@@ -164,6 +164,12 @@ If your app is production ready, you can begin the process of getting it listed 
   
   1. You must ensure users who are assigned licenses have access to the accurate purchased plan features described in your plan’s listing.
 
+## Teams store search experience
+
+After an app is published to the Teams store, users can find apps by going to the **Apps** icon from the left pane in Teams. Users can use the search box in the upper left corner or browse by category to see if a particular app or program has a version for Teams.
+
+Teams provides intelligent search experience by matching the keywords provided by the user with the appName, publisher name, short description, long description, and category names in the app manifest. The search results display apps that are closest match to the user's specified characters.
+
 ## Training module
 
 | **Training name** | **Description** |

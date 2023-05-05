@@ -437,7 +437,7 @@ For more information, see [icon guidelines](~/concepts/build-and-test/apps-packa
 
 ### App descriptions
 
-You must have a short and long description for your app. The descriptions in your app configuration and Partner Center must be the same.
+You must have a short and long description for your app. App description helps improve your app discoverability in the Teams store. The descriptions in your app configuration and Partner Center must be the same.
 
 :::image type="content" source="../../../../assets/images/submission/validation-app-description-adequete-information.png" alt-text="Graphic shows an example of adequate app description in the Teams app.":::
 

@@ -93,7 +93,7 @@ Make sure your short name adheres to the [store validation guidelines](~/concept
 
 ### Write descriptions
 
-You must have a short and long description of your app.
+You must have a short and long description of your app. App description helps improve app discoverability in the Teams store.
 
 #### Short description
 
@@ -185,7 +185,7 @@ You can add a URL for your YouTube or Vimeo video.
 
 ### Select a category for your app
 
-During submission, you're asked to categorize your app. You can categorize your app based on the following categories:
+During submission, you're asked to categorize your app. App category helps improve your app discoverability in the Teams store. You can categorize your app based on the following categories:
 
 |Categories  |
 |--------------|

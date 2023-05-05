@@ -368,7 +368,7 @@ The ID stored in Teams Admin Center is the **External App ID** and it is visible
 
 **Required**—object
 
-Specifies information about your company. For apps submitted to the Teams store, these values must match the information in your store listing. For more information, see the [Teams store publishing guidelines](~/concepts/deploy-and-publish/appsource/publish.md).
+Specifies information about your company. For apps submitted to the Teams store, these values must match the information in your store listing. For more information, see the [Teams store publishing guidelines](~/concepts/deploy-and-publish/appsource/publish.md). Developer name helps improve your app discoverability in the Teams store.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -382,7 +382,7 @@ Specifies information about your company. For apps submitted to the Teams store,
 
 **Required**—object
 
-The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` must be different.
+The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` must be different. App name helps improve your app discoverability in the Teams store.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -393,7 +393,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 
 **Required**—object
 
-Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry.
+Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry. App description helps improve your app discoverability in the Teams store.
 
 Ensure that your description describes your experience and helps potential customers understand what your experience does. You must note in the full description, if an external account is required for use. The values of `short` and `full` must be different. Your short description can't be repeated within the long description and must not include any other app name.
 
