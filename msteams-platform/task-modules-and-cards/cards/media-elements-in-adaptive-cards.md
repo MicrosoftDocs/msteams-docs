@@ -38,7 +38,7 @@ You can add media files to an existing or new Adaptive Card using Teams Develope
    :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/share-link.png" alt-text="Screenshot shows you from where you can take a link.":::
 
     >[!NOTE]
-    > Adaptive Card don't support media file links or URL that are copied directly from the address bar.
+    > Adaptive Card does't support media file links or URL that are copied directly from the address bar.
 
 1. Open an existing Adaptive Card or create a new Adaptive Card using [Teams Developer Portal](https://dev.teams.microsoft.com/cards) or [Adaptive Card Designer](https://adaptivecards.io/designer).
 
@@ -101,3 +101,4 @@ The following code shows an example of an Adaptive Card with media elements:
 
 * [Adaptive Cards](cards-reference.md#adaptive-card)
 * [People Picker in Adaptive Cards](people-picker.md)
+* [Typeahead search in Adaptive Cards](dynamic-search.md)
