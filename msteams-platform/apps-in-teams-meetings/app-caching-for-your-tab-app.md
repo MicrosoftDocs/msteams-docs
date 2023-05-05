@@ -10,10 +10,12 @@ ms.date: 04/07/2022
 
 # Enable app caching for your tab app
 
-> [!NOTE]
-> App caching is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-
 You can configure your tab app (app) to enable app caching to reduce the reload time of your app that are loaded in the meeting side panel during a meeting. The app reloads from the cache, which improves the app relaunch time within the meeting. App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client.
+
+> [!NOTE]
+>
+> * App caching in Teams desktop client is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * App caching in iOS personal tray is generally available (GA) and it's supported only in personal scope.
 
 Here's what you'll learn in this section:
 
@@ -199,7 +201,9 @@ Apps aren't cached if the load handler isn't invoked on subsequent navigation. T
 
 * If the system memory load is high, the app is removed from the cache. Ensure that your system memory load isn't high.
 
-* If the participant doesn't come back to the app within 20 minutes, the app is removed from the cache.
+* If the user doesn't return to the app in Teams desktop client within 20 minutes, the app is removed from the cache.
+
+* If the user doesn't return to the app in iOS personal tray within 10 minutes through the personal scope, the app is removed from the cache.
 
 * If the number of cached apps exceed the maximum cache size, the oldest cached app is removed from the cache. Ensure you don't exceed the maximum cache size.
 
