@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 April**
 
-***May 05, 2023***: [Deep link to meeting side panel](/apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel)
+***May 05, 2023***: [Deep link to meeting side panel](apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel)
 
 :::column-end:::
 :::row-end:::
