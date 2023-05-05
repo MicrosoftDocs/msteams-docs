@@ -14,6 +14,8 @@ Content to be added
 
 ## SDKs and libraries to build Teams app
 
+[Content to be added]
+
 :::row:::
     :::column span="1":::
         **TeamsFx SDK**
@@ -112,19 +114,50 @@ Content to be added
 
 ## Azure AD-secured REST APIs
 
+[Content to be added]
+
 :::row:::
     :::column span="1":::
         **Microsoft Graph**
     :::column-end:::
     :::column span="2":::
-        Microsoft Graph is the gateway to data and intelligence in Microsoft 365.
+        Microsoft Graph is the gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access the tremendous amount of data in Microsoft 365, Windows, and Enterprise Mobility + Security. Use the wealth of data in Microsoft Graph to build apps for organizations and consumers that interact with millions of users.
 
         > [!div class="nextstepaction"]
         > [Microsoft Graph](/graph/sdks/sdks-overview)
     :::column-end:::
 :::row-end:::
 
+:::row:::
+    :::column span="1":::
+        **Azure Active Directory**
+    :::column-end:::
+    :::column span="2":::
+
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        **Azure Bot Service**
+    :::column-end:::
+    :::column span="2":::
+
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        **Azure OpenAI**
+    :::column-end:::
+    :::column span="2":::
+
+    :::column-end:::
+:::row-end:::
+
 ## Tools
+
+[Content to be added]
 
 :::row:::
     :::column span="1":::
