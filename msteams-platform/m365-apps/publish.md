@@ -9,7 +9,7 @@ ms.subservice: m365apps
 ---
 # Publish Teams apps for Microsoft 365
 
-Microsoft Teams supports Microsoft 365-enabled Teams apps for production. You can distribute these apps to users who use the *Targeted Release* (dev preview) versions of Outlook.com and microsoft365.com (formerly office.com), the *Beta Channel* build of Outlook for Windows desktop, and Microsoft 365 Current Channel (dev preview) build of Microsoft 365 app for Android. Distribution options and processes for Microsoft 365-enabled Teams apps are the same as for traditional Teams apps.
+Microsoft Teams supports Microsoft 365-enabled Teams apps for production. You can distribute these apps to users who use the *Targeted Release* (dev preview) versions of Outlook.com and microsoft365.com (formerly office.com), the *Beta Channel* build of Outlook for Windows desktop, Outlook for Android, and Microsoft 365 Current Channel (dev preview) build of Microsoft 365 app for Android. Distribution options and processes for Microsoft 365-enabled Teams apps are the same as for traditional Teams apps.
 
 After it's published, your app will be discoverable as an installable app from the Outlook and Microsoft 365 app stores, in addition to the Teams store. Your app uses the permissions defined in Teams across Outlook and Microsoft 365. Teams admins can [manage access to Teams apps across Microsoft 365](/microsoftteams/manage-third-party-teams-apps) for users in their organization.
 
