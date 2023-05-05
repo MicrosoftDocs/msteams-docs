@@ -5,7 +5,7 @@ description: Learn about Microsoft Teams, why should you build apps on Teams pla
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.date: 05/24/2021
+ms.date: 04/02/2023
 ---
 # Teams app that fits
 
@@ -56,7 +56,7 @@ Here's why Teams is best-suited for your app needs:
 - **Common business processes**
 
     Tasks like creating and sharing a sales call report, tracking your project timeline, reserving common resources, submitting help desk requests, expense reports are repetitive tasks. They make for effective Teams apps.
-    
+
     :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-approval-flow.png" alt-text="Teams app for internal use":::
 
 - **Personal apps with tabs and bots**
@@ -76,6 +76,9 @@ Here's why Teams is best-suited for your app needs:
 - **Teams store advantage**
 
     Push your app on Teams store to improve app's availability and you can use it as a marketing opportunity. If you're running a startup, Teams platform helps to increase awareness of your products. Teams store marketplace can be a great platform for large audiences to discover your app.
+- **Build once, run everywhere**
+
+    Use the latest app manifest and Teams JavaScript client library versions to enable your personal tab and message extension apps to run in other Microsoft 365 experiences in addition to Teams. You can reach users on platforms such as Outlook and Microsoft 365 app all with the same codebase, broadening the reach of your app and streamlining your development and distribution processes.
 
 ## Next step
 

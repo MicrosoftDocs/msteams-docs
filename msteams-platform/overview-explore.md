@@ -5,7 +5,7 @@ description: Microsoft Teams platform features for your app on desktop and mobil
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.date: 11/02/2021
+ms.date: 04/16/2023
 ---
 # Explore Teams platform features
 
