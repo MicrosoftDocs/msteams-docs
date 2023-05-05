@@ -71,5 +71,6 @@ Sample name | Description | .NET |
 
 ## See also
 
+* [Build tabs for meeting](build-tabs-for-meeting.md)
 * [Build in-meeting notification for Teams meeting](in-meeting-notification-for-meeting.md)
 * [Targeted meeting notification API](meeting-apps-apis.md#targeted-meeting-notification-and-visual-indicator-api)
