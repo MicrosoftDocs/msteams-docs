@@ -1,21 +1,22 @@
 ---
-title: Build notification bot
-description: Sends messages in Teams channel or group chat or personal chat.
+title: Build message extension
+description: In this module, learn how to build your first message extension for your Teams app.
 ms.localizationpriority: medium
 ms.topic: reference
 ---
-# Build notification bot
 
-The notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with an HTTP request, such as cards or texts.
+# Build message extension
 
-:::image type="content" border="false" source="../assets/images/get-started/get-started-bot.png" alt-text="Illustration showing a conceptual bot app":::
+Message extensions allow the users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Teams client in the form of a richly formatted card.
 
-In this tutorial, get familiarize with the scenario-based Teams app in one of the following ways:
+[Image to be added]
 
-* [Use Teams Toolkit codespaces to build a notification bot](#use-teams-toolkit-codespaces-to-build-a-notification-bot) or
-* [Use step-by-step guide to build a notification bot](#use-step-by-step-guide-to-build-a-notification-bot)
+In this tutorial, get familiarize with the message extension in one of the following ways:
 
-## Use Teams Toolkit codespaces to build a notification bot
+* [Use Teams Toolkit codespaces to build a message extension](#use-teams-toolkit-codespaces-to-build-a-message-extension) or
+* [Use step-by-step guide to build a message extension](#use-step-by-step-guide-to-build-a-message-extension)
+
+## Use Teams Toolkit codespaces to build a message extension
 
 The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you. You just need to select the following button to begin.
 
@@ -25,9 +26,9 @@ But before you create your codespace, ensure that you have:
 * A [Microsoft 365 account](https://developer.microsoft.com/microsoft-365/dev-program) with sideloading permission
 * A [Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
 
-To use codespaces for creating a Teams notification bot:
+To use codespaces for creating a message extension:
 
-<a href="https://github.com/codespaces/new?hide_repo_select=true&ref=dol%2Fcodespaces&repo=348288141&machine=basicLinux32gb&devcontainer_path=.devcontainer%2Fnotification-codespaces%2Fdevcontainer.json&location=WestUs2" target="_blank"><img src="https://github.com/codespaces/badge.svg" alt="Open hello-world tab in GitHub Codespaces"></a>
+<a href="https://github.com/codespaces/new?hide_repo_select=true&ref=dev&repo=348288141&machine=basicLinux32gb&location=WestUs2&devcontainer_path=.devcontainer%2Fnpm-search-message-extension-codespaces%2Fdevcontainer.json" target="_blank"><img src="https://github.com/codespaces/badge.svg" alt="Open message extension in GitHub Codespaces"></a>
 
 1. Select the button above to open Codespaces. You may be asked to login to GitHub if you haven't.
 1. Select **Create codespaces**.
@@ -46,7 +47,7 @@ To use codespaces for creating a Teams notification bot:
 > [!TIP]
 > [GitHub codespaces](https://github.com/features/codespaces) offers the free plan up to a fixed amount of usage every month. If you need to free up the space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespaces that you no longer need.
 
-## Use step-by-step guide to build a notification bot
+## Use step-by-step guide to build a message extension
 
 If you would like to learn how to start a project with Teams Toolkit from scratch, let's go through the step-by-step guide together.
 
@@ -56,4 +57,7 @@ Unlike codespaces, where everything you need is packaged for you already, you wi
 > [Prerequisites](../toolkit/tools-prerequisites.md)
 
 > [!div class="nextstepaction"]
-> [Start building a notification bot](../sbs-gs-notificationbot.yml)
+> [Build search based message extension](../sbs-messagingextension-searchcommand.yml)
+
+> [!div class="nextstepaction"]
+> [Build action based message extension](../sbs-meetingextension-action.yml)

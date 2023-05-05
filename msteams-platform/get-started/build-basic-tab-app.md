@@ -12,8 +12,8 @@ Start Microsoft Teams app development with your first Teams app. You can create 
 
 In this tutorial, get familiarize with a basic Teams tab app in one of the following ways:
 
-* [Quick start with a codespace instance](#use-teams-toolkit-codespaces-to-build-a-basic-tab-app) or
-* [Step-by-step guide](#use-step-by-step-guide-to-build-a-basic-tab-app) to build an app
+* [Use Teams Toolkit codespaces to build a basic tab app](#use-teams-toolkit-codespaces-to-build-a-basic-tab-app) or
+* [Use step-by-step guide to build a basic tab app](#use-step-by-step-guide-to-build-a-basic-tab-app)
 
 ## Use Teams Toolkit codespaces to build a basic tab app
 
@@ -37,7 +37,7 @@ To use codespaces for creating a Teams tab app:
    Teams Toolkit codespaces builds the app. A dialog appears to prompt you to open the app in a browser.
 1. Select the option to preview the app in the browser.
    The app is sideloaded to Teams and opens in the browser.
-1. One the app dialog appears, select **Add** to install the app in Teams client.
+1. Once the app dialog appears, select **Add** to install the app in Teams client.
 
 > [!NOTE]
 >
