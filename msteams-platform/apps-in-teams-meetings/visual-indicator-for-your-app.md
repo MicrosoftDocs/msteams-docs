@@ -61,11 +61,13 @@ App can define the following objects under the `surface` parameter:
 
 * The visual indicator is displayed only one notification for a user in a minute per meeting.
 
-* The visual indicator is displayed to a maximum of first 50 participants in the array for a particular meeting. For the above 50 participants it shows an error.
+* The visual indicator is displayed to a maximum of first 50 participants in the array for a particular meeting.
 
 ## Code sample
 
-[Code sample to be added]
+Sample name | Description | .NET |
+|----------------|-----------------|--------------|----------------|----------------|
+| Visual indicator for your Teams app | This sample demonstrates how to enable visual indicator for your Teams app. | [Link to be added] |
 
 ## See also
 
