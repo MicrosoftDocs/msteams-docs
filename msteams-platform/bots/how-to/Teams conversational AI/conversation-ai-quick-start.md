@@ -20,7 +20,7 @@ To get started, install:
 * [Teams Toolkit](../../../toolkit/install-Teams-Toolkit.md)
 * [NodeJS](https://nodejs.org/en/)
 * [OpenAI](https://openai.com/api/) key to leverage GPT.
-* Global Administrator access to a [Microsoft 365 tenant](https://developer.microsoft.com/microsoft-365/dev-program?ocid=MSlearn&WT.mc_id=m365-16105-cxa) and enable [upload a Teams custom apps](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading?WT.mc_id=m365-84637-cxa).
+* Global Administrator access to a [Microsoft 365 tenant](https://developer.microsoft.com/microsoft-365/dev-program?ocid=MSlearn&WT.mc_id=m365-16105-cxa) and [Enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 ## Build and run the sample app
 
