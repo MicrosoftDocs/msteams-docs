@@ -169,7 +169,7 @@ The query parameters are:
 | `context.channelId`&emsp; | Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It isn't available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 | `context.chatId`&emsp; | Chat ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md) for group and meeting chat. | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
 | `context.contextType`&emsp; |  Chat is the only supported contextType for meetings. | chat |
-| `openInMeeting`&emsp; | Parameter that overrides the Teams default behaviour to open the deep link in meeting side panel when app user is in meeting stage. | false |
+| `openInMeeting`&emsp; | Set the value to `false` to open the app in a tab. Any other value is ignored by Teams and opens the app in the meeting side panel. | `false` |
 
 **Examples**:
 
