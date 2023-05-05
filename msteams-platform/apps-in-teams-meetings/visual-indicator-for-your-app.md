@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 Visual indicator in Teams helps you to keep engaged with the apps added in the meeting even when the side panel isn't open.
 
-The indicator is displayed on the app icon in the Teams UI, whenever there’s a new activity in the app during the meeting it attracts the users attention more easily.
+The indicator is displayed on the app icon in the Teams UI, whenever there’s a new activity in the app during the meeting and it attracts the users attention more easily.
 
 (image to be added)
 
