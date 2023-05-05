@@ -720,7 +720,7 @@
       - name: Conversational AI quick start guide
         href: bots/how-to/Teams conversational AI/conversation-ai-quick-start.md
       - name: Teams AI core capabilities
-        href: bots/how-to/Teams conversational AI/how-conversation-ai-works.md
+        href: bots/how-to/Teams conversational AI/how-conversation-ai-get-started.md
       - name: Teams conversational AI FAQs
         href: bots/how-to/Teams conversational AI/coversational-ai-faq.md
   - name: Microsoft Graph

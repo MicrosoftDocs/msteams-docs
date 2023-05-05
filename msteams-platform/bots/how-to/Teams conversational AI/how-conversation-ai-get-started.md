@@ -6,11 +6,11 @@ ms.topic: overview
 ms.author: surbhigupta
 ---
 
-## Get started with Teams conversational AI
+# Get started with Teams conversational AI
 
 The Teams AI SDK simplifies the process of creating and powering bots with AI capabilities. It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
 
-### Create AI Components
+## Create AI Components
 
 You can take your existing or a new bot framework app and add AI capabilities.
 
@@ -36,7 +36,7 @@ const promptManager = new DefaultPromptManager(path.join(__dirname, '../src/prom
 
 ```
 
-### Define storage and application
+## Define storage and application
 
 The application object automatically manages the conversation and user state of your bot.
 
@@ -60,7 +60,7 @@ const app = new Application<ApplicationTurnState>({
 });
 ```
 
-### Prompt
+## Prompt
 
 Prompts are pieces of text that can be used to create conversational experiences. They're used to start conversations, ask questions, and generate responses. They can be used to create natural language experiences for chatbots, virtual assistants, and other conversational user interfaces. The use of prompts can help reduce the complexity of creating conversational experiences and make them more engaging for the user.
 
@@ -89,7 +89,7 @@ Create a folder called prompts, and define your prompts in the folder.
    }
    ```
 
-#### Prompt actions
+### Prompt actions
 
 Plans let the model perform actions or say things to the user. You can create a schema of the plan and add a list of actions that you support. It can perform an action and pass arguments. GPT can  figure out what actions it wants to use and then extract all the entities and pass those in as arguments to the action call.
 
@@ -104,7 +104,7 @@ Plans let the model perform actions or say things to the user. You can create a 
     AI:
   ```
 
-#### Prompt Template
+### Prompt Template
 
 You can add functions to call a callback and return any kind of data you want.
 
@@ -116,7 +116,7 @@ You can add functions to call a callback and return any kind of data you want.
 
 * {{$< scope >. < property >}}: Inserts state properties.
 
-### Actions
+## Actions
 
 Actions handle events triggered by AI components.
 
@@ -134,7 +134,7 @@ app.ai.action(AI.FlaggedOutputActionName, async (context: TurnContext, state: Ap
 });
 ```
 
-#### Register Action Handlers
+### Register Action Handlers
 
 Action handlers help users achieve the goals which is shared in the user intents.
 

@@ -67,3 +67,7 @@ To get started, install:
 1. You can @mention the bot to invoke the Chef bot and chat in a plain language.
 
    The bot uses the text-davinci-003 model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation. This is possible due to the skprompts.txt file's contents.
+
+## See also
+
+[Teams conversational AI](teams-conversation-ai-overview.md)
