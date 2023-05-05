@@ -24,11 +24,15 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2023 March**
+**2023 April**
 
-* ***March 23, 2023***: [Apps are available for scheduled public channel meetings](apps-in-teams-meetings/teams-apps-in-meetings.md)
-* ***March 20, 2023***: [Bots are available in DOD](bots/what-are-bots.md)
-* ***March 20, 2023***: [Message extensions are available in DOD](messaging-extensions/what-are-messaging-extensions.md)
+* ***April 24, 2023***: [Develop your apps with Teams Toolkit](concepts/build-and-test/develop-your-apps-with-teams-toolkit.md)
+
+* ***April 14, 2023***: [Contextless app update](concepts/deploy-and-publish/apps-upload.md#update-your-app).
+
+* ***April 6, 2023***: [Set up Microsoft license management](concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md)
+
+* ***April 4, 2023***: [Tab apps in shared channels are available in DOD](~/concepts/build-and-test/shared-channels.md)
 
 :::column-end:::
 :::row-end:::
@@ -39,6 +43,9 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 23/03/2023 | Apps are available for scheduled public channel meetings | Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md) |
+| 20/03/2023 | Bots are available in DOD | Build bots > [Overview](bots/what-are-bots.md)|
+| 20/03/2023 | Message extensions are available in DOD | Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md)|
 | 28/02/2023 | Facilitate adoption of your app and create awareness | Distribute your app > adoption > [Drive customer adoption of your app](promote-app-adoption.md) |
 | 27/02/2023 | Changelog for Developer Portal | Tools and SDKs > Developer Portal for Teams > [Overview](concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal) |
 | 23/02/2023 | SSO authentication for your Adaptive Cards Universal Actions | Add authentication > Enable SSO for your Teams app > Enable SSO for Adaptive Cards Universal Actions in your bot > [Overview](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md) |
@@ -358,9 +365,9 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
-**2022 August**
+* ***May 05, 2023***: Adaptive Card tabs will be deprecated in the new Microsoft Teams. Apps are expected to be available in the new Microsoft Teams by June 2023. If your app is using Adaptive Card tabs, it's recommended to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
 
-***August 01, 2022***: App Studio is deprecated, use [Developer Portal](concepts/build-and-test/teams-developer-portal.md) for Teams.
+* ***August 01, 2022***: App Studio is deprecated, use [Developer Portal](concepts/build-and-test/teams-developer-portal.md) for Teams.
 
 :::column-end:::
 :::row-end:::
