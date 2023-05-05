@@ -362,3 +362,4 @@ The following are the limitations for app caching:
 * [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
 * [Add apps to meetings using Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [Get change notifications for Microsoft Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)
+* [Visual indicator for your Teams app](visual-indicator-for-your-app.md)
