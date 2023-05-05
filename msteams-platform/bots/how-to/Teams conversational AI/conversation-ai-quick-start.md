@@ -17,10 +17,10 @@ Get started with Teams conversation AI SDK using the ChefBot sample. It's design
 To get started, install:
 
 * Microsoft Teams.
-* Global Administrator access to a [Microsoft 365 tenant](https://developer.microsoft.com/microsoft-365/dev-program?ocid=MSlearn&WT.mc_id=m365-16105-cxa) and enable [upload a Teams custom apps](https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading?WT.mc_id=m365-84637-cxa).
-* [Teams Toolkit](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode&pivots=visual-studio-code) extension installed
+* [Teams Toolkit](../../../toolkit/install-Teams-Toolkit.md)
 * [NodeJS](https://nodejs.org/en/)
 * [OpenAI](https://openai.com/api/) key to leverage GPT.
+* Global Administrator access to a [Microsoft 365 tenant](https://developer.microsoft.com/microsoft-365/dev-program?ocid=MSlearn&WT.mc_id=m365-16105-cxa) and enable [upload a Teams custom apps](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading?WT.mc_id=m365-84637-cxa).
 
 ## Build and run the sample app
 

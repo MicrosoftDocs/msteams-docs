@@ -1,6 +1,6 @@
 ---
 title: Teams AI core capabilities
-description: In this article, learn how to create an app using Teams conversational IA and it's capabilities.
+description: In this article, learn how to create an app using Teams conversational IA and its capabilities.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
@@ -179,23 +179,156 @@ app.ai.action(
 
 Next step is to pick the capabilities needed. You need to use the SDK to scaffold bot and adaptive card handlers to the source file.
 
-The Conversational AI SDK is a powerful tool for developers to leverage natural language processing and create rich conversational apps for Microsoft Teams. This SDK supports JavaScript and is designed to simplify the process of building bots that can interact with Microsoft Teams, and facilitates the migration of existing bots. The SDK supports the migration of messaging capabilities, Message Extension (ME) capabilities and Adaptive Cards capabilities to the new format. It is also possible to upgrade existing Teams apps with these features.
+Teams conversational AI Library supports JavaScript and is designed to simplify the process of building bots that can interact with Microsoft Teams, and facilitates the migration of existing bots. The SDK supports the migration of messaging capabilities, Message Extension (ME) capabilities and Adaptive Cards capabilities to the new format. It's also possible to upgrade existing Teams apps with these features.
 
-**Bot handler**: Add it to the main activity manager file. Once you've configured your Open AI API, you need to create a Bot Activity Handler class. This class will contain all the logic for handling user requests and responding with the appropriate response.
+Developers creating bots for Microsoft Teams were using the BotBuilder SDK directly. New AI SDK is designed to facilitate the construction of bots that can interact with Microsoft Teams. While one of the key features of this SDK is the AI support that customers can utilize, the initial objectives of the team may simply be to upgrade their current bot without AI. Once upgraded the bot can simply connect to AI/LLM available in the SDK.
+
+The following app capabilities are supported by Teams conversational AI:
+
+* Sending or Receiving Message – Migration supported.  
+
+* Message Extension (ME) capabilities – Migration supported.  
+
+* Adaptive Cards capabilities – Migration supported.
+
+In the section below we'll explain in detail each of the capabilities and their path to migration. We'll using the samples from the AI SDK repo for explaining the method of migration.  
+
+### Sending or receiving Message
+
+Example: EchoBot
+
+Replace BotActivityHandler and ApplicationTurnState with this Application and DefaultTurnState Note that here, DefaultTurnState is constructed to include ConversationState.
 
 ```javascript
-import { 
-CloudAdapter, 
-ConfigurationBotFrameworkAuthentication, ConfigurationBotFrameworkAuthenticationOptions, 
-MemoryStorage, 
-ActivityTypes } from 'botbuilder';
 
-const adapter = new CloudAdapter(botFrameworkAuthentication);
+// Assumption is that the bot/app is named “app” or “bot”
+    import { Application, DefaultTurnState } from "botbuilder-m365";
+
+interface ConversationState {
+
+  count: number;
+
+}
+
+// DefaultTurnState: Conversation State, UserState, TurnState (or TempState)
+
+type ApplicationTurnState = DefaultTurnState<ConversationState>;
+
+// Previous:
+
+// const bot = BotActivityHandler();
+
+const app =
+
+  new Application() <
+
+  ApplicationTurnState >
+
+  {
+
+    storage 
+
+  };
+
 ```
 
-This SDK is designed to help you build bots that can interact with Teams and Microsoft 365 apps. It is built on top of the Bot Framework SDK to make it easier to build Teams and Microsoft 365-interacting bots.
+The rest of the code, including server.post and await app.run(context) stays the same.
 
-The SDK also facilitates the creation of bots that uses an OpenAI API key to provide an AI-driven conversational experience, or the same using Azure Foundry.
+## Message Extensions
+
+The original ME sample will eventually be updated to M365messageExtensions.
+
+In the previous Teams SDK format, developers needed to set up the Message Extensions query handler like:
+
+Now, the app class has messageExtensions features to make creating the handler(s) simpler:
+
+* `context` = TurnContext
+* `state` = DefaultTurnState
+* `query`= The data passed from ME interaction
+
+```javascript
+// Imported from earlier example
+
+import { MessagingExtensionAttachment } from "botbuilder";
+
+import { Application } from "botbuilder-m365";
+
+// ME query Listener
+
+app.messageExtensions.query("searchCmd", async (context, state, query) => {
+
+  const searchQuery = query.parameters.queryText;
+
+  // Other handling
+
+  // For examples, Create search / action cards
+
+  // Return results
+
+  return {
+
+    attachmentLayout: "", 
+
+    attachments: results, 
+
+    type: "result" 
+
+  };
+
+});
+
+Similarly, selectItem listener would be set up as:
+
+app.messageExtensions.selectItem(async (context, state, item) => {
+
+  // Other handling
+
+  // For example, Create search / action cards
+
+  // item is the card/item the user selected
+
+  return {
+
+    //... 
+
+  }
+
+}
+```
+
+### Adaptive Cards capabilities
+
+Similar to Message extensions example above, app.AdaptiveCards is the handler for producing Adaptive Cards.
+
+```javascript
+// Listener for messages from the user that trigger an adaptive card
+
+app.message(/searchQuery/i, async (context, state) => {
+
+  const attachment = createAdaptiveCard();
+
+  await context.sendActivity({ attachments: [attachment] });
+
+});
+
+// Listener for action.submit on cards from the user
+
+interface SubmitData {
+
+  choiceSelect: string;
+
+}
+
+// Listen for submit actions from the user
+
+app.adaptiveCards.actionSubmit("ChoiceSubmit", async (context, state, data: SubmitData) => {
+
+  await context.sendActivity(`Submitted option is: ${data.choiceSelect}`);
+
+});
+```
+
+## Core capabilities
 
 ### Message-extension query
 
@@ -405,161 +538,3 @@ app.ai.action('findItem', async (context, state, data: EntityData) => {
     return false;
 });
 ```
-
-Developers creating bots for Microsoft Teams were using the BotBuilder SDK directly. New AI SDK is designed to facilitate the construction of bots that can interact with Microsoft Teams. While one of the key features of this SDK is the AI support that customers can utilize, the initial objectives of the team may simply be to upgrade their current bot without AI. Once upgraded the bot can simply connect to AI/LLM available in the SDK.
-
-These instructions are applicable to both non-AI and AI bot migration.
-
-Teams’ apps capabilities which the bot may be using:
-
-* Sending/Receiving Message – Migration supported.  
-
-* Message Extension (ME) capabilities – Migration supported.  
-
-* Adaptive Cards capabilities – Migration supported.
-
-* Dialogue management - Migration not supported.
-
-In the section below we will explain in detail each of the capabilities and their path to migration. We will using the samples from the AI SDK repo for explaining the method of migration.  
-
-### Sending/Receiving Message
-
-Example : EchoBot
-
-Replace BotActivityHandler and ApplicationTurnState with this Application and DefaultTurnState Note that here, DefaultTurnState is constructed to include ConversationState.
-
-```javascript
-
-// Assumption is that the bot/app is named “app” or “bot”
-    import { Application, DefaultTurnState } from "botbuilder-m365";
-
-interface ConversationState {
-
-  count: number;
-
-}
-
-// DefaultTurnState: Conversation State, UserState, TurnState (or TempState)
-
-type ApplicationTurnState = DefaultTurnState<ConversationState>;
-
-// Previous:
-
-// const bot = BotActivityHandler();
-
-const app =
-
-  new Application() <
-
-  ApplicationTurnState >
-
-  {
-
-    storage 
-
-  };
-
-```
-
-The rest of the code, including server.post and await app.run(context) stays the same.
-
-That's it!
-
-Run your bot (with ngrok) and sideload your manifest to test.
-
-## Message Extensions
-
-The original ME sample will eventually be updated to M365messageExtensions.
-
-In the previous Teams SDK format, developers needed to set up the Message Extensions query handler like:
-
-Now, the app class has messageExtensions features to make creating the handler(s) simpler.  
-Context is TurnContext and state is DefaultTurnState passed in from the bot.  
-The third parameter query is the data passed from ME interaction.
-
-```javascript
-// Imported from earlier example
-
-import { MessagingExtensionAttachment } from "botbuilder";
-
-import { Application } from "botbuilder-m365";
-
-// ME query Listener
-
-app.messageExtensions.query("searchCmd", async (context, state, query) => {
-
-  const searchQuery = query.parameters.queryText;
-
-  // Other handling
-
-  // e.g. Create search / action cards
-
-  // Return results
-
-  return {
-
-    attachmentLayout: "", 
-
-    attachments: results, 
-
-    type: "result" 
-
-  };
-
-});
-
-Similarly, selectItem listener would be set up as:
-
-app.messageExtensions.selectItem(async (context, state, item) => {
-
-  // Other handling
-
-  // e.g. Create search / action cards
-
-  // item is the card/item the user selected
-
-  return {
-
-    //... 
-
-  }
-
-}
-```
-
-### Adaptive Cards capabilities
-
-Similar to Message extensions example above, app.AdaptiveCards is the handler for producing Adaptive Cards.
-
-```javascript
-// Listener for messages from the user that trigger an adaptive card
-
-app.message(/searchQuery/i, async (context, state) => {
-
-  const attachment = createAdaptiveCard();
-
-  await context.sendActivity({ attachments: [attachment] });
-
-});
-
-// Listener for action.submit on cards from the user
-
-interface SubmitData {
-
-  choiceSelect: string;
-
-}
-
-// Listen for submit actions from the user
-
-app.adaptiveCards.actionSubmit("ChoiceSubmit", async (context, state, data: SubmitData) => {
-
-  await context.sendActivity(`Submitted option is: ${data.choiceSelect}`);
-
-});
-```
-
-### Dialogue management system  
-
-Developer using dialogue management system will not be able to upgrade existing SDK to new SDK. If needed, we can review and offer support on case by case basis. We are actively working on supporting these however, direct migration will not be supported by //Build.  
-Details of dialogue management system: Reference
