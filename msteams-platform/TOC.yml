@@ -445,7 +445,7 @@
       - name: Build in-meeting notification for meeting
         href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
         displayName: bubble, targeted meeting, in-meeting, notification
-      - name: Visual indicator for your Teams app
+      - name: Enable visual indicator for your Teams app
         href: apps-in-teams-meetings/visual-indicator-for-your-app.md
         displayName: visual indicator
     - name: Build extensible conversations for meeting chat
