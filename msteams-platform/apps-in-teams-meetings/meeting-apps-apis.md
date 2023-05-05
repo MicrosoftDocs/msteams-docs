@@ -1016,23 +1016,79 @@ The following code provides an example of meeting end event payload:
 
 ## Get participant events
 
-When a bot is built through Developer Portal, you can subscribe to participant join and leave events. To subscribe to participant events ensure to add the following [RSC delegated permissions](~/resources/schema/manifest-schema.md#rsc-delegated-permissions) to your app:
+You can subscribe to participant join and leave events for a bot app through Developer Portal. To subscribe to participant events ensure to add the following [RSC delegated permissions](~/resources/schema/manifest-schema.md#rsc-delegated-permissions) to your app manifest:
 
 * `OnlineMeetingParticipant.Read.Chat` for scheduled private meetings.
 * `ChannelMeetingParticipant.Read.Group` for scheduled channel meetings.
+
+Use the following examples to configure your manifest:
+
+<br>
+
+<details>
+
+<summary><b>For app manifest version 1.12 and later</b></summary>
+
+```json
+"webApplicationInfo": {
+    "id": "<bot id>",
+    "resource": "https://RscPermission",
+    },
+"authorization": {
+    "permissions": {
+        "resourceSpecific": [
+            {
+                "name": "OnlineMeeting.ReadBasic.Chat",
+                "type": "Delegated"
+            }
+            {
+                "name": "ChannelMeetingParticipant.Read.Group",
+                "type": "Delegated"
+            }
+        ]    
+    }
+}
+ ```
+
+<br>
+
+</details>
+
+<br>
+
+<details>
+
+<summary><b>For app manifest version 1.11 and earlier</b></summary>
+
+```json
+"webApplicationInfo": {
+    "id": "<bot id>",
+    "resource": "https://RscPermission",
+    "applicationPermissions": [
+      "OnlineMeeting.ReadBasic.Chat"
+      "ChannelMeetingParticipant.Read.Group"
+    ]
+}
+ ```
+
+<br>
+
+</details>
 
 > [!NOTE]
 > Participant events is supported in scheduled private and channel meetings only.
 
 To subscribe to participant events, follow the steps:
 
-1. Go to Developer Portal and open your bot app.
-1. In the **Meeting events** section of the registered bot app, select the required events.
+1. Go to [Developer Portal](https://dev.teams.microsoft.com/) and open your bot app.
+1. In the **Meeting events** section, select the required events from the following:
+    * Participant join the meeting
+    * Participant leave the meeting
 1. Select **Save**
 
    :::image type="content" source="~/assets/images/apps-in-meetings/participant-events.png" alt-text="Screenshot shows how developer portal display for participant events.":::
 
-The bot receives the participant events only when the app is added to the meeting before a participant joins or leaves the meeting. 
+For a bot to receive participant events, ensure that you add the bot to the meeting before a participant joins or leaves the meeting.
 
 ### Participant join event
 
