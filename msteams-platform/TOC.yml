@@ -713,7 +713,7 @@
     - name: Debug your calling and meeting bot locally
       href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
       displayName: signaling
-    - name: Teams Conversation AI
+    - name: Teams Conversational AI
       items:
       - name: Overview
         href: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
