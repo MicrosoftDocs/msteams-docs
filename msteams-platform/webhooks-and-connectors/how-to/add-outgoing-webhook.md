@@ -9,7 +9,7 @@ ms.author: lajanuar
 
 # Create Outgoing Webhooks
 
-The Outgoing Webhook acts as a bot and search for messages in channels using **@mention**. It sends notifications to an external web service and responds with rich messages, which include cards and images. It helps to skip the process of creating bots through the [Microsoft Bot Framework](https://dev.botframework.com/).
+The Outgoing Webhook acts as a bot and searches for messages in channels using **@mention**. It sends notifications to an external web service and responds with rich messages, which include cards and images. It helps to skip the process of creating bots through the [Microsoft Bot Framework](https://dev.botframework.com/).
 
 <!--- TBD: Edit this article.
 * Admonitions/alerts may be overused in this article. Check once.
@@ -241,7 +241,7 @@ var responseMsg = JSON.stringify({
 
 |**Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Outgoing Webhooks | Samples to create custom bots to be used in Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+| Outgoing Webhooks | This sample shows how to  implement and use outgoing webhook.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
 ## Step-by-step guide
 

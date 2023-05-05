@@ -257,6 +257,10 @@ To get an edit or undelete message event notification in a bot, you can override
 * For edit: `OnTeamsMessageEditAsync`
 * For undelete: `OnTeamsMessageUndeleteAsync`
 
+> [!NOTE]
+>
+>The `OnTeamsMessageEditAsync` and `OnTeamsMessageUndeleteAsync` handlers aren’t supported in group chat and Teams channel scopes.
+
 The following is an example of an edit message event notification when a sent message is edited:
 
 # [C#](#tab/dotnet3)
@@ -462,6 +466,10 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 When you soft delete a message in a chat, the bot gets a notification of the soft delete message event.
 
 To get a soft delete message event notification in a bot, you can override the `OnTeamsMessageSoftDeleteAsync` handler.
+
+> [!NOTE]
+>
+>The `OnTeamsMessageSoftDeleteAsync` handler isn’t supported in group chat and Teams channel scopes.
 
 The following is an example of a soft delete message event notification when a message is soft deleted:
 
@@ -854,11 +862,10 @@ The general retry guidance for each status code is listed in the following table
 
 ## Code sample
 
-| Sample name | Description | Node.js | .NETCore | Python | .NET |
-|----------------|-----------------|--------------|----------------|-----------|-----|
-| Teams conversation bot | Messaging and conversation event handling. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | NA |
-| Teams app localization | Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | NA | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
-| Update and delete message | Sample app shows how to get a update and delete event notification in your bot. | [View]() | NA | NA | [View]() |
+| Sample name | Description | Node.js | .NETCore | Python | .NET | Manifest
+|----------------|-----------------|--------------|----------------|-----------|-----|-----|
+| Teams conversation bot | This sample app shows how to use different bot conversation events available in Bot Framework v4. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip) |
+| Teams app localization | This sample shows Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | NA | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) | NA |
 
 ## Next step
 

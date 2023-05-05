@@ -2,7 +2,7 @@
 title: Add single sign-on to your Teams apps
 author: surbhigupta
 description: In this module, learn how to add single sign-on (SSO) of Teams Toolkit, enable SSO support, update your application to use SSO
-ms.author: v-amprasad
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
@@ -425,8 +425,6 @@ To make this work in your app:
 
 </details>
 
-<br>
-
 ## Debug your app
 
 Press **F5** to debug your application. Teams Toolkit uses the Azure AD manifest file to register an Azure AD app for SSO. For Teams Toolkit local debug functionalities, see [how to debug your Teams app locally](debug-local.md).
@@ -525,7 +523,7 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
 
 1. Select the required application type under **Create a new Teams application**, clear the **Configure with single sign-on** check box.
 
-1. Select **create**.
+1. Select **Create**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp-sso-uncheck_1.png" alt-text="select the teams app to be created and uncheck sso check box" lightbox="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp-sso-uncheck.png":::
 

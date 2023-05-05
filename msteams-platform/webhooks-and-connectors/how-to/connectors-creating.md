@@ -237,8 +237,8 @@ The following table provides the sample name and its description:
 
 |**Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Connectors | Sample connector for Microsoft 365 Groups generating notifications to Teams channel.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
-| Generic connectors sample |Sample code for a generic connector that is easy to customize for any system that supports webhooks.| | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
+| Connector TODO notification |This sample shows a connector for Microsoft 365 Groups, which generates and sends notifications for Teams channel.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/nodejs)|
+| Generic connectors sample |This sample shows a generic connector that is easy to customize for any system that supports webhooks.| NA| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
 
 ## Step-by-step guide
 
@@ -253,4 +253,3 @@ Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to build and tes
 * [How admins can enable or disable connectors](/microsoftteams/office-365-custom-connectors#enable-or-disable-connectors-in-teams)
 * [How admins can publish custom connectors within their org](/microsoftteams/office-365-custom-connectors)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
-* [getConfig](/javascript/api/@microsoft/teamsfx/teamsfxconfiguration?view=msteams-client-js-latest&preserve-view=true)
