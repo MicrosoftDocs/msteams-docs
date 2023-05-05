@@ -1,7 +1,7 @@
 ---
 title: Conversation AI quick start guide
 author: surbhigupta
-description:  In this module, learn how to quickly try the Teams conversational AI SDK.
+description:  In this module, learn how to quickly try the Teams conversational AI library.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
@@ -10,7 +10,7 @@ ms.date: 04/07/2022
 
 # Conversation AI quick start guide
 
-Get started with Teams conversation AI SDK using the ChefBot sample. It's designed to quickly run a Teams conversation AI library based sample on your computer's localhost.
+Get started with Teams conversational AI library using the ChefBot sample. It's designed to quickly run a Teams conversational AI library based sample on your computer's localhost.
 
 ## Set up your development environment
 

@@ -8,11 +8,11 @@ ms.author: surbhigupta
 
 # Teams conversational AI
 
-Teams Conversational AI SDK is a Teams-centric interface to GPT-based common language models and user intent engines, moderating the need for you to take on the complex and expensive task of writing and maintaining conversational bot logic to integrate with large language models (LLMs).
+Teams conversational AI library is a Teams-centric interface to GPT-based common language models and user intent engines, moderating the need for you to take on the complex and expensive task of writing and maintaining conversational bot logic to integrate with large language models (LLMs).
 
 The SDK provides a simple capabilities-driven approach and helps you create intelligent apps quickly and easily with pre-built, reusable code snippets so that you can focus on building the business logic rather than learning the semantics of Teams conversational applications.
 
-The following are some of the main features available through Teams Conversational AI SDK:
+The following are some of the main features available through Teams conversational AI library:
 
 1. [Simple Teams-Centric Component Scaffolding](#simple-teams-centric-component-scaffolding)
 1. [Natural Language Modeling](#natural-language-modeling)
@@ -72,9 +72,9 @@ A simple interface for actions and predictions allows bots to react when they ha
 
 ## Why build apps with Teams conversational AI?
 
-Teams Conversational AI SDK makes Teams apps truly conversational, not driven by rigid command structures. The SDK is designed to seamlessly integrate with the Teams Bot Framework SDK. Building apps for Teams is drastically simpler, with rich natural language features out of the box that brings any app experience into the conversation.
+Teams conversational AI library makes Teams apps truly conversational, not driven by rigid command structures. The SDK is designed to seamlessly integrate with the Teams Bot Framework SDK. Building apps for Teams is drastically simpler, with rich natural language features out of the box that brings any app experience into the conversation.
 
-Here are some key benefits of the Teams conversational AI SDK:
+Here are some key benefits of the Teams conversational AI library:
 
 * ​Strong POV with Teams app components​. You can instantiate your bot activity handler and invoke any Teams capabilities by just invoking the function.
 
