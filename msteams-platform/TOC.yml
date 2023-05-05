@@ -186,8 +186,8 @@
       - name: Publish Teams apps using Teams Toolkit 
         href: toolkit/publish.md
         displayName: license
-      - name: Integrate with Developer Portal
-        href: toolkit/Integrate-with-developer-portal.md
+      - name: Publish Teams apps using Developer Portal 
+        href: toolkit/publish-your-teams-apps-using-developer-portal.md
     - name: FAQ
       href: toolkit/faq.md  
   - name: TeamsFx SDK
@@ -203,6 +203,9 @@
     - name: Manage your apps in Developer Portal
       href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
       displayName: AppID 
+    - name: Develop your apps with Teams Toolkit
+      href: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
+      displayName: visual studio code, visual studio, teams toolkit
     - name: Analyze your apps usage in Developer Portal
       href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  
       displayName: dashboard
@@ -430,13 +433,8 @@
   - name: Enable and configure apps for Teams meetings
     items:
     - name: Build tabs for meeting
-      items:
-      - name: Enable your tabs for Teams meeting
-        href: apps-in-teams-meetings/build-tabs-for-meeting.md
-        displayName: anonymous
-      - name: Enable app caching for your tab app
-        href: apps-in-teams-meetings/app-caching-for-your-tab-app.md
-        displayName: app caching, launch time
+      href: apps-in-teams-meetings/build-tabs-for-meeting.md
+      displayName: anonymous, app caching, launch time
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
       displayName: MicrosoftTeams.meeting.getAppContentStageSharingState
@@ -651,7 +649,11 @@
   - name: Teams app permissions
     href: graph-api/app-permissions/teams-app-permissions.md
   - name: Resource-specific consent
-    href: graph-api/rsc/resource-specific-consent.md
+    items:
+    - name: Overview
+      href: graph-api/rsc/resource-specific-consent.md
+    - name: Grant RSC permission to your app
+      href: graph-api/rsc/grant-resource-specific-consent.md
     displayName: Permissions, delegated
   - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
@@ -786,6 +788,12 @@
   - name: Test preview for monetized apps
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
     displayName: paid, AppSource, fee 
+  - name: Set up Microsoft license management
+    href: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
+    displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
+  - name: Purchase and manage app subscriptions and licenses
+    href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
+    displayName: Purchase, apps, License, manage
 - name: Grow your app
   items:
     - name: Strategize and execute growth for your app

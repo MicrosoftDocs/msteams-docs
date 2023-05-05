@@ -4,7 +4,7 @@ author: surbhigupta
 description: With this learning module, you'll learn how to plan for creating an app on Teams mobile and understand different stages to build app.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.author: v-abirade
+ms.author: surbhigupta
 ---
 # Plan responsive tabs for Teams mobile
 
@@ -26,7 +26,7 @@ After you've identified the app scope, it's time to understand the following thr
 
    View apps on mobile. To build an app on mobile, you can start with the consumption experience. Since the mobile world has made scrolling for content a common practice, you can show relevant information. Use engagement mechanisms, such as notifications to inform updates.
 
-2. **Quick Actions**
+2. **Quick actions**
 
    Use app on mobile. After your users start consuming the content on mobile, you can scale your app to the next level by migrating some actions from desktop app. You can optimize and build new actions for mobile.
 
@@ -146,7 +146,7 @@ In the first stage, you can consider desktop experience to show the content and 
 
 :::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png" alt-text="Shows content and assets in desktop experience.":::
 
-Quick Actions:
+Quick actions:
 
 In the second stage, you can introduce the following actions:
 
