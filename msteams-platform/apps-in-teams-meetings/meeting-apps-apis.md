@@ -1090,6 +1090,7 @@ To subscribe to participant events, follow the steps:
 1. Ensure that the following RSC delegated permissions are configured in your app manifest:
     * `OnlineMeetingParticipant.Read.Chat` for scheduled private meetings.
     * `ChannelMeetingParticipant.Read.Group` for scheduled channel meetings.
+    
     If your app doesn't have the above permissions add them through **Configure** > **Permissions** section of your app in Developer Portal.
 1. In the **Meeting events** section, select the required events from the following:
     * Participant join the meeting
@@ -1097,6 +1098,8 @@ To subscribe to participant events, follow the steps:
 1. Select **Save**
 
    :::image type="content" source="~/assets/images/apps-in-meetings/participant-events.png" alt-text="Screenshot shows how developer portal display for participant events.":::
+
+Following are the event payloads returned by the participant events:
 
 # [Participant join event](#tab/participant-join-event) 
 
