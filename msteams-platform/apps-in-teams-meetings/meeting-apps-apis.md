@@ -1016,73 +1016,12 @@ The following code provides an example of meeting end event payload:
 
 ## Get participant events
 
-Get participant events will provide your bot with real-time meeting participant events such as participant join and leave events. For example, if you want your bot app to notify or return the time stamp when an attendee joined or left the meeting subscribe to these participant events in Developer Portal. For a bot to receive participant events, ensure that you add the bot to the meeting before a participant joins or leaves the meeting.
-
-#### Prerequisite
-
-Your app manifest must have the following RSC delegated permissions to receive the participant join and leave events:
-
-* `OnlineMeetingParticipant.Read.Chat` for scheduled private meetings.
-* `ChannelMeetingParticipant.Read.Group` for scheduled channel meetings.
-
-Use the following examples to configure your app manifest:
-
-<br>
-
-<details>
-
-<summary><b>For app manifest version 1.12 and later</b></summary>
-
-```json
-"webApplicationInfo": {
-    "id": "<bot id>",
-    "resource": "https://RscPermission",
-    },
-"authorization": {
-    "permissions": {
-        "resourceSpecific": [
-            {
-                "name": "OnlineMeeting.ReadBasic.Chat",
-                "type": "Delegated"
-            }
-            {
-                "name": "ChannelMeetingParticipant.Read.Group",
-                "type": "Delegated"
-            }
-        ]    
-    }
-}
- ```
-
-<br>
-
-</details>
-
-<br>
-
-<details>
-
-<summary><b>For app manifest version 1.11 and earlier</b></summary>
-
-```json
-"webApplicationInfo": {
-    "id": "<bot id>",
-    "resource": "https://RscPermission",
-    "applicationPermissions": [
-      "OnlineMeeting.ReadBasic.Chat"
-      "ChannelMeetingParticipant.Read.Group"
-    ]
-}
- ```
-
-<br>
-
-</details>
+Your bot can receive real-time meeting details such as participant join and leave events through meeting event subscription in developer portal. For example, if you want your bot app to notify or return the time stamp when an attendee joined or left the meeting, subscribe to these participant events in Developer Portal.
 
 > [!NOTE]
-> Participant events is supported in scheduled private and channel meetings only.
-
-[RSC delegated permissions](~/resources/schema/manifest-schema.md#rsc-delegated-permissions)
+>
+> * Participant events is supported in scheduled private and channel meetings only.
+> * For a bot to receive participant events, ensure that you add the bot to the meeting before a participant joins or leaves the meeting.
 
 To subscribe to participant events, follow the steps:
 
@@ -1091,15 +1030,15 @@ To subscribe to participant events, follow the steps:
     * `OnlineMeetingParticipant.Read.Chat` for scheduled private meetings.
     * `ChannelMeetingParticipant.Read.Group` for scheduled channel meetings.
     
-    If your app doesn't have the above permissions add them through **Configure** > **Permissions** section of your app in Developer Portal.
-1. In the **Meeting events** section, select the required events from the following:
+    If your app doesn't have these permissions add them through **Configure** > **Permissions** section of your app in Developer Portal.For more information, see [RSC delegated permissions.](~/resources/schema/manifest-schema.md#rsc-delegated-permissions)
+1. In the **Meeting events** section, select the following events as per your choice:
     * Participant join the meeting
     * Participant leave the meeting
 1. Select **Save**
 
    :::image type="content" source="~/assets/images/apps-in-meetings/participant-events.png" alt-text="Screenshot shows how developer portal display for participant events.":::
 
-Following are the event payloads returned by the participant events:
+Following are the examples of the participant join and leave event payloads:
 
 # [Participant join event](#tab/participant-join-event) 
 
