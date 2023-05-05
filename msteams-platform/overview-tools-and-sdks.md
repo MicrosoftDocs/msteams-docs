@@ -1,7 +1,6 @@
 ---
 title: Exploring Tools and SDKs for building Teams apps
-description: Microsoft Teams platform features for your app on desktop and mobile. Tabs, bots, messaging extension, webhook, connectors, Microsoft Graph, or Adaptive Cards.
-ms.topic: overview
+description: In this module, learn different tools, SDKs and libraries to build you Microsoft Teams app.
 ms.localizationpriority: high
 ms.author: v-sdhakshina
 author: v-sdhakshina
@@ -13,17 +12,7 @@ Content to be added
 
 :::image type="content" source="assets/images/tools-and-sdks.png" alt-text="Screenshot shows you the tools and SDKs available for you to build Teams apps."lightbox="assets/images/tools-and-sdks.png":::
 
-:::row:::
-    :::column span="1":::
-        **Teams Toolkit**
-    :::column-end:::
-    :::column span="2":::
-        Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio Code and Visual Studio.
-
-        > [!div class="nextstepaction"]
-        > [Teams Toolkit](~/toolkit/teams-toolkit-fundamentals.md)
-    :::column-end:::
-:::row-end:::
+## SDKs and libraries to build Teams app
 
 :::row:::
     :::column span="1":::
@@ -34,30 +23,6 @@ Content to be added
 
         > [!div class="nextstepaction"]
         > [TeamsFx SDK](~/toolkit/teamsfx-sdk.md)
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column span="1":::
-        **Teams Toolkit CLI**
-    :::column-end:::
-    :::column span="2":::
-        TeamsFx CLI is a text-based command line interface that accelerates Teams application development.
-
-        > [!div class="nextstepaction"]
-        > [Teams Toolkit CLI](~/toolkit/teamsfx-cli.md)
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column span="1":::
-        **Developer Portal for Teams**
-    :::column-end:::
-    :::column span="2":::
-        Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Microsoft Teams apps.
-
-        > [!div class="nextstepaction"]
-        > [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md)
     :::column-end:::
 :::row-end:::
 
@@ -123,18 +88,6 @@ Content to be added
 
 :::row:::
     :::column span="1":::
-        **Microsoft Graph**
-    :::column-end:::
-    :::column span="2":::
-        Microsoft Graph is the gateway to data and intelligence in Microsoft 365.
-
-        > [!div class="nextstepaction"]
-        > [Microsoft Graph](/graph/sdks/sdks-overview)
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column span="1":::
         **SharePoint Framework (SPFx)**
     :::column-end:::
     :::column span="2":::
@@ -154,5 +107,57 @@ Content to be added
 
         > [!div class="nextstepaction"]
         > [Live Share SDK](~/apps-in-teams-meetings/teams-live-share-overview.md)
+    :::column-end:::
+:::row-end:::
+
+## Azure AD-secured REST APIs
+
+:::row:::
+    :::column span="1":::
+        **Microsoft Graph**
+    :::column-end:::
+    :::column span="2":::
+        Microsoft Graph is the gateway to data and intelligence in Microsoft 365.
+
+        > [!div class="nextstepaction"]
+        > [Microsoft Graph](/graph/sdks/sdks-overview)
+    :::column-end:::
+:::row-end:::
+
+## Tools
+
+:::row:::
+    :::column span="1":::
+        **Teams Toolkit**
+    :::column-end:::
+    :::column span="2":::
+        Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio Code and Visual Studio.
+
+        > [!div class="nextstepaction"]
+        > [Teams Toolkit](~/toolkit/teams-toolkit-fundamentals.md)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        **Teams Toolkit CLI**
+    :::column-end:::
+    :::column span="2":::
+        TeamsFx CLI is a text-based command line interface that accelerates Teams application development.
+
+        > [!div class="nextstepaction"]
+        > [Teams Toolkit CLI](~/toolkit/teamsfx-cli.md)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        **Developer Portal for Teams**
+    :::column-end:::
+    :::column span="2":::
+        Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Microsoft Teams apps.
+
+        > [!div class="nextstepaction"]
+        > [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md)
     :::column-end:::
 :::row-end:::
