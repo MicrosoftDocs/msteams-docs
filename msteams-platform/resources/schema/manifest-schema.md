@@ -930,8 +930,8 @@ Contains objects that define the set of extensions for the app. Used to specify 
 |`alternates`| array | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both. For more information, see the [EquivalentAddins - See also](/javascript/api/manifest/equivalentaddins) for background information. |
 |`audienceClaimUrl`| string | 2048 | | The url for your extension, used to validate Exchange user identity tokens. |
 
-For additional details, see the [extension property](/office/dev/add-ins/develop/json-manifest-overview) in the Office Add-ins manifest documentation.
 For more information, see the [extension property](/office/dev/add-ins/develop/json-manifest-overview) in the Office Add-ins manifest documentation.
+
 ## Create a manifest file
 
 If your app doesn't have a Teams app manifest file, you'll need to create it.
