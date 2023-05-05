@@ -65,8 +65,8 @@ App can define the following objects under the `surface` parameter:
 
 ## Code sample
 
-Sample name | Description | .NET |
-|----------------|-----------------|--------------|----------------|----------------|
+|Sample name | Description | .NET |
+|----------------|-----------------|--------------|
 | Visual indicator for your Teams app | This sample demonstrates how to enable visual indicator for your Teams app. | [Link to be added] |
 
 ## See also
