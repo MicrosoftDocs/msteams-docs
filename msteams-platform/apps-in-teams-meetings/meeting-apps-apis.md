@@ -1016,11 +1016,7 @@ The following code provides an example of meeting end event payload:
 
 ## Get participant events
 
-Get participant events will provide your bot with real-time meeting participant events such as participant join and leave events. For example, if you want your app to notify or return the time stamp when an attendee joined or left the meeting or when an  has left meeting ticipant events will help your app to determine the participant joinning and leaving information 
-
-
-For a bot to receive participant events, ensure that you add the bot to the meeting before a participant joins or leaves the meeting.
-
+Get participant events will provide your bot with real-time meeting participant events such as participant join and leave events. For example, if you want your bot app to notify or return the time stamp when an attendee joined or left the meeting subscribe to these participant events in Developer Portal. For a bot to receive participant events, ensure that you add the bot to the meeting before a participant joins or leaves the meeting.
 
 #### Prerequisite
 
@@ -1090,7 +1086,11 @@ Use the following examples to configure your app manifest:
 
 To subscribe to participant events, follow the steps:
 
-1. open your bot app through [Developer Portal](https://dev.teams.microsoft.com/).
+1. In [Developer Portal](https://dev.teams.microsoft.com/) open your bot app or import an existing app.
+1. Ensure that the following RSC delegated permissions are configured in your app manifest:
+    * `OnlineMeetingParticipant.Read.Chat` for scheduled private meetings.
+    * `ChannelMeetingParticipant.Read.Group` for scheduled channel meetings.
+    If your app doesn't have the above permissions add them through **Configure** > **Permissions** section of your app in Developer Portal.
 1. In the **Meeting events** section, select the required events from the following:
     * Participant join the meeting
     * Participant leave the meeting
@@ -1098,7 +1098,7 @@ To subscribe to participant events, follow the steps:
 
    :::image type="content" source="~/assets/images/apps-in-meetings/participant-events.png" alt-text="Screenshot shows how developer portal display for participant events.":::
 
-# [Participant join event](#tab/Participant join event) 
+# [Participant join event](#tab/participant-join-event) 
 
 The following code provides an example of the participant join event payload:
 
@@ -1148,7 +1148,7 @@ The following code provides an example of the participant join event payload:
 } 
 ```
 
-# [Participant leave event](#tab/Participant leave event) 
+# [Participant leave event](#tab/participant-leave-event) 
 
 The following code provides an example of the participant leave event payload:
 
