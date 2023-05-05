@@ -5,7 +5,7 @@ description: Learn how Microsoft Teams apps helps your users in the Teams enviro
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.date: 11/02/2021
+ms.date: 04/16/2023
 ---
 # From ideas to Teams app
 
