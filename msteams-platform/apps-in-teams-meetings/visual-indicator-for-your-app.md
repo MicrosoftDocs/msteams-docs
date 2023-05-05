@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 The Visual indicator on the Ubar indicates the meeting participants don't miss any real-time information from meeting apps, even when the side panel is closed. The app calls meeting notification API, whenever there's new activity during the meeting, which displays a red indicator on the app icon in the meeting Ubar, seeking participants attention to the activity.
 
-For example, a meeting participant A adds a new comment to a file during real-time collaboration, the app calls meeting notification API from meeting participant A’s side panel as soon as meeting participant A added the new comment. All other meeting participants can see the visual indicator on the app icon.
+For example, during a real time collaboration in a meeting, if participant A adds a new comment to a file, the app will call the meeting notification API from participant A's side panel. This will trigger a visual indicator on the app icon, making all the other participants aware of the new comment
 
 The following image shows you the visual indicator on the app icon in the meeting Ubar:
 
