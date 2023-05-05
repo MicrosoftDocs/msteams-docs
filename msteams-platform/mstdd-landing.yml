@@ -52,6 +52,8 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      - text: Deep link to the meeting side panel
+        url: apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel
       - text: Develop your apps with Teams Toolkit
         url: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
       - text: Contextless app update
@@ -70,13 +72,9 @@ landingContent:
         url:  concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
       - text: Build a dashboard tab app
         url:  tabs/how-to/build-a-dashboard-tab-app.md
-      - text: Targeted in-meeting notification (Developer preview)
-        url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
 
     - linkListType: whats-new
       links:
-      - text: Deep link to the meeting side panel
-        url: apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel
       - text: Set up Microsoft license management
         url: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
       - text: Apps for Teams meetings support anonymous users
@@ -95,6 +93,8 @@ landingContent:
         url: task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu
       - text: Support global routing for bot APIs
         url: bots/how-to/conversations/send-proactive-messages.md#create-the-conversation
+      - text: Developer Portal for Teams is now available for GCC tenants
+        url: concepts/build-and-test/teams-developer-portal.md
 
 
 - title: Get started
