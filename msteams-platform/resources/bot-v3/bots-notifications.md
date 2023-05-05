@@ -1,7 +1,7 @@
 ---
 title: Handle bot events
 description: In this module, learn how to handle events in bots for Microsoft Teams, Teams member or bot addition, Team member or bot removed and more
-ms.date: 05/20/2019
+ms.date: 04/02/2023
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
