@@ -169,37 +169,39 @@ On the left side of Teams, users can right-click the personal app to pin, remove
 
 Use these recommendations to create a quality app experience.
 
-### Tab priority
+### Desktop
 
-#### Do: Show the most relevant content in the first tab
+#### Tab priority
+
+##### Do: Show the most relevant content in the first tab
 
 With responsive sizing, tabs on the right may become truncated or out of view.
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-do.png" alt-text="Example shows a personal app displaying the most relevant content in the first tab.":::
 
-#### Don’t: Lead with secondary content or metadata
+##### Don’t: Lead with secondary content or metadata
 
 Like a standard web app, tab navigation should progress in an order that helps make sense of your app’s primary features.
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="Example shows a personal app leading with secondary content or metadata.":::
 
-### Tab hierarchy
+#### Tab hierarchy
 
-#### Do: Tabs should be of equal hierarchy and represent key app pages
+##### Do: Tabs should be of equal hierarchy and represent key app pages
 
 Your tabs should categorize your app’s primary features and content. With responsive sizing, content on the right may become truncated or out of view.
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="Example shows a personal app with tabs of equal hierarchy.":::
 
-#### Don't: Include different levels of hierarchy
+##### Don't: Include different levels of hierarchy
 
 Your content should progress in a logical order that helps users make sense of it. If you have two tabs that are closely related, consider combining them into one tab.
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="Example shows a personal app with different levels of hierarchy.":::
 
-### First-run experience
+#### First-run experience
 
-#### Do: Include a first-run experience
+##### Do: Include a first-run experience
 
 There should be at least a welcome screen the first time you use a personal app. For bots, describe what your bot can do and provide quick actions, such as a sign in.
 
@@ -207,15 +209,15 @@ There should be at least a welcome screen the first time you use a personal app.
 
 :::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="Another example shows what to do during a personal app first-run experience.":::
 
-#### Don't: Start with a blank screen
+##### Don't: Start with a blank screen
 
 Users might be confused if nothing displays the first time they run your app.
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="Example shows what not to do during a personal app first-run experience.":::
 
-### Personalized content
+#### Personalized content
 
-#### Do: Aggregate app content relevant to a user
+##### Do: Aggregate app content relevant to a user
 
 Whether it's a personal tab or bot, display content related to only a user's activity in your app.
 
@@ -223,7 +225,7 @@ Whether it's a personal tab or bot, display content related to only a user's act
 
 :::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-do.png" alt-text="Another example shows what to do with a personal app and personalized content.":::
 
-#### Don’t: Show unrelated or overly broad content
+##### Don’t: Show unrelated or overly broad content
 
 In personal contexts, don’t display content for teams a user isn't part of. Personal bot content should focus on the individual—not a group.
 
@@ -231,19 +233,23 @@ In personal contexts, don’t display content for teams a user isn't part of. Pe
 
 :::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-dont.png" alt-text="Another example shows what not to do with a personal app and personalized content.":::
 
-### Complex app features
+#### Complex app features
 
-#### Do: Allow users to access complex features in a browser
+##### Do: Allow users to access complex features in a browser
 
 Your app should focus on core tasks in Teams, but you can still view the full, standalone app in a browser.
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="Example shows how to handle complex app features with a personal app.":::
 
-#### Don’t: Include your entire app
+##### Don’t: Include your entire app
 
 Unless you created your app specifically for Teams, you probably have features that don’t make sense in a collaboration tool.
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="Example shows how not to handle complex app features with a personal app.":::
+
+### Mobile
+
+:::image type="content" source="~/assets/images/personal-apps/personal-app-best-practice-mobile.png" alt-text="Example shows best practices for a personal app in mobile.":::
 
 ## Code sample
 
