@@ -23,7 +23,7 @@ Here are some use cases for fetching meeting recordings using Graph API:
 To fetch the recording for a particular meeting:
 
 - [Configure permissions on Azure AD to access recording](#configure-permissions-on-azure-ad-to-access-recording)
-- [Obtain meeting ID and organizer ID](fetch-id.md)
+- [Obtain meeting ID and organizer ID](../meeting-transcripts/fetch-id.md)
 - Use Graph APIs to fetch recording - link to be added
 
 ## Configure permissions on Azure AD to access recording
@@ -47,15 +47,14 @@ After you've configured the permissions, configure your app to receive change no
 > [!NOTE]
 > The docx format for recordings will be deprecated starting May 31, 2023. For more information, see Get callTranscript - link to be added.
 
-For more information about how your app can know when the meetings ends, see [subscribe to change notifications](fetch-id.md#subscribe-to-change-notifications) and [use Bot Framework to get meeting ID and organizer ID](fetch-id.md#use-bot-framework-to-get-meeting-id-and-organizer-id).
-
+For more information about how your app can know when the meetings ends, see [subscribe to change notification](../meeting-transcripts/fetch-id.md#subscribe-to-change-notifications)s and [use Bot Framework to get meeting ID and organizer ID](../meeting-transcripts/fetch-id.md#use-bot-framework-to-get-meeting-id-and-organizer-id).
 > [!NOTE]
 > The process for calling Graph APIs to access and retrieve recordings remains the same for both meeting-specific RSC application permissions or organization-wide application permissions. These APIs currently support only scheduled meetings.
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Obtain meeting ID and organizer ID](fetch-id.md)
+> [Obtain meeting ID and organizer ID](../meeting-transcripts/fetch-id.md)
 
 ## See also
 
