@@ -177,10 +177,47 @@ The configuration page code informs Teams that the configuration requirements ar
 
 ## Migrate configurable tab to instant tab
 
-move all the configuration logic out of your configuration dialog and into your contentUrl. Your configurationUrl (dialog) should be very simple, and all it should do is show a light-hearted splash screen and ask the user to pin the tab (ie: pin the contentUrl). If you are doing any middle-tier requests or API calls int the configuration dialog: move them into your configurationUrl instead. The getSettings and setSettings APIs that you are accustomed to using in your configuration dialog can also be used from contentUrl. This is where you should really be moving all you configuration logic: in the contentUrl. 
+Move all the configuration logic out of your configuration dialog and into your contentUrl. Your configurationUrl (dialog) should be very simple, and all it should do is show a light-hearted splash screen and ask the user to pin the tab (ie: pin the contentUrl). If you are doing any middle-tier requests or API calls int the configuration dialog: move them into your configurationUrl instead. The getSettings and setSettings APIs that you are accustomed to using in your configuration dialog can also be used from contentUrl. This is where you should really be moving all you configuration logic: in the contentUrl. 
 
  
 This will allow you to get your configurable tab ready for Instant Tabs. All that will be required to adopt Instant (Static) Tabs after this is done is to update your manifest by adding a `staticTab` that pins the `contentUrl` you decided to use in the given `scope` and `context`. 
+
+If your static tab will serve custom content based on the context that the tab is being pinned in, then you will need to set a contentUrl where you plan to do some setup. For example: a developer may decide to serve a slightly different experience in meetings and so may choose to pin a setup/bootstrap page where a new contentUrl is set at runtime in the tab itself. For example, if your contentUrl is `https://wwww.contoso.com/teamsapp/setup`, then this page will get pinned where you can change the contentUrl at runtime, like this: 
+
+```javascript
+
+// inside https://wwww.contoso.com/teamsapp/setup 
+import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'; 
+await app.initialize(); 
+app.getContext((context) => { 
+     // pinned as a meeting tab, so we want to change the contentUrl 
+     if(context.meetingId) { 
+         // change the contentUrl at runtime 
+         const configPromise = pages.config.setConfig({ 
+             contentUrl: "https://wwww.contoso.com/teamsapp/meeting/" + context.meetingId, 
+             websiteUrl: "https://wwww.contoso.com/meeting/" + context.meetingId 
+         }); 
+     configPromise. 
+     then((result) => {saveEvent.notifySuccess()}). 
+     catch((error) => {saveEvent.notifyFailure("failure message")}); 
+     } 
+}); 
+
+```
+
+Once the above code completes, the tabs contentUrl will have been changed for that tab instance. All subsequent visits by users will load the new contentUrl instead of the url that was originally defined in the manifest. 
+
+Note: you will not be able to change the displayName or entitId of your tab. This is defined by the the app manifest. 
+
+In short: you can use your contentUrl to simply serve content, or use it similarly like you used your configurationUrl to customize the content being served for that tab. 
+
+If your configurable tab allowed users to edit the tab after it was pinned (ie: canUpdateConfiguration: true) then you should continue to keep the configurableTab property in your manifest in order to ensure users can edit pre-existing pinned configurable tabs
+
+### Determine your `contentUrl`
+
+With configurable tabs, the `contentUrl` is defined at runtime during by the user in the tab configuration dialog, which is served from the `configurationUrl` in the manifest. The outcome of this dialog is a `contentUrl` and some other properties. 
+
+If your static tab will always be pinning the same `contentUrl`, you can create a `staticTab` object in your manifest and set your `contentUrl`. This is what will get pinned when the user selects your app to be pinned. This may be the case for most developers. 
 
 ### Get context data for your tab settings
 
