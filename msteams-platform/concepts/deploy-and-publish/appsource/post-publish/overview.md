@@ -68,7 +68,11 @@ After you stop the distribution of an app, you can still see it in Partner Cente
 
 ## Ratings and review for Teams apps
 
-Users can provide ratings and reviews to give feedback on their experience with an app on the Teams store. Users can rate your app on a scale of one to five stars and provide a summary of their experience, which is displayed on your product page or app details page and in search results. As you can view all the reviews for your app in Partner Center, the responses to the reviews are displayed on the Teams store. Ratings and reviews help improve your app’s discoverability, user retention, encourage downloads, and in-app revenue on Teams store.
+Users can provide ratings and reviews to give feedback on their experience with an app on the Teams store. Users can rate your app from one to five stars and must provide a summary of their experience. These ratings are displayed on the app tile on store for users to view while browsing and in search results. You can view all the reviews and respond to the reviews in Partner Center, these responses are displayed on the Teams store and AppSource. Ratings and reviews help improve your app’s discoverability, user retention, and encourage downloads on Teams store.
+
+>[!NOTE]
+>Ratings and reviews are not provided for LOB apps.
+
 
 ## See also
 
