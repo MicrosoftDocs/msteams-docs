@@ -721,6 +721,8 @@
         href: bots/how-to/Teams conversational AI/conversation-ai-quick-start.md
       - name: Teams AI core capabilities
         href: bots/how-to/Teams conversational AI/how-conversation-ai-get-started.md
+      - name: Build your first app using Teams conversational AI
+        href: sbs-botbuilder-conversation-AI.yml
       - name: Teams conversational AI FAQs
         href: bots/how-to/Teams conversational AI/coversational-ai-faq.md
   - name: Microsoft Graph
