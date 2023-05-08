@@ -13,16 +13,17 @@ Walk through the steps to build a basic, real-world Teams app. The Get started a
 Here's an idea of what you learn:
 
 * Get up and running quickly with the Microsoft Teams Toolkit (a Visual Studio Code extension).
+* Learn to build apps with codespace.
 * Learn to build scenario-based apps, such as a notification bot.
-* Get experience with the Toolkit and SDKs.
-* Configure and build different types of Teams apps.
-* Learn about extending your Teams app across Microsoft 365.
+* Learn to build message extension.
+* Learn to build different types of Teams apps with the help of tutorials and code samples.
 
 ## Choose your path to learn
 
-(Note: please edit the content!)
+In this section, learn more about your Teams app capabilities such as tab, scenerio-based app, and message extension. You can use one of the following ways to build your Teams app with different capabilities:
 
-In this section, you will learn these three major app capabilities--tab, bot, and message extension. And each tutorial, you have two ways to learn. One way is a quickstart using a GitHub Codespaces instance, and another way takes longer but you learn step by step.
+* GitHub Codespaces - Allows you to run, test, and debug your app as you used to do in a development environment without the need for any of the setup we're used to.
+* Step by step guide - Allows you to create a Teams app from scratch with all development environment setup.
 
 :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Illustration showing your choices to build Teams app - Codespaces bundles all you need and it only takes several minutes to rey, while getting started manually will take time but you learn step-by-step":::
 
@@ -30,8 +31,7 @@ In this section, you will learn these three major app capabilities--tab, bot, an
 
 (Note: Move some content to Overview > Tools and SDKs (title TBD))
 
-
-Depending on the capabilities you want for your app, choose an appropriate development tool set.
+Based on the capabilities you want for your app, choose an appropriate development tool set.
 
 | App capabilities | Tabs | Bots | Message extensions |
 |--------|-------------|--------|--------|
@@ -39,11 +39,10 @@ Depending on the capabilities you want for your app, choose an appropriate devel
 | **Recommended tools** | Microsoft Visual Studio Code with Teams Toolkit extension, or TeamsFx CLI if you prefer using CLI | Visual Studio Code with Teams Toolkit extension, or TeamsFx CLI | Visual Studio Code with Teams Toolkit extension, or TeamsFx CLI |
 | **SDKs** | TeamsFx SDK for core libs and Teams JavaScript client library for UI functionalities | TeamsFx SDK and Bot Framework SDK | TeamsFx SDK and Bot Framework SDK |
 | **Technology stacks or Languages** | Web technology in general, HTML, CSS, and JavaScript (incl. React). | Node.js, C#, Java, and Python. | Node.js, C#, Java, and Python. |
-| **Extend for Microsoft 365** | | | |
 
 *You aren't limited to using these particular stacks!*
 
-If you are already familiar with Yeoman workflow, you may prefer using [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps.
+If you are already familiar with Yeoman workflow, you can use [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps.
 
 ## See also
 
