@@ -612,6 +612,71 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 
 ```
 
+## Extend static personal tabs to group chat and channel scopes
+
+Extending static tabs to different scopes will have a number of benefits, including allowing tabs to be pre-pinned by admins and be included as pre-pinned tabs in meeting templates. It will also allow you to build tabs that behave more like apps, instead of pinned app content as there will only ever be one tab pinned at a time. 
+
+>[!NOTE] 
+> static tabs in personal apps will continue to work the same, YOU will find that static tabs now work outside of personal apps with many of the same benefits of classic configurable tabs.
+>
+> If you have both a configurable tab and a static tab in your app manifest that work in a specific context, Teams will always bias towards pinning the static tab and ignore the configurable tab. 
+
+Here are some of the additional benefits coming to static tabs in chats, channel and meeting tabs: 
+
+* **Pinnable**: End users can now pin apps with static tabs from the [+] button in chats, channels or meetings. Users can also find and pin these tabs from the Teams app store. These tabs can also be unpinned. 
+
+* **Instant**: End users just have to select your app to pin it. No more mandatory configuration dialog. 
+
+* **Single instance**: End users can only pin one tab per app, allowing users to pin single instance apps. This allows you to create tabs that function more like apps. 
+
+* **Unified**: You can create one static tab that work in every context of Teams, personal apps and group contexts (such as chat, channel, and meeting tabs). 
+
+* **Optional configuration**: You can change your app's `contentUrl` after it's been pinned. Useful if you do wish to change the default url in your tab instance. 
+
+### Manifest update
+
+Below is a sample static tab defined in the app manifest that will work in all scopes and contexts in Teams:
+
+```json
+"staticTabs": [ 
+  { 
+     "entityId": "homeTab", 
+     "scopes": [ 
+       "personal", 
+       "team", 
+       "groupchat" 
+      ], 
+     "context": [ 
+       "personalTab", 
+       "channelTab", 
+       "privateChatTab", 
+       "meetingChatTab", 
+       "meetingDetailsTab", 
+       "meetingSidePanel", 
+       "meetingStage" 
+      ], 
+      "name": "Contoso", 
+      "contentUrl": "https://contoso.com/content (displayed in Teams canvas)", 
+      "websiteUrl": "https://contoso.com/content (displayed in web browser)" 
+  }
+], 
+
+```
+
+If context is not defined in the app manifest, then Teams will default to the following:
+
+```json
+"context": [ 
+   "personalTab", 
+   "channelTab", 
+   "privateChatTab", 
+   "meetingChatTab", 
+   "meetingDetailsTab",
+   "meetingStage" 
+]
+```
+
+
 ## Code sample
 
 | Sample name | Description | .NET |Node.js|Manifest|
