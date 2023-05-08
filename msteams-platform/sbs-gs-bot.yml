@@ -17,7 +17,7 @@ items:
     Start Microsoft Teams app development with your first Teams app. 
     You can create a bot app with Teams. 
 
-    Your app will have a capability, which comes with its own UI and UX:
+    Your app has a capability, which comes with its own UI and UX:
     
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram shows that this app has three features.":::
     
@@ -212,11 +212,11 @@ items:
            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
 
        1. Select the location for project workspace.
-       1. Select the **Select Folder**.
+       1. Select **Select Folder**.
 
            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot shows the folder to select.":::
 
-    1. Enter a suitable name for your app. Select **Enter**.
+    1. Enter a suitable name for your app and select the **Enter** key.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
 
@@ -265,7 +265,7 @@ items:
 
     ## Take a tour of the bot app source code
 
-    After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
+    After scaffolding is completed, view the project directories and files in the Explorer area of Visual Studio Code.
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/folder-structure-bot-app.png" alt-text="Screenshot shows the folder structure.":::
 
@@ -479,7 +479,7 @@ items:
       Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
 
       * The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
-      * The frontend application will be deployed to an Azure Storage account configured for static web hosting.
+      * The frontend application is deployed to an Azure Storage account configured for static web hosting.
 
       </details>
 
@@ -491,15 +491,7 @@ items:
 
     You've created a bot app.
 
-    Now that you've learned to create a basic app, you can move on to creating more complex apps. To start with, try adding capabilities to your existing apps.
-
-    To add capabilities to your existing app:
-
-    1. Select **Add features** from the **Development** section of the Teams Toolkit sidebar.
-
-    1. Select the capability you want to add to your app.
-
-    That's it! Teams Toolkit adds the scaffolding for the new capability to your app's directory structure. Follow the procedures to build and deploy the app, and your app will have multiple capabilities. 
+    Now that you've learned to create a basic app, you can move on to creating more complex apps. Follow the procedures to build and deploy the app, and your app will have multiple features.
 
     You've completed the tutorial to build bot with JavaScript.
     
