@@ -390,10 +390,9 @@ items:
     AI: 
     ```
 
-    </details>
-    <details open>
-        <summary><h3>Conversational session history</h3></summary>
-        Because this sample leaves the conversation to GPT, the bot simply facilitates user conversation as-is. But because it includes the 'prompt.txt' file to guide it, GPT will store and leverage session history appropriately. From the 'prompt.txt' file:
+    ## Conversational session history</h3></summary>
+        
+    Because this sample leaves the conversation to GPT, the bot simply facilitates user conversation as-is. But because it includes the 'prompt.txt' file to guide it, GPT will store and leverage session history appropriately. From the 'prompt.txt' file:
 
     ```
     Conversation history:
