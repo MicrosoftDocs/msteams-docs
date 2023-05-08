@@ -33,6 +33,8 @@
     href: get-started/build-basic-tab-app.md
   - name: Build notification bot
     href: get-started/build-notification-bot.md
+  - name: Build message extension
+    href: get-started/build-message-extension.md
   - name: Teams app tutorials and code samples
     href: get-started/teams-toolkit-tutorial.md
  

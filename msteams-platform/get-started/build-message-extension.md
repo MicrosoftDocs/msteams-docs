@@ -26,7 +26,7 @@ But before you create your codespace, ensure that you have:
 * A [Microsoft 365 account](https://developer.microsoft.com/microsoft-365/dev-program) with sideloading permission
 * A [Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
 
-To use codespaces for creating a message extension:
+To use codespaces for creating a search based message extension:
 
 <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=dev&repo=348288141&machine=basicLinux32gb&location=WestUs2&devcontainer_path=.devcontainer%2Fnpm-search-message-extension-codespaces%2Fdevcontainer.json" target="_blank"><img src="https://github.com/codespaces/badge.svg" alt="Open message extension in GitHub Codespaces"></a>
 
