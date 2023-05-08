@@ -671,7 +671,7 @@ If context is not defined in the app manifest, then Teams will default to th
    "channelTab", 
    "privateChatTab", 
    "meetingChatTab", 
-   "meetingDetailsTab",
+   "meetingDetailsTab", 
    "meetingStage" 
 ]
 ```

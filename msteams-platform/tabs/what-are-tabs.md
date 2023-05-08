@@ -38,7 +38,7 @@ Following helps you determine the best fit for your app:
 
 | &nbsp; |Personal scope|Channel, groupchat, or meetings scope|
 |---|---|---|
-|[Personal (Static) tabs](~/tabs/how-to/create-personal-tab.md)|✔️|❌|
+|[Static (Personal) tabs](~/tabs/how-to/create-personal-tab.md)|✔️|❌|
 |[Configurable tabs](~/tabs/how-to/create-channel-group-tab.md)|❌|✔️|
 |Instant tab|✔️|✔️|
 
