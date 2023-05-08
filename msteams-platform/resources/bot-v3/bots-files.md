@@ -4,7 +4,7 @@ description: Learn how to send and receive files through the bot using Graph API
 keywords: teams bots files send receive
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 05/20/2019
+ms.date: 04/02/2023
 ---
 # Send and receive files using bots
 
