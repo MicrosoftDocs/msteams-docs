@@ -20,7 +20,15 @@ The following image shows personal tabs:
 
 The following image shows Contoso channel tabs:
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Channel or group tabs" lightbox="../assets/images/tabs/tabs.png":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="~/assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a channel.":::
+
+---
 
 There are few prerequisites that you must go through before working on tabs.
 
