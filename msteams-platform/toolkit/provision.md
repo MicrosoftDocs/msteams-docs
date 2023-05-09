@@ -26,9 +26,9 @@ The following list shows the actions designed for provision.
 
 ### teamsApp/create
 
-#### What it is
+#### What it's
 
-This action will create a new Teams app for you if the environment variable that stores Teams app id is empty or the app with given id is not found from Teams Developer Portal.
+This action will create a new Teams app for you if the environment variable that stores Teams app ID is empty or the app with given ID isn't found from Teams Developer Portal.
 
 #### What resource it operates
 
@@ -49,9 +49,9 @@ Teams app in Teams Developer Portal.
 
 ### teamsApp/update
 
-#### What it is
+#### What it's
 
-Apply the Teams app manifest to an existing Teams app in Teams Developer Portal. It will use the app id in manifest.json file to determine which Teams app to update.
+Apply the Teams app manifest to an existing Teams app in Teams Developer Portal. It will use the app ID in manifest.json file to determine which Teams app to update.
 
 #### What resource it operates
 
@@ -68,7 +68,7 @@ Teams app in Teams Developer Portal.
 
 ### teamsApp/validateManifest
 
-#### What it is
+#### What it's
 
 This action will render Teams app manifest template with environment variables and validate Teams app manifest file using its schema.
 
@@ -87,7 +87,7 @@ N/A
 
 ### teamsApp/validateAppPackage
 
-#### What it is
+#### What it's
 
 This action will validate Teams app package using validation rules.
 
@@ -106,7 +106,7 @@ N/A
 
 ### teamsApp/zipAppPackage
 
-#### What it is
+#### What it's
 
 This action will render Teams app manifest template with environment variables, and zip manifest file with two icons.
 
@@ -135,7 +135,7 @@ This action will publish built Teams app zip file to tenant app catalog.
 
 #### What resource it operates
 
-Teams app in M365 tenant app catalog.
+Teams app in Microsoft 365 tenant app catalog.
 
 #### How to use it
 
@@ -154,18 +154,18 @@ Teams app in M365 tenant app catalog.
 
 #### What it is
 
-This action will create a new Azure Active Directory (AAD) application to authenticate users if the environment variable that stores clientId is empty.
+This action will create a new Azure Active Directory (Azure AD) application to authenticate users if the environment variable that stores clientId is empty.
 
 #### What resource it operates
 
-AAD in your Microsoft 365 tenant.
+Azure AD in your Microsoft 365 tenant.
 
 #### How to use it
 
 ```typescript
 - uses: aadApp/create
     with:
-      # Required. The AAD app's display name. When you run aadApp/update, the AAD app name will be updated based on the definition in manifest. If you don't want to change the name, make sure the name in AAD manifest is the same with the name defined here.
+      # Required. The AAD app's display name. When you run aadApp/update, the Azure Active Directory AD app name will be updated based on the definition in manifest. If you don't want to change the name, make sure the name in AAD manifest is the same with the name defined here.
       name: <your-application-name>
       # Required. If the value is false, the action will not generate client secret for you
       generateClientSecret: true
@@ -173,7 +173,7 @@ AAD in your Microsoft 365 tenant.
       signInAudience: "AzureADMyOrg"
     # Write the information of created resources into environment file for the specified environment variable(s).
     writeToEnvironmentFile:
-      # Required. The client (application) ID of AAD application. The action will refer the environment variable defined here to determine whether to create a new AAD app.
+      # Required. The client (application) ID of Azure Active Directory AD application. The action will refer the environment variable defined here to determine whether to create a new AAD app.
       clientId: <your-preferred-env-var-name>
       # Required when `generateClientSecret` is `true`. The action will refer the environment variable defined here to determine whether to create a new client secret. It's recommended to add `SECRET_` prefix to the environment variable name so it will be stored to the .env.{envName}.user environment file.
       clientSecret: <your-preferred-env-var-name>
@@ -191,11 +191,11 @@ AAD in your Microsoft 365 tenant.
 
 #### What it is
 
-This action will update your AAD application based on give AAD app manifest. It will refer the id property in AAD app manifest to determine which AAD app to update.
+This action will update your Azure AD application based on give Azure AD app manifest. It will refer the ID property in Azure AD app manifest to determine which Azure AD app to update.
 
 #### What resource it operates
 
-AAD in your Microsoft 365 tenant.
+Azure AD in your Microsoft 365 tenant.
 
 #### How to use it
 
@@ -212,11 +212,11 @@ AAD in your Microsoft 365 tenant.
 
 #### What it is
 
-This action will create a new or reuse an existing AAD application for bot.
+This action will create a new or reuse an existing Azure AD application for bot.
 
 #### What resource it operates
 
-AAD in your Microsoft 365 tenant.
+Azure AD in your Microsoft 365 tenant.
 
 #### How to use it
 
@@ -319,7 +319,7 @@ The provision steps are defined in `teamsapp.yml` file, under `provision` proper
 
 #### Reference environment variables in parameter files
 
-Teams Toolkit supports referencing the values from environment variables in `teamsapp.yml`, Teams app manifest, AAD app manifest, and Azure parameter files. You can use syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
+Teams Toolkit supports referencing the values from environment variables in `teamsapp.yml`, Teams app manifest, Azure AD app manifest, and Azure parameter files. You can use syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
 
 The following example sets the value of environment variable `MY_AZURE_SUBSCRIPTION_ID` to `subscriptionId`:
 
@@ -358,7 +358,7 @@ You can follow below steps to add environment variables to the .env files to use
 
 1. Open `teamsapp.yml` and find the `aadApp/create` action.
 
-1. Find the environment variable names that stores information for Azure AD app in the `writeToEnvironmentFile` property. Below are the default `writeToenvironmentFile` definition if you create projects using Teams Toolkit:
+1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. Below are the default `writeToenvironmentFile` definition if you create projects using Teams Toolkit:
 
  ```typescript
  writeToEnvironmentFile:
@@ -403,7 +403,7 @@ You can follow below steps to add environment variables to the .env files to use
 
 1. Open `teamsapp.yml` and find the `botAadApp/create` action.
 
-1. Find the environment variable names that stores information for Azure AD app in the `writeToEnvironmentFile` property. Below are the default `writeToEnvironmentFile` definition if you create projects using Teams Toolkit:
+1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. Below are the default `writeToEnvironmentFile` definition if you create projects using Teams Toolkit:
 
  ```typescript
  writeToEnvironmentFile:
