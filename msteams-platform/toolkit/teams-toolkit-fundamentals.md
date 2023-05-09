@@ -11,8 +11,6 @@ zone_pivot_groups: teams-app-platform
 
 # Teams Toolkit Overview
 
-::: zone pivot="visual-studio-code"
-
 Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio Code.
 
 * Start with a project templates for common line-of-business app scenarios or from a sample.
@@ -33,34 +31,24 @@ Teams Toolkit is available for free for Visual Studio Code. For more information
 | Installation | Available in the VS Code Marketplace |
 | Build with | JavaScript, TypeScript, React, SPFx |
 
-::: zone-end
-
 ## Features
 
 The following list provides the key features of Teams Toolkit:
-
-::: zone pivot="visual-studio-code"
 
 * [Project templates](#project-templates)
 * [Automatic registration and configuration](#automatic-registration-and-configuration)
 * [Multiple environments](#multiple-environments)
 * [Quick access to Teams Developer Portal](#quick-access-to-teams-developer-portal)
 
-::: zone-end
-
 ### Project templates
 
 You can start directly with the capability-focused templates such as tabs, bots, and message extensions or by following existing samples if you're already familiar with Teams app development. Teams Toolkit reduces the complexity of getting started with templates for common line-of-business app scenarios and smart defaults to accelerate your time to production.
 
-::: zone pivot="visual-studio-code"
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create-new-app_2.png" alt-text="Create new Teams app menu in VS Code":::
-::: zone-end
 
 ### Automatic registration and configuration
 
 You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, configure settings, such as Azure Active Directory (Azure AD) automatically. Sign in with your Microsoft 365 account to control where the app is configured and customized the included Azure AD manifest when you need flexibility.
-
-::: zone pivot="visual-studio-code"
 
 ### Multiple environments
 

@@ -2,7 +2,7 @@
 title: Customize Teams App Manifest in Teams Toolkit
 author: surbhigupta
 description: In this module, learn how to edit, preview and customize Teams App Manifest in different environment.
-ms.author: v-amprasad
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
