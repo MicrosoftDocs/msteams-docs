@@ -40,7 +40,7 @@ To add the search command to your app manifest, you must add a new `composeExten
 
 ### Create a search command using Developer Portal
 
-The prerequisite to create a search command is that you must already have created a message extension. For information on how to create a message extension, see [create a message extension](~/messaging-extensions/how-to/create-messaging-extension.md).
+The prerequisite to create a search command is that you must already have created a message extension. For information on how to create a message extension, see [create a message extension](../../../sbs-gs-msgext.yml).
 
 **To create an action command**
 
