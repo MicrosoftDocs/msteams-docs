@@ -11,17 +11,14 @@ keywords: TeamsJS Teams JavaScript library capability Microsoft 365 M365
 
 Starting with version 2.0.0, Teams JavaScript client library (TeamsJS) enables [certain types of Teams apps](./overview.md) to run across the Microsoft 365 ecosystem. Currently, Microsoft 365 application hosts (Microsoft 365 app and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support will expand over time.
 
-This article details the level of support of Teams JavaScript client (TeamsJS) library version 2.x capabilities for *personal scope* tab apps and dialogs (task modules) across various Microsoft 365 host applications. For a more info on what's changed between TeamsJS versions 1.x and 2.x, see [What's new in TeamsJS version 2.x.x](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx).
+This article details the level of support of TeamsJS version 2.x capabilities across various host applications. For a more info on what's changed between TeamsJS versions 1.x and 2.x, see [What's new in TeamsJS version 2.x.x](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx).
 
-> [!TIP]
-> You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace or subnamespace).
-
-The *TeamsJS Capability* table below lists TeamsJS capabilities (public namespaces) and their support across Microsoft 365 hosts. Some capabilties are marked with  "Deprecated" or "Preview" badges, which have the following meanings:
+The *TeamsJS Capability* table below lists TeamsJS capabilities (public namespaces) and their support across Microsoft 365 hosts. Some capabilities are marked with  "Deprecated" or "Preview" badges, which have the following meanings:
 
 | Badge | Meaning |
 | - | - |
 | Preview :::image type="content" source="./images/preview-badge.png" alt-text="Image with the word 'Preview' inside a blue rectangle"::: | This capability is in preview and subject to change based on feedback. Please do not use in production. |
-| Deprecated :::image type="content" source="./images/deprecated-badge.png" alt-text="Image with the word 'Deprecated' inside an orange rectangle"::: | This capability is deprecated in favor of newer functionality, though  supported for backwards compability purposes. For new apps, please use the capability recommended in the usage notes of the deprecated capability. |
+| Deprecated :::image type="content" source="./images/deprecated-badge.png" alt-text="Image with the word 'Deprecated' inside an orange rectangle"::: | This capability is deprecated in favor of newer functionality, though it is supported for backwards compatibility purposes. For new apps, please use the capability recommended in the usage notes of the deprecated capability. |
 
 For readability, Microsoft 365 hosts are signified by the following product icons:
 
@@ -36,6 +33,10 @@ Preview versions for both Teams and Outlook, launched via *Try the new Teams* an
 | :::image type="content" source="./images/teams-preview-icon.png" alt-text="Microsoft Teams (Preview) icon"::: | :::image type="content" source="./images/outlook-preview-icon.png" alt-text="Microsoft Outlook preview icon"::: |
 
 Entries marked with a check and asterisk (&#x2713;*) indicate support for that host is available only to preview audiences. Click on any TeamsJS Capability to find further details, including host version availability, recommended alternative capability or APIs (for deprecated capabilities), usage notes, and further resources.
+
+## Cross-host capabilities
+
+The following table lists status of host support for TeamsJS capabilities that can run outside of Microsoft Teams.
 
 <br />
 <table border>
@@ -76,35 +77,18 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
             <th><a href="#app">app</a></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-        </tr>
-        <tr>
-            <th><a href="#appinitialization">appInitialization</a><img src="./images/deprecated-badge.png" alt="Badge indicating this capability is deprecated" /></th>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;*</td>
         </tr>
         <tr>
             <th><a href="#appinstalldialog">appInstallDialog</a></th>
@@ -127,35 +111,18 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
             <th><a href="#authentication">authentication</a></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
+            <td></td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-        </tr>
-        <tr>
-            <th><a href="#barcode">barCode</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;*</td>
         </tr>
         <tr>
             <th><a href="#calendar">calendar</a></th>
@@ -165,14 +132,156 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
             <td></td>
             <td></td>
             <td></td>
+            <td>&#x2713;*</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;*</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;*</td>
+        </tr>
+        <tr>
+            <th><a href="#dialog">dialog</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th><a href="#geolocation">geoLocation</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th><a href="#mail">mail</a></th>
+            <td></td>
+            <td></td>
+            <td>&#x2713;*</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;*</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th><a href="#pages">pages</a></th>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
+        </tr>
+        <tr>
+            <th><a href="#profile">profile</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;*</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+## Teams-only capabilities
+
+The following table lists support status for TeamsJS capabilities that run only in the Microsoft Teams environment.
+
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th>TeamsJS Capability</th>
+            <th colspan=3>Web</th>
+            <th colspan=5>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=5>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Outlook (Preview)" src="./images/outlook-preview-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th><a href="#appinitialization">appInitialization</a><img src="./images/deprecated-badge.png" alt="Badge indicating this capability is deprecated" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
             <th><a href="#call">call</a></th>
@@ -209,38 +318,6 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
             <td></td>
         </tr>
         <tr>
-            <th><a href="#dialog">dialog</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <th><a href="#geolocation">geoLocation</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
             <th><a href="#location">location</a><img src="./images/deprecated-badge.png" alt="Badge indicating this capability is deprecated" /></th>
             <td>&#x2713;</td>
             <td></td>
@@ -254,57 +331,6 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <th><a href="#mail">mail</a></th>
-            <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <th><a href="#media">media</a></th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <th><a href="#meeting">meeting</a></th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
@@ -326,29 +352,12 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
             <td></td>
         </tr>
         <tr>
-            <th><a href="#pages">pages</a></th>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-        </tr>
-        <tr>
             <th><a href="#people">people</a></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -356,40 +365,6 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <th><a href="#profile">profile</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <th><a href="#search">search</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
@@ -416,7 +391,7 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -433,7 +408,7 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -515,6 +490,10 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
     </tbody>
 </table>
 
+## Preview capabilities without host support
+
+Some capabilities in the source are in early preview and still awaiting initial support in one or more host applications. These include: [**barCode**](#barcode), [**media**](#media), [**meeting**](#meeting), and [**search**](#search).  
+
 ## `app`
 
 [Reference](/javascript/api/@microsoft/teams-js/app) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/App.tsx)
@@ -560,18 +539,18 @@ Namespace to interact with app initialization and lifecycle.
             <th>app</th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
         </tr>
     </tbody>
 </table>
@@ -743,18 +722,18 @@ Namespace to interact with the authentication-related part of the library. This 
             <th>authentication</th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
         </tr>
     </tbody>
 </table>
@@ -869,14 +848,14 @@ Namespace providing calendar-related functionality.
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
         </tr>
     </tbody>
 </table>
@@ -1051,11 +1030,11 @@ Preview. This group of capabilities enables apps to show modal dialogs. There ar
             <th>dialog <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
@@ -1102,11 +1081,11 @@ Preview. This group of capabilities enables apps to show modal dialogs. There ar
             <th><a href="#dialogupdate">dialog.update</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1119,11 +1098,11 @@ Preview. This group of capabilities enables apps to show modal dialogs. There ar
             <th><a href="#dialogurl">dialog.url</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1136,11 +1115,11 @@ Preview. This group of capabilities enables apps to show modal dialogs. There ar
             <th><a href="#dialogurlbot">dialog.url.bot</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td></td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
@@ -1229,7 +1208,7 @@ Preview. Namespace providing location-related functionality. This is the newer v
             <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -1244,7 +1223,7 @@ Preview. Namespace providing location-related functionality. This is the newer v
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1370,11 +1349,11 @@ Namespace providing email-related functionality.
             <th>mail</th>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1643,18 +1622,18 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <th>pages</th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
         </tr>
         <tr>
             <th><a href="#pagesappbutton">pages.appButton</a></th>
@@ -1662,7 +1641,7 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -1679,7 +1658,7 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1694,18 +1673,18 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <th><a href="#pagescurrentapp">pages.currentApp</a></th>
             <td></td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
+            <td></td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
+            <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
         </tr>
         <tr>
             <th><a href="#pagesconfig">pages.config</a></th>
@@ -1713,9 +1692,9 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1730,7 +1709,7 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1820,7 +1799,7 @@ Namespace providing functionality for [People Picker API](../concepts/device-cap
             <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -1884,7 +1863,7 @@ Preview. Namespace providing for profile-related functionality.
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -2065,7 +2044,7 @@ Namespace to open a share dialog for web content. For more info, see [Share to T
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -2126,7 +2105,7 @@ Preview. Namespace to interact with the stage view specific part of the library.
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -2187,7 +2166,7 @@ Earlier version of the capability for providing modal dialog (task module) suppo
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
