@@ -614,28 +614,44 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 
 ## Extend personal tabs to group chat and channels
 
-Extending static tabs to different scopes will have a number of benefits, including allowing tabs to be pre-pinned by admins and be included as pre-pinned tabs in meeting templates. It will also allow you to build tabs that behave more like apps, instead of pinned app content as there will only ever be one tab pinned at a time. 
+Extending personal tabs to different scopes will have number of benefits, which includes allowing tabs to be pre-pinned by admins or as pre-pinned tabs in meeting templates. It will also allow you to build tabs that behave more like apps, instead of pinned app content as there will only ever be one tab pinned at a time. 
 
 >[!NOTE] 
-> * Static tabs in personal apps will continue to work the same, YOU will find that static tabs now work outside of personal apps with many of the same benefits of classic configurable tabs.
+> * Personal tabs in personal apps will continue to work the same, you will find that personal tabs now work outside of personal apps with many of the same benefits of classic [configurable tabs](~/tabs/how-to/create-tab-pages/configuration-page.md).
 >
-> * SIf you have both a configurable tab and a static tab in your app manifest that work in a specific context, Teams will always bias towards pinning the static tab and ignore the configurable tab. 
+> * If you have both a [configurable tab](~/tabs/how-to/create-tab-pages/configuration-page.md) and a personal tab in your app manifest that work in a specific context, Teams will always bias towards pinning the personal tab and ignore the configurable tab. 
 
-Here are some of the additional benefits coming to static tabs in chats, channel and meeting tabs: 
+Following are some of the benefits for extending personal tabs in chats, channel and meeting tabs: 
 
-* **Pinnable**: End users can now pin apps with static tabs from the [+] button in chats, channels or meetings. Users can also find and pin these tabs from the Teams app store. These tabs can also be unpinned. 
+* **Pinnable**: End users can now pin apps with personal tabs from the **+** icon in chats, channels or meetings. They can also find and pin these tabs from the Teams app store, these tabs can be unpinned. 
 
-* **Instant**: End users just have to select your app to pin it. No more mandatory configuration dialog. 
+* **Instant**: End users just have to select your app to pin it, no more mandatory configuration dialog. 
 
 * **Single instance**: End users can only pin one tab per app, allowing users to pin single instance apps. This allows you to create tabs that function more like apps. 
 
-* **Unified**: You can create one static tab that work in every context of Teams, personal apps and group contexts (such as chat, channel, and meeting tabs). 
+* **Unified**: You can create one personal tab that work in every context of Teams, personal apps and group contexts (such as chat, channel, and meeting tabs). 
 
-* **Optional configuration**: You can change your app's `contentUrl` after it's been pinned. Useful if you do wish to change the default url in your tab instance. 
+* **Optional configuration**: You can change your app's `contentUrl` after it's been pinned. Useful if you do wish to change the default URL in your tab instance. 
+
+Following are the end user experiences when configurable personal tabs are added to different contexts:
+
+# [Personal](#tab/personal)
+
+:::image type="content" source="../assets/images/tabs/personal-tab-configure.png" alt-text=" Screenshot shows the configurable tab added to a personal scope."
+
+# [Channel](#tab/channel)
+
+:::image type="content" source="~/assets/images/tabs/personal-tab-channel.png" alt-text="Example shows a configurable tab added to a channel.":::
+
+# [Meeting](#tab/meeting)
+
+:::image type="content" source="~/assets/images/tabs/personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting.":::
+
+---
 
 ### Manifest update
 
-Below is a sample static tab defined in the app manifest that will work in all scopes and contexts in Teams:
+Following is an example app manifest where a personal tab is defined that will work in all scopes and contexts in Teams:
 
 ```json
 "staticTabs": [ 
@@ -663,7 +679,7 @@ Below is a sample static tab defined in the app manifest that will work in all s
 
 ```
 
-If context is not defined in the app manifest, then Teams will default to the following:
+If a context isn't defined in the app manifest, then Teams will default to the following:
 
 ```json
 "context": [ 
@@ -676,6 +692,13 @@ If context is not defined in the app manifest, then Teams will default to th
 ]
 ```
 
+## Designing a personal tab that works everywhere
+
+If you decide to build a personal tab that works everywhere in Teams, there are UI and UX considerations that are to be noted. 
+
+* Don't embed your entire web app in Teams, as users often don't find this valuable.
+* Instead, think about what your app can uniquely do inside of Teams. For example, can you serve an app experience that consolidates all your apps content, such as displaying all the surveys in a meeting.
+* Your app needs to be responsive down to 320 pixels width since your app will be loaded in the meeting side panel and on mobile devices. 
 
 ## Code sample
 

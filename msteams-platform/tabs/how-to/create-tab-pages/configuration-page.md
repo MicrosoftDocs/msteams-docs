@@ -175,14 +175,15 @@ The configuration page code informs Teams that the configuration requirements ar
 >* If you do not register a save handler, the `saveEvent.notifySuccess()` call is made automatically when the user selects **Save**.
 >* Ensure to have unique `entityId`. Duplicate `entityId` redirects to the first instance of the tab.
 
-## Migrate configurable tab to instant tab
+## Update configurable tab to instant tab
 
-Move all the configuration logic out of your configuration dialog and into your contentUrl. Your configurationUrl (dialog) should be very simple, and all it should do is show a light-hearted splash screen and ask the user to pin the tab (ie: pin the contentUrl). If you are doing any middle-tier requests or API calls int the configuration dialog: move them into your configurationUrl instead. The getSettings and setSettings APIs that you are accustomed to using in your configuration dialog can also be used from contentUrl. This is where you should really be moving all you configuration logic: in the contentUrl. 
+To update your configurable tab to instant tab move all the configuration logic out of your configuration dialog and into your `contentUrl`. Your `configurationUrl` must needs to display a dialog that asks the user to pin the tab, that is pin the `contentUrl`. If you are making any API calls or requests in the configuration dialog, add them to your `configurationUrl`. 
 
- 
-This will allow you to get your configurable tab ready for Instant Tabs. All that will be required to adopt Instant (Static) Tabs after this is done is to update your manifest by adding a `staticTab` that pins the `contentUrl` you decided to use in the given `scope` and `context`. 
+The `getSettings` and `setSettings` APIs that you would like to add in your configuration dialog can also be used from `contentUrl`. To update configurable tab to instant tab, you need to add all of your configuration logic in the `contentUrl`. This will allow you to get your configurable tab ready for Instant Tabs. 
 
-If your static tab will serve custom content based on the context that the tab is being pinned in, then you will need to set a contentUrl where you plan to do some setup. For example: a developer may decide to serve a slightly different experience in meetings and so may choose to pin a setup/bootstrap page where a new contentUrl is set at runtime in the tab itself. For example, if your contentUrl is `https://wwww.contoso.com/teamsapp/setup`, then this page will get pinned where you can change the contentUrl at runtime, like this: 
+All that will be required to adopt Instant (Static) Tabs after this is done is to update your manifest by adding a `staticTab` that pins the `contentUrl` you decided to use in the given `scope` and `context`. 
+
+If your static tab will serve custom content based on the context that the tab is being pinned in, then you will need to set a `contentUrl` where you plan to do some setup. For example, You may decide to serve a slightly different experience in meetings and so may choose to pin a setup or a bootstrap page where a new `contentUrl` is set at runtime in the tab itself. Such as, if your `contentUrl` is `https://wwww.contoso.com/teamsapp/setup`, then this page will get pinned where you can change the `contentUrl` at runtime`, like the following: 
 
 ```javascript
 
@@ -205,10 +206,10 @@ app.getContext((context) => {
 
 ```
 
-Once the above code completes, the tabs `contentUrl` will have been changed for that tab instance. All subsequent visits by users will load the new `contentUrl` instead of the url that was originally defined in the manifest. 
+After the earlier code executes, the tabs `contentUrl` will have been changed for that tab instance and all the subsequent visits by users for that tab will load the new `contentUrl` instead of the URL that was originally defined in the manifest. 
 
 > [!NOTE]
-> You will not be able to change the `displayName` or `entitId` of your tab. This is defined by the the app manifest. 
+> You will not be able to change the `displayName` or `entitId` of your tab. This is defined by the app manifest. 
 
 In short: you can use your contentUrl to simply serve content, or use it similarly like you used your configurationUrl to customize the content being served for that tab. 
 
