@@ -5,7 +5,7 @@ description: Learn about Microsoft Teams, why should you build apps on Teams pla
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.date: 05/24/2021
+ms.date: 04/02/2023
 ---
 # Teams app that fits
 
@@ -72,6 +72,11 @@ Here's why Teams is best-suited for your app needs:
     One-to-one conversational bots are one of the more open-ended features in Teams. The conversation is just between the bot and your user. You have the flexibility of including task modules to simplify complex sets of information.
 
     For example, if your app is a design tool with multiple collaborators, a shared bot that notifies all users helps to build user engagement.
+
+- **Build once, run everywhere**
+
+    Use the latest app manifest and Teams JavaScript client library versions to enable your personal tab and message extension apps to run in other Microsoft 365 experiences in addition to Teams. You can reach users on platforms such as Outlook and Microsoft 365 app all with the same codebase, broadening the reach of your app and streamlining your development and distribution processes.
+    
 
 ## Next step
 
