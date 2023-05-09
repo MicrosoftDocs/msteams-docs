@@ -13,8 +13,6 @@ zone_pivot_groups: teams-app-platform
 
 Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and side-loads the Teams app. You can preview your Teams app in Teams web client locally after debugging.
 
-::: zone pivot="visual-studio-code"
-
 ## Debug your Teams app locally for Visual Studio Code
 
 Teams Toolkit in Microsoft Visual Studio Code gives you the features to automate debugging of your Teams app locally. Visual Studio Code allows you to debug tab, bot, and message extension. You need to set up Teams Toolkit before you debug your app.
@@ -146,69 +144,6 @@ The configuration **Attach to Frontend** or **Launch App** launches Microsoft Ed
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="Add local debug" lightbox="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png":::
 
    Your app is added to Teams!
-
-::: zone-end
-
-::: zone pivot="visual-studio"
-
-## Debug your Teams app locally using Visual Studio
-
-Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. Visual Studio allows you to debug tab, bot, and message extension. You can debug your app locally in Visual Studio using Teams Toolkit by performing:
-
-### Set up ngrok (Only for Bot and Message Extension app)
-
-Use command prompt to run this command:
-
-```
-
-ngrok http 5130
-
-```
-
-### Set up your Teams Toolkit
-
-Perform the following steps using the Teams Toolkit to debug your app after you create a project:
-
-1. Right-click on your project.
-1. Select **Teams Toolkit** > **Prepare Teams App Dependencies**.
-
-   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png" alt-text="Teams app dependencies for local debug" lightbox="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png":::
-
-   > [!NOTE]
-   > In this scenario, the project name is MyTeamsApp1.
-
-   Your Microsoft 365 account needs to have the side loading permission before you sign in.  Ensure your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
-
-1. Sign in to your **Microsoft 365 Account**, then select **Continue**.
-
-   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-signin-m365.png" alt-text="Sign in to Microsoft 365 account":::
-
-   > [!Note]
-   > Learn more about sideloading permission by visiting [Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md).
-
-1. Select **Debug** > **Start Debugging**, or directly select **F5**.
-
-   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Startdebug.png" alt-text="Start Debugging":::
-
-   Visual Studio launches the Teams app inside Microsoft Teams client in your browser.
-
-   > [!Note]
-   > Learn more by visiting [Teams Toolkit Overview](teams-toolkit-fundamentals.md).
-
-1. After Microsoft Teams is loaded, select **Add** to install your app in Teams.
-
-   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-add-loadapp.png" alt-text="Select add to load app":::
-
-   > [!TIP]
-   > You can also use hot reload function of Visual Studio during debug. Learn more by visiting <https://aka.ms/teamsfx-vs-hotreload>.
-
-   > [!NOTE]
-   > Ensure to post HTTP request to `http://localhost:5130/api/notification` to trigger notification, when you're debugging Notification Bot app. If you've selected HTTP trigger when creating the project, you can use any API tools such as curl (Windows Command Prompt), Postman, or any other API tool.
-
-   > [!TIP]
-   > If you make any changes to Teams app manifest file (/templates/appPackage/manifest.template.json), ensure that you perform the Prepare Teams App Dependencies command. Before you try to run the Teams app again locally.
-
-::: zone-end
 
 ## Next step
 
