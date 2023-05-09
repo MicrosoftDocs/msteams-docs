@@ -8,7 +8,13 @@ author: v-sdhakshina
 
 # Explore Tools and SDKs
 
-Content to be added
+You can build Micrososft Teams app with help of the following tools and SDKs.
+
+* [SDKs and libraries to build Teams app](#sdks-and-libraries-to-build-teams-app)
+* [Azure AD-secured REST APIs](#azure-ad-secured-rest-apis)
+* [Tools](#tools)
+
+Choose the best tools and SDKs for building a new Teams app.
 
 :::image type="content" source="assets/images/tools-and-sdks.png" alt-text="Screenshot shows you the tools and SDKs available for you to build Teams apps."lightbox="assets/images/tools-and-sdks.png":::
 
@@ -133,3 +139,8 @@ If you are already familiar with Yeoman workflow, you can use to build your apps
 
 > [!div class="nextstepaction"]
 > [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [The Teams solution](overview-solution.md)

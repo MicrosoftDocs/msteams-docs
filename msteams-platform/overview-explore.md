@@ -36,4 +36,4 @@ You've had a short tour through some of Teams platform features. You're ready to
 ## Next step
 
 > [!div class="nextstepaction"]
-> [The Teams solution](overview-solution.md)
+> [Explore Tools and SDKs](overview-tools-and-sdks.md)
