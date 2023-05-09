@@ -40,7 +40,7 @@ To create a Teams tab app with codespace, follow the steps:
 
    Teams Toolkit prepares the tab app project for you and opens it in Visual Studio Code in the browser. Teams Toolkit icon appears in the activity bar of Visual Studio Code.
 
-1. Select **Sign in to your Microsoft 365** and **Sign in to Azure** to sign in.
+1. Select **Sign in to your Microsoft 365** and **Sign in to Azure** to sign in with your Microsoft 365 account.
 
    :::image type="content" source="../assets/images/get-started/toolkit-in-browser-sign-in.png" alt-text="Screenshot shows you the Teams Toolkit window in browser to sign in."lightbox="../assets/images/get-started/add-tab-in-teams.png":::
 

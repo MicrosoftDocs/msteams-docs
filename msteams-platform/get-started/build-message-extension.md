@@ -30,22 +30,45 @@ To use codespaces for creating a search based message extension:
 
 <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=dev&repo=348288141&machine=basicLinux32gb&location=WestUs2&devcontainer_path=.devcontainer%2Fnpm-search-message-extension-codespaces%2Fdevcontainer.json" target="_blank"><img src="https://github.com/codespaces/badge.svg" alt="Open message extension in GitHub Codespaces"></a>
 
-1. Select the button above to open Codespaces. You may be asked to login to GitHub if you haven't.
+1. Select the button above to open codespaces. You may be asked to login to GitHub account if you haven't.
 1. Select **Create codespaces**.
-   The Setting up your codespace page appears. Teams Toolkit prepares the app project for you and opens it in Visual Studio Code in the browser. Teams Toolkit icon appears in the activity bar of Visual Studio Code.
-1. Select **Preview your Teams App (F5)** to build the app.
-1. Sign in to your Microsoft 365 account.
-   Teams Toolkit codespaces builds the app. A dialog appears to prompt you to open the app in a browser.
-1. Select the option to preview the app in the browser.
-   The app is sideloaded to Teams and opens in the browser.
-1. Once the app dialog appears, select **Add** to install the app in Teams client.
 
-> [!NOTE]
-> Your browser may block a pop-up to prevent to open a new browser tab or window.  
-> You need to allow pop-ups so that Codespace can sideload the app to Teams client in another tab.
+   :::image type="content" source="../assets/images/get-started/codespace/me-codespace.png" alt-text="Screenshot shows you the github page to create a codespace for message extension.":::
+
+   The **Setting up your codespace** page appears.
+
+   :::image type="content" source="../assets/images/get-started/building-codespace.png" alt-text="Screenshot shows you the codespace building your message extension.":::
+
+   Teams Toolkit prepares the message extension for you and opens it in Visual Studio Code in the browser. Teams Toolkit icon appears in the activity bar of Visual Studio Code.
+
+1. Select **Sign in to your Microsoft 365** and **Sign in to Azure** to sign in with your Microsoft 365 account.
+
+   :::image type="content" source="../assets/images/get-started/codespace/me-sign-in.png" alt-text="Screenshot shows you the Teams Toolkit window in browser to sign in."lightbox="../assets/images/get-started/add-tab-in-teams.png":::
+
+1. Select **Preview your Teams App (F5)** to build the your message extension.
+
+      :::image type="content" source="../assets/images/get-started/codespace/me-preview-teams.png" alt-text="Screenshot shows you the Teams Toolkit window in browser with your message extension.":::
+
+   Teams Toolkit codespaces builds the app. A dialog appears to prompt you to open the app in a browser.
+
+    > [!NOTE]
+    >
+    > Your browser may block a pop-up to prevent to open a new browser tab or window. You need to allow pop-ups so that the codespace can sideload the app to Teams client in another tab.
+
+   Your message extension is sideloaded to Teams.
+
+1. Once the app dialog appears in Teams, select **Add** to install your message extension in Teams.
+
+   :::image type="content" source="../assets/images/get-started/codespace/me-in-teams.png" alt-text="Screenshot shows you the message extension loaded in the Teams client.":::
+
+   You've successfully created the message extension and loaded in the Teams client.
+
+   :::image type="content" source="../assets/images/get-started/codespace/me-teams-chat.png" alt-text="Screenshot shows your message extension loaded in the Teams client."lightbox"":::
 
 > [!TIP]
 > [GitHub codespaces](https://github.com/features/codespaces) offers the free plan up to a fixed amount of usage every month. If you need to free up the space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespaces that you no longer need.
+
+If you want to build by yourself, or wants to create a message extension that can be installed on Outlook and Microsoft 365, follow the step-by-step guide at the next section!
 
 ## Use step-by-step guide to build a message extension
 
