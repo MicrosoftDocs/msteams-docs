@@ -6,7 +6,6 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
-zone_pivot_groups: teams-app-platform
 ---
 
 # Teams Toolkit Overview
@@ -20,7 +19,7 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 * Create unique configurations like dev, test, and prod using the environments feature.
 * Bring your app to your organization or the Teams App Store using built-in publishing tools.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="User Journey of the Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="Illustration shows the User Journey of the Teams Toolkit." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 ## Available for Visual Studio Code
 
@@ -58,7 +57,7 @@ You can create different groupings of cloud resources to run and test your app. 
 
 You can configure, distribute, and manage your app in Teams Developer Portal quickly. For more information, see [distribute your Teams apps](../concepts/deploy-and-publish/apps-publish-overview.md) and [manage your Teams apps using Developer Portal](../concepts/build-and-test/manage-your-apps-in-developer-portal.md).
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/build-environment-developer-portal-2.png" alt-text="Developer Portal":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/build-environment-developer-portal-2.png" alt-text="Screenshot shows the Developer Portal option.":::
 
 ## See also
 

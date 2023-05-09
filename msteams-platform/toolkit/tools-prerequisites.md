@@ -61,6 +61,7 @@ It's recommended that you bookmark the Microsoft Graph Explorer to learn about M
 
 |Teams Toolkit Version | Project Type | Supported Node.js Versions  |
 |---|---|---|
+| 5.0.0 | - | 14, 16, 18 (Preview) <br> 14, 16, 18 (Preview) <br> 16 <br> 14, 16, 18 |
 | 4.2.2 | Notify with http or timer trigger <br> Azure functions <br> SPFx <br> Other | 14, 16, 18 (Preview) <br> 14, 16, 18 (Preview) <br> 16 <br> 14, 16, 18 |
 | 4.2.0 | SPFx | 16 |
 | 4.0.3 | SPFx | 14, 16 |
