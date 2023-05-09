@@ -205,9 +205,10 @@ app.getContext((context) => {
 
 ```
 
-Once the above code completes, the tabs contentUrl will have been changed for that tab instance. All subsequent visits by users will load the new contentUrl instead of the url that was originally defined in the manifest. 
+Once the above code completes, the tabs `contentUrl` will have been changed for that tab instance. All subsequent visits by users will load the new `contentUrl` instead of the url that was originally defined in the manifest. 
 
-Note: you will not be able to change the displayName or entitId of your tab. This is defined by the the app manifest. 
+> [!NOTE]
+> You will not be able to change the `displayName` or `entitId` of your tab. This is defined by the the app manifest. 
 
 In short: you can use your contentUrl to simply serve content, or use it similarly like you used your configurationUrl to customize the content being served for that tab. 
 

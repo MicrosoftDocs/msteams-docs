@@ -612,14 +612,14 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 
 ```
 
-## Extend static personal tabs to group chat and channel scopes
+## Extend personal tabs to group chat and channels
 
 Extending static tabs to different scopes will have a number of benefits, including allowing tabs to be pre-pinned by admins and be included as pre-pinned tabs in meeting templates. It will also allow you to build tabs that behave more like apps, instead of pinned app content as there will only ever be one tab pinned at a time. 
 
 >[!NOTE] 
-> static tabs in personal apps will continue to work the same, YOU will find that static tabs now work outside of personal apps with many of the same benefits of classic configurable tabs.
+> * Static tabs in personal apps will continue to work the same, YOU will find that static tabs now work outside of personal apps with many of the same benefits of classic configurable tabs.
 >
-> If you have both a configurable tab and a static tab in your app manifest that work in a specific context, Teams will always bias towards pinning the static tab and ignore the configurable tab. 
+> * SIf you have both a configurable tab and a static tab in your app manifest that work in a specific context, Teams will always bias towards pinning the static tab and ignore the configurable tab. 
 
 Here are some of the additional benefits coming to static tabs in chats, channel and meeting tabs: 
 
@@ -644,7 +644,7 @@ Below is a sample static tab defined in the app manifest that will work in all s
      "scopes": [ 
        "personal", 
        "team", 
-       "groupchat" 
+       "groupChat" 
       ], 
      "context": [ 
        "personalTab", 
