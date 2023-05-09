@@ -175,7 +175,7 @@ The configuration page code informs Teams that the configuration requirements ar
 >* If you do not register a save handler, the `saveEvent.notifySuccess()` call is made automatically when the user selects **Save**.
 >* Ensure to have unique `entityId`. Duplicate `entityId` redirects to the first instance of the tab.
 
-## Move configurable channel or group chat tab to configurable personal tab
+## Update configurable channel or group chat tab to configurable personal tab
 
 To update your configurable channel or group chat tab to personal tab move all the configuration logic out of your configuration dialog into your `contentUrl`. Your `configurationUrl` must display a dialog that asks the user to pin the tab, that is pin the `contentUrl`. If you are making any API calls or requests in the configuration dialog, add them to your `configurationUrl`. 
 
