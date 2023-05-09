@@ -213,7 +213,7 @@ After the earlier code executes, the tabs `contentUrl` will have been change
 
 In short: you can use your contentUrl to simply serve content, or use it similarly like you used your configurationUrl to customize the content being served for that tab. 
 
-If your configurable tab allowed users to edit the tab after it was pinned (ie: canUpdateConfiguration: true) then you should continue to keep the configurableTab property in your manifest in order to ensure users can edit pre-existing pinned configurable tabs
+If your configurable tab allowed users to edit the tab after it was pinned (ie: canUpdateConfiguration: true) then you should continue to keep the `configurableTab` property in your manifest in order to ensure users can edit pre-existing pinned configurable tabs
 
 ### Determine your `contentUrl`
 
