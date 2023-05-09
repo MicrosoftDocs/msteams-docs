@@ -547,17 +547,13 @@ items:
 
     1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/add-bot-app-local-debug.png" alt-text="Screenshot showing the bot is being added on Teams client.":::
+        :::image type="content" source="assets/images/bots/conversational-AI-add-sample-bot.png" alt-text="Screenshot shows an example of the add option to add a sample bot to the local machine.":::
 
         Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-added-bot-local-debug.png" alt-text="Screenshot showing the bot is running on Teams client.":::
+        :::image type="content" source="assets/images/bots/conversational-ai-sample-bot-chat.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
 
-        You can type `welcome` to show an introduction card, and type `learn` to go to adaptive card and bot command documentation.
-
-         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/bot-app-learn-local-debug.png" alt-text="Screenshot showing the learn card in the bot on Teams client.":::       
-
-        You can do normal debugging activities, such as setting breakpoints, as with any other web application. Open the `bot/teamsBot.js` file and locate the `onMessage()` method. Set a breakpoint on any case. Then, type some text.
+        You can type `Hi` to start interacting with the bot.
 
       <!-- markdownlint-disable MD033 -->
       <details>
@@ -566,7 +562,7 @@ items:
       To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
 
       > [!IMPORTANT]
-      > Currently, sideloading apps are available in Government Community Cloud (GCC), GCC-High, and DOD.
+      > Sideloading apps are available in Government Community Cloud (GCC), GCC-High, and DOD.
 
       > [!TIP]
       > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to sideload the app.
@@ -656,7 +652,6 @@ items:
 
     You've created a bot app.
 
-    Now that you've learned to create a basic app, you can move on to creating more complex apps. To start with, try adding capabilities to your existing apps.
 
     
     
