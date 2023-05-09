@@ -341,149 +341,166 @@ items:
 
     To update the conversational AI capabilities:
 
-    ## Import Bot Builder
+    1. Open a terminal window.
+    
+    1. Run the following command in the terminal to install botbuilder-m365 modules:
 
-    Import the dependencies from Microsoft Bot Builder library.
+       ```bash
+       npm install @microsoft/botbuilder-m365
+       ```
 
-    ```typescript
-    import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnState, OpenAIModerator, OpenAIPlanner, AI } from '@microsoft/botbuilder-m365';
+    1. Go to the `index.ts` file and add the following code to import Teams conversational AI library:
 
-    // eslint-disable-next-line @typescript-eslint/no-empty-interface
-    interface ConversationState {}
-    type ApplicationTurnState = DefaultTurnState<ConversationState>;
-    ```
+        ```typescript
+        import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnState, OpenAIModerator, OpenAIPlanner, AI } from '@microsoft/botbuilder-m365';
+        import path from "path";
+        // eslint-disable-next-line @typescript-eslint/no-empty-interface
+        interface ConversationState {}
+        type ApplicationTurnState = DefaultTurnState<ConversationState>;
+        ```
 
-    ## Create AI Components
+    1. In the `index.ts` file, add the following code to create planner, moderator, and promptManager:
 
-    Create Planner, Moderator and Prompt Manager.
+        ```typescript
+        // Create AI components
+        const planner = new OpenAIPlanner({
+            apiKey: process.env.OPENAI_API_KEY,
+            defaultModel: 'text-davinci-003',
+            logRequests: true
+        });
+        const moderator = new OpenAIModerator({
+            apiKey: process.env.OPENAI_API_KEY,
+            moderate: 'both'
+        });
+        const promptManager = new DefaultPromptManager(path.join(__dirname, './prompts' ));
 
-    ```typescript
-    // Create AI components
-    const planner = new OpenAIPlanner({
-        apiKey: process.env.OPENAI_API_KEY,
-        defaultModel: 'text-davinci-003',
-        logRequests: true
-    });
-    const moderator = new OpenAIModerator({
-        apiKey: process.env.OPENAI_API_KEY,
-        moderate: 'both'
-    });
-    const promptManager = new DefaultPromptManager(path.join(__dirname, '../src/prompts'
+        ````
 
-    ````
+    1. In the `index.ts` file, add the following code to define storage and application:
 
-    ## Define storage container
+        ```typescript
+        // Define storage and application
+        const storage = new MemoryStorage();
+        const app = new Application<ApplicationTurnState>({
+            storage,
+            ai: {
+                planner,
+                moderator,
+                promptManager,
+                prompt: 'chat',
+                history: {
+                    assistantHistoryType: 'text'
+                }
+            }
+        });
+        ```
+    1. In the `index.ts` file, add the following code to define actions:
 
-    ```typescript
-    // Define storage and application
-    const storage = new MemoryStorage();
-    const app = new Application<ApplicationTurnState>({
-        storage,
-        ai: {
-            planner,
-            moderator,
-            promptManager,
-            prompt: 'chat',
-            history: {
-                assistantHistoryType: 'text'
+        ```typescript
+        app.ai.action(AI.FlaggedInputActionName, async (context, state, data) => {
+            await context.sendActivity(`I'm sorry your message was flagged: ${JSON.stringify(data)}`);
+            return false;
+        });
+
+        app.ai.action(AI.FlaggedOutputActionName, async (context, state, data) => {
+            await context.sendActivity(`I'm not allowed to talk about such things.`);
+            return false;
+        });
+        ```
+
+    1. In the `index.ts` file, add the following code to define history:
+
+        ```typescript
+        app.message('/history', async (context, state) => {
+        const history = ConversationHistory.toString(state, 2000, '\n\n');
+        await context.sendActivity(history);
+        });
+        ``` 
+
+    1. In the `index.ts` file, update `await bot.run(context);` to `await app.run(context);`.
+   
+    1. In the root folder, create a new folder **prompts/chat**.
+
+    1. Under **chat**, create the following files:
+       * config.json
+       * skprompt.txt
+
+    1. Go to the `config.json` file, and add the following code to create a prediction engine:
+    
+        ```javascript
+        {
+            "schema": 1,
+            "description": "Chat with Teams Chef",
+            "type": "completion",
+            "completion": {
+            "max_tokens": 150,
+            "temperature": 0.9,
+            "top_p": 0.0,
+            "presence_penalty": 0.6,
+            "frequency_penalty": 0.0,
+            "stop_sequences": [
+                "Human:",
+                "AI:"
+            ]
             }
         }
-    });
-    ```
-    ## Define actions
+        ```
 
-    ```typescript
-    app.ai.action(AI.FlaggedInputActionName, async (context, state, data) => {
-        await context.sendActivity(`I'm sorry your message was flagged: ${JSON.stringify(data)}`);
-        return false;
-    });
+    1. Go to the 'prompt.txt' file and add the following instructions for GPT on how the bot should conduct itself and facilitate conversation:
 
-    app.ai.action(AI.FlaggedOutputActionName, async (context, state, data) => {
-        await context.sendActivity(`I'm not allowed to talk about such things.`);
-        return false;
-    });
-    ```
+        ```text
+        The following is a conversation with an AI assistant, its name is Teams Chef. 
+        Teams Chef is an expert in Microsoft Teams apps development and the Human is junior developer learning Microsoft Teams development for the first time. 
+        Teams Chef should always reply by explaining new concepts in simple terms using cooking as parallel concepts. 
+        Teams Chef should always greet the human, ask them their name, and then guide the junior developer in his journey to build new apps for Microsoft Teams. 
+        ```
 
-    ## Conversational bot scaffolding</h3></summary>
+        To store and leverage session history, add the following in the 'prompt.txt' file:
+
+        ```
+        Conversation history:
+        {{conversation.history}}
+        ```
+
+        For example, let's say the user's name is "Dave". The bot might carry on the following conversation:
+
+        ```
+        AI: Hi there! My name is Teams Chef. It's nice to meet you. What's your name?
+        DAVE: My name is Dave.
+        AI:Hi Dave! It's great to meet you. Let me help you get started with Microsoft Teams app development. Have you ever cooked before?
+        DAVE: No, not yet, why?
+        AI:Cooking is a great way to learn how to develop apps for Microsoft Teams. Just like cooking, developing apps requires you to have the right ingredients and tools, and to follow a set of instructions. It also requires creativity and problem-solving skills. So, let's get started! What would you like to learn first?
+        DAVE: Which kind of apps can I build for Microsoft Teams?
+        AI: Great question! You can build a variety of apps for Microsoft Teams, including bots, messaging extensions, tabs, and connectors. Bots are like the main course of your app - they provide the core functionality. Messaging extensions are like side dishes - they add extra features to your app. Tabs are like garnishes - they provide additional information or visuals. And connectors are like spices - they allow you to integrate with other services.
+        ```
+        Notice that the bot remembered Dave's first message when responding to the second.
+
+    1. Go to the **env** folder and update the Open AI key in the `.env.local.user`file.
     
-    Throughout the 'index.ts' file you'll see the scaffolding created to run a simple conversational bot, like storage, authentication, and conversation state.
-   
-    ## Natural language modelling
+       The following is an example of Open AI key in the .env.local.user`file:
+
+       ```
+        SECRET_BOT_PASSWORD=
+        SECRET_OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+       ```
+
+    1. Go to the `config.ts` file and add the following code:
     
-    Notice that outside of one '\history' command, the 'index.ts' file relies on GPT for all its natural language modelling - no code is specifically written to handle language processing. Rather, a 'predictionEngine' is defined to handle this for you:
+       ```typescript
+       openAIKey: process.env.SECRET_OPENAI_API_KEY
+       ```
 
-    ```javascript
-    // Create prediction engine
-    const predictionEngine = new OpenAIPredictionEngine({
-        configuration: {
-            apiKey: process.env.OPENAI_API_KEY
-        },
-        prompt: path.join(__dirname, '../src/prompt.txt'),
-        promptConfig: {
-            model: 'text-davinci-003',
-            temperature: 0.4,
-            max_tokens: 2048,
-            top_p: 1,
-            frequency_penalty: 0,
-            presence_penalty: 0.6,
-            stop: [' Human:', ' AI:']
-        },
-        logRequests: true
-    });
-    ```
+    1. Go to the `teamsapp.local.yml`file and add the following code after `BOT_ID` and `BOT_PASSWORD`:
 
-    ## Prompt engineering
-        
-    Inside the 'predictionEngine', a prompt file is defined:
-
-    ```javascript
-    prompt: path.join(__dirname, '../src/prompt.txt'),
-    ```
-
-    Open the 'prompt.txt' file to find descriptive prompt engineering that, in plain language and with minor training, instructs GPT how the bot should conduct itself and facilitate conversation:
-
-    #### prompt.txt
-
-    ```
-    The following is a conversation with an AI assistant, its name is Teams Chef. 
-    Teams Chef is an expert in Microsoft Teams apps development and the Human is junior developer learning Microsoft Teams development for the first time. 
-    Teams Chef should always reply by explaining new concepts in simple terms using cooking as parallel concepts. 
-    Teams Chef should always greet the human, ask them their name, and then guide the junior developer in his journey to build new apps for Microsoft Teams.
-
-    {{$history}}
-    Human: {{$input}}
-    AI: 
-    ```
-
-    ## Conversational session history
-        
-    Because this sample leaves the conversation to GPT, the bot simply facilitates user conversation as-is. But because it includes the 'prompt.txt' file to guide it, GPT will store and leverage session history appropriately. From the 'prompt.txt' file:
-
-    ```
-    Conversation history:
-    {{conversation.history}}
-    ```
-
-    For example, let's say the user's name is "Dave". The bot might carry on the following conversation:
-
-    ```
-    AI: Hi there! My name is Teams Chef. It's nice to meet you. What's your name?
-    DAVE: My name is Dave.
-    AI:Hi Dave! It's great to meet you. Let me help you get started with Microsoft Teams app development. Have you ever cooked before?
-    DAVE: No, not yet, why?
-    AI:Cooking is a great way to learn how to develop apps for Microsoft Teams. Just like cooking, developing apps requires you to have the right ingredients and tools, and to follow a set of instructions. It also requires creativity and problem-solving skills. So, let's get started! What would you like to learn first?
-    DAVE: Which kind of apps can I build for Microsoft Teams?
-    AI: Great question! You can build a variety of apps for Microsoft Teams, including bots, messaging extensions, tabs, and connectors. Bots are like the main course of your app - they provide the core functionality. Messaging extensions are like side dishes - they add extra features to your app. Tabs are like garnishes - they provide additional information or visuals. And connectors are like spices - they allow you to integrate with other services.
-    ```
-
-    Notice that the bot remembered Dave's first message when responding to the second.
-
-    ## Localization across languages
-        
-    Because this sample leverages GPT for all its natural language modelling, the user can talk to an AI bot in any language of their choosing. The bot will understand and respond appropriately with no additional code required.
-    </details>
-
-    This bot has been created using [Bot Framework](https://dev.botframework.com).
+       ```teamsapp.local.yml
+       SECRET_OPENAI_API_KEY: ${{SECRET_OPENAI_API_KEY}}
+       ```
+    1. Go to the `index.ts` file and update the following:
+    
+       * Under **Create AI components**, replace `process.env.` with `config.`.
+       * Under **Import required bot service**, add `MemoryStorage`.
+         
+    This sample leverages GPT for all its natural language modelling, the user can talk to an AI bot in any language of their choosing. The bot understands and responds appropriately without extra code.
 
     ## Build and run your first bot app locally
 
