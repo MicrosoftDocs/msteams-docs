@@ -32,15 +32,15 @@ The following image shows Contoso channel tabs:
 
 There are few prerequisites that you must go through before working on tabs.
 
-There are two types of tabs available in Teams, personal and channel or group. [Personal tabs](~/tabs/how-to/create-personal-tab.md), along with personal-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar for easy access.Instant tabs are a kind of personal tabs which can be added to a channel pr group chat  with configurable experience to it. [Channel or group tabs](~/tabs/how-to/create-channel-group-tab.md) deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content.
+There are two types of tabs available in Teams, personal and channel or group. [Personal tabs](~/tabs/how-to/create-personal-tab.md), along with personal-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar for easy access. Instant tabs are a kind of personal tabs which can be added to a channel or group chat with configurable experience. [Channel or group tabs](~/tabs/how-to/create-channel-group-tab.md) deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content.
 
 Following helps you determine the best fit for your app:
 
-| &nbsp; |Personal scope|Channel, groupchat, or meetings scope|
+| &nbsp; |Personal scope| Channels | Group chat | Meetings |
 |---|---|---|
-|[Static (Personal) tabs](~/tabs/how-to/create-personal-tab.md)|✔️|❌|
-|[Configurable tabs](~/tabs/how-to/create-channel-group-tab.md)|❌|✔️|
-|Instant tab|✔️|✔️|
+|[Static (Personal) tabs](~/tabs/how-to/create-personal-tab.md)|✔️|❌|❌|❌|
+|[Configurable tabs](~/tabs/how-to/create-channel-group-tab.md)|❌|✔️|✔️|✔️|
+|[Instant tab](~/tabs/how-to/create-personal-tab.md#extend-personal-tabs-to-group-chat-and-channels)|✔️|✔️|✔️|✔️|
 
 > [!Note]
 > If you have both a configurable tab and a static tab in your app manifest that work in a specific context, Teams will always bias towards pinning the static tab and ignore the configurable tab. 
