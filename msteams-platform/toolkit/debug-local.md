@@ -166,7 +166,7 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png" alt-text="Teams app dependencies for local debug" lightbox="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png":::
 
    > [!NOTE]
-   > In this scenario the project name is MyTeamsApp1
+   > In this scenario the project name is MyTeamsApp1.
 
    Your Microsoft 365 account needs to have the side loading permission before you sign in.  Ensure your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
 
