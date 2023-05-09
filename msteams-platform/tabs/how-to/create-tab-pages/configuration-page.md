@@ -175,11 +175,11 @@ The configuration page code informs Teams that the configuration requirements ar
 >* If you do not register a save handler, the `saveEvent.notifySuccess()` call is made automatically when the user selects **Save**.
 >* Ensure to have unique `entityId`. Duplicate `entityId` redirects to the first instance of the tab.
 
-## Update configurable tab to instant tab
+## Move configurable channel or group chat tab to configurable personal tab
 
-To update your configurable tab to instant tab move all the configuration logic out of your configuration dialog and into your `contentUrl`. Your `configurationUrl` must needs to display a dialog that asks the user to pin the tab, that is pin the `contentUrl`. If you are making any API calls or requests in the configuration dialog, add them to your `configurationUrl`. 
+To update your configurable channel or group chat tab to personal tab move all the configuration logic out of your configuration dialog into your `contentUrl`. Your `configurationUrl` must display a dialog that asks the user to pin the tab, that is pin the `contentUrl`. If you are making any API calls or requests in the configuration dialog, add them to your `configurationUrl`. 
 
-The `getSettings` and `setSettings` APIs that you would like to add in your configuration dialog can also be used from `contentUrl`. To update configurable tab to instant tab, you need to add all of your configuration logic in the `contentUrl`. This will allow you to get your configurable tab ready for Instant Tabs. 
+The `getSettings` and `setSettings` APIs that you would like to add in your configuration dialog can also be used from `contentUrl`. To update configurable tab to personal tab, you need to add all of your configuration logic in the `contentUrl`. This will allow you to get your configurable tab ready for personal tabs. 
 
 All that will be required to adopt Instant (Static) Tabs after this is done is to update your manifest by adding a `staticTab` that pins the `contentUrl` you decided to use in the given `scope` and `context`. 
 

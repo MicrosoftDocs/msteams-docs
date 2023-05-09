@@ -32,18 +32,45 @@ The following image shows Contoso channel tabs:
 
 There are few prerequisites that you must go through before working on tabs.
 
-There are two types of tabs available in Teams, personal and channel or group. [Personal tabs](~/tabs/how-to/create-personal-tab.md), along with personal-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar for easy access. [Instant tabs](~/tabs/how-to/create-personal-tab.md#extend-personal-tabs-to-group-chat-and-channels) are a kind of personal tabs which can be added to a channel or group chat with [configurable experience](~/tabs/how-to/create-tab-pages/configuration-page.md#migrate-configurable-tab-to-instant-tab). [Channel or group tabs](~/tabs/how-to/create-channel-group-tab.md) deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content.
+There are two types of tabs available in Teams, personal and channel or group. [Personal tabs](~/tabs/how-to/create-personal-tab.md), along with personal-scoped bots, are part of personal apps and are scoped to a single user. [Personal tabs](~/tabs/how-to/create-personal-tab.md#extend-personal-tabs-to-group-chat-and-channels) can also be extended for channels or group chat with [configurable experience](~/tabs/how-to/create-personal-tab.md#create-configurable-personal-tab). They can be pinned to the left navigation bar for easy access.
+
+By extending personal tabs to different scopes, you can pre-pin tabs and include the pre-pinned tabs in meeting templates. You can build tabs that behave more like apps, instead of pinned app content as there will only ever be one tab pinned at a time. Personal tabs in personal apps will continue to work the same, personal tabs can work outside personal apps with the same benefits as [configurable tabs](~/tabs/how-to/create-tab-pages/configuration-page.md).
+
+Following are few benefits of personal tabs in chats, channel, and meeting tabs:
+
+* **Pinnable and instant**: Users can now pin apps with personal tabs from the **+** icon in chats, channels or meetings. They can also find and pin these tabs from the Teams app store, these tabs can be unpinned and no more mandatory configuration dialog. This allows you to create tabs that function more like apps.
+
+* **Unified**: You can create one personal tab that work in every context of Teams, personal apps and group contexts such as chat, channel, and meeting tabs). 
+
+* **Optional configuration**: You can change your apps `contentUrl` after it's been pinned. Useful if you do wish to change the default URL in your tab instance. 
+
+Following image shows configurable personal tabs added to different contexts:
+
+# [Personal](#tab/personal)
+
+:::image type="content" source="~/assets/images/tabs/personal-tab-configure.png" alt-text=" Screenshot shows the configurable tab added to a personal scope."
+
+# [Channel](#tab/channel)
+
+:::image type="content" source="~/assets/images/tabs/personal-tab-channel.png" alt-text="Example shows a configurable tab added to a channel.":::
+
+# [Meeting](#tab/meeting)
+
+:::image type="content" source="~/assets/images/tabs/personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting.":::
+
+---
+
+[Channel or group tabs](~/tabs/how-to/create-channel-group-tab.md) deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content.
 
 Following helps you determine the best fit for your app:
 
-| &nbsp; |Personal scope| Channels | Group chat | Meetings |
+| &nbsp; |Personal | Channels | Group chat | Meetings |
 |---|---|---|
-|[Static (Personal) tabs](~/tabs/how-to/create-personal-tab.md)|✔️|❌|❌|❌|
+|[Personal tabs](~/tabs/how-to/create-personal-tab.md)|✔️|✔️|✔️|✔️|
 |[Configurable tabs](~/tabs/how-to/create-channel-group-tab.md)|❌|✔️|✔️|✔️|
-|[Instant tab](~/tabs/how-to/create-personal-tab.md#extend-personal-tabs-to-group-chat-and-channels)|✔️|✔️|✔️|✔️|
 
-> [!Note]
-> If you have both a configurable tab and a static tab in your app manifest that work in a specific context, Teams will always bias towards pinning the static tab and ignore the configurable tab. 
+>[!NOTE] 
+> If you have both [configurable tab](~/tabs/how-to/create-tab-pages/configuration-page.md) and [personal tab](~/tabs/how-to/create-personal-tab.md) in your app manifest for a specific context, personal tabs will only get pinned.
 
 You can [create a content page](~/tabs/how-to/create-tab-pages/content-page.md) as part of a personal tab, channel or group tab, or task module. You can [create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) that enables users to configure Microsoft Teams app and use it to configure a channel or group chat tab, a messaging extension, or a connector card for Microsoft 365 Groups. You can permit users to reconfigure your tab after installation and [create a tab removal page](~/tabs/how-to/create-tab-pages/removal-page.md) for your application. When you build a Teams app that includes a tab, you must test how your [tab functions on both the Android and iOS Teams clients](~/tabs/design/tabs-mobile.md). Your tab must [get context](~/tabs/how-to/access-teams-context.md) through basic information, locale and theme information, and `entityId` or `subEntityId` that identifies what is in the tab.
 

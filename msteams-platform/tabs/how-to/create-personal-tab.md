@@ -614,42 +614,13 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 
 ## Extend personal tabs to group chat and channels
 
-You can extend personal tabs to group chat, channel, and meetings. Admins can pre-pin tabs and include the pre-pinned tabs in meeting templates. You can build tabs that behave more like apps, instead of pinned app content as there will only ever be one tab pinned at a time. 
+You can extend personal tabs to group chat, channel, and meetings. These tabs behave more like apps, instead of pinned app content as there will only ever be one tab pinned at a time. Keep the following things in mind to build a personal tab that works in every context:
 
->[!NOTE] 
-> * Personal tabs in personal apps will continue to work the same, personal tabs can work outside personal apps with the same benefits as [configurable tabs](~/tabs/how-to/create-tab-pages/configuration-page.md).
->
-> * If you have both a [configurable tab](~/tabs/how-to/create-tab-pages/configuration-page.md) and a personal tab in your app manifest for a specific context, Teams is always biased towards pinning the personal tabs. 
+* Don't embed your entire web app in Teams, as users often don't find this valuable.
+* Instead, think about what your app can uniquely do inside of Teams. For example, can you serve an app experience that consolidates all your apps content, such as displaying all the surveys in a meeting.
+* Your app needs to be responsive down to 320 pixels width since your app will be loaded in the meeting side panel and on mobile devices. 
 
-Following are some of the benefits for extending personal tabs in chats, channel and meeting tabs: 
-
-* **Pinnable**: End users can now pin apps with personal tabs from the **+** icon in chats, channels or meetings. They can also find and pin these tabs from the Teams app store, these tabs can be unpinned. 
-
-* **Instant**: End users just have to select your app to pin it, no more mandatory configuration dialog. 
-
-* **Single instance**: End users can only pin one tab per app, allowing users to pin single instance apps. This allows you to create tabs that function more like apps. 
-
-* **Unified**: You can create one personal tab that work in every context of Teams, personal apps and group contexts (such as chat, channel, and meeting tabs). 
-
-* **Optional configuration**: You can change your app's `contentUrl` after it's been pinned. Useful if you do wish to change the default URL in your tab instance. 
-
-Following are the end user experiences when configurable personal tabs are added to different contexts:
-
-# [Personal](#tab/personal)
-
-:::image type="content" source="~/assets/images/tabs/personal-tab-configure.png" alt-text=" Screenshot shows the configurable tab added to a personal scope."
-
-# [Channel](#tab/channel)
-
-:::image type="content" source="~/assets/images/tabs/personal-tab-channel.png" alt-text="Example shows a configurable tab added to a channel.":::
-
-# [Meeting](#tab/meeting)
-
-:::image type="content" source="~/assets/images/tabs/personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting.":::
-
----
-
-### Manifest update
+To extend your personal tabs to group chat and channels, update your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with respective `scopes` and `context` parameters in the `staticTabs` property 
 
 Following is an example app manifest where a personal tab is defined that will work in all scopes and contexts in Teams:
 
@@ -692,13 +663,10 @@ If a context isn't defined in the app manifest, then Teams will default to t
 ]
 ```
 
-## Designing a personal tab that works everywhere
+## Create configurable personal tab
 
-If you decide to build a personal tab that works everywhere in Teams, there are UI and UX considerations that are to be noted. 
+To create configurable personal tab add the configuration page logic to your `contentUrl`. For more information, see [configuration page.](~/tabs/how-to/create-tab-pages/configuration-page.md#update-configurable-tab-to-instant-tab)
 
-* Don't embed your entire web app in Teams, as users often don't find this valuable.
-* Instead, think about what your app can uniquely do inside of Teams. For example, can you serve an app experience that consolidates all your apps content, such as displaying all the surveys in a meeting.
-* Your app needs to be responsive down to 320 pixels width since your app will be loaded in the meeting side panel and on mobile devices. 
 
 ## Code sample
 
