@@ -10,7 +10,7 @@ ms.author: v-npaladugu
 
 A configuration page is a special type of [content page](content-page.md). The users configure some aspects of the Microsoft Teams app using the configuration page and use that configuration as part of the following:
 
-* A channel or group chat tab: Collect information from the users and set the `contentUrl` of the content page to be displayed.
+* A Personal, channel, or group chat tab: Collect information from the users and set the `contentUrl` of the content page to be displayed.
 * A [message extension](~/messaging-extensions/what-are-messaging-extensions.md).
 * A [connector for Microsoft 365 Groups](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 

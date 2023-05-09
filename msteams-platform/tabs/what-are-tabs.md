@@ -40,7 +40,7 @@ Following are few benefits of personal tabs in chats, channel, and meeting tabs:
 
 * **Pinnable and instant**: Users can now pin apps with personal tabs from the **+** icon in chats, channels or meetings. They can also find and pin these tabs from the Teams app store, these tabs can be unpinned and no more mandatory configuration dialog. This allows you to create tabs that function more like apps.
 
-* **Unified**: You can create one personal tab that work in every context of Teams, personal apps and group contexts such as chat, channel, and meeting tabs). 
+* **Unified**: You can create one personal tab that work in every context of Teams, personal apps and group contexts such as chat, channel, and meeting tabs. 
 
 * **Optional configuration**: You can change your apps `contentUrl` after it's been pinned. Useful if you do wish to change the default URL in your tab instance. 
 
@@ -67,12 +67,12 @@ Following helps you determine the best fit for your app:
 | &nbsp; |Personal | Channels | Group chat | Meetings |
 |---|---|---|
 |[Personal tabs](~/tabs/how-to/create-personal-tab.md)|✔️|✔️|✔️|✔️|
-|[Configurable tabs](~/tabs/how-to/create-channel-group-tab.md)|❌|✔️|✔️|✔️|
+|[Channel or group tabs](~/tabs/how-to/create-channel-group-tab.md)|❌|✔️|✔️|✔️|
 
 >[!NOTE] 
 > If you have both [configurable tab](~/tabs/how-to/create-tab-pages/configuration-page.md) and [personal tab](~/tabs/how-to/create-personal-tab.md) in your app manifest for a specific context, personal tabs will only get pinned.
 
-You can [create a content page](~/tabs/how-to/create-tab-pages/content-page.md) as part of a personal tab, channel or group tab, or task module. You can [create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) that enables users to configure Microsoft Teams app and use it to configure a channel or group chat tab, a messaging extension, or a connector card for Microsoft 365 Groups. You can permit users to reconfigure your tab after installation and [create a tab removal page](~/tabs/how-to/create-tab-pages/removal-page.md) for your application. When you build a Teams app that includes a tab, you must test how your [tab functions on both the Android and iOS Teams clients](~/tabs/design/tabs-mobile.md). Your tab must [get context](~/tabs/how-to/access-teams-context.md) through basic information, locale and theme information, and `entityId` or `subEntityId` that identifies what is in the tab.
+You can [create a content page](~/tabs/how-to/create-tab-pages/content-page.md) as part of a personal tab, channel or group tab, or task module. You can [create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) that enables users to configure Microsoft Teams app and use it to configure a personal, channel, or group chat tab, a messaging extension, or a connector card for Microsoft 365 Groups. You can permit users to reconfigure your tab after installation and [create a tab removal page](~/tabs/how-to/create-tab-pages/removal-page.md) for your application. When you build a Teams app that includes a tab, you must test how your [tab functions on both the Android and iOS Teams clients](~/tabs/design/tabs-mobile.md). Your tab must [get context](~/tabs/how-to/access-teams-context.md) through basic information, locale and theme information, and `entityId` or `subEntityId` that identifies what is in the tab.
 
 > [!NOTE]
 > **Posts** and **Files** can't be moved from their positions.
