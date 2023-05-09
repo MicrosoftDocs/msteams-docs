@@ -717,10 +717,10 @@
       items:
       - name: Overview
         href: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
-      - name: Conversational AI quick start guide
-        href: bots/how-to/Teams conversational AI/conversation-ai-quick-start.md
       - name: Teams AI core capabilities
         href: bots/how-to/Teams conversational AI/how-conversation-ai-get-started.md
+      - name: Conversational AI quick start guide
+        href: bots/how-to/Teams conversational AI/conversation-ai-quick-start.md
       - name: Build your first app using Teams conversational AI
         href: sbs-botbuilder-conversation-AI.yml
       - name: Teams conversational AI FAQs
