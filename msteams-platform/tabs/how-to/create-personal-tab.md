@@ -614,12 +614,12 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 
 ## Extend personal tabs to group chat and channels
 
-Extending personal tabs to different scopes will have number of benefits, which includes allowing tabs to be pre-pinned by admins or as pre-pinned tabs in meeting templates. It will also allow you to build tabs that behave more like apps, instead of pinned app content as there will only ever be one tab pinned at a time. 
+You can extend personal tabs to group chat, channel, and meetings. Admins can pre-pin tabs and include the pre-pinned tabs in meeting templates. You can build tabs that behave more like apps, instead of pinned app content as there will only ever be one tab pinned at a time. 
 
 >[!NOTE] 
-> * Personal tabs in personal apps will continue to work the same, you will find that personal tabs now work outside of personal apps with many of the same benefits of classic [configurable tabs](~/tabs/how-to/create-tab-pages/configuration-page.md).
+> * Personal tabs in personal apps will continue to work the same, personal tabs can work outside personal apps with the same benefits as [configurable tabs](~/tabs/how-to/create-tab-pages/configuration-page.md).
 >
-> * If you have both a [configurable tab](~/tabs/how-to/create-tab-pages/configuration-page.md) and a personal tab in your app manifest that work in a specific context, Teams will always bias towards pinning the personal tab and ignore the configurable tab. 
+> * If you have both a [configurable tab](~/tabs/how-to/create-tab-pages/configuration-page.md) and a personal tab in your app manifest for a specific context, Teams is always biased towards pinning the personal tabs. 
 
 Following are some of the benefits for extending personal tabs in chats, channel and meeting tabs: 
 
@@ -637,7 +637,7 @@ Following are the end user experiences when configurable personal tabs are added
 
 # [Personal](#tab/personal)
 
-:::image type="content" source="../assets/images/tabs/personal-tab-configure.png" alt-text=" Screenshot shows the configurable tab added to a personal scope."
+:::image type="content" source="~/assets/images/tabs/personal-tab-configure.png" alt-text=" Screenshot shows the configurable tab added to a personal scope."
 
 # [Channel](#tab/channel)
 
