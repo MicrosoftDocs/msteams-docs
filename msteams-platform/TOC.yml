@@ -150,7 +150,9 @@
           href: toolkit/add-API-connection.md
           displayName: endpoint
         - name: Add single sign-on to Teams app
-          href: toolkit/add-single-sign-on.md  
+          href: toolkit/add-single-sign-on.md
+        - name: Using existing Azure AD app in TeamsFx project
+          href: toolkit/use-existing-aad-app.md  
       - name: Customize Manifest
         items:
         - name: Customize Teams app Manifest
