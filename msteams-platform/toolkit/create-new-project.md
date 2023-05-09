@@ -33,13 +33,13 @@ The process to create a new Teams app is similar for all types of apps except SP
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="screenshot shows the Create New Project button in the Teams Toolkit sidebar.":::
 
-1. Select **Start with a Teams capability**.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-app-type.png" alt-text="Screenshot shows the option to select app type." lightbox="../assets/images/teams-toolkit-v2/first-tab/select-app-type.png":::
-
 1. Ensure that **Tab** is selected as app capability.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Select App Capability":::
+
+1. Select **Basic Tab**
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/basic-tab-app.png" alt-text="Screenshot shows the basic tab selected.":::
 
 1. Select **JavaScript** as the programming language.
 
@@ -63,13 +63,9 @@ The process to create a new Teams app is similar for all types of apps except SP
     The folder you select is the location for your project workspace.
     </details>
 
-1. Enter a suitable name for your app, such as helloworld, as the application name. Ensure that you use only alphanumeric characters. Press **Enter**.
+    1. Enter a suitable name for your app, such as helloworld, as the application name. Ensure that you use only alphanumeric characters. Press **Enter**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot showing where to enter the app name.":::
-
-    By default, your app project opens in a new window . You can open your app project in the current window as well.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/new-window-notification.png" alt-text="New window notification":::
 
    The Teams tab app is created in a few seconds.
 
