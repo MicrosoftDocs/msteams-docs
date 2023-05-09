@@ -1027,6 +1027,10 @@ You've completed the tutorial to build a tab app with Blazor.
 
 ::: zone-end
 
+## Change  your configurable channel or group chat tab to personal tab
+
+As Teams has extended the personal tab capability to support channel, group chat, or meetings you can update your existing tab to personal tab and add different scopes to the personal tab. For more information, see [configurable personal tab](~/tabs/how-to/create-tab-pages/configuration-page.md#configurable-personal-tab)
+
 ## Next step
 
 > [!div class="nextstepaction"]

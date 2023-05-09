@@ -215,9 +215,9 @@ If your [configurable channel or group tab](#configure-a-channel-or-group-chat-t
 
 ### Determine your `contentUrl`
 
-With configurable tabs, the `contentUrl` is defined at runtime during by the user in the tab configuration dialog, which is served from the `configurationUrl` in the manifest. The outcome of this dialog is a `contentUrl` and some other properties. 
+With configurable tabs, the `contentUrl` is defined at runtime by the user in the tab configuration dialog, which is served from the `configurationUrl` in the manifest. The outcome of this dialog is a `contentUrl` and some other properties. 
 
-If your personal tab will always be pinning the same `contentUrl`, you can create a `staticTab` object in your app manifest and set your `contentUrl`. This is what will get pinned when the user selects your app to be pinned. This may be the case for most developers. 
+If your personal tab will always be pinning the same `contentUrl`, you can create a `staticTab` object in your app manifest and set your `contentUrl`. This is what will get pinned when the user selects your app to be pinned.
 
 ### Get context data for your tab settings
 
