@@ -173,4 +173,3 @@ To preview values for all the environment, you can hover over the placeholder. I
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
-* [Deploy Teams app to the cloud using Visual Studio](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio)

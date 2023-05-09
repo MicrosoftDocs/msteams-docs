@@ -115,4 +115,3 @@ The Teams Toolkit for Visual Studio Code extension is available in a pre-release
 * [Prepare to build apps](build-environments.md)
 * [Provision cloud resources](provision.md)
 * [Deploy Teams app to the cloud](deploy.md)
-* [Create new Teams app](create-new-project.md#create-new-teams-app-in-visual-studio)

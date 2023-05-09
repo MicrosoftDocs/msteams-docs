@@ -49,7 +49,5 @@ The Get started guide helps to deploy using Teams Toolkit. You can use the follo
 * [Create and deploy an Azure cloud service](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
 * [Create multi-capability Teams apps](add-capability.md)
 * [Add cloud resources to Microsoft Teams app](add-resource.md)
-* [Create new Teams app in Visual Studio](create-new-project.md#create-new-teams-app-in-visual-studio)
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
 * [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
-* [Debug your Teams app locally using Visual Studio](debug-local.md#debug-your-teams-app-locally-using-visual-studio)

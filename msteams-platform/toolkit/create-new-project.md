@@ -174,4 +174,3 @@ The following image shows the directory structure of tab app with bot feature:
 * [Prerequisites for all types of environment and create your Teams app](tools-prerequisites.md)
 * [Prepare to build apps using Microsoft Teams Toolkit](build-environments.md)
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
-* [Deploy Teams app to the cloud using Visual Studio](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio)
