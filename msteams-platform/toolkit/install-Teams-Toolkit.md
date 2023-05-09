@@ -6,9 +6,7 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 07/29/2022
-zone_pivot_groups: teams-app-platform
 ---
-
 # Install Teams Toolkit
 
 ## Prerequisites
