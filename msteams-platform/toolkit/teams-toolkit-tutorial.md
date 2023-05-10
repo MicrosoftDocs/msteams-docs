@@ -1,10 +1,10 @@
 ---
-title: Teams toolkit tutorial
-description: This tutorial helps you to select the app that you want to build. 
+title: Teams toolkit tutorial and code samples
+description: The article lists the app that you want to build and the associated guides. 
 ms.localizationpriority: medium
 ms.topic: reference
 ---
-# Teams app tutorials and code samples
+# Teams app tutorials and related code samples
 
 You can build your own Teams app with different capabilities using the step-by-step guide or tutorial and code samples.
 
