@@ -841,7 +841,7 @@ To build and run your app:
 
     Teams is loaded in a web browser.
 
-1. Select **Add to a chat** when prompted to install the app to Teams.
+1. Select **Add** when prompted to install the app to Teams.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-app.png" alt-text="Screenshot8 of BlazorApp local debug with Add option highlighted in red.":::
 
