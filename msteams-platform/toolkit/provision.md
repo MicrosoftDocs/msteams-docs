@@ -6,7 +6,6 @@ ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-zone_pivot_groups: teams-app-platform
 ---
 
 # Provision cloud resources
@@ -358,7 +357,7 @@ You can follow below steps to add environment variables to the .env files to use
 
 1. Open `teamsapp.yml` and find the `aadApp/create` action.
 
-1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. Below are the default `writeToenvironmentFile` definition if you create projects using Teams Toolkit:
+1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. Below is the default `writeToenvironmentFile` definition if you create projects using Teams Toolkit:
 
  ```typescript
  writeToEnvironmentFile:
@@ -403,7 +402,7 @@ You can follow below steps to add environment variables to the .env files to use
 
 1. Open `teamsapp.yml` and find the `botAadApp/create` action.
 
-1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. Below are the default `writeToEnvironmentFile` definition if you create projects using Teams Toolkit:
+1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. Below is the default `writeToEnvironmentFile` definition if you create projects using Teams Toolkit:
 
  ```typescript
  writeToEnvironmentFile:
