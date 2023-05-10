@@ -60,9 +60,10 @@ Alternately, you can use the ready-made Outlook-enabled app in the following sec
 
 To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/NPM-search-connector-M365) that's already enabled to run in Outlook, use Teams Toolkit extension for Visual Studio Code.
 
-1. From Visual Studio Code, open the command palette (`Ctrl+Shift+P`), type `Teams: Create a new app`.
-1. Select **Create a new Teams app** option.
-1. Select **Search-based message extension** to download the sample code for a Teams message extension using the latest Teams app manifest. For more information, see [Teams developer manifest](../resources/schema/manifest-schema.md).
+1. From Visual Studio Code, open the command palette (`Ctrl+Shift+P`), type `Teams: Create a New App`.
+1. Select the **Teams: Create a New App** option.
+1. Select the **Message Extension** option.
+1. Then select the **Custom Search Results** to download the sample code for a Teams message extension using the latest Teams app manifest. For more information, see [Teams developer manifest](../resources/schema/manifest-schema.md).
 
     :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="The screenshot is an example that shows the Type 'Create a new Teams app' VS Code command palette to list Teams sample options.":::
 
@@ -72,10 +73,10 @@ To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-
 
 1. Select preferred programming language.
 1. Select a location on your local machine for the workspace folder and enter your application name.
-1. Open the command palette (`Ctrl+Shift+P`) and type `Teams: Provision in the cloud` to create the required app resources (Azure App Service, App Service plan, Azure Bot, and Managed Identity) in your Azure account.
+1. Open the command palette (`Ctrl+Shift+P`) and type `Teams: Provision` to create the required app resources (Azure App Service, App Service plan, Azure Bot, and Managed Identity) in your Azure account.
 1. Select a subscription and a resource group.
-1. Select **Provision**.
-1. Open the command palette (`Ctrl+Shift+P`) and type `Teams: Deploy to the cloud` to deploy the sample code to the provisioned resources in Azure and start the app.
+1. Select **Provision**. Alternatively, you can select `Provision` from the **Lifecycle** section of the extension.
+1. Open the command palette (`Ctrl+Shift+P`) and type `Teams: Deploy` to deploy the sample code to the provisioned resources in Azure and start the app. Alternatively, you can select `Deploy` from the **Lifecycle** section of the extension.
 1. Select **Deploy**.
 
 From here, you can skip ahead to [Add Microsoft 365 channel for your bot](#add-microsoft-365-channel-for-your-bot) to complete the final step of enabling the Teams message extension to work in Outlook. (The app manifest is already referencing the correct version, so no updates are necessary).
@@ -152,19 +153,19 @@ Azure Active Directory (AD) single sign-on (SSO) for message extensions works th
 
 The final step is to sideload your updated message extension ([app package](/microsoftteams/platform/concepts/build-and-test/apps-package)) into Teams. After you complete, message extension appears in your installed *Apps* from the compose message area.
 
-1. Package your Teams application (manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you used Teams Toolkit to create your app, you can easily do this using the **Zip Teams metadata package** option in the *Deployment* menu of Teams Toolkit.
+1. Package your Teams application (manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you used Teams Toolkit to create your app, you can easily do this using the **Zip Teams App Package** option in the **Utility** section of Teams Toolkit. Select the `manifest.json` file for your app, as well as the appropriate environment.
 
-    :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="The screenshot is an example that shows 'Zip Teams metadata package' option in Teams Toolkit extension for Visual Studio Code.":::
+    :::image type="content" source="images/toolkit-zip-teams-app-package.png" alt-text="The screenshot is an example that shows 'Zip Teams metadata package' option in Teams Toolkit extension for Visual Studio Code.":::
 
 1. Go to **Microsoft Teams** and sign in using your sandbox tenant account.
 
 1. Select **Apps** to open the **Manage your apps** pane. Then select **Upload an app**.
 
-    :::image type="content" source="../assets/images/teams-manage-your-apps.png" alt-text="The screenshot is an example that shows the 'Upload an app' option.":::
+    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="The screenshot is an example that shows the 'Upload an app' option.":::
 
-1. Choose **Upload a customized app** option, select your app package, and install (*Add*) it to your Teams client.
+1. Choose **Upload a custom app** option, select your app package, and install (*Add*) it to your Teams client.
 
-    :::image type="content" source="../assets/images/teams-upload-custom-app.png" alt-text="The screenshot is an example that shows the 'Upload a customized app' option in Teams.":::
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="The screenshot is an example that shows the 'Upload a customized app' option in Teams.":::
 
 After it's sideloaded through Teams, your message extension is available in Outlook for Windows desktop and web.
 
