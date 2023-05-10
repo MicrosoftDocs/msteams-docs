@@ -82,7 +82,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
@@ -116,7 +116,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
@@ -546,7 +546,7 @@ Namespace to interact with app initialization and lifecycle.
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
@@ -729,7 +729,7 @@ Namespace to interact with the authentication-related part of the library. This 
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
