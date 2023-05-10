@@ -24,9 +24,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2023 May**
+## Microsoft Build 2023 :::image type="icon" source="assets/images/bullhorn.png" border="false"
 
-***May 05, 2023***: [Visual indicator for your Teams app](apps-in-teams-meetings/visual-indicator-for-your-app.md)
+***May 11, 2023***: [Visual indicator for your Teams app](apps-in-teams-meetings/visual-indicator-for-your-app.md)
 
 :::column-end:::
 :::row-end:::
