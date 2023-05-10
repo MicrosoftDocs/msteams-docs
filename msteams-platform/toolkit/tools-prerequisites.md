@@ -30,7 +30,7 @@ Ensure the following requirements are met before you start building your Teams a
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. | JavaScript and SPFx|
    | &nbsp; | [Microsoft Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SPFx build environments. Use version 1.55 or later. | JavaScript and SPFx|
    | **Optional** | &nbsp; | &nbsp; | &nbsp; |
-   | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Access stored data or deploy a cloud-based back-end for your Teams app in Azure. | JavaScript|
+   | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Access stored data or deploy a cloud-based back end for your Teams app in Azure. | JavaScript|
    | &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) or [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | A browser DevTools extension for the open-source React JavaScript library. | JavaScript|
    | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | A browser-based tool that lets you run a query from Microsoft Graph data. | JavaScript and SPFx|
    | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | A web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store.| JavaScript and SPFx|
@@ -50,10 +50,10 @@ Ensure that the following tools are installed on the device where you’ll creat
 | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. | JavaScript, TypeScript, SPFx, and C# or Blazor. |
 | [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/) | Version 17.4.1 or later, *ASP.NET and web development* workload, and *Microsoft Teams development tools* option. | C# or Blazor. |
 | **Optional** | &nbsp; | &nbsp; |
-| [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Stored data or deploy a cloud-based back-end for your Teams app in Azure. | JavaScript and TypeScript. |
+| [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Stored data or deploy a cloud-based back end for your Teams app in Azure. | JavaScript and TypeScript. |
 | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) or [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | The browser based DevTools extension for the open-source React JavaScript library. | JavaScript, TypeScript, and SPFx. |
 | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | The browser-based tool that lets you run a query from Microsoft Graph data. | JavaScript, TypeScript, SPFx, and C# or Blazor. |
-| [Developer Portal for Teams](https://dev.teams.microsoft.com/) | The web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store.| JavaScript, TypeScript, SPFx, and C# or Blazor. |
+| [Developer Portal for Teams](https://dev.teams.microsoft.com/) | The web-based portal to configure, manage, and distribute your Teams app to your organization or the Teams store.| JavaScript, TypeScript, SPFx, and C# or Blazor. |
 
 It's recommended that you bookmark the Microsoft Graph Explorer to learn about Microsoft Graph services. This browser-based tool allows you to run a query and access the Microsoft Graph API.
 
@@ -61,7 +61,7 @@ It's recommended that you bookmark the Microsoft Graph Explorer to learn about M
 
 |Teams Toolkit Version | Project Type | Supported Node.js Versions  |
 |---|---|---|
-| 5.0.0 | - | 14, 16, 18 (Preview) <br> 14, 16, 18 (Preview) <br> 16 <br> 14, 16, 18 |
+| 5.0.0 | Notify with http or timer trigger <br> Azure functions <br> SPFx <br> Other | 14, 16, 18 (Preview) <br> 14, 16, 18 (Preview) <br> 16 <br> 14, 16, 18 |
 | 4.2.2 | Notify with http or timer trigger <br> Azure functions <br> SPFx <br> Other | 14, 16, 18 (Preview) <br> 14, 16, 18 (Preview) <br> 16 <br> 14, 16, 18 |
 | 4.2.0 | SPFx | 16 |
 | 4.0.3 | SPFx | 14, 16 |

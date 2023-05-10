@@ -40,7 +40,7 @@ You can add capabilities in the following ways:
 
    1. Open your app project in **Visual Studio Code**.
    1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
-   1. Select **Add features** in the **DEVELOPMENT** section.
+   1. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Add capabilities from Teams Toolkit":::
 
@@ -58,7 +58,7 @@ You can add capabilities in the following ways:
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-capabilities-command-palette_1.png" alt-text="Add capabilities from command palette":::
 
-   1. Select **Teams: Add features**.
+   1. Select **Teams: View How-to Guides**.
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features_1.png" alt-text="To add capabilities by using command palette.":::
 

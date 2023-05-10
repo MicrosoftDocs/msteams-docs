@@ -190,6 +190,8 @@
         displayName: license
       - name: Publish Teams apps using Developer Portal 
         href: toolkit/publish-your-teams-apps-using-developer-portal.md
+    - name: Teams app tutorials and code samples
+      href: toolkit/teams-toolkit-tutorial.md
     - name: FAQ
       href: toolkit/faq.md  
   - name: Teams Toolkit v4
@@ -260,6 +262,8 @@
         displayName: license
       - name: Publish Teams apps using Developer Portal 
         href: toolkit/toolkit-v4/publish-your-teams-apps-using-developer-portal-v4.md
+    - name: Teams app tutorials and code samples v4
+      href: toolkit/toolkit-v4/teams-toolkit-tutorial-v4.md
     - name: FAQ
       href: toolkit/toolkit-v4/faq-v4.md  
   - name: TeamsFx SDK

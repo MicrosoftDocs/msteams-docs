@@ -57,7 +57,7 @@ You can also trigger Zip Teams App Package from treeview or `Teams: Zip Teams ap
 During local debug or provision, Teams Toolkit loads manifest from `appPackage/manifest.json`, and resolve manifest by environment variales defined in `env/.env.xx`, then creates or updates Teams app in [Teams Developer Portal](https://dev.teams.microsoft.com/home).
 
 1. You can define your own manifest.json file in `teamsapp.yml` and `teamsapp.local.yml`.
-E.g. You can put your manifest.json file in `test/test.json`, and update `manifestPath` parameters in yaml files.
+For example, you can put your manifest.json file in `test/test.json`, and update `manifestPath` parameters in yaml files.
 
 ```text
   - uses: teamsApp/zipAppPackage # Build Teams app package with latest env value
@@ -68,7 +68,7 @@ E.g. You can put your manifest.json file in `test/test.json`, and update `manife
 ```
 
 1. You can define your own environment variables. The default manifest.json contains some placeholders with format of ${{xx_xx}}. You can define your own environment variables, and add placeholders in manifest.json file.
-E.g. You can customize app description by defining a new environment variable in env/.env.xx file, and update manifest.json with corresponding placeholder.
+For example, you can customize app description by defining a new environment variable in env/.env.xx file, and update manifest.json with corresponding placeholder.
 
 [.env.dev]
 
@@ -91,13 +91,13 @@ TEAMS_APP_DESCRIPTION=This is an amazing app
 
 ## Validate Application
 
-After customization, you may want to validate your manifest or app package. You can trigger `Validate Application` from Treeview, or `Teams: ValidateApplication` from command palette. There are 2 options, `Validate using manifest schema` or `Validate app package using validation rules`.
+After customization, you may want to validate your manifest or app package. You can trigger `Validate Application` from Treeview, or `Teams: ValidateApplication` from command palette. There are two options, `Validate using manifest schema` or `Validate app package using validation rules`.
 
 [Image]
 
 Validate using manifest schema
 
-This option will render `appPackage/manifest.json` with environment variables, and then validate your manifest with its schema.
+This option renders `appPackage/manifest.json` with environment variables, and then validate your manifest with its schema.
 
 [Image]
 
@@ -113,7 +113,7 @@ If you meet `MissingEnvironmentVariablesError`, it means that Teams Toolkit cann
 
 Validate app package using validation rules
 
-This option will validate the zipped app package with validation rules.
+This option validates the zipped app package with validation rules.
 
 [Image]
 
@@ -123,7 +123,7 @@ CLI command:
 teamsfx validate --app-package-file-path YOUR-PATH-TO-APP-PACKAGE
 ```
 
-It has additional validation rules than manifest schema. E.g. If static tab section has entityId "conversations" and name, you will meet following error:
+It has additional validation rules than manifest schema. For example, if static tab section has entityId "conversations" and name, the following error appears:
 
 [Image]
 
@@ -157,7 +157,7 @@ In `appPackage/manifest.json`, you can go to CodeLens to preview the values for 
 > [!NOTE]
 > Provision the environment or execute local debug to generate environment variables.
 
-You can go to .env file by selecting the CodeLens, which provides a drop down list with all the environment names. After selecting one environment, the corresponding .env file opens.
+You can go to .env file by selecting the CodeLens, which provide a dropdown list with all the environment names. After selecting one environment, the corresponding .env file opens.
 
 [Image]
 
