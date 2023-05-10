@@ -44,16 +44,16 @@ You can add capabilities in the following ways:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot shows Add capabilities from Teams Toolkit.":::
 
-   1. From the dropdown list that appears, select the capability you want to add to your app. You'll be redirected to wiki link.
+   1. From the dropdown list that appears, select the capability you want to add to your app. You'll be redirected to the detailed page.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="Screenshot shows the notification.":::
 
-      |Capability | Wiki link |
+      |**Capability** | **How-to Guide** |
       |----------|----------|
       | Configure Tab Capability | [How to configure Tab capability within your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-configure-Tab-capability-within-your-Teams-app) |
       | Configure Bot Capability | [How to configure Bot capability within your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-configure-Bot-capability-within-your-Teams-app) |
       | Configure Message Extension Capability | [How to configure Message Extension capability within your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-configure-Message-Extension-capability-within-your-Teams-app) |
-      | Configure Outlook add-in Capability | [Configure Outlook Add in capability within your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Configure-Outlook-Add-in-capability-within-your-Teams-app) |
+      | Configure Outlook add-in Capability | [How to configure Outlook add-in capability within your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Configure-Outlook-Add-in-capability-within-your-Teams-app) |
 
 ### Use the Command Palette
 
@@ -67,16 +67,16 @@ You can add capabilities in the following ways:
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features_1.png" alt-text="Screenshot shows option to add capabilities by using command palette.":::
 
-   1. From the dropdown list that appears, select the capability you want to add to your app. You'll be redirected to wiki link.
+   1. From the dropdown list that appears, select the capability you want to add to your app. You'll be redirected to detailed page.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="Screenshot shows the notification.":::
 
-      |Capability | Wiki link |
+      |**Capability** | **How-to Guide** |
       |----------|----------|
       | Configure Tab Capability | [How to configure Tab capability within your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-configure-Tab-capability-within-your-Teams-app) |
       | Configure Bot Capability | [How to configure Bot capability within your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-configure-Bot-capability-within-your-Teams-app) |
       | Configure Message Extension Capability | [How to configure Message Extension capability within your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-configure-Message-Extension-capability-within-your-Teams-app) |
-      | Configure Outlook add-in Capability | [Configure Outlook Add in capability within your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Configure-Outlook-Add-in-capability-within-your-Teams-app) |
+      | Configure Outlook add-in Capability | [Configure Outlook add-in capability within your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Configure-Outlook-Add-in-capability-within-your-Teams-app) |
 
 ### Use TeamsFx CLI
 
