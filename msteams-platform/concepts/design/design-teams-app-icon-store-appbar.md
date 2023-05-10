@@ -196,7 +196,7 @@ Avoid using multiple words on the icon. It will be impossible to read the text w
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../.. \assets\images\design-guidelines\icon-balance-do.png "alt-text="Example shows a balanced app icon.":::
+:::image type="content" source="../..\assets\images\design-guidelines\icon-balance-do.png "alt-text="Example shows a balanced app icon.":::
 
 #### Do: Create balance (96x96)
 
