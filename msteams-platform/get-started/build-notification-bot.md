@@ -58,17 +58,23 @@ To use codespaces for creating a Teams notification bot:
 
    :::image type="content" source="../assets/images/get-started/open-in-browser.png" alt-text="Screenshot shows you to open your notification bot in browser.":::
 
-   Your notification bot is sideloaded to Teams and opens in the browser.
-
-   :::image type="content" source="../assets/images/get-started/tab-in-browser.png" alt-text="Screenshot shows your bot opened in the browser window.":::
+   Your notification bot is sideloaded to Teams.
 
 1. Once the app dialog appears, select **Add** to install your notification bot in Teams.
 
    :::image type="content" source="../assets/images/get-started/codespace/bot-teams.png" alt-text="Screenshot shows you the notification bot loaded in the Teams client.":::
 
-   You've successfully created the notification bot and loaded in the Teams client.
+1. Open new terminal in your codespace and run the following command:
+
+   ```bash
+   curl -X POST http://localhost:3978/api/notification
+   ```
+
+   App sends an Adaptive Card to your Teams.
 
    :::image type="content" source="../assets/images/get-started/codespace/notification-bot.png" alt-text="Screenshot shows your notification bot loaded in the Teams client.":::
+
+   You've successfully created the notification bot and loaded in the Teams client.
 
 > [!TIP]
 > [GitHub codespaces](https://github.com/features/codespaces) offers the free plan up to a fixed amount of usage every month. If you need to free up the space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespaces that you no longer need.
