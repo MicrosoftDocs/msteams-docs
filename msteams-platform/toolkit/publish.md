@@ -58,7 +58,7 @@ Perform the following steps to upload app package:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/upload_1.png" alt-text="upload an app":::
 
-   Now the app is sideloaded into the Teams client and you can add and view it
+   Now the app is sideloaded into the Teams client and you can add and view it.
 
 ## Publish to your organization
 

@@ -28,7 +28,7 @@ The following steps help to test the API connection in the Teams Toolkit local e
 
  2. **Add API credentials to the local application settings**
 
-    Teams Toolkit does't ask for credentials but it leaves placeholders in the local application settings file. Replace the placeholders with the appropriate credentials to access the API. The local application settings file is the `.env.teamsfx.local` file in the `bot` or `api` folder.
+    Teams Toolkit doesn't ask for credentials but it leaves placeholders in the local application settings file. Replace the placeholders with the appropriate credentials to access the API. The local application settings file is the `.env.teamsfx.local` file in the `bot` or `api` folder.
 
  3. **Use the API client to make API requests**
 

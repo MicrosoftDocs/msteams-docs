@@ -10,7 +10,7 @@ ms.date: 03/03/2022
 
 # Debug background process
 
-The debugging process involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debuggers in Visual Studio Code. Visual Studio Code launches Node debugger and browser debugger, and Microsoft Edge or Google Chrome launches a new browser instance.
+The debugging process involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debuggers in Visual Studio Code. Visual Studio Code launches Node debugger and browser debugger, and Microsoft Edge, or Google Chrome launches a new browser instance.
 
 The debugging process workflow is as follows:
 
