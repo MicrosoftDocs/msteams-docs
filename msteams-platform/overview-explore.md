@@ -27,6 +27,14 @@ With Teams, you can build your app in a feature-rich environment. Using Teams as
 | Adaptive Card | Cards help you organize information into groups and give users the opportunity to interact with specific parts of the information. | Sharing using text and images; gathering information using input forms. |
 | Task modules | Task modules permit you to create modal pop-up experiences in your Teams application. | Run your own custom HTML or JavaScript code. Show an <`iframe`>-based widget such as a YouTube or Microsoft Stream video. |
 
+### Extend your Teams app across Microsoft 365
+
+If you previously have built some Teams apps, now you can extend your apps across Microsoft 365 by updating the app manifest. Configure the properties in the Teams app manifest to make your app accessible over Outlook and Microsoft 365.
+
+:::image type="content" border="false" source="assets/images/overview/app-manifest.png" alt-text="Screenshot showing the configuration of properties in the Teams app manifest.":::
+
+If you would like to extend existing apps, learn how at [Extend Teams apps across Microsoft 365](../m365-apps/overview.md).
+
 ## Dive deeper
 
 Choose to customize your app with features and tools, such as user authentication, Microsoft Graph, and Developer Portal.
