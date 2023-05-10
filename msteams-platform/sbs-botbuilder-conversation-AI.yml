@@ -332,10 +332,7 @@ items:
 
     ---
 
-
-
     ## Update your bot app with Conversational AI capabilities
-
 
     1. Go to Visual Studio Code and open a terminal window.
     
@@ -351,6 +348,8 @@ items:
         import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnState, OpenAIModerator, OpenAIPlanner, AI } from '@microsoft/botbuilder-m365';
         import path from "path";
         ```
+        
+        You need to import all the classes to build your bot and leverage the Conversational AI capabilities.
 
     1. In the `index.ts` file, add the following code to create planner, moderator, and promptManager:
 
@@ -367,6 +366,9 @@ items:
         });
         const promptManager = new DefaultPromptManager(path.join(__dirname, './prompts' ));
         ````
+        * Planner: `planner` is  component that calls either OpenAI.
+        * PromptManager: `promptManager` manages prompt creation.
+        * Moderator: `moderator` adds safety moderation to the bots input and output.
 
     1. In the `index.ts` file, add the following code to define storage and application:
 
@@ -386,8 +388,9 @@ items:
             }
         });
         ```
-        
-        The `Application` class replaces the Teams Activity Handler class from Bot Framework SDK. The `ai` object is passed into the Application, which receives the AI components.
+
+        * The `storage` class is used to store conversation and user state; all BotFramework storage providers supported.
+        * The `Application` class replaces the Teams Activity Handler class from Bot Framework SDK. The `ai` object is passed into the Application, which receives the AI components.
 
     1.  In the `index.ts` file, add the following code to define actions:
 
@@ -490,11 +493,16 @@ items:
        openAIKey: process.env.SECRET_OPENAI_API_KEY
        ```
 
+       When you debug the app, the Open AI key defined here process the Open AI key from the `.env.local.user` during local debug.
+
     1. Go to the `teamsapp.local.yml`file and add the following code after `BOT_ID` and `BOT_PASSWORD`:
 
        ```teamsapp.local.yml
        SECRET_OPENAI_API_KEY: ${{SECRET_OPENAI_API_KEY}}
        ```
+       
+       When you run the app locally, the Open AI key defined here is used in the local settings.
+
     1. Go to the `index.ts` file and update the following:
     
        * Under **Create AI components**, replace `process.env.` with `config.`.
@@ -532,7 +540,6 @@ items:
         6. Registers the app in Teams Developer Portal and configures the app.
         7. Starts the bot app.
         8. Starts Teams in a web browser and sideloads the bot app.
-
 
         </details>
 
@@ -629,7 +636,6 @@ items:
     ## Deploy your app to Azure
 
     Deployment consists of two steps. First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the tab app.
-
 
     What's the difference between Provision and Deploy?
 

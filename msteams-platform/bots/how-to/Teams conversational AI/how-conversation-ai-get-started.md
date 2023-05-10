@@ -53,7 +53,7 @@ const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
 
 ### Import Teams conversational AI Library
 
-Import the class from `@microsoft/botbuilder-m365`.
+Import all the classes from `@microsoft/botbuilder-m365` to build your bot and leverage the Conversational AI capabilities.
 
 ```typescript
 ///// Teams Conversational AI Library /////
