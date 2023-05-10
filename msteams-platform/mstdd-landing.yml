@@ -52,8 +52,8 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
-      - text: Develop your apps with Teams Toolkit
-        url: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
+      - text: Teams Toolkit
+        url: toolkit/teams-toolkit-fundamentals.md
       - text: Contextless app update
         url: concepts/deploy-and-publish/apps-upload.md#update-your-app
       - text: Resource-specific consent for your Teams app
