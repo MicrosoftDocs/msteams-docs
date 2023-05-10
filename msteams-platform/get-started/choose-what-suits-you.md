@@ -7,13 +7,14 @@ ms.topic: reference
 
 # Choose what suits you
 
-You can build a Teams app as per your app's requirements. Based on factors, such as business needs, development environment, domain knowledge, select the environment and tools you want to build your app. You've built your first tab app, notification bot, and message extension. This section takes you through the various options that you have for building your Teams app as per your requirements.
+You've built your first tab app, notification bot, and message extension. You can build a Teams app as per your app's requirements. Based on factors, such as business needs, development environment, domain knowledge, select the environment and tools you want to build your app.
 
-A Teams app offers you the flexibility of choosing your build environment. It includes tools, framework, and languages to approach your app development.
+A Teams app offers you the flexibility of choosing your build environment. It includes tools, framework, and languages to approach your app development. Build your Teams app in the environment that works for your particular requirements. You can even select a combination. For example, you can use Teams Toolkit to build an app with JavaScript and host it on a SharePoint site.
 
-Build your Teams app in the environment that works for your particular requirements. You can even select a combination.
+This section takes you through the various options that you have for building your Teams app as per your requirements.
 
-For example, you can use Teams Toolkit to build an app with JavaScript and host it on a SharePoint site.
+* [Teams collaborative platform](#teams-collaborative-platform)
+* [Tools and SDKs](#tools-and-sdks)
 
 ## Teams collaborative platform
 
@@ -31,24 +32,26 @@ From designing to building and distributing a Teams app, you can use various too
 1. Deploy the app to Azure.
 1. Manage and publish the apps to Teams store with Developer Portal. Monetize your app with options, such as SaaS offers, in-app purchases, and more.
 
-## Explore tools and SDKs
+## Tools and SDKs
 
-You can build Microsoft Teams app with help of the following tools and SDKs.
+You can build your Microsoft Teams app with help of the following tools and SDKs.
 
-:::image type="content" source="../assets/images/overview/choose-what-you-need.png" alt-text="Pick SDKs and tools you need":::
-
-* [SDKs and libraries to build Teams app](#sdks-and-libraries-to-build-teams-app)
-* [Azure AD-secured REST APIs](#azure-ad-secured-rest-apis)
-* [Tools](#tools)
+:::image type="content" source="../assets/images/overview/choose-what-you-need.png" alt-text="Pick SDKs and tools you need"lightbox="../assets/images/overview/choose-what-you-need.png":::
 
 | | Tabs | Bots | Message extensions |
 |--------|-------------|--------|--------|
 | **User interactions** | A full-screen embedded web experience. | A chat bot that converses with members. | Shortcuts for inserting external content into a conversation or taking action on messages. |
-| **Recommended tools** | Microsoft Visual Studio Code with Teams Toolkit extension, or TeamsFx CLI if you prefer using CLI | Visual Studio Code with Teams Toolkit extension, or TeamsFx CLI | Visual Studio Code with Teams Toolkit extension, or TeamsFx CLI |
-| **SDKs** | TeamsFx SDK for core libs and Teams JavaScript client library for UI functionalities | TeamsFx SDK and Bot Framework SDK | TeamsFx SDK and Bot Framework SDK |
-| **Technology stacks or Languages** | Web technology in general, HTML, CSS, and JavaScript (incl. React). | Node.js, C#, Java, and Python. | Node.js, C#, Java, and Python. |
+| **SDKs** | Teams JavaScript client library for UI functionalities, SharePoint Framework (SPFx), and Microsoft Graph SDK. | TeamsFx SDK, Bot Framework SDK, Teams Conversational AI, and Microsoft Graph SDK. | TeamsFx SDK, Bot Framework SDK, Teams Conversational AI, and Microsoft Graph SDK. |
+| **Languages** | Web technology in general, HTML, CSS,  C#, .NET, TypeScript, and JavaScript (including React). | Node.js, Java, C#, .NET, TypeScript, JavaScript, and Python. |Node.js, Java, C#, .NET, TypeScript, JavaScript, and Python. |
+| **Recommended tools** | Visual Studio Code or Visual Studio with Teams Toolkit extension, or TeamsFx CLI if you prefer using CLI. | Visual Studio Code or Visual Studio with Teams Toolkit extension, or TeamsFx CLI if you prefer using CLI. | Visual Studio Code or Visual Studio with Teams Toolkit extension, or TeamsFx CLI if you prefer using CLI. |
+
+<!--
 
 Choose the best tools and SDKs for building a new Teams app.
+
+* [SDKs and libraries to build Teams app](#sdks-and-libraries-to-build-teams-app)
+* [Azure AD-secured REST APIs](#azure-ad-secured-rest-apis)
+* [Tools](#tools)
 
 :::image type="content" source="../assets/images/tools-and-sdks.png" alt-text="Screenshot shows you the tools and SDKs available for you to build Teams apps."lightbox="../assets/images/tools-and-sdks.png":::
 
@@ -171,6 +174,8 @@ If you are already familiar with Yeoman workflow, you can use to build your apps
 
 > [!div class="nextstepaction"]
 > [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md)
+
+-->
 
 ## See also
 
