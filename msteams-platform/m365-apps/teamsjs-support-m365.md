@@ -370,18 +370,18 @@ The following table lists support status for TeamsJS capabilities that run only 
         </tr>
         <tr>
             <th><a href="#settings">settings</a><img src="./images/deprecated-badge.png" alt="Badge indicating this capability is  deprecated" /></th>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -425,7 +425,7 @@ The following table lists support status for TeamsJS capabilities that run only 
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1964,18 +1964,18 @@ Deprecated. Provides settings-related functionality. Please use equivalent APIs 
     <tbody>
         <tr>
             <th>settings <img src="./images/deprecated-badge.png" alt="Badge indicating this capability is deprecated" /></th>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -2151,7 +2151,7 @@ Earlier version of the capability for providing modal dialog (task module) suppo
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
