@@ -83,7 +83,7 @@ To use codespaces for creating a Teams notification bot:
 
 If you would like to learn how to start a project with Teams Toolkit from scratch, let's go through the step-by-step guide together.
 
-Unlike codespaces, where everything you need is packaged for you already, you'll need to set you your development environment. Let's start with prerequisites section first before start building.
+Unlike codespaces, where everything you need is packaged for you already, you need to set you your development environment. Let's start with prerequisites section first before start building.
 
 > [!div class="nextstepaction"]
 > [Prerequisites](../toolkit/tools-prerequisites.md)

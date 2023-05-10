@@ -44,7 +44,7 @@ To create a Teams tab app with codespace, follow the steps:
 
    :::image type="content" source="../assets/images/get-started/toolkit-in-browser-sign-in.png" alt-text="Screenshot shows you the Teams Toolkit window in browser to sign in."lightbox="../assets/images/get-started/add-tab-in-teams.png":::
 
-1. Select **Preview your Teams App (F5)** to build the your tab app.
+1. Select **Preview your Teams App (F5)** to build your tab app.
 
       :::image type="content" source="../assets/images/get-started/toolkit-in-browser.png" alt-text="Screenshot shows you the Teams Toolkit window in browser with your tab app.":::
 
@@ -73,7 +73,7 @@ To create a Teams tab app with codespace, follow the steps:
 > [!TIP]
 > [GitHub codespaces](https://github.com/features/codespaces) offers the free plan up to a fixed amount of usage every month. If you need to free up the space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespaces that you no longer need.
 
-If you want to build by yourself, or wants to create a tab app that can be installed on Outlook and Microsoft 365, follow the step-by-step guide at the next section!
+If you want to build by yourself, or want to create a tab app that can be installed on Outlook and Microsoft 365, follow the step-by-step guide at the next section!
 
 ## Use step-by-step guide to build a basic tab app
 
