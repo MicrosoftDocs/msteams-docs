@@ -334,6 +334,10 @@ items:
 
     ## Update your bot app with Conversational AI capabilities
 
+    Teams Toolkit is the easiest way to scaffold and get a bot running, Teams Toolkit creates the basic bot structure for you so that you can  get started with configuring your bot. 
+    
+    Let's get started to configure Teams AI library capabilities.
+
     1. Go to Visual Studio Code and open a terminal window.
     
     1. Run the following command in the terminal to add the latest version of the Teams conversational AI library to your application using npm:
@@ -500,7 +504,7 @@ items:
        ```teamsapp.local.yml
        SECRET_OPENAI_API_KEY: ${{SECRET_OPENAI_API_KEY}}
        ```
-       
+
        When you run the app locally, the Open AI key defined here is used in the local settings.
 
     1. Go to the `index.ts` file and update the following:
