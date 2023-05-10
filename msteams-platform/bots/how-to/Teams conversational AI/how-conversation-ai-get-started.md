@@ -8,7 +8,60 @@ ms.author: surbhigupta
 
 # Get started with Teams conversational AI
 
-The Teams AI SDK simplifies the process of creating and powering bots with AI capabilities. It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
+The Teams conversational AI library simplifies the process of creating and powering bots with AI capabilities. It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
+
+Teams conversational AI library streamlines the process to build intelligent Microsoft Teams applications by leveraging the AI components provided by the AI library. You can easily integrate conversational AI, prompt management, and safety moderation into your apps and enhancing the user experience and improve communication. It also facilitates the creation of bots that uses an OpenAI API key to provide an AI-driven conversational experience, or the same using Azure Foundry.
+
+This article focuses on how to integrate Teams conversational AI library into your app and key capabilities.
+
+## Initial setup
+
+Teams conversational AI library is built on top of the BOT framework and uses its fundamentals to offer an extension to the BOT framework capabilities. As part of initial setup, it's important to import the BOT framework functionalities.
+
+> [!NOTE]
+> The adapter class that handles connectivity with the channels is imported from the [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0#the-bot-adapter).
+
+```typescript
+import {
+  TeamsActivityHandler,
+  CardFactory,
+  TurnContext,
+  AdaptiveCardInvokeValue,
+  AdaptiveCardInvokeResponse,
+} from "botbuilder";
+import rawWelcomeCard from "./adaptiveCards/welcome.json";
+import rawLearnCard from "./adaptiveCards/learn.json";
+import { AdaptiveCards } from "@microsoft/adaptivecards-tools";
+
+export interface DataInterface {
+  likeCount: number;
+}
+
+export class TeamsBot extends TeamsActivityHandler {
+  // record the likeCount
+  likeCountObj: { likeCount: number };
+}
+
+// Create adapter.
+// See https://aka.ms/about-bot-adapter to learn more about adapters.
+const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
+  MicrosoftAppId: config.botId,
+  MicrosoftAppPassword: config.botPassword,
+  MicrosoftAppType: "MultiTenant",
+});
+  ```
+
+### Import Teams conversational AI Library
+
+Import the class from `@microsoft/botbuilder-m365`.
+
+```typescript
+///// Teams Conversational AI Library /////
+
+// import Teams Conversational AI Library
+import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnState, OpenAIModerator, OpenAIPlanner, AI } from '@microsoft/botbuilder-m365';
+import path from "path";
+```
 
 ## Create AI Components
 
@@ -40,8 +93,10 @@ const promptManager = new DefaultPromptManager(path.join(__dirname, '../src/prom
 
 The application object automatically manages the conversation and user state of your bot.
 
-* Storage: Create a storage provider to store conversation and user state for your bot. The `MemoryStorage()` function stores all the state for your bot.
-* Application: The application class replaces the ActivityHandler class in a typical BotFramework bot. You can configure your ai by adding the planner, moderator, prompt manager, default prompt and history.
+* **Storage**: Create a storage provider to store conversation and user state for your bot. The `MemoryStorage()` function stores all the state for your bot.
+* **Application**: The application class replaces the Teams Activity Handler class. You can configure your ai by adding the planner, moderator, prompt manager, default prompt and history.
+
+The `ai` object is passed into the Application, which receives the AI components and the default prompt defined earlier.
 
 ```javascript
 // Define storage and application
@@ -64,11 +119,11 @@ const app = new Application<ApplicationTurnState>({
 
 Prompts are pieces of text that can be used to create conversational experiences. They're used to start conversations, ask questions, and generate responses. They can be used to create natural language experiences for chatbots, virtual assistants, and other conversational user interfaces. The use of prompts can help reduce the complexity of creating conversational experiences and make them more engaging for the user.
 
-Create a folder called prompts, and define your prompts in the folder.
+Create a folder called prompts, and define your prompts in the folder. When the user interacts with the bot by entering a text prompt, the bot responds with a text completion.
 
-* skprompt.txt: Define all your text prompts. Contains the prompts text and supports template variables and functions.
+* `skprompt.txt`: Define all your text prompts. Contains the prompts text and supports template variables and functions.
   
-* config.json: Provide the right configuration to ensure bot responses are aligned with your business requirement. Configure `max_tokens`, `temperature`, and other properties to pass into open AI or Azure AI. Contains the prompts model settings.
+* `config.json`: Provide the right configuration to ensure bot responses are aligned with your requirement. Configure `max_tokens`, `temperature`, and other properties to pass into open AI or Azure AI. Contains the prompt model settings.
 
    ```json
    {
@@ -88,6 +143,19 @@ Create a folder called prompts, and define your prompts in the folder.
     }
    }
    ```
+
+### Query parameters
+
+The following table includes the query parameters:
+
+|**Value**  |**Description**  |
+|---------|---------|
+|`max_tokens`     | The maximum number of tokens to generate in the completion. The token count of your prompt plus max_tokens cannot exceed the model's context length.        |
+|`temperature`    | What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.        |
+|`top_p`    |An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered.         |
+|`presence_penalty`     |  Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.       |
+|`frequency_penalty`     |Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.         |
+|`stop_sequences`     |  Up to 4 sequences where the API will stop generating further tokens. The returned text will not contain the stop sequence. |
 
 ### Prompt actions
 
@@ -181,7 +249,7 @@ Next step is to pick the capabilities needed. You need to use the SDK to scaffol
 
 Teams conversational AI Library supports JavaScript and is designed to simplify the process of building bots that can interact with Microsoft Teams, and facilitates the migration of existing bots. The SDK supports the migration of messaging capabilities, Message Extension (ME) capabilities and Adaptive Cards capabilities to the new format. It's also possible to upgrade existing Teams apps with these features.
 
-Developers creating bots for Microsoft Teams were using the BotBuilder SDK directly. New AI SDK is designed to facilitate the construction of bots that can interact with Microsoft Teams. While one of the key features of this SDK is the AI support that customers can utilize, the initial objectives of the team may simply be to upgrade their current bot without AI. Once upgraded the bot can simply connect to AI/LLM available in the SDK.
+Developers creating bots for Microsoft Teams were using the BotBuilder SDK directly. New AI library is designed to facilitate the construction of bots that can interact with Microsoft Teams. While one of the key features of this SDK is the AI support that customers can utilize, the initial objectives of the team may simply be to upgrade their current bot without AI. Once upgraded the bot can simply connect to AI/LLM available in the SDK.
 
 The following app capabilities are supported by Teams conversational AI:
 
@@ -191,7 +259,7 @@ The following app capabilities are supported by Teams conversational AI:
 
 * Adaptive Cards capabilities – Migration supported.
 
-In the section below we'll explain in detail each of the capabilities and their path to migration. We'll using the samples from the AI SDK repo for explaining the method of migration.  
+In the section below we'll explain in detail each of the capabilities and their path to migration. We'll using the samples from the AI library repo for explaining the method of migration.  
 
 ### Sending or receiving Message
 
@@ -332,7 +400,7 @@ app.adaptiveCards.actionSubmit("ChoiceSubmit", async (context, state, data: Subm
 
 ### Message-extension query
 
-The Teams Conversational AI SDK offers bot developers a more intuitive approach to create handlers for various message-extension query commands when compared to previous iterations of Teams Bot Framework SDK. The new SDK works alongside the existing Teams Bot Framework SDK.
+The Teams Conversational AI library offers bot developers a more intuitive approach to create handlers for various message-extension query commands when compared to previous iterations of Teams Bot Framework SDK. The new SDK works alongside the existing Teams Bot Framework SDK.
 
 The following is an example of how a bot developer can structure their code to handle a message-extension query for the `searchCmd` command.
 

@@ -19,10 +19,8 @@ items:
 
     Your app will have a capability, which comes with its own UI and UX:
     
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features.":::
-    
     > [!NOTE]
-    > In this tutorial, you can create a bot app.
+    > If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio code to build a bot, see sbs-gs-bot.yml. 
 
     In this tutorial, you learn:
 
@@ -269,16 +267,15 @@ items:
 
     | Folder name | Contents |
     | --- | --- |
-    | `.fx/configs` | Configuration files that user can customize for the Teams app. |
-    | `.fx/configs/config.<envName>.json` | Configuration file for every environment. |
-    | `.fx/configs/azure.parameters.<envName>.json` | Parameters file for Azure BICEP provision for every environment. |
-    | `.fx/configs/projectSettings.json` | Global project settings that apply to all environments. |
-    | `.fx/configs/ngrok.yml` | Ngrok settings|
-    | `bot` |  Code for the Bot capability needed at runtime. |
-    | `bot/teamsBot.js` | Main entry point for the bot app. |
-    | `templates/appPackage` | App manifest template files, and the app icons, color.png and outline.png. |
-    | `templates/appPackage/manifest.template.json` | App manifest for running the app in local and remote environment.  |
-    | `templates/azure` | BICEP template files |
+    | `env/.env.local.user` |Configuration file for local environment used by `teamsapp.yml` to customize the provisioning and deployment rules.  |
+    | `index.ts` |  Main entry point for the bot app. |
+    | `teamsBot.ts` | Main entry point for the bot app. |
+    | `appPackage` | App manifest template files, and the app icons, color.png and outline.png. |
+    | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
+    | `config.ts` |  |
+    | `teamsapp.yml` |	This is the main Teams Toolkit project that defines two primary things:  Properties and configuration Stage definitions. |
+    | `teamsapp.local.yml` |This overrides teamsapp.yml with actions that enable local execution and debugging. See teamsapp.local.yml below for more details. |
+    | `infra/azure.parameters.json` | Parameters file for Azure BICEP provision for every environment. |
 
     > [!Tip]
     > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.
@@ -339,11 +336,10 @@ items:
 
     ## Update your bot app with Conversational AI capabilities
 
-    To update the conversational AI capabilities:
 
-    1. Open a terminal window.
+    1. Go to Visual Studio Code and open a terminal window.
     
-    1. Run the following command in the terminal to install botbuilder-m365 modules:
+    1. Run the following command in the terminal to add the latest version of the Teams conversational AI library to your application using npm:
 
        ```bash
        npm install @microsoft/botbuilder-m365
@@ -354,9 +350,6 @@ items:
         ```typescript
         import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnState, OpenAIModerator, OpenAIPlanner, AI } from '@microsoft/botbuilder-m365';
         import path from "path";
-        // eslint-disable-next-line @typescript-eslint/no-empty-interface
-        interface ConversationState {}
-        type ApplicationTurnState = DefaultTurnState<ConversationState>;
         ```
 
     1. In the `index.ts` file, add the following code to create planner, moderator, and promptManager:
@@ -373,7 +366,6 @@ items:
             moderate: 'both'
         });
         const promptManager = new DefaultPromptManager(path.join(__dirname, './prompts' ));
-
         ````
 
     1. In the `index.ts` file, add the following code to define storage and application:
@@ -394,7 +386,10 @@ items:
             }
         });
         ```
-    1. In the `index.ts` file, add the following code to define actions:
+        
+        The `Application` class replaces the Teams Activity Handler class from Bot Framework SDK. The `ai` object is passed into the Application, which receives the AI components.
+
+    1.  In the `index.ts` file, add the following code to define actions:
 
         ```typescript
         app.ai.action(AI.FlaggedInputActionName, async (context, state, data) => {
@@ -407,6 +402,7 @@ items:
             return false;
         });
         ```
+        The `FlaggedInputActionName` and `FlaggedOutputActionName` handlers are built-in action handlers to handle moderator flags. If the moderator flags an incoming message input, the moderator redirects to the `FlaggedInputAction` handler and `context.sendActivity` sends a message to the user about the flag.
 
     1. In the `index.ts` file, add the following code to define history:
 
@@ -425,7 +421,7 @@ items:
        * config.json
        * skprompt.txt
 
-    1. Go to the `config.json` file, and add the following code to create a prediction engine:
+    1. Go to the `config.json` file, and add the following code to create the prompt model settings:
     
         ```javascript
         {
@@ -446,6 +442,8 @@ items:
         }
         ```
 
+        The `config.js` file contains parameters like temperature, max tokens, type, and so on, which you pass into Open AI.
+
     1. Go to the 'prompt.txt' file and add the following instructions for GPT on how the bot should conduct itself and facilitate conversation:
 
         ```text
@@ -455,12 +453,16 @@ items:
         Teams Chef should always greet the human, ask them their name, and then guide the junior developer in his journey to build new apps for Microsoft Teams. 
         ```
 
+        The `prompt.txt` file contains text prompts with which the users interact with GPT. GPT attempts to use these prompts to produce the next series of words that are most likely to follow from the previous text.
+
         To store and leverage session history, add the following in the 'prompt.txt' file:
 
         ```
         Conversation history:
         {{conversation.history}}
         ```
+
+        The `conversation.history` remembers context across messages SDK returns the correct intents and entities for the user's input. 
 
         For example, let's say the user's name is "Dave". The bot might carry on the following conversation:
 
@@ -476,8 +478,6 @@ items:
         Notice that the bot remembered Dave's first message when responding to the second.
 
     1. Go to the **env** folder and update the Open AI key in the `.env.local.user`file.
-    
-       The following is an example of Open AI key in the .env.local.user`file:
 
        ```
         SECRET_BOT_PASSWORD=

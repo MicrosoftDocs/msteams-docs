@@ -22,6 +22,9 @@ To get started, install:
 * [OpenAI](https://openai.com/api/) key.
 * Global Administrator access to a [Microsoft 365 tenant](https://developer.microsoft.com/microsoft-365/dev-program?ocid=MSlearn&WT.mc_id=m365-16105-cxa) and [Enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
+> [!NOTE]
+> If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio code to build a bot, see [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml).
+
 ## Build and run the sample app
 
 1. Go to the [sample](https://github.com/microsoft/botbuilder-m365/tree/main/js/samples/04.ai.a.naturalLanguage.santaBot).
