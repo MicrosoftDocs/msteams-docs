@@ -232,7 +232,7 @@ App caching improves subsequent launch time of the apps that are loaded in the m
 > [!NOTE]
 >
 > * App caching is supported only for tabs loaded in the Teams meeting.
-> * App caching in Teams desktop client is supported for all scopes but for the meeting side panel scope it is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * App caching in Teams desktop client is supported for all scopes but for the meeting side panel scope it's available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * App caching in iOS personal tray is generally available (GA) and it's supported only in personal scope.
 
 ### Enable app caching
