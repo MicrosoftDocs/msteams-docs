@@ -146,7 +146,10 @@ async function example() {
 
 A *capability* is a logical grouping (via namespace) of APIs that provide similar functionality. You can think of Microsoft Teams, Outlook, and Microsoft 365 app, as hosts to your tab app. A host supports a given capability if it supports all the APIs defined within that capability. A host can't partially implement a capability. Capabilities can be feature- or content-based, such as *authentication*, or *dialog*. There are also capabilities for application types such as *pages*, and other groupings.
 
-Starting with TeamsJS v.2.0, APIs are defined as functions in a JavaScript namespace whose name matches their required capability. For example, if an app is running in a host that supports the *dialog* capability, then the app can safely call APIs such as `dialog.open` (in addition to other dialog-related APIs defined in the namespace). If an app attempts to call an API that's not supported in that host, the API generates an exception. To verify if the current host running your app supports a given capability, call the [isSupported()](#differentiate-your-app-experience) function of its namespace.
+Starting with TeamsJS v.2.0, APIs are defined as functions in a JavaScript namespace whose name matches their required capability. For example, if an app is running in a host that supports the *dialog* capability, then the app can safely call APIs such as `dialog.open` (in addition to other dialog-related APIs defined in the namespace). If an app attempts to call an API that's not supported in that host, the API generates an exception.
+
+> [!TIP]
+> Check for host support of a given capability at runtime by calling the [`isSupported()`](#differentiate-your-app-experience) function on that capability (namespace).
 
 #### Differentiate your app experience
 

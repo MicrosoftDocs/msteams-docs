@@ -9,34 +9,34 @@ keywords: TeamsJS Teams JavaScript library capability Microsoft 365 M365
 ---
 # TeamsJS capability support across Microsoft 365
 
-Starting with version 2.0.0, Teams JavaScript client library (TeamsJS) enables [certain types of Teams apps](./overview.md) to run across the Microsoft 365 ecosystem. Currently, Microsoft 365 application hosts (Microsoft 365 app and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support will expand over time.
+Starting with version 2.0.0, Teams JavaScript client library (TeamsJS) enables [certain types of Teams apps](./overview.md) to run across the Microsoft 365 ecosystem. Currently, Microsoft 365 applications that can host Teams apps (Microsoft 365 app and Outlook) support only a subset of the application types and capabilities you can build for the Teams platform. This support will expand over time.
 
 This article details the level of support of TeamsJS version 2.x capabilities across various host applications. For a more info on what's changed between TeamsJS versions 1.x and 2.x, see [What's new in TeamsJS version 2.x.x](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx).
 
-The *TeamsJS Capability* table below lists TeamsJS capabilities (public namespaces) and their support across Microsoft 365 hosts. Some capabilities are marked with  "Deprecated" or "Preview" badges, which have the following meanings:
+The *TeamsJS Capability* table below lists TeamsJS capabilities (public namespaces) and their support across Microsoft 365 host applications. Some capabilities are marked with *Deprecated* or *Preview* badges, which have the following meanings:
 
 | Badge | Meaning |
 | - | - |
 | :::image type="content" source="./images/preview-badge.png" alt-text="Image with the word 'Preview' inside a blue rectangle":::  | This capability is in preview and subject to change based on feedback. Please do not use in production. |
 | :::image type="content" source="./images/deprecated-badge.png" alt-text="Image with the word 'Deprecated' inside an orange rectangle"::: | This capability is deprecated in favor of newer functionality, though it is supported for backwards compatibility purposes. For new apps, please use the capability recommended in the usage notes of the deprecated capability. |
 
-For readability, Microsoft 365 hosts are signified by the following product icons:
+Microsoft 365 hosts are signified by the following product icons in the tables below:
 
 | Microsoft Teams | Microsoft 365 app | Microsoft Outlook |
 | :-: | :-: | :-: |
 | :::image type="content" source="./images/teams-icon.png" alt-text="Microsoft Teams icon"::: | :::image type="content" source="./images/microsoft-365-icon.png" alt-text="Microsoft 365 app icon"::: | :::image type="content" source="./images/outlook-icon.png" alt-text="Microsoft Outlook icon"::: |
 
-Preview versions for both Teams and Outlook, launched via *Try the new Teams* and *Try the new Outlook* toggle controls in the regular Teams and Outlook clients respectively, have different levels of support. The preview versions are designated by the following "Pre" (preview) icons:
+Preview versions for both Teams and Outlook (launched via *Try the new Teams* and *Try the new Outlook* toggle controls in Teams and Outlook clients respectively), have different levels of support. The preview versions are designated by the following "PRE" (preview) icons:
 
 | Microsoft Teams preview | Microsoft Outlook preview |
 | :-: | :-: |
 | :::image type="content" source="./images/teams-preview-icon.png" alt-text="Microsoft Teams (Preview) icon"::: | :::image type="content" source="./images/outlook-preview-icon.png" alt-text="Microsoft Outlook preview icon"::: |
 
-Entries marked with a check and asterisk (&#x2713;*) indicate support for that host is available only to preview audiences. Click on any TeamsJS Capability to find further details, including host version availability, recommended alternative capability or APIs (for deprecated capabilities), usage notes, and further resources.
+Entries marked with a check and asterisk (&#x2713;*) indicate support for that host is available only to preview audiences (enrolled in [Microsoft 365 Targeted Releases](prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases) for web clients, or with [Beta Channel apps](./prerequisites.md#install-microsoft-365-apps-in-your-test-environment) installed for desktop clients). Click on any TeamsJS Capability for further details, including reference docs, samples, and usage notes.
 
 ## Cross-host capabilities
 
-The following table lists status of host support for TeamsJS capabilities that can run outside of Microsoft Teams.
+The following table lists host application support for TeamsJS capabilities that can run outside of Microsoft Teams.
 
 <br />
 <table border>
@@ -229,7 +229,7 @@ The following table lists status of host support for TeamsJS capabilities that c
 
 ## Teams-only capabilities
 
-The following table lists support status for TeamsJS capabilities that run only in the Microsoft Teams environment.
+The following table lists support for TeamsJS capabilities that run only in the Microsoft Teams environment.
 
 <br />
 <table border>
@@ -490,9 +490,11 @@ The following table lists support status for TeamsJS capabilities that run only 
     </tbody>
 </table>
 
-## Preview capabilities without host support
+## Preview capabilities awaiting host support
 
-Some capabilities in the source are in early preview and still awaiting initial support in one or more host applications. These include: [**barCode**](#barcode), [**media**](#media), [**meeting**](#meeting), and [**search**](#search).  
+Some capabilities in the source are in early preview and still awaiting initial support in one or more host applications. These include: [**barCode**](#barcode), [**media**](#media), [**meeting**](#meeting), and [**search**](#search).
+
+The remainder of this article provides further info on each capability of the Teams JavaScript client library.
 
 ## `app`
 
@@ -1087,7 +1089,7 @@ Preview. This group of capabilities enables apps to show modal dialogs. There ar
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -1104,7 +1106,7 @@ Preview. This group of capabilities enables apps to show modal dialogs. There ar
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
