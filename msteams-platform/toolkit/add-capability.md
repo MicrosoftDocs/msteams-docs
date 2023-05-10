@@ -1,7 +1,7 @@
 ---
 title: Add Capabilities to Your Teams apps
 author: surbhigupta
-description:  In this module, learn how to add Capabilities of Teams Toolkit
+description:  In this module, learn how to add capabilities of Teams Toolkit.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
@@ -19,9 +19,9 @@ Adding capabilities with Teams Toolkit allows you to extend the functionality of
 | **Bot** |  Bots help to interact with your web service through text, interactive cards, and task modules.|Basic message extension, SSO-enabled tab, and basic tab|
 | **Message extension** | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|Basic bot, SSO-enabled tab, and basic tab|
 |**Scenario-based Teams app**|&nbsp;|&nbsp;|
-| **Notification bot** | Notification bot proactively sends messages in Teams channel or group chat, or personal chat. You can trigger the notification bot with an HTTP request, such as cards or texts. |SSO-enabled tab and basic tab|
-| **Command bot** | Command bot allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with the Adaptive Cards. |SSO-enabled tab and basic tab|
-| **Workflow bot** | Workflow bot allows users to interact with an Adaptive Card enabled by the Adaptive Card action handler in the workflow bot app.|SSO-enabled tab and basic tab|
+| **Chat Notification Message** | Notification bot proactively sends messages in Teams channel or group chat, or personal chat. You can trigger the notification bot with an HTTP request, such as cards or texts. |SSO-enabled tab and basic tab|
+| **Chat Command** | Command bot allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with the Adaptive Cards. |SSO-enabled tab and basic tab|
+| **Sequential Workflow in Chat** | Workflow bot allows users to interact with an Adaptive Card enabled by the Adaptive Card action handler in the workflow bot app.|SSO-enabled tab and basic tab|
 | **SPFx tab** | Microsoft 365 hosts the SPFx tab apps and supports developing and hosting your client-side SharePoint Framework (SPFx) solution.|None|
 | **SSO-enabled tab** |You can build SSO-enabled tab app that allows the user access to your app with single sign-on (SSO).|SSO-enabled tab, notification bot, command bot, basic bot, and basic message extension|
 
