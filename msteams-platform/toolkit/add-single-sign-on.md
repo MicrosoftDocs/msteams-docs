@@ -43,6 +43,10 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-select features_1.png" alt-text="Screenshot shows the Single Sign-on feature highlighted in red in the Visual Studio Code.":::
 
+| **Development** | **Wiki link**                                             |
+| -------- | ---------------------------------------------------- |
+| Develop Single Sign-on Experience in Teams | [Single Sign-on](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams) |
+
 ### Add SSO using TeamsFx CLI
 
 You can run `teamsfx add sso` command in your **project root directory**.
