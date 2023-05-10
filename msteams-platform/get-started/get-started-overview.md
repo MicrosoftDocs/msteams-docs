@@ -29,19 +29,13 @@ In this section, learn more about your Teams app capabilities such as tab, scene
 
 ## Build your Teams app
 
-Here’s how you proceed:
+Select the type of Teams app you want to build:
 
-You can select the section based on the type of Teams app you want to build:
+* **Build a basic Teams tab app**: You can get started with building a Teams app with a [basic tab app](build-basic-tab-app.md). The process to create the Teams app is similar for any basic app.
 
-* **Build a basic Teams tab app**: You can get started with building a Teams app with a basic tab app. The process to create the Teams app is similar for any basic app.
+* **Build a scenario-based Teams app**: You can build a Teams app that is suitable for a particular scenario or use-case. For example, a [notification bot](build-notification-bot.md) is suitable to send notifications but not to chat.
 
-    You can start by building a [basic tab app](build-basic-tab-app.md)
-
-* **Build a scenario-based Teams app**: You can build a Teams app that is suitable for a particular scenario or use-case. For example, a notification bot is suitable to send notifications but not to chat.
-
-    You can start by building a [scenario-based app](build-notification-bot.md)
-
-* **Build message extension Teams app**: You can build a message extension for your Teams app [build message extension](build-message-extension.md).
+* **Build message extension Teams app**: You can build a [message extension Teams app](build-message-extension.md).
 
 For building other basic Teams app, see [Teams app tutorials and code samples](teams-toolkit-tutorial.md).
 

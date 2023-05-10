@@ -18,11 +18,9 @@ This section takes you through the various options that you have for building yo
 
 ## Teams collaborative platform
 
-A Teams app brings your users the advantages of a collaborative workspace.
+As a collaborative platform for building apps, Teams offers the full range of apps and tools. Teams platform supports your app development at every stage from planning to distributing it.
 
-As a platform for building apps, Teams offers the full range of apps and toolkits. Teams platform supports you at every stage from planning your app to distributing it.
-
-From designing to building and distributing a Teams app, you can use various tools and services. An example development flow can be:
+You can use various tools and services to build your app. An example development flow can be:
 
 1. Plan your project and figure out the requirement.
 1. Design the app. Use Teams UI Kit and UI Library for designing tabs UI.
