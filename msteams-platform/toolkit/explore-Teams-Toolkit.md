@@ -9,7 +9,7 @@ ms.date: 07/29/2022
 ---
 # Explore Teams Toolkit
 
-You can explore the Teams Toolkit look and feel within the Visual Studio Code.
+You can explore the look and feel of Teams Toolkit within the Visual Studio Code.
 
 This section gives you a tour of Teams Toolkit and its features.
 
@@ -89,13 +89,13 @@ From the task pane, you can see the following sections:
 
         To create and debug your Teams app, you need the following features:
         
-       * **Create a new Teams app**: Use the Teams Toolkit wizard to prepare project scaffolding for app development.
+       * **Create a New App**: Use the Teams Toolkit wizard to prepare project scaffolding for app development.
 
         * **View Samples**: Select any of the Teams Toolkit's sample apps. The toolkit downloads the app code from GitHub and you can build the sample app.
 
         * **View How-to Guides**: Select to view Teams app scenario guides and development guides.
        
-        * **Preview your Teams app (F5)**: Press **F5** to debug and preview your Teams app.
+        * **Preview Your Teams App (F5)**: Press **F5** to debug and preview your Teams app.
    :::column-end:::
 :::row-end:::
 
@@ -125,11 +125,11 @@ From the task pane, you can see the following sections:
         
         * **Zip Teams metadata package**: Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest and app icons.
         
-        * **Validate Application**: Validate the App created..
+        * **Validate Application**: Validate the app created using manifest schema or app package using validation rules.
        
-        * **Preview and Debug Adaptive Cards**: To preview and debug the Adaptive Cards created.
+        * **Preview and Debug Adaptive Cards**: Preview and author Adaptive Cards directly in Visual Studio Code.
         
-        * **Open Developer Portal to Teams**: Use Developer Portal to configure and manage your Teams app. 
+        * **Open Developer Portal to Teams**: Use Developer Portal to publish, configure, and manage your Teams app. 
    :::column-end:::
 :::row-end:::
 
@@ -160,8 +160,9 @@ From the task pane, you can see the following sections:
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/view-how-to-guides.png" alt-text="Screenshot shows the how-to guides menu options." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/view-how-to-guides.png":::
 
     * Select any one of the Teams app scenario guides to view the guide to develop an app for a common app scenario, such as sending notifications using a bot.
-
+    * Select any one of the Teams app capability guides to view the guide that helps configure app capabilities, such as tab, bot, or message extension.
     * Select any one of the Teams app development guides to view a guide that helps in app development, such as embedding a dashboard tab in a Teams app.
+    * Select any one of the Teams app cloud service integration guides to view the guide that helps integrate cloud services, such as Azure Functions.
 
 ## See also
 
