@@ -1,7 +1,7 @@
 ---
 title: Add Capabilities to Your Teams apps
 author: surbhigupta
-description:  In this module, learn how to add Capabilities of Teams Toolkit
+description:  In this module, learn how to add capabilities of Teams Toolkit.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
@@ -19,9 +19,9 @@ Adding capabilities with Teams Toolkit allows you to extend the functionality of
 | **Bot** |  Bots help to interact with your web service through text, interactive cards, and task modules.|Basic message extension, SSO-enabled tab, and basic tab|
 | **Message extension** | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|Basic bot, SSO-enabled tab, and basic tab|
 |**Scenario-based Teams app**|&nbsp;|&nbsp;|
-| **Notification bot** | Notification bot proactively sends messages in Teams channel or group chat, or personal chat. You can trigger the notification bot with an HTTP request, such as cards or texts. |SSO-enabled tab and basic tab|
-| **Command bot** | Command bot allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with the Adaptive Cards. |SSO-enabled tab and basic tab|
-| **Workflow bot** | Workflow bot allows users to interact with an Adaptive Card enabled by the Adaptive Card action handler in the workflow bot app.|SSO-enabled tab and basic tab|
+| **Chat Notification Message** | Notification bot proactively sends messages in Teams channel or group chat, or personal chat. You can trigger the notification bot with an HTTP request, such as cards or texts. |SSO-enabled tab and basic tab|
+| **Chat Command** | Command bot allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with the Adaptive Cards. |SSO-enabled tab and basic tab|
+| **Sequential Workflow in Chat** | Workflow bot allows users to interact with an Adaptive Card enabled by the Adaptive Card action handler in the workflow bot app.|SSO-enabled tab and basic tab|
 | **SPFx tab** | Microsoft 365 hosts the SPFx tab apps and supports developing and hosting your client-side SharePoint Framework (SPFx) solution.|None|
 | **SSO-enabled tab** |You can build SSO-enabled tab app that allows the user access to your app with single sign-on (SSO).|SSO-enabled tab, notification bot, command bot, basic bot, and basic message extension|
 
@@ -42,11 +42,11 @@ You can add capabilities in the following ways:
    1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
    1. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Add capabilities from Teams Toolkit":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot shows Add capabilities from Teams Toolkit.":::
 
    1. From the dropdown list that appears, select the capability you want to add to your app.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="notification":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="Screenshot shows the notification.":::
 
       Teams Toolkit adds the selected capability to your app and updates the app directory structure for the new capability. After successfully adding the capability to your Teams app, you need to provision for each environment.
 
@@ -56,15 +56,15 @@ You can add capabilities in the following ways:
 
    1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-capabilities-command-palette_1.png" alt-text="Add capabilities from command palette":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-capabilities-command-palette_1.png" alt-text="Screenshot shows the Add capabilities from command palette.":::
 
    1. Select **Teams: View How-to Guides**.
 
-      :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features_1.png" alt-text="To add capabilities by using command palette.":::
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features_1.png" alt-text="Screenshot shows option to add capabilities by using command palette.":::
 
    1. From the dropdown list that appears, select the capability you want to add to your app.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="notification":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="Screenshot shows the notification.":::
 
       Teams Toolkit adds the selected capability to your app and updates the app directory structure for the new capability. After successfully adding the capability to your Teams app, you need to provision for each environment.
 

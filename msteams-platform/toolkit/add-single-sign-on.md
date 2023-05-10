@@ -1,12 +1,11 @@
 ---
 title: Add single sign-on to your Teams apps
 author: surbhigupta
-description: In this module, learn how to add single sign-on (SSO) of Teams Toolkit, enable SSO support, update your application to use SSO
+description: In this module, learn how to add single sign-on (SSO) of Teams Toolkit, enable SSO support, and update your application to use SSO.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-zone_pivot_groups: teams-app-platform
 ---
 
 # Add single sign-on to Teams app
@@ -34,13 +33,13 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
 
 1. Open **Visual Studio Code**.
 2. Select **Teams Toolkit** from the Visual Studio Code activity bar.
-3. Select **Add features** under **DEVELOPMENT**.
+3. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-add features_1.png" alt-text="Screenshot shows the Add features option under the Development option in the Visual Studio Code.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot showing the selection of View How to guides. ":::
 
-   * You can select **View** > **Command Palette...** to view **Add features** window.
+   * You can select **View** > **Command Palette...** to view **View How-to Guides** window.
 
-4. Select **Single Sign-On**.
+4. Select **Develop Single Sign-On Experience in Teams**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-select features_1.png" alt-text="Screenshot shows the Single Sign-on feature highlighted in red in the Visual Studio Code.":::
 
@@ -49,7 +48,7 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
 You can run `teamsfx add sso` command in your **project root directory**.
 
 > [!NOTE]
-> The feature enables SSO for all existing applicable capabilities. Follow the same steps to enable SSO if you add capability later to the project.
+> The feature enables SSO for all existing applicable capabilities. Follow the same steps to enable SSO, if you add capability later to the project.
 
 ## Customize your project using Teams Toolkit
 
@@ -393,7 +392,7 @@ To make this work in your app:
 
 1. Override `handleTeamsMessagingExtensionQuery` interface under `bot\teamsBot`. You can follow the sample code in the `handleMessageExtensionQueryWithToken` to do your own query logic.
 
-1. Open `bot\package.json`, ensure that `@microsoft/teamsfx` version >= 1.2.0
+1. Open `bot\package.json`, ensure that `@microsoft/teamsfx` version >= 1.2.0.
 
 1. Install `isomorphic-fetch` npm packages in your bot project.
 
