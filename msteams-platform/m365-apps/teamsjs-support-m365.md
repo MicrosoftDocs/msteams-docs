@@ -17,8 +17,8 @@ The *TeamsJS Capability* table below lists TeamsJS capabilities (public namespac
 
 | Badge | Meaning |
 | - | - |
-| Preview :::image type="content" source="./images/preview-badge.png" alt-text="Image with the word 'Preview' inside a blue rectangle"::: | This capability is in preview and subject to change based on feedback. Please do not use in production. |
-| Deprecated :::image type="content" source="./images/deprecated-badge.png" alt-text="Image with the word 'Deprecated' inside an orange rectangle"::: | This capability is deprecated in favor of newer functionality, though it is supported for backwards compatibility purposes. For new apps, please use the capability recommended in the usage notes of the deprecated capability. |
+| :::image type="content" source="./images/preview-badge.png" alt-text="Image with the word 'Preview' inside a blue rectangle":::  | This capability is in preview and subject to change based on feedback. Please do not use in production. |
+| :::image type="content" source="./images/deprecated-badge.png" alt-text="Image with the word 'Deprecated' inside an orange rectangle"::: | This capability is deprecated in favor of newer functionality, though it is supported for backwards compatibility purposes. For new apps, please use the capability recommended in the usage notes of the deprecated capability. |
 
 For readability, Microsoft 365 hosts are signified by the following product icons:
 
