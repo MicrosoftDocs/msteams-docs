@@ -29,10 +29,10 @@ To create a Teams tab app with codespace, follow the steps:
 
 <a href="https://github.com/codespaces/new?hide_repo_select=true&amp;ref=dol%2Fcodespaces&amp;repo=348288141&amp;machine=standardLinux32gb&amp;devcontainer_path=.devcontainer%2Fhello-world-tab-codespaces%2Fdevcontainer.json&amp;location=WestUs2" target="_blank"><img src="https://github.com/codespaces/badge.svg" alt="Open hello-world tab in GitHub Codespaces"></a>
 
-1. Select the button above to open codespaces. You may be asked to login to GitHub account if you haven't.
+1. Select the button above to open codespaces. You may be asked to sign in to GitHub account if you haven't.
 1. Select **Create codespaces**.
 
-   :::image type="content" source="../assets/images/get-started/codespace.png" alt-text="Screenshot shows you the github page to create a codespace for tab.":::
+   :::image type="content" source="../assets/images/get-started/codespace.png" alt-text="Screenshot shows you the GitHub page to create a codespace for tab.":::
 
    The **Setting up your codespace** page appears.
 
