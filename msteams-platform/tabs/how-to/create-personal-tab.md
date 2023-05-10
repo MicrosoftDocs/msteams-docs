@@ -10,7 +10,7 @@ zone_pivot_groups: teams-app-environment
 
 # Create a personal tab
 
-Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) your personal tabs.
+Personal tabs also known as static tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) your personal tabs.
 
 Ensure that you have all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your personal tab.
 
@@ -614,7 +614,7 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 
 ## Extend personal tabs to group chat and channels
 
-You can extend personal tabs to group chat, channel, and meetings. These tabs behave more like apps, instead of pinned app content as there will only ever be one tab pinned at a time. Keep the following things in mind to build a personal tab that works in every context:
+You can extend personal tabs to group chat, channel, and meetings. These tabs behave more like apps, instead of pinned app content as there is only one tab pinned at a time. Keep the following things in mind to build a personal tab that works in every context:
 
 * Don't embed your entire web app in Teams, as users often don't find this valuable.
 * Instead, think about what your app can uniquely do inside of Teams. For example, can you serve an app experience that consolidates all your apps content, such as displaying all the surveys in a meeting.
@@ -665,8 +665,7 @@ If a context isn't defined in the app manifest, then Teams will default to t
 
 ## Create configurable personal tab
 
-To create configurable personal tab add the configuration page logic to your `contentUrl`. For more information, see [configuration page.](~/tabs/how-to/create-tab-pages/configuration-page.md#configurable-personal-tab)
-
+To create a configurable experience for a personal tab add the configuration page logic to your `contentURL` codespace and define `setConfig()` (formerly `setSettings()`) property. For more information, see [configuration page.](~/tabs/how-to/create-tab-pages/configuration-page.md#configurable-personal-tab)
 
 ## Code sample
 
