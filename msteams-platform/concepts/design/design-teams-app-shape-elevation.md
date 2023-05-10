@@ -1,6 +1,6 @@
 ---
 title: Design your app - Shape and elevation
-description: Learn about the basics of designing your Microsoft Teams app, including avatars, layout, icons, color scheme, and more.
+description: Learn about the basics of shapes and elevation of your Teams app.
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
