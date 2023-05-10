@@ -35,8 +35,6 @@ Add a connection to an existing third-party API using the following steps:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot showing the selection of View How to guides. ":::
 
-     The **View How-to Guides** dropdown list appears.
-
 1. Select **API Connection**.
 
 1. From the dropdown list that appears, select the API connection you want to add to your app. You'll be redirected to the detailed page.
@@ -45,7 +43,6 @@ Add a connection to an existing third-party API using the following steps:
 
       |**Development** | **How-to Guide** |
       |----------|----------|
-      | Develop Single Sign-on Experience in Teams | [How to Develop single sign-on experience in Teams](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams) |
       |Connect to an API | [How to Integrate API Connection with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-API-Connection-with-your-Teams-app) |
       |Automate CI/CD Pipelines | [How to automate CI/CD pipelines](https://github.com/OfficeDev/TeamsFx/wiki/How-to-automate-cicd-pipelines) |
       |Run and Debug on Mobile Client | [How to Run and debug your Teams application on iOS or Android client](https://github.com/OfficeDev/TeamsFx/wiki/Run-and-debug-your-Teams-application-on-iOS-or-Android-client) |
