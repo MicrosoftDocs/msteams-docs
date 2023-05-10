@@ -1,7 +1,7 @@
 ---
 title: Teams Toolkit Overview
 author: zyxiaoyuer
-description: Learn about Teams Toolkit, it's installation, navigation, and user journey. Teams Toolkit is available for Visual Studio code and Visual Studio.
+description: Learn about Teams Toolkit, it's installation, navigation, and user journey. Teams Toolkit is available for Visual Studio code.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -23,7 +23,7 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 
 ## Available for Visual Studio Code
 
-Teams Toolkit is available for free for Visual Studio Code. For more information about installation and setup, see [install Teams Toolkit](./install-Teams-Toolkit.md).
+Teams Toolkit is available for free for Visual Studio Code. For more information about installation and set up, see [install Teams Toolkit](./install-Teams-Toolkit.md).
 
 | Teams Toolkit | Visual Studio Code |
 | - | ------------------ |
@@ -47,7 +47,7 @@ You can start directly with the project templates such as tabs, bots, and messag
 
 ### Automatic registration and configuration
 
-You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app configure settings, such as Azure Active Directory (Azure AD) automatically. Sign in with your Microsoft 365 account to control where the app is configured and customize the included Azure AD manifest when you need flexibility.
+You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug, the app configure settings as in Azure Active Directory (Azure AD) is done automatically. Sign in with your Microsoft 365 account to control where the app is configured and customize the included Azure AD manifest when you need flexibility.
 
 ### Multiple environments
 
