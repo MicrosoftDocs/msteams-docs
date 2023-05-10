@@ -50,78 +50,135 @@ The minimum size for desktop is 550 pixels.
 
 ## Best practices
 
-##### Do: Use word wrap so that text is legible at all zoom levels
+:::row:::
+   :::column span="":::
+:::image type="content" source="../..\assets\images\design-guidelines\word-wrap-zoom-do.png" alt-text="Example shows a word wrap so that the text is legible at all zoom levels.":::
+
+#### Do Use word wrap so that text is legible at all zoom levels
 
 Avoid text overlap and truncation.
 
-:::image type="content" source="../..\assets\images\design-guidelines\word-wrap-zoom-do.png" alt-text="Example shows a word wrap so that the text is legible at all zoom levels.":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../..\assets\images\design-guidelines\word-wrap-zoom-dont.png" alt-text="Example shows overlap of text and buttons that may not meet accessibility standards.":::
 
-##### Don’t: Let text and buttons shift and overlap as zoom level changes
+#### Don’t: Let text and buttons shift and overlap as zoom level changes
 
 Overlapping text and buttons may not meet our accessibility standards.
 
-:::image type="content" source="../..\assets\images\design-guidelines\word-wrap-zoom-dont.png" alt-text="Example shows overlap of text and buttons that may not meet accessibility standards.":::
+   :::column-end:::
+:::row-end:::
 
-##### Do: Use word wrap so that text is legible at all widths
+:::row:::
+   :::column span="":::
+:::image type="content" source="../..\assets\images\design-guidelines\word-wrap-width-do.png" alt-text="Example shows a word wrap so that the text is legible at all width.":::
+
+#### Do: Use word wrap so that text is legible at all widths
 
 Avoid truncation with reflow, prioritizing CTAs and action items.
 
-:::image type="content" source="../..\assets\images\design-guidelines\word-wrap-width-do.png" alt-text="Example shows a word wrap so that the text is legible at all width.":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../..\assets\images\design-guidelines\word-wrap-width-dont.png" alt-text="Example shows that the text and CTAs are not usable without word wrap.":::
 
-##### Don’t: Let text or CTAs get cut off or become illegible as window width changes
+#### Don’t: Let text or CTAs get cut off or become illegible as window width changes
 
 Without word wrapping, the text and CTAs are not usable.
 
-:::image type="content" source="../..\assets\images\design-guidelines\word-wrap-width-dont.png" alt-text="Example shows that the text and CTAs are not usable without word wrap.":::
+   :::column-end:::
+:::row-end:::
 
-##### Do: Make sure your app is legible at 200% scale
+:::row:::
+   :::column span="":::
+:::image type="content" source="" alt-text="Example shows a word wrap so that the text is legible at all width.":::
+
+#### Do: Do: Make sure your app is legible at 200% scale
 
 Use responsive design to avoid text overlap and truncation.
 
-##### Don’t: Truncate and cut off content at any zoom level
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="" alt-text="Example shows that the text and CTAs are not usable without word wrap.":::
+
+#### Don’t: Truncate and cut off content at any zoom level
 
 We recommend testing up to 200% zoom.
 
-##### Do: Do text and colors for accessibility
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../..\assets\images\design-guidelines\text-colors-do.png" alt-text="Example shows how the text should be visible and accessible for users.":::
+
+#### Do: Text and colors for accessibility
 
 All text should be visible and usable for all users, meaning that it should exceed certain color ratios, depending on its usage. To check your contrast levels check out the WebAIM contrast checker.
 
-:::image type="content" source="../..\assets\images\design-guidelines\text-colors-do.png" alt-text="Example shows how the text should be visible and accessible for users.":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../..\assets\images\design-guidelines\text-colors-dont.png" alt-text="Example shows a text that doesn't meet the contrast standards.":::
 
-##### Don’t: Submit your app with text that doesn’t pass contrast standards
+#### Don’t: Submit your app with text that doesn’t pass contrast standards
 
 Teams apps need to be accessible to all users with any level of visual impairment or disability. Submissions with inaccessible text will not be accepted.
 
-:::image type="content" source="../..\assets\images\design-guidelines\text-colors-dont.png" alt-text="Example shows a text that doesn't meet the contrast standards.":::
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="" alt-text="Example shows a word wrap so that the text is legible at all width.":::
 
 ##### Do: Test your app at 1920 x 1080 resolution
 
 Avoid text overlap and truncation.
 
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="" alt-text="Example shows that the text and CTAs are not usable without word wrap.":::
+
 ##### Don’t: Submit your app for review without testing at Teams default resolution
 
 Your app may not pass the submission process if there are issues at 1920 x 1080 resolution.
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../..\assets\images\design-guidelines\responsive-mobile-do.png" alt-text="Example shows mobile app responsiveness.":::
 
 ##### Do: Test mobile app for responsiveness
 
 Mobile view of your app should also be responsive, similarly to the narrowest responsive breakpoint of a web app.
 
-:::image type="content" source="../..\assets\images\design-guidelines\responsive-mobile-do.png" alt-text="Example shows mobile app responsiveness.":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../..\assets\images\design-guidelines\responsive-mobile-dont.png" alt-text="Example shows cut off or illegible text on mobile app.":::
 
 ##### Don’t: Allow truncation on your mobile app
 
 As with the desktop app, nothing should be cut off or illegible on your mobile app.
 
-:::image type="content" source="../..\assets\images\design-guidelines\responsive-mobile-dont.png" alt-text="Example shows cut off or illegible text on mobile app.":::
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../..\assets\images\design-guidelines\headers-do.png" alt-text="Example shows the headers that are legible at all zoom levels.":::
 
 ##### Do: Ensure headers are always legible at all zoom levels
 
 If headers truncate, use a tooltip so that users can read headers by hovering over them.
 
-:::image type="content" source="../..\assets\images\design-guidelines\headers-do.png" alt-text="Example shows the headers that are legible at all zoom levels.":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../..\assets\images\design-guidelines\headers-dont.png" alt-text="Example shows a truncated header without a hover feature.":::
 
 ##### Don’t: Truncate headers without a hover feature
 
 Your app will not pass Teams submission if it has illegible headers without a hover functionality.
 
-:::image type="content" source="../..\assets\images\design-guidelines\headers-dont.png" alt-text="Example shows a truncated header without a hover feature.":::
+   :::column-end:::
+:::row-end:::
