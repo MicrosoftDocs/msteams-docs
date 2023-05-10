@@ -68,10 +68,6 @@ Based on the capabilities you want for your app, choose an appropriate developme
 If you are already familiar with Yeoman workflow, you can use [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps.
 
 -->
-## Next step
-
-> [!div class="nextstepaction"]
-> [Build your Teams app](know-your-teams-app.md)
 
 ## See also
 
