@@ -227,7 +227,7 @@ You need to interact with Azure AD application during various stages of your Tea
 
     Teams Toolkit performs the following functions during local development:
 
-    - Read the `.env.local` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit reuses the existing Azure AD application. Otherwise you need to create a new application using the `aad.template.json` file.
+    - Read the `.env.local` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit reuses the existing Azure AD application. Otherwise, you need to create a new application using the `aad.template.json` file.
 
     - Initially ignores some properties in the manifest file that requires more context, such as `replyUrls` property that requires a local development endpoint during the creation of a new Azure AD application with the manifest file.
 
@@ -239,7 +239,7 @@ You need to interact with Azure AD application during various stages of your Tea
 
       You need to provision cloud resources and deploy your application while moving your application to the cloud. At stages, such as local debug, Teams Toolkit:
 
-      - Reads the `.env.{env}` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit reuses the existing Azure AD application. Otherwise you need to create a new application using the `aad.template.json` file.
+      - Reads the `.env.{env}` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit reuses the existing Azure AD application. Otherwise, you need to create a new application using the `aad.template.json` file.
 
       - Ignores some properties in the manifest file initially that requires more context such as `replyUrls` property. This property requires frontend or bot endpoint during the creation of a new Azure AD application with the manifest file.
 

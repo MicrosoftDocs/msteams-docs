@@ -6,11 +6,10 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-zone_pivot_groups: teams-app-platform
 ---
 # Create a new Teams project
 
-In this section, you can learn how to create a new Teams project using Microsoft Visual Studio Code and Visual Studio.
+In this section, you can learn how to create a new Teams project using Microsoft Visual Studio Code.
 
 ## Create a new Teams project for Visual Studio Code
 
@@ -29,7 +28,7 @@ The process to create a new Teams app is similar for all types of apps except SP
 
 1. Open **Visual Studio Code**.
 
-1. Select the **Teams Toolkit** > **Create a new Teams app**.
+1. Select the **Teams Toolkit** > **Create a New App**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="screenshot shows the Create New Project button in the Teams Toolkit sidebar.":::
 
@@ -169,4 +168,3 @@ The following image shows the directory structure of tab app with bot feature:
 * [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
 * [Prerequisites for all types of environment and create your Teams app](tools-prerequisites.md)
 * [Prepare to build apps using Microsoft Teams Toolkit](build-environments.md)
-* [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
