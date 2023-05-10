@@ -39,31 +39,16 @@ Add a connection to an existing third-party API using the following steps:
 
 1. Select **API Connection**.
 
+1. From the dropdown list that appears, select the API connection you want to add to your app. You'll be redirected to the detailed page.
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features_1.png" alt-text="api select features":::
 
-    You'll be redirected to [Integrate API Connection with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-API-Connection-with-your-Teams-app).
-
-1. Enter endpoint for the API, and then press **Enter**.
-
-    Ensure that the endpoint is a valid http(s) URL. Teams Toolkit adds the endpoint to the project's local app settings, and it's the base URL for API requests.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint_1.png" alt-text="api endpoint":::
-
-1. Select the component that needs to connect to the API, and then select **OK**.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-invoke_1.png" alt-text="api invoke":::
-
-1. Enter an alias for the API, and then press **Enter**.
-
-    The alias generates an app setting name for the API. Teams Toolkit adds the alias to the project's local app setting.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-alias_1.png" alt-text="api alias":::
-
-1. Select the required authentication for the API request from the **API authentication type**.
-
-     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/myAPI connection.png" alt-text="api auth":::
-
-     Teams Toolkit generates appropriate sample code and adds corresponding local application settings based on authentication that you select. To configure authentication:
+      |**Development** | **How-to Guide** |
+      |----------|----------|
+      | Develop Single Sign-on Experience in Teams | [How to Develop single sign-on experience in Teams](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams) |
+      |Connect to an API | [How to Integrate API Connection with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-API-Connection-with-your-Teams-app) |
+      |Automate CI/CD Pipelines | [How to automate CI/CD pipelines](https://github.com/OfficeDev/TeamsFx/wiki/How-to-automate-cicd-pipelines) |
+      |Run and Debug on Mobile Client | [How to Run and debug your Teams application on iOS or Android client](https://github.com/OfficeDev/TeamsFx/wiki/Run-and-debug-your-Teams-application-on-iOS-or-Android-client) |
 
 # [Basic](#tab/basic)
 
