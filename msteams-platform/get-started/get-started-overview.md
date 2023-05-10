@@ -1,6 +1,6 @@
 ---
 title: Get started - Overview
-description: Get started. Build your first Microsoft Teams app based on language (Node.js, C#, Java, and Python) and developement environment, understand app capabilities, SDKs.
+description: In this module, learn how to build your first Microsoft Teams app based on language and developement environment, understand app capabilities, SDKs.
 ms.localizationpriority: high
 ms.topic: reference
 ---
@@ -33,17 +33,13 @@ Here’s how you proceed:
 
 You can select the section based on the type of Teams app you want to build:
 
-* [Build a basic tab app](#build-a-basic-tab-app)
-* [Build scenario-based apps](#build-a-scenario-based-teams-app)
-* [Build message extension](#build-message-extension)
-
 * **Build a basic Teams tab app**: You can get started with building a Teams app with a basic tab app. The process to create the Teams app is similar for any basic app.
 
-You can start by building a [basic tab app](build-basic-tab-app.md)
+    You can start by building a [basic tab app](build-basic-tab-app.md)
 
 * **Build a scenario-based Teams app**: You can build a Teams app that is suitable for a particular scenario or use-case. For example, a notification bot is suitable to send notifications but not to chat.
 
-You can start by building a [scenario-based app](build-notification-bot.md)
+    You can start by building a [scenario-based app](build-notification-bot.md)
 
 * **Build message extension Teams app**: You can build a message extension for your Teams app [build message extension](build-message-extension.md).
 

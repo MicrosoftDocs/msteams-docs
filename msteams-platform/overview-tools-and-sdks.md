@@ -99,7 +99,7 @@ Azure Active Directory (Azure AD) is a cloud-based identity and access managemen
 Azure Bot Service is a collection of libraries, tools, and services that let you build, test, deploy, and manage intelligent bots.
 
 > [!div class="nextstepaction"]
-> [Azure Bot Services](/azure/bot-service/bot-service-overview?view=azure-bot-service-4.0)
+> [Azure Bot Services](/azure/bot-service/bot-service-overview)
 
 ### Azure OpenAI
 

@@ -1,6 +1,6 @@
 ---
 title: Choose what suits you
-description: Get started. Build your first Microsoft Teams app based on language (Node.js, C#, Java, and Python) and developement environment, understand app capabilities, SDKs.
+description: In this module, learn more about the tools and SDKs available for you to build a Microsoft Teams app
 ms.localizationpriority: high
 ms.topic: reference
 ---
@@ -223,7 +223,7 @@ If you are already familiar with Yeoman workflow, you can use to build your apps
 You can preview your Teams apps running in other high usage Microsoft 365 experiences with the latest Teams JavaScript client library.
 
         > [!div class="nextstepaction"]
-        > [Extend your app](m365-apps/overview.md)
+        > [Extend your app](~/m365-apps/overview.md)
     :::column-end:::
 :::row-end:::
 
@@ -235,7 +235,7 @@ You can preview your Teams apps running in other high usage Microsoft 365 experi
         After integrating your app with Teams, you must test your app before publishing it.
 
         > [!div class="nextstepaction"]
-        > [Test your app](concepts/build-and-test/test-app-overview.md)
+        > [Test your app](~/concepts/build-and-test/test-app-overview.md)
     :::column-end:::
 :::row-end:::
 
@@ -259,7 +259,7 @@ You can preview your Teams apps running in other high usage Microsoft 365 experi
         Teams store offers app monetizing options, such as SaaS offers and In-app purchases. Choose the best monetizing option suitable for your Teams app.
 
         > [!div class="nextstepaction"]
-        > [Monetize your app](concepts/deploy-and-publish/appsource/prepare/monetize-overview.md)
+        > [Monetize your app](~/concepts/deploy-and-publish/appsource/prepare/monetize-overview.md)
     :::column-end:::
 :::row-end:::
 
@@ -271,7 +271,7 @@ You can preview your Teams apps running in other high usage Microsoft 365 experi
         Blend the features users love about an existing web app, service, or system with the collaborative features of Teams.
 
         > [!div class="nextstepaction"]
-        > [Integrate an existing app](samples/integrating-web-apps.md)
+        > [Integrate an existing app](~/samples/integrating-web-apps.md)
     :::column-end:::
 :::row-end:::
 
@@ -283,6 +283,6 @@ You can preview your Teams apps running in other high usage Microsoft 365 experi
         You don't need to be an expert programmer to build a great Teams app. Try one of several low-code solutions.
 
         > [!div class="nextstepaction"]
-        > [Create a low-code app](samples/teams-low-code-solutions.md)
+        > [Create a low-code app](~/samples/teams-low-code-solutions.md)
     :::column-end:::
 :::row-end:::

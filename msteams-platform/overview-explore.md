@@ -33,7 +33,7 @@ If you previously have built some Teams apps, now you can extend your apps acros
 
 :::image type="content" border="false" source="assets/images/overview/app-manifest.png" alt-text="Screenshot showing the configuration of properties in the Teams app manifest.":::
 
-If you would like to extend existing apps, learn how at [Extend Teams apps across Microsoft 365](../m365-apps/overview.md).
+If you would like to extend existing apps, learn how at [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md).
 
 ## Dive deeper
 
