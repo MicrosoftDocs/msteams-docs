@@ -16,7 +16,7 @@ A configuration page is a special type of [content page](content-page.md). The u
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
-## Configure a channel or group chat tab
+## Build a configuration page
 
 The application must reference the [TeamsJS library](/javascript/api/overview/msteams-client) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and are available from the cloud.
 
