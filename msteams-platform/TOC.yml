@@ -17,8 +17,6 @@
     displayName: Teams app user experience
   - name: Explore Teams platform features
     href: overview-explore.md
-  - name: Explore Tools and SDKs
-    href: overview-tools-and-sdks.md
   - name: The Teams solution
     href: overview-solution.md
 - name: Get started
@@ -37,6 +35,8 @@
     href: get-started/build-message-extension.md
   - name: Teams app tutorials and code samples
     href: get-started/teams-toolkit-tutorial.md
+  - name: Choose what suits you
+    href: get-started/choose-what-suits-you.md
  
 - name: Plan your app
   items:

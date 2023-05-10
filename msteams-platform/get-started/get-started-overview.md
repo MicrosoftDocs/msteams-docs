@@ -27,9 +27,10 @@ In this section, learn more about your Teams app capabilities such as tab, scene
 
 :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Illustration showing your choices to build Teams app - Codespaces bundles all you need and it only takes several minutes to rey, while getting started manually will take time but you learn step-by-step":::
 
+<!--
 ## App capabilities and development tools
 
-(Note: Move some content to Overview > Tools and SDKs (title TBD))
+(Note: will be moved to choose what suits you)
 
 Based on the capabilities you want for your app, choose an appropriate development tool set.
 
@@ -43,6 +44,8 @@ Based on the capabilities you want for your app, choose an appropriate developme
 *You aren't limited to using these particular stacks!*
 
 If you are already familiar with Yeoman workflow, you can use [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps.
+
+-->
 
 ## See also
 
