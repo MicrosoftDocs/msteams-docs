@@ -96,7 +96,7 @@ After the initial setup process, Teams Toolkit starts the following processes:
 
 ### Starts app services
 
-Runs tasks as defined in `.vscode/tasks.json`. By default the task name is `"Start application"`. If your project contains more than one components, there'll be more dependent tasks.
+Runs tasks as defined in `.vscode/tasks.json`. By default, the task name is `"Start application"`. If your project contains more than one component, there'll be more dependent tasks.
 
 ```JSON
 // .vscode/tasks.json
