@@ -32,7 +32,7 @@ To use codespaces for creating a Teams notification bot:
 1. Select the button above to open codespaces. You may be asked to sign in to GitHub account if you haven't.
 1. Select **Create codespaces**.
 
-   :::image type="content" source="../assets/images/get-started/codespace.png" alt-text="Screenshot shows you the GitHub page to create a codespace for bot.":::
+   :::image type="content" source="../assets/images/get-started/codespace/bot-codespace.png" alt-text="Screenshot shows you the GitHub page to create a codespace for bot.":::
 
    The **Setting up your codespace** page appears.
 
@@ -64,11 +64,11 @@ To use codespaces for creating a Teams notification bot:
 
 1. Once the app dialog appears, select **Add** to install your notification bot in Teams.
 
-   :::image type="content" source="../assets/images/get-started/tab-in-teams.png" alt-text="Screenshot shows you the notification bot loaded in the Teams client.":::
+   :::image type="content" source="../assets/images/get-started/codespace/bot-teams.png" alt-text="Screenshot shows you the notification bot loaded in the Teams client.":::
 
    You've successfully created the notification bot and loaded in the Teams client.
 
-   :::image type="content" source="../assets/images/get-started/tab-app-in-teams.png" alt-text="Screenshot shows your notification bot loaded in the Teams client.":::
+   :::image type="content" source="../assets/images/get-started/codespace/notification-bot.png" alt-text="Screenshot shows your notification bot loaded in the Teams client.":::
 
 > [!TIP]
 > [GitHub codespaces](https://github.com/features/codespaces) offers the free plan up to a fixed amount of usage every month. If you need to free up the space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespaces that you no longer need.
