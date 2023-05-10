@@ -30,34 +30,36 @@ You can add an existing third-party API to your Teams app using:
 Add a connection to an existing third-party API using the following steps:
 
 1. Open your Teams app project in **Visual Studio Code**.
-2. Select **Teams Toolkit** from the Visual Studio Code activity bar.
-3. Select **Add features** in the **DEVELOPMENT** section.
+1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
+1. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-add-features_1.png" alt-text="api add features":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot showing the selection of View How to guides. ":::
 
-     The **Add Feature** drop-down list appears.
+     The **View How-to Guides** dropdown list appears.
 
-4. Select **API Connection**.
+1. Select **API Connection**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features_1.png" alt-text="api select features":::
 
-5. Enter endpoint for the API, and then press **Enter**.
+    You'll be redirected to [Integrate API Connection with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-API-Connection-with-your-Teams-app).
+
+1. Enter endpoint for the API, and then press **Enter**.
 
     Ensure that the endpoint is a valid http(s) URL. Teams Toolkit adds the endpoint to the project's local app settings, and it's the base URL for API requests.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint_1.png" alt-text="api endpoint":::
 
-7. Select the component that needs to connect to the API, and then select **OK**.
+1. Select the component that needs to connect to the API, and then select **OK**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-invoke_1.png" alt-text="api invoke":::
 
-9. Enter an alias for the API, and then press **Enter**.
+1. Enter an alias for the API, and then press **Enter**.
 
     The alias generates an app setting name for the API. Teams Toolkit adds the alias to the project's local app setting.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-alias_1.png" alt-text="api alias":::
 
-11. Select the required authentication for the API request from the **API authentication type**.
+1. Select the required authentication for the API request from the **API authentication type**.
 
      :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/myAPI connection.png" alt-text="api auth":::
 
