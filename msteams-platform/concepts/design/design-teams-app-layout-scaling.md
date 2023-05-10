@@ -90,7 +90,7 @@ Without word wrapping, the text and CTAs are not usable.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="" alt-text="Example shows a word wrap so that the text is legible at all width.":::
+image
 
 #### Do: Do: Make sure your app is legible at 200% scale
 
@@ -98,7 +98,7 @@ Use responsive design to avoid text overlap and truncation.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="" alt-text="Example shows that the text and CTAs are not usable without word wrap.":::
+image
 
 #### Don’t: Truncate and cut off content at any zoom level
 
@@ -128,7 +128,7 @@ Teams apps need to be accessible to all users with any level of visual impairmen
 
 :::row:::
    :::column span="":::
-:::image type="content" source="" alt-text="Example shows a word wrap so that the text is legible at all width.":::
+image
 
 ##### Do: Test your app at 1920 x 1080 resolution
 
@@ -136,7 +136,7 @@ Avoid text overlap and truncation.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="" alt-text="Example shows that the text and CTAs are not usable without word wrap.":::
+image
 
 ##### Don’t: Submit your app for review without testing at Teams default resolution
 
