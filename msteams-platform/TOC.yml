@@ -81,8 +81,28 @@
   - name: Understand design process
     href: concepts/design/design-teams-app-process.md
   - name: Design system
-    href: concepts/design/design-teams-app-fundamentals.md
-    displayName: icons, Font, Color 
+    items:
+    - name: Overview
+      href: concepts/design/design-teams-app-fundamentals.md
+      displayName: icons, Font, Color 
+    - name: Layout and scaling
+      href: \concepts\design\design-teams-app-layout-scaling.md
+      displayName: layout, scaling 
+    - name: App icons for store and app bar
+      href: \concepts\design\design-teams-app-icon-store-appbar.md
+      displayName: icons, Font, Color 
+    - name: App artwork for store
+      href: \concepts\design\design-teams-app-artwork-store.md
+      displayName: app artwork 
+    - name: Type
+      href: \concepts\design\design-teams-app-type.md
+      displayName: type 
+    - name: Color
+      href: \concepts\design\design-teams-app-color.md
+      displayName: Color 
+    - name: Shape and elevation
+      href: \concepts\design\design-teams-app-shape-elevation.md
+      displayName: shape, elevation
   - name: App capabilities
     items:
     - name: Understand app structure
