@@ -1371,21 +1371,6 @@ Namespace providing email-related functionality.
 
 Namespace providing image file-related functionality.
 
-App capabilities that require the user to grant [device permissions](../concepts/device-capabilities/device-capabilities-overview.md) (such as *media*) aren't yet supported for apps running outside of Teams. There is currently no way to check app permissions in Settings or your app header when running in Outlook or Microsoft 365 app. If a Teams app running in Microsoft 365 app or Outlook calls a TeamsJS (or HTML5) API that triggers device permissions, that API will generates an error and fail to display a system dialog asking for user consent.
-
-Current guidance is to modify your code to catch the failure:
-
-* Check [isSupported()](../tabs/how-to/using-teams-client-library.md#differentiate-your-app-experience) on a capability before using it. Some capabilities, such as `media` and `meeting` don't yet support *isSupported* calls and don't yet work outside of Teams.
-* Catch and handle errors when calling TeamsJS and HTML5 APIs.
-
-When an API is unsupported or generates an error, add logic to fail gracefully or provide a workaround. For example:
-
-* Direct the user to your app's website.
-* Direct the user to use the app in Teams to complete the flow.
-* Notify the user the functionality isn't yet available.
-
-Additionally, best practice is to ensure your app manifest only specifies the [devicePermissions](../resources/schema/manifest-schema.md#devicepermissions) you're using.
-
 <br />
 <table border>
     <thead>
