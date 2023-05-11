@@ -21,14 +21,14 @@ You can deploy to the following types of cloud resources:
 * Azure Storage (as static website)
 * SharePoint
 
-  > [!NOTE]
-  > Before you deploy app code to Azure cloud, you need to successfully complete the [provisioning of cloud resources](provision.md).
+> [!NOTE]
+> Before you deploy app code to Azure cloud, you need to successfully complete the [provisioning of cloud resources](provision.md).
 
 ## Deploy Teams apps using Teams Toolkit
 
 The Get started guide helps to deploy using Teams Toolkit. You can use the following to deploy your Teams app:
 
-## Sign in to your Azure account
+### Sign in to your Azure account
 
 Use this account to access the Microsoft Azure portal and to provision new cloud resources to support your app. Before deploying your app to Azure App Service, Azure Functions, or Azure Storage, you must sign in to your Azure account.
 
@@ -64,7 +64,7 @@ Congratulations, you've created a Teams app! Now let's go ahead and learn how to
 
 1. Select the Teams Toolkit icon in the sidebar.
 
-## Customize deploy lifecycle in Teams
+### Customize deploy lifecycle in Teams
 
 To customize the deployment process, you can edit the deploy sections in 'teamsapp.yml'.
 
