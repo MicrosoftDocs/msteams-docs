@@ -77,7 +77,7 @@ Overlapping text and buttons may not meet our accessibility standards.
 
 #### Do: Use word wrap so that text is legible at all widths
 
-Avoid truncation with reflow, prioritizing CTAs and action items.
+Avoid truncation with reflow, prioritizing call to actions (CTAs) and action items.
 
    :::column-end:::
    :::column span="":::

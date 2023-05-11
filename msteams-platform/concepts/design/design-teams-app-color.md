@@ -76,7 +76,7 @@ Learn how to [use color tokens in your Teams app project](https://fluentsite.z22
 
 ##### Secondary colors
 
-:::image type="content" source="../..\assets\images\design-guidelines\secondary color.png" alt-text="Example shows the application of secondary colors.":::
+:::image type="content" source="../..\assets\images\design-guidelines\secondary-color.png" alt-text="Example shows the application of secondary colors.":::
 
 |Counter|Description|
 |----------|-----------|
