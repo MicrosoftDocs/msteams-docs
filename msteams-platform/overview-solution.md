@@ -39,3 +39,7 @@ Teams offers these and many more capabilities to bring your users a feature-rich
 1. Integrate with an external weather forecast API to connect and request forecast for specific date and location.
 1. Integrate with :::image type="icon" source="assets/icons/graph-small-icon.png"::: Microsoft Graph for registered users.
 1. Check and send forecast details based on user's travel date and travel location.
+
+Now, let start with building basic Teams app [Get started](get-started/get-started-overview.md).
+
+If you're an experienced developer and wants to learn more about, see [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md) to build your Teams apps using various tools and SDKs, based on your requirements.
