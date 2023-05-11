@@ -16,8 +16,6 @@ You can configure and manage your app in Developer Portal within Teams Toolkit.
 
 You can publish your app, which is created in Visual Studio and Visual Studio Code using Developer Portal:
 
-# [Visual Studio Code](#tab/visualstudiocode)
-
 The following steps help to publish your app in Developer Portal:
 
 1. Select **Open Developer Portal to Publish** for Teams under **UTILITY**.
