@@ -110,7 +110,7 @@ If you meet `MissingEnvironmentVariablesError`, it means that Teams Toolkit cann
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/missing-env.png" alt-text="Screenshot showing the Missing Environment Variables Error.":::
 
-Validate app package using validation rules
+**Validate app package using validation rules**
 
 This option validates the zipped app package with validation rules.
 
