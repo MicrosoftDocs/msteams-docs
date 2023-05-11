@@ -10,11 +10,58 @@ ms.author: v-npaladugu
 
 A configuration page is a special type of [content page](content-page.md). The users configure some aspects of the Microsoft Teams app using the configuration page and use that configuration as part of the following:
 
-* A Personal, channel, or group chat tab: Collect information from the users and set the `contentUrl` of the content page to be displayed.
+* A personal, channel, or group chat tab: Collect information from the users and set the `contentUrl` of the content page to be displayed.
 * A [message extension](~/messaging-extensions/what-are-messaging-extensions.md).
 * A [connector for Microsoft 365 Groups](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+
+To add customizable experience to your personal (static) tab add your [configuration logic]() to your `contentUrl`. If your [migrating your configurable tabs to personal (static) tab](~/tabs/how-to/create-channel-group-tab.md#migrate-your-configurable-tab-to-personal-(-static-)-tab) move the configuration logic from `configurationUrl` folder to `contentURL`
+
+
+or to change  your [configurable tabs](#configure-a-channel-or-group-chat-tab) to personal tab (static tabs) move all the configuration URL codespace to your 
+
+Your configuration URL codespace must display a dialog that asks the user to pin the tab, that is pin the `contentUrl`. If you are making any API calls or requests in the configuration dialog, add them to your `configurationUrl`.
+
+The `getSettings` and `setSettings` APIs that you would like to add in your configuration dialog can also be used from `contentUrl`. To add configurations for personal tab, you need to add all of your configuration logic in the `contentUrl`. That means that you can use `getSettings` and `setSettings` in your `contentUrl` to display the content or use it as `configurationUrl` to customize the content being displayed for that tab. This will allow you to get your configuration page ready for personal tabs. 
+
+To change configurable tab to a personal (Static) tab, move the configuration logic into your `contentUrl` codespace as explained earlier and update your app manifest by adding a `staticTab` that pins the `contentUrl` you decided to use in the given `scope` and `context`. 
+
+If your personal tab will serve custom content based on the context that the tab is being pinned in, then you need to set a `contentUrl` where you plan to do some setup. For example, you may decide to serve a slightly different experience in meetings and so may choose to pin a setup or a bootstrap page where a new `contentUrl` is set at runtime in the tab itself. Such as, if your `contentUrl` is `https://wwww.contoso.com/teamsapp/setup`, then this page will get pinned where you can change the `contentUrl` at runtime such as following: 
+
+```javascript
+
+// inside https://wwww.contoso.com/teamsapp/setup 
+import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'; 
+await app.initialize(); 
+app.getContext((context) => { 
+     // pinned as a meeting tab, so we want to change the contentUrl 
+     if(context.meetingId) { 
+         // change the contentUrl at runtime 
+         const configPromise = pages.config.setConfig({ 
+             contentUrl: "https://wwww.contoso.com/teamsapp/meeting/" + context.meetingId, 
+             websiteUrl: "https://wwww.contoso.com/meeting/" + context.meetingId 
+         }); 
+     configPromise. 
+     then((result) => {saveEvent.notifySuccess()}). 
+     catch((error) => {saveEvent.notifyFailure("failure message")}); 
+     } 
+}); 
+
+```
+
+After the preceding code executes, the tabs `contentUrl` is changed for that tab instance and all the subsequent visits by users for that tab will load the new `contentUrl` instead of the URL that was originally defined in the manifest. 
+
+> [!NOTE]
+> You will not be able to change the `displayName` or `entitId` of your tab. This is defined by the app manifest. 
+
+If your [configurable tab](#configure-a-channel-or-group-chat-tab) allowed users to edit the tab after it was pinned, that is `canUpdateConfiguration: true` then you should continue to keep the `configurableTab` property in your app manifest in order to ensure users can edit pre-existing pinned configurable tabs
+
+### Determine your `contentUrl`
+
+With configurable tabs, the `contentUrl` is defined at runtime by the user in the tab configuration dialog, which is served from the `configurationUrl` in the manifest. The outcome of this dialog is a `contentUrl` and some other properties. 
+
+If your personal tab will always be pinning the same `contentUrl`, you can create a `staticTab` object in your app manifest and set your `contentUrl`. This is what will get pinned when the user selects your app to be pinned.
 
 ## Build a configuration page
 
@@ -174,50 +221,6 @@ The configuration page code informs Teams that the configuration requirements ar
 >* If you register a save handler using `registerOnSaveHandler()`, the callback must invoke `saveEvent.notifySuccess()` or `saveEvent.notifyFailure()` to indicate the outcome of the configuration.
 >* If you do not register a save handler, the `saveEvent.notifySuccess()` call is made automatically when the user selects **Save**.
 >* Ensure to have unique `entityId`. Duplicate `entityId` redirects to the first instance of the tab.
-
-## Configuration experience for a personal tab
-
-To add configurable experience or to change  your [configurable tabs](#configure-a-channel-or-group-chat-tab) to personal tab (static tabs) move all the configuration logic out of your configuration URL codespace to your `contentUrl` codespace `setConfig()` (formerly `setSettings()`) property. Your configuration URL codespace must display a dialog that asks the user to pin the tab, that is pin the `contentUrl`. If you are making any API calls or requests in the configuration dialog, add them to your `configurationUrl`. 
-
-The `getSettings` and `setSettings` APIs that you would like to add in your configuration dialog can also be used from `contentUrl`. To add configurations for personal tab, you need to add all of your configuration logic in the `contentUrl`. That means that you can use `getSettings` and `setSettings` in your `contentUrl` to display the content or use it as `configurationUrl` to customize the content being displayed for that tab. This will allow you to get your configuration page ready for personal tabs. 
-
-To change configurable tab to a personal (Static) tab, move the configuration logic into your `contentUrl` codespace as explained earlier and update your app manifest by adding a `staticTab` that pins the `contentUrl` you decided to use in the given `scope` and `context`. 
-
-If your personal tab will serve custom content based on the context that the tab is being pinned in, then you need to set a `contentUrl` where you plan to do some setup. For example, you may decide to serve a slightly different experience in meetings and so may choose to pin a setup or a bootstrap page where a new `contentUrl` is set at runtime in the tab itself. Such as, if your `contentUrl` is `https://wwww.contoso.com/teamsapp/setup`, then this page will get pinned where you can change the `contentUrl` at runtime such as following: 
-
-```javascript
-
-// inside https://wwww.contoso.com/teamsapp/setup 
-import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'; 
-await app.initialize(); 
-app.getContext((context) => { 
-     // pinned as a meeting tab, so we want to change the contentUrl 
-     if(context.meetingId) { 
-         // change the contentUrl at runtime 
-         const configPromise = pages.config.setConfig({ 
-             contentUrl: "https://wwww.contoso.com/teamsapp/meeting/" + context.meetingId, 
-             websiteUrl: "https://wwww.contoso.com/meeting/" + context.meetingId 
-         }); 
-     configPromise. 
-     then((result) => {saveEvent.notifySuccess()}). 
-     catch((error) => {saveEvent.notifyFailure("failure message")}); 
-     } 
-}); 
-
-```
-
-After the preceding code executes, the tabs `contentUrl` is changed for that tab instance and all the subsequent visits by users for that tab will load the new `contentUrl` instead of the URL that was originally defined in the manifest. 
-
-> [!NOTE]
-> You will not be able to change the `displayName` or `entitId` of your tab. This is defined by the app manifest. 
-
-If your [configurable tab](#configure-a-channel-or-group-chat-tab) allowed users to edit the tab after it was pinned, that is `canUpdateConfiguration: true` then you should continue to keep the `configurableTab` property in your app manifest in order to ensure users can edit pre-existing pinned configurable tabs
-
-### Determine your `contentUrl`
-
-With configurable tabs, the `contentUrl` is defined at runtime by the user in the tab configuration dialog, which is served from the `configurationUrl` in the manifest. The outcome of this dialog is a `contentUrl` and some other properties. 
-
-If your personal tab will always be pinning the same `contentUrl`, you can create a `staticTab` object in your app manifest and set your `contentUrl`. This is what will get pinned when the user selects your app to be pinned.
 
 ### Get context data for your tab settings
 

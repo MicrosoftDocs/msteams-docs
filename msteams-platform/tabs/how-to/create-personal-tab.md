@@ -663,9 +663,9 @@ If a context isn't defined in the app manifest, then Teams will default to t
 ]
 ```
 
-## Create configurable personal tab
+## Create a customizable personal tab
 
-To create a configurable experience for a personal tab add the configuration page logic to your `contentURL` codespace and define `setConfig()` (formerly `setSettings()`) property. For more information, see [configuration page.](~/tabs/how-to/create-tab-pages/configuration-page.md#configurable-personal-tab)
+To create a customizable experience for a personal tab add the configuration page logic to your `contentUrl` codespace. For more information, see [configuration page.](~/tabs/how-to/create-tab-pages/configuration-page.md#configurable-personal-tab)
 
 ## Code sample
 

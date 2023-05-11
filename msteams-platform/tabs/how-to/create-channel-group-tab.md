@@ -1027,9 +1027,15 @@ You've completed the tutorial to build a tab app with Blazor.
 
 ::: zone-end
 
-## Change your configurable tab to personal (static) tab
+## Migrate your configurable tab to personal (static) tab
 
-Teams has extended the personal(static) tab capability to support channel, group chat, or meetings you can update your existing configurable tab to personal(static) tab and add different scopes to the personal tab. For more information, see [personal tab.](~/tabs/how-to/create-tab-pages/configuration-page.md#configurable-personal-tab)
+Teams has extended the personal(static) tab capability to support channel, group chat, or meetings. You can update your existing configurable tab to personal(static) tab and add different scopes to the personal tab. 
+
+To change your configurable tab to personal (static) tab, make the following changes:
+
+* Move your configuration logic out of your configuration URL codespace to your `contentUrl` codespace. For more information, see [configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) 
+* Add the `staticTabs` property to your [app manifest]() with the required `scopes` and `context` parameters. For more information, see [personal (static) tab](~/tabs/how-to/create-personal-tab.md#extend-personal-tabs-to-group-chat-and-channels)
+
 
 ## Next step
 
