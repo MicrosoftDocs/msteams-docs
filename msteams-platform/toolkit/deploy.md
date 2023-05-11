@@ -37,8 +37,8 @@ Use this account to access the Microsoft Azure portal and to provision new cloud
 1. Select the Teams Toolkit icon in the sidebar.
 1. Select Sign in to Azure.
 
-  > [!TIP]
-  > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you're using in other extensions.
+> [!TIP]
+> If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you're using in other extensions.
 
 Your default web browser opens to let you sign in to the account.
 

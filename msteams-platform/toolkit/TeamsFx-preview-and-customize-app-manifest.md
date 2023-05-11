@@ -58,13 +58,13 @@ During local debug or provision, Teams Toolkit loads manifest from `appPackage/m
 1. You can define your own manifest.json file in `teamsapp.yml` and `teamsapp.local.yml`.
 For example, you can put your manifest.json file in `test/test.json`, and update `manifestPath` parameters in yaml files.
 
-```text
-  - uses: teamsApp/zipAppPackage # Build Teams app package with latest env value
-    with:
+    ```text
+    - uses: teamsApp/zipAppPackage # Build Teams app package with latest env value
+      with:
       manifestPath: ./test/test.json # Path to manifest template
       outputZipPath: ./appPackage/build/appPackage.${{TEAMSFX_ENV}}.zip
       outputJsonPath: ./appPackage/build/manifest.${{TEAMSFX_ENV}}.json
-```
+    ```
 
 1. You can define your own environment variables. The default manifest.json contains some placeholders with format of ${{xx_xx}}. You can define your own environment variables and add placeholders in manifest.json file.
 For example, you can customize app description by defining a new environment variable in env/.env.xx file, and update manifest.json with corresponding placeholder.

@@ -7,7 +7,6 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
 ---
-
 # Test app behavior in different environment
 
 ## Upload your app to Teams
