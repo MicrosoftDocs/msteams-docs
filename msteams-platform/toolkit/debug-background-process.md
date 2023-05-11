@@ -34,7 +34,7 @@ Teams Toolkit checks the following prerequisites during the debugging process:
 
 When you select **Start Debugging (F5)**, Teams Toolkit output channel displays the progress and result after checking the prerequisites.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/validate-prerequisites.png" alt-text="Prerequisites check summary" lightbox="../assets/images/teams-toolkit-v2/debug/validate-prerequisites.png":::
+[validate-prerequisites image to be updated]
 
 For more information on validating prerequisites, see [Validate prerequisites task](https://aka.ms/teamsfx-tasks/check-prerequisites).
 
