@@ -27,7 +27,7 @@ You can add cloud resources in the following ways:
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot shows Add capabilities from Teams Toolkit.":::
 
-   1. From the dropdown list that appears, select the cloud service integration you want to add to your app. You'll be redirected to the detailed page.
+   1. From the dropdown list that appears, select the cloud service integration you want to add to your app. You'll be redirected to the respective How-to Guide.
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot showing the capabilities in view How-to Guides.":::
 
@@ -50,7 +50,7 @@ You can add cloud resources in the following ways:
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot shows Add capabilities from Teams Toolkit.":::
 
-   1. From the dropdown list that appears, select the capability you want to add to your app. You'll be redirected to the detailed page.
+   1. From the dropdown list that appears, select the capability you want to add to your app. You'll be redirected to the respective How-to Guide.
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot showing the capabilities in view How-to Guides.":::
 

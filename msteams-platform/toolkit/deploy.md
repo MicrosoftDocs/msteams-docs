@@ -57,7 +57,7 @@ Congratulations, you've created a Teams app! Now let's go ahead and learn how to
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/deploy_to_the_cloud_button.png" alt-text="Screenshot showing the selection of Deploy.":::
 
-1. Select an environment.(If there is only one environment, this step will be skipped.)
+1. Select an environment.(If there's only one environment, this step is skipped.)
 1. Select deploy button.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/click_deploy.png" alt-text="Screenshot showing the selection of Deploy under Visual Studio Code.":::
@@ -70,7 +70,7 @@ To customize the deployment process, you can edit the deploy sections in 'teamsa
 
 **cli/runNpmCommand**
 
-This action will execute npm commands under specified directory with parameters.
+This action executes npm commands under specified directory with parameters.
 
 **Sample**
 
@@ -85,12 +85,12 @@ This action will execute npm commands under specified directory with parameters.
 
 | Parameter | description | required | default value |
 |-------------|----------|---------------|---------------|
-|workingDirectory | represents the folder where you want to run the command. If your input value is a relative path, it is relative to the workingDirectory. |No | Project root |
+|workingDirectory | represents the folder where you want to run the command. If your input value is a relative path, it's relative to the workingDirectory. |No | Project root |
 |args | command arguments| Yes | |
 
 **cli/runDotnetCommand**
 
-This action will execute dotnet commands under specified directory with parameters.
+This action executes dotnet commands under specified directory with parameters.
 
 **Sample**
 
@@ -106,7 +106,7 @@ This action will execute dotnet commands under specified directory with paramete
 
 | Parameter | description | required | default value |
 |-------------|----------|---------------|---------------|
-|workingDirectory | represents the folder where you want to run the command. If your input value is a relative path, it is relative to the workingDirectory. |No | Project root |
+|workingDirectory | represents the folder where you want to run the command. If your input value is a relative path, it's relative to the workingDirectory. |No | Project root |
 |args | npm command arguments| Yes | |
 |execPath | executor path | No | System PATH |
 
@@ -125,7 +125,7 @@ This action will execute dotnet commands under specified directory with paramete
 
 | Parameter | description | required | default value |
 |-------------|----------|---------------|---------------|
-|workingDirectory | represents the folder where you want to run the command. If your input value is a relative path, it is relative to the workingDirectory. |No | Project root |
+|workingDirectory | represents the folder where you want to run the command. If your input value is a relative path, it's relative to the workingDirectory. |No | Project root |
 |args | command arguments| Yes | |
 
 **azureAppService/zipDeploy**
@@ -147,16 +147,16 @@ This action will execute dotnet commands under specified directory with paramete
 
 | Parameter | description | required | default value |
 |-------------|----------|---------------|---------------|
-|workingDirectory | Represents the folder where you want to upload the artifact. If your input value is a relative path, it is relative to the workingDirectory. |No | Project root |
-|artifactFolder | Represents the folder where you want to upload the artifact. If your input value is a relative path, it is relative to the workingDirectory.| Yes | |
+|workingDirectory | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory. |No | Project root |
+|artifactFolder | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory.| Yes | |
 |ignoreFile | Specifies the file path of the ignore file used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
-| resourceId | Indicates the resource ID of an Azure App Service. It is generated automatically after running the provision command. If you already have an Azure App Service, you can find its resource ID in the Azure portal (see this link for more information). | Yes | |
-|dryRun | You can set the dryRun parameter to true if you only want to test the preparation of the upload and do not intend to deploy it. This will help you verify that the packaging zip file is correct. | No | false |
-| outputZipFile | Indicates the path of the zip file for the packaged artifact folder. It is relative to the workingDirectory. This file will be reconstructed during deployment, reflecting all folders and files in your artifactFolder, and removing any non-existent files or folders. | No | ./.deployment/deployment.zip |
+| resourceId | Indicates the resource ID of an Azure App Service. It's generated automatically after running the provision command. If you already have an Azure App Service, you can find its resource ID in the Azure portal (see this link for more information). | Yes | |
+|dryRun | You can set the dryRun parameter to true if you only want to test the preparation of the upload and don't intend to deploy it. This helps you verify that the packaging zip file is correct. | No | false |
+| outputZipFile | Indicates the path of the zip file for the packaged artifact folder. It's relative to the workingDirectory. This file is reconstructed during deployment, reflecting all folders and files in your artifactFolder, and removing any non-existent files or folders. | No | ./.deployment/deployment.zip |
 
 **azureFunctions/zipDeploy**
 
-This action will upload and deploy the project to Azure Functions using the [zip deploy feature](/azure/azure-functions/deployment-zip-push).
+This action uploads and deploy the project to Azure Functions using the [zip deploy feature](/azure/azure-functions/deployment-zip-push).
 
 **Sample**
 
@@ -175,16 +175,16 @@ This action will upload and deploy the project to Azure Functions using the [zip
 
 | Parameter | description | required | default value |
 |-------------|----------|---------------|---------------|
-|workingDirectory | represents the folder where you want to upload the artifact. If your input value is a relative path, it is relative to the workingDirectory. |No | Project root |
-|artifactFolder | represents the folder where you want to upload the artifact. If your input value is a relative path, it is relative to the workingDirectory.| Yes | |
+|workingDirectory | represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory. |No | Project root |
+|artifactFolder | represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory.| Yes | |
 |ignoreFile | specifies the file path of the ignore file used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
-| resourceId | Indicates the resource ID of an Azure Functions. It is generated automatically after running the provision command. If you already have an Azure Functions, you can find its resource ID in the Azure portal (see this link for more information).| Yes | |
-|dryRun | You can set the dryRun parameter to true if you only want to test the preparation of the upload and do not intend to deploy it. This will help you verify that the packaging zip file is correct. | No | false |
-| outputZipFile | Indicates the path of the zip file for the packaged artifact folder. It is relative to the workingDirectory. This file will be reconstructed during deployment, reflecting all folders and files in your artifactFolder, and removing any non-existent files or folders. | No | ./.deployment/deployment.zip |
+| resourceId | Indicates the resource ID of an Azure Functions. It's generated automatically after running the provision command. If you already have an Azure Functions, you can find its resource ID in the Azure portal (see this link for more information).| Yes | |
+|dryRun | You can set the dryRun parameter to true if you only want to test the preparation of the upload and don't intend to deploy it. This helps you verify that the packaging zip file is correct. | No | false |
+| outputZipFile | Indicates the path of the zip file for the packaged artifact folder. It's relative to the workingDirectory. This file is reconstructed during deployment, reflecting all folders and files in your artifactFolder, and removing any non-existent files or folders. | No | ./.deployment/deployment.zip |
 
 **azureStorage/deploy**
 
-This action will upload and deploy the project to Azure Storage.
+This action uploads and deploy the project to Azure Storage.
 
 **Sample**
 
@@ -201,10 +201,10 @@ This action will upload and deploy the project to Azure Storage.
 
 | Parameter | description | required | default value |
 |-------------|----------|---------------|---------------|
-|workingDirectory | represents the folder where you want to upload the artifact. If your input value is a relative path, it is relative to the workingDirectory. |No | Project root |
-|artifactFolder | represents the folder where you want to upload the artifact. If your input value is a relative path, it is relative to the workingDirectory.| Yes | |
+|workingDirectory | represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory. |No | Project root |
+|artifactFolder | represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory.| Yes | |
 |ignoreFile | specifies the file path of the ignore file used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
-| resourceId | Indicates the resource ID of an Azure Functions. It is generated automatically after running the provision command. If you already have an Azure Functions, you can find its resource ID in the Azure portal (see this link for more information).| Yes | |
+| resourceId | Indicates the resource ID of an Azure Functions. It's generated automatically after running the provision command. If you already have an Azure Functions, you can find its resource ID in the Azure portal (see this link for more information).| Yes | |
 
 **spfx/deploy**
 
@@ -223,7 +223,7 @@ This action will upload and deploy generated sppkg to SharePoint app catalog. Yo
 
 | Parameter | description | required | default value |
 |-------------|----------|---------------|---------------|
-|createAppCatalogIfNotExist | If the value is true, this action will create tenant app catalog first if not exist. |No | False |
+|createAppCatalogIfNotExist | If the value is true, this action creates tenant app catalog first if not exist. |No | False |
 |packageSolutionPath | Path to package-solution.json in SPFx project. This action will honor the configuration to get target sppkg.| Yes | |
 
 ## See also

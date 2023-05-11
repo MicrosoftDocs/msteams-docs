@@ -37,7 +37,7 @@ Add a connection to an existing third-party API using the following steps:
 
 1. Select **API Connection**.
 
-1. From the dropdown list that appears, select the API connection you want to add to your app. You'll be redirected to the detailed page.
+1. From the dropdown list that appears, select the API connection you want to add to your app. You'll be redirected to the respective How-to Guide.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features_1.png" alt-text="api select features":::
 

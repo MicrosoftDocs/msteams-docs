@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Add capabilities to Microsoft Teams app
 
-Adding capabilities with Teams Toolkit allows you to extend the functionality of your existing Microsoft Teams app. The advantage of adding more capabilities is that you can add more functions to your app by using Teams Toolkit to automatically add necessary code and project files. You can select different capabilities based on the app project you've created for your Teams app. The following table lists the Teams app capabilities:
+Add capabilities with Teams Toolkit to extend the functionality of your existing Microsoft Teams app. Capabilities allow you to add more functions and automatically create necessary code and project files for your app. You can select different capabilities based on the app project you've created for your Teams app. The following table lists the Teams app capabilities:
 
 |Capability|Description|Other supported capabilities|
 |--------|-------------|-----------------|
@@ -44,7 +44,7 @@ You can add capabilities in the following ways:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot shows Add capabilities from Teams Toolkit.":::
 
-   1. From the dropdown list that appears, select the capability you want to add to your app. You'll be redirected to the detailed page.
+   1. From the dropdown list that appears, select the capability you want to add to your app. You'll be redirected to the respective How-to Guide.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="Screenshot shows the notification.":::
 
@@ -67,7 +67,7 @@ You can add capabilities in the following ways:
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features_1.png" alt-text="Screenshot shows option to add capabilities by using command palette.":::
 
-   1. From the dropdown list that appears, select the capability you want to add to your app. You'll be redirected to detailed page.
+   1. From the dropdown list that appears, select the capability you want to add to your app. You'll be redirected to the respective How-to Guide.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="Screenshot shows the notification.":::
 
