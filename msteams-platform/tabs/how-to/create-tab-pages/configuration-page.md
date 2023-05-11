@@ -16,7 +16,7 @@ A configuration page is a special type of [content page](content-page.md). The u
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
-To add customizable experience to your personal (static) tab add your [configuration logic]() to your `contentUrl`. If your [migrating your configurable tab to personal (static) tab](~/tabs/how-to/create-channel-group-tab.md#migrate-your-configurable-tab-to-personal-(-static-)-tab) move your configuration logic from `configurationUrl` folder to `contentURL` folder.
+To add customizable experience to your personal (static) tab add your [configuration logic](#configuration-page-for-tabs) to your `contentUrl`. If your [migrating your configurable tab to personal (static) tab](~/tabs/how-to/create-channel-group-tab.md#migrate-your-configurable-tab-to-personal-(-static-)-tab) move your configuration logic from `configurationUrl` folder to `contentURL` folder.
 
 Your configuration logic must display a dialog that asks the user to pin the tab, that is pin the `contentUrl`. If you are making any API calls or requests in the configuration dialog, add them to your `contentURL` codespace. The `getSettings` and `setSettings` APIs that you would like to add in your configuration dialog can be used from `contentUrl`. That means that you can use `getSettings` and `setSettings` in your `contentUrl` to display the content or use it as `configurationUrl` to customize the content being displayed for that tab. This will allow you to get your configuration page ready for tabs. 
 
@@ -56,7 +56,7 @@ With `configurableTabs`, the `contentUrl` is defined at runtime by the user in t
 
 If your personal (static) tab will always be pinning the same `contentUrl`, you can create a `staticTab` object in your app manifest and set your `contentUrl`. This is what will get pinned when the user selects your app to be pinned.
 
-## Build a configuration page
+## Configuration page for tabs
 
 The application must reference the [TeamsJS library](/javascript/api/overview/msteams-client) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and are available from the cloud.
 
