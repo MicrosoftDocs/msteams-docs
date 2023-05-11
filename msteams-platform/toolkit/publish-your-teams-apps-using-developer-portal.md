@@ -20,34 +20,19 @@ You can publish your app, which is created in Visual Studio and Visual Studio Co
 
 The following steps help to publish your app in Developer Portal:
 
-1. Select **Open Developer Portal to Publish** for Teams under **UTILITY**. [Image]
+1. Select **Open Developer Portal to Publish** for Teams under **UTILITY**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/dev-portal-ttk_1.png" alt-text="Developer Portal for Teams":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/open-developer-portal-to-publish.png" alt-text="Screenshot showing the selection of open Developer Portal to publish.":::
 
-1. Select the Teams app package you'd like to publish. [Image]
+1. Select the Teams app package you'd like to publish.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-your-teams-app-package.png" alt-text="Screenshot showing the selection of zip Teams app package.":::
+
 1. Sign in to [Developer Portal for Teams](https://dev.teams.microsoft.com/home) using the corresponding account.
 1. Teams Toolkit will open your selected Teams app's page and navigate to the `publish` > `Publish to store` page.
-1. Select **Publish** > **Publish to your org**.[Image]
+1. Select **Publish** > **Publish to your org**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Select_Import_app.png" alt-text="Select Import app":::
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Select_Publish_to_org.png" alt-text="Select to publish the app to your organization.":::
-
-# [Visual Studio](#tab/visualstudio)
-
-The following are the steps to publish your app in Teams Developer Portal:
-
-1. Select **Project** > **Teams Toolkit** > **Open Teams Developer Portal to Publish**.
-
-    :::image type="content" source="../assets/images/tdp/tdp-vs.png" alt-text="Screenshot shows you how to open developer portal from visual studio.":::
-
-1. Select the app package.
-
-1. Teams Toolkit opens your app in **Teams Developer Portal** and direct you to the **Publish to your org** page, from there you can select **Publish your app** to continue with your publishing process.
-
-    :::image type="content" source="../assets/images/tdp/vs-tdp.png" alt-text="Screenshot shows you the app open in Teams Developer Portal.":::
-
----
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/publish-to-your-org.png" alt-text="Screenshot showing the selection of publish to your org.":::
 
 ## To update Manifest file and app package
 
@@ -56,7 +41,6 @@ If there are any changes related to Teams app's manifest file, you can update th
 1. Sign in to [Developer Portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
 1. Select **Apps** > **Import app** to import your app package in zip format.<br>
    You need to replace the app, that you previously uploaded to the Developer Portal.
-1. Select **Publish** > **Publish to your org**.
 
 You can do the following configuration for your app in the Developer Portal:
 
