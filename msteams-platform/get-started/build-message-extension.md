@@ -13,7 +13,7 @@ Message extensions allow the users to interact with your web service through but
 
 In this tutorial, get familiarize with the message extension in one of the following ways:
 
-* [Use Teams Toolkit codespaces to build a message extension](#use-teams-toolkit-codespaces-to-build-a-message-extension) or
+* [Use Teams Toolkit codespaces to build a message extension](#use-teams-toolkit-codespaces-to-build-a-message-extension)
 * [Use step-by-step guide to build a message extension](#use-step-by-step-guide-to-build-a-message-extension)
 
 ## Use Teams Toolkit codespaces to build a message extension
@@ -75,9 +75,6 @@ If you want to build by yourself, or want to create a message extension that can
 If you would like to learn how to start a project with Teams Toolkit from scratch, let's go through the step-by-step guide together.
 
 Unlike codespaces, where everything you need is packaged for you already, you'll need to set you your development environment. Let's start with [Prerequisites](../toolkit/tools-prerequisites.md) section first before start building.
-
-> [!div class="nextstepaction"]
-> [Prerequisites](../toolkit/tools-prerequisites.md)
 
 > [!div class="nextstepaction"]
 > [Build search based message extension](../sbs-messagingextension-searchcommand.yml)

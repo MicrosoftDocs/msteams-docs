@@ -18,16 +18,7 @@ Here's an idea of what you learn:
 * Learn to build message extension.
 * Learn to build different types of Teams apps with the help of tutorials and code samples.
 
-## Choose your path to build your first Teams app
-
-In this section, learn more about your Teams app capabilities such as tab, scenerio-based app, and message extension. You can use one of the following ways to build your Teams app with different capabilities:
-
-* **GitHub Codespaces**: Allows you to run, test, and debug your app as you used to do in a development environment without the need for any of the setup we're used to.
-* **Step by step guide**: Allows you to create a Teams app from scratch with all development environment setup.
-
-:::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Illustration showing your choices to build Teams app - Codespaces bundles all you need and it only takes several minutes to rey, while getting started manually will take time but you learn step-by-step":::
-
-## Build your Teams app
+## Build your first Teams app
 
 Select the type of Teams app you want to build:
 
@@ -38,6 +29,15 @@ Select the type of Teams app you want to build:
 * **Build message extension Teams app**: You can build a [message extension Teams app](build-message-extension.md).
 
 For building other basic Teams app, see [Teams app tutorials and code samples](teams-toolkit-tutorial.md).
+
+### Choose your path to build your first Teams app
+
+In this section, learn more about your Teams app capabilities such as tab, scenerio-based app, and message extension. You can use one of the following ways to build your Teams app with different capabilities:
+
+* **GitHub Codespaces**: Allows you to run, test, and debug your app as you used to do in a development environment without the need for any of the setup we're used to.
+* **Step by step guide**: Allows you to create a Teams app from scratch with all development environment setup.
+
+:::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Illustration showing your choices to build Teams app - Codespaces bundles all you need and it only takes several minutes to rey, while getting started manually will take time but you learn step-by-step":::
 
 <!--
 ## App capabilities and development tools
