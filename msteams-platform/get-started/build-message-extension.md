@@ -9,6 +9,8 @@ ms.topic: reference
 
 Message extensions allow the users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Teams client in the form of a richly formatted card.
 
+:::image type="content" border="false" source="../assets/images/get-started/get-started-me.png" alt-text="Illustration showing a conceptual message extension":::
+
 In this tutorial, get familiarize with the message extension in one of the following ways:
 
 * [Use Teams Toolkit codespaces to build a message extension](#use-teams-toolkit-codespaces-to-build-a-message-extension) or
