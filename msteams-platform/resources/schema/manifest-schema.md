@@ -475,7 +475,7 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 |`contentBotId`|string|||The Microsoft app ID specified for the bot in the [Bot Framework portal](https://dev.botframework.com/bots).|
 |`websiteUrl`|string|||The https:// URL to point to if a user opts to view in a browser.|
 |`searchUrl`|string|||The https:// URL to point to for a user's search queries.|
-|`scopes`|array of enums|3|✔️|Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
+|`scopes`|array of enums|3|✔️| Static tabs support `personal`, `team`, and `groupChat` scopes, which means it can be provisioned as part of the personal, channel, and group chat experience.|
 |`context` | array of enums| 8|| The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: **[personalTab, channelTab, privateChatTab, meetingChatTab, meetingDetailsTab, meetingStage, meetingSidepanel, teamLevelApp]**.|
 
 > [!NOTE]
