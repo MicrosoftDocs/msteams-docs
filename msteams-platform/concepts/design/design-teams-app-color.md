@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: Colors
 ---
-# Colors
+# Colors for your Microsoft Teams app
 
 Teams web and desktop supports default (light), dark, and high-contrast themes, while Teams mobile supports light and dark themes. Each theme has its own color scheme.
 
@@ -53,16 +53,11 @@ Learn how to [use color tokens in your Teams app project](https://fluentsite.z22
 
 |Counter|Description|
 |----------|-----------|
-|A|Background 2
-Canvas background color|
-|B|Default Foreground
-Primary text color|
-|C|Foreground 1
-Secondary text color|
-|D|Brand Background
-Primary button background color|
-|E|Brand Foreground
-Link text color|
+|A|Background 2: Canvas background color|
+|B|Default Foreground: Primary text color|
+|C|Foreground 1: Secondary text color|
+|D|Brand Background: Primary button background color|
+|E|Brand Foreground: Link text color|
 
 ### Integrate your app’s color palette with Teams
 
