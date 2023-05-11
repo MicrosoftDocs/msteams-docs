@@ -664,7 +664,7 @@ If a context isn't defined in the app manifest, Teams defaults to the follow
 
 ## Customizable personal tab
 
-To create a customizable experience for a personal tab add the configuration page logic to your `contentUrl` codespace. For more information, see [configuration page.](~/tabs/how-to/create-tab-pages/configuration-page.md#configurable-personal-tab)
+To create a customizable experience for a personal tab add the configuration page logic to your `contentUrl` codespace. For more information, see [configuration page.](~/tabs/how-to/create-tab-pages/configuration-page.md)
 
 ## Code sample
 
