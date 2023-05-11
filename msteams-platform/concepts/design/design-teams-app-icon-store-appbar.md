@@ -1,12 +1,12 @@
 ---
-title: Design your app - Microsoft Teams app icon for store and app bar
+title: Design your app - App icon for store and app bar
 description: Learn about the app icons for store and app bar
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: App icon
 ---
-# App icon for store and app bar
+# Microsoft Teams app icon for store and app bar
 
 Quickly learn the guidelines for creating icons in our app ecosystem to help designers and developers submit the correct application icon. Following these guidelines creates uniformity and balance in our app ecosystem and emphasizes the artwork of your app icon.
 

@@ -1,12 +1,12 @@
 ---
-title: Design your app - Typography for your Microsoft Teams app
+title: Design your app - Typography
 description: Learn about the basics of typography in Microsoft Teams app including type scale, font and more.
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: Typography
 ---
-# Typography
+# Typography for your Microsoft Teams app
 
 Quickly learn how to incorporate standard Teams typography in your app design.
 
