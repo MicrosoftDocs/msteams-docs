@@ -1,5 +1,5 @@
 ---
-title: Design your app - Layout and scaling
+title: Design your app - Layout and scaling for your Microsoft Teams app
 description: Learn about the layout and scaling for Microsoft Teams app.
 author: heath-hamilton
 ms.localizationpriority: medium

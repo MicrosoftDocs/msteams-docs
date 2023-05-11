@@ -1,5 +1,5 @@
 ---
-title: Design your app - App icon for store and app bar
+title: Design your app - Microsoft Teams app icon for store and app bar
 description: Learn about the app icons for store and app bar
 author: heath-hamilton
 ms.localizationpriority: medium
@@ -18,7 +18,7 @@ When submitting your app package, include two PNG versions of the app icon—a c
 
 The icons are intended to create a uniform layout. These guidelines will help you create your app icon for submission.
 
-:::image type="content" source="../..\assets\images\design-guidelines\app-icon-balanced-layout.png" alt-text="Example shows the uniform layout for app icons..":::
+:::image type="content" source="../..\assets\images\design-guidelines\app-icon-balanced-layout.png" alt-text="Example shows the uniform layout for app icons.":::
 
 ### Creating your assets
 
