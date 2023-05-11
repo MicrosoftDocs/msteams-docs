@@ -12,10 +12,10 @@ Start Microsoft Teams app development with your first Teams app. You can create 
 
 In this tutorial, get familiarize with a basic Teams tab app in one of the following ways:
 
-* [Use Teams Toolkit codespaces to build a basic tab app](#use-teams-toolkit-codespaces-to-build-a-basic-tab-app): The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you.
-* [Use step-by-step guide to build a basic tab app](#use-step-by-step-guide-to-build-a-basic-tab-app):
+* Teams Toolkit codespaces: The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you.
+* Step-by-step guide
 
-# [Teams Toolkit codespaces](#tab/teams toolkit codespaces)
+# [Teams Toolkit codespaces](#tab/teamstoolkitcodespaces)
 
 But before you create your codespace, ensure that you have:
 
@@ -73,7 +73,7 @@ To create a Teams tab app with codespace, follow the steps:
 
 If you want to build by yourself, or want to create a tab app that can be installed on Outlook and Microsoft 365, follow the step-by-step guide at the next section!
 
-# [Step-by-step guide](#tab/step-by-step guide)
+# [Step-by-step guide](#tab/step-by-stepguide)
 
 If you would like to learn how to start a project with Teams Toolkit from scratch, let's go through the step-by-step guide.
 
