@@ -1,5 +1,5 @@
 ---
-title: Design your app - App artwork for store
+title: Design your app - Microsoft Teams app artwork for store
 description: Learn about guidelines and templates for displaying the app artwork.
 author: heath-hamilton
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ ms.topic: App artwork
 ---
 # App artwork for store
 
-This article provides guidelines and templates for displaying app artwork and details in the Teams store. Follow these guidelines for tips on crafting engaging and useful imagery to get people excited about your app given in [fluent icons](https://www.figma.com/community/file/836835755999342788) and [teams icon](https://fluentsite.z22.web.core.windows.net/0.66.2/icon-viewer).
+This article provides guidelines and templates for displaying app artwork and details in the Teams store. Follow these guidelines for tips on crafting engaging and useful imagery to get people excited about your app given in [fluent icons](https://www.figma.com/community/file/836835755999342788) and [teams icon](https://fluentsite.z22.web.core.windows.net/icon-viewer).
 
 ## App image templates
 
