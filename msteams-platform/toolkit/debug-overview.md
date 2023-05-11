@@ -6,7 +6,6 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-zone_pivot_groups: teams-app-platform
 ---
 
 # Debug your Teams app
