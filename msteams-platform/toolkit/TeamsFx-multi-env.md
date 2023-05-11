@@ -8,43 +8,30 @@ ms.topic: conceptual
 ms.date: 11/29/2021
 ---
 
-# Manage multiple environments
+# Environments in Teams Toolkit
 
- Teams Toolkit environments are principally a collection of cloud resources that are targets for a deployment. For example, the dev environment consists of a set of cloud resources that are used for development, and the prod environment consists of a set of cloud resources that are used for production.
+Teams Toolkit provides a way to run and test your app in different targets for deployment like dev, staging, production, or locally on your machine. To do this, Teams Toolkit includes an optional set of features that orchestrate the configuration of these different targets using information in environment files. The environment files represent a collection of all the resources of a deployment target. Teams Toolkit project templates include two default environment groupings - one for running the app on your machine named "local" and another for hosting somewhere else named "dev". You can rename the "dev" enviroment and add additional enviroments using the Envrioments window or manually with a new `.env.{environment-name}` file. You cannot rename the local environment.
 
- Teams Toolkit environments are in an `.env` file. There are several ways to create an `.env` file:
+By supplying different environment files, Teams Toolkit can help automate the provisioning of resources needed to run the app and deploy your code to those resources. Using these features means you can have a single set of deployment rules for any number of enviroments.
 
-* Using the provisioning life cycle stage: Teams Toolkit will generate an environment file for you.
-* Manually: If you aren't using Teams Toolkit to provision your cloud environment, you can create an environment file manually.
+## Using enviroment files with Teams Toolkit
 
-Environments are optional.
-
-Your project file can hard code cloud resources in their deployment targets. When you do this, you don't need a Teams Toolkit environment.
-
-However, your project file can reference values by name defined in the environment files. When you do this, you can supply different environment files, and Teams Toolkit will deploy to the cloud resources defined in the environment file. In this way, you can have a single set of deploy rules for an arbitrary number of environments.
-
-## Environment file definition
-
-The .env files follow the naming convention of `.env.{environment-name}`. For each life cycle execution, you're required to provide an environment name (local, dev, and other environment name) and Teams Toolkit will load the corresponding `.env.{environment-name}` into the execution process.
-
-You can also define variables in your current shell environment, Teams Toolkit will load these environment variables when running a life cycle stage. Environment variables defined in the current shell overwrite variables defined in `.env` files when there's a name conflict.
-
-## Environment file location
-
-By default, Teams Toolkit generated templates configure the project to store `.env` in the `~/<app>/env` folder. You change this by configuring the project file - set the `environmentFolderPath` field in `teamsapp.yml` appropriately.
-
-### Local environments
-
-There's nothing special from Team Toolkit's perspective about `local` environments.
-
-However, Teams Toolkit templates and samples all come with an environment called local. This environment enables you to run and deploy your Azure components locally.
+Teams Toolkit uses a naming convention for the enviroment files like: `.env.{environment-name}`. When using the toolkit's lifecycle commands (Provision, Deploy, Publish) you're required to provide an environment name. The name of the enviroment should be the same as the value chosen for`{environment-name}` when creating the enviroment file.
 
 > [!NOTE]
-> App registrations and the Teams client still runs in the cloud.
+> You can also define enviroment variables for Teams Toolkit in your current shell environment which override any values in a `.env` file during a naming conflict.
 
-The pattern that the templates follow is to use `teamsapp.local.yml` to override the life cycle stages with specific actions that run locally.
+### Environment file location
 
-### Create a new environment manually in Visual Studio Code
+You can define where `.env` files are using the `environmentFolderPath` property in `teamsapp.yml` and `teamsapp.local.yml`. By default, Teams Toolkit assumes these files are an `./env/` directory. 
+
+## Local environments
+
+While some resources needed to build a Teams app are always in the cloud (app registrations, Teams client, etc.), other parts like your application logic can be hosted locally to make testing changes during development easier. To help with this, all Teams Toolkit projects templates and samples have an enviroment called `local`, configured with the `./env/.env.local` and `./env/.env.local.user` files. This gives you flexibility to run your app with a locally hosted web server. When using VS Code and VS, these templates and samples are also setup to support debugging with breakpoints.
+
+To differentiate between a local environment and all other environments, you can create a separate project file called `teamsapp.local.yml` in the same directory as `teamsapp.yml`. 
+
+## Create a new environment manually in Visual Studio Code
 
 Each project can have one local environment but multiple remote environments. After you create a project, Teams Toolkit configures the following default environments:
 
@@ -54,16 +41,15 @@ Each project can have one local environment but multiple remote environments. Af
 To create a new environment:
 
 1. Open your Teams app project in Visual Studio Code.
-1. Select the Teams Toolkit from the Visual Studio Code activity bar.
-1. Select **+** > **Create new environment** under **ENVIRONMENT**.
+1. Select the Teams Toolkit icon from the Visual Studio Code activity bar.
+1. Select the **+** icon in the **ENVIRONMENT** section.
+1. Enter a name for the environment and select Enter.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-environment.png" alt-text="Screenshot shows environment ":::
 
-If you've more than one environment, you need to select an existing environment to create the new environment.
+## Targeting an enviroment
 
-### Target environment
-
-Teams Toolkit prompts you to select a target environment when you have multiple remote environments.
+When you have multiple environments and select the Provision, Deploy, or Publish menu items, Teams Toolkit prompts you to select a target environment.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/target-environment.png" alt-text="Screenshot shows production selected in environment.":::
 
