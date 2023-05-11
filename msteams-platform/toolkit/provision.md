@@ -25,9 +25,9 @@ The following list shows the actions designed for provision.
 
 ### teamsApp/create
 
-#### What it's
+#### What it is
 
-This action will create a new Teams app for you if the environment variable that stores Teams app ID is empty or the app with given ID isn't found from Teams Developer Portal.
+This action creates a new Teams app for you if the environment variable that stores Teams app ID is empty or the app with given ID isn't found from Teams Developer Portal.
 
 #### What resource it operates
 
@@ -48,9 +48,9 @@ Teams app in Teams Developer Portal.
 
 ### teamsApp/update
 
-#### What it's
+#### What it is
 
-Apply the Teams app manifest to an existing Teams app in Teams Developer Portal. It will use the app ID in manifest.json file to determine which Teams app to update.
+Apply the Teams app manifest to an existing Teams app in Teams Developer Portal. It'll use the app ID in manifest.json file to determine which Teams app to update.
 
 #### What resource it operates
 
@@ -67,9 +67,9 @@ Teams app in Teams Developer Portal.
 
 ### teamsApp/validateManifest
 
-#### What it's
+#### What it is
 
-This action will render Teams app manifest template with environment variables and validate Teams app manifest file using its schema.
+This action renders Teams app manifest template with environment variables and validate Teams app manifest file using its schema.
 
 #### What resource it operates
 
@@ -86,9 +86,9 @@ N/A
 
 ### teamsApp/validateAppPackage
 
-#### What it's
+#### What it is
 
-This action will validate Teams app package using validation rules.
+This actions validate Teams app package using validation rules.
 
 #### What resource it operates
 
@@ -105,9 +105,9 @@ N/A
 
 ### teamsApp/zipAppPackage
 
-#### What it's
+#### What it is
 
-This action will render Teams app manifest template with environment variables, and zip manifest file with two icons.
+This actions render Teams app manifest template with environment variables, and zip manifest file with two icons.
 
 #### What resource it operates
 
@@ -118,7 +118,7 @@ N/A
   ```typescript
   - uses: teamsApp/zipAppPackage
     with:
-      # Required. Relative path to the yaml file. This is the path for Teams app manifest file. Environment variables in manifest will be replaced before apply to AAD app.
+      # Required. Relative path to the yaml file. This is the path for Teams app manifest file. Environment variables in manifest are replaced before apply to AAD app.
       manifestPath: <path-to-manifest-file>
       # Required. Relative path to the yaml file. This is the path for built zip file.
       outputZipPath: <path-to-generated-zip-file>
@@ -130,7 +130,7 @@ N/A
 
 #### What it is
 
-This action will publish built Teams app zip file to tenant app catalog.
+This action publishes built Teams app zip file to tenant app catalog.
 
 #### What resource it operates
 
@@ -153,7 +153,7 @@ Teams app in Microsoft 365 tenant app catalog.
 
 #### What it is
 
-This action will create a new Azure Active Directory (Azure AD) application to authenticate users if the environment variable that stores clientId is empty.
+This action creates a new Azure Active Directory (Azure AD) application to authenticate users if the environment variable that stores clientId is empty.
 
 #### What resource it operates
 
