@@ -50,7 +50,7 @@ Teams app in Teams Developer Portal.
 
 #### What it is
 
-Apply the Teams app manifest to an existing Teams app in Teams Developer Portal. It'll use the app ID in manifest.json file to determine which Teams app to update.
+Apply the Teams app manifest to an existing Teams app in Teams Developer Portal. It uses the app ID in manifest.json file to determine which Teams app to update.
 
 #### What resource it operates
 
@@ -88,7 +88,7 @@ N/A
 
 #### What it is
 
-This actions validate Teams app package using validation rules.
+This actions validates Teams app package using validation rules.
 
 #### What resource it operates
 
@@ -107,7 +107,7 @@ N/A
 
 #### What it is
 
-This actions render Teams app manifest template with environment variables, and zip manifest file with two icons.
+This actions renders Teams app manifest template with environment variables, and zip manifest file with two icons.
 
 #### What resource it operates
 
@@ -118,7 +118,7 @@ N/A
   ```typescript
   - uses: teamsApp/zipAppPackage
     with:
-      # Required. Relative path to the yaml file. This is the path for Teams app manifest file. Environment variables in manifest are replaced before apply to AAD app.
+      # Required. Relative path to the yaml file. This is the path for Teams app manifest file. Environment variables in manifest will be replaced before apply to AAD app.
       manifestPath: <path-to-manifest-file>
       # Required. Relative path to the yaml file. This is the path for built zip file.
       outputZipPath: <path-to-generated-zip-file>
@@ -190,7 +190,7 @@ Azure AD in your Microsoft 365 tenant.
 
 #### What it is
 
-This action will update your Azure AD application based on give Azure AD app manifest. It will refer the ID property in Azure AD app manifest to determine which Azure AD app to update.
+This action updates your Azure AD application based on give Azure AD app manifest. It refers to the ID property in Azure AD app manifest to determine which Azure AD app to update.
 
 #### What resource it operates
 
@@ -211,7 +211,7 @@ Azure AD in your Microsoft 365 tenant.
 
 #### What it is
 
-This action will create a new or reuse an existing Azure AD application for bot.
+This action creates a new or reuse an existing Azure AD application for bot.
 
 #### What resource it operates
 
@@ -235,7 +235,7 @@ Azure AD in your Microsoft 365 tenant.
 
 #### What it is
 
-This action will deploy given ARM templates parallelly.
+This action deploys given ARM templates parallelly.
 
 #### What resource it operates
 
@@ -266,7 +266,7 @@ Azure subscription.
 
 #### What it is
 
-This action will enable static website setting in Azure Storage.
+This action enables static website setting in Azure Storage.
 
 #### What resource it operates
 
@@ -289,7 +289,7 @@ Azure Storage.
 
 #### What it is
 
-This action will execute a user defined script.
+This action executes a user-defined script.
 
 #### What resource it operates
 

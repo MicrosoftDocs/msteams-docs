@@ -44,7 +44,7 @@ TeamsFx supports four types of workflow templates:
 
 ## Prepare credentials
 
-Two categories of login credentials are involved in CI/CD workflows:
+Two categories of sign in credentials are involved in CI/CD workflows:
 
 1. **M365** - M365 credentials are required for running Provision, Publish, and SPFx based projects' CD workflows.
 2. **Azure** - Azure credentials are required for running Azure hosted projects' Provision and CD workflows.
@@ -56,11 +56,11 @@ Two categories of login credentials are involved in CI/CD workflows:
 |---|---|
 |AZURE_SERVICE_PRINCIPAL_NAME |The service principal name of Azure used to provision resources.|
 |AZURE_SERVICE_PRINCIPAL_PASSWORD |The password of Azure service principal.|
-|AZURE_SUBSCRIPTION_ID |To identify the subscription in which the resources will be provisioned.|
+|AZURE_SUBSCRIPTION_ID |To identify the subscription in which the resources are to be provisioned.|
 |AZURE_TENANT_ID |To identify the tenant in which the subscription resides.|
 |M365_ACCOUNT_NAME |The Microsoft 365 account for creating and publishing the Teams App.|
 |M365_ACCOUNT_PASSWORD |The password of the Microsoft 365 account.|
-|M365_TENANT_ID |To identify the tenant in which the Teams App will be created or published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on how to find your Microsoft 365 tenant ID.|
+|M365_TENANT_ID |To identify the tenant in which the Teams App gets created or published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on how to find your Microsoft 365 tenant ID.|
 
 > [!NOTE]
 >
@@ -236,7 +236,7 @@ Perform the following steps to publish your app:
 1. Sign in to [Developer portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
 2. Import your app package in zip, select **App** > **Import app** > **Replace**.
 3. Select the target app in app list.
-4. To publish your app, select `Publish -> Publish to your org` .
+4. To publish your app, select **Publish** > **Publish to your org**.
 
 ## See also
 
