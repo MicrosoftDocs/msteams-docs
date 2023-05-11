@@ -92,7 +92,7 @@ Without word wrapping, the text and CTAs are not usable.
 
 :::row:::
    :::column span="":::
-image
+:::image type="content" source="../..\assets\images\design-guidelines\legible-scale-do.png" alt-text="Example shows a responsive design to avoid overlap at zoom level.":::
 
 #### Do: Do: Make sure your app is legible at 200% scale
 
@@ -100,7 +100,7 @@ Use responsive design to avoid text overlap and truncation.
 
    :::column-end:::
    :::column span="":::
-image
+:::image type="content" source="../..\assets\images\design-guidelines\legible-scale-dont.png" alt-text="Example shows a truncated content at zoom level.":::
 
 #### Don’t: Truncate and cut off content at any zoom level
 
@@ -130,7 +130,7 @@ Teams apps need to be accessible to all users with any level of visual impairmen
 
 :::row:::
    :::column span="":::
-image
+:::image type="content" source="../..\assets\images\design-guidelines\resolution-do.png" alt-text="Example shows a resolution to avoid overlap and truncation.":::
 
 ##### Do: Test your app at 1920 x 1080 resolution
 
@@ -138,7 +138,7 @@ Avoid text overlap and truncation.
 
    :::column-end:::
    :::column span="":::
-image
+:::image type="content" source="../..\assets\images\design-guidelines\resolution-dont.png" alt-text="Example shows a bad resolution which doesn't meet the standards.":::
 
 ##### Don’t: Submit your app for review without testing at Teams default resolution
 
