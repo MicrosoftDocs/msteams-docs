@@ -88,7 +88,7 @@ N/A
 
 #### What it is
 
-This actions validates Teams app package using validation rules.
+This action validates Teams app package using validation rules.
 
 #### What resource it operates
 
@@ -107,7 +107,7 @@ N/A
 
 #### What it is
 
-This actions renders Teams app manifest template with environment variables, and zip manifest file with two icons.
+This action renders Teams app manifest template with environment variables, and zip manifest file with two icons.
 
 #### What resource it operates
 
@@ -211,7 +211,7 @@ Azure AD in your Microsoft 365 tenant.
 
 #### What it is
 
-This action creates a new or reuse an existing Azure AD application for bot.
+This action creates a new or reuses an existing Azure AD application for bot.
 
 #### What resource it operates
 
@@ -235,7 +235,7 @@ Azure AD in your Microsoft 365 tenant.
 
 #### What it is
 
-This action deploys given ARM templates parallelly.
+This action deploys given ARM templates in parallel.
 
 #### What resource it operates
 
