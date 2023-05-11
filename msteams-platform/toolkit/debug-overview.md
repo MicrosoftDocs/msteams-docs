@@ -173,10 +173,14 @@ In `teamsapp.local.yml`, edit `args` of `cli/runNpmCommand` action.
 * Bot
   1. Search for `"3978"` across your project and look for appearances in `tasks.json` and `index.js`.
   1. Replace it with your port.
+
      :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-bot.png" alt-text="Replace your port for bot":::
+
 * Tab
+
   1. Search for `"53000"` across your project and look for appearances in `teamsapp.local.yml` and `tasks.json`.
   1. Replace it with your port.
+  
      :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-tab.png" alt-text="Replace your port for tab":::
 
 </details>
