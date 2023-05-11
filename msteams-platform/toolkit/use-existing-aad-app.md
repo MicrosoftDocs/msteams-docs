@@ -29,6 +29,7 @@ This section provides information for using existing Azure AD app or manually cr
 
 ## Create client secret for Azure AD app (Optional)
 
+> [!NOTE]
 > You can skip this part if your application doesn't require client secret. This step can be automated by the `aadApp/create` action.
 
 1. Go to app's **Certificates & secrets** page, select **Client Secret** and select **New client secret**.
@@ -40,6 +41,7 @@ This section provides information for using existing Azure AD app or manually cr
 
 ## Create Access As User Scope for Azure AD app (Optional)
 
+> [!NOTE]
 > You can skip this part if your M365 account has permission to update the Azure AD app. We will create the scope for you. This step can be automated by the `aadApp/update` action.
 
 1. Go to app's **Expose an API** page, select **Add a scope** under **Scopes defined by this API**.
