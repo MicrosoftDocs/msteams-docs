@@ -12,7 +12,7 @@ ms.date: 05/24/2022
 
 Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio Code.
 
-* Start with a project templates for common line-of-business app scenarios or from a sample.
+* Start with a project template for common line-of-business app scenarios or from a sample.
 * Save setup time with automated app registration and configuration.
 * Run and debug to Teams directly from familiar tools.
 * Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
