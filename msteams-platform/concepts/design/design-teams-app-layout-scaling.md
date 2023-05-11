@@ -42,11 +42,11 @@ Mobile designs should be at 320 pixels.
 
 The minimum size for desktop is 550 pixels.
 
-550 pixels
+##### Example for 550 pixels
 
 :::image type="content" source="../..\assets\images\design-guidelines\responsive-minimum.png" alt-text="Example shows the minimum responsive layout on desktop.":::
 
-2560 pixels - example
+##### Example for 2560 pixels
 
 :::image type="content" source="../..\assets\images\design-guidelines\responsive-desktop.png" alt-text="Example shows a responsive layout on desktop.":::
 

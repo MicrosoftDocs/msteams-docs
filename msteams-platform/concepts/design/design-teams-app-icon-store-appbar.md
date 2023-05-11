@@ -12,7 +12,7 @@ Quickly learn the guidelines for creating icons in our app ecosystem to help des
 
 ## App icon
 
-When submitting your app package, include two PNG versions of the app icon—a color icon and an outline icon. For your app to pass Teams store review, these icons must meet certain size requirements. Follow these steps to ensure your app icons fit the Teams store standard.
+When submitting your app package, include two PNG versions of the app icon - a color icon and an outline icon. For your app to pass Teams store review, these icons must meet certain size requirements. Follow these steps to ensure your app icons fit the Teams store standard.
 
 ### Balanced layout
 
@@ -22,19 +22,19 @@ The icons are intended to create a uniform layout. These guidelines will help yo
 
 ### Creating your assets
 
-Microsoft Teams needs three assets during app submission to generate the app icons:
+Microsoft Teams needs three assets during app submission to generate the app icons.
 
 :::image type="content" source="../..\assets\images\design-guidelines\app-icon-assets-needed.png" alt-text="Example shows the three assets to generate app icons.":::
 
 |Counter|Description|
 |----------|-----------|
-|1|A full bleed .PNG at 192x192 px. Utilize the full asset space as the background. This is used in the app store or flyouts.|
-|2|A default or rest .PNG icon at 32x32 px. This icon is used as “rest/default” state in the app bar and other locations in the product. |
-|3|A focus or pressed  .PNG icon at 32x32 px. This icon is used as “focus” state in the app bar.|
+|1|A full bleed PNG format at 192 x 192 pixels. Utilize the full asset space as the background. This is used in the app store or fly-outs.|
+|2|A default or rest PNG format icon at 32 x 32 pixels. This icon is used as **rest/default** state in the app bar and other locations in the product. |
+|3|A focus or pressed  PNG format icon at 32 x 32 pixels. This icon is used as **focus** state in the app bar.|
 
 ### Color icon architecture
 
-The color app icon dimensions must be 192x192 pixels. If you have a logo icon, the logo needs to fit within the 120x120 safe area in the center.
+The color app icon dimensions must be 192 x 192 pixels. If you have a logo icon, the logo needs to fit within the 120 x 120 safe area in the center.
 
 The submitted icon should be a full square. Teams automatically applies masking for consistent icon shapes across the app.
 
@@ -84,9 +84,9 @@ Reference this list for content areas where your icon will show in the product, 
    :::column span="":::
 :::image type="content" source="../..\assets\images\design-guidelines\safe-area-do.png" alt-text="Example shows a logo within the safe area.":::
 
-#### Do: Follow the recommendation for safe area (96x96)
+#### Do: Follow the recommendation for safe area (96 x 96)
 
-It is recommended that if you have a logo, you keep it within the 96x96 safe area inside of the 192x192 .PNG icon.
+It is recommended that if you have a logo, you keep it within the 96 x 96 safe area inside of the 192 x 192 PNG format icon.
 
    :::column-end:::
    :::column span="":::
@@ -94,7 +94,7 @@ It is recommended that if you have a logo, you keep it within the 96x96 safe are
 
 #### Don’t: Make the icon bigger than the safe area
 
-Here is an example of a logo inside of the .PNG icon that is not within the safe area. It creates uneven padding (negative space) around the icon.
+Here is an example of a logo inside of the PNG format icon that is not within the safe area. It creates uneven padding (negative space) around the icon.
 
    :::column-end:::
 :::row-end:::
@@ -105,7 +105,7 @@ Here is an example of a logo inside of the .PNG icon that is not within the safe
 
 #### Do: Provide full bleed, we will add the rounded corners
 
-If you have a full bleed image, just upload a square .PNG at 192x192. We will round the corners for you dynamically.
+If you have a full bleed image, just upload a square PNG format at 192x192. We will round the corners for you dynamically.
 
    :::column-end:::
    :::column span="":::
@@ -124,7 +124,7 @@ Don’t round the corners. Just submit at perfect square at 192x192. We will rou
 
 #### Do: Upload an icon without a border
 
-We will add the border automatically. In this case just upload your .PNG without a border, even if it’s on a white background.
+We will add the border automatically. In this case just upload your PNG format without a border, even if it’s on a white background.
 
    :::column-end:::
    :::column span="":::
@@ -132,7 +132,7 @@ We will add the border automatically. In this case just upload your .PNG without
 
 #### Don’t: Add a border
 
-We dynamically add borders. If you include a border in your .PNG, it will result in unwanted duplication on white backgrounds.
+We dynamically add borders. If you include a border in your PNG format, it will result in unwanted duplication on white backgrounds.
 
    :::column-end:::
 :::row-end:::
@@ -151,7 +151,7 @@ Please consider your icon to have enough contrast against the background. We rec
 
 #### Don’t: Fade the icon
 
-Avoid low contrast for your icons. Make sure that the background and icon you use in your .PNG has enough contrast.
+Avoid low contrast for your icons. Make sure that the background and icon you use in your PNG format has enough contrast.
 
    :::column-end:::
 :::row-end:::
@@ -181,7 +181,7 @@ Elevate your brand by keeping the brand icon within 96x96 safe area.
 
 #### Do: Abbreviate long words in the app icon
 
-If you have a long app name, please try to abbreviate so that it’s easier to read when we bring your icon down to 32x32 size.
+If you have a long app name, please try to abbreviate so that it’s easier to read when we bring your icon down to 32 x 32 size.
 
    :::column-end:::
    :::column span="":::
@@ -189,7 +189,7 @@ If you have a long app name, please try to abbreviate so that it’s easier to r
 
 #### Don’t: Include multiple words in app icon
 
-Avoid using multiple words on the icon. It will be impossible to read the text when the icon is at smaller sizes for example 32x32 or 36x36.
+Avoid using multiple words on the icon. It will be impossible to read the text when the icon is at smaller sizes for example 32 x 32 or 36 x 36.
 
    :::column-end:::
 :::row-end:::
@@ -198,9 +198,9 @@ Avoid using multiple words on the icon. It will be impossible to read the text w
    :::column span="":::
 :::image type="content" source="../..\assets\images\design-guidelines\icon-balance-do.png "alt-text="Example shows a balanced app icon.":::
 
-#### Do: Create balance (96x96)
+#### Do: Create balance (96 x 96)
 
-Elevate your brand by keeping balance. Stick to the 96x96 safe area for a sense of equilibrium.
+Elevate your brand by keeping balance. Stick to the 96 x 96 safe area for a sense of equilibrium.
 
    :::column-end:::
    :::column span="":::
