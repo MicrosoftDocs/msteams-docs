@@ -1,7 +1,7 @@
 ---
 title: Use Teams Toolkit to provision cloud resources
 author: MuyangAmigo
-description: Learn how to do provision cloud resources using Teams Toolkit in Visual Studio Code and Visual Studio, resource creation and customize resource provision.
+description: Learn how to do provision cloud resources using Teams Toolkit in Visual Studio Code, resource creation and customize resource provision.
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview

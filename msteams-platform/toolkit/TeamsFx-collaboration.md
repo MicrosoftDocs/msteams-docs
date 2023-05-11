@@ -23,30 +23,35 @@ The following sections guide us to understand the collaboration process as proje
 
   1. Select **Teams Toolkit** in the activity bar.
   
-     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-teams-toolkit.png" alt-text="Select teams toolkit from activity bar":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-teams-toolkit.png" alt-text="Screenshot shows the select teams toolkit from activity bar.":::
 
   1. In **ENVIRONMENT** section, select Manage Collaborators button as shown in the following image:
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="collaborators":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="Screenshot shows the collaborators.":::
 
-  1. Select **Add App Owners** to add other Microsoft 365 account email address as collaborator.
+  1. Select **Add App Owners** to add other Microsoft 365 account email address as collaborator:
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add-owner.png" alt-text="Add project owner":::
+        * Select the apps you want to add app owners for.
+        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add-owner.png" alt-text="Screenshot shows the Add project owner.":::
+        * (Optional) Select and confirm Teams `manifest.json` file.
+        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest.png" alt-text="Screenshot shows the Teams manifest file.":::
+        * (Optional) Select and confirm Azure AD app `aad.manifest.json` file.
+        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/browse-1.png" alt-text="Screenshot shows the Browse option.":::
+        * Input the M365 account email address you want to add as app owner. The account to be added must be on the same tenant as project owner for remote debug as shown in the image.
+        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/confirm-owner.png" alt-text="Screenshot shows the owner name to confirm.":::
 
-        * Select the apps you want to add app owners for. [image]
-        * (Optional) Select and confirm Teams `manifest.json` file. [image]
-        * (Optional) Select and confirm Azure AD app `aad.manifest.json` file. [image]
-        * Input the M365 account email address you want to add as app owner. The account to be added must be on the same tenant as project owner for remote debug as shown in the image. [image]
+  1. Select **List App Owners** to view collaborators in current environment:
 
-  1. Select **List App Owners** to view collaborators in current environment.
-
-     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="list":::
-
-        * Select the apps you want to add app owners for. [image]
-        * (Optional) Select and confirm Teams `manifest.json` file. [image]
-        * (Optional) Select and confirm Azure AD app `aad.manifest.json` file. [image]
-        * Input the M365 account email address you want to add as app owner. The account to be added must be on the same tenant as project owner for remote debug as shown in the image. [image]
-        * Then you can see collaborators listed in the output channel as shown in following image: [image]
+        * Select the apps you want to add app owners for.
+        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add-owner.png" alt-text="Screenshot shows the Add project owner.":::
+        * (Optional) Select and confirm Teams `manifest.json` file.
+        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest.png" alt-text="Screenshot shows the Teams manifest file.":::
+        * (Optional) Select and confirm Azure AD app `aad.manifest.json` file.
+        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/browse-1.png" alt-text="Screenshot shows the Browse option.":::
+        * Input the M365 account email address you want to add as app owner. The account to be added must be on the same tenant as project owner for remote debug as shown in the image.
+        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/confirm-owner.png" alt-text="Screenshot shows the owner name to confirm.":::
+        * Then you can see collaborators listed in the output channel as shown in following image:
+        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="Screenshot shows the collaborators list.":::
 
   1. Push the project to GitHub.
 

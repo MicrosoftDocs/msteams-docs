@@ -1,7 +1,7 @@
 ---
 title: Edit Azure Active Directory manifest in Teams Toolkit
 author: zyxiaoyuer
-description:  Describes Managing Azure Active Directory application in Teams Toolkit
+description: Describes Managing Azure Active Directory application in Teams Toolkit.
 ms.author: surbhigupta
 ms.localizationpriority: medium 
 ms.topic: overview
