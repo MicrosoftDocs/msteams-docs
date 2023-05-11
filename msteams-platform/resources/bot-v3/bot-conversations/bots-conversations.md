@@ -4,7 +4,7 @@ description: In this module, learn to have a conversation with a Microsoft Teams
 
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 05/20/2019
+ms.date: 04/02/2023
 ---
 # Have a conversation with a Microsoft Teams bot
 

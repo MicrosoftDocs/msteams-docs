@@ -33,10 +33,10 @@ The following table lists Teams tabs and dialogs (task modules) capabilities (pu
 
 |Capability | Host support | Notes |
 |-----------|--------------|-------|
-| app | Teams, Outlook, Microsoft 365, Microsoft 365 app for Android | Namespace representing app initialization and lifecycle. |
+| app | Teams, Outlook, Outlook app for Android, Microsoft 365, Microsoft 365 app for Android | Namespace representing app initialization and lifecycle. |
 | appInitialization| | Deprecated. Replaced by `app` namespace. |
 | appInstallDialog | Teams, Microsoft 365 ||
-| authentication | Teams, Outlook, Microsoft 365, Microsoft 365 app for Android | |
+| authentication | Teams, Outlook, Outlook app for Android, Microsoft 365, Microsoft 365 app for Android | |
 | calendar | Outlook (Windows desktop only) ||
 | call | Teams||
 | chat |Teams||
@@ -47,7 +47,7 @@ The following table lists Teams tabs and dialogs (task modules) capabilities (pu
 | media |Teams| See notes on [App permissions](#app-permissions).|
 | menus | Teams ||
 | monetization | Teams ||
-| pages | Teams, Outlook, Microsoft 365, Microsoft 365 app for Android | Namespace representing page navigation. See notes on [Deep linking](#deep-linking). |
+| pages | Teams, Outlook, Outlook app for Android, Microsoft 365, Microsoft 365 app for Android | Namespace representing page navigation. See notes on [Deep linking](#deep-linking). |
 | people |Teams||
 | profile | ||
 | search | ||
@@ -144,6 +144,9 @@ Enabling an existing Teams app to run in Outlook and Microsoft 365 requires all 
 For more info, see [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
 
 ### Callbacks converted to promises
+
+> [!NOTE]
+> The `getTabInstances` API isn't implemented on Teams mobile.
 
 Teams APIs that previously took a callback parameter have been updated to return a JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object. These include the following APIs:
 

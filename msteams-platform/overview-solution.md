@@ -5,7 +5,7 @@ description: Understand how to plan, design, build, extend to Microsoft 365, tes
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.date: 11/02/2021
+ms.date: 04/16/2023
 ---
 # The Teams solution
 
