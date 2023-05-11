@@ -17,7 +17,7 @@ In this tutorial, get familiarize with a basic Teams tab app in one of the follo
 
 # [Teams Toolkit codespaces](#tab/teamstoolkitcodespaces)
 
-But before you create your codespace, ensure that you have:
+Before you create your codespace, ensure that you have:
 
 * A GitHub account to create your codespace instance.
 * A [Microsoft 365 account](https://developer.microsoft.com/microsoft-365/dev-program) with sideloading permission.

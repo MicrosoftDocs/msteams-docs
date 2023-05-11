@@ -10,20 +10,21 @@ The notification bot proactively sends messages in Teams channel or group chat o
 
 :::image type="content" border="false" source="../assets/images/get-started/get-started-bot.png" alt-text="Illustration showing a conceptual notification bot":::
 
-In this tutorial, get familiarize with the scenario-based Teams app in one of the following ways:
+In this tutorial, get familiarize with a basic Teams tab app in one of the following ways:
 
-* [Use Teams Toolkit codespaces to build a notification bot](#use-teams-toolkit-codespaces-to-build-a-notification-bot)
-* [Use step-by-step guide to build a notification bot](#use-step-by-step-guide-to-build-a-notification-bot)
+* Teams Toolkit codespaces: The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you.
+* Step-by-step guide
 
-## Use Teams Toolkit codespaces to build a notification bot
+# [Teams Toolkit codespaces](#tab/teamstoolkitcodespaces)
 
-The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you. You just need to select the following button to begin.
-
-But before you create your codespace, ensure that you have:
+Before you create your codespace, ensure that you have:
 
 * A GitHub account to create your codespace instance
 * A [Microsoft 365 account](https://developer.microsoft.com/microsoft-365/dev-program) with sideloading permission
 * A [Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
+
+> [!TIP]
+> [GitHub codespaces](https://github.com/features/codespaces) offers the free plan up to a fixed amount of usage every month. If you need to free up the space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespaces that you no longer need.
 
 To use codespaces for creating a Teams notification bot:
 
@@ -44,15 +45,15 @@ To use codespaces for creating a Teams notification bot:
 
    :::image type="content" source="../assets/images/get-started/toolkit-in-browser-sign-in.png" alt-text="Screenshot shows you the Teams Toolkit window in browser to sign in."lightbox="../assets/images/get-started/add-tab-in-teams.png":::
 
+    > [!NOTE]
+    >
+    > Your browser may block a pop-up to prevent to open a new browser tab or window. You need to allow pop-ups so that the codespace can sideload the app to Teams client in another tab.
+
 1. Select **Preview your Teams App (F5)** to build your notification bot.
 
       :::image type="content" source="../assets/images/get-started/toolkit-in-browser.png" alt-text="Screenshot shows you the Teams Toolkit window in browser with your notification bot.":::
 
    Teams Toolkit codespaces builds the app. A dialog appears to prompt you to open the app in a browser.
-
-    > [!NOTE]
-    >
-    > Your browser may block a pop-up to prevent to open a new browser tab or window. You need to allow pop-ups so that the codespace can sideload the app to Teams client in another tab.
 
 1. Select **Open in Browser** to preview your notification bot in the browser.
 
@@ -76,10 +77,7 @@ To use codespaces for creating a Teams notification bot:
 
    You've successfully created the notification bot and loaded in the Teams client.
 
-> [!TIP]
-> [GitHub codespaces](https://github.com/features/codespaces) offers the free plan up to a fixed amount of usage every month. If you need to free up the space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespaces that you no longer need.
-
-## Use step-by-step guide to build a notification bot
+# [Step-by-step guide](#tab/step-by-stepguide)
 
 If you would like to learn how to start a project with Teams Toolkit from scratch, let's go through the step-by-step guide together.
 
