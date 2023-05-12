@@ -66,7 +66,7 @@ To use codespaces for creating a search based message extension:
 
    :::image type="content" source="../assets/images/get-started/codespace/me-teams-chat.png" alt-text="Screenshot shows your message extension loaded in the Teams client.":::
 
-If you want to build by yourself, or want to create a message extension that can be installed on Outlook and Microsoft 365, follow the step-by-step guide at the next section!
+If you want to build by yourself, or want to create a message extension that can be installed on Outlook and Microsoft 365, follow the step-by-step guide.
 
 # [Step-by-step guide](#tab/step-by-stepguide)
 

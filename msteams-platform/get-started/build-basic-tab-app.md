@@ -47,19 +47,13 @@ To create a Teams tab app with codespace, follow the steps:
 
     > [!NOTE]
     >
-    > Your browser may block a pop-up to prevent to open a new browser tab or window. You need to allow pop-ups so that the codespace can sideload the app to Teams client in another tab.
+    > Your browser may block a pop-up to prevent to open a new browser tab or window. You need to allow pop-ups so that the codespace can load your the app to Teams client in another tab.
 
 1. Select **Preview your Teams App (F5)** to build your tab app.
 
       :::image type="content" source="../assets/images/get-started/toolkit-in-browser.png" alt-text="Screenshot shows you the Teams Toolkit window in browser with your tab app.":::
 
-   Teams Toolkit codespaces builds the app. A dialog appears to prompt you to open the app in a browser.
-
-1. Select **Open in Browser** to preview your tab app in the browser.
-
-   :::image type="content" source="../assets/images/get-started/open-in-browser.png" alt-text="Screenshot shows you to open your tab app in browser.":::
-
-   Your tab app is sideloaded to Teams and opens in the browser.
+   Teams Toolkit codespaces builds the app. Your tab app is loaded to Teams and opens in the browser.
 
    :::image type="content" source="../assets/images/get-started/tab-in-browser.png" alt-text="Screenshot shows your tab opened in the browser window.":::
 
