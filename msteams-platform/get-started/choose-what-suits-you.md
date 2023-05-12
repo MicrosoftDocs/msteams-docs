@@ -40,7 +40,7 @@ You can build your Microsoft Teams app with help of the following tools and SDKs
 |--------|-------------|--------|--------|
 | **User interactions** | A full-screen embedded web experience. | A chat bot that converses with members. | Shortcuts for inserting external content into a conversation or taking action on messages. |
 | **SDKs** | Teams JavaScript client library for UI functionalities, SharePoint Framework (SPFx), and Microsoft Graph SDK. | TeamsFx SDK, Bot Framework SDK, Teams Conversational AI, and Microsoft Graph SDK. | TeamsFx SDK, Bot Framework SDK, Teams Conversational AI, and Microsoft Graph SDK. |
-| **Languages** | Web technology in general, HTML, CSS,  C#, .NET, TypeScript, and JavaScript (including React). | Node.js, Java, C#, .NET, TypeScript, JavaScript, and Python. |Node.js, Java, C#, .NET, TypeScript, JavaScript, and Python. |
+| **Languages** | Web technology in general, HTML, CSS, C#, TypeScript, and JavaScript (including React). | Node.js, Java, C#, TypeScript, JavaScript, and Python. |Node.js, Java, C#, TypeScript, JavaScript, and Python. |
 | **Recommended tools** | Visual Studio Code or Visual Studio with Teams Toolkit extension, or TeamsFx CLI if you prefer using CLI. | Visual Studio Code or Visual Studio with Teams Toolkit extension, or TeamsFx CLI if you prefer using CLI. | Visual Studio Code or Visual Studio with Teams Toolkit extension, or TeamsFx CLI if you prefer using CLI. |
 
 <!--
