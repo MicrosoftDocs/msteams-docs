@@ -18,13 +18,13 @@ Here are some use cases for fetching meeting transcripts and recordings using Gr
 > [!NOTE]
 > In the future, Microsoft may require you or your customers to pay additional fees based on the amount of data accessed through the API.
 
-To fetch the transcript for a particular meeting:
+To fetch the transcript and recording for a particular meeting:
 
-- [Configure permissions on Azure AD to access transcript](#configure-permissions-on-azure-ad-to-access-transcript)
+- [Configure permissions on Azure AD to access transcript and recording](#configure-permissions-on-azure-ad-to-access-transcript-and-recording)
 - [Obtain meeting ID and organizer ID](fetch-id.md)
 - [Use Graph APIs to fetch transcript](/graph/api/resources/calltranscript)
 
-## Configure permissions on Azure AD to access transcript
+## Configure permissions on Azure AD to access transcript and recording
 
 Your app must have the required permissions for fetching transcripts and recordings. It can access and fetch transcripts and recordings for a Teams meeting using organization-wide application permissions or resource-specific consent (RSC) application permissions for a particular meeting.
 
@@ -36,11 +36,11 @@ For more information about the organization-wide application permissions that ca
 
 ### Use meeting-specific RSC application permissions
 
-If you want your app to fetch transcripts and recordings only for the Teams meeting where it's installed, configure  meeting-specific RSC permission for your app. Authorized users can install your app in the meeting chat. After the meeting ends, your app can make the API call to obtain the transcript for that meeting.
+If you want your app to fetch transcripts and recordings only for the Teams meeting where it's installed, configure  meeting-specific RSC permission for your app. Authorized users can install your app in the meeting chat. After the meeting ends, your app can make the API call to obtain the transcript and recording for that meeting.
 
 For more information about the meeting-specific RSC permissions, see [RSC permissions for a chat or meeting](../rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting).
 
-After you've configured the permissions, configure your app to receive change notifications for all relevant meeting events. Notifications contain meeting ID and organizer ID that help in accessing transcript content. Your app can fetch the transcript for a meeting when it's generated after it ends. The content of the transcript is available as `.vtt` or `.docx` file.
+After you've configured the permissions, configure your app to receive change notifications for all relevant meeting events. Notifications contain meeting ID and organizer ID that help in accessing transcript content and recording. Your app can fetch the transcript and recording for a meeting when it's generated after it ends. The content of the transcript is available as `.vtt` or `.docx` file.
 
 > [!NOTE]
 > The docx format for transcripts will be deprecated starting May 31, 2023. For more information, see [Get callTranscript](/graph/api/calltranscript-get).
