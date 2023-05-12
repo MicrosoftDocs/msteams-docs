@@ -1,0 +1,518 @@
+### YamlMime:Tutorial
+title: Build your first app with SPFx
+metadata:
+  title: Hello World with SPFx
+  description: In this tutorial, you learn to build Hello World app with SPFx. The step-by-step guide helps you to install toolkit, setup development tenant, and you can enable sideloading.
+  audience: Developer
+  level: Beginner
+  ms.date: 05/09/2022
+  ms.topic: interactive-tutorial
+  nextTutorialHref: ~/toolkit/toolkit-v4/teams-toolkit-tutorial-v4.md
+  nextTutorialTitle: Back to Get started overview
+  ms.custom: mvc
+  ms.localizationpriority: high
+items:
+- durationInMinutes: 1
+  content: |
+    SharePoint Framework (SPFx) is a development model to build client-side solutions for Microsoft Teams and SharePoint. Your SPFx Teams app is hosted on Microsoft 365. It provides full support for developing and hosting your client-side SPFx solution. You can integrate your SharePoint Framework solution with:
+
+    - SharePoint data and extend Microsoft Teams. 
+    - Your business APIs secured with Azure Active Directory.
+
+    For this tutorial, start Microsoft Teams app development with SPFx by building your first app with a tab capability.
+
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab1.png" alt-text="Diagram showing this app has three features. Tab is highlighted.":::
+
+    > [!NOTE]
+    > Currently, Teams Toolkit offers only the Tab capability in a Teams app with Visual Studio Code and SharePoint Framework. The Bot and Message Extension capabilities are not available.
+
+- title: Prerequisites
+  durationInMinutes: 1
+  content: |
+    Here's a list of tools you need for building and deploying your apps.
+
+    | &nbsp; | Install | For using... |
+    | --- | --- | --- |
+    | **Required** | &nbsp; | &nbsp; |
+    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use latest version. || &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use version 4.0.0.|
+    | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use version 4.0.0.|
+    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
+    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+    | **Optional** | &nbsp; | &nbsp; |
+    | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, a browser-based tool that lets you run a query from Microsoft Graph data. |
+    | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
+
+    > [!TIP]
+    > If you work with Microsoft Graph data, you should learn about and bookmark the Microsoft Graph Explorer. This browser-based tool allows you to query Microsoft Graph outside of an app.
+    </details>
+
+    ## Prepare development environment
+
+    After you've installed the required tools, set up the development environment.
+
+    ### Install the Teams Toolkit
+
+    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. You can use the toolkit with Visual Studio Code, Visual Studio, or as a CLI (called `teamsfx`).
+    # [Visual Studio Code](#tab/vscode)
+
+    1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
+    1. In the search box, enter **Teams toolkit**.
+    1. Select **Install** next to the Teams Toolkit.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-install-toolkit-vscode.png" alt-text="microsoft tool kit":::
+
+        The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
+
+    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+
+    > [!NOTE]
+    > The latest version of Teams Toolkit is 4.2.0.
+
+    # [Command line](#tab/cli)
+
+    To install the TeamsFx CLI, use the `npm` package manager:
+
+    ``` bash
+    npm install -g @microsoft/teamsfx-cli
+    ```
+
+    Depending on your configuration, you may need to use `sudo` to install the CLI:
+
+    ``` bash
+    sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
+    ```
+
+    This condition is more common on Linux and macOS systems.
+
+    Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.  
+
+    You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
+
+    > [!CAUTION]
+    > Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell.
+
+    ---
+
+    ## Set up your Teams development tenant
+
+    A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
+
+    ### Enable sideloading option
+
+    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+      
+    > [!NOTE]
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
+
+    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+
+    Verify if you can sideload apps in Teams:
+
+    1. In the Teams client, select **Store** icon.
+    1. Select **Manage your apps**.
+    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="bot home":::
+
+        > [!NOTE]
+        > If Teams doesn't show the option to upload a custom app, talk to your Teams administrator.
+
+    ### Create a free Teams developer tenant (optional)
+
+    If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
+
+    1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+    1. Select **Join Now** and follow the onscreen instructions.
+    1. In the welcome screen, select **Set up E5 subscription**.
+    1. Set up your administrator account. After you finish, the following screen appears:
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-microsoft-365.png" alt-text="Microsoft 365":::
+
+    1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
+
+    ## SharePoint Collection Site Administrator account
+
+    Ensure that you have an Administrator account for a SharePoint Site Collection. You need this account at deployment for hosting. If you're using a Microsoft 365 developer program tenant, you can use the administrator account you created at the time.
+
+    Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building!
+
+- title: Create project workspace for your tab app
+  durationInMinutes: 1
+  content: |
+    This tutorial walks you through the steps to create, build, and deploy a Teams app using SharePoint Framework SPFx. This app will have a tab capability.  
+
+    In this tutorial, you learn:
+    1. [How to set up a new project with Teams Toolkit](#create-your-project)
+    1. [About the directory structure of your app](#take-a-tour-of-the-source-code)
+
+    > [!IMPORTANT]
+    > Before you start creating the project workspace, ensure that you're not signed into any Microsoft 365 or Azure account.
+
+    ## Create your project
+
+    If the prerequisites are in place, let's begin!
+
+    # [Visual Studio Code](#tab/vscode)
+
+    1. Open Visual Studio code.
+    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
+
+    1. Select **Create a new app**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
+
+    1. Select **Create a new Teams app**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
+
+    1. Select **(SPFx) tab**.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/new-spfxTab-spfx.png" alt-text="new spfx tab spfx":::
+
+    1. Select **React** in the **Framework** section.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-react-page.png" alt-text="bot home":::
+
+    1. Select **Enter** to accept the default **Web Part Name**.
+        
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-helloworld.png" alt-text="bot home":::
+
+    1. Select your **Workspace folder** by choosing your required folder.  
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot showing how to select the folder.":::
+
+    1. Enter a suitable **Application name** for your app. Press **Enter**.
+
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/application-name.png" alt-text="Screenshot showing how to select the folder.":::
+    
+        After your app is created, the Teams Toolkit displays the following message:
+        
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/preview-project.png" alt-text="localdebug":::
+        
+        Select **Local debug** to preview your project.
+
+        Teams Toolkit invokes Yeoman CLI to scaffold your Teams app, and install the required dependencies in the process.</br>
+        
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-tooklit-updated.png" alt-text="bot home":::
+ 
+        The scaffolding takes a couple of minutes.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/sbs-share-point.png" alt-text="bot home":::
+          
+
+    <details>
+    <summary>A quick recap of creating a Teams app.</summary>
+    
+    ![Create a Teams app](~/assets/videos/spfx-tabapp-preview.gif)
+    </details>
+
+    # [Command line](#tab/cli)
+
+    Use the `teamsfx` CLI to create your first project.  Start from the folder where you want to create the project folder.
+
+    ``` bash
+    teamsfx new
+    ```
+
+    The CLI walks through some questions to create the project. Every question includes an instruction on answering it, for example, Use arrow keys to select an option. When you've answered the question, select **Enter** to confirm it.
+
+    1. Select **Create a new Teams app**.
+    2. Select **Tab**.
+    3. Select **SharePoint Framework (SPFx)** frontend hosting.
+    4. Select **React** Framework.
+    5. Press **Enter** for the **Web Part Name**.
+    6. Enter a suitable name for your app, like `helloworld`. The name of the app must be alphanumeric.
+
+
+       Your project is created after all the questions are answered.
+
+    ---
+
+  
+    ## Take a tour of the source code
+
+    After project creation, you have the components to build a basic personal app. You can view the project directories and files in the Explorer area of Visual Studio Code.
+
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio Code.":::
+
+    The Toolkit creates scaffolding for you in the project directory for the tab capability. 
+
+    Among other items in this directory, the Teams Toolkit contains:
+
+    - `fx`: App's state in the `.fx` directory.  
+    - templates/resources: contains the app icons, `color.png` and `outline.png`.
+    - `manifest.local.template.json`: contains the app manifest for local debug.
+    - `manifest.remote.template.json`: contains the app manifest for publishing to Developer Portal for Teams.
+    - `.fx/configs/projectSettings.json`: the settings you chose when creating the project.
+
+    As you selected an SPFx Web part project, the following files are relevant to your UI:
+
+    - `SPFx/src/webparts/{webpart}`: contains your SPFx web part.
+    - `.vscode/launch.json`: describes the debugging configurations available in the debug palette.
+
+- title: Build your tab app
+  durationInMinutes: 1
+  content: |
+    After you set up your project workspace with Teams Toolkit, build your tab project. You need to sign in to your Microsoft 365 account.
+
+    In this page, you learn to [build and run your first app](#build-and-run-your-app-locally-in-visual-studio-code).
+
+    ## Sign in to your Microsoft 365 account
+
+    Use your Microsoft 365 account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+
+    # [Visual Studio Code](#tab/viscode)
+
+    1. Open Visual Studio Code.
+    1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select **Sign in to M365**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/account-signin-spfx.png" alt-text="Screenshot showing where to sign in to Microsoft 365.":::
+
+        Your default web browser opens to let you sign in to the account.
+
+    1. Sign in to your Microsoft 365 account using your credentials.
+    1. Close the browser when prompted, and return to Visual Studio Code.
+    1. Return to Teams Toolkit within Visual Studio Code.
+
+        The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name.
+
+        Now you're ready to build the app and run it locally!
+
+    # [Command line](#tab/cline)
+
+       Sign in to Microsoft 365 with the TeamsFx CLI.
+
+    ``` bash
+        teamsfx account login m365
+    ```
+
+
+    Your default web browser opens to let you sign in to the account. Sign in to your account using your credentials. Close the browser when you're prompted.
+ 
+    The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+
+    Now that the development environment is configured, you can create, build, and deploy your first Teams app.
+
+     ---
+
+    ## Build and run your app locally in Visual Studio Code
+
+    To build and run your app locally:
+
+    1. Select the **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
+
+    1. Select one of the following options to run and debug the app.
+
+        - **Teams workbench (Edge)**
+        - **Teams workbench (Chrome)**
+
+            :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-debug.png" alt-text="bot home":::
+
+    1. Select the play button or select the **F5** key to start debugging.
+        > [!NOTE]
+        > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens and loads the SharePoint Workbench when the build is complete. This process can take a few minutes to complete.
+
+        The Toolkit may prompt you to install a local certificate, if needed. This certificate allows Teams to load your application from `https://localhost`. 
+        
+    1. Select **Yes** when the following dialog appears:
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Microsoft 365":::
+
+        Teams web client opens in a browser window.
+
+    1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-app-local-debug.png" alt-text="Add the app to Teams":::
+   
+    1. Select the web app version, if you're asked to switch to Teams desktop. You can see the HTML, CSS, and JavaScript code in a standard web development environment.
+
+    1. Select **Load debug scripts**, if you're prompted to load debug scripts before your app is sideloaded in Teams.
+    
+        Congratulations, your first app is running on Teams!
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of the completed app in local environment":::
+
+        Your app should now be running. You can debug the app as any other SPFx web part (such as setting breakpoints).
+
+    > [!TIP]
+    > Try placing breakpoints in the render method of `SPFx/src/webparts/{webpart}/{webpart}.ts` and reloading the browser window. Visual Studio Code will stop on breakpoints in your code.
+
+    <details>
+    <summary>Learn what happens when you use Local Workbench for debugging your app.</summary>
+    
+    **Local workbench** is the default option to run and debug an app in Visual Studio Code. For this tutorial, it's recommended that you choose to debug your app with the Teams workbench, however, you can choose the Local workbench to explore web part layouts.
+
+    > [!NOTE]
+    > This interface is intended only for exploring how a web part may appear in a mobile or a tablet. You would need to write the code for including them in your app, and then deploy it to view them. 
+
+    To explore web part layouts using local workbench:
+
+    1. Select **Local workbench**, and then select **F5** to run and debug the app.
+        
+        The **SharePoint Web Part Workbench** opens in the browser to let you add, edit, and remove web parts.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-workbench-addpart.png" alt-text="Screenshot showing the SPFx workbench running with the pop-up to add a web part showing.":::
+
+    1. Select **Add Web Part in column one +** icon to add your web part.
+
+    1. Select your web part from the menu.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-workbench-addpart2.png" alt-text="Screenshot showing the SPFx workbench running with the pop-up to add a web part selection.":::
+    
+    1. Select **Add a new section +** icon to choose column layout for your web parts.
+
+    1. Use this interface to try out different layouts for web parts:
+        
+        - View **Web Part Data** for your layout.
+        - Try changing between different layouts, text, color, and more.
+        - Use the **Preview** button to view the web parts. 
+        - View the web part layout in different **Mobile** or **Tablet** devices.
+        - Save or discard any changes in the layout to continue trying possible layouts.
+    
+    1. Close the browser window to stop local workbench debugging when you're ready.
+    </details>
+
+- title: Deploy your first Teams app
+  durationInMinutes: 1
+  content: |
+    You've learned to create, build, and run Teams app with Tab capability. The final step is to deploy your app.
+
+    Let's deploy the first app with Tab capability on SharePoint using Teams Toolkit.
+
+    In this page, you learn to:
+    1. [Deploy your first app](#deploy-your-app-to-sharepoint)
+    1. [Distribute the app package on SharePoint](#distribute-the-app-package-on-sharepoint)
+
+    ## Deploy your app to SharePoint
+
+    Ensure a SharePoint App Catalog exists in your deployment. If it doesn't exist, [create one](/sharepoint/use-app-catalog). It may take up to 15 minutes for the app catalog to be created.
+
+    # [Visual Studio Code](#tab/vscode)
+
+    1. Open Visual Studio Code.
+    1. Select the Teams Toolkit from the sidebar by selecting the Teams icon.
+    1. Select **Provision in the Cloud**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning command":::
+
+        The Toolkit updates the progress in the bottom-right corner. After a few seconds, you can see the following notice:
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/provision-complete.png" alt-text="Screenshot showing the provisioning complete dialog.":::
+
+    1. After provisioning is complete, select **Deploy to the cloud**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/deploying-command.png" alt-text="Screenshot for showing the deploying command":::
+
+        The app package is built, and uploaded to the SharePoint site. The Teams Toolkit displays a message with the local path where the app package is saved.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-package.png" alt-text="Screenshot for the SPFx App Package message":::
+
+        After the package is built, Teams Toolkit displays a message with the url of the SharePoint site where your app package has been uploaded.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-package-uploaded.png"alt-text="Screenshot for the SPFx package uploaded to SharePoint site":::
+
+       You can either publish to Teams or select the SharePoint site.
+
+        * Publish to Teams (#publish-to-teams)
+        * Select the link of the SharePoint site (#select-the-link-of-the-sharepoint-site)
+
+    ### Publish to Teams
+
+    1. Select **Publish to Teams**.
+
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/publish-your-app1.png"alt-text="Screenshot for the publish to Teams.":::
+
+    1. Select **Admin portal**.
+       
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/admin-portal.png"alt-text="Screenshot for the admin portal.":::
+
+    1. Select **Manage Apps** and search your app in the search section to select your app.
+
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/manage-apps.png"alt-text="Screenshot for the Manage apps.":::
+
+    1. Select **Publish** to publish your app in Teams.
+
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/publish-app.png"alt-text="Screenshot for the publish.":::
+
+    1. Open the Teams application (or sign in at `https://teams.microsoft.com`).
+
+    1. Select the triple-dot on the sidebar, then select **All apps**.  
+
+        The app displays in the **Apps built for your org** category. You can add the app from there.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot showing the app built in your org.":::
+
+    1. Select your app, and then select **Add**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-add-app.png" alt-text="Screenshot of app to be added in Teams.":::
+
+        Congratulations! Your app is now added to Teams.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of completed app to be added in Ms. Teams.":::"
+
+    ### Select the link of the SharePoint site
+
+
+    1. Select the link of the SharePoint site.
+
+        The SharePoint site opens to the Apps home page. Follow the procedure to [distribute the app](#distribute-the-app-package-on-sharepoint) on SharePoint.
+
+    # [Command line](#tab/cli)
+
+    In your terminal window:
+
+    1. Run `teamsfx provision`.
+
+      ``` bash
+      teamsfx provision
+      ```
+
+    1. Run `teamsfx deploy`.
+
+      ``` bash
+      teamsfx deploy
+      ```
+
+    1. When prompted, select **Build SharePoint Package**.
+
+        Follow the procedure to [distribute the app](#distribute-the-app-package-on-sharepoint) on SharePoint.
+    ---
+
+    ## Distribute the app package on SharePoint
+
+    You can find the app package uploaded at the SharePoint site. To distribute the app and sync it to Teams:
+
+    1. Select **Distribute apps for SharePoint**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-distribute-apps.png" alt-text="Distribute apps for SharePoint.":::
+
+        The Apps for SharePoint home page opens. Your app is listed in this page.
+
+    1. Select the **FILES** tab.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-files-tab.png" alt-text="Select the files tab in the SharePoint App Catalog.":::
+
+    1. Select the package you deployed, then select **Sync to Teams**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-sync-to-teams.png" alt-text="Select the files tab in the SharePoint App Catalog.":::
+
+        > [!Note]
+        > The Sync to Teams process can take a few minutes. You will see a message in the browser indicating that the app has been successfully synchronized to Teams.
+
+    1. Open the Teams application (or sign in at `https://teams.microsoft.com`).
+    1. Select the triple-dot on the sidebar, then select **All apps**.  
+
+        The app will be placed in the **Apps built for your org** category. You can add the app from there.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot showing the app within Teams":::
+
+    1. Select your app, and then select **Add**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-add-app.png" alt-text="Screenshot of completed app to be added in Teams.":::
+
+        Congratulations! Your app is now added to Teams.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of completed app to be added in Teams.":::"
