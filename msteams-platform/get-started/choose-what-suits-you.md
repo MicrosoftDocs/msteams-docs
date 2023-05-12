@@ -43,6 +43,10 @@ You can build your Microsoft Teams app with help of the following tools and SDKs
 | **Languages** | Web technology in general, HTML, CSS, C#, TypeScript, and JavaScript (including React). | Node.js, Java, C#, TypeScript, JavaScript, and Python. |Node.js, Java, C#, TypeScript, JavaScript, and Python. |
 | **Recommended tools** | Visual Studio Code or Visual Studio with Teams Toolkit extension, or TeamsFx CLI if you prefer using CLI. | Visual Studio Code or Visual Studio with Teams Toolkit extension, or TeamsFx CLI if you prefer using CLI. | Visual Studio Code or Visual Studio with Teams Toolkit extension, or TeamsFx CLI if you prefer using CLI. |
 
+Now, this is an example scenario for a TypeScript developer, who wants to build a social media dashboard that sends notifications for her team:
+
+:::image type="content" source="../assets/images/overview/sdks-scenario.png" alt-text="I want to build a social media dashboard that sends notifications with TypeScript. I will use Teams Toolkit for VS Code and Developer Portal, as well as TeamsJS with FluentUI, TeamsFx with Bot Framework, also the 3rd party API to get social media data.":::
+
 <!--
 
 Choose the best tools and SDKs for building a new Teams app.
