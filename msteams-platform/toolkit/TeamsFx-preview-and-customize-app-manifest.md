@@ -51,6 +51,8 @@ You can also trigger Zip Teams App Package from tree view or `Teams: Zip Teams a
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/zip-app-package (1).png" alt-text="Screenshot showing the selection of zip Teams app package in preview manifest file.":::
 
+</details>
+
 ## Customize Teams app manifest for Visual Studio Code
 
 During local debug or provision, Teams Toolkit loads manifest from `appPackage/manifest.json`, and resolve manifest by environment variables defined in `env/.env.xx`, then creates or updates Teams app in [Teams Developer Portal](https://dev.teams.microsoft.com/home).
