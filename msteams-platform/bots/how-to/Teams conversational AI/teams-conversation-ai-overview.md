@@ -26,11 +26,11 @@ The following are some of the main features available through Teams conversation
 
 ### Simple Teams-Centric Component Scaffolding
 
-The Conversational AI SDK simplifies the Teams app model to focus on the extension needed vs the protocol required. Developers can leverage pre-built templates, and simply add their business logic to this scaffold to add modules like bots, message extensions, Adaptive Cards, link unfurling, and so on.  
+The Teams AI library simplifies the Teams app model to focus on the extension needed vs the protocol required. Developers can leverage pre-built templates, and simply add their business logic to this scaffold to add modules like bots, message extensions, Adaptive Cards, link unfurling, and so on.  
 
 ### Natural Language Modeling
 
-The Conversational AI SDK is built with GPT-powered language models,so that developers don't need to spend time to  write their own conversation logic and identify user intents. This makes building AI-powered Teams apps easier, more compliant, and consistently usable than ever before.
+The Teams AI library is built with GPT-powered language models,so that developers don't need to spend time to  write their own conversation logic and identify user intents. This makes building AI-powered Teams apps easier, more compliant, and consistently usable than ever before.
 
 Bots can run in-context and assist when they recognize a user intent map to one of their app actions, boosting the conversation without requiring users to explicitly talk to the bot using a small set of registered actions.
 
@@ -44,7 +44,7 @@ Bots can channel focus to their own business logic with custom topic filters.
 
 ### Conversational Session History
 
-The Conversational AI SDK remembers context across messages and helps improve the bot performance by analyzing patterns in user behavior.
+The Teams AI library remembers context across messages and helps improve the bot performance by analyzing patterns in user behavior.
 
 ### Localization
 
@@ -64,7 +64,7 @@ The SDK allows developers to create ethical and responsible conversational apps 
 * Conversation sweeping, which helps developers monitor conversations and intervene when the conversation goes astray through proactive detection and remediation.
 * Feedback loops, which allow developers to evaluate the performance of the bot for high quality conversations and fine-tune their experience for improvement.
 
-In summary, the Conversational AI SDK offers wide support from low code to complex scenarios. The SDK extends capabilities with AI constructs to build natural language modeling, scenario-specific user intent, personalization, and automated, context-aware conversations.
+In summary, the Teams AI library offers wide support from low code to complex scenarios. The SDK extends capabilities with AI constructs to build natural language modeling, scenario-specific user intent, personalization, and automated, context-aware conversations.
 
 ### Predictive Engine for Mapping Intents to Actions  
 
@@ -103,7 +103,7 @@ Here are some key benefits of the Teams conversational AI library:
 
 <!-- ## Bots Architecture overview
 
-The bot framework using Conversational AI SDK requires the following:
+The bot framework using Teams AI library requires the following:
 
 * Support to OAuth S2S
 * Adherence to Activity schema for reading and writing JSON documents

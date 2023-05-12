@@ -6,17 +6,17 @@ ms.topic: overview
 ms.author: surbhigupta
 ---
 
-# Get started with Teams conversational AI
+# Get started with Teams AI library
 
-The Teams conversational AI library simplifies the process of creating and powering bots with AI capabilities. It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
+The Teams AI library library simplifies the process of creating and powering bots with AI capabilities. It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
 
-Teams conversational AI library streamlines the process to build intelligent Microsoft Teams applications by leveraging the AI components provided by the AI library. You can easily integrate conversational AI, prompt management, and safety moderation into your apps and enhancing the user experience and improve communication. It also facilitates the creation of bots that uses an OpenAI API key to provide an AI-driven conversational experience, or the same using Azure Foundry.
+Teams AI library library streamlines the process to build intelligent Microsoft Teams applications by leveraging the AI components provided by the AI library. You can easily integrate Teams AI library, prompt management, and safety moderation into your apps and enhancing the user experience and improve communication. It also facilitates the creation of bots that uses an OpenAI API key to provide an AI-driven conversational experience, or the same using Azure Foundry.
 
-This article focuses on how to integrate Teams conversational AI library into your app and key capabilities.
+This article focuses on how to integrate Teams AI library library into your app and key capabilities.
 
 ## Initial setup
 
-Teams conversational AI library is built on top of the BOT framework and uses its fundamentals to offer an extension to the BOT framework capabilities. As part of initial setup, it's important to import the BOT framework functionalities.
+Teams AI library library is built on top of the BOT framework and uses its fundamentals to offer an extension to the BOT framework capabilities. As part of initial setup, it's important to import the BOT framework functionalities.
 
 > [!NOTE]
 > The adapter class that handles connectivity with the channels is imported from the [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0#the-bot-adapter).
@@ -51,14 +51,14 @@ const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
 });
   ```
 
-### Import Teams conversational AI Library
+### Import Teams AI library Library
 
-Import all the classes from `@microsoft/botbuilder-m365` to build your bot and leverage the Conversational AI capabilities.
+Import all the classes from `@microsoft/botbuilder-m365` to build your bot and leverage the Teams AI library capabilities.
 
 ```typescript
-///// Teams Conversational AI Library /////
+///// Teams AI library Library /////
 
-// import Teams Conversational AI Library
+// import Teams AI library Library
 import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnState, OpenAIModerator, OpenAIPlanner, AI } from '@microsoft/botbuilder-m365';
 import path from "path";
 ```
@@ -247,11 +247,11 @@ app.ai.action(
 
 Next step is to pick the capabilities needed. You need to use the SDK to scaffold bot and adaptive card handlers to the source file.
 
-Teams conversational AI Library supports JavaScript and is designed to simplify the process of building bots that can interact with Microsoft Teams, and facilitates the migration of existing bots. The SDK supports the migration of messaging capabilities, Message Extension (ME) capabilities and Adaptive Cards capabilities to the new format. It's also possible to upgrade existing Teams apps with these features.
+Teams AI library Library supports JavaScript and is designed to simplify the process of building bots that can interact with Microsoft Teams, and facilitates the migration of existing bots. The SDK supports the migration of messaging capabilities, Message Extension (ME) capabilities and Adaptive Cards capabilities to the new format. It's also possible to upgrade existing Teams apps with these features.
 
 Developers creating bots for Microsoft Teams were using the BotBuilder SDK directly. New AI library is designed to facilitate the construction of bots that can interact with Microsoft Teams. While one of the key features of this SDK is the AI support that customers can utilize, the initial objectives of the team may simply be to upgrade their current bot without AI. Once upgraded the bot can simply connect to AI/LLM available in the SDK.
 
-The following app capabilities are supported by Teams conversational AI:
+The following app capabilities are supported by Teams AI library:
 
 * Sending or Receiving Message – Migration supported.  
 
@@ -400,7 +400,7 @@ app.adaptiveCards.actionSubmit("ChoiceSubmit", async (context, state, data: Subm
 
 ### Message-extension query
 
-The Teams Conversational AI library offers bot developers a more intuitive approach to create handlers for various message-extension query commands when compared to previous iterations of Teams Bot Framework SDK. The new SDK works alongside the existing Teams Bot Framework SDK.
+The Teams AI library library offers bot developers a more intuitive approach to create handlers for various message-extension query commands when compared to previous iterations of Teams Bot Framework SDK. The new SDK works alongside the existing Teams Bot Framework SDK.
 
 The following is an example of how a bot developer can structure their code to handle a message-extension query for the `searchCmd` command.
 

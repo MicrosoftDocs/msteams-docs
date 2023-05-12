@@ -1,20 +1,20 @@
 ---
-title: Conversational AI quick start guide
+title: Teams AI library quick start guide
 author: surbhigupta
-description:  In this module, learn how to quickly try the Teams conversational AI library.
+description:  In this module, learn how to quickly try the Teams AI library.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
 ---
 
-# Conversational AI quick start guide
+# Teams AI library quick start guide
 
-Get started with Teams conversational AI library using the ChefBot sample. It's designed to quickly run a Teams conversational AI library based sample on your computer's localhost.
+Get started with Teams AI library using the ChefBot sample. It's designed to quickly run a Teams AI library based sample on your computer's localhost.
 
 ## Set up your development environment
 
-To get started, install:
+To get started, ensure that you have the following tools:
 
 * Microsoft Teams.
 * [Teams Toolkit](../../../toolkit/install-Teams-Toolkit.md)
@@ -73,6 +73,14 @@ To get started, install:
 
    The bot uses the text-davinci-003 model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Build your first bot using Teams AI library](../../../sbs-botbuilder-conversation-AI.yml)
+
+> [!NOTE]
+> If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio code to build a bot.
+
 ## See also
 
-[Teams conversational AI](teams-conversation-ai-overview.md)
+[Teams Teams AI library](teams-conversation-ai-overview.md)

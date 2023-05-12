@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Build your first bot using Teams conversational AI
+title:  
 metadata:
-  title: Chef Bot with Teams Conversational AI
-  description: With this learning module, you learn how to build Chef bot with Teams conversational AI by setting up a new project with Teams Toolkit, build and deploy a bot app.
+  title: Chef Bot with Teams AI library
+  description: With this learning module, you learn how to build Chef bot with Teams AI library by setting up a new project with Teams Toolkit, build and deploy a bot app.
   audience: Developer
   level: Beginner
   ms.date: 10/21/2021
@@ -14,19 +14,14 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Start Microsoft Teams app development with your first Teams conversational AI app. 
-    You can create a bot app with Teams. 
-
-    Your app will have a capability, which comes with its own UI and UX:
+    Start Microsoft Teams app development with your first Teams AI library app. 
+    You can create a bot app with Teams. Your app will have a capability, which comes with its own UI and UX.
     
-    > [!NOTE]
-    > If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio code to build a bot, see sbs-gs-bot.yml. 
-
     In this tutorial, you learn:
 
     - How to set up a new project with Teams Toolkit.
-    - How to build a bot app.
-    - How to deploy your app.
+    - How to build a bot using Teams AI library.
+    - How to deploy your bot in Teams and start a conversation.
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -42,13 +37,7 @@ items:
    |[Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
    |[Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-   |[OpenAI](https://openai.com/api/) key ||
-   |Global Administrator access to a [Microsoft 365 tenant](https://developer.microsoft.com/microsoft-365/dev-program?ocid=MSlearn&WT.mc_id=m365-16105-cxa) and [Enable custom Teams apps and turn on custom app uploading](/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading)|
-   
-
-
-   > [!NOTE]
-   > If you work with Microsoft Graph data, you should learn about and bookmark the Microsoft Graph Explorer. This browser-based tool allows you to query Microsoft Graph outside of an app.
+   |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) or [Azure Open AI ](https://azure.microsoft.com/free/)|First create your OpenAI API key to use OpenAI's GPT. If you wish to host your app or access resources in Azure, you must have an  before you begin.|
 
 
    ## Prepare development environment
@@ -141,11 +130,7 @@ items:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft":::
 
-   1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
-
-   ## Get a free Azure account
-
-   If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
+   1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.  
 
    Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building! Select the app you want to do first.
 
@@ -174,7 +159,7 @@ items:
     If the prerequisites are in place, let's begin!
 
     > [!NOTE]
-    > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Teams Toolkit version, and environment.
+    > The Visual Studio Code UI shown is from Windows. It may differ depending on your operating system, Teams Toolkit version, and environment.
 
     # [Visual Studio Code](#tab/vscode)
 
@@ -185,15 +170,13 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
 
-    1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app1.png" alt-text="Wizard start for Create New Project":::
-
     1. Ensure that **Bot** is selected as the capability that you want to build in your app.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-bot.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
 
-    1. Select **JavaScript** as the programming language.
+    1. Select **Basic Bot**.
+   
+    1. Select **TypeScript** as the programming language.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot showing how to select the programming language.":::
 
@@ -228,7 +211,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project.png" alt-text="Location message":::
         
-        Select **Local debug** to preview your project.
+        Select **F5** to debug and preview your project.
         
     <details>
     <summary>A quick recap of creating a Teams app.</summary>
@@ -263,7 +246,7 @@ items:
 
     After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/folder-structure-bot-app.png" alt-text="Folder Structure.":::
+    :::image type="content" source="../msteams-platform/assets/images/bots/Teams-AI-library-ttk-files.png" alt-text="Screenshot shows the Teams Toolkit sample bot folder Structure.":::
 
     | Folder name | Contents |
     | --- | --- |
@@ -278,7 +261,7 @@ items:
     | `infra/azure.parameters.json` | Parameters file for Azure BICEP provision for every environment. |
 
     > [!Tip]
-    > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.
+    > Familiarize yourself with bots outside Teams before you integrate your first bot within Teams.
 
 - title: Build and run your first bot app
   durationInMinutes: 1
@@ -340,87 +323,115 @@ items:
 
     1. Go to Visual Studio Code and open a terminal window.
     
-    1. Run the following command in the terminal to add the latest version of the Teams conversational AI library to your application using npm:
+    1. Run the following command in the terminal to add the latest version of the Teams AI library library to your application using npm:
 
        ```bash
        npm install @microsoft/botbuilder-m365
+
        ```
 
-    1. Go to the `index.ts` file and add the following code to import Teams conversational AI library:
+    1. Go to the **env** folder and update the Open AI key in the `.env.local.user`file.
 
-        ```typescript
-        import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnState, OpenAIModerator, OpenAIPlanner, AI } from '@microsoft/botbuilder-m365';
-        import path from "path";
-        ```
-        
-        You need to import all the classes to build your bot and leverage the Conversational AI capabilities.
+       ```
+        SECRET_BOT_PASSWORD=
+        SECRET_OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+       ```
 
-    1. In the `index.ts` file, add the following code to create planner, moderator, and promptManager:
+    1. Go to the `config.ts` file and add the following code:
+    
+       ```typescript
+       openAIKey: process.env.SECRET_OPENAI_API_KEY
+       ```
 
-        ```typescript
-        // Create AI components
-        const planner = new OpenAIPlanner({
-            apiKey: process.env.OPENAI_API_KEY,
+       When you debug the app, the Open AI key defined here process the Open AI key from the `.env.local.user` during local debug.
+
+    1. Go to the `teamsapp.local.yml`file and add the following code after `BOT_ID` and `BOT_PASSWORD`:
+
+       ```teamsapp.local.yml
+       SECRET_OPENAI_API_KEY: ${{SECRET_OPENAI_API_KEY}}
+       ```
+
+       When you run the app locally, the Open AI key defined here is used in the local settings.
+
+    1. Go to the `index.ts` file, and add the following code:
+
+        1. Add the following code to import Teams AI library library:
+
+            ```typescript
+            import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnState, OpenAIModerator, OpenAIPlanner, AI } from '@microsoft/botbuilder-m365';
+            import path from "path";
+            ```
+            
+            You need to import all the classes to build your bot and leverage the Conversational AI capabilities.
+
+        1. Add the following code to create planner, moderator, and promptManager:
+
+            ```typescript
+            // Create AI components
+            const planner = new OpenAIPlanner({
+            apiKey: config.openAIKey,
             defaultModel: 'text-davinci-003',
             logRequests: true
-        });
-        const moderator = new OpenAIModerator({
-            apiKey: process.env.OPENAI_API_KEY,
+            });
+            const moderator = new OpenAIModerator({
+            apiKey: config.openAIKey,
             moderate: 'both'
-        });
-        const promptManager = new DefaultPromptManager(path.join(__dirname, './prompts' ));
-        ````
-        * Planner: `planner` is  component that calls either OpenAI.
-        * PromptManager: `promptManager` manages prompt creation.
-        * Moderator: `moderator` adds safety moderation to the bots input and output.
+            });
+            const promptManager = new DefaultPromptManager(path.join(__dirname, './prompts' ));
+            ````
+            * Planner: `planner` is  component that calls either OpenAI.
+            * PromptManager: `promptManager` manages prompt creation.
+            * Moderator: `moderator` adds safety moderation to the bots input and output.
 
-    1. In the `index.ts` file, add the following code to define storage and application:
+        1. Add the following code to define storage and application:
 
-        ```typescript
-        // Define storage and application
-        const storage = new MemoryStorage();
-        const app = new Application<ApplicationTurnState>({
-            storage,
-            ai: {
-                planner,
-                moderator,
-                promptManager,
-                prompt: 'chat',
-                history: {
-                    assistantHistoryType: 'text'
+            ```typescript
+            // Define storage and application
+            const storage = new MemoryStorage();
+            const app = new Application<ApplicationTurnState>({
+                storage,
+                ai: {
+                    planner,
+                    moderator,
+                    promptManager,
+                    prompt: 'chat',
+                    history: {
+                        assistantHistoryType: 'text'
+                    }
                 }
-            }
-        });
-        ```
+            });
+            ```
 
-        * The `storage` class is used to store conversation and user state; all BotFramework storage providers supported.
-        * The `Application` class replaces the Teams Activity Handler class from Bot Framework SDK. The `ai` object is passed into the Application, which receives the AI components.
+            * The `storage` class is used to store conversation and user state; all BotFramework storage providers supported.
+            * The `Application` class replaces the Teams Activity Handler class from Bot Framework SDK. The `ai` object is passed into the Application, which receives the AI components.
 
-    1.  In the `index.ts` file, add the following code to define actions:
+            1. Under **Import required bot service**, add `MemoryStorage`.
 
-        ```typescript
-        app.ai.action(AI.FlaggedInputActionName, async (context, state, data) => {
-            await context.sendActivity(`I'm sorry your message was flagged: ${JSON.stringify(data)}`);
-            return false;
-        });
+        1.  Add the following code to define actions:
 
-        app.ai.action(AI.FlaggedOutputActionName, async (context, state, data) => {
-            await context.sendActivity(`I'm not allowed to talk about such things.`);
-            return false;
-        });
-        ```
-        The `FlaggedInputActionName` and `FlaggedOutputActionName` handlers are built-in action handlers to handle moderator flags. If the moderator flags an incoming message input, the moderator redirects to the `FlaggedInputAction` handler and `context.sendActivity` sends a message to the user about the flag.
+            ```typescript
+            app.ai.action(AI.FlaggedInputActionName, async (context, state, data) => {
+                await context.sendActivity(`I'm sorry your message was flagged: ${JSON.stringify(data)}`);
+                return false;
+            });
 
-    1. In the `index.ts` file, add the following code to define history:
+            app.ai.action(AI.FlaggedOutputActionName, async (context, state, data) => {
+                await context.sendActivity(`I'm not allowed to talk about such things.`);
+                return false;
+            });
+            ```
+            The `FlaggedInputActionName` and `FlaggedOutputActionName` handlers are built-in action handlers to handle moderator flags. If the moderator flags an incoming message input, the moderator redirects to the `FlaggedInputAction` handler and `context.sendActivity` sends a message to the user about the flag.
 
-        ```typescript
-        app.message('/history', async (context, state) => {
-        const history = ConversationHistory.toString(state, 2000, '\n\n');
-        await context.sendActivity(history);
-        });
-        ``` 
+        1. Add the following code to define history:
 
-    1. In the `index.ts` file, update `await bot.run(context);` to `await app.run(context);`.
+            ```typescript
+            app.message('/history', async (context, state) => {
+            const history = ConversationHistory.toString(state, 2000, '\n\n');
+            await context.sendActivity(history);
+            });
+            ``` 
+
+        1. Update `await bot.run(context);` to `await app.run(context);`.
    
     1. In the root folder, create a new folder **prompts/chat**.
 
@@ -449,7 +460,7 @@ items:
         }
         ```
 
-        The `config.js` file contains parameters like temperature, max tokens, type, and so on, which you pass into Open AI.
+        The `config.js` file contains parameters like temperature, max tokens, type, and so on, which you pass into Open AI or Azure Open AI.
 
     1. Go to the 'prompt.txt' file and add the following instructions for GPT on how the bot should conduct itself and facilitate conversation:
 
@@ -483,34 +494,6 @@ items:
         AI: Great question! You can build a variety of apps for Microsoft Teams, including bots, messaging extensions, tabs, and connectors. Bots are like the main course of your app - they provide the core functionality. Messaging extensions are like side dishes - they add extra features to your app. Tabs are like garnishes - they provide additional information or visuals. And connectors are like spices - they allow you to integrate with other services.
         ```
         Notice that the bot remembered Dave's first message when responding to the second.
-
-    1. Go to the **env** folder and update the Open AI key in the `.env.local.user`file.
-
-       ```
-        SECRET_BOT_PASSWORD=
-        SECRET_OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-       ```
-
-    1. Go to the `config.ts` file and add the following code:
-    
-       ```typescript
-       openAIKey: process.env.SECRET_OPENAI_API_KEY
-       ```
-
-       When you debug the app, the Open AI key defined here process the Open AI key from the `.env.local.user` during local debug.
-
-    1. Go to the `teamsapp.local.yml`file and add the following code after `BOT_ID` and `BOT_PASSWORD`:
-
-       ```teamsapp.local.yml
-       SECRET_OPENAI_API_KEY: ${{SECRET_OPENAI_API_KEY}}
-       ```
-
-       When you run the app locally, the Open AI key defined here is used in the local settings.
-
-    1. Go to the `index.ts` file and update the following:
-    
-       * Under **Create AI components**, replace `process.env.` with `config.`.
-       * Under **Import required bot service**, add `MemoryStorage`.
          
     This sample leverages GPT for all its natural language modelling, the user can talk to an AI bot in any language of their choosing. The bot understands and responds appropriately without extra code.
 
@@ -710,7 +693,7 @@ items:
 
     You've done it!
 
-    You've created a Teams conversational AI bot.
+    You've created a Teams AI library bot.
 
 
     
