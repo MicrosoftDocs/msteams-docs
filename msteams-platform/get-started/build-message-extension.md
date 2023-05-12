@@ -75,7 +75,4 @@ If you would like to learn how to start a project with Teams Toolkit from scratc
 Unlike codespaces, where everything you need is packaged for you already, you'll need to set you your development environment. Let's start with [Prerequisites](../toolkit/tools-prerequisites.md) section first before start building.
 
 > [!div class="nextstepaction"]
-> [Build search based message extension](../sbs-messagingextension-searchcommand.yml)
-
-> [!div class="nextstepaction"]
-> [Build action based message extension](../sbs-meetingextension-action.yml)
+> [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml)
