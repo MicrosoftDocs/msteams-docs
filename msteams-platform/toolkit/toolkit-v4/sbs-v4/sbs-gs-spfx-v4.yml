@@ -435,7 +435,7 @@ items:
 
     1. Select **Publish** to publish your app in Teams.
 
-       :::image type="content" source="msteams-platform/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/publish-app-v4.png" alt-text="Screenshot for the publish.":::
+       :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/publish-app-v4.png" alt-text="Screenshot for the publish.":::
 
     1. Open the Teams application (or sign in at `https://teams.microsoft.com`).
 
@@ -493,7 +493,7 @@ items:
 
     1. Select the **FILES** tab.
 
-        :::image type="content" source="msteams-platform/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/sp-files-tab-v4.png" alt-text="Select the files tab in the SharePoint App Catalog.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/sp-files-tab-v4.png" alt-text="Select the files tab in the SharePoint App Catalog.":::
 
     1. Select the package you deployed, then select **Sync to Teams**.
 
