@@ -58,7 +58,7 @@ Alternately, you can use the ready-made Outlook-enabled app in the following sec
 
 ### Quickstart
 
-To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/NPM-search-connector-M365) that's already enabled to run in Outlook, use Teams Toolkit extension for Visual Studio Code.
+To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/NPM-search-connector-M365) that's already enabled to run in Outlook, use Teams Toolkit extension for Visual Studio Code.
 
 1. From Visual Studio Code, open the command palette (`Ctrl+Shift+P`), type `Teams: Create a New App`.
 1. Select the **Teams: Create a New App** option.

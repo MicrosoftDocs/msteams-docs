@@ -39,7 +39,7 @@ To complete this tutorial, you need:
 
 If you have an existing personal tab app, make a copy or a branch of your production project for testing and update your App ID in the app manifest to use a new identifier (distinct from the production App ID, for testing).
 
-If you'd like to use sample code instead of your own production code, you can use the Todo List sample. You can either follow the setup steps in the [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) GitHub repository or use the Teams Toolkit extension to create a new Teams app (select *Start from a sample > Todo List with backend on Azure*). After you've created a personal tab, return to this article to extend it across Microsoft 365.
+If you'd like to use sample code instead of your own production code, you can use the Todo List sample. You can either follow the setup steps in the [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/todo-list-with-Azure-backend) GitHub repository or use the Teams Toolkit extension to create a new Teams app (select *Start from a sample > Todo List with backend on Azure*). After you've created a personal tab, return to this article to extend it across Microsoft 365.
 
 Alternately, you can use a basic single sign-on *hello world* app that's already Microsoft 365 app enabled, as shown in the following [Quickstart](#quickstart) section, and then skip to [sideload your app in Teams](#sideload-your-app-in-teams).
 
