@@ -431,11 +431,11 @@ items:
 
     1. Select **Manage Apps** and search your app in the search section to select your app.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/manage-apps.png"alt-text="Screenshot for the Manage apps.":::
+       :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/manage-apps-v4.png"alt-text="Screenshot for the Manage apps.":::
 
     1. Select **Publish** to publish your app in Teams.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/publish-app.png"alt-text="Screenshot for the publish.":::
+       :::image type="content" source="msteams-platform/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/publish-app-v4.png" alt-text="Screenshot for the publish.":::
 
     1. Open the Teams application (or sign in at `https://teams.microsoft.com`).
 
@@ -443,15 +443,15 @@ items:
 
         The app displays in the **Apps built for your org** category. You can add the app from there.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot showing the app built in your org.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/spfx-app-in-teams-v4.png" alt-text="Screenshot showing the app built in your org.":::
 
     1. Select your app, and then select **Add**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-add-app.png" alt-text="Screenshot of app to be added in Teams.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/sp-add-app-v4.png" alt-text="Screenshot of app to be added in Teams.":::
 
         Congratulations! Your app is now added to Teams.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of completed app to be added in Ms. Teams.":::"
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/sp-app-added-v4.png" alt-text="Screenshot of completed app to be added in Ms. Teams.":::"
 
     ### Select the link of the SharePoint site
 
@@ -487,17 +487,17 @@ items:
 
     1. Select **Distribute apps for SharePoint**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-distribute-apps.png" alt-text="Distribute apps for SharePoint.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/spfx-distribute-apps-v4.png" alt-text="Distribute apps for SharePoint.":::
 
         The Apps for SharePoint home page opens. Your app is listed in this page.
 
     1. Select the **FILES** tab.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-files-tab.png" alt-text="Select the files tab in the SharePoint App Catalog.":::
+        :::image type="content" source="msteams-platform/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/sp-files-tab-v4.png" alt-text="Select the files tab in the SharePoint App Catalog.":::
 
     1. Select the package you deployed, then select **Sync to Teams**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-sync-to-teams.png" alt-text="Select the files tab in the SharePoint App Catalog.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/sp-sync-to-teams-v4.png" alt-text="Select the files tab in the SharePoint App Catalog.":::
 
         > [!Note]
         > The Sync to Teams process can take a few minutes. You will see a message in the browser indicating that the app has been successfully synchronized to Teams.
@@ -507,12 +507,12 @@ items:
 
         The app will be placed in the **Apps built for your org** category. You can add the app from there.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot showing the app within Teams":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/spfx-app-in-teams-v4.png" alt-text="Screenshot showing the app within Teams":::
 
     1. Select your app, and then select **Add**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-add-app.png" alt-text="Screenshot of completed app to be added in Teams.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/sp-add-app-v4.png" alt-text="Screenshot of completed app to be added in Teams.":::
 
         Congratulations! Your app is now added to Teams.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of completed app to be added in Teams.":::"
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/sp-app-added-v4.png" alt-text="Screenshot of completed app to be added in Teams.":::"
