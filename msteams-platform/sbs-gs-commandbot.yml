@@ -151,7 +151,7 @@ items:
 
     1. Select **Bot** to create a new bot project.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/create-new-app_v5.png" alt-text="Screenshot shows the wizard to Create New Project.":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/create-new-app_v5.png" alt-text="Screenshot shows the wizard to Create New Project.":::
 
     1. Ensure that **Chat Command** is selected as the app feature that you want to build in your app.
 
@@ -205,7 +205,7 @@ items:
     
     1. Select **Enter**.
 
-         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/hello-world-command_v54.png" alt-text="Screenshot shows to add an App dropdown":::  
+         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/hello-world-command_v5.png" alt-text="Screenshot shows to add an App dropdown":::  
 
        You receive the following command response in adaptive card:
 
