@@ -1,7 +1,7 @@
 ---
 title: Deploy to the cloud
 author: MuyangAmigo
-description: Learn how to deploy app to the cloud, Azure, or SharePoint using Teams Toolkit in Visual Studio Code and Visual Studio.
+description: Learn how to deploy app to the cloud, Azure, or SharePoint using Teams Toolkit in Visual Studio Code.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -147,7 +147,7 @@ This action executes dotnet commands under specified directory with parameters.
 
 | Parameter | description | required | default value |
 |-------------|----------|---------------|---------------|
-|workingDirectory | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory. |No | Project root |
+|workingDirectory | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the project root. |No | Project root |
 |artifactFolder | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory.| Yes | |
 |ignoreFile | Specifies the file path of the ignore file used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
 | resourceId | Indicates the resource ID of an Azure App Service. It's generated automatically after running the provision command. If you already have an Azure App Service, you can find its resource ID in the Azure portal (see [this link](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/) for more information). | Yes | |
@@ -175,7 +175,7 @@ This action uploads and deploy the project to Azure Functions using the [zip dep
 
 | Parameter | description | required | default value |
 |-------------|----------|---------------|---------------|
-|workingDirectory | represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory. |No | Project root |
+|workingDirectory | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the project root. |No | Project root |
 |artifactFolder | represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory.| Yes | |
 |ignoreFile | specifies the file path of the ignore file used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
 | resourceId | Indicates the resource ID of an Azure Functions. It's generated automatically after running the provision command. If you already have an Azure Functions, you can find its resource ID in the Azure portal (see [this link](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/) for more information).| Yes | |
@@ -201,7 +201,7 @@ This action uploads and deploy the project to Azure Storage.
 
 | Parameter | description | required | default value |
 |-------------|----------|---------------|---------------|
-|workingDirectory | represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory. |No | Project root |
+|workingDirectory | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the project root. |No | Project root |
 |artifactFolder | represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory.| Yes | |
 |ignoreFile | specifies the file path of the ignore file used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
 | resourceId | Indicates the resource ID of an Azure Functions. It's generated automatically after running the provision command. If you already have an Azure Functions, you can find its resource ID in the Azure portal (see [this link](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/) for more information).| Yes | |
