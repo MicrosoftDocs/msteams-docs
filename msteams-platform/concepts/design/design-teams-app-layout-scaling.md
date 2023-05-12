@@ -56,7 +56,7 @@ The minimum size for desktop is 550 pixels.
    :::column span="":::
 :::image type="content" source="../..\assets\images\design-guidelines\word-wrap-zoom-do.png" alt-text="Example shows a word wrap so that the text is legible at all zoom levels.":::
 
-#### Do Use word wrap so that text is legible at all zoom levels
+#### Do: Use word wrap so that text is legible at all zoom levels
 
 Avoid text overlap and truncation.
 
@@ -94,7 +94,7 @@ Without word wrapping, the text and CTAs are not usable.
    :::column span="":::
 :::image type="content" source="../..\assets\images\design-guidelines\legible-scale-do.png" alt-text="Example shows a responsive design to avoid overlap at zoom level.":::
 
-#### Do: Do: Make sure your app is legible at 200% scale
+#### Do: Make sure your app is legible at 200% scale
 
 Use responsive design to avoid text overlap and truncation.
 

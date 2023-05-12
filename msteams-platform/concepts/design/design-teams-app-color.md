@@ -47,17 +47,17 @@ Each Teams theme has its own color scheme. To handle theme changes automatically
 
 Learn how to [use color tokens in your Teams app project](https://fluentsite.z22.web.core.windows.net/colors).
 
-##### Example design with tokens
+##### Example for design with tokens
 
 :::image type="content" source="../..\assets\images\design-guidelines\colors-design-token-example.png" alt-text="Example shows the light theme color tokens. ":::
 
 |Counter|Description|
 |----------|-----------|
-|A|Background 2: Canvas background color|
-|B|Default Foreground: Primary text color|
-|C|Foreground 1: Secondary text color|
-|D|Brand Background: Primary button background color|
-|E|Brand Foreground: Link text color|
+|A|**Background 2**: Canvas background color|
+|B|**Default Foreground**: Primary text color|
+|C|**Foreground 1**: Secondary text color|
+|D|**Brand Background**: Primary button background color|
+|E|**Brand Foreground**: Link text color|
 
 ### Integrate your app’s color palette with Teams
 

@@ -105,7 +105,7 @@ Here is an example of a logo inside of the PNG format icon that is not within th
 
 #### Do: Provide full bleed, we will add the rounded corners
 
-If you have a full bleed image, just upload a square PNG format at 192x192. We will round the corners for you dynamically.
+If you have a full bleed image, just upload a square PNG format at 192 x 192. We will round the corners for you dynamically.
 
    :::column-end:::
    :::column span="":::
@@ -113,7 +113,7 @@ If you have a full bleed image, just upload a square PNG format at 192x192. We w
 
 #### Don’t: Round the corners of your icon
 
-Don’t round the corners. Just submit at perfect square at 192x192. We will round the corners for you dynamically.
+Don’t round the corners. Just submit at perfect square at 192 x 192. We will round the corners for you dynamically.
 
    :::column-end:::
 :::row-end:::
