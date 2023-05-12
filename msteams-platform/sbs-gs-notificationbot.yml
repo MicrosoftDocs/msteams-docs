@@ -42,7 +42,7 @@ items:
    | &nbsp; | [Microsoft 365](https://developer.microsoft.com/en-us/microsoft-365/dev-program) | Access to Teams account with the appropriate permissions to install an app. |
    
    > [!NOTE]
-   > The guide is tested on Teams Toolkit version 4.0.0 and Nodejs version 14 and 16. The steps in this guide may work with other versions, but that hasn't been tested.
+   > The guide is tested on Teams Toolkit version 5.0.0 and Nodejs version 14 and 16. The steps in this guide may work with other versions, but that hasn't been tested.
    
    ## Prepare development environment
 
@@ -60,7 +60,7 @@ items:
    1. In the search box, enter **Teams toolkit**.
    1. Select **Install** next to the Teams Toolkit.
 
-    :::image type="content" source="~/assets/images/sbs-notification-bot/teams-toolkit_v5.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
+    :::image type="content" source="~/assets/images/sbs-notification-bot/teams-toolkit.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
 
     The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
 
@@ -69,7 +69,7 @@ items:
    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
     > [!NOTE]
-    > The latest version of Teams Toolkit is 4.2.0.
+    > The latest version of Teams Toolkit is 5.0.0.
 
    # [Command line](#tab/cli)
 
@@ -147,16 +147,15 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/create-new-teams-app.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
 
-    1. Select **Create a new Teams app** option to create an app using Teams Toolkit.
+    1. Select **Bot** to create a new bot project.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/create-new-app.png" alt-text="Wizard starts for creating a new project":::
 
-    1. Ensure that **Notification Bot** is selected as the capability that you want to build in your app. 
+    1. Ensure that **Chat Notification Message** is selected as the App feature that you want to build in your app. 
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-notification-bot.png" alt-text="Select App Capability":::
 
     1. Select **HTTP Trigger Restify Server** as the trigger. 
-    1. Select **OK**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-trigger.png" alt-text="Screenshot showing how to select the programming language.":::  
 
@@ -248,7 +247,7 @@ items:
   content: |
     **To send notification to Teams channel**
     
-    1. In Visual Studio Code, under **EXPLORER**, select **MYNOTIFICATIONBOT> bot> src> index.js**.
+    1. In Visual Studio Code, under **EXPLORER**, select **MYNOTIFICATIONBOT> src> index.js**.
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/file-path.png" alt-text="File path":::
 
@@ -271,7 +270,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-notification-bot/code-add.png" alt-text="Code Add":::
 
-        **To customize storage:**
+        **To customize storage (Optional):**
 
         1. In Visual Studio Code, under **EXPLORER**, select **MYNOTIFICATIONBOT> bot> src> internal> initialize.js**.
 
@@ -384,7 +383,7 @@ items:
 
     1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
-    1. Select **Provision in the Cloud** under **DEPLOYMENT**.
+    1. Select **Provision** under **LIFECYCLE**.
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/provision-cloud.png" alt-text="Screenshot showing the provisioning commands":::
 
@@ -411,7 +410,7 @@ items:
 
          You see the option to view the provisioned resources. For this tutorial, you don't need to view resources.
 
-    1. Select **Deploy to the Cloud** under **DEPLOYMENT** after provisioning is complete.
+    1. Select **Deploy** under **LIFECYCLE** after provisioning is complete.
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-cloud.png" alt-text="Screenshot showing where to select to deploy to cloud.":::
 
