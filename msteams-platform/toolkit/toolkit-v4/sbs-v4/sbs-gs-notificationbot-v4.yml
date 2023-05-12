@@ -250,11 +250,11 @@ items:
     
     1. In Visual Studio Code, under **EXPLORER**, select **MYNOTIFICATIONBOT> bot> src> index.js**.
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/file-path.png" alt-text="File path":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/file-path-v4.png" alt-text="File path":::
 
        You can see the following page:
 
-         :::image type="content" ~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/default-program-v4.png" alt-text="Default Program":::
+         :::image type="content" source"~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/default-program-v4.png" alt-text="Default Program":::
 
     1. Use the following code after `for (const target of await bot.notification.installations()) { ` in Visual Studio Code.
 
@@ -279,7 +279,7 @@ items:
         
            You can see the following page:
 
-            :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/storage-code.png" alt-text="Storage Code":::
+            :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/storage-code-v4.png" alt-text="Storage Code":::
 
         1. Update the following code in **initialize.js** file to customize the storage.
 
@@ -392,11 +392,11 @@ items:
 
     1. Select anyone of the existing subscription.
 
-        :::image type="content" source="toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/select-subscription-v4.png" alt-text="Screenshot showing the selection of existing subscription.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/select-subscription-v4.png" alt-text="Screenshot showing the selection of existing subscription.":::
 
     1. Select an existing or create new resource group.
     
-        :::image type="content"~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/subscription-cloud-v4.png" alt-text="Screenshot showing resources for provisioning.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/subscription-cloud-v4.png" alt-text="Screenshot showing resources for provisioning.":::
 
        > [!NOTE]
        > A dialog appears mentioning that costs may be incurred when running resources in Azure.
@@ -458,7 +458,7 @@ items:
   content: |
     Did you come up with something like this?
 
-     :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/trigger-output.png" alt-text="Trigger Output"border="true":::
+     :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/trigger-output-v4.png" alt-text="Trigger Output"border="true":::
 
 - content: |
    You've completed the tutorial to build a notification bot. You can extend your notification bot to add the command response and workflow features.
