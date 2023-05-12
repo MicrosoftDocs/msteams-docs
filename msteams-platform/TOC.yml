@@ -451,30 +451,19 @@
     - name: Meeting apps APIs
       href: apps-in-teams-meetings/meeting-apps-apis.md
       displayName: payload, recurring, getparticipant, captions, targeted meeting notification
-  - name: Get meeting transcripts using Graph APIs
+  - name: Get meeting transcripts and recordings using Graph APIs
     items:
     - name: Overview
       href: graph-api/meeting-transcripts/overview-transcripts.md
-      displayName: get meeting transcripts, teams meeting transcript
+      displayName: get meeting transcripts, teams meeting transcript, get meeting recordings, teams meeting recording
     - name: Fetch meeting ID and organizer ID
       href: graph-api/meeting-transcripts/fetch-id.md
       displayName: Obtain meeting details using user-level notification, tenant-level notification
-    - name: Get notified when transcript is available
+    - name: Get notified when transcripts and recordings is available
       href: /graph/teams-change-notification-in-microsoft-teams-overview
-      displayName: Get notified, transcript
+      displayName: Get notified, transcript, recording
     - name: Get transcripts
       href: /graph/api/resources/calltranscript
-  - name: Get meeting recordings using Graph APIs
-    items:
-    - name: Overview
-      href: graph-api/meeting-recordings/overview-recordings.md
-      displayName: get meeting recordings, teams meeting recording
-    - name: Fetch meeting ID and organizer ID
-      href: graph-api/meeting-transcripts/fetch-id.md
-      displayName: Obtain meeting details using user-level notification, tenant-level notification
-    - name: Get notified when recording is available
-      href: /graph/teams-change-notification-in-microsoft-teams-overview
-      displayName: Get notified, recording
     - name: Get recordings
       href: /graph/api/resources/calltranscript
   - name: Enhanced collaboration with Live Share
