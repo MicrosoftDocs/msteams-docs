@@ -1,14 +1,14 @@
 ---
-title: Use Microsoft Graph to fetch transcripts for a Teams meeting
-description: Describes the process, scenarios, and APIs to fetch transcripts in the post-meeting scenario.
+title: Use Microsoft Graph to fetch transcripts and recordings for a Teams meeting
+description: In this module, learn the process, scenarios, and APIs to fetch transcripts and recordings in the post-meeting scenario.
 ms.localizationpriority: high
 ms.topic: conceptual
 ---
-# Get meeting transcripts using Graph APIs
+# Get meeting transcripts and recordings using Graph APIs
 
-You can now configure your app to fetch Microsoft Teams meeting transcripts in the post-meeting scenario. Your app can use Microsoft Graph REST APIs to access and fetch transcripts generated for a Teams meeting that has been scheduled beforehand.
+You can now configure your app to fetch Microsoft Teams meeting transcripts and recordings in the post-meeting scenario. Your app can use Microsoft Graph REST APIs to access and fetch transcripts and recordings generated for a Teams meeting that has been scheduled beforehand.
 
-Here are some use cases for fetching meeting transcripts using Graph API:
+Here are some use cases for fetching meeting transcripts and recordings using Graph API:
 
 | Use case | How Transcript APIs help... |
 | --- | --- |
@@ -26,17 +26,17 @@ To fetch the transcript for a particular meeting:
 
 ## Configure permissions on Azure AD to access transcript
 
-Your app must have the required permissions for fetching transcripts. It can access and fetch transcripts for a Teams meeting using organization-wide application permissions or resource-specific consent (RSC) application permissions for a particular meeting.
+Your app must have the required permissions for fetching transcripts and recordings. It can access and fetch transcripts and recordings for a Teams meeting using organization-wide application permissions or resource-specific consent (RSC) application permissions for a particular meeting.
 
 ### Use organization-wide application permissions
 
-You can configure your app to access meeting transcripts across the tenant. In this case, the meeting organizer doesn't need to install your app in the Teams meeting chat. When the tenant administrator authorizes the organization-wide application permissions, your app can read and access transcripts for all meetings in the tenant.
+You can configure your app to access meeting transcripts and recordings across the tenant. In this case, the meeting organizer doesn't need to install your app in the Teams meeting chat. When the tenant administrator authorizes the organization-wide application permissions, your app can read and access transcripts and recordings for all meetings in the tenant.
 
 For more information about the organization-wide application permissions that can be granted to your app, see [online meeting permissions](/graph/permissions-reference#online-meetings-permissions).
 
 ### Use meeting-specific RSC application permissions
 
-If you want your app to fetch transcripts only for the Teams meeting where it's installed, configure  meeting-specific RSC permission for your app. Authorized users can install your app in the meeting chat. After the meeting ends, your app can make the API call to obtain the transcript for that meeting.
+If you want your app to fetch transcripts and recordings only for the Teams meeting where it's installed, configure  meeting-specific RSC permission for your app. Authorized users can install your app in the meeting chat. After the meeting ends, your app can make the API call to obtain the transcript for that meeting.
 
 For more information about the meeting-specific RSC permissions, see [RSC permissions for a chat or meeting](../rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting).
 
@@ -48,7 +48,7 @@ After you've configured the permissions, configure your app to receive change no
 For more information about how your app can know when the meetings ends, see [subscribe to change notifications](fetch-id.md#subscribe-to-change-notifications) and [use Bot Framework to get meeting ID and organizer ID](fetch-id.md#use-bot-framework-to-get-meeting-id-and-organizer-id).
 
 > [!NOTE]
-> The process for calling Graph APIs to access and retrieve transcripts remains the same for both meeting-specific RSC application permissions or organization-wide application permissions. These APIs currently support only scheduled meetings.
+> The process for calling Graph APIs to access and retrieve transcripts and recordings remains the same for both meeting-specific RSC application permissions or organization-wide application permissions. These APIs currently support only scheduled meetings.
 
 ## Next step
 
