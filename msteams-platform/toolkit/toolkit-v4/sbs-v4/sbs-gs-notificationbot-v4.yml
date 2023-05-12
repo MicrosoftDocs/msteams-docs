@@ -7,8 +7,8 @@ metadata:
   level: Beginner
   ms.date: 05/04/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: bots/how-to/conversations/command-bot-in-teams.md
-  nextTutorialTitle: Command bot in Teams
+  nextTutorialHref: ~/toolkit/toolkit-v4/teams-toolkit-tutorial-v4.md
+  nextTutorialTitle: Back to Teams app tutorials
   ms.custom: mvc
   ms.localizationpriority: high
 items:
