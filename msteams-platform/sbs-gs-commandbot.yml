@@ -23,7 +23,7 @@ items:
     
     This step-by-step guide helps you to build command bot with Teams Toolkit. You can see the following output:
 
-      :::image type="content" source="~/assets/images/sbs-command-bot/final-output_v5.png" alt-text="Screenshot shows the final output.":::
+      :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="Screenshot shows the final output.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -62,7 +62,7 @@ items:
    1. In the search box, enter **Teams toolkit**.
    1. Select **Install** next to the Teams Toolkit.
 
-       :::image type="content" source="~/assets/images/sbs-command-bot/teams-toolkit_v5.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
+       :::image type="content" source="~/assets/images/sbs-command-bot/teams-toolkit.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
 
     The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
 
@@ -147,15 +147,15 @@ items:
 
     1. Select **Create a new app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/create-new-teams-app_v5.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/create-new-teams-app.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
 
     1. Select **Bot** to create a new bot project.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/create-new-app_v5.png" alt-text="Screenshot shows the wizard to Create New Project.":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/create-new-app.png" alt-text="Screenshot shows the wizard to Create New Project.":::
 
     1. Ensure that **Chat Command** is selected as the app feature that you want to build in your app.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-bot_v5.png" alt-text="Screenshot shows the app feature to add to your new app.":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
 
     1. Select **JavaScript** as the programming language.
 
@@ -187,7 +187,7 @@ items:
 
         The command bot app is created in a few seconds.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/command-bot_v5.png" alt-text="Screenshot shows the app created.":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/command-bot.png" alt-text="Screenshot shows the app created.":::
 
     1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
 
@@ -199,17 +199,17 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/add-app_v5.png" alt-text="Screenshot shows to add an app.":::     
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/add-app.png" alt-text="Screenshot shows to add an app.":::     
 
     1. Select the command bot.
     
     1. Select **Enter**.
 
-         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/hello-world-command_v5.png" alt-text="Screenshot shows to add an App dropdown":::  
+         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/hello-world-command.png" alt-text="Screenshot shows to add an App dropdown":::  
 
        You receive the following command response in adaptive card:
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/final-output_v5.png" alt-text="Screenshot shows the final output.":::      
+        :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="Screenshot shows the final output.":::      
 
     ## Take tour of source code
 
@@ -267,7 +267,7 @@ items:
 
     1. Select **Provision** under **LIFECYCLE**.
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/provision-cloud_v5.png" alt-text="Screenshot shows the provisioning commands.":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/provision-cloud.png" alt-text="Screenshot shows the provisioning commands.":::
 
     1. Select an existing resource group or create new resource group. For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
     
@@ -288,7 +288,7 @@ items:
 
     1. Select **Deploy** under **LIFECYCLE** after provisioning is complete.
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/deploy-cloud_v5.png" alt-text="Screenshot showing the where to click to deploy to cloud.":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/deploy-cloud.png" alt-text="Screenshot showing the where to click to deploy to cloud.":::
 
     1. Select **Deploy**.
 
@@ -307,16 +307,16 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output_v5.png" alt-text="Screenshot shows the app cloud output.":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="Screenshot shows the app cloud output.":::
 
     1. Select the command bot.
     1. Select **Enter**.  
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/hello-world-cloud_v5.png" alt-text="Screenshot shows the Hello World Command to enter.":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/hello-world-cloud.png" alt-text="Screenshot shows the Hello World Command to enter.":::
 
         You receive the following command response in adaptive card:
 
-         :::image type="content" source="~/assets/images/sbs-command-bot/cloud-final-output_v5.png" alt-text="Screenshot shows the cloud final output.":::
+         :::image type="content" source="~/assets/images/sbs-command-bot/cloud-final-output.png" alt-text="Screenshot shows the cloud final output.":::
 
     # [Command Line](#tab/cli)
 
@@ -353,7 +353,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="~/assets/images/sbs-command-bot/final-output_v5.png" alt-text="Screenshot shows the cloud final output.":::
+    :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="Screenshot shows the cloud final output.":::
   
 - content: |
     You've completed the tutorial to build command response app.   
