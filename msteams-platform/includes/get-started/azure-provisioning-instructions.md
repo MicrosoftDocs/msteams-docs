@@ -86,7 +86,7 @@ Once the provisioning and deployment steps are complete:
 
    The toolkit displays a message to indicate that the app is added to Teams.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="Screenshot showing a message to try the app now or later":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="Screenshot showing a message to try the app now or later.":::
 
     - If you select **Got it**, you can try the app later from the list of Sideloaded apps.
     - If you select **Try it**, Teams loads your app.
@@ -97,4 +97,4 @@ Once the provisioning and deployment steps are complete:
 
    The Message Extension app is loaded in a chat bot app.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="Screenshot showing an app sideloaded in Teams":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="Screenshot showing an app sideloaded in Teams.":::

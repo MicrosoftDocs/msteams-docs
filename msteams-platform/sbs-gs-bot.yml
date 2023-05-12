@@ -17,9 +17,9 @@ items:
     Start Microsoft Teams app development with your first Teams app. 
     You can create a bot app with Teams. 
 
-    Your app will have a capability, which comes with its own UI and UX:
+    Your app has a capability, which comes with its own UI and UX:
     
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram shows that this app has three features.":::
     
     > [!NOTE]
     > In this tutorial, you can create a bot app.
@@ -39,7 +39,7 @@ items:
    | &nbsp; | Install | For using... |
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
-   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
+   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 5.0.0 version. |
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place.|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -82,7 +82,7 @@ items:
    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
    > [!NOTE]
-   > The latest version of Teams Toolkit is 4.2.0.
+   > The latest version of Teams Toolkit is 5.0.0.
 
    # [Command line](#tab/cli)
 
@@ -129,7 +129,7 @@ items:
     1. Select **Upload an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="bot home":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="Screenshot shows the bot home.":::
 
         > [!NOTE]
         > If you don't have the option to upload a custom app, talk to your Teams administrator.
@@ -143,7 +143,7 @@ items:
    1. In the welcome screen, select **Set up E5 subscription**.
    1. Set up your administrator account. After you finish, the following screen appears.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
 
    1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
@@ -187,50 +187,50 @@ items:
 
     1. Select **Create a new app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
-    1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
+    1. Select **Bot** to create a new bot project.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app1.png" alt-text="Wizard start for Create New Project":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app1.png" alt-text="Screenshot shows the wizard to Create New Project.":::
 
-    1. Ensure that **Bot** is selected as the capability that you want to build in your app.
+    1. Ensure that **Basic Bot** is selected as the app feature that you want to build in your app.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-bot.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
 
     1. Select **JavaScript** as the programming language.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot showing how to select the programming language.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot shows the option to select the programming language.":::
 
     1. Select **Default folder** to store your project root folder in default location.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-default-location.png" alt-text="Select default location.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
 
        You can also change the default location by the following steps:
 
        1. Select **Browse**.
 
-           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-browse.png" alt-text="Select browse location.":::
+           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
 
        1. Select the location for project workspace.
-       1. Select the **Select Folder**.
+       1. Select **Select Folder**.
 
-           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot showing how to select the programming language.":::
+           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot shows the folder to select.":::
 
-    1. Enter a suitable name for your app. Select **Enter**.
+    1. Enter a suitable name for your app and select the **Enter** key.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot showing where to enter the app name.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
 
         A dialog appears, where you would be required to choose yes or no to trust the authors of the files in this folder.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="This screenshot is an example of the dialog to trust or not the authors of the files in this folder ":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
     
         Your Teams app with a bot capability is created in a few seconds.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png" alt-text="Screenshot showing the app created.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png" alt-text="Screenshot shows the app created.":::
 
         After your app is created, the Teams Toolkit displays the following message:
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project.png" alt-text="Location message":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project.png" alt-text="Screenshot shows the message that the feature is successfully created.":::
         
         Select **Local debug** to preview your project.
         
@@ -265,9 +265,9 @@ items:
 
     ## Take a tour of the bot app source code
 
-    After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
+    After scaffolding is completed, view the project directories and files in the Explorer area of Visual Studio Code.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/folder-structure-bot-app.png" alt-text="Folder Structure.":::
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/folder-structure-bot-app.png" alt-text="Screenshot shows the folder structure.":::
 
     | Folder name | Contents |
     | --- | --- |
@@ -309,7 +309,7 @@ items:
 
         Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot shows where to sign in to Microsoft 365 and Azure.":::
 
         Now you're ready to build the app and run it locally!
 
@@ -382,15 +382,15 @@ items:
 
     1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/add-bot-app-local-debug.png" alt-text="Screenshot showing the bot is being added on Teams client.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/add-bot-app-local-debug.png" alt-text="Screenshot shows the bot is being added on Teams client.":::
 
         Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-added-bot-local-debug.png" alt-text="Screenshot showing the bot is running on Teams client.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-added-bot-local-debug.png" alt-text="Screenshot shows the bot is running on Teams client.":::
 
         You can type `welcome` to show an introduction card, and type `learn` to go to adaptive card and bot command documentation.
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/bot-app-learn-local-debug.png" alt-text="Screenshot showing the learn card in the bot on Teams client.":::       
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/bot-app-learn-local-debug.png" alt-text="Screenshot shows the learn card in the bot on Teams client.":::       
 
         You can do normal debugging activities, such as setting breakpoints, as with any other web application. Open the `bot/teamsBot.js` file and locate the `onMessage()` method. Set a breakpoint on any case. Then, type some text.
 
@@ -479,7 +479,7 @@ items:
       Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
 
       * The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
-      * The frontend application will be deployed to an Azure Storage account configured for static web hosting.
+      * The frontend application is deployed to an Azure Storage account configured for static web hosting.
 
       </details>
 
@@ -491,15 +491,7 @@ items:
 
     You've created a bot app.
 
-    Now that you've learned to create a basic app, you can move on to creating more complex apps. To start with, try adding capabilities to your existing apps.
-
-    To add capabilities to your existing app:
-
-    1. Select **Add features** from the **Development** section of the Teams Toolkit sidebar.
-
-    1. Select the capability you want to add to your app.
-
-    That's it! Teams Toolkit adds the scaffolding for the new capability to your app's directory structure. Follow the procedures to build and deploy the app, and your app will have multiple capabilities. 
+    Now that you've learned to create a basic app, you can move on to creating more complex apps. Follow the procedures to build and deploy the app, and your app will have multiple features.
 
     You've completed the tutorial to build bot with JavaScript.
     
