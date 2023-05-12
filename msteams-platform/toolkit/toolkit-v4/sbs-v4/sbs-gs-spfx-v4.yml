@@ -157,15 +157,15 @@ items:
     # [Visual Studio Code](#tab/vscode)
 
     1. Open Visual Studio code.
-    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
+    1. Select the Teams Toolkit :::image type="icon" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-javascript-v4/teams-toolkit-sidebar-icon-v4.png"::: icon in the Visual Studio Code **Activity Bar**.
 
     1. Select **Create a new app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-javascript-v4/create-project-v4.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
 
     1. Select **Create a new Teams app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/create-new-project-intro-v4.png" alt-text="Wizard start for Create New Project":::
 
     1. Select **(SPFx) tab**.
 
@@ -181,11 +181,11 @@ items:
 
     1. Select your **Workspace folder** by choosing your required folder.  
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot showing how to select the folder.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/select-folder-v4.png" alt-text="Screenshot showing how to select the folder.":::
 
     1. Enter a suitable **Application name** for your app. Press **Enter**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/application-name.png" alt-text="Screenshot showing how to select the folder.":::
+       :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/application-name-v4.png" alt-text="Screenshot showing how to select the folder.":::
     
         After your app is created, the Teams Toolkit displays the following message:
         
@@ -235,7 +235,7 @@ items:
 
     After project creation, you have the components to build a basic personal app. You can view the project directories and files in the Explorer area of Visual Studio Code.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio Code.":::
+    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/app-project-files-spfx-v4.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio Code.":::
 
     The Toolkit creates scaffolding for you in the project directory for the tab capability. 
 
@@ -266,10 +266,10 @@ items:
     # [Visual Studio Code](#tab/viscode)
 
     1. Open Visual Studio Code.
-    1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select the Teams Toolkit  :::image type="icon" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-javascript-v4/teams-toolkit-sidebar-icon-v4.png"::: icon in the sidebar.
     1. Select **Sign in to M365**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/account-signin-spfx.png" alt-text="Screenshot showing where to sign in to Microsoft 365.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/account-signin-spfx-v4.png" alt-text="Screenshot showing where to sign in to Microsoft 365.":::
 
         Your default web browser opens to let you sign in to the account.
 
@@ -302,7 +302,7 @@ items:
 
     To build and run your app locally:
 
-    1. Select the **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
+    1. Select the **Run and Debug** :::image type="icon" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/run-debug-icon-v4.png"::: icon from the Visual Studio Code sidebar.
 
     1. Select one of the following options to run and debug the app.
 
@@ -325,7 +325,7 @@ items:
 
     1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-app-local-debug.png" alt-text="Add the app to Teams":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/add-app-local-debug-v4.png" alt-text="Add the app to Teams":::
    
     1. Select the web app version, if you're asked to switch to Teams desktop. You can see the HTML, CSS, and JavaScript code in a standard web development environment.
 
@@ -333,7 +333,7 @@ items:
     
         Congratulations, your first app is running on Teams!
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of the completed app in local environment":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/sp-app-added-v4.png" alt-text="Screenshot of the completed app in local environment":::
 
         Your app should now be running. You can debug the app as any other SPFx web part (such as setting breakpoints).
 
@@ -354,13 +354,13 @@ items:
         
         The **SharePoint Web Part Workbench** opens in the browser to let you add, edit, and remove web parts.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-workbench-addpart.png" alt-text="Screenshot showing the SPFx workbench running with the pop-up to add a web part showing.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/spfx-workbench-addpart-v4.png" alt-text="Screenshot showing the SPFx workbench running with the pop-up to add a web part showing.":::
 
     1. Select **Add Web Part in column one +** icon to add your web part.
 
     1. Select your web part from the menu.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-workbench-addpart2.png" alt-text="Screenshot showing the SPFx workbench running with the pop-up to add a web part selection.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/spfx-workbench-addpart2-v4.png" alt-text="Screenshot showing the SPFx workbench running with the pop-up to add a web part selection.":::
     
     1. Select **Add a new section +** icon to choose column layout for your web parts.
 
@@ -396,23 +396,23 @@ items:
     1. Select the Teams Toolkit from the sidebar by selecting the Teams icon.
     1. Select **Provision in the Cloud**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning command":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/provisioning-commands-v4.png" alt-text="Screenshot showing the provisioning command":::
 
         The Toolkit updates the progress in the bottom-right corner. After a few seconds, you can see the following notice:
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/provision-complete.png" alt-text="Screenshot showing the provisioning complete dialog.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/provision-complete-v4.png" alt-text="Screenshot showing the provisioning complete dialog.":::
 
     1. After provisioning is complete, select **Deploy to the cloud**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/deploying-command.png" alt-text="Screenshot for showing the deploying command":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/deploying-command-v4.png" alt-text="Screenshot for showing the deploying command":::
 
         The app package is built, and uploaded to the SharePoint site. The Teams Toolkit displays a message with the local path where the app package is saved.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-package.png" alt-text="Screenshot for the SPFx App Package message":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/app-package-v4.png" alt-text="Screenshot for the SPFx App Package message":::
 
         After the package is built, Teams Toolkit displays a message with the url of the SharePoint site where your app package has been uploaded.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-package-uploaded.png"alt-text="Screenshot for the SPFx package uploaded to SharePoint site":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/app-package-uploaded-v4.png"alt-text="Screenshot for the SPFx package uploaded to SharePoint site":::
 
        You can either publish to Teams or select the SharePoint site.
 
@@ -423,11 +423,11 @@ items:
 
     1. Select **Publish to Teams**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/publish-your-app1.png"alt-text="Screenshot for the publish to Teams.":::
+       :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/publish-your-app1-v4.png"alt-text="Screenshot for the publish to Teams.":::
 
     1. Select **Admin portal**.
        
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/admin-portal.png"alt-text="Screenshot for the admin portal.":::
+       :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/admin-portal-v4.png"alt-text="Screenshot for the admin portal.":::
 
     1. Select **Manage Apps** and search your app in the search section to select your app.
 
