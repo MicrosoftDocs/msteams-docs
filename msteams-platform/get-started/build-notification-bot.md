@@ -12,8 +12,8 @@ The notification bot proactively sends messages in Teams channel or group chat o
 
 In this tutorial, get familiarize with a basic Teams tab app in one of the following ways:
 
-* Teams Toolkit codespaces: The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you.
-* Step-by-step guide
+* **Teams Toolkit codespaces**: The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you.
+* **Step-by-step guide**
 
 # [Teams Toolkit codespaces](#tab/teamstoolkitcodespaces)
 
@@ -81,7 +81,7 @@ To use codespaces for creating a Teams notification bot:
 
 If you would like to learn how to start a project with Teams Toolkit from scratch, let's go through the step-by-step guide together.
 
-Unlike codespaces, where everything you need is packaged for you already, you need to set you your development environment. Let's start with prerequisites section first before start building.
+Unlike codespaces, where everything you need is packaged for you already, you need to set you your development environment. Let's start building your notification bot.
 
 > [!div class="nextstepaction"]
 > [Start building a notification bot](../sbs-gs-notificationbot.yml)

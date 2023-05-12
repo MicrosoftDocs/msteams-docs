@@ -13,8 +13,8 @@ Message extensions allow the users to interact with your web service through but
 
 In this tutorial, get familiarize with a basic Teams tab app in one of the following ways:
 
-* Teams Toolkit codespaces: The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you.
-* Step-by-step guide
+* **Teams Toolkit codespaces**: The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you.
+* **Step-by-step guide**
 
 # [Teams Toolkit codespaces](#tab/teamstoolkitcodespaces)
 
@@ -72,7 +72,7 @@ If you want to build by yourself, or want to create a message extension that can
 
 If you would like to learn how to start a project with Teams Toolkit from scratch, let's go through the step-by-step guide together.
 
-Unlike codespaces, where everything you need is packaged for you already, you'll need to set you your development environment. Let's start with [Prerequisites](../toolkit/tools-prerequisites.md) section first before start building.
+Unlike codespaces, where everything you need is packaged for you already, you'll need to set you your development environment. Let's start building your first message extension app.
 
 > [!div class="nextstepaction"]
 > [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml)
