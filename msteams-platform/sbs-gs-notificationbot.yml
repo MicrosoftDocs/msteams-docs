@@ -272,7 +272,7 @@ items:
 
         **To customize storage (Optional):**
 
-        1. In Visual Studio Code, under **EXPLORER**, select **MYNOTIFICATIONBOT> bot> src> internal> initialize.js**.
+        1. In Visual Studio Code, under **EXPLORER**, select **MYNOTIFICATIONBOT> src> internal> initialize.js**.
 
             :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/initialize-storage.png" alt-text="Storage Initialize":::
         
