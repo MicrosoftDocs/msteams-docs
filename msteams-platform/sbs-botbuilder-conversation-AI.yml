@@ -361,8 +361,8 @@ items:
             import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnState, OpenAIModerator, OpenAIPlanner, AI } from '@microsoft/botbuilder-m365';
             import path from "path";
             ```
-            
-            You need to import all the classes to build your bot and leverage the Conversational AI capabilities.
+
+            You need to import the required classes to use the functions and variables available in the class to build your app. You can leverage pre-built templates, and simply add your business logic to this scaffold.
 
         1. Add the following code to create planner, moderator, and promptManager:
 
@@ -379,9 +379,12 @@ items:
             });
             const promptManager = new DefaultPromptManager(path.join(__dirname, './prompts' ));
             ````
-            * Planner: `planner` is  component that calls either OpenAI.
-            * PromptManager: `promptManager` manages prompt creation.
-            * Moderator: `moderator` adds safety moderation to the bots input and output.
+            * Planner: The `OpenAIPlanner` is a class that implements an interface called `planner`. The planner calls the LLM model 'text-davinci-003' for text completion. You can use the `OpenAIPlanner` or Azure OpenAI planner. If your using the Azure OpenAI planner, ensure that you define the endpoint property.
+
+            * PromptManager: `promptManager` Allows you to register your prompts, load a prompt template into the AI component. All the functions related to the prompt manager are available in the `DefaultPromptManager`.  The prompt manager parses the prompts defined in the `prompt.txt` folder. You can replace or override your own functionality in the prompt manager. 
+
+            * Moderator: The `OpenAIModerator` reviews both user's input and the model output to detect harmful speech, such as hate speech, self-harm, and violence.
+
 
         1. Add the following code to define storage and application:
 
@@ -402,8 +405,9 @@ items:
             });
             ```
 
-            * The `storage` class is used to store conversation and user state; all BotFramework storage providers supported.
-            * The `Application` class replaces the Teams Activity Handler class from Bot Framework SDK. The `ai` object is passed into the Application, which receives the AI components.
+            * The `Application` class replaces the Teams Activity Handler class from Bot Framework SDK. The application class has all the information and bot logic required for an app. You can register actions or activity handlers for the app in this class.
+            * The `MemoryStorage` class is imported from the Bot Builder SDK and has a predefined logic to handle any issues when two or more events exist at the same time so that you don't want to worry about handling storage issues and focus on building your application.
+
 
             1. Under **Import required bot service**, add `MemoryStorage`.
 
@@ -420,7 +424,8 @@ items:
                 return false;
             });
             ```
-            The `FlaggedInputActionName` and `FlaggedOutputActionName` handlers are built-in action handlers to handle moderator flags. If the moderator flags an incoming message input, the moderator redirects to the `FlaggedInputAction` handler and `context.sendActivity` sends a message to the user about the flag.
+            
+            When the `OpenAIModerator` reviews and identifies a flag in an input or output, it triggers the action `AI.FlaggedInputActionName` or `AI.FlaggedOutputActionName` and the `context.sendActivity` sends a message to the user. If the user receives a message for an flagged  input or output, the user can control what he wants to do.
 
         1. Add the following code to define history:
 
@@ -429,9 +434,11 @@ items:
             const history = ConversationHistory.toString(state, 2000, '\n\n');
             await context.sendActivity(history);
             });
-            ``` 
+            ```
 
-        1. Update `await bot.run(context);` to `await app.run(context);`.
+           The `ConversationHistory` class remembers context across messages. It automatically populates the {{$history}} variable available in the `prompt.txt` file.
+
+        1. By default Bot builder uses `bot` as a variable, since we are constructing an app for the `new Application`. We need to replace `await bot.run(context) with `await app.run(context)`.
    
     1. In the root folder, create a new folder **prompts/chat**.
 
@@ -460,7 +467,7 @@ items:
         }
         ```
 
-        The `config.js` file contains parameters like temperature, max tokens, type, and so on, which you pass into Open AI or Azure Open AI.
+        The `config.json' is initiated by the `DefaultPromptManager` from the `index.ts` file. When a prompt is initiated, the prompt manager searches for  the prompt config file (chat/config.json) and passed the prompt settings into Open AI or Azure Open AI.
 
     1. Go to the 'prompt.txt' file and add the following instructions for GPT on how the bot should conduct itself and facilitate conversation:
 
@@ -468,19 +475,21 @@ items:
         The following is a conversation with an AI assistant, its name is Teams Chef. 
         Teams Chef is an expert in Microsoft Teams apps development and the Human is junior developer learning Microsoft Teams development for the first time. 
         Teams Chef should always reply by explaining new concepts in simple terms using cooking as parallel concepts. 
-        Teams Chef should always greet the human, ask them their name, and then guide the junior developer in his journey to build new apps for Microsoft Teams. 
+        Teams Chef should always greet the human, ask them their name, and then guide the junior developer in his journey to build new apps for Microsoft Teams.
         ```
 
-        The `prompt.txt` file contains text prompts with which the users interact with GPT. GPT attempts to use these prompts to produce the next series of words that are most likely to follow from the previous text.
+        The `prompt.txt` file contains text prompts with which the users interact with OpenAI endpoint. OpenAI endpoint attempts to use these prompts to produce the next series of words that are most likely to follow from the previous text.
 
         To store and leverage session history, add the following in the 'prompt.txt' file:
 
         ```
-        Conversation history:
-        {{conversation.history}}
+        {{$history}}
+        Human: {{$input}}
+        TeamsChef:
         ```
 
-        The `conversation.history` remembers context across messages SDK returns the correct intents and entities for the user's input. 
+        
+        The prompt template is populated using the {{$history}}} variable. The `$history` variable remembers the list of entries provided by the user and the model. 
 
         For example, let's say the user's name is "Dave". The bot might carry on the following conversation:
 
@@ -495,7 +504,7 @@ items:
         ```
         Notice that the bot remembered Dave's first message when responding to the second.
          
-    This sample leverages GPT for all its natural language modelling, the user can talk to an AI bot in any language of their choosing. The bot understands and responds appropriately without extra code.
+    This sample leverages OpenAI endpoint for all its natural language modelling, the user can talk to an AI bot in any language of their choosing. The bot understands and responds appropriately without extra code.
 
     ## Build and run your first bot app locally
 

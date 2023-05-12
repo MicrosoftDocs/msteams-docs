@@ -19,7 +19,7 @@ This article focuses on how to integrate Teams AI library library into your app 
 Teams AI library library is built on top of the BOT framework and uses its fundamentals to offer an extension to the BOT framework capabilities. As part of initial setup, it's important to import the BOT framework functionalities.
 
 > [!NOTE]
-> The adapter class that handles connectivity with the channels is imported from the [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0#the-bot-adapter).
+> The adapter class that handles connectivity with the channels is imported from the [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0#the-bot-adapter&preserve-view=true).
 
 ```typescript
 import {
