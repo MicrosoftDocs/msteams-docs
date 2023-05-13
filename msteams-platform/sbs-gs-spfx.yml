@@ -171,6 +171,10 @@ items:
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/new-spfxTab-spfx.png" alt-text="new spfx tab spfx":::
 
+    1. Select an option for scaffolding
+
+        :::image type="content" source="assets/images/teams-toolkit-v2/scaffolding.png" alt-text="Screenshot showing the latest options to install spfx.":::
+
     1. Select **React** in the **Framework** section.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-react-page.png" alt-text="bot home":::
