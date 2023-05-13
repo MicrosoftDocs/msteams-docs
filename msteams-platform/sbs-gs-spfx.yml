@@ -398,7 +398,7 @@ items:
 
     1. Open Visual Studio Code.
     1. Select the Teams Toolkit from the sidebar by selecting the Teams icon.
-    1. Select **Provision in the Cloud**.
+    1. Select **Provision** under **LIFECYCLE**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning command":::
 
@@ -406,7 +406,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/provision-complete.png" alt-text="Screenshot showing the provisioning complete dialog.":::
 
-    1. After provisioning is complete, select **Deploy to the cloud**.
+    1. After provisioning is complete, select **Deploy** under **LIFECYCLE**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/deploying-command.png" alt-text="Screenshot for showing the deploying command":::
 
