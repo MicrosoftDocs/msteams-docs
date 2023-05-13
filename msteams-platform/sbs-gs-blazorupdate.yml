@@ -208,7 +208,7 @@ items:
 
         1. Select **Create**.      
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-tab_v5.png" alt-text="Screenshot of Create a new Teams application with Tab and Create options highlighted in red.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-tab_1.png" alt-text="Screenshot of Create a new Teams application with Tab and Create options highlighted in red.":::
         
         Your Teams tab app is created in a few seconds.
         
@@ -556,7 +556,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/bot-running.png" alt-text="Screenshot of Microsoft Teams with Welcome option highlighted under Suggestions.":::
 
-        You can type `welcome` to show an introduction card, and type `learn` to go to adaptive card and bot command documentation.
+        You can type `hellowworld` to show an introduction card for an adaptive card and bot command documentation.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/bot-welcome.png" alt-text="Screenshot of Microsoft Teams displaying an introduction card.":::       
 
@@ -643,11 +643,9 @@ items:
 
         Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
  
-     1. You can type `welcome` to show an introduction card.
+              :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/welcome.png" alt-text="Screenshot of Microsoft Teams displaying an introduction card.":::
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/welcome.png" alt-text="Screenshot of Microsoft Teams displaying an introduction card.":::
-
-     1. You can type `learn` to go to adaptive card and bot command documentation.
+     1. You can type `hellowworld` to show an introduction card for an adaptive card and bot command documentation.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/learn.png" alt-text="Screenshot of Microsoft Teams displaying the Learn Adaptive Card and Commands.":::
 
