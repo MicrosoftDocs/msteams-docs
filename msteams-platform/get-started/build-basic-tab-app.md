@@ -33,7 +33,7 @@ To create a Teams tab app with codespace, follow the steps:
 1. Select the button above to open codespaces. You may be asked to sign in to GitHub account if you haven't.
 1. Select **Create codespaces**.
 
-   :::image type="content" source="../assets/images/get-started/codespace.png" alt-text="Screenshot shows you the GitHub page to create a codespace for tab.":::
+   :::image type="content" source="../assets/images/get-started/codespace.png" alt-text="Screenshot shows you the GitHub page to create a codespace for tab."lightbox="../assets/images/get-started/codespace.png":::
 
    The **Setting up your codespace** page appears.
 
@@ -51,11 +51,9 @@ To create a Teams tab app with codespace, follow the steps:
 
 1. Select **Preview your Teams App (F5)** to build your tab app.
 
-      :::image type="content" source="../assets/images/get-started/toolkit-in-browser.png" alt-text="Screenshot shows you the Teams Toolkit window in browser with your tab app.":::
+      :::image type="content" source="../assets/images/get-started/toolkit-in-browser.png" alt-text="Screenshot shows you the Teams Toolkit window in browser with your tab app."lightbox="../assets/images/get-started/toolkit-in-browser.png":::
 
-   Teams Toolkit codespaces builds the app. Your tab app is loaded to Teams and opens in the browser.
-
-   :::image type="content" source="../assets/images/get-started/tab-in-browser.png" alt-text="Screenshot shows your tab opened in the browser window.":::
+   Teams Toolkit codespaces builds your tab app. Your tab app is loaded to Teams client and opens in the another browser window.
 
 1. Once the app dialog appears, select **Add** to install your tab app in Teams.
 
@@ -63,7 +61,7 @@ To create a Teams tab app with codespace, follow the steps:
 
    You've successfully created the tab app and loaded in the Teams client.
 
-   :::image type="content" source="../assets/images/get-started/tab-app-in-teams.png" alt-text="Screenshot shows your tab app loaded in the Teams client.":::
+   :::image type="content" source="../assets/images/get-started/tab-app-in-teams.png" alt-text="Screenshot shows your tab app loaded in the Teams client."lightbox="../assets/images/get-started/tab-app-in-teams.png":::
 
 If you want to build by yourself, or want to create a tab app that can be installed on Outlook and Microsoft 365, follow the step-by-step guide at the next section!
 
@@ -78,7 +76,7 @@ Unlike codespaces, you need to set you your development environment. Let's start
 
 ---
 
-Or if a bot is what you are interested, go to another section:
+If a bot is what you are interested, go to another section:
 
 > [!div class="nextstepaction"]
 > [Start building a bot](build-notification-bot.md)

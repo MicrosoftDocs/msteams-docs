@@ -33,7 +33,7 @@ To use codespaces for creating a Teams notification bot:
 1. Select the button above to open codespaces. You may be asked to sign in to GitHub account if you haven't.
 1. Select **Create codespaces**.
 
-   :::image type="content" source="../assets/images/get-started/codespace/bot-codespace.png" alt-text="Screenshot shows you the GitHub page to create a codespace for bot.":::
+   :::image type="content" source="../assets/images/get-started/codespace/bot-codespace.png" alt-text="Screenshot shows you the GitHub page to create a codespace for bot."lightbox="../assets/images/get-started/codespace/bot-codespace.png":::
 
    The **Setting up your codespace** page appears.
 
@@ -51,25 +51,23 @@ To use codespaces for creating a Teams notification bot:
 
 1. Select **Preview your Teams App (F5)** to build your notification bot.
 
-      :::image type="content" source="../assets/images/get-started/toolkit-in-browser.png" alt-text="Screenshot shows you the Teams Toolkit window in browser with your notification bot.":::
+      :::image type="content" source="../assets/images/get-started/toolkit-in-browser.png" alt-text="Screenshot shows you the Teams Toolkit window in browser with your notification bot."lightbox="../assets/images/get-started/toolkit-in-browser.png":::
 
-   Teams Toolkit codespaces builds the app. A dialog appears to prompt you to open the app in a browser.
-
-1. Select **Open in Browser** to preview your notification bot in the browser.
-
-   :::image type="content" source="../assets/images/get-started/open-in-browser.png" alt-text="Screenshot shows you to open your notification bot in browser.":::
-
-   Your notification bot is sideloaded to Teams.
+   Teams Toolkit codespaces builds your tab app. Your tab app is loaded to Teams client and opens in the another browser window.
 
 1. Once the app dialog appears, select **Add** to install your notification bot in Teams.
 
    :::image type="content" source="../assets/images/get-started/codespace/bot-teams.png" alt-text="Screenshot shows you the notification bot loaded in the Teams client.":::
 
-1. Open new terminal in your codespace and run the following command:
+1. Open new terminal in your codespace and run the following command to send a notification to your bot:
 
    ```bash
    curl -X POST http://localhost:3978/api/notification
    ```
+
+    > [!Tip]
+    >
+    > In real time, events are triggered by an external source, such as third party API. To get an event triggering, you can send an event manually via curl commands on terminal.
 
    App sends an Adaptive Card to your Teams.
 
@@ -85,3 +83,10 @@ Unlike codespaces, where everything you need is packaged for you already, you ne
 
 > [!div class="nextstepaction"]
 > [Start building a notification bot](../sbs-gs-notificationbot.yml)
+
+---
+
+If you want to build message extension, go to another section:
+
+> [!div class="nextstepaction"]
+> [Build message extension](build-message-extension.md)

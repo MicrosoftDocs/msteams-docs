@@ -62,7 +62,7 @@ To use codespaces for creating a search based message extension:
 
    :::image type="content" source="../assets/images/get-started/codespace/me-in-teams.png" alt-text="Screenshot shows you the message extension loaded in the Teams client.":::
 
-   You've successfully created the message extension and loaded in the Teams client.
+   You've successfully created the search based message extension and loaded in the Teams client.
 
    :::image type="content" source="../assets/images/get-started/codespace/me-teams-chat.png" alt-text="Screenshot shows your message extension loaded in the Teams client.":::
 
