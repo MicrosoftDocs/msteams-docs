@@ -619,7 +619,10 @@ You can extend personal tabs to group chat, channel, and meetings. These tabs be
 * Don't embed your entire web app in Teams, as users often don't find this valuable. Instead, think about what your app can uniquely do inside Teams. For example, can you serve an app experience that consolidates all your apps content, such as displaying all the surveys in a meeting.
 * Your app needs to be responsive down to 320 pixels width to align with the meeting side panel and  Teams mobile experience. 
 
-To extend your personal tabs to group chat and channels, update your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with the `scopes` and `context` parameters in the `staticTabs` property 
+To extend your personal tabs to group chat and channels, update your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with the `scopes` and `context` parameters in the `staticTabs` property.
+
+>[!NOTE]
+> To extend your personal tabs to group chat and channels, use the app manifest v1.16 or later.
 
 Following is an example app manifest where a personal tab is defined that works in all scopes and contexts in Teams:
 
@@ -662,9 +665,18 @@ If a context isn't defined in the app manifest, Teams defaults to the follow
 ]
 ```
 
-## Customizable personal tab
+## Customizing your personal (static) tab in chats or channels
 
-To create a customizable experience for a personal tab add the configuration page logic to your `contentUrl` codespace. For more information, see [configuration page.](~/tabs/how-to/create-tab-pages/configuration-page.md)
+To customize your personal (static) tab experience in chats or channel, you can add `setConfig` APIs in a [configuration dialog](~/tabs/how-to/create-tab-pages/configuration-page.md#configuration-page-for-tabs) to update the `contentUrl`. Following is an example:
+
+```json
+pages.config.setConfig({ 
+  "contentUrl": "https://wwww.contoso.com/teamsapp/thread/" + context.threadId,
+   ...}
+
+```
+
+For more information, see [create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md)
 
 ## Code sample
 
