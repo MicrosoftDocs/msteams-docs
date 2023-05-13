@@ -449,7 +449,7 @@ resource botService 'Microsoft.BotService/botServices@2021-03-01' = {
   }
 ```
 
-# [Azure Active Directory](#tab/azureactivedirectory1)
+# [Azure Active Directory](#tab/azureactivedirectory3)
 
 * Host in the *Azure Function*, append following values to `infra/azure.bicep`
 
