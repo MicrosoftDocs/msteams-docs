@@ -130,7 +130,7 @@ Add a reference to the `@microsoft/teamsfx` package to `package.json`.
 
 The TeamsFx SDK supports five different ways to connect to the API. You can create a module to connect your API and export the `apiClient` to provide for your project.
 
-# [Basic Auth](#tab/basicauth)
+# [Basic Auth](#tab/basicauth1)
 
 Sample code for Basic Auth:
 
@@ -149,7 +149,7 @@ const apiClient = teamsfxSdk.createApiClient(
 module.exports.apiClient = apiClient;
 ```
 
-# [Certification](#tab/certification)
+# [Certification](#tab/certification1)
 
 Sample code for Certification
 
@@ -171,7 +171,7 @@ const apiClient = teamsfxSdk.createApiClient(
 module.exports.apiClient = apiClient;
 ```
 
-# [Azure Active Directory](#tab/azureactivedirectory)
+# [Azure Active Directory](#tab/azureactivedirectory1)
 
 Below are the two scenarios:
 
@@ -209,7 +209,7 @@ const apiClient= teamsfxSdk.createApiClient(
 module.exports.apiClient= apiClient;
 ```
 
-# [API Key](#tab/apikey)
+# [API Key](#tab/apikey1)
 
 Sample code for API Key:
 
@@ -235,7 +235,7 @@ const apiClient = teamsfxSdk.createApiClient(
 module.exports.apiClient = apiClient;
 ```
 
-# [Custom Auth Implementation](#tab/CustomAuthImplementation)
+# [Custom Auth Implementation](#tab/CustomAuthImplementation1)
 
 Sample code for Custom Auth Implementation:
 
@@ -298,7 +298,7 @@ const responseBody = response.data;
 
 According to the `apiClient` created in Step 2, select the corresponding type to configure your API for local debugging.
 
-# [Basic Auth](#tab/basicauth)
+# [Basic Auth](#tab/basicauth2)
 
 Append your Api connection configuration to `env/.env.local`
 
@@ -310,7 +310,7 @@ TEAMSFX_API_USERNAME =
 TEAMSFX_API_PASSWORD =
 ```
 
-# [Certification](#tab/certification)
+# [Certification](#tab/certification2)
 
 Append your Api connection configuration to `env/.env.local`
 
@@ -320,7 +320,7 @@ Append your Api connection configuration to `env/.env.local`
 TEAMSFX_API_ENDPOINT =
 ```
 
-# [Azure Active Directory](#tab/azureactivedirectory)
+# [Azure Active Directory](#tab/azureactivedirectory2)
 
 Below are the two scenarios:
 
@@ -348,7 +348,7 @@ TEAMSFX_API_CLIENT_SECRET =
 > [!NOTE]
 >You can use `common` as tenant id if necessary.
 
-# [API Key](#tab/apikey)
+# [API Key](#tab/apikey2)
 
 Append your Api connection configuration to `./env/.env.local`
 
@@ -359,7 +359,7 @@ TEAMSFX_API_ENDPOINT =
 TEAMSFX_API_API_KEY =
 ```
 
-# [Custom Auth Implementation](#tab/CustomAuthImplementation)
+# [Custom Auth Implementation](#tab/CustomAuthImplementation2)
 
 Append your Api connection configuration to `env/.env.local`
 
@@ -379,7 +379,7 @@ If hosting in the *Azure Function*, please append following appSettings to `infr
 
 If hosting in the Bot Service, please append following appSettings to `infra/botRegistration/azurebot.bicep`
 
-# [Basic Auth](#tab/basicauth)
+# [Basic Auth](#tab/basicauth3)
 
 Host in the *Azure Function*, append following values to `infra/azure.bicep`
 
@@ -419,7 +419,7 @@ resource botService 'Microsoft.BotService/botServices@2021-03-01' = {
   }
 ```
 
-# [Certification](#tab/Certification)
+# [Certification](#tab/Certification3)
 
 * Host in the *Azure Function*, append following values to `infra/azure.bicep`
 
@@ -449,7 +449,7 @@ resource botService 'Microsoft.BotService/botServices@2021-03-01' = {
   }
 ```
 
-# [Azure Active Directory](#tab/azureactivedirectory)
+# [Azure Active Directory](#tab/azureactivedirectory1)
 
 * Host in the *Azure Function*, append following values to `infra/azure.bicep`
 
@@ -522,7 +522,7 @@ resource botService 'Microsoft.BotService/botServices@2021-03-01' = {
 >[!NOTE]
 > You can use `common` as tenant id if necessary.
 
-# [API Key](#tab/apikey)
+# [API Key](#tab/apikey3)
 
 * Host in the *Azure Function*, append following values to `infra/azure.bicep`
 
@@ -557,7 +557,7 @@ resource botService 'Microsoft.BotService/botServices@2021-03-01' = {
   }
 ```
 
-# [Custom Auth Implementation](#tab/CustomAuthImplementation)
+# [Custom Auth Implementation](#tab/CustomAuthImplementation3)
 
 * Host in the *Azure Function*, append following values to `infra/azure.bicep`
 
