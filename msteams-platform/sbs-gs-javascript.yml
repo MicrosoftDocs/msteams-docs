@@ -16,10 +16,6 @@ items:
   content: |
     Start Microsoft Teams app development with your first Teams app. 
     You can create a tab app with Teams. 
-
-    Your app has a capability, which comes with its own UI and UX:
-    
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram shows that this app has three features.":::
     
     > [!NOTE]
     > In this tutorial, you can create a tab app with JavaScript.

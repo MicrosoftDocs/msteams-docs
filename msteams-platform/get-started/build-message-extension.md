@@ -11,7 +11,7 @@ Message extensions allow the users to interact with your web service through but
 
 :::image type="content" border="false" source="../assets/images/get-started/get-started-me.png" alt-text="Illustration showing a conceptual message extension":::
 
-In this tutorial, get familiarize with a basic Teams tab app in one of the following ways:
+In this tutorial, get familiarized with a basic Teams tab app in one of the following ways:
 
 * **Teams Toolkit codespaces**: The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you.
 * **Step-by-step guide**: Allows you to create a Teams app from scratch with all development environment setup.
@@ -65,8 +65,6 @@ To use codespaces for creating a search based message extension:
    You've successfully created the search based message extension and loaded in the Teams client.
 
    :::image type="content" source="../assets/images/get-started/codespace/me-teams-chat.png" alt-text="Screenshot shows your message extension loaded in the Teams client.":::
-
-If you want to build by yourself, or want to create a message extension that can be installed on Outlook and Microsoft 365, follow the step-by-step guide.
 
 # [Step-by-step guide](#tab/step-by-stepguide)
 
