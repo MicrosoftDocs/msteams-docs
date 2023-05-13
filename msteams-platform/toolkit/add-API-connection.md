@@ -122,11 +122,11 @@ The following steps help you to add API connection manually:
 * Add Configuration for local debugging
 * Add Configuration for Azure
 
-1. Add SDK to project
+### Add SDK to project
 
 Add a reference to the `@microsoft/teamsfx` package to `package.json`.
 
-1. Provide ApiClient for project
+### Provide ApiClient for project
 
 The TeamsFx SDK supports five different ways to connect to the API. You can create a module to connect your API and export the `apiClient` to provide for your project.
 
@@ -294,7 +294,7 @@ const responseBody = response.data;
 
 ---
 
-1. Add Configuration for local debugging
+### Add Configuration for local debugging
 
 According to the `apiClient` created in Step 2, select the corresponding type to configure your API for local debugging.
 
@@ -346,7 +346,7 @@ TEAMSFX_API_CLIENT_SECRET =
 ```
 
 > [!NOTE]
->You can use `common` as tenant id if necessary.
+> You can use `common` as tenant id if necessary.
 
 # [API Key](#tab/apikey2)
 
@@ -371,7 +371,7 @@ TEAMSFX_API_ENDPOINT=
 
 ---
 
-1. Add Configuration for Azure
+### Add Configuration for Azure
 
 Before provision, make sure the project has *Azure Function* or *Bot Service* to host your API connection. Then add the apiClient to the correspoing service according to your design.
 
