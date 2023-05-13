@@ -35,7 +35,7 @@ Add a connection to an existing third-party API using the following steps:
 
     :::image type="content" source="images/api-add-features_1-v4.png" alt-text="api add features":::
 
-     The **Add Feature** drop-down list appears.
+     The **Add Feature** dropdown list appears.
 
 4. Select **API Connection**.
 
