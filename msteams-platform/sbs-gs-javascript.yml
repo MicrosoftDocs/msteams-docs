@@ -29,6 +29,10 @@ items:
         - The rest of the features with Node.js.
     - How to deploy your app.
 
+    This step-by-step guide helps you to build tab with Teams Toolkit. You can see the following output:
+
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-localdebug.png" alt-text="Screenshot shows the completed app":::
+
 - title: Prerequisites
   durationInMinutes: 1
   content: |
