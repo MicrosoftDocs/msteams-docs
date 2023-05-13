@@ -292,6 +292,8 @@ const response = await apiClient.get("relative_path_of_target_api");
 const responseBody = response.data;
 ```
 
+---
+
 1. Add Configuration for local debugging
 
 According to the `apiClient` created in Step 2, select the corresponding type to configure your API for local debugging.
@@ -366,6 +368,8 @@ Append your Api connection configuration to `env/.env.local`
 // set up environment variables required by teamsfx
 TEAMSFX_API_ENDPOINT=
 ```
+
+---
 
 1. Add Configuration for Azure
 
