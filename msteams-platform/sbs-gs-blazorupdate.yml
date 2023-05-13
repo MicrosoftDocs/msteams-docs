@@ -643,7 +643,7 @@ items:
 
         Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
  
-              :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/welcome.png" alt-text="Screenshot of Microsoft Teams displaying an introduction card.":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/welcome.png" alt-text="Screenshot of Microsoft Teams displaying an introduction card.":::
 
      1. You can type `hellowworld` to show an introduction card for an adaptive card and bot command documentation.
 
