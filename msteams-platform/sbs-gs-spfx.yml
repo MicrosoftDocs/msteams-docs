@@ -167,11 +167,11 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
 
-    1. Select **(SPFx) tab**.
+    1. Select **SPFx**.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/new-spfxTab-spfx.png" alt-text="new spfx tab spfx":::
 
-    1. Select an option for scaffolding
+    1. Select an option for **scaffolding**
 
         :::image type="content" source="assets/images/teams-toolkit-v2/scaffolding.png" alt-text="Screenshot showing the latest options to install spfx.":::
 
