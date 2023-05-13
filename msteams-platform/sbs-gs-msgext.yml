@@ -23,6 +23,10 @@ items:
     - How to build a message extension app.
     - How to deploy your app.
 
+    This step-by-step guide helps you to build message extension Teams app with Teams Toolkit. You can see the following output:
+
+     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot shows that app sideloaded in Teams.":::
+
 - title: Prerequisites
   durationInMinutes: 1
   content: |
