@@ -39,7 +39,7 @@ items:
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-   | &nbsp; | [Teams Toolkit](#tabpanel_1_vscode) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 5.0.0 version. |
+   | &nbsp; | [Teams Toolkit](#tabpanel_1_vscode) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 5.0.0 version. |
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -69,7 +69,7 @@ items:
    # [Visual Studio Code](#tab/vscode)
 
    1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
-   1. In the search box, enter **Teams toolkit**.
+   1. In the search box, enter **Teams Toolkit**.
    1. Select **Install** next to the Teams Toolkit.
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
@@ -111,16 +111,16 @@ items:
 
    ## Set up your Teams development tenant
 
-   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your sideload and test your app. Let's verify if you're ready to develop with the tenant.
+   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
 
    ### Check for sideloading option
 
    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams locally.
 
-   Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+   Do you already have a tenant, and an admin access? Let's check if you really do!
 
    Verify if you can sideload apps in Teams:
 
@@ -149,9 +149,9 @@ items:
 
    ## Get a free Azure account
 
-   If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
+   If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
-   Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building! Select the app you want to do first.
+   Now you’ve got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to create first.
 
 - title: Create project workspace for your tab app
   durationInMinutes: 1
@@ -170,7 +170,7 @@ items:
     If the prerequisites are in place, let's begin!
 
     > [!NOTE]
-    > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Teams Toolkit version, and environment.
+    > The Visual Studio Code UI shown is from Mac. Teams Toolkit version and environment might differ based on your operating system.
 
     # [Visual Studio Code](#tab/vsc)
 
@@ -197,7 +197,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-default-location.png" alt-text="Screenshot shows how to select default location.":::
 
-       You can also change the default location by the following steps:
+       Follow the steps to change the default location:
 
           1. Select **Browse**.
 
@@ -205,11 +205,11 @@ items:
 
           1. Select the location for project workspace.
 
-          1. Select the **Select Folder**.
+          1. Select the **Select folder**.
 
               :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot shows how to select-folder.":::
 
-    1. Enter a suitable name for your app. Select **Enter**.
+    1. Enter a suitable name for your app and then select **Enter**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot shows where to enter the app name.":::
 
@@ -255,7 +255,7 @@ items:
 
     ## Take a tour of the tab app source code
 
-    Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
+    Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the **Explorer** in the Visual Studio Code.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/folder-structure-tab-app.png" alt-text="Screen shot shows the structure tab.":::
 

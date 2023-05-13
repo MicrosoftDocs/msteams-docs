@@ -85,7 +85,7 @@ In your terminal window:
 Once the provisioning and deployment steps are complete:
 
 1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
-1. Select **Launch Remote (Edge)** from the launch configuration drop-down.
+1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
 1. Select the **Start debugging (F5)** to launch your app from Azure.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="The screenshot showing how to launch the app remotely.":::
