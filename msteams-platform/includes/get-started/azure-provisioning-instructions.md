@@ -14,7 +14,7 @@ The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your 
 
 Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
-1. Select **Provision in the Cloud**.
+1. Select **Provision**.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the selection of provision in the cloud under Teams toolkit.":::
 
@@ -36,11 +36,11 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
     If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
 
-    The provisioned resource appears in the **Environment** section.
+    The provisioned resource appears in the **ENVIRONMENT** section.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot showing the resource being provisioned in the environment section.":::
 
-1. Select **Deploy to the Cloud** from the **Deployment** panel after provisioning is complete.
+1. Select **Deploy** from the **LIFECYCLE** panel after provisioning is complete.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot showing deploy to cloud.":::
 
