@@ -375,13 +375,13 @@ TEAMSFX_API_ENDPOINT=
 
 Before provision, make sure the project has *Azure Function* or *Bot Service* to host your API connection. Then add the apiClient to the correspoing service according to your design.
 
-If hosting in the *Azure Function*, please append following appSettings to `infra/azure.bicep`
+If hosting in the **Azure Function**, please append following appSettings to `infra/azure.bicep`
 
 If hosting in the Bot Service, please append following appSettings to `infra/botRegistration/azurebot.bicep`
 
 # [Basic Auth](#tab/basicauth3)
 
-Host in the *Azure Function*, append following values to `infra/azure.bicep`
+* Host in the **Azure Function**, append following values to `infra/azure.bicep`
 
 ```javascript
 ...
