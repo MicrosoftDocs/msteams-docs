@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Add capabilities to Microsoft Teams app
 
-Teams Toolkit project templates focus on getting started with an app that implements a single [app capability](https://learn.microsoft.com/microsoftteams/platform/concepts/design/app-structure). However, apps can have multiple capabilities. We've created a set of How-To guides with the steps needed to add different capabilities to a project created with Teams Toolkit.
+Teams Toolkit project templates focus on getting started with an app that implements a single [app capability](concepts/design/app-structure). However, apps can have multiple capabilities. We've created a set of How-To guides with the steps needed to add different capabilities to a project created with Teams Toolkit.
 
 ## How-to guides for adding capabilities
 
