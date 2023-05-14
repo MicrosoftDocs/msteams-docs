@@ -23,7 +23,7 @@ items:
     
     You can see the following output:
     
-    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/sbs-workflow-bot-v4/sbs-workflow-bot-final-output-v4.png" alt-text="Workflow bot output.":::
+    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-final-output-v4.png" alt-text="Workflow bot output.":::
 - title: Prerequisites
   durationInMinutes: 1
   content: |
@@ -112,19 +112,19 @@ items:
     1. Select the **Teams Toolkit** :::image type="icon" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-javascript-v4/teams-toolkit-sidebar-icon-v4.png"::: icon in the Visual Studio Code **Activity Bar**.
     1. Select **Create a new app**.
       
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/sbs-workflow-bot-v4/sbs-workflow-bot-create-v4.png" alt-text="create a new teams app in side panel.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-create-v4.png" alt-text="create a new teams app in side panel.":::
     
     1. Select **Create a new Teams** app option to create an app using Teams Toolkit.
     
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/sbs-workflow-bot-v4/sbs-workflow-bot-teams-app-v4.png" alt-text=" select option create a new teams app.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-teams-app-v4.png" alt-text=" select option create a new teams app.":::
     
     1. Under **Scenario-based Teams apps**, select **Workflow bot** as the capability that you want to build in your app.
     
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/sbs-workflow-bot-v4/sbs-workflow-bot-capabilities-workflow-v4.png" alt-text=" select option Work flow bot for capabilities" lightbox="./assets/images/sbs-workflow-bot/sbs-workflow-bot-capabilities-workflow.png":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-capabilities-workflow-v4.png" alt-text=" select option Work flow bot for capabilities" lightbox="./assets/images/sbs-workflow-bot/sbs-workflow-bot-capabilities-workflow.png":::
     
     1. Select **TypeScript** as the programming language.
     
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/sbs-workflow-bot-v4/sbs-workflow-bot-program-lang-v4.png" alt-text=" select option type script for programming language":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-app-name-v4.png" alt-text=" select option type script for programming language":::
     
     1. Select **Default folder** to store your project root folder in default location.
       
@@ -135,28 +135,28 @@ items:
        
     1. Enter a suitable name for your app.
               
-        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-app-name.png" alt-text="enter application name":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-app-name-v4.png" alt-text="enter application name":::
     
     1. Select **Enter**.
         
     1. The workflow bot is created in a few seconds, and you can see the scaffolding.
         
-        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding1.png" alt-text="your app is created with the scaffolding visible in the side panel":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-scaffolding1-v4.png" alt-text="your app is created with the scaffolding visible in the side panel":::
     
-    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
+    1. Select **Run and Debug** :::image type="icon" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/run-debug-icon-v4.png"::: icon from the Visual Studio Code **Activity Bar**.
     
     1. Select **Debug (Edge)** or **Debug (Chrome)** from the dropdown list.
     
-       :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-local-debug1.png" alt-text="your app is created with the scaffolding visible in the side panel":::    
+       :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-local-debug1-v4.png" alt-text="your app is created with the scaffolding visible in the side panel":::    
     
     1. Select **Start Debugging**.
     
     1. Select **Add**.
-        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-add-app.png" alt-text="select add to add your workflow bot app":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-add-app-v4.png" alt-text="select add to add your workflow bot app":::
     ### Take tour of source code
     Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the Explorer area of Visual Studio Code for JavaScript/TypeScript. 
     
-    :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding2.png" alt-text="select add to add your workflow bot app":::
+    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-scaffolding2-v4.png" alt-text="select add to add your workflow bot app":::
     
     
     The created bot is a normal TeamsFx project that contains following folders:
@@ -196,20 +196,20 @@ items:
   durationInMinutes: 2
   content: |
     You can interact with the bot in Teams by sending a helloWorld command. After running this template, you get a response then select the **workflow bot** and **Enter**.
-     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-action-response.png" alt-text="select add to add your workflow bot app":::
+     :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-action-response-v4.png" alt-text="select add to add your workflow bot app":::
     
     You'll receive the following command response in Adaptive Card:
-     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output1.png" alt-text="select add to add your workflow bot app":::
+     :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-debug-output1-v4.png" alt-text="select add to add your workflow bot app":::
     
     Then you can select the **DoStuff** button to invoke the action, that responds with the following updated Adaptive Card:
-     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png" alt-text="select add to add your workflow bot app":::
+     :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-debug-output2-v4.png" alt-text="select add to add your workflow bot app":::
        
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png" alt-text="select add to add your workflow bot app":::
+    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-debug-output2-v4.png" alt-text="select add to add your workflow bot app":::
     
 - content: |
     You've completed the tutorial to get started with workflow bot for Microsoft Teams.

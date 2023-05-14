@@ -56,7 +56,7 @@ items:
     1. Open `vs_enterprise__3bed52501a604464b1eff2ce580fd4eb.exe` from your download folder.
     1. Select **Continue** in the **Visual Studio Installer** page to configure your installation.
 
-       :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor/visual-studio-installer.png" alt-text="Screenshot of Visual Studio Installer with Continue option highlighted in red.":::  
+       :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-blazorupdate-v4/visual-studio-installer-v4.png" alt-text="Screenshot of Visual Studio Installer with Continue option highlighted in red.":::  
 
     1. Select **ASP.NET and web development** under **Workloads**.
 
@@ -64,7 +64,7 @@ items:
        
     1. Select **Install**.
 
-       :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/vs.install.png" alt-text="Screenshot of Visual Studio Enterprise Preview with the option Asp.NET and web development, Microsoft Teams development tools under installation details and install highlighted in red.":::  
+       :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-blazorupdate-v4/vs.install-v4.png" alt-text="Screenshot of Visual Studio Enterprise Preview with the option Asp.NET and web development, Microsoft Teams development tools under installation details and install highlighted in red.":::  
        
      Your Visual Studio is installed in a few minutes.
     
@@ -109,7 +109,7 @@ items:
     1. Select **Manage your apps**.
     1. Select **Upload a custom app**. If you see Upload a customized app option, sideloading apps is enabled.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/prerequisites/upload-custom-app.png" alt-text="Screenshot of Manage your apps in Teams with the Upload an app dialog open. Apps icon, Manage your apps, Upload an app, and Upload a customised app options are highlighted in red.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-csharp/upload-custom-app-v4.png" alt-text="Screenshot of Manage your apps in Teams with the Upload an app dialog open. Apps icon, Manage your apps, Upload an app, and Upload a customised app options are highlighted in red.":::
 
         > [!NOTE]
         > If Teams doesn't show the option to upload a custom app, connect to your Teams administrator.
@@ -161,7 +161,7 @@ items:
 
     1. Select **Create a new project**.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/vs-select-project.png" alt-text="Screenshot of Visual Studio with Create a new project option highlighted in red.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-blazorupdate-v4/vs-select-project-v4.png" alt-text="Screenshot of Visual Studio with Create a new project option highlighted in red.":::
 
         The **Create a new project** page appears.
 
@@ -175,7 +175,7 @@ items:
 
           1. Select **Next**.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/vs-select-teams-app.png" alt-text="Screenshot of Create a new project with Next option highlighted in red.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-blazorupdate-v4/vs-select-teams-app-v4.png" alt-text="Screenshot of Create a new project with Next option highlighted in red.":::
         
           The **Configure your new project** page appears.
 
@@ -196,7 +196,7 @@ items:
 
           1. Select **Create**.
 
-          :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/configure-new-project.png" alt-text="Screenshot of Configure your new project with Create option highlighted in red.":::
+          :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-blazorupdate-v4/configure-new-project-v4.png" alt-text="Screenshot of Configure your new project with Create option highlighted in red.":::
 
           The **Create a new Teams application** page appears.  
 
