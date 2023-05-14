@@ -36,7 +36,7 @@ items:
    | **Required** | &nbsp; | &nbsp; |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use latest version. |
    | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use version 4.0.0.|
-   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
+   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](/toolkit/toolkit-v4/tools-prerequisites-v4.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
@@ -143,69 +143,69 @@ items:
 
     1. Open Visual Studio Code.
 
-    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
+    1. Select the Teams Toolkit :::image type="icon" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 
     1. Select **Create a new app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/create-new-teams-app.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-command-bot-v4/create-new-teams-app-v4.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
 
     1. Select **Create a new Teams app** option to create an app using Teams Toolkit.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/create-new-app.png" alt-text="Wizard starts for creating a new project":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/create-new-app-v4.png" alt-text="Wizard starts for creating a new project":::
 
     1. Ensure that **Command bot** is selected as the capability that you want to build in your app.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-bot.png" alt-text="Select App Capability":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-command-bot-v4/select-bot-v4.png" alt-text="Select App Capability":::
 
     1. Select **JavaScript** as the programming language.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-script.png" alt-text="Screenshot showing how to select the programming language.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-command-bot-v4/select-script-v4.png" alt-text="Screenshot showing how to select the programming language.":::
     
     1. Select **Default folder** to store your project root folder in default location.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-default-location.png" alt-text="Select default Location for storage.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-command-bot-v4/select-default-location-v4.png" alt-text="Select default Location for storage.":::
 
        You can also change the default location by the following steps:
 
           1. Select **Browse**.
 
-             :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-browse.png" alt-text="Select Browse for storage":::
+             :::image type="content" source=".~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-command-bot-v4/select-browse-v4.png" alt-text="Select Browse for storage":::
 
           1. Select the location for project workspace.
           1. Select **Select Folder**.
 
-              :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-folder.png" alt-text="Select Folder.":::
+              :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-command-bot-v4/select-folder-v4.png" alt-text="Select Folder.":::
     
     1. Enter a suitable name for your app. 
     1. Select **Enter**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/app-name.png" alt-text="Application name.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-command-bot-v4/app-name-v4.png" alt-text="Application name.":::
 
     1. After your app is created, the Teams Toolkit displays the following message:
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/new-window-notification.png" alt-text="New window Notification for scaffolding.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-command-bot-v4/new-window-notification-v4.png" alt-text="New window Notification for scaffolding.":::
 
         The command bot app is created in a few seconds.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/command-bot.png" alt-text="Screenshot showing the app created.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-command-bot-v4/command-bot-v4.png" alt-text="Screenshot showing the app created.":::
 
-    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
+    1. Select **Run and Debug** :::image type="icon" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
 
     1. Select **Debug(Edge)** or **Debug(Chrome)** from the dropdown list.
 
     1. Select **Start Debugging** button.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="Debugging application":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-command-bot-v4/debug-app-v4.png" alt-text="Debugging application":::
 
     1. Select **Add**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/add-app.png" alt-text="Add an App":::     
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-command-bot-v4/add-app-v4.png" alt-text="Add an App":::     
 
     1. Select the command bot.
     
     1. Select **Enter**.
 
-         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/hello-world-command.png" alt-text="Add an App dropdown":::  
+         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-command-bot-v4/hello-world-command-v4.png" alt-text="Add an App dropdown":::  
 
        You receive the following command response in adaptive card:
 
@@ -240,7 +240,7 @@ items:
 
     1. Open Visual Studio Code.
     1. Open the project folder that you created the command bot app.
-    1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select the Teams Toolkit  :::image type="icon" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign-in to Azure**.
 
         > [!TIP]
