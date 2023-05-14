@@ -51,6 +51,9 @@ When calling initializing `LiveShareClient`, there is a property called `ILiveSh
 
 When connecting to a Live Share session for Teams meeting participants through your Azure Communication Services application, you must use the `ACSLiveShareHost` from the `@microsoft/live-share-acs` package. For your users joining the meeting through the Teams client, your tab application can connect to the same session using the `LiveShareHost` from the `teams-js` library.
 
+> [!NOTE]
+> Live Share does not currently support AAD users joining through Azure Communication Services. AAD users must join a meeting through the Microsoft Teams client to connect to a Live Share session.
+
 Here is an example of how this might work in your application:
 
 # [JavaScript](#tab/javascript)
