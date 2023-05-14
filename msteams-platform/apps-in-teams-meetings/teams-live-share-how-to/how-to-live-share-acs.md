@@ -13,21 +13,21 @@ ms.date: 07/21/2022
 # Integrate your Azure Communication Services app with Live Share
 
 > [!IMPORTANT]
-> Live Share for Azure Communication Services is available in private developer preview. You can request access [here](https://aka.ms/liveshareacspreview).
+> Live Share for Azure Communication Services is currently in private developer preview. Request access [here](https://aka.ms/liveshareacspreview).
 
-If you use [Azure Communication Services Teams interoperability](/azure/communication-services/concepts/teams-interop) in your web application, then you can extend it to use Microsoft Teams Live Share. This allows Azure Communication Service (ACS) users and Teams meeting users to join the same Live Share session, enabling frictionless collaboration.
+Use [Azure Communication Services Teams interoperability](/azure/communication-services/concepts/teams-interop) in your web application to extend it to Microsoft Teams Live Share. This integration allows Azure Communication Service (ACS) users and Teams meeting users to join the same Live Share session for seamless collaboration.
 
-In this article, we will walk you through how to integrate the `@microsoft/live-share-acs` package with the `LiveShareClient` to join a Live Share session for a Teams meeting. We will also show you how to join the meeting's Live Share session through your Microsoft Teams meeting extension. Let's get started!
+In this article, you'll learn how to integrate the @microsoft/live-share-acs package with the LiveShareClient to join a Live Share session for a Teams meeting. You'll also discover how to join the meeting's Live Share session through your Microsoft Teams meeting extension. Let's start!
 
 ## Pre-requisites
 
-1. [Get access](https://aka.ms/liveshareacspreview) to the Live Share for Azure Communication Services private preview.
-2. Read the [Azure Communication Services Teams interoperability](/azure/communication-services/concepts/teams-interop) documentation.
+1. [Request access](https://aka.ms/liveshareacspreview) to the Live Share for Azure Communication Services private preview.
+2. Understand the [Azure Communication Services Teams interoperability](/azure/communication-services/concepts/teams-interop) by reading the documentation.
 3. Complete the [Live Share quick start guide](../teams-live-share-quick-start.md).
 
 ### Install the JavaScript SDK
 
-The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), which you can download through npm or Yarn. You must also install Live Share peer dependencies, which include `fluid-framework` and `@fluidframework/azure-client`. Next, install the `@microsoft/live-share-acs` package. If you are using Live Share in your tab application, you should also install `@microsoft/teams-js` version `2.11.0` or greater.
+Install the [Live Share SDK](https://github.com/microsoft/live-share-sdk), a JavaScript package on [npm](https://www.npmjs.com/package/@microsoft/live-share). Don't forget to install Live Share peer dependencies, including fluid-framework and @fluidframework/azure-client. Next, install the @microsoft/live-share-acs package. If you're using Live Share in your tab application, install @microsoft/teams-js version 2.11.0 or newer.
 
 #### npm
 
@@ -49,14 +49,14 @@ yarn add @microsoft/teams-js
 
 ## Join a session
 
-When calling initializing `LiveShareClient`, there is an property called `host`, which implements the `ILiveShareHost` interface. The `host` allows the `LiveShareClient` class to connect to a Live Share session. For example, the `TestLiveShareHost` joins a session using a `localhost` test server.
+When initializing `LiveShareClient`, use the `ILiveShareHost` property to connect the `LiveShareClient` class to a Live Share session. For example, the `TestLiveShareHost` class joins a session using a `localhost` test server.
 
-When meeting participants join a Live Share session through your Azure Communication Services application, you must use the `ACSLiveShareHost` class from the `@microsoft/live-share-acs` package. For users joining the meeting through the Teams client, your tab application can connect to the session using the `LiveShareHost` from the `@microsoft/teams-js` library.
+To have meeting participants join a Live Share session through your Azure Communication Services application, use the `ACSLiveShareHost` class from the `@microsoft/live-share-acs` package. For users joining the meeting through the Teams client, your tab application can connect to the session using the `LiveShareHost` class from the `@microsoft/teams-js` library.
 
 > [!NOTE]
-> Live Share does not support AAD users joining through Azure Communication Services. AAD users must join a meeting through the Microsoft Teams client to join a Live Share session.
+> Live Share doesn't support AAD users joining through Azure Communication Services. AAD users must join a meeting through the Microsoft Teams client to join a Live Share session.
 
-Here is an example of how this might work in your application:
+Here's an example of how you can implement this in your application:
 
 # [JavaScript](#tab/javascript)
 
@@ -210,12 +210,12 @@ if (IN_TEAMS) {
 
 ## Why use Live Share with Azure Communication Services?
 
-If your business provides customer services, Live Share helps to improve collaboration between your agents and customers. The following are several examples in which `ACSLiveShareHost` can be used in your application:
+Integrating Live Share into your app can enhance collaboration between your agents and customers, particularly if your business provides customer services. Here are a few examples of how `ACSLiveShareHost` can be implemented in your application:
 
-* Enable your support agents and customers to co-browse your website.
-* Empower your retail agents and digital shoppers to co-shop on your e-commerce website.
-* Implement onboarding assistance between your sales representatives and new customers.
-* Co-watch high-quality promotional videos during sales calls.
+* Facilitate co-browsing of your website between your support agents and customers.
+* Enable your retail agents and digital shoppers to co-shop on your e-commerce website.
+* Provide onboarding assistance through your sales representatives for new customers.
+* Allow co-watching of high-quality promotional videos during sales calls.
 
 ## See also
 
