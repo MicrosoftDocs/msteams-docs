@@ -35,7 +35,7 @@ items:
     | &nbsp; | Install | For using... |
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
-    | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/toolkit-v4/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
+    | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/toolkit-v4/tools-prerequisites-v4.md#nodejs-version-compatibility-table-for-project-type).|
     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
@@ -427,7 +427,7 @@ items:
 
         The details for Hello tab appear.
 
-    1. Select the :::image type="icon" source=".~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/ellipse-icon.png"::: icon for Hello tab, and select **Edit** to open the app details for updating.
+    1. Select the :::image type="icon" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/ellipse-icon.png"::: icon for Hello tab, and select **Edit** to open the app details for updating.
 
         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/devp-edit-tab.png" alt-text="Screenshot of image showing Hello tab menu.":::
 
