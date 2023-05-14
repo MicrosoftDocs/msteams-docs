@@ -248,7 +248,7 @@ items:
 
     1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-        :::image type="content" source=".~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Prepare Teams App Dependencies options are highlighted in red.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Prepare Teams App Dependencies options are highlighted in red.":::
 
     1. Select your Microsoft 365 account or **Add an account** to sign in.
 
@@ -466,7 +466,7 @@ items:
 
           1. Select **Create**.   
 
-          :::image type="content" source=".~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/configure-new-project-bot.png" alt-text="Screenshot of Configure your new project with Create option highlighted in red.":::
+          :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/configure-new-project-bot.png" alt-text="Screenshot of Configure your new project with Create option highlighted in red.":::
 
           The **Create a new Teams application** window appears.  
 
@@ -609,7 +609,7 @@ items:
 
     1. Select **View Provisioned Resources** to view on Azure portal. 
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource-azure.png" alt-text="Screenshot of Teams Toolkit with View Provisioned Resources highlighted in red.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/view-resource-azure.png" alt-text="Screenshot of Teams Toolkit with View Provisioned Resources highlighted in red.":::
 
     1. Sign in to your Azure portal account on sign-in prompt. 
 
@@ -645,7 +645,7 @@ items:
  
      1. You can type `welcome` to show an introduction card.
 
-         :::image type="content" source=".~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/welcome.png" alt-text="Screenshot of Microsoft Teams displaying an introduction card.":::
+         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/welcome.png" alt-text="Screenshot of Microsoft Teams displaying an introduction card.":::
 
      1. You can type `learn` to go to adaptive card and bot command documentation.
 
