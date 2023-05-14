@@ -18,11 +18,11 @@ The Live Share SDK enables robust **media synchronization** for any HTML `<video
 
 ## Install
 
-To add the latest version of the SDK to your application using npm:
+Live Share media is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share-media), and you can download through npm or Yarn. You must also install its peer dependencies, which include `@microsoft/live-share`, `fluid-framework` and `@fluidframework/azure-client`. If you are using Live Share in your tab application, you should also install `@microsoft/teams-js` version `2.11.0` or greater.
 
 ```bash
-npm install @microsoft/live-share@next --save
-npm install @microsoft/live-share-media@next --save
+npm install @microsoft/live-share @microsoft/live-share-media fluid-framework @fluidframework/azure-client --save
+npm install @microsoft/teams-js --save
 ```
 
 OR
@@ -30,8 +30,8 @@ OR
 To add the latest version of the SDK to your application using [Yarn](https://yarnpkg.com/):
 
 ```bash
-yarn add @microsoft/live-share@next
-yarn add @microsoft/live-share-media@next
+yarn add @microsoft/live-share @microsoft/live-share-media fluid-framework @fluidframework/azure-client
+yarn add @microsoft/teams-js
 ```
 
 ## Media sync overview
@@ -127,19 +127,27 @@ Example:
 ```javascript
 // ...
 
-document.getElementById("play-button").onclick = () => {
-  synchronizer.play();
+document.getElementById("play-button").onclick = async () => {
+  // Will play for all users in the session.
+  // If using role verification, this will throw an error if the user doesn't have the required role.
+  await synchronizer.play();
 };
 
-document.getElementById("pause-button").onclick = () => {
-  synchronizer.pause();
+document.getElementById("pause-button").onclick = async () => {
+  // Will pause for all users in the session.
+  // If using role verification, this will throw an error if the user doesn't have the required role.
+  await synchronizer.pause();
 };
 
-document.getElementById("restart-button").onclick = () => {
-  synchronizer.seekTo(0);
+document.getElementById("restart-button").onclick = async () => {
+  // Will seek for all users in the session.
+  // If using role verification, this will throw an error if the user doesn't have the required role.
+  await synchronizer.seekTo(0);
 };
 
 document.getElementById("change-track-button").onclick = () => {
+  // Will change the track for all users in the session.
+  // If using role verification, this will throw an error if the user doesn't have the required role.
   synchronizer.setTrack({
     trackIdentifier: "SOME_OTHER_VIDEO_SRC",
   });

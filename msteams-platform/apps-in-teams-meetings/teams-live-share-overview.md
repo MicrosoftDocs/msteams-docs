@@ -14,19 +14,16 @@ ms.date: 04/07/2022
 
 > [!VIDEO https://www.youtube.com/embed/971YIvosuUk]
 
-Live Share is an SDK designed to transform Teams apps into collaborative multiuser experiences without writing any dedicated back-end code. With Live Share, your users can co-watch, co-create, and co-edit during meetings.
+Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. With Live Share, your users can co-watch, co-create, and co-edit during meetings.
 
 Sometimes screen sharing just isn't enough, which is why Microsoft built tools like PowerPoint Live and Whiteboard directly into Teams. By bringing your web application directly to center stage in the meeting interface, your users can seamlessly collaborate during meetings and calls.
 
 > [!div class="nextstepaction"]
 > [Get started](teams-live-share-quick-start.md)
 
-> [!NOTE]
-> Live Share SDK is available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
-
 ## Feature overview
 
-Live Share has three packages that support limitless collaborative scenarios. These packages expose a set of distributed data structures (DDS), including primitive building blocks and turn-key scenarios.
+Live Share has three primary packages that support limitless collaborative scenarios. These packages expose a set of distributed data structures (DDS), including primitive building blocks and turn-key scenarios.
 
 Live Share seamlessly integrates meetings with [Fluid Framework](https://fluidframework.com/). Fluid Framework is a collection of client libraries for distributing and synchronizing shared state. Live Share provides a free, fully managed, and ready to use [Azure Fluid Relay](/azure/azure-fluid-relay/) backed by the security and global scale of Teams.
 
@@ -38,9 +35,9 @@ Features supported by the Live Share core package include:
 
 - Join a meeting's Live Share session with `LiveShareClient`.
 - Track meeting presence and synchronize user metadata with `LivePresence`.
-- Send real-time events to other clients in the session with `LiveEvent`.
 - Coordinate app state that disappears when users leave the session with `LiveState`.
 - Synchronize a countdown timer with `LiveTimer`.
+- Send real-time events to other clients in the session with `LiveEvent`.
 - Leverage any feature of Fluid Framework, such as `SharedMap` and `SharedString`.
 
 You can find more information about this package on the [core capabilities page](./teams-live-share-capabilities.md).

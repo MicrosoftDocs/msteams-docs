@@ -14,28 +14,29 @@ ms.date: 04/07/2022
 
 The Live Share SDK can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort.
 
-> [!NOTE]
-> The Live Share SDK isn't supported for anonymous users.
-
 This article focuses on how to integrate the Live Share SDK into your app and key capabilities of the SDK.
 
-## Install the JavaScript SDK
+## Pre-requisites
 
-The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or Yarn.
+### Install the JavaScript SDK
 
-### npm
+The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or Yarn. You must also install Live Share peer dependencies, which include `fluid-framework` and `@fluidframework/azure-client`. If you are using Live Share in your tab application, you should also install `@microsoft/teams-js` version `2.11.0` or greater.
 
-```bash
-npm install @microsoft/live-share@next --save
-```
-
-### yarn
+#### npm
 
 ```bash
-yarn add @microsoft/live-share@next
+npm install @microsoft/live-share fluid-framework @fluidframework/azure-client --save
+npm install @microsoft/teams-js --save
 ```
 
-## Register RSC permissions
+#### yarn
+
+```bash
+yarn add @microsoft/live-share fluid-framework @fluidframework/azure-client
+yarn add @microsoft/teams-js
+```
+
+### Register RSC permissions
 
 To enable the Live Share SDK for your meeting extension, you must first add the following RSC permissions into your app manifest:
 
@@ -89,7 +90,7 @@ To enable the Live Share SDK for your meeting extension, you must first add the 
 Follow the steps to join a session that's associated with a user's meeting:
 
 1. Initialize `LiveShareClient`.
-2. Define the data structures you want to synchronize. For example, `SharedMap`.
+2. Define the data structures you want to synchronize. For example, `LiveState` or `SharedMap`.
 3. Join the container.
 
 Example:
@@ -97,7 +98,7 @@ Example:
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import { LiveShareClient } from "@microsoft/live-share";
+import { LiveShareClient, LiveState } from "@microsoft/live-share";
 import { LiveShareHost } from "@microsoft/teams-js";
 import { SharedMap } from "fluid-framework";
 
@@ -105,7 +106,10 @@ import { SharedMap } from "fluid-framework";
 const host = LiveShareHost.create();
 const liveShare = new LiveShareClient(host);
 const schema = {
-  initialObjects: { exampleMap: SharedMap },
+  initialObjects: {
+    liveState: LiveState,
+    sharedMap: SharedMap,
+  },
 };
 const { container } = await liveShare.joinContainer(schema);
 
@@ -115,7 +119,7 @@ const { container } = await liveShare.joinContainer(schema);
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import { LiveShareClient } from "@microsoft/live-share";
+import { LiveShareClient, LiveState } from "@microsoft/live-share";
 import { LiveShareHost } from "@microsoft/teams-js";
 import { ContainerSchema, SharedMap } from "fluid-framework";
 
@@ -123,7 +127,10 @@ import { ContainerSchema, SharedMap } from "fluid-framework";
 const host = LiveShareHost.create();
 const liveShare = new LiveShareClient(host);
 const schema: ContainerSchema = {
-  initialObjects: { exampleMap: SharedMap },
+  initialObjects: {
+    exampleMap: SharedMap,
+    liveState: LiveState,
+  },
 };
 const { container } = await liveShare.joinContainer(schema);
 
@@ -135,13 +142,600 @@ const { container } = await liveShare.joinContainer(schema);
 That's all it took to setup your container and join the meeting's session. Now, let's review the different types of _distributed data structures_ that you can use with the Live Share SDK.
 
 > [!TIP]
-> Ensure that the Teams Client SDK is initialized before using the Live Share APIs.
+> Ensure that the Teams Client SDK is initialized before calling `LiveShareHost.create()`.
+
+## Live Share data structures
+
+The Live Share SDK includes a set of new distributed-data structures that extend Fluid's `DataObject` class, providing new types of stateful and stateless objects. Unlike Fluid data structures, Live Share's `LiveDataObject` classes don’t write changes to the Fluid container, enabling faster synchronization. Further, these classes were designed from the ground up for common meeting scenarios in Teams meetings. Common scenarios include synchronizing what content the presenter is viewing, displaying metadata for each user in the meeting, or displaying a countdown timer.
+
+| Live Object                                                        | Description                                                                                                                             |
+| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| [LivePresence](/javascript/api/@microsoft/live-share/livepresence) | See which users are online, set custom properties for each user, and broadcast changes to their presence.                                                            |
+| [LiveState](/javascript/api/@microsoft/live-share/livestate)       | Synchronizes any JSON serializable `state` value. |
+| [LiveTimer](/javascript/api/@microsoft/live-share/livetimer)       | Synchronize a countdown timer for a given interval.                                                            |
+| [LiveEvent](/javascript/api/@microsoft/live-share/liveevent)       | Broadcast individual events with any custom data attributes in the payload.                                                             |
+
+### LivePresence example
+
+:::image type="content" source="../assets/images/teams-live-share/live-share-presence.png" alt-text="Screenshot shows an example of showing people who available in a sessionTeams using Live Share presence.":::
+
+The `LivePresence` class makes tracking who is in the session easier than ever. When calling the `.initialize()` or `.updatePresence()` methods, you can assign custom metadata for that user, such as profile picture, the identifier for content they are viewing, and more. By listening to `presenceChanged` events, each client receives the latest `LivePresenceUser` object, collapsing all presence updates into a single record for each unique `userId`.
+
+The following are a few examples in which `LivePresence` can be used in your application:
+
+- Getting the Microsoft Teams `userId`, `displayName`, and `roles` of each user in the session.
+- Displaying custom information about each user connected to the session, such as a profile picture URL.
+- Synchronizing the coordinates in a 3D scene where each user's avatar is located.
+- Reporting each user's cursor position in a text document.
+- Posting each user's answer to an ice-breaker question during a group activity.
+
+# [JavaScript](#tab/javascript)
+
+```javascript
+import {
+  LiveShareClient,
+  LivePresence,
+  PresenceState,
+} from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+
+// Join the Fluid container
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema = {
+  initialObjects: {
+    presence: LivePresence,
+  },
+};
+const { container } = await liveShare.joinContainer(schema);
+const presence = container.initialObjects.presence;
+
+// Register listener for changes to each user's presence.
+// This should be done before calling `.initialize()`.
+presence.on("presenceChanged", (user, local) => {
+  console.log("A user presence changed:")
+  console.log("- display name:", user.displayName);
+  console.log("- state:", user.state);
+  console.log("- custom data:", user.data);
+  console.log("- change from local client", local);
+  console.log("- change impacts local user", user.isLocalUser);
+});
+
+// Define the initial custom data for the local user (optional).
+const customUserData = {
+  picture: "DEFAULT_PROFILE_PICTURE_URL",
+  readyToStart: false,
+};
+// Start receiving incoming presence updates from the session.
+// This will also broadcast the user's `customUserData` to others in the session.
+await presence.initialize(customUserData);
+
+// Send a presence update, in this case once a user is ready to start an activity.
+// If using role verification, this will throw an error if the user doesn't have the required role.
+await presence.update({
+  ...customUserData,
+  readyToStart: true,
+});
+```
+
+# [TypeScript](#tab/typescript)
+
+```TypeScript
+import {
+  LiveShareClient,
+  LivePresence,
+  PresenceState,
+  LivePresenceUser,
+} from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+
+// Declare interface for type of custom data for user
+interface ICustomUserData {
+  picture: string;
+  readyToStart: boolean;
+}
+
+// Join the Fluid container
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema = {
+  initialObjects: {
+    presence: LivePresence<ICustomUserData>,
+  },
+};
+const { container } = await liveShare.joinContainer(schema);
+const presence = container.initialObjects.presence as LivePresence<ICustomUserData>;
+
+// Register listener for changes to each user's presence.
+// This should be done before calling `.initialize()`.
+presence.on("presenceChanged", (user: LivePresenceUser<ICustomUserData>, local: boolean) => {
+  console.log("A user presence changed:")
+  console.log("- display name:", user.displayName);
+  console.log("- custom data:", user.data);
+  console.log("- state:", user.state);
+  console.log("- roles", user.roles);
+  console.log("- change from local client", local);
+  console.log("- change impacts local user", user.isLocalUser);
+});
+
+// Define the initial custom data for the local user (optional).
+const customUserData: ICustomUserData = {
+  picture: "DEFAULT_PROFILE_PICTURE_URL",
+  readyToStart: false,
+};
+// Start receiving incoming presence updates from the session.
+// This will also broadcast the user's `customUserData` to others in the session.
+await presence.initialize(customUserData);
+
+// Send a presence update, in this case once a user is ready to start an activity.
+// If using role verification, this will throw an error if the user doesn't have the required role.
+await presence.update({
+  ...initialData,
+  readyToStart: true,
+});
+```
+
+---
+
+Users joining a session from a single device will have a single `LivePresenceUser` record that is shared for all their devices. To access the latest `data` and `state` for each of their active connections, you can use the `getConnections()` API from the `LivePresenceUser` class. This will return you a list of `LivePresenceConnection` objects. You can see if a given `LivePresenceConnection` instance is from the local device using the `isLocalConnection` property.
+
+Each `LivePresenceUser` and `LivePresenceConnection` instance has a `state` property, which can be either `online`, `offline`, or `away`. An `presenceChanged` event will be emitted when a user's state changes. For example, if a user leaves a meeting, their state will change to `offline`.
+
+> [!NOTE]
+> It can take up to 20 seconds for an `LivePresenceUser`'s `state` to update to `offline` after leaving a meeting.
+
+### LiveState example
+
+:::image type="content" source="../assets/images/teams-live-share/live-share-state.png" alt-text="Screenshot shows an example of Live Share state to synchronize what planet in the solar system is actively presented to the meeting.":::
+
+The `LiveState` class enables synchronizing simple application state for everyone in a meeting. `LiveState` synchronizes a single `state` value, allowing you to synchronize any JSON serializable value, such as a `string`, `number`, or `object`.
+
+The following are a few examples in which `LiveState` can be used in your application:
+
+- Setting the user identifier of the current presenter to build a **take control** feature.
+- Synchronizing the current route path for your application to ensure everyone is on the same page. For example, `/whiteboard/:whiteboardId`.
+- Maintaining the content identifier that the current presenter is viewing. For example, an `taskId` on a task board.
+- Synchronizing the current step in a multi-round group activity. For example, the guessing phase during the Agile Poker game.
+- Keeping a scroll position in sync for a "follow me" feature.
+
+> [!NOTE]
+> Unlike `SharedMap`, the `state` value in `LiveState` will be reset after all the users disconnect from a session.
+
+Example:
+
+# [JavaScript](#tab/javascript)
+
+```javascript
+import { LiveShareClient, LiveState } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+
+// Join the Fluid container
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema = {
+  initialObjects: { appState: LiveState },
+};
+const { container } = await liveShare.joinContainer(schema);
+const { appState } = container.initialObjects;
+
+// Register listener for changes to the state.
+// This should be done before calling `.initialize()`.
+appState.on("stateChanged", (planetName, local, clientId) => {
+  // Update app with newly selected planet.
+  // To know which user made this change, you can pass the `clientId` to the `getUserForClient()` API from the `LivePresence` class.
+});
+
+// Set a default value and start listening for changes.
+// This default value will not override existing for others in the session.
+const defaultState = "Mercury";
+await appState.initialize(defaultState);
+
+// `.set()` will change the state for everyone in the session.
+// If using role verification, this will throw an error if the user doesn't have the required role.
+await appState.set("Earth");
+```
+
+# [TypeScript](#tab/typescript)
+
+```TypeScript
+import { LiveShareClient, LiveState } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+
+enum PlanetName {
+  MERCURY = "Mercury",
+  VENUS = "Venus",
+  EARTH = "Earth",
+  MARS = "Mars",
+  JUPITER = "Jupiter",
+  SATURN = "Saturn",
+  URANUS = "Uranus",
+  NEPTUNE = "Neptune",
+}
+
+// Join the Fluid container
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema = {
+  initialObjects: {
+    appState: LiveState<PlanetName>,
+  },
+};
+const { container } = await liveShare.joinContainer(schema);
+const appState = container.initialObjects.appState as LiveState<PlanetName>;
+
+// Register listener for changes to the state.
+// This should be done before calling `.initialize()`.
+appState.on("stateChanged", (planetName: PlanetName, local: boolean, clientId: string) => {
+  // Update app with newly selected planet
+  // To know which user made this change, you can pass the `clientId` to the `getUserForClient()` API from the `LivePresence` class.
+});
+
+// Set a default value and start listening for changes.
+// This default value will not override existing for others in the session.
+const defaultState = PlanetName.MERCURY;
+await appState.initialize(defaultState);
+
+// `.set()` will change the state for everyone in the session.
+// If using role verification, this will throw an error if the user doesn't have the required role.
+await appState.set(PlanetName.EARTH);
+```
+
+---
+
+### LiveEvent example
+
+:::image type="content" source="../assets/images/teams-live-share/live-share-event.png" alt-text="Screenshot shows an example of Teams client displaying notification when there's a change in the event.":::
+
+`LiveEvent` is a great way to send simple events to other clients in a meeting that are only needed at the time of delivery. It's useful for scenarios like sending session notifications or implementing custom reactions.
+
+# [JavaScript](#tab/javascript)
+
+```javascript
+import { LiveEvent, LiveShareClient } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+
+// Join the Fluid container
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema = {
+  initialObjects: { customReactionEvent: LiveEvent },
+};
+const { container } = await liveShare.joinContainer(schema);
+const { customReactionEvent } = container.initialObjects;
+
+// Register listener to receive events sent through this object.
+// This should be done before calling `.initialize()`.
+customReactionEvent.on("received", (kudosReaction, local, clientId) => {
+  console.log("Received reaction:", kudosReaction, "from clientId", clientId);
+  // To know which user made this change, you can pass the `clientId` to the `getUserForClient()` API from the `LivePresence` class.
+  // Display notification in your UI
+});
+
+// Start listening for incoming events
+await customReactionEvent.initialize();
+
+// `.send()` will send your event value to everyone in the session.
+// If using role verification, this will throw an error if the user doesn't have the required role.
+const kudosReaction = {
+  emoji: "❤️",
+  forUserId: "SOME_OTHER_USER_ID",
+};
+await customReactionEvent.send(kudosReaction);
+```
+
+# [TypeScript](#tab/typescript)
+
+```TypeScript
+import { LiveShareClient, LiveEvent } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+
+// Declare interface for type of custom data for user
+interface ICustomReaction {
+  emoji: string,
+  forUserId: "SOME_OTHER_USER_ID",
+}
+
+// Join the Fluid container
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema = {
+  initialObjects: {
+    customReactionEvent: LiveEvent<ICustomEvent>,
+  },
+};
+const { container } = await liveShare.joinContainer(schema);
+const customReactionEvent = container.initialObjects.customReactionEvent as LiveEvent<ICustomReaction>;
+
+// Register listener to receive events sent through this object.
+// This should be done before calling `.initialize()`.
+customReactionEvent.on("received", async (event: ICustomReaction, local: boolean, clientId: string) => {
+  console.log("Received reaction:", kudosReaction, "from clientId", clientId);
+  // To know which user made this change, you can pass the `clientId` to the `getUserForClient()` API from the `LivePresence` class.
+  // Display notification in your UI
+});
+
+// Start listening for incoming events
+await customReactionEvent.initialize();
+
+// `.send()` will send your event value to everyone in the session.
+// If using role verification, this will throw an error if the user doesn't have the required role.
+const kudosReaction: ICustomReaction = {
+  emoji: "❤️",
+  forUserId: "SOME_OTHER_USER_ID",
+};
+await customReactionEvent.send(kudosReaction);
+```
+
+---
+
+### LiveTimer example
+
+:::image type="content" source="../assets/images/teams-live-share/live-share-timer.png" alt-text="Screenshot shows an example of a count down timer with 9 seconds remaining.":::
+
+`LiveTimer` provides a simple countdown timer that is synchronized for everyone in a meeting. It’s useful for scenarios that have a time limit, such as a group meditation timer or a round timer for a game.
+
+# [JavaScript](#tab/javascript)
+
+```javascript
+import { LiveShareClient, LiveTimer } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+
+// Join the Fluid container
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema = {
+  initialObjects: { timer: LiveTimer },
+};
+const { container } = await liveShare.joinContainer(schema);
+const { timer } = container.initialObjects;
+
+// Register listeners for timer changes
+// This should be done before calling `.initialize()`.
+
+// Register listener for when the timer starts its countdown
+timer.on("started", (config, local) => {
+  // Update UI to show timer has started
+});
+
+// Register listener for when a paused timer has resumed
+timer.on("played", (config, local) => {
+  // Update UI to show timer has resumed
+});
+
+// Register listener for when a playing timer has paused
+timer.on("paused", (config, local) => {
+  // Update UI to show timer has paused
+});
+
+// Register listener for when a playing timer has finished
+timer.on("finished", (config) => {
+  // Update UI to show timer is finished
+});
+
+// Register listener for the timer progressed by 20 milliseconds
+timer.on("onTick", (milliRemaining) => {
+  // Update UI to show remaining time
+});
+
+// Start synchronizing timer events for users in session
+await timer.initialize();
+
+// Start a 60 second timer for users in the session.
+// If using role verification, this will throw an error if the user doesn't have the required role.
+const durationInMilliseconds = 1000 * 60;
+await timer.start(durationInMilliseconds);
+
+// Pause the timer for users in session
+// If using role verification, this will throw an error if the user doesn't have the required role.
+await timer.pause();
+
+// Resume the timer for users in session
+// If using role verification, this will throw an error if the user doesn't have the required role.
+await timer.play();
+```
+
+# [TypeScript](#tab/typescript)
+
+```TypeScript
+import {
+  LiveShareClient,
+  LiveTimer,
+  LiveTimerEvents,
+  ITimerConfig,
+} from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+
+// Join the Fluid container
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema = {
+  initialObjects: { timer: LiveTimer },
+};
+const { container } = await liveShare.joinContainer(schema);
+const timer = container.initialObjects.timer as LiveTimer;
+
+// Register listeners for timer changes
+// This should be done before calling `.initialize()`.
+
+// Register listener for when the timer starts its countdown
+timer.on(LiveTimerEvents.started, (config: ITimerConfig, local: boolean) => {
+  // Update UI to show timer has started
+});
+
+// Register listener for when a paused timer has resumed
+timer.on(LiveTimerEvents.played, (config: ITimerConfig, local: boolean) => {
+  // Update UI to show timer has resumed
+});
+
+// Register listener for when a playing timer has paused
+timer.on(LiveTimerEvents.paused, (config: ITimerConfig, local: boolean) => {
+  // Update UI to show timer has paused
+});
+
+// Register listener for when a playing timer has finished
+timer.on(LiveTimerEvents.finished, (config: ITimerConfig) => {
+  // Update UI to show timer is finished
+});
+
+// Register listener for the timer progressed by 20 milliseconds
+timer.on(LiveTimerEvents.onTick, (milliRemaining: number) => {
+  // Update UI to show remaining time
+});
+
+// Start synchronizing timer events
+await timer.initialize();
+
+// Start a 60 second timer for users in session
+// If using role verification, this will throw an error if the user doesn't have the required role.
+const durationInMilliseconds = 1000 * 60;
+await timer.start(durationInMilliseconds);
+
+// Pause the timer for users in session
+// If using role verification, this will throw an error if the user doesn't have the required role.
+await timer.pause();
+
+// Resume the timer for users in session
+// If using role verification, this will throw an error if the user doesn't have the required role.
+await timer.play();
+```
+
+---
+
+## Role verification for live data structures
+
+Meetings in Teams include calls, all-hands meetings, and online classrooms. Meeting participants might span across organizations, have different privileges, or simply have different goals. Hence, it’s important to respect the privileges of different user roles during meetings. Live objects are designed to support role verification, allowing you to define the roles that are allowed to send messages for each individual live object. For example, you could choose that only meeting presenters and organizers can control video playback, but still allow guests and attendees to request videos to watch next.
+
+> [!NOTE]
+> The `LivePresence` class doesn't support role verification. The `LivePresenceUser` object has a `getRoles` method, which returns the meeting roles for a given user.
+
+In the following example where only presenters and organizers can take control, `LiveState` is used to synchronize which user is the active presenter.
+
+# [JavaScript](#tab/javascript)
+
+```javascript
+import {
+  LiveShareClient,
+  LiveState,
+  UserMeetingRole,
+} from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+
+// Join the Fluid container
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema = {
+  initialObjects: { appState: LiveState },
+};
+const { container } = await liveShare.joinContainer(schema);
+const { appState } = container.initialObjects;
+
+// Register listener for changes to state
+appState.on("stateChanged", (state, local) => {
+  // Update local app state
+});
+
+// Set roles who can change state and start listening for changes
+const initialState = {
+  documentId: "INITIAL_DOCUMENT_ID",
+};
+const allowedRoles = [UserMeetingRole.organizer, UserMeetingRole.presenter];
+await appState.initialize(initialState, allowedRoles);
+
+async function onSelectEditMode(documentId) {
+  try {
+    await appState.set({
+      documentId,
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function onSelectPresentMode(documentId) {
+  try {
+    await appState.set({
+      documentId,
+      presentingUserId: "LOCAL_USER_ID",
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+```
+
+# [TypeScript](#tab/typescript)
+
+```TypeScript
+import { LiveShareClient, LiveState, UserMeetingRole } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+
+// Declare interface for type of custom data for user
+interface ICustomState {
+  documentId: string;
+  presentingUserId?: string;
+}
+
+// Join the Fluid container
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema = {
+  initialObjects: {
+    appState: LiveState<ICustomState>,
+  },
+};
+const { container } = await liveShare.joinContainer(schema);
+const appState = container.initialObjects.appState as LiveState<ICustomState>;
+
+// Register listener for changes to state
+appState.on("stateChanged", (state: ICustomState, local: boolean) => {
+  // Update local app state
+});
+
+// Set roles who can change state and start listening for changes
+const initialState: ICustomState = {
+  documentId: "INITIAL_DOCUMENT_ID",
+};
+const allowedRoles: UserMeetingRole[] = [UserMeetingRole.organizer, UserMeetingRole.presenter];
+await appState.initialize(initialState, allowedRoles);
+
+async function onSelectEditMode(documentId: string) {
+  try {
+    await appState.set({
+      documentId,
+    });
+  } catch (error: Error) {
+    console.error(error);
+  }
+}
+
+async function onSelectPresentMode(documentId: string) {
+  try {
+    await appState.set({
+      documentId,
+      presentingUserId: "LOCAL_USER_ID",
+    });
+  } catch (error: Error) {
+    console.error(error);
+  }
+}
+```
+
+---
+
+Listen to your customers to understand their scenarios before implementing role verification into your app, particularly for the **Organizer** role. There's no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users will be either **Organizer** or **Presenter** when collaborating within an organization. If a user is an **Attendee**, it's usually an intentional decision on behalf of a meeting organizer.
+
+In some cases, a user may have multiple roles. For example, an **Organizer** is also an **Presenter**. In addition, meeting participants that are external to the tenant hosting the meeting have the **Guest** role, but may also have **Presenter** privileges. This provides a lot of flexibility in how you use role verification in your application.
+
+> [!NOTE]
+> The Live Share SDK isn't supported for **Guest** users in channel meetings.
 
 ## Fluid distributed data structures
 
 The Live Share SDK supports any [distributed data structure](https://fluidframework.com/docs/data-structures/overview/) included in Fluid Framework. These features serve as a set of primitives you can use to build robust collaborative scenarios, such as real-time updates of a task list or co-authoring text within an HTML `<textarea>`.
 
-Following are the different types of objects available:
+Unlike the `LiveDataObject` classes mentioned above, Fluid data structures do not reset after your application is closed. This is ideal for scenarios such as the meeting side panel, where users will frequently close and re-open your app while using other tabs in the meeting, such as chat.
+
+Fluid Framework officially supports the following types of distributed data structures:
 
 | Shared Object                                                                       | Description                                                                                                                             |
 | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
@@ -217,524 +811,6 @@ function onClickAddToPlaylist(video: IVideo) {
 
 > [!NOTE]
 > Core Fluid Framework DDS objects don't support meeting role verification. Everyone in the meeting can change data stored through these objects.
-
-## Live Share data structures
-
-The Live Share SDK includes a set of new distributed-data structures that extend Fluid's `SharedObject` class, providing new types of stateful and stateless objects. Unlike Fluid data structures, Live Share's `SharedObject` classes don’t write changes to the Fluid container, enabling faster synchronization. Further, these classes were designed from the ground up for common meeting scenarios in Teams meetings. Common scenarios include synchronizing what content the presenter is viewing, displaying metadata for each user in the meeting, or displaying a countdown timer.
-
-| Live Object    | Description                                                                                                                             |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `LivePresence` | See which users are online, set custom properties for each user, and broadcast changes to their presence.                               |
-| `LiveEvent`    | Broadcast individual events with any custom data attributes in the payload.                                                             |
-| `LiveState`    | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role, for example, the presenter. |
-| `LiveTimer`    | Synchronize a countdown timer for a given interval.                                                                                     |
-
-### LivePresence example
-
-:::image type="content" source="../assets/images/teams-live-share/live-share-presence.png" alt-text="Screenshot shows an example of showing people who available in a sessionTeams using Live Share presence.":::
-
-The `LivePresence` class makes tracking who is in the session easier than ever. When calling the `.initialize()` or `.updatePresence()` methods, you can assign custom metadata for that user, such as name, profile picture, or the identifier for content they are viewing. By listening to `presenceChanged` events, each client receives the latest `LivePresenceUser` object, collapsing all presence updates into a single record for each unique `userId`.
-
-The following are a few examples in which `LivePresence` can be used in your application:
-
-- Displaying profile pictures and names of each user connected to the session.
-- Synchronizing the coordinates in a 3D scene where each user's avatar is located.
-- Reporting each user's cursor position in a text document.
-- Posting each user's answer to an ice-breaker question during a group activity.
-
-> [!NOTE]
-> The default `userId` assigned to each `LivePresenceUser` is a random UUID and is not directly tied to an AAD identity. You can override this by setting a custom `userId` to be the primary key, as shown in the example below.
-
-# [JavaScript](#tab/javascript)
-
-```javascript
-import {
-  LiveShareClient,
-  LivePresence,
-  PresenceState,
-} from "@microsoft/live-share";
-import { LiveShareHost } from "@microsoft/teams-js";
-
-// Join the Fluid container
-const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: {
-    presence: LivePresence,
-  },
-};
-const { container } = await liveShare.joinContainer(schema);
-const presence = container.initialObjects.presence;
-
-// Register listener for changes to presence
-presence.on("presenceChanged", (userPresence, local) => {
-  // Update UI with presence
-});
-
-// Start tracking presence
-presence.initialize("YOUR_CUSTOM_USER_ID", {
-  name: "Anonymous",
-  picture: "DEFAULT_PROFILE_PICTURE_URL",
-});
-
-function onUserDidLogIn(userName, profilePicture) {
-  presence.updatePresence(PresenceState.online, {
-    name: userName,
-    picture: profilePicture,
-  });
-}
-```
-
-# [TypeScript](#tab/typescript)
-
-```TypeScript
-import {
-  LiveShareClient,
-  LivePresence,
-  PresenceState,
-  LivePresenceUser,
-} from "@microsoft/live-share";
-import { LiveShareHost } from "@microsoft/teams-js";
-
-// Declare interface for type of custom data for user
-interface ICustomUserData {
-  name: string;
-  picture: string;
-}
-
-// Join the Fluid container
-const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: {
-    presence: LivePresence<ICustomUserData>,
-  },
-};
-const { container } = await liveShare.joinContainer(schema);
-const presence = container.initialObjects.presence as LivePresence<ICustomUserData>;
-
-// Register listener for changes to presence
-presence.on("presenceChanged", (userPresence: LivePresenceUser<ICustomUserData>, local: boolean) => {
-  // Update UI with presence
-});
-
-// Start tracking presence
-presence.initialize("YOUR_CUSTOM_USER_ID", {
-  name: "Anonymous",
-  picture: "DEFAULT_PROFILE_PICTURE_URL",
-});
-
-function onUserDidLogIn(userName: string, profilePicture: string) {
-  presence.updatePresence(PresenceState.online, {
-    name: userName,
-    picture: profilePicture,
-  });
-}
-```
-
----
-
-### LiveEvent example
-
-:::image type="content" source="../assets/images/teams-live-share/live-share-event.png" alt-text="Screenshot shows an example of Teams client displaying notification when there's a change in the event.":::
-
-`LiveEvent` is a great way to send simple events to other clients in a meeting that are only needed at the time of delivery. It's useful for scenarios like sending session notifications or implementing custom reactions.
-
-# [JavaScript](#tab/javascript)
-
-```javascript
-import { LiveEvent, LiveShareClient } from "@microsoft/live-share";
-import { LiveShareHost } from "@microsoft/teams-js";
-
-// Join the Fluid container
-const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: { notifications: LiveEvent },
-};
-const { container } = await liveShare.joinContainer(schema);
-const { notifications } = container.initialObjects;
-
-// Register listener for incoming notifications
-notifications.on("received", (event, local) => {
-  let notificationToDisplay;
-  if (local) {
-    notificationToDisplay = `You ${event.text}`;
-  } else {
-    notificationToDisplay = `${event.senderName} ${event.text}`;
-  }
-  // Display notification in your UI
-});
-
-// Start listening for incoming notifications
-await notifications.initialize();
-
-notifications.sendEvent({
-  senderName: "LOCAL_USER_NAME",
-  text: "joined the session",
-});
-```
-
-# [TypeScript](#tab/typescript)
-
-```TypeScript
-import { LiveShareClient, LiveEvent, ILiveEvent } from "@microsoft/live-share";
-import { LiveShareHost } from "@microsoft/teams-js";
-
-// Declare interface for type of custom data for user
-interface ICustomEvent extends ILiveEvent {
-  senderName: string;
-  text: string;
-}
-
-// Join the Fluid container
-const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: {
-    notifications: LiveEvent<ICustomEvent>,
-  },
-};
-const { container } = await liveShare.joinContainer(schema);
-const notifications = container.initialObjects.notifications as LiveEvent<ICustomEvent>;
-
-// Register listener for incoming notifications
-notifications.on("received", (event: ICustomEvent, local: boolean) => {
-  let notificationToDisplay: string;
-  if (local) {
-    notificationToDisplay = `You ${event.text}`;
-  } else {
-    notificationToDisplay = `${event.senderName} ${event.text}`;
-  }
-  // Display notification in your UI
-});
-
-// Start listening for incoming notifications
-await notifications.initialize();
-
-notifications.sendEvent({
-  senderName: "LOCAL_USER_NAME",
-  text: "joined the session",
-});
-```
-
----
-
-### LiveTimer example
-
-:::image type="content" source="../assets/images/teams-live-share/live-share-timer.png" alt-text="Screenshot shows an example of a count down timer with 9 seconds remaining.":::
-
-`LiveTimer` provides a simple countdown timer that is synchronized for everyone in a meeting. It’s useful for scenarios that have a time limit, such as a group meditation timer or a round timer for a game.
-
-# [JavaScript](#tab/javascript)
-
-```javascript
-import { LiveShareClient, LiveTimer } from "@microsoft/live-share";
-import { LiveShareHost } from "@microsoft/teams-js";
-
-// Join the Fluid container
-const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: { timer: LiveTimer },
-};
-const { container } = await liveShare.joinContainer(schema);
-const { timer } = container.initialObjects;
-
-// Register listener for when the timer starts its countdown
-timer.on("started", (config, local) => {
-  // Update UI to show timer has started
-});
-
-// Register listener for when a paused timer has resumed
-timer.on("played", (config, local) => {
-  // Update UI to show timer has resumed
-});
-
-// Register listener for when a playing timer has paused
-timer.on("paused", (config, local) => {
-  // Update UI to show timer has paused
-});
-
-// Register listener for when a playing timer has finished
-timer.on("finished", (config) => {
-  // Update UI to show timer is finished
-});
-
-// Register listener for the timer progressed by 20 milliseconds
-timer.on("onTick", (milliRemaining) => {
-  // Update UI to show remaining time
-});
-
-// Start synchronizing timer events for users in session
-await timer.initialize();
-
-// Start a 60 second timer
-const durationInMilliseconds = 1000 * 60;
-timer.start(durationInMilliseconds);
-
-// Pause the timer for users in session
-timer.pause();
-
-// Resume the timer for users in session
-timer.play();
-```
-
-# [TypeScript](#tab/typescript)
-
-```TypeScript
-import {
-  LiveShareClient,
-  LiveTimer,
-  LiveTimerEvents,
-  ITimerConfig,
-} from "@microsoft/live-share";
-import { LiveShareHost } from "@microsoft/teams-js";
-
-// Join the Fluid container
-const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: { timer: LiveTimer },
-};
-const { container } = await liveShare.joinContainer(schema);
-const timer = container.initialObjects.timer as LiveTimer;
-
-// Register listener for when the timer starts its countdown
-timer.on(LiveTimerEvents.started, (config: ITimerConfig, local: boolean) => {
-  // Update UI to show timer has started
-});
-
-// Register listener for when a paused timer has resumed
-timer.on(LiveTimerEvents.played, (config: ITimerConfig, local: boolean) => {
-  // Update UI to show timer has resumed
-});
-
-// Register listener for when a playing timer has paused
-timer.on(LiveTimerEvents.paused, (config: ITimerConfig, local: boolean) => {
-  // Update UI to show timer has paused
-});
-
-// Register listener for when a playing timer has finished
-timer.on(LiveTimerEvents.finished, (config: ITimerConfig) => {
-  // Update UI to show timer is finished
-});
-
-// Register listener for the timer progressed by 20 milliseconds
-timer.on(LiveTimerEvents.onTick, (milliRemaining: number) => {
-  // Update UI to show remaining time
-});
-
-// Start synchronizing timer events
-await timer.initialize();
-
-// Start a 60 second timer for users in session
-const durationInMilliseconds = 1000 * 60;
-timer.start(durationInMilliseconds);
-
-// Pause the timer for users in session
-timer.pause();
-
-// Resume the timer for users in session
-timer.play();
-```
-
----
-
-### LiveState example
-
-:::image type="content" source="../assets/images/teams-live-share/live-share-state.png" alt-text="Screenshot shows an example of Live Share state to synchronize what planet in the solar system is actively presented to the meeting.":::
-
-The `LiveState` class enables synchronizing simple application state for everyone in a meeting. `LiveState` synchronizes a single `state` value, allowing you to synchronize any JSON serializable value, such as a `string`, `number`, or `object`.
-
-The following are a few examples in which `LiveState` can be used in your application:
-
-- Tracking the user identifier of the current presenter to build a **take control** feature.
-- Maintaining the content identifier that the current presenter is viewing. For example, an `taskId` on a task board.
-- Synchronizing the current step in a multi-round group activity. For example, the guessing phase during the Agile Poker game.
-
-> [!NOTE]
-> Unlike `SharedMap`, the `state` value in `LiveState` will be reset after all the users disconnect from a session.
-
-Example:
-
-# [JavaScript](#tab/javascript)
-
-```javascript
-import { LiveShareClient, LiveState } from "@microsoft/live-share";
-import { LiveShareHost } from "@microsoft/teams-js";
-
-// Join the Fluid container
-const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: { appState: LiveState },
-};
-const { container } = await liveShare.joinContainer(schema);
-const { appState } = container.initialObjects;
-
-// Register listener for changes to state
-appState.on("stateChanged", (planetName, local) => {
-  // Update app with newly selected planet
-});
-
-// Set a default value and start listening for changes
-await appState.initialize("Mercury");
-
-function onSelectPlanet(planetName) {
-  appState.set(planetName);
-}
-```
-
-# [TypeScript](#tab/typescript)
-
-```TypeScript
-import { LiveShareClient, LiveState } from "@microsoft/live-share";
-import { LiveShareHost } from "@microsoft/teams-js";
-
-enum PlanetName {
-  MERCURY = "Mercury",
-  VENUS = "Venus",
-  EARTH = "Earth",
-  MARS = "Mars",
-  JUPITER = "Jupiter",
-  SATURN = "Saturn",
-  URANUS = "Uranus",
-  NEPTUNE = "Neptune",
-}
-
-// Join the Fluid container
-const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: {
-    appState: LiveState<PlanetName>,
-  },
-};
-const { container } = await liveShare.joinContainer(schema);
-const appState = container.initialObjects.appState as LiveState<PlanetName>;
-
-// Register listener for changes to state
-appState.on("stateChanged", (planetName: PlanetName, local: boolean) => {
-  // Update app to display an image of the selected planet for the selected solar system
-});
-
-// Set a default value and start listening for changes
-await appState.initialize(PlanetName.MERCURY);
-
-function onSelectPlanet(planetName: PlanetName) {
-  appState.set(planetName);
-}
-```
-
----
-
-## Role verification for live data structures
-
-Meetings in Teams include calls, all-hands meetings, and online classrooms. Meeting participants might span across organizations, have different privileges, or simply have different goals. Hence, it’s important to respect the privileges of different user roles during meetings. Live objects are designed to support role verification, allowing you to define the roles that are allowed to send messages for each individual live object. For example, you could choose that only meeting presenters and organizers can control video playback, but still allow guests and attendees to request videos to watch next.
-
-> [!NOTE]
-> The `LivePresence` class doesn't support role verification. The `LivePresenceUser` object has a `getRoles` method, which returns the meeting roles for a given user.
-
-In the following example where only presenters and organizers can take control, `LiveState` is used to synchronize which user is the active presenter.
-
-# [JavaScript](#tab/javascript)
-
-```javascript
-import {
-  LiveShareClient,
-  LiveState,
-  UserMeetingRole,
-} from "@microsoft/live-share";
-import { LiveShareHost } from "@microsoft/teams-js";
-
-// Join the Fluid container
-const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: { appState: LiveState },
-};
-const { container } = await liveShare.joinContainer(schema);
-const { appState } = container.initialObjects;
-
-// Register listener for changes to state
-appState.on("stateChanged", (state, local) => {
-  // Update local app state
-});
-
-// Set roles who can change state and start listening for changes
-const initialState = {
-  documentId: "INITIAL_DOCUMENT_ID",
-};
-const allowedRoles = [UserMeetingRole.organizer, UserMeetingRole.presenter];
-await appState.initialize(initialState, allowedRoles);
-
-function onSelectEditMode(documentId) {
-  appState.set({
-    documentId,
-  });
-}
-
-function onSelectPresentMode(documentId) {
-  appState.set({
-    documentId,
-    presentingUserId: "LOCAL_USER_ID",
-  });
-}
-```
-
-# [TypeScript](#tab/typescript)
-
-```TypeScript
-import { LiveShareClient, LiveState, UserMeetingRole } from "@microsoft/live-share";
-import { LiveShareHost } from "@microsoft/teams-js";
-
-// Declare interface for type of custom data for user
-interface ICustomState {
-  documentId: string;
-  presentingUserId?: string;
-}
-
-// Join the Fluid container
-const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: {
-    appState: LiveState<ICustomState>,
-  },
-};
-const { container } = await liveShare.joinContainer(schema);
-const appState = container.initialObjects.appState as LiveState<ICustomState>;
-
-// Register listener for changes to state
-appState.on("stateChanged", (state: ICustomState, local: boolean) => {
-  // Update local app state
-});
-
-// Set roles who can change state and start listening for changes
-const initialState: ICustomState = {
-  documentId: "INITIAL_DOCUMENT_ID",
-};
-const allowedRoles: UserMeetingRole[] = [UserMeetingRole.organizer, UserMeetingRole.presenter];
-await appState.initialize(initialState, allowedRoles);
-
-function onSelectEditMode(documentId: string) {
-  appState.set({
-    documentId,
-  });
-}
-
-function onSelectPresentMode(documentId: string) {
-  appState.set({
-    documentId,
-    presentingUserId: "LOCAL_USER_ID",
-  });
-}
-```
-
----
-
-Listen to your customers to understand their scenarios before implementing role verification into your app, particularly for the **Organizer** role. There's no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users will be either **Organizer** or **Presenter** when collaborating within an organization. If a user is an **Attendee**, it's usually an intentional decision on behalf of a meeting organizer.
 
 ## Code samples
 

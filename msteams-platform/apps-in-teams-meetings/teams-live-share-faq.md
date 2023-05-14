@@ -38,7 +38,7 @@ For more information, see [how to guide](./teams-live-share-how-to/how-to-custom
 
 <summary><b>How long is data stored in Live Share's hosted service accessible?</b></summary>
 
-Any data sent or stored through Fluid containers created by Live Share's hosted Azure Fluid Relay service is accessible for 24 hours. If you want to persist data beyond 24 hours, you can replace our hosted Azure Fluid Relay service with your own. Alternatively, you can use your own storage provider in parallel to Live Share's hosted service.
+Any data sent or stored through Fluid containers created by Live Share's hosted Azure Fluid Relay service may be accessible for up to 24 hours, though in most cases it is deleted within six hours. If you want to persist data beyond 24 hours, you can replace our hosted Azure Fluid Relay service with your own. Alternatively, you can use your own storage provider in parallel to Live Share's hosted service.
 
 <br>
 
@@ -101,8 +101,9 @@ Currently, Live Share doesn't support adding new `initialObjects` to the Fluid `
 
 To fix errors resulting from changes to `initialObjects` when testing locally in your browser, remove the hashed container ID from your URL and reload the page. If you're testing in a Teams meeting, start a new meeting and try again.
 
-If you plan to update your app with new `SharedObject` or `LiveObject` instances frequently, you should consider how you deploy new schema changes to production. While the actual risk is relatively low and short lasting, there may be active sessions at the time you roll out the change. Existing users in the session shouldn't be impacted, but users joining that session after you deployed a breaking change may have issues connecting to the session. To mitigate this, you may consider some of the following solutions:
+If you plan to update your app with new `SharedObject`, `DataObject`, or `LiveDataObject` instances, you should consider how you deploy new schema changes to production. While the actual risk is relatively low and short lasting, there may be active sessions at the time you roll out the change. Existing users in the session shouldn't be impacted, but users joining that session after you deployed a breaking change may have issues connecting to the session. To mitigate this, you may consider some of the following solutions:
 
+* Use our experimental [Live Share Turbo](https://aka.ms/liveshareturbo) or [Live Share for React](https://aka.ms/livesharereact) packages.
 * Deploy schema changes for your web application outside of normal business hours.
 * Use `dynamicObjectTypes` for any changes made to your schema, rather than changing `initialObjects`.
 
@@ -116,7 +117,7 @@ If you plan to update your app with new `SharedObject` or `LiveObject` instances
 <details>
 <summary><b>Are there limits to how many change events I can emit through Live Share?</b></summary>
 
-While Live Share is in Preview, any limit to events emitted through Live Share isn't enforced. For optimal performance, you must debounce changes emitted through `SharedObject` or `LiveObject` instances to one message per 50 milliseconds or more. This is especially important when sending changes based on mouse or touch coordinates, such as when synchronizing cursor positions, inking, and dragging objects around a page.
+While there aren't any enforced limits, you should be mindful of how many messages you send. For optimal performance, you must debounce changes emitted through Live Share to one message per 50 milliseconds or more. This is especially important when sending changes based on mouse or touch coordinates, such as when synchronizing cursor positions, inking, and dragging objects around a page.
 
 <br>
 
@@ -126,6 +127,33 @@ While Live Share is in Preview, any limit to events emitted through Live Share i
 <summary><b>Is Live Share supported for Government Community Cloud (GCC), Government Community Cloud High (GCC-High), and Department of Defense (DOD) tenants?</b></summary>
 
 Live Share isn't supported for GCC, GCC-High, and DOD tenants.
+
+<br>
+
+</details>
+
+<details>
+<summary><b>Does Live Share support external and guest users?</b></summary>
+
+Yes, Live Share supports guest and external users for most meeting types. However, guest users are not supported in channel meetings.
+
+<br>
+
+</details>
+
+<details>
+<summary><b>Does Live Share support Teams Rooms devices?</b></summary>
+
+No, Live Share does not support Teams Rooms devices at this time.
+
+<br>
+
+</details>
+
+<details>
+<summary><b>Do Live Share apps support meeting recordings?</b></summary>
+
+No, neither Live Share nor other meeting apps support Teams meeting recordings at this time.
 
 <br>
 
