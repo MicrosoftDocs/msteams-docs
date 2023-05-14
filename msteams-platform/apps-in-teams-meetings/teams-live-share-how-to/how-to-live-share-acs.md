@@ -21,7 +21,7 @@ If you use [Azure Communication Services with Teams interoperability](/azure/com
 
 1. [Obtain access](https://aka.ms/liveshareacspreview) to the Live Share for Azure Communication Services private preview.
 2. Build an app with [Azure Communication Services with Teams interoperability](/azure/communication-services/concepts/teams-interop).
-3. Complete the [Live Share quick start guide](../teams-live-share-quick-start).
+3. Complete the [Live Share quick start guide](../teams-live-share-quick-start.md).
 
 ### Install the JavaScript SDK
 

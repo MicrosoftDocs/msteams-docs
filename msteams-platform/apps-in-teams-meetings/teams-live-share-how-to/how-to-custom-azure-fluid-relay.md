@@ -114,7 +114,6 @@ Live Share has features that are beneficial to common meeting scenarios that aug
 
 * [Container mapping](#container-mapping)
 * [Live objects and role verification](#live-objects-and-role-verification)
-* [Media synchronization](#media-synchronization)
 
 ### Container mapping
 

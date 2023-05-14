@@ -14,8 +14,8 @@ In the Dice Roller sample app, users are shown a dice with a button to roll it. 
 
 1. [Set up the application](#set-up-the-application)
 2. [Join a Fluid container](#join-a-fluid-container)
-3. [Write the stage view](#write-the-stage-view)
-4. [Connect stage view to Fluid data](#connect-stage-view-to-fluid-data)
+3. [Write the meeting stage view](#write-the-stage-view)
+4. [Connect meeting stage view to Live Share](#connect-meeting-stage-view-to-live-share)
 5. [Write the side panel view](#write-the-side-panel-view)
 6. [Write the settings view](#write-the-settings-view)
 
@@ -137,7 +137,7 @@ function renderStage(diceState, elem) {
 }
 ```
 
-## Connect stage view to Live Share
+## Connect meeting stage view to Live Share
 
 ### Modify LiveState
 
