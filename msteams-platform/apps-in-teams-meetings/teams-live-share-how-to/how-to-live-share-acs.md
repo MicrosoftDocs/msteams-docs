@@ -17,7 +17,7 @@ ms.date: 07/21/2022
 
 Use [Azure Communication Services Teams interoperability](/azure/communication-services/concepts/teams-interop) in your web application to extend it to Microsoft Teams Live Share. This integration allows Azure Communication Service (ACS) users and Teams meeting users to join the same Live Share session for seamless collaboration.
 
-In this article, you'll learn how to integrate the @microsoft/live-share-acs package with the LiveShareClient to join a Live Share session for a Teams meeting. You'll also discover how to join the meeting's Live Share session through your Microsoft Teams meeting extension. Let's start!
+In this article, you'll learn how to integrate the `@microsoft/live-share-acs` package with the `LiveShareClient` to join a Live Share session for a Teams meeting. You'll also discover how to join the meeting's Live Share session through your Microsoft Teams meeting extension. Let's start!
 
 ## Pre-requisites
 
@@ -25,25 +25,23 @@ In this article, you'll learn how to integrate the @microsoft/live-share-acs pac
 2. Understand the [Azure Communication Services Teams interoperability](/azure/communication-services/concepts/teams-interop) by reading the documentation.
 3. Complete the [Live Share quick start guide](../teams-live-share-quick-start.md).
 
-### Install the JavaScript SDK
+### Install the JavaScript dependencies
 
-Install the [Live Share SDK](https://github.com/microsoft/live-share-sdk), a JavaScript package on [npm](https://www.npmjs.com/package/@microsoft/live-share). Don't forget to install Live Share peer dependencies, including fluid-framework and @fluidframework/azure-client. Next, install the @microsoft/live-share-acs package. If you're using Live Share in your tab application, install @microsoft/teams-js version 2.11.0 or newer.
+First, install [@microsoft/live-share](https://github.com/microsoft/live-share-sdk) and its peer dependencies, including `fluid-framework` and `@fluidframework/azure-client`. Then, install the `@microsoft/live-share-acs` package and its peer dependency, the `@azure/communication-calling@next` package. If you're using Live Share in your tab application, install `@microsoft/teams-js` version 2.11.0 or newer.
 
 #### npm
 
 ```bash
-npm install @azure/communication-calling@next --save
 npm install @microsoft/live-share fluid-framework @fluidframework/azure-client --save
-npm install @microsoft/live-share-acs --save
+npm install @microsoft/live-share-acs @azure/communication-calling@next --save
 npm install @microsoft/teams-js --save
 ```
 
 #### yarn
 
 ```bash
-yarn add @azure/communication-calling@next
 yarn add @microsoft/live-share fluid-framework @fluidframework/azure-client
-yarn add @microsoft/live-share-acs
+yarn add @microsoft/live-share-acs @azure/communication-calling@next
 yarn add @microsoft/teams-js
 ```
 
