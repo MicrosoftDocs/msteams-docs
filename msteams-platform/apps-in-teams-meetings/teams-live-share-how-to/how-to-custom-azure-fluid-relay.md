@@ -242,6 +242,8 @@ const { container } = await client.createContainer(injectedSchema);
 // ... ready to start app sync logic
 ```
 
+---
+
 Alternatively, you can use or override the `AzureLiveShareHost`. This allows you to get custom user display names and roles from your `AzureAudience`, rather than through Microsoft Teams.
 
 # [JavaScript](#tab/javascript)
