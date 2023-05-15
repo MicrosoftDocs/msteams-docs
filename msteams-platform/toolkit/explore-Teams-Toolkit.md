@@ -28,7 +28,7 @@ Teams Toolkit appears within Visual Studio Code as an extension. After you insta
 | Serial No. | UI Elements | Definition |
 | --- | --- | --- |
 | 1 | **Documentation** | Access the Microsoft Teams Developer documentation. |
-| 2 | **How-to Guides** | Access how-to guides for app scenario and app development. |
+| 2 | **How-to Guides** | Access the how-to guides for app scenario and app development. |
 | 3 | **Create a New App** | Create a new Teams app based on your requirement. |
 | 4 | **View Samples** | Select and build existing app samples based on common use cases for a Teams app. |
 | 5 | • **New File** <br> • **Open File** <br> • **Open Folder** <br> • **Clone Git Repository** | • Create a new file. <br> • Open an existing file. <br> • Open an existing folder. <br> • Clone an Git repository of your app project. |

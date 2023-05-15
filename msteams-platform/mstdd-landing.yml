@@ -46,10 +46,6 @@ landingContent:
 
 - title: Microsoft Build 2023
   linkLists:
-    - linkListType: reference
-      links:
-      - text: Community chat room for Microsoft Teams app developers
-        url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
       - text: Teams Toolkit
@@ -95,7 +91,10 @@ landingContent:
         url: bots/how-to/conversations/send-proactive-messages.md#create-the-conversation
       - text: Developer Portal for Teams is now available for GCC tenants
         url: concepts/build-and-test/teams-developer-portal.md
-
+    - linkListType: reference
+      links:
+      - text: Community chat room for Microsoft Teams app developers
+        url: https://gitter.im/OfficeDev/home
 
 - title: Get started
   linkLists:
