@@ -104,7 +104,7 @@ const allowedRoles: UserMeetingRole[] = [UserMeetingRole.organizer, UserMeetingR
 await mediaSession.initialize(allowedRoles);
 ```
 
-# [React](#tab/react-js)
+# [React](#tab/react)
 
 ```jsx
 import { useMediaSynchronizer } from "@microsoft/live-share-react";
@@ -227,7 +227,7 @@ const suspension: MediaSessionCoordinatorSuspension = mediaSession.coordinator.b
 suspension.end();
 ```
 
-# [React](#tab/react-js)
+# [React](#tab/react)
 
 ```jsx
 import { useMediaSynchronizer } from "@microsoft/live-share-react";

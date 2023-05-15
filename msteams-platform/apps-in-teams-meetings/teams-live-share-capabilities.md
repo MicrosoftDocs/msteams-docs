@@ -137,7 +137,7 @@ const { container } = await liveShare.joinContainer(schema);
 // ... ready to start app sync logic
 ```
 
-# [React](#tab/react-js)
+# [React](#tab/react)
 
 ```jsx
 import { LiveShareHost } from "@microsoft/teams-js";
@@ -304,7 +304,7 @@ await presence.update({
 });
 ```
 
-# [React](#tab/react-js)
+# [React](#tab/react)
 
 ```jsx
 import { useLivePresence } from "@microsoft/live-share-react";
@@ -453,7 +453,7 @@ await appState.initialize(defaultState);
 await appState.set(PlanetName.EARTH);
 ```
 
-# [React](#tab/react-js)
+# [React](#tab/react)
 
 ```jsx
 import { useLiveState } from "@microsoft/live-share-react";
@@ -579,7 +579,7 @@ const kudosReaction: ICustomReaction = {
 await customReactionEvent.send(kudosReaction);
 ```
 
-# [React](#tab/react-js)
+# [React](#tab/react)
 
 ```jsx
 import { useLiveEvent } from "@microsoft/live-share-react";
@@ -751,7 +751,7 @@ await timer.pause();
 await timer.play();
 ```
 
-# [React](#tab/react-js)
+# [React](#tab/react)
 
 ```jsx
 import { useLiveTimer } from "@microsoft/live-share-react";
@@ -1004,7 +1004,7 @@ function onClickAddToPlaylist(video: IVideo) {
 }
 ```
 
-# [React](#tab/react-js)
+# [React](#tab/react)
 
 ```jsx
 import { useSharedMap } from "@microsoft/live-share-react";
