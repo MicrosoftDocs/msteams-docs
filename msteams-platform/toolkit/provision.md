@@ -420,7 +420,7 @@ You can follow below steps to add environment variables to the .env files to use
 
     1. Add below environment variable and its value to `env\.env.{env}.user` file.
 
-    ```yml
+    ```
     SECRET_BOT_PASSWORD=<value of Azure AD application's client secret>
     ```
 
