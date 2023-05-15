@@ -166,8 +166,8 @@ items:
     ## Take a tour of tab app source code
       
     Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under **Solution Explorer**.  
-
-      :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-csharp/solution explorer-v4.png"::: 
+        
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-csharp/solution explorer-v4.png" alt-text="solution explorer"::::::
 
     Although you're free to choose any UI framework (or not to use any), this sample template code provides a scaffolding with React components.
 
@@ -201,7 +201,7 @@ items:
 
     1. Select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-csharp/teams-app-dependencies-v4.png alt-text="Teams app Dependencies":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-csharp/teams-app-dependencies-v4.png" alt-text="Teams app Dependencies":::
     
     1. Select **Microsoft 365 Account** and select **Continue**. 
 
