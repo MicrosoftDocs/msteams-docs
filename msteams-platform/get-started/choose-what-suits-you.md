@@ -59,7 +59,7 @@ Now, this is an example scenario for a TypeScript developer, who wants to build 
 
 You can also create and build your Teams app with various other tools and SDKs.
 
-:::image type="content" source="../assets/images/get-started/tools-and-sdk.png" alt-text="Screenshot shows you the list of tools and SDKs for you to build your Teams app.":::
+:::image type="content" source="../assets/images/get-started/tools-and-sdk.png" alt-text="Screenshot shows you the list of tools and SDKs for you to build your Teams app."lightbox="../assets/images/get-started/tools-and-sdk.png":::
 
 Teams supports all the tools and SDKs shown in the image and you can choose tools and SDKS based on your requirements.
 

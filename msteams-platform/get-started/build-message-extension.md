@@ -11,7 +11,9 @@ Message extensions allow the users to interact with your web service through but
 
 :::image type="content" border="false" source="../assets/images/get-started/get-started-me.png" alt-text="Illustration showing a conceptual message extension":::
 
-In this tutorial, get familiarized with a basic Teams tab app in one of the following ways:
+In this tutorial, you'll learn to build a search based message extension app, this app allows the users to search npm packages from the Node Package Manager (npm) directory.
+
+Get familiarized with search based message extension app in one of the following ways:
 
 * **Teams Toolkit codespaces**: The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you.
 * **Step-by-step guide**: Allows you to create a Teams app from scratch with all development environment setup.
