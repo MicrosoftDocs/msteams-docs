@@ -18,9 +18,9 @@ A configuration page is a special type of [content page](content-page.md). The u
 
 To add customizable experience to your personal (static) tab, add your [configuration logic](#configuration-page-for-tabs) to your `contentUrl` code space. If you are [migrating your configurable tab to personal (static) tab](~/tabs/how-to/create-channel-group-tab.md#migrate-your-configurable-tab-to-personal-static-tab) move your configuration logic from `configurationUrl` code space to `contentURL` code space.
 
-Your configuration logic must display a dialog that asks the user to pin the tab, that is, pin the `contentUrl`. If you are making any API calls or requests in the configuration dialog, add them to your `contentURL` code space. The `getSettings` and `setSettings` APIs that you would need to add in your configuration dialog can be used from `contentUrl`. That means that you can use `getSettings` and `setSettings` in your `contentUrl` to display the content or use it in `configurationUrl` to customize the content displayed for that tab. This allows you to get your configuration page ready for tabs. 
+Your configuration logic must display a dialog that asks the user to pin the tab (pin the `contentUrl`). If you are making any API calls or requests in the configuration dialog, add them to your `contentURL` code space. The `getSettings` and `setSettings` APIs that you would need to add in your configuration dialog can be used from `contentUrl`. That means that you can use `getSettings` and `setSettings` in your `contentUrl` to display the content or use it in `configurationUrl` to customize the content displayed for that tab. This allows you to get your configuration page ready for tabs. 
 
-If your personal tab serves custom content based on the context that the tab is pinned, then you need to set a `contentUrl`. For example, you might decide to serve a slightly different experience in meetings and choose to pin a setup or a bootstrap page where a new `contentUrl` is set at runtime in the tab itself. Such as, if your `contentUrl` is `https://wwww.contoso.com/teamsapp/setup`, then this page is pinned where you can change the `contentUrl` at runtime such as following: 
+If your personal tab serves custom content based on the context that the tab is pinned, then you need to set `contentUrl`. For example, you might decide to serve a slightly different experience in meetings and choose to pin a setup or a bootstrap page where a new `contentUrl` is set at runtime in the tab itself. If your `contentUrl` is `https://wwww.contoso.com/teamsapp/setup`, then this page is pinned where you can change `contentUrl` at runtime such as following: 
 
 ```javascript
 
@@ -48,11 +48,11 @@ After the preceding code executes, the tabs `contentUrl` is changed for that
 > [!NOTE]
 > You can't change the `displayName` or `entitId` of your tab that is defined by the app manifest. 
 
-If your [configurable tab](#configuration-page-for-tabs) allowed users to edit the tab after it was pinned, that is `canUpdateConfiguration: true` then you must continue to keep the `configurableTab` property in your app manifest in order to ensure users can edit pre-existing pinned configurable tabs
+If your [configurable tab](#configuration-page-for-tabs) allows users to edit the tab after it is pinned, which means that `canUpdateConfiguration` is set to `true`, then you must continue to keep the `configurableTab` property in your app manifest in order to ensure that the users can edit the pre-existing pinned configurable tabs.
 
 ## Determine your `contentUrl`
 
-With `configurableTabs`, the `contentUrl` is defined at runtime by the user in the tab configuration dialog, which is served from the `configurationUrl` in the manifest. The outcome of this dialog is a `contentUrl` and some other properties. 
+With `configurableTabs`, the `contentUrl` is defined at runtime by the user in the tab configuration dialog, which is served from the `configurationUrl` in the manifest. The outcome of this dialog is `contentUrl` and some other properties. 
 
 If your personal (static) tab always pins the same `contentUrl`, you can create a `staticTab` object in your app manifest and set your `contentUrl`. This will be pinned when the user selects your app to be pinned.
 
