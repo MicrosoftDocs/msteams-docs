@@ -188,8 +188,6 @@ In `teamsapp.local.yml`, edit `args` of `cli/runNpmCommand` action.
 
 Teams Toolkit by default creates a set of `teamsApp` actions to manage app package. You can update those in `teamsapp.local.yml` to use your own app package.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/app-package-path.png" alt-text="use your own app package path":::
-
 ```yml
 # teamsapp.local.yml
 ...
@@ -252,7 +250,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
         "configurations": [
            "Attach to Frontend (Edge)",
            // "Attach to Bot",
-           // "Attach to Backend""
+           // "Attach to Backend"
            ],
            "preLaunchTask": "Start Teams App Locally",
            "presentation": {
