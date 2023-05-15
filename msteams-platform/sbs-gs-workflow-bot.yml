@@ -174,6 +174,7 @@ items:
     | `infra\azure.parameters.json` | Parameters file for Azure BICEP provision for every environment. |
     | `src\adaptiveCards\` | Templates for Adaptive Card.|
     | `src\adaptiveCards\ helloworldCommandResponse.json `|A generated Adaptive Card that is sent to Teams. |	
+    | `src\cardActions\dostuffActionHandler` | Responds to the doStuff card action. |
     | `src\commands\helloworldCommandHandler.ts`|Responds to the command message. |
     | `src\internal\intialize.ts` | Application initialization and bot message handling. |
     | `src\cardModels.ts` |Application entry point and `restify` handlers for the workflow bot. |
