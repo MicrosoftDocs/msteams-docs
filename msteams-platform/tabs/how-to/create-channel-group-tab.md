@@ -1033,7 +1033,7 @@ Teams has extended the personal (static) tab capability to support channel, grou
 
 To change your configurable tab to personal (static) tab, make the following changes:
 
-1. Move your configuration logic out of your `configurationUrl` codespace to your `contentUrl` codespace. For more information, see [configuration page.](~/tabs/how-to/create-tab-pages/configuration-page.md) 
+1. Move your configuration logic out of your `configurationUrl` code space to your `contentUrl` code space. For more information, see [configuration page.](~/tabs/how-to/create-tab-pages/configuration-page.md) 
 1. Add the `staticTabs` property to your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with `scopes` and `context` parameters. For more information, see [personal (static) tab.](~/tabs/how-to/create-personal-tab.md#extend-personal-tabs-to-group-chat-and-channels)
 
 If your [configurable tab](~/tabs/how-to/create-tab-pages/configuration-page.md#configuration-page-for-tabs) allowed users to edit the tab after it was pinned, that is `canUpdateConfiguration: true` then you must continue to keep the `configurableTab` property in your app manifest in order to ensure users can edit pre-existing pinned configurable tabs.

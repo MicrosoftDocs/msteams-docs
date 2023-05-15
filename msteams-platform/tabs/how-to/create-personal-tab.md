@@ -614,7 +614,7 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 
 ## Extend personal tabs to group chat and channels
 
-You can extend personal tabs to group chat, channel, and meetings. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one tab at a time. The following lists helps you build a personal tab that works in every context:
+You can extend personal tabs to group chat, channel, and meetings. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one tab at a time. The following list helps you build a personal tab that works in every context:
 
 * Don't embed your entire web app in Teams, as users often don't find this helpful. Instead, think about what your app can uniquely do inside Teams. For example, can you serve an app experience that consolidates all your apps content, such as displaying all the surveys in a meeting.
 * Your app needs to be responsive down to 320 pixels width to align with the meeting side panel and  Teams mobile experience. 

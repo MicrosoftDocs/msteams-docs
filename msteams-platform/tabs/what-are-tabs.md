@@ -37,7 +37,7 @@ There are two types of tabs available in Teams, personal and channel or group. [
 You can extend personal tabs to different scopes and pre-pin tabs to include the pre-pinned tabs in meeting templates. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one tab at a time.
 
 
-Personal tabs in personal scope continues to work the same and personal tabs can be extended to work in a channel or group chat to provide a configurable experience. 
+Personal tabs in personal scope continue to work the same and personal tabs can be extended to work in a channel or group chat to provide a configurable experience. 
 
 Following are few benefits of personal tabs in chats, channel, and meeting tabs:
 
@@ -121,7 +121,7 @@ Whether you choose to expose your tab within the channel or group, or personal s
 
 For channel or group tabs, you can also create an extra configuration page. This page allows you to configure content page URL, typically by using URL query string parameters to load the appropriate content for that context. This is because your channel or group tab can be added to multiple teams or group chats. On each subsequent install, your users can configure the tab, allowing you to tailor the experience as required. When users add or configure a tab, a URL is associated with the tab that is presented in the Teams user interface (UI). Configuring a tab simply adds more parameters to that URL. For example, when you add the Azure Boards tab, the configuration page allows you to choose, which board the tab loads. The configuration page URL is specified by the `configurationUrl` property in the `configurableTabs` array in your app manifest.
 
-For personal (static) tabs you can pin a `contentUrl` to chat or channel tabs. This allows you to skip the mandatory configuration dialog and get your users use app much faster. You can still change the `contentUrl` at runtime. This also allows you to build one tab object that works in all surface areas of Teams. For more information, see [migrate your configurable tab to personal (static) tab.](~/tabs/how-to/create-channel-group-tab.md#migrate-your-configurable-tab-to-personal-static-tab)
+For personal (static) tabs you can pin a `contentUrl` to chat or channel tabs. This allows you to skip the mandatory configuration dialog and get your users to use app much faster. You can still change the `contentUrl` at runtime. This also allows you to build one tab object that works in all surface areas of Teams. For more information, see [migrate your configurable tab to personal (static) tab.](~/tabs/how-to/create-channel-group-tab.md#migrate-your-configurable-tab-to-personal-static-tab)
 
 You can have multiple channels or group tabs, and up to 16 personal tabs per app.
 
