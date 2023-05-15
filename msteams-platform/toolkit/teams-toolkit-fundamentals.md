@@ -68,4 +68,4 @@ You can access Teams Developer Portal where you can configure, distribute, and m
 
 ## See also
 
-* [Install Teams Toolkit](install-Teams-Toolkit.md)
+[Install Teams Toolkit](install-Teams-Toolkit.md)
