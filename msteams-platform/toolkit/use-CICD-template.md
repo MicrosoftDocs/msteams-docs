@@ -37,17 +37,17 @@ You can set up pipelines with the following platforms:
 
 TeamsFx supports four types of workflow templates:
 
-1. **CI** - Help checkout code, build, and run test.
-1. **CD** - Help checkout code, build, test, and deploy to cloud.
-1. **Provision** - Help create or update resources in cloud and Teams app registrations.
-1. **Publish** - Help publish Teams app to tenants.
+1. **CI**: Help checkout code, build, and run test.
+1. **CD**: Help checkout code, build, test, and deploy to cloud.
+1. **Provision**: Help create or update resources in cloud and Teams app registrations.
+1. **Publish**: Help publish Teams app to tenants.
 
 ## Prepare credentials
 
 Two categories of sign in credentials are involved in CI/CD workflows:
 
-1. **M365** - M365 credentials are required for running Provision, Publish, and SPFx based projects' CD workflows.
-2. **Azure** - Azure credentials are required for running Azure hosted projects' Provision and CD workflows.
+1. **M365**: M365 credentials are required for running Provision, Publish, and SPFx based projects' CD workflows.
+2. **Azure**: Azure credentials are required for running Azure hosted projects' Provision and CD workflows.
 
 > [!NOTE]
 > Azure subscription id is required to be set in environment variable or `env/.env.*` files before running Provision workflows. The variable name used is `AZURE_SUBSCRIPTION_ID`. Also, please don't forget to commit and push files `env/.env.*` into Git repositories or set pipelines' environment variables as they're ignored by `.gitignore` file by default.
@@ -91,27 +91,27 @@ To set up pipelines with GitHub for CI/CD:
 
 To customize the CI workflow, you can do the following:
 
-1. Change the trigger - By default, the CI workflow is triggered when a new pull request is created against `dev` branch.
-1. Add scripts to build the project - By default, the `Build the project` step is commented.
-1. Add scripts to run unit test - By default, the `Run unit test` step is commented.
+1. Change the trigger: By default, the CI workflow is triggered when a new pull request is created against `dev` branch.
+1. Add scripts to build the project: By default, the `Build the project` step is commented.
+1. Add scripts to run unit test: By default, the `Run unit test` step is commented.
 
 ### Customize CD workflow
 
 To customize the CD workflow, you can do the following:
 
-1. Change the trigger - By default, the CD workflow is triggered when new commits are pushed into `main` branch.
-1. Change the value of environment variable `TEAMSFX_ENV_NAME` - By default, the value is `dev`.
-1. Change the value of environment variable `TEAMSFX_CLI_VERSION` - By default, the value is `1.*`.
-1. Add scripts to build the project - By default, the `Build the project` step is commented.
-1. Add scripts to run unit test - By default, the `Run unit test` step is commented.
+1. Change the trigger: By default, the CD workflow is triggered when new commits are pushed into `main` branch.
+1. Change the value of environment variable `TEAMSFX_ENV_NAME`: By default, the value is `dev`.
+1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `1.*`.
+1. Add scripts to build the project: By default, the `Build the project` step is commented.
+1. Add scripts to run unit test: By default, the `Run unit test` step is commented.
 
 ### Customize Provision and Publish workflow
 
 To customize the Provision and Publish workflow, you can do the following:
 
-1. Change the trigger - By default, the workflow is triggered manually.
-1. Change the value of environment variable `TEAMSFX_ENV_NAME` - By default, the value is `dev`.
-1. Change the value of environment variable `TEAMSFX_CLI_VERSION` - By default, the value is `1.*`.
+1. Change the trigger: By default, the workflow is triggered manually.
+1. Change the value of environment variable `TEAMSFX_ENV_NAME`: By default, the value is `dev`.
+1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `1.*`.
 
 ## Set up pipelines with Azure DevOps
 
@@ -134,27 +134,27 @@ To set up pipelines with Azure DevOps for CI/CD:
 
 To customize the CI pipeline, you can do the following:
 
-1. Change the trigger - By default, the CI pipeline is triggered when a new pull request is created against `dev` branch.
-1. Add scripts to build the project - By default, the `Build the project` step is commented.
-1. Add scripts to run unit test - By default, the `Run unit test` step is commented.
+1. Change the trigger: By default, the CI pipeline is triggered when a new pull request is created against `dev` branch.
+1. Add scripts to build the project: By default, the `Build the project` step is commented.
+1. Add scripts to run unit test: By default, the `Run unit test` step is commented.
 
 ### Customize CD pipeline
 
 To customize the CD pipeline, you can do the following:
 
-1. Change the trigger - By default, the CD pipeline is triggered when new commits are pushed into `main` branch.
-1. Change the value of environment variable `TEAMSFX_ENV_NAME` - By default, the value is `dev`.
-1. Change the value of environment variable `TEAMSFX_CLI_VERSION` - By default, the value is `1.*`.
-1. Add scripts to build the project - By default, the `Build the project` step is commented.
-1. Add scripts to run unit test - By default, the `Run unit test` step is commented.
+1. Change the trigger: By default, the CD pipeline is triggered when new commits are pushed into `main` branch.
+1. Change the value of environment variable `TEAMSFX_ENV_NAME`: By default, the value is `dev`.
+1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `1.*`.
+1. Add scripts to build the project: By default, the `Build the project` step is commented.
+1. Add scripts to run unit test: By default, the `Run unit test` step is commented.
 
 ### Customize Provision and Publish pipelines
 
 To customize the Provision and Publish pipeline, you can do the following:
 
-1. Change the trigger - By default, the workflow is triggered manually.
-1. Change the value of environment variable `TEAMSFX_ENV_NAME` - By default, the value is `dev`.
-1. Change the value of environment variable `TEAMSFX_CLI_VERSION` - By default, the value is `1.*`.
+1. Change the trigger: By default, the workflow is triggered manually.
+1. Change the value of environment variable `TEAMSFX_ENV_NAME`: By default, the value is `dev`.
+1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `1.*`.
 
 ## Set up pipelines with Jenkins
 
@@ -173,27 +173,27 @@ To set up pipelines with Jenkins for CI/CD:
 
 To customize the CI pipeline, you can do the following:
 
-1. Change the trigger - By default, the CI pipeline is triggered periodically.
-1. Add scripts to build the project - By default, the `Build the project` step is commented.
-1. Add scripts to run unit test - By default, the `Run unit test` step is commented.
+1. Change the trigger: By default, the CI pipeline is triggered periodically.
+1. Add scripts to build the project: By default, the `Build the project` step is commented.
+1. Add scripts to run unit test: By default, the `Run unit test` step is commented.
 
 ### Customize CD pipeline
 
 To customize the CD pipeline, you can do the following:
 
-1. Change the trigger - By default, the CD pipeline is triggered periodically.
-1. Change the value of environment variable `TEAMSFX_ENV_NAME` - By default, the value is `dev`.
-1. Change the value of environment variable `TEAMSFX_CLI_VERSION` - By default, the value is `1.*`.
-1. Add scripts to build the project - By default, the `Build the project` step is commented.
-1. Add scripts to run unit test - By default, the `Run unit test` step is commented.
+1. Change the trigger: By default, the CD pipeline is triggered periodically.
+1. Change the value of environment variable `TEAMSFX_ENV_NAME`: By default, the value is `dev`.
+1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `1.*`.
+1. Add scripts to build the project: By default, the `Build the project` step is commented.
+1. Add scripts to run unit test: By default, the `Run unit test` step is commented.
 
 ### Customize Provision and Publish pipelines
 
 To customize the Provision and Publish pipeline, you can do the following:
 
-1. Change the trigger - By default, the pipeline is triggered periodically.
-1. Change the value of environment variable `TEAMSFX_ENV_NAME` - By default, the value is `dev`.
-1. Change the value of environment variable `TEAMSFX_CLI_VERSION` - By default, the value is `1.*`.
+1. Change the trigger: By default, the pipeline is triggered periodically.
+1. Change the value of environment variable `TEAMSFX_ENV_NAME`: By default, the value is `dev`.
+1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `1.*`.
 
 ## Set up pipelines for other platforms
 
