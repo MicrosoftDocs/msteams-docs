@@ -10,9 +10,9 @@ The notification bot proactively sends messages in Teams channel or group chat o
 
 :::image type="content" border="false" source="../assets/images/get-started/get-started-bot.png" alt-text="Illustration showing a conceptual notification bot":::
 
-In this tutorial, get familiarized with a basic Teams tab app in one of the following ways:
+In this tutorial, get familiarized with a notification bot app in one of the following ways:
 
-* **Teams Toolkit codespaces**: The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you.
+* **Teams Toolkit codespaces**: The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where the Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you.
 * **Step-by-step guide**: Allows you to create a Teams app from scratch with all development environment setup.
 
 # [Teams Toolkit codespaces](#tab/teamstoolkitcodespaces)
@@ -26,7 +26,7 @@ Before you create your codespace, ensure that you have:
 > [!TIP]
 > [GitHub codespaces](https://github.com/features/codespaces) offers the free plan up to a fixed amount of usage every month. If you need to free up the space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespaces that you no longer need.
 
-To use codespaces for creating a Teams notification bot:
+To create a Teams notification bot with codespaces, follow the steps:
 
 <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=dol%2Fcodespaces&repo=348288141&machine=basicLinux32gb&devcontainer_path=.devcontainer%2Fnotification-codespaces%2Fdevcontainer.json&location=WestUs2" target="_blank"><img src="https://github.com/codespaces/badge.svg" alt="Open hello-world tab in GitHub Codespaces"></a>
 
@@ -67,13 +67,13 @@ To use codespaces for creating a Teams notification bot:
 
     > [!Tip]
     >
-    > In real time, events are triggered by an external source, such as third party API. To get an event triggering, you can send an event manually via curl commands on terminal.
+    > In real time, events are triggered by an external source, such as a third party API. To get an event triggering, you can send an event manually via curl commands on terminal.
 
-   App sends an Adaptive Card to your Teams.
+   The notification bot app sends an notification as an Adaptive Card to your Teams client:
 
    :::image type="content" source="../assets/images/get-started/codespace/notification-bot.png" alt-text="Screenshot shows your notification bot loaded in the Teams client.":::
 
-   You've successfully created the notification bot and loaded in the Teams client.
+   You've successfully created the notification bot and loaded it in the Teams client.
 
 # [Step-by-step guide](#tab/step-by-stepguide)
 
@@ -86,7 +86,12 @@ Unlike codespaces, where everything you need is packaged for you already, you ne
 
 ---
 
-If you want to build message extension, go to another section:
+If you want to build message extension, go to:
 
 > [!div class="nextstepaction"]
 > [Build message extension](build-message-extension.md)
+
+If you want to build basic tab app, go to:
+
+> [!div class="nextstepaction"]
+> [Build your basic tab app](build-basic-tab-app.md)

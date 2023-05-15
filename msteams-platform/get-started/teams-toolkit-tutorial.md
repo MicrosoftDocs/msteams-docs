@@ -6,11 +6,11 @@ ms.topic: reference
 ---
 # Teams app tutorials and code samples
 
-You can build your own Microsoft Teams app with different capabilities using the tutorials and code samples.
+You can build your own Microsoft Teams app with different capabilities using the following tutorials and code samples.
 
 ## Teams app tutorials
 
-Now, let's build your Teams app. You can use the following language or framework and prepare your development environment for building your app.
+Now, let's build your Teams app. You can use the following languages or framework and prepare your development environment for building your app.
 
 | &nbsp; | **Tab** | **Bot** | **Message extension** |
 | --- | --- | --- | --- |
@@ -19,4 +19,4 @@ Now, let's build your Teams app. You can use the following language or framework
 
 ## Code samples
 
-Code samples are designed to help understand and build your own Teams app with different capabilities and scenarios. To learn more about the list of code samples, see [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+Code samples are designed to help understand and build your own Teams app with different capabilities and scenarios. To learn more about the code samples, see [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).

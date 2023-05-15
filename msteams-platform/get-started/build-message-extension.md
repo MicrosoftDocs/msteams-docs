@@ -7,7 +7,7 @@ ms.topic: reference
 
 # Build message extension
 
-Message extensions allow the users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Teams client in the form of a richly formatted card.
+A message extension allows the users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Teams client in the form of a richly formatted card.
 
 :::image type="content" border="false" source="../assets/images/get-started/get-started-me.png" alt-text="Illustration showing a conceptual message extension":::
 
@@ -15,7 +15,7 @@ In this tutorial, you'll learn to build a search based message extension app, th
 
 Get familiarized with search based message extension app in one of the following ways:
 
-* **Teams Toolkit codespaces**: The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you.
+* **Teams Toolkit codespaces**: The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where the Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you.
 * **Step-by-step guide**: Allows you to create a Teams app from scratch with all development environment setup.
 
 # [Teams Toolkit codespaces](#tab/teamstoolkitcodespaces)
@@ -78,6 +78,21 @@ Unlike codespaces, where everything you need is packaged for you already, you'll
 > [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml)
 
 ---
+
+If a bot is what you are interested in, go to:
+
+> [!div class="nextstepaction"]
+> [Start building a bot](build-notification-bot.md)
+
+If you want to build basic tab app, go to:
+
+> [!div class="nextstepaction"]
+> [Build your basic tab app](build-basic-tab-app.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Choose what suits you](choose-what-suits-you.md)
 
 ## See also
 
