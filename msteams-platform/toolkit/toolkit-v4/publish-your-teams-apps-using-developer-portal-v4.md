@@ -10,6 +10,12 @@ ms.date: 07/29/2022
 
 # Publish your Teams apps using Developer Portal v4
 
+> [!IMPORTANT]
+>
+> We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+>
+> [Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
+
 You can configure and manage your app in Developer Portal within Teams Toolkit.
 
 ## To Publish app using Developer Portal

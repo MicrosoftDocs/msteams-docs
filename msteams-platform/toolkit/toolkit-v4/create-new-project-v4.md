@@ -10,6 +10,12 @@ zone_pivot_groups: teams-app-platform
 ---
 # Create a new Teams project using Teams Toolkit v4
 
+> [!IMPORTANT]
+>
+> We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+>
+> [Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
+
 In this section, you can learn how to create a new Teams project using Microsoft Visual Studio Code and Visual Studio.
 
 ::: zone pivot="visual-studio-code"
