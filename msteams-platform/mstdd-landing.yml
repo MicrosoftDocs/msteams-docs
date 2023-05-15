@@ -52,7 +52,7 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
-      - text: Static tabs that works everywhere
+      - text: Static tabs that work everywhere
         url: tabs/what-are-tabs.md
       - text: Develop your apps with Teams Toolkit
         url: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md

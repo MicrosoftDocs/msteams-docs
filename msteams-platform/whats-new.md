@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 May**
 
-***May 09, 2023***: [Static tabs that works everywhere](tabs/what-are-tabs.md)
+***May 09, 2023***: [Static tabs that work everywhere](tabs/what-are-tabs.md)
 
 :::column-end:::
 :::row-end:::
