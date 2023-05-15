@@ -82,7 +82,7 @@ You can customize Azure AD manifest template to update Azure AD application.
            {
                "appId": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
                "permissionIds": [
-                    "{{state.fx-resource-aad-app-for-teams.oauth2PermissionScopeId}}"
+                    "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
                 ]
            }
            ...

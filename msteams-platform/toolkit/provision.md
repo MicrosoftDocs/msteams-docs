@@ -35,7 +35,7 @@ Teams app in Teams Developer Portal.
 
 #### How to use it
 
-```typescript
+```yml
   - uses: teamsApp/create
     with:
       # #required. Name of Teams app
@@ -394,7 +394,7 @@ You can follow below steps to add environment variables to the .env files to use
     >
     > * If you don't use `aadApp/create` action to create Azure AD application, you can add necessary environment variables with your preferred name without following above steps.
     >
-    > * Ensure not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you get a warning with instructions about how to manually update the Azure AD app. Follow the instructions to update your Azure AD app after provision.
+    > * Ensure not to share the same Azure AD app in multiple environments.
 
 #### Use an existing Azure AD app for your bot
 
@@ -404,11 +404,11 @@ You can follow below steps to add environment variables to the .env files to use
 
 1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. Below is the default `writeToEnvironmentFile` definition if you create projects using Teams Toolkit:
 
- ```typescript
+```yml
  writeToEnvironmentFile:
    botId: BOT_ID
    botPassword: SECRET_BOT_PASSWORD
- ```
+```
 
 1. Add values for each environment variable from step 2.
 

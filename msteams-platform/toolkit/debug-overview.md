@@ -153,8 +153,6 @@ In `.vscode/tasks.json` under `"Validate prerequisites"` > `"args"` > `"prerequi
 
 In `teamsapp.local.yml`, edit `args` of `cli/runNpmCommand` action.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/customize-npm-install.png" alt-text="Install npm package":::
-  
 ```yml
 # teamsapp.local.yml
 ...
@@ -216,9 +214,6 @@ Teams Toolkit by default creates a set of `teamsApp` actions to manage app packa
 1. In `.vscode/tasks.json` under `"Start Teams App Locally"`, you can update `"Start Local tunnel"`.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-local-tunnel.png" alt-text="Use your own tunnel":::
-1. Launch your own tunnel service then update `"BOT_DOMAIN"` and `"BOT_ENDPOINT"` to your own values in `env/.env.local`.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/set-up-bot.png" alt-text="update messaging endpoint":::
 
 ```javascript
 # env/.env.local
