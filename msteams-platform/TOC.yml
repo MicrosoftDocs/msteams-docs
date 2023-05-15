@@ -179,8 +179,6 @@
           href: toolkit/TeamsFx-collaboration.md
         - name: Set up CI/CD pipelines
           href: toolkit/use-CICD-template.md  
-        - name: Sideload and test app in Teams environment
-          href: toolkit/sideload-and-test-app.md 
         - name: Test app behavior in different environment
           href: toolkit/test-app-behavior.md
     - name: Publish your Teams app
