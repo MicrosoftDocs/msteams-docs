@@ -35,13 +35,11 @@ If you've already built some Teams apps, you can now extend your apps across Mic
 
 If you would like to extend existing apps, learn how at [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md).
 
-## Dive deeper
-
-Choose to customize your app with features and tools, such as user authentication, Microsoft Graph, and Developer Portal.
-
-You've had a short tour through some of Teams platform features. You're ready to see how you can use them to build your app. Let's head towards the solution for the user story.
-
 ## Next step
+
+You've had a short tour through some of Teams platform features. You're ready to see how you can use them to build your app.
+
+Let's head towards the solution for the user story.
 
 > [!div class="nextstepaction"]
 > [The Teams solution](overview-solution.md)

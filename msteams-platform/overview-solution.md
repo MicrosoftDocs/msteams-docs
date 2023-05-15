@@ -46,3 +46,20 @@ Now, let start with building basic Teams app:
 > [Get started](get-started/get-started-overview.md).
 
 If you're an experienced developer and wants to learn more about, see [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md) to build your Teams apps using various tools and SDKs, based on your requirements.
+
+## Dive deeper
+
+Choose to customize your app with features and tools, such as user authentication, Microsoft Graph, and Developer Portal.
+
+Lets go through Teams Developer Documentation based on your requirement for building Teams app:
+
+| What do you want? | Where to go |
+| --------| --------|
+| If you're new to Teams app development | [Get started](get-started/get-started-overview.md) |
+|If you've created app with Teams before | <li> Tools and SDKs <br><li> Build modules for tabs, bots, message extensions, meeting app, and more. |
+| If you want to find more information about the tools and SDKs options that are available with Teams | [Choose what suits you](get-started/choose-what-suits-you.md) |
+
+## See also
+
+- [Extend a Teams personal tab across Microsoft 365 app](m365-apps/extend-m365-teams-personal-tab.md)
+-
