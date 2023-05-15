@@ -37,13 +37,13 @@ The process to create a new Teams app is similar for all types of apps.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="screenshot shows the Create New Project button in the Teams Toolkit sidebar.":::
 
-1. Select **Start with a Teams capability**.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-new-app.PNG" alt-text="Screenshot shows the Create a New App dropdown.":::
-
 1. In this example, we select **Tab** as app capability.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Select App Capability":::
+
+1. Select **Basic Tab** as app capability.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-basic-tab.png" alt-text="Select App Feature using a Tab as Basic Tab.":::
 
 1. Select **JavaScript** as the programming language.
 
@@ -91,9 +91,9 @@ The following example shows a basic Teams tab app directory structure:
 
 | Folder name | Contents |
 | --- | --- |
-| `.vscode` | settings for VS Code to build and debug your Teams app. |
+| `.vscode` | Settings for VS Code to build and debug your Teams app. |
 | `appPackage` | Teams manifest file and icon files that Teams used to recognize your Teams app. |
-| `env` | stores different environment parameters. |
+| `env` | Stores different environment parameters. |
 | `infra` | Azure `bicep` template files. Used for deploy your Teams app to Azure. |
 | `src` | Source code for the Tab capability, including your front-end app, UI components and the privacy notice, terms of use, |
 | `src\components\` | The main app which handles the initialization and routing.  |
@@ -123,7 +123,7 @@ The new project folder contains the following content:
 
 | Folder name | Contents |
 | --- | --- |
-| `.vscode` | settings for VS Code to build and debug your Teams app. |
+| `.vscode` | Settings for VS Code to build and debug your Teams app. |
 | `appPackage` | Teams manifest file and icon files that Teams used to regconized your Teams app. |
 | `env` | stores different environment parameters. |
 | `infra` | Azure `bicep` template files. Used for deploy your Teams app to Azure. |
