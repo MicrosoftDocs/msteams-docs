@@ -73,7 +73,7 @@ Following table helps you determine the best fit for your app:
 |[Configurable tabs](~/tabs/how-to/create-channel-group-tab.md)|❌|✔️|✔️|✔️|
 
 >[!NOTE] 
-> If you have both [configurable tab](~/tabs/how-to/create-tab-pages/configuration-page.md) and [Personal (static) tab](~/tabs/how-to/create-personal-tab.md) defined in your app manifest for a specific context, Teams pins the personal tab by default.
+> If you have both [configurable tab](~/tabs/how-to/create-tab-pages/configuration-page.md) and [personal (static) tab](~/tabs/how-to/create-personal-tab.md) defined in your app manifest for a specific context, Teams pins the personal tab by default.
 
 You can [create a content page](~/tabs/how-to/create-tab-pages/content-page.md) as part of a personal tab, channel or group tab, or task module. You can [create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) that enables users to configure Microsoft Teams app and use it to configure a personal, channel, or group chat tab, a messaging extension, or a connector card for Microsoft 365 Groups. You can permit users to reconfigure your tab after installation and [create a tab removal page](~/tabs/how-to/create-tab-pages/removal-page.md) for your application. When you build a Teams app that includes a tab, you must test how your [tab functions on both the Android and iOS Teams clients](~/tabs/design/tabs-mobile.md). Your tab must [get context](~/tabs/how-to/access-teams-context.md) through basic information, locale and theme information, and `entityId` or `subEntityId` that identifies what is in the tab.
 

@@ -1061,7 +1061,7 @@ To change your configurable tab to personal (static) tab:
    ],
    ```
 
-For more information, see [configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) and [personal (static) tab.](~/tabs/how-to/create-personal-tab.md#extend-personal-tabs-to-group-chat-and-channels)
+    For more information, see [configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) and [personal (static) tab.](~/tabs/how-to/create-personal-tab.md#extend-personal-tabs-to-group-chat-and-channels)
 
 If your [configurable tab](~/tabs/how-to/create-tab-pages/configuration-page.md#configuration-page-for-tabs) allows users to edit the tab after it is pinned, which means that `canUpdateConfiguration` is set to `true`, then you must continue to keep the `configurableTab` property in your app manifest in order to ensure that the users can edit the pre-existing pinned configurable tabs.
 
