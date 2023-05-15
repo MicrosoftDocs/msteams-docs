@@ -62,4 +62,3 @@ Lets go through Teams Developer Documentation based on your requirement for buil
 ## See also
 
 - [Extend a Teams personal tab across Microsoft 365 app](m365-apps/extend-m365-teams-personal-tab.md)
--
