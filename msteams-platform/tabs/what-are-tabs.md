@@ -34,7 +34,7 @@ There are few prerequisites that you must go through before working on tabs.
 
 There are two types of tabs available in Teams, personal and channel or group. [Personal tabs](~/tabs/how-to/create-personal-tab.md) also known as static tabs, along with personal-scoped bots. Static tabs are part of personal apps and are scoped to a single user and pinned to the left navigation bar for easy access. [Static tabs](~/tabs/how-to/create-personal-tab.md#extend-personal-tabs-to-group-chat-and-channels) can be [extended to channels or group chat](~/tabs/how-to/create-personal-tab.md#extend-personal-tabs-to-group-chat-and-channels) with a [customizable experience](~/tabs/how-to/create-personal-tab.md#customizing-your-personal-static-tab-in-chats-or-channels)
 
-You can extend personal tabs to different scopes and pre-pin tabs to include the pre-pinned tabs in meeting templates. You can build tabs that behave more like apps instead of pinned app content you can only pin one tab at a time. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one tab at a time.
+You can extend personal tabs to different scopes and pre-pin tabs to include the pre-pinned tabs in meeting templates. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one tab at a time.
 
 
 Personal tabs in personal scope continues to work the same and personal tabs can be extended to work in a channel or group chat to provide a configurable experience. 
