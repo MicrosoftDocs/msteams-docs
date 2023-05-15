@@ -9,6 +9,12 @@ ms.date: 07/29/2022
 ---
 # Install Teams Toolkit
 
+> [!IMPORTANT]
+>
+> We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+>
+> [Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
+
 This section helps you to know about the prerequisites, install Teams Toolkit for Visual Studio Code, and install a different version of Teams Toolkit.
 
 ## Prerequisites
