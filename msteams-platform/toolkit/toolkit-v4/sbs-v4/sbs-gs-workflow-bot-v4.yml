@@ -120,7 +120,7 @@ items:
     
     1. Under **Scenario-based Teams apps**, select **Workflow bot** as the capability that you want to build in your app.
     
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-capabilities-workflow-v4.png"alt-text="Select option Work flow bot for capabilities."lightbox="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-capabilities-workflow-v4.png":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-capabilities-workflow-v4.png"alt-text="Select option Work flow bot for capabilities.":::
     
     1. Select **TypeScript** as the programming language.
     
@@ -128,14 +128,14 @@ items:
     
     1. Select **Default folder** to store your project root folder in default location.
      
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-capabilities-workflow-v4.png" alt-text="select to add workspace folder":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-capabilities-workflow-v4.png" alt-text="select to add workspace folder.":::
        
         > [!NOTE]
         > You can also change the default location by selecting **Browse...**
 
     1. Enter a suitable name for your app.
               
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-app-name-v4.png" alt-text="enter application name":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-app-name-v4.png" alt-text="enter application name.":::
     
     1. Select **Enter**.
         
