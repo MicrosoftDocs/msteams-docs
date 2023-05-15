@@ -372,7 +372,7 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 Teams platform features that aren't available.
 
 * We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.<br>
-[Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension **will be** deprecated.
+[Teams Toolkit v4](~/toolkit/toolkit-v4/teams-toolkit-fundamentals-v4.md) extension **will be** deprecated.
 
 * ***May 05, 2023***: Adaptive Card tabs will be deprecated in the new Microsoft Teams. Apps are expected to be available in the new Microsoft Teams by June 2023. If your app is using Adaptive Card tabs, it's recommended to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
 
