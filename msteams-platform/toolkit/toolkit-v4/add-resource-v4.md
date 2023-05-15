@@ -14,7 +14,7 @@ ms.date: 11/29/2021
 >
 > We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
 >
-> [Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
+> [Teams Toolkit v4](~/toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
 
 Teams Toolkit allows you to provision the cloud resources for hosting your app. You can add the cloud resources according to your development needs. The advantage of adding more cloud resources in TeamsFx is that you can autogenerate all configuration files and connect to Teams app by using Teams Toolkit.
 

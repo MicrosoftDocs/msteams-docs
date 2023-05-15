@@ -14,7 +14,7 @@ ms.date: 03/03/2022
 >
 > We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
 >
-> [Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
+> [Teams Toolkit v4](~/toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
 
 The local debug process involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debugger in Microsoft Visual Studio Code. The Visual Studio Code launches the debuggers, and Microsoft Edge or Google Chrome launches a new browser instance.
 
