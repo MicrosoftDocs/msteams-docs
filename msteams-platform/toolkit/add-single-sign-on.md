@@ -45,13 +45,6 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
    | -------- | --------|
    |Develop Single Sign-on Experience in Teams | [How to Develop Single Sign-on Experience](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams) |
 
-### Add SSO using TeamsFx CLI
-
-You can run `teamsfx add sso` command in your **project root directory**.
-
-> [!NOTE]
-> The feature enables SSO for all existing applicable capabilities. Follow the same steps to enable SSO, if you add capability later to the project.
-
 ## Customize your project using Teams Toolkit
 
 The following table lists the changes Teams Toolkit makes to your project:

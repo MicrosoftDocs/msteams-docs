@@ -373,7 +373,7 @@ You can follow below steps to add environment variables to the .env files to use
 
     1. Add below environment variables and their values to `env\.env.{env}` file.
 
-```yml
+```
     AAD_APP_CLIENT_ID=<value of Azure AD application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000
     AAD_APP_OBJECT_ID=<value of Azure AD application's object id> # example: 00000000-0000-0000-0000-000000000000
     AAD_APP_TENANT_ID=<value of Azure AD's Directory (tenant) id>> # example: 00000000-0000-0000-0000-000000000000
@@ -384,7 +384,7 @@ You can follow below steps to add environment variables to the .env files to use
 
    1. If your application requires an Azure AD app client secret, add below environment variable and its value to `env\.env.{env}.user` file.
 
-```yml
+```
     SECRET_AAD_APP_CLIENT_SECRET=<value of Azure AD application's client secret>
 ```
 
@@ -424,18 +424,12 @@ You can follow below steps to add environment variables to the .env files to use
     SECRET_BOT_PASSWORD=<value of Azure AD application's client secret>
     ```
 
->[!NOTE]
-
+> [!NOTE]
+>
 > * Remember to update the environment variable names in the examples if you use different names in `writeToEnvironmentFile`.
-
 > * If you don't use `botAadApp/create` action to create Azure AD application, you can add necessary environment variables with your preferred name without following above steps.
-
 > * Ensure not to share the same Azure AD app in multiple environments.
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Deploy Teams app to the cloud](deploy.md)
-* [Manage multiple environments](TeamsFx-multi-env.md)
-* [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
-* [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
