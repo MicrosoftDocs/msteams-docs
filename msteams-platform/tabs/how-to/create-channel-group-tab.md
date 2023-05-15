@@ -1035,9 +1035,10 @@ To change your configurable tab to personal (static) tab:
 
 1. Move your configuration logic out of your `configurationUrl` code space to your `contentUrl` code space. 
 1. Add the `staticTabs` property to your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with `scopes` and `context` parameters. Following is an example of app manifest where a personal (static) tab is defined that works in all scopes and contexts in Teams:
+
    ```json
    "staticTabs": [ 
-  { 
+     { 
      "entityId": "homeTab", 
      "scopes": [ 
        "personal", 
@@ -1056,7 +1057,7 @@ To change your configurable tab to personal (static) tab:
       "name": "Contoso", 
       "contentUrl": "https://contoso.com/content (displayed in Teams canvas)", 
       "websiteUrl": "https://contoso.com/content (displayed in web browser)" 
-  }
+     }
    ],
    ```
 
