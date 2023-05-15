@@ -19,8 +19,8 @@ In this tutorial, get familiarized with a notification bot app in one of the fol
 
 Before you create your codespace, ensure that you have:
 
-* A GitHub account to create your codespace instance
-* A [Microsoft 365 account](https://developer.microsoft.com/microsoft-365/dev-program) with sideloading permission
+* A GitHub account to create your codespace instance.
+* A [Microsoft 365 account](https://developer.microsoft.com/microsoft-365/dev-program) with sideloading permission.
 * A [Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
 
 > [!TIP]
