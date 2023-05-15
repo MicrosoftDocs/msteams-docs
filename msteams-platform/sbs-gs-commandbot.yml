@@ -218,6 +218,7 @@ items:
       :::image type="content" source="~/assets/images/sbs-command-bot/folder-structure-command-bot.png" alt-text="Screenshot shows the structure tab":::
 
     If you choose to use UI framework, following sample template code provides a scaffolding with React components. It contains following content:
+
     | Folder name | Contents |
     | --- | --- |
     | `.vscode` | Settings for VS Code to build and debug your Teams app. |
@@ -228,7 +229,7 @@ items:
     | `infra\azure.bicep` | BICEP template files|
     | `infra\azure.parameters.json` | Parameters file for Azure BICEP provision for every environment.|
     | `src\adaptiveCards\` | Templates for Adaptive Card.  |
-    | `src\adaptiveCards\ helloworldCommand.js `|A hello world command handler to process a helloworld command and return an adaptive card as response.|	
+    | `src\adaptiveCards\ helloworldCommand.json `|A hello world command handler to process a helloworld command and return an adaptive card as response.|	
     | `src\internal\intialize.js` | Create the global bot adapter and initialize with Teams Frameworks. |
     | `src\helloworldCommandHandler.js `|Adaptive card JSON file used as your command response.|
     | `src\index.js` |Server code to host the bot app and listen on/api/messages to process Teams activity with Bot Framework. |
