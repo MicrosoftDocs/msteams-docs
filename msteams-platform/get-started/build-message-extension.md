@@ -77,6 +77,8 @@ Unlike codespaces, where everything you need is packaged for you already, you'll
 > [!div class="nextstepaction"]
 > [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml)
 
+---
+
 ## See also
 
 [npm directory](https://www.npmjs.com/)

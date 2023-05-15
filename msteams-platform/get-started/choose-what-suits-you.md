@@ -39,10 +39,10 @@ You can build your Microsoft Teams app with help of the following tools and SDKs
 To start building your Teams app, you can select the tools and SDKs based on your app requirements:
 
 1. **App capabilities**: Choose the capabilities for your app. You can choose single or combination capabilities depends on you app requirements.
-1. **SDKs you need**: Choosing SDKs depends on the capability that you are building for your app. For example, if you building AI capability for your bot app, you should select Teams AI library.
-1. **UI  Components**: Choose UI components to design your app based your app capability.
+1. **SDKs you need**: Choose the SDKs depends on the capability that you are building for your app. For example, if you building AI capability for your bot app, you should select Teams AI library.
+1. **UI  Components**: Choose the UI components to design your app based your app capability.
 1. **Languages**: Choose the languages in which you want to build your app.
-1. **Recommended Tools**: Teams Toolkit offers you to build your app with JavaScript, TypeScript or C# in Visual Studio Code or Visual studio. Choose tools based on the language that you've selected. You can also use Developer Portal to manage your app.
+1. **Recommended Tools**: Choose the tools based on the language that you've selected. You can also use Developer Portal to manage your app. Teams Toolkit offers you to build your app with JavaScript, TypeScript or C# in Visual Studio Code or Visual studio.
 
 | App capabilities | User interactions | Recommended tools | SDKs | Languages |
 |--------|-------------|--------|--------|--------|

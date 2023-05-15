@@ -63,7 +63,7 @@ To create a Teams tab app with codespace, follow the steps:
 
    :::image type="content" source="../assets/images/get-started/tab-app-in-teams.png" alt-text="Screenshot shows your tab app loaded in the Teams client."lightbox="../assets/images/get-started/tab-app-in-teams.png":::
 
-# [Step-by-step guide](#tab/step-by-stepguide)
+# [Step-by-step guide](#tab/step-by-step-guide)
 
 If you would like to learn how to start a project with Teams Toolkit from scratch, let's go through the step-by-step guide.
 
@@ -74,7 +74,12 @@ Unlike codespaces, you need to set you your development environment. Let's start
 
 ---
 
-If a bot is what you are interested, go to another section:
+If a bot is what you are interested in, go to another section:
 
 > [!div class="nextstepaction"]
 > [Start building a bot](build-notification-bot.md)
+
+If you want to build message extension app, go to:
+
+> [!div class="nextstepaction"]
+> [Build message extension](build-message-extension.md)

@@ -29,11 +29,9 @@ With Teams, you can build your app in a feature-rich environment. Using Teams as
 
 ### Extend your Teams app across Microsoft 365
 
-If you've already built some Teams apps, you can now extend your apps across Microsoft 365 by updating the app manifest. Configure the properties in the Teams app manifest to make your app accessible over Outlook and Microsoft 365.
+If you've already built some Teams apps, you can now extend your apps across Microsoft 365 and configure them to be accessible over Outlook and Microsoft 365.
 
 :::image type="content" border="false" source="assets/images/overview/app-manifest.png" alt-text="Screenshot showing the configuration of properties in the Teams app manifest.":::
-
-If you would like to extend existing apps, learn how at [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md).
 
 ## Next step
 
