@@ -55,6 +55,14 @@ Now, this is an example scenario for a TypeScript developer, who wants to build 
 
 :::image type="content" source="../assets/images/overview/sdks-scenario.png" alt-text="I want to build a social media dashboard that sends notifications with TypeScript. I will use Teams Toolkit for VS Code and Developer Portal, as well as TeamsJS with FluentUI, TeamsFx with Bot Framework, also the 3rd party API to get social media data.":::
 
+### Explore more tools and SDKs
+
+You can also create and build your Teams app with various other tools and SDKs.
+
+:::image type="content" source="../assets/images/get-started/tools-and-sdk.png" alt-text="Screenshot shows you the list of tools and SDKs for you to build your Teams app.":::
+
+Teams supports all the tools and SDKs shown in the image and you can choose tools and SDKS based on your requirements.
+
 <!--
 
 Choose the best tools and SDKs for building a new Teams app.
