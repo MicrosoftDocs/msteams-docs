@@ -219,25 +219,19 @@ items:
 
     If you choose to use UI framework, following sample template code provides a scaffolding with React components. It contains following content:
 
-    | Folder name | Contents |
-    | --- | --- |
-    | `.vscode` | Settings for VS Code to build and debug your Teams app. |
-    | `appPackage` | Teams manifest file and icon files that Teams used to regconized your Teams app. |
-    | `appPackage\build\manifest.json` | App manifest for running the app in local or remote environment. |
-    | `env` | stores different environment parameters. |
-    | `infra` | Azure `bicep` template files. Used for deploy your Teams app to Azure. |
-    | `infra\azure.bicep` | BICEP template files. |
-    | `infra\azure.parameters.json` | Parameters file for Azure BICEP provision for every environment. |
-    | `src\adaptiveCards\` | Templates for Adaptive Card. |
-    | `src\adaptiveCards\ helloworldCommand.json `|A hello world command handler to process a helloworld command and return an adaptive card as response. |	
-    | `src\internal\intialize.js` | Create the global bot adapter and initialize with Teams Frameworks. |
-    | `src\helloworldCommandHandler.js `|Adaptive card JSON file used as your command response. |
-    | `src\index.js` |Server code to host the bot app and listen on/api/messages to process Teams activity with Bot Framework. |
-    | ` src\teamsbot.js` | Main entry point for the bot app. |
-    | `teamsapp.yml` | This configuration file defines the Teams Toolkit behavior for provision, deploy and publish lifecycle. And you can customized this file to change the behavior of Teams Toolkit in each lifecycle. |
-    | `teamsapp.local.yml` | This overrides teamsapp.yml with actions that enable local execution and debugging. |
-    | `.gitignore` | File to exclude local files from the bot project. |
-    | `package.json` | The npm package file for the bot project. |
+    | Folder / File | Contents |
+    | - | - |
+    | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+    | `teamsapp.local.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
+    | `env/`| Name / value pairs are stored in environment files and used by `teamsapp.yml` to customize the provisioning and deployment rules. |
+    | `.vscode/` | VSCode files for debugging. |
+    | `appPackage/` | Templates for the Teams application manifest. |
+    | `infra/` | Templates for provisioning Azure resources. |
+    | `src/` | The source code for the application. |
+    | `src/index.js` | Application entry point and `restify` handlers for command and response. |
+    | `src/teamsBot.js` | An empty teams activity handler for bot customization. |
+    | `src/adaptiveCards/helloworldCommand.json` | A generated Adaptive Card that is sent to Teams. |
+    | `src/helloworldCommandHandler.js` | The business logic to handle a command. |
 
 - title: Deploy your first Teams app
   durationInMinutes: 1
