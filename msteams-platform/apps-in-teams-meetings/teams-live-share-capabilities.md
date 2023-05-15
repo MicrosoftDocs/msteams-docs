@@ -137,6 +137,35 @@ const { container } = await liveShare.joinContainer(schema);
 // ... ready to start app sync logic
 ```
 
+# [React](#tab/react-js)
+
+```jsx
+import { LiveShareHost } from "@microsoft/teams-js";
+import { LiveShareProvider, useLiveShareContext } from "@microsoft/live-share-react";
+import { useState } from "react";
+
+export const App = () => {
+    // Create the host as React state so that it doesn't get reset on mount
+    const [host] = useState(LiveShareHost.create());
+
+    // Live Share for React does not require that you define a custom Fluid schema
+    return (
+        <LiveShareProvider host={host} joinOnLoad>
+            <LiveShareLoading />
+        </LiveShareProvider>
+    );
+}
+
+const LiveShareLoading = () => {
+    // Any live-share-react hook (e.g., useLiveShareContext, useLiveState, etc.) must be a child of <LiveShareProvider>
+    const { joined } = useLiveShareContext();
+    if (joined) {
+        return <p>{"Loading..."}</p>;
+    }
+    return <p>{"Your app here..."}</p>;
+}
+```
+
 ---
 
 That's all it took to setup your container and join the meeting's session. Now, let's review the different types of _distributed data structures_ that you can use with the Live Share SDK.
@@ -275,6 +304,50 @@ await presence.update({
 });
 ```
 
+# [React](#tab/react-js)
+
+```jsx
+import { useLivePresence } from "@microsoft/live-share-react";
+
+// Define a unique key that differentiates this usage of `useLivePresence` from others in your app
+const MY_UNIQUE_KEY = "presence-key";
+
+// Example component for using useLivePresence
+export const MyCustomPresence = () => {
+    const { allUsers, localUser, updatePresence } = useLivePresence(MY_UNIQUE_KEY, {
+        picture: "DEFAULT_PROFILE_PICTURE_URL",
+        readyToStart: false,
+    });
+
+    // Callback to update the user's presence
+    const onToggleReady = () => {
+        updatePresence({
+            ...localUser.data,
+            readyToStart: !localUser.data.readyToStart,
+        });
+    }
+
+    // Render UI
+    return (
+        {allUsers.map((user) => (
+            <div key={user.userId}>
+                <div>
+                    {user.displayName}
+                </div>
+                <div>
+                    {`Ready: ${user.data.readyToStart}`}
+                </div>
+                {user.isLocalUser && (
+                    <button onClick={onToggleReady}>
+                        {"Toggle ready"}
+                    </button>
+                )}
+            </div>
+        ))}
+    );
+}
+```
+
 ---
 
 Users joining a session from a single device will have a single `LivePresenceUser` record that is shared for all their devices. To access the latest `data` and `state` for each of their active connections, you can use the `getConnections()` API from the `LivePresenceUser` class. This will return you a list of `LivePresenceConnection` objects. You can see if a given `LivePresenceConnection` instance is from the local device using the `isLocalConnection` property.
@@ -380,6 +453,46 @@ await appState.initialize(defaultState);
 await appState.set(PlanetName.EARTH);
 ```
 
+# [React](#tab/react-js)
+
+```jsx
+import { useLiveState } from "@microsoft/live-share-react";
+
+const planets = [
+  "Mercury",
+  "Venus",
+  "Earth",
+  "Mars",
+  "Jupiter",
+  "Saturn",
+  "Uranus",
+  "Neptune",
+];
+
+// Define a unique key that differentiates this usage of `useLiveState` from others in your app
+const MY_UNIQUE_KEY = "selected-planet-key";
+
+// Example component for using useLiveState
+export const MyCustomState = () => {
+    const [planet, setPlanet] = useLiveState(MY_UNIQUE_KEY, planets[0]);
+
+    // Render UI
+    return (
+        <div>
+            {`Current planet: ${planet}`}
+            {'Select a planet below:'}
+            {planets.map((planet) => (
+                <button key={planet} onClick={() => {
+                    setPlanet(planet);
+                }}>
+                    {planet}
+                </button>
+            ))}
+        </div>
+    );
+}
+```
+
 ---
 
 ### LiveEvent example
@@ -464,6 +577,45 @@ const kudosReaction: ICustomReaction = {
   forUserId: "SOME_OTHER_USER_ID",
 };
 await customReactionEvent.send(kudosReaction);
+```
+
+# [React](#tab/react-js)
+
+```jsx
+import { useLiveEvent } from "@microsoft/live-share-react";
+
+const emojis = [
+  "❤️",
+  "😂",
+  "👍",
+  "👎",
+];
+
+// Define a unique key that differentiates this usage of `useLiveEvent` from others in your app
+const MY_UNIQUE_KEY = "event-key";
+
+// Example component for using useLiveEvent
+export const MyCustomEvent = () => {
+    const {
+        latestEvent,
+        sendEvent,
+    } = useLiveEvent(MY_UNIQUE_KEY);
+
+    // Render UI
+    return (
+        <div>
+            {`Latest event: ${latestEvent?.value}, from local user: ${latestEvent?.local}`}
+            {'Select a planet below:'}
+            {emojis.map((emoji) => (
+                <button key={emoji} onClick={() => {
+                    sendEvent(emoji);
+                }}>
+                    {emoji}
+                </button>
+            ))}
+        </div>
+    );
+}
 ```
 
 ---
@@ -597,6 +749,50 @@ await timer.pause();
 // Resume the timer for users in session
 // If using role verification, this will throw an error if the user doesn't have the required role.
 await timer.play();
+```
+
+# [React](#tab/react-js)
+
+```jsx
+import { useLiveTimer } from "@microsoft/live-share-react";
+
+// Define a unique key that differentiates this usage of `useLiveTimer` from others in your app
+const MY_UNIQUE_KEY = "timer-key";
+
+// Example component for using useLiveTimer
+export function CountdownTimer() {
+  const { milliRemaining, timerConfig, start, pause, play } = useLiveTimer("TIMER-ID");
+
+  return (
+    <div>
+      <button
+        onClick={() => {
+          start(60 * 1000);
+        }}
+      >
+        { timerConfig === undefined ? "Start" : "Reset" }
+      </button>
+      { timerConfig !== undefined && (
+        <button
+          onClick={() => {
+            if (timerConfig.running) {
+              pause();
+            } else {
+              play();
+            }
+          }}
+        >
+          {timerConfig.running ? "Pause" : "Play" }
+        </button>
+      )}
+      { milliRemaining !== undefined && (
+        <p>
+          { `${Math.round(milliRemaining / 1000)} / ${Math.round(timerConfig.duration) / 1000}` }
+        </p>
+      )}
+    </div>
+  );
+}
 ```
 
 ---
@@ -793,6 +989,7 @@ const playlistMap = container.initialObjects.playlistMap as SharedMap;
 interface IVideo {
   id: string;
   url: string;
+  title: string;
 }
 
 // Register listener for changes to values in the map
@@ -804,6 +1001,44 @@ playlistMap.on("valueChanged", (changed: IValueChanged, local: boolean) => {
 function onClickAddToPlaylist(video: IVideo) {
   // Add video to map
   playlistMap.set(video.id, video);
+}
+```
+
+# [React](#tab/react-js)
+
+```jsx
+import { useSharedMap } from "@microsoft/live-share-react";
+import { v4 as uuid } from "uuid";
+
+// Unique key that distinguishes this useSharedMap from others in your app
+const UNIQUE_KEY = "CUSTOM-MAP-ID"
+
+export function PlaylistMapExample() {
+  const { map, setEntry, deleteEntry } = useSharedMap(UNIQUE_KEY);
+  return (
+    <div>
+      <h2>{"Videos"}</h2>
+      <button
+        onClick={() => {
+          const id = uuid();
+          setEntry(id, {
+            id,
+            url: "<YOUR_VIDEO_URL>",
+            title: "<VIDEO_TITLE>",
+          });
+        }}
+      >
+        {"+ Add video"}
+      </button>
+      <div>
+        {[...map.values()].map((video) => (
+          <div key={video.id}>
+            {video.title}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 ```
 

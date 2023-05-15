@@ -166,6 +166,10 @@ Consider using a custom service if you:
 
 For more information, see the custom Azure Fluid Relay service [how-to guide](./teams-live-share-how-to/how-to-custom-azure-fluid-relay.md).
 
+## React integration
+
+Live Share has a dedicated React integration, making Live Share features even easier to integrate into React apps. Rather than use the `LiveShareClient` directly, you can use the `LiveShareProvider` component to join a Live Share session when the component first mounts. Each `LiveDataObject` has a corresponding React hook, designed to make using Live Share incredibly easy. Visit the Live Share for React [GitHub page](https://aka.ms/livesharereact) for more information.
+
 ## User scenarios
 
 | Scenario                                                                                | Example                                                                                                                                                                                            |

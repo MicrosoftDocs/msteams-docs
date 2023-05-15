@@ -104,6 +104,55 @@ await liveCanvas.initialize(inkingManager);
 inkingManager.activate();
 ```
 
+# [React](#tab/react-js)
+
+```jsx
+import { useLiveCanvas } from "@microsoft/live-share-react";
+import { InkingTool } from "@microsoft/live-share-canvas";
+import { useRef } from "react";
+
+// Unique identifier that distinguishes this useLiveCanvas from others in your app
+const UNIQUE_KEY = "CUSTOM-LIVE-CANVAS";
+
+// Example component
+export const ExampleLiveCanvas = () => {
+    const liveCanvasRef = useRef(null);
+    const { liveCanvas, inkingManager } = useLiveCanvas(
+        "CUSTOM-LIVE-CANVAS",
+        liveCanvasRef,
+    );
+
+    return (
+        {/** Canvas currently needs to be a child of a parent with absolute styling */}
+        <div style={{ position: "absolute"}}>
+            <div
+                ref={liveCanvasRef}
+                // Best practice is to not define inline styles
+                style={{ width: "556px", height: "224px" }}
+            />
+            {!!liveCanvas && (
+                <div>
+                    <button
+                        onClick={() => {
+                            inkingManager.tool = InkingTool.pen;
+                        }}
+                    >
+                        {"Pen"}
+                    </button>
+                    <button
+                        onClick={() => {
+                            inkingManager.tool = InkingTool.laserPointer;
+                        }}
+                    >
+                        {"Laser pointer"}
+                    </button>
+                </div>
+            )}
+        </div>
+    );
+};
+```
+
 ---
 
 ## Canvas tools and cursors

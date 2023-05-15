@@ -104,6 +104,48 @@ const allowedRoles: UserMeetingRole[] = [UserMeetingRole.organizer, UserMeetingR
 await mediaSession.initialize(allowedRoles);
 ```
 
+# [React](#tab/react-js)
+
+```jsx
+import { useMediaSynchronizer } from "@microsoft/live-share-react";
+import { UserMeetingRole } from "@microsoft/live-share";
+import { useRef } from "react";
+
+const ALLOWED_ROLES = [UserMeetingRole.organizer, UserMeetingRole.presenter];
+
+const INITIAL_TRACK = "<YOUR_VIDEO_URL>";
+
+// Define a unique key that distinguishes this `useMediaSynchronizer` from others in your app
+const UNIQUE_KEY = "MEDIA-SESSION-ID";
+
+export function VideoPlayer() {
+  const videoRef = useRef(null);
+  const { play, pause, seekTo } = useMediaSynchronizer(
+    UNIQUE_KEY,
+    videoRef,
+    INITIAL_TRACK,
+    ALLOWED_ROLES
+  );
+
+  return (
+    <div>
+      <video ref={videoRef} />
+      <button onClick={play}>
+        Play
+      </button>
+      <button onClick={pause}>
+        Pause
+      </button>
+      <button onClick={() => {
+        seekTo(0);
+      }}>
+        Start over
+      </button>
+    </div>
+  );
+}
+```
+
 ---
 
 The `LiveMediaSession` automatically listens for changes to the group's playback state. `MediaPlayerSynchronizer` listens to state changes emitted by `LiveMediaSession` and applies them to the provided `IMediaPlayer` object, such as an HTML5 `<video>` or `<audio>` element. To avoid playback state changes that a user didn't intentionally initiate, such as a buffer event, we must call transport controls through the synchronizer, rather than directly through the player.
@@ -183,6 +225,46 @@ const suspension: MediaSessionCoordinatorSuspension = mediaSession.coordinator.b
 
 // End the suspension when ready
 suspension.end();
+```
+
+# [React](#tab/react-js)
+
+```jsx
+import { useMediaSynchronizer } from "@microsoft/live-share-react";
+import { useRef } from "react";
+
+// Define a unique key that distinguishes this `useMediaSynchronizer` from others in your app
+const UNIQUE_KEY = "MEDIA-SESSION-ID";
+
+// Example component
+export function VideoPlayer() {
+  const videoRef = useRef(null);
+  const { suspended, beginSuspension, endSuspension } = useMediaSynchronizer(
+    UNIQUE_KEY,
+    videoRef,
+    "<YOUR_INITIAL_VIDEO_URL>",
+  );
+
+  return (
+    <div>
+      <video ref={videoRef} />
+      {!suspended && (
+        <button onClick={() => {
+          beginSuspension();
+        }}>
+          Stop following
+        </button>
+      )}
+      {suspended && (
+        <button onClick={() => {
+          endSuspension();
+        }}>
+          Sync to presenter
+        </button>
+      )}
+    </div>
+  );
+}
 ```
 
 ---
