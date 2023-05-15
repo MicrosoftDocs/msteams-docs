@@ -15,7 +15,7 @@ In this section, you can learn how to create a new Teams project using Microsoft
 
 You can build a new Teams project by selecting **Create a New App** in Teams Toolkit. You can start from built-in Teams app templates or start from official Teams app samples in Teams Toolkit. What's more, Teams Toolkit V5.0.0 supports to start with Outlook Add-ins templates to build your own Outlook Add-ins.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-new-app.PNG" alt-text="Screenshot shows the Create a New App dropdown.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the Select App Capability.":::
 
 To start with Teams capabilities, you can create the following types of Teams app:
 
