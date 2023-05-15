@@ -358,7 +358,7 @@ host.setAudience(services.audience);
 
 ---
 
-Many Live Share APIs depend on a global timestamp API, which allows `LiveDataObject` objects to determine the order of remote messages. If you are using data structures that rely on the `TimestampProvider` class, then you must either use the `LiveShareHost` the `teams-js` library, or override the `getTimestamp()` function in `AzureLiveShareHost` with a value returned by your server.
+Many Live Share APIs depend on a global timestamp API, which allows `LiveDataObject` objects to determine the order of remote messages. If you are using data structures that rely on the `TimestampProvider` class, then you must either use the `LiveShareHost` from the `teams-js` library, or override the `getTimestamp()` function in `AzureLiveShareHost` with a value returned by your server.
 
 ## See also
 

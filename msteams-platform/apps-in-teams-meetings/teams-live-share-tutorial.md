@@ -125,14 +125,13 @@ function renderStage(diceState, elem) {
   const rollButton = elem.querySelector(".roll");
   const dice = elem.querySelector(".dice");
 
-  rollButton.onclick = () => updateDice();
-
   const updateDice = () => {
     // Get a random value between 1 and 6
     const diceValue = Math.floor(Math.random() * 6) + 1;
     // Unicode 0x2680-0x2685 are the sides of a die (⚀⚁⚂⚃⚄⚅).
     dice.textContent = String.fromCodePoint(0x267f + value);
   };
+  rollButton.onclick = () => updateDice();
   updateDice(1);
 }
 ```
