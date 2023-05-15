@@ -169,9 +169,6 @@ From the task pane, you can see the following sections:
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Create a new Teams app using Teams Toolkit](create-new-project.md)
-* [App manifest schema](../resources/schema/manifest-schema.md)
 * [Prepare to build apps using Teams Toolkit](build-environments.md)
 
 <!--  
