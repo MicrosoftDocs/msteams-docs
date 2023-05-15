@@ -94,14 +94,11 @@ By default, Visual Studio Code automatically keeps Teams Toolkit up-to-date. If 
 
    Teams Toolkit installs the version you’ve selected.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Explore Teams Toolkit](explore-Teams-Toolkit.md)
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Prepare to build apps](build-environments.md)
-* [Provision cloud resources](provision.md)
-* [Deploy Teams app to the cloud](deploy.md)
+* [Explore Teams Toolkit](explore-Teams-Toolkit.md)
