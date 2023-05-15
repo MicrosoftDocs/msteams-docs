@@ -14,8 +14,8 @@ Now, let's build your first Teams app. You can use the following language (or fr
 
 | &nbsp; | **Tab** | **Bot** | **Message extension** |
 | --- | --- | --- | --- |
-| **Basic app** | • [Build your first tab app using JavaScript](~/toolkit/toolkit-v4/sbs-v4/sbs-gs-javascript-v4.yml) <br> •  [Build your first app using C#](~/sbs-gs-csharp.yml) <br> • [Build your first app using Node.js](~/sbs-gs-nodejs.yml) <br> • [Build your first app with SPFx](~/sbs-gs-spfx.yml) <br> • [Build your first app using Blazor](~/sbs-gs-blazorupdate.yml) | • [Build your first bot app using JavaScript](~/sbs-gs-bot.yml) <br> • [Build your first app using Blazor](~/sbs-gs-blazorupdate.yml) | [Build your first message extension app using JavaScript](/toolkit/toolkit-v4/sbs-v4/sbs-gs-msgext-v4.yml)|
-| **Scenario-based app** | NA | • [Build notification bot with JavaScript](~/sbs-gs-notificationbot.yml) <br> • [Build command bot with JavaScript](~/sbs-gs-commandbot.yml) <br> • [Create Teams workflow bot](~/sbs-gs-workflow-bot.yml) | NA |
+| **Basic app** | • [Build your first tab app using JavaScript](~/toolkit/toolkit-v4/sbs-v4/sbs-gs-javascript-v4.yml) <br> •  [Build your first app using C#](~/toolkit/toolkit-v4/sbs-v4/sbs-gs-csharp-v4.yml) <br> • [Build your first app using Node.js](~/toolkit/toolkit-v4/sbs-v4/sbs-gs-nodejs-v4.yml) <br> • [Build your first app with SPFx](~/sbs-gs-spfx.yml) <br> • [Build your first app using Blazor](~/toolkit/toolkit-v4/sbs-v4/sbs-gs-blazorupdate-v4.yml) | • [Build your first bot app using JavaScript](~/toolkit/toolkit-v4/sbs-v4/sbs-gs-bot-v4.yml) <br> • [Build your first app using Blazor](~/toolkit/toolkit-v4/sbs-v4/sbs-gs-blazorupdate-v4.yml) | [Build your first message extension app using JavaScript](~/toolkit/toolkit-v4/sbs-v4/sbs-gs-msgext-v4.yml)|
+| **Scenario-based app** | NA | • [Build notification bot with JavaScript](~/toolkit/toolkit-v4/sbs-v4/sbs-gs-notificationbot-v4.yml) <br> • [Build command bot with JavaScript](~/toolkit/toolkit-v4/sbs-v4/sbs-gs-commandbot-v4.yml) <br> • [Create Teams workflow bot](~/toolkit/toolkit-v4/sbs-v4/sbs-gs-workflow-bot-v4.yml) | NA |
 
 ## Code samples
 
