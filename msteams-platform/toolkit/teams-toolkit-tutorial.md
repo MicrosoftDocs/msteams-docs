@@ -6,6 +6,12 @@ ms.topic: reference
 ---
 # Teams app tutorials and related code samples
 
+> [!IMPORTANT]
+>
+> We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+>
+> [Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
+
 You can build your own Teams app with different capabilities using the step-by-step guide or tutorial and code samples.
 
 ## Teams app tutorials

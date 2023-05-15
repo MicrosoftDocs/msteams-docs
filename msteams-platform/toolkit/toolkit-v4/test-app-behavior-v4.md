@@ -10,6 +10,12 @@ ms.date: 03/03/2022
 
 # Test app behavior in different environment v4
 
+> [!IMPORTANT]
+>
+> We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+>
+> [Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
+
 You can test your Teams app after integrating with Microsoft Teams. To test your Teams app, you need to create at least one workspace in your environment. You can use Teams Toolkit for testing your Teams app:
 
 * **Locally hosted in Teams**: Teams Toolkit locally hosts your Teams app by sideloading it into Teams for testing in local environment.

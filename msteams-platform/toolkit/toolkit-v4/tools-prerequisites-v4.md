@@ -9,6 +9,12 @@ ms.date: 03/14/2022
 ---
 # Prerequisites for creating your Teams app using Visual Studio Code
 
+> [!IMPORTANT]
+>
+> We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+>
+> [Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
+
 Before you create your Teams app project, ensure that the prerequisites are in place. You must:
 
 * [Install required tools to build your Teams app](#install-required-tools-to-build-your-teams-app)

@@ -10,6 +10,12 @@ ms.date: 11/29/2021
 
 # FAQ for Teams Toolkit v4
 
+> [!IMPORTANT]
+>
+> We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+>
+> [Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
+
 You can see the FAQ for all the sections of Teams Toolkit for Visual Studio Code.
 
 FAQ for [Provision cloud resources using Teams Toolkit](provision-v4.md)
