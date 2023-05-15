@@ -635,11 +635,11 @@ items:
 
      1. Select **Project** > **Teams Toolkit** > **Preview in Teams**.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/preview-azure_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit and Preview in Teams options highlighted in red.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-blazorupdate-v4/vs-build-preview_1-v4.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit and Preview in Teams options highlighted in red.":::
 
      1. Select **Add** when prompted to install the app to Teams.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/add-app-azure.png" alt-text="Screenshot of Teams displaying the Add option for adding Blazor app. The Add option is highlighted in red.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-blazorupdate-v4/blazor-add-app-v4.png" alt-text="Screenshot of Teams displaying the Add option for adding Blazor app. The Add option is highlighted in red.":::
 
         Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
  
