@@ -34,7 +34,7 @@ You can use various tools and services to build your app. An example development
 
 You can build your Microsoft Teams app with the help of the following tools and SDKs.
 
-:::image type="content" source="../assets/images/overview/choose-what-you-need.png" alt-text="Pick SDKs and tools you need"lightbox="../assets/images/overview/choose-what-you-need.png":::
+:::image type="content" source="../assets/images/overview/choose-what-you-need.png" alt-text="Screenshot shows you the SDKs and tools you need to build your Teams app."lightbox="../assets/images/overview/choose-what-you-need.png":::
 
 To start building your Teams app, you can select the tools and SDKs based on your app requirements:
 
@@ -53,7 +53,7 @@ To start building your Teams app, you can select the tools and SDKs based on you
 
 If you want to build a social media dashboard app that sends notifications using TypeScript, consider the following scenario:
 
-:::image type="content" source="../assets/images/overview/sdks-scenario.png" alt-text="I want to build a social media dashboard that sends notifications with TypeScript. I will use Teams Toolkit for VS Code and Developer Portal, as well as TeamsJS with FluentUI, TeamsFx with Bot Framework, also the 3rd party API to get social media data.":::
+:::image type="content" source="../assets/images/overview/sdks-scenario.png" alt-text="Screenshot shows you the scenario where you build Teams app with TypeScript."lightbox="../assets/images/overview/sdks-scenario.png":::
 
 ### Explore more tools and SDKs
 

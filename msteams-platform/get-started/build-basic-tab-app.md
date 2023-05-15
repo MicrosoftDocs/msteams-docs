@@ -8,7 +8,7 @@ ms.topic: reference
 
 Start Microsoft Teams app development with your first Teams tab app.
 
-:::image type="content" border="false" source="../assets/images/get-started/get-started-tab.png" alt-text="Illustration showing a conceptual tab app":::
+:::image type="content" border="false" source="../assets/images/get-started/get-started-tab.png" alt-text="Screenshot shows you the conceptual tab app in Teams client.":::
 
 In this tutorial, get familiarized with a basic Teams tab app in one of the following ways:
 
@@ -40,7 +40,7 @@ To create a Teams tab app with codespaces, follow the steps:
 
    The **Setting up your codespace** page appears.
 
-   :::image type="content" source="../assets/images/get-started/building-codespace.png" alt-text="Screenshot shows you the codespace building your tab.":::
+   :::image type="content" source="../assets/images/get-started/building-codespace.png" alt-text="Screenshot shows you the codespace building your tab."lightbox="../assets/images/get-started/building-codespace.png":::
 
    Teams Toolkit prepares the tab app project for you and opens it in Visual Studio Code in the browser. Teams Toolkit icon appears in the activity bar of Visual Studio Code.
 
