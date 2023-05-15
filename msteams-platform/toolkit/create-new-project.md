@@ -29,7 +29,7 @@ To start with Teams capabilities, you can create the following types of Teams ap
 
 The process to create a new Teams app is similar for all types of apps.
 
-**To create a basic Teams app**:
+To create a basic Teams app:
 
 1. Open **Visual Studio Code**.
 
@@ -37,7 +37,7 @@ The process to create a new Teams app is similar for all types of apps.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="screenshot shows the Create New Project button in the Teams Toolkit sidebar.":::
 
-1. In this example, we select **Tab** as app capability.
+1. In this example, select **Tab** as app capability.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Select App Capability":::
 
@@ -67,7 +67,7 @@ The process to create a new Teams app is similar for all types of apps.
     The folder you select is the location for your project workspace.
     </details>
 
-    1. Enter a suitable name for your app, such as helloworld, as the application name. Ensure that you use only alphanumeric characters. Press **Enter**.
+1. Enter a suitable name for your app, such as helloworld, as the application name. Ensure that you use only alphanumeric characters. Press **Enter**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot showing where to enter the app name.":::
 
@@ -96,9 +96,9 @@ The following example shows a basic Teams tab app directory structure:
 | `env` | Stores different environment parameters. |
 | `infra` | Azure `bicep` template files. Used for deploy your Teams app to Azure. |
 | `src` | Source code for the Tab capability, including your front-end app, UI components and the privacy notice, terms of use, |
-| `src\components\` | The main app which handles the initialization and routing.  |
+| `src\components\` | The main app which handles the initialization and routing. |
 | `src\index.jsx` | Entry point for the front-end app. |
-| `teamsapp.yml` | This configuration file defines the Teams Toolkit behavior for provision, deploy and publish lifecycle. And you can customized this file to change the behavior of Teams Toolkit in each lifecycle.  |
+| `teamsapp.yml` | This configuration file defines the Teams Toolkit behavior for provision, deploy, and publish lifecycle. You can customize this file to change the behavior of Teams Toolkit in each lifecycle. |
 | `teamsapp.local.yml` | This overrides teamsapp.yml with actions that enable local execution and debugging. |
 
 > [!NOTE]
@@ -124,17 +124,17 @@ The new project folder contains the following content:
 | Folder name | Contents |
 | --- | --- |
 | `.vscode` | Settings for VS Code to build and debug your Teams app. |
-| `appPackage` | Teams manifest file and icon files that Teams used to regconized your Teams app. |
-| `env` | stores different environment parameters. |
+| `appPackage` | Teams manifest file and icon files that Teams used to recognized your Teams app. |
+| `env` | Stores different environment parameters. |
 | `infra` | Azure `bicep` template files. Used for deploy your Teams app to Azure. |
-| `teamsapp.yml` | This configuration file defines the Teams Toolkit behavior for provision, deploy and publish lifecycle. And you can customized this file to change the behavior of Teams Toolkit in each lifecycle.  |
+| `teamsapp.yml` | This configuration file defines the Teams Toolkit behavior for provision, deploy, and publish lifecycle. You can customize this file to change the behavior of Teams Toolkit in each lifecycle. |
 | `teamsapp.local.yml` | This overrides teamsapp.yml with actions that enable local execution and debugging. |
 
 The core notification implementation is stored in the **src** folder and it contains:
 
 | File name | Contents |
 | --- | --- |
-| `src\adaptiveCards\` | Templates for Adaptive Card.  |
+| `src\adaptiveCards\` | Templates for Adaptive Card. |
 | `src\internal\` | Generated initialize code for notification functionality. |
 | `src\index.ts` | The entry point to handle bot messages and send notifications. |
 | `.gitignore` | File to exclude local files from the bot project. |
