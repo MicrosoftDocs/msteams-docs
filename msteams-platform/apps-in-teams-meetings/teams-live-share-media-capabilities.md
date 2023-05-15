@@ -312,6 +312,50 @@ document.getElementById("ready-up-button")!.onclick = () => {
 };
 ```
 
+# [React](#tab/react)
+
+```jsx
+import { useMediaSynchronizer } from "@microsoft/live-share-react";
+import { useRef } from "react";
+
+// Define a unique key that distinguishes this `useMediaSynchronizer` from others in your app
+const UNIQUE_KEY = "MEDIA-SESSION-ID";
+
+// Example component
+export function VideoPlayer() {
+    const videoRef = useRef(null);
+    const { suspended, beginSuspension, endSuspension } = useMediaSynchronizer(
+        UNIQUE_KEY,
+        videoRef,
+        "<YOUR_INITIAL_VIDEO_URL>",
+    );
+    
+    return (
+      <div>
+          <video ref={videoRef} />
+          {!suspended && (
+            <button onClick={() => {
+                const waitPoint = {
+                  position: 0,
+                  reason: "ReadyUp", // Optional.
+                };
+                beginSuspension(waitPoint);
+            }}>
+                Wait until ready
+            </button>
+          )}
+          {suspended && (
+            <button onClick={() => {
+              endSuspension();
+            }}>
+                Ready up
+            </button>
+          )}
+      </div>
+    );
+}
+```
+
 ---
 
 ## Audio ducking
@@ -370,6 +414,56 @@ meeting.registerSpeakingStateChangeHandler((speakingState: meeting.ISpeakingStat
     volumeTimer = undefined;
   }
 });
+```
+
+# [React](#tab/react)
+
+```jsx
+import { useMediaSynchronizer } from "@microsoft/live-share-react";
+import { meeting } from "@microsoft/teams-js";
+import { useRef, useEffect } from "react";
+
+// Define a unique key that distinguishes this `useMediaSynchronizer` from others in your app
+const UNIQUE_KEY = "MEDIA-SESSION-ID";
+
+// Example component
+export function VideoPlayer() {
+    const videoRef = useRef(null);
+    const { synchronizer } = useMediaSynchronizer(
+        UNIQUE_KEY,
+        videoRef,
+        "<YOUR_INITIAL_VIDEO_URL>",
+    );
+
+    const enableSmartSound = () => {
+        let volumeTimer;
+        meeting.registerSpeakingStateChangeHandler((speakingState) => {
+            if (speakingState.isSpeakingDetected && !volumeTimer) {
+                // If someone in the meeting starts speaking, periodically
+                // lower the volume using your MediaPlayerSynchronizer's
+                // VolumeLimiter.
+                synchronizer.volumeLimiter?.lowerVolume();
+                volumeTimer = setInterval(() => {
+                    synchronizer.volumeLimiter?.lowerVolume();
+                }, 250);
+            } else if (volumeTimer) {
+                // If everyone in the meeting stops speaking and the
+                // interval timer is active, clear the interval.
+                clearInterval(volumeTimer);
+                volumeTimer = undefined;
+            }
+        });
+    }
+
+    return (
+        <div>
+            <video ref={videoRef} />
+            <button onClick={enableSmartSound}>
+                Enable smart sound
+            </button>
+        </div>
+      );
+}
 ```
 
 ---
