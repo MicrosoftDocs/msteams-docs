@@ -177,7 +177,7 @@ From the task pane, you can see the following sections:
 
 ## See also
 
-* [Prepare to build apps using Teams Toolkit](build-environments.md)
+[Prepare to build apps using Teams Toolkit](build-environments.md)
 
 <!--  
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="Screenshot shows the UI Elements.":::
