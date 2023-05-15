@@ -9,7 +9,7 @@ ms.date: 07/29/2022
 ---
 # Install Teams Toolkit
 
-This section helps you to know about the prerequisites, install Teams Toolkit from Visual Studio Code, and install a different version of Teams Toolkit.
+This section helps you to know about the prerequisites, install Teams Toolkit for Visual Studio Code, and install a different version of Teams Toolkit.
 
 ## Prerequisites
 
