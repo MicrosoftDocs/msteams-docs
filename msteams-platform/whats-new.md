@@ -24,9 +24,15 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2023 May**
+**2023 April**
 
-***May 09, 2023***: [Static tabs that work everywhere](tabs/what-are-tabs.md)
+* ***April 24, 2023***: [Develop your apps with Teams Toolkit](concepts/build-and-test/develop-your-apps-with-teams-toolkit.md)
+
+* ***April 14, 2023***: [Contextless app update](concepts/deploy-and-publish/apps-upload.md#update-your-app).
+
+* ***April 6, 2023***: [Set up Microsoft license management](concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md)
+
+* ***April 4, 2023***: [Tab apps in shared channels are available in DOD](~/concepts/build-and-test/shared-channels.md)
 
 :::column-end:::
 :::row-end:::
@@ -37,10 +43,6 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 24/04/2023 | Develop your apps with Teams Toolkit | Tools and SDKs > Developer Portal for Teams > [Develop your apps with Teams Toolkit](concepts/build-and-test/develop-your-apps-with-teams-toolkit.md) |
-| 14/04/2023 | Contextless app update | Distribute your app > [Upload your app in Teams](concepts/deploy-and-publish/apps-upload.md#update-your-app) |
-| 06/04/2023 | Set up Microsoft license management | Monetize your app > [Set up Microsoft license management](~/concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md) |
-| 04/04/2023 | Tab apps in shared channels are available in DOD | Build tabs > [Build apps for shared channels](~/concepts/build-and-test/shared-channels.md) |
 | 23/03/2023 | Apps are available for scheduled public channel meetings | Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 20/03/2023 | Bots are available in DOD | Build bots > [Overview](bots/what-are-bots.md)|
 | 20/03/2023 | Message extensions are available in DOD | Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md)|
@@ -322,16 +324,17 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2023 January**
+**2023 May**
 
-* ***January 31, 2023***: [Introducing Targeted in-meeting notification for apps in Teams.](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification)
-* ***January 30, 2023***: [Enable app caching to improve subsequent launch time of the apps to the meeting side panel.](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching)
+***May 09, 2023***: [Static tabs that work everywhere](tabs/what-are-tabs.md)
 
 :::column-end:::
 :::row-end:::
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
+|01/31/2023| Introduced Targeted in-meeting notification for apps in Teams.| Build apps for Teams meetings and calls > Enable and configure apps for meetings > [Build in-meeting notification for Teams meeting](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification) |
+|01/30/2023| Enable app caching to improve subsequent launch time of the apps to the meeting side panel. | Build apps for Teams meetings and calls > Enable and configure apps for meetings > [Build tabs for meetings](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching)|
 |05/12/2022| Introduced share in meeting to share any document or third-party app to the meeting stage.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > [Share in meeting](concepts/build-and-test/share-in-meeting.md) |
 |10/11/2022| Enable bots to receive all chat messages without being @mentioned.|Build bots > Bot conversations > Message in bot conversations > [Receive all conversation messages with RSC](bots/how-to/conversations/channel-messages-with-rsc.md) |
 |10/11/2022|Generate a deep link to share content to stage in meetings.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > Share in meeting > [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md) |
