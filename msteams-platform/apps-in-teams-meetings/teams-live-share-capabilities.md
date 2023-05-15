@@ -916,6 +916,48 @@ async function onSelectPresentMode(documentId: string) {
 }
 ```
 
+# [React](#tab/react)
+
+```jsx
+import { useLiveState } from "@microsoft/live-share-react";
+
+// Define a unique key that differentiates this usage of `useLiveState` from others in your app
+const MY_UNIQUE_KEY = "unique-key";
+// Define the initial state
+const INITIAL_STATE = {
+  documentId: "INITIAL_DOCUMENT_ID",
+};
+// Define the allowed roles
+const ALLOWED_ROLES = [UserMeetingRole.organizer, UserMeetingRole.presenter];
+
+// Example component for using useLiveState
+export const MyCustomState = () => {
+    const [state, setState] = useLiveState(MY_UNIQUE_KEY, INITIAL_STATE, ALLOWED_ROLES);
+
+    const onTakeControl = async () => {
+        try {
+            await setState({
+                ...state,
+                presentingUserId: "<LOCAL_USER_ID>",
+            });
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    // Render UI
+    return (
+        <div>
+            {`Current document: ${state.documentId}`}
+            {`Current presenter: ${state.presentingUserId}`}
+            <button onClick={onTakeControl}>
+                Take control
+            </button>
+        </div>
+    );
+}
+```
+
 ---
 
 Listen to your customers to understand their scenarios before implementing role verification into your app, particularly for the **Organizer** role. There's no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users will be either **Organizer** or **Presenter** when collaborating within an organization. If a user is an **Attendee**, it's usually an intentional decision on behalf of a meeting organizer.
