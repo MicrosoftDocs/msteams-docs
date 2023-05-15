@@ -35,7 +35,7 @@ You can explore the available functionalities from the Teams Toolkit task pane. 
 
    :::image type="content" source="../assets/videos/javascript-bot-app1_1.gif" alt-text="Graphical representation shows the steps to create a Teams app.":::
 
-After you create a new Teams app project, the directory structure of the app appears in the left panel and the **`README`** file in the right panel.
+After you create a new Teams app project, the directory structure of the app appears in the left pane and the **`README`** file in the right pane.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page_1.png" alt-text="Screenshot shows the  first page of Teams Toolkit." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page_1.png":::
 
@@ -59,7 +59,7 @@ From the task pane, you can see the following sections:
 
         To develop a Teams app, you need the following accounts:
         
-         * **Sign in to Microsoft 365**: Use your Microsoft 365 work or school account with a valid E5 subscription for building your app. If you do not have a valid account, you can join [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) to get a free account before you start.
+         * **Sign in to Microsoft 365**: Use your Microsoft 365 work or school account with a valid E5 subscription for building your app. If you don't have a valid account, you can join [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) to get a free account before you start.
 
         * **Sign in to Azure**: Use your Azure account for deploying your app on Azure. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
    :::column-end:::
@@ -120,11 +120,13 @@ From the task pane, you can see the following sections:
    :::column-end:::
    :::column span="":::
 
-        * **Zip Teams metadata package**: Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest and app icons.
+        To create an app package, validate an app, and publish in Developer Portal, you need the following features:
+
+        * **Zip Teams App Package**: Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest and app icons.
         
         * **Validate Application**: Validate if Teams manifest file is in right schema or validate the Teams app package.
         
-        * **Open Developer Portal to Teams**: Use Developer Portal to publish and manage your Teams app. 
+        * **Open Developer Portal to Publish**: Use Developer Portal to publish and manage your Teams app. 
    :::column-end:::
 :::row-end:::
 
