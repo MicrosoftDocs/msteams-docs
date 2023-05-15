@@ -59,7 +59,7 @@ Ensure the following requirements are met before you start building your Teams a
 
 |Teams Toolkit Version | Project Type | Supported Node.js Versions  |
 |---|---|---|
-| 5.0.0 | Notify with http or timer trigger <br> Azure functions <br> SPFx | 16, 18 (Preview) <br> 16, 18 (Preview) <br> 16 <br> 16, 18 |
+| 5.0.0 | Notify with http or timer trigger <br> Azure functions <br> SPFx | 16, 18 <br> 16, 18 <br> 16 <br> 16, 18 |
 | 4.2.2 | Notify with http or timer trigger <br> Azure functions <br> SPFx | 14, 16, 18 (Preview) <br> 14, 16, 18 (Preview) <br> 16 <br> 14, 16, 18 |
 | 4.2.0 | SPFx | 16 |
 | 4.0.3 | SPFx | 14, 16 |
