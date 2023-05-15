@@ -21,7 +21,7 @@ items:
 
     For this tutorial, start Microsoft Teams app development with SPFx by building your first app with a tab capability.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab1.png" alt-text="Diagram showing this app has three features. Tab is highlighted.":::
+    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/your-helloworld-app-tab1-v4.png" alt-text="Diagram showing this app has three features. Tab is highlighted.":::
 
     > [!NOTE]
     > Currently, Teams Toolkit offers only the Tab capability in a Teams app with Visual Studio Code and SharePoint Framework. The Bot and Message Extension capabilities are not available.
@@ -59,11 +59,11 @@ items:
     1. In the search box, enter **Teams toolkit**.
     1. Select **Install** next to the Teams Toolkit.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-install-toolkit-vscode.png" alt-text="microsoft tool kit":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/spfx-install-toolkit-vscode-v4.png" alt-text="microsoft tool kit":::
 
         The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/hw-teams-toolkit-sidebar-icon-v4.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
 
     You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
@@ -114,7 +114,7 @@ items:
     1. Select **Manage your apps**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="bot home":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/spfx-custom-new1-v4.png" alt-text="bot home":::
 
         > [!NOTE]
         > If Teams doesn't show the option to upload a custom app, talk to your Teams administrator.
@@ -128,7 +128,7 @@ items:
     1. In the welcome screen, select **Set up E5 subscription**.
     1. Set up your administrator account. After you finish, the following screen appears:
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-microsoft-365.png" alt-text="Microsoft 365":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/spfx-microsoft-365-v4.png" alt-text="Microsoft 365":::
 
     1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
@@ -169,15 +169,15 @@ items:
 
     1. Select **(SPFx) tab**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/new-spfxTab-spfx.png" alt-text="new spfx tab spfx":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/new-spfxTab-spfx-v4.png" alt-text="new spfx tab spfx":::
 
     1. Select **React** in the **Framework** section.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-react-page.png" alt-text="bot home":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/spfx-react-page-v4.png" alt-text="bot home":::
 
     1. Select **Enter** to accept the default **Web Part Name**.
         
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-helloworld.png" alt-text="bot home":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/spfx-helloworld-v4.png" alt-text="bot home":::
 
     1. Select your **Workspace folder** by choosing your required folder.  
 
@@ -189,17 +189,17 @@ items:
     
         After your app is created, the Teams Toolkit displays the following message:
         
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/preview-project.png" alt-text="localdebug":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/preview-project-v4.png" alt-text="localdebug":::
         
         Select **Local debug** to preview your project.
 
         Teams Toolkit invokes Yeoman CLI to scaffold your Teams app, and install the required dependencies in the process.</br>
         
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-tooklit-updated.png" alt-text="bot home":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/spfx-tooklit-updated-v4.png" alt-text="bot home":::
  
         The scaffolding takes a couple of minutes.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/sbs-share-point.png" alt-text="bot home":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/sbs-share-point-v4.png" alt-text="bot home":::
           
 
     <details>
@@ -309,7 +309,7 @@ items:
         - **Teams workbench (Edge)**
         - **Teams workbench (Chrome)**
 
-            :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-debug.png" alt-text="bot home":::
+            :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/spfx-debug-v4.png" alt-text="bot home":::
 
     1. Select the play button or select the **F5** key to start debugging.
         > [!NOTE]
@@ -319,7 +319,7 @@ items:
         
     1. Select **Yes** when the following dialog appears:
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Microsoft 365":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/ssl-prompt-v4.png" alt-text="Microsoft 365":::
 
         Teams web client opens in a browser window.
 
