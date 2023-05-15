@@ -223,6 +223,7 @@ Preview the current application.
 | `--m365-host` | No | Preview the application in Teams, Outlook, or the Microsoft 365 app [string] [choices: `teams`, `outlook`, `office`]. Defaults to `teams`. |
 | `--browser` | No | Select browser to open Teams web client [string] [choices: `chrome`, `edge`, `default`]. Defaults to `default`. |
 | `--browser-arg` | No | Argument to pass to the browser, for example, --browser-args="--guest. |
+| `--exec-path` | No | The paths that will be added to the system environment variable PATH when the command is executed, defaults to `${folder}/devTools/func`. |
 
 ### Scenarios for `teamsfx preview`
 
