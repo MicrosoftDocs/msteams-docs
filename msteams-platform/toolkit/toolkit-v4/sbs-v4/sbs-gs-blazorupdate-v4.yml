@@ -19,7 +19,7 @@ items:
     
     You can create a tab app and a bot app with Blazor and the latest version of Visual Studio.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Screenshot of the blazor app displaying the tab, Bot, and Message Extension output after you've successfully completed the step-by-step guide.":::
+    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-blazorupdate-v4/your-blazor-helloworld-app-v4.png" alt-text="Screenshot of the blazor app displaying the tab, Bot, and Message Extension output after you've successfully completed the step-by-step guide.":::
 
     > [!NOTE]
     > Currently, Teams Toolkit doesn't support the message extension capability.
@@ -138,7 +138,7 @@ items:
   content: |
     Start Teams app development by creating your first app. This app uses the tab capability.
     
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Screenshot of the Blazor app displaying the final output of tab app after you've successfully completed the step-by-step guide.":::    
+    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-blazorupdate-v4/your-blazor-helloworld-app1-v4.png" alt-text="Screenshot of the Blazor app displaying the final output of tab app after you've successfully completed the step-by-step guide.":::    
 
     This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
 
@@ -408,7 +408,7 @@ items:
   content: |
     Start Teams app development by creating your first app. This app uses the bot capability.
     
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-helloworld-app-bot.png" alt-text="Screenshot displaying workspace for your bot app.":::    
+    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-blazorupdate-v4/your-helloworld-app-bot-v4.png" alt-text="Screenshot displaying workspace for your bot app.":::    
 
     This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
 
