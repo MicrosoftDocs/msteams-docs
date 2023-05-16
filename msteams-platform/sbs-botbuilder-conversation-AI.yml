@@ -15,7 +15,7 @@ items:
 - durationInMinutes: 1
   content: |
     Start Microsoft Teams app development with your first Teams AI library app. 
-    You can create a bot app with Teams. Your app will have a capability, which comes with its own UI and UX.
+    You can create a bot app that uses Teams AI library 
     
     In this tutorial, you learn:
 
@@ -31,13 +31,12 @@ items:
 
    | Install | For using... |
    | --- | --- |
-   | &nbsp; | &nbsp; |
    |[Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
    |[Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place.|
    |[Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
    |[Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-   |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) or [Azure Open AI ](https://azure.microsoft.com/free/)|First create your OpenAI API key to use OpenAI's GPT. If you wish to host your app or access resources in Azure, you must have an  before you begin.|
+   |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) or [Azure Open AI ](https://azure.microsoft.com/free/)|First create your OpenAI API key to use OpenAI's GPT. If you wish to host your app or access resources in Azure, you must have an AzureOpenAI key before you begin.|
 
 
    ## Prepare development environment
@@ -323,7 +322,7 @@ items:
 
     1. Go to Visual Studio Code and open a terminal window.
     
-    1. Run the following command in the terminal to add the latest version of the Teams AI library library to your application using npm:
+    1. Run the following command in the terminal to add the latest version of the Teams AI library to your application using npm:
 
        ```bash
        npm install @microsoft/botbuilder-m365
@@ -355,7 +354,7 @@ items:
 
     1. Go to the `index.ts` file, and add the following code:
 
-        1. Add the following code to import Teams AI library library:
+        1. Add the following code to import Teams AI library:
 
             ```typescript
             import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnState, OpenAIModerator, OpenAIPlanner, AI } from '@microsoft/botbuilder-m365';
@@ -369,19 +368,19 @@ items:
             ```typescript
             // Create AI components
             const planner = new OpenAIPlanner({
-            apiKey: config.openAIKey,
-            defaultModel: 'text-davinci-003',
-            logRequests: true
+                apiKey: config.openAIKey,
+                defaultModel: 'text-davinci-003',
+                logRequests: true
             });
             const moderator = new OpenAIModerator({
-            apiKey: config.openAIKey,
-            moderate: 'both'
-            });
+                apiKey: config.openAIKey,
+                moderate: 'both'
+                });
             const promptManager = new DefaultPromptManager(path.join(__dirname, './prompts' ));
             ````
-            * Planner: The `OpenAIPlanner` is a class that implements an interface called `planner`. The planner calls the LLM model 'text-davinci-003' for text completion. You can use the `OpenAIPlanner` or Azure OpenAI planner. If your using the Azure OpenAI planner, ensure that you define the endpoint property.
+            * Planner: The `OpenAIPlanner` is a class that implements an interface called `Planner`. The Planner calls the OpenAI's LLM model 'text-davinci-003' for text completion. You can use the `OpenAIPlanner` or AzureOpenAIPlanner. If your using the AzureOpenAIPlanner, ensure that you define the endpoint property.
 
-            * PromptManager: `promptManager` Allows you to register your prompts, load a prompt template into the AI component. All the functions related to the prompt manager are available in the `DefaultPromptManager`.  The prompt manager parses the prompts defined in the `prompt.txt` folder. You can replace or override your own functionality in the prompt manager. 
+            * PromptManager: `promptManager` Allows you to register your prompts, load a prompt template into the AI component. All the functions related to the prompt manager are available in the `DefaultPromptManager`.  The prompt manager parses the prompts defined in the `prompt` folder. You can replace or override your own functionality in the prompt manager. 
 
             * Moderator: The `OpenAIModerator` reviews both user's input and the model output to detect harmful speech, such as hate speech, self-harm, and violence.
 
@@ -406,7 +405,7 @@ items:
             ```
 
             * The `Application` class replaces the Teams Activity Handler class from Bot Framework SDK. The application class has all the information and bot logic required for an app. You can register actions or activity handlers for the app in this class.
-            * The `MemoryStorage` class is imported from the Bot Builder SDK and has a predefined logic to handle any issues when two or more events exist at the same time so that you don't want to worry about handling storage issues and focus on building your application.
+            * The `MemoryStorage`` class is a memory based storage provider that stores and retrieves plan old JSON objects. It is imported from the Bot Builder SDK.
 
 
             1. Under **Import required bot service**, add `MemoryStorage`.
@@ -436,9 +435,9 @@ items:
             });
             ```
 
-           The `ConversationHistory` class remembers context across messages. It automatically populates the {{$history}} variable available in the `prompt.txt` file.
+           The `ConversationHistory` class is a utility class that make it easier to manage the conversation history. When the user sends '/history' to the bot in Teams, the server sends a log of the conversation history back to the user. The history is tracked and populated in the state.temp.history property where state is the `ApplicationTurnState`.
 
-        1. By default Bot builder uses `bot` as a variable, since we are constructing an app for the `new Application`. We need to replace `await bot.run(context) with `await app.run(context)`.
+        1. By default Bot builder uses `bot` as a variable, since we are constructing an app for the `new Application`. We need to replace `await bot.run(context)` with `await app.run(context)`.
    
     1. In the root folder, create a new folder **prompts/chat**.
 
@@ -467,7 +466,7 @@ items:
         }
         ```
 
-        The `config.json' is initiated by the `DefaultPromptManager` from the `index.ts` file. When a prompt is initiated, the prompt manager searches for  the prompt config file (chat/config.json) and passed the prompt settings into Open AI or Azure Open AI.
+        The `config.json` is initiated by the `DefaultPromptManager` from the `index.ts` file. When a prompt is initiated, the prompt manager searches for  the prompt config file (chat/config.json) and passed the prompt settings into Open AI or Azure Open AI.
 
     1. Go to the 'prompt.txt' file and add the following instructions for GPT on how the bot should conduct itself and facilitate conversation:
 
@@ -488,7 +487,8 @@ items:
         TeamsChef:
         ```
 
-        
+        The {{$history}} variable gets its value from the state.temp.history property and the {{$input}} variable gets its value from state.temp.input where state is the `ApplicationTurnState`.
+
         The prompt template is populated using the {{$history}}} variable. The `$history` variable remembers the list of entries provided by the user and the model. 
 
         For example, let's say the user's name is "Dave". The bot might carry on the following conversation:

@@ -10,7 +10,7 @@ ms.author: surbhigupta
 
 Teams conversational AI library is a Teams-centric interface to GPT-based common language models and user intent engines, moderating the need for you to take on the complex and expensive task of writing and maintaining conversational bot logic to integrate with large language models (LLMs).
 
-The SDK provides a simple capabilities-driven approach and helps you create intelligent apps quickly and easily with pre-built, reusable code snippets so that you can focus on building the business logic rather than learning the semantics of Teams conversational applications.
+The SDK provides a simple capabilities-driven approach and helps you create intelligent apps quickly and easily with prebuilt, reusable code snippets so that you can focus on building the business logic rather than learning the semantics of Teams conversational applications.
 
 The following are some of the main features available through Teams conversational AI library:
 
@@ -26,11 +26,11 @@ The following are some of the main features available through Teams conversation
 
 ### Simple Teams-Centric Component Scaffolding
 
-The Teams AI library simplifies the Teams app model to focus on the extension needed vs the protocol required. Developers can leverage pre-built templates, and simply add their business logic to this scaffold to add modules like bots, message extensions, Adaptive Cards, link unfurling, and so on.  
+The Teams AI library simplifies the Teams app model to focus on the extension needed vs the protocol required. Developers can use prebuilt templates, and add their business logic to this scaffold to add modules like bots, message extensions, Adaptive Cards, link unfurling, and so on.  
 
 ### Natural Language Modeling
 
-The Teams AI library is built with GPT-powered language models,so that developers don't need to spend time to  write their own conversation logic and identify user intents. This makes building AI-powered Teams apps easier, more compliant, and consistently usable than ever before.
+The Teams AI library is built with GPT-powered language models, so that developers don't need to spend time to  write their own conversation logic and identify user intents. This makes building AI-powered Teams apps easier, more compliant, and consistently usable than ever before.
 
 Bots can run in-context and assist when they recognize a user intent map to one of their app actions, boosting the conversation without requiring users to explicitly talk to the bot using a small set of registered actions.
 
@@ -78,7 +78,7 @@ Here are some key benefits of the Teams conversational AI library:
 
 * ​Strong POV with Teams app components​. You can instantiate your bot activity handler and invoke any Teams capabilities by just invoking the function.
 
-* ​Easy to leverage powerful conversational language models vs building on your own​.
+* ​Easy to use powerful conversational language models vs building on your own​.
 
 * ​Guardrails to steer responsible conversation w/moderation​.
 
@@ -88,7 +88,7 @@ Here are some key benefits of the Teams conversational AI library:
 
 * ​Can talk to Teams apps like you’d talk to a human as opposed to a declarative set of commands​.
 
-* ​Any app leveraging the SDK offers consistency for interactions, and the app handles steering natural conversation into actionable outcomes.
+* ​Any app that uses the SDK offers consistency for interactions, and the app handles steering natural conversation into actionable outcomes.
 
 * Multiple safety layers to ensure that the bots work in a safe and responsible manner. The safety layers are as follows:
 

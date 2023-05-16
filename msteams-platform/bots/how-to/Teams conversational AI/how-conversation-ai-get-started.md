@@ -8,15 +8,15 @@ ms.author: surbhigupta
 
 # Get started with Teams AI library
 
-The Teams AI library library simplifies the process of creating and powering bots with AI capabilities. It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
+The Teams AI library simplifies the process of creating and powering bots with AI capabilities. It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
 
-Teams AI library library streamlines the process to build intelligent Microsoft Teams applications by leveraging the AI components provided by the AI library. You can easily integrate Teams AI library, prompt management, and safety moderation into your apps and enhancing the user experience and improve communication. It also facilitates the creation of bots that uses an OpenAI API key to provide an AI-driven conversational experience, or the same using Azure Foundry.
+Teams AI library streamlines the process to build intelligent Microsoft Teams applications by using the AI components provided by the AI library. You can easily integrate Teams AI library, prompt management, and safety moderation into your apps and enhancing the user experience and improve communication. It also facilitates the creation of bots that uses an OpenAI API key to provide an AI-driven conversational experience, or the same using Azure Foundry.
 
-This article focuses on how to integrate Teams AI library library into your app and key capabilities.
+This article focuses on how to integrate Teams AI library into your app and key capabilities.
 
 ## Initial setup
 
-Teams AI library library is built on top of the BOT framework and uses its fundamentals to offer an extension to the BOT framework capabilities. As part of initial setup, it's important to import the BOT framework functionalities.
+Teams AI library is built on top of the BOT framework and uses its fundamentals to offer an extension to the BOT framework capabilities. As part of initial setup, it's important to import the BOT framework functionalities.
 
 > [!NOTE]
 > The adapter class that handles connectivity with the channels is imported from the [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0#the-bot-adapter&preserve-view=true).
@@ -51,14 +51,14 @@ const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
 });
   ```
 
-### Import Teams AI library Library
+### Import Teams AI library
 
-Import all the classes from `@microsoft/botbuilder-m365` to build your bot and leverage the Teams AI library capabilities.
+Import all the classes from `@microsoft/botbuilder-m365` to build your bot and use the Teams AI library capabilities.
 
 ```typescript
-///// Teams AI library Library /////
+///// Teams AI library /////
 
-// import Teams AI library Library
+// import Teams AI library
 import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnState, OpenAIModerator, OpenAIPlanner, AI } from '@microsoft/botbuilder-m365';
 import path from "path";
 ```
@@ -71,7 +71,7 @@ You can take your existing or a new bot framework app and add AI capabilities.
 
 **Prompt manager**: The prompt manager manages prompt creation. It calls functions and injects  from your code into the prompt. It can copy conversation state user state into the prompt for you automatically.
 
-**Moderator**: A moderator adds safety moderation to the bots input and output. allows you to look at what the user is trying to say to the model, and you can flag prompt injection techniques, review what's coming out of the LLM and run it through a business logic for filtering and ensure that the bot's not saying things that you don't want it to say. You can either moderate the input or the output, or both. Open AI moderator is the default moderator.
+**Moderator**: A moderator adds safety moderation to the bots input and output. allows you to look at what the user is trying to say to the model, and you can flag prompt injection techniques, review what's coming out of the LLM and run it through a business logic for filtering and ensure that the bot isn't saying things that you don't want it to say. You can either moderate the input or the output, or both. Open AI moderator is the default moderator.
 
 ```javascript
 // Create AI components
@@ -150,12 +150,12 @@ The following table includes the query parameters:
 
 |**Value**  |**Description**  |
 |---------|---------|
-|`max_tokens`     | The maximum number of tokens to generate in the completion. The token count of your prompt plus max_tokens cannot exceed the model's context length.        |
-|`temperature`    | What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.        |
+|`max_tokens`     | The maximum number of tokens to generate in the completion. The token count of your prompt plus max_tokens can't exceed the model's context length.        |
+|`temperature`    | What sampling temperature to use, between 0 and 2. Higher values like 0.8 makes the output more random, while lower values like 0.2 makes it more focused and deterministic.        |
 |`top_p`    |An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered.         |
 |`presence_penalty`     |  Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.       |
 |`frequency_penalty`     |Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.         |
-|`stop_sequences`     |  Up to 4 sequences where the API will stop generating further tokens. The returned text will not contain the stop sequence. |
+|`stop_sequences`     |  Up to four sequences where the API stops generating further tokens. The returned text won't contain the stop sequence. |
 
 ### Prompt actions
 
@@ -188,7 +188,7 @@ You can add functions to call a callback and return any kind of data you want.
 
 Actions handle events triggered by AI components.
 
-`FlaggedInputAction` and `FlaggedOutputAction` are the built-in action handlers to handle the moderator flags. If the moderator flags an incoming message input, the moderator redirects to the `FlaggedInputAction` handler and `context.sendActivity` sends a message to the user about the flag.
+`FlaggedInputAction` and `FlaggedOutputAction` are the built-in action handlers to handle the moderator flags. If the moderator flags an incoming message input, the moderator redirects to the `FlaggedInputAction` handler and the `context.sendActivity` sends a message to the user about the flag.
 
 ```javascript
 app.ai.action(AI.FlaggedInputActionName, async (context: TurnContext, state: TurnState, data: TData) => {
@@ -204,7 +204,7 @@ app.ai.action(AI.FlaggedOutputActionName, async (context: TurnContext, state: Ap
 
 ### Register Action Handlers
 
-Action handlers help users achieve the goals which is shared in the user intents.
+Action handlers help users achieve the goals, which is shared in the user intents.
 
 One of the key aspects in action handlers is that you must first register the actions in the prompts and then help user achieve the goal.
 
@@ -247,11 +247,11 @@ app.ai.action(
 
 Next step is to pick the capabilities needed. You need to use the SDK to scaffold bot and adaptive card handlers to the source file.
 
-Teams AI library Library supports JavaScript and is designed to simplify the process of building bots that can interact with Microsoft Teams, and facilitates the migration of existing bots. The SDK supports the migration of messaging capabilities, Message Extension (ME) capabilities and Adaptive Cards capabilities to the new format. It's also possible to upgrade existing Teams apps with these features.
+Teams AI library supports JavaScript and is designed to simplify the process of building bots that can interact with Microsoft Teams, and facilitates the migration of existing bots. The SDK supports the migration of messaging capabilities, Message Extension (ME) capabilities and Adaptive Cards capabilities to the new format. It's also possible to upgrade existing Teams apps with these features.
 
-Developers creating bots for Microsoft Teams were using the BotBuilder SDK directly. New AI library is designed to facilitate the construction of bots that can interact with Microsoft Teams. While one of the key features of this SDK is the AI support that customers can utilize, the initial objectives of the team may simply be to upgrade their current bot without AI. Once upgraded the bot can simply connect to AI/LLM available in the SDK.
+Developers creating bots for Microsoft Teams were using the BotBuilder SDK directly. New AI library is designed to facilitate the construction of bots that can interact with Microsoft Teams. While one of the key features of this SDK is the AI support that customers can utilize, the initial objectives of the team may simply be to upgrade their current bot without AI. Once upgraded, the bot can connect to AI/LLM available in the SDK.
 
-The following app capabilities are supported by Teams AI library:
+Teams AI library supports the following capabilities:
 
 * Sending or Receiving Message – Migration supported.  
 
@@ -265,7 +265,7 @@ In the section below we'll explain in detail each of the capabilities and their 
 
 Example: EchoBot
 
-Replace BotActivityHandler and ApplicationTurnState with this Application and DefaultTurnState Note that here, DefaultTurnState is constructed to include ConversationState.
+Replace `BotActivityHandler` and `ApplicationTurnState` with this `Application` and `DefaultTurnState`. `DefaultTurnState` is constructed to include `ConversationState`.
 
 ```javascript
 
@@ -366,7 +366,7 @@ app.messageExtensions.selectItem(async (context, state, item) => {
 
 ### Adaptive Cards capabilities
 
-Similar to Message extensions example above, app.AdaptiveCards is the handler for producing Adaptive Cards.
+The `app.AdaptiveCards` handler is the handler for producing Adaptive Cards.
 
 ```javascript
 // Listener for messages from the user that trigger an adaptive card
@@ -400,7 +400,7 @@ app.adaptiveCards.actionSubmit("ChoiceSubmit", async (context, state, data: Subm
 
 ### Message-extension query
 
-The Teams AI library library offers bot developers a more intuitive approach to create handlers for various message-extension query commands when compared to previous iterations of Teams Bot Framework SDK. The new SDK works alongside the existing Teams Bot Framework SDK.
+The Teams AI library offers bot developers a more intuitive approach to create handlers for various message-extension query commands when compared to previous iterations of Teams Bot Framework SDK. The new SDK works alongside the existing Teams Bot Framework SDK.
 
 The following is an example of how a bot developer can structure their code to handle a message-extension query for the `searchCmd` command.
 

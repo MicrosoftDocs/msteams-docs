@@ -11,7 +11,7 @@ ms.date: 04/07/2022
 # Teams conversational AI FAQ
 
 <details>
-<summary><b>What does the SDK do?</b></summary>
+<summary>What does the SDK do?</summary>
 
 Teams Conversational AI SDK provides abstractions for developers to build robust applications that utilize OpenAI LLMs.
 
@@ -19,22 +19,22 @@ Teams Conversational AI SDK provides abstractions for developers to build robust
 <br>
 
 <details>
-<summary><b>Does Microsoft provide a hosted version of OpenAI models that are used by the AI SDK?</b></summary>
+<summary>Does Microsoft provide a hosted version of OpenAI models that are used by the AI SDK?</summary>
 No, developers bring their own LLMs – hosted in Azure OpenAI, or elsewhere.
 
 </details>
 <br>
 
 <details>
-<summary><b>Can the SDK be used against LLMs other than those from OpenAI?</b></summary>
+<summary>Can we use the SDK with other LLMs apart from OpenAI?</summary>
 
-Yes, it's theoretically possible to utilize LLMs other than those from OpenAI.
+Yes, it's possible to use the SDK with other LLMs.
 
 </details>
 <br>
 
 <details>
-<summary><b>Does a developer need to do anything to benefit from LLMs? If yes, why?</b></summary>
+<summary>Does a developer need to do anything to benefit from LLMs? If yes, why?</summary>
 
 Yes, the SDK provides abstractions to simplify utilization of LLMs in conversational applications. However, developers must tweak the prompts, topic filters, and actions depending upon their scenarios.
 
@@ -58,9 +58,9 @@ The SDK story is targeted at Pro Devs and separate from the hero-story around Sk
 <br>
 
 <details>
-<summary>  What will be the release status of the SDK by Build 2023?</summary>
+<summary>  What is the release status of the SDK at Build 2023?</summary>
 
-The SDK will be public preview state by Build 2023.
+The SDK is available in public preview at Build 2023.
 
 </details>
 <br>
