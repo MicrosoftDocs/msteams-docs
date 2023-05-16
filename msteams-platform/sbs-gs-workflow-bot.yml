@@ -184,13 +184,14 @@ items:
   durationInMinutes: 2
   content: |
    
-        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-action-response.png" alt-text="Screenshot shows the selection to add your workflow bot app.":::
-    
+    :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-action-response.png" alt-text="Screenshot shows the selection to add your workflow bot app.":::
+
     You'll receive the following command response in Adaptive Card:
 
      :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output1.png" alt-text="Screenshot shows the selection to add your workflow bot app.":::
     
     Then you can select the **DoStuff** button to invoke the action, that responds with the following updated Adaptive Card:
+    
      :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png" alt-text="Screenshot shows the selection to add your workflow bot app.":::
        
 - title: Complete challenge
