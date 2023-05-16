@@ -375,6 +375,8 @@ items:
             interface ConversationState {}
             type ApplicationTurnState = DefaultTurnState<ConversationState>;
             ```
+
+            The `ApplicationTurnState` performs flow of the arbitrary data in the entire bot application.
         
         1. Add the following code to create planner, moderator, and promptManager:
 
