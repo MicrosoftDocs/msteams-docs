@@ -244,12 +244,11 @@ items:
     The Toolkit creates scaffolding for you in the project directory for the tab capability. 
 
     Among other items in this directory, the Teams Toolkit contains:
-
-    - `fx`: App's state in the `.fx` directory.  
-    - templates/resources: contains the app icons, `color.png` and `outline.png`.
-    - `manifest.local.template.json`: contains the app manifest for local debug.
-    - `manifest.remote.template.json`: contains the app manifest for publishing to Developer Portal for Teams.
-    - `.fx/configs/projectSettings.json`: the settings you chose when creating the project.
+ 
+    - appPackage: contains the app icons, `color.png` and `outline.png`.
+    - `manifest.local.json`: contains the app manifest for local debug.
+    - `manifest.json`: contains the app manifest for publishing to Developer Portal for Teams.
+    - `.vscode/Settings.json`: the settings you chose when creating the project.
 
     As you selected an SPFx Web part project, the following files are relevant to your UI:
 
