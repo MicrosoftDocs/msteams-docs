@@ -23,7 +23,7 @@ Teams Toolkit uses a naming convention for the environment files like: `.env.{en
 
 ### Environment file location
 
-You can define where `.env` files are using the `environmentFolderPath` property in `teamsapp.yml`. By default, Teams Toolkit will not load any env variables, and just proceed with executing actions and write outputs to `./env/.env.dev`.
+By default, Teams Toolkit will not load any env variables, and just proceed with executing actions and write outputs to `./env/.env.dev`. If `environmentFolderPath` is not defined, Teams Toolkit will not load any environment variables from a `.env` file, and will execute actions assuming the env is dev. The outputs will be written to `./env/.env.dev`.
 
 ## Local environments
 
