@@ -190,7 +190,7 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-new-app1.png" alt-text="Screenshots shows the wizard to create a new project.":::
 
     1. Ensure that **Basic Tab** is selected as the app feature that you want to build in your app.
-    
+
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Screenshot shows to add app feature to add to your new app.":::
 
     1. Select **JavaScript** as the programming language.
@@ -269,19 +269,17 @@ items:
 
     | Folder name | Contents |
     | --- | --- |
-    | `.vscode` | Settings for VS Code to build and debug your Teams app. |
-    | `appPackage` | Teams manifest file and icon files that Teams used to regconized your Teams app. |
-    | `appPackage\build\manifest.local.json` | App manifest for running the app in local or remote environment. |
-    | `env` | stores different environment parameters. |
-    | `infra` | Azure `bicep` template files. Used for deploy your Teams app to Azure. |
-    | `infra\azure.bicep` | BICEP template files.|
-    | `infra\azure.parameters.json` | Parameters file for Azure BICEP provision for every environment.|
-    | `teamsapp.yml` | This configuration file defines the Teams Toolkit behavior for provision, deploy and publish lifecycle. And you can customized this file to change the behavior of Teams Toolkit in each lifecycle. |
-    | `teamsapp.local.yml` | This overrides teamsapp.yml with actions that enable local execution and debugging. |
-    | `.gitignore` | File to exclude local files from the bot project. |
-    | `package.json` | The npm package file for the bot project. |
+    | `.vscode` | VSCode files for debugging. |
+    | `appPackage` | Templates for the Teams application manifest. |
+    | `env` | Name / value pairs are stored in environment files and used by teamsapp.yml to customize the provisioning and deployment rules. |
+    | `infra` | Templates for provisioning Azure resources. |
+    | `src/`| The source code for the notification Teams application. |
+    | `src/app.js` | Application entry point and `restify` handlers for website. |
+    | `src/views/hello.html`| A HTML template that is bind to the tab endpoint. |
+    | `src/static` | The static assets like CSS and JavaScript files that can be served by the web server. |
+    | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+    | `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
 
-    When you add the cloud functionality, Teams Toolkit adds the necessary folders to the project. The `api` folder holds the code to any Azure Functions you write.
 
 - title: Build and run your first tab app
   durationInMinutes: 1
