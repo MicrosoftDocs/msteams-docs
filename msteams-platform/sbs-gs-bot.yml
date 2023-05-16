@@ -269,18 +269,17 @@ items:
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/folder-structure-bot-app.png" alt-text="Screenshot shows the folder structure.":::
 
-    | Folder name | Contents |
+    | Folder / File | Contents |
     | --- | --- |
-    | `.fx/configs` | Configuration files that user can customize for the Teams app. |
-    | `.fx/configs/config.<envName>.json` | Configuration file for every environment. |
-    | `.fx/configs/azure.parameters.<envName>.json` | Parameters file for Azure BICEP provision for every environment. |
-    | `.fx/configs/projectSettings.json` | Global project settings that apply to all environments. |
-    | `.fx/configs/ngrok.yml` | Ngrok settings|
-    | `bot` |  Code for the Bot capability needed at runtime. |
-    | `bot/teamsBot.js` | Main entry point for the bot app. |
-    | `templates/appPackage` | App manifest template files, and the app icons, color.png and outline.png. |
-    | `templates/appPackage/manifest.template.json` | App manifest for running the app in local and remote environment.  |
-    | `templates/azure` | BICEP template files |
+    | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+    | `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
+    | `.vscode/` | VSCode files for local debug. |
+    | `appPackage/` | Templates for the Teams application manifest. |
+    | `adaptiveCards/` | The adaptive cards sent back by bot. |
+    | `infra/` | Templates for provisioning Azure resources. |
+    | `index.js` | Application entry point and `restify` handler. |
+    | `teamsBot.js` | Teams activity handler. |
+
 
     > [!Tip]
     > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.
@@ -422,7 +421,7 @@ items:
     # [Visual Studio Code](#tab/viscode)
 
     1. Open Visual Studio Code.
-    1. Open the project folder in which you created the tab app.
+    1. Open the project folder in which you created the bot app.
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to Azure**.
 
@@ -460,7 +459,7 @@ items:
 
         The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
-        Congratulations, you have created a Teams app! 
+        Congratulations, you have signed in your Azure account!
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
     ---
