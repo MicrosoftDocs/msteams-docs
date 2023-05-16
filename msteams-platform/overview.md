@@ -33,7 +33,7 @@ You can build apps with Teams platform by extending app capabilities to fit your
 
 Take a look at these example developer personas and app scenarios:
 
-:::image type="content" border="false" source="assets/images/overview/dev-persona.png" alt-text="Screenshot shows you the developer persona and user stories.":::
+:::image type="content" border="false" source="assets/images/overview/dev-persona.png" alt-text="Screenshot shows you the developer persona and user stories."lightbox="assets/images/overview/dev-persona.png":::
 
 You can meet all of these scenarios with Teams apps and enhance collaboration within your Teams across Microsoft 365.
 

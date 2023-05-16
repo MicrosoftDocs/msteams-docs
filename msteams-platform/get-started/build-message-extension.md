@@ -59,7 +59,7 @@ To create a search based message extension app with GitHub Codespaces, follow th
 
       :::image type="content" source="../assets/images/get-started/codespace/me-preview-teams.png" alt-text="Screenshot shows you the Teams Toolkit window in browser with your message extension."lightbox="../assets/images/get-started/codespace/me-preview-teams.png":::
 
-      GitHub Codespaces builds your message extension app, loads it to Teams client, and opens in the another browser tab or window.
+      GitHub Codespaces builds your message extension app, loads it to Teams client, and opens in another browser tab or window.
 
    Your message extension app is sideloaded to Teams.
 

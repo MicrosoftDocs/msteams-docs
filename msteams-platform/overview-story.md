@@ -13,7 +13,7 @@ Learn how apps let you help your users in the Teams environment.
 
 Take a look at this scenario:
 
-:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="Screenshot shows you to builds an app that sends weather forecast to customers so that they can plan ahead their traveling dates.":::
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="Screenshot shows you to builds an app that sends weather forecast to customers so that they can plan ahead their traveling dates."lightbox="../msteams-platform/assets/images/overview/developer-scenario.png":::
 
 As a developer, you want a way to share important and relevant information to help your users. It's a typical user story. Relatable? But how does Teams fit in to this scenario?
 

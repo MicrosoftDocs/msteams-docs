@@ -31,7 +31,7 @@ Collate and map requirements to Teams functionalities:
 
 **Teams app solution**: A Teams *notification bot* app that checks and *sends forecast notification* to *registered users* before their travel date.
 
-:::image type="content" border="false" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Screenshot shows you to builds a bot for Teams that sends weather forecast to customers so that they can plan ahead their traveling dates.":::
+:::image type="content" border="false" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Screenshot shows you to builds a bot for Teams that sends weather forecast to customers so that they can plan ahead their traveling dates."lightbox="../msteams-platform/assets/images/overview/developer-scenario-solution.png":::
 
 Teams offers these and many more capabilities to bring your users a feature-rich app solution. To develop this app:
 

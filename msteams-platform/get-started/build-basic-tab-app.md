@@ -56,7 +56,7 @@ To create a Teams tab app with GitHub Codespaces, follow the steps:
 
       :::image type="content" source="../assets/images/get-started/toolkit-in-browser.png" alt-text="Screenshot shows you the Teams Toolkit window in browser with your tab app."lightbox="../assets/images/get-started/toolkit-in-browser.png":::
 
-   GitHub Codespaces builds your tab app, loads it to Teams client, and opens in the another browser tab or window.
+   GitHub Codespaces builds your tab app, loads it to Teams client, and opens in another browser tab or window.
 
 1. When the app dialog appears, select **Add** to install your tab app in Teams.
 
