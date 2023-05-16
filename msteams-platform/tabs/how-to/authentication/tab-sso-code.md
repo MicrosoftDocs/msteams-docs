@@ -159,8 +159,8 @@ There are a number of libraries available that can handle JWT validation. Basic 
 
 Keep in mind the following guidelines when validating the token:
 
-- Valid SSO tokens are issued by Azure AD. The `iss` claim in the token should start with this value.
-- The token's `aud1` parameter will be set to the app ID generated during Azure AD app registration.
+- Valid SSO tokens are issued by Azure AD. The `iss` claim in the token should start with this [value](https://login.microsoftonline.com/).
+- The token's `aud` parameter will be set to the app ID generated during Azure AD app registration.
 - The token's `scp` parameter will be set to `access_as_user`.
 
 #### Example access token
