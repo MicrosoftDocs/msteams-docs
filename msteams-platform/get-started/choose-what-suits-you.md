@@ -52,7 +52,7 @@ To start building your Teams app, you can select the tools and SDKs based on you
 
 > [!NOTE]
 >
-> * Meeting and calls can deliver a user experience for enabling collaboration, partnership, informed communication, and shared feedback. For more infromation, see [apps for Teams meetings and calls](../apps-in-teams-meetings/teams-apps-in-meetings.md).
+> * Meeting and calls can deliver a user experience for enabling collaboration, partnership, informed communication, and shared feedback. For more information, see [apps for Teams meetings and calls](../apps-in-teams-meetings/teams-apps-in-meetings.md).
 > * You can also use languages, such as Node.js, Java, Python, and Web technology like HTML and CSS to build your Teams app.
 
 **Example scenario**: If you want to build a social media dashboard app that sends notifications using TypeScript, consider the following scenario:
@@ -61,11 +61,9 @@ To start building your Teams app, you can select the tools and SDKs based on you
 
 ### Explore SDKs
 
-You can also create and build your Teams app with various SDKs.
+You can also create and build your Teams app with various SDKs. Teams supports all the SDKs shown in the following image and you can choose SDKs based on your requirements:
 
 :::image type="content" source="../assets/images/get-started/tools-and-sdk.png" alt-text="Screenshot shows you the list of tools and SDKs for you to build your Teams app."lightbox="../assets/images/get-started/tools-and-sdk.png":::
-
-Teams supports all the SDKs shown in the image and you can choose SDKS based on your requirements.
 
 ### Explore Tools
 

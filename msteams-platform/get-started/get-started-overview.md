@@ -58,7 +58,7 @@ If you are already familiar with Yeoman workflow, you can use [YoTeams Yeoman Ge
 
 ## Next step
 
-If you want to build basic tab app, go to:
+If you want to build a basic tab app, go to:
 
 > [!div class="nextstepaction"]
 > [Build your basic tab app](build-basic-tab-app.md)
