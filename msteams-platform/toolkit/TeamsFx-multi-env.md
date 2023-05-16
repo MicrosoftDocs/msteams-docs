@@ -43,15 +43,18 @@ To create a new environment:
 1. Open your Teams app project in Visual Studio Code.
 1. Select the Teams Toolkit icon from the Visual Studio Code activity bar.
 1. Select the **+** icon in the **ENVIRONMENT** section.
-1. Enter a name for the environment and select Enter.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-environment.png" alt-text="Screenshot shows environment ":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-environment.png" alt-text="Screenshot shows the plus icon highlighted in the Environment section.":::
+
+1. Enter a name for the environment and select **Enter**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/environment-name.png" alt-text="Screenshot shows where to enter the environment name.":::
 
 ## Targeting an environment
 
 When you have multiple environments and select the Provision, Deploy, or Publish menu items, Teams Toolkit prompts you to select a target environment.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/target-environment.png" alt-text="Screenshot shows production selected in environment.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/target-environment.png" alt-text="Screenshot shows the Production environment selected.":::
 
 ## See also
 

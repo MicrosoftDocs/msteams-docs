@@ -35,7 +35,7 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
 2. Select **Teams Toolkit** from the Visual Studio Code activity bar.
 3. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot showing the selection of View How-to guides option. ":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot shows the selection of View How-to guides option. ":::
 
 4. From the dropdown list, select **Develop Single Sign-On Experience in Teams**. You'll be redirected to the respective How-to guide.
 

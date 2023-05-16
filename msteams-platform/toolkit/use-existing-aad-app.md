@@ -49,7 +49,7 @@ This section provides information for using existing Azure AD app or manually cr
    * **Scope name**: Fill in **access_as_user**.
    * **Who can consent?**: Choose **Admins and users**.
    * **Admin consent display name**: Fill in **Teams can access app’s web APIs**.
-   * **Admin consent description**: Fill in **Allows Teams to call the app’s web APIs as the current user.**.
+   * **Admin consent description**: Fill in **Allows Teams to call the app’s web APIs as the current user**.
    * **User consent display name**: Fill in **Teams can access app’s web APIs and make requests on your behalf**.
    * **User consent description**: Fill in **Enable Teams to call this app’s web APIs with the same rights that you have**.
    * **State**: Choose **Enabled**.
