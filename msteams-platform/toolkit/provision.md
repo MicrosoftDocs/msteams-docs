@@ -359,41 +359,39 @@ You can follow below steps to add environment variables to the .env files to use
 
 1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. Below is the default `writeToenvironmentFile` definition if you create projects using Teams Toolkit:
 
- ```yml
-  writeToEnvironmentFile:
-   clientId: AAD_APP_CLIENT_ID
-   clientSecret: SECRET_AAD_APP_CLIENT_SECRET
-   objectId: AAD_APP_OBJECT_ID
-   tenantId: AAD_APP_TENANT_ID
-   authority: AAD_APP_OAUTH_AUTHORITY
-   authorityHost: AAD_APP_OAUTH_AUTHORITY_HOST
- ```
+     ```yml
+      writeToEnvironmentFile:
+       clientId: AAD_APP_CLIENT_ID
+       clientSecret: SECRET_AAD_APP_CLIENT_SECRET
+       objectId: AAD_APP_OBJECT_ID
+       tenantId: AAD_APP_TENANT_ID
+       authority: AAD_APP_OAUTH_AUTHORITY
+       authorityHost: AAD_APP_OAUTH_AUTHORITY_HOST
+     ```
 
 1. Add values for each environment variable from step 2.
 
     1. Add below environment variables and their values to `env\.env.{env}` file.
 
-```
-    AAD_APP_CLIENT_ID=<value of Azure AD application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000
-    AAD_APP_OBJECT_ID=<value of Azure AD application's object id> # example: 00000000-0000-0000-0000-000000000000
-    AAD_APP_TENANT_ID=<value of Azure AD's Directory (tenant) id>> # example: 00000000-0000-0000-0000-000000000000
-    AAD_APP_OAUTH_AUTHORITY=<value of Azure AD's authority> # example: https://login.microsoftonline.com/<Directory (tenant) ID>
-    AAD_APP_OAUTH_AUTHORITY_HOST=<host of Azure AD's authority> # example: https://login.microsoftonline.com
-    AAD_APP_ACCESS_AS_USER_PERMISSION_ID=<id of access_as_user permission> # example: 00000000-0000-0000-0000-000000000000
-```  
+       ```env
+        AAD_APP_CLIENT_ID=<value of Azure AD application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000
+        AAD_APP_OBJECT_ID=<value of Azure AD application's object id> # example: 00000000-0000-0000-0000-000000000000
+        AAD_APP_TENANT_ID=<value of Azure AD's Directory (tenant) id>> # example: 00000000-0000-0000-0000-000000000000
+        AAD_APP_OAUTH_AUTHORITY=<value of Azure AD's authority> # example: https://login.microsoftonline.com/<Directory (tenant) ID>
+        AAD_APP_OAUTH_AUTHORITY_HOST=<host of Azure AD's authority> # example: https://login.microsoftonline.com
+        AAD_APP_ACCESS_AS_USER_PERMISSION_ID=<id of access_as_user permission> # example: 00000000-0000-0000-0000-000000000000
+       ```  
 
-   1. If your application requires an Azure AD app client secret, add below environment variable and its value to `env\.env.{env}.user` file.
+    1. If your application requires an Azure AD app client secret, add below environment variable and its value to `env\.env.{env}.user` file.
 
-```
-    SECRET_AAD_APP_CLIENT_SECRET=<value of Azure AD application's client secret>
-```
+       ```env
+       SECRET_AAD_APP_CLIENT_SECRET=<value of Azure AD application's client secret>
+       ```
 
 >[!NOTE]
 >
 > * Remember to update the environment variable names in the examples if you uses different names in `writeToEnvironmentFile`.
->
 > * If you don't use `aadApp/create` action to create Azure AD application, you can add necessary environment variables with your preferred name without following above steps.
->
 > * Ensure not to share the same Azure AD app in multiple environments.
 
 #### Use an existing Azure AD app for your bot
@@ -404,23 +402,23 @@ You can follow below steps to add environment variables to the .env files to use
 
 1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. Below is the default `writeToEnvironmentFile` definition if you create projects using Teams Toolkit:
 
-```yml
- writeToEnvironmentFile:
-   botId: BOT_ID
-   botPassword: SECRET_BOT_PASSWORD
-```
+    ```yml
+     writeToEnvironmentFile:
+       botId: BOT_ID
+       botPassword: SECRET_BOT_PASSWORD
+    ```
 
 1. Add values for each environment variable from step 2.
 
     1. Add below environment variable and its value to `env\.env.{env}` file.
 
-    ```
+    ```env
     BOT_ID=<value of Azure AD application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000    
     ```
 
     1. Add below environment variable and its value to `env\.env.{env}.user` file.
 
-    ```
+    ```env
     SECRET_BOT_PASSWORD=<value of Azure AD application's client secret>
     ```
 
