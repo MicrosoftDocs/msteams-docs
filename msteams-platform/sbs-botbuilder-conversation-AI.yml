@@ -368,19 +368,27 @@ items:
 
             You need to import the required classes to use the functions and variables available in the class to build your app. You can leverage pre-built templates, and simply add your business logic to this scaffold.
 
+        1. Add the following code in the `index.ts` file to define a state:
+
+            ```typescript
+            // eslint-disable-next-line @typescript-eslint/no-empty-interface
+            interface ConversationState {}
+            type ApplicationTurnState = DefaultTurnState<ConversationState>;
+            ```
+        
         1. Add the following code to create planner, moderator, and promptManager:
 
             ```typescript
             // Create AI components
             const planner = new OpenAIPlanner({
-                apiKey: config.openAIKey,
-                defaultModel: 'text-davinci-003',
-                logRequests: true
+              apiKey: config.openAIKey,
+              defaultModel: 'text-davinci-003',
+              logRequests: true
             });
             const moderator = new OpenAIModerator({
-                apiKey: config.openAIKey,
-                moderate: 'both'
-                });
+              apiKey: config.openAIKey,
+              moderate: 'both'
+            });
             const promptManager = new DefaultPromptManager(path.join(__dirname, './prompts' ));
             ````
             * Planner: The `OpenAIPlanner` is a class that implements an interface called `Planner`. The Planner calls the OpenAI's LLM model 'text-davinci-003' for text completion. You can use the `OpenAIPlanner` or AzureOpenAIPlanner. If your using the AzureOpenAIPlanner, ensure that you define the endpoint property.
@@ -396,16 +404,16 @@ items:
             // Define storage and application
             const storage = new MemoryStorage();
             const app = new Application<ApplicationTurnState>({
-                storage,
-                ai: {
-                    planner,
-                    moderator,
-                    promptManager,
-                    prompt: 'chat',
-                    history: {
-                        assistantHistoryType: 'text'
-                    }
-                }
+              storage,
+              ai: {
+                  planner,
+                  moderator,
+                  promptManager,
+                  prompt: 'chat',
+                  history: {
+                      assistantHistoryType: 'text'
+                  }
+              }
             });
             ```
 
