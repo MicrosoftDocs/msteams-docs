@@ -62,7 +62,7 @@ To create a Teams notification bot with GitHub Codespaces, follow the steps:
 
    :::image type="content" source="../assets/images/get-started/codespace/bot-teams.png" alt-text="Screenshot shows you the notification bot loaded in the Teams client.":::
 
-1. Open new terminal in your codespace and run the following command to send a notification to your bot:
+1. Open a new terminal in your codespace and run the following command to trigger an event for sending a notification to your bot:
 
    ```bash
    curl -X POST http://localhost:3978/api/notification
@@ -70,7 +70,7 @@ To create a Teams notification bot with GitHub Codespaces, follow the steps:
 
     > [!Tip]
     >
-    > In real time, events are triggered by an external source, such as a third party API. To get an event triggering, you can send an event manually via curl commands on terminal.
+    > In real time, events are triggered by an external source, such as a third party API that cause the notification bot to send the user a notification. To emulate an event trigger, you can send an event manually via curl commands on terminal.
 
    The notification bot app sends an notification as an Adaptive Card to your Teams client:
 

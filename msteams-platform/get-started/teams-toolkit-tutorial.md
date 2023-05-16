@@ -19,4 +19,4 @@ Now, let's build your Teams app. You can use the following languages or framewor
 
 ## Code samples
 
-Code samples are designed to help understand and build your own Teams app with different capabilities and scenarios. To learn more about the code samples, see [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+Code samples are designed to help you understand and build your own Teams app with different capabilities and scenarios. To learn more about the code samples, see [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
