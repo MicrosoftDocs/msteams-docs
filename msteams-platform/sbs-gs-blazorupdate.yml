@@ -326,7 +326,7 @@ items:
     
     1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Provision in the Cloud options are highlighted in red." lightbox="..msteams-platform\assets\images\teams-toolkit-v2\blazor-vs-preview2\vs-build-provision_2.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Provision in the Cloud options are highlighted in red." lightbox="../msteams-platform\assets\images\teams-toolkit-v2\blazor-vs-preview2\vs-build-provision_2.png":::
 
     1. Enter the subscription and resource group details in the **Provision** dialog:
 
@@ -365,7 +365,7 @@ items:
 
     1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Deploy to the Cloud options highlighted in red." lightbox="../msteams-platform\assets\images\teams-toolkit-v2\blazor-vs-preview2\vs-build-deploytocloud_2.png:::
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Deploy to the Cloud options highlighted in red." lightbox="../msteams-platform\assets\images\teams-toolkit-v2\blazor-vs-preview2\vs-build-deploytocloud_2.png":::
 
     1. Select **OK**. 
 
@@ -522,7 +522,7 @@ items:
     
     1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with project, Teams Toolkit, and Prepare Teams App Dependencies options highlighted in red." lightbox="./msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_2.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with project, Teams Toolkit, and Prepare Teams App Dependencies options highlighted in red." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_2.png":::
 
     1. Select your Microsoft 365 account or **Add an account** to sign in.
 
