@@ -86,4 +86,4 @@ Once the provisioning and deployment steps are complete:
 
    You've successfully added your bot app to the Teams client.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/bot-app-learn-local-debug.png" alt-text="Screenshot shows the learn card in the bot on Teams client.":::  
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/bot-app-learn-local-debug.png" alt-text="Screenshot shows the learn card in the bot on Teams client.":::  
