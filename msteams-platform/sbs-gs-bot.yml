@@ -7,8 +7,8 @@ metadata:
   level: Beginner
   ms.date: 10/21/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: ~/get-started/get-started-overview.md
-  nextTutorialTitle: Back to Get started overview
+  nextTutorialHref: ~/toolkit/teams-toolkit-tutorial.md
+  nextTutorialTitle: Teams app tutorials
   ms.custom: mvc
   ms.localizationpriority: high
 items:

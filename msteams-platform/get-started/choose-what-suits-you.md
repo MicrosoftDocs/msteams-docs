@@ -9,7 +9,7 @@ ms.topic: reference
 
 You've built your first tab app, notification bot, and message extension. You can build a Teams app as per your app's requirements. Based on factors, such as business needs, development environment, domain knowledge, select the environment and tools to build your app.
 
-A Teams app offers you the flexibility of choosing your build environment. It includes tools, framework, and languages to approach your app development. Build your Teams app in the environment that works best for your particular requirements. You can even select a combination. For example, you can use Teams Toolkit to build an app with JavaScript and host it on a SharePoint site.
+A Teams app offers you the flexibility of choosing your build environment. It includes tools, framework, and languages to approach your app development. Build your Teams app in the environment that's best suited for your app. You can even select a combination. For example, you can use Teams Toolkit to build an app with JavaScript and host it on a SharePoint site.
 
 This section takes you through the various options that you have for building your Teams app as per your requirements.
 
@@ -73,8 +73,8 @@ The following tools in the Teams platform helps you during app development:
 |-----|----|
 | Design | Teams UI kit and Teams UI library |
 | Build | Teams Toolkit, Tools and SDKs, and Microsoft Graph |
-| Test, deploy, and publish |Azure Active Directory (Azure AD) and Developer Portal|
-| Distribute | Teams store|
+| Test, deploy, and publish |Azure Active Directory (Azure AD) and Developer Portal |
+| Distribute | Partner Center and Teams store |
 
 <!--
 

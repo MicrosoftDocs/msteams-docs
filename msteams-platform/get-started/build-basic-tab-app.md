@@ -26,15 +26,15 @@ Before you create your codespace, ensure that you have:
 > [!TIP]
 > [GitHub codespaces](https://github.com/features/codespaces) offers the free plan up to a fixed amount of usage every month. If you need to free up the space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespace that you no longer need.
 
-To create a Teams tab app with codespace, follow the steps:
+To create a Teams tab app with GitHub Codespaces, follow the steps:
 
-1. Select the following button to open codespace.
+1. Select the following button to open GitHub Codespaces.
 
     <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=v3&repo=348288141&machine=standardLinux32gb&location=WestUs2&devcontainer_path=.devcontainer%2Fhello-world-tab-codespaces%2Fdevcontainer.json&resume=1" target="_blank"><img src="https://github.com/codespaces/badge.svg" alt="Open hello-world tab in GitHub Codespaces"></a>
 
    You may be asked to sign in to GitHub account if you haven't.
 
-1. Select **Create codespaces**.
+1. Select **Create new codespace**.
 
    :::image type="content" source="../assets/images/get-started/codespace.png" alt-text="Screenshot shows you the GitHub page to create a codespace for tab."lightbox="../assets/images/get-started/codespace.png":::
 
@@ -50,7 +50,7 @@ To create a Teams tab app with codespace, follow the steps:
 
     > [!NOTE]
     >
-    > When you build your app, codespace loads it to Teams client in a new tab. If your browser blocks pop-up tabs or windows, you'll need to allow pop-ups to let codespace open your app.
+    > When you build your app, GitHub Codespaces loads it to Teams client in a new tab. If your browser blocks pop-up tabs or windows, you'll need to allow pop-ups to let your app open.
 
 1. Select **Preview your Teams App (F5)** to build your tab app.
 
@@ -72,7 +72,7 @@ To create a Teams tab app with codespace, follow the steps:
 
 If you would like to learn how to start a project with Teams Toolkit from scratch, let's go through the step-by-step guide.
 
-Unlike codespace, you need to set up your development environment. Let's start building your basic tab app.
+Unlike GitHub Codespaces, you need to set up your development environment. Let's start building your basic tab app.
 
 > [!div class="nextstepaction"]
 > [Start building a basic tab app](../sbs-gs-javascript.yml)
