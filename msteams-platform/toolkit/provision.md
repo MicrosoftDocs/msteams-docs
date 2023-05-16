@@ -69,7 +69,7 @@ Teams app in Teams Developer Portal.
 
 #### What it is
 
-This action renders Teams app manifest template with environment variables and validate Teams app manifest file using its schema.
+This action renders Teams app manifest template with environment variables and validates Teams app manifest file using its schema.
 
 #### What resource it operates
 
@@ -107,7 +107,7 @@ N/A
 
 #### What it is
 
-This action renders Teams app manifest template with environment variables, and zip manifest file with two icons.
+This action renders Teams app manifest template with environment variables, and zips the manifest file with two icons.
 
 #### What resource it operates
 
@@ -328,7 +328,7 @@ subscriptionId: ${{MY_AZURE_SUBSCRIPTION_ID}}
 
 #### Customize ARM template files
 
-If the predefined templates don't meet your app requirements, you can create your own ARM template or update existing ARM template and provide the path to `arm/deploy` action like below:
+If the predefined templates don't meet your app requirements, you can create your own ARM template or update existing ARM template and provide the path to `arm/deploy` action like as follows:
 
 ```yml
 - uses: arm/deploy
@@ -357,7 +357,7 @@ You can follow below steps to add environment variables to the .env files to use
 
 1. Open `teamsapp.yml` and find the `aadApp/create` action.
 
-1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. Below is the default `writeToenvironmentFile` definition if you create projects using Teams Toolkit:
+1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. The following is the default `writeToenvironmentFile` definition if you create projects using Teams Toolkit:
 
      ```yml
       writeToEnvironmentFile:
@@ -371,7 +371,7 @@ You can follow below steps to add environment variables to the .env files to use
 
 1. Add values for each environment variable from step 2.
 
-    1. Add below environment variables and their values to `env\.env.{env}` file.
+    1. Add the following environment variables and their values to `env\.env.{env}` file:
 
        ```env
         AAD_APP_CLIENT_ID=<value of Azure AD application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000
@@ -382,7 +382,7 @@ You can follow below steps to add environment variables to the .env files to use
         AAD_APP_ACCESS_AS_USER_PERMISSION_ID=<id of access_as_user permission> # example: 00000000-0000-0000-0000-000000000000
        ```  
 
-    1. If your application requires an Azure AD app client secret, add below environment variable and its value to `env\.env.{env}.user` file.
+    1. If your application requires an Azure AD app client secret, add the following environment variable and set its value to `env\.env.{env}.user`:
 
        ```env
        SECRET_AAD_APP_CLIENT_SECRET=<value of Azure AD application's client secret>
@@ -400,7 +400,7 @@ You can follow below steps to add environment variables to the .env files to use
 
 1. Open `teamsapp.yml` and find the `botAadApp/create` action.
 
-1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. Below is the default `writeToEnvironmentFile` definition if you create projects using Teams Toolkit:
+1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. The following is the default `writeToEnvironmentFile` definition if you create projects using Teams Toolkit:
 
     ```yml
      writeToEnvironmentFile:
@@ -410,13 +410,13 @@ You can follow below steps to add environment variables to the .env files to use
 
 1. Add values for each environment variable from step 2.
 
-    1. Add below environment variable and its value to `env\.env.{env}` file.
+    1. Add the following environment variable and set its value to `env\.env.{env}` file:
 
        ```env
        BOT_ID=<value of Azure AD application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000    
        ```
 
-    1. Add below environment variable and its value to `env\.env.{env}.user` file.
+    1. Add the following environment variable and set its value to `env\.env.{env}.user` file:
 
        ```env
        SECRET_BOT_PASSWORD=<value of Azure AD application's client secret>

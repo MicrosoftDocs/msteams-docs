@@ -10,7 +10,7 @@ ms.date: 05/13/2022
 
 # Customize Teams app manifest
 
-The Teams app manifest describes how your app integrates into Teams. After scaffolding, the default manifest file is available at `appPackage/manifest.json`. The manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved by Teams Toolkit with env files like `env/.env.dev` and `env/.env.local`.
+The Teams app manifest describes how your app integrates into Teams. After scaffolding, the default manifest file is available at `appPackage/manifest.json`. The manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Teams Toolkit with env files like `env/.env.dev` and `env/.env.local`.
 
 To preview manifest with actual content, Teams Toolkit generates preview manifest files under `appPackage/build` folder:
 
@@ -27,7 +27,7 @@ You can preview the manifest file in local and remote environments.
 
 ## Preview manifest file in local environment
 
-To preview manifest file in local environment, you can press F5 to run local debug. After generating environment variables in `env/.env.local`, the app package and preview manifest will be built under `appPackage/build` folder.
+To preview manifest file in local environment, you can press F5 to run local debug. After you generate the environment variables in `env/.env.local`, the app package and preview manifest will be built under `appPackage/build` folder.
 
 You can also trigger `Zip Teams App Package` from tree view or `Teams: Zip Teams app Package` from command palette to generate previewed manifest and app package.
 
@@ -96,7 +96,7 @@ CLI command:
 teamsfx validate --manifest-path YOUR-PATH-TO-MANIFEST
 ```
 
-If you meet `MissingEnvironmentVariablesError`, it means that Teams Toolkit cannot find corresponding environment variables defined in manifest.json. You may need to run Provision or F5 to generate environment variables, or manually update `.env.xx` file to fulfill the value.
+If you meet `MissingEnvironmentVariablesError`, it means that Teams Toolkit can't find corresponding environment variables defined in manifest.json. You may need to run Provision or F5 to generate environment variables, or manually update `.env.xx` file to fulfill the value.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/missing-env.png" alt-text="Screenshot showing the Missing Environment Variables Error.":::
 
@@ -146,7 +146,7 @@ In `appPackage/manifest.json`, you can go to CodeLens to preview the values for 
 > [!NOTE]
 > Provision the environment or execute local debug to generate environment variables.
 
-You can go to .env file by selecting the CodeLens, which provide a dropdown list with all the environment names. After selecting one environment, the corresponding .env file opens.
+You can go to .env file by selecting the CodeLens, which provide a dropdown list with all the environment names. After you select one environment, the corresponding .env file opens.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/select-env-with-local.png" alt-text="Screenshot showing the selection of dev.":::
 

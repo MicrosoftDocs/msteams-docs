@@ -144,7 +144,7 @@ teamsfx env add staging --env dev
 
 Run the provision stage in `teamsapp.yml`.
 
-Running `teamsfx provision --env local` will trigger the provision stage in `teamsapp.local.yml` instead.
+Running `teamsfx provision --env local` triggesr the provision stage in `teamsapp.local.yml` instead.
 
 ### Parameters for `teamsfx provision`
 
@@ -157,7 +157,7 @@ Running `teamsfx provision --env local` will trigger the provision stage in `tea
 
 Run the deploy stage in `teamsapp.yml`.
 
-Running `teamsfx deploy --env local` will trigger the deploy stage in `teamsapp.local.yml` instead.
+Running `teamsfx deploy --env local` triggers the deploy stage in `teamsapp.local.yml` instead.
 
 ### Parameters for `teamsfx deploy`
 
@@ -175,15 +175,15 @@ Validate the Teams app using manifest schema or validation rules.
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
 | `--env` | Yes | Select an existing environment for the project. |
-| `--manifest-path` | No | Select the input Teams app manifest file path, defaults to `${folder}/appPackage/manifest.json`. This manifest will be validated using manifest schema. |
-|`--app-package-file-path` | No | Select the zipped Teams app package path, defaults to `${folder}/appPackage/build/appPackage.${env}.zip`. This package will be validated with validation rules. |
+| `--manifest-path` | No | Select the input Teams app manifest file path, defaults to `${folder}/appPackage/manifest.json`. This manifest is validated using manifest schema. |
+|`--app-package-file-path` | No | Select the zipped Teams app package path, defaults to `${folder}/appPackage/build/appPackage.${env}.zip`. This package is validated with validation rules. |
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 
 ## `teamsfx publish`
 
 Run the publish stage in `teamsapp.yml`.
 
-Running `teamsfx publish --env local` will trigger the publish stage in `teamsapp.local.yml` instead.
+Running `teamsfx publish --env local` triggers the publish stage in `teamsapp.local.yml` instead.
 
 ### Parameters for `teamsfx publish`
 
@@ -217,13 +217,13 @@ Preview the current application.
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 | `--env` | No | Select an existing env for the project. Defaults to `local`. |
 | `--manifest-file-path` | No | Select the Teams app `manifest file path`, defaults to `${folder}/appPackage/manifest.json`. |
-| `--run-command` | No | The command to start local service. Work for `local` environment only. If undefined, `teamsfx` will use the auto detected one from project type (`npm run dev:teamsfx` or `dotnet run` or `func start`). If empty, `teamsfx` will skip starting local service. |
-| `--running-pattern` | No | The ready signal output that service is launched. Work for `local` environment only. If undefined, `teamsfx` will use the default common pattern ("started/successfully/finished/crashed/failed"). If empty, `teamsfx` treats process start as ready signal. |
+| `--run-command` | No | The command to start local service. Work for `local` environment only. If undefined, `teamsfx` uses the auto detected one from project type (`npm run dev:teamsfx` or `dotnet run` or `func start`). If empty, `teamsfx` skips starting local service. |
+| `--running-pattern` | No | The ready signal output that service is launched. Work for `local` environment only. If undefined, `teamsfx` uses the default common pattern ("started/successfully/finished/crashed/failed"). If empty, `teamsfx` treats process start as ready signal. |
 | `--open-only` | No | Work for `local` environment only. If true, directly open web client without launching local service. Defaults to `false`. |
 | `--m365-host` | No | Preview the application in Teams, Outlook, or the Microsoft 365 app [string] [choices: `teams`, `outlook`, `office`]. Defaults to `teams`. |
 | `--browser` | No | Select browser to open Teams web client [string] [choices: `chrome`, `edge`, `default`]. Defaults to `default`. |
 | `--browser-arg` | No | Argument to pass to the browser, for example, --browser-args="--guest. |
-| `--exec-path` | No | The paths that will be added to the system environment variable PATH when the command is executed, defaults to `${folder}/devTools/func`. |
+| `--exec-path` | No | The paths that are added to the system environment variable PATH when the command is executed, defaults to `${folder}/devTools/func`. |
 
 ### Scenarios for `teamsfx preview`
 
@@ -290,7 +290,7 @@ Check, grant, and list user permission.
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 | `--email` | No | Input email address of collaborator. |
 | `--teams-app-manifest` | No | Manifest of Your Teams app. |
-| `--aad-app-manifest` | No | Manifest of your Azure AD app. |
+| `--aad-app-manifest` | No | Manifest of your Azure Active Directory (Azure AD) app. |
 
 ### Parameters for `teamsfx permission status`
 
@@ -312,7 +312,7 @@ Check, grant, and list user permission.
   teamsfx permission grant --env dev --email user-email@user-tenant.com
   ```
 
-  After receiving required permission, project creator and collaborators can share the project with the new collaborator by GitHub, and the new collaborator can have all the permissions for Microsoft 365 account.
+  After you receive the required permission, project creator and collaborators can share the project with the new collaborator by GitHub, and the new collaborator can have all the permissions for Microsoft 365 account.
 
 * Show Permission Status
 
@@ -336,7 +336,7 @@ Update the specific application manifest file.
 
 | Command | Description |
 |:----------------  |:-------------|
-| `teamsfx update aad-app` | Update the AAD App in the current application. |
+| `teamsfx update aad-app` | Update the Azure AD App in the current application. |
 | `teamsfx update teams-app` | Update the Teams App manifest to Teams Developer Portal. |
 
 ### Parameters for `teamsfx update aad-app`
@@ -345,7 +345,7 @@ Update the specific application manifest file.
 |:----------------  |:-------------|:-------------|
 | `--env` | Yes | Select an existing environment for the project. |
 | `--folder` | No | Select root folder of the project. Defaults to `./` |
-| `--manifest-file-path` | No | Enter the AAD app manifest template file path, it's a relative path to project root folder, defaults to `./aad.manifest.json`. |
+| `--manifest-file-path` | No | Enter the Azure AD app manifest template file path, it's a relative path to project root folder, defaults to `./aad.manifest.json`. |
 
 ### Parameters for `teamsfx update teams-app`
 
