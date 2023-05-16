@@ -50,7 +50,7 @@ Lets go through Teams Developer Documentation based on your requirement for buil
 | --------| --------|
 | If you're new to Teams app development and want to create a new Teams app | [Get started](get-started/get-started-overview.md) |
 |If you've created app with Teams before and want to learn more about app functionalities | Build modules for tabs, bots, message extensions, meeting app, and more. |
-| If you want to find more information about the tools and SDKs options that are available with Teams | [Explore more tools and SDKs](get-started/choose-what-suits-you.md#explore-more-tools-and-sdks) |
+| If you want to find more information about the tools and SDKs options that are available with Teams | [Explore SDKs](get-started/choose-what-suits-you.md#explore-sdks) and [Explore Tools](get-started/choose-what-suits-you.md#explore-tools) |
 
 ## See also
 

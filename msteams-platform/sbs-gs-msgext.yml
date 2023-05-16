@@ -403,6 +403,9 @@ items:
         - If you've created a bot app before you created the message extension app, you can see that it is loaded in the same bot app you created. Previous chat messages are visible.
         - If you created a message extension first, your app is loaded in any chat that is open on Teams.
 
+        > [!NOTE]
+        > If you want to extend your app to Outlook and Microsoft 365, you can choose to debug your app with Outlook and Microsoft 365 from RUN AND DEBUG dropdown in Visual Studio Code.
+
     ### Test your app
 
     The first time your app loads, the message extension app is open for you to test. This sample app lets you search open-source npm packages from the software registry.
