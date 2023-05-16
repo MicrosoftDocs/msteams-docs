@@ -54,7 +54,7 @@ items:
       1. Select the box **Microsoft Teams development tools** in the installation details panel.
       1. Select **Install**.
 
-          :::image type="content" source="~/assets/images/teams-toolkit-overview/visual-studio-install_1.png" alt-text="Visual studio-installation":::
+          :::image type="content" source="~/assets/images/teams-toolkit-overview/visual-studio-install_1.png" alt-text="Visual studio-installation" lightbox="~/assets/images/teams-toolkit-overview/visual-studio-install_1.png":::
 
       1. Select **Launch** to open Visual Studio.
 
@@ -69,11 +69,11 @@ items:
 
          The following Manage Extension window appears:
 
-          :::image type="content" source="~/assets/images/teams-toolkit-v2/manage-extension.png" alt-text="Manage Extensions.":::
+          :::image type="content" source="~/assets/images/teams-toolkit-v2/manage-extension.png" alt-text="Manage Extensions." lightbox="~/assets/images/teams-toolkit-v2/manage-extension.png":::
 
       1. Select **Installed** and you can see **Teams Toolkit** extension installed.
     
-          :::image type="content" source="~/assets/images/teams-toolkit-v2/select-ttk.png" alt-text="Select Teams Toolkit":::
+          :::image type="content" source="~/assets/images/teams-toolkit-v2/select-ttk.png" alt-text="Select Teams Toolkit" lightbox="~/assets/images/teams-toolkit-v2/select-ttk.png":::
 
     ## Set up your Teams development tenant
 
@@ -141,7 +141,7 @@ items:
     1. Enter **Teams** in the search box.
     1. Select **Microsoft Teams App** and select **Next**.
     
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/enter-teams.png" alt-text="Enter Teams":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/enter-teams.png" alt-text="Enter Teams" lightbox="~/assets/images/teams-toolkit-v2/enter-teams.png":::
 
        Configure your new project page appears.
 
@@ -161,7 +161,7 @@ items:
 
        Now Teams tab app is created in a few seconds.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/tap-app-in-vs.png" alt-text="Project Creation":::     
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/tap-app-in-vs.png" alt-text="Project Creation" lightbox="~/assets/images/teams-toolkit-v2/tap-app-in-vs.png":::     
 
     ## Take a tour of tab app source code
       
@@ -201,7 +201,7 @@ items:
 
     1. Select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-app-dependencies.png" alt-text="Teams app Dependencies":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-app-dependencies.png" alt-text="Teams app Dependencies" lightbox="~/assets/images/teams-toolkit-v2/teams-app-dependencies.png":::
     
     1. Select **Microsoft 365 Account** and select **Continue**. 
 
