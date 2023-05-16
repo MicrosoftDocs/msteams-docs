@@ -182,7 +182,7 @@ You can add functions to call a callback and return any kind of data you want.
 
 * {{$history}}: Inserts the conversation history.​ It gets it's value from state.temp.history
 
-* {{$state.<property>}}: Inserts state properties.
+* {{$state.< property >}}: Inserts state properties.
 
 ## Actions
 
