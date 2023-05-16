@@ -11,24 +11,24 @@ ms.date: 04/07/2022
 # Teams AI library FAQ
 
 <details>
-<summary>What does the SDK do?</summary>
+<summary>What does the AI library do?</summary>
 
-Teams AI library SDK provides abstractions for developers to build robust applications that utilize OpenAI LLMs.
+Teams AI library provides abstractions for developers to build robust applications that utilize OpenAI LLMs.
 
 </details>
 <br>
 
 <details>
-<summary>Does Microsoft provide a hosted version of OpenAI models that are used by the AI SDK?</summary>
+<summary>Does Microsoft provide a hosted version of OpenAI models that are used by the AI library?</summary>
 No, developers bring their own LLMs – hosted in Azure OpenAI, or elsewhere.
 
 </details>
 <br>
 
 <details>
-<summary>Can we use the SDK with other LLMs apart from OpenAI?</summary>
+<summary>Can we use the AI library with other LLMs apart from OpenAI?</summary>
 
-Yes, it's possible to use the SDK with other LLMs.
+Yes, it's possible to use Teams AI library with other LLMs.
 
 </details>
 <br>
@@ -36,13 +36,13 @@ Yes, it's possible to use the SDK with other LLMs.
 <details>
 <summary>Does a developer need to do anything to benefit from LLMs? If yes, why?</summary>
 
-Yes, the SDK provides abstractions to simplify utilization of LLMs in conversational applications. However, developers must tweak the prompts, topic filters, and actions depending upon their scenarios.
+Yes, Teams AI library provides abstractions to simplify utilization of LLMs in conversational applications. However, developers must tweak the prompts, topic filters, and actions depending upon their scenarios.
 
 </details>
 <br>
 
 <details>
-<summary> How does the SDK integrate with ODSL? </summary>
+<summary> How does Teams AI library integrate with ODSL? </summary>
 
 The two are independent.
 
@@ -50,17 +50,17 @@ The two are independent.
 <br>
 
 <details>
-<summary> How does the SDK co-exist against the “hero story” of developers building for the Skills ecosystem in Microsoft 365?</summary>
+<summary> How does Teams AI library co-exist against the “hero story” of developers building for the Skills ecosystem in Microsoft 365?</summary>
 
-The SDK story is targeted at Pro Devs and separate from the hero-story around Skills ecosystem in Microsoft 365.
+Teams AI library story is targeted at Pro Devs and separate from the hero-story around Skills ecosystem in Microsoft 365.
 
 </details>
 <br>
 
 <details>
-<summary>  What is the release status of the SDK at Build 2023?</summary>
+<summary>  What is the release status of Teams AI library at Build 2023?</summary>
 
-The SDK is available in public preview at Build 2023.
+Teams AI library is available in public preview at Build 2023.
 
 </details>
 <br>
@@ -68,22 +68,22 @@ The SDK is available in public preview at Build 2023.
 <details>
 <summary> How should information about the existing Bot Framework SDK be communicated after announcing a new version? </summary>
 
-The new SDK works alongside the existing Bot Framework SDK and isn't a replacement.
+The new Teams AI library works alongside the existing Bot Framework SDK and isn't a replacement.
 
 </details>
 <br>
 
 <details>
-<summary> What are the recommended steps for product integration and documentation for the AI SDK? Specifically: </summary>
+<summary> What are the recommended steps for product integration and documentation for Teams AI library? Specifically: </summary>
 
-<details><summary> For TTK, is adding a sample using the AI SDK to the samples gallery a good approach? </summary>
+<details><summary> For TTK, is adding a sample using Teams AI library to the samples gallery a good approach? </summary>
 
-We should have a starter for TTK for AI SDK.
+We should have a starter for TTK for Teams AI library.
 
 </details>
 
 <details>
-<summary> What documentation updates should be made for the AI SDK? </summary>
+<summary> What documentation updates should be made for Teams AI library? </summary>
 
 The doc updates are in progress.
 
