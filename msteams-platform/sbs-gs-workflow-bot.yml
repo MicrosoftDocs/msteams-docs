@@ -19,7 +19,6 @@ items:
     In this tutorial, you'll learn:
       * How to build workflow bot with Teams Toolkit.
       * About the directory structure of your app.
-      * Customize installation of your bot with the Adaptive Card response.
     
     You can see the following output:
     
