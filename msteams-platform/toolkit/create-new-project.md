@@ -71,10 +71,6 @@ To create a basic Teams app:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot showing where to enter the app name.":::
 
-    By default, your app project opens in a new window . You can open your app project in the current window as well.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/new-window-notification.png" alt-text="Screenshot showing the New window notification.":::
-
    The Teams tab app is created in a few seconds.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/tab-app-created.png" alt-text="Screenshot showing the app created." lightbox="../assets/images/teams-toolkit-v2/first-tab/tab-app-created.png":::
