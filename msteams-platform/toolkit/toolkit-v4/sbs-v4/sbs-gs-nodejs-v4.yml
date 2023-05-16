@@ -146,7 +146,7 @@ items:
     1. In the welcome screen, select **Set up E5 subscription**.
     1. Set up your administrator account. After you finish, the following screen appears.
 
-        :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Screenshot of example of what you see after signing up for the Microsoft 365 developer program.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-blazorupdate-v4/dev-program-subscription-v4.png" alt-text="Screenshot of example of what you see after signing up for the Microsoft 365 developer program.":::
 
     1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 

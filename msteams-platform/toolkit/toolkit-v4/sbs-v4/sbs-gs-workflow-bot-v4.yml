@@ -54,7 +54,7 @@ items:
     1. Open Visual Studio Code and select **Extensions** (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
     1. In the search box, enter **Teams toolkit**.
     1. Select **Install** next to the Teams Toolkit.
-       :::image type="content" source="~/assets/images/sbs-command-bot/teams-toolkit.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
+       :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/teams-toolkit-v4.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
     
     The Teams Toolkit :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/teams-toolkit-sidebar-icon-v4.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code side bar."::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
         

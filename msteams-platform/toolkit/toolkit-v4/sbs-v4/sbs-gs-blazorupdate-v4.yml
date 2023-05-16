@@ -219,7 +219,7 @@ items:
     <summary>A quick recap of creating a Teams tab app.</summary>
     Watch this short recap for creating a Teams tab app.
 
-    :::image type="content" source="~/assets/videos/blazorapp.gif" alt-text="Graphical representation shows the process of creating the Teams tab app.":::
+    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-blazorupdate-v4/blazor-app-v4.gif" alt-text="Graphical representation shows the process of creating the Teams tab app.":::
 
     ## Take a tour of the source code for Teams tab app
 
@@ -489,7 +489,7 @@ items:
     <summary>A quick recap of creating a Teams bot app.</summary>
     Watch this short recap for creating a Teams bot app.
 
-    :::image type="content" source="~/assets/videos/botapp.gif" alt-text="Graphical representation shows the process of creating the  jTeams bot app.":::
+    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-blazorupdate-v4/botapp-v4.gif" alt-text="Graphical representation shows the process of creating the  jTeams bot app.":::
 
     ## Take a tour of the source code for Teams bot app
 
