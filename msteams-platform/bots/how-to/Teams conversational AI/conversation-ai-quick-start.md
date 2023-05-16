@@ -32,7 +32,7 @@ To get started, ensure that you have the following tools:
 1. Clone the repository to test the sample app.
 
    ```bash
-   git clone <https://github.com/Microsoft/botbuilder-m365.git>
+   git clone https://github.com/microsoft/teams-ai.git
    ```
 
 1. Run the following command to go to the app folder:
