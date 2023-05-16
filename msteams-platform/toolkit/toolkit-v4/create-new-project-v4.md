@@ -75,7 +75,7 @@ The process to create a new Teams app is similar for all types of apps except SP
 
     :::image type="content" source="images/enter-name-tab1-v4.png" alt-text="Screenshot showing where to enter the app name.":::
 
-    By default, your app project opens in a new window . You can open your app project in the current window as well.
+    By default, your app project opens in a new window. You can open your app project in the current window as well.
 
     :::image type="content" source="images/new-window-notification-v4.png" alt-text="New window notification":::
 
@@ -135,7 +135,7 @@ The new project folder contains the following content:
 | `bot` | The bot source code. |
 | `templates` | Templates for Teams app manifest and corresponding Azure resources. |
 
-The core notification implementation is stored in the **bot** folder and it contains:
+The core notification implementation is stored in the **bot** folder, and it contains:
 
 | File name | Contents |
 | --- | --- |
