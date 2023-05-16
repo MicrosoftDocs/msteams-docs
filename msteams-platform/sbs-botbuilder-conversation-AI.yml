@@ -2,7 +2,7 @@
 title:  Build your first app using Teams AI library
 metadata:
   title: Chef Bot with Teams AI library
-  description: With this learning module, you learn how to build Chef bot with Teams AI library by setting up a new project with Teams Toolkit, build and deploy a bot app.
+  description: In this learn module, you'll learn how to build a bot with Teams AI library and set up, build, and deploy a bot app with Teams Toolkit.
   audience: Developer
   level: Beginner
   ms.date: 10/21/2021
@@ -15,12 +15,13 @@ items:
 - durationInMinutes: 1
   content: |
     Start Microsoft Teams app development with your first Teams AI library app. 
-    You can create a bot app that uses Teams AI library 
+    
+    You can create a conversational bot for Microsoft Teams that thinks it's a Chef to help you cook Teams apps and illustrates basic conversational bot behavior in Microsoft Teams. The bot is built to allow GPT to facilitate the conversation on its behalf, using only a natural language prompt file to guide it.
     
     In this tutorial, you learn:
 
     - How to set up a new project with Teams Toolkit.
-    - How to build a bot using Teams AI library.
+    - How to import Teams AI library capabilities.
     - How to deploy your bot in Teams and start a conversation.
 
     You can see the following output:
@@ -319,7 +320,7 @@ items:
 
     ---
 
-    ## Update your bot app with Conversational AI capabilities
+    ## Update your bot app with Teams AI library capabilities
 
     Teams Toolkit is the easiest way to scaffold and get a bot running, Teams Toolkit creates the basic bot structure for you so that you can  get started with configuring your bot. 
     
