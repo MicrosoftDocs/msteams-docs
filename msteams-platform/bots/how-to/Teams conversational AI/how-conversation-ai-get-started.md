@@ -1,6 +1,6 @@
 ---
 title: Teams AI core capabilities
-description: In this article, learn how to create an app using Teams conversational IA and its capabilities.
+description: In this article, learn how to create an app using Teams AI library and its capabilities.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
