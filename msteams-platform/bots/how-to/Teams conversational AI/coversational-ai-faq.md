@@ -11,7 +11,7 @@ ms.date: 04/07/2022
 # Teams AI library FAQ
 
 <details>
-<summary>What does the AI library do?</summary>
+<summary>What does the Teams AI library do?</summary>
 
 Teams AI library provides abstractions for developers to build robust applications that utilize OpenAI LLMs.
 
