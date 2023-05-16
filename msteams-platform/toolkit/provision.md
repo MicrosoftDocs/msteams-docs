@@ -412,15 +412,15 @@ You can follow below steps to add environment variables to the .env files to use
 
     1. Add below environment variable and its value to `env\.env.{env}` file.
 
-    ```env
-    BOT_ID=<value of Azure AD application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000    
-    ```
+       ```env
+       BOT_ID=<value of Azure AD application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000    
+       ```
 
     1. Add below environment variable and its value to `env\.env.{env}.user` file.
 
-    ```env
-    SECRET_BOT_PASSWORD=<value of Azure AD application's client secret>
-    ```
+       ```env
+       SECRET_BOT_PASSWORD=<value of Azure AD application's client secret>
+       ```
 
 > [!NOTE]
 >
