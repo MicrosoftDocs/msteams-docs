@@ -8,7 +8,7 @@ ms.topic: reference
 
 Let's get started with building apps for Microsoft Teams and beyond!
 
-Experience the Teams app with Teams Toolkit codespaces or walk through the steps to build a basic, real-world Teams app. The Get started also introduces you to common tools, fundamental concepts, and more advanced functionalities.
+Experience the Teams app with GitHub Codespaces or walk through the steps to build a basic, real-world Teams app. The Get started also introduces you to common tools, fundamental concepts, and more advanced functionalities.
 
 Here's an idea of what you'll learn:
 
@@ -32,7 +32,7 @@ Select the type of Teams app and choose your path to build it:
 
 In this section, learn more about your Teams app capabilities, such as tab, scenario-based bot app, and message extension. You can use one of the following ways to build your Teams app:
 
-* **Teams Toolkit codespaces**: Allows you to run, test, and debug your app in a development environment without the need for any of the setup.
+* **GitHub Codespaces**: Allows you to run, test, and debug your app in a development environment without the need for any of the setup.
 * **Step by step guide**: Allows you to create a Teams app from scratch with all development environment setup.
 
 :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Screenshot shows your choices to build Teams app with codespaces and step-by-step guide.":::

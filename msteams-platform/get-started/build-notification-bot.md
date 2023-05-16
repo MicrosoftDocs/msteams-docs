@@ -12,10 +12,10 @@ The notification bot proactively sends messages in Teams channel or group chat o
 
 In this tutorial, get familiarized with a notification bot app in one of the following ways:
 
-* **Teams Toolkit codespaces**: The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where the Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you.
+* **GitHub Codespaces**: The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where the Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you.
 * **Step-by-step guide**: Allows you to create a Teams app from scratch with all development environment setup.
 
-# [Teams Toolkit codespaces](#tab/teamstoolkitcodespaces)
+# [GitHub Codespaces](#tab/teamstoolkitcodespaces)
 
 Before you create your codespace, ensure that you have:
 
@@ -24,11 +24,11 @@ Before you create your codespace, ensure that you have:
 * A [Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
 
 > [!TIP]
-> [GitHub codespaces](https://github.com/features/codespaces) offers the free plan up to a fixed amount of usage every month. If you need to free up the space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespaces that you no longer need.
+> [GitHub Codespaces](https://github.com/features/codespaces) offers the free plan up to a fixed amount of usage every month. If you need to free up the space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespace that you no longer need.
 
-To create a Teams notification bot with codespaces, follow the steps:
+To create a Teams notification bot with codespace, follow the steps:
 
-1. Select the following button to open codespaces.
+1. Select the following button to open codespace.
 
    <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=v3&repo=348288141&machine=basicLinux32gb&location=WestUs2&devcontainer_path=.devcontainer%2Fnotification-codespaces%2Fdevcontainer.json&resume=1" target="_blank"><img src="https://github.com/codespaces/badge.svg" alt="Open hello-world tab in GitHub Codespaces"></a>
 
@@ -36,7 +36,7 @@ To create a Teams notification bot with codespaces, follow the steps:
 
 1. Select **Create codespaces**.
 
-   :::image type="content" source="../assets/images/get-started/codespace/bot-codespace.png" alt-text="Screenshot shows you the GitHub page to create a codespace for bot."lightbox="../assets/images/get-started/codespace/bot-codespace.png":::
+   :::image type="content" source="../assets/images/get-started/codespace.png" alt-text="Screenshot shows you the GitHub page to create a codespace for bot."lightbox="../assets/images/get-started/codespace.png":::
 
    The **Setting up your codespace** page appears.
 
@@ -56,7 +56,7 @@ To create a Teams notification bot with codespaces, follow the steps:
 
       :::image type="content" source="../assets/images/get-started/toolkit-in-browser.png" alt-text="Screenshot shows you the Teams Toolkit window in browser with your notification bot."lightbox="../assets/images/get-started/toolkit-in-browser.png":::
 
-   Teams Toolkit codespaces builds your notification bot app, loads it to Teams client, and opens in the another browser tab or window.
+   GitHub Codespaces builds your notification bot app, loads it to Teams client, and opens in the another browser tab or window.
 
 1. Once the app dialog appears, select **Add** to install your notification bot in Teams.
 
@@ -82,7 +82,7 @@ To create a Teams notification bot with codespaces, follow the steps:
 
 If you would like to learn how to start a project with Teams Toolkit from scratch, let's go through the step-by-step guide.
 
-Unlike codespaces, you need to set up your development environment. Let's start building your notification bot app.
+Unlike codespace, you need to set up your development environment. Let's start building your notification bot app.
 
 > [!div class="nextstepaction"]
 > [Start building a notification bot](../sbs-gs-notificationbot.yml)

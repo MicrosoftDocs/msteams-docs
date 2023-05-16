@@ -15,10 +15,10 @@ In this tutorial, you'll learn to build a search based message extension app, th
 
 Get familiarized with search based message extension app in one of the following ways:
 
-* **Teams Toolkit codespaces**: The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where the Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you.
+* **GitHub Codespaces**: The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where the Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you.
 * **Step-by-step guide**: Allows you to create a Teams app from scratch with all development environment setup.
 
-# [Teams Toolkit codespaces](#tab/teamstoolkitcodespaces)
+# [GitHub Codespaces](#tab/teamstoolkitcodespaces)
 
 Before you create your codespace, ensure that you have:
 
@@ -27,11 +27,11 @@ Before you create your codespace, ensure that you have:
 * A [Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
 
 > [!TIP]
-> [GitHub codespaces](https://github.com/features/codespaces) offers the free plan up to a fixed amount of usage every month. If you need to free up the space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespaces that you no longer need.
+> [GitHub Codespaces](https://github.com/features/codespaces) offers the free plan up to a fixed amount of usage every month. If you need to free up the space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespaces that you no longer need.
 
-To use codespaces for creating a search based message extension:
+To use codespace for creating a search based message extension:
 
-1. Select the following button to open codespaces.
+1. Select the following button to open codespace.
 
     <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=v3&repo=348288141&machine=basicLinux32gb&location=WestUs2&devcontainer_path=.devcontainer%2Fnpm-search-message-extension-codespaces%2Fdevcontainer.json&resume=1" target="_blank"><img src="https://github.com/codespaces/badge.svg" alt="Open message extension in GitHub Codespaces"></a>
 
@@ -39,7 +39,7 @@ To use codespaces for creating a search based message extension:
 
 1. Select **Create codespaces**.
 
-   :::image type="content" source="../assets/images/get-started/codespace/me-codespace.png" alt-text="Screenshot shows you the GitHub page to create a codespace for message extension.":::
+   :::image type="content" source="../assets/images/get-started/codespace.png" alt-text="Screenshot shows you the GitHub page to create a codespace for message extension."lightbox="../assets/images/get-started/codespace.png":::
 
    The **Setting up your codespace** page appears.
 
@@ -59,7 +59,7 @@ To use codespaces for creating a search based message extension:
 
       :::image type="content" source="../assets/images/get-started/codespace/me-preview-teams.png" alt-text="Screenshot shows you the Teams Toolkit window in browser with your message extension."lightbox="../assets/images/get-started/codespace/me-preview-teams.png":::
 
-      Teams Toolkit codespaces builds your message extension app, loads it to Teams client, and opens in the another browser tab or window.
+      GitHub Codespaces builds your message extension app, loads it to Teams client, and opens in the another browser tab or window.
 
    Your message extension app is sideloaded to Teams.
 
@@ -75,7 +75,7 @@ To use codespaces for creating a search based message extension:
 
 If you would like to learn how to start a project with Teams Toolkit from scratch, let's go through the step-by-step guide.
 
-Unlike codespaces, you need to set up your development environment. Let's start building your message extension app.
+Unlike codespace, you need to set up your development environment. Let's start building your message extension app.
 
 > [!div class="nextstepaction"]
 > [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml)
