@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Add capabilities to Microsoft Teams app
 
-Teams Toolkit project templates focus on getting started with an app that implements a single [app capability](~/concepts/design/app-structure.md). However, apps can have multiple capabilities. We've created a set of How-To guides with the steps needed to add different capabilities to a project created with Teams Toolkit.
+Teams Toolkit project templates focus on getting started with an app that implements a single [app capability](~/concepts/design/app-structure.md). However, apps can have multiple capabilities. We've created a set of How-to guides with the steps needed to add different capabilities to a project created with Teams Toolkit.
 
 ## How-to guides for adding capabilities
 
@@ -32,11 +32,11 @@ Teams Toolkit project templates focus on getting started with an app that implem
    1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
    1. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot shows Add capabilities from Teams Toolkit.":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot shows View How-to Guides under Development highlighted.":::
 
    1. From the dropdown list that appears, select the capability you want to add to your app. You'll be redirected to the respective How-to Guide.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="Screenshot shows the notification.":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="Screenshot shows the capabilities listed.":::
 
 ### Use the Command Palette
 
@@ -44,7 +44,7 @@ Teams Toolkit project templates focus on getting started with an app that implem
 
    1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-capabilities-command-palette_1.png" alt-text="Screenshot shows the Add capabilities from command palette.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-capabilities-command-palette_1.png" alt-text="Screenshot shows the Command Palette option.":::
 
    1. Select **Teams: View How-to Guides**.
 
@@ -52,7 +52,7 @@ Teams Toolkit project templates focus on getting started with an app that implem
 
    1. From the dropdown list that appears, select the capability you want to add to your app. You'll be redirected to the respective How-to Guide.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="Screenshot shows the notification.":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="Screenshot shows the capabilities list.":::
 
 ## See also
 

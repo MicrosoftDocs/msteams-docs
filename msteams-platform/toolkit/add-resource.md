@@ -25,11 +25,11 @@ You can add cloud resources in the following ways:
    1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
    1. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot shows Add capabilities from Teams Toolkit.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot shows View How-to Guides under Development highlighted.":::
 
    1. From the dropdown list that appears, select the cloud service integration you want to add to your app. You'll be redirected to the respective How-to Guide.
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the capabilities in View How-to Guides.":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the Cloud service integration options in View How-to Guides.":::
 
       |**Cloud service integration** | **How-to Guide** |
       |----------|----------|

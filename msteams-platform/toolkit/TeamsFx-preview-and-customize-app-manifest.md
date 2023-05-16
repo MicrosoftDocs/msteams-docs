@@ -141,7 +141,7 @@ If the manifest file is outdated due to configuration file change or template ch
 
 In `appPackage/manifest.json`, you can go to CodeLens to preview the values for `local` and `dev` environment.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/codelens-v5.png" alt-text="Screenshot showing the code lens v5.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/codelens-v5.png" alt-text="Screenshot showing the codelens v5.":::
 
 > [!NOTE]
 > Provision the environment or execute local debug to generate environment variables.

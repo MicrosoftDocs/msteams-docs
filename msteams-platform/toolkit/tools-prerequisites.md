@@ -97,7 +97,7 @@ You can sign up for the developer program using one of the following account typ
 
     :::column-end:::
     :::column span="1":::
-             :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/personal-account-icon.png" alt-text="personal account.":::
+             :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/personal-account-icon.png" alt-text="Screenshot shows the personal account icon.":::
    :::column-end:::
 
   :::row-end:::
@@ -114,7 +114,7 @@ You can sign up for the developer program using one of the following account typ
 
     :::column-end:::
     :::column span="1":::
-             :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/work-account-icon.png" alt-text="work account.":::
+             :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/work-account-icon.png" alt-text="Screenshot shows the work account icon.":::
     :::column-end:::
 
   :::row-end:::
@@ -129,7 +129,7 @@ To create a free Microsoft 365 developer account:
 
    After the completion of the subscription, the following information appears:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/m365-account_1.png" alt-text="M365 Account":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/m365-account_1.png" alt-text="Screenshot shows the M365 Account subscription options.":::
 
 ### Azure account
 
@@ -203,7 +203,7 @@ If you have admin rights, you can enable sideloading:
 
   1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/showall icon.PNG"::: icon > **Teams**.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center_1.png" alt-text="Microsoft 365 Admin center":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center_1.png" alt-text="Screenshot shows the Teams client in the left pane of Microsoft 365 Admin center.":::
 
      > [!Note]
      > It can take up to 24 hours for the Teams option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps) for testing and validation.
@@ -211,15 +211,15 @@ If you have admin rights, you can enable sideloading:
   1. Sign in to Microsoft Teams admin center with your admin credentials.
   1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/showall icon.PNG"::: icon > **Teams apps** > **Setup policies**.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center1_1.png" alt-text="Microsoft 365 Admin center1":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center1_1.png" alt-text="Screenshot shows the Setup policies under Teams apps in Microsoft 365 Admin center.":::
 
   1. Select **Global (Org-wide default)**.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/select-manage-policies_1.png" alt-text="Select Manage Policies":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/select-manage-policies_1.png" alt-text="Screenshot shows the Manage policies tab with Global (Org-wide default) option highlighted.":::
 
   1. Set **Upload custom apps** toggle to **On**.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/Upload-custom-apps_1.png" alt-text="Upload Custom Apps":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/Upload-custom-apps_1.png" alt-text="Screenshot shows the Upload custom apps toggle highlighted.":::
 
   5. Select **Save**.
 
