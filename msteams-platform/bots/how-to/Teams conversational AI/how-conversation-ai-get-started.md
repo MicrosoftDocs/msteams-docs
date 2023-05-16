@@ -178,11 +178,11 @@ You can add functions to call a callback and return any kind of data you want.
 
 * {{function}}:  Calls a registered function and inserts its value.​
 
-* {{$input}}:  Inserts the message text.​
+* {{$input}}:  Inserts the message text. It gets it's value from state.temp.input.
 
-* {{$history}}: Inserts the conversation history.​
+* {{$history}}: Inserts the conversation history.​ It gets it's value from state.temp.history
 
-* {{$< scope >. < property >}}: Inserts state properties.
+* {{$state.<property>}}: Inserts state properties.
 
 ## Actions
 
