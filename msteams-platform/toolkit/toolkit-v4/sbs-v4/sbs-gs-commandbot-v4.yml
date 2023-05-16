@@ -278,7 +278,7 @@ items:
 
     1. Select **Provision**.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-command-bot-v4/provision-confirm1-v4.png" alt-text="Screenshot of the provisioning dialog.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-command-bot-v4/provision-confirm2-v4.png" alt-text="Screenshot of the provisioning dialog.":::
 
        The provisioning process creates resources in the Azure cloud. You can monitor the progress by observing the dialogs in the lower-right corner. After few minutes, you see the following notice:
 
