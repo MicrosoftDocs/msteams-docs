@@ -377,7 +377,7 @@ items:
             type ApplicationTurnState = DefaultTurnState<ConversationState>;
             ```
 
-            The `ApplicationTurnState` performs flow of the arbitrary data in the entire bot application.
+            The `ApplicationTurnState` is the typescript **type** of the turn state object state. End users can create their own **conversation** or **user** concrete type implementations and provide it to the `DefaultTurnState` interface.
         
         1. Add the following code to create planner, moderator, and promptManager:
 
