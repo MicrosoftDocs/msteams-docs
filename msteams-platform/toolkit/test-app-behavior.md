@@ -65,9 +65,6 @@ You can test your Teams app after integrating with Microsoft Teams. To test your
 
 Teams is a cloud-based product that requires all services it accesses, to be available publicly using HTTPS endpoints. Local hosting is about sideloading into Teams for testing in local environment.
 
-> [!NOTE]
-> Although you can use any tool of your choice for testing, we recommend you to use [ngrok](https://ngrok.com/download)
-
 ## Cloud-hosted environment
 
 To host your development and production code and their HTTPS endpoints, You need to remotely test your teams app using provisioning and deploying on Azure AD. You need to ensure that all domains are accessible from your Teams app listed in the `validDomains` object in the `manifest.json` file.

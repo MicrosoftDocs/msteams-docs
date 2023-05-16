@@ -23,27 +23,17 @@ To preview manifest with actual content, Teams Toolkit generates preview manifes
         └───manifest.local.json  - Previewed manifest of local Teams app
 ```
 
-You can preview the manifest file in local and remove environments.
+You can preview the manifest file in local and remote environments.
 
-<br>
-
-<details>
-
-<b><summary>Preview manifest file in local environment</b></summary>
+## Preview manifest file in local environment
 
 To preview manifest file in local environment, you can press F5 to run local debug. After generating environment variables in `env/.env.local`, the app package and preview manifest will be built under `appPackage/build` folder.
 
-You can also trigger `Zip Teams App Package` from tree view or Teams: Zip Teams app Package from command palette to generate preview manifest and app package.
+You can also trigger `Zip Teams App Package` from tree view or `Teams: Zip Teams app Package` from command palette to generate previewed manifest and app package.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/zip-app-package.png" alt-text="Screenshot showing the selection of zip Teams App package.":::
 
-<br>
-
-</details>
-
-<details>
-
-<b><summary>Preview manifest file in remote environment</b></summary>
+## Preview manifest file in remote environment
 
 To preview manifest file in remote environment, you can trigger `Provision` from tree view or `Teams: Provision in the cloud` from command palette. It generates environment variables for remote Teams app, build app package and preview manifest under `appPackage/build` folder.
 
@@ -53,7 +43,7 @@ You can also trigger Zip Teams App Package from tree view or `Teams: Zip Teams a
 
 ## Customize Teams app manifest for Visual Studio Code
 
-During local debug or provision, Teams Toolkit loads manifest from `appPackage/manifest.json`, and resolve manifest by environment variables defined in `env/.env.xx`, then creates or updates Teams app in [Teams Developer Portal](https://dev.teams.microsoft.com/home).
+During local debug or provision, Teams Toolkit loads manifest from `appPackage/manifest.json`, and resolves manifest by environment variables defined in `env/.env.xx`, then creates or updates Teams app in [Teams Developer Portal](https://dev.teams.microsoft.com/home).
 
 1. You can define your own manifest.json file in `teamsapp.yml` and `teamsapp.local.yml`.
 For example, you can put your manifest.json file in `test/test.json`, and update `manifestPath` parameters in yaml files.
