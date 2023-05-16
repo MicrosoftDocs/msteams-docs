@@ -1,19 +1,19 @@
 ---
-title: Teams Conversational AI FAQs
+title: Teams AI library FAQs
 author: surbhigupta
-description: In this module, learn more about Teams conversational AI Frequently Asked Questions.
+description: In this module, learn more about Teams AI library Frequently Asked Questions.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
 ---
 
-# Teams conversational AI FAQ
+# Teams AI library FAQ
 
 <details>
 <summary>What does the SDK do?</summary>
 
-Teams Conversational AI SDK provides abstractions for developers to build robust applications that utilize OpenAI LLMs.
+Teams AI library SDK provides abstractions for developers to build robust applications that utilize OpenAI LLMs.
 
 </details>
 <br>
