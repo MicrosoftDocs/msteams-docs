@@ -56,7 +56,7 @@ You can customize Azure AD manifest template to update Azure AD application.
 
     ```
 
-    The following permissions are used property IDs:
+    The following list provides different property IDs and their usage:
 
     - The `resourceAppId` property is used for different APIs. For `Microsoft Graph` and `Office 365 SharePoint Online`, enter the name directly instead of UUID, and for other APIs use UUID.
 
@@ -72,7 +72,7 @@ You can customize Azure AD manifest template to update Azure AD application.
 
     <summary>Pre-authorize a client application</summary>
 
-     You can use `preAuthorizedApplications` property to authorize a client application to indicate that the API trusts the application. Users don't consent when the client calls it exposed API. You can see the following example for this property:
+     You can use `preAuthorizedApplications` property to authorize a client application to indicate that the API trusts the application. Users don't consent when the client calls exposed API. You can see the following example for this property:
 
      ```JSON
 
@@ -196,7 +196,7 @@ CodeLens shows the application name for the pre-authorized application ID for th
 
 1. Select Azure AD application from search result to view the detailed information.
   
-1. In Azure AD app information page, select the `Manifest` menu to view manifest of this application. The schema of the manifest is same as the one in `aad.template.json` file. For more information about manifest, see [Azure AD app manifest](/azure/active-directory/develop/reference-app-manifest).
+1. In Azure AD app information page, select the Manifest menu to view manifest of this application. The schema of the manifest is same as the one in `aad.template.json` file. For more information about manifest, see [Azure AD app manifest](/azure/active-directory/develop/reference-app-manifest).
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view3.png" alt-text="Screenshot shows the Manifest screen.":::
 
@@ -268,10 +268,10 @@ You need to interact with Azure AD application during various stages of your Tea
 
 2. Currently, `requiredResourceAccess` property is used for user readable resource application name or permission name strings only for `Microsoft Graph` and `Office 365 SharePoint Online` APIs. You need to use UUID for other APIs. Perform the following steps to retrieve IDs from Azure portal:
 
-    - Register a new Azure AD application on [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
-    - Select `API permissions` from the Azure AD application page.
-    - Select `add a permission` to add the permission you need.
-    - Select `Manifest` from the `requiredResourceAccess` property, where you can find the IDs of API, and the permissions.
+    1. Register a new Azure AD application on [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
+    1. Select `API permissions` from the Azure AD application page.
+    1. Select `add a permission` to add the permission you need.
+    1. Select `Manifest` from the `requiredResourceAccess` property, where you can find the IDs of API, and the permissions.
 
 ## See also
 

@@ -72,7 +72,7 @@ If you've signed up for Microsoft 365 already, sign in to Microsoft 365. For mor
 
 ### Toggle breakpoints
 
-Ensure that you can toggle breakpoints on the source codes of tabs, bots, message extensions, and Azure Functions for more information, see [Toggle breakpoints](#toggle-breakpoints)
+Ensure that you can toggle breakpoints on the source codes of tabs, bots, message extensions, and Azure Functions. For more information, see [Toggle breakpoints](#toggle-breakpoints)
 
 ## Customize debug settings
 
@@ -115,7 +115,7 @@ Here's a list of debug scenarios that you can use:
 
 <summary><b>Skip prerequisite checks</b></summary>
 
-In `.vscode/tasks.json` under `"Validate prerequisites"` > `"args"` > `"prerequisites"`, update the prerequisite checks you wish to skip.
+In `.vscode/tasks.json` under `"Validate prerequisites"` > `"args"` > `"prerequisites"`, update the prerequisite checks you want to skip.
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/skip-prerequisite-checks.png" alt-text="Screenshot shows the skip prerequisite checks.":::
 
@@ -127,24 +127,24 @@ In `.vscode/tasks.json` under `"Validate prerequisites"` > `"args"` > `"prerequi
 1. In `teamsapp.local.yml`, remove `devCert` from `devTool/install` action (or remove the whole `devTool/install` action if it only contains `devCert`).
 1. In `teamsapp.local.yml`, set `"SSL_CRT_FILE"` and `"SSL_KEY_FILE"` in `file/createOrUpdateEnvironmentFile` action to your certificate file path and key file path.
 
-```yml
-# teamsapp.local.yml
-...
-  # Remove devCert or this whole action
-  - uses: devTool/install
-    with:
-      # devCert:
-  ...
-  - uses: file/createOrUpdateEnvironmentFile
-    with:
-      target: ./.localSettings
-      envs:
-        ...
-        # set your own cert values
-        SSL_CRT_FILE: ...
-        SSL_KEY_FILE: ...
-...
-```
+    ```yml
+    # teamsapp.local.yml
+    ...
+      # Remove devCert or this whole action
+      - uses: devTool/install
+        with:
+          # devCert:
+      ...
+      - uses: file/createOrUpdateEnvironmentFile
+        with:
+          target: ./.localSettings
+          envs:
+            ...
+            # set your own cert values
+            SSL_CRT_FILE: ...
+            SSL_KEY_FILE: ...
+    ...
+    ```
 
 </details>
 
@@ -209,9 +209,9 @@ Teams Toolkit by default creates a set of `teamsApp` actions to manage app packa
 <details>
 <summary><b>Use your own tunnel</b></summary>
 
-1. In `.vscode/tasks.json` under `"Start Teams App Locally"`, you can update `"Start Local tunnel"`.
+In `.vscode/tasks.json` under `"Start Teams App Locally"`, you can update `"Start Local tunnel"`.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-local-tunnel.png" alt-text="Screenshot shows the tasks of use your own tunnel.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-local-tunnel.png" alt-text="Screenshot shows the tasks of use your own tunnel.":::
 
 ```javascript
 # env/.env.local

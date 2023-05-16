@@ -10,7 +10,7 @@ ms.date: 05/09/2023
 
 # Use existing Azure AD app in TeamsFx project
 
-This section provides information for using existing Azure AD app or manually create Azure AD app for TeamsFx project. Please follow the instruction and make sure all required info is properly set in your TeamsFx project.
+This section provides information for using existing Azure Active Directory (Azure AD) app or manually create Azure AD app for TeamsFx project. Please follow the instruction and make sure all required info is properly set in your TeamsFx project.
 
 ## Create an Azure AD app
 
@@ -27,7 +27,7 @@ This section provides information for using existing Azure AD app or manually cr
 
 1. When the app is registered, you'll be taken to the app's **Overview** page. Copy the **Application (client) ID**, **Object ID**, and **Directory (tenant) ID**; it's needed later. Verify that the **Supported account types** is set to **My organization only**.
 
-## Create client secret for Azure AD app (Optional)
+## Create client secret for Azure AD app (optional)
 
 > [!NOTE]
 > You can skip this part if your application doesn't require client secret. This step can be automated by the `aadApp/create` action.
@@ -39,7 +39,7 @@ This section provides information for using existing Azure AD app or manually cr
 
 1. When the client secret is added, press the copy button under the **Value** column to copy the **Client Secret**.
 
-## Create Access As User Scope for Azure AD app (Optional)
+## Create access as user scope for Azure AD app (optional)
 
 > [!NOTE]
 > You can skip this part if your M365 account has permission to update the Azure AD app. We'll create the scope for you. This step can be automated by the `aadApp/update` action.
@@ -69,6 +69,7 @@ This section provides information for using existing Azure AD app or manually cr
 
 ## Get necessary info from existing Azure AD app
 
+> [!NOTE]
 > You may skip this part if you follow the instruction above to create an Azure AD app.
 
 1. Go to the [Azure Portal](https://portal.azure.com) and select **Azure Active Directory**.
@@ -79,10 +80,10 @@ This section provides information for using existing Azure AD app or manually cr
 
 1. Go to app's **Certificates & secrets** page, press the copy button under the **Value** column to copy the **Client Secret**.
 
-> [!NOTE]
-> If you can't copy the secret, please follow the [instruction](#create-client-secret-for-azure-ad-app-optional) to create a new client secret.
-
-1. Go to app's **Expose an API** page. If you've already added **access_as_user** scope under **Scopes defined by this API** and pre-auth the two Teams Client Ids, go to app's **Manifest** page, copy the **id** under **oauth2Permissions** as **Access As User Scope ID**.
+    > [!NOTE]
+    > If you can't copy the secret, please follow the [instruction](#create-client-secret-for-azure-ad-app-optional) to create a new client secret.
+    
+1. Go to apps **Expose an API** page. If you've already added **access_as_user** scope under **Scopes defined by this API** and pre-auth the two Teams Client Ids, go to app's **Manifest** page, copy the **id** under **oauth2Permissions** as **Access As User Scope ID**.
 
 ## Set necessary info in TeamsFx project
 
@@ -122,8 +123,8 @@ This section provides information for using existing Azure AD app or manually cr
       SECRET_AAD_APP_CLIENT_SECRET=<value of Azure AD application's client secret>
       ```
 
-> [!NOTE]
-> Remember to update the environment variable names in the examples if you use different names in `writeToEnvironmentFile`.
+      > [!NOTE]
+      > Remember to update the environment variable names in the examples if you use different names in `writeToEnvironmentFile`.
 
 1. Open Teams Toolkit extension and select **Provision in the cloud**. Wait until your project is successfully provisioned.
 

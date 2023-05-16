@@ -98,8 +98,7 @@ Teams toolkit for Visual Studio Code built on top of the Teams App Submission AP
   > * Add apps to Teams.
   > * Purchase services for third-party apps.
   > * View permissions requested by apps.
-  > * Grant admin consent to apps.
-  > * [Manage org wide app settings](https://admin.teams.microsoft.com/policies/manage-apps).
+  > * Grant admin consent to apps in [manage org wide app settings.](https://admin.teams.microsoft.com/policies/manage-apps).
 
 The following steps help you to approve from Admin Center:
 

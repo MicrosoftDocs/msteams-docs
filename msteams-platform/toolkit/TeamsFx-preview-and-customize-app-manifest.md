@@ -27,7 +27,7 @@ You can preview the manifest file in local and remote environments.
 
 ## Preview manifest file in local environment
 
-To preview manifest file in local environment, you can press F5 to run local debug. After you generate the environment variables in `env/.env.local`, the app package and preview manifest will be built under `appPackage/build` folder.
+To preview manifest file in local environment, you can press F5 to run local debug. After you generate the environment variables in `env/.env.local`, the app package and preview manifest is built under `appPackage/build` folder.
 
 You can also trigger `Zip Teams App Package` from tree view or `Teams: Zip Teams app Package` from command palette to generate previewed manifest and app package.
 
@@ -59,24 +59,24 @@ For example, you can put your manifest.json file in `test/test.json`, and update
 1. You can define your own environment variables. The default manifest.json contains some placeholders with format of ${{xx_xx}}. You can define your own environment variables and add placeholders in manifest.json file.
 For example, you can customize app description by defining a new environment variable in env/.env.xx file, and update manifest.json with corresponding placeholder.
 
-[.env.dev]
+    `.env.dev`
 
-```text
-TEAMS_APP_DESCRIPTION=This is an amazing app
-```
+    ```text
+    TEAMS_APP_DESCRIPTION=This is an amazing app
+    ```
+    
+    `manifest.json`
 
-[manifest.json]
-
-```text
-{
-    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.16",
-    "description": {
-        "short": "${{TEAMS_APP_DESCRIPTION}}",
-        "full": "Full description of tab0418"
-    },
-}
-```
+    ```text
+    {
+        "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+        "manifestVersion": "1.16",
+        "description": {
+            "short": "${{TEAMS_APP_DESCRIPTION}}",
+            "full": "Full description of tab0418"
+        },
+    }
+    ```
 
 ## Validate Application
 
