@@ -27,7 +27,7 @@ Following is a list of main TeamsFx features:
 
 * **TeamsFx CLI**: Accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
 
-* **TeamsFx SDK**: Provides access to database, such as the primary TeamsFx code library containing simple authentication for both client and server-side code tailored for Teams developers.
+* **TeamsFx SDK**: Provides access to database, such as the primary TeamsFx code library contains simple authentication for both client and server-side code tailored for Teams developers.
 
 ## Get Started
 

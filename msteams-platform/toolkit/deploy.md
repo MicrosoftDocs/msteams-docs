@@ -149,14 +149,14 @@ This action executes dotnet commands under specified directory with parameters.
 |-------------|----------|---------------|---------------|
 |workingDirectory | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the project root. | No | Project root |
 |artifactFolder | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory.| Yes | |
-|ignoreFile | Specifies the file path of the ignore file used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
-| resourceId | Indicates the resource ID of an Azure App Service. It's generated automatically after running the provision command. If you already have an Azure App Service, you can find its resource ID in the Azure portal (see [this link](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/) for more information). | Yes | |
+|ignoreFile | Specifies the file path of ignoreFile used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
+| resourceId | Indicates the resource ID of an Azure App Service. It's generated automatically after running the provision command. If you already have an Azure App Service, you can find its [resource ID](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/) | Yes | |
 |dryRun | You can set the dryRun parameter to true if you only want to test the preparation of the upload and don't intend to deploy it. This helps you verify that the packaging zip file is correct. | No | false |
-| outputZipFile | Indicates the path of the zip file for the packaged artifact folder. It's relative to the workingDirectory. This file is reconstructed during deployment, reflecting all folders and files in your artifactFolder, and removing any non-existent files or folders. | No | ./.deployment/deployment.zip |
+| outputZipFile | Indicates the path of the zip file for the packaged artifact folder. It's relative to the workingDirectory. This file is reconstructed during deployment, reflecting all folders and files in your artifactFolder, and removing any nonexistent files or folders. | No | ./.deployment/deployment.zip |
 
 **azureFunctions/zipDeploy**
 
-This action uploads and deploy the project to Azure Functions using the [zip deploy feature](/azure/azure-functions/deployment-zip-push).
+This action upload and deploy the project to Azure Functions using the [zip deploy feature](/azure/azure-functions/deployment-zip-push).
 
 **Sample**
 
@@ -177,14 +177,14 @@ This action uploads and deploy the project to Azure Functions using the [zip dep
 |-------------|----------|---------------|---------------|
 |workingDirectory | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the project root. |No | Project root |
 |artifactFolder | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory.| Yes | |
-|ignoreFile | Specifies the file path of the ignore file used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
-| resourceId | Indicates the resource ID of an Azure Functions. It's generated automatically after running the provision command. If you already have an Azure Functions, you can find its resource ID in the Azure portal (see [this link](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/) for more information).| Yes | |
+|ignoreFile | Specifies the file path of ignoreFile used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
+| resourceId | Indicates the resource ID of an Azure Functions. It's generated automatically after running the provision command. If you already have an Azure Functions, you can find its [resource ID](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/) in the Azure portal.| Yes | |
 |dryRun | You can set the dryRun parameter to true if you only want to test the preparation of the upload and don't intend to deploy it. This helps you verify that the packaging zip file is correct. | No | false |
-| outputZipFile | Indicates the path of the zip file for the packaged artifact folder. It's relative to the workingDirectory. This file is reconstructed during deployment, reflecting all folders and files in your artifactFolder, and removing any non-existent files or folders. | No | ./.deployment/deployment.zip |
+| outputZipFile | Indicates the path of the zip file for the packaged artifact folder. It's relative to the workingDirectory. This file is reconstructed during deployment, reflecting all folders and files in your artifactFolder, and removing any nonexistent files or folders. | No | ./.deployment/deployment.zip |
 
 **azureStorage/deploy**
 
-This action uploads and deploy the project to Azure Storage.
+This action upload and deploy the project to Azure Storage.
 
 **Sample**
 
@@ -203,12 +203,12 @@ This action uploads and deploy the project to Azure Storage.
 |-------------|----------|---------------|---------------|
 |workingDirectory | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the project root. |No | Project root |
 |artifactFolder | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory.| Yes | |
-|ignoreFile | Specifies the file path of the ignore file used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
-| resourceId | Indicates the resource ID of an Azure Functions. It's generated automatically after running the provision command. If you already have an Azure Functions, you can find its resource ID in the Azure portal (see [this link](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/) for more information).| Yes | |
+|ignoreFile | Specifies the file path of ignoreFile used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
+| resourceId | Indicates the resource ID of an Azure Functions. It's generated automatically after running the provision command. If you already have an Azure Functions, you can find its [resource ID](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/) in the Azure portal.| Yes | |
 
 **spfx/deploy**
 
-This action uploads and deploys generated sppkg to SharePoint app catalog. You can create tenant app catalog manually or by setting createAppCatalogIfNotExist to true if you don't have one in current M365 tenant.
+This action upload and deploys generated sppkg to SharePoint app catalog. You can create tenant app catalog manually or by setting createAppCatalogIfNotExist to true if you don't have one in current M365 tenant.
 
 **Sample**
 
