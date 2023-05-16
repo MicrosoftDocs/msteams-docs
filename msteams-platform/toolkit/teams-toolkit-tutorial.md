@@ -25,4 +25,4 @@ Now, let's build your first Teams app. You can use the following language (or fr
 
 ## Code samples
 
-Code samples are designed to help understand and build your own Microsoft Teams app with different capabilities and scenarios. To learn more about list of code samples, see [microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+Code samples are designed to help understand and build your own Microsoft Teams app with different capabilities and scenarios. To learn more about list of code samples, see [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
