@@ -181,7 +181,7 @@ items:
     1. Open Visual Studio Code.
     1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 
-    1. Select **Create a new app**.
+    1. Select **Create a New App**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Screenshots shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
@@ -189,8 +189,8 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-new-app1.png" alt-text="Screenshots shows the wizard to create a new project.":::
 
-    1. Ensure that **Basic Tab** is selected as the app feature that you want to build in your app. Select **OK**.
-
+    1. Ensure that **Basic Tab** is selected as the app feature that you want to build in your app.
+    
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Screenshot shows to add app feature to add to your new app.":::
 
     1. Select **JavaScript** as the programming language.
