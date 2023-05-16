@@ -59,7 +59,7 @@ items:
     1. In the search box, enter **Teams toolkit**.
     1. Select **Install** next to the Teams Toolkit.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-install-toolkit-vscode.png" alt-text="microsoft tool kit":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-install-toolkit-vscode.png" alt-text="microsoft tool kit" lightbox="~/assets/images/teams-toolkit-v2/spfx-install-toolkit-vscode.png":::
 
         The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
 
@@ -199,11 +199,11 @@ items:
 
         Teams Toolkit invokes Yeoman CLI to scaffold your Teams app, and install the required dependencies in the process.</br>
         
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-tooklit-updated.png" alt-text="bot home":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-tooklit-updated.png" alt-text="bot home" lightbox="~/assets/images/teams-toolkit-v2/spfx-tooklit-updated.png":::
  
         The scaffolding takes a couple of minutes.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/sbs-share-point.png" alt-text="bot home":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/sbs-share-point.png" alt-text="bot home" lightbox="~/assets/images/teams-toolkit-v2/sbs-share-point.png":::
           
 
     <details>
@@ -328,7 +328,7 @@ items:
 
     1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-app-local-debug.png" alt-text="Add the app to Teams":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-app-local-debug.png" alt-text="Add the app to Teams" lightbox="../msteams-platform/assets/images/teams-toolkit-v2/add-app-local-debug.png":::
    
     1. Select the web app version, if you're asked to switch to Teams desktop. You can see the HTML, CSS, and JavaScript code in a standard web development environment.
 
@@ -336,7 +336,7 @@ items:
     
         Congratulations, your first app is running on Teams!
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of the completed app in local environment":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of the completed app in local environment" lightbox="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png":::
 
         Your app should now be running. You can debug the app as any other SPFx web part (such as setting breakpoints).
 
@@ -434,11 +434,11 @@ items:
 
     1. Select **Manage Apps** and search your app in the search section to select your app.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/manage-apps.png"alt-text="Screenshot for the Manage apps.":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/manage-apps.png"alt-text="Screenshot for the Manage apps." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/manage-apps.png":::
 
     1. Select **Publish** to publish your app in Teams.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/publish-app.png"alt-text="Screenshot for the publish.":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/publish-app.png" alt-text="Screenshot for the publish.":::
 
     1. Open the Teams application (or sign in at `https://teams.microsoft.com`).
 
@@ -446,15 +446,15 @@ items:
 
         The app displays in the **Apps built for your org** category. You can add the app from there.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot showing the app built in your org.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot showing the app built in your org." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-in-teams.png":::
 
     1. Select your app, and then select **Add**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-add-app.png" alt-text="Screenshot of app to be added in Teams.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-add-app.png" alt-text="Screenshot of app to be added in Teams." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/sp-add-app.png":::
 
         Congratulations! Your app is now added to Teams.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of completed app to be added in Ms. Teams.":::"
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of completed app to be added in Ms. Teams." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png":::
 
     ### Select the link of the SharePoint site
 
@@ -496,11 +496,11 @@ items:
 
     1. Select the **FILES** tab.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-files-tab.png" alt-text="Select the files tab in the SharePoint App Catalog.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-files-tab.png" alt-text="Select the files tab in the SharePoint App Catalog." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/sp-files-tab.png":::
 
     1. Select the package you deployed, then select **Sync to Teams**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-sync-to-teams.png" alt-text="Select the files tab in the SharePoint App Catalog.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-sync-to-teams.png" alt-text="Select the files tab in the SharePoint App Catalog." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/sp-sync-to-teams.png":::
 
         > [!Note]
         > The Sync to Teams process can take a few minutes. You will see a message in the browser indicating that the app has been successfully synchronized to Teams.
@@ -510,12 +510,12 @@ items:
 
         The app will be placed in the **Apps built for your org** category. You can add the app from there.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot showing the app within Teams":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot showing the app within Teams" lightbox="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-in-teams.png":::
 
     1. Select your app, and then select **Add**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-add-app.png" alt-text="Screenshot of completed app to be added in Teams.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-add-app.png" alt-text="Screenshot of completed app to be added in Teams." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/sp-add-app.png":::
 
         Congratulations! Your app is now added to Teams.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of completed app to be added in Teams.":::"
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of completed app to be added in Teams." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png":::
