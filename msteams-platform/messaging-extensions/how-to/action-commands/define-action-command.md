@@ -12,7 +12,7 @@ ms.author: anclear
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 > [!NOTE]
-> When  a message action is initiated, attachment details aren't sent as part of the `turncontext` invoke activity.
+> When a message action is initiated, attachment details aren't sent as part of the `turncontext` invoke activity.
 
 Action commands allow you to present your users with a modal pop-up called a task module in Teams. The task module collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message, or card, create action command using app studio, or create it manually.
 
@@ -47,8 +47,11 @@ First, you must decide the location from where your action command must be invok
 
     Commands context = message
 
-    > [!NOTE]
-    > The initial invoke to your bot includes a JSON object containing the message from which it was invoked. You can process the message before presenting them with a task module.
+   > [!NOTE]
+   >
+   > * The initial invoke to your bot includes a JSON object containing the message from which it was invoked. You can process the message before presenting them with a task module.
+   >
+   > * When the user clicks on the three dots, an overflow menu is displayed. However, by default, message actions for apps created by developers for your organization or third-party apps aren't displayed. After the user selects **More Actions**, they can see the message actions and select them. The respective message action is displayed in the overflow menu by default for next time. In summary, the overflow menu displays the three most recent message actions only, and you can't pin a message action to be displayed by default.
 
 The following image displays the locations from where action command is invoked:
 
