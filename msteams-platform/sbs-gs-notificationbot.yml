@@ -224,8 +224,6 @@ items:
 
     :::image type="content" source="~/assets/images/sbs-notification-bot/folder-structure1.png" alt-text="structure tab":::
 
-    If you choose to use UI framework, following sample template code provides a scaffolding with React components.
-
     The new project folder contains following content:
 
     | Folder/file name | Contents |
@@ -235,7 +233,7 @@ items:
     | `env` | Name / value pairs are stored in environment files and used by teamsapp.yml to customize the provisioning and deployment rules. |
     | `infra` | Templates for provisioning Azure resources. |
     | `src\`| The source code for the notification Teams application. |
-    | `src\index.js` Application entry point and `restify` handlers for notifications. |
+    | `src\index.js`| Application entry point and `restify` handlers for notifications. |
     | `src\teamsbot.js` | An empty teams activity handler for bot customization. |
     | `src\adaptiveCards\notification-default.json` | A generated Adaptive Card that is sent to Teams. |
     | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
