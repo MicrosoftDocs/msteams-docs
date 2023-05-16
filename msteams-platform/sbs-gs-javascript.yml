@@ -397,6 +397,9 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-localdebug.png" alt-text="Screenshot shows the completed app":::
 
+        > [!NOTE]
+        > If you want to extend your app to Outlook and Microsoft 365, you can choose to debug your app with Outlook and Microsoft 365 from RUN AND DEBUG dropdown in Visual Studio Code.
+
        You can add SSO feature to retrieve the user details. You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading. If you change any file within the project, the page will be reloaded.
 
       <!-- markdownlint-disable MD033 -->

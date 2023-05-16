@@ -50,7 +50,8 @@ To start building your Teams app, you can select the tools and SDKs based on you
 | **Bots** | A chat bot that converses with members. |Visual Studio Code or Visual Studio with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) if you prefer using CLI | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true), [Bot Framework SDK](https://dev.botframework.com/), Teams AI library, and Microsoft Graph SDK. | Node.js, C#, Java, Python, TypeScript, and JavaScript. |
 | **Message extensions** | Shortcuts for inserting external content into a conversation or taking action on messages. | Visual Studio Code or Visual Studio with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) if you prefer using CLI |  [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true), [Bot Framework SDK](https://dev.botframework.com/), Teams AI library, and Microsoft Graph SDK. | Node.js, C#, Java, Python, TypeScript, and JavaScript. |
 
-<sr>*<sr> **Meeting and calls**: Meeting space can deliver a user experience for enabling collaboration, partnership, informed communication, and shared feedback. For more infromation, see [apps for Teams meetings and calls](../apps-in-teams-meetings/teams-apps-in-meetings.md).
+> [!NOTE]
+> **Meeting and calls**: Meeting space can deliver a user experience for enabling collaboration, partnership, informed communication, and shared feedback. For more infromation, see [apps for Teams meetings and calls](../apps-in-teams-meetings/teams-apps-in-meetings.md).
 
 If you want to build a social media dashboard app that sends notifications using TypeScript, consider the following scenario:
 

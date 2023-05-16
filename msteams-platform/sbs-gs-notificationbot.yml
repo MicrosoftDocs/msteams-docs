@@ -214,6 +214,10 @@ items:
 
           :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/trigger-output.png" alt-text="Trigger Output"border="true":::
 
+
+    > [!NOTE]
+    > If you want to extend your app to Outlook and Microsoft 365, you can choose to debug your app with Outlook and Microsoft 365 from RUN AND DEBUG dropdown in Visual Studio Code.
+
     ## Take tour of source code
 
     Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
