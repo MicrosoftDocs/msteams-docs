@@ -360,11 +360,10 @@ items:
           - You're logged in with a Microsoft 365 account.
           - Sideloading is enabled for your Microsoft 365 account.
           - Supported Node.js version is installed.
-          - Ngrok is installed.
           - Port required by bot app is available.
 
         2. Install npm packages
-        3. Starts Ngrok to create a HTTP tunnel.
+        3. Starts Dev Tunnel to create a HTTP tunnel.
         4. Registers the app in Azure AD and configures the app.
         5. Registers the bot app in Bot Framework and configures the app.
         6. Registers the app in Teams Developer Portal and configures the app.

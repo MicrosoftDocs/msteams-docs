@@ -1,6 +1,6 @@
 ## Deploy your app to Azure
 
-Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the message extension app.
+Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the bot app.
 <br>
 <br>
 <details>
@@ -84,17 +84,6 @@ Once the provisioning and deployment steps are complete:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Screenshot showing the app being installed.":::
 
-   The toolkit displays a message to indicate that the app is added to Teams.
+   You've successfully added your bot app to the Teams client.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="Screenshot showing a message to try the app now or later.":::
-
-    - If you select **Got it**, you can try the app later from the list of Sideloaded apps.
-    - If you select **Try it**, Teams loads your app.
-
-   Your app is loaded on the Azure site.
-
-1. Select **Try it**.
-
-   The Message Extension app is loaded in a chat bot app.
-
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="Screenshot showing an app sideloaded in Teams.":::
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/bot-app-learn-local-debug.png" alt-text="Screenshot shows the learn card in the bot on Teams client.":::  
