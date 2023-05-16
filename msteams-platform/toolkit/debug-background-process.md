@@ -10,7 +10,7 @@ ms.date: 03/03/2022
 
 # Debug background process
 
-The debugging process involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debuggers in Visual Studio Code. Visual Studio Code launches Node debugger and browser debugger, and Microsoft Edge, or Google Chrome launches a new browser instance.
+The debugging process involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debuggers in Visual Studio Code. Visual Studio Code launches Node debugger and browser debugger, and Microsoft Edge or Google Chrome launches a new browser instance.
 
 The debugging process workflow is as follows:
 
@@ -34,7 +34,7 @@ Teams Toolkit checks the following prerequisites during the debugging process:
 
 When you select **Start Debugging (F5)**, Teams Toolkit output channel displays the progress and result after checking the prerequisites.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="Prerequisites check summary":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="Screenshot shows the prerequisites check summary.":::
 
 For more information on validating prerequisites, see [Validate prerequisites task](https://aka.ms/teamsfx-tasks/check-prerequisites).
 

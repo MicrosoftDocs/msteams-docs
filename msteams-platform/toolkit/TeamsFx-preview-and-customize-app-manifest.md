@@ -86,7 +86,7 @@ After customization, you may want to validate your manifest or app package. You 
 
 Validate using manifest schema
 
-This option renders `appPackage/manifest.json` with environment variables, and then validate your manifest with its schema.
+This option renders `appPackage/manifest.json` with environment variables, and then validates your manifest with its schema.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/validate-schema.png" alt-text="Screenshot showing the selection of validate using manifest schema.":::
 
@@ -146,7 +146,7 @@ In `appPackage/manifest.json`, you can go to CodeLens to preview the values for 
 > [!NOTE]
 > Provision the environment or execute local debug to generate environment variables.
 
-You can go to .env file by selecting the CodeLens, which provide a dropdown list with all the environment names. After you select one environment, the corresponding .env file opens.
+You can go to `.env` file by selecting the CodeLens, which provide a dropdown list with all the environment names. After selecting one environment, the corresponding `.env` file opens.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/select-env-with-local.png" alt-text="Screenshot showing the selection of dev.":::
 

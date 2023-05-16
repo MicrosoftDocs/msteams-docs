@@ -1,7 +1,7 @@
 ---
 title: Debug your Teams app
 author: surbhigupta 
-description: In this module, learn how to debug your Teams app, and key features of Teams Toolkit
+description: In this module, learn how to debug your Teams app and key features of Teams Toolkit.
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
@@ -48,19 +48,19 @@ Teams Toolkit utilizes multi-target debugging feature to debug tab, bot, message
 
 You can toggle breakpoints on the source codes of tabs, bots, message extensions, and Azure Functions. The breakpoints execute when you interact with the Teams app in a web browser. The following image shows toggle breakpoint:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle-points.png" alt-text="toggle breakpoints" lightbox="../assets/images/teams-toolkit-v2/debug/toggle-points.png":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle-points.png" alt-text="Screenshot shows the toggle breakpoints." lightbox="../assets/images/teams-toolkit-v2/debug/toggle-points.png":::
 
 ### Hot reload
 
 You can update and save the source codes of tab, bot, message extension, and Azure Functions at the same time when you're debugging the Teams app. The app reloads and the debugger reattach to the programming languages.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="hot-reload for source codes" lightbox="../assets/images/teams-toolkit-v2/debug/hot-reload.png":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="Screenshot shows the hot reload for source codes." lightbox="../assets/images/teams-toolkit-v2/debug/hot-reload.png":::
 
 ### Stop debugging
 
 When you complete local debug, you can select **Stop (Shift+F5)** or **[Alt] Disconnect (Shift+F5)** from the floating debugging toolbar to stop all debug sessions and terminate tasks. The following image shows the stop debug action:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="stop debugging":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="Screenshot shows the stop debugging option.":::
 
 ## Prepare for debug
 
@@ -117,7 +117,7 @@ Here's a list of debug scenarios that you can use:
 
 In `.vscode/tasks.json` under `"Validate prerequisites"` > `"args"` > `"prerequisites"`, update the prerequisite checks you wish to skip.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/skip-prerequisite-checks.png" alt-text="skip the prerequisite checks":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/skip-prerequisite-checks.png" alt-text="Screenshot shows the skip prerequisite checks.":::
 
 </details>
 
@@ -172,14 +172,14 @@ In `teamsapp.local.yml`, edit `args` of `cli/runNpmCommand` action.
   1. Search for `"3978"` across your project and look for appearances in `tasks.json` and `index.js`.
   1. Replace it with your port.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-bot.png" alt-text="Replace your port for bot":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-bot.png" alt-text="Screenshot shows the search result to replace your port for bot.":::
 
 * Tab
 
   1. Search for `"53000"` across your project and look for appearances in `teamsapp.local.yml` and `tasks.json`.
   1. Replace it with your port.
   
-     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-tab.png" alt-text="Replace your port for tab":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-tab.png" alt-text="Screenshot shows the search result to replace your port for tab.":::
 
 </details>
 
@@ -211,7 +211,7 @@ Teams Toolkit by default creates a set of `teamsApp` actions to manage app packa
 
 1. In `.vscode/tasks.json` under `"Start Teams App Locally"`, you can update `"Start Local tunnel"`.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-local-tunnel.png" alt-text="Use your own tunnel":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-local-tunnel.png" alt-text="Screenshot shows the tasks of use your own tunnel.":::
 
 ```javascript
 # env/.env.local
