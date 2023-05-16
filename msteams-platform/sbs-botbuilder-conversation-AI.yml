@@ -118,7 +118,7 @@ items:
     1. Select **Upload an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="bot home":::
+        :::image type="content" source="assets/images/bots/Teams-AI-library-upload-a-custom-app.png" alt-text="Screenshot shows the Upload a custom app option in Teams desktop client.":::
 
         > [!NOTE]
         > If you don't see the option **Upload a custom app**, talk to your Teams administrator.
@@ -132,7 +132,7 @@ items:
    1. In the welcome screen, select **Set up E5 subscription**.
    1. Set up your administrator account. After you finish, the following screen appears.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft":::
+       :::image type="content" source="assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft":::
 
    1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.  
 
@@ -146,7 +146,7 @@ items:
     
     The bot capability of a Teams app creates a chatbot or a conversational bot. You use it to run simple and automated tasks, like providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Diagram showing this app has three features. Bot is highlighted.":::
+    :::image type="content" source="assets/images/teams-toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Diagram showing this app has three features. Bot is highlighted.":::
     
     As you've already prepared for creating these apps, you can set up a new Teams project for creating the bot app.
 
@@ -182,7 +182,7 @@ items:
    
     1. Select **TypeScript** as the programming language.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot showing how to select the programming language.":::
+        :::image type="content" source="assets/images/bots/Teams-AI-library-typescript.png" alt-text="Screenshot shows the TypeScript option for programming language in Teams Toolkit.":::
 
     1. Select **Default folder** to store your project root folder in default location.
 
@@ -221,7 +221,7 @@ items:
     <summary>A quick recap of creating a Teams app.</summary>
     Watch this short recap for creating a Teams app.
 
-    ![Create a Teams app](~/assets/videos/javascript-bot-app1.gif)
+    ![Create a Teams app](assets/videos/javascript-bot-app1.gif)
     </details>
 
     # [Command line](#tab/cli)
@@ -410,7 +410,7 @@ items:
             ```
 
             * The `Application` class replaces the Teams Activity Handler class from Bot Framework SDK. The application class has all the information and bot logic required for an app. You can register actions or activity handlers for the app in this class.
-            * The `MemoryStorage`` class is a memory based storage provider that stores and retrieves plan old JSON objects. It's imported from the Bot Builder SDK.
+            * The `MemoryStorage` class is a memory based storage provider that stores and retrieves plan old JSON objects. It's imported from the Bot Builder SDK.
 
 
             1. Under **Import required bot service**, add `MemoryStorage`.
@@ -646,19 +646,27 @@ items:
    
     1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the Visual Studio Code sidebar.
 
-    1. Select Provision in the Cloud.
+    1. Select **Provision in the Cloud**.
+    
+        :::image type="content" source="assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the selection of provision in the cloud under Teams toolkit.":::
 
     1. Select a subscription to use for the Azure resources. Your app is hosted using Azure resources.
     
+    :::image type="content" source="assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing the subscription to use for the Azure resources.":::
+
        A dialog warns you that costs may be incurred when running resources in Azure.
 
-    1. Select Provision.
+    1. Select **Provision**.
 
        The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
        If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
        The provisioned resource appears in the Environment section.
 
+       :::image type="content" source="assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing a notice which displays 'hellomsg' successfully provisioned in the cloud.":::
+
     1. Select Deploy to the Cloud from the Deployment panel after provisioning is complete.
+
+       :::image type="content" source="assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot showing deploy to cloud.":::
 
        As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
 
