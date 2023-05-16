@@ -224,23 +224,18 @@ items:
 
     The new project folder contains following content:
 
-    | Folder name | Contents |
+    | Folder/file name | Contents |
     | --- | --- |
-    | `.fx` | Project level settings, configuration, and environment information |
-    | `.vscode` | VS code files for local debug |
-    | `bot` | The bot source code |
-    | `templates` | Templates for Teams app manifest and corresponding Azure resources |
-    
-     The core notification implementation in **bot** folder and it contains:
-
-    | File name | Contents |
-    | --- | --- |
-    | `src/adaptiveCards/` | Templates for Adaptive card  |
-    | `src/internal/` | Generated initialize code for notification functionality |
-    | `src/index.*s` | The entrypoint to handle bot messages and send notifications |
-    | `.gitignore` | File to exclude local files from bot project |
-    | `package.json` | The npm package file for bot project |
-    | `README.md` | `README.md` file is to know more about the notification bot |
+    | `.vscode` | VSCode files for debugging. |
+    | `appPackage` | Templates for the Teams application manifest. |
+    | `env` | Name / value pairs are stored in environment files and used by teamsapp.yml to customize the provisioning and deployment rules. |
+    | `infra` | Templates for provisioning Azure resources. |
+    | `src\`| The source code for the notification Teams application. |
+    | `src\index.js` Application entry point and `restify` handlers for notifications. |
+    | `src\teamsbot.js` | An empty teams activity handler for bot customization. |
+    | `src\adaptiveCards\notification-default.json` | A generated Adaptive Card that is sent to Teams. |
+    | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+    | `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
 
 - title: Send notification to Teams channel
   durationInMinutes: 1
