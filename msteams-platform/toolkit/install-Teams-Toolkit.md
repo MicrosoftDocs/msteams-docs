@@ -104,7 +104,3 @@ By default, Visual Studio Code automatically keeps Teams Toolkit up-to-date. If 
 
 > [!div class="nextstepaction"]
 > [Explore Teams Toolkit](explore-Teams-Toolkit.md)
-
-## See also
-
-[Explore Teams Toolkit](explore-Teams-Toolkit.md)
