@@ -1,7 +1,7 @@
 ---
 title: Integrate existing third-party APIs
 author: MuyangAmigo
-description: Learn how toolkit allows bootstrap sample access to existing APIs. List of different authentication types.
+description: Learn how toolkit allows bootstrap sample access to existing APIs and the list of different authentication types.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: Overview
@@ -39,9 +39,7 @@ Add a connection to an existing third-party API using the following steps:
 1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
 1. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot showing the selection of View How to guides. ":::
-
-1. Select **API Connection**.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot showing the selection of View How to guides.":::
 
 1. From the dropdown list that appears, select the API connection you want to add to your app. You'll be redirected to the respective How-to Guide.
 
@@ -49,9 +47,9 @@ Add a connection to an existing third-party API using the following steps:
 
       |**Development** | **How-to Guide** |
       |----------|----------|
-      |Connect to an API | [How to Integrate API Connection with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-API-Connection-with-your-Teams-app) |
+      |Connect to an API | [How to integrate API Connection with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-API-Connection-with-your-Teams-app) |
       |Automate CI/CD Pipelines | [How to automate CI/CD pipelines](https://github.com/OfficeDev/TeamsFx/wiki/How-to-automate-cicd-pipelines) |
-      |Run and Debug on Mobile Client | [How to Run and debug your Teams application on iOS or Android client](https://github.com/OfficeDev/TeamsFx/wiki/Run-and-debug-your-Teams-application-on-iOS-or-Android-client) |
+      |Run and Debug on Mobile Client | [How to run and debug your Teams application on iOS or Android client](https://github.com/OfficeDev/TeamsFx/wiki/Run-and-debug-your-Teams-application-on-iOS-or-Android-client) |
 
 # [Basic](#tab/basic)
 
@@ -157,7 +155,7 @@ module.exports.apiClient = apiClient;
 
 # [Certification](#tab/certification1)
 
-Sample code for Certification
+Sample code for Certification:
 
 ```javascript
 const teamsfxSdk = require("@microsoft/teamsfx");
@@ -284,7 +282,7 @@ const apiClient = teamsfxSdk.createApiClient(
 module.exports.apiClient = apiClient;
 ```
 
-You can import the apiClient (an Axios instance) in another file and call the APIs and authentication is now handled for you automatically.
+You can import the apiClient (an Axios instance) in another file and call the APIs, and authentication is now handled for you automatically.
 
 Example for a GET request to "relative_path_of_target_api":
 

@@ -389,11 +389,11 @@ You can follow below steps to add environment variables to the .env files to use
 ```
 
 >[!NOTE]
-
+>
 > * Remember to update the environment variable names in the examples if you uses different names in `writeToEnvironmentFile`.
-
+>
 > * If you don't use `aadApp/create` action to create Azure AD application, you can add necessary environment variables with your preferred name without following above steps.
-
+>
 > * Ensure not to share the same Azure AD app in multiple environments.
 
 #### Use an existing Azure AD app for your bot
