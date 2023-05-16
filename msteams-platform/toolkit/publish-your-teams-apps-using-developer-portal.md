@@ -42,7 +42,7 @@ If there are any changes related to Teams app's manifest file, you can update th
 
 You can do the following configuration for your app in the Developer Portal:
 
-* **Basic information**: This section shows and allows you to edit the **App names**, **App ID**, **Descriptions**, **Version**, **Developer information**, **App URLs**, **Application (client) ID**, and **Microsoft Partner Network ID**.
+* **Basic information**: This section shows and allows you to edit the **App names**, **Descriptions**, **Version**, **Developer information**, **App URLs**, **Application (client) ID**, and **Microsoft Partner Network ID**.
 * **Branding**: This section allows you to add **Color icon** and **Outline icon** in `.png` format.
 * **App features**: This section allows you to add the following features to your app:
   * Personal app
