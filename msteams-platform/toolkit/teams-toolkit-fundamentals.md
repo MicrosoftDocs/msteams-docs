@@ -24,7 +24,8 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 * Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
 * Create unique configurations like dev, test, and prod using the environment features.
 
-Before you get started, we strongly recommend that you visit [Teams Toolkit v5 Guide](https://aka.ms/teamsfx-v5.0-guide) to learn key features, such as life cycles and actions.
+> [!NOTE]
+> Before you get started, we strongly recommend that you visit [Teams Toolkit v5 Guide](https://aka.ms/teamsfx-v5.0-guide) to learn key features, such as life cycles and actions.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="Illustration shows the User Journey of the Teams Toolkit." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
