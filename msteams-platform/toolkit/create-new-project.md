@@ -45,6 +45,10 @@ To create a basic Teams app:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-basic-tab.png" alt-text="Screenshot shows to select App Feature using a Tab as Basic Tab.":::
 
+1. Select **Basic Tab**
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/basic-tab-app.png" alt-text="Screenshot shows the basic tab selected.":::
+
 1. Select **JavaScript** as the programming language.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-language-tab_1.png" alt-text="Screenshot shows the programming language to select.":::
@@ -67,7 +71,7 @@ To create a basic Teams app:
     The folder you select is the location for your project workspace.
     </details>
 
-1. Enter a suitable name for your app, such as helloworld, as the application name. Ensure that you use only alphanumeric characters. Press **Enter**.
+    1. Enter a suitable name for your app, such as helloworld, as the application name. Ensure that you use only alphanumeric characters. Press **Enter**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot shows where to enter the app name.":::
 

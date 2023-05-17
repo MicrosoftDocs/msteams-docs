@@ -23,7 +23,7 @@ To preview manifest with actual content, Teams Toolkit generates preview manifes
         └───manifest.local.json  - Previewed manifest of local Teams app
 ```
 
-You can preview the manifest file in local and remote environments.
+You can preview the manifest file in local and remove environments.
 
 ## Preview manifest file in local environment
 

@@ -93,14 +93,13 @@ From the task pane, you can see the following sections:
    :::column-end:::
    :::column span="":::
 
-        To create, customize, and debug your Teams app, you need the following features:
+        To create and debug your Teams app, you need the following features:
         
        * **Create a New App**: Use the Teams Toolkit wizard to prepare project scaffolding for app development.
 
         * **View Samples**: Select any of the Teams Toolkit's sample apps. The toolkit downloads the app code from GitHub and you can build the sample app.
 
         * **View How-to Guides**: Select to view Teams app scenario guides and development guides.
-
    :::column-end:::
 :::row-end:::
 

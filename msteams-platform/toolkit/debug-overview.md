@@ -224,6 +224,17 @@ BOT_ENDPOINT={YOUR_OWN_TUNNEL_URL}
 ...
 ```
 
+```javascript
+# env/.env.local
+
+# Built-in environment variables
+TEAMSFX_ENV=local
+...
+BOT_DOMAIN={YOUR_OWN_TUNNEL_DOMAIN}
+BOT_ENDPOINT={YOUR_OWN_TUNNEL_URL}
+...
+```
+
 </details>
 
 <details>
