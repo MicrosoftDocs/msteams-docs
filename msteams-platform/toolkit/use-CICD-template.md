@@ -10,7 +10,7 @@ ms.date: 04/20/2022
 
 # Set up CI/CD pipelines
 
-TeamsFx helps to automate your development workflow while building Teams application. The following are the tools and templates you can use to set up CI/CD pipelines, create workflow templates, and customize CI/CD workflow with GitHub, Azure DevOps, Jenkins, and other platforms. To provision resources, you can create Azure service principals and use the Provision pipeline or do it manually by leveraging bicep files. To publish Teams app, you can use the Publish pipeline or do it manually by leveraging [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+TeamsFx helps to automate your development workflow while building Teams application. The tools and templates to set up CI/CD pipelines are create workflow templates and customize CI/CD workflow with GitHub, Azure DevOps, Jenkins, and other platforms. To provision resources, you can create Azure service principals and use the Provision pipeline or do it manually by leveraging bicep files. To publish Teams app, you can use the Publish pipeline or do it manually by leveraging [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
 ## Tools and Templates
 
@@ -37,17 +37,17 @@ You can set up pipelines with the following platforms:
 
 TeamsFx supports four types of workflow templates:
 
-1. **CI**: Help checkout code, build, and run test.
-1. **CD**: Help checkout code, build, test, and deploy to cloud.
-1. **Provision**: Help create or update resources in cloud and Teams app registrations.
-1. **Publish**: Help publish Teams app to tenants.
+* **CI**: Help checkout code, build, and run test.
+* **CD**: Help checkout code, build, test, and deploy to cloud.
+* **Provision**: Help create or update resources in cloud and Teams app registrations.
+* **Publish**: Help publish Teams app to tenants.
 
 ## Prepare credentials
 
 Two categories of sign in credentials are involved in CI/CD workflows:
 
-1. **M365**: M365 credentials are required for running Provision, Publish, and SPFx based projects' CD workflows.
-2. **Azure**: Azure credentials are required for running Azure hosted projects' Provision and CD workflows.
+* **M365**: M365 credentials are required for running Provision, Publish, and SPFx based projects' CD workflows.
+* **Azure**: Azure credentials are required for running Azure hosted projects' Provision and CD workflows.
 
 > [!NOTE]
 > Azure subscription id is required to be set in environment variable or `env/.env.*` files before running Provision workflows. The variable name used is `AZURE_SUBSCRIPTION_ID`. Also, please don't forget to commit and push files `env/.env.*` into Git repositories or set pipelines' environment variables as they're ignored by `.gitignore` file by default.
@@ -128,7 +128,7 @@ To set up pipelines with Azure DevOps for CI/CD:
 1. Commit and push these template files into remote repositories.
 1. Create corresponding Azure DevOps pipelines by following [Create your first Azure DevOps Pipeline](/azure/devops/pipelines/create-first-pipeline).
 1. Add necessary [Azure DevOps Pipeline variables](/azure/devops/pipelines/process/variables) for your pipelines.
-1. Trigger your pipelines automatically, manually, or do customization (Check the `trigger:` or `pr:` section in yml files to find the triggers). More about triggers in Azure DevOps, refer to [Triggers in Azure pipelines](/azure/devops/pipelines/build/triggers).
+1. Trigger your pipelines automatically, manually, or customize (Check the `trigger:` or `pr:` section in yml files to find the triggers). For more information about triggers in Azure DevOps, see [Triggers in Azure pipelines](/azure/devops/pipelines/build/triggers).
 
 ### Customize CI pipeline
 

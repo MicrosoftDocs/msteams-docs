@@ -19,7 +19,7 @@ You can sideload your Teams app to Microsoft Teams without having to publish to 
 
 > [!IMPORTANT]
 >
-> * Currently, sideloading of apps is possible only in Government Community Cloud (GCC) and is not possible in GCC-High and Department of Defense (DOD).
+> * Sideloading of apps is possible only in Government Community Cloud (GCC) and isn't possible in GCC-High and Department of Defense (DOD).
 >
 > * App installation is supported only on Teams desktop client.
 
@@ -56,7 +56,7 @@ You can test your Teams app after integrating with Microsoft Teams. To test your
 
 * **Locally hosted in Teams**: Teams Toolkit locally hosts your Teams app by sideloading it into Teams for testing in local environment.
 
-* **Cloud-hosted in Teams**: For testing your Teams app remotely, you need to Cloud-host it using provisioning and deploying on Microsoft Azure Active Directory(Azure AD). It involves uploading your solution to the Azure AD and then upload into Teams.
+* **Cloud-hosted in Teams**: For testing your Teams app remotely, you need to Cloud-host it using provisioning and deploying on Microsoft Azure Active Directory (Azure AD). It involves uploading your solution to the Azure AD and then upload into Teams.
 
 > [!NOTE]
 > For production-scale debugging and testing, we recommend that you follow your own company guidelines to ensure you are able to support testing, staging, and deployment through your own processes.
