@@ -328,7 +328,7 @@ subscriptionId: ${{MY_AZURE_SUBSCRIPTION_ID}}
 
 #### Customize ARM template files
 
-If the predefined templates don't meet your app requirements, you can create your own ARM template or update existing ARM template and provide the path to `arm/deploy` action as following:
+If the predefined templates don't meet your app requirements, you can create your own ARM template or update existing ARM template and provide the path to `arm/deploy` action as in the following template:
 
 ```yml
 - uses: arm/deploy
