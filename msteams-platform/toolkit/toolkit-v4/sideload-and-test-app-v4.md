@@ -10,9 +10,15 @@ ms.date: 03/03/2022
 
 # Sideload and test app in Teams environment v4
 
+> [!IMPORTANT]
+>
+> We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+>
+> [Teams Toolkit v4](~/toolkit/toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
+
 After adding API connection, you can test API connection in the Teams Toolkit local environment and deploy your application to the cloud. In CI/CD pipeline, after set-up with different platform, you need to create Azure service principal to provision and deploy resources.
 
-In this section, you'll learn
+In this section, you'll learn:
 
 * [Test API connection in local environment](#test-api-connection-in-local-environment)
 * [Deploy your application to Azure](#deploy-your-application-to-azure)
@@ -28,7 +34,7 @@ The following steps help to test the API connection in the Teams Toolkit local e
 
  2. **Add API credentials to the local application settings**
 
-    Teams Toolkit does't ask for credentials but it leaves placeholders in the local application settings file. Replace the placeholders with the appropriate credentials to access the API. The local application settings file is the `.env.teamsfx.local` file in the `bot` or `api` folder.
+    Teams Toolkit doesn't ask for credentials, but it leaves placeholders in the local application settings file. Replace the placeholders with the appropriate credentials to access the API. The local application settings file is the `.env.teamsfx.local` file in the `bot` or `api` folder.
 
  3. **Use the API client to make API requests**
 

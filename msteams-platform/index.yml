@@ -19,7 +19,7 @@ metadata:
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
    items: 
-    - title: What's new?
+    - title: Microsoft Build 2023
       itemType: whats-new
       url: /microsoftteams/platform/whats-new
     - title: New to Teams development? 🚀Start here! 

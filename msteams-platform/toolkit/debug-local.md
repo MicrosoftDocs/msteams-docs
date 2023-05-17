@@ -33,7 +33,7 @@ The following steps help you set up your Teams Toolkit before you initiate the d
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Screenshot shows the Start debugging option.":::
 
-3. Select **Sign in** to Microsoft 365 account.
+3. Select **Create a Microsoft 365 Testing Tenant** to Microsoft 365 account.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Screenshot shows the Sign in option highlighted.":::
 

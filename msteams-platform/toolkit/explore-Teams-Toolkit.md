@@ -9,6 +9,12 @@ ms.date: 07/29/2022
 ---
 # Explore Teams Toolkit
 
+> [!IMPORTANT]
+>
+> We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+>
+> [Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
+
 You can explore the look and feel of Teams Toolkit within the Visual Studio Code.
 
 This section gives you a tour of Teams Toolkit and its features.
@@ -22,10 +28,10 @@ Teams Toolkit appears within Visual Studio Code as an extension. After you insta
 | Serial No. | UI Elements | Definition |
 | --- | --- | --- |
 | 1 | **Documentation** | Access the Microsoft Teams Developer documentation. |
-| 2 | **How-to Guides** | Access how-to guides for app scenario and app development. |
+| 2 | **How-to Guides** | Access the how-to guides for app scenario and app development. |
 | 3 | **Create a New App** | Create a new Teams app based on your requirement. |
 | 4 | **View Samples** | Select and build existing app samples based on common use cases for a Teams app. |
-| 5 | • **New File** <br> • **Open File** <br> • **Open Folder** <br> • **Clone Git Repository** | • Create a new file. <br> • Open the existing file. <br> • Open the existing folder. <br> • Clone the Git repository of your app project. |
+| 5 | • **New File** <br> • **Open File** <br> • **Open Folder** <br> • **Clone Git Repository** | • Create a new file. <br> • Open an existing file. <br> • Open an existing folder. <br> • Clone an Git repository of your app project. |
 | 6 | **Recent** | View the recent files. |
 | 7 | **Get Started** | Explore Teams Toolkit and get an overview of the fundamentals. |
 
@@ -35,7 +41,7 @@ You can explore the available functionalities from the Teams Toolkit task pane. 
 
    :::image type="content" source="../assets/videos/javascript-bot-app1_1.gif" alt-text="Graphical representation shows the steps to create a Teams app.":::
 
-After you create a new Teams app project, the directory structure of the app appears in the left panel and the **`README`** file in the right panel.
+After you create a new Teams app project, the directory structure of the app appears in the left pane and the **`README`** file in the right pane.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page_1.png" alt-text="Screenshot shows the  first page of Teams Toolkit." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page_1.png":::
 
@@ -59,7 +65,7 @@ From the task pane, you can see the following sections:
 
         To develop a Teams app, you need the following accounts:
         
-        * **Sign in to Microsoft 365**: Use your Microsoft 365 account with a valid E5 subscription for building your app.
+         * **Sign in to Microsoft 365**: Use your Microsoft 365 work or school account with a valid E5 subscription for building your app. If you don't have a valid account, you can join [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) to get a free account before you start.
 
         * **Sign in to Azure**: Use your Azure account for deploying your app on Azure. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
    :::column-end:::
@@ -94,8 +100,6 @@ From the task pane, you can see the following sections:
         * **View Samples**: Select any of the Teams Toolkit's sample apps. The toolkit downloads the app code from GitHub and you can build the sample app.
 
         * **View How-to Guides**: Select to view Teams app scenario guides and development guides.
-       
-        * **Preview Your Teams App (F5)**: Press **F5** to debug and preview your Teams app.
    :::column-end:::
 :::row-end:::
 
@@ -121,21 +125,19 @@ From the task pane, you can see the following sections:
    :::column-end:::
    :::column span="":::
 
-        To validate the app and to publish app in Developer Portal, you need the following features:
+        To create an app package, validate an app, and publish in Developer Portal, you need the following features:
+
+        * **Zip Teams App Package**: Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest and app icons.
         
-        * **Zip Teams metadata package**: Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest and app icons.
+        * **Validate Application**: Validate if Teams manifest file is in right schema or validate the Teams app package.
         
-        * **Validate Application**: Validate the app created using manifest schema or app package using validation rules.
-       
-        * **Preview and Debug Adaptive Cards**: Preview and author Adaptive Cards directly in Visual Studio Code.
-        
-        * **Open Developer Portal to Teams**: Use Developer Portal to publish, configure, and manage your Teams app. 
+        * **Open Developer Portal to Publish**: Use Developer Portal to publish and manage your Teams app. 
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/help-and-feedback1.png" alt-text="Screenshot shows the Help and feedback section.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/help-and-feedback1.png" alt-text="Screenshot shows the Help section.":::
    :::column-end:::
    :::column span="":::
 
@@ -146,6 +148,16 @@ From the task pane, you can see the following sections:
         * **Get Started**: View Teams Toolkit Get started help within Visual Studio Code.
 
         * **Report Issues on GitHub**: Select to access GitHub page and raise any issues.
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/feedback.png" alt-text="Screenshot shows the Feedback section.":::
+   :::column-end:::
+   :::column span="":::
+
+        You can help us improve by giving us your feedbacks!
    :::column-end:::
 :::row-end:::
 
@@ -160,16 +172,11 @@ From the task pane, you can see the following sections:
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/view-how-to-guides.png" alt-text="Screenshot shows the how-to guides menu options." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/view-how-to-guides.png":::
 
     * Select any one of the Teams app scenario guides to view the guide to develop an app for a common app scenario, such as sending notifications using a bot.
-    * Select any one of the Teams app capability guides to view the guide that helps configure app capabilities, such as tab, bot, or message extension.
     * Select any one of the Teams app development guides to view a guide that helps in app development, such as embedding a dashboard tab in a Teams app.
-    * Select any one of the Teams app cloud service integration guides to view the guide that helps integrate cloud services, such as Azure Functions.
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Create a new Teams app using Teams Toolkit](create-new-project.md)
-* [App manifest schema](../resources/schema/manifest-schema.md)
-* [Prepare to build apps using Teams Toolkit](build-environments.md)
+[Prepare to build apps using Teams Toolkit](build-environments.md)
 
 <!--  
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="Screenshot shows the UI Elements.":::

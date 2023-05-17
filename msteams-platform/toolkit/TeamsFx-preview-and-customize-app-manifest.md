@@ -10,7 +10,7 @@ ms.date: 05/13/2022
 
 # Customize Teams app manifest
 
-The Teams app manifest describes how your app integrates into Teams. After scaffolding, the default manifest file is available at `appPackage/manifest.json`. The manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved by Teams Toolkit with env files like `env/.env.dev` and `env/.env.local`.
+The Teams app manifest describes how your app integrates into Teams. After scaffolding, the default manifest file is available at `appPackage/manifest.json`. The manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Teams Toolkit with env files like `env/.env.dev` and `env/.env.local`.
 
 To preview manifest with actual content, Teams Toolkit generates preview manifest files under `appPackage/build` folder:
 
@@ -25,25 +25,15 @@ To preview manifest with actual content, Teams Toolkit generates preview manifes
 
 You can preview the manifest file in local and remove environments.
 
-<br>
+## Preview manifest file in local environment
 
-<details>
+To preview manifest file in local environment, you can press F5 to run local debug. After you generate the environment variables in `env/.env.local`, the app package and preview manifest is built under `appPackage/build` folder.
 
-<b><summary>Preview manifest file in local environment</b></summary>
-
-To preview manifest file in local environment, you can press F5 to run local debug. After generating environment variables in `env/.env.local`, the app package and preview manifest will be built under `appPackage/build` folder.
-
-You can also trigger `Zip Teams App Package` from tree view or Teams: Zip Teams app Package from command palette to generate preview manifest and app package.
+You can also trigger `Zip Teams App Package` from tree view or `Teams: Zip Teams app Package` from command palette to generate previewed manifest and app package.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/zip-app-package.png" alt-text="Screenshot showing the selection of zip Teams App package.":::
 
-<br>
-
-</details>
-
-<details>
-
-<b><summary>Preview manifest file in remote environment</b></summary>
+## Preview manifest file in remote environment
 
 To preview manifest file in remote environment, you can trigger `Provision` from tree view or `Teams: Provision in the cloud` from command palette. It generates environment variables for remote Teams app, build app package and preview manifest under `appPackage/build` folder.
 
@@ -53,7 +43,7 @@ You can also trigger Zip Teams App Package from tree view or `Teams: Zip Teams a
 
 ## Customize Teams app manifest for Visual Studio Code
 
-During local debug or provision, Teams Toolkit loads manifest from `appPackage/manifest.json`, and resolve manifest by environment variables defined in `env/.env.xx`, then creates or updates Teams app in [Teams Developer Portal](https://dev.teams.microsoft.com/home).
+During local debug or provision, Teams Toolkit loads manifest from `appPackage/manifest.json`, and resolves manifest by environment variables defined in `env/.env.xx`, then creates or updates Teams app in [Teams Developer Portal](https://dev.teams.microsoft.com/home).
 
 1. You can define your own manifest.json file in `teamsapp.yml` and `teamsapp.local.yml`.
 For example, you can put your manifest.json file in `test/test.json`, and update `manifestPath` parameters in yaml files.
@@ -69,24 +59,24 @@ For example, you can put your manifest.json file in `test/test.json`, and update
 1. You can define your own environment variables. The default manifest.json contains some placeholders with format of ${{xx_xx}}. You can define your own environment variables and add placeholders in manifest.json file.
 For example, you can customize app description by defining a new environment variable in env/.env.xx file, and update manifest.json with corresponding placeholder.
 
-[.env.dev]
+    `.env.dev`
 
-```text
-TEAMS_APP_DESCRIPTION=This is an amazing app
-```
+    ```text
+    TEAMS_APP_DESCRIPTION=This is an amazing app
+    ```
+    
+    `manifest.json`
 
-[manifest.json]
-
-```text
-{
-    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.16",
-    "description": {
-        "short": "${{TEAMS_APP_DESCRIPTION}}",
-        "full": "Full description of tab0418"
-    },
-}
-```
+    ```text
+    {
+        "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+        "manifestVersion": "1.16",
+        "description": {
+            "short": "${{TEAMS_APP_DESCRIPTION}}",
+            "full": "Full description of tab0418"
+        },
+    }
+    ```
 
 ## Validate Application
 
@@ -96,7 +86,7 @@ After customization, you may want to validate your manifest or app package. You 
 
 Validate using manifest schema
 
-This option renders `appPackage/manifest.json` with environment variables, and then validate your manifest with its schema.
+This option renders `appPackage/manifest.json` with environment variables, and then validates your manifest with its schema.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/validate-schema.png" alt-text="Screenshot showing the selection of validate using manifest schema.":::
 
@@ -106,7 +96,7 @@ CLI command:
 teamsfx validate --manifest-path YOUR-PATH-TO-MANIFEST
 ```
 
-If you meet `MissingEnvironmentVariablesError`, it means that Teams Toolkit cannot find corresponding environment variables defined in manifest.json. You may need to run Provision or F5 to generate environment variables, or manually update `.env.xx` file to fulfill the value.
+If you meet `MissingEnvironmentVariablesError`, it means that Teams Toolkit can't find corresponding environment variables defined in manifest.json. You may need to run Provision or F5 to generate environment variables, or manually update `.env.xx` file to fulfill the value.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/missing-env.png" alt-text="Screenshot showing the Missing Environment Variables Error.":::
 
@@ -151,12 +141,12 @@ If the manifest file is outdated due to configuration file change or template ch
 
 In `appPackage/manifest.json`, you can go to CodeLens to preview the values for `local` and `dev` environment.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/codelens-v5.png" alt-text="Screenshot showing the code lens v5.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/codelens-v5.png" alt-text="Screenshot showing the codelens v5.":::
 
 > [!NOTE]
 > Provision the environment or execute local debug to generate environment variables.
 
-You can go to .env file by selecting the CodeLens, which provide a dropdown list with all the environment names. After selecting one environment, the corresponding .env file opens.
+You can go to `.env` file by selecting the CodeLens, which provide a dropdown list with all the environment names. After selecting one environment, the corresponding `.env` file opens.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/select-env-with-local.png" alt-text="Screenshot showing the selection of dev.":::
 

@@ -25,28 +25,17 @@
   - name: Overview
     href: get-started/get-started-overview.md
     displayName: First Teams app, Python, .NET, Java, Node.js
-  - name: Build your first tab app using JavaScript
-    href: sbs-gs-javascript.yml
-  - name: Build your first bot app using JavaScript
-    href: sbs-gs-bot.yml
-  - name: Build your first message extension app using JavaScript
-    href: sbs-gs-msgext.yml
-  - name: Build your first app using Blazor
-    href: sbs-gs-blazorupdate.yml
-  - name: Build your first app using SPFx
-    href: sbs-gs-spfx.yml
-  - name: Build your first app using C# or .NET
-    href: sbs-gs-csharp.yml
-  - name: Build your first app using Node.js
-    href: sbs-gs-nodejs.yml
-  - name: Build notification bot with JavaScript
-    href: sbs-gs-notificationbot.yml
-  - name: Build command bot with JavaScript
-    href: sbs-gs-commandbot.yml 
-  - name: Build workflow bot
-    href: sbs-gs-workflow-bot.yml
-  - name: Code samples
-    href: https://github.com/OfficeDev/Microsoft-Teams-Samples
+  - name: Build your first tab app
+    href: get-started/build-basic-tab-app.md
+  - name: Build notification bot
+    href: get-started/build-notification-bot.md
+  - name: Build message extension
+    href: get-started/build-message-extension.md
+  - name: Teams app tutorials and code samples
+    href: get-started/teams-toolkit-tutorial.md
+  - name: Choose what suits you
+    href: get-started/choose-what-suits-you.md
+ 
 - name: Plan your app
   items:
   - name: Overview
@@ -179,8 +168,6 @@
           href: toolkit/TeamsFx-collaboration.md
         - name: Set up CI/CD pipelines
           href: toolkit/use-CICD-template.md  
-        - name: Sideload and test app in Teams environment
-          href: toolkit/sideload-and-test-app.md 
         - name: Test app behavior in different environment
           href: toolkit/test-app-behavior.md
     - name: Publish your Teams app

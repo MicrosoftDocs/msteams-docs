@@ -10,6 +10,12 @@ ms.date: 11/29/2021
 
 # Prepare to build apps using Teams Toolkit v4
 
+> [!IMPORTANT]
+>
+> We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+>
+> [Teams Toolkit v4](~/toolkit/toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
+
 Teams Toolkit supports different build environments for creating apps. It helps to integrate Azure Functions capabilities and cloud services in the Teams app that you've built.
 
 :::image type="content" source="images/buildapps-TTK_1-v4.png" alt-text="Prepare to build apps using Teams Toolkit"  lightbox="images/buildapps-TTK_1-v4.png":::

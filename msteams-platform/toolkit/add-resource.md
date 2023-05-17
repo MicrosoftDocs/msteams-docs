@@ -1,7 +1,7 @@
 ---
 title: Add Resources to Teams apps
 author: MuyangAmigo
-description: Learn how to add resources of Teams Toolkit, advantages, limitations, and capabilities.
+description: Learn how to add resources of Teams Toolkit and about advantages, limitations, and capabilities.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -25,11 +25,11 @@ You can add cloud resources in the following ways:
    1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
    1. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot shows Add capabilities from Teams Toolkit.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot shows View How-to Guides under Development highlighted.":::
 
    1. From the dropdown list that appears, select the cloud service integration you want to add to your app. You'll be redirected to the respective How-to Guide.
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot showing the capabilities in view How-to Guides.":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the Cloud service integration options in View How-to Guides.":::
 
       |**Cloud service integration** | **How-to Guide** |
       |----------|----------|
@@ -44,15 +44,15 @@ You can add cloud resources in the following ways:
 
    1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
 
-      :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features_1.png" alt-text="Add feature from command palette":::
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features_1.png" alt-text="Screenshot shows the Command Palette option under View.":::
 
    1. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot shows Add capabilities from Teams Toolkit.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot shows the View How-to Guides option highlighted in Teams Toolkit activity bar.":::
 
    1. From the dropdown list that appears, select the capability you want to add to your app. You'll be redirected to the respective How-to Guide.
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot showing the capabilities in view How-to Guides.":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the capabilities in View How-to Guides list.":::
 
       |**Cloud service integration** | **How-to Guide** |
       |----------|----------|
@@ -60,43 +60,6 @@ You can add cloud resources in the following ways:
       |Integrate with Azure SQL Database | [How to Integrate Azure SQL Database with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-SQL-Database-with-your-Teams-app) |
       |Integrate with Azure API Management | [How to Integrate Azure API Management with your Teams App and export the api to power app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-API-Management-with-your-Teams-App-and-export-the-api-to-power-app) |
       |Integrate with Azure Key Vault | [How to Integrate Azure Key Vault with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-Key-Vault-with-your-Teams-app) |
-
-### Add cloud resources using TeamsFx CLI
-
-* Before you add cloud resources, ensure that you change the directory to your **project directory**.
-* The following table lists the capabilities and required commands:
-
-  |Cloud Resource|Command|
-  |---------------|----------|
-  | **Azure Functions**|`teamsfx add azure-function`|
-  | **Azure SQL Database**|`teamsfx add azure-sql`|
-  | **Azure API Management**|`teamsfx add azure-apim`|
-  | **Azure Key Vault**|`teamsfx add azure-keyvault`|
-
-## Types of cloud resources
-
-In the following scenarios, TeamsFx integrates the Azure services with your Teams app:
-
-* [Azure Functions](/azure/azure-functions/functions-overview): A serverless solution to meet your on-demand requirements, such as creating web APIs for your Teams app back-end.
-* [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview): A platform as a service (PaaS) database engine to serve as your Teams app data store.
-* [Azure API Management](deploy.md): An API gateway can be used to administer APIs created for Teams apps and publish them so other apps can consume them, such as Power app.
-* [Azure Key Vault](/azure/key-vault/general/overview): Safeguard cryptographic keys and other secrets used by cloud apps and services.
-
-## Changes after adding Azure resources
-
-The following changes appear after adding Azure cloud resources in your project:
-
-* New parameters added to `azure.parameter.{env}.json` to provide the required information for provision.
-* New content is included to ARM template under `templates\azure`. The files are in `templates\azure\teamsfx` folder for the Azure resources.
-* Teams Toolkit regenerates the files under `templates\azure\teamsfx` folder to ensure configuration required for TeamsFx is up to date for added Azure resources.
-* `.fx\configs\projectSettings.json` is updated to track the available resources in your project.
-
-The following additional changes appear after adding resources in your project:
-
-|Resources|Changes|Description|
-|---------------|---------------|-----------------------------|
-|**Azure Functions**|The Azure Functions template code is added into a subfolder with path `yourProjectFolder\api`</br></br>`launch.json` and `task.json` are updated under `.vscode` folder.| Includes a hello world http trigger template into your project.</br></br> Includes necessary scripts for Visual Studio Code to be executed when you want to debug your app locally.|
-|**Azure API Management**|An open API specification file added into a subfolder with path `yourProjectFolder\openapi`.|Defines your API after publishing. It's the API specification file.|
 
 ## See also
 

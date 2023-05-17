@@ -1,7 +1,7 @@
 ---
 title: Test app behavior in different environment
 author: surbhigupta
-description: In this module, learn how to test app behavior in different environment
+description: In this module, learn how to test app behavior in different environment.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -37,20 +37,20 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
 
 1. Select **Apps** > **Manage your apps** and **Upload an app**.
 
-   :::image type="content" source="~/assets/images/publish-app/manage-apps.png" alt-text="Publish an app":::
+   :::image type="content" source="~/assets/images/publish-app/manage-apps.png" alt-text="Screenshot shows the Upload an app option highlighted.":::
 
 1. Select **Upload a custom app**.
 
-   :::image type="content" source="~/assets/images/publish-app/publish-app.png" alt-text="Upload a custom app":::
+   :::image type="content" source="~/assets/images/publish-app/publish-app.png" alt-text="Screenshot shows the Upload a custom app option highlighted.":::
 
 1. Select your app package **.zip file**.
 
 1. Add your app to Teams as per your requirement:
 
-    1. Select Add to add your personal app.
+    1. Select **Add** to add your personal app.
     1. Use the dropdown menu to add your app to a Team or chat.
 
-   :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="App description":::
+   :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Screenshot shows the App description.":::
 
 You can test your Teams app after integrating with Microsoft Teams. To test your Teams app, you need to create at least one workspace in your environment. You can use Teams Toolkit for testing your Teams app:
 
@@ -65,12 +65,9 @@ You can test your Teams app after integrating with Microsoft Teams. To test your
 
 Teams is a cloud-based product that requires all services it accesses, to be available publicly using HTTPS endpoints. Local hosting is about sideloading into Teams for testing in local environment.
 
-> [!NOTE]
-> Although you can use any tool of your choice for testing, we recommend you to use [ngrok](https://ngrok.com/download)
-
 ## Cloud-hosted environment
 
-To host your development and production code and their HTTPS endpoints, You need to remotely test your teams app using provisioning and deploying on Azure AD. You need to ensure that all domains are accessible from your Teams app listed in the `validDomains` object in the `manifest.jason` file
+To host your development and production code and their HTTPS endpoints, you need to remotely test your teams app using provisioning and deploying on Azure AD. You need to ensure that all domains are accessible from your Teams app listed in the `validDomains` object in the `manifest.json` file.
 
 > [!NOTE]
 > To ensure a secure environment, be explicit about the exact domain and subdomains you reference and those domains must be in your control. For example, `*.azurewebsites.net` is not recommended, however `contoso.azurewebsites.net` is recommended.

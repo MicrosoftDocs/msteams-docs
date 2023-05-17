@@ -10,6 +10,12 @@ zone_pivot_groups: teams-app-platform
 ---
 # Create a new Teams project using Teams Toolkit v4
 
+> [!IMPORTANT]
+>
+> We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+>
+> [Teams Toolkit v4](~/toolkit/toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
+
 In this section, you can learn how to create a new Teams project using Microsoft Visual Studio Code and Visual Studio.
 
 ::: zone pivot="visual-studio-code"
@@ -69,7 +75,7 @@ The process to create a new Teams app is similar for all types of apps except SP
 
     :::image type="content" source="images/enter-name-tab1-v4.png" alt-text="Screenshot showing where to enter the app name.":::
 
-    By default, your app project opens in a new window . You can open your app project in the current window as well.
+    By default, your app project opens in a new window. You can open your app project in the current window as well.
 
     :::image type="content" source="images/new-window-notification-v4.png" alt-text="New window notification":::
 
@@ -129,7 +135,7 @@ The new project folder contains the following content:
 | `bot` | The bot source code. |
 | `templates` | Templates for Teams app manifest and corresponding Azure resources. |
 
-The core notification implementation is stored in the **bot** folder and it contains:
+The core notification implementation is stored in the **bot** folder, and it contains:
 
 | File name | Contents |
 | --- | --- |

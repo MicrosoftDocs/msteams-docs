@@ -27,7 +27,7 @@ The following list shows the actions designed for provision.
 
 #### What it is
 
-This action creates a new Teams app for you if the environment variable that stores Teams app ID is empty or the app with given ID isn't found from Teams Developer Portal.
+If the environment variable that stores Teams app ID is empty or the app ID isn't found from Teams Developer Portal, then this action creates a new Teams app.
 
 #### What resource it operates
 
@@ -35,7 +35,7 @@ Teams app in Teams Developer Portal.
 
 #### How to use it
 
-```typescript
+```yml
   - uses: teamsApp/create
     with:
       # #required. Name of Teams app
@@ -58,8 +58,8 @@ Teams app in Teams Developer Portal.
 
 #### How to use it
 
-```typescript
-  - uses: teamsApp/update
+```yml
+- uses: teamsApp/update
     with:
       # Required. Relative path to the yaml file. This is the path for built zip file.
       appPackagePath: <path-to-teams-app-package-file>
@@ -69,7 +69,7 @@ Teams app in Teams Developer Portal.
 
 #### What it is
 
-This action renders Teams app manifest template with environment variables and validate Teams app manifest file using its schema.
+This action renders Teams app manifest template with environment variables and validates Teams app manifest file using its schema.
 
 #### What resource it operates
 
@@ -77,7 +77,7 @@ N/A
 
 #### How to use it
 
-```typescript
+```yml
   - uses: teamsApp/validate
     with:
       # Required. Relative path to the yaml file. Path to Teams app manifest file
@@ -96,7 +96,7 @@ N/A
 
 #### How to use it
 
-```typescript
+```yml
   - uses: teamsApp/validateAppPackage
     with:
       # Required. Relative path to the yaml file. This is the path for built zip file.
@@ -107,7 +107,7 @@ N/A
 
 #### What it is
 
-This action renders Teams app manifest template with environment variables, and zip manifest file with two icons.
+This action renders Teams app manifest template with environment variables and compresses the manifest file with two icons into a zip file.
 
 #### What resource it operates
 
@@ -115,8 +115,8 @@ N/A
 
 #### How to use it
 
-  ```typescript
-  - uses: teamsApp/zipAppPackage
+```yml
+- uses: teamsApp/zipAppPackage
     with:
       # Required. Relative path to the yaml file. This is the path for Teams app manifest file. Environment variables in manifest will be replaced before apply to AAD app.
       manifestPath: <path-to-manifest-file>
@@ -124,7 +124,7 @@ N/A
       outputZipPath: <path-to-generated-zip-file>
       # Required. Relative path to the yaml file. This is the path for built manifest json file.
       outputJsonPath: <path-to-generated-json-file>
-  ```
+```
 
 ### teamsApp/publishAppPackage
 
@@ -138,8 +138,8 @@ Teams app in Microsoft 365 tenant app catalog.
 
 #### How to use it
 
-```typescript
-  - uses: teamsApp/publishAppPackage
+```yml
+- uses: teamsApp/publishAppPackage
     with:
       # Required. Relative path to this file. This is the path for built zip file.
       appPackagePath: <path-to-teams-app-package>
@@ -147,7 +147,7 @@ Teams app in Microsoft 365 tenant app catalog.
     writeToEnvironmentFile:
       # The Teams app id in tenant app catalog.
       publishedAppId: <your-preferred-env-var-name>
-  ```
+```
 
 ### aadApp/create
 
@@ -161,7 +161,7 @@ Azure AD in your Microsoft 365 tenant.
 
 #### How to use it
 
-```typescript
+```yml
 - uses: aadApp/create
     with:
       # Required. The AAD app's display name. When you run aadApp/update, the Azure Active Directory AD app name will be updated based on the definition in manifest. If you don't want to change the name, make sure the name in AAD manifest is the same with the name defined here.
@@ -198,7 +198,7 @@ Azure AD in your Microsoft 365 tenant.
 
 #### How to use it
 
-```typescript
+```yaml
 - uses: aadApp/update
     with:
       # Required. Relative path to the yaml file. Path to the AAD app manifest. Environment variables in manifest will be replaced before apply to AAD app.
@@ -219,7 +219,7 @@ Azure AD in your Microsoft 365 tenant.
 
 #### How to use it
 
-```typescript
+```yml
 - uses: botAadApp/create
     with:
       # Required. The AAD app's display name
@@ -243,7 +243,7 @@ Azure subscription.
 
 #### How to use it
 
-```typescript
+```yml
 - uses: arm/deploy
     with:
       # Required. You can use built-in environment variable `AZURE_SUBSCRIPTION_ID` here. TeamsFx will ask you select one subscription if its value is empty. You're free to reference other environment variable here, but TeamsFx will not ask you to select subscription if it's empty in this case.
@@ -273,8 +273,8 @@ This action enables static website setting in Azure Storage.
 Azure Storage.
 
 #### How to use it
-  
-```typescript
+
+```yml
 - uses: azureStorage/enableStaticWebsite
     with:
       # Required. The resource id of Azure Storage
@@ -297,7 +297,7 @@ N/A
 
 #### How to use it
 
-```typescript
+```yml
 - uses: script
     with:
      # Required. Command to run or path to the script. Succeeds if exit code is 0. '::set-teamsfx-env key=value' is a special command to generate output variables into .env file, in this case, "mykey=abc" will be added the output in the corresponding .env file.
@@ -311,7 +311,6 @@ N/A
      # Optional. Redirect stdout and stderr to a file.
      redirectTo: <path-to-output-file>
 ```
-  
 ### Customize resource provision
 
 The provision steps are defined in `teamsapp.yml` file, under `provision` property. You can add, remove, or update actions to the `provision` property to define the expected actions you want to do during provision.
@@ -322,15 +321,15 @@ Teams Toolkit supports referencing the values from environment variables in `tea
 
 The following example sets the value of environment variable `MY_AZURE_SUBSCRIPTION_ID` to `subscriptionId`:
 
-```typescript
+```yml
 subscriptionId: ${{MY_AZURE_SUBSCRIPTION_ID}}
 ```
 
 #### Customize ARM template files
 
-If the predefined templates don't meet your app requirements, you can create your own ARM template or update existing ARM template and provide the path to `arm/deploy` action like below:
+If the predefined templates don't meet your app requirements, you can create your own ARM template or update existing ARM template and provide the path to `arm/deploy` action as in the following template:
 
-```typescript
+```yml
 - uses: arm/deploy
     with:
       subscriptionId: ${{AZURE_SUBSCRIPTION_ID}}
@@ -353,89 +352,81 @@ You can customize your bot or the Teams app by adding environment variables to u
 
 #### Use an existing Azure AD app for your Teams app
 
-You can follow below steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app yet or you already have one but don't know where to find the correct value, see [how to use existing Azure AD app in TeamsFx project](https://github.com/devdiv-azure-service-dmitryr/teamsfx-docs/blob/main/V5-doc-update/use-existing-aad-app.md).
+You can follow the steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app yet or you already have one but don't know where to find the correct value, see [how to use existing Azure AD app in TeamsFx project](use-existing-aad-app.md).
 
 1. Open `teamsapp.yml` and find the `aadApp/create` action.
 
-1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. Below is the default `writeToenvironmentFile` definition if you create projects using Teams Toolkit:
+1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. The default `writeToenvironmentFile` definition if you create projects using Teams Toolkit is as follows:
 
- ```typescript
- writeToEnvironmentFile:
-   clientId: AAD_APP_CLIENT_ID
-   clientSecret: SECRET_AAD_APP_CLIENT_SECRET
-   objectId: AAD_APP_OBJECT_ID
-   tenantId: AAD_APP_TENANT_ID
-   authority: AAD_APP_OAUTH_AUTHORITY
-   authorityHost: AAD_APP_OAUTH_AUTHORITY_HOST
- ```
-
-1. Add values for each environment variable from step 2.
-
-    1. Add below environment variables and their values to `env\.env.{env}` file.
-
-    ```typescript
-    AAD_APP_CLIENT_ID=<value of Azure AD application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000
-    AAD_APP_OBJECT_ID=<value of Azure AD application's object id> # example: 00000000-0000-0000-0000-000000000000
-    AAD_APP_TENANT_ID=<value of Azure AD's Directory (tenant) id>> # example: 00000000-0000-0000-0000-000000000000
-    AAD_APP_OAUTH_AUTHORITY=<value of Azure AD's authority> # example: https://login.microsoftonline.com/<Directory (tenant) ID>
-    AAD_APP_OAUTH_AUTHORITY_HOST=<host of Azure AD's authority> # example: https://login.microsoftonline.com
-    AAD_APP_ACCESS_AS_USER_PERMISSION_ID=<id of access_as_user permission> # example: 00000000-0000-0000-0000-000000000000
-    ```
-
-    1. If your application requires an Azure AD app client secret, add below environment variable and its value to `env\.env.{env}.user` file.
-
-    ```typescript
-    SECRET_AAD_APP_CLIENT_SECRET=<value of Azure AD application's client secret>
-    ```
-
-    > [!NOTE]
-    >
-    > * Remember to update the environment variable names in the examples if you uses different names in `writeToEnvironmentFile`.
-    >
-    > * If you don't use `aadApp/create` action to create Azure AD application, you can add necessary environment variables with your preferred name without following above steps.
-    >
-    > * Ensure not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you get a warning with instructions about how to manually update the Azure AD app. Follow the instructions to update your Azure AD app after provision.
-
-#### Use an existing Azure AD app for your bot
-
-You can follow below steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app for your bot yet or you already have one but don't know where to find the correct values, see [how to use existing Azure AD app in TeamsFx project](https://github.com/devdiv-azure-service-dmitryr/teamsfx-docs/blob/main/V5-doc-update/use-existing-aad-app.md).
-
-1. Open `teamsapp.yml` and find the `botAadApp/create` action.
-
-1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. Below is the default `writeToEnvironmentFile` definition if you create projects using Teams Toolkit:
-
- ```typescript
- writeToEnvironmentFile:
-   botId: BOT_ID
-   botPassword: SECRET_BOT_PASSWORD
- ```
+     ```yml
+      writeToEnvironmentFile:
+       clientId: AAD_APP_CLIENT_ID
+       clientSecret: SECRET_AAD_APP_CLIENT_SECRET
+       objectId: AAD_APP_OBJECT_ID
+       tenantId: AAD_APP_TENANT_ID
+       authority: AAD_APP_OAUTH_AUTHORITY
+       authorityHost: AAD_APP_OAUTH_AUTHORITY_HOST
+     ```
 
 1. Add values for each environment variable from step 2.
 
-    1. Add below environment variable and its value to `env\.env.{env}` file.
+    1. Add the following environment variables and their values to `env\.env.{env}` file.
 
-    ```typescript
-    BOT_ID=<value of Azure AD application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000
-    ```
+       ```env
+        AAD_APP_CLIENT_ID=<value of Azure AD application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000
+        AAD_APP_OBJECT_ID=<value of Azure AD application's object id> # example: 00000000-0000-0000-0000-000000000000
+        AAD_APP_TENANT_ID=<value of Azure AD's Directory (tenant) id>> # example: 00000000-0000-0000-0000-000000000000
+        AAD_APP_OAUTH_AUTHORITY=<value of Azure AD's authority> # example: https://login.microsoftonline.com/<Directory (tenant) ID>
+        AAD_APP_OAUTH_AUTHORITY_HOST=<host of Azure AD's authority> # example: https://login.microsoftonline.com
+        AAD_APP_ACCESS_AS_USER_PERMISSION_ID=<id of access_as_user permission> # example: 00000000-0000-0000-0000-000000000000
+       ```  
 
-    1. Add below environment variable and its value to `env\.env.{env}.user` file.
+    1. If your application requires an Azure AD app client secret, add the following environment variable and its value to `env\.env.{env}.user` file.
 
-    ```typescript
-    SECRET_BOT_PASSWORD=<value of Azure AD application's client secret>
-    ```
+       ```env
+       SECRET_AAD_APP_CLIENT_SECRET=<value of Azure AD application's client secret>
+       ```
 
 >[!NOTE]
 >
 > * Remember to update the environment variable names in the examples if you use different names in `writeToEnvironmentFile`.
+> * If you don't use `aadApp/create` action to create Azure AD application, you can add necessary environment variables with your preferred name without following above steps.
+> * Ensure not to share the same Azure AD app in multiple environments.
+
+#### Use an existing Azure AD app for your bot
+
+You can follow the steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app for your bot yet or you already have one but don't know where to find the correct values, see [Use existing Azure AD app in TeamsFx project](use-existing-aad-app.md).
+
+1. Open `teamsapp.yml` and find the `botAadApp/create` action.
+
+1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. The default `writeToEnvironmentFile` definition if you create projects using Teams Toolkit is as follows:
+
+    ```yml
+     writeToEnvironmentFile:
+       botId: BOT_ID
+       botPassword: SECRET_BOT_PASSWORD
+    ```
+
+1. Add values for each environment variable from step 2.
+
+    1. Add the following environment variable and its value to `env\.env.{env}` file.
+
+       ```env
+       BOT_ID=<value of Azure AD application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000    
+       ```
+
+    1. Add the following environment variable and its value to `env\.env.{env}.user` file.
+
+       ```env
+       SECRET_BOT_PASSWORD=<value of Azure AD application's client secret>
+       ```
+
+> [!NOTE]
 >
+> * Remember to update the environment variable names in the examples if you use different names in `writeToEnvironmentFile`.
 > * If you don't use `botAadApp/create` action to create Azure AD application, you can add necessary environment variables with your preferred name without following above steps.
->
-> * Ensure not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you get a warning with instructions about how to manually update the Azure AD app. Follow the instructions to update your Azure AD app after provision.
+> * Ensure not to share the same Azure AD app in multiple environments.
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Deploy Teams app to the cloud](deploy.md)
-* [Manage multiple environments](TeamsFx-multi-env.md)
-* [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
-* [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)

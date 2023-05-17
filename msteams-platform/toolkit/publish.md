@@ -7,7 +7,6 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-
 # Publish Teams apps using Teams Toolkit
 
 After creating the app, you can distribute your app to different scopes, such as an individual, a team, or an organization. The distribution depends on multiple factors such as needs, business and technical requirements, and your goal for the app. Distribution to different scope may need different review process. In general, the bigger the scope, the more review the app needs to go through for security and compliance concerns.
@@ -41,8 +40,8 @@ You can build an app for internal use and share it with your team without submit
 
 You need to run **Provision in the cloud** before you build the app package. The following step helps you to build the app package:
 
-* Select **Zip Teams metadata package** under **DEPLOYMENT**.<br>
-    The generated app package is located in `{your project folder}\build\appPackage\appPackage.{env}.zip`.
+* Select **Zip Teams App Package** > **UTILITY**.<br>
+    The generated app package is located in `{your project folder}\appPackage\build\appPackage.{env}.zip`.
 
 ### Upload app package
 
@@ -73,7 +72,7 @@ The following steps help you to publish the app from Teams Toolkit:
 
 1. You can publish your Teams app in one of the following ways:
      * Select **Publish** under **LIFECYCLE**.
-     * Select **View** > **Command Palette...** > **Teams: Publish to Teams**.
+     * Select **View** > **Command Palette...** > **Teams: Publish**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-publish_1.png" alt-text="Screenshot shows the Publish option highlighted.":::
 
@@ -99,8 +98,7 @@ Teams toolkit for Visual Studio Code built on top of the Teams App Submission AP
   > * Add apps to Teams.
   > * Purchase services for third-party apps.
   > * View permissions requested by apps.
-  > * Grant admin consent to apps.
-  > * [Manage org wide app settings](https://admin.teams.microsoft.com/policies/manage-apps).
+  > * Grant admin consent to apps in [manage org wide app settings.](https://admin.teams.microsoft.com/policies/manage-apps).
 
 The following steps help you to approve from Admin Center:
 

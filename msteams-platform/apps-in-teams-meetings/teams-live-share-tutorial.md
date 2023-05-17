@@ -23,7 +23,7 @@ In the Dice Roller sample app, users are shown a dice with a button to roll it. 
 
 ## Set up the application
 
-You can start by importing the required modules. The sample uses [LiveState DDS](/javascript/api/@microsoft/live-share/livestate) and [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) from the Live Share SDK. The sample supports Teams Meeting Extensibility so you must include the [Microsoft Teams JavaScript client library (TeamsJS)](https://github.com/OfficeDev/microsoft-teams-library-js). Finally, the sample is designed to run both locally and in a Teams meeting so you need to include more Fluid Framework pieces to [test the sample locally](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
+You can start by importing the required modules. The sample uses the [LiveState DDS](/javascript/api/@microsoft/live-share/livestate) and [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) from the Live Share SDK. The sample supports Teams Meeting Extensibility so you must include the [Microsoft Teams JavaScript client library (TeamsJS)](https://github.com/OfficeDev/microsoft-teams-library-js). Finally, the sample is designed to run both locally and in a Teams meeting so you need to include more Fluid Framework pieces to [test the sample locally](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
 
 Applications create Fluid containers using a schema that defines a set of _initial objects_ that are available to the container. The sample uses a SharedMap to store the current dice value that was rolled. For more information, see [data modeling](https://fluidframework.com/docs/build/data-modeling/).
 
