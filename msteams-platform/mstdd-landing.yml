@@ -88,6 +88,8 @@ landingContent:
 
     - linkListType: whats-new
       links:
+      - text: Distribute your app to specific countries
+        url: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries
       - text: Command bot in Teams
         url: bots/how-to/conversations/command-bot-in-teams.md
       - text: Enable SSO for your bot and message extension app
