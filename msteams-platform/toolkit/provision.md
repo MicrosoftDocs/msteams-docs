@@ -107,7 +107,7 @@ N/A
 
 #### What it is
 
-This action renders Teams app manifest template with environment variables, and compress the manifest file with two icons into a zip file.
+This action renders Teams app manifest template with environment variables and compresses the manifest file with two icons into a zip file.
 
 #### What resource it operates
 
@@ -357,7 +357,7 @@ You can follow the steps to add environment variables to the .env files to use a
 
 1. Open `teamsapp.yml` and find the `aadApp/create` action.
 
-1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. The following is the default `writeToenvironmentFile` definition if you create projects using Teams Toolkit:
+1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. The default `writeToenvironmentFile` definition if you create projects using Teams Toolkit is as follows:
 
      ```yml
       writeToEnvironmentFile:
@@ -400,7 +400,7 @@ You can follow the steps to add environment variables to the .env files to use a
 
 1. Open `teamsapp.yml` and find the `botAadApp/create` action.
 
-1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. The following is the default `writeToEnvironmentFile` definition if you create projects using Teams Toolkit:
+1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. The default `writeToEnvironmentFile` definition if you create projects using Teams Toolkit is as follows:
 
     ```yml
      writeToEnvironmentFile:
