@@ -197,8 +197,7 @@ Your bot can mention tags in messages posted into channels. When the bot @mentio
 > [!NOTE]
 >
 > * Tag mentions are supported in Teams desktop and web clients.
-> * Tag mentions aren't supported in shared and private channels.
-> * Tag mentions are supported only in text messages and Adaptive Cards.
+> * Tag mentions are supported in GCC and GCC-H tenants only.
 
 ##### Prerequisite
 
@@ -252,23 +251,30 @@ Example:
 
 | Status code | Error code | Message values | Retry request | Developer action|
 |----------------|-----------------|-----------------|----------------|----------------|
-| 400 | **Code**: `Bad Request` | ​Mentioned Tag with ID {id string} doesn't exist in current Team<br/>​Tag can only be mentioned in Channel<br/>Invalid mentioned tag because no tag exists in the team| No | Reevaluate request payload for errors. Check returned error message for details. |
+| 400 | **Code**: `Bad Request` | ​Mentioned tag with ID {id string} doesn't exist in current team<br/>​Tag can only be mentioned in channel<br/>Invalid mentioned tag because no tag exists in the team| No | Reevaluate request payload for errors. Check returned error message for details. |
 | 502 | **Code**: `Bad Gateway` | Invalid team group ID<br/> ​Malformed tenant ID for the tag<br/> ​Mention ID can't be resolved | Yes |Retry with exponential backoff.|
 
 ##### Throttling limits
 
-Any request can be evaluated against multiple limits, depending on the scope, the window type (short and long), number of tags per message and other factors. The first limit to be reached triggers throttling behavior.
+Any request can be evaluated against multiple limits, depending on the scope, the window type (short and long), number of tags per message, and other factors. The first limit to be reached triggers throttling behavior.
 
 Ensure that you don't exceed the throttling limits to avoid heavy traffic to the notification service and  the IC3 service. For example, A bot can send only two messages with tags mention in a five-second window and each message can have only up to 10 tags.
 
 The following table lists the throttling limits for tag mentions in a bot:
 
-|​Scope   |​Window Type  |Number of Tags per message  |​Time windows (sec)  |​Maximum number of messages per time window  |
+|​Scope   |​Window Type  |Number of tags per message  |​Time windows (sec)  |​Maximum number of messages per time window  |
 |------------------------|------------|-----------|----------|----------|
 |​Per bot per thread     |   ​Short     |    10     |     5    |     2    |
-|&nspb                  |   ​Long      |    10     |     60   |     5    |
+| &nbsp;                |   ​Long      |    10     |     60   |     5    |
 |​All bots per thread    |   ​Short     |    10     |     5    |     4    |
-|&nspb                  |  Long       |    10     |     60   |     5    |
+| &nbsp;                |   Long      |    10     |     60   |     5    |
+
+##### Limitations
+
+* Tag mentions aren't supported in shared and private channels.
+* Tag mentions are supported only in text messages and Adaptive Cards.
+* Tag mentions aren't supported in connectors.
+* Tag mentions don't support the invoke function in a bot.
 
 ## Accessing groupChat or channel scope
 

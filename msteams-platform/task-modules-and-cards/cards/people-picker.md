@@ -308,3 +308,4 @@ You can implement People Picker for efficient task management in different scena
 * [Bots and SDKs](../../bots/bot-features.md)
 * [Build message extensions for Teams](../../messaging-extensions/what-are-messaging-extensions.md)
 * [Create connectors for Microsoft 365 Groups](../../webhooks-and-connectors/how-to/connectors-creating.md)
+* [Tag mention](../../resources/bot-v3/bot-conversations/bots-conv-channel.md#tag-mention)
