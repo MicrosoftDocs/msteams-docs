@@ -50,6 +50,8 @@ landingContent:
       links:
       - text: Static tabs that work everywhere
         url: tabs/what-are-tabs.md 
+      - text: Distribute your app to specific countries
+        url: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries
       - text: Teams Toolkit v5 extension within Visual Studio Code
         url: toolkit/teams-toolkit-fundamentals.md
       - text: Get started module includes GitHub Codespaces
