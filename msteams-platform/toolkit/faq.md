@@ -1,7 +1,7 @@
 ---
 title: FAQ
 author: MuyangAmigo
-description:  In this module, See FAQ for Teams Toolkit using Visual Studio Code
+description:  In this module, see FAQ for Teams Toolkit using Visual Studio Code.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -9,6 +9,12 @@ ms.date: 11/29/2021
 ---
 
 # FAQ for Teams Toolkit
+
+> [!IMPORTANT]
+>
+> We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+>
+> [Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
 
 You can see the FAQ for all the sections of Teams Toolkit for Visual Studio Code.
 
@@ -20,7 +26,7 @@ FAQ for [Provision cloud resources using Teams Toolkit](provision.md)
 
 <summary><b>How to troubleshoot?</b></summary>
 
-If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there will be a hyperlink at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
+If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there'll be a hyperlink at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
 
 <br>
 
@@ -30,8 +36,8 @@ If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get
 
 <summary><b>How can I switch to another Azure subscription while provisioning?</b></summary>
 
-1. Switch subscription in current account or log out and select a new subscription.
-2. If you have already provisioned current environment, you need to create a new environment and perform provision because ARM doesn't support moving resources.
+1. Switch subscription in current account or sign out and select a new subscription.
+2. If you've already provisioned current environment, you need to create a new environment and perform provision because ARM doesn't support moving resources.
 3. If you didn't provision current environment, you can trigger provision directly.
 
 <br>
@@ -50,12 +56,12 @@ Before provision, the tool asks you if you want to create a new resource group o
 
 <details>
 
-<summary><b>How can I provision sharepoint-based app?</b></summary>
+<summary><b>How can I provision SharePoint-based app?</b></summary>
 
 You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 
 > [!NOTE]
-> Currently, the building Teams app with sharepoint framework with Teams Toolkit doesn't have direct integration with Azure, the contents in the doc doesn't apply to SPFx based apps.
+> Currently, the building Teams app with SharePoint framework with Teams Toolkit doesn't have direct integration with Azure, the contents in the doc doesn't apply to SPFx-based apps.
 
 <br>
 

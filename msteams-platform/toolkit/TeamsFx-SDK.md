@@ -5,7 +5,7 @@ description: In this module, learn about TeamsFx SDK, core concepts and code str
 ms.author: v-npaladugu
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/29/2021
+ms.date: 04/16/2023
 ---
 
 # TeamsFx SDK
@@ -353,7 +353,7 @@ This section provides several code snippets for common scenarios that are relate
        }
        ```
 
-    For more information on sample to use Graph API in tab app, see [hello-world-tab sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab).
+    For more information on sample to use Graph API in tab app, see [Graph Conector app sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/graph-connector-app).
 
     </details>
 
