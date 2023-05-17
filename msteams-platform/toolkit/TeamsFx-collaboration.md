@@ -69,7 +69,7 @@ The following sections guide us to understand the collaboration process as proje
      > [!NOTE]
      > Collaborators must log in using the account that project owner adds under the same tenant with project owner. For more information, see [build and run your Teams app in remote environment](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3).
 
-## Remove Collaborators
+## Remove Collaborator
 
 Removing collaborators requires the following manual steps:
 

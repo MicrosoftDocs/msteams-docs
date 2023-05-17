@@ -362,7 +362,7 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 17/05/2023 | [Teams Toolkit v4](~/toolkit/toolkit-v4/teams-toolkit-fundamentals-v4.md) extension **will be** deprecated. We recommend that you use Teams Toolkit v5 for building your Teams app. | Tools and SDKs > Teams Toolkit > [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md)|
+| 17/05/2023 | [Teams Toolkit v4](~/toolkit/toolkit-v4/teams-toolkit-fundamentals-v4.md) extension within Visual Studio Code **will be** deprecated. We recommend that you use Teams Toolkit v5 within Visual Studio Code for building your Teams app. | Tools and SDKs > Teams Toolkit > [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md)|
 
 ## Deprecated
 

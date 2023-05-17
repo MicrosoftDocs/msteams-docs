@@ -311,7 +311,6 @@ N/A
      # Optional. Redirect stdout and stderr to a file.
      redirectTo: <path-to-output-file>
 ```
-
 ### Customize resource provision
 
 The provision steps are defined in `teamsapp.yml` file, under `provision` property. You can add, remove, or update actions to the `provision` property to define the expected actions you want to do during provision.
