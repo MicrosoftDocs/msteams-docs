@@ -17,11 +17,11 @@ Chat in channels and group chats differs from personal chat in that the user nee
 
 Bots added to a team become another team member and can be @mentioned as part of the conversation. In fact, bots only receive messages when they're @mentioned, so other conversations on the channel aren't sent to the bot.
 
-A bot in a group or channel should provide information relevant and appropriate for all members. While your bot can certainly provide any information relevant to the experience, keep in mind conversations with it are visible to everyone. Therefore, a great bot in a group or channel should add value to all users, and certainly not inadvertently share information more appropriate to a one-to-one conversation.
+A bot in a group or channel should provide information relevant and appropriate for all members. While your bot can certainly provide any information relevant to the experience, keep in mind conversations with it are visible to everyone. Therefore, a great bot in a group or channel should add value to all users, and not inadvertently share information more appropriate to a one-to-one conversation.
 
 Your bot, just as it is, may be entirely relevant in all scopes without requiring more work. In Teams, there's no expectation that your bot function in all scopes, but you should ensure that your bot provides user value in whichever scope(s) you choose to support. For more information on scopes, see [Apps in Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md).
 
-Developing a bot that works in groups or channels uses much of the same functionality as personal conversations. Additional events and data in the payload provide Teams group and channel information. Those differences, as well as key differences in common functionality are described in the following sections.
+Developing a bot that works in groups or channels uses much of the same functionality as personal conversations. Additional events and data in the payload provide Teams group and channel information. Those differences, and key differences in common functionality are described in the following sections.
 
 ### Creating messages
 
@@ -51,9 +51,9 @@ When your bot is first added to the group or team, it's useful to send a welcome
 
 You might also want to send a personal message to each member of the team when the bot is added. To do this, you could [fetch the team roster](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) and send each user a [direct message](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md).
 
-We recommend that your bot *not* send a welcome message in the following situations:
+We recommend that your bot to *not* send a welcome message in the following situations:
 
-* The team is large (obviously subjective, for example, more than 100 members). Your bot may be seen as 'spammy' and the person who added it may get complaints unless you clearly communicate your bot's value proposition to everyone who sees the welcome message.
+* The team is large (subjective, for example, more than 100 members). Your bot may be seen as 'spammy' and the person who added it may get complaints unless you clearly communicate your bot's value proposition to everyone who sees the welcome message.
 * Your bot is first mentioned in a group or channel, versus being first added to a team.
 * A group or channel is renamed.
 * A team member is added to a group or channel.
@@ -200,7 +200,7 @@ Your bot can mention tags in messages posted into channels. When the bot @mentio
 > * Tag mentions aren't supported in shared and private channels.
 > * Tag mentions are supported only in text messages and Adaptive Cards.
 
-##### Pre-requisite
+##### Prerequisite
 
 Get a list of the tags available in the channel using the [List teamworkTags](/graph/api/teamworktag-list?view=graph-rest-1.0&tabs=http&preserve-view=true) API.
 
@@ -235,7 +235,7 @@ Example:
 ​    "type": "mention", 
     ​"text": "<at>my tag</at>", 
 ​    "mentioned": { 
-            ​"id": "base64 encoded id" ,// tag graph 64 base id
+            ​"id": "base64 encoded id" ,// tag graph 64 base ID
 ​            "name": "my tag", 
             ​"type": "tag" 
 ​    } 
@@ -246,20 +246,20 @@ Example:
 
 |Name |Description |
 |---------|----------------|
-|`type`| The type of mention. The supported type is `tag`. The tag format is  base 64 encoded id​. For example, `NTI4ZGJlM2YtMTVlMC00ZTM3LTg0YTEtMDBjYzMwNTg0N2RkIyNlYzgwMTVmMC1iMmYxLTQxZTItODA0OC1hMGE2OTcwNmM5ZGIjI3RxRE04YndyVQ==​`.
+|`type`| The type of mention. The supported type is `tag`. The tag format is base 64 encoded ID​. For example, `NTI4ZGJlM2YtMTVlMC00ZTM3LTg0YTEtMDBjYzMwNTg0N2RkIyNlYzgwMTVmMC1iMmYxLTQxZTItODA0OC1hMGE2OTcwNmM5ZGIjI3RxRE04YndyVQ==​`.
 
 ###### Error code
 
 | Status code | Error code | Message values | Retry request | Developer action|
 |----------------|-----------------|-----------------|----------------|----------------|
-| 400 | **Code**: `Bad Request` | ​Mentioned Tag with id {id string} does not exist in current Team<br/>​Tag can only be mentioned in Channel<br/>Invalid mentioned tag because no tag exists in the team| No | Reevaluate request payload for errors. Check returned error message for details. |
-| 502 | **Code**: `Bad Gateway` | Invalid team group Id<br/> ​Malformed tenant id for the tag<br/> ​Mention Id cannot be resolved | Yes |Retry with exponential backoff.|
+| 400 | **Code**: `Bad Request` | ​Mentioned Tag with ID {id string} doesn't exist in current Team<br/>​Tag can only be mentioned in Channel<br/>Invalid mentioned tag because no tag exists in the team| No | Reevaluate request payload for errors. Check returned error message for details. |
+| 502 | **Code**: `Bad Gateway` | Invalid team group ID<br/> ​Malformed tenant ID for the tag<br/> ​Mention ID can't be resolved | Yes |Retry with exponential backoff.|
 
 ##### Throttling limits
 
 Any request can be evaluated against multiple limits, depending on the scope, the window type (short and long), number of tags per message and other factors. The first limit to be reached triggers throttling behavior.
 
-Ensure that you don't exceed the throttling limits to avoid heavy traffic to the notification service and  the IC3 service. For example, A bot can send only two messages with tags mention in a five second window and each message can have only up to 10 tags.
+Ensure that you don't exceed the throttling limits to avoid heavy traffic to the notification service and  the IC3 service. For example, A bot can send only two messages with tags mention in a five-second window and each message can have only up to 10 tags.
 
 The following table lists the throttling limits for tag mentions in a bot:
 
