@@ -12,7 +12,7 @@ ms.date: 11/29/2021
 
 Teams Toolkit supports different build environments for creating apps. It helps to integrate Azure Functions capabilities and cloud services in the Teams app that you've built.
 
-:::image type="content" source="../assets/images/buildapps-TTK_1.png" alt-text="Prepare to build apps using Teams Toolkit" lightbox="../assets/images/buildapps-TTK_1.png":::
+:::image type="content" source="../assets/images/buildapps-TTK_1.png" alt-text="Illustration shows the steps to prepare to build apps using Teams Toolkit." lightbox="../assets/images/buildapps-TTK_1.png":::
 
 ## Build environments
 
@@ -53,7 +53,7 @@ Teams Toolkit in Visual Studio Code allows you to create tab apps using SPFx. Th
 
 ### Create your Teams app using C# and Blazor
 
-* Teams Toolkit in Visual Studio allows you to create a Teams app using C# using the Blazor framework. You can create tab app, bot app, and message extension app in a C# build environment.
+Teams Toolkit in Visual Studio allows you to create a Teams app using C# using the Blazor framework. You can create tab app, bot app, and message extension app in a C# build environment.
 
 ## Support for Azure Functions
 
@@ -63,7 +63,7 @@ Azure Functions provides "compute on-demand" in two significant ways:
 1. Allows implementing system's logic into your readily available blocks of code. These blocks are called functions.
 1. Meets the requirement with as many resources and function instances as necessary as the requests increase.
 
-Azure Functions integrates with an array of [cloud services](add-resource.md#types-of-cloud-resources) to provide feature-rich implementations. The following are the common scenarios for Azure Functions:
+Azure Functions integrates with an array of [cloud services](add-resource.md) to provide feature-rich implementations. The following are the common scenarios for Azure Functions:
 
 * Building a web API
 * Processing to database changes
