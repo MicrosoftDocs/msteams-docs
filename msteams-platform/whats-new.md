@@ -12,6 +12,13 @@ zone_pivot_groups: What-new-features
 
 Discover Microsoft Teams platform features that are generally available (GA). You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
+## Microsoft Build 2023 :::image type="icon" source="assets/images/bullhorn.png" border="false"
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+| 17/05/2023 | Introduced the Teams Toolkit v5 extension within Visual Studio Code. | Tools and SDKs > Teams Toolkit > [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md)|
+| 17/05/2023 | Updated Get started module with GitHub Codespaces and step-by-step guides aligned with Teams Toolkit v5. It also includes details for extending Teams app over Microsoft 365 and Outlook. | [Get started](get-started/get-started-overview.md)|
+
 ## Generally available
 
 :::row:::
@@ -353,6 +360,12 @@ For more information, see [public developer preview for Teams](~/resources/dev-p
 
 Discover Microsoft Teams platform features that are deprecated. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
+## Microsoft Build 2023 :::image type="icon" source="assets/images/bullhorn.png" border="false"
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+| 17/05/2023 | [Teams Toolkit v4](~/toolkit/toolkit-v4/teams-toolkit-fundamentals-v4.md) extension **will be** deprecated. We recommend that you use Teams Toolkit v5 for building your Teams app. | Tools and SDKs > Teams Toolkit > [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md)|
+
 ## Deprecated
 
 :::row:::
@@ -365,7 +378,7 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
-* ***May 05, 2023***: Adaptive Card tabs will be deprecated in the new Microsoft Teams. Apps are expected to be available in the new Microsoft Teams by June 2023. If your app is using Adaptive Card tabs, it's recommended to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
+* ***May 05, 2023***: Adaptive Card tabs **will be** deprecated in the new Microsoft Teams. Apps are expected to be available in the new Microsoft Teams by June 2023. If your app is using Adaptive Card tabs, it's recommended to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
 
 * ***August 01, 2022***: App Studio is deprecated, use [Developer Portal](concepts/build-and-test/teams-developer-portal.md) for Teams.
 
