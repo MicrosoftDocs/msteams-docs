@@ -105,8 +105,9 @@ items:
 
     Verify if you can sideload apps in Teams:
 
-    1. In the Teams client, select **Store** icon.
+    1. In the Teams client, select **Apps** icon.
     1. Select **Manage your apps**.
+    1. Select **Upload an app**.
     1. Select **Upload a custom app**. If you see Upload a customized app option, sideloading apps is enabled.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Screenshot of Manage your apps in Teams with the Upload an app dialog open. Apps icon, Manage your apps, Upload an app, and Upload a customised app options are highlighted in red.":::
@@ -131,7 +132,7 @@ items:
 
     If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
-    Now you've got all tools and set up your accounts. Next, let's set up your development environment and start building!
+    Now you've got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to create first.
 
 - title: Create project workspace for your tab app
   durationInMinutes: 1
