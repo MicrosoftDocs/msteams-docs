@@ -182,6 +182,8 @@ items:
 - title: Interaction with the workflow bot
   durationInMinutes: 2
   content: |
+    You can interact with the bot in Teams by sending a helloWorld command.
+    
     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-action-response.png" alt-text="Screenshot shows the selection to add your workflow bot app.":::
 
     You'll receive the following command response in Adaptive Card:
