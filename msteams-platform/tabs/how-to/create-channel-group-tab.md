@@ -1029,7 +1029,7 @@ You've completed the tutorial to build a tab app with Blazor.
 
 ## Migrate your configurable tab to personal (static) tab
 
-Personal (static) tab capability is extended to support channel, group chat, or meetings. You can update your existing configurable tab to personal (static) tab and add different scopes to the personal tab. 
+Personal (static) tab capability is extended to support group chat and meetings. You can update your existing configurable tab to personal (static) tab and add different scopes to the personal tab. 
 
 To change your configurable tab to personal (static) tab:
 
@@ -1041,13 +1041,11 @@ To change your configurable tab to personal (static) tab:
      { 
      "entityId": "homeTab", 
      "scopes": [ 
-       "personal", 
-       "team", 
+       "personal",  
        "groupChat" 
       ], 
      "context": [ 
        "personalTab", 
-       "channelTab", 
        "privateChatTab", 
        "meetingChatTab", 
        "meetingDetailsTab", 

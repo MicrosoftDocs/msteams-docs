@@ -612,18 +612,18 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 
 ```
 
-## Extend personal tabs to group chat and channels
+## Extend personal tabs to group chat and meetings
 
-You can extend personal tabs to group chat, channel, and meetings. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one tab at a time. The following list helps you build a personal tab that works in every context:
+You can extend personal tabs to group chat and meetings. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one tab at a time. The following list helps you build a personal tab that works in every context:
 
 * Don't embed your entire web app in Teams, as users often don't find this helpful. Instead, think about what your app can uniquely do inside Teams. For example, can you serve an app experience that consolidates all your apps content, such as displaying all the surveys in a meeting.
 * Your app needs to be responsive down to 320 pixels width to align with the meeting side panel and  Teams mobile experience. 
 
 > [!NOTE]
-> * Extend your personal tabs to group chat and channels is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-> * To extend your personal tabs to group chat and channels, use the app manifest v1.16 or later.
+> * Extend your personal tabs to group chat and meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * To extend your personal tabs to group chat and meetings, use the app manifest v1.16 or later.
 
-To extend your personal tabs to group chat and channels, update your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with the `scopes` and `context` parameters in the `staticTabs` property.
+To extend your personal tabs to group chat and meetings, update your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with the `scopes` and `context` parameters in the `staticTabs` property.
 
 Following is an example of app manifest where a personal tab is defined that works in all scopes and contexts in Teams:
 
@@ -633,12 +633,10 @@ Following is an example of app manifest where a personal tab is defined that wor
      "entityId": "homeTab", 
      "scopes": [ 
        "personal", 
-       "team", 
        "groupChat" 
       ], 
      "context": [ 
-       "personalTab", 
-       "channelTab", 
+       "personalTab",  
        "privateChatTab", 
        "meetingChatTab", 
        "meetingDetailsTab", 
@@ -658,7 +656,6 @@ If a context isn't defined in the app manifest, by default Teams consider the fo
 ```json
 "context": [ 
    "personalTab", 
-   "channelTab", 
    "privateChatTab", 
    "meetingChatTab", 
    "meetingDetailsTab", 
@@ -666,9 +663,9 @@ If a context isn't defined in the app manifest, by default Teams consider the fo
 ]
 ```
 
-## Customizing your personal (static) tab in chats or channels
+## Customizing your personal (static) tab in chats or meetings
 
-To customize your personal (static) tab experience in chats or channel, you can add `setConfig` APIs in a [configuration dialog](~/tabs/how-to/create-tab-pages/configuration-page.md#configuration-page-for-tabs) to update the `contentUrl`. Following is an example:
+To customize your personal (static) tab experience in chats or meetings, you can add `setConfig` APIs in a [configuration dialog](~/tabs/how-to/create-tab-pages/configuration-page.md#configuration-page-for-tabs) to update the `contentUrl`. Following is an example:
 
 ```json
 pages.config.setConfig({ 
