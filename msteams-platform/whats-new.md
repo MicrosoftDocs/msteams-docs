@@ -16,7 +16,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|17/05/2023 |  Distribute your app to specific countries | Distribute your app > Publish to the Teams store > Prepare your Teams store submission > [Distribute your app to specific countries](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries).|
+|17/05/2023 |  Distribute your app to specific countries. | Distribute your app > Publish to the Teams store > Prepare your Teams store submission > [Distribute your app to specific countries](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries).
 | 17/05/2023 | Introduced the Teams Toolkit v5 extension within Visual Studio Code. | Tools and SDKs > Teams Toolkit > [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md)|
 | 17/05/2023 | Updated Get started module with GitHub Codespaces and step-by-step guides aligned with Teams Toolkit v5. It also includes details for extending Teams app over Microsoft 365 and Outlook. | [Get started](get-started/get-started-overview.md)|
 
@@ -36,7 +36,7 @@ Teams platform features that are available to all app developers.
 
 * ***April 24, 2023***: [Develop your apps with Teams Toolkit](concepts/build-and-test/develop-your-apps-with-teams-toolkit.md)
 
-* ***April 14, 2023***: [Contextless app update](concepts/deploy-and-publish/apps-upload.md#update-your-app).
+* ***April 14, 2023***: [Contextless app update](concepts/deploy-and-publish/apps-upload.md#update-your-app)
 
 * ***April 6, 2023***: [Set up Microsoft license management](concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md)
 
