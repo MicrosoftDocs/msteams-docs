@@ -32,9 +32,9 @@ The following image shows Contoso channel tabs:
 
 There are few prerequisites that you must go through before working on tabs.
 
-There are two types of tabs available in Teams, personal and channel or group. [Personal tabs](~/tabs/how-to/create-personal-tab.md) also known as static tabs. Personal (static) tabs along with personal-scoped bots are part of the personal apps that are scoped to a single user and pinned to the left navigation bar for easy access. Personal (static) tabs in personal scope continue to work the same. However, you can now extend [Personal (static) tabs](~/tabs/how-to/create-personal-tab.md#extend-personal-static-tabs-to-group-chat-and-meetings) to [group chat or meetings](~/tabs/how-to/create-personal-tab.md#extend-personal-static-tabs-to-group-chat-and-meetings) with a [customizable experience.](~/tabs/how-to/create-personal-tab.md#customizing-your-personal-static-tab-in-chats-or-meetings)
+There are two types of tabs available in Teams, personal and channel or group. [Personal tabs](~/tabs/how-to/create-personal-tab.md) also known as static tabs. Personal (static) tabs along with personal-scoped bots are part of the personal apps that are scoped to a single user and pinned to the left navigation bar for easy access. Personal (static) tabs in personal scope continue to work the same. However, you can now [ extend personal (static) tabs](~/tabs/how-to/create-personal-tab.md#extend-personal-static-tabs-to-group-chat-and-meetings) to group chat or meetings with a [customizable experience.](~/tabs/how-to/create-personal-tab.md#customizing-your-personal-static-tab-in-chats-or-meetings)
 
-You can extend personal (static) tabs to different scopes and pre-pin tabs to include the pre-pinned tabs in meeting templates. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one tab at a time.
+You can extend personal (static) tabs to different scopes and pre-pin tabs to include the pre-pinned tabs in meeting templates. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one app at a time.
 
 Following image shows personal (static) tabs with customizable experience added to different contexts in Teams:
 
