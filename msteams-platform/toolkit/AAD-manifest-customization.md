@@ -196,7 +196,7 @@ CodeLens shows the application name for the pre-authorized application ID for th
 
 1. Select Azure AD application from search result to view the detailed information.
   
-1. In Azure AD app information page, select the Manifest menu to view manifest of this application. The schema of the manifest is same as the one in `aad.template.json` file. For more information about manifest, see [Azure AD app manifest](/azure/active-directory/develop/reference-app-manifest).
+1. In Azure AD app information page, select the **Manifest** menu to view manifest of this application. The schema of the manifest is same as the one in `aad.template.json` file. For more information about manifest, see [Azure AD app manifest](/azure/active-directory/develop/reference-app-manifest).
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view3.png" alt-text="Screenshot shows the Manifest screen.":::
 
@@ -214,13 +214,13 @@ You need to interact with Azure AD application during various stages of your Tea
 
       You can create a project with Teams Toolkit that comes with single sign-on (SSO) support by default such as `SSO-enabled tab`. For more information on how to create a new app, see [create new Teams application using Teams Toolkit](create-new-project.md). An Azure AD manifest file is automatically created for you in `aad.template.json`. Teams Toolkit creates or updates the Azure AD application during local development or while you move the application to the cloud.
 
-1. **To add SSO to your Bot or Tab**
+1. **To add SSO to your bot or tab**
 
       After you create a Teams application without built-in SSO, Teams Toolkit progressively helps you to add SSO for the project. As a result, an Azure AD manifest file is automatically created for you in `aad.template.json`.
 
       Teams Toolkit creates or updates the Azure AD application during next local development session or while you move the application to the cloud.
 
-1. **To build Locally**
+1. **To build locally**
 
     Teams Toolkit performs the following functions during local development:
 
