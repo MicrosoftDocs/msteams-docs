@@ -105,12 +105,14 @@ You can also use the Teams extension function `getTextWithoutMentions`, which st
 
 ### Constructing mentions
 
+#### User mention
+
 Your bot can mention other users in messages posted into channels. To do this, your message must do the following:
 
 * Include `<at>@username</at>` in the message text.
 * Include the `mention` object inside the entities collection.
 
-#### .NET example
+# [.NET](#tab/dotnet)
 
 This example uses the [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package.
 
@@ -126,7 +128,7 @@ replyActivity.AddMentionToText(activity.From, MentionTextLocation.AppendText);
 await client.Conversations.ReplyToActivityAsync(replyActivity);
 ```
 
-#### Node.js example
+# [Node.js](#tab/nodejs)
 
 ```javascript
 // User to mention
@@ -144,7 +146,9 @@ var generalMessage = mentionedMsg.routeReplyToGeneralChannel();
 session.send(generalMessage);
 ```
 
-#### Example: Outgoing message with user mentioned
+---
+
+**Example: Outgoing message with user mentioned**
 
 ```json
 {
@@ -185,6 +189,86 @@ session.send(generalMessage);
     "replyToId": "3UP4UTkzUk1zzeyW"
 }
 ```
+
+#### Tag mention
+
+Your bot can mention tags in messages posted into channels. When the bot @mentions the tag in a channel, the tag is highlighted and the people associated with the tag get notified. When a user hovers over the tag, a pop-up appears with the tag details.
+
+> [!NOTE]
+>
+> * Tag mentions are supported in Teams desktop and web clients.
+> * Tag mentions aren't supported in shared and private channels.
+> * Tag mentions are supported only in text messages and Adaptive Cards.
+
+##### Pre-requisite
+
+Get a list of the tags available in the channel using the [List teamworkTags](/graph/api/teamworktag-list?view=graph-rest-1.0&tabs=http&preserve-view=true) API.
+
+##### Mention tags in a text message
+
+In the `mention.properties` object, add the property `'type': 'tag'`. If the property `'type': 'tag'` isn't added, the bot treats the mention as a user mention.
+
+Example:
+
+```javascript
+​var mention = new ChannelAccount(tagId, "Test Tag"); 
+​mention.Properties = JObject.Parse("{'type': 'tag'}"); 
+​var mentionObj = new Mention 
+​{ 
+​    Mentioned = mention, 
+​    Text = "<at>Test Tag</at>" 
+​}; 
+
+​var replyActivity = MessageFactory.Text("Hello " + mentionObj.Text); 
+​replyActivity.Entities = new List<Microsoft.Bot.Schema.Entity> { mentionObj }; 
+​await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+```
+
+##### Mention tags in an Adaptive Card
+
+In the `mentioned` object, add the property `"type": "tag"` in the Adaptive Card schema.  If the property `"type": "tag"` isn't added, the bot treats the mention as a user mention.
+
+Example:
+
+```json
+​{ 
+​    "type": "mention", 
+    ​"text": "<at>my tag</at>", 
+​    "mentioned": { 
+            ​"id": "base64 encoded id" ,// tag graph 64 base id
+​            "name": "my tag", 
+            ​"type": "tag" 
+​    } 
+​} 
+```
+
+###### Query Parameters
+
+|Name |Description |
+|---------|----------------|
+|`type`| The type of mention. The supported type is `tag`. The tag format is  base 64 encoded id​. For example, `NTI4ZGJlM2YtMTVlMC00ZTM3LTg0YTEtMDBjYzMwNTg0N2RkIyNlYzgwMTVmMC1iMmYxLTQxZTItODA0OC1hMGE2OTcwNmM5ZGIjI3RxRE04YndyVQ==​`.
+
+###### Error code
+
+| Status code | Error code | Message values | Retry request | Developer action|
+|----------------|-----------------|-----------------|----------------|----------------|
+| 400 | **Code**: `Bad Request` | ​Mentioned Tag with id {id string} does not exist in current Team<br/>​Tag can only be mentioned in Channel<br/>Invalid mentioned tag because no tag exists in the team| No | Reevaluate request payload for errors. Check returned error message for details. |
+| 502 | **Code**: `Bad Gateway` | Invalid team group Id<br/> ​Malformed tenant id for the tag<br/> ​Mention Id cannot be resolved | Yes |Retry with exponential backoff.|
+
+##### Throttling limits
+
+Any request can be evaluated against multiple limits, depending on the scope, the window type (short and long), number of tags per message and other factors. The first limit to be reached triggers throttling behavior.
+
+Ensure that you don't exceed the throttling limits to avoid heavy traffic to the notification service and  the IC3 service. For example, A bot can send only two messages with tags mention in a five second window and each message can have only up to 10 tags.
+
+The following table lists the throttling limits for tag mentions in a bot:
+
+|​Scope   |​Window Type  |Number of Tags per message  |​Time windows (sec)  |​Maximum number of messages per time window  |
+|------------------------|------------|-----------|----------|----------|
+|​Per bot per thread     |   ​Short     |    10     |     5    |     2    |
+|&nspb                  |   ​Long      |    10     |     60   |     5    |
+|​All bots per thread    |   ​Short     |    10     |     5    |     4    |
+|&nspb                  |  Long       |    10     |     60   |     5    |
 
 ## Accessing groupChat or channel scope
 
