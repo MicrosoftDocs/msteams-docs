@@ -213,14 +213,14 @@ items:
         * If you use Windows, follow the steps:
           1. Open **Windows PowerShell**.
           1. Run the `Invoke-Webrequest -Method POST -URI http://localhost:3978/api/notification` command.
-          
+
              :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/windows-powershell.png" alt-text="Powershell Trigger"border="true" lightbox="../msteams-platform/assets/images/sbs-notification-bot/windows-powershell-1.png":::
 
         * If you don't use Windows, follow the steps:
           1. In Visual Studio Code, go to **Terminal** > **New Terminal** to open another terminal.
           1. Run the `curl -X POST http://localhost:3978/api/notification` command.
 
-        You get the following output in Teams:
+        You'll get the following output in Teams:
 
           :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/trigger-output.png" alt-text="Trigger Output"border="true" lightbox="../msteams-platform/assets/images/sbs-notification-bot/trigger-output.png":::
 
