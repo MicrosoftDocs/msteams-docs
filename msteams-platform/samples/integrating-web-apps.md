@@ -92,7 +92,7 @@ Learn more about [authentication in Teams](../concepts/authentication/authentica
 
 ***Integration scenarios**: Standalone apps, collaboration apps*
 
-Ensure to follow [Teams design guidelines](../concepts/design/understand-use-cases.md) to make your app native to Teams. You can't migrate an existing app content to a Teams tab. For more information on app design, see [Fluent Design System](https://fluentsite.z22.web.core.windows.net/).
+Ensure to follow [Teams design guidelines](../concepts/design/understand-use-cases.md) to make your app native to Teams. You can't migrate an existing app content to a Teams tab. For more information on app design, see [Fluent Design System](https://react.fluentui.dev/?path=/docs/).
 
 ## Maximize deep linking
 
