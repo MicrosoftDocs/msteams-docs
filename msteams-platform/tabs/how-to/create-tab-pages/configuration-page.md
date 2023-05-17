@@ -20,7 +20,7 @@ To add customizable experience to your personal (static) tab, add your [configur
 
 Your configuration logic must display a dialog that asks the user to pin the tab (pin the `contentUrl`). If you are making any API calls or requests in the configuration dialog, add them to your `contentURL` code space. The `getSettings` and `setSettings` APIs that you would need to add in your configuration dialog can be used from `contentUrl`. That means that you can use `getSettings` and `setSettings` in your `contentUrl` to display the content or use it in `configurationUrl` to customize the content displayed for that tab. This allows you to get your configuration page ready for tabs. 
 
-If your personal tab serves custom content based on the context that the tab is pinned, then you need to set `contentUrl`. For example, you might decide to serve a slightly different experience in meetings and choose to pin a setup or a bootstrap page where a new `contentUrl` is set at runtime in the tab itself. If your `contentUrl` is `https://wwww.contoso.com/teamsapp/setup`, then this page is pinned where you can change `contentUrl` at runtime such as following: 
+If your personal (static) tab serves custom content based on the context that the tab is pinned, then you need to set `contentUrl`. For example, you might decide to serve a slightly different experience in meetings and choose to pin a setup or a bootstrap page where a new `contentUrl` is set at runtime in the tab itself. If your `contentUrl` is `https://wwww.contoso.com/teamsapp/setup`, then this page is pinned where you can change `contentUrl` at runtime such as following: 
 
 ```javascript
 
@@ -329,7 +329,7 @@ Authenticate before allowing a user to configure your app. Otherwise, your conte
 
 ## Modify or remove a tab
 
-Set your manifest's `canUpdateConfiguration` property to `true`. It enables the users to modify or reconfigure a channel or group tab. You can rename your tab only through Teams user interface. Inform the user about the impact on content when a tab is removed. To do this, include a removal options page in the app, and set a value for the `removeUrl` property in the `setConfig()` (formerly `setSettings()`) configuration. The user can uninstall personal tabs but can't modify them. For more information, see [create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
+Set your manifest's `canUpdateConfiguration` property to `true`. It enables the users to modify or reconfigure a channel or group tab. You can rename your tab only through Teams user interface. Inform the user about the impact on content when a tab is removed. To do this, include a removal options page in the app, and set a value for the `removeUrl` property in the `setConfig()` (formerly `setSettings()`) configuration. The user can uninstall personal (static) tabs but can't modify them. For more information, see [create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 Microsoft Teams `setConfig()` (formerly `setSettings()`) configuration for removal page:
 
