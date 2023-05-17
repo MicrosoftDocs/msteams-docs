@@ -45,10 +45,6 @@ To create a basic Teams app:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-basic-tab.png" alt-text="Screenshot shows to select App Feature using a Tab as Basic Tab.":::
 
-1. Select **Basic Tab**
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/basic-tab-app.png" alt-text="Screenshot shows the basic tab selected.":::
-
 1. Select **JavaScript** as the programming language.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-language-tab_1.png" alt-text="Screenshot shows the programming language to select.":::

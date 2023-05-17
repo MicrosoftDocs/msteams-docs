@@ -64,7 +64,7 @@ For example, you can customize app description by defining a new environment var
     ```text
     TEAMS_APP_DESCRIPTION=This is an amazing app
     ```
-    
+
     `manifest.json`
 
     ```text
@@ -80,11 +80,11 @@ For example, you can customize app description by defining a new environment var
 
 ## Validate Application
 
-After customization, you may want to validate your manifest or app package. You can trigger `Validate Application` from Tree view, or `Teams: ValidateApplication` from command palette. There are two options, `Validate using manifest schema` or `Validate app package using validation rules`.
+After customization, you may want to validate your manifest or app package. You can trigger `Validate Application` from tree view, or `Teams: ValidateApplication` from command palette. There are two options, `Validate using manifest schema` or `Validate app package using validation rules`.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/validate-application.png" alt-text="Screenshot showing the selection of validate application under utility.":::
 
-Validate using manifest schema
+### Validate using manifest schema
 
 This option renders `appPackage/manifest.json` with environment variables, and then validates your manifest with its schema.
 
