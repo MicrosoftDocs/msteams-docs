@@ -38,12 +38,12 @@ items:
 
    | Install | For using... |
    | --- | --- |
-   |[Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
+   |[Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use version 5. |
    |[Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place.|
    |[Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
    |[Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-   |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) or [Azure Open AI ](https://azure.microsoft.com/free/)|First create your OpenAI API key to use OpenAI's GPT. If you wish to host your app or access resources in Azure, you must have an AzureOpenAI key before you begin.|
+   |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) or [AzureOpenAI ](https://azure.microsoft.com/free/)|First create your OpenAI API key to use OpenAI's GPT. If you wish to host your app or access resources in Azure, you must have an AzureOpenAI key before you begin.|
    |[Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
 
 
@@ -322,7 +322,7 @@ items:
 
     ## Update your bot app with Teams AI library capabilities
 
-    Teams Toolkit is the easiest way to scaffold and get a bot running, Teams Toolkit creates the basic bot structure for you so that you can  get started with configuring your bot. 
+    Teams Toolkit is the easiest way to scaffold and get a bot running. Teams Toolkit creates the basic bot structure for you so that you can  get started with configuring your bot. 
     
     Let's get started to configure Teams AI library capabilities.
 
@@ -335,7 +335,7 @@ items:
 
        ```
 
-    1. Go to the **env** folder and update the Open AI key in the `.env.local.user`file.
+    1. Go to the **env** folder and update the OpenAI key in the `.env.local.user`file.
 
        ```
         SECRET_BOT_PASSWORD=
@@ -348,17 +348,17 @@ items:
        openAIKey: process.env.SECRET_OPENAI_API_KEY
        ```
 
-       When you debug the app, the Open AI key defined here process the Open AI key from the `.env.local.user` during local debug.
+       When you debug the app, the OpenAI key defined here processes the OpenAI key from the `.env.local.user` during local debug.
 
-    1. Go to the `teamsapp.local.yml`file and add the following code after `BOT_ID` and `BOT_PASSWORD`:
+    1. Go to the `teamsapp.local.yml` file and add the following code after `BOT_ID` and `BOT_PASSWORD`:
 
        ```teamsapp.local.yml
        SECRET_OPENAI_API_KEY: ${{SECRET_OPENAI_API_KEY}}
        ```
 
-       When you run the app locally, the Open AI key defined here is used in the local settings.
+       When you run the app locally, the OpenAI key defined here is used in the local settings.
 
-    1. Go to the `index.ts` file, and add the following code:
+    1. Go to the `index.ts` file:
 
         1. Add the following code to import Teams AI library:
 
@@ -367,9 +367,9 @@ items:
             import path from "path";
             ```
 
-            You need to import the required classes to use the functions and variables available in the class to build your app. You can leverage pre-built templates, and simply add your business logic to this scaffold.
+            You need to import the required classes to use the functions and variables available in the class to build your app. You can leverage pre-built templates and simply add your business logic to this scaffold.
 
-        1. Add the following code in the `index.ts` file to define a state:
+        1. Add the following code to define a state:
 
             ```typescript
             // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -394,9 +394,9 @@ items:
             });
             const promptManager = new DefaultPromptManager(path.join(__dirname, './prompts' ));
             ````
-            * Planner: The `OpenAIPlanner` is a class that implements an interface called `Planner`. The Planner calls the OpenAI's LLM model 'text-davinci-003' for text completion. You can use the `OpenAIPlanner` or AzureOpenAIPlanner. If your using the AzureOpenAIPlanner, ensure that you define the endpoint property.
+            * Planner: The `OpenAIPlanner` is a class that implements an interface called `Planner`. Planner calls the OpenAI's LLM model `text-davinci-003` for text completion. You can use the `OpenAIPlanner` or AzureOpenAIPlanner. If your using the AzureOpenAIPlanner, ensure that you define the endpoint property.
 
-            * PromptManager: `promptManager` Allows you to register your prompts, load a prompt template into the AI component. All the functions related to the prompt manager are available in the `DefaultPromptManager`.  The prompt manager parses the prompts defined in the `prompt` folder. You can replace or override your own functionality in the prompt manager. 
+            * PromptManager: `promptManager` Allows you to register your prompts and load a prompt template into the AI component. All the functions related to the prompt manager are available in the `DefaultPromptManager`.  The prompt manager parses the prompts defined in the `prompt` folder. You can replace or override your own functionality in the prompt manager. 
 
             * Moderator: The `OpenAIModerator` reviews both user's input and the model output to detect harmful speech, such as hate speech, self-harm, and violence.
 
@@ -424,7 +424,7 @@ items:
             * The `MemoryStorage` class is a memory based storage provider that stores and retrieves plan old JSON objects. It's imported from the Bot Builder SDK.
 
 
-            1. Under **Import required bot service**, add `MemoryStorage`.
+        1. Under **Import required bot service**, add `MemoryStorage`.
 
         1.  Add the following code to define actions:
 
@@ -451,9 +451,9 @@ items:
             });
             ```
 
-           The `ConversationHistory` class is a utility class that makes it easier to manage the conversation history. When the user sends '/history' to the bot in Teams, the server sends a log of the conversation history back to the user. The history is tracked and populated in the state.temp.history property where state is the `ApplicationTurnState`.
+           The `ConversationHistory` class is a utility class that makes it easier to manage the conversation history. When the user sends `/history`` to the bot in Teams, the server sends a log of the conversation history back to the user. The history is tracked and populated in the state.temp.history property where state is the `ApplicationTurnState`.
 
-        1. By default Bot builder uses `bot` as a variable, since we're constructing an app for the `new Application`. We need to replace `await bot.run(context)` with `await app.run(context)`.
+        1. By default, Bot builder uses `bot` as a variable, as we're constructing an app for the `new Application`. We must replace `await bot.run(context)` with `await app.run(context)`.
    
     1. In the root folder, create a new folder **prompts/chat**.
 
@@ -461,7 +461,7 @@ items:
        * config.json
        * skprompt.txt
 
-    1. Go to the `config.json` file, and add the following code to create the prompt model settings:
+    1. Go to the `config.json` file and add the following code to create the prompt model settings:
     
         ```javascript
         {
@@ -482,9 +482,9 @@ items:
         }
         ```
 
-       The bot relies on Open AI or AzureOpenAI for its natural language modelling, the `config.json` file handles the language processing for the bot. The `config.json` is initiated by the `DefaultPromptManager` from the `index.ts` file. When a prompt is initiated, the prompt manager searches for  the prompt config file (chat/config.json) and passed the prompt settings into Open AI or Azure Open AI.
+       The bot relies on OpenAI or AzureOpenAI for its natural language modelling, the `config.json` file handles the language processing for the bot. The `config.json` is initiated by the `DefaultPromptManager` from the `index.ts` file. When a prompt is initiated, the prompt manager searches for  the prompt config file (chat/config.json) and passed the prompt settings into OpenAI or AzureOpenAI.
 
-    1. Go to the 'prompt.txt' file and add the following instructions for GPT on how the bot should conduct itself and facilitate conversation:
+    1. Go to the `prompt.txt` file. Add the following instructions for OpenAI endpoint to conduct and facilitate conversation:
 
         ```text
         The following is a conversation with an AI assistant, its name is Teams Chef. 
@@ -495,7 +495,7 @@ items:
 
         The `prompt.txt` file contains text prompts with which the users interact with OpenAI endpoint. OpenAI endpoint attempts to use these prompts to produce the next series of words that are most likely to follow from the previous text.
 
-        To store and leverage session history, add the following in the 'prompt.txt' file:
+        To store and leverage session history, add the following in the `prompt.txt` file:
 
         ```
         {{$history}}
@@ -507,7 +507,7 @@ items:
 
         The prompt template is populated using the {{$history}}} variable. The `$history` variable remembers the list of entries provided by the user and the model. 
 
-        For example, let's say the user's name is "Dave". The bot might carry on the following conversation:
+        For example, let's say the user's name is **Dave**. The bot might carry on the following conversation:
 
         ```
         AI: Hi there! My name is Teams Chef. It's nice to meet you. What's your name?
@@ -651,7 +651,7 @@ items:
 
     What's the difference between Provision and Deploy?
 
-    The Provision step creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. The Deploy step copies the code for your app to the resources you created during the provision step. It's common to deploy multiple times without provisioning new resources. Since the provision step can take some time to complete, it's separate from the deployment step.
+    The Provision step creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, and so on) is copied to the resources. The Deploy step copies the code for your app to the resources you created during the provision step. It's common to deploy multiple times without provisioning new resources. Since the provision step can take some time to complete, it's separate from the deployment step.
     
     # [Visual Studio Code](#tab/viscode2)
    
@@ -663,9 +663,9 @@ items:
 
     1. Select a subscription to use for the Azure resources. Your app is hosted using Azure resources.
     
-    :::image type="content" source="assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing the subscription to use for the Azure resources.":::
+        :::image type="content" source="assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing the subscription to use for the Azure resources.":::
 
-       A dialog warns you that costs may be incurred when running resources in Azure.
+        A dialog warns you that costs may be incurred when running resources in Azure.
 
     1. Select **Provision**.
 

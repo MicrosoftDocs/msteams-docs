@@ -460,6 +460,20 @@
       displayName: codec 
   - name: Teams bot API changes to fetch team or chat members
     href: resources/team-chat-member-api-changes.md
+  - name: Teams AI library
+    items:
+      - name: Overview
+        href: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
+      - name: Get started
+        href: bots/how-to/Teams conversational AI/how-conversation-ai-get-started.md
+      - name: Quick start guide
+        href: bots/how-to/Teams conversational AI/conversation-ai-quick-start.md
+      - name: Build your first Teams AI app
+        href: sbs-botbuilder-conversation-AI.yml
+      - name: Core capabilities
+        href: bots/how-to/Teams conversational AI/how-conversation-ai-core-capabilities.md
+      - name: Teams AI library FAQs
+        href: bots/how-to/Teams conversational AI/coversational-ai-faq.md
 - name: Build message extensions
   items:
   - name: Overview
@@ -776,18 +790,6 @@
     - name: Debug your calling and meeting bot locally
       href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
       displayName: signaling
-    - name: Teams AI library
-      items:
-      - name: Overview
-        href: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
-      - name: Core capabilities
-        href: bots/how-to/Teams conversational AI/how-conversation-ai-get-started.md
-      - name: Quick start guide
-        href: bots/how-to/Teams conversational AI/conversation-ai-quick-start.md
-      - name: Build your first app using Teams AI library
-        href: sbs-botbuilder-conversation-AI.yml
-      - name: Teams AI library FAQs
-        href: bots/how-to/Teams conversational AI/coversational-ai-faq.md
   - name: Microsoft Graph
     items:
     - name: Test resource-specific consent permissions
