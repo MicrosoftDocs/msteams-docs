@@ -67,11 +67,11 @@ import path from "path";
 
 You can take your existing or a new bot framework app and add AI capabilities.
 
-**Planner**: Open AI planner is the main component that calls the LLM Open AI or Azure Open AI.
+**Planner**: OpenAI planner is the main component that calls the LLM OpenAI or Azure OpenAI. The OpenAI API is powered by a diverse set of models with different capabilities. You can also make limited customizations to our original base models for your specific use case.
 
 **Prompt manager**: The prompt manager manages prompt creation. It calls functions and injects  from your code into the prompt. It can copy conversation state user state into the prompt for you automatically.
 
-**Moderator**: A moderator adds safety moderation to the input and output. It allows you to identify the user input, flag prompt injection techniques, review the output from the not, and run it through a business logic for filtering to ensure that the bot complies with OpenAI's usage policies. You can either moderate the input or the output, or both. Open AI moderator is the default moderator.
+**Moderator**: A moderator adds safety moderation to the input and output. It allows you to identify the user input, flag prompt injection techniques, review the output from the not, and run it through a business logic for filtering to ensure that the bot complies with OpenAI's usage policies. You can either moderate the input or the output, or both. OpenAI moderator is the default moderator.
 
 ```javascript
 // Create AI components
@@ -86,6 +86,8 @@ const moderator = new OpenAIModerator({
 });
 // You can also modify this to out the `chatGPT` prompt.
 const promptManager = new DefaultPromptManager(path.join(__dirname, '../src/prompts/chat'));
+
+The `defaultModel` type `text-davinci-003` can perform any language task with better quality, longer output, and consistent instruction.
 
 ```
 
@@ -118,7 +120,13 @@ The `MemoryStorage()` function stores all the state for your bot. The `Applicati
 
 ## Prompt
 
-Prompts are pieces of text that can be used to create conversational experiences. They're used to start conversations, ask questions, and generate responses. Prompts can be used to create natural language experiences for chatbots, virtual assistants, and other conversational user interfaces. The use of prompts can help reduce the complexity of creating conversational experiences and make them more engaging for the user.
+Prompts are pieces of text that can be used to create conversational experiences. They're used to start conversations, ask questions, and generate responses. The use of prompts can help reduce the complexity of creating conversational experiences and make them more engaging for the user.
+
+The following are a few guidelines to create prompts:
+
+* Provide instructions, examples, or a both.
+* Provide quality data. Ensure that there are enough examples. Be sure to proofread your examples — the model is usually smart enough to see through basic spelling mistakes and give you a response, but it also might assume this is intentional and it can affect the response.
+* Check your prompt settings. The temperature and top_p settings control how deterministic the model is in generating a response.  Higher values like 0.8 makes the output random, while lower values like 0.2 makes the output focused and deterministic.
 
 Create a folder called prompts, and define your prompts in the folder. When the user interacts with the bot by entering a text prompt, the bot responds with a text completion.
 
@@ -160,7 +168,7 @@ The following table includes the query parameters:
 
 ### Prompt actions
 
-Plans let the model perform actions or say things to the user. You can create a schema of the plan and add a list of actions that you support. It can perform an action and pass arguments. The Open AI endpoint can figure out what actions it wants to use and then extract all the entities and pass those as arguments to the action call.
+Plans let the model perform actions or say things to the user. You can create a schema of the plan and add a list of actions that you support. It can perform an action and pass arguments. The OpenAI endpoint can figure out what actions it wants to use and then extract all the entities and pass those as arguments to the action call.
 
 ```text
     The following is a conversation with an AI assistant. 
@@ -175,7 +183,9 @@ Plans let the model perform actions or say things to the user. You can create a 
 
 ### Prompt Template
 
-You can add functions to call a callback and return any kind of data you want.
+Prompt template is a simple and powerful way to define and compose AI functions using plain text. You can use it to create natural language prompts, generate responses, extract information, invoke other prompts or perform any other task that can be expressed with text.
+
+The language supports three basic features that allow you to include variables, call external functions, and pass parameters to functions. You don't need to write any code or import any external libraries, just use the curly braces {{...}} to embed expressions in your prompts. Teams will parse your template and execute the logic behind it. This way, you can easily integrate AI into your apps with minimal effort and maximum flexibility.
 
 * {{function}}:  Calls a registered function and inserts its value.​
 
@@ -260,7 +270,7 @@ Teams AI library supports the following capabilities:
 
 * Adaptive Cards capabilities.
 
-In the following section, we'll explain each capability and their path to migration. We'll using the samples from the AI library to explain the method of migration.  
+In the following section, we'll explain each capability and their path to migration. We'll using the samples from the [AI library](https://github.com/microsoft/teams-ai/tree/main) to explain the method of migration.  
 
 ### Sending or receiving Message
 
@@ -300,8 +310,6 @@ const app =
   };
 
 ```
-
-The rest of the code, including server.post and await app.run(context) stays the same.
 
 ## Message Extensions
 
@@ -540,11 +548,11 @@ app.ai.action(AI.OffTopicActionName, async (context, state) => {
 
 ## Intents to actions
 
-The most compelling example to prove the efficacy of the clean separation of intents to actions provided by our SDK is to analyze the source code for ListBot, which highlights how to construct a bot for list management, including the ability to add and remove items.
+A simple interface for actions and predictions allows bots to react when they have high confidence for taking action. Ambient presence lets bots learn intent, use prompts based on business logic, and generate responses.
 
-Thanks to our SDK, the prompt need only outline the actions supported by the bot, and supply a few-shot examples of how to employ those actions. We also use conversation-history to enable a more natural dialogue between the user and bot, such as "add cereal to groceries list", followed by "also add coffee", which should indicate that coffee is to be added to the groceries list.
+Thanks to our AI library, the prompt need only outline the actions supported by the bot, and supply a few-shot examples of how to employ those actions. We also use conversation-history to enable a more natural dialogue between the user and bot, such as *add cereal to groceries list*, followed by *also add coffee*, which should indicate that coffee is to be added to the groceries list.
 
-All entities are required parameters to actions
+All entities are required parameters to actions.
 
 Current list names:
 
@@ -566,7 +574,7 @@ Human: {{activity.text}}
 
 ## AI
 
-The bot logic is simplified to merely providing handlers for actions such as addItem, removeItem, findItem, and so on. This clear delineation between actions and the prompts that instruct the AI on how to execute them is an incredibly potent tool.
+The bot logic is simplified to provide handlers for actions such as addItem, removeItem, findItem, and so on. This clear delineation between actions and the prompts that instruct the AI on how to execute them is an incredibly potent tool.
 
 ```csharp
 app.ai.action('addItem', async (context, state, data: EntityData) => {
