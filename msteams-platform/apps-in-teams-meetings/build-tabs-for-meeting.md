@@ -89,7 +89,7 @@ You can create a deep link to your tab app that can open in the meeting side pan
 
    :::image type="content" source="../assets/images/pre-post-meeting.gif" alt-text="Screenshot shows a pre or post-meeting tab when deep link is selected.":::
 
-   This pre or post-meeting tab behaviour isn't supported in channel meetings.
+   Pre or post-meeting tab behavior isn't supported in channel meetings.
 
 ---
 
