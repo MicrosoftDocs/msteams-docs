@@ -320,6 +320,12 @@ Explore updates from the previous GA releases listed here.
 
 Discover Microsoft Teams platform features that are in developer preview. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
+## Microsoft Build 2023 :::image type="icon" source="assets/images/bullhorn.png" border="false"
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+|18/05/2023 |  Bots can mention tags in Adaptive Cards. | Build Bots > Bot conversations > Channel and group chat conversations with a bot > [Tag mention](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention)|
+
 ## Developer preview
 
 :::row:::
@@ -331,12 +337,6 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 :::column span="2":::
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
-
-## Microsoft Build 2023 :::image type="icon" source="assets/images/bullhorn.png" border="false"
-
-| **Date** | **Update** | **Find here** |
-| -------- | --------- | ----------------|
-|18/05/2023 |  Bots can mention tags in Adaptive Cards. | Build Bots > Bot conversations > Channel and group chat conversations with a bot > [Tag mention](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention)|
 
 **2023 January**
 
