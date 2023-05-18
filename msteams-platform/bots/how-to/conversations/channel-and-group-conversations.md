@@ -168,12 +168,12 @@ def get_mentions(activity: Activity) -> List[Mention]:
 
 There are two types of mentions:
 
-1. [User mention](#user-mention)
-1. [Tag mention](#tag-mention)
+* [User mention](#user-mention)
+* [Tag mention](#tag-mention)
 
 #### User mention
 
-Your bot can mention other users in messages posted into channels.
+Your bot can mention other users in messages posted in channels.
 
 The `Mention` object has two properties that you must set using the following:
 
@@ -301,12 +301,12 @@ Now you can send an introduction message when your bot is first installed or add
 
 #### Tag mention
 
-Your bot can mention tags in text messages and Adaptive Cards posted into channels. When the bot @mentions the tag in a channel, the tag is highlighted and the people associated with the tag get notified. When a user hovers over the tag, a pop-up appears with the tag details.
+Your bot can mention tags in text messages and Adaptive Cards posted in channels. When the bot @mentions the tag in a channel, the tag is highlighted and the people associated with the tag get notified. When a user hovers over the tag, a pop-up appears with the tag details.
 
 > [!NOTE]
 >
-> * Tag mentions are supported in Teams desktop and web clients.
-> * Tag mentions are supported in GCC and GCC-H tenants only.
+> * Tag mentions are supported in Teams desktop and web clients. However, it's not supported in Teams mobile client.
+> * Tag mentions are supported in Government Community Cloud (GCC) and GCC-H tenants only.
 
 ##### Mention tags in a text message
 
@@ -330,7 +330,7 @@ Example:
 
 ##### Mention tags in an Adaptive Card
 
-In the `mentioned` object, add the property `"type": "tag"` in the Adaptive Card schema.  If the property `"type": "tag"` isn't added, the bot treats the mention as a user mention.
+In the Adaptive Card schema,  under the `mentioned` object, add the `"type": "tag"` property.  If the  `"type": "tag"` property isn't added, the bot treats the mention as a user mention.
 
 You can get the list of the tags available in the channel using the [List teamworkTags](/graph/api/teamworktag-list?view=graph-rest-1.0&tabs=http&preserve-view=true) API.
 
@@ -365,7 +365,7 @@ Example:
 
 Any request can be evaluated against multiple limits, depending on the scope, the window type (short and long), number of tags per message, and other factors. The first limit to be reached triggers throttling behavior.
 
-Ensure that you don't exceed the throttling limits to avoid heavy traffic to the notification service and  the IC3 service. For example, A bot can send only two messages with tags mention in a five-second window and each message can have only up to 10 tags.
+Ensure that you don't exceed the throttling limits to avoid heavy traffic to the notification service and  the IC3 service. For example, a bot can send only two messages with tags mention in a five-second window and each message can have only up to 10 tags.
 
 The following table lists the throttling limits for tag mentions in a bot:
 
