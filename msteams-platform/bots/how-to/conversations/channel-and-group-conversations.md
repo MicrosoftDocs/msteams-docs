@@ -166,6 +166,13 @@ def get_mentions(activity: Activity) -> List[Mention]:
 
 ### Add mentions to your messages
 
+There are two types of mentions:
+
+1. [User mention](#user-mention)
+1. [Tag mention](#tag-mention)
+
+#### User mention
+
 Your bot can mention other users in messages posted into channels.
 
 The `Mention` object has two properties that you must set using the following:
@@ -178,6 +185,7 @@ The Bot Framework SDK provides helper methods and objects to create mentions.
 The following code shows an example of adding mentions to your messages:
 
 # [C#](#tab/dotnet)
+
 * [SDK reference](/dotnet/api/microsoft.bot.schema.mention?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L300)
 
@@ -269,6 +277,7 @@ The `text` field in the object in the `entities` array must match a portion of t
 ```
 
 # [Python](#tab/python)
+
 * [SDK reference](/python/api/botbuilder-schema/botbuilder.schema.mention?view=botbuilder-py-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L94)
 
@@ -289,6 +298,90 @@ async def _mention_activity(self, turn_context: TurnContext):
 * * *
 
 Now you can send an introduction message when your bot is first installed or added to a group or team.
+
+#### Tag mention
+
+Your bot can mention tags in text messages and Adaptive Cards posted into channels. When the bot @mentions the tag in a channel, the tag is highlighted and the people associated with the tag get notified. When a user hovers over the tag, a pop-up appears with the tag details.
+
+> [!NOTE]
+>
+> * Tag mentions are supported in Teams desktop and web clients.
+> * Tag mentions are supported in GCC and GCC-H tenants only.
+
+##### Mention tags in a text message
+
+In the `mention.properties` object, add the property `'type': 'tag'`. If the property `'type': 'tag'` isn't added, the bot treats the mention as a user mention.
+
+Example:
+
+```javascript
+​var mention = new ChannelAccount(tagId, "Test Tag"); 
+​mention.Properties = JObject.Parse("{'type': 'tag'}"); 
+​var mentionObj = new Mention 
+​{ 
+​    Mentioned = mention, 
+​    Text = "<at>Test Tag</at>" 
+​}; 
+
+​var replyActivity = MessageFactory.Text("Hello " + mentionObj.Text); 
+​replyActivity.Entities = new List<Microsoft.Bot.Schema.Entity> { mentionObj }; 
+​await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+```
+
+##### Mention tags in an Adaptive Card
+
+In the `mentioned` object, add the property `"type": "tag"` in the Adaptive Card schema.  If the property `"type": "tag"` isn't added, the bot treats the mention as a user mention.
+
+You can get the list of the tags available in the channel using the [List teamworkTags](/graph/api/teamworktag-list?view=graph-rest-1.0&tabs=http&preserve-view=true) API.
+
+Example:
+
+```json
+​{ 
+​    "type": "mention", 
+    ​"text": "<at>my tag</at>", 
+​    "mentioned": { 
+            ​"id": "base64 encoded id" ,// tag graph 64 base ID
+​            "name": "my tag", 
+            ​"type": "tag" 
+​    } 
+​} 
+```
+
+###### Query Parameters
+
+|Name |Description |
+|---------|----------------|
+|`type`| The type of mention. The supported type is `tag`. The tag format is base 64 encoded ID​. For example, `NTI4ZGJlM2YtMTVlMC00ZTM3LTg0YTEtMDBjYzMwNTg0N2RkIyNlYzgwMTVmMC1iMmYxLTQxZTItODA0OC1hMGE2OTcwNmM5ZGIjI3RxRE04YndyVQ==​`.
+
+###### Error code
+
+| Status code | Error code | Message values | Retry request | Developer action|
+|----------------|-----------------|-----------------|----------------|----------------|
+| 400 | **Code**: `Bad Request` | ​Mentioned tag with ID {id string} doesn't exist in current team<br/>​Tag can only be mentioned in channel<br/>Invalid mentioned tag because no tag exists in the team| No | Reevaluate request payload for errors. Check returned error message for details. |
+| 502 | **Code**: `Bad Gateway` | Invalid team group ID<br/> ​Malformed tenant ID for the tag<br/> ​Mention ID can't be resolved | No |Retry manually.|
+
+##### Throttling limits
+
+Any request can be evaluated against multiple limits, depending on the scope, the window type (short and long), number of tags per message, and other factors. The first limit to be reached triggers throttling behavior.
+
+Ensure that you don't exceed the throttling limits to avoid heavy traffic to the notification service and  the IC3 service. For example, A bot can send only two messages with tags mention in a five-second window and each message can have only up to 10 tags.
+
+The following table lists the throttling limits for tag mentions in a bot:
+
+|​Scope   |​Window Type  |Number of tags per message  |​Time windows (sec)  |​Maximum number of messages per time window  |
+|------------------------|------------|-----------|----------|----------|
+|​Per bot per thread     |   ​Short     |    10     |     5    |     2    |
+| &nbsp;                |   ​Long      |    10     |     60   |     5    |
+|​All bots per thread    |   ​Short     |    10     |     5    |     4    |
+| &nbsp;                |   Long      |    10     |     60   |     5    |
+
+##### Limitations
+
+* Tag mentions aren't supported in shared and private channels.
+* Tag mentions are supported only in text messages and Adaptive Cards.
+* Tag mentions aren't supported in connectors.
+* Tag mentions don't support the invoke function in a bot.
 
 ## Send a message on installation
 
