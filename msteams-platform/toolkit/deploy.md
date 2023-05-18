@@ -35,7 +35,7 @@ Use this account to access the Microsoft Azure portal and to provision new cloud
 1. Open Visual Studio Code.
 1. Open the project folder in which you created app.
 1. Select the Teams Toolkit icon in the sidebar.
-1. Select Sign in to Azure.
+1. Select **Sign in to Azure**.
 
     > [!TIP]
     > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you're using in other extensions.
@@ -53,7 +53,7 @@ Congratulations, you've created a Teams app! Now let's go ahead and learn how to
 
 ## Deploy to Azure
 
-1. Select **Deploy** from the **LIFECYCLE** pane.
+1. Select **Deploy** from the **LIFECYCLE** section in the left pane.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/deploy_to_the_cloud_button.png" alt-text="Screenshot showing the selection of Deploy.":::
 

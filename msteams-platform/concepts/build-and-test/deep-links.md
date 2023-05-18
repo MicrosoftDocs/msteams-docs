@@ -58,7 +58,3 @@ You can create a [deep link to perform a specific task](~/concepts/build-and-tes
 * Table with just a row isn't really needed. Provide the content without tabulating it.
 --->
 
-## See also
-
-* [Integrate web apps](~/samples/integrate-web-apps-overview.md)
-* [Moodle LMS](~/resources/moodleinstructions.md)

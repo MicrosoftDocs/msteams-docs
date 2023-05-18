@@ -20,7 +20,7 @@ The debugging process workflow is as follows:
 
 3. Visual Studio Code then launches the debuggers specified in the compound configurations, such as **Attach to Bot**, **Attach to Backend**, **Attach to Frontend**, and **Launch Bot**.
 
-4. The browser debugger, Microsoft Edge or Google Chrome, launches a new browser instance and opens a web page to load Teams client.
+4. The browser debugger, Microsoft Edge or Google Chrome, launches a new browser instance and opens a webpage to load Teams client.
 
 ## Validate prerequisites
 
@@ -56,9 +56,9 @@ You can view the project folders and files under **Explorer** in Visual Studio C
 
 | Folder name| Contents| Debug configuration type |
 | --- | --- | --- |
-|  `teamsapp.local.yml` | The main Teams Toolkit project file for debugging | This file defines the life cycles and actions required for debugging. |
-|  `env/.env.local` | Environment variables file for Teams Toolkit project | The values of each environment variable are consumed or generated during debugging. |
-| `.localConfigs` | Environment variables file for the app code | The values of each environment variable are generated during debugging. |
+|  `teamsapp.local.yml` | The main Teams Toolkit project file for debugging. | This file defines the life cycles and actions required for debugging. |
+|  `env/.env.local` | Environment variables file for Teams Toolkit project. | The values of each environment variable are consumed or generated during debugging. |
+| `.localConfigs` | Environment variables file for the app code. | The values of each environment variable are generated during debugging. |
 
 For more information on the project folder structure, see [Teams Toolkit project](https://aka.ms/teamsfx-v5.0-guide#teams-toolkit-project).
 

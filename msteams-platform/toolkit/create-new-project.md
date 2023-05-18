@@ -13,7 +13,7 @@ In this section, you can learn how to create a new Teams project using Microsoft
 
 ## Create a new Teams project using Visual Studio Code
 
-You can build a new Teams project by selecting **Create a New App** in Teams Toolkit. You can start from built-in Teams app templates or start from official Teams app samples in Teams Toolkit. What's more, Teams Toolkit V5.0.0 supports to start with Outlook Add-in templates to build your own Outlook Add-ins.
+You can build a new Teams project by selecting **Create a New App** in Teams Toolkit. You can start from built-in Teams app templates or start from official Teams app samples in Teams Toolkit. What's more, Teams Toolkit v5 supports to start with Outlook Add-in templates to build your own Outlook Add-ins.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the App Capability options.":::
 
@@ -44,10 +44,6 @@ To create a basic Teams app:
 1. Select **Basic Tab** as app capability.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-basic-tab.png" alt-text="Screenshot shows to select App Feature using a Tab as Basic Tab.":::
-
-1. Select **Basic Tab**
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/basic-tab-app.png" alt-text="Screenshot shows the basic tab selected.":::
 
 1. Select **JavaScript** as the programming language.
 
