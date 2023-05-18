@@ -116,4 +116,4 @@ The bot framework using Teams AI library requires the following:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Get started with Teams AI library](how-conversation-ai-get-started.md)
+> [Teams AI library capabilities](how-conversation-ai-core-capabilities.md)

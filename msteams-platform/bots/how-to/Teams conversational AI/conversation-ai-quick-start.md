@@ -16,18 +16,18 @@ Get started with Teams AI library using the ChefBot sample. It's designed to qui
 
 To get started, ensure that you have the following tools:
 
-* Microsoft Teams.
+* Microsoft Teams
 * [Teams Toolkit](../../../toolkit/install-Teams-Toolkit.md)
 * [NodeJS](https://nodejs.org/en/)
-* [OpenAI](https://openai.com/api/) key.
-* Global Administrator access to a [Microsoft 365 tenant](https://developer.microsoft.com/microsoft-365/dev-program?ocid=MSlearn&WT.mc_id=m365-16105-cxa) and [Enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+* [OpenAI](https://openai.com/api/) key
+* Global Administrator access to a [Microsoft 365 tenant](https://developer.microsoft.com/microsoft-365/dev-program?ocid=MSlearn&WT.mc_id=m365-16105-cxa) and [Enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading)
 
 > [!NOTE]
 > If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio code to build a bot, see [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml).
 
 ## Build and run the sample app
 
-1. Go to the [sample](https://github.com/microsoft/botbuilder-m365/tree/main/js/samples/04.ai.a.naturalLanguage.santaBot).
+1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples).
 
 1. Clone the repository to test the sample app.
 
@@ -73,14 +73,10 @@ To get started, ensure that you have the following tools:
 
    The bot uses the text-davinci-003 model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
+> [!NOTE]
+> If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio code to [build a bot](../../../sbs-gs-bot.yml).
+
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Build your first bot using Teams AI library](../../../sbs-botbuilder-conversation-AI.yml)
-
-> [!NOTE]
-> If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio code to build a bot.
-
-## See also
-
-[Teams Teams AI library](teams-conversation-ai-overview.md)

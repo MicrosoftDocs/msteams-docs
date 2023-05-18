@@ -7,8 +7,8 @@ metadata:
   level: Beginner
   ms.date: 10/21/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: bots/how-to/Teams conversational AI/how-conversation-ai-core-capabilities.md
-  nextTutorialTitle: Teams AI library capabilities
+  nextTutorialHref: bots/how-to/Teams conversational AI/coversational-ai-faq.md
+  nextTutorialTitle: Teams AI FAQs
   ms.custom: mvc
   ms.localizationpriority: high
 items:
@@ -339,7 +339,7 @@ items:
     1. Run the following command in the terminal to add the latest version of the Teams AI library to your application using npm:
 
        ```bash
-       npm install @microsoft/botbuilder-m365
+       npm install @microsoft/teams-ai
 
        ```
 
@@ -371,7 +371,7 @@ items:
         1. Add the following code to import Teams AI library:
 
             ```typescript
-            import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnState, OpenAIModerator, OpenAIPlanner, AI } from '@microsoft/botbuilder-m365';
+            import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnState, OpenAIModerator, OpenAIPlanner, AI } from '@microsoft/teams-ai';
             import path from "path";
             ```
 

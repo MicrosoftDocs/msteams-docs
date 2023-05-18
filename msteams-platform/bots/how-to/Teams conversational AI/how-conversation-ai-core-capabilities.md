@@ -8,25 +8,25 @@ ms.author: surbhigupta
 
 # Teams AI library capabilities
 
-Teams AI library supports JavaScript and is designed to simplify the process of building bots that can interact with Microsoft Teams, and facilitates the migration of existing bots. The AI library supports the migration of messaging capabilities, Message Extension (ME) capabilities and Adaptive Cards capabilities to the new format. It's also possible to upgrade existing Teams apps with these features.
+Teams AI library supports JavaScript and is designed to simplify the process of building bots that can interact with Microsoft Teams, and facilitates the migration of existing bots. The AI library supports the migration of messaging capabilities, Message extension (ME) capabilities, and Adaptive Cards capabilities to the new format. It's also possible to upgrade existing Teams apps with these features.
 
-Developers creating bots for Microsoft Teams were using the BotBuilder SDK directly. Teams AI library is designed to facilitate the construction of bots that can interact with Microsoft Teams. While one of the key features of this SDK is the AI support that customers can utilize, the initial objectives of the team may simply be to upgrade their current bot without AI. Once upgraded, the bot can connect to AI or LLM available in the SDK.
+Earlier, you were using BotBuilder SDK directly to create bots for Microsoft Teams. Teams AI library is designed to facilitate the construction of bots that can interact with Microsoft Teams. While one of the key features of Teams AI library is the AI support that customers can utilize, the initial objective might be to upgrade their current bot without AI. After you upgrade, the bot can connect to AI or large language model (LLM) available in the AI library.
 
 Teams AI library supports the following capabilities:
 
-* Sending or Receiving Message.  
+* Sending or receiving Message
 
-* Message Extension (ME) capabilities.  
+* Message extension (ME) capabilities
 
-* Adaptive Cards capabilities.
+* Adaptive Cards capabilities
 
- You need to use the AI library to scaffold bot and adaptive card handlers to the source file.
+ You need to use the AI library to scaffold bot and Adaptive Card handlers to the source file.
 
-In the following section, we'll explain each capability and their path to migration. We'll using the samples from the [AI library](https://github.com/microsoft/teams-ai/tree/main) to explain the method of migration.  
+In the following section, we'll explain each capability and their path to migration. We'll be using the samples from the [AI library](https://github.com/microsoft/teams-ai/tree/main) to explain the migration method:  
 
 ### Sending or receiving Message
 
-Example: EchoBot
+Example: [EchoBot](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.messaging.a.echoBot)
 
 Replace `BotActivityHandler` and `ApplicationTurnState` with this `Application` and `DefaultTurnState`. `DefaultTurnState` is constructed to include `ConversationState`.
 
@@ -63,11 +63,11 @@ const app =
 
 ```
 
-## Message Extensions
+## Message extensions
 
-The original ME sample will eventually be updated to M365messageExtensions.
+Example: [Message extension search command](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand)
 
-In the previous Teams SDK format, developers needed to set up the Message Extensions query handler like:
+In the previous Teams SDK format, you needed to set up the Message extensions query handler like:
 
 Now, the app class has messageExtensions features to make creating the handler(s) simpler:
 
@@ -129,85 +129,40 @@ app.messageExtensions.selectItem(async (context, state, item) => {
 
 The `app.AdaptiveCards` handler is the handler for producing Adaptive Cards.
 
+[Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.adaptiveCards.a.typeAheadBot)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.adaptiveCards.a.typeAheadBot/src/index.ts#L92)
+
 ```javascript
-// Listener for messages from the user that trigger an adaptive card
 
-app.message(/searchQuery/i, async (context, state) => {
+// Listen for messages that trigger returning an adaptive card
+app.message(/dynamic/i, async (context, _state) => {
+    const attachment = createDynamicSearchCard();
+    await context.sendActivity({ attachments: [attachment] });
+});
 
-  const attachment = createAdaptiveCard();
-
-  await context.sendActivity({ attachments: [attachment] });
-
+app.message(/static/i, async (context, _state) => {
+    const attachment = createStaticSearchCard();
+    await context.sendActivity({ attachments: [attachment] });
 });
 
 // Listener for action.submit on cards from the user
 
 interface SubmitData {
-
-  choiceSelect: string;
-
+    choiceSelect?: string;
 }
 
-// Listen for submit actions from the user
+// Listen for submit buttons
+app.adaptiveCards.actionSubmit('DynamicSubmit', async (context, _state, data: SubmitData) => {
+    await context.sendActivity(`Dynamically selected option is: ${data.choiceSelect}`);
+});
 
-app.adaptiveCards.actionSubmit("ChoiceSubmit", async (context, state, data: SubmitData) => {
-
-  await context.sendActivity(`Submitted option is: ${data.choiceSelect}`);
-
+app.adaptiveCards.actionSubmit('StaticSubmit', async (context, _state, data: SubmitData) => {
+    await context.sendActivity(`Statically selected option is: ${data.choiceSelect}`);
 });
 ```
 
 ## Core capabilities
-
-### Message-extension query
-
-The Teams AI library offers bot developers a more intuitive approach to create handlers for various message-extension query commands when compared to previous iterations of Teams Bot Framework SDK. The new SDK works alongside the existing Teams Bot Framework SDK.
-
-The following is an example of how a bot developer can structure their code to handle a message-extension query for the `searchCmd` command.
-
-```csharp
-// Listen for search actions
-app.messageExtensions.query('searchCmd', async (context, state, query) => {
-    const searchQuery = query.parameters.queryText ?? '';
-    const count = query.count ?? 10;
-    const response = await axios.get(
-        `http://registry.npmjs.com/-/v1/search?${new URLSearchParams({
-            size: count.toString(),
-            text: searchQuery
-        }).toString()}`
-    );
-
-
-    // Format search results
-    const results: MessagingExtensionAttachment[] = [];
-    response?.data?.objects?.forEach((obj: any) => results.push(createNpmSearchResultCard(obj.package)));
-
-
-    // Return results as a list
-    return {
-        attachmentLayout: 'list',
-        attachments: results,
-        type: 'result'
-    };
-});
-
-And here’s how they can return a card when a message-extension result is selected.
-
-// Listen for item tap
-app.messageExtensions.selectItem(async (context, state, item) => {
-    // Generate detailed result
-    const card = createNpmPackageCard(item);
-
-
-    // Return results
-    return {
-        attachmentLayout: 'list',
-        attachments: [card],
-        type: 'result'
-    };
-});
-
-```
 
 ## Bot logic for handling an action
 
@@ -215,23 +170,18 @@ app.messageExtensions.selectItem(async (context, state, item) => {
 
 The following example illustrates how the SDK makes it possible to manage the bot logic for handling an action `LightsOn` or `LightsOff` and connect it to the prompt used with GPT:
 
+Example: [Light bot](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.c.actionMapping.lightBot)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.c.actionMapping.lightBot/src/index.ts#L80)
+
 ```csharp
-// Create prediction engine
-const planner = new OpenAIPlanner({
-    configuration: {
-        apiKey: process.env.OPENAI_API_KEY
-    },
-    prompt: path.join(__dirname, '../src/prompt.txt'),
-    promptConfig: {
-        model: 'gpt-3.5-turbo',
-        temperature: 0.7,
-        max_tokens: 2048,
-        top_p: 1,
-        frequency_penalty: 0,
-        presence_penalty: 0.6
-    },
+// Create AI components
+const planner = new OpenAIPlanner<ApplicationTurnState>({
+    apiKey: process.env.OpenAIKey,
+    defaultModel: 'gpt-3.5-turbo',
     logRequests: true
 });
+const promptManager = new DefaultPromptManager<ApplicationTurnState>(path.join(__dirname, '../src/prompts'));
 
 
 // Define storage and application
@@ -298,6 +248,60 @@ app.ai.action(AI.OffTopicActionName, async (context, state) => {
 
 ```
 
+### Message-extension query
+
+The Teams AI library offers you a more intuitive approach to create handlers for various message-extension query commands when compared to previous iterations of Teams Bot Framework SDK. The new SDK works alongside the existing Teams Bot Framework SDK.
+
+The following is an example of how you can structure their code to handle a message-extension query for the `searchCmd` command.
+
+Example: [Message extension search command](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.messageExtensions.a.searchCommand/src/index.ts#L76)
+
+```csharp
+// Listen for search actions
+app.messageExtensions.query('searchCmd', async (context, state, query) => {
+    const searchQuery = query.parameters.queryText ?? '';
+    const count = query.count ?? 10;
+    const response = await axios.get(
+        `http://registry.npmjs.com/-/v1/search?${new URLSearchParams({
+            size: count.toString(),
+            text: searchQuery
+        }).toString()}`
+    );
+
+
+    // Format search results
+    const results: MessagingExtensionAttachment[] = [];
+    response?.data?.objects?.forEach((obj: any) => results.push(createNpmSearchResultCard(obj.package)));
+
+
+    // Return results as a list
+    return {
+        attachmentLayout: 'list',
+        attachments: results,
+        type: 'result'
+    };
+});
+
+And here’s how they can return a card when a message-extension result is selected.
+
+// Listen for item tap
+app.messageExtensions.selectItem(async (context, state, item) => {
+    // Generate detailed result
+    const card = createNpmPackageCard(item);
+
+
+    // Return results
+    return {
+        attachmentLayout: 'list',
+        attachments: [card],
+        type: 'result'
+    };
+});
+
+```
+
 ## Intents to actions
 
 A simple interface for actions and predictions allows bots to react when they have high confidence for taking action. Ambient presence lets bots learn intent, use prompts based on business logic, and generate responses.
@@ -327,6 +331,10 @@ Human: {{activity.text}}
 ## AI
 
 The bot logic is simplified to provide handlers for actions such as addItem, removeItem and , findItem. This clear delineation between actions and the prompts that instruct the AI on how to execute them is an incredibly potent tool.
+
+Example: [List bot](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.d.chainedActions.listBot)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.d.chainedActions.listBot/src/index.ts#L149)
 
 ```csharp
 app.ai.action('addItem', async (context, state, data: EntityData) => {
@@ -367,3 +375,8 @@ app.ai.action('findItem', async (context, state, data: EntityData) => {
     return false;
 });
 ```
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Get started with Teams AI library](how-conversation-ai-get-started.md)

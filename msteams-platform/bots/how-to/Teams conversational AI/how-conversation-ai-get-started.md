@@ -10,16 +10,16 @@ ms.author: surbhigupta
 
 Teams AI library streamlines the process to build intelligent Microsoft Teams applications by using the AI components.  It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
 
-You can easily integrate Teams AI library, prompt management, and safety moderation into your apps and enhance the user experience. It also facilitates the creation of bots that uses an OpenAI API key to provide an AI-driven conversational experience, or the same using Azure Foundry.
-
-This article focuses on how to integrate Teams AI library into your app and its capabilities.
+You can easily integrate Teams AI library, prompt management, and safety moderation into your apps and enhance the user experience. It also facilitates the creation of bots that uses an OpenAI API key or AzureOpenAI to provide an AI-driven conversational experience.
 
 ## Initial setup
 
-Teams AI library is built on top of the BOT framework and uses its fundamentals to offer an extension to the BOT framework capabilities. As part of initial setup, it's important to import the BOT framework functionalities.
+Teams AI library is built on top of the Bot Framework SDK and uses its fundamentals to offer an extension to the Bot Framework SDK capabilities. As part of initial setup, it's important to import the Bot Framework SDK functionalities.
 
 > [!NOTE]
-> The adapter class that handles connectivity with the channels is imported from the [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0#the-bot-adapter&preserve-view=true).
+> The adapter class that handles connectivity with the channels is imported from [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0#the-bot-adapter&preserve-view=true).
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.naturalLanguage.santaBot/src/index.ts#L9)
 
 ```typescript
 import {
@@ -53,13 +53,15 @@ const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
 
 ### Import Teams AI library
 
-Import all the classes from `@microsoft/botbuilder-m365` to build your bot and use the Teams AI library capabilities.
+Import all the classes from `@microsoft/teams-ai` to build your bot and use the Teams AI library capabilities.
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.naturalLanguage.santaBot/src/index.ts#L64)
 
 ```typescript
 ///// Teams AI library /////
 
 // import Teams AI library
-import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnState, OpenAIModerator, OpenAIPlanner, AI } from '@microsoft/botbuilder-m365';
+import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnState, OpenAIModerator, OpenAIPlanner, AI } from `@microsoft/teams-ai`;
 import path from "path";
 ```
 
@@ -67,11 +69,13 @@ import path from "path";
 
 You can take your existing or a new bot framework app and add AI capabilities.
 
-**Planner**: OpenAI planner is the main component that calls the LLM OpenAI or Azure OpenAI. The OpenAI API is powered by a diverse set of models with different capabilities. You can also make limited customizations to our original base models for your specific use case.
+**Planner**: OpenAI planner is the main component that calls the large language model (LLM) OpenAI or AzureOpenAI. The OpenAI API is powered by a diverse set of models with different capabilities. You can also make limited customizations to our original base models for your specific use case.
 
 **Prompt manager**: The prompt manager manages prompt creation. It calls functions and injects  from your code into the prompt. It can copy conversation state user state into the prompt for you automatically.
 
 **Moderator**: A moderator adds safety moderation to the input and output. It allows you to identify the user input, flag prompt injection techniques, review the output from the not, and run it through a business logic for filtering to ensure that the bot complies with OpenAI's usage policies. You can either moderate the input or the output, or both. OpenAI moderator is the default moderator.
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.naturalLanguage.santaBot/src/index.ts#L83)
 
 ```javascript
 // Create AI components
@@ -99,6 +103,8 @@ The application object automatically manages the conversation and user state of 
 
 * **Application**: The application class has all the information and bot logic required for an app. You can register actions or activity handlers for the app in this class.
 
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.naturalLanguage.santaBot/src/index.ts#L97)
+
 ```javascript
 // Define storage and application
 const storage = new MemoryStorage();
@@ -120,19 +126,21 @@ The `MemoryStorage()` function stores all the state for your bot. The `Applicati
 
 ## Prompt
 
-Prompts are pieces of text that can be used to create conversational experiences. They're used to start conversations, ask questions, and generate responses. The use of prompts can help reduce the complexity of creating conversational experiences and make them more engaging for the user.
+Prompts are pieces of text that can be used to create conversational experiences. Prompts are used to start conversations, ask questions, and generate responses. The use of prompts can help reduce the complexity of creating conversational experiences and make them more engaging for the user.
 
 The following are a few guidelines to create prompts:
 
-* Provide instructions, examples, or a both.
-* Provide quality data. Ensure that there are enough examples. Be sure to proofread your examples — the model is usually smart enough to see through basic spelling mistakes and give you a response, but it also might assume this is intentional and it can affect the response.
-* Check your prompt settings. The temperature and top_p settings control how deterministic the model is in generating a response.  Higher values like 0.8 makes the output random, while lower values like 0.2 makes the output focused and deterministic.
+* Provide instructions, examples, or both.
+* Provide quality data. Ensure that there are enough examples and proofread your examples. The model is usually smart enough to see through basic spelling mistakes and give you a response, but it also might assume this is intentional and it can affect the response.
+* Check your prompt settings. The temperature and top_p settings control how deterministic the model is in generating a response.  Higher value such as 0.8 makes the output random, while lower value such as 0.2 makes the output focused and deterministic.
 
-Create a folder called prompts, and define your prompts in the folder. When the user interacts with the bot by entering a text prompt, the bot responds with a text completion.
+Create a folder called prompts and define your prompts in the folder. When the user interacts with the bot by entering a text prompt, the bot responds with a text completion.
 
 * `skprompt.txt`:  Contains the prompts text and supports template variables and functions. Define all your text prompts in the `skprompt.txt` file.
   
-* `config.json`: Contains the prompt model settings. Provide the right configuration to ensure bot responses are aligned with your requirement. Configure `max_tokens`, `temperature`, and other properties to pass into open AI or AzureOpenAI.
+* `config.json`: Contains the prompt model settings. Provide the right configuration to ensure bot responses are aligned with your requirement. Configure `max_tokens`, `temperature`, and other properties to pass into OpenAI or AzureOpenAI.
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.naturalLanguage.santaBot/src/prompts/chat/config.json)
 
    ```json
    {
@@ -161,7 +169,7 @@ The following table includes the query parameters:
 |---------|---------|
 |`max_tokens`     | The maximum number of tokens to generate in the completion. The token count of your prompt plus max_tokens can't exceed the model's context length.        |
 |`temperature`    | What sampling temperature to use, between 0 and 2. Higher values like 0.8 makes the output more random, while lower values like 0.2 makes it more focused and deterministic.        |
-|`top_p`    |An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered.         |
+|`top_p`    |An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. Therefore, 0.1 means only the tokens comprising the top 10% probability mass are considered.         |
 |`presence_penalty`     |  Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.       |
 |`frequency_penalty`     |Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.         |
 |`stop_sequences`     |  Up to four sequences where the API stops generating further tokens. The returned text won't contain the stop sequence. |
@@ -183,9 +191,9 @@ Plans let the model perform actions or say things to the user. You can create a 
 
 ### Prompt Template
 
-Prompt template is a simple and powerful way to define and compose AI functions using plain text. You can use it to create natural language prompts, generate responses, extract information, invoke other prompts or perform any other task that can be expressed with text.
+Prompt template is a simple and powerful way to define and compose AI functions using plain text. You can use it to create natural language prompts, generate responses, extract information, invoke other prompts, or perform any other task that can be expressed with text.
 
-The language supports three basic features that allow you to include variables, call external functions, and pass parameters to functions. You don't need to write any code or import any external libraries, just use the curly braces {{...}} to embed expressions in your prompts. Teams will parse your template and execute the logic behind it. This way, you can easily integrate AI into your apps with minimal effort and maximum flexibility.
+The language supports features that allow you to include variables, call external functions, and pass parameters to functions. You don't need to write any code or import any external libraries, just use the curly braces {{...}} to embed expressions in your prompts. Teams parses your template and execute the logic behind it. This way, you can easily integrate AI into your apps with minimal effort and maximum flexibility.
 
 * {{function}}:  Calls a registered function and inserts its value.​
 
@@ -200,6 +208,8 @@ The language supports three basic features that allow you to include variables, 
 Actions handle events triggered by AI components.
 
 `FlaggedInputAction` and `FlaggedOutputAction` are the built-in action handlers to handle the moderator flags. If the moderator flags an incoming message input, the moderator redirects to the `FlaggedInputAction` handler and the `context.sendActivity` sends a message to the user about the flag.
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.naturalLanguage.santaBot/src/index.ts#L126)
 
 ```javascript
 app.ai.action(AI.FlaggedInputActionName, async (context: TurnContext, state: TurnState, data: TData) => {
@@ -221,7 +231,9 @@ One of the key aspects in action handlers is that you must first register the ac
 
 You must register a handler for each action listed in the prompt and also add a handler to deal with unknown actions.
 
-In the following example of a light bot, we have the `LightsOn`, `LightsOff` and `Pause`  action. Every time an action is called, you return true or false. ​Returning false from a handler prevents the planner from running additional DO or SAY commands. When the bot receives an unknown action, we're telling the bot to terminate the action.
+In the following example of a light bot, we have the `LightsOn`, `LightsOff`, and `Pause`  action. Every time an action is called, you return `true` or `false`. ​Returning `false` from a handler prevents the planner from running additional `DO` or `SAY` commands. When the bot receives an unknown action, we're telling the bot to terminate the action.
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.c.actionMapping.lightBot/src/index.ts#L107)
 
 ```javascript
 // Register action handlers
@@ -253,3 +265,8 @@ app.ai.action(
     }
 );
 ```
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Teams AI library quick start guide](conversation-ai-quick-start.md)
