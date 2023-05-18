@@ -97,6 +97,12 @@ The following code shows an example of an Adaptive Card with media elements:
 * Adaptive Card supports only the media files uploaded in SharePoint or OneDrive.
 * Ensure that the users have access to the media files available in the SharePoint or OneDrive.
 
+## Code samples
+
+| Description|.NET|
+|--------------------------------------------------------|-----|
+|This sample shows how user can send different types of cards using bot which are supported in Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-all-cards/csharp)|
+
 ## See also
 
 * [Adaptive Cards](cards-reference.md#adaptive-card)
