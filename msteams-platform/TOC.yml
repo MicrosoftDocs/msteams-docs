@@ -737,16 +737,21 @@
     displayName: Application, Outlook, and Office as application hosts, extend 
   - name: Prerequisites
     href: m365-apps/prerequisites.md
-  - name: Enable a Teams personal tab for Microsoft 365
-    href: m365-apps/extend-m365-teams-personal-tab.md
-    displayName: Microsoft 365, Office 365
-  - name: Enable a Teams message extension for Outlook
-    href: m365-apps/extend-m365-teams-message-extension.md
-
-    displayName: mail, Microsoft 365, Office 365
-  - name: Decide the app type for your scenario
-    href: m365-apps/me-or-outlook-add-in.md
-    displayName: mail, Microsoft 365, Office 365, OUtlook add-in, message extension
+  - name: Teams tabs in Microsoft 365 and Outlook
+    items:
+    - name: Enable a Teams personal tab for Microsoft 365
+      href: m365-apps/extend-m365-teams-personal-tab.md
+      displayName: Microsoft 365, Office 365
+    - name: TeamsJS capability support across Microsoft 365
+      href: m365-apps/teamsjs-support-m365.md
+  - name: Teams message extensions in Outlook
+    items:
+      - name: Enable a Teams message extension for Outlook
+        href: m365-apps/extend-m365-teams-message-extension.md
+        displayName: mail, Microsoft 365, Office 365
+      - name: Teams message extension vs. Outlook add-in
+        href: m365-apps/me-or-outlook-add-in.md
+        displayName: mail, Microsoft 365, Office 365, Outlook add-in, message extension
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Teams developer documentation FAQs
