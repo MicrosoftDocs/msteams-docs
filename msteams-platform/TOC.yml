@@ -24,8 +24,8 @@
   items:
   - name: Overview
     href: get-started/get-started-overview.md
-    displayName: First Teams app, Python, .NET, Java, Node.js
-  - name: Build your first tab app
+    displayName: First Teams app, Python, .NET, Java, Node.js, get started
+  - name: Build tab app
     href: get-started/build-basic-tab-app.md
   - name: Build notification bot
     href: get-started/build-notification-bot.md

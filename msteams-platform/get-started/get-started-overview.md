@@ -8,7 +8,7 @@ ms.topic: reference
 
 Let's get started with building apps for Microsoft Teams and beyond!
 
-Experience the Teams app with GitHub Codespaces or walk through the steps to build a basic, real-world Teams app. The Get started also introduces you to common tools, fundamental concepts, and more advanced functionalities.
+Use GitHub Codespaces or walk through the step-by-step to build a basic, real-world Teams app. The Get started module introduces you to common tools, fundamental concepts, and more advanced functionalities.
 
 Here's an idea of what you'll learn:
 

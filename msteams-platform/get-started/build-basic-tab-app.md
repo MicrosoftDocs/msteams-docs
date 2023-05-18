@@ -6,7 +6,7 @@ ms.topic: reference
 ---
 # Build your basic tab app
 
-Start Microsoft Teams app development with your first Teams tab app.
+Tabs are Teams-aware webpages embedded in Microsoft Teams. You can add them as part of a channel inside a team, group chat, or personal app for an individual user. Start Microsoft Teams app development with your first Teams tab app.
 
 :::image type="content" border="false" source="../assets/images/get-started/get-started-tab.png" alt-text="Screenshot shows you the conceptual tab app in Teams client.":::
 
