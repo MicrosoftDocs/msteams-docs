@@ -8,11 +8,11 @@ ms.author: surbhigupta
 
 # Get started with Teams AI library
 
-The Teams AI library simplifies the process of creating and powering bots with AI capabilities. It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
+Teams AI library streamlines the process to build intelligent Microsoft Teams applications by using the AI components.  It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
 
-Teams AI library streamlines the process to build intelligent Microsoft Teams applications by using the AI components provided by the AI library. You can easily integrate Teams AI library, prompt management, and safety moderation into your apps and enhancing the user experience and improve communication. It also facilitates the creation of bots that uses an OpenAI API key to provide an AI-driven conversational experience, or the same using Azure Foundry.
+You can easily integrate Teams AI library, prompt management, and safety moderation into your apps and enhance the user experience. It also facilitates the creation of bots that uses an OpenAI API key to provide an AI-driven conversational experience, or the same using Azure Foundry.
 
-This article focuses on how to integrate Teams AI library into your app and key capabilities.
+This article focuses on how to integrate Teams AI library into your app and its capabilities.
 
 ## Initial setup
 
@@ -71,7 +71,7 @@ You can take your existing or a new bot framework app and add AI capabilities.
 
 **Prompt manager**: The prompt manager manages prompt creation. It calls functions and injects  from your code into the prompt. It can copy conversation state user state into the prompt for you automatically.
 
-**Moderator**: A moderator adds safety moderation to the bots input and output. allows you to look at what the user is trying to say to the model, and you can flag prompt injection techniques, review what's coming out of the LLM and run it through a business logic for filtering and ensure that the bot isn't saying things that you don't want it to say. You can either moderate the input or the output, or both. Open AI moderator is the default moderator.
+**Moderator**: A moderator adds safety moderation to the input and output. It allows you to identify the user input, flag prompt injection techniques, review the output from the not, and run it through a business logic for filtering to ensure that the bot complies with OpenAI's usage policies. You can either moderate the input or the output, or both. Open AI moderator is the default moderator.
 
 ```javascript
 // Create AI components
@@ -93,10 +93,9 @@ const promptManager = new DefaultPromptManager(path.join(__dirname, '../src/prom
 
 The application object automatically manages the conversation and user state of your bot.
 
-* **Storage**: Create a storage provider to store conversation and user state for your bot. The `MemoryStorage()` function stores all the state for your bot.
-* **Application**: The application class replaces the Teams Activity Handler class. You can configure your ai by adding the planner, moderator, prompt manager, default prompt and history.
+* **Storage**: Create a storage provider to store the conversation and the user state for your bot.
 
-The `ai` object is passed into the Application, which receives the AI components and the default prompt defined earlier.
+* **Application**: The application class has all the information and bot logic required for an app. You can register actions or activity handlers for the app in this class.
 
 ```javascript
 // Define storage and application
@@ -115,15 +114,17 @@ const app = new Application<ApplicationTurnState>({
 });
 ```
 
+The `MemoryStorage()` function stores all the state for your bot. The `Application` class replaces the Teams Activity Handler class. You can configure your `ai` by adding the planner, moderator, prompt manager, default prompt and history. The `ai` object is passed into the `Application`, which receives the AI components and the default prompt defined earlier.
+
 ## Prompt
 
-Prompts are pieces of text that can be used to create conversational experiences. They're used to start conversations, ask questions, and generate responses. They can be used to create natural language experiences for chatbots, virtual assistants, and other conversational user interfaces. The use of prompts can help reduce the complexity of creating conversational experiences and make them more engaging for the user.
+Prompts are pieces of text that can be used to create conversational experiences. They're used to start conversations, ask questions, and generate responses. Prompts can be used to create natural language experiences for chatbots, virtual assistants, and other conversational user interfaces. The use of prompts can help reduce the complexity of creating conversational experiences and make them more engaging for the user.
 
 Create a folder called prompts, and define your prompts in the folder. When the user interacts with the bot by entering a text prompt, the bot responds with a text completion.
 
-* `skprompt.txt`: Define all your text prompts. Contains the prompts text and supports template variables and functions.
+* `skprompt.txt`:  Contains the prompts text and supports template variables and functions. Define all your text prompts in the `skprompt.txt` file.
   
-* `config.json`: Provide the right configuration to ensure bot responses are aligned with your requirement. Configure `max_tokens`, `temperature`, and other properties to pass into open AI or Azure AI. Contains the prompt model settings.
+* `config.json`: Contains the prompt model settings. Provide the right configuration to ensure bot responses are aligned with your requirement. Configure `max_tokens`, `temperature`, and other properties to pass into open AI or AzureOpenAI.
 
    ```json
    {
@@ -159,7 +160,7 @@ The following table includes the query parameters:
 
 ### Prompt actions
 
-Plans let the model perform actions or say things to the user. You can create a schema of the plan and add a list of actions that you support. It can perform an action and pass arguments. GPT can  figure out what actions it wants to use and then extract all the entities and pass those in as arguments to the action call.
+Plans let the model perform actions or say things to the user. You can create a schema of the plan and add a list of actions that you support. It can perform an action and pass arguments. The Open AI endpoint can figure out what actions it wants to use and then extract all the entities and pass those as arguments to the action call.
 
 ```text
     The following is a conversation with an AI assistant. 
@@ -245,21 +246,21 @@ app.ai.action(
 
 ## Pick your capabilities
 
-Next step is to pick the capabilities needed. You need to use the SDK to scaffold bot and adaptive card handlers to the source file.
+Next step is to pick the capabilities needed. You need to use the AI library to scaffold bot and adaptive card handlers to the source file.
 
-Teams AI library supports JavaScript and is designed to simplify the process of building bots that can interact with Microsoft Teams, and facilitates the migration of existing bots. The SDK supports the migration of messaging capabilities, Message Extension (ME) capabilities and Adaptive Cards capabilities to the new format. It's also possible to upgrade existing Teams apps with these features.
+Teams AI library supports JavaScript and is designed to simplify the process of building bots that can interact with Microsoft Teams, and facilitates the migration of existing bots. The AI library supports the migration of messaging capabilities, Message Extension (ME) capabilities and Adaptive Cards capabilities to the new format. It's also possible to upgrade existing Teams apps with these features.
 
-Developers creating bots for Microsoft Teams were using the BotBuilder SDK directly. New AI library is designed to facilitate the construction of bots that can interact with Microsoft Teams. While one of the key features of this SDK is the AI support that customers can utilize, the initial objectives of the team may simply be to upgrade their current bot without AI. Once upgraded, the bot can connect to AI/LLM available in the SDK.
+Developers creating bots for Microsoft Teams were using the BotBuilder SDK directly. Teams AI library is designed to facilitate the construction of bots that can interact with Microsoft Teams. While one of the key features of this SDK is the AI support that customers can utilize, the initial objectives of the team may simply be to upgrade their current bot without AI. Once upgraded, the bot can connect to AI or LLM available in the SDK.
 
 Teams AI library supports the following capabilities:
 
-* Sending or Receiving Message – Migration supported.  
+* Sending or Receiving Message.  
 
-* Message Extension (ME) capabilities – Migration supported.  
+* Message Extension (ME) capabilities.  
 
-* Adaptive Cards capabilities – Migration supported.
+* Adaptive Cards capabilities.
 
-In the section below we'll explain in detail each of the capabilities and their path to migration. We'll using the samples from the AI library repo for explaining the method of migration.  
+In the following section, we'll explain each capability and their path to migration. We'll using the samples from the AI library to explain the method of migration.  
 
 ### Sending or receiving Message
 

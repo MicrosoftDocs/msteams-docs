@@ -482,7 +482,7 @@ items:
         }
         ```
 
-        The `config.json` is initiated by the `DefaultPromptManager` from the `index.ts` file. When a prompt is initiated, the prompt manager searches for  the prompt config file (chat/config.json) and passed the prompt settings into Open AI or Azure Open AI.
+       The bot relies on Open AI or AzureOpenAI for its natural language modelling, the `config.json` file handles the language processing for the bot. The `config.json` is initiated by the `DefaultPromptManager` from the `index.ts` file. When a prompt is initiated, the prompt manager searches for  the prompt config file (chat/config.json) and passed the prompt settings into Open AI or Azure Open AI.
 
     1. Go to the 'prompt.txt' file and add the following instructions for GPT on how the bot should conduct itself and facilitate conversation:
 
