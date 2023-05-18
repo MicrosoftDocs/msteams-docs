@@ -45,6 +45,9 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
    | -------- | --------|
    |Develop Single Sign-on Experience in Teams | [How to Develop Single Sign-on Experience](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams) |
 
+> [!NOTE]
+> When SSO is enabled, Teams Toolkit by default provisions a single-tenant Azure AD app, which means only user and guest accounts in the same directory as your M365 account can sign in to your Teams app. For more information on supporting multi-tenant, to update your TeamsFx project, see [Multi-tenancy support for Azure AD app](https://github.com/OfficeDev/TeamsFx/wiki/Multi-tenancy-Support-for-Azure-AD-app).
+
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
