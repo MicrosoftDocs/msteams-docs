@@ -14,7 +14,7 @@ Earlier, you were using BotBuilder SDK directly to create bots for Microsoft Tea
 
 Teams AI library supports the following capabilities:
 
-* [Sending or receiving Message](#sending-or-receiving-message)
+* [Sending or receiving message](#sending-or-receiving-message)
 
 * [Message extension (ME) capabilities](#message-extensions)
 
@@ -24,11 +24,11 @@ Teams AI library supports the following capabilities:
 
 In the following section, we'll explain each capability and their path to migration. We'll be using the samples from the [AI library](https://github.com/microsoft/teams-ai/tree/main) to explain the migration method:  
 
-### Sending or receiving message
-
-Example: [EchoBot](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.messaging.a.echoBot)
+## Sending or receiving message
 
 Replace `BotActivityHandler` and `ApplicationTurnState` with this `Application` and `DefaultTurnState`. `DefaultTurnState` is constructed to include `ConversationState`.
+
+Example: [EchoBot](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.messaging.a.echoBot)
 
 ```javascript
 
@@ -63,17 +63,17 @@ const app =
 
 ```
 
-### Message extensions
-
-Example: [Message extension search command](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand)
+## Message extensions
 
 In the previous Teams SDK format, you needed to set up the Message extensions query handler like:
 
 Now, the app class has messageExtensions features to make creating the handler(s) simpler:
 
-* `context` = TurnContext
-* `state` = DefaultTurnState
-* `query`= The data passed from ME interaction
+* `context`: TurnContext
+* `state`: DefaultTurnState
+* `query`: The data passed from message extension interaction
+
+Example: [Message extension search command](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand)
 
 ```javascript
 // Imported from earlier example
@@ -125,7 +125,7 @@ app.messageExtensions.selectItem(async (context, state, item) => {
 }
 ```
 
-### Adaptive Cards capabilities
+## Adaptive Cards capabilities
 
 The `app.AdaptiveCards` handler is the handler for producing Adaptive Cards.
 
@@ -174,7 +174,8 @@ Example: [Light bot](https://github.com/microsoft/teams-ai/tree/main/js/samples/
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.c.actionMapping.lightBot/src/index.ts#L80)
 
-```csharp
+```typescript
+
 // Create AI components
 const planner = new OpenAIPlanner<ApplicationTurnState>({
     apiKey: process.env.OpenAIKey,
@@ -258,7 +259,8 @@ Example: [Message extension search command](https://github.com/microsoft/teams-a
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.messageExtensions.a.searchCommand/src/index.ts#L76)
 
-```csharp
+```typescript
+
 // Listen for search actions
 app.messageExtensions.query('searchCmd', async (context, state, query) => {
     const searchQuery = query.parameters.queryText ?? '';
@@ -336,7 +338,7 @@ Example: [List bot](https://github.com/microsoft/teams-ai/tree/main/js/samples/0
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.d.chainedActions.listBot/src/index.ts#L149)
 
-```csharp
+```typescript
 app.ai.action('addItem', async (context, state, data: EntityData) => {
     const items = getItems(state, data.list);
     items.push(data.item);

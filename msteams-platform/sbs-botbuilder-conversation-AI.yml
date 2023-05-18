@@ -4,7 +4,7 @@ metadata:
   title: Chef Bot with Teams AI library
   description: In this learn module, you'll learn how to build a bot with Teams AI library and set up, build, and deploy a bot app with Teams Toolkit.
   audience: Developer
-  level: Beginner
+  level: Advanced
   ms.date: 10/21/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/how-to/Teams conversational AI/coversational-ai-faq.md
