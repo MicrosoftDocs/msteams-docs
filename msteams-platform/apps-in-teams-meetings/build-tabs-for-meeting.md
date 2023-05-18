@@ -75,7 +75,7 @@ The following image shows a tab added to the meeting details page in the Teams m
 
 #### Deep link to meeting side panel
 
-You can create a deep link to your tab app that can open in the meeting side panel. When users in a meeting select the deep link, it opens the meeting side panel in the meeting stage. If a user selects the deep link before or after the meeting, the deep link opens in a pre or a post-meeting tab respectively. 
+You can create a deep link to your tab app that can open in the meeting side panel. When users in a meeting select the deep link, it opens the meeting side panel in the meeting stage. If a user selects the deep link before or after the meeting, the deep link opens in a pre or a post-meeting tab respectively.
 
 # [Meeting side panel](#tab/meeting-side-panel)
 
@@ -88,6 +88,8 @@ You can create a deep link to your tab app that can open in the meeting side pan
    The following shows a deep link in a pre or a post-meeting tab:
 
    :::image type="content" source="../assets/images/pre-post-meeting.gif" alt-text="Screenshot shows a pre or post-meeting tab when deep link is selected.":::
+
+   This pre or post-meeting tab behaviour isn't supported in channel meetings.
 
 ---
 
