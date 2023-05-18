@@ -8,7 +8,7 @@ ms.topic: App artwork
 ---
 # Microsoft Teams app artwork for store
 
-This article provides guidelines and templates for displaying app artwork and details in the Teams store. Follow these guidelines for tips on crafting engaging and useful imagery to get people excited about your app in [fluent icons](https://www.figma.com/community/file/836835755999342788) and [teams icon](https://fluentsite.z22.web.core.windows.net/icon-viewer).
+This article provides guidelines and templates for displaying app artwork and details in the Teams store. Follow these guidelines for tips on crafting engaging and useful imagery to get people excited about your app in [fluent icons](https://react.fluentui.dev/?path=/docs/concepts-developer-icons-icons--page) and [teams icon](https://fluentsite.z22.web.core.windows.net/icon-viewer).
 
 ## App image templates
 

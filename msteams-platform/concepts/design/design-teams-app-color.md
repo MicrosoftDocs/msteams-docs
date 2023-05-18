@@ -45,7 +45,7 @@ Don’t confuse people by using colors inconsistently. Make use of Teams core co
 
 Each Teams theme has its own color scheme. To handle theme changes automatically, you can specify color tokens in your design. The following token values are for the default (light) theme.
 
-Learn how to [use color tokens in your Teams app project](https://fluentsite.z22.web.core.windows.net/colors).
+Learn how to [use color tokens in your Teams app project](https://react.fluentui.dev/?path=/docs/theme-colors--page).
 
 ##### Example for design with tokens
 
