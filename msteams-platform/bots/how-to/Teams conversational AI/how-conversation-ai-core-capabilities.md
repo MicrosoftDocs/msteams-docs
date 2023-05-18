@@ -326,7 +326,7 @@ Human: {{activity.text}}
 
 ## AI
 
-The bot logic is simplified to provide handlers for actions such as addItem, removeItem, findItem, and so on. This clear delineation between actions and the prompts that instruct the AI on how to execute them is an incredibly potent tool.
+The bot logic is simplified to provide handlers for actions such as addItem, removeItem and , findItem. This clear delineation between actions and the prompts that instruct the AI on how to execute them is an incredibly potent tool.
 
 ```csharp
 app.ai.action('addItem', async (context, state, data: EntityData) => {
