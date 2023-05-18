@@ -14,17 +14,17 @@ Earlier, you were using BotBuilder SDK directly to create bots for Microsoft Tea
 
 Teams AI library supports the following capabilities:
 
-* Sending or receiving Message
+* [Sending or receiving Message](#sending-or-receiving-message)
 
-* Message extension (ME) capabilities
+* [Message extension (ME) capabilities](#message-extensions)
 
-* Adaptive Cards capabilities
+* [Adaptive Cards capabilities](#adaptive-cards-capabilities)
 
  You need to use the AI library to scaffold bot and Adaptive Card handlers to the source file.
 
 In the following section, we'll explain each capability and their path to migration. We'll be using the samples from the [AI library](https://github.com/microsoft/teams-ai/tree/main) to explain the migration method:  
 
-### Sending or receiving Message
+### Sending or receiving message
 
 Example: [EchoBot](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.messaging.a.echoBot)
 
@@ -63,7 +63,7 @@ const app =
 
 ```
 
-## Message extensions
+### Message extensions
 
 Example: [Message extension search command](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand)
 
@@ -248,7 +248,7 @@ app.ai.action(AI.OffTopicActionName, async (context, state) => {
 
 ```
 
-### Message-extension query
+### Message extension query
 
 The Teams AI library offers you a more intuitive approach to create handlers for various message-extension query commands when compared to previous iterations of Teams Bot Framework SDK. The new SDK works alongside the existing Teams Bot Framework SDK.
 

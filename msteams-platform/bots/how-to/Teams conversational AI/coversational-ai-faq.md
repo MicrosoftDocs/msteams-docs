@@ -72,3 +72,7 @@ Teams AI library is available in public preview at Build 2023.
 Teams AI library works alongside the existing Bot Framework SDK and isn't a replacement.
 
 </details>
+
+## See also
+
+[Teams AI library](teams-conversation-ai-overview.md)
