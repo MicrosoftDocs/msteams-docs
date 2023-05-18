@@ -70,9 +70,9 @@ Teams AI library offers support from low code to complex scenarios. The library 
 
 A simple interface for actions and predictions allows bots to react when the bot has confidence for taking action. Ambient presence lets bots learn intent, use prompts based on business logic, and generate responses. For example, if a user has been out of office and needs to quickly summarize a thread, the library:
 
-* Understands the intent as summarization.
-* Allows prompts to make summarizations over a period of time focused on the user’s manager.
-* Provides actions to summarize chat content for users to consume.
+1. Understands the intent as summarization.
+1. Allows prompts to make summarizations over a period of time focused on the user’s manager.
+1. Provides actions to summarize chat content for users to consume.
 
 ## Why build apps with Teams AI library?
 
