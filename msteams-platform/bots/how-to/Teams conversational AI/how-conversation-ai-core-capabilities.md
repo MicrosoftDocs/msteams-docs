@@ -1,6 +1,6 @@
 ---
 title: Teams AI library capabilities
-description: In this article, learn how to create an app using Teams AI library and its capabilities.
+description: In this article, learn more about Teams AI library capabilities, bot logic and message extension query.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
