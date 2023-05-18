@@ -15,15 +15,15 @@ items:
 - durationInMinutes: 1
   content: |
     Start Microsoft Teams app development with your first Teams app. 
-    You can create a message extension Teams app.  
+    You can create a message extension Teams app with Teams using Javascript.  
     
-    In this tutorial, you can learn:
+    In this tutorial, you'll learn:
 
     - How to set up a new project with Teams Toolkit.
     - How to build a message extension app.
     - How to deploy your app.
 
-    This step-by-step guide helps you to build message extension Teams app with Teams Toolkit. You can see the following output:
+    This step-by-step guide helps you to build message extension Teams app with Teams Toolkit. You'll see the following output after you've completed this guide:
 
      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot shows that app sideloaded in Teams." lightbox="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png":::
 
@@ -31,13 +31,13 @@ items:
   durationInMinutes: 1
   content: |
 
-   Here's a list of tools you need for building and deploying your apps.
+   Ensure you install the following tools for building and deploying your apps.
 
    | &nbsp; | Install | For using... |
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use latest version. |
-   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use version 5.0.0.|
+   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Teams Toolkit v5.|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -80,7 +80,7 @@ items:
    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
    > [!NOTE]
-   > The latest version of Teams Toolkit is 5.0.0.
+   > The latest version of Teams Toolkit is v5.
    
    # [Command line](#tab/cli)
 
@@ -116,7 +116,7 @@ items:
    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams local environment.
 
    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
@@ -348,7 +348,7 @@ items:
     1. Select **F5** in Visual Studio Code to run your application in debug mode.
 
         > [!NOTE]
-        > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check it.
+        > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check.
 
         <!-- markdownlint-disable MD033 -->
         <details>
@@ -411,7 +411,7 @@ items:
     
     #### To run a search query
 
-    1. Let's enter a search string in the search box, such as "cli". You will get a list of the matching items:
+    1. Let's enter a search string in the search box, such as "cli". You'll get a list of the matching items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/mex-search-string.png" alt-text="Screenshot that shows how to use the app for search.":::
 
