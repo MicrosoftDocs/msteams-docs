@@ -12,7 +12,7 @@ The following components are a combination of [basic UI components](~/concepts/d
 
 ## Microsoft Teams UI Kit
 
-Based on [Fluent UI](https://fluentsite.z22.web.core.windows.net/), the Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. In the UI kit, you can grab and insert the components listed here directly into your design and see more examples of how to use each component.
+Based on [Fluent UI](https://react.fluentui.dev/?path=/docs/), the Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. In the UI kit, you can grab and insert the components listed here directly into your design and see more examples of how to use each component.
 
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -55,7 +55,7 @@ Use the left nav to browse multiple pages within your Teams tab. In the followin
 
 A notification bar is a dedicated area for displaying a brief, important messages that do not require the user to take immediate action. Specific background colors and icons are associated with specific types of messages (see below).
 
-You can implement a notification bar using the Fluent UI [alert](https://fluentsite.z22.web.core.windows.net/0.59.0/components/alert/definition) component.
+You can implement a notification bar using the Fluent UI [alert](https://react.fluentui.dev/?path=/docs/preview-components-alert--default) component.
 
 ### Top use cases
 
