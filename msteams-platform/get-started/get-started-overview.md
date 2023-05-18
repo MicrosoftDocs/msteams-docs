@@ -19,7 +19,7 @@ Here's an idea of what you'll learn:
 
 ## Build your first Teams app
 
-In this section, learn more how to build Teams app with different capabilities, such as tab, scenario-based bot app, and message extension.
+In this section, learn more on how to build Teams app with different capabilities, such as tab, scenario-based bot app, and message extension.
 
 1. Select the type of Teams app that you want to build:
 
