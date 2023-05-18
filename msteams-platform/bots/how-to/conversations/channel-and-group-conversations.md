@@ -306,7 +306,7 @@ Your bot can mention tags in text messages and Adaptive Cards posted in channels
 > [!NOTE]
 >
 > * Tag mentions are supported in Teams desktop and web clients. However, it's not supported in Teams mobile client.
-> * Tag mentions are supported in Government Community Cloud (GCC) and GCC-H tenants only.
+> * Tag mentions are supported in Government Community Cloud (GCC) and GCC-High tenants, and not supported in  Department of Defense (DoD) tenant.
 
 ##### Mention tags in a text message
 
@@ -339,10 +339,10 @@ Example:
 ```json
 ​{ 
 ​    "type": "mention", 
-    ​"text": "<at>my tag</at>", 
+    ​"text": "<at>Test Tag</at>", 
 ​    "mentioned": { 
             ​"id": "base64 encoded id" ,// tag graph 64 base ID
-​            "name": "my tag", 
+​            "name": "Test Tag", 
             ​"type": "tag" 
 ​    } 
 ​} 
@@ -352,7 +352,8 @@ Example:
 
 |Name |Description |
 |---------|----------------|
-|`type`| The type of mention. The supported type is `tag`. The tag format is base 64 encoded ID​. For example, `NTI4ZGJlM2YtMTVlMC00ZTM3LTg0YTEtMDBjYzMwNTg0N2RkIyNlYzgwMTVmMC1iMmYxLTQxZTItODA0OC1hMGE2OTcwNmM5ZGIjI3RxRE04YndyVQ==​`.
+|`type`| The type of mention. The supported type is `tag`.|
+|`id`|The tag format is base 64 encoded ID​. For example, `NTI4ZGJlM2YtMTVlMC00ZTM3LTg0YTEtMDBjYzMwNTg0N2RkIyNlYzgwMTVmMC1iMmYxLTQxZTItODA0OC1hMGE2OTcwNmM5ZGIjI3RxRE04YndyVQ==​`|
 
 ###### Error code
 
@@ -365,7 +366,7 @@ Example:
 
 Any request can be evaluated against multiple limits, depending on the scope, the window type (short and long), number of tags per message, and other factors. The first limit to be reached triggers throttling behavior.
 
-Ensure that you don't exceed the throttling limits to avoid heavy traffic to the notification service and  the IC3 service. For example, a bot can send only two messages with tags mention in a five-second window and each message can have only up to 10 tags.
+Ensure that you don't exceed the throttling limits to avoid failed message delivery. For example, a bot can send only two messages with tags mention in a five-second window and each message can have only up to 10 tags.
 
 The following table lists the throttling limits for tag mentions in a bot:
 
@@ -378,8 +379,8 @@ The following table lists the throttling limits for tag mentions in a bot:
 
 ##### Limitations
 
+* Tag mentions are supported only in bot to client message flow with text and Adaptive Card.
 * Tag mentions aren't supported in shared and private channels.
-* Tag mentions are supported only in text messages and Adaptive Cards.
 * Tag mentions aren't supported in connectors.
 * Tag mentions don't support the invoke function in a bot.
 

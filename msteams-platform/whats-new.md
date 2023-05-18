@@ -16,7 +16,6 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|18/05/2023 |  Bots can mention tags in Adaptive Cards. | Build Bots > Bot conversations > Channel and group chat conversations with a bot > [Tag mention](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention)|
 |17/05/2023 |  Distribute your app to specific countries. | Distribute your app > Publish to the Teams store > Prepare your Teams store submission > [Distribute your app to specific countries](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries)|
 | 17/05/2023 | Introduced the Teams Toolkit v5 extension within Visual Studio Code. | Tools and SDKs > Teams Toolkit > [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md)|
 | 17/05/2023 | Updated Get started module with GitHub Codespaces and step-by-step guides aligned with Teams Toolkit v5. It also includes details for extending Teams app over Microsoft 365 and Outlook. | [Get started](get-started/get-started-overview.md)|
@@ -332,6 +331,12 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 :::column span="2":::
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
+
+## Microsoft Build 2023 :::image type="icon" source="assets/images/bullhorn.png" border="false"
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+|18/05/2023 |  Bots can mention tags in Adaptive Cards. | Build Bots > Bot conversations > Channel and group chat conversations with a bot > [Tag mention](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention)|
 
 **2023 January**
 
