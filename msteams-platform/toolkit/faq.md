@@ -16,9 +16,7 @@ ms.date: 11/29/2021
 >
 > [Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
 
-You can see the FAQ for all the sections of Teams Toolkit for Visual Studio Code.
-
-FAQ for [Provision cloud resources using Teams Toolkit](provision.md)
+Following are the FAQ for [Provision cloud resources using Teams Toolkit](provision.md):
 
 <br>
 
