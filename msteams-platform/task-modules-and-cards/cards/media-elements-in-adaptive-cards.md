@@ -99,9 +99,9 @@ The following code shows an example of an Adaptive Card with media elements:
 
 ## Code samples
 
-| Description|.NET|
-|--------------------------------------------------------|-----|
-|This sample shows how user can send different types of cards using bot which are supported in Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-all-cards/csharp)|
+|Sample name| Description|.NET|
+|-------|------------------|-----|
+| Adaptive Card |This sample shows how user can send cards with media files. Also, explain|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-all-cards/csharp)|
 
 ## See also
 
