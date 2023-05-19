@@ -161,7 +161,7 @@ Mobile view of your app must be responsive, similarly to the narrowest responsiv
 
 ##### Don’t: Allow truncation on your mobile app
 
-As with the desktop app, nothing must be cut off or illegible on your mobile app.
+Nothing must be cut off or illegible on your mobile app.
 
    :::column-end:::
 :::row-end:::

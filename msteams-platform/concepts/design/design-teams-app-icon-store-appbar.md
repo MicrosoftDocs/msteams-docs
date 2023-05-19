@@ -103,9 +103,9 @@ Here is an example of a logo inside of the PNG format icon that is not within th
    :::column span="":::
 :::image type="content" source="../..\assets\images\design-guidelines\round-corners-do.png" alt-text="Example shows an icon with full bleed.":::
 
-#### Do: Provide full bleed, we will add the rounded corners
+#### Do: Provide full bleed for rounded corners
 
-If you have a full bleed image, just upload a square PNG format at 192 x 192. We will round the corners for you dynamically.
+If you have a full bleed image, just upload a square PNG format at 192 x 192. The corners are rounded dynamically.
 
    :::column-end:::
    :::column span="":::
@@ -113,7 +113,7 @@ If you have a full bleed image, just upload a square PNG format at 192 x 192. We
 
 #### Don’t: Round the corners of your icon
 
-Don’t round the corners. Just submit at perfect square at 192 x 192. We will round the corners for you dynamically.
+Don’t round the corners. Just submit at perfect square at 192 x 192, the corners are rounded dynamically.
 
    :::column-end:::
 :::row-end:::
@@ -124,7 +124,7 @@ Don’t round the corners. Just submit at perfect square at 192 x 192. We will r
 
 #### Do: Upload an icon without a border
 
-We will add the border automatically. In this case just upload your PNG format without a border, even if it’s on a white background.
+Border is added automatically. In this case just upload your PNG format without a border, even if it’s on a white background.
 
    :::column-end:::
    :::column span="":::
@@ -132,7 +132,7 @@ We will add the border automatically. In this case just upload your PNG format w
 
 #### Don’t: Add a border
 
-We dynamically add borders. If you include a border in your PNG format, it will result in unwanted duplication on white backgrounds.
+Borders are added dynamically. If you include a border in your PNG format, it'll result in unwanted duplication on white backgrounds.
 
    :::column-end:::
 :::row-end:::
@@ -181,7 +181,7 @@ Elevate your brand by keeping the brand icon within 96 x 96 safe area.
 
 #### Do: Abbreviate long words in the app icon
 
-If you have a long app name, try to abbreviate so that it’s easier to read when we bring your icon down to 32 x 32 size.
+If you have a long app name, try to abbreviate so that it’s easier to read when your icon is resized to 32 x 32 size.
 
    :::column-end:::
    :::column span="":::
