@@ -732,7 +732,7 @@ Verify if you can sideload apps in Teams:
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG" alt-text="Screenshot of Manage your apps in Teams with the Upload an app dialog open. Apps icon, Manage your apps, Upload an app, and Upload a customised app options highlighted in red.":::
 
     > [!NOTE]
-    > If Teams doesn't show the option to upload a custom app, connect to your Teams administrator.
+    > Contact your Teams administrator, if you don't find the option to upload a custom app.
 
 ### Create a free Teams developer tenant (optional)
 
@@ -761,7 +761,7 @@ Start Teams app development by creating your first app. This app uses the tab ca
 
 This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
 
-In this section, you can learn:
+In this page, you'll learn:
 
 1. [How to set up a new tab project with Teams Toolkit](#create-your-tab-project)
 1. [About the directory structure of your app](#take-a-tour-of-the-source-code-for-teams-tab-app)
@@ -770,9 +770,9 @@ In this section, you can learn:
 
 Use Teams Toolkit to create your first tab project. The toolkit takes you through a series of pages to create and configure your Teams app project:
 
-1. **Create a new project** page: You select the project type.
+1. **Create a new project** page: You can select the project type.
 1. **Configure your new project** page: You enter the project details.
-1. **Create a new Teams application** page: You select the Teams app capabilities.
+1. **Create a new Teams application** page: You can select the Teams app capabilities.
 
 **To create your tab project workspace**
 
@@ -829,7 +829,7 @@ Use Teams Toolkit to create your first tab project. The toolkit takes you throug
 
 :::image type="content" source="../../assets/images/teams-toolkit-v2/first-tab/select-language-tab_1.png" alt-text="Screenshot2 of Create a new Teams application with Tab and Create options highlighted in red.":::
 
-Your Teams tab app is created in a few seconds.
+Your Teams tab app is created in few seconds.
 
 :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/vs-tab-app.png" alt-text="Screenshot3 of Visual Studio displaying tips to get started while building your app.":::
 
@@ -870,7 +870,7 @@ To build and run your app:
 
 1. Select your Microsoft 365 account or **Add an account** to sign in.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/m365-account_1.PNG" alt-text="Screenshot6 of Microsoft 365 Account with Continue option highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/M365-account_1.png" alt-text="Screenshot6 of Microsoft 365 Account with Continue option highlighted in red.":::
 
 1. Select **Debug** > **Start Debugging** or select **F5** to run your app in debug mode.
     <!-- markdownlint-disable MD033 -->
@@ -883,7 +883,7 @@ To build and run your app:
     1. Registers your application for sideloading in Teams.
     1. Starts your application backend running locally.
     1. Starts your application front-end hosted locally.
-    1. Starts Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
+    1. Starts Teams in a web browser with a command to instruct Teams to side load the application the URL is registered inside the application manifest.
 
     </details>
 
