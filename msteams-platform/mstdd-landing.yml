@@ -48,6 +48,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Design your app for new Teams 
+        url: concepts/design/design-teams-app-overview.md
       - text: Distribute your app to specific countries
         url: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries
       - text: Teams Toolkit v5 extension within Visual Studio Code
