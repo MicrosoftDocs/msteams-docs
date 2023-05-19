@@ -8,7 +8,7 @@ ms.topic: Shape and elevation
 ---
 # Shape and elevation for designing your Teams app
 
-You can use shape and elevation to create additional hierarchy in your app.
+This article provides how to use shape and elevation to create additional hierarchy in your app.
 
 :::image type="content" source="../..\assets\images\design-guidelines\shape-elevation.png" alt-text="Example shows shape and elevation to create additional hierarchy in your app.":::
 

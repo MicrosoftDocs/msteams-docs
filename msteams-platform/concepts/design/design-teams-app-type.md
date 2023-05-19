@@ -8,7 +8,7 @@ ms.topic: Typography
 ---
 # Typography for your Microsoft Teams app
 
-Quickly learn how to incorporate standard Teams typography in your app design.
+This article provides how to incorporate standard Teams typography in your app design.
 
 ## Font type
 
@@ -26,7 +26,7 @@ Teams uses Segoe UI for its type ramp to optimize hierarchy and readability.​
 
 ##### Android
 
-The Teams Android app uses Roboto typeface. See [fluent android guidelines and examples](https://www.microsoft.com/design/fluent/#/android).
+The Teams Android app uses Roboto typeface. For more information, see [Android guidelines and examples (Fluent UI)](https://www.microsoft.com/design/fluent/#/android).
 
    :::column-end:::
    :::column span="":::
@@ -34,7 +34,7 @@ The Teams Android app uses Roboto typeface. See [fluent android guidelines and e
 
 ##### iOS
 
-The Teams iOS app uses the SF Pro typeface. See [fluent iOS guidelines and examples](https://www.microsoft.com/design/fluent/#/ios).
+The Teams iOS app uses the SF Pro typeface. For more information, see [iOS guidelines and examples (Fluent UI)](https://www.microsoft.com/design/fluent/#/ios).
 
    :::column-end:::
 :::row-end:::

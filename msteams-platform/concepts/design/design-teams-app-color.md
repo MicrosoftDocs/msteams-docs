@@ -12,7 +12,7 @@ Teams web and desktop supports default (light), dark, and high-contrast themes, 
 
 ## Guidelines
 
-Using standard Teams colors, which are designed to meet Web Content Accessibility Guidelines (WCAG) 2.1 contrast requirements, ensures a consistent, accessible experience across the supported themes.
+Use standard Teams colors, which are designed to meet Web Content Accessibility Guidelines (WCAG) 2.1 contrast requirements, ensures a consistent and accessible experience across the supported themes.
 
 :::row:::
    :::column span="":::
@@ -20,7 +20,7 @@ Using standard Teams colors, which are designed to meet Web Content Accessibilit
 
 ##### Add colors when necessary
 
-Start from a white canvas and add colors only if needed. Avoid using colors to paint large surfaces such as cards. Instead, use them to create hierarchy (for example, highlighting important actions).
+Start from a white canvas and add colors only if needed. Avoid using colors to paint large surfaces such as cards. Instead, use colors to create hierarchy, for example, highlighting important actions.
 
    :::column-end:::
    :::column span="":::
@@ -36,7 +36,7 @@ Always aim to present app content with all user needs and preferences in mind. T
 
 ##### Use colors consistently
 
-Don’t confuse people by using colors inconsistently. Make use of Teams core colors and secondary colors, which convey activity, errors, and other common states.
+Don’t confuse by using colors inconsistently. Make use of Teams core colors and secondary colors, which convey activity, errors, and other common states.
 
    :::column-end:::
 :::row-end:::
@@ -59,7 +59,7 @@ Learn how to [use color tokens in your Teams app project](https://react.fluentui
 |D|**Brand Background**: Primary button background color|
 |E|**Brand Foreground**: Link text color|
 
-### Integrate your app’s color palette with Teams
+### Integrate your apps color palette with Teams
 
 ##### Primary color
 
@@ -99,7 +99,7 @@ Colors must be used for highlighting functionality, defining hierarchy, and conv
 
 #### Do: Use the neutral color palette to create depth
 
-Always use the neutral, gray scale color palette provided in this kit as the base of your UI. You can include additional steps of gray to reinforce a sense of depth and hierarchy. Layers should appear brighter as they move up the z-axis.
+Always use the neutral, gray scale color palette provided in this kit as the base of your UI. You can include additional steps of gray to reinforce a sense of depth and hierarchy. Layers must appear brighter as they move up the z-axis.
 
    :::column-end:::
 :::row-end:::
@@ -118,7 +118,7 @@ Don’t use colors just for branding purposes or visual delight. Avoid using col
 
 #### Don’t: Get too complicated
 
-For example, don’t have different shades of gray for light and dark theme. Also, on large surfaces, never use neutral colors that aren’t gray scale.
+For example, don’t have different shades of gray for light and dark themes. Also, on large surfaces, never use neutral colors that aren’t gray scale.
 
    :::column-end:::
 :::row-end:::
