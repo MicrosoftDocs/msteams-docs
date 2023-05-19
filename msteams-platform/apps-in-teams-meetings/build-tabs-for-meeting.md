@@ -237,11 +237,13 @@ App caching improves subsequent launch time of the apps that are loaded in the m
 
 App caching is supported for the following:
 
-| &nbsp; | Personal | Chat | Channel | Meeting tab | Meeting side panel or In-meeting apps |
-| --- | --- | --- | --- | --- | --- |
-| **Desktop** | Available | Available | Available | Available | Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) |
-| **iOS** | Available | NA | NA | NA | NA |
-| **Android** | NA | NA | NA | NA | NA |
+| Scope | Desktop | iOS | Android |
+| --- | --- | --- | --- |
+| Personal | &#x2713; | &#x2713; | NA |
+| Chat | &#x2713; | NA | NA |
+| Channel | &#x2713;| NA | NA |
+| Meeting tab | &#x2713; | NA | NA |
+| Meeting side panel or In-meeting apps | Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | NA | NA |
 
 ### Enable app caching
 
