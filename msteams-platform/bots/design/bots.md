@@ -68,7 +68,7 @@ Your bot's introduction should be slightly different in channels and group chats
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="Example shows a bot introduction in a collaborative context."- lightbox="../../assets/images/bots/bot-group-welcome.png":::
+:::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="Example shows a bot introduction in a collaborative context."lightbox="../../assets/images/bots/bot-group-welcome.png":::
 
 ### Bot authentication with single sign-on
 

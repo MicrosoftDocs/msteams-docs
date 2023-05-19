@@ -97,7 +97,7 @@ Based on [Fluent UI react components](https://react.fluentui.dev/), the Microsof
 
 ## Scrollbar
 
-:::image type="content" source="../../assets/images/components/scrollbar.png" alt-text="Example shows a scrollbar UI component." lightbox="../../assets/images/components/scrollbar.png" lightbox="../../assets/images/components/scrollbar.png":::
+:::image type="content" source="../../assets/images/components/scrollbar.png" alt-text="Example shows a scrollbar UI component." lightbox="../../assets/images/components/scrollbar.png":::
 
 ## Search box
 
