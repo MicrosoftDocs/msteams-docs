@@ -35,7 +35,7 @@ Users can access tabs by selecting the **More** button in the channel (example b
 
 The following example shows how users can add a tab in a channel.
 
-:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="Example shows a tab being added in a channel. lightbox="../../assets/images/tabs/design-add-tab.png":::
+:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="Example shows a tab being added in a channel." lightbox="../../assets/images/tabs/design-add-tab.png":::
 
 ## Set up a tab
 
