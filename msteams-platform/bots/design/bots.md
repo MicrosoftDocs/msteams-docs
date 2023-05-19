@@ -40,7 +40,7 @@ Users can add a bot one of the following ways:
 * Using the app flyout by selecting the **More** icon on the left side of Teams.
 * With an @mention in the new chat or compose box (the following example shows how you can do this in a group chat).
 
-    :::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="Example shows how to add a bot in a group chat using an @mention.":::
+    :::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="Example shows how to add a bot in a group chat using an @mention." lightbox="../../assets/images/bots/add-bot-chat-at-mention.png":::
 
 ## Introduce a bot
 
@@ -56,7 +56,7 @@ In personal contexts, welcome messages set your bot's tone. The message includes
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="Example shows a bot introduction in a personal app.":::
+:::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="Example shows a bot introduction in a personal app." lightbox="../../assets/images/bots/bot-personal-welcome.png":::
 
 ### Welcome message in channels and group chats
 
@@ -68,7 +68,7 @@ Your bot's introduction should be slightly different in channels and group chats
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="Example shows a bot introduction in a collaborative context.":::
+:::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="Example shows a bot introduction in a collaborative context."- lightbox="../../assets/images/bots/bot-group-welcome.png":::
 
 ### Bot authentication with single sign-on
 
@@ -82,7 +82,7 @@ Don’t forget: In the bot command menu (**What can I do?**), you must also prov
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/bots/bot-sso-example.png" alt-text="Example shows a bot with a sign-in button.":::
+:::image type="content" source="../../assets/images/bots/bot-sso-example.png" alt-text="Example shows a bot with a sign-in button." lightbox="../../assets/images/bots/bot-sso-example.png":::
 
 ### Tours
 
@@ -101,7 +101,7 @@ In a personal app, a carousel can provide an effective overview of your bot and 
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="Example shows a bot tour in a one-on-one chat.":::
+:::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="Example shows a bot tour in a one-on-one chat." lightbox="../../assets/images/bots/bot-tour-personal.png":::
 
 ### Channels and group chats
 
@@ -113,7 +113,7 @@ In channels and group chats, a tour should open in a modal (also known as a [tas
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="Example shows a bot tour in a channel.":::
+:::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="Example shows a bot tour in a channel." lightbox="../../assets/images/bots/bot-tour-channel.png":::
 
 ## Chat with a bot
 
@@ -145,7 +145,7 @@ You can use bots in the following contexts:
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/bots/bot-anatomy.png" alt-text="Example shows a bot's structural anatomy.":::
+:::image type="content" source="../../assets/images/bots/bot-anatomy.png" alt-text="Example shows a bot's structural anatomy." lightbox="../../assets/images/bots/bot-anatomy.png":::
 
 |Counter|Description|
 |----------|-----------|
@@ -165,7 +165,7 @@ The list of commands should be brief. The menu is only meant to highlight your b
 
 The command menu must always be available regardless of the state of the conversation.
 
-:::image type="content" source="../../assets/images/bots/bot-command-menu.png" alt-text="Example shows a bot's command menu.":::
+:::image type="content" source="../../assets/images/bots/bot-command-menu.png" alt-text="Example shows a bot's command menu." lightbox="../../assets/images/bots/bot-command-menu.png":::
 
 ## Understand what people are saying
 
@@ -220,7 +220,7 @@ Bots can deliver an exact match to a query or a group of related matches to help
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="Example shows a simple query interaction with a bot.":::
+:::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="Example shows a simple query interaction with a bot." lightbox="../../assets/images/bots/bot-simple-query.png":::
 
 ### Multi-turn interactions
 
@@ -234,7 +234,7 @@ In the following examples, the bot responds to each message with options for wha
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="Example shows a multi-turn interaction with a bot.":::
+:::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="Example shows a multi-turn interaction with a bot." lightbox="../../assets/images/bots/bot-multi-turn.png":::
 
 ### Reach out to users
 
@@ -254,11 +254,11 @@ Now in that channel, the user can read their message from the bot.
 
 In the following example, the user gets a toast notification that a bot messaged them in another channel.
 
-:::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="Example shows a toast of a bot proactively messaging a user from another channel.":::
+:::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="Example shows a toast of a bot proactively messaging a user from another channel." lightbox="../../assets/images/bots/bot-proactive-message-toast.png":::
 
 Now in that channel, the user can read their message from the bot.
 
-:::image type="content" source="../../assets/images/bots/bot-proactive-message.png" alt-text="Example shows the user looking at the bot's proactive message.":::
+:::image type="content" source="../../assets/images/bots/bot-proactive-message.png" alt-text="Example shows the user looking at the bot's proactive message." lightbox="../../assets/images/bots/bot-proactive-message.png":::
 
 ### Use tabs with bots
 
@@ -270,13 +270,13 @@ In personal apps, a tab can complement what your bot can do. For example, if you
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="Example shows how a tab can help organize bot content.":::
+:::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="Example shows how a tab can help organize bot content." lightbox="../../assets/images/bots/bot-with-tab.png":::
 
 ## Manage a bot
 
 Users should be able to change a bot's settings. You can provide this functionality with bot commands, but it's usually more efficient to include all settings in a [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) (as shown in the following example).
 
-:::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="Example shows a task module for configuring a bot's settings.":::
+:::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="Example shows a task module for configuring a bot's settings." lightbox="../../assets/images/bots/manage-bot-task-module.png":::
 
 ## Best practices
 
