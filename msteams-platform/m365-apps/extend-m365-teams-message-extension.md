@@ -92,8 +92,8 @@ You have two options for updating your app manifest:
 
 # [Teams Toolkit](#tab/manifest-teams-toolkit)
 
-1. Open the command palette: `Ctrl+Shift+P`.
-1. Run the `Teams: Upgrade Teams manifest` command and select your app manifest file. Changes are made in place.
+1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
+1. Run the `Teams: Upgrade Teams manifest` command and select your app manifest file. Your app manifest files is updated with the latest changes.
 
 # [Manual steps](#tab/manifest-manual)
 
@@ -155,7 +155,7 @@ Azure Active Directory (AD) single sign-on (SSO) for message extensions works th
 
 The final step is to sideload your updated message extension ([app package](/microsoftteams/platform/concepts/build-and-test/apps-package)) into Teams. After you complete, message extension appears in your installed *Apps* from the compose message area.
 
-1. Package your Teams application (manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you used Teams Toolkit to create your app, you can easily do this using the **Zip Teams App Package** option in the **UTILITY** section of Teams Toolkit. Select the `manifest.json` file for your app and the appropriate environment.
+1. Package your Teams application (manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you use Teams Toolkit to create your app, you can easily do this using the **Zip Teams App Package** option in the **UTILITY** section of Teams Toolkit. Select the `manifest.json` file for your app and the appropriate environment.
 
     :::image type="content" source="images/toolkit-zip-teams-app-package.png" alt-text="The screenshot is an example that shows Zip Teams metadata package option in Teams Toolkit extension for Visual Studio Code.":::
 
@@ -165,7 +165,7 @@ The final step is to sideload your updated message extension ([app package](/mic
 
     :::image type="content" source="~/assets/images/teams-manage-your-apps.png" alt-text="The screenshot is an example that shows the Upload an app option.":::
 
-1. Choose the **Upload a custom app** option, select your app package, and install (*Add*) it to your Teams client.
+1. Choose the **Upload a custom app** option, select your app package, and install (**Add**) it to your Teams client.
 
     :::image type="content" source="~/assets/images/teams-upload-custom-app.png" alt-text="The screenshot is an example that shows the Upload a customized app option in Teams.":::
 
