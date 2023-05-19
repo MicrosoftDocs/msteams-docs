@@ -589,7 +589,7 @@ Upgrade the Teams JavaScript client SDK to (@microsoft/teams-js": "^2.0.0") to r
 </details>
 <br>
 <details> 
-<summary>Which tab gets pinned if both configurable tab and personal (static) tab are defined in app manifest for a specific scope?</summary>
+<summary>Which tab gets pinned if both configurable tab and personal (static) tab are defined in the app manifest for a specific scope?</summary>
 
 <br>
 If you have both configurable tab and personal (static) tab defined in your app manifest for a specific scope, Teams pins the personal (static) tab by default.
