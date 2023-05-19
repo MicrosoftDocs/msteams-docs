@@ -16,7 +16,7 @@ Use standard Teams colors, which are designed to meet Web Content Accessibility 
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\colors-guideline-1.png" alt-text="Example shows the guideline to add colors when necessary.":::
+:::image type="content" source="../../assets/images/design-guidelines/colors-guideline-1.png" alt-text="Example shows the guideline to add colors when necessary.":::
 
 ##### Add colors when necessary
 
@@ -24,7 +24,7 @@ Start from a white canvas and add colors only if needed. Avoid using colors to p
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\colors-guideline-2.png" alt-text="Example shows the guideline to put accessibility first.":::
+:::image type="content" source="../../assets/images/design-guidelines/colors-guideline-2.png" alt-text="Example shows the guideline to put accessibility first.":::
 
 ##### Put accessibility first
 
@@ -32,7 +32,7 @@ Always aim to present app content with all user needs and preferences in mind. T
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\colors-guideline-3.png" alt-text="Example shows the guideline to use colors consistently. ":::
+:::image type="content" source="../../assets/images/design-guidelines/colors-guideline-3.png" alt-text="Example shows the guideline to use colors consistently. ":::
 
 ##### Use colors consistently
 
@@ -78,7 +78,7 @@ The following token values are for the default (light) theme:
 
 ##### Secondary colors
 
-:::image type="content" source="../..\assets\images\design-guidelines\secondary-color.png" alt-text="Example shows the application of secondary colors.":::
+:::image type="content" source="../../assets/images/design-guidelines/secondary-color.png" alt-text="Example shows the application of secondary colors.":::
 
 |Counter|Description|
 |----------|-----------|
@@ -89,7 +89,7 @@ The following token values are for the default (light) theme:
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\color-purpose-do.png" alt-text="Example shows the use of colors with purpose.":::
+:::image type="content" source="../../assets/images/design-guidelines/color-purpose-do.png" alt-text="Example shows the use of colors with purpose.":::
 
 #### Do: Use colors with purpose
 
@@ -97,7 +97,7 @@ Colors must be used for highlighting functionality, defining hierarchy, and conv
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\natural-color-pallette.png" alt-text="Example shows the use of natural color palette.":::
+:::image type="content" source="../../assets/images/design-guidelines/natural-color-pallette.png" alt-text="Example shows the use of natural color palette.":::
 
 #### Do: Use the neutral color palette to create depth
 
@@ -108,7 +108,7 @@ Always use the neutral, gray scale color palette provided in this kit as the bas
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\hero-card.png" alt-text="Example shows a hero card to indicate wrong color usage":::
+:::image type="content" source="../../assets/images/design-guidelines/hero-card.png" alt-text="Example shows a hero card to indicate wrong color usage":::
 
 #### Don’t: Use color for branding only
 
@@ -116,7 +116,7 @@ Don’t use colors just for branding purposes or visual delight. Avoid using col
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\light-dark-theme-dont.png" alt-text="Example shows an example of different shades of gray for light and dark theme.":::
+:::image type="content" source="../../assets/images/design-guidelines/light-dark-theme-dont.png" alt-text="Example shows an example of different shades of gray for light and dark theme.":::
 
 #### Don’t: Get too complicated
 

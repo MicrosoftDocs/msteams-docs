@@ -18,7 +18,7 @@ When submitting your app package, include two PNG versions of the app icon, a co
 
 The icons are intended to create a uniform layout. These guidelines helps you create your app icon for submission.
 
-:::image type="content" source="../..\assets\images\design-guidelines\app-icon-balanced-layout.png" alt-text="Example shows the uniform layout for app icons.":::
+:::image type="content" source="../../assets/images/design-guidelines/app-icon-balanced-layout.png" alt-text="Example shows the uniform layout for app icons.":::
 
 ### Creating your assets
 
@@ -56,33 +56,33 @@ Refer this list for content areas where your icon shows in the product, dependin
 
 ### Personal app
 
-:::image type="content" source="../..\assets\images\design-guidelines\app-icon-personal-app.png" alt-text="Example shows the app icon in personal app.":::
+:::image type="content" source="../../assets/images/design-guidelines/app-icon-personal-app.png" alt-text="Example shows the app icon in personal app.":::
 
 ### App flyout
 
-:::image type="content" source="../..\assets\images\design-guidelines\app-icon-app-flyout.png" alt-text="Example shows app icon in app flyout.":::
+:::image type="content" source="../../assets/images/design-guidelines/app-icon-app-flyout.png" alt-text="Example shows app icon in app flyout.":::
 
 ### Bot (channel view)
 
-:::image type="content" source="../..\assets\images\design-guidelines\app-icon-bot-channel-view.png" alt-text="Example shows an app icon in channel view of bot.":::
+:::image type="content" source="../../assets/images/design-guidelines/app-icon-bot-channel-view.png" alt-text="Example shows an app icon in channel view of bot.":::
 
 ### Message extension flyout
 
-:::image type="content" source="../..\assets\images\design-guidelines\app-icon-message-extension.png" alt-text="Example shows an app icon in message extension flyout.":::
+:::image type="content" source="../../assets/images/design-guidelines/app-icon-message-extension.png" alt-text="Example shows an app icon in message extension flyout.":::
 
 ### Meeting apps flyout
 
-:::image type="content" source="../..\assets\images\design-guidelines\app-icon-meeting-apps.png" alt-text="Example shows an app icon in meeting app flyout.":::
+:::image type="content" source="../../assets/images/design-guidelines/app-icon-meeting-apps.png" alt-text="Example shows an app icon in meeting app flyout.":::
 
 ### Meeting U-bar
 
-:::image type="content" source="../..\assets\images\design-guidelines\app-icon-meeting-u-bar.png" alt-text="Example shows an app icon in meeting U-bar.":::
+:::image type="content" source="../../assets/images/design-guidelines/app-icon-meeting-u-bar.png" alt-text="Example shows an app icon in meeting U-bar.":::
 
 ## Best practices
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\safe-area-do.png" alt-text="Example shows a logo within the safe area.":::
+:::image type="content" source="../../assets/images/design-guidelines/safe-area-do.png" alt-text="Example shows a logo within the safe area.":::
 
 #### Do: Follow the recommendation for safe area (96 x 96)
 
@@ -90,7 +90,7 @@ It is recommended that if you have a logo, keep it within the 96 x 96 safe area 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\safe-area-dont.png" alt-text="Example shows a logo that is not within the safe area.":::
+:::image type="content" source="../../assets/images/design-guidelines/safe-area-dont.png" alt-text="Example shows a logo that is not within the safe area.":::
 
 #### Don’t: Make the icon bigger than the safe area
 
@@ -101,7 +101,7 @@ Here is an example of a logo inside of the PNG format icon that is not within th
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\round-corners-do.png" alt-text="Example shows an icon with full bleed.":::
+:::image type="content" source="../../assets/images/design-guidelines/round-corners-do.png" alt-text="Example shows an icon with full bleed.":::
 
 #### Do: Provide full bleed for rounded corners
 
@@ -109,7 +109,7 @@ If you have a full bleed image, just upload a square PNG format at 192 x 192. Th
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\round-corners-dont.png" alt-text="Example shows an icon with rounder corners.":::
+:::image type="content" source="../../assets/images/design-guidelines/round-corners-dont.png" alt-text="Example shows an icon with rounder corners.":::
 
 #### Don’t: Round the corners of your icon
 
@@ -120,7 +120,7 @@ Don’t round the corners. Submit at perfect square at 192 x 192, the corners ar
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\icon-without-border-do.png" alt-text="Example shows an upload of icon without border.":::
+:::image type="content" source="../../assets/images/design-guidelines/icon-without-border-do.png" alt-text="Example shows an upload of icon without border.":::
 
 #### Do: Upload an icon without a border
 
@@ -128,7 +128,7 @@ Border is added automatically. In this case just upload your PNG format without 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\icon-without-border-dont.png" alt-text="Example shows an upload of icon with a border.":::
+:::image type="content" source="../../assets/images/design-guidelines/icon-without-border-dont.png" alt-text="Example shows an upload of icon with a border.":::
 
 #### Don’t: Add a border
 
@@ -139,7 +139,7 @@ Borders are added dynamically. If you include a border in your PNG format, it'll
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\icon-contrast-do.png" alt-text="Example shows an app icon with enough contrast.":::
+:::image type="content" source="../../assets/images/design-guidelines/icon-contrast-do.png" alt-text="Example shows an app icon with enough contrast.":::
 
 #### Do: Provide enough contrast
 
@@ -147,7 +147,7 @@ Consider your icon to have enough contrast against the background. It's recommen
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\icon-contrast-dont.png" alt-text="Example shows an app icon which is faded.":::
+:::image type="content" source="../../assets/images/design-guidelines/icon-contrast-dont.png" alt-text="Example shows an app icon which is faded.":::
 
 #### Don’t: Fade the icon
 
@@ -158,7 +158,7 @@ Avoid low contrast for your icons. Ensure that the background and icon you use i
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\icon-elevate-brand-do.png" alt-text="Example shows an app icon with your brand elevated.":::
+:::image type="content" source="../../assets/images/design-guidelines/icon-elevate-brand-do.png" alt-text="Example shows an app icon with your brand elevated.":::
 
 #### Do: Elevate your brand
 
@@ -166,7 +166,7 @@ Focus on your brand by using a full flat color as background.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\icon-elevate-brand-dont.png" alt-text="Example shows an app icon with your brand in a circle.":::
+:::image type="content" source="../../assets/images/design-guidelines/icon-elevate-brand-dont.png" alt-text="Example shows an app icon with your brand in a circle.":::
 
 #### Don’t: Avoid placing your brand icon in a circle
 
@@ -177,7 +177,7 @@ Elevate your brand by keeping the brand icon within 96 x 96 safe area.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\icon-abbreviate-do.png" alt-text="Example shows an app icon with abbreviation..":::
+:::image type="content" source="../../assets/images/design-guidelines/icon-abbreviate-do.png" alt-text="Example shows an app icon with abbreviation..":::
 
 #### Do: Abbreviate long words in the app icon
 
@@ -185,7 +185,7 @@ If you have a long app name, try to abbreviate so that it’s easier to read whe
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\icon-abbreviate-dont.png" alt-text="Example shows an app icon with multiple words.":::
+:::image type="content" source="../../assets/images/design-guidelines/icon-abbreviate-dont.png" alt-text="Example shows an app icon with multiple words.":::
 
 #### Don’t: Include multiple words in app icon
 
@@ -196,7 +196,7 @@ Avoid using multiple words on the icon. It is impossible to read the text when t
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\icon-balance-do.png "alt-text="Example shows a balanced app icon.":::
+:::image type="content" source="../../assets/images/design-guidelines/icon-balance-do.png "alt-text="Example shows a balanced app icon.":::
 
 #### Do: Create balance (96 x 96)
 
@@ -204,7 +204,7 @@ Elevate your brand by keeping balance. Stick to the 96 x 96 safe area for a sens
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\icon-balance-dont.png" alt-text="Example shows a skewed or stretched app icon.":::
+:::image type="content" source="../../assets/images/design-guidelines/icon-balance-dont.png" alt-text="Example shows a skewed or stretched app icon.":::
 
 #### Don’t: Skew or stretch your icon
 

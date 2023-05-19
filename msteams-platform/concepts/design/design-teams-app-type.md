@@ -14,7 +14,7 @@ This article provides how to incorporate standard Teams typography in your app d
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\type-web-desktop-app-font.png" alt-text="Example shows the font for web and desktop app.":::
+:::image type="content" source="../../assets/images/design-guidelines/type-web-desktop-app-font.png" alt-text="Example shows the font for web and desktop app.":::
 
 ##### Web and desktop app
 
@@ -22,7 +22,7 @@ Teams uses Segoe UI for its type ramp to optimize hierarchy and readability.​
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\type-android-font.png" alt-text="Example shows the font for android app.":::
+:::image type="content" source="../../assets/images/design-guidelines/type-android-font.png" alt-text="Example shows the font for android app.":::
 
 ##### Android
 
@@ -30,7 +30,7 @@ The Teams Android app uses Roboto typeface. For more information, see [Android g
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\type-ios-font.png" alt-text="Example shows the font for iOS app. ":::
+:::image type="content" source="../../assets/images/design-guidelines/type-ios-font.png" alt-text="Example shows the font for iOS app. ":::
 
 ##### iOS
 
@@ -49,7 +49,7 @@ Teams uses seven styles that range from level-one titles to captions.
 
 Font weights are for identifying specific elements and conveying states. ​Don’t use bold to create hierarchy in your text. Instead, use a different shade of grey and the SemiBold weight.
 
-:::image type="content" source="../..\assets\images\design-guidelines\type-font-weight.png" alt-text="Example shows the font weight for Teams use. ":::
+:::image type="content" source="../../assets/images/design-guidelines/type-font-weight.png" alt-text="Example shows the font weight for Teams use. ":::
 
 ## Usage
 

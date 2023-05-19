@@ -111,7 +111,7 @@ It is recommended to test up to 200% zoom.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets\images/design-guidelines/text-colors-do.png" alt-text="Example shows how the text should be visible and accessible for users.":::
+:::image type="content" source="../../assets/images/design-guidelines/text-colors-do.png" alt-text="Example shows how the text should be visible and accessible for users.":::
 
 #### Do: Text and colors for accessibility
 

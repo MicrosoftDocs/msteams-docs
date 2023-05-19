@@ -10,19 +10,19 @@ ms.topic: Shape and elevation
 
 This article provides how to use shape and elevation to create additional hierarchy in your app.
 
-:::image type="content" source="../..\assets\images\design-guidelines\shape-elevation.png" alt-text="Example shows shape and elevation to create additional hierarchy in your app.":::
+:::image type="content" source="../../assets/images/design-guidelines/shape-elevation.png" alt-text="Example shows shape and elevation to create additional hierarchy in your app.":::
 
 ## Shape and form
 
 Depending on the component, Teams uses corner radiuses of 0 pixels, 4 pixels, and fully rounded. Most Teams components, including buttons, have a 4-pixel corner radius. Key calls to action might use different shapes, such as rounded floating action buttons. In cases where you must alter a Teams button shape, follow the sizing and spacing guidelines to maintain a consistent experience.
 
-:::image type="content" source="../..\assets\images\design-guidelines\shape-form.png" alt-text="Example shows the guidelines for shape and form for your app components.":::
+:::image type="content" source="../../assets/images/design-guidelines/shape-form.png" alt-text="Example shows the guidelines for shape and form for your app components.":::
 
 ## Best practices
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\shape-change-dont.png" alt-text="Example shows the change of basic UI component's shape.":::
+:::image type="content" source="../../assets/images/design-guidelines/shape-change-dont.png" alt-text="Example shows the change of basic UI component's shape.":::
 
 ##### Don’t: Change the shape of basic UI components
 
@@ -30,7 +30,7 @@ Avoid modifying the shape of basic UI components as much as possible. Try follow
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../..\assets\images\design-guidelines\shadow-level-dont.png" alt-text="Example shows the modification or addition to the shadow level.":::
+:::image type="content" source="../../assets/images/design-guidelines/shadow-level-dont.png" alt-text="Example shows the modification or addition to the shadow level.":::
 
 ##### Don’t: Modifying or adding to the shadow levels
 
