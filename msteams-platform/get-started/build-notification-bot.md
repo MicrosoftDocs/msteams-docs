@@ -80,7 +80,7 @@ To create a Teams notification bot with GitHub Codespaces, follow the steps:
 
 # [Step-by-step guide](#tab/step-by-step-guide)
 
-If you would like to learn how to start a project with Teams Toolkit from scratch, let's go through the step-by-step guide.
+If you would want to learn how to start a project with Teams Toolkit from scratch, let's go through the step-by-step guide.
 
 Unlike GitHub Codespaces, you need to set up your development environment. Let's start building your notification bot app.
 
