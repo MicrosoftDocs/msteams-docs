@@ -931,7 +931,7 @@ To build and run your app:
 
 ## Preview your first Teams tab app
 
-You have learned to create, build, and run Teams app with tab capability. The following final steps are to deploy your app on Azure and Preview in Teams:
+You've learned to create, build, and run Teams app with tab capability. The following final steps are to deploy your app on Azure and Preview in Teams:
 
 1. [Provision your tab app in the cloud](#to-provision-your-tab-app-in-the-cloud): You can provision your tab app in the cloud.
 1. [Deploy your tab app to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud.
@@ -1021,9 +1021,9 @@ You have learned to create, build, and run Teams app with tab capability. The fo
 
 ## Congratulations
 
-You have done it!
+You've done it!
 
-You have completed the tutorial to build a tab app with Blazor.
+You've completed the tutorial to build a tab app with Blazor.
 
 ::: zone-end
 
