@@ -51,7 +51,7 @@ First, you must decide the location from where your action command must be invok
    >
    > * The initial invoke to your bot includes a JSON object containing the message from which it was invoked. You can process the message before presenting them with a task module.
    >
-   > * When the user clicks on the three dots, an overflow menu is displayed. However, by default, message actions for apps created by developers for your organization or third-party apps aren't displayed. After the user selects **More Actions**, they can see the message actions and select them. The respective message action is displayed in the overflow menu by default for next time. In summary, the overflow menu displays the three most recent message actions only, and you can't pin a message action to be displayed by default.
+   > * When the user select ellipses …, an overflow menu is displayed. However, by default, message actions for apps created by you for your organization or third-party apps aren't displayed. After the user selects More Actions, they can see the message actions and select them. The respective message action is displayed in the overflow menu by default. The overflow menu displays the three most recent message actions. By default, you can't pin the message action to be displayed.
 
 The following image displays the locations from where action command is invoked:
 
