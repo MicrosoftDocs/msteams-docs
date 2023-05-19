@@ -75,7 +75,7 @@ To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-
 1. Select preferred programming language.
 1. Select a location on your local machine for the workspace folder and enter your application name.
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
-1. Enter **Teams: Provision**, to create the Teams app, few resources such as Azure App Service, App Service plan, Azure Bot, and Managed Identity in your Azure account.
+1. Enter **Teams: Provision**, to create the Teams app. Few resources under **Teams: Provision** such as Azure App Service, App Service plan, Azure Bot, and Managed Identity in your Azure account.
 1. Select a subscription and a resource group.
 1. Select **Provision**. Alternatively, you can select **Provision** under **LIFECYCLE** section.
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
