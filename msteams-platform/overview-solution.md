@@ -44,7 +44,7 @@ Teams offers these and many more capabilities to bring your users a feature-rich
 
 Choose to customize your app with functionalities, such as user authentication and tools, such as Microsoft Graph and Developer Portal.
 
-Let's go through Teams Developer Documentation based on your requirement for building Teams app:
+Let's go through Teams Developer Documentation based on your requirements for building Teams app:
 
 | What do you want? | Where to go |
 | --------| --------|
