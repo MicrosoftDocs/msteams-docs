@@ -10,7 +10,7 @@ ms.localizationpriority: high
 
 > [!NOTE]
 >
-> * If you've connected your message extension bot to an **Outlook** channel, you must to migrate to the **Microsoft 365** channel.
+> If you've connected your message extension bot to an **Outlook** channel, you must to migrate to the **Microsoft 365** channel.
 
 Search-based [message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) allow users to search an external system and share results through the compose message area of the Microsoft Teams client. You can now bring production search-based Teams message extensions to preview audiences in Outlook for Windows desktop and outlook.com by [extending your Teams apps across Microsoft 365](overview.md).
 
