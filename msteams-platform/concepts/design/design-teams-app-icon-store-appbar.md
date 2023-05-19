@@ -8,7 +8,7 @@ ms.topic: App icon
 ---
 # Microsoft Teams app icon for store and app bar
 
-This article provides the guidelines for creating icons in your app ecosystem to help designers and developers submit the correct application icon. Following these guidelines creates uniformity and balance in your app ecosystem and emphasizes the artwork of your app icon.
+This article provides the guidelines for creating icons in your app ecosystem to help designers and you submit the correct application icon. Following these guidelines creates uniformity and balance in your app ecosystem and emphasizes the artwork of your app icon.
 
 ## App icon
 
@@ -113,7 +113,7 @@ If you have a full bleed image, just upload a square PNG format at 192 x 192. Th
 
 #### Don’t: Round the corners of your icon
 
-Don’t round the corners. Just submit at perfect square at 192 x 192, the corners are rounded dynamically.
+Don’t round the corners. Submit at perfect square at 192 x 192, the corners are rounded dynamically.
 
    :::column-end:::
 :::row-end:::
@@ -143,7 +143,7 @@ Borders are added dynamically. If you include a border in your PNG format, it'll
 
 #### Do: Provide enough contrast
 
-Please consider your icon to have enough contrast against the background. It's recommended that a ratio of 4.5:1 for best accessibility.
+Consider your icon to have enough contrast against the background. It's recommended that a ratio of 4.5:1 for best accessibility.
 
    :::column-end:::
    :::column span="":::

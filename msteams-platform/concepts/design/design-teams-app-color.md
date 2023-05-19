@@ -36,20 +36,22 @@ Always aim to present app content with all user needs and preferences in mind. T
 
 ##### Use colors consistently
 
-Don’t confuse by using colors inconsistently. Make use of Teams core colors and secondary colors, which convey activity, errors, and other common states.
+Don’t confuse by using colors inconsistently. Use Teams core colors and secondary colors, which convey activity, errors, and other common states.
 
    :::column-end:::
 :::row-end:::
 
 ### Primary colors and color tokens
 
-Each Teams theme has its own color scheme. To handle theme changes automatically, you can specify color tokens in your design. The following token values are for the default (light) theme.
+Each Teams theme has its own color scheme. To handle theme changes automatically, you can specify color tokens in your design.
 
 Learn how to [use color tokens in your Teams app project](https://react.fluentui.dev/?path=/docs/theme-colors--page).
 
 ##### Example for design with tokens
 
 :::image type="content" source="../../assets/images/design-guidelines/colors-design-token-example.png" alt-text="Example shows the light theme color tokens." lightbox="../../assets/images/design-guidelines/colors-design-token-example.png":::
+
+The following token values are for the default (light) theme:
 
 |Counter|Description|
 |----------|-----------|

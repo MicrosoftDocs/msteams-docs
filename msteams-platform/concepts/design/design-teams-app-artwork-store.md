@@ -12,7 +12,7 @@ This article provides guidelines and templates for displaying app artwork and de
 
 ## App image templates
 
-Choose the following templates that helps you show customers your app images in an appealing way. Use the templates to highlight key screens from your app and change the text to emphasize features. It's recommended to change the background color to enhance your brand.
+Select one of the following templates that helps you show customers your app images in an appealing way. Use the templates to highlight key screens from your app and change the text to emphasize features. It's recommended to change the background color to enhance your brand.
 
 Use Size 1 for single column images and Size 2 for double column images.
 
