@@ -12,7 +12,7 @@ The notification bot proactively sends messages in Teams channel or group chat o
 
 In this tutorial, get familiarized with a notification bot app in one of the following ways:
 
-* **GitHub Codespaces**: The codespace instance allows you to experience a Teams app instantaneously. It opens Visual Studio Code, where the Teams Toolkit extension, the app source code, and all the dependencies are pre-packaged for you.
+* **GitHub Codespaces**: The codespace instance allows you to experience a Teams app instantaneously. It opens Visual Studio Code (VS Code), where the Teams Toolkit extension, the app source code, and all the dependencies are pre-packaged for you.
 * **Step-by-step guide**: Allows you to create a Teams app from scratch with all development environment setup.
 
 # [GitHub Codespaces](#tab/teamstoolkitcodespaces)
@@ -42,7 +42,7 @@ To create a Teams notification bot with GitHub Codespaces, follow the steps:
 
    :::image type="content" source="../assets/images/get-started/building-codespace.png" alt-text="Screenshot shows you the codespace building your notification bot.":::
 
-   Teams Toolkit prepares the notification bot project for you and opens it in Visual Studio Code in the browser. Teams Toolkit icon appears in the activity bar of Visual Studio Code.
+   Teams Toolkit prepares the notification bot project for you and opens it in VS Code in the browser. Teams Toolkit icon appears in the activity bar of VS Code.
 
 1. Select **Sign in to your Microsoft 365** and **Sign in to Azure** to sign in with your Microsoft 365 account.
 

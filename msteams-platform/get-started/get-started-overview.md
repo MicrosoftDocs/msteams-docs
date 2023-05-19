@@ -46,7 +46,7 @@ Based on the capabilities you want for your app, choose an appropriate developme
 | App capabilities | Tabs | Bots | Message extensions |
 |--------|-------------|--------|--------|
 | **User interactions** | A full-screen embedded web experience. | A chat bot that converses with members. | Shortcuts for inserting external content into a conversation or taking action on messages. |
-| **Recommended tools** | Microsoft Visual Studio Code with Teams Toolkit extension, or TeamsFx CLI if you prefer using CLI | Visual Studio Code with Teams Toolkit extension, or TeamsFx CLI | Visual Studio Code with Teams Toolkit extension, or TeamsFx CLI |
+| **Recommended tools** | Microsoft Visual Studio Code (VS Code) with Teams Toolkit extension, or TeamsFx CLI if you prefer using CLI | VS Code with Teams Toolkit extension, or TeamsFx CLI | VS Code with Teams Toolkit extension, or TeamsFx CLI |
 | **SDKs** | TeamsFx SDK for core libs and Teams JavaScript client library for UI functionalities | TeamsFx SDK and Bot Framework SDK | TeamsFx SDK and Bot Framework SDK |
 | **Technology stacks or Languages** | Web technology in general, HTML, CSS, and JavaScript (incl. React). | Node.js, C#, Java, and Python. | Node.js, C#, Java, and Python. |
 
