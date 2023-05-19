@@ -102,7 +102,7 @@ Not unlike the design phase, you can use these Fluent UI components in your app 
 > If you notice something missing or have an idea for a template, consider contributing to the Teams UI Library repo.
 
 > [!div class="nextstepaction"]
-> [Get the library (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
+> [Get the library (Fluent UI)](https://react.fluentui.dev/?path=/docs/)
 
 ## Review design resources
 

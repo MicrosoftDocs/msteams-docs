@@ -25,28 +25,17 @@
   - name: Overview
     href: get-started/get-started-overview.md
     displayName: First Teams app, Python, .NET, Java, Node.js
-  - name: Build your first tab app using JavaScript
-    href: sbs-gs-javascript.yml
-  - name: Build your first bot app using JavaScript
-    href: sbs-gs-bot.yml
-  - name: Build your first message extension app using JavaScript
-    href: sbs-gs-msgext.yml
-  - name: Build your first app using Blazor
-    href: sbs-gs-blazorupdate.yml
-  - name: Build your first app using SPFx
-    href: sbs-gs-spfx.yml
-  - name: Build your first app using C# or .NET
-    href: sbs-gs-csharp.yml
-  - name: Build your first app using Node.js
-    href: sbs-gs-nodejs.yml
-  - name: Build notification bot with JavaScript
-    href: sbs-gs-notificationbot.yml
-  - name: Build command bot with JavaScript
-    href: sbs-gs-commandbot.yml 
-  - name: Build workflow bot
-    href: sbs-gs-workflow-bot.yml
-  - name: Code samples
-    href: https://github.com/OfficeDev/Microsoft-Teams-Samples
+  - name: Build your first tab app
+    href: get-started/build-basic-tab-app.md
+  - name: Build notification bot
+    href: get-started/build-notification-bot.md
+  - name: Build message extension
+    href: get-started/build-message-extension.md
+  - name: Teams app tutorials and code samples
+    href: get-started/teams-toolkit-tutorial.md
+  - name: Choose what suits you
+    href: get-started/choose-what-suits-you.md
+ 
 - name: Plan your app
   items:
   - name: Overview
@@ -150,7 +139,9 @@
           href: toolkit/add-API-connection.md
           displayName: endpoint
         - name: Add single sign-on to Teams app
-          href: toolkit/add-single-sign-on.md  
+          href: toolkit/add-single-sign-on.md
+        - name: Using existing Azure AD app in TeamsFx project
+          href: toolkit/use-existing-aad-app.md  
       - name: Customize Manifest
         items:
         - name: Customize Teams app Manifest
@@ -177,8 +168,6 @@
           href: toolkit/TeamsFx-collaboration.md
         - name: Set up CI/CD pipelines
           href: toolkit/use-CICD-template.md  
-        - name: Sideload and test app in Teams environment
-          href: toolkit/sideload-and-test-app.md 
         - name: Test app behavior in different environment
           href: toolkit/test-app-behavior.md
     - name: Publish your Teams app
@@ -188,8 +177,82 @@
         displayName: license
       - name: Publish Teams apps using Developer Portal 
         href: toolkit/publish-your-teams-apps-using-developer-portal.md
+    - name: Teams app tutorials and code samples
+      href: toolkit/teams-toolkit-tutorial.md
     - name: FAQ
       href: toolkit/faq.md  
+  - name: Teams Toolkit v4
+    items:
+    - name: Teams Toolkit v4 overview
+      href: toolkit/toolkit-v4/teams-toolkit-fundamentals-v4.md
+    - name: Install Teams Toolkit v4
+      href: toolkit/toolkit-v4/install-Teams-Toolkit-v4.md
+    - name: Explore Teams Toolkit v4
+      href: toolkit/toolkit-v4/explore-Teams-Toolkit-v4.md
+    - name: Prepare to build apps using Teams Toolkit v4
+      href: toolkit/toolkit-v4/build-environments-v4.md
+      items:
+      - name: Prerequisites for creating your Teams app
+        href: toolkit/toolkit-v4/tools-prerequisites-v4.md
+        displayName: Accounts to build your Teams app    
+      - name: Create a new Teams app project
+        href: toolkit/toolkit-v4/create-new-project-v4.md
+      - name: Develop your Teams app
+        items: 
+        - name: Add and manage environment
+          href: toolkit/toolkit-v4/TeamsFx-multi-env-v4.md
+        - name: Create multi capability app
+          href: toolkit/toolkit-v4/add-capability-v4.md
+          displayName: Multiple capabilities app 
+        - name: Create capability based cloud resources
+          href: toolkit/toolkit-v4/add-resource-v4.md  
+          displayName: application 
+        - name: Integrate existing third party APIs
+          href: toolkit/toolkit-v4/add-API-connection-v4.md
+          displayName: endpoint
+        - name: Add single sign-on to Teams app
+          href: toolkit/toolkit-v4/add-single-sign-on-v4.md  
+      - name: Customize Manifest
+        items:
+        - name: Customize Teams app Manifest
+          href: toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-v4.md
+        - name: Edit Azure AD manifest
+          href: toolkit/toolkit-v4/AAD-manifest-customization-v4.md
+      - name: Debug your Teams app
+        items: 
+        - name: Overview
+          href: toolkit/toolkit-v4/debug-overview-v4.md
+        - name: Debug your Teams app locally
+          href: toolkit/toolkit-v4/debug-local-v4.md
+        - name: Debug background process
+          href: toolkit/toolkit-v4/debug-background-process-v4.md
+      - name: Host your app on Azure
+        items:    
+        - name: Provision cloud resources
+          href: toolkit/toolkit-v4/provision-v4.md
+        - name: Deploy Teams app to the cloud
+          href: toolkit/toolkit-v4/deploy-v4.md
+      - name: Test your Teams app
+        items: 
+        - name: Integrate and collaborate
+          href: toolkit/toolkit-v4/TeamsFx-collaboration-v4.md
+        - name: Set up CI/CD pipelines
+          href: toolkit/toolkit-v4/use-CICD-template-v4.md  
+        - name: Sideload and test app in Teams environment
+          href: toolkit/toolkit-v4/sideload-and-test-app-v4.md 
+        - name: Test app behavior in different environment
+          href: toolkit/toolkit-v4/test-app-behavior-v4.md
+    - name: Publish your Teams app
+      items:
+      - name: Publish Teams apps using Teams Toolkit v4
+        href: toolkit/toolkit-v4/publish-v4.md
+        displayName: license
+      - name: Publish Teams apps using Developer Portal 
+        href: toolkit/toolkit-v4/publish-your-teams-apps-using-developer-portal-v4.md
+    - name: Teams app tutorials and code samples v4
+      href: toolkit/toolkit-v4/teams-toolkit-tutorial-v4.md
+    - name: FAQ
+      href: toolkit/toolkit-v4/faq-v4.md  
   - name: TeamsFx SDK
     href: toolkit/TeamsFx-SDK.md
     displayName: getUserinfo    
@@ -671,16 +734,21 @@
     displayName: Application, Outlook, and Office as application hosts, extend 
   - name: Prerequisites
     href: m365-apps/prerequisites.md
-  - name: Enable a Teams personal tab for Microsoft 365
-    href: m365-apps/extend-m365-teams-personal-tab.md
-    displayName: Microsoft 365, Office 365
-  - name: Enable a Teams message extension for Outlook
-    href: m365-apps/extend-m365-teams-message-extension.md
-
-    displayName: mail, Microsoft 365, Office 365
-  - name: Decide the app type for your scenario
-    href: m365-apps/me-or-outlook-add-in.md
-    displayName: mail, Microsoft 365, Office 365, OUtlook add-in, message extension
+  - name: Teams tabs in Microsoft 365 and Outlook
+    items:
+    - name: Enable a Teams personal tab for Microsoft 365
+      href: m365-apps/extend-m365-teams-personal-tab.md
+      displayName: Microsoft 365, Office 365
+    - name: TeamsJS capability support across Microsoft 365
+      href: m365-apps/teamsjs-support-m365.md
+  - name: Teams message extensions in Outlook
+    items:
+      - name: Enable a Teams message extension for Outlook
+        href: m365-apps/extend-m365-teams-message-extension.md
+        displayName: mail, Microsoft 365, Office 365
+      - name: Teams message extension vs. Outlook add-in
+        href: m365-apps/me-or-outlook-add-in.md
+        displayName: mail, Microsoft 365, Office 365, Outlook add-in, message extension
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Teams developer documentation FAQs
@@ -754,7 +822,7 @@
       displayName: Support issues, account verification status, employee verification process, business verification process, support ticket 
     - name: Prepare your Teams store submission
       href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
-      displayName: Testing instructions, store listing, Microsoft Teams app validation tool, compile testing instructions, admin account and non admin account, preconfigured account, premium or upgraded features, tenant configuration
+      displayName: Testing instructions, store listing, Microsoft Teams app validation tool, compile testing instructions, admin account and non admin account, preconfigured account, premium or upgraded features, tenant configuration, Geo-filtering
     - name: Update Apple Developer Program Team ID
       href: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
       displayName: Enable users to install your app on Teams iOS platform, app acquisition on mobile
