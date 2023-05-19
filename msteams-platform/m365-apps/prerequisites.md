@@ -15,7 +15,6 @@ To set up your development environment:
 > [!div class="checklist"]
 >
 > * [Get Microsoft 365 Developer (Sandbox) Tenant and enable sideloading](#prepare-a-developer-tenant-for-testing)
-> * [Enroll your Microsoft 365 tenant in Microsoft 365 Targeted Releases*](#enroll-your-developer-tenant-for-microsoft-365-targeted-releases)
 > * [Install Beta Channel builds of Microsoft 365 Apps in your test environment](#install-microsoft-365-apps-in-your-test-environment)
 > * [*Optional*] [Install Teams Toolkit extension for Microsoft Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-extension)
 
@@ -43,26 +42,6 @@ You also need to enable sideloading for your tenant:
  1. In the Teams admin center, go to **Teams apps** > **Setup policies**, and then select **Global (Org-wide default) policy**.
 
  1. Turn on **Upload custom apps**, and select **Save**.
-
-## Enroll your developer tenant for Microsoft 365 Targeted Releases
-
-> [!IMPORTANT]
-> It can take up to five days after creating a [Microsoft 365 developer sandbox tenant](/office/developer-program/microsoft-365-developer-program-get-started) and enrolling in [Microsoft 365 Targeted Releases](#enroll-your-developer-tenant-for-microsoft-365-targeted-releases) for sideloaded Teams apps to appear in Outlook and Microsoft 365 app.
-
-This step is required to preview your Teams app running in Outlook (desktop and web); the Microsoft 365 app (desktop and web) supports Teams tab apps in both Standard and Targeted release channels. To enroll your test tenant for Microsoft 365 Targeted Releases:
-
-1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com) with your test tenant credentials.
-1. Go to **Settings** > **Org Settings** > **Organization profile**.
-1. Select **Release preferences**.
-1. Select any *Targeted Release* preference:
-    1. **Targeted Release for everyone**
-    1. **Targeted Release for select users**
-
-    :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="The screenshot is an example that shows the Microsoft 365 admin center 'Release preferences' menu with Targeted Release option selected.":::
-
-1. Select **Save**.
-
-For more information on Microsoft 365 release options, see [set up the Standard or Targeted Release options](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release) in *Microsoft 365 admin center help*.
 
 ## Install Microsoft 365 apps in your test environment
 
