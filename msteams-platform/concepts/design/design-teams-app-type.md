@@ -43,7 +43,7 @@ The Teams iOS app uses the SF Pro typeface. See [fluent iOS guidelines and examp
 
 Teams uses seven styles that range from level-one titles to captions.
 
-:::image type="content" source="../..\assets\images\design-guidelines\type-scale.png" alt-text="Example shows seven styles for Teams use. ":::
+:::image type="content" source="../../assets/images/design-guidelines/type-scale.png" alt-text="Example shows seven styles for Teams use." lightbox="../../assets/images/design-guidelines/type-scale.png":::
 
 ## Font weight
 
@@ -55,4 +55,4 @@ Font weights are for identifying specific elements and conveying states. ​Don
 
 Using different font sizes and weights help create hierarchy and ensure readability. However, don’t rely on just size and weight. When possible, build your hierarchy with the primary, secondary, and tertiary text colors listed below.
 
-:::image type="content" source="../..\assets\images\design-guidelines\type-usage.png" alt-text="Example shows the usage for different fonts and weight in Teams app. ":::
+:::image type="content" source="../../assets/images/design-guidelines/type-usage.png" alt-text="Example shows the usage for different fonts and weight in Teams app." lightbox="../../assets/images/design-guidelines/type-usage.png":::

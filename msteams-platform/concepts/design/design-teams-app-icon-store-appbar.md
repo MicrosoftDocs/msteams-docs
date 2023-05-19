@@ -24,7 +24,7 @@ The icons are intended to create a uniform layout. These guidelines will help yo
 
 Microsoft Teams needs three assets during app submission to generate the app icons.
 
-:::image type="content" source="../..\assets\images\design-guidelines\app-icon-assets-needed.png" alt-text="Example shows the three assets to generate app icons.":::
+:::image type="content" source="../../assets/images/design-guidelines/app-icon-assets-needed.png" alt-text="Example shows the three assets to generate app icons." lightbox="../../assets/images/design-guidelines/app-icon-assets-needed.png":::
 
 |Counter|Description|
 |----------|-----------|
@@ -38,17 +38,17 @@ The color app icon dimensions must be 192 x 192 pixels. If you have a logo icon,
 
 The submitted icon should be a full square. Teams automatically applies masking for consistent icon shapes across the app.
 
-:::image type="content" source="../..\assets\images\design-guidelines\app-icon-color-architecture.png" alt-text="Example shows the color app icon dimensions of your logo icon.":::
+:::image type="content" source="../../assets/images/design-guidelines/app-icon-color-architecture.png" alt-text="Example shows the color app icon dimensions of your logo icon." lightbox="../../assets/images/design-guidelines/app-icon-color-architecture.png":::
 
 ### Icon attributes
 
 #### Colored
 
-:::image type="content" source="../..\assets\images\design-guidelines\app-icon-color-attribute.png" alt-text="Example shows the icon attributes for a colored icon.":::
+:::image type="content" source="../../assets/images/design-guidelines/app-icon-color-attribute.png" alt-text="Example shows the icon attributes for a colored icon." lightbox="../../assets/images/design-guidelines/app-icon-color-attribute.png":::
 
 #### White background
 
-:::image type="content" source="../..\assets\images\design-guidelines\app-icon-attribute-white.png" alt-text="Example shows the color attributes for an icon with white background.":::
+:::image type="content" source="../../assets/images/design-guidelines/app-icon-attribute-white.png" alt-text="Example shows the color attributes for an icon with white background." lightbox="../../assets/images/design-guidelines/app-icon-attribute-white.png":::
 
 ## App icon utilization
 

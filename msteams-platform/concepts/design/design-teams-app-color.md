@@ -49,7 +49,7 @@ Learn how to [use color tokens in your Teams app project](https://react.fluentui
 
 ##### Example for design with tokens
 
-:::image type="content" source="../..\assets\images\design-guidelines\colors-design-token-example.png" alt-text="Example shows the light theme color tokens. ":::
+:::image type="content" source="../../assets/images/design-guidelines/colors-design-token-example.png" alt-text="Example shows the light theme color tokens." lightbox="../../assets/images/design-guidelines/colors-design-token-example.png":::
 
 |Counter|Description|
 |----------|-----------|
@@ -63,7 +63,7 @@ Learn how to [use color tokens in your Teams app project](https://react.fluentui
 
 ##### Primary color
 
-:::image type="content" source="../..\assets\images\design-guidelines\colors-primary-color-usage.png" alt-text="Example shows an app screen with primary color usage.":::
+:::image type="content" source="../../assets/images/design-guidelines/colors-primary-color-usage.png" alt-text="Example shows an app screen with primary color usage. lightbox="../../assets/images/design-guidelines/colors-primary-color-usage.png"":::
 
 |Counter|Description|
 |----------|-----------|
@@ -72,7 +72,7 @@ Learn how to [use color tokens in your Teams app project](https://react.fluentui
 
 ##### Apply the primary color
 
-:::image type="content" source="../..\assets\images\design-guidelines\colors-primary-color-apply.png" alt-text="Example shows the benefits of applying primary colors.":::
+:::image type="content" source="../../assets/images/design-guidelines/colors-primary-color-apply.png" alt-text="Example shows the benefits of applying primary colors." lightbox="../../assets/images/design-guidelines/colors-primary-color-apply.png":::
 
 ##### Secondary colors
 

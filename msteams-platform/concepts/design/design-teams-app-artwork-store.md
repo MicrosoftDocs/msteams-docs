@@ -18,15 +18,15 @@ Use Size 1 for single column images and Size 2 for double column images.
 
 #### Template A
 
-:::image type="content" source="../..\assets\images\design-guidelines\app-artwork-template-a.png" alt-text="Example shows an app artwork template A.":::
+:::image type="content" source="../../assets/images/design-guidelines/app-artwork-template-a.png" alt-text="Example shows an app artwork template A." lightbox="../../assets/images/design-guidelines/app-artwork-template-a.png":::
 
 #### Template B
 
-:::image type="content" source="../..\assets\images\design-guidelines\app-artwork-template-b.png" alt-text="Example shows an app artwork template B.":::
+:::image type="content" source="../../assets/images/design-guidelines/app-artwork-template-b.png" alt-text="Example shows an app artwork template B." lightbox="../../assets/images/design-guidelines/app-artwork-template-b.png":::
 
 #### Template C
 
-:::image type="content" source="../..\assets\images\design-guidelines\app-artwork-template-c.png" alt-text="Example shows an app artwork template C.":::
+:::image type="content" source="../../assets/images/design-guidelines/app-artwork-template-c.png" alt-text="Example shows an app artwork template C." lightbox="../../assets/images/design-guidelines/app-artwork-template-c.png":::
 
 ## Best practices
 
