@@ -59,7 +59,7 @@ To start with a personal tab that's already enabled to run in Teams, Outlook, an
 1. Select a location on your local machine for the workspace folder and enter your application name.
 1. Once your app has been created, within the Teams Toolkit extension, make sure you're signed in to the appropriate Microsoft 365 Developer Program sandbox tenant and Azure account. These options can be found within the **ACCOUNTS** section of the extension.
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
-1. Enter **Teams: Provision** to create the Teams app resources, such as Azure App Service, App Service plan, Azure Bot, and Managed Identity, in your Azure account. Alternatively, you can select **Provision** under the **LIFECYCLE** section of the extension.
+1. Enter **Teams: Provision** to create the relevant app resources, such as Azure App Service, App Service plan, Azure Bot, and Managed Identity, in your Azure account. Alternatively, you can select **Provision** under the **LIFECYCLE** section of the extension.
 1. Select a subscription and a resource group. If you choose to create a new resource group, you'll need to specify the Location.
 1. Select **Provision**.
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
