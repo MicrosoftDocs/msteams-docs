@@ -222,7 +222,7 @@ A wizard guides a user through several screens to complete a task (such as a set
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Example shows a wizard UI template on desktop.":::
+:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Example shows a wizard UI template on desktop." lightbox="../../assets/images/ui-templates/wizard.png":::
 
 ## See also
 
