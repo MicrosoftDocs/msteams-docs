@@ -229,21 +229,15 @@ The following table provides the user types and lists the features that each use
 
 App caching improves subsequent launch time of the apps that are loaded in the meeting side panel by allowing you to keep some resources and assets in memory that you can use when rehydrating your app.
 
-> [!NOTE]
->
-> * App caching is supported only for tabs loaded in a Teams meeting.
-> * App caching in Teams desktop client is supported for all scopes except for meeting side panel. App caching for meeting side panel is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-> * App caching in iOS personal tray is generally available (GA) and is supported only in personal scope.
-
 App caching is supported for the following:
 
 | Scope | Desktop | iOS | Android |
 | --- | --- | --- | --- |
-| Personal | &#x2713; | &#x2713; | NA |
-| Chat | &#x2713; | NA | NA |
-| Channel | &#x2713;| NA | NA |
-| Meeting tab | &#x2713; | NA | NA |
-| Meeting side panel or In-meeting apps | Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | NA | NA |
+| Personal | ✔️ | ✔️ | ❌ |
+| Chat | ✔️ | ❌ | ❌ |
+| Channel | ✔️| ❌ | ❌ |
+| Meeting tab | ✔️ | ❌ | ❌ |
+| Meeting side panel or In-meeting apps | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | ❌ | ❌ |
 
 ### Enable app caching
 
@@ -305,7 +299,7 @@ microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
 
 ### Best practices
 
-We recommend you to implement web storage capabilities to cache the user's app data. This helps to load the app faster in subsequent launches.
+We recommend you to implement web storage capabilities to store the data locally in iOS and Android. This helps to load the app faster in subsequent launches.
 
 ### Limitations
 
