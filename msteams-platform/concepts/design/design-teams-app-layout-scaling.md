@@ -8,13 +8,13 @@ ms.topic: Layout and scaling
 ---
 # Layout and scaling for your Microsoft Teams app
 
-A grid layout allows our app to feel consistent and guarantees recognizable relationships between design components. You can learn about our grid system and tips for scaling and zoom levels in your app to pass submission criteria.
+A grid layout allows your app to be consistent and guarantees recognizable relationships between design components. You can learn about your grid system and tips for scaling and zoom levels in your app to pass submission criteria.
 
-Scaling and responsive design are essential to all Teams apps so that users can successfully interact with all interfaces with certainty. In order to pass Teams store review, all text must be visible and not truncated.
+Scaling and responsive design are essential to all Teams apps so that users can successfully interact with all interfaces with certainty. In order to pass Teams store review, the entire text must be visible and not truncated.
 
 ## Layout design
 
-The 4-pixel base unit of grid allows components to scale consistently across all display size in Teams. In the example, the corner radius of each button is 4 pixels.
+The 4-pixel base unit of grid allows components to scale consistently across all display size in Teams. In the following example, the corner radius of each button is 4 pixels.
 
 :::image type="content" source="../../assets/images/design-guidelines/layout-pixel.png" alt-text="Example shows an example of pixels in layout." lightbox="../../assets/images/design-guidelines/layout-pixel.png":::
 
@@ -34,7 +34,7 @@ The 4-pixel base unit of grid allows components to scale consistently across all
 
 ### Mobile
 
-Mobile designs should be at 320 pixels.
+Mobile designs must be 320 pixels.
 
 :::image type="content" source="../../assets/images/design-guidelines/responsive-mobile.png" alt-text="Example shows a responsive layout on mobile.":::
 
@@ -66,7 +66,7 @@ Avoid text overlap and truncation.
 
 #### Don’t: Let text and buttons shift and overlap as zoom level changes
 
-Overlapping text and buttons may not meet our accessibility standards.
+Overlapping text and buttons might not meet our accessibility standards.
 
    :::column-end:::
 :::row-end:::
@@ -77,7 +77,7 @@ Overlapping text and buttons may not meet our accessibility standards.
 
 #### Do: Use word wrap so that text is legible at all widths
 
-Avoid truncation with reflow, prioritizing call to actions (CTAs) and action items.
+Avoid truncation with reflow, prioritizing call to actions (CTAs), and action items.
 
    :::column-end:::
    :::column span="":::
@@ -94,7 +94,7 @@ Without word wrapping, the text and CTAs are not usable.
    :::column span="":::
 :::image type="content" source="../../assets/images/design-guidelines/legible-scale-do.png" alt-text="Example shows a responsive design to avoid overlap at zoom level.":::
 
-#### Do: Make sure your app is legible at 200% scale
+#### Do: Ensure your app is legible at 200% scale
 
 Use responsive design to avoid text overlap and truncation.
 
@@ -104,7 +104,7 @@ Use responsive design to avoid text overlap and truncation.
 
 #### Don’t: Truncate and cut off content at any zoom level
 
-We recommend testing up to 200% zoom.
+It is recommended to test up to 200% zoom.
 
    :::column-end:::
 :::row-end:::
@@ -115,7 +115,7 @@ We recommend testing up to 200% zoom.
 
 #### Do: Text and colors for accessibility
 
-All text should be visible and usable for all users, meaning that it should exceed certain color ratios, depending on its usage. To check your contrast levels check out the WebAIM contrast checker.
+The entire text must be visible and used for all users, meaning that it must exceed certain color ratios, depending on its usage. To check your contrast levels check out the WebAIM contrast checker.
 
    :::column-end:::
    :::column span="":::
@@ -123,7 +123,7 @@ All text should be visible and usable for all users, meaning that it should exce
 
 #### Don’t: Submit your app with text that doesn’t pass contrast standards
 
-Teams apps need to be accessible to all users with any level of visual impairment or disability. Submissions with inaccessible text will not be accepted.
+Teams apps need to be accessible to all users with any level of visual impairment or disability. Submissions with inaccessible text is not accepted.
 
    :::column-end:::
 :::row-end:::
@@ -142,7 +142,7 @@ Avoid text overlap and truncation.
 
 ##### Don’t: Submit your app for review without testing at Teams default resolution
 
-Your app may not pass the submission process if there are issues at 1920 x 1080 resolution.
+Your app might not pass the submission process if there are issues at 1920 x 1080 resolution.
 
    :::column-end:::
 :::row-end:::
@@ -153,7 +153,7 @@ Your app may not pass the submission process if there are issues at 1920 x 1080 
 
 ##### Do: Test mobile app for responsiveness
 
-Mobile view of your app should also be responsive, similarly to the narrowest responsive breakpoint of a web app.
+Mobile view of your app must be responsive, similarly to the narrowest responsive breakpoint of a web app.
 
    :::column-end:::
    :::column span="":::
@@ -161,7 +161,7 @@ Mobile view of your app should also be responsive, similarly to the narrowest re
 
 ##### Don’t: Allow truncation on your mobile app
 
-As with the desktop app, nothing should be cut off or illegible on your mobile app.
+As with the desktop app, nothing must be cut off or illegible on your mobile app.
 
    :::column-end:::
 :::row-end:::
@@ -172,7 +172,7 @@ As with the desktop app, nothing should be cut off or illegible on your mobile a
 
 ##### Do: Ensure headers are always legible at all zoom levels
 
-If headers truncate, use a tooltip so that users can read headers by hovering over them.
+If the headers truncate, use a tooltip so that users can read headers by hovering.
 
    :::column-end:::
    :::column span="":::
@@ -180,7 +180,7 @@ If headers truncate, use a tooltip so that users can read headers by hovering ov
 
 ##### Don’t: Truncate headers without a hover feature
 
-Your app will not pass Teams submission if it has illegible headers without a hover functionality.
+Your app won't pass Teams submission if it has illegible headers without a hover functionality.
 
    :::column-end:::
 :::row-end:::

@@ -8,15 +8,15 @@ ms.topic: App icon
 ---
 # Microsoft Teams app icon for store and app bar
 
-Quickly learn the guidelines for creating icons in our app ecosystem to help designers and developers submit the correct application icon. Following these guidelines creates uniformity and balance in our app ecosystem and emphasizes the artwork of your app icon.
+This article provides the guidelines for creating icons in your app ecosystem to help designers and developers submit the correct application icon. Following these guidelines creates uniformity and balance in your app ecosystem and emphasizes the artwork of your app icon.
 
 ## App icon
 
-When submitting your app package, include two PNG versions of the app icon - a color icon and an outline icon. For your app to pass Teams store review, these icons must meet certain size requirements. Follow these steps to ensure your app icons fit the Teams store standard.
+When submitting your app package, include two PNG versions of the app icon, a color icon and an outline icon. For your app to pass Teams store review, these icons must meet certain size requirements. Follow the steps to ensure your app icons fit the Teams store standards.
 
 ### Balanced layout
 
-The icons are intended to create a uniform layout. These guidelines will help you create your app icon for submission.
+The icons are intended to create a uniform layout. These guidelines helps you create your app icon for submission.
 
 :::image type="content" source="../..\assets\images\design-guidelines\app-icon-balanced-layout.png" alt-text="Example shows the uniform layout for app icons.":::
 
@@ -36,7 +36,7 @@ Microsoft Teams needs three assets during app submission to generate the app ico
 
 The color app icon dimensions must be 192 x 192 pixels. If you have a logo icon, the logo needs to fit within the 120 x 120 safe area in the center.
 
-The submitted icon should be a full square. Teams automatically applies masking for consistent icon shapes across the app.
+The submitted icon must be a full square. Teams automatically applies masking for consistent icon shapes across the app.
 
 :::image type="content" source="../../assets/images/design-guidelines/app-icon-color-architecture.png" alt-text="Example shows the color app icon dimensions of your logo icon." lightbox="../../assets/images/design-guidelines/app-icon-color-architecture.png":::
 
@@ -52,7 +52,7 @@ The submitted icon should be a full square. Teams automatically applies masking 
 
 ## App icon utilization
 
-Reference this list for content areas where your icon will show in the product, depending on app type or capability.
+Refer this list for content areas where your icon shows in the product, depending on app type or capability.
 
 ### Personal app
 
@@ -86,7 +86,7 @@ Reference this list for content areas where your icon will show in the product, 
 
 #### Do: Follow the recommendation for safe area (96 x 96)
 
-It is recommended that if you have a logo, you keep it within the 96 x 96 safe area inside of the 192 x 192 PNG format icon.
+It is recommended that if you have a logo, keep it within the 96 x 96 safe area inside of the 192 x 192 PNG format icon.
 
    :::column-end:::
    :::column span="":::
@@ -143,7 +143,7 @@ We dynamically add borders. If you include a border in your PNG format, it will 
 
 #### Do: Provide enough contrast
 
-Please consider your icon to have enough contrast against the background. We recommend a ratio of 4.5:1 for best accessibility.
+Please consider your icon to have enough contrast against the background. It's recommended that a ratio of 4.5:1 for best accessibility.
 
    :::column-end:::
    :::column span="":::
@@ -151,7 +151,7 @@ Please consider your icon to have enough contrast against the background. We rec
 
 #### Don’t: Fade the icon
 
-Avoid low contrast for your icons. Make sure that the background and icon you use in your PNG format has enough contrast.
+Avoid low contrast for your icons. Ensure that the background and icon you use in your PNG format has enough contrast.
 
    :::column-end:::
 :::row-end:::
@@ -170,7 +170,7 @@ Focus on your brand by using a full flat color as background.
 
 #### Don’t: Avoid placing your brand icon in a circle
 
-Elevate your brand by keeping the brand icon within 96x96 safe area.
+Elevate your brand by keeping the brand icon within 96 x 96 safe area.
 
    :::column-end:::
 :::row-end:::
@@ -181,7 +181,7 @@ Elevate your brand by keeping the brand icon within 96x96 safe area.
 
 #### Do: Abbreviate long words in the app icon
 
-If you have a long app name, please try to abbreviate so that it’s easier to read when we bring your icon down to 32 x 32 size.
+If you have a long app name, try to abbreviate so that it’s easier to read when we bring your icon down to 32 x 32 size.
 
    :::column-end:::
    :::column span="":::
@@ -189,7 +189,7 @@ If you have a long app name, please try to abbreviate so that it’s easier to r
 
 #### Don’t: Include multiple words in app icon
 
-Avoid using multiple words on the icon. It will be impossible to read the text when the icon is at smaller sizes for example 32 x 32 or 36 x 36.
+Avoid using multiple words on the icon. It is impossible to read the text when the icon is at smaller sizes for example 32 x 32 or 36 x 36.
 
    :::column-end:::
 :::row-end:::

@@ -8,11 +8,11 @@ ms.topic: App artwork
 ---
 # Microsoft Teams app artwork for store
 
-This article provides guidelines and templates for displaying app artwork and details in the Teams store. Follow these guidelines for tips on crafting engaging and useful imagery to get people excited about your app in [fluent icons](https://www.figma.com/community/file/836835755999342788) and [teams icon](https://react.fluentui.dev/?path=/docs/concepts-developer-icons-icons--page).
+This article provides guidelines and templates for displaying app artwork and details in the Teams store. Follow these guidelines for tips on crafting engaging and useful imagery to get people excited about your app in [Fluent icons](https://www.figma.com/community/file/836835755999342788) and [Teams icon](https://react.fluentui.dev/?path=/docs/concepts-developer-icons-icons--page).
 
 ## App image templates
 
-While your app images can look however you choose, the following templates can help you show customers your app images in an appealing way. Use them to highlight key screens from your app and change the text to emphasize features. We encourage you to change the background color to enhance your brand.
+Choose the following templates that helps you show customers your app images in an appealing way. Use the templates to highlight key screens from your app and change the text to emphasize features. It's recommended to change the background color to enhance your brand.
 
 Use Size 1 for single column images and Size 2 for double column images.
 
@@ -46,7 +46,7 @@ Use the background color to highlight your logo and create more cohesion.
 
 #### Don’t: Use colors that clash with your brand
 
-Your app display will be overwhelming to customers.
+Your app display is overwhelming to customers.
 
    :::column-end:::
 :::row-end:::
@@ -76,7 +76,7 @@ Customers may ignore an unclear message.
 
 #### Do: Clearly and accurately describe your app
 
-Give a brief and honest overview of your application and what people can expect from it.
+Give a brief and accurate overview of your application and what people can expect from it.
 
    :::column-end:::
    :::column span="":::
@@ -84,7 +84,7 @@ Give a brief and honest overview of your application and what people can expect 
 
 #### Don’t: Use confusing or misleading copy to describe your app
 
-It is essential that your app description is honest and easy to understand.
+It is essential that your app description is accurate and easy to understand.
 
    :::column-end:::
 :::row-end:::
