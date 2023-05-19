@@ -63,7 +63,7 @@ Learn how to [use color tokens in your Teams app project](https://react.fluentui
 
 ##### Primary color
 
-:::image type="content" source="../../assets/images/design-guidelines/colors-primary-color-usage.png" alt-text="Example shows an app screen with primary color usage. lightbox="../../assets/images/design-guidelines/colors-primary-color-usage.png"":::
+:::image type="content" source="../../assets/images/design-guidelines/colors-primary-color-usage.png" alt-text="Example shows an app screen with primary color usage." lightbox="../../assets/images/design-guidelines/colors-primary-color-usage.png":::
 
 |Counter|Description|
 |----------|-----------|
