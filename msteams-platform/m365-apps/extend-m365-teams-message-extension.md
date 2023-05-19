@@ -163,11 +163,11 @@ The final step is to sideload your updated message extension ([app package](/mic
 
 1. Select **Apps** to open the **Manage your apps** pane. Then select **Upload an app**.
 
-    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="The screenshot is an example that shows the Upload an app option.":::
+    :::image type="content" source="~/assets/images/teams-manage-your-apps.png" alt-text="The screenshot is an example that shows the Upload an app option.":::
 
 1. Choose the **Upload a custom app** option, select your app package, and install (*Add*) it to your Teams client.
 
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="The screenshot is an example that shows the Upload a customized app option in Teams.":::
+    :::image type="content" source="~/assets/images/teams-upload-custom-app.png" alt-text="The screenshot is an example that shows the Upload a customized app option in Teams.":::
 
 After it's sideloaded through Teams, your message extension is available in Outlook for Windows desktop and web.
 

@@ -181,11 +181,11 @@ The final step to running your app in Microsoft 365 and Outlook is to sideload y
 
 1. Select **Apps** to open the **Manage your apps** pane. Then select **Upload an app**.
 
-    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="The screenshot is an example that shows the Manage your apps pane and Publish an app options.":::
+    :::image type="content" source="~/assets/images/teams-manage-your-apps.png" alt-text="The screenshot is an example that shows the Manage your apps pane and Publish an app options.":::
 
 1. Choose the **Upload a custom app** option and select your app package.
 
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="The screenshot is an example that shows the option to upload am app in Teams.":::
+    :::image type="content" source="~/assets/images/teams-upload-custom-app.png" alt-text="The screenshot is an example that shows the option to upload am app in Teams.":::
 
 After it's sideloaded to Teams, your personal tab is available in Outlook and Microsoft 365 app. You must sign in with the same credentials that you used to sideload your app into Teams. When running the Microsoft 365 for Android app, you need to restart the app to use your personal tab app from the Microsoft 365 app.
 
