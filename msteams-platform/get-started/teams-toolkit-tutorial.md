@@ -10,7 +10,7 @@ You can build your own Microsoft Teams app with different capabilities using the
 
 ## Teams app tutorials
 
-Now, let's build your Teams app. You can use the following languages or framework and prepare your development environment for building your app.
+Now, let's build your Teams app. You can use the following languages or frameworks and prepare your development environment for building your app.
 
 | &nbsp; | **Tab** | **Bot** | **Message extension** |
 | --- | --- | --- | --- |
