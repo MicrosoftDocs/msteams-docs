@@ -587,12 +587,14 @@ For more information about Node js code sample, see [Bot SSO quick-start](https:
 Upgrade the Teams JavaScript client SDK to (@microsoft/teams-js": "^2.0.0") to resolve the issue.
 <br>
 </details>
+
 <details> 
 <summary>Which tab gets pinned if both configurable tab and personal (static) tab are defined in app manifest for a specific scope?</summary>
 
 <br>
 If you have both configurable tab and personal (static) tab defined in your app manifest for a specific scope, Teams pins the personal (static) tab by default.
 </details>
+
 <details>
 <summary>What if I already have pre-existing pinned configurable tabs after switching to personal (static) tabs?</summary>
 
