@@ -38,7 +38,7 @@ To get started, ensure that you have the following tools:
 1. Run the following command to go to the app folder:
 
    ```bash
-   cd samples/js/samples/AITeamsChefBotTTK 
+   cd samples/js/samples/04.ai.a.teamsChefBot
    ```
 
 1. Update the **SECRET_OPENAI_API_KEY** in the `.env.local.user` configuration file.
