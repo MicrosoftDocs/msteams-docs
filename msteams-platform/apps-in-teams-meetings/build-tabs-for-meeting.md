@@ -79,15 +79,35 @@ You can create a deep link to your tab app that can open in the meeting side pan
 
 # [Meeting side panel](#tab/meeting-side-panel)
 
-   The following shows a deep link in meeting side panel:
+The following shows a deep link in meeting side panel:
 
-   :::image type="content" source="../assets/images/sidepanel-deeplink.gif" alt-text="Screenshot shows side panel view when deep link is selected.":::
+   # [Desktop](#tab/desktop)
+    
+    :::image type="content" source="../assets/images/sidepanel-deeplink.gif" alt-text="Screenshot shows side panel view when deep link is selected.":::
+    
+   ---
+    
+   # [Mobile](#tab/mobile)
+    
+    :::image type="content" source="../assets/images/mobile-in-meeting-deeplink.gif" alt-text="Screenshot shows side panel view when deep link is selected in mobile.":::
+    
+   ---
 
 # [Pre or post-meeting tab](#tab/pre-or-post-meeting-tab)
 
-   The following shows a deep link in a pre or a post-meeting tab:
+The following shows a deep link in a pre or a post-meeting tab:
 
-   :::image type="content" source="../assets/images/pre-post-meeting.gif" alt-text="Screenshot shows a pre or post-meeting tab when deep link is selected.":::
+   # [Desktop](#tab/desktop)
+    
+    :::image type="content" source="../assets/images/pre-post-meeting.gif" alt-text="Screenshot shows a pre or post-meeting tab when deep link is selected.":::
+    
+   ---
+    
+   # [Mobile](#tab/mobile)
+    
+    :::image type="content" source="../assets/images/mobile-post-meeting-deeplink.gif" alt-text="Screenshot shows a pre or post-meeting tab when deep link is selected in mobile.":::
+    
+   ---
 
    Pre or post-meeting tab behavior isn't supported in channel meetings.
 
