@@ -95,27 +95,27 @@ To ensure your plugin will work as intended, it is important to include good des
 
 5. Deep Content Retrieval – To further enhance your plugin’s functionality, it’s recommended that your API supports deep content retrieval scenarios that can be leveraged by the LLMs to obtain grounding data. This involves enabling copilot to send targeted requests, such as limiting a search to a specific date range, to your API for particular tasks and queries.
 
-# Upgrading your plugin to a rich conversational Teams app  
+## Upgrading your plugin to a rich conversational Teams app  
 
 When you connect your API to Teams, you've built a simple, powerful Microsoft 365 copilot plugin. You can now take that to the next level by adding rich conversational components to supercharge that experience – and Teams makes it simple to do. In addition to your plugin, you can use Teams Toolkit to add a bot to your manifest file. Developing a bot has never been easier with the release of the new [Teams AI SDK](https://github.com/microsoft/teams-ai). By doing this, your plugin becomes a full conversational Teams app, allowing you to develop link unfurling experiences, message extensions, message actions, search bar actions, and end-to-end conversational bots.
 
 ## Connecting external data sources
 
-If you have an existing Microsoft Graph Connector, it will work with copilot without any changes. With a Graph Connector, your data will be included in copilot responses, and also participate in other Microsoft 365 experiences like Search, content recommendations, and more. For more details, see [building a Microsoft Graph connector](https://developer.microsoft.com/en-us/graph/connectors).
+If you have an existing Microsoft Graph Connector, it will work with copilot without any changes. With a Graph Connector, your data will be included in copilot responses, and also participate in other Microsoft 365 experiences like Search, content recommendations, and more. For more details, see [building a Microsoft Graph connector](https://developer.microsoft.com/graph/connectors).
 
 ## How to make your Graph connector work better with copilot?
 
 To ensure your Graph connector works well with copilot, there are several things you must do. Following these tips would also improve relevance for your connector content with Microsoft Search:
 
-1. Include urlToItemResolver. By including urlToItemResolver in your connector’s [activity settings](https://learn.microsoft.com/en-us/graph/connecting-external-content-manage-connections#activity-settings), copilot will become aware when users share URLs to your content with one another. When users share an item with one another, copilot will boost its importance for including the item in its response.  
-2. Provide a rich human-readable name and detailed description when you [create the connection](https://learn.microsoft.com/en-us/graph/api/externalconnectors-external-post-connections?view=graph-rest-1.0&tabs=http). This helps copilot understand what the data source is so it will include the data source in its response if it’s relevant.
-3. Apply [semantic labels](https://learn.microsoft.com/en-us/graph/connecting-external-content-manage-schema#semantic-labels). Semantic labels help copilot understands the semantic meaning of your schema. You must apply as many of them to your schema as applicable.
-4. Add [user activities](https://learn.microsoft.com/en-us/graph/api/externalconnectors-externalitem-addactivities?view=graph-rest-1.0&tabs=http). In addition to adding your content (externalItems) to the Microsoft Graph, your connector must also add user activities around you’re your content. Supported activity types are shown [here](https://learn.microsoft.com/en-us/graph/api/resources/externalconnectors-externalactivity?view=graph-rest-1.0). Items that have more activities will be boosted in its importance.
+1. Include urlToItemResolver. By including urlToItemResolver in your connector’s [activity settings](https://learn.microsoft.com/graph/connecting-external-content-manage-connections#activity-settings), copilot will become aware when users share URLs to your content with one another. When users share an item with one another, copilot will boost its importance for including the item in its response.  
+2. Provide a rich human-readable name and detailed description when you [create the connection](https://learn.microsoft.com/graph/api/externalconnectors-external-post-connections?view=graph-rest-1.0&tabs=http). This helps copilot understand what the data source is so it will include the data source in its response if it’s relevant.
+3. Apply [semantic labels](https://learn.microsoft.com/graph/connecting-external-content-manage-schema#semantic-labels). Semantic labels help copilot understands the semantic meaning of your schema. You must apply as many of them to your schema as applicable.
+4. Add [user activities](https://learn.microsoft.com/graph/api/externalconnectors-externalitem-addactivities?view=graph-rest-1.0&tabs=http). In addition to adding your content (externalItems) to the Microsoft Graph, your connector must also add user activities around you’re your content. Supported activity types are shown [here](https://learn.microsoft.com/graph/api/resources/externalconnectors-externalactivity?view=graph-rest-1.0). Items that have more activities will be boosted in its importance.
 
 ## See also
 
 * [Message extensions overview] (~/messaging-extensions/what-are-messaging-extensions)
-* [Build message extension](~/get-started/build-message-extension?)
+* [Build message extension](~/get-started/build-message-extension)
 * [OpenAPI spec definition](https://spec.openapis.org/oas/v3.1.0)
 * [Graph connectors overview](https://developer.microsoft.com/graph/connectors)
 * [Our approach to responsible AI at Microsoft](https://www.microsoft.com/ai/our-approach?activetab=pivot1:primaryr5)
