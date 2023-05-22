@@ -48,7 +48,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Introduced Live Share with Azure Communication Services
+      - text: Live Share SDK is now generally available
         url: apps-in-teams-meetings/teams-live-share-overview.md
       - text: Distribute your app to specific countries
         url: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries
