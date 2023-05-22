@@ -14,6 +14,9 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
+    > [!NOTE]
+    > Teams AI library is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).  
+    
     Start Microsoft Teams app development with your first Teams AI library app. 
     
     You can create a conversational bot for Microsoft Teams that thinks it's a Chef to help you cook Teams apps and illustrates basic conversational bot behavior in Microsoft Teams. The bot is built to allow GPT to facilitate the conversation on its behalf, using only a natural language prompt file to guide it.

@@ -8,6 +8,10 @@ ms.author: surbhigupta
 
 # Teams AI library
 
+> [!NOTE]
+>
+> Teams AI library is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+
 Teams AI library is a Teams-centric interface to GPT-based common language models and user intent engines. This moderates the need for you to take on complex and expensive tasks of writing and maintaining conversational bot logic to integrate with large language models (LLMs).
 
 The AI library provides a simple capabilities-driven approach and helps you create intelligent apps quickly and easily with prebuilt, reusable code snippets so that you can focus on building the business logic rather than learning the semantics of Teams conversational applications.
@@ -17,7 +21,6 @@ The following are some of the main features available through Teams AI library:
 * [Simple Teams-centric component scaffolding](#simple-teams-centric-component-scaffolding)
 * [Natural language modeling](#natural-language-modeling)
 * [Prompt engineering](#prompt-engineering)
-* [Topic filtering](#topic-filtering)
 * [Conversational session history](#conversational-session-history)
 * [Localization](#localization)
 * [LLM modularity](#llm-modularity)
@@ -37,10 +40,6 @@ Bots can run in-context and assist when the bot recognizes a user intent that ma
 ### Prompt engineering
 
 Prompt engineering helps you design prompts considering user's intent, context of the conversation, and the bot personality. Bots can be personalized, customized, and tailor-made to meet user needs.
-
-### Topic filtering
-
-Bots can focus on the business logic with custom topic filters.
 
 ### Conversational session history
 

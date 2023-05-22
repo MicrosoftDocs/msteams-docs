@@ -10,6 +10,10 @@ ms.date: 04/07/2022
 
 # Teams AI library FAQ
 
+> [!NOTE]
+>
+> Teams AI library is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+
 <details>
 <summary>What does the Teams AI library do?</summary>
 

@@ -10,6 +10,10 @@ ms.date: 04/07/2022
 
 # Teams AI library quick start guide
 
+> [!NOTE]
+>
+> Teams AI library is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+
 Get started with Teams AI library using the ChefBot sample. It's designed to quickly run a Teams AI library based sample on your computer's localhost.
 
 ## Set up your development environment
