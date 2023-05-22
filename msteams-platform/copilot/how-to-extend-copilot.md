@@ -107,15 +107,15 @@ If you have an existing Microsoft Graph Connector, it will work with copilot wit
 
 To ensure your Graph connector works well with copilot, there are several things you must do. Following these tips would also improve relevance for your connector content with Microsoft Search:
 
-1. Include urlToItemResolver. By including urlToItemResolver in your connector’s [activity settings](https://learn.microsoft.com/graph/connecting-external-content-manage-connections#activity-settings), copilot will become aware when users share URLs to your content with one another. When users share an item with one another, copilot will boost its importance for including the item in its response.  
-2. Provide a rich human-readable name and detailed description when you [create the connection](https://learn.microsoft.com/graph/api/externalconnectors-external-post-connections?view=graph-rest-1.0&tabs=http). This helps copilot understand what the data source is so it will include the data source in its response if it’s relevant.
-3. Apply [semantic labels](https://learn.microsoft.com/graph/connecting-external-content-manage-schema#semantic-labels). Semantic labels help copilot understands the semantic meaning of your schema. You must apply as many of them to your schema as applicable.
-4. Add [user activities](https://learn.microsoft.com/graph/api/externalconnectors-externalitem-addactivities?view=graph-rest-1.0&tabs=http). In addition to adding your content (externalItems) to the Microsoft Graph, your connector must also add user activities around you’re your content. Supported activity types are shown [here](https://learn.microsoft.com/graph/api/resources/externalconnectors-externalactivity?view=graph-rest-1.0). Items that have more activities will be boosted in its importance.
+1. Include urlToItemResolver. By including urlToItemResolver in your connector’s [activity settings](/graph/connecting-external-content-manage-connections), copilot will become aware when users share URLs to your content with one another. When users share an item with one another, copilot will boost its importance for including the item in its response.  
+2. Provide a rich human-readable name and detailed description when you [create the connection](/graph/api/externalconnectors-external-post-connections). This helps copilot understand what the data source is so it will include the data source in its response if it’s relevant.
+3. Apply [semantic labels](/graph/connecting-external-content-manage-schema). Semantic labels help copilot understands the semantic meaning of your schema. You must apply as many of them to your schema as applicable.
+4. Add [user activities](/graph/api/externalconnectors-externalitem-addactivities). In addition to adding your content (externalItems) to the Microsoft Graph, your connector must also add user activities around you’re your content. Supported activity types are shown [here](/graph/api/resources/externalconnectors-externalactivity). Items that have more activities will be boosted in its importance.
 
 ## See also
 
-* [Message extensions overview] (~/messaging-extensions/what-are-messaging-extensions)
-* [Build message extension](~/get-started/build-message-extension)
+* [Message extensions overview] (~/messaging-extensions/what-are-messaging-extensions.md)
+* [Build message extension](~/get-started/build-message-extension.md)
 * [OpenAPI spec definition](https://spec.openapis.org/oas/v3.1.0)
 * [Graph connectors overview](https://developer.microsoft.com/graph/connectors)
 * [Our approach to responsible AI at Microsoft](https://www.microsoft.com/ai/our-approach?activetab=pivot1:primaryr5)
