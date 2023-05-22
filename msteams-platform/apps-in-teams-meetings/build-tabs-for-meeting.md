@@ -60,7 +60,7 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
     The following image shows an app added to the meeting chat in the Teams mobile client:
     
     :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
-    
+
     ---
 
 ### Meeting side panel view
@@ -77,25 +77,28 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 
 You can create a deep link to your tab app that can open in the meeting side panel. When users in a meeting select the deep link, it opens the meeting side panel in the meeting stage. If a user selects the deep link before or after the meeting, the deep link opens in a pre or a post-meeting tab respectively.
 
+> [!NOTE]
+> Deep link to meeting side panel isn't supported in Teams iOS mobile client.
+
 # [Meeting side panel](#tab/meeting-side-panel)
 
-The following shows a deep link in meeting side panel in the Teams desktop client:
+* The following shows a deep link in meeting side panel in the Teams desktop client:
 
-:::image type="content" source="../assets/images/sidepanel-deeplink.gif" alt-text="Screenshot shows side panel view when deep link is selected.":::
+  :::image type="content" source="../assets/images/sidepanel-deeplink.gif" alt-text="Screenshot shows side panel view when deep link is selected.":::
     
-The following shows a deep link in meeting side panel in the Teams mobile client:
+* The following shows a deep link in meeting side panel in the Teams mobile client:
     
-:::image type="content" source="../assets/images/mobile-in-meeting-deeplink.gif" alt-text="Screenshot shows side panel view when deep link is selected in mobile.":::
+  :::image type="content" source="../assets/images/mobile-in-meeting-deeplink.gif" alt-text="Screenshot shows side panel view when deep link is selected in mobile.":::
 
 # [Pre or post-meeting tab](#tab/pre-or-post-meeting-tab)
 
-The following shows a deep link in a pre or a post-meeting tab in the Teams desktop client:
+* The following shows a deep link in a pre or a post-meeting tab in the Teams desktop client:
 
-:::image type="content" source="../assets/images/pre-post-meeting.gif" alt-text="Screenshot shows a pre or post-meeting tab when deep link is selected.":::
+  :::image type="content" source="../assets/images/pre-post-meeting.gif" alt-text="Screenshot shows a pre or post-meeting tab when deep link is selected.":::
     
-The following shows a deep link in a pre or a post-meeting tab in the Teams mobile client:
+* The following shows a deep link in a pre or a post-meeting tab in the Teams mobile client:
     
-:::image type="content" source="../assets/images/mobile-post-meeting-deeplink.gif" alt-text="Screenshot shows a pre or post-meeting tab when deep link is selected in mobile.":::
+  :::image type="content" source="../assets/images/mobile-post-meeting-deeplink.gif" alt-text="Screenshot shows a pre or post-meeting tab when deep link is selected in mobile.":::
     
 Pre or post-meeting tab behavior isn't supported in channel meetings.
 
