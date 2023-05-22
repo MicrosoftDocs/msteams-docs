@@ -49,19 +49,19 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 
 1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting chat.
 
-# [Meeting chat view desktop](#tab/meeting-chat-view-desktop)
-
-   The following image shows an app added to the meeting chat in the Teams desktop client:
-
-   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams desktop.":::
-
-# [Meeting chat view mobile](#tab/meeting-chat-view-mobile)
-
-   The following image shows an app added to the meeting chat in the Teams mobile client:
-
-  :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
-
----
+  # [Meeting chat view desktop](#tab/meeting-chat-view-desktop)
+    
+    The following image shows an app added to the meeting chat in the Teams desktop client:
+   
+    :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams desktop.":::
+    
+  # [Meeting chat view mobile](#tab/meeting-chat-view-mobile)
+    
+    The following image shows an app added to the meeting chat in the Teams mobile client:
+    
+    :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
+    
+  ---
 
 ### Meeting side panel view
 
@@ -81,31 +81,32 @@ You can create a deep link to your tab app that can open in the meeting side pan
 
 The following shows a deep link in meeting side panel:
 
-   # [Desktop](#tab/desktop1)
+# [Desktop](#tab/desktop1)
     
-   :::image type="content" source="../assets/images/sidepanel-deeplink.gif" alt-text="Screenshot shows side panel view when deep link is selected.":::
+:::image type="content" source="../assets/images/sidepanel-deeplink.gif" alt-text="Screenshot shows side panel view when deep link is selected.":::
     
-   # [Mobile](#tab/mobile1)
+# [Mobile](#tab/mobile1)
     
-   :::image type="content" source="../assets/images/mobile-in-meeting-deeplink.gif" alt-text="Screenshot shows side panel view when deep link is selected in mobile.":::
-    
-   ---
+:::image type="content" source="../assets/images/mobile-in-meeting-deeplink.gif" alt-text="Screenshot shows side panel view when deep link is selected in mobile.":::
+ 
+---
+
 
 # [Pre or post-meeting tab](#tab/pre-or-post-meeting-tab)
 
 The following shows a deep link in a pre or a post-meeting tab:
 
-   # [Desktop](#tab/desktop2)
+# [Desktop](#tab/desktop2)
     
-   :::image type="content" source="../assets/images/pre-post-meeting.gif" alt-text="Screenshot shows a pre or post-meeting tab when deep link is selected.":::
+:::image type="content" source="../assets/images/pre-post-meeting.gif" alt-text="Screenshot shows a pre or post-meeting tab when deep link is selected.":::
     
-   # [Mobile](#tab/mobile2)
+# [Mobile](#tab/mobile2)
     
-   :::image type="content" source="../assets/images/mobile-post-meeting-deeplink.gif" alt-text="Screenshot shows a pre or post-meeting tab when deep link is selected in mobile.":::
+:::image type="content" source="../assets/images/mobile-post-meeting-deeplink.gif" alt-text="Screenshot shows a pre or post-meeting tab when deep link is selected in mobile.":::
     
-   ---
+---
 
-   Pre or post-meeting tab behavior isn't supported in channel meetings.
+Pre or post-meeting tab behavior isn't supported in channel meetings.
 
 ---
 
