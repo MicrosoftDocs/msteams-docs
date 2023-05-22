@@ -17,7 +17,7 @@ For example, during a real time collaboration in a meeting, if a participant add
 
 The following image shows you the visual indicator on the app icon in the meeting U-bar:
 
-[Image to be added]
+:::image type="content" source="../assets/images/visual-indicator.png" alt-text="Screenshot shows you the visual indicator on the app in U-bar in teams meeting.":::
 
 > [!NOTE]
 >
