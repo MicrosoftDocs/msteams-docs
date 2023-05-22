@@ -172,7 +172,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
     - Transcription started event: `callTranscriptEventMessageDetail` event type
 
         <details>
-        <summary><b>Example</b>: Payload for transcription started event</summary>
+        <summary><b>Example</b>: Payload for transcription or recording started event</summary>
 
         ```json
         {
