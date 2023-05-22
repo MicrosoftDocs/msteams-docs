@@ -79,27 +79,21 @@ You can create a deep link to your tab app that can open in the meeting side pan
 
 # [Meeting side panel](#tab/meeting-side-panel)
 
-The following shows a deep link in meeting side panel:
+The following shows a deep link in meeting side panel in the Teams desktop client:
 
-# [Desktop](#tab/desktop1)
-    
 :::image type="content" source="../assets/images/sidepanel-deeplink.gif" alt-text="Screenshot shows side panel view when deep link is selected.":::
     
-# [Mobile](#tab/mobile1)
+The following shows a deep link in meeting side panel in the Teams mobile client:
     
 :::image type="content" source="../assets/images/mobile-in-meeting-deeplink.gif" alt-text="Screenshot shows side panel view when deep link is selected in mobile.":::
 
----
-
 # [Pre or post-meeting tab](#tab/pre-or-post-meeting-tab)
 
-The following shows a deep link in a pre or a post-meeting tab:
+The following shows a deep link in a pre or a post-meeting tab in the Teams desktop client:
 
-# [Desktop](#tab/desktop2)
-    
 :::image type="content" source="../assets/images/pre-post-meeting.gif" alt-text="Screenshot shows a pre or post-meeting tab when deep link is selected.":::
     
-# [Mobile](#tab/mobile2)
+The following shows a deep link in a pre or a post-meeting tab in the Teams mobile client:
     
 :::image type="content" source="../assets/images/mobile-post-meeting-deeplink.gif" alt-text="Screenshot shows a pre or post-meeting tab when deep link is selected in mobile.":::
     
