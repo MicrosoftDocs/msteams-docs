@@ -408,32 +408,32 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
     </details>
 
-4. **Fetch transcript**: The organizer ID and meeting ID obtained in the Steps 2 and 3 let your app fetch the transcripts and recordings for that particular meeting event.
+4. **Fetch transcript and recording**: The organizer ID and meeting ID obtained in the Steps 2 and 3 let your app fetch the transcripts and recordings for that particular meeting event.
 
-    To fetch transcripts, you'll need to:
+    - To fetch transcripts, you'll need to:
 
-    1. **Retrieve transcript ID based on organizer ID and meeting ID**:
+       1. **Retrieve transcript ID based on organizer ID and meeting ID**:
 
-       Use the following example to request the transcript ID:
+           Use the following example to request the transcript ID:
 
-        ```http
-        GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts
-        ```
+            ```http
+            GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts
+            ```
 
-        In this example:
+            In this example:
 
-        - The meeting ID is included as the value for `onlineMeetings`: *MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bW
+            - The meeting ID is included as the value for `onlineMeetings`: *MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bW
     VldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM
     1pqWTJAdGhyZWFkLnYy*.
-        - The organizer ID is *14b779ae-cb64-47e7-a512-52fd50a4154d*.
+            - The organizer ID is *14b779ae-cb64-47e7-a512-52fd50a4154d*.
 
-        The response payload contains the transcript ID for the meeting ID and organizer ID in the `id` member of the `value` property.
-        <br>
-        <details>
-        <summary><b>Example</b>: Response payload for getting transcript ID</summary>
+            The response payload contains the transcript ID for the meeting ID and organizer ID in the `id` member of the `value` property.
+            <br>
+            <details>
+            <summary><b>Example</b>: Response payload for getting transcript ID</summary>
 
-        ```json
-        {
+            ```json
+            {
             "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts",
             "@odata.count": 1,
             "value": [
@@ -442,22 +442,70 @@ To obtain meeting ID and organizer ID from tenant-level notification:
                     "createdDateTime": "2022-04-14T11:34:39.5662792Z"
                 }
             ]
-        }
-        ```
+            }
+            ```
 
-        In this example, the transcript ID is *MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh*.
+            In this example, the transcript ID is *MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh*.
 
-        </details>
+            </details>
 
-    1. **Access and get meeting transcript based on the transcript ID**:
+       1. **Access and get meeting transcript based on the transcript ID**:
 
-        Use the following example to request the transcripts for a specific meeting in the `.vtt` format:
+            Use the following example to request the transcripts for a specific meeting in the `.vtt` format:
 
-        ```http
-        GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts('MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh')/content?$format=text/vtt
-        ```
+            ```http
+             GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts('MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh')/content?$format=text/vtt
+            ```
 
-        The response payload will contain the transcripts in `.vtt` format.
+            The response payload will contain the transcripts in `.vtt` format.
+
+    - To fetch recordings, you'll need to:
+
+       1. **Retrieve recording ID based on organizer ID and meeting ID**:
+
+           Use the following example to request the recording ID:
+
+            ```http
+            GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts
+            GET  https://graph.microsoft.com/beta/users/b935e675-5e67-48b9-8d45-249d5f88e964/onlineMeetings/MSpiOTM1ZTY3NS01ZTY3LTQ4YjktOGQ0NS0yNDlkNWY4OGU5NjQqMCoqMTk6bWVldGluZ19ZbU0zTnpJNU9USXRZakU0WlMwME1tUTNMVGt6TVRRdFkyWm1PRGRtWmpsaVptRTNAdGhyZWFkLnYy/recordings/
+            ```
+
+            In this example:
+
+            - The meeting ID is included as the value for `onlineMeetings`: *MSpiOTM1ZTY3NS01ZTY3LTQ4YjktOGQ0NS0yNDlkNWY4OGU5NjQqMCoqMTk6bWVldGluZ19ZbU0zTnpJNU9USXRZakU0WlMwME1tUTNMVGt6TVRRdFkyWm1PRGRtWmpsaVptRTNAdGhyZWFkLnYy*.
+            - The organizer ID is *b935e675-5e67-48b9-8d45-249d5f88e964*.
+
+            The response payload contains the recording ID for the meeting ID and organizer ID in the `id` member of the `value` property.
+            <br>
+            <details>
+            <summary><b>Example</b>: Response payload for getting recording ID</summary>
+
+            ```json
+            {
+            "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('b935e675-5e67-48b9-8d45-249d5f88e964')/onlineMeetings('MSpiOTM1ZTY3NS01ZTY3LTQ4YjktOGQ0NS0yNDlkNWY4OGU5NjQqMCoqMTk6bWVldGluZ19ZbU0zTnpJNU9USXRZakU0WlMwME1tUTNMVGt6TVRRdFkyWm1PRGRtWmpsaVptRTNAdGhyZWFkLnYy')/recordings",
+            "@odata.count": 1,
+            "value": [
+                {
+            "id": "7e31db25-bc6e-4fd8-96c7-e01264e9b6fc",
+            "createdDateTime": "2023-04-10T08:13:17.5990966Z"
+                }
+            ]
+            }
+            ```
+
+            In this example, the recording ID is *7e31db25-bc6e-4fd8-96c7-e01264e9b6fc*.
+
+            </details>
+
+       1. **Access and get meeting recording based on the recording ID**:
+
+            Use the following example to request the recordings for a specific meeting in the `.mp4` format:
+
+            ```http
+            GET https://graph.microsoft.com/beta/users/b935e675-5e67-48b9-8d45-249d5f88e964/onlineMeetings/MSpiOTM1ZTY3NS01ZTY3LTQ4YjktOGQ0NS0yNDlkNWY4OGU5NjQqMCoqMTk6bWVldGluZ19ZbU0zTnpJNU9USXRZakU0WlMwME1tUTNMVGt6TVRRdFkyWm1PRGRtWmpsaVptRTNAdGhyZWFkLnYy/recordings/7e31db25-bc6e-4fd8-96c7-e01264e9b6fc/content?$format=video/mp4
+            ```
+
+            The response payload will contain the recordings in `.mp4` format.
 
 ### Use Bot Framework to get meeting ID and organizer ID
 
