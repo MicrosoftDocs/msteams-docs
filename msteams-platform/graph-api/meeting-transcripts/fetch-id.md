@@ -11,7 +11,7 @@ Your app can fetch transcripts and recordings of a meeting using the meeting ID 
 > [!NOTE]
 > The meeting ID for scheduled meetings may expire in some days if it's unused. It can be revived by using the meeting URL to join the meeting. For more information about meeting expiration timeline for different meeting types, see [meeting expiration](/microsoftteams/limits-specifications-teams#meeting-expiration).
 
-To obtain meeting ID and organizer ID for fetching the transcript, choose one of the two ways:
+To obtain meeting ID and organizer ID for fetching the transcript and recording, choose one of the two ways:
 
 - [Subscribe to change notifications](#subscribe-to-change-notifications)
 - [Use Bot Framework](#use-bot-framework-to-get-meeting-id-and-organizer-id)
@@ -172,7 +172,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
     - Transcription started event: `callTranscriptEventMessageDetail` event type
 
         <details>
-        <summary><b>Example</b>: Payload for transcription or recording started event</summary>
+        <summary><b>Example</b>: Payload for transcription started event</summary>
 
         ```json
         {
@@ -466,7 +466,6 @@ To obtain meeting ID and organizer ID from tenant-level notification:
            Use the following example to request the recording ID:
 
             ```http
-            GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts
             GET  https://graph.microsoft.com/beta/users/b935e675-5e67-48b9-8d45-249d5f88e964/onlineMeetings/MSpiOTM1ZTY3NS01ZTY3LTQ4YjktOGQ0NS0yNDlkNWY4OGU5NjQqMCoqMTk6bWVldGluZ19ZbU0zTnpJNU9USXRZakU0WlMwME1tUTNMVGt6TVRRdFkyWm1PRGRtWmpsaVptRTNAdGhyZWFkLnYy/recordings/
             ```
 
@@ -561,7 +560,7 @@ dGluZ19OV00xTVRJNU56TXROamd6TXkwMFlXUTRMVGhtT1dRdFpUZzNNVEJtT1RnM
 
 </details>
 
-After your app obtains the meeting ID and the organizer ID, it triggers the Graph APIs to fetch transcript content using these meeting details.
+After your app obtains the meeting ID and the organizer ID, it triggers the Graph APIs to fetch transcript content and recording using these meeting details.
 
 ### Code samples
 
