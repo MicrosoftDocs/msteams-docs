@@ -1,12 +1,12 @@
 ---
-title: Obtain meeting ID and organizer ID for fetching meeting transcripts
-description: Describes the process of Obtain meeting ID and organizer ID for fetching meeting transcripts
+title: Obtain meeting ID and organizer ID for fetching meeting transcripts and recordings
+description: Describes the process of Obtain meeting ID and organizer ID for fetching meeting transcripts and recordings
 ms.localizationpriority: high
 ms.topic: conceptual
 ---
 # Obtain meeting ID and organizer ID
 
-Your app can fetch transcripts of a meeting using the meeting ID and the user ID of the meeting organizer, also known as organizer ID. The Graph REST APIs fetch transcripts based on the meeting ID and organizer ID that are passed as parameters in the API.
+Your app can fetch transcripts and recordings of a meeting using the meeting ID and the user ID of the meeting organizer, also known as organizer ID. The Graph REST APIs fetch transcripts and recordings based on the meeting ID and organizer ID that are passed as parameters in the API.
 
 > [!NOTE]
 > The meeting ID for scheduled meetings may expire in some days if it's unused. It can be revived by using the meeting URL to join the meeting. For more information about meeting expiration timeline for different meeting types, see [meeting expiration](/microsoftteams/limits-specifications-teams#meeting-expiration).
@@ -18,18 +18,18 @@ To obtain meeting ID and organizer ID for fetching the transcript, choose one of
 
 ## Subscribe to change notifications
 
-You can subscribe your app to receive change notifications for scheduled meeting events. When your app is notified about the subscribed meeting events, it can obtain transcripts, if it's authorized via required Azure AD permissions.
+You can subscribe your app to receive change notifications for scheduled meeting events. When your app is notified about the subscribed meeting events, it can obtain transcripts and recordings, if it's authorized via required Azure AD permissions.
 
 Your app receives notification for the type of meeting events for which it's subscribed:
 
 - [User-level notification](#obtain-meeting-details-using-user-level-notification)
 - [Tenant-level notification](#obtain-meeting-details-using-tenant-level-notification)
 
-When your app is notified of a subscribed meeting event, it can retrieve the meeting ID and organizer ID from the notification message. Based on the meeting details obtained, your app can fetch the meeting transcripts after the meeting has ended.
+When your app is notified of a subscribed meeting event, it can retrieve the meeting ID and organizer ID from the notification message. Based on the meeting details obtained, your app can fetch the meeting transcripts and recordings after the meeting has ended.
 
 ## Obtain meeting details using user-level notification
 
-Choose to subscribe your app to user-level notifications for getting transcripts of a particular user's meeting event. When a meeting is scheduled for that user, your app is notified. Your app can receive meeting notifications using calendar events as well.
+Choose to subscribe your app to user-level notifications for getting transcripts and recordings of a particular user's meeting event. When a meeting is scheduled for that user, your app is notified. Your app can receive meeting notifications using calendar events as well.
 
 For subscribing your app to calendar events, see [change notifications for Outlook resources in Microsoft Graph](/graph/outlook-change-notifications-overview).
 
@@ -159,11 +159,11 @@ To obtain meeting ID and organizer ID from user-level notification:
 
 ### Obtain meeting details using tenant-level notification
 
-Tenant-level notifications are useful if your app is authorized to access all meeting transcripts across the tenant. Subscribe your app to be notified for events when transcription starts or call ends for scheduled online Teams meetings. After the meeting ends, your app can access and retrieve the meeting transcript.
+Tenant-level notifications are useful if your app is authorized to access all meeting transcripts and recordings across the tenant. Subscribe your app to be notified for events when transcription and recording starts or call ends for scheduled online Teams meetings. After the meeting ends, your app can access and retrieve the meeting transcript and recording.
 
 For subscribing your app to tenant-level notifications, see [get change notifications](/graph/teams-changenotifications-chatmessage#subscribe-to-messages-across-all-chats).
 
-When your app is notified about subscribed meeting events, it searches through the notifications for transcription started and meeting ended events. These events contain the chat ID, which is used to obtain chat entity, and eventually meeting ID and organizer ID.
+When your app is notified about subscribed meeting events, it searches through the notifications for transcription and recording started and meeting ended events. These events contain the chat ID, which is used to obtain chat entity, and eventually meeting ID and organizer ID.
 
 To obtain meeting ID and organizer ID from tenant-level notification:
 
@@ -408,7 +408,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
     </details>
 
-4. **Fetch transcript**: The organizer ID and meeting ID obtained in the Steps 2 and 3 let your app fetch the transcripts for that particular meeting event.
+4. **Fetch transcript**: The organizer ID and meeting ID obtained in the Steps 2 and 3 let your app fetch the transcripts and recordings for that particular meeting event.
 
     To fetch transcripts, you'll need to:
 
@@ -527,6 +527,9 @@ You can try the following code sample for a bot app:
 
 > [!div class="nextstepaction"]
 > [Graph APIs for fetching transcripts](/graph/api/resources/calltranscript)
+
+> [!div class="nextstepaction"]
+> [Graph APIs for fetching recordings](/graph/api/resources/callrecording)
 
 ## See also
 

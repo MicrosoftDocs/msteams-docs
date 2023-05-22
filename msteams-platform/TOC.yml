@@ -523,12 +523,12 @@
       href: graph-api/meeting-transcripts/fetch-id.md
       displayName: Obtain meeting details using user-level notification, tenant-level notification
     - name: Get notified when transcripts and recordings is available
-      href: /graph/teams-change-notification-in-microsoft-teams-overview
+      href: /graph/transcripts-and-recordings
       displayName: Get notified, transcript, recording
     - name: Get transcripts
       href: /graph/api/resources/calltranscript
     - name: Get recordings
-      href: /graph/api/resources/calltranscript
+      href: /graph/api/resources/callrecording
   - name: Enhanced collaboration with Live Share
     items:
     - name: Overview
