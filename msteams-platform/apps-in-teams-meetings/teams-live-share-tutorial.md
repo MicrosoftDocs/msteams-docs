@@ -332,7 +332,7 @@ Users invited to the meeting can see your app on stage when they join the meetin
 
 ## Deployment
 
-After you're ready to deploy your code, you can use [Teams Toolkit](../toolkit/provision.md#provision-using-teams-toolkit-in-visual-studio) or the [Teams Developer Portal](https://dev.teams.microsoft.com/apps) to provision and upload your app's zip file.
+After you're ready to deploy your code, you can use Teams Toolkit or the Teams Developer Portal to provision and upload your app's zip file.
 
 > [!NOTE]
 > You need to add your provisioned appId to the `manifest.json` before uploading or distributing the app.
