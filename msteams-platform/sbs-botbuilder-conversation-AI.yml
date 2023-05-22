@@ -271,7 +271,7 @@ items:
     | `teamsBot.ts` | Main entry point for the bot app. |
     | `appPackage` | App manifest template files, and the app icons, color.png and outline.png. |
     | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
-    | `config.ts` |  |
+    | `config.ts` | `config.ts` wraps access to environment variables that is used to setup the bots adapter. |
     | `teamsapp.yml` |	This is the main Teams Toolkit project that defines two primary things:  Properties and configuration stage definitions. |
     | `teamsapp.local.yml` |This overrides teamsapp.yml with actions that enable local execution and debugging. |
     | `infra/azure.parameters.json` | Parameters file for Azure BICEP provision for every environment. |
