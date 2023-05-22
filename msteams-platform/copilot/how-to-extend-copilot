@@ -123,7 +123,7 @@ To ensure your Graph connector works well with Copilot, there are several things
 
 ## See also
 
-* [Message extensions overview] <https://learn.microsoft.com/en-us/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions>)
+* [Message extensions overview] <https://learn.microsoft.com/en-us/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions>
 * [Build message extension](https://learn.microsoft.com/en-us/microsoftteams/platform/get-started/build-message-extension?)
 * [OpenAPI spec definition](https://spec.openapis.org/oas/v3.1.0)
 * [Graph connectors overview](https://developer.microsoft.com/en-us/graph/connectors)
