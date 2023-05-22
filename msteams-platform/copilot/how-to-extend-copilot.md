@@ -10,7 +10,7 @@ ms.date: 05/23/2023
 # Extend Microsoft 365 Copilot
 
 > [!NOTE]
-> Extend Microsoft 365 Copilot is available only in private developer preview.
+> Extend Microsoft 365 Copilot is available only in public developer preview.
 
 Microsoft 365 Copilot is powered by an advanced processing and orchestration engine that seamlessly integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to turn your words into the most powerful productivity tool. While Copilot is already able to use the apps and data within the Microsoft 365 ecosystem, many users still depend on various external tools and services for work management and collaboration. You can address this gap by extending Copilot to enable users to work with their third-party tools and services, unlocking the full potential of Microsoft 365 Copilot.
 
@@ -28,7 +28,7 @@ Plugins allow Copilot to:
 ## How do I build a plugin?
 
 > [!NOTE]
-> Plugins for Microsoft 365 Copilot are in early access preview. This documentation is subject to change.
+> Plugins for Microsoft 365 Copilot are in early access preview. This documentation is subject to change. When you have access to [the developer preview program](https://aka.ms/plugins-dev-waitlist), you'll receive instructions on evaluating your message extension to be used by Microsoft 365 Copilot.
 
 If you already have a Teams message extension, then you must already have a plugin that works with Copilot. If not, create a [message extension using the Teams Toolkit](~/messaging-extensions/what-are-messaging-extensions.md).
 
