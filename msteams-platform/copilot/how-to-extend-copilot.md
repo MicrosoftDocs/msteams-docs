@@ -7,7 +7,7 @@ ms.author: ginobuzz
 ms.date: 05/23/2023 
 ---
 
-# How to Extend Microsoft 365 Copilot
+# Extend Microsoft 365 Copilot
 
 > [!NOTE]
 > Extend Microsoft 365 Copilot is available only in private developer preview.
@@ -18,7 +18,7 @@ You can extend Microsoft 365 Copilot by building a plugin or by connecting to an
 
 ## What is a plugin?
 
-A Plugin allows Copilot to interact directly with third-party data, apps, and services, enhancing its capabilities and broadening its range of capabilities.
+A plugin allows Copilot to interact directly with third-party data, apps, and services, enhancing its capabilities and broadening its range of capabilities.
 Plugins allow Copilot to:
 
 * Retrieve real-time information, for example, latest news coverage on a product launch.
@@ -32,18 +32,18 @@ Plugins allow Copilot to:
 
 If you already have a Teams message extension, then you must already have a plugin that works with Copilot. If not, create a [message extension using the Teams Toolkit](~/messaging-extensions/what-are-messaging-extensions.md).
 
-### Scenario 1: I want to create a new plugin from an existing API or OpenAI plugin
+**Scenario 1: I want to create a new plugin from an existing API or OpenAI plugin**
 
 [Join the early access program](https://aka.ms/PluginsEarlyAccess) to build a message extension that allows you to convert an existing API or OpenAI plugin to work for Microsoft Copilot.
 
-1. Using the Teams Toolkit for Visual Studio Code (VS Code), go to **Create plugin for Copilot**.
+1. Using the Teams Toolkit for Microsoft Visual Studio Code, go to **Create plugin for Copilot**.
 2. Provide a link to either an OpenAPI specification or an OpenAI plugin.
 3. Update your manifest with plugin metadata such as name, publisher, APIs used.
 4. Optional: If you want your plugin to return an Adaptive Card, provide an Adaptive Card template and reference the template in the manifest.
 5. Test your plugin.
 6. Preview and publish your plugin.
 
-### Scenario 2: I want to build a plugin from an existing Microsoft 365 message extension
+**Scenario 2: I want to build a plugin from an existing Microsoft 365 message extension**
 
 Your Message Extension works with Copilot (after quality testing).
 
@@ -53,47 +53,32 @@ To ensure your plugin works as intended, it is important to include good descrip
 
 1. App description: Include detailed descriptions of the app, supported scenarios, feature capabilities, and related keywords using the `shortDescription` and `longDescription` fields.
 
-```json
-... 
-"name": { 
-"shortDescription": "Work-item tracking and productivity app", 
-"longDescription": "Contoso app is a work-item tracking and project management app that allows teams to create, manage, and track work items. This app helps teams manage projects more efficiently. " 
-... 
-} 
-
-```
+   ```json
+   ... 
+   "name": { 
+   "shortDescription": "Work-item tracking and productivity app", 
+   "longDescription": "Contoso app is a work-item tracking and project management app that allows teams to create, manage, and track work items. This app helps teams manage projects more efficiently. " 
+   ... 
+   } 
+   ```
 
 2. Skill Parameter descriptions: Include detailed descriptions of your search and action skills along with associated parameters. These descriptions are used by the LLM to trigger the right skill and input the correct parameters for a given user request.
 
-```json
-
-... 
-
-"commands": [{ 
-
-"id": "Work item search query", 
-
-"type": "query", 
-
-"context": "command box", 
-
-"parameters": [ 
-
- { 
-
-"name": "Work item search string", 
-
-"title": "Work item search keyword", 
-
-"description": "Search for work items by keyword(s)", 
-
- }] 
-
-}, 
-
-... 
-
-```
+   ```json
+    ... 
+   "commands": [{ 
+   "id": "Work item search query", 
+   "type": "query", 
+   "context": "command box", 
+   "parameters": [ 
+   { 
+   "name": "Work item search string", 
+   "title": "Work item search keyword", 
+   "description": "Search for work items by keyword(s)", 
+   }] 
+   }, 
+   ...
+   ```
 
 3. Adaptive Card responses: By incorporating Adaptive Cards into your plugin’s response, you can enhance the user experience by providing more dynamic, actionable content within the responses and references, allowing users to interact more effectively with the information provided.
 
@@ -110,7 +95,7 @@ When you connect your API to Teams, you've built a simple, powerful Microsoft 36
 
 ## Connecting external data sources
 
-If you have an existing Microsoft Graph Connector, it works with Copilot without any changes. With a Graph Connector, your data is included in Copilot responses, and also participate in other Microsoft 365 experiences such as search, content recommendations, and so on. For more information, see [building a Microsoft Graph connector](https://developer.microsoft.com/graph/connectors).
+If you've an existing Microsoft Graph Connector, it works with Copilot without any changes. With a Graph Connector, your data is included in Copilot responses, and also participate in other Microsoft 365 experiences such as search, content recommendations, and so on. For more information, see [building a Microsoft Graph connector](https://developer.microsoft.com/graph/connectors).
 
 ## How to make your Graph connector work better with Copilot?
 
