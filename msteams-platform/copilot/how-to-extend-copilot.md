@@ -22,7 +22,6 @@ The **Usage by time period** chart shows you the number of active users or tenan
 3. Perform actions on behalf of the user, for example, create a Jira ticket.
 
 > [!NOTE]
-> > [!NOTE]
 > Plugins for Microsoft 365 Copilot are in early access preview. This documentation is subject to change.
 
 If you already have a Teams message extension, then you already have a plugin that will work with Copilot. If not, it’s easy to create a [Message Extension using the Teams Toolkit](https://learn.microsoft.com/en-us/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?tabs=dotnet).
@@ -32,15 +31,10 @@ If you already have a Teams message extension, then you already have a plugin th
 [Join the early access program](https://aka.ms/PluginsEarlyAccess) in order to build a message extension that will allow you to convert an existing API or OpenAI Plugin to work for Microsoft Copilot also.
 
 1. Using the Teams Toolkit for VSCode, go to ‘Create plugin for Copilot’.
-
 2. Provide a link to either an OpenAPI specification or an OpenAI plugin.
-
 3. Update your manifest with plugin metadata (name, publisher, APIs used, and so on).
-
 4. Optional: If you want your plugin to return an adaptive card, provide an adaptive card template and reference them in the manifest.
-
 5. Test your plugin.
-
 6. Preview and publish your plugin.
 
 ### Scenario 2: I want to build a plugin from an existing Microsoft 365 Message Extension
@@ -114,16 +108,13 @@ If you have an existing Microsoft Graph Connector, it will work with Copilot wit
 To ensure your Graph connector works well with Copilot, there are several things you must do. Following these tips would also improve relevance for your connector content with Microsoft Search:
 
 1. Include urlToItemResolver. By including urlToItemResolver in your connector’s [activity settings](https://learn.microsoft.com/en-us/graph/connecting-external-content-manage-connections#activity-settings), Copilot will become aware when users share URLs to your content with one another. When users share an item with one another, Copilot will boost its importance for including the item in its response.  
-
 2. Provide a rich human-readable name and detailed description when you [create the connection](https://learn.microsoft.com/en-us/graph/api/externalconnectors-external-post-connections?view=graph-rest-1.0&tabs=http). This helps Copilot understand what the data source is so it will include the data source in its response if it’s relevant.
-
 3. Apply [semantic labels](https://learn.microsoft.com/en-us/graph/connecting-external-content-manage-schema#semantic-labels). Semantic labels help Copilot understands the semantic meaning of your schema. You must apply as many of them to your schema as applicable.
-
 4. Add [user activities](https://learn.microsoft.com/en-us/graph/api/externalconnectors-externalitem-addactivities?view=graph-rest-1.0&tabs=http). In addition to adding your content (externalItems) to the Microsoft Graph, your connector must also add user activities around you’re your content. Supported activity types are shown [here](https://learn.microsoft.com/en-us/graph/api/resources/externalconnectors-externalactivity?view=graph-rest-1.0). Items that have more activities will be boosted in its importance.
 
 ## See also
 
-* [Message extensions overview] <https://learn.microsoft.com/en-us/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions>
+* [Message extensions overview] (<https://learn.microsoft.com/en-us/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions>)
 * [Build message extension](https://learn.microsoft.com/en-us/microsoftteams/platform/get-started/build-message-extension?)
 * [OpenAPI spec definition](https://spec.openapis.org/oas/v3.1.0)
 * [Graph connectors overview](https://developer.microsoft.com/en-us/graph/connectors)
