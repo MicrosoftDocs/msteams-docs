@@ -114,7 +114,7 @@ To ensure your Graph connector works well with copilot, there are several things
 
 ## See also
 
-* [Message extensions overview] (~/messaging-extensions/what-are-messaging-extensions.md)
+* [Message extensions overview](~/messaging-extensions/what-are-messaging-extensions.md)
 * [Build message extension](~/get-started/build-message-extension.md)
 * [OpenAPI spec definition](https://spec.openapis.org/oas/v3.1.0)
 * [Graph connectors overview](https://developer.microsoft.com/graph/connectors)
