@@ -51,6 +51,9 @@ To get started, ensure that you have the following tools:
     SECRET_OPENAI_API_KEY=<your OpenAI key>
    ```
 
+   > [!NOTE]
+   > If you’re cloning the [chefbot sample](https://github.com/microsoft/teams-ai/tree/main/js/samples) through Teams Toolkit, you’ll find the `.env.local.user` file in the setup. If you can't find the file, create the `.env.local.user` file and update the OpenAI key to get started.
+
 1. Go to **Visual Studio Code**.
 
 1. Select **Open a folder**, browse to the folder where ChefBot is available and select **Select folder**.
