@@ -49,19 +49,19 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 
 1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting chat.
 
-  # [Meeting chat view desktop](#tab/meeting-chat-view-desktop)
+    # [Meeting chat view desktop](#tab/meeting-chat-view-desktop)
     
-   The following image shows an app added to the meeting chat in the Teams desktop client:
+    The following image shows an app added to the meeting chat in the Teams desktop client:
    
-   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams desktop.":::
+    :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams desktop.":::
     
-  # [Meeting chat view mobile](#tab/meeting-chat-view-mobile)
+    # [Meeting chat view mobile](#tab/meeting-chat-view-mobile)
     
-   The following image shows an app added to the meeting chat in the Teams mobile client:
+    The following image shows an app added to the meeting chat in the Teams mobile client:
     
-   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
+    :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
     
-  ---
+    ---
 
 ### Meeting side panel view
 
@@ -101,8 +101,6 @@ The following shows a deep link in a pre or a post-meeting tab:
     
 :::image type="content" source="../assets/images/mobile-post-meeting-deeplink.gif" alt-text="Screenshot shows a pre or post-meeting tab when deep link is selected in mobile.":::
     
----
-
 Pre or post-meeting tab behavior isn't supported in channel meetings.
 
 ---
