@@ -32,7 +32,7 @@ The following image shows Contoso channel tabs:
 
 There are few prerequisites that you must go through before working on tabs.
 
-There are two types of tabs available in Teams, personal and channel or group. [Personal tabs](~/tabs/how-to/create-personal-tab.md) also known as static tabs. Personal (static) tabs along with personal-scoped bots are part of the personal apps that are scoped to a single user and pinned to the left navigation bar for easy access. Personal (static) tabs in personal scope continue to work the same. However, you can now [extend static tabs](~/tabs/how-to/create-personal-tab.md#extend-personal-tabs-to-group-chat-and-meetings) to group chat or meetings with a [customizable experience.](~/tabs/how-to/create-personal-tab.md#customizing-your-personal-tab-in-chats-or-meetings)
+There are two types of tabs available in Teams, personal and channel or group. [Personal tabs](~/tabs/how-to/create-personal-tab.md) also known as static tabs. Personal (static) tabs along with personal-scoped bots are part of the personal apps that are scoped to a single user and pinned to the left navigation bar for easy access. Personal (static) tabs in personal scope continue to work the same. However, you can now [extend static tabs](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-and-meetings) to group chat or meetings with a [customizable experience.](~/tabs/how-to/create-personal-tab.md#customizing-your-static-tab-in-chats-or-meetings)
 
 You can extend static tabs to different scopes. Static tabs in chats or meetings behave more like apps as you can pin only one tab per app for example, pinning a single YouTube app tab in a meeting. Static tabs in meetings can also be pre-pinned in meetings by IT Admins.
 
