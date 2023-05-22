@@ -9,9 +9,6 @@ ms.date: 05/23/2023
 
 # Extend Microsoft 365 Copilot
 
-> [!NOTE]
-> Extend Microsoft 365 Copilot is available only in public developer preview.
-
 Microsoft 365 Copilot is powered by an advanced processing and orchestration engine that seamlessly integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to turn your words into the most powerful productivity tool. While Copilot is already able to use the apps and data within the Microsoft 365 ecosystem, many users still depend on various external tools and services for work management and collaboration. You can address this gap by extending Copilot to enable users to work with their third-party tools and services, unlocking the full potential of Microsoft 365 Copilot.
 
 You can extend Microsoft 365 Copilot by building a plugin or by connecting to an external data source.
@@ -30,7 +27,7 @@ Plugins allow Copilot to:
 > [!NOTE]
 > Plugins for Microsoft 365 Copilot are in early access preview. This documentation is subject to change. When you have access to [the developer preview program](https://aka.ms/plugins-dev-waitlist), you'll receive instructions on evaluating your message extension to be used by Microsoft 365 Copilot.
 
-If you already have a Teams message extension, then you must already have a plugin that works with Copilot. If not, create a [message extension using the Teams Toolkit](~/messaging-extensions/what-are-messaging-extensions.md).
+If you already have a Teams message extension, then you already have a plugin that works with Copilot. If not, create a [message extension using the Teams Toolkit](~/messaging-extensions/what-are-messaging-extensions.md).
 
 **Scenario 1: I want to create a new plugin from an existing API or OpenAI plugin**
 
@@ -45,7 +42,7 @@ If you already have a Teams message extension, then you must already have a plug
 
 **Scenario 2: I want to build a plugin from an existing Microsoft 365 message extension**
 
-Your Message Extension works with Copilot (after quality testing).
+Your Message Extension will work with Copilot (after quality testing).
 
 ## What makes a good plugin for Microsoft 365 Copilot?
 
@@ -95,16 +92,16 @@ When you connect your API to Teams, you've built a simple, powerful Microsoft 36
 
 ## Connecting external data sources
 
-If you've an existing Microsoft Graph Connector, it works with Copilot without any changes. With a Graph Connector, your data is included in Copilot responses, and also participate in other Microsoft 365 experiences such as search, content recommendations. For more information, see [building a Microsoft Graph connector](https://developer.microsoft.com/graph/connectors).
+If you have an existing Microsoft Graph Connector, it will work with Copilot without any changes. With a Graph Connector, your data will be included in Copilot responses, and also participate in other Microsoft 365 experiences such as search, content recommendations. For more information, see [building a Microsoft Graph connector](https://developer.microsoft.com/graph/connectors).
 
 ## How to make your Graph connector work better with Copilot?
 
-To ensure your Graph connector works well with Copilot, there are several things you must do. Following these tips would also improve relevance for your connectors content with Microsoft Search:
+To ensure your Graph connector works well with Copilot, there are several things you should do. Following these tips would also improve relevance for your connector content with Microsoft Search:
 
-1. Include `urlToItemResolver`. By including `urlToItemResolver` in your connector’s [activity settings](/graph/connecting-external-content-manage-connections), Copilot becomes aware when users share URLs to your content with one another. When users share an item with one another, Copilot boosts its importance for including the item in its response.  
+1. Include `urlToItemResolver`. By including `urlToItemResolver` in your connector’s [activity settings](/graph/connecting-external-content-manage-connections), Copilot will become aware when users share URLs to your content with one another. When users share an item with one another, Copilot will boost its importance for including the item in its response.  
 2. Provide a rich human-readable name and detailed description when you [create the connection](/graph/api/externalconnectors-external-post-connections). This helps Copilot understand what the data source is so it includes the data source in its response if it’s relevant.
 3. Apply [semantic labels](/graph/connecting-external-content-manage-schema). Semantic labels help Copilot understand the semantic meaning of your schema. You must apply as many of them to your schema as applicable.
-4. Add [user activities](/graph/api/externalconnectors-externalitem-addactivities). In addition to adding your content `externalItems` to the Microsoft Graph, your connector must also add user activities around you’re content. Supported activity types are shown [here](/graph/api/resources/externalconnectors-externalactivity). Items that have more activities are boosted in its importance.
+4. Add [user activities](/graph/api/externalconnectors-externalitem-addactivities). In addition to adding your content `externalItems` to the Microsoft Graph, your connector should also add user activities around you’re content. Supported activity types are shown [here](/graph/api/resources/externalconnectors-externalactivity). Items that have more activities are boosted in its importance.
 
 ## See also
 
