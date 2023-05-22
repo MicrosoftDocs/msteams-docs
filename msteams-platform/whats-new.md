@@ -324,7 +324,7 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|17/05/2023| Static tabs that work everywhere | Build Tabs > [Overview](tabs/what-are-tabs.md)|
+|23/05/2023| Static tabs that work everywhere | Build Tabs > [Overview](tabs/what-are-tabs.md)|
 
 ## Developer preview
 

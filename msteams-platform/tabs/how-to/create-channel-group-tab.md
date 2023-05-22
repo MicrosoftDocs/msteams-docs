@@ -1027,14 +1027,14 @@ You've completed the tutorial to build a tab app with Blazor.
 
 ::: zone-end
 
-## Migrate your configurable tab to personal (static) tab
+## Migrate your configurable tab to static tab
 
-Personal (static) tab capability is extended to support group chat and meetings. You can update your existing configurable tab to personal (static) tab and add different scopes to the personal (static) tab. 
+Static tab capability is extended to support group chat and meetings. You can update your existing configurable tab to static tab and add different scopes to the static tab. 
 
-To change your configurable tab to personal (static) tab:
+To change your configurable tab to static tab:
 
 1. Move your configuration logic out of your `configurationUrl` code space to your `contentUrl` code space. 
-1. Add the `staticTabs` property to your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with `scopes` and `context` parameters. Following is an example of app manifest where a personal (static) tab is defined that works in all scopes and contexts in Teams:
+1. Add the `staticTabs` property to your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with `scopes` and `context` parameters. Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
 
    ```json
    "staticTabs": [ 
@@ -1059,7 +1059,7 @@ To change your configurable tab to personal (static) tab:
    ],
    ```
 
-    For more information, see [configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) and [personal (static) tab.](~/tabs/how-to/create-personal-tab.md#extend-personal-static-tabs-to-group-chat-and-meetings)
+    For more information, see [configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) and [static tab.](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-and-meetings)
 
 If your [configurable tab](~/tabs/how-to/create-tab-pages/configuration-page.md#configuration-page-for-tabs) allows users to edit the tab after it is pinned, which means that `canUpdateConfiguration` is set to `true`, then you must continue to keep the `configurableTab` property in your app manifest in order to ensure that the users can edit the pre-existing pinned configurable tabs.
 

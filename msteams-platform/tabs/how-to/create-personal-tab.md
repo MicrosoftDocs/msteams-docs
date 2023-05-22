@@ -10,7 +10,7 @@ zone_pivot_groups: teams-app-environment
 
 # Create a personal tab
 
-Personal tabs also known as static tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) your personal tabs.
+Personal tabs are personally-scoped static tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) your personal tabs.
 
 Ensure that you have all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your personal tab.
 
@@ -612,20 +612,17 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 
 ```
 
-## Extend personal (static) tabs to group chat and meetings
+## Extend static tabs to group chat and meetings
 
 > [!NOTE]
-> * Extend your personal (static) tabs to group chat and meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-> * To extend your personal tabs to group chat and meetings, use the app manifest v1.16 or later.
+> * Extend your static tabs to group chat and meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * To extend your static tabs to group chat and meetings, use the app manifest v1.16 or later.
 
-You can extend personal (static) tabs to group chat and meetings. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one tab at a time. The following guidelines help you build a personal (static) tab that works in every context:
+You can extend static tabs to group chat and meetings. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one tab per app for example, pinning a single YouTube app tab.
 
-* Don't embed your entire web app in Teams, as users often don't find this helpful. Instead, think about what your app can uniquely do inside Teams. For example, can you serve an app experience that consolidates all your apps content, such as displaying all the surveys in a meeting.
-* Your app needs to be responsive down to 320 pixels width to align with the meeting side panel and  Teams mobile experience. 
+To extend your static tabs to group chat and meetings, update your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with the `scopes` and `context` parameters in the `staticTabs` property.
 
-To extend your personal (static) tabs to group chat and meetings, update your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with the `scopes` and `context` parameters in the `staticTabs` property.
-
-Following is an example of app manifest where a personal (static) tab is defined that works in all scopes and contexts in Teams:
+Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
 
 ```json
 "staticTabs": [ 
@@ -663,9 +660,9 @@ If a context isn't defined in the app manifest, by default Teams consider the fo
 ]
 ```
 
-## Customizing your personal (static) tab in chats or meetings
+## Customizing your static tab in chats or meetings
 
-To customize your personal (static) tab experience in chats or meetings, you can add `setConfig` APIs in a [configuration dialog](~/tabs/how-to/create-tab-pages/configuration-page.md#configuration-page-for-tabs) to update the `contentUrl`. Following is an example:
+To customize your static tab experience in chats or meetings, you can add `setConfig` APIs in a [configuration dialog](~/tabs/how-to/create-tab-pages/configuration-page.md#configuration-page-for-tabs) to update the `contentUrl`. Following is an example:
 
 ```json
 pages.config.setConfig({ 
@@ -674,7 +671,7 @@ pages.config.setConfig({
 
 ```
 
-For more information, see [create a configuration page.](~/tabs/how-to/create-tab-pages/configuration-page.md)
+Only `contentUrl` changes are supported for `setConfig`, other properties can't be changed for static tabs.
 
 ## Code sample
 
