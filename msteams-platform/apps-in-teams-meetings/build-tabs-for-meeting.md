@@ -88,7 +88,9 @@ The following shows a deep link in meeting side panel:
 # [Mobile](#tab/mobile1)
     
 :::image type="content" source="../assets/images/mobile-in-meeting-deeplink.gif" alt-text="Screenshot shows side panel view when deep link is selected in mobile.":::
- 
+
+---
+
 # [Pre or post-meeting tab](#tab/pre-or-post-meeting-tab)
 
 The following shows a deep link in a pre or a post-meeting tab:
