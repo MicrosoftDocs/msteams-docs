@@ -51,15 +51,15 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 
   # [Meeting chat view desktop](#tab/meeting-chat-view-desktop)
     
-    The following image shows an app added to the meeting chat in the Teams desktop client:
+   The following image shows an app added to the meeting chat in the Teams desktop client:
    
-    :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams desktop.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams desktop.":::
     
   # [Meeting chat view mobile](#tab/meeting-chat-view-mobile)
     
-    The following image shows an app added to the meeting chat in the Teams mobile client:
+   The following image shows an app added to the meeting chat in the Teams mobile client:
     
-    :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
     
   ---
 
@@ -89,9 +89,6 @@ The following shows a deep link in meeting side panel:
     
 :::image type="content" source="../assets/images/mobile-in-meeting-deeplink.gif" alt-text="Screenshot shows side panel view when deep link is selected in mobile.":::
  
----
-
-
 # [Pre or post-meeting tab](#tab/pre-or-post-meeting-tab)
 
 The following shows a deep link in a pre or a post-meeting tab:
