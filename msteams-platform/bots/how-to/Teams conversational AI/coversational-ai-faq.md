@@ -55,7 +55,7 @@ The two are independent and can't be integrated.
 <br>
 
 <details>
-<summary> How does Teams AI library co-exist against the **hero-story** of developers building for the Skills ecosystem in Microsoft 365?</summary>
+<summary> How does Teams AI library co-exist against the hero-story of developers building for the Skills ecosystem in Microsoft 365?</summary>
 
 Teams AI library story is targeted towards Pro-developers and separate from the hero-story around skills ecosystem in Microsoft 365.
 
