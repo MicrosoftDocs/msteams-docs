@@ -17,7 +17,7 @@ For example, during a real time collaboration in a meeting, if a participant add
 
 The following image shows you the visual indicator on the app icon in the meeting U-bar:
 
-:::image type="content" source="../assets/images/visual-indicator.png" alt-text="Screenshot shows you the visual indicator on the app in U-bar in teams meeting.":::
+:::image type="content" source="../assets/images/visual-indicator.png" alt-text="Screenshot shows you the visual indicator on the app in U-bar in teams meeting."lightbox="../assets/images/visual-indicator.png":::
 
 > [!NOTE]
 >
@@ -58,7 +58,7 @@ To enable visual indicator, you must:
 
 To enable visual indicator, ensure that you've [enabled targeted in-meeting notification](in-meeting-notification-for-meeting.md#enable-targeted-in-meeting-notification).
 
-The [targeted meeting notification API](in-meeting-notification-for-meeting.md#enable-targeted-in-meeting-notification) has been extended to support the visual indicator capability on the app icon and pass the user MRI IDs of the intended recipients. The `surfaces` parameter now supports `meetingTabIcon` value, which is used by the app.
+The [targeted meeting notification API](meeting-apps-apis.md#targeted-meeting-notification-and-visual-indicator-api) has been extended to support the visual indicator capability on the app icon and pass the user MRI IDs of the intended recipients. The `surfaces` parameter now supports `meetingTabIcon` value, which is used by the app.
 
 App can also pass the `tabEntityId`, if there are multiple instances of the app added to the same meeting. If the `tabEntityId` isn't passed, then Teams displays the indicator on the first app icon on the users meeting window.
 
