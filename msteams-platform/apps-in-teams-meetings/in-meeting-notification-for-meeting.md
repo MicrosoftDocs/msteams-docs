@@ -161,6 +161,8 @@ To enable the targeted in-meeting notification:
 
 For more information on `targetedMeetingNotification`, see [targeted meeting notification API](meeting-apps-apis.md#targeted-meeting-notification-and-visual-indicator-api).
 
+After you've built in-meeting notification for your app, you can use the `targetedMeetingNotification` API to enable visual indicator for your meeting app. This helps meeting participants to get a notification whenever there's new activity in the app.
+
 ## Code sample
 
 Sample name | Description | .NET | Node.js | Manifest|

@@ -395,7 +395,7 @@ POST /v1/meetings/{meetingId}/notification
 | `meetingId` | The meeting ID is available through bot invoke and TeamsJS library. |
 | `type` |`targetedMeetingNotification` |
 | `recipients` | List of user IDs. Get user IDs for meeting participants through [Get participant API](#get-participant-api). Get the entire list of chat roster using [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Empty or null recipients list will return 400.|
-| `surface` | A type of surface. The supported surface type is `meetingStage`. |
+| `surface` | A type of surface. The supported surface type are `meetingStage` and `meetingTabIcon`. |
 | `surfaces` | List of surfaces where notifications can be rendered. |
 | `contentType` | Type of content that the targeted in-meeting notification renders. The supported value is `task`. |
 | `content` | [TaskModuleContinueResponse](/dotnet/api/microsoft.bot.schema.teams.taskmodulecontinueresponse?view=botbuilder-dotnet-stable&preserve-view=true) |

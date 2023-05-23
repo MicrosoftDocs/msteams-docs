@@ -62,13 +62,6 @@ The [targeted meeting notification API](meeting-apps-apis.md#targeted-meeting-no
 
 App can also pass the `tabEntityId`, if there are multiple instances of the app added to the same meeting. If the `tabEntityId` isn't passed, then Teams displays the indicator on the first app icon on the users meeting window.
 
-The targeted meeting notification API already supports `meetingStage` surface and apps can define multiple surfaces in the same API call if there are relevant scenarios.
-
-App can define the following objects under the `surface` parameter:
-
-* `meetingTabIcon`, which shows an indicator on the app icon.
-* `meetingStage`, which sends an in-meeting notification.
-
 ### Example
 
 The following is an example of a payload:
