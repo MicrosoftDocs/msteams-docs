@@ -766,6 +766,8 @@
         displayName: mail, Microsoft 365, Office 365, Outlook add-in, message extension
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
+- name: Extend Microsoft 365 Copilot
+  href: copilot/how-to-extend-copilot.md
 - name: Teams developer documentation FAQs
   href: teams-faq.md
 - name: Test your app
