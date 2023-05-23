@@ -24,12 +24,12 @@
   items:
   - name: Overview
     href: get-started/get-started-overview.md
-    displayName: First Teams app, Python, .NET, Java, Node.js
-  - name: Build your first tab app
+    displayName: First Teams app, Python, .NET, Java, Node.js, get started
+  - name: Build a tab app
     href: get-started/build-basic-tab-app.md
-  - name: Build notification bot
+  - name: Build a notification bot app
     href: get-started/build-notification-bot.md
-  - name: Build message extension
+  - name: Build a message extension app
     href: get-started/build-message-extension.md
   - name: Teams app tutorials and code samples
     href: get-started/teams-toolkit-tutorial.md
@@ -766,6 +766,8 @@
         displayName: mail, Microsoft 365, Office 365, Outlook add-in, message extension
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
+- name: Extend Microsoft 365 Copilot
+  href: copilot/how-to-extend-copilot.md
 - name: Teams developer documentation FAQs
   href: teams-faq.md
 - name: Test your app
