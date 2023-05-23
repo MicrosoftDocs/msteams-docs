@@ -85,6 +85,8 @@ The following is an example of a payload:
 
 ```
 
+[!INCLUDE [Response code](../includes/meeting-response-code.md)]
+
 ## Limitations
 
 * Visual indicator displays only one notification for a user in a minute per meeting.
