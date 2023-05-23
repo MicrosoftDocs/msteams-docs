@@ -162,7 +162,7 @@ const updateDice = () => {
 
 ### Handle remote changes
 
-The values returned from `diceState` are only a snapshot in time. To keep the data up to date as it changes an event handler must be registered with the `diceState` to call `updateDice` each time that the `stateChanged` event is sent.
+The values returned from `diceState` are only a snapshot in time. To keep the data up-to-date as it changes, an event handler must be registered with `diceState` to call `updateDice` each time that the `stateChanged` event is sent.
 
 ```js
 diceState.on("stateChanged", updateDice);
