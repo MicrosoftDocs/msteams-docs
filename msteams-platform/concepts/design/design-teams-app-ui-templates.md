@@ -140,7 +140,7 @@ Forms are used to collect, validate, and submit user input in a structured way. 
 
 ### Desktop
 
-:::image type="content" source="../../assets/form.png" alt-text="Example shows a form UI template on desktop.":::
+:::image type="content" source="../../assets/form.png" alt-text="Example shows a form UI template on desktop." lightbox="../../assets/form.png":::
 
 ## List
 

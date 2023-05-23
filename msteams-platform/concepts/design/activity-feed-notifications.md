@@ -16,7 +16,7 @@ The activity feed is a surface for users to access their notifications in Micros
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="Example shows an app notification displaying in the Teams activity feed.":::
+:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="Example shows an app notification displaying in the Teams activity feed."  lightbox="../../assets/images/activity-feed/desktop-overview.png":::
 
 ---
 
@@ -37,7 +37,7 @@ The activity feed is a surface for users to access their notifications in Micros
 
 The following variants show the kinds of activity feed notification cards you can display. The app logo replaces the user avatar for app-generated notifications.
 
-:::image type="content" source="../../assets/images/activity-feed/activity-feed-card-types.png" alt-text="Variants of Teams activity feed cards.":::
+:::image type="content" source="../../assets/images/activity-feed/activity-feed-card-types.png" alt-text="Variants of Teams activity feed cards." lightbox="../../assets/images/activity-feed/activity-feed-card-types.png":::
 
 ## Manage activity feed notifications
 
@@ -58,7 +58,7 @@ Each activity generates a system notification. What displays depends on what the
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/activity-feed/related-system-notifications.png" alt-text="Variants of Teams activity cards on different operating systems.":::
+:::image type="content" source="../../assets/images/activity-feed/related-system-notifications.png" alt-text="Variants of Teams activity cards on different operating systems." lightbox="../../assets/images/activity-feed/related-system-notifications.png":::
 
 |Counter|Description|
 |----------|-----------|
