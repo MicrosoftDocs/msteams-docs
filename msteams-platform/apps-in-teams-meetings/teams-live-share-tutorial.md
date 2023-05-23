@@ -172,7 +172,7 @@ diceState.on("stateChanged", updateDice);
 
 Before you can begin receiving the Live Share changes in the application, you must first call `initialize()` on your `LiveState` object with an initial value. This initial value doesn't overwrite any existing state that was sent by other users.
 
-Once you've initialized `LiveState`, the `stateChanged` event you registered earlier will start to be triggered whenever a change is made. However, to update our UI with the initial value, next we will call `updateDice()`.
+After you've initialized `LiveState`, the `stateChanged` event you registered earlier starts to trigger whenever a change is made. However, to update the UI within the initial value, call `updateDice()`.
 
 ```js
 await diceState.initialize(1);
