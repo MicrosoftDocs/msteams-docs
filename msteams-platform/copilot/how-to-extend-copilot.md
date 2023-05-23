@@ -51,18 +51,15 @@ To ensure your plugin works as intended, it is important to include good descrip
 1. App description: Include detailed descriptions of the app, supported scenarios, feature capabilities, and related keywords using the `shortDescription` and `longDescription` fields.
 
    ```json
-   ... 
    "name": { 
    "shortDescription": "Work-item tracking and productivity app", 
    "longDescription": "Contoso app is a work-item tracking and project management app that allows teams to create, manage, and track work items. This app helps teams manage projects more efficiently. " 
-   ... 
    } 
    ```
 
 2. Skill parameter descriptions: Include detailed descriptions of your search and action skills along with associated parameters. These descriptions are used by the LLM to trigger the right skill and input the correct parameters for a given user request.
 
    ```json
-    ... 
    "commands": [{ 
    "id": "Work item search query", 
    "type": "query", 
@@ -74,7 +71,6 @@ To ensure your plugin works as intended, it is important to include good descrip
    "description": "Search for work items by keyword(s)", 
    }] 
    }, 
-   ...
    ```
 
 3. Adaptive Card responses: By incorporating Adaptive Cards into your plugin’s response, you can enhance the user experience by providing more dynamic, actionable content within the responses and references, allowing users to interact more effectively with the information provided.
@@ -82,7 +78,7 @@ To ensure your plugin works as intended, it is important to include good descrip
 4. Including links in plugin response: Including links within your skill’s response serves multiple purposes:
     * Assists the LLM in posting the entity link for users, streamlining the reference process.
     * Enables users to easily access your entities in future Copilot requests.
-    * Embeds links in Adaptive Cards that allows your content to be displayed as a live, actionable loop component throughout the M365 ecosystem, enhancing user engagement and interaction.
+    * Embedded links in Adaptive Cards that allows your content to be displayed as a live, actionable loop component throughout the M365 ecosystem, enhancing user engagement and interaction.
 
 5. Deep Content Retrieval: To further enhance your plugin’s functionality, it’s recommended that your API supports deep content retrieval scenarios that can be leveraged by the LLMs to obtain grounding data. This involves enabling Copilot to send targeted requests, such as limiting a search to a specific date range, to your API for particular tasks and queries.
 
@@ -96,12 +92,12 @@ If you have an existing Microsoft Graph Connector, it will work with Copilot wit
 
 ## How to make your Graph connector work better with Copilot?
 
-To ensure your Graph connector works well with Copilot, there are several things you should do. Following these tips would also improve relevance for your connector content with Microsoft Search:
+To ensure your Graph connector works well with Copilot, there are several things you should do. Following these tips will also improve relevance for your connector content with Microsoft Search:
 
 1. Include `urlToItemResolver`. By including `urlToItemResolver` in your connector’s [activity settings](/graph/connecting-external-content-manage-connections), Copilot will become aware when users share URLs to your content with one another. When users share an item with one another, Copilot will boost its importance for including the item in its response.  
 2. Provide a rich human-readable name and detailed description when you [create the connection](/graph/api/externalconnectors-external-post-connections). This helps Copilot understand what the data source is, so it includes the data source in its response if it’s relevant.
 3. Apply [semantic labels](/graph/connecting-external-content-manage-schema). Semantic labels help Copilot understand the semantic meaning of your schema. You must apply as many of them to your schema as applicable.
-4. Add [user activities](/graph/api/externalconnectors-externalitem-addactivities). In addition to adding your content `externalItems` to the Microsoft Graph, your connector should also add user activities around you’re content. Supported activity types are shown [here](/graph/api/resources/externalconnectors-externalactivity). Items that have more activities are boosted in its importance.
+4. Add [user activities](/graph/api/externalconnectors-externalitem-addactivities). In addition to adding your content `externalItems` to the Microsoft Graph, your connector should also add user activities around you’re content. Supported activity types are shown [here](/graph/api/resources/externalconnectors-externalactivity). Items that have more activities are boosted in their importance.
 
 ## See also
 
