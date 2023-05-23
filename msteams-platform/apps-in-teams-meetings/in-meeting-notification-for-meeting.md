@@ -161,7 +161,7 @@ To enable the targeted in-meeting notification:
 
 For more information on `targetedMeetingNotification`, see [targeted meeting notification API](meeting-apps-apis.md#targeted-meeting-notification-and-visual-indicator-api).
 
-After you've built in-meeting notification for your app, you can use the `targetedMeetingNotification` API to enable visual indicator for your meeting app. This helps meeting participants to get a notification whenever there's new activity in the app.
+After you've built in-meeting notification for your app, you can use the `targetedMeetingNotification` API to enable visual indicator for your meeting app. This helps meeting participants to get a notification whenever there's new activity in the app. For more information, see [visual indicator for your Teams app](visual-indicator-for-your-app.md).
 
 ## Code sample
 
@@ -180,4 +180,3 @@ Follow the [step-by-step guide](../sbs-meeting-content-bubble.yml) to generate i
 * [Build apps for Teams meeting stage](build-apps-for-teams-meeting-stage.md)
 * [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
 * [Build apps for anonymous users](build-apps-for-anonymous-user.md)
-* [Visual indicator for your Teams app](visual-indicator-for-your-app.md)
