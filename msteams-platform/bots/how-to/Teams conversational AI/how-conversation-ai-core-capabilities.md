@@ -18,7 +18,7 @@ Earlier, you were using BotBuilder SDK directly to create bots for Microsoft Tea
 
 Teams AI library supports the following capabilities:
 
-* [Sending or receiving message](#sending-or-receiving-message)
+* [Send or receive message](#send-or-receive-message)
 
 * [Message extension (ME) capabilities](#message-extensions)
 
@@ -28,7 +28,7 @@ Teams AI library supports the following capabilities:
 
 In the following section, we'll explain each capability and their path to migration. We'll be using the samples from the [AI library](https://github.com/microsoft/teams-ai/tree/main) to explain the migration method:  
 
-## Sending or receiving message
+## Send or receive message
 
 Replace `BotActivityHandler` and `ApplicationTurnState` with this `Application` and `DefaultTurnState`. `DefaultTurnState` is constructed to include `ConversationState`.
 
@@ -71,7 +71,7 @@ const app =
 
 In the previous Teams SDK format, you needed to set up the Message extensions query handler like:
 
-Now, the app class has messageExtensions features to make creating the handler(s) simpler:
+Now, the app class has `messageExtensions` features to simply creating the handlers:
 
 * `context`: TurnContext
 * `state`: DefaultTurnState
@@ -170,9 +170,9 @@ app.adaptiveCards.actionSubmit('StaticSubmit', async (context, _state, data: Sub
 
 ## Bot logic for handling an action
 
- The Bot responds to the user's input with the action `lights on` to turn the lights-on.
+ The Bot responds to the user's input with the action `lights on` to turn the lights on.
 
-The following example illustrates how the SDK makes it possible to manage the bot logic for handling an action `LightsOn` or `LightsOff` and connect it to the prompt used with GPT:
+The following example illustrates how Teams AI library makes it possible to manage the bot logic for handling an action `LightsOn` or `LightsOff` and connect it to the prompt used with OpenAI:
 
 Example: [Light bot](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.c.actionMapping.lightBot)
 

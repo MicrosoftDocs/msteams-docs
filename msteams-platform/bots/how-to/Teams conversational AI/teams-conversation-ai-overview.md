@@ -14,6 +14,8 @@ ms.author: surbhigupta
 
 Teams AI library is a Teams-centric interface to GPT-based common language models and user intent engines. This moderates the need for you to take on complex and expensive tasks of writing and maintaining conversational bot logic to integrate with large language models (LLMs).
 
+:::image type="content" border="false" source="../../../assets/images/bots/teams-ai-library.png" alt-text="Visual representation of a user input and a bot response."lightbox="../../../assets/images/bots/teams-ai-library.png":::
+
 The AI library provides a simple capabilities-driven approach and helps you create intelligent apps quickly and easily with prebuilt, reusable code snippets so that you can focus on building the business logic rather than learning the semantics of Teams conversational applications.
 
 The following are some of the main features available through Teams AI library:
@@ -27,35 +29,35 @@ The following are some of the main features available through Teams AI library:
 * [Responsible AI](#responsible-ai)
 * [Predictive engine for mapping intents to actions](#predictive-engine-for-mapping-intents-to-actions)
 
-### Simple Teams-centric component scaffolding
+## Simple Teams-centric component scaffolding
 
 The Teams AI library simplifies the Teams app model to focus on the extension needed versus the protocol required. You can use prebuilt templates and add your business logic to this scaffold to add modules such as bots, message extensions, Adaptive Cards, or link unfurling.
 
-### Natural language modeling
+## Natural language modeling
 
 The Teams AI library is built with GPT-powered language models, so that you don't need to spend time to write your conversational logic and identify user intents. This makes building AI-powered Teams apps easier, more compliant, and consistently usable than ever before.
 
 Bots can run in-context and assist when the bot recognizes a user intent that maps to one of the bot actions. This boosts the conversation without requiring users to explicitly talk to the bot using a small set of registered actions.
 
-### Prompt engineering
+## Prompt engineering
 
 Prompt engineering helps you design prompts considering user's intent, context of the conversation, and the bot personality. Bots can be personalized, customized, and tailor-made to meet user needs.
 
-### Conversational session history
+## Conversational session history
 
 Teams AI library remembers context across messages and helps improve the bot performance by analyzing patterns in user behavior.
 
-### Localization
+## Localization
 
 Since Teams AI library is backed by GPT, localization is available. When a user inputs in any language, the input is consistently translated to intents, entities, and resultant actions that the app understands without the need to build and maintain localization records.
 
-### LLM modularity
+## LLM modularity
 
 Large language model (LLM) is an advanced language model that utilizes latent variables to generate coherent and diverse natural language text and style.
 
 Although, Teams AI library is built to use Open AI’s GPT model, you have the flexibility to swap with any LLM of your choice without changing the bot logic.
 
-### Responsible AI
+## Responsible AI
 
 Teams AI library allows you to create ethical and responsible conversational apps by:
 
@@ -65,7 +67,7 @@ Teams AI library allows you to create ethical and responsible conversational app
 
 Teams AI library offers support from low code to complex scenarios. The library extends capabilities with AI constructs to build natural language modeling, scenario-specific user intent, personalization, and automated context-aware conversations.
 
-### Predictive engine for mapping intents to actions  
+## Predictive engine for mapping intents to actions  
 
 A simple interface for actions and predictions allows bots to react when the bot has confidence for taking action. Ambient presence lets bots learn intent, use prompts based on business logic, and generate responses. For example, if a user has been out of office and needs to quickly summarize a thread, the library:
 

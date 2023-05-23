@@ -14,7 +14,7 @@ ms.date: 04/07/2022
 >
 > Teams AI library is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
-Get started with Teams AI library using the ChefBot sample. It's designed to quickly run a Teams AI library based sample on your computer's localhost.
+Get started with Teams AI library using the **ChefBot** sample. It's designed to quickly run a Teams AI library based sample on your computer's localhost.
 
 ## Set up your development environment
 
@@ -25,9 +25,6 @@ To get started, ensure that you have the following tools:
 * [NodeJS](https://nodejs.org/en/)
 * [OpenAI](https://openai.com/api/) key
 * Global Administrator access to a [Microsoft 365 tenant](https://developer.microsoft.com/microsoft-365/dev-program?ocid=MSlearn&WT.mc_id=m365-16105-cxa) and [Enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading)
-
-> [!NOTE]
-> If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio code to build a bot, see [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml).
 
 ## Build and run the sample app
 
@@ -56,7 +53,7 @@ To get started, ensure that you have the following tools:
 
 1. Go to **Visual Studio Code**.
 
-1. Select **Open a folder**, browse to the folder where ChefBot is available and select **Select folder**.
+1. Select **Open a folder**, browse to the folder where ChefBot is available and then select **Select folder**.
 
 1. From the left pane, select **Teams Toolkit**.
 
@@ -81,7 +78,7 @@ To get started, ensure that you have the following tools:
    The bot uses the text-davinci-003 model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
 > [!NOTE]
-> If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio code to [build a bot](../../../sbs-gs-bot.yml).
+> If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio code to build a bot, see [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml).
 
 ## Next step
 

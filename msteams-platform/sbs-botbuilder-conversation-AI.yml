@@ -21,7 +21,7 @@ items:
     
     You can create a conversational bot for Microsoft Teams that thinks it's a Chef to help you cook Teams apps and illustrates basic conversational bot behavior in Microsoft Teams. The bot is built to allow GPT to facilitate the conversation on its behalf, using only a natural language prompt file to guide it.
     
-    In this tutorial, you learn:
+    In this tutorial, you'll learn:
 
     - How to set up a new project with Teams Toolkit.
     - How to import Teams AI library capabilities.
@@ -45,7 +45,7 @@ items:
    |[Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
    |[Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-   |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) or [AzureOpenAI ](https://azure.microsoft.com/free/)|First create your OpenAI API key to use OpenAI's GPT. If you wish to host your app or access resources in Azure, you must have an AzureOpenAI key before you begin.|
+   |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) or [AzureOpenAI ](https://azure.microsoft.com/free/)|First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must have an AzureOpenAI key before you begin.|
    |[Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
    | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
 
@@ -87,7 +87,7 @@ items:
    npm install -g @microsoft/teamsfx-cli
    ```
 
-   Depending on your configuration, you may need to use `sudo` to install the CLI:
+   Depending on your configuration, you might need to use `sudo` to install the CLI:
 
    ``` bash
    sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
@@ -144,7 +144,7 @@ items:
 
    ## Get a free Azure account
 
-   If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
+   If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
    Now you’ve got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to build first.
 
@@ -160,7 +160,7 @@ items:
     
     As you've already prepared for creating these apps, you can set up a new Teams project for creating the bot app.
 
-    In this tutorial, you learn:
+    In this tutorial, you'll learn:
 
     1. [How to set up a new bot project with Teams Toolkit.](#create-your-bot-project-workspace)
     1. [About the directory structure of your app project.](#take-a-tour-of-the-bot-app-source-code)
@@ -173,7 +173,7 @@ items:
     If the prerequisites are in place, let's begin!
 
     > [!NOTE]
-    > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Teams Toolkit version, and environment.
+    > The Visual Studio Code UI shown is from Mac. It might differ depending on your operating system, Teams Toolkit version, and environment.
 
     # [Visual Studio Code](#tab/vscode)
 
@@ -269,10 +269,10 @@ items:
     | `env/.env.local.user` |Configuration file for local environment used by `teamsapp.yml` to customize the provisioning and deployment rules.  |
     | `index.ts` |  Main entry point for the bot app. |
     | `teamsBot.ts` | Main entry point for the bot app. |
-    | `appPackage` | App manifest template files, and the app icons, color.png and outline.png. |
+    | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
     | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
     | `config.ts` | `config.ts` wraps access to environment variables that is used to setup the bots adapter. |
-    | `teamsapp.yml` |	This is the main Teams Toolkit project that defines two primary things:  Properties and configuration stage definitions. |
+    | `teamsapp.yml` |	This is the main Teams Toolkit project that defines properties and configuration stage definitions. |
     | `teamsapp.local.yml` |This overrides teamsapp.yml with actions that enable local execution and debugging. |
     | `infra/azure.parameters.json` | Parameters file for Azure BICEP provision for every environment. |
 
@@ -346,7 +346,7 @@ items:
 
        ```
 
-    1. Go to the **env** folder and update the OpenAI key in the `.env.local.user`file.
+    1. Go to the **env** folder and update the OpenAI key in the `.env.local.user` file.
 
        ```
         SECRET_BOT_PASSWORD=
@@ -558,7 +558,7 @@ items:
         2. Install npm packages.
         3. Starts Dev Tunnel to create a HTTP tunnel.
         4. Registers the app in Azure AD and configures the app.
-        5. Registers the bot app in Bot Framework and configures the bot app.
+        5. Registers the bot app in Bot Framework SDK and configures the bot app.
         6. Registers the app in Teams Developer Portal and configures the app.
         7. Starts the bot app.
         8. Starts Teams in a web browser and sideloads the bot app.
@@ -682,13 +682,13 @@ items:
 
         Your app is hosted using Azure resources.
 
-        A dialog warns you that costs may be incurred when running resources in Azure.
+        A dialog warns you that costs might be incurred when running resources in Azure.
 
     1. Select **Provision**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot showing a dialog box that costs may be incurred when running resources in Azure.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot showing a dialog box that costs ma be incurred when running resources in Azure.":::
 
-        The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
+        The provisioning process creates resources in the Azure cloud. It might take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing a notice which displays 'hellomsg' successfully provisioned in the cloud.":::
 

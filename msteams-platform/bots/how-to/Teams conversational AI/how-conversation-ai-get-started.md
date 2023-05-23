@@ -70,7 +70,7 @@ You can take your existing or a new bot framework app and add AI capabilities.
 
 **Planner**: OpenAI planner is the main component that calls the large language model (LLM) OpenAI or AzureOpenAI. The OpenAI API is powered by a diverse set of models with different capabilities. You can also make limited customizations to our original base models for your specific use case.
 
-**Prompt manager**: The prompt manager manages prompt creation. It calls functions and injects  from your code into the prompt. It can copy conversation state user state into the prompt for you automatically.
+**Prompt manager**: The prompt manager manages prompt creation. It calls functions and injects  from your code into the prompt. It can copy the conversation state and the user state into the prompt for you automatically.
 
 **Moderator**: A moderator adds safety moderation to the input and output. It allows you to identify the user input, flag prompt injection techniques, review the output from the not, and run it through a business logic for filtering to ensure that the bot complies with OpenAI's usage policies. You can either moderate the input or the output, or both. OpenAI moderator is the default moderator.
 
@@ -130,7 +130,7 @@ Prompts are pieces of text that can be used to create conversational experiences
 The following are a few guidelines to create prompts:
 
 * Provide instructions, examples, or both.
-* Provide quality data. Ensure that there are enough examples and proofread your examples. The model is usually smart enough to see through basic spelling mistakes and give you a response, but it also might assume this is intentional and it can affect the response.
+* Provide quality data. Ensure that there are enough examples and proofread your examples. The model is usually smart enough to see through basic spelling mistakes and give you a response, but it also might assume that the input is intentional and it might affect the response.
 * Check your prompt settings. The temperature and top_p settings control how deterministic the model is in generating a response.  Higher value such as 0.8 makes the output random, while lower value such as 0.2 makes the output focused and deterministic.
 
 Create a folder called prompts and define your prompts in the folder. When the user interacts with the bot by entering a text prompt, the bot responds with a text completion.
