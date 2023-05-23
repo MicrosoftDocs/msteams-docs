@@ -227,21 +227,22 @@ The following table provides the user types and lists the features that each use
 
 ## App caching
 
-App caching improves subsequent launch time of the apps that are loaded in the meeting side panel by allowing you to keep some resources and assets in memory that you can use when rehydrating your app.
+App caching improves subsequent launch time of the apps that are loaded in the meeting by allowing you to keep some resources and assets in memory that you can use when rehydrating your app.
 
 App caching is supported for the following:
 
-| Scope | Desktop | iOS | Android |
-| --- | --- | --- | --- |
-| Personal | ✔️ | ✔️ | ❌ |
-| Chat | ✔️ | ❌ | ❌ |
-| Channel | ✔️| ❌ | ❌ |
-| Meeting tab | ✔️ | ❌ | ❌ |
-| Meeting side panel or In-meeting apps | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | ❌ | ❌ |
+| Scope | &nbsp; Desktop | &nbsp; | &nbsp; iOS | &nbsp; | &nbsp; Android | &nbsp; |
+| --- | --- | --- | --- | --- | --- | --- |
+| &nbsp; | Supported | Cache lifetime | Supported | Cache lifetime | Supported | Cache lifetime |
+| Personal | ✔️ | 30 minutes| ✔️ | 10 minutes| ❌ | - |
+| Chat | ✔️ | 30 minutes| ❌ | - | ❌ | - |
+| Channel | ✔️| 30 minutes| ❌ | - | ❌ | - |
+| Meeting tab | ✔️ | 30 minutes| ❌ | - | ❌ | - |
+| Meeting side panel or In-meeting apps | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | 20 minutes| ❌ | - | ❌ | - |
 
 ### Enable app caching
 
-To enable app caching in your meeting side panel, follow the steps:
+To enable app caching, follow the steps:
 
 1. Call `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs.
 
@@ -357,7 +358,7 @@ The following are the limitations for app caching:
 
 > [!NOTE]
 >
-> * Meeting apps (side panel and meeting stage) are supported in Teams desktop and mobile clients.
+> * Meeting apps (side panel and meeting stage) are supported in Teams desktop client.
 > * Meeting apps (side panel and meeting stage) in Teams web client is supported only when the [developer preview is enabled](/microsoftteams/platform/resources/dev-preview/developer-preview-intro#enable-developer-preview).
 
 ## Step-by-step guides
