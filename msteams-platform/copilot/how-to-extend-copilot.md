@@ -52,25 +52,28 @@ To ensure your plugin works as intended, it is important to include good descrip
 
    ```json
    "name": { 
-   "shortDescription": "Work-item tracking and productivity app", 
-   "longDescription": "Contoso app is a work-item tracking and project management app that allows teams to create, manage, and track work items. This app helps teams manage projects more efficiently. " 
+     "shortDescription": "Work-item tracking and productivity app", 
+
+     "longDescription": "Contoso app is a work-item tracking and project management app that allows teams to create, manage, and track work items. This app helps teams manage projects more efficiently. " 
    } 
    ```
 
 2. Skill parameter descriptions: Include detailed descriptions of your search and action skills along with associated parameters. These descriptions are used by the LLM to trigger the right skill and input the correct parameters for a given user request.
 
    ```json
-   "commands": [{ 
-   "id": "Work item search query", 
-   "type": "query", 
-   "context": "command box", 
-   "parameters": [ 
+   "commands": [
    { 
-   "name": "Work item search string", 
-   "title": "Work item search keyword", 
-   "description": "Search for work items by keyword(s)", 
-   }] 
-   }, 
+     "id": "Work item search query", 
+     "type": "query", 
+     "context": "command box", 
+     "parameters": [ 
+       { 
+         "name": "Work item search string", 
+         "title": "Work item search keyword", 
+         "description": "Search for work items by keyword(s)", 
+       }
+     ] 
+   } 
    ```
 
 3. Adaptive Card responses: By incorporating Adaptive Cards into your plugin’s response, you can enhance the user experience by providing more dynamic, actionable content within the responses and references, allowing users to interact more effectively with the information provided.
