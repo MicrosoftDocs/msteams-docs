@@ -18,7 +18,7 @@ To enable more seamless collaboration, Microsoft created PowerPoint Live, which 
 
 ## Install
 
-Live Share canvas is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share-media), and you can download through npm or Yarn. You must also install its peer dependencies, which include `@microsoft/live-share`, `fluid-framework` and `@fluidframework/azure-client`. If you are using Live Share in your tab application, you should also install `@microsoft/teams-js` version `2.11.0` or greater.
+Live Share canvas is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share-media), and you can download through npm or yarn. You must also install its peer dependencies, which includes `@microsoft/live-share`, `fluid-framework`, and `@fluidframework/azure-client`. If you are using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later.
 
 ```bash
 npm install @microsoft/live-share @microsoft/live-share-canvas fluid-framework @fluidframework/azure-client --save
