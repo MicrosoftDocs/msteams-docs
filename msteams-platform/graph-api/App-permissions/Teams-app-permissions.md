@@ -11,10 +11,10 @@ ms.author: lomeybur
 
 Permission for Teams app is managed in two places, depending on the app feature:
 
-* [Resource-specific consent (RSC)](#resource-specific-consent)
 * [Azure Active Directory (Azure AD)](#azure-active-directory)
+* [Resource-specific consent (RSC)](#resource-specific-consent)
 
-:::image type="content" source="../../assets/images/teams-app-permissions.png" alt-text="The screenshot describes the different Teams app permissions.":::
+:::image type="content" source="../../assets/images/teams-app-permissions-1.png" alt-text="The screenshot describes the different Teams app permissions.":::
 
 ## Resource-specific consent
 
