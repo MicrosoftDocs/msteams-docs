@@ -232,7 +232,7 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 
         To handle incremental consent for tab app, see [incremental and dynamic user consent](/azure/active-directory/develop/v2-permissions-and-consent).
     5. After the app user has granted more permissions, retry the OBO flow to get access to these other APIs.
-        </details>
+    </details>
 
 1. Time lag for Graph consent with middle-tier service:
 
