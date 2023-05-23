@@ -352,7 +352,7 @@ export const MyCustomPresence = () => {
 
 Users joining a session from a single device have a single `LivePresenceUser` record that is shared to all their devices. To access the latest `data` and `state` for each of their active connections, you can use the `getConnections()` API from the `LivePresenceUser` class. This returns a list of `LivePresenceConnection` objects. You can see if a given `LivePresenceConnection` instance is from the local device using the `isLocalConnection` property.
 
-Each `LivePresenceUser` and `LivePresenceConnection` instance has a `state` property, which can be either `online`, `offline`, or `away`. An `presenceChanged` event will be emitted when a user's state changes. For example, if a user leaves a meeting, their state will change to `offline`.
+Each `LivePresenceUser` and `LivePresenceConnection` instance has a `state` property, which can be either `online`, `offline`, or `away`. An `presenceChanged` event is emitted when a user's state changes. For example, if a user leaves a meeting, their state changes to `offline`.
 
 > [!NOTE]
 > It can take up to 20 seconds for an `LivePresenceUser`'s `state` to update to `offline` after leaving a meeting.
