@@ -324,6 +324,12 @@ Explore updates from the previous GA releases listed here.
 
 Discover Microsoft Teams platform features that are in developer preview. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
+## Microsoft Build 2023 :::image type="icon" source="assets/images/bullhorn.png" border="false"
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+|23/05/2023 | Introduced Teams AI library to help build AI-powered Teams apps. | Build Bots > [Teams AI library](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)|
+
 ## Developer preview
 
 :::row:::
