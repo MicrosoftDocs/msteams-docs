@@ -53,7 +53,6 @@ To ensure your plugin works as intended, it is important to include good descrip
    ```json
    "name": { 
      "shortDescription": "Work-item tracking and productivity app", 
-
      "longDescription": "Contoso app is a work-item tracking and project management app that allows teams to create, manage, and track work items. This app helps teams manage projects more efficiently. " 
    } 
    ```
