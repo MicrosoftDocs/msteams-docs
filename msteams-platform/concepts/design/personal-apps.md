@@ -23,7 +23,7 @@ You can find comprehensive personal app design guidelines, including elements th
 
 Users can add a personal app from the Teams store or app flyout by selecting the **More** icon on the left side of Teams (shown in the following example).
 
-:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="Example shows how to add a personal app from the app flyout.":::
+:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="Example shows how to add a personal app from the app flyout." lightbox="../../assets/images/personal-apps/add-from-app-flyout.png":::
 
 ## Use a personal app (private workspace)
 
@@ -81,7 +81,7 @@ microsoftTeams.menus.setNavBarMenu(menuItems, (id: string) => {
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="This example shows personal tab's component anatomy.":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="This example shows personal tab's component anatomy." lightbox="../../assets/images/personal-apps/personal-tab-component-anatomy.png":::
 
 |Counter|Description|
 |----------|-----------|
@@ -90,7 +90,7 @@ microsoftTeams.menus.setNavBarMenu(menuItems, (id: string) => {
 |C|**Popout view**: Pushes your app content from a parent window to a standalone child window.|
 |D|**More menu**: Includes other app options and information. (You could alternatively make **Settings** a tab.)|
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="This example shows personal tab's structural anatomy.":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="This example shows personal tab's structural anatomy." lightbox="../../assets/images/personal-apps/personal-tab-structural-anatomy.png":::
 
 |Counter|Description|
 |----------|-----------|
@@ -151,7 +151,7 @@ microsoftTeams.registerBackButtonHandler(() => {
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="Example shows the anatomy of the personal bot component.":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="Example shows the anatomy of the personal bot component." lightbox="../../assets/images/personal-apps/personal-bot-anatomy.png":::
 
 |Counter|Description|
 |----------|-----------|
@@ -163,7 +163,7 @@ microsoftTeams.registerBackButtonHandler(() => {
 
 On the left side of Teams, users can right-click the personal app to pin, remove, and configure other app options.
 
-:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="Example shows options for managing a personal app.":::
+:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="Example shows options for managing a personal app." lightbox="../../assets/images/personal-apps/manage-personal-tab.png":::
 
 ## Best practices
 
