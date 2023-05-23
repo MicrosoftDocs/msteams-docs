@@ -233,7 +233,7 @@ App caching is supported for the following:
 
 | Scope | &nbsp; Desktop | &nbsp; | &nbsp; iOS | &nbsp; | &nbsp; Android | &nbsp; |
 | --- | --- | --- | --- | --- | --- | --- |
-| &nbsp; | Supported | Cache lifetime | Supported | Cache lifetime | Supported | Cache lifetime |
+| &nbsp; | *Supported* | *Cache lifetime* | *Supported* | *Cache lifetime* | *Supported* | *Cache lifetime* |
 | Personal | ✔️ | 30 minutes| ✔️ | 10 minutes| ❌ | - |
 | Chat | ✔️ | 30 minutes| ❌ | - | ❌ | - |
 | Channel | ✔️| 30 minutes| ❌ | - | ❌ | - |
