@@ -49,7 +49,7 @@ Use the left nav to browse multiple pages within your Teams tab. In the followin
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Example shows a left nav template on desktop.":::
+:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Example shows a left nav template on desktop." lightbox="../../assets/images/ui-templates/left-nav.png":::
 
 ## Notification bar
 
@@ -90,7 +90,7 @@ Your app can launch a stage from an Adaptive Card, shared link, or visual compon
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="Example shows a stage template on desktop.":::
+:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="Example shows a stage template on desktop." lightbox="../../assets/images/ui-templates/stage.png":::
 
 ## Toolbar
 
