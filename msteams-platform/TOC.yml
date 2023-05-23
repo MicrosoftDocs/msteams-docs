@@ -24,12 +24,12 @@
   items:
   - name: Overview
     href: get-started/get-started-overview.md
-    displayName: First Teams app, Python, .NET, Java, Node.js
-  - name: Build your first tab app
+    displayName: First Teams app, Python, .NET, Java, Node.js, get started
+  - name: Build a tab app
     href: get-started/build-basic-tab-app.md
-  - name: Build notification bot
+  - name: Build a notification bot app
     href: get-started/build-notification-bot.md
-  - name: Build message extension
+  - name: Build a message extension app
     href: get-started/build-message-extension.md
   - name: Teams app tutorials and code samples
     href: get-started/teams-toolkit-tutorial.md
@@ -460,6 +460,21 @@
       displayName: codec 
   - name: Teams bot API changes to fetch team or chat members
     href: resources/team-chat-member-api-changes.md
+  - name: Teams AI library
+    items:
+      - name: Overview
+        href: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
+        displayName: OpenAI, Azure OpenAI, LLM, ChatGPT, prompt 
+      - name: Core capabilities
+        href: bots/how-to/Teams conversational AI/how-conversation-ai-core-capabilities.md
+      - name: Get started
+        href: bots/how-to/Teams conversational AI/how-conversation-ai-get-started.md
+      - name: Quick start guide
+        href: bots/how-to/Teams conversational AI/conversation-ai-quick-start.md
+      - name: Build your first Teams AI app
+        href: sbs-botbuilder-conversation-AI.yml
+      - name: Teams AI library FAQs
+        href: bots/how-to/Teams conversational AI/coversational-ai-faq.md
 - name: Build message extensions
   items:
   - name: Overview
