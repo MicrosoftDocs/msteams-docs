@@ -77,7 +77,7 @@ A simple interface for actions and predictions allows bots to react when the bot
 
 ## Why build apps with Teams AI library?
 
-Teams AI library makes Teams apps conversational, not driven by rigid command structures. The library is designed to seamlessly integrate with the Teams Bot Framework SDK. Building apps for Teams is drastically simpler, with rich natural language features that brings any app experience into the conversation.
+Teams AI library makes Teams apps conversational, not driven by rigid command structures. The library is designed to seamlessly integrate with the Teams Bot Framework SDK. Building apps for Teams is drastically simpler, with rich natural language features that bring any app experience into the conversation.
 
 Here are some key benefits of the Teams AI library:
 
@@ -99,7 +99,7 @@ Here are some key benefits of the Teams AI library:
 
   * Skype Messaging Bot API (SMBA): Endpoint for all bot related activities. Performs throttling and sanitization on bot payload.
   * Other IC3 services: Bot roster membership check.
-  * Agent Provisioning Service (APS) : Bot metadata retrieval and bot validation.
+  * Agent Provisioning Service (APS): Bot metadata retrieval and bot validation.
   * Teams Middle Tier (MT): App policy or tenant settings checks.
   * Partner Lookup Service (PLS): User or tenant region lookups.
   * Experimental Config Service (ECS): Feature flags and scenario configuration data.

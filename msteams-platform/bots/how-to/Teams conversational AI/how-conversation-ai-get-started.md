@@ -72,7 +72,7 @@ You can take your existing or a new bot framework app and add AI capabilities.
 
 **Prompt manager**: The prompt manager manages prompt creation. It calls functions and injects  from your code into the prompt. It can copy the conversation state and the user state into the prompt for you automatically.
 
-**Moderator**: A moderator adds safety moderation to the input and output. It allows you to identify the user input, flag prompt injection techniques, review the output from the not, and run it through a business logic for filtering to ensure that the bot complies with OpenAI's usage policies. You can either moderate the input or the output, or both. OpenAI moderator is the default moderator.
+**Moderator**: A moderator adds safety moderation to the input and output. It allows you to identify the user input, flag prompt injection techniques, review the output from the bot, and run it through a business logic for filtering to ensure that the bot complies with OpenAI's usage policies. You can either moderate the input or the output, or both. OpenAI moderator is the default moderator.
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L70)
 

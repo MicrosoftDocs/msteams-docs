@@ -154,7 +154,7 @@ items:
 
     Let's create your first bot app.
     
-    The bot capability of a Teams app creates a chatbot or a conversational bot. You use it to run simple and automated tasks, like providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
+    The bot capability of a Teams app creates a chatbot or a conversational bot. You use it to run simple and automated tasks, for example, providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Diagram showing this app has three features. Bot is highlighted.":::
     
@@ -628,7 +628,7 @@ items:
 
         Now you're ready to deploy your app to Azure!
 
-        Congratulations, you have created a Teams app! 
+        Congratulations, you've created a Teams app! 
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
     # [Command line](#tab/cline)
@@ -651,14 +651,14 @@ items:
 
         The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
-        Congratulations, you have signed in your Azure account!
+        Congratulations, you've signed in your Azure account!
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
     ---
 
     ## Deploy your app to Azure
 
-    Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the bot app.
+    Deployment consists of two steps. First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the bot app.
     <br>
     <br>
     <details>
@@ -733,7 +733,7 @@ items:
     After the provisioning and deployment steps are complete:
 
     1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
-    1. Select **Launch Remote (Edge)** from the launch configuration drop-down.
+    1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
     1. Select the **Start debugging (F5)** to launch your app from Azure.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely.":::
