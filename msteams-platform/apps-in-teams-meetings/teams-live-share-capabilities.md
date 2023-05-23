@@ -180,7 +180,7 @@ The Live Share SDK includes a set of new distributed-data structures that extend
 | Live Object                                                        | Description                                                                                                                             |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
 | [LivePresence](/javascript/api/@microsoft/live-share/livepresence) | See which users are online, set custom properties for each user, and broadcast changes to their presence.                                                            |
-| [LiveState](/javascript/api/@microsoft/live-share/livestate)       | Synchronizes any JSON serializable `state` value. |
+| [LiveState](/javascript/api/@microsoft/live-share/livestate)       | Synchronize any JSON serializable `state` value. |
 | [LiveTimer](/javascript/api/@microsoft/live-share/livetimer)       | Synchronize a countdown timer for a given interval.                                                            |
 | [LiveEvent](/javascript/api/@microsoft/live-share/liveevent)       | Broadcast individual events with any custom data attributes in the payload.                                                             |
 
