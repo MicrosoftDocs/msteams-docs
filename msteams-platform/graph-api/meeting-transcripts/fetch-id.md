@@ -163,7 +163,12 @@ Tenant-level notifications are useful if your app is authorized to access all me
 
 For subscribing your app to tenant-level notifications, see [get change notifications](/graph/teams-changenotifications-chatmessage#subscribe-to-messages-across-all-chats).
 
-When your app is notified about subscribed meeting events, it searches through the notifications for transcription and recording started and meeting ended events. These events contain the chat ID, which is used to obtain chat entity, and eventually meeting ID and organizer ID.
+When your app is notified about subscribed meeting events, it searches through the notifications for:
+
+- Transcription started or recording started (or both) events.
+- Meeting ended events.
+
+These events contain the chat ID, which is used to obtain chat entity, and eventually meeting ID and organizer ID.
 
 To obtain meeting ID and organizer ID from tenant-level notification:
 
@@ -408,7 +413,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
     </details>
 
-4. **Fetch transcript and recording**: The organizer ID and meeting ID obtained in the Steps 2 and 3 let your app fetch the transcripts and recordings for that particular meeting event.
+4. **Fetch transcript or recording**: The organizer ID and meeting ID obtained in the Steps 2 and 3 let your app fetch the transcripts or recordings for that particular meeting event.
 
     - To fetch transcripts, you'll need to:
 
@@ -457,7 +462,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
              GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts('MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh')/content?$format=text/vtt
             ```
 
-            The response payload will contain the transcripts in `.vtt` format.
+            The response payload will contain the transcripts in the `.vtt` format.
 
     - To fetch recordings, you'll need to:
 
@@ -471,7 +476,9 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
             In this example:
 
-            - The meeting ID is included as the value for `onlineMeetings`: *MSpiOTM1ZTY3NS01ZTY3LTQ4YjktOGQ0NS0yNDlkNWY4OGU5NjQqMCoqMTk6bWVldGluZ19ZbU0zTnpJNU9USXRZakU0WlMwME1tUTNMVGt6TVRRdFkyWm1PRGRtWmpsaVptRTNAdGhyZWFkLnYy*.
+            - The meeting ID is included as the value for `onlineMeetings`: *MSpiOTM1ZTY3NS01ZTY3LTQ4YjktOGQ0NS0yNDlkNWY4OGU5NjQqMCoqMTk6bWVl
+    dGluZ19ZbU0zTnpJNU9USXRZakU0WlMwME1tUTNMVGt6TVRRdFkyWm1
+    PRGRtWmpsaVptRTNAdGhyZWFkLnYy*.
             - The organizer ID is *b935e675-5e67-48b9-8d45-249d5f88e964*.
 
             The response payload contains the recording ID for the meeting ID and organizer ID in the `id` member of the `value` property.
@@ -504,7 +511,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
             GET https://graph.microsoft.com/beta/users/b935e675-5e67-48b9-8d45-249d5f88e964/onlineMeetings/MSpiOTM1ZTY3NS01ZTY3LTQ4YjktOGQ0NS0yNDlkNWY4OGU5NjQqMCoqMTk6bWVldGluZ19ZbU0zTnpJNU9USXRZakU0WlMwME1tUTNMVGt6TVRRdFkyWm1PRGRtWmpsaVptRTNAdGhyZWFkLnYy/recordings/7e31db25-bc6e-4fd8-96c7-e01264e9b6fc/content?$format=video/mp4
             ```
 
-            The response payload will contain the recordings in `.mp4` format.
+            The response payload will contain the recordings in the `.mp4` format.
 
 ### Use Bot Framework to get meeting ID and organizer ID
 
