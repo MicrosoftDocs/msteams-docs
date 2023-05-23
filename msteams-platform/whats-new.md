@@ -325,6 +325,8 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
 |23/05/2023| Static tabs that work everywhere | Build Tabs > [Overview](tabs/what-are-tabs.md)|
+|23/05/2023 | Introduced Teams AI library to help build AI-powered Teams apps. | Build Bots > [Teams AI library](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)|
+|23/05/2023| Extend Microsoft 365 Copilot| [Extend Microsoft 365 Copilot](copilot/how-to-extend-copilot.md)|
 
 ## Developer preview
 
@@ -340,7 +342,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 January**
 
-* ***January 31, 2023***: [Introducing Targeted in-meeting notification for apps in Teams.](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification)
+* ***January 31, 2023***: [Introduced Targeted in-meeting notification for apps in Teams.](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification)
 * ***January 30, 2023***: [Enable app caching to improve subsequent launch time of the apps to the meeting side panel.](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching)
 
 :::column-end:::

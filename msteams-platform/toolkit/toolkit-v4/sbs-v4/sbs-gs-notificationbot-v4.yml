@@ -153,7 +153,7 @@ items:
 
     1. Ensure that **Notification Bot** is selected as the capability that you want to build in your app. 
 
-        :::image type="content" source="/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/select-notification-bot-v4.png" alt-text="Select App Capability":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/select-notification-bot-v4.png" alt-text="Select App Capability":::
 
     1. Select **HTTP Trigger Restify Server** as the trigger. 
     1. Select **OK**.
