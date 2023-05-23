@@ -23,43 +23,38 @@ Teams AI library is built on top of the Bot Framework SDK and uses its fundament
 > [!NOTE]
 > The adapter class that handles connectivity with the channels is imported from [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0#the-bot-adapter&preserve-view=true).
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.naturalLanguage.santaBot/src/index.ts#L9)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L9)
 
 ```typescript
+// Import required bot services.
+// See https://aka.ms/bot-services to learn more about the different parts of a bot.
 import {
-  TeamsActivityHandler,
-  CardFactory,
-  TurnContext,
-  AdaptiveCardInvokeValue,
-  AdaptiveCardInvokeResponse,
-} from "botbuilder";
-import rawWelcomeCard from "./adaptiveCards/welcome.json";
-import rawLearnCard from "./adaptiveCards/learn.json";
-import { AdaptiveCards } from "@microsoft/adaptivecards-tools";
+    CloudAdapter,
+    ConfigurationBotFrameworkAuthentication,
+    ConfigurationServiceClientCredentialFactory,
+    MemoryStorage
+} from 'botbuilder';
 
-export interface DataInterface {
-  likeCount: number;
-}
-
-export class TeamsBot extends TeamsActivityHandler {
-  // record the likeCount
-  likeCountObj: { likeCount: number };
-}
+const botFrameworkAuthentication = new ConfigurationBotFrameworkAuthentication(
+    {},
+    new ConfigurationServiceClientCredentialFactory({
+        MicrosoftAppId: process.env.BOT_ID,
+        MicrosoftAppPassword: process.env.BOT_PASSWORD,
+        MicrosoftAppType: 'MultiTenant'
+    })
+);
 
 // Create adapter.
-// See https://aka.ms/about-bot-adapter to learn more about adapters.
-const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
-  MicrosoftAppId: config.botId,
-  MicrosoftAppPassword: config.botPassword,
-  MicrosoftAppType: "MultiTenant",
-});
+// See https://aka.ms/about-bot-adapter to learn more about how bots work.
+const adapter = new CloudAdapter(botFrameworkAuthentication);
+
   ```
 
 ### Import Teams AI library
 
 Import all the classes from `@microsoft/teams-ai` to build your bot and use the Teams AI library capabilities.
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.naturalLanguage.santaBot/src/index.ts#L64)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L64)
 
 ```typescript
 ///// Teams AI library /////
@@ -79,7 +74,7 @@ You can take your existing or a new bot framework app and add AI capabilities.
 
 **Moderator**: A moderator adds safety moderation to the input and output. It allows you to identify the user input, flag prompt injection techniques, review the output from the not, and run it through a business logic for filtering to ensure that the bot complies with OpenAI's usage policies. You can either moderate the input or the output, or both. OpenAI moderator is the default moderator.
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.naturalLanguage.santaBot/src/index.ts#L83)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L70)
 
 ```javascript
 // Create AI components
@@ -107,7 +102,7 @@ The application object automatically manages the conversation and user state of 
 
 * **Application**: The application class has all the information and bot logic required for an app. You can register actions or activity handlers for the app in this class.
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.naturalLanguage.santaBot/src/index.ts#L97)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L82)
 
 ```javascript
 // Define storage and application
@@ -144,7 +139,7 @@ Create a folder called prompts and define your prompts in the folder. When the u
   
 * `config.json`: Contains the prompt model settings. Provide the right configuration to ensure bot responses are aligned with your requirement. Configure `max_tokens`, `temperature`, and other properties to pass into OpenAI or AzureOpenAI.
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.naturalLanguage.santaBot/src/prompts/chat/config.json)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/prompts/chat/config.json)
 
    ```json
    {
@@ -213,7 +208,7 @@ Actions handle events triggered by AI components.
 
 `FlaggedInputAction` and `FlaggedOutputAction` are the built-in action handlers to handle the moderator flags. If the moderator flags an incoming message input, the moderator redirects to the `FlaggedInputAction` handler and the `context.sendActivity` sends a message to the user about the flag.
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.naturalLanguage.santaBot/src/index.ts#L126)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L97)
 
 ```javascript
 app.ai.action(AI.FlaggedInputActionName, async (context: TurnContext, state: TurnState, data: TData) => {
