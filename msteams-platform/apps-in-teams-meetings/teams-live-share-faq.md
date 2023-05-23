@@ -159,15 +159,6 @@ No, neither Live Share nor other meeting stage apps support Teams meeting record
 
 </details>
 
-<details>
-<summary><b>Does Live Share support Azure Communication Services users?</b></summary>
-
-Live Share supports external users joining a Teams meeting from Azure Communication Services in private preview. For more information, follow our [how-to guide](./teams-live-share-how-to/how-to-live-share-acs.md).
-
-<br>
-
-</details>
-
 ## Have more questions or feedback?
 
 Submit issues and feature requests to the SDK repository for [Live Share SDK](https://github.com/microsoft/live-share-sdk). Use the `live-share` and `microsoft-teams` tag to post how-to questions about the SDK at [Stack Overflow](https://stackoverflow.com/questions/tagged/live-share+microsoft-teams).

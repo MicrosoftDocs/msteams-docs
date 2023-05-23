@@ -550,8 +550,6 @@
         href: sbs-teams-live-share.yml
       - name: Custom Azure Fluid Relay service
         href: apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md
-      - name: Integrate with Azure Communication Services
-        href: apps-in-teams-meetings/teams-live-share-how-to/how-to-live-share-acs.md
     - name: Live Share FAQ
       href: apps-in-teams-meetings/teams-live-share-faq.md
   - name: Custom Together Mode scenes in Teams
