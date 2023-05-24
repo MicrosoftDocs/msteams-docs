@@ -73,7 +73,7 @@ The following image shows a tab added to the meeting details page in the Teams m
 
    :::image type="content" source="../assets/images/side-panel-view.png" alt-text="Screenshot shows side panel view with the list of apps.":::
 
-Whenever there's a new activity on the app loaded in the meeting side panel, you can enable visual indicator to indicate meeting participants. For more information, see [visual indicator for your Teams app](visual-indicator-for-your-app.md).
+To notify meeting participants whenever there's a new activity on the app loaded in the meeting side panel, you can enable visual indicator. For more information, see [visual indicator for your Teams app](visual-indicator-for-your-app.md).
 
 ### Meeting stage view
 
