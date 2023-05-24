@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title:  Build your first app using Teams AI library
 metadata:
-  title: Chef Bot with Teams AI library
+  title: Build your first app using Teams AI library
   description: In this learn module, you'll learn how to build a bot with Teams AI library and set up, build, and deploy a bot app with Teams Toolkit.
   audience: Developer
   level: Advanced
@@ -45,7 +45,7 @@ items:
    |[Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
    |[Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-   |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) or [AzureOpenAI ](https://azure.microsoft.com/free/)|First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must have an AzureOpenAI key before you begin.|
+   |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) or [Azure OpenAI ](https://azure.microsoft.com/free/)|First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must have an Azure OpenAI key before you begin.|
    |[Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
    | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
 
@@ -178,7 +178,7 @@ items:
     # [Visual Studio Code](#tab/vscode)
 
     1. Open Visual Studio Code.
-    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
+    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 
     1. Select **Create a New App**.
 
@@ -215,7 +215,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
 
-        A dialog appears. Select **Yes, I trust the authors** or ** No, I don’t trust the authors** based on your requirement.
+        A dialog appears. Select **Yes, I trust the authors** or **No, I don’t trust the authors** based on your requirement.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png":::
     
@@ -268,7 +268,7 @@ items:
     | --- | --- |
     | `env/.env.local.user` |Configuration file for local environment used by `teamsapp.yml` to customize the provisioning and deployment rules.  |
     | `index.ts` |  Main entry point for the bot app. |
-    | `teamsBot.ts` | Main entry point for the bot app. |
+    | `teamsBot.ts` | Teams activity handler. |
     | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
     | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
     | `config.ts` | `config.ts` wraps access to environment variables that is used to setup the bots adapter. |
@@ -333,7 +333,7 @@ items:
 
     ## Update your bot app with Teams AI library capabilities
 
-    Teams Toolkit is the easiest way to scaffold and get a bot running. Teams Toolkit creates the basic bot structure for you so that you can  get started with configuring your bot. 
+    Teams Toolkit is the easiest way to scaffold and get a bot running. Teams Toolkit creates the basic bot structure for you to get started with configuring your bot. 
     
     Let's get started to configure Teams AI library capabilities.
 
@@ -346,22 +346,22 @@ items:
 
        ```
 
-    1. Go to the **env** folder and update the OpenAI key in the `.env.local.user` file.
+    1. Go to **Explorer** > **env** > **.env.local.user** and add the OpenAI key to `SECRET_OPENAI_API_KEY`.
 
-       ```
+       ```env/.env.local.user
         SECRET_BOT_PASSWORD=
         SECRET_OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
        ```
 
     1. Go to the `config.ts` file and add the following code:
     
-       ```typescript
+       ```config.ts
        openAIKey: process.env.SECRET_OPENAI_API_KEY
        ```
 
        When you debug the app, the OpenAI key defined here processes the OpenAI key from the `.env.local.user` during local debug.
 
-    1. Go to the `teamsapp.local.yml` file and add the following code after `BOT_ID` and `BOT_PASSWORD`:
+    1. Go to the `teamsapp.local.yml` file, under **Generate runtime environment variables** add the following code after `BOT_ID` and `BOT_PASSWORD`:
 
        ```teamsapp.local.yml
        SECRET_OPENAI_API_KEY: ${{SECRET_OPENAI_API_KEY}}
@@ -369,7 +369,7 @@ items:
 
        When you run the app locally, the OpenAI key defined here is used in the local settings.
 
-    1. Go to the `index.ts` file:
+    1. Go to the `index.ts` file :
 
         1. Add the following code to import Teams AI library:
 
@@ -466,7 +466,7 @@ items:
 
         1. By default, Bot builder uses `bot` as a variable, as we're constructing an app for the `new Application`. We must replace `await bot.run(context)` with `await app.run(context)`.
    
-    1. In the root folder, create a new folder **prompts/chat**.
+    1. In the root folder, create new folders **prompts** > **chat**.
 
     1. Under **chat**, create the following files:
        * config.json
@@ -493,7 +493,7 @@ items:
         }
         ```
 
-       The bot relies on OpenAI or AzureOpenAI for its natural language modelling, the `config.json` file handles the language processing for the bot. The `config.json` is initiated by the `DefaultPromptManager` from the `index.ts` file. When a prompt is initiated, the prompt manager searches for the prompt config file (chat/config.json) and passes the prompt settings into OpenAI or AzureOpenAI.
+       The bot relies on OpenAI or Azure OpenAI for its natural language modelling, the `config.json` file handles the language processing for the bot. The `config.json` is initiated by the `DefaultPromptManager` from the `index.ts` file. When a prompt is initiated, the prompt manager searches for the prompt config file (chat/config.json) and passes the prompt settings into OpenAI or Azure OpenAI.
 
     1. Go to the `prompt.txt` file. Add the following instructions for OpenAI endpoint to conduct and facilitate conversation:
 
@@ -592,7 +592,7 @@ items:
       To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
 
       > [!IMPORTANT]
-      > Sideloading apps are available in Government Community Cloud (GCC), GCC-High, and DOD.
+      > Sideloading apps are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
       > [!TIP]
       > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to sideload the app.
@@ -602,9 +602,9 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've learned to create, build, and run Teams app with Bot capability. The final step is to deploy your app on Azure.
+    You've learned to create, build, and run Teams app with bot capability. The final step is to deploy your app on Azure.
 
-    Let's deploy the first app with Bot capability on Azure using Teams Toolkit.
+    Let's deploy the first app with bot capability on Azure using Teams Toolkit.
 
     ## Sign in to your Azure account
 
@@ -614,7 +614,7 @@ items:
 
     1. Open Visual Studio Code.
     1. Open the project folder in which you created the bot app.
-    1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
     1. Select **Sign in to Azure**.
 
         > [!TIP]
@@ -670,7 +670,7 @@ items:
 
     # [Visual Studio Code](#tab/vscode)
 
-    Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+    Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the Visual Studio Code sidebar.
 
     1. Select **Provision**.
 
