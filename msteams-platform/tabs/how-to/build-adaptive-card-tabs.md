@@ -9,9 +9,8 @@ ms.localizationpriority: high
 
 # Build tabs with Adaptive Cards
 
-> [!IMPORTANT]
->
-> Tabs with Adaptive Cards are only supported as personal apps.
+> [!WARNING]
+> Adaptive Card tabs will be deprecated in the new Microsoft Teams. Apps are expected to be available in the new Microsoft Teams by June 2023. If your app is using Adaptive Card tabs, it's recommended to rebuild the tab as a web-based tab. For more information, see [Build tabs for Teams](../what-are-tabs.md).
 
 When developing a tab using the traditional method, you might run into these issues:
 
@@ -20,7 +19,7 @@ When developing a tab using the traditional method, you might run into these iss
 * iFrame constraints
 * Server maintenance and costs
 
-Adaptive Card tabs are a new way to build tabs in Teams. Instead of embedding web content in an iFrame, you can render Adaptive Cards to a tab. While the front end is rendered with Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
+You can build Adaptive Card tabs in Teams. Instead of embedding web content in an iFrame, you can render Adaptive Cards to a tab. While the front end is rendered with Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
 
 You can build your tabs with ready-made user interface (UI) building blocks native on desktop, web, and mobile. This article helps you understand the changes required to be made to the app manifest. The article also identifies how the invoke activity requests and sends information in tab with Adaptive Cards, and its effect on the task module workflow.
 
@@ -424,6 +423,10 @@ The following code shows a reissued request example:
 |**Sample name** | **Description** |**.NET** | **Node.js** | **Manifest**|
 |----------------|-----------------|--------------|--------------|--------------|
 | Show Adaptive Cards in Teams tab | Microsoft Teams tab sample code, which demonstrates how to show Adaptive Cards in Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp/demo-manifest/tab-adaptive-card.zip)|
+
+## Step-by-step guide
+
+Follow the [step-by-step](../../sbs-tab-with-adaptive-cards.yml) guide to build tab with Adaptive Cards.
 
 ## Next step
 

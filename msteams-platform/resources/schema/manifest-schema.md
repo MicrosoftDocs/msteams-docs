@@ -14,6 +14,9 @@ The following table lists TeamsJS version and app manifest versions as per diffe
 
 [!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
+> [!NOTE]
+> If your Teams app is using the manifest version 1.13 or later, ensure that your app meets the criteria to [extend your app to run across Microsoft 365 or Outlook](../../m365-apps/extend-m365-teams-personal-tab.md).
+
 The following is the sample manifest schema:
 
 ## Sample manifest
@@ -170,7 +173,7 @@ The following is the sample manifest schema:
                         {
                             "name": "keyword",
                             "title": "Search keywords",
-                            "inputType": "text",
+                            "inputType": "choiceset",
                             "description": "Enter the keywords to search for",
                             "value": "Initial value for the parameter",
                             "choices": [
