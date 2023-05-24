@@ -26,7 +26,7 @@ Teams AI library supports the following capabilities:
 
  You need to use the AI library to scaffold bot and Adaptive Card handlers to the source file.
 
-In the following section, we'll explain each capability and their path to migration. We'll be using the samples from the [AI library](https://github.com/microsoft/teams-ai/tree/main) to explain the migration method:  
+In the following section, we've used  the samples from the [AI library](https://github.com/microsoft/teams-ai/tree/main) to explain each capability and the path to migration:
 
 ## Send or receive message
 
@@ -312,7 +312,7 @@ app.messageExtensions.selectItem(async (context, state, item) => {
 
 A simple interface for actions and predictions allows bots to react when they have high confidence for taking action. Ambient presence lets bots learn intent, use prompts based on business logic, and generate responses.
 
-Thanks to our AI library, the prompt need only outline the actions supported by the bot, and supply a few-shot examples of how to employ those actions. We also use conversation-history to enable a more natural dialogue between the user and bot, such as *add cereal to groceries list*, followed by *also add coffee*, which should indicate that coffee is to be added to the groceries list.
+Thanks to our AI library, the prompt needs only to outline the actions supported by the bot, and supply a few-shot examples of how to employ those actions. Conversation history helps with a natural dialogue between the user and bot, such as *add cereal to groceries list*, followed by *also add coffee*, which should indicate that coffee is to be added to the groceries list.
 
 All entities are required parameters to actions.
 
@@ -336,7 +336,7 @@ Human: {{activity.text}}
 
 ## AI
 
-The bot logic is simplified to provide handlers for actions such as addItem, removeItem and , findItem. This clear delineation between actions and the prompts that instruct the AI on how to execute them is an incredibly potent tool.
+The bot logic is simplified to provide handlers for actions such as `addItem`, `removeItem`, and `findItem`. This clear delineation between actions and the prompts that instruct the AI on how to execute them is an incredibly potent tool.
 
 Example: [List bot](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.d.chainedActions.listBot)
 
