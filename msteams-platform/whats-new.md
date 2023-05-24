@@ -36,7 +36,7 @@ Teams platform features that are available to all app developers.
 
 **2023 May**
 
-***May 04, 2023***: [Media elements in Adaptive Card](task-modules-and-cards/cards/media-elements-in-adaptive-cards.md)
+***May 24, 2023***: [Media elements in Adaptive Card](task-modules-and-cards/cards/media-elements-in-adaptive-cards.md)
 
 :::column-end:::
 :::row-end:::
