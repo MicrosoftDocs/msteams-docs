@@ -48,6 +48,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Live Share SDK is now generally available
+        url: apps-in-teams-meetings/teams-live-share-overview.md
       - text: Design your app for new Teams 
         url: concepts/design/design-teams-app-overview.md
       - text: Teams AI library
