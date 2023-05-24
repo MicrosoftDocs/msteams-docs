@@ -227,18 +227,18 @@ The following table provides the user types and lists the features that each use
 
 ## App caching
 
-App caching improves subsequent launch time of the apps that are loaded in the meeting by allowing you to keep some resources and assets in memory that you can use when rehydrating your app.
+App caching improves subsequent launch time of the apps within Teams by allowing you to keep some resources and assets in memory that you can use when rehydrating your app.
 
 App caching is supported for the following:
 
 | Scope | &nbsp; Desktop | &nbsp; | &nbsp; iOS | &nbsp; | &nbsp; Android | &nbsp; |
 | --- | --- | --- | --- | --- | --- | --- |
-| &nbsp; | *Supported* | *Cache lifetime* | *Supported* | *Cache lifetime* | *Supported* | *Cache lifetime* |
-| Personal | ✔️ | 30 minutes| ✔️ | 10 minutes| ❌ | - |
-| Chat | ✔️ | 30 minutes| ❌ | - | ❌ | - |
-| Channel | ✔️| 30 minutes| ❌ | - | ❌ | - |
-| Meeting tab | ✔️ | 30 minutes| ❌ | - | ❌ | - |
-| Meeting side panel or In-meeting apps | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | 20 minutes| ❌ | - | ❌ | - |
+| &nbsp; | *Supported* | *Cache lifetime* | *Supported* | *Supported* |
+| Personal | ✔️ | 30 minutes| ✔️ | ❌ |
+| Chat | ✔️ | 30 minutes| ❌ | ❌ |
+| Channel | ✔️| 30 minutes| ❌ | ❌ |
+| Meeting tab | ✔️ | 30 minutes| ❌ | ❌ |
+| Meeting side panel or In-meeting apps | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | 20 minutes| ❌ | ❌ |
 
 ### Enable app caching
 
