@@ -149,7 +149,7 @@ $.ajax({
 
 ### Validate the access token
 
-For more information about validate the access token, see [Validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
+For more information on validating the access token, see [validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
 
 #### Example access token
 
