@@ -27,8 +27,7 @@ The rest of this guide walks you through these steps and show you how to preview
 To complete this tutorial, you need:
 
 * A Microsoft 365 Developer Program sandbox tenant.
-* Your sandbox tenant enrolled in *Microsoft 365 Targeted Releases*.
-* A machine with Microsoft 365 apps installed from the Microsoft 365 Apps *beta channel*.
+* A machine with Microsoft 365 apps installed from the Microsoft 365 Apps *[value] channel*.
 * (Optional) An Android device or emulator with Microsoft 365 for Android app installed.
 * (Optional) [Teams Toolkit](https://aka.ms/teams-toolkit) extension for Microsoft Visual Studio Code to help update your code.
 
