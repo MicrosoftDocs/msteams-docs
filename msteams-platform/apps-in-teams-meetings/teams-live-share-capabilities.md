@@ -16,11 +16,11 @@ The Live Share SDK can be added to your meeting extension's `sidePanel` and `mee
 
 This article focuses on how to integrate the Live Share SDK into your app and key capabilities of the SDK.
 
-## Pre-requisites
+## Prerequisites
 
 ### Install the JavaScript SDK
 
-The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or yarn. You must also install Live Share peer dependencies, which includes `fluid-framework` and `@fluidframework/azure-client`. If you are using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later.
+The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or yarn. You must also install Live Share peer dependencies, which include `fluid-framework` and `@fluidframework/azure-client`. If you're using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later.
 
 #### npm
 
@@ -188,7 +188,7 @@ The Live Share SDK includes a set of new distributed-data structures that extend
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-presence.png" alt-text="Screenshot shows an example of showing people who available in a sessionTeams using Live Share presence.":::
 
-The `LivePresence` class makes tracking who is in the session easier than ever. When calling the `.initialize()` or `.updatePresence()` methods, you can assign custom metadata for that user, such as profile picture, the identifier for content they are viewing, and more. By listening to `presenceChanged` events, each client receives the latest `LivePresenceUser` object, collapsing all presence updates into a single record for each unique `userId`.
+The `LivePresence` class makes tracking who is in the session easier than ever. When calling the `.initialize()` or `.updatePresence()` methods, you can assign custom metadata for that user, such as profile picture, the identifier for content they're viewing, and more. By listening to `presenceChanged` events, each client receives the latest `LivePresenceUser` object, collapsing all presence updates into a single record for each unique `userId`.
 
 The following are a few examples in which `LivePresence` can be used in your application:
 
@@ -960,7 +960,7 @@ export const MyCustomState = () => {
 
 ---
 
-Listen to your customers to understand their scenarios before implementing role verification into your app, particularly for the **Organizer** role. There's no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users will be either **Organizer** or **Presenter** when collaborating within an organization. If a user is an **Attendee**, it's usually an intentional decision on behalf of a meeting organizer.
+Listen to your customers to understand their scenarios before implementing role verification into your app, particularly for the **Organizer** role. There's no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users are either **Organizer** or **Presenter** when collaborating within an organization. If a user is an **Attendee**, it's usually an intentional decision on behalf of a meeting organizer.
 
 In some cases, a user may have multiple roles. For example, an **Organizer** is also an **Presenter**. In addition, meeting participants that are external to the tenant hosting the meeting have the **Guest** role, but may also have **Presenter** privileges. This provides a lot of flexibility in how you use role verification in your application.
 
@@ -971,7 +971,7 @@ In some cases, a user may have multiple roles. For example, an **Organizer** is 
 
 The Live Share SDK supports any [distributed data structure](https://fluidframework.com/docs/data-structures/overview/) included in Fluid Framework. These features serve as a set of primitives you can use to build robust collaborative scenarios, such as real-time updates of a task list or co-authoring text within an HTML `<textarea>`.
 
-Unlike the `LiveDataObject` classes mentioned above, Fluid data structures do not reset after your application is closed. This is ideal for scenarios such as the meeting side panel, where users will frequently close and re-open your app while using other tabs in the meeting, such as chat.
+Unlike the `LiveDataObject` classes mentioned above, Fluid data structures do not reset after your application is closed. This is ideal for scenarios such as the meeting side panel, where users will frequently close and reopen your app while using other tabs in the meeting, such as chat.
 
 Fluid Framework officially supports the following types of distributed data structures:
 

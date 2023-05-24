@@ -12,9 +12,9 @@ ms.date: 07/21/2022
 
 # Custom Azure Fluid Relay service
 
-While you likely will prefer using our free hosted service, there are situations where it's beneficial to use your own Azure Fluid Relay service for your Live Share app.
+While you likely prefer using our free hosted service, there are situations where it's beneficial to use your own Azure Fluid Relay service for your Live Share app.
 
-## Pre-requisites
+## Prerequisites
 
 1. Build a meeting side panel and stage app meeting extension, as shown in the [dice roller tutorial](../teams-live-share-tutorial.md).
 2. Update your app manifest to include all [necessary permissions](../teams-live-share-capabilities.md#register-rsc-permissions).
@@ -22,7 +22,7 @@ While you likely will prefer using our free hosted service, there are situations
 
 ## Connect to Azure Fluid Relay service
 
-When calling initializing `LiveShareClient`, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, but you'll need to implement the `ITokenProvider` interface to sign tokens for your containers. This example explains Azure's `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
+When calling initializing `LiveShareClient`, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, but you need to implement the `ITokenProvider` interface to sign tokens for your containers. This example explains Azure's `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
 
 # [JavaScript](#tab/javascript)
 
@@ -132,7 +132,7 @@ For more information, see [core capabilities](../teams-live-share-capabilities.m
 
 ## Using Live Share without LiveShareClient
 
-You can still use Live Share even if you use don't want to use the `LiveShareClient` class for your custom Azure Fluid Relay service. This is helpful if you want to control when a container is created or how it is shared with meeting participants.
+You can still use Live Share even if you use don't want to use the `LiveShareClient` class for your custom Azure Fluid Relay service. This is helpful if you want to control when a container is created or how it's shared with meeting participants.
 
 Here is an example of how you might do this in your application:
 
@@ -358,7 +358,7 @@ host.setAudience(services.audience);
 
 ---
 
-Many Live Share APIs depend on a global timestamp API, which allows `LiveDataObject` objects to determine the order of remote messages. If you are using data structures that rely on the `TimestampProvider` class, then you must either use the `LiveShareHost` from the `teams-js` library, or override the `getTimestamp()` function in `AzureLiveShareHost` with a value returned by your server.
+Many Live Share APIs depend on a global timestamp API, which allows `LiveDataObject` objects to determine the order of remote messages. If you're using data structures that rely on the `TimestampProvider` class, then you must either use the `LiveShareHost` from the `teams-js` library, or override the `getTimestamp()` function in `AzureLiveShareHost` with a value returned by your server.
 
 ## See also
 

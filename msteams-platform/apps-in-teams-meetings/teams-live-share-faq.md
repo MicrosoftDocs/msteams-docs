@@ -20,7 +20,7 @@ Get answers to common questions when using Live Share.<br>
 
 <summary><b>Can I use my own Azure Fluid Relay service?</b></summary>
 
-Yes! When initializing Live Share, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, but you'll need to implement the `ITokenProvider` interface to sign tokens for your containers. For example, you can use a provided `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
+Yes! When initializing Live Share, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, but you need to implement the `ITokenProvider` interface to sign tokens for your containers. For example, you can use a provided `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
 
 While most of you find it beneficial to use our free hosted service, there may still be times where it's beneficial to use your own Azure Fluid Relay service for your Live Share app. Consider using a custom AFR service connection if you:
 
@@ -38,7 +38,7 @@ For more information, see [how to guide](./teams-live-share-how-to/how-to-custom
 
 <summary><b>How long is data stored in Live Share's hosted service accessible?</b></summary>
 
-Any data sent or stored through Fluid containers created by Live Share's hosted Azure Fluid Relay service may be accessible for up to 24 hours, though in most cases it is deleted within six hours. If you want to persist data beyond 24 hours, you can replace our hosted Azure Fluid Relay service with your own. Alternatively, you can use your own storage provider in parallel to Live Share's hosted service.
+Any data sent or stored through Fluid containers created by Live Share's hosted Azure Fluid Relay service may be accessible for up to 24 hours, though in most cases it's deleted within six hours. If you want to persist data beyond 24 hours, you can replace our hosted Azure Fluid Relay service with your own. Alternatively, you can use your own storage provider in parallel to Live Share's hosted service.
 
 <br>
 
@@ -76,7 +76,7 @@ Currently, Live Share supports a maximum of 100 attendees per session. If this i
 <details>
 <summary><b>Can I use Live Share's data structures outside of Teams?</b></summary>
 
-Currently, Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` won't work outside Microsoft Teams. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
+Currently, Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` don't work outside Microsoft Teams. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 
 <br>
 
@@ -135,7 +135,7 @@ Live Share isn't supported for GCC, GCC-High, and DOD tenants.
 <details>
 <summary><b>Does Live Share support external and guest users?</b></summary>
 
-Yes, Live Share supports guest and external users for most meeting types. However, guest users are not supported in channel meetings.
+Yes, Live Share supports guest and external users for most meeting types. However, guest users aren't supported in channel meetings.
 
 <br>
 

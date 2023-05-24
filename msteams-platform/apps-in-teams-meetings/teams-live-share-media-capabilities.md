@@ -18,7 +18,7 @@ The Live Share SDK enables robust **media synchronization** for any HTML `<video
 
 ## Install
 
-Live Share media is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share-media), and you can download through npm or Yarn. You must also install its peer dependencies, which include `@microsoft/live-share`, `fluid-framework` and `@fluidframework/azure-client`. If you are using Live Share in your tab application, you should also install `@microsoft/teams-js` version `2.11.0` or greater.
+Live Share media is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share-media), and you can download through npm or Yarn. You must also install its peer dependencies, which include `@microsoft/live-share`, `fluid-framework` and `@fluidframework/azure-client`. If you're using Live Share in your tab application, you should also install `@microsoft/teams-js` version `2.11.0` or greater.
 
 ```bash
 npm install @microsoft/live-share @microsoft/live-share-media fluid-framework @fluidframework/azure-client --save
