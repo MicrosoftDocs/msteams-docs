@@ -31,11 +31,11 @@ With Teams, you can build your app in a feature-rich environment. Using Teams as
 
 If you've already built some Teams apps, you can now extend your apps across Microsoft 365 and configure them to be accessible over Outlook and Microsoft 365.
 
-:::image type="content" border="false" source="assets/images/overview/app-manifest.png" alt-text="Screenshot shows yous the configuration of properties in the Teams app manifest."lightbox="assets/images/overview/app-manifest.png":::
+:::image type="content" border="false" source="assets/images/overview/app-manifest.png" alt-text="Screenshot shows you the configuration of properties in the Teams app manifest."lightbox="assets/images/overview/app-manifest.png":::
 
 ## Microsoft Teams update
 
-We are excited to announce a major update to the Microsoft Teams! New Teams is reimagined from the ground up with performance in mind; it is faster, simpler, smarter, and flexible to ensure better experience for your apps and users.
+We're excited to announce a major update to the Microsoft Teams! New Teams is reimagined from the ground up with performance in mind; it's faster, simpler, smarter, and flexible to ensure better experience for your apps and users.
 
 The new Teams Client is closely aligned with all the existing Teams Clients where your apps run today. At full feature parity, you can use the new Teams Client with all the same capabilities available in Teams today.
 
@@ -45,15 +45,15 @@ Apps in the new Teams client run better and faster as:
 
 * The new Teams Client uses the Evergreen version of Edge WebView2 to ensure Teams client is always up to date with the latest fixes and improvements available in Edge and Chromium.
 
-* The new Teams Client has been re-built from the ground up with performance in mind and includes all the platform infrastructure responsible for bootstrapping your app and powering the SDK APIs that it uses.  
+* The new Teams Client has been rebuilt from the ground up with performance in mind and includes all the platform infrastructure responsible for bootstrapping your app and powering the SDK APIs that it uses.  
 
 ### Timelines and Rollout
 
 To ensure a smooth transition, a phased rollout of the new platform is planned. Following is an overview of the key milestones:
 
-Private Preview or Developer Preview: The new Teams client is available in Public Developer Preview starting 24th May, 2023. You can access the new platform and test your apps. We encourage you to adopt the feature early and provide feedback to help refine the platform.
+Private Preview or Developer Preview: The new Teams client is available in Public Developer Preview starting 24th May 2023. You can access the new platform and test your apps. We encourage you to adopt the feature early and provide feedback to help refine the platform.
 
-GA of all platform features from Teams classic: All the platform features from Teams classic will be generally available in the new Teams client by June 2023. We plan to officially launch the the new platform after addressing the known issues and incorporating feedback.
+GA of all platform features from Teams classic: All the platform features from Teams classic will be generally available in the new Teams client by June 2023. We plan to officially launch the new platform after addressing the known issues and incorporating feedback.
 
 > [!NOTE]
 >
@@ -61,11 +61,10 @@ GA of all platform features from Teams classic: All the platform features from T
 > * Test channel tabs after installing and pinning them in the Classic Teams Client.
 > * Test messaging extensions, meeting apps, bots, and link unfurling after installing and pinning them in the Classic Teams Client.
 
-You can distinguish between the Teams host clients using the [HostName](/javascript/api/@microsoft/teams-js/hostname?view=msteams-client-js-latest&preserve-view=true) property. Classic Teams client and New Teams client are represented by `teams` and `teamsModern` respectively.  
+You can distinguish between the Teams host clients using the [HostName](/javascript/api/@microsoft/teams-js/hostname?view=msteams-client-js-latest&preserve-view=true) property. Classic Teams client and New Teams client are represented by `teams` and `teamsModern` respectively.
 
-For Sdk v1.x - hostName,
-
-For Sdk v2.x - app.Context.app.host.name
+* SDK v1.x - hostName
+* SDK v2.x - app.Context.app.host.name
 
 ### Known Issues
 
@@ -79,8 +78,7 @@ For Sdk v2.x - app.Context.app.host.name
 
 * Adaptive card tabs aren't supported in the new Teams client.
 
-For more information on known issues and gaps in the New Teams Client, see [Tne new microsoft Teams](/microsoftteams/new-teams-desktop-admin?tabs=teams-admin-center#known-issues)
-We are aiming to close all these gaps as soon as possible.
+For more information on known issues and gaps in the New Teams Client, see [The new Microsoft Teams](/microsoftteams/new-teams-desktop-admin?tabs=teams-admin-center#known-issues).
 
 ## Next step
 
