@@ -165,7 +165,7 @@ For subscribing your app to tenant-level notifications, see [get change notifica
 
 When your app is notified about subscribed meeting events, it searches through the notifications for:
 
-- Transcription started or recording started (or both) events.
+- Transcription started events.
 - Meeting ended events.
 
 These events contain the chat ID, which is used to obtain chat entity, and eventually meeting ID and organizer ID.
