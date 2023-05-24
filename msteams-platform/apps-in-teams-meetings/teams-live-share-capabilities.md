@@ -369,7 +369,7 @@ The following are a few examples in which `LiveState` can be used in your applic
 - Synchronizing the current route path for your application to ensure everyone is on the same page. For example, `/whiteboard/:whiteboardId`.
 - Maintaining the content identifier that the current presenter is viewing. For example, an `taskId` on a task board.
 - Synchronizing the current step in a multi-round group activity. For example, the guessing phase during the Agile Poker game.
-- Keeping a scroll position in sync for a "follow me" feature.
+- Keeping a scroll position in sync for a **follow me** feature.
 
 > [!NOTE]
 > Unlike `SharedMap`, the `state` value in `LiveState` will be reset after all the users disconnect from a session.
@@ -804,7 +804,7 @@ Meetings in Teams include calls, all-hands meetings, and online classrooms. Meet
 > [!NOTE]
 > The `LivePresence` class doesn't support role verification. The `LivePresenceUser` object has a `getRoles` method, which returns the meeting roles for a given user.
 
-In the following example where only presenters and organizers can take control, `LiveState` is used to synchronize which user is the active presenter.
+In the following example where only presenters and organizers can take control, `LiveState` is used to synchronize which user is the active presenter:
 
 # [JavaScript](#tab/javascript)
 
@@ -971,7 +971,7 @@ In some cases, a user may have multiple roles. For example, an **Organizer** is 
 
 The Live Share SDK supports any [distributed data structure](https://fluidframework.com/docs/data-structures/overview/) included in Fluid Framework. These features serve as a set of primitives you can use to build robust collaborative scenarios, such as real-time updates of a task list or co-authoring text within an HTML `<textarea>`.
 
-Unlike the `LiveDataObject` classes mentioned above, Fluid data structures do not reset after your application is closed. This is ideal for scenarios such as the meeting side panel, where users will frequently close and re-open your app while using other tabs in the meeting, such as chat.
+Unlike the `LiveDataObject` classes mentioned in this article, Fluid data structures don't reset after your application is closed. This is ideal for scenarios such as the meeting side panel, where users frequently close and re-open your app while using other tabs in the meeting, such as chat.
 
 Fluid Framework officially supports the following types of distributed data structures:
 
@@ -979,7 +979,7 @@ Fluid Framework officially supports the following types of distributed data stru
 | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | [SharedMap](https://fluidframework.com/docs/data-structures/map/)                   | A distributed key-value store. Set any JSON-serializable object for a given key to synchronize that object for everyone in the session. |
 | [SharedSegmentSequence](https://fluidframework.com/docs/data-structures/sequences/) | A list-like data structure for storing a set of items (called segments) at set positions.                                               |
-| [SharedString](https://fluidframework.com/docs/data-structures/string/)             | Distributed-string sequence optimized for editing the text of documents or text areas.                                                  |
+| [SharedString](https://fluidframework.com/docs/data-structures/string/)             | A distributed-string sequence optimized for editing the text of documents or text areas.                                                  |
 
 Let's see how `SharedMap` works. In this example, we've used `SharedMap` to build a playlist feature.
 
@@ -1087,7 +1087,7 @@ export function PlaylistMapExample() {
 ---
 
 > [!NOTE]
-> Core Fluid Framework DDS objects don't support meeting role verification. Everyone in the meeting can change data stored through these objects.
+> Core Fluid Framework DDS objects don't support meeting role verification. Everyone in the meeting can change the data stored through these objects.
 
 ## Code samples
 

@@ -117,7 +117,7 @@ If you plan to update your app with new `SharedObject`, `DataObject`, or `LiveDa
 <details>
 <summary><b>Are there limits to how many change events I can emit through Live Share?</b></summary>
 
-While there aren't any enforced limits, you should be mindful of how many messages you send. For optimal performance, you must debounce changes emitted through Live Share to one message per 50 milliseconds or more. This is especially important when sending changes based on mouse or touch coordinates, such as when synchronizing cursor positions, inking, and dragging objects around a page.
+While there aren't any enforced limits, you must be mindful of how many messages you send. For optimal performance, you must debounce changes emitted through Live Share to one message per 50 milliseconds or more. This is especially important when sending changes based on mouse or touch coordinates, such as when synchronizing cursor positions, inking, and dragging objects around a page.
 
 <br>
 
@@ -144,7 +144,7 @@ Yes, Live Share supports guest and external users for most meeting types. Howeve
 <details>
 <summary><b>Does Live Share support Teams Rooms devices?</b></summary>
 
-No, Live Share does not support Teams Rooms devices at this time.
+No, Live Share doesn't support Teams Rooms devices.
 
 <br>
 
@@ -153,7 +153,7 @@ No, Live Share does not support Teams Rooms devices at this time.
 <details>
 <summary><b>Do Live Share apps support meeting recordings?</b></summary>
 
-No, neither Live Share nor other meeting stage apps support Teams meeting recordings at this time.
+No, Live Share doesn't support Teams Rooms devices.
 
 <br>
 
