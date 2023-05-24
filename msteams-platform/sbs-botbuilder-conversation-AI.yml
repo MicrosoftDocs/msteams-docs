@@ -369,18 +369,18 @@ items:
 
        When you run the app locally, the OpenAI key defined here is used in the local settings.
 
-    1. Go to the `index.ts` file and add the following code at the end of the file:
+    1. Go to the `index.ts` file :
 
-        1. To import Teams AI library:
+        1. Add the following code to import Teams AI library:
 
             ```typescript
             import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnState, OpenAIModerator, OpenAIPlanner, AI } from '@microsoft/teams-ai';
             import path from "path";
             ```
 
-            You need to import the required classes to use the functions and variables available in the class to build your app. Leverage pre-built templates and add your business logic to this scaffold.
+            You need to import the required classes to use the functions and variables available in the class to build your app. You can leverage pre-built templates and add your business logic to this scaffold.
 
-        1. To define a state:
+        1. Add the following code to define a state:
 
             ```typescript
             // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -390,7 +390,7 @@ items:
 
             The `ApplicationTurnState` is the typescript **type** of the turn state object state. End users can create their own **conversation** or **user** concrete type implementations and provide it to the `DefaultTurnState` interface.
         
-        1. To create planner, moderator, and promptManager:
+        1. Add the following code to create planner, moderator, and promptManager:
 
             ```typescript
             // Create AI components
@@ -412,7 +412,7 @@ items:
             * Moderator: The `OpenAIModerator` reviews both user's input and the model output to detect harmful speech, such as hate speech, self-harm, and violence.
 
 
-        1. To define storage and application:
+        1. Add the following code to define storage and application:
 
             ```typescript
             // Define storage and application
@@ -437,7 +437,7 @@ items:
 
         1. Under **Import required bot service**, add `MemoryStorage`.
 
-        1.  To define actions:
+        1.  Add the following code to define actions:
 
             ```typescript
             app.ai.action(AI.FlaggedInputActionName, async (context, state, data) => {
@@ -453,7 +453,7 @@ items:
             
             When the `OpenAIModerator` reviews and identifies a flag in an input or output, it triggers the action `AI.FlaggedInputActionName` or `AI.FlaggedOutputActionName` and the `context.sendActivity` sends a message to the user. If the user receives a message for an flagged  input or output, the user can control what he wants to do.
 
-        1. To define history:
+        1. Add the following code to define history:
 
             ```typescript
             app.message('/history', async (context, state) => {

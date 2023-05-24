@@ -26,7 +26,7 @@ Teams AI library supports the following capabilities:
 
  You need to use the AI library to scaffold bot and Adaptive Card handlers to the source file.
 
-In the following section, we've used  the samples from the [AI library](https://github.com/microsoft/teams-ai/tree/main) to explain each capability and their path to migration:
+In the following section, we've used  the samples from the [AI library](https://github.com/microsoft/teams-ai/tree/main) to explain each capability and the path to migration:
 
 ## Send or receive message
 
@@ -336,7 +336,7 @@ Human: {{activity.text}}
 
 ## AI
 
-The bot logic is simplified to provide handlers for actions such as `addItem`, `removeItem` and , `findItem`. This clear delineation between actions and the prompts that instruct the AI on how to execute them is an incredibly potent tool.
+The bot logic is simplified to provide handlers for actions such as `addItem`, `removeItem`, and `findItem`. This clear delineation between actions and the prompts that instruct the AI on how to execute them is an incredibly potent tool.
 
 Example: [List bot](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.d.chainedActions.listBot)
 

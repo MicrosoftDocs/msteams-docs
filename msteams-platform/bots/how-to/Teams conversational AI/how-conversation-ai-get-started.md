@@ -100,7 +100,7 @@ The application object automatically manages the conversation and user state of 
 
 * **Storage**: Create a storage provider to store the conversation and the user state for your bot.
 
-* **Application**: The application class has all the information and bot logic required for an app. Register actions or activity handlers for the app in this class.
+* **Application**: The application class has all the information and bot logic required for an app. You can register actions or activity handlers for the app in this class.
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L82)
 
@@ -121,7 +121,7 @@ const app = new Application<ApplicationTurnState>({
 });
 ```
 
-The `MemoryStorage()` function stores all the state for your bot. The `Application` class replaces the Teams Activity Handler class. Configure your `ai` by adding the planner, moderator, prompt manager, default prompt and history. The `ai` object is passed into the `Application`, which receives the AI components and the default prompt defined earlier.
+The `MemoryStorage()` function stores all the state for your bot. The `Application` class replaces the Teams Activity Handler class. You can configure your `ai` by adding the planner, moderator, prompt manager, default prompt and history. The `ai` object is passed into the `Application`, which receives the AI components and the default prompt defined earlier.
 
 ## Prompt
 
@@ -175,7 +175,7 @@ The following table includes the query parameters:
 
 ### Prompt actions
 
-Plans let the model perform actions or respond to the user. Create a schema of the plan and add a list of actions that you support to perform an action and pass arguments. The OpenAI endpoint figures out the actions required to be used, extracts all the entities, and passes those as arguments to the action call.
+Plans let the model perform actions or respond to the user. You can create a schema of the plan and add a list of actions that you support to perform an action and pass arguments. The OpenAI endpoint figures out the actions required to be used, extracts all the entities, and passes those as arguments to the action call.
 
 ```text
     The following is a conversation with an AI assistant. 
@@ -190,9 +190,9 @@ Plans let the model perform actions or respond to the user. Create a schema of t
 
 ### Prompt template
 
-Prompt template is a simple and powerful way to define and compose AI functions using plain text. Use prompt template to create natural language prompts, generate responses, extract information, invoke other prompts, or perform any other task that can be expressed with text.
+Prompt template is a simple and powerful way to define and compose AI functions using plain text. You can use prompt template to create natural language prompts, generate responses, extract information, invoke other prompts, or perform any other task that can be expressed with text.
 
-The language supports features that allow you to include variables, call external functions, and pass parameters to functions. You don't need to write any code or import any external libraries, just use the curly braces {{...}} to embed expressions in your prompts. Teams parses your template and execute the logic behind it. This way, easily integrate AI into your apps with minimal effort and maximum flexibility.
+The language supports features that allow you to include variables, call external functions, and pass parameters to functions. You don't need to write any code or import any external libraries, just use the curly braces {{...}} to embed expressions in your prompts. Teams parses your template and execute the logic behind it. This way, you can easily integrate AI into your apps with minimal effort and maximum flexibility.
 
 * {{function}}:  Calls a registered function and inserts its value.​
 
