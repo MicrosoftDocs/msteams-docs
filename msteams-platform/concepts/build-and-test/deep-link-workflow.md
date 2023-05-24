@@ -163,10 +163,10 @@ By default, a deep link opens in a meeting side panel. To open a deep link direc
 
 For more information, see [deep link to a tab](~/concepts/build-and-test/deep-link-application.md#generate-a-deep-link-to-your-tab).
 
-In the following scenarios deep link doesn't open in the meeting side panel:
+Deep link doesn't open in the meeting side panel in the following scenarios:
 
 * If there is no active meeting.
-* If the app don't have `sidePanel` context declared in the app manifest.
+* If the app doesn't have `sidePanel` context declared in the app manifest.
 * If `openInMeeting=false` is set in the deep link.
 * If deep link is selected outside of the meeting window or component.
 * If deep link doesn't match the current meeting for example, deep link is created from another meeting.
