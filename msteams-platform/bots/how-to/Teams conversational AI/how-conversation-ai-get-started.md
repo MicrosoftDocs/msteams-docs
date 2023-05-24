@@ -14,7 +14,7 @@ ms.author: surbhigupta
 
 Teams AI library streamlines the process to build intelligent Microsoft Teams applications by using the AI components.  It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
 
-You can easily integrate Teams AI library, prompt management, and safety moderation into your apps and enhance the user experience. It also facilitates the creation of bots that uses an OpenAI API key or AzureOpenAI to provide an AI-driven conversational experience.
+You can easily integrate Teams AI library, prompt management, and safety moderation into your apps and enhance the user experience. It also facilitates the creation of bots that uses an OpenAI API key or Azure OpenAI to provide an AI-driven conversational experience.
 
 ## Initial setup
 
@@ -64,13 +64,13 @@ import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnStat
 import path from "path";
 ```
 
-## Create AI Components
+## Create AI components
 
-You can take your existing or a new bot framework app and add AI capabilities.
+Add AI capabilities to your existing app or a new Bot Framework app.
 
-**Planner**: OpenAI planner is the main component that calls the large language model (LLM) OpenAI or AzureOpenAI. The OpenAI API is powered by a diverse set of models with different capabilities. You can also make limited customizations to our original base models for your specific use case.
+**Planner**: OpenAI planner is the main component that calls the large language model (LLM) OpenAI or Azure OpenAI. The OpenAI API is powered by a diverse set of models with different capabilities. You can also make limited customizations to our original base models for your specific use case.
 
-**Prompt manager**: The prompt manager manages prompt creation. It calls functions and injects  from your code into the prompt. It can copy the conversation state and the user state into the prompt for you automatically.
+**Prompt manager**: The prompt manager manages prompt creation. It calls functions and injects  from your code into the prompt. It copies the conversation state and the user state into the prompt for you automatically.
 
 **Moderator**: A moderator adds safety moderation to the input and output. It allows you to identify the user input, flag prompt injection techniques, review the output from the bot, and run it through a business logic for filtering to ensure that the bot complies with OpenAI's usage policies. You can either moderate the input or the output, or both. OpenAI moderator is the default moderator.
 
@@ -125,7 +125,7 @@ The `MemoryStorage()` function stores all the state for your bot. The `Applicati
 
 ## Prompt
 
-Prompts are pieces of text that can be used to create conversational experiences. Prompts are used to start conversations, ask questions, and generate responses. The use of prompts can help reduce the complexity of creating conversational experiences and make them more engaging for the user.
+Prompts are pieces of text that can be used to create conversational experiences. Prompts are used to start conversations, ask questions, and generate responses. The use of prompts helps reduce the complexity of creating conversational experiences and make them more engaging for the user.
 
 The following are a few guidelines to create prompts:
 
@@ -137,7 +137,7 @@ Create a folder called prompts and define your prompts in the folder. When the u
 
 * `skprompt.txt`:  Contains the prompts text and supports template variables and functions. Define all your text prompts in the `skprompt.txt` file.
   
-* `config.json`: Contains the prompt model settings. Provide the right configuration to ensure bot responses are aligned with your requirement. Configure `max_tokens`, `temperature`, and other properties to pass into OpenAI or AzureOpenAI.
+* `config.json`: Contains the prompt model settings. Provide the right configuration to ensure bot responses are aligned with your requirement. Configure `max_tokens`, `temperature`, and other properties to pass into OpenAI or Azure OpenAI.
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/prompts/chat/config.json)
 
@@ -175,7 +175,7 @@ The following table includes the query parameters:
 
 ### Prompt actions
 
-Plans let the model perform actions or say things to the user. You can create a schema of the plan and add a list of actions that you support. It can perform an action and pass arguments. The OpenAI endpoint can figure out what actions it wants to use and then extract all the entities and pass those as arguments to the action call.
+Plans let the model perform actions or respond to the user. You can create a schema of the plan and add a list of actions that you support to perform an action and pass arguments. The OpenAI endpoint figures out the actions required to be used, extracts all the entities, and passes those as arguments to the action call.
 
 ```text
     The following is a conversation with an AI assistant. 
@@ -188,9 +188,9 @@ Plans let the model perform actions or say things to the user. You can create a 
     AI:
   ```
 
-### Prompt Template
+### Prompt template
 
-Prompt template is a simple and powerful way to define and compose AI functions using plain text. You can use it to create natural language prompts, generate responses, extract information, invoke other prompts, or perform any other task that can be expressed with text.
+Prompt template is a simple and powerful way to define and compose AI functions using plain text. You can use prompt template to create natural language prompts, generate responses, extract information, invoke other prompts, or perform any other task that can be expressed with text.
 
 The language supports features that allow you to include variables, call external functions, and pass parameters to functions. You don't need to write any code or import any external libraries, just use the curly braces {{...}} to embed expressions in your prompts. Teams parses your template and execute the logic behind it. This way, you can easily integrate AI into your apps with minimal effort and maximum flexibility.
 
