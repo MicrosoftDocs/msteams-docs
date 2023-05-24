@@ -801,6 +801,28 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`MicrophoneStream.Read.User`| Allows the app to read user's microphone stream.|
     |`MeetingParticipantReaction.Read.User`| Allows the app to read user's reactions while participating in a meeting.|
 
+## extensions
+
+**Optional**—array
+
+Contains objects that define the set of extensions for the app. Used to specify Outlook Add-ins within a unified manifest for simplified distribution and acquisition within the Microsoft 365 ecosystem.
+
+> [!NOTE]
+> Only one extension per app is supported.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`requirements.capabilities`| array | | | Identifies the requirement sets that the add-in needs to be installable. Each object in the array is made up of three strings `name` (required), `minVersion`, and `maxVersion`. |
+|`requirements.scopes`| array | 1 | | Identifies the Office applications, by enum, in which the add-in can be installed. The only supported enum value is `mail`. |
+|`requirements.formFactors`| array | | | Identifies the form factors, by enum `mobile` and `desktop`, in which the add-in can be installed. |
+|`runtimes`| array | | | Configures various kinds of add-ins that have little or no UI, such as custom function-only add-ins and [function commands](/office/dev/add-ins/design/add-in-commands). |
+|`ribbons`| array | | | The ribbons that the add-in customizes. This property is an array of objects that combine the child properties `requirements`, `contexts`, and `tabs`. `Contexts` specify the command surfaces that the add-in customizes, while the `tabs` property configures custom ribbon tabs. |
+|`autoRunEvents`| array | | | Configures an event handler for a specified event. |
+|`alternates`| array | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both. For more information, see the [EquivalentAddins - See also](/javascript/api/manifest/equivalentaddins) for background information. |
+|`audienceClaimUrl`| string | 2048 | | The url for your extension, used to validate Exchange user identity tokens. |
+
+For more information, see the [extension property](/office/dev/add-ins/develop/json-manifest-overview) in the Office Add-ins manifest documentation.
+
 ## See also
 
 * [Understand the Microsoft Teams app structure](~/concepts/design/app-structure.md)
