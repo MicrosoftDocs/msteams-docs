@@ -37,7 +37,7 @@ If you've already built some Teams apps, you can now extend your apps across Mic
 
 We're excited to announce a major update to the Microsoft Teams! New Teams is reimagined from the ground up with performance in mind; it's faster, simpler, smarter, and flexible to ensure better experience for your apps and users.
 
-The new Teams Client is closely aligned with all the existing Teams Clients where your apps run today. At full feature parity, you can use the new Teams Client with all the same capabilities available in Teams today.
+The new Teams Client is closely aligned with all the existing Teams Clients where your apps run. At full feature parity, you can use the new Teams Client with all the same capabilities available in Teams.
 
 If you have an app that runs inside the Classic Teams Client for Windows or Mac, the Teams Web Clients for Edge, Chrome, or Firefox, and our Teams Mobile Clients for Android and iOS, the app will most likely run in the new Teams Client without any issues.
 
@@ -49,11 +49,11 @@ Apps in the new Teams client run better and faster as:
 
 ### Timelines and Rollout
 
-To ensure a smooth transition, a phased rollout of the new platform is planned. Following is an overview of the key milestones:
+To ensure a smooth transition, a phased rollout of the new platform is planned. The following are the key milestones:
 
-Private Preview or Developer Preview: The new Teams client is available in Public Developer Preview starting 24th May 2023. You can access the new platform and test your apps. We encourage you to adopt the feature early and provide feedback to help refine the platform.
+* **Private Preview or Developer Preview**: The new Teams client is available in Public Developer Preview starting 24th May 2023. You can access the new platform and test your apps. We encourage you to adopt the feature early and provide feedback to help refine the platform.
 
-GA of all platform features from Teams classic: All the platform features from Teams classic will be generally available in the new Teams client by June 2023. We plan to officially launch the new platform after addressing the known issues and incorporating feedback.
+* **GA of all platform features from Teams classic**: All the platform features from Teams classic will be generally available (GA) in the new Teams client by June 2023. We plan to officially launch the new platform after addressing the known issues and incorporating feedback.
 
 > [!NOTE]
 >
@@ -61,16 +61,16 @@ GA of all platform features from Teams classic: All the platform features from T
 > * Test channel tabs after installing and pinning them in the Classic Teams Client.
 > * Test messaging extensions, meeting apps, bots, and link unfurling after installing and pinning them in the Classic Teams Client.
 
-You can distinguish between the Teams host clients using the [HostName](/javascript/api/@microsoft/teams-js/hostname?view=msteams-client-js-latest&preserve-view=true) property. Classic Teams client and New Teams client are represented by `teams` and `teamsModern` respectively.
+You can distinguish between the Teams host clients using the [HostName](/javascript/api/@microsoft/teams-js/hostname?view=msteams-client-js-latest&preserve-view=true) property. Classic Teams client and the new Teams client are represented using the `teams` and `teamsModern` fields respectively.
 
-* SDK v1.x - hostName
-* SDK v2.x - app.Context.app.host.name
+* SDK v1.x: `hostName`
+* SDK v2.x: `app.Context.app.host.name`
 
 ### Known Issues
 
-* App installs, Pining, and unpinning aren't supported in the new Teams client. It's recommended to perform these actions in the Classic Teams Client and the changes are reflected in the New Teams Client.
+* You can't install, uninstall, pin, and unpin apps in the new Teams client. It's recommended to perform these actions in the Classic Teams Client and the changes are reflected in the New Teams Client.
 
-* Add, update, rename, and remove tabs from chats and channels isn't supported in the new Teams client. It's recommended to perform these actions in the Classic Teams Client and the changes are reflected in the New Teams Client.
+* You can't add, update, rename, and remove tabs from chats and channels in the new Teams client. It's recommended to perform these actions in the Classic Teams Client and the changes are reflected in the New Teams Client.
 
 * Share in Teams isn't supported in the new Teams client.
 
