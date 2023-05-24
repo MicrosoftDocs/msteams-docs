@@ -47,19 +47,13 @@ Apps in the new Teams client run better and faster as:
 
 * The new Teams Client has been rebuilt from the ground up with performance in mind and includes all the platform infrastructure responsible for bootstrapping your app and powering the SDK APIs that it uses.  
 
-### Timelines and Rollout
+### Timelines and rollout
 
-To ensure a smooth transition, a phased rollout of the new platform is planned. The following are the key milestones:
+To ensure a smooth transition, a phased rollout of the new platform is planned as follows:
 
 * **Private Preview or Developer Preview**: The new Teams client is available in Public Developer Preview starting 24th May 2023. You can access the new platform and test your apps. We encourage you to adopt the feature early and provide feedback to help refine the platform.
 
 * **GA of all platform features from Teams classic**: All the platform features from Teams classic will be generally available (GA) in the new Teams client by June 2023. We plan to officially launch the new platform after addressing the known issues and incorporating feedback.
-
-> [!NOTE]
->
-> * Test personal apps after installing and pinning it in the Classic Teams Client.
-> * Test channel tabs after installing and pinning them in the Classic Teams Client.
-> * Test messaging extensions, meeting apps, bots, and link unfurling after installing and pinning them in the Classic Teams Client.
 
 You can distinguish between the Teams host clients using the [HostName](/javascript/api/@microsoft/teams-js/hostname?view=msteams-client-js-latest&preserve-view=true) property. Classic Teams client and the new Teams client are represented using the `teams` and `teamsModern` fields respectively.
 
@@ -67,6 +61,9 @@ You can distinguish between the Teams host clients using the [HostName](/javascr
 * SDK v2.x: `app.Context.app.host.name`
 
 ### Known Issues
+
+> [!NOTE]
+> It's recommended to test apps, tabs, messaging extensions, bots, and link unfurling after switching from the Classic Teams Client to the new Teams client.
 
 * You can't install, uninstall, pin, and unpin apps in the new Teams client. It's recommended to perform these actions in the Classic Teams Client and the changes are reflected in the New Teams Client.
 
