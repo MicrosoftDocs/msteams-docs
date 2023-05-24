@@ -168,7 +168,7 @@ To learn more, try one of the following resources:
 Get code samples and implementation details for the basic Fluent UI components used to build Teams experiences.
 
 > [!div class="nextstepaction"]
-> [Try Teams UI components (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
+> [Try Teams UI components (Fluent UI)](https://react.fluentui.dev/?path=/docs/)
 
 ### Adaptive Cards designer
 

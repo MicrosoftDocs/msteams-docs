@@ -15,30 +15,29 @@ items:
 - durationInMinutes: 1
   content: |
     Start Microsoft Teams app development with your first Teams app. 
-    You can create a message extension Teams app. 
-
-    Your app will have a capability, which comes with its own UI and UX:
+    You can create a message extension Teams app with Teams using Javascript.  
     
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram shows the three features of the app.":::
-    
-    
-    In this tutorial, you can learn:
+    In this tutorial, you'll learn:
 
     - How to set up a new project with Teams Toolkit.
     - How to build a message extension app.
     - How to deploy your app.
 
+    This step-by-step guide helps you to build message extension Teams app with Teams Toolkit. You'll see the following output after you've completed this guide:
+
+     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot shows that app sideloaded in Teams." lightbox="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png":::
+
 - title: Prerequisites
   durationInMinutes: 1
   content: |
 
-   Here's a list of tools you need for building and deploying your apps.
+   Ensure you install the following tools for building and deploying your apps.
 
    | &nbsp; | Install | For using... |
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use latest version. |
-   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use version 4.0.0.|
+   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Teams Toolkit v5.|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -69,7 +68,7 @@ items:
    # [Visual Studio Code](#tab/vscode)
 
    1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
-   1. In the search box, enter **Teams toolkit**.
+   1. In the search box, enter **Teams Toolkit**.
    1. Select **Install** next to the Teams Toolkit.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Screenshot shows the options to select for Teams Toolkit extension installation.":::
@@ -81,7 +80,7 @@ items:
    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
    > [!NOTE]
-   > The latest version of Teams Toolkit is 4.2.0.
+   > The latest version of Teams Toolkit is v5.
    
    # [Command line](#tab/cli)
 
@@ -117,7 +116,7 @@ items:
    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams local environment.
 
    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
@@ -125,7 +124,7 @@ items:
 
     1. In the Teams client, select the **Store** icon.
     1. Select **Manage your apps**.
-    1. Select **Publish an app**.
+    1. Select **Upload an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="Screenshot shows the options to select to Upload a custom app.":::
@@ -142,7 +141,7 @@ items:
    1. In the welcome screen, select **Set up E5 subscription**.
    1. Set up your administrator account. After you finish, the following screen appears.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program window of the administrator account.":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
 
    1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
@@ -150,7 +149,7 @@ items:
 
    If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
-   Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building! Select the app you want to do first.
+   Now you’ve got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to create first.
 
 
 - title: Create project workspace for your message extension app
@@ -193,15 +192,15 @@ items:
     1. Open Visual Studio Code.
     1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 
-    1. Select **Create a new app**.
+    1. Select **Create a New App**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/create-project.png" alt-text="Screenshot shows the location of the Create a new app option in Teams Toolkit.":::
 
-    1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
+    1. Select **Message Extension** to create an app using the Teams Toolkit.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/create-new-app1.png" alt-text="Screenshot shows the selection of Create a new Teams app option.":::
 
-    1. Ensure that **Message extension** is selected as the capability that you want to build in your app..
+    1. Ensure that **Custom Search Result** is selected as the app feature that you want to build in your app.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-capabilities-mex1.png" alt-text="Screenshot shows the selection of Message extension from the list of capabilities.":::
 
@@ -275,21 +274,15 @@ items:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/first-msgext/folder-structure-mex-app.png" alt-text="Screenshot shows the folder structure under Explorer.":::
 
-    | Folder name | Contents |
+    | Folder / File | Contents |
     | --- | --- |
-    | `.fx/configs` | Configuration files that user can customize for the Teams app. |
-    | `.fx/configs/config.<envName>.json` | Configuration file for every environment. |
-    | `.fx/configs/azure.parameters.<envName>.json` | Parameters file for Azure BICEP provision for every environment. |
-    | `.fx/configs/projectSettings.json` | Global project settings that apply to all environments. |
-    | `.fx/configs/ngrok.yml` | Ngrok settings |
-    | `.fx/states` | Provision output that is generated by the Toolkit.  The toolkit creates this folder after you provision resources for your app. |
-    | `.fx/states/state.<envName>.json` | Provision output file for every environment. |
-    | `.fx/states/<env>.userdata` | Sensitive user data for the provision output for every environment. |
-    | `bot` |  Code for the Bot needed at runtime. |
-    | `bot/messageExtensionBot.js` | Main entry point for the message extension app. |
-    | `templates/appPackage` | App manifest template files, and the app icons, color.png and outline.png. |
-    | `templates/appPackage/manifest.template.json` | App manifest for running the app in local and remote environment.  |
-    | `templates/azure` | BICEP template files |
+    | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+    | `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
+    | `.vscode/` | VSCode files for local debug. |
+    | `appPackage/` | Templates for the Teams application manifest. |
+    | `infra/` | Templates for provisioning Azure resources. |
+    | `index.js` | Application entry point and `restify` handler. |
+    | `teamsBot.js` | Teams activity handler. |
 
     > [!Tip]
     > Familiarize yourself with bots and message extension outside of Teams before you integrate your app within Teams.
@@ -355,7 +348,7 @@ items:
     1. Select **F5** in Visual Studio Code to run your application in debug mode.
 
         > [!NOTE]
-        > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check it.
+        > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check.
 
         <!-- markdownlint-disable MD033 -->
         <details>
@@ -367,11 +360,10 @@ items:
           - You're logged in with a Microsoft 365 account.
           - Sideloading is enabled for your Microsoft 365 account.
           - Supported Node.js version is installed.
-          - Ngrok is installed.
           - Port required by bot app is available.
 
         2. Install npm packages
-        3. Starts Ngrok to create a HTTP tunnel.
+        3. Starts Dev Tunnel to create a HTTP tunnel.
         4. Registers the app in Azure AD and configures the app.
         5. Registers the bot app in Bot Framework and configures the app.
         6. Registers the app in Teams Developer Portal and configures the app.
@@ -410,13 +402,16 @@ items:
         - If you've created a bot app before you created the message extension app, you can see that it is loaded in the same bot app you created. Previous chat messages are visible.
         - If you created a message extension first, your app is loaded in any chat that is open on Teams.
 
+        > [!NOTE]
+        > If you want to extend your app to Outlook and Microsoft 365, you can choose to debug your app with Outlook and Microsoft 365 from RUN AND DEBUG dropdown in Visual Studio Code.
+
     ### Test your app
 
     The first time your app loads, the message extension app is open for you to test. This sample app lets you search open-source npm packages from the software registry.
     
     #### To run a search query
 
-    1. Let's enter a search string in the search box, such as "cli". You will get a list of the matching items:
+    1. Let's enter a search string in the search box, such as "cli". You'll get a list of the matching items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/mex-search-string.png" alt-text="Screenshot that shows how to use the app for search.":::
 
@@ -525,7 +520,7 @@ items:
 
     You've learned to create, build, and run Teams app with Message Extension capabilities. The final step is to deploy your app on Azure.
 
-    Let's deploy the first app with Tab capability on Azure using Teams Toolkit.
+    Let's deploy the first message extension app on Azure using Teams Toolkit.
 
     ## Sign in to your Azure account
 
@@ -534,7 +529,7 @@ items:
     # [Visual Studio Code](#tab/viscode)
 
     1. Open Visual Studio Code.
-    1. Open the project folder in which you created the tab app.
+    1. Open the project folder in which you created the message extension app.
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to Azure**.
 
@@ -549,7 +544,7 @@ items:
 
         Now you're ready to deploy your app to Azure!
 
-        Congratulations, you have created a Teams app! 
+        Congratulations, you have signed in your Azure account! 
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
     # [Command line](#tab/cline)
@@ -591,7 +586,7 @@ items:
       Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
 
       * The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
-      * The frontend application will be deployed to an Azure Storage account configured for static web hosting.
+      * The frontend application is deployed to an Azure Storage account configured for static web hosting.
 
       </details>
 
@@ -603,15 +598,7 @@ items:
 
     You've created a message extension app.
 
-    Now that you've learned to create a basic app, you can move on to creating more complex apps. To start with, try adding capabilities to your existing apps.
+    Now that you've learned to create a basic app, you can move on to creating more complex apps. Follow the procedures to build and deploy the app, and your app has multiple capabilities. 
 
-    To add capabilities to your existing app:
-
-    1. Select **Add feature** from the **Development** section of the Teams Toolkit sidebar.
-
-    1. Select the capability you want to add to your app.
-
-    That's it! Teams Toolkit adds the scaffolding for the new capability to your app's directory structure. Follow the procedures to build and deploy the app, and your app will have multiple capabilities. 
-
-    You've completed the tutorial to build messaging extension app with JavaScript.
+    You've completed the tutorial to build message extension app with JavaScript.
     
