@@ -14,8 +14,8 @@ In the Dice Roller sample app, users are shown a dice with a button to roll it. 
 
 1. [Set up the application](#set-up-the-application)
 2. [Join a Fluid container](#join-a-fluid-container)
-3. [Write the stage view](#write-the-stage-view)
-4. [Connect stage view to Fluid data](#connect-stage-view-to-fluid-data)
+3. [Write the meeting stage view](#write-the-stage-view)
+4. [Connect meeting stage view to Live Share](#connect-meeting-stage-view-to-live-share)
 5. [Write the side panel view](#write-the-side-panel-view)
 6. [Write the settings view](#write-the-settings-view)
 
@@ -25,7 +25,7 @@ In the Dice Roller sample app, users are shown a dice with a button to roll it. 
 
 You can start by importing the required modules. The sample uses the [LiveState DDS](/javascript/api/@microsoft/live-share/livestate) and [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) from the Live Share SDK. The sample supports Teams Meeting Extensibility so you must include the [Microsoft Teams JavaScript client library (TeamsJS)](https://github.com/OfficeDev/microsoft-teams-library-js). Finally, the sample is designed to run both locally and in a Teams meeting so you need to include more Fluid Framework pieces to [test the sample locally](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
 
-Applications create Fluid containers using a schema that defines a set of _initial objects_ that are available to the container. The sample uses a SharedMap to store the current dice value that was rolled. For more information, see [data modeling](https://fluidframework.com/docs/build/data-modeling/).
+Applications create Fluid containers using a schema that defines a set of _initial objects_ that are available to the container. The sample uses a LiveState to store the current dice value that was rolled.
 
 Teams meeting apps require multiple views, such as content, configuration, and stage. You can create a `start()` function to help identify the view. This helps to render and perform any initialization that's required. The app supports running both locally in a web browser and from within a Teams meeting. The `start()` function looks for an `inTeams=true` query parameter to determine if it's running in Teams.
 
@@ -35,26 +35,17 @@ Teams meeting apps require multiple views, such as content, configuration, and s
 In addition to the `inTeams=true` query parameter, you can use a `view=content|config|stage` query parameter to determine the view that needs to be rendered.
 
 ```js
-import { SharedMap } from "fluid-framework";
 import { app, pages, LiveShareHost } from "@microsoft/teams-js";
-import { LiveShareClient, TestLiveShareHost } from "@microsoft/live-share";
-import { InsecureTokenProvider } from "@fluidframework/test-client-utils";
+import { LiveShareClient, TestLiveShareHost, LiveState } from "@microsoft/live-share";
 
 const searchParams = new URL(window.location).searchParams;
 const root = document.getElementById("content");
 
 // Define container schema
 
-const diceValueKey = "dice-value-key";
-
 const containerSchema = {
-  initialObjects: { diceMap: SharedMap },
+  initialObjects: { diceState: LiveState },
 };
-
-function onContainerFirstCreated(container) {
-  // Set initial state of the rolled dice to 1.
-  container.initialObjects.diceMap.set(diceValueKey, 1);
-}
 
 // STARTUP LOGIC
 
@@ -66,12 +57,6 @@ async function start() {
   if (!!searchParams.get("inTeams")) {
     // Initialize teams app
     await app.initialize();
-
-    // Get our frameContext from context of our app in Teams
-    const context = await app.getContext();
-    if (context.page.frameContext == "meetingStage") {
-      view = "stage";
-    }
   }
 
   // Load the requested view
@@ -85,7 +70,7 @@ async function start() {
     case "stage":
     default:
       const { container } = await joinContainer();
-      renderStage(container.initialObjects.diceMap, root);
+      renderStage(container.initialObjects.diceState, root);
       break;
   }
 }
@@ -108,13 +93,13 @@ async function joinContainer() {
     ? LiveShareHost.create()
     : TestLiveShareHost.create();
   // Create client
-  const liveShare = new LiveShareClient(host);
+  const client = new LiveShareClient(host);
   // Join container
-  return await liveShare.joinContainer(containerSchema, onContainerFirstCreated);
+  return await client.joinContainer(containerSchema, onContainerFirstCreated);
 }
 ```
 
-When testing locally, `TestLiveShareHost` updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the `LiveShareClient` to join the test container that was created. If the modification of the applications URL interferers with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/live-share/iliveshareclientoptions) and [getLocalTestContainerId](/javascript/api/@microsoft/live-share/iliveshareclientoptions) options passed to `LiveShareClient`.
+When testing locally, `TestLiveShareHost` updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the `LiveShareClient` to join the test container that was created. If the modification of the applications URL interferes with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/live-share/iliveshareclientoptions) and [getLocalTestContainerId](/javascript/api/@microsoft/live-share/iliveshareclientoptions) options passed to `LiveShareClient`.
 
 ## Write the stage view
 
@@ -124,7 +109,7 @@ Many Teams Meeting Extensibility applications are designed to use React for thei
 
 It's easy to create the view using local data without any Fluid functionality, then add Fluid by changing some key pieces of the app.
 
-The `renderStage` function appends the `stageTemplate` to the passed HTML element and creates a working dice roller with a random dice value each time the **Roll** button is selected. The `diceMap` is used in the next few steps.
+The `renderStage` function appends the `stageTemplate` to the passed HTML element and creates a working dice roller with a random dice value each time the **Roll** button is selected. The `diceState` is used in the next few steps.
 
 ```js
 const stageTemplate = document.createElement("template");
@@ -135,52 +120,63 @@ stageTemplate["innerHTML"] = `
     <button class="roll"> Roll </button>
   </div>
 `;
-function renderStage(diceMap, elem) {
+function renderStage(diceState, elem) {
   elem.appendChild(stageTemplate.content.cloneNode(true));
   const rollButton = elem.querySelector(".roll");
   const dice = elem.querySelector(".dice");
 
-  rollButton.onclick = () => updateDice(Math.floor(Math.random() * 6) + 1);
-
-  const updateDice = (value) => {
+  const updateDice = () => {
+    // Get a random value between 1 and 6
+    const diceValue = Math.floor(Math.random() * 6) + 1;
     // Unicode 0x2680-0x2685 are the sides of a die (⚀⚁⚂⚃⚄⚅).
     dice.textContent = String.fromCodePoint(0x267f + value);
   };
+  rollButton.onclick = () => updateDice();
   updateDice(1);
 }
 ```
 
-## Connect stage view to Fluid data
+## Connect meeting stage view to Live Share
 
-### Modify Fluid data
+### Modify LiveState
 
-To begin using Fluid in the application, the first thing to change is what happens when the user selects the `rollButton`. Instead of updating the local state directly, the button updates the number stored in the `value` key of the passed in `diceMap`. Because the `diceMap` is a Fluid `SharedMap`, changes are distributed to all clients. Any changes to the `diceMap` can cause a `valueChanged` event to be emitted, and an event handler can trigger an update of the view.
+To begin using Live Share in the application, the first thing to change is what happens when the user selects the `rollButton`. Instead of updating the local state directly, the button updates the number stored as a `state` value in `diceState`. Whenever you call `.set()` with a new `state`, that value is distributed to all clients. Any changes to the `diceState` can cause a `stateChanged` event to be emitted, and an event handler can trigger an update of the view.
 
-This pattern is common in Fluid because it enables the view to behave the same way for both local and remote changes.
+This pattern is common in Fluid and Live Share distributed data structures because it enables the view to behave the same way for both local and remote changes.
 
 ```js
 rollButton.onclick = () =>
-  diceMap.set("dice-value-key", Math.floor(Math.random() * 6) + 1);
+  diceState.set(Math.floor(Math.random() * 6) + 1);
 ```
 
 ### Rely on Fluid data
 
-The next change that needs to be made is to change the `updateDice` function, as it no longer accepts an arbitrary value. This means the app can no longer directly modify the local dice value. Instead, the value is retrieved from the `SharedMap` each time `updateDice` is called.
+The next change that needs to be made is to change the `updateDice` function to retrieve the latest dice value from the `LiveState` each time `updateDice` is called.
 
 ```js
 const updateDice = () => {
-  const diceValue = diceMap.get("dice-value-key");
+  const diceValue = diceState.state;
   dice.textContent = String.fromCodePoint(0x267f + diceValue);
 };
-updateDice();
 ```
 
 ### Handle remote changes
 
-The values returned from `diceMap` are only a snapshot in time. To keep the data up to date as it changes an event handler must be set on the `diceMap` to call `updateDice` each time that the `valueChanged` event is sent. To get a list of events fired and the values passed to those events, see [SharedMap](https://fluidframework.com/docs/data-structures/map/).
+The values returned from `diceState` are only a snapshot in time. To keep the data up-to-date as it changes, an event handler must be registered with `diceState` to call `updateDice` each time that the `stateChanged` event is sent.
 
 ```js
-diceMap.on("valueChanged", updateDice);
+diceState.on("stateChanged", updateDice);
+```
+
+### Initialize LiveState
+
+Before you can begin receiving the Live Share changes in the application, you must first call `initialize()` on your `LiveState` object with an initial value. This initial value doesn't overwrite any existing state that was sent by other users.
+
+After you've initialized `LiveState`, the `stateChanged` event you registered earlier starts to trigger whenever a change is made. However, to update the UI within the initial value, call `updateDice()`.
+
+```js
+await diceState.initialize(1);
+updateDice();
 ```
 
 ## Write the side panel view
