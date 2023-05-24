@@ -130,11 +130,11 @@ Live Share's live data structures such as `LivePresence`, `LiveState`, and `Live
 
 For more information, see [core capabilities](../teams-live-share-capabilities.md) page.
 
-## Using Live Share without LiveShareClient
+## Use Live Share without LiveShareClient
 
 You can still use Live Share even if you use don't want to use the `LiveShareClient` class for your custom Azure Fluid Relay service. This is helpful if you want to control when a container is created or how it's shared with meeting participants.
 
-Here is an example of how you might do this in your application:
+The following is an example of how you might do this in your application:
 
 # [JavaScript](#tab/javascript)
 
@@ -358,7 +358,7 @@ host.setAudience(services.audience);
 
 ---
 
-Many Live Share APIs depend on a global timestamp API, which allows `LiveDataObject` objects to determine the order of remote messages. If you're using data structures that rely on the `TimestampProvider` class, then you must either use the `LiveShareHost` from the `teams-js` library, or override the `getTimestamp()` function in `AzureLiveShareHost` with a value returned by your server.
+Many Live Share APIs depend on a global timestamp API, which allows `LiveDataObject` objects to determine the order of remote messages. If you're using data structures that rely on the `TimestampProvider` class, then you must either use the `LiveShareHost` from the `teams-js` library or override the `getTimestamp()` function in `AzureLiveShareHost` with a value returned by your server.
 
 ## See also
 
