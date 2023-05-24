@@ -16,7 +16,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|17/05/2023 |  Distribute your app to specific countries. | Distribute your app > Publish to the Teams store > Prepare your Teams store submission > [Distribute your app to specific countries](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries)|
+|23/05/2023 |  Live Share SDK is now generally available. | Build apps for Teams meetings and calls > Enhanced collaboration with Live Share > [Live Share SDK](apps-in-teams-meetings/teams-live-share-overview.md)|
+|23/05/2023 | Design your app for new Teams. | Design your app > [Overview](concepts/design/design-teams-app-overview.md)|
+|17/05/2023 | Distribute your app to specific countries. | Distribute your app > Publish to the Teams store > Prepare your Teams store submission > [Distribute your app to specific countries](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries)|
 | 17/05/2023 | Introduced the Teams Toolkit v5 extension within Visual Studio Code. | Tools and SDKs > Teams Toolkit > [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md)|
 | 17/05/2023 | Updated Get started module with GitHub Codespaces and step-by-step guides aligned with Teams Toolkit v5. It also includes details for extending Teams app over Microsoft 365 and Outlook. | [Get started](get-started/get-started-overview.md)|
 
