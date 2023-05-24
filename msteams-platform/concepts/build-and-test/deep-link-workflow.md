@@ -144,7 +144,7 @@ For deep links to share content to stage, see [deep link to share content to sta
 
 > [!NOTE]
 >
-> * Currently, generating a deep link to share content to stage in meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * Generating a deep link to share content to stage in meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * Deep link to share content to stage in meeting is supported in Teams desktop client only.
 
 ## Deep link to meeting side panel
@@ -162,6 +162,14 @@ By default, a deep link opens in a meeting side panel. To open a deep link direc
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>&openInMeeting=false`
 
 For more information, see [deep link to a tab](~/concepts/build-and-test/deep-link-application.md#generate-a-deep-link-to-your-tab).
+
+In the following scenarios deep link doesn't open the meeting side panel:
+
+* If there is no active meeting.
+* If the app don't have `sidePanel` context declared in the app manifest.
+* If `openInMeeting=false` is set in the deep link.
+* If deep link is selected outside of the meeting window or component.
+* If deep link doesn't match the current meeting for example, deep link is created from another meeting.
 
 ## Deep link to join a meeting
 
