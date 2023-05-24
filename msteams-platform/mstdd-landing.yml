@@ -50,6 +50,8 @@ landingContent:
       links:
       - text: Deep link to the meeting side panel
         url: apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel
+      - text: Design your app for new Teams 
+        url: concepts/design/design-teams-app-overview.md
       - text: Teams AI library
         url: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
       - text: Extend Microsoft 365 Copilot
