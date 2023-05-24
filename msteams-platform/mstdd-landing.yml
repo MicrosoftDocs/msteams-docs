@@ -48,8 +48,12 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Design your app for new Teams 
+        url: concepts/design/design-teams-app-overview.md
       - text: Teams AI library
         url: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
+      - text: Extend Microsoft 365 Copilot
+        url: copilot/how-to-extend-copilot.md
       - text: Distribute your app to specific countries
         url: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries
       - text: Teams Toolkit v5 extension within Visual Studio Code
