@@ -14,9 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-   > [!NOTE]
-   > The Live Share SDK is currently available only in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md). You must be part of the Public Developer Preview for Microsoft Teams to use the Live Share SDK.
-
+  
    Live Share SDK allows you to build collaborative apps and discover more ways to collaborate and connect through Teams. You can build apps to share content such as watching movies, playing live games, and so on, in Teams one-on-one calls, group calls, schedule meetings, and meet now.
   
    This step-by-step guide helps you to create a Agile Poker sample app using Live Share SDK. You'll see the following output:
