@@ -7,7 +7,7 @@ ms.topic: conceptual
 
 # Create Teams app package
 
-You need an app package, however, you plan to distribute your Microsoft Teams app. A valid package is a ZIP file (Compressed (zipped) folder) that contains the following:
+You need an app package, however, you plan to distribute your Microsoft Teams app. A valid package is a ZIP file (compressed (zipped) folder) that contains the following:
 
 * **App manifest**: Describes how your app is configured, including its capabilities, required resources, and other important attributes.
 * **App icons**: Each package requires a color and outline icon for your app.
