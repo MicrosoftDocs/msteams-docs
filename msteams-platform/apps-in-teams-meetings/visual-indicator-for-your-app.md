@@ -22,6 +22,7 @@ The following image shows you the visual indicator on the app icon in the meetin
 > [!NOTE]
 >
 > * Visual indicator for your Teams app is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * Visual indicator isn't available for [Government Community Cloud (GCC)-High and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 > * Visual indicator isn't supported for mobile clients.
 > * Visual indicator isn't supported for channel meetings.
 
