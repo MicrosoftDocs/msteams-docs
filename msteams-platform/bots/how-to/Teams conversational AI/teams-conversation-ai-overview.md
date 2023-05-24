@@ -41,7 +41,7 @@ Bots can run in-context and assist when the bot recognizes a user intent that ma
 
 ## Prompt engineering
 
-Prompt engineering helps you design prompts considering user's intent, context of the conversation, and the bot personality. Bots can be personalized, customized, and tailor-made to meet user needs.
+Prompt engineering helps you design prompts considering user's intent, context of the conversation, and the bot personality. Bots can be personalized and customized to meet user needs.
 
 ## Conversational session history
 
@@ -77,7 +77,7 @@ A simple interface for actions and predictions allows bots to react when the bot
 
 ## Why build apps with Teams AI library?
 
-Teams AI library makes Teams apps conversational, not driven by rigid command structures. The library is designed to seamlessly integrate with the Teams Bot Framework SDK. Building apps for Teams is drastically simpler, with rich natural language features that bring any app experience into the conversation.
+Teams AI library makes Teams apps conversational, not driven by rigid command structures. The library is designed to seamlessly integrate with the Teams Bot Framework SDK. Building apps for Teams is simpler, with rich natural language features that bring any app experience into the conversation.
 
 Here are some key benefits of the Teams AI library:
 
@@ -91,7 +91,7 @@ Here are some key benefits of the Teams AI library:
 
 * You can select any LLM.
 
-* ​You can talk to Teams apps like you’d talk to a human as opposed to a set of commands​.
+* You can talk to Teams apps like you’d talk to a human as opposed to a set of commands​.
 
 * ​Any app that uses the library offers consistency for interactions, and the app handles steering natural conversation into actionable outcomes.
 

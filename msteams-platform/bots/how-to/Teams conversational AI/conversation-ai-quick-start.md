@@ -49,7 +49,7 @@ To get started, ensure that you have the following tools:
    ```
 
    > [!NOTE]
-   > If you’re cloning the [ChefBot sample](https://github.com/microsoft/teams-ai/tree/main/js/samples) through Teams Toolkit, you’ll find the `.env.local.user` file in the setup that is created automatically. If you can't find the file, create the `.env.local.user` file and update the OpenAI key to get started.
+   > If you’re cloning the [ChefBot sample](https://github.com/microsoft/teams-ai/tree/main/js/samples) through Teams Toolkit, you’ll find the `.env.local.user` file in the setup that is created automatically. If the file isn't available, create the `.env.local.user` file and update the OpenAI key to get started.
 
 1. Go to **Visual Studio Code**.
 
