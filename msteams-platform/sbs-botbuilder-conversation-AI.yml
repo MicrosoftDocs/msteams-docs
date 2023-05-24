@@ -45,7 +45,7 @@ items:
    |[Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
    |[Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-   |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) or [AzureOpenAI ](https://azure.microsoft.com/free/)|First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must have an AzureOpenAI key before you begin.|
+   |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) or [Azure OpenAI ](https://azure.microsoft.com/free/)|First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must have an Azure OpenAI key before you begin.|
    |[Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
    | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
 
@@ -346,22 +346,22 @@ items:
 
        ```
 
-    1. Go to the **env** folder and update the OpenAI key in the `.env.local.user` file.
+    1. Go to **Explorer** > **env** > **.env.local.user** and add the OpenAI key to `SECRET_OPENAI_API_KEY`.
 
-       ```
+       ```env/.env.local.user
         SECRET_BOT_PASSWORD=
         SECRET_OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
        ```
 
     1. Go to the `config.ts` file and add the following code:
     
-       ```typescript
+       ```config.ts
        openAIKey: process.env.SECRET_OPENAI_API_KEY
        ```
 
        When you debug the app, the OpenAI key defined here processes the OpenAI key from the `.env.local.user` during local debug.
 
-    1. Go to the `teamsapp.local.yml` file and add the following code after `BOT_ID` and `BOT_PASSWORD`:
+    1. Go to the `teamsapp.local.yml` file, under **Generate runtime environment variables** add the following code after `BOT_ID` and `BOT_PASSWORD`:
 
        ```teamsapp.local.yml
        SECRET_OPENAI_API_KEY: ${{SECRET_OPENAI_API_KEY}}
@@ -369,9 +369,9 @@ items:
 
        When you run the app locally, the OpenAI key defined here is used in the local settings.
 
-    1. Go to the `index.ts` file:
+    1. Go to the `index.ts` file and add the following code at the end of the file:
 
-        1. Add the following code to import Teams AI library:
+        1. To import Teams AI library:
 
             ```typescript
             import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnState, OpenAIModerator, OpenAIPlanner, AI } from '@microsoft/teams-ai';
@@ -380,7 +380,7 @@ items:
 
             You need to import the required classes to use the functions and variables available in the class to build your app. Leverage pre-built templates and add your business logic to this scaffold.
 
-        1. Add the following code to define a state:
+        1. To define a state:
 
             ```typescript
             // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -390,7 +390,7 @@ items:
 
             The `ApplicationTurnState` is the typescript **type** of the turn state object state. End users can create their own **conversation** or **user** concrete type implementations and provide it to the `DefaultTurnState` interface.
         
-        1. Add the following code to create planner, moderator, and promptManager:
+        1. To create planner, moderator, and promptManager:
 
             ```typescript
             // Create AI components
@@ -412,7 +412,7 @@ items:
             * Moderator: The `OpenAIModerator` reviews both user's input and the model output to detect harmful speech, such as hate speech, self-harm, and violence.
 
 
-        1. Add the following code to define storage and application:
+        1. To define storage and application:
 
             ```typescript
             // Define storage and application
@@ -437,7 +437,7 @@ items:
 
         1. Under **Import required bot service**, add `MemoryStorage`.
 
-        1.  Add the following code to define actions:
+        1.  To define actions:
 
             ```typescript
             app.ai.action(AI.FlaggedInputActionName, async (context, state, data) => {
@@ -453,7 +453,7 @@ items:
             
             When the `OpenAIModerator` reviews and identifies a flag in an input or output, it triggers the action `AI.FlaggedInputActionName` or `AI.FlaggedOutputActionName` and the `context.sendActivity` sends a message to the user. If the user receives a message for an flagged  input or output, the user can control what he wants to do.
 
-        1. Add the following code to define history:
+        1. To define history:
 
             ```typescript
             app.message('/history', async (context, state) => {
@@ -466,7 +466,7 @@ items:
 
         1. By default, Bot builder uses `bot` as a variable, as we're constructing an app for the `new Application`. We must replace `await bot.run(context)` with `await app.run(context)`.
    
-    1. In the root folder, create a new folder **prompts/chat**.
+    1. In the root folder, create new folders **prompts** > **chat**.
 
     1. Under **chat**, create the following files:
        * config.json
@@ -493,7 +493,7 @@ items:
         }
         ```
 
-       The bot relies on OpenAI or AzureOpenAI for its natural language modelling, the `config.json` file handles the language processing for the bot. The `config.json` is initiated by the `DefaultPromptManager` from the `index.ts` file. When a prompt is initiated, the prompt manager searches for the prompt config file (chat/config.json) and passes the prompt settings into OpenAI or AzureOpenAI.
+       The bot relies on OpenAI or Azure OpenAI for its natural language modelling, the `config.json` file handles the language processing for the bot. The `config.json` is initiated by the `DefaultPromptManager` from the `index.ts` file. When a prompt is initiated, the prompt manager searches for the prompt config file (chat/config.json) and passes the prompt settings into OpenAI or Azure OpenAI.
 
     1. Go to the `prompt.txt` file. Add the following instructions for OpenAI endpoint to conduct and facilitate conversation:
 
