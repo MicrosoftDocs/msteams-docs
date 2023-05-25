@@ -1,7 +1,7 @@
 ---
 title: Set up your dev environment for extending Teams apps across Microsoft 365
 description: Requirements to set up your dev environment for extending Teams apps across Microsoft 365. Know configurations required to run builds of Microsoft Teams and Microsoft 365 applications.
-ms.date: 05/24/2022
+ms.date: 02/28/2023
 ms.custom: m365apps
 ms.topic: conceptual
 ms.localizationpriority: high
@@ -49,7 +49,7 @@ You also need to enable sideloading for your tenant:
 > [!IMPORTANT]
 > It can take up to five days after creating a [Microsoft 365 developer sandbox tenant](/office/developer-program/microsoft-365-developer-program-get-started) and enrolling in [Microsoft 365 Targeted Releases](#enroll-your-developer-tenant-for-microsoft-365-targeted-releases) for sideloaded Teams apps to appear in Outlook and Microsoft 365 app.
 
-To enroll your test tenant for Microsoft 365 Targeted Releases:
+This step is required to preview your Teams app running in Outlook (desktop and web); the Microsoft 365 app (desktop and web) supports Teams tab apps in both Standard and Targeted release channels. To enroll your test tenant for Microsoft 365 Targeted Releases:
 
 1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com) with your test tenant credentials.
 1. Go to **Settings** > **Org Settings** > **Organization profile**.
@@ -91,24 +91,33 @@ To install Microsoft 365 Beta Channel applications in your test environment:
 
 ### Mobile
 
-You can preview Teams personal tabs running in Microsoft 365 app for Android by joining the beta program.
+#### Android
 
-To install the latest Microsoft 365 app beta, build to your physical Android device or Android emulator:
+Install the Microsoft 365 app to preview your Teams personal tab app running on your physical Android device or Android emulator:
 
-1. Ensure you use a Google Play [supported Android device](https://support.google.com/googleplay/answer/1727131).
+1. Ensure you're using a Google Play [supported Android device](https://support.google.com/googleplay/answer/1727131).
 1. Launch the **Play Store** on your Android device.
-1. Search for "Office" and select **Office (Microsoft 365)**.
+1. Search for a supported host for running Teams apps:
+    1. For Microsoft 365 app (formerly Office), search office and select *Microsoft 365 app*.
+    1. For Outlook, search outlook and select *Microsoft Outlook*.
 1. Select the **Install** button.
 
     :::image type="content" source="images/office-android-install.png" alt-text="The screenshot is an example that shows the install button for the Office (Microsoft 365) app in Google Play Store.":::
 
-1. Select **Join** under **Join the beta** section after the installation completes.
-
-    :::image type="content" source="images/office-android-join-beta.png" alt-text="The screenshot is an example that shows the Join the beta screen.":::
-
 1. Launch the Microsoft 365 app and sign in with your test tenant credentials.
 1. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
-1. Ensure you use Microsoft 365 app version 16.0.15726.20000 or higher for Android.
+1. Ensure that you use Microsoft 365 app version 16.0.15726.20000 or later and Outlook app version 4.2247.1 (52247812) or later for Android.
+
+#### iOS
+
+You can preview Teams personal tabs running in Outlook and Microsoft 365 app for iOS by installing the prerelease version on the [TestFlight app](https://testflight.apple.com/) on your iOS device.
+
+1. To access the preview version on TestFlight, please reach out to the product group through your CSAM/Account Manager for an Invitation.
+1. Install the TestFlight app from the **App Store** on your testing device of choice.
+1. Open your email invitation, accept the email invitation, or follow the public link invitation to install the beta app.
+1. Launch the Outlook app and sign in with your test tenant credentials.
+1. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
+1. Ensure that you use Microsoft 365 app version 2.72.23030700 or later and Outlook app version 4.2310.0 (18999702) or later for iOS.
 
 ## Install Visual Studio Code and Teams Toolkit extension
 

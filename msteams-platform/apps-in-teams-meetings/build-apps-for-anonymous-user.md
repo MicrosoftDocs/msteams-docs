@@ -11,6 +11,9 @@ ms.localizationpriority: medium
 
 Anonymous users don't have an Azure Active Directory (Azure AD) identity and aren't federated with a tenant. The anonymous participants are like external users but their identity isn't shown in the meeting. An anonymous user can be a presenter or an attendee but can't be an organizer. You can build bots, messaging extensions, and cards and task modules in your app to engage with anonymous meeting participants.
 
+> [!NOTE]
+> Apps for anonymous users is supported in Teams mobile client only and isn't supported in channel meetings.
+
 For anonymous users to interact with the apps in Teams meetings, ensure the following:
 
 1. Update your [app manifest](#app-manifest-update-for-anonymous-users).
@@ -225,8 +228,6 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
 ## Known issues and limitations
 
-* Side panel tabs and content bubbles aren't available for anonymous users. Anonymous users can still see app content shared to the meeting stage.
-
 * For an anonymous user, the user ID from `getContext` and the user ID received by the bot are different. It's not possible to correlate the two directly. If you need to track the user's identity between your tab and bot, you must prompt the user to authenticate with an external identity provider.
 
 * Anonymous users will see a generic app icon on bot messages and cards, instead of the app's actual icon.
@@ -235,9 +236,9 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
 ## Code sample
 
-|Sample name | Description | .NET |
+|Sample name | Description | .NET |Node.js|
 |----------------|-----------------|--------------|--------------|
-| Anonymous user support | Sample app to show anonymous user support in meeting apps. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-anonymous-users/csharp) |
+| Anonymous user support | Sample app to show anonymous user support in meeting apps. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-anonymous-users/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-anonymous-users/nodejs)|
 
 ## Next step
 
