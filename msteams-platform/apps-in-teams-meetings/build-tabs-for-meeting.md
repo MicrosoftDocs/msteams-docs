@@ -231,8 +231,8 @@ App caching improves subsequent launch time of the apps within Teams by allowing
 
 App caching is supported for the following:
 
-| Scope | &nbsp; Desktop | iOS | Android |
-| --- | --- | --- | --- |
+| Scope | &nbsp; Desktop | &nbsp; | iOS | Android |
+| --- | --- | --- | --- | --- |
 | &nbsp; | *Supported* | *Cache lifetime* | *Supported* | *Supported* |
 | Personal | ✔️ | 30 minutes| ✔️ | ❌ |
 | Chat | ✔️ | 30 minutes| ❌ | ❌ |
