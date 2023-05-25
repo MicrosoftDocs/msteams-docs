@@ -29,7 +29,7 @@ The rest of this guide walks you through these steps and shows how to preview yo
 To complete this tutorial, you need:
 
 * A Microsoft 365 Developer Program sandbox tenant.
-* A test environment with Microsoft 365 apps installed from the Microsoft 365 Apps *[value] Channel*.
+* A test environment with Microsoft 365 apps installed from the Microsoft 365 Apps *Current Channel*.
 * (Optional) Microsoft Visual Studio Code with the Teams Toolkit extension.
 
 > [!div class="nextstepaction"]
