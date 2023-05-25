@@ -40,7 +40,7 @@
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
-		<title type="html"><![CDATA[Platform update: Teams Toolkit v4 for Visual Studio Code]]></title>
+		<title type="html"><![CDATA[Platform update: Deprecation of Teams Toolkit v4 for Visual Studio Code]]></title>
 		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/toolkit-v4/teams-toolkit-fundamentals-v4?pivots=visual-studio-code</id>
 		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/toolkit-v4/teams-toolkit-fundamentals-v4?pivots=visual-studio-code?referrer=whats.new.rssfeed"/>
 		<updated>2023-05-17T11:04:01+05:30</updated>
