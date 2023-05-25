@@ -16,7 +16,7 @@ To set up your development environment:
 >
 > * [Get Microsoft 365 Developer (Sandbox) Tenant and enable sideloading](#prepare-a-developer-tenant-for-testing)
 > * [Install Microsoft 365 Apps in your test environment](#install-microsoft-365-apps-in-your-test-environment)
-> * [*Optional*] [Enroll your Microsoft 365 tenant in Microsoft 365 Targeted Releases*](#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-(optional))
+> * [*Optional*] [Enroll your Microsoft 365 tenant in Microsoft 365 Targeted Releases*](#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional)
 > * [*Optional*] [Install Beta Channel builds of Microsoft 365 Apps in your test environment](#install-microsoft-365-apps-in-your-test-environment)
 > * [*Optional*] [Install Teams Toolkit extension for Microsoft Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-extension)
 
@@ -48,7 +48,7 @@ You also need to enable sideloading for your tenant:
 ## Enroll your developer tenant for Microsoft 365 Targeted Releases (Optional)
 
 > [!NOTE]
-> It can take up to five days after creating a [Microsoft 365 developer sandbox tenant](/office/developer-program/microsoft-365-developer-program-get-started) and enrolling in [Microsoft 365 Targeted Releases](#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-(optional)) for sideloaded Teams apps to appear in Outlook and Microsoft 365 app.
+> It can take up to five days after creating a [Microsoft 365 developer sandbox tenant](/office/developer-program/microsoft-365-developer-program-get-started) and enrolling in [Microsoft 365 Targeted Releases](#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional) for sideloaded Teams apps to appear in Outlook and Microsoft 365 app.
 
 This section is optional and only required for any features in **preview**, as listed in [Teams apps across Microsoft 365](overview.md) app element support table. To enroll your test tenant for Microsoft 365 Targeted Releases:
 

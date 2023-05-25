@@ -1,5 +1,5 @@
 ---
-title: Extend Teams apps across Microsoft 365 (preview)
+title: Extend Teams apps across Microsoft 365
 description: Learn how to extend Teams apps across Microsoft 365 (running in Teams, Outlook, and Microsoft 365 as application hosts).
 ms.date: 02/28/2023
 ms.topic: Conceptual
