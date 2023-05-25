@@ -9,7 +9,33 @@ ms.localizationpriority: medium
 
 # Build apps for anonymous users
 
-You can build bots, message extensions, and cards and task modules in your app to engage with anonymous meeting participants.
+Anonymous users don't have an Azure Active Directory (Azure AD) identity and aren't federated with a tenant. The anonymous participants are like external users but their identity isn't shown in the meeting. An anonymous user can be a presenter or an attendee but can't be an organizer. You can build bots, messaging extensions, and cards and task modules in your app to engage with anonymous meeting participants.
+
+> [!NOTE]
+> Apps for anonymous users is supported in Teams mobile client only and isn't supported in channel meetings.
+
+For anonymous users to interact with the apps in Teams meetings, ensure the following:
+
+1. Update your [app manifest](#app-manifest-update-for-anonymous-users).
+2. Enable the [anonymous user app interaction](#admin-setting-for-anonymous-user-app-interaction) in Teams admin center.
+
+## App manifest update for anonymous users
+
+To allow anonymous users to interact with the tab app, update the `supportsAnonymousGuestUsers` property to `true` in your app manifest schema v1.16 or later. Following is an example of the manifest:
+
+```json
+
+ "meetingExtensionDefinition": {
+  "supportsAnonymousGuestUsers": true
+ }
+
+```
+
+For more information, see [app manifest schema.](~/resources/schema/manifest-schema.md#meetingextensiondefinition)
+
+## Anonymous user authentication flow
+
+Anonymous users can't be authenticated through Azure AD authentication or `getAuthToken` from the client SDK as they aren't Azure AD accounts. `getAuthToken` fails for anonymous users by returning the error `useGetAuthToken: Failed with error - User is not authenticated`. If you need to authenticate anonymous users, your app must identify anonymous users and provide an alternative authentication experience in the meetings. You can determine if a user is anonymous by validating [user's context](#in-meeting-getcontext-from-teams-client-library).
 
 ## Admin setting for anonymous user app interaction
 
@@ -142,8 +168,6 @@ Bots are not allowed to initiate a One-on-One conversation with an anonymous use
 Anonymous users can view and interact with Adaptive Cards in the meeting chat. Adaptive card actions behave the same way for anonymous and non-anonymous users. For more information, see [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json).
 
 ## Known issues and limitations
-
-* Side panel tabs and content bubbles aren't available for anonymous users. Anonymous users can still see app content shared to the meeting stage.
 
 * For an anonymous user, the user ID from `getContext` and the user ID received by the bot are different. It's not possible to correlate the two directly. If you need to track the user's identity between your tab and bot, you must prompt the user to authenticate with an external identity provider.
 

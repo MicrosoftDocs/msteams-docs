@@ -10,7 +10,7 @@ ms.topic: reference
 
 You can create modal pop-up experiences in your Teams app with task modules. Use this capability to display rich media and information or complete a complex task.
 
-:::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="Example shows a task module.":::
+:::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="Example shows a task module." lightbox="../../assets/images/task-module/task-module-overview.png":::
 
 ## Microsoft Teams UI Kit
 
@@ -80,7 +80,7 @@ Lists work nicely in a task module because they're easy to scan.
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/task-module/task-module-list-desktop.png" alt-text="Example list in a task module.":::
+:::image type="content" source="../../assets/images/task-module/task-module-list-desktop.png" alt-text="Example list in a task module." lightbox="../../assets/images/task-module/task-module-list-desktop.png":::
 
 ### Form
 
@@ -96,7 +96,7 @@ Task modules are a great place to surface forms with sequential user inputs and 
 
 ### Sign in
 
-Create a focused sign in or sign-up flow with a series of task modules, letting users move easily through sequential steps.
+Create a focused sign in or sign up flow with a series of task modules, letting users move easily through sequential steps.
 
 #### Mobile
 
@@ -104,7 +104,7 @@ Create a focused sign in or sign-up flow with a series of task modules, letting 
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Example sign in experience in a task module.":::
+:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Example sign in experience in a task module." lightbox="../../assets/images/task-module/sign-in.png":::
 
 ### Media
 
@@ -116,7 +116,7 @@ Embed media content in a task module for a focused viewing experience.
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Example media content in a task module.":::
+:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Example media content in a task module." lightbox="../../assets/images/task-module/media.png":::
 
 ### Empty state
 
@@ -128,7 +128,7 @@ Use for welcome, error, and success messages.
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Example empty state in a task module.":::
+:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Example empty state in a task module." lightbox="../../assets/images/task-module/empty-state.png":::
 
 ### Image gallery
 
@@ -140,7 +140,7 @@ Embed a gallery carousel in an iframe (desktop) or webview (mobile).
 
 ##### Desktop
 
-:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Example image gallery in a task module.":::
+:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Example image gallery in a task module." lightbox="../../assets/images/task-module/image-gallery.png":::
 
 ### Poll
 
@@ -152,7 +152,7 @@ This example shows poll results launched from an Adaptive Card. The poll can be 
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Example poll in a task module.":::
+:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Example poll in a task module." lightbox="../../assets/images/task-module/poll.png":::
 
 ## Best practices
 
