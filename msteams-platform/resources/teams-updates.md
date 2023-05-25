@@ -48,7 +48,7 @@ You can distinguish between the Teams host clients using the [HostName](/javascr
 
 For more information on known issues and gaps in the New Teams Client, see [New Microsoft Teams](/microsoftteams/new-teams-desktop-admin?tabs=teams-admin-center#known-issues).
 
-If you have any issues with your app, request you to raise a bug and provide feedback at [Support and feedback](../feedback.md).
+If you have any issues with your app, request you to raise a bug and provide feedback at [Support and feedback](../feedback.md#report-issues).
 
 ## See also
 
