@@ -1,64 +1,80 @@
 ---
 title: Get started - Overview
-description: Get started. Build your first Microsoft Teams app based on language (Node.js, C#, Java, and Python) and developement environment, understand app capabilities, SDKs.
+description: In this module, learn how to build your first Microsoft Teams app based on language and developement environment, understand app capabilities, SDKs.
 ms.localizationpriority: high
 ms.topic: reference
 ---
 # Get started
 
-Welcome to Get started for building and deploying customized apps for Microsoft Teams!
+Let's get started with building apps for Microsoft Teams and beyond!
 
-Walk through the steps to build a basic, real-world Teams app. The Get started also introduces you to common tools, fundamental concepts, and more advanced features.
+Use GitHub Codespaces or walk through the step-by-step guide to build a basic, real-world Teams app. The Get started module introduces you to common tools, fundamental concepts, and more advanced functionalities.
 
 Here's an idea of what you'll learn:
 
-- Get up and running quickly with the Microsoft Teams Toolkit (a Visual Studio Code extension).
-- Get experience with the Toolkit and SDKs.
-- Configure and build different types of Teams apps.
-
-Let's take a quick glance at the build environment options you can choose from, and the road-map to build and deploy a Teams app.
-
-:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Illustration showing basic steps to build and deploy a Teams app":::
-
-## App capabilities and development tools
-
-Depending on the capabilities you want for your app, choose an appropriate development tool set.
-
-| App capabilities | User interactions | Recommended tools | SDKs | Technology stacks / Languages |
-|--------|-------------|--------|--------|--------|
-| Tabs | A full-screen embedded web experience. | Microsoft Visual Studio Code with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) if you prefer using CLI | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) for core libs and [Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) for UI functionalities | Web technology in general, HTML, CSS, and JavaScript (incl. React). |
-| Bots | A chat bot that converses with members. | Visual Studio Code with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) and [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, Java, and Python. |
-| Message extensions | Shortcuts for inserting external content into a conversation or taking action on messages. | Visual Studio Code with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) and [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, Java, and Python. |
-
-*You aren't limited to using these particular stacks!*
-
-If you are already familiar with Yeoman workflow, you may prefer using [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps.
+* Get started quickly with the Microsoft Teams Toolkit.
+* Build tab, scenario-based apps, and message extension with GitHub Codespaces or step-by-step guide.
+* Learn about tutorials and code samples available for building your Teams app.
+* Learn about various tools and SDKs available for building your Teams app.
 
 ## Build your first Teams app
 
-Now, let's build your first Teams app. But first, pick your language (or framework) and prepare your development environment.
+In this section, learn more on how to build Teams app with different capabilities, such as tab, scenario-based bot app, and message extension.
+
+1. Select the type of Teams app that you want to build:
+
+   * **Build a basic Teams tab app**: You can get started with building a Teams app with a basic tab app.
+
+   * **Build a scenario-based Teams bot app**: You can build a Teams app that is suitable for a particular scenario or use-case. For example, a notification bot is suitable for sending notifications but not to chat.
+
+   * **Build message extension Teams app**: You can build a search-based message extension Teams app.
+
+2. Choose your path to build your selected app:
+
+   * **GitHub Codespaces**: Allows you to run, test, and debug your app in a development environment without the need for any of the setup.
+   * **Step-by-step guide**: Allows you to create a Teams app from scratch with all development environment setup.
+
+   :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Screenshot shows your choices to build Teams app with codespaces and step-by-step guide."lightbox="../assets/images/get-started/codescpaces-vs-manual.png":::
+
+<!--
+## App capabilities and development tools
+
+(Note: will be moved to choose what suits you)
+
+Based on the capabilities you want for your app, choose an appropriate development tool set.
+
+| App capabilities | Tabs | Bots | Message extensions |
+|--------|-------------|--------|--------|
+| **User interactions** | A full-screen embedded web experience. | A chat bot that converses with members. | Shortcuts for inserting external content into a conversation or taking action on messages. |
+| **Recommended tools** | Microsoft Visual Studio Code (VS Code) with Teams Toolkit extension, or TeamsFx CLI if you prefer using CLI | VS Code with Teams Toolkit extension, or TeamsFx CLI | VS Code with Teams Toolkit extension, or TeamsFx CLI |
+| **SDKs** | TeamsFx SDK for core libs and Teams JavaScript client library for UI functionalities | TeamsFx SDK and Bot Framework SDK | TeamsFx SDK and Bot Framework SDK |
+| **Technology stacks or Languages** | Web technology in general, HTML, CSS, and JavaScript (incl. React). | Node.js, C#, Java, and Python. | Node.js, C#, Java, and Python. |
+
+*You aren't limited to using these particular stacks!*
+
+If you are already familiar with Yeoman workflow, you can use [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps.
+
+-->
+
+## Next step
+
+If you want to build a basic tab app, go to:
 
 > [!div class="nextstepaction"]
-> [Build a Teams tab app with JavaScript using React](../sbs-gs-javascript.yml)
+> [Build your basic tab app](build-basic-tab-app.md)
+
+If a bot is what you're interested in, go to:
+
 > [!div class="nextstepaction"]
-> [Build a Teams bot app with JavaScript](../sbs-gs-bot.yml)
+> [Start building a bot](build-notification-bot.md)
+
+If you want to build a message extension app, go to:
+
 > [!div class="nextstepaction"]
-> [Build a Teams message extension app with JavaScript using React](../sbs-gs-msgext.yml)
-> [!div class="nextstepaction"]
-> [Build a Teams app with Blazor](../sbs-gs-blazorupdate.yml)
-> [!div class="nextstepaction"]
-> [Build a Teams app with SPFx](../sbs-gs-spfx.yml)
-> [!div class="nextstepaction"]
-> [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
-> [!div class="nextstepaction"]
-> [Build a Teams app with Node.js](../sbs-gs-nodejs.yml)
-> [!div class="nextstepaction"]
-> [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml)
-> [!div class="nextstepaction"]
-> [Build command bot with JavaScript](../sbs-gs-commandbot.yml)
-> [!div class="nextstepaction"]
+> [Build message extension](build-message-extension.md)
 
 ## See also
 
-- [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
-- [Git and GitHub resources](/contribute/additional-resources)
+* [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+* [Git and GitHub resources](/contribute/additional-resources)
+* [Teams app tutorials and code samples](teams-toolkit-tutorial.md)
