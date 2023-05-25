@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Resource-specific consent for your Teams app
 
-Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft identity platform that allows for granting scoped access to an app.
+Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft Identity platform that allows for granting scoped access to an app.
 
 Through RSC, an authorized user can give an app access to the data of a specific instance of a resource type. They don't need to give app access to every instance of the resource type in the entire tenant.
 
@@ -54,18 +54,20 @@ Use RSC permissions to determine the data access methods for your app. A user's 
 
 Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft TeamsJS client library support fine-grained data access through RSC. The supported modes and resource types vary across the API surfaces.
 
-| RSC mode or type | Supported SDKs | App manifest version | Resource types | RSC-related controls for the entire tenant | Who can consent to RSC permissions? |
+| RSC mode | Supported SDKs | App manifest version | Resource types | RSC-related controls for the entire tenant | Who can consent to RSC permissions? |
 |---------|---------|---------|---------|---------|---------|
 |Application| • Microsoft Graph  <br> • Microsoft Bot Framework | >=v1.6 | Teams, chats, and meetings | • Microsoft Graph-based controls for chats and meetings <br> • Azure Active Directory (Azure AD) portal-based controls for Teams |• Team: A team owner <br> • Chat: A chat member <br> • Meeting: A meeting organizer or presenter |
 | Delegated | Microsoft Teams Client | >=v1.12 | Teams, chats, meetings, and users | Always on | Any user authorized to install an app in the specific scope. |
 
 ## Supported RSC permissions
 
-The following list provides all the RSC permissions categorized based on resource type and access mode:
+The following list provides all the RSC permissions categorized based on resource type. Each table also states which data access modes are currently available for each permission. In the tables below, **NA** indicates that the permission listed is currently not available in that data access mode.
 
 * [RSC permissions for a team](#rsc-permissions-for-a-team): Includes the channels within a team.
 * [RSC permissions for a chat or meeting](#rsc-permissions-for-a-chat-or-meeting): Includes the meetings associated with the chats.
 * [RSC permissions for user access](#rsc-permissions-for-user-access): Includes permission for users to access different resources.
+
+
 
 > [!NOTE]
 > The features associated with some permissions listed here might not be generally available (GA).
@@ -74,37 +76,37 @@ The following list provides all the RSC permissions categorized based on resourc
 
 The following table provides RSC application permissions for a team and their applicable data access mode:
 
-| Permission name | Action | Delegate Mode | Application Mode |
-| ----- | ----- | ----- | ----- |
-|`Channel.Create.Group`|Create channels in the team. |NA |Supported |
-|`Channel.Delete.Group`|Delete this team's channels. |NA |Supported |
-|`ChannelMeeting.ReadBasic.Group`|Read the basic properties of the channel meetings in this team.|NA |Supported |
-|`ChannelMeetingParticipant.Read.Group`|Read the participant information including name, role, ID, join and left time of channel meetings associated with this team.|NA |Supported |
-|`ChannelMeetingRecording.Read.Group`|Read the recordings of all channel meetings associated with this team.|NA |Supported |
-|`ChannelMeetingTranscript.Read.Group`|Read the transcripts of all channel meetings associated with this team.|NA |Supported |
-|`ChannelMeetingNotification.Send.Group`|Send notifications in all the channel meetings associated with this team.|NA |Supported |
-|`ChannelMessage.Read.Group`|Read this team's channel messages. |NA |Supported |
-|`ChannelMessage.Send.Group`|Send messages to this team's channels.|NA |Supported |
-|`ChannelSettings.Read.Group`| Read the names, descriptions, and settings of this team's channels​.|NA |Supported |
-|`ChannelSettings.ReadWrite.Group`|Update the names, descriptions, and settings of this team's channels.​|NA |Supported |
-|`Member.Read.Group`|Read this group's members.|NA |Supported |
-|`Owner.Read.Group`|Read this group's owners.|NA |Supported |
-|`TeamsActivity.Send.Group`|Send activity feed notifications to users in this team. |NA |Supported |
-|`TeamsAppInstallation.Read.Group`|Read the apps that are installed in this team.|NA |Supported |
-|`TeamMember.Read.Group`|Read this team's members. |NA |Supported |
-|`TeamSettings.Read.Group` | Read this team's settings.|NA |Supported |
-|`TeamSettings.ReadWrite.Group`|Read and write this team's settings.|NA |Supported |
-|`TeamsTab.Create.Group`|Create tabs in this team. |NA |Supported |
-|`TeamsTab.Delete.Group`|Delete this team's tabs. |NA |Supported |
-|`TeamsTab.Read.Group`|Read this team's tabs.|NA |Supported |
-|`TeamsTab.ReadWrite.Group`|Manage this team's tabs. |NA |Supported |
-|`ChannelMeetingActiveSpeaker.Read.Group`|Reading the participants who are currently sending audio into the channel meetings associated with this team.|Supported |NA |
-|`ChannelMeetingAudioVideo.Stream.Group`|Stream audio-video content of channel meetings associated with this team.|Supported |NA |
-`ChannelMeetingIncomingAudio.Detect.Group`|Detect incoming audio in channel meetings associated with this team.|Supported |NA |
-|`ChannelMeetingStage.Write.Group`|Show content on the meeting stage of channel meetings associated with this team.|Supported |NA |
-|`InAppPurchase.Allow.Group`|Show and complete in-app purchases for users in this team.|Supported |NA |
-|`LiveShareSession.ReadWrite.Group`| Create and synchronize Live Share sessions for meetings associated with this team. |Supported |NA |
-|`MeetingParticipantReaction.Read.Group`| Read reactions of participants in channel meetings associated with this team.|Supported |NA |
+| Permission name | Action | Delegated | Application |
+| ----- | ----- | :-----: | :-----: |
+|`Channel.Create.Group`|Create channels in the team. | NA | Supported |
+|`Channel.Delete.Group`|Delete this team's channels. | NA | Supported |
+|`ChannelMeeting.ReadBasic.Group`|Read the basic properties of the channel meetings in this team.| NA | Supported |
+|`ChannelMeetingParticipant.Read.Group`|Read the participant information including name, role, ID, join and left time of channel meetings associated with this team.| NA | Supported |
+|`ChannelMeetingRecording.Read.Group`|Read the recordings of all channel meetings associated with this team.| NA | Supported |
+|`ChannelMeetingTranscript.Read.Group`|Read the transcripts of all channel meetings associated with this team.| NA | Supported |
+|`ChannelMeetingNotification.Send.Group`|Send notifications in all the channel meetings associated with this team.| NA | Supported |
+|`ChannelMessage.Read.Group`|Read this team's channel messages. | NA | Supported |
+|`ChannelMessage.Send.Group`|Send messages to this team's channels.| NA | Supported |
+|`ChannelSettings.Read.Group`| Read the names, descriptions, and settings of this team's channels​.| NA | Supported |
+|`ChannelSettings.ReadWrite.Group`|Update the names, descriptions, and settings of this team's channels.​| NA | Supported |
+|`Member.Read.Group`|Read this group's members.| NA | Supported |
+|`Owner.Read.Group`|Read this group's owners.| NA | Supported |
+|`TeamsActivity.Send.Group`|Send activity feed notifications to users in this team. | NA | Supported |
+|`TeamsAppInstallation.Read.Group`|Read the apps that are installed in this team.| NA | Supported |
+|`TeamMember.Read.Group`|Read this team's members. | NA | Supported |
+|`TeamSettings.Read.Group` | Read this team's settings.| NA | Supported |
+|`TeamSettings.ReadWrite.Group`|Read and write this team's settings.| NA | Supported |
+|`TeamsTab.Create.Group`|Create tabs in this team. | NA | Supported |
+|`TeamsTab.Delete.Group`|Delete this team's tabs. | NA | Supported |
+|`TeamsTab.Read.Group`|Read this team's tabs.| NA | Supported |
+|`TeamsTab.ReadWrite.Group`|Manage this team's tabs. | NA | Supported |
+|`ChannelMeetingActiveSpeaker.Read.Group`|Reading the participants who are currently sending audio into the channel meetings associated with this team.| Supported | NA |
+|`ChannelMeetingAudioVideo.Stream.Group`|Stream audio-video content of channel meetings associated with this team.| Supported | NA |
+|`ChannelMeetingIncomingAudio.Detect.Group`|Detect incoming audio in channel meetings associated with this team.| Supported | NA |
+|`ChannelMeetingStage.Write.Group`|Show content on the meeting stage of channel meetings associated with this team.| Supported | NA |
+|`InAppPurchase.Allow.Group`|Show and complete in-app purchases for users in this team.| Supported | NA |
+|`LiveShareSession.ReadWrite.Group`| Create and synchronize Live Share sessions for meetings associated with this team. | Supported | NA |
+|`MeetingParticipantReaction.Read.Group`| Read reactions of participants in channel meetings associated with this team.| Supported | NA |
 
 For more information, see [team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
 
@@ -114,8 +116,8 @@ If a chat has a meeting or a call associated with it, then the relevant RSC perm
 
 The following table provides RSC permissions for a chat or meeting and their applicable data access mode:
 
-| Permission name | Action | Delegate Mode | Application Mode |
-| ----- | ----- | ----- | ----- |
+| Permission name | Action | Delegated | Application |
+| ----- | ----- | :-----: | :-----: |
 | `Calls.AccessMedia.Chat` | Access media streams in calls associated with this chat or meeting. |NA |Supported |
 | `Calls.JoinGroupCalls.Chat` | Join calls associated with this chat or meeting. |NA |Supported |
 | `ChatSettings.Read.Chat`| Read this chat's settings.|NA |Supported |
@@ -152,10 +154,10 @@ For more information, see [chat resource-specific consent permissions](/graph/pe
 
 ### RSC permissions for user access
 
-You can give the following delegated RSC permissions to your app, which allows users to access different resources:
+The following table provides RSC permissions for a user and their applicable data access mode:
 
-| Permission name | Action | Delegate Mode | Application Mode |
-| ----- | ----- | ----- | ----- |
+| Permission name | Action | Delegated | Application |
+| ----- | ----- | :-----: | :-----: |
 | `CameraStream.Read.User`| Read the user's camera stream. |Supported |NA |
 | `InAppPurchase.Allow.User` | Show and complete in-app purchases. |Supported |NA |
 | `MicrophoneStream.Read.User` | Read the user's microphone stream. |Supported |NA |
