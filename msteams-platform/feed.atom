@@ -24,7 +24,7 @@
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
-		<title type="html"><![CDATA[Platform update: Get Started]]></title>
+		<title type="html"><![CDATA[Platform update: Updated guide to use GitHub Codespaces and Teams Toolkit v5]]></title>
 		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/get-started/get-started-overview</id>
 		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/get-started/get-started-overview?referrer=whats.new.rssfeed"/>
 		<updated>2023-05-17T11:04:01+05:30</updated>
