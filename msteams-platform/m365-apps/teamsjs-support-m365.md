@@ -1,5 +1,6 @@
 ---
 title: Teams JavaScript client library support across Microsoft 365
+date: 05/18/2023
 author: erikadoyle
 ms.author: mosdevdocs
 description: Understand the level of support for different TeamsJS library capabilities running in different hosts for Teams apps, including Microsoft Teams, Outlook, and Microsoft 365 app 
@@ -503,6 +504,8 @@ The remainder of this article provides further info on each capability of the Te
 
 Namespace to interact with app initialization and lifecycle.
 
+The `app` namespace is supported globally across all application hosts and therefore does not have an `isSupported` function.
+
 <br />
 <table border>
     <thead>
@@ -685,6 +688,8 @@ Namespace used to open a dialog for installing an application.
 [Reference](/javascript/api/@microsoft/teams-js/authentication)
 
 Namespace to interact with the authentication-related part of the library. This module is used for starting or completing authentication flows.
+
+The `authentication` namespace is supported globally across all application hosts and therefore does not have an `isSupported` function.
 
 <br />
 <table border>
@@ -1169,6 +1174,19 @@ Preview. Subcapability for interacting with HTML-based dialogs that need to comm
 [Reference](/javascript/api/@microsoft/teams-js/geolocation) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/GeoLocation.tsx)
 
 Preview. Namespace providing location-related functionality. This is the newer version of location module.
+
+Capabilities that require the user to grant [device permissions](../concepts/device-capabilities/device-capabilities-overview.md) (such as *geoLocation*), are now partially supported for apps running outside of Teams. Users can adjust app permissions from the app header when running in Outlook and Microsoft 365 app, or from app Settings on mobile. Current guidance for now is to modify your code to check Outlook and Microsoft 365 supportability:
+
+- Call `isSupported` on a capability before using it.
+- Catch and handle errors when calling TeamsJS and HTML5 APIs
+
+When an API is unsupported or generates an error, add logic to fail gracefully or provide a workaround. For example:
+
+- Direct the user to your app's website
+- Direct the user to use the app in Teams to complete the flow
+- Notify the user that the functionality is not yet available
+
+Additionally, best practice is to ensure your app manifest only specifies the device permissions it's using.
 
 <br />
 <table border>
@@ -2233,7 +2251,7 @@ Namespace containing the set of APIs that support Teams-specific functionalities
 
 [Reference](/javascript/api/@microsoft/teams-js/video) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Video.tsx)
 
-Preview. Namespace representing functionality for in-meeting video support.
+Preview. Namespace representing functionality for in-meeting video effects.
 
 <br />
 <table border>
