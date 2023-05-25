@@ -40,13 +40,15 @@ You can distinguish between the Teams host clients using the [HostName](/javascr
 
 * You can't add, update, rename, and remove tabs from chats and channels in the new Teams client. It's recommended to perform these actions in the Classic Teams Client and the changes are reflected in the New Teams Client. For more information, see [Use an app in a tab in a channel or chat](https://support.microsoft.com/office/use-an-app-in-a-tab-in-a-channel-or-chat-83d0514f-2134-4db5-80f2-e9b43e111d57).
 
-* [Share in Teams](/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) isn't supported in the new Teams client.
+* [Share in Teams](../concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) isn't supported in the new Teams client.
 
-* API's used in Teams that require [device permissions](/concepts/device-capabilities/native-device-permissions.md) aren't supported.
+* API's used in Teams that require [device permissions](../concepts/device-capabilities/native-device-permissions.md) aren't supported.
 
-* [Adaptive card tabs](/tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client.
+* [Adaptive card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client.
 
 For more information on known issues and gaps in the New Teams Client, see [New Microsoft Teams](/microsoftteams/new-teams-desktop-admin?tabs=teams-admin-center#known-issues).
+
+If you have any issues with your app, request you to raise a bug and provide feedback at [Support and feedback](../feedback.md).
 
 ## See also
 
