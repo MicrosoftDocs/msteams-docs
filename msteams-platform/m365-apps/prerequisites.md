@@ -16,7 +16,7 @@ To set up your development environment:
 >
 > * [Get Microsoft 365 Developer (Sandbox) Tenant and enable sideloading](#prepare-a-developer-tenant-for-testing)
 > * [Install Microsoft 365 Apps in your test environment](#install-microsoft-365-apps-in-your-test-environment)
-> * [*Optional*] [Enroll your Microsoft 365 tenant in Microsoft 365 Targeted Releases*](#enroll-your-developer-tenant-for-microsoft-365-targeted-releases)
+> * [*Optional*] [Enroll your Microsoft 365 tenant in Microsoft 365 Targeted Releases*](#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-(optional))
 > * [*Optional*] [Install Beta Channel builds of Microsoft 365 Apps in your test environment](#install-microsoft-365-apps-in-your-test-environment)
 > * [*Optional*] [Install Teams Toolkit extension for Microsoft Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-extension)
 
@@ -48,9 +48,9 @@ You also need to enable sideloading for your tenant:
 ## Enroll your developer tenant for Microsoft 365 Targeted Releases (Optional)
 
 > [!NOTE]
-> It can take up to five days after creating a [Microsoft 365 developer sandbox tenant](/office/developer-program/microsoft-365-developer-program-get-started) and enrolling in [Microsoft 365 Targeted Releases](#enroll-your-developer-tenant-for-microsoft-365-targeted-releases) for sideloaded Teams apps to appear in Outlook and Microsoft 365 app.
+> It can take up to five days after creating a [Microsoft 365 developer sandbox tenant](/office/developer-program/microsoft-365-developer-program-get-started) and enrolling in [Microsoft 365 Targeted Releases](#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-(optional)) for sideloaded Teams apps to appear in Outlook and Microsoft 365 app.
 
-This section is optional and only required for any features in **preview**, as listed in [Teams apps across Microsoft 365](/msteams-platform/m365-apps/overview.md) app element support table. To enroll your test tenant for Microsoft 365 Targeted Releases:
+This section is optional and only required for any features in **preview**, as listed in [Teams apps across Microsoft 365](overview.md) app element support table. To enroll your test tenant for Microsoft 365 Targeted Releases:
 
 1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com) with your test tenant credentials.
 1. Go to **Settings** > **Org Settings** > **Organization profile**.
@@ -83,11 +83,11 @@ To install Microsoft 365 applications in your test environment:
 1. Open Outlook (desktop client) and set up the mail account using your test tenant credentials.
 1. Open **File** > **Office Account** > **About Outlook** to confirm you're running a Microsoft 365 *Current Channel* build of Outlook.
 
-    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="The screenshot is an example that shows about Outlook to verify that you're running a Current Channel build.":::
+    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="The screenshot shows where to verify you're running a Current Channel build in Outlook.":::
 
 1. Verify that *Microsoft Edge WebView2 Runtime* is installed. Open Windows **Start** > **Apps & features**, and search for **webview**:
 
-    :::image type="content" source="images/windows-addremove-webview2.png" alt-text="The screenshot is an example that shows the search field in your Windows settings.":::
+    :::image type="content" source="images/windows-addremove-webview2.png" alt-text="The screenshot shows the search field in your Windows settings.":::
 
     If it's not listed, install [Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/) to your test environment.
 
