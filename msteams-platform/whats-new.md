@@ -16,6 +16,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 25/05/2023 | Deep link to meeting side panel in Teams moble client. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) |
 |23/05/2023 |  Live Share SDK is now generally available. | Build apps for Teams meetings and calls > Enhanced collaboration with Live Share > [Live Share SDK](apps-in-teams-meetings/teams-live-share-overview.md)|
 |23/05/2023 | Design your app for new Teams. | Design your app > [Overview](concepts/design/design-teams-app-overview.md)|
 |17/05/2023 | Distribute your app to specific countries. | Distribute your app > Publish to the Teams store > Prepare your Teams store submission > [Distribute your app to specific countries](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries)|
@@ -330,7 +331,7 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 25/05/2023 | Deep link to meeting side panel | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) |
+| 25/05/2023 | Deep link to meeting side panel in Teams desktop client. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) |
 |23/05/2023 | Introduced Teams AI library to help build AI-powered Teams apps. | Build Bots > [Teams AI library](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)|
 |23/05/2023| Extend Microsoft 365 Copilot| [Extend Microsoft 365 Copilot](copilot/how-to-extend-copilot.md)|
 
