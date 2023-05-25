@@ -76,7 +76,7 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 #### Deep link to meeting side panel
 
 > [!NOTE]
-> Deep link to meeting side panel in Teams desktop client is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> Deep link to meeting side panel in Teams desktop client is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md). However, for Teams mobile client deep link to meeting side panel is generally available.
 
 You can create a deep link to your tab app that can open in the meeting side panel. When users in a meeting select the deep link, it opens the meeting side panel in the meeting stage. If a user selects the deep link before or after the meeting, the deep link opens in a pre or a post-meeting tab respectively.
 
