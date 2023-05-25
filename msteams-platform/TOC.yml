@@ -1056,6 +1056,8 @@
     href: resources/teams-contributor-reference.md
   - name: Troubleshoot your Microsoft Teams app
     href: resources/troubleshoot.md
+  - name: Microsoft Teams updates
+    href: resources/teams-updates.md
 - name: Support and feedback
   href: feedback.md
   displayName: Developer community help, questions, suggestions, contact, issues
