@@ -504,7 +504,7 @@ The remainder of this article provides further info on each capability of the Te
 
 Namespace to interact with app initialization and lifecycle.
 
-The `app` namespace is supported globally across all application hosts and therefore does not have an `isSupported` function.
+The `app` namespace is supported globally across all application hosts and therefore doesn't have an `isSupported` function.
 
 <br />
 <table border>
@@ -689,7 +689,7 @@ Namespace used to open a dialog for installing an application.
 
 Namespace to interact with the authentication-related part of the library. This module is used for starting or completing authentication flows.
 
-The `authentication` namespace is supported globally across all application hosts and therefore does not have an `isSupported` function.
+The `authentication` namespace is supported globally across all application hosts and therefore doesn't have an `isSupported` function.
 
 <br />
 <table border>
@@ -1184,7 +1184,7 @@ When an API is unsupported or generates an error, add logic to fail gracefully o
 
 - Direct the user to your app's website
 - Direct the user to use the app in Teams to complete the flow
-- Notify the user that the functionality is not yet available
+- Notify the user that the functionality isn't yet available
 
 Additionally, best practice is to ensure your app manifest only specifies the device permissions it's using.
 
