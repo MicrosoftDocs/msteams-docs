@@ -99,7 +99,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Update and soft delete event notifications in bot
-        url: bots/how-to/update-and-delete-bot-messages.md#to-get-edit-or-delete-message-events
+        url: bots/how-to/update-and-delete-bot-messages.md#get-edit-or-undelete-message-events
       - text: Set up Microsoft license management
         url: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
       - text: Apps for Teams meetings support anonymous users
