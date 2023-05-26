@@ -30,115 +30,90 @@ In the following section, we've used  the samples from the [AI library](https://
 
 ## Send or receive message
 
-Replace `BotActivityHandler` and `ApplicationTurnState` with this `Application` and `DefaultTurnState`. `DefaultTurnState` is constructed to include `ConversationState`.
+Replace `TeamsActivityHandler` with this `Application` and `DefaultTurnState`. `DefaultTurnState` is constructed to include `ConversationState`.
 
 Example: [EchoBot](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.messaging.a.echoBot)
 
-```javascript
-
+```typescript
 // Assumption is that the bot/app is named “app” or “bot”
-    import { Application, DefaultTurnState } from "botbuilder-m365";
+import { Application, DefaultTurnState } from '@microsoft/teams-ai';
 
 interface ConversationState {
-
   count: number;
-
 }
 
-// DefaultTurnState: Conversation State, UserState, TurnState (or TempState)
-
+// DefaultTurnState: Conversation State, UserState, TempState
 type ApplicationTurnState = DefaultTurnState<ConversationState>;
 
 // Previous:
+// const bot = TeamsActivityHandler();
 
-// const bot = BotActivityHandler();
-
-const app =
-
-  new Application() <
-
-  ApplicationTurnState >
-
-  {
-
-    storage 
-
-  };
-
+// New:
+// Define storage and application
+const storage = new MemoryStorage();
+const app = new Application<ApplicationTurnState>({
+    storage
+});
 ```
 
 ## Message extensions
 
-In the previous Teams SDK format, you needed to set up the Message extensions query handler like:
+In the Bot Framework SDK's `TeamsActivityHandler`, you needed to set up the Message extensions query handler by extending handler methods.
 
-Now, the app class has `messageExtensions` features to simply creating the handlers:
+Now, the app class has `messageExtensions` features to simplify creating the handlers:
 
-* `context`: TurnContext
-* `state`: DefaultTurnState
+* `context`: `TurnContext`
+* `state`: `DefaultTurnState`
 * `query`: The data passed from message extension interaction
 
-Example: [Message extension search command](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand)
+Code samples are from example: [Message extension search command](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand)
 
 ```javascript
-// Imported from earlier example
-
 import { MessagingExtensionAttachment } from "botbuilder";
-
 import { Application } from "botbuilder-m365";
 
-// ME query Listener
-
+// ME query listener
 app.messageExtensions.query("searchCmd", async (context, state, query) => {
-
   const searchQuery = query.parameters.queryText;
 
-  // Other handling
-
-  // For examples, Create search / action cards
-
+  // Work with the search query
+  // For example, create search/action cards
+  
   // Return results
-
   return {
-
     attachmentLayout: "", 
-
     attachments: results, 
-
     type: "result" 
-
   };
 
 });
+```
 
-Similarly, selectItem listener would be set up as:
+Similarly, `selectItem` listener would be set up as:
 
+```typescript
 app.messageExtensions.selectItem(async (context, state, item) => {
+    // Generate detailed result
+    const card = createNpmPackageCard(item);
 
-  // Other handling
-
-  // For example, Create search / action cards
-
-  // item is the card/item the user selected
-
-  return {
-
-    //... 
-
-  }
-
-}
+    // Return results
+    return {
+        attachmentLayout: 'list',
+        attachments: [card],
+        type: 'result'
+    };
+});
 ```
 
 ## Adaptive Cards capabilities
 
-The `app.AdaptiveCards` handler is the handler for producing Adaptive Cards.
+You can register Adaptive Card action handlers using the `app.adaptiveCards` property.
 
 [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.adaptiveCards.a.typeAheadBot)
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.adaptiveCards.a.typeAheadBot/src/index.ts#L92)
 
 ```javascript
-
 // Listen for messages that trigger returning an adaptive card
 app.message(/dynamic/i, async (context, _state) => {
     const attachment = createDynamicSearchCard();
@@ -170,7 +145,7 @@ app.adaptiveCards.actionSubmit('StaticSubmit', async (context, _state, data: Sub
 
 ## Bot logic for handling an action
 
- The Bot responds to the user's input with the action `lights on` to turn the lights on.
+The Bot responds to the user's input with the action `LightsOn` to turn the lights on.
 
 The following example illustrates how Teams AI library makes it possible to manage the bot logic for handling an action `LightsOn` or `LightsOff` and connect it to the prompt used with OpenAI:
 
@@ -186,8 +161,8 @@ const planner = new OpenAIPlanner<ApplicationTurnState>({
     defaultModel: 'gpt-3.5-turbo',
     logRequests: true
 });
-const promptManager = new DefaultPromptManager<ApplicationTurnState>(path.join(__dirname, '../src/prompts'));
 
+const promptManager = new DefaultPromptManager<ApplicationTurnState>(path.join(__dirname, '../src/prompts'));
 
 // Define storage and application
 const storage = new MemoryStorage();
@@ -196,7 +171,6 @@ const app = new Application<ApplicationTurnState>({
     planner
 });
 
-
 // Register action handlers
 app.ai.action('LightsOn', async (context, state) => {
     state.conversation.value.lightsOn = true;
@@ -204,13 +178,11 @@ app.ai.action('LightsOn', async (context, state) => {
     return true;
 });
 
-
 app.ai.action('LightsOff', async (context, state) => {
     state.conversation.value.lightsOn = false;
     await context.sendActivity(`[lights off]`);
     return true;
 });
-
 
 app.ai.action('Pause', async (context, state, data) => {
     const time = data.time ? parseInt(data.time) : 1000;
@@ -218,7 +190,6 @@ app.ai.action('Pause', async (context, state, data) => {
     await new Promise((resolve) => setTimeout(resolve, time));
     return true;
 });
-
 
 app.ai.action('LightStatus', async (context, state) => {
     // Send the user a static response with the status of the lights.
