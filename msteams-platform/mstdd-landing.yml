@@ -48,6 +48,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Deep link to the meeting side panel
+        url: apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel
       - text: Live Share SDK is now generally available
         url: apps-in-teams-meetings/teams-live-share-overview.md
       - text: Design your app for new Teams 
