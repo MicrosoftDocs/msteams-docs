@@ -27,20 +27,20 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 
 1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting details page.
 
-# [Desktop](#tab/desktop)
-
-The following image shows a tab added to the meeting details page in the Teams desktop client:
-
-   :::image type="content" source="~/assets/images/apps-in-meetings/premeetingtab.png" alt-text="The screenshot shows desktop Teams tabs in the meeting details view in the Teams meeting.":::
-
-# [Mobile](#tab/mobile)
-
-The following image shows a tab added to the meeting details page in the Teams mobile client:
-
-   :::image type="content" source="../assets/images/mobile-tab.png" alt-text="Screenshot shows mobile Teams tabs in the meeting details view in the Teams meeting.":::
-
----
-
+   # [Desktop](#tab/desktop)
+    
+   The following image shows a tab added to the meeting details page in the Teams desktop client:
+    
+    :::image type="content" source="~/assets/images/apps-in-meetings/premeetingtab.png" alt-text="The screenshot shows desktop Teams tabs in the meeting details view in the Teams meeting.":::
+    
+   # [Mobile](#tab/mobile)
+    
+   The following image shows a tab added to the meeting details page in the Teams mobile client:
+    
+    :::image type="content" source="../assets/images/mobile-tab.png" alt-text="Screenshot shows mobile Teams tabs in the meeting details view in the Teams meeting.":::
+    
+   ---
+    
 ### Meeting chat view
 
 1. From the Teams chat panel, select the meeting chat view.
@@ -49,19 +49,19 @@ The following image shows a tab added to the meeting details page in the Teams m
 
 1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting chat.
 
-# [Meeting chat view desktop](#tab/meeting-chat-view-desktop)
+    # [Meeting chat view desktop](#tab/meeting-chat-view-desktop)
+    
+    The following image shows an app added to the meeting chat in the Teams desktop client:
+   
+    :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams desktop.":::
+    
+    # [Meeting chat view mobile](#tab/meeting-chat-view-mobile)
+    
+    The following image shows an app added to the meeting chat in the Teams mobile client:
+    
+    :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
 
-   The following image shows an app added to the meeting chat in the Teams desktop client:
-
-   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams desktop.":::
-
-# [Meeting chat view mobile](#tab/meeting-chat-view-mobile)
-
-   The following image shows an app added to the meeting chat in the Teams mobile client:
-
-  :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
-
----
+    ---
 
 ### Meeting side panel view
 
@@ -72,6 +72,41 @@ The following image shows a tab added to the meeting details page in the Teams m
 1. In the app gallery, select the app that you want to add and follow the steps as required. The app is added to the meeting side panel.
 
    :::image type="content" source="../assets/images/side-panel-view.png" alt-text="Screenshot shows side panel view with the list of apps.":::
+
+#### Deep link to meeting side panel
+
+> [!NOTE]
+> * Deep link to meeting side panel in Teams desktop client is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md). 
+> * Deep link to meeting side panel in Teams mobile client is generally available.
+
+You can create a deep link to your tab app that can open in the meeting side panel. When users in a meeting select the deep link, it opens the meeting side panel in the meeting stage. If a user selects the deep link before or after the meeting, the deep link opens in a pre or a post-meeting tab respectively.
+
+# [Meeting side panel](#tab/meeting-side-panel)
+
+* The following shows a deep link in meeting side panel in the Teams desktop client:
+
+  :::image type="content" source="../assets/images/sidepanel-deeplink.gif" alt-text="Screenshot shows side panel view when deep link is selected.":::
+    
+* The following shows a deep link in meeting side panel in the Teams mobile client:
+    
+  :::image type="content" source="../assets/images/mobile-in-meeting-deeplink.gif" alt-text="Screenshot shows side panel view when deep link is selected in mobile.":::
+
+# [Pre or post-meeting tab](#tab/pre-or-post-meeting-tab)
+
+* The following shows a deep link in a pre or a post-meeting tab in the Teams desktop client:
+
+  :::image type="content" source="../assets/images/pre-post-meeting.gif" alt-text="Screenshot shows a pre or post-meeting tab when deep link is selected.":::
+    
+* The following shows a deep link in a pre or a post-meeting tab in the Teams mobile client:
+    
+  :::image type="content" source="../assets/images/mobile-post-meeting-deeplink.gif" alt-text="Screenshot shows a pre or post-meeting tab when deep link is selected in mobile.":::
+    
+Pre or post-meeting tab behavior isn't supported in channel meetings.
+
+---
+
+For deep link format, see [deep links](~/concepts/build-and-test/deep-link-workflow.md#deep-link-to-meeting-side-panel).
+
 
 ### Meeting stage view
 
