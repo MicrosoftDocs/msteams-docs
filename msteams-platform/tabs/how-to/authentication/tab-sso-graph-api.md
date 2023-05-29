@@ -234,28 +234,15 @@ If you need to access Microsoft Graph data, configure your server-side code to:
     5. After the app user has granted more permissions, retry the OBO flow to get access to these other APIs.
     </details>
 
-1. Time lag for Graph consent with middle-tier service:
+1. Delay in fetching access token for Graph permission and scope: Your app can get staggered app user consent for accessing the Graph permissions and scopes using the OBO flow based on the requirement of the app user. In this scenario, the consent dialog appears again for the app user, and when the app user gives consent, a middle-tier service runs the OBO flow. For more information, see the Step 2 of [exchange the token ID with the server-side token](tab-sso-graph-api.md#exchange-the-token-id-with-the-server-side-token).
 
-    Your app can get app user consent for accessing the Graph permissions and scopes using the OBO flow. If your app uses a middle-tier service for running the OBO flow, then there may be a delay between when the app user gives consent and when the middle-tier service acknowledges it for fetching the token.
+    Sometimes there may be a delay between when the app user gives consent and when the middle-tier service acknowledges it for fetching the token. This results in the API call to fail authentication and it returns a `invalid_grant` or `interaction_required`. As a result, the consent dialog is shown to the app user again, and they need to give consent again.
 
-    This is a limitation when your app uses a middle-tier service for running the OBO flow.
+    This is a known limitation that in such scenarios the app user may have to give consent 3 to 5 times before the access token is granted.
 
-    The middle-tier OBO flow for Graph permissions and scopes:
+    While there is no workaround to this limitation, Azure AD recommends that you can build a meaningful wait-and-retry mechanism to overcome this issue.
 
-    **Auth API**:
-    If an app user requires Graph permission that wasn't given as a part of the access token, then the app user will need to give consent for the required permission and scopes. To do this, you need to call the getAuthToken API. This triggers a consent request to the app user.
-
-    **The OBO flow**:
-    When the app user gives consent for Graph permissions and scopes, the middle tier service runs the OBO flow.
-
-    At this stage, there's a delay before the middle-tier service  acknowledges the consent. As the middle-tier service doesn't get the app user consent, it results in a authentication fail. In this scenario, the API call for authentication may fail, and it returns an invalid_grant or interaction_required.
-
-    This means that the consent request shows up again for the app user. This cycle of OBO flow may be repeated 3 to 5 times before the middle tier service takes the app user consent into account, and the access token is generated and shared.
-
-    **The Azure AD solution**:
-    There isn't any workaround for this delay. However, Azure AD recommends that you can build a wait-and-retry mechanism in your app. If the client knows that the app user has already given consent for Graph permissions and scopes, you can retry calling the getAuthToken API. You can use the app credentials that you already have, that is, app ID and client secret, to call the API.
-
-    The app must wait and retry calling the API again. It may take up to 3 to 5 attempts before the middle tier service takes the app user's consent into account. For each attempt, you can add a one second delay for the retry to the wait and retry mechanism.
+    The wait-and-retry mechanism can be built because app can use the app user's consent to run the `getAuthToken()` API call using the app ID and client secret. The mechanism must wait and retry calling the API again. It may take 3 to 5 attempts before the middle tier service takes the app user's consent into account. For each attempt, you can add a one second delay for the retry to the wait and retry mechanism. This mechanism will help your app user to give consent only once to fetch the access token.
 
 ## Code sample
 
