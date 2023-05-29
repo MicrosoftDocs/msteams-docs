@@ -39,7 +39,7 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
 
 4. Select **Microsoft Graph**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/request-api-permission.png" alt-text="The screenshot shows shows the request API permissions page.":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/request-api-permission.png" alt-text="The screenshot shows the request API permissions page.":::
 
     The options for Graph permissions display.
 
@@ -86,7 +86,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
 1. Select **+ Add a platform**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="The screenshot shows the options to add add a platform.":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="The screenshot shows the options to add a platform.":::
 
     The **Configure platforms** page appears.
 
@@ -206,7 +206,7 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 1. Validate the access token. For more information, see [Validate the access token](tab-sso-code.md#validate-the-access-token).
 1. Initiate the OAuth 2.0 OBO flow with a call to the Microsoft identity platform that includes the access token, some metadata about the user, and the credentials of the tab app (its app ID and client secret). The Microsoft identity platform will return a new access token that can be used to access Microsoft Graph.
 1. Get data from Microsoft Graph by using the new token.
-1. Use token cache serialization in MSAL.NET to cache the new access token for multiple, if required.
+1. Use token cache serialization in MSAL.NET to cache the new access token for multiple, if necessary.
 
 > [!IMPORTANT]
 >
@@ -240,9 +240,9 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 
     This is a known limitation that in such scenarios the app user may have to give consent 3 to 5 times before the access token is granted.
 
-    While there is no workaround to this limitation, Azure AD recommends that you can build a meaningful wait-and-retry mechanism to overcome this issue.
+    While there's no workaround to this limitation, Azure AD recommends that you can build a meaningful wait-and-retry mechanism to overcome this issue.
 
-    The wait-and-retry mechanism can be built because app can use the app user's consent to run the `getAuthToken()` API call using the app ID and client secret. The mechanism must wait and retry calling the API again. It may take 3 to 5 attempts before the middle tier service takes the app user's consent into account. For each attempt, you can add a one second delay for the retry to the wait and retry mechanism. This mechanism will help your app user to give consent only once to fetch the access token.
+    The wait-and-retry mechanism can be built because app can use the app user's consent to run the `getAuthToken()` API call using the app ID and client secret. The mechanism must wait and retry calling the API again. It may take 3 to 5 attempts before the middle tier service takes the app user's consent into account. For each attempt, you can add a one-second delay for the retry to the wait and retry mechanism. This mechanism will help your app user to give consent only once to fetch the access token.
 
 ## Code sample
 
