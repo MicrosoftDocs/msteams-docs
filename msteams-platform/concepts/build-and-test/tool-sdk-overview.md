@@ -11,8 +11,7 @@ ms.author: surbhigupta
 
 You can build your Microsoft Teams app using following different tools and SDKs:
 
-:::image type="content" source="../../assets/images/Tools-and-SDK-revamp/tools-and-sdk.jpg" alt-text="Screenshot shows you the list of tools and SDKs.":::
-:::image type="content" source="../../assets/images/Tools-and-SDK-revamp/tools-and-sdks.jpg" alt-text="Screenshot shows you the list of tools and SDKs in Teams.":::
+:::image type="content" source="../../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png" alt-text="Screenshot shows you the list of all tools and SDKs that are available for you to build Teams apps.":::
 
 :::row:::
     :::column span="1":::
