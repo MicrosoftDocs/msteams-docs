@@ -234,15 +234,15 @@ If you need to access Microsoft Graph data, configure your server-side code to:
     5. After the app user has granted more permissions, retry the OBO flow to get access to these other APIs.
     </details>
 
-1. Delay in fetching access token for Graph permission and scope: Your app can get staggered app user consent for accessing the Graph permissions and scopes using the OBO flow based on the requirement of the app user. In this scenario, the consent dialog appears again for the app user, and when the app user gives consent, a middle-tier service runs the OBO flow. For more information, see the Step 2 of [exchange the token ID with the server-side token](tab-sso-graph-api.md#exchange-the-token-id-with-the-server-side-token).
+1. Delay in fetching access token for Graph permission and scope: If your app uses staggered permission for Graph permissions and scopes, the app user must give consent again to fetch the access token. In this scenario, when the app user gives consent, a middle-tier service runs the OBO flow. For more information, see the Step 2 of [exchange the token ID with the server-side token](tab-sso-graph-api.md#exchange-the-token-id-with-the-server-side-token).
 
-    Sometimes there may be a delay between when the app user gives consent and when the middle-tier service acknowledges it for fetching the token. This results in the API call to fail authentication and it returns a `invalid_grant` or `interaction_required`. As a result, the consent dialog is shown to the app user again, and they need to give consent again.
+    Sometimes there might be a delay between when the app user gives consent and when the middle-tier service acknowledges it for fetching the token. This results in the API call to fail authentication and it returns a `invalid_grant` or `interaction_required` response. As a result, the consent dialog is shown to the app user again, and they need to give consent again.
 
-    This is a known limitation that in such scenarios the app user may have to give consent 3 to 5 times before the access token is granted.
+    This is a known limitation as in such scenarios the app user might need to give consent 3 to 5 times before the access token is granted.
 
     While there's no workaround to this limitation, Azure AD recommends that you can build a meaningful wait-and-retry mechanism to overcome this issue.
 
-    The wait-and-retry mechanism can be built because app can use the app user's consent to run the `getAuthToken()` API call using the app ID and client secret. The mechanism must wait and retry calling the API again. It may take 3 to 5 attempts before the middle tier service takes the app user's consent into account. For each attempt, you can add a one-second delay for the retry to the wait and retry mechanism. This mechanism will help your app user to give consent only once to fetch the access token.
+    The wait-and-retry mechanism allows your app to call the `getAuthToken()` API using the app ID and client secret if the app user has already given consent. The mechanism must wait and retry calling the API again. It might take 3 to 5 attempts before the middle-tier service takes the app user's consent into account. For each attempt, add a one-second delay for the retry to the wait-and-retry mechanism. This mechanism allows your app to retry fetching the access token after the app user has given consent only once.
 
 ## Code sample
 
