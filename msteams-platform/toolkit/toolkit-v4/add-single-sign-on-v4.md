@@ -574,6 +574,9 @@ The following steps help you to enable SSO in your app:
 <summary><b>Bot project
 </b></summary>
 
+> [!NOTE]
+> The following steps apply only to command bot.
+
 1. Ensure to upgrade your SDK version to:
    * TeamsFx, version 1.1.0 or later.
    * `Microsoft.Bot.Builder`, version 4.17.1 or later.
