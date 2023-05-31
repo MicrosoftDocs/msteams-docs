@@ -46,7 +46,7 @@ Following these guidelines increases the chances of your app to pass the Microso
      :::image type="icon" source="../../../../assets/icons/messaging-extension.png" link="#message-extensions" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/task-module.png" link="#task-modules" border="false":::
+      :::image type="icon" source="../../../../assets/icons/task-module.png" link="#dialogs-task-modules" border="false":::
    :::column-end:::
      :::column span="":::
       :::image type="icon" source="../../../../assets/icons/meeting.png" link="#meeting-extensions" border="false":::
@@ -1329,7 +1329,7 @@ Link unfurling only apps don't provide significant value within Teams. Consider 
 
 [Back to top](#microsoft-teams-store-validation-guidelines)
 
-## Dialogs
+## Dialogs (task modules)
 
 [*Mandatory Fix*]
 

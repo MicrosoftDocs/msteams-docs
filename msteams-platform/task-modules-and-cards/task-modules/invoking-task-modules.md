@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 Dialogs (formerly known as *task modules*) can be invoked from tabs or bots. The response can be either in HTML, JavaScript, or as an Adaptive Card. There's a range of flexibility in terms of how dialogs are invoked and how to handle user interaction. The following table summarizes different dialog flows:
 
 > [!NOTE]
-> The *task module* concept has been renamed to *dialog* and the *tasks* capability (namespace) has been deprecated in favor of the `dialog` capability for use in both HTML dialogs (since TeamsJS v.2.0.0) and Adaptive Card-based dialogs (starting with TeamsJS v.2.x.x). See [notes on Dialogs](./../../tabs/how-to/using-teams-client-library.md#dialogs) for more information.
+> The *task module* concept has been renamed to ***dialog*** and the *tasks* capability (namespace) has been replaced by the `dialog` capability for use in both HTML dialogs (since TeamsJS v.2.0.0) and Adaptive Card-based dialogs (starting with TeamsJS v.2.8.0 See [notes on Dialog](./../../m365-apps/teamsjs-support-m365.md#dialog) for more information.
 
 | Invoked using | Dialog with HTML or JavaScript | Dialog with Adaptive Card |
 | --- | --- | --- |

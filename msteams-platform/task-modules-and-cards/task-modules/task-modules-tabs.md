@@ -144,7 +144,7 @@ The `submitHandler` echoes the values of `err` or `result` to the console.
 
 ## Submit the result of a dialog
 
-If there's an error when invoking the dialog, your `submitHandler` function is immediately invoked with an `err` string indicating what [error occurred](#task-module-invocation-errors). The `submitHandler` function is also called with an `err` string when the user selects **X** on the dialog to exit.
+If there's an error when invoking the dialog, your `submitHandler` function is immediately invoked with an `err` string indicating what [error occurred](#dialog-invocation-errors). The `submitHandler` function is also called with an `err` string when the user selects **X** on the dialog to exit.
 
 If there's no invocation error and the user doesn't select **X** to dismiss the dialog, the user selects a submit button when finished. The following sections explain what happens next for HTML and Adaptive Card dialog types.
 
