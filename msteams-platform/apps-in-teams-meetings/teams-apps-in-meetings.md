@@ -18,6 +18,8 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 
 :::row:::
     :::column span="":::
+    :::column-end:::
+    :::column span="":::
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/1-cust-apps.png" border="false" link="../concepts/build-and-test/share-in-meeting.md":::
     :::column-end:::
     :::column span="":::
@@ -29,8 +31,12 @@ Meetings enable collaboration, partnership, informed communication, and shared f
     :::column span="":::
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/4-meeting-lifecycle.png" border="false" link="#meeting-lifecycle":::
     :::column-end:::
+    :::column span="":::
+    :::column-end:::
 :::row-end:::
 :::row:::
+    :::column span="":::
+    :::column-end:::
     :::column span="":::
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/5-notification-user.png" border="false" link="in-meeting-notification-for-meeting.md":::
     :::column-end:::
@@ -39,8 +45,12 @@ Meetings enable collaboration, partnership, informed communication, and shared f
     :::column-end:::
     :::column span="":::
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/6-integrate.png" border="false" link="build-extensible-conversation-for-meeting-chat.md":::
+    :::column span="":::
+    :::column-end:::
 :::row-end:::
 :::row:::
+    :::column span="":::
+    :::column-end:::
     :::column span="":::
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/7-fetch-participant.png" border="false" link="meeting-apps-apis.md#get-participant-api":::
     :::column-end:::
@@ -52,6 +62,8 @@ Meetings enable collaboration, partnership, informed communication, and shared f
     :::column-end:::
     :::column span="":::
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/10-get-meeting.png" border="false" link="meeting-apps-apis.md#get-real-time-teams-meeting-events-api":::
+    :::column-end:::
+    :::column span="":::
     :::column-end:::
 :::row-end:::
 
