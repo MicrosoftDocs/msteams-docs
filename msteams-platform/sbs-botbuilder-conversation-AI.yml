@@ -435,7 +435,7 @@ items:
             * The `Application` class replaces the Teams Activity Handler class from Bot Framework SDK. The application class has all the information and bot logic required for an app. You can register actions or activity handlers for the app in this class.
             * The `MemoryStorage` class is a memory based storage provider that stores and retrieves plan old JSON objects. It's imported from the Bot Builder SDK.
 
-        1.  Add the following code at the end of the file to define actions:
+        1.  At the end of the file, add the following code to define actions:
 
             ```typescript
             app.ai.action(AI.FlaggedInputActionName, async (context, state, data) => {
@@ -451,7 +451,7 @@ items:
             
             When the `OpenAIModerator` reviews and identifies a flag in an input or output, it triggers the action `AI.FlaggedInputActionName` or `AI.FlaggedOutputActionName` and the `context.sendActivity` sends a message to the user. If the user receives a message for an flagged  input or output, the user can control what he wants to do.
 
-        1. Add the following code at the end of the file to define history:
+        1. At the end of the file, add the following code to define history:
 
             ```typescript
             app.message('/history', async (context, state) => {
