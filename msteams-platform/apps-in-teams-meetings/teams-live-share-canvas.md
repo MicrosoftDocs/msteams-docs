@@ -18,11 +18,11 @@ To enable more seamless collaboration, Microsoft created PowerPoint Live, which 
 
 ## Install
 
-To add the latest version of the SDK to your application using npm:
+Live Share canvas is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share-media), and you can download through npm or yarn. You must also install its peer dependencies, which includes `@microsoft/live-share`, `fluid-framework`, and `@fluidframework/azure-client`. If you are using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later.
 
 ```bash
-npm install @microsoft/live-share@next --save
-npm install @microsoft/live-share-canvas@next --save
+npm install @microsoft/live-share @microsoft/live-share-canvas fluid-framework @fluidframework/azure-client --save
+npm install @microsoft/teams-js --save
 ```
 
 OR
@@ -30,8 +30,8 @@ OR
 To add the latest version of the SDK to your application using [Yarn](https://yarnpkg.com/):
 
 ```bash
-yarn add @microsoft/live-share@next
-yarn add @microsoft/live-share-canvas@next
+yarn add @microsoft/live-share @microsoft/live-share-canvas fluid-framework @fluidframework/azure-client
+yarn add @microsoft/teams-js
 ```
 
 ## Setting up the package
@@ -102,6 +102,55 @@ const inkingManager = new InkingManager(canvasHostElement);
 await liveCanvas.initialize(inkingManager);
 
 inkingManager.activate();
+```
+
+# [React](#tab/react-js)
+
+```jsx
+import { useLiveCanvas } from "@microsoft/live-share-react";
+import { InkingTool } from "@microsoft/live-share-canvas";
+import { useRef } from "react";
+
+// Unique identifier that distinguishes this useLiveCanvas from others in your app
+const UNIQUE_KEY = "CUSTOM-LIVE-CANVAS";
+
+// Example component
+export const ExampleLiveCanvas = () => {
+    const liveCanvasRef = useRef(null);
+    const { liveCanvas, inkingManager } = useLiveCanvas(
+        "CUSTOM-LIVE-CANVAS",
+        liveCanvasRef,
+    );
+
+    return (
+        {/** Canvas currently needs to be a child of a parent with absolute styling */}
+        <div style={{ position: "absolute"}}>
+            <div
+                ref={liveCanvasRef}
+                // Best practice is to not define inline styles
+                style={{ width: "556px", height: "224px" }}
+            />
+            {!!liveCanvas && (
+                <div>
+                    <button
+                        onClick={() => {
+                            inkingManager.tool = InkingTool.pen;
+                        }}
+                    >
+                        {"Pen"}
+                    </button>
+                    <button
+                        onClick={() => {
+                            inkingManager.tool = InkingTool.laserPointer;
+                        }}
+                    >
+                        {"Laser pointer"}
+                    </button>
+                </div>
+            )}
+        </div>
+    );
+};
 ```
 
 ---
@@ -320,7 +369,7 @@ document.getElementById("line-arrow").onclick = () => {
   inkingManager.lineBrush.endArrow = "open";
 };
 // Change the selected color for lineBrush
-document.getElementById("line-color").onchange = () => {
+document.getElementById("line-color").onclick = () => {
   const colorPicker = document.getElementById("line-color");
   inkingManager.lineBrush.color = fromCssColor(colorPicker.value);
 };
@@ -334,6 +383,28 @@ document.getElementById("line-tip-size").onclick = () => {
 
 You can clear all strokes in the canvas by calling `inkingManager.clear()`. This deletes all strokes from the canvas.
 
+#### Import and export raw strokes
+
+Live Share Canvas supports importing and exporting raw strokes from `InkingManager`, which enables you to export them to your back-end for later use in a future session.
+
+```javascript
+// Export raw strokes
+const strokes = inkingManager.exportRaw();
+
+// Optionally clear out existing strokes, and import strokes
+inkingManager.clear();
+inkingManager.importRaw(strokes);
+```
+
+#### Export strokes as an SVG
+
+You can export your entire drawing within the `InkingManager` to a scalable vector graphic (SVG). The SVG contents are returned as a string, which you can then store in your server as an .svg file extension.
+
+```javascript
+// Export raw strokes
+const svgText = inkingManager.exportSVG();
+```
+
 ### Cursors
 
 :::image type="content" source="../assets/images/teams-live-share/canvas-cursors.gif" alt-text="GIF shows an example of users sharing a cursor on a canvas.":::
@@ -342,12 +413,7 @@ You can enable live cursors in your application for users to track each other's 
 
 ```javascript
 // Optional. Set user display info
-liveCanvas.onGetLocalUserInfo = () => {
-  return {
-    displayName: "YOUR USER NAME",
-    pictureUri: "YOUR USER PICTURE URI",
-  };
-};
+liveCanvas.onGetLocalUserPictureUrl = () => "YOUR USER PICTURE URI";
 // Toggle Live Canvas cursor enabled state
 liveCanvas.isCursorShared = !isCursorShared;
 ```

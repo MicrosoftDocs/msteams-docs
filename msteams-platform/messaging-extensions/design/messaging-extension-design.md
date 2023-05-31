@@ -33,7 +33,7 @@ The following examples show how to add a message extension in a channel.
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="Example shows how to add a message extension near the compose box in a channel.":::
+:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="Example shows how to add a message extension near the compose box in a channel." lightbox="../../assets/images/messaging-extension/add-in-channel.png":::
 
 ## Set up a message extension
 
@@ -47,7 +47,7 @@ For consistency across Teams apps, you can't customize the sign-in screen. If yo
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="Example shows message extension setup screen with a sign-in button.":::
+:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="Example shows message extension setup screen with a sign-in button." lightbox="../../assets/images/messaging-extension/set-up.png":::
 
 ## Types of message extensions
 
@@ -63,13 +63,13 @@ With search commands, people can use your message extension to quickly find exte
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="Example shows a search-based message extension launched from the compose box.":::
+:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="Example shows a search-based message extension launched from the compose box." lightbox="../../assets/images/messaging-extension/search-command-type.png":::
 
 #### Compose box layout options
 
 You have some options for displaying message extension search results, including [list and grid views](../../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests).
 
-:::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="Illustrations showing layout options for message extension search results.":::
+:::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="Illustrations showing layout options for message extension search results." lightbox="../../assets/images/messaging-extension/search-result-layout.png":::
 
 ### Action commands
 
@@ -91,7 +91,7 @@ Once added, users can open your message extension by selecting your app icon bel
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="Example shows how to open a message extension from the compose box.":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="Example shows how to open a message extension from the compose box." lightbox="../../assets/images/messaging-extension/open-from-compose-box.png":::
 
 ### From a chat message or channel post
 
@@ -99,11 +99,11 @@ Once added, users can select the **More** :::image type="icon" source="../../ass
 
 #### Chat message
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="Example shows how to open a message extension from a chat message.":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="Example shows how to open a message extension from a chat message." lightbox="../../assets/images/messaging-extension/open-from-chat-message.png":::
 
 #### Channel post
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a message extension from a channel post on mobile.":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a message extension from a channel post on mobile." lightbox="../../assets/images/messaging-extension/open-from-channel-post.png":::
 
 ## Use a message extension
 
@@ -119,7 +119,7 @@ The following scenarios show the primary ways people use message extensions.
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="Example shows a user searching for content to insert from the compose box.":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="Example shows a user searching for content to insert from the compose box." lightbox="../../assets/images/messaging-extension/insert-content-search.png":::
 
 **2. Insert content**. Once posted, others can reply or select the content to see more information in your app.
 
@@ -129,17 +129,17 @@ The following scenarios show the primary ways people use message extensions.
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="Example shows a user posting content into a channel conversation.":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="Example shows a user posting content into a channel conversation." lightbox="../../assets/images/messaging-extension/insert-content-posted.png":::
 
 ### Take action on a message
 
 **1. Select a message extension**. Your app can include one or more action commands.
 
-:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="Example shows a user selecting a message extension action command.":::
+:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="Example shows a user selecting a message extension action command." lightbox="../../assets/images/messaging-extension/select-action-command.png":::
 
 **2. Complete the action**. Your app can receive and process any content or data sent by the message action. Users complete the action in your app while remaining in their conversation.
 
-:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Example on how to take action on a message.":::
+:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Example on how to take action on a message." lightbox="../../assets/images/messaging-extension/complete-action-command.png":::
 
 ### Preview links
 
@@ -153,7 +153,7 @@ Message extensions also allow you to insert rich links from a recognized URL int
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="Example shows a user pasting a link in the compost box.":::
+:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="Example shows a user pasting a link in the compost box." lightbox="../../assets/images/messaging-extension/paste-preview-link.png":::
 
 **2. Insert content**. If your app recognizes the URL in the compose box, it renders the link as a card that provides a content-rich preview of the web content. (See [Adaptive Cards design guidelines](../../task-modules-and-cards/cards/design-effective-cards.md) for more information.)
 
@@ -163,7 +163,7 @@ Message extensions also allow you to insert rich links from a recognized URL int
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="Example shows how the URL, since it's recognized by your app, includes some rich content in the compose box.":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="Example shows how the URL, since it's recognized by your app, includes some rich content in the compose box." lightbox="../../assets/images/messaging-extension/insert-preview-link.png":::
 
 ## Manage a message extension
 
@@ -190,7 +190,7 @@ The following examples show a message extension opened from the compose box.
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="Illustration showing the UI anatomy of a message extension in the compose box.":::
+:::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="Illustration showing the UI anatomy of a message extension in the compose box." lightbox="../../assets/images/messaging-extension/anatomy-compose.png":::
 
 |Counter|Description|
 |----------|-----------|
@@ -205,7 +205,7 @@ The following examples show a message extension opened from the compose box.
 
 ### Message extension management menu
 
-:::image type="content" source="../../assets/images/messaging-extension/anatomy-management-menu.png" alt-text="Illustration showing the UI anatomy of a message extension management menu.":::
+:::image type="content" source="../../assets/images/messaging-extension/anatomy-management-menu.png" alt-text="Illustration showing the UI anatomy of a message extension management menu." lightbox="../../assets/images/messaging-extension/anatomy-management-menu.png":::
 
 |Counter|Description|
 |----------|-----------|
@@ -270,7 +270,7 @@ If your message extension requires action commands, keep the dialog simple and d
 
 #### Do: Take advantage of Teams color tokens
 
-Each Teams theme has its own color scheme. To handle theme changes automatically, use [color tokens (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme) in your design.
+Each Teams theme has its own color scheme. To handle theme changes automatically, use [color tokens (Fluent UI)](https://react.fluentui.dev/?path=/docs/theme-colors--page) in your design.
 
    :::column-end:::
    :::column span="":::

@@ -16,7 +16,7 @@ Whether you're a designer, product manager, developer, or maker using low-code t
 
 Designing a Teams app is like designing a conventional web app—but also a little different. An effective design highlights your app's unique attributes while fitting naturally with Teams features and contexts.
 
-These guidelines and resources can help you strike that balance. You'll know what to do and what to avoid when designing your Teams app (such as multi-level navigation in a tab).
+These guidelines and resources can help you strike that balance. You'll know what to do and what to avoid when designing your Teams app (such as multilevel navigation in a tab).
 
 ## Teams app design principles
 
@@ -168,7 +168,7 @@ To learn more, try one of the following resources:
 Get code samples and implementation details for the basic Fluent UI components used to build Teams experiences.
 
 > [!div class="nextstepaction"]
-> [Try Teams UI components (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
+> [Try Teams UI components (Fluent UI)](https://react.fluentui.dev/?path=/docs/)
 
 ### Adaptive Cards designer
 

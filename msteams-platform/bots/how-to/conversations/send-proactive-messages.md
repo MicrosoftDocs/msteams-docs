@@ -287,32 +287,27 @@ Example of a code snippet to demonstrate creating conversation reference.
         };
 ```
 
-# [TypeScript](#tab/typescript)
+# [JavaScript](#tab/javascript)
 
 * [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-getconversationreference&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/nodejs/bots/proactiveBot.js#L59)
 
 ```javascript
 
-async messageAllMembersAsync(context) {
-    const members = await this.getPagedMembers(context);
-
-    members.forEach(async (teamMember) => {
-        const message = MessageFactory.text('Hello ${ teamMember.givenName } ${ teamMember.surname }. I\'m a Teams conversation bot.');
-        // A conversation reference for the conversation that contains this activity.
-        var ref = TurnContext.getConversationReference(context.activity);
-        ref.user = teamMember;
-
-        await context.adapter.createConversation(ref,
-            async (t1) => {
-                const ref2 = TurnContext.getConversationReference(t1.activity);
-                await t1.adapter.continueConversation(ref2, async (t2) => {
-                    await t2.sendActivity(message);
-                });
-            });
-    });
-    // Sends an activity to the sender of the incoming activity.
-    await context.sendActivity(MessageFactory.text('All messages have been sent.'));
+async SendNotificationToAllUsersAsync(context) {
+     const TeamMembers = await TeamsInfo.getPagedMembers(context);
+     let Sent_msg_Cout = TeamMembers.members.length;
+     TeamMembers.members.map(async member => {
+         const ref = TurnContext.getConversationReference(context.activity);
+         ref.user = member;
+         await context.adapter.createConversation(ref, async (context) => {
+             const ref = TurnContext.getConversationReference(context.activity);
+             await context.adapter.continueConversation(ref, async (context) => {
+                 await context.sendActivity("Proactive hello.");
+             });
+         });
+     });
+    await context.sendActivity(MessageFactory.text("Message sent:" + Sent_msg_Cout));
 }
 
 ```

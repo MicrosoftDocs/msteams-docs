@@ -83,11 +83,33 @@ You can create and send actionable messages through Incoming Webhook or connecto
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/incoming-webhook/csharp/IncomingWebhook/Controllers/CardController.cs#L28)
 
 ```csharp
-url = {{Webhook_URL}};
-HttpClient client = new HttpClient();
+var adaptiveCardJson = @"{
+  ""type"": ""message"",
+  ""attachments"": [
+    {
+      ""contentType"": ""application/vnd.microsoft.card.adaptive"",
+      ""content"": {
+        ""type"": ""AdaptiveCard"",
+        ""body"": [
+          {
+            ""type"": ""TextBlock"",
+            ""text"": ""Message Text""
+          }
+        ],
+        ""$schema"": ""http://adaptivecards.io/schemas/adaptive-card.json"",
+        ""version"": ""1.0""
+      }
+    }
+  ]
+}";
+
+var webhookUrl = "https://xxxxx.webhook.office.com/xxxxxxxxx";
+
+var client = new HttpClient();
 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-var content = new StringContent({{formatted_Card_Payload}}(Adaptive_Card_Json), System.Text.Encoding.UTF8, "application/json");
-var response = await client.PostAsync({{WebhookUrl}}, content);
+
+var content = new StringContent(adaptiveCardJson, System.Text.Encoding.UTF8, "application/json");
+var response = await client.PostAsync(webhookUrl, content);
 ```
 
 # [JavaScript](#tab/javascript)
@@ -135,9 +157,9 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 
 ## Code sample
 
-| Sample Name       | Description | .NET    |  Node.js |Manifest |
-|---------------------|--------------|---------|--------|--------|
-|Dialog sample bots-V4 | This sample shows how to create dialogs using bot framework v4 and teams tabs. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)|
+| Sample Name       | Description | .NET    |  Node.js |
+|---------------------|--------------|---------|--------|
+| Incoming Webhook |This sample shows how to implement and use Incoming Webhook. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs)|
 
 ## See also
 
