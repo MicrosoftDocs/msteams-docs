@@ -66,11 +66,11 @@ Now, the app class has `messageExtensions` features to simplify creating the
 * `state`: `DefaultTurnState`
 * `query`: The data passed from message extension interaction
 
-Code samples are from example: [Message extension search command](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand)
+[Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand)
 
 ```javascript
 import { MessagingExtensionAttachment } from "botbuilder";
-import { Application } from "botbuilder-m365";
+import { Application } from `@microsoft/teams-ai`;
 
 // ME query listener
 app.messageExtensions.query("searchCmd", async (context, state, query) => {
