@@ -427,13 +427,16 @@ The following table includes the response codes:
 
 ## Get meeting details API
 
-The Meeting Details API enables your app to get a meeting's static metadata. The metadata provides data points that don't change dynamically. The API is available through Bot Services. Currently, both private scheduled or recurring meetings and channel scheduled or recurring meetings support API with different RSC permissions respectively.
+The meeting details API enables your app to get a meeting's static metadata. The metadata provides data points that don't change dynamically. The API is available through Bot Services. Currently, both private scheduled or recurring meetings and channel scheduled or recurring meetings support API with different RSC permissions respectively.
 
-The `Meeting Details` API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`. To use the Meeting Details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
+The meeting details API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`. To use the meeting details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
+
+> [!NOTE]
+> The meeting details API is supported for scheduled private meetings, scheduled channel meeting, instant meetings (Meet now), one-on-one calls, and group calls in Teams desktop and mobile clients.
 
 ### Prerequisite
 
-To use the Meeting Details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
+To use the meeting details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
 
 <br>
 
@@ -564,7 +567,7 @@ this.onMessage(async(context, next) =>{
 GET /v1/meetings/{meetingId}
 ```
 
-The JSON response body for Meeting Details API is as follows:
+The JSON response body for meeting details API is as follows:
 
 * **Scheduled meetings:**
 
@@ -781,7 +784,7 @@ The following table provides the error codes:
 > [!NOTE]
 > Real-time Teams meeting events are supported for scheduled and channel meetings.
 
-The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot. The actual start and end time of a meeting are different from scheduled start and end time. The Meeting Details API provides the scheduled start and end time. The event provides the actual start and end time.
+The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot. The actual start and end time of a meeting are different from scheduled start and end time. The meeting details API provides the scheduled start and end time. The event provides the actual start and end time.
 
 If the `ChannelMeeting.ReadBasic.Group` and `OnlineMeeting.ReadBasic.Chat` permissions are added in the manifest, the bot automatically starts receiving the meeting start or end events for the scheduled and channel meeting types.
 
@@ -1127,3 +1130,4 @@ The following table provides the response codes:
 * [Get the attendance report for an online meeting](/graph/api/meetingattendancereport-get)
 * [Build in-meeting notification for Teams meeting](in-meeting-notification-for-meeting.md)
 * [Get notifications for Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)
+* [Get participants presence API](/graph/api/presence-get?&tabs=http)

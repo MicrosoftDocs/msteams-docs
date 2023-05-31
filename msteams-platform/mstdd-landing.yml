@@ -44,18 +44,40 @@ landingContent:
 #      - text: Adaptive Cards overflow menu
 #        url: ~/task-modules-and-cards/cards/cards-format.md
 
-- title: Explore the latest
+- title: Microsoft Build 2023
   linkLists:
+    - linkListType: whats-new
+      links:
+      - text: Deep link to the meeting side panel
+        url: apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel
+      - text: Live Share SDK is now generally available
+        url: apps-in-teams-meetings/teams-live-share-overview.md
+      - text: Design your app for new Teams 
+        url: concepts/design/design-teams-app-overview.md
+      - text: Teams AI library
+        url: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
+      - text: Extend Microsoft 365 Copilot
+        url: copilot/how-to-extend-copilot.md
+      - text: Distribute your app to specific countries
+        url: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries
+      - text: Teams Toolkit v5 extension within Visual Studio Code
+        url: toolkit/teams-toolkit-fundamentals.md
+      - text: Get started module includes GitHub Codespaces
+        url: get-started/get-started-overview.md
+      - text: Contextless app update
+        url: concepts/deploy-and-publish/apps-upload.md#update-your-app
+
     - linkListType: reference
       links:
       - text: Community chat room for Microsoft Teams app developers
         url: https://gitter.im/OfficeDev/home
+
+- title: Whats new
+  linkLists:
     - linkListType: whats-new
       links:
-      - text: Develop your apps with Teams Toolkit
-        url: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
-      - text: Contextless app update
-        url: concepts/deploy-and-publish/apps-upload.md#update-your-app
+      - text: Real-time meeting events are supported in channel meetings
+        url: apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api
       - text: Resource-specific consent for your Teams app
         url: graph-api/rsc/resource-specific-consent.md      
       - text: Drive customer adoption of your app
@@ -72,17 +94,12 @@ landingContent:
         url:  tabs/how-to/build-a-dashboard-tab-app.md
       - text: Targeted in-meeting notification (Developer preview)
         url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
+      - text: Set up Microsoft license management
+        url: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
+
 
     - linkListType: whats-new
       links:
-      - text: Real-time meeting events are supported in channel meetings
-        url: apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api
-      - text: Set up Microsoft license management
-        url: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
-      - text: Apps for Teams meetings support anonymous users
-        url: apps-in-teams-meetings/build-apps-for-anonymous-user.md
-      - text: Notification bot in Teams
-        url: bots/how-to/conversations/notification-bot-in-teams.md
       - text: Command bot in Teams
         url: bots/how-to/conversations/command-bot-in-teams.md
       - text: Enable SSO for your bot and message extension app
@@ -95,7 +112,6 @@ landingContent:
         url: task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu
       - text: Support global routing for bot APIs
         url: bots/how-to/conversations/send-proactive-messages.md#create-the-conversation
-
 
 - title: Get started
   linkLists:
