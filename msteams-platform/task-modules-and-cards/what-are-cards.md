@@ -16,7 +16,7 @@ The bots for Teams support the following types of cards:
 - List card
 - Connector card for Microsoft 365 Groups
 - Receipt card
-- Sign-in card
+- Sign in card
 - Thumbnail card
 - Card collections
 - Overflow menu on Adaptive Cards

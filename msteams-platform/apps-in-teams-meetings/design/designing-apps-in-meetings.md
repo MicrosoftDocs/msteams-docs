@@ -26,7 +26,7 @@ Users can add a meeting extension before and during meetings. They can also add 
 
 In the meeting details, users can select **Add a tab +** to open the app flyout and find apps optimized for meetings.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="Example shows how to add a meeting extension before a meeting.":::
+:::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="Example shows how to add a meeting extension before a meeting." lightbox="../../assets/images/apps-in-meetings/add-before-meeting.png":::
 
 ### Add during a meeting
 
@@ -40,17 +40,17 @@ Once app is added (for example, on desktop), users can access the app in a meeti
 
 In a meeting, users can select **More** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: > **Add an app** and select the app they want.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="Example shows how to add a meeting extension during a meeting.":::
+:::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="Example shows how to add a meeting extension during a meeting." lightbox="../../assets/images/apps-in-meetings/add-during-meeting.png":::
 
 ## Before a meeting
 
 Prior to a meeting, your app's available to users in a tab. The following example shows a draft survey question that people will answer during the meeting.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="Example shows how to app content in the meeting details before a call.":::
+:::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="Example shows how to app content in the meeting details before a call." lightbox="../../assets/images/apps-in-meetings/before-meeting-tab.png":::
 
 ### Anatomy: Meeting tab (before and after meetings)
 
-:::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="Example shows the structural anatomy of a meeting tab before and after a meeting.":::
+:::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="Example shows the structural anatomy of a meeting tab before and after a meeting." lightbox="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png":::
 
 |Counter|Description|
 |----------|-----------|
@@ -87,11 +87,11 @@ People might use the in-meeting tab to:
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="Example shows how you can present poll content in an in-meeting tab.":::
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="Example shows how you can present poll content in an in-meeting tab." lightbox="../../assets/images/apps-in-meetings/use-in-meeting-tab.png":::
 
 ### Anatomy: In-meeting tab
 
-:::image type="content" source="../../assets/in-meeting-tab-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting tab.":::
+:::image type="content" source="../../assets/in-meeting-tab-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting tab." lightbox="../../assets/in-meeting-tab-anatomy.png":::
 
 |Counter|Description|
 |----------|-----------|
@@ -143,7 +143,7 @@ In-meeting dialogs are triggered by a user (such as the meeting organizer) who m
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="Example shows how you can use an in-meeting dialog.":::
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="Example shows how you can use an in-meeting dialog." lightbox="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png":::
 
 ### Anatomy: In-meeting dialog
 
@@ -156,7 +156,7 @@ In-meeting dialogs are triggered by a user (such as the meeting organizer) who m
 
 ### Anatomy: In-meeting dialog header
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting dialog header.":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting dialog header." lightbox="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png":::
 
 There are two header variants. When possible, use the variant with the avatar to reinforce that the dialog is coming from a person.
 
@@ -175,7 +175,7 @@ In-meeting dialogs can vary in size to account for different scenarios. Make sur
 * **Width**: You can specify the width of the dialog's iframe anywhere within the supported size range.
 * **Height**: You can specify the height of the dialog's iframe anywhere within the supported size range. You also can allow users to scroll vertically if your app content exceeds the maximum height.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Example shows the in-meeting dialog. Width: Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Height: 300 pixels (iframe).":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Example shows the in-meeting dialog. Width: Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Height: 300 pixels (iframe)." lightbox="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png":::
 
 ## Use the shared meeting stage
 
@@ -201,9 +201,9 @@ The shared meeting stage is all about collaboration and participation. Here are 
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="Example shows a dashboard being reviewed on the shared meeting stage.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="Example shows a dashboard being reviewed on the shared meeting stage." lightbox="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="Example shows a dashboard component being reviewed on the shared meeting stage.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="Example shows a dashboard component being reviewed on the shared meeting stage." lightbox="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png":::
 
    :::column-end:::
 :::row-end:::
@@ -216,7 +216,7 @@ The shared meeting stage is all about collaboration and participation. Here are 
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-whiteboard.png" alt-text="Example shows a whiteboard on the shared meeting stage.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-whiteboard.png" alt-text="Example shows a whiteboard on the shared meeting stage." lightbox="~/assets/images/apps-in-meetings/shared-meeting-stage-whiteboard.png":::
 
    :::column-end:::
 :::row-end:::
@@ -229,14 +229,14 @@ The shared meeting stage is all about collaboration and participation. Here are 
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-quiz.png" alt-text="Example shows a quiz on the shared meeting stage.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-quiz.png" alt-text="Example shows a quiz on the shared meeting stage." lightbox="~/assets/images/apps-in-meetings/shared-meeting-stage-quiz.png":::
 
    :::column-end:::
 :::row-end:::
 
 ### Anatomy: Share all app content to a meeting
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="Image shows the design anatomy of the shared meeting stage when all app content is shared.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="Image shows the design anatomy of the shared meeting stage when all app content is shared." lightbox="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png":::
 
 |Counter|Description|
 |----------|-----------|
@@ -248,7 +248,7 @@ The shared meeting stage is all about collaboration and participation. Here are 
 
 ### Anatomy: Share specific app content to a meeting
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy-component.png" alt-text="Image shows the design anatomy of the shared meeting stage when only specific app content is shared.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy-component.png" alt-text="Image shows the design anatomy of the shared meeting stage when only specific app content is shared." lightbox="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy-component.png":::
 
 |Counter|Description|
 |----------|-----------|
@@ -281,7 +281,7 @@ When the side panel is open, the meeting stage is 918x540 pixels by default and 
 
 You can go back to a meeting after it ends and view app content. In this example, the meeting organizer can look at poll results in the **Contoso** tab. (Note: From a design standpoint, there's no difference between the pre- and post-meeting tab experience.)
 
-:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Example illustration shows a post-meeting tab.":::
+:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Example illustration shows a post-meeting tab." lightbox="../../assets/images/apps-in-meetings/post-meeting-experience.png":::
 
 ## Best practices
 
