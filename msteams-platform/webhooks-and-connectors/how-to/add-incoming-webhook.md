@@ -5,6 +5,7 @@ description: Create Incoming Webhook to Teams app and post external requests to 
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
+ms.date: 01/25/2023
 ---
 
 # Create Incoming Webhooks

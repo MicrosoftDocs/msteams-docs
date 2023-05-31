@@ -4,6 +4,7 @@ description: In this article, you'll have Microsoft 365 plugins, plugin list and
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: Surbhigupta
+ms.date: 12/21/2022
 ---
 
 # Microsoft 365 plugins

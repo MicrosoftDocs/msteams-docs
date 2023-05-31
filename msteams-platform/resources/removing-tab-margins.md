@@ -5,6 +5,7 @@ description: Learn how to remove margins around tabs in Microsoft Teams with UI 
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
+ms.date: 07/21/2022
 ---
 
 # Tab margin changes

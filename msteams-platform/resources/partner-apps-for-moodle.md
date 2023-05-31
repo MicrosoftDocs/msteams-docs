@@ -4,6 +4,7 @@ description: Learn partner apps for Moodle, key benefits of partner apps for Moo
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: Surbhigupta
+ms.date: 07/17/2022
 ---
 
 # Partner apps for Moodle

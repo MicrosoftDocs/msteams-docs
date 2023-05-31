@@ -3,6 +3,7 @@ title: Public developer preview for Microsoft Teams
 description: A Developer Preview (Beta) is public program to explore and test upcoming features for potential inclusion in your Microsoft Teams app.
 ms.topic: conceptual
 ms.localizationpriority: high
+ms.date: 01/31/2023
 ---
 # Public developer preview for Teams
 

@@ -4,6 +4,7 @@ description: Learn Moodle LMS integration with Teams, Moodle learning management
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.date: 06/17/2022
 ---
 
 # Moodle learning management system

@@ -4,6 +4,7 @@ description: In this article, fetch answers to some frequently asked questions w
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: Surbhigupta
+ms.date: 06/29/2022
 ---
 
 # Moodle FAQ
