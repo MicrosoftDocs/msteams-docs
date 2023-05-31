@@ -95,7 +95,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
       Teams web and desktop supports default (light), dark, and high-contrast themes, while Teams mobile supports light and dark themes. Each theme has its own color scheme.
 
       * [See full color guidelines and available color tokens (Figma)](https://www.figma.com/community/file/916836509871353159)
-      * [Implement colors (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.7/colors)
+      * [Implement colors (Fluent UI)](https://react.fluentui.dev/?path=/docs/theme-colors--page)
 
    :::column-end:::
    :::column span="1":::

@@ -7,14 +7,14 @@ metadata:
   level: Beginner
   ms.date: 05/05/2022
   ms.topic: interactive-tutorial
-  nextTutorialHref: toolkit/add-capability.md
-  nextTutorialTitle: Back to Add capability
+  nextTutorialHref: toolkit/teams-toolkit-tutorial.md
+  nextTutorialTitle: Teams app tutorials
   ms.custom: mvc
   ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with adaptive cards. 
+    Microsoft Teams allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with Adaptive Cards. 
 
     In this tutorial, you learn:
 
@@ -23,7 +23,7 @@ items:
     
     This step-by-step guide helps you to build command bot with Teams Toolkit. You can see the following output:
 
-      :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="final-output":::
+      :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="Screenshot shows the final output." lightbox="~/assets/images/sbs-command-bot/final-output.png":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -35,14 +35,14 @@ items:
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use latest version. |
-   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use version 4.0.0.|
+   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Teams Toolkit v5.|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
    
    > [!NOTE]
-   > The guide is tested on Teams Toolkit version 4.0.0 and Nodejs version 14 and 16. The steps in this guide may work with other versions, but that hasn't been tested.
+   > The guide is tested on Teams Toolkit v5 and Nodejs version 14 and 16. The steps in this guide may work with other versions, but that hasn't been tested.
 
    ## Prepare development environment
 
@@ -59,10 +59,10 @@ items:
    # [Visual Studio Code](#tab/vscode)
 
    1. Open Visual Studio Code and select **Extensions** (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
-   1. In the search box, enter **Teams toolkit**.
+   1. In the search box, enter **Teams Toolkit**.
    1. Select **Install** next to the Teams Toolkit.
 
-       :::image type="content" source="~/assets/images/sbs-command-bot/teams-toolkit.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
+       :::image type="content" source="~/assets/images/sbs-command-bot/teams-toolkit.png" alt-text="Illustration shows the Teams Toolkit extension installation." lightbox="~/assets/images/sbs-command-bot/teams-toolkit.png":::
 
     The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
 
@@ -71,7 +71,7 @@ items:
    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
     > [!NOTE]
-    > The latest version of Teams Toolkit is 4.2.0.
+    > The latest version of Teams Toolkit is v5.
 
    # [Command line](#tab/cli)
 
@@ -145,17 +145,17 @@ items:
 
     1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 
-    1. Select **Create a new app**.
+    1. Select **Create a New App**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/create-new-teams-app.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
 
-    1. Select **Create a new Teams app** option to create an app using Teams Toolkit.
+    1. Select **Bot** to create a new bot project.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/create-new-app.png" alt-text="Wizard starts for creating a new project":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/create-new-app.png" alt-text="Screenshot shows the wizard to Create New Project.":::
 
-    1. Ensure that **Command bot** is selected as the capability that you want to build in your app.
+    1. Ensure that **Chat Command** is selected as the app feature that you want to build in your app.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-bot.png" alt-text="Select App Capability":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
 
     1. Select **JavaScript** as the programming language.
 
@@ -163,31 +163,31 @@ items:
     
     1. Select **Default folder** to store your project root folder in default location.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-default-location.png" alt-text="Select default Location for storage.":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location for storage.":::
 
        You can also change the default location by the following steps:
 
           1. Select **Browse**.
 
-             :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-browse.png" alt-text="Select Browse for storage":::
+             :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location for storage.":::
 
           1. Select the location for project workspace.
           1. Select **Select Folder**.
 
-              :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-folder.png" alt-text="Select Folder.":::
+              :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-folder.png" alt-text="Screenshot shows the selection of folder.":::
     
     1. Enter a suitable name for your app. 
     1. Select **Enter**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/app-name.png" alt-text="Application name.":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/app-name.png" alt-text="Screenshot shows to enter the application name.":::
 
     1. After your app is created, the Teams Toolkit displays the following message:
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/new-window-notification.png" alt-text="New window Notification for scaffolding.":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/new-window-notification.png" alt-text="Screenshot shows the new window Notification for scaffolding.":::
 
         The command bot app is created in a few seconds.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/command-bot.png" alt-text="Screenshot showing the app created.":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/command-bot.png" alt-text="Screenshot shows the app created.":::
 
     1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
 
@@ -195,36 +195,43 @@ items:
 
     1. Select **Start Debugging** button.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="Debugging application":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="Screenshot shows the debugging application.":::
 
     1. Select **Add**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/add-app.png" alt-text="Add an App":::     
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/add-app.png" alt-text="Screenshot shows to add an app.":::     
 
-    1. Select the command bot.
+    1. Select the **command bot**.
     
     1. Select **Enter**.
 
-         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/hello-world-command.png" alt-text="Add an App dropdown":::  
+         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/hello-world-command.png" alt-text="Screenshot shows to add an App dropdown":::  
 
        You receive the following command response in adaptive card:
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="final-output":::      
+        :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="Screenshot shows the final output." lightbox="~/assets/images/sbs-command-bot/final-output.png":::      
 
     ## Take tour of source code
 
     Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
 
-      :::image type="content" source="~/assets/images/sbs-command-bot/folder-structure-command-bot.png" alt-text="structure tab":::
+      :::image type="content" source="~/assets/images/sbs-command-bot/folder-structure-command-bot.png" alt-text="Screenshot shows the structure tab":::
 
     If you choose to use UI framework, following sample template code provides a scaffolding with React components. It contains following content:
 
-    | File name | Contents |
-    | --- | --- |
-    | `bot/src/internal/initialize.js` | Create the global bot adapter and initialize with Teams Frameworks |
-    | `bot/src/index.js` | Server code to host the bot app and listen on /api/messages to process Teams activity with Bot Framework |
-    | `bot/src/helloworldCommandHandler.js` | A hello world command handler to process a helloworld command and return an adaptive card as response |
-    | `bot/src/adaptiveCards/*.json` | Adaptive card JSON file used as your command response |
+    | Folder / File | Contents |
+    | - | - |
+    | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+    | `teamsapp.local.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
+    | `env/`| Name / value pairs are stored in environment files and used by `teamsapp.yml` to customize the provisioning and deployment rules. |
+    | `.vscode/` | VSCode files for debugging. |
+    | `appPackage/` | Templates for the Teams application manifest. |
+    | `infra/` | Templates for provisioning Azure resources. |
+    | `src/` | The source code for the application. |
+    | `src/index.js` | Application entry point and `restify` handlers for command and response. |
+    | `src/teamsBot.js` | An empty teams activity handler for bot customization. |
+    | `src/adaptiveCards/helloworldCommand.json` | A generated Adaptive Card that is sent to Teams. |
+    | `src/helloworldCommandHandler.js` | The business logic to handle a command. |
 
 - title: Deploy your first Teams app
   durationInMinutes: 1
@@ -265,13 +272,13 @@ items:
 
     1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
-    1. Select **Provision in the Cloud** under **DEPLOYMENT**.
+    1. Select **Provision** under **LIFECYCLE**.
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/provision-cloud.png" alt-text="Screenshot showing the provisioning commands":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/provision-cloud.png" alt-text="Screenshot shows the provisioning commands.":::
 
     1. Select an existing resource group or create new resource group. For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
     
-        :::image type="content" source="~/assets/images/sbs-command-bot/subscription-cloud.png" alt-text="Screenshot showing resources for provisioning":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/subscription-cloud.png" alt-text="Screenshot show resources for provisioning.":::
 
         > [!NOTE]
         > A dialog appears mentioning that costs may be incurred when running resources in Azure.
@@ -282,41 +289,41 @@ items:
 
        The provisioning process creates resources in the Azure cloud. You can monitor the progress by observing the dialogs in the lower-right corner. After few minutes, you see the following notice:
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/deploy-provision-success1.png" alt-text="Screenshot showing the provisioning complete dialog.":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/deploy-provision-success1.png" alt-text="Screenshot shows the provisioning complete dialog.":::
 
          You have the option to view the provisioned resources. For this tutorial, you don't need to view resources.
 
-    1. Select **Deploy to the cloud** under **DEPLOYMENT** after provisioning is complete.
+    1. Select **Deploy** under **LIFECYCLE** after provisioning is complete.
 
         :::image type="content" source="~/assets/images/sbs-command-bot/deploy-cloud.png" alt-text="Screenshot showing the where to click to deploy to cloud.":::
 
     1. Select **Deploy**.
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/Deploy-confirm.png" alt-text="Deploy to confirm.":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/Deploy-confirm.png" alt-text="Screenshot shows the confirmation to deploy.":::
 
        Deployment takes some time. You can monitor the progress in the dialog in lower-right corner. After a few minutes, you see the following notice.
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/command-deploy-confirm.png" alt-text="Deploy confirm.":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/command-deploy-confirm.png" alt-text="Screenshots shows the deploy confirm.":::
     
     
     1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
     1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
     1. Select **Start Debugging** button.
 
-         :::image type="content" source="~/assets/images/sbs-command-bot/remote-debug.png" alt-text="Remote Debug.":::
+         :::image type="content" source="~/assets/images/sbs-command-bot/remote-debug.png" alt-text="Screenshot shows the remote debug.":::
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="App cloud output.":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="Screenshot shows the app cloud output.":::
 
-    1. Select the command bot.
+    1. Select the **command bot**.
     1. Select **Enter**.  
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/hello-world-cloud.png" alt-text="Hello World Command":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/hello-world-cloud.png" alt-text="Screenshot shows the Hello World Command to enter.":::
 
         You receive the following command response in adaptive card:
 
-         :::image type="content" source="~/assets/images/sbs-command-bot/cloud-final-output.png" alt-text="Cloud final output":::
+         :::image type="content" source="~/assets/images/sbs-command-bot/cloud-final-output.png" alt-text="Screenshot shows the cloud final output.":::
 
     # [Command Line](#tab/cli)
 
@@ -353,7 +360,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="Cloud final output":::
+    :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="Screenshot shows the cloud final output.":::
   
 - content: |
     You've completed the tutorial to build command response app.   
