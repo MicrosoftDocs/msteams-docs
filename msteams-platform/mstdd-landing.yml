@@ -76,6 +76,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: New Microsoft Teams client
+        url: resources/teams-updates.md 
       - text: Resource-specific consent for your Teams app
         url: graph-api/rsc/resource-specific-consent.md      
       - text: Drive customer adoption of your app
@@ -94,8 +96,6 @@ landingContent:
         url: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
       - text: Apps for Teams meetings support anonymous users
         url: apps-in-teams-meetings/build-apps-for-anonymous-user.md
-      - text: Notification bot in Teams
-        url: bots/how-to/conversations/notification-bot-in-teams.md
 
 
     - linkListType: whats-new
