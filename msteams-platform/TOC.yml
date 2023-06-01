@@ -557,6 +557,8 @@
     - name: Fetch meeting ID and organizer ID
       href: graph-api/meeting-transcripts/fetch-id.md
       displayName: Obtain meeting details using user-level notification, tenant-level notification
+    - name: Get notified when the meeting transcript is available
+      href: /graph/transcripts
     - name: Get transcripts
       href: /graph/api/resources/calltranscript
   - name: Enhanced collaboration with Live Share
