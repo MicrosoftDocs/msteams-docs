@@ -99,7 +99,9 @@ To add card actions with JavaScript and TypeScript, you can perform the followin
 
 <summary><b>1. Add an action to your Adaptive Card</b></summary>
 
-You can add a new action (button) to an Adaptive Card by defining it in the JSON file, such as add a new `Action.Execute`. This is a sample universal action type `Action.Execute`:
+You can add a new action (button) to an Adaptive Card by defining it in the JSON file, such as add a new `Action.Execute`.
+
+The following is a sample universal action type `Action.Execute`:
 
 ```helloworldCommandResponse.json
 { 
@@ -121,14 +123,14 @@ You can add a new action (button) to an Adaptive Card by defining it in the JSON
 }
 ```
 
-When the action is invoked in Teams, **verb** property is required, so that the TeamsFx conversation SDK can invoke the corresponding action handler. For more information on action to your Adaptive Card, see [Universal Actions](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md#universal-actions)
+When the action is invoked in Teams, **verb** property is required, so that the TeamsFx conversation SDK can invoke the corresponding action handler. For more information on action to your Adaptive Card, see [Universal Actions](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md#universal-actions).
 
 > [!NOTE]
 > Ensure to provide a global unique string for the **verb** property, when you're using a general string that might cause a collision with other bot. This can avoid unexpected behavior.
 
-<br>
-
 </details>
+
+<br/>
 
 <details>
 
@@ -136,10 +138,7 @@ When the action is invoked in Teams, **verb** property is required, so that the 
 
 You can return a new Adaptive Card for each action invoked to display the response to end user. You need to create a new file, `doSomethingResponse.json` as a response for the `doSomething` action with the following content:
 
-* For JS/TS: Create the Adaptive Card file in `src/adaptiveCards/` folder.
-* For C#: Create the Adaptive Card file in `Resources/` folder.
-
-```
+```json
 {
   "type": "AdaptiveCard",
   "body": [
@@ -155,12 +154,15 @@ You can return a new Adaptive Card for each action invoked to display the respon
 }
 ```
 
+* For JS/TS: Create the Adaptive Card file in `src/adaptiveCards/` folder.
+* For C#: Create the Adaptive Card file in `Resources/` folder.
+
 > [!NOTE]
 > You can design your card layout according to your business need. See, [adaptive Card designer](https://adaptivecards.io/designer/).
 
-<br>
-
 </details>
+
+<br/>
 
 <details>
 
@@ -168,7 +170,9 @@ You can return a new Adaptive Card for each action invoked to display the respon
 
 You can handle a new action invoked by Adaptive Card with TeamsFx SDK's class `TeamsFxAdaptiveCardActionHandler`. You need to customize the action in this step, such as calling an API, processing data, or any other action as per your business need.
 
-### [JavaScript](#tab/JS)
+</br>
+
+# [JavaScript](#tab/JS)
 
 You can create a new file `/src/cardActions/doSomethingActionHandler.js(ts)`:
 
@@ -192,7 +196,7 @@ You can create a new file `/src/cardActions/doSomethingActionHandler.js(ts)`:
     }
 ```
 
-### [TypeScript](#tab/TS)
+# [TypeScript](#tab/TS)
 
 You can create a new file `bot/src/cardActions/doSomethingActionHandler.ts`:
 
@@ -211,7 +215,7 @@ You can create a new file `bot/src/cardActions/doSomethingActionHandler.ts`:
     }
 ```
 
-### [C#](#tab/Csharp)
+# [C#](#tab/CS)
 
 You can handle a new `Action.Execute` action invoked by implement with TeamsFx SDK's interface `IAdaptiveCardActionHandler`. You need to customize the action in this step, such as calling an API, processing data, or any other action as per your business need.
 
@@ -271,13 +275,13 @@ The following is an example of action handler:
 * `triggerVerb` is the **verb** property of your action.
 * `actionData` is the data associated with the action, which may include dynamic user input, or some contextual data provided in the data property of your action.
 * If an Adaptive Card is returned, the existing card is replaced with it by default.
-* To customize the action response card sent in Teams chat. For more information, see [Customize the action response](#customize-the-action-response)
-
-<br>
+* To customize the action response card sent in Teams chat. For more information, see [Customize the action response](#customize-the-action-response).
 
 </details>
 
 <details>
+
+</br>
 
 <summary><b>4. Register the action handler</b></summary>
 
@@ -285,7 +289,7 @@ You need to configure each Adaptive Card action in the `conversationBot` that en
 
 The following steps help you to register the action handler:
 
-### [JavaScript/TypeScript](#tab/JS3)
+# [JavaScript/TypeScript](#tab/JS2)
 
    ```initialize.js(ts)
          const { BotBuilderCloudAdapter } = require("@microsoft/teamsfx");
@@ -303,7 +307,7 @@ The following steps help you to register the action handler:
       });
    ```
 
-### [C#](#tab/Csharp2)
+# [C#](#tab/CS2)
 
 ```csharp
 ...
@@ -332,9 +336,9 @@ builder.Services.AddSingleton(sp =>
 
 ---
 
-<br>
-
 </details>
+
+</br>
 
 ## Customize the action response
 
@@ -420,27 +424,27 @@ The following steps help you to add user-specific view with TeamsFx SDK:
   In the following sample, a base card returns as command response that can auto-refresh to specific user, such as the command sender:
 
   ```
-           import baseCard from "../adaptiveCards/baseCard.json";
-           import { AdaptiveCards } from "@microsoft/adaptivecards-tools";
+  import baseCard from "../adaptiveCards/baseCard.json";
+  import { AdaptiveCards } from "@microsoft/adaptivecards-tools";
 
-           export class HelloWorldCommandHandler implements TeamsFxBotCommandHandler {
-           triggerPatterns: TriggerPatterns = "helloWorld";
+        export class HelloWorldCommandHandler implements TeamsFxBotCommandHandler {
+        triggerPatterns: TriggerPatterns = "helloWorld";
 
-           async handleCommandReceived(context: TurnContext, message: CommandMessage): 
-           Promise<string | Partial<Activity> | void> {
-           const refreshVerb = "userViewRefresh";        // verb to identify the refresh action
-           const userIds = [ context.activity.from.id ]; // users who will be refreshed
-           const data = { key: "value"};                 // optional data associated with the action
+        async handleCommandReceived(context: TurnContext, message: CommandMessage): 
+        Promise<string | Partial<Activity> | void> {
+        const refreshVerb = "userViewRefresh";        // verb to identify the refresh action
+        const userIds = [ context.activity.from.id ]; // users who will be refreshed
+        const data = { key: "value"};                 // optional data associated with the action
 
-           const responseCard = AdaptiveCards
-             .declare(baseCard)
-             .refresh(refreshVerb, userIds, data)
+        const responseCard = AdaptiveCards
+          .declare(baseCard)
+          .refresh(refreshVerb, userIds, data)
              .render(cardData);
     
                return MessageFactory.attachment(CardFactory.adaptiveCard(responseCard));
            }
          }
-  ```
+   ```
 
 * Second option enables user-specific view to refresh your Adaptive Card. This is a sample refresh action defined in `baseCard.json`:
 
@@ -470,9 +474,9 @@ The following steps help you to add user-specific view with TeamsFx SDK:
 
   You need to replace `${userID}` with user MRI in code, while rendering your card content.
 
-<br>
-
 </details>
+
+</br>
 
 <details>
 
@@ -501,9 +505,9 @@ You need to design the user-specific Adaptive Card to refresh a specific respons
 
 ```
 
-<br>
-
 </details>
+
+</br>
 
 <details>
 
@@ -511,7 +515,7 @@ You need to design the user-specific Adaptive Card to refresh a specific respons
 
 You can add handler that implements `TeamsFxAdaptiveCardActionHandler` to process the refresh invoke activity that is automatically triggered in Teams. You can create a new file `/src/cardActions/refreshActionHandler.js(ts)`:
 
-### [JavaScript](#tab/JS2)
+# [JavaScript](#tab/JS3)
 
 ```Javascript
 const { AdaptiveCards } = require("@microsoft/adaptivecards-tools");
@@ -545,7 +549,7 @@ module.exports = {
 };
 ```
 
-### [TYpeScript](#tab/TS2)
+# [TypeScript](#tab/TS2)
 
 ```TypeScript
 const { AdaptiveCards } = require("@microsoft/adaptivecards-tools");
@@ -576,7 +580,7 @@ export class RefreshActionHandler {
 }
 ```
 
-### [C#](#tab/Csharp3)
+# [C#](#tab/CS3)
 
 You can handle a new refresh action by implementing the TeamsFx SDK's interface `IAdaptiveCardActionHandler`. You need to customize the action in this step, such as calling an API, processing data, or any other action as per your business need.
 
@@ -629,15 +633,19 @@ namespace MyBotApp.CardActions
 }
 ```
 
-<br>
+---
 
 </details>
+
+</br>
 
 <details>
 
 <summary><b>4. Register the action handler</b></summary>
 
 You can register the refresh action handler in `bot/src/internal/initialize.js(ts)` with the following code:
+
+# [JavaScript/Typescript](#tab/JS4)
 
 ```initialize.js(ts)
 export const commandBot = new ConversationBot({
@@ -652,7 +660,7 @@ export const commandBot = new ConversationBot({
 
 ```
 
-### [C#](#tab/Csharp4)
+# [C#](#tab/CS4)
 
 ```csharp
 ...
@@ -679,7 +687,7 @@ builder.Services.AddSingleton(sp =>
 });
 ```
 
-<br>
+---
 
 </details>
 
@@ -693,7 +701,7 @@ You need to often connect to existing APIs for retrieving data to send to Teams.
 
 ## FAQ
 
-<br>
+</br>
 
 <details>
 
@@ -706,41 +714,41 @@ To add the notification feature:
 1. Go to `bot\src\internal\initialize.js(ts)`
 1. Update your `conversationBot` initialization to enable notification feature:
 
-```initialize.js(ts)
-const conversationBot = new ConversationBot({ 
-  ... 
-  cardAction: { 
-    enabled: true, 
-    actions: [ 
-      new Handler1() 
-    ], 
-  },
-  notification: {
-    enabled: true
-  } 
-}); 
-
-```
+    ```initialize.js(ts)
+    const conversationBot = new ConversationBot({ 
+      ... 
+      cardAction: { 
+        enabled: true, 
+        actions: [ 
+          new Handler1() 
+        ], 
+      },
+      notification: {
+        enabled: true
+      } 
+    }); 
+    
+    ```
 
 1. Add a sample notification triggered by a HTTP request, add the sample code in `bot\src\index.js(ts)`:
 
-```initialize.js(ts)
-server.post("/api/notification", async (req, res) => {
-  for (const target of await conversationBot.notification.installations()) {
-    await target.sendMessage("This is a sample notification message");
-  }
-
-  res.json({});
-}); 
-
-```
+    ```initialize.js(ts)
+    server.post("/api/notification", async (req, res) => {
+      for (const target of await conversationBot.notification.installations()) {
+        await target.sendMessage("This is a sample notification message");
+      }
+    
+      res.json({});
+    }); 
+    
+    ```
 
 1. Uninstall your previous bot installation from Teams, and press **F5** to start your application.
 1. Send a notification to the bot installation targets (channel/group chat/personal chat) by using a your favorite tool to send a HTTP POST request to `https://localhost:3978/api/notification`. For more information, see [Notification bot in Teams](notification-bot-in-teams.md).
 
-<br>
-
 </details>
+
+</br>
 
 <details>
 
@@ -748,9 +756,9 @@ server.post("/api/notification", async (req, res) => {
 
 The default workflow bot comes with command and response. For more information to extend workflow bot with command and response, see [add command and response](command-bot-in-teams.md#add-command-and-response).
 
-<br>
-
 </details>
+
+</br>
 
 ## Step-by-step guide
 
