@@ -182,7 +182,6 @@ TeamsFx SDK provides a convenient class `TeamsFxBotCommandHandler`, to handle wh
 # [JavaScript](#tab/js)
 
 ```JavaScript
-/** JavaScript **/
 const doSomethingCard = require("./adaptiveCards/doSomethingCommandResponse.json");
 const { AdaptiveCards } = require("@microsoft/adaptivecards-tools");
 const { CardFactory, MessageFactory } = require("botbuilder");
