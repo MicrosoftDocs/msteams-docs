@@ -80,6 +80,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Device permission](../concepts/device-capabilities/browser-device-permissions.md) | A Teams app setting that you can configure in your app. You use it to request permission for your app to access and utilize a native device capability. You can manage device permissions in Teams settings. <br>**See also**: [App permissions](#a) |
 | [Dev environment](../toolkit/TeamsFx-multi-env.md#create-a-new-environment-manually-in-visual-studio-code) | A type of development environment that Teams Toolkit creates by default. It represents remote or cloud environment configurations. A project can have multiple remote environments. You can add more dev environments to your project using Teams Toolkit. <br>**See also** [Environment](#e); [Local environment](#l) |
 | [DevTools](../tabs/how-to/developer-tools.md) | Browser's DevTools are used to view console logs, view or modify runtime network requests, add breakpoints to code (JavaScript) and perform interactive debugging for a Teams app. The feature is only available for desktop and Android clients after the Developer Preview has been enabled. |
+| [Dialog](../task-modules-and-cards/what-are-task-modules.md) | Teams app capability to create modal pop-ups for completing tasks, displaying videos, or dashboard. Formerly known as *Task modules*. <br> 
 | [Dynamic search](../task-modules-and-cards/cards/dynamic-search.md#dynamic-typeahead-search) | A search feature for Adaptive Cards that is useful to search and select data from large data sets. It helps to filter out the choices as the user enters the search string. <br>**See also**: [Static search](#s) |
 
 ## E
@@ -211,7 +212,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | --- | --- |
 | [Tab](../tabs/what-are-tabs.md) | Tabs are Teams-aware webpages embedded in Microsoft Teams that point to domains declared in manifest. You can add it inside a team, group chat, or personal app. |
 | [Tab chat](../tabs/how-to/conversational-tabs.md) | A type of tab that lets a user have a focused conversation experience in dynamic tabs. |
-| [Dialogs](../task-modules-and-cards/what-are-task-modules.md) | A feature of Teams app to create modal pop-up for completing tasks, displaying videos, or dashboard. <br> **See also**: [Adaptive Card](#a) |
+| Task module | See [Dialog](#d) |
 | [Thread discussion](../tabs/design/tabs.md#thread-discussion) | A conversation posted on a channel or chat between users. <br>**See also** [Conversation](#c); [Channel](#c) |
 | [Teams](../overview.md) | Microsoft Teams is the ultimate message app for your organization. It's a workspace for real-time collaboration and communication, meetings, file and app sharing. |
 | [Teams identity](../tabs/how-to/authentication/tab-sso-overview.md) | The Microsoft account or Microsoft 365 account of an app user that is used to log in to Teams client, web, or mobile app. |

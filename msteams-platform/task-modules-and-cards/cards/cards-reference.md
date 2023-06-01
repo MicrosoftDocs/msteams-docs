@@ -55,7 +55,7 @@ You can identify and use different types of cards based on your application requ
 
 ## Features that support different card types
 
-| Card type | Bots | Message extension previews | Message extension results | Dialogs | Outgoing Webhooks | Incoming Webhooks | Connectors for Microsoft 365 Groups|
+| Card type | Bots | Message extension previews | Message extension results | Dialogs (task modules) | Outgoing Webhooks | Incoming Webhooks | Connectors for Microsoft 365 Groups|
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Adaptive Card | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
 | Connector card for Microsoft 365 Groups | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ | ✔️ |
@@ -123,7 +123,7 @@ The following table provides the features that support Adaptive Cards:
 > [!NOTE]
 >
 > * Teams platform supports v1.5 or earlier of Adaptive Card features for bot sent cards and action based message extensions.
-> * Teams platform supports v1.5 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), tabs, and dialogs.
+> * Teams platform supports v1.5 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), tabs, and dialogs (task modules).
 > * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
 > * Media elements are currently not supported in Adaptive Card on the Teams platform.
 > * Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content is not truncated.

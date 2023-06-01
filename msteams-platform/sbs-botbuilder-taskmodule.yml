@@ -22,7 +22,7 @@ items:
     * Help users to keep track of the bot state.
     * Retrieve input from user and display custom web page content.
 
-    This step-by-step guide helps you to create a sample Azure bot to invoke Teams dialog. You'll see the following output:
+    This step-by-step guide helps you to create a sample Azure bot to invoke a Teams dialog. You'll see the following output:
 
      :::image type="content" source="./assets/images/Teams-task-module/final_image.png" alt-text="Dialog":::
 

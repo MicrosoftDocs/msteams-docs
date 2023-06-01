@@ -47,7 +47,7 @@ There are two types of message extension commands, action command and search com
 
 Action commands are used to present the users with a modal pop-up to collect or display information. When the user submits the form, your web service responds by inserting a message into the conversation directly or by inserting a message into the compose message area. After that, the user can submit the message. You can chain multiple forms together for more complex workflows.
 
-The action commands are triggered from the compose message area, the command box, or from a message. When the command is invoked from a message, the initial JSON payload sent to your bot includes the entire message it was invoked from. The following image displays the message extension action command dialog:
+The action commands are triggered from the compose message area, the command box, or from a message. When the command is invoked from a message, the initial JSON payload sent to your bot includes the entire message it was invoked from. The following image displays the message extension action command dialog (task module):
 
 :::image type="content" source="~/assets/images/task-module.png" alt-text="Message extension action command dialog":::
 
@@ -56,7 +56,7 @@ The action commands are triggered from the compose message area, the command box
 Search commands allow the users to search an external system for information either manually through a search box, or by pasting a link to a monitored domain into the compose message area and insert the results of the search into a message. In the most basic search command flow, the initial invoke message includes the search string that the user submitted. You respond with a list of cards and card previews. The Teams client renders a list of card previews for the user. When the user selects a card from the list, the full-size card is inserted into the compose message area.
 
 The cards are triggered from the compose message area or the command box and not triggered from a message. They can't be triggered from a message.
-The following image displays the message extension search command dialog:
+The following image displays the message extension search command dialog (task module):
 
 :::image type="content" source="~/assets/images/search-extension.png" alt-text="Message extension search command":::
 

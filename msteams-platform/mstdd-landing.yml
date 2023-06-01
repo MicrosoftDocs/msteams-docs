@@ -196,7 +196,7 @@ landingContent:
       url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
     - text: Build webhooks and connectors
       url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - text: Build cards and dialogs
+    - text: Build cards and dialogs (task modules)
       url: ~/task-modules-and-cards/cards-and-task-modules.md
     - text: App manifest
       url: ../msteams-platform/resources/schema/manifest-schema.md

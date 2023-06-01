@@ -22,7 +22,7 @@ Adding capabilities with Teams Toolkit allows you to extend the functionality of
 |--------|-------------|-----------------|
 |**Basic Teams app**|&nbsp;|&nbsp;|
 | **Tab** |  Basic tabs are simple HTML tags that refer to domains declared in the app manifest. You can add tabs as a part of channel inside a team, group chat, or personal app for an individual user.|Basic tab, notification bot, command bot, basic bot, and basic message extension|
-| **Bot** |  Bots help to interact with your web service through text, interactive cards, and task modules.|Basic message extension, SSO-enabled tab, and basic tab|
+| **Bot** |  Bots help to interact with your web service through text, interactive cards, and dialogs (task modules).|Basic message extension, SSO-enabled tab, and basic tab|
 | **Message extension** | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|Basic bot, SSO-enabled tab, and basic tab|
 |**Scenario-based Teams app**|&nbsp;|&nbsp;|
 | **Notification bot** | Notification bot proactively sends messages in Teams channel or group chat, or personal chat. You can trigger the notification bot with an HTTP request, such as cards or texts. |SSO-enabled tab and basic tab|

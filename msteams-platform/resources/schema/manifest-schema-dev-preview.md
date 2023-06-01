@@ -479,8 +479,8 @@ Each command item is an object with the following structure:
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value that indicates whether the command should be run initially with no parameters. Default: `false`|
 |`context`|Array of Strings|3||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. Default is `["compose", "commandBox"]`|
-|`fetchTask`|Boolean|||A Boolean value that indicates if it should fetch the dialog dynamically.|
-|`taskInfo`|Object|||Specify the dialog to preload when using a message extension command.|
+|`fetchTask`|Boolean|||A Boolean value that indicates if it should fetch the dialog (task module) dynamically.|
+|`taskInfo`|Object|||Specify the dialog (task module) to preload when using a message extension command.|
 |`taskInfo.title`|String|64||Initial dialog title.|
 |`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|

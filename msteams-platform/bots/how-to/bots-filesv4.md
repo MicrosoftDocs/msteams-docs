@@ -234,7 +234,7 @@ private static Attachment GetInlineAttachment()
 
 ### Basic example in C# #
 
-The following code shows an example of how to handle file uploads and send file consent requests in the bot's dialog:
+The following code shows an example of how to handle file uploads and send file consent requests in the bot's dialog (task module):
 
 ```csharp
 

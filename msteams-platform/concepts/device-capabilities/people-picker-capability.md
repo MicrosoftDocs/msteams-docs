@@ -14,7 +14,7 @@ You can use [Microsoft Teams JavaScript client library](/javascript/api/overview
 
 ## Advantages of using People Picker
 
-* Works on all Teams capabilities, such as dialog, chat, channel, meeting tab, and personal app.
+* Works on all Teams capabilities, such as dialog (task module), chat, channel, meeting tab, and personal app.
 * Allows the user to search and select people in a chat, channel, or the entire organization within Teams.
 * Helps in scenarios involving task assignment, tagging, and notifying user.
 * Saves significant time and effort in comparison to building any similar control.

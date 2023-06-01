@@ -1,5 +1,5 @@
 ---
-title: Use dialogs in Microsoft Teams bots
+title: Use dialogs (task modules) in Microsoft Teams bots
 description: Learn how to use dialogs with Microsoft Teams bots, including Bot Framework cards, Adaptive cards, and deep links.
 ms.localizationpriority: medium
 ms.topic: how-to
@@ -26,14 +26,14 @@ Here's how a dialog is invoked using `task/fetch`:
 
 1. The image shows a Bot Framework hero card with a **Buy** `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke). The value of the `type` property is `task/fetch` and the rest of the `value` object can be of your choice.
 1. The bot receives the `invoke` HTTP POST message.
-1. The bot creates a response object and returns it in the body of the POST response with an HTTP 200 response code. For more information on schema for responses, see the [discussion on task/submit](#responds-to-the-tasksubmit-messages). The following code provides an example of body of the HTTP response that contains a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object) embedded in a wrapper object:
+1. The bot creates a response object and returns it in the body of the POST response with an HTTP 200 response code. For more information on schema for responses, see the [discussion on task/submit](#responses-to-tasksubmit-messages). The following code provides an example of body of the HTTP response that contains a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object) embedded in a wrapper object:
 
     ```json
     {
       "task": {
         "type": "continue",
         "value": {
-          "title": "Task module title",
+          "title": "Dialog (task module) title",
           "height": 500,
           "width": "medium",
           "url": "https://contoso.com/msteams/taskmodules/newcustomer",
@@ -51,14 +51,14 @@ The next section provides details on submitting the result of a dialog.
 
 ## Submit the result of a dialog
 
-When the user is finished with the dialog, submitting the result back to the bot is similar to the way it works with tabs. For more information, see [example of submitting the result of a task module](./task-modules-tabs.md#example-of-submitting-the-result-of-a-dialog). There are a few differences as follows:
+When the user is finished with the dialog, submitting the result back to the bot is similar to the way it works with tabs. For more information, see [example of submitting the result of a dialog](./task-modules-tabs.md#example-of-submitting-the-result-of-a-dialog). There are a few differences as follows:
 
 * HTML or JavaScript that is `UrlDialogInfo.url`: Once you've validated what the user has entered, call the `microsoftTeams.dialog.url.submit()`. You can call `submit()` without any parameters if you want Teams to simply close the dialog, but you must pass an object or a string to your `submitHandler` as the first parameter, `result`. Teams will then invoke your submitHandler with `err` as `null`, and `result` as the object or string you passed to `submit()`. If you call `submit()` with a `result` parameter, you must pass an `appId` or an array of `appId` strings. This allows Teams to validate that the app sending the result is the same one that invoked the dialog. Your bot then receives a `task/submit` message including `result`. For more information, see [payload of `task/fetch` and `task/submit` messages](#payload-of-taskfetch-and-tasksubmit-messages).
 * Adaptive Card that is `AdaptiveCardDialogInfo.card`: The Adaptive Card body as filled in by the user is sent to the bot through a `task/submit` message when the user selects any `Action.Submit` button.
 
 The next section provides details on how to respond to the `task/submit` messages.
 
-## Responds to the `task/submit` messages
+## Responses to `task/submit` messages
 
 When the user finishes with a dialog invoked from a bot, the bot always receives a `task/submit invoke` message. You have several options when responding to the `task/submit` message as follows:
 
@@ -200,7 +200,7 @@ The schema for Bot Framework card actions is different from Adaptive Card `Actio
 
 |Sample name | Description | .NET | Node.js | Manifest|
 |----------------|-----------------|--------------|----------------|----------------|
-|Task module sample bots-V4 | This sample shows how to create task modules using bot framework v4 and Teams tab. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
+|Task module sample bots-V4 | This sample shows how to create dialogs using bot framework v4 and Teams tab. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
 
 ## Step-by-step guide
 

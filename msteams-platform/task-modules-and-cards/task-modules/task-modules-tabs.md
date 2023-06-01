@@ -1,5 +1,5 @@
 ---
-title: Use dialogs in Microsoft Teams tabs
+title: Use dialogs (task modules) in Microsoft Teams tabs
 description: Learn how to invoke dialogs from Teams tabs and submit results using the Microsoft Teams client library (TeamsJS).
 ms.localizationpriority: medium
 ms.topic: how-to
@@ -243,7 +243,7 @@ function validateForm() {
 ## Dialog invocation errors
 
 > [!NOTE]
-> This section pertains to usage patterns for the `tasks` (dialog) namespace, which is now deprecated in favor of the `dialog` namespace and its HTML (`url`), Adaptive Card (`adaptiveCard`), and bot (`dialog.url.bot` and `dialog.adaptiveCard.bot`) sub-namespaces.
+> This section pertains to usage patterns for the `tasks` (task module) namespace, which is now replaced by the `dialog` namespace and its sub-namespaces for HTML (`url`), Adaptive Card (`adaptiveCard`), and bot-based (`dialog.url.bot` and `dialog.adaptiveCard.bot`) functionality.
 
 The following table provides the possible values of `err` that can be received by your `submitHandler`:
 
@@ -258,7 +258,7 @@ The following table provides the possible values of `err` that can be received b
 
 |Sample name | Description | .NET | Node.js | Manifest
 |----------------|-----------------|--------------|----------------|----------------|
-|Dialog sample bots-V4 | This sample shows how to create dialogs using bot framework v4 and teams tabs. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
+|Task module sample bots-V4 | This sample shows how to create dialogs using bot framework v4 and teams tabs. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
 
 ## Next step
 

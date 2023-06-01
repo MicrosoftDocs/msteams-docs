@@ -55,7 +55,7 @@ SameSite cookie attributes are as follows:
 ### Tabs, dialogs, and message extensions
 
 * Teams tabs use `<iframes>` to embed content that is viewed at a top level or first party context.
-* Dialogs allow you to create modal pop-up experiences in your Teams application. Similar to a tab, a modal window opens inside the current page.
+* Dialogs (task modules) allow you to create modal pop-up experiences in your Teams application. Similar to a tab, a modal window opens inside the current page.
 * Message extensions allow you to insert enriched content into a chat message from external resources.
 
 Any cookies used by embedded content are considered as third party when the site is displayed in an `<iframe>`. In addition, if any remote resources on a page rely on cookies being sent with a request `<img>` and `<script>` tags, external fonts, and personalized content, you must ensure those are marked for cross site usage, such as `SameSite=None; Secure` or ensure that a fallback is in place.

@@ -1,5 +1,5 @@
 ---
-title: Respond to the dialog submit action
+title: Respond to the dialog (task module) submit action
 author: surbhigupta
 description: Learn how to respond to the dialog submit action from a message extension action command with Proactive message. Define search commands and respond to searches.
 ms.localizationpriority: medium
@@ -11,7 +11,7 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-This document guides you on how your app responds to the action commands, such as user's dialog submit action.
+This document guides you on how your app responds to the action commands, such as user's dialog (task module) submit action.
 After a user submits the dialog, your web service receives a `composeExtension/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to the invoke.  
 
 You have the following options to respond:
@@ -408,7 +408,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### Respond to botMessagePreview edit
 
-If the user edits the card before sending, by selecting **Edit**, you receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = edit`. Respond by returning the dialog (task module) you sent, in response to the initial `composeExtension/fetchTask` invoke that began the interaction. This allows the user to start the process by reentering the original information. Use the available information to update the dialog so that the user need not fill out all information from scratch.
+If the user edits the card before sending, by selecting **Edit**, you receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = edit`. Respond by returning the dialog you sent, in response to the initial `composeExtension/fetchTask` invoke that began the interaction. This allows the user to start the process by reentering the original information. Use the available information to update the dialog so that the user need not fill out all information from scratch.
 
 For more information on responding to the initial `fetchTask` event, see [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md).
 

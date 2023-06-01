@@ -53,7 +53,8 @@ Teams platform features that are available to all app developers.
 <summary><b>2023</b></summary>
 
 | **Date** | **Update** | **Find here** |
-| -------- | --------- | ----------------|
+| -------- | --------- | ---------------|
+| 04/05/2023 | Teams platform concept of *task module* replaced by *dialog*. | Build cards and dialogs > Build dialogs > [Invoke and dismiss dialogs](./task-modules-and-cards/task-modules/invoking-task-modules.md) |
 | 24/04/2023 | Develop your apps with Teams Toolkit | Tools and SDKs > Developer Portal for Teams > [Develop your apps with Teams Toolkit](concepts/build-and-test/develop-your-apps-with-teams-toolkit.md) |
 | 14/04/2023 | Contextless app update | Distribute your app > [Upload your app in Teams](concepts/deploy-and-publish/apps-upload.md#update-your-app) |
 | 06/04/2023 | Set up Microsoft license management | Monetize your app > [Set up Microsoft license management](~/concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md) |

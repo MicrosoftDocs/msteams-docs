@@ -19,7 +19,7 @@ You can enrich your Teams app with native device capabilities, such as camera, m
 
 ## Native device permissions
 
-You must request the device permissions to access native device capabilities. The device permissions work similarly for all app constructs, such as tabs, dialogs, or message extensions. The user must go to the permissions page in Teams settings to manage device permissions.
+You must request the device permissions to access native device capabilities. The device permissions work similarly for all app constructs, such as tabs, dialogs (task modules), or message extensions. The user must go to the permissions page in Teams settings to manage device permissions.
 By accessing the device capabilities, you can build richer experiences on the Teams platform, such as:
 
 * Capture and view images

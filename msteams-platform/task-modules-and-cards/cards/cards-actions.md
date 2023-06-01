@@ -256,7 +256,7 @@ CardFactory.actions([
 
 ## Action type invoke
 
-The `invoke` action is used for invoking [dialogs](~/task-modules-and-cards/task-modules/task-modules-bots.md).
+The `invoke` action is used for invoking [dialogs](~/task-modules-and-cards/task-modules/task-modules-bots.md) (task modules).
 
 The `invoke` action contains three properties, `type`, `title`, and `value`.
 

@@ -235,7 +235,7 @@ There are three ways to collect information from a user in Teams.
 
 In this method, all you need to do is define a static list of parameters in the manifest as shown above in the "Create To Do" command. To use this method, ensure `fetchTask` is set to `false` and that you define your parameters in the manifest.
 
-When a user chooses a command with static parameters, Teams will generate a form in a dialog with the defined parameters in the manifest. On hitting Submit, a `composeExtension/submitAction` is sent to the bot. For more information on the expected set of responses, see [Responding to submit](#responding-to-submit).
+When a user chooses a command with static parameters, Teams will generate a form in a dialog (task module) with the defined parameters in the manifest. On hitting Submit, a `composeExtension/submitAction` is sent to the bot. For more information on the expected set of responses, see [Responding to submit](#responding-to-submit).
 
 ### Dynamic input using an adaptive card
 
@@ -576,7 +576,7 @@ public class MessagesController : ApiController
 
         if (activity.Type == ActivityTypes.Invoke)
         {
-            // Initial task module presented to the user.
+            // Initial dialog (task module) presented to the user.
             if (activity.Name == "composeExtension/fetchTask")
             {
                 string task = GetTaskModule();

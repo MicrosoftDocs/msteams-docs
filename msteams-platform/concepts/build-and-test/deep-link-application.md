@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Deep link to an application
 
-Application can open the profile dialog through deep links and help users to learn more about the application, permissions, and more. You can create a deep link for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the URL, `https://teams.microsoft.com/l/app/<appId>`. A dialog appears to install or open the app.
+Applications can open the profile dialog through deep links and help users to learn more about the application, permissions, and more. You can create a deep link for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the URL, `https://teams.microsoft.com/l/app/<appId>`. A dialog appears to install or open the app.
 
 If your app is approved for mobile platform, you can deep link to an app on mobile. Apple App Store Connect Team ID is required additionally for the deep link to work on Teams-iOS. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
@@ -230,7 +230,7 @@ The query parameters are:
 
 Example: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList`
 
-## Deep link to open a dialog
+## Deep link to open a dialog (task module)
 
 A dialog deep link is a serialization of the `TaskInfo` object with two other details, the `APP_ID` and optionally the `BOT_APP_ID`:
 

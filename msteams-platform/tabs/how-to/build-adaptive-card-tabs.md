@@ -21,7 +21,7 @@ When developing a tab using the traditional method, you might run into these iss
 
 You can build Adaptive Card tabs in Teams. Instead of embedding web content in an iFrame, you can render Adaptive Cards to a tab. While the front end is rendered with Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
 
-You can build your tabs with ready-made user interface (UI) building blocks native on desktop, web, and mobile. This article helps you understand the changes required to be made to the app manifest. The article also identifies how the invoke activity requests and sends information in tab with Adaptive Cards, and its effect on the dialog workflow.
+You can build your tabs with ready-made user interface (UI) building blocks native on desktop, web, and mobile. This article helps you understand the changes required to be made to the app manifest. The article also identifies how the invoke activity requests and sends information in tab with Adaptive Cards, and its effect on the modal dialog workflow.
 
 The following image shows build tabs with Adaptive Cards in desktop and mobile:
 
@@ -31,7 +31,7 @@ The following image shows build tabs with Adaptive Cards in desktop and mobile:
 
 Before you start using Adaptive Cards to build tabs, you must:
 
-* Be familiar with [bot development](../../bots/what-are-bots.md), [Adaptive Cards](https://adaptivecards.io/), and [dialogs](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams.
+* Be familiar with [bot development](../../bots/what-are-bots.md), [Adaptive Cards](https://adaptivecards.io/), and [modal dialogs](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams.
 * Have a bot running in Teams for your development.
 
 ## Changes to app manifest
@@ -220,7 +220,7 @@ The following code provides examples of `tab/submit` request and response:
 
 ## Understand dialog workflow
 
-The dialog also uses Adaptive Card to invoke `task/fetch` and `task/submit` requests and responses. For more information, see [using Dialogs in Microsoft Teams bots](../../task-modules-and-cards/task-modules/task-modules-bots.md).
+Modal dialogs (task modules) also use Adaptive Cards to invoke `task/fetch` and `task/submit` requests and responses. For more information, see [using Dialogs in Microsoft Teams bots](../../task-modules-and-cards/task-modules/task-modules-bots.md).
 
 With the introduction of Adaptive Card tab, there's a change in how the bot responds to a `task/submit` request. If you're using an Adaptive Card tab, the bot responds to the `task/submit` invoke request with the standard tab **continue** response, and closes the dialog. The Adaptive Card tab is updated by rendering the new list of cards provided in the tab **continue** response body.
 

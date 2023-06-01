@@ -91,7 +91,7 @@ You can create deep links to entities in Teams. They're used to create links tha
 
 ### Dialogs
 
-A dialog is a modal pop-up experience that you can trigger from your tab. In a content page, use dialogs to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The dialogs themselves can be additional content pages or created completely using Adaptive Cards. For more information, see [using dialogs in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+A dialog (task module) is a modal pop-up experience that you can trigger from your tab. In a content page, use dialogs to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The dialogs themselves can be additional content pages or created completely using Adaptive Cards. For more information, see [using dialogs in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 ### Valid domains
 

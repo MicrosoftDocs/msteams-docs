@@ -1,6 +1,6 @@
 ---
-title: Invoke and dismiss dialogs
-description: Learn about invoking and dismissing dialogs (task modules), the DialogInfo object, dialog sizing, and dialog deep link syntax using code samples
+title: Invoke and dismiss dialogs (task modules)
+description: Learn about invoking and dismissing dialogs, the DialogInfo object, dialog sizing, and dialog deep link syntax using code samples
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium

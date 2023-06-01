@@ -1,16 +1,16 @@
 ---
-title: Create and send dialog
+title: Create and send dialogs (task modules)
 author: surbhigupta
 description: Learn how to create and send dialogs. Handle the initial invoke action and respond with a dialog from an action message extension command.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Create and send dialog
+# Create and send dialogs
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-You can create the dialog using an Adaptive Card or an embedded web view. To create a dialog, you must perform the process called the initial invoke request. This document covers
+You can create a modal dialog (task module) using an Adaptive Card or an embedded web view. To create a dialog, you must perform the process called the initial invoke request. This document covers
 the initial invoke request, payload activity properties when a dialog is invoked from 1:1 chat, group chat, channel (new post), channel (reply to thread), and command box.
 > [!NOTE]
 > If you are not populating the dialog with parameters defined in the app manifest, you must create the dialog for users with either an Adaptive Card or an embedded web view.
