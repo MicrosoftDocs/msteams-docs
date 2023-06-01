@@ -669,15 +669,15 @@ A tenant is like a space or a container for your organization in Teams, where yo
 
 After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
-Do you already have a tenant, and do you've the admin access? Let's check if you really do!
+Do you already have a tenant and the admin access? Let's check if you really do!
 
 Verify if you can sideload apps in Teams:
 
 1. In the Teams client, select **Store** icon.
 1. Select **Manage your apps**.
-1. Select **Upload a custom app**. If you see Upload a customized app option, sideloading apps is enabled.
+1. Select **Upload a custom app**. If you see Upload a custom app option, sideloading apps is enabled.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG" alt-text="Screenshot of Manage your apps in Teams with the Upload an app dialog open. Apps icon, Manage your apps, Upload an app, and Upload a customised app options highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG" alt-text="Screenshot of Manage your apps in Teams with the Upload an app dialog open. Apps icon, Manage your apps, Upload an app, and Upload a customized app options highlighted in red.":::
 
     > [!NOTE]
     > Contact your Teams administrator, if you don't find the option to upload a custom app.
@@ -719,7 +719,7 @@ In this page, you'll learn:
 Use Teams Toolkit to create your first tab project. The toolkit takes you through a series of pages to create and configure your Teams app project:
 
 1. **Create a new project** page: You can select the project type.
-1. **Configure your new project** page: You enter the project details.
+1. **Configure your new project** page: You can enter the project details.
 1. **Create a new Teams application** page: You can select the Teams app capabilities.
 
 **To create your tab project workspace**
@@ -769,17 +769,15 @@ Use Teams Toolkit to create your first tab project. The toolkit takes you throug
 
 1. Select Teams app feature.
 
-    Select app feature:
-
    1. Select the **Tab** as the capability for your app.
 
    1. Select **Create**.
 
-:::image type="content" source="../../assets/images/teams-toolkit-v2/first-tab/select-language-tab_1.png" alt-text="Screenshot2 of Create a new Teams application with Tab and Create options highlighted in red.":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/first-tab/create-tab.png" alt-text="Screenshot2 of Create a new Teams application with Tab and Create options highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/first-tab/create-tab.png":::
 
 Your Teams tab app is created in few seconds.
 
-:::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/vs-tab-app.png" alt-text="Screenshot3 of Visual Studio displaying tips to get started while building your app.":::
+:::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/vs-tab-app.png" alt-text="Screenshot3 of Visual Studio displaying tips to get started while building your app."lightbox="../../assets/images/teams-toolkit-v2/blazor/vs-tab-app.png":::
 
 <details>
 <summary>A quick recap of creating a Teams tab app.</summary>
@@ -831,7 +829,7 @@ To build and run your app:
     1. Registers your application for sideloading in Teams.
     1. Starts your application backend running locally.
     1. Starts your application front-end hosted locally.
-    1. Starts Teams in a web browser with a command to instruct Teams to side load the application the URL is registered inside the application manifest.
+    1. Starts Teams in a web browser with a command to instruct Teams to side load the application, the URL is registered inside the application manifest.
 
     </details>
 
@@ -879,11 +877,11 @@ To build and run your app:
 
 ## Preview your first Teams tab app
 
-You have learned to create, build, and run Teams app with tab capability. The following final steps are to deploy your app on Azure and Preview in Teams:
+You have learned to create, build, and run Teams app with tab capability. The following final steps are to deploy your app on Azure and preview in Teams follow the steps:
 
 1. [Provision your tab app in the cloud](#to-provision-your-tab-app-in-the-cloud): You can provision your tab app in the cloud.
 1. [Deploy your tab app to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud.
-1. [Preview your tab app in Teams](#to-preview-your-tab-app-in-teams): Your tab app opens in Teams.
+1. [Preview your tab app in Teams](#to-preview-your-tab-app-in-teams): Your can preview your tab app in Teams.
 
     Let's deploy the first app with tab capability on Azure using Teams Toolkit.
 
@@ -891,7 +889,7 @@ You have learned to create, build, and run Teams app with tab capability. The fo
 
 1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png" alt-text="Screenshot13 of Visual Studio with Project, Teams Toolkit, and Provision in the Cloud options are highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png" alt-text="Screenshot13 of Visual Studio with Project, Teams Toolkit, and Provision in the Cloud options are highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png":::
 
 1. Enter the subscription and resource group details in the **Provision** dialog:
    1. Select the subscription name from  **Subscription name** dropdown list.
