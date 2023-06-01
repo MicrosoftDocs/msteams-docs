@@ -124,40 +124,32 @@ For details about what topics are supported for each scenario, see the specific 
 > [!NOTE]
 > The activity icon is based on the context the request is made in. If the request is made with delegated permissions, the user's photo appears as the avatar, while the Teams app icon appears as the activity icon. In an application-only context, the Teams app icon is used as the avatar and the activity icon is omitted.
 
+### Scenarios based on first party apps
+
+|Scenarios|Description|
+|:---|:---|
+|**News**|New assigment, task, or post this kind of news help user to stay with the latest update.|
+|**Collaboration**|Shared a file, mentioned you in comment so, this helps to understand where the coworker requires a collobaration. Activity notification grabs the attention in teams as we a pop up and see who is requesting in the text preview.|
+|**Reminder**|A backlog, but not doing it yet and its due or focus time is coming up. For example, a training is coming up nearing the due date and this type of reminder notification helps to interact user form other tasks. |
+|**Alert**|It's like urgent that requires attention immedaitely. For example, a traing passed due to complete or admin send a request to fix a bugor change some configuration fast.|
+
+### Scenario-based adoption strategy
+
+|Notifications|App Capability|Notification requirement|
+|:---|:---|:---|
+|Activity notifications|Tab app |Feed <br> Personal Notification <br> Localization <br> Batch send|
+|Bot notifications|Bot app|Adaptive cards <br> Notification sent from bot <br> Quick response <br> Media|
+
 ## Customize the notifications alerts / Manage activity feed notifications
 
 Microsoft Teams users can customize the notifications they see in their feed, as a banner, and so on. Notifications generated through activity feed APIs can also be customized. Users can choose how they are notified via settings in Microsoft Teams. Teams apps will appear in the list for the user to choose from, as shown in the following screenshot.
 
 :::image type="content" source="../assets/images/activity-feed/notification-settings.png" alt-text="Screenshot shows the Notifications settings in Teams, with the Custom option highlighted.":::
 
-Users can click **Edit** next to an app and customize the notifications, as shown in the following example. The `description` field in the Teams app manifest is displayed.
+Users can select **Edit** next to an app and customize the notifications, as shown in the following example. The `description` field in the Teams app manifest is displayed.
 
 :::image type="content" source="../assets/images/activity-feed/app-level-notification-settings.png" alt-text="Screenshot shows notifications customized to Banner and feed for a Teams app.":::
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../sbs-graphactivity-feedbroadcast.yml) to send activity feed notifications in Teams.
-
-## Scenario-based adoption strategy
-
-App should choose between NAPI and Bot mainly based on 2 factors:
-
-   1. App’s main capability
-   1. Notification requirements
-
-### App’s main capability
-
-App’s main capability is the one in which app supports most functionalities.
-
-- If an app is mainly a Tab app, for example, Viva Engage, Assignments, NAPI is a better option because Activity is a native Teams integration that brings user seamlessly into the Tab app, without the need for additional integration or setup.
-- If an app mainly relies on Bot, for example, Polly, Bot is a better option because the notification card is an easy integration that provides consistent user experience within the Bot app.
-
-### Notification requirements
-
-Based on where and how we want users to see notifications:
-
-- If users would like to see notification in Feed, use NAPI and if adaptive card, use Bot.
-- If the personal notification should appear being sent on behalf of someone, use NAPI. If the notification appears to be sent from Bot app, use Bot.
-- If notification requires Team localization and batch sending to big number of users, use NAPI. If the notification requires quick response or media content, use Bot.
-
-:::image type="content" source="../assets/images/activity-feed/Scenario-based-adoption-strategy.png" alt-text="Screenshot shows the scenarios to adapt.":::
+Follow the [step-by-step guide](../sbs-graphactivity-feedbroadcast.yml) to send activity feed notifications in Teams.
