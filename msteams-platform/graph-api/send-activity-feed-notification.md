@@ -135,10 +135,23 @@ For details about what topics are supported for each scenario, see the specific 
 
 ### Scenario-based adoption strategy
 
-|Notifications|App Capability|Notification requirement|
-|:---|:---|:---|
-|Activity notifications|Tab app |Feed <br> Personal Notification <br> Localization <br> Batch send|
-|Bot notifications|Bot app|Adaptive cards <br> Notification sent from bot <br> Quick response <br> Media|
+|Notifications|App Capability|&nbsp;|Notification requirement|
+|---|---|---|---|
+|&nbsp;|&nbsp;|Pros|Cons|
+|Activity notifications|Tab app |Feed <br> Personal Notification <br> Localization <br> Batch send|App must be installed for the user.<br> No one-click response/action. <br> May need admin consent in some cases.|
+|Bot notifications|Bot app|Adaptive cards <br> Notification sent from bot <br> Quick response <br> Media|Notification can be turned of from chat or channel.<br>App must be installed in the scope (chat or channel).<br>Need to set up app’s own storage for prod environment.|
+
+### Use Activity notification and Bot notification
+
+|Activity notifications|Bot notifications|
+|:---|:---|
+|A notification is sent to an individual about customized content that requires their attention.|A notification is sent to everyone on a channel or chat about the same or related content.|
+|A rich content in Tab app or URL is required.|Highly customizable UI in a Card is required.|
+|To support complex user interactions.|To provide quick response/action buttons.|
+|Multiple notifications are sent in a batch.|Scheduled notifications are required to be sent.|
+|Users who initiated the notification send a delegated notification.|The notification to light up double badges on both Activity & Chat or Channel or App.|
+|Template is added in manifest. |Template is added in source code.|
+|Teams to handle localization.|Easy in handling localization by yourself or app.|
 
 ## Customize the notifications alerts / Manage activity feed notifications
 
