@@ -285,7 +285,7 @@ You need to configure each Adaptive Card action in the `conversationBot` that en
 
 The following steps help you to register the action handler:
 
-### [JavaScript/TypeScript](#tab/JS2)
+### [JavaScript/TypeScript](#tab/JS3)
 
    ```initialize.js(ts)
          const { BotBuilderCloudAdapter } = require("@microsoft/teamsfx");
