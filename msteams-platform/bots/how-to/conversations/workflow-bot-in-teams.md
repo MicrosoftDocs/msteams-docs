@@ -3,7 +3,7 @@ title: Workflow bot in Teams
 author: surbhigupta
 description: Learn how to send a response to card action in Teams workflow bot, add more card actions and customize action responses.
 ms.topic: conceptual
-ms.author: v-amprasad
+ms.author: v-bvishnu
 ms.localizationpriority: high
 ---
 
@@ -285,7 +285,7 @@ You need to configure each Adaptive Card action in the `conversationBot` that en
 
 The following steps help you to register the action handler:
 
-### [JavaScript/TypeScript](#tab/JS(TS))
+### [JavaScript/TypeScript](#tab/JS2)
 
    ```initialize.js(ts)
          const { BotBuilderCloudAdapter } = require("@microsoft/teamsfx");
@@ -329,6 +329,8 @@ builder.Services.AddSingleton(sp =>
     return new ConversationBot(options);
 });
 ```
+
+---
 
 <br>
 
