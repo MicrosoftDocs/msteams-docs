@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Notification bot in Teams
 
-Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to a personal, group chat, or a channel in Teams. You can send notifications as plain text or Adaptive Cards. The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
+Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to a personal, group chat, or a channel in Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
 
 The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your requirement. For example, in a scenario where a travel agency builds an app in Teams for their customers to keep them up-to-date with the weather forecast. In the following diagram you can see a Teams app that sends notification to the travelers about the destination weather forecast:
 
@@ -48,15 +48,18 @@ When you send notifications, TeamsFx SDK creates a new conversation from the sel
 
 ```TypeScript
 
-   // list all installation targets
-for (const target of await bot.notification.installations()) {
-    // call Bot Framework's adapter.continueConversation()
-    await target.adapter.continueConversation(target.conversationReference, async (context) => {
-        // your own bot logic
-        await context...
-    });
+// list all installation targets
+for (const target of await notificationApp.notification.installations()) {
+    // call Bot Framework's adapter.continueConversationAsync()
+    await target.adapter.continueConversationAsync(
+        target.botAppId,
+        target.conversationReference,
+        async (context) => {
+            // your own bot logic
+            await context...
+        }
+    );
 }
-```
 
 # [C#](#tab/csharp)
 
@@ -114,7 +117,7 @@ You can customize the following triggers:
 
 * Azure Functions based notification:
 
-  * When you select timer trigger, the default implemented Azure Function timer trigger `src/timerTrigger.ts` sends an Adaptive Card every 30 seconds. You can edit the file `*Trigger/function.json` to customize the `schedule` property. For more information, see [Azure Function documentation](/azure/azure-functions/functions-bindings-timer?tabs=in-process&pivots=programming-language-javascript).
+  * When you select timer `trigger`, the default implemented Azure Function timer trigger `src/timerTrigger.ts` sends an Adaptive Card every 30 seconds. You can edit the file `*Trigger/function.json` to customize the `schedule` property. For more information, see [Azure Function documentation](/azure/azure-functions/functions-bindings-timer?tabs=python-v2%2Cin-process&pivots=programming-language-javascript#ncrontab-expressions)
 
     :::image type="content" source="../../../assets/images/notification-bot/notification-timer-triggered.png" alt-text="sample of timer triggered notification":::
 
@@ -128,13 +131,13 @@ You can customize the following triggers:
 
   * `Cosmos DB` trigger to send notifications when a Cosmos document is created or updated.
 
-For more information on support triggers, see [Azure Functions support triggers](/azure/azure-functions/functions-triggers-bindings?tabs=javascript).
+For more information on support triggers, see [Azure Functions support triggers](/azure/azure-functions/functions-triggers-bindings?tabs=javascript#supported-bindings).
 
 ### Customize the notification content
 
 The file `src/adaptiveCards/notification-default.json` defines the default Adaptive Card. You can use the [Adaptive Card designer](https://adaptivecards.io/designer/) to help visually design your Adaptive Card UI. The `src/cardModels.ts` defines a data structure that is used to load data for the Adaptive Card. The binding between the card model and the Adaptive Card is done by matching name such as `CardData.title` maps to `${title}` in the Adaptive Card. You can add, edit, or remove properties and their bindings to customize the Adaptive Card as required.
 
-You can also add new cards if needed. For more information on how to build different types of Adaptive Cards with a list or table of dynamic contents using `ColumnSet` and `FactSet`, see [Adaptive Card notification sample](<https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification>).
+You can also add new cards if needed. For more information on how to build different types of Adaptive Cards with a list or table of dynamic contents using `ColumnSet` and `FactSet`, see [Adaptive Card notification sample](<https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/adaptive-card-notification>).
 
 ### Customize where notifications are sent
 
@@ -143,125 +146,131 @@ You can customize sending the notification to the following targets:
 * Notifications to a personal chat:
 
   ```TypeScript
-       // list all installation targets
-       for (const target of await bot.notification.installations()) {
-           // "Person" means this bot is installed as Personal app
-           if (target.type === "Person") {
-              // Directly notify the individual person
-               await target.sendAdaptiveCard(...);
-           }
-       }
+
+// list all installation targets
+for (const target of await notificationApp.notification.installations()) {
+    // "Person" means this bot is installed as Personal app
+    if (target.type === "Person") {
+        // Directly notify the individual person
+        await target.sendAdaptiveCard(...);
+    }
+}
+
   ```
 
   ```C#
-        // list all installation targets
-        foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
-        // "Person" means this bot is installed as Personal   app
-           if (target.Type == NotificationTargetType.Person)
-       {
-          // Directly notify the individual person
-          await target.SendAdaptiveCard(...);
-       }
+// list all installation targets
+      foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
+      // "Person" means this bot is installed as Personal   app
+         if (target.Type == NotificationTargetType.Person)
+     {
+        // Directly notify the individual person
+        await target.SendAdaptiveCard(...);
      }
+   }
   ```
 
 * Notifications to a group chat:
 
   ```TypeScript
-            // list all installation targets
-            for (const target of await bot.notification.installations()) {
-            // "Group" means this bot is installed to a Group Chat
-            if (target.type === "Group") {
-            // Directly notify the Group Chat
-            await target.sendAdaptiveCard(...);
 
-            // List all members in the Group Chat then notify each member
-            const members = await target.members();
-            for (const member of members) {
+// list all installation targets
+for (const target of await notificationApp.notification.installations()) {
+    // "Group" means this bot is installed to a Group Chat
+    if (target.type === "Group") {
+        // Directly notify the Group Chat
+        await target.sendAdaptiveCard(...);
+
+        // List all members in the Group Chat then notify each member
+        const members = await target.members();
+        for (const member of members) {
             await member.sendAdaptiveCard(...);
-           
-            }
-          }
         }
+    }
+}
 
   ```
 
   ```C#
-           // list all installation targets
-           foreach (var target in await _conversation.Notification.GetInstallationsAsync())     {
-              // "Group" means this bot is installed to a Group Chat
-              if (target.Type == NotificationTargetType.Group)
-             {
-                // Directly notify the Group Chat
-                await target.SendAdaptiveCard(...);
+// list all installation targets
+foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
+    // "Group" means this bot is installed to a Group Chat
+    if (target.Type == NotificationTargetType.Group)
+    {
+        // Directly notify the Group Chat
+        await target.SendAdaptiveCard(...);
 
-                // List all members in the Group Chat then notify each member
-                var members = await target.GetMembersAsync();
-                foreach (var member in members) {
-                await member.SendAdaptiveCard(...);
-                 }
-             }
-          }
+        // List all members in the Group Chat then notify each member
+        var members = await target.GetMembersAsync();
+        foreach (var member in members) {
+            await member.SendAdaptiveCard(...);
+        }
+    }
+}
   ```
 
 * Notifications to a channel:
 
   ```TypeScript
-               // list all installation targets
-            for (const target of await bot.notification.   installations()) {
-            // "Channel" means this bot is installed to a Team (default to notify General channel)
-            if (target.type === "Channel") {
-            // Directly notify the Team (to the default General channel)
-            await target.sendAdaptiveCard(...);
 
-            // List all members in the Team then notify each member
-            const members = await target.members();
-            for (const member of members) {
+// list all installation targets
+for (const target of await notificationApp.notification.installations()) {
+    // "Channel" means this bot is installed to a Team (default to notify General channel)
+    if (target.type === "Channel") {
+        // Directly notify the Team (to the default General channel)
+        await target.sendAdaptiveCard(...);
+
+        // List all members in the Team then notify each member
+        const members = await target.members();
+        for (const member of members) {
             await member.sendAdaptiveCard(...);
-              }
+        }
 
-              // List all channels in the Team then notify each channel
-              const channels = await target.channels();
-              for (const channel of channels) {
-                await channel.sendAdaptiveCard(...);
-               }
-             }
-           }
+        // List all channels in the Team then notify each channel
+        const channels = await target.channels();
+        for (const channel of channels) {
+            await channel.sendAdaptiveCard(...);
+        }
+    }
+}
+
   ```
 
   ```C#
-        // list all installation targets
-        foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
-        // "Channel" means this bot is installed to a Team (default to notify General channel)
-        if (target.Type == NotificationTargetType.Channel)
-        {
-          // Directly notify the Team (to the default General channel)
-             await target.SendAdaptiveCard(...);
+// list all installation targets
+foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
+    // "Channel" means this bot is installed to a Team (default to notify General channel)
+    if (target.Type == NotificationTargetType.Channel)
+    {
+        // Directly notify the Team (to the default General channel)
+        await target.SendAdaptiveCard(...);
 
-            // List all members in the Team then notify each member
-            var members = await target.GetMembersAsync();
-            foreach (var member in members) {
+        // List all members in the Team then notify each member
+        var members = await target.GetMembersAsync();
+        foreach (var member in members) {
             await member.SendAdaptiveCard(...);
         }
 
         // List all channels in the Team then notify each channel
         var channels = await target.GetChannelsAsync();
         foreach (var channel in channels) {
-        await channel.SendAdaptiveCard(...);
+            await channel.SendAdaptiveCard(...);
         }
-      }
     }
+}
 
   ```
 
 * Notifications to a specific channel:
 
   ```TypeScript
-         // find the first channel when the predicate is true.
-         const channel = await bot.notification.findChannel(c => Promise.resolve(c.info.name === "MyChannelName"));
 
-        // send adaptive card to the specific channel. 
-        await channel?.sendAdaptiveCard(...);
+// find the first channel when the predicate is true.
+const channel = await notificationApp.notification.findChannel(c => Promise.resolve(c.info.name === "MyChannelName"));
+
+// send adaptive card to the specific channel.
+await channel?.sendAdaptiveCard(...);
+
    ```
 
    > [!NOTE]
@@ -271,11 +280,11 @@ You can customize sending the notification to the following targets:
 
   ```TypeScript
 
-        // find the first person when the predicate is true.
-        const member = await bot.notification.findMember(m => Promise.resolve(m.account.name === "Bob"));
+// find the first person when the predicate is true.
+const member = await notificationApp.notification.findMember(m => Promise.resolve(m.account.name === "Bob"));
 
-        // send adaptive card to the specific person. 
-        await member?.sendAdaptiveCard(...);
+// send adaptive card to the specific person. 
+await member?.sendAdaptiveCard(...);
    ```
 
    > [!NOTE]
@@ -293,13 +302,14 @@ You need to create `ConversationBot` to send notification.
 # [JavaScript/TypeScript](#tab/jsts)
 
 ```JS/TS
-/** Javascript/Typescript: bot/src/internal/initialize.*s **/
-const bot = new ConversationBot({
-    // The bot id and password to create BotFrameworkAdapter.
-    // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about adapters.
+/** Javascript/Typescript: src/internal/initialize.*s **/
+const notificationApp = new ConversationBot({
+    // The bot id and password to create CloudAdapter.
+    // See https://aka.ms/about-bot-adapter to learn more about adapters.
     adapterConfig: {
-        appId: process.env.BOT_ID,
-        appPassword: process.env.BOT_PASSWORD,
+        MicrosoftAppId: config.botId,
+        MicrosoftAppPassword: config.botPassword,
+        MicrosoftAppType: "MultiTenant",
     },
     // Enable notification
     notification: {
@@ -312,15 +322,21 @@ const bot = new ConversationBot({
 
 ```C#
 /** .NET: Program.cs or Startup.cs **/
-// list all installation targets
-foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
-    // "Person" means this bot is installed as Personal app
-    if (target.Type == NotificationTargetType.Person)
+// Create the Conversation with notification feature enabled.
+builder.Services.AddSingleton(sp =>
+{
+    var options = new ConversationOptions()
     {
-        // Directly notify the individual person
-        await target.SendAdaptiveCard(...);
-    }
-}
+        // To use your own CloudAdapter
+        Adapter = sp.GetService<CloudAdapter>(),
+        Notification = new NotificationOptions
+        {
+            BotAppId = builder.Configuration["MicrosoftAppId"],
+        },
+    };
+
+    return new ConversationBot(options);
+});
 ```
 
 ---
@@ -333,20 +349,20 @@ You can customize by creating your own adapter, or customize the adapter after i
 
 ```Typescript
 
-  // Create your own adapter
-const adapter = new BotFrameworkAdapter(...);
+// Create your own adapter
+const adapter = new CloudAdapter(...);
 
 // Customize your adapter, e.g., error handling
 adapter.onTurnError = ...
 
-const bot = new ConversationBot({
+const notificationApp = new ConversationBot({
     // use your own adapter
     adapter: adapter;
     ...
 });
 
 // Or, customize later
-bot.adapter.onTurnError = ...
+notificationApp.adapter.onTurnError = ...
 
 ```
 
@@ -359,17 +375,18 @@ Storage can be used to implement notification connections. You can add your own 
 # [TypeScript](#tab/ts4)
 
 ```Typescript
-   // implement your own storage
+// implement your own storage
 class MyStorage implements NotificationTargetStorage {...}
 const myStorage = new MyStorage(...);
 
 // initialize ConversationBot with notification enabled and customized storage
-const bot = new ConversationBot({
-    // The bot id and password to create BotFrameworkAdapter.
-    // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about adapters.
+const notificationApp = new ConversationBot({
+    // The bot id and password to create CloudAdapter.
+    // See https://aka.ms/about-bot-adapter to learn more about adapters.
     adapterConfig: {
-        appId: process.env.BOT_ID,
-        appPassword: process.env.BOT_PASSWORD,
+        MicrosoftAppId: config.botId,
+        MicrosoftAppPassword: config.botPassword,
+        MicrosoftAppType: "MultiTenant",
     },
     // Enable notification
     notification: {
@@ -414,10 +431,14 @@ If storage isn't provided, you can use a default local file storage, which store
 * `.notification.localstore.json` if running locally.
 * `${process.env.TEMP}/.notification.localstore.json`, if `process.env.RUNNING_ON_AZURE` is set to 1.
 
+The `NotificationTargetStorage` is different from Bot Framework SDK's [custom storage](/azure/bot-service/bot-builder-custom-storage). The notification storage requires `read`, `write`, `delete`, `list` functionalities but Bot Framework SDK's storage has `read`, `write`, `delete`, and doesn’t have `list` functionality.
+
 For sample implementation to use Azure blob storage, see [add notification storage implementation sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/ga/adaptive-card-notification/bot/src/storage/blobsStorage.ts).
 
 > [!NOTE]
-> It's recommended to use your own shared storage for production environment.
+>
+> * It's recommended to use your own shared storage for production environment.
+> * If you implement your own Bot Framework SDK's storage, for example, `botbuilder-azure-blobs.BlobsStorage`, you need to implement another storage for notification. You can share the same Blob Connection String with different containers.
 
 [Back to top](#notification-bot-in-teams)
 
@@ -483,7 +504,7 @@ You can resolve this in the following ways:
 * Send a message to your personal bot or mention your bot in group chat, or channel, which helps you to reach the bot service again with correct installation information.
 * Uninstall the bot app from Teams then redebug or relaunch it. You can resend the installation event to bot service.
 
-Notification target connections are stored in the persistence storage. If you're using the default local file storage, all installations are stored under `bot/.notification.localstore.json`.
+Notification target connections are stored in the persistence storage. If you're using the default local file storage, all installations are stored under `.notification.localstore.json`.
 
 > [!NOTE]
 > For more information to add your own storage, see [add storage](#add-storage).
@@ -519,9 +540,9 @@ Notification target connections are stored in the persistence storage. If you're
 
 <details>
 
-<summary><b>Why is undefined error returned when using the API findChannel()?</b></summary>
+<summary><b>Why is undefined error returned when using the API `findChannel`()?</b></summary>
 
-You can encounter an undefined error, when the bot app is installed into other channels instead of the **General** channel. To fix this error, you can uninstall the bot app from Teams and redebug and relaunch it. After you've redebug and relaunched, ensure that the bot app is installed into the **General** channel.
+You can encounter an undefined error, when the bot app is installed into other channels instead of the `General` channel. To fix this error, you can uninstall the bot app from Teams and redebug and relaunch it. After you've redebug and relaunched, ensure that the bot app is installed into the `General` channel.
 
 <br>
 
@@ -531,7 +552,7 @@ You can encounter an undefined error, when the bot app is installed into other c
 
 <summary><b>Can I know all the targets where my bot is installed in and out of the notification project?</b></summary>
 
-There are Microsoft Graph APIs to list apps installed in a team, group, or chat. If required you need to iterate your team, group, or chat into an installed app to be targeted. In the notification project, it uses persistence storage to store installation targets. For more information, see [notification based on events](#notification-based-on-events).
+There are [Microsoft Graph APIs](/graph/api/team-list-installedapps) to list apps installed in a team, group, or chat. If required you need to iterate your team, group, or chat into an installed app to be targeted. In the notification project, it uses persistence storage to store installation targets. For more information, see [notification based on events](#notification-based-on-events).
 
 <br>
 
@@ -541,7 +562,7 @@ There are Microsoft Graph APIs to list apps installed in a team, group, or chat.
 
 <summary><b>How to customize the Azurite listening ports?</b></summary>
 
-If Azurite exits due to port in use, you can specify another listening port and update the connection string of `AzureWebJobsStorage` in `bot/local.settings.json`.
+If Azurite exits due to port in use, you can [specify another listening port](/azure/storage/common/storage-use-azurite?tabs=visual-studio#blob-listening-port-configuration) and update the [connection string](/azure/storage/common/storage-use-azurite?tabs=visual-studio#http-connection-strings) of `AzureWebJobsStorage` in `local.settings.json`.
 
 <br>
 
