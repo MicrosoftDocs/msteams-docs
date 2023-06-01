@@ -84,7 +84,7 @@ Let's look at how Teams capabilities enable different features for your app.
 
 :::image type="content" source="../../assets/images/overview/teams-app-capabilities.png" alt-text="Image showing Teams capabilities" lightbox="../../assets/images/overview/teams-app-capabilities.png":::
 
-:::image type="content" source="../../assets/images/overview/teams-app-cap2.png" alt-text="screenshot showing the graphical representation." lightbox="../../assets/images/overview/teams-app-cap2.png":::
+:::image type="content" source="../../assets/images/overview/teams-app-cap3.png" alt-text="screenshot showing the graphical representation." lightbox="../../assets/images/overview/teams-app-cap3.png":::
 
 For example:
 
