@@ -279,11 +279,11 @@ You can customize sending the notification to the following targets:
 
   ```TypeScript
 
-// find the first person when the predicate is true.
-const member = await notificationApp.notification.findMember(m => Promise.resolve(m.account.name === "Bob"));
+  // find the first person when the predicate is true.
+  const member = await notificationApp.notification.findMember(m => Promise.resolve(m.account.name === "Bob"));
 
-// send adaptive card to the specific person.
-await member?.sendAdaptiveCard(...);
+  // send adaptive card to the specific person. 
+  await member?.sendAdaptiveCard(...);
 
    ```
 
