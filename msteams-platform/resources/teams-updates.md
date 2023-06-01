@@ -26,10 +26,10 @@ To ensure a smooth transition, a phased rollout of the new platform is planned a
 
 * **Availability of all platform features from Teams classic**: All the platform features from Teams classic will be available in the new Teams client by June 2023. We plan to officially launch the new platform after addressing the known issues and incorporating feedback.
 
-You can distinguish between the Teams host clients using the [HostName](/javascript/api/@microsoft/teams-js/hostname?view=msteams-client-js-latest&preserve-view=true) property. Classic Teams client and the new Teams client are represented using the `teams` and `teamsModern` fields respectively.
+You can distinguish between the Teams host clients using the `hostName` property. Classic Teams client and the new Teams client are represented using the `teams` and `teamsModern` fields respectively.
 
-* SDK v1.x: `hostName`
-* SDK v2.x: `app.Context.app.host.name`
+* SDK v1.x: [`hostName`](/javascript/api/@microsoft/teams-js/hostname?view=msteams-client-js-latest&preserve-view=true)
+* SDK v2.x: [`app.Context.app.host.name`](/javascript/api/@microsoft/teams-js/app.appinfo?view=msteams-client-js-latest&preserve-view=true)
 
 ## Known issues
 
@@ -52,4 +52,5 @@ If you have any issues with your app, request you to raise a bug and provide fee
 
 ## See also
 
-[Support and feedback](../feedback.md)
+[What's new for developers in Microsoft Teams](../whats-new.md)
+[Teams app that fits](../overview.md)
