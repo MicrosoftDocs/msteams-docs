@@ -125,18 +125,6 @@ You can build your Microsoft Teams app using following different tools and SDKs:
 
 :::row:::
     :::column span="1":::
-        **Teams AI library**
-    :::column-end:::
-    :::column span="2":::
-        Teams AI library is a Teams-centric interface to GPT-based common language models and user intent engines. The AI library provides a simple capabilities-driven approach and helps you create intelligent apps quickly and easily with prebuilt, reusable code snippets so that you can focus on building the business logic rather than learning the semantics of Teams conversational applications.
-
-        > [!div class="nextstepaction"]
-        > [Teams AI library](../../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column span="1":::
         **Fluent UI**
     :::column-end:::
     :::column span="2":::
