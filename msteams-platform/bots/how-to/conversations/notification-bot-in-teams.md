@@ -90,6 +90,7 @@ A notification bot needs to be installed into a team, or a group chat, or as per
 :::image type="content" source="../../../assets/images/notification-bot/notification-installation-scope.png" alt-text="add installation scope":::
 
 For more install options, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
+For uninstalling, see [remove an app from Teams](https://support.microsoft.com/en-us/office/remove-an-app-from-teams-0bc48d54-e572-463c-a7b7-71bfdc0e4a9d).
 
 [Back to top](#notification-bot-in-teams)
 
@@ -481,7 +482,7 @@ In the following table, you can see the comparison of the two different ways:
 ### Incoming Webhook notification
 
 Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webhooks are enabled for a Team in any channel, it exposes the HTTPS endpoint, which accepts correctly formatted JSON and inserts the messages into that channel. For example, you can create an Incoming Webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts.
-TeamsFx provides you with an [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/incoming-webhook-notification#getting-started-with-incoming-webhook-notification-sample) that helps you:
+TeamsFx provides you with an [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/incoming-webhook-notification) that helps you:
 
 * [Create an Incoming Webhook](../../../webhooks-and-connectors/how-to/add-incoming-webhook.md) in Teams.
 * Send notifications using Incoming Webhooks with Adaptive Cards.
