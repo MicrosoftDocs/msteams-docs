@@ -238,11 +238,11 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 
     Sometimes there might be a delay between when the app user gives consent and when the middle-tier service acknowledges it for fetching the token. This results in the API call to fail authentication and it returns a `invalid_grant` or `interaction_required` response. As a result, the consent dialog is shown to the app user again, and they need to give consent again.
 
-    This is a known limitation as in such scenarios the app user might need to give consent 3 to 5 times before the access token is granted.
+    This is a known limitation as in such scenarios the app user might need to give consent three to five times before the access token is granted.
 
     While there's no workaround to this limitation, Azure AD recommends that you can build a meaningful wait-and-retry mechanism to overcome this issue.
 
-    The wait-and-retry mechanism allows your app to call the `getAuthToken()` API using the app ID and client secret if the app user has already given consent. The mechanism must wait and retry calling the API again. It might take 3 to 5 attempts before the middle-tier service takes the app user's consent into account. For each attempt, add a one-second delay for the retry to the wait-and-retry mechanism. This mechanism allows your app to retry fetching the access token after the app user has given consent only once.
+    The wait-and-retry mechanism allows your app to call the `getAuthToken()` API using the app ID and client secret if the app user has already given consent. The mechanism must wait and retry calling the API again. It might take three to five attempts before the middle-tier service takes the app user's consent into account. For each attempt, add a one-second delay for the retry to the wait-and-retry mechanism. This mechanism allows your app to retry fetching the access token after the app user has given consent only once.
 
 ## Code sample
 
