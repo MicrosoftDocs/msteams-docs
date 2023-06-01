@@ -41,6 +41,42 @@ You can build your Microsoft Teams app using following different tools and SDKs:
 
 :::row:::
     :::column span="1":::
+        **SharePoint Framework (SPFx)**
+    :::column-end:::
+    :::column span="2":::
+        The SharePoint Framework (SPFx) is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams and Microsoft Viva.
+
+        > [!div class="nextstepaction"]
+        > [SharePoint Framework (SPFx)](/sharepoint/dev/spfx/sharepoint-framework-overview)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        **Live Share SDK**
+    :::column-end:::
+    :::column span="2":::
+        Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code.
+
+        > [!div class="nextstepaction"]
+        > [Live Share SDK](~/apps-in-teams-meetings/teams-live-share-overview.md)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        **Microsoft Authentication Library (MSAL)**
+    :::column-end:::
+    :::column span="2":::
+        The Microsoft Authentication Library (MSAL) enables developers to acquire security tokens from the Microsoft identity platform to authenticate users and access secured web APIs.
+
+        > [!div class="nextstepaction"]
+        > [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
         **Microsoft Graph SDKs**
     :::column-end:::
     :::column span="2":::
@@ -77,37 +113,49 @@ You can build your Microsoft Teams app using following different tools and SDKs:
 
 :::row:::
     :::column span="1":::
-        **Microsoft Authentication Library (MSAL)**
+        **Teams AI library**
     :::column-end:::
     :::column span="2":::
-        The Microsoft Authentication Library (MSAL) enables developers to acquire security tokens from the Microsoft identity platform to authenticate users and access secured web APIs.
+        Teams AI library is a Teams-centric interface to GPT-based common language models and user intent engines. The AI library provides a simple capabilities-driven approach and helps you create intelligent apps quickly and easily with prebuilt, reusable code snippets so that you can focus on building the business logic rather than learning the semantics of Teams conversational applications.
 
         > [!div class="nextstepaction"]
-        > [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview)
+        > [Teams AI library](../../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column span="1":::
-        **SharePoint Framework (SPFx)**
+        **Teams AI library**
     :::column-end:::
     :::column span="2":::
-        The SharePoint Framework (SPFx) is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams and Microsoft Viva.
+        Teams AI library is a Teams-centric interface to GPT-based common language models and user intent engines. The AI library provides a simple capabilities-driven approach and helps you create intelligent apps quickly and easily with prebuilt, reusable code snippets so that you can focus on building the business logic rather than learning the semantics of Teams conversational applications.
 
         > [!div class="nextstepaction"]
-        > [SharePoint Framework (SPFx)](/sharepoint/dev/spfx/sharepoint-framework-overview)
+        > [Teams AI library](../../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column span="1":::
-        **Live Share SDK**
+        **Fluent UI**
     :::column-end:::
     :::column span="2":::
-        Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code.
+        You can design and build your Teams app from scratch with the following basic Fluent UI components.
 
         > [!div class="nextstepaction"]
-        > [Live Share SDK](~/apps-in-teams-meetings/teams-live-share-overview.md)
+        > [Fluent U](../design/design-teams-app-basic-ui-components.md)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        **SharePoint REST API**
+    :::column-end:::
+    :::column span="2":::
+        You can interact remotely with SharePoint data by using any technology that supports Representational State Transfer (REST) web requests. You can perform basic create, read, update, and delete (CRUD) operations by using the REST interface provided by SharePoint.
+
+        > [!div class="nextstepaction"]
+        > [SharePoint REST API](/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service?tabs=csom)
     :::column-end:::
 :::row-end:::
 
