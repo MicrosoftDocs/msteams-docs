@@ -8,7 +8,7 @@ ms.topic: reference
 ---
 # Microsoft Teams update
 
-[New Microsoft Teams client](https://www.microsoft.com/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) is re-imagined from the ground up with performance in mind. It's faster, simpler, smarter, and flexible to provide better experience for your apps and users. The new Teams Client is closely aligned with all the existing Teams Clients (desktop, web and mobile) where your apps run. You can use the new Teams Client with all the existing capabilities in Teams at full feature parity.
+[New Microsoft Teams client](https://www.microsoft.com/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) is reimagined from the ground up with performance in mind. It's faster, simpler, smarter, and flexible to provide better experience for your apps and users. The new Teams Client is closely aligned with all the existing Teams Clients (desktop, web and mobile) where your apps run. You can use the new Teams Client with all the existing capabilities in Teams at full feature parity.
 
 If you have an app that runs inside the Classic Teams Client for Windows or Mac, Teams Web Clients for Edge, Chrome, or Firefox, and Teams Mobile Clients for Android and iOS, the app will most likely run in the new Teams Client without any issues.
 
@@ -22,11 +22,11 @@ Apps in the new Teams client run better and faster as:
 
 To ensure a smooth transition, a phased rollout of the new platform is planned as follows:
 
-* **Developer Preview**: The new Teams client is available in Public Developer Preview starting 24th May 2023. You can access the new platform and test your apps. We encourage you to adopt the feature early and provide feedback to help refine the platform.
+* **Developer Preview**: The new Teams client is available in Public Developer Preview starting 24 May 2023. You can access the new platform and test your apps. We encourage you to adopt the feature early and provide feedback to help refine the platform.
 
 * **Availability of all platform features from Teams classic**: All the platform features from Teams classic will be available in the new Teams client by June 2023. We plan to officially launch the new platform after addressing the known issues and incorporating feedback.
 
-You can distinguish between the Teams host clients using the `hostName` property. Classic Teams client and the new Teams client are represented using the `teams` and `teamsModern` fields respectively.
+You can distinguish between the Teams host clients using the `hostName` property. Classic Teams client and the new Teams client are represented using the `teams` and `teamsModern` fields, respectively.
 
 * SDK v1.x: [`hostName`](/javascript/api/@microsoft/teams-js/hostname?view=msteams-client-js-latest&preserve-view=true)
 * SDK v2.x: [`app.Context.app.host.name`](/javascript/api/@microsoft/teams-js/app.appinfo?view=msteams-client-js-latest&preserve-view=true)
@@ -42,7 +42,7 @@ You can distinguish between the Teams host clients using the `hostName` property
 
 * [Share in Teams](../concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) isn't supported in the new Teams client.
 
-* API's used in Teams that require [device permissions](../concepts/device-capabilities/native-device-permissions.md) aren't supported.
+* APIs used in Teams that require [device permissions](../concepts/device-capabilities/native-device-permissions.md) aren't supported.
 
 * [Adaptive card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client.
 
