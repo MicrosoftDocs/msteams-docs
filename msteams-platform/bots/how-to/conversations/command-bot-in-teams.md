@@ -28,35 +28,61 @@ A command bot needs to be installed into a team, or a group chat, or as personal
 :::image type="content" source="../../../assets/images/command-bot-teams/commandbot-installation.png" alt-text="installation option selection":::
 
 For more install options, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
+For uninstalling, see [remove an app from Teams](https://support.microsoft.com/en-us/office/remove-an-app-from-teams-0bc48d54-e572-463c-a7b7-71bfdc0e4a9d).
 
 ## Command and response
 
-The TeamsFx command and response bots are built using the Bot Framework SDK. The Bot Framework SDK provides built-in message handler to handle the incoming message activity, which requires you to understand the concept of Bot Framework such as the event-driven conversation model. TeamsFx SDK provides command-response abstraction layer to let the users focus on handling the command request according to the business need, without learning the Bot Framework SDK.
+The TeamsFx command and response bots are built using the [Bot Framework SDK](/azure/bot-service/bot-builder-basics). The Bot Framework SDK provides [built-in message handler](../../bot-basics.md#teams-activity-handlers) to handle the incoming message activity, which requires you to understand the concept of Bot Framework such as the [event-driven conversation model](/azure/bot-service/bot-activity-handler-concept). TeamsFx SDK provides command-response abstraction layer to let the users focus on handling the command request according to the business need, without learning the Bot Framework SDK.
 
-TeamsFx SDK pulls Bot Framework middleware to handle the integration with the underlying activity handlers. If the received message text matches the command pattern provided in a `TeamsFxBotCommandHandler` instance, the middleware handles the incoming message activity and invokes the corresponding `handlerCommandReceived` function. After this process, the middleware calls `context.sendActivity` to send the command response returned from the `handlerCommandReceived` function to the user.
+TeamsFx SDK pulls [Bot Framework middleware](/azure/bot-service/bot-builder-concept-middleware) to handle the integration with the underlying activity handlers. If the received message text matches the command pattern provided in a `TeamsFxBotCommandHandler` instance, the middleware handles the incoming message activity and invokes the corresponding `handlerCommandReceived` function. After this process, the middleware calls `context.sendActivity` to send the command response returned from the `handlerCommandReceived` function to the user.
 
 ## Customize initialization
 
-You can initialize with your own adapter or customize after initialization.
+You need to create `ConversationBot` to respond to the command in chat. You can initialize with your own adapter or customize after initialization.
+
+# [JavaScript/TypeScript](#tab/jsts)
 
 ```js(ts)
 
-   // Create your own adapter
-   const adapter = new BotFrameworkAdapter(...);
-
-   // Customize your adapter, e.g., error handling
-   adapter.onTurnError = ...
-
-   const bot = new ConversationBot({
-       // use your own adapter
-       adapter: adapter;
-       ...
-   });
-
-   // Or, customize later
-   bot.adapter.onTurnError = ...
+/** JavaScript/TypeScript: src/internal/initialize.js(ts) **/
+const commandApp = new ConversationBot({
+  // The bot id and password to create CloudAdapter.
+  // See https://aka.ms/about-bot-adapter to learn more about adapters.
+  adapterConfig: {
+    MicrosoftAppId: config.botId,
+    MicrosoftAppPassword: config.botPassword,
+    MicrosoftAppType: "MultiTenant",
+  },
+  command: {
+    enabled: true,
+    commands: [new HelloWorldCommandHandler()],
+  },
+});
 
 ```
+
+# [C#](#tab/csharp1)
+
+```csharp
+
+builder.Services.AddSingleton<HelloWorldCommandHandler>();
+builder.Services.AddSingleton(sp =>
+{
+    var options = new ConversationOptions()
+    {
+        Adapter = sp.GetService<CloudAdapter>(),
+        Command = new CommandOptions()
+        {
+            Commands = new List<ITeamsCommandHandler> { sp.GetService<HelloWorldCommandHandler>() }
+        }
+    };
+
+    return new ConversationBot(options);
+});
+
+```
+
+---
 
 ## Add command and response
 
