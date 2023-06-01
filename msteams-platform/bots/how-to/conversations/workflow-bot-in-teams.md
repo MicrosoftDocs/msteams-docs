@@ -23,7 +23,7 @@ A workflow bot can be installed into a team, group chat, or as personal app, dep
    > [!NOTE]
    > You can select the capability that you want to install, when adding the app. For more information, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
 
-You can create a workflow bot to respond to the Adaptive Card triggered by users. Adaptive Card action handler powered by TeamsFx SDK can execute the Adaptive Card universal action `Action.Execute` triggered by users. In response to this respective card action in the conversation another Adaptive Card is sent by the Adaptive card action handler.
+You can create a workflow bot to respond to the Adaptive Card triggered by users. Adaptive Card action handler powered by TeamsFx SDK can execute the Adaptive Card universal action `Action.Execute` triggered by users. In response to this respective card action in the conversation, the Adaptive Card action handler sends another Adaptive Card.
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" alt-text="Workflow bot final output with a button" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" :::
 
@@ -91,7 +91,7 @@ A Teams bot needs to be installed into a team, or a group chat, or as personal a
 
 ## Add card actions
 
-To add card actions with JavaScript and TypeScript, you can perform the following:
+To add card actions with JavaScript and TypeScript, follow these steps:
 
 <br>
 
@@ -219,6 +219,8 @@ You can create a new file `bot/src/cardActions/doSomethingActionHandler.ts`:
 
 You can handle a new `Action.Execute` action invoked by implement with TeamsFx SDK's interface `IAdaptiveCardActionHandler`. You need to customize the action in this step, such as calling an API, processing data, or any other action as per your business need.
 
+The following is an example of action handler:
+
 You can create a new file `/CardActions/DoSomethingActionHandler.cs`
 
 ```csharp
@@ -270,18 +272,17 @@ namespace MyBotApp.CardActions
 
 ---
 
-The following is an example of action handler:
-
-* `triggerVerb` is the **verb** property of your action.
-* `actionData` is the data associated with the action, which may include dynamic user input, or some contextual data provided in the data property of your action.
-* If an Adaptive Card is returned, the existing card is replaced with it by default.
-* To customize the action response card sent in Teams chat. For more information, see [Customize the action response](#customize-the-action-response).
+> [!NOTE]
+>
+> * `triggerVerb` is the **verb** property of your action.
+> * `actionData` is the data associated with the action, which may include dynamic user input, or some contextual data provided in the data property of your action.
+> * If an Adaptive Card is returned, the existing card is replaced with it by default.
+> * To customize the action response card sent in Teams chat. For more information, see [Customize the action response](#customize-the-action-response).
 
 </details>
+</br>
 
 <details>
-
-</br>
 
 <summary><b>4. Register the action handler</b></summary>
 
@@ -344,7 +345,7 @@ builder.Services.AddSingleton(sp =>
 
 You can use the `adaptiveCardResponse` property in handler to customize how the bot sends the Adaptive Card to users. Following are the three options to customize:
 
-* The response card is replaced by the current card where the button is defined for the interactor that triggers the action. The users in the conversation can still view the original action card `AdaptiveCardResponse.ReplaceForInteractor`. This is the default behavior.
+* The current card replaces the response card where the button is defined for the interactor that triggers the action. The users in the conversation can still view the original action card `AdaptiveCardResponse.ReplaceForInteractor`. This is the default behavior.
 
    :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-interactor.gif" alt-text="Grpahical interface that shows how to customize the bot to send adaptive card.":::
 
@@ -413,9 +414,9 @@ The following steps help you to add user-specific view with TeamsFx SDK:
 
 <summary><b>1. Enable refresh in base Adaptive Card</b></summary>
 
- The user-specific views are refreshed from a base card, when response card is refreshed from the base card, as illustrated in the [auto-refresh user-specific view](#auto-refresh-to-user-specific-view). You need to enable auto-refresh on the base card. There are two options to achieve this:
+ The user-specific views are refreshed from a base card, when response card is refreshed from the base card, as illustrated in the [auto-refresh user-specific view](#auto-refresh-to-user-specific-view). You need to enable auto-refresh on the base card. There are two options to achieve:
 
-* First option enables user-specific view refresh with SDK. The base card can be sent as a command response or a card action response. You can enable user-specific view refresh in `handleCommandReceived` of a command handler, or in `handleActionInvoked` of card action handler where the base card is returned. You can use `refresh(refreshVerb, userIds, data)` method from the `@microsoft/adaptivecards-tools` library to inject a refresh section into your base card. To define the refresh section, ensure that you provide the following:
+* First option enables user-specific view refresh with SDK. The base card can be sent as a command response or a card action response. You can enable user-specific view refresh in `handleCommandReceived` of a command handler, or in `handleActionInvoked` of card action handler where the base card is returned. You can use `refresh(refreshVerb, userIds, data)` method from the `@microsoft/adaptivecards-tools` library to inject a refresh section into your base card. To define the refresh section, ensure that you provide the following properties:
 
   1. `userIds`: A set of user MRIs for those who can trigger auto-refresh. For more information on how to add in `userIds` list in refresh section of Adaptive Card, see [fetch the roster or user profile](../get-teams-context.md#fetch-the-roster-or-user-profile).
   1. `verb`: A string to identify the refresh action.
@@ -730,7 +731,7 @@ To add the notification feature:
     
     ```
 
-1. Add a sample notification triggered by a HTTP request, add the sample code in `bot\src\index.js(ts)`:
+1. Add a sample notification triggered by an HTTP request, add the sample code in `bot\src\index.js(ts)`:
 
     ```initialize.js(ts)
     server.post("/api/notification", async (req, res) => {
@@ -744,7 +745,7 @@ To add the notification feature:
     ```
 
 1. Uninstall your previous bot installation from Teams, and press **F5** to start your application.
-1. Send a notification to the bot installation targets (channel/group chat/personal chat) by using a your favorite tool to send a HTTP POST request to `https://localhost:3978/api/notification`. For more information, see [Notification bot in Teams](notification-bot-in-teams.md).
+1. Send a notification to the bot installation targets (channel/group chat/personal chat) by using your favorite tool to send an HTTP POST request to `https://localhost:3978/api/notification`. For more information, see [Notification bot in Teams](notification-bot-in-teams.md).
 
 </details>
 
