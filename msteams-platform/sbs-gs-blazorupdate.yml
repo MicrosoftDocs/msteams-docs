@@ -540,12 +540,12 @@ items:
         1. Registers your application for sideloading in Teams.
         1. Starts your application backend running locally.
         1. Starts your application front-end hosted locally.
-        1. Starts Teams in a web browser with a command to instruct Teams to side load the application the URL is registered inside the application manifest.
+        1. Starts Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
     
         </details>
         
         >[!NOTE]
-        > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens when the build is complete. This process can take 3-5  minutes to complete.
+        > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens when the build is complete. This process can take 3-5 minutes to complete.
 
         Your web browser starts to run the app.
 
