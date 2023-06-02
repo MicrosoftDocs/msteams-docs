@@ -5,6 +5,7 @@ description: Learn about Microsoft Teams events and activity handlers for messag
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
+ms.date: 01/22/2023
 ---
 
 # Bot activity handlers
