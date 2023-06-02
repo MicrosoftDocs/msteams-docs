@@ -31,7 +31,7 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 
    The following image shows a tab added to the meeting details page in the Teams desktop client:
 
-    :::image type="content" source="~/assets/images/apps-in-meetings/premeetingtab.png" alt-text="The screenshot shows desktop Teams tabs in the meeting details view in the Teams meeting.":::
+    :::image type="content" source="../assets/images/apps-in-meetings/premeetingtab.png" alt-text="The screenshot shows desktop Teams tabs in the meeting details view in the Teams meeting.":::
 
 # [Mobile](#tab/mobile)
 
@@ -39,7 +39,7 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 
     :::image type="content" source="../assets/images/mobile-tab.png" alt-text="Screenshot shows mobile Teams tabs in the meeting details view in the Teams meeting.":::
 
-   ---
+---
 
 ### Meeting chat view
 
@@ -61,7 +61,7 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 
     :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
 
-    ---
+---
 
 ### Meeting side panel view
 
