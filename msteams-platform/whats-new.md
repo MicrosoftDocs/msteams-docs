@@ -35,9 +35,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2023 May**
+**2023 June**
 
-* ***May 31, 2023***: [Real-time meeting events are supported in channel meetings](apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api).
+* ***June 02, 2023***: [Real-time meeting events are supported in channel meetings](apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api).
 
 :::column-end:::
 :::row-end:::
