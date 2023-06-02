@@ -445,7 +445,7 @@ For sample implementation to use Azure blob storage, see [add notification stora
 
 ## Add authentication for notification API
 
-If you select HTTP trigger, the scaffolded notification API doesn't have authentication or authorization enabled. Ensure that you add authentication or authorization for the API before using it for production. You can perform either of the following:
+If you select HTTP trigger, the scaffolded notification API doesn't have authentication or authorization enabled. Ensure that you add authentication or authorization for the API before using it for production. You can perform one of the following actions:
 
 * Use an API key. You can use [function access keys](/azure/azure-functions/security-concepts?tabs=v4#function-access-keys), if you select Azure Functions to host your notification bot.
 
@@ -498,9 +498,9 @@ TeamsFx provides you with an [Incoming Webhook notification sample](https://gith
 
 <summary><b>Why is the notification installations empty even though the bot app is installed in Teams?</b></summary>
 
-Teams sends an event only at the first installation. If the bot app is already installed before your notification bot service is launched, the installation event, either didn't reach the bot service, or is omitted.
+Teams sends an event only at the first installation. If the bot app is already installed before your notification bot service is launched, either the installation event didn't reach the bot service or is omitted.
 
-You can resolve this in the following ways:
+You can resolve this issue in the following ways:
 
 * Send a message to your personal bot or mention your bot in group chat, or channel, which helps you to reach the bot service again with correct installation information.
 * Uninstall the bot app from Teams then redebug or relaunch it. You can resend the installation event to bot service.
@@ -518,9 +518,9 @@ Notification target connections are stored in the persistence storage. If you're
 
 <summary><b>Why Bad Request or Bad Argument error occurs when sending notification?</b></summary>
 
-If the notification installation doesn't match the bot ID or password, you can get a **Failed to decrypt conversation ID** error. One possible cause for this error is that the bot ID or password is changed due to cleaning local state or reprovisioning.
+If the notification installation doesn't match the bot ID or password, you can get a **Failed to decrypt conversation ID** error. One possible cause for this error is that the bot ID or password is changed due to cleaning local state or re-provisioning.
 
-You can resolve this by cleaning your notification storage. After cleaning, notify in Teams to reinstall your bot, and ensure that the new installation is up-to-date. Each stored notification installation is bound with one bot. If you're able to check your notification storage, its bot field should match the bot you're running such as the bot ID with the same GUID.
+You can resolve this issue by cleaning your notification storage. After cleaning, notify in Teams to reinstall your bot, and ensure that the new installation is up-to-date. Each stored notification installation is bound with one bot. If you're able to check your notification storage, its bot field should match the bot you're running such as the bot ID with the same GUID.
 
 > [!NOTE]
 > In case of local storage the default location is `.notification.localstore.json`.
@@ -553,7 +553,7 @@ You can encounter an undefined error, when the bot app is installed into other c
 
 <summary><b>Can I know all the targets where my bot is installed in and out of the notification project?</b></summary>
 
-There are [Microsoft Graph APIs](/graph/api/team-list-installedapps) to list apps installed in a team, group, or chat. If required you need to iterate your team, group, or chat into an installed app to be targeted. In the notification project, it uses persistence storage to store installation targets. For more information, see [notification based on events](#notification-based-on-events).
+There are [Microsoft Graph APIs](/graph/api/team-list-installedapps) to list apps installed in a team, group, or chat. If necessary, iterate your team, group, or chat into an installed app to be targeted. In the notification project, it uses persistence storage to store installation targets. For more information, see [notification based on events](#notification-based-on-events).
 
 <br>
 

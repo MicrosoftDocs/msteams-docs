@@ -181,7 +181,7 @@ TeamsFx SDK provides a convenient class `TeamsFxBotCommandHandler`, to handle wh
 
 # [JavaScript](#tab/js)
 
-```JavaScript
+```javascript
 const doSomethingCard = require("./adaptiveCards/doSomethingCommandResponse.json");
 const { AdaptiveCards } = require("@microsoft/adaptivecards-tools");
 const { CardFactory, MessageFactory } = require("botbuilder");
@@ -207,7 +207,7 @@ module.exports = {
   DoSomethingCommandHandler,
 };
 
-   ```
+```
 
 # [TypeScript/](#tab/ts)
 
@@ -248,7 +248,7 @@ export class DoSomethingCommandHandler implements TeamsFxBotCommandHandler {
 
 # [C#](#tab/csharp1)
 
-The TeamsFx .NET SDK provides an interface `ITeamsCommandHandler` for command handler to handle when an command is triggered from Teams conversation message. Create a new file `Commands/DoSomethingCommandHandler.cs`:
+The TeamsFx .NET SDK provides an interface `ITeamsCommandHandler` for command handler to handle when a command is triggered from Teams conversation message. Create a new file `Commands/DoSomethingCommandHandler.cs`:
 
 ```csharp
 using MyCommandApp.Models;
@@ -404,7 +404,7 @@ Adaptive Card provides [template language](/adaptive-cards/templating/) to allow
 1. Model your card data.
 1. Use `MessageBuilder.attachAdaptiveCard` in the template with dynamic card data.
 
-You can also add new cards, if required for your application. For more information on how to build different types of Adaptive Cards with a list, or a table of dynamic contents using `ColumnSet`, and `FactSet`, see [sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification).
+You can also add new cards for your application if necessary. For more information on how to build different types of Adaptive Cards with a list, or a table of dynamic contents using `ColumnSet`, and `FactSet`, see [sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification).
 
 ### Access Microsoft Graph
 
@@ -424,9 +424,9 @@ If you don't have the required SDK, and need to invoke external APIs in your cod
 
 1. Go to `bot\src\internal\initialize.ts(js)` and update your `conversationBot` initialization to enable notification feature:
 
-:::image type="content" source="../../../assets/images/command-bot-teams/notification-enable.png" alt-text="installation option selection" lightbox="../../../assets/images/command-bot-teams/notification-enable.png":::
+:::image type="content" source="../../../assets/images/command-bot-teams/notification-enable.png" alt-text="Conversation bot initialization to enable notification feature." lightbox="../../../assets/images/command-bot-teams/notification-enable.png":::
 
-2. Follow the [instructions](notification-bot-in-teams.md) to send notification to the bot installation target (channel/group chat/personal chat). You can add the following sample code in `bot\src\index.ts(js)` to add a sample notification triggered by a HTTP request:
+2. Follow the [instructions](notification-bot-in-teams.md) to send notification to the bot installation target (channel/group chat/personal chat). You can add the following sample code in `bot\src\index.ts(js)` to add a sample notification triggered by an HTTP request:
 
 ```js
 server.post("/api/notification", async (req, res) => {
@@ -440,9 +440,9 @@ server.post("/api/notification", async (req, res) => {
 ```
 
 3. Uninstall your previous bot installation from Teams, and re-run local debug to test your bot notification.
-4. Send a notification to the bot installation targets (channel/group chat/personal chat) by using a HTTP POST request with target URL `<https://localhost:3978/api/notification>`.
+4. Send a notification to the bot installation targets (channel/group chat/personal chat) by using an HTTP POST request with target URL `<https://localhost:3978/api/notification>`.
 
-For more details about notification feature such as send notification with adaptive card and add more triggers, see [Notification bot in Teams](notification-bot-in-teams.md).
+For more information about notification feature such as send notification with adaptive card and add more triggers, see [Notification bot in Teams](notification-bot-in-teams.md).
 
 <br>
 
@@ -452,7 +452,7 @@ For more details about notification feature such as send notification with adapt
 
 <summary><b>How to extend my command bot by adding workflow bot Adaptive Card actions?</b></summary>
 
-The Adaptive Card action handler feature enables the app to respond to adaptive card actions that triggered by end users to complete a sequential workflow. An Adaptive Card provides one or more buttons in the card to ask for user's input such as calling some APIs, and then send another adaptive card in conversation to response to the card action.
+The Adaptive Card action handler feature enables the app to respond to adaptive card actions that triggered by end users to complete a sequential workflow. An Adaptive Card provides one or more buttons in the card to ask for user's input such as calling some APIs. The Adaptive Card then send another Adaptive Card in conversation to response to the card action.
 
 For more information on how to add adaptive card actions to command bot, see [Workflow bot in Teams](workflow-bot-in-teams.md).
 
