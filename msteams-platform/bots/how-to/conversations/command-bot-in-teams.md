@@ -40,7 +40,7 @@ TeamsFx SDK pulls [Bot Framework middleware](/azure/bot-service/bot-builder-conc
 
 You need to create `ConversationBot` to respond to the command in chat. You can initialize with your own adapter or customize after initialization.
 
-# [JavaScript/TypeScript](#tab/jsts)
+# [JavaScript/TypeScript](#tab/jsts1)
 
 ```js(ts)
 
@@ -246,7 +246,7 @@ export class DoSomethingCommandHandler implements TeamsFxBotCommandHandler {
 
 ```
 
-# [C#](#tab/csharp1)
+# [C#](#tab/csharp2)
 
 The TeamsFx .NET SDK provides an interface `ITeamsCommandHandler` for command handler to handle when a command is triggered from Teams conversation message. Create a new file `Commands/DoSomethingCommandHandler.cs`:
 
@@ -322,7 +322,7 @@ You can customize the command, including calling an API, processing data, or any
 
 Each new command needs to be configured in the `ConversationBot`, which initiates the conversational flow of the command bot template. In the `src/internal/initialize.ts` file, update the commands array of the command property:
 
-# [JavaScript/TypeScript](#tab/jsts)
+# [JavaScript/TypeScript](#tab/jsts2)
 
 ```TypeScript
 /** Update ConversationBot  in src/internal/initialize.js(ts) **/
@@ -337,7 +337,7 @@ const commandApp = new ConversationBot({
 });
 ```
 
-# [C#](#tab/csharp1)
+# [C#](#tab/csharp3)
 
 ```csharp
 /** Update ConversationBot in Program.cs **/

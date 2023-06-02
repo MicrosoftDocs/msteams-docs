@@ -432,9 +432,9 @@ If storage isn't provided, you can use a default local file storage, which store
 * `.notification.localstore.json` if running locally.
 * `${process.env.TEMP}/.notification.localstore.json`, if `process.env.RUNNING_ON_AZURE` is set to 1.
 
-The `NotificationTargetStorage` is different from Bot Framework SDK's [custom storage](https://github.com/OfficeDev/TeamsFx-Samples/blob/v3/adaptive-card-notification/src/storage/blobsStorage.ts). The notification storage requires `read`, `write`, `delete`, `list` functionalities but Bot Framework SDK's storage has `read`, `write`, `delete`, and doesn’t have `list` functionality.
+The `NotificationTargetStorage` is different from Bot Framework SDK's [custom storage](/azure/bot-service/bot-builder-custom-storage). The notification storage requires `read`, `write`, `delete`, `list` functionalities but Bot Framework SDK's storage has `read`, `write`, `delete`, and doesn’t have `list` functionality.
 
-For sample implementation to use Azure blob storage, see [add notification storage implementation sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/ga/adaptive-card-notification/bot/src/storage/blobsStorage.ts).
+For sample implementation to use Azure blob storage, see [add notification storage implementation sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/v3/adaptive-card-notification/src/storage/blobsStorage.ts).
 
 > [!NOTE]
 >

@@ -3,7 +3,7 @@ title: Workflow bot in Teams
 author: surbhigupta
 description: Learn how to send a response to card action in Teams workflow bot, add more card actions and customize action responses.
 ms.topic: conceptual
-ms.author: v-amprasad
+ms.author: v-vanv
 ms.localizationpriority: high
 ---
 
