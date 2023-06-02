@@ -251,7 +251,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Prepare Teams App Dependencies options are highlighted in red." lightbox="../msteams-platform\assets\images\teams-toolkit-v2\blazor-vs-preview2\configure-msteamsapp_2.png":::
 
-    1. Select your Microsoft 365 account or Add an account to sign in.
+    1. Select your Microsoft 365 account or **Add an account** to sign in.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/M365-account_1.png" alt-text="Screenshot of Microsoft 365 Account with Continue option highlighted in red.":::
 
@@ -481,7 +481,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-bot_1.png" alt-text="Screenshot of Create a new Teams application with Command Bot and Create options highlighted in red.":::
 
-        Your Teams bot app is created in few seconds.
+        Your Teams bot app is created in a few seconds.
         
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-bot-app-team_1.png" alt-text="Screenshot of Visual Studio displaying the information of getting started with Teams Toolkit." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-bot-app-team_1.png":::
         
@@ -525,7 +525,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with project, Teams Toolkit, and Prepare Teams App Dependencies options highlighted in red." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_2.png":::
 
-    1. Select your Microsoft 365 account or Add an account to sign in.
+    1. Select your Microsoft 365 account or **Add an account** to sign in.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/M365-account_1.png" alt-text="Screenshot of Microsoft 365 Account with Add an account and Continue options highlighted in red.":::
 
