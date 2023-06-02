@@ -63,21 +63,21 @@ items:
 
       The Teams tab app is created in few seconds and Teams Toolkit displays the following message.
 
-      :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-app-preview.png" alt-text="Screenshot shows the teams tab app dashboard preview in VS Code.":::
+       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-app-preview.png" alt-text="Screenshot shows the teams tab app dashboard preview in VS Code.":::
 
-      :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-debug.png" alt-text="Screenshot shows the local debug.":::
+       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-debug.png" alt-text="Screenshot shows the local debug.":::
 
      1. Select the Teams Toolkit icon in sidebar 
      
      1. Select signin to Microsoft 365 account using test credentials.
 
-     :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/M365-account-signin.png" alt-text="Screenshot shows the Microsoft signin.":::
+       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/M365-account-signin.png" alt-text="Screenshot shows the Microsoft signin.":::
 
      1. Select F5 to run the application in debug mode.
 
      1. Select Add.
 
-     :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-dashboard-add.png" alt-text="Screenshot shows the selection of workspace folder.":::
+       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-dashboard-add.png" alt-text="Screenshot shows the selection of workspace folder.":::
 
      1. Successfully created the teams tab app dashboard
 
@@ -112,7 +112,7 @@ items:
       The following files provide the business logic for the dashboard tab. These files can be updated to fit your business logic requirements. The default implementation provides a starting point to help you get started.
 
       | File | Contents |
-      | ------ | ----- |
+      | ----- | ----- |
       | `src/models/chartModel.ts` | Data model for the chart widget. |
       | `src/models/listModel.ts` | Data model for the list widget. |
       | `src/services/chartService.ts` | A data retrive implementation for the chart widget. |
@@ -126,10 +126,10 @@ items:
       | `src/App.tsx` | Application route. |
       
       The following files are project-related files. You generally will not need to customize these files.
-      
+
       | File | Contents |
       | ----- | ----- |
-      | `src/index.css` | The style of application entry point. |
+      | `src/index.css` | The style of application entry point.|
       | `src/index.tsx` | Application entry point. |
       | `src/internal/addNewScopes.ts` | Implementation of new scopes add. |
       | `src/internal/context.ts` | TeamsFx Context. |
