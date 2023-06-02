@@ -61,7 +61,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/enter-application-name.png" alt-text="Screenshot shows the selection of application name.":::
 
-        The Teams tab app is created in few seconds and Teams Toolkit displays the following message.
+      The Teams tab app is created in few seconds and Teams Toolkit displays the following message.
 
       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-app-preview.png" alt-text="Screenshot shows the teams tab app dashboard preview in VS Code.":::
 
@@ -126,6 +126,7 @@ items:
       | `src/App.tsx` | Application route. |
       
       The following files are project-related files. You generally will not need to customize these files.
+      
       | File | Contents |
       | ----- | ----- |
       | `src/index.css` | The style of application entry point. |
