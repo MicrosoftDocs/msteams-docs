@@ -22,7 +22,7 @@ items:
     :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Screenshot of the blazor app displaying the tab, Bot, and Message Extension output after you've successfully completed the step-by-step guide.":::
 
     > [!NOTE]
-    > Teams Toolkit doesn't support the message extension capability.
+    > Currently, Teams Toolkit doesn't support the message extension capability.
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -113,7 +113,7 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Screenshot of Manage your apps in Teams with the Upload an app dialog open. Apps icon, Manage your apps, Upload an app, and Upload a customised app options are highlighted in red.":::
 
         > [!NOTE]
-        > Contact your Teams administrator, if you don't find the option to upload a custom app.
+        > If Teams doesn't show the option to upload a custom app, connect to your Teams administrator.
 
     ### Create a free Teams developer tenant (optional)
 
@@ -143,7 +143,7 @@ items:
 
     This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
 
-    In this page, you'll learn:
+    In this section, you can learn:
     
     1. [How to set up a new tab project with Teams Toolkit](#create-your-tab-project)
     1. [About the directory structure of your app](#take-a-tour-of-the-source-code-for-teams-tab-app)
@@ -152,9 +152,9 @@ items:
 
     Use Teams Toolkit to create your first tab project. The toolkit takes you through a series of pages to create and configure your Teams app project:
 
-    1. **Create a new project** page: You can select the project type.
+    1. **Create a new project** page: You select the project type.
     1. **Configure your new project** page: You enter the project details.
-    1. **Create a new Teams application** page: You can select the Teams app capabilities.
+    1. **Create a new Teams application** page: You select the Teams app capabilities.
 
     **To create your tab project workspace**
 
@@ -211,7 +211,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-tab_1.png" alt-text="Screenshot of Create a new Teams application with Tab and Create options highlighted in red." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-tab_2.png":::
         
-        Your Teams tab app is created in few seconds.
+        Your Teams tab app is created in a few seconds.
         
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-tab-app.png" alt-text="Screenshot of Visual Studio displaying tips to get started while building your app." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-tab-app.png":::
         
@@ -251,7 +251,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Prepare Teams App Dependencies options are highlighted in red." lightbox="../msteams-platform\assets\images\teams-toolkit-v2\blazor-vs-preview2\configure-msteamsapp_2.png":::
 
-    1. Select your Microsoft 365 account or **Add an account** to sign in.
+    1. Select your Microsoft 365 account or Add an account to sign in.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/M365-account_1.png" alt-text="Screenshot of Microsoft 365 Account with Continue option highlighted in red.":::
 
@@ -266,7 +266,7 @@ items:
         1. Registers your application for sideloading in Teams.
         1. Starts your application backend running locally.
         1. Starts your application front-end hosted locally.
-        1. Starts Teams in a web browser with a command to instruct Teams to side load the application the URL is registered inside the application manifest.
+        1. Starts Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
     
         </details>
 
@@ -278,7 +278,7 @@ items:
         
     1. Select **Add** when prompted to install the app to Teams.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-app.png" alt-text="Screenshot of BlazorApp local debug with Add option highlighted in red.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-add-app_1.png" alt-text="Screenshot of BlazorApp local debug with Add option highlighted in red.":::
 
        Congratulations, your first tab app is running in your local environment!
 
@@ -422,9 +422,9 @@ items:
 
     Use Teams Toolkit to create your first project. The toolkit takes you through a series of pages to create and configure your Teams app project:
 
-    1. **Create a new project** page: You can select the project type.
+    1. **Create a new project** page: You select the project type.
     1. **Configure your new project** page: You enter the project details.
-    1. **Create a new Teams application** page: You can select the Teams app capabilities.
+    1. **Create a new Teams application** page: You select the Teams app capabilities.
 
     **To create your bot project workspace**
 
@@ -545,7 +545,7 @@ items:
         </details>
         
         >[!NOTE]
-        > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens when the build is complete. This process can take 3 to 5 minutes to complete.
+        > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens when the build is complete. This process can take 3-5  minutes to complete.
 
         Your web browser starts to run the app.
 
