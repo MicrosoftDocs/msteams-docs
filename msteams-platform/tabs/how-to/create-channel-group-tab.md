@@ -727,9 +727,9 @@ Verify if you can sideload apps in Teams:
 
 1. In the Teams client, select **Store** icon.
 1. Select **Manage your apps**.
-1. Select **Upload a custom app**. If you see Upload a customized app option, sideloading apps is enabled.
+1. Select **Upload a custom app**. If you see Upload a custom app option, sideloading apps is enabled.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG" alt-text="Screenshot of Manage your apps in Teams with the Upload an app dialog open. Apps icon, Manage your apps, Upload an app, and Upload a customised app options highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG" alt-text="Screenshot of Manage your apps in Teams with the Upload an app dialog open. Apps icon, Manage your apps, Upload an app, and Upload a custom app option highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG":::
 
     > [!NOTE]
     > Contact your Teams administrator, if you don't find the option to upload a custom app.
@@ -794,7 +794,7 @@ Use Teams Toolkit to create your first tab project. The toolkit takes you throug
 
    1. Select **Next**.
 
-      :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Screenshot of Create a new project with Next option highlighted in red for blazor app creation.":::
+      :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Screenshot of Create a new project with Next option highlighted in red for blazor app creation."lightbox="../../assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png":::
 
       The **Configure your new project** page appears.
 
@@ -815,7 +815,7 @@ Use Teams Toolkit to create your first tab project. The toolkit takes you throug
 
    1. Select **Create**.
 
-      :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project.PNG" alt-text="Screenshot1 of Configure your new project with Create option highlighted in red.":::
+      :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project.PNG" alt-text="Screenshot1 of Configure your new project with Create option highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project.PNG":::
 
       The **Create a new Teams application** page appears.
 
@@ -883,7 +883,7 @@ To build and run your app:
     1. Registers your application for sideloading in Teams.
     1. Starts your application backend running locally.
     1. Starts your application front-end hosted locally.
-    1. Starts Teams in a web browser with a command to instruct Teams to side load the application, the URL is registered inside the application manifest.
+    1. Starts Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
 
     </details>
 
@@ -951,7 +951,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
    1. Select your **Region**, if new resource group is created.
    1. Select **Provision**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/select-subscription.PNG" alt-text="Screenshot14 of Provision with New and Provision highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/select-subscription.PNG" alt-text="Screenshot14 of Provision with New and Provision highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/select-subscription.PNG":::
 
    Provision warning displays.
 

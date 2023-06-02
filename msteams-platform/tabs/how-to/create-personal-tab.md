@@ -742,7 +742,7 @@ Use Teams Toolkit to create your first tab project. The toolkit takes you throug
 
    1. Select **Next**.
 
-      :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Screenshot of Create a new project with Next option highlighted in red for blazor app creation.":::
+      :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Screenshot of Create a new project with Next option highlighted in red for blazor app creation."lightbox="../../assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png":::
 
       The **Configure your new project** page appears.
 
@@ -763,7 +763,7 @@ Use Teams Toolkit to create your first tab project. The toolkit takes you throug
 
    1. Select **Create**.
 
-      :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project.PNG" alt-text="Screenshot1 of Configure your new project with Create option highlighted in red.":::
+      :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project.PNG" alt-text="Screenshot1 of Configure your new project with Create option highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project.PNG":::
 
       The **Create a new Teams application** page appears.
 
@@ -773,7 +773,7 @@ Use Teams Toolkit to create your first tab project. The toolkit takes you throug
 
    1. Select **Create**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/first-tab/create-tab.png" alt-text="Screenshot2 of Create a new Teams application with Tab and Create options highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/first-tab/create-tab.png":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/first-tab/create-tab.png" alt-text="Screenshot2 of Create a new Teams application with Tab and Create options highlighted in red.":::
 
 Your Teams tab app is created in few seconds.
 
@@ -812,7 +812,7 @@ To build and run your app:
 
 1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot5 of Visual Studio with Project, Teams Toolkit, and Prepare Teams App Dependencies options are highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot5 of Visual Studio with Project, Teams Toolkit, and Prepare Teams App Dependencies options are highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png":::
 
 1. Select your Microsoft 365 account or **Add an account** to sign in.
 
@@ -829,7 +829,7 @@ To build and run your app:
     1. Registers your application for sideloading in Teams.
     1. Starts your application backend running locally.
     1. Starts your application front-end hosted locally.
-    1. Starts Teams in a web browser with a command to instruct Teams to side load the application, the URL is registered inside the application manifest.
+    1. Starts Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
 
     </details>
 
@@ -897,7 +897,7 @@ You have learned to create, build, and run Teams app with tab capability. The fo
    1. Select your **Region**, if new resource group is created.
    1. Select **Provision**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/select-subscription.PNG" alt-text="Screenshot14 of Provision with New and Provision highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/select-subscription.PNG" alt-text="Screenshot14 of Provision with New and Provision highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/select-subscription.PNG":::
 
    Provision warning displays.
 
