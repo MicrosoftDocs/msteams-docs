@@ -677,7 +677,7 @@ Verify if you can sideload apps in Teams:
 1. Select **Manage your apps**.
 1. Select **Upload a custom app**. If you see Upload a custom app option, sideloading apps is enabled.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG" alt-text="Screenshot of Manage your apps in Teams with the Upload an app dialog open. Apps icon, Manage your apps, Upload an app, and Upload a customized app options highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG" alt-text="Screenshot of Manage your apps in Teams with the Upload an app dialog open. Apps icon, Manage your apps, Upload an app, and Upload a customized app options highlighted in red."lightbox=""../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG":::
 
     > [!NOTE]
     > Contact your Teams administrator, if you don't find the option to upload a custom app.
@@ -877,7 +877,7 @@ To build and run your app:
 
 ## Preview your first Teams tab app
 
-You have learned to create, build, and run Teams app with tab capability. The following final steps are to deploy your app on Azure and preview in Teams follow the steps:
+You've learned to create, build, and run Teams app with tab capability. The following final steps are to deploy your app on Azure and preview in Teams follow the steps:
 
 1. [Provision your tab app in the cloud](#to-provision-your-tab-app-in-the-cloud): You can provision your tab app in the cloud.
 1. [Deploy your tab app to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud.
@@ -967,9 +967,7 @@ You have learned to create, build, and run Teams app with tab capability. The fo
 
 ## Congratulations
 
-You have done it!
-
-You have completed the tutorial to build a tab app with Blazor.
+You've completed the tutorial to build a tab app with Blazor.
 
 ::: zone-end
 

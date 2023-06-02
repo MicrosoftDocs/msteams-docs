@@ -1021,8 +1021,6 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 ## Congratulations
 
-You've done it!
-
 You've completed the tutorial to build a tab app with Blazor.
 
 ::: zone-end
