@@ -76,7 +76,7 @@ The following list provides all the RSC permissions categorized based on resourc
 
 The following table provides RSC application permissions for a team and their applicable data access mode:
 
-| Permission name | Action | Delegated | Application |
+| Permission name | Action | Type: Delegated | Type: Application |
 | ----- | ----- | :-----: | :-----: |
 |`Channel.Create.Group`|Create channels in the team. | NA | Supported |
 |`Channel.Delete.Group`|Delete this team's channels. | NA | Supported |
@@ -116,7 +116,7 @@ If a chat has a meeting or a call associated with it, then the relevant RSC perm
 
 The following table provides RSC permissions for a chat or meeting and their applicable data access mode:
 
-| Permission name | Action | Delegated | Application |
+| Permission name | Action | Type: Delegated | Type: Application |
 | ----- | ----- | :-----: | :-----: |
 | `Calls.AccessMedia.Chat` | Access media streams in calls associated with this chat or meeting. |NA |Supported |
 | `Calls.JoinGroupCalls.Chat` | Join calls associated with this chat or meeting. |NA |Supported |
@@ -156,7 +156,7 @@ For more information, see [chat resource-specific consent permissions](/graph/pe
 
 The following table provides RSC permissions for a user and their applicable data access mode:
 
-| Permission name | Action | Delegated | Application |
+| Permission name | Action | Type: Delegated | Type: Application |
 | ----- | ----- | :-----: | :-----: |
 | `CameraStream.Read.User`| Read the user's camera stream. |Supported |NA |
 | `InAppPurchase.Allow.User` | Show and complete in-app purchases. |Supported |NA |
