@@ -6,13 +6,13 @@ ms.topic: reference
 ---
 # Build your basic tab app
 
-Start Microsoft Teams app development with your first Teams tab app.
+Tabs are Teams-aware webpages embedded in Microsoft Teams. You can add them as part of a channel inside a team, group chat, or personal app for an individual user. Start Microsoft Teams app development with your first Teams tab app.
 
 :::image type="content" border="false" source="../assets/images/get-started/get-started-tab.png" alt-text="Screenshot shows you the conceptual tab app in Teams client.":::
 
 In this tutorial, get familiarized with a basic Teams tab app in one of the following ways:
 
-* **GitHub Codespaces**: The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where the Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you.
+* **GitHub Codespaces**: The codespace instance allows you to experience a Teams app instantaneously. It opens Visual Studio Code (VS Code), where the Teams Toolkit extension, the app source code, and all the dependencies are pre-packaged for you.
 * **Step-by-step guide**: Allows you to create a Teams app from scratch with all development environment setup.
 
 # [GitHub Codespaces](#tab/teamstoolkitcodespaces)
@@ -24,7 +24,7 @@ Before you create your codespace, ensure that you have:
 * A [Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
 
 > [!TIP]
-> [GitHub codespaces](https://github.com/features/codespaces) offers the free plan up to a fixed amount of usage every month. If you need to free up the space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespace that you no longer need.
+> [GitHub Codespaces](https://github.com/features/codespaces) offers free plan up to a fixed amount of usage every month. If you need to free up the space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespace that you no longer need.
 
 To create a Teams tab app with GitHub Codespaces, follow the steps:
 
@@ -32,7 +32,7 @@ To create a Teams tab app with GitHub Codespaces, follow the steps:
 
     <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=v3&repo=348288141&machine=standardLinux32gb&location=WestUs2&devcontainer_path=.devcontainer%2Fhello-world-tab-codespaces%2Fdevcontainer.json&resume=1" target="_blank"><img src="https://github.com/codespaces/badge.svg" alt="Open hello-world tab in GitHub Codespaces"></a>
 
-   You may be asked to sign in to GitHub account if you haven't.
+   You might be asked to sign in to GitHub account if you haven't.
 
 1. Select **Create new codespace**.
 
@@ -42,7 +42,7 @@ To create a Teams tab app with GitHub Codespaces, follow the steps:
 
    :::image type="content" source="../assets/images/get-started/building-codespace.png" alt-text="Screenshot shows you the codespace building your tab."lightbox="../assets/images/get-started/building-codespace.png":::
 
-   Teams Toolkit prepares the tab app project for you and opens it in Visual Studio Code in the browser. Teams Toolkit icon appears in the activity bar of Visual Studio Code.
+   Teams Toolkit prepares the tab app project for you and opens it in VS Code in the browser. Teams Toolkit icon appears in the activity bar of VS Code.
 
 1. Select **Sign in to your Microsoft 365** and **Sign in to Azure** to sign in with your Microsoft 365 account.
 
@@ -62,7 +62,7 @@ To create a Teams tab app with GitHub Codespaces, follow the steps:
 
    :::image type="content" source="../assets/images/get-started/tab-in-teams.png" alt-text="Screenshot shows you the tab app loaded in the Teams client.":::
 
-   The Tab app is installed in the Teams client and opens.
+   The tab app is installed in the Teams client and opens.
 
    You've successfully created the tab app and loaded in the Teams client.
 
@@ -70,7 +70,7 @@ To create a Teams tab app with GitHub Codespaces, follow the steps:
 
 # [Step-by-step guide](#tab/step-by-step-guide)
 
-If you would like to learn how to start a project with Teams Toolkit from scratch, let's go through the step-by-step guide.
+If you would want to learn how to start a project with Teams Toolkit from scratch, let's go through the step-by-step guide.
 
 Unlike GitHub Codespaces, you need to set up your development environment. Let's start building your basic tab app.
 
@@ -79,12 +79,12 @@ Unlike GitHub Codespaces, you need to set up your development environment. Let's
 
 ---
 
-If a bot is what you are interested in, go to:
+If a bot is what you're interested in, go to:
 
 > [!div class="nextstepaction"]
 > [Start building a bot](build-notification-bot.md)
 
-If you want to build message extension app, go to:
+If you want to build a message extension app, go to:
 
 > [!div class="nextstepaction"]
 > [Build message extension](build-message-extension.md)
