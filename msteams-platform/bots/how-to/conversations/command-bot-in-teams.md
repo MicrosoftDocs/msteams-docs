@@ -167,7 +167,7 @@ You can define your card in its JSON format to respond with an Adaptive Card. Fo
       }
   ```
 
-Respond with plain text, or with an Adaptive Card. You can use the [Adaptive Card Designer](https://adaptivecards.io/designer/) to help visually design your Adaptive Card UI. How to send an Adaptive card with dynamic data, see this [section](#how-to-build-command-and-response-using-adaptive-card-with-dynamic-content).
+Respond with plain text, or with an Adaptive Card. You can use the [Adaptive Card Designer](https://adaptivecards.io/designer/) to help visually design your Adaptive Card UI. For more information on how to send an Adaptive card with dynamic data, see [build command and response using Adaptive card](#how-to-build-command-and-response-using-adaptive-card-with-dynamic-content).
 
 <br>
 
@@ -320,7 +320,7 @@ You can customize the command, including calling an API, processing data, or any
 
 <summary><b>4. Register the new command</b></summary>
 
-Each new command needs to be configured in the `ConversationBot`, which initiates the conversational flow of the command bot template. In the `bot/src/internal/initialize.ts` file, update the commands array of the command property:
+Each new command needs to be configured in the `ConversationBot`, which initiates the conversational flow of the command bot template. In the `src/internal/initialize.ts` file, update the commands array of the command property:
 
 # [JavaScript/TypeScript](#tab/jsts)
 
@@ -422,7 +422,27 @@ If you don't have the required SDK, and need to invoke external APIs in your cod
 
 <summary><b>How to extend my command and response to support notifications?</b></summary>
 
-Add Adaptive Cards in response to external events to extend your command and response to support notifications. See the steps to [customize notifications](notification-bot-in-teams.md#customize-notification).
+1. Go to `bot\src\internal\initialize.ts(js)` and update your `conversationBot` initialization to enable notification feature:
+
+:::image type="content" source="../../../assets/images/command-bot-teams/notification-enable.png" alt-text="installation option selection" lightbox="../../../assets/images/command-bot-teams/notification-enable.png":::
+
+2. Follow the [instructions](notification-bot-in-teams.md) to send notification to the bot installation target (channel/group chat/personal chat). You can add the following sample code in `bot\src\index.ts(js)` to add a sample notification triggered by a HTTP request:
+
+```js
+server.post("/api/notification", async (req, res) => {
+  for (const target of await commandBot.notification.installations()) {
+    await target.sendMessage("This is a sample notification message");
+  }
+
+  res.json({});
+});
+
+```
+
+3. Uninstall your previous bot installation from Teams, and re-run local debug to test your bot notification.
+4. Send a notification to the bot installation targets (channel/group chat/personal chat) by using a HTTP POST request with target URL `<https://localhost:3978/api/notification>`.
+
+For more details about notification feature such as send notification with adaptive card and add more triggers, see [Notification bot in Teams](notification-bot-in-teams.md).
 
 <br>
 
@@ -432,7 +452,9 @@ Add Adaptive Cards in response to external events to extend your command and res
 
 <summary><b>How to extend my command bot by adding workflow bot Adaptive Card actions?</b></summary>
 
-For more information on how to add workflow bot Adaptive Card actions to command bot, see the steps to [add card actions](workflow-bot-in-teams.md#add-card-actions).
+The Adaptive Card action handler feature enables the app to respond to adaptive card actions that triggered by end users to complete a sequential workflow. An Adaptive Card provides one or more buttons in the card to ask for user's input such as calling some APIs, and then send another adaptive card in conversation to response to the card action.
+
+For more information on how to add adaptive card actions to command bot, see [Workflow bot in Teams](workflow-bot-in-teams.md).
 
 <br>
 
