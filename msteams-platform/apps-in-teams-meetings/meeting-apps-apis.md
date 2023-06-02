@@ -1137,3 +1137,4 @@ The following table provides the response codes:
 * [Get the attendance report for an online meeting](/graph/api/meetingattendancereport-get)
 * [Build in-meeting notification for Teams meeting](in-meeting-notification-for-meeting.md)
 * [Get notifications for Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)
+* [Get participants presence API](/graph/api/presence-get?&tabs=http)

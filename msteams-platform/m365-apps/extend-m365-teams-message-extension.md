@@ -60,7 +60,7 @@ Alternately, you can use the ready-made Outlook-enabled app in the following sec
 
 To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/NPM-search-connector-M365) that's already enabled to run in Outlook, use Teams Toolkit extension for Visual Studio Code.
 
-1. Open your app project in **Visual Studio Code**.
+1. Open **Visual Studio Code**.
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
 1. Select **Teams: Create a New App**.
 1. From the dropdown list that appears, select **Message Extension**.
@@ -75,11 +75,11 @@ To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-
 1. Select preferred programming language.
 1. Select a location on your local machine for the workspace folder and enter your application name.
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
-1. Enter **Teams: Provision**, to create the Teams app. Few resources under **Teams: Provision** such as Azure App Service, App Service plan, Azure Bot, and Managed Identity in your Azure account.
+1. Enter **Teams: Provision** to create the relevant app resources, such as Azure App Service, App Service plan, Azure Bot, and Managed Identity, in your Azure account.
 1. Select a subscription and a resource group.
-1. Select **Provision**. Alternatively, you can select **Provision** under **LIFECYCLE** section.
+1. Select **Provision**. Alternatively, you can select **Provision** under the **LIFECYCLE** section of the extension.
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
-1. Enter **Teams: Deploy** to deploy the sample code to the provisioned resources in Azure and start the app. Alternatively, you can select **Deploy** under **LIFECYCLE** section.
+1. Enter **Teams: Deploy** to deploy the sample code to the provisioned resources in Azure and start the app. Alternatively, you can select **Deploy** under **LIFECYCLE** section of the extension.
 1. Select **Deploy**.
 
 From here, you can skip ahead to [Add Microsoft 365 channel for your bot](#add-microsoft-365-channel-for-your-bot) to complete the final step of enabling the Teams message extension to work in Outlook. (The app manifest is already referencing the correct version, so no updates are necessary).
@@ -155,7 +155,7 @@ Azure Active Directory (AD) single sign-on (SSO) for message extensions works th
 
 The final step is to sideload your updated message extension ([app package](/microsoftteams/platform/concepts/build-and-test/apps-package)) into Teams. After you complete, message extension appears in your installed *Apps* from the compose message area.
 
-1. Package your Teams application (manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you use Teams Toolkit to create your app, you can easily do this using the **Zip Teams App Package** option in the **UTILITY** section of Teams Toolkit. Select the `manifest.json` file for your app and the appropriate environment.
+1. Package your Teams application (manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you used Teams Toolkit to create your app, you can easily do this using the **Zip Teams App Package** option in the **UTILITY** section of Teams Toolkit. Select the `manifest.json` file for your app and the appropriate environment.
 
     :::image type="content" source="images/toolkit-zip-teams-app-package.png" alt-text="The screenshot is an example that shows Zip Teams metadata package option in Teams Toolkit extension for Visual Studio Code.":::
 
@@ -163,11 +163,11 @@ The final step is to sideload your updated message extension ([app package](/mic
 
 1. Select **Apps** to open the **Manage your apps** pane. Then select **Upload an app**.
 
-    :::image type="content" source="~/assets/images/teams-manage-your-apps.png" alt-text="The screenshot is an example that shows the Upload an app option.":::
+    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="The screenshot is an example that shows the Upload an app option.":::
 
 1. Choose the **Upload a custom app** option, select your app package, and install (**Add**) it to your Teams client.
 
-    :::image type="content" source="~/assets/images/teams-upload-custom-app.png" alt-text="The screenshot is an example that shows the Upload a customized app option in Teams.":::
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="The screenshot is an example that shows the Upload a customized app option in Teams.":::
 
 After it's sideloaded through Teams, your message extension is available in Outlook for Windows desktop and web.
 
@@ -183,7 +183,7 @@ To preview your app running in Outlook on the web:
 1. Select **New message**.
 1. Select **Apps** on the ribbon.
 
-    :::image type="content" source="~/m365-apps/images/outlook-web-compose-more-apps.png" alt-text="The screenshot is an example that shows the 'Apps' menu on the ribbon of the mail composition window to launch your message extension.":::
+    :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="The screenshot is an example that shows the 'Apps' menu on the ribbon of the mail composition window to launch your message extension.":::
 
 Your message extension is listed. You can invoke it from there and use it just as you would while composing a message in Teams.
 
@@ -195,7 +195,7 @@ To preview your app running in Outlook on Windows desktop:
 1. Select **New Email**.
 1. Select **All Apps** on the ribbon.
 
-    :::image type="content" source="~/m365-apps/images/outlook-desktop-compose-more-apps.png" alt-text="The screenshot is an example that shows the 'All Apps' menu on the ribbon of the composition window to launch your message extension.":::
+    :::image type="content" source="images/outlook-desktop-compose-more-apps.png" alt-text="The screenshot is an example that shows the 'All Apps' menu on the ribbon of the composition window to launch your message extension.":::
 
 Your message extension is listed, it opens an adjacent pane to display search results.
 
@@ -220,7 +220,7 @@ As you test your message extension, you can identify the source (originating fro
 |---------------|--------------|--------|
 | NPM Search Connector | Use Teams Toolkit to build a message extension app. Works in Teams, Outlook. |  [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/NPM-search-connector-M365) |
 | Teams Link Unfurling | Simple Teams app to demonstrate link unfurling. Works in Teams, Outlook. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-link-unfurling/nodejs)
-| Tab in stage view | Microsoft Teams tab sample app for demonstrating a tab in stage view. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-link-unfurling/nodejs)
+| Tab in stage view | Microsoft Teams tab sample app for demonstrating a tab in stage view. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)
 
 ## Next step
 
