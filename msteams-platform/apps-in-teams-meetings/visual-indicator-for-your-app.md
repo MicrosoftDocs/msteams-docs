@@ -1,17 +1,17 @@
 ---
-title: Visual indicator for your Teams app
+title: Enable app icon badges for your Teams app
 author: v-sdhakshina
-description: In this article, learn how to build visual indicator for your Microsoft Teams app in meeting.
+description: In this article, learn how to enable app icon badges for your Microsoft Teams app in meeting.
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
 ---
 
-# Visual indicator for your Teams app
+# Enable app icon badges for your Teams app
 
-Visual indicator for an app helps meeting participants identify any app activity during a meeting. Participants get activity notification for the meeting apps.
+App icon badges for an app helps meeting participants identify any app activity during a meeting. Participants get activity notification for the meeting apps.
 
-When there's new activity during the meeting, the app calls the targeted meeting notification API and displays a red indicator on the app icon in the meeting unified bar (U-bar). When the participants select the app icon, the app opens in a meeting side panel, and the indicator goes away.
+When there's new activity during the meeting, the app calls the targeted meeting notification API and displays a red badge on the app icon in the meeting unified bar (U-bar). When the participants select the app icon, the app opens in a meeting side panel, and the badge goes away.
 
 For example, during a real time collaboration in a meeting, if a participant adds a comment in a file, the app calls the targeted meeting notification API from the participant's meeting side panel. This triggers a visual indicator on the app icon for other participants of the comment activity.
 
