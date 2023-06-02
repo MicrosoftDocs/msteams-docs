@@ -939,7 +939,7 @@ You have learned to create, build, and run Teams app with tab capability. The fo
 
 1. Select **Project** > **Teams Toolkit** > **Preview in Teams**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png" alt-text="Screenshot21of Visual Studio with Project, Teams Toolkit, and Preview in Teams options are highlighted in red."lightbox=../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png" alt-text="Screenshot21of Visual Studio with Project, Teams Toolkit, and Preview in Teams options are highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png":::
 
 1. Select **Add** when prompted to install the app to Teams.
 
