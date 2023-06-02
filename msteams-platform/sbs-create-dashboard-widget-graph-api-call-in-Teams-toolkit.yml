@@ -26,7 +26,7 @@ items:
     | --- | --- |    
     | [NodeJS](https://nodejs.org/en/)| Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type). |
     | [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) | Teams account with the appropriate permissions to install an app. |
-    | [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](~/toolkit/TeamsFx-CLI.md) |  A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Teams Toolkit version 4.0.0. |
+    | [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](~/toolkit/TeamsFx-CLI.md) |  A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Teams Toolkit version 5.0.0. |
 
 - title: Create a new dashboard
   content: |
@@ -35,21 +35,23 @@ items:
 
     To create a new dashboard:
 
-     1. From the Teams Toolkit left pane, select **Create a new Teams app**.
+     1. Select the Teams Toolkit icon in the Visual Studio Code Activity Bar.
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-a-new teams-app.png" alt-text="Screenshot shows the selection of create new Teams app":::
+     1. Select **Create a New App**.
 
-     1. Select **Create a new Teams app**. 
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-a-new teams-app.png" alt-text="Screenshot shows the selection to create new app.":::
+
+     1. Select **Tab** to create a new tab project.. 
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-a-new-teams-app-2.png" alt-text="Screenshot shows the selection of new Teams app.":::
 
-     1. Select **Dashboard tab**.
+     1. Select **Dashboard** from the App Features Using a Tab.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-tab-preview.png" alt-text="Screenshot shows the selection of dashboard tab preview.":::
 
-     1. Select a programming language.
+     1. Select TypeScript as the programming language..
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/javascript.png" alt-text="Screenshot shows the selection of programming language.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/programming-language.png" alt-text="Screenshot shows the selection of programming language.":::
 
      1. Select a workspace folder.
 
@@ -59,8 +61,32 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/enter-application-name.png" alt-text="Screenshot shows the selection of application name.":::
 
-        The Teams tab app is created.
+        The Teams tab app is created in few seconds and Teams Toolkit displays the following message.
 
+      :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-app-preview.png" alt-text="Screenshot shows the teams tab app dashboard preview in VS Code.":::
+
+      :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-debug.png" alt-text="Screenshot shows the local debug.":::
+
+     1. Select the Teams Toolkit icon in sidebar 
+     
+     1. Select signin to Microsoft 365 account using test credentials.
+
+     :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/M365-account-signin.png" alt-text="Screenshot shows the Microsoft signin.":::
+
+     1. Select F5 to run the application in debug mode.
+
+     1. Select Add.
+
+     :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-dashboard-add.png" alt-text="Screenshot shows the selection of workspace folder.":::
+
+     1. Successfully created the teams tab app dashboard
+
+       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity.":::
+
+      Teams app also supports different themes, including dark and high contrast themes.
+
+       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-light-theme.png" alt-text="Screenshot shows the contrast themes.":::
+      
       In TeamsFX CLI,
 
       * If you prefer interactive mode, execute `teamsfx new` command, then use the keyboard to go through the same flow as in Visual Studio Code.
@@ -69,58 +95,45 @@ items:
 
         `teamsfx new--interactive false--capabilities "dashboard-tab"--programming-language "TypeScript"--folder "./"--app-name dashboard-cli-001`
 
-      1. After you've successfully created the Teams tab app, select the **F5** key to start local debugging in Visual Studio Code. You'll see a tab app loaded:
-
-      :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity.":::
-
-      Teams app also supports different themes, including dark and high contrast themes.
-
-      :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-light-theme.png" alt-text="Screenshot shows the contrast themes.":::
-       
 - title: Take a tour of the app source code
   durationInMinutes: 2
   content: |       
 
       The core dashboard implementation is in the tabs folder. This section walks you through the generated code:
 
-      | **Folder** | **Content** |
-      |---|---|
-      | `.fx` | Project level settings, configurations, and environment information. |
-      | `.vscode` | Visual Studio Code files for local debug. |
-      | `tabs` | Source code for the dashboard tab Teams application. |
-      | `templates` | Templates for the Teams application manifest and for provisioning Azure resources. |
+      | Folder | Contents |
+      | ----- | ----- |
+      | `.vscode` | VSCode files for debugging. |
+      | `appPackage` | Templates for the Teams application manifest. |
+      | `env` | Environment files. |
+      | `infra` | Templates for provisioning Azure resources. |
+      | `src` | The source code for the dashboard Teams application. |
 
       The following files provide the business logic for the dashboard tab. These files can be updated to fit your business logic requirements. The default implementation provides a starting point to help you get started.
 
-      | **File**                                   | **Contents**                                       |
-      | ------------------------------------------ | -------------------------------------------------- |
-      | src/data/listData.json                     | Data for the list widget.                           |
-      | src/models/listModel.ts                    | Data model for the list widget.                     |
-      | src/services/chartService.ts               | A data retrive implementation for the chart widget. |
-      | src/services/listService.ts                | A data retrive implementation for the list widget.  |
-      | src/views/dashboards/SampleDashboard.tsx   | A sample dashboard layout implementation.           |
-      | src/views/lib/Dashboard.css                | The dashbaord style file.                           |
-      | src/views/lib/Dashboard.tsx                | An base class that defines the dashboard.           |
-      | src/views/lib/Widget.css                   | The widgt style file.                               |
-      | src/views/lib/Widget.tsx                   | An abstract class that defines the widget.          |
-      | src/views/styles/ChartWidget.css           | The chart widget style file.                        |
-      | src/views/styles/ListWidget.css            | The list widget style file.                         |
-      | src/views/widgets/ChartWidget.tsx          | A widget implementation that can display a chart.   |
-      | src/views/widgets/ListWidget.tsx           | A widget implementation that can display a list.    |
+      | File | Contents |
+      | ------ | ----- |
+      | `src/models/chartModel.ts` | Data model for the chart widget. |
+      | `src/models/listModel.ts` | Data model for the list widget. |
+      | `src/services/chartService.ts` | A data retrive implementation for the chart widget. |
+      | `src/services/listService.ts` | A data retrive implementation for the list widget. |
+      | `src/dashboards/SampleDashboard.tsx` | A sample dashboard layout implementation. |
+      | `src/styles/ChartWidget.css` | The chart widget style file. |
+      | `src/styles/ListWidget.css` | The list widget style file. |
+      | `src/widgets/ChartWidget.tsx` | A widget implementation that can display a chart. |
+      | `src/widgets/ListWidget.tsx` | A widget implementation that can display a list. |
+      | `src/App.css` | The style of application route. |
+      | `src/App.tsx` | Application route. |
       
-
-      The following files are project-related files and you need not customize these files:
-
-      | **File**                           | **Contents**                                                 |
-      | ---------------------------------- | ------------------------------------------------------------ |
-      | src/index.css                      | The style of application entry point.                         |
-      | src/index.tsx                      | Application entry point.                                      |
-      | src/App.css                        | The style of application route.                               |
-      | src/App.tsx                        | Application route.                                            |
-      | src/internal/addNewScopes.ts       | Implementation of new scopes add.                             |
-      | src/internal/context.ts            | TeamsFx Context.                                              |
-      | src/internal/login.ts              | Implementation of login.                                      |
-      | src/internal/singletonContext.ts   | Implementation of the TeamsUserCredential instance singleton. |
+      The following files are project-related files. You generally will not need to customize these files.
+      | File | Contents |
+      | ----- | ----- |
+      | `src/index.css` | The style of application entry point. |
+      | `src/index.tsx` | Application entry point. |
+      | `src/internal/addNewScopes.ts` | Implementation of new scopes add. |
+      | `src/internal/context.ts` | TeamsFx Context. |
+      | `src/internal/login.ts` | Implementation of login. |
+      | `src/internal/singletonContext.ts` | Implementation of the TeamsUserCredential instance singleton. |
    
 - title: Add a widget to the dashboard
   durationInMinutes: 5
