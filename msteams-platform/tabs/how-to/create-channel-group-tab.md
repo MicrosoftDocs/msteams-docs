@@ -935,7 +935,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 1. [Provision your tab app in the cloud](#to-provision-your-tab-app-in-the-cloud): You can provision your tab app in the cloud.
 1. [Deploy your tab app to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud.
-1. [Preview your tab app in Teams](#to-preview-your-tab-app-in-teams): Your tab app opens in Teams.
+1. [Preview your tab app in Teams](#to-preview-your-tab-app-in-teams): You can preview your tab app in Teams.
 
     Let's deploy the first app with tab capability on Azure using Teams Toolkit.
 
@@ -943,7 +943,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png" alt-text="Screenshot13 of Visual Studio with Project, Teams Toolkit, and Provision in the Cloud options are highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png" alt-text="Screenshot13 of Visual Studio with Project, Teams Toolkit, and Provision in the Cloud options are highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png":::
 
 1. Enter the subscription and resource group details in the **Provision** dialog:
    1. Select the subscription name from  **Subscription name** dropdown list.
@@ -981,7 +981,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png" alt-text="Screenshot19 of Visual Studio with Project, Teams Toolkit, and Deploy to the Cloud options highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png" alt-text="Screenshot19 of Visual Studio with Project, Teams Toolkit, and Deploy to the Cloud options highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png":::
 
 1. Select **OK**.
 
@@ -993,7 +993,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 1. Select **Project** > **Teams Toolkit** > **Preview in Teams**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png" alt-text="Screenshot21of Visual Studio with Project, Teams Toolkit, and Preview in Teams options are highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png" alt-text="Screenshot21of Visual Studio with Project, Teams Toolkit, and Preview in Teams options are highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png":::
 
 1. Select **Add** when prompted to install the app to Teams.
 
