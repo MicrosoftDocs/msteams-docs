@@ -492,7 +492,7 @@ The item is an array (maximum of only one element&mdash;currently only one bot i
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`botId`|string|64 characters|✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
+|`botId`|string|128 characters|✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
 |`scopes`|array of enums|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupChat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
 |`needsChannelSelector`|Boolean|||Describes whether or not the bot uses a user hint to add the bot to a specific channel. Default: **`false`**|
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: **`false`**|
@@ -543,7 +543,7 @@ The item is an array (maximum of one element) with all elements of type `object`
 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
-|`botId`|string|64|✔️|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall App ID.|
+|`botId`|string|128 characters|✔️|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall App ID.|
 |`commands`|array of objects|10|✔️|Array of commands the message extension supports.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. Default: **false**.|
 |`messageHandlers`|array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met.|
@@ -637,7 +637,7 @@ Provide your Azure Active Directory App ID and Microsoft Graph information to he
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|string|36 characters|✔️|Azure AD application ID of the app. This ID must be a GUID.|
+|`id`|string|128 characters|✔️|Azure AD application ID of the app. This ID must be a GUID.|
 |`resource`|string|2048 characters|✔️|Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you aren't using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, `https://example` to avoid an error response. |
 
 ## graphConnector
