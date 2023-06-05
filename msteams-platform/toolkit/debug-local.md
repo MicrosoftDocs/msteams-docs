@@ -146,7 +146,7 @@ The following image displays task names in the **OUTPUT** and **TERMINAL** tabs 
 | Arguments | Type | Required | Description |
 | --- | --- | --- |--------|
 | type | string | required | The type of tunnel service to use. This argument must be set to `dev-tunnel`. |
-| env | string | optional | The environment name. Teams Toolkit writes the environment variables defined in output to `.env.<env>` file. |
+| env | string | optional | The environment name. Teams Toolkit writes the environment variables defined in `output` to `.env.<env>` file. |
 | ports | array | required | An array of port configurations, each specifying the local port number, protocol, and access control settings. |
 
 2. **Change port**. Change the `portNumber` to use another port for local bot service, for example, 3922. Also, change the port in bot code (`index.js` or `index.ts`).
@@ -176,7 +176,7 @@ The following image displays task names in the **OUTPUT** and **TERMINAL** tabs 
 },
 ```
 
-The ports argument must be an array of objects, with each object specifying the configuration for a particular port. Each object must contain the following fields:
+The `ports` argument must be an array of objects, with each object specifying the configuration for a particular port. Each object must contain the following fields:
 
 | Port | Type | Required | Description |
 |---|---|---|------|
