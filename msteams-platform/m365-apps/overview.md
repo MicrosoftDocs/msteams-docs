@@ -16,8 +16,8 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 
 | Teams app features| App manifest element | Teams support |Outlook support | Microsoft 365 app support | Notes |
 |--|--|--|--|--|--|
-| [**Tabs-personal scope**](../tabs/how-to/create-personal-tab.md)     |`staticTabs`  | Web, Desktop, Mobile | Web (Targeted Release), Desktop (Beta Channel), Mobile (Android) | Web, Desktop, Mobile (Android)| Channel and group scope not yet supported for Microsoft 365. See [notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
-| [**Message extensions-search-based**](../messaging-extensions/how-to/search-commands/define-search-command.md)| `composeExtensions` | Web, Desktop, Mobile| Web (Targeted Release), Desktop (Beta Channel)| - |Action-based not yet supported for Microsoft 365. See [notes](extend-m365-teams-message-extension.md#troubleshooting). |
+| [**Tabs-personal scope**](../tabs/how-to/create-personal-tab.md)     |`staticTabs`  | Web, Desktop, Mobile (iOS & Android) | Web (Targeted Release), Desktop (Beta Channel), Mobile (iOS & Android) | Web, Desktop, Mobile (iOS & Android)| Channel and group scope not yet supported for Microsoft 365. See [notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
+| [**Message extensions-search-based**](../messaging-extensions/how-to/search-commands/define-search-command.md)| `composeExtensions` | Web, Desktop, Mobile (iOS & Android)| Web (Targeted Release), Desktop (Beta Channel)| - |Action-based not yet supported for Microsoft 365. See [notes](extend-m365-teams-message-extension.md#troubleshooting). |
 | link unfurling (including stage view) | `composeExtensions.messageHandlers` | Web, Desktop | Web (Targeted release), Desktop (Beta Channel) | - | See notes on [link unfurling](extend-m365-teams-message-extension.md#link-unfurling) and [stage view](extend-m365-teams-message-extension.md#stage-view)|
 | [**Office Add-ins**](/office/dev/add-ins/develop/json-manifest-overview) (preview) | `extensions` | - | Web, Desktop | - | Only available in [devPreview](../resources/schema/manifest-schema-dev-preview.md) manifest version. See [notes](#office-add-ins-preview).|
 
@@ -34,9 +34,15 @@ Reach your users where they are, right in the context of their work by extending
 
 :::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="The screenshot is an example that shows Personal tab running in Outlook, Microsoft 365, and Teams.":::
 
-On mobile, you can test and debug your Teams personal tab running on [Microsoft 365 for Android app](extend-m365-teams-personal-tab.md#microsoft-365-for-android-app) and [Outlook for Android app](extend-m365-teams-personal-tab.md#outlook-for-android-app).
+On mobile, you can test and debug your Teams personal tab running on Microsoft 365 for [iOS](extend-m365-teams-personal-tab.md#microsoft-365-for-ios) and [Android app](extend-m365-teams-personal-tab.md#microsoft-365-for-android-app), in addition to Outlook for [iOS](extend-m365-teams-personal-tab.md#outlook-for-ios) and [Android app](extend-m365-teams-personal-tab.md#outlook-for-android-app).
 
-:::image type="content" source="images/office-mobile-personal-tab.png" alt-text="The screenshot is an example that shows personal tab running in Microsoft 365.":::
+# [Android](#tab/Android)
+
+:::image type="content" source="images/office-mobile-personal-tab.png" alt-text="The screenshot is an example that shows personal tab running in Microsoft 365 on Android app.":::
+
+# [iOS](#tab/iOS)
+
+:::image type="content" source="images/m365-mobile-personal-tab.png" alt-text="The screenshot is an example that shows personal tab running in Microsoft 365 on iOS.":::
 
 You can also extend your search-based [Teams message extensions](extend-m365-teams-message-extension.md) to Outlook on the web and Windows desktop, enabling your customers to search and share results through the compose message area of Outlook, in addition to Microsoft Teams clients.
 
