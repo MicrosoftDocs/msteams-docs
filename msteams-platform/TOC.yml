@@ -548,7 +548,7 @@
       displayName: supportsAnonymousGuestUsers, guest
     - name: Meeting apps APIs
       href: apps-in-teams-meetings/meeting-apps-apis.md
-      displayName: payload, recurring, getparticipant, captions, targeted meeting notification
+      displayName: payload, recurring, getparticipant, captions, targeted meeting notification, real-time meeting events, meeting start and end events
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview
