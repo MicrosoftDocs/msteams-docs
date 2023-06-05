@@ -177,6 +177,7 @@ The following image displays task names in the **OUTPUT** and **TERMINAL** tabs 
 ```
 
 The ports argument must be an array of objects, with each object specifying the configuration for a particular port. Each object must contain the following fields:
+
 | Port | Type | Required | Description |
 |---|---|---|------|
 | portNumber | number | required | The local port number of the tunnel. |
