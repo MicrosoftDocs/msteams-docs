@@ -251,7 +251,7 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
 }
 ```
 
-    ```typescript
+```typescript
     export default class SampleDashboard extends BaseDashboard<any, any> {
 
   override styling(): string {
@@ -261,14 +261,14 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
   override layout(): JSX.Element | undefined {
     return (
       <>
-        <ListWidget />
-        <ChartWidget />
-        <NewsWidget />
-      </>
+    <ListWidget />
+    <ChartWidget />
+    <NewsWidget />
+    </>
     );
   }
 }
-    ```
+```
 
    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout.png" alt-text="Screenshot shows the customized dashboard layout.":::
 
@@ -281,7 +281,7 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
 }
 ```
 
-    ```typescript
+```typescript
     export default class SampleDashboard extends Dashboard {
   override styling(): string {
     return "customize-class-name";
@@ -290,16 +290,16 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
   override layout(): JSX.Element | undefined {
     return (
       <>
-        <ListWidget />
-        <ChartWidget />
-        <NewsWidget />
+    <ListWidget />
+    <ChartWidget />
+    <NewsWidget />
       </>
     );
   }
     }
-    ```
+```
 
-    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout2.png" alt-text="Screenshot shows the customization of height and width of the dashboard layout.":::
+:::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout2.png" alt-text="Screenshot shows the customization of height and width of the dashboard layout.":::
 
 * Arrange two widgets in a column.
 
@@ -535,15 +535,15 @@ If you want to include a data loader to your widget before the widget is loaded,
 
 The following code is an example:
 
-    ```typescript
+```typescript
     override loading(): JSX.Element | undefined {
   return (
-    <div className="loading">
-      <Spinner label="Loading..." labelPosition="below" />
+  <div className="loading">
+  <Spinner label="Loading..." labelPosition="below" />
     </div>
   );
     }
-    ```
+```
 
 Now, the loading spinner is shown while the data is loading. When the data is loaded, the loading spinner is hidden and the list data, and footer button are shown.
 
