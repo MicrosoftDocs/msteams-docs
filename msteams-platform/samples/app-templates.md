@@ -1,4 +1,3 @@
----
 title: App templates for Microsoft Teams
 description: Learn to use app templates for Microsoft Teams platform with detailed instructions for deploying and installing an app.
 ms.topic: reference
@@ -39,6 +38,10 @@ It provides a foundation to build custom targeted communication capabilities suc
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
 ![jCompany Communicator compose box view](../assets/images/CompanyCommunicatorCompose.png)
+
+> [!NOTE]
+> Company Communicator app is not currently supported in mobile devices.
+
 
 ## FAQ Plus
 
