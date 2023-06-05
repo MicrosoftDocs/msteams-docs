@@ -24,9 +24,12 @@ items:
 
     | Install | For using |
     | --- | --- |    
-    | [NodeJS](https://nodejs.org/en/)| Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type). |
+    | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
+    | [Teams Toolkit](#tabpanel_1_vscode) or [TeamsFx CLI](~/toolkit/TeamsFx-CLI.md| Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Teams Toolkit v5. |
     | [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) | Teams account with the appropriate permissions to install an app. |
-    | [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](~/toolkit/TeamsFx-CLI.md) |  A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Teams Toolkit version 5.0.0. |
+    | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
+    | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place.|
+    | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 
 - title: Create a new dashboard
   content: |
@@ -279,13 +282,13 @@ items:
 
       Add single sign-on (SSO) related files by using Teams toolkit.
 
-      1. In Visual Studio Code, select **Teams** in the left pane.
+      1. Select the Teams Toolkit icon in the Visual Studio Code Activity Bar.
       
-      1. Under **DEVELOPMENT**, select **Add features**.
+      1. Under **DEVELOPMENT**, select **View How-to Guides**.
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/add-features.png" alt-text="Screenshot shows the selection of added features option.":::
 
-      1. Select **Single Sign-On**.
+      1. Select **Develop Single Sign-On Experience in Teams.**.
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/single-sign-on.png" alt-text="Screenshot shows the selection of single sign-on option.":::
 
