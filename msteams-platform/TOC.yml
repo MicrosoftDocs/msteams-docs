@@ -102,6 +102,7 @@
       displayName: logo
     - name: Tabs
       href: tabs/design/tabs.md
+      displayName: changing margins
     - name: Bots
       href: bots/design/bots.md
     - name: Message extensions
@@ -400,17 +401,17 @@
     displayName: configurable
   - name: Tab margin changes
     href: resources/removing-tab-margins.md
-    displayName: margins align, extra padding effect, size of the tab margins
+    displayName: margins align, extra padding effect, size of the tab margins, changing margins
 - name: Build bots
   items:
   - name: Overview
     href: bots/what-are-bots.md
   - name: Bots and SDKs
     href: bots/bot-features.md
-    displayName: Bot samples, advantages of bots, bot with Power Virtual Agents, Microsoft Bot Framework
+    displayName: Bot samples, advantages of bots, bot with Power Virtual Agents, Microsoft Bot Framework, OnMessageActivityAsync
   - name: Bot activity handlers
     href: bots/bot-basics.md
-    displayName: Bot logic, core Bot Framework handlers
+    displayName: Bot logic, core Bot Framework handlers, OnMessageActivityAsync
   - name: Bot conversations
     items:
     - name: Overview
@@ -418,23 +419,23 @@
       displayName: chat, Messages sent between your Microsoft Teams bot and one or more user
     - name: Messages in bot conversations
       href: bots/how-to/conversations/conversation-messages.md
-      displayName: Picture messages, emojis, attribution for bot message, status code responses, app localization using bot and tab, form, soft delete
+      displayName: Picture messages, emojis, attribution for bot message, status code responses, app localization using bot and tab, form, soft delete, OnMessageActivityAsync
       items:
       - name: Receive all conversation messages with RSC
         href: bots/how-to/conversations/channel-messages-with-rsc.md
-        displayName: mention
+        displayName: mention, OnMessageActivityAsync
     - name: Create a commands menu
       href: bots/how-to/create-a-bot-commands-menu.md
       displayName: compose
     - name: Channel and group chat conversations with a bot
       href: bots/how-to/conversations/channel-and-group-conversations.md
-      displayName: Teams conversational bots, mention
+      displayName: Teams conversational bots, mention, OnMessageActivityAsync
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md 
       displayName: activity, Message reaction events, event handling for install and uninstall events
     - name: Proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
-      displayName: conversationId 
+      displayName: conversationId, cache
     - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
       displayName: Interactive elements, UTF-16, Base64, hyperlink
@@ -452,10 +453,10 @@
       displayname: Jira
   - name: Get Teams specific context for your bot
     href: bots/how-to/get-teams-context.md
-    displayName: Fetch roster or user profile
+    displayName: Fetch roster or user profile, OnMessageActivityAsync
   - name: Send and receive files using bot
     href: bots/how-to/bots-filesv4.md
-    displayName: send, File consent and upload files to Teams from a bot
+    displayName: send, File consent and upload files to Teams from a bot, OnMessageActivityAsync
   - name: Optimize your bot with rate limiting in Teams
     href: bots/how-to/rate-limit.md
     displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
@@ -527,17 +528,18 @@
   items:
   - name: Overview
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
-    displayName: guest 
+    displayName: guest, meeting stage, cache
   - name: Enable and configure apps for Teams meetings
     items:
     - name: Build tabs for meeting
       href: apps-in-teams-meetings/build-tabs-for-meeting.md
-      displayName: anonymous, app caching, launch time
+      displayName: anonymous, app caching, launch time, meeting stage, cache
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
-      displayName: MicrosoftTeams.meeting.getAppContentStageSharingState
+      displayName: MicrosoftTeams.meeting.getAppContentStageSharingState, meeting stage
     - name: Share in meeting
       href: concepts/build-and-test/share-in-meeting.md
+      displayName: meeting stage
     - name: Build in-meeting notification for meeting
       href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
       displayName: bubble, targeted meeting, in-meeting, notification
@@ -548,7 +550,7 @@
       displayName: supportsAnonymousGuestUsers, guest
     - name: Meeting apps APIs
       href: apps-in-teams-meetings/meeting-apps-apis.md
-      displayName: payload, recurring, getparticipant, captions, targeted meeting notification, real-time meeting events, meeting start and end events
+      displayName: payload, recurring, getparticipant, captions, targeted meeting notification, real-time meeting events, meeting start and end events, meeting stage, OnMessageActivityAsync
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview
@@ -605,7 +607,7 @@
     href: webhooks-and-connectors/how-to/connectors-creating.md
   - name: Create and send messages
     href: webhooks-and-connectors/how-to/connectors-using.md
-    displayName: Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard
+    displayName: Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard, MessageCard
 - name: Build cards and task modules
   items:
   - name: Overview
@@ -617,10 +619,10 @@
       displayName: People picker, type-ahead
     - name: Types of cards
       href: task-modules-and-cards/cards/cards-reference.md
-      displayName: correlationId, Markdown, what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card
+      displayName: correlationId, Markdown, what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card, MessageCard
     - name: Format cards in Microsoft Teams
       href: task-modules-and-cards/cards/cards-format.md
-      displayName: Information masking, background, extension, notification, HTML, rich text
+      displayName: Information masking, background, extension, notification, HTML, rich text, MessageCard
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
       displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin
@@ -672,7 +674,7 @@
         href: tabs/how-to/authentication/tab-sso-register-aad.md
       - name: Add code to enable SSO
         href: tabs/how-to/authentication/tab-sso-code.md
-        displayName: getAuthToken
+        displayName: getAuthToken, cache
       - name: Update app manifest for SSO and preview app
         href: tabs/how-to/authentication/tab-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
@@ -699,7 +701,7 @@
         displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
     - name: Troubleshoot SSO authentication
       href: tabs/how-to/authentication/tab-sso-troubleshooting.md
-      displayName: Caching
+      displayName: Caching, cache
   - name: Use third party IdP authentication
     items:
     - name: Overview
@@ -790,6 +792,7 @@
   href: copilot/how-to-extend-copilot.md
 - name: Teams developer documentation FAQs
   href: teams-faq.md
+  displayName: cache
 - name: Test your app
   items:
   - name: Overview
@@ -808,6 +811,7 @@
     items:
     - name: DevTools for Microsoft Teams tabs
       href: tabs/how-to/developer-tools.md
+      displayName: cache
   - name: Bots
     items:
     - name: Test and debug your bot locally with IDE
@@ -1056,6 +1060,7 @@
     href: resources/teams-contributor-reference.md
   - name: Troubleshoot your Microsoft Teams app
     href: resources/troubleshoot.md
+    displayName: cache
 - name: Support and feedback
   href: feedback.md
   displayName: Developer community help, questions, suggestions, contact, issues
