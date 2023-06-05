@@ -174,7 +174,7 @@ You can handle a new action invoked by Adaptive Card with TeamsFx SDK's class `T
 
 # [JavaScript](#tab/JS)
 
-You can create a new file `/src/cardActions/doSomethingActionHandler.js(ts)`:
+You can create a new file `/src/cardActions/doSomethingActionHandler.js`:
 
 ```javascript
     const { AdaptiveCards } = require("@microsoft/adaptivecards-tools");
@@ -191,7 +191,6 @@ You can create a new file `/src/cardActions/doSomethingActionHandler.js(ts)`:
     }
 
      module.exports = {
-
        DoSomethingActionHandler,
     }
 ```
