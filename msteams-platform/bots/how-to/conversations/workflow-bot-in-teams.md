@@ -16,14 +16,14 @@ A workflow bot can be installed into a team, group chat, or as personal app, dep
 **Advantages**:
 
 * Automates business processes and repetitive workflows without leaving the context of conversations.
-* Supports users with sequential workflow through various cards progressively, without sending another cards.
+* Supports users with sequential workflow through various cards progressively, without sending additional cards.
 * Provides up-to-date user-specific views.
 * Simplifies programming model with TeamsFx SDK.
 
    > [!NOTE]
    > You can select the capability that you want to install, when adding the app. For more information, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
 
-You can create a workflow bot to respond to the Adaptive Card triggered by users. Adaptive Card action handler powered by TeamsFx SDK can execute the Adaptive Card universal action `Action.Execute` triggered by users. In response to this respective card action in the conversation, the Adaptive card action handler sends another Adaptive Card.
+You can create a workflow bot to respond to the Adaptive Card triggered by users. Adaptive Card action handler powered by TeamsFx SDK can execute the Adaptive Card universal action `Action.Execute` triggered by users. In response to this respective card action in the conversation, the Adaptive Card action handler sends another Adaptive Card.
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" alt-text="Workflow bot final output with a button" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" :::
 
