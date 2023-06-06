@@ -84,7 +84,6 @@ The following are the supported micro-capability templates for Teams client:
 > If the website link doesn't have the supported micro-capability templates, Teams defaults the link to the current URL preview unfurling.
 
 # [Article](#tab/article)
-
 |Property |Description  |
 |---------|---------|
 |`@type`     | Article        |
@@ -94,10 +93,9 @@ The following are the supported micro-capability templates for Teams client:
 |creator     | Author of the article.        |
 |description    | Summary about the article.        |
 |url     |  URL of the article's official website.      |
-
 Example of the unfurling experience for article type:
-
 :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-article.png" alt-text="Screenshot shows a unfurling experience of the article template in Microsoft Teams.":::
+
 
 # [Product](#tab/product)
 
@@ -133,42 +131,6 @@ Example of the unfurling experience for the event type:
 
 :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-event.png" alt-text="Screenshot shows the unfurling experience of the event template in Microsoft Teams.":::
 
-# [Restaurant](#tab/restaurant)
-
-|Property |Description  |
-|---------|---------|
-|`@type`     |  Restaurant       |
-|image    | URL of the image of for the restaurant.        |
-|name    |  Name of the author.       |
-|priceRange      |  Price range of the restaurant.       |
-|aggregateRating.ratingValue       | Average Rating of the restaurant.        |
-|address     |  Physical address of the restaurant.       |
-|url     | Link to the restaurant's website.        |
-|geo.latitude     | Latitude of the restaurant location.       |
-|geo.longitude      |  Longitude of the restaurant location.       |
-|aggregateRating.reviewCount      | Average number of reviews for the restaurant.        |
-|aggregateRating.ratingCount      | Average number of ratings for the restaurant.        |
-
-Example of the unfurling experience for the restaurant type:
-
-:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-restaurant.png" alt-text="Screenshot shows the unfurling experience of the restaurant template in Microsoft Teams.":::
-
-# [Recipe](#tab/recipe)
-
-|Property |Description  |
-|---------|---------|
-|`@type`     |  Recipe       |
-|image    | URL of the image of for the recipe.        |
-|name    |  Name of the recipe.       |
-|aggregateRating.ratingValue     | Average rating of the recipe.        |
-|aggregateRating.reviewCount      |  Average  review  of the recipe.   |
-|description    |  Summary of the recipe.       |
-|recipeYeild    |  Quantity of the recipe.       |
-|prepTime      | Time to prepare the recipe.        |
-
-Example of the unfurling experience for the recipe type:
-
-:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-recipe.png" alt-text="Screenshot shows the unfurling experience of the recipe template in Microsoft Teams.":::
 
 # [Local business](#tab/localbuisness)
 
@@ -206,29 +168,6 @@ Example of the unfurling experience for the course type:
 
 :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-course.png" alt-text="Screenshot shows the unfurling experience of the course template in Microsoft Teams.":::
 
-# [Person](#tab/person)
-
-|Property |Description  |
-|---------|---------|
-|`@type`     |   Person      |
-|image    | URL of the image for the person.        |
-|name    |  Name of the person.       |
-|jobTitle    |    Job title of the person.    |
-|description    |   Summary of the person.      |
-|url     |  URL of the person's website.        |
-
-Example of the unfurl experience for the person type:
-
-:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-person.png" alt-text="Screenshot shows the unfurling experience of the person template in Microsoft Teams.":::
-
-# [Website](#tab/website)
-
-|Property |Description  |
-|---------|---------|
-|`@type`     |   Website      |
-|image    | URL of the image of for the website.        |
-|name    |  Name of the author.      |
-|description    |  Summary of the website.      |
 
 ---
 
