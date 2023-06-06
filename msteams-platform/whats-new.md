@@ -341,7 +341,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 June**
 
-***June 05, 2023***: [New Microsoft Teams client](resources/teams-updates.md).
+***June 06, 2023***: [New Microsoft Teams client](resources/teams-updates.md).
 
 :::column-end:::
 :::row-end:::

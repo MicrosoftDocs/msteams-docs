@@ -22,7 +22,7 @@ Apps in the new Teams client run better and faster as:
 
 To ensure a smooth transition, a phased rollout of the new platform is planned as follows:
 
-* **Developer Preview**: The new Teams client is available in Public Developer Preview starting 01 June 2023. You can access the new platform and test your apps. We encourage you to adopt the feature early and provide feedback to help refine the platform.
+* **Developer Preview**: The new Teams client is available in Public Developer Preview starting 06 June 2023. You can access the new platform and test your apps. We encourage you to adopt the feature early and provide feedback to help refine the platform.
 
 * **Availability of all platform features from Teams classic**: All the platform features from Teams classic will be available in the new Teams client by August 2023. We plan to officially launch the new platform after addressing the known issues and incorporating feedback.
 
