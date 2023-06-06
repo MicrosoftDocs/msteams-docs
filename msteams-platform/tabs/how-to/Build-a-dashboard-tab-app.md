@@ -308,7 +308,7 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
 
 # [JavaScript](#tab/JS1)
 
-    ```typescript
+  ```typescript
     export default class SampleDashboard extends BaseDashboard<any, any> {
       override layout(): JSX.Element | undefined {
         return (
