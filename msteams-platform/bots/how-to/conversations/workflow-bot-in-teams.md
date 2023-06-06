@@ -1,7 +1,7 @@
 ---
 title: Workflow bot in Teams
 author: surbhigupta
-description: Learn how to send a response to card action in Teams workflow bot, add more card actions and customize action responses.
+description: Learn how to send a response to card action in Teams workflow bot, add more card actions, and customize action responses.
 ms.topic: conceptual
 ms.author: v-bvishnu
 ms.localizationpriority: high
@@ -85,9 +85,9 @@ A Teams bot needs to be installed into a team, or a group chat, or as personal a
 
 * For more install options, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
 
-:::image type="content" source="../../../assets/images/notification-bot/notification-installation-scope.png" alt-text="add installation scope":::
+    :::image type="content" source="../../../assets/images/notification-bot/notification-installation-scope.png" alt-text="add installation scope":::
 
-* For more uninstall options, see [uninstall options](https://support.microsoft.com/office/remove-an-app-from-teams-0bc48d54-e572-463c-a7b7-71bfdc0e4a9d)
+* For more uninstall options, see [uninstall options](https://support.microsoft.com/office/remove-an-app-from-teams-0bc48d54-e572-463c-a7b7-71bfdc0e4a9d).
 
 ## Add card actions
 
@@ -274,7 +274,7 @@ namespace MyBotApp.CardActions
 > [!NOTE]
 >
 > * `triggerVerb` is the **verb** property of your action.
-> * `actionData` is the data associated with the action, which may include dynamic user input, or some contextual data provided in the data property of your action.
+> * `actionData` is the data associated with the action, which may include dynamic user input, or some contextual data provided in the `data` property of your action.
 > * If an Adaptive Card is returned, the existing card is replaced with it by default.
 > * To customize the action response card sent in Teams chat. For more information, see [Customize the action response](#customize-the-action-response).
 
@@ -285,7 +285,7 @@ namespace MyBotApp.CardActions
 
 <summary><b>4. Register the action handler</b></summary>
 
-You need to configure each Adaptive Card action in the `conversationBot` that enables the conversational flow of the workflow bot template.
+You need to configure each Adaptive Card action in the `ConversationBot` that enables the conversational flow of the workflow bot template.
 
 The following steps help you to register the action handler:
 
@@ -372,12 +372,20 @@ You can see the following response message in Teams:
 
 ### Respond with error messages
 
-When you want to return an error response message to the client, you can apply `InvokeResponseFactory.errorResponse` to build your invoke response. The following image shows error message in Adaptive Card:
+When you want to return an error response message to the client, you can apply `InvokeResponseFactory.errorResponse` to build your invoke response, for example:
+
+```
+async handleActionInvoked(context: TurnContext, actionData: any): Promise<InvokeResponse> {
+    return InvokeResponseFactory.errorResponse(StatusCodes.BAD_REQUEST, "You input is invalid!");
+}
+```
+
+The following image shows error message in Adaptive Card:
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/error-message-response.png" alt-text="error response message displayed.":::
 
 > [!NOTE]
-> For more information about the invoke response format, see [response format](/adaptive-cards/authoring-cards/universal-action-model)
+> For more information about the invoke response format, see [response format](/adaptive-cards/authoring-cards/universal-action-model).
 
 ### Customize Adaptive Card content
 
@@ -389,7 +397,7 @@ You can also add new cards, if needed for your application. To build different t
 
 ## Auto-refresh to user-specific view
 
-When Adaptive Cards are sent in a Teams channel or group chat, all users can see the same card content. With the new refresh model for Adaptive Cards universal action, users can have a user-specific view. The auto-refresh also facilitates scenarios such as approvals, poll creator controls, ticketing, incident management, and project management cards. The following diagram illustrates how to provide user-specific view with `refresh` model. For more information, see [Refresh model](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#refresh-model)
+When Adaptive Cards are sent in a Teams channel or group chat, all users can see the same card content. With the new refresh model for Adaptive Cards universal action, users can have a user-specific view. The auto-refresh also facilitates scenarios such as approvals, poll creator controls, ticketing, incident management, and project management cards. The following diagram illustrates how to provide user-specific view with `refresh` model. For more information, see [Refresh model](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#refresh-model).
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-base-card.gif" alt-text="Graphical interface that shows of a user specific auto-refresh model.":::
 
@@ -424,27 +432,29 @@ The following steps help you to add user-specific view with TeamsFx SDK:
   In the following sample, a base card returns as command response that can auto-refresh to specific user, such as the command sender:
 
 ```
-  import baseCard from "../adaptiveCards/baseCard.json";
-  import { AdaptiveCards } from "@microsoft/adaptivecards-tools";
+import baseCard from "../adaptiveCards/baseCard.json";
+import { AdaptiveCards } from "@microsoft/adaptivecards-tools"; 
 
-        export class HelloWorldCommandHandler implements TeamsFxBotCommandHandler {
-        triggerPatterns: TriggerPatterns = "helloWorld";
+export class HelloWorldCommandHandler implements TeamsFxBotCommandHandler {
+  triggerPatterns: TriggerPatterns = "helloWorld";
 
-        async handleCommandReceived(context: TurnContext, message: CommandMessage): 
-        Promise<string | Partial<Activity> | void> {
-        const refreshVerb = "userViewRefresh";        // verb to identify the refresh action
-        const userIds = [ context.activity.from.id ]; // users who will be refreshed
-        const data = { key: "value"};                 // optional data associated with the action
+  async handleCommandReceived(
+    context: TurnContext,
+    message: CommandMessage
+  ): Promise<string | Partial<Activity> | void> {
+    const refreshVerb = "userViewRefresh";        // verb to identify the refresh action
+    const userIds = [ context.activity.from.id ]; // users who will be refreshed
+    const data = { key: "value"};                 // optional data associated with the action
 
-        const responseCard = AdaptiveCards
-          .declare(baseCard)
-          .refresh(refreshVerb, userIds, data)
-             .render(cardData);
+    const responseCard = AdaptiveCards
+        .declare(baseCard)
+        .refresh(refreshVerb, userIds, data)
+        .render(cardData);
     
-               return MessageFactory.attachment(CardFactory.adaptiveCard(responseCard));
-           }
-         }
-   ```
+    return MessageFactory.attachment(CardFactory.adaptiveCard(responseCard));
+  }
+}
+```
 
 * Second option enables user-specific view to refresh your Adaptive Card. This is a sample refresh action defined in `baseCard.json`:
 
@@ -648,15 +658,19 @@ You can register the refresh action handler in `bot/src/internal/initialize.js(t
 # [JavaScript/Typescript](#tab/JS4)
 
 ```initialize.js(ts)
-export const commandBot = new ConversationBot({
+const { BotBuilderCloudAdapter } = require("@microsoft/teamsfx");
+const ConversationBot = BotBuilderCloudAdapter.ConversationBot;
+
+const conversationBot = new ConversationBot({
   ...
   cardAction: {
     enabled: true,
     actions: [
-      new Handler1()
+      new DoStuffActionHandler(),
+      new DoSomethingActionHandler()    // newly added doSomething card action handler
     ],
   }
-})
+});
 
 ```
 
