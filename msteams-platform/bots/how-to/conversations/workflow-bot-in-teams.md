@@ -42,7 +42,6 @@ The following diagram illustrates how to respond to an Adaptive Card action with
 To handle card actions with TeamsFx SDK, each card action handler must implement the `TeamsFxAdaptiveCardActionHandler` interface. The following interface definition for `TeamsFxAdaptiveCardActionHandler`:
 
 ``` Export interface
-
 TeamsFxAdaptiveCardActionHandler 
 {
     /**
@@ -431,35 +430,34 @@ The following steps help you to add user-specific view with TeamsFx SDK:
 
   In the following sample, a base card returns as command response that can auto-refresh to specific user, such as the command sender:
 
-```
-import baseCard from "../adaptiveCards/baseCard.json";
-import { AdaptiveCards } from "@microsoft/adaptivecards-tools"; 
+  ```
+  import baseCard from "../adaptiveCards/baseCard.json";
+  import { AdaptiveCards } from "@microsoft/adaptivecards-tools"; 
 
-export class HelloWorldCommandHandler implements TeamsFxBotCommandHandler {
-  triggerPatterns: TriggerPatterns = "helloWorld";
+  export class HelloWorldCommandHandler implements TeamsFxBotCommandHandler {
+    triggerPatterns: TriggerPatterns = "helloWorld";
 
-  async handleCommandReceived(
-    context: TurnContext,
-    message: CommandMessage
-  ): Promise<string | Partial<Activity> | void> {
-    const refreshVerb = "userViewRefresh";        // verb to identify the refresh action
-    const userIds = [ context.activity.from.id ]; // users who will be refreshed
-    const data = { key: "value"};                 // optional data associated with the action
+    async handleCommandReceived(
+      context: TurnContext,
+      message: CommandMessage
+    ): Promise<string | Partial<Activity> | void> {
+      const refreshVerb = "userViewRefresh";        // verb to identify the refresh action
+      const userIds = [ context.activity.from.id ]; // users who will be refreshed
+      const data = { key: "value"};                 // optional data associated with the action
 
-    const responseCard = AdaptiveCards
-        .declare(baseCard)
-        .refresh(refreshVerb, userIds, data)
-        .render(cardData);
-    
-    return MessageFactory.attachment(CardFactory.adaptiveCard(responseCard));
+      const responseCard = AdaptiveCards
+          .declare(baseCard)
+          .refresh(refreshVerb, userIds, data)
+          .render(cardData);
+      
+      return MessageFactory.attachment(CardFactory.adaptiveCard(responseCard));
+    }
   }
-}
-```
+  ```
 
 * Second option enables user-specific view to refresh your Adaptive Card. This is a sample refresh action defined in `baseCard.json`:
 
   ```baseCard.json
-
   {
     "type": "AdaptiveCard",
     "refresh": {
@@ -498,7 +496,6 @@ You need to design the user-specific Adaptive Card to refresh a specific respons
 * For C#: Create the adaptive card file in `Resources/` folder.
 
 ```responseCard.json
-
 {
   "type": "AdaptiveCard",
   "body": [

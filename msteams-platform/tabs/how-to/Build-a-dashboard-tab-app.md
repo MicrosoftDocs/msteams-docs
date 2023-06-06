@@ -306,6 +306,8 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
 
 * Arrange two widgets in a column.
 
+# [C#](#tab/CS1)
+
     ```css
     .one-column {
       display: grid;
@@ -313,6 +315,8 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
       grid-template-rows: 1fr 1fr;
     }
     ```
+
+# [JavaScript](#tab/JS1)
 
     ```typescript
     export default class SampleDashboard extends BaseDashboard<any, any> {
@@ -329,6 +333,7 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
       }
     }
     ```
+---
 
     :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/widget-customize.png" alt-text="Screenshot shows the two-widget customization.":::
 
@@ -435,7 +440,6 @@ You can customize the widget by overriding the following methods in the `BaseWid
 * Override `header()`, `body()`, and `footer()` to customize the widget.
 
     ```typescript
-
     export class NewsWidget extends BaseWidget<any, any> {
   override header(): JSX.Element | undefined {
     return (
