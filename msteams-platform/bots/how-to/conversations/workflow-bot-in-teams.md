@@ -42,7 +42,6 @@ The following diagram illustrates how to respond to an Adaptive Card action with
 To handle card actions with TeamsFx SDK, each card action handler must implement the `TeamsFxAdaptiveCardActionHandler` interface. The following interface definition for `TeamsFxAdaptiveCardActionHandler`:
 
 ``` Export interface
-
 TeamsFxAdaptiveCardActionHandler 
 {
     /**
@@ -352,7 +351,6 @@ The following steps help you to add user-specific view with TeamsFx SDK:
 * Second option enables user-specific view to refresh your Adaptive Card. A sample refresh action defined in `baseCard.json`:
 
   ```baseCard.json
-
   {
     "type": "AdaptiveCard",
     "refresh": {
@@ -388,7 +386,6 @@ The following steps help you to add user-specific view with TeamsFx SDK:
 You need to design the user-specific Adaptive Card to refresh a specific response card such as `responseCard.json` for `userA` shown in the diagram for [refresh behavior](#auto-refresh-to-user-specific-view). To get started, you can create a `responseCard.json` with the following content, and save it in `bot/src/adaptiveCards` folder:
 
 ```responseCard.json
-
 {
   "type": "AdaptiveCard",
   "body": [

@@ -43,7 +43,6 @@ You need to create `ConversationBot` to respond to the command in chat. You can 
 # [JavaScript/TypeScript](#tab/jsts1)
 
 ```js(ts)
-
 /** JavaScript/TypeScript: src/internal/initialize.js(ts) **/
 const commandApp = new ConversationBot({
   // The bot id and password to create CloudAdapter.
@@ -64,7 +63,6 @@ const commandApp = new ConversationBot({
 # [C#](#tab/csharp1)
 
 ```csharp
-
 builder.Services.AddSingleton<HelloWorldCommandHandler>();
 builder.Services.AddSingleton(sp =>
 {
@@ -79,7 +77,6 @@ builder.Services.AddSingleton(sp =>
 
     return new ConversationBot(options);
 });
-
 ```
 
 ---
@@ -87,7 +84,6 @@ builder.Services.AddSingleton(sp =>
 ## Customize adapter
 
 ```Typescript
-
 // Create your own adapter
 const adapter = new CloudAdapter(...);
 
@@ -376,7 +372,6 @@ The default pattern to trigger a command is through a defined keyword. You can a
 You can find any capture group in `message.matches`, when using regular expressions. For example if user inputs `reboot myMachine`, `message.matches[1]`, it captures `myMachine`. The following example uses regular expression to capture strings after `reboot`:
 
 ```
-
 class HelloWorldCommandHandler {
   triggerPatterns = /^reboot (.*?)$/i; //"reboot myDevMachine";
   async handleCommandReceived(context, message) {

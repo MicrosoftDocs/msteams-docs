@@ -44,10 +44,9 @@ Bot Framework SDK provides the functionality to proactively message in Teams. Te
 
 When you send notifications, TeamsFx SDK creates a new conversation from the selected conversation reference, and then sends a message. For advanced usage, you can directly access the conversation reference to execute your own bot logic:
 
-# [TypeScript](#tab/ts)
+# [TypeScript](#tab/ts1)
 
 ```TypeScript
-
 // list all installation targets
 for (const target of await notificationApp.notification.installations()) {
     // call Bot Framework's adapter.continueConversationAsync()
@@ -62,7 +61,7 @@ for (const target of await notificationApp.notification.installations()) {
 }
 ```
 
-# [C#](#tab/csharp)
+# [C#](#tab/csharp1)
 
 ```C#
    // list all installation targets
@@ -147,8 +146,9 @@ You can customize sending the notification to the following targets:
 
 * Notifications to a personal chat:
 
-  ```TypeScript
+# [TypeScript](#tab/ts2)
 
+  ```TypeScript
   // list all installation targets
   for (const target of await notificationApp.notification.installations()) {
       // "Person" means this bot is installed as Personal app
@@ -159,6 +159,8 @@ You can customize sending the notification to the following targets:
   }
 
   ```
+
+# [C#](#tab/csharp2)
 
   ```C#
   // list all installation targets
@@ -172,10 +174,13 @@ You can customize sending the notification to the following targets:
   }
   ```
 
+---
+
 * Notifications to a group chat:
 
-  ```TypeScript
+# [TypeScript](#tab/ts3)
 
+  ```TypeScript
   // list all installation targets
   for (const target of await notificationApp.notification.installations()) {
     // "Group" means this bot is installed to a Group Chat
@@ -193,6 +198,8 @@ You can customize sending the notification to the following targets:
   }
 
   ```
+
+# [C#](#tab/csharp3)
 
   ```C#
   // list all installation targets
@@ -212,10 +219,13 @@ You can customize sending the notification to the following targets:
   }
   ```
 
+---
+
 * Notifications to a channel:
 
-  ```TypeScript
+# [TypeScript](#tab/ts4)
 
+  ```TypeScript
   // list all installation targets
   for (const target of await notificationApp.notification.installations()) {
     // "Channel" means this bot is installed to a Team (default to notify General channel)
@@ -238,6 +248,8 @@ You can customize sending the notification to the following targets:
   }
 
   ```
+
+# [C#](#tab/csharp4)
 
   ```C#
   // list all installation targets
@@ -264,10 +276,11 @@ You can customize sending the notification to the following targets:
 
   ```
 
+---
+
 * Notifications to a specific channel:
 
   ```TypeScript
-
   // find the first channel when the predicate is true.
   const channel = await notificationApp.notification.findChannel(c => Promise.resolve(c.info.name === "MyChannelName"));
 
@@ -282,7 +295,6 @@ You can customize sending the notification to the following targets:
 * Notifications to a specific person:
 
   ```TypeScript
-
   // find the first person when the predicate is true.
   const member = await notificationApp.notification.findMember(m => Promise.resolve(m.account.name === "Bob"));
 
@@ -322,7 +334,7 @@ const notificationApp = new ConversationBot({
 });
 ```
 
-# [C#](#tab/csharp1)
+# [C#](#tab/csharp5)
 
 ```C#
 /** .NET: Program.cs or Startup.cs **/
@@ -352,7 +364,6 @@ builder.Services.AddSingleton(sp =>
 You can customize by creating your own adapter, or customize the adapter after initialization. Following is the code sample for creating your adapter:
 
 ```Typescript
-
 // Create your own adapter
 const adapter = new CloudAdapter(...);
 
@@ -376,7 +387,7 @@ notificationApp.adapter.onTurnError = ...
 
 Storage can be used to implement notification connections. You can add your own storage with the help of following code sample:
 
-# [TypeScript](#tab/ts4)
+# [TypeScript](#tab/ts5)
 
 ```Typescript
 // implement your own storage
@@ -402,10 +413,9 @@ const notificationApp = new ConversationBot({
 
 ```
 
-# [C#](#tab/csharp2)
+# [C#](#tab/csharp6)
 
 ```C#
-
 // implement your own storage
 public class MyStorage : INotificationTargetStorage {...}
 
