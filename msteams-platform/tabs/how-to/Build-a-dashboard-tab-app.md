@@ -103,6 +103,9 @@ export class SampleWidget extends BaseWidget<any, SampleWidgetState> {
 | `footer()` | Customize the footer content of the widget. |
 | `styling()` | Customize the style of the widget. |
 
+> [!NOTE]
+> All method overrides are optional.
+
 ### Add widget to the dashboard
 
 Navigate to the `src/dashboards/SampleDashboard.tsx` file and include the widget in the implementation of the `layout()` method. For more information on how to create a new dashboard, see [how to add a new dashboard](https://github.com/OfficeDev/TeamsFx/wiki/Embed-a-dashboard-canvas-in-Teams#how-to-add-a-new-dashboard).
@@ -156,7 +159,7 @@ To add a new dashboard, follow these steps:
 
 ### Create a dashboard class
 
-Create a file with the .tsx extension for your dashboard in the tabs/src/views/dashboards directory, for example, YourDashboard.tsx. Then, create a class that extends the [Dashboard](https://github.com/OfficeDev/TeamsFx/wiki/) class:
+Create a file with the `.tsx` extension for your dashboard in the `src/dashboards` directory, for example, `YourDashboard.tsx`. Then, create a class that extends the `BaseDashboard class from` `@microsoft/teamsfx-react`.
 
 ```typescript
 
@@ -244,86 +247,86 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
 
 * Three widgets in a row with the height of 350 px occupying 20 percent, 60 percent, and 20 percent of the width, respectively.
 
-```typescript
-.customize-class-name {
-  grid-template-rows: 350px;
-  grid-template-columns: 2fr 6fr 2fr;
-}
-```
-
-```typescript
-    export default class SampleDashboard extends BaseDashboard<any, any> {
-
-  override styling(): string {
-    return "customize-class-name";
-  }
-
-  override layout(): JSX.Element | undefined {
-    return (
-      <>
-    <ListWidget />
-    <ChartWidget />
-    <NewsWidget />
-    </>
-    );
-  }
-}
-```
-
-   :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout.png" alt-text="Screenshot shows the customized dashboard layout.":::
-
-* Two widgets in a row with a width of 600 px and 1100 px. The height of the first line is the maximum height of its content, and the height of the second line is 400 px.
-
-```typescript
-.customize-class-name {
-  grid-template-rows: max-content 400px;
-  grid-template-columns: 600px 1100px;
-}
-```
-
-```typescript
-    export default class SampleDashboard extends Dashboard {
-  override styling(): string {
-    return "customize-class-name";
-  }
-
-  override layout(): JSX.Element | undefined {
-    return (
-      <>
-    <ListWidget />
-    <ChartWidget />
-    <NewsWidget />
-      </>
-    );
-  }
-    }
-```
-
-:::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout2.png" alt-text="Screenshot shows the customization of height and width of the dashboard layout.":::
-
-* Arrange two widgets in a column.
-
-    ```css
-    .one-column {
-  display: grid;
-  gap: 20px;
-  grid-template-rows: 1fr 1fr;
+    ```typescript
+    .customize-class-name {
+      grid-template-rows: 350px;
+      grid-template-columns: 2fr 6fr 2fr;
     }
     ```
 
     ```typescript
     export default class SampleDashboard extends BaseDashboard<any, any> {
-  override layout(): JSX.Element | undefined {
-    return (
-      <>
+
+      override styling(): string {
+        return "customize-class-name";
+      }
+
+      override layout(): JSX.Element | undefined {
+        return (
+          <>
+           <ListWidget />
+           <ChartWidget />
+           <NewsWidget />
+          </>
+        );
+      }
+    }
+    ```
+
+   :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout.png" alt-text="Screenshot shows the customized dashboard layout.":::
+
+* Two widgets in a row with a width of 600 px and 1100 px. The height of the first line is the maximum height of its content, and the height of the second line is 400 px.
+
+    ```typescript
+    .customize-class-name {
+      grid-template-rows: max-content 400px;
+      grid-template-columns: 600px 1100px;
+    }
+    ```
+
+    ```typescript
+        export default class SampleDashboard extends Dashboard {
+      override styling(): string {
+        return "customize-class-name";
+      }
+
+      override layout(): JSX.Element | undefined {
+        return (
+          <>
+        <ListWidget />
+        <ChartWidget />
         <NewsWidget />
-        <div className="one-column">
-          <ListWidget />
-          <ChartWidget />          
-        </div>
-      </>
-    );
-  }
+          </>
+        );
+      }
+        }
+    ```
+
+    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout2.png" alt-text="Screenshot shows the customization of height and width of the dashboard layout.":::
+
+* Arrange two widgets in a column.
+
+    ```css
+    .one-column {
+      display: grid;
+      gap: 20px;
+      grid-template-rows: 1fr 1fr;
+    }
+    ```
+
+    ```typescript
+    export default class SampleDashboard extends BaseDashboard<any, any> {
+      override layout(): JSX.Element | undefined {
+        return (
+          <>
+            <NewsWidget />
+            <div className="one-column">
+              <ListWidget />
+              <ChartWidget />          
+            </div>
+          </>
+        );
+      }
     }
     ```
 
@@ -537,15 +540,15 @@ The following code is an example:
 
 ```typescript
     override loading(): JSX.Element | undefined {
-  return (
-  <div className="loading">
-  <Spinner label="Loading..." labelPosition="below" />
-    </div>
-  );
+     return (
+      <div className="loading">
+       <Spinner label="Loading..." labelPosition="below" />
+      </div>
+     );
     }
 ```
 
-Now, the loading spinner is shown while the data is loading. When the data is loaded, the loading spinner is hidden and the list data, and footer button are shown.
+Now, the loading spinner is shown while the data is loading. When the data is loaded, the loading spinner is hidden, and the list data, and footer button are shown.
 
 :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/spinner.gif" alt-text="Graphical representation shows the loading spinner while the data is loading.":::
 
@@ -556,25 +559,25 @@ You can display a specific content in your widget when the data is empty. To do 
 The following example shows how to display an empty image when the data of **ListWidget** is empty.
 
 ```typescript
-  override body(): JSX.Element | undefined {
-    let hasData = this.state.data && this.state.data.length > 0;
-    return (
-      <div>
-        {hasData ? (
-          <>
-            {this.state.data?.map((t: ListModel) => {
-              ...
-            })}
-          </>
-        ) : (
-          <div>
-            <Image src="empty-default.svg" height="150px" />
-            <Text align="center">No data</Text>
-          </div>
-        )}
-      </div>
-    );
-  }
+override body(): JSX.Element | undefined {
+  let hasData = this.state.data && this.state.data.length > 0;
+  return (
+    <div>
+      {hasData ? (
+        <>
+          {this.state.data?.map((t: ListModel) => {
+            ...
+          })}
+        </>
+      ) : (
+        <div>
+          <Image src="empty-default.svg" height="150px" />
+          <Text align="center">No data</Text>
+        </div>
+      )}
+    </div>
+  );
+}
 ```
 
 You can use a similar approach to remove the footer content of your widget when the data is empty.
@@ -738,10 +741,10 @@ The following are the recommended methods to override:
 | `render()` | Invokes whenever there's an update. The dashboard default layout is defined in this method. |  No |
 | `getData()` | Invokes the data needed by the widget. The value returned by this method is set to `this.state.data`. | Yes |
 | `header()` | Invokes what the widget header looks like. You can choose to override this method to customize a widget or not, if not, the widget won't have a header. |  Yes |
-| `bodyContent()` | Invokes what the widget body looks like. You can choose to override this method to customize a widget or not, if not, the widget won't have a body. |  Yes |
+| `body()` | Invokes what the widget body looks like. You can choose to override this method to customize a widget or not, if not, the widget won't have a body. |  Yes |
 | `footer()` | Invokes what the widget footer looks like. You can choose to override this method to customize a widget or not, if not, the widget won't have a footer. |  Yes |
 | `loading()` | Invokes when the widget is in the process of fetching data. If a loading indicator is required, the method can return a `JSX.Element` that contains the necessary components to render the loading indicator. |  Yes |
-| `style()` | Invokes n object that defines the class names for the different parts of the widget. |  Yes |
+| `style()` | Invokes an object that defines the class names for the different parts of the widget. |  Yes |
 
 ### Microsoft Graph Toolkit as widget content
 
@@ -823,16 +826,15 @@ To use Microsoft Graph Toolkit as your widget content, follow these steps:
     ```tsx
     ...
     export default class YourDashboard extends BaseDashboard<any, any> {
-    ...
-    override layout(): undefined | JSX.Element {
-    return (
-      <>
-        <GraphWiget />
-      </>
-    );
-
-  }
-  ...
+      ...
+      override layout(): undefined | JSX.Element {
+        return (
+          <>
+            <GraphWiget />
+          </>
+        );
+      }
+      ...
     }
     ```
 
@@ -853,7 +855,7 @@ To add a Graph API call:
 
 If you want to call a Graph API from the front-end tab, follow these steps:
 
-1. To obtain the name of the permission scope associated with the Graph API you intend to invoke,- see [Graph API](/graph/api/overview).
+1. To obtain the name of the permission scope associated with the Graph API you intend to invoke, see [Graph API](/graph/api/overview).
 
 1. Create a Graph client by adding the scope related to the Graph API you want to call.
 
@@ -900,7 +902,7 @@ To consent application permissions, follow these steps:
 
 #### Add an Azure function
 
-In the left pane of the Visual Studio Code, select **Teams Toolkit** > **Adding features** > **Azure Functions** > and Enter the function name.
+In the left pane of the Visual Studio Code, select **Teams Toolkit** > **Adding features** > **Azure Functions** > Enter the function name.
 
 :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/azure-functions.png" alt-text="Screenshot shows the selection of Azure Functions.":::
 
@@ -914,7 +916,7 @@ In the `index.ts`/`index.ts` under the folder named Azure Function, you can add 
 /**
  * This function handles requests from teamsfx client.
  * The HTTP request should contain an SSO token queried from Teams in the header.
- * Before trigger this function, teamsfx binding would process the SSO token and generate teamsfx configuration.
+ * Before triggering this function, teamsfx binding would process the SSO token and generate teamsfx configuration.
  *
  * You should initializes the teamsfx SDK with the configuration and calls these APIs.
  *
