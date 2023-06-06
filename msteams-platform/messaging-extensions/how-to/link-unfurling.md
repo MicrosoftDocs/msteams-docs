@@ -422,27 +422,27 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 1. **Advantages and limitations**:
 
-# [Advantages](#tab/advantages)
-
+    # [Advantages](#tab/advantages)
+    
     Zero install link unfurling helps you provide enhanced experience to the users, such as:
-
+    
     * Unfurl previews for your links that users share in Teams even before they've installed your app.
     * Create a welcome card for your app to show a preview with the placeholder fields.
 
-# [Limitations](#tab/limitations)
-
+    # [Limitations](#tab/limitations)
+    
     The following are the limitations:
-
+    
     * The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtension/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, *silentAuth* and *config*.
-
+    
     * The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
-
+    
     * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
-
-      * The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
-
-        * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
-
+    
+    * The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
+    
+    * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
+    
     ---
 
 ## Remove link unfurling cache
