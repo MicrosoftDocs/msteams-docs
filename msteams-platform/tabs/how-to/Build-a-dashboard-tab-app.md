@@ -767,56 +767,58 @@ To use Microsoft Graph Toolkit as your widget content, follow these steps:
       The following code is an example of using Todo component from Microsoft Graph Toolkit in widget:
 
       ```tsx
-        import { Providers, ProviderState, Todo } from "@microsoft/mgt-react";
-        import { TeamsFxProvider } from "@microsoft/mgt-teamsfx-provider";
-        
-        import { loginAction } from "../../internal/login";
-        import { TeamsUserCredentialContext } from "../../internal/singletonContext";
-        import { Widget } from "../lib/Widget";
-        
-        interface IGraphWidgetState {
-          needLogin: boolean;
+      import { Providers, ProviderState, Todo } from "@microsoft/mgt-react";
+      import { TeamsFxProvider } from "@microsoft/mgt-teamsfx-provider";
+
+      import { loginAction } from "../../internal/login";
+      import { TeamsUserCredentialContext } from "../../internal/singletonContext";
+      import { BaseWidget } from "@microsoft/teamsfx-react";
+
+      interface IGraphWidgetState {
+        needLogin: boolean;
+      }
+
+      export class GraphWidget extends Widget<any, IGraphWidgetState> {
+        override body(): JSX.Element | undefined {
+          return <div>{this.state.needLogin === false && <Todo />}</div>;
         }
-        
-        export class GraphWidget extends Widget<any, IGraphWidgetState> {
-          override bodyContent(): JSX.Element | undefined {
-            return <div>{this.state.needLogin === false && <Todo />}</div>;
-          }
-        
-          async componentDidMount() {
-            super.componentDidMount();
-        
-            // Initialize TeamsFx provider
-            const provider = new TeamsFxProvider(TeamsUserCredentialContext.getInstance().getCredential(), [
-              "Tasks.ReadWrite",
-            ]);
-            Providers.globalProvider = provider;
-        
-            // Check if user is signed in
-            if (await this.checkIsConsentNeeded()) {
-              await loginAction(["Tasks.ReadWrite"]);
-            }
-        
-            // Update signed in state
-            Providers.globalProvider.setState(ProviderState.SignedIn);
-            this.setState({ needLogin: false });
-          }
-        
-          /**
-           * Check if user needs to consent
-           * @returns true if user needs to consent
-           */
-          async checkIsConsentNeeded() {
-            let needConsent = false;
-            try {
-              await TeamsUserCredentialContext.getInstance().getCredential().getToken(["Tasks.ReadWrite"]);
-            } catch (error) {
-              needConsent = true;
-            }
-            return needConsent;
-          }
+
+        async componentDidMount() {
+          super.componentDidMount();
+
+          // Initialize TeamsFx provider
+          const provider = new TeamsFxProvider(TeamsUserCredentialContext.getInstance().getCredential(), [
+           "Tasks.ReadWrite",
+    ]);
+          Providers.globalProvider = provider;
+
+          // Check if user is signed in
+          if (await this.checkIsConsentNeeded()) {
+            await loginAction(["Tasks.ReadWrite"]);
+    }
+
+    // Update signed in state
+    Providers.globalProvider.setState(ProviderState.SignedIn);
+    this.setState({ needLogin: false });
+
         }
-        
+
+        /**
+
+        * Check if user needs to consent
+        * @returns true if user needs to consent
+        */
+
+        async checkIsConsentNeeded() {
+          let needConsent = false;
+          try {
+            await TeamsUserCredentialContext.getInstance().getCredential().getToken(["Tasks.ReadWrite"]);
+          } catch (error) {
+            needConsent = true;
+          }
+          return needConsent;
+        }
+      }
       ```
 
       You can use an alternative Microsoft Graph Toolkit components within your widget. For more information about Microsoft Graph Toolkit components, refer [Microsoft Graph Toolkit](/graph/toolkit/overview).
