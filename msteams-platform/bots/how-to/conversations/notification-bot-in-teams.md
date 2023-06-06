@@ -109,7 +109,7 @@ You can customize the following triggers:
 
 * `Restify` based notification
 
-   When HTTP request is sent to `src/index.js` entry point, the default implementation sends an Adaptive Card to Teams. You can customize this event by modifying `src/index.js`. A typical implementation can call an API to retrieve events, data, or both that can send an Adaptive Card as required. You can perform the following to add more triggers:
+   When a HTTP request is sent to `src/index.js` entry point, the default implementation sends an Adaptive Card to Teams. You can customize this event by modifying `src/index.js`. A typical implementation can call an API to retrieve events, data, or both that can send an Adaptive Card as required. You can perform the following to add more triggers:
 
   * Create a new routing: `server.post("/api/new-trigger", ...)`.
   * Add timer trigger(s) from widely used npm packages, such as [cron](https://www.npmjs.com/package/cron), [node-schedule](https://www.npmjs.com/package/node-schedule), or from other packages.
@@ -119,7 +119,7 @@ You can customize the following triggers:
 
 * Azure Functions based notification:
 
-  * When you select timer `trigger`, the default implemented Azure Function timer trigger `src/timerTrigger.ts` sends an Adaptive Card every 30 seconds. You can edit the file `*Trigger/function.json` to customize the `schedule` property. For more information, see [Azure Function documentation](/azure/azure-functions/functions-bindings-timer?tabs=python-v2%2Cin-process&pivots=programming-language-javascript#ncrontab-expressions)
+  * When you select `timer` trigger, the default implemented Azure Function timer trigger `src/timerTrigger.ts` sends an Adaptive Card every 30 seconds. You can edit the file `*Trigger/function.json` to customize the `schedule` property. For more information, see [Azure Function documentation](/azure/azure-functions/functions-bindings-timer?tabs=python-v2%2Cin-process&pivots=programming-language-javascript#ncrontab-expressions)
 
     :::image type="content" source="../../../assets/images/notification-bot/notification-timer-triggered.png" alt-text="sample of timer triggered notification":::
 
@@ -151,25 +151,25 @@ You can customize sending the notification to the following targets:
 
   // list all installation targets
   for (const target of await notificationApp.notification.installations()) {
-    // "Person" means this bot is installed as Personal app
-    if (target.type === "Person") {
-        // Directly notify the individual person
-        await target.sendAdaptiveCard(...);
-    }
+      // "Person" means this bot is installed as Personal app
+      if (target.type === "Person") {
+          // Directly notify the individual person
+          await target.sendAdaptiveCard(...);
+      }
   }
 
   ```
 
   ```C#
   // list all installation targets
-      foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
+  foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
       // "Person" means this bot is installed as Personal   app
-         if (target.Type == NotificationTargetType.Person)
-     {
-        // Directly notify the individual person
-        await target.SendAdaptiveCard(...);
-     }
-   }
+      if (target.Type == NotificationTargetType.Person)
+      {
+         // Directly notify the individual person
+         await target.SendAdaptiveCard(...);
+      }
+  }
   ```
 
 * Notifications to a group chat:
@@ -182,6 +182,7 @@ You can customize sending the notification to the following targets:
     if (target.type === "Group") {
         // Directly notify the Group Chat
         await target.sendAdaptiveCard(...);
+
         // List all members in the Group Chat then notify each member
         const members = await target.members();
         for (const member of members) {
@@ -221,11 +222,13 @@ You can customize sending the notification to the following targets:
     if (target.type === "Channel") {
         // Directly notify the Team (to the default General channel)
         await target.sendAdaptiveCard(...);
+
         // List all members in the Team then notify each member
         const members = await target.members();
         for (const member of members) {
             await member.sendAdaptiveCard(...);
         }
+
         // List all channels in the Team then notify each channel
         const channels = await target.channels();
         for (const channel of channels) {
@@ -520,7 +523,7 @@ Notification target connections are stored in the persistence storage. If you're
 
 If the notification installation doesn't match the bot ID or password, you can get a **Failed to decrypt conversation ID** error. One possible cause for this error is that the bot ID or password is changed due to cleaning local state or re-provisioning.
 
-You can resolve this issue by cleaning your notification storage. After cleaning, notify in Teams to reinstall your bot, and ensure that the new installation is up-to-date. Each stored notification installation is bound with one bot. If you're able to check your notification storage, its bot field should match the bot you're running such as the bot ID with the same GUID.
+You can resolve this issue by cleaning your notification storage. After cleaning, notify in Teams to reinstall your bot, and ensure that the new installation is up to date. Each stored notification installation is bound with one bot. If you're able to check your notification storage, its bot field should match the bot you're running such as the bot ID with the same GUID.
 
 > [!NOTE]
 > In case of local storage the default location is `.notification.localstore.json`.
@@ -573,7 +576,11 @@ If Azurite exits due to port in use, you can [specify another listening port](/a
 
 <summary><b>How to extend my notification bot to support command and response?</b></summary>
 
-  The command and response adds the ability for your bot to capture the commands sent in a Teams message and respond with Adaptive Cards. See the steps to [add command and response](command-bot-in-teams.md#add-command-and-response).
+1. Go to `bot\src\internal\initialize.ts(js)` and update your `conversationBot` initialization to enable notification feature:
+
+    :::image type="content" source="../../../assets/images/notification-bot/notification-bot-enable.png" alt-text="Conversation bot initialization to enable notification feature." lightbox="../../../assets/images/notification-bot/notification-bot-enable.png":::
+
+2. Follow the [instructions](command-bot-in-teams.md) to add command to your bot.
 
 <br>
 
@@ -583,7 +590,9 @@ If Azurite exits due to port in use, you can [specify another listening port](/a
 
 <summary><b>How to extend my notification bot by adding workflow bot Adaptive Card actions?</b></summary>
 
-You can extend your notification bot by defining actions and use workflow bot to return an Adaptive Card in response to the action. To add an Adaptive Card in notification bot, see the steps to [add card action](workflow-bot-in-teams.md#add-card-actions).
+The Adaptive Card action handler feature enables the app to respond to adaptive card actions that triggered by end users to complete a sequential workflow. An Adaptive Card provides one or more buttons in the card to ask for user's input such as calling some APIs. The Adaptive Card then send another Adaptive Card in conversation to response to the card action.
+
+For more information on how to add adaptive card actions to command bot, see [Workflow bot in Teams](workflow-bot-in-teams.md).
 
 <br>
 

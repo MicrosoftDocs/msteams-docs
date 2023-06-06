@@ -11,7 +11,7 @@ ms.localizationpriority: high
 
 Microsoft Teams allows you to automate simple and repetitive tasks in a conversation. You can build a command bot that can respond to simple commands sent in chats with Adaptive Cards. You can create a command bot template in Teams Toolkit that responds to chat commands by displaying UI using an Adaptive Card. This enables users to send messages in Teams and your app can provide a response as required.
 
-The command bot template is built using the TeamsFx SDK, which provides a simple set of functions over the Microsoft Bot Framework to implement the scenario. Command bot can be used in different scenarios such as checking ticket status, and retrieve help information.
+The command bot template is built using the TeamsFx SDK, which provides a simple set of functions over the Microsoft Bot Framework to implement the scenario. Command bot can be used in different scenarios such as checking ticket status and retrieve help information.
 
 :::image type="content" source="../../../assets/images/command-bot-teams/commandbot-flowchart1.png" alt-text="Screenshot of creating command bot app with adaptive card flow chart." lightbox="../../../assets/images/command-bot-teams/commandbot-flowchart1.png":::
 
@@ -404,7 +404,7 @@ Adaptive Card provides [template language](/adaptive-cards/templating/) to allow
 1. Model your card data.
 1. Use `MessageBuilder.attachAdaptiveCard` in the template with dynamic card data.
 
-You can also add new cards for your application if necessary. For more information on how to build different types of Adaptive Cards with a list, or a table of dynamic contents using `ColumnSet`, and `FactSet`, see [sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification).
+You can also add new cards for your application if necessary. For more information on how to build different types of Adaptive Cards with a list, or a table of dynamic contents using `ColumnSet` and `FactSet`, see [sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification).
 
 ### Access Microsoft Graph
 
@@ -424,20 +424,20 @@ If you don't have the required SDK, and need to invoke external APIs in your cod
 
 1. Go to `bot\src\internal\initialize.ts(js)` and update your `conversationBot` initialization to enable notification feature:
 
-:::image type="content" source="../../../assets/images/command-bot-teams/notification-enable.png" alt-text="Conversation bot initialization to enable notification feature." lightbox="../../../assets/images/command-bot-teams/notification-enable.png":::
+    :::image type="content" source="../../../assets/images/command-bot-teams/notification-enable.png" alt-text="Conversation bot initialization to enable notification feature." lightbox="../../../assets/images/command-bot-teams/notification-enable.png":::
 
 2. Follow the [instructions](notification-bot-in-teams.md) to send notification to the bot installation target (channel/group chat/personal chat). You can add the following sample code in `bot\src\index.ts(js)` to add a sample notification triggered by an HTTP request:
 
-```js
-server.post("/api/notification", async (req, res) => {
-  for (const target of await commandBot.notification.installations()) {
-    await target.sendMessage("This is a sample notification message");
-  }
+    ```js
+    server.post("/api/notification", async (req, res) => {
+      for (const target of await commandBot.notification.installations()) {
+        await target.sendMessage("This is a sample notification message");
+      }
 
-  res.json({});
-});
+      res.json({});
+    });
 
-```
+    ```
 
 3. Uninstall your previous bot installation from Teams, and re-run local debug to test your bot notification.
 4. Send a notification to the bot installation targets (channel/group chat/personal chat) by using an HTTP POST request with target URL `<https://localhost:3978/api/notification>`.
