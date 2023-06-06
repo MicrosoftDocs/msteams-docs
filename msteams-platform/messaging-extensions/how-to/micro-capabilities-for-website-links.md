@@ -84,6 +84,7 @@ The following are the supported micro-capability templates for Teams client:
 > If the website link doesn't have the supported micro-capability templates, Teams defaults the link to the current URL preview unfurling.
 
 # [Article](#tab/article)
+
 |Property |Description  |
 |---------|---------|
 |`@type`     | Article        |
@@ -93,6 +94,7 @@ The following are the supported micro-capability templates for Teams client:
 |creator     | Author of the article.        |
 |description    | Summary about the article.        |
 |url     |  URL of the article's official website.      |
+
 Example of the unfurling experience for article type:
 :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-article.png" alt-text="Screenshot shows a unfurling experience of the article template in Microsoft Teams.":::
 
