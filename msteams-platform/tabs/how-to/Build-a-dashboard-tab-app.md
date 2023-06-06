@@ -306,16 +306,6 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
 
 * Arrange two widgets in a column.
 
-# [C#](#tab/CS1)
-
-    ```css
-    .one-column {
-      display: grid;
-      gap: 20px;
-      grid-template-rows: 1fr 1fr;
-    }
-    ```
-
 # [JavaScript](#tab/JS1)
 
     ```typescript
@@ -333,6 +323,17 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
       }
     }
     ```
+
+# [C#](#tab/CS1)
+
+  ```css
+  .one-column {
+      display: grid;
+      gap: 20px;
+      grid-template-rows: 1fr 1fr;
+    }
+    ```
+
 ---
 
     :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/widget-customize.png" alt-text="Screenshot shows the two-widget customization.":::
