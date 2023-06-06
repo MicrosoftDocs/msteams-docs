@@ -66,7 +66,7 @@ for (const target of await notificationApp.notification.installations()) {
 
 ```C#
    // list all installation targets
-foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
+    foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
     // call Bot Framework's adapter.ContinueConversationAsync()
     await target.Adapter.ContinueConversationAsync(
         target.BotAppId,
