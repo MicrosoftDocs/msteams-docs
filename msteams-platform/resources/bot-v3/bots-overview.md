@@ -3,7 +3,7 @@ title: Add bots to Microsoft Teams apps
 description: In this module, learn how to get started developing bots in Microsoft Teams and what are all the requirements to add a bot in Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 05/20/2018
+ms.date: 04/02/2023
 ---
 # Add bots to Microsoft Teams apps
 
@@ -12,7 +12,7 @@ ms.date: 05/20/2018
 Build and connect intelligent bots to interact with Microsoft Teams users naturally through chat. Or provide a simple commands-based bot, to be used as your "command-line" interface for your broader Teams app experience. You can make a notification-only bot, which can push information relevant to your users directly to them in a channel or direct message. You can even bring your existing Bot Framework-based bot and add Teams-specific support to make your experience shine.
 
 > [!IMPORTANT]
-> Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not available in Department of Defense (DOD).
+> Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
 :::image type="content" source="../../assets/images/bot_example.png" alt-text="Example of a bot assisting a user":::
 
@@ -34,7 +34,7 @@ With Teams apps, you can make the bot the star of your experience, or just a hel
 
 Teams supports most of the [Microsoft Bot Framework](https://dev.botframework.com/). (If you already have a bot that's based on the Bot Framework, you can easily adapt it to work in Teams.) We recommend you use either C# or Node.js to take advantage of our [SDKs](/microsoftteams/platform/#pivot=sdk-tools). These packages extend the basic Bot Builder SDK classes and methods:
 
-* Using specialized card types like the Office 365 Connector card.
+* Using specialized card types like the connector card for Microsoft 365 Groups.
 * Consuming and setting Teams-specific channel data on activities.
 * Processing message extension requests.
 
@@ -68,4 +68,4 @@ The following articles will guide you through the process of creating a great bo
 
 ## See also
 
-[Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+[Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md).

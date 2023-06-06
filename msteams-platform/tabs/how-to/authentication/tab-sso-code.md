@@ -30,7 +30,8 @@ To obtain app access for the current app user, your client-side code must make a
 <details>
 <summary>Learn more about getAuthToken()</summary>
 <br>
-`getAuthToken()` is a method in Microsoft Teams JavaScript SDK. It requests an Azure AD access token to be issued on behalf of app. The token is acquired from the cache, if it is not expired. If it's expired, a request is sent to Azure AD to obtain a new access token.
+
+`getAuthToken()` is a method in Microsoft Teams JavaScript library. It requests an Azure AD access token to be issued on behalf of app. The token is acquired from the cache, if it is not expired. If it's expired, a request is sent to Azure AD to obtain a new access token.
 
  For more information, see [getAuthToken](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-authentication-getauthtoken&preserve-view=true).
 </details>
@@ -41,7 +42,7 @@ Use `getAuthToken()` at the time when you need access token for the current app 
 
 | If access token is needed... | Call getAuthToken()... |
 | --- | --- |
-| When app user accesses the app | From inside `microsoftTeams.initialize()`. |
+| When app user accesses the app | After `microsoftTeams.initialize()`. |
 | To use a particular functionality of the app | When the app user takes an action that requires signing in. |
 
 ### Add code for getAuthToken
@@ -148,19 +149,7 @@ $.ajax({
 
 ### Validate the access token
 
-Web APIs on your server must decode the access token, and verify if it's sent from the client. The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows. The web APIs must decode access token. Optionally, you can copy and paste access token manually into a tool, such as jwt.ms.
-
-There are a number of libraries available that can handle JWT validation. Basic validation includes:
-
-- Checking that the token is well-formed
-- Checking that the token was issued by the intended authority
-- Checking that the token is targeted to the web API
-
-Keep in mind the following guidelines when validating the token:
-
-- Valid SSO tokens are issued by Azure AD. The `iss` claim in the token should start with this value.
-- The token's `aud1` parameter will be set to the app ID generated during Azure AD app registration.
-- The token's `scp` parameter will be set to `access_as_user`.
+For more information on validating the access token, see [validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
 
 #### Example access token
 
@@ -190,7 +179,7 @@ The following is a typical decoded payload of an access token.
 
 ## Code samples
 
-| Sample name | Description | C#/.NET| Node.js |
+| Sample name | Description | .NET| Node.js |
 |---------------|---------------|------|--------------|
 | Tab SSO |Microsoft Teams sample app for tabs Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 | Tab, Bot and Message Extension (ME) SSO | This sample shows SSO for Tab, Bot and ME - search, action, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) |

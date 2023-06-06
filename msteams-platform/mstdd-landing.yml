@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Microsoft Teams developer documentation # < 60 chars
-summary: Welcome to overview of Microsoft Teams developer documentation. Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work. # < 160 chars
+summary: Welcome to overview of Microsoft Teams developer documentation. Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work. # < 160 chars
 
 metadata:
   title: Microsoft Teams developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
@@ -43,37 +43,75 @@ landingContent:
 #        url: ~/concepts/device-capabilities/people-picker-capability.md
 #      - text: Adaptive Cards overflow menu
 #        url: ~/task-modules-and-cards/cards/cards-format.md
-#      - text: Glossary
-#        url: ~/get-started/glossary.md
-#      - text: Overview
-#        url: ~/overview.md
 
-- title: Explore the latest
+- title: Microsoft Build 2023
   linkLists:
+    - linkListType: whats-new
+      links:
+      - text: Deep link to the meeting side panel
+        url: apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel
+      - text: Live Share SDK is now generally available
+        url: apps-in-teams-meetings/teams-live-share-overview.md
+      - text: Design your app for new Teams 
+        url: concepts/design/design-teams-app-overview.md
+      - text: Teams AI library
+        url: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
+      - text: Extend Microsoft 365 Copilot
+        url: copilot/how-to-extend-copilot.md
+      - text: Distribute your app to specific countries
+        url: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries
+      - text: Teams Toolkit v5 extension within Visual Studio Code
+        url: toolkit/teams-toolkit-fundamentals.md
+      - text: Get started module includes GitHub Codespaces
+        url: get-started/get-started-overview.md
+      - text: Contextless app update
+        url: concepts/deploy-and-publish/apps-upload.md#update-your-app
+
     - linkListType: reference
       links:
       - text: Community chat room for Microsoft Teams app developers
         url: https://gitter.im/OfficeDev/home
+
+- title: Whats new
+  linkLists:
     - linkListType: whats-new
       links:
       - text: Micro-capabilities for website links
         url: messaging-extensions/how-to/micro-capabilities-for-website-links.md
-      - text: Live Share canvas
-        url: apps-in-teams-meetings/teams-live-share-canvas.md
-      - text: Generate a deep link to share content to stage in meetings
-        url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#generate-a-deep-link-to-share-content-to-stage-in-meetings
-      - text: Manage SaaS licenses for third party apps in Teams
-        url: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams
-      - text: Update Apple App Store Connect Team ID on Partner Center
-        url: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
-      - text: Introduced meeting app support for Scheduled Channel Meetings
-        url: apps-in-teams-meetings/teams-apps-in-meetings.md
-      - text: Introduced Teams Toolkit for Visual Studio 2022
-        url: toolkit/teams-toolkit-fundamentals.md
-      - text: Collaboration controls [Developer preview]
-        url: samples/collaboration-control.md
-      - text: Build shared channels
-        url: concepts/build-and-test/Shared-channels.md
+      - text: Real-time meeting events are supported in channel meetings
+        url: apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api
+      - text: Resource-specific consent for your Teams app
+        url: graph-api/rsc/resource-specific-consent.md      
+      - text: Drive customer adoption of your app
+        url: promote-app-adoption.md
+      - text: Changelog for Developer Portal
+        url: concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal
+      - text: SSO authentication for your Adaptive Cards Universal Actions
+        url: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
+      - text: Third party authentication for Adaptive Cards Universal Actions
+        url: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
+      - text: Plan your app growth in Teams
+        url:  concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
+      - text: Build a dashboard tab app
+        url:  tabs/how-to/build-a-dashboard-tab-app.md
+      - text: Targeted in-meeting notification (Developer preview)
+        url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
+
+
+    - linkListType: whats-new
+      links:
+      - text: Command bot in Teams
+        url: bots/how-to/conversations/command-bot-in-teams.md
+      - text: Enable SSO for your bot and message extension app
+        url: bots/how-to/authentication/bot-sso-overview.md
+      - text: Integrate location capabilities
+        url: concepts/device-capabilities/location-capability.md
+      - text: Zero install for link unfurling
+        url: messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling
+      - text: Adaptive Cards overflow menu
+        url: task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu
+      - text: Support global routing for bot APIs
+        url: bots/how-to/conversations/send-proactive-messages.md#create-the-conversation
 
 - title: Get started
   linkLists:
@@ -103,6 +141,8 @@ landingContent:
         url: sbs-gs-commandbot.yml
       - text: Build notification bot with JavaScript
         url: sbs-gs-notificationbot.yml
+      - text: Build workflow bot
+        url: sbs-gs-workflow-bot.yml
      
 - title: Monetize your app
   linkLists:
@@ -173,7 +213,7 @@ landingContent:
           url: ~/sbs-calling-and-meeting.yml
         - text: Configure SSO for tabs and message extensions
           url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml  
-        - text: Build tabs with adaptive cards
+        - text: Build tabs with Adaptive Card
           url: ~/sbs-tab-with-adaptive-cards.yml
         - text: Build a bot to send Proactive messages
           url: ~/sbs-send-proactive.yml
@@ -183,16 +223,14 @@ landingContent:
           url: ~/sbs-meeting-token-generator.yml
         - text: Generate meeting sidepanel
           url: ~/sbs-meetings-sidepanel.yml
-
-
-    - linkListType: tutorial
-      links:
         - text: Send activity feed notification 
           url:  ~/sbs-graphactivity-feedbroadcast.yml
 
 
     - linkListType: tutorial
       links:
+        - text: Build an in-meeting document signing app
+          url:  ~/sbs-inmeeting-document-signing.yml
         - text: Build command bot with JavaScript
           url: sbs-gs-commandbot.yml
         - text: Build notification bot with JavaScript
@@ -211,6 +249,10 @@ landingContent:
           url: ~/sbs-outgoing-webhooks.yml
         - text: Unfurl links in Teams using bot
           url: ~/sbs-botbuilder-linkunfurling.yml
+
+
+    - linkListType: tutorial
+      links:
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
         
@@ -230,6 +272,8 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
+    - text: Publish Teams apps in Microsoft Teams store
+      url: /training/modules/microsoft-teams-publish-app-to-store
     - text: Distribution
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
     - text: Upload your app in Microsoft Teams
@@ -242,3 +286,16 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md      
     - text: Maintain your published app
       url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md
+
+- title: Notifications
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Design activity feed notifications
+      url: concepts/design/activity-feed-notifications.md 
+    - text: Send activity feed notifications
+      url: /graph/teams-send-activityfeednotifications
+    - text: Best practices for activity feed notifications
+      url: /graph/teams-activity-feed-notifications-best-practices
+    - text: Send proactive messages
+      url: bots/how-to/conversations/send-proactive-messages.md

@@ -14,15 +14,15 @@ ms.date: 10/04/2022
 
 In conference rooms and classrooms across the globe, whiteboards are a pivotal part of collaboration. In modern times however, the whiteboard is no longer enough. With numerous digital tools such as PowerPoint being the focal point of collaboration in the modern era, it's essential to enable the same creative potential.
 
-To enable more seamless collaboration, Microsoft created PowerPoint Live, which has become instrumental to how people work in Teams. Presenters can annotate over slides for everyone to see, using pens, highlighters, and laser pointers to draw attention to key concepts. Using Live Share canvas, your app can bring the power of PowerPoint Live inking tools with minimal effort.
+To enable more seamless collaboration, Microsoft created PowerPoint Live, which has become instrumental to how people work in Microsoft Teams. Presenters can annotate over slides for everyone to see, using pens, highlighters, and laser pointers to draw attention to key concepts. Using Live Share canvas, your app can bring the power of PowerPoint Live inking tools with minimal effort.
 
 ## Install
 
-To add the latest version of the SDK to your application using npm:
+Live Share canvas is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share-media), and you can download through npm or yarn. You must also install its peer dependencies, which includes `@microsoft/live-share`, `fluid-framework`, and `@fluidframework/azure-client`. If you are using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later.
 
 ```bash
-npm install @microsoft/live-share@next --save
-npm install @microsoft/live-share-canvas@next --save
+npm install @microsoft/live-share @microsoft/live-share-canvas fluid-framework @fluidframework/azure-client --save
+npm install @microsoft/teams-js --save
 ```
 
 OR
@@ -30,8 +30,8 @@ OR
 To add the latest version of the SDK to your application using [Yarn](https://yarnpkg.com/):
 
 ```bash
-yarn add @microsoft/live-share@next
-yarn add @microsoft/live-share-canvas@next
+yarn add @microsoft/live-share @microsoft/live-share-canvas fluid-framework @fluidframework/azure-client
+yarn add @microsoft/teams-js
 ```
 
 ## Setting up the package
@@ -56,9 +56,11 @@ Example:
 ```javascript
 import { LiveShareClient } from "@microsoft/live-share";
 import { InkingManager, LiveCanvas } from "@microsoft/live-share-canvas";
+import { LiveShareHost } from "@microsoft/teams-js";
 
 // Setup the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create(host);
+const liveShare = new LiveShareClient(host);
 const schema = {
   initialObjects: { liveCanvas: LiveCanvas },
 };
@@ -71,6 +73,8 @@ const inkingManager = new InkingManager(canvasHostElement);
 
 // Begin synchronization for LiveCanvas
 await liveCanvas.initialize(inkingManager);
+
+inkingManager.activate();
 ```
 
 # [TypeScript](#tab/typescript)
@@ -78,10 +82,12 @@ await liveCanvas.initialize(inkingManager);
 ```TypeScript
 import { LiveShareClient } from "@microsoft/live-share";
 import { InkingManager, LiveCanvas } from "@microsoft/live-share-canvas";
+import { LiveShareHost } from "@microsoft/teams-js";
 import { ContainerSchema } from "fluid-framework";
 
 // Setup the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create(host);
+const liveShare = new LiveShareClient(host);
 const schema: ContainerSchema = {
   initialObjects: { liveCanvas: LiveCanvas },
 };
@@ -94,6 +100,57 @@ const inkingManager = new InkingManager(canvasHostElement);
 
 // Begin synchronization for LiveCanvas
 await liveCanvas.initialize(inkingManager);
+
+inkingManager.activate();
+```
+
+# [React](#tab/react-js)
+
+```jsx
+import { useLiveCanvas } from "@microsoft/live-share-react";
+import { InkingTool } from "@microsoft/live-share-canvas";
+import { useRef } from "react";
+
+// Unique identifier that distinguishes this useLiveCanvas from others in your app
+const UNIQUE_KEY = "CUSTOM-LIVE-CANVAS";
+
+// Example component
+export const ExampleLiveCanvas = () => {
+    const liveCanvasRef = useRef(null);
+    const { liveCanvas, inkingManager } = useLiveCanvas(
+        "CUSTOM-LIVE-CANVAS",
+        liveCanvasRef,
+    );
+
+    return (
+        {/** Canvas currently needs to be a child of a parent with absolute styling */}
+        <div style={{ position: "absolute"}}>
+            <div
+                ref={liveCanvasRef}
+                // Best practice is to not define inline styles
+                style={{ width: "556px", height: "224px" }}
+            />
+            {!!liveCanvas && (
+                <div>
+                    <button
+                        onClick={() => {
+                            inkingManager.tool = InkingTool.pen;
+                        }}
+                    >
+                        {"Pen"}
+                    </button>
+                    <button
+                        onClick={() => {
+                            inkingManager.tool = InkingTool.laserPointer;
+                        }}
+                    >
+                        {"Laser pointer"}
+                    </button>
+                </div>
+            )}
+        </div>
+    );
+};
 ```
 
 ---
@@ -265,7 +322,7 @@ import {
 
 // Change the selected tool to laser pointer
 document.getElementById("laser").onclick = () => {
-  inkingManager.tool = InkingTool.highlighter;
+  inkingManager.tool = InkingTool.laserPointer;
 };
 // Change the selected color for laser pointer
 document.getElementById("laser-color").onchange = () => {
@@ -312,7 +369,7 @@ document.getElementById("line-arrow").onclick = () => {
   inkingManager.lineBrush.endArrow = "open";
 };
 // Change the selected color for lineBrush
-document.getElementById("line-color").onchange = () => {
+document.getElementById("line-color").onclick = () => {
   const colorPicker = document.getElementById("line-color");
   inkingManager.lineBrush.color = fromCssColor(colorPicker.value);
 };
@@ -326,6 +383,28 @@ document.getElementById("line-tip-size").onclick = () => {
 
 You can clear all strokes in the canvas by calling `inkingManager.clear()`. This deletes all strokes from the canvas.
 
+#### Import and export raw strokes
+
+Live Share Canvas supports importing and exporting raw strokes from `InkingManager`, which enables you to export them to your back-end for later use in a future session.
+
+```javascript
+// Export raw strokes
+const strokes = inkingManager.exportRaw();
+
+// Optionally clear out existing strokes, and import strokes
+inkingManager.clear();
+inkingManager.importRaw(strokes);
+```
+
+#### Export strokes as an SVG
+
+You can export your entire drawing within the `InkingManager` to a scalable vector graphic (SVG). The SVG contents are returned as a string, which you can then store in your server as an .svg file extension.
+
+```javascript
+// Export raw strokes
+const svgText = inkingManager.exportSVG();
+```
+
 ### Cursors
 
 :::image type="content" source="../assets/images/teams-live-share/canvas-cursors.gif" alt-text="GIF shows an example of users sharing a cursor on a canvas.":::
@@ -334,12 +413,7 @@ You can enable live cursors in your application for users to track each other's 
 
 ```javascript
 // Optional. Set user display info
-liveCanvas.onGetLocalUserInfo = () => {
-  return {
-    displayName: "YOUR USER NAME",
-    pictureUri: "YOUR USER PICTURE URI",
-  };
-};
+liveCanvas.onGetLocalUserPictureUrl = () => "YOUR USER PICTURE URI";
 // Toggle Live Canvas cursor enabled state
 liveCanvas.isCursorShared = !isCursorShared;
 ```
@@ -441,10 +515,10 @@ Both the scenarios work well because the content can be viewed the same on all d
 
 ## Code samples
 
-| Sample name          | Description                            | JavaScript                                                                                |
-| -------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Live Canvas demo     | Simple whiteboard application.         | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/03.live-canvas-demo) |
-| React media template | Draw over a synchronized video player. | [View](https://aka.ms/liveshare-mediatemplate)                                            |
+| Sample name | Description | JavaScript |
+| ------ | ----- | ---- |
+| Live Canvas demo | Simple whiteboard application. | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/javascript/03.live-canvas-demo) |
+| React media template | Draw over a synchronized video player. | [View](https://aka.ms/liveshare-mediatemplate) |
 
 ## Next step
 
@@ -453,7 +527,8 @@ Both the scenarios work well because the content can be viewed the same on all d
 
 ## See also
 
+- [Apps for Teams meetings](teams-apps-in-meetings.md)
 - [Live Share SDK FAQ](teams-live-share-faq.md)
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Canvas SDK reference docs](/javascript/api/@microsoft/live-share-canvas/)
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+- [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)

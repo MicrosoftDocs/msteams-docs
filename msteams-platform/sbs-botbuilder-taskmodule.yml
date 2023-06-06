@@ -24,7 +24,7 @@ items:
 
     This step-by-step guide helps you to create a sample Azure bot to invoke Teams task module. You'll see the following output:
 
-     ![Task module](~/assets/images/Teams-task-module/final_image.png)
+     :::image type="content" source="./assets/images/Teams-task-module/final_image.png" alt-text="Task module":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -35,7 +35,7 @@ items:
      | --- | --- | --- |
      | **Required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install the <br> ASP.NET and web development workload. | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
      | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
@@ -47,13 +47,13 @@ items:
 - title: Set up local environment
   durationInMinutes: 1
   content: |
-   Clone `BotBuilder-Samples` repository to your local GitHub:  
+   Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
 
-    1. Open [BotBuilder Samples](https://github.com/microsoft/BotBuilder-Samples).
+    1. Open [Microsoft-Teams-Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
     1. Select **Code**.
     1. Select **Open with GitHub Desktop** from the dropdown menu.
 
-       :::image type="content" source="~/assets/images/Teams-task-module/clonerepository_1.png" alt-text="Clone repository":::
+       :::image type="content" source="~/assets/images/Teams-task-module/clone-repository.png" alt-text="Clone repository":::
 
     1. Select **Clone**. 
 
@@ -63,9 +63,9 @@ items:
     To create and register your bot in Microsoft Azure Active Directory (Azure AD), perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
-    * Create client secret ID and value details to enable SSO authentication of the bot.
+    * Create client secret ID and value details to enable single sign-on (SSO) authentication of the bot.
     * Add Teams channel to deploy the bot to a Teams channel.
-    * Use ngrok to create a tunnel to your web server's endpoints.
+    * Create a tunnel to your web server's endpoints by using ngrok.
     * Add messaging endpoint to the ngrok tunnel you created.
 
     **To create Azure Bot resource**
@@ -81,14 +81,15 @@ items:
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** and **Resource group** from the dropdown list.
-        
+    1. Select required **Data residency (preview)**.
+
         :::image type="content" source="~/assets/images/Teams-task-module/review-plus-create_2.png" alt-text="Select resource Azure bot"::: 
     
        To create a new resource group, select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
        
-        ![New resource group location](~/assets/images/bots/newresource.png)
+        :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="New resource group location":::
 
-    1. Select **MultiTenant** under Bot Type.
+    1. Select **Type of App** as **MultiTenant**.
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
@@ -99,7 +100,7 @@ items:
 
     1. Select **Review + create**.
 
-        ![Microsoft App ID](~/assets/images/Teams-task-module/multi-tenant-option.png)
+        :::image type="content" source="~/assets/images/Teams-task-module/multi-tenant-option_1.png" alt-text="Microsoft App ID":::
 
     1. Once the validation is passed, select **Create**. 
 
@@ -107,11 +108,11 @@ items:
 
     1. Select **Go to resource**. 
 
-        ![Deploy App](~/assets/images/Teams-task-module/bot-deployment_1.png)
+        :::image type="content" source="~/assets/images/Teams-task-module/bot-deployment_2.png" alt-text="Deploy App":::
 
         Your Azure bot is created.
 
-        ![Azure bot resource created](~/assets/images/Teams-task-module/bot-page_1.png)
+        :::image type="content" source="~/assets/images/Teams-task-module/bot-page_1.png" alt-text="Azure bot resource created":::
 
     **To create client secret**
 
@@ -122,25 +123,25 @@ items:
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
-        ![Microsoft ID created](~/assets/images/Teams-task-module/manage.png)
+        :::image type="content" source="~/assets/images/Teams-task-module/manage_1.png" alt-text="Microsoft ID created":::
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret_1.png" alt-text="New client secret":::
+        :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret_2.png" alt-text="New client secret":::
     
-       The **Add a client secret** window appears.  
+       The **Add a client secret** window appears. 
 
     1. Enter **Description**.
     
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/Teams-task-module/clientsecret_1.png" alt-text="Add client secret to app":::
+        :::image type="content" source="~/assets/images/Teams-task-module/clientsecret_2.png" alt-text="Add client secret to app":::
 
-    1. In the **Value** column, select copy to clipboard icon to copy value details.
+    1. In the **Value** column, select **Copy to clipboard**.
 
-         :::image type="content" source="~/assets/images/Teams-task-module/clientvalue_1.png" alt-text="Value of client secret":::
+         :::image type="content" source="~/assets/images/Teams-task-module/clientvalue_2.png" alt-text="Value of client secret":::
        
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
@@ -149,7 +150,7 @@ items:
 
     1. Select **Home**.
 
-        ![Home page](~/assets/images/Teams-task-module/gotohome_1.png)
+        :::image type="content" source="~/assets/images/Teams-task-module/gotohome_2.png" alt-text="Home page":::
 
     1. Select your bot from **Recent resources**.
 
@@ -161,11 +162,11 @@ items:
     
     1. Select **Agree**.
 
-          ![Terms of service](~/assets/images/Teams-task-module/terms_1.png)
+          :::image type="content" source="~/assets/images/Teams-task-module/terms_2.png" alt-text="Terms of service":::
 
-    1. Select **Save**.
+    1. Select **Apply**.
 
-          ![Select Teams](~/assets/images/Teams-task-module/configteams_1.png)  
+          :::image type="content" source="~/assets/images/Teams-task-module/configteams_2.png" alt-text="Select Teams":::  
     
     **To create tunnel for local web server**
 
@@ -182,7 +183,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL.
 
-       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url1_1.png" alt-text="ngrok HTTPS URL":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -192,7 +193,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        ![Messaging Endpoint](~/assets/images/Teams-task-module/messaging-endpoint_1.png)
+        :::image type="content" source="~/assets/images/Teams-task-module/messaging-endpoint_1.png" alt-text="Messaging Endpoint":::
 
     1. Select **Apply**.
 
@@ -209,25 +210,25 @@ items:
 
     1. Select your bot.
 
-       ![App registration](~/assets/images/Teams-task-module/appregister_1.png)
+       :::image type="content" source="~/assets/images/Teams-task-module/appregister_1.png" alt-text="App registration":::
 
     1. Select **Expose an API**.
 
     1. Select **Set**.
 
-       ![Expose an API](~/assets/images/Teams-task-module/exposeanapi_1.png)
+       :::image type="content" source="~/assets/images/Teams-task-module/exposeanapi_1.png" alt-text="Expose an API":::
 
     1. Set the **Application ID URI** in the form of `api://your ngrok/{AppID}`.
 
-       ![Set link](~/assets/images/Teams-task-module/setlink_1.png)
+       :::image type="content" source="~/assets/images/Teams-task-module/setlink_1.png" alt-text="Set link":::
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
-        > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
+        > For example: `api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
 
     1. Select **Add a scope**. 
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/selectscope_1.png" alt-text="Select scope":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/selectscope_2.png" alt-text="Select scope":::
 
        The **Add a scope** window appears.
 
@@ -254,10 +255,10 @@ items:
         :::image type="content" source="~/assets/images/Teams-task-module/addascope_1.png" alt-text="Add a scope":::
 
         > [!NOTE]
-        > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
+        > The **Scope name** must match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://d4b8****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
-        ![Scopes](~/assets/images/Teams-task-module/scopes_2.png) 
+        :::image type="content" source="~/assets/images/Teams-task-module/scopes_3.png" alt-text="Scopes"::: 
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
@@ -267,19 +268,19 @@ items:
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
-        ![Add client application 1](~/assets/images/meetings-side-panel/addclientapplication1.png) 
+        :::image type="content" source="~/assets/images/meetings-side-panel/addclientapplication1.png" alt-text="Add client application 1"::: 
 
        Enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-        ![Add client application 2](~/assets/images/meetings-side-panel/addclientapplication2.png) 
+        :::image type="content" source="~/assets/images/meetings-side-panel/addclientapplication2.png" alt-text="Add client application 2"::: 
 
     1. Select **Authorized scopes**.
 
-        ![Add client application 2](~/assets/images/Teams-task-module/authorizedscope.png) 
+        :::image type="content" source="~/assets/images/Teams-task-module/authorizedscope.png" alt-text="Add client application 2"::: 
 
        The following image displays the client IDs:
 
-        ![Client applications](~/assets/images/meetings-side-panel/clientapps.png) 
+        :::image type="content" source="~/assets/images/meetings-side-panel/clientapps.png" alt-text="Client applications"::: 
   
     1. In the left pane, select **API Permissions**. 
 
@@ -288,7 +289,7 @@ items:
 
     1. Select **Add a permission**.
 
-        ![Add permission](~/assets/images/meetings-side-panel/add-permission_1.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/add-permission_2.png" alt-text="Add permission":::
 
     1. Select **Microsoft Graph**.
 
@@ -303,7 +304,7 @@ items:
 
     1. Select **Add permissions**.
 
-         ![Other permissions](~/assets/images/meetings-side-panel/other-permissions_1.png)
+         :::image type="content" source="~/assets/images/meetings-side-panel/other-permissions_1.png" alt-text="Other permissions":::
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
@@ -312,7 +313,7 @@ items:
                
          1. Select **Add a platform** > **Web**.
 
-            ![Web](~/assets/images/Teams-task-module/webauth_1.png)
+            :::image type="content" source="~/assets/images/Teams-task-module/webauth_1.png" alt-text="Web":::
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://d4b8****.ngrok.io/auth-end`. </br>
@@ -323,16 +324,16 @@ items:
    
          1. Select **Configure**.
 
-            ![Auth-end](~/assets/images/Teams-task-module/authend_1.png)
+            :::image type="content" source="~/assets/images/Teams-task-module/authend_1.png" alt-text="Auth-end":::
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    1. Go to **appsettings.json** in cloned repository.
+    1. Go to **appsettings.json** in the cloned repository.
 
-        ![App settings location](~/assets/images/Teams-task-module/appsettingslocation_1.png)
+        :::image type="content" source="~/assets/images/Teams-task-module/appsettings-file-location.png" alt-text="App settings location":::
 
-    1. Open **appsettings.json** in latest version of Visual Studio and update the following information:  
+    1. Open **appsettings.json** in the latest version of Visual Studio and update the following information:  
 
          * Set `"MicrosoftAppType"` to **MultiTenant**.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
@@ -340,44 +341,38 @@ items:
          * Set `"MicrosoftAppTenantId"` to the tenant ID of the tenant where the app is used.
          * Set `"BaseUrl"` to the fully qualified domain name (https to io).
 
-        ![App settings](~/assets/images/Teams-task-module/appsettings_1.png)
+        :::image type="content" source="~/assets/images/Teams-task-module/appsettings_1.png" alt-text="Screenshot shows appsetting.json in visual studio.":::
 
-    1. Go to `manifest.json`` in cloned repository.
+    1. Go to **manifest.json** in the cloned repository.
 
-        :::image type="content" source="~/assets/images/Teams-task-module/manifestlocation_1.png" alt-text="Manifest file location":::
+        :::image type="content" source="~/assets/images/Teams-task-module/manifest-file-location.png" alt-text="Manifest file location":::
     
-    1. Open `manifest.json`` in latest version of Visual Studio and make the following changes:
+    1. Open **manifest.json** in the latest version of Visual Studio and make the following changes:
 
          * Replace all occurrences of `YourDeployedBotUrl.com` with `WebAppDomain` name.
          * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with bot's **Microsoft App ID**.
 
-        ![Manifest image2](~/assets/images/Teams-task-module/manifest_1.png)
+        :::image type="content" source="~/assets/images/Teams-task-module/manifest_1.png" alt-text="Manifest image2."lightbox="~/assets/images/Teams-task-module/manifest_1.png":::
 
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using latest version of Visual Studio or Command line**
+    **To build and run the service using the latest version of Visual Studio or Command line**
 
     # [Latest version of Visual Studio](#tab/latestversionofvisualstudio)
 
        1. Launch the latest version of Visual Studio.
        1. Go to **File** > **Open** > **Project/Solution**.
     
-          ![Open file](~/assets/images/Teams-task-module/VSopenfile.png)
+          :::image type="content" source="~/assets/images/Teams-task-module/VSopenfile.png" alt-text="Screenshot shows the open file with folder location.":::
 
-       1. Select **TeamsTaskModule.csproj** file from **54.teams-task-module** folder.
+       1. Select **TeamsTaskModule.csproj** file from **samples** > **bot-task-module** > **csharp** folder.
 
-          :::image type="content" source="~/assets/images/Teams-task-module/csprojfileopen_1.png" alt-text="CS proj file":::
+          :::image type="content" source="~/assets/images/Teams-task-module/project-file-location.png" alt-text="CS proj file":::
 
        1. Open **Solution Explorer** from **View**.
 
-          ![Solution Explorer](~/assets/images/Teams-task-module/solutionexplorer_1.png)
-
-       1. Right-click to select **TeamsTaskModule**.
-
-       1. Select **Set as Startup Project**.
-
-          ![Solution Explorer](~/assets/images/Teams-task-module/startup_1.png)
+          :::image type="content" source="~/assets/images/Teams-task-module/solutionexplorer_1.png" alt-text="Screenshot shows the open solution explorer.":::
 
        1. Press **F5** to run the project.
     
@@ -387,48 +382,44 @@ items:
 
           A webpage opens with a message **. Your bot is ready!**.
 
-          ![App ready](~/assets/images/Teams-task-module/appisready.png) 
+          :::image type="content" source="~/assets/images/Teams-task-module/appisready.png" alt-text="App ready"::: 
 
         
     # [Command line](#tab/cli)
 
-    Go to **BotBuilder-Samples > samples > csharp_dotnetcore > 54.teams-task-module** in Command Prompt window and enter the following command:
+    Go to **Microsoft-Teams-Samples** > **samples** > **bot-task-module** > **csharp** in Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
     ```
    
-    ![Dotnet](~/assets/images/Teams-task-module/dotnetruncmd.png)
+    :::image type="content" source="~/assets/images/Teams-task-module/dotnetrun.png" alt-text="Screenshot shows the command prompt of dotnet run."::: 
 
 - title: Upload Task Module app
   durationInMinutes: 1
   content: |
-    1. In your cloned repository, go to **csharp_dotnetcore > 54.teams-task-module > TeamsAppManifest**.
+    1. In your cloned repository, go to **samples** > **bot-task-module** > **csharp** > **TeamsAppManifest**.
 
     1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder: 
        * manifest.json
        * icon-outline.png
        * icon-color.png
 
-       ![Zip file](~/assets/images/Teams-task-module/zip-file_1.png) 
+       :::image type="content" source="~/assets/images/Teams-task-module/manifest-file-zip.png" alt-text="Zip file"::: 
 
     1. Go to **Microsoft Teams**.
 
-    1. Select **Apps**.
+    1. Select **Apps** > **Manage your apps**.
 
-       ![Zip file](~/assets/images/Teams-task-module/AppStore_1.png)
+       :::image type="content" source="~/assets/images/Teams-task-module/manage-apps_3.png" alt-text="Manage apps":::
    
-    1. Select **Manage your apps**.
+    1. Select **Upload an app** and select **Upload a custom app**. 
 
-       ![Manage apps](~/assets/images/Teams-task-module/manage-apps_1.png)
-   
-    1. Select **Upload a custom app**. 
-
-       ![Upload custom app](~/assets/images/Teams-task-module/upload-app_1.png)
-
+       :::image type="content" source="~/assets/images/upload-a-custom-app.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
+       
     1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
 
-       ![Select zip file](~/assets/images/Teams-task-module/select-zip_1.png)
+       :::image type="content" source="~/assets/images/Teams-task-module/upload-manifest-zip.png" alt-text="Select zip file":::
 
     1. Select **Add**.
 
@@ -436,9 +427,9 @@ items:
 
        The app opens in a chat.
    
-    1. Enter any text and select Enter. 
+    1. Enter any text and send. 
 
-       ![Chat](~/assets/images/Teams-task-module/chat_ready.png)
+       :::image type="content" source="~/assets/images/Teams-task-module/chat_ready_1.png" alt-text="Chat":::
     
        The app displays **Task Module Invocation from Hero Card** and **Task Module Invocation from Adaptive Card**.         
 
@@ -447,21 +438,21 @@ items:
   content: |
     1. Select **Adaptive Card** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
 
-       ![Adaptive card](~/assets/images/Teams-task-module/adaptive-card_1.png)
+       :::image type="content" source="~/assets/images/Teams-task-module/adaptive-card_1.png" alt-text="Adaptive card":::
 
     1. Enter any text.
 
     1. Select **Submit**.
 
-       ![Adaptive card text](~/assets/images/Teams-task-module/adaptive-card-text.png)
+       :::image type="content" source="~/assets/images/Teams-task-module/adaptive-card-text.png" alt-text="Screenshot shows Adaptive card message box.":::
 
        **Adaptive Card** sends an acknowledgment message.
-
-       ![Adaptive card submit](~/assets/images/Teams-task-module/adaptive-card-submit.png)
+       
+       :::image type="content" source="~/assets/images/Teams-task-module/adaptive-card-submit.png" alt-text="Screenshot shows the Adaptive card sends an acknowledgment message.":::
 
     1. Select **Custom Form** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
 
-       ![Custom form](~/assets/images/Teams-task-module/custom-form_1.png)
+       :::image type="content" source="~/assets/images/Teams-task-module/custom-form_1.png" alt-text="Custom form":::
 
     1. Enter the required information:
 
@@ -473,23 +464,23 @@ items:
 
     1. Select **Sign up**.
 
-       ![Custom Form text](~/assets/images/Teams-task-module/custom-text.png)
+       :::image type="content" source="~/assets/images/Teams-task-module/custom-text.png" alt-text="Custom Form text":::
 
        **Custom Form** sends an acknowledgment message.
 
-       ![Sign up](~/assets/images/Teams-task-module/custom-on-sign-up.png)
+       :::image type="content" source="~/assets/images/Teams-task-module/custom-on-sign-up.png" alt-text="Sign up":::
 
        The following information appears in chat:
 
-       ![Chat](~/assets/images/Teams-task-module/adaptive-custom-chat.png)
+       :::image type="content" source="~/assets/images/Teams-task-module/adaptive-custom-chat.png" alt-text="Chat":::
 
     1. Select **YouTube** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
 
-       ![YouTube](~/assets/images/Teams-task-module/youtube_1.png)
+       :::image type="content" source="~/assets/images/Teams-task-module/youtube_1.png" alt-text="YouTube":::
 
     1. Select **Play**.
 
-       ![YouTube select](~/assets/images/Teams-task-module/youtube-select_1.png)
+       :::image type="content" source="~/assets/images/Teams-task-module/youtube-select_1.png" alt-text="YouTube select":::
 
        The video plays.
 
@@ -498,7 +489,7 @@ items:
   content: |
     Did you come up with something like this?
 
-       ![Task module](~/assets/images/Teams-task-module/final_image.png)
+       :::image type="content" source="./assets/images/Teams-task-module/final_image.png" alt-text="Task module":::
 
 - content: |
     You've completed the tutorial to get started with Teams task module app!

@@ -18,14 +18,9 @@ Data for newly published apps takes about a week to appear in the report.
 
 ## Publish updates to your app
 
-> [!NOTE]
-> Teams store has evolved:
->
-> Previously, the links were copied by selecting ellipses on the app tile. With the updated Teams store experience, you will access the same from the details tab of the apps. This update will be generally available (GA) by March 01, 2022.
-
 You can submit changes to your app (such as new features or even metadata) in Partner Center. These changes require a new review process.
 
-Ensure the following when publishing updates:
+Ensure to check the following when you're publishing updates:
 
 * Don't change your app ID.
 * Increment your app's version number.
@@ -33,7 +28,7 @@ Ensure the following when publishing updates:
 
 ### App updates requiring user consent
 
-When a user installs your app, they must give the app permission to access the services and information the app requires to function. In most cases, users must do this once and new version of your app install automatically.
+When a user installs your app, they must give the app permission to access the services, and information the app requires to function. In most cases, users must do this once and new version of your app install automatically.
 If you make any of the following changes to your app, however, your existing users must accept another permission request to install the update:
 
 * Add or remove a bot.
@@ -58,16 +53,16 @@ Create the link using the following URL appended with your app ID: `https://team
 
 ## Complete Microsoft 365 Certification
 
-[Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) offers assurances that data and privacy are adequately secured and protected when a third-party Office app or an add-in is installed in your Microsoft 365 ecosystem. The certification confirms that your app is compatible with Microsoft technologies, is compliant with cloud app security best practices, and is supported by Microsoft.
+[Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) offers assurances that data and privacy are adequately secured and protected when a third-party Microsoft 365 app or an add-in is installed in your Microsoft 365 ecosystem. The certification confirms that your app is compatible with Microsoft technologies, is compliant with cloud app security best practices, and is supported by Microsoft.
 
 ## Stop app distribution
 
-You can remove an app from the [Microsoft commercial marketplace](/azure/marketplace/overview) to prevent its discovery and use.
+You can remove an app from the [Microsoft commercial marketplace](/azure/marketplace/overview) and the Microsoft Teams store to prevent its discovery and use.
 
 To stop distribution of an app after you've published, follow the steps:
 
-1. On the **Product overview** page, select **Stop selling**. It removes the app from the Microsoft AppSource.
-1. To initiate de-listing of the app, on **Partner Center**, select the **Overview** page, and then select **Stop selling**.
+1. In **Partner Center**, on the **Product overview** page, select **Stop selling**. It removes the app from the Microsoft AppSource.
+1. To initiate de-listing of the app from the Microsoft Teams store, write to [apphealthevaluation](mailto:apphealthevaluation@microsoft.com).
 
 After you stop the distribution of an app, you can still see it in Partner Center with a **Not available** status. If you decide to list the app again, follow the instructions to [Publish your app to the Microsoft Teams store](../publish.md).
 

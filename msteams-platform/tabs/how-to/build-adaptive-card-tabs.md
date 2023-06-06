@@ -9,9 +9,8 @@ ms.localizationpriority: high
 
 # Build tabs with Adaptive Cards
 
-> [!IMPORTANT]
->
-> Tabs with Adaptive Cards are currently only supported as personal apps.
+> [!WARNING]
+> Adaptive Card tabs will be deprecated in the new Microsoft Teams. Apps are expected to be available in the new Microsoft Teams by June 2023. If your app is using Adaptive Card tabs, it's recommended to rebuild the tab as a web-based tab. For more information, see [Build tabs for Teams](../what-are-tabs.md).
 
 When developing a tab using the traditional method, you might run into these issues:
 
@@ -20,7 +19,7 @@ When developing a tab using the traditional method, you might run into these iss
 * iFrame constraints
 * Server maintenance and costs
 
-Adaptive Card tabs are a new way to build tabs in Teams. Instead of embedding web content in an iFrame, you can render Adaptive Cards to a tab. While the front end is rendered with Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
+You can build Adaptive Card tabs in Teams. Instead of embedding web content in an iFrame, you can render Adaptive Cards to a tab. While the front end is rendered with Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
 
 You can build your tabs with ready-made user interface (UI) building blocks native on desktop, web, and mobile. This article helps you understand the changes required to be made to the app manifest. The article also identifies how the invoke activity requests and sends information in tab with Adaptive Cards, and its effect on the task module workflow.
 
@@ -40,7 +39,7 @@ Before you start using Adaptive Cards to build tabs, you must:
 Personal apps that render tabs must include a `staticTabs` array in their app manifest. Adaptive Card tabs are rendered when the `contentBotId` property is provided in the `staticTab` definition. Static tab definitions must contain either a `contentBotId`, specifying an Adaptive Card tab or a `contentUrl`, specifying a typical hosted web content tab experience.
 
 > [!NOTE]
-> The `contentBotId` property is currently available in manifest version 1.9 or later.
+> The `contentBotId` property is available in manifest version 1.9 or later.
 
 Provide the `contentBotId` property with the `botId` that the Adaptive Card tab must communicate with. The `entityId` configured for the Adaptive Card tab is sent in the `tabContext` parameter of each invoke request, and can be used to differentiate Adaptive Card Tabs that are powered by the same bot. For more information about other static tab definition fields, see [manifest schema](../../resources/schema/manifest-schema.md#statictabs).
 
@@ -421,9 +420,13 @@ The following code shows a reissued request example:
 
 ## Code sample
 
-|**Sample name** | **Description** |**.NET** | **Node.js** |
-|----------------|-----------------|--------------|--------------|
-| Show Adaptive Cards in Teams tab | Microsoft Teams tab sample code, which demonstrates how to show Adaptive Cards in Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+|**Sample name** | **Description** |**.NET** | **Node.js** | **Manifest**|
+|----------------|-----------------|--------------|--------------|--------------|
+| Show Adaptive Cards in Teams tab | Microsoft Teams tab sample code, which demonstrates how to show Adaptive Cards in Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp/demo-manifest/tab-adaptive-card.zip)|
+
+## Step-by-step guide
+
+Follow the [step-by-step](../../sbs-tab-with-adaptive-cards.yml) guide to build tab with Adaptive Cards.
 
 ## Next step
 
@@ -432,9 +435,8 @@ The following code shows a reissued request example:
 
 ## See also
 
-* [Adaptive Card](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-* [Tabs on mobile](~/tabs/design/tabs-mobile.md)
-* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Build tabs for Teams](../what-are-tabs.md)
+* [Tabs on mobile](../design/tabs-mobile.md)
+* [Cards](../../task-modules-and-cards/what-are-cards.md)
+* [Use task modules in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Form completion feedback](../../bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

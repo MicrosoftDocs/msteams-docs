@@ -37,7 +37,7 @@ items:
      | --- | --- | --- |
      | **Required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install the <br> **ASP.NET and web development** workload.| You can install the enterprise version in Visual Studio 2022 and install the workloads. |
      | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
@@ -48,11 +48,11 @@ items:
   durationInMinutes: 1
   content: | 
 
-    1. Open [BotBuilder Samples](https://github.com/microsoft/BotBuilder-Samples).
+    1. Open [Microsoft-Teams-Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
     1. Select **Code**.
     1. Select **Open with GitHub Desktop** from the dropdown menu.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/clonerepository-new_1.png" alt-text="Clone repository":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/clone-repository.png" alt-text="Clone repository":::
 
     1. Select **Clone**. 
 
@@ -80,8 +80,9 @@ items:
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** and **Resource group** from the respective dropdown list.
-        
-        :::image type="content" source="~/assets/images/Teams-link-unfurling/review-plus-create_1.png" alt-text="Select resource Azure bot":::
+    1. Select required **Data residency (preview)**.
+    
+       :::image type="content" source="./assets/images/conversation-bot/create-azure-bot.png" alt-text="Screenshot shows how to create Azure bot.":::
        
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
@@ -110,7 +111,7 @@ items:
 
         :::image type="content" source="~/assets/images/Teams-link-unfurling/botdeployment_1.png" alt-text="Screenshot showing the navigation of go to resource.":::
 
-       Your Azure bot is created and you can see the **Resource group** and **Subscription ID** in the Azure bot.
+       Your Azure bot is created, and you can see the **Resource group** and **Subscription ID** in the Azure bot.
 
         :::image type="content" source="~/assets/images/Teams-link-unfurling/bot-page_1.png" alt-text="Azure bot resource created":::
         
@@ -250,7 +251,7 @@ items:
   
     1. Ensure that **State** is set to **Enabled**.
   
-    1. Select **Add a scope** to save.
+    1. Select **Add scope** to save.
 
         :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/addscope.png" alt-text="Screenshot showing how to Add scope."::: 
         
@@ -331,7 +332,7 @@ items:
   content: |
     1. Go to **appsettings.json** in cloned repository.
  
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appsettingslocation_1.png" alt-text="Screenshot showing the navigation of app settings location.":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appsettings-file-location.png" alt-text="Screenshot showing the navigation of app settings location.":::
       
     1. Open **appsettings.json** in Visual Studio.
     
@@ -346,7 +347,7 @@ items:
         
     1. Go to **manifest.json** in cloned repository.
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manifestlocation_1.png" alt-text="Screenshot showing the manifest file location.":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manifest-file-location.png" alt-text="Screenshot showing the manifest file location.":::
         
     1. Open **manifest.json** in Visual Studio.
 
@@ -382,19 +383,13 @@ items:
 
           :::image type="content" source="~/assets/images/Teams-link-unfurling/VSopenfile_1.png" alt-text="Screenshot showing the navigation of open file.":::
           
-       1. Select **TeamsLinkUnfurling.csproj** file from **55.teams-link-unfurling** folder.
+       1. Select **TeamsLinkUnfurling.csproj** file from **samples** > **msgext-link-unfurling** > **csharp** folder.
 
-          :::image type="content" source="~/assets/images/Teams-link-unfurling/csproj_1.png" alt-text="Screenshot showing the select of folder.":::
+          :::image type="content" source="~/assets/images/Teams-link-unfurling/project-file-location.png" alt-text="Screenshot showing the select of folder.":::
       
        1. Open **Solution Explorer** from **View**.
 
           :::image type="content" source="~/assets/images/Teams-link-unfurling/solutionexplorer_1.png" alt-text="Screenshot showing the Solution Explorer.":::
-          
-       1. Right-click the **TeamsLinkUnfurling**.
-
-       1. Select **Set as Startup Project**.
-          
-          :::image type="content" source="~/assets/images/Teams-link-unfurling/startup_1.png" alt-text="Screenshot showing the setup of startup project."::: 
           
        1. Press **F5** to run the project.
     
@@ -408,44 +403,40 @@ items:
                   
     # [Command line](#tab/cli)
 
-    Go to **BotBuilder-Samples > samples > csharp_dotnetcore > 55.teams-link-unfurling** in Command Prompt window and enter the following command:
+    Go to **Microsoft-Teams-Samples** > **samples** > **msgext-link-unfurling** > **csharp** in Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
     ```
-    :::image type="content" source="~/assets/images/Teams-link-unfurling/dotnetruncmd.png" alt-text="Screenshot showing the dotnet run in bash.":::
+    :::image type="content" source="~/assets/images/Teams-link-unfurling/dotnet-run-command.png" alt-text="Screenshot showing the dotnet run in bash.":::
 
       ---
 
 - title: Upload Link Unfurling app
   durationInMinutes: 1
   content: |
-    1. In your cloned repository, go to **csharp_dotnetcore > 55.teams-link-unfurling > TeamsAppManifest**.
+    1. In your cloned repository, go to **samples** > **msgext-link-unfurling** > **csharp** > **TeamsAppManifest**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
        * icon-outline.png
        * icon-color.png
 
-         :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/zipfile_1.png" alt-text="Screenshot showing the zipping of file.":::
+         :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manifest-file-zip.png" alt-text="Screenshot showing the zipping of file.":::
        
     1. Go to **Microsoft Teams**.
 
-    1. Select **Apps**.
- 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/AppStore_1.png" alt-text="Zip file":::
-       
-    1. Select **Manage your apps**.
+    1. Select **Apps** > **Manage your apps**.
 
        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manageapps_1.png" alt-text="Manage apps":::
           
-    1. Select **Upload a custom app**. 
+    1. Select **Upload an app** and select **Upload a custom app**. 
 
        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/uploadapp_1.png" alt-text="Upload custom app":::
       
     1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/selectzip_1.png" alt-text="Screenshot showing the selection of zip file.":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/upload-manifest-zip.png" alt-text="Screenshot showing the selection of zip file.":::
       
     1. Select **Add**.
 

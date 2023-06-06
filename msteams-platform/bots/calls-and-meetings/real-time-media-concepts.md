@@ -59,11 +59,19 @@ To develop an application-hosted media bot, you must install the [Microsoft.Grap
 
 Application-hosted media bots require .NET or C# and Windows Server. For more information, see [requirements and considerations for application-hosted media bots](requirements-considerations-application-hosted-media-bots.md#c-or-net-and-windows-server-for-development).
 
+## Code sample
+
+| **Sample name** | **Description** | **Graph** |
+|---------------|----------|--------|
+| Policy recording bot | This sample demonstrates how a bot can receive media streams for recording. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/PolicyRecordingBot) |
+
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Register a calling bot](~/bots/calls-and-meetings/registering-calling-bot.md)
+> [Register calls and meetings bot for Microsoft Teams](registering-calling-bot.md)
 
 ## See also
 
-[Supported media formats for bots](~/resources/media-formats.md)
+* [Build bots for Teams](../what-are-bots.md)
+* [Calls and online meetings bots](calls-meetings-bots-overview.md)
+* [Supported media formats for bots](~/resources/media-formats.md)

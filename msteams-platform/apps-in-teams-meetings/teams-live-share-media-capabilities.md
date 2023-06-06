@@ -18,11 +18,11 @@ The Live Share SDK enables robust **media synchronization** for any HTML `<video
 
 ## Install
 
-To add the latest version of the SDK to your application using npm:
+Live Share media is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share-media), and you can download through npm or yarn. You must also install its peer dependencies, which include `@microsoft/live-share`, `fluid-framework` and `@fluidframework/azure-client`. If you are using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later.
 
 ```bash
-npm install @microsoft/live-share@next --save
-npm install @microsoft/live-share-media@next --save
+npm install @microsoft/live-share @microsoft/live-share-media fluid-framework @fluidframework/azure-client --save
+npm install @microsoft/teams-js --save
 ```
 
 OR
@@ -30,8 +30,8 @@ OR
 To add the latest version of the SDK to your application using [Yarn](https://yarnpkg.com/):
 
 ```bash
-yarn add @microsoft/live-share@next
-yarn add @microsoft/live-share-media@next
+yarn add @microsoft/live-share @microsoft/live-share-media fluid-framework @fluidframework/azure-client
+yarn add @microsoft/teams-js
 ```
 
 ## Media sync overview
@@ -40,7 +40,7 @@ The Live Share SDK has two primary classes related to media synchronization:
 
 | Classes                                                                                        | Description                                                                                                                                       |
 | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [LiveMediaSession](/javascript/api/@microsoft/live-share-media/livemediasession)     | Custom live object designed to coordinate media transport controls and playback state in independent media streams.                          |
+| `LiveMediaSession` | Custom live object designed to coordinate media transport controls and playback state in independent media streams.                          |
 | [MediaPlayerSynchronizer](/javascript/api/@microsoft/live-share-media/mediaplayersynchronizer) | Synchronizes any object that implements the `IMediaPlayer` interface -- including HTML5 `<video>` and `<audio>` -- using `LiveMediaSession`. |
 
 Example:
@@ -58,9 +58,11 @@ Example:
 ```javascript
 import { LiveShareClient, UserMeetingRole } from "@microsoft/live-share";
 import { LiveMediaSession } from "@microsoft/live-share-media";
+import { LiveShareHost } from "@microsoft/teams-js";
 
 // Setup the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
 const schema = {
   initialObjects: { mediaSession: LiveMediaSession },
 };
@@ -81,10 +83,12 @@ await mediaSession.initialize(allowedRoles);
 ```TypeScript
 import { LiveShareClient, UserMeetingRole } from "@microsoft/live-share";
 import { LiveMediaSession, IMediaPlayer, MediaPlayerSynchronizer } from "@microsoft/live-share-media";
+import { LiveShareHost } from "@microsoft/teams-js";
 import { ContainerSchema } from "fluid-framework";
 
 // Join the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
 const schema: ContainerSchema = {
   initialObjects: { mediaSession: LiveMediaSession },
 };
@@ -98,6 +102,48 @@ const synchronizer: MediaPlayerSynchronizer = mediaSession.synchronize(player);
 // Define roles you want to allow playback control and start sync
 const allowedRoles: UserMeetingRole[] = [UserMeetingRole.organizer, UserMeetingRole.presenter];
 await mediaSession.initialize(allowedRoles);
+```
+
+# [React](#tab/react)
+
+```jsx
+import { useMediaSynchronizer } from "@microsoft/live-share-react";
+import { UserMeetingRole } from "@microsoft/live-share";
+import { useRef } from "react";
+
+const ALLOWED_ROLES = [UserMeetingRole.organizer, UserMeetingRole.presenter];
+
+const INITIAL_TRACK = "<YOUR_VIDEO_URL>";
+
+// Define a unique key that distinguishes this `useMediaSynchronizer` from others in your app
+const UNIQUE_KEY = "MEDIA-SESSION-ID";
+
+export function VideoPlayer() {
+  const videoRef = useRef(null);
+  const { play, pause, seekTo } = useMediaSynchronizer(
+    UNIQUE_KEY,
+    videoRef,
+    INITIAL_TRACK,
+    ALLOWED_ROLES
+  );
+
+  return (
+    <div>
+      <video ref={videoRef} />
+      <button onClick={play}>
+        Play
+      </button>
+      <button onClick={pause}>
+        Pause
+      </button>
+      <button onClick={() => {
+        seekTo(0);
+      }}>
+        Start over
+      </button>
+    </div>
+  );
+}
 ```
 
 ---
@@ -123,19 +169,27 @@ Example:
 ```javascript
 // ...
 
-document.getElementById("play-button").onclick = () => {
-  synchronizer.play();
+document.getElementById("play-button").onclick = async () => {
+  // Will play for all users in the session.
+  // If using role verification, this will throw an error if the user doesn't have the required role.
+  await synchronizer.play();
 };
 
-document.getElementById("pause-button").onclick = () => {
-  synchronizer.pause();
+document.getElementById("pause-button").onclick = async () => {
+  // Will pause for all users in the session.
+  // If using role verification, this will throw an error if the user doesn't have the required role.
+  await synchronizer.pause();
 };
 
-document.getElementById("restart-button").onclick = () => {
-  synchronizer.seekTo(0);
+document.getElementById("restart-button").onclick = async () => {
+  // Will seek for all users in the session.
+  // If using role verification, this will throw an error if the user doesn't have the required role.
+  await synchronizer.seekTo(0);
 };
 
 document.getElementById("change-track-button").onclick = () => {
+  // Will change the track for all users in the session.
+  // If using role verification, this will throw an error if the user doesn't have the required role.
   synchronizer.setTrack({
     trackIdentifier: "SOME_OTHER_VIDEO_SRC",
   });
@@ -149,7 +203,7 @@ document.getElementById("change-track-button").onclick = () => {
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-media-out-of-sync.png" alt-text="Screenshot that shows a suspension sync to the presenter.":::
 
-If you want to temporarily suspend synchronization for the `LiveMediaSession` object, you can use suspensions. A [MediaSessionCoordinatorSuspension](/javascript/api/@microsoft/live-share-media/livemediasessioncoordinatorsuspension) object is local by default, which can be helpful in cases where a user might want to catch up on something they missed, take a break, and so on. If the user ends the suspension, synchronization resumes automatically.
+If you want to temporarily suspend synchronization for the `LiveMediaSession` object, you can use suspensions. A `MediaSessionCoordinatorSuspension` object is local by default, which can be helpful in cases where a user might want to catch up on something they missed, take a break, and so on. If the user ends the suspension, synchronization resumes automatically.
 
 # [JavaScript](#tab/javascript)
 
@@ -171,6 +225,46 @@ const suspension: MediaSessionCoordinatorSuspension = mediaSession.coordinator.b
 
 // End the suspension when ready
 suspension.end();
+```
+
+# [React](#tab/react)
+
+```jsx
+import { useMediaSynchronizer } from "@microsoft/live-share-react";
+import { useRef } from "react";
+
+// Define a unique key that distinguishes this `useMediaSynchronizer` from others in your app
+const UNIQUE_KEY = "MEDIA-SESSION-ID";
+
+// Example component
+export function VideoPlayer() {
+  const videoRef = useRef(null);
+  const { suspended, beginSuspension, endSuspension } = useMediaSynchronizer(
+    UNIQUE_KEY,
+    videoRef,
+    "<YOUR_INITIAL_VIDEO_URL>",
+  );
+
+  return (
+    <div>
+      <video ref={videoRef} />
+      {!suspended && (
+        <button onClick={() => {
+          beginSuspension();
+        }}>
+          Stop following
+        </button>
+      )}
+      {suspended && (
+        <button onClick={() => {
+          endSuspension();
+        }}>
+          Sync to presenter
+        </button>
+      )}
+    </div>
+  );
+}
 ```
 
 ---
@@ -218,6 +312,50 @@ document.getElementById("ready-up-button")!.onclick = () => {
 };
 ```
 
+# [React](#tab/react)
+
+```jsx
+import { useMediaSynchronizer } from "@microsoft/live-share-react";
+import { useRef } from "react";
+
+// Define a unique key that distinguishes this `useMediaSynchronizer` from others in your app
+const UNIQUE_KEY = "MEDIA-SESSION-ID";
+
+// Example component
+export function VideoPlayer() {
+    const videoRef = useRef(null);
+    const { suspended, beginSuspension, endSuspension } = useMediaSynchronizer(
+        UNIQUE_KEY,
+        videoRef,
+        "<YOUR_INITIAL_VIDEO_URL>",
+    );
+    
+    return (
+      <div>
+          <video ref={videoRef} />
+          {!suspended && (
+            <button onClick={() => {
+                const waitPoint = {
+                  position: 0,
+                  reason: "ReadyUp", // Optional.
+                };
+                beginSuspension(waitPoint);
+            }}>
+                Wait until ready
+            </button>
+          )}
+          {suspended && (
+            <button onClick={() => {
+              endSuspension();
+            }}>
+                Ready up
+            </button>
+          )}
+      </div>
+    );
+}
+```
+
 ---
 
 ## Audio ducking
@@ -231,7 +369,7 @@ import { meeting } from "@microsoft/teams-js";
 
 // ... set up MediaPlayerSynchronizer
 
-// Register speaking state change handler through Teams Client SDK
+// Register speaking state change handler through Microsoft Teams JavaScript client library (TeamsJS)
 let volumeTimer;
 meeting.registerSpeakingStateChangeHandler((speakingState) => {
   if (speakingState.isSpeakingDetected && !volumeTimer) {
@@ -258,7 +396,7 @@ import { meeting } from "@microsoft/teams-js";
 
 // ... set up MediaPlayerSynchronizer
 
-// Register speaking state change handler through Teams Client SDK
+// Register speaking state change handler through TeamsJS library
 let volumeTimer: NodeJS.Timeout | undefined;
 meeting.registerSpeakingStateChangeHandler((speakingState: meeting.ISpeakingState) => {
   if (speakingState.isSpeakingDetected && !volumeTimer) {
@@ -276,6 +414,56 @@ meeting.registerSpeakingStateChangeHandler((speakingState: meeting.ISpeakingStat
     volumeTimer = undefined;
   }
 });
+```
+
+# [React](#tab/react)
+
+```jsx
+import { useMediaSynchronizer } from "@microsoft/live-share-react";
+import { meeting } from "@microsoft/teams-js";
+import { useRef, useEffect } from "react";
+
+// Define a unique key that distinguishes this `useMediaSynchronizer` from others in your app
+const UNIQUE_KEY = "MEDIA-SESSION-ID";
+
+// Example component
+export function VideoPlayer() {
+    const videoRef = useRef(null);
+    const { synchronizer } = useMediaSynchronizer(
+        UNIQUE_KEY,
+        videoRef,
+        "<YOUR_INITIAL_VIDEO_URL>",
+    );
+
+    const enableSmartSound = () => {
+        let volumeTimer;
+        meeting.registerSpeakingStateChangeHandler((speakingState) => {
+            if (speakingState.isSpeakingDetected && !volumeTimer) {
+                // If someone in the meeting starts speaking, periodically
+                // lower the volume using your MediaPlayerSynchronizer's
+                // VolumeLimiter.
+                synchronizer.volumeLimiter?.lowerVolume();
+                volumeTimer = setInterval(() => {
+                    synchronizer.volumeLimiter?.lowerVolume();
+                }, 250);
+            } else if (volumeTimer) {
+                // If everyone in the meeting stops speaking and the
+                // interval timer is active, clear the interval.
+                clearInterval(volumeTimer);
+                volumeTimer = undefined;
+            }
+        });
+    }
+
+    return (
+        <div>
+            <video ref={videoRef} />
+            <button onClick={enableSmartSound}>
+                Enable smart sound
+            </button>
+        </div>
+      );
+}
 ```
 
 ---
@@ -320,7 +508,9 @@ Additionally, add the following [RSC](/microsoftteams/platform/graph-api/rsc/res
 
 ## See also
 
+- [Apps for Teams meetings](teams-apps-in-meetings.md)
 - [Live Share SDK FAQ](teams-live-share-faq.md)
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+- [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)
+- [App manifest schema for Teams](../resources/schema/manifest-schema.md)

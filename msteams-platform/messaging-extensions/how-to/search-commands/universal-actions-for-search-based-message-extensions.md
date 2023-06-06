@@ -125,4 +125,5 @@ Example of a dynamic ME and JIT install user flow:
 ## See also
 
 * [Message extensions](../../what-are-messaging-extensions.md)
+* [Adaptive Cards](../../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [Universal Actions for Adaptive Cards](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md)

@@ -2,7 +2,7 @@
 author: heath-hamilton
 description: Learn best practices or considerations for integrating existing web apps with Microsoft Teams. It gives information on API requirements, authentication, and deep-linking of your app with Teams.
 ms.author: surbhigupta
-ms.date: 08/26/2020
+ms.date: 04/02/2023
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Considerations for Teams integration
@@ -28,12 +28,12 @@ Your Teams app must include required and expected collaborative features. To wor
 
 |Common app features   |Teams platform capabilities   |
 |----------|-----------|
-|Embedded webpage, homepage, or webview  |[Tabs](../tabs/what-are-tabs.md)  |
-|Share shortcuts and extensions  |[Message extensions](../messaging-extensions/what-are-messaging-extensions.md)  |
+|Embedded webpage, homepage, or webview  |[Tabs](../tabs/what-are-tabs.md)<br/> [Tabs extended across Microsoft 365](../m365-apps/overview.md)  |
+|Share shortcuts and extensions  |[Message extensions](../messaging-extensions/what-are-messaging-extensions.md)<br/>[Message extensions for Outlook](../m365-apps/overview.md)  |
 |Action shortcuts and extensions  |[Message extensions](../messaging-extensions/what-are-messaging-extensions.md)  |
 |Chatbots |[Bots](../bots/what-are-bots.md) |
-|Channel notifications  |[Bots](../bots/what-are-bots.md)<br/>[Incoming webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Office 365 Connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
-|Message external services  |[Bots](../bots/what-are-bots.md)<br/>[Outgoing webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
+|Channel notifications  |[Bots](../bots/what-are-bots.md)<br/>[Incoming Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[connectors for Microsoft 365 Groups](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
+|Message external services  |[Bots](../bots/what-are-bots.md)<br/>[Outgoing Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |Modals  |[Task modules](../task-modules-and-cards/what-are-task-modules.md)  |
 |Content-rich cards  |[Adaptive Cards](../task-modules-and-cards/what-are-cards.md)  |
 
@@ -92,7 +92,7 @@ Learn more about [authentication in Teams](../concepts/authentication/authentica
 
 ***Integration scenarios**: Standalone apps, collaboration apps*
 
-Ensure to follow [Teams design guidelines](../concepts/design/understand-use-cases.md) to make your app native to Teams. You can't migrate an existing app content to a Teams tab. For more information on app design, see [Fluent Design System](https://fluentsite.z22.web.core.windows.net/).
+Ensure to follow [Teams design guidelines](../concepts/design/understand-use-cases.md) to make your app native to Teams. You can't migrate an existing app content to a Teams tab. For more information on app design, see [Fluent Design System](https://react.fluentui.dev/?path=/docs/).
 
 ## Maximize deep linking
 
@@ -122,6 +122,8 @@ When a team is created, a [SharePoint site collection](/microsoftteams/sharepoin
 
 ## See also
 
+* [Integrate web apps](integrate-web-apps-overview.md)
+* [Adaptive Cards](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 * [Integrate web apps](~/samples/integrate-web-apps-overview.md)
 * [Low-code and no-code solutions for Microsoft Teams](~/samples/teams-low-code-solutions.md)
 * [Share to Teams from web apps](~/concepts/build-and-test/share-to-teams-from-web-apps.md)

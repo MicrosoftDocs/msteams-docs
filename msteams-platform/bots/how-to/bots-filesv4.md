@@ -1,14 +1,15 @@
 ---
 title: Send and receive files using bot
 description: Learn how to send and receive files through the bot using Graph APIs for personal, channel and groupchat scopes.
-ms.date: 05/20/2019
+ms.date: 04/17/2023
 ms.localizationpriority: medium
 ms.topic: how-to
 ---
 # Send and receive files using bot
 
 > [!IMPORTANT]
-> The articles in this document are based on the v4 Bot Framework SDK.
+> * This article is based on the v4 Bot Framework SDK.
+> * Bots don't support sending and receiving files in Governmernt Community Cloud High (GCC-High) and Department of Defense (DOD) environments.
 
 There are two ways to send files to and receive files from a bot:
 
@@ -32,8 +33,7 @@ Alternately, you can send files to and receive files from a bot using the Teams 
 
 ## Use the Teams bot APIs
 
-> [!NOTE]
-> Teams bot APIs work only in the `personal` context. They do not work in the `channel` or `groupchat` context.
+Teams bot APIs work only in the `personal` context. They don't work in the `channel` or `groupchat` context.
 
 Using Teams APIs, the bot can directly send and receive files with users in the `personal` context, also known as personal chats. Implement features, such as expense reporting, image recognition, file archival, and e-signatures involving the editing of file content. Files shared in Teams typically appear as cards and allow rich in-app viewing.
 
@@ -314,9 +314,9 @@ private async Task SendFileCardAsync(ITurnContext turnContext, string filename, 
 
 The following code sample demonstrates how to obtain file consent and upload files to Teams from a bot:
 
-|**Sample name** | **Description** | **.NET** | **Javascript** | **Python**|
-|----------------|-----------------|--------------|----------------|-----------|
-| File upload | Demonstrates how to obtain file consent and upload files to Teams from a bot. Also, how to receive a file sent to a bot. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/56.teams-file-upload) |
+|**Sample name** | **Description** | **.NET** | **Node.js** | **Python**| **Manifest**|
+|----------------|-----------------|--------------|----------------|-----------|-----------|
+| File upload | This sample shows how to obtain file consent and upload files to Teams using bot. Also, how to receive a file sent to a bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/csharp/demo-manifest/bot-file-upload.zip)
 
 ## Step-by-step guide
 
@@ -329,4 +329,9 @@ Follow the [step-by-step guide](../../sbs-file-handling-in-bot.yml) to upload fi
 
 ## See also
 
-[Protected APIs in Microsoft Teams](/graph/teams-protected-apis)
+* [Build bots for Teams](../what-are-bots.md)
+* [Authentication flow for bots in Microsoft Teams](authentication/auth-flow-bot.md)
+* [Have a personal (one-on-one) conversation with a Microsoft Teams bot](../../resources/bot-v3/bot-conversations/bots-conv-personal.md)
+* [Get Teams specific context for your bot](get-teams-context.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [Protected APIs in Microsoft Teams](/graph/teams-protected-apis)
