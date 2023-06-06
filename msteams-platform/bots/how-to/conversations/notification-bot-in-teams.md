@@ -123,7 +123,7 @@ You can customize the following triggers:
 
     :::image type="content" source="../../../assets/images/notification-bot/notification-timer-triggered.png" alt-text="sample of timer triggered notification":::
 
-  * When you select `http` trigger, the HTTP request triggers the notification, and the default implementation sends an Adaptive Card to Teams.  You can change this event by customizing `src/*Trigger.ts`. This implementation can call an API to retrieve events, data, or both, which can send an Adaptive Card as required.
+  * When you select `http` trigger, the HTTP request triggers the notification, and the default implementation sends an Adaptive Card to Teams. You can change this event by customizing `src/*Trigger.ts`. This implementation can call an API to retrieve events, data, or both, which can send an Adaptive Card as required.
 
     :::image type="content" source="../../../assets/images/notification-bot/notification-http-triggered.png" alt-text="sample of HTTP triggered notification":::
 
@@ -163,7 +163,7 @@ You can customize sending the notification to the following targets:
   ```C#
   // list all installation targets
   foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
-      // "Person" means this bot is installed as Personal   app
+      // "Person" means this bot is installed as Personal app
       if (target.Type == NotificationTargetType.Person)
       {
          // Directly notify the individual person
@@ -460,7 +460,7 @@ There can be more authentication or authorization solutions for an API, you can 
 
 ## Connect to existing APIs
 
-If you don't have the required SDK, and want to invoke external APIs in your code. The **Teams: Connect to an API** command in Microsoft Visual Studio Code Teams Toolkit extension, or **teamsfx add api-connection** command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [Integrate existing third-party APIs](../../../toolkit/add-API-connection.md).
+If you don't have the required SDK and want to invoke external APIs in your code, the **Teams: Connect to an API** command in Microsoft Visual Studio Code Teams Toolkit extension, or **teamsfx add api-connection** command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [Integrate existing third-party APIs](../../../toolkit/add-API-connection.md).
 
 ### Teams bot application or Teams Incoming Webhook
 

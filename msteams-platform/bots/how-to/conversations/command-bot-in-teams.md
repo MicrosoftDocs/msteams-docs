@@ -248,7 +248,7 @@ export class DoSomethingCommandHandler implements TeamsFxBotCommandHandler {
 
 # [C#](#tab/csharp2)
 
-The TeamsFx .NET SDK provides an interface `ITeamsCommandHandler` for command handler to handle when a command is triggered from Teams conversation message. Create a new file `Commands/DoSomethingCommandHandler.cs`:
+TeamsFx .NET SDK provides an interface `ITeamsCommandHandler` for command handler to handle when a command is triggered from Teams conversation message. Create a new file `Commands/DoSomethingCommandHandler.cs`:
 
 ```csharp
 using MyCommandApp.Models;
@@ -412,7 +412,7 @@ If you're responding to a command that needs to access Microsoft Graph data of a
 
 ### Connect to existing APIs
 
-If you don't have the required SDK, and need to invoke external APIs in your code. The **Teams: Connect to an API** command in Microsoft Visual Studio Code Teams Toolkit extension, or **teamsfx add api-connection** command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [configure API connection](../../../toolkit/add-API-connection.md#).
+If you don't have the required SDK and need to invoke external APIs in your code the **Teams: Connect to an API** command in Microsoft Visual Studio Code Teams Toolkit extension, or **teamsfx add api-connection** command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [configure API connection](../../../toolkit/add-API-connection.md#).
 
 ## FAQ
 
@@ -426,7 +426,7 @@ If you don't have the required SDK, and need to invoke external APIs in your cod
 
     :::image type="content" source="../../../assets/images/command-bot-teams/notification-enable.png" alt-text="Conversation bot initialization to enable notification feature." lightbox="../../../assets/images/command-bot-teams/notification-enable.png":::
 
-2. Follow the [instructions](notification-bot-in-teams.md) to send notification to the bot installation target (channel/group chat/personal chat). You can add the following sample code in `bot\src\index.ts(js)` to add a sample notification triggered by an HTTP request:
+1. Follow the [instructions](notification-bot-in-teams.md) to send notification to the bot installation target (channel/group chat/personal chat). You can add the following sample code in `bot\src\index.ts(js)` to add a sample notification triggered by an HTTP request:
 
     ```js
     server.post("/api/notification", async (req, res) => {
@@ -439,10 +439,10 @@ If you don't have the required SDK, and need to invoke external APIs in your cod
 
     ```
 
-3. Uninstall your previous bot installation from Teams, and re-run local debug to test your bot notification.
-4. Send a notification to the bot installation targets (channel/group chat/personal chat) by using an HTTP POST request with target URL `<https://localhost:3978/api/notification>`.
+1. Uninstall your previous bot installation from Teams, and rerun local debug to test your bot notification.
+1. Send a notification to the bot installation targets (channel/group chat/personal chat) by using an HTTP POST request with target URL `<https://localhost:3978/api/notification>`.
 
-For more information about notification feature such as send notification with adaptive card and add more triggers, see [Notification bot in Teams](notification-bot-in-teams.md).
+For more information about notification feature such as send notification with Adaptive Card and add more triggers, see [Notification bot in Teams](notification-bot-in-teams.md).
 
 <br>
 
@@ -452,9 +452,9 @@ For more information about notification feature such as send notification with a
 
 <summary><b>How to extend my command bot by adding workflow bot Adaptive Card actions?</b></summary>
 
-The Adaptive Card action handler feature enables the app to respond to adaptive card actions that triggered by end users to complete a sequential workflow. An Adaptive Card provides one or more buttons in the card to ask for user's input such as calling some APIs. The Adaptive Card then send another Adaptive Card in conversation to response to the card action.
+The Adaptive Card action handler feature enables the app to respond to Adaptive Card actions triggered by end users to complete a sequential workflow. An Adaptive Card provides one or more buttons in the card to ask for user's input such as calling some APIs. The Adaptive Card then send another Adaptive Card in conversation to response to the card action.
 
-For more information on how to add adaptive card actions to command bot, see [Workflow bot in Teams](workflow-bot-in-teams.md).
+For more information on how to add Adaptive Card actions to command bot, see [Workflow bot in Teams](workflow-bot-in-teams.md).
 
 <br>
 
