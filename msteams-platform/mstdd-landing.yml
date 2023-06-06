@@ -76,8 +76,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Visual indicator for your Teams app
-        url: apps-in-teams-meetings/visual-indicator-for-your-app.md
+      - text: App icon badging for your Teams app
+        url: apps-in-teams-meetings/app-icon-badging-for-your-app.md
       - text: Real-time meeting events are supported in channel meetings
         url: apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api
       - text: Resource-specific consent for your Teams app

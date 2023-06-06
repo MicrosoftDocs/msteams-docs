@@ -337,9 +337,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2023 May**
+**2023 June**
 
-***May 26***: [Enable app icon badges for your Teams app](apps-in-teams-meetings/visual-indicator-for-your-app.md)
+***June 07***: [Enable app icon badging for your Teams app](apps-in-teams-meetings/app-icon-badging-for-your-app.md)
 
 :::column-end:::
 :::row-end:::

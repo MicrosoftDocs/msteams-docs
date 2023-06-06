@@ -73,7 +73,7 @@ The following image shows an app added to the meeting chat in the Teams mobile c
 
    :::image type="content" source="../assets/images/side-panel-view.png" alt-text="Screenshot shows side panel view with the list of apps.":::
 
-To notify meeting participants whenever there's a new activity on the app loaded in the meeting side panel, you can enable visual indicator. For more information, see [visual indicator for your Teams app](visual-indicator-for-your-app.md).
+To notify meeting participants whenever there's a new activity on the app loaded in the meeting side panel, you can enable app icon badging. For more information, see [enable app icon badging for your Teams app](app-icon-badging-for-your-app.md).
 
 #### Deep link to meeting side panel
 
@@ -399,4 +399,4 @@ The following are the limitations for app caching:
 * [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
 * [Add apps to meetings using Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [Get change notifications for Microsoft Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)
-* [Visual indicator for your Teams app](visual-indicator-for-your-app.md)
+* [Enable app icon badging for your Teams app](app-icon-badging-for-your-app.md)
