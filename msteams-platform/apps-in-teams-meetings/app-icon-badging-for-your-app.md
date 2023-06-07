@@ -9,11 +9,11 @@ ms.localizationpriority: medium
 
 # Enable app icon badging for your Teams app
 
-App icon badging helps meeting participants identify any app activity during a meeting. Participants get activity notification for the meeting apps.
+App icon badging helps a meeting participant identify any app activity during a meeting. Participants get activity notification for the meeting apps.
 
-When there's new activity during the meeting, the app calls the targeted meeting notification API and displays a red badge on the app icon in the meeting unified bar (U-bar). When the participants select the app icon, the app opens in a meeting side panel, and the badge goes away.
+When there's new activity during the meeting, the app calls the `targetedMeetingNotification` API and displays a red badge on the app icon in the meeting unified bar (U-bar). When the participant selects the app icon, the app opens in the meeting side panel, and the badge goes away.
 
-For example, during a real time collaboration in a meeting, if a participant adds a comment in a file, the app calls the targeted meeting notification API from the participant's meeting side panel. This triggers a badge on the app icon for other participants of the comment activity.
+For example, during a real time collaboration in a meeting, if a participant adds a comment in a file added to the meeting, the app calls the `targetedMeetingNotification` API from the participant's meeting side panel. The API triggers a badge on the app icon to make other participants aware of the comment activity.
 
 The following image shows you the app icon badging in the meeting U-bar:
 
