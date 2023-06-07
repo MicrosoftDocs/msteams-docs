@@ -87,11 +87,11 @@ Download the [sample app manifest](https://github.com/MicrosoftDocs/msteams-docs
 1. Select the **Appstore** icon at the lower left of side tab.
 1. Select **Upload a custom app** at the lower left. The following image displays the corresponding screen:  
 
-    ![upload a custom app](~/assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png)
+    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png" alt-text="Screenshot shows the Upload a custom app option.":::
 
 1. The file to upload is located in your **Downloads** folder. It's called TalentMgmt-Azure.zip. The following image displays the corresponding screen:
 
-    ![TalentMgmt in Azure](~/assets/images/tabs/tabs-in-sharepoint/talentmgmt-azure.png)
+    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/talentmgmt-azure.png" alt-text="Screenshot shows the Downloads folder.":::
 
 1. You can see the install or consent screen for the talent management app. Select the team you want to install.
 1. Select the **Install** and start experimenting with the app.
@@ -103,32 +103,33 @@ Download the [sample app manifest](https://github.com/MicrosoftDocs/msteams-docs
 1. When prompted, enable **Make this solution available to all sites in the organization**.
 The following image displays the corresponding screen:
 
-   ![Tabs in Sharepoint view](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
+    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image065.png" alt-text="Screenshot shows the deploy dialog.":::
 
 1. In your site, create a new page by selecting the gear button at the upper right and then  select **Add a page**.
 The following image displays the corresponding screen:
 
-   ![Sharepoint view](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
+    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image066.png" alt-text="Screenshot shows the Office 365 settings options.":::
 
 1. You can see the SharePoint pages authoring experience. Name your page as **My Teams Tab**.
 
 1. Open the web part toolbox by selecting the `+` button, and select your Teams Tab, named **Contoso HR**. Web parts are sorted alphabetically. If it's a long list, you can use the search bar to find it. This creates a web part in the canvas that contains your Teams tab. The following image displays the tab view:
 
-   ![Tab view](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
+    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image071.png" alt-text="Screenshot shows the tab view.":::
 
-1. Select the **Publish** button after you finish  editing.
+1. Select the **Publish** button after you finish editing.
 
 1. Select **Add page to navigation** to have a quick reference to your page in the left navigation bar.
 The following image displays the tab in SharePoint:
 
-   ![Tab in Sharepoint image](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
+    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image073.png" alt-text="Screenshot shows the tab in SharePoint.":::
 
 ## 3. Explore App Pages in SharePoint
 
 After your page is published, you can explore [turning your Teams app into a more complete experience inside SharePoint](/sharepoint/dev/spfx/web-parts/single-part-app-pages). This converts the current page into an App Page, showing the normal SharePoint page layout with a full page experience for the Teams tab.
 
 The following image displays the complete experience of Teams app in SharePoint:
-![Image of Tabs in Sharepoint](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
+
+:::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image085.png" alt-text="Screenshot shows the Teams app in SharePoint.":::
 
 ## Code sample
 
