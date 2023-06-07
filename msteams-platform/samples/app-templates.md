@@ -38,7 +38,7 @@ It provides a foundation to build custom targeted communication capabilities suc
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-![jCompany Communicator compose box view](../assets/images/CompanyCommunicatorCompose.png)
+:::image type="content" source="../assets/images/CompanyCommunicatorCompose.png" alt-text="Screenshot shows the Company Communicator screen.":::
 
 ## FAQ Plus
 
@@ -67,7 +67,7 @@ In addition to encouraging personal connections across your entire team, the Ice
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
 
-![Icebreaker app](../assets/images/icebreaker.png)
+:::image type="content" source="../assets/images/icebreaker.PNG" alt-text="Screenshot shows the Icebreaker screen.":::
 
 ## Microsoft 365 Learning Pathways (Get Started)
 

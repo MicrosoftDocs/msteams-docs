@@ -34,7 +34,7 @@ Open shifts view in Teams:
 
 The shifts view in Teams is shown in the following image:
 
-![Open shifts in Teams](../assets/images/teams-open-shifts-view.png)
+:::image type="content" source="../assets/images/teams-open-shifts-view.png" alt-text="Screenshot shows the shifts view.":::
 
 For more information on Teams Shifts Workforce management (WFM) connectors, see [Shifts connectors](/microsoft-365/frontline/shifts-connectors).
 

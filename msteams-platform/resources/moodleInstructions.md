@@ -88,7 +88,7 @@ Use the generated `AppID` and `Key` in your Microsoft 365 Moodle Plugins setup p
 
 ### The Moodle tab for Microsoft Teams information flow
 
-<img width="530px" src="../assets/images/MoodleTabInformationFlow.png" alt="Moodle tab for Microsoft Teams information flow" />
+:::image type="content" source="../assets/images/MoodleTabInformationFlow.png" alt-text="Screenshot shows the Moodle tab for Microsoft Teams information flow.":::
 
 1. From the Microsoft 365 Integration plugins page, select the **Setup** tab.
 
@@ -175,7 +175,7 @@ The free Moodle assistant bot for Microsoft Teams helps teachers and students an
 
 ### Moodle bot information flow
 
-<img width="530px" src="../assets/images/MoodleBotInformationFlow.png" alt="Moodle bot for Microsoft Teams information flow" />
+:::image type="content" source="../assets/images/MoodleBotInformationFlow.png" alt-text="Screenshot shows the Moodle bot for Microsoft Teams information flow.":::
 
 To install the bot, you must register it on the [Microsoft Identity Platform](https://identity.microsoft.com/Landing). This allows your bot to authenticate against your Microsoft endpoints.
 
@@ -257,7 +257,7 @@ To allow automatic creation of Moodle tabs:
 When a Moodle course is synced, Teams automatically installs the Moodle app in the team, creates a Moodle tab in the General channel of Teams, and configures it to contain the course page for the Moodle course from which it's synced. You can now start working with your Moodle courses directly from Teams.
 
 > [!NOTE]
-> To share any feature requests or feedback with us, visit our [User Voice page](https://support.microsoft.com/en-us/office/uservoice-pages-430e1a78-e016-472a-a10f-dc2a3df3450a).
+> To share any feature requests or feedback with us, visit our [User Voice page](https://support.microsoft.com/office/uservoice-pages-430e1a78-e016-472a-a10f-dc2a3df3450a).
 
 ## See also
 
