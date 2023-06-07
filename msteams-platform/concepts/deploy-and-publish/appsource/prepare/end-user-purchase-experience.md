@@ -31,7 +31,7 @@ The following example shows how users can purchase subscription plans for a fict
 
     :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Placing the subscription order.":::
 
-1. During checkout, select how many subscription licenses you want, enter a sold-to address, and provide a method of payment. For **Sold-to address**, enter the address of the legal entity responsible for payment and identified on the invoice (business or residence). The **Sold-to address** determines the estimated tax rate for your purchase.
+1. During checkout, select how many subscription licenses you want, enter a **Sold-to address**, and provide a payment method. For **Sold-to address**, enter the address of the legal entity responsible for payment and identified on the invoice (business or residence). The **Sold-to address** determines the estimated tax rate for your purchase.
 
 1. Select **Place order**.
 
