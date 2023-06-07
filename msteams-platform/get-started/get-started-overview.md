@@ -2,14 +2,15 @@
 title: Get started - Overview
 description: In this module, learn how to build your first Microsoft Teams app based on language and developement environment, understand app capabilities, SDKs.
 ms.localizationpriority: high
+ms.date: 06/07/2023
 ms.topic: reference
 ---
 
 # Get started
 
-Let's get started with building apps for Microsoft Teams and beyond!
+Get started with building apps for Microsoft Teams and beyond!
 
-Use GitHub Codespaces or walk through the step-by-step guide to build a basic, real-world Teams app. The Get started module introduces you to common tools, fundamental concepts, and more advanced functionalities.
+Use GitHub Codespaces or walk through the step-by-step guide to build a basic, real-world Teams app. This module introduces you to common tools, fundamental concepts, and more advanced functionalities.
 
 Here's an idea of what you'll learn:
 
@@ -30,26 +31,26 @@ In this section, learn how to build a Teams app with different capabilities, suc
 
    * **Build message extension Teams app**: Build a search-based message extension Teams app.
 
-2. Choose your path to build your selected app:
+2. Choose your path to build your selected app.
 
    * **GitHub Codespaces**: Allows you to run, test, and debug your app in a development environment without the need for any extra setup.
-   * **Step-by-step guide**: Allows you to create a Teams app from scratch with all development environment setup.
+   * **Step-by-step guide**: Allows you to create a Teams app from the ground up including setting up your development environment.
 
    :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Your choices to build a Teams app with codespaces and step-by-step guide."lightbox="../assets/images/get-started/codescpaces-vs-manual.png":::
 
 ## Next step
 
-If you want to build a basic tab app, go to:
+If you want to build a basic tab app, select the following button.
 
 > [!div class="nextstepaction"]
 > [Build your basic tab app](build-basic-tab-app.md)
 
-If a bot is what you're interested in, go to:
+If a bot is what you're interested in, select the following button.
 
 > [!div class="nextstepaction"]
 > [Start building a bot](build-notification-bot.md)
 
-If you want to build a message extension app, go to:
+If you want to build a message extension app, select the following button.
 
 > [!div class="nextstepaction"]
 > [Build message extension](build-message-extension.md)
