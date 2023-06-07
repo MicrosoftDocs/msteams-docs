@@ -75,8 +75,8 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 |-------------|---------|---|---|---|
 | **Apps** | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | Microsoft apps | ✔️ Microsoft apps compliant with GCC. | ✔️ Microsoft apps compliant with GCC-High. | ✔️ Microsoft apps compliant with DOD. |
-| 3P or third-party apps built by external developers | ✔️ | ❌ | ❌ | ❌ | ❌ |
-|Line-of-business apps are built, distributed and used for specific tenant  | ✔️ | ✔️ | ✔️ | ❌ | ❌ |
+| 3P or third-party apps built by external developers. | ✔️ | ❌ | ❌ | ❌ | ❌ |
+|Line-of-business apps are built, distributed and used for specific tenant.  | ✔️ | ✔️ | ✔️ | ❌ | ❌ |
 |Custom apps| ✔️ | ✔️ | ✔️ |
 |Sideloading apps | ✔️ | ❌ | ❌ |
 |1P apps built by Teams engineering such as Kudos, Tasks. | ✔️ | ✔️ | ✔️ | ❌ | Coming soon|
@@ -94,7 +94,7 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 | Tabs | ✔️ | ✔️ | ✔️ | ❌ |  ❌ |
 | Bots and Message extensions | ✔️ | ✔️ | ✔️ | ❌ | ❌ |
 | Message actions | ✔️ | Partially available | Partially available | ❌ | ❌ |
-| Cards: Adaptive, Hero, Thumbnail, O365 connector, Receipt, Sign in and OAuth cards  | ✔️ | Partially available | Partially available | ❌ | ❌ |
+| Cards: Adaptive, Hero, Thumbnail, O365 connector, Receipt, Sign in and OAuth cards. | ✔️ | Partially available | Partially available | ❌ | ❌ |
 | Task modules | ✔️ | ❌ | ❌ | ❌ | ❌ |
 | Link unfurling | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Meetings extensibility | ✔️ | ❌ | ❌ | ❌ | ❌ |
