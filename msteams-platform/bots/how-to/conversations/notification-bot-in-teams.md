@@ -11,7 +11,7 @@ ms.localizationpriority: high
 
 Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to a personal, group chat, or a channel in Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
 
-The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your requirement. For example, in a scenario where a travel agency builds an app in Teams for their customers to keep them up-to-date with the weather forecast. In the following diagram you can see a Teams app that sends notification to the travelers about the destination weather forecast:
+The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your requirement. For example, in a scenario where a travel agency builds an app in Teams for their customers to keep them up-to-date with the weather forecast. In the following diagram, you can see a Teams app that sends notification to the travelers about the destination weather forecast:
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-new-scenario-diagram.png" alt-text="weather forecast sample notification scenario" lightbox="../../../assets/images/notification-bot/notification-new-scenario-diagram.png":::
 
@@ -116,9 +116,9 @@ You can customize the following triggers:
     > [!NOTE]
     > By default Teams Toolkit scaffolds a single `restify` entry point in `src/index.js`.
 
-* Azure Functions based notification:
+* Azure Functions based notification
 
-  * When you select `timer` trigger, the default implemented Azure Function timer trigger `src/timerTrigger.ts` sends an Adaptive Card every 30 seconds. You can edit the file `*Trigger/function.json` to customize the `schedule` property. For more information, see [Azure Function documentation](/azure/azure-functions/functions-bindings-timer?tabs=python-v2%2Cin-process&pivots=programming-language-javascript#ncrontab-expressions)
+  * When you select `timer` trigger, the default implemented Azure Function timer trigger `src/timerTrigger.ts` sends an Adaptive Card every 30 seconds. You can edit the file `*Trigger/function.json` to customize the `schedule` property. For more information, see [Azure Function documentation](/azure/azure-functions/functions-bindings-timer?tabs=python-v2%2Cin-process&pivots=programming-language-javascript#ncrontab-expressions).
 
     :::image type="content" source="../../../assets/images/notification-bot/notification-timer-triggered.png" alt-text="sample of timer triggered notification":::
 
@@ -126,7 +126,7 @@ You can customize the following triggers:
 
     :::image type="content" source="../../../assets/images/notification-bot/notification-http-triggered.png" alt-text="sample of HTTP triggered notification":::
 
-* Azure Function triggers:
+* Azure Function triggers
 
   * `Event Hub` trigger to send notifications when an event is pushed to Azure Event Hub.
 
