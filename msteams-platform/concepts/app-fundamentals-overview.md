@@ -71,19 +71,19 @@ Government Community Cloud (GCC) is a government focused copy of the commercial 
 
 The following table includes Teams features and availability for GCC, GCC-High, and DOD:
 
-| &nbsp; | GCC | GCC-High | DOD |
-|-------------|---------|---|---|
-| **Apps** | &nbsp; | &nbsp; | &nbsp; |
+| &nbsp; | GCC | GCC-High | DOD | AG 08, 09 (US) | Gallatin (China)|
+|-------------|---------|---|---|---|
+| **Apps** | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | Microsoft apps | ✔️ Microsoft apps compliant with GCC. | ✔️ Microsoft apps compliant with GCC-High. | ✔️ Microsoft apps compliant with DOD. |
-| 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
-|Line-of-business apps| ✔️ | ❌ | ❌ |
+| 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ | ❌ |  ❌ |
+|Line-of-business apps| ✔️ | ❌ | ❌ | ❌ |  ❌ |
 |Custom apps| ✔️ | ✔️ | ✔️ |
 |Sideloading apps | ✔️ | ❌ | ❌ |
-| **Capabilities** | &nbsp; | &nbsp; | &nbsp; |
-| Tabs | ✔️ | ✔️ | ✔️ |
-| Bots | ✔️ | ✔️ | ✔️ |
-| Message extensions | ✔️ | ✔️ | ✔️ |
-| Connectors | ✔️ | ❌ | ❌ |
+| **Capabilities** | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| Tabs | ✔️ | ✔️ | ✔️ | ❌ |  ❌ |
+| Bots | ✔️ | ✔️ | ✔️ | ❌ |  ❌ |
+| Message extensions | ✔️ | ✔️ | ✔️ | ❌ |  ❌ |
+| Connectors | ✔️ | ❌ | ❌ | ❌ |  ❌ |
 
 **Compliance UI**: By enabling third-party communications, customers accept that such communication is being processed through the third party and not Microsoft. The customer is solely responsible for mitigating risks associated with connecting with third party bots in their services. Microsoft doesn't endorse and makes no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service. Enabling bots will extend your system boundary beyond this tenant based on the bot you choose to leverage. It is your responsibility to ensure that this meets your compliance requirements including FedRAMP, DFARS, ITAR, and so on. It is your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
 
