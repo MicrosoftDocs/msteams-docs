@@ -15,7 +15,7 @@ Tabs are Teams-aware webpages embedded in Microsoft Teams and a good way to begi
 In this tutorial, you'll learn about a basic Teams tab app in one of the following ways:
 
 * **GitHub Codespaces**: The codespace instance allows you to experience a Teams app instantaneously. It opens Visual Studio Code (VS Code), where the Teams Toolkit extension, the app source code, and all the dependencies are pre-packaged for you.
-* **Step-by-step guide**: Allows you to create a Teams app from scratch with all development environment setup.
+* **Step-by-step guide**:  Allows you to create a Teams app from the ground up including setting up your development environment.
 
 # [GitHub Codespaces](#tab/teamstoolkitcodespaces)
 
@@ -29,9 +29,9 @@ Before you create your codespace, ensure that you have the following prerequisit
 > 
 > [GitHub Codespaces](https://github.com/features/codespaces) offers a free plan with a fixed amount of usage per month. If you need to free up more space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespace that you no longer need.
 
-To create a Teams tab app with GitHub Codespaces, follow the steps.
+To create a Teams tab app with GitHub Codespaces, follow these steps.
 
-1. To open GitHub Codespaces, select the following button.
+1. Select the following button to open GitHub Codespaces.
 
     <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=v3&repo=348288141&machine=standardLinux32gb&location=WestUs2&devcontainer_path=.devcontainer%2Fhello-world-tab-codespaces%2Fdevcontainer.json&resume=1" target="_blank"><img src="https://github.com/codespaces/badge.svg" alt="Open hello-world tab in GitHub Codespaces"></a>
 
@@ -53,7 +53,7 @@ To create a Teams tab app with GitHub Codespaces, follow the steps.
 
     > [!NOTE]
     >
-    > When you build your app, GitHub Codespaces loads it to Teams client in a new tab. If your browser blocks pop-up tabs or windows, you'll need to allow pop-ups to let your app open.
+    > When you build your app, GitHub Codespaces loads it to the Teams client in a new tab. If your browser blocks pop-up tabs or windows, you'll need to allow pop-ups for your app to open.
 
 1. Select **Preview your Teams App (F5)** to build your tab app.
 
@@ -73,21 +73,20 @@ To create a Teams tab app with GitHub Codespaces, follow the steps.
 
 # [Step-by-step guide](#tab/step-by-step-guide)
 
-If you would want to learn how to start a project with Teams Toolkit from scratch, go through the step-by-step guide.
+If you want to learn how to start a project with Teams Toolkit from the beginning, you'll need to set up your development environment. Select the following button to start building your basic tab app.
 
-Unlike GitHub Codespaces, you need to set up your development environment.
 
 > [!div class="nextstepaction"]
 > [Start building a basic tab app](../sbs-gs-javascript.yml)
 
 ---
 
-If a bot is what you're interested in, go to:
+If a bot is what you're interested in, select the following button.
 
 > [!div class="nextstepaction"]
 > [Start building a bot](build-notification-bot.md)
 
-If you want to build a message extension app, go to:
+If you want to build a message extension app, select the following button.
 
 > [!div class="nextstepaction"]
 > [Build message extension](build-message-extension.md)
