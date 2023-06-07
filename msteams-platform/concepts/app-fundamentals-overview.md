@@ -48,11 +48,11 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 * **Design your app UI**: Use Teams UI Toolkit and UI Library to design your app's layout.
 
-* **Use Teams as a platform**: Teams platform helps you build a single- or multi-capability app. Your Teams app is supported by the integrated products and services that strengthen the app experience.
+* **Use Teams as a platform**: Teams platform helps you build a single- or multi-capability app. Your Teams app supports the integrated products and services that strengthen the app experience.
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Diagram that shows the conceptual representation of the Teams solution.":::
 
-    Your apps appear on Teams as Tabs, Bots, Messaging Extensions, Connectors and Webhooks, or as a multi-capability app. These capabilities are powered at the backend by Azure, Microsoft Graph, SharePoint, and Power apps that help automate tasks and processes.
+    Your apps appear on Teams as Tabs, Bots, Messaging Extensions, Connectors and Webhooks, or as a multi-capability app. These capabilities are powered at the backend with Azure, Microsoft Graph, SharePoint, and Power apps that help automate tasks and processes.
 
     Together, these capabilities bring your app solution to life.
 
@@ -94,7 +94,7 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 | Tabs | ✔️ | ✔️ | ✔️ | ❌ |  ❌ |
 | Bots and Message extensions | ✔️ | ✔️ | ✔️ | ❌ | ❌ |
 | Message actions | ✔️ | Partially available | Partially available | ❌ | ❌ |
-| Cards: Adaptive, Hero, Thumbnail, O365 connector, Receipt, Signin and OAuth cards  | ✔️ | Partially available | Partially available | ❌ | ❌ |
+| Cards: Adaptive, Hero, Thumbnail, O365 connector, Receipt, Sign in and OAuth cards  | ✔️ | Partially available | Partially available | ❌ | ❌ |
 | Task modules | ✔️ | ❌ | ❌ | ❌ | ❌ |
 | Link unfurling | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Meetings extensibility | ✔️ | ❌ | ❌ | ❌ | ❌ |
@@ -103,7 +103,7 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 | LiveShare | ❌ | ❌ | ❌ | ❌ | ❌ |
 | MetaOS Hub | ❌ | ❌ | ❌ | ❌ | ❌ |
 
-**Compliance UI**: By enabling third-party communications, customers accept that such communication is being processed through the third party and not Microsoft. The customer is solely responsible for mitigating risks associated with connecting with third party bots in their services. Microsoft doesn't endorse and makes no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service. Enabling bots will extend your system boundary beyond this tenant based on the bot you choose to leverage. It is your responsibility to ensure that this meets your compliance requirements including FedRAMP, DFARS, ITAR, and so on. It is your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
+**Compliance UI**: Enable the third-party communications, customers accept that such communication is being processed through the third party and not Microsoft. The customer is solely responsible for mitigating risks associated with connecting with third party bots in their services. Microsoft doesn't endorse and makes no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service. Enabling bots, extend your system boundary beyond this tenant based on the bot you choose to leverage. It is your responsibility to ensure that this meets your compliance requirements including FedRAMP, DFARS, ITAR, and so on. It is your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
 
 The following list helps to identify the availability of GCC, GCC-High, and DOD for the features:
 
