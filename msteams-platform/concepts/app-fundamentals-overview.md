@@ -75,15 +75,33 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 |-------------|---------|---|---|---|
 | **Apps** | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | Microsoft apps | ✔️ Microsoft apps compliant with GCC. | ✔️ Microsoft apps compliant with GCC-High. | ✔️ Microsoft apps compliant with DOD. |
-| 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ | ❌ |  ❌ |
-|Line-of-business apps| ✔️ | ❌ | ❌ | ❌ |  ❌ |
+| 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ | ❌ | ❌ |
+|Line-of-business apps| ✔️ | ❌ | ❌ | ❌ | ❌ |
 |Custom apps| ✔️ | ✔️ | ✔️ |
 |Sideloading apps | ✔️ | ❌ | ❌ |
-| **Capabilities** | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+|1P apps built by Teams engineering such as Kudos, Tasks. | ✔️ | ❌ | ❌ | ❌ | Coming soon|
+|2P apps built by internal MS Teams such as Azure DevOps, Planner, Word. | ✔️ | ❌ | ❌ | ❌ | ❌ |
+|Personal apps | ✔️ | ✔️ || ✔️ | ❌ | ❌ |
+| **Horizontal capabilities** | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| Store | ✔️ | ✔️ | ✔️ | ❌ |  ❌ |
+| Store 2.0 | ❌ | ❌ | ❌ | ❌ |  ❌ |
+| In-context stores/flyouts | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Manage your apps page | ✔️ | ❌ | ❌ | ❌ |  ❌ |
+| Teams admin center | ✔️ | ❌ | ❌ | ❌ | ❌ |
+| Graph | ✔️ | ✔️ | ✔️ | Partially available | Coming soon |
+| Teams developer portal  | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **Vertical capabilities** | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | Tabs | ✔️ | ✔️ | ✔️ | ❌ |  ❌ |
-| Bots | ✔️ | ✔️ | ✔️ | ❌ |  ❌ |
-| Message extensions | ✔️ | ✔️ | ✔️ | ❌ |  ❌ |
-| Connectors | ✔️ | ❌ | ❌ | ❌ |  ❌ |
+| Bots and Message extensions | ✔️ | ✔️ | ✔️ | ❌ | ❌ |
+| Message actions | ✔️ | Partially available | Partially available | ❌ | ❌ |
+| Cards: Adaptive, Hero, Thumbnail, O365 connector, Receipt, Signin and OAuth cards  | ✔️ | Partially available | Partially available | ❌ | ❌ |
+| Task modules | ✔️ | ❌ | ❌ | ❌ | ❌ |
+| Link unfurling | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Meetings extensibility | ✔️ | ❌ | ❌ | ❌ | ❌ |
+| Connectors and webhooks | ✔️ | Partially available | ❌ | ❌ | ❌ |
+| Workflows| ✔️ | ❌ | ❌ | ❌ | ❌ |
+| LiveShare | ❌ | ❌ | ❌ | ❌ | ❌ |
+| MetaOS Hub | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 **Compliance UI**: By enabling third-party communications, customers accept that such communication is being processed through the third party and not Microsoft. The customer is solely responsible for mitigating risks associated with connecting with third party bots in their services. Microsoft doesn't endorse and makes no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service. Enabling bots will extend your system boundary beyond this tenant based on the bot you choose to leverage. It is your responsibility to ensure that this meets your compliance requirements including FedRAMP, DFARS, ITAR, and so on. It is your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
 
