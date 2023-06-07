@@ -81,7 +81,7 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 |Sideloading apps | ✔️ | ❌ | ❌ |
 |1P apps built by Teams engineering such as Kudos, Tasks. | ✔️ | ❌ | ❌ | ❌ | Coming soon|
 |2P apps built by internal MS Teams such as Azure DevOps, Planner, Word. | ✔️ | ❌ | ❌ | ❌ | ❌ |
-|Personal apps | ✔️ | ✔️ || ✔️ | ❌ | ❌ |
+|Personal apps | ✔️ | ✔️ | ✔️ | ❌ | ❌ |
 | **Horizontal capabilities** | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | Store | ✔️ | ✔️ | ✔️ | ❌ |  ❌ |
 | Store 2.0 | ❌ | ❌ | ❌ | ❌ |  ❌ |
