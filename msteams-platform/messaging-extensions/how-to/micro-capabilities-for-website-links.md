@@ -98,7 +98,6 @@ The following are the supported micro-capability templates for Teams client:
 Example of the unfurling experience for article type:
 :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-article.png" alt-text="Screenshot shows a unfurling experience of the article template in Microsoft Teams.":::
 
-
 # [Product](#tab/product)
 
 |Property |Description  |
@@ -133,8 +132,7 @@ Example of the unfurling experience for the event type:
 
 :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-event.png" alt-text="Screenshot shows the unfurling experience of the event template in Microsoft Teams.":::
 
-
-# [Local business](#tab/localbuisness)
+# [Local business](#tab/local-buisness)
 
 |Property |Description  |
 |---------|---------|
@@ -152,7 +150,7 @@ Example of the unfurling experience for the local business type:
 
 :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-local-business.png" alt-text="Screenshot shows the unfurling experience of the local business template in Microsoft Teams.":::
 
-# [Course](#tab/course)
+# [Education](#tab/education)
 
 |Property |Description  |
 |---------|---------|
@@ -170,6 +168,17 @@ Example of the unfurling experience for the course type:
 
 :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-course.png" alt-text="Screenshot shows the unfurling experience of the course template in Microsoft Teams.":::
 
+# [Location](#tab/location)
+
+|Property |Description  |
+|---------|---------|
+|`@type`     |   Place      |
+|image    | URL of the image of for the location.        |
+|name    |  Name of the course.       |
+|address    |  Postal address.       |
+|addressRegion      |    Region code.  |
+|addressLocality    |   Name of the region.     |
+|url     |  URL of the course website.       |
 
 ---
 
