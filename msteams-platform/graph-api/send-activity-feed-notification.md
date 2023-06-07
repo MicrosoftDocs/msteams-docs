@@ -17,7 +17,20 @@ You can use Activity feed notifications in the following scenarios:
 * **Reminders**: A notification to let you know about an event or a task. For example, you have a training due date today, and the app sends you a reminder notification to help you remember the task or event.
 * **Alerts**: Notifications which require urgent or immediate attention. For example, the due date for a training is passed or an admin sends a request to fix a bug with the highest priority.
 
-## Why use activity feed notifications
+You can use Activity feed notification in the following scenarios:
+
+* Notify individuals about customized content that requires their attention.
+* Show rich content in Tab app or URL​.
+* Support complex user interactions​.
+* Send delegated notifications from the user who initiated the notification​.
+* Put template in the manifest​.
+* Localization for notifications is handled by Teams.
+
+**Advantages**
+
+* Activity feed notification is a native Teams integration that brings user seamlessly into the Tab app, without the need for additional integration or setup.
+
+* You can use Activity feed notification to send feeds, personal notifications, and  batch notifications.
 
 ## Understand the basics of activity feed notification
 
@@ -140,21 +153,6 @@ Microsoft Teams users can customize the notifications they see in their feed, as
 Users can select **Edit** next to an app and customize the notifications, as shown in the following example. The `description` field in the Teams app manifest is displayed.
 
 :::image type="content" source="../assets/images/activity-feed/app-level-notification-settings.png" alt-text="Screenshot shows notifications customized to Banner and feed for a Teams app.":::
-
-## Advantages of activity feed notification APIs
-
-* Activity feed notification is a native Teams integration that brings user seamlessly into the Tab app, without the need for additional integration or setup.
-
-* You can use Activity feed notification to send feeds, personal notifications, and  batch notifications.
-
-* You can use Activity feed notification in the following scenarios:
-
-  * Notify individuals about customized content that requires their attention.
-  * Show rich content in Tab app or URL​.
-  * Support complex user interactions​.
-  * Send delegated notifications from the user who initiated the notification​.
-  * Put template in the manifest​.
-  * Localization for notifications is handled by Teams.
 
 ## Step-by-step guide
 

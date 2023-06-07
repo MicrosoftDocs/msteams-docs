@@ -17,11 +17,29 @@ The app template is built using the TeamsFx SDK, which provides a simple set of 
 
 You can create notification bot in other scenarios, such as a notification can be sent in teams DevOps channel if there's a build failure.
 
+You can send a bot notification in the following scenarios:
+
+* You want to notify everyone in a channel or chat about the same or related content​.
+
+* Highly customizable UI in a Card​
+
+* Need quick response, include media content, or action buttons​.
+
+* Send scheduled notifications​
+
+* Light up double badges on both Activity & Chat, Channel or App​
+
+* Put template in source code​.
+
+* Handling localization manually.
+
 **Advantages**
 
 * Facilitates notifications to a personal, group chat, and in a channel, using APIs from TeamsFx SDK.
 * Enhances user experience by customizing notification with an Adaptive Card.
 * Provides multiple mechanisms to trigger notifications such as HTTP and schedule timer trigger with Azure Functions.
+
+* A notification card easily integrates with a bot and provides a consistent user experience within the Bot app.​
 
 > [!NOTE]
 > Bot application needs to be installed with the corresponding scope before sending notification.
