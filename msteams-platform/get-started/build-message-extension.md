@@ -54,7 +54,7 @@ To create a search-based message extension app with GitHub Codespaces, follow th
 
     > [!NOTE]
     >
-    > When you build your app, GitHub Codespaces loads it to Teams client in a new tab. If your browser blocks pop-up tabs or windows, you'll need to allow pop-ups to let your app open.
+    > When you build your app, GitHub Codespaces loads it to the Teams client in a new tab. If your browser blocks pop-up tabs or windows, you'll need to allow pop-ups for your app to open.
 
 1. Select **Preview your Teams App (F5)** to build your message extension.
 
