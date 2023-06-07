@@ -75,12 +75,12 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 |-------------|---------|---|---|---|
 | **Apps** | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | Microsoft apps | ✔️ Microsoft apps compliant with GCC. | ✔️ Microsoft apps compliant with GCC-High. | ✔️ Microsoft apps compliant with DOD. |
-| 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ | ❌ | ❌ |
-|Line-of-business apps| ✔️ | ❌ | ❌ | ❌ | ❌ |
+| 3P or third-party apps built by external developers | ✔️ | ❌ | ❌ | ❌ | ❌ |
+|Line-of-business apps are built, distributed and used for specific tenant  | ✔️ | ✔️ | ✔️ | ❌ | ❌ |
 |Custom apps| ✔️ | ✔️ | ✔️ |
 |Sideloading apps | ✔️ | ❌ | ❌ |
-|1P apps built by Teams engineering such as Kudos, Tasks. | ✔️ | ❌ | ❌ | ❌ | Coming soon|
-|2P apps built by internal MS Teams such as Azure DevOps, Planner, Word. | ✔️ | ❌ | ❌ | ❌ | ❌ |
+|1P apps built by Teams engineering such as Kudos, Tasks. | ✔️ | ✔️ | ✔️ | ❌ | Coming soon|
+|2P apps built by internal MS Teams such as Azure DevOps, Planner, Word. | ✔️ | ✔️ | ✔️ | ❌ | ❌ |
 |Personal apps | ✔️ | ✔️ | ✔️ | ❌ | ❌ |
 | **Horizontal capabilities** | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | Store | ✔️ | ✔️ | ✔️ | ❌ |  ❌ |
@@ -98,7 +98,7 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 | Task modules | ✔️ | ❌ | ❌ | ❌ | ❌ |
 | Link unfurling | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Meetings extensibility | ✔️ | ❌ | ❌ | ❌ | ❌ |
-| Connectors and webhooks | ✔️ | Partially available | ❌ | ❌ | ❌ |
+| Connectors and webhooks | ✔️ | Coming soon | ❌ | ❌ | ❌ |
 | Workflows| ✔️ | ❌ | ❌ | ❌ | ❌ |
 | LiveShare | ❌ | ❌ | ❌ | ❌ | ❌ |
 | MetaOS Hub | ❌ | ❌ | ❌ | ❌ | ❌ |
