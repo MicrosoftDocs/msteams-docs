@@ -10,7 +10,7 @@ ms.topic: concept
 
 The Microsoft Teams activity feed enables users to triage items that require attention by notifying them of changes. You can use the activity feed notification APIs in Microsoft Graph to extend this functionality to your apps. This allows your apps to provide richer experiences and better engage users by helping to keep them up to date with changes in the tools and workflows they use.
 
-You can use Activity feed notifications in the following scenarios:
+## Notifications based on events
 
 * **News**: Helps users to stay updated with the latest information like new assignment or new post.
 * **Collaboration**: When you share a file or @ mention a user in a comment, users can see a text preview in the notification banner.
@@ -43,10 +43,10 @@ The components include:
 |Counter|Description|
 |----------|-----------|
 |1|**Avatar**: Shows who initiated the activity.|
-|2|**Activity type/app icon**: Depicts the type of activity. For app notifications, the line icon is replaced with an app icon.|
-|3|**Title (first line): Actor + reason**: *Actor*: Name of the user or app that initiated the activity. *Reason*: Describes the activity.|
+|2|**Activity type or app icon**: Depicts the type of activity. For app notifications, the line icon is replaced with an app icon.|
+|3|**Title: Actor + reason**: *Actor*: Name of the user or app that initiated the activity. *Reason*: Describes the activity.|
 |4|**Timestamp**: Shows when the activity happened.|
-|5|**Text preview (third line) (second line)**: Shows a truncated line from the start of the notification.|
+|5|**Text preview**: Shows a truncated line from the start of the notification.|
 |6|**Location**: Shows where the activity happened in Teams.|
 
 The following example shows the components together provide the details about a notification.
@@ -57,7 +57,7 @@ The following example shows the components together provide the details about a 
 
 The following variants show the kinds of activity feed notification cards you can display. The app logo replaces the user avatar for app-generated notifications.
 
-:::image type="content" source="../assets/images/activity-feed/activity-feed-card-types.png" alt-text="Screenshot shows the variants of Teams activity feed cards.":::
+:::image type="content" source="../assets/images/activity-feed/activity-feed-card-types.png" alt-text="Screenshot shows the variants of Teams activity feed cards." lightbox="../assets/images/activity-feed/activity-feed-card-types.png":::
 
 Activity feed APIs work with a [Teams app](/microsoftteams/platform/overview). The following are the requirements for sending activity feed notifications:
 
@@ -144,7 +144,7 @@ For details about what topics are supported for each scenario, see the specific 
 > [!NOTE]
 > The activity icon is based on the context the request is made in. If the request is made with delegated permissions, the user's photo appears as the avatar, while the Teams app icon appears as the activity icon. In an application-only context, the Teams app icon is used as the avatar and the activity icon is omitted.
 
-## Customize the notifications alerts / Manage activity feed notifications
+## Customize the notifications
 
 Microsoft Teams users can customize the notifications they see in their feed, as a banner, and so on. Notifications generated through activity feed APIs can also be customized. Users can choose how they are notified via settings in Microsoft Teams. Teams apps will appear in the list for the user to choose from, as shown in the following screenshot.
 
@@ -157,3 +157,7 @@ Users can select **Edit** next to an app and customize the notifications, as sho
 ## Step-by-step guide
 
 Follow the [step-by-step guide](../sbs-graphactivity-feedbroadcast.yml) to send activity feed notifications in Teams.
+
+## See also
+
+[Notification bot in Teams](../bots/how-to/conversations/notification-bot-in-teams.md)
