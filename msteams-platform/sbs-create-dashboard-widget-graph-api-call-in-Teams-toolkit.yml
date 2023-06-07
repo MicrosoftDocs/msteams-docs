@@ -34,7 +34,7 @@ items:
 - title: Create a new dashboard
   content: |
 
-    Teams toolkit supports scaffolding and dashboard creation.
+    Teams Toolkit supports scaffolding and dashboard creation.
 
     To create a new dashboard:
 
@@ -44,7 +44,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-a-new teams-app.png" alt-text="Screenshot shows the selection to create new app.":::
 
-     1. Select **Tab** to create a new tab project.. 
+     1. Select **Tab** to create a new tab project. 
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-a-new-teams-app-2.png" alt-text="Screenshot shows the selection of new Teams app.":::
 
@@ -52,7 +52,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-tab-preview.png" alt-text="Screenshot shows the selection of dashboard tab preview.":::
 
-     1. Select TypeScript as the programming language..
+     1. Select TypeScript as the programming language.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/programming-language.png" alt-text="Screenshot shows the selection of programming language.":::
 
@@ -70,7 +70,7 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-debug.png" alt-text="Screenshot shows the local debug.":::
 
-     1. Select the Teams Toolkit icon in sidebar 
+     1. Select the Teams Toolkit icon in sidebar.
      
      1. Select signin to Microsoft 365 account using test credentials.
 
@@ -288,7 +288,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/add-features.png" alt-text="Screenshot shows the selection of added features option.":::
 
-      1. Select **Develop Single Sign-On Experience in Teams.**.
+      1. Select **Develop Single Sign-On Experience in Teams**.
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/single-sign-on.png" alt-text="Screenshot shows the selection of single sign-on option.":::
 
