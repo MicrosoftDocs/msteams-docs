@@ -2,6 +2,7 @@
 title: Build notification bot
 description: Sends messages in Teams channel or group chat or personal chat.
 ms.localizationpriority: medium
+ms.date: 06/07/2023
 ms.topic: reference
 ---
 
@@ -30,7 +31,7 @@ Before you create your codespace, ensure that you have the following prerequisit
 
 To create a Teams notification bot with GitHub Codespaces, follow these steps.
 
-1. To open GitHub Codespaces, select the following button.
+1. Select the following button to open GitHub Codespaces.
 
    <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=v3&repo=348288141&machine=basicLinux32gb&location=WestUs2&devcontainer_path=.devcontainer%2Fnotification-codespaces%2Fdevcontainer.json&resume=1" target="_blank"><img src="https://github.com/codespaces/badge.svg" alt="Open hello-world tab in GitHub Codespaces"></a>
 
@@ -52,7 +53,7 @@ To create a Teams notification bot with GitHub Codespaces, follow these steps.
 
     > [!NOTE]
     >
-    > When you build your app, GitHub Codespaces loads it to the Teams client in a new tab. If your browser blocks pop-up tabs or windows, you'll need to allow pop-ups to let your app open.
+    > When you build your app, GitHub Codespaces loads it to the Teams client in a new tab. If your browser blocks pop-up tabs or windows, you'll need to allow pop-ups for your app to open.
 
 1. Select **Preview your Teams App (F5)** to build your notification bot.
 
@@ -82,21 +83,19 @@ To create a Teams notification bot with GitHub Codespaces, follow these steps.
 
 # [Step-by-step guide](#tab/step-by-step-guide)
 
-If you want to learn how to start a project with Teams Toolkit from the ground up, use this step-by-step guide.
-
-Unlike GitHub Codespaces, you need to set up your development environment. 
+If you want to learn how to start a project with Teams Toolkit from the beginning, you'll need to set up your development environment. Select the following button to start building you notification bot.
 
 > [!div class="nextstepaction"]
 > [Start building a notification bot](../sbs-gs-notificationbot.yml)
 
 ---
 
-If you want to build a message extension, go to:
+If you want to build a message extension, select the following button.
 
 > [!div class="nextstepaction"]
 > [Build message extension](build-message-extension.md)
 
-If you want to build basic tab app, go to:
+If you want to build basic tab app, select the following button.
 
 > [!div class="nextstepaction"]
 > [Build your basic tab app](build-basic-tab-app.md)
