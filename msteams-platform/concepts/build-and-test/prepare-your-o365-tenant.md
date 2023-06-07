@@ -35,11 +35,9 @@ Enable Teams for your organization and for more information, see [enabling Teams
 
 To turn on the custom app uploading or sideloading for your developer tenant:
 
-1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
+1. Sign in to [Teams Admin Center](https://admin.teams.microsoft.com/dashboard) with your admin credentials.
 
-2. Select **Show All** > **Teams**.
-
-    ![Admin center menu](~/assets/images/prepare-test-tenant/admin-center.png)
+    ![Admin center menu](~/assets/images/prepare-test-tenant/admin-center-menu.png)
 
     > [!Note]
     > It can take up to 24 hours for the **Teams** option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps#validate) for testing and validation in that time.
