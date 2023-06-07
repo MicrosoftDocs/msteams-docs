@@ -1,7 +1,7 @@
 ---
 title: Edit Azure Active Directory manifest in Teams Toolkit v4
 author: zyxiaoyuer
-description:  Describes Managing Azure Active Directory application in Teams Toolkit v4
+description: In this module, learn how to edit and customize the Azure AD manifest and edit and preview the Azure AD manifest with CodeLens.
 ms.author: surbhigupta
 ms.localizationpriority: medium 
 ms.topic: overview
