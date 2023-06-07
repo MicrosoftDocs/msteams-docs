@@ -304,7 +304,13 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
 
 * Arrange two widgets in a column.
 
-# [JavaScript](#tab/JS1)
+  ```css
+  .one-column {
+      display: grid;
+      gap: 20px;
+      grid-template-rows: 1fr 1fr;
+    }
+  ```
 
   ```typescript
     export default class SampleDashboard extends BaseDashboard<any, any> {
@@ -321,18 +327,6 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
       }
     }
   ```
-
-# [C#](#tab/CS1)
-
-  ```css
-  .one-column {
-      display: grid;
-      gap: 20px;
-      grid-template-rows: 1fr 1fr;
-    }
-  ```
-
----
 
   :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/widget-customize.png" alt-text="Screenshot shows the two-widget customization.":::
 
@@ -551,7 +545,7 @@ The following code is an example:
     }
 ```
 
-Now, the loading spinner is shown while the data is loading. When the data is loaded, the loading spinner is hidden, and the list data, and footer button are shown.
+Now, the loading spinner is shown while the data is loading. When the data is loaded, the loading spinner is hidden, and the list data and footer button are shown.
 
 :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/spinner.gif" alt-text="Graphical representation shows the loading spinner while the data is loading.":::
 

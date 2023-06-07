@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Workflow bot in Teams
 
-A workflow bot allows users to interact with an Adaptive Card. Adaptive Card action handler enables the Adaptive card to converse in Teams app. You can create a workflow bot in multiple scenarios for your users to enhance the user experience, such as incident management, ticketing, approval workflow, and project management cards. You can create and assign a work item with workflow bot and sync the content to Azure DevOps or Jira system.
+A workflow bot allows users to interact with an Adaptive Card. Adaptive Card action handler enables the Adaptive Card to converse in Teams app. You can create a workflow bot in multiple scenarios for your users to enhance the user experience, such as incident management, ticketing, approval workflow, and project management cards. You can create and assign a work item with workflow bot and sync the content to Azure DevOps or Jira system.
 
 A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic returns an Adaptive Card. You can customize this logic with your business requirement. For the customization, you need to call your existing APIs.
 
@@ -76,7 +76,7 @@ You can update the initialization logic to:
 1. Set `options.cardAction.actions` to include multiple action handlers.
 1. Set `options.{feature}.enabled` to enable multiple `ConversationBot` functionality.
 
-For more information on initialization customization, see [Customize initialization](command-bot-in-teams.md#customize-initialization)
+For more information on initialization customization, see [Customize initialization](command-bot-in-teams.md#customize-initialization).
 
 ## Customize installation
 
@@ -157,7 +157,7 @@ You can return a new Adaptive Card for each action invoked to display the respon
 * For C#: Create the Adaptive Card file in `Resources/` folder.
 
 > [!NOTE]
-> You can design your card layout according to your business need. See, [adaptive Card designer](https://adaptivecards.io/designer/).
+> You can design your card layout according to your business need. See [Adaptive Card designer](https://adaptivecards.io/designer/).
 
 </details>
 
@@ -219,7 +219,7 @@ You can handle a new `Action.Execute` action invoked by implement with TeamsFx S
 
 An example of action handler is as follows:
 
-You can create a new file `/CardActions/DoSomethingActionHandler.cs`
+You can create a new file `/CardActions/DoSomethingActionHandler.cs`.
 
 ```csharp
 using MyBotApp.Models;
@@ -345,7 +345,7 @@ You can use the `adaptiveCardResponse` property in handler to customize how the 
 
 * The current card replaces the response card where the button is defined for the interactor that triggers the action. The users in the conversation can still view the original action card `AdaptiveCardResponse.ReplaceForInteractor` and is the default behavior.
 
-   :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-interactor.gif" alt-text="Grpahical interface that shows how to customize the bot to send adaptive card.":::
+   :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-interactor.gif" alt-text="Grpahical interface that shows how to customize the bot to send Adaptive Card.":::
 
 * The response card is replaced by the action card for all users in the chat, and they can view the response card `AdaptiveCardResponse.ReplaceForAll`.
 
@@ -722,7 +722,7 @@ Notifications add the ability in your app to send Adaptive Cards in response to 
 
 To add the notification feature:
 
-1. Go to `bot\src\internal\initialize.js(ts)`
+1. Go to `bot\src\internal\initialize.js(ts)`.
 1. Update your `conversationBot` initialization to enable notification feature:
 
     ```initialize.js(ts)
