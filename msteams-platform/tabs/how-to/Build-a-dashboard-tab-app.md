@@ -162,12 +162,10 @@ To add a new dashboard, follow these steps:
 Create a file with the `.tsx` extension for your dashboard in the `src/dashboards` directory, for example, `YourDashboard.tsx`. Then, create a class that extends the `BaseDashboard class from` `@microsoft/teamsfx-react`.
 
 ```typescript
-
 //YourDashboard.tsx
 import { BaseDashboard } from "@microsoft/teamsfx-react";
 
 export default class YourDashboard extends BaseDashboard<any, any> {}
-
 ```
 
 > [!NOTE]
@@ -322,7 +320,7 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
         );
       }
     }
-    ```
+  ```
 
 # [C#](#tab/CS1)
 
@@ -332,11 +330,11 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
       gap: 20px;
       grid-template-rows: 1fr 1fr;
     }
-    ```
+  ```
 
 ---
 
-    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/widget-customize.png" alt-text="Screenshot shows the two-widget customization.":::
+  :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/widget-customize.png" alt-text="Screenshot shows the two-widget customization.":::
 
 ### Dashboard tab app abstraction
 
