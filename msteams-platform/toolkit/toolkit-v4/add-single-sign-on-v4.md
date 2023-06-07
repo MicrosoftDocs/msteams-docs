@@ -571,7 +571,7 @@ The following steps help you to enable SSO in your app:
 
 </details>
 <details>
-<summary><b>Bot project
+<summary><b>Command bot project
 </b></summary>
 
 1. Ensure to upgrade your SDK version to:
