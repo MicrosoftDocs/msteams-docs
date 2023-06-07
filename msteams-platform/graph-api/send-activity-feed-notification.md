@@ -46,8 +46,6 @@ The following variants show the kinds of activity feed notification cards you ca
 
 :::image type="content" source="../assets/images/activity-feed/activity-feed-card-types.png" alt-text="Screenshot shows the variants of Teams activity feed cards.":::
 
-## Requirements for using the activity feed notification APIs
-
 Activity feed APIs work with a [Teams app](/microsoftteams/platform/overview). The following are the requirements for sending activity feed notifications:
 
 * The Teams app manifest must have the Azure AD app ID added to the `webApplicationInfo` section. For details, see [manifest schema](/microsoftteams/platform/resources/schema/manifest-schema).
@@ -133,26 +131,6 @@ For details about what topics are supported for each scenario, see the specific 
 > [!NOTE]
 > The activity icon is based on the context the request is made in. If the request is made with delegated permissions, the user's photo appears as the avatar, while the Teams app icon appears as the activity icon. In an application-only context, the Teams app icon is used as the avatar and the activity icon is omitted.
 
-### Scenario-based adoption strategy
-
-|Notifications|App Capability|&nbsp;|Notification requirement|
-|---|---|---|---|
-|&nbsp;|&nbsp;|Pros|Cons|
-|Activity notifications|Tab app |Feed <br> Personal Notification <br> Localization <br> Batch send|App must be installed for the user.<br> No one-click response/action. <br> May need admin consent in some cases.|
-|Bot notifications|Bot app|Adaptive cards <br> Notification sent from bot <br> Quick response <br> Media|Notification can be turned of from chat or channel.<br>App must be installed in the scope (chat or channel).<br>Need to set up app’s own storage for prod environment.|
-
-### Use Activity notification and Bot notification
-
-|Activity notifications|Bot notifications|
-|:---|:---|
-|A notification is sent to an individual about customized content that requires their attention.|A notification is sent to everyone on a channel or chat about the same or related content.|
-|A rich content in Tab app or URL is required.|Highly customizable UI in a Card is required.|
-|To support complex user interactions.|To provide quick response/action buttons.|
-|Multiple notifications are sent in a batch.|Scheduled notifications are required to be sent.|
-|Users who initiated the notification send a delegated notification.|The notification to light up double badges on both Activity & Chat or Channel or App.|
-|Template is added in manifest. |Template is added in source code.|
-|Teams to handle localization.|Easy in handling localization by yourself or app.|
-
 ## Customize the notifications alerts / Manage activity feed notifications
 
 Microsoft Teams users can customize the notifications they see in their feed, as a banner, and so on. Notifications generated through activity feed APIs can also be customized. Users can choose how they are notified via settings in Microsoft Teams. Teams apps will appear in the list for the user to choose from, as shown in the following screenshot.
@@ -162,6 +140,21 @@ Microsoft Teams users can customize the notifications they see in their feed, as
 Users can select **Edit** next to an app and customize the notifications, as shown in the following example. The `description` field in the Teams app manifest is displayed.
 
 :::image type="content" source="../assets/images/activity-feed/app-level-notification-settings.png" alt-text="Screenshot shows notifications customized to Banner and feed for a Teams app.":::
+
+## Advantages of activity feed notification APIs
+
+* Activity feed notification is a native Teams integration that brings user seamlessly into the Tab app, without the need for additional integration or setup.
+
+* You can use Activity feed notification to send feeds, personal notifications, and  batch notifications.
+
+* You can use Activity feed notification in the following scenarios:
+
+  * Notify individuals about customized content that requires their attention.
+  * Show rich content in Tab app or URL​.
+  * Support complex user interactions​.
+  * Send delegated notifications from the user who initiated the notification​.
+  * Put template in the manifest​.
+  * Localization for notifications is handled by Teams.
 
 ## Step-by-step guide
 
