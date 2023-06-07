@@ -157,7 +157,6 @@ You can customize sending the notification to the following targets:
           await target.sendAdaptiveCard(...);
       }
   }
-
   ```
 
 # [C#](#tab/csharp2)
@@ -196,7 +195,6 @@ You can customize sending the notification to the following targets:
     }
 
   }
-
   ```
 
 # [C#](#tab/csharp3)
@@ -246,7 +244,6 @@ You can customize sending the notification to the following targets:
         }
     }
   }
-
   ```
 
 # [C#](#tab/csharp4)
@@ -273,7 +270,6 @@ You can customize sending the notification to the following targets:
         }
     }
   }
-
   ```
 
 ---
@@ -286,7 +282,6 @@ You can customize sending the notification to the following targets:
 
   // send adaptive card to the specific channel.
   await channel?.sendAdaptiveCard(...);
-
    ```
 
    > [!NOTE]
@@ -300,7 +295,6 @@ You can customize sending the notification to the following targets:
 
   // send adaptive card to the specific person. 
   await member?.sendAdaptiveCard(...);
-
    ```
 
    > [!NOTE]
@@ -378,7 +372,6 @@ const notificationApp = new ConversationBot({
 
 // Or, customize later
 notificationApp.adapter.onTurnError = ...
-
 ```
 
 [Back to top](#notification-bot-in-teams)
@@ -409,8 +402,6 @@ const notificationApp = new ConversationBot({
         storage: myStorage,
     },
 });
-
-
 ```
 
 # [C#](#tab/csharp6)
@@ -435,7 +426,6 @@ builder.Services.AddSingleton(sp =>
 
     return new ConversationBot(options);
 });
-
 ```
 
 ---
@@ -515,7 +505,7 @@ Teams sends an event only at the first installation. If the bot app is already i
 
 You can resolve this issue in the following ways:
 
-* Send a message to your personal bot or mention your bot in group chat, or channel, which helps you to reach the bot service again with correct installation information.
+* Send a message to your personal bot or mention your bot in group chat or channel, which helps you to reach the bot service again with correct installation information.
 * Uninstall the bot app from Teams then redebug or relaunch it. You can resend the installation event to bot service.
 
 Notification target connections are stored in the persistence storage. If you're using the default local file storage, all installations are stored under `.notification.localstore.json`.

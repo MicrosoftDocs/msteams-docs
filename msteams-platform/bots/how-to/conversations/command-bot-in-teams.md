@@ -57,7 +57,6 @@ const commandApp = new ConversationBot({
     commands: [new HelloWorldCommandHandler()],
   },
 });
-
 ```
 
 # [C#](#tab/csharp1)
@@ -98,7 +97,6 @@ const bot = new ConversationBot({
 
 // Or, customize later
 bot.adapter.onTurnError = ...
-
 ```
 
 ## Add command and response
@@ -137,7 +135,7 @@ You can edit the manifest template file `appPackage\manifest.json` to include th
 
 <summary><b>2. Respond with an Adaptive Card</b></summary>
 
-You can define your card in its JSON format to respond with an Adaptive Card. Following is a code sample to create a new file:
+You can define your card in its JSON format to respond with an Adaptive Card. Following code sample is to create a new file:
 
 * For JavaScript/TypeScript: `src/adaptiveCards/doSomethingCommandResponse.json`
 * For .NET: `Resources/DoSomethingCommandResponse.json`
@@ -205,7 +203,7 @@ module.exports = {
 
 ```
 
-# [TypeScript/](#tab/ts)
+# [TypeScript](#tab/ts)
 
  ```TypeScript
 /** TypeScript **/
@@ -239,7 +237,6 @@ export class DoSomethingCommandHandler implements TeamsFxBotCommandHandler {
     return MessageFactory.attachment(CardFactory.adaptiveCard(cardJson));
   }
 }
-
 ```
 
 # [C#](#tab/csharp2)
@@ -303,7 +300,6 @@ namespace MyCommandApp.Commands
         }
     }
 }
-
 ```
 
 ---
@@ -360,7 +356,7 @@ builder.Services.AddSingleton(sp =>
 
 ---
 
-By completing the steps of adding a new command and response into your bot app, you can press F5 to debug locally with the command-response bot. Otherwise you can provision and deploy commands to deploy the change to Azure.
+By completing the steps of adding a new command and response into your bot app, you can press F5 to debug locally with the command-response bot. Otherwise, you can provision and deploy commands to deploy the change to Azure.
 <br>
 
 </details>
@@ -387,7 +383,6 @@ class HelloWorldCommandHandler {
     return MessageFactory.attachment(CardFactory.adaptiveCard(cardJson));
   }
 }
-
 ```
 
 ### How to build command and response using Adaptive card with dynamic content?
@@ -421,7 +416,7 @@ If you don't have the required SDK and need to invoke external APIs in your code
 
     :::image type="content" source="../../../assets/images/command-bot-teams/notification-enable.png" alt-text="Conversation bot initialization to enable notification feature." lightbox="../../../assets/images/command-bot-teams/notification-enable.png":::
 
-1. Follow the [instructions](notification-bot-in-teams.md) to send notification to the bot installation target (channel/group chat/personal chat). You can add the following sample code in `bot\src\index.ts(js)` to add a sample notification triggered by an HTTP request:
+1. Follow the [instructions](notification-bot-in-teams.md) to send notification to the bot installation target (channel or group chat or personal chat). You can add the following sample code in `bot\src\index.ts(js)` to add a sample notification triggered by an HTTP request:
 
     ```js
     server.post("/api/notification", async (req, res) => {
@@ -431,11 +426,10 @@ If you don't have the required SDK and need to invoke external APIs in your code
 
       res.json({});
     });
-
     ```
 
 1. Uninstall your previous bot installation from Teams, and rerun local debug to test your bot notification.
-1. Send a notification to the bot installation targets (channel/group chat/personal chat) by using an HTTP POST request with target URL `<https://localhost:3978/api/notification>`.
+1. Send a notification to the bot installation targets (channel or group chat or personal chat) by using an HTTP POST request with target URL `<https://localhost:3978/api/notification>`.
 
 For more information about notification feature such as send notification with Adaptive Card and add more triggers, see [Notification bot in Teams](notification-bot-in-teams.md).
 

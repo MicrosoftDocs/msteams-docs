@@ -118,30 +118,30 @@ The following image displays task names in the **OUTPUT** and **TERMINAL** tabs 
 
 1. **The default one used by TeamsFx templates**. To manually migrate your local tunnel task from a v4 project, use the following code to replace the old task:
 
-  ```typescript
-  {
-    "label": "Start local tunnel",
-    "type": "teamsfx",
-    "command": "debug-start-local-tunnel",
-    "args": {
-        "type": "dev-tunnel",
-        "ports": [
-            {
-                "portNumber": 3978,
-                "protocol": "http",
-                "access": "public",
-                "writeToEnvironmentFile": {
-                    "endpoint": "BOT_ENDPOINT",
-                    "domain": "BOT_DOMAIN"
-                }
-            }
+    ```typescript
+    {
+      "label": "Start local tunnel",
+      "type": "teamsfx",
+      "command": "debug-start-local-tunnel",
+      "args": {
+          "type": "dev-tunnel",
+          "ports": [
+              {
+                  "portNumber": 3978,
+                  "protocol": "http",
+                  "access": "public",
+                  "writeToEnvironmentFile": {
+                      "endpoint": "BOT_ENDPOINT",
+                      "domain": "BOT_DOMAIN"
+                  }
+              }
         ],
-        "env": "local"
+          "env": "local"
+      },
+      "isBackground": true,
+      "problemMatcher": "$teamsfx-local-tunnel-watch"
     },
-    "isBackground": true,
-    "problemMatcher": "$teamsfx-local-tunnel-watch"
-  },
-  ```
+    ```
 
 | Arguments | Type | Required | Description |
 | --- | --- | --- |--------|
@@ -151,30 +151,30 @@ The following image displays task names in the **OUTPUT** and **TERMINAL** tabs 
 
 2. **Change port**. Change the `portNumber` to use another port for local bot service, for example, 3922. Also, change the port in bot code (`index.js` or `index.ts`).
 
-  ```typescript
-  {
-    "label": "Start local tunnel",
-    "type": "teamsfx",
-    "command": "debug-start-local-tunnel",
-    "args": {
-        "type": "dev-tunnel",
-        "ports": [
-            {
-                "portNumber": 3922,
-                "protocol": "http",
-                "access": "public",
-                "writeToEnvironmentFile": {
-                    "endpoint": "BOT_ENDPOINT",
-                    "domain": "BOT_DOMAIN"
-                }
-            }
-        ],
-        "env": "local"
+    ```typescript
+    {
+      "label": "Start local tunnel",
+      "type": "teamsfx",
+      "command": "debug-start-local-tunnel",
+      "args": {
+          "type": "dev-tunnel",
+          "ports": [
+              {
+                  "portNumber": 3922,
+                  "protocol": "http",
+                  "access": "public",
+                  "writeToEnvironmentFile": {
+                      "endpoint": "BOT_ENDPOINT",
+                      "domain": "BOT_DOMAIN"
+                  }
+              }
+          ],
+          "env": "local"
+      },
+      "isBackground": true,
+      "problemMatcher": "$teamsfx-local-tunnel-watch"
     },
-    "isBackground": true,
-    "problemMatcher": "$teamsfx-local-tunnel-watch"
-  },
-  ```
+    ```
 
 The `ports` argument must be an array of objects, with each object specifying the configuration for a particular port. Each object must contain the following fields:
 
