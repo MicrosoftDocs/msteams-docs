@@ -797,6 +797,7 @@
     href: m365-apps/publish.md
 - name: Extend Microsoft 365 Copilot
   href: copilot/how-to-extend-copilot.md
+  displayName: Microsoft 365 Copilot, Copilot
 - name: Teams developer documentation FAQs
   href: teams-faq.md
   displayName: cache, entityId, icon, iframe
