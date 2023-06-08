@@ -51,7 +51,7 @@ Following is the code to open a stage from an Adaptive Card:
 ```json
 {
     type: "Action.Submit",
-    name: "View",
+    title: "View",
     data: {
           msteams: {
             type: "invoke",

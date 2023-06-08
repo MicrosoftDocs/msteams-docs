@@ -16,6 +16,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 25/05/2023 | Deep link to meeting side panel in Teams moble client. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) |
 |23/05/2023 |  Live Share SDK is now generally available. | Build apps for Teams meetings and calls > Enhanced collaboration with Live Share > [Live Share SDK](apps-in-teams-meetings/teams-live-share-overview.md)|
 |23/05/2023 | Design your app for new Teams. | Design your app > [Overview](concepts/design/design-teams-app-overview.md)|
 |17/05/2023 | Distribute your app to specific countries. | Distribute your app > Publish to the Teams store > Prepare your Teams store submission > [Distribute your app to specific countries](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries)|
@@ -34,15 +35,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2023 April**
+**2023 June**
 
-* ***April 24, 2023***: [Develop your apps with Teams Toolkit](concepts/build-and-test/develop-your-apps-with-teams-toolkit.md)
-
-* ***April 14, 2023***: [Contextless app update](concepts/deploy-and-publish/apps-upload.md#update-your-app)
-
-* ***April 6, 2023***: [Set up Microsoft license management](concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md)
-
-* ***April 4, 2023***: [Tab apps in shared channels are available in DOD](~/concepts/build-and-test/shared-channels.md)
+* ***June 02, 2023***: [Real-time meeting events are supported in channel meetings](apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api).
 
 :::column-end:::
 :::row-end:::
@@ -53,6 +48,10 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 24/04/2023 | Develop your apps with Teams Toolkit | Tools and SDKs > Developer Portal for Teams > [Develop your apps with Teams Toolkit](concepts/build-and-test/develop-your-apps-with-teams-toolkit.md) |
+| 14/04/2023 | Contextless app update | Distribute your app > [Upload your app in Teams](concepts/deploy-and-publish/apps-upload.md#update-your-app) |
+| 06/04/2023 | Set up Microsoft license management | Monetize your app > [Set up Microsoft license management](~/concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md) |
+| 04/04/2023 | Tab apps in shared channels are available in DOD | Build tabs > [Build apps for shared channels](~/concepts/build-and-test/shared-channels.md) |
 | 23/03/2023 | Apps are available for scheduled public channel meetings | Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 20/03/2023 | Bots are available in DOD | Build bots > [Overview](bots/what-are-bots.md)|
 | 20/03/2023 | Message extensions are available in DOD | Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md)|
@@ -326,6 +325,7 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 25/05/2023 | Deep link to meeting side panel in Teams desktop client. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) |
 |23/05/2023 | Introduced Teams AI library to help build AI-powered Teams apps. | Build Bots > [Teams AI library](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)|
 |23/05/2023| Extend Microsoft 365 Copilot| [Extend Microsoft 365 Copilot](copilot/how-to-extend-copilot.md)|
 
