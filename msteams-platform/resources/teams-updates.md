@@ -8,7 +8,7 @@ ms.topic: reference
 ---
 # Microsoft Teams update
 
-[New Microsoft Teams client](https://www.microsoft.com/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) is reimagined from the ground up with performance in mind. It's faster, simpler, smarter, and flexible to provide better experience for your apps and users. The new Teams client is closely aligned with all the existing Teams clients (desktop, web and mobile) where your apps run. You can use the new Teams client with all the existing capabilities in Teams at full feature parity.
+[The new Microsoft Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) is reimagined from the ground up with performance in mind. It's faster, simpler, smarter, and flexible to provide better experience for your apps and users. The new Teams client is closely aligned with all the existing Teams clients (desktop, web and mobile) where your apps run. You can use the new Teams client with all the existing capabilities in Teams at full feature parity.
 
 If you have an app that runs inside the Classic Teams client for Windows or Mac, Teams Web Clients for Edge, Chrome, or Firefox, and Teams Mobile Clients for Android and iOS, the app will most likely run in the new Teams client without any issues.
 
