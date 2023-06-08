@@ -410,7 +410,7 @@ items:
 
             * PromptManager: `promptManager` Allows you to register your prompts and load a prompt template into the AI component. All the functions related to the prompt manager are available in the `DefaultPromptManager`.  The prompt manager parses the prompts defined in the `prompt` folder. You can replace or override your own functionality in the prompt manager. 
 
-            * Moderator: The `OpenAIModerator` reviews both user's input and the model output to detect harmful speech, such as hate speech, self-harm, and violence. If your using the AzureOpenAIPlanner, ensure that you also define the endpoint property on the OpenAIModetator object.
+            * Moderator: The `OpenAIModerator` reviews both user's input and the model output to detect harmful speech, such as hate speech, self-harm, and violence. If you're using the AzureOpenAIPlanner, ensure that you also define the endpoint property on the OpenAIModetator object.
 
 
         1. At the end of the file, add the following code to define storage and application:
