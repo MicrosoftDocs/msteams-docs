@@ -47,7 +47,7 @@ The Open ID Connect plugin allows users to authenticate any website or tool that
 
 The following image displays the OpenID connect login page:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/openid-connect.png" alt-text="Screenshot shows the log in to open-id connect." lightbox="../../assets/images/MoodleInstructions/openid-connect.png":::
+:::image type="content" source="../../assets/images/MoodleInstructions/openid-connect.png" alt-text="Screenshot shows the log in to open-id connect.":::
 
 ## Microsoft 365 integration
 
@@ -60,7 +60,7 @@ Microsoft 365 integration consists of several apps with multiple functionalities
 
 The following image displays the Microsoft 365 integration setup page:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/365-integration.png" alt-text="Screenshot shows Microsoft 365 integration." lightbox="../../assets/images/MoodleInstructions/365-integration.png":::
+:::image type="content" source="../../assets/images/MoodleInstructions/365-integration.png" alt-text="Screenshot shows Microsoft 365 integration.":::
 
 ### User functions
 
@@ -95,7 +95,7 @@ After the plugin is installed, faculty and students can create an audio or video
 
 The following image displays the Teams meeting sign in page:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/teams-meeting.png" alt-text="Screenshot shows sign in to teams meeting." lightbox="../../assets/images/MoodleInstructions/teams-meeting.png":::
+:::image type="content" source="../../assets/images/MoodleInstructions/teams-meeting.png" alt-text="Screenshot shows sign in to teams meeting.":::
 
 ## Microsoft 365 Teams theme
 
