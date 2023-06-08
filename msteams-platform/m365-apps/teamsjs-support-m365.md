@@ -19,8 +19,8 @@ The *TeamsJS Capability* table below lists TeamsJS capabilities (public namespac
 
 | Badge | Meaning |
 | - | - |
-| :::image type="content" source="./images/preview-badge.png" alt-text="Image with the word 'Preview' inside a blue rectangle":::  | This capability is in preview and subject to change based on feedback. Do not use in production. |
-| :::image type="content" source="./images/deprecated-badge.png" alt-text="Image with the word 'Deprecated' inside an orange rectangle"::: | This capability is deprecated in favor of newer functionality, though it is supported for backwards compatibility purposes. For new apps, use the capability recommended in the usage notes of the deprecated capability. |
+| :::image type="content" source="./images/preview-badge.png" alt-text="Image with the word 'Preview' inside a blue rectangle":::  | This capability is in preview and subject to change based on feedback. Don't use in production. |
+| :::image type="content" source="./images/deprecated-badge.png" alt-text="Image with the word 'Deprecated' inside an orange rectangle"::: | This capability is deprecated in favor of newer functionality, though it's supported for backwards compatibility purposes. For new apps, use the capability recommended in the usage notes of the deprecated capability. |
 
 Microsoft 365 hosts are signified by the product icons in the following tables:
 
@@ -34,7 +34,7 @@ Preview versions for both Teams and Outlook (launched via *Try the new Teams* an
 | :-: | :-: |
 | :::image type="content" source="./images/teams-preview-icon.png" alt-text="Microsoft Teams (Preview) icon"::: | :::image type="content" source="./images/outlook-preview-icon.png" alt-text="Microsoft Outlook preview icon"::: |
 
-Entries marked with a check and asterisk (&#x2713;*) indicate support for that host is available only to preview audiences (enrolled in [Microsoft 365 Targeted Releases](prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases) for web clients, or with [Beta Channel apps](./prerequisites.md#install-microsoft-365-apps-in-your-test-environment) installed for desktop clients). Click on any TeamsJS Capability for further details, including reference docs, samples, and usage notes.
+Entries marked with a check and asterisk (&#x2713;*) indicate support for that host is available only to preview audiences (enrolled in [Microsoft 365 Targeted Releases](prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases) for web clients, or with [Beta Channel apps](./prerequisites.md#install-microsoft-365-apps-in-your-test-environment) installed for desktop clients). Select on any TeamsJS Capability for further details, including reference docs, samples, and usage notes.
 
 ## Cross-host capabilities
 
@@ -494,7 +494,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
 
 ## Preview capabilities awaiting host support
 
-Some capabilities in the source are in early preview and still awaiting initial support in one or more host applications, including: [**barCode**](#barcode), [**media**](#media), [**meeting**](#meeting), and [**search**](#search).
+Some capabilities in the source are in early preview and still awaiting initial support in one or more host applications, including [**barCode**](#barcode), [**media**](#media), [**meeting**](#meeting), and [**search**](#search).
 
 The remainder of this article provides further info on each capability of the Teams JavaScript client library.
 
@@ -994,7 +994,7 @@ Preview. Namespace providing functionality to start a chat with others.
 
 [Reference](/javascript/api/@microsoft/teams-js/dialog) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Dialog.tsx)
 
-Preview. This group of capabilities enables apps to show modal dialogs. There are two primary types of dialogs: URL-based dialogs and Adaptive Card dialogs. Both types of dialogs are shown on top of your app, preventing interaction with your app while they are displayed.
+Preview. This group of capabilities enables apps to show modal dialogs. There are two primary types of dialogs: URL-based dialogs and Adaptive Card dialogs. Both types of dialogs are shown on top of your app, preventing interaction with your app while they're displayed.
 
 - URL-based dialogs allow you to specify a URL from which the contents are shown inside the dialog. For URL dialogs, use the functions and interfaces in the url namespace.
 - Adaptive Card-based dialogs allow you to provide JSON describing an Adaptive Card that is shown inside the dialog. For Adaptive Card dialogs, use the functions and interfaces in the adaptiveCard namespace.
@@ -1175,18 +1175,19 @@ Preview. Subcapability for interacting with HTML-based dialogs that need to comm
 
 Preview. Namespace providing location-related functionality. This is the newer version of location module.
 
-Capabilities that require the user to grant [device permissions](../concepts/device-capabilities/device-capabilities-overview.md) (such as *geoLocation*), are now partially supported for apps running outside of Teams. Users can adjust app permissions from the app header when running in Outlook and Microsoft 365 app, or from app Settings on mobile. Current guidance for now is to modify your code to check Outlook and Microsoft 365 supportability:
+Capabilities that require the user to grant [device permissions](../concepts/device-capabilities/device-capabilities-overview.md) (such as *geoLocation*), are partially supported for apps running outside of Teams. Users can adjust app permissions from the app header when running in Outlook and Microsoft 365 app, or from app settings on mobile. It's recommended to modify your code to check Outlook and Microsoft 365 supportability:
 
 - Call `isSupported` on a capability before using it.
 - Catch and handle errors when calling TeamsJS and HTML5 APIs
 
-When an API is unsupported or generates an error, add logic to fail gracefully or provide a workaround. For example:
+When an API doesn't support or generate an error, add logic to fail or provide a workaround. For example:
 
 - Direct the user to your app's website
 - Direct the user to use the app in Teams to complete the flow
 - Notify the user that the functionality isn't yet available
 
-Additionally, best practice is to ensure your app manifest only specifies the device permissions it's using.
+> [!TIP]
+> Ensure your app manifest only specifies the device permissions it's using.
 
 <br />
 <table border>
@@ -1577,13 +1578,13 @@ Navigation-related part of the TeamsJS library.
 
 Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `shareDeepLink` (to generate a link *to* a specific part of your app) and `executeDeepLink` (to navigate to a deeplink *from* or *within* your app). TeamsJS v.2.0 introduces a new API, `navigateToApp`, for navigating to pages (and subpages) within an app in a consistent way across app hosts (Microsoft 365 app and Outlook, in addition to Teams). For new apps, follow the linked updated guidance depending on your navigation scenario:
 
-- **Deep links into your app.** Use [`pages.shareDeepLink`](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-sharedeeplink) (known as *shareDeepLink* prior to TeamsJS v.2.0) to generate and display a copyable link for the user to share. When clicked, the user is prompted to install the app if it's not already installed for the application host (specified in the link path).
+- **Deep links into your app.** Use [`pages.shareDeepLink`](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-sharedeeplink) (known as *shareDeepLink* prior to TeamsJS v.2.0) to generate and display a copyable link for the user to share. When selected, the user is prompted to install the app if it's not already installed for the application host.
 
-- **Navigation within your app.** Use the new [`pages.currentApp`](/javascript/api/@microsoft/teams-js/pages.currentapp) namespace to navigate within your app within the hosting application. Specifically, the function [`navigateTo(NavigateWithinAppParams)`](/javascript/api/@microsoft/teams-js/pages.currentapp#@microsoft-teams-js-pages-currentapp-navigateto) to allow navigation to a specific tab within the current app and the function [`navigateToDefaultPage()`](/javascript/api/@microsoft/teams-js/pages.currentapp#@microsoft-teams-js-pages-currentapp-navigatetodefaultpage) to navigate to the first tab defined in the app's manifest. For more information, see [Navigate within a tab app](../tabs/how-to/tab-navigation.md). 
+- **Navigation within your app.** Use the new [`pages.currentApp`](/javascript/api/@microsoft/teams-js/pages.currentapp) namespace to navigate within your app within the hosting application. Specifically, the function [`navigateTo(NavigateWithinAppParams)`](/javascript/api/@microsoft/teams-js/pages.currentapp#@microsoft-teams-js-pages-currentapp-navigateto) to allow navigation to a specific tab within the current app and the function [`navigateToDefaultPage()`](/javascript/api/@microsoft/teams-js/pages.currentapp#@microsoft-teams-js-pages-currentapp-navigatetodefaultpage) to navigate to the first tab defined in the app's manifest. For more information, see [Navigate within a tab app](../tabs/how-to/tab-navigation.md).
 
     These APIs provide the equivalent of navigating to a deep link (as the now deprecated *executeDeepLink* was once used for) without requiring your app to construct a URL or manage different deep link formats for different application hosts.
 
-- **Deep links out of your app.** For deep links from your app to various areas of its current host, use the strongly typed APIs provided by the TeamsJS library. For example, use the `calendar` capability to open a scheduling dialog or calendar item from your app.
+- **Deep links out of your app.** For deep links from your app to various areas of its current host, use the typed APIs provided by the TeamsJS library. For example, use the `calendar` capability to open a scheduling dialog or calendar item from your app.
 
     For deep links from your app to other apps running in the same host, use [`pages.navigateToApp`](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-navigatetoapp).
 
@@ -2377,7 +2378,7 @@ Preview. Contains functionality to allow web apps to store data in webview cache
 
 ## See also
 
-* [Extend Teams apps across Microsoft 365](./overview.md)
-* [Extend a Teams personal tab across Microsoft 365 app](./extend-m365-teams-personal-tab.md)
-* [Teams JavaScript client library overview](../tabs/how-to/using-teams-client-library.md)
-* [TeamsJS API Reference](/javascript/api/@microsoft/teams-js)
+- [Extend Teams apps across Microsoft 365](./overview.md)
+- [Extend a Teams personal tab across Microsoft 365 app](./extend-m365-teams-personal-tab.md)
+- [Teams JavaScript client library overview](../tabs/how-to/using-teams-client-library.md)
+- [TeamsJS API Reference](/javascript/api/@microsoft/teams-js)
