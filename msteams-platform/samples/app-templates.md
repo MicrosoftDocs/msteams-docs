@@ -24,7 +24,7 @@ The key benefits of using App templates are:
 
 ## Champion Management Platform
 
-The Champion Management Platform (CMP) app template helps you manage, scale, and inspire your teamwork champions to achieve more. This app template is built on the SharePoint Framework and loaded into a tab within a team. Groups can leverage this tool to help manage program membership, provide a leaderboard, and event types for logging, and tools to overlay digital badges to program participants.
+The Champion Management Platform (CMP) app template helps you manage, scale, and inspire your teamwork champions to achieve more. This app template is built on the SharePoint Framework and loaded into a tab within a team. Groups can use this tool to help manage program membership, provide a leaderboard, and event types for logging, and tools to overlay digital badges to program participants.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
 
