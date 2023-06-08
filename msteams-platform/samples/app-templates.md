@@ -39,7 +39,7 @@ It provides a foundation to build custom targeted communication capabilities suc
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-:::image type="content" source="../assets/images/CompanyCommunicatorCompose.png" alt-text="Screenshot shows the Company Communicator screen.":::
+:::image type="content" source="../assets/images/CompanyCommunicatorCompose.png" alt-text="Screenshot shows the Company Communicator screen." lightbox="../assets/images/CompanyCommunicatorCompose.png":::
 
 ## FAQ Plus
 

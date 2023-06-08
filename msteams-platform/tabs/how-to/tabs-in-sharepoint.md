@@ -21,7 +21,7 @@ With SharePoint Framework v.1.7, you can host your Teams tabs in SharePoint. As 
 
 Create rich app experiences in SharePoint by bringing your [Teams app into SharePoint](#introduction).
 
-:::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image084.png" alt-text="Screenshot shows the tab in SharePoint view.":::
+:::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image084.png" alt-text="Screenshot shows the tab in SharePoint view." lightbox="../../assets/images/tabs/tabs-in-sharepoint/image084.png":::
 
 ### SharePoint Framework in Teams
 
@@ -29,7 +29,7 @@ You can also implement your Teams tabs using SharePoint Framework. SharePoint Fr
 
 Bring your SharePoint web parts to Teams and let SharePoint manage the hosting for you.
 
-:::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png" alt-text="Screenshot shows the web part exposed as a tab.":::
+:::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png" alt-text="Screenshot shows the web part exposed as a tab."  lightbox="../../assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png":::
 
 ## Introduction
 
@@ -46,7 +46,7 @@ The sample app that is being used is a Talent Management application. It manages
 
 To add Teams tab to SharePoint, perform the following steps to add Teams tab to SharePoint:
 
-## 1. Test the sample app
+## Test the sample app
 
 Download the [sample app manifest](https://github.com/MicrosoftDocs/msteams-docs/raw/master/msteams-platform/assets/downloads/TalentMgmt-Azure.zip).
 
@@ -54,7 +54,7 @@ Download the [sample app manifest](https://github.com/MicrosoftDocs/msteams-docs
 1. Select the **Appstore** icon at the lower left of side tab.
 1. Select **Upload a custom app** at the lower left. The following image displays the corresponding screen:  
 
-    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png" alt-text="Screenshot shows the Upload a custom app option.":::
+    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png" alt-text="Screenshot shows the Upload a custom app option."  lightbox="../../assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png":::
 
 1. The file to upload is located in your **Downloads** folder. It's called TalentMgmt-Azure.zip. The following image displays the corresponding screen:
 
@@ -63,7 +63,7 @@ Download the [sample app manifest](https://github.com/MicrosoftDocs/msteams-docs
 1. You can see the install or consent screen for the talent management app. Select the team you want to install.
 1. Select the **Install** and start experimenting with the app.
 
-## 2. Use Teams tab in SharePoint
+## Use Teams tab in SharePoint
 
 1. Upload and deploy your Teams app package to your SharePoint App Catalog by visiting `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`. For example, `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`.
 
@@ -81,22 +81,22 @@ The following image displays the corresponding screen:
 
 1. Open the web part toolbox by selecting the `+` button, and select your Teams Tab, named **Contoso HR**. Web parts are sorted alphabetically. If it's a long list, you can use the search bar to find it. This creates a web part in the canvas that contains your Teams tab. The following image displays the tab view:
 
-    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image071.png" alt-text="Screenshot shows the tab view.":::
+    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image071.png" alt-text="Screenshot shows the tab view." lightbox="../../assets/images/tabs/tabs-in-sharepoint/image071.png":::
 
 1. Select the **Publish** button after you finish editing.
 
 1. Select **Add page to navigation** to have a quick reference to your page in the left navigation bar.
 The following image displays the tab in SharePoint:
 
-    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image073.png" alt-text="Screenshot shows the tab in SharePoint.":::
+    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image073.png" alt-text="Screenshot shows the tab in SharePoint." lightbox="../../assets/images/tabs/tabs-in-sharepoint/image073.png":::
 
-## 3. Explore App Pages in SharePoint
+## Explore App Pages in SharePoint
 
 After your page is published, you can explore [turning your Teams app into a more complete experience inside SharePoint](/sharepoint/dev/spfx/web-parts/single-part-app-pages). This converts the current page into an App Page, showing the normal SharePoint page layout with a full page experience for the Teams tab.
 
 The following image displays the complete experience of Teams app in SharePoint:
 
-:::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image085.png" alt-text="Screenshot shows the Teams app in SharePoint.":::
+:::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image085.png" alt-text="Screenshot shows the Teams app in SharePoint." lightbox="../../assets/images/tabs/tabs-in-sharepoint/image085.png":::
 
 ## Code sample
 
