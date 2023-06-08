@@ -149,7 +149,7 @@ By default, a deep link opens in a meeting side panel. To open a deep link direc
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>&openInMeeting=false`
 
-For more information, see [deep link to a tab](~/concepts/build-and-test/deep-link-application.md#generate-a-deep-link-to-your-tab).
+For more information, see [deep link to a tab](~/concepts/build-and-test/deep-link-application.md#configure-deep-link-to-browse-within-your-app-manually).
 
 Deep link doesn't open in the meeting side panel in the following scenarios:
 
