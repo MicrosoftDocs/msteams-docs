@@ -35,7 +35,7 @@ Enable Teams for your organization and for more information, see [enabling Teams
 
 To turn on the custom app uploading or sideloading for your developer tenant:
 
-1. Sign in to [Teams Admin Center](https://admin.teams.microsoft.com/dashboard) with your admin credentials.
+1. Sign in to [Microsoft Teams admin center](https://admin.teams.microsoft.com/dashboard) with your admin credentials.
 
     ![Admin center menu](~/assets/images/prepare-test-tenant/admin-center-menu.png)
 
