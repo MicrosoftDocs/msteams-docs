@@ -40,6 +40,9 @@ It provides a foundation to build custom targeted communication capabilities suc
 
 ![jCompany Communicator compose box view](../assets/images/CompanyCommunicatorCompose.png)
 
+> [!NOTE]
+> Company Communicator app is not currently supported in mobile devices.
+
 ## FAQ Plus
 
 Conversational Q&A bots are an easy way to provide answers to frequently asked questions by users. But, most bots fail to engage with users in meaningful way because there's no human in the loop when the bot fails. FAQ bot is a friendly Q&A bot that brings a human in the loop when it's unable to help. One can ask the bot a question and the bot responds with an answer if it's contained in the knowledge base. If not, the bot allows the user to submit a query, which then gets posted to a pre-configured team of experts who help to provide support by acting upon the notifications from within the team itself.
