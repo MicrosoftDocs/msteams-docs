@@ -39,3 +39,7 @@ The Microsoft Teams JavaScript client library (TeamsJS) can be used for navigati
 * Check for markdownlint errors.
 * Table with just a row isn't really needed. Provide the content without tabulating it.
 --->
+
+## See also
+
+[Integrate web apps](../../samples/integrate-web-apps-overview.md)

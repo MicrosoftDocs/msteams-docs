@@ -83,7 +83,9 @@ Example: `https://teams.microsoft.com/l/message/<channelId>/1648741500652?tenant
 
 Use the following deep link format to navigate a user to a message in a personal or group chat in Teams:
 
-`http://teams.microsoft.com/l/message/{chatId}/{messageId}?tenantId=<tenantId>&context={"contextType":"chat"}`
+`https://teams.microsoft.com/l/message/{chatId}/{messageId}?tenantId=<tenantId>?context={"contextType":"chat"}`
+
+Example: `https://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces/1563480968434?context=%7B%22contextType%22:%22chat%22%7D`
 
 The query parameters are:
 

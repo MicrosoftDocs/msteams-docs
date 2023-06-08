@@ -55,7 +55,7 @@ Applications can use the TeamsJS library to open the app install dialog without 
 ```javascript
 // Open an app install dialog from your tab
 if(appInstallDialog.isSupported()) {
-    const dialogPromise = appInstallDialog.openAppInstallDialog({ appId: "f46ad259-0fe5-4f12-872d-c737b174bcb4" });
+    const dialogPromise = appInstallDialog.openAppInstallDialog({ appId: "<appId>" });
     dialogPromise.
       then((result) => {/*Successful operation*/}).
       catch((error) => {/*Unsuccessful operation*/});
@@ -69,7 +69,7 @@ For more information about the install dialog, see the [appInstallDialog.openApp
 
 ```javascript
 // Open an app install dialog from your tab
-microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-4f12-872d-c737b174bcb4");
+microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/<appId>");
 ```
 
 ---
@@ -233,7 +233,7 @@ You'll need to replace the parameters with the appropriate information:
 ## Deep link for SharePoint Framework tabs
 
 You can use the following deep link format in a bot, connector, or message extension card:
-`https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`.
+`https://teams.microsoft.com/l/entity/<appId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`.
 
 > [!NOTE]
 >
