@@ -12,7 +12,7 @@ Deep links are a navigation mechanism that helps users to connect with features 
 * Navigating the user to the content within one of your app's tabs. For instance, your app can have a bot that sends messages notifying the user of an important activity. When the user selects an action button on the Adaptive Card sent by the bot, the deep link navigates to the tab to show more details about the activity.
 * Your app automates or simplifies certain user tasks. You can  create a chat or schedule a meeting by pre-populating the deep links with required parameters. Avoids the need for users to manually enter information.
 
-The Microsoft Teams JavaScript client library (TeamsJS) simplifies the process of navigation. For many scenarios, such as navigating to content and information within your tab or launching a chat dialog. TeamsJS provides typed APIs that provide improved experience and can replace the usage of deep links. These APIs are recommended for Teams apps that might be run in other hosts (Outlook, Microsoft 365 app), as they also provide a way to check that the capability being used is supported by that host.
+The Microsoft Teams JavaScript client library (TeamsJS) simplifies the process of navigation. For many scenarios, such as navigating to content and information within your tab or launching a chat dialog (task module). TeamsJS provides typed APIs that provide improved experience and can replace the usage of deep links. These APIs are recommended for Teams apps that might be run in other hosts (Outlook, Microsoft 365 app), as they also provide a way to check that the capability being used is supported by that host.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 

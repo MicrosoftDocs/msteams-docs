@@ -105,7 +105,7 @@ In a personal app, a carousel can provide an effective overview of your bot and 
 
 ### Channels and group chats
 
-In channels and group chats, a tour should open in a modal (also known as a [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) so it doesn’t interrupt ongoing conversations. This also gives you the option to implement role-based views for your tour.
+In channels and group chats, a tour should open in a modal (also known as a [dialog](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) or *task module*) so it doesn’t interrupt ongoing conversations. This also gives you the option to implement role-based views for your tour.
 
 #### Mobile
 
@@ -274,9 +274,9 @@ In personal apps, a tab can complement what your bot can do. For example, if you
 
 ## Manage a bot
 
-Users should be able to change a bot's settings. You can provide this functionality with bot commands, but it's usually more efficient to include all settings in a [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) (as shown in the following example).
+Users should be able to change a bot's settings. You can provide this functionality with bot commands, but it's usually more efficient to include all settings in a [dialog](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) (formerly known as *task module*), as shown in the following example.
 
-:::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="Example shows a task module for configuring a bot's settings." lightbox="../../assets/images/bots/manage-bot-task-module.png":::
+:::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="Example shows a dialog for configuring a bot's settings." lightbox="../../assets/images/bots/manage-bot-task-module.png":::
 
 ## Best practices
 
@@ -355,11 +355,11 @@ People will quickly abandon your bot if they can’t troubleshoot issues.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Example showing you can use task modules or tabs with your bot for complex interactions.":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Example showing you can use modal dialogs or tabs with your bot for complex interactions.":::
 
-#### Do: Use task modules or tabs
+#### Do: Use dialogs or tabs
 
-If your bot provides an answer that requires a few more steps, you can link to a task module or tab to complete the task or flow.
+If your bot provides an answer that requires a few more steps, you can link to a modal dialog or tab to complete the task or flow.
 
    :::column-end:::
    :::column span="":::
@@ -380,7 +380,7 @@ An extensive conversation to complete a single task is slow and overly complex. 
 
 #### Do: Only show sensitive info in a personal context
 
-If your bot is in a group chat or channel, we recommend directing users to a private location (such as a task module, tab, or browser) to view sensitive information.
+If your bot is in a group chat or channel, we recommend directing users to a private location (such as a modal dialog, tab, or browser) to view sensitive information.
 
    :::column-end:::
    :::column span="":::
@@ -399,4 +399,4 @@ These other guidelines may help with your bot design:
 
 * [Designing your personal app](../../concepts/design/personal-apps.md)
 * [Designing Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md)
-* [Designing task modules](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
+* [Designing dialogs](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)

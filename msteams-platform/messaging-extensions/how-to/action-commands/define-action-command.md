@@ -1,7 +1,7 @@
 ---
 title: Define message extension action commands
 author: surbhigupta
-description: Learn to define messaging extension action commands with app manifest example in Microsoft Teams. Sample (.NET, Node.js) how to define action commands, create task module, and respond to task module submit action.
+description: Learn to define messaging extension action commands with app manifest example in Microsoft Teams. Sample (.NET, Node.js) how to define action commands, create dialog, and respond to dialog submit action.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -14,12 +14,12 @@ ms.author: anclear
 > [!NOTE]
 > When a message action is initiated, attachment details aren't sent as part of the `turncontext` invoke activity.
 
-Action commands allow you to present your users with a modal pop-up called a task module in Teams. The task module collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message, or card, create action command using app studio, or create it manually.
+Action commands allow you to present your users with a modal pop-up called a *dialog* (formerly known as *task module*) in Teams. The dialog collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your dialog, send final message, or card, create action command using app studio, or create it manually.
 
 Before creating the action command, you must decide the following factors:
 
 1. [Where can the action command be triggered from?](#select-action-command-invoke-locations)
-1. [How will the task module be created?](#select-how-to-create-your-task-module)
+1. [How will the dialog be created?](#select-how-to-create-your-dialog)
 1. [Will the final message or card be sent to the channel from a bot, or will the message or card be inserted into the compose message area for the user to submit?](#select-how-the-final-message-is-sent)
 
 See the following video to learn how to define message extension action commands:
@@ -49,7 +49,7 @@ First, you must decide the location from where your action command must be invok
 
    > [!NOTE]
    >
-   > * The initial invoke to your bot includes a JSON object containing the message from which it was invoked. You can process the message before presenting a task module.
+   > * The initial invoke to your bot includes a JSON object containing the message from which it was invoked. You can process the message before presenting a dialog.
    >
    > * When the user selects ellipses **…**, an overflow menu is displayed. However, by default, message actions for apps created by you for your organization or third-party apps aren't displayed. After the user selects **More actions**, they can see the message actions and select the required option. The respective message action is displayed in the overflow menu. The overflow menu displays the three most recent message actions. You can't pin the message action to be displayed.
 
@@ -57,15 +57,15 @@ The following image displays the locations from where action command is invoked:
 
 :::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="Action command invoke locations":::
 
-## Select how to create your task module
+## Select how to create your dialog
 
-In addition to selecting where your command can be invoked from, you must also select how to populate the form in the task module for your users. You have the following three options for creating the form that is rendered inside the task module:
+In addition to selecting where your command can be invoked from, you must also select how to populate the form in the dialog for your users. You have the following three options for creating the form that is rendered inside the dialog:
 
 * **Static list of parameters**: This is the simplest method. You can define a list of parameters in your app manifest the Teams client renders, but can't control the formatting in this case.
 * **Adaptive Card**:  You can select to use an Adaptive Card, which provides greater control over the UI, but still limits you on the available controls and formatting options.
-* **Embedded web view**: You can select to embed a custom web view in the task module to have a complete control over the UI and controls.
+* **Embedded web view**: You can select to embed a custom web view in the dialog to have a complete control over the UI and controls.
 
-If you select to create the task module with a static list of parameters and when the user submits the task module, the message extension is called. When using an embedded web view or an Adaptive Card, your message extension must handle an initial invoke event from the user, create the task module, and return it back to the client.
+If you select to create the dialog with a static list of parameters and when the user submits the dialog, the message extension is called. When using an embedded web view or an Adaptive Card, your message extension must handle an initial invoke event from the user, create the dialog, and return it back to the client.
 
 ## Select how the final message is sent
 
@@ -141,7 +141,7 @@ To manually add your action-based message extension command to your app manifest
 | `id` | This property is an unique ID that you assign to this command. The user request includes this ID. | Yes | 1.0 |
 | `title` | This property is a command name. This value appears in the UI. | Yes | 1.0 |
 | `type` | This property must be an `action`. | No | 1.4 |
-| `fetchTask` | This property is set to `true` for an adaptive card or embedded web view for your task module, and`false` for a static list of parameters or when loading the web view by a `taskInfo`. | No | 1.4 |
+| `fetchTask` | This property is set to `true` for an adaptive card or embedded web view for your dialog, and`false` for a static list of parameters or when loading the web view by a `taskInfo`. | No | 1.4 |
 | `context` | This property is an optional array of values that defines where the message extension is invoked from. The possible values are `message`, `compose`, or `commandBox`. The default value is `["compose", "commandBox"]`. | No | 1.5 |
 
 If you're using a static list of parameters, you must also add the following parameters:
@@ -154,14 +154,14 @@ If you're using a static list of parameters, you must also add the following par
 | `parameter.title` | This property is a short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | This property is set to the type of input required. The possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. The default value is set to `text`. | No | 1.4 |
 
-If you're using an embedded web view, you can optionally add the `taskInfo` object to fetch your web view without calling your bot directly. If you select this option, the behavior is similar to that of using a static list of parameters. In that the first interaction with your bot is [responding to the task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). If you're using a `taskInfo` object, you must set the `fetchTask` parameter to `false`.
+If you're using an embedded web view, you can optionally add the `taskInfo` object to fetch your web view without calling your bot directly. If you select this option, the behavior is similar to that of using a static list of parameters. In that the first interaction with your bot is [responding to the dialog submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). If you're using a `taskInfo` object, you must set the `fetchTask` parameter to `false`.
 
 | Property name | Purpose | Is required? | Minimum manifest version |
 |---|---|---|---|
-|`taskInfo`|Specify the task module to preload when using a message extension command. | No | 1.4 |
-|`taskInfo.title`|Initial task module title. |No | 1.4 |
-|`taskInfo.width`|Task module width, either a number in pixels or default layout such as `large`, `medium`, or `small`. |No | 1.4 |
-|`taskInfo.height`|Task module height, either a number in pixels or default layout such as `large`, `medium`, or `small`.|No | 1.4 |
+|`taskInfo`|Specify the dialog to preload when using a message extension command. | No | 1.4 |
+|`taskInfo.title`|Initial dialog title. |No | 1.4 |
+|`taskInfo.width`|Dialog width, either a number in pixels or default layout such as `large`, `medium`, or `small`. |No | 1.4 |
+|`taskInfo.height`|Dialog height, either a number in pixels or default layout such as `large`, `medium`, or `small`.|No | 1.4 |
 |`taskInfo.url`|Initial web view URL.|No | 1.4 |
 
 #### App manifest example
@@ -227,7 +227,7 @@ This section isn't an example of the complete manifest. For the complete app man
 
 | Sample name           | Description | .NET    | Node.js   | Manifest|
 |:---------------------|:--------------|:---------|:--------|:--------------|
-|Teams message extension action| This sample shows how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip) |
+|Teams message extension action| This sample shows how to define action commands, create dialog, and  respond to dialog submit action. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip) |
 |Message extension action preview| This sample shows how to use action preview in Messaging Extensions using Bot Framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
 
 ## Step-by-step guide
@@ -239,17 +239,17 @@ Follow the [step-by-step guide](../../../sbs-meetingextension-action.yml) to bui
 If you're using either an Adaptive Card or an embedded web view without a `taskInfo` object, the next step is to:
 
 > [!div class="nextstepaction"]
-> [Create and respond with a task module](~/messaging-extensions/how-to/action-commands/create-task-module.md)
+> [Create and respond with a dialog](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
 If you're using the parameters or an embedded web view with a `taskInfo` object, the next step is to:
 
 > [!div class="nextstepaction"]
-> [Respond to task module submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+> [Respond to dialog submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
 ## See also
 
 * [Cards](../../../task-modules-and-cards/what-are-cards.md)
-* [Task modules](../../../task-modules-and-cards/what-are-task-modules.md)
+* [Dialogs](../../../task-modules-and-cards/what-are-task-modules.md)
 * [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
 * [Developer Portal for Teams](../../../concepts/build-and-test/teams-developer-portal.md)
 * [Message extensions](../../what-are-messaging-extensions.md)

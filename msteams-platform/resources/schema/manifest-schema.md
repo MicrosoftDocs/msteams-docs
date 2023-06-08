@@ -565,8 +565,8 @@ Each command item is an object with the following structure:
 |`description`|string|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value indicates whether the command runs initially with no parameters. Default is **false**.|
 |`context`|array of Strings|3||Defines where the message extension can be invoked from. Any combination of`compose`,`commandBox`,`message`. Default is `["compose","commandBox"]`.|
-|`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the task module dynamically. Default is **false**.|
-|`taskInfo`|object|||Specify the task module to pre-load when using a message extension command.|
+|`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the dialog (task module) dynamically. Default is **false**.|
+|`taskInfo`|object|||Specify the dialog (task module) to pre-load when using a message extension command.|
 |`taskInfo.title`|string|64 characters||Initial dialog title.|
 |`taskInfo.width`|string|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
 |`taskInfo.height`|string|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
@@ -576,7 +576,7 @@ Each command item is an object with the following structure:
 |`parameters.title`|string|32 characters|✔️|User-friendly title for the parameter.|
 |`parameters.description`|string|128 characters||User-friendly string that describes this parameter’s purpose.|
 |`parameters.value`|string|512 characters||Initial value for the parameter. Currently the value isn't supported|
-|`parameters.inputType`|string|128 characters||Defines the type of control displayed on a task module for`fetchTask: false` . One of `text, textarea, number, date, time, toggle, choiceset` .|
+|`parameters.inputType`|string|128 characters||Defines the type of control displayed on a dialog for`fetchTask: false` . One of `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|array of objects|10 items||The choice options for the`choiceset`. Use only when`parameter.inputType` is `choiceset`.|
 |`parameters.choices.title`|string|128 characters|✔️|Title of the choice.|
 |`parameters.choices.value`|string|512 characters|✔️|Value of the choice.|
@@ -657,7 +657,7 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 Indicates if or not to show the loading indicator when an app or tab is loading. Default is **false**.
 >[!NOTE]
 >
-> * If you select `showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+> * If you select `showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and dialogs as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
 > * If you don't modify the content pages of your tab, the tab app doesn't load and shows the error `There was a problem reaching this app`.
 
 ## isFullScreen
@@ -670,7 +670,7 @@ Indicates if a personal app is rendered without a tab header bar (signifying ful
 >
 > * `isFullScreen` only works for apps published to your organization. Sideloaded and published third-party apps cannot use this property (it is ignored).
 >
-> * `isFullScreen=true` removes the Teams-provided header bar and title from personal apps and task module dialogs.
+> * `isFullScreen=true` removes the Teams-provided header bar and title from personal apps and dialogs.
 
 ## activities
 

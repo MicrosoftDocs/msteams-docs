@@ -340,7 +340,7 @@ The following are the limitations for app caching:
 
 * Apps are cached on a per-window basis. App caching happens on a per app (not on a per tab) basis within the same window.
 
-* App caching isn't supported for the meeting stage or Task module contexts, because these can be opened on top of the tab and the same webview can't be used to render the content in the tab and the Task module.
+* App caching isn't supported for the meeting stage or Dialog contexts, because these can be opened on top of the tab and the same webview can't be used to render the content in the tab and the Dialog.
 
 * Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (as leaving the app can cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app hasn't registered for the `load` event, it's removed from the DOM after the unload flow completes.
 

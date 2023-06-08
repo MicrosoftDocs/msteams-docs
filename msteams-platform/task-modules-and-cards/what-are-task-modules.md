@@ -23,7 +23,7 @@ Dialogs can be invoked in three ways:
 
 * Channel or personal tabs: Using the TeamsJS library, you can invoke dialogs from buttons, links, or menus on your tab. For more information, see [using dialogs in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 * Bots: Using buttons on [cards](~/task-modules-and-cards/cards/cards-reference.md) sent from your bot. This is useful when you don't require everyone in a channel to see what you are doing with a bot. For example, when having users respond to a poll in a channel it isn't useful to see a record of that poll being created. For more information, see [using dialogs from Teams bots](~/task-modules-and-cards/task-modules/task-modules-bots.md).
-* Outside of Teams from a deep link: You can also create URLs to invoke a dialog from anywhere. For more information, see [task module deep link syntax](~/concepts/build-and-test/deep-link-application.md#deep-link-to-open-a-task-module).
+* Outside of Teams from a deep link: You can also create URLs to invoke a dialog from anywhere. For more information, see [dialog deep link syntax](~/concepts/build-and-test/deep-link-application.md#deep-link-to-open-a-dialog-task-module).
 
 ## Components of a dialog
 

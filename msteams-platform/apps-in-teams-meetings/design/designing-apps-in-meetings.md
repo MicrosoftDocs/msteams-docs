@@ -488,11 +488,11 @@ Providing an option to close in-meeting tab content may cause issues since there
    :::column span="":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="Example showing modals (or task modules) within an in-meeting tab.":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="Example showing modals (or dialogs) within an in-meeting tab.":::
 
 #### Caution: Avoid modals within the in-meeting tab
 
-Modals (also known as task modules) in the already narrow in-meeting tab might wrap and obscure the content.
+Modals (also known as dialogs) in the already narrow in-meeting tab might wrap and obscure the content.
 
    :::column-end:::
 :::row-end:::

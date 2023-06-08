@@ -114,4 +114,4 @@ To create a bot menu, add a new [`commandLists`](~/resources/schema/manifest-sch
 
 * Keep it simple: The bot menu is meant to present the key capabilities of your bot.
 * Keep it short: Menu options shouldn’t be extremely long and complex natural language statements - they should be simple commands.
-* Always available: Bot menu actions/commands should be always invokable, regardless of the state of the conversation or the dialog the bot is in.
+* Always available: Bot menu actions/commands should be always invocable, regardless of the state of the conversation or the dialog the bot is in.

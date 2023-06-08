@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams conversation bot allows users to interact with your web service through text, interactive cards, and task modules. Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. 
+    Microsoft Teams conversation bot allows users to interact with your web service through text, interactive cards, and dialogs. Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. 
     
     **Key features of Bot Builder SDK**
 

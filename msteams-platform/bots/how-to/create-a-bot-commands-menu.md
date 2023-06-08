@@ -220,7 +220,7 @@ Following are the command menu best practices:
 
 * Keep it simple: The bot menu is meant to present the key capabilities of your bot.
 * Keep it short: Menu options must not be long and must not be complex natural language statements. They must be simple commands.
-* Keep it invokable: Bot menu actions or commands must always be available, regardless of the state of the conversation or the dialog the bot is in.
+* Keep it invocable: Bot menu actions or commands must always be available, regardless of the state of the conversation or the dialog (task module) the bot is in.
 
 > [!NOTE]
 > If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.

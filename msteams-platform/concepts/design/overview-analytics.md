@@ -33,13 +33,13 @@ As the app’s developer, you can track your app’s usage in the [Teams app usa
 
 The out-of-box usage reports available in Partner Center or the Developer Portal for Teams can't provide you with in-depth analytics of what goes on inside your app and specific user-level analytics. Such analytics include a user’s journey within your app or a user’s engagement with specific features and measuring scenario completions.
 
-Your app on Teams is essentially a web-based service hosted elsewhere, for example, Azure cloud. It's embedded and surfaced inside Microsoft Teams shell where users can use your app. This applies to your app irrespective of the [platform capabilities](../../overview-explore.md) used, such as tabs, bots, message extensions, meeting extensions, cards, task modules, and so on. All these capabilities are a means to surface web-based experiences inside Teams.
+Your app on Teams is essentially a web-based service hosted elsewhere, for example, Azure cloud. It's embedded and surfaced inside Microsoft Teams shell where users can use your app. This applies to your app irrespective of the [platform capabilities](../../overview-explore.md) used, such as tabs, bots, message extensions, meeting extensions, cards, dialogs, and so on. All these capabilities are a means to surface web-based experiences inside Teams.
 
 Plan analytics for the Teams app the same way as you do for a SaaS product that runs on the web browser.
 
 ## Plan early for analytics
 
-Plan analytics for your Teams app at the development design and solution architecture stage. Examine which of the existing data instrumentation and practices for your core SaaS web app will accrue to hosted canvas constructs such as tabs, task modules, meeting apps and so on. in Teams that you’re optimizing or building from scratch to surface inside Teams. For Teams-specific capabilities, such as [conversational constructs](#conversational-constructs) like bots, message extensions, and so on, you'll need to plan and implement analytics instrumentation, capture relevant events, and context from the SDK methods from scratch.
+Plan analytics for your Teams app at the development design and solution architecture stage. Examine which of the existing data instrumentation and practices for your core SaaS web app will accrue to hosted canvas constructs such as tabs, dialogs, meeting apps and so on. in Teams that you’re optimizing or building from scratch to surface inside Teams. For Teams-specific capabilities, such as [conversational constructs](#conversational-constructs) like bots, message extensions, and so on, you'll need to plan and implement analytics instrumentation, capture relevant events, and context from the SDK methods from scratch.
 
 At the time, your production Teams app is live on the Teams public app store and customers start using it, your analytics and data infrastructure should be fully operational. It ensures that you don’t miss tracking:
 
@@ -89,7 +89,7 @@ You can classify Teams platform features into broadly two constructs:
 
 #### Hosted web canvas constructs
 
-Visual canvas-oriented capabilities are Teams-aware webpages embedded in Microsoft Teams, such as tabs, personal apps, task modules (displaying an embedded iframe), stage views, meeting tabs, shared meeting stage, and in-meeting dialogs. They're hosted in the cloud with the rest of your SaaS app that runs in the web browser.
+Visual canvas-oriented capabilities are Teams-aware webpages embedded in Microsoft Teams, such as tabs, personal apps, dialogs (displaying an embedded iframe), stage views, meeting tabs, shared meeting stage, and in-meeting dialogs. They're hosted in the cloud with the rest of your SaaS app that runs in the web browser.
 
 These webpages often have the instrumentation done for core SaaS web app needs. You just need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code. It's handy for your analytics needs that tabs are “Teams-aware” webpages.
 
@@ -97,7 +97,7 @@ When you build a tab following [prerequisites defined here](../../tabs/how-to/ta
 
 - Microsoft 365 tenant ID (Azure AD tenant) for the current user (`tid`). In Microsoft 365 or Azure AD, a tenant is representative of an organization, that is, the user’s company. The Microsoft 365 tenant ID is useful to find out and log which Microsoft 365 tenant the user belongs to. Once you know the tenant ID, you can find out the tenant domain for the organization, which often reveals the organization’s name, using this [Graph API](/graph/api/tenantrelationship-findtenantinformationbytenantid). Ensure to invoke this API in your Microsoft 365 Developer tenant since you’ll be able to consent to the required tenant administrator permission it needs.
 - License type assigned to the user and the SKU for the current user’s tenant. Possible values are F1, E1, E3, and E5 enterprise plans for (`licenseType`) and enterprise, free, edu, and unknown for (`tenantSKU`).
-- The context where the tab URL is loaded. Some possible values can be content page, task module, tab settings dialog, tab remove dialog, meeting sidePanel, and so on. (`frameContext`).
+- The context where the tab URL is loaded. Some possible values can be content page, dialog, tab settings dialog, tab remove dialog, meeting sidePanel, and so on. (`frameContext`).
 - Host client type where tab is loaded. Possible values are Android, IoS, web, desktop, surfaceHub, and so on. (`hostClientType`). You can slice your analytics data.
 - Locale awareness for the user to indicate language, for example, en-us, fr-fr, ja-jp and so on. (`locale`).
 - User Principal Name or login hint (`loginHint`) of the current user in the current tenant (usually user’s email address).
@@ -119,7 +119,7 @@ After you extract the Teams-specific information from the tab context, some poss
 
 #### Conversational constructs
 
-Conversation or chat-oriented capabilities include bots, message extensions, cards and task modules (displaying an Adaptive Card) that are created for Teams users. Conceptually, these experiences are created for and available only to users specifically inside Teams. You'll need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code for these constructs from scratch. A bot can access additional context data about a team, chat, meeting, 1:1 call, or group call where it's installed.
+Conversation or chat-oriented capabilities include bots, message extensions, cards and dialogs (displaying an Adaptive Card) that are created for Teams users. Conceptually, these experiences are created for and available only to users specifically inside Teams. You'll need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code for these constructs from scratch. A bot can access additional context data about a team, chat, meeting, 1:1 call, or group call where it's installed.
 
 Use this information for enriching the bot's functionality and the user experience:
 
@@ -140,7 +140,7 @@ Since message extensions are based on the bot channel, most of the above applies
 Besides the obvious metrics in the SaaS world such as daily, weekly, monthly active users, time spent in your app and so on., implementing analytics thoughtfully for your Teams app per the guidance above will allow you to get insights such as:
 
 - **Aggregate metrics**
-  - Which platform capabilities, surface areas (for example, tabs, bots, message extensions) and UI constructs (cards, task modules, stage views) leveraged in your Teams app found the most usage by your users?
+  - Which platform capabilities, surface areas (for example, tabs, bots, message extensions) and UI constructs (cards, dialogs, stage views) leveraged in your Teams app found the most usage by your users?
   - Which scope or UI entry point (like personal app, channel, group chat) is the most used by your users to invoke your app and begin a new app session inside Teams?
   - How many days on an average do users use your app in the first week after installing the app?
   - What is the week-over-week or month-over-month new user retention cohort analysis for your app or specific capabilities (like personal app or bot) in your app?

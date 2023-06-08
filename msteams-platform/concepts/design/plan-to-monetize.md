@@ -40,7 +40,7 @@ Establishing a monetizing option beforehand helps guide the app design, build, a
 * [Monetize your app](../deploy-and-publish/appsource/prepare/monetize-overview.md)
 * [Microsoft Teams store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 * [Build Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)
-* [Build Task modules](../../task-modules-and-cards/what-are-task-modules.md)
+* [Build Dialogs](../../task-modules-and-cards/what-are-task-modules.md)
 * [Build Adaptive Cards](../../task-modules-and-cards/what-are-cards.md)
 * [Webhooks and connectors](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 * [Build bots for Teams](../../bots/what-are-bots.md)

@@ -479,8 +479,8 @@ Each command item is an object with the following structure:
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value that indicates whether the command should be run initially with no parameters. Default: `false`|
 |`context`|Array of Strings|3||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. Default is `["compose", "commandBox"]`|
-|`fetchTask`|Boolean|||A Boolean value that indicates if it should fetch the task module dynamically.|
-|`taskInfo`|Object|||Specify the task module to preload when using a message extension command.|
+|`fetchTask`|Boolean|||A Boolean value that indicates if it should fetch the dialog (task module) dynamically.|
+|`taskInfo`|Object|||Specify the dialog (task module) to preload when using a message extension command.|
 |`taskInfo.title`|String|64||Initial dialog title.|
 |`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
@@ -493,7 +493,7 @@ Each command item is an object with the following structure:
 |`parameter.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. This is included in the user request.|
 |`parameter.title`|String|32 characters|✔️|User-friendly title for the parameter.|
 |`parameter.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
-|`parameter.inputType`|String|128 characters||Defines the type of control displayed on a task module for `fetchTask: true`. One of `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`.|
+|`parameter.inputType`|String|128 characters||Defines the type of control displayed on a dialog for `fetchTask: true`. One of `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`.|
 |`parameter.choices`|Array of Objects|10||The choice options for the `choiceset`. Use only when `parameter.inputType` is `choiceset`.|
 |`parameter.choices.title`|String|128||Title of the choice.|
 |`parameter.choices.value`|String|512||Value of the choice.|
@@ -563,7 +563,7 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 Indicates whether or not to show the loading indicator when an app or tab is loading. Default is **false**.
 > [!NOTE]
 >
-> * If you select`showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+> * If you select`showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and dialogs as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
 > * If you don't modify the content pages of your tab, the tab app doesn't load and shows the error `There was a problem reaching this app`.
 
 ## isFullScreen

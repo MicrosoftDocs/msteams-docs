@@ -120,7 +120,7 @@
     - name: Adaptive Cards
       href: task-modules-and-cards/cards/design-effective-cards.md
       displayName: column, ColumnSet 
-    - name: dialogs
+    - name: Dialogs (task modules)
       href: task-modules-and-cards/task-modules/design-teams-task-modules.md
       displayname: Forms
     - name: Activity feed notifications
@@ -391,7 +391,7 @@
     displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
   - name: Build tabs with Adaptive Cards
     href: tabs/how-to/build-adaptive-card-tabs.md
-    displayName: Slow load times, iFrame constraints, invoke activities, task module, dialog, task fetch, task submit, authentication
+    displayName: Slow load times, iFrame constraints, invoke activities, dialog, task fetch, task submit, authentication
   - name: Tabs link unfurling and Stage View
     href: tabs/tabs-link-unfurling.md
     displayName: Tab in stage view
@@ -505,7 +505,7 @@
     - name: Define action commands
       href: messaging-extensions/how-to/action-commands/define-action-command.md
       displayName: Command invoke locations, static list of parameters, action command manually
-    - name: Create and send dialog
+    - name: Create and send a dialog
       href: messaging-extensions/how-to/action-commands/create-task-module.md
       displayName: Initial invoke request, respond to fetchTask, payload activity, handleTeamsMessagingExtensionFetchTask
     - name: Respond to the dialog submit action
@@ -606,7 +606,7 @@
   - name: Create and send messages
     href: webhooks-and-connectors/how-to/connectors-using.md
     displayName: Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard
-- name: Build cards and dialogs
+- name: Build cards and dialogs (task modules)
   items:
   - name: Overview
     href: task-modules-and-cards/cards-and-task-modules.md
@@ -651,7 +651,7 @@
       href: task-modules-and-cards/what-are-task-modules.md
     - name: Invoke and dismiss dialogs
       href: task-modules-and-cards/task-modules/invoking-task-modules.md
-      displayName: JavaScript task modules, JavaScript dialogs, keyboard and accessibility guidelines, module sizing, css
+      displayName: JavaScript task modules, dialog, JavaScript dialogs, keyboard and accessibility guidelines, module sizing, css
     - name: Use dialogs in tabs
       href: task-modules-and-cards/task-modules/task-modules-tabs.md
       displayName: payload
