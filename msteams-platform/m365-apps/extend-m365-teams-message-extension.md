@@ -37,11 +37,11 @@ To complete this tutorial, you need:
 
 ## Link unfurling
 
-If your search-based message extension supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) in Teams, follow the steps in this article to enable link unfurling in Outlook on web  and Windows desktop environments. The [Code sample](#code-sample) section provides a link unfurling app for testing.
+If your search-based message extension supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) in Teams, follow the steps in this article to enable link unfurling in Outlook on web  and Windows desktop environments. The [code sample](#code-sample) section provides a link unfurling app for testing.
 
 ## Stage view
 
-If your search-based message extension unfurls links that display cards to launch [stage view](../tabs/tabs-link-unfurling.md) in Teams, follow the steps in this article that enables your users in Outlook on web and Windows desktop  to send links that work the same way in Outlook.
+If your search-based message extension unfurls links that display cards to launch [stage view](../tabs/tabs-link-unfurling.md) in Teams, follow the steps in this article that enables your users in Outlook on web and Windows desktop to send links that work the same way in Outlook.
 
 Outlook mobile users on Android and [Microsoft Outlook beta TestFlight](https://testflight.apple.com/join/AhS6fRDK) iOS rings can now receive and take actions on cards from your apps that were sent to them by users on Outlook on web and Windows desktop.
 

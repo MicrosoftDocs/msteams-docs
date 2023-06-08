@@ -16,7 +16,7 @@ To set up your development environment:
 >
 > * [Get Microsoft 365 Developer (Sandbox) Tenant and enable sideloading](#prepare-a-developer-tenant-for-testing)
 > * [Install Microsoft 365 Apps in your test environment](#install-microsoft-365-apps-in-your-test-environment)
-> * [*Optional*] [Enroll your Microsoft 365 tenant in Microsoft 365 Targeted Releases*](#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional)
+> * [*Optional*] [Enroll your Microsoft 365 tenant in Microsoft 365 Targeted Releases](#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional)
 > * [*Optional*] [Install Beta Channel builds of Microsoft 365 Apps in your test environment](#install-microsoft-365-apps-in-your-test-environment)
 > * [*Optional*] [Install Teams Toolkit extension for Microsoft Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-extension)
 
@@ -64,7 +64,6 @@ This section is optional and only required for any features in **preview**, as l
 1. Select **Save**.
 
 For more information on Microsoft 365 release options, see [set up the Standard or Targeted Release options](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release) in *Microsoft 365 admin center help*.
-
 
 ## Install Microsoft 365 apps in your test environment
 
