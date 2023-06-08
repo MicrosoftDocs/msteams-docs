@@ -55,7 +55,7 @@ If you'd like to use sample code to complete the full tutorial on updating an ex
 
 Alternately, you can use the ready-made Outlook-enabled app in the following section and skip the [*Update the app manifest*](#update-the-app-manifest) portion of this tutorial.
 
-### Quickstart
+### Quick start
 
 To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/NPM-search-connector-M365) that's already enabled to run in Outlook, use Teams Toolkit extension for Visual Studio Code.
 
