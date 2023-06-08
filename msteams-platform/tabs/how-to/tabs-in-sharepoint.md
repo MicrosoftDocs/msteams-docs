@@ -15,54 +15,21 @@ You can get a rich integration experience between Microsoft Teams and SharePoint
 
 With the November release of Teams and SharePoint Framework v.1.7, developers have two powerful capabilities:
 
-<ul  class="panelContent cardsC">
-<li>
-    <a href="#introduction">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage bgdAccent1">
-                            <img src="~/assets/images/tabs/tabs-in-sharepoint/image084.png" alt="tab-in-sharepoint view"/>
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Teams Tabs in SharePoint</h3>
-                        <p>Create rich app experiences in SharePoint by bringing your Teams app into SharePoint (this article).</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li>
-    <a href="/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage bgdAccent1">
-                            <img src="~/assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png" alt="web-part-exposed-as-a-tab" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>SharePoint Framework in Teams</h3>
-                        <p>Bring your SharePoint web parts to Teams and let SharePoint manage the hosting for you.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-</ul>
-
 ### Teams tabs in SharePoint
 
 With SharePoint Framework v.1.7, you can host your Teams tabs in SharePoint. As tabs hosted in SharePoint get a similar **full page** experience, exposing all the features of Teams tabs while retaining the context and familiarity of a SharePoint site.
 
+Create rich app experiences in SharePoint by bringing your [Teams app into SharePoint](#introduction).
+
+:::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image084.png" alt-text="Screenshot shows the tab in SharePoint view.":::
+
 ### SharePoint Framework in Teams
 
 You can also implement your Teams tabs using SharePoint Framework. SharePoint Framework web parts are hosted within SharePoint without any need for external services, such as Azure. For SharePoint developers, this significantly simplifies the development process for Teams tabs. For more information on SharePoint Framework in Teams, see [how to use the SharePoint Framework in Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+
+Bring your SharePoint web parts to Teams and let SharePoint manage the hosting for you.
+
+:::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png" alt-text="Screenshot shows the web part exposed as a tab.":::
 
 ## Introduction
 
