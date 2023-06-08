@@ -50,7 +50,7 @@ if (pages.currentApp.isSupported()) {
 else {/*Handle situation where capability isn't supported*/}
 ```
 
-You can also use the `pages.navigateToApp()` function or, in certain circumstances, deep links for tab navigation, as shown in [Create deep links](~/concepts/build-and-test/deep-link-application.md#navigate-within-your-app).
+You can use the `pages.navigateToApp()` function. You can also use deep links for tab navigation as shown in [create deep links](~/concepts/build-and-test/deep-link-application.md#navigate-within-your-app).
 
 ## Configure back button navigation
 
