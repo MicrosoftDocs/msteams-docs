@@ -185,7 +185,7 @@ protected override async Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccou
 
 ### Create Conversation API
 
-Bots aren't allowed to initiate a one-on-one conversation with an anonymous user. If a bot calls the [Create Conversation API](/dotnet/api/microsoft.bot.builder.botframeworkadapter.createconversationasync) with the user ID of an anonymous user, it will receive a `400` Bad Request status code and the following error response:
+Bots aren't allowed to initiate a one-on-one conversation with an anonymous user. If a bot calls the [Create Conversation API](/dotnet/api/microsoft.bot.builder.botframeworkadapter.createconversationasync) with the user ID of an anonymous user, it receives a `400` Bad Request status code and the following error response:
 
 ```csharp
 var conversationParameters = new ConversationParameters
@@ -230,7 +230,7 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
 * For an anonymous user, the user ID from `getContext` and the user ID received by the bot are different. It's not possible to correlate the two directly. If you need to track the user's identity between your tab and bot, you must prompt the user to authenticate with an external identity provider.
 
-* Anonymous users will see a generic app icon on bot messages and cards, instead of the app's actual icon.
+* Anonymous users see a generic app icon on bot messages and cards, instead of the app's actual icon.
 
     :::image type="content" source="../assets/images/apps-in-meetings/app-icon.png" alt-text="Screenshot shows how the app icon displays for anonymous user.":::
 
