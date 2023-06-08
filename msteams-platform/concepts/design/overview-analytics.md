@@ -39,7 +39,7 @@ Plan analytics for the Teams app the same way as you do for a SaaS product that 
 
 ## Plan early for analytics
 
-Plan analytics for your Teams app at the development design and solution architecture stage. Examine which of the existing data instrumentation and practices for your core SaaS web app will accrue to hosted canvas constructs such as tabs, dialogs, meeting apps and so on. in Teams that you’re optimizing or building from scratch to surface inside Teams. For Teams-specific capabilities, such as [conversational constructs](#conversational-constructs) like bots, message extensions, and so on, you'll need to plan and implement analytics instrumentation, capture relevant events, and context from the SDK methods from scratch.
+Plan analytics for your Teams app at the development design and solution architecture stage. Examine which of the existing data instrumentation and practices for your core SaaS web app accrues to hosted canvas constructs such as tabs, dialogs, meeting apps and so on. in Teams that you’re optimizing or building from scratch to surface inside Teams. For Teams-specific capabilities, such as [conversational constructs](#conversational-constructs) like bots, message extensions, and so on, you'll need to plan and implement analytics instrumentation, capture relevant events, and context from the SDK methods from scratch.
 
 At the time, your production Teams app is live on the Teams public app store and customers start using it, your analytics and data infrastructure should be fully operational. It ensures that you don’t miss tracking:
 
@@ -133,11 +133,11 @@ Use this information for enriching the bot's functionality and the user experien
 
 Each activity sent by Teams to your bot will contain the `turnContext` object from which all these relevant fields can be retrieved. You can leverage them in a similar way as described for hosted web canvas constructs.
 
-Since message extensions are based on the bot channel, most of the above applies to message extensions as well.
+Since message extensions are based on the bot channel, most of the content mentioned earlier applies to message extensions as well.
 
 ## Aggregate and user-specific insights
 
-Besides the obvious metrics in the SaaS world such as daily, weekly, monthly active users, time spent in your app and so on., implementing analytics thoughtfully for your Teams app per the guidance above will allow you to get insights such as:
+Besides the obvious metrics in the SaaS world such as daily, weekly, monthly active users, and time spent in your app, implementing analytics thoughtfully for your Teams app per the guidance above will allow you to get insights such as:
 
 - **Aggregate metrics**
   - Which platform capabilities, surface areas (for example, tabs, bots, message extensions) and UI constructs (cards, dialogs, stage views) leveraged in your Teams app found the most usage by your users?
@@ -166,7 +166,7 @@ Besides the obvious metrics in the SaaS world such as daily, weekly, monthly act
   - Which users have churned from your app in the past three months?
   - Has a specific user used your app in a Teams meeting?
 
-Next, see how you should methodically craft your data instrumentation strategy and decide what to measure based on which specific insights you want to derive from your Teams app usage. 
+Next, see how you should methodically craft your data instrumentation strategy and decide what to measure based on which specific insights you want to derive from your Teams app usage.
 
 ## Next step
 

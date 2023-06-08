@@ -252,14 +252,14 @@ The list of Teams activity handlers called from the `OnInvokeActivityAsync` Team
 
 | Invoke types                    | Handler                              | Description                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
-| CardAction.Invoke               | `OnTeamsCardActionInvokeAsync`       | This method is invoked when a card action invoke activity is received from the connector. |
-| fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | This method is invoked when a file consent card is accepted by the user. |
-| fileConsent/invoke              | `OnTeamsFileConsentAsync`            | This method is invoked when a file consent card activity is received from the connector. |
-| fileConsent/invoke              | `OnTeamsFileConsentDeclineAsync`     | This method is invoked when a file consent card is declined by the user. |
-| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | This method is invoked when a connector card for Microsoft 365 Groups action activity is received from the connector. |
-| signin/verifyState              | `OnTeamsSigninVerifyStateAsync`      | This method is invoked when a `signIn` verify state activity is received from the connector. |
-| task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | This method can be overridden in a derived class to provide logic when a dialog is fetched. |
-| task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | This method can be overridden in a derived class to provide logic when a dialog is submitted. |
+| CardAction.Invoke               | `OnTeamsCardActionInvokeAsync`       |When the connector receives a card action invoke activity,  this method is invoked. |
+| fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      |When a user accepts a file consent card, this method is invoked. |
+| fileConsent/invoke              | `OnTeamsFileConsentAsync`            | When the connector receives a file consent card activity,  this method is invoked. |
+| fileConsent/invoke              | `OnTeamsFileConsentDeclineAsync`     | When a user declines a file consent card, this method is invoked.|
+| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | When the connector receives a connector card for Microsoft 365 Groups action activity, this method is invoked. |
+| signin/verifyState              | `OnTeamsSigninVerifyStateAsync`      |When the connector receives a `signIn` verify state activity, this method is invoked. |
+| task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | You can override this method in a derived class to provide logic when a dialog is fetched. |
+| task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | You can override this method in a derived class to provide logic when a dialog is submitted. |
 
 The Invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](../messaging-extensions/what-are-messaging-extensions.md).
 
@@ -384,7 +384,7 @@ Now that you've familiarized yourself with bot activity handlers, let us see how
 |Sample name | Description | .NET | Node.js | Python|
 |----------------|-----------------|--------------|----------------|-------|
 | Teams conversation bot | This sample app shows how to use different bot conversation events available in bot framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)|
-| Bot samples | Set of bot framwork v4 samples | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|
+| Bot samples | Set of bot framework v4 samples | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|
 
 ## Next step
 
