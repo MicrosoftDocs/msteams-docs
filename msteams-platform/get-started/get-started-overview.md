@@ -8,7 +8,7 @@ ms.topic: reference
 
 Let's get started with building apps for Microsoft Teams and beyond!
 
-Experience the Teams app with GitHub Codespaces or walk through the steps to build a basic, real-world Teams app. The Get started also introduces you to the common tools, fundamental concepts, and more advanced functionalities.
+Use GitHub Codespaces or walk through the step-by-step guide to build a basic, real-world Teams app. The Get started module introduces you to common tools, fundamental concepts, and more advanced functionalities.
 
 Here's an idea of what you'll learn:
 
@@ -19,7 +19,7 @@ Here's an idea of what you'll learn:
 
 ## Build your first Teams app
 
-In this section, learn how to build Teams app with different capabilities, such as tab, scenario-based bot app, and message extension.
+In this section, learn more on how to build Teams app with different capabilities, such as tab, scenario-based bot app, and message extension.
 
 1. Select the type of Teams app that you want to build:
 
