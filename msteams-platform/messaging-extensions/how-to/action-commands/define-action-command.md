@@ -57,7 +57,7 @@ The following image displays the locations from where action command is invoked:
 
 :::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="Action command invoke locations":::
 
-To show custom options in **More options** or **More actions**, add your commands in [`composeExtensions`](../../../resources/schema/manifest-schema.md#composeextensions) of your app manifest schema, see [add the action command to your app manifest](#add-the-action-command-to-your-app-manifest).
+To show custom options in **More options** or **More actions**, add your commands in `[composeExtensions](../../../resources/schema/manifest-schema.md#composeextensions)` of your app manifest schema, see [add the action command to your app manifest](#add-the-action-command-to-your-app-manifest).
 
 ## Select how to create your task module
 

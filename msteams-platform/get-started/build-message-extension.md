@@ -82,7 +82,7 @@ Unlike GitHub Codespaces, you need to set up your development environment. Let's
 
 ---
 
-For more information about message extension, see [Define message extension action commands](../messaging-extensions/how-to/action-commands/define-action-command.md).
+For more information about message extension, see [define message extension action commands](../messaging-extensions/how-to/action-commands/define-action-command.md).
 
 If a bot is what you are interested in, go to:
 
