@@ -61,13 +61,11 @@ Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft TeamsJS client l
 
 ## Supported RSC permissions
 
-The following list provides all the RSC permissions categorized based on resource type. Each table also states which data access modes are currently available for each permission. In the tables below, **NA** indicates that the permission listed is currently not available in that data access mode.
+The following list provides all the RSC permissions categorized based on resource type. Each table also states which data access modes are available for each permission.
 
 * [RSC permissions for a team](#rsc-permissions-for-a-team): Includes the channels within a team.
 * [RSC permissions for a chat or meeting](#rsc-permissions-for-a-chat-or-meeting): Includes the meetings associated with the chats.
 * [RSC permissions for user access](#rsc-permissions-for-user-access): Includes permission for users to access different resources.
-
-
 
 > [!NOTE]
 > The features associated with some permissions listed here might not be generally available (GA).
