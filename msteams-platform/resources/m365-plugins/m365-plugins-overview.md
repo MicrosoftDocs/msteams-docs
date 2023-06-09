@@ -83,7 +83,7 @@ Microsoft 365 repository allows the user to use it as a file repository for an i
 
 The following image displays the Microsoft 365 file repository:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-365- repository.png" alt-text="Screenshot shows M365 repository." :::
+:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-365- repository.png" alt-text="Screenshot shows M365 repository." lightbox="../../assets/images/MoodleInstructions/microsoft-365- repository.png":::
 
 ## Teams meetings
 
@@ -111,7 +111,7 @@ The theme plugin gives users a unified enhanced experience with the following fe
 
 The following image displays the Teams theme set up by the user:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/teams-theme.png" alt-text="Screenshot shows the Microsoft Teams theme.":::
+:::image type="content" source="../../assets/images/MoodleInstructions/teams-theme.png" alt-text="Screenshot shows the Microsoft Teams theme." lightbox="../../assets/images/MoodleInstructions/teams-theme.png":::
 
 ## OneNote integration
 
@@ -141,7 +141,7 @@ Microsoft block enhances user experience by providing a user interface to modify
 
 The following image shows the Microsoft block user interface:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-block-1.png" alt-text="Screenshot shows Microsoft block.":::
+:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-block-1.png" alt-text="Screenshot shows Microsoft block." lightbox="../../assets/images/MoodleInstructions/microsoft-block-1.png":::
 
 ## oEmbed filter
 
@@ -154,7 +154,7 @@ oEmbed filter plugin simplifies and enhances user experience by simplifying incl
 
 The following image shows inclusion of external HTML content within Moodle:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/oEmbed-filter.png" alt-text="Screenshot shows the oEmbed filter page.":::
+:::image type="content" source="../../assets/images/MoodleInstructions/oEmbed-filter.png" alt-text="Screenshot shows the oEmbed filter page." lightbox="../../assets/images/MoodleInstructions/oEmbed-filter.png":::
 
 ## See also
 
