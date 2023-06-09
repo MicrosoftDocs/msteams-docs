@@ -1143,13 +1143,13 @@ Preview. This group of capabilities enables apps to show modal dialogs. There ar
 
 [Reference](/javascript/api/@microsoft/teams-js/dialog.adaptivecard) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Dialog.AdaptiveCard.tsx)
 
-Preview. Subcapability for interacting with adaptive card dialogs.
+Preview. Subcapability for interacting with Adaptive Card dialogs.
 
 ### `dialog.adaptiveCard.bot`
 
 [Reference](/javascript/api/@microsoft/teams-js/dialog.adaptivecard.bot)
 
-Preview. Subcapability for interaction with adaptive card dialogs that need to communicate with the Bot Framework.
+Preview. Subcapability for interaction with Adaptive Card dialogs that need to communicate with the Bot Framework.
 
 ### `dialog.update`
 
