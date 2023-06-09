@@ -1,6 +1,6 @@
 ---
 title: Microsoft 365 plugins
-description: In this article, you have information on Microsoft 365 plugins, plugin list and labels, Microsoft 365, and One Note interaction and more.
+description: In this article, you'll have Microsoft 365 plugins, plugin list and labels, Microsoft 365, and One Note interaction and more.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: Surbhigupta
