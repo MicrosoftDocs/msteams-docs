@@ -10,7 +10,7 @@ ms.date: 11/02/2021
 
 With Teams, you can build your app in a feature-rich environment. Using Teams as a platform for building apps, you can extend the Teams capabilities for your desktop and mobile app solutions. Choose the best features for your app.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/teams-platform.png" alt-text="Conceptual representation of Teams as a platform":::
+:::image type="content" source="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png" alt-text="Screenshot shows you the conceptual representation of Teams as a platform."lightbox="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png":::
 
 ## Teams app features
 
@@ -26,13 +26,17 @@ With Teams, you can build your app in a feature-rich environment. Using Teams as
 | Adaptive Card | Cards help you organize information into groups and give users the opportunity to interact with specific parts of the information. | Sharing using text and images; gathering information using input forms. |
 | Task modules | Task modules permit you to create modal pop-up experiences in your Teams application. | Run your own custom HTML or JavaScript code. Show an <`iframe`>-based widget such as a YouTube or Microsoft Stream video. |
 
-## Dive deeper
+### Extend your Teams app across Microsoft 365
 
-Choose to customize your app with features and tools, such as user authentication, Microsoft Graph, and Developer Portal.
+If you've already built some Teams apps, you can now extend your apps across Microsoft 365 and configure them to be accessible over Outlook and Microsoft 365.
 
-You've had a short tour through some of Teams platform features. You're ready to see how you can use them to build your app. Let's head towards the solution for the user story.
+:::image type="content" border="false" source="assets/images/overview/app-manifest.png" alt-text="Screenshot shows yous the configuration of properties in the Teams app manifest."lightbox="assets/images/overview/app-manifest.png":::
 
 ## Next step
+
+You've had a short tour through some of Teams platform features. You're ready to see how you can use them to build your app.
+
+Let's head towards the solution for the user story.
 
 > [!div class="nextstepaction"]
 > [The Teams solution](overview-solution.md)

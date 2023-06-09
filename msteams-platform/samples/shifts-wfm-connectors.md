@@ -1,6 +1,6 @@
 ---
 title: Production-ready Shifts Connectors
-description: Learn about the benefits of using Workforce management Shifts connectors for Teams, such as Kronos-to-Teams Shifts connector and JDA-to-Teams Shifts connector
+description: Learn about the benefits of using Workforce management Shifts connectors for Teams, such as Kronos-to-Teams Shifts connector and JDA-to-Teams Shifts connector.
 ms.topic: reference
 ms.date: 03/09/2020
 ms.localizationpriority: medium
@@ -32,7 +32,7 @@ Open shifts view in Teams:
 
 The shifts view in Teams is shown in the following image:
 
-![Open shifts in Teams](../assets/images/teams-open-shifts-view.png)
+:::image type="content" source="../assets/images/teams-open-shifts-view.png" alt-text="Screenshot shows the shifts view." lightbox="../assets/images/teams-open-shifts-view.png":::
 
 For more information on Teams Shifts Workforce management (WFM) connectors, see [Shifts connectors](/microsoft-365/frontline/shifts-connectors).
 

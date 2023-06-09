@@ -1,6 +1,7 @@
 ---
 title: Microsoft Teams tabs
-description: Learn to build tabs, webpages embedded in Microsoft Teams. Create a content page as part of personal, channel, or group tab. Also, learn to build tabs with Adaptive Cards.
+author: surbhigupta
+description: Learn to build tabs, webpages embedded in Microsoft Teams. Create a content page as part of personal, channel, or group tab.
 ms.localizationpriority: high
 ms.topic: overview
 ---

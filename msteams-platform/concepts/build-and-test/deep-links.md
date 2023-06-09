@@ -60,5 +60,4 @@ You can create a [deep link to perform a specific task](~/concepts/build-and-tes
 
 ## See also
 
-* [Integrate web apps](~/samples/integrate-web-apps-overview.md)
-* [Moodle LMS](~/resources/moodleinstructions.md)
+[Integrate web apps](../../samples/integrate-web-apps-overview.md)

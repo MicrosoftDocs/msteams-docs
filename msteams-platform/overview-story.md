@@ -12,7 +12,7 @@ Learn how apps let you help your users in the Teams environment.
 
 Take a look at this scenario:
 
-:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="A developer at a travel agency builds an app that sends weather forecast to customers so that they can plan ahead their traveling dates":::
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="Screenshot shows you to builds an app that sends weather forecast to customers so that they can plan ahead their traveling dates."lightbox="../msteams-platform/assets/images/overview/developer-scenario.png":::
 
 As a developer, you want a way to share important and relevant information to help your users. It's a typical user story. Relatable? But how does Teams fit in to this scenario?
 
@@ -22,7 +22,7 @@ Let’s dig deeper into this story and find out.
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-01.png" alt-text="User story - As a developer at a travel agency, I build apps for travelers":::
+      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-01.png" alt-text="Screenshot shows you the user story as a developer at a travel agency, build apps for travelers.":::
    :::column-end:::
    :::column span="":::
       #### Understand your user
@@ -45,12 +45,12 @@ Let’s dig deeper into this story and find out.
         - What issues do you want to address?
    :::column-end:::
    :::column span="":::
-       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-02.png" alt-text="I want to develop an app that sends weather forecast of the destination to customers...":::
+       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-02.png" alt-text="Screenshot shows you how to develop an app that sends weather forecast of the destination to customers.":::
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="...so that customers can know weather conditions and plan ahead":::
+      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="Screenshot shows you that customers can know weather conditions and plan ahead.":::
    :::column-end:::
    :::column span="":::
       #### List app requirements and benefits
@@ -73,7 +73,7 @@ Let’s dig deeper into this story and find out.
         - What features would be most convenient for user experience?
    :::column-end:::
    :::column span="":::
-       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-04.png" alt-text="Customers are well-prepared for traveling!":::
+       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-04.png" alt-text="Screenshot shows you the customers are well-prepared for traveling!":::
    :::column-end:::
 :::row-end:::
 

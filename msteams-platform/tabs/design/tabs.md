@@ -34,7 +34,7 @@ Users can access tabs by selecting the **More** button in the channel (example b
 
 The following example shows how users can add a tab in a channel.
 
-:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="Example shows a tab being added in a channel.":::
+:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="Example shows a tab being added in a channel." lightbox="../../assets/images/tabs/design-add-tab.png":::
 
 ## Set up a tab
 
@@ -42,7 +42,7 @@ There's a short setup process to add an app as a channel, chat, or meeting tab. 
 
 ### Tab configuration dialog
 
-:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="Example shows a tab configuration modal.":::
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="Example shows a tab configuration modal." lightbox="../../assets/images/tabs/design-set-up-tab-config.png":::
 
 #### Anatomy: Tab configuration dialog
 
@@ -65,7 +65,7 @@ You can add a step in which users must first sign in with their Microsoft creden
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Example shows a tab authentication screen.":::
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Example shows a tab authentication screen." lightbox="../../assets/images/tabs/design-set-up-tab-auth.png":::
 
 #### Mobile
 
@@ -91,7 +91,7 @@ Tabs provide a full-screen web experience in Teams where you can display collabo
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Example shows a tab with a task board.":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Example shows a tab with a task board." lightbox="../../assets/images/tabs/design-view-tab.png":::
 
 ### Anatomy: Tab
 
@@ -107,7 +107,7 @@ Tabs provide a full-screen web experience in Teams where you can display collabo
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="This Illustration shows the UI anatomy of a tab.":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="This Illustration shows the UI anatomy of a tab." lightbox="../../assets/images/tabs/design-view-tab-anatomy.png":::
 
 |Counter|Description|
 |----------|-----------|
@@ -141,7 +141,7 @@ Users can automatically post to a channel or chat once they’ve added a new tab
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="Example shows a tab being discussed in a channel thread.":::
+:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="Example shows a tab being discussed in a channel thread." lightbox="../../assets/images/tabs/design-use-tab-channel.png":::
 
 ### Tab chat
 
@@ -153,7 +153,7 @@ Users can have a conversation next to the tab content they're viewing. On deskto
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="Example shows a tab with a chat open on the right side.":::
+:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="Example shows a tab with a chat open on the right side." lightbox="../../assets/images/tabs/design-use-tab-side-chat.png":::
 
 ### Permissions and role-based views
 
@@ -179,7 +179,7 @@ You can include options to rename, remove, or modify a tab.
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Illustration showing the UI anatomy of a tab menu.":::
+:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Illustration showing the UI anatomy of a tab menu." lightbox="../../assets/images/tabs/design-manage-tab-menu-anatomy.png":::
 
 |Counter|Description|
 |----------|-----------|
@@ -291,7 +291,6 @@ If you don’t use Teams color tokens, your designs will be less scalable and ta
 :::image type="content" source="~/assets/images/tabs/mobile-tab-set-up-sso.png" alt-text="Illustration shows the best practices to follow when using a Tab app in Teams mobile.":::
 
 :::image type="content" source="~/assets/images/tabs/mobile-tab-best-practices.png" alt-text="Illustration shows the best practices to follow when using mobile tab app.":::
-
 
 ## See also
 
