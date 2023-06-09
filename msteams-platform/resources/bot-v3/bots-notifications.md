@@ -125,7 +125,7 @@ bot.on('conversationUpdate', (msg) => {
 
 ### User Added to a meeting
 
-The `conversationUpdate` event with the `membersAdded` object in the payload is sent when a user is added to a private scheduled meeting. The event details will be sent even when anonymous users join the meeting.
+The `conversationUpdate` event with the `membersAdded` object in the payload is sent when a user is added to a private scheduled meeting. The event details are sent even when anonymous users join the meeting.
 
 > [!NOTE]
 >
@@ -263,7 +263,7 @@ The `conversationUpdate` event with the `membersRemoved` object in the payload i
 
 ### User removed from a meeting
 
-The `conversationUpdate` event with the `membersRemoved` object in the payload is sent when a user is removed from a private scheduled meeting. The event details will be sent even when anonymous users join the meeting.
+The `conversationUpdate` event with the `membersRemoved` object in the payload is sent when a user is removed from a private scheduled meeting. The event details are sent even when anonymous users join the meeting.
 
 > [!NOTE]
 >
@@ -485,7 +485,7 @@ The `messageReaction` event is sent when a user adds or removes their reaction t
 }
 ```
 
-### Schema example: A user un-likes a message
+### Schema example: A user unlikes a message
 
 ```json
 {
