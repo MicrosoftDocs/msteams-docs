@@ -1,6 +1,6 @@
 ---
 title: Manifest schema reference
-description: In this article, you'll have the latest version of the public manifest schema for Microsoft Teams reference, schema and sample full manifest.
+description: In this article, you have the latest version of the public manifest schema for Microsoft Teams reference, schema and sample full manifest.
 ms.topic: reference
 ms.localizationpriority: high
 ms.date: 02/09/2023
@@ -741,7 +741,7 @@ Define the properties your app uses to post a user activity feed.
 
 **Optional** - string
 
-Specifies the install scope defined for this app by default. The defined scope will be the option displayed on the button when a user tries to add the app. Options are:
+Specifies the install scope defined for this app by default. The defined scope is the option displayed on the button when a user tries to add the app. Options are:
 
 * `personal`
 * `team`
@@ -752,7 +752,7 @@ Specifies the install scope defined for this app by default. The defined scope w
 
 **Optional** - object
 
-When a group install scope is selected, it will define the default capability when the user installs the app. Options are:
+When a group install scope is selected, it defines the default capability when the user installs the app. Options are:
 
 * `team`
 * `groupChat`
@@ -808,7 +808,7 @@ When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidd
 
 **Maximum size** - 128 characters
 
-The `publisherDocsUrl` is a HTTPS URL to an information page for admins to get guidelines before allowing an app, which is blocked by default. It can also be used to provide any instructions or information about the app which can be useful for the tenant admin.
+The `publisherDocsUrl` is a HTTPS URL to an information page for admins to get guidelines before allowing an app, which is blocked by default. It can also be used to provide any instructions or information about the app, which can be useful for the tenant admin.
 
 ## subscriptionOffer
 
@@ -916,7 +916,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 
 ## Create a manifest file
 
-If your app doesn't have a Teams app manifest file, you'll need to create it.
+If your app doesn't have a Teams app manifest file, you need to create it.
 
 To create a Teams app manifest file:
 
@@ -925,7 +925,7 @@ To create a Teams app manifest file:
 
 <br>
 <details>
-<summary>Here's an example of a example of manifest schema for a tab app with SSO enabled:</summary>
+<summary>Here's an example of manifest schema for a tab app with SSO enabled:</summary>
 <br>
 
 > [!NOTE]
