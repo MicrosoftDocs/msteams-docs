@@ -15,7 +15,7 @@ Starting with version 2.0.0, Teams JavaScript client library (TeamsJS) enables [
 
 This article details the level of support of TeamsJS version 2.x capabilities across various host applications. For more information on what's changed between TeamsJS versions 1.x and 2.x, see [What's new in TeamsJS version 2.x.x](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx).
 
-The following table *TeamsJS Capability* lists TeamsJS capabilities (public namespaces) and their support across Microsoft 365 host applications. Some capabilities are marked with *Deprecated* or *Preview* badges, which have the following meanings:
+The following *TeamsJS Capability* table lists TeamsJS capabilities (public namespaces) and their support across Microsoft 365 host applications. Some capabilities are marked with *Deprecated* or *Preview* badges, which have the following meanings:
 
 | Badge | Meaning |
 | - | - |
