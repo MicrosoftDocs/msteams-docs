@@ -8,9 +8,7 @@ ms.localizationpriority: medium
 
 # Add authentication to your Teams bot
 
-There are times when you may need to create bots in Microsoft Teams that can access resources on behalf of the user, such as a mail service.
-
-This article demonstrates how to use Azure Bot Service v4 SDK authentication, based on OAuth 2.0. This makes it easier to develop a bot that can use authentication tokens based on the user's credentials. Key in all this is the use of **identity providers**, as we'll see later.
+You can create bots in Microsoft Teams that access resources on behalf of the user, such as a mail service. You can use Azure Bot Service v4 SDK authentication, based on OAuth 2.0. This makes it easier to develop a bot that can use authentication tokens based on the user's credentials. The key is the use of **identity providers**.
 
 OAuth 2.0 is an open standard for authentication and authorization used by Microsoft Azure Active Directory (Azure AD) and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
 
@@ -40,13 +38,13 @@ In this article you'll learn:
 
 ## Create the resource group
 
-The resource group and the service plan aren't strictly necessary, but they allow you to conveniently release the resources you create. This is good practice for keeping your resources organized and manageable.
+The resource group and the service plan aren't strictly necessary, but they allow you to conveniently release the resources you create. It's recommended to keep your resources organized and manageable.
 
 You use a resource group to create individual resources for the Bot Framework. For performance, ensure that these resources are located in the same Azure region.
 
 1. In your browser, sign into the [**Microsoft Azure portal**][azure-portal].
 1. In the left navigation panel, select **Resource groups**.
-1. In the upper left of the displayed window, select **Add** tab to create a new resource group. You'll be prompted to provide the following:
+1. In the upper left of the displayed window, select **Add** tab to create a new resource group. You'll be prompted to provide the following details:
     1. **Subscription**. Use your existing subscription.
     1. **Resource group**. Enter the name for the resource group. An example could be  *TeamsResourceGroup*. Remember that the name must be unique.
     1. From the **Region** drop-down menu, select *West US*, or a region close to your applications.
@@ -67,7 +65,7 @@ You use a resource group to create individual resources for the Bot Framework. F
     1. **Name**. Enter the name for the service plan. An example could be  *TeamsServicePlan*. Remember that the name must be unique, within the group.
     1. **Operating System**. Select *Windows* or your applicable OS.
     1. **Region**. Select *West US* or a region close to your applications.
-    1. **Pricing Tier**. Make sure that *Standard S1* is selected. This should be the default value.
+    1. **Pricing Tier**. Make sure that *Standard S1* is selected, which is the default value.
     1. Select the **Review and create** button. You should see a banner that reads *Validation passed*.
     1. Select **Create**. It may take a few minutes to create the app service plan. The plan will be listed in the resource group.
 
@@ -247,7 +245,7 @@ Note: There are two options for Service Providers here, Azure AD V1 and Azure AD
 
 1. Select the connection entry to open the connection you created.
 1. Select **Test Connection** at the top of the **Service Provider Connection Setting** panel.
-1. The first time you do this will open a new browser window asking you to select an account. Select the one you want to use.
+1. For the first time, it opens a new browser window asking you to select an account. Select the one you want to use.
 1. Next, you'll be asked to allow to the identity provider to use your data (credentials). The following image is an example:
 
    :::image type="content" source="../../../assets/images/authentication/auth-bot-connection-test-accept.PNG" alt-text="The screenshot shows how to add Teams bot auth connection string adv1.":::
@@ -328,7 +326,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
    :::image type="content" source="../../../assets/images/authentication/auth-bot-app-service.png" alt-text="Screenshot shows how to enter required information for auth app service.":::
 
 1. Select **Create**.
-1. If the deployment completes successfully, you should see it reflected in Visual Studio. A page is displayed in your default browser saying *Your bot is ready!*. The URL will be similar to this: `https://botteamsauth.azurewebsites.net/`. Save it to a file.
+1. If the deployment completes successfully, you should see it reflected in Visual Studio. A page is displayed in your default browser as *Your bot is ready!*. The URL will be similar to this: `https://botteamsauth.azurewebsites.net/`. Save it to a file.
 1. In your browser, go to the [**Azure portal**][azure-portal].
 1. Check your resource group, the bot should be listed along with the other resources. The following image is an example:
 

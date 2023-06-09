@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Microsoft Teams sends notifications to your bot for changes or events that happen in scopes where your bot is active. You can use these events to trigger service logic, such as the following:
+Microsoft Teams sends notifications to your bot for changes or events that happen in scopes where your bot is active. The following list provides events to trigger service logic:
 
 * Trigger a welcome message when your bot is added to a team.
 * Query and cache group information when the bot is added to a group chat.
@@ -441,7 +441,7 @@ The channel events are as follows:
 
 ## Reactions
 
-The `messageReaction` event is sent when a user adds or removes his or her reaction to a message, which was originally sent by your bot. `replyToId` contains the ID of the specific message.
+The `messageReaction` event is sent when a user adds or removes their reaction to a message, which was originally sent by your bot. `replyToId` contains the ID of the specific message.
 
 ### Schema example: A user likes a message
 
