@@ -149,19 +149,7 @@ $.ajax({
 
 ### Validate the access token
 
-Web APIs on your server must decode the access token, and verify if it's sent from the client. The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows. The web APIs must decode access token. Optionally, you can copy and paste access token manually into a tool, such as jwt.ms.
-
-There are a number of libraries available that can handle JWT validation. Basic validation includes:
-
-- Checking that the token is well-formed
-- Checking that the token was issued by the intended authority
-- Checking that the token is targeted to the web API
-
-Keep in mind the following guidelines when validating the token:
-
-- Valid SSO tokens are issued by Azure AD. The `iss` claim in the token should start with this value.
-- The token's `aud1` parameter will be set to the app ID generated during Azure AD app registration.
-- The token's `scp` parameter will be set to `access_as_user`.
+For more information on validating the access token, see [validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
 
 #### Example access token
 
