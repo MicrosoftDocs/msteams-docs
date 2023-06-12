@@ -5,6 +5,7 @@ description: In this article, learn about tools and Bot Framework SDKs(C#, Pytho
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
+ms.date: 12/05/2022
 ---
 
 # Bots and SDKs
