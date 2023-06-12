@@ -183,10 +183,15 @@ Example of the unfurling experience for the course type:
 |geo.longitude      |  Longitude of the restaurant location.       |
 |aggregateRating.reviewCount      | Average number of reviews for the restaurant.        |
 |aggregateRating.ratingCount      | Average number of ratings for the restaurant.        |
+
 Example of the unfurling experience for the restaurant type:
 :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-restaurant.png" alt-text="Screenshot shows the unfurling experience of the restaurant template in Microsoft Teams.":::
 
-:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-schema-map-actionable-previews.png" alt-text="Graphic shows an example of schema metadata mapped to elements in the rich unfurling preview of an Adaptive Card.":::
+---
+
+The following is an example of schema metadata mapped to the rich unfurling preview of an Adaptive Card:
+
+:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-schema-map-actionable-previews.png" alt-text="Graphic shows an example of schema metadata mapped to elements in the rich unfurling preview of an Adaptive Card." lightbox="../../assets/images/messaging-extension/micro-capabilities-schema-map-actionable-previews.png":::
 
 ### Validate your website link
 
