@@ -76,6 +76,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Real-time meeting events are supported in channel meetings
+        url: apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api
       - text: Resource-specific consent for your Teams app
         url: graph-api/rsc/resource-specific-consent.md      
       - text: Drive customer adoption of your app
@@ -102,14 +104,6 @@ landingContent:
         url: bots/how-to/update-and-delete-bot-messages.md#get-edit-or-undelete-message-events
       - text: Set up Microsoft license management
         url: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
-      - text: Apps for Teams meetings support anonymous users
-        url: apps-in-teams-meetings/build-apps-for-anonymous-user.md
-      - text: Notification bot in Teams
-        url: bots/how-to/conversations/notification-bot-in-teams.md
-
-
-    - linkListType: whats-new
-      links:
       - text: Command bot in Teams
         url: bots/how-to/conversations/command-bot-in-teams.md
       - text: Enable SSO for your bot and message extension app
