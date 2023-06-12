@@ -128,7 +128,6 @@ You can customize Azure AD manifest template to update Azure AD application.
     </details>
 
 <br>
-
 <details>
 <summary>3. Deploy Azure AD application changes for local environment</summary>
 
