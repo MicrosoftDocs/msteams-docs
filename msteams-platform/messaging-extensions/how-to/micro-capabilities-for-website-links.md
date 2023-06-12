@@ -172,17 +172,19 @@ Example of the unfurling experience for the course type:
 
 |Property |Description  |
 |---------|---------|
-|`@type`     |   Place      |
-|image    | URL of the image of for the location.        |
-|name    |  Name of the course.       |
-|address    |  Postal address.       |
-|addressRegion      |    Region code.  |
-|addressLocality    |   Name of the region.     |
-|url     |  URL of the course website.       |
-
----
-
-The following is an example of schema metadata mapped to the rich unfurling preview of an Adaptive Card:
+|`@type`     |  Restaurant       |
+|image    | URL of the image of for the restaurant.        |
+|name    |  Name of the author.       |
+|priceRange      |  Price range of the restaurant.       |
+|aggregateRating.ratingValue       | Average Rating of the restaurant.        |
+|address     |  Physical address of the restaurant.       |
+|url     | Link to the restaurant's website.        |
+|geo.latitude     | Latitude of the restaurant location.       |
+|geo.longitude      |  Longitude of the restaurant location.       |
+|aggregateRating.reviewCount      | Average number of reviews for the restaurant.        |
+|aggregateRating.ratingCount      | Average number of ratings for the restaurant.        |
+Example of the unfurling experience for the restaurant type:
+:::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-restaurant.png" alt-text="Screenshot shows the unfurling experience of the restaurant template in Microsoft Teams.":::
 
 :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-schema-map-actionable-previews.png" alt-text="Graphic shows an example of schema metadata mapped to elements in the rich unfurling preview of an Adaptive Card.":::
 
