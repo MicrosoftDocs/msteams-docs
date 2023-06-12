@@ -275,13 +275,13 @@ The `https://` URL referencing the JSON Schema for the manifest.
 
 ## manifestVersion
 
-**Required** &ndash; String
+**Required**—String
 
 The version of the manifest schema this manifest is using.
 
 ## version
 
-**Required** &ndash; String
+**Required**—String
 
 The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it overwrites the existing one and the user will get the new functionality. If this app was submitted to the store, the new manifest has to be resubmitted and revalidated. Then, users of this app will get the new updated manifest automatically in a few hours, after it's approved.
 
@@ -365,7 +365,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 ## accentColor
 
-**Required** &ndash; String
+**Required**—String
 
 A color to use with and as a background for your outline icons.
 
@@ -821,7 +821,7 @@ Contains objects that define the set of extensions for the app. Used to specify 
 |`alternates`| array | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both. For more information on background, see [EquivalentAddins](/javascript/api/manifest/equivalentaddins). |
 |`audienceClaimUrl`| string | 2048 | | The url for your extension, used to validate Exchange user identity tokens. |
 
-For more information, see the [extension property](/office/dev/add-ins/develop/json-manifest-overview) in the Office Add-ins manifest documentation.
+For more information, see [extension property](/office/dev/add-ins/develop/json-manifest-overview) in the Office Add-ins manifest documentation.
 
 ## See also
 
