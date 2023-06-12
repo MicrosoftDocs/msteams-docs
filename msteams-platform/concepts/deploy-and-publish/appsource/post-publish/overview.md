@@ -72,7 +72,7 @@ Microsoft runs automated and manual continuous health checks for all the publish
 
 **Microsoft may contact you for a resolution when:**
 
-* Microsoft is unable to run our continuous health evaluation tests on your app as the test credentials or test environment you provided have expired.
+* Microsoft is unable to run the continuous health evaluation tests on your app as the test credentials or test environment you provided have expired.
 
 * Microsoft sees or is made aware of critical security vulnerabilities in your app. These may endanger your users or the Microsoft commercial marketplace.
 
@@ -82,7 +82,7 @@ Microsoft runs automated and manual continuous health checks for all the publish
 
 * Microsoft has identified commercial marketplace policy failures in your app as part of the continuous health evaluation of your app post publish.
 
-Microsoft doesn't receive a suitable response from you, it'll reach out to you again, and may simultaneously remove your app to protect end users. If it hears back from you, and you confirm that issues are resolved and you've submitted an updated app for review, Microsoft will re-list your app when the app passes review.
+If Microsoft doesn't receive a suitable response from you, it'll reach out to you again, and may simultaneously remove your app to protect end users. If it hears back from you, and you confirm that issues are resolved and you've submitted an updated app for review, Microsoft will re-list your app when the app passes review.
 
 **Microsoft may remove your app without prior notice (other than to inform you of that action) when:**
 
