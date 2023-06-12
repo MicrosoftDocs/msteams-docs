@@ -70,8 +70,28 @@
   - name: Understand design process
     href: concepts/design/design-teams-app-process.md
   - name: Design system
-    href: concepts/design/design-teams-app-fundamentals.md
-    displayName: icons, Font, Color 
+    items:
+    - name: Overview
+      href: concepts/design/design-teams-app-fundamentals.md
+      displayName: icons, Font, Color 
+    - name: Layout and scaling
+      href: concepts/design/design-teams-app-layout-scaling.md
+      displayName: layout, scaling 
+    - name: App icons for store and app bar
+      href: concepts/design/design-teams-app-icon-store-appbar.md
+      displayName: icons, Font, Color 
+    - name: App artwork for store
+      href: concepts/design/design-teams-app-artwork-store.md
+      displayName: app artwork 
+    - name: Type
+      href: concepts/design/design-teams-app-type.md
+      displayName: type 
+    - name: Color
+      href: concepts/design/design-teams-app-color.md
+      displayName: Color 
+    - name: Shape and elevation
+      href: concepts/design/design-teams-app-shape-elevation.md
+      displayName: shape, elevation
   - name: App capabilities
     items:
     - name: Understand app structure
@@ -374,7 +394,7 @@
     displayName: Slow load times, iFrame constraints, invoke activities, task module, task fetch, task submit, authentication
   - name: Tabs link unfurling and Stage View
     href: tabs/tabs-link-unfurling.md
-    displayName: Tab in stage view
+    displayName: Tab in Stage View
   - name: Create conversational tabs
     href: tabs/how-to/conversational-tabs.md
     displayName: configurable
@@ -528,7 +548,7 @@
       displayName: supportsAnonymousGuestUsers, guest
     - name: Meeting apps APIs
       href: apps-in-teams-meetings/meeting-apps-apis.md
-      displayName: payload, recurring, getparticipant, captions, targeted meeting notification
+      displayName: payload, recurring, getparticipant, captions, targeted meeting notification, real-time meeting events, meeting start and end events
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview

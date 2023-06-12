@@ -14,10 +14,11 @@ ms.date: 04/07/2022
 >
 > Teams AI library is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
+<br>
 <details>
 <summary>What does the Teams AI library do?</summary>
 
-Teams AI library provides abstractions for developers to build robust applications that utilize OpenAI large language model (LLM)s.
+Teams AI library provides abstractions for you to build robust applications that utilize OpenAI large language model (LLM)s.
 
 </details>
 <br>
@@ -55,7 +56,7 @@ The two are independent and can't be integrated.
 <br>
 
 <details>
-<summary> How does Teams AI library co-exist against the hero-story of developers building for the Skills ecosystem in Microsoft 365?</summary>
+<summary> How does Teams AI library co-exist against the hero-story of developers building for the skills ecosystem in Microsoft 365?</summary>
 
 Teams AI library story is targeted towards Pro-developers and separate from the hero-story around skills ecosystem in Microsoft 365.
 
