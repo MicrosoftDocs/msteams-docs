@@ -64,8 +64,6 @@ You can customize Azure AD manifest template to update Azure AD application.
 
     - The `resourceAccess.type` property is used for delegated permission or application permission. `Scope` means delegated permission and `Role` means application permission.
 
-    <br>
-
     </details>
 
     <details>
@@ -95,8 +93,6 @@ You can customize Azure AD manifest template to update Azure AD application.
 
      1. Select the application name and get the application ID from the overview page.
 
-    <br>
-
     </details>
 
     <details>
@@ -115,11 +111,7 @@ You can customize Azure AD manifest template to update Azure AD application.
       ]
       ```
 
-    <br>
-
     </details>
-
-<br>
 
 3. Update Azure AD application changes for local or remote environment.
 
@@ -139,8 +131,6 @@ You can customize Azure AD manifest template to update Azure AD application.
 
    1. Additionally, you can open the command palette and select **Teams: Update Azure Active Directory App** to update Azure AD app.
       :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy4.PNG" alt-text="Screenshot shows the Command Palette option.":::
-
-<br>
 
 ## Azure AD manifest template placeholders
 
