@@ -26,7 +26,9 @@ You have the following options to respond:
 If the app doesn't respond within five seconds, the Teams client will retry the request twice before it sends an error message **Unable to reach the app**. If the bot replies after the timeout, the response is ignored.
 
 > [!NOTE]
-> The app must defer any long-running actions after the bot replies to the invoke request. The long-running action results can be delivered as a message.
+>
+>* The app must defer any long-running actions after the bot replies to the invoke request. The long-running action results can be delivered as a message.
+>* Your app has five seconds to respond to the invoke message.
 
 For authentication or configuration, after the user completes the process, the original invoke is resent to your web service. The following table shows which types of responses are available, based on the invoke location `commandContext` of the message extension:
 
@@ -72,7 +74,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-This is an example of the JSON object that you receive. The `commandContext` parameter indicates where your message extension was triggered from. The `data` object contains the fields on the form as parameters, and the values the user submitted. The JSON object highlights the most relevant fields.
+The following example is a JSON object that you receive. The `commandContext` parameter indicates where your message extension was triggered from. The `data` object contains the fields on the form as parameters, and the values the user submitted. The JSON object highlights the most relevant fields:
 
 ```json
 {
@@ -193,7 +195,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## Respond with another task module
 
-You can select to respond to the `submitAction` event with an additional task module. This is useful when you need to:
+You can select to respond to the `submitAction` event with an additional task module. It's useful in the following scenarios:
 
 * Collect large amounts of information.
 * Dynamically change the information collection based on user input.
@@ -206,7 +208,7 @@ The method for response is the same as [responding to the initial `fetchTask` ev
 > [!NOTE]
 > The prerequisite to get the bot response with an Adaptive card is that you must add the `bot` object to your app manifest, and define the required scope for the bot. Use the same ID as your message extension for your bot.
 
-You can also respond to the `submitAction` by inserting a message with an Adaptive Card into the channel with a bot. The user can preview the message before submitting it. This is useful in scenarios where you gather information from the users before creating an Adaptive Card response, or when you update the card after someone interacts with it.
+You can also respond to the `submitAction` by inserting a message with an Adaptive Card into the channel with a bot. The user can preview the message before submitting it. It's useful in scenarios where you gather information from the users before creating an Adaptive Card response, or when you update the card after someone interacts with it.
 
 The following scenario shows how the app Polly configures a poll without including the configuration steps in the channel conversation:
 
@@ -406,7 +408,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### Respond to botMessagePreview edit
 
-If the user edits the card before sending, by selecting **Edit**, you receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = edit`. Respond by returning the task module you sent, in response to the initial `composeExtension/fetchTask` invoke that began the interaction. This allows the user to start the process by reentering the original information. Use the available information to update the task module so that the user need not fill out all information from scratch.
+If the user edits the card before sending, by selecting **Edit**, you receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = edit`. Respond by returning the task module you sent, in response to the initial `composeExtension/fetchTask` invoke that began the interaction. The user can start the process by reentering the original information. Use the available information to update the task module so that the user doesn't need to fill out all information from scratch.
 For more information on responding to the initial `fetchTask` event, see [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md).
 
 ### Respond to botMessagePreview send
@@ -599,10 +601,11 @@ The following section is a description of the entities in the `OnBehalfOf` Array
   
 ## Code sample
 
-| Sample Name           | Description | .NET    | Node.js   |
-|:---------------------|:--------------|:---------|:--------|
-|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) |
-|Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|
+| Sample name           | Description | .NET    | Node.js   | Manifest|
+|:---------------------|:--------------|:---------|:--------|:--------|
+|Teams message extension action| This sample shows how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip)
+|Message extension action preview| This sample shows how to use action preview in Messaging Extensions using Bot Framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
+|Teams message extension search   |  This sample shows how to build a Search-based Message Extension. It searches nudget packages and displays the results in search based messaging extension.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
 
 ## Next Step
 

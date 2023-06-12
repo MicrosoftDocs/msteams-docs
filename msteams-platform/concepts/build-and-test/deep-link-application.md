@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Deep link to an application
 
-Application can open the profile dialog through deep links and help users to learn more about the application, permissions, and more. You can create a deep link for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the URL, `https://teams.microsoft.com/l/app/<your-app-id>`. A dialog appears to install or open the app.
+Application can open the profile dialog through deep links and help users to learn more about the application, permissions, and more. You can create a deep link for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the URL, `https://teams.microsoft.com/l/app/<appId>`. A dialog appears to install or open the app.
 
 If your app is approved for mobile platform, you can deep link to an app on mobile. Apple App Store Connect Team ID is required additionally for the deep link to work on Teams-iOS. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
@@ -21,7 +21,7 @@ Deep link to an app isn't supported for custom apps.
 
 You can open an app install dialog from your Teams app and also can install the app in other contexts. Use the following deep link format to open an app install dialog from your Teams:
 
-`https://teams.microsoft.com/l/app/<your-app-id>`, where `<your-app-id>` is the application ID(f46ad259-0fe5-4f12-872d-c737b174bcb4).
+`https://teams.microsoft.com/l/app/<appId>`, where `<appId>` is the application ID.
 
 Applications can use the TeamsJS library to open the dialog without manually generating the deep link. Following is an example to open the app install dialog using TeamsJS:
 
@@ -30,7 +30,7 @@ Applications can use the TeamsJS library to open the dialog without manually gen
 ```javascript
 // Open an app install dialog from your tab
 if(appInstallDialog.isSupported()) {
-    const dialogPromise = appInstallDialog.openAppInstallDialog({ appId: "f46ad259-0fe5-4f12-872d-c737b174bcb4" });
+    const dialogPromise = appInstallDialog.openAppInstallDialog({ appId: "<appId>" });
     dialogPromise.
       then((result) => {/*Successful operation*/}).
       catch((error) => {/*Unsuccessful operation*/});
@@ -44,7 +44,7 @@ For more information about the install dialog, see the [appInstallDialog.openApp
 
 ```javascript
 // Open an app install dialog from your tab
-microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-4f12-872d-c737b174bcb4");
+microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/<appId>");
 ```
 
 ---
@@ -146,11 +146,11 @@ While it's recommended to use `shareDeepLink()` to generate a deep link to your 
 > [!NOTE]
 >
 > * Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. For more information on tab scopes, see the [manifest](~/resources/schema/manifest-schema.md) reference.
-> * Deep links work properly only if the tab was configured using the v0.4 or later library as it has an entity ID. Deep links to tabs without entity IDs still go to the tab but cannot provide the subentity ID to the tab.
+> * Deep links work properly only if the tab was configured using the v0.4 or later library as it has an entity ID. Deep links to tabs without entity IDs still go to the tab but can't provide the subentity ID to the tab.
 
 Use the following format for a deep link that you can use in a bot, connector, or message extension card:
 
-`https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
+`https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>&openInMeeting=false`
 
 > [!NOTE]
 >
@@ -169,6 +169,7 @@ The query parameters are:
 | `context.channelId`&emsp; | Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It isn't available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 | `context.chatId`&emsp; | Chat ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md) for group and meeting chat. | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
 | `context.contextType`&emsp; |  Chat is the only supported contextType for meetings. | chat |
+| `openInMeeting`&emsp; | `openInMeeting` is used to control the user experience when the target tab is associated with a meeting. If user interacts with the deep link in an ongoing meeting experience, by default Teams opens the app in the in-meeting side panel. Set this value to `false` to always open the app in the meeting chat tab rather than the side panel, regardless of the meeting status. Teams ignore any value other than `false`. | `false` |
 
 **Examples**:
 
@@ -193,7 +194,7 @@ The query parameters are:
     >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
 
 > [!IMPORTANT]
-> Ensure that all the query parameters are properly URI encoded. You must follow the preceding examples using the last example:
+> Ensure that all the query parameters and the white spaces are properly URI encoded. You must follow the preceding examples using the last example:
 >
 > ```javascript
 > var encodedWebUrl = encodeURIComponent(JSON.stringify('https://tasklist.example.com/123/456&label=Task 456'));
@@ -212,7 +213,7 @@ For more information about capabilities and the APIs in the TeamsJS library, see
 ### Deep link for SharePoint Framework tabs
 
 You can use the following deep link format in a bot, connector, or message extension card:
-`https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`.
+`https://teams.microsoft.com/l/entity/<appId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`.
 
 > [!NOTE]
 >
@@ -256,4 +257,4 @@ The following table provides information on `APP_ID` and `BOT_APP_ID`:
 
 | Sample name | Description | .NET |Node.js|
 |-------------|-------------|------|----|
-|Deep link consuming Subentity ID | Teams sample app for demonstrating deep link from bot chat to tab consuming Subentity ID.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+|Deep link consuming Subentity ID | This sample shows how to use deep-link from bot chat to tab consuming Subentity ID. It also shows deeplinks for navigate to app, navigate to chat, open profile dialog and open scheduling dialog.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|

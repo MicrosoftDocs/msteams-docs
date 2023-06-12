@@ -34,7 +34,7 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
    > The **channelId** is optional for channel tabs. However, it is recommended if you want to keep your implementation across channel and static tabs the same.
 * **title**: The title that is shown to the user in the chat panel.
 
-Most of these values can also be retrieved from the [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) API (`microsoftTeams.getContext()` in TeamsJS v1). For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true)
+Most of these values can also be retrieved from the [`app.getContext()`](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-getcontext) API (`microsoftTeams.getContext()` in TeamsJS v1). For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app.pageinfo).
 
 ```javascript
 microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, “entityId”: “tabInstanceId-1”, “channelId”: ”19:baa6e71f65b948d189bf5c892baa8e5a@thread.skype”, “title”: "Task Title”});
@@ -92,9 +92,9 @@ You can also listen for an event when the users selects **Close (X)** in the con
 
 ## Code sample
 
-| Sample name | Description | .NET |Node.js|
-|-------------|-------------|------|----|
-|Create Conversational tab| Microsoft Teams tab sample app for demonstrating create conversation tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+| Sample name | Description | .NET |Node.js|Manifest|
+|-------------|-------------|------|----|----|
+|Create Conversational tab| Microsoft Teams tab sample app for demonstrating create conversation tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp/demo-manifest/tab-conversations.zip)|
 
 ## Next step
 

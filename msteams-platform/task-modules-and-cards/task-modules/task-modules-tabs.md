@@ -42,6 +42,9 @@ microsoftTeams.tasks.submitTask(
 
 ```
 
+> [!NOTE]
+> The `dialog.submit` property can only be called within a dialog.
+
 ---
 
 You can see how invoking a task module from a tab and submitting the result of a task module works.
@@ -228,9 +231,9 @@ The following table provides the possible values of `err` that can be received b
 
 ## Code sample
 
-|Sample name | Description | .NET | Node.js|
-|----------------|-----------------|--------------|----------------|
-|Task module sample tabs and bots-V3 | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)|
+|Sample name | Description | .NET | Node.js | Manifest
+|----------------|-----------------|--------------|----------------|----------------|
+|Task module sample bots-V4 | This sample shows how to create task modules using bot framework v4 and teams tabs. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
 
 ## Next step
 

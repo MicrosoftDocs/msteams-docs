@@ -15,11 +15,9 @@ To install the Microsoft Teams bot in a team or group chat, add the `teams` or `
 Bots in a group or channel only receive messages when they're mentioned @botname. They don't receive any other messages sent to the conversation. The bot must be @mentioned directly. Your bot doesn't receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.
 
 > [!NOTE]
-> 
+>
 > * RSC for all *chat* messages is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
->
 > * Using resource-specific consent (RSC), bots can receive all channel messages in teams that it's installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
->
 > * Posting a message or Adaptive Card to a private channel is currently not supported.
 
 See the following video to learn about channel and group chat conversations with a bot:
@@ -190,6 +188,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
     {
         Mentioned = turnContext.Activity.From,
         Text = $"<at>{XmlConvert.EncodeName(turnContext.Activity.From.Name)}</at>",
+        Type = "mention",
     };
 
     // Returns a simple text message.
@@ -209,6 +208,7 @@ this.onMessage(async (turnContext, next) => {
     const mention = {
         mentioned: turnContext.activity.from,
         text: `<at>${ new TextEncoder().encode(turnContext.activity.from.name) }</at>`,
+        type: "mention",
     } as Mention;
 
     // Returns a simple text message.

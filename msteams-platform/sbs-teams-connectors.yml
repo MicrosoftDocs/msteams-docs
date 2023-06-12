@@ -42,7 +42,7 @@ items:
      | --- | --- | --- |
      | **Required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call, and all in one place.|
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install the <br> **ASP.NET and web development** workload. | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
    
       > [!NOTE]
@@ -184,7 +184,7 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-connector/manageapp_1.png" alt-text="Screenshot of Microsoft Teams with App icons and Manage your apps highlighted in red.":::
 
-    1. Select **Upload a custom app**.
+    1. Select **Upload an app** and select **Upload a custom app**.
  
        :::image type="content" source="~/assets/images/sbs-connector/upload_1.png" alt-text="Screenshot of Upload an app with Upload a custom app highlighted in red.":::
       

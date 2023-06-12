@@ -15,16 +15,10 @@ items:
 - durationInMinutes: 1
   content: |
     Start Microsoft Teams app development with your first Teams app. 
-    You can create a tab app with Teams. 
-
-    Your app will have a capability, which comes with its own UI and UX:
+    You can create a tab app with Teams using Javascript. 
     
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features.":::
-    
-    > [!NOTE]
-    > In this tutorial, you can create a tab app with JavaScript.
 
-    In this tutorial, you learn:
+    In this tutorial, you'll learn:
 
     - How to set up a new project with Teams Toolkit.
     - How to build a tab app.
@@ -33,18 +27,22 @@ items:
         - The rest of the features with Node.js.
     - How to deploy your app.
 
+    This step-by-step guide helps you to build tab with Teams Toolkit. You'll see the following output after you've completed this guide:
+
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-localdebug.png" alt-text="Screenshot shows the completed app" lightbox="../msteams-platform\assets\images\teams-toolkit-v2\first-tab\tab-app-localdebug-1.png":::
+
 - title: Prerequisites
   durationInMinutes: 1
   content: |
 
-   Here's a list of tools you need for building and deploying your apps.
+   Ensure you install the following tools for building and deploying your apps.
 
    | &nbsp; | Install | For using... |
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-   | &nbsp; | [Teams Toolkit](#tabpanel_1_vscode) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
-   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
+   | &nbsp; | [Teams Toolkit](#tabpanel_1_vscode) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Teams Toolkit v5. |
+   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | **Optional** | &nbsp; | &nbsp; |
@@ -73,10 +71,10 @@ items:
    # [Visual Studio Code](#tab/vscode)
 
    1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
-   1. In the search box, enter **Teams toolkit**.
+   1. In the search box, enter **Teams Toolkit**.
    1. Select **Install** next to the Teams Toolkit.
 
-      :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation." lightbox="~/assets\images\teams-toolkit-v2\prerequisites\install-toolkit-vscodeversion-1.png":::
 
     The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
 
@@ -85,7 +83,7 @@ items:
    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
    
    > [!NOTE]
-   > The latest version of Teams Toolkit is 4.2.0.
+   > The latest version of Teams Toolkit is v5.
 
 
    # [Command line](#tab/cli)
@@ -115,28 +113,28 @@ items:
 
    ## Set up your Teams development tenant
 
-   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your sideload and test your app. Let's verify if you're ready to develop with the tenant.
+   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
 
    ### Check for sideloading option
 
    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams local environment.
 
-   Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+   Do you already have a tenant, and an admin access? Let's check if you really do!
 
    Verify if you can sideload apps in Teams:
 
-    1. In the Teams client, select the **Store** icon.
+    1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps**.
-    1. Select **Publish an app**.
+    1. Select **Upload an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="bot home":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="Screenshot shows the bot home." lightbox="~\assets\images\teams-toolkit-v2\spfx-custom-new2.png":::
 
         > [!NOTE]
-        > If you don't have the option to upload a custom app, talk to your Teams administrator.
+        > Contact your Teams administrator, if you don't find the option to upload a custom app.
 
    ### Create a free Teams developer tenant (optional)
 
@@ -147,15 +145,15 @@ items:
    1. In the welcome screen, select **Set up E5 subscription**.
    1. Set up your administrator account. After you finish, the following screen appears.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
 
    1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
    ## Get a free Azure account
 
-   If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
+   If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
-   Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building! Select the app you want to do first.
+   Now you've got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to create first.
 
 - title: Create project workspace for your tab app
   durationInMinutes: 1
@@ -163,9 +161,9 @@ items:
 
     Start Microsoft Teams app development by creating your first app. This app uses the tab capability.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png" alt-text="Diagram showing this app has three features. Tab is highlighted.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png" alt-text="Diagram shows that this app has three features. Tab is highlighted.":::
 
-    In this page, you learn:
+    In this page, you'll learn:
     1. [How to set up a new tab project with Teams Toolkit](#create-your-tab-project-workspace)
     1. [About the directory structure of your app](#take-a-tour-of-the-tab-app-source-code)
 
@@ -174,56 +172,56 @@ items:
     If the prerequisites are in place, let's begin!
 
     > [!NOTE]
-    > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Teams Toolkit version, and environment.
+    > The Visual Studio Code UI shown is from Mac. Teams Toolkit version and environment might differ based on your operating system.
 
     # [Visual Studio Code](#tab/vsc)
 
     1. Open Visual Studio Code.
     1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 
-    1. Select **Create a new app**.
+    1. Select **Create a New App**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Screenshots shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
-    1. Select **Create a new Teams app** to create an app using Teams Toolkit.
+    1. Select **Tab** to create a new tab project.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-new-app1.png" alt-text="Wizard starts for creating a new project":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-new-app1.png" alt-text="Screenshots shows the wizard to create a new project.":::
 
-    1. Ensure that **Tab** is selected as the capability that you want to build in your app. Select **OK**.
+    1. Ensure that **Basic Tab** is selected as the app feature that you want to build in your app.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Select App Capability":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Screenshot shows to add app feature to add to your new app.":::
 
     1. Select **JavaScript** as the programming language.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-language-tab.png" alt-text="Screenshot showing how to select the programming language.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-language-tab.png" alt-text="Screenshot shows how to select the programming language.":::
     
     1. Select **Default folder** to store your project root folder in default location.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-default-location.png" alt-text="Select default location":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-default-location.png" alt-text="Screenshot shows how to select default location.":::
 
-       You can also change the default location by the following steps:
+       Follow the steps to change the default location:
 
           1. Select **Browse**.
 
-             :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-browse.png" alt-text="Select browse for storage":::
+             :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-browse.png" alt-text="Screenshot shows to select browse for storage.":::
 
           1. Select the location for project workspace.
 
-          1. Select the **Select Folder**.
+          1. Select the **Select folder**.
 
-              :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="select-folder":::
+              :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot shows how to select-folder.":::
 
-    1. Enter a suitable name for your app. Select **Enter**.
+    1. Enter a suitable name for your app and then select **Enter**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot showing where to enter the app name.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot shows where to enter the app name.":::
 
-        The Teams tab app is created in a few seconds.
+        The Teams tab app is created in few seconds.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tap-app-created1.png" alt-text="Screenshot showing the app created.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tap-app-created1.png" alt-text="Screenshot shows the app created." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tap-app-created1.png":::
 
         After your app is created, Teams Toolkit displays the following message:
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project.png" alt-text="Preview Project.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project.png" alt-text="Screenshot shows to preview project.":::
         
         You can select **Local debug** to preview your project. 
         
@@ -243,7 +241,7 @@ items:
     ```
     You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
 
-    For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
+    For example, use arrow keys to select an option and then, select **Enter** to confirm.
 
     1. Select **Create a new Teams app**.
     1. Select the **Tab** capability.
@@ -259,9 +257,9 @@ items:
 
     ## Take a tour of the tab app source code
 
-    Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
+    Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the **Explorer** in the Visual Studio Code.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/folder-structure-tab-app.png" alt-text="structure tab":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/folder-structure-tab-app.png" alt-text="Screen shot shows the structure tab.":::
 
     Although you're free to choose any UI framework (or not to use any), this sample template code provides a scaffolding with React components.
 
@@ -269,23 +267,17 @@ items:
 
     | Folder name | Contents |
     | --- | --- |
-    | `.fx/configs` | Configuration files that user can customize for the Teams app. |
-    | - `.fx/configs/config.<envName>.json` | Configuration file for every environment. |
-    | - `.fx/configs/azure.parameters.<envName>.json` | Parameters file for Azure BICEP provision for every environment. |
-    | - `.fx/configs/projectSettings.json` | Global project settings that apply to all environments. |
-    | - `.fx/states` | Provision output that is generated by Teams Toolkit.  The toolkit creates this folder after you provision resources for your app. |
-    | - `.fx/states/state.<envName>.json` | Provision output file for every environment. |
-    | - `.fx/states/<env>.userdata` | Sensitive user data for the provision output for every environment. |
-    | `tabs` | Code for the Tab capability needed at runtime, such as the privacy notice, terms of use, and configuration tabs. |
-    | - `tabs/src/index.jsx` | Entry point for the front-end app, where the main App component is rendered with `ReactDOM.render()` |
-    | - `tabs/src/components/App.jsx` | Code for handling URL routing in the app. It calls the [Microsoft Teams JavaScript client library](../msteams-platform/tabs/how-to/using-teams-client-library.md) to establish communication between your app and Teams. |
-    | - `tabs/src/components/Tab.jsx` | Code to implement the UI of your app. |
-    | - `tabs/src/components/TabConfig.jsx` | Code to implement the UI that configures your app. |
-    | `templates/appPackage` | App manifest template files, and the app icons: color.png and outline.png. |
-    | - `templates/appPackage/manifest.template.json` | App manifest for running the app in local or remote environment.  |
-    | `templates/azure` | BICEP template files |
+    | `.vscode` | VSCode files for debugging. |
+    | `appPackage` | Templates for the Teams application manifest. |
+    | `env` | Name / value pairs are stored in environment files and used by teamsapp.yml to customize the provisioning and deployment rules. |
+    | `infra` | Templates for provisioning Azure resources. |
+    | `src/`| The source code for the notification Teams application. |
+    | `src/app.js` | Application entry point and `restify` handlers for website. |
+    | `src/views/hello.html`| A HTML template that is bind to the tab endpoint. |
+    | `src/static` | The static assets like CSS and JavaScript files that can be served by the web server. |
+    | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+    | `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
 
-    When you add the cloud functionality, Teams Toolkit adds the necessary folders to the project. The `api` folder holds the code to any Azure Functions you write.
 
 - title: Build and run your first tab app
   durationInMinutes: 1
@@ -336,7 +328,7 @@ items:
 
         The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
-        Now that the development environment is configured, you can create, build, and deploy your first Teams app.
+        Now that the development environment is configured, you. can create, build, and deploy your first Teams app.
 
     ---
 
@@ -361,7 +353,7 @@ items:
           * Port is available for the tab app.
 
           > [!NOTE]
-          > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check it.
+          > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check.
 
         2. Install NPM packages.
         3. Registers the app with Azure AD and configures the app.
@@ -371,7 +363,7 @@ items:
 
         </details>
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/f5-build-and-run.png":::
 
         > [!NOTE]
         > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window opens when the build is complete. This process can take 3-5 minutes to complete.
@@ -380,7 +372,7 @@ items:
 
     1. Select **Yes** if the following dialog appears:
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/hw-warning.png" alt-text="microsoft":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/hw-warning.png" alt-text="Screenshot shows the microsoft warning.":::
 
         Or select **Continue**, depending on your operating system:
 
@@ -395,11 +387,14 @@ items:
 
     1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/add-tab-app-local-debug.png" alt-text="Add the app to Teams":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/add-tab-app-local-debug.png" alt-text="Screenshot shows to add the app to Teams." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/add-tab-app-local-debug.png":::
 
     1. Congratulations, your first app is running on Teams!
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-localdebug.png" alt-text="Screenshot of the completed app":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-localdebug.png" alt-text="Screenshot shows the completed app" lightbox="../msteams-platform\assets\images\teams-toolkit-v2\first-tab\tab-app-localdebug-1.png":::
+
+        > [!NOTE]
+        > If you want to extend your app to Outlook and Microsoft 365, you can choose to debug your app with Outlook and Microsoft 365 from RUN AND DEBUG dropdown in Visual Studio Code.
 
        You can add SSO feature to retrieve the user details. You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading. If you change any file within the project, the page will be reloaded.
 
@@ -485,7 +480,7 @@ items:
       Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
 
       * The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
-      * The frontend application will be deployed to an Azure Storage account configured for static web hosting.
+      * The frontend application is be deployed to an Azure Storage account configured for static web hosting.
 
       </details>
 
@@ -497,15 +492,8 @@ items:
 
     You've created a tab app.
 
-    Now that you've learned to create a basic app, you can move on to creating more complex apps. To start with, try adding capabilities to your existing apps.
-
-    To add capabilities to your existing app:
-
-    1. Select **Add features** from the **Development** section of the Teams Toolkit sidebar.
-
-    1. Select the capability you want to add to your app.
-
-    That's it! Teams Toolkit adds the scaffolding for the new capability to your app's directory structure. Follow the procedures to build and deploy the app, and your app will have multiple capabilities. 
+    Now that you've learned to create a basic app, you can move on to creating more complex apps. Follow the procedures to build and deploy the app, and your app has multiple capabilities. 
 
     You've completed the tutorial to build tab app with JavaScript.
     
+ 

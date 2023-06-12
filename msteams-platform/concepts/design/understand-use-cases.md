@@ -9,7 +9,7 @@ ms.author: anclear
 
 # Understand your use cases
 
-In the collaborative social framework of Teams, there's a wide variety of user needs that you can solve with a Teams app. For example, an app that bridges gap in achieving effective collaboration is a great fit.
+In the collaborative social framework of Teams, there's a wide variety of user needs that you can solve with a Teams app. For example, an app that bridges the gap in achieving effective collaboration is a great fit.
 
 The app user and their app's requirements are the basic guidelines that determine all app choices you'll make. Building app design, selecting capabilities, determining build and test environment, and app distribution follow the user's requirement from the app.
 
@@ -19,7 +19,7 @@ If you're going to meet user requirements with your app, you first need to under
   * Recognize user issues and identify the solutions to some common problems the users face.
   * Build your Teams app by finding the right combination of Teams features to meet your user's needs.
   * Understand use cases to know how an end-user interacts with your app.
-  * It's recommended to go through the lean module [how to publish your app to Teams app store](/training/modules/microsoft-teams-publish-app-to-store/) to help with your app to pass the Microsoft Teams store submission process.
+  * It's recommended to go through the learn module [how to publish your app to Teams app store](/training/modules/microsoft-teams-publish-app-to-store/) to help with your app to pass the Microsoft Teams store submission process.
 
 * **Understand the problem**: Work out the core problem your app must solve.
 

@@ -15,6 +15,10 @@ You can provide your Microsoft Teams app to an individual, team, organization, o
 
 You can configure default install options. For example, if your app's primary capability is a bot, you can make the bot the default capability when a user installs your app to a team.
 
+## Enable customization for your Microsoft Teams app
+
+You can allow customers to customize some aspects of your Microsoft Teams app in the Teams admin center. This feature is supported only for apps published to the Teams store.
+
 ## Create Teams app package
 
 To distribute your Teams app, you must have a valid app package.  An app package is a zip file that contains an **app manifest** and **app icons**.
@@ -57,3 +61,6 @@ For more information, see [publish to the Teams store](~/concepts/deploy-and-pub
 * [Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview)
 * [Create Teams app package](../build-and-test/apps-package.md)
 * [Publish to org](/microsoftteams/upload-custom-apps)
+* [Modify your app's registration in the Azure portal](/azure/active-directory/develop/howto-modify-supported-accounts)
+* [Growth lifecycle for your app](appsource/post-publish/app-growth/app-growth-lifecycle.md)
+* [Enable customization for your Microsoft Teams app](../design/enable-app-customization.md)

@@ -43,6 +43,6 @@ Also, you can integrate the Teams native [people picker control](people-picker-c
 
 ## Code sample
 
-| Sample Name           | Description | Node.js    |
-|:---------------------|:--------------|:---------|
-|Device permissions | Describes how to demonstrate Teams tab sample app for device permissions. |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|
+| Sample name           | Description | Node.js    | Manifest|
+|:---------------------|:--------------|:---------|:---------|
+|Device permissions | The sample shows how to show the device permissions using Teams JS SDK and browser api's. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs/demo-manifest/tab-device-permissions.zip)

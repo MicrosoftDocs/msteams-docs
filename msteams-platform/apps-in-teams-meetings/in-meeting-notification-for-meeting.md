@@ -5,6 +5,7 @@ description: Learn how to build in-meeting and targeted in-meeting notifications
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
+ms.date: 02/02/2023
 ---
 
 # Build in-meeting notification for Teams meeting
@@ -52,7 +53,7 @@ You can also add the Teams display picture and people card of the user to in-mee
     }
 ```
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="This screenshot shows how a display picture and people card in Teams is used with in-meeting dialog." border="true":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="Screenshot shows how a display picture and people card in Teams is used with in-meeting dialog.":::
 
 ## Feature compatibility by user types
 
@@ -63,12 +64,9 @@ The following table provides the user types and lists the features that each use
 | In-tenant | Available | Available |  Available | Available |
 | Guest | Available | Available |  Available | Available |
 | Federated or External | Available | Not available | Not available | Available |
-| Anonymous | Not available | Not available | Not available | Not available |
+| Anonymous | Available | Not available | Not available | Not available |
 
 ## Targeted in-meeting notification
-
-> [!NOTE]
-> Targeted in-meeting notification is available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
 Targeted in-meeting notification allows apps to send notifications to specific participants on a meeting stage. The notifications are private and are sent only to specific or targeted participants. Targeted in-meeting notification helps to enhance meeting experience and develop user engagement activities in Teams meetings.
 
@@ -166,10 +164,9 @@ For more information on `targetedMeetingNotification`, see [Targeted meeting not
 
 ## Code sample
 
-Sample name | Description | .NET | Node.js |
-|----------------|-----------------|--------------|----------------|
-| In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/nodejs) |
-| Targeted-in-meeting notification | Demonstrates how to send notifications to specific participants in a meeting stage. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) |
+Sample name | Description | .NET | Node.js | Manifest|
+|----------------|-----------------|--------------|----------------|----------------|
+| In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp/demo-manifest/meetings-notification.zip) |
 
 ## Step-by-step guide
 

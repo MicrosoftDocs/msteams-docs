@@ -1,7 +1,7 @@
 ---
 title: Tabs link unfurling and Stage View
 author: Rajeshwari-v
-description: Learn about stage view, a full screen UI component invoked to surface your web content. Link unfurling is used to turn URLs into a tab using Adaptive Cards.
+description: Learn about Stage View, a full screen UI component invoked to surface your web content. Link unfurling is used to turn URLs into a tab using Adaptive Cards.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -42,7 +42,60 @@ The following is an example from deep link Stage View opens as a modal within th
 
 #### Syntax
 
-The deep link syntax is as follows:
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card1.png" alt-text="Screenshot shows the open stage from Adaptive Card."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card1.png":::
+
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card2.png" alt-text="Screenshot shows the open stage from card."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card2.png":::
+
+### Example
+
+Following is the code to open a stage from an Adaptive Card:
+
+```json
+{
+    type: "Action.Submit",
+    title: "View",
+    data: {
+          msteams: {
+            type: "invoke",
+            value: {
+                type: "tab/tabInfoAction",
+                tabInfo: {
+                    contentUrl: contentUrl,
+                    websiteUrl: websiteUrl,
+                    name: "Tasks",
+                    entityId: "entityId"
+                 }
+                }
+            }
+        }
+} 
+```
+
+The `invoke` request type must be `composeExtension/queryLink`.
+
+> [!NOTE]
+>
+> * `invoke` workflow is similar to the current `appLinking` workflow.
+> * To maintain consistency, it is recommended to name `Action.Submit` as `View`.
+> * `websiteUrl` is a required property to be passed in the `TabInfo` object.
+
+Following is the process to invoke Stage View:
+
+* When the user selects **View**, the bot receives an `invoke` request. The request type is `composeExtension/queryLink`.
+* `invoke` response from bot contains an Adaptive Card with type `tab/tabInfoAction` in it.
+* The bot responds with a `200` code.
+
+> [!NOTE]
+>
+> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a mobile-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+
+## Invoke Stage View through deep link
+
+To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. The deep link can also be passed through an `OpenURL` action in the card.
+
+### Syntax
+
+Following is the deep link syntax:
 
 `<https://teams.microsoft.com/l/stage/{appId}/0?context>={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}`
 
@@ -187,9 +240,9 @@ The invoke request type must be composeExtension/queryLink.
 
 ## Code sample
 
-| Sample name | Description | .NET |Node.js|
-|-------------|-------------|------|----|
-|Tab in stage view |Microsoft Teams tab sample app for demonstrating tab in stage view.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
+| Sample name | Description | .NET |Node.js| Manifest|
+|-------------|-------------|------|----|----|
+|Tab in Stage View |Microsoft Teams tab sample app for demonstrating tab in Stage View.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp/demo-manifest/tab-stage-view.zip)|
 
 ## Next step
 

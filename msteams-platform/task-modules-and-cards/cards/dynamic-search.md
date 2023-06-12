@@ -79,6 +79,7 @@ The following properties are the new additions to the [`Input.ChoiceSet`](https:
 |-----------|------|----------|-------------|
 | style | Compact <br/> Expanded <br/> Filtered | No | Adds filtered style to the list of supported validations for static typeahead.|
 | choices.data | Data.Query | No | Enables dynamic typeahead as the user types, by fetching a remote set of choices from a backend. |
+| value | String | No | The initial choice (or set of choices) that must be selected. For multi-select, specify a comma-separated string of values. |
 
 ### Data.Query definition
 
@@ -222,6 +223,7 @@ The example payload which contains static and dynamic typeahead search with sing
                   "value": "static_option_3"
                 }
               ],
+              "value": "Static_option_2",
               "isMultiSelect": true,
               "style": "filtered",
               "choices.data": {
@@ -408,9 +410,9 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 ## Code sample
 
-|**Sample name** | **Description** | **.NET** | **Node.js** |
-|----------------|-----------------|--------------|----------------|
-| Typeahead search control on Adaptive Cards | The sample shows the features of static and dynamic typeahead search control in Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
+|**Sample name** | **Description** | **.NET** | **Node.js** | **Manifest**
+|----------------|-----------------|--------------|----------------|----------------|
+| Typeahead search control on Adaptive Cards | The sample shows how to use static and dynamic typeahead search control in Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp/demo-manifest/Typeahead-search-adaptive-cards.zip)
 
 ## See also
 
