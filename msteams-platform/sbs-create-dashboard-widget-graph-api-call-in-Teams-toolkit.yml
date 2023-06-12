@@ -64,9 +64,9 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/enter-application-name.png" alt-text="Screenshot shows the selection of application name.":::
 
-       The Teams tab app is created in few seconds and Teams Toolkit displays the following message.
-
-       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-app-preview.png" alt-text="Screenshot shows the teams tab app dashboard preview in VS Code.":::
+     The Teams tab app is created in few seconds and Teams Toolkit displays the following message.
+      
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-app-preview.png" alt-text="Screenshot shows the teams tab app dashboard preview in VS Code.":::
 
        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-debug.png" alt-text="Screenshot shows the local debug.":::
 
@@ -86,7 +86,7 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity.":::
 
-      Teams app also supports different themes, including dark and high contrast themes.
+     Teams app also supports different themes, including dark and high contrast themes.
 
        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-light-theme.png" alt-text="Screenshot shows the contrast themes.":::
       
@@ -280,6 +280,8 @@ items:
   durationInMinutes: 5
   content: |
 
+    Scenario 1:
+      
       Add single sign-on (SSO) related files by using Teams toolkit.
 
       1. Select the Teams Toolkit icon in the Visual Studio Code Activity Bar.
@@ -292,15 +294,17 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/single-sign-on.png" alt-text="Screenshot shows the selection of single sign-on option.":::
 
+      > [!NOTE]
+      > Dashboard teams tab app  is a React project. The SSO creation and Graph API follows the React steps.
+      While updating the aad, cli, file source, and source code follows the react section. The .html files *only* have to be created manually and debug the Teams app.
+      
       You've added the SSO files to your project and now you can call Graph APIs. 
-      
-      Now you call Graph APIs, Refer to [Graph API call](tabs/how-to/build-a-dashboard-tab-app.md#graph-api-call) 
-      
+   
       Now you can call graphi API via TeamsFx SDK. Refer to [this document](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-sdk#microsoft-graph-scenarios:~:text=caught%20and%20transformed.-,Microsoft%20Graph%20Scenarios,-This%20section%20provides) as follows:
 
-      1. In Visual Studio Code, go to Explorer > src > services > listService.ts
+      1. In Visual Studio Code, go to **EXPLORER** > **src** > **services** > **listService.ts**
 
-      1. Update the followining codes in the listService.ts.         
+      1. Update the followining codes in the **listService.ts**.         
 
       ```typescript
       /**
@@ -347,7 +351,289 @@ items:
        // },
       }
       ```
-      1. In Visual Studio Code, go to Explorer > src > services > ListWidget.tsx
+      1. In Visual Studio Code, go to EXPLORER > src > services > ListWidget.tsx
+
+      1. Update the `export default class ListWidget()` to add user pofile widget.
+
+      ```typescript
+      export default class ListWidget extends BaseWidget<any, IListWidgetState> {
+        async getData(): Promise<IListWidgetState> {
+          return { data: await getListData() };
+
+      ```
+
+      1. SSO and Graph API shows the login user profile in list widget. 
+
+         :::image type="content" source="assets/images/sbs-create-a-new-dashboard/join.png" alt-text="Screenshot shows the Join button highlighted in red.":::
+         
+    Scenario 2:
+    To add Single Sign On (SSO) and Graph API follow these steps:
+
+     1. [Create Azure Active Directory app manifest](#create-azure-active-directory-app-manifest)
+     2. [Update Teams app manifest](#update-teams-app-manifest)
+     3. [Update Teams Toolkit configuration files](#update-teams-toolkit-configuration-files)
+     4. [Update Source Code](#update-source-code)
+       
+     ## Create Azure Active Directory app manifest
+
+     1. In Visual Studio Code, go to **EXPLORER**.
+     2. Create a `aad.manifest.json` file.
+     3. Add the following code in `aad.manifest json`.
+
+     ```typescript
+     {
+     "id": "${{AAD_APP_OBJECT_ID}}",
+     "appId": "${{AAD_APP_CLIENT_ID}}",
+     "name": "YOUR_AAD_APP_NAME",
+     "accessTokenAcceptedVersion": 2,
+     "signInAudience": "AzureADMyOrg",
+     "optionalClaims": {
+      "idToken": [],
+      "accessToken": [
+          {
+              "name": "idtyp",
+              "source": null,
+              "essential": false,
+              "additionalProperties": []
+          }
+      ],
+      "saml2Token": []
+     },
+     "requiredResourceAccess": [
+      {
+          "resourceAppId": "Microsoft Graph",
+          "resourceAccess": [
+              {
+                  "id": "User.Read",
+                  "type": "Scope"
+              }
+          ]
+      }
+     ],
+     "oauth2Permissions": [
+      {
+          "adminConsentDescription": "Allows Teams to call the app's web APIs as the current user.",
+          "adminConsentDisplayName": "Teams can access app's web APIs",
+          "id": "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}",
+          "isEnabled": true,
+          "type": "User",
+          "userConsentDescription": "Enable Teams to call this app's web APIs with the same rights that you have",
+          "userConsentDisplayName": "Teams can access app's web APIs and make requests on your behalf",
+          "value": "access_as_user"
+      }
+      ],
+      "preAuthorizedApplications": [
+      {
+          "appId": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
+          "permissionIds": [
+              "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
+          ]
+      },
+      {
+          "appId": "5e3ce6c0-2b1f-4285-8d4b-75ee78787346",
+          "permissionIds": [
+              "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
+          ]
+      },
+      {
+          "appId": "d3590ed6-52b3-4102-aeff-aad2292ab01c",
+          "permissionIds": [
+              "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
+          ]
+      },
+      {
+          "appId": "00000002-0000-0ff1-ce00-000000000000",
+          "permissionIds": [
+              "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
+          ]
+      },
+      {
+          "appId": "bc59ab01-8403-45c6-8796-ac3ef710b3e3",
+          "permissionIds": [
+              "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
+          ]
+      },
+      {
+          "appId": "0ec893e0-5785-4de6-99da-4ed124e5296c",
+          "permissionIds": [
+              "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
+          ]
+      },
+      {
+          "appId": "4765445b-32c6-49b0-83e6-1d93765276ca",
+          "permissionIds": [
+              "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
+          ]
+      },
+      {
+          "appId": "4345a7b9-9a63-4910-a426-35363201d503",
+          "permissionIds": [
+              "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
+          ]
+      }
+     ],
+     "identifierUris": [
+     "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
+     ],
+     "replyUrlsWithType": [
+     {
+      "url": "${{TAB_ENDPOINT}}/auth-end.html",
+      "type": "Web"
+     },
+     {
+      "url": "${{TAB_ENDPOINT}}/auth-end.html?clientId=${{AAD_APP_CLIENT_ID}}",
+      "type": "Spa"
+     },
+     {
+      "url": "${{TAB_ENDPOINT}}/blank-auth-end.html",
+      "type": "Spa"
+     }
+     ]
+     }
+     ```
+
+     IMAGE
+
+     ## Update Teams app manifest
+
+     To update Teams app manifest, follow these steps:
+
+     1. In Visual Studio Code, go to **EXPLORER** > **appPackage** > **manifest.json**.
+
+     1. Add following codes into your Teams app manifest for your Tab project.
+
+     ```typescript
+     "webApplicationInfo": {
+     "id": "${{AAD_APP_CLIENT_ID}}",
+     "resource": "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
+     }
+     ```
+
+     IMAGE
+
+     ## Update Teams Toolkit configuration files
+
+     To update Teams Toolkit configuration files, follow the steps:
+
+     1. Add the **aadApp/create** codes under provision in `teamsapp.yml` and `teamsapp.local.yml`.
+     
+     ```typescript
+     - uses: aadApp/create
+       with:
+          name: "YOUR_AAD_APP_NAME"
+          generateClientSecret: true
+          signInAudience: "AzureADMyOrg"
+       writeToEnvironmentFile:
+          clientId: AAD_APP_CLIENT_ID
+          clientSecret: SECRET_AAD_APP_CLIENT_SECRET
+          objectId: AAD_APP_OBJECT_ID
+          tenantId: AAD_APP_TENANT_ID
+          authority: AAD_APP_OAUTH_AUTHORITY
+          authorityHost: AAD_APP_OAUTH_AUTHORITY_HOST
+     ```
+     1. Add the **aadApp/update** codes under provision in `teamsapp.yml` and `teamsapp.local.yml`.
+
+     ```typescript
+     - uses: aadApp/update
+       with:
+         manifestPath: "./aad.manifest.json"
+         outputFilePath : ./build/aad.manifest.${{TEAMSFX_ENV}}.json
+     ```
+
+     .yml IMAGE
+     .local.yml IMAGE
+
+     1. Find **cli/runNpmCommand** action with name `build app` in `teamsapp.yml` and add following env. 
+
+     ```typescript
+     env:
+     REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
+     REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
+     ```
+
+     IMAGE
+
+     1. Find **file/createOrUpdateEnvironmentFile** action for deploy in `teamsapp.local.yml``.
+     1. Add following env codes. 
+
+     ```typescript
+     REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
+     REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
+     ```
+     IMAGE
+
+     ## Update Source Code
+
+     Suppose you are building your tab app with React framework. You can find and download sample code for TeamsFx Tab below:
+      
+      •	for [js](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js)
+      •	for [ts](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts)
+     
+     You can follow the following steps to update your source code:
+
+      1.	Create **auth-start.html** in to **public**.
+      2.	Add the code in [auth-start.html](packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-end.html).
+      3.	Create **auth-start.html** in to **public**.
+      4.	Add the codes [auth-end.html](packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-start.html).
+     
+      IMAGE
+     
+      You can also find sample for SSO enabled Tab [here](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
+     
+      You've added the SSO files to your project and now you can call Graph APIs. 
+   
+      The graph API call is implemented via TeamsFx SDK. Refer to the [document](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-sdk#microsoft-graph-scenarios:~:text=caught%20and%20transformed.-,Microsoft%20Graph%20Scenarios,-This%20section%20provides) as follows:
+
+      1. In Visual Studio Code, go to **EXPLORER** > **src** > **services** > **listService.ts**.
+
+      1. Update the followining codes in the **listService.ts**.         
+
+      ```typescript
+      /**
+       * Retrive sample data
+       * @returns data for list widget
+       */
+      import {TeamsUserCredentialContext} from "../internal/singletonContext";
+      import {
+        createMicrosoftGraphClientWithCredential,
+        TeamsUserCredential,
+        } from "@microsoft/teamsfx";
+        import { ListModel } from "../models/listModel";
+        import { loginAction } from "../internal/login";
+                
+      export const getListData = async (): Promise<ListModel[]> => {
+        await loginAction(["User.Read"]);
+        let credential = TeamsUserCredentialContext.getInstance().getCredential();
+        const graphClient = createMicrosoftGraphClientWithCredential(credential, [
+          "User.Read",
+        ]);
+        const me = await graphClient.api("/me").get();
+        return [
+          {
+            id: me.id,
+            title: me.displayName,
+            content: me.mail,
+          },
+        ];
+
+       // {
+       //   id: "id1",
+       //   title: "Lorem ipsum",
+       //   content: "Lorem ipsum dolor sit amet",
+       // },
+       // {
+       //   id: "id2",
+       //   title: "Lorem ipsum",
+       //   content: "Lorem ipsum dolor sit amet",
+       // },
+       // {
+       //   id: "id3",
+       //   title: "Lorem ipsum",
+       //   content: "Lorem ipsum dolor sit amet",
+       // },
+      }
+      ```
+      1. In Visual Studio Code, go to **EXPLORER** > **src** > **services** > **ListWidget.tsx**.
 
       1. Update the `export default class ListWidget()` to add user pofile widget.
 
