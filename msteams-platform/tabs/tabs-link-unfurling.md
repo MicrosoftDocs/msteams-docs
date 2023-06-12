@@ -144,14 +144,13 @@ Encoded URL:
 ## Collaborative Stage View
 
 > [!NOTE]
-> Collaborative Stage View is available only in [public developer preview](/microsoftteams/platform/resources/dev-preview/developer-preview-intro).
+>
+> * Collaborative Stage View is available only in [public developer preview](/microsoftteams/platform/resources/dev-preview/developer-preview-intro).
+> * Collaborative Stage View isn't supported in Teams web and mobile clients.
 
 Collaborative Stage View is an enhancement to Stage View, that allows your app content to exist in multiple Teams windows. When a user opens Stage View from an Adaptive Card in a group chat or channel, the app content opens in a new Teams window instead of a modal.
 
 The Collaborative Stage View also opens a chat in the side panel from the group chat or channel thread it's invoked. Users can continue to collaborate directly within the new window.
-
-> [!NOTE]
-> Collaborative Stage View isn't supported in Teams web and mobile clients.
 
 The following screenshot is an example of collaborative Stage View in a new Teams window with a chat in the side panel:
 
