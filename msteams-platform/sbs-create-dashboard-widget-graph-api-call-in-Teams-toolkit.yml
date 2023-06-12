@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    This step-by-step guide helps you to create a dashboard tab, add a new widget to the dashboard, and implement Graph API. You'll see the following output:
+    This step-by-step guide helps you to create a dashboard tab, add a new widget to the dashboard, and implement Graph API. You see the following output:
 
     :::image type="content" source="assets/images/sbs-create-a-new-dashboard/dashboard1.png" alt-text="Screenshot shows the final output of dashboard.":::
     
@@ -72,7 +72,7 @@ items:
 
      1. Select the Teams Toolkit icon in sidebar.
      
-     1. Select signin to Microsoft 365 account using test credentials.
+     1. Select sign in to Microsoft 365 account using test credentials.
 
        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/M365-account-signin.png" alt-text="Screenshot shows the Microsoft signin.":::
 
@@ -118,8 +118,8 @@ items:
       | ----- | ----- |
       | `src/models/chartModel.ts` | Data model for the chart widget. |
       | `src/models/listModel.ts` | Data model for the list widget. |
-      | `src/services/chartService.ts` | A data retrive implementation for the chart widget. |
-      | `src/services/listService.ts` | A data retrive implementation for the list widget. |
+      | `src/services/chartService.ts` | A data retrieve implementation for the chart widget. |
+      | `src/services/listService.ts` | A data retrieve implementation for the list widget. |
       | `src/dashboards/SampleDashboard.tsx` | A sample dashboard layout implementation. |
       | `src/styles/ChartWidget.css` | The chart widget style file. |
       | `src/styles/ListWidget.css` | The list widget style file. |
@@ -128,7 +128,7 @@ items:
       | `src/App.css` | The style of application route. |
       | `src/App.tsx` | Application route. |
       
-      The following files are project-related files. You generally will not need to customize these files.
+      The following files are project-related files. You, generally will not need to customize these files.
 
       | File | Contents |
       | ----- | ----- |
@@ -296,15 +296,15 @@ items:
 
       > [!NOTE]
       > Dashboard teams tab app  is a React project. The SSO creation and Graph API follows the React steps.
-      While updating the aad, cli, file source, and source code follows the react section. The .html files *only* have to be created manually and debug the Teams app.
+      The aad, cli, file source, and source code follows the react section. The .html files *only* have to be created manually and debug the Teams app.
       
       You've added the SSO files to your project and now you can call Graph APIs. 
    
-      Now you can call graphi API via TeamsFx SDK. Refer to [this document](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-sdk#microsoft-graph-scenarios:~:text=caught%20and%20transformed.-,Microsoft%20Graph%20Scenarios,-This%20section%20provides) as follows:
+      Now you can call graph API via TeamsFx SDK. Refer to [this document](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-sdk#microsoft-graph-scenarios:~:text=caught%20and%20transformed.-,Microsoft%20Graph%20Scenarios,-This%20section%20provides) as follows:
 
       1. In Visual Studio Code, go to **EXPLORER** > **src** > **services** > **listService.ts**
 
-      1. Update the followining codes in the **listService.ts**.         
+      1. Update the following codes in the **listService.ts**.         
 
       ```typescript
       /**
@@ -564,7 +564,7 @@ items:
 
      ## Update Source Code
 
-     Suppose you are building your tab app with React framework. You can find and download sample code for TeamsFx Tab below:
+     Suppose you are building your tab app with React framework. You can find and download sample code for TeamsFx Tab:
       
       •	for [js](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js)
       •	for [ts](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts)
@@ -586,7 +586,7 @@ items:
 
       1. In Visual Studio Code, go to **EXPLORER** > **src** > **services** > **listService.ts**.
 
-      1. Update the followining codes in the **listService.ts**.         
+      1. Update the following codes in the **listService.ts**.         
 
       ```typescript
       /**
