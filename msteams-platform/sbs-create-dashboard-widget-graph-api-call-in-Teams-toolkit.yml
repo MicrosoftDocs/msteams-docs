@@ -74,7 +74,7 @@ items:
      
      1. Select sign in to Microsoft 365 account using test credentials.
 
-       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/M365-account-signin.png" alt-text="Screenshot shows the Microsoft signin.":::
+       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/M365-account-signin.png" alt-text="Screenshot shows the Microsoft sign in.":::
 
      1. Select F5 to run the application in debug mode.
 
@@ -128,7 +128,7 @@ items:
       | `src/App.css` | The style of application route. |
       | `src/App.tsx` | Application route. |
       
-      The following files are project-related files. You, generally will not need to customize these files.
+      The following files are project-related files. You, generally won't need to customize these files.
 
       | File | Contents |
       | ----- | ----- |
@@ -295,8 +295,8 @@ items:
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/single-sign-on.png" alt-text="Screenshot shows the selection of single sign-on option.":::
 
       > [!NOTE]
-      > Dashboard teams tab app  is a React project. The SSO creation and Graph API follows the React steps.
-      The aad, cli, file source, and source code follows the react section. The .html files *only* have to be created manually and debug the Teams app.
+      > Dashboard teams tab app  is a React project. The SSO creation and Graph API follow the React steps.
+      The aad, cli, file source, and source code follow the react section. The .html files *only* have to be created manually and debug the Teams app.
       
       You've added the SSO files to your project and now you can call Graph APIs. 
    
@@ -353,7 +353,7 @@ items:
       ```
       1. In Visual Studio Code, go to EXPLORER > src > services > ListWidget.tsx
 
-      1. Update the `export default class ListWidget()` to add user pofile widget.
+      1. Update the `export default class ListWidget()` to add user profile widget.
 
       ```typescript
       export default class ListWidget extends BaseWidget<any, IListWidgetState> {
@@ -367,7 +367,7 @@ items:
          :::image type="content" source="assets/images/sbs-create-a-new-dashboard/join.png" alt-text="Screenshot shows the Join button highlighted in red.":::
          
     Scenario 2:
-    To add Single Sign On (SSO) and Graph API follow these steps:
+    To add Single Sign On (SSO) and Graph API, follow these steps:
 
      1. [Create Azure Active Directory app manifest](#create-azure-active-directory-app-manifest)
      2. [Update Teams app manifest](#update-teams-app-manifest)
