@@ -12,13 +12,13 @@ With your app listed on the Microsoft Teams store, start thinking about how you'
 
 ## Analyze app usage
 
-You can track your app usage in the [Teams app usage report](/office/dev/store/teams-apps-usage) in Partner Center. Metrics include Monthly, Daily, and Weekly active users, and retention and intensity charts enabling you to track churn and frequency of usage.
+Track your app usage in the [Teams app usage report](/office/dev/store/teams-apps-usage) in Partner Center. Metrics include Monthly, Daily, and Weekly active users, and retention and intensity charts enabling you to track churn and frequency of usage.
 
 Data for newly published apps takes about a week to appear in the report.
 
 ## Publish updates to your app
 
-You can submit changes to your app (such as new features or even metadata) in Partner Center. These changes require a new review process.
+Submit changes to your app (such as new features or even metadata) in Partner Center. These changes require a new review process.
 
 Ensure to check the following when you're publishing updates:
 
@@ -43,7 +43,7 @@ If you make any of the following changes to your app, however, your existing use
 
 ## Promote your app on another site
 
-When your app is listed in the Teams store, you can create a link that launches Teams and displays a dialog to install your app. You could include this link, for example, with a download button on your product's marketing page.
+When your app is listed in the Teams store, create a link that launches Teams and displays a dialog to install your app. You could include this link, for example, with a download button on your product's marketing page.
 
 Create the link using the following URL appended with your app ID: `https://teams.microsoft.com/l/app/<your-app-id>`.
 
@@ -59,32 +59,32 @@ You must keep the following app details updated:
 |---|---|
 | Your **app's listing** must be kept updated. | Any changes to functionality, pricing, visual appearance, or any other updates must be accurately reflected in your app's listing. |
 | You must regularly update your app to ensure that it remains **compliant with the commercial marketplace policies**. | Stay up to date with policy changes by subscribing to the [changelog here](/legal/marketplace/offer-policies-change-history). |
-| Your **contact details** must be kept up to date in your Partner Center account. | We'll contact you occasionally to resolve any bugs or commercial marketplace policy violations in your app. If your contact details aren't updated, you might miss important notices or updates from us. |
+| Your **contact details** must be kept up to date in your Partner Center account. | Microsoft will contact you occasionally to resolve any bugs or commercial marketplace policy violations in your app. If your contact details aren't updated, you might miss important notices or updates from us. |
 | Maintain your app's **functionality** and **user experience**. | Your app's functionality and user experience must match or exceed the quality of experience at submission, and you must maintain your app's performance. |
 
 ## Fix issues with your published app
 
-Microsoft runs daily automation tests on apps listed on the Teams store. If issues with your app are identified, we contact you with a detailed report on how to reproduce the issues and recommendations to resolve them. If you can't fix the problems within a stated timeline, your app listing may be removed from the store.
+Microsoft runs daily automation tests on apps listed on the Teams store. If issues with your app are identified, Microsoft contacts you with a detailed report on how to reproduce the issues and recommendations to resolve them. If you can't fix the problems within a stated timeline, your app listing may be removed from the store.
 
 ## Possible enforcement actions
 
-Microsoft runs automated and manual continuous health checks for all the published apps. It's intended to maintain the health and end user experience of the Microsoft Commercial Marketplace and the Teams App store. In certain situations, we may contact you and remove your app from the commercial marketplace and the Teams app store, or temporarily halt new user acquisition for your app, or take further action on your app as deemed appropriate.
+Microsoft runs automated and manual continuous health checks for all the published apps. It's intended to maintain the health and end user experience of the Microsoft Commercial Marketplace and the Teams App store. In certain situations, Microsoft may contact you and remove your app from the commercial marketplace and the Teams app store, or temporarily halt new user acquisition for your app, or take further action on your app as deemed appropriate.
 
-**We may contact you for a resolution when:**
+**Microsoft may contact you for a resolution when:**
 
-* We're unable to run our continuous health evaluation tests on your app as the test credentials or test environment you provided have expired.
+* Microsoft is unable to run our continuous health evaluation tests on your app as the test credentials or test environment you provided have expired.
 
-* We see or are made aware of critical security vulnerabilities in your app. These may endanger your users or the Microsoft commercial marketplace.
+* Microsoft sees or is made aware of critical security vulnerabilities in your app. These may endanger your users or the Microsoft commercial marketplace.
 
-* We're made aware of issues with your app by your users through any of Microsoft’s support channels. These issues include, but aren't limited to, spammy behavior, broken functionality, or unexpected user experience bugs and user interface bugs.
+* Microsoft is made aware of issues with your app by your users through any of Microsoft’s support channels. These issues include, but aren't limited to, spammy behavior, broken functionality, or unexpected user experience bugs and user interface bugs.
 
-* We may also unilaterally take cognizance of issues with your app highlighted by users by means of rating and reviews for your app.
+* Microsoft may also unilaterally take cognizance of issues with your app highlighted by users by means of rating and reviews for your app.
 
-* We've identified commercial marketplace policy failures in your app as part of the continuous health evaluation of your app post publish.
+* Microsoft has identified commercial marketplace policy failures in your app as part of the continuous health evaluation of your app post publish.
 
-If we don't receive a suitable response from you, we'll reach out to you again, and may simultaneously remove your app to protect end users. If we hear back from you, and you can confirm that issues are resolved and you've submitted an updated app for review, we'll re-list your app when the app passes review.
+Microsoft doesn't receive a suitable response from you, it'll reach out to you again, and may simultaneously remove your app to protect end users. If it hears back from you, and you confirm that issues are resolved and you've submitted an updated app for review, Microsoft will re-list your app when the app passes review.
 
-**We may remove your app without prior notice (other than to inform you of that action) when:**
+**Microsoft may remove your app without prior notice (other than to inform you of that action) when:**
 
 * Microsoft receives a takedown notice for your app alleging copyright or trademark infringement.
 * Your app appears to be unmaintained or abandoned and unused and there's no response from you on our reach outs.
