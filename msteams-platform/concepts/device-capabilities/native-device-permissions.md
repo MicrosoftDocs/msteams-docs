@@ -50,7 +50,7 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 1. Select the app for which you need to choose the settings.
 1. Select your desired settings.
 
-    :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="Mobile Permissions." border="true":::
+    :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="Screenshot shows the mobile permissions.":::
 
 # [Desktop](#tab/desktop)
 
@@ -59,7 +59,7 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 1. Select **Settings** > **Permissions** from the drop-down menu.
 1. Select your desired settings.
 
-   :::image type="content" source="~/assets/images/tabs/device-permissions.png" alt-text="Device permission.":::
+   :::image type="content" source="~/assets/images/tabs/device-permissions.png" alt-text="Screenshot shows the device permission.":::
 
 ---
 
@@ -233,13 +233,13 @@ Here's how the device permissions prompts appear to users on mobile and desktop.
 
 # [Mobile](#tab/mobile1)
 
-   :::image type="content" source="~/assets/images/tabs/MobileLocationPermission.png" alt-text="Mobile location permission." border="true":::
+   :::image type="content" source="~/assets/images/tabs/MobileLocationPermission.png" alt-text="Screenshot shows the mobile location permission.":::
 
 # [Desktop](#tab/desktop1)
 
    <!-- ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png) -->
 
-   :::image type="content" source="~/assets/images/tabs/device-permissions-prompt.png" alt-text="Device permission in desktop.":::
+   :::image type="content" source="~/assets/images/tabs/device-permissions-prompt.png" alt-text="Screenshot shows the device permission in desktop.":::
 
 ---
 
