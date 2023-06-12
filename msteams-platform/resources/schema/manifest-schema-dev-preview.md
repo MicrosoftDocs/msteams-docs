@@ -283,9 +283,9 @@ The version of the manifest schema this manifest is using.
 
 **Required** &ndash; String
 
-The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it will overwrite the existing one and the user will get the new functionality. If this app was submitted to the store, the new manifest will have to be resubmitted and revalidated. Then, users of this app will get the new updated manifest automatically in a few hours, after it's approved.
+The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it overwrites the existing one and the user will get the new functionality. If this app was submitted to the store, the new manifest has to be resubmitted and revalidated. Then, users of this app will get the new updated manifest automatically in a few hours, after it's approved.
 
-If the app requested permissions change, users will be prompted to upgrade and re-consent to the app.
+If the app requested permissions change, users are prompted to upgrade and re-consent to the app.
 
 This version string must follow the [semver](http://semver.org/) standard (MAJOR.MINOR.PATCH).
 
@@ -386,7 +386,7 @@ The object is an array with all elements of the type `object`. This block is req
 |`scopes`|Array of enum|1|✔️|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
 |`context` |array of enums|6||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, and `meetingStage`.|
 |`sharePointPreviewImage`|String|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
-|`supportedSharePointHosts`|Array of enum|1||Defines how your tab will be made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
+|`supportedSharePointHosts`|Array of enum|1||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
 
 ## staticTabs
 
@@ -502,12 +502,12 @@ Each command item is an object with the following structure:
 
 Optional:
 
-An array of `string`, which specifies which permissions the app requests, which let end users know how the extension will perform. The following options are non-exclusive:
+An array of `string`, which specifies which permissions the app requests, which let end users know how the extension performs. The following options are non-exclusive:
 
 * `identity` &emsp; Requires user identity information.
 * `messageTeamMembers` &emsp; Requires permission to send direct messages to team members.
 
-Changing these permissions when updating your app will cause your users to repeat the consent process the first time they run the updated app.
+Changing these permissions when updating your app causes your users to repeat the consent process the first time they run the updated app.
 
 ## devicePermissions
 
@@ -675,7 +675,7 @@ Enables your app in non-standard channels. If your app supports a team scope and
 
 **Optional**—string
 
-Specifies the install scope defined for this app by default. The defined scope will be the option displayed on the button when a user tries to add the app. Options are:
+Specifies the install scope defined for this app by default. The defined scope is the option displayed on the button when a user tries to add the app. Options are:
 
 * `personal`
 * `team`
@@ -686,7 +686,7 @@ Specifies the install scope defined for this app by default. The defined scope w
 
 **Optional**—object
 
-When a group install scope is selected, it will define the default capability when the user installs the app. Options are:
+When a group install scope is selected, it defines the default capability when the user installs the app. Options are:
 
 * `team`
 * `groupchat`
