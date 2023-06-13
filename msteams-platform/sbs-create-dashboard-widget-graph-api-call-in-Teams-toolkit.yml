@@ -279,7 +279,22 @@ items:
 - title: Add a new Graph API call
   durationInMinutes: 5
   content: |
+    
+    Scenario 1
+    1. Select the Teams Toolkit icon in the Visual Studio Code Activity Bar.
+      
+       1. Under **DEVELOPMENT**, select **View How-to Guides**.
 
+          :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/add-features.png" alt-text="Screenshot shows the selection of added features option.":::
+
+       1. Select **Develop Single Sign-On Experience in Teams**.
+
+          :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/single-sign-on.png" alt-text="Screenshot shows the selection of single sign-on option.":::
+
+         >[ !NOTE] 
+         > Dashboard teams tab app  is a React project. The SSO creation and Graph API follow the React steps, adding the aad, cli, file source, and source code. The .html files *only* have to be created manually and debug the Teams app.
+       
+    Scenario 2
     To add Single Sign On (SSO) and Graph API, follow these steps:
 
      1. [Create Azure Active Directory app manifest](#create-azure-active-directory-app-manifest)
@@ -497,9 +512,11 @@ items:
      
       You can also find sample for SSO enabled Tab [here](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
      
+     `**Common for both scenarios**`:
+
       You've added the SSO files to your project and now you can call Graph APIs. 
    
-      The graph API call is implemented via TeamsFx SDK. Refer to the [document](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-sdk#microsoft-graph-scenarios:~:text=caught%20and%20transformed.-,Microsoft%20Graph%20Scenarios,-This%20section%20provides) as follows:
+     The graph API call is implemented via TeamsFx SDK. Refer to the [document](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-sdk#microsoft-graph-scenarios:~:text=caught%20and%20transformed.-,Microsoft%20Graph%20Scenarios,-This%20section%20provides) as follows:
 
       1. In Visual Studio Code, go to **EXPLORER** > **src** > **services** > **listService.ts**.
 
