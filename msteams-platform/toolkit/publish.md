@@ -68,6 +68,9 @@ When the app is ready for use in production, you can submit the app using the Te
 
 ### Publish from Teams Toolkit
 
+> [!NOTE]
+> You can also use CICD pipelines to publish your Teams app. For more information, see [Set up CI/CD pipelines](use-CICD-template.md)
+
 The following steps help you to publish the app from Teams Toolkit:
 
 1. You can publish your Teams app in one of the following ways:
