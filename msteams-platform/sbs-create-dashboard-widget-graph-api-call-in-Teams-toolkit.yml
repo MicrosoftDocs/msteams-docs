@@ -278,35 +278,43 @@ items:
   durationInMinutes: 5
   content: |
 
-   Scenario 1
+   **Scenario 1**
+
+    Add single sign-on (SSO) related files by using Teams toolkit:
+    
+     1. Select the Teams Toolkit icon in the Visual Studio Code Activity Bar.
    
-   1. Select the Teams Toolkit icon in the Visual Studio Code Activity Bar.
+     1. Under **DEVELOPMENT**, select **View How-to Guides**.
    
-   1. Under **DEVELOPMENT**, select **View How-to Guides**.
-   
-      :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/add-features.png" alt-text="Screenshot shows the selection of added features option.":::
+       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/add-features.png" alt-text="Screenshot shows the selection of added features option.":::
 
-   1. Select **Develop Single Sign-On Experience in Teams**.
+     1. Select **Develop Single Sign-On Experience in Teams**.
 
-      :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/single-sign-on.png" alt-text="Screenshot shows the selection of single sign-on option.":::
+       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/single-sign-on.png" alt-text="Screenshot shows the selection of single sign-on option.":::
 
-    > [!NOTE] 
-    > Dashboard teams tab app  is a React project. The SSO creation and Graph API follow the React steps, adding the aad, cli, file source, and source code. The .html files have to be created manually and debug the Teams app.
-       
-   Scenario 2
+     1. Follow the React steps to add sso. 
 
-    To add Single Sign On (SSO) and Graph API, follow these steps:
+        1. [Azure Active Directory app manifest](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams#azure-active-directory-app-manifest). 
+        1. [Teams app manifest](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams#teams-app-manifest). 
+        1. [Teams Toolkit configuration files](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams#teams-toolkit-configuration-files). 
+        1. [Update Source Code](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams#react). 
+          * Create auth-start.html and auth-end.html files in public folder.
+          * Add the codes in [auth-start.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-start.html) and [auth-end.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-end.html).
+
+   **Scenario 2**
+
+    To add Single Sign On (SSO), follow these steps:
 
      1. [Create Azure Active Directory app manifest](#create-azure-active-directory-app-manifest)
-     2. [Update Teams app manifest](#update-teams-app-manifest)
-     3. [Update Teams Toolkit configuration files](#update-teams-toolkit-configuration-files)
-     4. [Update Source Code](#update-source-code)
+     1. [Update Teams app manifest](#update-teams-app-manifest)
+     1. [Update Teams Toolkit configuration files](#update-teams-toolkit-configuration-files)
+     1. [Update Source Code](#update-source-code)
        
      ## Create Azure Active Directory app manifest
 
      1. In Visual Studio Code, go to **EXPLORER**.
-     2. Create a `aad.manifest.json` file.
-     3. Add the following code in `aad.manifest json`.
+     1. Create a `aad.manifest.json` file.
+     1. Add the following code in `aad.manifest json`.
 
         ```typescript
          {
@@ -497,68 +505,70 @@ items:
 
       Follow the steps to update source code if you're building your tab app with React framework for [js](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js) or [ts](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts):   
 
-      1. Create **auth-start.html** in to **public**.
-      1. Add the code in [auth-start.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-start.html).
-      1. Create **auth-end.html** in to **public**.
-      1. Add the code in [auth-end.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-end.html).
+     1. Create **auth-start.html** in to **public**.
+     1. Add the code in [auth-start.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-start.html).
+     1. Create **auth-end.html** in to **public**.
+     1. Add the code in [auth-end.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-end.html).
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/auth-end-start.png" alt-text="Screenshot shows the folder structure for auth-start and auth-end files.":::
 
         You can find the sample for SSO enabled Tab [here](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
      
       You've added the SSO files to your project and now call Graph APIs. 
+
+    To add Graph API, follow these steps:
    
       The graph API call is implemented via TeamsFx SDK. Refer to the [document](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-sdk#microsoft-graph-scenarios:~:text=caught%20and%20transformed.-,Microsoft%20Graph%20Scenarios,-This%20section%20provides) as follows:
 
-      1. In Visual Studio Code, go to **EXPLORER** > **src** > **services** > **listService.ts**.
+     1. In Visual Studio Code, go to **EXPLORER** > **src** > **services** > **listService.ts**.
 
-      1. Update the following codes in the **listService.ts**.         
+     1. Update the following codes in the **listService.ts**.         
 
-         ```typescript
-         /**
-           * Retrive sample data
-           * @returns data for list widget
-           */
-         import {TeamsUserCredentialContext} from "../internal/singletonContext";
-         import {
-           createMicrosoftGraphClientWithCredential,
-           TeamsUserCredential,
-           } from "@microsoft/teamsfx";
-           import { ListModel } from "../models/listModel";
-           import { loginAction } from "../internal/login";
-                  
-         export const getListData = async (): Promise<ListModel[]> => {
-           await loginAction(["User.Read"]);
-           let credential = TeamsUserCredentialContext.getInstance().getCredential();
-           const graphClient = createMicrosoftGraphClientWithCredential(credential, [
-             "User.Read",
-           ]);
-           const me = await graphClient.api("/me").get();
-           return [
-             {
-               id: me.id,
-               title: me.displayName,
-               content: me.mail,
-              },
-           ];
+        ```typescript
+        /**
+          * Retrive sample data
+          * @returns data for list widget
+          */
+        import {TeamsUserCredentialContext} from "../internal/singletonContext";
+        import {
+          createMicrosoftGraphClientWithCredential,
+          TeamsUserCredential,
+          } from "@microsoft/teamsfx";
+          import { ListModel } from "../models/listModel";
+          import { loginAction } from "../internal/login";
+                
+        export const getListData = async (): Promise<ListModel[]> => {
+          await loginAction(["User.Read"]);
+          let credential = TeamsUserCredentialContext.getInstance().getCredential();
+          const graphClient = createMicrosoftGraphClientWithCredential(credential, [
+            "User.Read",
+          ]);
+          const me = await graphClient.api("/me").get();
+          return [
+            {
+              id: me.id,
+              title: me.displayName,
+              content: me.mail,
+            },
+          ];
 
-           // {
-           //   id: "id1",
-           //   title: "Lorem ipsum",
-           //   content: "Lorem ipsum dolor sit amet",
-           // },
-           // {
-           //   id: "id2",
-           //   title: "Lorem ipsum",
-           //   content: "Lorem ipsum dolor sit amet",
-           // },
-           // {
-           //   id: "id3",
-           //   title: "Lorem ipsum",
-           //   content: "Lorem ipsum dolor sit amet",
-           // },
-          }
-         ```
+          // {
+          //   id: "id1",
+          //   title: "Lorem ipsum",
+          //   content: "Lorem ipsum dolor sit amet",
+          // },
+          // {
+          //   id: "id2",
+          //   title: "Lorem ipsum",
+          //   content: "Lorem ipsum dolor sit amet",
+          // },
+          // {
+          //   id: "id3",
+          //   title: "Lorem ipsum",
+          //   content: "Lorem ipsum dolor sit amet",
+          // },
+        }
+        ```
 
       1. In Visual Studio Code, go to **EXPLORER** > **src** > **services** > **ListWidget.tsx**.
 
