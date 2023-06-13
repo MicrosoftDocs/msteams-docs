@@ -308,7 +308,7 @@ To debug your app in Outlook for Android:
 1. Ensure your Android device is connected to your dev machine. From your dev machine, open your browser to its DevTools inspection page. For example, go to `edge://inspect/#devices` in Microsoft Edge to display a list of debug-enabled Android WebViews.
 1. Find the `Microsoft Teams Tab` with your tab URL and select **inspect** to start debugging your app with DevTools.
 
-    :::image type="content" source="images/office-android-debug.png" alt-text="Screenshot shows the list of webviews in devtool.":::
+    :::image type="content" source="images/office-android-debug.png" alt-text="Screenshot shows the list of webviews in DevTools.":::
 
 1. Debug your tab app within the Android WebView in the same way that you [remotely debug](/microsoft-edge/devtools-guide-chromium/remote-debugging) a regular website on an Android device.
 
