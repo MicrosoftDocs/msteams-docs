@@ -286,11 +286,11 @@ items:
    
      1. Under **DEVELOPMENT**, select **View How-to Guides**.
    
-       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/add-features.png" alt-text="Screenshot shows the selection of added features option.":::
+         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/add-features.png" alt-text="Screenshot shows the selection of added features option.":::
 
      1. Select **Develop Single Sign-On Experience in Teams**.
 
-       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/single-sign-on.png" alt-text="Screenshot shows the selection of single sign-on option.":::
+          :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/single-sign-on.png" alt-text="Screenshot shows the selection of single sign-on option.":::
 
      1. Follow the React steps to add sso. 
 
@@ -518,7 +518,7 @@ items:
 
     To add Graph API, follow these steps:
    
-      The graph API call is implemented via TeamsFx SDK. Refer to the [document](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-sdk#microsoft-graph-scenarios:~:text=caught%20and%20transformed.-,Microsoft%20Graph%20Scenarios,-This%20section%20provides) as follows:
+      The graph API call is implemented via TeamsFx SDK. Refer to the [document](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-sdk#microsoft-graph-scenarios:~:text=caught%20and%20transformed.-,Microsoft%20Graph%20Scenarios,-This%20section%20provides). 
 
      1. In Visual Studio Code, go to **EXPLORER** > **src** > **services** > **listService.ts**.
 
