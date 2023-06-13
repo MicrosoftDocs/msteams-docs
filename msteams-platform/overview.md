@@ -4,8 +4,7 @@ author: heath-hamilton
 description: Learn about Microsoft Teams, why should you build apps on Teams platform, and how does Teams app help meet business needs.
 ms.topic: overview
 ms.localizationpriority: high
-ms.author: lajanuar
-ms.date: 04/02/2023
+ms.date: 05/24/2021
 ---
 # Teams app that fits
 
