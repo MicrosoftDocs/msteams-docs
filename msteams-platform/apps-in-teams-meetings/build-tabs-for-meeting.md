@@ -23,17 +23,17 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 1. In your calendar, select a meeting to which you want to add a tab.
 1. Select the **Details** tab and select :::image type="icon" source="../assets/icons/add-icon.png" border="false":::. The app gallery appears.
 
-   :::image type="content" source="~/assets/images/apps-in-meetings/pre-meeting-002.png" alt-text="This screenshot shows the pre-meeting app experience in Teams meeting.":::
+   :::image type="content" source="~/assets/images/apps-in-meetings/pre-meeting-002.png" alt-text="Screenshot shows the pre-meeting app experience in Teams meeting.":::
 
 1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting details page.
 
-   # [Desktop](#tab/desktop)
+# [Desktop](#tab/desktop)
 
    The following image shows a tab added to the meeting details page in the Teams desktop client:
 
-   :::image type="content" source="~/assets/images/apps-in-meetings/premeetingtab.png" alt-text="The screenshot shows desktop Teams tabs in the meeting details view in the Teams meeting.":::
+   :::image type="content" source="~/assets/images/apps-in-meetings/premeetingtab.png" alt-text="Screenshot shows desktop Teams tabs in the meeting details view in the Teams meeting.":::
 
-   # [Mobile](#tab/mobile)
+# [Mobile](#tab/mobile)
 
    The following image shows a tab added to the meeting details page in the Teams mobile client:
 
@@ -49,17 +49,17 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 
 1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting chat.
 
-   # [Meeting chat view desktop](#tab/meeting-chat-view-desktop)
+# [Meeting chat view desktop](#tab/meeting-chat-view-desktop)
 
    The following image shows an app added to the meeting chat in the Teams desktop client:
 
-   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams desktop.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="Screenshot shows the meeting chat view in a meeting chat in Teams desktop.":::
 
-   # [Meeting chat view mobile](#tab/meeting-chat-view-mobile)
+# [Meeting chat view mobile](#tab/meeting-chat-view-mobile)
 
    The following image shows an app added to the meeting chat in the Teams mobile client:
 
-   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="Screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
 
    ---
 
@@ -119,13 +119,13 @@ For deep link format, see [deep links](~/concepts/build-and-test/deep-link-workf
 
    The following image shows a tab added to the meeting stage in the Teams desktop client:
 
-   :::image type="content" source="../assets/images/meeting-stage-view.png" alt-text="This screenshot shows meeting Stage View of the app you shared to meeting in Teams desktop.":::
+   :::image type="content" source="../assets/images/meeting-stage-view.png" alt-text="Screenshot shows meeting Stage View of the app you shared to meeting in Teams desktop.":::
 
 # [Meeting Stage View mobile](#tab/meeting-stage-view-mobile)
 
    The following image shows a tab added to the meeting stage in the Teams mobile client:
 
-   :::image type="content" source="../assets/images/meeting-stage/meeting-stage-view-mobile.png" alt-text="This screenshot shows meeting Stage View of the app you shared to meeting in Teams mobile.":::
+   :::image type="content" source="../assets/images/meeting-stage/meeting-stage-view-mobile.png" alt-text="Screenshot shows meeting Stage View of the app you shared to meeting in Teams mobile.":::
 
 ---
 
@@ -139,13 +139,13 @@ However, the tab instances in a channel meeting are separate from the tabs in th
 
    The following image shows apps in a channel in the Teams desktop client:
 
-   :::image type="content" source="../assets/images/apps-in-meetings/apps-in-channel-meeting-desktop.png" alt-text="This screenshot shows a tab added to a channel meeting in Teams desktop.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/apps-in-channel-meeting-desktop.png" alt-text="Screenshot shows a tab added to a channel meeting in Teams desktop.":::
 
 # [Channel meeting mobile](#tab/channel-meeting-mobile)
 
    The following image shows apps in a channel in the Teams mobile client:
 
-   :::image type="content" source="../assets/images/apps-in-meetings/apps-in-channel-meeting-mobile.png" alt-text="This screenshot shows a tab added to a channel meeting in Teams mobile.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/apps-in-channel-meeting-mobile.png" alt-text="Screenshot shows a tab added to a channel meeting in Teams mobile.":::
 
 ---
 
@@ -285,11 +285,11 @@ To enable app caching in your meeting side panel, follow the steps:
 
 The following is the flow diagram of the first launch of an app that wants to opt into app caching (register the `load` or `beforeUnload` on the first launch of the app):
 
-:::image type="content" source="../assets/images/saas-offer/first-launch-app.png" alt-text="This screenshot shows the flow of the first launch of the app in meeting side panel.":::
+:::image type="content" source="../assets/images/saas-offer/first-launch-app.png" alt-text="Screenshot shows the flow of the first launch of the app in meeting side panel.":::
 
 The following is the flow diagram of the launch of cached app:
 
-:::image type="content" source="../assets/images/saas-offer/cached-launch-app.png" alt-text="This screenshot shows the flow of the cached launch of the app in meeting side panel.":::
+:::image type="content" source="../assets/images/saas-offer/cached-launch-app.png" alt-text="Screenshot shows the flow of the cached launch of the app in meeting side panel.":::
 
 When you opt into app caching, the webview that is used to host the embedded app is reused as users navigate to different instances of the app within a window. The webview used to host the app is hidden when the users leave the app and shown when the users return to the app. When the app is cached, any audio that is playing is muted.
 
