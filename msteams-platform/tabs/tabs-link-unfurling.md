@@ -22,7 +22,7 @@ Stage View is a user interface (UI) component that allows you to render content 
 
 Stage View is a full screen UI component that can be used to render your app content, providing users with a focused experience to engage with your app. Stage View can be invoked from either an Adaptive Card or a deep link, in both chats and channels.
 
-* When users invoke Stage View from Adaptive cards within chats, Stage View opens in a new window along with the originating chat in the side panel and this action is called Collaborative Stage View. The Collaborative Stage  View allows users to collaborate and multi-task with each other.
+* When users invoke Stage View from Adaptive cards, Stage View opens in a new Teams window along with the originating chat or channel thread in the side panel. This new app canvas is called the Collaborative Stage View. The Collaborative Stage View allows users to multi-task and collaborate with each other.
 
 * The Collaborative Stage View surfaces the originating chat or thread from where it was invoked and helps the users to engage with content and conversation side-by-side.
 
