@@ -39,13 +39,13 @@ To complete this tutorial, you need:
 
 If your search-based message extension supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) in Teams, follow the steps in this article to enable link unfurling in Outlook on web  and Windows desktop environments. The [code sample](#code-sample) section provides a link unfurling app for testing.
 
-## Stage view
+## Stage View
 
-If your search-based message extension unfurls links that display cards to launch [stage view](../tabs/tabs-link-unfurling.md) in Teams, follow the steps in this article that enables your users in Outlook on web and Windows desktop to send links that work the same way in Outlook.
+If your search-based message extension unfurls links that display cards to launch [Stage View](../tabs/tabs-link-unfurling.md) in Teams, follow the steps in this article that enables your users in Outlook on web and Windows desktop to send links that work the same way in Outlook.
 
 Outlook mobile users on Android and [Microsoft Outlook beta TestFlight](https://testflight.apple.com/join/AhS6fRDK) iOS rings can now receive and take actions on cards from your apps that were sent to them by users on Outlook on web and Windows desktop.
 
-The [code sample](#code-sample) section provides a stage view app for testing.
+The [code sample](#code-sample) section provides a Stage View app for testing.
 
 ## Prepare your message extension for the upgrade
 
@@ -219,7 +219,7 @@ As you test your message extension, you can identify the source (originating fro
 |---------------|--------------|--------|
 | NPM Search Connector | Use Teams Toolkit to build a message extension app. Works in Teams, Outlook. |  [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/NPM-search-connector-M365) |
 | Teams Link Unfurling | Simple Teams app to demonstrate link unfurling. Works in Teams, Outlook. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-link-unfurling/nodejs)
-| Tab in stage view | Microsoft Teams tab sample app for demonstrating a tab in stage view. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)
+| Tab in Stage View | Microsoft Teams tab sample app for demonstrating a tab in Stage View. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)
 
 ## Next step
 

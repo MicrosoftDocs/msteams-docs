@@ -262,11 +262,21 @@ To preview your app running in Microsoft 365 on the web:
 
 To view your app running in Microsoft 365 for Android app:
 
-1. Launch the Microsoft 365 app and sign in using your dev tenant account. If the Microsoft 365 app was already running prior to sideloading your app in Teams, you need to restart it in order to see in your installed apps.
+1. Launch the Microsoft 365 app on your device and sign in using your developer tenant account. If the Microsoft 365 app was already running prior to sideloading your app in Teams, you need to restart Teams to see it in your installed apps.
 1. Select the **Apps** icon. Your sideloaded app appears among installed apps.
 1. Select your app icon to launch your app in the Microsoft 365 app.
 
-    :::image type="content" source="images/office-mobile-apps.png" alt-text="The screenshot is an example that shows the 'Apps' option on the side bar of the Microsoft 365 app to see your installed personal tabs.":::
+    :::image type="content" source="images/office-mobile-apps.png" alt-text="The screenshot is an example that shows the 'Apps' option on the side bar of the Microsoft 365 app to see your installed personal tabs on Microsoft 365 for Android app.":::
+
+### Microsoft 365 for iOS
+
+To view your app running in Microsoft 365 for iOS:
+
+1. Launch the Microsoft 365 app on your device and sign in using your developer tenant account. If the Microsoft 365 app was already running prior to sideloading your app in Teams, you need to restart Teams to see it in your installed apps.
+1. Select the **Apps** icon. Your sideloaded app appears among installed apps.
+1. Select your app icon to launch your app in the Microsoft 365 app.
+
+    :::image type="content" source="images/m365-mobile-apps.png" alt-text="The screenshot is an example that shows the 'Apps' option on the side bar of the Microsoft 365 app to see your installed personal tabs on Microsoft 365 for iOS.":::
 
 ## Troubleshooting
 

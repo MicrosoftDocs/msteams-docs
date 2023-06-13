@@ -6,6 +6,7 @@ description: Understand the level of support for different TeamsJS library capab
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.custom: m365apps
+ms.date: 05/18/2023
 keywords: TeamsJS Teams JavaScript library capability Microsoft 365 M365
 ---
 # TeamsJS capability support across Microsoft 365
@@ -2050,7 +2051,7 @@ Namespace to open a share dialog for web content. For more info, see [Share to T
 
 [Reference](/javascript/api/@microsoft/teams-js/stageview) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/StageView.tsx)
 
-Preview. Namespace to interact with the stage view specific part of the library.
+Preview. Namespace to interact with the Stage View specific part of the library.
 
 <br />
 <table border>
