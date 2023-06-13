@@ -27,8 +27,8 @@ The rest of this guide walks you through these steps and show you how to preview
 To complete this tutorial, you need:
 
 * A Microsoft 365 Developer Program sandbox tenant.
-* Your sandbox tenant enrolled in *Microsoft 365 Targeted Releases*.
-* A machine with Microsoft 365 apps installed from the Microsoft 365 Apps *beta channel*.
+* A machine with Microsoft 365 apps installed from the Microsoft 365 Apps *Current Channel*.
+* (Optional) Your sandbox tenant enrolled in Microsoft 365 Targeted Releases.
 * (Optional) An Android device or emulator with Microsoft 365 for Android app installed.
 * (Optional) [Teams Toolkit](https://aka.ms/teams-toolkit) extension for Microsoft Visual Studio Code to help update your code.
 
@@ -59,8 +59,8 @@ To start with a personal tab that's already enabled to run in Teams, Outlook, an
 1. Select a location on your local machine for the workspace folder and enter your application name.
 1. Once your app has been created, within the Teams Toolkit extension, make sure you're signed in to the appropriate Microsoft 365 Developer Program sandbox tenant and Azure account. These options can be found within the **ACCOUNTS** section of the extension.
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
-1. Enter **Teams: Provision** to create the relevant app resources, such as Azure App Service, App Service plan, Azure Bot, and Managed Identity, in your Azure account. Alternatively, you can select **Provision** under the **LIFECYCLE** section of the extension.
-1. Select a subscription and a resource group. If you choose to create a new resource group, you'll need to specify the Location.
+1. Enter **Teams: Provision** to create the Teams app resources such as Azure App Service, App Service plan, Azure Bot, and Managed Identity in your Azure account. Alternatively, you can select **Provision** under **LIFECYCLE** section of the extension.
+1. Select a subscription and a resource group. If you choose to create a new resource group, you need to specify the location.
 1. Select **Provision**.
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
 1. Enter **Teams: Deploy** to deploy the sample code to the provisioned resources in Azure and start the app. Alternatively, you can select **Deploy** under the **LIFECYCLE** section of the extension.
