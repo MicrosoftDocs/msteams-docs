@@ -95,12 +95,6 @@ Encoded URL:
 > * The deep link can also be passed through an `OpenURL` action.
 > * When you launch a Stage from a certain context, ensure that your app works in that context. For example, if your Stage View is launched from a personal app, you must ensure your app has a personal scope.
 
-Following is the process to invoke Stage View:
-
-* When the user share a URL in a Teams chat, the bot receives an `invoke` request. The request type is `composeExtension/queryLink`. The bot returns an Adaptive Card with the type `tab/tabInfoAction`.
-
-* When the user selects the action button on the Adaptive Card, a Stage View opens based on the content of the Adaptive Card.
-
 ## Collaborative Stage View
 
 > [!NOTE]
