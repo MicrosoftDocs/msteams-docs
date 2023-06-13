@@ -50,8 +50,6 @@ An example of Stage view when it is invoked from a deep link:
 
 :::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card2.png" alt-text="Screenshot shows the open stage from card."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card2.png":::
 
-:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card1.png" alt-text="Screenshot shows the open stage from Adaptive Card."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card1.png":::
-
 #### Examples
 
 When a user enters a URL, it's unfurled into an Adaptive card. Following are the deep link examples to invoke Stage View:
