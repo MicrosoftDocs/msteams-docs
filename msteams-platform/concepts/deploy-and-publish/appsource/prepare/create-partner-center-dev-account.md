@@ -91,7 +91,7 @@ See [manage account settings and profile info](/windows/uwp/publish/manage-accou
 
 You received this error message because your [account verification status](/partner-center/verification-responses) is pending. Check your status in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select the **Settings** gear icon and choose **Developer settings > Account > Account settings**.
 
-:::image type="content" source="../../../../assets/images/partner-center-verification-status.png" alt-text="Screenshot shows the Partner Center verification status.":::
+:::image type="content" source="../../../../assets/images/partner-center-verification-status.png" alt-text="Screenshot shows the Partner Center Verification status.":::
 
 <br>
 

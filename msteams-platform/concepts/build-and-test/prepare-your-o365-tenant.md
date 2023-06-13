@@ -53,7 +53,7 @@ To turn on the custom app uploading or sideloading for your developer tenant:
     > [!Note]
     > It can take up to 24 hours for the sideloading to be active. In the interim, you can use **upload for \<your tenant>** to test your app. To upload the .zip package file of the app, see [upload custom apps](/microsoftteams/upload-custom-apps#upload).
 
-    :::image type="content" source="../../assets/images/prepare-test-tenant/upload-for-contoso.png" alt-text="Screenshot shows the Upload app view.":::
+    :::image type="content" source="../../assets/images/prepare-test-tenant/upload-for-contoso.png" alt-text="Screenshot shows the upload app view.":::
 
 For complete information on how these settings interact, see [manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings) and [manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies).
 

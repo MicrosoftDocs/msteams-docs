@@ -53,7 +53,7 @@ To start with a personal tab that's already enabled to run in Teams, Outlook, an
 1. Select the **Tab** option.
 1. Select **Basic tab**.
 
-    :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Screenshot shows the Todo List sample (Works in Teams, Outlook, and Microsoft 365 app) in Teams Toolkit.":::
+    :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Screenshot shows the Basic Tab option highlighted to create a new app feature using a tab.":::
 
 1. Select preferred programming language.
 1. Select a location on your local machine for the workspace folder and enter your application name.
@@ -151,7 +151,7 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
 1. Select the name of your personal tab application to open its app registration.
 1. Select  **Expose an API** (under *Manage*).
 
-    :::image type="content" source="images/azure-app-registration-clients.png" alt-text="Screenshot shows the authorize client Ids from the App registrations blade on Azure portal.":::
+    :::image type="content" source="images/azure-app-registration-clients.png" alt-text="Screenshot shows the Authorized client Ids from the App registrations blade on Azure portal.":::
 
 1. In the **Authorized client applications** section, ensure all of the following `Client Id` values are added:
 
@@ -181,7 +181,7 @@ The final step to running your app in Microsoft 365 and Outlook is to sideload y
 
 1. Select **Apps** to open the **Manage your apps** pane. Then select **Upload an app**.
 
-    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Screenshot shows the Manage your apps pane and Publish an app options.":::
+    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Screenshot shows the Upload an app option under Manage your apps.":::
 
 1. Choose the **Upload a custom app** option and select your app package.
 
@@ -266,7 +266,7 @@ To view your app running in Microsoft 365 for Android app:
 1. Select the **Apps** icon. Your sideloaded app appears among installed apps.
 1. Select your app icon to launch your app in the Microsoft 365 app.
 
-    :::image type="content" source="images/office-mobile-apps.png" alt-text="The screenshot is an example that shows the 'Apps' option on the side bar of the Microsoft 365 app to see your installed personal tabs on Microsoft 365 for Android app.":::
+    :::image type="content" source="images/office-mobile-apps.png" alt-text="Screenshot shows the Apps option on the side bar of the Microsoft 365 app to see your installed personal tabs on Microsoft 365 for Android app.":::
 
 ### Microsoft 365 for iOS
 
@@ -276,7 +276,7 @@ To view your app running in Microsoft 365 for iOS:
 1. Select the **Apps** icon. Your sideloaded app appears among installed apps.
 1. Select your app icon to launch your app in the Microsoft 365 app.
 
-    :::image type="content" source="images/m365-mobile-apps.png" alt-text="The screenshot is an example that shows the 'Apps' option on the side bar of the Microsoft 365 app to see your installed personal tabs on Microsoft 365 for iOS.":::
+    :::image type="content" source="images/m365-mobile-apps.png" alt-text="Screenshot shows the Apps option on the side bar of the Microsoft 365 app to see your installed personal tabs on Microsoft 365 for iOS.":::
 
 ## Troubleshooting
 
@@ -292,7 +292,7 @@ Use the [Microsoft Teams developer community channels](/microsoftteams/platform/
 
 From Visual Studio code with Teams Toolkit, you can Debug (**F5**) your tab application running in Teams, Microsoft 365 app, and Outlook.
 
-:::image type="content" source="images/toolkit-debug-targets.png" alt-text="Screenshot shows the dropdown menu of debug in Teams in the Teams Toolkit.":::
+:::image type="content" source="images/toolkit-debug-targets.png" alt-text="Screenshot shows the dropdown menu of Debug in Teams in Teams Toolkit.":::
 
 Select the desired target and then launch the debug experience. Upon first run of local debug, you're prompted to sign in to your Microsoft 365 tenant account.
 

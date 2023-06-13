@@ -73,13 +73,13 @@ If the Preview offer is specified in the app manifest and the preview audience i
 
   No plans found with **-preview**. Make sure you're in the preview audience.
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="Screenshot shows the no plans with preview." :::
+  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="Screenshot shows the No plans found with preview warning." :::
 
 * If the offer ID specified in the app manifest isn't a Preview offer, the app shows the following warning message to the user and sideloading is disabled:
   
   This isn't a preview offer. Be sure to append the **-preview** to the Offer ID.
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="Screenshot shows the no -preview." :::
+  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="Screenshot shows the not a preview offer warning." :::
 
 ## See also
 
