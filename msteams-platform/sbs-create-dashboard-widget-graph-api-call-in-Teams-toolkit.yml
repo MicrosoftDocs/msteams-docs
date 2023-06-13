@@ -62,13 +62,13 @@ items:
 
      1. Enter an application name.
 
-       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/enter-application-name.png" alt-text="Screenshot shows the selection of application name.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/enter-application-name.png" alt-text="Screenshot shows the selection of application name.":::
 
-     The Teams tab app is created in few seconds and Teams Toolkit displays the following message.
+        The Teams tab app is created in few seconds and Teams Toolkit displays the following message.
       
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-app-preview.png" alt-text="Screenshot shows the teams tab app dashboard preview in VS Code.":::
 
-       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-debug.png" alt-text="Screenshot shows the local debug.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-debug.png" alt-text="Screenshot shows the local debug.":::
 
      1. Select the Teams Toolkit icon in sidebar.
      
@@ -82,7 +82,7 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-dashboard-add.png" alt-text="Screenshot shows the selection of workspace folder.":::
 
-     Successfully created the teams tab app dashboard
+       Successfully created the teams tab app dashboard.
 
        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity.":::
 
@@ -128,7 +128,7 @@ items:
       | `src/App.css` | The style of application route. |
       | `src/App.tsx` | Application route. |
       
-      The following files are project-related files. You, generally won't need to customize these files.
+      The following files are project-related files. Generally, you don't need to customize these files.
 
       | File | Contents |
       | ----- | ----- |
@@ -247,7 +247,7 @@ items:
             ```css
             .one-column {
               display: grid;
-              gap: 20px;
+              gap: 20 px;
               grid-template-rows: 1fr 1fr;
             }
             ```
@@ -477,7 +477,7 @@ items:
 
      ## Update Source Code
 
-     Suppose you are building your tab app with React framework. You can find and download sample code for TeamsFx Tab:
+     Suppose you're building your tab app with React framework. You can find and download sample code for TeamsFx Tab:
       
       •	for [js](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js)
       •	for [ts](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts)
@@ -485,9 +485,9 @@ items:
      You can follow the following steps to update your source code:
 
       1.	Create **auth-start.html** in to **public**.
-      2.	Add the code in [auth-start.html](packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-end.html).
-      3.	Create **auth-start.html** in to **public**.
-      4.	Add the codes [auth-end.html](packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-start.html).
+      2.	Add the code in [auth-start.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-start.html).
+      3.	Create **auth-end.html** in to **public**.
+      4.	Add the codes [auth-end.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-end.html).
      
       IMAGE
      
