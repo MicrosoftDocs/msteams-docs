@@ -68,7 +68,7 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 :::row-end:::
 
 <br>
-You can create scenes for meetings, provide notifications to users, populate in-meeting dialogs, and much more with meeting app extensibility.
+You can create scenes for meetings, provide notifications to users, populate in-meeting dialogs, and more with meeting app extensibility.
 
 Third-party and line-of-business apps built for meetings and calls are available in Government Community Cloud (GCC) but aren't available for GCC-High and Department of Defense (DOD) tenants.
 
