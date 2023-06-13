@@ -3,7 +3,7 @@ title: Teams JavaScript client library support across Microsoft 365
 date: 05/18/2023
 author: erikadoyle
 ms.author: mosdevdocs
-description: Understand the level of support for different TeamsJS library capabilities running in different hosts for Teams apps, including Microsoft Teams, Outlook, and Microsoft 365 app 
+description: Understand the level of support for different TeamsJS library capabilities running in different hosts for Teams apps, including Microsoft Teams, Outlook, and Microsoft 365 app.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.custom: m365apps
@@ -495,7 +495,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
 
 ## Preview capabilities awaiting host support
 
-Some capabilities in the source are in early preview and still awaiting initial support in one or more host applications, including [**barCode**](#barcode), [**media**](#media), [**meeting**](#meeting), and [**search**](#search).
+Some capabilities in the source are in early preview and still awaiting initial support in one or more host applications that include [**barCode**](#barcode), [**media**](#media), [**meeting**](#meeting), and [**search**](#search).
 
 The remainder of this article provides further information on each capability of the Teams JavaScript client library.
 
