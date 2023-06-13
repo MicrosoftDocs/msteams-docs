@@ -394,7 +394,7 @@
     displayName: Slow load times, iFrame constraints, invoke activities, task module, task fetch, task submit, authentication
   - name: Tabs link unfurling and Stage View
     href: tabs/tabs-link-unfurling.md
-    displayName: Tab in stage view
+    displayName: Tab in Stage View
   - name: Create conversational tabs
     href: tabs/how-to/conversational-tabs.md
     displayName: configurable
@@ -548,7 +548,7 @@
       displayName: supportsAnonymousGuestUsers, guest
     - name: Meeting apps APIs
       href: apps-in-teams-meetings/meeting-apps-apis.md
-      displayName: payload, recurring, getparticipant, captions, targeted meeting notification
+      displayName: payload, recurring, getparticipant, captions, targeted meeting notification, real-time meeting events, meeting start and end events
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview

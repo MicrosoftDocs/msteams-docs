@@ -2,9 +2,7 @@
 title: Overview resource-specific consent in Teams
 description: In this article, learn about resource-specific consent (RSC) permissions, types of RSC and supported RSC permissions.
 ms.localizationpriority: medium
-author: surbhigupta
-ms.author: surbhigupta
-ms.topic: conceptual
+ms.topic: Conceptual
 ---
 
 # Resource-specific consent for your Teams app
