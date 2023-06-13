@@ -26,7 +26,7 @@ Stage View is a full screen UI component that can be used to render your app con
 
 * The Collaborative Stage View surfaces the originating chat or thread from where it was invoked and helps the users to engage with content and conversation side-by-side.
 
-The following is an example of the modal experience for a deep link Stage View within the main Teams window:
+The following image is an example of the modal experience for a deep link Stage View within the main Teams window:
 
 :::image type="content" source="../assets/images/tab-images/invoke-stage-view-deep-link.png" alt-text="Screenshot shows the invoke Stage View through deep link.":::
 
@@ -40,7 +40,7 @@ The following is an example of the modal experience for a deep link Stage View w
 
 To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. Stage View from a deep link always defaults to the modal experience (and not a Teams window). The Stage View deep link can also be passed through an `OpenURL` action in the card,  the Stage View deep link is intended for the tab canvas. For Stage View from Adaptive Cards, we encourage developers to follow the JSON Adaptive Card example.
 
-An example of Stage view when it is invoked from a deep link:
+An example of Stage view when it's invoked from a deep link:
 
 :::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card2.png" alt-text="Screenshot shows the open stage from card."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card2.png":::
 
@@ -106,7 +106,7 @@ Collaborative Stage View is an enhancement to Stage View, that allows users to e
 
 In the new Teams window, the Collaborative Stage View also opens a chat in the side panel. The chat brings the conversation from the group chat or channel thread where the users' Adaptive Card is originally shared. Users can continue to collaborate directly within the new window.
 
-The following screenshot is an example of Collaborative Stage View:
+The following image is an example of Collaborative Stage View:
 
 :::image type="content" source="../assets/images/tab-images/collaborative-stage-view.png" alt-text="Screenshot shows the Collaborative Stage View in Teams.":::
 
@@ -125,7 +125,7 @@ Collaborative Stage View helps unlock multi-tasking scenarios with your app cont
 
 When the user enters an app content URL in a chat, the bot is invoked and returns an Adaptive Card with the option to open the URL. Depending on the context and the users’ client, the URL opens in the appropriate Stage View UI. When the Collaborative Stage View is invoked from an Adaptive Card in a chat or channel (and not from a deep link), a new window opens.
 
-The following is an example of a Collaborative Stage View from an Adaptive Card:
+The following image is an example of a Collaborative Stage View from an Adaptive Card:
 
 :::image type="content" source="../assets/images/tab-images/collaborative-stage-view-adaptive-card.png" alt-text="Screenshot shows the invoke experience of collaborative Stage View from Adaptive Card.":::
 
