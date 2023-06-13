@@ -5,6 +5,7 @@ description: Learn how to create Outgoing Webhook in Microsoft Teams, its key fe
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
+ms.date: 02/27/2023
 ---
 
 # Create Outgoing Webhooks

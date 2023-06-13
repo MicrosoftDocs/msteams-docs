@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
+ms.date: 02/28/2023
 ---
 
 # Install Moodle LMS
