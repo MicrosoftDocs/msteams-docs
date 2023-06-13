@@ -422,7 +422,7 @@ items:
        }
      ```
 
-        :::image type="content" source="assets/images/sbs-create-a-new-dashboard/aad-app-manifest.png" alt-text="Screenshot shows the azure active dirctory code addition. ":::
+          :::image type="content" source="assets/images/sbs-create-a-new-dashboard/aad-app-manifest.png" alt-text="Screenshot shows the azure active dirctory code addition. ":::
 
      ## Update Teams app manifest
 
@@ -439,7 +439,7 @@ items:
        }
      ```
 
-        :::image type="content" source="assets/images/sbs-create-a-new-dashboard/teams-app-manifest.png" alt-text="Screenshot shows the addition of web application info in manifest. ":::
+          :::image type="content" source="assets/images/sbs-create-a-new-dashboard/teams-app-manifest.png" alt-text="Screenshot shows the addition of web application info in manifest. ":::
 
      ## Update Teams Toolkit configuration files
 
@@ -470,9 +470,9 @@ items:
             outputFilePath : ./build/aad.manifest.${{TEAMSFX_ENV}}.json
      ```
 
-        :::image type="content" source="assets/images/sbs-create-a-new-dashboard/ttk-teams-app.png" alt-text="Screenshot shows the addition of aadApp/create and aadApp/update code.":::
+          :::image type="content" source="assets/images/sbs-create-a-new-dashboard/ttk-teams-app.png" alt-text="Screenshot shows the addition of aadApp/create and aadApp/update code.":::
       
-        :::image type="content" source="assets/images/sbs-create-a-new-dashboard/ttk-teams-app-local.png" alt-text="Screenshot shows the addition of aadApp/create and aadApp/update code.":::
+          :::image type="content" source="assets/images/sbs-create-a-new-dashboard/ttk-teams-app-local.png" alt-text="Screenshot shows the addition of aadApp/create and aadApp/update code.":::
 
      1. Find **cli/runNpmCommand** action with name `build app` in `teamsapp.yml` and add following env. 
 
@@ -482,7 +482,7 @@ items:
        REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
      ```
 
-        :::image type="content" source="assets/images/sbs-create-a-new-dashboard/cli-teams-app.png" alt-text="Screenshot shows the information to react code for cli.":::
+          :::image type="content" source="assets/images/sbs-create-a-new-dashboard/cli-teams-app.png" alt-text="Screenshot shows the information to react code for cli.":::
 
      1. Find **file/createOrUpdateEnvironmentFile** action for deploy in `teamsapp.local.yml``.
 
@@ -492,7 +492,7 @@ items:
        REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
        REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
      ```
-        :::image type="content" source="assets/images/sbs-create-a-new-dashboard/file-teams-app-local.png" alt-text="Screenshot shows the information to react codes.":::
+          :::image type="content" source="assets/images/sbs-create-a-new-dashboard/file-teams-app-local.png" alt-text="Screenshot shows the information to react codes.":::
 
      ## Update Source Code
 
@@ -509,7 +509,7 @@ items:
       3.	Create **auth-end.html** in to **public**.
       4.	Add the code in [auth-end.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-end.html).
 
-        :::image type="content" source="assets/images/sbs-create-a-new-dashboard/auth-end-start.png" alt-text="Screenshot shows the folder structure for auth-start and auth-end files.":::
+          :::image type="content" source="assets/images/sbs-create-a-new-dashboard/auth-end-start.png" alt-text="Screenshot shows the folder structure for auth-start and auth-end files.":::
      
       You can also find sample for SSO enabled Tab [here](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
      
@@ -581,7 +581,7 @@ items:
 
       1. SSO and Graph API shows the login user profile in list widget. 
 
-        :::image type="content" source="assets/images/sbs-create-a-new-dashboard/join.png" alt-text="Screenshot shows the Join button highlighted in red.":::
+          :::image type="content" source="assets/images/sbs-create-a-new-dashboard/join.png" alt-text="Screenshot shows the Join button highlighted in red.":::
 
 - title: Complete challenge
   durationInMinutes: 5
