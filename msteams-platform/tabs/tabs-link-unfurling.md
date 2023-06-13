@@ -28,7 +28,7 @@ Stage View is a full screen UI component that can be used to render your app con
 
 The following is an example of the modal experience for a deep link Stage View within the main Teams window:
 
-:::image type="content" source="../assets/images/tab-images/invoke-stage-view-deep-link.png" alt-text="Screenshot shows the invoke stage view through deep link.":::
+:::image type="content" source="../assets/images/tab-images/invoke-stage-view-deep-link.png" alt-text="Screenshot shows the invoke Stage View through deep link.":::
 
 ### Stage View vs. Task module
 
@@ -38,17 +38,17 @@ The following is an example of the modal experience for a deep link Stage View w
 
 ### Invoke Stage View through deep link
 
-To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. Stage View from a deep link always defaults to the modal experience (and not a Teams window). The deep link can also be passed through an `OpenURL` action in the card,  the Stage View deep link is intended for the tab canvas. For Adaptive Cards, we encourage developers to follow the JSON Adaptive Card example.
+To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. Stage View from a deep link always defaults to the modal experience (and not a Teams window). The Stage View deep link can also be passed through an `OpenURL` action in the card,  the Stage View deep link is intended for the tab canvas. For Stage View from Adaptive Cards, we encourage developers to follow the JSON Adaptive Card example.
+
+An example of Stage view when it is invoked from a deep link:
+
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card2.png" alt-text="Screenshot shows the open stage from card."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card2.png":::
 
 #### Syntax
 
 Following is the deep link syntax:
 
 `<https://teams.microsoft.com/l/stage/{appId}/0?context>={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}`
-
-An example of Stage view when it is invoked from a deep link:
-
-:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card2.png" alt-text="Screenshot shows the open stage from card."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card2.png":::
 
 #### Examples
 
@@ -108,13 +108,13 @@ In the new Teams window, the Collaborative Stage View also opens a chat in the s
 
 The following screenshot is an example of Collaborative Stage View:
 
-:::image type="content" source="../assets/images/tab-images/collaborative-stage-view.png" alt-text="Screenshot shows the Collaborative stage view in Teams.":::
+:::image type="content" source="../assets/images/tab-images/collaborative-stage-view.png" alt-text="Screenshot shows the Collaborative Stage View in Teams.":::
 
 ### Collaborative Stage View Vs. Stage View
 
 |Feature |Notes |Desktop |Web |Mobile|
 |---      |:-----  |:--------   |:----  |:----- |
-|Collaborative Stage View| Invoke from Adaptive Card action. |Chat/Channel: Opens Teams pop-out window with chat pane.| Opens Stage View modal. |Opens Stage View modal.|
+|Collaborative Stage View| Invoke from Adaptive Card action. |Chat or Channel: Opens Teams pop-out window with chat pane.| Opens Stage View modal. |Opens Stage View modal.|
 |Stage View |Invoke from Deep link. Only recommended when calling from your tab app, and not an Adaptive Card. |Opens Stage View modal.| Opens Stage View modal.| Opens Stage View modal.|
 
 ### Advantages of Collaborative Stage View
@@ -129,7 +129,7 @@ The following is an example of a Collaborative Stage View from an Adaptive Card:
 
 :::image type="content" source="../assets/images/tab-images/collaborative-stage-view-adaptive-card.png" alt-text="Screenshot shows the invoke experience of collaborative Stage View from Adaptive Card.":::
 
-:::image type="content" source="../assets/images/tab-images/collaborative-stage-view.png" alt-text="Screenshot shows the Collaborative stage view in Adaptive Card.":::
+:::image type="content" source="../assets/images/tab-images/collaborative-stage-view.png" alt-text="Screenshot shows the Collaborative Stage View in Adaptive Card.":::
 
 #### Syntax
 
