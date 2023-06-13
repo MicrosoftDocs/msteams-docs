@@ -4,6 +4,7 @@ description: In this article, you'll learn how to install and configure the Mood
 ms.topic: how-to
 ms.localizationpriority: medium
 author: surbhigupta
+ms.date: 02/28/2023
 ---
 
 # Install Moodle LMS

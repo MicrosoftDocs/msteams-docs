@@ -3,6 +3,7 @@ title: Create an Outgoing Webhook
 description: Learn how to create Outgoing Webhook in Microsoft Teams, its key features and code sample (.NET, Node.js) to create custom bots to be used in Teams.
 ms.topic: conceptual
 ms.localizationpriority: high
+ms.date: 02/27/2023
 ---
 
 # Create Outgoing Webhooks

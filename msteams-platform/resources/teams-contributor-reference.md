@@ -3,6 +3,7 @@ title: Contribute to Teams documentation
 description: Learn steps for creating and publishing Teams documentation
 ms.localizationpriority: medium
 ms.topic: contributor-guide
+ms.date: 07/27/2022
 ---
 
 # Contribute to Teams documentation
