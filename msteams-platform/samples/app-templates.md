@@ -1,6 +1,6 @@
 ---
 title: App templates for Microsoft Teams
-description: Learn to use app templates for Microsoft Teams platform with detailed instructions for deploying and installing an app.
+description: Learn to use app templates for Microsoft Teams platform with detailed instructions on deploying and installing an app.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lajanuar
@@ -32,6 +32,9 @@ The Champion Management Platform (CMP) app template helps you manage, scale, and
 ## Company Communicator
 
 The Company Communicator app enables corporate teams to create and send messages intended for multiple teams or large number of employees over chat allows organization to reach employees right where they collaborate. Utilize this template for multiple scenarios such as new initiative announcements, employee onboarding, modern learning, and development or organization-wide broadcasts.
+
+> [!NOTE]
+> Company Communicator app is not supported in mobile clients.
 
 The app provides an easy interface for designated users to create, preview, collaborate, and send messages.
 
