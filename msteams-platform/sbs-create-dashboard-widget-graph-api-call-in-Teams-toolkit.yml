@@ -497,77 +497,75 @@ items:
 
      ## Update Source Code
 
-     Suppose you're building your tab app with React framework. You can find and download sample code for TeamsFx Tab:
+      Suppose you're building your tab app with React framework:
       
       •	for [js](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js)
       
       •	for [ts](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts)
      
-     You can follow the following steps to update your source code:
+      Follow the steps to update source code:
 
       1.	Create **auth-start.html** in to **public**.
       1.	Add the code in [auth-start.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-start.html).
       1.	Create **auth-end.html** in to **public**.
       1.	Add the code in [auth-end.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-end.html).
-
+ 
           :::image type="content" source="assets/images/sbs-create-a-new-dashboard/auth-end-start.png" alt-text="Screenshot shows the folder structure for auth-start and auth-end files.":::
-     
-      You can also find sample for SSO enabled Tab [here](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
-     
-     `**Common for both scenarios**`:
 
-      You've added the SSO files to your project and now you can call Graph APIs. 
+        You can find the sample for SSO enabled Tab [here](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
+     
+    You've added the SSO files to your project and now call Graph APIs. 
    
-     The graph API call is implemented via TeamsFx SDK. Refer to the [document](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-sdk#microsoft-graph-scenarios:~:text=caught%20and%20transformed.-,Microsoft%20Graph%20Scenarios,-This%20section%20provides) as follows:
+      The graph API call is implemented via TeamsFx SDK. Refer to the [document](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-sdk#microsoft-graph-scenarios:~:text=caught%20and%20transformed.-,Microsoft%20Graph%20Scenarios,-This%20section%20provides) as follows:
 
       1. In Visual Studio Code, go to **EXPLORER** > **src** > **services** > **listService.ts**.
 
       1. Update the following codes in the **listService.ts**.         
 
-        ```typescript
-        /**
-          * Retrive sample data
-          * @returns data for list widget
-          */
-        import {TeamsUserCredentialContext} from "../internal/singletonContext";
-        import {
-          createMicrosoftGraphClientWithCredential,
-          TeamsUserCredential,
-          } from "@microsoft/teamsfx";
-          import { ListModel } from "../models/listModel";
-          import { loginAction } from "../internal/login";
+         ```typescript
+         /**
+           * Retrive sample data
+           * @returns data for list widget
+           */
+         import {TeamsUserCredentialContext} from "../internal/singletonContext";
+         import {
+           createMicrosoftGraphClientWithCredential,
+           TeamsUserCredential,
+           } from "@microsoft/teamsfx";
+           import { ListModel } from "../models/listModel";
+           import { loginAction } from "../internal/login";
                   
-        export const getListData = async (): Promise<ListModel[]> => {
-          await loginAction(["User.Read"]);
-          let credential = TeamsUserCredentialContext.getInstance().getCredential();
-          const graphClient = createMicrosoftGraphClientWithCredential(credential, [
-            "User.Read",
-          ]);
-          const me = await graphClient.api("/me").get();
-          return [
-            {
-              id: me.id,
-              title: me.displayName,
-              content: me.mail,
-            },
-          ];
+         export const getListData = async (): Promise<ListModel[]> => {
+           await loginAction(["User.Read"]);
+           let credential = TeamsUserCredentialContext.getInstance().getCredential();
+           const graphClient = createMicrosoftGraphClientWithCredential(credential, [
+             "User.Read",
+           ]);
+           const me = await graphClient.api("/me").get();
+           return [
+             {
+               id: me.id,
+               title: me.displayName,
+               content: me.mail,
+              },
+           ];
 
-          // {
-          //   id: "id1",
-          //   title: "Lorem ipsum",
-          //   content: "Lorem ipsum dolor sit amet",
-          // },
-          // {
-          //   id: "id2",
-          //   title: "Lorem ipsum",
-          //   content: "Lorem ipsum dolor sit amet",
-          // },
-          // {
-          //   id: "id3",
-          //   title: "Lorem ipsum",
-          //   content: "Lorem ipsum dolor sit amet",
-          // },
-        }
+           // {
+           //   id: "id1",
+           //   title: "Lorem ipsum",
+           //   content: "Lorem ipsum dolor sit amet",
+           // },
+           // {
+           //   id: "id2",
+           //   title: "Lorem ipsum",
+           //   content: "Lorem ipsum dolor sit amet",
+           // },
+           // {
+           //   id: "id3",
+           //   title: "Lorem ipsum",
+           //   content: "Lorem ipsum dolor sit amet",
+           // },
+          }
         ```
 
       1. In Visual Studio Code, go to **EXPLORER** > **src** > **services** > **ListWidget.tsx**.
@@ -582,7 +580,7 @@ items:
 
       1. SSO and Graph API shows the login user profile in list widget. 
 
-          :::image type="content" source="assets/images/sbs-create-a-new-dashboard/join.png" alt-text="Screenshot shows the Join button highlighted in red.":::
+         :::image type="content" source="assets/images/sbs-create-a-new-dashboard/join.png" alt-text="Screenshot shows the Join button highlighted in red.":::
 
 - title: Complete challenge
   durationInMinutes: 5
