@@ -4,7 +4,6 @@ description: Learn how to design a tab for desktop, web, and mobile, and get the
 author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.author: lajanuar
 ---
 # Design your tab for Microsoft Teams
 

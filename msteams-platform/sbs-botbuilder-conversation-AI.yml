@@ -346,14 +346,15 @@ items:
 
        ```
 
-    1. Go to **Explorer** > **env** > **.env.local.user** and add the OpenAI key to `SECRET_OPENAI_API_KEY`.
+    1. Go to **Explorer** > **env** > **.env.local.user**.
+    
+    1. Add the following code after `SECRET_BOT_PASSWORD` and update the OpenAI key that you've generated.
 
        ```env/.env.local.user
-        SECRET_BOT_PASSWORD=
-        SECRET_OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        SECRET_OPENAI_API_KEY=sk***********************
        ```
 
-    1. Go to the `config.ts` file and add the following code:
+    1. Go to the `config.ts` file and add the following code after `botId` and `botPassword`:
     
        ```config.ts
        openAIKey: process.env.SECRET_OPENAI_API_KEY
@@ -361,7 +362,7 @@ items:
 
        When you debug the app, the OpenAI key defined here processes the OpenAI key from the `.env.local.user` during local debug.
 
-    1. Go to the `teamsapp.local.yml` file, under **Generate runtime environment variables** add the following code after `BOT_ID` and `BOT_PASSWORD`:
+    1. Go to the `teamsapp.local.yml` file, under **Generate runtime environment variables**, add the following code after `BOT_ID` and `BOT_PASSWORD`:
 
        ```teamsapp.local.yml
        SECRET_OPENAI_API_KEY: ${{SECRET_OPENAI_API_KEY}}
@@ -371,7 +372,7 @@ items:
 
     1. Go to the `index.ts` file :
 
-        1. Add the following code to import Teams AI library:
+        1. At the end of the file, add the following code to import Teams AI library:
 
             ```typescript
             import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnState, OpenAIModerator, OpenAIPlanner, AI } from '@microsoft/teams-ai';
@@ -380,7 +381,7 @@ items:
 
             You need to import the required classes to use the functions and variables available in the class to build your app. You can leverage pre-built templates and add your business logic to this scaffold.
 
-        1. Add the following code to define a state:
+        1. At the end of the file, add the following code to define a state:
 
             ```typescript
             // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -390,7 +391,7 @@ items:
 
             The `ApplicationTurnState` is the typescript **type** of the turn state object state. End users can create their own **conversation** or **user** concrete type implementations and provide it to the `DefaultTurnState` interface.
         
-        1. Add the following code to create planner, moderator, and promptManager:
+        1. At the end of the file, add the following code to create planner, moderator, and promptManager:
 
             ```typescript
             // Create AI components
@@ -412,7 +413,7 @@ items:
             * Moderator: The `OpenAIModerator` reviews both user's input and the model output to detect harmful speech, such as hate speech, self-harm, and violence.
 
 
-        1. Add the following code to define storage and application:
+        1. At the end of the file, add the following code to define storage and application:
 
             ```typescript
             // Define storage and application
@@ -434,10 +435,7 @@ items:
             * The `Application` class replaces the Teams Activity Handler class from Bot Framework SDK. The application class has all the information and bot logic required for an app. You can register actions or activity handlers for the app in this class.
             * The `MemoryStorage` class is a memory based storage provider that stores and retrieves plan old JSON objects. It's imported from the Bot Builder SDK.
 
-
-        1. Under **Import required bot service**, add `MemoryStorage`.
-
-        1.  Add the following code to define actions:
+        1.  At the end of the file, add the following code to define actions:
 
             ```typescript
             app.ai.action(AI.FlaggedInputActionName, async (context, state, data) => {
@@ -453,7 +451,7 @@ items:
             
             When the `OpenAIModerator` reviews and identifies a flag in an input or output, it triggers the action `AI.FlaggedInputActionName` or `AI.FlaggedOutputActionName` and the `context.sendActivity` sends a message to the user. If the user receives a message for an flagged  input or output, the user can control what he wants to do.
 
-        1. Add the following code to define history:
+        1. At the end of the file, add the following code to define history:
 
             ```typescript
             app.message('/history', async (context, state) => {
@@ -464,7 +462,9 @@ items:
 
            The `ConversationHistory` class is a utility class that makes it easier to manage the conversation history. When the user sends `/history`` to the bot in Teams, the server sends a log of the conversation history back to the user. The history is tracked and populated in the state.temp.history property where state is the `ApplicationTurnState`.
 
-        1. By default, Bot builder uses `bot` as a variable, as we're constructing an app for the `new Application`. We must replace `await bot.run(context)` with `await app.run(context)`.
+        1. Under **Import required bot service**, after `TurnContext` add `MemoryStorage`.
+
+        1. By default, bot builder uses `bot` as a variable, as we're constructing an app for the `new Application`. We must replace `await bot.run(context)` with `await app.run(context)`.
    
     1. In the root folder, create new folders **prompts** > **chat**.
 
@@ -506,7 +506,7 @@ items:
 
         The `skprompt.txt` file contains text prompts with which the users interact with OpenAI endpoint. OpenAI endpoint attempts to use these prompts to produce the next series of words that are most likely to follow from the previous text.
 
-        To store and leverage session history, add the following in the `skprompt.txt` file:
+        To store and leverage session history, add the following at the end of the `skprompt.txt` file:
 
         ```
         {{$history}}
