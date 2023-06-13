@@ -16,7 +16,7 @@ Every team has a different way of communicating and collaborating tasks. To achi
 
 Tabs allow the meeting participants to access services and content in a specific space within a meeting. If you're new to Microsoft Teams tab development, see [build tabs for Teams](/microsoftteams/platform/tabs/what-are-tabs).
 
-Before creating a meeting tab, it's important to learn about the surfaces that are available to target the meeting chat view, meeting details view, meeting side panel view, and meeting stage view.
+Before creating a meeting tab, it's important to learn about the surfaces that are available to target the meeting chat view, meeting details view, meeting side panel view, and meeting Stage View.
 
 ### Meeting details view
 
@@ -109,23 +109,23 @@ Pre or post-meeting tab behavior isn't supported in channel meetings.
 
 For deep link format, see [deep links](~/concepts/build-and-test/deep-link-workflow.md#deep-link-to-meeting-side-panel).
 
-### Meeting stage view
+### Meeting Stage View
 
 1. After a tab is added to the meeting side panel, you can now choose to opt into global app sharing.
 
 1. This results in rendering tab on the stage for every participant in the meeting.
 
-# [Meeting stage view desktop](#tab/meeting-stage-view-desktop)
+# [Meeting Stage View desktop](#tab/meeting-stage-view-desktop)
 
    The following image shows a tab added to the meeting stage in the Teams desktop client:
 
-   :::image type="content" source="../assets/images/meeting-stage-view.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams desktop.":::
+   :::image type="content" source="../assets/images/meeting-stage-view.png" alt-text="This screenshot shows meeting Stage View of the app you shared to meeting in Teams desktop.":::
 
-# [Meeting stage view mobile](#tab/meeting-stage-view-mobile)
+# [Meeting Stage View mobile](#tab/meeting-stage-view-mobile)
 
    The following image shows a tab added to the meeting stage in the Teams mobile client:
 
-   :::image type="content" source="../assets/images/meeting-stage/meeting-stage-view-mobile.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams mobile.":::
+   :::image type="content" source="../assets/images/meeting-stage/meeting-stage-view-mobile.png" alt-text="This screenshot shows meeting Stage View of the app you shared to meeting in Teams mobile.":::
 
 ---
 
@@ -375,9 +375,9 @@ The following are the limitations for app caching:
 | Meeting stage sample | Sample app to show a tab in meeting stage for collaboration. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) ||
 | Meeting side panel | Sample app to show how to add agenda in a meeting side panel. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs) ||
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp/demo-manifest/Meetings-Events.zip)|
-| In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA ||
+| In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO and user specific Stage View. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA ||
 | App caching | Sample app to show how app caching works in the meeting side panel. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-cache-meetings/nodejs) ||
-| Meeting tabs | This sample shows app stage view, Mute/Unmute Teams meeting audio call in meeting Side panel tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-tabs/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-tabs/nodejs) ||
+| Meeting tabs | This sample shows app Stage View, Mute/Unmute Teams meeting audio call in meeting Side panel tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-tabs/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-tabs/nodejs) ||
 
 > [!NOTE]
 >
@@ -388,7 +388,7 @@ The following are the limitations for app caching:
 
 * Follow the [step-by-step guide](../sbs-meeting-token-generator.yml) to generate meeting token in your Teams meeting.
 * Follow the [step-by-step guide](../sbs-meetings-sidepanel.yml) to generate meeting side panel in your Teams meeting.
-* Follow the [step-by-step guide](../sbs-meetings-stage-view.yml) to share meeting stage view in your Teams meeting.
+* Follow the [step-by-step guide](../sbs-meetings-stage-view.yml) to share meeting Stage View in your Teams meeting.
 * Follow the [step-by-step guide](../sbs-meeting-content-bubble.yml) to generate in-meeting notification in your Teams meeting.
 
 ## See also
