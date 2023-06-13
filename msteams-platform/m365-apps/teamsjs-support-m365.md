@@ -2,7 +2,7 @@
 title: Teams JavaScript client library support across Microsoft 365
 author: erikadoyle
 ms.author: mosdevdocs
-description: Understand the level of support for different TeamsJS library capabilities running in different hosts for Teams apps, including Microsoft Teams, Outlook, and Microsoft 365 app 
+description: Understand the level of support for different TeamsJS library capabilities running in different hosts for Teams apps, including Microsoft Teams, Outlook, and Microsoft 365 app.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.custom: m365apps
@@ -15,14 +15,14 @@ Starting with version 2.0.0, Teams JavaScript client library (TeamsJS) enables [
 
 This article details the level of support of TeamsJS version 2.x capabilities across various host applications. For more info on what's changed between TeamsJS versions 1.x and 2.x, see [What's new in TeamsJS version 2.x.x](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx).
 
-The *TeamsJS Capability* table below lists TeamsJS capabilities (public namespaces) and their support across Microsoft 365 host applications. Some capabilities are marked with *Deprecated* or *Preview* badges, which have the following meanings:
+The *TeamsJS Capability* table lists TeamsJS capabilities (public namespaces) and their support across Microsoft 365 host applications. Some capabilities are marked with *Deprecated* or *Preview* badges, which have the following meanings:
 
 | Badge | Meaning |
 | - | - |
 | :::image type="content" source="./images/preview-badge.png" alt-text="Image with the word 'Preview' inside a blue rectangle":::  | This capability is in preview and subject to change based on feedback. Don't use in production. |
 | :::image type="content" source="./images/deprecated-badge.png" alt-text="Image with the word 'Deprecated' inside an orange rectangle"::: | This capability is deprecated in favor of newer functionality, though it's supported for backwards compatibility purposes. For new apps, use the capability recommended in the usage notes of the deprecated capability. |
 
-Microsoft 365 hosts are signified by the following product icons in the following tables:
+Microsoft 365 hosts are signified by the following product icons in the tables:
 
 | Microsoft Teams | Microsoft 365 app | Microsoft Outlook |
 | :-: | :-: | :-: |
@@ -34,7 +34,7 @@ Preview versions for both Teams and Outlook (launched via *Try the new Teams* an
 | :-: | :-: |
 | :::image type="content" source="./images/teams-preview-icon.png" alt-text="Microsoft Teams (Preview) icon"::: | :::image type="content" source="./images/outlook-preview-icon.png" alt-text="Microsoft Outlook preview icon"::: |
 
-Entries marked with a check and asterisk (&#x2713;*) indicate support for that host is available only to preview audiences (enrolled in [Microsoft 365 Targeted Releases](prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases) for web clients, or with [Beta Channel apps](./prerequisites.md#install-microsoft-365-apps-in-your-test-environment) installed for desktop clients). Select on any TeamsJS Capability for further details, including reference docs, samples, and usage notes.
+Entries marked with a check and asterisk (&#x2713;*) indicate support for that host is available only to preview audiences (enrolled in [Microsoft 365 Targeted Releases](prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional) for web clients, or with [Beta Channel apps](./prerequisites.md#install-microsoft-365-apps-in-your-test-environment) installed for desktop clients). Select any TeamsJS Capability for further details, including reference docs, samples, and usage notes.
 
 ## Cross-host capabilities
 
@@ -494,7 +494,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
 
 ## Preview capabilities awaiting host support
 
-Some capabilities in the source are in early preview and still awaiting initial support in one or more host applications, including [**barCode**](#barcode), [**media**](#media), [**meeting**](#meeting), and [**search**](#search).
+Some capabilities in the source are in early preview and still awaiting initial support in one or more host applications that include [**barCode**](#barcode), [**media**](#media), [**meeting**](#meeting), and [**search**](#search).
 
 The remainder of this article provides further info on each capability of the Teams JavaScript client library.
 
@@ -1560,7 +1560,7 @@ Navigation-related part of the TeamsJS library.
 
 Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `shareDeepLink` (to generate a link *to* a specific part of your app) and `executeDeepLink` (to navigate to a deeplink *from* or *within* your app). TeamsJS v.2.0 introduces a new API, `navigateToApp`, for navigating to pages (and subpages) within an app in a consistent way across app hosts (Microsoft 365 app and Outlook, in addition to Teams). For new apps, follow the linked updated guidance depending on your navigation scenario:
 
-- **Deep links into your app.** Use [`pages.shareDeepLink`](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-sharedeeplink) (known as *shareDeepLink* prior to TeamsJS v.2.0) to generate and display a copyable link for the user to share. When selected, a user is prompted to install the app if it's not already installed for the application host (specified in the link path).
+- **Deep links into your app.** Use [`pages.shareDeepLink`](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-sharedeeplink) (known as *shareDeepLink* prior to TeamsJS v.2.0) to generate and display a copyable link for the user to share. When clicked, a user is prompted to install the app if it's not already installed for the application host (specified in the link path).
 
 - **Navigation within your app.** Use the new [`pages.currentApp`](/javascript/api/@microsoft/teams-js/pages.currentapp) namespace to navigate within your app within the hosting application. Specifically, the function [`navigateTo(NavigateWithinAppParams)`](/javascript/api/@microsoft/teams-js/pages.currentapp#@microsoft-teams-js-pages-currentapp-navigateto) to allow navigation to a specific tab within the current app and the function [`navigateToDefaultPage()`](/javascript/api/@microsoft/teams-js/pages.currentapp#@microsoft-teams-js-pages-currentapp-navigatetodefaultpage) to navigate to the first tab defined in the app's manifest. For more information, see [Navigate within a tab app](../tabs/how-to/tab-navigation.md).
 
@@ -2051,7 +2051,7 @@ Namespace to open a share dialog for web content. For more info, see [Share to T
 
 [Reference](/javascript/api/@microsoft/teams-js/stageview) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/StageView.tsx)
 
-Preview. Namespace to interact with the stage view specific part of the library.
+Preview. Namespace to interact with the Stage View specific part of the library.
 
 <br />
 <table border>
