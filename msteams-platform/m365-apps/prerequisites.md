@@ -2,9 +2,11 @@
 title: Set up your dev environment for extending Teams apps across Microsoft 365
 description: Requirements to set up your dev environment for extending Teams apps across Microsoft 365. Know configurations required to run builds of Microsoft Teams and Microsoft 365 applications.
 ms.date: 02/28/2023
-ms.custom: m365apps
+ms.author: mosdevdocs
+author: erikadoyle
 ms.topic: conceptual
 ms.localizationpriority: high
+ms.subservice: m365apps
 ---
 # Set up your dev environment for extending Teams apps across Microsoft 365
 
