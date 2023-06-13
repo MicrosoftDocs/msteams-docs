@@ -3,7 +3,6 @@ title: Install Moodle LMS
 description: In this article, you'll learn how to install and configure the Moodle integration app for Microsoft Teams.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.author: lajanuar
 author: surbhigupta
 ms.date: 02/28/2023
 ---

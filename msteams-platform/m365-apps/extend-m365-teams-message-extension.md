@@ -2,9 +2,11 @@
 title: Extend a Teams message extension across Microsoft 365
 description: Learn how to update your search-based message extension to run in Outlook and add Microsoft 365 channel for your bot.
 ms.date: 01/31/2023
+ms.author: mosdevdocs
+author: erikadoyle
 ms.topic: tutorial
-ms.custom: m365apps
 ms.localizationpriority: high
+ms.subservice: m365apps
 ---
 # Extend a Teams message extension across Microsoft 365
 
@@ -29,8 +31,7 @@ The rest of this guide walks you through these steps and shows how to preview yo
 To complete this tutorial, you need:
 
 * A Microsoft 365 Developer Program sandbox tenant.
-* Enrollment in *Microsoft 365 Targeted Releases* for your sandbox tenant.
-* A test environment with Microsoft 365 apps installed from the Microsoft 365 Apps *Beta Channel*.
+* A test environment with Microsoft 365 apps installed from the Microsoft 365 Apps *Current Channel*.
 * (Optional) Microsoft Visual Studio Code with the Teams Toolkit extension.
 
 > [!div class="nextstepaction"]
@@ -38,11 +39,11 @@ To complete this tutorial, you need:
 
 ## Link unfurling
 
-If your search-based message extension supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) in Teams, follow the steps in this article to enable link unfurling in Outlook on web (Targeted release) and Windows desktop (Beta Channel) environments. The [Code sample](#code-sample) section provides a link unfurling app for testing.
+If your search-based message extension supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) in Teams, follow the steps in this article to enable link unfurling in Outlook on web  and Windows desktop environments. The [code sample](#code-sample) section provides a link unfurling app for testing.
 
 ## Stage View
 
-If your search-based message extension unfurls links that display cards to launch [Stage View](../tabs/tabs-link-unfurling.md) in Teams, follow the steps in this article that enables your users in Outlook on web (Targeted release) and Windows desktop (Beta Channel) to send links that work the same way in Outlook.
+If your search-based message extension unfurls links that display cards to launch [Stage View](../tabs/tabs-link-unfurling.md) in Teams, follow the steps in this article that enables your users in Outlook on web and Windows desktop to send links that work the same way in Outlook.
 
 Outlook mobile users on Android and [Microsoft Outlook beta TestFlight](https://testflight.apple.com/join/AhS6fRDK) iOS rings can now receive and take actions on cards from your apps that were sent to them by users on Outlook on web and Windows desktop.
 
@@ -93,7 +94,7 @@ You have two options for updating your app manifest:
 # [Teams Toolkit](#tab/manifest-teams-toolkit)
 
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
-1. Run the `Teams: Upgrade Teams manifest` command and select your app manifest file. Your app manifest files is updated with the latest changes.
+1. Run the `Teams: Upgrade Teams manifest` command and select your app manifest file. Your app manifest files are updated with the latest changes.
 
 # [Manual steps](#tab/manifest-manual)
 
@@ -204,7 +205,7 @@ Your message extension is listed, it opens an adjacent pane to display search re
  While your updated message extension continues to run in Teams with full [feature support for message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions), there are limitations in this early preview of the Outlook-enabled experience to be aware of:
 
 * Message extensions in Outlook are limited to the mail [*compose* context](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions). Even if your Teams message extension includes `commandBox` as a *context* in its manifest, the current preview is limited to the mail composition (`compose`) option. Invoking a message extension from the global Outlook *Search* box isn't supported.
-* [Action-based message extension](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) commands aren't supported in Outlook. If your app has both search- and action-based commands, it surfaces in Outlook, but the action menu won't be available.
+* [Action-based message extension](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) commands aren't supported in Outlook. If your app has both search- and action-based commands, it surfaces in Outlook, but the action menu isn't available.
 * Insertion of more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email isn't supported; Adaptive Cards v1.5 and later aren't supported.
 * [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) of type `messageBack`, `imBack`, `invoke`, and `signin` aren't supported for inserted cards. Support is limited to `openURL`: when selected, the user is redirected to the specified URL in a new tab.
 
