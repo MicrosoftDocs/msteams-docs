@@ -497,16 +497,16 @@ items:
 
       Follow the steps to update source code if you're building your tab app with React framework for [js](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js) or [ts](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts):   
 
-      1.	Create **auth-start.html** in to **public**.
-      1.	Add the code in [auth-start.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-start.html).
-      1.	Create **auth-end.html** in to **public**.
-      1.	Add the code in [auth-end.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-end.html).
+      1. Create **auth-start.html** in to **public**.
+      1. Add the code in [auth-start.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-start.html).
+      1. Create **auth-end.html** in to **public**.
+      1. Add the code in [auth-end.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-end.html).
 
-          :::image type="content" source="assets/images/sbs-create-a-new-dashboard/auth-end-start.png" alt-text="Screenshot shows the folder structure for auth-start and auth-end files.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/auth-end-start.png" alt-text="Screenshot shows the folder structure for auth-start and auth-end files.":::
 
         You can find the sample for SSO enabled Tab [here](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
      
-    You've added the SSO files to your project and now call Graph APIs. 
+      You've added the SSO files to your project and now call Graph APIs. 
    
       The graph API call is implemented via TeamsFx SDK. Refer to the [document](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-sdk#microsoft-graph-scenarios:~:text=caught%20and%20transformed.-,Microsoft%20Graph%20Scenarios,-This%20section%20provides) as follows:
 
