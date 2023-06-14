@@ -10,12 +10,18 @@ ms.date: 04/07/2022
 
 # Enable app caching for your tab app
 
-You can configure your tab app (app) to enable app caching to reduce the reload time of your app that are loaded in the meeting side panel during a meeting. The app reloads from the cache, which improves the app relaunch time within the meeting. App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client.
+You can configure your tab app (app) to enable app caching to reduce the reload time of your app within Teams during a meeting. The app reloads from the cache, which improves the app relaunch time within the meeting.
 
-> [!NOTE]
->
-> * App caching in Teams desktop client is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-> * App caching in iOS personal tray is generally available (GA) and it's supported only in personal scope.
+App caching is supported for the following:
+
+| Scope | &nbsp; Desktop | &nbsp; | iOS | Android |
+| --- | --- | --- | --- | --- |
+| &nbsp; | *Supported* | *Cache lifetime* | *Supported* | *Supported* |
+| Personal | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | 30 minutes| ✔️ | ❌ |
+| Chat | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | 30 minutes| ❌ | ❌ |
+| Channel | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md)| 30 minutes| ❌ | ❌ |
+| Meeting tab | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | 30 minutes| ❌ | ❌ |
+| Meeting side panel or In-meeting apps | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | 20 minutes| ❌ | ❌ |
 
 Here's what you'll learn in this section:
 
@@ -25,7 +31,7 @@ Here's what you'll learn in this section:
 
 ## App caching user experience
 
-App caching improves subsequent launch time of the apps that are loaded in the meeting side panel. Consider the following use case for app caching:
+App caching improves subsequent launch time of the apps within Teams. Consider the following use case for app caching:
 
 Your app is enabled to be installed in a Teams meeting. The meeting organizer or participants can install and use your app.
 
@@ -59,13 +65,13 @@ This process consists of two stages for an app that is enabled for app caching:
 
 The following flow diagram shows how the app loads for the first time it's launched in the meeting. The app registers the `load` or `beforeUnload`:
 
-:::image type="content" source="../assets/images/saas-offer/first-launch-app.png" alt-text="This screenshot shows the flow of the first launch of the app in meeting side panel.":::
+:::image type="content" source="../assets/images/saas-offer/first-launch-app.png" alt-text="This screenshot shows the flow of the first launch of the app in meeting .":::
 
 | # | Interaction | What's going on |
 | --- | --- | --- |
-| 1. | Teams client → App | Teams client launches the app to the meeting side panel. |
+| 1. | Teams client → App | Teams client launches the app to the meeting. |
 | 2. | App → Teams client | The app initializes the flow. |
-| 3. | App → Teams client | The app registers `Load` or `beforeUnload` handler with Teams clients and caches the app data in the meeting side panel. |
+| 3. | App → Teams client | The app registers `Load` or `beforeUnload` handler with Teams clients and caches the app data in the Teams meeting. |
 | 4. | App → Teams client | The app invokes SDK `notifySuccess` to notify Teams client that the initialization flow is complete. |
 | 5. | Teams client → App | When the participants move away from the app, Teams client disposes resources and performs any cleanup needed in the `beforeUnload` handler. |
 | 6. | App → Teams client | The app invokes the `readyToUnload` callback to notify Teams client that the app unload flow is complete. |
@@ -74,7 +80,7 @@ The following flow diagram shows how the app loads for the first time it's launc
 
 The following flow diagram shows how a cached app is reloaded:
 
-:::image type="content" source="../assets/images/saas-offer/cached-launch-app.png" alt-text="This screenshot shows the flow of the cached launch of the app in meeting side panel.":::
+:::image type="content" source="../assets/images/saas-offer/cached-launch-app.png" alt-text="This screenshot shows the flow of the cached launch of the app in meeting.":::
 
 | # | Interaction | What's going on |
 | --- | --- | --- |
@@ -143,6 +149,8 @@ microsoftTeams.registerOnLoadHandler((data) => { 
 
 ## Best practices
 
+* We recommend you to implement web storage capabilities to store the data locally in iOS and Android. This helps to load the app faster in subsequent launches.
+
 * Single-page apps that use client-side routing for page navigation can benefit from app caching. It's recommended that you use the same domain across all contexts of your app launch.
 
 * Register the `load` and `beforeUnload` handlers early in your launch sequence. If the handlers aren't registered with the Teams client before the participants move away from the app, the app isn't cached.
@@ -156,8 +164,6 @@ microsoftTeams.registerOnLoadHandler((data) => { 
 * App caching is disabled if the system memory is less than 4 GB or if the available memory is less than 1 GB on Windows or 512 MB on Mac.
 
 * App caching isn't supported for meetings where the invited participant count is more than 20.
-
-* When the app is cached, any audio that is playing within the cached app is muted.
 
 * Apps need to re-register for events in the load handler, such as `themeChange`, `focusEnter`, and so on. Teams client won't send any notifications to the app when it's cached. If your app requires notifications even when cached, caching might not be the right solution.
 
@@ -200,8 +206,6 @@ Apps aren't cached if the load handler isn't invoked on subsequent navigation. T
 **Why are apps removed from cache?**
 
 * If the system memory load is high, the app is removed from the cache. Ensure that your system memory load isn't high.
-
-* If the user doesn't return to the app in Teams desktop client within 20 minutes, the app is removed from the cache.
 
 * If the user doesn't return to the app in iOS personal tray within 10 minutes through the personal scope, the app is removed from the cache.
 
