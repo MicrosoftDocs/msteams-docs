@@ -582,7 +582,7 @@ items:
 
       1. SSO and Graph API shows the login user profile in list widget. 
 
-         :::image type="content" source="assets/images/sbs-create-a-new-dashboard/join.png" alt-text="Screenshot shows the Join button highlighted in red.":::
+         :::image type="content" source="assets/images/sbs-create-a-new-dashboard/your-list.png" alt-text="Screenshot shows the new your list widget highlighted in red.":::
 
 - title: Complete challenge
   durationInMinutes: 5
