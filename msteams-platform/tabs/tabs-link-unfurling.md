@@ -22,7 +22,7 @@ Stage View is a user interface (UI) component that allows you to render content 
 
 Stage View is a full screen UI component that can be used to render your app content, providing users with a focused experience to engage with your app. Stage View can be invoked from either an Adaptive Card or a deep link, in both chats and channels.
 
-* When users invoke Stage View from Adaptive cards, Stage View opens in a new Teams window along with the originating chat or channel thread in the side panel. This new app canvas is called the [Collaborative Stage](#collaborative-stage-view) View. The Collaborative Stage View allows users to multi-task and collaborate with each other.
+* When users invoke Stage View from Adaptive cards, Stage View opens in a new Teams window along with the originating chat or channel thread in the side panel. This new app canvas is called the [Collaborative Stage View](#collaborative-stage-view). The Collaborative Stage View allows users to multi-task and collaborate with each other.
 
 * The Collaborative Stage View surfaces the originating chat or thread from where it was invoked and helps the users to engage with content and conversation side-by-side.
 
@@ -38,7 +38,7 @@ The following image is an example of the Collaborative Stage View:
 
 ### Invoke Stage View through deep link
 
-To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. Stage View from a deep link always defaults to the modal experience (and not a Teams window). The Stage View deep link can also be passed through an `OpenURL` action in the card,  the Stage View deep link is intended for the tab canvas. For Stage View from Adaptive Cards, we encourage developers to follow the JSON [Adaptive Card example](#example).
+To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. Stage View from a deep link always defaults to the modal experience (and not a Teams window). While the Stage View deep link can be passed through an `OpenURL` action in the card, the Stage View deep link is intended for the tab canvas. For Stage View from Adaptive Cards, we encourage developers to follow the JSON [Adaptive Card example](#example).
 
 An example of Stage view when it's invoked from a deep link:
 
