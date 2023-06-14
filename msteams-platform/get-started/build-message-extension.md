@@ -11,11 +11,11 @@ A message extension allows the users to interact with your web service through b
 
 :::image type="content" border="false" source="../assets/images/get-started/get-started-me.png" alt-text="Screenshot shows you the conceptual message extension in Teams client.":::
 
-In this tutorial, you'll learn to build a search based message extension app, this app allows the users to search npm packages from the Node Package Manager (npm) directory.
+In this tutorial, you'll learn to build a search-based message extension app, and the app allows users to search npm packages from the Node Package Manager (npm) directory.
 
 Get familiarized with search based message extension app in one of the following ways:
 
-* **GitHub Codespaces**: The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where the Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you.
+* **GitHub Codespaces**: The codespace instance allows you to experience a Teams app instantaneously. It opens Visual Studio Code (VS Code), where the Teams Toolkit extension, the app source code, and all the dependencies are pre-packaged for you.
 * **Step-by-step guide**: Allows you to create a Teams app from scratch with all development environment setup.
 
 # [GitHub Codespaces](#tab/teamstoolkitcodespaces)
@@ -27,15 +27,15 @@ Before you create your codespace, ensure that you have:
 * A [Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
 
 > [!TIP]
-> [GitHub Codespaces](https://github.com/features/codespaces) offers the free plan up to a fixed amount of usage every month. If you need to free up the space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespaces that you no longer need.
+> [GitHub Codespaces](https://github.com/features/codespaces) offers free plan up to a fixed amount of usage every month. If you need to free up the space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespaces that you no longer need.
 
-To create a search based message extension app with GitHub Codespaces, follow the steps:
+To create a search-based message extension app with GitHub Codespaces, follow the steps:
 
 1. Select the following button to open GitHub Codespaces.
 
     <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=v3&repo=348288141&machine=basicLinux32gb&location=WestUs2&devcontainer_path=.devcontainer%2Fnpm-search-message-extension-codespaces%2Fdevcontainer.json&resume=1" target="_blank"><img src="https://github.com/codespaces/badge.svg" alt="Open message extension in GitHub Codespaces"></a>
 
-   You may be asked to sign in to GitHub account if you haven't.
+   You might be asked to sign in to GitHub account if you haven't.
 
 1. Select **Create new codespace**.
 
@@ -45,7 +45,7 @@ To create a search based message extension app with GitHub Codespaces, follow th
 
    :::image type="content" source="../assets/images/get-started/building-codespace.png" alt-text="Screenshot shows you the codespace building your message extension.":::
 
-   Teams Toolkit prepares the message extension for you and opens it in Visual Studio Code in the browser. Teams Toolkit icon appears in the activity bar of Visual Studio Code.
+   Teams Toolkit prepares the message extension for you and opens it in VS Code in the browser. Teams Toolkit icon appears in the activity bar of VS Code.
 
 1. Select **Sign in to your Microsoft 365** and **Sign in to Azure** to sign in with your Microsoft 365 account.
 
@@ -67,13 +67,13 @@ To create a search based message extension app with GitHub Codespaces, follow th
 
    :::image type="content" source="../assets/images/get-started/codespace/me-in-teams.png" alt-text="Screenshot shows you the message extension loaded in the Teams client.":::
 
-   You've successfully created the search based message extension and loaded in the Teams client.
+   You've successfully created the search-based message extension and loaded in the Teams client.
 
    :::image type="content" source="../assets/images/get-started/codespace/me-teams-chat.png" alt-text="Screenshot shows your message extension loaded in the Teams client.":::
 
 # [Step-by-step guide](#tab/step-by-step-guide)
 
-If you would like to learn how to start a project with Teams Toolkit from scratch, let's go through the step-by-step guide.
+If you would want to learn how to start a project with Teams Toolkit from scratch, let's go through the step-by-step guide.
 
 Unlike GitHub Codespaces, you need to set up your development environment. Let's start building your message extension app.
 
@@ -81,6 +81,8 @@ Unlike GitHub Codespaces, you need to set up your development environment. Let's
 > [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml)
 
 ---
+
+For more information on message extensions, see [message extensions](../messaging-extensions/what-are-messaging-extensions.md).
 
 If a bot is what you are interested in, go to:
 

@@ -48,6 +48,16 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Deep link to the meeting side panel
+        url: apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel
+      - text: Live Share SDK is now generally available
+        url: apps-in-teams-meetings/teams-live-share-overview.md
+      - text: Design your app for new Teams 
+        url: concepts/design/design-teams-app-overview.md
+      - text: Teams AI library
+        url: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
+      - text: Extend Microsoft 365 Copilot
+        url: copilot/how-to-extend-copilot.md
       - text: Distribute your app to specific countries
         url: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries
       - text: Teams Toolkit v5 extension within Visual Studio Code
@@ -66,6 +76,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Real-time meeting events are supported in channel meetings
+        url: apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api
       - text: Resource-specific consent for your Teams app
         url: graph-api/rsc/resource-specific-consent.md      
       - text: Drive customer adoption of your app
@@ -82,21 +94,14 @@ landingContent:
         url:  tabs/how-to/build-a-dashboard-tab-app.md
       - text: Targeted in-meeting notification (Developer preview)
         url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
-
-    - linkListType: whats-new
-      links:
       - text: Enable app caching for your tab app (Developer preview)
         url: apps-in-teams-meetings/app-caching-for-your-tab-app.md
-      - text: Set up Microsoft license management
-        url: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
-      - text: Apps for Teams meetings support anonymous users
-        url: apps-in-teams-meetings/build-apps-for-anonymous-user.md
-      - text: Notification bot in Teams
-        url: bots/how-to/conversations/notification-bot-in-teams.md
-
+      
 
     - linkListType: whats-new
       links:
+      - text: Set up Microsoft license management
+        url: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
       - text: Command bot in Teams
         url: bots/how-to/conversations/command-bot-in-teams.md
       - text: Enable SSO for your bot and message extension app
