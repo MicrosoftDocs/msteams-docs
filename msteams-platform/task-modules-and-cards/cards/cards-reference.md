@@ -496,9 +496,9 @@ For all other details about connector card properties, see [actionable message c
 * `originator`
 * `correlationId`
 
-### Example of an connector card for Microsoft 365 Groups
+### Example of a connector card for Microsoft 365 Groups
 
-The following code shows an example of an connector card for Microsoft 365 Groups:
+The following code shows an example of a connector card for Microsoft 365 Groups:
 
 ```json
 {
