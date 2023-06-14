@@ -40,8 +40,6 @@ To ensure a smooth transition, a phased rollout of the new platform is planned a
 
 **Teams features that will be supported soon**
 
-The following features aren't currently supported in the new Teams client and will be available soon:
-
 * [Share in Teams](../concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md).
 
 * APIs used in Teams that require [Device permissions](../concepts/device-capabilities/native-device-permissions.md).
