@@ -3,7 +3,6 @@ title: Design your app - Understand the design system
 description: Learn about the basics of designing your Microsoft Teams app, including avatars, layout, icons, color scheme, and more.
 author: heath-hamilton
 ms.localizationpriority: medium
-ms.author: lajanuar
 ms.topic: overview
 ---
 # Microsoft Teams app design system
@@ -95,7 +94,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
       Teams web and desktop supports default (light), dark, and high-contrast themes, while Teams mobile supports light and dark themes. Each theme has its own color scheme.
 
       * [See full color guidelines and available color tokens (Figma)](https://www.figma.com/community/file/916836509871353159)
-      * [Implement colors (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.7/colors)
+      * [Implement colors (Fluent UI)](https://react.fluentui.dev/?path=/docs/theme-colors--page)
 
    :::column-end:::
    :::column span="1":::
