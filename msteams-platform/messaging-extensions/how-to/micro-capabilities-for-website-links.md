@@ -168,7 +168,7 @@ Example of the unfurling experience for the course type:
 
 :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-course.png" alt-text="Screenshot shows the unfurling experience of the course template in Microsoft Teams.":::
 
-# [Location](#tab/location)
+# [Restaurant](#tab/restaurant)
 
 |Property |Description  |
 |---------|---------|
