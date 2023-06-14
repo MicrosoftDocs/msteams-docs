@@ -8,15 +8,20 @@ ms.topic: reference
 ---
 # Microsoft Teams update
 
-[The new Microsoft Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) is reimagined from the ground up with performance in mind. It's faster, simpler, smarter, and flexible to provide better experience for your apps and users. The new Teams client is closely aligned with all the existing Teams clients (desktop, web and mobile) where your apps run. You can use the new Teams client with all the existing capabilities in Teams at full feature parity.
+[The new Microsoft Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) is reimagined from the ground up with performance in mind. It's faster, simpler, smarter, and flexible to provide better experience for your apps and users. The new Teams client supports all the existing Teams app capabilities except Adaptive Card tabs. If you have an app that runs inside the Classic Teams, the app will most likely run in the new Teams client without any issues.
 
-If you have an app that runs inside the Classic Teams client for Windows or Mac, Teams Web Clients for Edge, Chrome, or Firefox, and Teams Mobile Clients for Android and iOS, the app will most likely run in the new Teams client without any issues.
-
-Apps in the new Teams client run better and faster as:  
+The following are the advantages the new Teams client:  
 
 * The new Teams client uses the Evergreen version of Edge WebView2 to ensure Teams client is always up to date with the latest fixes and improvements available in Edge and Chromium.
 
 * The new Teams client has been rebuilt from the ground up with performance in mind and includes all the platform infrastructure responsible for bootstrapping your app and powering the SDK APIs that it uses.  
+
+You can use the following property to identify your app usage in the new Teams or Classic Teams client:
+
+* For TeamsJS v1.x: [`hostName`](/javascript/api/@microsoft/teams-js/hostname?view=msteams-client-js-latest&preserve-view=true)
+* For TeamsJS v2.x: [`app.Context.app.host.name`](/javascript/api/@microsoft/teams-js/app.appinfo?view=msteams-client-js-latest&preserve-view=true)
+
+The new Teams or Classic Teams client are represented using the `teams` and `teamsModern` fields, respectively.
 
 ## Timelines and rollout
 
@@ -24,31 +29,28 @@ To ensure a smooth transition, a phased rollout of the new platform is planned a
 
 * **Developer Preview**: The new Teams client is available in Public Developer Preview starting June  2023. You can access the new platform and test your apps. We encourage you to adopt the feature early and provide feedback to help refine the platform.
 
-* **Availability of all platform features from Classic Teams**: All the platform features from Teams classic will be available in the new Teams client by August 2023. We plan to officially launch the new platform after addressing the known issues and incorporating feedback.
-
-You can distinguish between the Teams host clients using the `hostName` property. Classic Teams client and the new Teams client are represented using the `teams` and `teamsModern` fields, respectively.
-
-* SDK v1.x: [`hostName`](/javascript/api/@microsoft/teams-js/hostname?view=msteams-client-js-latest&preserve-view=true)
-* SDK v2.x: [`app.Context.app.host.name`](/javascript/api/@microsoft/teams-js/app.appinfo?view=msteams-client-js-latest&preserve-view=true)
+* **Availability of all platform features from Classic Teams**: All the platform features from Teams classic will be available in the new Teams client by August 2023.
 
 ## Known issues
 
 > [!NOTE]
 > It's recommended to test apps, tabs, messaging extensions, bots, and link unfurling after switching from the Classic Teams client to the new Teams client.
 
-* You can't install, uninstall, pin, and unpin apps in the new Teams client. It's recommended to perform these actions in the Classic Teams client and the changes are reflected in the new Teams client. For more information, see [Pin apps in Microsoft Teams](https://support.microsoft.com/office/pin-an-app-for-easy-access-3045fd44-6604-4ba7-8ecc-1c0d525e89ec).
+**Teams features that arn't supported**
+
+* You can't pin, and unpin apps in the new Teams client. It's recommended to perform these actions in the Classic Teams client and the changes are reflected in the new Teams client. For more information, see [Pin apps in Microsoft Teams](https://support.microsoft.com/office/pin-an-app-for-easy-access-3045fd44-6604-4ba7-8ecc-1c0d525e89ec).
 
 * You can't add, update, rename, and remove tabs from chats and channels in the new Teams client. It's recommended to perform these actions in the Classic Teams client and the changes are reflected in the new Teams client. For more information, see [Use an app in a tab in a channel or chat](https://support.microsoft.com/office/use-an-app-in-a-tab-in-a-channel-or-chat-83d0514f-2134-4db5-80f2-e9b43e111d57).
 
-* [Share in Teams](../concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) isn't supported in the new Teams client.
-
-* APIs used in Teams that require [Device permissions](../concepts/device-capabilities/native-device-permissions.md) aren't supported.
-
 * [Adaptive card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client.
 
-* You can't install an app with only [Meeting extension](../apps-in-teams-meetings/teams-apps-in-meetings.md) capability.
+**Teams features that will be supported soon**
 
-* Your app might not be available in the [Meeting stage](../apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md).
+* [Share in Teams](../concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md).
+
+* APIs used in Teams that require [Device permissions](../concepts/device-capabilities/native-device-permissions.md).
+
+* If you have a [meeting extension](../apps-in-teams-meetings/teams-apps-in-meetings.md) app, the app might not support all the meeting extensibility features.
 
 For more information on known issues and gaps in the new Teams client, see [New Microsoft Teams](/microsoftteams/new-teams-desktop-admin?tabs=teams-admin-center#known-issues).
 
