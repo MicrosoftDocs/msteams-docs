@@ -49,13 +49,13 @@ Teams AI library remembers context across messages and helps improve the bot per
 
 ## Localization
 
-Since Teams AI library is backed by GPT, localization is available. When a user inputs in any language, the input is consistently translated to intents, entities, and resultant actions that the app understands without the need to build and maintain localization records.
+Since Teams AI library uses OpenAI's GPT model, localization is available. When a user inputs in any language, the input is consistently translated to intents, entities, and resultant actions that the app understands without the need to build and maintain localization records.
 
 ## LLM modularity
 
 Large language model (LLM) is an advanced language model that utilizes latent variables to generate coherent and diverse natural language text and style.
 
-Although, Teams AI library is built to use Open AI’s GPT model, you have the flexibility to swap with any LLM of your choice without changing the bot logic.
+Although Teams AI library is built to use Open AI’s GPT model, you have the flexibility to swap with any LLM of your choice without changing the bot logic.
 
 ## Responsible AI
 
