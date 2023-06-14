@@ -38,6 +38,7 @@ The video filter app takes permission from a user to access their video stream, 
 > * Video filter isn't supported on Teams web client, Government Community Cloud (GCC), GCC-High, or Department of Defense (DOD) tenants.
 
 Before you begin, ensure the following:
+
 * You must have a basic understanding of [Formats for video rendering](/windows/win32/medfound/recommended-8-bit-yuv-formats-for-video-rendering).
 * [Install Microsoft Teams JavaScript SDK](https://github.com/OfficeDev/microsoft-teams-library-js)
 
@@ -64,7 +65,6 @@ import * as microsoftTeams from "@microsoft/teams-js";
 ```
 
 For more information, see [Teams JavaScript client SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit)
-
 
 The video filter app defines the video filter and applies it to the user's video stream. To enable video filter experience for your app:
 
@@ -166,7 +166,7 @@ Ensure that you adhere to the following requirements to update the app manifest:
 * Supported thumbnail image PixelFormat is PixelFormat24bppRGB or PixelFormat32bppARGB.
 
 * Video Filter categories for 3P apps:
-   * Category name should be your brand name.
+  * Category name should be your brand name.
 
 * Use descriptive terms as the filter name to best reflect the effect. Avoid using offensive words that don't conform with Microsoft’s value of inclusivity.
 
@@ -254,18 +254,30 @@ Following is an example of the `index.html` file:
 
 You can use the video extensibility APIs to access the video stream of the user and get notified when a user has selected and applied a video filter. Use the following API methods in the `index.js` file to trigger the video filter app:
 
-* **Get the selected effect and notify**: Call the `registerForVideoEffect` function to get the selected effect in Teams client and notify the video extension that the new effect will be applied. The `VideoEffectCallBack` function updates the local state with the current selected effectId.
+* **Get the selected effect and notify**: Call the `registerForVideoEffect` function to get the selected effect in Teams client and notify the video extension that the new effect will be applied. The `VideoEffectCallBack` function updates the local state with the current selected effectId and resolves when the selected effect is ready to process frames.
 
-  Following code snippet is an example of  `registerForVideoEffect` method:
+  Following code snippet is an example of the `registerForVideoEffect` method:
 
   ```typescript
-  function registerForVideoEffect(callback: VideoEffectCallBack)
-  
-  type VideoEffectCallBack = (effectId: string | undefined) => void,
-  
+  video.registerForVideoEffect(async (effectId: string | undefined) => {
+    if (!effectId) {
+      clearSelection();
+      return Promise.resolve();
+    }
+    try {
+      const effect = await getEffect(effectId);
+      if (effect) {
+        setSelection(effect);
+        return Promise.resolve();
+      }
+    } catch (e) {
+      console.error(e);
+      return Promise.reject(e);
+    }
+  })
   ```
 
-* **Get and return video frames**: Call the `registerForVideoFrame` function to get the video frames from video pipeline, return the processed video frames from video pipeline and notify errors. The `VideoFrameCallback` function registers and processes the video frame.
+* **Get and return video frames**: Call the `registerForVideoFrame` function to get the video frames from video pipeline, return the processed video frames from video pipeline and notify errors. The parameters take 2 different callback functions, different callback will be called on different platform depending on the platform's capability. To ensure the video effect works on all supported hosts, the video app must provide both `VideoFrameHandler` and `VideoBufferHandler`.
 
   Following code snippet is an example of the `registerForVideoFrame` method:
 
@@ -288,7 +300,7 @@ You can use the video extensibility APIs to access the video stream of the user 
       // process the video frame with sampleEffect2
 
   }
-  function videoFrameHandler(videoFrame, notifyVideoProcessed, notifyError) {
+  function videoBufferHandler(videoFrame, notifyVideoProcessed, notifyError) {
     // selectedEffectId is the effect id that is used currently in video app
     switch (selectedEffectId) {
       case sampleEffect1:
@@ -307,9 +319,29 @@ You can use the video extensibility APIs to access the video stream of the user 
     //   notifyError("some error message");
     // }
   }
+
+  async function processVideoFrame(videoFrame, selectedEffectId) {
+    // process the video frame with the selected effect
+    // return the processed video frame
+  }
+  async function videoStreamHandler(receivedVideoFrame) {
+    // nativeFrame is a VideoFrame object, see https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame
+    const nativeFrame = receivedVideoFrame.videoFrame;
+    try {
+      return await processVideoFrame(nativeFrame, selectedEffectId);
+    } catch (e) {
+      // send error to Teams if any
+      throw e;
+    }
+  }
+
   // call registerForVideoFrame
-  video.registerForVideoFrame(videoFrameHandler, {
-    format: "NV12",
+  video.registerForVideoFrame({
+    videoBufferHandler: videoBufferHandler,
+    videoFrameHandler: videoStreamHandler,
+    config: {
+      format: video.VideoFrameFormat.NV12,
+    }
   });
   ```
 
