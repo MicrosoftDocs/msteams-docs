@@ -1,5 +1,9 @@
 ---
+<<<<<<< Updated upstream
 title: Debug your Teams app
+=======
+title: Debug for mobile
+>>>>>>> Stashed changes
 author: surbhigupta 
 description: In this module, learn how to debug your Teams app and key features of Teams Toolkit.
 ms.author: surbhigupta 
