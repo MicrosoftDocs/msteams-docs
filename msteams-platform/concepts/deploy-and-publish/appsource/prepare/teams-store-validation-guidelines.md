@@ -342,12 +342,36 @@ Your app must show a graceful failure message on unsupported browsers and operat
 
 [*Mandatory Fix*]
 
-Teams apps must respond within a reasonable timeframe or show a loading or typing indicator or message or warning.
+Teams apps must respond within a reasonable time-frame or show a loading or typing indicator or message or warning.
 
 * Tabs must respond within two seconds or display a loading message or warning. [*Mandatory Fix*]
 * Bots must respond to user commands within two seconds or display a typing indicator. [*Mandatory Fix*]
 * Message extensions must respond to user commands within two seconds. [*Mandatory Fix*]
 * Notifications must display within two seconds of the user action. [*Mandatory Fix*]
+
+### Apps powered by AI
+
+#### Apps with AI-generated content
+
+* App must not generate, contain, or provide access to inappropriate, harmful, or offensive AI-generated content consistent with existing commercial marketplace policies outlined in [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content). Considering using any of the following: [*Mandatory Fix*]
+
+  * Leverage upcoming Teams AI library. [*Suggested Fix*]
+  * Use of moderation hooks, which can be used to regulate bot responses thr moderation API. [*Suggested Fix*]
+  * Add conversation sweeping capability which helps developers monitor conversations and intervene when conversations go astray. [*Suggested Fix*]
+
+* App must provide mechanism for app users to report inappropriate, harmful, or offensive content to the developer by any of the below mechanism. [*Mandatory Fix*]
+  * App description including mail ID or link to the portal to log the issue.
+  * In app mechanism to log issue along with specific reference of the inappropriate content.
+
+* Developer must take timely action on reported concerns. [*Mandatory Fix*]
+* App must clearly describe AI functionality before the customer acquires the offer consistent with policy[100.1.3](/legal/marketplace/certification-policies#10013-description) and prompt user to review the info as a part of in-app functionality. [*Mandatory Fix*].
+
+   :::image type="content" source="../../../../assets/images/submission/teams-ai-library-description-guideline.png" alt-text="Screenshot shows the description for Ai functionality.":::
+
+#### Apps using facial recognition capabilities
+
+* App must not allow use of facial recognition capabilities to identify an individual to be used by or for a police department in the United States. [*Mandatory Fix*]
+* Developers of apps utilizing facial recognition or emotional inference technologies must provide a prominent tag or indication of each of these capabilities in the app description. [*Mandatory Fix*]
 
 ## App package and store listing
 
