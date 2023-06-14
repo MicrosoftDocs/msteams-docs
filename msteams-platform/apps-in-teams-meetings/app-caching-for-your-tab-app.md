@@ -214,7 +214,7 @@ Apps aren't cached if the load handler isn't invoked on subsequent navigation. T
 ## Code sample
 
 |Sample name | Description | Node.js |
-|----------------|-----------------|----------------|
+|----------------|----------------|----------------|
 | App caching in meeting | Sample app to show how app caching works for tab app in Teams meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-cache-meetings/nodejs) |
 
 ## See also
