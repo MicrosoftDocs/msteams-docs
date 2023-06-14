@@ -353,7 +353,7 @@ Teams apps must respond within a reasonable time-frame or show a loading or typi
 
 #### Apps with AI-generated content
 
-* App must not generate, contain, or provide access to inappropriate, harmful, or offensive AI-generated content consistent with existing commercial marketplace policies outlined in [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content). Considering using any of the following: [*Mandatory Fix*]
+* App must not generate, contain, or provide access to inappropriate, harmful, or offensive Artificial Intelligence (AI) generated content consistent with existing commercial marketplace policies outlined in [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content). Considering using any of the following: [*Mandatory Fix*]
 
   * Leverage upcoming Teams AI library. [*Suggested Fix*]
   * Use of moderation hooks, which can be used to regulate bot responses thr moderation API. [*Suggested Fix*]
@@ -364,7 +364,7 @@ Teams apps must respond within a reasonable time-frame or show a loading or typi
   * In app mechanism to log issue along with specific reference of the inappropriate content.
 
 * Developer must take timely action on reported concerns. [*Mandatory Fix*]
-* App must clearly describe AI functionality before the customer acquires the offer consistent with policy[100.1.3](/legal/marketplace/certification-policies#10013-description) and prompt user to review the info as a part of in-app functionality. [*Mandatory Fix*].
+* App must clearly describe AI functionality before the customer acquires the offer consistent with policy [100.1.3](/legal/marketplace/certification-policies#10013-description) and prompt user to review the info as a part of in-app functionality. [*Mandatory Fix*].
 
    :::image type="content" source="../../../../assets/images/submission/teams-ai-library-description-guideline.png" alt-text="Screenshot shows the description for Ai functionality.":::
 

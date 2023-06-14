@@ -37,6 +37,8 @@ Teams platform features that are available to all app developers.
 
 **2023 June**
 
+* ***June 14, 2023***: [Added validation guidelines for Teams app powered by Artificial Intelligence (AI)](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-powered-by-ai).
+
 * ***June 02, 2023***: [Real-time meeting events are supported in channel meetings](apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api).
 
 :::column-end:::
