@@ -15,7 +15,7 @@ The app template is built using the TeamsFx SDK, which provides a simple set of 
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-new-scenario-diagram.png" alt-text="weather forecast sample notification scenario" lightbox="../../../assets/images/notification-bot/notification-new-scenario-diagram.png":::
 
-You can create notification bot in other scenarios, such as a notification can be sent in teams DevOps channel if there's a build failure.
+You can create notification bot in other scenarios, such as a notification can be sent in Teams DevOps channel if there's a build failure.
 
 You can send a bot notification in the following scenarios:
 
@@ -27,9 +27,9 @@ You can send a bot notification in the following scenarios:
 
 * Send scheduled notifications​
 
-* Light up double badges on both Activity & Chat, Channel or App​
+* Light up double badges on both Activity and Chat, Channel or App​
 
-* Put template in source code​.
+* Add template in source code​.
 
 * Handling localization manually.
 
