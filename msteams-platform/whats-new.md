@@ -341,7 +341,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 June**
 
-***June 07***: [Enable app icon badging for your Teams app](apps-in-teams-meetings/app-icon-badging-for-your-app.md)
+***June 15***: [Enable app icon badging for your Teams app](apps-in-teams-meetings/app-icon-badging-for-your-app.md)
 
 :::column-end:::
 :::row-end:::
