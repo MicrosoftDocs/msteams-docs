@@ -16,7 +16,7 @@ When you are building a Microsoft Teams app that includes tab, bot, and message 
 
 You need an existing Teams tab app to perform the debug for mobile. If you don't have a Teams tab app, create a tab app [Build your first tab app using JavaScript](../sbs-gs-javascript.yml).
 
-# Test your tab app on mobile client
+## Test your tab app on mobile client
 
 Debug your Teams app [Debug your Teams app locally](debug-local.md).
 
@@ -168,7 +168,7 @@ Once the provisioning and deployment steps are complete:
 
 1. For Android devices, use [DevTools](../tabs/how-to/developer-tools.md#access-devtools-from-an-android-device) to debug your tab while it is running.
 
-# Test your bot app on mobile client
+## Test your bot app on mobile client
 
 1. Start a Bot App in VSC or CLI same to the current Teams Toolkit behavior.
 
