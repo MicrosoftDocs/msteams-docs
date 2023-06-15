@@ -14,6 +14,8 @@ When you are building a Microsoft Teams app that includes tab, bot, and message 
 
 ## Test your tab app on mobile client
 
+1. Follow the steps to test your tab app on mobile:
+
 # [Visual Studio Code](#tab/vscode)
 
 1. You can view the project folders and files under **Explorer** in the Visual Studio Code after debugging.
@@ -67,7 +69,7 @@ When you are building a Microsoft Teams app that includes tab, bot, and message 
 > * To preview the tab app only in mobile client, set the value for `access` property to `private`.
 > * To preview the tab app on the mobile client and debug it on web clients, set the `access` property to `public`. Any user with the app's URL can visit the tab.
 
-1. Remove the `TAB_DOMAIN` and `TAB_ENDPOINT` from the `teamsapp.local.yml` file.
+4. Remove the `TAB_DOMAIN` and `TAB_ENDPOINT` from the `teamsapp.local.yml` file.
 
 ```javascript
  - uses: script 
@@ -77,7 +79,7 @@ When you are building a Microsoft Teams app that includes tab, bot, and message 
        echo "::set-teamsfx-env TAB_ENDPOINT=https://localhost:53000";
 ```
 
-1. If you're using React, add the configuration `WDS_SOCKET_PORT=0` in `teamsapp.local.yml` file to activate hot reloading while debugging in react after utilizing the tunnel service.
+5. If you're using React, add the configuration `WDS_SOCKET_PORT=0` in `teamsapp.local.yml` file to activate hot reloading while debugging in react after utilizing the tunnel service.
 
 ```javascript
   - uses: file/createOrUpdateEnvironmentFile
@@ -107,10 +109,6 @@ Once the provisioning and deployment steps are complete:
 # [Command Line](#tab/cline)
 
 1. Go to [ngrok](https://ngrok.com) and sign up for a free account or log into your existing account. After you've signed in, go to the [dashboard](https://dashboard.ngrok.com) and get your auth token.
-1. Create a ngrok configuration file `ngrok.yml` and add the following line. For more information on where the file can be located, see [ngrok](https://ngrok.com/docs#config):
-
-  `authtoken: <Your-AuthToken>`
-
 1. Run the command `ngrok http https://localhost:53000 --authtoken=<your-personal-ngrok-authtoken>` to start the local tunnel service.
 1. Fill the values for `TAB_DOMAIN` and `TAB_ENDPOINT` in the `env/.env.local` file:
 
@@ -119,13 +117,13 @@ Once the provisioning and deployment steps are complete:
  TAB_ENDPOINT=https://sample-ngrok-id.ngrok.io
 ```
 
-1. Execute the command `teamsfx provision --env local` in your project directory.
-1. Execute the command `teamsfx deploy --env local` in your project directory.
-1. Execute the command `teamsfx preview --env local` in your project directory.
+4. Execute the command `teamsfx provision --env local` in your project directory.
+5. Execute the command `teamsfx deploy --env local` in your project directory.
+6. Execute the command `teamsfx preview --env local` in your project directory.
 
 ---
 
-1. Select **Add** when prompted to sideload the app onto Teams.
+2. Select **Add** when prompted to sideload the app onto Teams.
 
 :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="The screenshot showing an app being installed.":::
 
@@ -133,33 +131,41 @@ Once the provisioning and deployment steps are complete:
 > When the dev tunnel access value is set to `private`, the tab app cannot be displayed within an iframe on the web client. The login page is hosted on "login.microsoftonline.com", which has the `X-FRAME-Options` header set to DENY.
 > To preview the tab app on the mobile client and debug it on web clients, set the access value to `public`. Any user with the app's URL can visit the tab.
 
-1. Open Teams on your mobile device and click **More** to find the previewing app.
+:::image type="content" source="../assets/images/debug-mobile/login.PNG" alt-text="The screenshot shows the login page.":::
+
+3. Open Teams on your mobile device and click **More** to find the previewing app.
 
 :::image type="content" source="../assets/images/debug-mobile/debug-mobile.PNG" alt-text="The screenshot showing an app being installed in mobile clients.":::
 
 > [!NOTE]
 > If a you have debugged the app previously, it's recommended to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
 
-1. For iOS, to clear the Teams app data go to **Settings** > **Teams** > **Clear App Data**.
+# [iOS](#tab/ios1)
+
+To clear the Teams app data go to **Settings** > **Teams** > **Clear App Data**.
 
 :::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios.PNG" alt-text="The screenshot showing to clean the app data in iOS mobile client.":::
 
-1. For android, to clear the Teams app data go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
+# [Android](#tab/android1)
+
+To clear the Teams app data go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
 
 :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android.PNG" alt-text="The screenshot showing to clean the app data in android mobile client.":::
 
-1. If you are accessing the dev tunnel for the first time, Sign in to Microsoft 365 account and select **continue**.
+---
+
+4. If you are accessing the dev tunnel for the first time, Sign in to Microsoft 365 account and select **continue**.
 
 :::image type="content" source="../assets/images/debug-mobile/m365-sign-in.PNG" alt-text="The screenshot showing the M365 sign in page.":::
 
 > [!NOTE]
 > You need to login only once per device, and every time you install the app you need to confirm the anti-phishing page.
 
-1. Your first mobile tab app is created.
+5. Your first mobile tab app is created.
 
 :::image type="content" source="../assets/images/debug-mobile/mobile-tab-app.PNG" alt-text="The screenshot shows the mobile tab app.":::
 
-1. For Android devices, use [DevTools](../tabs/how-to/developer-tools.md#access-devtools-from-an-android-device) to debug your tab while it is running.
+6. For Android devices, use [DevTools](../tabs/how-to/developer-tools.md#access-devtools-from-an-android-device) to debug your tab while it is running.
 
 ## Test your bot app on mobile client
 
@@ -168,14 +174,20 @@ To test your bot in mobile client, follow the steps listed in [Test your tab app
 > [!NOTE]
 > If a you have debugged the bot app previously and the Teams app manifest file is changed, it's recommended to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
 
-1. For iOS, to clear the Teams app data go to **Settings** > **Teams** > **Clear App Data**.
+# [iOS](#tab/ios2)
+
+To clear the Teams app data go to **Settings** > **Teams** > **Clear App Data**.
 
 :::image type="content" source="../assets/images/debug-mobile/iOS-mobile-bot.PNG" alt-text="The screenshot shows the bot app in iOS mobile client.":::
 
-1. For android, to clear the Teams app data go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
+# [Android](#tab/android2)
+
+To clear the Teams app data go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
 
 :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android.PNG" alt-text="The screenshot showing to clean the app data in android mobile client.":::
 
-1. Debug the bot app on your mobile client.
+---
+
+* Debug the bot app on your mobile client.
 
 :::image type="content" source="../assets/images/debug-mobile/debug-bot-mobile.PNG" alt-text="The screenshot showing to debug the bot app in mobile client.":::
