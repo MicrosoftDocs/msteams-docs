@@ -27,17 +27,10 @@ Teams Connect shared channels facilitate secure collaboration seamlessly. Allow 
 SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and the property is defined, Teams enables your app in each channel type accordingly. Private and shared channels are currently supported. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes).
 
 ```JSON
-"supportedChannelTypes": {
-      "type": "array",
-      "description": "List of ‘non-standard’ channel types that the app supports. Note: Channels of standard type are supported by default if the app supports team scope. ",
-      "maxItems": 2,
-      "items": { 
-        "enum": [
-          "sharedChannels",
-          "privateChannels"
-        ]
-      }
-    }
+    "supportedChannelTypes": [
+        "sharedChannels",
+        "privateChannels"
+    ]
 ```
 
 > [!NOTE]
