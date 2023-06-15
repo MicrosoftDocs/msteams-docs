@@ -12,18 +12,13 @@ ms.date: 06/14/2023
 
 When you are building a Microsoft Teams app that includes tab, bot, and message extension. You must test how your app functions on both Android and iOS Microsoft Teams mobile clients.
 
-## Prerequisties
-
-You need an existing Teams tab app to perform the debug for mobile. If you don't have a Teams tab app, create a tab app [Build your first tab app using JavaScript](../sbs-gs-javascript.yml).
-
 ## Test your tab app on mobile client
-
-Debug your Teams app [Debug your Teams app locally](debug-local.md).
 
 # [Visual Studio Code](#tab/vscode)
 
 1. You can view the project folders and files under **Explorer** in the Visual Studio Code after debugging.
-1. Add `Start local tunnel` task in `.vscode/task.json` file to make the tab app accessible on the mobile client.
+1. Add `Start local tunnel` after `Validate prerequisites` in the `task.json` file to make the tab app accessible on the mobile client.
+1. Add the following code after the property `dependsOrder` in the `task.json` file.
 
 ```json
 {
@@ -67,13 +62,12 @@ Debug your Teams app [Debug your Teams app locally](debug-local.md).
 }
 ```
 
-1. To preview the tab app only on mobile client set the access to `private`.
-1. To preview the tab app on the mobile client and debug it on web clients, set the access to `public`.
-
 > [!NOTE]
-> It's worth nothing that public access raises safety concerns since the tab app can be visited by anyone who knows the app's URL.
+>
+> * To preview the tab app only in mobile client, set the value for `access` property to `private`.
+> * To preview the tab app on the mobile client and debug it on web clients, set the `access` property to `public`. Any user with the app's URL can visit the tab.
 
-1. Remove the following action `TAB_DOMAIN` and `TAB_ENDPOINT` from `teamsapp.local.yml` file.
+1. Remove the `TAB_DOMAIN` and `TAB_ENDPOINT` from the `teamsapp.local.yml` file.
 
 ```javascript
  - uses: script 
@@ -83,7 +77,7 @@ Debug your Teams app [Debug your Teams app locally](debug-local.md).
        echo "::set-teamsfx-env TAB_ENDPOINT=https://localhost:53000";
 ```
 
-1. For React add task `WDS_SOCKET_PORT=0` in `teamsapp.local.yml` file to activate hot reloading while debugging in react after utilizing the tunnel service.
+1. If you're using React, add the configuration `WDS_SOCKET_PORT=0` in `teamsapp.local.yml` file to activate hot reloading while debugging in react after utilizing the tunnel service.
 
 ```javascript
   - uses: file/createOrUpdateEnvironmentFile
@@ -126,8 +120,8 @@ Once the provisioning and deployment steps are complete:
 ```
 
 1. Execute the command `teamsfx provision --env local` in your project directory.
-1. Execute  the command `teamsfx deploy --env local` in your project directory.
-1. Execute  the command `teamsfx preview --env local` in your project directory.
+1. Execute the command `teamsfx deploy --env local` in your project directory.
+1. Execute the command `teamsfx preview --env local` in your project directory.
 
 ---
 
@@ -136,31 +130,30 @@ Once the provisioning and deployment steps are complete:
 :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="The screenshot showing an app being installed.":::
 
 > [!NOTE]
-> When the dev tunnel access is set to `private`, the tab app cannot be displayed within an iframe on the web client. The login page is hosted on "login.microsoftonline.com", which has the `X-FRAME-Options` header set to DENY.
-> To preview the tab app on the mobile client and debug it on web clients, set the access to `public`.
-> It's worth nothing that public access raises safety concerns since the tab app can be visited by anyone who knows the app's URL.
+> When the dev tunnel access value is set to `private`, the tab app cannot be displayed within an iframe on the web client. The login page is hosted on "login.microsoftonline.com", which has the `X-FRAME-Options` header set to DENY.
+> To preview the tab app on the mobile client and debug it on web clients, set the access value to `public`. Any user with the app's URL can visit the tab.
 
 1. Open Teams on your mobile device and click **More** to find the previewing app.
 
 :::image type="content" source="../assets/images/debug-mobile/debug-mobile.PNG" alt-text="The screenshot showing an app being installed in mobile clients.":::
 
 > [!NOTE]
-> If a user has previously debugged the app, it's advisable for them to clear the cache on their mobile device to ensure immediate app synchronization. After clearing the cache, it may take some time for the app to sync.
+> If a you have debugged the app previously, it's recommended to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
 
-1. For iOS mobile client, clear the Teams app data by navigating to Settings > Teams > Clear App Data.
+1. For iOS, to clear the Teams app data go to **Settings** > **Teams** > **Clear App Data**.
 
 :::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios.PNG" alt-text="The screenshot showing to clean the app data in iOS mobile client.":::
 
-1. For android mobile client, clear the Teams app data by navigating to Teams > Settings > Data and storage > Clear app data > Clear data.
+1. For android, to clear the Teams app data go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
 
 :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android.PNG" alt-text="The screenshot showing to clean the app data in android mobile client.":::
 
-1. If you are accessing the dev tunnel for the first time, Select **Sign in to M365** and confirm the anti-phishing page.
+1. If you are accessing the dev tunnel for the first time, Sign in to Microsoft 365 account and select **continue**.
 
 :::image type="content" source="../assets/images/debug-mobile/m365-sign-in.PNG" alt-text="The screenshot showing the M365 sign in page.":::
 
 > [!NOTE]
-> The login process should only be required once per device, and confirmation of the anti-phishing page must be completed after every installation of the app.
+> You need to login only once per device, and every time you install the app you need to confirm the anti-phishing page.
 
 1. Your first mobile tab app is created.
 
@@ -170,22 +163,16 @@ Once the provisioning and deployment steps are complete:
 
 ## Test your bot app on mobile client
 
-1. Start a Bot App in VSC or CLI same to the current Teams Toolkit behavior.
-
-1. Open the sideloading URL and install the app in the Teams website as usual.
-
-1. Open Teams on your mobile device and click **More** to find the previewing app.
-
-:::image type="content" source="../assets/images/debug-mobile/bot-app-mobile.PNG" alt-text="The screenshot shows the bot app in mobile client.":::
+To test your bot in mobile client, follow the steps listed in [Test your tab app on mobile client](#test-your-tab-app-on-mobile-client) for your bot.
 
 > [!NOTE]
-> If a user has previously debugged the bot app and the Team app manifest file is changes, it is advisable for them to clear the cache on their mobile device to ensure immediate app synchronization. After clearing the cache, it may take some time for the app to sync.
+> If a you have debugged the bot app previously and the Teams app manifest file is changed, it's recommended to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
 
-1. For iOS mobile client, clear the Teams app data by navigating to Settings > Teams > Clear App Data.
+1. For iOS, to clear the Teams app data go to **Settings** > **Teams** > **Clear App Data**.
 
 :::image type="content" source="../assets/images/debug-mobile/iOS-mobile-bot.PNG" alt-text="The screenshot shows the bot app in iOS mobile client.":::
 
-1. For android mobile client, clear the Teams app data by navigating to Teams > Settings > Data and storage > Clear app data > Clear data.
+1. For android, to clear the Teams app data go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
 
 :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android.PNG" alt-text="The screenshot showing to clean the app data in android mobile client.":::
 
