@@ -97,7 +97,7 @@ The following is an example of a payload:
 
 |Sample name | Description | .NET |
 |----------------|-----------------|--------------|
-| App icon badging for your Teams app | This sample demonstrates how to enable app icon badging for your Teams app. | [Link to be added] |
+| App icon badging for your Teams app | This sample demonstrates how to enable app icon badging for your Teams app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-app-icon-badging/nodejs) |
 
 ## See also
 
