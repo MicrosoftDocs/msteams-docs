@@ -96,6 +96,10 @@ The following is the sample manifest schema:
             "searchUrl": "https://contoso.com/content (displayed in web browser)"
         }
     ],
+    "supportedChannelTypes": [
+        "sharedChannels",
+        "privateChannels"
+    ],
     "bots": [
         {
             "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
