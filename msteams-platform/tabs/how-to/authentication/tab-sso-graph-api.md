@@ -219,8 +219,10 @@ Tenant admin consent: A simple way of [consenting on behalf of an organization a
 
 Another approach for getting Graph scopes is to present a consent dialog using our existing [third party OAuth provider authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves popping up an Azure AD consent dialog box.
 
+You can also ask for consent using the TeamsJS [authentication](/javascript/api/@microsoft/teams-js/authentication) capability. 
+
 <details>
-<summary>You can also ask for consent using the TeamsJS [authentication](/javascript/api/@microsoft/teams-js/authentication) capability by following these steps:</summary>
+<summary>To ask obtain consent using the TeamsJS client library, follow these steps:</summary>
 
 > [!TIP]
 > The [Teams Personal Tab SSO Authentication](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-personal-sso-quickstart/js/src/components/Tab.js#L64-L101) sample provides code demonstrating following steps.
