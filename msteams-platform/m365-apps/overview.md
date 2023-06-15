@@ -24,7 +24,7 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 | [**Office Add-ins**](/office/dev/add-ins/develop/json-manifest-overview) (preview) | `extensions` | - | Web, Desktop | - | Only available in [devPreview](../resources/schema/manifest-schema-dev-preview.md) manifest version. See [notes](#office-add-ins-preview).|
 
 > [!NOTE]
-> Currently, `staticTabs` isn't supported on Android devices.
+> Currently, `staticTabs` isn't supported in Microsoft Teams Android mobile client.
 
 Enrollment to [Microsoft 365 Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365) and [Microsoft 365 Apps update channel](/deployoffice/change-update-channels) requires admin opt-in for the entire organization or selected users. For more information, see [Manage access to Teams apps across Microsoft 365](/microsoftteams/manage-third-party-teams-apps). Update channels are device specific and apply only to installations of Microsoft 365 running on Windows.
 
