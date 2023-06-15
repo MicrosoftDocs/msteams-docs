@@ -1,7 +1,7 @@
 ---
 title: Debug for mobile
 author: surbhigupta 
-description: In this module, learn how to debug your Teams app in mobile.
+description: In this module, learn how to debug your Teams app in mobile clients.
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
@@ -108,7 +108,7 @@ Once the provisioning and deployment steps are complete:
 1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
 1. Select the **Start debugging (F5)** to launch your app from Azure.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="The screenshot showing how to launch the app remotely.":::
+:::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="The screenshot showing how to launch the app remotely.":::
 
 # [Command Line](#tab/cline)
 
@@ -133,9 +133,62 @@ Once the provisioning and deployment steps are complete:
 
 1. Select **Add** when prompted to sideload the app onto Teams.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="The screenshot showing an app being installed.":::
+:::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="The screenshot showing an app being installed.":::
 
 > [!NOTE]
 > When the dev tunnel access is set to `private`, the tab app cannot be displayed within an iframe on the web client. The login page is hosted on "login.microsoftonline.com", which has the `X-FRAME-Options` header set to DENY.
 > To preview the tab app on the mobile client and debug it on web clients, set the access to `public`.
 > It's worth nothing that public access raises safety concerns since the tab app can be visited by anyone who knows the app's URL.
+
+1. Open Teams on your mobile device and click **More** to find the previewing app.
+
+:::image type="content" source="../assets/images/debug-mobile/debug-mobile.PNG" alt-text="The screenshot showing an app being installed in mobile clients.":::
+
+> [!NOTE]
+> If a user has previously debugged the app, it's advisable for them to clear the cache on their mobile device to ensure immediate app synchronization. After clearing the cache, it may take some time for the app to sync.
+
+1. For iOS mobile client, clear the Teams app data by navigating to Settings > Teams > Clear App Data.
+
+:::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios.PNG" alt-text="The screenshot showing to clean the app data in iOS mobile client.":::
+
+1. For android mobile client, clear the Teams app data by navigating to Teams > Settings > Data and storage > Clear app data > Clear data.
+
+:::image type="content" source="../assets/images/debug-mobile/clear-app-data-android.PNG" alt-text="The screenshot showing to clean the app data in android mobile client.":::
+
+1. If you are accessing the dev tunnel for the first time, Select **Sign in to M365** and confirm the anti-phishing page.
+
+:::image type="content" source="../assets/images/debug-mobile/m365-sign-in.PNG" alt-text="The screenshot showing the M365 sign in page.":::
+
+> [!NOTE]
+> The login process should only be required once per device, and confirmation of the anti-phishing page must be completed after every installation of the app.
+
+1. Your first mobile tab app is created.
+
+:::image type="content" source="../assets/images/debug-mobile/mobile-tab-app.PNG" alt-text="The screenshot shows the mobile tab app.":::
+
+1. For Android devices, use [DevTools](../tabs/how-to/developer-tools.md#access-devtools-from-an-android-device) to debug your tab while it is running.
+
+# Test your bot app on mobile client
+
+1. Start a Bot App in VSC or CLI same to the current Teams Toolkit behavior.
+
+1. Open the sideloading URL and install the app in the Teams website as usual.
+
+1. Open Teams on your mobile device and click **More** to find the previewing app.
+
+:::image type="content" source="../assets/images/debug-mobile/bot-app-mobile.PNG" alt-text="The screenshot shows the bot app in mobile client.":::
+
+> [!NOTE]
+> If a user has previously debugged the bot app and the Team app manifest file is changes, it is advisable for them to clear the cache on their mobile device to ensure immediate app synchronization. After clearing the cache, it may take some time for the app to sync.
+
+1. For iOS mobile client, clear the Teams app data by navigating to Settings > Teams > Clear App Data.
+
+:::image type="content" source="../assets/images/debug-mobile/iOS-mobile-bot.PNG" alt-text="The screenshot shows the bot app in iOS mobile client.":::
+
+1. For android mobile client, clear the Teams app data by navigating to Teams > Settings > Data and storage > Clear app data > Clear data.
+
+:::image type="content" source="../assets/images/debug-mobile/clear-app-data-android.PNG" alt-text="The screenshot showing to clean the app data in android mobile client.":::
+
+1. Debug the bot app on your mobile client.
+
+:::image type="content" source="../assets/images/debug-mobile/debug-bot-mobile.PNG" alt-text="The screenshot showing to debug the bot app in mobile client.":::
