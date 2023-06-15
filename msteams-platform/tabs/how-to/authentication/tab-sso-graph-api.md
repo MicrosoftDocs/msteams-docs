@@ -222,7 +222,7 @@ Another approach for getting Graph scopes is to present a consent dialog using o
 You can also ask for consent using the TeamsJS [authentication](/javascript/api/@microsoft/teams-js/authentication) capability. 
 
 <details>
-<summary>To ask obtain consent using the TeamsJS client library, follow these steps:</summary>
+<summary>To obtain consent using the TeamsJS client library, follow these steps:</summary>
 
 > [!TIP]
 > The [Teams Personal Tab SSO Authentication](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-personal-sso-quickstart/js/src/components/Tab.js#L64-L101) sample provides code demonstrating following steps.
