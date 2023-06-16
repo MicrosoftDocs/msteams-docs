@@ -10,6 +10,8 @@ ms.date: 04/07/2022
 
 # Live Share media capabilities
 
+:::image type="content" source="../assets/images/teams-live-share/live-share-media-capabilities-docs-feature-1.png" alt-text="Teams Live Share media synchronization":::
+
 Video and audio are instrumental parts of the modern world and workplace. We've heard wide ranging feedback that there's more we can do to increase the quality, accessibility, and license protections of watching videos together in meetings.
 
 The Live Share SDK enables robust **media synchronization** for any HTML `<video>` and `<audio>` element with just a few lines of code. By synchronizing media at the player state and transport controls layer, you can individually attribute views and license, while providing the highest possible quality available through your app.

@@ -82,8 +82,6 @@ Unlike GitHub Codespaces, you need to set up your development environment. Let's
 
 ---
 
-For more information on message extensions, see [message extensions](../messaging-extensions/what-are-messaging-extensions.md).
-
 If a bot is what you are interested in, go to:
 
 > [!div class="nextstepaction"]

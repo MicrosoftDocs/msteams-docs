@@ -14,8 +14,8 @@ In the Dice Roller sample app, users are shown a dice with a button to roll it. 
 
 1. [Set up the application](#set-up-the-application)
 2. [Join a Fluid container](#join-a-fluid-container)
-3. [Write the meeting Stage View](#write-the-stage-view)
-4. [Connect meeting Stage View to Live Share](#connect-meeting-stage-view-to-live-share)
+3. [Write the meeting stage view](#write-the-stage-view)
+4. [Connect meeting stage view to Live Share](#connect-meeting-stage-view-to-live-share)
 5. [Write the side panel view](#write-the-side-panel-view)
 6. [Write the settings view](#write-the-settings-view)
 
@@ -101,7 +101,7 @@ async function joinContainer() {
 
 When testing locally, `TestLiveShareHost` updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the `LiveShareClient` to join the test container that was created. If the modification of the applications URL interferes with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/live-share/iliveshareclientoptions) and [getLocalTestContainerId](/javascript/api/@microsoft/live-share/iliveshareclientoptions) options passed to `LiveShareClient`.
 
-## Write the Stage View
+## Write the stage view
 
 Many Teams Meeting Extensibility applications are designed to use React for their view framework, but this isn't required. For example, this sample uses standard HTML/DOM methods to render a view.
 
@@ -136,7 +136,7 @@ function renderStage(diceState, elem) {
 }
 ```
 
-## Connect meeting Stage View to Live Share
+## Connect meeting stage view to Live Share
 
 ### Modify LiveState
 
@@ -181,7 +181,7 @@ updateDice();
 
 ## Write the side panel view
 
-The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of side panel view is to let a user select content for the app prior to sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling `joinContainer()` from the side panel view connects to the same Fluid container the Stage View is connected to. This container can then be used to communicate with the Stage View. Ensure that you're communicating with everyone's Stage View and side panel view.
+The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of side panel view is to let a user select content for the app prior to sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling `joinContainer()` from the side panel view connects to the same Fluid container the stage view is connected to. This container can then be used to communicate with the stage view. Ensure that you're communicating with everyone's stage view and side panel view.
 
 The sample's side panel view prompts the user to select the share to stage button.
 

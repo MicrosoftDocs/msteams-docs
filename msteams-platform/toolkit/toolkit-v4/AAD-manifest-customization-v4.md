@@ -1,7 +1,7 @@
 ---
 title: Edit Azure Active Directory manifest in Teams Toolkit v4
 author: zyxiaoyuer
-description: In this module, learn how to edit, customize, and preview the Azure AD manifest with CodeLens in Teams Toolkit v4.
+description:  Describes Managing Azure Active Directory application in Teams Toolkit v4
 ms.author: surbhigupta
 ms.localizationpriority: medium 
 ms.topic: overview
@@ -72,6 +72,8 @@ You can customize Azure AD manifest template to update Azure AD application.
 
     - The `resourceAccess.type` property is used for delegated permission or application permission. `Scope` means delegated permission and `Role` means application permission.
 
+    <br>
+
     </details>
 
     <details>
@@ -101,6 +103,8 @@ You can customize Azure AD manifest template to update Azure AD application.
 
      1. Select the application name and get the application ID from the overview page.
 
+    <br>
+
     </details>
 
     <details>
@@ -119,7 +123,11 @@ You can customize Azure AD manifest template to update Azure AD application.
       ]
       ```
 
+    <br>
+
     </details>
+
+<br>
 
 <details>
 <summary>3. Deploy Azure AD application changes for local environment</summary>
@@ -138,7 +146,11 @@ You can customize Azure AD manifest template to update Azure AD application.
 
    4. The changes for Azure AD application used in local environment are deployed.
 
+<br>
+
 </details>
+  
+<br>
 
 <details>
 
@@ -151,6 +163,8 @@ You can customize Azure AD manifest template to update Azure AD application.
 - Additionally you can right click on the `aad.template.json` and select **Deploy Azure Active Directory app manifest** from the context menu.
   
     :::image type="content" source="images/add deploy5-v4.png" alt-text="deploy5":::
+
+<br>
 
 </details>
 

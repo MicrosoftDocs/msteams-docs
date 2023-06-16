@@ -4,7 +4,6 @@ description: In this article, you'll have Microsoft 365 plugins, plugin list and
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.date: 12/21/2022
 ---
 
 # Microsoft 365 plugins
@@ -46,13 +45,13 @@ The Open ID Connect plugin allows users to authenticate any website or tool that
 * Users can enter their Microsoft 365 credentials, such as email and password to sign in directly or sign in using Moodle’s username and password fields, without signing into Microsoft 365.
 * Users can select the link to sign in through Microsoft 365 or the OpenID Connect provider on Moodle page.
 
-The following image displays the OpenID connect log in page:
+The following image displays the OpenID connect login page:
 
 :::image type="content" source="../../assets/images/MoodleInstructions/openid-connect.png" alt-text="Screenshot shows the log in to open-id connect.":::
 
 ## Microsoft 365 integration
 
-Microsoft 365 integration consists of several apps with multiple functionalities, which allows users to stay connected and perform different actions as required. The plugin allows administrators to check the following actions:
+Microsoft 365 integration consists of several apps with multiple functionalities, which allows users to stay connected and perform different actions as required. The plugin allows administrators to check the following:
 
 * Check appropriate integration functions.
 * Synchronize users between Microsoft 365 and Moodle.

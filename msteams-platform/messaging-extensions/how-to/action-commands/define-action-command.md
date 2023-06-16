@@ -57,8 +57,6 @@ The following image displays the locations from where action command is invoked:
 
 :::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="Action command invoke locations":::
 
-To add custom options in **More options** (**...**) or **More actions**, add your commands in `composeExtensions` property of the [app manifest schema](../../../resources/schema/manifest-schema.md#composeextensions). For more information, see [add action command to your app manifest](#add-the-action-command-to-your-app-manifest).
-
 ## Select how to create your task module
 
 In addition to selecting where your command can be invoked from, you must also select how to populate the form in the task module for your users. You have the following three options for creating the form that is rendered inside the task module:
@@ -98,7 +96,7 @@ To create an action command:
 
    :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="The screenshot show you how to create a bot in Developer Portal.":::
 
-1. To use an existing bot, select **Select an existing bot** and choose the existing bots from the dropdown list or select **Enter a bot ID** if you have a bot ID created already.
+1. To use an existing bot, select **Select an existing bot** and choose the existing bots from the dropdown list or select **Enter a bot ID** if you have a bot id created already.
 
 1. Select the scope of the bot and **Save**.
 
@@ -112,7 +110,7 @@ To create an action command:
 
 1. Enter all the parameters and select the type of input from the dropdown list.
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="Screenshot shows how to add parameters to define your command for message extension.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="Screenshot shows how to add a parameters to define your command for message extension.":::
 
 1. Select **Add a domain** under **Preview links**.
 
@@ -140,7 +138,7 @@ To manually add your action-based message extension command to your app manifest
 
 | Property name | Purpose | Required? | Minimum manifest version |
 |---|---|---|---|
-| `id` | This property is a unique ID that you assign to this command. The user request includes this ID. | Yes | 1.0 |
+| `id` | This property is an unique ID that you assign to this command. The user request includes this ID. | Yes | 1.0 |
 | `title` | This property is a command name. This value appears in the UI. | Yes | 1.0 |
 | `type` | This property must be an `action`. | No | 1.4 |
 | `fetchTask` | This property is set to `true` for an adaptive card or embedded web view for your task module, and`false` for a static list of parameters or when loading the web view by a `taskInfo`. | No | 1.4 |

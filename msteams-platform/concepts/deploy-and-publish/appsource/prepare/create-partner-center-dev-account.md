@@ -91,7 +91,7 @@ See [manage account settings and profile info](/windows/uwp/publish/manage-accou
 
 You received this error message because your [account verification status](/partner-center/verification-responses) is pending. Check your status in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select the **Settings** gear icon and choose **Developer settings > Account > Account settings**.
 
-:::image type="content" source="../../../../assets/images/partner-center-verification-status.png" alt-text="Screenshot shows the Partner Center Verification status.":::
+![Partner Center verification status](~/assets/images/partner-center-verification-status.png)
 
 <br>
 
@@ -115,7 +115,7 @@ Once verification process is complete, the status of your enrollment on the prof
 
 <summary><b>My account verification status hasn't advanced beyond Email Ownership. How should I proceed?</b></summary>
 
-During the **Email Ownership** verification process, a verification email is sent to the primary contact. Check your primary contact inbox for an email from **<maccount@microsoft.com>** with the subject line **Action needed: Verify your email account with Microsoft** and complete the email verification process. The verification email is sent to the address listed on your Partner Center account settings.
+During the **Email Ownership** verification process, a verification email is sent to the primary contact. Check your primary contact inbox for an email from **maccount@microsoft.com** with the subject line **Action needed: Verify your email account with Microsoft** and complete the email verification process. The verification email is sent to the address listed on your Partner Center account settings.
 
 Remember the following about the email verification process:
 
@@ -137,7 +137,7 @@ Try the following:
 * Clear the browser cache, go to your Partner Center account dashboard, and select **Resend verification email**.
 * Try accessing the **Resend verification email** link from a different browser.
 * Work with your IT department to ensure that the verification emails are not blocked by your email server.
-* Adjust your server's spam filter to allow or safe-list all emails from **<maccount@microsoft.com>**.
+* Adjust your server's spam filter to allow or safe-list all emails from **maccount@microsoft.com**.
 
 <br>
 

@@ -5,7 +5,6 @@ description: In this module, learn upcoming and in-progress changes to the Bot A
 ms.localizationpriority: medium
 ms.topic: reference
 ms.author: ojchoudh
-ms.date: 08/30/2022
 ---
 
 # Teams bot API changes to fetch team or chat members

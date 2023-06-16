@@ -3,6 +3,7 @@ title: Designing Adaptive Cards for your app
 description: In this module, learn how to design Adaptive Cards for your Teams app and get the Microsoft Teams UI Kit.
 ms.localizationpriority: high
 ms.topic: conceptual
+ms.author: lajanuar
 ---
 # Designing Adaptive Cards for your Microsoft Teams app
 

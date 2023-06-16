@@ -4,6 +4,7 @@ author: laujan
 description: Learn to build a personal tab. Select the Node.js, ASP.NET Core, or ASP.NET Core MVC environment. Generate app, add content, create package, build and run app.
 ms.localizationpriority: high
 ms.topic: quickstart
+ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
 ---
 

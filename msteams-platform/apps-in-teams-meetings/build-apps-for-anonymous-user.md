@@ -5,7 +5,6 @@ description: Learn how to build apps for anonymous users and test the experience
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
-ms.date: 02/07/2023
 ---
 
 # Build apps for anonymous users
@@ -15,7 +14,7 @@ Anonymous users don't have an Azure Active Directory (Azure AD) identity and are
 > [!NOTE]
 > Apps for anonymous users are supported in Teams mobile iOS client only.
 
-For anonymous users to interact with the apps in Teams meetings, ensure to:
+For anonymous users to interact with the apps in Teams meetings, ensure the following:
 
 1. Update your [app manifest](#app-manifest-update-for-anonymous-users).
 2. Enable the [anonymous user app interaction](#admin-setting-for-anonymous-user-app-interaction) in Teams admin center.

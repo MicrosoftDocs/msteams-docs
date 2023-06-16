@@ -12,13 +12,13 @@ With your app listed on the Microsoft Teams store, start thinking about how you'
 
 ## Analyze app usage
 
-Track your app usage in the [Teams app usage report](/office/dev/store/teams-apps-usage) in Partner Center. Metrics include Monthly, Daily, and Weekly active users, and retention and intensity charts enabling you to track churn and frequency of usage.
+You can track your app usage in the [Teams app usage report](/office/dev/store/teams-apps-usage) in Partner Center. Metrics include Monthly, Daily, and Weekly active users, and retention and intensity charts enabling you to track churn and frequency of usage.
 
 Data for newly published apps takes about a week to appear in the report.
 
 ## Publish updates to your app
 
-Submit changes to your app (such as new features or even metadata) in Partner Center. These changes require a new review process.
+You can submit changes to your app (such as new features or even metadata) in Partner Center. These changes require a new review process.
 
 Ensure to check the following when you're publishing updates:
 
@@ -41,9 +41,13 @@ If you make any of the following changes to your app, however, your existing use
 * Add a connector.
 * Modify configurations related to your Microsoft Azure Active Directory (Azure AD) app registration. For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
+## Fix issues with your published app
+
+Microsoft runs daily automation tests on apps listed on the Teams store. If issues with your app are identified, we contact you with a detailed report on how to reproduce the issues and recommendations to resolve them. If you can't fix the problems within a stated timeline, your app listing may be removed from the store.
+
 ## Promote your app on another site
 
-When your app is listed in the Teams store, create a link that launches Teams and displays a dialog to install your app. You could include this link, for example, with a download button on your product's marketing page.
+When your app is listed in the Teams store, you can create a link that launches Teams and displays a dialog to install your app. You could include this link, for example, with a download button on your product's marketing page.
 
 Create the link using the following URL appended with your app ID: `https://teams.microsoft.com/l/app/<your-app-id>`.
 
@@ -51,53 +55,16 @@ Create the link using the following URL appended with your app ID: `https://team
 
 [Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) offers assurances that data and privacy are adequately secured and protected when a third-party Microsoft 365 app or an add-in is installed in your Microsoft 365 ecosystem. The certification confirms that your app is compatible with Microsoft technologies, is compliant with cloud app security best practices, and is supported by Microsoft.
 
-## Keep your app details updated
+## Stop app distribution
 
-You must keep the following app details updated:
+You can remove an app from the [Microsoft commercial marketplace](/azure/marketplace/overview) and the Microsoft Teams store to prevent its discovery and use.
 
-| App details | Description |
-|---|---|
-| Your **app's listing** must be kept updated. | Any changes to functionality, pricing, visual appearance, or any other updates must be accurately reflected in your app's listing. |
-| You must regularly update your app to ensure that it remains **compliant with the commercial marketplace policies**. | Stay up to date with policy changes by subscribing to the [changelog here](/legal/marketplace/offer-policies-change-history). |
-| Your **contact details** must be kept up to date in your Partner Center account. | Microsoft will contact you occasionally to resolve any bugs or commercial marketplace policy violations in your app. If your contact details aren't updated, you might miss important notices or updates from Microsoft. |
-| Maintain your app's **functionality** and **user experience**. | Your app's functionality and user experience must match or exceed the quality of experience at submission, and you must maintain your app's performance. |
+To stop distribution of an app after you've published, follow the steps:
 
-## Fix issues with your published app
+1. In **Partner Center**, on the **Product overview** page, select **Stop selling**. It removes the app from the Microsoft AppSource.
+1. To initiate de-listing of the app from the Microsoft Teams store, write to [apphealthevaluation](mailto:apphealthevaluation@microsoft.com).
 
-Microsoft runs daily automation tests on apps listed on the Teams store. If issues with your app are identified, Microsoft contacts you with a detailed report on how to reproduce the issues and recommendations to resolve them. If you can't fix the problems within a stated timeline, your app listing may be removed from the store.
-
-## Possible enforcement actions
-
-Microsoft runs automated and manual continuous health checks for all the published apps. It's intended to maintain the health and end user experience of the Microsoft Commercial Marketplace and the Teams App store. In certain situations, Microsoft may contact you and remove your app from the commercial marketplace and the Teams App store, or temporarily halt new user acquisition for your app, or take further action on your app as deemed appropriate.
-
-**Microsoft may contact you for a resolution when:**
-
-* Microsoft is unable to run the continuous health evaluation tests on your app as the test credentials or test environment you provided is expired.
-
-* Microsoft sees or is made aware of critical security vulnerabilities in your app. These may endanger your users or the Microsoft Commercial Marketplace.
-
-* Microsoft is made aware of issues with your app by your users through any of Microsoft’s support channels. These issues include, but aren't limited to, spammy behavior, broken functionality, or unexpected user experience bugs and user interface bugs.
-
-* Microsoft may also unilaterally take cognizance of issues with your app. Users may have highlighted these issues by means of rating and reviews for your app.
-
-* Microsoft has identified commercial marketplace policy failures in your app as part of the continuous health evaluation of your app post publish.
-
-If Microsoft doesn't receive a suitable response from you, it'll reach out to you again, and may simultaneously remove your app to protect end users. If it hears back from you, and you confirm that issues are resolved and you've submitted an updated app for review, Microsoft will re-list your app when the app passes review.
-
-**Microsoft may remove your app without prior notice (other than to inform you of that action) when:**
-
-* Microsoft receives a takedown notice for your app alleging copyright or trademark infringement.
-* Your app appears to be unmaintained or abandoned and unused, and there's no response from you on Microsoft's reach outs.
-
-## Discontinuing your published app
-
-You must maintain your app's user experience as at the initial app review. If you don't maintain the app actively, or no longer wish to support the app, ensure that you discontinue your published app from your Partner Center account.
-
-To discontinue your app:
-
-* Remove it from Microsoft AppSource. On the **Product Overview** page in your Microsoft Partner Center account, select **Stop Selling**.
-* Contact the Microsoft Teams App Health evaluation team at [apphealthevaluation@microsoft.com](mailto:apphealthevaluation@microsoft.com) or [teams-sas@microsoft.com](mailto:teams-sas@microsoft.com) to remove your app from the Microsoft Teams app store.
-* Contact your customers where appropriate. Delete or revoke any security or authorization tokens generated for your app.
+After you stop the distribution of an app, you can still see it in Partner Center with a **Not available** status. If you decide to list the app again, follow the instructions to [Publish your app to the Microsoft Teams store](../publish.md).
 
 ## See also
 

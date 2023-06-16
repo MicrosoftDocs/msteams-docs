@@ -1,35 +1,35 @@
 ---
-title: Obtain meeting ID and organizer ID for fetching meeting transcripts
-description: Describes the process of Obtain meeting ID and organizer ID for fetching meeting transcripts
+title: Obtain meeting ID and organizer ID for fetching meeting transcripts and recordings
+description: Describes the process of Obtain meeting ID and organizer ID for fetching meeting transcripts and recordings
 ms.localizationpriority: high
 ms.topic: conceptual
 ---
 # Obtain meeting ID and organizer ID
 
-Your app can fetch transcripts of a meeting using the meeting ID and the user ID of the meeting organizer, also known as organizer ID. The Graph REST APIs fetch transcripts based on the meeting ID and organizer ID that are passed as parameters in the API.
+Your app can fetch transcripts and recordings of a meeting using the meeting ID and the user ID of the meeting organizer, also known as organizer ID. The Graph REST APIs fetch transcripts and recordings based on the meeting ID and organizer ID that are passed as parameters in the API.
 
 > [!NOTE]
 > The meeting ID for scheduled meetings may expire in some days if it's unused. It can be revived by using the meeting URL to join the meeting. For more information about meeting expiration timeline for different meeting types, see [meeting expiration](/microsoftteams/limits-specifications-teams#meeting-expiration).
 
-To obtain meeting ID and organizer ID for fetching the transcript, choose one of the two ways:
+To obtain meeting ID and organizer ID for fetching the transcript and recording, choose one of the two ways:
 
 - [Subscribe to change notifications](#subscribe-to-change-notifications)
 - [Use Bot Framework](#use-bot-framework-to-get-meeting-id-and-organizer-id)
 
 ## Subscribe to change notifications
 
-You can subscribe your app to receive change notifications for scheduled meeting events. When your app is notified about the subscribed meeting events, it can obtain transcripts, if it's authorized via required Azure AD permissions.
+You can subscribe your app to receive change notifications for scheduled meeting events. When your app is notified about the subscribed meeting events, it can obtain transcripts and recordings, if it's authorized via required Azure AD permissions.
 
 Your app receives notification for the type of meeting events for which it's subscribed:
 
 - [User-level notification](#obtain-meeting-details-using-user-level-notification)
 - [Tenant-level notification](#obtain-meeting-details-using-tenant-level-notification)
 
-When your app is notified of a subscribed meeting event, it can retrieve the meeting ID and organizer ID from the notification message. Based on the meeting details obtained, your app can fetch the meeting transcripts after the meeting has ended.
+When your app is notified of a subscribed meeting event, it can retrieve the meeting ID and organizer ID from the notification message. Based on the meeting details obtained, your app can fetch the meeting transcripts and recordings after the meeting has ended.
 
 ## Obtain meeting details using user-level notification
 
-Choose to subscribe your app to user-level notifications for getting transcripts of a particular user's meeting event. When a meeting is scheduled for that user, your app is notified. Your app can receive meeting notifications using calendar events as well.
+Choose to subscribe your app to user-level notifications for getting transcripts and recordings of a particular user's meeting event. When a meeting is scheduled for that user, your app is notified. Your app can receive meeting notifications using calendar events as well.
 
 For subscribing your app to calendar events, see [change notifications for Outlook resources in Microsoft Graph](/graph/outlook-change-notifications-overview).
 
@@ -159,11 +159,16 @@ To obtain meeting ID and organizer ID from user-level notification:
 
 ### Obtain meeting details using tenant-level notification
 
-Tenant-level notifications are useful if your app is authorized to access all meeting transcripts across the tenant. Subscribe your app to be notified for events when transcription starts or call ends for scheduled online Teams meetings. After the meeting ends, your app can access and retrieve the meeting transcript.
+Tenant-level notifications are useful if your app is authorized to access all meeting transcripts and recordings across the tenant. Subscribe your app to be notified for events when transcription and recording starts or call ends for scheduled online Teams meetings. After the meeting ends, your app can access and retrieve the meeting transcript and recording.
 
 For subscribing your app to tenant-level notifications, see [get change notifications](/graph/teams-changenotifications-chatmessage#subscribe-to-messages-across-all-chats).
 
-When your app is notified about subscribed meeting events, it searches through the notifications for transcription started and meeting ended events. These events contain the chat ID, which is used to obtain chat entity, and eventually meeting ID and organizer ID.
+When your app is notified about subscribed meeting events, it searches through the notifications for:
+
+- Transcription started events.
+- Meeting ended events.
+
+These events contain the chat ID, which is used to obtain chat entity, and eventually meeting ID and organizer ID.
 
 To obtain meeting ID and organizer ID from tenant-level notification:
 
@@ -408,32 +413,32 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
     </details>
 
-4. **Fetch transcript**: The organizer ID and meeting ID obtained in the Steps 2 and 3 let your app fetch the transcripts for that particular meeting event.
+4. **Fetch transcript or recording**: The organizer ID and meeting ID obtained in the Steps 2 and 3 let your app fetch the transcripts or recordings for that particular meeting event.
 
-    To fetch transcripts, you'll need to:
+    - To fetch transcripts, you'll need to:
 
-    1. **Retrieve transcript ID based on organizer ID and meeting ID**:
+       1. **Retrieve transcript ID based on organizer ID and meeting ID**:
 
-       Use the following example to request the transcript ID:
+           Use the following example to request the transcript ID:
 
-        ```http
-        GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts
-        ```
+            ```http
+            GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts
+            ```
 
-        In this example:
+            In this example:
 
-        - The meeting ID is included as the value for `onlineMeetings`: *MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bW
+            - The meeting ID is included as the value for `onlineMeetings`: *MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bW
     VldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM
     1pqWTJAdGhyZWFkLnYy*.
-        - The organizer ID is *14b779ae-cb64-47e7-a512-52fd50a4154d*.
+            - The organizer ID is *14b779ae-cb64-47e7-a512-52fd50a4154d*.
 
-        The response payload contains the transcript ID for the meeting ID and organizer ID in the `id` member of the `value` property.
-        <br>
-        <details>
-        <summary><b>Example</b>: Response payload for getting transcript ID</summary>
+            The response payload contains the transcript ID for the meeting ID and organizer ID in the `id` member of the `value` property.
+            <br>
+            <details>
+            <summary><b>Example</b>: Response payload for getting transcript ID</summary>
 
-        ```json
-        {
+            ```json
+            {
             "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts",
             "@odata.count": 1,
             "value": [
@@ -442,22 +447,71 @@ To obtain meeting ID and organizer ID from tenant-level notification:
                     "createdDateTime": "2022-04-14T11:34:39.5662792Z"
                 }
             ]
-        }
-        ```
+            }
+            ```
 
-        In this example, the transcript ID is *MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh*.
+            In this example, the transcript ID is *MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh*.
 
-        </details>
+            </details>
 
-    1. **Access and get meeting transcript based on the transcript ID**:
+       1. **Access and get meeting transcript based on the transcript ID**:
 
-        Use the following example to request the transcripts for a specific meeting in the `.vtt` format:
+            Use the following example to request the transcripts for a specific meeting in the `.vtt` format:
 
-        ```http
-        GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts('MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh')/content?$format=text/vtt
-        ```
+            ```http
+             GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts('MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh')/content?$format=text/vtt
+            ```
 
-        The response payload will contain the transcripts in `.vtt` format.
+            The response payload will contain the transcripts in the `.vtt` format.
+
+    - To fetch recordings, you'll need to:
+
+       1. **Retrieve recording ID based on organizer ID and meeting ID**:
+
+           Use the following example to request the recording ID:
+
+            ```http
+            GET  https://graph.microsoft.com/beta/users/b935e675-5e67-48b9-8d45-249d5f88e964/onlineMeetings/MSpiOTM1ZTY3NS01ZTY3LTQ4YjktOGQ0NS0yNDlkNWY4OGU5NjQqMCoqMTk6bWVldGluZ19ZbU0zTnpJNU9USXRZakU0WlMwME1tUTNMVGt6TVRRdFkyWm1PRGRtWmpsaVptRTNAdGhyZWFkLnYy/recordings/
+            ```
+
+            In this example:
+
+            - The meeting ID is included as the value for `onlineMeetings`: *MSpiOTM1ZTY3NS01ZTY3LTQ4YjktOGQ0NS0yNDlkNWY4OGU5NjQqMCoqMTk6bWVl
+    dGluZ19ZbU0zTnpJNU9USXRZakU0WlMwME1tUTNMVGt6TVRRdFkyWm1
+    PRGRtWmpsaVptRTNAdGhyZWFkLnYy*.
+            - The organizer ID is *b935e675-5e67-48b9-8d45-249d5f88e964*.
+
+            The response payload contains the recording ID for the meeting ID and organizer ID in the `id` member of the `value` property.
+            <br>
+            <details>
+            <summary><b>Example</b>: Response payload for getting recording ID</summary>
+
+            ```json
+            {
+            "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('b935e675-5e67-48b9-8d45-249d5f88e964')/onlineMeetings('MSpiOTM1ZTY3NS01ZTY3LTQ4YjktOGQ0NS0yNDlkNWY4OGU5NjQqMCoqMTk6bWVldGluZ19ZbU0zTnpJNU9USXRZakU0WlMwME1tUTNMVGt6TVRRdFkyWm1PRGRtWmpsaVptRTNAdGhyZWFkLnYy')/recordings",
+            "@odata.count": 1,
+            "value": [
+                {
+            "id": "7e31db25-bc6e-4fd8-96c7-e01264e9b6fc",
+            "createdDateTime": "2023-04-10T08:13:17.5990966Z"
+                }
+            ]
+            }
+            ```
+
+            In this example, the recording ID is *7e31db25-bc6e-4fd8-96c7-e01264e9b6fc*.
+
+            </details>
+
+       1. **Access and get meeting recording based on the recording ID**:
+
+            Use the following example to request the recordings for a specific meeting in the `.mp4` format:
+
+            ```http
+            GET https://graph.microsoft.com/beta/users/b935e675-5e67-48b9-8d45-249d5f88e964/onlineMeetings/MSpiOTM1ZTY3NS01ZTY3LTQ4YjktOGQ0NS0yNDlkNWY4OGU5NjQqMCoqMTk6bWVldGluZ19ZbU0zTnpJNU9USXRZakU0WlMwME1tUTNMVGt6TVRRdFkyWm1PRGRtWmpsaVptRTNAdGhyZWFkLnYy/recordings/7e31db25-bc6e-4fd8-96c7-e01264e9b6fc/content?$format=video/mp4
+            ```
+
+            The response payload will contain the recordings in the `.mp4` format.
 
 ### Use Bot Framework to get meeting ID and organizer ID
 
@@ -513,7 +567,7 @@ dGluZ19OV00xTVRJNU56TXROamd6TXkwMFlXUTRMVGhtT1dRdFpUZzNNVEJtT1RnM
 
 </details>
 
-After your app obtains the meeting ID and the organizer ID, it triggers the Graph APIs to fetch transcript content using these meeting details.
+After your app obtains the meeting ID and the organizer ID, it triggers the Graph APIs to fetch transcript content and recording using these meeting details.
 
 ### Code samples
 
@@ -527,6 +581,9 @@ You can try the following code sample for a bot app:
 
 > [!div class="nextstepaction"]
 > [Graph APIs for fetching transcripts](/graph/api/resources/calltranscript)
+
+> [!div class="nextstepaction"]
+> [Graph APIs for fetching recordings](/graph/api/resources/callrecording)
 
 ## See also
 

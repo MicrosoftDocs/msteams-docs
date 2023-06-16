@@ -5,7 +5,6 @@ description: In this article, learn how to build extensible conversation for Mic
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
-ms.date: 01/11/2023
 ---
 
 # Build extensible conversation for meeting chat

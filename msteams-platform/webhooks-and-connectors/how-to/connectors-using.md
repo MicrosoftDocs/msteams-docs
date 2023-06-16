@@ -4,7 +4,6 @@ author: laujan
 description: Create actionable messages, send message through Incoming Webhook, connectors for Microsoft 365 Groups, cURL, or PowerShell. Send Adaptive Cards. Time based transaction. 
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 12/09/2022
 ---
 
 # Create and send messages

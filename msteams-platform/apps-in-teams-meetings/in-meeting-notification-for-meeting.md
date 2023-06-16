@@ -5,7 +5,6 @@ description: Learn how to build in-meeting and targeted in-meeting notifications
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
-ms.date: 02/02/2023
 ---
 
 # Build in-meeting notification for Teams meeting
