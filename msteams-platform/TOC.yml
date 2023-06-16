@@ -633,9 +633,9 @@
     - name: Universal Actions for Adaptive Cards
       items:
       - name: Overview
-        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/overview.md
+        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md
       - name: Work with Universal Actions for Adaptive Cards
-        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
+        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md
         displayName: Activity, Sequential Workflows
       - name: User Specific Views
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/User-Specific-Views.md
@@ -745,7 +745,7 @@
     href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
     displayName: Access, report, MSAL2
   - name: Teams app permissions
-    href: graph-api/app-permissions/teams-app-permissions.md
+    href: graph-api/App-permissions/Teams-app-permissions.md
   - name: Resource-specific consent
     items:
     - name: Overview
@@ -1024,7 +1024,7 @@
       href: concepts/build-and-test/share-to-teams-from-web-apps.md
       displayName: Share to Teams for Education
     - name: Share to Teams from personal app or tab
-      href: concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
+      href: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md
   - name: Add a Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links
