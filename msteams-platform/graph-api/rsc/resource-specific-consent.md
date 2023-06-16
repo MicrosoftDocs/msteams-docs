@@ -159,6 +159,7 @@ The following table provides RSC permissions for a user and their applicable dat
 | `MicrophoneStream.Read.User` | Read the user's microphone stream. |Supported |NA |
 | `MeetingParticipantReaction.Read.User` | Read the user's reactions while participating in a meeting. |Supported |NA |
 | `OutgoingVideoStream.Write.User` | Modify the user's outgoing video. |Supported |NA |
+| `TeamsActivity.Send.User` | Read the user's Teams activity. |NA |Supported |
 
 ## Next step
 

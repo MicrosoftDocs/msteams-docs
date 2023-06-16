@@ -364,6 +364,27 @@ The default value of the property `isChatResourceSpecificConsentEnabled` is base
 <br>
 </details>
 
+<br>
+<details>
+
+<summary><b>Configure user owner consent settings for RSC in a chat using the Graph APIs</b></summary>
+
+You can enable or disable RSC for user using Graph API. The property `isUserPersonalScopeResourceSpecificConsentEnabled` in [teamsAppSettings](/graph/api/teamsappsettings-update#example-1-enable-installation-of-apps-that-require-resource-specific-consent-in-chats-meetings) governs whether user RSC is enabled in the tenant.
+
+:::image type="content" source="../../assets/images/rsc/graph-rsc-chat-configuration.PNG" alt-text="Screenshot shows the Graph RSC team configuration.":::
+
+The default value of the property `isUserPersonalScopeResourceSpecificConsentEnabled` is based on whether [user consent settings](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) is turned on or off in the tenant when RSC for user is first used. The default value is defined either when:
+
+* [TeamsAppSettings](/graph/api/teamsappsettings-get) are retrieved for the first time.
+* Teams app with RSC permissions is installed in a chat or meeting.
+
+> [!NOTE]
+> Admin control is added to allow or block RSC consent settings based on the sensitivity of the data accessed. It isn't based on the single master switch that enables or disables consent settings for app RSC permissions for all apps in the tenant.
+
+</details>
+
+<br>
+
 ### Sideload your app in Teams
 
 If your Teams admin allows custom app uploads, you can [sideload your app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team or chat.
