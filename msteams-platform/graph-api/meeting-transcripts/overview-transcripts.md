@@ -26,6 +26,7 @@ To fetch the transcript and recording for a particular meeting:
 - [Obtain meeting ID and organizer ID](fetch-id.md)
 - [Get notified when transcripts is available](/graph/transcripts)
 - [Use Graph APIs to fetch transcript](/graph/api/resources/calltranscript)
+- [Use Graph APIs to fetch recording](/graph/api/resources/callrecording)
 
 ## Configure permissions on Azure AD to access transcript and recording
 
