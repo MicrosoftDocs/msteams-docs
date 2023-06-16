@@ -93,6 +93,7 @@ Encoded URL:
 > * All deep links must be encoded before pasting the URL. We don't support unencoded URLs.
 > * The `name` is optional in deep link. If not included, the app name replaces it.
 > * The deep link can also be passed through an `OpenURL` action.
+> * When you launch a Stage from a certain context, ensure that your app works in that context. For example, if your Stage View is launched from a personal app, you must ensure your app has a personal scope.
 
 ## Collaborative Stage View
 
