@@ -194,13 +194,13 @@ Prompt template is a simple and powerful way to define and compose AI functions 
 
 The language supports features that allow you to include variables, call external functions, and pass parameters to functions. You don't need to write any code or import any external libraries, just use the curly braces {{...}} to embed expressions in your prompts. Teams parses your template and execute the logic behind it. This way, you can easily integrate AI into your apps with minimal effort and maximum flexibility.
 
-* {{function}}:  Calls a registered function and inserts its value.​
+* ``{{function}}``:  Calls a registered function and inserts its return value string.​
 
-* {{$input}}:  Inserts the message text. It gets it's value from state.temp.input.
+* ``{{$input}}``:  Inserts the message text. It gets it's value from state.temp.input.
 
-* {{$history}}: Inserts the conversation history.​ It gets it's value from state.temp.history
+* ``{{$history}}``: Inserts the conversation history.​ It gets it's value from state.temp.history
 
-* {{$state.< property >}}: Inserts state properties.
+* ``{{$state.[property]}}``: Inserts state properties.
 
 ## Actions
 
