@@ -59,7 +59,7 @@ You must keep the following app details updated:
 |---|---|
 | Your **app's listing** must be kept updated. | Any changes to functionality, pricing, visual appearance, or any other updates must be accurately reflected in your app's listing. |
 | You must regularly update your app to ensure that it remains **compliant with the commercial marketplace policies**. | Stay up to date with policy changes by subscribing to the [changelog here](/legal/marketplace/offer-policies-change-history). |
-| Your **contact details** must be kept up to date in your Partner Center account. | Microsoft will contact you occasionally to resolve any bugs or commercial marketplace policy violations in your app. If your contact details aren't updated, you might miss important notices or updates from us. |
+| Your **contact details** must be kept up to date in your Partner Center account. | Microsoft will contact you occasionally to resolve any bugs or commercial marketplace policy violations in your app. If your contact details aren't updated, you might miss important notices or updates from Microsoft. |
 | Maintain your app's **functionality** and **user experience**. | Your app's functionality and user experience must match or exceed the quality of experience at submission, and you must maintain your app's performance. |
 
 ## Fix issues with your published app
@@ -68,17 +68,17 @@ Microsoft runs daily automation tests on apps listed on the Teams store. If issu
 
 ## Possible enforcement actions
 
-Microsoft runs automated and manual continuous health checks for all the published apps. It's intended to maintain the health and end user experience of the Microsoft Commercial Marketplace and the Teams App store. In certain situations, Microsoft may contact you and remove your app from the commercial marketplace and the Teams app store, or temporarily halt new user acquisition for your app, or take further action on your app as deemed appropriate.
+Microsoft runs automated and manual continuous health checks for all the published apps. It's intended to maintain the health and end user experience of the Microsoft Commercial Marketplace and the Teams App store. In certain situations, Microsoft may contact you and remove your app from the commercial marketplace and the Teams App store, or temporarily halt new user acquisition for your app, or take further action on your app as deemed appropriate.
 
 **Microsoft may contact you for a resolution when:**
 
-* Microsoft is unable to run the continuous health evaluation tests on your app as the test credentials or test environment you provided have expired.
+* Microsoft is unable to run the continuous health evaluation tests on your app as the test credentials or test environment you provided is expired.
 
-* Microsoft sees or is made aware of critical security vulnerabilities in your app. These may endanger your users or the Microsoft commercial marketplace.
+* Microsoft sees or is made aware of critical security vulnerabilities in your app. These may endanger your users or the Microsoft Commercial Marketplace.
 
 * Microsoft is made aware of issues with your app by your users through any of Microsoft’s support channels. These issues include, but aren't limited to, spammy behavior, broken functionality, or unexpected user experience bugs and user interface bugs.
 
-* Microsoft may also unilaterally take cognizance of issues with your app highlighted by users by means of rating and reviews for your app.
+* Microsoft may also unilaterally take cognizance of issues with your app. Users may have highlighted these issues by means of rating and reviews for your app.
 
 * Microsoft has identified commercial marketplace policy failures in your app as part of the continuous health evaluation of your app post publish.
 
@@ -87,7 +87,7 @@ If Microsoft doesn't receive a suitable response from you, it'll reach out to yo
 **Microsoft may remove your app without prior notice (other than to inform you of that action) when:**
 
 * Microsoft receives a takedown notice for your app alleging copyright or trademark infringement.
-* Your app appears to be unmaintained or abandoned and unused and there's no response from you on our reach outs.
+* Your app appears to be unmaintained or abandoned and unused, and there's no response from you on Microsoft's reach outs.
 
 ## Discontinuing your published app
 
