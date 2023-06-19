@@ -52,7 +52,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-tab-preview.png" alt-text="Screenshot shows the selection of dashboard tab preview.":::
 
-     1. Select TypeScript as the programming language.
+     1. Select **TypeScript** as the programming language.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/programming-language.png" alt-text="Screenshot shows the selection of programming language.":::
 
@@ -72,13 +72,13 @@ items:
 
      1. Select the Teams Toolkit icon in sidebar.
      
-     1. Select sign in to Microsoft 365 account using test credentials.
+     1. Select **sign in** to Microsoft 365 account using test credentials.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/M365-account-signin.png" alt-text="Screenshot shows the Microsoft sign in.":::
 
-     1. Select F5 to run the application in debug mode.
+     1. Select **F5** to run the application in debug mode.
 
-     1. Select Add.
+     1. Select **Add**.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-dashboard-add.png" alt-text="Screenshot shows the selection of workspace folder.":::
 
@@ -292,14 +292,13 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/single-sign-on.png" alt-text="Screenshot shows the selection of single sign-on option.":::
 
-     1. Follow the React steps to add sso. 
+     1. To add sso for react follow these steps
 
-        1. [Azure Active Directory app manifest](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams#azure-active-directory-app-manifest). 
-        1. [Teams app manifest](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams#teams-app-manifest). 
-        1. [Teams Toolkit configuration files](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams#teams-toolkit-configuration-files). 
-        1. [Update Source Code](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams#react). 
-          * Create auth-start.html and auth-end.html files in public folder.
-          * Add the codes in [auth-start.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-start.html) and [auth-end.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-end.html).
+        1. [Create Azure Active Directory app manifest](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams#azure-active-directory-app-manifest). 
+        1. [Update Teams app manifest](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams#teams-app-manifest). 
+        1. [Update Teams Toolkit configuration files](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams#teams-toolkit-configuration-files). 
+        1. Create auth-start.html and auth-end.html files in public folder.
+        1. Add the codes in [auth-start.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-start.html) and [auth-end.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-end.html).
 
    **Scenario 2**
 
@@ -506,9 +505,117 @@ items:
       Follow the steps to update source code if you're building your tab app with React framework for [js](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js) or [ts](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts):   
 
      1. Create **auth-start.html** in to **public**.
-     1. Add the code in [auth-start.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-start.html).
+     1. Add the code in **auth-start.html**
+
+        ```typescript
+          <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
+          <!--If you're not familiar with this, do not alter or remove this file from your project.-->
+          <html>
+            <head>
+              <title>Login Start Page</title>
+              <meta charset="utf-8" />
+            </head>
+
+            <body>
+            <script src="https://res.cdn.office.net/teams-js/2.7.1/js/MicrosoftTeams.min.js" integrity="sha384-4Gy2G+qxzDVdrdemcVqKVQvaSK1Ghg3x6xcsaMLPc/pw7KPtiogHGM97LTWF2PWg" crossorigin="anonymous"></script>
+              <script
+                type="text/javascript"
+                src="https://alcdn.msauth.net/browser/2.21.0/js/msal-browser.min.js"
+                integrity="sha384-s/NxjjAgw1QgpDhOlVjTceLl4axrp5nqpUbCPOEQy1PqbFit9On6uw2XmEF1eq0s"
+                crossorigin="anonymous">
+              </script>
+              <script type="text/javascript">
+                microsoftTeams.app.initialize().then(() => {
+                  microsoftTeams.app.getContext().then(async (context) => {
+                    // Generate random state string and store it, so we can verify it in the callback
+                    var currentURL = new URL(window.location);
+                    var clientId = currentURL.searchParams.get("clientId");
+                    var scope = currentURL.searchParams.get("scope");
+                    var loginHint = currentURL.searchParams.get("loginHint");
+
+                    const msalConfig = {
+                      auth: {
+                        clientId: clientId,
+                        authority: `https://login.microsoftonline.com/${context.user.tenant.id}`,
+                        navigateToLoginRequestUrl: false
+                      },
+                      cache: {
+                        cacheLocation: "sessionStorage",
+                      },
+                    }
+
+                    const msalInstance = new msal.PublicClientApplication(msalConfig);
+                    const scopesArray = scope.split(" ");
+                    const scopesRequest = {
+                      scopes: scopesArray,
+                      redirectUri: window.location.origin + `/auth-end.html?clientId=${clientId}`,
+                      loginHint: loginHint
+                    };
+                    await msalInstance.loginRedirect(scopesRequest);
+                  });
+                });
+                </script>
+            </body>
+          </html>
+        ```
+
      1. Create **auth-end.html** in to **public**.
-     1. Add the code in [auth-end.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-end.html).
+     1. Add the code in **auth-end.html**
+     
+        ```typescript
+          <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
+          <!--If you're not familiar with this, do not alter or remove this file from your project.-->
+          <html>
+            <head>
+              <title>Login End Page</title>
+              <meta charset="utf-8" />
+            </head>
+
+            <body>
+            <script src="https://res.cdn.office.net/teams-js/2.7.1/js/MicrosoftTeams.min.js" integrity="sha384-4Gy2G+qxzDVdrdemcVqKVQvaSK1Ghg3x6xcsaMLPc/pw7KPtiogHGM97LTWF2PWg" crossorigin="anonymous"></script>
+              <script
+                type="text/javascript"
+                src="https://alcdn.msauth.net/browser/2.21.0/js/msal-browser.min.js"
+                integrity="sha384-s/NxjjAgw1QgpDhOlVjTceLl4axrp5nqpUbCPOEQy1PqbFit9On6uw2XmEF1eq0s"
+                crossorigin="anonymous">
+              </script>
+              <script type="text/javascript">
+                var currentURL = new URL(window.location);
+                var clientId = currentURL.searchParams.get("clientId");
+
+                microsoftTeams.app.initialize().then(() => {
+                  microsoftTeams.app.getContext().then(async (context) => {
+                    const msalConfig = {
+                      auth: {
+                        clientId: clientId,
+                        authority: `https://login.microsoftonline.com/${context.user.tenant.id}`,
+                        navigateToLoginRequestUrl: false
+                      },
+                      cache: {
+                        cacheLocation: "sessionStorage",
+                      },
+                    }
+
+                    const msalInstance = new window.msal.PublicClientApplication(msalConfig);
+                    msalInstance.handleRedirectPromise()
+                      .then((tokenResponse) => {
+                        if (tokenResponse !== null) {
+                          microsoftTeams.authentication.notifySuccess(JSON.stringify({
+                            sessionStorage: sessionStorage
+                          }));
+                        } else {
+                          microsoftTeams.authentication.notifyFailure("Get empty response.");
+                        }
+                      })
+                      .catch((error) => {
+                        microsoftTeams.authentication.notifyFailure(JSON.stringify(error));
+                      });
+                  });
+                });
+              </script>
+            </body>
+          </html>
+        ```     
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/auth-end-start.png" alt-text="Screenshot shows the folder structure for auth-start and auth-end files.":::
 
