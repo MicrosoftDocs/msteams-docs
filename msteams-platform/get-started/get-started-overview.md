@@ -45,7 +45,7 @@ If you want to build a basic tab app, select the following:
 > [!div class="nextstepaction"]
 > [Build your basic tab app](build-basic-tab-app.md)
 
-If a bot is what you're interested in, select the following button.
+If a bot is what you're interested in, select the following:
 
 > [!div class="nextstepaction"]
 > [Start building a bot](build-notification-bot.md)
