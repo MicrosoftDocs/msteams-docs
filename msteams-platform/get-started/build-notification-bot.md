@@ -29,7 +29,7 @@ Before you create your codespace, ensure that you have the following prerequisit
 > 
 > [GitHub Codespaces](https://github.com/features/codespaces) offers a free plan with a fixed amount of usage per month. If you need to free up more space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespace that you no longer need.
 
-To create a Teams notification bot with GitHub Codespaces, follow these steps.
+To create a Teams notification bot with GitHub Codespaces, follow these steps:
 
 1. Select the following button to open GitHub Codespaces.
 
