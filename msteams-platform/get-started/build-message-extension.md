@@ -17,7 +17,7 @@ In this tutorial, you'll learn to build a search-based message extension app, an
 Get familiarized with search based message extension app in one of the following ways:
 
 * **GitHub Codespaces**: The codespace instance allows you to experience a Teams app instantaneously. It opens Visual Studio Code (VS Code), where the Teams Toolkit extension, the app source code, and all the dependencies are pre-packaged for you.
-* **Step-by-step guide**: Allows you to create a Teams app from the ground up including setting up your development environment.
+* **Step-by-step guide**: Allows you to set up your development environment and build a Teams app from start.
 
 # [GitHub Codespaces](#tab/teamstoolkitcodespaces)
 
