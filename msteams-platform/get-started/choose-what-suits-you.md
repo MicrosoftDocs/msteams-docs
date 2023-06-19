@@ -68,7 +68,7 @@ You can also create and build your Teams app with various SDKs. Teams supports a
 
 ### Explore Tools
 
-The following tools in the Teams platform help you during app development.
+The following tools in the Teams platform help you during app development:
 
 | App development phase | Teams platform tools |
 |-----|-----|
