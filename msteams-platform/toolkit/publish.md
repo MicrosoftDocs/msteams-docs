@@ -130,12 +130,6 @@ You can distribute your app directly to the store inside Microsoft Teams and rea
 
 For more information, see [how to publish to the Teams store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store).
 
-## Set up CI/CD pipelines
-
-TeamsFx helps to automate your development workflow while building Teams application. The tools and templates to set up CI/CD pipelines are create workflow templates and customize CI/CD workflow with GitHub, Azure DevOps, Jenkins, and other platforms.
-
-For more information, see [Set up CI/CD pipelines](use-CICD-template.md).
-
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)

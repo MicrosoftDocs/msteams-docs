@@ -116,7 +116,7 @@ The following image displays task names in the **OUTPUT** and **TERMINAL** tabs 
 
 #### Dev tunnel
 
-1. **The default one used by TeamsFx templates**. To manually migrate your local tunnel task from a v4 project, use the following code to replace the old task:
+1. Replace the old task using the following code to manually migrate your local tunnel task from a v4 project:
 
     ```typescript
     {
@@ -143,13 +143,15 @@ The following image displays task names in the **OUTPUT** and **TERMINAL** tabs 
     },
     ```
 
-| Arguments | Type | Required | Description |
-| --- | --- | --- |--------|
-| type | string | required | The type of tunnel service to use. This argument must be set to `dev-tunnel`. |
-| env | string | optional | The environment name. Teams Toolkit writes the environment variables defined in `output` to `.env.<env>` file. |
-| ports | array | required | An array of port configurations, each specifying the local port number, protocol, and access control settings. |
+    The following are the required arguments to use the dev tunnel service:
 
-2. **Change port**. Change the `portNumber` to use another port for local bot service, for example, 3922. Also, change the port in bot code (`index.js` or `index.ts`).
+    | **Arguments** | **Type** | **Required** | **Description** |
+    | --- | --- | --- |--------|
+    | `type` | string | required | The type of tunnel service to use. This argument must be set to `dev-tunnel`. |
+    | `env` | string | optional | The environment name. Teams Toolkit writes the environment variables defined in `output` to `.env.<env>` file. |
+    | `ports` | array | required | An array of port configurations, each specifying the local port number, protocol, and access control settings. |
+
+2. Change the `portNumber` to use another port for local bot service, for example, 3922. Also, change the port in bot code (`index.js` or `index.ts`).
 
     ```typescript
     {
@@ -176,27 +178,23 @@ The following image displays task names in the **OUTPUT** and **TERMINAL** tabs 
     },
     ```
 
-The `ports` argument must be an array of objects, with each object specifying the configuration for a particular port. Each object must contain the following fields:
+    The `ports` argument must be an array of objects, with each object specifying the configuration for a particular port. Each object must contain the following fields:
 
-| Port | Type | Required | Description |
-|---|---|---|------|
-| portNumber | number | required | The local port number of the tunnel. |
-| protocol | string | required | The protocol of the tunnel. |
-| access | string | optional | The access control setting for the tunnel. This value can be set to `private` or `public`. If not specified, the default value is `private`.
- |
-| writeToEnvironmentFile | object | optional | The key of tunnel endpoint and tunnel domain environment variables that are written to `.env` file.
- |
+    | **Port** | **Type** | **Required** | **Description**|
+    |---|---|---|------|
+    | `portNumber` | number | required | The local port number of the tunnel. |
+    | `protocol` | string | required | The protocol of the tunnel. |
+    | `access` | string | optional | The access control setting for the tunnel. This value can be set to `private` or `public`. If not specified, the default value is `private`.|
+    | `writeToEnvironmentFile` | object | optional | The key of tunnel endpoint and tunnel domain environment variables that are written to `.env` file.|
 
-The `writeToEnvironmentFile` object contains two fields:
+    The `writeToEnvironmentFile` object contains two fields:
 
-| WriteToEnvironmentFile | Type | Required | Description |
-|-----|---|---|------|
-| endpoint | string | optional | The key of tunnel endpoint environment variable.
- |
-| domain | string | optional | The key of tunnel domain environment variable.
- |
+    | **WriteToEnvironmentFile** | **Type** | **Required** | **Description** |
+    |-----|---|---|------|
+    | `endpoint` | string | optional | The key of tunnel endpoint environment variable.|
+    | `domain` | string | optional | The key of tunnel domain environment variable.|
 
-When `writeToEnvironmentFile` is included, the specified environment variables are written to the `.env` file. When the field is omitted, no environment variables are written to the file.
+    When `writeToEnvironmentFile` is included, the specified environment variables are written to the `.env` file. When the field is omitted, no environment variables are written to the file.
 
 ### Launches debug configurations
 
