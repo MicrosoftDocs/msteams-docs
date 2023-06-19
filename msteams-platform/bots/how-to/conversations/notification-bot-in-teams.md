@@ -11,7 +11,7 @@ ms.localizationpriority: high
 
 Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to a personal, group chat, or a channel in Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
 
-The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your requirement. For example, in a scenario where a travel agency builds an app in Teams for their customers to keep them up-to-date with the weather forecast. In the following diagram, you can see a Teams app that sends notification to the travelers about the destination weather forecast:
+The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your requirement. For example, a travel agency builds an app in Teams for their users to keep them up-to-date with the weather forecast. In the following flowchart, a Teams app notifies about the weather forecast to the users using an Adaptive Card:
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-new-scenario-diagram.png" alt-text="weather forecast sample notification scenario" lightbox="../../../assets/images/notification-bot/notification-new-scenario-diagram.png":::
 
@@ -106,17 +106,17 @@ You can make the following customizations to extend the notification template to
 
 You can customize the following triggers:
 
-* `Restify` based notification
+* `Restify` based notification:
 
-   When a HTTP request is sent to `src/index.js` entry point, the default implementation sends an Adaptive Card to Teams. You can customize this event by modifying `src/index.js`. A typical implementation can call an API to retrieve events, data, or both that can send an Adaptive Card as required. You can perform the following to add more triggers:
+  * When a HTTP request is sent to `src/index.js` entry point, the default implementation sends an Adaptive Card to Teams. You can customize this event by modifying `src/index.js`. A typical implementation can call an API to retrieve events, data, or both that can send an Adaptive Card as required. You can perform the following to add more triggers:
 
-  * Create a new routing: `server.post("/api/new-trigger", ...)`.
-  * Add timer trigger(s) from widely used npm packages, such as [cron](https://www.npmjs.com/package/cron), [node-schedule](https://www.npmjs.com/package/node-schedule), or from other packages.
+    * Create a new routing: `server.post("/api/new-trigger", ...)`.
+    * Add timer trigger(s) from widely used npm packages, such as [cron](https://www.npmjs.com/package/cron), [node-schedule](https://www.npmjs.com/package/node-schedule), or from other packages.
 
     > [!NOTE]
     > By default Teams Toolkit scaffolds a single `restify` entry point in `src/index.js`.
 
-* Azure Functions based notification
+* Azure Functions based notification:
 
   * When you select `timer` trigger, the default implemented Azure Function timer trigger `src/timerTrigger.ts` sends an Adaptive Card every 30 seconds. You can edit the file `*Trigger/function.json` to customize the `schedule` property. For more information, see [Azure Function documentation](/azure/azure-functions/functions-bindings-timer?tabs=python-v2%2Cin-process&pivots=programming-language-javascript#ncrontab-expressions).
 
@@ -126,7 +126,7 @@ You can customize the following triggers:
 
     :::image type="content" source="../../../assets/images/notification-bot/notification-http-triggered.png" alt-text="sample of HTTP triggered notification":::
 
-* Azure Function triggers
+* Azure Function triggers:
 
   * `Event Hub` trigger to send notifications when an event is pushed to Azure Event Hub.
 
@@ -138,7 +138,7 @@ For more information on support triggers, see [Azure Functions support triggers]
 
 The file `src/adaptiveCards/notification-default.json` defines the default Adaptive Card. You can use the [Adaptive Card designer](https://adaptivecards.io/designer/) to help visually design your Adaptive Card UI. The `src/cardModels.ts` defines a data structure that is used to load data for the Adaptive Card. The binding between the card model and the Adaptive Card is done by matching name such as `CardData.title` maps to `${title}` in the Adaptive Card. You can add, edit, or remove properties and their bindings to customize the Adaptive Card as required.
 
-You can also add new cards if needed. For more information on how to build different types of Adaptive Cards with a list or table of dynamic contents using `ColumnSet` and `FactSet`, see [Adaptive Card notification sample](<https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/adaptive-card-notification>).
+You can also add new cards if needed. For more information on how to build different types of Adaptive Cards with a list or table of dynamic contents using `ColumnSet` and `FactSet`, see [Adaptive Card notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/adaptive-card-notification).
 
 ### Customize where notifications are sent
 
@@ -435,9 +435,9 @@ If storage isn't provided, you can use a default local file storage, which store
 * `.notification.localstore.json` if running locally.
 * `${process.env.TEMP}/.notification.localstore.json`, if `process.env.RUNNING_ON_AZURE` is set to 1.
 
-The `NotificationTargetStorage` is different from Bot Framework SDK's [custom storage](/azure/bot-service/bot-builder-custom-storage). The notification storage requires `read`, `write`, `delete`, `list` functionalities but Bot Framework SDK's storage has `read`, `write`, `delete`, and doesn’t have `list` functionality.
+The `NotificationTargetStorage` is different from Bot Framework SDK's [custom storage](/azure/bot-service/bot-builder-custom-storage). The notification storage requires `read`, `write`, `delete`, and `list` functionalities but Bot Framework SDK's storage has `read`, `write`, and `delete` functionalities and doesn’t have the `list` functionality.
 
-For sample implementation to use Azure blob storage, see [add notification storage implementation sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/v3/adaptive-card-notification/src/storage/blobsStorage.ts).
+For more information about Azure blob storage, see [add notification storage implementation sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/v3/adaptive-card-notification/src/storage/blobsStorage.ts).
 
 > [!NOTE]
 >
@@ -460,7 +460,7 @@ There can be more authentication or authorization solutions for an API, you can 
 
 ## Connect to existing APIs
 
-If you don't have the required SDK and want to invoke external APIs in your code, the **Teams: Connect to an API** command in Microsoft Visual Studio Code Teams Toolkit extension, or **teamsfx add api-connection** command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [Integrate existing third-party APIs](../../../toolkit/add-API-connection.md).
+If you don't have the required SDK and want to invoke external APIs in your code, the **Teams: Connect to an API** command in Microsoft Visual Studio Code Teams Toolkit extension, or the  **teamsfx add api-connection** command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [Integrate existing third-party APIs](../../../toolkit/add-API-connection.md).
 
 ### Teams bot application or Teams Incoming Webhook
 
@@ -486,7 +486,7 @@ In the following table, you can see the comparison of the two different ways:
 ### Incoming Webhook notification
 
 Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webhooks are enabled for a Team in any channel, it exposes the HTTPS endpoint, which accepts correctly formatted JSON and inserts the messages into that channel. For example, you can create an Incoming Webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts.
-TeamsFx provides you with an [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/incoming-webhook-notification) that helps you:
+TeamsFx provides you with an [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/incoming-webhook-notification) that helps you to:
 
 * [Create an Incoming Webhook](../../../webhooks-and-connectors/how-to/add-incoming-webhook.md) in Teams.
 * Send notifications using Incoming Webhooks with Adaptive Cards.
@@ -576,11 +576,11 @@ If Azurite exits due to port in use, you can [specify another listening port](/a
 
 <summary><b>How to extend my notification bot to support command and response?</b></summary>
 
-1. Go to `bot\src\internal\initialize.ts(js)` and update your `conversationBot` initialization to enable notification feature:
+1. Go to `bot\src\internal\initialize.ts(js)` and update your `conversationBot` initialization to enable the notification feature:
 
     :::image type="content" source="../../../assets/images/notification-bot/notification-bot-enable.png" alt-text="Conversation bot initialization to enable notification feature." lightbox="../../../assets/images/notification-bot/notification-bot-enable.png":::
 
-2. Follow the [instructions](command-bot-in-teams.md) to add command to your bot.
+2. To add command to your bot, follow the instructions in [Command bot in Teams](command-bot-in-teams.md).
 
 <br>
 
@@ -590,7 +590,7 @@ If Azurite exits due to port in use, you can [specify another listening port](/a
 
 <summary><b>How to extend my notification bot by adding workflow bot Adaptive Card actions?</b></summary>
 
-The Adaptive Card action handler feature enables the app to respond to adaptive card actions that triggered by end users to complete a sequential workflow. An Adaptive Card provides one or more buttons in the card to ask for user's input such as calling some APIs. The Adaptive Card then send another Adaptive Card in conversation to response to the card action.
+The Adaptive Card action handler feature enables the app to respond to Adaptive Card actions that are triggered by end users to complete a sequential workflow. An Adaptive Card provides one or more buttons in the card to ask for user's input such as calling some APIs. The Adaptive Card then sends another Adaptive Card in the conversation to respond to the card action.
 
 For more information on how to add adaptive card actions to command bot, see [Workflow bot in Teams](workflow-bot-in-teams.md).
 
