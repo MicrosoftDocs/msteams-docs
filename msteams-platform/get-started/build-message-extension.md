@@ -81,7 +81,10 @@ If you want to learn how to start a project with Teams Toolkit from the beginnin
 
 ---
 
-If a bot is what you are interested in, select the following button.
+For more information on message extensions, see [message extensions](../messaging-extensions/what-are-messaging-extensions.md).
+
+If a bot is what you are interested in, go to:
+
 
 > [!div class="nextstepaction"]
 > [Start building a bot](build-notification-bot.md)

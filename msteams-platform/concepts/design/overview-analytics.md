@@ -80,7 +80,7 @@ This instrumentation is required to be done additionally in your SaaS app becaus
 
 <!--Tracking Teams app specific analytics-->
 
-This section includes guidelines and pointers regarding what to look for, which events to capture, how to use instrumentation markers, and where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Your Teams apps can be tabs, bots, message extensions, cards, stage views and so on. or any combination of these [capabilities and UI constructs](../../overview-explore.md#teams-app-features) across personal or shared scopes. It's best to understand, plan, and implement your instrumentation around each of these capabilities.
+This section includes guidelines and pointers regarding what to look for, which events to capture, how to use instrumentation markers, and where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Your Teams apps can be tabs, bots, message extensions, cards, Stage Views and so on. or any combination of these [capabilities and UI constructs](../../overview-explore.md#teams-app-features) across personal or shared scopes. It's best to understand, plan, and implement your instrumentation around each of these capabilities.
 
 You can classify Teams platform features into broadly two constructs:
 
@@ -89,7 +89,7 @@ You can classify Teams platform features into broadly two constructs:
 
 #### Hosted web canvas constructs
 
-Visual canvas-oriented capabilities are Teams-aware webpages embedded in Microsoft Teams, such as tabs, personal apps, task modules (displaying an embedded iframe), stage views, meeting tabs, shared meeting stage, and in-meeting dialogs. They're hosted in the cloud with the rest of your SaaS app that runs in the web browser.
+Visual canvas-oriented capabilities are Teams-aware webpages embedded in Microsoft Teams, such as tabs, personal apps, task modules (displaying an embedded iframe), Stage Views, meeting tabs, shared meeting stage, and in-meeting dialogs. They're hosted in the cloud with the rest of your SaaS app that runs in the web browser.
 
 These webpages often have the instrumentation done for core SaaS web app needs. You just need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code. It's handy for your analytics needs that tabs are “Teams-aware” webpages.
 
@@ -140,7 +140,7 @@ Since message extensions are based on the bot channel, most of the above applies
 Besides the obvious metrics in the SaaS world such as daily, weekly, monthly active users, time spent in your app and so on., implementing analytics thoughtfully for your Teams app per the guidance above will allow you to get insights such as:
 
 - **Aggregate metrics**
-  - Which platform capabilities, surface areas (for example, tabs, bots, message extensions) and UI constructs (cards, task modules, stage views) leveraged in your Teams app found the most usage by your users?
+  - Which platform capabilities, surface areas (for example, tabs, bots, message extensions) and UI constructs (cards, task modules, Stage Views) leveraged in your Teams app found the most usage by your users?
   - Which scope or UI entry point (like personal app, channel, group chat) is the most used by your users to invoke your app and begin a new app session inside Teams?
   - How many days on an average do users use your app in the first week after installing the app?
   - What is the week-over-week or month-over-month new user retention cohort analysis for your app or specific capabilities (like personal app or bot) in your app?
