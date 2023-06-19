@@ -49,13 +49,13 @@ Teams AI library remembers context across messages and helps improve the bot per
 
 ## Localization
 
-Since Teams AI library is backed by GPT, localization is available. When a user inputs in any language, the input is consistently translated to intents, entities, and resultant actions that the app understands without the need to build and maintain localization records.
+Since Teams AI library uses OpenAI's GPT model, localization is available. When a user inputs in any language, the input is consistently translated to intents, entities, and resultant actions that the app understands without the need to build and maintain localization records.
 
 ## LLM modularity
 
 Large language model (LLM) is an advanced language model that utilizes latent variables to generate coherent and diverse natural language text and style.
 
-Although, Teams AI library is built to use Open AI’s GPT model, you have the flexibility to swap with any LLM of your choice without changing the bot logic.
+Although Teams AI library is built to use Open AI’s GPT model, you have the flexibility to swap with any LLM of your choice without changing the bot logic.
 
 ## Responsible AI
 
@@ -74,37 +74,6 @@ A simple interface for actions and predictions allows bots to react when the bot
 1. Understands the intent as summarization.
 1. Allows prompts to make summarizations over a period of time focused on the user’s manager.
 1. Provides actions to summarize chat content for users to consume.
-
-## Why build apps with Teams AI library?
-
-Teams AI library makes Teams apps conversational, not driven by rigid command structures. The library is designed to seamlessly integrate with the Teams Bot Framework SDK. Building apps for Teams is simpler, with rich natural language features that bring any app experience into the conversation.
-
-Here are some key benefits of the Teams AI library:
-
-* ​Strong proof of value with Teams app components​. You can instantiate your bot activity handler and invoke any Teams capabilities by just invoking the function.
-
-* ​Easy to use powerful conversational language models versus building your model​.
-
-* ​Guardrails to steer responsible conversation with moderation​.
-
-* ​Out of the box localization with LLMs.
-
-* You can select any LLM.
-
-* You can talk to Teams apps like you’d talk to a human as opposed to a set of commands​.
-
-* ​Any app that uses the library offers consistency for interactions, and the app handles steering natural conversation into actionable outcomes.
-
-* Multiple safety layers to ensure that the bot works in a safe and responsible manner. The safety layers are as follows:
-
-  * Skype Messaging Bot API (SMBA): Endpoint for all bot related activities. Performs throttling and sanitization on bot payload.
-  * Other IC3 services: Bot roster membership check.
-  * Agent Provisioning Service (APS): Bot metadata retrieval and bot validation.
-  * Teams Middle Tier (MT): App policy or tenant settings checks.
-  * Partner Lookup Service (PLS): User or tenant region lookups.
-  * Experimental Config Service (ECS): Feature flags and scenario configuration data.
-  * Microsoft Graph: App install state and resource specific consent validation.
-  * Bot Framework Services: Bot authentication, SDK, and token store.
 
 <!-- ## Bots Architecture overview
 
