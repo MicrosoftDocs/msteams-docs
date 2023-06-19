@@ -40,7 +40,7 @@ In this section, learn how to build a Teams app with different capabilities, suc
 
 ## Next step
 
-If you want to build a basic tab app, select the following button.
+If you want to build a basic tab app, select the following:
 
 > [!div class="nextstepaction"]
 > [Build your basic tab app](build-basic-tab-app.md)
