@@ -1,7 +1,7 @@
 ---
 title: Tabs link unfurling and Stage View
 author: Rajeshwari-v
-description: Learn about Stage View, a full screen UI component invoked to surface your web content. Link unfurling is used to turn URLs into a tab using Adaptive Cards.
+description: Learn about Stage View and Collaborative Stage View, a full screen UI component invoked to surface your web content. Link unfurling is used to turn URLs into a tab using Adaptive Cards.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -34,19 +34,19 @@ The following image is an example of the Collaborative Stage View:
 
 | Stage View | Task module|
 |:-----------|:-----------|
-| Stage View is useful to display rich content to the users, such as a page, a dashboard, a file, and so on. It provides rich features that help to render your content in the new pop-up window. <br><br> It provides rich features that help to render your content in the full-screen canvas. <br><br> After your app content opens in Stage View, users can choose to pin the content as a tab. <br><br> For even more collaborative capabilities, opening your content in Collaborative Stage View (via an Adaptive Card) allows users to engage with content and conversation side-by-side, while also enabling multi-window scenarios.| [Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that require user attention, or collect information required to move to the next step.|
+| Stage View is useful to display rich content to the users, such as a page, a dashboard, or a file. It provides rich features that help to render your content in the new pop-up window and the full-screen canvas. <br><br> After your app content opens in Stage View, users can choose to pin the content as a tab. <br><br> For more collaborative capabilities, opening your content in Collaborative Stage View (through an Adaptive Card) allows users to engage with content and conversation side-by-side, while enabling multi-window scenarios.| [Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that need users' attention, or collect information required to move to the next step.|
 
 ### Invoke Stage View through deep link
 
-To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. Stage View from a deep link always defaults to the modal experience (and not a Teams window). While the Stage View deep link can be passed through an `OpenURL` action in the card, the Stage View deep link is intended for the tab canvas. For Stage View from Adaptive Cards, we encourage developers to follow the JSON [Adaptive Card example](#example).
+To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. Stage View from a deep link always defaults to the modal experience (and not a Teams window). While the Stage View deep link can be passed through an `OpenURL` action in the card, the Stage View deep link is intended for the tab canvas. For Stage View from Adaptive Cards, it's recommended to follow the JSON [Adaptive Card example](#example).
 
-An example of Stage view when it's invoked from a deep link:
+The following image is an example of Stage view when it's invoked from a deep link:
 
 :::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card2.png" alt-text="Screenshot shows the open stage from card."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card2.png":::
 
 #### Syntax
 
-Following is the deep link syntax:
+Following is the deep link syntax for Stage View:
 
 `https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}`
 
@@ -90,10 +90,10 @@ Encoded URL:
 
 > [!NOTE]
 >
-> * All deep links must be encoded before pasting the URL. We don't support unencoded URLs.
-> * The `name` is optional in deep link. If not included, the app name replaces it.
+> * All deep links must be encoded before pasting the URL.The unencoded URLs aren't supported.
+> * The `name` property is optional in a deep link. If not included, the app name replaces it.
 > * The deep link can also be passed through an `OpenURL` action.
-> * When you launch a Stage from a certain context, ensure that your app works in that context. For example, if your Stage View is launched from a personal app, you must ensure your app has a personal scope.
+> * When you launch a Stage View from a certain context, ensure that your app works in that context. For example, if the Stage View is launched from a personal app, you must ensure your app has a personal scope.
 
 ## Collaborative Stage View
 
@@ -162,13 +162,13 @@ Following is the process to invoke Collaborative Stage View:
 
 > [!NOTE]
 >
-> * Passing a Stage View deep link into an Adaptive Card won't open the Collaborative Stage View. Stage View deep link always opens the Stage View Modal.
-> * Ensure that the URL of the content is within the list of validDomains in your app manifest.
+> * Passing a Stage View deep link into an Adaptive Card doesn't open the Collaborative Stage View. A Stage View deep link always opens the Stage View Modal.
+> * Ensure that the URL of the content is within the list of `validDomains` in your app manifest.
 > * The invoke request type must be a `composeExtension/queryLink`.
-> * `invoke` workflow is similar to the current `appLinking` workflow.
+> * `invoke` workflow is similar to the `appLinking` workflow.
 > * To maintain consistency, it is recommended to name `Action.Submit` as `Open`.
 > * `websiteUrl` is a required property to be passed in the `TabInfo` object.
-> * If you don't have an optimized mobile experience for Teams mobile client, the Stage view for apps distributed through the [Teams store](../concepts/deploy-and-publish/apps-publish-overview.md) opens in a default web browser. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+> * If you don't have an optimized mobile experience for Teams mobile client, the Stage View for apps distributed through the [Teams store](../concepts/deploy-and-publish/apps-publish-overview.md) opens in a default web browser. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
 
 #### Query parameters
 
@@ -176,9 +176,9 @@ Following is the process to invoke Collaborative Stage View:
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | String | 64 | This property is a  unique identifier for the entity that the tab displays and it's a required field.|
 | `name` | String | 128 | This property is the display name of the tab in the channel interface and it's an optional field.|
-| `contentUrl` | String | 2048 | This property is the `<https://>` URL that points to the entity UI to be displayed in the Teams canvas and it's a required field.|
-| `websiteUrl?` | String | 2048 | This property is the `<https://>` URL to point at, if a user selects to view in a browser and it's a required field.|
-| `removeUrl?` | String | 2048 | This property is the `<https://>` URL that points to the UI to be displayed when the user deletes the tab and it's an optional field.|
+| `contentUrl` | String | 2048 | This property is the `https://` URL that points to the entity UI to be displayed in the Teams canvas and it's a required field.|
+| `websiteUrl?` | String | 2048 | This property is the `https://` URL to point at, if a user selects to view in a browser and it's a required field.|
+| `removeUrl?` | String | 2048 | This property is the `https://` URL that points to the UI to be displayed when the user deletes the tab and it's an optional field.|
 
 ## Code sample
 
