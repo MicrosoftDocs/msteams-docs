@@ -21,7 +21,7 @@ Get familiarized with search based message extension app in one of the following
 
 # [GitHub Codespaces](#tab/teamstoolkitcodespaces)
 
-Before you create your codespace, ensure that you have the following prerequisites.
+Before you create your codespace, ensure that you have the following prerequisites:
 
 * A GitHub account to create your codespace instance
 * A [Microsoft 365 account](https://developer.microsoft.com/microsoft-365/dev-program) with sideloading permission
