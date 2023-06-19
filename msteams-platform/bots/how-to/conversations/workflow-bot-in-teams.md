@@ -39,7 +39,7 @@ The following diagram illustrates how to respond to an Adaptive Card action with
 1. **Card action handler**: Triggered when users invoke the corresponding card action, its `triggerVerb` is same as the `verb` property in Adaptive Card action. It can send a response card to respond to the action.
 1. **Response card**: The card that responds to the action when user invokes it from the action card.
 
-To handle card actions with TeamsFx SDK, each card action handler must implement the `TeamsFxAdaptiveCardActionHandler` interface. This the interface definition for `TeamsFxAdaptiveCardActionHandler`:
+To handle card actions with TeamsFx SDK, each card action handler must implement the `TeamsFxAdaptiveCardActionHandler` interface. This is the interface definition for `TeamsFxAdaptiveCardActionHandler`:
 
 ``` Export interface
 TeamsFxAdaptiveCardActionHandler 
@@ -244,11 +244,11 @@ The following steps help you to register the action handler:
 
 You can use the `adaptiveCardResponse` property in handler to customize how the bot sends the Adaptive Card to users. Following are the three options to customize:
 
-* The response card is replaced by the current card where the button is defined for the interactor that triggers the action. The users in the conversation can still view the original action card `AdaptiveCardResponse.ReplaceForInteractor` and is the default behavior.
+* The response card is replaced by the current card where the button is defined for the interactor that triggers the action. The users in the conversation can still view the original action card `AdaptiveCardResponse.ReplaceForInteractor`. This is the default behavior.
 
    :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-interactor.png" alt-text="Customize how the bot sends adaptive card" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-interactor.png":::
 
-* The response card is replaced with the action card for all users in the chat, and they can view the response card `AdaptiveCardResponse.ReplaceForAll`.
+* The response card is replaced by the action card for all users in the chat, and they can view the response card `AdaptiveCardResponse.ReplaceForAll`.
 
    :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-all1.png" alt-text="Replaced the action card for all with the acknowledge button" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-all1.png":::
 
