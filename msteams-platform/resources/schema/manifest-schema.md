@@ -335,13 +335,13 @@ The following is the sample manifest schema:
 
 The schema defines the following properties:
 
-## $schema
+## [$schema](localization-schema.md)
 
 Optional, but recommended—string
 
 The https:// URL referencing the JSON Schema for the manifest.
 
-## manifestVersion
+## [manifestVersion](../../concepts/build-and-test/apps-localization.md)
 
 **Required**—string
 
@@ -406,7 +406,7 @@ Ensure that your description describes your experience and helps potential custo
 |`short`|80 characters|✔️|A short description of your app experience, used when space is limited.|
 |`full`|4000 characters|✔️|The full description of your app.|
 
-## localizationInfo
+## [localizationInfo](../../concepts/build-and-test/apps-localization.md)
 
 **Optional**—object
 
@@ -416,7 +416,7 @@ Allows the specification of a default language and provides pointers to more lan
 |---|---|---|---|
 |`defaultLanguageTag`||✔️|The language tag of the strings in this top-level manifest file.|
 
-### localizationInfo.additionalLanguages
+### [localizationInfo.additionalLanguages](manifest-schema-dev-preview.md)
 
 An array of objects specifying more language translations.
 
