@@ -3,7 +3,7 @@ title: Workflow bot in Teams
 author: surbhigupta
 description: Learn how to send a response to card action in Teams workflow bot, add more card actions and customize action responses.
 ms.topic: conceptual
-ms.author: v-vanv
+ms.author: v-amprasad
 ms.localizationpriority: high
 ---
 
@@ -16,7 +16,7 @@ A workflow bot can be installed into a team, group chat, or as personal app, dep
 **Advantages**:
 
 * Automates business processes and repetitive workflows without leaving the context of conversations.
-* Supports users with sequential workflow through various cards progressively, without sending another cards.
+* Supports users with sequential workflow through various cards progressively, without sending additional cards.
 * Provides up-to-date user-specific views.
 * Simplifies programming model with TeamsFx SDK.
 
