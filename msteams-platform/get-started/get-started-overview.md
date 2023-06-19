@@ -50,7 +50,7 @@ If a bot is what you're interested in, select the following:
 > [!div class="nextstepaction"]
 > [Start building a bot](build-notification-bot.md)
 
-If you want to build a message extension app, select the following button.
+If you want to build a message extension app, select the following:
 
 > [!div class="nextstepaction"]
 > [Build message extension](build-message-extension.md)
