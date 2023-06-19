@@ -30,7 +30,7 @@ Before you create your codespace, ensure that you have the following prerequisit
 > [!TIP]
 > [GitHub Codespaces](https://github.com/features/codespaces) offers free plan up to a fixed amount of usage per month. If you need to free up more space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespaces that you no longer need.
 
-To create a search-based message extension app with GitHub Codespaces, follow these steps.
+To create a search-based message extension app with GitHub Codespaces, follow these steps:
 
 1. Select the following button to open GitHub Codespaces.
 
