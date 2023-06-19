@@ -163,7 +163,7 @@ Add the following JSON code to `doSomethingCommandResponse.json` and `DoSomethin
       }
   ```
 
-Respond with plain text, or with an Adaptive Card. You can use the [Adaptive Card Designer](https://adaptivecards.io/designer/) to help visually design your Adaptive Card UI. For more information on how to send an Adaptive card with dynamic data, see [build command and response using Adaptive card](#how-to-build-command-and-response-using-adaptive-card-with-dynamic-content).
+Respond with plain text, or with an Adaptive Card. You can use the [Adaptive Card Designer](https://adaptivecards.io/designer/) to help visually design your Adaptive Card UI. For more information on how to send an Adaptive card with dynamic data, see [build command and response using Adaptive card](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-chat-commands-in-Teams#how-to-build-command-response-using-adaptive-card-with-dynamic-content).
 
 <br>
 
