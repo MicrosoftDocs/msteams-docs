@@ -89,7 +89,7 @@ If a bot is what you are interested in, go to:
 > [!div class="nextstepaction"]
 > [Start building a bot](build-notification-bot.md)
 
-If you want to build basic tab app, select the following button.
+If you want to build basic tab app, select the following:
 
 > [!div class="nextstepaction"]
 > [Build your basic tab app](build-basic-tab-app.md)
