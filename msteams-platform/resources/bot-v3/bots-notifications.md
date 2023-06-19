@@ -1,17 +1,15 @@
 ---
 title: Handle bot events
-description: In this module, learn how to handle events in bots for Microsoft Teams, Teams member or bot addition, Team member or bot removed and more
+description: In this module, learn how to handle events in bots for Microsoft Teams, Teams member or bot addition, Team member or bot removed and more.
 ms.date: 04/02/2023
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.author: lajanuar
-author: surbhigupta
 ---
 # Handle bot events in Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Microsoft Teams sends notifications to your bot for changes or events that happen in scopes where your bot is active. You can use these events to trigger service logic, such as the following:
+Microsoft Teams sends notifications to your bot for changes or events that happen in scopes where your bot is active. The following list provides events to trigger service logic:
 
 * Trigger a welcome message when your bot is added to a team.
 * Query and cache group information when the bot is added to a group chat.
@@ -127,7 +125,7 @@ bot.on('conversationUpdate', (msg) => {
 
 ### User Added to a meeting
 
-The `conversationUpdate` event with the `membersAdded` object in the payload is sent when a user is added to a private scheduled meeting. The event details will be sent even when anonymous users join the meeting.
+The `conversationUpdate` event with the `membersAdded` object in the payload is sent when a user is added to a private scheduled meeting. The event details are sent even when anonymous users join the meeting.
 
 > [!NOTE]
 >
@@ -180,7 +178,7 @@ The `conversationUpdate` event with the `membersAdded` object in the payload is 
 Your bot receives a `conversationUpdate` with `membersAdded` when a user adds it directly for personal chat. In this case, the payload that your bot receives doesn't contain the `channelData.team` object. You should use this as a filter in case you want your bot to offer a different [welcome message](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) depending on scope.
 
 > [!NOTE]
-> For personal scoped bots, your bot will  receive the `conversationUpdate` event multiple times, even if the bot is removed and re-added. For development and testing you may find it useful to add a helper function that will allow you to reset your bot completely. See a [Node.js example](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) or [C# example](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) for more details on implementing this.
+> For personal scoped bots, your bot will  receive the `conversationUpdate` event multiple times, even if the bot is removed and re-added. For development and testing you may find it useful to add a helper function that will allow you to reset your bot completely. For more information, see [Node.js example](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) or [C# example](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) for more details on implementing this.
 
 #### Schema example: bot added to personal context
 
@@ -265,7 +263,7 @@ The `conversationUpdate` event with the `membersRemoved` object in the payload i
 
 ### User removed from a meeting
 
-The `conversationUpdate` event with the `membersRemoved` object in the payload is sent when a user is removed from a private scheduled meeting. The event details will be sent even when anonymous users join the meeting.
+The `conversationUpdate` event with the `membersRemoved` object in the payload is sent when a user is removed from a private scheduled meeting. The event details are sent even when anonymous users join the meeting.
 
 > [!NOTE]
 >
@@ -316,7 +314,7 @@ The `conversationUpdate` event with the `membersRemoved` object in the payload i
 > [!NOTE]
 > There is no functionality to query all team names, and team name is not returned in payloads from other events.
 
-Your bot is notified when the team it is in has been renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object. Note that there are no notifications for team creation or deletion, because bots exist only as part of teams and have no visibility outside the scope in which they've been added.
+Your bot is notified when the team it is in has been renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object. There are no notifications for team creation or deletion, because bots exist only as part of teams and have no visibility outside the scope in which they've been added.
 
 ### Schema example: Team renamed
 
@@ -443,7 +441,7 @@ The channel events are as follows:
 
 ## Reactions
 
-The `messageReaction` event is sent when a user adds or removes his or her reaction to a message, which was originally sent by your bot. `replyToId` contains the ID of the specific message.
+The `messageReaction` event is sent when a user adds or removes their reaction to a message, which was originally sent by your bot. `replyToId` contains the ID of the specific message.
 
 ### Schema example: A user likes a message
 
@@ -487,7 +485,7 @@ The `messageReaction` event is sent when a user adds or removes his or her react
 }
 ```
 
-### Schema example: A user un-likes a message
+### Schema example: A user unlikes a message
 
 ```json
 {
