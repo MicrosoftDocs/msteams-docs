@@ -76,6 +76,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Collaborative Stage View
+        url: tabs/tabs-link-unfurling.md#collaborative-stage-view
       - text: Real-time meeting events are supported in channel meetings
         url: apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api
       - text: Resource-specific consent for your Teams app
@@ -94,8 +96,6 @@ landingContent:
         url:  tabs/how-to/build-a-dashboard-tab-app.md
       - text: Targeted in-meeting notification (Developer preview)
         url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
-      - text: Set up Microsoft license management
-        url: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
 
 
     - linkListType: whats-new
