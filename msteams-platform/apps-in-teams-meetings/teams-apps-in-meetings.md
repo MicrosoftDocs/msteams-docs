@@ -3,7 +3,6 @@ title: Apps for Teams meetings
 author: surbhigupta
 description: In this article, learn how apps works in Microsoft Teams meeting based on participant and user role and app extensibility.
 ms.topic: overview
-ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
 ---
@@ -12,65 +11,64 @@ ms.date: 04/07/2022
 
 Meetings enable collaboration, partnership, informed communication, and shared feedback. The meeting space can deliver a user experience for each stage of the meeting lifecycle.
 
-:::image type="content" source="../assets/images/apps-in-meetings/meeting-app-extensibility.png" alt-text="The screenshot shows you how meeting app extensibility works.":::
-
 <!--
+:::image type="content" source="../assets/images/apps-in-meetings/meetingappextensibility.png" alt-text="The screenshot shows you how meeting app extensibility works.":::
+-->
+
 :::row:::
     :::column span="":::
-           &nbsp; <!--:::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/space.png" border="false":::
     :::column-end:::
-    :::column span="2":::
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/1-cust-apps.png" border="false" link="../concepts/build-and-test/share-in-meeting.md":::  :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/2-enable-app.png" border="false" link="build-tabs-for-meeting.md":::
+    :::column span="":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/1-cust-apps.png" border="false" link="../concepts/build-and-test/share-in-meeting.md":::
     :::column-end:::
-        :::column span="":::
-           &nbsp;
-        :::column-end:::
+    :::column span="":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/2-enable-app.png" border="false" link="build-tabs-for-meeting.md":::
+    :::column-end:::
+    :::column span="":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/3-create-scene.png" border="false" link="teams-together-mode.md":::
+    :::column-end:::
+    :::column span="":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/4-meeting-lifecycle.png" border="false" link="#meeting-lifecycle":::
+    :::column-end:::
+    :::column span="":::
+    :::column-end:::
 :::row-end:::
 :::row:::
-
-        :::column span="":::
-        &nbsp; 
-    :::column-end:::
-
     :::column span="":::
-
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/3-create-scene.png" border="false" link="teams-together-mode.md":::
-        <br><br><br><br>
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/5-notification-user.png" border="false" link="in-meeting-notification-for-meeting.md":::
-        <br><br><br><br>
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/7-fetch-participant.png" border="false" link="meeting-apps-apis.md#get-participant-api":::
     :::column-end:::
-
+    :::column span="":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/5-notification-user.png" border="false" link="in-meeting-notification-for-meeting.md":::
+    :::column-end:::
     :::column span="2":::
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/0-app-extensibility.png" border="false":::
     :::column-end:::
-
     :::column span="":::
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/4-meeting-lifecycle.png" border="false" link="#meeting-lifecycle":::
-        <br><br><br><br>
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/6-integrate.png" border="false" link="build-extensible-conversation-for-meeting-chat.md":::
-        <br><br><br><br><br>
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/8-optimize-meeting.png" border="false" link="teams-apps-in-meetings.md":::
     :::column-end:::
-
     :::column span="":::
-        &nbsp; 
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column span="":::
-        &nbsp;
     :::column-end:::
-    :::column span="2":::
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/9-in-meeting.png" border="false" link="build-apps-for-teams-meeting-stage.md":::      :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/10-get-meeting.png" border="false" link="meeting-apps-apis.md#get-real-time-teams-meeting-events-api":::
+    :::column span="":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/7-fetch-participant.png" border="false" link="meeting-apps-apis.md#get-participant-api":::
     :::column-end:::
-        :::column span="":::
-        &nbsp;
+    :::column span="":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/8-optimize-meeting.png" border="false" link="teams-apps-in-meetings.md":::
+    :::column-end:::
+    :::column span="":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/9-in-meeting.png" border="false" link="build-apps-for-teams-meeting-stage.md":::
+    :::column-end:::
+    :::column span="":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/10-get-meeting.png" border="false" link="meeting-apps-apis.md#get-real-time-teams-meeting-events-api":::
+    :::column-end:::
+    :::column span="":::
     :::column-end:::
 :::row-end:::
--->
 
-You can create scenes for meetings, provide notifications to users, populate in-meeting dialogs, and much more with meeting app extensibility.
+<br>
+You can create scenes for meetings, provide notifications to users, populate in-meeting dialogs, and more with meeting app extensibility.
 
 Third-party and line-of-business apps built for meetings and calls are available in Government Community Cloud (GCC) but aren't available for GCC-High and Department of Defense (DOD) tenants.
 

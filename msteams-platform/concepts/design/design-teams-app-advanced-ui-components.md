@@ -1,7 +1,7 @@
 ---
 title: Design your app with advanced UI components
 author: heath-hamilton
-description: Learn about the Teams UI components, such as breadcrumbs, notification bar, stage view along with relevant use cases. 
+description: Learn about the Teams UI components, such as breadcrumbs, notification bar, Stage View along with relevant use cases. 
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
@@ -71,11 +71,11 @@ You can implement a notification bar using the Fluent UI [alert](https://react.f
 
 :::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Example shows notification bar UI templates on desktop.":::
 
-## Stage view
+## Stage View
 
-Stage view lets users see content—like an image, file, or website—on a large surface in Teams without switching context. This component is primarily for viewing content. Don't use it for complex interactions.
+Stage View lets users see content—like an image, file, or website—on a large surface in Teams without switching context. This component is primarily for viewing content. Don't use it for complex interactions.
 
-See how to implement [stage view](~/tabs/tabs-link-unfurling.md).
+See how to implement [Stage View](~/tabs/tabs-link-unfurling.md).
 
 ### Top use cases
 
