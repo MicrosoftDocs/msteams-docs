@@ -385,7 +385,7 @@
   - name: Navigate within your tab
     href: tabs/how-to/tab-navigation.md
   - name: Build a dashboard tab app
-    href: tabs/how-to/build-a-dashboard-tab-app.md
+    href: tabs/how-to/Build-a-dashboard-tab-app.md
     displayName: Dashboard, widget, Graph API call
   - name: Build apps for shared channels
     href: concepts/build-and-test/shared-channels.md
@@ -634,9 +634,9 @@
     - name: Universal Actions for Adaptive Cards
       items:
       - name: Overview
-        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/overview.md
+        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md
       - name: Work with Universal Actions for Adaptive Cards
-        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
+        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md
         displayName: Activity, Sequential Workflows
       - name: User Specific Views
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/User-Specific-Views.md
@@ -693,10 +693,10 @@
     - name: Enable SSO for your Adaptive Cards Universal Actions in bot
       items:
       - name: Overview
-        href: task-modules-and-cards\cards\Universal-actions-for-adaptive-cards\enable-sso-for-your-adaptive-cards-universal-action.md
+        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
         displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
       - name: Add code to enable SSO for your Adaptive Cards Universal Actions in bot
-        href: task-modules-and-cards\cards\Universal-actions-for-adaptive-cards\sso-adaptive-cards-universal-action.md
+        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/sso-adaptive-cards-universal-action.md
         displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
     - name: Troubleshoot SSO authentication
       href: tabs/how-to/authentication/tab-sso-troubleshooting.md
@@ -713,7 +713,7 @@
     - name: Add third party IdP authentication to message extension app
       href: messaging-extensions/how-to/add-authentication.md
     - name: Add third party IdP authentication to Adaptive Cards Universal Actions
-      href: task-modules-and-cards\cards\Universal-actions-for-adaptive-cards\authentication-flow-in-universal-action-for-adaptive-cards.md
+      href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
       displayName: Adaptive cards universal action third party Idp authentication, Action.Execute OAuth nominal authentication
   - name: Use external OAuth providers
     href: tabs/how-to/authentication/auth-oauth-provider.md
@@ -746,7 +746,7 @@
     href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
     displayName: Access, report, MSAL2
   - name: Teams app permissions
-    href: graph-api/app-permissions/teams-app-permissions.md
+    href: graph-api/App-permissions/Teams-app-permissions.md
   - name: Resource-specific consent
     items:
     - name: Overview
@@ -1025,7 +1025,7 @@
       href: concepts/build-and-test/share-to-teams-from-web-apps.md
       displayName: Share to Teams for Education
     - name: Share to Teams from personal app or tab
-      href: concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
+      href: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md
   - name: Add a Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links
