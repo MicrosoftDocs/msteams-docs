@@ -406,7 +406,7 @@ Ensure that your description describes your experience and helps potential custo
 |`short`|80 characters|✔️|A short description of your app experience, used when space is limited.|
 |`full`|4000 characters|✔️|The full description of your app.|
 
-## [localizationInfo](../../concepts/build-and-test/apps-localization.md)
+## [localizationInfo](../../concepts/build-and-test/apps-localization.md#localize-strings-in-your-app-manifest)
 
 **Optional**—object
 
@@ -531,7 +531,7 @@ The object is an array (maximum of one element) with all elements of type `objec
 |`scopes`|array of enums|1|✔️|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
 |`connectorId`|string|64 characters|✔️|A unique identifier for the Connector that matches its ID in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).|
 
-## [composeExtensions](../../messaging-extensions/how-to/action-commands/define-action-command.md)
+## [composeExtensions](../../messaging-extensions/how-to/action-commands/define-action-command.md#app-manifest-example)
 
 **Optional**—array
 
