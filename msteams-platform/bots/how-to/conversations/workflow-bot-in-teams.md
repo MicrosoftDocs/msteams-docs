@@ -716,7 +716,7 @@ You need to often connect to existing APIs for retrieving data to send to Teams.
 
 <details>
 
-<summary><b>How to extend workflow bot with notifications?</b></summary>
+<summary><b>Extend workflow bot with notifications</b></summary>
 
 Notifications add the ability in your app to send Adaptive Cards in response to external events. For example, when a message is posted to an `Event Hub`, your app can respond with an Adaptive Card to Teams.
 
@@ -755,7 +755,7 @@ To add the notification feature:
     ```
 
 1. Uninstall your previous bot installation from Teams, and press **F5** to start your application.
-1. Send a notification to the bot installation targets (channel/group chat/personal chat) by using your favorite tool to send an HTTP POST request to `https://localhost:3978/api/notification`. For more information, see [Notification bot in Teams](notification-bot-in-teams.md).
+1. Send a notification to the bot installation targets (channel, group chat, or personal chat) by using your favorite tool to send an HTTP POST request to <https://localhost:3978/api/notification>. For more information, see [Notification bot in Teams](notification-bot-in-teams.md).
 
 </details>
 
@@ -763,7 +763,7 @@ To add the notification feature:
 
 <details>
 
-<summary><b>How to extend workflow bot with command and response?</b></summary>
+<summary><b>Extend workflow bot with command and response</b></summary>
 
 The default workflow bot comes with command and response. For more information to extend workflow bot with command and response, see [add command and response](command-bot-in-teams.md#add-command-and-response).
 

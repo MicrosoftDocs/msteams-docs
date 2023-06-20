@@ -150,7 +150,7 @@ override layout(): JSX.Element | undefined {
 
 After you've created a dashboard tab app, you can add a new dashboard.
 
-To add a new dashboard, follow these steps:
+To add a new dashboard, steps as follows:
 
 1. [Create a dashboard class](#create-a-dashboard-class)
 1. [Override methods to customize dashboard tab app](#override-methods-to-customize-dashboard-tab-app)
