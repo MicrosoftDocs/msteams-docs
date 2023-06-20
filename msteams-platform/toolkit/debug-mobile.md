@@ -10,7 +10,7 @@ ms.date: 06/14/2023
 
 # Debug for mobile
 
-When you are building a Microsoft Teams app that includes tab, bot, and message extension. You must test how your app functions on both Android and iOS Microsoft Teams mobile clients.
+When you're building a Microsoft Teams app that includes tab, bot, and message extension. You must test how your app functions on both Android and iOS Microsoft Teams mobile clients.
 
 ## Test your tab app on mobile client
 
@@ -133,7 +133,7 @@ Once the provisioning and deployment steps are complete:
 
 :::image type="content" source="../assets/images/debug-mobile/login.PNG" alt-text="The screenshot shows the login page.":::
 
-3. Open Teams on your mobile device and click **More** to find the previewing app.
+3. Open Teams on your mobile device and select **More** to find the previewing app.
 
 :::image type="content" source="../assets/images/debug-mobile/debug-mobile.PNG" alt-text="The screenshot showing an app being installed in mobile clients.":::
 
@@ -142,21 +142,21 @@ Once the provisioning and deployment steps are complete:
 
 # [iOS](#tab/ios1)
 
-To clear the Teams app data go to **Settings** > **Teams** > **Clear App Data**.
+To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
 
 :::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios.PNG" alt-text="The screenshot showing to clean the app data in iOS mobile client.":::
 
 # [Android](#tab/android1)
 
-To clear the Teams app data go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
+To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
 
 :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android.PNG" alt-text="The screenshot showing to clean the app data in android mobile client.":::
 
 ---
 
-4. If you are accessing the dev tunnel for the first time, Sign in to Microsoft 365 account and select **continue**.
+4. If you're accessing the dev tunnel for the first time, Sign in to Microsoft 365 account and select **continue**.
 
-:::image type="content" source="../assets/images/debug-mobile/m365-sign-in.PNG" alt-text="The screenshot showing the M365 sign in page.":::
+:::image type="content" source="../assets/images/debug-mobile/m365-sign-in.PNG" alt-text="The screenshot showing the Microsoft 365 sign in page.":::
 
 > [!NOTE]
 > You need to login only once per device, and every time you install the app you need to confirm the anti-phishing page.
@@ -165,7 +165,7 @@ To clear the Teams app data go to **Teams** > **Settings** > **Data and storage*
 
 :::image type="content" source="../assets/images/debug-mobile/mobile-tab-app.PNG" alt-text="The screenshot shows the mobile tab app.":::
 
-6. For Android devices, use [DevTools](../tabs/how-to/developer-tools.md#access-devtools-from-an-android-device) to debug your tab while it is running.
+6. For Android devices, use [DevTools](../tabs/how-to/developer-tools.md#access-devtools-from-an-android-device) to debug your tab while it's running.
 
 ## Test your bot app on mobile client
 
@@ -176,13 +176,13 @@ To test your bot in mobile client, follow the steps listed in [Test your tab app
 
 # [iOS](#tab/ios2)
 
-To clear the Teams app data go to **Settings** > **Teams** > **Clear App Data**.
+To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
 
 :::image type="content" source="../assets/images/debug-mobile/iOS-mobile-bot.PNG" alt-text="The screenshot shows the bot app in iOS mobile client.":::
 
 # [Android](#tab/android2)
 
-To clear the Teams app data go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
+To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
 
 :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android.PNG" alt-text="The screenshot showing to clean the app data in android mobile client.":::
 
