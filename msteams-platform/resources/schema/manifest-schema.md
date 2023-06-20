@@ -444,7 +444,7 @@ A color to use and as a background for your color icons.
 
 The value must be a valid HTML color code starting with '#', for example `#4464ee`.
 
-## configurableTabs
+## [configurableTabs](../../apps-in-teams-meetings/build-tabs-for-meeting.md#configure-tab-app-for-a-meeting)
 
 **Optional**—array
 
@@ -460,7 +460,7 @@ Used when your app experience has a team channel tab experience that requires ex
 |`sharePointPreviewImage`|string|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
 |`supportedSharePointHosts`|array of enums|2||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart`. |
 
-## staticTabs
+## [staticTabs](../../tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs)
 
 **Optional**—array
 
@@ -517,7 +517,7 @@ A list of commands that your bot can recommend to users. The object is an array 
 |title|string|32|✔️|The bot command name.|
 |description|string|128 characters|✔️|A simple text description or an example of the command syntax and its arguments.|
 
-## connectors
+## [connectors](../../webhooks-and-connectors/how-to/connectors-creating.md)
 
 **Optional**—array
 
@@ -531,7 +531,7 @@ The object is an array (maximum of one element) with all elements of type `objec
 |`scopes`|array of enums|1|✔️|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
 |`connectorId`|string|64 characters|✔️|A unique identifier for the Connector that matches its ID in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).|
 
-## composeExtensions
+## [composeExtensions](../../messaging-extensions/how-to/action-commands/define-action-command.md)
 
 **Optional**—array
 
@@ -596,7 +596,7 @@ Changing these permissions during app update, causes your users to repeat the co
 > [!NOTE]
 > Permissions are deprecated now.
 
-## devicePermissions
+## [devicePermissions](../../concepts/device-capabilities/native-device-permissions.md)
 
 **Optional**—array of strings
 
@@ -651,7 +651,7 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 |---|---|---|---|---|
 |`notificationUrl`|string|2048 characters|✔️|The url where Graph-connector notifications for the application should be sent.|
 
-## showLoadingIndicator
+## [showLoadingIndicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 
 **Optional**—Boolean
 
@@ -737,7 +737,7 @@ Define the properties your app uses to post a user activity feed.
 
 ***
 
-## defaultInstallScope
+## [defaultInstallScope](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-install-scope)
 
 **Optional** - string
 
@@ -748,7 +748,7 @@ Specifies the install scope defined for this app by default. The defined scope i
 * `groupChat`
 * `meetings`
 
-## defaultGroupCapability
+## [defaultGroupCapability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-the-default-capability-for-shared-scopes)
 
 **Optional** - object
 
@@ -785,7 +785,7 @@ You can define any of the following properties:
 * [privacyUrl](#developer): The HTTPS URL of the developer's privacy policy.
 * [termsOfUseUrl](#developer): The HTTPS URL of the developer's terms of use.
 
-## supportedChannelTypes
+## [supportedChannelTypes](../../concepts/build-and-test/shared-channels.md#enable-your-app-for-shared-channels)
 
 **Optional** - array
 
@@ -796,7 +796,7 @@ Enables your app in non-standard channels. If your app supports a team scope and
 > * If your app supports a team scope, it functions in the standard channels regardless of the values that are defined in this property.
 > * Your app can account for the unique properties of each of the channel types to function properly. To enable your tab for private and shared channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) and [get context in shared channels](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
 
-## defaultBlockUntilAdminAction
+## [defaultBlockUntilAdminAction](../../concepts/deploy-and-publish/add-default-install-scope.md#block-apps-by-default-for-users-until-an-admin-approves)
 
 **Optional** - Boolean
 
