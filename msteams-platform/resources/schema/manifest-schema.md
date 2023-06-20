@@ -335,13 +335,13 @@ The following is the sample manifest schema:
 
 The schema defines the following properties:
 
-## [$schema](localization-schema.md)
+## $schema
 
 Optional, but recommended—string
 
 The https:// URL referencing the JSON Schema for the manifest.
 
-## [manifestVersion](../../concepts/build-and-test/apps-localization.md)
+## manifestVersion
 
 **Required**—string
 
