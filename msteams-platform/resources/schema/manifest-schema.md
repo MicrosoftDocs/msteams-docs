@@ -416,7 +416,7 @@ Allows the specification of a default language and provides pointers to more lan
 |---|---|---|---|
 |`defaultLanguageTag`||✔️|The language tag of the strings in this top-level manifest file.|
 
-### [localizationInfo.additionalLanguages](manifest-schema-dev-preview.md)
+### [localizationInfo.additionalLanguages](../../concepts/build-and-test/apps-localization.md#example-manifestjson-change)
 
 An array of objects specifying more language translations.
 
@@ -425,7 +425,7 @@ An array of objects specifying more language translations.
 |`languageTag`||✔️|The language tag of the strings in the provided file.|
 |`file`||✔️|A relative file path to the .json file containing the translated strings.|
 
-## icons
+## [icons](../../concepts/build-and-test/apps-package.md#app-icons)
 
 **Required**—object
 
@@ -436,7 +436,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 |`outline`|32 x 32 pixels|✔️|A relative file path to a transparent 32x32 PNG outline icon.|
 |`color`|192 x 192 pixels|✔️|A relative file path to a full color 192x192 PNG icon.|
 
-## accentColor
+## [accentColor](../../task-modules-and-cards/cards/cards-reference.md#properties-of-the-connector-card-for-microsoft-365-groups)
 
 **Required**—HTML Hex color code
 
@@ -582,7 +582,7 @@ Each command item is an object with the following structure:
 |`parameters.choices.title`|string|128 characters|✔️|Title of the choice.|
 |`parameters.choices.value`|string|512 characters|✔️|Value of the choice.|
 
-## permissions
+## [permissions](../../graph-api/rsc/grant-resource-specific-consent.md#request-rsc-permissions-for-teams-app)
 
 **Optional**—array of strings
 
@@ -630,7 +630,7 @@ Teams apps that require their own SharePoint URLs to function well, includes "{t
 
 The object is an array with all elements of the type `string`.
 
-## webApplicationInfo
+## [webApplicationInfo](../../tabs/how-to/authentication/tab-sso-manifest.md#webapplicationinfo-property)
 
 **Optional**—object
 
@@ -843,7 +843,7 @@ Specify meeting extension definition. For more information, see [custom Together
 |`maxAudience`| integer | 50  |✔️| The maximum number of audiences supported in the scene. |
 |`seatsReservedForOrganizersOrPresenters`| integer | 50 |✔️| The number of seats reserved for organizers or presenters.|
 
-## authorization
+## [authorization](../../graph-api/rsc/grant-resource-specific-consent.md#request-rsc-permissions-for-teams-app)
 
 **Optional** — object
 
@@ -856,13 +856,13 @@ Specify and consolidate authorization related information for the app.
 |---|---|---|---|---|
 |`permissions`|NA|NA|NA|List of permissions that the app needs to function.|
 
-### authorization.permissions
+### [authorization.permissions](../../graph-api/rsc/grant-resource-specific-consent.md#request-rsc-permissions-for-teams-app)
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
 |`resourceSpecific`| array of objects|16 items|NA|Permissions that guard data access on resource instance level.|
 
-### authorization.permissions.resourceSpecific
+### [authorization.permissions.resourceSpecific](../../bots/how-to/conversations/channel-messages-with-rsc.md#update-app-manifest)
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
