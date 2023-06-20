@@ -234,15 +234,21 @@ If you need to access Microsoft Graph data, configure your server-side code to:
     5. After the app user has granted more permissions, retry the OBO flow to get access to these other APIs.
     </details>
 
-1. Delay in fetching access token for Graph permission and scope: If your app uses staggered permission for Graph permissions and scopes, the app user must give consent again to fetch the access token. In this scenario, when the app user gives consent, a middle-tier service runs the OBO flow. For more information, see the Step 2 of [exchange the token ID with the server-side token](tab-sso-graph-api.md#exchange-the-token-id-with-the-server-side-token).
+1. Race condition in fetching Graph access token via on-behalf-of (OBO) flow after consent: If your app calls Microsoft Graph, you might use the on-behalf-of (OBO) flow in your API to get a valid Graph token for that user.
 
-    Sometimes there might be a delay between when the app user gives consent and when the middle-tier service acknowledges it for fetching the token. This results in the API call to fail authentication and it returns a `invalid_grant` or `interaction_required` response. As a result, the consent dialog is shown to the app user again, and they need to give consent again.
+If a user has not granted your AAD application consent for these scopes before, your OBO call will fail with an `invalid_grant` or `interaction_required` error. This error informs you that you need to prompt the user for their consent.
 
-    This is a known limitation as in such scenarios the app user might need to give consent three to five times before the access token is granted.
+When that user has provided their consent and you try to make an OBO call immediately, sometimes there is a race condition between Azure AD propagating this consent and the OBO request taking place. This can lead to your OBO call failing with the same `invalid_grant` or `interaction_required` errors.
 
-    While there's no workaround to this limitation, Azure AD recommends that you can build a meaningful wait-and-retry mechanism to overcome this issue.
+If your application is unaware of this behavior, it might ask the user for consent multiple times.
 
-    The wait-and-retry mechanism allows your app to call the `getAuthToken()` API using the app ID and client secret if the app user has already given consent. The mechanism must wait and retry calling the API again. It might take three to five attempts before the middle-tier service takes the app user's consent into account. For each attempt, add a one-second delay for the retry to the wait-and-retry mechanism. This mechanism allows your app to retry fetching the access token after the app user has given consent only once.
+There's no workaround to this limitation, Azure AD recommends that you can build a meaningful wait-and-retry mechanism to overcome this issue.
+
+This wait-and-retry mechanism should keep track, if a user has consented to the required scopes. If an API call that includes an OBO request fails with the above errors, but the user has already consented, avoid showing the consent prompt to the user. Instead, wait for some time before retrying the API call. Usually, Azure AD sends the consent within three to five seconds. In one of our [sample applications](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/8f266c33608d6d7b4cf89c81779ccf49e7664c1e/samples/bot-tab-conversations/csharp/Source/ConversationalTabs.Web/ClientApp/src/utils/UtilsFunctions.ts#LL8C1-L8C1), we retry up to three times with double the wait time between each retry, starting at a one second wait.
+
+If after three to five attempts the OBO flow still fails, the user might not have consented to all the required scopes and you may have to prompt them to consent again.
+
+This approach helps reduce the possibility of user being prompted for consent more than once.
 
 ## Code sample
 
