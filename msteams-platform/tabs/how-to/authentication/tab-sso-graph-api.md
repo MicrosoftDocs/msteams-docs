@@ -236,19 +236,19 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 
 1. Race condition in fetching Graph access token via on-behalf-of (OBO) flow after consent: If your app calls Microsoft Graph, you might use the on-behalf-of (OBO) flow in your API to get a valid Graph token for that user.
 
-If a user has not granted your AAD application consent for these scopes before, your OBO call will fail with an `invalid_grant` or `interaction_required` error. This error informs you that you need to prompt the user for their consent.
+   If a user has not granted your AAD application consent for these scopes before, your OBO call will fail with an `invalid_grant` or `interaction_required` error. This error informs you that you need to prompt the user for their consent.
 
-When that user has provided their consent and you try to make an OBO call immediately, sometimes there is a race condition between Azure AD propagating this consent and the OBO request taking place. This can lead to your OBO call failing with the same `invalid_grant` or `interaction_required` errors.
+   When that user has provided their consent and you try to make an OBO call immediately, sometimes there is a race condition between Azure AD propagating this consent and the OBO request taking place. This can lead to your OBO call failing with the same `invalid_grant` or `interaction_required` errors.
 
-If your application is unaware of this behavior, it might ask the user for consent multiple times.
+   If your application is unaware of this behavior, it might ask the user for consent multiple times.
 
-There's no workaround to this limitation, Azure AD recommends that you can build a meaningful wait-and-retry mechanism to overcome this issue.
+   There's no workaround to this limitation, Azure AD recommends that you can build a meaningful wait-and-retry mechanism to overcome this issue.
 
-This wait-and-retry mechanism should keep track, if a user has consented to the required scopes. If an API call that includes an OBO request fails with the above errors, but the user has already consented, avoid showing the consent prompt to the user. Instead, wait for some time before retrying the API call. Usually, Azure AD sends the consent within three to five seconds. In one of our [sample applications](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/8f266c33608d6d7b4cf89c81779ccf49e7664c1e/samples/bot-tab-conversations/csharp/Source/ConversationalTabs.Web/ClientApp/src/utils/UtilsFunctions.ts#LL8C1-L8C1), we retry up to three times with double the wait time between each retry, starting at a one second wait.
+   This wait-and-retry mechanism should keep track, if a user has consented to the required scopes. If an API call that includes an OBO request fails with the above errors, but the user has already consented, avoid showing the consent prompt to the user. Instead, wait for some time before retrying the API call. Usually, Azure AD sends the consent within three to five seconds. In one of our [sample applications](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/8f266c33608d6d7b4cf89c81779ccf49e7664c1e/samples/bot-tab-conversations/csharp/Source/ConversationalTabs.Web/ClientApp/src/utils/UtilsFunctions.ts#LL8C1-L8C1), we retry up to three times with double the wait time between each retry, starting at a one second wait.
 
-If after three to five attempts the OBO flow still fails, the user might not have consented to all the required scopes and you may have to prompt them to consent again.
+   If after three to five attempts the OBO flow still fails, the user might not have consented to all the required scopes and you may have to prompt them to consent again.
 
-This approach helps reduce the possibility of user being prompted for consent more than once.
+   This approach helps reduce the possibility of user being prompted for consent more than once.
 
 ## Code sample
 
