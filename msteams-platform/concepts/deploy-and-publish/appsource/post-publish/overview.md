@@ -53,6 +53,15 @@ Create the link using the following URL appended with your app ID: `https://team
 
 ## Keep your app details updated
 
+You must keep the following app details updated:
+
+| App details | Description |
+| --- | --- |
+| Your app's listing must be kept updated. | Any changes to functionality, pricing, visual appearance, or any other updates must be accurately reflected in your app's listing.|
+| You must regularly update your app to ensure that it remains compliant with the commercial marketplace policies.| Stay up to date with policy changes by subscribing to the changelog here.|
+| Your contact details must be kept up to date in your Partner Center account. |Microsoft will contact you occasionally to resolve any bugs or commercial marketplace policy violations in your app. If your contact details aren't updated, you might miss important notices or updates from Microsoft.|
+| Maintain your app's functionality and user experience. | Your app's functionality and user experience must match or exceed the quality of experience at submission, and you must maintain your app's performance.|
+
 ## Fix issues with your published app
 
 Microsoft runs daily automation tests on apps listed on the Teams store. If issues with your app are identified, Microsoft contacts you with a detailed report on how to reproduce the issues and recommendations to resolve them. If you can't fix the problems within a stated timeline, your app listing may be removed from the store.
