@@ -40,7 +40,7 @@ To create a search-based message extension app with GitHub Codespaces, follow th
 
 1. Select **Create new codespace**.
 
-   :::image type="content" source="../assets/images/get-started/codespace.png" alt-text="Screenshot shows you the GitHub page to create a codespace for message extension."lightbox="../assets/images/get-started/codespace.png":::
+   :::image type="content" source="../assets/images/get-started/codespace.png" alt-text="Screenshot shows you the GitHub page to create a codespace for message extension.":::
 
    The **Setting up your codespace** page appears.
 

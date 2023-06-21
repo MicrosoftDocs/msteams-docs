@@ -39,7 +39,7 @@ To create a Teams notification bot with GitHub Codespaces, follow these steps:
 
 1. Select **Create new codespace**.
 
-   :::image type="content" source="../assets/images/get-started/codespace.png" alt-text="Screenshot shows you the GitHub page to create a codespace for bot."lightbox="../assets/images/get-started/codespace.png":::
+   :::image type="content" source="../assets/images/get-started/codespace.png" alt-text="Screenshot shows you the GitHub page to create a codespace for bot.":::
 
    The **Setting up your codespace** page appears.
 
