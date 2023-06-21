@@ -276,29 +276,29 @@ You can customize sending the notification to the following targets:
 
 * Notifications to a specific channel:
 
-  ```TypeScript
-  // find the first channel when the predicate is true.
-  const channel = await notificationApp.notification.findChannel(c => Promise.resolve(c.info.name === "MyChannelName"));
+ ```TypeScript
+ // find the first channel when the predicate is true.
+ const channel = await notificationApp.notification.findChannel(c => Promise.resolve(c.info.name === "MyChannelName"));
 
-  // send adaptive card to the specific channel.
-  await channel?.sendAdaptiveCard(...);
-   ```
+ // send adaptive card to the specific channel.
+ await channel?.sendAdaptiveCard(...);
+ ```
 
    > [!NOTE]
    > To prevent an undefined output, ensure that you install the bot app in the **General** channel of a Team.
 
 * Notifications to a specific person:
 
-  ```TypeScript
-  // find the first person when the predicate is true.
-  const member = await notificationApp.notification.findMember(m => Promise.resolve(m.account.name === "Bob"));
+ ```TypeScript
+ // find the first person when the predicate is true.
+ const member = await notificationApp.notification.findMember(m => Promise.resolve(m.account.name === "Bob"));
 
-  // send adaptive card to the specific person. 
-  await member?.sendAdaptiveCard(...);
-   ```
+ // send adaptive card to the specific person. 
+ await member?.sendAdaptiveCard(...);
+ ```
 
-   > [!NOTE]
-   > To prevent an undefined output and a missing notification, you need to include the specific person in notification installation scope.
+ > [!NOTE]
+ > To prevent an undefined output and a missing notification, you need to include the specific person in notification installation scope.
 
 [Back to top](#notification-bot-in-teams)
 
