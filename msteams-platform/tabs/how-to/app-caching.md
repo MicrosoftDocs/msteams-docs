@@ -23,7 +23,7 @@ App caching is supported for the following:
 | Meeting tab | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | 30 minutes| ❌ | ❌ |
 | Meeting side panel or In-meeting apps | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | 20 minutes| ❌ | ❌ |
 
-### Enable app caching
+## Enable app caching
 
 To enable app caching, follow the steps:
 
@@ -59,7 +59,7 @@ There are multiple reasons for an app to not get cached or for an app to get rem
 * App caching isn't supported for meetings where the invited user count is more than 20.
 * If an app fails to load, the app isn't cached.
 
-### Code example
+## Code example
 
 The following code snippet is an example of `teamsCore.registerOnLoadHandler` and `teamsCore.registerBeforeUnloadHandler` APIs:
 
@@ -77,11 +77,11 @@ microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
 });
 ```
 
-### Best practices
+## Best practices
 
 It's recommended that you implement web storage capabilities to store the data locally in iOS and Android. This helps to load the app faster in subsequent launches.
 
-### Limitations
+## Limitations
 
 The following are the limitations for app caching:
 
@@ -115,7 +115,7 @@ The following are the limitations for app caching:
   * `readyToUnload`
   * `getConfig/getSettings`
 
-### Troubleshooting
+## Troubleshooting
 
 **Apps are not being cached? Why is load handler not invoked on subsequent navigation?**
 
