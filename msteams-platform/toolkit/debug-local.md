@@ -122,8 +122,8 @@ Use dev tunnel as a local tunnel service to make your local bot message endpoint
 
 To manually migrate your local tunnel task from a v4 project, update the following code in the `.vscode/tasks.json` file:
 
-    ```JSON
-    {
+```json
+{
       "label": "Start local tunnel",
       "type": "teamsfx",
       "command": "debug-start-local-tunnel",
@@ -145,35 +145,35 @@ To manually migrate your local tunnel task from a v4 project, update the followi
       "isBackground": true,
       "problemMatcher": "$teamsfx-local-tunnel-watch"
     },
-    ```
+```
 
 To use another port for local bot service, change the `portNumber` in the `.vscode/tasks.json` file and also change the `portNumber` in the `index.js` or `index.ts` file.
 
-    The following table lists the required arguments:
+The following table lists the required arguments:
 
-    | **Arguments** | **Type** | **Required** | **Description** |
-    | --- | --- | --- |--------|
-    | `type` | string | required | The type of tunnel service to use. This argument must be set to `dev-tunnel`. |
-    | `env` | string | optional | The environment name. Teams Toolkit writes the environment variables defined in `output` to `.env.<env>` file. |
-    | `ports` | array | required | An array of port configurations, each specifying the local port number, protocol, and access control settings. |
+| **Arguments** | **Type** | **Required** | **Description** |
+| --- | --- | --- |--------|
+| `type` | string | required | The type of tunnel service to use. This argument must be set to `dev-tunnel`. |
+| `env` | string | optional | The environment name. Teams Toolkit writes the environment variables defined in `output` to `.env.<env>` file. |
+| `ports` | array | required | An array of port configurations, each specifying the local port number, protocol, and access control settings. |
 
-    The `ports` argument must be an array of objects, with each object specifying the configuration for a particular port. Each object must contain the following fields:
+The `ports` argument must be an array of objects, with each object specifying the configuration for a particular port. Each object must contain the following fields:
 
-    | **Port** | **Type** | **Required** | **Description**|
-    |---|---|---|------|
-    | `portNumber` | number | required | The local port number of the tunnel. |
-    | `protocol` | string | required | The protocol of the tunnel. |
-    | `access` | string | optional | The access control setting for the tunnel. This value can be set to `private` or `public`. If not specified, the default value is `private`.|
-    | `writeToEnvironmentFile` | object | optional | The key of tunnel endpoint and tunnel domain environment variables that are written to `.env` file.|
+| **Port** | **Type** | **Required** | **Description**|
+|---|---|---|------|
+| `portNumber` | number | required | The local port number of the tunnel. |
+| `protocol` | string | required | The protocol of the tunnel. |
+| `access` | string | optional | The access control setting for the tunnel. This value can be set to `private` or `public`. If not specified, the default value is `private`.|
+ | `writeToEnvironmentFile` | object | optional | The key of tunnel endpoint and tunnel domain environment variables that are written to `.env` file.|
 
-    The `writeToEnvironmentFile` object contains two fields:
+The `writeToEnvironmentFile` object contains two fields:
 
-    | **WriteToEnvironmentFile** | **Type** | **Required** | **Description** |
-    |-----|---|---|------|
-    | `endpoint` | string | optional | The key of tunnel endpoint environment variable.|
-    | `domain` | string | optional | The key of tunnel domain environment variable.|
+| **WriteToEnvironmentFile** | **Type** | **Required** | **Description** |
+|-----|---|---|------|
+| `endpoint` | string | optional | The key of tunnel endpoint environment variable.|
+| `domain` | string | optional | The key of tunnel domain environment variable.|
 
-    When `writeToEnvironmentFile` is included, the specified environment variables are written to the `.env` file. When the field is omitted, no environment variables are written to the file.
+When `writeToEnvironmentFile` is included, the specified environment variables are written to the `.env` file. When the field is omitted, no environment variables are written to the file.
 
 ### Launches debug configurations
 
