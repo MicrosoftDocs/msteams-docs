@@ -114,11 +114,15 @@ The following image displays task names in the **OUTPUT** and **TERMINAL** tabs 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal1.png" alt-text="Screenshot shows the Start app services." lightbox="../assets/images/teams-toolkit-v2/debug/Terminal1.png":::
 
+### Start local tunnel
+
+Use dev tunnel as a local tunnel service to make your local bot message endpoint public.
+
 #### Dev tunnel
 
-1. Replace the old task using the following code to manually migrate your local tunnel task from a v4 project:
+To manually migrate your local tunnel task from a v4 project, update the following code in the `.vscode/tasks.json` file:
 
-    ```typescript
+    ```JSON
     {
       "label": "Start local tunnel",
       "type": "teamsfx",
@@ -143,40 +147,15 @@ The following image displays task names in the **OUTPUT** and **TERMINAL** tabs 
     },
     ```
 
-    The following are the required arguments to use the dev tunnel service:
+To use another port for local bot service, change the `portNumber` in the `.vscode/tasks.json` file and also change the `portNumber` in the `index.js` or `index.ts` file.
+
+    The following table lists the required arguments:
 
     | **Arguments** | **Type** | **Required** | **Description** |
     | --- | --- | --- |--------|
     | `type` | string | required | The type of tunnel service to use. This argument must be set to `dev-tunnel`. |
     | `env` | string | optional | The environment name. Teams Toolkit writes the environment variables defined in `output` to `.env.<env>` file. |
     | `ports` | array | required | An array of port configurations, each specifying the local port number, protocol, and access control settings. |
-
-2. Change the `portNumber` to use another port for local bot service, for example, 3922. Also, change the port in bot code (`index.js` or `index.ts`).
-
-    ```typescript
-    {
-      "label": "Start local tunnel",
-      "type": "teamsfx",
-      "command": "debug-start-local-tunnel",
-      "args": {
-          "type": "dev-tunnel",
-          "ports": [
-              {
-                  "portNumber": 3922,
-                  "protocol": "http",
-                  "access": "public",
-                  "writeToEnvironmentFile": {
-                      "endpoint": "BOT_ENDPOINT",
-                      "domain": "BOT_DOMAIN"
-                  }
-              }
-          ],
-          "env": "local"
-      },
-      "isBackground": true,
-      "problemMatcher": "$teamsfx-local-tunnel-watch"
-    },
-    ```
 
     The `ports` argument must be an array of objects, with each object specifying the configuration for a particular port. Each object must contain the following fields:
 
