@@ -14,17 +14,17 @@ The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your 
 
 Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
-1. Select **Provision in the Cloud**.
+1. Select **Provision**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning commands":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning commands.":::
 
 1. Select anyone of the existing subscription.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/select-subscription.png" alt-text="Screenshot showing selection of existing Subscription":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/select-subscription.png" alt-text="Screenshot showing selection of existing Subscription.":::
 
 1. Select a resource group to use for the Azure resources.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing resources for provisioning":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing resources for provisioning.":::
 
    > [!NOTE]
    > Your app is hosted using Azure resources.
@@ -45,11 +45,11 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
     If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
 
-    The provisioned resource appears in the **Environment** section.
+    The provisioned resource appears in the **ENVIRONMENT** section.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="The screenshot showing the provisioned resource.":::
 
-1. Select **Deploy to the Cloud** from the **Deployment** panel after provisioning is complete.
+1. Select **Deploy** from the **LIFECYCLE** panel after provisioning is complete.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="The screenshot showing deploy to the cloud.":::
 
@@ -85,7 +85,7 @@ In your terminal window:
 Once the provisioning and deployment steps are complete:
 
 1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
-1. Select **Launch Remote (Edge)** from the launch configuration drop-down.
+1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
 1. Select the **Start debugging (F5)** to launch your app from Azure.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="The screenshot showing how to launch the app remotely.":::
