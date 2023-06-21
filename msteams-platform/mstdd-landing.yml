@@ -77,7 +77,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: App caching for iOS personal tray
-        url: apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching
+        url: tabs/how-to/app-caching.md
       - text: Collaborative Stage View
         url: tabs/tabs-link-unfurling.md#collaborative-stage-view
       - text: Real-time meeting events are supported in channel meetings
