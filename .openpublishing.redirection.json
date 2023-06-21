@@ -863,6 +863,10 @@
       {
         "source_path": "msteams-platform/toolkit/sideload-and-test-app.md",
         "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/sideload-and-test-app-v4.md"
+      },
+      {
+        "source_path": "msteams-platform/apps-in-teams-meetings/app-caching-for-your-tab-app.md",
+        "redirect_url": "/microsoftteams/platform/tab/hpw-to/app-caching-for-your-tab-app"
       }
     ]
 }
