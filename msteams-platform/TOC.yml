@@ -402,6 +402,9 @@
   - name: Tab margin changes
     href: resources/removing-tab-margins.md
     displayName: margins align, extra padding effect, size of the tab margins, changing margins
+  - name: App caching for your tab app
+    href: tabs/how-to/app-caching-for-your-tab-app.md
+    displayName: App caching, caching, launch time, cache
 - name: Build bots
   items:
   - name: Overview
@@ -532,13 +535,8 @@
   - name: Enable and configure apps for Teams meetings
     items:
     - name: Build tabs for meeting
-      items:
-      - name: Enable your tabs for Teams meeting
-        href: apps-in-teams-meetings/build-tabs-for-meeting.md
-        displayName: anonymous
-      - name: Enable app caching for your tab app
-        href: apps-in-teams-meetings/app-caching-for-your-tab-app.md
-        displayName: app caching, launch time
+      href: apps-in-teams-meetings/build-tabs-for-meeting.md
+      displayName: anonymous
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
       displayName: MicrosoftTeams.meeting.getAppContentStageSharingState

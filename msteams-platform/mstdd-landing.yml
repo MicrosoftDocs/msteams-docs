@@ -102,7 +102,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Enable app caching for your tab app (Developer preview)
-        url: apps-in-teams-meetings/app-caching-for-your-tab-app.md
+        url: tabs/how-to/app-caching-for-your-tab-app.md
       - text: Set up Microsoft license management
         url: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
       - text: Command bot in Teams
