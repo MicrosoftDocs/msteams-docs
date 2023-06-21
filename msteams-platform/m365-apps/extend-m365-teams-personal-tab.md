@@ -136,11 +136,7 @@ As in Microsoft Teams, tab applications are hosted within [iframe elements](http
 
 If your app makes use of [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) headers, make sure you allow all the following [frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) in your CSP headers:
 
-|Microsoft 365 app host| frame-ancestor permission|
-|--|--|
-| Teams | `teams.microsoft.com` |
-| Microsoft 365 app | `*.microsoft365.com`, `*.office.com` |
-| Outlook | `outlook.live.com`, `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
+[!INCLUDE [CSP headers for multi-hub apps](~/includes/tabs/content-security-policy-headers.md)]
 
 ## Update Azure AD app registration for SSO
 
