@@ -137,7 +137,7 @@ You can edit the manifest template file `appPackage\manifest.json` to update the
 
 You can define your card in the JSON format to respond with an Adaptive Card. Create a new file in the following path for JavaScript/TypeScript and .NET as follows:
 
-* For JavaScript/TypeScript: `src/adaptiveCards/doSomethingCommandResponse.json`
+* For JavaScript or TypeScript: `src/adaptiveCards/doSomethingCommandResponse.json`
 * For .NET: `Resources/DoSomethingCommandResponse.json`
 
 Add the following JSON code to `doSomethingCommandResponse.json` and `DoSomethingCommandResponse`:
@@ -430,9 +430,9 @@ If you don't have the required SDK and need to invoke external APIs in your code
 
     :::image type="content" source="../../../assets/images/command-bot-teams/notification-enable.png" alt-text="Conversation bot initialization to enable notification feature." lightbox="../../../assets/images/command-bot-teams/notification-enable.png":::
 
-1. To send notification to the bot installation target (channel, group chat, or personal chat), follow the instructions in [Notification bot in Teams](notification-bot-in-teams.md).
+1. To customize sending the notification, see [Send notification to the bot installation target](notification-bot-in-teams.md#customize-where-notifications-are-sent).
 
-   1. You can add the following sample code in `bot\src\index.ts(js)` to add a sample notification triggered by an HTTP request:
+   1. If you want to quickly add a sample notification triggered by an HTTP request, add the  following sample code in `bot\src\index.ts(js)`:
 
     ```js
     server.post("/api/notification", async (req, res) => {
@@ -447,7 +447,7 @@ If you don't have the required SDK and need to invoke external APIs in your code
 1. Uninstall your previous bot installation from Teams, and run local debug to test your bot notification.
 1. Send a notification to the bot installation targets (channel, group chat, or personal chat) by using an HTTP POST request with target URL `https://localhost:3978/api/notification`.
 
-For more information to send notification with Adaptive Card and add more triggers, see [Notification bot in Teams](notification-bot-in-teams.md).
+To send a notification with Adaptive Card and add more triggers, see [Notification bot in Teams](notification-bot-in-teams.md).
 
 <br>
 
