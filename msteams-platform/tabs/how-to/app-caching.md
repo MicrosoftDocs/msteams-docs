@@ -1,5 +1,5 @@
 ---
-title: Enable app caching for your tab app
+title: App caching for your tab app
 author: surbhigupta
 description: Learn how to enable app caching to your tab app in Teams meeting and how it improves the launch time of the app.
 ms.topic: conceptual
@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ms.date: 04/07/2022
 ---
 
-# App caching
+# App caching for your tab app
 
 App caching improves subsequent launch time of the apps within Teams by allowing you to keep some resources and assets in memory that you can use when rehydrating your app.
 
