@@ -20,91 +20,7 @@ The dashboard tab template from Teams Toolkit allows you to get started with int
 
 :::image type="content" source="../../assets/images/dashboard/dashboard-demonstration.png" alt-text="Screenshot shows the sample of a dashboard.":::
 
-Your team can get the latest updates from different sources in Teams using the Teams dashboard tab app. Use dashboard tab apps to connect numerous metrics, data sources, APIs, and services. Dashboard tab apps help your business extract relevant information from the sources and present it to the users. For more information about creating a dashboard tab app and the source code directory structure, see [step-by-step guide](#step-by-step-guide).
-
-## Add a new widget
-
-To add a new widget, follow these steps:
-
-1. [Define a data model](#define-a-data-model)
-1. [Create a data retrieve service](#create-a-data-retrieve-service)
-1. [Create a widget file](#create-a-widget-file)
-1. [Add widget to the dashboard](#add-widget-to-the-dashboard)
-
-### Define a data model
-
-It's recommended to place the data model under the `src/models` directory to define a data model based on the business scenario. The following code is an example of a data model:
-
-```typescript
-//sampleModel.ts
-export interface SampleModel {
-  content: string;
-}
-```
-
-### Create a data retrieve service
-
-A widget requires a service to retrieve the necessary data for displaying its content. This service can either fetch static data from a predefined source or retrieve dynamic data from a backend service or API.
-For instance, you can implement a service that returns static data and place it under the `src/services` directory.
-
-The following code is a sample service for retrieving static data:
-
-```typescript
-//sampleService.ts
-import { SampleModel } from "../models/sampleModel";
-
-export const getSampleData = (): SampleModel => {
-  return { content: "Hello world!" };
-};
-```
-
-### Create a widget file
-
-Create a widget file in `src/widgets` folder. Inherit the `BaseWidget` class from `@microsoft/teamsfx-react`.
-The following code is a sample widget implementation:
-
-```typescript
-//SampleWidget.tsx
-import { Button, Text } from "@fluentui/react-components";
-import { BaseWidget } from "@microsoft/teamsfx-react";
-import { SampleModel } from "../models/sampleModel";
-import { getSampleData } from "../services/sampleService";
-
-interface SampleWidgetState {
-  data?: SampleModel;
-}
-
-export class SampleWidget extends BaseWidget<any, SampleWidgetState> {
-  override async getData(): Promise<SampleWidgetState> {
-    return { data: getSampleData() };
-  }
-
-  override header(): JSX.Element | undefined {
-    return <Text>Sample Widget</Text>;
-  }
-
-  override body(): JSX.Element | undefined {
-    return <div>{this.state.data?.content}</div>;
-  }
-
-  override footer(): JSX.Element | undefined {
-    return <Button>View Details</Button>;
-  }
-}
-```
-
- The following table lists the methods that you can override to customize your widget.
-
-| **Methods** | **Function** |
-|---|---|
-| `getData()` | Retrieves data for the widget. You can implement this method to obtain data from either the backend service or the Microsoft Graph API. |
-| `header()` | Customize the header content of the widget. |
-| `body()` | Customize the body content of the widget. |
-| `footer()` | Customize the footer content of the widget. |
-| `styling()` | Customize the style of the widget. |
-
-> [!NOTE]
-> All method overrides are optional.
+Your team can get the latest updates from different sources in Teams using the Teams dashboard tab app. Use dashboard tab apps to connect numerous metrics, data sources, APIs, and services. Dashboard tab apps help your business extract relevant information from the sources and present it to the users. For more information about creating a dashboard tab app, see [step-by-step guide](#step-by-step-guide).
 
 ### Add widget to the dashboard
 
@@ -150,7 +66,7 @@ override layout(): JSX.Element | undefined {
 
 After you've created a dashboard tab app, you can add a new dashboard.
 
-To add a new dashboard, steps as follows:
+To add a new dashboard, follow these steps:
 
 1. [Create a dashboard class](#create-a-dashboard-class)
 1. [Override methods to customize dashboard tab app](#override-methods-to-customize-dashboard-tab-app)
@@ -159,7 +75,7 @@ To add a new dashboard, steps as follows:
 
 ### Create a dashboard class
 
-Create a file with the `.tsx` extension for your dashboard in the `src/dashboards` directory, for example, `YourDashboard.tsx`. Then, create a class that extends the `BaseDashboard class from` `@microsoft/teamsfx-react`.
+Create a file with the `.tsx` extension for your dashboard in the `src/dashboards` directory, for example, `YourDashboard.tsx`. Then, create a class that extends the `BaseDashboard class from`  [@microsoft/teamsfx-react](/javascript/api/%40microsoft/teamsfx-react/?branch=main&view=msteams-client-js-latest).
 
 ```typescript
 //YourDashboard.tsx
@@ -213,7 +129,7 @@ export default class YourDashboard extends BaseDashboard<any, any> {
 
 You must link your widget to a data source file. The widget picks up the data that's presented in the dashboard from the source file.
 
-Open `src/App.tsx` and add a route for the new dashboard. Here's an example:
+Open the `src/App.tsx` file and add a route for the new dashboard. Here's an example:
 
 ```typescript
 import YourDashboard from "./dashboards/YourDashboard";
@@ -227,7 +143,7 @@ export default function App() {
 
 ### Modify manifest to add a new dashboard tab app
 
-Open `appPackage/manifest.json` and add a new dashboard tab under `staticTabs`. Here's an example:
+Open the `appPackage/manifest.json` file and add a new dashboard tab under `staticTabs`. Here's an example:
 
 ```json
 {
@@ -533,7 +449,7 @@ You can customize the widget by overriding the following methods in the `BaseWid
 
 If you want to include a data loader to your widget before the widget is loaded, you can add a property to the state of the widget to indicate that the data loader is `loading()`. You can use this property to show a loading indicator to the user.
 
-The following code is an example:
+Example:
 
 ```typescript
     override loading(): JSX.Element | undefined {
@@ -818,7 +734,7 @@ To use Microsoft Graph Toolkit as your widget content, follow these steps:
       }
       ```
 
-      You can use an alternative Microsoft Graph Toolkit components within your widget. For more information about Microsoft Graph Toolkit components, refer [Microsoft Graph Toolkit](/graph/toolkit/overview).
+      You can use alternative Microsoft Graph Toolkit components within your widget. For more information, see [Microsoft Graph Toolkit](/graph/toolkit/overview).
 
 1. Add the widget to dashboard layout. Include the new widget in your dashboard file.
 
@@ -843,7 +759,7 @@ Now, launch or refresh your Teams app, you'll see the new widget using Microsoft
 
 Microsoft Graph API is a web API that you can use to communicate with Microsoft cloud and other services. Custom applications can use the Microsoft Graph API to connect to data and use it in custom applications to enhance organizational productivity.
 
-Prior to implementing your Graph API call logic, it is necessary to enable SSO for your dashboard project. For more information on how to add SSO to your project, see [Add single sign-on to Teams app](../../toolkit/add-single-sign-on.md).
+Before implementing your Graph API call logic, it's necessary to enable SSO for your dashboard project. For more information, see [Add single sign-on to Teams app](../../toolkit/add-single-sign-on.md).
 
 To add a Graph API call:
 
@@ -901,7 +817,7 @@ To consent application permissions, follow these steps:
 
 #### Add an Azure function
 
-In the left pane of the Visual Studio Code, select **Teams Toolkit** > **Adding features** > **Azure Functions** > Enter the function name.
+In the left pane of the Visual Studio Code, go to **Teams Toolkit** > **Adding features** > **Azure Functions** and enter the function name.
 
 :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/azure-functions.png" alt-text="Screenshot shows the selection of Azure Functions.":::
 

@@ -11,7 +11,7 @@ zone_pivot_groups: teams-app-environment
 
 > [!IMPORTANT]
 >
-> * If you would want to learn how to create a tab with Teams Toolkit, see Start building a basic tab app [Build your first tab app using JavaScript](../../sbs-gs-javascript.yml).
+> * To learn how to create a tab with Teams Toolkit, see [build your first tab app using JavaScript](../../sbs-gs-javascript.yml).
 > * We've introduced the [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
 
 Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) your personal tabs.
