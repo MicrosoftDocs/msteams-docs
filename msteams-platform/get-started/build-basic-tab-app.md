@@ -26,7 +26,7 @@ Before you create your codespace, ensure that you have the following prerequisit
 * A [Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
 
 > [!TIP]
-> 
+>
 > [GitHub Codespaces](https://github.com/features/codespaces) offers a free plan with a fixed amount of usage per month. If you need to free up more space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespace that you no longer need.
 
 To create a Teams tab app with GitHub Codespaces, follow these steps:
@@ -75,18 +75,17 @@ To create a Teams tab app with GitHub Codespaces, follow these steps:
 
 If you want to learn how to start a project with Teams Toolkit from the beginning, you'll need to set up your development environment. Select the following button to start building your basic tab app.
 
-
 > [!div class="nextstepaction"]
 > [Start building a basic tab app](../sbs-gs-javascript.yml)
 
 ---
 
-If a bot is what you're interested in, select the following button.
+If a bot is what you're interested in, select the following:
 
 > [!div class="nextstepaction"]
 > [Start building a bot](build-notification-bot.md)
 
-If you want to build a message extension app, select the following button.
+If you want to build a message extension app, select the following:
 
 > [!div class="nextstepaction"]
 > [Build message extension](build-message-extension.md)

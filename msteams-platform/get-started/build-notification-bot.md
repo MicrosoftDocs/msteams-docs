@@ -26,7 +26,7 @@ Before you create your codespace, ensure that you have the following prerequisit
 * A [Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
 
 > [!TIP]
-> 
+>
 > [GitHub Codespaces](https://github.com/features/codespaces) offers a free plan with a fixed amount of usage per month. If you need to free up more space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespace that you no longer need.
 
 To create a Teams notification bot with GitHub Codespaces, follow these steps:
@@ -65,7 +65,7 @@ To create a Teams notification bot with GitHub Codespaces, follow these steps:
 
    :::image type="content" source="../assets/images/get-started/codespace/bot-teams.png" alt-text="Screenshot shows you the notification bot loaded in the Teams client.":::
 
-1. Open a new terminal in your codespace and run the following command to trigger an event for sending a notification to your bot.
+1. Open a new terminal in your codespace and run the following command to trigger an event for sending a notification to your bot:
 
    ```bash
    curl -X POST http://localhost:3978/api/notification
@@ -75,7 +75,7 @@ To create a Teams notification bot with GitHub Codespaces, follow these steps:
    >
    > In real time, events are triggered by an external source, such as a third-party API that cause the notification bot to send the user a notification. To emulate an event trigger, you can send an event manually via curl commands on terminal.
 
-   The notification bot app sends a notification as an Adaptive Card to your Teams client.
+   The notification bot app sends a notification as an Adaptive Card to your Teams client:
 
    :::image type="content" source="../assets/images/get-started/codespace/notification-bot.png" alt-text="Screenshot shows your notification bot loaded in the Teams client.":::
 
@@ -90,12 +90,12 @@ If you want to learn how to start a project with Teams Toolkit from the beginnin
 
 ---
 
-If you want to build a message extension, select the following button.
+If you want to build a message extension, select the following:
 
 > [!div class="nextstepaction"]
 > [Build message extension](build-message-extension.md)
 
-If you want to build basic tab app, select the following button.
+If you want to build basic tab app, select the following:
 
 > [!div class="nextstepaction"]
 > [Build your basic tab app](build-basic-tab-app.md)
