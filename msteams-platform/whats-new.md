@@ -16,10 +16,10 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 25/05/2023 | Deep link to meeting side panel in Teams moble client. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) |
+| 25/05/2023 | Deep link to open meeting side panel in Teams mobile client. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) |
 |23/05/2023 |  Live Share SDK is now generally available. | Build apps for Teams meetings and calls > Enhanced collaboration with Live Share > [Live Share SDK](apps-in-teams-meetings/teams-live-share-overview.md)|
-|23/05/2023 | Design your app for new Teams. | Design your app > [Overview](concepts/design/design-teams-app-overview.md)|
-|17/05/2023 | Distribute your app to specific countries. | Distribute your app > Publish to the Teams store > Prepare your Teams store submission > [Distribute your app to specific countries](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries)|
+|23/05/2023 | Design your app for new Teams that contains guidelines to make right design decisions. | Design your app > [Overview](concepts/design/design-teams-app-overview.md)|
+|17/05/2023 | Distribute your app to specific countries to reach the relevant to users. | Distribute your app > Publish to the Teams store > Prepare your Teams store submission > [Distribute your app to specific countries](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries)|
 | 17/05/2023 | Introduced the Teams Toolkit v5 extension within Visual Studio Code. | Tools and SDKs > Teams Toolkit > [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md)|
 | 17/05/2023 | Updated Get started module with GitHub Codespaces and step-by-step guides aligned with Teams Toolkit v5. It also includes details for extending Teams app over Microsoft 365 and Outlook. | [Get started](get-started/get-started-overview.md)|
 
@@ -37,7 +37,7 @@ Teams platform features that are available to all app developers.
 
 **2023 June**
 
-* ***June 14, 2023***: [Collaborative Stage View](tabs/tabs-link-unfurling.md#collaborative-stage-view).
+* ***June 14, 2023***: [Collaborative Stage View](tabs/tabs-link-unfurling.md#collaborative-stage-view) allows users to engage with your app content in a new Teams window.
 
 * ***June 14, 2023***: [Added validation guidelines for Teams app powered by Artificial Intelligence (AI)](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-powered-by-ai).
 
@@ -52,20 +52,20 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 24/04/2023 | Develop your apps with Teams Toolkit | Tools and SDKs > Developer Portal for Teams > [Develop your apps with Teams Toolkit](concepts/build-and-test/develop-your-apps-with-teams-toolkit.md) |
-| 14/04/2023 | Contextless app update | Distribute your app > [Upload your app in Teams](concepts/deploy-and-publish/apps-upload.md#update-your-app) |
-| 06/04/2023 | Set up Microsoft license management | Monetize your app > [Set up Microsoft license management](~/concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md) |
+| 24/04/2023 | Guidelines to develop your apps with Teams Toolkit | Tools and SDKs > Developer Portal for Teams > [Develop your apps with Teams Toolkit](concepts/build-and-test/develop-your-apps-with-teams-toolkit.md) |
+| 14/04/2023 | Introduced contextless app update in real-time| Distribute your app > [Upload your app in Teams](concepts/deploy-and-publish/apps-upload.md#update-your-app) |
+| 06/04/2023 | Set up Microsoft license management to help Teams admins or users to manage the SaaS licenses | Monetize your app > [Set up Microsoft license management](~/concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md) |
 | 04/04/2023 | Tab apps in shared channels are available in DOD | Build tabs > [Build apps for shared channels](~/concepts/build-and-test/shared-channels.md) |
 | 23/03/2023 | Apps are available for scheduled public channel meetings | Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 20/03/2023 | Bots are available in DOD | Build bots > [Overview](bots/what-are-bots.md)|
 | 20/03/2023 | Message extensions are available in DOD | Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md)|
 | 28/02/2023 | Facilitate adoption of your app and create awareness | Distribute your app > adoption > [Drive customer adoption of your app](promote-app-adoption.md) |
-| 27/02/2023 | Changelog for Developer Portal | Tools and SDKs > Developer Portal for Teams > [Overview](concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal) |
-| 23/02/2023 | SSO authentication for your Adaptive Cards Universal Actions | Add authentication > Enable SSO for your Teams app > Enable SSO for Adaptive Cards Universal Actions in your bot > [Overview](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md) |
-|23/02/2023| Third party authentication for Adaptive Cards Universal Actions | Add authentication > Use third party IdP authentication > [Third party authentication for Adaptive Cards Universal Actions](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md) |
-|21/02/2023| Targeted in-meeting notification for apps in Teams | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Targeted in-meeting notification for apps in Teams](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification) |
-|20/02/2023| Plan your app growth in Teams | Grow your app > [Strategize and execute growth for your app](concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md)|
-|17/02/2023| Build a dashboard tab app | Build Tabs > [Build a dashboard tab app](tabs/how-to/build-a-dashboard-tab-app.md#build-a-dashboard-tab-app)|
+| 27/02/2023 | Changelog for Developer Portal facilitate to view latest updates in Teams | Tools and SDKs > Developer Portal for Teams > [Overview](concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal) |
+| 23/02/2023 | SSO authentication allow Teams to access your Adaptive Cards Universal Actions in a bot | Add authentication > Enable SSO for your Teams app > Enable SSO for Adaptive Cards Universal Actions in your bot > [Overview](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md) |
+|23/02/2023| Introduce new actiontype to enable third party authentication for Adaptive Cards Universal Actions that works across the apps | Add authentication > Use third party IdP authentication > [Third party authentication for Adaptive Cards Universal Actions](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md) |
+|21/02/2023| Targeted in-meeting notification for apps in Teams allows app to send notifications to specific participants on a meeting stage | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Targeted in-meeting notification for apps in Teams](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification) |
+|20/02/2023| Guidelines to plan, strategize, and execute your app growth in Teams | Grow your app > [Strategize and execute growth for your app](concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md)|
+|17/02/2023| Build a dashboard tab app tool to monitor, display, and extract data | Build Tabs > [Build a dashboard tab app](tabs/how-to/build-a-dashboard-tab-app.md#build-a-dashboard-tab-app)|
 |09/02/2023| Apps for Teams meetings support anonymous users | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build apps for anonymous users](apps-in-teams-meetings/build-apps-for-anonymous-user.md) |
 |31/01/2023| Introducing update and soft delete event notifications in bot | Build bots > Bot conversations > [Messages in bot conversations](bots/how-to/conversations/conversation-messages.md#update-message)
 
