@@ -99,10 +99,6 @@ Learn more about [Teams meetings, expiration, and policies](/microsoftteams/meet
 
 A meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app experience, depending on the user type and user's role in a Teams meeting.
 
-### App caching for tab app in Teams meeting
-
-You can configure your tab app to enable app caching to reduce the reload time of your app during a meeting. The app reloads from the cache, which improves the app relaunch time within the meeting. For more information, see [enable app caching for your tab app](app-caching-for-your-tab-app.md).
-
 ## User types in Teams
 
 Teams supports user types, such as in-tenant, guest, federated or external, and anonymous users in a Teams meeting. Each user type can have one of the [user roles in Teams meeting](#user-roles-in-teams-meeting).
@@ -152,3 +148,4 @@ For more information, see [roles in a Teams meeting](https://support.microsoft.c
 * [Meeting apps APIs](meeting-apps-apis.md)
 * [Enhanced collaboration with Live Share SDK](teams-live-share-overview.md)
 * [Instrumenting for Teams app specific analytics](../concepts/design/overview-analytics.md#instrumenting-for-teams-app-specific-analytics)
+* [App caching for your tab app](../tabs/how-to/app-caching-for-your-tab-app.md)

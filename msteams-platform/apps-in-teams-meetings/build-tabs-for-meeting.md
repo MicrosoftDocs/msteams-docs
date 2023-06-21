@@ -285,11 +285,6 @@ The following table provides the user types and lists the features that each use
 * Follow the [step-by-step guide](../sbs-meetings-stage-view.yml) to share meeting Stage View in your Teams meeting.
 * Follow the [step-by-step guide](../sbs-meeting-content-bubble.yml) to generate in-meeting notification in your Teams meeting.
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Enable app caching for your tab app](app-caching-for-your-tab-app.md)
-
 ## See also
 
 * [Apps for Teams meetings and calls](teams-apps-in-meetings.md)
@@ -297,3 +292,4 @@ The following table provides the user types and lists the features that each use
 * [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
 * [Add apps to meetings using Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [Get change notifications for Microsoft Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)
+* [App caching for your tab app](../tabs/how-to/app-caching-for-your-tab-app.md)

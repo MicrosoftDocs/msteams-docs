@@ -80,7 +80,7 @@ The following flow diagram shows how the app loads for the first time it's launc
 
 The following flow diagram shows how a cached app is reloaded:
 
-:::image type="content" source="../assets/images/saas-offer/cached-launch-app.png" alt-text="This screenshot shows the flow of the cached launch of the app in Teams.":::
+:::image type="content" source="../../assets/images/saas-offer/cached-launch-app.png" alt-text="This screenshot shows the flow of the cached launch of the app in Teams.":::
 
 | # | Interaction | What's going on |
 | --- | --- | --- |
@@ -94,8 +94,8 @@ The following flow diagram shows how a cached app is reloaded:
 To enable app caching for your app, in the `app-cache-tab.tsx` file (or the equivalent file in your app):
 
 1. Pass `contentUrl` and `entityId` into the load handler to route to the correct page within your app. It also invokes `notifySuccess` or `notifyFailure` to notify Teams client when the app initialization flow is complete.
-   * [contentUrl](../tabs/how-to/create-tab-pages/configuration-page.md#modify-or-remove-a-tab): Add content page URL.
-   * [entityId](../tabs/how-to/create-tab-pages/configuration-page.md#modify-or-remove-a-tab): Add a unique identifier.
+   * [contentUrl](create-tab-pages/configuration-page.md#modify-or-remove-a-tab): Add content page URL.
+   * [entityId](create-tab-pages/configuration-page.md#modify-or-remove-a-tab): Add a unique identifier.
 
 1. Call `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs.
 1. Dispose resources and perform any cleanup needed in the `beforeUnload` handler.
@@ -215,5 +215,5 @@ Apps aren't cached if the load handler isn't invoked on subsequent navigation. T
 
 ## See also
 
-* [Build tabs for meeting](build-tabs-for-meeting.md)
-* [Build tabs for Teams](../tabs/what-are-tabs.md)
+* [Build tabs for meeting](../../apps-in-teams-meetings/build-tabs-for-meeting.md)
+* [Build tabs for Teams](../what-are-tabs.md)
