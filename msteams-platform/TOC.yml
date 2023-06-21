@@ -132,6 +132,7 @@
     items:
     - name: Teams Toolkit overview
       href: toolkit/teams-toolkit-fundamentals.md
+      displayName: TTK, version
     - name: Install Teams Toolkit
       href: toolkit/install-Teams-Toolkit.md
       displayName: download
@@ -384,7 +385,7 @@
   - name: Navigate within your tab
     href: tabs/how-to/tab-navigation.md
   - name: Build a dashboard tab app
-    href: tabs/how-to/build-a-dashboard-tab-app.md
+    href: tabs/how-to/Build-a-dashboard-tab-app.md
     displayName: Dashboard, widget, Graph API call
   - name: Build apps for shared channels
     href: concepts/build-and-test/shared-channels.md
@@ -394,13 +395,13 @@
     displayName: Slow load times, iFrame constraints, invoke activities, task module, task fetch, task submit, authentication
   - name: Tabs link unfurling and Stage View
     href: tabs/tabs-link-unfurling.md
-    displayName: Tab in Stage View
+    displayName: Tab in Stage View, Collaborative Stage View 
   - name: Create conversational tabs
     href: tabs/how-to/conversational-tabs.md
     displayName: configurable
   - name: Tab margin changes
     href: resources/removing-tab-margins.md
-    displayName: margins align, extra padding effect, size of the tab margins
+    displayName: margins align, extra padding effect, size of the tab margins, changing margins
 - name: Build bots
   items:
   - name: Overview
@@ -410,7 +411,7 @@
     displayName: Bot samples, advantages of bots, bot with Power Virtual Agents, Microsoft Bot Framework
   - name: Bot activity handlers
     href: bots/bot-basics.md
-    displayName: Bot logic, core Bot Framework handlers
+    displayName: OnMessageActivityAsync, Bot logic, core Bot Framework handlers
   - name: Bot conversations
     items:
     - name: Overview
@@ -449,7 +450,7 @@
       href: bots/how-to/conversations/command-bot-in-teams.md
     - name: Workflow bot in Teams
       href: bots/how-to/conversations/workflow-bot-in-teams.md
-      displayname: Jira
+      displayname: Jira, jira
   - name: Get Teams specific context for your bot
     href: bots/how-to/get-teams-context.md
     displayName: Fetch roster or user profile
@@ -532,7 +533,7 @@
     items:
     - name: Build tabs for meeting
       href: apps-in-teams-meetings/build-tabs-for-meeting.md
-      displayName: anonymous, app caching, launch time
+      displayName: anonymous, app caching, launch time, cache
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
       displayName: MicrosoftTeams.meeting.getAppContentStageSharingState
@@ -545,10 +546,10 @@
       href: apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md
     - name: Build apps for anonymous users
       href: apps-in-teams-meetings/build-apps-for-anonymous-user.md
-      displayName: supportsAnonymousGuestUsers, guest
+      displayName: supportsAnonymousGuestUsers, guest, meetingExtensionDefinition
     - name: Meeting apps APIs
       href: apps-in-teams-meetings/meeting-apps-apis.md
-      displayName: payload, recurring, getparticipant, captions, targeted meeting notification, real-time meeting events, meeting start and end events
+      displayName: OnMessageActivityAsync, payload, recurring, getparticipant, captions, targeted meeting notification, real-time meeting events, meeting start and end events
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview
@@ -605,7 +606,7 @@
     href: webhooks-and-connectors/how-to/connectors-creating.md
   - name: Create and send messages
     href: webhooks-and-connectors/how-to/connectors-using.md
-    displayName: Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard
+    displayName: MessageCard, Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard
 - name: Build cards and task modules
   items:
   - name: Overview
@@ -617,7 +618,7 @@
       displayName: People picker, type-ahead
     - name: Types of cards
       href: task-modules-and-cards/cards/cards-reference.md
-      displayName: correlationId, Markdown, what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card
+      displayName: MessageCard, correlationId, Markdown, what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card
     - name: Format cards in Microsoft Teams
       href: task-modules-and-cards/cards/cards-format.md
       displayName: Information masking, background, extension, notification, HTML, rich text
@@ -633,9 +634,9 @@
     - name: Universal Actions for Adaptive Cards
       items:
       - name: Overview
-        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/overview.md
+        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md
       - name: Work with Universal Actions for Adaptive Cards
-        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
+        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md
         displayName: Activity, Sequential Workflows
       - name: User Specific Views
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/User-Specific-Views.md
@@ -692,10 +693,10 @@
     - name: Enable SSO for your Adaptive Cards Universal Actions in bot
       items:
       - name: Overview
-        href: task-modules-and-cards\cards\Universal-actions-for-adaptive-cards\enable-sso-for-your-adaptive-cards-universal-action.md
+        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
         displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
       - name: Add code to enable SSO for your Adaptive Cards Universal Actions in bot
-        href: task-modules-and-cards\cards\Universal-actions-for-adaptive-cards\sso-adaptive-cards-universal-action.md
+        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/sso-adaptive-cards-universal-action.md
         displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
     - name: Troubleshoot SSO authentication
       href: tabs/how-to/authentication/tab-sso-troubleshooting.md
@@ -708,11 +709,11 @@
       href: tabs/how-to/authentication/auth-tab-aad.md
     - name: Add third party IdP authentication to bot app
       href: bots/how-to/authentication/add-authentication.md
-      displayName: Loop
+      displayName: Loop, validDomain, valid domain, validdomain
     - name: Add third party IdP authentication to message extension app
       href: messaging-extensions/how-to/add-authentication.md
     - name: Add third party IdP authentication to Adaptive Cards Universal Actions
-      href: task-modules-and-cards\cards\Universal-actions-for-adaptive-cards\authentication-flow-in-universal-action-for-adaptive-cards.md
+      href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
       displayName: Adaptive cards universal action third party Idp authentication, Action.Execute OAuth nominal authentication
   - name: Use external OAuth providers
     href: tabs/how-to/authentication/auth-oauth-provider.md
@@ -745,7 +746,7 @@
     href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
     displayName: Access, report, MSAL2
   - name: Teams app permissions
-    href: graph-api/app-permissions/teams-app-permissions.md
+    href: graph-api/App-permissions/Teams-app-permissions.md
   - name: Resource-specific consent
     items:
     - name: Overview
@@ -853,7 +854,7 @@
       displayName: AppSource, Rapid app approval, approve, publisher verification, what to expect after you submit your app, SaaS offer, concierge service, mandatory fix, suggested fix, blocker, test instructions
     - name: Review store validation guidelines
       href: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
-      displayName: Suggested, mandatory, value proposition, advertising, stacked text, whiteboarding apps, message spamming, Avatars, commercial marketplace certification policies, security, general functionality and performance, suitable for workplace consumption, financial information, external domains, sensitive content, privacy policy 
+      displayName: validDomain, valid domain, validdomain, logo, Suggested, mandatory, value proposition, advertising, stacked text, whiteboarding apps, message spamming, Avatars, commercial marketplace certification policies, security, general functionality and performance, suitable for workplace consumption, financial information, external domains, sensitive content, privacy policy 
     - name: Create a Partner Center developer account
       href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
       displayName: Support issues, account verification status, employee verification process, business verification process, support ticket 
@@ -928,7 +929,7 @@
   items:
     - name: App manifest schema for Teams
       href: resources/schema/manifest-schema.md
-      displayName: properties
+      displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
     - name: Public developer preview
       items:
         - name: Overview
@@ -1024,7 +1025,7 @@
       href: concepts/build-and-test/share-to-teams-from-web-apps.md
       displayName: Share to Teams for Education
     - name: Share to Teams from personal app or tab
-      href: concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
+      href: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md
   - name: Add a Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links
@@ -1049,6 +1050,7 @@
       displayname: localizationInfo 
     - name: Localize JSON schema reference
       href: resources/schema/localization-schema.md
+      displayname: meetingExtensionDefinition
   - name: SameSite cookie attribute 
     href: resources/samesite-cookie-update.md
     displayName: Cookies
