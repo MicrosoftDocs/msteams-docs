@@ -19,7 +19,7 @@ The following are the advantages the new Teams client:
 You can use the following property to identify your app usage in the new Teams or Classic Teams client:
 
 * For TeamsJS v1.x: [`hostName`](/javascript/api/@microsoft/teams-js/hostname?view=msteams-client-js-latest&preserve-view=true)
-* For TeamsJS v2.x: [`app.Context.app.host.name`](/javascript/api/@microsoft/teams-js/app.appinfo?view=msteams-client-js-latest&preserve-view=true)
+* For TeamsJS v2.x: [`AppHostInfo`](/javascript/api/@microsoft/teams-js/app.appinfo?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-app-appinfo-host)
 
 The new Teams or Classic Teams client are represented using the `teams` and `teamsModern` fields, respectively.
 
@@ -27,7 +27,7 @@ The new Teams or Classic Teams client are represented using the `teams` and `tea
 
 To ensure a smooth transition, a phased rollout of the new platform is planned as follows:
 
-* **Developer Preview**: The new Teams client is available in Public Developer Preview starting June  2023. You can access the new platform and test your apps. We encourage you to adopt the feature early and provide feedback to help refine the platform.
+* **Developer Preview**: The new Teams client is available in Public Developer Preview starting June 2023. You can access the new platform and test your apps. We encourage you to adopt the feature early and provide feedback to help refine the platform.
 
 * **Availability of all platform features from Classic Teams**: All the platform features from Teams classic will be available in the new Teams client by August 2023.
 
