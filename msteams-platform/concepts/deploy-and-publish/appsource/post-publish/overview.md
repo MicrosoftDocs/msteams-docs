@@ -8,7 +8,7 @@ ms.author: surbhigupta
 ---
 # Maintain your published Microsoft Teams app
 
-With your app listed on the Microsoft Teams store, start thinking about how you'll maintain the app going forward and increase downloads and usage.
+With your app listed on the Microsoft Teams store, start thinking about how you maintain the app going forward and increase downloads and usage.
 
 ## Analyze app usage
 
@@ -82,7 +82,7 @@ Microsoft runs automated and manual continuous health checks for all the publish
 
 * Microsoft has identified commercial marketplace policy failures in your app as part of the continuous health evaluation of your app post publish.
 
-If Microsoft doesn't receive a suitable response from you, it'll reach out to you again, and might simultaneously remove your app to protect end users. If Microsoft receives a response that your issues are resolved and you've submitted an updated app for review, Microsoft will re-list your app when the app passes review.
+If Microsoft doesn't receive a suitable response from you, it reaches out to you again, and might simultaneously remove your app to protect end users. If Microsoft receives a response that your issues are resolved and you've submitted an updated app for review, Microsoft will re-list your app when the app passes review.
 
 **Microsoft might remove your app without prior notice (other than to inform you of that action) when:**
 
