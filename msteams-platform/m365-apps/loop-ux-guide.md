@@ -1,5 +1,5 @@
 ---
-title: Loop components User Experience (UX) Guidelines
+title: Loop components User Experience (UX) guidelines
 description:
 ms.author: mobajemu
 ms.date: 06/15/2023
@@ -8,11 +8,11 @@ ms.custom: m365apps
 ms.localizationpriority: medium
 ---
 
-# Loop Component Developer User Experience Guidelines
+# Loop component developer user experience guidelines
 
 ## Overview
 
-Microsoft Loop components are live, actionable units of productivity that stay in sync and move freely across Microsoft 365 apps. With the capability for developers to create Loop components by evolving an existing Adaptive Card into a Loop component or creating a new Adaptive Card-based Loop component.
+Microsoft Loop components are live, actionable units of productivity that stay in sync and move freely across Microsoft 365 apps. It includes the capability for developers to create Loop components by evolving an existing Adaptive Card into a Loop component or creating a new Adaptive Card-based Loop component.
 
 ## Loop components are live, embedded, actionable, and portable.
 |||
@@ -26,16 +26,16 @@ Microsoft Loop components are live, actionable units of productivity that stay i
 
 **Embedded**: By their nature, Adaptive Cards are embedded, so there is nothing specific needed from the developer.
 
-**Actionable**: Loop components allow the user to take action to complete a flow within the component itself, beyond simply viewing information or opening a browser. If your Adaptive Card is a view-only experience, look for opportunities to make it actionable, as this is a core element of delighting users. It is OK to have a view-only Adaptive Card, but in that case, it should remain an Adaptive Card rather than become a Loop component.
+**Actionable**: Loop components allow the user to take action to complete a flow within the component itself; beyond simply viewing information or opening a browser. If your Adaptive Card is a view-only experience, look for opportunities to make it actionable, as this is a core element of delighting users. It is OK to have a view-only Adaptive Card, but in that case, it should remain an Adaptive Card rather than become a Loop component.
 
 > [!NOTE]
 > Certain user permissions or modes of your component may not be actionable, but the common cases should be actionable.
 
 Examples of actionability may include approving an expense report, adding a comment, updating a date, dollar amount, or other data, changing an assignment or status value, and the like. 
 
-**Portable**: Adding the URL attribute as required in the developer guidance ensures that your component can be live-copied to anywhere the Adaptive Card-based Loop component is supported.
+**Portable**: Adding the URL attribute as required in the developer guidance ensures that your component can be live-copied anywhere the Adaptive Card-based Loop component is supported.
 
-## Loop Component Elements Overview
+## Loop component elements overview
 
 An Adaptive Card-based Loop component comprises the Body, Header, and Border.
 
@@ -48,7 +48,7 @@ An Adaptive Card-based Loop component comprises the Body, Header, and Border.
 |Header | Icon and name | Elements and layout are standard and provided by platform |
 |Border | n/a | Standard border for all Loop components|
 
-## Loop Component Body
+## Loop component body
 
 The Loop component body is what makes your component unique. Building a component that embodies the Loop component attributes and provides customer value allows you to give your users a positive experience and grow usage and retention.
 
@@ -74,9 +74,9 @@ Adding buttons or links for more specific views as needed is acceptable, for exa
 
 ### Don’t add a duplicate header or border
 
-As described above, all Loop components have a standard header and border; your Adaptive Card code should not duplicate these. Having an item-specific title for your component is a good idea but avoid duplicating your app name and icon.
+As described above, all Loop components have a standard header and border; your Adaptive Card code should not duplicate these. Having an item-specific title for your component is a good idea, but avoid duplicating your app name and icon.
 
-## Loop Component Header
+## Loop component header
 
 The platform provides the component header and includes standard elements such as Logo, Name, and Copy.
 
@@ -84,7 +84,7 @@ The **app name** is drawn from the component contract. When possible, use a conc
 
 The **app logo** is drawn from the component contract. Ensure the logo provided works on both light and dark backgrounds since the same asset is used for light and dark modes and high contrast.
 
-## Loop Component Border
+## Loop component border
 
 The component border separates your component from the content around it. It can help users understand that the Loop component is live and separate from the contents surrounding it (such as email or chat).
 
