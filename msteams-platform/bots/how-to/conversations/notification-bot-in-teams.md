@@ -146,18 +146,18 @@ You can customize sending the notification to the following targets:
 
 * Notifications to a personal chat:
 
-# [TypeScript](#tab/ts2)
+    # [TypeScript](#tab/ts2)
 
-```TypeScript
-  // list all installation targets
-  for (const target of await notificationApp.notification.installations()) {
-      // "Person" means this bot is installed as Personal app
-      if (target.type === "Person") {
-          // Directly notify the individual person
-          await target.sendAdaptiveCard(...);
-      }
-  }
-```
+    ```TypeScript
+    // list all installation targets
+    for (const target of await notificationApp.notification.installations()) {
+        // "Person" means this bot is installed as Personal app
+        if (target.type === "Person") {
+            // Directly notify the individual person
+            await target.sendAdaptiveCard(...);
+        }
+    }
+    ```
 
 # [C#](#tab/csharp2)
 
