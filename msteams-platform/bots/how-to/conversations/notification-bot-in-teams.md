@@ -159,19 +159,19 @@ You can customize sending the notification to the following targets:
     }
     ```
 
-# [C#](#tab/csharp2)
+    # [C#](#tab/csharp2)
 
-```C#
-  // list all installation targets
-  foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
-      // "Person" means this bot is installed as Personal app
-      if (target.Type == NotificationTargetType.Person)
-      {
-         // Directly notify the individual person
-         await target.SendAdaptiveCard(...);
-      }
-  }
-```
+    ```C#
+    // list all installation targets
+    foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
+        // "Person" means this bot is installed as Personal app
+        if (target.Type == NotificationTargetType.Person)
+        {
+            // Directly notify the individual person
+            await target.SendAdaptiveCard(...);
+        }
+    }
+    ```
 
 ---
 
