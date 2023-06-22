@@ -843,7 +843,7 @@ Specify meeting extension definition. For more information, see [custom Together
 |`maxAudience`| integer | 50  |✔️| The maximum number of audiences supported in the scene. |
 |`seatsReservedForOrganizersOrPresenters`| integer | 50 |✔️| The number of seats reserved for organizers or presenters.|
 
-## [authorization](../../graph-api/rsc/grant-resource-specific-consent.md#request-rsc-permissions-for-teams-app)
+## authorization
 
 **Optional** — object
 
@@ -856,13 +856,13 @@ Specify and consolidate authorization related information for the app.
 |---|---|---|---|---|
 |`permissions`|NA|NA|NA|List of permissions that the app needs to function.|
 
-### [authorization.permissions](../../graph-api/rsc/grant-resource-specific-consent.md#request-rsc-permissions-for-teams-app)
+### [authorization.permissions](../../graph-api/App-permissions/Teams-app-permissions.md)
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
 |`resourceSpecific`| array of objects|16 items|NA|Permissions that guard data access on resource instance level.|
 
-### [authorization.permissions.resourceSpecific](../../bots/how-to/conversations/channel-messages-with-rsc.md#update-app-manifest)
+### [authorization.permissions.resourceSpecific](../../graph-api/rsc/grant-resource-specific-consent.md#request-rsc-permissions-for-teams-app)
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
