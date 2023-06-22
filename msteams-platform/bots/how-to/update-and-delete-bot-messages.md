@@ -17,7 +17,7 @@ Your bot can dynamically update messages after sending them instead of having th
 
 You can use dynamic message updates for scenarios, such as poll updates, modifying available actions after a button press, or any other asynchronous state change.
 
-It isn't necessary for the new message to match the original in type. For example, if the original message contains an attachment, the new message can be a simple text message.
+It is not necessary for the new message to match the original in type. For example, if the original message contains an attachment, the new message can be a simple text message.
 
 # [C#](#tab/dotnet)
 
