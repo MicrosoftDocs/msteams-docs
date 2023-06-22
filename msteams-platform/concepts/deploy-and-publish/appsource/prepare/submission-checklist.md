@@ -222,13 +222,13 @@ If you want to cater your app to a specific audience, you can select from the av
 
 # [Desktop](#tab/desktop)
 
-The following image shows the Geo-filtering option in the Teams desktop client:
+The following image shows the use of Geo-filtering for apps in the Teams desktop client:
 
  :::image type="content" source="../../../../assets/images/app-fundamentals/geo-fencing-infographic.png" alt-text="Infographic shows the difference in the Teams Store for the apps available in the US and other countries." lightbox="../../../../assets/images/app-fundamentals/geo-fencing-infographic.png":::
 
 # [Mobile](#tab/mobile)
 
-The following image shows the Geo-filtering option in the Teams mobile client:
+The following image shows the use of Geo-filtering for apps in the Teams mobile client:
 
  :::image type="content" source="../../../../assets/images/app-fundamentals/mobile-infographic.png" alt-text="Infographic shows the difference in the Teams Store for the apps available in the US and other countries in mobile." lightbox="../../../../assets/images/app-fundamentals/mobile-infographic.png":::
 
