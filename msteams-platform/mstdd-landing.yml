@@ -97,14 +97,12 @@ landingContent:
       - text: Targeted in-meeting notification (Developer preview)
         url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
         
-
-
     - linkListType: whats-new
       links:
       - text: Enable app caching for your tab app (Developer preview)
         url: apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching
       - text: Update and soft delete event notifications in bot
-        url: bots/how-to/update-and-delete-bot-messages.md#get-edit-or-undelete-message-events
+        url: bots/how-to/conversations/conversation-messages.md#get-edit-message-events
       - text: Set up Microsoft license management
         url: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
       - text: Command bot in Teams
