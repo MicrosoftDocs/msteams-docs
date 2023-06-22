@@ -63,6 +63,8 @@ To configure, distribute and manage your application use the Developer Portal fo
 test cases.
 * The **Preview in Teams** button lets you launch your app quickly in the Teams client for debugging.
 
+:::image type="content" source="images/developer-portal-overview.png" alt-text="A screenshot of the Developer Portal overview page with Preview in Teams button highlighted":::
+
 ### Setup your dev environment to test in Outlook
 
 To turn on the Adaptive Card based Loop component in Outlook.com:
