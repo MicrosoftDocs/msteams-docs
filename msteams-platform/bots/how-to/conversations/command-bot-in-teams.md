@@ -135,7 +135,7 @@ You can edit the manifest template file `appPackage\manifest.json` to update the
 
 <summary><b>2. Respond with an Adaptive Card</b></summary>
 
-You can define your card in the JSON format to respond with an Adaptive Card. Create a new file in the following path for JavaScript/TypeScript and .NET as follows:
+You can define your card in the JSON format to respond with an Adaptive Card. Create a new file in the following path for JavaScript or TypeScript and .NET as follows:
 
 * For JavaScript or TypeScript: `src/adaptiveCards/doSomethingCommandResponse.json`
 * For .NET: `Resources/DoSomethingCommandResponse.json`
