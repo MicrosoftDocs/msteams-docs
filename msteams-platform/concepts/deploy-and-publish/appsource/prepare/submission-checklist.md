@@ -232,6 +232,8 @@ The following image shows the Geo-filtering option in the Teams mobile client:
 
     :::image type="content" source="../../../../assets/images/app-fundamentals/mobile-infographic.png" alt-text="Infographic shows the difference in the Teams Store for the apps available in the US and other countries in mobile." lightbox="../../../../assets/images/app-fundamentals/mobile-infographic.png"::: 
 
+---
+
 > [!NOTE]
 > Geo-filtering isn't supported in Government community cloud (GCC), GCC-High, and Department of Defence (DoD) tenants.
 
