@@ -148,7 +148,7 @@ You can customize sending the notification to the following targets:
 
 # [TypeScript](#tab/ts2)
 
-  ```TypeScript
+```TypeScript
   // list all installation targets
   for (const target of await notificationApp.notification.installations()) {
       // "Person" means this bot is installed as Personal app
@@ -157,11 +157,11 @@ You can customize sending the notification to the following targets:
           await target.sendAdaptiveCard(...);
       }
   }
-  ```
+```
 
 # [C#](#tab/csharp2)
 
-  ```C#
+```C#
   // list all installation targets
   foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
       // "Person" means this bot is installed as Personal app
@@ -171,7 +171,7 @@ You can customize sending the notification to the following targets:
          await target.SendAdaptiveCard(...);
       }
   }
-  ```
+```
 
 ---
 
@@ -179,7 +179,7 @@ You can customize sending the notification to the following targets:
 
 # [TypeScript](#tab/ts3)
 
-   ```TypeScript
+```TypeScript
   // list all installation targets
   for (const target of await notificationApp.notification.installations()) {
     // "Group" means this bot is installed to a Group Chat
@@ -195,11 +195,11 @@ You can customize sending the notification to the following targets:
         }
     
   }
-  ```
+```
 
 # [C#](#tab/csharp3)
 
-  ```C#
+```C#
   // list all installation targets
   foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
     // "Group" means this bot is installed to a Group Chat
@@ -214,7 +214,7 @@ You can customize sending the notification to the following targets:
         }
     }
   }
-  ```
+```
 
 ---
 
@@ -222,7 +222,7 @@ You can customize sending the notification to the following targets:
 
 # [TypeScript](#tab/ts4)
 
-  ```TypeScript
+```TypeScript
   // list all installation targets
   for (const target of await notificationApp.notification.installations()) {
     // "Channel" means this bot is installed to a Team (default to notify General channel)
@@ -243,11 +243,11 @@ You can customize sending the notification to the following targets:
         }
     }
   }
-  ```
+```
 
 # [C#](#tab/csharp4)
 
-  ```C#
+```C#
   // list all installation targets
   foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
     // "Channel" means this bot is installed to a Team (default to notify General channel)
@@ -269,7 +269,7 @@ You can customize sending the notification to the following targets:
         }
     }
   }
-  ```
+```
 
 ---
 
