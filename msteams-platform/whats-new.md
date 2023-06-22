@@ -16,7 +16,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 25/05/2023 | Deep link to open meeting side panel in Teams mobile client. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) |
+| 25/05/2023 | Use a deep link to open a tab app in meeting side panel in Teams mobile client. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) |
 |23/05/2023 |  Live Share SDK is now generally available. | Build apps for Teams meetings and calls > Enhanced collaboration with Live Share > [Live Share SDK](apps-in-teams-meetings/teams-live-share-overview.md)|
 |23/05/2023 | Design your app for new Teams that contains guidelines to make right design decisions. | Design your app > [Overview](concepts/design/design-teams-app-overview.md)|
 |17/05/2023 | Distribute your app to specific countries to reach the relevant to users. | Distribute your app > Publish to the Teams store > Prepare your Teams store submission > [Distribute your app to specific countries](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries)|
