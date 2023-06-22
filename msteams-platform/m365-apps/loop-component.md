@@ -1,6 +1,6 @@
 ---
 title: Guidelines for building Loop components
-description:
+description: In this article, learn how to build a Adaptive card based Loop component.
 ms.author: mobajemu
 ms.date: 06/15/2023
 ms.topic: tutorial
@@ -27,7 +27,7 @@ In the subsequent sections we dive deeper into these pre-requisites
 
 ### Build a search-based message extension
 
-To begin building an Adaptive Card-based Loop component, firstly follow the steps to [build a Message Extension with a Search command and Link unfurling](../messaging-extensions/what-are-messaging-extensions.md ). 
+To begin building an Adaptive Card based Loop component, firstly follow the steps to [build a Message Extension with a Search command and Link unfurling](../messaging-extensions/what-are-messaging-extensions.md ). 
 
 [Search commands](../sbs-messagingextension-searchcommand.yml) allow end-users to search an external system for information. The users can select an item from the search result and insert them in chat and mail as a rich interactive card. The inserted card is the [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)-based Loop component.
 
@@ -57,7 +57,7 @@ Once you have met all the requirements, you can now upgrade the Adaptive Card in
 
 ### Setup your dev environment to test in Teams
 
-To configure, distribute, and manage your application use the Developer Portal for Teams. More detailed instructions on registering your application can be found at [Manage your apps with the Developer Portal](../concepts/build-and-test/teams-developer-portal.md#test-your-app-directly-in-teams). The Developer Portal provides options for testing and debugging your app:
+To configure, distribute, and manage your application use the Developer Portal for Teams. More detailed instructions on registering your application can be found at [Manage your apps with the Developer Portal](../concepts/build-and-test/teams-developer-portal.md). The Developer Portal provides options for testing and debugging your app:
 
 * On the **Overview page**, you can see a snapshot of whether your app's configurations validate against Teams store 
 test cases.

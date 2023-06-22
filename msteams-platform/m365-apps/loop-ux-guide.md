@@ -1,6 +1,6 @@
 ---
 title: Loop components User Experience (UX) guidelines
-description:
+description: In this article, learn User Experience (UX) guidelines to build an Adaptive Card based Loop component with the right styling.
 ms.author: mobajemu
 ms.date: 06/15/2023
 ms.topic: tutorial
@@ -15,10 +15,10 @@ ms.localizationpriority: medium
 Microsoft Loop components are live, actionable units of productivity that stay in sync and move freely across Microsoft 365 apps. It includes the capability for developers to create Loop components by evolving an existing Adaptive Card into a Loop component or creating a new Adaptive Card-based Loop component.
 
 ## Loop components are live, embedded, actionable, and portable.
-|||
+|Property|Function|
 |---|---|
 |Live| The latest information is populated in the card. If there are multiple instances, they remain in sync as updates are made. |
-|Embeddable |  I Cards can be placed into documents and conversations that are separate from the rest of the content. |
+|Embedded |  I Cards can be placed into documents and conversations that are separate from the rest of the content. |
 | Actionable | Tasks can be completed inline. |
 | Portable | Components can work across to Microsoft 365 app that supports Loop components |
  
