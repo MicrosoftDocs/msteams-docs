@@ -148,30 +148,30 @@ You can customize sending the notification to the following targets:
 
 # [TypeScript](#tab/ts2)
 
-      ```TypeScript
-      // list all installation targets
-      for (const target of await notificationApp.notification.installations()) {
-          // "Person" means this bot is installed as Personal app
-          if (target.type === "Person") {
-              // Directly notify the individual person
-              await target.sendAdaptiveCard(...);
-          }
+  ```TypeScript
+  // list all installation targets
+  for (const target of await notificationApp.notification.installations()) {
+      // "Person" means this bot is installed as Personal app
+      if (target.type === "Person") {
+          // Directly notify the individual person
+          await target.sendAdaptiveCard(...);
       }
-      ```
+  }
+  ```
 
 # [C#](#tab/csharp2)
 
-      ```C#
-      // list all installation targets
-      foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
-          // "Person" means this bot is installed as Personal app
-          if (target.Type == NotificationTargetType.Person)
-          {
-             // Directly notify the individual person
-             await target.SendAdaptiveCard(...);
-          }
+  ```C#
+  // list all installation targets
+  foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
+      // "Person" means this bot is installed as Personal app
+      if (target.Type == NotificationTargetType.Person)
+      {
+         // Directly notify the individual person
+         await target.SendAdaptiveCard(...);
       }
-      ```
+  }
+  ```
 
 ---
 
@@ -179,14 +179,14 @@ You can customize sending the notification to the following targets:
 
 # [TypeScript](#tab/ts3)
 
-      ```TypeScript
-      // list all installation targets
-      for (const target of await notificationApp.notification.installations()) {
-        // "Group" means this bot is installed to a Group Chat
-        if (target.type === "Group") {
-            // Directly notify the Group Chat
-            await target.sendAdaptiveCard(...);
-    
+   ```TypeScript
+  // list all installation targets
+  for (const target of await notificationApp.notification.installations()) {
+    // "Group" means this bot is installed to a Group Chat
+    if (target.type === "Group") {
+        // Directly notify the Group Chat
+        await target.sendAdaptiveCard(...);
+
             // List all members in the Group Chat then notify each member
             const members = await target.members();
             for (const member of members) {
@@ -194,28 +194,27 @@ You can customize sending the notification to the following targets:
             }
         }
     
-      }
-      ```
+  }
+  ```
 
 # [C#](#tab/csharp3)
 
-      ```C#
-      // list all installation targets
-      foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
-        // "Group" means this bot is installed to a Group Chat
-        if (target.Type == NotificationTargetType.Group)
-        {
-            // Directly notify the Group Chat
-            await target.SendAdaptiveCard(...);
-    
-            // List all members in the Group Chat then notify each member
-            var members = await target.GetMembersAsync();
-            foreach (var member in members) {
-                await member.SendAdaptiveCard(...);
-            }
+  ```C#
+  // list all installation targets
+  foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
+    // "Group" means this bot is installed to a Group Chat
+    if (target.Type == NotificationTargetType.Group)
+    {
+        // Directly notify the Group Chat
+        await target.SendAdaptiveCard(...);
+    // List all members in the Group Chat then notify each member
+        var members = await target.GetMembersAsync();
+        foreach (var member in members) {
+            await member.SendAdaptiveCard(...);
         }
-      }
-      ```
+    }
+  }
+  ```
 
 ---
 
@@ -223,82 +222,82 @@ You can customize sending the notification to the following targets:
 
 # [TypeScript](#tab/ts4)
 
-      ```TypeScript
-      // list all installation targets
-      for (const target of await notificationApp.notification.installations()) {
-        // "Channel" means this bot is installed to a Team (default to notify General channel)
-        if (target.type === "Channel") {
-            // Directly notify the Team (to the default General channel)
-            await target.sendAdaptiveCard(...);
-    
-            // List all members in the Team then notify each member
-            const members = await target.members();
-            for (const member of members) {
-                await member.sendAdaptiveCard(...);
-            }
-    
-            // List all channels in the Team then notify each channel
-            const channels = await target.channels();
-            for (const channel of channels) {
-                await channel.sendAdaptiveCard(...);
-            }
+  ```TypeScript
+  // list all installation targets
+  for (const target of await notificationApp.notification.installations()) {
+    // "Channel" means this bot is installed to a Team (default to notify General channel)
+    if (target.type === "Channel") {
+        // Directly notify the Team (to the default General channel)
+        await target.sendAdaptiveCard(...);
+
+        // List all members in the Team then notify each member
+        const members = await target.members();
+        for (const member of members) {
+            await member.sendAdaptiveCard(...);
         }
-      }
-      ```
+
+        // List all channels in the Team then notify each channel
+        const channels = await target.channels();
+        for (const channel of channels) {
+            await channel.sendAdaptiveCard(...);
+        }
+    }
+  }
+  ```
 
 # [C#](#tab/csharp4)
 
-      ```C#
-      // list all installation targets
-      foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
-        // "Channel" means this bot is installed to a Team (default to notify General channel)
-        if (target.Type == NotificationTargetType.Channel)
-        {
-            // Directly notify the Team (to the default General channel)
-            await target.SendAdaptiveCard(...);
-    
-            // List all members in the Team then notify each member
-            var members = await target.GetMembersAsync();
-            foreach (var member in members) {
-                await member.SendAdaptiveCard(...);
-            }
-    
-            // List all channels in the Team then notify each channel
-            var channels = await target.GetChannelsAsync();
-            foreach (var channel in channels) {
-                await channel.SendAdaptiveCard(...);
-            }
+  ```C#
+  // list all installation targets
+  foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
+    // "Channel" means this bot is installed to a Team (default to notify General channel)
+    if (target.Type == NotificationTargetType.Channel)
+    {
+        // Directly notify the Team (to the default General channel)
+        await target.SendAdaptiveCard(...);
+
+        // List all members in the Team then notify each member
+        var members = await target.GetMembersAsync();
+        foreach (var member in members) {
+            await member.SendAdaptiveCard(...);
         }
-      }
-      ```
+
+        // List all channels in the Team then notify each channel
+        var channels = await target.GetChannelsAsync();
+        foreach (var channel in channels) {
+            await channel.SendAdaptiveCard(...);
+        }
+    }
+  }
+  ```
 
 ---
 
 * Notifications to a specific channel:
 
- ```TypeScript
- // find the first channel when the predicate is true.
- const channel = await notificationApp.notification.findChannel(c => Promise.resolve(c.info.name === "MyChannelName"));
-
- // send adaptive card to the specific channel.
- await channel?.sendAdaptiveCard(...);
- ```
+     ```TypeScript
+     // find the first channel when the predicate is true.
+     const channel = await notificationApp.notification.findChannel(c => Promise.resolve(c.info.name === "MyChannelName"));
+    
+     // send adaptive card to the specific channel.
+     await channel?.sendAdaptiveCard(...);
+     ```
 
    > [!NOTE]
    > To prevent an undefined output, ensure that you install the bot app in the **General** channel of a Team.
 
 * Notifications to a specific person:
 
- ```TypeScript
- // find the first person when the predicate is true.
- const member = await notificationApp.notification.findMember(m => Promise.resolve(m.account.name === "Bob"));
+     ```TypeScript
+     // find the first person when the predicate is true.
+     const member = await notificationApp.notification.findMember(m => Promise.resolve(m.account.name === "Bob"));
+    
+     // send adaptive card to the specific person. 
+     await member?.sendAdaptiveCard(...);
+     ```
 
- // send adaptive card to the specific person. 
- await member?.sendAdaptiveCard(...);
- ```
-
- > [!NOTE]
- > To prevent an undefined output and a missing notification, you need to include the specific person in notification installation scope.
+     > [!NOTE]
+     > To prevent an undefined output and a missing notification, you need to include the specific person in notification installation scope.
 
 [Back to top](#notification-bot-in-teams)
 
