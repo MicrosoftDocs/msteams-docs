@@ -76,6 +76,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Collaborative Stage View
+        url: tabs/tabs-link-unfurling.md#collaborative-stage-view
       - text: Real-time meeting events are supported in channel meetings
         url: apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api
       - text: Resource-specific consent for your Teams app
@@ -94,12 +96,13 @@ landingContent:
         url:  tabs/how-to/build-a-dashboard-tab-app.md
       - text: Targeted in-meeting notification (Developer preview)
         url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
-      - text: Enable app caching for your tab app (Developer preview)
-        url: apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching
         
+
 
     - linkListType: whats-new
       links:
+      - text: Enable app caching for your tab app (Developer preview)
+        url: apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching
       - text: Update and soft delete event notifications in bot
         url: bots/how-to/update-and-delete-bot-messages.md#get-edit-or-undelete-message-events
       - text: Set up Microsoft license management
