@@ -10,15 +10,15 @@ ms.date: 06/14/2023
 
 # Debug for mobile
 
-When you're building a Microsoft Teams app that includes tab, bot, and message extension. You must test how your app functions on both Android and iOS Microsoft Teams mobile clients.
+When you're building a Microsoft Teams app that includes tab, bot, or message extension, you must debug your app to know how the app functions on both Android and iOS Microsoft Teams mobile clients.
 
-## Test your tab app on mobile client
+## Debug your tab app 
 
-1. Follow the steps to test your tab app on mobile:
+To debug your tab app follow these steps:
 
 # [Visual Studio Code](#tab/vscode)
 
-1. You can view the project folders and files under **Explorer** in the Visual Studio Code after debugging.
+You can view the project folders and files under **Explorer** in the Visual Studio Code after debugging.
 1. Add `Start local tunnel` after `Validate prerequisites` in the `task.json` file to make the tab app accessible on the mobile client.
 1. Add the following code after the property `dependsOrder` in the `task.json` file.
 
@@ -133,7 +133,9 @@ Once the provisioning and deployment steps are complete:
 
 :::image type="content" source="../assets/images/debug-mobile/login.PNG" alt-text="The screenshot shows the login page.":::
 
-3. Open Teams on your mobile device and select **More** to find the previewing app.
+## Test your tab app on mobile client
+
+1. Open Teams on your mobile device and select **More** to find the previewing app.
 
 :::image type="content" source="../assets/images/debug-mobile/debug-mobile.PNG" alt-text="The screenshot showing an app being installed in mobile clients.":::
 
@@ -154,7 +156,7 @@ To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage
 
 ---
 
-4. If you're accessing the dev tunnel for the first time, Sign in to Microsoft 365 account and select **continue**.
+2. If you're accessing the dev tunnel for the first time, Sign in to Microsoft 365 account and select **continue**.
 
 :::image type="content" source="../assets/images/debug-mobile/m365-sign-in.PNG" alt-text="The screenshot showing the Microsoft 365 sign in page.":::
 
