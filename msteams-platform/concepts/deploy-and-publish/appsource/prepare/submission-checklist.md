@@ -46,7 +46,7 @@ Depending on your app functionality, you're required to provide Teams tenant con
 
         * Ensure that test accounts are safe-listed or configured with license keys, if applicable.
         * If your app requires users to log in or connect to external services, provide the required credentials to complete the login or connection with the external service.
-        * Ensure that phone-based 2-way authentication is disabled for test accounts.
+        * Ensure that phone-based two-way authentication is disabled for test accounts.
         * If the app provides a collaborative experience, provide a non-admin account for each user persona. For example, if your app is used by teachers and students, provide credentials for both user personas.
         * Ensure that at least one account has access to premium or upgraded features, if applicable.
         * All accounts you provide must include pre-populated data to help in testing. For example, if your app helps to provide market insights based on the user profile, ensure that market data is pre-populated along with a few user profiles.
@@ -119,7 +119,7 @@ The long description can provide a narrative that highlights your apps:
 * The problems it solves
 * Target audience
 
-While this description can be as long as 4,000 characters, most users will only read between 300-500 words.
+While this description can be as long as 4,000 characters, most users only read between 300-500 words.
 
 :::row:::
 
@@ -179,7 +179,7 @@ You can add a URL for your YouTube or Vimeo video.
 #### Best practices for videos
 
 * Keep your video between 60-90 seconds.
-* Aim for quality. In a listing, users will see your video before screenshots.
+* Aim for quality. In a listing, users see your video before screenshots.
 * Communicate the value of the product in narrative form.
 * Demonstrate how the product works.
 
