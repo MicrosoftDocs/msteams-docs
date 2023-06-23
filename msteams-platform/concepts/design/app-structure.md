@@ -5,6 +5,7 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
+ms.date: 06/01/2022
 --- 
 # Understand the Microsoft Teams app structure
 

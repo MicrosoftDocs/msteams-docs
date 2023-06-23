@@ -5,6 +5,7 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high 
+ms.date: 01/31/2023
 ---
 
 # In-app purchases

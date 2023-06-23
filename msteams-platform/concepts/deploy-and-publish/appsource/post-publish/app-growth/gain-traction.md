@@ -5,6 +5,7 @@ description: Learn what you can do during the traction stage of your app to grow
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.date: 02/21/2023
 ---
 # Gain traction for your collaborative app in the market
 

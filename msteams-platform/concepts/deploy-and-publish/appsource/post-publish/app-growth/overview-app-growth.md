@@ -5,6 +5,7 @@ description: Learn to plan, strategize and execute growth for your app.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.date: 02/21/2023
 ---
 
 # Strategize and execute growth for your app
