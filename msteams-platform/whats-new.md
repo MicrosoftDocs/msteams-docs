@@ -20,7 +20,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 |23/05/2023 |  Live Share SDK is now generally available. | Build apps for Teams meetings and calls > Enhanced collaboration with Live Share > [Live Share SDK](apps-in-teams-meetings/teams-live-share-overview.md)|
 |23/05/2023 | Use the guidelines that helps to make quick and right design decisions to design your app. | Design your app > [Overview](concepts/design/design-teams-app-overview.md)|
 |17/05/2023 | Cater your app to a specific audience from the available list of countries and communicate about your app in ways that are relevant to the user. | Distribute your app > Publish to the Teams store > Prepare your Teams store submission > [Distribute your app to specific countries](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries)|
-| 17/05/2023 | Introduced the Teams Toolkit v5 extension within Visual Studio Code. | Tools and SDKs > Teams Toolkit > [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md)|
+| 17/05/2023 | Introduced the Teams Toolkit v5 extension within Visual Studio Code with many new app development features. | Tools and SDKs > Teams Toolkit > [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md)|
 | 17/05/2023 | Updated Get started module with GitHub Codespaces and step-by-step guides aligned with Teams Toolkit v5. It also includes details for extending Teams app over Microsoft 365 and Outlook. | [Get started](get-started/get-started-overview.md)|
 
 ## Generally available
@@ -37,7 +37,7 @@ Teams platform features that are available to all app developers.
 
 **2023 June**
 
-* ***June 14, 2023***: [Collaborative Stage View](tabs/tabs-link-unfurling.md#collaborative-stage-view) allows users to engage with your app content in a new Teams window.
+* ***June 14, 2023***: [Collaborative Stage View](tabs/tabs-link-unfurling.md#collaborative-stage-view).
 
 * ***June 14, 2023***: [Added validation guidelines for Teams app powered by Artificial Intelligence (AI)](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-powered-by-ai).
 
@@ -52,13 +52,13 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 24/04/2023 | Guidelines to develop your apps with Teams Toolkit | Tools and SDKs > Developer Portal for Teams > [Develop your apps with Teams Toolkit](concepts/build-and-test/develop-your-apps-with-teams-toolkit.md) |
-| 14/04/2023 | Introduced contextless app update in real-time| Distribute your app > [Upload your app in Teams](concepts/deploy-and-publish/apps-upload.md#update-your-app) |
-| 06/04/2023 | Set up Microsoft license management to help Teams admins or users to manage the SaaS licenses | Monetize your app > [Set up Microsoft license management](~/concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md) |
-| 04/04/2023 | Tab apps in shared channels are available in DOD | Build tabs > [Build apps for shared channels](~/concepts/build-and-test/shared-channels.md) |
-| 23/03/2023 | Apps are available for scheduled public channel meetings | Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md) |
-| 20/03/2023 | Bots are available in DOD | Build bots > [Overview](bots/what-are-bots.md)|
-| 20/03/2023 | Message extensions are available in DOD | Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md)|
+| 24/04/2023 | Develop your apps with a seamless transition between the Teams Developer Portal and the Teams Toolkit. | Tools and SDKs > Developer Portal for Teams > [Develop your apps with Teams Toolkit](concepts/build-and-test/develop-your-apps-with-teams-toolkit.md) |
+| 14/04/2023 | Introduced contextless app update that enables real-time reflection of changes in Teams without sideloading your app.| Distribute your app > [Upload your app in Teams](concepts/deploy-and-publish/apps-upload.md#update-your-app) |
+| 06/04/2023 | Set up Microsoft license management for third-party SaaS apps in Partner Centre as part of the offer publishing that allows easy management and tracking of licenses for third-party app subscriptions within Teams. | Monetize your app > [Set up Microsoft license management](~/concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md) |
+| 04/04/2023 | Tab apps in shared channels are available in Department of Defense (DOD). | Build tabs > [Build apps for shared channels](~/concepts/build-and-test/shared-channels.md) |
+| 23/03/2023 | Apps are available for meetings scheduled through Teams public channels. | Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md) |
+| 20/03/2023 | Bots are available in DOD. | Build bots > [Overview](bots/what-are-bots.md)|
+| 20/03/2023 | Message extensions are available in DOD. | Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md)|
 | 28/02/2023 | Facilitate adoption of your app and create awareness | Distribute your app > adoption > [Drive customer adoption of your app](promote-app-adoption.md) |
 | 27/02/2023 | Changelog for Developer Portal facilitate to view latest updates in Teams | Tools and SDKs > Developer Portal for Teams > [Overview](concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal) |
 | 23/02/2023 | SSO authentication allow Teams to access your Adaptive Cards Universal Actions in a bot | Add authentication > Enable SSO for your Teams app > Enable SSO for Adaptive Cards Universal Actions in your bot > [Overview](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md) |
