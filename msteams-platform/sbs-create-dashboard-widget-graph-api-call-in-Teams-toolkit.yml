@@ -48,7 +48,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-a-new-teams-app-2.png" alt-text="Screenshot shows the selection of new Teams app.":::
 
-     1. Select **Dashboard** from the App Features Using a Tab.
+     1. Select **Dashboard**.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-tab-preview.png" alt-text="Screenshot shows the selection of dashboard tab preview.":::
 
@@ -56,25 +56,29 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/programming-language.png" alt-text="Screenshot shows the selection of programming language.":::
 
-     1. Select a workspace folder.
+     1. Select **Default** folder to store your project root folder in default location.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/default-folder.png" alt-text="Screenshot shows the selection of workspace folder.":::
 
-     1. Enter an application name.
+     1. Enter a suitable name for your app. Select **Enter**.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/enter-application-name.png" alt-text="Screenshot shows the selection of application name.":::
 
-        The Teams tab app is created in few seconds and Teams Toolkit displays the following message.
+        Teams Toolkit creates tab app in few seconds and displays the following message.
       
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-app-preview.png" alt-text="Screenshot shows the teams tab app dashboard preview in VS Code.":::
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-debug.png" alt-text="Screenshot shows the local debug.":::
 
      1. Select the Teams Toolkit icon in sidebar.
-     
-     1. Select **sign in** to Microsoft 365 account using test credentials.
+
+     1. Select **Sign in to Microsoft 365**.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/M365-account-signin.png" alt-text="Screenshot shows the Microsoft sign in.":::
+
+      1. A promt appears select **Sign in**.
+
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/account-signin" alt-text="Screenshot shows the Microsoft sign in.":::
 
      1. Select **F5** to run the application in debug mode.
 
@@ -82,14 +86,26 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-dashboard-add.png" alt-text="Screenshot shows the selection of workspace folder.":::
 
-        Successfully created the teams tab app dashboard.
+        The Teams tab app dashboard is successfully created.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity.":::
 
         Teams app also supports different themes, including dark and high contrast themes.
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-light-theme.png" alt-text="Screenshot shows the contrast themes.":::
-      
+      # [Dark Theme](#tab/dark theme)
+
+      The following image shows the use of Dark theme in the Teams desktop client:
+
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-mode.png" alt-text="Screenshot shows the contrast themes.":::
+
+      # [High Contrast Theme](#tab/high contrast theme)
+
+      The following image shows the use of High contrast theme in the Teams desktop client:
+
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/high-contrast.png" alt-text="Screenshot shows the contrast themes.":::
+
+      ---
+
       In TeamsFX CLI,
 
       * If you prefer interactive mode, execute `teamsfx new` command, then use the keyboard to go through the same flow as in Visual Studio Code.
@@ -165,6 +181,9 @@ items:
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-model.png" alt-text="Screenshot shows the creation of sampleModel file under the models folder in Visual Studio Code. ":::
 
      ## Create a data retrieve service
+      
+      > [!NOTE]
+      > You can implement a service to retrieve data from the backend service or from Microsoft Graph API.
 
      1. In Visual Studio Code, go to **EXPLORER** > **src** > **services**.
      1. Create a **sampleService.ts** file.
@@ -179,9 +198,6 @@ items:
         ```
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/service-retrieve.png" alt-text="Screenshot shows the creation of sampleService.ts file under the service folder in Visual Studio Code.":::
-
-      > [!NOTE]
-      > You can implement a service to retrieve data from the backend service or from Microsoft Graph API.
     
      ## Create a widget file
 
@@ -224,7 +240,7 @@ items:
       To add a widget to the dashboard, follow these steps:
 
       1. In Visual Studio Code, go to **Explorer** > **src** > **dashboards** > **SampleDashboard.tsx**.
-      1. Update the `dashboardLayout()` method to add the widget to the dashboard:
+      1. Update the `override layout()` method to add the widget to the dashboard:
 
           ```typescript
           override layout(): JSX.Element | undefined {
@@ -242,7 +258,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-dashboard.png" alt-text="Screenshot shows the existing sampleDashboard file in Visual Studio Code."::: 
 
-          Optional: If you want put your widget in a column, you can refer to the following code:
+          Optional: If you want to place your widget in a column, you can refer to the following code:
 
             ```css
             .one-column {
@@ -274,160 +290,145 @@ items:
 
             You can change the look and style of the widget. For more information, see [customize the widget](tabs/how-to/build-a-dashboard-tab-app.md#customize-the-widget).
 
-- title: Add a new Graph API call
+- title: Add a SSO and Graph API call
   durationInMinutes: 5
   content: |
 
-   **Scenario 1**
-
-    Add single sign-on (SSO) related files by using Teams toolkit:
-    
-     1. Select the Teams Toolkit icon in the Visual Studio Code Activity Bar.
-   
-     1. Under **DEVELOPMENT**, select **View How-to Guides**.
-   
-         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/add-features.png" alt-text="Screenshot shows the selection of added features option.":::
-
-     1. Select **Develop Single Sign-On Experience in Teams**.
-
-          :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/single-sign-on.png" alt-text="Screenshot shows the selection of single sign-on option.":::
-
-     1. To add sso for react follow these steps
-
-        1. [Create Azure Active Directory app manifest](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams#azure-active-directory-app-manifest). 
-        1. [Update Teams app manifest](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams#teams-app-manifest). 
-        1. [Update Teams Toolkit configuration files](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams#teams-toolkit-configuration-files). 
-        1. Create auth-start.html and auth-end.html files in public folder.
-        1. Add the codes in [auth-start.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-start.html) and [auth-end.html](https://github.com/OfficeDev/TeamsFx/blob/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/public/auth-end.html).
-
-   **Scenario 2**
-
-    To add Single Sign On (SSO), follow these steps:
+     ## Add SSO
+     
+     To add Single Sign On (SSO), follow these steps:
 
      1. [Create Azure Active Directory app manifest](#create-azure-active-directory-app-manifest)
      1. [Update Teams app manifest](#update-teams-app-manifest)
      1. [Update Teams Toolkit configuration files](#update-teams-toolkit-configuration-files)
      1. [Update Source Code](#update-source-code)
        
-     ## Create Azure Active Directory app manifest
+     ## Create Azure Active Directory(AAD) app manifest
 
-     1. In Visual Studio Code, go to **EXPLORER**.
-     1. Create a `aad.manifest.json` file.
-     1. Add the following code in `aad.manifest json`.
+      <!-- markdownlint-disable MD033 -->
 
-        ```typescript
-         {
-          "id": "${{AAD_APP_OBJECT_ID}}",
-          "appId": "${{AAD_APP_CLIENT_ID}}",
-          "name": "dashboardV5Demo",
-          "accessTokenAcceptedVersion": 2,
-          "signInAudience": "AzureADMyOrg",
-          "optionalClaims": {
-              "idToken": [],
-              "accessToken": [
-                  {
-                    "name": "idtyp",
-                    "source": null,
-                    "essential": false,
-                    "additionalProperties": []
-                  }
-              ],
-              "saml2Token": []
-          },
-          "requiredResourceAccess": [
-              {
-                "resourceAppId": "Microsoft Graph",
-                "resourceAccess": [
+      <details>
+      <summary>Create AAD app manifest.</summary>
+
+      1. In Visual Studio Code, go to **EXPLORER**.
+      1. Create a `aad.manifest.json` file.
+      1. Add the following code in `aad.manifest json`.
+
+          ```json
+          {
+            "id": "${{AAD_APP_OBJECT_ID}}",
+            "appId": "${{AAD_APP_CLIENT_ID}}",
+            "name": "dashboardV5Demo",
+            "accessTokenAcceptedVersion": 2,
+            "signInAudience": "AzureADMyOrg",
+            "optionalClaims": {
+                "idToken": [],
+                "accessToken": [
                     {
-                      "id": "User.Read",
-                      "type": "Scope"
+                      "name": "idtyp",
+                      "source": null,
+                      "essential": false,
+                      "additionalProperties": []
                     }
-                ]
-              }
-          ],
-          "oauth2Permissions": [
-              {
-                "adminConsentDescription": "Allows Teams to call the app's web APIs as the current user.",
-                "adminConsentDisplayName": "Teams can access app's web APIs",
-                "id": "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}",
-                "isEnabled": true,
-                "type": "User",
-                "userConsentDescription": "Enable Teams to call this app's web APIs with the same rights that you have",
-                "userConsentDisplayName": "Teams can access app's web APIs and make requests on your behalf",
-                "value": "access_as_user"
-              }
-          ],
-          "preAuthorizedApplications": [
-              {
-                  "appId": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
-                  "permissionIds": [
-                      "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                  ]
-              },
-              {
-                  "appId": "5e3ce6c0-2b1f-4285-8d4b-75ee78787346",
-                  "permissionIds": [
-                      "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                  ]
-              },
-              {
-                  "appId": "d3590ed6-52b3-4102-aeff-aad2292ab01c",
-                  "permissionIds": [
-                      "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                  ]
-              },
-              {
-                  "appId": "00000002-0000-0ff1-ce00-000000000000",
-                  "permissionIds": [
-                      "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                  ]
-              },
-              {
-                  "appId": "bc59ab01-8403-45c6-8796-ac3ef710b3e3",
-                  "permissionIds": [
-                      "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                  ]
-              },
-              {
-                  "appId": "0ec893e0-5785-4de6-99da-4ed124e5296c",
-                  "permissionIds": [
-                      "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                  ]
-              },
-              {
-                  "appId": "4765445b-32c6-49b0-83e6-1d93765276ca",
-                  "permissionIds": [
-                      "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                  ]
-              },
-              {
-                  "appId": "4345a7b9-9a63-4910-a426-35363201d503",
-                  "permissionIds": [
-                      "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                  ]
-              }
-          ],
-          "identifierUris": [
-            "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
-          ],
-          "replyUrlsWithType": [
-            {
-              "url": "${{TAB_ENDPOINT}}/auth-end.html",
-              "type": "Web"
+                ],
+                "saml2Token": []
             },
-            {
-              "url": "${{TAB_ENDPOINT}}/auth-end.html?clientId=${{AAD_APP_CLIENT_ID}}",
-              "type": "Spa"
-            },
-            {
-              "url": "${{TAB_ENDPOINT}}/blank-auth-end.html",
-              "type": "Spa"
-            }
-          ]
-        }        
-        ```
+            "requiredResourceAccess": [
+                {
+                  "resourceAppId": "Microsoft Graph",
+                  "resourceAccess": [
+                      {
+                        "id": "User.Read",
+                        "type": "Scope"
+                      }
+                  ]
+                }
+            ],
+            "oauth2Permissions": [
+                {
+                  "adminConsentDescription": "Allows Teams to call the app's web APIs as the current user.",
+                  "adminConsentDisplayName": "Teams can access app's web APIs",
+                  "id": "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}",
+                  "isEnabled": true,
+                  "type": "User",
+                  "userConsentDescription": "Enable Teams to call this app's web APIs with the same rights that you have",
+                  "userConsentDisplayName": "Teams can access app's web APIs and make requests on your behalf",
+                  "value": "access_as_user"
+                }
+            ],
+            "preAuthorizedApplications": [
+                {
+                    "appId": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
+                    "permissionIds": [
+                        "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
+                    ]
+                },
+                {
+                    "appId": "5e3ce6c0-2b1f-4285-8d4b-75ee78787346",
+                    "permissionIds": [
+                        "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
+                    ]
+                },
+                {
+                    "appId": "d3590ed6-52b3-4102-aeff-aad2292ab01c",
+                    "permissionIds": [
+                        "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
+                    ]
+                },
+                {
+                    "appId": "00000002-0000-0ff1-ce00-000000000000",
+                    "permissionIds": [
+                        "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
+                    ]
+                },
+                {
+                    "appId": "bc59ab01-8403-45c6-8796-ac3ef710b3e3",
+                    "permissionIds": [
+                        "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
+                    ]
+                },
+                {
+                    "appId": "0ec893e0-5785-4de6-99da-4ed124e5296c",
+                    "permissionIds": [
+                        "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
+                    ]
+                },
+                {
+                    "appId": "4765445b-32c6-49b0-83e6-1d93765276ca",
+                    "permissionIds": [
+                        "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
+                    ]
+                },
+                {
+                    "appId": "4345a7b9-9a63-4910-a426-35363201d503",
+                    "permissionIds": [
+                        "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
+                    ]
+                }
+            ],
+            "identifierUris": [
+              "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
+            ],
+            "replyUrlsWithType": [
+              {
+                "url": "${{TAB_ENDPOINT}}/auth-end.html",
+                "type": "Web"
+              },
+              {
+                "url": "${{TAB_ENDPOINT}}/auth-end.html?clientId=${{AAD_APP_CLIENT_ID}}",
+                "type": "Spa"
+              },
+              {
+                "url": "${{TAB_ENDPOINT}}/blank-auth-end.html",
+                "type": "Spa"
+              }
+            ]
+          }        
+          ```
 
-        :::image type="content" source="assets/images/sbs-create-a-new-dashboard/aad-app-manifest.png" alt-text="Screenshot shows the azure active dirctory code addition. ":::
+          :::image type="content" source="assets/images/sbs-create-a-new-dashboard/aad-app-manifest.png" alt-text="Screenshot shows the azure active dirctory code addition. ":::
+
+        </details>
 
      ## Update Teams app manifest
 
