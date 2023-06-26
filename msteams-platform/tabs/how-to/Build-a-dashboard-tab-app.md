@@ -22,46 +22,6 @@ The dashboard tab template from Teams Toolkit allows you to get started with int
 
 Your team can get the latest updates from different sources in Teams using the Teams dashboard tab app. Use dashboard tab apps to connect numerous metrics, data sources, APIs, and services. Dashboard tab apps help your business extract relevant information from the sources and present it to the users. For more information about creating a dashboard tab app, see [step-by-step guide](#step-by-step-guide).
 
-### Add widget to the dashboard
-
-Navigate to the `src/dashboards/SampleDashboard.tsx` file and include the widget in the implementation of the `layout()` method. For more information on how to create a new dashboard, see [how to add a new dashboard](https://github.com/OfficeDev/TeamsFx/wiki/Embed-a-dashboard-canvas-in-Teams#how-to-add-a-new-dashboard).
-
-```
-override layout(): JSX.Element | undefined {
-  return (
-    <>
-      <ListWidget />
-      <ChartWidget />
-      <SampleWidget />
-    </>
-  );
-}
-```
-
-Use the following code snippet if you prefer to arrange multiple widgets within the same column:
-
-```
-.one-column {
-  display: grid;
-  gap: 20px;
-  grid-template-rows: 1fr 1fr;
-}
-```
-
-```javascript
-override layout(): JSX.Element | undefined {
-  return (
-    <>
-      <ListWidget />
-      <div className="one-column">
-        <ChartWidget />
-        <SampleWidget />
-      </div>
-    </>
-  );
-}
-```
-
 ## Add a new dashboard
 
 After you've created a dashboard tab app, you can add a new dashboard.
