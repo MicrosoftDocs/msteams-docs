@@ -536,7 +536,9 @@ items:
 
             :::image type="content" source="assets/images/sbs-create-a-new-dashboard/file-teams-app-local.png" alt-text="Screenshot shows the information to react codes.":::
 
-        </details>  
+        ---
+        
+        </details>          
 
        ### Update Source Code
 
@@ -657,8 +659,10 @@ items:
               </body>
             </html>
           ```     
-
+        
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/auth-end-start.png" alt-text="Screenshot shows the folder structure for auth-start and auth-end files.":::
+
+        ---
 
           You've added the SSO files to your project and now call Graph APIs. 
           
