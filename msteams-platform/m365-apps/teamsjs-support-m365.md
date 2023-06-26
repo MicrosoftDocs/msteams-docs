@@ -497,7 +497,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
 
 ## Preview capabilities awaiting host support
 
-Some capabilities in the source are in early preview and still awaiting initial support in one or more host applications that include [**barCode**](#barcode), [**media**](#media), [**meeting**](#meeting), [**search**](#search), and [**secondaryBrowser**](#secondaryBrowser).
+Some capabilities in the source are in early preview and still awaiting initial support in one or more host applications that include [**barCode**](#barcode), [**media**](#media), [**meeting**](#meeting), [**search**](#search), and [**secondaryBrowser**](#secondarybrowser).
 
 The remainder of this article provides further information on each capability of the Teams JavaScript client library.
 
