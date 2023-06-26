@@ -5,6 +5,7 @@ description: In this module, learn how to install Collaboration controls with po
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
+ms.date: ms.date: 10/04/2022
 ---
 
 # Install Collaboration controls

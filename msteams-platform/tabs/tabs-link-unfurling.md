@@ -5,6 +5,7 @@ description: Learn about Stage View and Collaborative Stage View, a full screen 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 06/05/2023
 ---
 
 # Tabs link unfurling and Stage View

@@ -4,6 +4,7 @@ description: Learn about the benefits of using Workforce management Shifts conne
 ms.topic: reference
 ms.date: 03/09/2020
 ms.localizationpriority: medium
+ms.date: 08/10/2022
 ---
 
 # Production-ready Shifts Connectors  
