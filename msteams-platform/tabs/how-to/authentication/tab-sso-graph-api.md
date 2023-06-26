@@ -219,7 +219,7 @@ Tenant admin consent: A simple way of [consenting on behalf of an organization a
 
 Another approach for getting Graph scopes is to present a consent dialog using our existing [third party OAuth provider authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves presenting an Azure AD consent dialog box to the user.
 
-You can also ask for consent using the TeamsJS [authentication](/javascript/api/@microsoft/teams-js/authentication) capability. 
+You can also ask for consent using the TeamsJS [authentication](/javascript/api/@microsoft/teams-js/authentication) capability.
 
 <details>
 <summary>To obtain consent using the TeamsJS client library, follow these steps:</summary>
@@ -227,8 +227,8 @@ You can also ask for consent using the TeamsJS [authentication](/javascript/api/
 > [!TIP]
 > The [Teams Personal Tab SSO Authentication](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-personal-sso-quickstart/js/src/components/Tab.js#L64-L101) sample provides code demonstrating following steps.
 
-1. The token retrieved using `getAuthToken()` must be exchanged on the server-side using Azure AD [on-behalf-of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to those other Graph APIs. Ensure you use the v2 Graph endpoint for this exchange.
-2. Often the first time you try to execute this token exchange for a user, Azure AD will refuse to exchange tokens because the user has not consented to giving your app permission to their data for this purpose. In these cases, your exchange will fail with either the `invalid_grant` or `interaction_required` error.
+1. The token retrieved using `getAuthToken()` must be exchanged on the server-side using Azure AD [on-behalf-of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to those other Graph APIs. Ensure you use the Azure AD v2 endpoint for this exchange.
+2. Often the first time you try to execute this token exchange for a user, Azure AD will refuse to exchange tokens because the user has not consented to giving your app permission to their data for this purpose. In these cases, your exchange will fail with either the `invalid_grant` or `interaction_required` error.  Examples of *invalid_grant* errors include when consent is required or *auth_code*, assertion, or the refresh token is expired, revoked, malformed, or absent. Examples of *interaction_required* include when multi-factor authentication or corporate device enrollment is required.
 3. If the exchange fails for one of these two reasons, you must prompt the user for consent. Since user interaction can only happen from the client, your server will need to return an indication to your client app that consent is required. You can then use the user interface (UI) to ask the app user to grant other consent. This UI must include a button that triggers an  [Azure AD consent dialog](../../../tabs/how-to/authentication/tab-sso-code.md#consent-dialog-for-getting-access-token).
 4. In order to ask the user for consent for your application to access their data, you must include `prompt=consent` in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) to Azure AD, otherwise Azure AD wouldn't ask for other scopes.
     - Instead of `?scope={scopes}`, use `?prompt=consent&scope={scopes}`
