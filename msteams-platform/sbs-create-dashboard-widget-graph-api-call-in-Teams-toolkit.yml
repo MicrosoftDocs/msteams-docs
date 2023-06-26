@@ -78,7 +78,7 @@ items:
 
      1. A promt appears select **Sign in**.
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/account-signin" alt-text="Screenshot shows the Microsoft sign in.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/account-signin.png" alt-text="Screenshot shows the Microsoft sign in.":::
 
      1. Select **F5** to run the application in debug mode.
 
@@ -92,13 +92,13 @@ items:
 
         Teams app also supports different themes, including dark and high contrast themes.
 
-        # [Dark Theme](#tab/dark theme)
+        # [Dark Theme](#tab/darktheme)
 
         The following image shows the use of Dark theme in the Teams desktop client:
 
            :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-mode.png" alt-text="Screenshot shows the contrast themes.":::
 
-        # [High Contrast Theme](#tab/high contrast theme)
+        # [High Contrast Theme](#tab/highcontrasttheme)
 
         The following image shows the use of High contrast theme in the Teams desktop client:
 
@@ -312,7 +312,7 @@ items:
 
         1. In Visual Studio Code, go to **EXPLORER**.
         1. Create a `aad.manifest.json` file.
-        1. Add the following code in `aad.manifest json`.
+        1. Add the following code in `aad.manifest.json` file.
 
             ```json
             {
@@ -441,7 +441,7 @@ items:
 
         1. In Visual Studio Code, go to **EXPLORER** > **appPackage** > **manifest.json**.
 
-        1. Add the following code after `validdomain` property in the manifest.json file.
+        1. Add the following code after `validdomain` property in the `manifest.json` file.
 
           ```json
             "webApplicationInfo": {
@@ -450,7 +450,7 @@ items:
             }
           ```
 
-          :::image type="content" source="assets/images/sbs-create-a-new-dashboard/teams-app-manifest.png" alt-text="Screenshot shows the addition of web application info in manifest. ":::
+            :::image type="content" source="assets/images/sbs-create-a-new-dashboard/teams-app-manifest.png" alt-text="Screenshot shows the addition of web application info in manifest. ":::
 
         </details>
 
@@ -662,7 +662,8 @@ items:
                 </script>
               </body>
             </html>
-          ```     
+          ```  
+             
         ---
 
        You've added the SSO files to your project and now call Graph APIs. 
