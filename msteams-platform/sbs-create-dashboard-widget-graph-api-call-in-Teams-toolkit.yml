@@ -302,8 +302,8 @@ items:
         <summary>1. Create Azure Active Directory app manifest.</summary>
 
         1. In Visual Studio Code, go to **EXPLORER**.
-        1. Create a `aad.manifest.json` file.
-        1. Add the following code in `aad.manifest.json` file.
+        1. Create a **aad.manifest.json** file.
+        1. Add the following code in **aad.manifest.json** file:
 
             ```json
             {
@@ -428,7 +428,7 @@ items:
 
         1. In Visual Studio Code, go to **EXPLORER** > **appPackage** > **manifest.json**.
 
-        1. Add the following code after `validdomain` property in the `manifest.json` file.
+        1. Add the following code after `validdomain` property in the **manifest.json** file:
 
            ```json
              "webApplicationInfo": {
@@ -472,7 +472,9 @@ items:
 
             :::image type="content" source="assets/images/sbs-create-a-new-dashboard/ttk-teams-app.png" alt-text="Screenshot shows the addition of aadApp/create and aadApp/update code.":::
 
-        1. Find **cli/runNpmCommand** action with name `build app` in `teamsapp.yml` and add following env. 
+        1. Find **cli/runNpmCommand** action with name `build app`. 
+        
+        1.Add following env code.
 
             ```typescript
               env:
@@ -508,7 +510,7 @@ items:
 
             :::image type="content" source="assets/images/sbs-create-a-new-dashboard/ttk-teams-app-local.png" alt-text="Screenshot shows the addition of aadApp/create and aadApp/update code.":::  
 
-        1. Find **file/createOrUpdateEnvironmentFile** action for deploy in `teamsapp.local.yml``.
+        1. Find **file/createOrUpdateEnvironmentFile** action to deploy.
 
         1. Add following env code. 
 
@@ -526,9 +528,7 @@ items:
         <details>
         <summary>4. Update Source Code.</summary>       
 
-        Follow the steps to update source code if you're building your tab app with React framework for [js](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js) or [ts](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts):   
-
-        1. Create auth-start.html and auth-end.html files in public folder.
+        1. Create **auth-start.html** and **auth-end.html** files in **public** folder.
         
            :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/auth-end-start.png" alt-text="Screenshot shows the folder structure for auth-start and auth-end files.":::
 
@@ -648,6 +648,8 @@ items:
         ```  
              
         ---
+
+        </details> 
 
        You've added the SSO files to your project and now call Graph APIs. 
           
