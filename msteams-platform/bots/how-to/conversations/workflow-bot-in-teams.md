@@ -153,7 +153,7 @@ For each action, you can display a new Adaptive Card as a response to the user. 
 }
 ```
 
-* For JS/TS: Create the Adaptive Card file in the `src/adaptiveCards/` folder.
+* For JS or TS: Create the Adaptive Card file in the `src/adaptiveCards/` folder.
 * For C#: Create the Adaptive Card file in the `Resources/` folder.
 
 > [!NOTE]
@@ -288,7 +288,7 @@ Register each Adaptive Card action handler in the `ConversationBot` it can handl
 
 The following steps help you to register the action handler:
 
-1. You can open file `bot/src/internal/initialize.js(ts)`.
+1. Open the file `bot/src/internal/initialize.js(ts)`.
 1. You need to update your `conversationBot` initialization, to enable `cardAction` feature and add the handler to actions array:
 
 # [JavaScript/TypeScript](#tab/JS2)
@@ -400,7 +400,7 @@ You can add new cards, if required for your application. To build different type
 
 When Adaptive Cards are sent in a Teams channel or group chat, all users can see the same card content. With the new refresh model for Adaptive Cards universal action, users can have a user-specific view. The auto-refresh also facilitates scenarios such as approvals, poll creator controls, ticketing, incident management, and project management cards. The following image illustrates how to provide user-specific view with the `refresh` model. For more information, see [Refresh model](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#refresh-model)
 
-:::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-base-card.gif" alt-text="Graphical interface that shows of a user specific auto-refresh model.":::
+:::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-base-card-refresh.png" alt-text="Graphical interface that shows of a user specific auto-refresh model.":::
 
 1. **Base card**: The bot sends a message with the base version of the card. This base card can be sent as a bot notification, command response, or any other card action response. All members of the conversation can view the same response. The base card is automatically refreshed to the user defined `userId` in the `refresh` property of the base card.
 
@@ -496,7 +496,7 @@ You can select from the following options to enable auto-refresh:
 
 You need to design the user-specific Adaptive Card to refresh a specific response card such as `responseCard.json` for `userA` shown in the diagram for [refresh behavior](#auto-refresh-to-user-specific-view).
 
-* For TS/JS: Create the adaptive card file in `src/adaptiveCards/` folder.
+* For TS or JS: Create the adaptive card file in `src/adaptiveCards/` folder.
 * For C#: Create the adaptive card file in `Resources/` folder.
 
 ```responseCard.json
@@ -769,7 +769,7 @@ To add the notification feature:
 
 <summary><b>Extend workflow bot with command and response</b></summary>
 
-The default workflow bot comes with command and response. For more information to extend workflow bot with command and response, see [add command and response](command-bot-in-teams.md#add-command-and-response).
+The default workflow bot comes with command and response. For more information, see [add command and response](command-bot-in-teams.md#add-command-and-response).
 
 </details>
 
