@@ -10,15 +10,16 @@ ms.date: 06/14/2023
 
 # Debug for mobile
 
-When you're building a Microsoft Teams app that includes tab, bot, or message extension, you must debug your app to know how the app functions on both Android and iOS Microsoft Teams mobile clients.
+When you're building a Microsoft Teams app that includes tab, bot, or message extension, you must debug your app to know how the app functions on both Android and iOS Microsoft Teams mobile clients. For more information, see [Debug your Teams app locally](debug-local.md).
 
-## Debug your tab app 
+## Debug your tab app
 
 To debug your tab app follow these steps:
 
 # [Visual Studio Code](#tab/vscode)
 
 You can view the project folders and files under **Explorer** in the Visual Studio Code after debugging.
+
 1. Add `Start local tunnel` after `Validate prerequisites` in the `task.json` file to make the tab app accessible on the mobile client.
 1. Add the following code after the property `dependsOrder` in the `task.json` file.
 
@@ -69,7 +70,7 @@ You can view the project folders and files under **Explorer** in the Visual Stud
 > * To preview the tab app only in mobile client, set the value for `access` property to `private`.
 > * To preview the tab app on the mobile client and debug it on web clients, set the `access` property to `public`. Any user with the app's URL can visit the tab.
 
-4. Remove the `TAB_DOMAIN` and `TAB_ENDPOINT` from the `teamsapp.local.yml` file.
+3. Remove the `TAB_DOMAIN` and `TAB_ENDPOINT` from the `teamsapp.local.yml` file.
 
 ```javascript
  - uses: script 
@@ -79,7 +80,7 @@ You can view the project folders and files under **Explorer** in the Visual Stud
        echo "::set-teamsfx-env TAB_ENDPOINT=https://localhost:53000";
 ```
 
-5. If you're using React, add the configuration `WDS_SOCKET_PORT=0` in `teamsapp.local.yml` file to activate hot reloading while debugging in react after utilizing the tunnel service.
+4. If you're using React, add the configuration `WDS_SOCKET_PORT=0` in `teamsapp.local.yml` file to activate hot reloading while debugging in react after utilizing the tunnel service.
 
 ```javascript
   - uses: file/createOrUpdateEnvironmentFile
