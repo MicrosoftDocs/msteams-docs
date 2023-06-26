@@ -76,7 +76,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/M365-account-signin.png" alt-text="Screenshot shows the Microsoft sign in.":::
 
-      1. A promt appears select **Sign in**.
+     1. A promt appears select **Sign in**.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/account-signin" alt-text="Screenshot shows the Microsoft sign in.":::
 
@@ -92,19 +92,19 @@ items:
 
         Teams app also supports different themes, including dark and high contrast themes.
 
-      # [Dark Theme](#tab/dark theme)
+        # [Dark Theme](#tab/dark theme)
 
-      The following image shows the use of Dark theme in the Teams desktop client:
+        The following image shows the use of Dark theme in the Teams desktop client:
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-mode.png" alt-text="Screenshot shows the contrast themes.":::
+           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-mode.png" alt-text="Screenshot shows the contrast themes.":::
 
-      # [High Contrast Theme](#tab/high contrast theme)
+        # [High Contrast Theme](#tab/high contrast theme)
 
-      The following image shows the use of High contrast theme in the Teams desktop client:
+        The following image shows the use of High contrast theme in the Teams desktop client:
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/high-contrast.png" alt-text="Screenshot shows the contrast themes.":::
+           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/high-contrast.png" alt-text="Screenshot shows the contrast themes.":::
 
-      ---
+        ---
 
       In TeamsFX CLI,
 
@@ -489,7 +489,7 @@ items:
 
             :::image type="content" source="assets/images/sbs-create-a-new-dashboard/ttk-teams-app.png" alt-text="Screenshot shows the addition of aadApp/create and aadApp/update code.":::
 
-          1. Find **cli/runNpmCommand** action with name `build app` in `teamsapp.yml` and add following env. 
+        1. Find **cli/runNpmCommand** action with name `build app` in `teamsapp.yml` and add following env. 
 
             ```typescript
               env:
@@ -497,7 +497,7 @@ items:
               REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
             ```
 
-            :::image type="content" source="assets/images/sbs-create-a-new-dashboard/cli-teams-app.png" alt-text="Screenshot shows the information to react code for cli.":::
+           :::image type="content" source="assets/images/sbs-create-a-new-dashboard/cli-teams-app.png" alt-text="Screenshot shows the information to react code for cli.":::
 
         # [teamsapp.local](#tab/teamsapplocal)
         
@@ -547,9 +547,11 @@ items:
         1. Create auth-start.html and auth-end.html files in public folder.
         1. Add the code.
 
+           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/auth-end-start.png" alt-text="Screenshot shows the folder structure for auth-start and auth-end files.":::
+
         # [auth-start](#tab/auth-start)
         
-          Add the code in **auth-start.html**
+        Add the code in **auth-start.html**
 
           ```html
             <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
@@ -604,6 +606,8 @@ items:
           ```
 
         # [auth-end](#tab/auth-end)
+
+        Add the code in **auth-end.html**
       
           ```html
             <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
@@ -659,12 +663,9 @@ items:
               </body>
             </html>
           ```     
-        
-          :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/auth-end-start.png" alt-text="Screenshot shows the folder structure for auth-start and auth-end files.":::
-
         ---
 
-          You've added the SSO files to your project and now call Graph APIs. 
+       You've added the SSO files to your project and now call Graph APIs. 
           
      ## Add Graph API
      
