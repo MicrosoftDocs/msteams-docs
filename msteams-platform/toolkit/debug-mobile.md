@@ -10,7 +10,7 @@ ms.date: 06/14/2023
 
 # Debug for mobile
 
-When you're building a Microsoft Teams app that includes tab, bot, or message extension, you must debug your app to know how the app functions on both Android and iOS Microsoft Teams mobile clients. For more information, see [Debug your Teams app locally](debug-local.md).
+When you're building a Microsoft Teams app that includes a tab, bot, or message extension, you must debug your app to know how the app functions on both Android and iOS Microsoft Teams mobile clients. For more information, see [debug your Teams app locally](debug-local.md).
 
 ## Debug your tab app
 
@@ -18,92 +18,90 @@ To debug your tab app follow these steps:
 
 # [Visual Studio Code](#tab/vscode)
 
-You can view the project folders and files under **Explorer** in the Visual Studio Code after debugging.
+You can view the project folders and files under **Explorer** in the Visual Studio Code.
 
 1. Add `Start local tunnel` after `Validate prerequisites` in the `task.json` file to make the tab app accessible on the mobile client.
 1. Add the following code after the property `dependsOrder` in the `task.json` file.
 
-```json
-{
-  "version": "2.0.0",
-  "tasks": [
+    ```json
     {
-      "label": "Start Teams App Locally",
-      "dependsOn": [
-        "Validate prerequisites",
-        "Start local tunnel", // Add this line
-        "Provision",
-        "Deploy",
-        "Start application"
-      ],
-      "dependsOrder": "sequence"
-    },
-    {
-      // Add this task
-      "label": "Start local tunnel",
-      "type": "teamsfx",
-      "command": "debug-start-local-tunnel",
-      "args": {
-        "type": "dev-tunnel",
-        "ports": [
-          {
-            "portNumber": 53000,
-            "protocol": "https",
-            "access": "private",
-            "writeToEnvironmentFile": {
-              "endpoint": "TAB_ENDPOINT",
-              "domain": "TAB_DOMAIN"
-            }
-          }
-        ],
-        "env": "local"
-      },
-      "isBackground": true,
-      "problemMatcher": "$teamsfx-local-tunnel-watch"
+      "version": "2.0.0",
+      "tasks": [
+        {
+          "label": "Start Teams App Locally",
+          "dependsOn": [
+            "Validate prerequisites",
+            "Start local tunnel", // Add this line
+            "Provision",
+            "Deploy",
+            "Start application"
+          ],
+          "dependsOrder": "sequence"
+        },
+        {
+          // Add this task
+          "label": "Start local tunnel",
+          "type": "teamsfx",
+          "command": "debug-start-local-tunnel",
+          "args": {
+            "type": "dev-tunnel",
+            "ports": [
+              {
+                "portNumber": 53000,
+                "protocol": "https",
+                "access": "private",
+                "writeToEnvironmentFile": {
+                  "endpoint": "TAB_ENDPOINT",
+                  "domain": "TAB_DOMAIN"
+                }
+              }
+            ],
+            "env": "local"
+          },
+          "isBackground": true,
+          "problemMatcher": "$teamsfx-local-tunnel-watch"
+        }
+      ]
     }
-  ]
-}
-```
+    ```
 
-> [!NOTE]
->
-> * To preview the tab app only in mobile client, set the value for `access` property to `private`.
-> * To preview the tab app on the mobile client and debug it on web clients, set the `access` property to `public`. Any user with the app's URL can visit the tab.
+    > [!NOTE]
+    >
+    > * To preview the tab app only in mobile client, set the value for `access` property to `private`.
+    > * To preview the tab app on the mobile client and debug it on web clients, set the `access` property to `public`. Any user with the app's URL can visit the tab.
 
-3. Remove the `TAB_DOMAIN` and `TAB_ENDPOINT` from the `teamsapp.local.yml` file.
+1. Remove `TAB_DOMAIN` and `TAB_ENDPOINT` from the `teamsapp.local.yml` file.
 
-```javascript
- - uses: script 
-   with:
-     run:
-       echo "::set-teamsfx-env TAB_DOMAIN=localhost:53000";
-       echo "::set-teamsfx-env TAB_ENDPOINT=https://localhost:53000";
-```
+    ```javascript
+    - uses: script 
+      with:
+        run:
+          echo "::set-teamsfx-env TAB_DOMAIN=localhost:53000";
+          echo "::set-teamsfx-env TAB_ENDPOINT=https://localhost:53000";
+    ```
 
-4. If you're using React, add the configuration `WDS_SOCKET_PORT=0` in `teamsapp.local.yml` file to activate hot reloading while debugging in react after utilizing the tunnel service.
+1. If you're using React, add the configuration `WDS_SOCKET_PORT=0` in `teamsapp.local.yml` file to activate hot reloading while debugging in React after utilizing the tunnel service.
 
-```javascript
-  - uses: file/createOrUpdateEnvironmentFile
-    with:
-      target: ./.localConfigs
-      envs:
-        BROWSER: none
-        HTTPS: true
-        PORT: 53000
-        SSL_CRT_FILE: ${{SSL_CRT_FILE}}
-        SSL_KEY_FILE: ${{SSL_KEY_FILE}}
-        REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}} 
-        REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html 
-        WDS_SOCKET_PORT: 0 
-```
+    ```javascript
+      - uses: file/createOrUpdateEnvironmentFile
+        with:
+          target: ./.localConfigs
+          envs:
+            BROWSER: none
+            HTTPS: true
+            PORT: 53000
+            SSL_CRT_FILE: ${{SSL_CRT_FILE}}
+            SSL_KEY_FILE: ${{SSL_KEY_FILE}}
+            REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}} 
+            REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html 
+            WDS_SOCKET_PORT: 0 
+    ```
 
 ## Run the deployed app
 
-Once the provisioning and deployment steps are complete:
-
 1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
 1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
-1. Select the **Start debugging (F5)** to launch your app from Azure.
+1. Select the Start debugging (F5) button.
 
 :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="The screenshot showing how to launch the app remotely.":::
 
@@ -124,7 +122,7 @@ Once the provisioning and deployment steps are complete:
 
 ---
 
-2. Select **Add** when prompted to sideload the app onto Teams.
+Select **Add**.
 
 :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="The screenshot showing an app being installed.":::
 
