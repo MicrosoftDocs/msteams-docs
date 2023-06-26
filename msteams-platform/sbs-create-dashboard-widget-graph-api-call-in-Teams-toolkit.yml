@@ -297,18 +297,9 @@ items:
      ## Add SSO
      
      To add Single Sign On (SSO), follow these steps:
-
-     1. [Create Azure Active Directory(AAD) app manifest](#create-azure-active-directoryaad-app-manifest)
-     1. [Update Teams app manifest](#update-teams-app-manifest)
-     1. [Update Teams Toolkit configuration files](#update-teams-toolkit-configuration-files)
-     1. [Update Source Code](#update-source-code)
        
-       ### Create Azure Active Directory(AAD) app manifest
-
-        <!-- markdownlint-disable MD033 -->
-
         <details>
-        <summary>Create AAD app manifest.</summary>
+        <summary>1. Create Azure Active Directory app manifest.</summary>
 
         1. In Visual Studio Code, go to **EXPLORER**.
         1. Create a `aad.manifest.json` file.
@@ -430,12 +421,8 @@ items:
 
         </details>
 
-       ### Update Teams app manifest
-
-        <!-- markdownlint-disable MD033 -->
-
         <details>
-        <summary>Create Teams app manifest.</summary>
+        <summary>2. Update Teams app manifest.</summary>
 
         To update Teams app manifest, follow these steps:
 
@@ -443,23 +430,19 @@ items:
 
         1. Add the following code after `validdomain` property in the `manifest.json` file.
 
-          ```json
-            "webApplicationInfo": {
-            "id": "${{AAD_APP_CLIENT_ID}}",
-            "resource": "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
-            }
-          ```
+           ```json
+             "webApplicationInfo": {
+             "id": "${{AAD_APP_CLIENT_ID}}",
+             "resource": "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
+             }
+           ```
 
             :::image type="content" source="assets/images/sbs-create-a-new-dashboard/teams-app-manifest.png" alt-text="Screenshot shows the addition of web application info in manifest. ":::
 
         </details>
 
-       ### Update Teams Toolkit configuration files
-
-        <!-- markdownlint-disable MD033 -->
-
         <details>
-        <summary>To update Teams Toolkit configuration files.</summary>
+        <summary>3. Update Teams Toolkit configuration files.</summary>
 
         To update Teams Toolkit configuration files, follow the steps:
 
@@ -538,131 +521,131 @@ items:
 
         ---
         
-        </details>          
+        </details>   
 
-       ### Update Source Code
+        <details>
+        <summary>4. Update Source Code.</summary>       
 
         Follow the steps to update source code if you're building your tab app with React framework for [js](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js) or [ts](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts):   
 
         1. Create auth-start.html and auth-end.html files in public folder.
-        1. Add the code.
-
+        
            :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/auth-end-start.png" alt-text="Screenshot shows the folder structure for auth-start and auth-end files.":::
 
         # [auth-start](#tab/auth-start)
         
         Add the code in **auth-start.html**
 
-          ```html
-            <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
-            <!--If you're not familiar with this, do not alter or remove this file from your project.-->
-            <html>
-              <head>
-                <title>Login Start Page</title>
-                <meta charset="utf-8" />
-              </head>
+        ```html
+          <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
+          <!--If you're not familiar with this, do not alter or remove this file from your project.-->
+          <html>
+            <head>
+              <title>Login Start Page</title>
+              <meta charset="utf-8" />
+            </head>
 
-              <body>
-              <script src="https://res.cdn.office.net/teams-js/2.7.1/js/MicrosoftTeams.min.js" integrity="sha384-4Gy2G+qxzDVdrdemcVqKVQvaSK1Ghg3x6xcsaMLPc/pw7KPtiogHGM97LTWF2PWg" crossorigin="anonymous"></script>
-                <script
-                  type="text/javascript"
-                  src="https://alcdn.msauth.net/browser/2.21.0/js/msal-browser.min.js"
-                  integrity="sha384-s/NxjjAgw1QgpDhOlVjTceLl4axrp5nqpUbCPOEQy1PqbFit9On6uw2XmEF1eq0s"
-                  crossorigin="anonymous">
-                </script>
-                <script type="text/javascript">
-                  microsoftTeams.app.initialize().then(() => {
-                    microsoftTeams.app.getContext().then(async (context) => {
-                      // Generate random state string and store it, so we can verify it in the callback
-                      var currentURL = new URL(window.location);
-                      var clientId = currentURL.searchParams.get("clientId");
-                      var scope = currentURL.searchParams.get("scope");
-                      var loginHint = currentURL.searchParams.get("loginHint");
+            <body>
+            <script src="https://res.cdn.office.net/teams-js/2.7.1/js/MicrosoftTeams.min.js" integrity="sha384-4Gy2G+qxzDVdrdemcVqKVQvaSK1Ghg3x6xcsaMLPc/pw7KPtiogHGM97LTWF2PWg" crossorigin="anonymous"></script>
+              <script
+                type="text/javascript"
+                src="https://alcdn.msauth.net/browser/2.21.0/js/msal-browser.min.js"
+                integrity="sha384-s/NxjjAgw1QgpDhOlVjTceLl4axrp5nqpUbCPOEQy1PqbFit9On6uw2XmEF1eq0s"
+                crossorigin="anonymous">
+              </script>
+              <script type="text/javascript">
+                microsoftTeams.app.initialize().then(() => {
+                  microsoftTeams.app.getContext().then(async (context) => {
+                    // Generate random state string and store it, so we can verify it in the callback
+                    var currentURL = new URL(window.location);
+                    var clientId = currentURL.searchParams.get("clientId");
+                    var scope = currentURL.searchParams.get("scope");
+                    var loginHint = currentURL.searchParams.get("loginHint");
 
-                      const msalConfig = {
-                        auth: {
-                          clientId: clientId,
-                          authority: `https://login.microsoftonline.com/${context.user.tenant.id}`,
-                          navigateToLoginRequestUrl: false
-                        },
-                        cache: {
-                          cacheLocation: "sessionStorage",
-                        },
-                      }
+                    const msalConfig = {
+                      auth: {
+                        clientId: clientId,
+                        authority: `https://login.microsoftonline.com/${context.user.tenant.id}`,
+                        navigateToLoginRequestUrl: false
+                      },
+                      cache: {
+                        cacheLocation: "sessionStorage",
+                      },
+                    }
 
-                      const msalInstance = new msal.PublicClientApplication(msalConfig);
-                      const scopesArray = scope.split(" ");
-                      const scopesRequest = {
-                        scopes: scopesArray,
-                        redirectUri: window.location.origin + `/auth-end.html?clientId=${clientId}`,
-                        loginHint: loginHint
-                      };
-                      await msalInstance.loginRedirect(scopesRequest);
-                    });
+                    const msalInstance = new msal.PublicClientApplication(msalConfig);
+                    const scopesArray = scope.split(" ");
+                    const scopesRequest = {
+                      scopes: scopesArray,
+                      redirectUri: window.location.origin + `/auth-end.html?clientId=${clientId}`,
+                      loginHint: loginHint
+                    };
+                    await msalInstance.loginRedirect(scopesRequest);
                   });
-                  </script>
-              </body>
-            </html>
-          ```
+                });
+                </script>
+            </body>
+          </html>
+        ```
 
         # [auth-end](#tab/auth-end)
 
         Add the code in **auth-end.html**
       
-          ```html
-            <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
-            <!--If you're not familiar with this, do not alter or remove this file from your project.-->
-            <html>
-              <head>
-                <title>Login End Page</title>
-                <meta charset="utf-8" />
-              </head>
+        ```html
+          <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
+          <!--If you're not familiar with this, do not alter or remove this file from your project.-->
+          <html>
+            <head>
+              <title>Login End Page</title>
+              <meta charset="utf-8" />
+            </head>
 
-              <body>
-              <script src="https://res.cdn.office.net/teams-js/2.7.1/js/MicrosoftTeams.min.js" integrity="sha384-4Gy2G+qxzDVdrdemcVqKVQvaSK1Ghg3x6xcsaMLPc/pw7KPtiogHGM97LTWF2PWg" crossorigin="anonymous"></script>
-                <script
-                  type="text/javascript"
-                  src="https://alcdn.msauth.net/browser/2.21.0/js/msal-browser.min.js"
-                  integrity="sha384-s/NxjjAgw1QgpDhOlVjTceLl4axrp5nqpUbCPOEQy1PqbFit9On6uw2XmEF1eq0s"
-                  crossorigin="anonymous">
-                </script>
-                <script type="text/javascript">
-                  var currentURL = new URL(window.location);
-                  var clientId = currentURL.searchParams.get("clientId");
+            <body>
+            <script src="https://res.cdn.office.net/teams-js/2.7.1/js/MicrosoftTeams.min.js" integrity="sha384-4Gy2G+qxzDVdrdemcVqKVQvaSK1Ghg3x6xcsaMLPc/pw7KPtiogHGM97LTWF2PWg" crossorigin="anonymous"></script>
+              <script
+                type="text/javascript"
+                src="https://alcdn.msauth.net/browser/2.21.0/js/msal-browser.min.js"
+                integrity="sha384-s/NxjjAgw1QgpDhOlVjTceLl4axrp5nqpUbCPOEQy1PqbFit9On6uw2XmEF1eq0s"
+                crossorigin="anonymous">
+              </script>
+              <script type="text/javascript">
+                var currentURL = new URL(window.location);
+                var clientId = currentURL.searchParams.get("clientId");
 
-                  microsoftTeams.app.initialize().then(() => {
-                    microsoftTeams.app.getContext().then(async (context) => {
-                      const msalConfig = {
-                        auth: {
-                          clientId: clientId,
-                          authority: `https://login.microsoftonline.com/${context.user.tenant.id}`,
-                          navigateToLoginRequestUrl: false
-                        },
-                        cache: {
-                          cacheLocation: "sessionStorage",
-                        },
-                      }
+                microsoftTeams.app.initialize().then(() => {
+                  microsoftTeams.app.getContext().then(async (context) => {
+                    const msalConfig = {
+                      auth: {
+                        clientId: clientId,
+                        authority: `https://login.microsoftonline.com/${context.user.tenant.id}`,
+                        navigateToLoginRequestUrl: false
+                      },
+                      cache: {
+                        cacheLocation: "sessionStorage",
+                      },
+                    }
 
-                      const msalInstance = new window.msal.PublicClientApplication(msalConfig);
-                      msalInstance.handleRedirectPromise()
-                        .then((tokenResponse) => {
-                          if (tokenResponse !== null) {
-                            microsoftTeams.authentication.notifySuccess(JSON.stringify({
-                              sessionStorage: sessionStorage
-                            }));
-                          } else {
-                            microsoftTeams.authentication.notifyFailure("Get empty response.");
-                          }
-                        })
-                        .catch((error) => {
-                          microsoftTeams.authentication.notifyFailure(JSON.stringify(error));
-                        });
-                    });
+                    const msalInstance = new window.msal.PublicClientApplication(msalConfig);
+                    msalInstance.handleRedirectPromise()
+                      .then((tokenResponse) => {
+                        if (tokenResponse !== null) {
+                          microsoftTeams.authentication.notifySuccess(JSON.stringify({
+                            sessionStorage: sessionStorage
+                          }));
+                        } else {
+                          microsoftTeams.authentication.notifyFailure("Get empty response.");
+                        }
+                      })
+                      .catch((error) => {
+                        microsoftTeams.authentication.notifyFailure(JSON.stringify(error));
+                      });
                   });
-                </script>
-              </body>
-            </html>
-          ```  
+                });
+              </script>
+            </body>
+          </html>
+        ```  
              
         ---
 
