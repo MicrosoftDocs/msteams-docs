@@ -92,13 +92,13 @@ items:
 
         Teams app also supports different themes, including dark and high contrast themes.
 
-        # [Dark Theme](#tab/darktheme)
+        # [Dark theme](#tab/darktheme)
 
         The following image shows the use of Dark theme in the Teams desktop client:
 
            :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-mode.png" alt-text="Screenshot shows the contrast themes.":::
 
-        # [High Contrast Theme](#tab/highcontrasttheme)
+        # [High contrast theme](#tab/highcontrasttheme)
 
         The following image shows the use of High contrast theme in the Teams desktop client:
 
@@ -182,8 +182,8 @@ items:
 
      ## Create a data retrieve service
       
-      > [!NOTE]
-      > You can implement a service to retrieve data from the backend service or from Microsoft Graph API.
+        > [!NOTE]
+        > You can implement a service to retrieve data from the backend service or from Microsoft Graph API.
 
      1. In Visual Studio Code, go to **EXPLORER** > **src** > **services**.
      1. Create a **sampleService.ts** file.
@@ -294,7 +294,7 @@ items:
   durationInMinutes: 5
   content: |
 
-     ## Add SSO
+     ## Add Single Sign On (SSO)
      
      To add Single Sign On (SSO), follow these steps:
        
@@ -653,7 +653,7 @@ items:
 
        You've added the SSO files to your project and now call Graph APIs. 
           
-     ## Add Graph API
+     ## Add Graph Application Programming Interface (API) call
      
      To add Graph API, follow these steps:
    
