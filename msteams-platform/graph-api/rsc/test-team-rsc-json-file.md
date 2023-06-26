@@ -4,6 +4,7 @@ description: In this module, learn how to test resource-specific consent for a t
 ms.localizationpriority: medium
 author: akjo
 ms.topic: how-to
+ms.date: 12/15/2022
 ---
 
 # Test team RSC Postman collection JSON
