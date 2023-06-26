@@ -26,7 +26,7 @@ The query parameters are:
 * `topicName`: An optional field for chat's display name if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
 
-To use this deep link with your bot, specify the deep link as the URL target in your card's button or tap action through the `openUrl` action type. Apps can also use Teams Java Script library 2.0 to create this without having to manually prepare the deep link. Following is an example using Microsoft Teams JavaScript client library (TeamsJS):
+To use this deep link with your bot, specify the deep link as the URL target in your card's button or tap action through the `openUrl` action type. Apps can also use Teams JavaScript library 2.0 to create this without having to manually prepare the deep link. Following is an example using Microsoft Teams JavaScript client library (TeamsJS):
 
 ```javascript
 if(chat.isSupported()) {
@@ -166,7 +166,7 @@ For more information, see [deep link to a tab](~/concepts/build-and-test/deep-li
 
 Deep link doesn't open in the meeting side panel in the following scenarios:
 
-* If there is no active meeting.
+* If there's is no active meeting.
 * If the app doesn't have `sidePanel` context declared in the app manifest.
 * If `openInMeeting=false` is set in the deep link.
 * If deep link is selected outside of the meeting window or component.
@@ -180,4 +180,4 @@ Application can read, join a meeting URL through Graph APIs. This deep link brin
 
 | Sample name | Description | .NET |Node.js|
 |-------------|-------------|------|----|
-|Deep link consuming Subentity ID | This sample shows how to use deep-link from bot chat to tab consuming Subentity ID. It also shows deeplinks for navigate to app, navigate to chat, open profile dialog and open scheduling dialog.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+|Deep link consuming Subentity ID | This sample shows how to use deep-link from bot chat to tab consuming Subentity ID. It also shows deep links for navigate to app, navigate to chat, open profile dialog and open scheduling dialog.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|

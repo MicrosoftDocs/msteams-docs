@@ -17,7 +17,7 @@ In the Traction stage, you’ll want to gain mindshare for your collaborative ap
 <details>
 <summary>Plan, build readiness and drive adoption among customers</summary>
 
-As soon as  your collaborative app is published and customers are made aware of its existence, the entire focus of your organization must shift towards driving adoption of your app among existing customers first. Follow the step-by-step guidance, resources and best practices available [here](../../../../../promote-app-adoption.md) to plan and support the rollout of your Teams app in your customers’ organizations, navigate business decision makers, IT admins and educate end-users. The outcome of a successful app rollout among your existing customers is a pre-requisite to learn from user feedback, achieve product-market fit, acquire net new customers, monetize your app and  eventually derive RoI out of your build and go-to-market investments.
+As soon as  your collaborative app is published and customers are made aware of its existence, the entire focus of your organization must shift towards driving adoption of your app among existing customers first. Follow the step-by-step guidance, resources and best practices available [here](../../../../../promote-app-adoption.md) to plan and support the rollout of your Teams app in your customers’ organizations, navigate business decision makers, IT admins and educate end-users. The outcome of a successful app rollout among your existing customers is a prerequisite to learn from user feedback, achieve product-market fit, acquire net new customers, monetize your app and  eventually derive RoI out of your build and go-to-market investments.
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>
@@ -27,7 +27,7 @@ As soon as  your collaborative app is published and customers are made aware of 
 
 - Your collaborative app for Teams is a key product line or channel for your customers to use your SaaS service. For this reason, training your customer success personnel on the Teams app is of critical importance. It can include how to get customers started with the app, high value scenarios and use cases, how to get the most out of the app, and so on.
 
-- For new customers who use Microsoft 365, your customer success team must know how to lead the conversations with your Teams collaborative app. Through collaborative workflows beyond the table stakes scenarios powered by your core SaaS product, it will offer your users unique and differentiated value.
+- For new customers who use Microsoft 365, your customer success team must know how to lead the conversations with your Teams collaborative app. Through collaborative workflows beyond the table stakes scenarios powered by your core SaaS product, it offers your users unique and differentiated value.
 
 - For existing customers who use Microsoft 365, your customer success team must immediately set up time to introduce your new Teams app to these customers and demo the experience. Then, they must work out a plan to activate these overlapping users on your Teams app.
 
@@ -51,7 +51,7 @@ To continue delivering a delightful experience for your customers, ensure the su
 - Security, compliance, and permissions for your Teams app.
 - App management and governance features in Teams.
   
-It will be a good idea to have your support team conversant in day-to-day usage of Microsoft Teams. It also helps to be up to speed with all articles in the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps). Your customers will benefit from their expertise in these areas.
+It's a good idea to have your support team conversant in day-to-day usage of Microsoft Teams. It also helps to be up to speed with all articles in the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps). Your customers will benefit from their expertise in these areas.
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>
@@ -172,7 +172,7 @@ Highlight your Microsoft Teams app in a Microsoft-led digital campaign based on 
 Drive awareness of your published Microsoft Teams app to customer-facing roles within Microsoft, such as the field or Teams Engineering’s customer PMs. Contact your Microsoft field, account, or engineering representatives or connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to make use of this opportunity.
 
 > [!NOTE]
-> Go-to-Market Bill of Materials (GTM BOM) for your app is a pre-requisite for using this opportunity.
+> Go-to-Market Bill of Materials (GTM BOM) for your app is a prerequisite for using this opportunity.
 
 </details>
 <br>
