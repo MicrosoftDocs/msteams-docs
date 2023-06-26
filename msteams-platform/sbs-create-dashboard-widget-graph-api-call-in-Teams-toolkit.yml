@@ -474,15 +474,15 @@ items:
 
         1. Find **cli/runNpmCommand** action with name `build app`. 
         
-        1.Add following env code.
+        1. Add following env code.
 
-            ```typescript
-              env:
-              REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
-              REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
-            ```
+           ```yaml
+             env:
+             REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
+             REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
+           ```
 
-           :::image type="content" source="assets/images/sbs-create-a-new-dashboard/cli-teams-app.png" alt-text="Screenshot shows the information to react code for cli.":::
+            :::image type="content" source="assets/images/sbs-create-a-new-dashboard/cli-teams-app.png" alt-text="Screenshot shows the information to react code for cli.":::
 
         # [teamsapp.local](#tab/teamsapplocal)
         
@@ -528,7 +528,7 @@ items:
         <details>
         <summary>4. Update Source Code.</summary>       
 
-        1. Create **auth-start.html** and **auth-end.html** files in **public** folder.
+        Create **auth-start.html** and **auth-end.html** files in **public** folder.
         
            :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/auth-end-start.png" alt-text="Screenshot shows the folder structure for auth-start and auth-end files.":::
 
