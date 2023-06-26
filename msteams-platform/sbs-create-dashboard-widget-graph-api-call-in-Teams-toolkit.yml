@@ -303,7 +303,7 @@ items:
      1. [Update Teams Toolkit configuration files](#update-teams-toolkit-configuration-files)
      1. [Update Source Code](#update-source-code)
        
-     ## Create Azure Active Directory(AAD) app manifest
+     ### Create Azure Active Directory(AAD) app manifest
 
       <!-- markdownlint-disable MD033 -->
 
@@ -430,7 +430,7 @@ items:
 
       </details>
 
-     ## Update Teams app manifest
+     ### Update Teams app manifest
 
       <!-- markdownlint-disable MD033 -->
 
@@ -454,7 +454,7 @@ items:
 
       </details>
 
-     ## Update Teams Toolkit configuration files
+     ### Update Teams Toolkit configuration files
 
       <!-- markdownlint-disable MD033 -->
 
@@ -538,7 +538,7 @@ items:
 
       </details>  
 
-     ## Update Source Code
+     ### Update Source Code
 
       Follow the steps to update source code if you're building your tab app with React framework for [js](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js) or [ts](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts):   
 
