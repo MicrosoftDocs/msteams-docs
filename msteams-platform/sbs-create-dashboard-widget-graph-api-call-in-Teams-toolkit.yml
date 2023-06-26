@@ -428,17 +428,22 @@ items:
 
           :::image type="content" source="assets/images/sbs-create-a-new-dashboard/aad-app-manifest.png" alt-text="Screenshot shows the azure active dirctory code addition. ":::
 
-        </details>
+      </details>
 
      ## Update Teams app manifest
 
-     To update Teams app manifest, follow these steps:
+      <!-- markdownlint-disable MD033 -->
 
-     1. In Visual Studio Code, go to **EXPLORER** > **appPackage** > **manifest.json**.
+      <details>
+      <summary>Create Teams app manifest.</summary>
 
-     1. Add following codes into your Teams app manifest for your Tab project.
+      To update Teams app manifest, follow these steps:
 
-        ```typescript
+      1. In Visual Studio Code, go to **EXPLORER** > **appPackage** > **manifest.json**.
+
+      1. Add the following code after `validdomain` property in the manifest.json file.
+
+        ```json
           "webApplicationInfo": {
           "id": "${{AAD_APP_CLIENT_ID}}",
           "resource": "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
@@ -447,68 +452,104 @@ items:
 
         :::image type="content" source="assets/images/sbs-create-a-new-dashboard/teams-app-manifest.png" alt-text="Screenshot shows the addition of web application info in manifest. ":::
 
+      </details>
+
      ## Update Teams Toolkit configuration files
 
-     To update Teams Toolkit configuration files, follow the steps:
+      <!-- markdownlint-disable MD033 -->
 
-     1. Add the **aadApp/create** codes under provision in `teamsapp.yml` and `teamsapp.local.yml`.
-     
-        ```typescript
-          - uses: aadApp/create
-            with:
-                name: "YOUR_AAD_APP_NAME"
-                generateClientSecret: true
-                signInAudience: "AzureADMyOrg"
-            writeToEnvironmentFile:
-                clientId: AAD_APP_CLIENT_ID
-                clientSecret: SECRET_AAD_APP_CLIENT_SECRET
-                objectId: AAD_APP_OBJECT_ID
-                tenantId: AAD_APP_TENANT_ID
-                authority: AAD_APP_OAUTH_AUTHORITY
-                authorityHost: AAD_APP_OAUTH_AUTHORITY_HOST
-        ```
-     1. Add the **aadApp/update** codes under provision in `teamsapp.yml` and `teamsapp.local.yml`.
+      <details>
+      <summary>To update Teams Toolkit configuration files.</summary>
 
-        ```typescript
+      To update Teams Toolkit configuration files, follow the steps:
+
+      # [teamsapp](#tab/teamsapp)
+
+      1. Add the code under provision.
+      
+          ```yaml 
+            - uses: aadApp/create
+              with:
+                  name: "YOUR_AAD_APP_NAME"
+                  generateClientSecret: true
+                  signInAudience: "AzureADMyOrg"
+              writeToEnvironmentFile:
+                  clientId: AAD_APP_CLIENT_ID
+                  clientSecret: SECRET_AAD_APP_CLIENT_SECRET
+                  objectId: AAD_APP_OBJECT_ID
+                  tenantId: AAD_APP_TENANT_ID
+                  authority: AAD_APP_OAUTH_AUTHORITY
+                  authorityHost: AAD_APP_OAUTH_AUTHORITY_HOST
+
             - uses: aadApp/update
               with:
                 manifestPath: "./aad.manifest.json"
                 outputFilePath : ./build/aad.manifest.${{TEAMSFX_ENV}}.json
-        ```
+          ```
 
-        :::image type="content" source="assets/images/sbs-create-a-new-dashboard/ttk-teams-app.png" alt-text="Screenshot shows the addition of aadApp/create and aadApp/update code.":::
+          :::image type="content" source="assets/images/sbs-create-a-new-dashboard/ttk-teams-app.png" alt-text="Screenshot shows the addition of aadApp/create and aadApp/update code.":::
+
+        1. Find **cli/runNpmCommand** action with name `build app` in `teamsapp.yml` and add following env. 
+
+          ```typescript
+            env:
+            REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
+            REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
+          ```
+
+          :::image type="content" source="assets/images/sbs-create-a-new-dashboard/cli-teams-app.png" alt-text="Screenshot shows the information to react code for cli.":::
+
+      # [teamsapp.local](#tab/teamsapp.local)
       
-        :::image type="content" source="assets/images/sbs-create-a-new-dashboard/ttk-teams-app-local.png" alt-text="Screenshot shows the addition of aadApp/create and aadApp/update code.":::
+      1. Add the code under provision.
+      
+          ```yaml 
+            - uses: aadApp/create
+              with:
+                  name: "YOUR_AAD_APP_NAME"
+                  generateClientSecret: true
+                  signInAudience: "AzureADMyOrg"
+              writeToEnvironmentFile:
+                  clientId: AAD_APP_CLIENT_ID
+                  clientSecret: SECRET_AAD_APP_CLIENT_SECRET
+                  objectId: AAD_APP_OBJECT_ID
+                  tenantId: AAD_APP_TENANT_ID
+                  authority: AAD_APP_OAUTH_AUTHORITY
+                  authorityHost: AAD_APP_OAUTH_AUTHORITY_HOST
 
-     1. Find **cli/runNpmCommand** action with name `build app` in `teamsapp.yml` and add following env. 
+            - uses: aadApp/update
+              with:
+                manifestPath: "./aad.manifest.json"
+                outputFilePath : ./build/aad.manifest.${{TEAMSFX_ENV}}.json
+          ```
 
-        ```typescript
-          env:
-          REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
-          REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
-        ```
+          :::image type="content" source="assets/images/sbs-create-a-new-dashboard/ttk-teams-app-local.png" alt-text="Screenshot shows the addition of aadApp/create and aadApp/update code.":::  
 
-        :::image type="content" source="assets/images/sbs-create-a-new-dashboard/cli-teams-app.png" alt-text="Screenshot shows the information to react code for cli.":::
+      1. Find **file/createOrUpdateEnvironmentFile** action for deploy in `teamsapp.local.yml``.
 
-     1. Find **file/createOrUpdateEnvironmentFile** action for deploy in `teamsapp.local.yml``.
+      1. Add following env code. 
 
-     1. Add following env codes. 
+          ```yaml
+            REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
+            REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
+          ```
 
-        ```typescript
-          REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
-          REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
-        ```
+          :::image type="content" source="assets/images/sbs-create-a-new-dashboard/file-teams-app-local.png" alt-text="Screenshot shows the information to react codes.":::
 
-        :::image type="content" source="assets/images/sbs-create-a-new-dashboard/file-teams-app-local.png" alt-text="Screenshot shows the information to react codes.":::
+      </details>  
 
      ## Update Source Code
 
       Follow the steps to update source code if you're building your tab app with React framework for [js](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js) or [ts](https://github.com/OfficeDev/TeamsFx/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts):   
 
-     1. Create **auth-start.html** in to **public**.
-     1. Add the code in **auth-start.html**
+      1. Create auth-start.html and auth-end.html files in public folder.
+      1. Add the code.
 
-        ```typescript
+       # [auth-start](#tab/auth-start)
+      
+        Add the code in **auth-start.html**
+
+        ```html
           <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
           <!--If you're not familiar with this, do not alter or remove this file from your project.-->
           <html>
@@ -560,10 +601,9 @@ items:
           </html>
         ```
 
-     1. Create **auth-end.html** in to **public**.
-     1. Add the code in **auth-end.html**
+       # [auth-end](#tab/auth-end)
      
-        ```typescript
+        ```html
           <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
           <!--If you're not familiar with this, do not alter or remove this file from your project.-->
           <html>
@@ -620,17 +660,17 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/auth-end-start.png" alt-text="Screenshot shows the folder structure for auth-start and auth-end files.":::
 
-        You can find the sample for SSO enabled Tab [here](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
-     
-      You've added the SSO files to your project and now call Graph APIs. 
+        You've added the SSO files to your project and now call Graph APIs. 
 
-    To add Graph API, follow these steps:
+     ## Add Graph API
+     
+     To add Graph API, follow these steps:
    
-      The graph API call is implemented via TeamsFx SDK. Refer to the [document](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-sdk#microsoft-graph-scenarios:~:text=caught%20and%20transformed.-,Microsoft%20Graph%20Scenarios,-This%20section%20provides). 
+     The graph API call is implemented via TeamsFx SDK. Refer to the [document](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-sdk#microsoft-graph-scenarios:~:text=caught%20and%20transformed.-,Microsoft%20Graph%20Scenarios,-This%20section%20provides). 
 
      1. In Visual Studio Code, go to **EXPLORER** > **src** > **services** > **listService.ts**.
 
-     1. Update the following codes in the **listService.ts**.         
+     1. Update the following code in the **listService.ts**.         
 
         ```typescript
         /**
@@ -678,7 +718,7 @@ items:
         }
         ```
 
-      1. In Visual Studio Code, go to **EXPLORER** > **src** > **services** > **ListWidget.tsx**.
+      1. Go to **EXPLORER** > **src** > **services** > **ListWidget.tsx**.
 
       1. Update the `export default class ListWidget()` to add user pofile widget.
 
