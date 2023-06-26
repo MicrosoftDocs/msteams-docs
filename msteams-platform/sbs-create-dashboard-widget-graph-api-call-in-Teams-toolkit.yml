@@ -530,7 +530,7 @@ items:
 
         Create **auth-start.html** and **auth-end.html** files in **public** folder.
         
-           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/auth-end-start.png" alt-text="Screenshot shows the folder structure for auth-start and auth-end files.":::
+          :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/auth-end-start.png" alt-text="Screenshot shows the folder structure for auth-start and auth-end files.":::
 
         # [auth-start](#tab/auth-start)
         
