@@ -68,7 +68,10 @@ You can view the project folders and files under **Explorer** in the Visual Stud
     > [!NOTE]
     >
     > * To preview the tab app only in mobile client, set the value for `access` property to `private`.
-    > * To preview the tab app on the mobile client and debug it on web clients, set the `access` property to `public`. Any user with the app's URL can visit the tab.
+    > * When the dev tunnel access value is set to `private`, the tab app cannot be displayed within an iframe on the web client. The login page is hosted on **login.microsoftonline.com**, which has the `X-FRAME-Options` header set to DENY.
+    > * To preview the tab app on the mobile client and debug it on web clients, set the access value to `public`. Any user with the app's URL can visit the tab.
+
+    :::image type="content" source="../assets/images/debug-mobile/login.PNG" alt-text="The screenshot shows the login page.":::
 
 1. Remove `TAB_DOMAIN` and `TAB_ENDPOINT` from the `teamsapp.local.yml` file.
 
@@ -107,36 +110,33 @@ You can view the project folders and files under **Explorer** in the Visual Stud
 
 # [Command Line](#tab/cline)
 
-1. Go to [ngrok](https://ngrok.com) and sign up for a free account or log into your existing account. After you've signed in, go to the [dashboard](https://dashboard.ngrok.com) and get your auth token.
+1. Go to [ngrok](https://ngrok.com) and sign up for a free account or log into your existing account.
+1. After you've signed in, from the left pane select [**Your Authtoken**](https://dashboard.ngrok.com).
+1. Copy the value of your Authtoken.
+1. Run the ngrok.exe file.
 1. Run the command `ngrok http https://localhost:53000 --authtoken=<your-personal-ngrok-authtoken>` to start the local tunnel service.
-1. Fill the values for `TAB_DOMAIN` and `TAB_ENDPOINT` in the `env/.env.local` file:
+1. In the `env/.env.local` file, update the values for `TAB_DOMAIN` and `TAB_ENDPOINT`.
 
-```json
- TAB_DOMAIN=sample-ngrok-id.ngrok.io 
- TAB_ENDPOINT=https://sample-ngrok-id.ngrok.io
-```
+    ```json
+     TAB_DOMAIN=sample-ngrok-id.ngrok.io 
+     TAB_ENDPOINT=https://sample-ngrok-id.ngrok.io
+    ```
 
-4. Execute the command `teamsfx provision --env local` in your project directory.
-5. Execute the command `teamsfx deploy --env local` in your project directory.
-6. Execute the command `teamsfx preview --env local` in your project directory.
+1. Execute the command `teamsfx provision --env local` in your project directory.
+1. Execute the command `teamsfx deploy --env local` in your project directory.
+1. Execute the command `teamsfx preview --env local` in your project directory.
 
 ---
 
-Select **Add**.
+You'll be prompted to sideload the app into Teams. Select **Add**.
 
 :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="The screenshot showing an app being installed.":::
 
-> [!NOTE]
-> When the dev tunnel access value is set to `private`, the tab app cannot be displayed within an iframe on the web client. The login page is hosted on "login.microsoftonline.com", which has the `X-FRAME-Options` header set to DENY.
-> To preview the tab app on the mobile client and debug it on web clients, set the access value to `public`. Any user with the app's URL can visit the tab.
-
-:::image type="content" source="../assets/images/debug-mobile/login.PNG" alt-text="The screenshot shows the login page.":::
-
 ## Test your tab app on mobile client
 
-1. Open Teams on your mobile device and select **More** to find the previewing app.
+1. To find the previewing app, open Teams on your mobile device and select **More**.
 
-:::image type="content" source="../assets/images/debug-mobile/debug-mobile.PNG" alt-text="The screenshot showing an app being installed in mobile clients.":::
+    :::image type="content" source="../assets/images/debug-mobile/mobile-more-option.PNG" alt-text="Screenshot shows more option in Teams mobile client." lightbox="../assets/images/debug-mobile/debug-mobile.PNG":::
 
 > [!NOTE]
 > If a you have debugged the app previously, it's recommended to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
@@ -155,7 +155,7 @@ To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage
 
 ---
 
-2. If you're accessing the dev tunnel for the first time, Sign in to Microsoft 365 account and select **continue**.
+2. If you're accessing the dev tunnel for the first time, sign in to Microsoft 365 account and select **continue**.
 
 :::image type="content" source="../assets/images/debug-mobile/m365-sign-in.PNG" alt-text="The screenshot showing the Microsoft 365 sign in page.":::
 
@@ -189,6 +189,6 @@ To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage
 
 ---
 
-* Debug the bot app on your mobile client.
+Debug the bot app on your mobile client.
 
 :::image type="content" source="../assets/images/debug-mobile/debug-bot-mobile.PNG" alt-text="The screenshot showing to debug the bot app in mobile client.":::
