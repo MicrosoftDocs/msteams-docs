@@ -298,7 +298,7 @@ items:
      
      To add Single Sign On (SSO), follow these steps:
 
-     1. [Create Azure Active Directory app manifest](#create-azure-active-directory-app-manifest)
+     1. [Create Azure Active Directory(AAD) app manifest](#create-azure-active-directoryaad-app-manifest)
      1. [Update Teams app manifest](#update-teams-app-manifest)
      1. [Update Teams Toolkit configuration files](#update-teams-toolkit-configuration-files)
      1. [Update Source Code](#update-source-code)
@@ -499,7 +499,7 @@ items:
 
           :::image type="content" source="assets/images/sbs-create-a-new-dashboard/cli-teams-app.png" alt-text="Screenshot shows the information to react code for cli.":::
 
-      # [teamsapp.local](#tab/teamsapp.local)
+      # [teamsapp.local](#tab/teamsapplocal)
       
       1. Add the code under provision.
       
