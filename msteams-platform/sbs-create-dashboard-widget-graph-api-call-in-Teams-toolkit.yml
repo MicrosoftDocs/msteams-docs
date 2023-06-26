@@ -182,8 +182,8 @@ items:
 
      ## Create a data retrieve service
       
-        > [!NOTE]
-        > You can implement a service to retrieve data from the backend service or from Microsoft Graph API.
+      > [!NOTE]
+      > You can implement a service to retrieve data from the backend service or from Microsoft Graph API.
 
      1. In Visual Studio Code, go to **EXPLORER** > **src** > **services**.
      1. Create a **sampleService.ts** file.
