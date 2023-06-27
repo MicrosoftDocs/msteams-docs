@@ -247,9 +247,9 @@ Provide the users with guides that help them understand how to use your app, tro
 
 ### Promote awareness about your app and its use cases for smooth change management
 
-The adoption change management relies on awareness and training targeted at your customers. These are the marketing and communications segments of your overall app adoption strategy that make change management successful and smooth. It ensures that your users are aware of the new capabilities of the Teams app and it enables the users to derive value out of your app.
+The adoption change management relies on awareness and training targeted at your customers. These trainings are the marketing and communications segments of your overall app adoption strategy that make change management successful and smooth. It ensures that your users are aware of the new capabilities of the Teams app and it enables the users to derive value out of your app.
 
-For both initial pilots and eventual company-wide roll out, your internal communications must be a priority. These must include:
+For both initial pilots and eventual company-wide roll out, your internal communications must be a priority. These communications must include:
 
 * Internal awareness materials such as posters, email templates, digital signage, and webinar or events.
 * Campaigns: Educate users about the benefits of using the Teams app. Use the template provided by Microsoft to create campaigns to improve organization-level awareness for apps.
@@ -259,7 +259,7 @@ For both initial pilots and eventual company-wide roll out, your internal commun
 
 Microsoft provides few templates that you can use to speed up the adoption of your app. These templates help you quickly generate toolkit to popularize your app. See [Launch your collaborative apps](/microsoftteams/platform/concepts/deploy-and-publish/appsource/post-publish/app-growth/launch-app) for a list of resources and BOM assets that you should create for app launch. Register for [Microsoft ISV Success program](https://www.microsoft.com/isv/program-benefits) to receive guidance and templates for some of the above digital assets.
 
-Microsoft provides a few templates that you can use to speed up the adoption of your app. These templates help you quickly generate toolkit to popularize your app. Register for  to receive guidance and templates for some of the above digital assets.
+Microsoft provides a few templates that you can use to speed up the adoption of your app. These templates help you quickly generate toolkit to popularize your app. Register to receive guidance and templates for some of the above digital assets.
 
 The following considerations might help you make the awareness documents more user-friendly:
 
@@ -313,7 +313,7 @@ The following table provides the support information that you already submitted 
 |[Manifest file](resources/schema/manifest-schema.md)|`websiteUrl`|The web page at this URL provides support information for an app.|App details page in Teams admin center displays the website URL.|
 |[Manifest file](resources/schema/manifest-schema.md)|`privacyUrl`|The URL to the page that provides privacy information for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in Store listing.|
 |[Manifest file](resources/schema/manifest-schema.md)|`termsOfUseUrl`|The URL to the page that provides the terms of use for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in Store listing.|
-|[Manifest file](resources/schema/manifest-schema.md)|`publisherDocsUrl`|The URL to the page provides more app information for the admins.|Available in Teams admin center for apps that are blocked by publisher.|
+|[Manifest file](resources/schema/manifest-schema.md)|`publisherDocsUrl`|The URL to the page provides more app information for the admins.|Available in Teams admin center for apps that a developer blocks by default.|
 |[Partner Center submission](/azure/marketplace/add-in-submission-guide)|NA|Support or help documentation URL.|Displayed in [AppSource](https://appsource.microsoft.com/), in the **Details + support** tab.|
 
 > [!div class="nextstepaction"]
@@ -325,7 +325,7 @@ You build an app for millions of Teams users to achieve specific business or cus
 
 ### Track app usage in Partner Center
 
-You can track your app’s overall usage in [Teams app usage report](concepts/deploy-and-publish/appsource/post-publish/overview.md) in Partner Center. You can do this after a week of publishing your app on the Teams public app store. Partner Center's usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. These reports are available at an aggregate level, such as:
+You can track your app’s overall usage in [Teams app usage report](concepts/deploy-and-publish/appsource/post-publish/overview.md) in Partner Center. You can track usage after one week of publishing your app on the Teams Store. Partner Center's usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. These reports are available at an aggregate level, such as:
 
 * Monthly, daily, and weekly active users.
 * Retention and intensity charts.
