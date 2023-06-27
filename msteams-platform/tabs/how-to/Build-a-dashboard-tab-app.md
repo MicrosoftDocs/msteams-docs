@@ -36,7 +36,7 @@ To add a new dashboard, follow these steps:
 ### Create a dashboard class
 
 Create a file with the `.tsx` extension for your dashboard in the `src/dashboards` directory, for example, `YourDashboard.tsx`. Then, create a class that extends the `BaseDashboard class from`  
-[@microsoft/teamsfx-react](https://learn.microsoft.com/javascript/api/%40microsoft/teamsfx-react/?branch=main&view=msteams-client-js-latest).
+[@microsoft/teamsfx-react](/javascript/api/%40microsoft/teamsfx-react).
 
 ```typescript
 //YourDashboard.tsx
