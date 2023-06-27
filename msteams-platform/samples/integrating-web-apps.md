@@ -6,7 +6,6 @@ ms.date: 04/02/2023
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Considerations for Teams integration
-ms.date: 01/06/2023
 ---
 # Considerations for Teams integration
 
