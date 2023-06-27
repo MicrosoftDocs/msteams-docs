@@ -89,7 +89,7 @@ You can focus on writing your business logic, and allow Teams to handle the comp
 
 * The library includes a planning engine that lets the model identify the users intent and then maps that intent to actions that you implement.
 
-* You can easily add support for any LLM of your choice without changing the bot logic with built-in support for both OpenAI and Azure OpenAI models.
+* You can easily add support for any LLM of your choice without changing the bot logic.
 
 <!-- ## Bots Architecture overview
 
