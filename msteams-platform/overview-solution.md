@@ -4,8 +4,7 @@ author: heath-hamilton
 description: Understand how to plan, design, build, extend to Microsoft 365, test, distribute, monetize, and integrate your app with Teams.
 ms.topic: overview
 ms.localizationpriority: high
-ms.author: lajanuar
-ms.date: 04/16/2023
+ms.date: 11/02/2021
 ---
 # The Teams solution
 
@@ -44,7 +43,7 @@ Teams offers these and many more capabilities to bring your users a feature-rich
 
 Choose to customize your app with functionalities, such as user authentication and tools, such as Microsoft Graph and Developer Portal.
 
-Lets go through Teams Developer Documentation based on your requirement for building Teams app:
+Let's go through Teams Developer Documentation based on your requirements for building a Teams app:
 
 | What do you want? | Where to go |
 | --------| --------|
