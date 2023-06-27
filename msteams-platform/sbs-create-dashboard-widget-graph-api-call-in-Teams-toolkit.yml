@@ -56,15 +56,15 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/programming-language.png" alt-text="Screenshot shows the selection of programming language.":::
 
-     1. Select **Default** folder to store your project root folder in default location.
+     1. Select **Default folder** to store your project root folder in default location.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/default-folder.png" alt-text="Screenshot shows the selection of workspace folder.":::
 
-     1. Enter a suitable name for your app. Select **Enter**.
+     1. Enter a suitable name for your app and select **Enter**.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/enter-application-name.png" alt-text="Screenshot shows the selection of application name.":::
 
-        Teams Toolkit creates tab app in few seconds and displays the following message.
+        Teams Toolkit creates tab app in few seconds and displays a message.
       
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-app-preview.png" alt-text="Screenshot shows the teams tab app dashboard preview in VS Code.":::
 
@@ -72,15 +72,15 @@ items:
 
      1. Select the Teams Toolkit icon in sidebar.
 
-     1. Select **Sign in to Microsoft 365**.
+     1. Select **Sign in to Microsoft 365**. A prompt appears.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/M365-account-signin.png" alt-text="Screenshot shows the Microsoft sign in.":::
 
-     1. A promt appears select **Sign in**.
+     1. Select **Sign in**.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/account-signin.png" alt-text="Screenshot shows the Microsoft sign in.":::
 
-     1. Select **F5** to run the application in debug mode.
+     1. Select the **F5** key to run the application in debug mode.
 
      1. Select **Add**.
 
@@ -294,12 +294,16 @@ items:
   durationInMinutes: 5
   content: |
 
-     ## Add Single Sign On (SSO)
+     You've learnt to create a dashboard tab, and add a new widget to the dashboard. Let's add Single Sign-on (SSO) and graph API call to the dashboard tab.
      
-     To add Single Sign On (SSO), follow these steps:
+     ## Add SSO
+     
+     To add SSO, follow these steps:
        
         <details>
-        <summary>1. Create Azure Active Directory app manifest.</summary>
+        <summary>1. Create Azure Active Directory (Azure AD) app manifest.</summary>
+
+        To create Azure AD app manifest, follow these steps:
 
         1. In Visual Studio Code, go to **EXPLORER**.
         1. Create a **aad.manifest.json** file.
@@ -446,7 +450,7 @@ items:
 
         To update Teams Toolkit configuration files, follow the steps:
 
-        # [teamsapp](#tab/teamsapp)
+        # [teamsapp.yml](#tab/teamsappyml)
 
         1. Add the code under provision.
         
@@ -472,10 +476,8 @@ items:
 
             :::image type="content" source="assets/images/sbs-create-a-new-dashboard/ttk-teams-app.png" alt-text="Screenshot shows the addition of aadApp/create and aadApp/update code.":::
 
-        1. Find **cli/runNpmCommand** action with name `build app`. 
+        1. Under the action `cli/runNpmCommand` and the `build app` name, add the following code:
         
-        1. Add following env code.
-
            ```yaml
              env:
              REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
@@ -484,7 +486,7 @@ items:
 
             :::image type="content" source="assets/images/sbs-create-a-new-dashboard/cli-teams-app.png" alt-text="Screenshot shows the information to react code for cli.":::
 
-        # [teamsapp.local](#tab/teamsapplocal)
+        # [teamsapp.local.yml](#tab/teamsapplocalyml)
         
         1. Add the code under provision.
         
@@ -510,10 +512,8 @@ items:
 
             :::image type="content" source="assets/images/sbs-create-a-new-dashboard/ttk-teams-app-local.png" alt-text="Screenshot shows the addition of aadApp/create and aadApp/update code.":::  
 
-        1. Find **file/createOrUpdateEnvironmentFile** action to deploy.
-
-        1. Add following env code. 
-
+        1. Under the action `file/createOrUpdateEnvironmentFile**`, add the following code:
+ 
             ```yaml
               REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
               REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
@@ -534,7 +534,7 @@ items:
 
         # [auth-start](#tab/auth-start)
         
-        Add the code in **auth-start.html**
+        Add the following code in **auth-start.html**
 
         ```html
           <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
@@ -590,7 +590,7 @@ items:
 
         # [auth-end](#tab/auth-end)
 
-        Add the code in **auth-end.html**
+        Add the following code in **auth-end.html**
       
         ```html
           <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
@@ -653,7 +653,7 @@ items:
 
        You've added the SSO files to your project and now call Graph APIs. 
           
-     ## Add Graph Application Programming Interface (API) call
+     ## Add Graph API call
      
      To add Graph API, follow these steps:
    
