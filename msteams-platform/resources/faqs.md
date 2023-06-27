@@ -4,6 +4,7 @@ description: In this article, fetch answers to some frequently asked questions w
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: Surbhigupta
+ms.date: 06/29/2022
 ---
 
 # Moodle FAQ
@@ -31,7 +32,7 @@ Each team course instance must have an owner, and the synchronization sets the f
 The users have multiple sign in options from the Moodle login page.
 
 * To sign in exclusively using Microsoft 365 credentials, enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled, user can see the Microsoft sign in page.
-* To sign in manually to the Moodle portal see [Moodle](https://moodle.org/login/index.php).
+* To sign in manually to the Moodle portal, see [Moodle](https://moodle.org/login/index.php).
 
 <br>
 
