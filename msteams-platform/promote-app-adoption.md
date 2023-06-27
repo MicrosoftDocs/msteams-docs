@@ -306,7 +306,7 @@ In your app’s help documentation, consider providing some or all the following
 * Call out any app-specific configuration or permissions that might be required. Also, call out any app-specific uptime information link if your app relies on a backend infrastructure to work.
 * If you [block an app by default](concepts/design/enable-app-customization.md), provide documentation for the requirements before admins can allow the app. For example, the required configuration or subscription purchase that admins must do.
 
-The following table provides the support information that you already submitted to Microsoft with your app and the interface in Teams where this information is displayed. Your customers can find the above support information and self-serve themselves.
+The following table provides the support information that you already submitted to Microsoft with your app and the interface in Teams where this information is displayed. Your customers can [find support information for your app](/microsoftteams/manage-apps#support-information-for-apps) and self-serve themselves.
 
 |Input source when creating app|Parameter|Description and meaning|Visibility of the information in Teams|
 |-----|-----|-----|-----|
