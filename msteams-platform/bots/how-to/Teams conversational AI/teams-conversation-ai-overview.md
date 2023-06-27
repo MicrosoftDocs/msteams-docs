@@ -75,7 +75,7 @@ A simple interface for actions and predictions allows bots to react when the bot
 1. Allows prompts to make summarizations over a period of time focused on the user’s manager.
 1. Provides actions to summarize chat content for users to consume.
 
-## Advantages of Team AI library
+## Why use Teams AI library?
 
 The AI Library is a Teams-centric interface to Large Language Models. Your apps can leverage LLMs to facilitate more natural conversational interactions with users, guiding that conversation into your apps skills.
 
@@ -83,13 +83,13 @@ You can focus on writing your business logic, and allow Teams to handle the comp
 
 :::image type="content" source="../../../assets/images/bots/teams-ai-library-benefits.png" alt-text="Screenshot shows the benefits of using Teams AI library.":::
 
-* The AI Library is a Teams-centric interface to Large Language Models. Using techniques like prompt engineering you can add ChatGPT like conversational experiences to your bot and built-in safety features, like moderation, help ensure your bot always responds in an appropriate manner.
+* The AI Library is a Teams-centric interface to Large Language Models. Use prebuilt templates to add Teams app capabilities.
+
+* Use techniques like prompt engineering to add ChatGPT like conversational experiences to your bot and built-in safety features, like moderation, help ensure your bot always responds in an appropriate manner.
 
 * The library includes a planning engine that lets the model identify the users intent and then maps that intent to actions that you implement.
 
-* You can easily add support for any model you chose with built-in support for both OpenAI and Azure OpenAI models.
-
-* with built-in guardrails for responsible AI, the library equips you to ensure moderated responses, and with language localization features built in, it serves a diverse user base for an experience that works in the language of your users.
+* You can easily add support for any LLM of your choice without changing the bot logic with built-in support for both OpenAI and Azure OpenAI models.
 
 <!-- ## Bots Architecture overview
 
