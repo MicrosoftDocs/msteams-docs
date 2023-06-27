@@ -153,7 +153,7 @@ You'll be prompted to sideload the app into Teams. Select **Add**.
 
     To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
 
-    :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android-option.PNG" alt-text="The screenshot showing to clean the app data in android mobile client for tab." " lightbox="../assets/images/debug-mobile/clear-app-data-android.PNG":::
+    :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android-option.PNG" alt-text="The screenshot showing to clean the app data in android mobile client for tab." lightbox="../assets/images/debug-mobile/clear-app-data-android.PNG":::
 
     :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android.PNG" alt-text="The screenshot showing to clean the app data in android.":::
 
@@ -191,7 +191,7 @@ You'll be prompted to sideload the app into Teams. Select **Add**.
 
     To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
 
-      :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android-option.PNG" alt-text="The screenshot showing to clean the app data in android mobile client for bot." " lightbox="../assets/images/debug-mobile/clear-app-data-android.PNG":::
+      :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android-option.PNG" alt-text="The screenshot showing to clean the app data in android mobile client for bot." lightbox="../assets/images/debug-mobile/clear-app-data-android.PNG":::
 
       :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android.PNG" alt-text="The screenshot showing to clean the app data in android mobile client.":::
 
