@@ -89,7 +89,7 @@ Each property allows you to prompt the users to ask for their consent:
 
 ## Check permissions from your app
 
-After adding `devicePermissions` to your app manifest, check permissions using the **HTML5 permissions API** without causing a prompt:
+After adding `devicePermissions` to your [app manifest](../../resources/schema/manifest-schema.md#devicepermissions), check permissions using the **HTML5 permissions API** without causing a prompt:
 
 ``` JavaScript
 // Different query options:
