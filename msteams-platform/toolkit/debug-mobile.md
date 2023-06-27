@@ -138,35 +138,35 @@ You'll be prompted to sideload the app into Teams. Select **Add**.
 
     :::image type="content" source="../assets/images/debug-mobile/mobile-more-option.PNG" alt-text="Screenshot shows more option in Teams mobile client." lightbox="../assets/images/debug-mobile/debug-mobile.PNG":::
 
-> [!NOTE]
-> If a you have debugged the app previously, it's recommended to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
+    > [!NOTE]
+    > If a you have debugged the app previously, it's recommended to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
 
-# [iOS](#tab/ios1)
+  # [iOS](#tab/ios1)
 
-To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
+    To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
 
-:::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios.PNG" alt-text="The screenshot showing to clean the app data in iOS mobile client.":::
+    :::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios.PNG" alt-text="The screenshot showing to clean the app data in iOS mobile client." lightbox="../assets/images/debug-mobile/clear-app-data-ios.PNG":::
 
-# [Android](#tab/android1)
+  # [Android](#tab/android1)
 
-To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
+  To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
 
-:::image type="content" source="../assets/images/debug-mobile/clear-app-data-android.PNG" alt-text="The screenshot showing to clean the app data in android mobile client.":::
+  :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android.PNG" alt-text="The screenshot showing to clean the app data in android mobile client.":::
 
 ---
 
-2. If you're accessing the dev tunnel for the first time, sign in to Microsoft 365 account and select **continue**.
+1. If you're accessing the dev tunnel for the first time, sign in to Microsoft 365 account and select **continue**.
 
-:::image type="content" source="../assets/images/debug-mobile/m365-sign-in.PNG" alt-text="The screenshot showing the Microsoft 365 sign in page.":::
+  :::image type="content" source="../assets/images/debug-mobile/m365-sign-in.PNG" alt-text="The screenshot showing the Microsoft 365 sign in page.":::
 
-> [!NOTE]
-> You need to login only once per device, and every time you install the app you need to confirm the anti-phishing page.
+  > [!NOTE]
+  > You need to login only once per device, and every time you install the app you need to confirm the anti-phishing page.
 
-5. Your first mobile tab app is created.
+1. Your first mobile tab app is created.
 
-:::image type="content" source="../assets/images/debug-mobile/mobile-tab-app.PNG" alt-text="The screenshot shows the mobile tab app.":::
+  :::image type="content" source="../assets/images/debug-mobile/mobile-tab-app.PNG" alt-text="The screenshot shows the mobile tab app.":::
 
-6. For Android devices, use [DevTools](../tabs/how-to/developer-tools.md#access-devtools-from-an-android-device) to debug your tab while it's running.
+1. For Android devices, use [DevTools](../tabs/how-to/developer-tools.md#access-devtools-from-an-android-device) to debug your tab while it's running.
 
 ## Test your bot app on mobile client
 
@@ -175,20 +175,20 @@ To test your bot in mobile client, follow the steps listed in [Test your tab app
 > [!NOTE]
 > If a you have debugged the bot app previously and the Teams app manifest file is changed, it's recommended to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
 
-# [iOS](#tab/ios2)
+  # [iOS](#tab/ios2)
 
-To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
+  To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
 
-:::image type="content" source="../assets/images/debug-mobile/iOS-mobile-bot.PNG" alt-text="The screenshot shows the bot app in iOS mobile client.":::
+  :::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios.PNG" alt-text="The screenshot showing to clean the app data in iOS mobile client." lightbox="../assets/images/debug-mobile/clear-app-data-ios.PNG":::
 
-# [Android](#tab/android2)
+  # [Android](#tab/android2)
 
-To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
+  To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
 
-:::image type="content" source="../assets/images/debug-mobile/clear-app-data-android.PNG" alt-text="The screenshot showing to clean the app data in android mobile client.":::
+  :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android.PNG" alt-text="The screenshot showing to clean the app data in android mobile client.":::
 
 ---
 
-Debug the bot app on your mobile client.
+Your first mobile bot app is created.
 
 :::image type="content" source="../assets/images/debug-mobile/debug-bot-mobile.PNG" alt-text="The screenshot showing to debug the bot app in mobile client.":::
