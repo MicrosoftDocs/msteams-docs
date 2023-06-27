@@ -136,22 +136,22 @@ You'll be prompted to sideload the app into Teams. Select **Add**.
 
 1. To find the previewing app, open Teams on your mobile device and select **More**.
 
-    :::image type="content" source="../assets/images/debug-mobile/mobile-more-option.PNG" alt-text="Screenshot shows more option in Teams mobile client." lightbox="../assets/images/debug-mobile/debug-mobile.PNG":::
+  :::image type="content" source="../assets/images/debug-mobile/mobile-more-option.PNG" alt-text="Screenshot shows more option in Teams mobile client." lightbox="../assets/images/debug-mobile/debug-mobile.PNG":::
 
-    > [!NOTE]
-    > If a you have debugged the app previously, it's recommended to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
+  > [!NOTE]
+  > If a you have debugged the app previously, it's recommended to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
 
-  # [iOS](#tab/ios1)
+# [iOS](#tab/ios1)
 
-    To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
+To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
 
-    :::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios.PNG" alt-text="The screenshot showing to clean the app data in iOS mobile client." lightbox="../assets/images/debug-mobile/clear-app-data-ios.PNG":::
+:::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios.PNG" alt-text="The screenshot showing to clean the app data in iOS mobile client." lightbox="../assets/images/debug-mobile/clear-app-data-ios.PNG":::
 
-  # [Android](#tab/android1)
+# [Android](#tab/android1)
 
-  To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
+To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
 
-  :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android.PNG" alt-text="The screenshot showing to clean the app data in android mobile client.":::
+:::image type="content" source="../assets/images/debug-mobile/clear-app-data-android.PNG" alt-text="The screenshot showing to clean the app data in android mobile client.":::
 
 ---
 
@@ -175,17 +175,17 @@ To test your bot in mobile client, follow the steps listed in [Test your tab app
 > [!NOTE]
 > If a you have debugged the bot app previously and the Teams app manifest file is changed, it's recommended to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
 
-  # [iOS](#tab/ios2)
+# [iOS](#tab/ios2)
 
-  To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
+To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
 
-  :::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios.PNG" alt-text="The screenshot showing to clean the app data in iOS mobile client." lightbox="../assets/images/debug-mobile/clear-app-data-ios.PNG":::
+:::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios.PNG" alt-text="The screenshot showing to clean the app data in iOS mobile client." lightbox="../assets/images/debug-mobile/clear-app-data-ios.PNG":::
 
-  # [Android](#tab/android2)
+# [Android](#tab/android2)
 
-  To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
+To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
 
-  :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android.PNG" alt-text="The screenshot showing to clean the app data in android mobile client.":::
+:::image type="content" source="../assets/images/debug-mobile/clear-app-data-android.PNG" alt-text="The screenshot showing to clean the app data in android mobile client.":::
 
 ---
 
