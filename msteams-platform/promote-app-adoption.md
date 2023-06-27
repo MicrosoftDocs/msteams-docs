@@ -31,7 +31,7 @@ If you're a Microsoft Partner, you can work with your Microsoft counterpart to f
 Ensure that the users have access to and appropriate licenses for your app on Teams. There are two types of apps available for your users:
 
 * **Custom apps**: Custom apps are developed specifically for an organization and are made available by admins in Teams within their organization.
-* **Third-party apps**: Teams store provides many useful apps created by third-party software developers in addition to apps created by Microsoft. For the apps created by third-party providers, Microsoft does rigorous validation of functionality and security. For more information, see [Understand third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps).
+* **Third-party apps**: [Teams app store](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams) provides many useful apps created by third-party software developers in addition to apps created by Microsoft. For the apps created by third-party providers, Microsoft does rigorous validation of functionality and security. For more information, see [Understand third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps).
 
 Admins can set up an app governance process that manages your organization's IT policies, standards, and risk profiles. For more information. For more information, see [Create policies for app access](#create-policies-to-give-permission-to-use-apps-and-pin-it).
 
@@ -102,7 +102,7 @@ To learn and understand how an IT admin can configure your app, see [Help IT adm
 
 Provide a user guide for your app and cover the following articles:
 
-* Installation instructions for your app from the Teams store.
+* Instructions to install your app from the [Teams app store](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams).
 * Key features and use cases of your app. For more information, see [Provide your app's use cases](#provide-a-feature-guide-for-the-users-of-your-app).
 * How can users reach you for support?
 * What are the user configuration settings, for example, profile setup?
@@ -189,7 +189,7 @@ If an organization uses custom or line-of-business apps, then understand how adm
 
 ### Customize branding of apps
 
-Microsoft Teams admins can modify the metadata and appearance of some Teams apps to provide a personalized brand experience within their organization. Such modifications help admins adhere to their organization's requirements and branding. Customizing also enhances Teams store experience for the users, improves trust, and promotes app usage. For more information, see [how admins use app customization to update branding](/microsoftteams/customize-apps).
+Microsoft Teams admins can modify the metadata and appearance of some Teams apps to provide a personalized brand experience within their organization. Such modifications help admins adhere to their organization's requirements and branding. Customizing also enhances Teams app store experience for the users, improves trust, and promotes app usage. For more information, see [how admins use app customization to update branding](/microsoftteams/customize-apps).
 
 To support app customization, you as an app developer can allow admins to customize you app within their organization. Your app in Teams app store contains the default information and metadata that you provide when you create and submit an app. Teams provides an option to customize properties of an app. You can decide what properties of your app can the admins customize. However, customizations made within an organization don't affect the apps used in other organizations. To learn more, see [how to allow app customization](concepts/design/enable-app-customization.md).
 
@@ -265,7 +265,7 @@ The following considerations might help you make the awareness documents more us
 
 * Include a call to action encouraging users to download and use the app.
 * Ensure that there’s a support path for users to contact the support team if they run into any problems.
-* Your feature and usage guide must cover the details of how users can install the app from the Teams app store from different entry points such as channels, chats, meetings, and message extensions, as well as the details of each feature's usage.
+* Your feature and usage guide must cover the details of how users can install the app from the [Teams app store](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams) from different entry points such as channels, chats, meetings, and message extensions, as well as the details of each feature's usage.
 
 ### Provide training and create champions who facilitate change management
 
@@ -311,8 +311,8 @@ The following table provides the support information that you already submitted 
 |Input source when creating app|Parameter|Description and meaning|Visibility of the information in Teams|
 |-----|-----|-----|-----|
 |[Manifest file](resources/schema/manifest-schema.md)|`websiteUrl`|The web page at this URL provides support information for an app.|App details page in Teams admin center displays the website URL.|
-|[Manifest file](resources/schema/manifest-schema.md)|`privacyUrl`|The URL to the page that provides privacy information for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in Store listing.|
-|[Manifest file](resources/schema/manifest-schema.md)|`termsOfUseUrl`|The URL to the page that provides the terms of use for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in Store listing.|
+|[Manifest file](resources/schema/manifest-schema.md)|`privacyUrl`|The URL to the page that provides privacy information for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in app store listing.|
+|[Manifest file](resources/schema/manifest-schema.md)|`termsOfUseUrl`|The URL to the page that provides the terms of use for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in app store listing.|
 |[Manifest file](resources/schema/manifest-schema.md)|`publisherDocsUrl`|The URL to the page provides more app information for the admins.|Available in Teams admin center for apps that a developer blocks by default.|
 |[Partner Center submission](/azure/marketplace/add-in-submission-guide)|NA|Support or help documentation URL.|Displayed in [AppSource](https://appsource.microsoft.com/), in the **Details + support** tab.|
 
@@ -321,11 +321,11 @@ The following table provides the support information that you already submitted 
 
 ## Step 5: Track app adoption and usage using analytics
 
-You build an app for millions of Teams users to achieve specific business or customer goals. For this purpose, you distribute it using the options available on the app store versus a custom app. After the app is published, you'll want to measure how your app is performing in the real-world. You’d also want to guide the admins to measure their org-specific app usage.
+You build an app for millions of Teams users to achieve specific business or customer goals. For this purpose, you distribute it using the options available on the Teams app store versus a custom app. After the app is published, you'll want to measure how your app is performing in the real-world. You’d also want to guide the admins to measure their org-specific app usage.
 
 ### Track app usage in Partner Center
 
-You can track your app’s overall usage in [Teams app usage report](concepts/deploy-and-publish/appsource/post-publish/overview.md) in Partner Center. You can track usage after one week of publishing your app on the Teams Store. Partner Center's usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. These reports are available at an aggregate level, such as:
+You can track your app’s overall usage in [Teams app usage report](concepts/deploy-and-publish/appsource/post-publish/overview.md) in Partner Center. You can track usage after one week of publishing your app on the Teams app store. Partner Center's usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. These reports are available at an aggregate level, such as:
 
 * Monthly, daily, and weekly active users.
 * Retention and intensity charts.
