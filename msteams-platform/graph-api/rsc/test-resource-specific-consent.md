@@ -3,17 +3,15 @@ title: Test resource-specific consent permissions in Teams
 description: Details testing resource-specific consent in Teams using Postman with Code Samples
 ms.localizationpriority: medium
 author: akjo
-ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams authorization OAuth SSO Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
 ---
 
 # Test resource-specific consent permissions in Teams
 
-> [!NOTE]
-> Resource-specific consent for chat scope is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
+Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft identity that allows for granting scoped access to an application.
 
-Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration that enables your app to use API endpoints to manage specific resources—either teams or chats—within an organization. For more information, see [Resource-specific consent (RSC) — Microsoft Teams Graph API](resource-specific-consent.md).
+Through RSC, an authorized user can give an application access to the data of a specific instance of a resource type instead of every instance in the entire tenant. For example, a person who owns both team A and team B can decide to give the data for the Contoso app to only team A and not team B. The same concept of scoped data access applies to chats and meetings. For more information, see [Resource-specific consent (RSC)](resource-specific-consent.md).
 
 ## Prerequisites
 
@@ -29,7 +27,7 @@ Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicat
 
 |Name| Type | Description|
 |---|---|---|
-|`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](grant-resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
 
 Specify permissions needed by the app.
@@ -74,6 +72,10 @@ Example for RSC in a team
             },
             {
                 "name": "ChannelMessage.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "ChannelMeeting.ReadBasic.Group",
                 "type": "Application"
             },
             {
@@ -195,9 +197,9 @@ Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicat
 
 |Name| Type | Description|
 |---|---|---|
-|`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](grant-resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
-|`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [resource-specific permissions](resource-specific-consent.md#resource-specific-permissions).|
+|`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [Supported RSC permissions](resource-specific-consent.md#supported-rsc-permissions).|
 
 Example for RSC in a team
 
@@ -213,6 +215,7 @@ Example for RSC in a team
         "Channel.Create.Group",
         "Channel.Delete.Group",
         "ChannelMessage.Read.Group",
+        "ChannelMeeting.ReadBasic.Group",
         "TeamsAppInstallation.Read.Group",
         "TeamsTab.Read.Group",
         "TeamsTab.Create.Group",
@@ -269,7 +272,7 @@ To check whether the RSC permissions are being honored by the API request payloa
 * `azureADAppId`: Your app's Azure AD app ID.
 * `azureADAppSecret`: Your Azure AD app password.
 * `token_scope`: The scope is required to get a token. Set the value to `https://graph.microsoft.com/.default`.
-* `teamGroupId`: You can get the team group id from the Teams client as follows:
+* `teamGroupId`: You can get the team group ID from the Teams client as follows:
 
     1. In the Teams client, select **Teams** from the far left navigation bar.
     2. Select the team where the app is installed from the dropdown menu.
@@ -285,11 +288,11 @@ To check whether the RSC permissions are being honored by the API request payloa
 * `azureADAppSecret`: Your Azure AD app password.
 * `token_scope`: The scope is required to get a token. Set the value to `https://graph.microsoft.com/.default`.
 * `tenantId`: The name or the Azure AD Object ID of your tenant.
-* `chatId`: You can get the chat thread id from the Teams *web* client as follows:
+* `chatId`: You can get the chat thread ID from the Teams *web* client as follows:
 
     1. In the Teams web client, select **Chat** from the far left navigation bar.
     2. Select the chat where the app is installed from the dropdown menu.
-    3. Copy the web URL and save the chat thread id from the string.
+    3. Copy the web URL and save the chat thread ID from the string.
 ![Chat thread id from web URL.](../../assets/images/chat-thread-id.png)
 
 ### Use Postman

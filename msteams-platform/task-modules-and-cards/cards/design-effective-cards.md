@@ -3,7 +3,6 @@ title: Designing Adaptive Cards for your app
 description: In this module, learn how to design Adaptive Cards for your Teams app and get the Microsoft Teams UI Kit.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.author: lajanuar
 ---
 # Designing Adaptive Cards for your Microsoft Teams app
 
@@ -11,7 +10,7 @@ An Adaptive Card contains a freeform body of card elements and optional set of a
 
 The Adaptive Card framework is used across many Microsoft products, including Teams. You can send cards inside messages to users via bots or message extensions. Users can also take actions on cards when present.
 
-:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Overview example of an Adaptive Card.":::
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Overview example of an Adaptive Card." lightbox="../../assets/images/adaptive-cards/adaptive-card-overview.png":::
 
 ## Microsoft Teams UI Kit
 
@@ -51,7 +50,7 @@ Use for sending a simple actionable message.
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="Example shows an Adaptive Card thumbnail card.":::
+:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="Example shows an Adaptive Card thumbnail card." lightbox="../../assets/images/adaptive-cards/thumbnail-card.png":::
 
 ### List
 
@@ -63,7 +62,7 @@ Use in scenarios where you want the user to pick an item from a list, but the it
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="Example shows an Adaptive Card list card.":::
+:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="Example shows an Adaptive Card list card." lightbox="../../assets/images/adaptive-cards/list-card.png":::
 
 ### Digest
 
@@ -75,7 +74,7 @@ Use for news digests and round-up posts. Note: We recommend the thumbnail card f
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card.":::
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." lightbox="../../assets/images/adaptive-cards/digest-card.png":::
 
 ### Media
 
@@ -87,7 +86,7 @@ Use when you want to combine text and media, like audio or video.
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="Example shows an Adaptive Card media card.":::
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="Example shows an Adaptive Card media card." lightbox="../../assets/images/adaptive-cards/media-card.png":::
 
 ### People
 
@@ -99,7 +98,7 @@ Best used when you to efficiently convey who's involved with a task.
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Example shows an Adaptive Card people card.":::
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Example shows an Adaptive Card people card." lightbox="../../assets/images/adaptive-cards/people-card.png":::
 
 ### Request ticket
 
@@ -111,7 +110,7 @@ Use to get quick inputs from a user to automatically create a task or ticket.
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Example shows an Adaptive Card request ticket card.":::
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Example shows an Adaptive Card request ticket card." lightbox="../../assets/images/adaptive-cards/request-ticket-card.png":::
 
 ### ImageSet
 
@@ -135,7 +134,7 @@ Use when you want to the user to select a button, then gather addition user inpu
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Example shows an Adaptive Card action set card.":::
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Example shows an Adaptive Card action set card." lightbox="../../assets/images/adaptive-cards/action-set-card.png":::
 
 ### ChoiceSet
 
@@ -147,7 +146,7 @@ Use to gather multiple inputs from the user.
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Example shows an Adaptive Card choice set card.":::
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Example shows an Adaptive Card choice set card." lightbox="../../assets/images/adaptive-cards/choice-set-card.png":::
 
 ## Anatomy
 
@@ -637,7 +636,7 @@ A `Container` allows you to group a set of related elements together.
 
 Follow these guidelines when including images in your cards.
 
-* **Do**: Design images for high DPI screens to avoid pixelation. It's better to display a 100x100-pixel image at 50x50 pixels than the other way around.
+* **Do**: Design images for high DPI screens to avoid pixelation. It's better to display a 100 x 100 pixel image at 50 x 50 pixels than the other way around.
 * **Do**: If you need to control the exact size of your images, use the `width` and `height` properties.
 * **Don't**: Include padding with your images. This typically introduces undesirable spacing and layout issues.
 * Regarding background color:

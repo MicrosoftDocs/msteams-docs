@@ -48,7 +48,7 @@ The People Picker input control allows the user to search and add people using t
 1. Type the name of the required person. The list appears with name suggestions.
 1. Select the name of the required person from the list.
 
-   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Picker Picker mobile":::
+   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Screenshot shows the Picker Picker on mobile.":::
 
 # [Desktop](#tab/Sampledesktop)
 
@@ -57,7 +57,7 @@ The People Picker control on web or desktop is launched in a modal window on top
 1. Type the name of the required person. The list appears with name suggestions.
 1. Select the name of the required person from the list.
 
-   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="People picker by name desktop":::
+   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="Screenshot shows the People Picker by name on desktop.":::
 
 ---
 
@@ -115,7 +115,7 @@ The following table lists the error codes and their descriptions:
 
 | Sample name           | Description | .NET |Node.js    | Manifest|
 |:---------------------|:--------------|:---------|:---------|:---------|
-|Tab people picker | This sample shows tab capability with the feature of client sdk people picker. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/csharp/demo-manifest/Tab-People-Picker.zip)|
+|Tab people picker | This sample shows the feature of people picker using teams js client sdk inside tab. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/csharp/demo-manifest/Tab-People-Picker.zip)
 
 ## See also
 
