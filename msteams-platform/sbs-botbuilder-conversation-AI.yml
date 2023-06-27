@@ -537,7 +537,7 @@ items:
 
     To build and run your app in the local environment:
 
-    1. Select **F5** in Visual Studio Code to run your app in debug mode.
+    1. Select the **F5** key to run your app in debug mode.
 
         > [!NOTE]
         > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check.
