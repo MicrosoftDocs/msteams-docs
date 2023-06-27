@@ -248,15 +248,14 @@ POST {Service URL of your bot}/v3/conversations
 
 Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
 
-## Get edit message events
+## Get edit message event
 
 When you edit a message in a chat, the bot gets a notification of the edit message event.
 
-> [!NOTE]
->
->The `OnTeamsMessageEditAsync` handler isn’t supported in group chat and Teams channel scopes.
-
 To get an edit message event notification in a bot, you can override `OnTeamsMessageEditAsync` handler.
+
+> [!NOTE]
+> The `OnTeamsMessageEditAsync` handler isn’t supported in group chat and Teams channel scopes.
 
 Following is an example of an edit message event notification using `OnTeamsMessageEditAsync` when a sent message is edited:
 
@@ -361,11 +360,10 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 When you undelete a message in a chat, the bot gets a notification of the undelete message event.
 
-> [!NOTE]
->
->The `OnTeamsMessageUndeleteAsync` handler isn’t supported in group chat and Teams channel scopes.
-
 To get an undelete message event notification in a bot, you can override `OnTeamsMessageUndeleteAsync` handler.
+
+> [!NOTE]
+> The `OnTeamsMessageUndeleteAsync` handler isn’t supported in group chat and Teams channel scopes.
 
 The following is an example of an undelete message event notification using `OnTeamsMessageUndeleteAsync` when a deleted message is restored:
 
@@ -468,17 +466,16 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ---
 
-## Get soft delete message events
+## Get soft delete message event
 
 When you soft delete a message in a chat, the bot gets a notification of the soft delete message event.
 
 To get a soft delete message event notification in a bot, you can override `OnTeamsMessageSoftDeleteAsync` handler.
 
-Following is an example of a soft delete message event notification using `OnTeamsMessageSoftDeleteAsync` when a message is soft deleted:
-
 > [!NOTE]
->
 > The `OnTeamsMessageSoftDeleteAsync` handler isn’t supported in group chat and Teams channel scopes.
+
+Following is an example of a soft delete message event notification using `OnTeamsMessageSoftDeleteAsync` when a message is soft deleted:
 
 # [C#](#tab/dotnet5)
 
