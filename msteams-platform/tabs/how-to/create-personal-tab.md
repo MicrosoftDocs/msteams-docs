@@ -5,6 +5,7 @@ description: Learn to build a personal tab. Select the Node.js, ASP.NET Core, or
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment
+ms.date: 02/27/2023
 ---
 
 # Create a personal tab

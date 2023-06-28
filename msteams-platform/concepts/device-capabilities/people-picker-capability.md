@@ -4,6 +4,7 @@ description: In this article, learn how to use Teams JavaScript client library t
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.date: 02/24/2023
 ---
 
 # Integrate People Picker
