@@ -9,7 +9,7 @@ ms.date: 02/21/2023
 ---
 # Gain traction for your collaborative app in the market
 
-In the Traction stage, you’ll want to gain mindshare for your collaborative app among top customers. You'll build readiness to scale adoption and growth, and start realizing return on investment. Here are the various initiatives and growth levers at your disposal:
+In the Traction stage, you want to gain mindshare for your collaborative app among top customers. You build readiness to scale adoption and growth, and start realizing return on investment. Here are the various initiatives and growth levers at your disposal:
 
 ## What should you do during the Traction stage?
 
@@ -33,7 +33,7 @@ As soon as  your collaborative app is published and customers are made aware of 
 
 - To achieve product-led growth, you must strategically upskill your customer success teams. The aim is to access and monitor product acquisition, engagement, and task completion. They must also monitor value realization metrics or milestones for customers using the app, so that performing outreach and intervention at the right time becomes possible to be able to assist users in their journey.
 
-- In addition, establish a process to channel customer feedback from this team. Use this feedback to inform roadmap planning and growth experimentation for your Teams app. It will be a good idea to have your customer success team conversant in day-to-day usage of Microsoft Teams. It also helps if your team is up to speed with all articles in the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps). Your customers will benefit from their expertise in these areas.
+- In addition, establish a process to channel customer feedback from this team. Use this feedback to inform roadmap planning and growth experimentation for your Teams app. It is a good idea to have your customer success team conversant in day-to-day usage of Microsoft Teams. It also helps if your team is up to speed with all articles in the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps). Your customers benefit from their expertise in these areas.
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>
@@ -51,7 +51,7 @@ To continue delivering a delightful experience for your customers, ensure the su
 - Security, compliance, and permissions for your Teams app.
 - App management and governance features in Teams.
   
-It's a good idea to have your support team conversant in day-to-day usage of Microsoft Teams. It also helps to be up to speed with all articles in the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps). Your customers will benefit from their expertise in these areas.
+It's a good idea to have your support team conversant in day-to-day usage of Microsoft Teams. It also helps to be up to speed with all articles in the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps). Your customers benefit from their expertise in these areas.
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>
@@ -69,7 +69,7 @@ Your own flagship annual customer or partner conference is the perfect opportuni
 
 While at the launch stage you’d announced the availability of your new Teams app to the entire customer base, it’s time to build traction by going targeted. Identify a shorter list of existing customers of your SaaS product who are also Microsoft 365 customers. Drive awareness about your app among these customers through your customer success team.
 
-Your customer success team must set up time to introduce your new Teams app to these customers and demo the experience. Then, they must work out a plan to activate these overlapping customers on Teams. These activation motions will allow your customer success and customer support teams to learn how to drive programmatic adoption, tackle common customer queries and build real-world expertise on your Teams app.
+Your customer success team must set up time to introduce your new Teams app to these customers and demo the experience. Then, they must work out a plan to activate these overlapping customers on Teams. These activation motions allow your customer success and customer support teams to learn how to drive programmatic adoption, tackle common customer queries and build real-world expertise on your Teams app.
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>
