@@ -50,7 +50,7 @@ Two categories of sign in credentials are involved in CI/CD workflows:
 * **Azure**: Azure credentials are required for running Azure hosted projects' Provision and CD workflows.
 
 > [!NOTE]
-> Azure subscription id is required to be set in environment variable or `env/.env.*` files before running Provision workflows. The variable name used is `AZURE_SUBSCRIPTION_ID`. Also, please don't forget to commit and push files `env/.env.*` into Git repositories or set pipelines' environment variables as they're ignored by `.gitignore` file by default.
+> Azure subscription id is required to be set in environment variable or `env/.env.*` files before running Provision workflows. The variable name used is `AZURE_SUBSCRIPTION_ID`. Also, don't forget to commit and push files `env/.env.*` into Git repositories or set pipelines' environment variables as they're ignored by `.gitignore` file by default.
 
 |Name | Description |
 |---|---|
@@ -64,12 +64,12 @@ Two categories of sign in credentials are involved in CI/CD workflows:
 
 > [!NOTE]
 >
-> * Currently, a non-interactive authentication style for Microsoft 365 is used in CI/CD workflows, so please ensure that your Microsoft 365 account has sufficient privileges in your tenant and doesn't have multi-factor authentication or other advanced security features enabled. Please refer to the [Configure Microsoft 365 Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
+> * Currently, a non-interactive authentication style for Microsoft 365 is used in CI/CD workflows, so ensure that your Microsoft 365 account has sufficient privileges in your tenant and doesn't have multi-factor authentication or other advanced security features enabled. Refer to the [Configure Microsoft 365 Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
 > * Currently, service principal for Azure is used in CI/CD workflows, and to create Azure service principals for use, refer to [here](https://github.com/devdiv-azure-service-dmitryr/teamsfx-docs/blob/main/V5-doc-update/cicd.md#how-to-create-azure-service-principals-for-use).
 
 ## Host types
 
-Templates vary in host types (Azure or SPFx) by which Provision and CD workflow templates are split into copies. CI, Publish workflow templates are host-type independent. If you're working on Azure hosted projects, please download those templates with file name of `azure` infixes. If you're working on SPFx hosted projects, please download those templates with file name of `spfx` infixes.
+Templates vary in host types (Azure or SPFx) by which Provision and CD workflow templates are split into copies. CI, Publish workflow templates are host-type independent. If you're working on Azure hosted projects, download those templates with file name of `azure` infixes. If you're working on SPFx hosted projects, download those templates with file name of `spfx` infixes.
 
 ## Set up workflows with GitHub
 
@@ -167,7 +167,7 @@ To set up pipelines with Jenkins for CI/CD:
 
 1. Download the corresponding template files from [Tools and Templates](#tools-and-templates).
 1. Rename the downloaded template files by your needs.
-1. Put them under `.jenkins/pipelines` which can be a conventional folder for Jenkins Pipelines.
+1. Put them under `.jenkins/pipelines`, which can be a conventional folder for Jenkins Pipelines.
 
 ### Customize CI pipeline
 
