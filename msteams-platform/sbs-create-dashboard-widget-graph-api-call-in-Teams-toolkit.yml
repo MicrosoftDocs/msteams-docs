@@ -28,7 +28,7 @@ items:
     | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](~/toolkit/TeamsFx-CLI.md) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Teams Toolkit v5. |
     | [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) | Teams account with the appropriate permissions to install an app. |
     | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
-    | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place.|
+    | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
     | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 
 - title: Create a new dashboard
@@ -258,7 +258,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-dashboard.png" alt-text="Screenshot shows the existing sampleDashboard file in Visual Studio Code."::: 
 
-          Optional: If you want to place your widget in a column, you can refer to the following code:
+          Optional: If you want to add your widget in a column, you can refer to the following code:
 
             ```css
             .one-column {
@@ -288,9 +288,7 @@ items:
 
             :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/widget-added-to-dashboard.png" alt-text="Screenshot shows the addition of widget to the dashboard with the sample widget highlighted in red. ":::
 
-            You can change the look and style of the widget. For more information, see [customize the widget](tabs/how-to/build-a-dashboard-tab-app.md#customize-the-widget).
-
-- title: Add a SSO and Graph API call
+- title: Add SSO and Graph API call
   durationInMinutes: 5
   content: |
 
@@ -448,7 +446,7 @@ items:
         <details>
         <summary>3. Update Teams Toolkit configuration files.</summary>
 
-        To update Teams Toolkit configuration files, follow the steps:
+        To update Teams Toolkit configuration in **teamsapp.yml** and **teamsapp.local.yml files, follow the steps:
 
         # [teamsapp.yml](#tab/teamsappyml)
 
@@ -534,7 +532,7 @@ items:
 
         # [auth-start](#tab/auth-start)
         
-        Add the following code in **auth-start.html**
+        Add the following code in **auth-start.html**:
 
         ```html
           <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
@@ -590,7 +588,7 @@ items:
 
         # [auth-end](#tab/auth-end)
 
-        Add the following code in **auth-end.html**
+        Add the following code in **auth-end.html**:
       
         ```html
           <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
@@ -657,11 +655,11 @@ items:
      
      To add Graph API, follow these steps:
    
-     The graph API call is implemented via TeamsFx SDK. Refer to the [document](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-sdk#microsoft-graph-scenarios:~:text=caught%20and%20transformed.-,Microsoft%20Graph%20Scenarios,-This%20section%20provides). 
+     The graph API call is implemented via TeamsFx SDK. 
 
      1. In Visual Studio Code, go to **EXPLORER** > **src** > **services** > **listService.ts**.
 
-     1. Update the following code in the **listService.ts**.         
+     1. Update the following code in the **listService.ts**:        
 
         ```typescript
         /**
