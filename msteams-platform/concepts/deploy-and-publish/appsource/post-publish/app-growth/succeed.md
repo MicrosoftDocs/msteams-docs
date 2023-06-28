@@ -40,7 +40,7 @@ A core product-led growth initiative is capturing Teams marketplace trials, tria
 <details>
 <summary>Deepen investment into Teams-app driven growth engine</summary>
 
-This stage is ripe to further sales, customer success, and product-led initiatives to grow your SaaS business leading with the Teams collaborative app product line you’ve built. Consider making further investments into your sales, customer success, marketing and product teams who are responsible for the Teams app. So that you can win more customer deals, collaborate with Microsoft on GTM and realize net new economic value through purchases and renewals on the commercial marketplace.
+This stage is ripe to further sales, customer success, and product-led initiatives to grow your SaaS business leading with the Teams collaborative app product line you’ve built. Consider making further investments into your sales, customer success, marketing and product teams who are responsible for the Teams app so that you can win more customer deals, collaborate with Microsoft on GTM and realize net new economic value through purchases and renewals on the commercial marketplace.
 
 </details>
 <br>
