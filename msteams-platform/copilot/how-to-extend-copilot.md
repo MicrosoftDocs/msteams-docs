@@ -46,7 +46,7 @@ Your Message Extension will work with Copilot (after quality testing).
 
 ## What makes a good plugin for Microsoft 365 Copilot?
 
-To ensure your plugin works as intended, it is important to include good descriptions in your manifest. This allows the underlying LLM to take full advantage of your plugin’s capabilities. It’s recommended to test different descriptions and instructions to find the most effective way for the LLM to utilize your plugin. Also, it’s important that the manifest file is up-to-date with any changes or enhancements you make to your plugin.
+To ensure your plugin works as intended, it's important to include good descriptions in your manifest. This allows the underlying LLM to take full advantage of your plugin’s capabilities. It’s recommended to test different descriptions and instructions to find the most effective way for the LLM to utilize your plugin. Also, it’s important that the manifest file is up-to-date with any changes or enhancements you make to your plugin.
 
 1. App description: Include detailed descriptions of the app, supported scenarios, feature capabilities, and related keywords using the `shortDescription` and `longDescription` fields.
 
@@ -80,7 +80,7 @@ To ensure your plugin works as intended, it is important to include good descrip
 4. Including links in plugin response: Including links within your skill’s response serves multiple purposes:
     * Assists the LLM in posting the entity link for users, streamlining the reference process.
     * Enables users to easily access your entities in future Copilot requests.
-    * Embedded links in Adaptive Cards that allows your content to be displayed as a live, actionable loop component throughout the M365 ecosystem, enhancing user engagement and interaction.
+    * Embedded links in Adaptive Cards that allows your content to be displayed as a live, actionable loop component throughout the Microsoft 365 ecosystem, enhancing user engagement and interaction.
 
 5. Deep Content Retrieval: To further enhance your plugin’s functionality, it’s recommended that your API supports deep content retrieval scenarios that can be leveraged by the LLMs to obtain grounding data. This involves enabling Copilot to send targeted requests, such as limiting a search to a specific date range, to your API for particular tasks and queries.
 
@@ -90,13 +90,13 @@ When you connect your API to Teams, you've built a simple, powerful Microsoft 36
 
 ## Connecting external data sources
 
-If you have an existing Microsoft Graph Connector, it will work with Copilot without any changes. With a Graph Connector, your data will be included in Copilot responses, and also participate in other Microsoft 365 experiences such as search, content recommendations. For more information, see [building a Microsoft Graph connector](https://developer.microsoft.com/graph/connectors).
+If you have an existing Microsoft Graph Connector, it works with Copilot without any changes. With a Graph Connector, your data is included in Copilot responses, and also participate in other Microsoft 365 experiences such as search, content recommendations. For more information, see [building a Microsoft Graph connector](https://developer.microsoft.com/graph/connectors).
 
 ## How to make your Graph connector work better with Copilot?
 
-To ensure your Graph connector works well with Copilot, there are several things you should do. Following these tips will also improve relevance for your connector content with Microsoft Search:
+To ensure your Graph connector works well with Copilot, there are several things you should do. Following these tips improves relevance for your connector content with Microsoft Search:
 
-1. Include `urlToItemResolver`. By including `urlToItemResolver` in your connector’s [activity settings](/graph/connecting-external-content-manage-connections#activity-settings), Copilot will become aware when users share URLs to your content with one another. When users share an item with one another, Copilot will boost its importance for including the item in its response.  
+1. Include `urlToItemResolver`. By including `urlToItemResolver` in your connector’s [activity settings](/graph/connecting-external-content-manage-connections#activity-settings), Copilot will become aware when users share URLs to your content with one another. When users share an item with one another, Copilot boosts its importance for including the item in its response.  
 2. Provide a rich human-readable name and detailed description when you [create the connection](/graph/api/externalconnectors-external-post-connections). This helps Copilot understand what the data source is, so it includes the data source in its response if it’s relevant.
 3. Apply [semantic labels](/graph/connecting-external-content-manage-schema#semantic-labels). Semantic labels help Copilot understand the semantic meaning of your schema. You must apply as many of them to your schema as applicable.
 4. Add [user activities](/graph/api/externalconnectors-externalitem-addactivities). In addition to adding your content `externalItems` to the Microsoft Graph, your connector should also add user activities around you’re content. Supported activity types are shown [here](/graph/api/resources/externalconnectors-externalactivity). Items that have more activities are boosted in their importance.
