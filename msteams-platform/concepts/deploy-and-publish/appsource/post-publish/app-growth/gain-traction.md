@@ -33,7 +33,7 @@ As soon as  your collaborative app is published and customers are made aware of 
 
 - To achieve product-led growth, you must strategically upskill your customer success teams. The aim is to access and monitor product acquisition, engagement, and task completion. They must also monitor value realization metrics or milestones for customers using the app, so that performing outreach and intervention at the right time becomes possible to be able to assist users in their journey.
 
-- In addition, establish a process to channel customer feedback from this team. Use this feedback to inform roadmap planning and growth experimentation for your Teams app. It is a good idea to have your customer success team conversant in day-to-day usage of Microsoft Teams. It also helps if your team is up to speed with all articles in the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps). Your customers benefit from their expertise in these areas.
+- In addition, establish a process to channel customer feedback from this team. Use this feedback to inform roadmap planning and growth experimentation for your Teams app. It's a good idea to have your customer success team conversant in day-to-day usage of Microsoft Teams. It also helps if your team is up to speed with all articles in the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps). Your customers benefit from their expertise in these areas.
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>
@@ -41,7 +41,7 @@ As soon as  your collaborative app is published and customers are made aware of 
 <details>
 <summary>Upskill customer support staff on new Teams app</summary>
 
-Similar to customer success teams, it's imperative to train your customer support team on the Teams app. Upskill them on frequent user scenarios, common queries, and guidance for troubleshooting. It's also useful to train the team for any pre-configuration required, app rollout and governance of the Teams app in customer organizations. Your support team may get fairly nuanced queries about your app in Teams.
+Similar to customer success teams, it's imperative to train your customer support team on the Teams app. Upskill them on frequent user scenarios, common queries, and guidance for troubleshooting. It's also useful to train the team for any preconfiguration required, app rollout and governance of the Teams app in customer organizations. Your support team may get fairly nuanced queries about your app in Teams.
 
 To continue delivering a delightful experience for your customers, ensure the support team has basic understanding of:
 
@@ -83,11 +83,11 @@ Before shipping Teams app on the marketplace, you'd have identified three to fiv
 </details>
 <br>
 <details>
-<summary>Share overlapping customer orgs to plan co-activation</summary>
+<summary>Share overlapping customer orgs to plan coactivation</summary>
 
-For large, strategic enterprise customers that use your SaaS product and Microsoft Teams, Microsoft’s customer-facing resources can partner with your sales and customer success teams to drive co-activation of your app in the customer organization. Microsoft evaluates co-activation opportunities for apps based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria.
+For large, strategic enterprise customers that use your SaaS product and Microsoft Teams, Microsoft’s customer-facing resources can partner with your sales and customer success teams to drive coactivation of your app in the customer organization. Microsoft evaluates coactivation opportunities for apps based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria.
 
-Contact your field, account, or engineering representatives from Microsoft to request potential co-activation of your Teams collaborative app in strategic enterprise customer accounts.
+Contact your field, account, or engineering representatives from Microsoft to request potential coactivation of your Teams collaborative app in strategic enterprise customer accounts.
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>
