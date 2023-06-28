@@ -36,7 +36,7 @@ Before you start using Adaptive Cards to build tabs, you must:
 
 ## Changes to app manifest
 
-Personal apps that render tabs must include a `staticTabs` array in their [app manifest](../../resources/schema/manifest-schema.md#statictabs). Adaptive Card tabs are rendered when the `contentBotId` property is provided in the `staticTab` definition. Static tab definitions must contain either a `contentBotId`, specifying an Adaptive Card tab or a `contentUrl`, specifying a typical hosted web content tab experience.
+Personal apps that render tabs must include a `staticTabs` array in their app manifest. Adaptive Card tabs are rendered when the `contentBotId` property is provided in the `staticTab` definition. Static tab definitions must contain either a `contentBotId`, specifying an Adaptive Card tab or a `contentUrl`, specifying a typical hosted web content tab experience.
 
 > [!NOTE]
 > The `contentBotId` property is available in manifest version 1.9 or later.
