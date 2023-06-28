@@ -652,4 +652,3 @@ app.run();
 ## See also
 
 [Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md)
-[App manifest schema for Teams](../schema/manifest-schema.md)

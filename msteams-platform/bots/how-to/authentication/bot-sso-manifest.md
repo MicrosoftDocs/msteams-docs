@@ -208,7 +208,3 @@ You can also upload your SSO-enabled app in Developer Portal. To enable SSO supp
 1. Select **Save**.
 
 Developer Portal would now support SSO for your app.
-
-## See also
-
-- [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)

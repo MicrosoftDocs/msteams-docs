@@ -406,7 +406,7 @@ Ensure that your description describes your experience and helps potential custo
 |`short`|80 characters|✔️|A short description of your app experience, used when space is limited.|
 |`full`|4000 characters|✔️|The full description of your app.|
 
-## [localizationInfo](../../concepts/build-and-test/apps-localization.md#localize-strings-in-your-app-manifest)
+## localizationInfo
 
 **Optional**—object
 
@@ -416,7 +416,7 @@ Allows the specification of a default language and provides pointers to more lan
 |---|---|---|---|
 |`defaultLanguageTag`||✔️|The language tag of the strings in this top-level manifest file.|
 
-### [localizationInfo.additionalLanguages](../../concepts/build-and-test/apps-localization.md#example-manifestjson-change)
+### localizationInfo.additionalLanguages
 
 An array of objects specifying more language translations.
 
@@ -425,7 +425,7 @@ An array of objects specifying more language translations.
 |`languageTag`||✔️|The language tag of the strings in the provided file.|
 |`file`||✔️|A relative file path to the .json file containing the translated strings.|
 
-## [icons](../../concepts/build-and-test/apps-package.md#app-icons)
+## icons
 
 **Required**—object
 
@@ -436,7 +436,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 |`outline`|32 x 32 pixels|✔️|A relative file path to a transparent 32x32 PNG outline icon.|
 |`color`|192 x 192 pixels|✔️|A relative file path to a full color 192x192 PNG icon.|
 
-## [accentColor](../../task-modules-and-cards/cards/cards-reference.md#properties-of-the-connector-card-for-microsoft-365-groups)
+## accentColor
 
 **Required**—HTML Hex color code
 
@@ -444,7 +444,7 @@ A color to use and as a background for your color icons.
 
 The value must be a valid HTML color code starting with '#', for example `#4464ee`.
 
-## [configurableTabs](../../apps-in-teams-meetings/build-tabs-for-meeting.md#configure-tab-app-for-a-meeting)
+## configurableTabs
 
 **Optional**—array
 
@@ -460,7 +460,7 @@ Used when your app experience has a team channel tab experience that requires ex
 |`sharePointPreviewImage`|string|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
 |`supportedSharePointHosts`|array of enums|2||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart`. |
 
-## [staticTabs](../../tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs)
+## staticTabs
 
 **Optional**—array
 
@@ -517,7 +517,7 @@ A list of commands that your bot can recommend to users. The object is an array 
 |title|string|32|✔️|The bot command name.|
 |description|string|128 characters|✔️|A simple text description or an example of the command syntax and its arguments.|
 
-## [connectors](../../webhooks-and-connectors/how-to/connectors-creating.md)
+## connectors
 
 **Optional**—array
 
@@ -531,7 +531,7 @@ The object is an array (maximum of one element) with all elements of type `objec
 |`scopes`|array of enums|1|✔️|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
 |`connectorId`|string|64 characters|✔️|A unique identifier for the Connector that matches its ID in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).|
 
-## [composeExtensions](../../messaging-extensions/how-to/action-commands/define-action-command.md#app-manifest-example)
+## composeExtensions
 
 **Optional**—array
 
@@ -582,7 +582,7 @@ Each command item is an object with the following structure:
 |`parameters.choices.title`|string|128 characters|✔️|Title of the choice.|
 |`parameters.choices.value`|string|512 characters|✔️|Value of the choice.|
 
-## [permissions](../../graph-api/rsc/grant-resource-specific-consent.md#request-rsc-permissions-for-teams-app)
+## permissions
 
 **Optional**—array of strings
 
@@ -596,7 +596,7 @@ Changing these permissions during app update, causes your users to repeat the co
 > [!NOTE]
 > Permissions are deprecated now.
 
-## [devicePermissions](../../concepts/device-capabilities/native-device-permissions.md)
+## devicePermissions
 
 **Optional**—array of strings
 
@@ -630,7 +630,7 @@ Teams apps that require their own SharePoint URLs to function well, includes "{t
 
 The object is an array with all elements of the type `string`.
 
-## [webApplicationInfo](../../tabs/how-to/authentication/tab-sso-manifest.md#webapplicationinfo-property)
+## webApplicationInfo
 
 **Optional**—object
 
@@ -651,7 +651,7 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 |---|---|---|---|---|
 |`notificationUrl`|string|2048 characters|✔️|The url where Graph-connector notifications for the application should be sent.|
 
-## [showLoadingIndicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
+## showLoadingIndicator
 
 **Optional**—Boolean
 
@@ -737,7 +737,7 @@ Define the properties your app uses to post a user activity feed.
 
 ***
 
-## [defaultInstallScope](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-install-scope)
+## defaultInstallScope
 
 **Optional** - string
 
@@ -748,7 +748,7 @@ Specifies the install scope defined for this app by default. The defined scope i
 * `groupChat`
 * `meetings`
 
-## [defaultGroupCapability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-the-default-capability-for-shared-scopes)
+## defaultGroupCapability
 
 **Optional** - object
 
@@ -785,7 +785,7 @@ You can define any of the following properties:
 * [privacyUrl](#developer): The HTTPS URL of the developer's privacy policy.
 * [termsOfUseUrl](#developer): The HTTPS URL of the developer's terms of use.
 
-## [supportedChannelTypes](../../concepts/build-and-test/shared-channels.md#enable-your-app-for-shared-channels)
+## supportedChannelTypes
 
 **Optional** - array
 
@@ -796,7 +796,7 @@ Enables your app in non-standard channels. If your app supports a team scope and
 > * If your app supports a team scope, it functions in the standard channels regardless of the values that are defined in this property.
 > * Your app can account for the unique properties of each of the channel types to function properly. To enable your tab for private and shared channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) and [get context in shared channels](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
 
-## [defaultBlockUntilAdminAction](../../concepts/deploy-and-publish/add-default-install-scope.md#block-apps-by-default-for-users-until-an-admin-approves)
+## defaultBlockUntilAdminAction
 
 **Optional** - Boolean
 
@@ -856,13 +856,13 @@ Specify and consolidate authorization related information for the app.
 |---|---|---|---|---|
 |`permissions`|NA|NA|NA|List of permissions that the app needs to function.|
 
-### [authorization.permissions](../../graph-api/App-permissions/Teams-app-permissions.md)
+### authorization.permissions
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
 |`resourceSpecific`| array of objects|16 items|NA|Permissions that guard data access on resource instance level.|
 
-### [authorization.permissions.resourceSpecific](../../graph-api/rsc/grant-resource-specific-consent.md#request-rsc-permissions-for-teams-app)
+### authorization.permissions.resourceSpecific
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|

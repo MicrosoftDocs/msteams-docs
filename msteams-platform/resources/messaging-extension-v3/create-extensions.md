@@ -131,7 +131,7 @@ Users can access message extension from **Take action** option of the overflow `
 
 :::image type="content" source="../../assets/images/compose-extensions/MessageExtensions_MessageAction.png" alt-text="Screenshot describes how to initiate an action from a message.":::
 
-To enable your message extension to work from a message, add the `context` parameter to your message extension's `commands` object in your [app manifest](../schema/manifest-schema.md#composeextensionscommands) as in the following example. Valid strings for the `context` array are `"message"`, `"commandBox"`, and `"compose"`. The default value is `["compose", "commandBox"]`. See the [define commands](#define-commands) section for complete details on the `context` parameter:
+To enable your message extension to work from a message, add the `context` parameter to your message extension's `commands` object in your app manifest as in the following example. Valid strings for the `context` array are `"message"`, `"commandBox"`, and `"compose"`. The default value is `["compose", "commandBox"]`. See the [define commands](#define-commands) section for complete details on the `context` parameter:
 
 ```json
 "composeExtensions": [
