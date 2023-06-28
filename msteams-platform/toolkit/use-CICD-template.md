@@ -101,7 +101,7 @@ To customize the CD workflow, you can do the following:
 
 1. Change the trigger: By default, the CD workflow is triggered when new commits are pushed into `main` branch.
 1. Change the value of environment variable `TEAMSFX_ENV_NAME`: By default, the value is `dev`.
-1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `1.*`.
+1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `2.*`.
 1. Add scripts to build the project: By default, the `Build the project` step is commented.
 1. Add scripts to run unit test: By default, the `Run unit test` step is commented.
 
@@ -111,7 +111,7 @@ To customize the Provision and Publish workflow, you can do the following:
 
 1. Change the trigger: By default, the workflow is triggered manually.
 1. Change the value of environment variable `TEAMSFX_ENV_NAME`: By default, the value is `dev`.
-1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `1.*`.
+1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `2.*`.
 
 ## Set up pipelines with Azure DevOps
 
@@ -144,7 +144,7 @@ To customize the CD pipeline, you can do the following:
 
 1. Change the trigger: By default, the CD pipeline is triggered when new commits are pushed into `main` branch.
 1. Change the value of environment variable `TEAMSFX_ENV_NAME`: By default, the value is `dev`.
-1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `1.*`.
+1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `2.*`.
 1. Add scripts to build the project: By default, the `Build the project` step is commented.
 1. Add scripts to run unit test: By default, the `Run unit test` step is commented.
 
@@ -154,7 +154,7 @@ To customize the Provision and Publish pipeline, you can do the following:
 
 1. Change the trigger: By default, the workflow is triggered manually.
 1. Change the value of environment variable `TEAMSFX_ENV_NAME`: By default, the value is `dev`.
-1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `1.*`.
+1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `2.*`.
 
 ## Set up pipelines with Jenkins
 
@@ -183,7 +183,7 @@ To customize the CD pipeline, you can do the following:
 
 1. Change the trigger: By default, the CD pipeline is triggered periodically.
 1. Change the value of environment variable `TEAMSFX_ENV_NAME`: By default, the value is `dev`.
-1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `1.*`.
+1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `2.*`.
 1. Add scripts to build the project: By default, the `Build the project` step is commented.
 1. Add scripts to run unit test: By default, the `Run unit test` step is commented.
 
@@ -193,7 +193,7 @@ To customize the Provision and Publish pipeline, you can do the following:
 
 1. Change the trigger: By default, the pipeline is triggered periodically.
 1. Change the value of environment variable `TEAMSFX_ENV_NAME`: By default, the value is `dev`.
-1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `1.*`.
+1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `2.*`.
 
 ## Set up pipelines for other platforms
 
