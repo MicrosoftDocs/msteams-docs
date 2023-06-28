@@ -262,4 +262,4 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 - [OAuth 2.0 On-Behalf-Of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)
 - [Get access for MS Graph](/graph/auth-v2-user)
 - [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet)
-- [Microsoft Teams MSAL2 provider](/graph/toolkit/providers/teams-msal2)
+- [Microsoft Teams MSAL2 provider](/graph/toolkit/providers/msal2)
