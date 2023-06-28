@@ -27,7 +27,7 @@ To scale your app, become CSP channel ready (see [CSP Channel Readiness Guide fo
 <details>
 <summary>Onboard CSP resellers to extend your app’s sales reach</summary>
 
-After you become CSP channel ready by completing the pre-requisites, browse through the CSP list on the Partner Center to find resellers to negotiate a partnership.
+After you become CSP channel ready by completing the prerequisites, browse through the CSP list on the Partner Center to find resellers to negotiate a partnership.
 
 You can find detailed partner profile information in the Partner Center or using the public [partner finder](https://appsource.microsoft.com/marketplace/partner-dir) on AppSource.
 
@@ -47,7 +47,7 @@ Help your sales team secure large new customer deals leading with your Teams col
 <details>
 <summary>Digital webinars for existing customers and new prospects</summary>
 
-Host digital webinars at regular cadences to showcase the value of your Teams app to customers. Your customer success team and pre-sales or sales team must funnel relevant existing customers and new prospects as preferred leads to invite for the webinars. Ensure that you include links to sign up for the webinars on your app’s landing page on your website and your app store listing. It attracts new, exploratory users who may be interested in learning more about your app.
+Host digital webinars at regular cadences to showcase the value of your Teams app to customers. Your customer success team and presales or sales team must funnel relevant existing customers and new prospects as preferred leads to invite for the webinars. Ensure that you include links to sign up for the webinars on your app’s landing page on your website and your app store listing. It attracts new, exploratory users who may be interested in learning more about your app.
 
 Get in touch with your field, account, or engineering representatives from Microsoft to request their participation in hero instances of these direct-to-customer webinars.
 
@@ -100,7 +100,7 @@ Remember, your goal is to get users to experience value at the earliest by using
 <details>
 <summary>Co-activation in mutually identified existing customers</summary>
 
-Based on the list you’ve shared with your Microsoft field, account, or engineering representatives while building traction, it’s time to execute co-activation and adoption of your collaborative app in customer accounts with significant seat sizes. Your customer success team will play a major driving role in this motion. They can work alongside business decision makers, IT decision makers, and end-users, that is, employees of the customer organization who are going to use your app inside Teams.
+Based on the list you’ve shared with your Microsoft field, account, or engineering representatives while building traction, it’s time to execute co-activation and adoption of your collaborative app in customer accounts with significant seat sizes. Your customer success team plays a major driving role in this motion. They can work alongside business decision makers, IT decision makers, and end-users, that is, employees of the customer organization who are going to use your app inside Teams.
 
 Remember, just enabling the app inside Teams won't be enough. Instead, adoption and change management practices led by your customer success team such as organization-wide emails at regular cadences, flyers, retention campaigns, user trainings, identifying and scaling through app champions in each team, gamification and constantly keeping an eye on app usage metrics within the customer’s tenant is required to form a habit among users.
 
@@ -131,7 +131,7 @@ Microsoft will evaluate co-activation opportunities in large customer accounts. 
 <details>
 <summary>Support joint customer success story development</summary>
 
-Connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to seek guidance and execute. You'll be able to utilize Microsoft slide templates, customer story intake form, customer interview template, and vendor video production, or copy writing services. Introduce a creative team to the customer. Help facilitate the interviews and review processes until the story is approved by all parties. Microsoft team will make sure your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
+Connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to seek guidance and execute. You're able to utilize Microsoft slide templates, customer story intake form, customer interview template, and vendor video production, or copy writing services. Introduce a creative team to the customer. Help facilitate the interviews and review processes until the story is approved by all parties. Microsoft team makes sure your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
 
 </details>
 <br>
@@ -152,7 +152,7 @@ Strategic developers, who are part of the invite-only Teams engineering’s buil
 <details>
 <summary>High-touch support for select, joint new customer pitches</summary>
 
-Get in touch with the Microsoft field, account or engineering representatives to discuss partnering during pitches you make to new customers. Microsoft will use discretion to partner on such opportunities based on customer interest, adoption opportunity (seat size in prospect customer account), and so on, among other criteria. Microsoft will primarily help land the value of the overall Teams collaborative app platform, letting you own your app or solution pitch.
+Get in touch with the Microsoft field, account or engineering representatives to discuss partnering during pitches you make to new customers. Microsoft uses discretion to partner on such opportunities based on customer interest, adoption opportunity (seat size in prospect customer account), and so on, among other criteria. Microsoft primarily helps land the value of the overall Teams collaborative app platform, letting you own your app or solution pitch.
 
 </details>
 <br>

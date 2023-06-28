@@ -40,7 +40,7 @@ A core product-led growth initiative is capturing Teams marketplace trials, tria
 <details>
 <summary>Deepen investment into Teams-app driven growth engine</summary>
 
-This stage is ripe to further sales, customer success and product-led initiatives to grow your SaaS business leading with the Teams collaborative app product line you’ve built. Consider making further investments into your sales, customer success, marketing and product teams who are responsible for the Teams app so that you can win more customer deals, collaborate with Microsoft on GTM and realize net new economic value through purchases and renewals on the commercial marketplace.
+This stage is ripe to further sales, customer success, and product-led initiatives to grow your SaaS business leading with the Teams collaborative app product line you’ve built. Consider making further investments into your sales, customer success, marketing and product teams who are responsible for the Teams app. So that you can win more customer deals, collaborate with Microsoft on GTM and realize net new economic value through purchases and renewals on the commercial marketplace.
 
 </details>
 <br>
@@ -90,14 +90,14 @@ Impactful case studies of how investing in a collaborative app resulted in growt
 <details>
 <summary>Expand customer co-activation and joint new pitches</summary>
 
-Microsoft will evaluate co-activation opportunities in large customer accounts based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria. Get in touch with your Microsoft field, account, or engineering representatives to discuss potential joint customer pitches in large customer accounts.
+Microsoft evaluates co-activation opportunities in large customer accounts based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria. Get in touch with your Microsoft field, account, or engineering representatives to discuss potential joint customer pitches in large customer accounts.
 
 </details>
 <br>
 <details>
 <summary>Get included in Microsoft exec blog or flagship event endorsement</summary>
 
-Get the power of the Microsoft executive team behind your next leadership blog or event. Review your plans for blogs or events in which you'll be participating. Develop ideas on how a Microsoft executive can help to promote your commercial marketplace offer in a blog or at an event. Reach out to the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to request Microsoft executive endorsement. If eligible, the team will work with you to find a Microsoft executive (Director level or higher) to help endorse your Teams collaborative app available on the marketplace.
+Get the power of the Microsoft executive team behind your next leadership blog or event. Review your plans for blogs or events in which you're participating. Develop ideas on how a Microsoft executive can help to promote your commercial marketplace offer in a blog or at an event. Reach out to the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to request Microsoft executive endorsement. If eligible, the team works with you to find a Microsoft executive (Director level or higher) to help endorse your Teams collaborative app available on the marketplace.
 
 </details>
 <br>
