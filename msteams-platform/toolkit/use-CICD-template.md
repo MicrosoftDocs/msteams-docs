@@ -46,11 +46,11 @@ TeamsFx supports four types of workflow templates:
 
 Two categories of sign in credentials are involved in CI/CD workflows:
 
-* **M365**: M365 credentials are required for running Provision, Publish, and SPFx based projects' CD workflows.
+* **Microsoft 365**: Microsoft 365 credentials are required for running Provision, Publish, and SPFx based projects' CD workflows.
 * **Azure**: Azure credentials are required for running Azure hosted projects' Provision and CD workflows.
 
 > [!NOTE]
-> Azure subscription id is required to be set in environment variable or `env/.env.*` files before running Provision workflows. The variable name used is `AZURE_SUBSCRIPTION_ID`. Also, please don't forget to commit and push files `env/.env.*` into Git repositories or set pipelines' environment variables as they're ignored by `.gitignore` file by default.
+> Azure subscription id is required to be set in environment variable or `env/.env.*` files before running Provision workflows. The variable name used is `AZURE_SUBSCRIPTION_ID`. Also, don't forget to commit and push files `env/.env.*` into Git repositories or set pipelines' environment variables as they're ignored by `.gitignore` file by default.
 
 |Name | Description |
 |---|---|
@@ -64,12 +64,12 @@ Two categories of sign in credentials are involved in CI/CD workflows:
 
 > [!NOTE]
 >
-> * Currently, a non-interactive authentication style for Microsoft 365 is used in CI/CD workflows, so please ensure that your Microsoft 365 account has sufficient privileges in your tenant and doesn't have multi-factor authentication or other advanced security features enabled. Please refer to the [Configure Microsoft 365 Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
+> * Currently, a non-interactive authentication style for Microsoft 365 is used in CI/CD workflows, so ensure that your Microsoft 365 account has sufficient privileges in your tenant and doesn't have multi-factor authentication or other advanced security features enabled. Refer to the [Configure Microsoft 365 Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
 > * Currently, service principal for Azure is used in CI/CD workflows, and to create Azure service principals for use, refer to [here](https://github.com/devdiv-azure-service-dmitryr/teamsfx-docs/blob/main/V5-doc-update/cicd.md#how-to-create-azure-service-principals-for-use).
 
 ## Host types
 
-Templates vary in host types (Azure or SPFx) by which Provision and CD workflow templates are splited into copies. CI, Publish workflow templates are host-type independent. If you're working on Azure hosted projects, please download those templates with file name of `azure` infixes. If you're working on SPFx hosted projects, please download those templates with file name of `spfx` infixes.
+Templates vary in host types (Azure or SPFx) by which Provision and CD workflow templates are split into copies. CI, Publish workflow templates are host-type independent. If you're working on Azure hosted projects, download those templates with file name of `azure` infixes. If you're working on SPFx hosted projects, download those templates with file name of `spfx` infixes.
 
 ## Set up workflows with GitHub
 
@@ -82,7 +82,7 @@ To set up pipelines with GitHub for CI/CD:
 
 1. Download the corresponding template files from [Tools and Templates](#tools-and-templates).
 1. Rename the downloaded template files by your needs.
-1. Put them under `.github/workflows` which is the designated folder for GitHub Actions.
+1. Put them under `.github/workflows`, which is the designated folder for GitHub Actions.
 1. Commit and push these template files into remote repositories.
 1. Add necessary [encrypted secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets) for your workflows.
 1. Trigger your workflows. Check more [details](https://docs.github.com/en/actions/using-workflows/triggering-a-workflow) about how to trigger a workflow on GitHub.
@@ -101,7 +101,7 @@ To customize the CD workflow, you can do the following:
 
 1. Change the trigger: By default, the CD workflow is triggered when new commits are pushed into `main` branch.
 1. Change the value of environment variable `TEAMSFX_ENV_NAME`: By default, the value is `dev`.
-1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `1.*`.
+1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `2.*`.
 1. Add scripts to build the project: By default, the `Build the project` step is commented.
 1. Add scripts to run unit test: By default, the `Run unit test` step is commented.
 
@@ -111,7 +111,7 @@ To customize the Provision and Publish workflow, you can do the following:
 
 1. Change the trigger: By default, the workflow is triggered manually.
 1. Change the value of environment variable `TEAMSFX_ENV_NAME`: By default, the value is `dev`.
-1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `1.*`.
+1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `2.*`.
 
 ## Set up pipelines with Azure DevOps
 
@@ -124,7 +124,7 @@ To set up pipelines with Azure DevOps for CI/CD:
 
 1. Download the corresponding template files from [Tools and Templates](#tools-and-templates).
 1. Rename the downloaded template files by your needs.
-1. Put them under `.azure/pipelines` which is the conventional folder for Azure Pipelines.
+1. Put them under `.azure/pipelines`, which is the conventional folder for Azure Pipelines.
 1. Commit and push these template files into remote repositories.
 1. Create corresponding Azure DevOps pipelines by following [Create your first Azure DevOps Pipeline](/azure/devops/pipelines/create-first-pipeline).
 1. Add necessary [Azure DevOps Pipeline variables](/azure/devops/pipelines/process/variables) for your pipelines.
@@ -144,7 +144,7 @@ To customize the CD pipeline, you can do the following:
 
 1. Change the trigger: By default, the CD pipeline is triggered when new commits are pushed into `main` branch.
 1. Change the value of environment variable `TEAMSFX_ENV_NAME`: By default, the value is `dev`.
-1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `1.*`.
+1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `2.*`.
 1. Add scripts to build the project: By default, the `Build the project` step is commented.
 1. Add scripts to run unit test: By default, the `Run unit test` step is commented.
 
@@ -154,7 +154,7 @@ To customize the Provision and Publish pipeline, you can do the following:
 
 1. Change the trigger: By default, the workflow is triggered manually.
 1. Change the value of environment variable `TEAMSFX_ENV_NAME`: By default, the value is `dev`.
-1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `1.*`.
+1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `2.*`.
 
 ## Set up pipelines with Jenkins
 
@@ -167,7 +167,7 @@ To set up pipelines with Jenkins for CI/CD:
 
 1. Download the corresponding template files from [Tools and Templates](#tools-and-templates).
 1. Rename the downloaded template files by your needs.
-1. Put them under `.jenkins/pipelines` which can be a conventional folder for Jenkins Pipelines.
+1. Put them under `.jenkins/pipelines`, which can be a conventional folder for Jenkins Pipelines.
 
 ### Customize CI pipeline
 
@@ -183,7 +183,7 @@ To customize the CD pipeline, you can do the following:
 
 1. Change the trigger: By default, the CD pipeline is triggered periodically.
 1. Change the value of environment variable `TEAMSFX_ENV_NAME`: By default, the value is `dev`.
-1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `1.*`.
+1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `2.*`.
 1. Add scripts to build the project: By default, the `Build the project` step is commented.
 1. Add scripts to run unit test: By default, the `Run unit test` step is commented.
 
@@ -193,7 +193,7 @@ To customize the Provision and Publish pipeline, you can do the following:
 
 1. Change the trigger: By default, the pipeline is triggered periodically.
 1. Change the value of environment variable `TEAMSFX_ENV_NAME`: By default, the value is `dev`.
-1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `1.*`.
+1. Change the value of environment variable `TEAMSFX_CLI_VERSION`: By default, the value is `2.*`.
 
 ## Set up pipelines for other platforms
 
@@ -214,7 +214,7 @@ To provision and deploy resources targeting Azure inside CI/CD, you must create 
 
 Perform the following steps to create Azure service principals:
 
-1. Register an Microsoft Azure Active Directory (Azure AD) application in single tenant.
+1. Register a Microsoft Azure Active Directory (Azure AD) application in single tenant.
 2. Assign a role to your Azure AD application to access your Azure subscription. The `Contributor` role is recommended.
 3. Create a new Azure AD application secret.
 
