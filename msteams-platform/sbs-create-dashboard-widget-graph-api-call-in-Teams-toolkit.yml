@@ -528,9 +528,9 @@ items:
 
         1. Create **auth-start.html** and **auth-end.html** files in **public** folder.
         
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/auth-end-start.png" alt-text="Screenshot shows the folder structure for auth-start and auth-end files.":::
+           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/auth-end-start.png" alt-text="Screenshot shows the folder structure for auth-start and auth-end files.":::
 
-        1. Add the code in **auth-start.html** and **auth-end.html** files
+        1. Add the code in **auth-start.html** and **auth-end.html** files.
 
         # [auth-start](#tab/auth-start)
         
