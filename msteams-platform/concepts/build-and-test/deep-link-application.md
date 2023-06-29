@@ -253,6 +253,42 @@ The following table provides information on `APP_ID` and `BOT_APP_ID`:
 > [!NOTE]
 > `APP_ID` and `BOT_APP_ID` can be the same in many cases, if an app has a recommended bot to use as an app's ID and if there is one.
 
+## Generate a deep link to share content to stage in meetings
+
+You can also generate a deep link to [share the app to stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#share-entire-app-to-stage) and start or join a meeting.
+
+For deep links to share content to stage, see [deep link to share content to stage in meetings](~/concepts/build-and-test/share-in-meeting.md#generate-a-deep-link-to-share-content-to-stage-in-meetings).
+
+> [!NOTE]
+>
+> * Generating a deep link to share content to stage in meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * Deep link to share content to stage in meeting is supported in Teams desktop client only.
+
+## Deep link to meeting side panel
+
+You can generate a deep link to the [meeting side panel](~/apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) in a meeting. Use the following format for a deep link to the meeting side panel:
+
+`https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`.
+
+Example:
+
+`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
+
+By default, a deep link opens in a meeting side panel. To open a deep link directly in an app rather than the meeting side panel, add `openInMeeting=false` in the deep link format:
+
+`https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>&openInMeeting=false`
+
+For more information, see [deep link to a tab](~/concepts/build-and-test/deep-link-application.md#generate-a-deep-link-to-your-tab).
+
+Deep link doesn't open in the meeting side panel in the following scenarios:
+
+* If there is no active meeting.
+* If the app doesn't have `sidePanel` context declared in the app manifest.
+* If `openInMeeting=false` is set in the deep link.
+* If deep link is selected outside of the meeting window or component.
+* If deep link doesn't match the current meeting for example, deep link is created from another meeting.
+
+
 ## Code Sample
 
 | Sample name | Description | .NET |Node.js|
