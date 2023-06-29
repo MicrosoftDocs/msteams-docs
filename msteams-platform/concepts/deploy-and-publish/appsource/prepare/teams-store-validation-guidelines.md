@@ -353,17 +353,16 @@ Teams apps must respond within a reasonable time-frame or show a loading or typi
 
 Explore resources designed to help you with responsible Artificial Intelligence (AI) practices at every stage of innovation such as [Microsoft RAI Toolkit](https://www.microsoft.com/en-us/ai/responsible-ai-resources) and [HAX Toolkit Project](https://www.microsoft.com/en-us/research/project/hax-toolkit/).
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial marketplace policy for Apps with AI generated content](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements) and [Microsoft commerical marketplace policy for Apps using facial recognition capabilities](/legal/marketplace/certification-policies#2-apps-using-facial-recognition-capabilities-are-subject-to-the-following-policies) 
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial marketplace policy for Apps with AI generated content](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements) and [Microsoft commerical marketplace policy for Apps using facial recognition capabilities.](/legal/marketplace/certification-policies#2-apps-using-facial-recognition-capabilities-are-subject-to-the-following-policies) 
 
 #### Apps with AI-generated content
 
-* App must not generate, contain, or provide access to inappropriate, harmful, or offensive Artificial Intelligence (AI) generated content consistent with existing commercial marketplace policies outlined in [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content). [*Mandatory Fix*]
+* App must not generate, contain, or provide access to inappropriate, harmful, or offensive AI generated content consistent with existing commercial marketplace policies outlined in [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content). [*Mandatory Fix*]
 
 * Consider using any of the following:
-
-  * Use [Teams AI library](~/bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md) Teams-centric interface to GPT-based common language models and user intent engines. [*Suggested Fix*]
+  * Use [Teams AI library](~/bots/how-to/Teams-conversational-AI/teams-conversation-ai-overview.md), Teams-centric interface to GPT-based common language models and user intent engines. [*Suggested Fix*]
   * Use of moderation hooks, which can be used to regulate bot responses through moderation API. [*Suggested Fix*]
-  * Add conversation sweeping capability which helps developers monitor conversations and intervene when conversations go astray. [*Suggested Fix*]
+  * Add conversation sweeping capability, which helps you monitor conversations and intervene when conversations go astray. [*Suggested Fix*]
 
 * App must provide mechanism for app users to report inappropriate, harmful, or offensive content to the developer by any of the below mechanism. [*Mandatory Fix*]
   * App description including mail ID or link to the portal to log the issue.
@@ -380,8 +379,7 @@ Explore resources designed to help you with responsible Artificial Intelligence 
 > Apps in this category may undergo additional review for adherence to Microsoft’s Responsible AI principles. 
 
 * App must not allow use of facial recognition capabilities to identify an individual to be used by or for a police department in the United States. [*Mandatory Fix*]
-* Developers of apps utilizing facial recognition or emotional inference technologies must provide a prominent tag or indication of each of these capabilities in the app description. [*Mandatory Fix*]
-
+* For apps utilizing facial recognition or emotional inference technologies, you must provide a prominent tag or indication of each of these capabilities in the app description. [*Mandatory Fix*]
    * Apps that use facial expressions or facial movements to infer emotional states, such as anger, disgust, happiness, sadness, surprise, fear, or other terms commonly used to describe the emotional state of a person can be restricted based on the review. 
    * Use of facial expressions and movements to detect and classify only individual facial elements, such as smiles or raised eyebrows is permitted. The key distinction is between the detection of facial expressions or movements as visual signals versus the inference of an emotional state. 
 
