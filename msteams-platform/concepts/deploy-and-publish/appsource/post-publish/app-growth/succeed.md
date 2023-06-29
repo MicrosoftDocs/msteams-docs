@@ -88,9 +88,9 @@ Impactful case studies of how investing in a collaborative app resulted in growt
 </details>
 <br>
 <details>
-<summary>Expand customer co-activation and joint new pitches</summary>
+<summary>Expand customer coactivation and joint new pitches</summary>
 
-Microsoft will evaluate co-activation opportunities in large customer accounts based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria. Get in touch with your Microsoft field, account, or engineering representatives to discuss potential joint customer pitches in large customer accounts.
+Microsoft will evaluate coactivation opportunities in large customer accounts based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria. Get in touch with your Microsoft field, account, or engineering representatives to discuss potential joint customer pitches in large customer accounts.
 </details>
 <br>
 <details>
