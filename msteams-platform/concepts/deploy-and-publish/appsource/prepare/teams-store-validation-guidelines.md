@@ -364,7 +364,7 @@ Explore resources designed to help you with responsible Artificial Intelligence 
       * Use of moderation hooks, which can be used to regulate bot responses through moderation API. [*Suggested Fix*]
       * Add conversation sweeping capability, which helps you monitor conversations and intervene when conversations go astray. [*Suggested Fix*]
 
-* App must provide mechanism for app users to report inappropriate, harmful, or offensive content to the developer by any of the below mechanism. [*Mandatory Fix*]
+* App must provide mechanisms for app users to report inappropriate, harmful, or offensive content to the developer by any of the following mechanisms: [*Mandatory Fix*]
   * App description including mail ID or link to the portal to log the issue.
   * In app mechanism to log issue along with specific reference to the inappropriate content.
 
