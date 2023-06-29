@@ -14,7 +14,7 @@ Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API int
 In this section, you'll learn to:
 
 1. [Add RSC permissions to your Teams app](#add-rsc-permissions-to-your-teams-app)
-1. [Install your app in a team or chat](#install-your-app-in-a-team-or-chat)
+1. [Install your app in a team, chat, or user](#install-your-app-in-a-team-chat-or-user)
 1. [Verify app RSC permission granted to your app](#verify-app-rsc-permission-granted-to-your-app)
 
 ## Add RSC permissions to your Teams app
@@ -240,6 +240,30 @@ Example for RSC permissions in a chat:
 }
 ```
 
+Example for RSC permissions for user:
+
+```json
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp"
+    },
+"authorization": {
+    "permissions": {
+        "orgWide": []
+        "resourceSpecific": [
+            {
+                "name": "InAppPurchase.Allow.User",
+                "type": "Delegated"
+            },
+            {
+                "name": "TeamsActivity.Send.User",
+                "type": "Application"
+            },
+        ]
+    }
+}
+```
+
 <br>
 </details>
 
@@ -314,11 +338,11 @@ Example for RSC permissions in a chat:
 <br>
 </details>
 
-## Install your app in a team or chat
+## Install your app in a team, chat, or user
 
-To install your app on which you've enabled RSC permission in a team or chat, follow these steps:
+To install your app on which you've enabled RSC permission in a team, chat, or user, follow these steps:
 
-1. Ensure that you've configured [consent settings](#configure-consent-settings) for team or chat.
+1. Ensure that you've configured [consent settings](#configure-consent-settings) for team, chat, or user.
 1. [Sideload your app in Teams](#sideload-your-app-in-teams).
 
 ### Configure consent settings
@@ -367,16 +391,16 @@ The default value of the property `isChatResourceSpecificConsentEnabled` is base
 <br>
 <details>
 
-<summary><b>Configure user owner consent settings for RSC in a chat using the Graph APIs</b></summary>
+<summary><b>Configure user owner consent settings for RSC in a user using the Graph APIs</b></summary>
 
 You can enable or disable RSC for user using Graph API. The property `isUserPersonalScopeResourceSpecificConsentEnabled` in [teamsAppSettings](/graph/api/teamsappsettings-update#example-1-enable-installation-of-apps-that-require-resource-specific-consent-in-chats-meetings) governs whether user RSC is enabled in the tenant.
 
-:::image type="content" source="../../assets/images/rsc/graph-rsc-chat-configuration.PNG" alt-text="Screenshot shows the Graph RSC team configuration.":::
+:::image type="content" source="../../assets/images/rsc/graph-rsc-user-configuration.PNG" alt-text="The screenshot shows the Graph RSC user configuration.":::
 
 The default value of the property `isUserPersonalScopeResourceSpecificConsentEnabled` is based on whether [user consent settings](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) is turned on or off in the tenant when RSC for user is first used. The default value is defined either when:
 
 * [TeamsAppSettings](/graph/api/teamsappsettings-get) are retrieved for the first time.
-* Teams app with RSC permissions is installed in a chat or meeting.
+* Teams app with RSC permissions is installed in for a user.
 
 > [!NOTE]
 > Admin control is added to allow or block RSC consent settings based on the sensitivity of the data accessed. It isn't based on the single master switch that enables or disables consent settings for app RSC permissions for all apps in the tenant.
@@ -387,7 +411,7 @@ The default value of the property `isUserPersonalScopeResourceSpecificConsentEna
 
 ### Sideload your app in Teams
 
-If your Teams admin allows custom app uploads, you can [sideload your app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team or chat.
+If your Teams admin allows custom app uploads, you can [sideload your app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team, chat, or user.
 
 ## Verify app RSC permission granted to your app
 
@@ -412,10 +436,11 @@ For more information, see [get access on behalf of a user](/graph/auth-v2-user?v
 
 You can check the type of RSC permission granted to a resource in the app:
 
-* For application RSC permissions, call the following APIs to retrieve the list of apps installed in a team or chat:
+* For application RSC permissions, call the following APIs to retrieve the list of apps installed in a team, chat, or user:
 
   * [List apps in chat](/graph/api/chat-list-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
   * [List apps in team](/graph/api/team-list-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
+  * [List apps for user](/graph/api/userteamwork-list-installedapps?view=graph-rest-1.0&tabs=http)
 
   These are all the application RSC permissions granted on this specific resource. Each entry in the list can be correlated to the Teams app by matching the `clientAppId` in the permission grants list with the `webApplicationInfo.Id` property in the app's manifest.
 
