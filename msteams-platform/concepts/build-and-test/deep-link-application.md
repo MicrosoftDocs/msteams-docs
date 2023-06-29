@@ -287,6 +287,8 @@ Deep link doesn't open in the meeting side panel in the following scenarios:
 * If `openInMeeting=false` is set in the deep link.
 * If deep link is selected outside of the meeting window or component.
 * If deep link doesn't match the current meeting for example, deep link is created from another meeting.
+
+
 ## Code Sample
 
 | Sample name | Description | .NET |Node.js|
