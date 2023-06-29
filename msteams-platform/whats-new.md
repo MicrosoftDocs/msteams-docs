@@ -357,8 +357,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 31/01/2023 |Introducing Targeted in-meeting notification for apps in Teams | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > Build in-meeting notification for meeting > [Targeted in-meeting notification for apps in Teams.](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification) |
-| 30/01/2023 | Enable app caching to improve subsequent launch time of the apps to the meeting side panel. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching) |
+|31/01/2023| Send notifications to specific participants on a meeting stage with targeted in-meeting notification. |Build apps for Teams meetings and calls > Enable and configure apps for meetings > Build in-meeting notification for Teams meeting > Build tabs for meeting > [Targeted in-meeting notification](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification)|
+|30/01/2023| Enable app caching to improve subsequent launch time of the apps to the meeting side panel.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > [App caching](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching) |
 
 </details>
 </br>
@@ -368,8 +368,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-|01/31/2023| Send notifications to specific participants on a meeting stage with targeted in-meeting notification. |Build apps for Teams meetings and calls > Enable and configure apps for meetings > Build in-meeting notification for Teams meeting > Build tabs for meeting > [Targeted in-meeting notification](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification)|
-|01/30/2023| Enable app caching to improve subsequent launch time of the apps to the meeting side panel.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > [App caching](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching) |
+
 |05/12/2022| Use share in meeting to share any document or third-party app to the meeting stage.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > [Share in meeting](concepts/build-and-test/share-in-meeting.md) |
 |10/11/2022| Enable bots to receive all conversation messages without being @mentioned in relevant contexts.|Build bots > Bot conversations > Message in bot conversations > [Receive all conversation messages with RSC](bots/how-to/conversations/channel-messages-with-rsc.md) |
 |10/11/2022|Generate a deep link to share content to stage in meetings.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > Share in meeting > [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md) |
