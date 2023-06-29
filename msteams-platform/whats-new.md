@@ -345,8 +345,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 June**
 
-* ***June 29, 2023***: [Enable app icon badging for your Teams app](apps-in-teams-meetings/app-icon-badging-for-your-app.md).
-***June 19, 2023***: [Use Collaborative Stage View to engage with your app content in a new Teams window](tabs/tabs-link-unfurling.md#collaborative-stage-view).
+* ***June 29, 2023***: [Use app icon badging to identify any app activity during a meeting.](apps-in-teams-meetings/app-icon-badging-for-your-app.md).
+* ***June 19, 2023***: [Use Collaborative Stage View to engage with your app content in a new Teams window](tabs/tabs-link-unfurling.md#collaborative-stage-view).
 
 :::column-end:::
 :::row-end:::
