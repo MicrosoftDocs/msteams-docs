@@ -353,7 +353,7 @@ Teams apps must respond within a reasonable time-frame or show a loading or typi
 
 Explore resources designed to help you with responsible Artificial Intelligence (AI) practices at every stage of innovation such as [Microsoft RAI Toolkit](https://www.microsoft.com/en-us/ai/responsible-ai-resources) and [HAX Toolkit Project](https://www.microsoft.com/en-us/research/project/hax-toolkit/).
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial marketplace policy for Apps with AI generated content](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements) and [Microsoft commerical marketplace policy for Apps using facial recognition capabilities.](/legal/marketplace/certification-policies#2-apps-using-facial-recognition-capabilities-are-subject-to-the-following-policies) 
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial marketplace policy for Apps with AI generated content](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements) and [Microsoft commercial marketplace policy for Apps using facial recognition capabilities.](/legal/marketplace/certification-policies#2-apps-using-facial-recognition-capabilities-are-subject-to-the-following-policies) 
 
 #### Apps with AI-generated content
 
@@ -366,9 +366,9 @@ Explore resources designed to help you with responsible Artificial Intelligence 
 
 * App must provide mechanism for app users to report inappropriate, harmful, or offensive content to the developer by any of the below mechanism. [*Mandatory Fix*]
   * App description including mail ID or link to the portal to log the issue.
-  * In app mechanism to log issue along with specific reference of the inappropriate content.
+  * In app mechanism to log issue along with specific reference to the inappropriate content.
 
-* Developer must take timely action on reported concerns. [*Mandatory Fix*]
+* You must take timely action on reported concerns. [*Mandatory Fix*]
 * App must clearly describe AI functionality before the customer acquires the offer consistent with policy [100.1.3](/legal/marketplace/certification-policies#10013-description) and prompt user to review the info as a part of in-app functionality. [*Mandatory Fix*].
 
    :::image type="content" source="../../../../assets/images/submission/teams-ai-library-description-guideline.png" alt-text="Screenshot shows the description for Ai functionality.":::
