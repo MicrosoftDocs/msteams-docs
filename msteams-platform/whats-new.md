@@ -347,7 +347,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 June**
 
-***June 19, 2023***: [Introduced Collaborative Stage View](tabs/tabs-link-unfurling.md#collaborative-stage-view) allows users to engage with your app content in a new Teams window.
+***June 19, 2023***: [Use Collaborative Stage View to engage with your app content in a new Teams window](tabs/tabs-link-unfurling.md#collaborative-stage-view).
 
 :::column-end:::
 :::row-end:::
