@@ -103,7 +103,7 @@ Teams toolkit for Visual Studio Code built on top of the Teams App Submission AP
   > * View permissions requested by apps.
   > * Grant admin consent to apps in [manage org wide app settings.](https://admin.teams.microsoft.com/policies/manage-apps).
 
-The following steps help you to approve from Admin Center:
+The following steps help you to approve from admin center:
 
 1. Select **Go to admin portal**.
 
