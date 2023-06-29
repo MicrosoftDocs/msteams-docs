@@ -37,8 +37,6 @@ Teams platform features that are available to all app developers.
 
 **2023 June**
 
-* ***June 14, 2023***: [Use Collaborative Stage View to engage with your app content in a new Teams window](tabs/tabs-link-unfurling.md#collaborative-stage-view).
-
 * ***June 14, 2023***: [Added validation guidelines for Teams app powered by Artificial Intelligence (AI)](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-powered-by-ai).
 
 * ***June 02, 2023***: [Get real-time meeting events for channel meetings](apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api).
@@ -67,7 +65,7 @@ Teams platform features that are available to all app developers.
 |20/02/2023| Plan, strategize, and execute your app growth in Teams to make it a successful app on the marketplace. | Grow your app > [Strategize and execute growth for your app](concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md)|
 |17/02/2023| Build a dashboard tab app that acts as a tool to track, analyze, monitor, display, and extract data. | Build Tabs > [Build a dashboard tab app](tabs/how-to/build-a-dashboard-tab-app.md#build-a-dashboard-tab-app)|
 |09/02/2023| Build apps for anonymous users that support anonymous users to attend Teams meetings with an alternative authentication experience. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build apps for anonymous users](apps-in-teams-meetings/build-apps-for-anonymous-user.md) |
-|31/01/2023| Get update and soft delete event notification in a bot when you edit, undelete or soft delete a message in a chat. | Build bots > Bot conversations > [Messages in bot conversations](bots/how-to/conversations/conversation-messages.md#update-message)
+|31/01/2023| Get update and soft delete event notification in a bot when you edit, undelete or soft delete a message in a chat. | Build bots > Bot conversations > [Messages in bot conversations](bots/how-to/conversations/conversation-messages.md#get-edit-message-event)
 
 </details>
 </br>
@@ -331,7 +329,7 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 | -------- | --------- | ----------------|
 | 25/05/2023 | Use a deep link to open a tab app in meeting side panel in Teams mobile client. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) |
 |23/05/2023 | Teams AI library helps you build AI-powered Teams apps. | Build Bots > [Teams AI library](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)|
-|23/05/2023| Extend Microsoft 365 Copilot to enable users to work with Microsoft apps and third-party tools and services, unlocking the full potential of Microsoft 365 Copilot. | [Extend Microsoft 365 Copilot](copilot/how-to-extend-copilot.md)|
+|23/05/2023| Extend Microsoft 365 Copilot to integrate with Microsoft Teams apps to turn your app into most powerful productivity tool. | [Extend Microsoft 365 Copilot](copilot/how-to-extend-copilot.md)|
 
 ## Developer preview
 
@@ -357,15 +355,15 @@ Developer preview is a public program that provides early access to unreleased T
 |01/31/2023| Send notifications to specific participants on a meeting stage with targeted in-meeting notification. |Build apps for Teams meetings and calls > Enable and configure apps for meetings > Build in-meeting notification for Teams meeting > Build tabs for meeting > [Targeted in-meeting notification](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification)|
 |01/30/2023| Enable app caching to improve subsequent launch time of the apps to the meeting side panel.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > [App caching](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching) |
 |05/12/2022| Use share in meeting to share any document or third-party app to the meeting stage.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > [Share in meeting](concepts/build-and-test/share-in-meeting.md) |
-|10/11/2022| Enable bots to receive all chat messages without being @mentioned.|Build bots > Bot conversations > Message in bot conversations > [Receive all conversation messages with RSC](bots/how-to/conversations/channel-messages-with-rsc.md) |
+|10/11/2022| Enable bots to receive all conversation messages without being @mentioned in relevant contexts.|Build bots > Bot conversations > Message in bot conversations > [Receive all conversation messages with RSC](bots/how-to/conversations/channel-messages-with-rsc.md) |
 |10/11/2022|Generate a deep link to share content to stage in meetings.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > Share in meeting > [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md) |
 | 09/23/2022 | Use apps in Teams meetings scheduled through public channels. | Build apps for Teams meetings and calls > [Apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/23/2022 | Share apps to the Teams meeting stage in mobile. | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
-| 08/03/2022 | Use toggle incoming audion to toggle the incoming audio state setting for the meeting user in Teams meeting stage. | Build apps for Teams meetings and calls > [Meeting apps API references](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
-| 08/02/2022| The Collaboration controls in Teams allow you to build custom collaborative experiences and enable contextual collaboration around business processes. | Integrate with Teams > [Collaboration controls](samples/collaboration-control.md) |
-|05/24/2022| Enhanced collaboration with Live Share SDK. | Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
+| 08/03/2022 | Use toggle incoming audio API to toggle the incoming audio state setting for the user in Teams meeting stage from mute to unmute or vice-versa. | Build apps for Teams meetings and calls > [Meeting apps API references](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
+| 08/02/2022| Use Collaboration controls to build custom collaborative experiences and integrate with Microsoft 365 services. | Integrate with Teams > [Collaboration controls](samples/collaboration-control.md) |
+|05/24/2022| Use Live Share to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. | Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 10/28/2021 |Enable bots to receive all channel messages using resource-specific consent (RSC). | • Build bots > Bot conversations > [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) |
-| 06/16/2021 | Resource-specific consent for chats allows access to the data of a specific instance of a resource type. | • Utilize Teams data with Microsoft Graph > [Resource-specific consent](graph-api/rsc/resource-specific-consent.md) </br> • Test your app > Microsoft Graph > [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
+| 06/16/2021 | Use resource-specific consent permissions to allow the app to access the data of a specific instance of a resource type. | • Utilize Teams data with Microsoft Graph > [Resource-specific consent](graph-api/rsc/resource-specific-consent.md) </br> • Test your app > Microsoft Graph > [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 
 For more information, see [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
 
