@@ -177,6 +177,8 @@
           href: toolkit/debug-local.md
         - name: Debug background process
           href: toolkit/debug-background-process.md
+        - name: Debug for mobile
+          href: toolkit/debug-mobile.md        
       - name: Host your app on Azure
         items:    
         - name: Provision cloud resources
