@@ -446,7 +446,7 @@ items:
         <details>
         <summary>3. Update Teams Toolkit configuration files.</summary>
 
-        To update Teams Toolkit configuration in **teamsapp.yml** and **teamsapp.local.yml files, follow the steps:
+        To update Teams Toolkit configuration code in **teamsapp.yml** and **teamsapp.local.yml** files, follow the steps:
 
         # [teamsapp.yml](#tab/teamsappyml)
 
@@ -526,9 +526,11 @@ items:
         <details>
         <summary>4. Update Source Code.</summary>       
 
-        Create **auth-start.html** and **auth-end.html** files in **public** folder.
+        1. Create **auth-start.html** and **auth-end.html** files in **public** folder.
         
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/auth-end-start.png" alt-text="Screenshot shows the folder structure for auth-start and auth-end files.":::
+
+        1. Add the code in **auth-start.html** and **auth-end.html** files
 
         # [auth-start](#tab/auth-start)
         
