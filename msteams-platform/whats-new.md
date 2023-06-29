@@ -17,7 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
 | 25/05/2023 | Use a deep link to open a tab app in meeting side panel in Teams mobile client. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) |
-|23/05/2023 |  Live Share SDK is now generally available. | Build apps for Teams meetings and calls > Enhanced collaboration with Live Share > [Live Share SDK](apps-in-teams-meetings/teams-live-share-overview.md)|
+|23/05/2023 |  Live Share SDK is now generally available. Use Live Share to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. | Build apps for Teams meetings and calls > Enhanced collaboration with Live Share > [Live Share SDK](apps-in-teams-meetings/teams-live-share-overview.md)|
 |23/05/2023 | Use Teams app design guidelines to help you make quick and right decisions to design your app. | Design your app > [Overview](concepts/design/design-teams-app-overview.md)|
 |17/05/2023 | Cater your app to a specific audience from the available list of countries. | Distribute your app > Publish to the Teams store > Prepare your Teams store submission > [Distribute your app to specific countries](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries)|
 | 17/05/2023 | Use the Teams Toolkit v5 extension with many new app development features to get started with app development for Teams using Visual Studio Code. | Tools and SDKs > Teams Toolkit > [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md)|
@@ -345,10 +345,26 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 June**
 
+* ***June 29, 2023***: [Enable app icon badging for your Teams app](apps-in-teams-meetings/app-icon-badging-for-your-app.md).
 ***June 19, 2023***: [Use Collaborative Stage View to engage with your app content in a new Teams window](tabs/tabs-link-unfurling.md#collaborative-stage-view).
 
 :::column-end:::
 :::row-end:::
+
+<br>
+<details>
+<summary><b>2023</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+| 31/01/2023 |Introducing Targeted in-meeting notification for apps in Teams | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > Build in-meeting notification for meeting > [Targeted in-meeting notification for apps in Teams.](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification) |
+| 30/01/2023 | Enable app caching to improve subsequent launch time of the apps to the meeting side panel. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching) |
+
+</details>
+</br>
+
+<details>
+<summary><b>2022</b></summary>
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
@@ -366,6 +382,9 @@ Developer preview is a public program that provides early access to unreleased T
 | 06/16/2021 | Use resource-specific consent permissions to allow the app to access the data of a specific instance of a resource type. | • Utilize Teams data with Microsoft Graph > [Resource-specific consent](graph-api/rsc/resource-specific-consent.md) </br> • Test your app > Microsoft Graph > [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 
 For more information, see [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
+
+</details>
+</br>
 
 ::: zone-end
 
