@@ -360,7 +360,7 @@ Explore resources designed to help you with responsible Artificial Intelligence 
 * App must not generate, contain, or provide access to inappropriate, harmful, or offensive AI generated content consistent with existing commercial marketplace policies outlined in [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content). [*Mandatory Fix*]
 
 * Consider using any of the following:
-  * Use [Teams AI library](~/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md), Teams-centric interface to GPT-based common language models and user intent engines. [*Suggested Fix*]
+  * Use [Teams AI library](~/bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview), Teams-centric interface to GPT-based common language models and user intent engines. [*Suggested Fix*]
   * Use of moderation hooks, which can be used to regulate bot responses through moderation API. [*Suggested Fix*]
   * Add conversation sweeping capability, which helps you monitor conversations and intervene when conversations go astray. [*Suggested Fix*]
 
