@@ -340,3 +340,4 @@ If you choose to have your channel or group tab appear on the Teams mobile clien
 * [Create connectors for Microsoft 365 Groups](../../../webhooks-and-connectors/how-to/connectors-creating.md)
 * [Get context for your tab](../access-teams-context.md)
 * [Tabs on mobile](../../design/tabs-mobile.md)
+* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
