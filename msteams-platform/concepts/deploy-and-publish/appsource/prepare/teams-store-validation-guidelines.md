@@ -33,12 +33,12 @@ Following these guidelines increases the chances of your app to pass the Microso
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/package.png" link="#app-package-and-store-listing" border="false":::
    :::column-end:::
-   :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/saas-offer.PNG" link="#apps-linked-to-saas-offer" border="false":::
-   :::column-end:::
 :::row-end:::
 
 :::row:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/saas-offer.PNG" link="#apps-linked-to-saas-offer" border="false":::
+   :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/tab.png" link="#tabs" border="false":::
    :::column-end:::
@@ -51,12 +51,12 @@ Following these guidelines increases the chances of your app to pass the Microso
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/task-module.png" link="#task-modules" border="false":::
    :::column-end:::
-     :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/meeting.png" link="#meeting-extensions" border="false":::
-   :::column-end:::
 :::row-end:::
 
 :::row:::
+     :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/meeting.png" link="#meeting-extensions" border="false":::
+   :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/notifications.png" link="#notifications" border="false":::
    :::column-end:::
@@ -69,11 +69,11 @@ Following these guidelines increases the chances of your app to pass the Microso
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/crypto-currency-based-apps-icon.png" link="#cryptocurrency-based-apps" border="false":::
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/app-functionality-icon.png" link="#app-functionality" border="false":::
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/mobile-experience-icon.png" link="#mobile-experience" border="false":::
    :::column-end:::
