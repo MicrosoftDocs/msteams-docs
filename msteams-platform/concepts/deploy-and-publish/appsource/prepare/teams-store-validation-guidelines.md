@@ -19,6 +19,9 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 :::row:::
    :::column:::
+      :::image type="icon" source="../../../../assets/icons/ai-apps.png" link="#apps-powered-by-artificial-intelligence" border="false":::
+   :::column-end:::
+   :::column span="":::
       :::image type="icon" source="../../../../assets/icons/value-proposition.png" link="#value-proposition" border="false":::
    :::column-end:::
    :::column span="":::
