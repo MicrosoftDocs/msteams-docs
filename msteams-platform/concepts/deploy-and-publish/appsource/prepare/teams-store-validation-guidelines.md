@@ -72,7 +72,7 @@ Following these guidelines increases the chances of your app to pass the Microso
 :::row-end:::
 
 :::row:::
-   :::column span="4":::
+   :::column span="1":::
       :::image type="icon" source="../../../../assets/icons/app-functionality-icon.png" link="#app-functionality" border="false":::
    :::column-end:::
    :::column span="":::
