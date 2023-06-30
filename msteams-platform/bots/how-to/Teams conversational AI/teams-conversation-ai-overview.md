@@ -16,7 +16,7 @@ Teams AI library is a Teams-centric interface to GPT-based common language model
 
 :::image type="content" border="false" source="../../../assets/images/bots/teams-ai-library.png" alt-text="Visual representation of a user input and a bot response."lightbox="../../../assets/images/bots/teams-ai-library.png":::
 
-The AI library provides a simple capabilities-driven approach and helps you create intelligent apps quickly and easily with prebuilt, reusable code snippets so that you can focus on building the business logic rather than learning the semantics of Teams conversational applications.
+The AI library provides a simple capabilities-driven approach and helps you to create intelligent apps quickly and easily with prebuilt, reusable code snippets so that you can focus on building the business logic rather than learning the semantics of Teams conversational applications.
 
 The following are some of the main features available through Teams AI library:
 
@@ -41,7 +41,7 @@ Bots can run in-context and assist when the bot recognizes a user intent that ma
 
 ## Prompt engineering
 
-Prompt engineering helps you design prompts considering user's intent, context of the conversation, and the bot personality. Bots can be personalized and customized to meet user needs.
+Prompt engineering helps you to design prompts considering user's intent, context of the conversation, and the bot personality. Bots can be personalized and customized to meet user needs.
 
 ## Conversational session history
 
@@ -87,7 +87,7 @@ You can focus on writing your business logic, and allow Teams to handle the comp
 
 * Use techniques like prompt engineering to add ChatGPT like conversational experiences to your bot and built-in safety features, like moderation, help ensure your bot always responds in an appropriate manner.
 
-* The library includes a planning engine that lets the model identify the users intent and then maps that intent to actions that you implement.
+* The library includes a planning engine that lets the model identify the user's intent and then maps that intent to actions that you implement.
 
 * You can easily add support for any LLM of your choice without changing the bot logic.
 
