@@ -70,8 +70,9 @@ Following these guidelines increases the chances of your app to pass the Microso
       :::image type="icon" source="../../../../assets/icons/crypto-currency-based-apps-icon.png" link="#cryptocurrency-based-apps" border="false":::
    :::column-end:::
 :::row-end:::
+
 :::row:::
-   :::column span="":::
+   :::column span="4":::
       :::image type="icon" source="../../../../assets/icons/app-functionality-icon.png" link="#app-functionality" border="false":::
    :::column-end:::
    :::column span="":::
