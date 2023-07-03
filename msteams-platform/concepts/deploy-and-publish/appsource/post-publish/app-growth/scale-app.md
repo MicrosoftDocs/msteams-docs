@@ -82,7 +82,7 @@ After developing it, host these customer stories on the landing page of the Team
 <details>
 <summary>Showcase Teams app in leading industry events</summary>
 
-While building traction, you showcased the collaborative app in Teams during your annual customer conference. It’s time to expand the coverage to well-known public industry events where you have a prominent presence or conferences which you sponsor. Your executives can include the Teams app in their keynote or showcase your innovation center stage. Doing so is bound to attract both existing and new prospective customers.
+While building traction, you showcased the collaborative app in Teams during your annual customer conference. It’s time to expand the coverage to well-known public industry events where you've a prominent presence or conferences which you sponsor. Your executives can include the Teams app in their keynote or showcase your innovation center stage. Doing so is bound to attract both existing and new prospective customers.
 
 [Back to top](#what-should-you-do-during-the-scale-stage)
 </details>
@@ -100,7 +100,7 @@ Remember, your goal is to get users to experience value at the earliest by using
 <details>
 <summary>Coactivation in mutually identified existing customers</summary>
 
-Based on the list you’ve shared with your Microsoft field, account, or engineering representatives while building traction, it’s time to execute coactivation and adoption of your collaborative app in customer accounts with significant seat sizes. Your customer success team plays a major driving role in this motion. They can work alongside business decision makers, IT decision makers, and end-users, that is, employees of the customer organization who are going to use your app inside Teams.
+Based on the list you’ve shared with your Microsoft field, account, or engineering representatives while building traction, it’s time to execute coactivation and adoption of your collaborative app in customer accounts with significant seat sizes. Your customer success team will play a major driving role in this motion. They can work alongside business decision makers, IT decision makers, and end-users, that is, employees of the customer organization who are going to use your app inside Teams.
 
 Remember, just enabling the app inside Teams won't be enough. Instead, adoption and change management practices led by your customer success team such as organization-wide emails at regular cadences, flyers, retention campaigns, user trainings, identifying and scaling through app champions in each team, gamification and constantly keeping an eye on app usage metrics within the customer’s tenant is required to form a habit among users.
 
@@ -124,21 +124,21 @@ Ensure that you [instrument code and track analytics](../../../../design/overvie
 <details>
 <summary>Coactivation in mutually identified existing customers</summary>
 
-Microsoft evaluates coactivation opportunities in large customer accounts. Evaluation is based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria.
+Microsoft will evaluate coactivation opportunities in large customer accounts. Evaluation is based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria.
 
 </details>
 <br>
 <details>
 <summary>Support joint customer success story development</summary>
 
-Connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to seek guidance and execute. You're able to utilize Microsoft slide templates, customer story intake form, customer interview template, and vendor video production, or copy writing services. Introduce a creative team to the customer. Help facilitate the interviews and review processes until the story is approved by all parties. Microsoft team makes sure your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
+Connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to seek guidance and execute. You'll be able to utilize Microsoft slide templates, customer story intake form, customer interview template, and vendor video production, or copy writing services. Introduce a creative team to the customer. Help facilitate the interviews and review processes until the story is approved by all parties. Microsoft team will make sure your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
 
 </details>
 <br>
 <details>
 <summary>Select, area-specific marketing to local Teams customers</summary>
 
-Your field, account, or engineering representatives from Microsoft reach out to include your collaborative app in specific, local subsidiary-drive GTM opportunities focused on Teams customers located in the subsidiary’s market.
+Your field, account, or engineering representatives from Microsoft will reach out to include your collaborative app in specific, local subsidiary-drive GTM opportunities focused on Teams customers located in the subsidiary’s market.
 
 </details>
 <br>
@@ -152,7 +152,7 @@ Strategic developers, who are part of the invite-only Teams engineering’s buil
 <details>
 <summary>High-touch support for select, joint new customer pitches</summary>
 
-Get in touch with the Microsoft field, account or engineering representatives to discuss partnering during pitches you make to new customers. Microsoft uses discretion to partner on such opportunities based on customer interest, adoption opportunity (seat size in prospect customer account), and so on, among other criteria. Microsoft primarily helps land the value of the overall Teams collaborative app platform, letting you own your app or solution pitch.
+Get in touch with the Microsoft field, account or engineering representatives to discuss partnering during pitches you make to new customers. Microsoft will use discretion to partner on such opportunities based on customer interest, adoption opportunity (seat size in prospect customer account), and so on, among other criteria. Microsoft will primarily help land the value of the overall Teams collaborative app platform, letting you own your app or solution pitch.
 
 </details>
 <br>
