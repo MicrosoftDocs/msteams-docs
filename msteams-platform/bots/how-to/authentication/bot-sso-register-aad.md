@@ -844,6 +844,16 @@ Congratulations! You've completed the following app configurations in Azure AD r
 
 ---
 
+## Best practices
+
+- Keep the Azure AD app registration restricted to its original purpose of service to service application.
+- Create an additional Azure AD app for any user to service authentication, for more finite control over disabling authentication connections, rolling secrets, or reusing the Azure AD app with other applications.
+
+Some of the problems you encounter if you also use the Azure AD registration app for authentication are:
+
+- If the certificate attached to the Azure AD app registration needs to be renewed, it would impact users that have authenticated with other Azure AD services using the certificate.
+- It creates a single point of failure and control for all authentication-related activities with the bot.
+
 ## Next step
 
 > [!div class="nextstepaction"]
