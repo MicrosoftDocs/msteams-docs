@@ -37,7 +37,7 @@ You can find detailed partner profile information in the Partner Center or using
 <details>
 <summary>Tailor SaaS offers for customers and CSP resellers</summary>
 
-Teams marketplace allows you to create private offers, that is, time-bound pricing of your SaaS subscription for Teams app with customized, pre-negotiated terms for [CSPs](/azure/marketplace/isv-csp-reseller). You can also create [private plans](/marketplace/private-plans) for targeted customers to offer negotiated pricing.
+Teams marketplace allows you to create private offers, that is, time-bound pricing of your SaaS subscription for Teams app with customized, prenegotiated terms for [CSPs](/azure/marketplace/isv-csp-reseller). You can also create [private plans](/marketplace/private-plans) for targeted customers to offer negotiated pricing.
 
 Help your sales team secure large new customer deals leading with your Teams collaborative app. Offer private pricing to your customers via the Teams marketplace, leaving tax remittance, payments, and subscription billing to Microsoft.
 
@@ -82,7 +82,7 @@ After developing it, host these customer stories on the landing page of the Team
 <details>
 <summary>Showcase Teams app in leading industry events</summary>
 
-While building traction, you showcased the collaborative app in Teams during your annual customer conference. It’s time to expand the coverage to well-known public industry events where you've a prominent presence or conferences which you sponsor. Your executives can include the Teams app in their keynote or showcase your innovation centre stage. Doing so is bound to attract both existing and new prospective customers.
+While building traction, you showcased the collaborative app in Teams during your annual customer conference. It’s time to expand the coverage to well-known public industry events where you have a prominent presence or conferences which you sponsor. Your executives can include the Teams app in their keynote or showcase your innovation center stage. Doing so is bound to attract both existing and new prospective customers.
 
 [Back to top](#what-should-you-do-during-the-scale-stage)
 </details>
@@ -131,14 +131,14 @@ Microsoft evaluates coactivation opportunities in large customer accounts. Evalu
 <details>
 <summary>Support joint customer success story development</summary>
 
-Connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to seek guidance and execute. You'll be able to utilize Microsoft slide templates, customer story intake form, customer interview template, and vendor video production, or copy writing services. Introduce a creative team to the customer. Help facilitate the interviews and review processes until the story is approved by all parties. Microsoft team will make sure your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
+Connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to seek guidance and execute. You're able to utilize Microsoft slide templates, customer story intake form, customer interview template, and vendor video production, or copy writing services. Introduce a creative team to the customer. Help facilitate the interviews and review processes until the story is approved by all parties. Microsoft team makes sure your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
 
 </details>
 <br>
 <details>
 <summary>Select, area-specific marketing to local Teams customers</summary>
 
-Your field, account or engineering representatives from Microsoft will reach out to include your collaborative app in specific, local subsidiary-drive GTM opportunities focused on Teams customers located in the subsidiary’s market.
+Your field, account, or engineering representatives from Microsoft reach out to include your collaborative app in specific, local subsidiary-drive GTM opportunities focused on Teams customers located in the subsidiary’s market.
 
 </details>
 <br>
@@ -159,7 +159,7 @@ Get in touch with the Microsoft field, account or engineering representatives to
 <details>
 <summary>Include your app in global outreach to Microsoft sellers</summary>
 
-Expose your solution to Microsoft field sellers and executives through an on-demand webinar featuring your speakers and content. Microsoft will post your on-demand webinar to an internal site and promote it to Microsoft sellers. Share the internal Microsoft on-demand webinar link with your Microsoft contacts as well. Connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to check eligibility, seek guidance and execute this motion.
+Expose your solution to Microsoft field sellers and executives through an on-demand webinar featuring your speakers and content. Microsoft posts your on-demand webinar to an internal site and promote it to Microsoft sellers. Share the internal Microsoft on-demand webinar link with your Microsoft contacts as well. Connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to check eligibility, seek guidance and execute this motion.
 
 </details>
 <br>
