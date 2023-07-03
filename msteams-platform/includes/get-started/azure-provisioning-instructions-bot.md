@@ -80,9 +80,10 @@ Once the provisioning and deployment steps are complete:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely.":::
 
-1. Select **Add**.
+1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
+    1. Use the dropdown menu to add your bot app to a Team, chat, or meeting.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Screenshot showing the app being installed.":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Screenshot showing the app being installed.":::
 
    You've successfully added your bot app to the Teams client.
 
