@@ -481,7 +481,7 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 
 > [!NOTE]
 >
-> * The `teamLevelApp` context is dedicated only for Microsoft 365 Education apps.
+> * The `teamLevelApp` context is dedicated only for Education tenants.
 > * The `searchUrl` feature is not available for the third-party developers.
 > * If your tabs require context-dependent information to display relevant content or for initiating an authentication flow, For more information, see [Get context for your Microsoft Teams tab](../../tabs/how-to/access-teams-context.md).
 
