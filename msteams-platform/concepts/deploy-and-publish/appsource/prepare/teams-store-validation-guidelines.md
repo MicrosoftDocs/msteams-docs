@@ -198,7 +198,7 @@ If your app authenticates users with an external service, follow these guideline
 
 </details>
 
-### Media
+### Audio apps
 
 * If the primary intent of the app is to listen to music, it must support at least one collaborative scope with end-to-end workflow specific to app. For example, sharing of playlist, configuring or pinning playlist, and synchronously listening to music. [*Mandatory Fix*]
 
