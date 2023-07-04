@@ -42,7 +42,7 @@ items:
    | &nbsp; | [Microsoft 365](https://developer.microsoft.com/en-us/microsoft-365/dev-program) | Access to Teams account with the appropriate permissions to install an app. |
    
    > [!NOTE]
-   > The guide is tested on Teams Toolkit v5 and Nodejs version 14 and 16. The steps in this guide may work with other versions, but that hasn't been tested.
+   > The guide is tested on Teams Toolkit v5.0.1 and Nodejs version 14 and 16. The steps in this guide may work with other versions, but that hasn't been tested.
    
    ## Prepare development environment
 
