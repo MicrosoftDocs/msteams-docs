@@ -5,6 +5,7 @@ description: In this module, learn how Teams apps are managed in different place
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
+ms.date: 10/31/2022
 ---
 
 # Permissions in Teams app

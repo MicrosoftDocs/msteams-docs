@@ -4,6 +4,7 @@ description: Learn how to specify your Teams app's default install options, defa
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
+ms.date: 12/15/2022
 ---
 # Configure default options for Teams app
 

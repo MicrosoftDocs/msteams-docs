@@ -4,6 +4,7 @@ description: Plan to monetize your Microsoft Teams app and also understand the b
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.date: 06/28/2022
 ---
 # Plan to monetize your app
 
