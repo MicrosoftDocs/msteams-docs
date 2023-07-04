@@ -5,6 +5,7 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
+ms.date: 03/21/2023
 ---
 # Microsoft Teams store validation guidelines
 
@@ -19,6 +20,9 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 :::row:::
    :::column:::
+      :::image type="icon" source="../../../../assets/icons/ai-apps.png" link="#apps-powered-by-artificial-intelligence" border="false":::
+   :::column-end:::
+   :::column span="":::
       :::image type="icon" source="../../../../assets/icons/value-proposition.png" link="#value-proposition" border="false":::
    :::column-end:::
    :::column span="":::
@@ -30,12 +34,12 @@ Following these guidelines increases the chances of your app to pass the Microso
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/package.png" link="#app-package-and-store-listing" border="false":::
    :::column-end:::
-   :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/saas-offer.PNG" link="#apps-linked-to-saas-offer" border="false":::
-   :::column-end:::
 :::row-end:::
 
 :::row:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/saas-offer.PNG" link="#apps-linked-to-saas-offer" border="false":::
+   :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/tab.png" link="#tabs" border="false":::
    :::column-end:::
@@ -48,12 +52,12 @@ Following these guidelines increases the chances of your app to pass the Microso
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/task-module.png" link="#task-modules" border="false":::
    :::column-end:::
-     :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/meeting.png" link="#meeting-extensions" border="false":::
-   :::column-end:::
 :::row-end:::
 
 :::row:::
+     :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/meeting.png" link="#meeting-extensions" border="false":::
+   :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/notifications.png" link="#notifications" border="false":::
    :::column-end:::
@@ -66,13 +70,22 @@ Following these guidelines increases the chances of your app to pass the Microso
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/crypto-currency-based-apps-icon.png" link="#cryptocurrency-based-apps" border="false":::
    :::column-end:::
-   :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/app-functionality-icon.png" link="#app-functionality" border="false":::
-   :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/app-functionality-icon.png" link="#app-functionality" border="false":::
+   :::column-end:::
+   :::column span="":::
       :::image type="icon" source="../../../../assets/icons/mobile-experience-icon.png" link="#mobile-experience" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
    :::column-end:::
 :::row-end:::
 

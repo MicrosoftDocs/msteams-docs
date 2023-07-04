@@ -3,6 +3,7 @@ title: Cards
 description: In this module, learn what are cards and how they're used in bots, connectors, and message extensions.
 ms.localizationpriority: high
 ms.topic: overview
+ms.date: 01/08/2023
 ---
 
 # Cards

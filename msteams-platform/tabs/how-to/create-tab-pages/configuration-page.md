@@ -5,6 +5,7 @@ description: Create configuration page to collect information from user. Also, g
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: v-npaladugu
+ms.date: 01/31/2023
 ---
 # Create a configuration page
 

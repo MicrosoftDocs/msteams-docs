@@ -5,6 +5,7 @@ description: In this module, learn about Collaboration controls and Settings RES
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
+ms.date: 01/10/2023
 ---
 
 # Collaboration control and Settings REST API reference
