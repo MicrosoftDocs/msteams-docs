@@ -4,6 +4,7 @@ description: Learn about the basics of designing your Microsoft Teams app, inclu
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.topic: overview
+ms.date: 07/26/2022
 ---
 # Microsoft Teams app design system
 
