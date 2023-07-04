@@ -5,6 +5,7 @@ description: Learn about Stage View and Collaborative Stage View, a full screen 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 06/05/2023
 ---
 
 # Tabs link unfurling and Stage View
@@ -136,7 +137,7 @@ The following is a JSON code example to create a Collaborative Stage View button
 ```json
 {
   "type": "Action.Submit",
-  "name": "Open",
+  "title": "Open",
   "data": {
     "msteams": {
       "type": "invoke",

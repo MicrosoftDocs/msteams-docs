@@ -4,6 +4,7 @@ description: Learn how to configure, distribute, and manage your apps using the 
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
+ms.date: 02/28/2023
 ---
 
 # Manage your apps in Developer Portal

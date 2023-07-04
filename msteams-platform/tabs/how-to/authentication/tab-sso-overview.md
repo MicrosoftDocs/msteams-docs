@@ -3,6 +3,7 @@ title: Overview to authentication for tabs using SSO in Teams with Azure AD
 description: Learn about Single sign-on (SSO) authentication in Teams and how to enable it in tabs.
 ms.topic: conceptual
 ms.localizationpriority: high
+ms.date: 01/17/2023
 ---
 # Enable SSO for tab app
 

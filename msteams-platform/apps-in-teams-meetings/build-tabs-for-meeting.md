@@ -73,12 +73,13 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 
    :::image type="content" source="../assets/images/side-panel-view.png" alt-text="Screenshot shows side panel view with the list of apps.":::
 
+To notify meeting participants whenever there's a new activity on the app loaded in the meeting side panel, you can enable app icon badging. For more information, see [enable app icon badging for your Teams app](app-icon-badging-for-your-app.md).
+
 #### Deep link to meeting side panel
 
 > [!NOTE]
 >
 > * Deep link to meeting side panel in Teams desktop client is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
->
 > * Deep link to meeting side panel in Teams mobile client is generally available.
 
 You can create a deep link to your tab app that can open in the meeting side panel. When users in a meeting select the deep link, it opens the meeting side panel in the meeting stage. If a user selects the deep link before or after the meeting, the deep link opens in a pre or a post-meeting tab respectively.
@@ -109,7 +110,7 @@ Pre or post-meeting tab behavior isn't supported in channel meetings.
 
 For deep link format, see [deep links](~/concepts/build-and-test/deep-link-workflow.md#deep-link-to-meeting-side-panel).
 
-### Meeting Stage View
+### Meeting stage view
 
 1. After a tab is added to the meeting side panel, you can now choose to opt into global app sharing.
 
@@ -398,3 +399,4 @@ The following are the limitations for app caching:
 * [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
 * [Add apps to meetings using Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [Get change notifications for Microsoft Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)
+* [Enable app icon badging for your Teams app](app-icon-badging-for-your-app.md)
