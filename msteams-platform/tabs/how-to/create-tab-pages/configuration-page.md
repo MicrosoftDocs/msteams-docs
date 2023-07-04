@@ -181,7 +181,7 @@ Your tab requires contextual information to display relevant content. Contextual
 
 For more information on the properties used for tab configuration, see [context interface](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true). Collect the values of context data variables in the following two ways:
 
-* Insert URL query string placeholders in your manifest's `configurationURL`.
+* Insert URL query string placeholders in `configurationURL`of your [app manifest](../../../resources/schema/manifest-schema.md#configurabletabs).
 
 * Use the [TeamsJS library](/javascript/api/overview/msteams-client) `app.getContext()` method.
 
@@ -340,4 +340,3 @@ If you choose to have your channel or group tab appear on the Teams mobile clien
 * [Create connectors for Microsoft 365 Groups](../../../webhooks-and-connectors/how-to/connectors-creating.md)
 * [Get context for your tab](../access-teams-context.md)
 * [Tabs on mobile](../../design/tabs-mobile.md)
-* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)

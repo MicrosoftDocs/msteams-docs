@@ -442,7 +442,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 A color to use and as a background for your color icons.
 
-The value must be a valid HTML color code starting with '#', for example `#4464ee`.
+The value must be a valid HTML color code starting with '#', for example `#4464ee`. For more information, see [accentColor](../../task-modules-and-cards/cards/cards-reference.md#properties-of-the-connector-card-for-microsoft-365-groups).
 
 ## configurableTabs
 

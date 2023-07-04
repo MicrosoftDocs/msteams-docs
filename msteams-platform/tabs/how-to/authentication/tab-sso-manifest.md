@@ -63,7 +63,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
    1. `contentUrl`
    2. `configurationUrl`
    3. `validDomains`
-6. Save the Teams app manifest file.
+6. Save the Teams app manifest file. For more information, see [App manifest schema for Teams](../../../resources/schema/manifest-schema.md).
 
 <br>
 <details>
