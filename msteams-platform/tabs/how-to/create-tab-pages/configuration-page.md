@@ -182,7 +182,7 @@ Your tab requires contextual information to display relevant content. Contextual
 
 For more information on the properties used for tab configuration, see [context interface](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true). Collect the values of context data variables in the following two ways:
 
-* Insert URL query string placeholders in your manifest's `configurationURL`.
+* Insert URL query string placeholders in `configurationURL`of your [app manifest](../../../resources/schema/manifest-schema.md#configurabletabs).
 
 * Use the [TeamsJS library](/javascript/api/overview/msteams-client) `app.getContext()` method.
 
