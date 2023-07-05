@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 # Configure your app in Azure AD
 
-Azure AD provides app users access to your bot or message extension app. The app user who has signed in to Teams can be given access to your app.
+Azure Active Directory (Azure AD) provides app users access to your bot or message extension app. The app user who has signed in to Teams can be given access to your app.
 
 ## SSO configuration in Azure AD portal
 
@@ -152,7 +152,7 @@ You need:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="Screenshot shows the Application ID URI added." :::
 
-    - The **Application ID URI** is pre-filled with app ID (GUID) in the format `api://{AppID}`.
+    - The **Application ID URI** is prefilled with app ID (GUID) in the format `api://{AppID}`.
 
     > [!IMPORTANT]
     >
@@ -255,7 +255,7 @@ The scope and permissions are now configured. Next, you must configure the autho
 
     The authorized app's client ID displays on the page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Screenshot shows the newly added Client Id under Authorized client applications screen." :::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Screenshot shows the newly added Client ID under Authorized client applications screen." :::
 
     > [!NOTE]
     > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
@@ -432,7 +432,7 @@ With the app (client) ID and client secret provided, the Bot Framework Token Sto
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/test-oauth.png" alt-text="Screenshot shows the Test OAuth connection for your bot resource option.":::
 
-    If the connection isn't successful, Azure AD, displays an error. You can verify all configurations and test again.
+    If the connection isn't successful, Azure AD displays an error. You can verify all the configurations and test again.
 
 Congratulations! You've completed the following app configurations in Azure AD required to enable SSO for your bot app:
 
@@ -616,7 +616,7 @@ The scope and permissions are now configured. Next, you must configure the autho
 
     The authorized app's client ID displays on the page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Screenshot shows the newly added Client Id under Authorized client applications screen." :::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Screenshot shows the newly added Client ID under Authorized client applications screen." :::
 
     > [!NOTE]
     > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
@@ -829,7 +829,7 @@ After you've configured the OAuth connection, you can select **Test connection**
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/test-oauth.png" alt-text="Screenshot shows the Test OAuth connection for your bot resource option.":::
 
-If the connection isn't successful, Azure AD, displays an error. You can verify all configurations and test again.
+If the connection isn't successful, Azure AD displays an error. You can verify all configurations and test again.
 
 Congratulations! You've completed the following app configurations in Azure AD required to enable SSO for your bot app:
 
@@ -847,11 +847,11 @@ Congratulations! You've completed the following app configurations in Azure AD r
 ## Best practices
 
 - Keep the Azure AD app registration restricted to its original purpose of service to service application.
-- Create an additional Azure AD app for any user to service authentication, for more finite control over disabling authentication connections, rolling secrets, or reusing the Azure AD app with other applications.
+- For better control over disabling authentication connections, rolling secrets, or reusing the Azure AD app with other applications, create an additional Azure AD app for any user to service authentication.
 
-Some of the problems you encounter if you also use the Azure AD registration app for authentication are:
+If you use the Azure AD registration app for authentication you might encounter the following issues:
 
-- If the certificate attached to the Azure AD app registration needs to be renewed, it would impact users that have authenticated with other Azure AD services using the certificate.
+- If you need to renew the certificate attached to the Azure AD app registration, it will affect the users who have authenticated with other Azure AD services using the certificate.
 - It creates a single point of failure and control for all authentication-related activities with the bot.
 
 ## Next step
