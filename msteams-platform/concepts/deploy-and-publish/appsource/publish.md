@@ -5,6 +5,7 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 12/15/2022
 ---
 # Publish your app to the Microsoft Teams store
 

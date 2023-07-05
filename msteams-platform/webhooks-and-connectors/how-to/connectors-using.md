@@ -181,10 +181,7 @@ To post a message to the webhook with PowerShell, follow these steps:
     > [!NOTE]
     > If the POST succeeds, you must see a simple **1** output by `Invoke-RestMethod`.
 
-1. Check the Teams channels associated with the webhook URL. You can see the new card posted to the channel. Before you use the connector to test or publish your app, you must do the following:
-
-    * [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
-    * Modify the `icons` portion of the manifest to the file names of the icons instead of URLs.
+1. Check the Teams channels associated with the webhook URL. You can see the new card posted to the channel.
 
 ---
 
