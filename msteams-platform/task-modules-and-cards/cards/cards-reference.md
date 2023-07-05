@@ -981,3 +981,4 @@ The following cards are implemented by the Bot Framework, but aren't supported b
 * [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)
 * [Create connectors for Microsoft 365 Groups](../../webhooks-and-connectors/how-to/connectors-creating.md)
 * [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
