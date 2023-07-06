@@ -5,6 +5,7 @@ description: In this module, understand how Teams admins can customize your Team
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
+ms.date: 12/10/2022
 ---
 
 # Enable customization for your Microsoft Teams app
