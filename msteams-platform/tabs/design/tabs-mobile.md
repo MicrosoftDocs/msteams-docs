@@ -21,10 +21,10 @@ Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsour
 
 > [!NOTE]
 >
-> * Apps submitted to the [AppSource](https://appsource.microsoft.com) for publishing on Teams are evaluated automatically for mobile responsiveness. For any queries, reach out to <teamsubm@microsoft.com>.
+> * Apps submitted to the [AppSource](https://appsource.microsoft.com) for publishing on Teams are evaluated automatically for mobile responsiveness. For any queries, reach out to teamsubm@microsoft.com.
 > * For all apps that are not distributed through the AppSource, the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
 > * The default behavior of apps is only applicable if distributed through the Teams store. By default, all tabs open in the Teams client.
-> * To initiate an evaluation of your app for mobile-friendliness, reach out to <teamsubm@microsoft.com> with your app details.
+> * To initiate an evaluation of your app for mobile-friendliness, reach out to teamsubm@microsoft.com with your app details.
 > * If a mobile app has multiple tabs, whenever the user switches a tab, the tab doesn't reload.
 
 ## Authentication
