@@ -325,7 +325,8 @@ You build an app for millions of Teams users to achieve specific business or cus
 
 ### Track app usage in Partner Center
 
-You can track your app’s overall usage in [Teams app usage report](concepts/deploy-and-publish/appsource/post-publish/overview.md) in Partner Center. You can track usage after one week of publishing your app on the Teams app store. Partner Center's usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. These reports are available at an aggregate level, such as:
+
+You can track your app’s overall usage in [Teams app usage report](concepts/deploy-and-publish/appsource/post-publish/overview.md) in Partner Center after one week of publishing your app on the Teams store. Partner Center's usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. The reports are available at an aggregate level, such as:
 
 * Monthly, daily, and weekly active users.
 * Retention and intensity charts.
