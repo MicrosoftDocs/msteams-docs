@@ -76,7 +76,7 @@ Once the provisioning and deployment steps are complete:
 
 1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
 1. Select **Launch Remote (Edge)** from the launch configuration drop-down.
-1. Select the **Start debugging (F5)**. You'll be prompted to sideload the bot app onto Teams to Azure.
+1. Select the **Start debugging (F5)**. You'll be prompted to sideload the bot app onto Teams.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely.":::
 
