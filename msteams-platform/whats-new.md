@@ -37,7 +37,7 @@ Teams platform features that are available to all app developers.
 
 **2023 July**
 
-* ***July 06, 2023***: [Use app icon badging to identify any app activity during a meeting](apps-in-teams-meetings/app-icon-badging-for-your-app.md).
+***July 06, 2023***: [Use app icon badging to identify any app activity during a meeting](apps-in-teams-meetings/app-icon-badging-for-your-app.md).
 
 :::column-end:::
 :::row-end:::
