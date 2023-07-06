@@ -13,6 +13,17 @@ ms.date: 03/21/2023
 :::row:::
    :::column span="3":::
 
+SaaS apps published to Microsoft commercial marketplace, either Azure marketplace or Microsoft AppSource are known as SaaS offers. Based on the SaaS offer configurations, the offers are available in one or both the marketplaces. This guide helps you to add SaaS offers as premium and/or enterprise plans for users who want more features to an existing basic free app.
+
+To create  a SaaS offer for your application and sell through commercial marketplace, here are some general steps you can follow:
+
+1. Plan your offer
+1. Prepare to create an offer/Fulfil the prerequisites
+1. Create an offer
+1. Configure your app for the SaaS offer
+1. Test the offer
+1. Publish the app with the SaaS offer
+
 With a transactable Software-as-a-Service (SaaS) offer, you can monetize your Teams app by selling subscription plans directly from your Teams store listing. For example, say you have a free app anyone can get in the store. Now you can offer premium and enterprise plans for users who want more features.
 
 Here's a general idea of how to monetize your app:

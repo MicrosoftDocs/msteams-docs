@@ -10,6 +10,11 @@ ms.date: 11/23/2022
 
 # Monetize your app
 
+Microsoft commercial marketplace hosts applications and solutions that are in-house and from the partners. As a publisher, you can market your software and services to wide range of users/customers through two online stores in commercial marketplace. Azure Marketplace is for IT solutions where as Microsoft AppSource is for business software and web applications.
+SaaS offer can be made available in
+Azure portal
+Microsoft AppSource
+
 Microsoft Teams app Store provides features that enable you to monetize your apps and gain customers by engaging with your users. The topics in this section show you how to build these features into your app.
 
 ## Choose a pricing model
