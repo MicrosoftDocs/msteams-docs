@@ -256,12 +256,9 @@ items:
         Your default web browser opens to let you sign-in to the account.
         1. Close the browser when prompted and return to Visual Studio Code.
 
-        The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you.
-        
-        > [!NOTE]
-        > Ensure you have at least one usable Azure subscription available.
+        The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
 
-        Now you're ready to deploy your app to Azure!
+        Congratulations, you have created a Teams app! Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
     ## Deploy your app to Azure
 
@@ -313,7 +310,7 @@ items:
 
     1. Select **Add** or use the dropdown menu to add your command bot app to a team, chat, or meeting.
     
-            :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="Screenshot shows the app cloud output.":::
+         :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="Screenshot shows the app cloud output.":::
 
     1. Select the **command bot**.
     1. Select **Enter**.  
