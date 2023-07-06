@@ -294,11 +294,10 @@ items:
 
     1. Open Visual Studio Code.
     1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
-    1. Select **Sign in to M365**.
+    1. Select **Sign in to M365** using your credentials.
 
         Your default web browser opens to let you sign in to the account.
 
-    1. Sign in to your Microsoft 365 account using your credentials.
     1. Close the browser when prompted and return to Visual Studio Code.
     1. Return to Teams Toolkit within Visual Studio Code.
 

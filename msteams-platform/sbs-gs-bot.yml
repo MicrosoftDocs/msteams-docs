@@ -377,7 +377,7 @@ items:
 
     1. Select **Add** when prompted to sideload the bot app onto Teams on your local machine or use the dropdown menu to add your bot app to a team, chat, or meeting.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/add-bot-app-local-debug.png" alt-text="Screenshot shows the bot is being added on Teams client.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/add-bot-app-local-debug.png" alt-text="Screenshot shows the bot is being added on Teams client.":::
 
         Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
 
@@ -428,8 +428,6 @@ items:
     1. Close the browser when prompted and return to Visual Studio Code.
 
         The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
-
-        Now you're ready to deploy your app to Azure!
 
         Congratulations, you have created a Teams app! 
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
