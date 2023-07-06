@@ -193,13 +193,12 @@ items:
 
     1. Select **Debug(Edge)** or **Debug(Chrome)** from the dropdown list.
 
-    1. Select **Start Debugging** button.
+    1. Select **Start Debugging** button. You'll be prompted to sideload the command bot app onto Teams on your local machine. 
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="Screenshot shows the debugging application.":::
 
-    1. Select **Add** when prompted to sideload the command bot app onto Teams on your local machine.
-        1. Use the dropdown menu to add your command bot app to a Team, chat, or meeting.
-
+    1. Select **Add** or use the dropdown menu to add your command bot app to a team, chat, or meeting.
+    
             :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/add-app.png" alt-text="Screenshot shows to add an app.":::     
 
     1. Select the **command bot**.
@@ -249,14 +248,13 @@ items:
     1. Open Visual Studio Code.
     1. Open the project folder that you created the command bot app.
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
-    1. Select **Sign-in to Azure**.
+    1. Select **Sign-in to Azure** using your credentials.
 
         > [!TIP]
-        > If you have the Azure Account extension installed and are using the same account, you can skip this step.
+        > If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step.
 
         Your default web browser opens to let you sign-in to the account.
-    1. Sign-in to your Azure account using your credentials.
-    1. Close the browser when prompted and return to Visual Studio Code.
+        1. Close the browser when prompted and return to Visual Studio Code.
 
         The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you.
         
@@ -309,13 +307,12 @@ items:
     
     1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
     1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
-    1. Select **Start Debugging** button.
+    1. Select **Start Debugging** button. You'll be prompted to sideload the command bot app onto Teams to Azure.
 
          :::image type="content" source="~/assets/images/sbs-command-bot/remote-debug.png" alt-text="Screenshot shows the remote debug.":::
 
-    1. Select **Add** when prompted to sideload the command bot app onto Teams on your local machine.
-        1. Use the dropdown menu to add your command bot app to a Team, chat, or meeting.
-
+    1. Select **Add** or use the dropdown menu to add your command bot app to a team, chat, or meeting.
+    
             :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="Screenshot shows the app cloud output.":::
 
     1. Select the **command bot**.

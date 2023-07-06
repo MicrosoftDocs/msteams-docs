@@ -425,18 +425,15 @@ items:
     1. Open Visual Studio Code.
     1. Open the project folder in which you created the tab app.
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
-    1. Select **Sign in to Azure**.
+    1. Select **Sign in to Azure** using your credentials.
 
         > [!TIP]
-        > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you're using in other extensions.
+        > If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step. Use the same account as you're using in other extensions.
 
         Your default web browser opens to let you sign in to the account.
-    1. Sign in to your Azure account using your credentials.
     1. Close the browser when prompted and return to Visual Studio Code.
 
         The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
-
-        Now you're ready to deploy your app to Azure!
 
         Congratulations, you've created a Teams app! 
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.

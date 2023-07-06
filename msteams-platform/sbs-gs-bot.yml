@@ -296,11 +296,10 @@ items:
 
     1. Open Visual Studio Code.
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
-    1. Select **Sign in to M365**.
+    1. Select **Sign in to M365** using your credentials.
 
         Your default web browser opens to let you sign in to the account.
 
-    1. Sign in to your Microsoft 365 account using your credentials.
     1. Close the browser when prompted and return to Visual Studio Code.
     1. Return to Teams Toolkit within Visual Studio Code.
 
@@ -376,8 +375,7 @@ items:
 
     1. Sign in with your Microsoft 365 account, if prompted.
 
-    1. Select **Add** when prompted to sideload the bot app onto Teams on your local machine.
-        1. Use the dropdown menu to add your bot app to a Team, chat, or meeting.
+    1. Select **Add** when prompted to sideload the bot app onto Teams on your local machine or use the dropdown menu to add your bot app to a team, chat, or meeting.
 
             :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/add-bot-app-local-debug.png" alt-text="Screenshot shows the bot is being added on Teams client.":::
 
@@ -421,13 +419,12 @@ items:
     1. Open Visual Studio Code.
     1. Open the project folder in which you created the bot app.
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
-    1. Select **Sign in to Azure**.
+    1. Select **Sign in to Azure** using your credentials.
 
         > [!TIP]
-        > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
+        > If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
 
         Your default web browser opens to let you sign in to the account.
-    1. Sign in to your Azure account using your credentials.
     1. Close the browser when prompted and return to Visual Studio Code.
 
         The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
