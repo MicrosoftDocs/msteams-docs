@@ -196,7 +196,6 @@ Following is the process to invoke Collaborative Stage View:
 
 * [Build tabs for Teams](what-are-tabs.md)
 * [Add link unfurling](../messaging-extensions/how-to/link-unfurling.md)
-* [composeExtensions](../resources/schema/manifest-schema.md#composeextensions)
 * [Build tabs with Adaptive Cards](how-to/build-adaptive-card-tabs.md)
 * [Create deep links](../concepts/build-and-test/deep-links.md)
 * [Cards](../task-modules-and-cards/what-are-cards.md)
