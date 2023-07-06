@@ -136,7 +136,7 @@ The following is a JSON code example to create a Collaborative Stage View button
 ```json
 {
   "type": "Action.Submit",
-  "name": "Open",
+  "title": "Open",
   "data": {
     "msteams": {
       "type": "invoke",
