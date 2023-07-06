@@ -148,7 +148,7 @@ items:
     
     1. Select **Start Debugging**.
     
-    1. Select **Add** or use the dropdown menu to add your command bot app to a team, chat, or meeting.
+    1. Select **Add** or use the dropdown menu to add your workflow bot app to a team, chat, or meeting.
 
      :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-add-app.png" alt-text="Screenshot shows the selection to add your workflow bot app.":::
     ### Take tour of source code
