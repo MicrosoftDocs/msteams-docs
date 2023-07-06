@@ -37,6 +37,8 @@ Teams platform features that are available to all app developers.
 
 **2023 June**
 
+* ***June 29, 2023***: [Use app icon badging to identify any app activity during a meeting.](apps-in-teams-meetings/app-icon-badging-for-your-app.md)
+
 * ***June 14, 2023***: [Added validation guidelines for Teams app powered by Artificial Intelligence (AI)](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-powered-by-artificial-intelligence).
 
 * ***June 02, 2023***: [Get real-time meeting events for channel meetings](apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api).
@@ -345,8 +347,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 June**
 
-* ***June 29, 2023***: [Use app icon badging to identify any app activity during a meeting.](apps-in-teams-meetings/app-icon-badging-for-your-app.md)
-* ***June 19, 2023***: [Use Collaborative Stage View to engage with your app content in a new Teams window](tabs/tabs-link-unfurling.md#collaborative-stage-view).
+***June 19, 2023***: [Use Collaborative Stage View to engage with your app content in a new Teams window](tabs/tabs-link-unfurling.md#collaborative-stage-view).
 
 :::column-end:::
 :::row-end:::
