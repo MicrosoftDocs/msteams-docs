@@ -300,7 +300,7 @@ items:
     
     1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
     1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
-    1. Select **Start Debugging** button. You'll be prompted to sideload the command bot app onto Teams to Azure.
+    1. Select **Start Debugging** button. You'll be prompted to sideload the command bot app onto Teams.
 
          :::image type="content" source="~/assets/images/sbs-command-bot/remote-debug.png" alt-text="Screenshot shows the remote debug.":::
 
