@@ -176,7 +176,7 @@ If your app accesses any data outside Teams, it does that using Microsoft Graph 
 
 ### Buy and manage licenses and subscriptions for paid apps
 
-Your app might require purchasing a service subscription to experience the app's full functionality and scope. These service subscriptions are called Software as a Service (SaaS) offers. A license can be made available for purchase through [AppSource](https://appsource.microsoft.com/) and through the [Teams admin center](https://admin.teams.microsoft.com/). Include instructions on buying and managing licenses, as part of your app’s admin documentation. The governance controls for admins on paid and free apps remain the same. Admins can purchase apps using a credit card, debit card, or with invoice billing. To learn more about licenses and subscriptions, see [how admins manage subscriptions for apps](/microsoftteams/purchase-third-party-apps).
+Your app might require purchasing a service subscription to experience the app's full functionality and scope. These service subscriptions are called Software as a Service (SaaS) offers. A license can be made available for purchase through [Microsoft AppSource](https://appsource.microsoft.com/) and through the [Teams admin center](https://admin.teams.microsoft.com/). Include instructions on buying and managing licenses, as part of your app’s admin documentation. The governance controls for admins on paid and free apps remain the same. Admins can purchase apps using a credit card, debit card, or with invoice billing. To learn more about licenses and subscriptions, see [how admins manage subscriptions for apps](/microsoftteams/purchase-third-party-apps).
 
 ### Allow custom apps in an organization
 
@@ -260,8 +260,6 @@ For both initial pilots and eventual company-wide roll out, your internal commun
 
 Microsoft provides few templates that you can use to speed up the adoption of your app. These templates help you quickly generate toolkit to popularize your app. See [Launch your collaborative apps](/microsoftteams/platform/concepts/deploy-and-publish/appsource/post-publish/app-growth/launch-app) for a list of resources and BOM assets that you should create for app launch. Register for [Microsoft ISV Success program](https://www.microsoft.com/isv/program-benefits) to receive guidance and templates for some of the above digital assets.
 
-Microsoft provides a few templates that you can use to speed up the adoption of your app. These templates help you quickly generate toolkit to popularize your app. Register to receive guidance and templates for some of the above digital assets.
-
 The following considerations might help you make the awareness documents more user-friendly:
 
 * Include a call to action encouraging users to download and use the app.
@@ -312,10 +310,10 @@ Your customers can find [support information for your app](/microsoftteams/manag
 |Input source when creating app|Parameter|Description and meaning|Visibility of the information in Teams|
 |-----|-----|-----|-----|
 |[Manifest file](resources/schema/manifest-schema.md)|`websiteUrl`|The web page at this URL provides support information for an app.|App details page in Teams admin center displays the website URL.|
-|[Manifest file](resources/schema/manifest-schema.md)|`privacyUrl`|The URL to the page that provides privacy information for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in store listing.|
-|[Manifest file](resources/schema/manifest-schema.md)|`termsOfUseUrl`|The URL to the page that provides the terms of use for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in store listing.|
+|[Manifest file](resources/schema/manifest-schema.md)|`privacyUrl`|The URL to the page that provides privacy information for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in Appsource listing.|
+|[Manifest file](resources/schema/manifest-schema.md)|`termsOfUseUrl`|The URL to the page that provides the terms of use for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in Appsource listing.|
 |[Manifest file](resources/schema/manifest-schema.md)|`publisherDocsUrl`|The URL to the page provides more app information for the admins.|Available in Teams admin center for apps that a developer blocks by default.|
-|[Partner Center submission](/azure/marketplace/add-in-submission-guide)|NA|Support or help documentation URL.|Displayed in [AppSource](https://appsource.microsoft.com/), in the **Details + support** tab.|
+|[Partner Center submission](/azure/marketplace/add-in-submission-guide)|NA|Support or help documentation URL.|Displayed in [Microsoft AppSource](https://appsource.microsoft.com/), in the **Details + support** tab.|
 
 > [!div class="nextstepaction"]
 > [Back to top](#understand-how-you-can-drive-app-adoption)
