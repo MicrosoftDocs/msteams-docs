@@ -200,3 +200,4 @@ Following is the process to invoke Collaborative Stage View:
 * [Build tabs with Adaptive Cards](how-to/build-adaptive-card-tabs.md)
 * [Create deep links](../concepts/build-and-test/deep-links.md)
 * [Cards](../task-modules-and-cards/what-are-cards.md)
+* [App manifest schema for Teams](../resources/schema/manifest-schema.md)
