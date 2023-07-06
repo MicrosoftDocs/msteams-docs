@@ -15,7 +15,7 @@ ms.date: 03/21/2023
 
 SaaS apps published to Microsoft commercial marketplace, either Azure marketplace or Microsoft AppSource are known as SaaS offers. Based on the SaaS offer configurations, the offers are available in one or both the marketplaces. This guide helps you to add SaaS offers as premium and/or enterprise plans for users who want more features to an existing basic free app.
 
-To create  a SaaS offer for your application and sell through commercial marketplace, here are some general steps you can follow:
+To create a SaaS offer for your application and sell through commercial marketplace, you must first plan and prepare for the offer:
 
 1. Plan your offer
 1. Prepare to create an offer/Fulfil the prerequisites
@@ -24,7 +24,77 @@ To create  a SaaS offer for your application and sell through commercial marketp
 1. Test the offer
 1. Publish the app with the SaaS offer
 
+## Plan your offer
+
+To create and publish your SaaS offer in the marketplace, it is recommended that you plan the offer and fulfil the prerequisites.
+
+1. Decide the publishing option – The initial step to create any SaaS offer is to choose how the app should be available in the marketplace. You can choose to sell through Microsoft where Microsoft host all your transactions. The other option is to manage your transactions independently which further has three list offers. The type of listing option decides the information required to create the specific offer in Partner Center. The publishing option is available as a call-to-action button in your landing page.
+
+1. Choose the type of Plan/subscription model - SaaS offers through Microsoft must have at least one plan added. The plan can either be private or public, public plans are available for all customers while private plans are customized for specific customers.
+1. Decide the pricing model and billing term – You can choose between two pricing model offered for SaaS offers - flat rate or per user. For example, a SaaS offer cannot have one plan that's flat rate and another plan that’s per user. The billing terms can be monthly or annual.
+1. Choose to have free trails - Microsoft allows a free trial period of one month, after which the offer is billed based on the subscription model./ When you sell through Microsoft, you can offer free trial of one month and Microsoft converts it to a paid subscription by the end of the trial period.
+1. Plan for mobile - To avoid violating third-party app store policies, your app can't include links that allow users to purchase subscription plans on mobile. However, you can still indicate if your app has features that require a subscription plan. For more information, see the related commercial marketplace certification policies.
+1. Plan to provide Test drive.
+
+For comprehensive guidance, see how to plan a SaaS offer for the Microsoft commercial marketplace.
+Note
+
+Note: Pricing model and billing term can’t be changed once the offer is published.
+
+## Prepare to create an offer
+
+Before you start to create a SaaS offer, make sure the technical requirements are in place.
+
+### Technical configuration
+
+(Based on the listing option, the technical configuration differs, can add information in that order – Add reference page link)
+
+If you choose to sell your SaaS offer through Microsoft, there are certain technical configurations to be done (requirements that needs to be fulfilled) before you can create your offer. The technical requirements differ based on the listing option you chose for your SaaS offer. (It helps negate any blockers while creating the app.) This helps to manage and track your offers right from the start and provide seamless user experience.
+
+• Enable Microsoft Accounts and Azure Active Directory (Azure AD)
+
+• Create a landing page
+
+When someone finishes buying a subscription plan for your app in the Teams store, the commercial marketplace will direct them to your landing page where they can manage the subscription (such as assign a license to a specific user in their org). For complete instructions, see build the landing page for your SaaS offer. A buyer is directed to the landing page after they subscribe to an offer.After the SaaS offer is purchased successfully, the user is directed to the landing page where they activate and configure the subscription. Action taking page. Learn how to create a landing page for your transactable SaaS offer. What the landing page should have - allow the user to sign in with Azure AD SSO.
+
+• Integrate with Fulfillment SaaS API (purpose)
+
+Integrating with the SaaS Fulfillment APIs is required for monetizing your Teams app. These APIs help you manage the lifecycle of a subscription plan once it’s purchased by a user.
+
+In general, you’ll implement the following steps using the APIs once a subscription is purchased:
+
+1. Receive a purchase identification token via the URL to your landing page.
+1. Use the token to retrieve subscription details.
+1. Notify the commercial marketplace that the subscription is activated.)
+
+For complete instructions and API reference, see the SaaS Fulfillment APIs documentation.
+
+• Integrate with Graph usageRights API (purpose)
+
+Integrate with Graph usageRights API to manage user permissions at the time of app launch by a customer who has a purchase license. You're required to determine the user’s permissions for the app with a Graph call to the usageRights API.
+
+You can call Graph APIs to determine if the currently logged in user with a valid subscription of the plan has access to your app. To call Graph usageRights API to check user permissions, follow the steps:
+
+1. Get user OBO token: Get access on behalf of a user.
+1. Call Graph to get user’s object ID: Use the Microsoft Graph API.
+1. Call usageRights API to determine the user has License to the plan: List user usageRights API.
+
+Note
+
+You need to have minimum User.Read permissions to call usageRights. The usageRights API is currently in beta version. After the version is updated to V1, users must upgrade from beta to V1 version.
+
+If the Azure AD app is used for both SaaS Fulfillment APIs and usageRights API, ensure that the tenant under which the Azure AD app is created is either the publishing tenant or the associated tenant in the Partner Center.
+
+To determine if the tenant for the Azure AD app is part of the Partner Center setup, follow these steps:
+
+1. Sign in to Microsoft Partner Center with the publisher account that is used to publish the SaaS offer.
+1. On the upper-right corner, select the Settings icon.
+1. Select Account Settings.
+1. On the left pane, select Tenants. You can see all tenants associated with the Microsoft Partner Network (MPN) account. The tenant, who is the owner of the Azure AD app, must be available in the list. If the tenant isn’t on the list, you can use the Associate Azure ID button to link the tenant.
+
 With a transactable Software-as-a-Service (SaaS) offer, you can monetize your Teams app by selling subscription plans directly from your Teams store listing. For example, say you have a free app anyone can get in the store. Now you can offer premium and enterprise plans for users who want more features.
+
+Now that we have planned and prepared for the SaaS offer, let's move to create a SaaS offer as planned.
 
 Here's a general idea of how to monetize your app:
 
