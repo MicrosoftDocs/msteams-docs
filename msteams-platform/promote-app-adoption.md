@@ -306,7 +306,9 @@ In your app’s help documentation, consider providing some or all the following
 * Call out any app-specific configuration or permissions that might be required. Also, call out any app-specific uptime information link if your app relies on a backend infrastructure to work.
 * If you [block an app by default](concepts/design/enable-app-customization.md), provide documentation for the requirements before admins can allow the app. For example, the required configuration or subscription purchase that admins must do.
 
-The following table provides the support information that you already submitted to Microsoft with your app and the interface in Teams where this information is displayed. Your customers can [find support information for your app](/microsoftteams/manage-apps#support-information-for-apps) and self-serve themselves.
+
+Your customers can find [support information for your app](/microsoftteams/manage-apps#support-information-for-apps) and self-serve themselves. The following table provides the support information that you already submitted to Microsoft with your app and the interface in Teams where this information is displayed:
+
 
 |Input source when creating app|Parameter|Description and meaning|Visibility of the information in Teams|
 |-----|-----|-----|-----|
@@ -325,7 +327,8 @@ You build an app for millions of Teams users to achieve specific business or cus
 
 ### Track app usage in Partner Center
 
-You can track your app’s overall usage in [Teams app usage report](concepts/deploy-and-publish/appsource/post-publish/overview.md) in Partner Center. You can track usage after one week of publishing your app on the Teams app store. Partner Center's usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. These reports are available at an aggregate level, such as:
+
+You can track your app’s overall usage in [Teams app usage report](concepts/deploy-and-publish/appsource/post-publish/overview.md) in Partner Center after one week of publishing your app on the Teams store. Partner Center's usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. The reports are available at an aggregate level, such as:
 
 * Monthly, daily, and weekly active users.
 * Retention and intensity charts.
