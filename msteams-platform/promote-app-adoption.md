@@ -248,7 +248,7 @@ Provide the users with guides that help them understand how to use your app, tro
 
 ### Promote awareness about your app and its use cases for smooth change management
 
-The adoption change management relies on awareness and training targeted at your customers. These trainings are the marketing and communications segments of your overall app adoption strategy that make change management successful and smooth. It ensures that your users are aware of the new capabilities of the Teams app and it enables the users to derive value out of your app.
+The adoption change management relies on awareness and trainings targeted at your customers. These trainings are the marketing and communication segments of your overall app adoption strategy that make change management successful and smooth. It ensures that your users are aware of the new capabilities of the Teams app and it enables the users to derive value out of your app.
 
 For both initial pilots and eventual company-wide roll out, your internal communications must be a priority. These communications must include:
 
