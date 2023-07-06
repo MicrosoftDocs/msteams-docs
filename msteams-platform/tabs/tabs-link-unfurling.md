@@ -29,7 +29,7 @@ Stage View is a full screen UI component that can be used to render your app con
 
 The following image is an example of the Collaborative Stage View:
 
-:::image type="content" source="../assets/images/tab-images/collaborative-stage-view.png" alt-text="Screenshot shows the Collaborative Stage View in Teams.":::
+:::image type="content" source="../assets/images/tab-images/collaborative-stage-view.png" alt-text="Screenshot shows the Collaborative Stage View in Teams." "lightbox="../assets/images/tab-images/collaborative-stage-view.png":::
 
 ### Stage View vs. Task module
 
@@ -109,7 +109,7 @@ In the new Teams window, the Collaborative Stage View also opens a chat in the s
 
 The following image is an example of Collaborative Stage View:
 
-:::image type="content" source="../assets/images/tab-images/collaborative-stage-view.png" alt-text="Screenshot shows the Collaborative Stage View in Teams.":::
+:::image type="content" source="../assets/images/tab-images/collaborative-stage-view.png" alt-text="Screenshot shows the Collaborative Stage View in Teams." "lightbox="../assets/images/tab-images/collaborative-stage-view.png":::
 
 ### Advantages of Collaborative Stage View
 
@@ -126,9 +126,9 @@ When the user enters an app content URL in a chat, the bot is invoked and return
 
 The following image is an example of a Collaborative Stage View from an Adaptive Card:
 
-:::image type="content" source="../assets/images/tab-images/collaborative-stage-view-adaptive-card.png" alt-text="Screenshot shows the invoke experience of collaborative Stage View from Adaptive Card.":::
+:::image type="content" source="../assets/images/tab-images/collaborative-stage-view-adaptive-card.png" alt-text="Screenshot shows the invoke experience of collaborative Stage View from Adaptive Card." "lightbox="../assets/images/tab-images/collaborative-stage-view-adaptive-card.png":::
 
-:::image type="content" source="../assets/images/tab-images/collaborative-stage-view.png" alt-text="Screenshot shows the Collaborative Stage View in Adaptive Card.":::
+:::image type="content" source="../assets/images/tab-images/collaborative-stage-view.png" alt-text="Screenshot shows the Collaborative Stage View in Adaptive Card." "lightbox="../assets/images/tab-images/collaborative-stage-view.png":::
 
 #### Example
 
