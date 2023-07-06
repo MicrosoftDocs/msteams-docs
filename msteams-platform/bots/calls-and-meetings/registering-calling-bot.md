@@ -9,7 +9,7 @@ ms.date: 11/23/2022
 
 A bot that participates in audio or video calls and online meetings is a regular Microsoft Teams bot with the following extra features used to register the bot:
 
-* There's a new version of the Teams app manifest with two additional settings, `supportsCalling` and `supportsVideo`. These settings are included in the [Manifest schema for Microsoft Teams](../../resources/schema/manifest-schema.md).
+* There's a new version of the Teams app manifest with two additional settings, `supportsCalling` and `supportsVideo`. These settings are included in the [manifest schema for Microsoft Teams](../../resources/schema/manifest-schema.md#bots).
 * [Microsoft Graph permissions](./registering-calling-bot.md#add-graph-permissions) must be configured for your bot's Microsoft App ID.
 * The Graph calls and online meetings APIs permissions require tenant admin consent.
 
