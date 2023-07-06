@@ -3,6 +3,7 @@ title: Prepare your Microsoft 365 tenant
 description: In this module, learn how to get started with Teams in Microsoft 365 and create your development environment
 ms.topic: how-to
 ms.localizationpriority: medium
+ms.date: 01/31/2023
 ---
 
 # Prepare your Microsoft 365 tenant

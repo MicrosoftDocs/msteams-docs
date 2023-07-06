@@ -4,6 +4,7 @@ description: Learn about Single sign-on (SSO) authentication in Teams and how to
 author: v-sdhakshina
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.date: 01/24/2023
 ---
 
 # Enable SSO for Adaptive Cards Universal Actions in your bot

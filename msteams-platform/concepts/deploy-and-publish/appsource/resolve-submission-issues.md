@@ -5,6 +5,7 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: medium
+ms.date: 09/28/2022
 ---
 # Resolve issues if your Teams store submission fails
 

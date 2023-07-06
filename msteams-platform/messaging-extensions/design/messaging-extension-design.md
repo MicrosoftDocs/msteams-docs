@@ -5,6 +5,7 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
+ms.date: 05/17/2022
 ---
 # Designing your Microsoft Teams message extension
 
