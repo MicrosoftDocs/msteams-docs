@@ -29,7 +29,7 @@ RSC permissions are categorized based on:
 | **Resource type** |  &nbsp; | &nbsp; |
 | Team | ✔️ | ✔️ |
 | Chat or meeting | ✔️ | ✔️ |
-| User | NA | ✔️ |
+| User | ✔️ | NA |
 
 In this section, you'll learn more about:
 
