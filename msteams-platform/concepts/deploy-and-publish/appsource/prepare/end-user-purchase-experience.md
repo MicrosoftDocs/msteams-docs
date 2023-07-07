@@ -5,6 +5,7 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
+ms.date: 04/06/2023
 ---
 
 # Purchase and manage app subscriptions and licenses

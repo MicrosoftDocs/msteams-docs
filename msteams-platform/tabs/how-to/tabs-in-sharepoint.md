@@ -3,6 +3,7 @@ title: Add Teams tab to SharePoint
 description: Learn how to deploy your existing Teams tab to SharePoint as a SharePoint Framework web part using code samples.
 ms.localizationpriority: medium
 ms.topic: conceptual
+ms.date: 06/08/2023
 ---
 
 # Add Teams tab to SharePoint
@@ -60,6 +61,9 @@ Download the [sample app manifest](https://github.com/MicrosoftDocs/msteams-docs
 
 1. You can see the install or consent screen for the talent management app. Select the team you want to install.
 1. Select the **Install** and start experimenting with the app.
+
+> [!NOTE]
+> The SharePoint extension commands aren’t supported in the Teams **Files** tab. You can [add a SharePoint page, list, or document library as a tab in Teams](https://support.microsoft.com/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b).
 
 ## Use Teams tab in SharePoint
 
