@@ -10,23 +10,23 @@ ms.topic: concept
 
 The Microsoft Teams activity feed enables users to triage items that require attention by notifying them of changes. You can use the activity feed notification APIs in Microsoft Graph to extend this functionality to your apps. This allows your apps to provide richer experiences and better engage users by helping to keep them up to date with changes in the tools and workflows they use.
 
-## Use cases of Activity feed notifications
+## Use cases of activity feed notifications
 
 * **News**: Helps users to stay updated with the latest information like new assignment or new post.
 * **Collaboration**: When you share a file or @ mention a user in a comment, users can see a text preview in the notification banner.
 * **Reminders**: A notification to let you know about an event or a task. For example, you have a training due date today, and the app sends you a reminder notification to help you remember the task or event.
 * **Alerts**: Notifications which require urgent or immediate attention. For example, the due date for a training is passed or an admin sends a request to fix a bug with the highest priority.
 
-**Advantages**
+## Advantages of activity feed notifications
 
-* Activity feed notification is a native Teams integration that brings user seamlessly into the Tab app, bringing additional user engagement from "Activity" to your app.
-* Activity feed notification comes with an OS notification in Desktop and Mobile, so that user attention is grabbed by the system pop-up and sound.
+* Activity feed notification is a native Teams integration that brings user seamlessly into the Tab app, bringing additional user engagement from *Activity* to your app.
+* Activity feed notification comes with an OS notification in Teams desktop and mobile clients, so that user attention is grabbed by the system pop-up and sound.
 * Notification content is highly customizable, allowing users to preview the summary of the notified events.
-* Your app be deep-linked to a notification, so that clicking notification increase user app engagement.
-* You can send activity feed notification to various of recipients, e.g. sending a personal notification, or sending batch notifications to a group of users.
+* You can deep link your app to a notification so that when a user select the notification it increases user app engagement.
+* You can send activity feed notification to various of recipients. For example, sending a personal notification or sending batch notifications to a group of users.
 * Teams manifest localization is supported for the templated text in activity feed notifications.
 
-## Understand the basics of activity feed notification
+## Understand the basics of activity feed notifications
 
 Activity feed notifications in Microsoft Teams are comprised of multiple bits of information, displayed together, as shown in the following image.
 
@@ -49,7 +49,11 @@ The following example shows the components together provide the details about a 
 
 # [Windows](#tab/windows)
 
+<WIP - Image to be shared by the PM>
+
 # [iOS](#tab/ios)
+
+<WIP - Image to be shared by the PM>
 
 ---
 
