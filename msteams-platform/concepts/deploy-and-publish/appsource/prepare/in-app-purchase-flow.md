@@ -14,14 +14,39 @@ Plan and  prepare > **Create and configure** > Test and publish > Publish with o
 
 Before you create a SaaS offer, check if the technical requirements and configurations are in place. You must also have a commercial marketplace account in Partner Center. It's time to officially create, configure, test, and publish your transactable SaaS offer.
 
-## Create the offer
+## Create an offer in Partner Center
 
-Creating your SaaS offer is quick if you have all the requirements in place.
+1. Sign in to [Partner Center](https://partner.microsoft.com/) and select **Partner Center**.
 
-1. From your Partner Center, click New offer.
-1. Select Software as a Service from the drop-down list.
-1. Enter Offer ID and Offer alias value.
-1. Select **Create**.
+   :::image type="content" source="~/assets/images/first-party-license-mgt/partner-center-home-page.png" alt-text="The screenshots shows how to login to the Partner Center account.":::
+
+1. In the **Home** page, select **Marketplace offers** tab to define commercial marketplace offers.
+
+   :::image type="content" source="~/assets/images/first-party-license-mgt/home-page.png" alt-text="The screenshots shows the home page and Marketplace offer tab in the Partner Center.":::
+
+1. Select **Overview** from the left pane.
+
+1. Select **New Offer** > **Software as a Service**.
+
+   :::image type="content" source="~/assets/images/first-party-license-mgt/commercial-marketplace.png" alt-text="The screenshots shows the marketplace offer page where you can select new offer.":::
+
+1. Enter **Offer ID** and **Offer alias** and select **Create**.
+
+   > [!NOTE]
+   > If you're creating an offer for testing purpose, add the text **-ISVPILOT** to the end of your offer alias. This indicates the certification team that the offer is for testing purposes. Microsoft delete offers with **-ISVPILOT** periodically. So, don't use this tag for reasons other than testing the license management capability.
+
+   :::image type="content" source="~/assets/images/first-party-license-mgt/saas.png" alt-text="The screenshots shows how to enter Offer ID and Offer alias in the Partner Center.":::
+
+1. In the Offer setup page, under setup details, select the checkbox **Yes, I would like Microsoft to manage customer licenses on my behalf**.
+
+   :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="The screenshots shows the offer setup page to setup license to manage for your app within Teams.":::
+
+   > [!NOTE]
+   >
+   > * This is a one-time setting and you can't change it once your offer is published. This allows the customer to manage licenses for your app within Teams.
+   > * The App manifest supports only one offer for an app. Choose an appropriate license management solution for all the plans available in your offer and you can't change this option after the offer is pushed to live.
+
+1. Select **Save draft**.
 
 ## Configure your SaaS offer
 
@@ -89,7 +114,18 @@ Offers sold through the Microsoft commercial marketplace must have at least one 
 
 When you finish configuring your offer, validate the offer and submit your offer for publishing.
 
-When the offer is submitted for publishing, the Offer overview page shows the Publish status where you can track the progress. When the offer is in Publisher sign-off state, preview links for the respective platforms are given below the Go live button. To test the offer, see preview and test your offer.
+When the offer is submitted for publishing, the Offer overview page shows the Publish status where you can track the progress. When the offer is in Publisher sign-off state, preview links for the respective platforms are given below the Go live button. To test the offer, see preview and test your offer.\
+
+## Remove a SaaS offer from your app
+
+If you unlink a SaaS offer included in your Teams store listing, you must republish your app to see the change in the store.
+
+1. Go to the [Developer Portal](https://dev.teams.microsoft.com/) and select **Apps**.
+1. On the **Apps** page, select the app you're removing the offer from.
+1. Go to the **Plans and pricing** page and select **Revert**.
+1. After the offer is unlinked, do the following to update your store listing:
+   1. Select **Distribute > Publish to the Teams store**.
+   1. Select **Open Partner Center** to begin the process of republishing your app without the offer.
 
 ## In-app purchases
 
@@ -184,6 +220,12 @@ Following code snippet is an example of calling the API from the Teams app built
 ```
 
 ---
+
+## Code sample
+
+| **Sample name** | **Description** | **Node.js** | **Manifest**|
+|-----------------|-----------------|----------------|----------------|----------------|
+| Tab App Monetization | This is an sample tab application which shows how to open purchase dialog and trigger purchase flow using Teams JS SDK.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs/demo-manifest/tab-app-monetization.zip)|
 
 ## Next step
 
