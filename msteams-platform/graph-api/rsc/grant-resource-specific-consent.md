@@ -502,7 +502,7 @@ For more information on how to get details of apps installed in a specific chat,
 
 1. Get the [user ID](../../bots/how-to/conversations/send-proactive-messages.md#get-the-user-id-team-id-or-channel-id).
 1. Sign in to **Graph Explorer**.
-1. Make a **GET** call to this endpoint: `https://graph.microsoft.com/beta/users/{user-id}/PermissionGrants`.
+1. Make a **GET** call to this endpoint: `https://graph.microsoft.com/beta/users/{user-id}/oauth2PermissionGrants`.
 
    The `clientAppId` field in the response must map to the `webApplicationInfo.id` specified in the Teams app manifest.
 
