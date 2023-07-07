@@ -8,11 +8,51 @@ ms.localizationpriority: high
 ms.date: 04/06/2023
 ---
 
-# Purchase and manage app subscriptions and licenses
+# Publish your app with the SaaS offer configuration
 
-Add functionality to your Teams experience by subscribing and managing licenses for apps made just for Teams. When you add an app to Teams, check if additional features are available through subscription. You can purchase subscriptions and manage licenses for yourself, your team, or your organization directly from the Teams store.
+After publishing the offer to the marketplace, link the offer to your app and publish the app in the store for the customers to purchase paid apps from the marketplace.
 
-## Subscription experience
+You’ve published your SaaS offer, but you still must link it to your Teams app for users to see your subscription plans in the Teams store. There are two ways to link your offer and your app.
+
+* Teams Developer Portal
+* App manifest update
+
+> [!NOTE]
+> You need the Publisher ID and Offer ID from Microsoft partner Center to configure the SaaS offer to your app.
+
+To configure from Teams Developer Portal, follow the given steps:
+
+1. Go to the Developer Portal and select Apps.
+1. On the Apps page, select the app you're linking the SaaS offer to.
+1. Go to the Plans and pricing page and specify your publisher and offer IDs.
+1. Select View to preview your SaaS offer's subscription plans.
+1. If everything looks good, select Save.
+
+To configure through app manifest:
+
+Update the subscriptionOffer property in your app manifest.
+
+JSONCopy
+   "subscriptionOffer": {
+     "offerId": "publisherId.offerId"  
+     }
+
+> [!NOTE]
+> The subscriptionOffer property is supported in manifest schema version 1.10 or later.
+
+## Publish your app
+
+You’ve created your SaaS offer and linked it to your Teams app—now it's time to publish your app to the Teams store. For complete instructions, see publish your app to the Teams store.
+ Important
+• Even if your app is already listed on the Teams store, you still must go through the store validation process again to include your SaaS offer.
+• Flat rate offers created without the Offer ID and Publisher ID in the app manifest should be updated and resubmitted for validation.
+Once published, users will see a Buy a subscription option in the app details dialog when they try to add your app to Teams.
+
+## Purchase and manage app subscriptions and licenses
+
+The information given below help you understand purchase experience from the customer end. You can add additional features and functionality for your Teams app through subscriptions. Users can purchase subscriptions and manage licenses for themselves, team, or organization directly from the Teams store.
+
+### Subscription experience
 
 The following example shows how users can purchase subscription plans for a fictional Teams app called *Recloud*:
 
@@ -46,7 +86,7 @@ Consent dialog is part of the flow to get the users license information and may 
 
 :::image type="content" source="../../../../assets/images/saas-offer/permissions-requested.png" alt-text="Screenshot shows the Permissions requested consent dialog.":::
 
-## License management experience
+### License management experience
 
 The following example shows how users can manage licenses for third-party apps from the Teams store:
 
@@ -77,7 +117,7 @@ The following example shows how users can manage licenses for third-party apps f
 
     :::image type="content" source="../../../../assets/images/saas-offer/unassign-button.png" alt-text="Screenshot shows the Unassign option highlighted in red to unassign the selected users.":::
 
-## Admin purchasing experience
+### Admin purchasing experience
 
 Admins can manage the app subscriptions and licenses in the Teams admin center. For more information, see [Purchase third-party Teams apps and manage subscriptions](/microsoftteams/purchase-third-party-apps).
 

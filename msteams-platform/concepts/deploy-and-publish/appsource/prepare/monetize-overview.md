@@ -14,9 +14,9 @@ Microsoft Teams app Store provides features that enable you to monetize your app
 
 Microsoft commercial marketplace hosts to create, publish, and manage offers for your applications and solutions that are published online and made available for customers. Azure Marketplace and Microsoft AppSource are two main online store where the offers are listed based on the offer type, categories, and other options you select.
 
-As a publisher, create your marketplace offers in Partner Center and have them in either of the online stores. In this module, you get to learn in detail on how to create a SaaS offer in Partner Center, configure the offer, link the offer to your app, and publish manage the offer.
+As a publisher, create your marketplace offers in Partner Center and have them in either of the online stores. In this module, you get to learn in detail on how to create a SaaS offer in Partner Center, configure the offer, link the offer to your app, and publish and manage the offer.
 
-SaaS applications published in Microsoft commercial marketplace are SaaS offers and the availability of the offer in either of the online stores is based on the industry it is build for and the related configurations.
+SaaS applications published in Microsoft commercial marketplace are SaaS offers. The availability of the offer in the online store is based on the industry it is build for and the related configurations.
 
 Note
 
@@ -73,24 +73,6 @@ Allow your user to subscribe and use your application at no cost for a certain p
 
 Customers can share their details and ask that you contact them about the offer through the leads you from Microsoft.
 
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column:::
-        :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetize-app-image.png" alt-text="Manage license for third party apps":::
-    :::column-end:::
-    :::column span="2":::
-
-**Set up Microsoft license management**
-
-If you choose to use Microsoft license management to manage a SaaS license purchased in Teams, you can easily assign, unassign, use, and track SaaS licenses from the Teams store.
-
-[Set up Microsoft license management](manage-third-party-apps-license.md).
-
-:::column-end:::
-:::row-end:::
-
 Some of the options that you can add to your SaaS offer
 
 ### In-app purchases
@@ -102,6 +84,14 @@ Whether you charge a price for your app or offer it for free, you can use in-app
 ### Test drive
 
 With a transactable Software as a Service (SaaS) offer, you can allow customers to test the end-to-end purchase experience for your monetized apps for a fixed time. Test Drive and Free Trail are different and you can offer one or both to the customers.
+
+**Set up Microsoft license management**
+
+If you choose to use Microsoft license management to manage a SaaS license purchased in Teams, you can easily assign, unassign, use, and track SaaS licenses from the Teams store.
+
+[Set up Microsoft license management](manage-third-party-apps-license.md).
+
+:::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetize-app-image.png" alt-text="Manage license for third party apps":::
 
 Now that we know about what a SaaS offer is and the listing methods that you can choose, let's get started to create a SaaS offer, configure and manage the offer, test the offer, and publish the offer. Let's also learn to configure the SaaS offer to your app and publish the app with the offer.
 
