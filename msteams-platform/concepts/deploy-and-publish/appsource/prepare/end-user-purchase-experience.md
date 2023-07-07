@@ -32,10 +32,11 @@ To configure through app manifest:
 
 Update the subscriptionOffer property in your app manifest.
 
-JSONCopy
-   "subscriptionOffer": {
-     "offerId": "publisherId.offerId"  
-     }
+   ```json
+      "subscriptionOffer": {
+        "offerId": "publisherId.offerId"  
+        }
+   ```
 
 > [!NOTE]
 > The subscriptionOffer property is supported in manifest schema version 1.10 or later.
@@ -43,9 +44,11 @@ JSONCopy
 ## Publish your app
 
 You’ve created your SaaS offer and linked it to your Teams app—now it's time to publish your app to the Teams store. For complete instructions, see publish your app to the Teams store.
- Important
-• Even if your app is already listed on the Teams store, you still must go through the store validation process again to include your SaaS offer.
-• Flat rate offers created without the Offer ID and Publisher ID in the app manifest should be updated and resubmitted for validation.
+
+> [!IMPORTANT]
+>
+> * Even if your app is already listed on the Teams store, you still must go through the store validation process again to include your SaaS offer.
+> * Flat rate offers created without the Offer ID and Publisher ID in the app manifest should be updated and resubmitted for validation.
 Once published, users will see a Buy a subscription option in the app details dialog when they try to add your app to Teams.
 
 ## Purchase and manage app subscriptions and licenses

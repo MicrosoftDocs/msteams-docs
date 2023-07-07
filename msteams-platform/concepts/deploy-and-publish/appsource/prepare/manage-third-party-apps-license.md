@@ -14,12 +14,16 @@ Independent software vendors (ISVs) can configure Microsoft license management f
 
 To enable license management for a third-party app in Teams, you must create a plan for the offer and configure pricing and availability of the plan.
 
-Offers sold through the Microsoft commercial marketplace must have at least one plan. You can create a variety of plans with different options within the same offer.
-
 ## Create a plan
 
+Offers sold through the Microsoft commercial marketplace must have at least one plan. You can create a variety of plans with different options within the same offer.
+
 1. Select Plan overview from the left pane, and then select Create new plan.
+
 1. Enter Plan ID and Plan name, and then select Create.
+
+    :::image type="content" source="~/assets/images/first-party-license-mgt/plan-overview.png" alt-text="The screenshots shows plan overview to create a new plan for your apps in the Partner Center.":::
+
 1. Select the plan to add pricing and availability information
 
 ## Define Plan listing
@@ -27,6 +31,9 @@ Offers sold through the Microsoft commercial marketplace must have at least one 
 On the **Plan listing** tab, you can define the plan name and description as you want them to appear in the commercial marketplace.
 
 1. Under Plan listing, enter the Plan name and Plan description.
+
+    :::image type="content" source="~/assets/images/first-party-license-mgt/plan-listing.png" alt-text="The screenshots shows plan page to add plan name and plan description for your app.":::
+
 1. Select Save draft.
 
 ## Define markets
@@ -45,6 +52,9 @@ You must associate a pricing model with each plan: either flat rate or per user.
 1. Add the billing terms you want: 1-month, 1-year, 2-year, and 3-year billing terms can be added.
 1. For each billing term, select the payment option to set the payment schedule. Only one payment option per term can be configured on the same plan.
 1. Enter the price for each payment occurrence.
+
+    :::image type="content" source="~/assets/images/first-party-license-mgt/pricing-availability.png" alt-text="The screenshots shows pricing and availability page to add SaaS offer for your app.":::
+
 1. Select Save draft.
 1. Select Plan overview at the top of the page to go to the listing page that shows all the plans you've created for this offer.
 1. Copy the service ID of the plan you created to integrate with Microsoft Graph usageRights API.

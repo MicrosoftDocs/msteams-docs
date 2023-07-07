@@ -73,6 +73,9 @@ Allow your user to subscribe and use your application at no cost for a certain p
 
 Customers can share their details and ask that you contact them about the offer through the leads you from Microsoft.
 
+    :::column-end:::
+:::row-end:::
+
 Some of the options that you can add to your SaaS offer
 
 ### In-app purchases
@@ -85,7 +88,7 @@ Whether you charge a price for your app or offer it for free, you can use in-app
 
 With a transactable Software as a Service (SaaS) offer, you can allow customers to test the end-to-end purchase experience for your monetized apps for a fixed time. Test Drive and Free Trail are different and you can offer one or both to the customers.
 
-**Set up Microsoft license management**
+### Set up Microsoft license management
 
 If you choose to use Microsoft license management to manage a SaaS license purchased in Teams, you can easily assign, unassign, use, and track SaaS licenses from the Teams store.
 
