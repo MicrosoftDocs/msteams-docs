@@ -36,7 +36,7 @@ You can access context information in two ways:
 ### Get context by inserting URL placeholder values
 
 > [!IMPORTANT]
-> Teams supports default (light), dark, and contrast themes for apps in Teams meetings. The `app.theme` property returns the light theme as default.
+> Teams supports all three themes, default (light), dark, and contrast for apps in Teams meetings. When the `app.theme` property in getContext API returns the `default` value, Teams client is in light theme.
 
 Use placeholders in your configuration or content URLs. Microsoft Teams replaces the placeholders with the relevant values when determining the actual configuration or content URL. The available placeholders include all fields on the [context](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) object. Common placeholders include the following properties:
 
@@ -55,7 +55,7 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 
 For example, in your app manifest if you set your tab *configurationUrl* attribute to `"https://www.contoso.com/config?name={user.loginHint}&tenant={user.tenant.id}&group={team.groupId}&theme={app.theme}"` and the signed-in user has the following attributes:
 
-* Their username is **user@example.com**.
+* Their username is **<user@example.com>**.
 * Their company tenant ID is **e2653c-etc**.
 * They're a member of the Office 365 group with ID **00209384-etc**.
 * The user has set their Teams theme to **dark**.
@@ -348,7 +348,7 @@ For more information on shared channels, see [shared channels](~/concepts/build-
 ## Handle theme change
 
 > [!IMPORTANT]
-> Teams supports default (light), dark, and contrast themes for apps in Teams meetings. The `app.theme` property returns the light theme as default.
+> Teams supports all three themes, default (light), dark, and contrast for apps in Teams meetings. When the `app.theme` property in getContext API returns the `default` value, Teams client is in light theme.
 
 You can register your app to be informed if the theme changes by calling `microsoftTeams.app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
