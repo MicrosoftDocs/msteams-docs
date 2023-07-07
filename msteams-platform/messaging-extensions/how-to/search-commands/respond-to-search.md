@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 After the user submits the search command, your web service receives a `composeExtension/query` invoke message that contains a `value` object with the search parameters. This invoke which is triggered with the following conditions:
 
 * As characters are entered into the search box.
-* `initialRun` is set to true in your app manifest, you receive the invoke message as soon as the search command is invoked. For more information, see [default query](#default-query).
+* `initialRun` is set to true in your [app manifest](../../../resources/schema/manifest-schema.md#composeextensions), you receive the invoke message as soon as the search command is invoked. For more information, see [default query](#default-query).
 
 This document guides you on how to respond to user requests in the form of cards and previews, and the conditions under which Microsoft Teams issues a default query.
 
@@ -433,4 +433,3 @@ The default query has the same structure as any regular user query, with the `na
 
 * [Message extensions](../../what-are-messaging-extensions.md)
 * [Build your first tab app using JavaScript](../../../sbs-gs-javascript.yml)
-* [composeExtensions](../../../resources/schema/manifest-schema.md#composeextensions)
