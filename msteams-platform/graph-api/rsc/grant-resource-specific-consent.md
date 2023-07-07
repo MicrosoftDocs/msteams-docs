@@ -440,7 +440,7 @@ You can check the type of RSC permission granted to a resource in the app:
 
   * [List apps in chat](/graph/api/chat-list-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
   * [List apps in team](/graph/api/team-list-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
-  * [List apps for user](/graph/api/userteamwork-list-installedapps?view=graph-rest-1.0&tabs=http)
+  * [List apps for user](/graph/api/userteamwork-list-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
   These are all the application RSC permissions granted on this specific resource. Each entry in the list can be correlated to the Teams app by matching the `clientAppId` in the permission grants list with the `webApplicationInfo.Id` property in the app's manifest.
 
@@ -485,6 +485,18 @@ For more information on how to get details of the apps installed in a specific t
     :::image type="content" source="../../assets/images/chat-graph-permissions.png" alt-text="Screenshot shows the Graph explorer response to GET call for chat RSC permissions.":::
 
 For more information on how to get details of apps installed in a specific chat, see [get the names and other details of apps installed in the specified chat](/graph/api/chat-list-installedapps#example-2-get-the-names-and-other-details-of-apps-installed-in-the-specified-chat).
+
+#### Check your app for added RSC permissions in user
+
+1. Get the [user ID](../../bots/how-to/conversations/send-proactive-messages.md#get-the-user-id-team-id-or-channel-id).
+1. Sign in to **Graph Explorer**.
+1. Make a **GET** call to this endpoint: `https://graph.microsoft.com/beta/users/{user-id}/PermissionGrants`.
+
+   The `clientAppId` field in the response must map to the `webApplicationInfo.id` specified in the Teams app manifest.
+
+    :::image type="content" source="../../assets/images/user-graph-permissions.png" alt-text="Screenshot shows the Graph explorer response to GET call for user RSC permissions.":::
+
+For more information on how to get details of the apps installed in a specific team, see [get the names and other details of apps installed for the specified user](/graph/api/userteamwork-list-installedapps#example-2-get-the-names-and-other-details-of-apps-installed-for-the-user).
 
 ## Code sample
 
