@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
+ms.date: 01/06/2023
 ---
 
 # Prepare your Teams store submission
@@ -46,7 +47,7 @@ Depending on your app functionality, you're required to provide Teams tenant con
 
         * Ensure that test accounts are safe-listed or configured with license keys, if applicable.
         * If your app requires users to log in or connect to external services, provide the required credentials to complete the login or connection with the external service.
-        * Ensure that phone-based 2-way authentication is disabled for test accounts.
+        * Ensure that phone-based two-way authentication is disabled for test accounts.
         * If the app provides a collaborative experience, provide a non-admin account for each user persona. For example, if your app is used by teachers and students, provide credentials for both user personas.
         * Ensure that at least one account has access to premium or upgraded features, if applicable.
         * All accounts you provide must include pre-populated data to help in testing. For example, if your app helps to provide market insights based on the user profile, ensure that market data is pre-populated along with a few user profiles.
@@ -119,7 +120,7 @@ The long description can provide a narrative that highlights your apps:
 * The problems it solves
 * Target audience
 
-While this description can be as long as 4,000 characters, most users will only read between 300-500 words.
+While this description can be as long as 4,000 characters, most users only read between 300-500 words.
 
 :::row:::
 
@@ -179,7 +180,7 @@ You can add a URL for your YouTube or Vimeo video.
 #### Best practices for videos
 
 * Keep your video between 60-90 seconds.
-* Aim for quality. In a listing, users will see your video before screenshots.
+* Aim for quality. In a listing, users see your video before screenshots.
 * Communicate the value of the product in narrative form.
 * Demonstrate how the product works.
 
@@ -220,7 +221,19 @@ During submission, you're asked to categorize your app. You can categorize your 
 
 If you want to cater your app to a specific audience, you can select from the available list of countries and communicate what’s great about your app in ways that are relevant to users. This is known as Geo-filtering. Geo-filtering is applicable only for apps listed in the Teams store. For example, a Contoso US app, which sells gift cards that are valid within the US and Canada is only visible in the Teams store for the users in the US and Canada.
 
-:::image type="content" source="../../../../assets/images/app-fundamentals/geo-fencing-infographic.png" alt-text="Infographic shows the difference in the Teams Store for the apps available in the US and other countries." lightbox="../../../../assets/images/app-fundamentals/geo-fencing-infographic.png":::
+# [Desktop](#tab/desktop)
+
+The following image shows the use of Geo-filtering for apps in the Teams desktop client:
+
+ :::image type="content" source="../../../../assets/images/app-fundamentals/geo-fencing-infographic.png" alt-text="Infographic shows the difference in the Teams Store for the apps available in the US and other countries." lightbox="../../../../assets/images/app-fundamentals/geo-fencing-infographic.png":::
+
+# [Mobile](#tab/mobile)
+
+The following image shows the use of Geo-filtering for apps in the Teams mobile client:
+
+ :::image type="content" source="../../../../assets/images/app-fundamentals/mobile-infographic.png" alt-text="Infographic shows the difference in the Teams Store for the apps available in the US and other countries in mobile." :::
+
+---
 
 > [!NOTE]
 > Geo-filtering isn't supported in Government community cloud (GCC), GCC-High, and Department of Defence (DoD) tenants.

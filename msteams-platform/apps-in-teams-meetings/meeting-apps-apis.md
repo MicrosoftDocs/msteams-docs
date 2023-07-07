@@ -3,7 +3,6 @@ title: Meeting apps APIs
 author: v-sdhakshina
 description: Learn meeting apps API references that are available for Teams client and Bot Framework SDKs with examples, code samples, and response codes.
 ms.topic: conceptual
-ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
 ---
@@ -283,13 +282,13 @@ The following table includes the response codes:
 | **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the tenant admin disables and blocks the app during live site migration. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat doesn't exist. |
 
-## Targeted meeting notification API
+## Targeted meeting notification and app icon badging API
 
-The `targetedMeetingNotification` API allows apps to send targeted in-meeting notifications to specific participants in a meeting. Apps send targeted in-meeting notifications based on user action. The API is available through bot API.
+The `targetedMeetingNotification` API allows apps to send targeted in-meeting notifications and shows app icon badging to specific participants in a meeting. Apps send targeted in-meeting notifications and app icon badging based on user action. The API is available through bot API.
 
 ### Prerequisite
 
-You must configure your app manifest with [RSC permissions](../graph-api/rsc/resource-specific-consent.md) under the `webApplicationInfo` property to send targeted in-meeting notifications to specific participants in a meeting. Use the following examples to configure your manifest:
+You must configure your app manifest with [RSC permissions](../graph-api/rsc/resource-specific-consent.md) under the `webApplicationInfo` property to send targeted in-meeting notifications and shows app icon badging to specific participants in a meeting. Use the following examples to configure your manifest:
 
 <br>
 
@@ -342,14 +341,14 @@ You must configure your app manifest with [RSC permissions](../graph-api/rsc/res
 > * The API payload only permits a task module with a URL.
 > * The user ID formats **aadObjectid** and **UPN** aren't supported.
 
-Get supported user ID format for targeted in-meeting notification:
+Get supported user ID format for targeted in-meeting notification and app icon badging:
 
 * [Get participant API](#get-participant-api)
 * [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)
 
 ### Example
 
-Following is an example of request payload for targeted in-meeting notification:
+Following is an example of request payload for targeted in-meeting notification and app icon badging:
 
 ```http
 POST /v1/meetings/{meetingId}/notification
@@ -395,7 +394,7 @@ POST /v1/meetings/{meetingId}/notification
 | `meetingId` | The meeting ID is available through bot invoke and TeamsJS library. |
 | `type` |`targetedMeetingNotification` |
 | `recipients` | List of user IDs. Get user IDs for meeting participants through [Get participant API](#get-participant-api). Get the entire list of chat roster using [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Empty or null recipients list will return 400.|
-| `surface` | A type of surface. The supported surface type is `meetingStage`. |
+| `surface` | A type of surface. The supported surface type are `meetingStage` and `meetingTabIcon`. |
 | `surfaces` | List of surfaces where notifications can be rendered. |
 | `contentType` | Type of content that the targeted in-meeting notification renders. The supported value is `task`. |
 | `content` | [TaskModuleContinueResponse](/dotnet/api/microsoft.bot.schema.teams.taskmodulecontinueresponse?view=botbuilder-dotnet-stable&preserve-view=true) |
@@ -412,18 +411,7 @@ POST /v1/meetings/{meetingId}/notification
 > [!NOTE]
 > If you provide an invalid input, the API returns the status code 400.
 
-### Response code
-
-The following table includes the response codes:
-
-| Response code | Description |
-|---|---|
-| **202** | Notification is successfully sent. |
-| **207** | Notifications are sent only to a few participants. |
-| **400** | Meeting notification request payload validation failed. |
-| **401** | Bot token is invalid. |
-| **403** | Bot isn't allowed to send the notification. |
-| **404** | Meeting chat isn't found or none of the participants were found in the roster. |
+[!INCLUDE [Response code](../includes/meeting-response-code.md)]
 
 ## Get meeting details API
 

@@ -5,6 +5,7 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
+ms.date: 03/21/2023
 ---
 
 # Include a SaaS offer with your Teams app

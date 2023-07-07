@@ -4,6 +4,7 @@ description: In this module, learn about how to enable SSO for your Adaptive Car
 author: v-sdhakshina
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.date: 02/06/2023
 ---
 
 # Add code to enable SSO for Adaptive Cards Universal Actions

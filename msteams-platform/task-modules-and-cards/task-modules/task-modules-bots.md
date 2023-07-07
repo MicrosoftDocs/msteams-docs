@@ -3,6 +3,7 @@ title: Use Task Modules in Microsoft Teams bots
 description: Learn how to use task modules with Microsoft Teams bots, including Bot Framework cards, Adaptive cards, and deep links.
 ms.localizationpriority: medium
 ms.topic: how-to
+ms.date: 01/31/2023
 ---
 
 # Use task modules from bots
