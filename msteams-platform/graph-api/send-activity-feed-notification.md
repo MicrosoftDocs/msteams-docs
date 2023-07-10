@@ -69,6 +69,8 @@ The following variants show the kinds of activity feed notification cards you ca
 
 :::image type="content" source="../assets/images/activity-feed/activity-feed-notifications-mobile.png" alt-text="Screenshot shows the activity feed notifications in a mobile.":::
 
+---
+
 ## Requirements for using the activity feed notification APIs
 
 Activity feed APIs work with a Teams app. The following are the requirements for sending activity feed notifications:
