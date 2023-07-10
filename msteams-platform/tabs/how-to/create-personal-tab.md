@@ -5,11 +5,17 @@ description: Learn to build a personal tab. Select the Node.js, ASP.NET Core, or
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment
+ms.date: 02/27/2023
 ---
 
 # Create a personal tab
 
-Personal tabs are personally-scoped static tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) your personal tabs.
+Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) your personal tabs.
+
+> [!IMPORTANT]
+>
+> * To learn how to create a tab with Teams Toolkit, see [build your first tab app using JavaScript](../../sbs-gs-javascript.yml).
+> * We've introduced the [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
 
 Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your personal tab.
 

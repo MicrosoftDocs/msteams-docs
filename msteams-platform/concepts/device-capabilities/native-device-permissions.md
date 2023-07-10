@@ -5,6 +5,7 @@ description: How to update your app manifest in order to request access to nativ
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.author: surbhigupta
+ms.date: 03/21/2023
 ---
 
 # Request device permissions for your Teams app

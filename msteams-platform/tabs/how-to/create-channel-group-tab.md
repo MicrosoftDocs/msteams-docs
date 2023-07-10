@@ -4,6 +4,7 @@ description: Create custom channel, group tab with Node.js, ASP.NET Core, ASP.NE
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment-blazor
+ms.date: 02/27/2023
 ---
 
 # Create a channel tab or group tab
@@ -1072,3 +1073,4 @@ If your app supports [configurable tab,](~/tabs/how-to/create-tab-pages/configur
 * [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md)
 * [Build tabs with Adaptive Cards](build-adaptive-card-tabs.md)
 * [Add a SharePoint page as a tab in Teams](https://support.microsoft.com/en-us/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)

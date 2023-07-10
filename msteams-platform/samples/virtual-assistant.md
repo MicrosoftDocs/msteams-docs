@@ -3,6 +3,7 @@ title: Create Virtual Assistant
 description: Learn how to create Virtual Assistant bot for Teams using Code examples and snippets with features such as, Adaptive cards, handling interruptions and more.
 ms.localizationpriority: medium
 ms.topic: how-to
+ms.date: 12/21/2022
 ---
 
 # Create Virtual Assistant
@@ -539,7 +540,7 @@ Updating activity, such as card refresh isn't supported yet through Virtual Assi
 To forward card action or task module activities to an associated skill, the skill must embed `skillId` to it.
 `Book-a-room` bot card action, task module fetch and submit action payloads are modified to contain `skillId` as a parameter.
 
-For more information,, refer [this](/microsoftteams/platform/samples/virtual-assistant#add-adaptive-cards-to-your-virtual-assistant) section from this documentation.
+For more information, see [Add Adaptive Cards to your Virtual Assistant](/microsoftteams/platform/samples/virtual-assistant#add-adaptive-cards-to-your-virtual-assistant).
 
 ### Handle activities from group chat or channel scope
 
