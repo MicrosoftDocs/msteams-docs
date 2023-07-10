@@ -312,7 +312,7 @@ Your customers can find [support information for your app](/microsoftteams/manag
 |[Manifest file](resources/schema/manifest-schema.md)|`websiteUrl`|The web page at this URL provides support information for an app.|App details page in Teams admin center displays the website URL.|
 |[Manifest file](resources/schema/manifest-schema.md)|`privacyUrl`|The URL to the page that provides privacy information for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in Appsource listing.|
 |[Manifest file](resources/schema/manifest-schema.md)|`termsOfUseUrl`|The URL to the page that provides the terms of use for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in Appsource listing.|
-|[Manifest file](resources/schema/manifest-schema.md)|`publisherDocsUrl`|The URL to the page provides more app information for the admins.|Available in Teams admin center for apps that a developer blocks by default.|
+|[Manifest file](resources/schema/manifest-schema.md)|`publisherDocsUrl`|The URL destination provides app documentation for the admins to use to understand, allow, configure, and rollout the app. | URL is available in Teams admin center for those apps where app developer provide it in their manifest file.|
 |[Partner Center submission](/azure/marketplace/add-in-submission-guide)|NA|Support or help documentation URL.|Displayed in [Microsoft AppSource](https://appsource.microsoft.com/), in the **Details + support** tab.|
 
 > [!div class="nextstepaction"]
