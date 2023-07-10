@@ -81,7 +81,7 @@ The following example shows how users can purchase subscription plans for a fict
 
     :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="Screenshot shows the option to set up your subscription.":::
 
-1. Manage your subscription plan through the *Recloud* website (also known as a [landing page](include-saas-offer.md#build-a-landing-page-for-subscription-management)).
+1. Manage your subscription plan through the *Recloud* website (also known as a [landing page](include-saas-offer.md#technical-configuration)).
 
     :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Screenshot shows User and Licenses screen to assign license.":::
 

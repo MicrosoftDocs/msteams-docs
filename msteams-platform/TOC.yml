@@ -893,18 +893,18 @@
   - name: Overview
     href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
     displayName: Pricing model, SaaS offer, purchase experience, Price
-  - name: Include a SaaS offer with your Teams app
+  - name: Plan and prepare a SaaS offer
     href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     displayName: license, Transactable Software-as-a-Service, Recloud app
-  - name: In-app purchases
+  - name: Create and configure your SaaS offer
     href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-  - name: Test preview for monetized apps
+  - name: Test preview and publish the offer
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
     displayName: paid, AppSource, fee 
-  - name: Set up Microsoft license management
+  - name: Create plans and set up license management
     href: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
     displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
-  - name: Purchase and manage app subscriptions and licenses
+  - name: Publish the offer and manage licenses
     href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
     displayName: Purchase, apps, License, manage
 - name: Grow your app
