@@ -904,6 +904,9 @@
   - name: Create plans and set up license management
     href: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
     displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
+  - name: In-app purchase
+    href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase.md
+    displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
   - name: Publish the offer and manage licenses
     href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
     displayName: Purchase, apps, License, manage
