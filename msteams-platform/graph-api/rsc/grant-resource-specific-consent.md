@@ -501,9 +501,11 @@ For more information on how to get details of apps installed in a specific chat,
 
 #### Check your app for added RSC permissions for a user
 
-1. Get the [user ID](/graph/api/user-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
+1. Use the [Get user API](/graph/api/user-get?view=graph-rest-1.0&tabs=http&preserve-view=true). In the request url, pass the user's UPN and from the response body use the `id` field as the user's ID.
 1. Sign in to **Graph Explorer**.
-1. Make a **GET** call to this endpoint: `https://graph.microsoft.com/beta/users/{user-id}/PermissionGrants`.
+1. Make a **GET** call to this endpoint: `https://graph.microsoft.com/beta/users/{user-id}/permissionGrants`.
+
+   Alternatively, you can pass the user's UPN instead of the `user-id`.
 
    The `clientAppId` field in the response must map to the `webApplicationInfo.id` specified in the Teams app manifest.
 
