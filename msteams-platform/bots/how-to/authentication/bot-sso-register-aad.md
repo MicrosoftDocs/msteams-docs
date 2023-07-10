@@ -851,7 +851,7 @@ Congratulations! You've completed the following app configurations in Azure AD r
 
 If you use the Azure AD registration app for authentication you might encounter the following issues:
 
-- If you need to renew the certificate attached to the Azure AD app registration, it will affect the users who have authenticated with other Azure AD services using the certificate.
+- If you renew the certificate attached to the Azure AD app registration, it'll affect the users who have authenticated with other Azure AD services using the certificate.
 - It creates a single point of failure and control for all authentication-related activities with the bot.
 
 ## Next step
