@@ -1586,7 +1586,7 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 * Include your app’s name in the activity feed notification for end-users to understand the source or trigger for the notification without confusion. [*Mandatory Fix*]
 
-* App must trigger notifications for all the notification scenarios mentioned in the app long description, app first run experience, and in scenarios declared under `activityTypes` in the manifest. [*Mandatory Fix*]
+* App must trigger notifications for all the notification scenarios mentioned in the app long description, app first run experience, and in scenarios declared under `activityTypes` in the [app manifest](../../../../resources/schema/manifest-schema.md#activitiesactivitytypes). [*Mandatory Fix*]
 
 * Notifications must display within five seconds of user action. [*Mandatory Fix*]
 
