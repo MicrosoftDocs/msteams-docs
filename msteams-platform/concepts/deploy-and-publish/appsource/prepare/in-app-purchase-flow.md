@@ -10,9 +10,9 @@ ms.date: 01/31/2023
 
 # Create and configure your SaaS offer
 
-Plan and  prepare > **Create and configure** > Test and publish > Publish with offer configured
-
 Before you create a SaaS offer, check if the technical requirements and configurations are in place. You must also have a commercial marketplace account in Partner Center. It's time to officially create, configure, test, and publish your transactable SaaS offer.
+
+:::image type="content" source="~/assets/images/saas-offer/monetize-flow-2.png" alt-text="Diagram shows the process for how to include a SaaS offer with your Teams app with the first phase highlighted.":::
 
 ## Create an offer in Partner Center
 
@@ -30,23 +30,14 @@ Before you create a SaaS offer, check if the technical requirements and configur
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/commercial-marketplace.png" alt-text="The screenshots shows the marketplace offer page where you can select new offer.":::
 
-1. Enter **Offer ID** and **Offer alias** and select **Create**.
+1. Enter **Offer ID** and **Offer alias**.
 
    > [!NOTE]
    > If you're creating an offer for testing purpose, add the text **-ISVPILOT** to the end of your offer alias. This indicates the certification team that the offer is for testing purposes. Microsoft delete offers with **-ISVPILOT** periodically. So, don't use this tag for reasons other than testing the license management capability.
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/saas.png" alt-text="The screenshots shows how to enter Offer ID and Offer alias in the Partner Center.":::
 
-1. In the Offer setup page, under setup details, select the checkbox **Yes, I would like Microsoft to manage customer licenses on my behalf**.
-
-   :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="The screenshots shows the offer setup page to setup license to manage for your app within Teams.":::
-
-   > [!NOTE]
-   >
-   > * This is a one-time setting and you can't change it once your offer is published. This allows the customer to manage licenses for your app within Teams.
-   > * The App manifest supports only one offer for an app. Choose an appropriate license management solution for all the plans available in your offer and you can't change this option after the offer is pushed to live.
-
-1. Select **Save draft**.
+1. Select **Create**.
 
 ## Configure your SaaS offer
 
@@ -56,27 +47,40 @@ Make the required configurations and setups for the offer. The offer setup, offe
 
 On the **Offer setup** tab, under **Setup** details, choose whether to sell your offer through Microsoft or manage your transactions independently. Offers sold through Microsoft are called transactable offers, which means that Microsoft facilitates the exchange of money for a software license on the publisher's behalf.
 
-If you haven't added Offer Alias while creating the offer, enter a suitable Offer Alias name.
+1. If you haven't added Offer Alias while creating the offer, enter a suitable Offer Alias name.
 
-1. To sell through Microsoft and have Microsoft facilitate transactions for you, select Yes.
+1. To sell through Microsoft and have Microsoft facilitate transactions for you, in the Offer setup page, under setup details, select the checkbox **Yes, I would like Microsoft to manage customer licenses on my behalf**.
+
+   :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="The screenshots shows the offer setup page to setup license to manage for your app within Teams.":::
+
     * If you would like Microsoft to manage customer licenses for you, select Yes. If you select yes, you must integrate with Microsoft Graph APIs to verify customer eligibility. For details on how to integrate, see Integrate your SaaS offer with Graph API for License Management
     * If you want to manage customer licenses yourself, select No.
-1. To sell your offer through Microsoft, under Setup details, select the Yes.
-    If you want to manage transactions independently, select No. The technical requirements and configuration differ based on the selection.
-1. To list your offer through the commercial marketplace and process transactions independently, select No and then choose from the [listed options](/partner-center/marketplace/plan-saas-offer). You can change to a different listing option after publishing the offer.
+
+   > [!NOTE]
+   >
+   > * This is a one-time setting and you can't change it once your offer is published. This allows the customer to manage licenses for your app within Teams.
+   > * The App manifest supports only one offer for an app. Choose an appropriate license management solution for all the plans available in your offer and you can't change this option after the offer is pushed to live.
+
+1. If you want to manage transactions independently, To list your offer through the commercial marketplace and process transactions independently, select **No**.
+
+    The technical requirements and configuration differ based on the selection.
+
+1. Select from the [listed options](/partner-center/marketplace/plan-saas-offer). You can change to a different listing option after publishing the offer.
 
 1. To enable a test drive, under **Test drive**, select the **Enable a test drive** checkbox.
 
     A test drive is a great way to showcase your offer to potential customers by giving them access to a preconfigured environment for a fixed number of hours.
 
+1. Select **Save draft**.
+
 ### Configure Properties
 
 On the Properties tab, you'll define the categories and industries applicable to your offer, your app version, and legal contracts. Be sure to provide complete and accurate details about your offer on this page, so that it's displayed appropriately and offered to the right set of customers.
 
-* Under Category, select at least one and up to two categories for grouping your offer into the appropriate marketplace search areas.
-* Under Industries, you can select up to two industries and up to two sub-industries (also called verticals) for each industry.
+* Under **Category**, select at least one and up to two categories for grouping your offer into the appropriate marketplace search areas.
+* Under **Industries**, you can select up to two industries and up to two sub-industries (also called verticals) for each industry.
 * In the App version box, enter a version number. The app version is used in the AppSource marketplace to identify the version number of your offer.
-* Under Legal, provide terms and conditions for your offer. You can use standard contract with some amendments or use own terms and conditions.
+* Under **Legal**, provide terms and conditions for your offer. You can use standard contract with some amendments or use own terms and conditions.
 
 ### Offer listing
 
@@ -93,9 +97,9 @@ On the Offer listing page, under Marketplace details, complete the following ste
 
 You can define a limited audience who can review your SaaS offer before you publish it live to the broader marketplace audience.
 
-On the Preview Audience page, add a single Azure AD or MSA email address and an optional description in the boxes provided.
+On the **Preview Audience** page, add a single Azure AD or MSA email address and an optional description in the boxes provided.
 To add another email address, select the Add another email link.
-Select Save draft before continuing to the next tab: Technical configuration.
+Select **Save draft** before continuing to the next tab: Technical configuration.
 
 ### Technical configuration
 
@@ -106,7 +110,7 @@ On the Technical configuration tab, you'll define the technical details that the
 1. Enter Azure Active Directory tenant ID.
 1. Enter Azure Active Directory application ID.
 
-Select Save draft before continuing to the next tab: Plan overview.
+Select **Save draft** before continuing to the next tab: Plan overview.
 
 ### Plan Overview
 
@@ -114,7 +118,7 @@ Offers sold through the Microsoft commercial marketplace must have at least one 
 
 When you finish configuring your offer, validate the offer and submit your offer for publishing.
 
-When the offer is submitted for publishing, the Offer overview page shows the Publish status where you can track the progress. When the offer is in Publisher sign-off state, preview links for the respective platforms are given below the Go live button. To test the offer, see preview and test your offer.\
+When the offer is submitted for publishing, the Offer overview page shows the Publish status where you can track the progress. When the offer is in Publisher sign-off state, preview links for the respective platforms are given below the Go live button. To test the offer, see preview and test your offer.
 
 ## Remove a SaaS offer from your app
 

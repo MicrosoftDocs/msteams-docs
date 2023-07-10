@@ -22,11 +22,11 @@ You’ve published your SaaS offer, but you still must link it to your Teams app
 
 To configure from Teams Developer Portal, follow the given steps:
 
-1. Go to the Developer Portal and select Apps.
-1. On the Apps page, select the app you're linking the SaaS offer to.
+1. Go to the **Developer Portal** and select **Apps**.
+1. On the **Apps** page, select the app you're linking the SaaS offer to.
 1. Go to the Plans and pricing page and specify your publisher and offer IDs.
 1. Select View to preview your SaaS offer's subscription plans.
-1. If everything looks good, select Save.
+1. If everything looks good, select **Save**.
 
 To configure through app manifest:
 
@@ -43,13 +43,15 @@ Update the subscriptionOffer property in your app manifest.
 
 ## Publish your app
 
-You’ve created your SaaS offer and linked it to your Teams app—now it's time to publish your app to the Teams store. For complete instructions, see publish your app to the Teams store.
+You’ve created your SaaS offer and linked it to your Teams app—now it's time to publish your app to the Teams store. For complete instructions, see [publish your app to the Teams store](../publish.md).
 
 > [!IMPORTANT]
 >
 > * Even if your app is already listed on the Teams store, you still must go through the store validation process again to include your SaaS offer.
 > * Flat rate offers created without the Offer ID and Publisher ID in the app manifest should be updated and resubmitted for validation.
 Once published, users will see a Buy a subscription option in the app details dialog when they try to add your app to Teams.
+
+Once published, users see a **Buy a subscription** option in the app details dialog when they try to add your app to Teams.
 
 ## Purchase and manage app subscriptions and licenses
 
@@ -129,6 +131,17 @@ The following example shows how users can manage licenses for third-party apps f
 ### Admin purchasing experience
 
 Admins can manage the app subscriptions and licenses in the Teams admin center. For more information, see [Purchase third-party Teams apps and manage subscriptions](/microsoftteams/purchase-third-party-apps).
+
+## Remove a SaaS offer from your app
+
+If you unlink a SaaS offer included in your Teams store listing, you must republish your app to see the change in the store.
+
+1. Go to the Developer Portal and select Apps.
+1. On the Apps page, select the app you're removing the offer from.
+1. Go to the Plans and pricing page and select Revert.
+1. After the offer is unlinked, do the following to update your store listing:
+    1. Select Distribute > Publish to the Teams store.
+    1. Select Open Partner Center to begin the process of republishing your app without the offer.
 
 ## See also
 

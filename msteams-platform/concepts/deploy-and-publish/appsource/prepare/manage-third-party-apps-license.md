@@ -26,7 +26,7 @@ Offers sold through the Microsoft commercial marketplace must have at least one 
 
 1. Select the plan to add pricing and availability information
 
-### Define Plan listing
+### Define plan listing
 
 On the **Plan listing** tab, you can define the plan name and description as you want them to appear in the commercial marketplace.
 
