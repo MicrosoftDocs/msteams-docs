@@ -501,7 +501,7 @@ For more information on how to get details of apps installed in a specific chat,
 
 #### Check your app for added RSC permissions for a user
 
-1. Get the [user ID](../../bots/how-to/conversations/send-proactive-messages.md#get-the-user-id-team-id-or-channel-id).
+1. Get the [user ID](/graph/api/user-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
 1. Sign in to **Graph Explorer**.
 1. Make a **GET** call to this endpoint: `https://graph.microsoft.com/beta/users/{user-id}/PermissionGrants`.
 
@@ -509,7 +509,7 @@ For more information on how to get details of apps installed in a specific chat,
 
     :::image type="content" source="../../assets/images/user-graph-permissions.png" alt-text="Screenshot shows the Graph explorer response to GET call for user RSC permissions.":::
 
-For more information on how to get details of the apps installed for the user, see [get a user](/graph/api/user-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
+For more information on how to get details of the apps installed for the user, see [get the names and other details of apps installed in the specified chat](/graph/api/chat-list-installedapps#example-2-get-the-names-and-other-details-of-apps-installed-in-the-specified-chat).
 
 ## Code sample
 
