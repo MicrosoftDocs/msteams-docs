@@ -49,11 +49,11 @@ The following example shows the components together provide the details about a 
 
 # [Windows](#tab/windows)
 
-<WIP>:
+< WIP >
 
 # [iOS](#tab/ios)
 
-<WIP>
+< WIP >
 
 ---
 
