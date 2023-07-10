@@ -509,7 +509,7 @@ For more information on how to get details of apps installed in a specific chat,
 
     :::image type="content" source="../../assets/images/user-graph-permissions.png" alt-text="Screenshot shows the Graph explorer response to GET call for user RSC permissions.":::
 
-For more information on how to get details of the apps installed for the user, see [get the names and other details of apps installed in the specified chat](/graph/api/chat-list-installedapps#example-2-get-the-names-and-other-details-of-apps-installed-in-the-specified-chat).
+For more information on how to get details of the apps installed for the user, see [get the names and other details of apps installed for the user](/graph/api/userteamwork-list-installedapps?view=graph-rest-1.0&branch=main&tabs=http&preserve-view=true).
 
 ## Code sample
 
