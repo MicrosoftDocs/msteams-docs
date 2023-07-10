@@ -49,13 +49,25 @@ The following example shows the components together provide the details about a 
 
 # [Windows](#tab/windows)
 
-<WIP - Image to be shared by the PM>
+<WIP>:
 
 # [iOS](#tab/ios)
 
-<WIP - Image to be shared by the PM>
+<WIP>
 
 ---
+
+### Types of activity feed notification cards
+
+The following variants show the kinds of activity feed notification cards you can display. The app logo replaces the user avatar for app-generated notifications.
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../assets/images/activity-feed/activity-feed-notifications-desktop.png" alt-text="Sceenshot shows the activity feed notifications in a desktop.":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../assets/images/activity-feed/activity-feed-notifications-mobile.png" alt-text="Screenshot shows the activity feed notifications in a mobile.":::
 
 ## Requirements for using the activity feed notification APIs
 
