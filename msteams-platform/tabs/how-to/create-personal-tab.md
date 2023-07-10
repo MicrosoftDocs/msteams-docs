@@ -1050,7 +1050,7 @@ If a context isn't defined in the app manifest, by default Teams consider the fo
 
 ## Customizing your static tab in chats or meetings
 
-To customize your static tab experience in chats or meetings, you can add `setConfig` APIs in a [configuration dialog](~/tabs/how-to/create-tab-pages/configuration-page.md#configuration-page-for-tabs) to update the `contentUrl`. Following is an example:
+To customize your static tab experience in chats or meetings, you can use the `setConfig` APIs in your tab to update the `contentUrl` and `websiteUrl`. Following is an example:
 
 ```json
 pages.config.setConfig({ 
@@ -1059,7 +1059,7 @@ pages.config.setConfig({
 
 ```
 
-Only `contentUrl` changes are supported for `setConfig`, other properties can't be changed for static tabs.
+Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other properties can't be changed for static tabs.
 
 ## Code sample
 

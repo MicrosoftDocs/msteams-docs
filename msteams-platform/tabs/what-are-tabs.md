@@ -40,11 +40,23 @@ Following image shows static tabs with customizable experience added to differen
 
 # [Personal](#tab/personal)
 
-:::image type="content" source="~/assets/images/tabs/personal-tab-configure.png" alt-text=" Screenshot shows the configurable tab added to a personal scope."
+* The following image shows a static tab in perosnal context in the Teams desktop client:
+
+    :::image type="content" source="~/assets/images/tabs/personal-tab-configure.png" alt-text=" Screenshot shows the configurable tab added to a personal scope."
+
+* The following image shows a static tab in perosnal context in the Teams mobile client:
+
+    :::image type="content" source="~/assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a personal context.":::
 
 # [Meeting](#tab/meeting)
 
-:::image type="content" source="~/assets/images/tabs/personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting.":::
+* The following image shows a static tab in meeting context in the Teams desktop client:
+
+    :::image type="content" source="~/assets/images/tabs/personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting.":::
+
+* The following image shows a static tab in meeting context in the Teams mobile client:
+
+    :::image type="content" source="~/assets/images/tabs/mobile-personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting in mobile.":::
 
 ---
 
