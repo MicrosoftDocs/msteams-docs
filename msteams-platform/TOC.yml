@@ -893,15 +893,18 @@
   - name: Overview
     href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
     displayName: Pricing model, SaaS offer, purchase experience, Price
-  - name: Plan and prepare a SaaS offer
+  - name: Prerequisites
+    href: concepts/deploy-and-publish/appsource/prepare/prerequisites.md
+    displayName: SaaS API, landing page, graph usageRights API
+  - name: Plan your SaaS offer
     href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     displayName: license, Transactable Software-as-a-Service, Recloud app
-  - name: Create and configure your SaaS offer
+  - name: Create your SaaS offer
     href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-  - name: Test preview and publish the offer
+  - name: Test the SaaS offer
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
     displayName: paid, AppSource, fee 
-  - name: Create plans and set up license management
+  - name: Set up Microsoft license management
     href: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
     displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
   - name: In-app purchase

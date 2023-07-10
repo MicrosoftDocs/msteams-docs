@@ -1,5 +1,5 @@
 ---
-title: In-app purchase flow for the monetization of apps
+title: Create your SaaS offer for apps
 description: Learn the basic tasks and concepts needed to implement in-app purchases and trial functionality in teams apps.
 author: v-npaladugu
 ms.author: surbhigupta
@@ -8,9 +8,9 @@ ms.localizationpriority: high
 ms.date: 01/31/2023
 ---
 
-# Create and configure your SaaS offer
+# Create your SaaS offer
 
-Before you create a SaaS offer, check if the technical requirements and configurations are in place. You must also have a commercial marketplace account in Partner Center. It's time to officially create, configure, test, and publish your transactable SaaS offer.
+Create your offer in Partner Center and configure the offer to publish in the marketplace. The decision to sell through Microsoft, details of the offer, pricing are configured after creating the offer. Check if the prerequisites are done before you create a SaaS offer. You must also have a commercial marketplace account in Partner Center.
 
 :::image type="content" source="~/assets/images/saas-offer/monetize-flow-2.png" alt-text="Diagram shows the process for how to include a SaaS offer with your Teams app with the first phase highlighted.":::
 
