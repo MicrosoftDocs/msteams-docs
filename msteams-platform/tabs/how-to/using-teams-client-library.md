@@ -7,6 +7,7 @@ author: erikadoyle
 ms.subservice: m365apps
 ms.topic: conceptual
 keywords: SDK TeamsJS Teams client JavaScript library
+ms.date: 05/05/2023
 ---
 # Teams JavaScript client library
 

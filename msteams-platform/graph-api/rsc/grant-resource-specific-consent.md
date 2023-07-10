@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: surbhigupta
 ms.author: surbhigupta
 ms.topic: reference
+ms.date: 03/28/2023
 ---
 
 # Grant RSC permissions to your app
