@@ -62,7 +62,7 @@ An example of connector message is as follows:
     "sections": [{
         "activityTitle": "Larry Bryant created a new task",
         "activitySubtitle": "On Project Tango",
-        "activityImage": "https://teamsnodesample.azurewebsites.net/static/img/image5.png",
+        "activityImage": "https://adaptivecards.io/content/cats/3.png",
         "facts": [{
             "name": "Assigned to",
             "value": "Unassigned"
