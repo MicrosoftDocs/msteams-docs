@@ -24,16 +24,14 @@ Enable Microsoft Accounts (link) and Azure Active Directory (Azure AD)
 
 When someone finishes buying a subscription plan for your app in the Teams store, the commercial marketplace will direct them to your landing page where they can manage the subscription (such as assign a license to a specific user in their org). For complete instructions, see build the landing page for your SaaS offer. A buyer is directed to the landing page after they subscribe to an offer.After the SaaS offer is purchased successfully, the user is directed to the landing page where they activate and configure the subscription. Action taking page. Learn how to create a landing page for your transactable SaaS offer. What the landing page should have - allow the user to sign in with Azure AD SSO.
 
-  When someone finishes buying a subscription plan for your app in the Teams store, the commercial marketplace will direct them to your landing page where they can manage the subscription (such as assign a license to a specific user in their org).
-
-  For complete instructions, see [build the landing page for your SaaS offer](/azure/marketplace/azure-ad-transactable-saas-landing-page).
+For complete instructions, see [build the landing page for your SaaS offer](/azure/marketplace/azure-ad-transactable-saas-landing-page).
 
 #### Best practices for landing pages
 
 Consider the following approaches when building a landing page for the Teams app you’re monetizing. See an example landing page in the End-user purchase experience.
 
 * Users must be able to sign in to your landing page with the same Azure AD credentials they used to buy the subscription. For more information, see Azure AD and transactable SaaS offers in the commercial marketplace.
-* Allow users to take the following actions on your landing page. Don’t forget to consider what’s appropriate for a user’s role and permissions. For example, you may want to allow only subscription admins to search for users):
+* Allow users to take the following actions on your landing page. Don’t forget to consider what’s appropriate for a user’s role and permissions. For example, you may want to allow only subscription admins to search for users:
   * Search for users in their org using email or another form of identity.
   * See users they can assign licenses to in a list.
   * Assign licenses to one or multiple users at the same time.
@@ -54,7 +52,7 @@ In general, you’ll implement the following steps using the APIs once a subscri
 
   1. Receive a purchase identification token via the URL to your landing page.
   1. Use the token to retrieve subscription details.
-  1. Notify the commercial marketplace that the subscription is activated.)
+  1. Notify the commercial marketplace that the subscription is activated.
 
 For complete instructions and API reference, see the SaaS Fulfillment APIs documentation.
 
@@ -98,7 +96,7 @@ Before you create your SaaS offer, have the below technical information that's r
 
 * Azure Active Directory application ID: The Azure AD application ID is associated with your publisher ID in your Partner Center account. You must use the same application ID for all offers in that account.
 
-Now that we have prepared for the SaaS offer, let's plan to create a SaaS offer.
+Now that we have the technical requirements to create a SaaS offer, it's essential to plan the offer and decide features to be provided in the offer.
 
 :::image type="content" source="~/assets/images/saas-offer/saas-offer-diagram.png" alt-text="Diagram showing process for how to include a SaaS offer with your Teams app.":::
 
@@ -106,3 +104,7 @@ Now that we have prepared for the SaaS offer, let's plan to create a SaaS offer.
 
 > [!div class="nextstepaction"]
 > [Plan your SaaS offer](include-saas-offer.md)
+
+## See also
+
+* [Monetize your app](monetize-overview.md)

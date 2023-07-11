@@ -902,12 +902,12 @@
   - name: Create your SaaS offer
     href: concepts/deploy-and-publish/appsource/prepare/create-saas-offer.md
     displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
-  - name: Test the SaaS offer to publish
-    href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
-    displayName: paid, AppSource, fee
   - name: Set up Microsoft license management
     href: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
     displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
+  - name: Test the SaaS offer to publish
+    href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
+    displayName: paid, AppSource, fee
   - name: Publish your app with SaaS offer configuration
     href: concepts/deploy-and-publish/appsource/prepare/publish-saas-offer-app.md
     displayName: configure, apps, publish app
