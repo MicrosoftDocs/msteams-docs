@@ -9,7 +9,7 @@ ms.date: 01/31/2023
 ---
 # Prerequisites to create an offer
 
-If you choose to sell your SaaS offer through Microsoft, there are certain technical configurations to be done and requirements that needs to be fulfilled before you create the offer. Before you start to create a SaaS offer, make sure the technical requirements are in place.
+If you choose to sell your SaaS offer through Microsoft, there are certain technical configurations to be done and technical information to be gathered before you create the offer. Before you start to create a SaaS offer, make sure the technical requirements are in place.
 
 ## Technical configuration
 
@@ -18,31 +18,37 @@ The technical configurations differ based on the listing option you chose for yo
 > [!NOTE]
 > If you choose the listing option as Contact me, there are no technical requirements.
 
-* Enable Microsoft Accounts (link) and Azure Active Directory (Azure AD)
+Enable Microsoft Accounts (link) and Azure Active Directory (Azure AD)
 
-* Create a landing page: When someone finishes buying a subscription plan for your app in the Teams store, the commercial marketplace will direct them to your landing page where they can manage the subscription (such as assign a license to a specific user in their org). For complete instructions, see build the landing page for your SaaS offer. A buyer is directed to the landing page after they subscribe to an offer.After the SaaS offer is purchased successfully, the user is directed to the landing page where they activate and configure the subscription. Action taking page. Learn how to create a landing page for your transactable SaaS offer. What the landing page should have - allow the user to sign in with Azure AD SSO.
+### Create a landing page
 
-When someone finishes buying a subscription plan for your app in the Teams store, the commercial marketplace will direct them to your landing page where they can manage the subscription (such as assign a license to a specific user in their org).
+When someone finishes buying a subscription plan for your app in the Teams store, the commercial marketplace will direct them to your landing page where they can manage the subscription (such as assign a license to a specific user in their org). For complete instructions, see build the landing page for your SaaS offer. A buyer is directed to the landing page after they subscribe to an offer.After the SaaS offer is purchased successfully, the user is directed to the landing page where they activate and configure the subscription. Action taking page. Learn how to create a landing page for your transactable SaaS offer. What the landing page should have - allow the user to sign in with Azure AD SSO.
 
-For complete instructions, see [build the landing page for your SaaS offer](/azure/marketplace/azure-ad-transactable-saas-landing-page).
+  When someone finishes buying a subscription plan for your app in the Teams store, the commercial marketplace will direct them to your landing page where they can manage the subscription (such as assign a license to a specific user in their org).
 
-* Best practices for landing pages: Consider the following approaches when building a landing page for the Teams app you’re monetizing. See an example landing page in the End-user purchase experience.
+  For complete instructions, see [build the landing page for your SaaS offer](/azure/marketplace/azure-ad-transactable-saas-landing-page).
 
-  * Users must be able to sign in to your landing page with the same Azure AD credentials they used to buy the subscription. For more information, see Azure AD and transactable SaaS offers in the commercial marketplace.
-  * Allow users to take the following actions on your landing page. Don’t forget to consider what’s appropriate for a user’s role and permissions. For example, you may want to allow only subscription admins to search for users):
-    * Search for users in their org using email or another form of identity.
-    * See users they can assign licenses to in a list.
-    * Assign licenses to one or multiple users at the same time.
-    * Assign and manage different types of licenses (if available).
-    * Validate if a license is already assigned to another user.
-    * Cancel their subscription.
-  * Provide an introduction on how to use your app.
-  * Add ways to get support, such as an FAQ, knowledge base, or contact email.
-  * Provide a link that makes it easy for the subscriber to get back to the landing page. For example, include this link in your app’s About tab.
+#### Best practices for landing pages
+
+Consider the following approaches when building a landing page for the Teams app you’re monetizing. See an example landing page in the End-user purchase experience.
+
+* Users must be able to sign in to your landing page with the same Azure AD credentials they used to buy the subscription. For more information, see Azure AD and transactable SaaS offers in the commercial marketplace.
+* Allow users to take the following actions on your landing page. Don’t forget to consider what’s appropriate for a user’s role and permissions. For example, you may want to allow only subscription admins to search for users):
+  * Search for users in their org using email or another form of identity.
+  * See users they can assign licenses to in a list.
+  * Assign licenses to one or multiple users at the same time.
+  * Assign and manage different types of licenses (if available).
+  * Validate if a license is already assigned to another user.
+  * Cancel their subscription.
+* Provide an introduction on how to use your app.
+* Add ways to get support, such as an FAQ, knowledge base, or contact email.
+* Provide a link that makes it easy for the subscriber to get back to the landing page. For example, include this link in your app’s About tab.
 
 The technical requirements listed below are specific to Sell through Microsoft listing option.
 
-* Integrate with Fulfillment SaaS API: Integrating with the SaaS Fulfillment APIs is required for monetizing your Teams app. These APIs help you manage the lifecycle of a subscription plan once it’s purchased by a user.
+### Integrate with Fulfillment SaaS API
+
+Integrating with the SaaS Fulfillment APIs is required for monetizing your Teams app. These APIs help you manage the lifecycle of a subscription plan once it’s purchased by a user.
 
 In general, you’ll implement the following steps using the APIs once a subscription is purchased:
 
@@ -52,7 +58,9 @@ In general, you’ll implement the following steps using the APIs once a subscri
 
 For complete instructions and API reference, see the SaaS Fulfillment APIs documentation.
 
-* Integrate with Graph usageRights API: Integrate with Graph usageRights API to manage user permissions at the time of app launch by a customer who has a purchase license. You're required to determine the user’s permissions for the app with a Graph call to the usageRights API.
+### Integrate with Graph usageRights API
+
+Integrate with Graph usageRights API to manage user permissions at the time of app launch by a customer who has a purchase license. You're required to determine the user’s permissions for the app with a Graph call to the usageRights API.
 
 You can call Graph APIs to determine if the currently logged in user with a valid subscription of the plan has access to your app. To call Graph usageRights API to check user permissions, follow the steps:
 
