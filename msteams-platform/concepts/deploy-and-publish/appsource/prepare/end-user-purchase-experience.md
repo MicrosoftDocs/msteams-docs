@@ -39,7 +39,7 @@ The following example shows how users can purchase subscription plans for a fict
 
     :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="Setting up the subscription.":::
 
-    You'll be redirected to the *Recloud* website to activate your subscription.
+    You're redirected to the *Recloud* website to activate your subscription.
 
 1. Manage your subscription plan through the *Recloud* website (also known as a [landing page](include-saas-offer.md#build-a-landing-page-for-subscription-management)).
 
@@ -55,11 +55,11 @@ Consent dialog is part of the flow to get the users license information and may 
 
 If you bought a Teams app subscription or manage one for your team, you can view the list of subscriptions purchased and their details:
 
-* Change a plan
-* Buy or remove licenses
-* Update a payment method
-* Cancel a subscription
-* View your invoices
+* Change a plan.
+* Buy or remove licenses.
+* Update a payment method.
+* Cancel a subscription.
+* View your invoices.
 
 ### Filter your subscriptions
 
@@ -76,7 +76,7 @@ If you bought a Teams app subscription or manage one for your team, you can view
 
 1. To find a specific subscription, type the name of the app in the search box.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/find subscription.png" alt-text="Screenshot shows to find a specific subscription.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/find subscription.png" alt-text="Screenshot shows you to find a specific subscription.":::
 
 ### Manage licenses
 
@@ -102,12 +102,12 @@ If you bought a Teams app subscription or manage one for your team, you can view
 
 1. Select **Cancel subscription**.
 
->[NOTE!]
-You can only manage subscriptions you purchased.
+> [!NOTE]
+> You can only manage subscriptions you purchased.
 
-To take additional actions related to your subscription, like editing your billing profile or recurring billing settings, select [**Manage more in M365 admin center**.](<https://www.microsoft.com/en-in/microsoft-365/business/office-365-administration?rtc=1>)
+To take additional actions related to your subscription, such as editing your billing profile or recurring billing settings, select [**Manage more in M365 admin center**](https://www.microsoft.com/en-in/microsoft-365/business/office-365-administration?rtc=1).
 
-    :::image type="content" source="../../../../assets/images/saas-offer/manage more in M365 admin center.png" alt-text="Screenshot shows to manage the additional subscriptions in M365 admin center.":::
+:::image type="content" source="../../../../assets/images/saas-offer/manage more in M365 admin center.png" alt-text="Screenshot shows you to manage the additional subscriptions in M365 admin center.":::
 
 ## License management experience
 
