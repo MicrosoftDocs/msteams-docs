@@ -23,7 +23,7 @@ RSC is a Microsoft Teams and Microsoft Graph API integration that enables your a
 
 RSC permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure AD portal and are declared in the Teams app manifest (JSON) file. You can manage RSC permissions for Teams apps in Developer Portal from the **Permissions** section under **Configure**.
 
-:::image type="content" source="../../assets/images/dev-portal-permissions.png" alt-text="Screenshot shows the RSC permissions managed from Developer Portal.":::
+:::image type="content" source="../../assets/images/dev-portal-permissions.png" alt-text="Screenshot shows the RSC permissions managed from Developer Portal. " lightbox="../../assets/images/dev-portal-permissions.png":::
 
 ## Azure Active Directory
 
