@@ -900,17 +900,21 @@
     href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     displayName: license, Transactable Software-as-a-Service, Recloud app
   - name: Create your SaaS offer
-    href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-  - name: Test the SaaS offer
+    href: concepts/deploy-and-publish/appsource/prepare/create-saas-offer.md
+    displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
+  - name: Test the SaaS offer to publish
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
-    displayName: paid, AppSource, fee 
+    displayName: paid, AppSource, fee
+  - name: In-app purchases
+    href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+    displayName: manifest, purchase experience API, purchase
   - name: Set up Microsoft license management
     href: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
     displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
-  - name: In-app purchase
-    href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase.md
-    displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
-  - name: Publish the offer and manage licenses
+  - name: Publish your app with SaaS offer configuration
+    href: concepts/deploy-and-publish/appsource/prepare/publish-saas-offer-app.md
+    displayName: configure, apps, publish app
+  - name: Purchase and manage app subscriptions and licenses
     href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
     displayName: Purchase, apps, License, manage
 - name: Grow your app

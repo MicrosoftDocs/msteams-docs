@@ -12,7 +12,7 @@ ms.date: 04/06/2023
 
 Independent software vendors (ISVs) can configure Microsoft license management for third-party SaaS apps in Partner Center as part of the offer publishing. This allows Teams admins or users to easily assign, unassign, use, and track SaaS licenses for their third-party app subscriptions within Teams.
 
-To enable license management for a third-party app in Teams, you must create a plan for the offer and configure pricing and availability of the plan.
+To enable Microsoft to manage license for a third-party app in Teams, you must create a plan for the offer and configure pricing and availability of the plan.
 
 ## Create a plan
 

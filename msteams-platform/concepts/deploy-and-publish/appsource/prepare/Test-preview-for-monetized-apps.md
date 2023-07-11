@@ -1,5 +1,5 @@
 ---
-title: Test preview for monetized apps 
+title: Test preview the offer for monetized apps 
 author: v-ypalikila
 description: Create and test SaaS Preview offers for Teams app before pushing the offer live. Create a preview offer ID, configure your app with the preview offer ID, and sideload.
 ms.topic: conceptual
