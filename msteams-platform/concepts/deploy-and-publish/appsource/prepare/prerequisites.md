@@ -7,13 +7,13 @@ ms.topic: how-to
 ms.localizationpriority: high 
 ms.date: 01/31/2023
 ---
-## Prerequisites to create an offer
+# Prerequisites to create an offer
 
-Before you start to create a SaaS offer, make sure the technical requirements are in place.
+If you choose to sell your SaaS offer through Microsoft, there are certain technical configurations to be done and requirements that needs to be fulfilled before you create the offer. Before you start to create a SaaS offer, make sure the technical requirements are in place.
 
-### Technical configuration
+## Technical configuration
 
-If you choose to sell your SaaS offer through Microsoft, there are certain technical configurations to be done and requirements that needs to be fulfilled before you create the offer. The technical requirements differ based on the listing option you chose for your SaaS offer. It helps negate any blockers while creating the offer.
+The technical configurations differ based on the listing option you chose for your SaaS offer. It helps negate any blockers while creating the offer.
 
 > [!NOTE]
 > If you choose the listing option as Contact me, there are no technical requirements.
@@ -62,11 +62,11 @@ You can call Graph APIs to determine if the currently logged in user with a vali
 
   1. Call usageRights API to determine the user has License to the plan: [List user usageRights API](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http&preserve-view=true).
 
-    > [!NOTE]
-    >
-    > * You need to have minimum `User.Read` permissions to call usageRights.
-    > The usageRights API is currently in beta version. After the version is updated to V1, users must upgrade from beta to V1 version.
-    > * If the Azure AD app is used for both SaaS Fulfillment APIs and usageRights API, ensure that the tenant under which the Azure AD app is created is either the publishing tenant or the associated tenant in the Partner Center.
+  > [!NOTE]
+  >
+  > * You need to have minimum `User.Read` permissions to call usageRights.
+  > The usageRights API is currently in beta version. After the version is updated to V1, users must upgrade from beta to V1 version.
+  > * If the Azure AD app is used for both SaaS Fulfillment APIs and usageRights API, ensure that the tenant under which the Azure AD app is created is either the publishing tenant or the associated tenant in the Partner Center.
 
 To determine if the tenant for the Azure AD app is part of the Partner Center setup, follow these steps:
 
@@ -78,7 +78,7 @@ To determine if the tenant for the Azure AD app is part of the Partner Center se
 
 Integrating the APIs and building your landing page to manage subscriptions help to manage and track your offers right from the start and provide seamless user experience.
 
-### Technical requirements
+## Technical requirements
 
 Before you create your SaaS offer, have the below technical information that's required to configure the SaaS offer.
 

@@ -1,6 +1,6 @@
 ---
 title: Create your SaaS offer for apps
-description: Learn the basic tasks and concepts needed to implement in-app purchases and trial functionality in teams apps.
+description: Learn how to create a SaaS offer in Partner Center and configure the offer.
 author: v-preethah
 ms.author: surbhigupta
 ms.topic: how-to
