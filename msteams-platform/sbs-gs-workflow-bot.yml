@@ -124,7 +124,6 @@ items:
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-program-lang.png" alt-text=" Screenshots shows the selection of type script for programming language.":::
     
     1. Select **Default folder** to store your project root folder in default location.
-      
         > [!NOTE]
         > You can also change the default location by selecting **Browse...**
         
