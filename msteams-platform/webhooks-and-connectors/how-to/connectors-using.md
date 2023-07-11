@@ -137,7 +137,7 @@ An example of connector message is as follows:
 }
 ```
 
-This message provides the following card in the channel:
+The following image is an example of the connector message card in the channel.
 
 :::image type="content" source="../../assets/images/connectorcard_1.png" alt-text="Screenshot of a coonector card.":::
 
