@@ -5,6 +5,7 @@ author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: Colors
+ms.date: 05/23/2023
 ---
 # Colors for your Microsoft Teams app
 
