@@ -229,7 +229,7 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
 ## Known issues and limitations
 
-* For an anonymous user, the user ID from `getContext` and the user ID received by the bot are different. It's not possible to correlate the two directly. If you need to track the user's identity between your tab and bot, you must prompt the user to authenticate with an external identity provider.
+* Currently `getContext` doesn't return an user ID for the anonymous user, although the bot APIs do and It's not possible to correlate the anonymous user between these two APIs. If you need to track the user's identity between your tab and bot, you must prompt the user to authenticate with an external identity provider.
 
 * Anonymous users see a generic app icon on bot messages and cards, instead of the app's actual icon.
 
