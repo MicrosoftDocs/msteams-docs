@@ -5,6 +5,7 @@ description: Identify how your app's use cases can work within the Teams experie
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
+ms.date: 12/01/2022
 ---
 # Map your use cases to Teams app features
 

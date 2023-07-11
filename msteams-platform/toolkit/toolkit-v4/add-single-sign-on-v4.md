@@ -205,7 +205,7 @@ SSO command handler `ProfileSsoCommandHandler` uses an Azure AD token to call Mi
    });
    ```
 
-1. Register your command in the Teams app manifest. Open `templates\appPackage\manifest.template.json`, and add the following lines under `commands` in `commandLists` of your bot:
+1. Register your command in the Teams [app manifest](../../resources/schema/manifest-schema.md#botscommandlists). Open `templates\appPackage\manifest.template.json`, and add the following lines under `commands` in `commandLists` of your bot:
 
    ```json
    {

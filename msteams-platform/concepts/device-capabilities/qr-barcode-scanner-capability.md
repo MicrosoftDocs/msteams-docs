@@ -5,6 +5,7 @@ description: Learn how to use Teams JavaScript client library to leverage QR or 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
+ms.date: 02/08/2023
 ---
 
 # Integrate QR or barcode scanner capability
