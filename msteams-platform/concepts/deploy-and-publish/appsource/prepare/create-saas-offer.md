@@ -120,17 +120,6 @@ When you finish configuring your offer, validate the offer and submit your offer
 
 When the offer is submitted for publishing, the Offer overview page shows the Publish status where you can track the progress. When the offer is in Publisher sign-off state, preview links for the respective platforms are given below the Go live button. To test the offer, see preview and test your offer.
 
-## Remove a SaaS offer from your app
-
-If you unlink a SaaS offer included in your Teams store listing, you must republish your app to see the change in the store.
-
-1. Go to the [Developer Portal](https://dev.teams.microsoft.com/) and select **Apps**.
-1. On the **Apps** page, select the app you're removing the offer from.
-1. Go to the **Plans and pricing** page and select **Revert**.
-1. After the offer is unlinked, do the following to update your store listing:
-   1. Select **Distribute > Publish to the Teams store**.
-   1. Select **Open Partner Center** to begin the process of republishing your app without the offer.
-
 ## Code sample
 
 | **Sample name** | **Description** | **Node.js** | **Manifest**|
