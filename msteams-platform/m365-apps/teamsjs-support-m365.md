@@ -229,6 +229,22 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td></td>
         </tr>
+            <th><a href="#secondarybrowser">secondaryBrowser</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;*</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
@@ -497,7 +513,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
 
 ## Preview capabilities awaiting host support
 
-Some capabilities in the source are in early preview and still awaiting initial support in one or more host applications that include [**barCode**](#barcode), [**media**](#media), [**meeting**](#meeting), [**search**](#search), and [**secondaryBrowser**](#secondarybrowser).
+Some capabilities in the source are in early preview and still awaiting initial support in one or more host applications that include [**barCode**](#barcode), [**media**](#media), [**meeting**](#meeting), and  [**search**](#search).
 
 Later in this article, you can find more information on each capability of the Teams JavaScript client library.
 
@@ -1999,7 +2015,7 @@ Preview. Namespace supporting in-app browser experiences of the host app. For ex
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
