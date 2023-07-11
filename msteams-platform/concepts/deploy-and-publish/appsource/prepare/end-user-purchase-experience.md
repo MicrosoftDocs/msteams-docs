@@ -51,6 +51,64 @@ Consent dialog is part of the flow to get the users license information and may 
 
 :::image type="content" source="../../../../assets/images/saas-offer/permissions-requested.png" alt-text="Screenshot showing the permissions requested.":::
 
+## Manage subscriptions
+
+If you bought a Teams app subscription or manage one for your team, you can view the list of subscriptions purchased and their details:
+
+* Change a plan
+* Buy or remove licenses
+* Update a payment method
+* Cancel a subscription
+* View your invoices
+
+### Filter your subscriptions
+
+1. Go to **Microsoft Teams**.
+
+1. Select **Apps** > **Manage your apps**.
+
+1. Select the **Subscriptions** tab to view your list of subscriptions.
+
+1. To filter subscriptions by status, select **Filter** and select the type(s) of subscriptions:
+    * **Pending**: Subscription still needs to be set up.
+    * **Active**: Subscription is set up and the service can be used.
+    * **Deleted**: Subscription is no longer available.
+
+1. To find a specific subscription, type the name of the app in the search box.
+
+    :::image type="content" source="../../../../assets/images/saas-offer/find subscription.png" alt-text="Screenshot shows to find a specific subscription.":::
+
+### Manage licenses
+
+1. Go to **Microsoft Teams**.
+
+1. Select **Apps** > **Manage your apps**.
+
+1. Select the **Subscriptions** tab to view your list of subscriptions.
+
+1. Find the app subscription you want to manage and select **More options ...**.
+
+1. Manage licenses by selecting **Buy licenses** or **Remove licenses**.
+
+### Cancel a subscription
+
+1. Go to **Microsoft Teams**.
+
+1. Select **Apps** > **Manage your apps**.
+
+1. Select the **Subscriptions** tab to view your list of subscriptions.
+
+1. Find the app you want to cancel and select **More options ...** > **View subscription**.
+
+1. Select **Cancel subscription**.
+
+>[NOTE!]
+You can only manage subscriptions you purchased.
+
+To take additional actions related to your subscription, like editing your billing profile or recurring billing settings, select [**Manage more in M365 admin center**.](<https://www.microsoft.com/en-in/microsoft-365/business/office-365-administration?rtc=1>)
+
+    :::image type="content" source="../../../../assets/images/saas-offer/manage more in M365 admin center.png" alt-text="Screenshot shows to manage the additional subscriptions in M365 admin center.":::
+
 ## License management experience
 
 The following example shows how users can manage licenses for third-party apps from the Teams store:
