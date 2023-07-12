@@ -105,4 +105,3 @@ If you're not re-uploading an updated package, ensure that the ID is unique.
 * [Build bots for Teams](../bots/what-are-bots.md)
 * [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
 * [Receive all conversation messages with RSC](../bots/how-to/conversations/channel-messages-with-rsc.md)
-* [App manifest schema for Teams](schema/manifest-schema.md)

@@ -139,7 +139,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
       1. Your app is linked to a live (already published) SaaS offer on AppSource with at least one plan with pricing information.
 
-      1. You've correctly mentioned the `subscriptionOffer` details in your app manifest in the format `publisherId.offerId`.
+      1. You've correctly mentioned the `subscriptionOffer` details in your [app manifest](../../../resources/schema/manifest-schema.md#subscriptionoffer) in the format `publisherId.offerId`.
 
       1. You must ensure your linked SaaS offer is designed to support licenses assigned on a [SaaS pricing model](/azure/marketplace/create-new-saas-offer-plans).
 
