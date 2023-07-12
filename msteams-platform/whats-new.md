@@ -345,7 +345,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 July**
 
-* ***July 12, 2023***: [Static tabs that work everywhere](tabs/what-are-tabs.md)
+* ***July 12, 2023***: [Extend personal (static) tabs to group chat or meetings with a customizable experience.](tabs/what-are-tabs.md)
 
 :::column-end:::
 :::row-end:::

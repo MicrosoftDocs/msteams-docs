@@ -76,7 +76,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Static tabs that work everywhere
+      - text: Extend personal (static) tabs to group chat or meetings with a customizable experience.
         url: tabs/what-are-tabs.md
       - text: App icon badging for your Teams app
         url: apps-in-teams-meetings/app-icon-badging-for-your-app.md
