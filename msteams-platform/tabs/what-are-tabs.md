@@ -26,7 +26,7 @@ The following image shows Contoso channel tabs:
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="~/assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a channel.":::
+:::image type="content" source="~/assets/images/tabs/mobile-design-static-tab.png" alt-text="Example shows a mobile tab being added in a channel.":::
 
 ---
 
@@ -40,11 +40,11 @@ Following image shows static tabs with customizable experience added to differen
 
 # [Personal](#tab/personal)
 
-* The following image shows a static tab in perosnal context in the Teams desktop client:
+* The following image shows a static tab in personal context in the Teams desktop client:
 
     :::image type="content" source="~/assets/images/tabs/personal-tab-configure.png" alt-text=" Screenshot shows the configurable tab added to a personal scope."
 
-* The following image shows a static tab in perosnal context in the Teams mobile client:
+* The following image shows a static tab in personal context in the Teams mobile client:
 
     :::image type="content" source="~/assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a personal context.":::
 
