@@ -103,6 +103,10 @@ A meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app exper
 
 You can configure your tab app to enable app caching to reduce the reload time of your app during a meeting. The app reloads from the cache, which improves the app relaunch time within the meeting. For more information, see [enable app caching for your tab app](build-tabs-for-meeting.md#app-caching).
 
+### Default theme for meeting apps
+
+By default, Teams meetings are available in the light theme. Your app can update the app UI based on the user's theme by using the [getContext API](meeting-apps-apis.md#get-user-context-api).
+
 ## User types in Teams
 
 Teams supports user types, such as in-tenant, guest, federated or external, and anonymous users in a Teams meeting. Each user type can have one of the [user roles in Teams meeting](#user-roles-in-teams-meeting).
