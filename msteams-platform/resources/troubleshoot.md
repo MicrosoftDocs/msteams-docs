@@ -85,7 +85,7 @@ Because bots in channels only receive messages when they're @mentioned, all mess
 
 ### Error while reading manifest.json
 
-Most  manifest errors will provide a hint at what specific field is missing or invalid. However, if the JSON file can't be read as JSON at all, this generic error message is used.
+Most  manifest errors provide a hint at what specific field is missing or invalid. However, if the JSON file can't be read as JSON at all, this generic error message is used.
 
 Common reasons for manifest read errors:
 

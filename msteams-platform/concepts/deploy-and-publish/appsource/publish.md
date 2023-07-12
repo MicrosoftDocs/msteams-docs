@@ -47,11 +47,11 @@ If your app is production ready, you can begin the process of getting it listed 
 * **Deep functional and experience tests**
 
   Your app is thoroughly reviewed by a validator to ensure compliance with the [Microsoft Commercial Marketplace certification policies](/legal/marketplace/certification-policies).
-  There will be a focus on deep functional and user experience testing, usability checks, and metadata checks. App validation is performed across desktop, web, and mobile clients. We work hard to provide you a detailed test report in 24 working hours post submission.
+  There will be a focus on deep functional and user experience testing, usability checks, and metadata checks. App validation is performed across desktop, web, and mobile clients. We work hard to provide you with a detailed test report in 24 working hours post submission.
 
 * **Guided app publish through concierge service**
 
-  If there are no issues observed with your app, then your app will be approved and published to the Teams store. On the other hand, if the issues are present, then you'll receive an automated validation report from Partner Center with the failure details. To help you successfully publish your app to the Teams store and guide you through this process, the validation team will send you a personalized email from our concierge service [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) that includes the following information:
+  If there are no issues observed with your app, then your app is approved and published to the Teams store. On the other hand, if the issues are present, then you receive an automated validation report from Partner Center with the failure details. To help you successfully publish your app to the Teams store and guide you through this process, the validation team sends you a personalized email from our concierge service [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) that includes the following information:
 
   * Summary of all issues
 
@@ -71,7 +71,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
   After you've reviewed the list of issues, fix all the reported issues and share the updated app package over email, for the validation team to revalidate your app thoroughly. If you've any queries related to the reported issues, contact the validation team at [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com).
 
-  If there are issues remaining or regression issues observed in your app, the validation team will share an updated validation report with you. If your app had blockers, you might see new issues reported when your app is validated after the blockers are resolved. Sometimes, the validation team has also noticed regression issues in apps post deployment of fixes. It takes a few resubmissions to close all the issues for an app that consists of bugs, and get it approved to publish to the Teams store.
+  If there are issues remaining or regression issues observed in your app, the validation team shares an updated validation report with you. If your app had blockers, you might see new issues reported when your app is validated after the blockers are resolved. Sometimes, the validation team has also noticed regression issues in apps post deployment of fixes. It takes a few resubmissions to close all the issues for an app that consists of bugs, and get it approved to publish to the Teams store.
 
   After all reported issues are closed and final submission is made in the Partner Center, the validation team will approve and publish your app. Allow at least one business day for the app to be available in the Teams store.
 
@@ -85,7 +85,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
 * **During design phase**
 
-  Review the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements. If you build your app in line with these guidelines, then it will prevent any rework due to non-adherence to store policies.
+  Review the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements. If you build your app in line with these guidelines, then it prevents any rework due to non-adherence to store policies.
 
 * **Prior to app submission**
 
@@ -115,7 +115,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
         1. Setup instructions if your app requires more configuration to access app functionality. Alternately, if your app requires complex configuration, you can also provide a [provisioned demo tenant](/office/developer-program/microsoft-365-developer-program-get-started) with admin access so that our validators can skip the configuration steps.
 
-        1. Link to a demo video that demonstrates key user flow for your app. This is highly recommended.
+        1. We recommend you to link a demo video that demonstrates key user flow for your app.
 
 * **Post app submission**
 
@@ -131,11 +131,11 @@ If your app is production ready, you can begin the process of getting it listed 
 
 * **During design phase**
 
-  Review the [store validation guidelines specific to apps published with linked SaaS offers](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements and [Microsoft Commercial Marketplace policies applicable to Teams apps linked to SaaS offers](/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers). If you build your app in line with these guidelines, then it will prevent any rework due to non-adherence to store policies.
+  Review the [store validation guidelines specific to apps published with linked SaaS offers](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements and [Microsoft Commercial Marketplace policies applicable to Teams apps linked to SaaS offers](/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers). If you build your app in line with these guidelines, then it prevents any rework due to non-adherence to store policies.
 
 * **Prior to app submission**
 
-  1. As you prepare for app submission, ensure the following:
+  1. As you prepare for app submission, ensure the following details:
 
       1. Your app is linked to a live (already published) SaaS offer on AppSource with at least one plan with pricing information.
 
@@ -145,15 +145,15 @@ If your app is production ready, you can begin the process of getting it listed 
 
       1. Include test instructions or setup instructions or link to a demo video detailing app functionality and supported scenarios and any additional information to enable our testers to easily understand your SaaS portal workflows.
 
-  1. You must thoroughly [self-test](~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md) the end to end purchase and license management workflows before you submit your app linked to a SaaS offer for validation, ensure the following:
+  1. You must thoroughly [self-test](~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md) the end to end purchase and license management workflows before you submit your app linked to a SaaS offer for validation, ensure the following details:
 
      1. Both admin and non-admin users can place an order and confirm the purchase of your subscription. Purchasers can navigate to the SaaS application landing page by selecting  **Setup Now** in the Microsoft Admin Center. Test and ensure that your purchasers can activate and configure their subscription on your SaaS application. Messaging on your SaaS application should provide enough and clear information on the way forward to a purchaser.
 
      1. The **Manage Subscriptions** section in Microsoft Admin Center shows the correct details of the subscriptions brought by your test users. Subscription status, number of licenses, and other details must be accurate.
 
-     1. Buying and removal of license workflows are working as expected. Ensure purchasers can increase the number of licenses from Microsoft Admin Center. Ensure license count and assignment on your SaaS application reflects respective licenses and the right assignees. Also, ensure your SaaS application provides a way to take away a license from an user. Post removal of a license, ensure remaining assignments and count remain intact on your SaaS application and the correct details are reflected in the Microsoft Admin Center.
+     1. Buying and removal of license workflows are working as expected. Ensure purchasers can increase the number of licenses from Microsoft Admin Center. Ensure license count and assignment on your SaaS application reflects respective licenses and the right assignees. Also, ensure your SaaS application provides a way to take away a license from a user. Post removal of a license, ensure remaining assignments and count remain intact on your SaaS application and the correct details are reflected in the Microsoft Admin Center.
 
-     1. Subscription cancellation is working as expected. Purchasers can cancel a subscription. Post cancellation, check if the correct subscription status is reflected in the Microsoft Admin Center and your SaaS application. Verify that the purchaser has lost access to the subscription after successful cancellation.
+     1. Subscription cancellation is working as expected. Purchasers can cancel a subscription. Check if the correct subscription status is reflected in the Microsoft Admin Center and your SaaS application post cancellation. Verify that the purchaser has lost access to the subscription after successful cancellation.
 
      1. Repurchasing a subscription is seamless. After cancellation of an active subscription, thoroughly test to ensure purchasers can repurchase the subscription.
 
