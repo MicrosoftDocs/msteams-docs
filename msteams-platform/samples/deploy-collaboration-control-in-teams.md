@@ -5,6 +5,7 @@ description: In this module, learn how to deploy your app with Collaboration con
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
+ms.date: 10/04/2022
 ---
 
 # Deploy Collaboration controls to Microsoft Teams

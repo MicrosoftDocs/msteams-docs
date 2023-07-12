@@ -5,6 +5,7 @@ description: In this module, understand how Teams admins can customize your Team
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
+ms.date: 12/10/2022
 ---
 
 # Enable customization for your Microsoft Teams app
@@ -30,6 +31,5 @@ Provide guidelines for customers (specifically Teams admins) who want to customi
 
 ## See also
 
-* [App manifest schema](/microsoftteams/platform/resources/schema/manifest-schema)
 * [Customize apps in the Teams admin center](/microsoftteams/customize-apps)
 * [Distribute your Microsoft Teams app](../deploy-and-publish/apps-publish-overview.md)

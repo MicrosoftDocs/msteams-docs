@@ -3,6 +3,7 @@ title: Enable authentication using third-party OAuth provider
 description: Learn about Teams authentication flow in tabs using third-party OAuth provider with Azure AD configuration and code samples.
 ms.topic: conceptual
 ms.localizationpriority: high
+ms.date: 01/05/2023
 ---
 # Enable authentication using third-party OAuth provider
 
@@ -65,3 +66,4 @@ For a detailed implementation for tab authentication using Azure AD, see:
 
 * [Authenticate a user in a Teams tab](~/tabs/how-to/authentication/auth-tab-AAD.md)
 * [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md)
+* [validDomains](../../../resources/schema/manifest-schema.md#validdomains)
