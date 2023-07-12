@@ -123,7 +123,7 @@ The following card types are supported:
 
 For more information, see [Action type invoke](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
 
-The following is an example of the `invoke` request:
+The following code is an example of the `invoke` request:
 
 # [JSON](#tab/json)
 
