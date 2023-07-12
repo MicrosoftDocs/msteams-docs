@@ -270,6 +270,9 @@ The following code shows an example of an Adaptive Card:
 
 #### Additional information on Adaptive Cards
 
+> [!Note]
+> The `speak` property in an Adaptive Card for Teams bots is supported for immersive readers only.
+
 You can pass dynamic values in an Adaptive Card using the dollar symbol ($) and curly braces. For more information, see [Adaptive Cards Templating](/adaptive-cards/templating/).
 
 Example:
