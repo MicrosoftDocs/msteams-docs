@@ -66,7 +66,7 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 
 ## Specify permissions
 
-Update your [app manifest](../../resources/schema/manifest-schema.md#devicepermissions) by adding `devicePermissions` and specifying which of the following five properties that you use in your application:
+Update your app's `manifest.json` by adding `devicePermissions` and specifying which of the following five properties that you use in your application:
 
 ``` json
 "devicePermissions": [
@@ -87,6 +87,8 @@ Each property allows you to prompt the users to ask for their consent:
 | notifications | Permission to send the user notifications.      |
 | midi          | Permission to send and receive  Musical Instrument Digital Interface (MIDI) information from a digital musical instrument.   |
 | openExternal  | Permission to open links in external applications.  |
+
+For more information, see [app manifest](../../resources/schema/manifest-schema.md#devicepermissions).
 
 ## Check permissions from your app
 
