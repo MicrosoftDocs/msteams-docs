@@ -1,5 +1,5 @@
 ---
-title: Include a SaaS offer with your app
+title: Plan your SaaS offer for the marketplace
 description: Learn to monetize your Microsoft Teams app by selling subscription plans directly from your Teams store listing. Understand publish app, end-user, admin purchase experience. 
 author: heath-hamilton
 ms.author: surbhigupta
@@ -14,7 +14,7 @@ SaaS apps published to Microsoft commercial marketplace, either Azure marketplac
 
 To create a SaaS offer for your application and sell through commercial marketplace, you must first plan for the offer.
 
-:::image type="content" source="~/assets/images/saas-offer/monetize-flow2.png" alt-text="Diagram shows the process for how to include a SaaS offer with your Teams app with the first phase highlighted.":::
+:::image type="content" source="~/assets/images/saas-offer/monetize-flow-2.png" alt-text="Diagram shows the process for how to include a SaaS offer with your Teams app with the first phase highlighted.":::
 
 ## Plan your offer
 

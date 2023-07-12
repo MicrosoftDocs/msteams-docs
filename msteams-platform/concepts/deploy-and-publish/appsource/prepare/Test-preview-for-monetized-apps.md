@@ -1,5 +1,5 @@
 ---
-title: Test preview and publish the offer
+title: Test preview and offer go live
 author: v-ypalikila
 description: Create and test SaaS Preview offers for Teams app before pushing the offer live. Create a preview offer ID, configure your app with the preview offer ID, and sideload.
 ms.topic: conceptual
@@ -8,15 +8,13 @@ ms.localizationpriority: high
 ms.date: 12/26/2022
 ---
 
-# Test preview and publish the offer
+# Test preview the offer and make offer live
 
-You can  create a Software as a Service (SaaS) offer and test the end-to-end purchase experience for your monetized apps  in Teams. Users who are added as the preview audience for the Teams app can review your SaaS offer before you publish.
+You can create a Software as a Service (SaaS) offer and test the end-to-end purchase experience for your monetized apps in Teams. Users who are added as the preview audience for the Teams app can review your SaaS offer before you publish.
 
 :::image type="content" source="~/assets/images/saas-offer/monetize-flow5.png" alt-text="Diagram shows the process of testing the SaaS offer.":::
 
 When the offer is in Publisher sign-off state, preview links for the respective platforms are given below the Go live button. We recommend that you verify the end-to-end purchasing experience before publishing your SaaS offer. You can test and verify the end-to-end transaction in Teams by creating a separate offer just for testing.
-
-:::image type="content" source="~/assets/images/saas-offer/monetize-flow-2.png" alt-text="Diagram shows the process for how to include a SaaS offer with your Teams app with the first phase highlighted.":::
 
 ## Create a Preview offer ID
 
@@ -88,11 +86,14 @@ If the Preview offer is specified in the app manifest and the preview audience i
 
   :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="Screenshot shows the not a preview offer warning." :::
 
-## Publish the offer
+## Make the offer go live
 
-Up on successful testing, your offer is now ready to be published. Check for any validation errors, fix and resumbit the offer for publishing. You can track the publishing status in the Offer overview page.
+Up on successful testing, your offer is now ready to go live. Check for any validation errors, fix and resumbit the offer for publishing. You can track the publishing status in the Offer overview page.
 
-When all the check are done, click **Go live** to publish the offer in the commercial marketplace. After the validation checks are done for the live offer, the offer is available for purchase.
+When all the check are done, click **Go live** for the offer to be available in the commercial marketplace. After the validation checks are done for the live offer, the offer is available for purchase.
+
+> [!NOTE]
+> You need to first make your offer live in the marketplace and link the offer to your app. Then you need to publish the updated app to the store with the configured offer.
 
 To understand more about the validation and certification, check Review and publish offers.
 
@@ -108,4 +109,4 @@ To understand more about the validation and certification, check Review and publ
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Publish your app with SaaS offer](publish-saas-offer-app.md)
+> [Publish your app with configured SaaS offer](publish-saas-offer-app.md)

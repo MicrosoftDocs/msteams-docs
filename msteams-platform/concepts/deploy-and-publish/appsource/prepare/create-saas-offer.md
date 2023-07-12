@@ -114,11 +114,13 @@ Select **Save draft** before continuing to the next tab: Plan overview.
 
 ### Plan Overview
 
-Offers sold through the Microsoft commercial marketplace must have at least one plan. You can create a variety of plans with different options within the same offer.
+Offers sold through the Microsoft commercial marketplace must have at least one plan. To create one or more plans for your offer, check [Set up license management](manage-third-party-apps-license.md).
 
-When you finish configuring your offer, validate the offer and submit your offer for publishing.
+### Submit the offer
 
-When the offer is submitted for publishing, the Offer overview page shows the Publish status where you can track the progress. When the offer is in Publisher sign-off state, preview links for the respective platforms are given below the Go live button. To test the offer, see preview and test your offer.
+When you finish configuring your offer, validate the offer and submit your offer for publishing. The Offer overview page shows the Publish status where you can track the progress.
+
+When the offer is in Publisher sign-off state, preview links for the respective platforms are given below the Go live button to test the offer. It's recommended to [preview and test the offer](Test-preview-for-monetized-apps.md) before you publish the offer live.
 
 ## Code sample
 

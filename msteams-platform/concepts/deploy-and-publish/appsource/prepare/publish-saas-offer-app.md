@@ -1,5 +1,5 @@
 ---
-title: Publish your app with SaaS offer configuration
+title: Publish your app with SaaS offer
 description: Learn how to configure the SaaS offer to your app and publish the app to Teams store.
 author: v-preethah
 ms.author: surbhigupta
@@ -10,7 +10,7 @@ ms.date: 07/11/2023
 
 # Publish your app with the SaaS offer configuration
 
-After publishing the offer to the marketplace, you need to link the offer to your app and publish the app in the store. The customers can purchase paid apps from the marketplace.
+After the offer is live in the marketplace, you need to link the offer to your app and publish the updated app in the store. The customers can purchase paid apps from the marketplace.
 
 :::image type="content" source="~/assets/images/saas-offer/monetize-flow6.png" alt-text="Diagram shows the process of creating a SaaS offer with publish stage highlighted.":::
 
@@ -43,6 +43,8 @@ Update the subscriptionOffer property in your app manifest.
 > [!NOTE]
 > The subscriptionOffer property is supported in manifest schema version 1.10 or later.
 
+For more information to map the paid functionality to your offer and publish, see [Map your Teams app](https://aka.ms/TMTG).
+
 ## Publish your app
 
 You’ve created your SaaS offer and linked it to your Teams app—now it's time to publish your app to the Teams store. For complete instructions, see [publish your app to the Teams store](../publish.md).
@@ -55,6 +57,14 @@ Once published, users will see a Buy a subscription option in the app details di
 
 Once published, users see a **Buy a subscription** option in the app details dialog when they try to add your app to Teams.
 
+## Post purchase
+
+1. After activation, customer is redirected from landing page to Teams License Management.
+
+1. Upon successful completion of subscription purchase, the customer is redirected to the app landing page for subscription activation. This is the existing experience for user purchasing [Monetized apps in Teams](https://aka.ms/TMTG).
+
+1. After the customer activates the subscription purchase on landing page, customer is redirected to subscriptions page in Teams via a [redirect URL](https://teams.microsoft.com/_#/subscriptionManagement) link or button that the customer selects on the publisher landing page.
+
 ## Remove a SaaS offer from your app
 
 If you unlink a SaaS offer included in your Teams store listing, you must republish your app to see the change in the store.
@@ -65,5 +75,3 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
 1. After the offer is unlinked, do the following to update your store listing:
    1. Select **Distribute > Publish to the Teams store**.
    1. Select **Open Partner Center** to begin the process of republishing your app without the offer.
-
-Benefits of choosing a SaaS offer

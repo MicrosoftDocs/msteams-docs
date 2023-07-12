@@ -74,18 +74,6 @@ You can configure a free trial for each plan in your offer. Select the check box
 
 After you create one or more plans, you'll see your plan name, plan ID, pricing model, availability (Public or Private), current publishing status, and any available actions on the Plan overview tab.
 
-## Update your Teams app
-
-Update your Teams app to map to the paid functionality and [Map your Teams app](https://aka.ms/TMTG) to your offer and publish.
-
-## Post purchase
-
-1. After activation, customer is redirected from landing page to Teams License Management.
-
-1. Upon successful completion of subscription purchase, the customer is redirected to the app landing page for subscription activation. This is the existing experience for user purchasing [Monetized apps in Teams](https://aka.ms/TMTG).
-
-1. After the customer activates the subscription purchase on landing page, customer is redirected to subscriptions page in Teams via a [redirect URL](https://teams.microsoft.com/_#/subscriptionManagement) link or button that the customer selects on the publisher landing page.
-
 ## Check license usage in Partner Center analytics
 
 1. Sign in to [Partner Center](https://partner.microsoft.com/).
