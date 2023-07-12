@@ -85,7 +85,7 @@ Because bots in channels only receive messages when they're @mentioned, all mess
 
 ### Error while reading manifest.json
 
-Most  manifest errors will provide a hint at what specific field is missing or invalid. However, if the JSON file can't be read as JSON at all, this generic error message is used.
+Most  manifest errors provide a hint at what specific field is missing or invalid. However, if the JSON file can't be read as JSON at all, this generic error message is used.
 
 Common reasons for manifest read errors:
 
@@ -105,4 +105,3 @@ If you're not re-uploading an updated package, ensure that the ID is unique.
 * [Build bots for Teams](../bots/what-are-bots.md)
 * [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
 * [Receive all conversation messages with RSC](../bots/how-to/conversations/channel-messages-with-rsc.md)
-* [App manifest schema for Teams](schema/manifest-schema.md)
