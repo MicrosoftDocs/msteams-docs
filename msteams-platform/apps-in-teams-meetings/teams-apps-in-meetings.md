@@ -149,7 +149,6 @@ For more information, see [roles in a Teams meeting](https://support.microsoft.c
 > * The [default participant settings](/microsoftteams/meeting-policies-participants-and-guests) are determined by an organization's IT administrator. As per default settings, participants joining a meeting have the presenter role.
 > * Presenter role isn't available in one-on-one calls.
 > * A user who starts the group call from a chat is considered as an organizer.
-> * By default, Teams meetings are available in the light theme. Your app can update the app UI based on the user's theme by using the [getContext API](meeting-apps-apis.md#get-user-context-api).
 
 ## See also
 
