@@ -246,7 +246,7 @@ The following image provides a sequential flow to enable and use zero install li
 
 To get your app ready for zero install link unfurling, follow these steps:
 
-1. Set the property `supportsAnonymizedPayloads` to true in the [manifest schema](../../resources/schema/manifest-schema.md).
+1. Set the property `supportsAnonymizedPayloads` to true in the [manifest schema](../../resources/schema/manifest-schema#composeextensions).
 
 1. Set your app to handle the new invoke request `composeExtension/anonymousQueryLink`.
 

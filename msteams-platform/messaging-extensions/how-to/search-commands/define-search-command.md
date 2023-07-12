@@ -140,7 +140,7 @@ Following section is an example of the simple app manifest of the `composeExtens
 
 ```
 
-For the complete app manifest, see [App manifest schema](~/resources/schema/manifest-schema.md).
+For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
 
 ## Code sample
 
