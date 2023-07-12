@@ -107,7 +107,7 @@ First, you must add the `messageHandlers` array to your app manifest and enable 
 
 For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
 
-## Handle the `composeExtension/queryLink` invoke
+## Handle the `composeExtensions/queryLink` invoke
 
 After adding the domain to the app manifest, you must update your web service code to handle the invoke request. Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
 
@@ -248,11 +248,11 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 1. Set the property `supportsAnonymizedPayloads` to true in the [manifest schema](../../resources/schema/manifest-schema.md#composeextensions).
 
-1. Set your app to handle the new invoke request `composeExtension/anonymousQueryLink`.
+1. Set your app to handle the new invoke request `composeExtensions/anonymousQueryLink`.
 
    Example of the new invoke request:
 
-   :::image type="content" source="../../assets/images/tdp/link-unfurl_1.png" alt-text="Screenshot of the invoke request  `composeExtension/anonymousQueryLink` declaration in the manifest." lightbox="../../assets/images/tdp/link-unfurl_1.png":::
+   :::image type="content" source="../../assets/images/tdp/link-unfurl_1.png" alt-text="Screenshot of the invoke request  `composeExtensions/anonymousQueryLink` declaration in the manifest." lightbox="../../assets/images/tdp/link-unfurl_1.png":::
 
    Example of the invoke request payload:
 
@@ -305,7 +305,7 @@ To get your app ready for zero install link unfurling, follow these steps:
    }
    ```
 
-1. Respond to the `composeExtension/anonymousQueryLink` payload.
+1. Respond to the `composeExtensions/anonymousQueryLink` payload.
 
    1. For non-auth scenarios: You must send back a response with the `type` as `result` and a card. Use the following template:
 
@@ -402,13 +402,13 @@ Zero install link unfurling helps you provide enhanced experience to the users, 
 
 The following are the limitations:
 
-* The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtension/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, *silentAuth* and *config*.
+* The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtensions/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, *silentAuth* and *config*.
 
-* The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
+* The bot can't send back an acv2 card in response to the `composeExtensions/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
 
 * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
 
-* The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
+* The bot can't send back an acv2 card in response to the `composeExtensions/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
 
 * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
 
