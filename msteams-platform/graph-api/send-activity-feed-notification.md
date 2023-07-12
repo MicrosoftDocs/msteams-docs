@@ -47,16 +47,6 @@ The following example shows the components together provide the details about a 
 
 :::image type="content" source="../assets/images/activity-feed/example-feed-notification.png" alt-text="Screenshot shows the example for notification.":::
 
-# [Windows](#tab/windows)
-
-< WIP >
-
-# [iOS](#tab/ios)
-
-< WIP >
-
----
-
 ### Types of activity feed notification cards
 
 The following variants show the kinds of activity feed notification cards you can display. The app logo replaces the user avatar for app-generated notifications.
