@@ -26,7 +26,7 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 Enrollment to [Microsoft 365 Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365) and [Microsoft 365 Apps update channel](/deployoffice/change-update-channels) requires admin opt-in for the entire organization or selected users.
 
 > [!NOTE]
-> For additional admin options and guidance on your extended Teams app, please see the documentation [*'Teams apps that work on Outlook and Microsoft 365'*](microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365)
+> For additional admin options and guidance on your extended Teams app, please see the documentation [*'Teams apps that work on Outlook and Microsoft 365'*](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365)
 
 Update channels are device specific and apply only to installations of Microsoft 365 running on Windows.
 
