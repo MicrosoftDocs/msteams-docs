@@ -1036,3 +1036,4 @@ You've completed the tutorial to build a tab app with Blazor.
 * [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md)
 * [Build tabs with Adaptive Cards](build-adaptive-card-tabs.md)
 * [Add a SharePoint page as a tab in Teams](https://support.microsoft.com/en-us/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
