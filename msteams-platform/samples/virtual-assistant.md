@@ -216,7 +216,7 @@ The code snippet for `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitA
     }
 ```
 
-Additionally, you must include all skill domains in the `validDomains` section in Virtual Assistant's manifest file so that task modules invoked through a skill render properly.
+Additionally, you must include all skill domains in the `validDomains` section in Virtual Assistant's [app manifest](../resources/schema/manifest-schema.md#validdomains) file so that task modules invoked through a skill render properly.
 
 ### Handle collaborative app scopes
 
@@ -585,6 +585,5 @@ You can also leverage existing skills from [Bot Framework Solutions repository](
 
 * [Integrate web apps](~/samples/integrate-web-apps-overview.md)
 * [Adaptive Cards](../task-modules-and-cards/what-are-cards.md#adaptive-cards)
-* [App manifest](../resources/schema/manifest-schema.md)
 * [Book-a-room](app-templates.md#app-template-code-samples)
 * [Microsoft Teams bot](../bots/what-are-bots.md)
