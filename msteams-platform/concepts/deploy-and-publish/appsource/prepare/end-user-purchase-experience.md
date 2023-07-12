@@ -91,11 +91,11 @@ Admins can manage the app subscriptions and licenses in the Teams admin center. 
 
 If you unlink a SaaS offer included in your Teams store listing, you must republish your app to see the change in the store.
 
-1. Go to the Developer Portal and select Apps.
+1. Go to the Developer Portal and select **Apps**.
 1. On the Apps page, select the app you're removing the offer from.
-1. Go to the Plans and pricing page and select Revert.
+1. Go to the Plans and pricing page and select **Revert**.
 1. After the offer is unlinked, do the following to update your store listing:
-    1. Select Distribute > Publish to the Teams store.
+    1. Select **Distribute** > **Publish to the Teams store**.
     1. Select Open Partner Center to begin the process of republishing your app without the offer.
 
 ## See also

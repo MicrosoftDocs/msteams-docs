@@ -10,13 +10,11 @@ ms.date: 11/23/2022
 
 # Monetize your app
 
-Microsoft Teams app Store provides features that empower you to monetize your apps by helpong you retain and expand your customer base through interactive user engagement. The topics in this section show you how to build these features into your app.
-
-Microsoft commercial marketplace hosts to publish offers through two main online store, Azure Marketplace and Microsoft AppSource. The offers for your applications and solutions are published in the store and made available for customers.
+Microsoft Teams app Store provides features that empower you to monetize your apps by helping you retain and expand your customer base through interactive user engagement. Microsoft commercial marketplace hosts to publish offers through two main online store, Azure Marketplace and Microsoft AppSource. The offers for your applications and solutions are published in the store and made available for customers.
 
 ## SaaS offer
 
-SaaS applications published in Microsoft commercial marketplace are SaaS offers. The availability of the offer in the online store is based on the industry it is built for and the related configurations.
+SaaS applications published in Microsoft commercial marketplace are SaaS offers. The availability of the offer in the online store is based on the industry it's built for and the related configurations.
 
 As a publisher, create your marketplace offers in Partner Center and have them in either of the online stores. In this module, you get to learn in detail on how to create a SaaS offer in Partner Center, configure the offer, link the offer to your app, and publish and manage the offer.
 
@@ -25,7 +23,7 @@ As a publisher, create your marketplace offers in Partner Center and have them i
 
 ## Choose a publishing option
 
-Before you start creating an offer, you must first decide the listing or publishing option, that is, how you want to engage with your customers and the purchase experience you want to provide. When you are creating an offer, you are asked if you want to sell through Microsoft or not. Based on your response the offer is published and a suitable call-to-action button appears on the offer listing page. The listing option also decides the technical requirements to create an offer. Let's learn in detail about in the following sections.
+Before you start creating an offer, you must first decide the listing or publishing option, that is, how you want to engage with your customers and the purchase experience you want to provide. When you are creating an offer, you're asked if you want to sell through Microsoft or not. Based on your response, the offer is published and a suitable call-to-action button appears on the offer listing page. The listing option also decides the technical requirements to create an offer. Let's learn in detail about in the following sections.
 
 :::row:::
     :::column:::
@@ -99,5 +97,9 @@ Now that we know about a SaaS offer and the listing methods, let's get started t
 
 ## Next step
 
-* [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+> [!div class="nextstepaction"]
+> [Prerequisites to create an offer](prerequisites.md)
+
+## See also
+
 * [Microsoft Teams store validation guidelines](teams-store-validation-guidelines.md)

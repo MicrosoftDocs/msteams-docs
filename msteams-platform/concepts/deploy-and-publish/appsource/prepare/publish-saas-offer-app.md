@@ -12,6 +12,8 @@ ms.date: 07/11/2023
 
 After publishing the offer to the marketplace, you need to link the offer to your app and publish the app in the store. The customers can purchase paid apps from the marketplace.
 
+:::image type="content" source="~/assets/images/saas-offer/monetize-flow6.png" alt-text="Diagram shows the process of creating a SaaS offer with publish stage highlighted.":::
+
 For users to see your subscription plans in the Teams store, there are two ways you can link the published SaaS offer to your Teams app.
 
 * Teams Developer Portal

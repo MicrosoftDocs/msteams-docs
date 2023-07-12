@@ -11,6 +11,8 @@ ms.date: 01/31/2023
 
 If you choose to sell your SaaS offer through Microsoft, there are certain technical configurations to be done and technical information to be gathered before you create the offer. Before you start to create a SaaS offer, make sure the technical requirements are in place.
 
+:::image type="content" source="~/assets/images/saas-offer/monetize-flow.png" alt-text="Diagram shows the process for how to include a SaaS offer with your Teams app with the first phase highlighted.":::
+
 ## Technical configuration
 
 The technical configurations differ based on the listing option you chose for your SaaS offer. It helps negate any blockers while creating the offer.

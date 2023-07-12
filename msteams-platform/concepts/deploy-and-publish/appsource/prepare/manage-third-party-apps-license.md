@@ -12,6 +12,8 @@ ms.date: 04/06/2023
 
 Independent software vendors (ISVs) can configure Microsoft license management for third-party SaaS apps in Partner Center as part of the offer publishing. This allows Teams admins or users to easily assign, unassign, use, and track SaaS licenses for their third-party app subscriptions within Teams.
 
+:::image type="content" source="~/assets/images/saas-offer/monetize-flow4.png" alt-text="Diagram shows the process to set up license management for the SaaS offer.":::
+
 To enable Microsoft to manage license for a third-party app in Teams, you must create a plan for the offer and configure pricing and availability of the plan.
 
 ## Create a plan
@@ -89,6 +91,11 @@ Update your Teams app to map to the paid functionality and [Map your Teams app](
 1. Sign in to [Partner Center](https://partner.microsoft.com/).
 1. In the left pane, go to **Commercial Marketplace > Analyze > Licensing**.
 1. Select **Plan and Tenant** in the reporting widget to see the month wise usage.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Test preview for monetized apps](~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)
 
 ## See also
 

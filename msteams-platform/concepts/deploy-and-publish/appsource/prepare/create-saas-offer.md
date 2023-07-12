@@ -12,7 +12,7 @@ ms.date: 07/11/2023
 
 Create your offer in Partner Center and configure the offer to publish in the marketplace. The decision to sell through Microsoft, details of the offer, pricing are configured after creating the offer. Check if the prerequisites are done before you create a SaaS offer. You must also have a commercial marketplace account in Partner Center.
 
-:::image type="content" source="~/assets/images/saas-offer/monetize-flow-2.png" alt-text="Diagram shows the process for how to create a SaaS offer.":::
+:::image type="content" source="~/assets/images/saas-offer/monetize-flow3.png" alt-text="Diagram shows the process on how to create a SaaS offer.":::
 
 ## Create an offer in Partner Center
 
@@ -129,4 +129,4 @@ When the offer is submitted for publishing, the Offer overview page shows the Pu
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Test preview for monetized apps](~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)
+> [Set up Microsoft license management](manage-third-party-apps-license.md)

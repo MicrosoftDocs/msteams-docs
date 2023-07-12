@@ -14,7 +14,7 @@ SaaS apps published to Microsoft commercial marketplace, either Azure marketplac
 
 To create a SaaS offer for your application and sell through commercial marketplace, you must first plan for the offer.
 
-:::image type="content" source="~/assets/images/saas-offer/monetize-flow.png" alt-text="Diagram shows the process for how to include a SaaS offer with your Teams app with the first phase highlighted.":::
+:::image type="content" source="~/assets/images/saas-offer/monetize-flow2.png" alt-text="Diagram shows the process for how to include a SaaS offer with your Teams app with the first phase highlighted.":::
 
 ## Plan your offer
 
@@ -36,6 +36,11 @@ For comprehensive guidance, see [how to plan a SaaS offer for the Microsoft comm
 
 > [!NOTE]
 > Pricing model and billing term can’t be changed once the offer is published.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create your SaaS offer](create-saas-offer.md)
 
 ## See also
 
