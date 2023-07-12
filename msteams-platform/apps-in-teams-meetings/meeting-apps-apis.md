@@ -288,7 +288,7 @@ The `targetedMeetingNotification` API allows apps to send targeted in-meeting no
 
 ### Prerequisite
 
-You must configure your app manifest with [RSC permissions](../graph-api/rsc/resource-specific-consent.md) under the `webApplicationInfo` property to send targeted in-meeting notifications and shows app icon badging to specific participants in a meeting. Use the following examples to configure your manifest:
+You must configure your [app manifest](../resources/schema/manifest-schema.md) with [RSC permissions](../graph-api/rsc/resource-specific-consent.md) under the `webApplicationInfo` property to send targeted in-meeting notifications and shows app icon badging to specific participants in a meeting. Use the following examples to configure your manifest:
 
 <br>
 
