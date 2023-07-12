@@ -139,7 +139,7 @@ An example of connector message is as follows:
 
 The following image is an example of the connector message card in a channel:
 
-:::image type="content" source="../../assets/images/connectorcard_1.png" alt-text="Screenshot of a coonector card.":::
+:::image type="content" source="../../assets/images/connectorcard.png" alt-text="Screenshot of a coonector card.":::
 
 ## Send messages using cURL and PowerShell
 
