@@ -16,7 +16,7 @@ items:
   content: |
     Microsoft Teams app that requires device permissions, such as location, camera, or microphone access, now require users to manually grant permission in the web browser. Previously, the browser handled how to grant access permissions, but now these permissions are handled in Teams.
 
-    This step-by-step guide helps you grant tab device permission in Teams. You'll see the following output:
+    This step-by-step guide helps you grant tab device permission in Teams. You can see the following output:
 
       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output1_1.png" alt-text="final output":::
 
@@ -29,7 +29,7 @@ items:
     *| &nbsp; | Install | For using... |
      | --- | --- | --- |
      | **Required** | &nbsp; | &nbsp; |
-     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
      | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
      | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install the <br> ASP.NET and web development workload. | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
      | &nbsp; | [Node.js and npm](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
@@ -125,20 +125,23 @@ items:
 
     1. Create a .zip with the following files that are present in the `appPackage` folder: 
        * manifest.json
-       * icon-outline.png
-       * icon-color.png
+       * outline.png
+       * color.png
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device1_1.png" alt-text="create a zip":::        
      
-    1. Go to **Microsoft Teams**.
+    1. Go to **Microsoft Teams**, select the **Apps** icon.
 
-    1. Select **Apps** > **Manage your apps**.
+    1. Select **Manage your apps**.
 
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manageapps_2.png" alt-text="Manage apps":::
-   
-    1. Select **Upload an app** and select **Upload a custom app**.
+    1. Select **Upload an app**.
 
-       :::image type="content" source="assets/images/upload-custom-app.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
+    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-latest.png" alt-text="Screenshot shows the bot home." lightbox="~\assets\images\teams-toolkit-v2\spfx-custom-new2.png":::
+      
+       > [!NOTE]
+       > Contact your Teams administrator, if you don't find the option to upload a custom app.
 
     1. Select **Open** to upload the .zip file that you created in the `appPackage` folder.
 
@@ -160,21 +163,24 @@ items:
 
     1. Create a .zip with the following files that are present in the `appPackage` folder: 
        * manifest.json
-       * icon-outline.png
-       * icon-color.png
+       * outline.png
+       * color.png
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device1_1.png" alt-text="create a zip":::        
 
-    1. Go to **Microsoft Teams**.
+    1. Go to **Microsoft Teams**, select the **Apps** icon.
 
-    1. Select **Apps** > **Manage your apps**.
+    1. Select **Manage your apps**.
 
-       :::image type="content" source="../msteams-platform/assets/images/conversation-bot/manageapps_1.png" alt-text="Manage apps":::
-   
-    1. Select **Upload an app** and select **Upload a custom app**.
+    1. Select **Upload an app**.
 
-       :::image type="content" source="../msteams-platform/assets/images/conversation-bot/uploadapp_1.png" alt-text="Upload custom app":::
-   
+    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-latest.png" alt-text="Screenshot shows the bot home." lightbox="~\assets\images\teams-toolkit-v2\spfx-custom-new2.png":::
+
+       > [!NOTE]
+       > Contact your Teams administrator, if you don't find the option to upload a custom app. 
+
     1. Select **Open** to upload the .zip file that you created in the `appPackage` folder.
 
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device1_1.png" alt-text="add the manifest zip":::             
