@@ -71,7 +71,7 @@ The following list provides all the RSC permissions categorized based on resourc
 
 ### RSC permissions for a team
 
-The following table provides RSC application permissions for a team and their applicable data access mode:
+The following table provides RSC permissions for a team and their applicable data access mode:
 
 | Permission name | Action | Type: Delegated | Type: Application |
 | ----- | ----- | :-----: | :-----: |
