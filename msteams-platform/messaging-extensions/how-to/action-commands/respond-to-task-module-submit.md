@@ -12,7 +12,7 @@ ms.author: anclear
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 This document guides you on how your app responds to the action commands, such as user's task module submit action.
-After a user submits the task module, your web service receives a `composeExtension/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to the invoke.  
+After a user submits the task module, your web service receives a `composeExtensions/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to the invoke.  
 
 You have the following options to respond:
 
@@ -41,7 +41,7 @@ For authentication or configuration, after the user completes the process, the o
 
 > [!NOTE]
 >
-> * When you select **Action.Submit** through ME cards, it sends invoke activity with the name **composeExtension**, where the value is equal to the usual payload.
+> * When you select **Action.Submit** through ME cards, it sends invoke activity with the name **composeExtensions**, where the value is equal to the usual payload.
 > * When you select **Action.Submit** through conversation, you receive message activity with the name **onCardButtonClicked**, where the value is equal to the usual payload.
 
 If the app contains a conversational bot, install the bot in the conversation, and then load the task module. The bot is useful to get additional context for the task module. To install conversational bot, see [Request to install your conversational bot](create-task-module.md#request-to-install-your-conversational-bot).
@@ -104,7 +104,7 @@ The following example is a JSON object that you receive. The `commandContext` pa
 
 ## Respond with a card inserted into the compose message area
 
-The most common way to respond to the `composeExtension/submitAction` request is with a card inserted into the compose message area. The user submits the card to the conversation. For more information on using cards, see [cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
+The most common way to respond to the `composeExtensions/submitAction` request is with a card inserted into the compose message area. The user submits the card to the conversation. For more information on using cards, see [cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
 # [C#/.NET](#tab/dotnet)
 
@@ -228,7 +228,7 @@ To configure the poll:
 
 ## Respond to initial submit action
 
-Your task module must respond to the initial `composeExtension/submitAction` message with a preview of the card that the bot sends to the channel. The user can verify the card before sending, and try to install your bot in the conversation if the bot is already installed.
+Your task module must respond to the initial `composeExtensions/submitAction` message with a preview of the card that the bot sends to the channel. The user can verify the card before sending, and try to install your bot in the conversation if the bot is already installed.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -337,7 +337,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### The botMessagePreview send and edit events
 
-Your message extension must respond to two new types of the `composeExtension/submitAction` invoke, where `value.botMessagePreviewAction = "send"`and `value.botMessagePreviewAction = "edit"`.
+Your message extension must respond to two new types of the `composeExtensions/submitAction` invoke, where `value.botMessagePreviewAction = "send"`and `value.botMessagePreviewAction = "edit"`.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -408,12 +408,12 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### Respond to botMessagePreview edit
 
-If the user edits the card before sending, by selecting **Edit**, you receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = edit`. Respond by returning the task module you sent, in response to the initial `composeExtension/fetchTask` invoke that began the interaction. The user can start the process by reentering the original information. Use the available information to update the task module so that the user doesn't need to fill out all information from scratch.
+If the user edits the card before sending, by selecting **Edit**, you receive a `composeExtensions/submitAction` invoke with `value.botMessagePreviewAction = edit`. Respond by returning the task module you sent, in response to the initial `composeExtensions/fetchTask` invoke that began the interaction. The user can start the process by reentering the original information. Use the available information to update the task module so that the user doesn't need to fill out all information from scratch.
 For more information on responding to the initial `fetchTask` event, see [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md).
 
 ### Respond to botMessagePreview send
 
-After the user selects the **Send**, you receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = send`. Your web service must create and send a proactive message with the Adaptive Card to the conversation, and also reply to the invoke.
+After the user selects the **Send**, you receive a `composeExtensions/submitAction` invoke with `value.botMessagePreviewAction = send`. Your web service must create and send a proactive message with the Adaptive Card to the conversation, and also reply to the invoke.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -511,7 +511,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-You receive a new `composeExtension/submitAction` message similar to the following:
+You receive a new `composeExtensions/submitAction` message similar to the following:
 
 ```json
 {
