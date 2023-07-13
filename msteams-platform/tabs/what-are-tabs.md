@@ -26,11 +26,11 @@ The following image shows static tabs:
 
 The following image shows Contoso channel tabs:
 
-# [Desktop](#tab/desktop1)
+# [Desktop](#tab/desktop2)
 
 :::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Channel or group tabs" lightbox="../assets/images/tabs/tabs.png":::
 
-# [Mobile](#tab/mobile1)
+# [Mobile](#tab/mobile2)
 
 :::image type="content" source="~/assets/images/tabs/mobile-design-static-tab.png" alt-text="Example shows a mobile tab being added in a channel.":::
 
