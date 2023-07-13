@@ -1024,6 +1024,48 @@ You've completed the tutorial to build a tab app with Blazor.
 
 ::: zone-end
 
+## Migrate your configurable tab to static tab
+
+> [!NOTE]
+> * Migrating your configurable tab to static tab is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * To migrate your configurable tab to static tab, use the app manifest v1.16 or later.
+
+Static tab capability is extended to support group chat and meetings. You can update your existing configurable tab to static tab and add different scopes to the static tab. 
+
+To change your configurable tab to static tab:
+
+1. Move your configuration logic out of your `configurationUrl` code space to your `contentUrl` code space. 
+1. Add the `staticTabs` property to your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with `scopes` and `context` parameters. Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
+
+   ```json
+   "staticTabs": [ 
+     { 
+     "entityId": "homeTab", 
+     "scopes": [ 
+       "personal",  
+       "groupChat",
+       "team"
+      ], 
+     "context": [ 
+       "personalTab", 
+       "privateChatTab", 
+       "meetingChatTab", 
+       "meetingDetailsTab", 
+       "meetingSidePanel", 
+       "meetingStage" 
+      ], 
+      "name": "Contoso", 
+      "contentUrl": "https://contoso.com/content (displayed in Teams canvas)", 
+      "websiteUrl": "https://contoso.com/content (displayed in web browser)" 
+     }
+   ],
+   ```
+
+    For more information, see [configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) and [static tab.](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-and-meetings)
+
+If your app supports [configurable tab,](~/tabs/how-to/create-tab-pages/configuration-page.md#configuration-page-for-tabs) then you must continue to keep the `configurableTab` property in your app manifest to ensure the backward compatibility of previously pinned tabs. As you can only pin static tabs from now, it is important that previous configurable tabs continue to be supported.
+
+
 ## Next step
 
 > [!div class="nextstepaction"]
