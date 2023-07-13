@@ -440,4 +440,4 @@ Follow the [step-by-step](../../sbs-tab-with-adaptive-cards.yml) guide to build 
 * [Tabs on mobile](../design/tabs-mobile.md)
 * [Cards](../../task-modules-and-cards/what-are-cards.md)
 * [Use task modules in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
-* [Form completion feedback](../../bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Form completion feedback](cards-format.md#form-completion-feedback)
