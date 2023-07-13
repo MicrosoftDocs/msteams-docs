@@ -42,7 +42,7 @@ To add the search command to your [app manifest](../../../resources/schema/manif
 
 The prerequisite to create a search command is that you must already have created a message extension. For information on how to create a message extension, see [create a message extension](../../../sbs-gs-msgext.yml).
 
-**To create a search command:**
+**To create a search command**
 
 1. Open **Developer Portal** from the Microsoft Teams client and select the **Apps** tab.
    If you already created your app package in **Developer Portal**, select from the list. If you haven't created an app package, import an existing one.
