@@ -17,7 +17,7 @@ Action-based message extensions allow your users to trigger actions in external 
 
 ## Action type message extensions
 
-To initiate actions from a message extension, set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single message extension can have up to 10 different commands and include multiple search-based and action-based commands.
+To initiate actions from a message extension, set the `type` parameter to `action`. The following code is an example of a manifest with a search and a create command. A single message extension can have up to 10 different commands and include multiple search-based and action-based commands.
 
  > [!NOTE]
  >`justInTimeInstall` functions when you upload an app to the app catalog but fails when you sideload an app.
@@ -151,7 +151,7 @@ To enable your message extension to work from a message, add the `context` param
 
 ```
 
-Below is an example of the `value` object containing the message details that will be sent as part of the `composeExtensions` request to your bot.
+The following code is an example of the `value` object containing the message details that will be sent as part of the `composeExtensions` request to your bot.
 
 ```json
 {
@@ -235,7 +235,7 @@ There are three ways to collect information from a user in Teams.
 
 In this method, all you need to do is define a static list of parameters in the manifest as shown above in the "Create To Do" command. To use this method, ensure `fetchTask` is set to `false` and that you define your parameters in the manifest.
 
-When a user chooses a command with static parameters, Teams will generate a form in a task module with the defined parameters in the manifest. On hitting Submit, a `composeExtensions/submitAction` is sent to the bot. For more information on the expected set of responses, see [Responding to submit](#responding-to-submit).
+When a user chooses a command with static parameters, Teams generates a form in a task module with the defined parameters in the manifest. On hitting Submit, a `composeExtensions/submitAction` is sent to the bot. For more information on the expected set of responses, see [Responding to submit](#responding-to-submit).
 
 ### Dynamic input using an adaptive card
 
@@ -337,7 +337,7 @@ Here's an example of the response:
 }
 ```
 
-Once the user completes the installation, your bot will receive another invoke message with `name = composeExtensions/submitAction` and `value.data.msteams.justInTimeInstall = true`.
+Once the user completes the installation, your bot receives another invoke message with `name = composeExtensions/submitAction` and `value.data.msteams.justInTimeInstall = true`.
 
 Here's an example of the invoke:
 
@@ -367,7 +367,7 @@ Respond to the invoke with the same task response you would have responded with 
 
 ## Responding to submit
 
-Once a user completes entering their input, bot will receive a `composeExtensions/submitAction` event with the command ID and parameter values set.
+Once a user completes entering their input, bot receives a `composeExtensions/submitAction` event with the command ID and parameter values set.
 
 These are the different expected responses to a `submitAction`.
 
@@ -436,11 +436,11 @@ Respond to the submit action by inserting a message with an Adaptive Card into t
 1. The user selects the message extension to trigger the task module.
 1. The user uses the task module to configure the poll.
 1. After submitting the configuration task module, the app uses the information provided in the task module to craft an adaptive card and sends it as a `botMessagePreview` response to the client.
-1. The user can then preview the adaptive card message before the bot inserts it into the channel. If the bot isn't already a member of the channel, clicking `Send` will add the bot.
-1. Interacting with the adaptive card will change the message before sending it.
+1. The user can then preview the adaptive card message before the bot inserts it into the channel. If the bot isn't already a member of the channel, clicking `Send` adds the bot.
+1. Interacting with the adaptive card changes the message before sending it.
 1. Once the user selects `Send`, the bot will post the message to the channel.
 
-To enable this flow your task module should respond as in the example below, which will present the preview message to the user.
+To enable this flow your task module should respond as in the following example, which will present the preview message to the user.
 
 > [!NOTE]
 > The `activityPreview` must contain a `message` activity with exactly one adaptive card attachment.
@@ -462,7 +462,7 @@ To enable this flow your task module should respond as in the example below, whi
 }
 ```
 
-Your message extension will now need to respond to two new types of interactions, `value.botMessagePreviewAction = "send"` and `value.botMessagePreviewAction = "edit"`. Below is an example of the `value` object you'll need to process:
+Your message extension will now need to respond to two new types of interactions, `value.botMessagePreviewAction = "send"` and `value.botMessagePreviewAction = "edit"`. The following code is an example of the `value` object you need to process:
 
 ```json
 {

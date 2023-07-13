@@ -12,7 +12,7 @@ ms.author: anclear
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 This document guides you on how your app responds to the action commands, such as user's task module submit action.
-After a user submits the task module, your web service receives a `composeExtensions/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to the invoke.  
+After a user submits the task module, your web service receives a `composeExtensions/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to the invoke.
 
 You have the following options to respond:
 
@@ -23,7 +23,7 @@ You have the following options to respond:
 * [Request the user to authenticate](~/messaging-extensions/how-to/add-authentication.md).
 * [Request the user to provide additional configuration](~/get-started/first-message-extension.md).
 
-If the app doesn't respond within five seconds, the Teams client will retry the request twice before it sends an error message **Unable to reach the app**. If the bot replies after the timeout, the response is ignored.
+If the app doesn't respond within five seconds, the Teams client retries the request twice before it sends an error message **Unable to reach the app**. If the bot replies after the timeout, the response is ignored.
 
 > [!NOTE]
 >
@@ -511,7 +511,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-You receive a new `composeExtensions/submitAction` message similar to the following:
+You receive a new `composeExtensions/submitAction` message similar to the following json:
 
 ```json
 {
@@ -548,7 +548,7 @@ You receive a new `composeExtensions/submitAction` message similar to the follow
 
 In scenarios where a bot sends messages on behalf of a user, attributing the message to that user helps with engagement and showcase a more natural interaction flow. This feature allows you to attribute a message from your bot to a user on whose behalf it was sent.
 
-In the following image, on the left is a card message sent by a bot without user attribution and on the right is a card sent by a bot with user attribution.
+In the following image, left side of the image is a card message sent by a bot without user attribution and right side of the image is a card sent by a bot with user attribution.
 
 :::image type="content" source="../../../assets/images/messaging-extension/user-attribution-bots.png" alt-text="User attribution bots":::
 
@@ -595,8 +595,8 @@ The following section is a description of the entities in the `OnBehalfOf` Array
 |Field|Type|Description|
 |:---|:---|:---|
 |`itemId`|Integer|Describes identification of the item. Its value must be `0`.|
-|`mentionType`|String|Describes the mention of a "person".|
-|`mri`|String|Message resource identifier​ (MRI) of the person on whose behalf the message is sent. Message sender name would appear as "\<user\> through \<bot name\>".|
+|`mentionType`|String|Describes the mention of a "person". |
+|`mri`|String|Message resource identifier​ (MRI) of the person on whose behalf the message is sent. Message sender name would appear as "\<user\> through \<bot name\>". |
 |`displayName`|String|Name of the person. Used as fallback in case name resolution is unavailable.|
   
 ## Code sample
