@@ -50,7 +50,7 @@ items:
      1. From the dropdown menu, select **Open with GitHub Desktop**.
 
 
-        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/cloner-epository-tab-device_1.png" alt-text="cloning the repository":::
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/clone-repository-tab-device.png" alt-text="cloning the repository":::
 
     
      1. Select **Clone**.
@@ -91,7 +91,7 @@ items:
 
      1. Copy the `nodejs` folder path. 
 
-        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/nodejs-path-tab-device_1.png" alt-text="copy the path":::  
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/nodejs-path.png" alt-text="Screenshot shows the nodejs path.":::  
 
      1. Open a new **Command Prompt** window, change the current directory to the copied `nodejs` path.
 
@@ -138,7 +138,7 @@ items:
 
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-latest.png" alt-text="Screenshot shows the bot home." lightbox="~\assets\images\teams-toolkit-v2\spfx-custom-new2.png":::
+       :::image type="content" source="~/assets/images/tab-device-permission/custom-upload.png" alt-text="Screenshot shows the upload a custom app.":::
       
        > [!NOTE]
        > Contact your Teams administrator, if you don't find the option to upload a custom app.
@@ -149,11 +149,11 @@ items:
   
     1. Select **Add**.
 
-         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-add-desktop_2.png" alt-text="add the app tab device permission":::               
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-permission.png" alt-text="Screenshot shows the add tab device permission":::               
 
     1. Select **Device Permission Tab** to see the following output:
      
-         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission1_2.png" alt-text="add tab device to desktop"::: 
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-permission-in-teams.png" alt-text="Screenshot shows the device permission tab" lightbox="../msteams-platform/assets/images/tab-device-permission/device-permission-tab.png"::: 
 
 
     # [Browser](#tab/Browser)
@@ -176,7 +176,7 @@ items:
 
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-latest.png" alt-text="Screenshot shows the bot home." lightbox="~\assets\images\teams-toolkit-v2\spfx-custom-new2.png":::
+       :::image type="content" source="~/assets/images/tab-device-permission/custom-upload.png" alt-text="Screenshot shows the custom upload.":::
 
        > [!NOTE]
        > Contact your Teams administrator, if you don't find the option to upload a custom app. 
@@ -187,11 +187,11 @@ items:
   
     1. Select **Add**.
 
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-add-browser-teams1_1.png" alt-text="add the app tab device permission":::               
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-permission.png" alt-text="add the app tab device permission":::               
 
     1. Select **Device Permission Tab** to see the following output:
 
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/browser-tab-device1_1.png" alt-text="get location":::
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/mobile-browser-tab.png" alt-text="screenshot show the browser tab device permission." lightbox=""../msteams-platform/assets/images/tab-device-permission/mobile-browser-tab-device.png"":::
 
   
     # [Mobile](#tab/mobile)
@@ -212,11 +212,11 @@ items:
 
       Select **App Permission** icon to test the app on desktop.
         
-      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission_3.png" alt-text="desktop":::                   
+      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/desktop-teams-test-your-app.png" alt-text="screenshot shows the desktop test your app." lightbox="../msteams-platform/assets/images/tab-device-permission/desktop-tab-device-permission.png":::                   
       
       The **Tab Device Permission** window appears to allow access to the permission requests.
 
-      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission_4.png" alt-text="desktop":::                   
+      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-permission-window.png" alt-text="Screenshot shows the tab device permission window popup.":::                   
 
       
        # [Browser](#tab/Browser)
@@ -234,7 +234,7 @@ items:
      # [Mobile](#tab/Mobile)
 
       
-      To test the app on mobile, the following pop-up windows are displayed to select the course of action:
+      To test the app on mobile, the following pop-up windows are displayed:
 
       * Select **ALLOW** if you want to grant permission.
       * Select **DENY** if you don't want to grant permission.
