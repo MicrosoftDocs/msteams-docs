@@ -16,7 +16,13 @@ Tabs are Teams-aware webpages embedded in Microsoft Teams. They're simple HTML `
 
 The following image shows static tabs:
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Screenshot shows an example of a personal (static) tab in Teams desktop client.":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="~/assets/images/tabs/personal-tab-mobile.png" alt-text="Example shows a mobile tab being added in Teams mobile client.":::
 
 The following image shows Contoso channel tabs:
 
@@ -32,9 +38,9 @@ The following image shows Contoso channel tabs:
 
 There are few prerequisites that you must go through before working on tabs.
 
-There are two types of tabs available in Teams, personal and channel or group. [Personal tabs](~/tabs/how-to/create-personal-tab.md) also known as static tabs. Personal (static) tabs along with personal-scoped bots are part of the personal apps that are scoped to a single user and pinned to the left navigation bar for easy access. Personal (static) tabs in personal scope continue to work the same. However, you can now [extend static tabs](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-and-meetings) to group chat or meetings with a [customizable experience.](~/tabs/how-to/create-personal-tab.md#customizing-your-static-tab-in-chats-or-meetings)
+There are two types of tabs available in Teams, personal and group. [Personal tabs](~/tabs/how-to/create-personal-tab.md) are also known as static tabs. Personal (static) tabs, along with personal-scoped bots, are part of the personal apps that are scoped to a single user and pinned to the left navigation bar for easy access. Personal (static) tabs in personal scope continue to work the same way. However, you can now [extend static tabs](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-and-meetings) to group chat or meetings with a [customizable experience.](~/tabs/how-to/create-personal-tab.md#customizing-your-static-tab-in-chats-or-meetings)
 
-You can extend static tabs to different scopes. Static tabs in chats or meetings behave more like apps as you can pin only one tab per app for example, pinning a single YouTube app tab in a meeting. Static tabs in meetings can also be pre-pinned in meetings by IT Admins.
+You can extend static tabs to different scopes. Static tabs in chats or meetings behave more like apps, as you can pin only one tab per app. For example, you can only pin a single YouTube app tab in a meeting. Static tabs in meetings can also be pre-pinned in meetings by IT Admins.
 
 Following image shows static tabs with customizable experience added to different contexts in Teams:
 
@@ -60,7 +66,7 @@ Following image shows static tabs with customizable experience added to differen
 
 ---
 
-Following are few benefits of static tabs in chats and meeting tabs:
+Following are a few benefits of static tabs in chats and meeting tabs:
 
 * **Pinnable and instant**: You can pin apps with static tabs from the add a tab **+** icon in chats and meetings. These tabs can be unpinned and don't have the mandatory configuration dialog, which allows you to create tabs that function more like apps.
 
@@ -129,7 +135,7 @@ For channel or group tabs, you can also create an extra configuration page. This
 
 For static tabs you can pin a `contentUrl` to chat or meeting tabs. This allows you to skip the mandatory configuration dialog and get your users to use the app much faster. You can also change the `contentUrl` at runtime. This allows you to build one tab object that works in all surface areas of Teams. For more information, see [migrate your configurable tab to static tab.](~/tabs/how-to/create-channel-group-tab.md#migrate-your-configurable-tab-to-static-tab)
 
-You can have multiple channels or group tabs, and up to 16 personal (static) tabs per app.
+You can have multiple channels or group tabs, and up to 16 static tabs per app.
 
 ### Tools to build tabs
 

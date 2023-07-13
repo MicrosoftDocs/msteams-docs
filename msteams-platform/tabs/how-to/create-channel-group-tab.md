@@ -1043,7 +1043,8 @@ To change your configurable tab to static tab:
      "entityId": "homeTab", 
      "scopes": [ 
        "personal",  
-       "groupChat" 
+       "groupChat",
+       "team"
       ], 
      "context": [ 
        "personalTab", 

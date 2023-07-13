@@ -10,7 +10,7 @@ ms.date: 02/27/2023
 
 # Create a personal tab
 
-Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) your personal tabs.
+Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access.
 
 > [!IMPORTANT]
 >
@@ -1018,7 +1018,8 @@ Following is an example of app manifest where a static tab is defined that works
      "entityId": "homeTab", 
      "scopes": [ 
        "personal", 
-       "groupChat" 
+       "groupChat",
+       "team"
       ], 
      "context": [ 
        "personalTab",  
@@ -1026,7 +1027,8 @@ Following is an example of app manifest where a static tab is defined that works
        "meetingChatTab", 
        "meetingDetailsTab", 
        "meetingSidePanel", 
-       "meetingStage" 
+       "meetingStage",
+       "channelTab"
       ], 
       "name": "Contoso", 
       "contentUrl": "https://contoso.com/content (displayed in Teams canvas)", 
@@ -1065,7 +1067,7 @@ Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other 
 
 | Sample name | Description | .NET |Node.js|Manifest|
 |-------------|-------------|------|----|----|
-|Tab personal|Sample app which showcases creating a custom channel/group tab with ASP.Net Core and MVC. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp) |  NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp/demo-manifest/tab-personal.zip)|
+|Tab personal| Sample app which showcases custom personal Tab with ASP.NET core | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp) |  NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp/demo-manifest/tab-personal.zip)|
 
 ## Next step
 
