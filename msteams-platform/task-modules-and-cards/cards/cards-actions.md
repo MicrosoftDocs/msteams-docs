@@ -419,12 +419,24 @@ CardFactory.actions([
 
 Adaptive Cards support four action types:
 
-* [Action.OpenUrl](https://adaptivecards.io/explorer/Action.OpenUrl.html)
-* [Action.Submit](https://adaptivecards.io/explorer/Action.Submit.html)
-* [Action.ShowCard](https://adaptivecards.io/explorer/Action.ShowCard.html)
-* [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
+* [Action.OpenUrl](https://adaptivecards.io/explorer/Action.OpenUrl.html): Open the specified url.
+* [Action.Submit](https://adaptivecards.io/explorer/Action.Submit.html): Sends the result of the submit action to the bot.
+* [Action.ShowCard](https://adaptivecards.io/explorer/Action.ShowCard.html): Invokes a dialog and renders the sub-card into that dialog. You only need to handle this if `ShowCardActionMode` is set to popup.
+* [Action.ToggleVisibility](https://adaptivecards.io/explorer/Action.ToggleVisibility.html): Shows or hides one or more elements in the card.
+* [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute): Gathers the input fields, merges with optional data field, and sends an event to the client.
 
-You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. The next section provides details on how to use existing Bot Framework actions with Adaptive Cards.
+### Action.Submit
+
+In an Adaptive Card, the `Action.Submit` type is used gather the input fields, merge with optional `data` properties, and send an event to the bot. In the Adaptive Card schema, the `data` property for Action.Submit is either a `string` or `object`. A submit action behaves differently for each data property:
+
+* `string`: A string submit action automatically sends a message from the user to the bot and is visible in the conversation history.
+* `object`:  An object submit action automatically sends an invisible message from the user to the bot that contains hidden data.
+
+Action.submit is equivalent to the bot framework actions. In a Bot Framework, when a user selects the submit action, Teams sends a bot Framework message activity to the bot and transfers the string data to the activity’s text property. An object submit action populates the activity’s value property while the text property is empty.
+
+You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. When you define the `msteams` property under `data`, the `action.submit` behavior is defined by Teams client. If the `msteams` property isn't defined in the schema,  `action.submit` works like a regular bot Framework invoke actions, where; the submit action triggers an invoke call to the bot and the bot receives the payload with all in the input values defined in the input fields.
+
+The next section provides details on how to use existing Bot Framework actions with Adaptive Cards.
 
 > [!NOTE]
 >
