@@ -21,7 +21,6 @@ The following image shows you the app icon badging in the meeting U-bar:
 
 > [!NOTE]
 >
-> * App icon badging for your Teams app is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * App icon badging isn't available for [Government Community Cloud (GCC)-High and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 > * App icon badging isn't supported for mobile clients.
 > * App icon badging isn't supported for channel meetings.
