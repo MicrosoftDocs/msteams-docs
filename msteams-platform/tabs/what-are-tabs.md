@@ -16,21 +16,23 @@ Tabs are Teams-aware webpages embedded in Microsoft Teams. They're simple HTML `
 
 The following image shows static tabs:
 
-# [Desktop](#tab/desktop1)
+# [Desktop](#tab/desktop)
 
 :::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Screenshot shows an example of a personal (static) tab in Teams desktop client.":::
 
-# [Mobile](#tab/mobile1)
+# [Mobile](#tab/mobile)
 
 :::image type="content" source="~/assets/images/tabs/personal-tab-mobile.png" alt-text="Example shows a mobile tab being added in Teams mobile client.":::
 
+---
+
 The following image shows Contoso channel tabs:
 
-# [Desktop](#tab/desktop2)
+# [Desktop](#tab/desktop1)
 
 :::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Channel or group tabs" lightbox="../assets/images/tabs/tabs.png":::
 
-# [Mobile](#tab/mobile2)
+# [Mobile](#tab/mobile1)
 
 :::image type="content" source="~/assets/images/tabs/mobile-design-static-tab.png" alt-text="Example shows a mobile tab being added in a channel.":::
 
