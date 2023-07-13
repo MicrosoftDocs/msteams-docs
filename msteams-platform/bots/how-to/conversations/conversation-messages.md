@@ -694,7 +694,11 @@ The following code shows an example of sending a simple Adaptive Card:
 
 You can build form completion feedback using an Adaptive Card. Form completion message appears in Adaptive Cards while sending a response to the bot. The message can be of two types, error or success:
 
-* **Error**: When a response sent to the bot is unsuccessful, **Something went wrong, Try again** message appears.
+* **Error**: When a response sent to the bot is unsuccessful, **Something went wrong, Try again** message appears. The error occurs due to various reasons, such as:
+  * Too many requests
+  * Multiple concurrent operations on the same conversation
+  * Service dependency issue
+  * Gateway Timeout
 
      :::image type="content" source="../../../assets/images/Cards/error-message.png" alt-text="Error message"border="true":::
 
