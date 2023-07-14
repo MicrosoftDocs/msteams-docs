@@ -38,14 +38,14 @@ items:
      | **Required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install the <br> ASP.NET and web development workload. | You can install the enterprise version in Visual Studio 2022, and install the workloads. |   
-     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
-     | &nbsp; | [Microsoft Teams and a Teams account](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place. |
+     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> Install the <br> ASP.NET and web development workload. | You can install the enterprise version in Visual Studio 2022, and install the workloads. |   
+     | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. Use the latest version or install the portable version. |
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place. |
 
 - title: Create and register your bot
   durationInMinutes: 5
   content: |
-    Register your bot with Azure Bot service when you develop and host it in Azure. Perform the following steps:
+    Register your bot with Azure Bot service when you develop and host it in Azure. Following are the steps:
 
     1. Create a ngrok tunnel to your web server's endpoints.
     1. Create bot channel registration in Azure account.
@@ -64,7 +64,7 @@ items:
 
     **To create bot channel registration in Azure account**
 
-    1. Access the [Azure portal](https://portal.azure.com/).
+    1. Go to [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
     1. Search for **Azure Bot** in the search box.
     1. Select **Azure Bot**.
@@ -73,7 +73,7 @@ items:
        :::image type="content" source="./assets/images/conversation-bot/azure-bot_1.png" alt-text="Azure bot.":::
 
        
-    1. In the **Create an Azure Bot** window that appears, enter the required bit handle name in **Bot handle**.
+    1. In the **Create an Azure Bot** window that appears, enter the required bot handle name in **Bot handle**.
     1. Select your **Subscription** and **Resource group** from the dropdown list.
     
        :::image type="content" source="./assets/images/conversation-bot/create-azure-bot.png" alt-text="Create Azure bot.":::
@@ -82,7 +82,7 @@ items:
    
        :::image type="content" source="~/assets/images/conversation-bot/newresource_1.png" alt-text="Screenshot showing the new resource group location.":::
 
-    1. In the **Microsoft App ID** section, Select **Type of App** as **Multi Tenant**.
+    1. In the **Microsoft App ID** section, select **Type of App** as **Multi Tenant**.
 
        :::image type="content" source="./assets/images/conversation-bot/tenant-review_1.png" alt-text="tenant review.":::
 
@@ -98,7 +98,7 @@ items:
 
     1. If the validation passes, select **Create**.
 
-       It takes a few moments for your bot service to be provisioned.
+       It takes a few minutes for your bot service to be provisioned.
 
         :::image type="content" source="./assets/images/conversation-bot/validation-passed.png" alt-text="Validation of the bot.":::
 
@@ -127,7 +127,7 @@ items:
 
        :::image type="content" source="~/assets/images/Tab-ME-SSO/newclientsecret_1.png" alt-text="Screenshot showing the selection of new client secret.":::
 
-    1. In the **Add a client secret** window that appears, enter **Description** of the client secret and select *Add*.
+    1. In the **Add a client secret** window that appears, enter **Description** of the client secret and select **Add**.
 
        :::image type="content" source="./assets/images/conversation-bot/add-client-secret_1.png" alt-text="Add client secret.":::
 
@@ -278,7 +278,7 @@ items:
 
     1. Select **F5** to run the project.
 
-    1. Select **Yes** if the following dialog appears:
+    1. Select **Yes** to install the certificate.
 
        :::image type="content" source="./assets/images/conversation-bot/certificate.png" alt-text="Trust Certificate.":::
     
@@ -288,16 +288,19 @@ items:
 
     **To upload the app to Teams**
 
-    1. Go to **Microsoft Teams**.
+    1. In the Teams client, select the **Apps** icon.
 
-    1. Select **Apps** > **Manage your apps**.
+    1. Select **Manage your apps**.
 
-       :::image type="content" source="../msteams-platform/assets/images/conversation-bot/manageapps_1.png" alt-text="Manage apps":::
-   
-    1. Select **Upload an app** and select **Upload a custom app**.
+    1. Select **Upload an app**.
 
-       :::image type="content" source="assets/images/upload-custom-app.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
-       
+    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-latest.png" alt-text="Screenshot shows the bot home." lightbox="~\assets\images\teams-toolkit-v2\spfx-custom-new2.png":::
+
+        > [!NOTE]
+        > Contact your Teams administrator, if you don't find the option to upload a custom app.
+     
     1. Select **Open** to upload the .zip file that you created in the TeamAppManifest folder.
     
         :::image type="content" source="./assets/images/conversation-bot/upload-manifest-zip.png" alt-text="Manifest upload in Teams.":::
