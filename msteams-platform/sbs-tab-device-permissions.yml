@@ -224,11 +224,11 @@ items:
       
       Select **App Permission** icon to test the app in browser.
 
-      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/browser-tab-device1_3.png" alt-text="get location":::
+      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/browser-app-permission.png" alt-text="Screenshot shows the browser app permission." lightbox="../msteams-platform/assets/images/tab-device-permission/browser-app-permission-icon.png":::
 
       The **Tab Device Permission** window appears to allow access to the permission requests.
 
-      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/browser-tab-device1_2.png" alt-text="get location":::
+      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-permission-window.png" alt-text="Screenshot shows the browser tab device permission.":::
 
      
      # [Mobile](#tab/Mobile)
