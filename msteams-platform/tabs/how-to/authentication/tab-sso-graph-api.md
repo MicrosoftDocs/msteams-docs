@@ -233,7 +233,7 @@ You can also ask for consent using the Microsoft Teams JavaScript client library
 3. If the exchange fails because of the `invalid_grant` or `interaction_required` errors, you must prompt the user for consent. Since user interaction can only happen from the client, your server needs to return an indication to your client app that consent is required. You can then use the user interface (UI) to ask the app user to grant other consent. The UI must include a button that triggers an [Azure AD consent dialog](../../../tabs/how-to/authentication/tab-sso-code.md#consent-dialog-for-getting-access-token).
 4. To ask the user for consent for your app to access their data, you must include the `prompt=consent` property in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) to Azure AD, else Azure AD wouldn't ask for other scopes.
     - Instead of `?scope={scopes}`, use `?prompt=consent&scope={scopes}`
-    - Ensure that `{scopes}` includes all the scopes you're prompting the user for, for example, `Mail.Read` or `User.Read`.
+    - Ensure that the `{scopes}` property includes all the scopes you're prompting the user for. For example, `Mail.Read` or `User.Read`.
 
     To handle incremental consent for tab app, see [incremental and dynamic user consent](/azure/active-directory/develop/v2-permissions-and-consent).
 5. After the app user has granted more permissions, retry the OBO flow to get access to these other APIs.
