@@ -220,7 +220,7 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 
 Another approach for getting Graph scopes is to present a consent dialog using the existing [third-party OAuth provider authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). The approach involves presenting an Azure AD consent dialog box to the user.
 
-You can also ask for consent using the TeamsJS [authentication](/javascript/api/@microsoft/teams-js/authentication) capability.
+You can also ask for consent using the Microsoft Teams JavaScript client library (TeamsJS) [authentication](/javascript/api/@microsoft/teams-js/authentication) capability.
 
 <details>
 <summary>To obtain consent using the TeamsJS client library, follow these steps:</summary>
