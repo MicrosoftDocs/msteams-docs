@@ -17,9 +17,9 @@ A configuration page is a special type of [content page](content-page.md). The u
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
-## Configure a channel or group chat tab
+## Configuration page for tabs
 
-The application must reference the [TeamsJS library](/javascript/api/overview/msteams-client) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and are available from the cloud.
+The application must refer the [TeamsJS library](/javascript/api/overview/msteams-client) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and are available from the cloud.
 
 ### Example
 
@@ -290,7 +290,7 @@ Authenticate before allowing a user to configure your app. Otherwise, your conte
 
 ## Modify or remove a tab
 
-Set your manifest's `canUpdateConfiguration` property to `true`. It enables the users to modify or reconfigure a channel or group tab. You can rename your tab only through Teams user interface. Inform the user about the impact on content when a tab is removed. To do this, include a removal options page in the app, and set a value for the `removeUrl` property in the `setConfig()` (formerly `setSettings()`) configuration. The user can uninstall personal tabs but can't modify them. For more information, see [create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
+Set your manifest's `canUpdateConfiguration` property to `true`. It enables the users to modify or reconfigure a channel or group tab. You can rename your tab only through Teams user interface. Inform the user about the impact on content when a tab is removed. To do this, include a removal options page in the app, and set a value for the `removeUrl` property in the `setConfig()` (formerly `setSettings()`) configuration. The user can uninstall static tabs but can't modify them. For more information, see [create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 Microsoft Teams `setConfig()` (formerly `setSettings()`) configuration for removal page:
 
