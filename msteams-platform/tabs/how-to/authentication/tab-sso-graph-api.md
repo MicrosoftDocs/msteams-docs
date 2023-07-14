@@ -3,23 +3,17 @@ title: Extend tab app with Microsoft Graph permissions
 description: Configure additional permissions and scopes, get access token with Microsoft Graph to enable single sign-on (SSO).
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token scope
+keywords: teams authentication tabs Microsoft Azure Active Directory Azure AD Graph API delegated permission access token scope
 ---
 # Extend tab app with Microsoft Graph permissions and scopes
 
-You can extend your tab app by using Microsoft Graph to allow users additional permissions, such as to view app user profile, to read mail, and more. Your app must ask for specific permission scopes to obtain the access tokens on app user's consent.
+You can extend your tab app by using Microsoft Graph to allow additional user permissions, such as to view app user profile, read mail, and more. Your app must ask for specific permission scopes to obtain the access tokens upon app user consent.
 
-Graph scopes, such as `User.Read` or `Mail.Read`, lets you specify how your app accesses a Teams user's account. You need to specify your scopes in the authorization request.
-
-In this section, you'll learn to:
-
-- [Configure API permissions in Azure AD](#configure-api-permissions-in-azure-ad)
-- [Configure authentication for different platforms](#configure-authentication-for-different-platforms)
-- [Acquire access token for MS Graph](#acquire-access-token-for-ms-graph)
+Graph scopes, such as `User.Read` or `Mail.Read`, indicate what your app can access from a Teams user account. You'll need to specify your scopes in the authorization request. This article will walk you through the steps to configure Microsoft Graph permissions and scopes for your Teams tab app.
 
 ## Configure API permissions in Azure AD
 
-You can configure additional Graph scopes in Azure AD for your app. These are delegated permissions, which are used by apps that require signed-in access. A signed-in app user or administrator must consent to them. Your tab app can consent on behalf of the signed-in user when it calls Microsoft Graph.
+You can configure additional Graph scopes in Azure AD for your app. These are delegated permissions, which are used by apps that require signed-in access. A signed-in app user or administrator must initially consent to them. Thereafter, your tab app can consent on behalf of the signed-in user when it calls Microsoft Graph.
 
 ### To configure API permissions
 
@@ -61,15 +55,15 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="The screenshot shows an example of the API permissions, which are configured.":::
 
-    You've configured your app with Microsoft Graph permissions.
+    You've now configured your app with Microsoft Graph permissions.
 
 ## Configure authentication for different platforms
 
-Depending on the platform or device where you want to target your app, additional configuration may be required such as redirect URIs, specific authentication settings, or details specific to the platform.
+Depending on the platform or device where you want to target your app, additional configuration may be required, such as redirect URIs, specific authentication settings, or details specific to the platform.
 
 > [!NOTE]
 >
-> - If your tab app hasn't been granted IT admin consent, app users have to provide consent the first time they use your app on a different platform.
+> - If your tab app hasn't been granted IT admin consent, app users will need to provide consent the first time they use your app on a different platform.
 > - Implicit grant isn't required if SSO is enabled on a tab app.
 
 You can configure authentication for multiple platforms as long as the URL is unique.
@@ -115,19 +109,15 @@ You can configure authentication for multiple platforms as long as the URL is un
 
 ## Acquire access token for MS Graph
 
-You'll need to acquire access token for Microsoft Graph. You can do so by using Azure AD on-behalf-of (OBO) flow.
+You'll need to acquire an access token for Microsoft Graph. You can do so by using Azure AD on-behalf-of (OBO) flow.
 
-The current implementation for SSO grants consent for only user-level permissions that aren't usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO apps must implement a custom web service to exchange the token received from the Teams JavaScript library for a token that includes the needed scopes. You can use Microsoft Authentication Library (MSAL) for fetching the token from the client side.
+The current implementation for single sign-on (SSO) is limited to user-level permissions, which aren't usable for making Graph calls. To get the permissions and scopes needed to make a Graph call, SSO apps must implement a custom web service to exchange the token received from the Teams JavaScript library for a token that includes the needed scopes. You can use Microsoft Authentication Library (MSAL) for fetching the token from the client side.
 
-After you've configured Graph permissions in Azure AD:
-
-1. [Get the token ID from Teams client](#get-the-token-id-from-teams-client)
-
-1. [Exchange the token ID with the server-side token](#exchange-the-token-id-with-the-server-side-token)
+After you've configured Graph permissions in Azure AD, you'll need to get the token ID from the Teams client and then exchange it with the server-side token.
 
 ### Get the token ID from Teams client
 
-The following is an example for calling token ID from Teams client:
+The following is an example for getting the token ID from Teams client:
 
 ```csharp
 microsoftTeams.authentication.getAuthToken().then((result) => {
@@ -138,7 +128,7 @@ microsoftTeams.authentication.getAuthToken().then((result) => {
 
 ### Exchange the token ID with the server-side token
 
-The following is an example of OBO flow to fetch access token from the Teams client using MSAL:
+The following is an example of OBO flow to fetch the access token from Teams client using MSAL:
 
 ### [C#](#tab/dotnet)
 
@@ -166,9 +156,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 
 ### [Node.js](#tab/nodejs)
 
-- [SDK reference](/javascript/api/@azure/msal-node/confidentialclientapplication?view=azure-node-latest#@azure-msal-node-confidentialclientapplication-acquiretokenonbehalfof&preserve-view=true)
-
-- [sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs/src/server/tabs.js#L51-L94)
+[ConfidentiaClientApplication class](/javascript/api/@azure/msal-node/confidentialclientapplication?view=azure-node-latest#@azure-msal-node-confidentialclientapplication-acquiretokenonbehalfof&preserve-view=true) SDK reference | [sample code](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs/src/server/tabs.js#L51-L94)
 
 ```Node.js
 // Exchange client Id side token with server token
@@ -210,7 +198,7 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 
 > [!IMPORTANT]
 >
-> - As a best practice for security, always use the [server-side code to make Microsoft Graph calls](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow#middle-tier-access-token-request) or other calls that require passing an access token. You must not return the OBO token to the client because it enables the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked.
+> - As a best practice for security, always use [server-side code to make Microsoft Graph calls](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow#middle-tier-access-token-request) or other calls that require passing an access token. This helps protect the token from being intercepted or leaked. DO NOT return the OBO token to the client because it would then enable the client to make direct calls to Microsoft Graph.
 >
 > - Don’t use `notifySuccess` result to return the token information to the parent page. Use `localStorage` to save the token and pass the item key via `notifySuccess`.
 
@@ -218,7 +206,7 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 
 1. Tenant admin consent: A simple way of [consenting on behalf of an organization as a tenant admin](/azure/active-directory/manage-apps/consent-and-permissions-overview#admin-consent) is by getting [consent from admin](/azure/active-directory/manage-apps/grant-admin-consent).
 
-Another approach for getting Graph scopes is to present a consent dialog using the existing [third-party OAuth provider authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). The approach involves presenting an Azure AD consent dialog box to the user.
+Another approach for getting Graph scopes is to present an Azure AD consent consent dialog using the existing [third-party OAuth provider authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page).
 
 You can also ask for consent using the Microsoft Teams JavaScript client library (TeamsJS) [authentication](/javascript/api/@microsoft/teams-js/authentication) capability.
 
@@ -226,12 +214,12 @@ You can also ask for consent using the Microsoft Teams JavaScript client library
 <summary>To obtain consent using the TeamsJS client library, follow these steps:</summary>
 
 > [!TIP]
-> The [Teams Personal Tab SSO Authentication](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-personal-sso-quickstart/js/src/components/Tab.js#L64-L101) sample provides code demonstrating following steps.
+> [Teams Personal Tab SSO Authentication](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-personal-sso-quickstart/js/src/components/Tab.js#L64-L101) sample provides code demonstrating following steps.
 
 1. The token retrieved using `getAuthToken()` must be exchanged on the server-side using Azure AD [OBO flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to those other Graph APIs. Ensure that you use the Azure AD v2 endpoint for this exchange.
 2. Often the first time you try to execute this token exchange for a user, Azure AD will refuse to exchange tokens because the user has not consented to giving your app permission to their data for this purpose. In these cases, your exchange will fail with either the `invalid_grant` or `interaction_required` error.  Examples of *invalid_grant* errors include when consent is required or *auth_code*, assertion, or the refresh token is expired, revoked, malformed, or absent. Examples of *interaction_required* include when multi-factor authentication or corporate device enrollment is required.
 3. If the exchange fails because of the `invalid_grant` or `interaction_required` errors, you must prompt the user for consent. Since user interaction can only happen from the client, your server needs to return an indication to your client app that consent is required. You can then use the user interface (UI) to ask the app user to grant other consent. The UI must include a button that triggers an [Azure AD consent dialog](../../../tabs/how-to/authentication/tab-sso-code.md#consent-dialog-for-getting-access-token).
-4. To ask the user for consent for your app to access their data, you must include the `prompt=consent` property in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) to Azure AD, else Azure AD wouldn't ask for other scopes.
+4. To ask the user for consent for your app to access their data, you must include the `prompt=consent` property in your [query-string-parameter](/azure/active-directory/develop/v2-oauth2-implicit-grant-flow#send-the-sign-in-request) to Azure AD.
     - Instead of `?scope={scopes}`, use `?prompt=consent&scope={scopes}`
     - Ensure that the `{scopes}` property includes all the scopes you're prompting the user for. For example, `Mail.Read` or `User.Read`.
 
