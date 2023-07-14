@@ -1,6 +1,6 @@
 ---
 title: Messages in bot conversations
-description: Learn how to send, receive, edit, undelete, and soft delete a message, suggested actions, notification, attachments, images, Adaptive Card and status error code responses.
+description: Learn how to send, receive, edit, undelete, and soft delete a message, suggested actions, notification, attachments, images, bot conversation, Adaptive Card and status error code responses.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
