@@ -96,15 +96,15 @@ items:
 
     1. If the validation is passed, select **Create**.
 
-       It takes a few moments for your bot service to be provisioned.
-
          :::image type="content" source="./assets/images/calls-and-meetings/validation_1.png" alt-text="Screenshot of Create an Azure Bot that shows the Validation Passed status and the Create option highlighted in red.":::
+
+      It takes a few moments for your bot service to be provisioned.
 
     1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
 
-        Now your Azure bot has been created.
-
          :::image type="content" source="./assets/images/calls-and-meetings/go-to-resource_1.png" alt-text="Screenshot of Home page that shows the deployment complete status with Go to resource button highlighted in red.":::
+
+        Now your Azure bot has been created.
 
     **To create client secret**
 
@@ -119,7 +119,7 @@ items:
  
          :::image type="content" source="./assets/images/calls-and-meetings/add-client_2.png" alt-text="Screenshot of Certificates and secrets with client and secrets, client secrets, and +New client secret highlighted in red."lightbox="./assets/images/calls-and-meetings/add-client_2.png":::
 
-      1. Select **Copy to clipboard** to copy the **Value** details.
+      1. Select **Copy to clipboard** icon to copy the **Value** details.
 
          :::image type="content" source="./assets/images/calls-and-meetings/client-secret_2.png" alt-text="Screenshot of Client secrets tab with client secret Value highlighted in red.":::
 
@@ -185,7 +185,7 @@ items:
     1. Select **Add a permission**. **Request API permissions** window appears.
     1. Select **Microsoft APIs** > **Microsoft Graph**.
     1. Select **Application permissions**.
-    1. Select permissions and add the following Graph API applications permissions to your Azure App and grant admin consent:
+    1. In **Select permissions**, add the following Graph API applications permissions to your Azure App and grant admin consent:
         * `Calls.AccessMedia.All`
         * `Calls.Initiate.All`
         * `Calls.InitiateGroupCall.All`
@@ -219,10 +219,11 @@ items:
          :::image type="content" source="./assets/images/calls-and-meetings/configure-teams.png" alt-text="Screenshot of Channels page of the bot with Channels in the left pane and Calling options highlighted in red.":::
     
     1. Select **Enable calling**, and then update **Webhook** with your HTTPS ngrok URL (https://yourngrok/api/callback).
+    
+    1. Select **Apply**.
 
          :::image type="content" source="./assets/images/calls-and-meetings/enable-calling_1.png" alt-text="Screenshot of Calling tab with Enable calling, the webhook added, and Apply highlighted in red.":::
 
-    1. Select **Apply**.
 
     **To add messaging endpoint**
 
@@ -239,12 +240,12 @@ items:
 
     1. Select **Apply**.
 
-        You've successfully set up a bot in Azure bot service and you need to set up bot service connection.
+        You've successfully set up a bot in the Azure bot service, and you need to set up a bot service connection.
 
 - title: Update and create Teams app package
   durationInMinutes: 1
   content: |
-    Configure the bot sample to understand how to authenticate conversational bot in Microsoft Teams and create the Teams app package, and upload it to the organization.
+    Configure the bot sample to understand how to authenticate conversational bot in Microsoft Teams, create the Teams app package, and upload it to the organization.
     
     1. Update the appsettings.json file in Visual Studio.
     1. Update teh manifest.json file in Visual Studio and compress it to the zip file in File Explorer.
@@ -293,7 +294,7 @@ items:
             > [!NOTE]
             > `TenantId` or `UserId` of the Teams account denotes from where you want to initiate the call, and `DisplayName` and `UserId` of the users denote to whom you want to redirect or transfer the call.
 
-    1. Replace `MicrosoftAppId`, `ClientId`, `AppId` with Microsoft App ID and `MicrosoftAppPassword`, `ClientSecret`, and `AppSecret` with **Value**.
+    1. Replace `MicrosoftAppId`, `ClientId`, and `AppId` with Microsoft App ID and `MicrosoftAppPassword`, `ClientSecret`, and `AppSecret` with **Value**.
     1. Replace `BotBaseUrl` with `ngrok` URL.
     1. Replace `TenantId` with `UserId`.
     1. Replace `DisplayName` with `Id`.
