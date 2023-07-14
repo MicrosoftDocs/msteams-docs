@@ -335,7 +335,7 @@ items:
    
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled. 
 
-       :::image type="content" source="~/assets/images/upload-a-custom-app1.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
+       :::image type="content" source="~/assets/images/upload-custom-app1.PNG" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
 
     1. Open `manifest.zip` from the repository folder in File Explorer.
 
