@@ -297,76 +297,107 @@ The following image illustrates People Picker in Adaptive Cards with static choi
 
 You can implement People Picker for efficient task management in different scenarios.
 
-## People icon inside Adaptive Card
+## People icon in an Adaptive Card
 
-Developer can insert an image in card and apply all the properties supported on images (size, style, etc.).
+People icon helps users to view the images of users in an Adaptive Card. You can insert an image and apply all the properties supported on images.
 
-Developer only needs to specify an identifier of the user whose image should be rendered.
+There are two types of people icons that are supported in an Adaptive Card:
 
-If one person is shown on the adaptive card, then we show icon and name
+* Persona: If you want to show a single user in an Adaptive Card, the Adaptive Card displays the people icon and the name of the user.
 
-If more than 1 person is shown, then we only display the people icons
+    The following is a JSON example of a Persona card:
 
-When a user hovers (Desktop/Web) on a people icon within the adaptive card, we will show the people card of that user.  
-
-When a user clicks (mobile) on a people icon within the adaptive card, we will show the people card of that user.
-
-When an approval is created from chat/channels and has a file attached, we will show a file chiclet on the adaptive card.  
-
-User can open the file from this chiclet and go to stage view in Team.
-
-### Schema
-
-Schema example:
-
-```json
-{
-  "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
-  "type": "AdaptiveCard",
-  "version": "1.0.0",
-  "body": [
+    ```json
     {
-      "type": "TextBlock",
-      "text": "Persona Set",
-      "weight": "bolder"
-    },
+      "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+      "type": "AdaptiveCard",
+      "version": "1.0.0",
+      "body": [
     {
-      "type": "Component",
-      "name": "graph.microsoft.com/users",
-      "view": "compact",
-      "properties": {
-        "users": [
-          {
-            "id": "97b1ec61-45bf-453c-9059-6e8984e0cef4",
-            "displayName": "Robin Liao",
-            "userPrincipalName": "yilia@microsoft.com"
-          },
-          {
+          "type": "TextBlock",
+          "text": "Persona",
+          "weight": "bolder"
+        },
+        {
+          "type": "Component",
+          "name": "graph.microsoft.com/user",
+          "view": "compact",
+          "properties": {
             "id": "97b1ec61-45bf-453c-9059-6e8984e0cef4",
             "displayName": "Robin Liao",
             "userPrincipalName": "yilia@microsoft.com"
           }
-        ]
-      }
-    },
-    {
-      "type": "TextBlock",
-      "text": "Persona",
-      "weight": "bolder"
-    },
-    {
-      "type": "Component",
-      "name": "graph.microsoft.com/user",
-      "view": "compact",
-      "properties": {
-        "id": "97b1ec61-45bf-453c-9059-6e8984e0cef4",
-        "displayName": "Robin Liao",
-        "userPrincipalName": "yilia@microsoft.com"
-      }
+        }
+      ]
     }
-  ]
-}
-```
+    ```
+
+* Persona Set: If you want to show multiple users in an Adaptive Card, the Adaptive Card displays only the people icon of the users.
+
+    The following is a JSON example of a Persona Set:
+
+    ```json
+    {
+      "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+      "type": "AdaptiveCard",
+      "version": "1.0.0",
+      "body": [
+        {
+          "type": "TextBlock",
+          "text": "Persona Set",
+          "weight": "bolder"
+        },
+        {
+          "type": "Component",
+          "name": "graph.microsoft.com/users",
+          "view": "compact",
+          "properties": {
+            "users": [
+              {
+                "id": "97b1ec61-45bf-453c-9059-6e8984e0cef4",
+                "displayName": "Robin Liao",
+                "userPrincipalName": "yilia@microsoft.com"
+              },
+              {
+                "id": "97b1ec61-45bf-453c-9059-6e8984e0cef4",
+                "displayName": "Robin Liao",
+                "userPrincipalName": "yilia@microsoft.com"
+              }
+            ]
+          }
+        }
+      ]
+    }
+    ```
+
+  > [!NOTE]
+  > You can't customize the style of the Persona and Persona Set in an Adaptive Card.
+
+The following image is an example of the people icon in an Adaptive Card:
+
+:::image type="content" source="../../assets/images/adaptive-cards/people-icon-persona-persona-set.png" alt-text="Screenshot shows an example of the persona and persona set type people icon in an Adaptive Card.":::
+
+### Query parameters
+
+The following table lists the query parameters:
+
+|Property name  |description  |
+|---------|---------|
+|`type`     |    `component`     |
+|`name`     |   `graph.microsoft.com/users`      |
+|`view`     |   `compact`      |
+|`id`     | User's MRI.    |
+|`displayName`     |   Name of the user.      |
+|`userPrincipalName`|The user principal name of the account in Azure AD.|
+
+Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Azure Active Directory (Azure AD) information, such as `name`, `id` and `userPrincipalName`. For more information, see [Fetch the roster or user profile](../../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
+
+The `properties` property defines the format for Persona and Persona Set and all other  properties under `properties` is ignored by `component` type in the Adaptive Card schema.
+
+The following is the behavior of the people icon in an Adaptive Card on Teams desktop and mobile clients:
+
+* Desktop: When a user hovers on a people icon, the people card of that user is displayed.
+* Mobile: When a users selects a people icon, the people card of that user is displayed.
 
 ## Code sample
 
