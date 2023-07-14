@@ -295,7 +295,78 @@ The following image illustrates People Picker in Adaptive Cards with static choi
 
 :::image type="content" source="../../assets/images/Cards/peoplepicker-static-choice.png" alt-text="people-picker-static-choice":::
 
-You can implement People Picker for efficient task management in different scenarios.  
+You can implement People Picker for efficient task management in different scenarios.
+
+## People icon inside Adaptive Card
+
+Developer can insert an image in card and apply all the properties supported on images (size, style, etc.).
+
+Developer only needs to specify an identifier of the user whose image should be rendered.
+
+If one person is shown on the adaptive card, then we show icon and name
+
+If more than 1 person is shown, then we only display the people icons
+
+When a user hovers (Desktop/Web) on a people icon within the adaptive card, we will show the people card of that user.  
+
+When a user clicks (mobile) on a people icon within the adaptive card, we will show the people card of that user.
+
+When an approval is created from chat/channels and has a file attached, we will show a file chiclet on the adaptive card.  
+
+User can open the file from this chiclet and go to stage view in Team.
+
+### Schema
+
+Schema example:
+
+```json
+{
+  "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0.0",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Persona Set",
+      "weight": "bolder"
+    },
+    {
+      "type": "Component",
+      "name": "graph.microsoft.com/users",
+      "view": "compact",
+      "properties": {
+        "users": [
+          {
+            "id": "97b1ec61-45bf-453c-9059-6e8984e0cef4",
+            "displayName": "Robin Liao",
+            "userPrincipalName": "yilia@microsoft.com"
+          },
+          {
+            "id": "97b1ec61-45bf-453c-9059-6e8984e0cef4",
+            "displayName": "Robin Liao",
+            "userPrincipalName": "yilia@microsoft.com"
+          }
+        ]
+      }
+    },
+    {
+      "type": "TextBlock",
+      "text": "Persona",
+      "weight": "bolder"
+    },
+    {
+      "type": "Component",
+      "name": "graph.microsoft.com/user",
+      "view": "compact",
+      "properties": {
+        "id": "97b1ec61-45bf-453c-9059-6e8984e0cef4",
+        "displayName": "Robin Liao",
+        "userPrincipalName": "yilia@microsoft.com"
+      }
+    }
+  ]
+}
+```
 
 ## Code sample
 
