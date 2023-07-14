@@ -14,9 +14,9 @@ Add functionality to your Teams experience by subscribing and managing licenses 
 
 ## Subscription experience
 
-The following example shows how users can purchase subscription plans for a fictional Teams app called *Feeder*:
+The following example shows how users can purchase subscription plans for a Teams app:
 
-1. In the Teams store, find and select the *Feeder* app.
+1. In the Teams store, find and select the app you want to purchase the subscription. Here *Feeder* app is shown as an example.
 
 1. In the app details dialog, select **Buy a subscription**.
 
@@ -43,7 +43,7 @@ The following example shows how users can purchase subscription plans for a fict
 
     :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="Screenshot shows the option to set up your subscription.":::
 
-1. Manage your subscription plan through the *Feeder* website (also known as a [landing page](include-saas-offer.md#build-a-landing-page-for-subscription-management)).
+1. Manage your subscription plan through the website (also known as a [landing page](include-saas-offer.md#build-a-landing-page-for-subscription-management)).
 
     :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Screenshot shows User and Licenses screen to assign license.":::
 
