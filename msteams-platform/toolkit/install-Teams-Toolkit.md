@@ -100,6 +100,16 @@ By default, Visual Studio Code automatically keeps Teams Toolkit up-to-date. If 
 
    Teams Toolkit installs the version you’ve selected.
 
+## Install a pre-release version
+
+The Teams Toolkit for Visual Studio Code extension is available in a pre-release version. To install a Teams Toolkit pre-release version, follow these steps:
+
+1. Open **Visual Studio Code**.
+1. Select **Extensions** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/extension icon.png" border="false" alt-text="Screenshot shows the extension icon."::: from the Visual Studio Code activity bar.
+1. Enter **Teams Toolkit** in the search box.
+1. On the Teams Toolkit page, select the dropdown arrow next to **Install**.
+1. Select **Install Pre-Release Version**.
+
 ## Next step
 
 > [!div class="nextstepaction"]
