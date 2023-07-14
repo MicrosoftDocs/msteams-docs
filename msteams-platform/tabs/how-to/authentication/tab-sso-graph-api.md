@@ -202,46 +202,44 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 >
 > - Don’t use `notifySuccess` result to return the token information to the parent page. Use `localStorage` to save the token and pass the item key via `notifySuccess`.
 
-## Obtaining consent
+## Obtain consent
 
-1. Tenant admin consent: A simple way of [consenting on behalf of an organization as a tenant admin](/azure/active-directory/manage-apps/consent-and-permissions-overview#admin-consent) is by getting [consent from admin](/azure/active-directory/manage-apps/grant-admin-consent).
+Your app can obtain consent for Graph permissions globally from the tenant administrator, or individually per user.
 
-Another approach for getting Graph scopes is to present an Azure AD consent consent dialog using the existing [third-party OAuth provider authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page).
+### From the tenant administrator
 
-You can also ask for consent using the Microsoft Teams JavaScript client library (TeamsJS) [authentication](/javascript/api/@microsoft/teams-js/authentication) capability.
+ A simple way of [consenting on behalf of an organization](/azure/active-directory/manage-apps/consent-and-permissions-overview#admin-consent) is by obtaining [admin consent](/azure/active-directory/manage-apps/grant-admin-consent).
 
-<details>
-<summary>To obtain consent using the TeamsJS client library, follow these steps:</summary>
+### From the user
+
+When asking for additional user consent using the Microsoft Teams JavaScript client library (TeamsJS) [authentication](/javascript/api/@microsoft/teams-js/authentication) capability, keep in mind the following considerations:
 
 > [!TIP]
 > [Teams Personal Tab SSO Authentication](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-personal-sso-quickstart/js/src/components/Tab.js#L64-L101) sample provides code demonstrating following steps.
 
 1. The token retrieved using `getAuthToken()` must be exchanged on the server-side using Azure AD [OBO flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to those other Graph APIs. Ensure that you use the Azure AD v2 endpoint for this exchange.
-2. Often the first time you try to execute this token exchange for a user, Azure AD will refuse to exchange tokens because the user has not consented to giving your app permission to their data for this purpose. In these cases, your exchange will fail with either the `invalid_grant` or `interaction_required` error.  Examples of *invalid_grant* errors include when consent is required or *auth_code*, assertion, or the refresh token is expired, revoked, malformed, or absent. Examples of *interaction_required* include when multi-factor authentication or corporate device enrollment is required.
-3. If the exchange fails because of the `invalid_grant` or `interaction_required` errors, you must prompt the user for consent. Since user interaction can only happen from the client, your server needs to return an indication to your client app that consent is required. You can then use the user interface (UI) to ask the app user to grant other consent. The UI must include a button that triggers an [Azure AD consent dialog](../../../tabs/how-to/authentication/tab-sso-code.md#consent-dialog-for-getting-access-token).
-4. To ask the user for consent for your app to access their data, you must include the `prompt=consent` property in your [query-string-parameter](/azure/active-directory/develop/v2-oauth2-implicit-grant-flow#send-the-sign-in-request) to Azure AD.
+1. When you try to execute the token exchange for a user for the first time, if Azure AD refuses to exchange tokens it might be because the user has not consented to give your app permission to the user's data. In these cases, your exchange will fail with either the `invalid_grant` or `interaction_required` error.  Examples of *invalid_grant* errors include when consent is required or *auth_code*, assertion, or the refresh token is expired, revoked, malformed, or absent. Examples of *interaction_required* include when multi-factor authentication or corporate device enrollment is required.
+1. If the exchange fails because of the `invalid_grant` or `interaction_required` errors, you must prompt the user for consent. Since user interaction can only happen from the client, your server needs to return an indication to your client app that consent is required. You can then use the user interface (UI) to ask the app user to grant other consent. The UI must include a button that triggers an [Azure AD consent dialog](../../../tabs/how-to/authentication/tab-sso-code.md#consent-dialog-for-getting-access-token).
+1. To ask the user for consent for your app to access their data, you must include the `prompt=consent` property in your [query-string-parameter](/azure/active-directory/develop/v2-oauth2-implicit-grant-flow#send-the-sign-in-request) to Azure AD.
     - Instead of `?scope={scopes}`, use `?prompt=consent&scope={scopes}`
     - Ensure that the `{scopes}` property includes all the scopes you're prompting the user for. For example, `Mail.Read` or `User.Read`.
 
     To handle incremental consent for tab app, see [incremental and dynamic user consent](/azure/active-directory/develop/v2-permissions-and-consent).
-5. After the app user has granted more permissions, retry the OBO flow to get access to these other APIs.
-</details>
+1. After the app user has granted more permissions, retry the OBO flow to get access to additional Graph APIs.
 
-1. Race condition in fetching Graph access token via on-behalf-of (OBO) flow after consent: If your app calls Microsoft Graph, you might use the on-behalf-of (OBO) flow in your API to get a valid Graph token for that user.
+## Race condition when making an OBO call after invalid grant exception
 
-   If a user hasn't granted Azure AD application consent for these scopes, your OBO call will fail with `invalid_grant` or `interaction_required` error. This error informs you that you need to prompt the user for their consent.
+If a user hasn't granted Azure AD application consent for these scopes, your OBO call will fail with `invalid_grant` or `interaction_required` error. This error informs you that you need to prompt the user for their consent.
 
-   When the user has provided their consent and you try to make an OBO call immediately, sometimes there's a race condition between Azure AD propagating this consent and the OBO request taking place. This can lead to OBO call failing with the same `invalid_grant` or `interaction_required` errors.
+When the user has provided their consent and you try to make an OBO call immediately, sometimes there's a race condition between Azure AD propagating this consent and the OBO request taking place. This can lead to OBO call failing with the same `invalid_grant` or `interaction_required` errors.
 
-   If your application is unaware of this behaviour, it might ask the user for consent multiple times.
+If your application is unaware of this behavior, it might ask the user for consent multiple times. Best practice is to build a meaningful wait-and-retry mechanism to avoid this suboptimal user experience.
 
-   There's no workaround to this limitation. Azure AD recommends that you can build a meaningful wait-and-retry mechanism to overcome this issue.
+This wait-and-retry mechanism should keep track if a user has consented to the required scopes. If an API call that includes an OBO request fails with the above errors, but the user has already consented, avoid showing the consent prompt to the user. Instead, wait for some time before retrying the API call. Usually, Azure AD sends the consent within three to five seconds. In one of our [sample applications](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/8f266c33608d6d7b4cf89c81779ccf49e7664c1e/samples/bot-tab-conversations/csharp/Source/ConversationalTabs.Web/ClientApp/src/utils/UtilsFunctions.ts#LL8C1-L8C1), we retry up to three times with double the wait time between each retry, starting at a one second wait.
 
-   This wait-and-retry mechanism should keep track if a user has consented to the required scopes. If an API call that includes an OBO request fails with the above errors, but the user has already consented, avoid showing the consent prompt to the user. Instead, wait for some time before retrying the API call. Usually, Azure AD sends the consent within three to five seconds. In one of our [sample applications](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/8f266c33608d6d7b4cf89c81779ccf49e7664c1e/samples/bot-tab-conversations/csharp/Source/ConversationalTabs.Web/ClientApp/src/utils/UtilsFunctions.ts#LL8C1-L8C1), we retry up to three times with double the wait time between each retry, starting at a one second wait.
+If after three to five attempts the OBO flow still fails, the user might not have consented to all the required scopes, and you may have to prompt them to consent again.
 
-   If after three to five attempts the OBO flow still fails, the user might not have consented to all the required scopes, and you may have to prompt them to consent again.
-
-   This approach helps reduce the possibility of user being prompted for consent more than once.
+This approach helps reduce the possibility of user being prompted for consent more than once.
 
 ## Code sample
 
