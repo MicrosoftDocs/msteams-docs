@@ -592,6 +592,23 @@ For more information about Node js code sample, see [Bot SSO quick-start](https:
 Upgrade the Teams JavaScript client SDK to (@microsoft/teams-js": "^2.0.0") to resolve the issue.
 <br>
 </details>
+<br>
+<details> 
+<summary>Which tab gets pinned if both configurable tab and static tab are defined in the app manifest for a specific scope?</summary>
+
+<br>
+If you have both configurable tab and static tab defined in your app manifest for a specific scope, Teams pins the static tab by default.
+</details>
+<br>
+<details>
+<summary>What if I already have pre-existing pinned configurable tabs after switching to static tabs?</summary>
+
+<br>
+Pre-existing pinned configurable tab instances of your app continue to work the same. You don't have the option to pin new instances of these configurable tabs. When you select to pin your tab, then Teams pins the static tab of your app. 
+<br>
+</details>
+
+
 
 ## Teams toolkit
 

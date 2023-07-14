@@ -177,6 +177,8 @@
           href: toolkit/debug-local.md
         - name: Debug background process
           href: toolkit/debug-background-process.md
+        - name: Debug for mobile
+          href: toolkit/debug-mobile.md        
       - name: Host your app on Azure
         items:    
         - name: Provision cloud resources
@@ -363,7 +365,7 @@
     displayName: clickjacking
   - name: Create a personal tab
     href: tabs/how-to/create-personal-tab.md
-    displayName: App generator, Reorder static personal tabs
+    displayName: App generator, Reorder static personal tabs, channel, or group custom tab
   - name: Create a channel tab
     href: tabs/how-to/create-channel-group-tab.md
     displayName: Create a channel tab or group tab, Create a custom channel or group tab with ASP.NET Core, Build your first app using Blazor
@@ -539,9 +541,14 @@
       displayName: MicrosoftTeams.meeting.getAppContentStageSharingState
     - name: Share in meeting
       href: concepts/build-and-test/share-in-meeting.md
-    - name: Build in-meeting notification for meeting
-      href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
-      displayName: bubble, targeted meeting, in-meeting, notification
+    - name: Build in-meeting notification and app icon badging
+      items:
+      - name: Build in-meeting notification for meeting
+        href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
+        displayName: bubble, targeted meeting, in-meeting, notification
+      - name: Enable app icon badging for your Teams app
+        href: apps-in-teams-meetings/app-icon-badging-for-your-app.md
+        displayName: app icon badging
     - name: Build extensible conversations for meeting chat
       href: apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md
     - name: Build apps for anonymous users
