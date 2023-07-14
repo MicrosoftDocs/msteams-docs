@@ -32,7 +32,7 @@ If you're a Microsoft Partner, you can work with your Microsoft counterpart to f
 Ensure that the users have access to and appropriate licenses for your app on Teams. There are two types of apps available for your users:
 
 * **Custom apps**: Custom apps are developed specifically for an organization and are made available by admins in Teams within their organization.
-* **Third-party apps**: [Microsoft Teams store](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams) provides many useful apps created by third-party software developers in addition to apps created by Microsoft. For the apps created by third-party providers, Microsoft does rigorous validation of functionality and security. For more information, see [Understand third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps).
+* **Third-party apps**: [Teams apps in AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams) are created by third-party software developers and by Microsoft. For the apps created by third-party providers, Microsoft does testing and validation. For more information, see [Understand third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps).
 
 Admins can set up an app governance process that manages your organization's IT policies, standards, and risk profiles. For more information. For more information, see [Create policies for app access](#create-policies-to-give-permission-to-use-apps-and-pin-it).
 
