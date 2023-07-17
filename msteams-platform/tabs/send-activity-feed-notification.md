@@ -58,7 +58,7 @@ The following variants show the kinds of activity feed notification cards you ca
   |Counter  |Description  |
   |---------|---------|
   |1     | Teams custom       |
-  |2     |  Windows       |
+  |2     | Windows       |
   |3     | Mac |
 
 # [Mobile](#tab/mobile)
@@ -177,6 +177,10 @@ Microsoft Teams users can customize the notifications they see in their feed, as
 Users can select **Edit** next to an app and customize the notifications, as shown in the following example. The `description` field in the Teams app manifest is displayed.
 
 :::image type="content" source="../assets/images/activity-feed/app-level-notification-settings.png" alt-text="Screenshot shows notifications customized to Banner and feed for a Teams app.":::
+
+## Examples
+
+For examples on how to send an activity feed notification, see [send activity feed notification examples](/graph/teams-send-activityfeednotifications?tabs=http#example-1-notify-a-user-about-a-task-created-in-a-chat).
 
 ## Step-by-step guide
 
