@@ -33,22 +33,21 @@ items:
   content: |
     Ensure you install the following tools for the development environment:  
 
-    * [Latest version of ngrok](https://ngrok.com/download) or any equivalent tunneling solution.
+    Ensure that you install the following tools and set up your development environment:  
+
+     | &nbsp; | Install | For using... |
+     | --- | --- | --- |
+     | **Required** | &nbsp; | &nbsp; |
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
+     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
+     | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. Use the latest version or install the portable version. |
+     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+     | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
 
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
-
-    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/).
-    * [Latest version of.NET Core SDK](https://dotnet.microsoft.com/download).
-
-    Ensure you have created the following accounts to set up your development environment: 
-
-    * [Microsoft Teams](https://teams.microsoft.com/) account.
-
       > [!TIP]
       > Ensure the Microsoft Teams account isn't a guest account.
-
-    * [Microsoft 365 developer account](https://developer.microsoft.com/en-us/microsoft-365/dev-program). If you don't have that, you need have access to a Teams account with the appropriate permissions to install an app.
 
     ## Set up your Teams development tenant
 
