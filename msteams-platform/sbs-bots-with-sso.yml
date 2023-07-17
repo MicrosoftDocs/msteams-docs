@@ -28,13 +28,13 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure you install the following tools and set up your development environment:  
+    Ensure that you install the following tools and set up your development environment:  
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
      | **Required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) |  Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, calls, and all in one place. |
-     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> Install the <br> ASP.NET and web development workload. | You can install the enterprise version in Visual Studio 2022, and install the workloads. Use the latest version. |
+     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the workloads. Use the latest version. <br> Install the ASP.NET and web development workload.|
      | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
@@ -352,7 +352,7 @@ items:
 
        The **Add a client application** window appears.
 
-    1. Enter the Client ID for desktop and web application separately that you want to authorize. It's the application ID of client application that you want to authorize.
+    1. Enter the Client ID you want to authorize for desktop and web application separately. It's the application ID of client application that you want to authorize.
        
        |**Client ID**|**For authorizing**|
        |--------|-------------|
@@ -365,7 +365,7 @@ items:
        
     1. Select **Add application**.
 
-        The following image displays the Client ID:
+        The following image displays the Client Id:
 
           :::image type="content" source="~/assets/images/bots/clientapps.png" alt-text="Screenshot of Authorized client applications with the Client IDs displayed.":::
 
