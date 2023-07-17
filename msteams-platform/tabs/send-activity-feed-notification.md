@@ -8,21 +8,21 @@ ms.topic: concept
 
 # Send activity feed notifications to users in Microsoft Teams
 
-The Microsoft Teams activity feed enables users to triage items that require attention by notifying them of changes. You can use the activity feed notification APIs in Microsoft Graph to extend this functionality to your apps. This allows your apps to provide richer experiences and better engage users by helping to keep them up to date with changes in the tools and workflows they use.
+The Microsoft Teams activity feed enables users to triage items that require attention by notifying them of changes. You can use the activity feed notification APIs in Microsoft Graph to extend this functionality to your apps. This allows your apps to provide richer experiences and better engage users by helping to keep them up-to-date with changes in the tools and workflows they use.
 
 ## Use cases of activity feed notifications
 
 * **News**: Helps users to stay updated with the latest information like new assignment or new post.
 * **Collaboration**: When you share a file or @ mention a user in a comment, users can see a text preview in the notification banner.
 * **Reminders**: A notification to let you know about an event or a task. For example, you have a training due date today, and the app sends you a reminder notification to help you remember the task or event.
-* **Alerts**: Notifications which require urgent or immediate attention. For example, the due date for a training is passed or an admin sends a request to fix a bug with the highest priority.
+* **Alerts**: Notifications, which require urgent or immediate attention. For example, the due date for a training is passed or an admin sends a request to fix a bug with the highest priority.
 
 ## Advantages of activity feed notifications
 
 * Activity feed notification is a native Teams integration that brings user seamlessly into the Tab app, bringing additional user engagement from *Activity* to your app.
 * Activity feed notification comes with an OS notification in Teams desktop and mobile clients, so that user attention is grabbed by the system pop-up and sound.
 * Notification content is highly customizable, allowing users to preview the summary of the notified events.
-* You can deep link your app to a notification so that when a user select the notification it increases user app engagement.
+* You can deep link your app to a notification so that when a user selects the notification it increases user app engagement.
 * You can send activity feed notification to various of recipients. For example, sending a personal notification or sending batch notifications to a group of users.
 * Teams manifest localization is supported for the templated text in activity feed notifications.
 
@@ -78,11 +78,11 @@ Activity feed APIs work with a Teams app. The following are the requirements for
 
 * The Teams app manifest must have the Azure AD app ID added to the webApplicationInfo section. For details, see manifest schema.
 * Activity types must be declared in the activities section. For details, see manifest schema.
-The Teams app must be installed for the recipient, either personally, or in a team or chat they are part of. For more information, see Teams app installation.
+The Teams app must be installed for the recipient, either personally, or in a team or chat they're part of. For more information, see Teams app installation.
 
 ### Teams app manifest changes
 
-This section describes the changes that need to be added to Teams app manifest. Note that you must be using the [Teams app manifest](/microsoftteams/platform/resources/schema/manifest-schema) version `1.7` or greater.
+This section describes the changes that need to be added to Teams app manifest. Ensure that you use the [Teams app manifest](/microsoftteams/platform/resources/schema/manifest-schema) version `1.7` or greater.
 
 ```json
 "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
@@ -101,8 +101,8 @@ This section describes the changes that need to be added to Teams app manifest. 
 
 |Parameter|Type|Description|
 |:---|:---|:---|
-|id|string|Azure AD app ID (client ID).|
-|resource|string|Resource associated with the Azure AD app. Also known as reply or redirect URL in the Azure Portal.|
+|`id`|string|Azure AD app ID (client ID).|
+|`resource`|string|Resource associated with the Azure AD app. Also known as reply or redirect URL in the Azure Portal.|
 
 > [!NOTE]
 > You might get an error if multiple Teams apps in the same scope (team, chat or user) are using the same Azure AD app. Make sure that you're using unique Azure AD apps.
@@ -130,7 +130,7 @@ This section describes the changes that need to be added to Teams app manifest. 
 |Parameter|Type|Description|
 |:---|:---|:---|
 |type|string|Type of activity. This needs to be unique in a specific manifest.|
-|description|string|Human-readable short description. This will be visible on the Microsoft Teams client.|
+|description|string|Human-readable short description. This is visible on the Microsoft Teams client.|
 |templateText|string|Template text for the activity notification. You can declare your parameters by encapsulating parameters in `{}`.|
 
 > [!NOTE]
@@ -170,7 +170,7 @@ You can use Activity feed notification in the following scenarios:
 
 ## Customize the notifications
 
-Microsoft Teams users can customize the notifications they see in their feed, as a banner, and so on. Notifications generated through activity feed APIs can also be customized. Users can choose how they are notified via settings in Microsoft Teams. Teams apps will appear in the list for the user to choose from, as shown in the following screenshot.
+Microsoft Teams users can customize the notifications they see in their feed, as a banner, and so on. Notifications generated through activity feed APIs can also be customized. Users can choose how they're notified via settings in Microsoft Teams. Teams apps appear in the list for the user to choose from, as shown in the following screenshot.
 
 :::image type="content" source="../assets/images/activity-feed/notification-settings.png" alt-text="Screenshot shows the Notifications settings in Teams, with the Custom option highlighted.":::
 
