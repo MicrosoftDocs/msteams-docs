@@ -22,7 +22,7 @@ You can create a bot that works in Microsoft Teams with one of the following too
 
 ## Bots with the Microsoft Bot Framework
 
-Your Teams bot consists of the following:s
+Your Teams bot consists of the following:
 
 * A publicly accessible web service hosted by you.
 * A Bot Framework registration for your web service.
