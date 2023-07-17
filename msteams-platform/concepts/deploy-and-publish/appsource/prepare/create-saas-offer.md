@@ -49,12 +49,12 @@ On the **Offer setup** tab, under **Setup** details, choose whether to sell your
 
 1. If you haven't added Offer Alias while creating the offer, enter a suitable Offer Alias name.
 
-1. To sell through Microsoft and have Microsoft facilitate transactions for you, in the Offer setup page, under setup details, select the checkbox **Yes, I would like Microsoft to manage customer licenses on my behalf**.
+1. To sell through Microsoft and have Microsoft facilitate transactions for you, in the Offer setup page, under **Setup** details, select the checkbox **Yes, I would like Microsoft to manage customer licenses on my behalf**.
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="The screenshots shows the offer setup page to setup license to manage for your app within Teams.":::
 
-    * If you would like Microsoft to manage customer licenses for you, select Yes. If you select yes, you must integrate with Microsoft Graph APIs to verify customer eligibility. For details on how to integrate, see Integrate your SaaS offer with Graph API for License Management
-    * If you want to manage customer licenses yourself, select No.
+    * If you would like Microsoft to manage customer licenses for you, select **Yes**.
+    * If you want to manage customer licenses yourself, select **No**.
 
    > [!NOTE]
    >
@@ -88,18 +88,18 @@ On the Offer listing page, under Marketplace details, complete the following ste
 
 * The Name box is prefilled with the name you entered earlier in the New offer dialog box. You can change the name at any time.
 * In the Search results summary box, enter up to 100 characters of text. This summary is used in the marketplace listing search results.
-* In the Description box, enter a description for your offer.
-* In the Getting started instructions box, provide instructions to help customers connect to your SaaS offer.
+* In the **Description** box, enter a description for your offer.
+* In the **Getting started** instructions box, provide instructions to help customers connect to your SaaS offer.
 * Optionally, you can add up to three search keywords.
-* In the Privacy policy link box, enter a link to your organization's privacy policy, starting with https.
+* In the **Privacy policy** link box, enter a link to your organization's privacy policy, starting with https.
 
 ### Preview audience
 
 You can define a limited audience who can review your SaaS offer before you publish it live to the broader marketplace audience.
 
-On the **Preview Audience** page, add a single Azure AD or MSA email address and an optional description in the boxes provided.
-To add another email address, select the Add another email link.
-Select **Save draft** before continuing to the next tab: Technical configuration.
+* On the **Preview Audience** page, add a single Azure AD or MSA email address and an optional description in the boxes provided.
+* To add another email address, select the Add another email link.
+* Select **Save draft** before continuing to the next tab: Technical configuration.
 
 ### Technical configuration
 
@@ -120,7 +120,7 @@ Offers sold through the Microsoft commercial marketplace must have at least one 
 
 When you finish configuring your offer, validate the offer and submit your offer for publishing. The Offer overview page shows the Publish status where you can track the progress.
 
-When the offer is in Publisher sign-off state, preview links for the respective platforms are given below the Go live button to test the offer. It's recommended to [preview and test the offer](Test-preview-for-monetized-apps.md) before you publish the offer live.
+When the offer is in Publisher sign-off state, preview links for the respective platforms are given below the **Go live** button to test the offer. It's recommended to [preview and test the offer](Test-preview-for-monetized-apps.md) before you publish the offer live.
 
 ## Code sample
 

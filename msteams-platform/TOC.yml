@@ -893,12 +893,12 @@
   - name: Overview
     href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
     displayName: Pricing model, SaaS offer, purchase experience, Price
-  - name: Prerequisites
-    href: concepts/deploy-and-publish/appsource/prepare/prerequisites.md
-    displayName: SaaS API, landing page, graph usageRights API
   - name: Plan your SaaS offer
     href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     displayName: license, Transactable Software-as-a-Service, Recloud app
+  - name: Prerequisites
+    href: concepts/deploy-and-publish/appsource/prepare/prerequisites.md
+    displayName: SaaS API, landing page, graph usageRights API
   - name: Create your SaaS offer
     href: concepts/deploy-and-publish/appsource/prepare/create-saas-offer.md
     displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
