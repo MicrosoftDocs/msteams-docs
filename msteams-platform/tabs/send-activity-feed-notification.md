@@ -55,9 +55,20 @@ The following variants show the kinds of activity feed notification cards you ca
 
 :::image type="content" source="../assets/images/activity-feed/activity-feed-notifications-desktop.png" alt-text="Screenshot shows the activity feed notifications in a desktop."  lightbox="../assets/images/activity-feed/activity-feed-notifications-desktop.png" border="false":::
 
+  |Counter  |Description  |
+  |---------|---------|
+  |1     | Teams custom       |
+  |2     |  Windows       |
+  |3     | Mac |
+
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="../assets/images/activity-feed/activity-feed-notifications-mobile.png" alt-text="Screenshot shows the activity feed notifications in a mobile." border="false":::
+
+  |Counter  |Description  |
+  |---------|---------|
+  |1     | Android        |
+  |2     |  iOS       |
 
 ---
 
