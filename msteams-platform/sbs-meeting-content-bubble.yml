@@ -43,10 +43,9 @@ items:
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
      | **Required** | &nbsp; | &nbsp; |
-     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the workloads. Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** |
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the workloads. Install the <br> **ASP.NET and web development** workload.|
-     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
+     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the workloads. Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** |
+     | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. Use the latest version or install the portable version. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     
       > [!NOTE]
@@ -351,6 +350,9 @@ items:
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"BaseURL"` to your `webAppDomain`.
 
+          > [!NOTE]
+          > `WebAppDomain` is your ngrok domain.
+
           :::image type="content" source="~/assets/images/meeting-content-bubble/appsettings-json1_1.png" alt-text="App settings":::
 
 - title: Set up manifest file
@@ -362,10 +364,12 @@ items:
     
          * Set `ID` to **Microsoft App ID**.
          * Set `botId` to **Microsoft App ID**.
+         * Set `webApplicationInfo` Id to **Microsoft App ID**.
          * Set `validDomains` to **Web App Domain Name**.
 
           > [!NOTE]
           > `WebAppDomain` is your ngrok domain.
+          > If the ngrok ID end with `*.ngrok-free.app` valid domain is optional.
 
          :::image type="content" source="~/assets/images/meeting-content-bubble/manifest-set_1.png" alt-text="Screenshot of Manifest cloned repository.":::
 
@@ -440,6 +444,10 @@ items:
     Did you come up with something like this?
 
      :::image type="content" source="~/assets/images/meeting-content-bubble/final-result-targeted-notification.png" alt-text="Screenshot shows the final output after the selection of targeted notification.":::
+
+     :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
+
+     :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
 
 
 - content: |
