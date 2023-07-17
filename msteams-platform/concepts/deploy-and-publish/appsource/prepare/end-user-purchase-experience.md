@@ -24,6 +24,8 @@ The following example shows how users can purchase subscription plans for a Team
 
 1. Select your country to see subscription plans for your location.
 
+    :::image type="content" source="~/assets/images/saas-offer/add-region.png" alt-text="Screenshot shows option to select the country or region.":::
+
 1. In the **Choose a subscription plan** dialog, select the plan you want.
 
     > [!NOTE]
