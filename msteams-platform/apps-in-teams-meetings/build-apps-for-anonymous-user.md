@@ -136,7 +136,6 @@ The [get members](/microsoftteams/platform/bots/how-to/get-teams-context#fetch-t
 | --- | --- |
 | `id` | Unique generated value for the anonymous user. |
 | `name` | Name provided by the anonymous user when joining the meeting. |
-| `userRole` | `Anonymous` represents anonymous user. |
 | `tenantId` | Tenant ID of the meeting organizer. |
 | `userRole` | `anonymous`, represents anonymous user. |
 
