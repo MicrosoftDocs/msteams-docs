@@ -38,7 +38,7 @@ To identify and retrieve contextual information for your tab content, see [get c
 
 ## Get participant API
 
-The `GetParticipant` API must have a bot registration and ID to generate auth tokens. For more information, see [bot registration and ID](/azure/bot-service/bot-service-quickstart-registration)
+The `GetParticipant` API must have a bot registration and ID to generate auth tokens. For more information, see [bot registration and ID](/azure/bot-service/bot-service-quickstart-registration).
 
 > [!NOTE]
 >
