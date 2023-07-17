@@ -404,6 +404,9 @@
   - name: Tab margin changes
     href: resources/removing-tab-margins.md
     displayName: margins align, extra padding effect, size of the tab margins, changing margins
+  - name: Send activity feed notifications
+    href: tabs/send-activity-feed-notification.md
+    displayName: Activity feed, notifications, customize notification
 - name: Build bots
   items:
   - name: Overview
