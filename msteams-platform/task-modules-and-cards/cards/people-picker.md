@@ -384,11 +384,17 @@ The following table lists the query parameters:
 |Property name  |description  |
 |---------|---------|
 |`type`     |    `component`     |
-|`name`     |   `graph.microsoft.com/users`      |
+|`name`     |   `graph.microsoft.com/users`. Search all members across the organization.      |
 |`view`     |   `compact`      |
-|`id`     | User's MRI.    |
-|`displayName`     |   Name of the user.      |
+|`properties`|Passed directly to the component template|
+|`id`     | User's MRI    |
+|`displayName`     |   Name of the user     |
 |`userPrincipalName`|The user principal name of the account in Azure AD.|
+
+
+
+
+Adaptive Components are high-level components powered by [templating](/adaptive-cards/templating/) and native Adaptive Card elements. The type `component` can be used anywhere inside the card body and the component data is defined in the `properties` attribute.  The component data under `properties` is passed directly to the component. 
 
 Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Azure Active Directory (Azure AD) information, such as `name`, `id` and `userPrincipalName`. For more information, see [Fetch the roster or user profile](../../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
