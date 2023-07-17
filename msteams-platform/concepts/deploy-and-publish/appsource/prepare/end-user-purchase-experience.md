@@ -16,7 +16,7 @@ Add functionality to your Teams experience by subscribing and managing licenses 
 
 The following example shows how users can purchase subscription plans for a Teams app:
 
-1. In the Teams store, find and select the app you want to purchase the subscription. Here *Feeder* app is shown as an example.
+1. In the Teams store, find and select the app you want to purchase the subscription. Here *Miro* app is shown as an example.
 
 1. In the app details dialog, select **Buy a subscription**.
 
