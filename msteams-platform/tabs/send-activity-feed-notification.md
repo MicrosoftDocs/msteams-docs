@@ -20,7 +20,7 @@ The Microsoft Teams activity feed enables users to triage items that require att
 ## Advantages of activity feed notifications
 
 * Activity feed notification is a native Teams integration that brings user seamlessly into the Tab app, bringing additional user engagement from *Activity* to your app.
-* Activity feed notification comes with an OS notification in Teams desktop and mobile clients, so that user attention is grabbed by the system pop-up and sound.
+* Activity feed notification comes with an OS notification in Teams desktop and mobile clients, so that user attention is grabbed from the system pop-up and sound.
 * Notification content is highly customizable, allowing users to preview the summary of the notified events.
 * You can deep link your app to a notification so that when a user selects the notification it increases user app engagement.
 * You can send activity feed notification to various of recipients. For example, sending a personal notification or sending batch notifications to a group of users.
@@ -49,7 +49,7 @@ The following example shows the components together provide the details about a 
 
 ### Types of activity feed notification cards
 
-The following variants show the kinds of activity feed notification cards you can display. The app logo replaces the user avatar for app-generated notifications.
+The following variants show the kinds of activity feed notification cards you can display. The app logo replaces the user avatar for app-generated notifications:
 
 # [Desktop](#tab/desktop)
 
@@ -102,12 +102,12 @@ This section describes the changes that need to be added to Teams app manifest. 
 |Parameter|Type|Description|
 |:---|:---|:---|
 |`id`|string|Azure AD app ID (client ID).|
-|`resource`|string|Resource associated with the Azure AD app. Also known as reply or redirect URL in the Azure Portal.|
+|`resource`|string|Resource associated with the Azure AD app. Also known as reply or redirect URL in the Microsoft Azure Portal.|
 
 > [!NOTE]
-> You might get an error if multiple Teams apps in the same scope (team, chat or user) are using the same Azure AD app. Make sure that you're using unique Azure AD apps.
+> You might get an error if multiple Teams apps in the same scope (team, chat, or user) are using the same Azure AD app. Make sure that you're using unique Azure AD apps.
 
-#### activities section changes
+#### Activities section changes
 
 ```json
 "activities":
@@ -163,7 +163,7 @@ You can use Activity feed notification in the following scenarios:
 * Support complex user interactions​.
 * Send delegated notifications from the user who initiated the notification​.
 * Put template in the manifest​.
-* Localization for notifications is handled by Teams.
+* Teams handles localization for notifications.
 
 > [!NOTE]
 > The activity icon is based on the context the request is made in. If the request is made with delegated permissions, the user's photo appears as the avatar, while the Teams app icon appears as the activity icon. In an application-only context, the Teams app icon is used as the avatar and the activity icon is omitted.
@@ -174,9 +174,10 @@ Microsoft Teams users can customize the notifications they see in their feed, as
 
 :::image type="content" source="../assets/images/activity-feed/notification-settings.png" alt-text="Screenshot shows the Notifications settings in Teams, with the Custom option highlighted.":::
 
-Users can select **Edit** next to an app and customize the notifications, as shown in the following example. The `description` field in the Teams app manifest is displayed.
+Users can select **Edit** next to an app and customize the notifications. The `description` field in the Teams app manifest is displayed.
 
 :::image type="content" source="../assets/images/activity-feed/app-level-notification-settings.png" alt-text="Screenshot shows notifications customized to Banner and feed for a Teams app.":::
+
 
 ## Examples
 
@@ -188,4 +189,5 @@ Follow the [step-by-step guide](../sbs-graphactivity-feedbroadcast.yml) to send 
 
 ## See also
 
-[Notification bot in Teams](../bots/how-to/conversations/notification-bot-in-teams.md)
+* [Notification bot in Teams](../bots/how-to/conversations/notification-bot-in-teams.md)
+* [Designing activity feed notifications for your Microsoft Teams app](../concepts/design/activity-feed-notifications.md)
