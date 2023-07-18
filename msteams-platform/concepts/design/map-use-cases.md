@@ -106,6 +106,8 @@ For example:
         :::image type="content" source="~\assets\images\overview\tab-extension.png" alt-text="Microsoft Teams app tab details. ":::
     :::column-end:::
 
+Sample 2
+
 :::row:::
    :::column:::
       :::image type="icon" source="~\assets\images\overview\microsoft-teams-app.png" border="false":::
