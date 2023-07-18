@@ -114,7 +114,7 @@ Sample 2
       :::image type="icon" source="~\assets\images\overview\microsoft-teams-app.png" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="~\assets\images\overview\tab.png" link="#what-are-tabs" border="false":::
+      :::image type="icon" source="~\assets\images\overview\tab.png" link="~/tabs/what-are-tabs" border="false":::
    :::column-end:::
    :::column span="":::
      :::image type="icon" source="~\assets\images\overview\tab-extension.png" border="false":::
