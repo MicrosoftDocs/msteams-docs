@@ -510,6 +510,11 @@ TeamsFx provides you with an [Incoming Webhook notification sample](https://gith
 
 [Back to top](#notification-bot-in-teams)
 
+
+### Send activity feed notifications
+
+If you want to send activity feed notifications for your app, you can use the activity feed notification APIs in Microsoft Graph. For more information, see [Send activity feed notifications to users in Microsoft Teams](../../../tabs/send-activity-feed-notification.md).
+
 ## FAQ
 
 <br>
@@ -614,10 +619,6 @@ For more information on how to add adaptive card actions to command bot, see [Wo
 <br>
 
 </details>
-
-### Send activity feed notifications
-
-If you want to send activity feed notifications for your app, you can use the activity feed notification APIs in Microsoft Graph. For more information, see [Send activity feed notifications to users in Microsoft Teams](../../../tabs/send-activity-feed-notification.md).
 
 [Back to top](#notification-bot-in-teams)
 
