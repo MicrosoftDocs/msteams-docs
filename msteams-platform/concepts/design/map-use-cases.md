@@ -120,7 +120,7 @@ For example:
    :::column span="":::
       :::image type="icon" source="~\assets\images\overview\message-extension.png" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\message-extension-extension.png" alt-text="Microsoft Teams app bot details." border="false":::
+     :::image type="content" source="~\assets\images\overview\message-extension-extension.png" alt-text="Microsoft Teams app message extension details." border="false":::
 :::row-end:::
 
 ## See also
