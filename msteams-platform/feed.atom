@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Microsoft Teams Platform</title>
-	<updated>2023-05-26T04:15:01+05:30</updated>
+	<updated>2023-07-19T04:15:01+05:30</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
 	<category term="new"/>
 	<category term="updated"/>
+	<entry>
+		<title type="html"><![CDATA[Platform update: Extend static tabs to group chat or meetings with a customizable experience]]></title>
+		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/what-are-tabs?tabs=desktop%2Cdesktop1%2Cpersonal</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/what-are-tabs?tabs=desktop%2Cdesktop1%2Cpersonal?referrer=whats.new.rssfeed"/>
+		<updated>2023-07-13T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[Personal (static) tabs in personal scope continue to work the same way. However, you can now extend static tabs to group chat or meetings with a customizable experience. You can extend static tabs to different scopes. Static tabs in chats or meetings behave more like apps, as you can pin only one tab per app. This feature is in Developer Preview. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2062b12649-8660-975a-87f6-2f7486b5dc79%0A*%20Version%20Independent%20ID%3A%20c1b86714-5b2e-79a8-5761-0fb2fd5746c0%0A*%20Content%3A%20%5BMicrosoft%20Teams%20tabs%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fwhat-are-tabs%3Ftabs%3Ddesktop%252Cdesktop1%252Cpersonal)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftabs%2Fwhat-are-tabs.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fwhat-are-tabs.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Platform update: Use app icon badging to identify any app activity during a meeting]]></title>
+		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/apps-in-teams-meetings/app-icon-badging-for-your-app</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/apps-in-teams-meetings/app-icon-badging-for-your-app?referrer=whats.new.rssfeed"/>
+		<updated>2023-07-06T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[App icon badging helps a meeting participant identify any app activity during a meeting. Participants get activity notification for the meeting apps. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d4be67f0-6ae1-d898-886f-10560d217cba%0A*%20Version%20Independent%20ID%3A%20d4be67f0-6ae1-d898-886f-10560d217cba%0A*%20Content%3A%20%5BEnable%20app%20icon%20badging%20for%20your%20Teams%20app%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fapps-in-teams-meetings%2Fapp-icon-badging-for-your-app)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fapps-in-teams-meetings%2Fapp-icon-badging-for-your-app.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fapps-in-teams-meetings%2Fapp-icon-badging-for-your-app.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40v-sdhakshina%0A*%20Microsoft%20Alias%3A%20**v-sdhakshina**">feedback</a>? It is important to us.]]></summary>
+		<category label="new" term="new"/>
+	</entry>
 	<entry>
 		<title type="html"><![CDATA[Platform update: Teams AI Library]]></title>
 		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview</id>
@@ -101,22 +117,6 @@
 		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/teams-developer-portal#changelog-for-developer-portal?referrer=whats.new.rssfeed"/>
 		<updated>2023-02-27T11:04:01+05:30</updated>
 		<summary type="html"><![CDATA[Changelog for Developer Portal allows you to stay engaged with the latest updates in Teams. You can view the updates about features, recent changes in APIs, and important bug fixes. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%207da63b6f-15d7-a6dd-82fc-d183afaeb816%0A*%20Version%20Independent%20ID%3A%2082d1ca83-28dd-220e-ab0c-a4833f8f8143%0A*%20Content%3A%20%5BDeveloper%20Portal%20for%20Teams%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal%23changelog-for-developer-portal)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Doc update: Drive customer adoption of your app]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/promote-app-adoption</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/promote-app-adoption?referrer=whats.new.rssfeed"/>
-		<updated>2023-02-28T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[As an app developer, one of the key activities after publishing your Microsoft Teams app is to drive adoption for your app with your customers. Ensure that the users interact with your app and you learn from their usage behaviour and feedback. You incorporate the learning in your app revisions. Examples of post-publish activities are deployment and adoption-related engagements, user base growth, support for existing app customers, app updates, and app monetization. This document provides resources and best practices to support the rollout of your Teams app in your customers’ organizations. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20fdf2a4a2-80cf-0c36-2611-fddfd14917bb%0A*%20Version%20Independent%20ID%3A%20fdf2a4a2-80cf-0c36-2611-fddfd14917bb%0A*%20Content%3A%20%5BFacilitate%20adoption%20of%20your%20app%20and%20create%20awareness%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fpromote-app-adoption)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fpromote-app-adoption.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fpromote-app-adoption.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40ashishguptaiitb%0A*%20Microsoft%20Alias%3A%20**guptaashish**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Doc update: Strategize and execute growth for your app]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth?referrer=whats.new.rssfeed"/>
-		<updated>2023-02-20T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Shipping your app on the Teams marketplace is just the beginning. After shipping, you must meticulously plan how to grow your app and make it a successful product on the marketplace. It drives intended business metrics and helps you realize returns on the investment you made into planning, designing, and building the app. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2011870ac8-2383-4b73-5fe1-f2343ee68545%0A*%20Version%20Independent%20ID%3A%2011870ac8-2383-4b73-5fe1-f2343ee68545%0A*%20Content%3A%20%5BOverview%20for%20planning%2C%20strategizing%2C%20and%20executing%20growth%20for%20your%20app%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fpost-publish%2Fapp-growth%2Foverview-app-growth)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fpost-publish%2Fapp-growth%2Foverview-app-growth.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fpost-publish%2Fapp-growth%2Foverview-app-growth.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40heath-hamilton%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 </feed>
