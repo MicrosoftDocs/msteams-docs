@@ -1,13 +1,14 @@
 ---
 title: Send and receive files using bot
 description: Learn how to send and receive files through the bot using Graph APIs for personal, channel and groupchat scopes.
-ms.date: 05/20/2019
+ms.date: 04/17/2023
 ms.localizationpriority: medium
 ms.topic: how-to
 ---
 # Send and receive files using bot
 
 > [!IMPORTANT]
+>
 > * This article is based on the v4 Bot Framework SDK.
 > * Bots don't support sending and receiving files in Governmernt Community Cloud High (GCC-High) and Department of Defense (DOD) environments.
 
@@ -41,7 +42,7 @@ The next sections describe how to send file content as direct user interaction, 
 
 ### Configure the bot to support files
 
-To send and receive files in the bot, set the `supportsFiles` property in the manifest to `true`. This property is described in the [bots](~/resources/schema/manifest-schema.md#bots) section of the Manifest reference.
+To send and receive files in the bot, set the `supportsFiles` property in the manifest to `true`. This property is described in the [bots](~/resources/schema/manifest-schema.md#bots) section of the manifest reference.
 
 The definition looks like this, `"supportsFiles": true`. If the bot does not enable `supportsFiles`, the features listed in this section do not work.
 
@@ -333,5 +334,3 @@ Follow the [step-by-step guide](../../sbs-file-handling-in-bot.yml) to upload fi
 * [Authentication flow for bots in Microsoft Teams](authentication/auth-flow-bot.md)
 * [Have a personal (one-on-one) conversation with a Microsoft Teams bot](../../resources/bot-v3/bot-conversations/bots-conv-personal.md)
 * [Get Teams specific context for your bot](get-teams-context.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
-* [Protected APIs in Microsoft Teams](/graph/teams-protected-apis)

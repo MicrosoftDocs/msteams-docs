@@ -16,7 +16,7 @@ To invoke share to stage, users can select the **Share to Stage** icon on the up
 
 ## App manifest settings for apps in meeting stage
 
-To share an app to the meeting stage, you must configure the context and RSC permissions in the app manifest:
+To share an app to the meeting stage, you must configure the context and RSC permissions in the [app manifest](../resources/schema/manifest-schema.md):
 
 1. Update the `context` property in the app manifest as follows:
 
@@ -58,13 +58,13 @@ To help users in such scenarios, we released APIs within the Microsoft Teams Jav
 
 The following image shows the share to stage option in the Teams desktop client:
 
-   :::image type="content" source="../assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="The screenshot shows the share to meeting stage view.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="The screenshot shows the share to meeting Stage View.":::
 
 # [Mobile](#tab/mobile)
 
 The following image shows the share to stage option in the Teams mobile client:
 
-   :::image type="content" source="../assets/images/meeting-stage/meeting-share-to-stage-mobile.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams mobile.":::
+   :::image type="content" source="../assets/images/meeting-stage/meeting-share-to-stage-mobile.png" alt-text="This screenshot shows meeting Stage View of the app you shared to meeting in Teams mobile.":::
 
 ---
 
@@ -239,9 +239,9 @@ The following table provides the user types and lists the features that each use
 
 |Sample name | Description | .NET| Node.js |
 |----------------|-----------------|--------------|----------------|
-|Meeting stage sample | This sample app shows a tab in meeting stage for collaboration. This sample also uses live share sdk for collaborative stage view. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+|Meeting stage sample | This sample app shows a tab in meeting stage for collaboration. This sample also uses live share sdk for collaborative Stage View. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 | In-meeting notification | Demonstrates how to implement in-meeting notifications using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/nodejs) |
-| In-meeting document signing | This sample app shows how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO, and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA |
+| In-meeting document signing | This sample app shows how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO, and user specific Stage View. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA |
 
 ## Step-by-step guide
 

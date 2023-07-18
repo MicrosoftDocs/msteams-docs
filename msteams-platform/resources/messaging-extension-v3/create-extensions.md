@@ -3,6 +3,7 @@ title: Initiate actions with message extensions
 description: In this module, learn create Action-based message extensions to allow users to trigger external services.
 ms.localizationpriority: medium
 ms.topic: how-to
+ms.date: 04/02/2023
 ---
 # Initiate actions with message extensions
 
@@ -714,4 +715,4 @@ public class MessagesController : ApiController
 
 ## See also
 
-[Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md).
+[Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md)
