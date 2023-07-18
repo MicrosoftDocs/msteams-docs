@@ -250,7 +250,7 @@ Messages sent between users and bots include internal channel data within the me
 
 ## Get edit message event
 
-When you edit a message in a chat, group chat, or Teams channel, the bot gets a notification of the edit message event.
+When you edit a message in a chat, group chat, or channel, the bot gets a notification of the edit message event.
 
 To get an edit message event notification in a bot, you can override `OnTeamsMessageEditAsync` handler.
 
@@ -355,7 +355,7 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ## Get undelete message event
 
-When you undelete a message in chat, group chat, or Teams channel, the bot gets a notification of the undelete message event.
+When you undelete a message in chat, group chat, or channel, the bot gets a notification of the undelete message event.
 
 To get an undelete message event notification in a bot, you can override `OnTeamsMessageUndeleteAsync` handler.
 
@@ -462,7 +462,7 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ## Get soft delete message event
 
-When you soft delete a message in chat, group chat, or Teams channel, the bot gets a notification of the soft delete message event.
+When you soft delete a message in chat, group chat, or channel, the bot gets a notification of the soft delete message event.
 
 To get a soft delete message event notification in a bot, you can override `OnTeamsMessageSoftDeleteAsync` handler.
 
