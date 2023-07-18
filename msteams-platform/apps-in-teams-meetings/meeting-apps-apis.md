@@ -1094,8 +1094,7 @@ The following code provides an example of the participant leave event payload:
             "aadObjectId": " user_object_Id " 
         },   
         "meeting": { 
-            "inMeeting": true, 
-            "role": "Organizer" //Atendee, Organizer, Presenter 
+            "inMeeting": true
         },  
         }], 
     }, 
