@@ -23,7 +23,7 @@ Following are the types of RSC permissions:
 
 1. The mode of data access:
     * Application: The app accesses data without the presence of a signed-in user.
-    * Delegated: The app only accesses data in the context of a signed-in user's sessions. It does not allow access in the absence of a signed-in user.
+    * Delegated: The app only accesses data in the context of a signed-in user's sessions. It doesn't allow access in the absence of a signed-in user.
 
 | &nbsp; | Application context RSC permissions | Delegated context RSC permissions |
 | ---- | :----: | :----: |
@@ -47,7 +47,7 @@ Use RSC permissions to determine the data access methods for your app. A user's 
   > [!NOTE]
   > Application RSC permissions for chat scope are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
 
-* **Delegated context RSC permissions (delegated permission)**: The app only accesses data in the context of a signed in user's sessions. It doesn't allow access in the absence of a signed-in user. Only authorized users can install an app in a specific scope. They can also grant any delegated RSC permissions that the app requests in that specific scope at app installation. For example, if regular members have the permission to install an app inside a team, then they can also grant delegated RSC permission to the app in that specific team.
+* **Delegated context RSC permissions (delegated permission)**: Allows an app to access data only on behalf of a signed-in user. No access is allowed in the absence of a signed-in user. Only authorized users can install an app in a specific scope. They can also grant any delegated RSC permissions that the app requests in that specific scope at app installation. For example, if regular members have the permission to install an app inside a team, then they can also grant delegated RSC permission to the app in that specific team.
 
 ### RSC-based data access APIs
 
