@@ -116,7 +116,7 @@ Sample 2
    :::column span="":::
       :::image type="icon" source="~\assets\images\overview\tab.png" border="false":::
    :::column-end:::
-   :::column span="1":::
+   :::column span="2":::
      :::image type="icon" source="~\assets\images\overview\tab-extension.png" border="false":::
    :::column-end:::
 :::row-end:::
