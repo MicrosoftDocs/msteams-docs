@@ -328,7 +328,7 @@ items:
 
        A webpage opens with a message **Your bot is ready!**.
 
-       :::image type="content" source="~/assets/images/calls-and-meetings/bot-is-ready.png" alt-text="Screenshot of localhost displaying your bot is ready.":::
+       :::image type="content" source="~/assets/images/calls-and-meetings/bot-is-ready.png" alt-text="Screenshot of localhost displaying your bot is ready." lightbox="~/assets/images/calls-and-meetings/bot-is-ready-1.png":::
     
     1. Go to **Microsoft Teams** and select the **Apps** icon.
     
@@ -351,7 +351,7 @@ items:
   content: |
     Bot allows you to access services and content in a dedicated space within a channel or in a chat.
 
-    Perform the following steps to use the bot:
+    Following steps describes how to use the bot:
 
     1. In the left pane of the Teams, select **More added apps** (**...**) and select your app from the list.
     1. Bot sends welcome text with Adaptive Card.
