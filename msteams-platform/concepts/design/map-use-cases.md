@@ -97,11 +97,11 @@ For example:
     :::column:::
         :::image type="content" source="~/assets/images/overview/microsoft-teams-app.png" alt-text="Microsoft Teams app. ":::
     :::column-end:::
-    :::column span="2":::
+    :::column span="":::
     :::column:::
         :::image type="content" source="~\assets\images\overview\tab.png" alt-text="Microsoft Teams app tab. ":::
     :::column-end:::
-    :::column span="5":::
+    :::column span="":::
     :::column:::
         :::image type="content" source="~\assets\images\overview\tab-extension.png" alt-text="Microsoft Teams app tab details. ":::
     :::column-end:::
