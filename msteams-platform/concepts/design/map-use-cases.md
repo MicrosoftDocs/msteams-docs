@@ -94,41 +94,14 @@ For example:
 > You can also explore the capability to add meeting app extensibility to your Teams app. For more information, see [apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md).
 
 :::row:::
-    :::column:::
-        :::image type="content" source="~/assets/images/overview/microsoft-teams-app.png" alt-text="Microsoft Teams app. ":::
-    :::column-end:::
-    :::column span="":::
-    :::column:::
-        :::image type="content" source="~\assets\images\overview\tab.png" alt-text="Microsoft Teams app tab. ":::
-    :::column-end:::
-    :::column span="2":::
-    :::column:::
-        :::image type="content" source="~\assets\images\overview\tab-extension.png" alt-text="Microsoft Teams app tab details. ":::
-    :::column-end:::
-:::row-end:::
-
-Sample 2
-
-:::row:::
    :::column:::
       :::image type="icon" source="~\assets\images\overview\microsoft-teams-app.png" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="~\assets\images\overview\tab.png" border="false":::
    :::column-end:::
-   :::column span="2":::
-     :::image type="content" source="~\assets\images\overview\tab-extension.png" alt-text="Microsoft Teams app tab details." border="false":::
-   :::column-end:::
-:::row-end:::
-
-sample 3
-
-:::row:::
-   :::column:::
-      :::image type="icon" source="~\assets\images\overview\microsoft-teams-app.png" border="false":::
-   :::column-end:::
    :::column span="":::
-      :::image type="icon" source="~\assets\images\overview\tab.png" border="false":::
+      :::image type="icon" source="~\assets\images\overview\line-1.png" border="false":::
    :::column-end:::
      :::image type="content" source="~\assets\images\overview\tab-extension.png" alt-text="Microsoft Teams app tab details." border="false":::
 :::row-end:::
