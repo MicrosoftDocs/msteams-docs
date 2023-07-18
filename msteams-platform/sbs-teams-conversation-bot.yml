@@ -38,9 +38,13 @@ items:
      | **Required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
-     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> Install the <br> ASP.NET and web development workload. | You can install the enterprise version in Visual Studio 2022, and install the workloads. |   
-     | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. Use the latest version or install the portable version. |
+     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> Install the <br> ASP.NET and web development workload. | You can install the enterprise version in Visual Studio 2022, and install the workloads. Use the latest version. |   
+     | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments.  If you haven't installed the latest version, install the portable version. |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place. |
+      
+      > [!NOTE]
+      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
+
 
 - title: Create and register your bot
   durationInMinutes: 5

@@ -23,7 +23,7 @@ items:
 
     This step-by-step guide helps you to build a search based message extension. You'll see the following output:
 
-    :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/final_output_1.png" alt-text="Screenshot of the search based message extension output after you have successfully completed the step-by-step guide.":::
+    :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/output.png" alt-text="Screenshot shows the search based message extension output after you have successfully completed the step-by-step guide.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -33,9 +33,9 @@ items:
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
      | **Required** | &nbsp; | &nbsp; |
-     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install the <br> ASP.NET and web development workload. | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
-     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
+     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> Install the <br> ASP.NET and web development workload. | You can install the enterprise version in Visual Studio 2022, and install the workloads. Use the latest version. |
+     | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the latest version, install the portable version. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
       > [!NOTE]
@@ -54,10 +54,10 @@ items:
 
     1. Select **Clone**. 
 
-- title: Create and register your bot in Azure AD portal
+- title: Create and register your bot
   durationInMinutes: 5
   content: |
-    To create and register your bot in Microsoft Azure Active Directory (Azure AD), perform the following steps:
+    Register your bot with Azure Bot service when you develop and host it in Azure. Following are the steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
@@ -67,7 +67,7 @@ items:
 
     **To create Azure Bot resource**
 
-    1. Go to the [Azure portal](https://portal.azure.com/).
+    1. Go to [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
     1. In the search box, enter **Azure Bot**.
     1. Select **Enter**.
