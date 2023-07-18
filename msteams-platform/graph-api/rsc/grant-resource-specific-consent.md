@@ -31,7 +31,7 @@ To add RSC permissions to your app, follow these steps:
 The Azure Active Directory (Azure AD) portal provides a central platform for you to register and configure your apps. You must register your app in the Azure AD portal to integrate with the identity platform and call Graph APIs. For more information, see [register an app with the identity platform](/graph/auth-register-app-v2).
 
 > [!WARNING]
-> You mustn't share your Azure AD app ID across multiple Teams apps. There must be a 1:1 mapping between a Teams app and an Azure AD app. Attempts to install multiple Teams apps which are associated with the same Azure AD app ID will cause installation or runtime failures.
+> You mustn't share your Azure AD app ID across multiple Teams apps. There must be a 1:1 mapping between a Teams app and an Azure AD app. Installing multiple Teams apps associated with the same Azure AD app ID will cause installation or runtime failures.
 
 ### Review your application permissions in the Azure AD portal
 
@@ -396,7 +396,7 @@ The default value of the property `isChatResourceSpecificConsentEnabled` is base
 * Teams app with RSC permissions is installed in a chat or meeting.
 
 > [!NOTE]
-> Admin control is added to allow or block RSC consent settings based on the sensitivity of the data accessed. It isn't based on the single master switch that enables or disables consent settings for app RSC permissions for all apps in the tenant.
+> Admin control is added to allow or block RSC settings based on the sensitivity of the accessed data. The control is independent of the org-wide app settings for RSC that allows or blocks RSC permissions for all apps in the tenant.
 
 <br>
 </details>
