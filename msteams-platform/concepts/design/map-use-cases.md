@@ -100,10 +100,27 @@ For example:
    :::column span="":::
       :::image type="icon" source="~\assets\images\overview\tab.png" border="false":::
    :::column-end:::
-   :::column span="":::
-      :::image type="icon" source="~\assets\images\overview\line-1.png" border="false":::
-   :::column-end:::
      :::image type="content" source="~\assets\images\overview\tab-extension.png" alt-text="Microsoft Teams app tab details." border="false":::
+:::row-end:::
+
+:::row:::
+   :::column:::
+      :::image type="icon" source="~\assets\images\overview\microsoft-teams-app.png" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="~\assets\images\overview\bot.png" border="false":::
+   :::column-end:::
+     :::image type="content" source="~\assets\images\overview\bot-extension.png" alt-text="Microsoft Teams app bot details." border="false":::
+:::row-end:::
+
+:::row:::
+   :::column:::
+      :::image type="icon" source="~\assets\images\overview\microsoft-teams-app.png" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="~\assets\images\overview\message-extension.png" border="false":::
+   :::column-end:::
+     :::image type="content" source="~\assets\images\overview\message-extension-extension.png" alt-text="Microsoft Teams app bot details." border="false":::
 :::row-end:::
 
 ## See also
