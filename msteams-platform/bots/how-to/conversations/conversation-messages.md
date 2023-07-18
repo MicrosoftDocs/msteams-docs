@@ -462,12 +462,9 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ## Get soft delete message event
 
-When you soft delete a message in a chat, the bot gets a notification of the soft delete message event.
+When you soft delete a message in chat, group chat, or Teams channel, the bot gets a notification of the soft delete message event.
 
 To get a soft delete message event notification in a bot, you can override `OnTeamsMessageSoftDeleteAsync` handler.
-
-> [!NOTE]
-> The `OnTeamsMessageSoftDeleteAsync` handler isn’t supported in group chat and Teams channel scopes.
 
 Following is an example of a soft delete message event notification using `OnTeamsMessageSoftDeleteAsync` when a message is soft deleted:
 
