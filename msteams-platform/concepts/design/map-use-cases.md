@@ -113,10 +113,10 @@ Sample 2
    :::column:::
       :::image type="icon" source="~\assets\images\overview\microsoft-teams-app.png" border="false":::
    :::column-end:::
-   :::column span="2":::
-      :::image type="icon" source="~\assets\images\overview\tab.png" link="~/tabs/what-are-tabs" border="false":::
+   :::column span="":::
+      :::image type="icon" source="~\assets\images\overview\tab.png" border="false":::
    :::column-end:::
-   :::column span="5":::
+   :::column span="1":::
      :::image type="icon" source="~\assets\images\overview\tab-extension.png" border="false":::
    :::column-end:::
 :::row-end:::
