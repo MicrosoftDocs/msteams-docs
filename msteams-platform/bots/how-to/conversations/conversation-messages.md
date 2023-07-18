@@ -250,12 +250,9 @@ Messages sent between users and bots include internal channel data within the me
 
 ## Get edit message event
 
-When you edit a message in a chat, the bot gets a notification of the edit message event.
+When you edit a message in a chat, group chat, or Teams channel, the bot gets a notification of the edit message event.
 
 To get an edit message event notification in a bot, you can override `OnTeamsMessageEditAsync` handler.
-
-> [!NOTE]
-> The `OnTeamsMessageEditAsync` handler isn’t supported in group chat and Teams channel scopes.
 
 Following is an example of an edit message event notification using `OnTeamsMessageEditAsync` when a sent message is edited:
 
@@ -358,12 +355,9 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ## Get undelete message event
 
-When you undelete a message in a chat, the bot gets a notification of the undelete message event.
+When you undelete a message in chat, group chat, or Teams channel, the bot gets a notification of the undelete message event.
 
 To get an undelete message event notification in a bot, you can override `OnTeamsMessageUndeleteAsync` handler.
-
-> [!NOTE]
-> The `OnTeamsMessageUndeleteAsync` handler isn’t supported in group chat and Teams channel scopes.
 
 The following is an example of an undelete message event notification using `OnTeamsMessageUndeleteAsync` when a deleted message is restored:
 
