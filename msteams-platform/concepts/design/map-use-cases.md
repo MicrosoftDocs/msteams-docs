@@ -97,7 +97,7 @@ For example:
     :::column:::
         :::image type="content" source="~/assets/images/overview/microsoft-teams-app.png" alt-text="Microsoft Teams app. ":::
     :::column-end:::
-    :::column span="":::
+    :::column span="2":::
     :::column:::
         :::image type="content" source="~\assets\images\overview\tab.png" alt-text="Microsoft Teams app tab. ":::
     :::column-end:::
@@ -113,10 +113,10 @@ Sample 2
    :::column:::
       :::image type="icon" source="~\assets\images\overview\microsoft-teams-app.png" border="false":::
    :::column-end:::
-   :::column span="":::
+   :::column span="2":::
       :::image type="icon" source="~\assets\images\overview\tab.png" border="false":::
    :::column-end:::
-   :::column span="":::
+   :::column span="2":::
      :::image type="content" source="~\assets\images\overview\tab-extension.png" alt-text="Microsoft Teams app tab details." border="false":::
    :::column-end:::
 :::row-end:::
