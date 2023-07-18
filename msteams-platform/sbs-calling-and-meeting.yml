@@ -35,18 +35,19 @@ items:
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
-     | **Required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
-     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> Install the <br> ASP.NET and web development workload. | You can install the enterprise version in Visual Studio 2022, and install the workloads. Use the latest version. |   
+     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |   
      | &nbsp; | [.NET Core SDK version](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. You can install the .NET 3.1 (or later) SDK globally, or you can install the portable version. |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place. |
      | &nbsp; | [Windows PowerShell](/microsoftteams/teams-powershell-install) | Install by executing all the commands. |
 
+     > [!NOTE]
+      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 - title: Set up calling and meeting bot
   durationInMinutes: 5
   content: |
-    Register an application using app registration in the Microsoft Azure portal for your app to integrate with the Microsoft identity platform and call Microsoft Graph API. Perform the following steps:
+    Register an application using app registration in the Microsoft Azure portal for your app to integrate with the Microsoft identity platform and call Microsoft Graph API. Following are the steps:
 
     1. Create a ngrok tunnel to the endpoints of your web server.
     1. Create Azure bot resource to register bot with Azure bot service.
@@ -117,7 +118,7 @@ items:
       1. Enter the **Description** of the client secret.
       1. Select **Add**.
  
-         :::image type="content" source="./assets/images/calls-and-meetings/add-client_2.png" alt-text="Screenshot of Certificates and secrets with client and secrets, client secrets, and +New client secret highlighted in red."lightbox="./assets/images/calls-and-meetings/add-client_2.png":::
+         :::image type="content" source="./assets/images/calls-and-meetings/add-client_2.png" alt-text="Screenshot of Certificates and secrets with client and secrets, client secrets, and +New client secret highlighted in red."lightbox="./assets/images/calls-and-meetings/add-client_3.png":::
 
       1. Select **Copy to clipboard** icon to copy the **Value** details.
 
@@ -157,7 +158,7 @@ items:
      1. Select **Run query**. A response is generated under **Response preview**.
      1. Copy the value of the `id` property from the **Response preview** and replace with the object ID in the PowerShell script.
 
-         :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer-id.png" alt-text="Screenshot of graph explorer displaying the response preview.":::
+         :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer-id.png" alt-text="Screenshot of graph explorer displaying the response preview." lightbox="~/assets/images/calls-and-meetings/graph-explorer-id_1.png":::
        
      1. Execute the PowerShell script. 
      
@@ -171,7 +172,7 @@ items:
         Get-CsApplicationAccessPolicy -Identity “<<policy-identity/policy-name>>”
         ```
 
-         :::image type="content" source="~/assets/images/calls-and-meetings/powershell_id.png" alt-text="Screenshot of Windows PowerShell ISE with Account details highlighted in red.":::
+         :::image type="content" source="~/assets/images/calls-and-meetings/powershell_id.png" alt-text="Screenshot of Windows PowerShell ISE with Account details highlighted in red." lightbox="~/assets/images/calls-and-meetings/powershell_id_1.png":::
 
     > [!NOTE]
     > Ensure running scripts aren't disabled in your system. For more information, see [execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2).
@@ -212,7 +213,7 @@ items:
    
     1. Select **Apply**.
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/apply-teams_1.png" alt-text="Screenshot of Teams Messaging selection with Apply highlighted in red.":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/apply-teams_1.png" alt-text="Screenshot of Teams Messaging selection with Apply highlighted in red." lightbox="../msteams-platform/assets/images/teams-file-upload-bot/apply-teams_1.png":::
 
     1. Select **Microsoft Teams** and select **Calling** tab on Teams channel page.
 
@@ -310,7 +311,7 @@ items:
     1. In the `manifest.json` file, replace {id} and {BotId} with your Microsoft App ID.
     1. Add ngrok url in **validDomains** excluding https://.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/manifest_1.png" alt-text="Screenshot of manifest displaying the details of manifest." lightbox= "./assets/images/calls-and-meetings/manifest_1.png" :::
+        :::image type="content" source="./assets/images/calls-and-meetings/manifest_1.png" alt-text="Screenshot of manifest displaying the details of manifest." lightbox= "./assets/images/calls-and-meetings/manifest_1_lb.png" :::
 
     1. Zip the contents of the **Manifest** folder to create `manifest.zip`.
     
