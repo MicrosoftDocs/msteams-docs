@@ -117,7 +117,7 @@ Sample 2
       :::image type="icon" source="~\assets\images\overview\tab.png" border="false":::
    :::column-end:::
    :::column span="2":::
-     :::image type="content" source="~\assets\images\overview\tab-extension.png" border="false":::
+     :::image type="content" source="~\assets\images\overview\tab-extension.png" alt-text="Microsoft Teams app tab details. border="false":::
    :::column-end:::
 :::row-end:::
 
