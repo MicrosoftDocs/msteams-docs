@@ -4,6 +4,7 @@ description: In this module, learn about Sequential Workflows for Adaptive cards
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.date: 12/14/2022
 ---
 
 # Sequential Workflows

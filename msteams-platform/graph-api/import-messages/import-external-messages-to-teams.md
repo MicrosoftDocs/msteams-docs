@@ -4,6 +4,7 @@ description: Describes how to use Microsoft Graph to import messages from an ext
 ms.localizationpriority: high
 author: "akjo"
 ms.topic: Overview
+ms.date: 09/02/2022
 ---
 
 # Import third-party platform messages to Teams using Microsoft Graph

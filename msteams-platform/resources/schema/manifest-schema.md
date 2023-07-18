@@ -442,7 +442,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 A color to use and as a background for your color icons.
 
-The value must be a valid HTML color code starting with '#', for example `#4464ee`.
+The value must be a valid HTML color code starting with '#', for example `#4464ee`. For more information, see [accentColor](../../task-modules-and-cards/cards/cards-reference.md#properties-of-the-connector-card-for-microsoft-365-groups).
 
 ## configurableTabs
 
@@ -476,7 +476,7 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 |`contentBotId`|string|||The Microsoft app ID specified for the bot in the [Bot Framework portal](https://dev.botframework.com/bots).|
 |`websiteUrl`|string|||The https:// URL to point to if a user opts to view in a browser.|
 |`searchUrl`|string|||The https:// URL to point to for a user's search queries.|
-|`scopes`|array of enums|3|✔️|Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
+|`scopes`|array of enums|3|✔️| Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
 |`context` | array of enums| 8|| The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: **[personalTab, channelTab, privateChatTab, meetingChatTab, meetingDetailsTab, meetingStage, meetingSidepanel, teamLevelApp]**.|
 
 > [!NOTE]

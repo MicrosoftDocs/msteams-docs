@@ -5,16 +5,17 @@ description: Learn to build a personal tab. Select the Node.js, ASP.NET Core, or
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment
+ms.date: 02/27/2023
 ---
 
 # Create a personal tab
+
+Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access.
 
 > [!IMPORTANT]
 >
 > * To learn how to create a tab with Teams Toolkit, see [build your first tab app using JavaScript](../../sbs-gs-javascript.yml).
 > * We've introduced the [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
-
-Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) your personal tabs.
 
 Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your personal tab.
 
@@ -999,11 +1000,74 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 
 ```
 
+## Extend static tabs to group chat and meetings
+
+> [!NOTE]
+> * Extend your static tabs to group chat and meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * To extend your static tabs to group chat and meetings, use the app manifest v1.16 or later.
+
+You can extend static tabs to group chat and meetings. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one tab per app for example, pinning a single YouTube app tab.
+
+To extend your static tabs to group chat and meetings, update your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with the `scopes` and `context` parameters in the `staticTabs` property.
+
+Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
+
+```json
+"staticTabs": [ 
+  { 
+     "entityId": "homeTab", 
+     "scopes": [ 
+       "personal", 
+       "groupChat",
+       "team"
+      ], 
+     "context": [ 
+       "personalTab",  
+       "privateChatTab", 
+       "meetingChatTab", 
+       "meetingDetailsTab", 
+       "meetingSidePanel", 
+       "meetingStage",
+       "channelTab"
+      ], 
+      "name": "Contoso", 
+      "contentUrl": "https://contoso.com/content (displayed in Teams canvas)", 
+      "websiteUrl": "https://contoso.com/content (displayed in web browser)" 
+  }
+], 
+
+```
+
+If a context isn't defined in the app manifest, by default Teams consider the following context:
+
+```json
+"context": [ 
+   "personalTab", 
+   "privateChatTab", 
+   "meetingChatTab", 
+   "meetingDetailsTab", 
+   "meetingStage" 
+]
+```
+
+## Customizing your static tab in chats or meetings
+
+To customize your static tab experience in chats or meetings, you can use the `setConfig` APIs in your tab to update the `contentUrl` and `websiteUrl`. Following is an example:
+
+```json
+pages.config.setConfig({ 
+  "contentUrl": "https://wwww.contoso.com/teamsapp/thread/" + context.threadId,
+   ...}
+
+```
+
+Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other properties can't be changed for static tabs.
+
 ## Code sample
 
 | Sample name | Description | .NET |Node.js|Manifest|
 |-------------|-------------|------|----|----|
-|Tab personal|Sample app which showcases creating a custom channel/group tab with ASP.Net Core and MVC. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp) |  NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp/demo-manifest/tab-personal.zip)|
+|Tab personal| Sample app which showcases custom personal Tab with ASP.NET core | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp) |  NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp/demo-manifest/tab-personal.zip)|
 
 ## Next step
 
