@@ -31,9 +31,7 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure you install the following tools for the development environment:  
-
-    Ensure that you install the following tools and set up your development environment:  
+    Ensure that you install the following tools to set up your development environment:
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
