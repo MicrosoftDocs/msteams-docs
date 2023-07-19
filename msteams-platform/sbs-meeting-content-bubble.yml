@@ -450,7 +450,7 @@ items:
 
     1. The in-meeting notifications Demo app sends an automatic reply to the meeting chat.
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="Screenshot shows the suggestions in the Teams chat."::: 
+         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-final.png" alt-text="Screenshot shows the suggestions in the Teams chat."::: 
     
     1. Send a response with Targeted In-meeting `SendTargetedNotification`. 
 
@@ -467,7 +467,7 @@ items:
 
     1. The in-meeting notifications Demo app sends an automatic reply to the meeting chat.
     
-         :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="Screenshot shows the suggestions in the Teams chat."::: 
+         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-final.png" alt-text="Screenshot shows the suggestions in the Teams chat."::: 
 
     1. Send a response with Targeted In-meeting `SendInMeetingNotification`.
 
