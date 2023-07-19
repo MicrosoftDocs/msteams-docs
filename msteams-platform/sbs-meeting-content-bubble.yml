@@ -439,8 +439,10 @@ items:
          :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-final.png" alt-text="Screenshot shows the suggestions in the Teams chat.":::
     
         # [SendTargetedNotification](#tab/sendtargetednotification)
+
+        To send targeted notification follow the steps:
            
-        1. Bot sends an adaptive card to fill the response.
+        1. Bot sends an adaptive card to selcet the participant.
         
         1. Select the checkbox to specfic participant.
         
@@ -453,6 +455,8 @@ items:
              :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
         
         # [SendInMeetingNotification](#tab/sendinmeetingnotification)
+
+        To send in meeting notification follow the steps:
 
         1. Bot sends an agenda adaptive card.
         
@@ -477,13 +481,13 @@ items:
 
         The following image shows the pop-up for the send targeted notification:
         
-         :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
+             :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
         
         # [SendInMeetingNotification](#tab/sendinmeetingnotification)
 
         The following image shows the pop-up for the send in-meeting notification:
         
-         :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
+             :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
 
         ---
 
