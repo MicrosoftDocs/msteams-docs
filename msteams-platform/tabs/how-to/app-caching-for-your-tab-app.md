@@ -147,7 +147,7 @@ microsoftTeams.registerOnLoadHandler((data) => { 
 
 ## Best practices
 
-* It's recommended that you implement web storage capabilities to store the data locally in iOS and Android. This helps to load the app faster in subsequent launches.
+* It's recommended that you implement web storage or service worker capabilities to store the data or web view locally in iOS and Android. This helps to load the app faster in subsequent launches.
 
 * Single-page apps that use client-side routing for page navigation can benefit from app caching. It's recommended that you use the same domain across all contexts of your app launch.
 
