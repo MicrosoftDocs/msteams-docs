@@ -739,7 +739,7 @@ Define the properties your app uses to post a user activity feed.
 
 ## defaultInstallScope
 
-**Optional** - string
+**Optional**—string
 
 Specifies the install scope defined for this app by default. The defined scope is the option displayed on the button when a user tries to add the app. Options are:
 
@@ -750,7 +750,7 @@ Specifies the install scope defined for this app by default. The defined scope i
 
 ## defaultGroupCapability
 
-**Optional** - object
+**Optional**—object
 
 When a group install scope is selected, it defines the default capability when the user installs the app. Options are:
 
@@ -766,7 +766,7 @@ When a group install scope is selected, it defines the default capability when t
 
 ## configurableProperties
 
-**Optional** - array
+**Optional**—array
 
 The `configurableProperties` block defines the app properties that Teams admins can customize. For more information, see [enable app customization](~/concepts/design/enable-app-customization.md). The app customization feature isn't supported in custom or LOB apps.
 
@@ -787,7 +787,7 @@ You can define any of the following properties:
 
 ## supportedChannelTypes
 
-**Optional** - array
+**Optional**—array
 
 Enables your app in non-standard channels. If your app supports a team scope and this property is defined, Teams enables your app in each channel type accordingly. Currently, the private and shared channel types are supported.
 
@@ -798,13 +798,13 @@ Enables your app in non-standard channels. If your app supports a team scope and
 
 ## defaultBlockUntilAdminAction
 
-**Optional** - Boolean
+**Optional**—Boolean
 
 When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidden from users by default until admin allows it. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**. For more information on default app block, see [Block apps by default for users until an admin approves](../../concepts/deploy-and-publish/add-default-install-scope.md#block-apps-by-default-for-users-until-an-admin-approves).
 
 ## publisherDocsUrl
 
-**Optional** - string
+**Optional**—string
 
 **Maximum size** - 128 characters
 
@@ -812,7 +812,7 @@ The `publisherDocsUrl` is an HTTPS URL to an information page for admins to get 
 
 ## subscriptionOffer
 
-**Optional** - object
+**Optional**—object
 
 Specifies the SaaS offer associated with your app.
 
@@ -822,7 +822,7 @@ Specifies the SaaS offer associated with your app.
 
 ## meetingExtensionDefinition
 
-**Optional** - object
+**Optional**—object
 
 Specify meeting extension definition. For more information, see [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md).
 
@@ -845,7 +845,7 @@ Specify meeting extension definition. For more information, see [custom Together
 
 ## authorization
 
-**Optional** — object
+**Optional**—object
 
 > [!NOTE]
 > `authorization` is only supported for manifest version 1.12 or later.
