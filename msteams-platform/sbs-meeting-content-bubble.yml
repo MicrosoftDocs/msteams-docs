@@ -434,10 +434,10 @@ items:
     
     1. **In-meeting notifications Demo** app sends an automatic reply to the meeting chat. 
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-final.png" alt-text="Screenshot shows the suggestions in the Teams chat.":::
-    
     1. Type at the rate mention the `bot` with `SendTargetedNotification` or `SendInMeetingNotification` and **Enter**.
 
+         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-final.png" alt-text="Screenshot shows the suggestions in the Teams chat.":::
+    
         # [SendTargetedNotification](#tab/sendtargetednotification)
 
         To get the targeted notification follow the steps:
@@ -466,7 +466,7 @@ items:
 
              :::image type="content" source="~/assets/images/meeting-content-bubble/send-in-meeting-notification.png" alt-text="Screenshot shows the responses for the send in-meeting notification.":::
 
-        1. The participantin the meeting recives the pop-up notification to submit feedback.
+        1. The participant in the meeting recives the pop-up notification to submit feedback.
 
              :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
 
@@ -480,14 +480,14 @@ items:
     # [SendTargetedNotification](#tab/sendtargetednotification)
 
     The following image shows the pop-up for the send targeted notification:
-
-         :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
+    
+        :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
     
     # [SendInMeetingNotification](#tab/sendinmeetingnotification)
 
     The following image shows the pop-up for the send in-meeting notification:
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
 
     ---
 
