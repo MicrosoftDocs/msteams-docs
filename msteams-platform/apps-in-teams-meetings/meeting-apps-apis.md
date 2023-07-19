@@ -3,7 +3,6 @@ title: Meeting apps APIs
 author: v-sdhakshina
 description: Learn meeting apps API references that are available for Teams client and Bot Framework SDKs with examples, code samples, and response codes.
 ms.topic: conceptual
-ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
 ---
@@ -39,7 +38,7 @@ To identify and retrieve contextual information for your tab content, see [get c
 
 ## Get participant API
 
-The `GetParticipant` API must have a bot registration and ID to generate auth tokens. For more information, see [bot registration and ID](../build-your-first-app/build-bot.md).
+The `GetParticipant` API must have a bot registration and ID to generate auth tokens. For more information, see [bot registration and ID](/azure/bot-service/bot-service-quickstart-registration).
 
 > [!NOTE]
 >
@@ -283,13 +282,13 @@ The following table includes the response codes:
 | **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the tenant admin disables and blocks the app during live site migration. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat doesn't exist. |
 
-## Targeted meeting notification API
+## Targeted meeting notification and app icon badging API
 
-The `targetedMeetingNotification` API allows apps to send targeted in-meeting notifications to specific participants in a meeting. Apps send targeted in-meeting notifications based on user action. The API is available through bot API.
+The `targetedMeetingNotification` API allows apps to send targeted in-meeting notifications and shows app icon badging to specific participants in a meeting. Apps send targeted in-meeting notifications and app icon badging based on user action. The API is available through bot API.
 
 ### Prerequisite
 
-You must configure your app manifest with [RSC permissions](../graph-api/rsc/resource-specific-consent.md) under the `webApplicationInfo` property to send targeted in-meeting notifications to specific participants in a meeting. Use the following examples to configure your manifest:
+You must configure your [app manifest](../resources/schema/manifest-schema.md) with [RSC permissions](../graph-api/rsc/resource-specific-consent.md) under the `webApplicationInfo` property to send targeted in-meeting notifications and shows app icon badging to specific participants in a meeting. Use the following examples to configure your manifest:
 
 <br>
 
@@ -342,14 +341,14 @@ You must configure your app manifest with [RSC permissions](../graph-api/rsc/res
 > * The API payload only permits a task module with a URL.
 > * The user ID formats **aadObjectid** and **UPN** aren't supported.
 
-Get supported user ID format for targeted in-meeting notification:
+Get supported user ID format for targeted in-meeting notification and app icon badging:
 
 * [Get participant API](#get-participant-api)
 * [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)
 
 ### Example
 
-Following is an example of request payload for targeted in-meeting notification:
+Following is an example of request payload for targeted in-meeting notification and app icon badging:
 
 ```http
 POST /v1/meetings/{meetingId}/notification
@@ -395,7 +394,7 @@ POST /v1/meetings/{meetingId}/notification
 | `meetingId` | The meeting ID is available through bot invoke and TeamsJS library. |
 | `type` |`targetedMeetingNotification` |
 | `recipients` | List of user IDs. Get user IDs for meeting participants through [Get participant API](#get-participant-api). Get the entire list of chat roster using [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Empty or null recipients list will return 400.|
-| `surface` | A type of surface. The supported surface type is `meetingStage`. |
+| `surface` | A type of surface. The supported surface type are `meetingStage` and `meetingTabIcon`. |
 | `surfaces` | List of surfaces where notifications can be rendered. |
 | `contentType` | Type of content that the targeted in-meeting notification renders. The supported value is `task`. |
 | `content` | [TaskModuleContinueResponse](/dotnet/api/microsoft.bot.schema.teams.taskmodulecontinueresponse?view=botbuilder-dotnet-stable&preserve-view=true) |
@@ -412,18 +411,7 @@ POST /v1/meetings/{meetingId}/notification
 > [!NOTE]
 > If you provide an invalid input, the API returns the status code 400.
 
-### Response code
-
-The following table includes the response codes:
-
-| Response code | Description |
-|---|---|
-| **202** | Notification is successfully sent. |
-| **207** | Notifications are sent only to a few participants. |
-| **400** | Meeting notification request payload validation failed. |
-| **401** | Bot token is invalid. |
-| **403** | Bot isn't allowed to send the notification. |
-| **404** | Meeting chat isn't found or none of the participants were found in the roster. |
+[!INCLUDE [Response code](../includes/meeting-response-code.md)]
 
 ## Get meeting details API
 
@@ -522,7 +510,7 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
 
 > [!NOTE]
 >
-> * The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for RSC permission.
+> * If the `ChannelMeeting.ReadBasic.Group` permission is added to the manifest, the bot receives the meeting start or end events automatically from the channel meetings created in all the teams where the bot is added.
 > * For a one-on-one call `organizer` is the initiator of the chat and for group calls `organizer` is the call initiator. For public channel meetings `organizer` is the person who created the channel post.
 
 ### Query parameter
@@ -552,7 +540,12 @@ await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 
 ```javascript
 
-Not available
+this.onMessage(async(context, next) =>{
+  TurnContext.removeRecipientMention(context.activity);
+ 
+  const details=await TeamsInfo.getMeetingInfo(context);
+  await context.sendActivity(JSON.stringify(details, null, 2));
+});
 
 ```
 
@@ -777,11 +770,11 @@ The following table provides the error codes:
 ## Get real-time Teams meeting events API
 
 > [!NOTE]
-> Real-time Teams meeting events are only supported for scheduled meetings.
+> Real-time Teams meeting events are supported for scheduled and channel meetings.
 
 The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot. The actual start and end time of a meeting are different from scheduled start and end time. The meeting details API provides the scheduled start and end time. The event provides the actual start and end time.
 
-You must be familiar with the `TurnContext` object available through the Bot SDK. The `Activity` object in `TurnContext` contains the payload with the actual start and end time. Real-time meeting events require a registered bot ID from the Teams platform. The bot can automatically receive meeting start or end event by adding `ChannelMeeting.ReadBasic.Group` in the manifest.
+If the `ChannelMeeting.ReadBasic.Group` and `OnlineMeeting.ReadBasic.Chat` permissions are added in the manifest, the bot automatically starts receiving the meeting start or end events for the scheduled and channel meeting types.
 
 ### Prerequisite
 
@@ -805,6 +798,10 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
                 "name": "OnlineMeeting.ReadBasic.Chat",
                 "type": "Application"
             }
+            {
+                "name": "ChannelMeeting.ReadBasic.Group",
+                "type": "Application"
+            }
         ]    
     }
 }
@@ -825,7 +822,8 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
-      "OnlineMeeting.ReadBasic.Chat"
+      "OnlineMeeting.ReadBasic.Chat",
+      "ChannelMeeting.ReadBasic.Group"
     ]
 }
  ```
@@ -834,9 +832,9 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
 
 </details>
 
-### Example of getting `MeetingStartEndEventvalue`
+### Example of getting meeting start or end events
 
-The bot receives event through the `OnEventActivityAsync` handler. To deserialize the JSON payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting is in the `value` property in the event payload. The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under the `value` property in the event payload.
+The bot receives the meeting start and meeting end events through the `OnTeamsMeetingStartAsync` and `OnTeamsMeetingEndAsync` handlers. The information related to the meeting event is part of the `MeetingStartEventDetails` object, which includes the metadata fields such as, `meetingType`, `title`, `id`, `joinUrl`, `startTime`, and `EndTime`.
 
 > [!NOTE]
 >
@@ -844,14 +842,12 @@ The bot receives event through the `OnEventActivityAsync` handler. To deserializ
 > * Do not use conversation ID as meeting ID.
 > * Do not use meeting ID from meeting events payload `turncontext.activity.value`.
 
-The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start/end event:
+The following examples show how to capture the meeting start and end events:
 
-Meeting Start Event
+**Meeting Start Event**
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingstartasync(microsoft-bot-schema-teams-meetingstarteventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
-
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingstartasync(microsoft-bot-schema-teams-meetingstarteventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
 
 ```csharp
 // Invoked when a Teams Meeting Start event activity is received from the connector.
@@ -862,12 +858,7 @@ protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails 
 }
 ```
 
-Meeting End Event
-
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingendasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingendasync(microsoft-bot-schema-teams-meetingendeventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
+**Meeting End Event**
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingendasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingendasync(microsoft-bot-schema-teams-meetingendeventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
@@ -886,50 +877,36 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 The following code provides an example of meeting start event payload:
 
 ```json
-{ 
-    "name": "application/vnd.microsoft.meetingStart", 
-    "type": "event", 
-    "timestamp": "2021-04-29T16:10:41.1252256Z", 
-    "id": "123", 
-    "channelId": "msteams", 
-    "serviceUrl": "https://microsoft.com", 
-    "from": { 
-        "id": "userID", 
-        "aadObjectId": "aadOnjectId" 
-    }, 
-    "conversation": { 
-        "isGroup": true, 
-        "tenantId": "tenantId", 
-        "id": "thread id" 
-    }, 
-    "recipient": { 
-        "id": "user Id", 
-        "name": "user name" 
-    }, 
-    "entities": [ 
-        { 
-            "locale": "en-US", 
-            "country": "US", 
-            "type": "clientInfo" 
-        } 
-    ], 
-    "channelData": { 
-        "tenant": { 
-            "id": "channel id" 
-        }, 
-        "source": null, 
-        "meeting": { 
-            "id": "meeting id" 
-        } 
-    }, 
-    "value": { 
-        "MeetingType": "Scheduled", 
-        "Title": "Meeting Start/End Event", 
-        "Id": "meeting id", 
-        "JoinUrl": "url" 
-        "StartTime": "2021-04-29T16:17:17.4388966Z" 
-    }, 
-    "locale": "en-US" 
+{
+  "name": " application/vnd.microsoft.meetingStart",
+  "type": "event",
+  "timestamp": "2023-02-23T19:34:07.478Z",
+  "localTimestamp": "2023-02-23T11:34:07.478-8",
+  "channelId": "msteams",
+  "serviceUrl": "https://smba.trafficmanager.net/teams/",
+  "from": {
+    "id": "user_id"
+  },
+  "conversation": {
+    "isGroup": true,
+    "conversationType": "groupchat",
+    "id": "conversation_id"
+  },
+  "recipient": {
+    "id": "28:65f50003-e15d-434a-9e14-0fcfeb3d7817"
+  },
+  "value": {
+    "id": "meeting_id",
+    "joinUrl": "join_url",
+    "title": "Example meeting",
+    "meetingType": "Scheduled",
+    "startTime": "2023-02-23T19:34:07.478Z"
+  },
+  "channelData": {
+    "tenant": {
+      "id": "tenant_id"
+    }
+  }
 }
 ```
 
@@ -938,50 +915,36 @@ The following code provides an example of meeting start event payload:
 The following code provides an example of meeting end event payload:
 
 ```json
-{ 
-    "name": "application/vnd.microsoft.meetingEnd", 
-    "type": "event", 
-    "timestamp": "2021-04-29T16:17:17.4388966Z", 
-    "id": "123", 
-    "channelId": "msteams", 
-    "serviceUrl": "https://microsoft.com", 
-    "from": { 
-        "id": "user id", 
-        "aadObjectId": "aadObjectId" 
-    }, 
-    "conversation": { 
-        "isGroup": true, 
-        "tenantId": "tenantId", 
-        "id": "thread id" 
-    }, 
-    "recipient": { 
-        "id": "user id", 
-        "name": "user name" 
-    }, 
-    "entities": [ 
-        { 
-            "locale": "en-US", 
-            "country": "US", 
-            "type": "clientInfo" 
-        } 
-    ], 
-    "channelData": { 
-        "tenant": { 
-            "id": "channel id" 
-        }, 
-        "source": null, 
-        "meeting": { 
-            "id": "meeting Id" 
-        } 
-    }, 
-    "value": { 
-        "MeetingType": "Scheduled", 
-        "Title": "Meeting Start/End Event in Canary", 
-        "Id": "19:meeting_NTM3ZDJjOTUtZGRhOS00MzYxLTk5NDAtMzY4M2IzZWFjZGE1@thread.v2", 
-        "JoinUrl": "url", 
-        "EndTime": "2021-04-29T16:17:17.4388966Z" 
-    }, 
-    "locale": "en-US" 
+{
+  "name": " application/vnd.microsoft.meetingEnd",
+  "type": "event",
+  "timestamp": "2023-02-23T19:34:07.478Z",
+  "localTimestamp": "2023-02-23T11:34:07.478-8",
+  "channelId": "msteams",
+  "serviceUrl": "https://smba.trafficmanager.net/teams/",
+  "from": {
+    "id": "user_id"
+  },
+  "conversation": {
+    "isGroup": true,
+    "conversationType": "groupchat",
+    "id": "conversation_id"
+  },
+  "recipient": {
+    "id": "28:65f50003-e15d-434a-9e14-0fcfeb3d7817"
+  },
+  "value": {
+    "id": "meeting_id",
+    "joinUrl": "join_url",
+    "title": "Example meeting",
+    "meetingType": "Scheduled",
+    "EndTime": "2023-02-23T20:30:07.478Z"
+  },
+  "channelData": {
+    "tenant": {
+      "id": "tenant_id"
+    }
+  }
 }
 ```
 

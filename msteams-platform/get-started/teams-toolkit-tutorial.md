@@ -2,15 +2,17 @@
 title: Teams toolkit tutorial
 description: This tutorial helps you to select the app that you want to build. 
 ms.localizationpriority: medium
+ms.date: 06/07/2023
 ms.topic: reference
 ---
+
 # Teams app tutorials and code samples
 
 You can build your own Microsoft Teams app with different capabilities using the following tutorials and code samples.
 
 ## Teams app tutorials
 
-Now, let's build your Teams app. You can use the following languages or frameworks and prepare your development environment for building your app.
+To start building your Teams app, use the following languages or frameworks and prepare your development environment.
 
 | &nbsp; | **Tab** | **Bot** | **Message extension** |
 | --- | --- | --- | --- |

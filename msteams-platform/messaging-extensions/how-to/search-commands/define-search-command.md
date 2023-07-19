@@ -36,13 +36,13 @@ The following image displays the invoke locations of the search command:
 
 ## Add the search command to your app manifest
 
-To add the search command to your app manifest, you must add a new `composeExtension` object to the top level of your app manifest JSON. You can add the search command either with the help of Developer Portal, or manually.
+To add the search command to your [app manifest](../../../resources/schema/manifest-schema.md#composeextensions), you must add a new `composeExtensions` object to the top level of your app manifest JSON. You can add the search command either with the help of Developer Portal, or manually.
 
 ### Create a search command using Developer Portal
 
 The prerequisite to create a search command is that you must already have created a message extension. For information on how to create a message extension, see [create a message extension](../../../sbs-gs-msgext.yml).
 
-**To create an action command**
+**To create a search command**
 
 1. Open **Developer Portal** from the Microsoft Teams client and select the **Apps** tab.
    If you already created your app package in **Developer Portal**, select from the list. If you haven't created an app package, import an existing one.
@@ -88,7 +88,7 @@ The following image displays command addition for message extension:
 
 ### Create a search command manually
 
-To manually add your message extension search command to your app manifest, you must add the following parameters to your `composeExtension.commands` array of objects:
+To manually add your message extension search command to your app manifest, you must add the following parameters to your `composeExtensions.commands` array of objects:
 
 | Property name | Purpose | Required? | Minimum manifest version |
 |---|---|---|---|
@@ -140,7 +140,7 @@ Following section is an example of the simple app manifest of the `composeExtens
 
 ```
 
-For the complete app manifest, see [App manifest schema](~/resources/schema/manifest-schema.md).
+For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
 
 ## Code sample
 
@@ -161,6 +161,5 @@ Follow the [step-by-step guide](../../../sbs-messagingextension-searchcommand.ym
 
 * [Cards](../../../task-modules-and-cards/what-are-cards.md)
 * [Task modules](../../../task-modules-and-cards/what-are-task-modules.md)
-* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
 * [Developer Portal for Teams](../../../concepts/build-and-test/teams-developer-portal.md)
 * [Message extensions](../../what-are-messaging-extensions.md)

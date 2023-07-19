@@ -5,6 +5,7 @@ description: In this module, learn about Power Automate in Collaboration control
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
+ms.date: 01/11/2023
 ---
 
 # Power Automate
