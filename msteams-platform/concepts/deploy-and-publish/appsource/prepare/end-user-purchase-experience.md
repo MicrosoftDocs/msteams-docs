@@ -22,7 +22,8 @@ The following example shows how users can purchase subscription plans for a fict
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app.":::
 
-1. Select your country/region to see subscription plans for your location.
+Select your country or region to see subscription plans for your location. 
+
 
 1. In the **Choose a subscription plan** dialog, choose the plan you want and select **Checkout**. (Note: Private plans are visible only to users in orgs you're providing the offer to. These plans are indicated with a **Special offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon.)
 
