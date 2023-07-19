@@ -12,11 +12,11 @@ ms.date: 01/31/2023
 
 You can create a deep link to a Teams chat, such as to start a new chat, browse to a channel conversation, and to a file in a channel.
 
-In this article, you’ll learn to configure a deep link:
-* To start a new chat
-* To navigate to channel conversation
-* To navigate to chat messages
-* To file in a channel
+In this article, you’ll learn to create a deep link:
+* [To start a new chat](#deep-link-to-start-a-new-chat)
+* [To navigate to channel conversation](#deep-links-to-navigate-to-channel-conversation)
+* [To navigate to chat messages](#deep-link-to-teams-chat)
+* [To file in a channel](#generate-deep-links-to-file-in-a-channel)
 
 ## Deep link to start a new chat
 

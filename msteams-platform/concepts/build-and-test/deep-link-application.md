@@ -14,7 +14,7 @@ You can configure deep links to a tab, to open an app install dialog, to browse 
 
 If your app is approved for Teams mobile platform, you can create a deep link to the app on mobile. If you want the deep link to work on Teams iOS, you’ll need the Apple App Store Connect Team ID for the deep link to work. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
-Deep links allow users to know more about an app and install it in different scopes. You can also create deep links for your app users to go to specific pages within your app. In this article, you’ll learn to configure a deep link:
+Deep links allow users to know more about an app and install it in different scopes. You can also create deep links for your app users to go to specific pages within your app. In this article, you’ll learn to create a deep link:
 
 - [To open application install dialog](#deep-link-to-open-application-install-dialog)
 - [To browse within your app](#deep-link-to-browse-within-your-app)
@@ -103,7 +103,7 @@ The query parameters are:
 | Parameter name | Description | Example |
 |:------------|:--------------|:---------------------|
 | `appId`&emsp; | The ID from Microsoft Teams admin center. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
-| `entityId`&emsp; | The ID for the item in the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). When generating a URL for deep linking, continue to use entity ID as a parameter name in the URL. When configuring the tab, the context object refers to the entityID as {page.id}. |Tasklist123|
+| `entityId`&emsp; | The ID of the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). When generating a URL for deep linking, continue to use entity ID as a parameter name in the URL. When configuring the tab, the context object refers to the entityID as {page.id}. |Tasklist123|
 | `entityWebUrl` or `subEntityWebUrl`&emsp; | An optional field with a fallback URL to use if the client doesn't support rendering the tab. | `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456` |
 | `entityLabel` or `subEntityLabel`&emsp; | A label for the item in your tab to use when displaying the deep link. | Task List 123 or Task 456 |
 | `context.subEntityId`&emsp; | An ID for the item within the tab. When generating a URL for deep linking, continue to use subEntityId as the parameter name in the URL. When configuring the tab, the context object refers to the subEntityID as subPageID. |Task456 |
@@ -143,7 +143,7 @@ The query parameters are:
 > Ensure that all the query parameters and the white spaces are properly URI encoded. You must follow the preceding examples using the last example:
 >
 > ```javascript
-> var encodedWebUrl = encodeURIComponent(JSON.stringify('https://tasklist.example.com/123/456&label=Task 456'));
+> var encodedWebUrl = encodeURIComponent('https://tasklist.example.com/123/456&label=Task 456');
 > var encodedContext = encodeURIComponent(JSON.stringify({"subEntityId": "task456"}));
 > var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
 > ```
@@ -189,7 +189,7 @@ If the Teams app is running within the host where the deep link is targeted, you
 
 You can allow app users browse to a personal chat with the application by configuring the deep link manually using the following format:
 
-`https://teams.microsoft.com/l/entity/<appId>?tenantId=<tenantId>/conversations`, where `appId` is your application ID. To know about different app IDs used see, [app ID used for different apps](#app-id-used-for-different-apps).
+`https://teams.microsoft.com/l/entity/<appId>/conversations?tenantId=<tenantId>`, where `appId` is your application ID. To know about different app IDs used see, [app ID used for different apps](#app-id-used-for-different-apps).
 
 ## Share deep link for a tab
 

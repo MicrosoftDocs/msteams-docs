@@ -12,6 +12,16 @@ ms.date: 01/31/2023
 
 You can create a deep link to perform a specific task in Teams, such as to create a new chat, open a scheduling dialog, and navigate to audio-video call.
 
+In this article, you’ll learn to create a deep link:
+
+* [To start a new chat](#deep-link-to-start-a-new-chat)
+* [To open a meeting scheduling dialog](#deep-link-to-open-a-meeting-scheduling-dialog)
+* [To start an audio-video call](#deep-link-to-start-an-audio-video-call-with-users)
+* [To share content to stage in meetings](#generate-a-deep-link-to-share-content-to-stage-in-meetings)
+* [To meeting side panel](#deep-link-to-meeting-side-panel)
+* [To join a meeting](#deep-link-to-join-a-meeting)
+* [Invoke Stage View through deep link](#invoke-stage-view-through-deep-link)
+
 ## Deep link to start a new chat
 
 Applications can start a new chat with a list of users and provide additional information such as chat name and draft message by using the following format:
@@ -191,7 +201,7 @@ Deep link doesn't open in the meeting side panel in the following scenarios:
 
 ## Deep link to join a meeting
 
-Teams app can read the URL for, joining a meeting URL through Graph APIs. This deep link brings up the UI for the user to join the meeting. For more information see, [Get `onlineMeeting`](/graph/api/onlinemeeting-get#response-1)
+Teams app can read the URL for joining a meeting URL through Graph APIs. This deep link brings up the UI for the user to join the meeting. For more information see, [Get `onlineMeeting`](/graph/api/onlinemeeting-get#response-1) and [Get meeting details](~/apps-in-teams-meetings/meeting-apps-apis.md#get-meeting-details-api)
 
 ## Invoke Stage View through deep link
 
