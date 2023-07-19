@@ -42,7 +42,7 @@ The users have multiple sign in options from the Moodle login page.
 
 <summary><b>How can I specify which users to sync? I don’t want all Azure AD users synchronized with the Moodle website. </b></summary>
 
-Use the **User Creation Restriction** option to specify the users by synchronizing the configuration options of the **local_o365** plugin. The dropdown menu to the left of the **filter** offers options such as Country/Region, Company Name, and Language.
+Use the **User Creation Restriction** option to specify the users by synchronizing the configuration options of the **local_o365** plugin. The dropdown menu to the left of the **filter** offers options such as Country or Region, Company Name, and Language.
 
 > [!TIP]
 > Create a dynamic Microsoft 365 group to enable the **filter** option with multiple profile properties.

@@ -240,13 +240,13 @@ The following image shows the use of Geo-filtering for apps in the Teams mobile 
 
 Geo-filtering helps you improve your app's visibility in the Teams store. When you publish your app to the store, you can select from the available list of countries/regions in the Partner Center to target your app to users in specific countries or regions. For more information on supported geographic locations in Partner Center, see [Geographic availability and currencies](/partner-center/marketplace/marketplace-geo-availability-currencies).
 
-:::image type="content" source="../../../../assets/images/app-fundamentals/select-countries-app-partner-center.png" alt-text="Screenshot shows the list of available countries/regions in Microsoft Partner Center.":::
+:::image type="content" source="../../../../assets/images/app-fundamentals/select-countries-app-partner-center.png" alt-text="Screenshot shows the list of available countries or regions in Microsoft Partner Center.":::
 
 #### Determine user location
 
-Teams uses the `UsageLocation` property from the [user resource type](/graph/api/resources/user?view=graph-rest-#properties&preserve-view=true) API to determine the location of the user and displays the apps available in the user's country/region.
+Teams uses the `UsageLocation` property from the [user resource type](/graph/api/resources/user?view=graph-rest-#properties&preserve-view=true) API to determine the location of the user and displays the apps available in the user's country or region.
 
-If a user wants to install an app available in another country/region, they can use the following methods:
+If a user wants to install an app available in another country or region, they can use the following methods:
 
 * Use a deep link to install the app.
 
