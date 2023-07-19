@@ -5,6 +5,7 @@ ms.topic: overview
 author: v-ypalikila
 ms.author: v-ypalikila
 ms.localizationpriority: high
+ms.date: 12/15/2022
 ---
 # Common reasons for app validation failure
 

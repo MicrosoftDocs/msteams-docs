@@ -5,6 +5,7 @@ description: Learn to plan growth lifecycle for your Teams app.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.date: 02/21/2023
 ---
 
 # Growth lifecycle for your app

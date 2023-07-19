@@ -3,6 +3,7 @@ title: Deep links overview
 description: Learn how to create deep links and navigate using them in your Microsoft Teams apps with tabs.
 ms.topic: how-to
 ms.localizationpriority: high
+ms.date: 04/13/2023
 ---
 
 # Create deep links
@@ -60,5 +61,4 @@ You can create a [deep link to perform a specific task](~/concepts/build-and-tes
 
 ## See also
 
-* [Integrate web apps](~/samples/integrate-web-apps-overview.md)
-* [Moodle LMS](~/resources/moodleinstructions.md)
+[Integrate web apps](../../samples/integrate-web-apps-overview.md)

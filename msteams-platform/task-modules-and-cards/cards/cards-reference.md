@@ -3,6 +3,7 @@ title: Types of cards
 description: In this module, learn what are cards and card actions available to bots in Teams and create a hero, thumbnail and adaptive cards.
 ms.localizationpriority: high
 ms.topic: reference
+ms.date: 06/13/2023
 ---
 
 # Types of cards
@@ -69,7 +70,7 @@ You can identify and use different types of cards based on your application requ
 >
 > * For Adaptive Cards in Incoming Webhooks, all native Adaptive Card schema elements, except `Action.Submit`, are fully supported. The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 >
-> * Adaptive Card supports only Incoming Webhook O365 Connector type and not any other O365 Connector types.
+> * Adaptive Card supports only Incoming Webhook connectors for Microsoft 365 groups type. For these connectors, you can send the Adaptive Card using the following [format](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook).
 
 ## Common properties for all cards
 
@@ -84,7 +85,7 @@ The card can contain an inline image by including a link to the publicly availab
 
 Images are scaled up or down in size to maintain the aspect ratio for covering the image area. Images are then cropped from center to achieve the appropriate aspect ratio for the card.
 
-Images must be at most 1024×1024 and in PNG, JPEG, or GIF format. Animated GIF isn't supported.
+Images must be at most 1024 × 1024 and in PNG, JPEG, or GIF format. Animated GIF isn't supported.
 
 The following table provides the properties of inline card images:
 
@@ -268,6 +269,9 @@ The following code shows an example of an Adaptive Card:
 ```
 
 #### Additional information on Adaptive Cards
+
+> [!Note]
+> The `speak` property in an Adaptive Card for Teams bots is supported for immersive readers only.
 
 You can pass dynamic values in an Adaptive Card using the dollar symbol ($) and curly braces. For more information, see [Adaptive Cards Templating](/adaptive-cards/templating/).
 
@@ -496,9 +500,9 @@ For all other details about connector card properties, see [actionable message c
 * `originator`
 * `correlationId`
 
-### Example of an connector card for Microsoft 365 Groups
+### Example of a connector card for Microsoft 365 Groups
 
-The following code shows an example of an connector card for Microsoft 365 Groups:
+The following code shows an example of a connector card for Microsoft 365 Groups:
 
 ```json
 {
@@ -635,13 +639,13 @@ Bot Framework reference:
 
 ## Sign in card
 
-The sign in card in Teams is similar to the signin card in the Bot Framework except that the signin card in Teams only supports two actions `signin` and `openUrl`.
+The sign in card in Teams is similar to the sign in card in the Bot Framework except that the sign in card in Teams only supports two actions `signin` and `openUrl`.
 
 The sign in action can be used from any card in Teams, not just the sign in card. For more information, see [Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
 ### Support for login cards
 
-The following table provides the features that support sign-in cards:
+The following table provides the features that support sign in cards:
 
 | Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
@@ -980,3 +984,4 @@ The following cards are implemented by the Bot Framework, but aren't supported b
 * [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)
 * [Create connectors for Microsoft 365 Groups](../../webhooks-and-connectors/how-to/connectors-creating.md)
 * [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)

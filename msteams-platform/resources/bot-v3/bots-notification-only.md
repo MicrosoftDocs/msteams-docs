@@ -3,13 +3,13 @@ title: Notification-only bots
 description: In this module, learn what notification-only bots are in Microsoft Teams, app manifest and its best practices and limitations
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 01/29/2020
+ms.date: 04/02/2023
 ---
 # Notification-only bots in Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-If your bot's sole purpose is to deliver notification to users and isn't conversational, you can enable the `isNotificationOnly` field in your app manifest. This produces the following changes:
+If your bot's sole purpose is to deliver notification to users and isn't conversational, you can enable the `isNotificationOnly` field in your [app manifest](../schema/manifest-schema.md#bots). This produces the following changes:
 
 * Users can't message your notification-only bot.
 * Users can't @mention the bot.
