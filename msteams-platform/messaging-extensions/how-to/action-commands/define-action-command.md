@@ -77,7 +77,7 @@ If the message extension is invoked from the compose box or directly from a mess
 
 ## Add the action command to your app manifest
 
-To add the action command to the app manifest, you must add a new `composeExtension` object to the top level of the app manifest JSON. You can use one of the following ways to do so:
+To add the action command to the app manifest, you must add a new `composeExtensions` object to the top level of the app manifest JSON. You can use one of the following ways to do so:
 
 * [Create an action command using Developer Portal](#create-an-action-command-using-developer-portal)
 * [Create an action command manually](#create-an-action-command-manually)
@@ -136,7 +136,7 @@ To create an action command:
 
 ### Create an action command manually
 
-To manually add your action-based message extension command to your app manifest, you must add the following parameters to the `composeExtension.commands` array of objects:
+To manually add your action-based message extension command to your app manifest, you must add the following parameters to the `composeExtensions.commands` array of objects:
 
 | Property name | Purpose | Required? | Minimum manifest version |
 |---|---|---|---|
@@ -168,7 +168,7 @@ If you're using an embedded web view, you can optionally add the `taskInfo` obje
 
 #### App manifest example
 
-This section isn't an example of the complete manifest. For the complete app manifest schema, see [app manifest schema](~/resources/schema/manifest-schema.md). The following is an example of a `composeExtensions` object defining two action commands:
+This section isn't an example of the complete manifest. The following is an example of a `composeExtensions` object defining two action commands:
 
 ```json
 ...
@@ -225,6 +225,8 @@ This section isn't an example of the complete manifest. For the complete app man
 ...
 ```
 
+For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
+
 ## Code sample
 
 | Sample name           | Description | .NET    | Node.js   | Manifest|
@@ -252,6 +254,5 @@ If you're using the parameters or an embedded web view with a `taskInfo` object,
 
 * [Cards](../../../task-modules-and-cards/what-are-cards.md)
 * [Task modules](../../../task-modules-and-cards/what-are-task-modules.md)
-* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
 * [Developer Portal for Teams](../../../concepts/build-and-test/teams-developer-portal.md)
 * [Message extensions](../../what-are-messaging-extensions.md)

@@ -400,3 +400,4 @@ Now that you've familiarized yourself with bot activity handlers, let us see how
 * [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
 * [Get Teams specific context for your bot](how-to/get-teams-context.md)
 * [Messages in bot conversations](how-to/conversations/conversation-messages.md)
+* [Component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs)
