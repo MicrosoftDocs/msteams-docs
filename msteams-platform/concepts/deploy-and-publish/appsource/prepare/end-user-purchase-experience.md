@@ -54,7 +54,7 @@ Consent dialog is part of the flow to get the users license information and may 
 
 ## Manage subscriptions
 
-If you bought a Teams app subscription or manage one for your team, you can view the list of subscriptions purchased and their details:
+If you've purchased a Teams app subscription or if you want to manage one for your team, you can view the list of subscriptions and their details:
 
 * Change a plan.
 * Buy or remove licenses.
@@ -70,7 +70,7 @@ If you bought a Teams app subscription or manage one for your team, you can view
 
 1. Select the **Subscriptions** tab to view your list of subscriptions.
 
-1. To filter subscriptions by status, select **Filter** and select the type(s) of subscriptions:
+1. To filter subscriptions by status, select **Filter** and then select the type(s) of subscriptions:
     * **Pending**: Subscription still needs to be set up.
     * **Active**: Subscription is set up and the service can be used.
     * **Deleted**: Subscription is no longer available.
@@ -87,7 +87,7 @@ If you bought a Teams app subscription or manage one for your team, you can view
 
 1. Select the **Subscriptions** tab to view your list of subscriptions.
 
-1. Find the app subscription you want to manage and select **More options ...**.
+1. Find the app subscription that you want to manage and select **More options ...**.
 
 1. Manage licenses by selecting **Buy licenses** or **Remove licenses**.
 
@@ -99,14 +99,14 @@ If you bought a Teams app subscription or manage one for your team, you can view
 
 1. Select the **Subscriptions** tab to view your list of subscriptions.
 
-1. Find the app you want to cancel and select **More options ...** > **View subscription**.
+1. Find the app that you want to cancel and select **More options ...** > **View subscription**.
 
 1. Select **Cancel subscription**.
 
 > [!NOTE]
 > You can only manage subscriptions you purchased.
 
-To take additional actions related to your subscription, such as editing your billing profile or recurring billing settings, select [**Manage more in M365 admin center**](https://www.microsoft.com/en-in/microsoft-365/business/office-365-administration?rtc=1).
+Yac can take additional actions related to your subscription, such as editing your billing profile or recurring billing settings in [M365 admin center](https://www.microsoft.com/en-in/microsoft-365/business/office-365-administration?rtc=1).
 
 :::image type="content" source="../../../../assets/images/saas-offer/manage more in M365 admin center.png" alt-text="Screenshot shows you to manage the additional subscriptions in M365 admin center.":::
 
