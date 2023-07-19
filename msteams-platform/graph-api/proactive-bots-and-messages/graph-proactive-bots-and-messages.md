@@ -84,6 +84,9 @@ You can retrieve the `teamsAppId` in the following ways:
     }
     ```
 
+    > [!NOTE]
+    > When the app is in the store, the `teamsAppId` is same as `IdFromManifest` and the `externalId` must not be used in this case.
+
 * If your app has already been uploaded or sideloaded for a user in personal scope:
 
     **Microsoft Graph page reference:** [List apps installed for user](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
