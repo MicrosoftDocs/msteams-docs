@@ -439,9 +439,7 @@ items:
          :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-final.png" alt-text="Screenshot shows the suggestions in the Teams chat.":::
     
         # [SendTargetedNotification](#tab/sendtargetednotification)
-
-        To send targeted notification follow the steps:
-     
+           
         1. Bot sends an adaptive card to fill the response.
         
         1. Select the checkbox to specfic participant.
@@ -455,8 +453,6 @@ items:
              :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
         
         # [SendInMeetingNotification](#tab/sendinmeetingnotification)
-
-        To send in meeting notification follow the steps:
 
         1. Bot sends an agenda adaptive card.
         
@@ -477,19 +473,19 @@ items:
   content: |
     Did you come up with something like this?
 
-    # [SendTargetedNotification](#tab/sendtargetednotification)
+        # [SendTargetedNotification](#tab/sendtargetednotification)
 
-    The following image shows the pop-up for the send targeted notification:
-    
+        The following image shows the pop-up for the send targeted notification:
+        
          :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
-    
-    # [SendInMeetingNotification](#tab/sendinmeetingnotification)
+        
+        # [SendInMeetingNotification](#tab/sendinmeetingnotification)
 
-    The following image shows the pop-up for the send in-meeting notification:
-    
+        The following image shows the pop-up for the send in-meeting notification:
+        
          :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
 
-    ---
+        ---
 
 - content: |
     You've completed the tutorial to get started with generate in-meeting notifications app.
