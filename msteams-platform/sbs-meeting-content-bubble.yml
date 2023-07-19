@@ -418,7 +418,7 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/upload-custom-app_1.png" alt-text="Screenshot shows the Teams apps with Upload a custom app highlighted in red."::: 
 
-    1. Select the upload In-meeting-notification-demo.zip file that you created in the **Manifest** folder and select **Open**.
+    1. Select the .zip file you've created in the **Manifest** folder and select **Open**.
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/Zip-file_1.png" alt-text="Screenshot shows the manifest folder with in-meeting notification demo zip file and Open option highlighted in red.":::
 
@@ -481,13 +481,13 @@ items:
 
     The following image shows the pop-up for the send targeted notification:
     
-         :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
+          :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
     
     # [SendInMeetingNotification](#tab/sendinmeetingnotification)
 
     The following image shows the pop-up for the send in-meeting notification:
     
-         :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
+          :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
 
     ---
 
