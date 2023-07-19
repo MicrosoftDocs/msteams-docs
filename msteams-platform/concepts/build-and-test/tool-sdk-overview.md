@@ -73,7 +73,7 @@ You can build your Microsoft Teams app using following different tools and SDKs:
         Microsoft Bot Framework and Azure AI Bot Service are a collection of libraries, tools, and services that let you build, test, deploy, and manage intelligent bots. The Bot Framework includes a modular and extensible SDK for building bots and connecting to AI services.
 
         > [!div class="nextstepaction"]
-        > [Bot Framework SDK](/azure/bot-service/bot-service-overview?view=azure-bot-service-4.0)
+        > [Bot Framework SDK](/azure/bot-service/bot-service-overview)
     :::column-end:::
 :::row-end:::
 
