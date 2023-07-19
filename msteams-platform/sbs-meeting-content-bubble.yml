@@ -126,7 +126,7 @@ items:
 
       Perform the following steps if you've created a new **Microsoft App ID**:
 
-    1. In the left panel, select **Configuration**. 
+    1. In the left pane, select **Configuration**. 
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.      
@@ -164,8 +164,6 @@ items:
 
         :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Screenshot shows the Channels with Microsoft Teams highlighted in red.":::
 
-    1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
-
     1. Select the checkbox to accept the **Terms of Service**.
     
     1. Select **Agree**.
@@ -183,7 +181,7 @@ items:
      ```
 
      > [!NOTE]
-     > While creating ngrok tunnel, use `localhost 5000` instead of `3978` if you choose **Command line** to run your app.
+     > If you choose **Command line** to run your app, while creating ngrok tunnel, use `localhost 5000` instead of `3978`.
      
      > [!TIP]
      > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
@@ -199,7 +197,7 @@ items:
         > The HTTPS URL in your ngrok is your fully qualified domain name.
         > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
 
-    1. In **Settings** for the Azure bot that you created, select **Configuration**.
+    1. Go to the Azure bot you've created in Azure portal. In the left pane, under **Settings**, select **Configuration**
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
@@ -217,15 +215,17 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. In the left panel, select **App Registrations**.
+    1. In the left pane, select **App Registrations**.
 
     1. Select your bot.
 
     1. Under **Manage**, select **Expose an API**.
 
-    1. Select **Set**.
+    1. Select **Add**.
 
-    1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{AppID}`.
+    1. Use the `api://your ngrok/botid-{AppID}` format for the **Application ID URI**. 
+
+    1. Update the a **Application ID URI** and select **Save**.
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-set-api_1.png" alt-text="Screenshot shows to Set the App ID URI with Save option highlighted in red.":::
 
@@ -292,7 +292,7 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-client-applications.png" alt-text="Screenshot shows the Client IDs":::
 
-    1. In the left panel, select **API Permissions**. 
+    1. In the left pane, select **API Permissions**. 
 
        > [!NOTE]
        > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
@@ -316,7 +316,7 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-otherpermissions.png" alt-text="Screenshot shows the Add permissions":::
 
-    1. From the left panel, select **Authentication** to set a redirect URI. 
+    1. From the left pane, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
        > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
@@ -343,7 +343,7 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/navigate-to-meeting-content-bubble-repo_1.png" alt-text="Screenshot shows the App settings location.":::
 
-    1. Open the **appsettings.json** file in Visual Studio and update the following information:  
+    1. Open the **appsettings.json** file  and update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
@@ -359,7 +359,7 @@ items:
   content: |
     1. Go to **manifest.json** in cloned repository.
     
-    1. Open the **manifest.json** file in Visual Studio and make the following changes:
+    1. Open the **manifest.json** file and update the following information:
     
          * Set `ID` to **Microsoft App ID**.
          * Set `botId` to **Microsoft App ID**.
@@ -382,7 +382,7 @@ items:
     
            :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-VSopenfile_1.png" alt-text="Screenshot shows the Visual Studio with File, Open and Project-Solution highlighted in red.":::
 
-       1. Open the **InMeetingNotifications.sln** file in Visual Studio Code.
+       1. Open the **InMeetingNotifications.sln** file in Visual Studio.
 
            :::image type="content" source="~/assets/images/meeting-content-bubble/proj-sln_1.png" alt-text="Screenshot shows the cloned repository with InMeetingNotifications.sln file highlighted in red.":::
 
@@ -396,18 +396,20 @@ items:
   durationInMinutes: 1
   content: |
 
-    1. In your cloned repository, go to **csharp > Resources > Manifest**.
+    1. In your cloned repository, go to **csharp > InMeetingNotifications > Manifest**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
-       * icon-outline.png
-       * icon-color.png
+       * outline.png
+       * color.png
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/create-manifest-zip_1.png" alt-text="Screenshot shows the cloned repository with path and in-meeting notification demo zip file highlighted in red."::: 
     
     1. Create a meeting with a few presenters and attendees.
+
+    1. Join the meeting.
    
-    1. After the meeting is created, select **+ Apps** to add an App.
+    1. After the meeting is started, select **+ Apps** to add an App.
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/add-an-app.png" alt-text="Screenshot shows the Teams call with Apps option highlighted in red."::: 
    
@@ -419,7 +421,7 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/upload-custom-app_1.png" alt-text="Screenshot shows the Teams apps with Upload a custom app highlighted in red."::: 
 
-    1. Select the upload .zip file that you created in the **Manifest** folder and select **Open**.
+    1. Select the upload In-meeting-notification-demo.zip file that you created in the **Manifest** folder and select **Open**.
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/Zip-file_1.png" alt-text="Screenshot shows the manifest folder with in-meeting notification demo zip file and Open option highlighted in red.":::
 
@@ -442,12 +444,40 @@ items:
   content: |
     Did you come up with something like this?
 
-     :::image type="content" source="~/assets/images/meeting-content-bubble/final-result-targeted-notification.png" alt-text="Screenshot shows the final output after the selection of targeted notification.":::
+    # [SendTargetedNotification](#tab/sendtargetednotification)
 
-     :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
+    To get the targeted notification follow the steps:
 
-     :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
+    1. The in-meeting notifications Demo app sends an automatic reply to the meeting chat.
 
+         :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="Screenshot shows the suggestions in the Teams chat."::: 
+    
+    1. Send a response with Targeted In-meeting `SendTargetedNotification`. 
+
+         :::image type="content" source="~/assets/images/meeting-content-bubble/targeted-meeting-notification.png" alt-text="Screenshot shows the responses for the send targeted notification.":::
+
+    1. In the pop-up, select the feedback response.
+
+         :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
+    
+
+    # [SendInMeetingNotification](#tab/sendinmeetingnotification)
+
+    To get the send in meeting notification follow the steps:
+
+    1. The in-meeting notifications Demo app sends an automatic reply to the meeting chat.
+    
+         :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="Screenshot shows the suggestions in the Teams chat."::: 
+
+    1. Send a response with Targeted In-meeting `SendInMeetingNotification`.
+
+         :::image type="content" source="~/assets/images/meeting-content-bubble/send-in-meeting-notification.png" alt-text="Screenshot shows the responses for the send in-meeting notification.":::
+
+    1. In the pop-up, select the feedback response
+
+        :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
+
+    ---
 
 - content: |
     You've completed the tutorial to get started with generate in-meeting notifications app.
