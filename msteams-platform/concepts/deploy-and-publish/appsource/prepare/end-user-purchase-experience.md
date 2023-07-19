@@ -26,22 +26,22 @@ The following example shows how users can purchase subscription plans for a Team
 
     :::image type="content" source="~/assets/images/saas-offer/add-region.png" alt-text="Screenshot shows option to select the country or region.":::
 
-1. In the **Choose a subscription plan** dialog, select the plan you want.
+1. In the **Choose a subscription plan** dialog, select **Buy** on the plan you want to purchase.
 
     > [!NOTE]
     > Private plans are visible only to users in orgs you're providing the offer to. These plans are indicated with a **Special offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon.)
 
     :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Screenshot shows selecting the appropriate subscription plan.":::
 
-1. In the **Checkout** dialog, provide the license quantity and select **Next**.
+1. In the **Checkout** dialog, under **Quantity**, select the license quantity and select **Next**.
 
     :::image type="content" source="~/assets/images/saas-offer/add-license-quantity.png" alt-text="Screenshot shows selecting the number of licenses.":::
 
-1. Review the given details and select **Place order**.
+1. Review the details and select **Place order**.
 
     :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Screenshot shows placing the subscription order.":::
 
-1. When prompted, select **Set up subscription** to set up your subscription.
+1. Select **Set up subscription**.
 
     :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="Screenshot shows the option to set up your subscription.":::
 
