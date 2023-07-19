@@ -17,11 +17,11 @@ App caching is supported for the following:
 | Scope | &nbsp; Desktop | &nbsp; | iOS | Android |
 | --- | --- | --- | --- | --- |
 | &nbsp; | *Supported* <br> *Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md)*  | *Cache lifetime* | *Supported* | *Supported* |
-| Personal | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | 30 minutes| ✔️ | ❌ |
-| Chat | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | 30 minutes| ❌ | ❌ |
-| Channel | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md)| 30 minutes| ❌ | ❌ |
-| Meeting tab | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | 30 minutes| ❌ | ❌ |
-| Meeting side panel or In-meeting apps | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | 20 minutes| ❌ | ❌ |
+| Personal | ✔️ | 30 minutes| ✔️ | ❌ |
+| Chat | ✔️ | 30 minutes| ❌ | ❌ |
+| Channel | ✔️ | 30 minutes| ❌ | ❌ |
+| Meeting tab | ✔️ | 30 minutes| ❌ | ❌ |
+| Meeting side panel or In-meeting apps | ✔️ | 20 minutes| ❌ | ❌ |
 
 Here's what you'll learn in this section:
 
