@@ -16,9 +16,9 @@ Add functionality to your Teams experience by subscribing and managing licenses 
 
 The following example shows how users can purchase subscription plans for a Teams app:
 
-1. In the Teams store, find and select the app you want to purchase the subscription. Here *Miro* app is shown as an example.
+1. In the Teams store, find and select the app you want to purchase the subscription. Here the *Miro* app is shown as an example.
 
-1. In the app details dialog, select **Buy a subscription**.
+1. In the app details dialog, select **Buy subscription**.
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app.":::
 
@@ -26,14 +26,14 @@ The following example shows how users can purchase subscription plans for a Team
 
     :::image type="content" source="~/assets/images/saas-offer/add-region.png" alt-text="Screenshot shows option to select the country or region.":::
 
-1. In the **Choose a subscription plan** dialog, select **Buy** on the plan you want to purchase.
+1. In the **Choose a subscription plan** dialog, select **Buy** for the plan you want to purchase.
 
     > [!NOTE]
-    > Private plans are visible only to users in orgs you're providing the offer to. These plans are indicated with a **Special offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon.)
+    > Private plans are visible only to users in orgs you're providing the offer to. These plans are indicated with a **Special offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon.
 
     :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Screenshot shows selecting the appropriate subscription plan.":::
 
-1. In the **Checkout** dialog, under **Quantity**, select the license quantity and select **Next**.
+1. In the **Checkout** dialog, under **Subscription details**, select the number of licenses and length of subscription > **Next**.
 
     :::image type="content" source="~/assets/images/saas-offer/add-license-quantity.png" alt-text="Screenshot shows selecting the number of licenses.":::
 
