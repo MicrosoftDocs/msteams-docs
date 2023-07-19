@@ -16,7 +16,7 @@ App caching is supported for the following:
 
 | Scope | &nbsp; Desktop | &nbsp; | iOS | Android |
 | --- | --- | --- | --- | --- |
-| &nbsp; | *Supported* | *Cache lifetime* | *Supported* | *Supported* |
+| &nbsp; | *Supported* *Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md)*  | *Cache lifetime* | *Supported* | *Supported* |
 | Personal | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | 30 minutes| ✔️ | ❌ |
 | Chat | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | 30 minutes| ❌ | ❌ |
 | Channel | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md)| 30 minutes| ❌ | ❌ |
