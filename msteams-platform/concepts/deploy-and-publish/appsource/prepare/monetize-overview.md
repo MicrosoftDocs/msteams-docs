@@ -5,6 +5,7 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high 
+ms.date: 11/23/2022
 ---
 
 # Monetize your app

@@ -5,6 +5,7 @@ description: Learn to build tabs using Adaptive Cards where front end is rendere
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 05/02/2023
 ---
 
 # Build tabs with Adaptive Cards

@@ -3,6 +3,7 @@ title: Tabs on mobile
 description: Learn how tab functions on Android and iOS Microsoft Teams clients (mobile), their authentication, low bandwidth connection, testing, or distribution.
 ms.topic: conceptual
 ms.localizationpriority: high
+ms.date: 11/02/2022
 ---
 
 # Tabs on mobile
@@ -85,3 +86,4 @@ If you are sideloading your app or publishing to an organization's app catalog, 
 * [Test your app](../../concepts/build-and-test/test-app-overview.md)
 * [Distribute your Microsoft Teams app](../../concepts/deploy-and-publish/apps-publish-overview.md)
 * [Create Teams app package](../../concepts/build-and-test/apps-package.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md#statictabs)
