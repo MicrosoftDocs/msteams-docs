@@ -257,4 +257,3 @@ server.get('/api/notify', async (req, res) => {
 * [Send activity feed notifications to users in Microsoft Teams](/graph/teams-send-activityfeednotifications)
 * [Add app to team - Microsoft Graph v1.0](/graph/api/team-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [Microsoft Teams service limits](/graph/throttling-limits#microsoft-teams-service-limits)
-* [Protected APIs in Microsoft Teams](/graph/teams-protected-apis)
