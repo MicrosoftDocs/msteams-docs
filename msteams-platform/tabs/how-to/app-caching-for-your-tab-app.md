@@ -14,9 +14,9 @@ You can configure your tab app (app) to enable app caching to reduce the reload 
 
 App caching is supported for the following:
 
-| Scope | &nbsp; Desktop | &nbsp; | iOS | Android |
-| --- | --- | --- | --- | --- |
-| &nbsp; | *Supported* <br> *Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md)*  | *Cache lifetime* | *Supported* | *Supported* |
+| Scope | &nbsp; Desktop | iOS | Android |
+| --- | --- | --- | --- |
+| &nbsp; | *Supported* <br> *Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md)* | *Supported* | *Supported* |
 | Personal | ✔️ Cache lifetime: 30 minutes| ✔️ | ❌ |
 | Chat | ✔️ Cache lifetime: 30 minutes| ❌ | ❌ |
 | Channel | ✔️ Cache lifetime: 30 minutes| ❌ | ❌ |
