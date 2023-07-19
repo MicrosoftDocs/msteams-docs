@@ -167,7 +167,7 @@ Microsoft Teams JavaScript library exposes the frameContext in which your meetin
 
 ## Enable your tabs for Teams meeting
 
-Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-schema) with relevant context property to configure the different tab views. The meetings app capabilities are declared in your app manifest using the scopes and context arrays under the `configurableTabs` section.
+Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-schema#configurabletabs) with relevant context property to configure the different tab views. The meetings app capabilities are declared in your app manifest using the scopes and context arrays under the `configurableTabs` section.
 
 ### Scope
 

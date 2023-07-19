@@ -365,7 +365,7 @@
     displayName: clickjacking
   - name: Create a personal tab
     href: tabs/how-to/create-personal-tab.md
-    displayName: App generator, Reorder static personal tabs
+    displayName: App generator, Reorder static personal tabs, channel, or group custom tab
   - name: Create a channel tab
     href: tabs/how-to/create-channel-group-tab.md
     displayName: Create a channel tab or group tab, Create a custom channel or group tab with ASP.NET Core, Build your first app using Blazor
