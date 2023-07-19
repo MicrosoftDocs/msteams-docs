@@ -77,7 +77,7 @@ You can build your Microsoft Teams app using following different tools and SDKs:
     :::column-end:::
 :::row-end:::
 
-::::row:::
+:::row:::
     :::column span="1":::
         **Microsoft Graph SDKs**
     :::column-end:::
