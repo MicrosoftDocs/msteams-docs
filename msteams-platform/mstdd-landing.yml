@@ -58,8 +58,8 @@ landingContent:
         url: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
       - text: Extend Microsoft 365 Copilot
         url: copilot/how-to-extend-copilot.md
-text: Distribute your app to specific countries or regions
-concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries-or-regions
+text: Distribute your app to specific countries
+concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries
       - text: Teams Toolkit v5 extension within Visual Studio Code
         url: toolkit/teams-toolkit-fundamentals.md
       - text: Get started module includes GitHub Codespaces
