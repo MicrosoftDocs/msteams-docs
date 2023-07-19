@@ -4,6 +4,7 @@ description: Learn how to implement the design guidelines including UI elements 
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.date: 05/04/2023
 --- 
 # Designing your personal app for Microsoft Teams
 

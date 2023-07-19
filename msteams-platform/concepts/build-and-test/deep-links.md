@@ -3,6 +3,7 @@ title: Deep links overview
 description: Learn how to create deep links and navigate using them in your Microsoft Teams apps with tabs.
 ms.topic: how-to
 ms.localizationpriority: high
+ms.date: 04/13/2023
 ---
 
 # Configure deep links

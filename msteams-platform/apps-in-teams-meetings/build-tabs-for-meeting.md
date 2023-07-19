@@ -73,12 +73,13 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 
    :::image type="content" source="../assets/images/side-panel-view.png" alt-text="Screenshot shows side panel view with the list of apps.":::
 
+To notify meeting participants whenever there's a new activity on the app loaded in the meeting side panel, you can enable app icon badging. For more information, see [enable app icon badging for your Teams app](app-icon-badging-for-your-app.md).
+
 #### Deep link to meeting side panel
 
 > [!NOTE]
 >
 > * Deep link to meeting side panel in Teams desktop client is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
->
 > * Deep link to meeting side panel in Teams mobile client is generally available.
 
 You can create a deep link to your tab app that can open in the meeting side panel. When users in a meeting select the deep link, it opens the meeting side panel in the meeting stage. If a user selects the deep link before or after the meeting, the deep link opens in a pre or a post-meeting tab respectively.
@@ -109,7 +110,7 @@ Pre or post-meeting tab behavior isn't supported in channel meetings.
 
 For deep link format, see [deep links](~/concepts/build-and-test/deep-link-workflow.md#deep-link-to-meeting-side-panel).
 
-### Meeting Stage View
+### Meeting stage view
 
 1. After a tab is added to the meeting side panel, you can now choose to opt into global app sharing.
 
@@ -166,7 +167,7 @@ Microsoft Teams JavaScript library exposes the frameContext in which your meetin
 
 ## Enable your tabs for Teams meeting
 
-Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-schema) with relevant context property to configure the different tab views. The meetings app capabilities are declared in your app manifest using the scopes and context arrays under the `configurableTabs` section.
+Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-schema#configurabletabs) with relevant context property to configure the different tab views. The meetings app capabilities are declared in your app manifest using the scopes and context arrays under the `configurableTabs` section.
 
 ### Scope
 
@@ -278,8 +279,8 @@ To enable app caching in your meeting side panel, follow the steps:
 
 1. Use `contentUrl` and `entityId` passed into the load handler to route to the correct page within your app and invoke `notifySuccess` or `notifyFailure` to notify Teams client that the app initialization flow is complete.
 
-   * [contentUrl](../tabs/how-to/create-tab-pages/configuration-page.md#modify-or-remove-a-tab): Add content page URL.
-   * [entityId](../tabs/how-to/create-tab-pages/configuration-page.md#modify-or-remove-a-tab): Add a unique identifier.
+   * [contentUrl](../resources/schema/manifest-schema.md#statictabs): Add content page URL.
+   * [entityId](../resources/schema/manifest-schema.md#statictabs): Add a unique identifier.
 
 1. Dispose resources and perform any cleanup needed in the `beforeUnload` handler, then invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
 
@@ -398,3 +399,4 @@ The following are the limitations for app caching:
 * [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
 * [Add apps to meetings using Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [Get change notifications for Microsoft Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)
+* [Enable app icon badging for your Teams app](app-icon-badging-for-your-app.md)

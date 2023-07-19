@@ -5,11 +5,41 @@ description: Learn how to create deep links to a specific task in Microsoft Team
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 01/31/2023
 ---
 
 # Deep link to a workflow in Teams
 
-You can create a deep link to perform a specific task in Teams, such as to open a scheduling dialog, or navigate to audio-video call.
+You can create a deep link to perform a specific task in Teams, such as to create a new chat, open a scheduling dialog, and navigate to audio-video call.
+
+## Deep link to start a new chat
+
+Applications can start a new chat with a list of users and provide additional information such as chat name and draft message by using the following format:
+
+`https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
+
+Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
+
+The query parameters are:
+
+* `users`: The comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID field supports the Microsoft Azure Active Directory (Azure AD) UserPrincipalName, such as an email address only.
+* `topicName`: An optional field for chat's display name if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
+* `message`: An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
+
+To use this deep link with your bot, specify the deep link as the URL target in your card's button or tap action through the `openUrl` action type. Apps can also use Teams JavaScript library 2.0 to create this without having to manually prepare the deep link. Following is an example using Microsoft Teams JavaScript client library (TeamsJS):
+
+```javascript
+if(chat.isSupported()) {
+    const chatPromise = chat.openGroupChat({ users: ["joe@contoso.com","bob@contoso.com"], topic: "Prep For Meeting Tomorrow", message: "Hi folks kicking off chat about our meeting tomorrow"});
+    chatPromise.
+      then((result) => {/*Successful operation*/}).
+      catch((error) => {/*Unsuccessful operation*/});
+}
+else { /* handle case where capability isn't supported */ }
+```
+
+> [!NOTE]
+> If a chat already exists deep link opens in that chat.
 
 ## Deep link to open a meeting scheduling dialog
 
@@ -153,7 +183,7 @@ For more information, see [deep link to a tab](~/concepts/build-and-test/deep-li
 
 Deep link doesn't open in the meeting side panel in the following scenarios:
 
-* If there is no active meeting.
+* If there's is no active meeting.
 * If the app doesn't have `sidePanel` context declared in the app manifest.
 * If `openInMeeting=false` is set in the deep link.
 * If deep link is selected outside of the meeting window or component.
@@ -171,5 +201,4 @@ To invoke the Stage View through deep link from your tab, you must wrap the deep
 
 | Sample name | Description | .NET |Node.js|
 |-------------|-------------|------|----|
-|Deep link consuming Subentity ID | This sample shows how to use deep-link from bot chat to tab consuming Subentity ID. It also shows deeplinks for navigate to app, navigate to chat, open profile dialog and open scheduling dialog.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
-
+|Deep link consuming Subentity ID | This sample shows how to use deep-link from bot chat to tab consuming Subentity ID. It also shows deep links for navigate to app, navigate to chat, open profile dialog and open scheduling dialog.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|

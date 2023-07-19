@@ -5,6 +5,7 @@ description:  Learn how to create deep links to a teams chat and navigate using 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 01/31/2023
 ---
 
 # Deep link to Teams chat

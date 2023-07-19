@@ -3,6 +3,7 @@ title: Configure third party OAuth authentication
 description: In this article, learn Teams authentication tabs Microsoft Azure AD, authentication in Teams and how to use it in tabs.
 ms.topic: how-to
 ms.localizationpriority: medium
+ms.date: 12/13/2022
 ---
 # Configure third party OAuth IdP authentication
 
