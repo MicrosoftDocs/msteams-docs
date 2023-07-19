@@ -73,6 +73,8 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 
    :::image type="content" source="../assets/images/side-panel-view.png" alt-text="Screenshot shows side panel view with the list of apps.":::
 
+To notify meeting participants whenever there's a new activity on the app loaded in the meeting side panel, you can enable app icon badging. For more information, see [enable app icon badging for your Teams app](app-icon-badging-for-your-app.md).
+
 #### Deep link to meeting side panel
 
 > [!NOTE]
@@ -108,7 +110,7 @@ Pre or post-meeting tab behavior isn't supported in channel meetings.
 
 For deep link format, see [deep links](~/concepts/build-and-test/deep-link-workflow.md#deep-link-to-meeting-side-panel).
 
-### Meeting Stage View
+### Meeting stage view
 
 1. After a tab is added to the meeting side panel, you can now choose to opt into global app sharing.
 
@@ -165,7 +167,7 @@ Microsoft Teams JavaScript library exposes the frameContext in which your meetin
 
 ## Enable your tabs for Teams meeting
 
-Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-schema) with relevant context property to configure the different tab views. The meetings app capabilities are declared in your app manifest using the scopes and context arrays under the `configurableTabs` section.
+Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-schema#configurabletabs) with relevant context property to configure the different tab views. The meetings app capabilities are declared in your app manifest using the scopes and context arrays under the `configurableTabs` section.
 
 ### Scope
 
@@ -290,3 +292,4 @@ The following table provides the user types and lists the features that each use
 * [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
 * [Add apps to meetings using Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [Get change notifications for Microsoft Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)
+* [Enable app icon badging for your Teams app](app-icon-badging-for-your-app.md)

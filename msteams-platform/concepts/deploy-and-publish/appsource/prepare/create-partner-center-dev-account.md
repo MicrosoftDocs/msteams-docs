@@ -5,6 +5,7 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 12/20/2022
 ---
 # Create a Partner Center developer account
 
