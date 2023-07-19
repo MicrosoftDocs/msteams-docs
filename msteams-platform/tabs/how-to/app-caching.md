@@ -14,14 +14,14 @@ App caching improves subsequent launch time of the apps within Teams by allowing
 
 App caching is supported for the following:
 
-| Scope | &nbsp; Desktop | &nbsp; | iOS | Android |
-| --- | --- | --- | --- | --- |
-| &nbsp; | *Supported* | *Cache lifetime* | *Supported* | *Supported* |
-| Personal | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | 30 minutes| ✔️ | ❌ |
-| Chat | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | 30 minutes| ❌ | ❌ |
-| Channel | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md)| 30 minutes| ❌ | ❌ |
-| Meeting tab | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | 30 minutes| ❌ | ❌ |
-| Meeting side panel or In-meeting apps | ✔️ Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) | 20 minutes| ❌ | ❌ |
+| Scope | &nbsp; Desktop | iOS | Android |
+| --- | --- | --- | --- |
+| &nbsp; | *Supported* <br> *Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md)* | *Supported* | *Supported* |
+| Personal | ✔️ Cache lifetime: 30 minutes| ✔️ | ❌ |
+| Chat | ✔️ Cache lifetime: 30 minutes| ❌ | ❌ |
+| Channel | ✔️ Cache lifetime: 30 minutes| ❌ | ❌ |
+| Meeting tab | ✔️ Cache lifetime: 30 minutes| ❌ | ❌ |
+| Meeting side panel or In-meeting apps | ✔️ Cache lifetime: 20 minutes| ❌ | ❌ |
 
 ## Enable app caching
 
@@ -79,7 +79,7 @@ microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
 
 ## Best practices
 
-It's recommended that you implement web storage capabilities to store the data locally in iOS and Android. This helps to load the app faster in subsequent launches.
+It's recommended that you implement web storage or service worker capabilities to store the data or web view locally in iOS and Android. This helps to load the app faster in subsequent launches.
 
 ## Limitations
 
