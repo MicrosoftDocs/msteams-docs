@@ -130,7 +130,7 @@ For example:
    :::column span="":::
       :::image type="icon" source="~/assets/images/overview/adaptive-cards.png" border="false":::
    :::column-end:::
-     :::image type="content" source="~/assets/images/overview/adaptive-cards-extension.png" alt-text="Microsoft Teams app message extension details." border="false":::
+     :::image type="content" source="~/assets/images/overview/adaptive-cards-extension.png" alt-text="Microsoft Teams app adaptive card details." border="false":::
 :::row-end:::
 
 ## See also
