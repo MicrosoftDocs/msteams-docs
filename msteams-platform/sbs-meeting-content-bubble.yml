@@ -347,10 +347,7 @@ items:
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
-         * Set `"BaseURL"` to your `webAppDomain`.
-
-          > [!NOTE]
-          > `WebAppDomain` is your ngrok domain.
+         * Set `"BaseURL"` to the fully qualified `ngrok` domain name.
 
           :::image type="content" source="~/assets/images/meeting-content-bubble/appsettings-json1_1.png" alt-text="Screenshot shows the App settings.":::
 
@@ -435,9 +432,45 @@ items:
 
     1. Go to Teams meeting chat.
     
-    1. **In-meeting notifications Demo** app sends an automatic reply to the meeting chat. You can send a targeted notification and also a in-meeting notification.
+    1. **In-meeting notifications Demo** app sends an automatic reply to the meeting chat. 
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="Screenshot shows the suggestions in the Teams chat."::: 
+         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-final.png" alt-text="Screenshot shows the suggestions in the Teams chat.":::
+    
+    1. Type at the rate mention the `bot` with `SendTargetedNotification` or `SendInMeetingNotification` and **Enter**.
+
+        # [SendTargetedNotification](#tab/sendtargetednotification)
+
+        To get the targeted notification follow the steps:
+     
+        1. Bot sends an adaptive card to fill the response.
+        
+        1. Select the checkbox to specfic participant.
+        
+        1. Select **Send Notifcation**.
+
+             :::image type="content" source="~/assets/images/meeting-content-bubble/targeted-meeting-notification.png" alt-text="Screenshot shows the responses for the send targeted notification.":::
+
+        1. The specfic participant recieves the pop-up notification to submit feedback.
+
+             :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
+        
+        # [SendInMeetingNotification](#tab/sendinmeetingnotification)
+
+        To get the send in meeting notification follow the steps:
+
+        1. Bot sends an agenda adaptive card.
+        
+        1. Select the checkbox to specfic agenda. 
+        
+        1. Select **Push Agenda**.
+
+             :::image type="content" source="~/assets/images/meeting-content-bubble/send-in-meeting-notification.png" alt-text="Screenshot shows the responses for the send in-meeting notification.":::
+
+        1. The participantin the meeting recives the pop-up notification to submit feedback.
+
+             :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
+
+        ---
       
 - title: Complete challenge
   durationInMinutes: 1
@@ -446,36 +479,15 @@ items:
 
     # [SendTargetedNotification](#tab/sendtargetednotification)
 
-    To get the targeted notification follow the steps:
-
-    1. The in-meeting notifications Demo app sends an automatic reply to the meeting chat.
-
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-final.png" alt-text="Screenshot shows the suggestions in the Teams chat."::: 
-    
-    1. Send a response with Targeted In-meeting `SendTargetedNotification`. 
-
-         :::image type="content" source="~/assets/images/meeting-content-bubble/targeted-meeting-notification.png" alt-text="Screenshot shows the responses for the send targeted notification.":::
-
-    1. In the pop-up, select the feedback response.
+    The following image shows the pop-up for the send targeted notification:
 
          :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
     
-
     # [SendInMeetingNotification](#tab/sendinmeetingnotification)
 
-    To get the send in meeting notification follow the steps:
+    The following image shows the pop-up for the send in-meeting notification:
 
-    1. The in-meeting notifications Demo app sends an automatic reply to the meeting chat.
-    
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-final.png" alt-text="Screenshot shows the suggestions in the Teams chat."::: 
-
-    1. Send a response with Targeted In-meeting `SendInMeetingNotification`.
-
-         :::image type="content" source="~/assets/images/meeting-content-bubble/send-in-meeting-notification.png" alt-text="Screenshot shows the responses for the send in-meeting notification.":::
-
-    1. In the pop-up, select the feedback response
-
-        :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
 
     ---
 
