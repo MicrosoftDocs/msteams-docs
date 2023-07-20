@@ -46,17 +46,20 @@ You can create a new conversation with a user or a conversation thread in a chan
 * You can retrieve the [list of channels](~/bots/how-to/get-teams-context.md) in a team where your app is installed.
 * You can retrieve the [list of members](~/bots/how-to/get-teams-context.md) of a team where your app is installed.
 
-Regardless of how you get the information, store the `tenantId` and either the `userId` or `channelId` to create a new conversation. You can also use the `teamId` to create a new conversation thread in the general or default channel of a team.
+Regardless of how you get the information, store the `tenantId` and either the `aadObjectId`, `userId`, or `channelId` to create a new conversation. You can also use the `teamId` to create a new conversation thread in the general or default channel of a team.
 
-The `userId` is unique to your bot ID and a particular user. You can't reuse the `userId` between bots. The `channelId` is global. However, install the bot in the team before you can send a proactive message to a channel.
+The `aadObjectId` is unique the user and can be retrieved using the [graph API.](/graph/api/user-list). The `userId` is unique to your bot ID and a particular user. You can't reuse the `userId` between bots. The `channelId` is global. However, install the bot in the team before you can send a proactive message to a channel or in a personal scope. If the bot isn't installed in a users personal scope when using `aadObjectId`, `403` error code is returned with `ForbiddenOperationException` message.
 
 Create the conversation, after you have the user or channel information.
+
+> [!NOTE]
+> Sending proactive messages using `aadObjectId` is supported only in personal scope.
 
 ## Create the conversation
 
 You can create the conversation if it doesn't exist or you don't know the `conversationId`. Create the conversation only once and store the `conversationId` value or `conversationReference` object.
 
-To create the conversation, you need a `userId`, `tenantId`, and `serviceUrl`.
+To [create the conversation](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference#create-conversation), you need a `aadObjectId` or `userId`, `tenantId`, and `serviceUrl`.
 
 For `serviceUrl`, use the value from an incoming activity triggering the flow or one of the global service URLs. If the `serviceUrl` isn't available from an incoming activity triggering the proactive scenario, use the following global URL endpoints:
 

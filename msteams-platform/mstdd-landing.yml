@@ -76,6 +76,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Send proactive messages using users AAD ID.
+        url: bots/how-to/conversations/send-proactive-messages.md
       - text: Extend static tabs to group chat or meetings with a customizable experience.
         url: tabs/what-are-tabs.md
       - text: App icon badging for your Teams app
