@@ -37,7 +37,9 @@ Teams platform features that are available to all app developers.
 
 **2023 July**
 
-***July 06, 2023***: [Use app icon badging to identify any app activity during a meeting](apps-in-teams-meetings/app-icon-badging-for-your-app.md).
+* ***July 20, 2023***: [App caching for iOS personal tray](tabs/how-to/app-caching.md)
+
+* ***July 06, 2023***: [Use app icon badging to identify any app activity during a meeting](apps-in-teams-meetings/app-icon-badging-for-your-app.md).
 
 :::column-end:::
 :::row-end:::
@@ -358,7 +360,7 @@ Developer preview is a public program that provides early access to unreleased T
 | -------- | --------- | ----------------|
 |19/07/2023| Use Collaborative Stage View to engage with your app content in a new Teams window | Build tabs > [Tabs link unfurling and Stage View](tabs/tabs-link-unfurling.md#collaborative-stage-view) |
 |31/01/2023| Send notifications to specific participants on a meeting stage with targeted in-meeting notification. |Build apps for Teams meetings and calls > Enable and configure apps for meetings > Build in-meeting notification for Teams meeting > Build tabs for meeting > [Targeted in-meeting notification](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification)|
-|30/01/2023| Enable app caching to improve subsequent launch time of the apps to the meeting side panel.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > [App caching](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching) |
+|30/01/2023| Enable app caching to improve subsequent launch time of the apps to the meeting side panel.|Build tabs > [App caching for your tab app](tabs/how-to/app-caching.md) |
 
 </details>
 </br>
