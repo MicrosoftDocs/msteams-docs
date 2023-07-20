@@ -225,7 +225,7 @@ items:
 
     1. Use the `api://your ngrok/botid-{AppID}` format for the **Application ID URI**. 
 
-    1. Update the a **Application ID URI** and select **Save**.
+    1. Update the **Application ID URI** and select **Save**.
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-set-api_1.png" alt-text="Screenshot shows to Set the App ID URI with Save option highlighted in red.":::
 
@@ -452,7 +452,7 @@ items:
 
           :::image type="content" source="~/assets/images/meeting-content-bubble/targeted-meeting-notification.png" alt-text="Screenshot shows the responses for the send targeted notification.":::
 
-    1. The targeted participant recieves a pop-up notification in the meeting window.
+    1. The targeted participant receives a pop-up notification in the meeting window.
 
           :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
     
@@ -466,7 +466,7 @@ items:
 
           :::image type="content" source="~/assets/images/meeting-content-bubble/send-in-meeting-notification.png" alt-text="Screenshot shows the responses for the send in-meeting notification.":::
 
-    1. All the participants recieve a pop-up notification in the meeting.
+    1. All the participants receive a pop-up notification in the meeting.
 
           :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
 
