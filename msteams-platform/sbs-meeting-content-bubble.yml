@@ -440,37 +440,37 @@ items:
 
     1.Select **Send**.
     
-        # [SendTargetedNotification](#tab/sendtargetednotification)
+    # [SendTargetedNotification](#tab/sendtargetednotification)
 
-        To send targeted notification follow the steps:
-           
-        1. Bot sends an Adaptive Card with the list of participant in the meeting.
+    To send targeted notification follow the steps:
         
-        1. Select the checkbox for the targeted participant.
-        
-        1. Select **Send Notifcation**.
+    1. Bot sends an Adaptive Card with the list of participant in the meeting.
+    
+    1. Select the checkbox for the targeted participant.
+    
+    1. Select **Send Notifcation**.
 
-             :::image type="content" source="~/assets/images/meeting-content-bubble/targeted-meeting-notification.png" alt-text="Screenshot shows the responses for the send targeted notification.":::
+          :::image type="content" source="~/assets/images/meeting-content-bubble/targeted-meeting-notification.png" alt-text="Screenshot shows the responses for the send targeted notification.":::
 
-        1. The targeted participant recieves a pop-up notification in the meeting window.
+    1. The targeted participant recieves a pop-up notification in the meeting window.
 
-             :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
-        
-        # [SendInMeetingNotification](#tab/sendinmeetingnotification)
+          :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
+    
+    # [SendInMeetingNotification](#tab/sendinmeetingnotification)
 
-        To send in-meeting notification follow the steps:
+    To send in-meeting notification follow the steps:
 
-        1. Bot sends an Adaptive Card with the list of agenda.
-        
-        1. Select the option from the list and select **Push Agenda**.
+    1. Bot sends an Adaptive Card with the list of agenda.
+    
+    1. Select the option from the list and select **Push Agenda**.
 
-             :::image type="content" source="~/assets/images/meeting-content-bubble/send-in-meeting-notification.png" alt-text="Screenshot shows the responses for the send in-meeting notification.":::
+          :::image type="content" source="~/assets/images/meeting-content-bubble/send-in-meeting-notification.png" alt-text="Screenshot shows the responses for the send in-meeting notification.":::
 
-        1. All the participants recive a pop-up notification in the meeting.
+    1. All the participants recive a pop-up notification in the meeting.
 
-             :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
+          :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
 
-        ---
+    ---
       
 - title: Complete challenge
   durationInMinutes: 1
