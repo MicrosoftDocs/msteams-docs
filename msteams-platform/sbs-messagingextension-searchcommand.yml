@@ -113,7 +113,7 @@ items:
 
       Perform the following steps if you've created a new **Microsoft App ID**:
 
-    1. In the left panel, select **Configuration**. 
+    1. In the left pane, select **Configuration**. 
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
@@ -135,7 +135,7 @@ items:
          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/clientvalue_1.png" alt-text="Screenshot of Client secret section with the Copy to clipboard icon highlighted in red.":::
        
        > [!TIP]
-       > Save the Client secrets **Value** or app password for future reference.
+       > Save the **Client secrets** **Value** or app password for future reference.
 
     **To add the Teams channel**
 
@@ -314,8 +314,8 @@ items:
            `https://9179****.ngrok.io/auth-end`. </br>
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
-             * **ID tokens**
-             * **Access tokens**
+             * **Access tokens (used for implicit flows)**
+             * **ID tokens (used for implicit and hybrid flows)**
    
          1. Select **Configure**.
 
@@ -342,7 +342,7 @@ items:
 
         :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/manifestlocation_1.png" alt-text="Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red.":::
 
-    1. Open the **manifest.json** file in the Visual Studio and make the following changes:
+    1. Open the **manifest.json** file and make the following changes:
 
          * Replace `<<YOUR-BASE-URL-DOMAIN>>` with `WebAppDomain` name.
          * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with bot's **Microsoft App ID**.
@@ -356,7 +356,7 @@ items:
 
     # [Visual Studio](#tab/latestversionofvisualstudio)
 
-       1. Open Visual Studio.
+       1. Open the Visual Studio.
 
        1. Go to **File** > **Open** > **Project/Solution...**.
     
@@ -417,7 +417,7 @@ items:
 
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-latest.png" alt-text="Screenshot shows the bot home." lightbox="~\assets\images\teams-toolkit-v2\spfx-custom-new2.png":::
+       :::image type="content" source="~/assets/images/tab-device-permission/custom-upload.png" alt-text="Screenshot shows the upload a custom app.":::
 
         > [!NOTE]
         > Contact your Teams administrator, if you don't find the option to upload a custom app.
