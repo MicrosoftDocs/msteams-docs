@@ -434,39 +434,39 @@ items:
     
     1. **In-meeting notifications Demo** app sends an automatic reply to the meeting chat. 
 
-    1. Type at the rate mention the `bot` with `SendTargetedNotification` or `SendInMeetingNotification` and **Enter**.
-
+    1. @mention the `In-Meeting Notification` bot and select `SendTargetedNotification` or `SendInMeetingNotification`.
+    
          :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-final.png" alt-text="Screenshot shows the suggestions in the Teams chat.":::
+
+    1.Select **Send**.
     
         # [SendTargetedNotification](#tab/sendtargetednotification)
 
         To send targeted notification follow the steps:
            
-        1. Bot sends an adaptive card to selcet the participant.
+        1. Bot sends an Adaptive Card with the list of participant in the meeting.
         
-        1. Select the checkbox to specfic participant.
+        1. Select the checkbox for the targeted participant.
         
         1. Select **Send Notifcation**.
 
              :::image type="content" source="~/assets/images/meeting-content-bubble/targeted-meeting-notification.png" alt-text="Screenshot shows the responses for the send targeted notification.":::
 
-        1. The specfic participant recieves the pop-up notification to submit feedback.
+        1. The targeted participant recieves a pop-up notification in the meeting window.
 
              :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
         
         # [SendInMeetingNotification](#tab/sendinmeetingnotification)
 
-        To send in meeting notification follow the steps:
+        To send in-meeting notification follow the steps:
 
-        1. Bot sends an agenda adaptive card.
+        1. Bot sends an Adaptive Card with the list of agenda.
         
-        1. Select the checkbox to specfic agenda. 
-        
-        1. Select **Push Agenda**.
+        1. Select the option from the list and select **Push Agenda**.
 
              :::image type="content" source="~/assets/images/meeting-content-bubble/send-in-meeting-notification.png" alt-text="Screenshot shows the responses for the send in-meeting notification.":::
 
-        1. The participant in the meeting recives the pop-up notification to submit feedback.
+        1. All the participants recive a pop-up notification in the meeting.
 
              :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
 
@@ -479,13 +479,13 @@ items:
 
     # [SendTargetedNotification](#tab/sendtargetednotification)
 
-    The following image shows the pop-up for the send targeted notification:
+    The following image shows a pop-up for the send targeted notification:
     
      :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
     
     # [SendInMeetingNotification](#tab/sendinmeetingnotification)
 
-    The following image shows the pop-up for the send in-meeting notification:
+    The following image shows a pop-up for the send in-meeting notification:
     
      :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
 
