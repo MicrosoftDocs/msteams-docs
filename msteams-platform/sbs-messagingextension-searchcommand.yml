@@ -70,7 +70,7 @@ items:
     1. Select **Azure Bot**.
     1. Select **Create**.
 
-         :::image type="content" source="./assets/images/azure-bot_1.png" alt-text="Screenshot of Azure bot create page with the Create option highlighted in red.":::
+         :::image type="content" source="./assets/images/create-bot-in-azure.png" alt-text="Screenshot of Azure bot create page with the Create option highlighted in red.":::
 
     1. In the **Create an Azure Bot** window that appears, enter the required bot handle name in **Bot handle**.
     1. Select your **Subscription** and **Resource group** from the dropdown list.
@@ -79,11 +79,11 @@ items:
     
     1. You can optionally create a new resource group. Select **Create new** > enter resource name > select **OK**. Select the required location from the **New resource group location** dropdown list.
 
-         :::image type="content" source="~/assets/images/conversation-bot/newresource_1.png" alt-text="Screenshot shows the new resource group location.":::
+         :::image type="content" source="~/assets/images/conversation-bot/newresource-group.png" alt-text="Screenshot shows the new resource group location.":::
 
     1. In the **Microsoft App ID** section, select **Type of App** as **Multi Tenant**.
 
-       :::image type="content" source="./assets/images/conversation-bot/tenant-review_1.png" alt-text="tenant review.":::
+       :::image type="content" source="./assets/images/conversation-bot/multi-tenant.png" alt-text="tenant review.":::
 
     1. In the **Creation Type**, by default **Create new Microsoft App ID** is selected.
        You can optionally select **Use existing app registration** and enter **App ID**, **App tenant ID**, and **MSI resource ID**.
@@ -93,7 +93,7 @@ items:
 
     1. Select **Review + create**.
 
-       :::image type="content" source="./assets/images/conversation-bot/tenant-review_2.png" alt-text="tenant review.":::
+       :::image type="content" source="./assets/images/conversation-bot/review-create-app.png" alt-text="tenant review.":::
 
     1. If the validation passes, select **Create**.
 
@@ -328,7 +328,7 @@ items:
 
         :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/appsettingslocation_1.png" alt-text="Screenshot of cloned repository with the file path and appsettings JSON file highlighted in red.":::
     
-    1. Open the **appsettings.json** file in the Visual Studio and update the following information:  
+    1. Open the **appsettings.json** file and update the following information:  
 
          * Set `"MicrosoftAppType"` to **MultiTenant**.
          * Set `"MicrosoftAppId"` to bot's **Microsoft App ID**.

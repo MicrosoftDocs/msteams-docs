@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Teams action based message extensions allow users to interact with web services in the Microsoft Teams client. Message extensions help to initiate actions in an external system from the compose message area, the command box, or directly from a message.
+    Teams action based message extension allow users to interact with web services in the Microsoft Teams client. Message extensions help to initiate actions in an external system from the compose message area, the command box, or directly from a message.
 
     **Key features of action based message extension**:
 
@@ -32,10 +32,9 @@ items:
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
-     | **Required** | &nbsp; | &nbsp; |
-     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install the <br> **ASP.NET and web development** workload.| You can install the enterprise version in Visual Studio 2022, and install the workloads. |
-     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
+     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) |You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
+     | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the latest version, install the portable version. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     
       > [!NOTE]
@@ -47,8 +46,7 @@ items:
    Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
 
     1. Open [Microsoft-Teams-Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
-    1. Select **Code**.
-    1. From the dropdown menu, select **Open with GitHub Desktop**.
+    1. Select **Code**. From the dropdown menu, select **Open with GitHub Desktop**.
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/botbuilder-sample.png" alt-text="Screenshot of GitHub web page. The option titled Open with GitHub Desktop option under Code dropdown menu is highlighted in red.":::
 
@@ -60,17 +58,16 @@ items:
     To create and register your bot in Microsoft Azure Active Directory (Azure AD), create a tunnel using ngrok, add messaging endpoint, and then perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
-    * Create client secret to enable SSO authentication of the bot.
+    * Create client secret that enables single sign-on (SSO) authentication of the bot.
     * Add Teams channel to deploy the bot to a Teams channel.
-    * Use ngrok to create a tunnel to your web server's endpoints.
+    * Create a ngrok tunnel to the endpoints of your web server.
     * Add messaging endpoint to the ngrok tunnel you created.
 
     **To create Azure Bot resource**
 
-    1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
+    1. Go to the [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
-    1. In the search box, enter **Azure Bot**.
-    1. Select **Enter**.
+    1. Search for **Azure Bot** in the search box.
     1. Select **Azure Bot**.
     1. Select **Create**.
 
