@@ -427,23 +427,143 @@ Adaptive Cards support four action types:
 
 ### Action.Submit
 
-In an Adaptive Card, the `Action.Submit` type is used gather the input fields, merge with optional `data` properties, and send an event to the bot. In the Adaptive Card schema, the `data` property for Action.Submit is either a `string` or `object`. A submit action behaves differently for each data property:
+`Action.Submit` type is used to gather the input, combine the `data` properties, and send an event to the bot. When a user selects the submit action, Teams sends a message activity to the bot which includes the user's input in key-value pairs for all input fields and hidden data that is defined in the card payload. 
 
-* `string`: A string submit action automatically sends a message from the user to the bot and is visible in the conversation history.
-* `object`:  An object submit action automatically sends an invisible message from the user to the bot that contains hidden data.
+In the Adaptive Card schema, the `data` property for Action.Submit is either a `string` or an `object`. A submit action behaves differently for each data property:
 
-Action.submit is equivalent to the bot framework actions. In a Bot Framework, when a user selects the submit action, Teams sends a bot Framework message activity to the bot and transfers the string data to the activity’s text property. An object submit action populates the activity’s value property while the text property is empty.
+* `string`: A string submit action automatically sends a message from the user to the bot and is visible in the conversation history. 
+* `object`:  An object submit action automatically sends an invisible message from the user to the bot that contains hidden data.  An object submit action populates the activity’s value property while the text property is empty.
 
-You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. When you define the `msteams` property under `data`, the `action.submit` behavior is defined by Teams client. If the `msteams` property isn't defined in the schema,  `action.submit` works like a regular bot Framework invoke actions, where; the submit action triggers an invoke call to the bot and the bot receives the payload with all in the input values defined in the input fields.
-
-The next section provides details on how to use existing Bot Framework actions with Adaptive Cards.
+Action.submit is equivalent to the Bot Framework actions. You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. When you define the `msteams` property under `data`, the `action.submit` behavior is defined by Teams client. If the `msteams` property isn't defined in the schema,  `action.submit` works like a regular Bot Framework invoke action, where; the submit action triggers an invoke call to the bot and the bot receives the payload with all in the input values defined in the input fields.
 
 > [!NOTE]
 >
 >* Adding `msteams` to data with a Bot Framework action doesn't work with an Adaptive Card task module.
->
 >* Primary or destructive `ActionStyle` isn't supported in Microsoft Teams.
 >* Your app has five seconds to respond to the invoke message.
+
+
+#### Example
+
+The following is an example of a `action.submit` card payload:
+
+The payload consists a text input field `"id": "text-1"` and hidden data payload `"hiddenKey": 123.45`.
+
+```json
+
+{
+
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+
+    "type": "AdaptiveCard",
+
+    "version": "1.5",
+
+    "fallbackText": "fallback text for sample 01",
+
+    "speak": "This is adaptive card sample 1",
+
+    "body": [
+
+        {
+
+            "type": "Container",
+
+            "items": [
+
+                {
+
+                    "id": "text-1",
+
+                    "type": "Input.Text"
+
+                }
+
+            ]
+
+        }
+
+    ],
+
+    "actions": [
+
+        {
+
+            "type": "Action.Submit",
+
+            "data": {
+
+                "hiddenKey": 123.45
+
+            }
+
+        }
+
+    ]
+}
+
+ 
+```
+
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-action-submit.png" alt-text="Screenshot shows an example of an Adaptive Card with the submit button.":::
+ 
+The following is an example of the incoming activity to a bot when user types something in the input field and selects **Submit**. The `value` attribute includes the users input in the `text-1` property and a hidden data payload in the `hiddenKey` property:
+
+ ```json
+ 
+{
+    "type": "message",
+    "timestamp": "2023-07-18T23:45:41.699Z",
+    "localTimestamp": "2023-07-18T16:45:41.699-07:00",
+    "id": "f:9eb18f56-2259-8fa4-7dfc-111ffff58e67",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
+    "from": {
+        "id": "29:1E0NZYNZFQOCUI8zM9NY_EhlCsWgNbLGTHUNdBVX2ob8SLjhltEhQMPi07Gr6MLScFeS8SrKH1WGvJSiVKThnyw",
+        "name": "Robin Liao",
+        "aadObjectId": "97b1ec61-45bf-453c-9059-6e8984e0cef4"
+    },
+    "conversation": {
+        "conversationType": "personal",
+        "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+        "id": "a:1H-RowZ3FrIheyjTupPnoCC6JvOLB5pCWms1xwqvAJG97j61D18EuSennYZE6tyfbQrnfIN3uIcwpOx73mg10hHp_uoTMMQlXhXosIu_q7QVCaYiW6Ch3bPWAitUw4aSX"
+    },
+    "recipient": {
+        "id": "28:159e1c0f-15ef-4597-a8c6-44ba1fd89b78",
+        "name": "Mushroom"
+    },
+    "entities": [
+        {
+            "locale": "en-US",
+            "country": "US",
+            "platform": "Web",
+            "timezone": "America/Los_Angeles",
+            "type": "clientInfo"
+        }
+    ],
+    "channelData": {
+        "tenant": {
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        },
+        "source": {
+            "name": "message"
+        },
+        "legacy": {
+            "replyToId": "1:1XFuAl7wF96vl6iAQk9tqus0uFrB89uujGpld-Qm-XEw"
+        }
+    },
+    "replyToId": "1689723936016",
+    "value": {
+"hiddenKey": 123.45,
+"text-1": "HELLO"
+    },
+    "locale": "en-US",
+    "localTimezone": "America/Los_Angeles"
+}
+
+ ```
+
+The next section provides details on how to use existing Bot Framework actions with Adaptive Cards.
 
 ### Adaptive Cards with messageBack action
 
