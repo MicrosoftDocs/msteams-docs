@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams app that requires device permissions, such as location, camera, or microphone access, now require users to manually grant permission in the web browser. Previously, the browser handled how to grant access permissions, but now these permissions are handled in Teams.
+    Microsoft Teams app that requires device permissions, such as location, camera, or microphone access, now requires users to manually grant permission in the web browser. Previously, the browser handled how to grant access permissions, but now these permissions are handled in Teams.
 
     This step-by-step guide helps you grant tab device permission in Teams. You can see the following output:
 
@@ -23,15 +23,14 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure you install the following tools and set up your development environment:
+    Ensure that you install the following tools and set up your development environment:
 
  
     *| &nbsp; | Install | For using... |
      | --- | --- | --- |
-     | **Required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
      | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
-     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> Install the <br> ASP.NET and web development workload. | You can install the enterprise version in Visual Studio 2022, and install the workloads. Use the latest version. |
+     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
      | &nbsp; | [Node.js and npm](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     
@@ -45,14 +44,12 @@ items:
   content: |
      1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
 
-     1. Select **Code**.
-
-     1. From the dropdown menu, select **Open with GitHub Desktop**.
+     1. Select **Code**. From the dropdown menu, select **Open with GitHub Desktop**.
 
 
         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/clone-repository-tab-device.png" alt-text="cloning the repository":::
 
-    
+
      1. Select **Clone**.
 
 
@@ -72,11 +69,11 @@ items:
 - title: Set up manifest file
   durationInMinutes: 1
   content: | 
-     1. Go to `manifest.json` in cloned repository.
+     1. Go to the **manifest.json** file in cloned repository.
   
         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifestjson-tab-device_1.png" alt-text="manifest file":::
 
-     1. Open `manifest.json` in Visual Studio and make the following changes:
+     1. Open **manifest.json** file in Visual Studio and make the following changes:
        
           - Replace `<<BASE_URI_DOMAIN>>` with your ngrok URL in `websiteUrl`, `privacyUrl`, `termsOfUseUrl`, and `contentUrl`.
        
@@ -89,11 +86,11 @@ items:
   content: |
      1. In your cloned repository, go to **samples** > **tab-device-permissions** > **nodejs**.
 
-     1. Copy the `nodejs` folder path. 
+     1. Copy the **nodejs** folder path. 
 
         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/nodejs-path.png" alt-text="Screenshot shows the nodejs path.":::  
 
-     1. Open a new **Command Prompt** window, change the current directory to the copied `nodejs` path.
+     1. Open a new **Command Prompt** window, change the current directory to the copied **nodejs** path.
 
         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/nodejs-new-folder-path-tab-device.png" alt-text="copy the path":::     
 
@@ -123,7 +120,7 @@ items:
 
     1. In your cloned repository, go to **samples** > **tab-device-permissions** > **nodejs** > **appPackage**.
 
-    1. Create a .zip with the following files that are present in the `appPackage` folder: 
+    1. Create a .zip with the following files that are present in the **appPackage** folder: 
        * manifest.json
        * outline.png
        * color.png
@@ -143,7 +140,7 @@ items:
        > [!NOTE]
        > Contact your Teams administrator, if you don't find the option to upload a custom app.
 
-    1. Select **Open** to upload the .zip file that you created in the `appPackage` folder.
+    1. Select **Open** to upload the .zip file that you created in the **appPackage** folder.
 
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device1_2.png" alt-text="add the manifest zip":::             
   
@@ -161,7 +158,7 @@ items:
     
     1. In your cloned repository, go to **samples** > **tab-device-permissions** > **nodejs** > **appPackage**.
 
-    1. Create a .zip with the following files that are present in the `appPackage` folder: 
+    1. Create a .zip with the following files that are present in the **appPackage** folder: 
        * manifest.json
        * outline.png
        * color.png
@@ -181,7 +178,7 @@ items:
        > [!NOTE]
        > Contact your Teams administrator, if you don't find the option to upload a custom app. 
 
-    1. Select **Open** to upload the .zip file that you created in the `appPackage` folder.
+    1. Select **Open** to upload the .zip file that you created in the **appPackage** folder.
 
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device1_1.png" alt-text="add the manifest zip":::             
   
