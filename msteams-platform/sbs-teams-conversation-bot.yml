@@ -298,10 +298,10 @@ items:
 
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-       :::image type="content" source="~/assets/images/tab-device-permission/custom-upload.png" alt-text="Screenshot shows the upload a custom app.":::
-      
-       > [!NOTE]
-       > Contact your Teams administrator, if you don't find the option to upload a custom app.
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-latest.png" alt-text="Screenshot shows the bot home." lightbox="~\assets\images\teams-toolkit-v2\spfx-custom-new2.png":::
+
+        > [!NOTE]
+        > Contact your Teams administrator, if you don't find the option to upload a custom app.
   
     1. Select **Open** to upload the .zip file that you created in the **TeamAppManifest** folder.
     
@@ -340,7 +340,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Final output."lightbox="assets/images/conversation-bot/final-output.png":::
+    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Final output.":::
     
 - content: |
     You've completed the tutorial to get started with conversation bot for Microsoft Teams.

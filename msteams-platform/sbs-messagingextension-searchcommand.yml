@@ -457,7 +457,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/final_output_1.png" alt-text="Screenshot of the search based message extension output after you have successfully completed the step-by-step guide.":::
+    :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/final_output.png" alt-text="Screenshot of the search based message extension output after you have successfully completed the step-by-step guide.":::
 
 - content: |
     You've completed the tutorial to get started with Teams message extensions search!
