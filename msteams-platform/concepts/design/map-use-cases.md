@@ -83,7 +83,7 @@ The Microsoft Teams platform offers a large variety of features. Each feature is
 
 Let's look at how Teams capabilities enable different features for your app.
 
-:::image type="content" source="../../assets/images/overview/teams-apps-capabilities.png" alt-text="Image showing Teams capabilities":::
+:::image type="content" source="../../assets/images/overview/teams-apps-capabilities.png" alt-text="screenshot showing the graphical representation." lightbox="../../assets/images/overview/teams-apps-capabilities.png":::
 
 For example:
 
