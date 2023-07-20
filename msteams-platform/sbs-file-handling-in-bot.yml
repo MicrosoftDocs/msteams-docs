@@ -76,8 +76,8 @@ items:
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. From the **Subscription** dropdown list, select your subscription.
-    1. From the **Resource group** dropdown list, select your existing resource group.
+    1. Select your **Subscription** from the dropdown list.
+    1. Select your **Resource group** from the dropdown list.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/selection-of-resource_1.png" alt-text="azure resource selection":::
        
@@ -114,12 +114,12 @@ items:
 
        Perform the following steps if you've created a new **Microsoft App ID**:
 
-    1. In the left panel, select **Configuration**. 
+    1. In the left pane, select **Configuration**. 
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
-    1. Next to **Microsoft App ID**, select **Manage**.
+    1. Next to **Microsoft App ID**, select **Manage Password**.
 
        :::image type="content" source="~/assets/images/manage-bot-label_1.png" alt-text="manage bot":::
 
@@ -170,7 +170,7 @@ items:
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/apply-teams_1.png" alt-text="microsoft teams":::
 
       
-    **To create tunnel for local web server**
+    **To create a ngrok tunnel**
 
     Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
@@ -236,7 +236,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectscope_2.png" alt-text="selection of scope":::
 
-    1. In the panel that appears, enter `access_as_user` as the **Scope name**.
+    1. Enter `access_as_user` as the **Scope name**.
   
     1. Set **Who can consent?** to `Admins and users`.
   
@@ -280,7 +280,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/client-id-teams-bot.png" alt-text="shows ids":::   
 
-    1. In the left panel, select **API Permissions**. 
+    1. In the left pane, select **API Permissions**. 
 
        > [!NOTE]
        > Users need to consent to the API permissions only if the Azure Active Directory app is registered in a different tenant.
@@ -299,7 +299,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-permissions_1.png" alt-text="delegated permissions added":::
 
-    1. From the left panel, select **Authentication** to set a redirect URI.
+    1. From the left pane, select **Authentication** to set a redirect URI.
 
        > [!NOTE]
        > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
