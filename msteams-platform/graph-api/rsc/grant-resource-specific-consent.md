@@ -23,7 +23,6 @@ In this section, you'll learn to:
 To add RSC permissions to your app, follow these steps:
 
 1. [Register your app with Microsoft identity platform using the Azure AD portal](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
-1. [Review your application permissions in the Azure AD portal](#review-your-application-permissions-in-the-azure-ad-portal).
 1. [Update your Teams app manifest](#update-your-teams-app-manifest).
 
 ### Register your app with Microsoft identity platform using the Azure AD portal
@@ -32,20 +31,6 @@ The Azure Active Directory (Azure AD) portal provides a central platform for you
 
 > [!WARNING]
 > You mustn't share your Azure AD app ID across multiple Teams apps. There must be a 1:1 mapping between a Teams app and an Azure AD app. Attempts to install multiple Teams apps which are associated with the same Azure AD app ID will cause installation or runtime failures.
-
-### Review your application permissions in the Azure AD portal
-
-1. Open the [Azure AD portal](https://ms.portal.azure.com/) on your web browser.
-
-   The Azure AD portal page opens.
-1. Select **App registrations** and select your app.
-1. Select **API permissions** from the left pane.
-1. Review permissions from the list of **Configured permissions** for your app:
-   * If your app makes only RSC Graph API calls, delete all the permissions from the list of configured permissions.
-   * If your app makes non-RSC calls also, keep those permissions as required.
-
-> [!IMPORTANT]
-> The Azure AD portal can't be used to request RSC permissions, as they're exclusive to Teams apps installed in Teams client and are declared in the Teams app manifest (JSON) file.
 
 ### Update your Teams app manifest
 
