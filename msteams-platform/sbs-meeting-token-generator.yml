@@ -69,8 +69,7 @@ items:
   durationInMinutes: 1
   content: |
     1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
-    1. Select **Code**.
-    1. From the dropdown menu, select **Open with GitHub Desktop**.
+    1. Select **Code**. From the dropdown menu, select **Open with GitHub Desktop**.
 
        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-bot-builder-samples.png" alt-text="Screenshot of GitHub web page. The option titled Open with GitHub Desktop under Code dropdown menu is highlighted in red.":::
 
@@ -141,14 +140,14 @@ items:
 
       Perform the following steps if you've created a new **Microsoft App ID**:
 
-    1. In the left panel, select **Configuration**. 
+    1. In the left pane, select **Configuration**. 
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
-    1. Next to **Microsoft App ID**, select **Manage**.
+    1. Next to **Microsoft App ID**, select **Manage Password**.
 
-       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="Screenshot of Microsoft App ID option under Configuration page with the Manage option highlighted in red.":::
+       :::image type="content" source="~/assets/images/manage-password-bot-label.png" alt-text="Screenshot of Microsoft App ID option under Configuration page with the Manage option highlighted in red.":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
@@ -156,9 +155,7 @@ items:
        
        The **Add a client secret** window appears.  
 
-    1. Enter **Description**.
-    
-    1. Select **Add**.
+    1. Enter **Description** and select **Add**.
 
         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-add-client secret.png" alt-text="Screenshot of Add a client secret with the Description and Add option highlighted in red.":::
 
@@ -181,10 +178,8 @@ items:
 
         :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Screenshot of Azure bot home page. The Channels option in the left pane and Microsoft Teams under Channel are highlighted in red.":::
 
-    1. Select the checkbox to accept the **Terms of Service**.
+    1. Select the checkbox to accept the **Terms of Service** and select **Agree**.
     
-    1. Select **Agree**.
-
         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-agree.png" alt-text="Screenshot of Terms of Service page with the Agree option highlighted in red.":::
 
     1. Select **Apply**.
@@ -232,7 +227,7 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. In the left navigation panel, select **App registrations**.
+    1. In the left navigation pane, select **App registrations**.
 
     1. Select your bot.
 
@@ -260,7 +255,7 @@ items:
     
         :::image type="content" source="~/assets/images/meetings-side-panel/selectscope.png" alt-text="Screenshot of Scopes defined by this API section with the Add a scope option highlighted in red.":::
     
-    1. In the panel that appears, enter `access_as_user` as the **Scope name**.
+    1. In the pane that appears, enter `access_as_user` as the **Scope name**.
   
     1. Set **Who can consent?** to `Admins and users`.
   
@@ -277,9 +272,7 @@ items:
        The following image shows the fields and the values:
 
         :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-addascope.png" alt-text="Screenshot shows all the fields in the Add a scope page.":::
-    1. Ensure that **State** is set to **Enabled**.
-  
-    1. Select **Add scope** to save.
+    1. Ensure that **State** is set to **Enabled** and select **Add scope** to save.
 
         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-enabled.png" alt-text="Screenshot of Add a scope with Add scope highlighted in red.":::
 
@@ -289,7 +282,7 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-scopes.png" alt-text="Screenshot of Scopes defined by this API section with the Scope highlighted in red.":::
   
-    1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
+    1. In the **Authorized client applications** section, identify the applications that you want to authorize for your apps web application. 
     
     1. Select **Add a client application**. 
 
@@ -311,7 +304,7 @@ items:
 
          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-clientapps.png" alt-text="Screenshot of Authorized client applications under Expose an API with the client IDs highlighted in red.":::
   
-    1. In the left panel, select **API Permissions**. 
+    1. In the left pane, select **API Permissions**. 
 
        > [!NOTE]
        > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
@@ -320,7 +313,9 @@ items:
 
          :::image type="content" source="~/assets/images/meetings-side-panel/addpermission.png" alt-text="Screenshot of Configured permissions with Add a permission highlighted in red.":::
 
-    1. Select **Microsoft Graph**.
+    1. Select **Microsoft APIs** > **Microsoft Graph**.
+
+         :::image type="content" source="~/assets/images/microsoft-api-graph.png" alt-text="Screenshot shows Microsoft API and Microsoft graph highlighted in red.":::    
 
     1. Select **Delegated permissions**.
 
@@ -331,17 +326,16 @@ items:
          * **profile**
          * **User.Read**
 
-    1. Select **Add permissions**.
+    1. Select **Add permissions**. 
 
          :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-otherpermissions.png" alt-text="Screenshot of Request API permissions with the OpenId permissions highlighted in red.":::
 
-    1. From the left panel, select **Authentication** to set a redirect URI. 
+    1. From the left pane, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
        > If an app isn't granted IT admin consent, users must provide consent the first time they use an app. </br>
                
-         1. Select **Add a platform**.
-         1. Select **Web**.
+         1. Select **Add a platform** > **Web**.
 
          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-webauthentication.png" alt-text="Screenshot of Authentication page with Authentication in the left pane, Add a platform, and the Web option highlighted in red.":::
 
@@ -425,19 +419,19 @@ items:
        ```
        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-buildapp.png" alt-text="Screenshot of Command Prompt displaying the commands.":::
 
-       The process generates the distributable or **/dist** folder inside the **App** folder where the assets get copied. The server serves the static files from the location.
+       The process generates the distributable or **/dist** folder inside the **App** folder where the assets get copied. The server identifies the static files from the location.
 
        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-distfolder.png" alt-text="Screenshot of Microsoft Teams Samples displaying the static files from the location.":::
 
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-   **To build and run the service using Latest Visual Studio or Command line**
+   To build and run the service use Visual Studio or Command line.
 
    # [Visual Studio](#tab/vs)
 
-      1. Launch the latest version of Visual Studio.
-      1. Go to **File** > **Open** > **Project/Solution**.
+      1. Open the Visual Studio.
+      1. Go to **File** > **Open** > **Project/Solution...**.
           
          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png" alt-text="Screenshot of Visual Studio with the File, Open, and Project/Solution options highlighted in red.":::
 
@@ -469,12 +463,12 @@ items:
   content: |
     1. Enable uploading of apps in the admin console of your tenant.
        1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
-       1. In the left panel, select **Show All**.
+       1. In the left pane, select **Show All**.
        1. Select **Teams**.
  
           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-admincenterimage.png" alt-text="Screenshot of Admin Centers with Teams option highlighted in red.":::
 
-       1. In the left panel, select **Teams apps**.
+       1. In the left pane, select **Teams apps**.
        
        1. Select **Setup Policies**.
 
@@ -499,9 +493,7 @@ items:
     
     1. From the upper right corner of your Teams interface, select `...`.
     
-    1. Select **About**. 
-    
-    1. Select **Developer preview**.
+    1. Select **About** > **Developer preview**.
 
           :::image type="content" source="~/assets/images/meeting-token-generator/sbs-dev-preview.png" alt-text="Screenshot of compose message section that shows the More option, the About option, and Developer preview under the About option being highlighted in red.":::
    
