@@ -77,9 +77,9 @@ items:
     
        :::image type="content" source="./assets/images/conversation-bot/create-azure-bot.png" alt-text="Screenshot shows the create Azure bot."::: 
     
-    1.  You can optionally create a new resource group. Select **Create new** > enter resource name > select **OK**. Select the required location from the **New resource group location** dropdown list.
+    1. You can optionally create a new resource group. Select **Create new** > enter resource name > select **OK**. Select the required location from the **New resource group location** dropdown list.
 
-       :::image type="content" source="~/assets/images/conversation-bot/newresource_1.png" alt-text="Screenshot shows the new resource group location.":::
+         :::image type="content" source="~/assets/images/conversation-bot/newresource_1.png" alt-text="Screenshot shows the new resource group location.":::
 
     1. In the **Microsoft App ID** section, select **Type of App** as **Multi Tenant**.
 
@@ -163,12 +163,12 @@ items:
 
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
-     ```bash
-     ngrok http --host-header=localhost 3978
-     ```
+      ```bash
+      ngrok http --host-header=localhost 3978
+      ```
 
-    > [!TIP]
-    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
+      > [!TIP]
+      > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
 
     **To add messaging endpoint**
 
@@ -298,7 +298,7 @@ items:
 
     1. Select **Add permissions**.
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-otherpermissions.png" alt-text="Other permissions":::
+        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/token-generator-otherpermissions.png" alt-text="Other permissions.":::
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
