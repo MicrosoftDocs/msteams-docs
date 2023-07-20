@@ -46,9 +46,13 @@ You can create a new conversation with a user or a conversation thread in a chan
 * You can retrieve the [list of channels](~/bots/how-to/get-teams-context.md) in a team where your app is installed.
 * You can retrieve the [list of members](~/bots/how-to/get-teams-context.md) of a team where your app is installed.
 
-Regardless of how you get the information, store the `tenantId` and either the `aadObjectId`, `userId`, or `channelId` to create a new conversation. You can also use the `teamId` to create a new conversation thread in the general or default channel of a team.
+Regardless of how you get the information, store the `tenantId` and either the `aadObjectId`, `userId`, or `channelId` to create a new conversation. You can also use the `teamId` to create a new conversation thread in the general or default channel of a team. Ensure that the bot is installed in the chat or team before you can send a proactive message to a channel or in a personal scope. 
 
-The `aadObjectId` is unique to the user and can be retrieved using the [graph API](/graph/api/user-list). The `userId` is unique to your bot ID and a particular user. You can't reuse the `userId` between bots. The `channelId` is global. However, install the bot in the team before you can send a proactive message to a channel or in a personal scope. If the bot isn't installed in a users personal scope when using the `aadObjectId`, `403` error code is returned with `ForbiddenOperationException` message.
+* The `aadObjectId` is unique to the user and can be retrieved using the [graph API](/graph/api/user-list). If the bot isn't installed in a personal scope when sending a proactive message using the `aadObjectId`, the bot returns a `403` error with `ForbiddenOperationException` message.
+
+* The `userId` is unique to your bot ID and a particular user. You can't reuse the `userId` between bots. 
+
+* The `channelId` is global.
 
 Create the conversation, after you have the user or channel information.
 

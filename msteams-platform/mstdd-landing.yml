@@ -76,7 +76,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Send proactive messages using users AAD ID.
+      - text: Send a proactive message using AAD ID.
         url: bots/how-to/conversations/send-proactive-messages.md
       - text: App caching for iOS personal tray
         url: tabs/how-to/app-caching.md

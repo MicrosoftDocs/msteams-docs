@@ -37,7 +37,7 @@ Teams platform features that are available to all app developers.
 
 **2023 July**
 
-* ***July 24,2023***: [Send proactive messages using users AAD ID](bots/how-to/conversations/send-proactive-messages.md)
+* ***July 24,2023***: [Send a proactive message using AAD ID](bots/how-to/conversations/send-proactive-messages.md)
 
 * ***July 20, 2023***: [App caching for iOS personal tray](tabs/how-to/app-caching.md)
 
