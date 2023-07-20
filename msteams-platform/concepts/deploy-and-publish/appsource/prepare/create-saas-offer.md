@@ -10,7 +10,7 @@ ms.date: 07/11/2023
 
 # Create your SaaS offer
 
-Create your offer in Partner Center and configure the offer to publish in the marketplace. The decision to sell through Microsoft, details of the offer, pricing are configured after creating the offer. Check if the prerequisites are done before you create a SaaS offer. You must also have a commercial marketplace account in Partner Center.
+Create your offer in Partner Center and configure the offer to publish in the marketplace. The decision to sell through Microsoft, details of the offer, and pricing are configured after creating the offer. Check if the prerequisites are done before you create a SaaS offer. You must also have a commercial marketplace account in Partner Center.
 
 :::image type="content" source="~/assets/images/saas-offer/monetize-flow3.png" alt-text="Diagram shows the process on how to create a SaaS offer.":::
 
@@ -18,7 +18,7 @@ Create your offer in Partner Center and configure the offer to publish in the ma
 
 1. Sign in to [Partner Center](https://partner.microsoft.com/) and select **Partner Center**.
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/partner-center-home-page.png" alt-text="The screenshots shows how to login to the Partner Center account.":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/partner-center-home-page.png" alt-text="The screenshots shows how to log in to the Partner Center account.":::
 
 1. In the **Home** page, select **Marketplace offers** tab to define commercial marketplace offers.
 
@@ -51,7 +51,7 @@ On the **Offer setup** tab, under **Setup** details, choose whether to sell your
 
 1. To sell through Microsoft and have Microsoft facilitate transactions for you, in the Offer setup page, under **Setup** details, select the checkbox **Yes, I would like Microsoft to manage customer licenses on my behalf**.
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="The screenshots shows the offer setup page to setup license to manage for your app within Teams.":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="The screenshots shows the offer setup page to set up license to manage for your app within Teams.":::
 
     * If you would like Microsoft to manage customer licenses for you, select **Yes**.
     * If you want to manage customer licenses yourself, select **No**.
@@ -75,7 +75,7 @@ On the **Offer setup** tab, under **Setup** details, choose whether to sell your
 
 ### Configure Properties
 
-On the Properties tab, you'll define the categories and industries applicable to your offer, your app version, and legal contracts. Be sure to provide complete and accurate details about your offer on this page, so that it's displayed appropriately and offered to the right set of customers.
+On the Properties tab, you define the categories and industries applicable to your offer, your app version, and legal contracts. Be sure to provide complete and accurate details about your offer on this page, so that it's displayed appropriately and offered to the right set of customers.
 
 * Under **Category**, select at least one and up to two categories for grouping your offer into the appropriate marketplace search areas.
 * Under **Industries**, you can select up to two industries and up to two sub-industries (also called verticals) for each industry.
@@ -103,7 +103,7 @@ You can define a limited audience who can review your SaaS offer before you publ
 
 ### Technical configuration
 
-On the Technical configuration tab, you'll define the technical details that the commercial marketplace uses to communicate to your SaaS application or solution.
+On the Technical configuration tab, you define the technical details that the commercial marketplace uses to communicate to your SaaS application or solution.
 
 1. Enter the landing page URL, that customers will land on after acquiring your offer from the commercial marketplace and triggering the configuration process from the newly created SaaS subscription.
 1. Enter Connection webhook URL, for all asynchronous events that Microsoft needs to send to your SaaS subscription.
@@ -126,7 +126,7 @@ When the offer is in Publisher sign-off state, preview links for the respective 
 
 | **Sample name** | **Description** | **Node.js** | **Manifest**|
 |-----------------|-----------------|----------------|----------------|----------------|
-| Tab App Monetization | This is an sample tab application which shows how to open purchase dialog and trigger purchase flow using Teams JS SDK.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs/demo-manifest/tab-app-monetization.zip)|
+| Tab App Monetization | This is a sample tab application that shows how to open purchase dialog and trigger purchase flow using Teams JS SDK.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs/demo-manifest/tab-app-monetization.zip)|
 
 ## Next step
 

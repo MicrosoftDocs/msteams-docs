@@ -9,6 +9,8 @@ ms.date: 01/31/2023
 ---
 # Prerequisites to create an offer
 
+SaaS offers that are
+
 If you decide to sell your SaaS offer through Microsoft, you need to fulfill the technical configurations and gather the required technical information. Before you create a SaaS offer, ensure the technical fulfillments are in place.
 
 :::image type="content" source="~/assets/images/saas-offer/monetize-flow.png" alt-text="Diagram shows the process for how to include a SaaS offer with your Teams app with the first phase highlighted.":::
@@ -24,7 +26,7 @@ Enable Microsoft Accounts (link) and Azure Active Directory (Azure AD)
 
 ### Create a landing page
 
-When someone finishes buying a subscription plan for your app in the Teams store, the commercial marketplace will direct them to your landing page where they can manage the subscription (such as assign a license to a specific user in their org). For complete instructions, see build the landing page for your SaaS offer. A buyer is directed to the landing page after they subscribe to an offer.After the SaaS offer is purchased successfully, the user is directed to the landing page where they activate and configure the subscription. Action taking page. Learn how to create a landing page for your transactable SaaS offer. What the landing page should have - allow the user to sign in with Azure AD SSO.
+When someone finishes buying a subscription plan for your app in the Teams store, the commercial marketplace directs them to your landing page where they can manage the subscription (such as assign a license to a specific user in their org). For complete instructions, see build the landing page for your SaaS offer. A buyer is directed to the landing page after they subscribe to an offer. After the SaaS offer is purchased successfully, the user is directed to the landing page where they activate and configure the subscription. Action taking page. Learn how to create a landing page for your transactable SaaS offer. What the landing page should have - allow the user to sign in with Azure AD SSO.
 
 For complete instructions, see [build the landing page for your SaaS offer](/azure/marketplace/azure-ad-transactable-saas-landing-page).
 
@@ -50,7 +52,7 @@ The technical requirements listed below are specific to Sell through Microsoft l
 
 Integrating with the SaaS Fulfillment APIs is required for monetizing your Teams app. These APIs help you manage the lifecycle of a subscription plan once it’s purchased by a user.
 
-In general, you’ll implement the following steps using the APIs once a subscription is purchased:
+In general, you implement the following steps using the APIs once a subscription is purchased:
 
   1. Receive a purchase identification token via the URL to your landing page.
   1. Use the token to retrieve subscription details.
@@ -90,11 +92,11 @@ Integrating the APIs and building your landing page to manage subscriptions help
 
 Before you create your SaaS offer, have the below technical information that's required to configure the SaaS offer.
 
-* Landing page URL: The SaaS site URL that users will be directed to after acquiring your offer from the commercial marketplace, triggering the configuration process from the newly created SaaS subscription. This URL will receive a token that can be used to call the fulfillment APIs to get provisioning details for your interactive registration page.Say where we add it. It is to be defined in the Offer setup page.
+* Landing page URL: The SaaS site URL that users will be directed to after acquiring your offer from the commercial marketplace, triggering the configuration process from the newly created SaaS subscription. This URL receives a token that can be used to call the fulfillment APIs to get provisioning details for your interactive registration page. Say where we add it. It's to be defined in the Offer setup page.
 
-* Connection webhook URL: For all asynchronous events that Microsoft needs to send to you (for example, when a SaaS subscription has been canceled), we require you to provide a connection webhook URL. We will call this URL to notify you on the event. Define it in the Offer setup page and you receive subscription changes from the user.
+* Connection webhook URL: For all asynchronous events that Microsoft needs to send to you (for example, when a SaaS subscription has been canceled), we require you to provide a connection webhook URL. We call this URL to notify you on the event. Define it in the Offer setup page and you receive subscription changes from the user.
 
-* Azure Active Directory tenant ID: Inside the Azure portal, we require you to register an Azure Active Directory (Azure AD) app so we can add it to the access control list (ACL) of the API to make sure you are authorized to call it. You can find the tenant ID under the App registrations blade in Azure Active Directory.
+* Azure Active Directory tenant ID: Inside the Azure portal, we require you to register an Azure Active Directory (Azure AD) app so we can add it to the access control list (ACL) of the API to make sure you're authorized to call it. You can find the tenant ID under the App registrations blade in Azure Active Directory.
 
 * Azure Active Directory application ID: The Azure AD application ID is associated with your publisher ID in your Partner Center account. You must use the same application ID for all offers in that account.
 
@@ -105,7 +107,7 @@ Now that we have the technical requirements to create a SaaS offer, it's essenti
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Plan your SaaS offer](include-saas-offer.md)
+> [Create your SaaS offer](create-saas-offer.md)
 
 ## See also
 

@@ -35,11 +35,11 @@ SaaS applications published in Microsoft commercial marketplace are SaaS offers.
 > [!NOTE]
 > To create and publish your offer, you must have a commercial marketplace account in Partner Center.
 
-In this module, you learn about the entire process from planning the SaaS offer to publishing the app with the offer. You can opt to integrate the features listed below with your SaaS to enable better service and expand the customer base.
+In this module, you learn about the entire process from planning the SaaS offer to publishing the app with the offer. Here are some features you can opt to integrate with your SaaS to enable better service and expand the customer base.
 
 ### Decide a publishing option
 
-When you are creating an offer, you're asked if you want to sell through Microsoft or not. Based on your response, the published offer has the suitable call-to-action button on the offer listing page. The listing option you select also decides the technical requirements to create an offer. Let's learn in detail about it when you [plan your SaaS offer](include-saas-offer.md).
+When you're creating an offer, you're asked if you want to sell through Microsoft or not. Based on your response, the published offer has the suitable call-to-action button on the offer listing page. The listing option you select also decides the technical requirements to create an offer. Let's learn in detail about it when you [plan your SaaS offer](include-saas-offer.md).
 
 ### In-app purchases
 
@@ -62,8 +62,8 @@ Now that we know about a SaaS offer and the listing methods, let's get started t
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Prerequisites to create an offer](prerequisites.md)
+> [Plan your SaaS offer](include-saas-offer.md)
 
 ## See also
 
-* [Microsoft Teams store validation guidelines](teams-store-validation-guidelines.md)
+[Microsoft Teams store validation guidelines](teams-store-validation-guidelines.md)

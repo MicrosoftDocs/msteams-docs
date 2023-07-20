@@ -10,7 +10,7 @@ ms.date: 03/21/2023
 
 # Plan your SaaS offer
 
-SaaS apps published to Microsoft commercial marketplace, either Azure marketplace or Microsoft AppSource, are known as SaaS offers. Based on the SaaS offer configurations, the offers are available in one or both the marketplaces. This guide helps you to add premium and enterprise SaaS offers on top of the existing basic free app.
+SaaS apps published to Microsoft commercial marketplace, either Azure Marketplace or Microsoft AppSource, are known as SaaS offers. Based on the SaaS offer configurations, the offers are available in one or both the marketplaces. This guide helps you to add premium and enterprise SaaS offers on top of the existing basic free app.
 
 :::image type="content" source="~/assets/images/saas-offer/monetize-flow-2.png" alt-text="Diagram shows the process for how to include a SaaS offer with your Teams app with the first phase highlighted.":::
 
@@ -21,13 +21,15 @@ The basic information to be provided for any SaaS offer you create are:
 1. Logos, keywords, and descriptions: For the users to know the value of the app.
 1. Customer Relationship Management (CRM): For you to receive customer lead.
 
-## Features for your offer
+## Offer features to plan
 
-To create and publish your SaaS offer and sell through commercial marketplace, it's recommended that you plan the offer and then fulfil the prerequisites. Here are the detailing about the features that you need to decide before you create an offer.
+To create your SaaS offer and sell through commercial marketplace, it's recommended to plan the offer initially. Planning helps you to understand the suitable features for your offer. Here are the detailing about the features you need to decide before creating an offer.
 
 ### Choose a publishing option
 
-The initial step to create any SaaS offer is to choose how the app should be available in the marketplace. You can choose to sell through Microsoft where Microsoft host all your transactions. The other option is to manage your transactions independently which further has three list offers. The type of listing option decides the information required to create the specific offer in Partner Center. The publishing option is available as a call-to-action button in your landing page.
+The initial step to create any SaaS offer is to choose how the offer must be available in the marketplace. The publishing option is available as a call-to-action button on the offer landing page.
+
+You can choose to sell through Microsoft where Microsoft host all your transactions. The other option is to manage your transactions independently that further has three list offers. The type of listing option decides the information required to create the specific offer in Partner Center.
 
 :::row:::
     :::column:::
@@ -81,31 +83,31 @@ Customers can share their details and ask that you contact them about the offer 
     :::column-end:::
 :::row-end:::
 
-### Choose the type of Plan visibility/subscription model
+The technical configurations and requirements differ based on the listing option you select. Fulfill the [prerequisites](prerequisites.md) before you start creating the plan.
 
-SaaS offers through Microsoft must have at least one plan added. The plan can either be private or public. Public plans are available for all customers while private plans are customized for specific customers and visible only for targeted customers. For more details, see [Private plans in Microsoft commercial marketplace](/partner-center/marketplace/private-plans?branch=main).
+### Choose the Plan visibility/subscription model
+
+SaaS offers through Microsoft must have at least one plan added. Plan visibility or the subscription model decides if the plans of the offer can be public or private. Public plans are available for all customers while private plans are customized for specific customers and visible only for targeted customers. For more information, see [Private plans in Microsoft commercial marketplace](/partner-center/marketplace/private-plans?branch=main).
 
 Offers with private plans are published in Azure portal. Private plan can be converted to public plans later, but can't be configured as private plan again.
 
 ### Decide the pricing model and billing term
 
-When creating a SaaS offer you can decide between two pricing model available.
+When creating a plan for your SaaS offer, you can decide between two [pricing models](/partner-center/marketplace/plan-saas-offer?branch=main) available.
 
-* Flat rate: To charge based on the software usage across their organization.
-* Per user: To charge for each unique user.
+* **Flat rate**: To charge based on the software usage across their organization. For flat rate pricing model, you can opt to use [metered billing](/partner-center/marketplace/plans-pricing?branch=main) for consumption-based pricing.
+* **Per user**: To charge for each unique user.
 
-For flat rate pricing model, you can opt to use [metered billing](/partner-center/marketplace/plans-pricing?branch=main) for consumption-based pricing.
+An offer can have only one pricing model. For example, a SaaS offer can't have one plan that's flat rate and another plan that’s per user.
 
-An offer can have only one pricing model. For example, a SaaS offer cannot have one plan that's flat rate and another plan that’s per user.
-
-The billing terms indicate the subscription period and can be set to monthly or annual billing terms.
+The [billing terms](/partner-center/marketplace/plan-saas-offer?branch=main) indicate the subscription period and can be set to monthly or annual billing terms.
 
 > [!NOTE]
 > Pricing model and billing term can’t be changed once the offer is published.
 
 ### Free trails
 
-You can opt to provide free trials for your SaaS offer. Microsoft allows a free trial period of one month, after which the offer is billed based on the subscription model. When you sell through Microsoft, you can offer free trial of one month and Microsoft converts it to a paid subscription by the end of the trial period.
+You can opt to provide free trials for your SaaS offer. Microsoft allows a free trial period of one month, after which the offer is billed based on the subscription model. When you sell through Microsoft, you can offer free trial of one month, and Microsoft converts it to a paid subscription by the end of the trial period.
 
 ### Plan to provide Test drive
 
@@ -115,12 +117,20 @@ You can opt to add test drive for your SaaS app that provides customers access t
 
 To avoid violating third-party app store policies, your app can't include links that allow users to purchase subscription plans on mobile. However, you can still indicate if your app has features that require a subscription plan. For more information, see the related commercial marketplace certification policies.
 
+### Plan for other details
+
+Apart from the detailed discussion on planning, you can also plan on the following information that helps the users to find your offer easily in the marketplace.
+
+* Offer categories: Decide on the primary and secondary categories of the offer that in turn decides the store where the offer is published.
+* Offer details: Decide the logos, keywords, and description that helps to improve the discovery of your offer in the marketplace
+* Preview audience: Decide the audience and collate their email address that enables them to use and verify the preview offer before live. The email addresses must be either of Azure Active Directory or Microsoft.
+
 For comprehensive guidance, see [how to plan a SaaS offer for the Microsoft commercial marketplace](/azure/marketplace/plan-saas-offer).
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create your SaaS offer](create-saas-offer.md)
+> [Prerequisites to create an offer](prerequisites.md)
 
 ## See also
 
