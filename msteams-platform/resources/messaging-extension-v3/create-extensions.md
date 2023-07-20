@@ -17,12 +17,14 @@ Action-based message extensions allow your users to trigger actions in external 
 
 ## Action type message extensions
 
-To initiate actions from a message extension, set the `type` parameter to `action`. The following code is an example of a manifest with a search and a create command. A single message extension can have up to 10 different commands and include multiple search-based and action-based commands.
+To initiate actions from a message extension, set the `type` parameter to `action`. A single message extension can have up to 10 different commands and include multiple search-based and action-based commands.
 
  > [!NOTE]
  >`justInTimeInstall` functions when you upload an app to the app catalog but fails when you sideload an app.
 
 ### Complete app manifest example
+
+The following code is an example of a manifest with a search and a create command:
 
 ```json
 {
@@ -151,7 +153,7 @@ To enable your message extension to work from a message, add the `context` param
 
 ```
 
-The following code is an example of the `value` object containing the message details that will be sent as part of the `composeExtensions` request to your bot.
+The following code is an example of the `value` object containing the message details that is sent as part of the `composeExtensions` request to your bot:
 
 ```json
 {
@@ -440,10 +442,11 @@ Respond to the submit action by inserting a message with an Adaptive Card into t
 1. Interacting with the adaptive card changes the message before sending it.
 1. Once the user selects `Send`, the bot will post the message to the channel.
 
-To enable this flow your task module should respond as in the following example, which will present the preview message to the user.
 
 > [!NOTE]
 > The `activityPreview` must contain a `message` activity with exactly one adaptive card attachment.
+
+To enable this flow your task module should respond as in the following example, which presents the preview message to the user:
 
 ```json
 {
