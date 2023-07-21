@@ -353,11 +353,11 @@ items:
 - title: Set up app settings
   durationInMinutes: 1
   content: |
-    1. Go to **appsettings.json** in cloned repository.
+    1. Go to the **appsettings.json** file in cloned repository.
 
         :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-appsettingslocation.png" alt-text="Screenshot of cloned repository with the file path and appsettings JSON file highlighted in red.":::
 
-    1. Open **appsettings.json** in **Visual Studio Code** and update the following information:  
+    1. Open the **appsettings.json** file in **Visual Studio Code** and update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
