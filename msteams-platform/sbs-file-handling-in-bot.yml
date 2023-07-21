@@ -385,11 +385,11 @@ items:
 - title: Build and run the service
   durationInMinutes: 2
   content: |
-     **To build and run the service using Visual Studio or Command line**
+     To build and run the service using Visual Studio or Command line.
 
      # [Visual Studio](#tab/visualstudio)
 
-       1. Launch Visual Studio.
+       1. Open Visual Studio.
        
        1. Go to **File** > **Open** > **Project/Solution...**.
 
