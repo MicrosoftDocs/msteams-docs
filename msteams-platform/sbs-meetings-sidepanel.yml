@@ -33,7 +33,7 @@ items:
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
-     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all-in-one place.|
      | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
      | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
      | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
@@ -208,6 +208,8 @@ items:
 
     1. In the left navigation pane, select **App registrations**.
 
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-app-registration -screen.png" alt-text="New registration" border="true":::    
+
     1. Select your bot.
 
        :::image type="content" source="~/assets/images/meetings-side-panel/appregister_2.png" alt-text="Screenshot of Azure Active Directory page. The App registrations in the left panel and the bot selected are highlighted in red.":::
@@ -216,15 +218,15 @@ items:
 
     1. Select **Set**.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/exposeanapi_1.png" alt-text="Screenshot of Expose an API with the Set option highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/expose-an-api.png" alt-text="Screenshot of Expose an API with the Set option highlighted in red.":::
 
     1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{AppID}`.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/setlink_1.png" alt-text="Screenshot of Expose an API with the Application ID highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/set-link.png" alt-text="Screenshot of Expose an API with the Application ID highlighted in red.":::
         
        The following image shows the domain name:
         
-       :::image type="content" source="~/assets/images/meetings-side-panel/appIDuri_1.png" alt-text="Screenshot of Expose an API with the domain name highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/appl-Duri.png" alt-text="Screenshot of Expose an API with the domain name highlighted in red.":::
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -232,7 +234,7 @@ items:
 
     1. Select ** Add a scope**. 
 
-       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectscope_1.png" alt-text="Screenshot of Scopes defined by this API section with the Add a scope option highlighted in red.":::
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/select-scope.png" alt-text="Screenshot of Scopes defined by this API section with the Add a scope option highlighted in red.":::
     
        **Add a scope** window appears.
 
