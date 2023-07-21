@@ -3,7 +3,7 @@ title: Test and debug your bot
 description: In this article, you'll know how to test and debug your bots in Microsoft Teams and Test your bot without uploading to Teams
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 03/20/2019
+ms.date: 04/02/2023
 ---
 # Test and debug your Microsoft Teams bot
 

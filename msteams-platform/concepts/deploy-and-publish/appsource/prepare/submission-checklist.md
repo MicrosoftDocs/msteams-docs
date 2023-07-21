@@ -5,13 +5,14 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
+ms.date: 01/06/2023
 ---
 
 # Prepare your Teams store submission
 
 You've designed, built, and tested your Microsoft Teams app. Now you're ready to list it so people can discover and start using your app.
 
-See the following video to learn more about publishing your app to the Microsoft Teams app store:
+See the following video to learn more about publishing your app to the Microsoft Teams store:
 <br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
@@ -41,16 +42,16 @@ Depending on your app functionality, you're required to provide Teams tenant con
 
 2. **Test Accounts**: Depending on your app's features, you need to provide the following accounts:
 
-    - Admin account (required)
-    - Non-admin accounts (required)
+    * Admin account (required)
+    * Non-admin accounts (required)
 
-        - Ensure that test accounts are safe-listed or configured with license keys, if applicable.
-        - If your app requires users to log in or connect to external services, provide the required credentials to complete the login or connection with the external service.
-        - Ensure that phone-based 2-way authentication is disabled for test accounts.
-        - If the app provides a collaborative experience, provide a non-admin account for each user persona. For example, if your app is used by teachers and students, provide credentials for both user personas.
-        - Ensure that at least one account has access to premium or upgraded features, if applicable.
-        - All accounts you provide must include pre-populated data to help in testing. For example, if your app helps to provide market insights based on the user profile, ensure that market data is pre-populated along with a few user profiles.
-        - Provide at least one account that isn't pre-configured to test the first-run sign-in experience properly.
+        * Ensure that test accounts are safe-listed or configured with license keys, if applicable.
+        * If your app requires users to log in or connect to external services, provide the required credentials to complete the login or connection with the external service.
+        * Ensure that phone-based two-way authentication is disabled for test accounts.
+        * If the app provides a collaborative experience, provide a non-admin account for each user persona. For example, if your app is used by teachers and students, provide credentials for both user personas.
+        * Ensure that at least one account has access to premium or upgraded features, if applicable.
+        * All accounts you provide must include pre-populated data to help in testing. For example, if your app helps to provide market insights based on the user profile, ensure that market data is pre-populated along with a few user profiles.
+        * Provide at least one account that isn't pre-configured to test the first-run sign-in experience properly.
 
     > [!NOTE]
     > These accounts must be utilized only for validation requirements. The validation team will test your app fully, including first-run user experience.
@@ -65,9 +66,9 @@ Depending on your app functionality, you're required to provide Teams tenant con
 
 You can find the following [sample test instructions](https://github.com/MicrosoftDocs/msteams-docs/tree/19115f8bdd4be6a6c0c38a77651dd8d8c55c741b/msteams-platform/assets/sample-instructions) for your reference.
 
-- Sample 1: Educational app
-- Sample 2: ERP Data transfer
-- Sample 3: Collaborative app
+* Sample 1: Educational app
+* Sample 2: ERP Data transfer
+* Sample 3: Collaborative app
 
 ## Create your store listing details
 
@@ -119,7 +120,7 @@ The long description can provide a narrative that highlights your apps:
 * The problems it solves
 * Target audience
 
-While this description can be as long as 4,000 characters, most users will only read between 300-500 words.
+While this description can be as long as 4,000 characters, most users only read between 300-500 words.
 
 :::row:::
 
@@ -179,7 +180,7 @@ You can add a URL for your YouTube or Vimeo video.
 #### Best practices for videos
 
 * Keep your video between 60-90 seconds.
-* Aim for quality. In a listing, users will see your video before screenshots.
+* Aim for quality. In a listing, users see your video before screenshots.
 * Communicate the value of the product in narrative form.
 * Demonstrate how the product works.
 
@@ -215,6 +216,41 @@ During submission, you're asked to categorize your app. You can categorize your 
 | Financial management |
 | Maps and feeds |
 | Other |
+
+### Distribute your app to specific countries
+
+If you want to cater your app to a specific audience, you can select from the available list of countries and communicate what’s great about your app in ways that are relevant to users. This is known as Geo-filtering. Geo-filtering is applicable only for apps listed in the Teams store. For example, a Contoso US app, which sells gift cards that are valid within the US and Canada is only visible in the Teams store for the users in the US and Canada.
+
+# [Desktop](#tab/desktop)
+
+The following image shows the use of Geo-filtering for apps in the Teams desktop client:
+
+ :::image type="content" source="../../../../assets/images/app-fundamentals/geo-fencing-infographic.png" alt-text="Infographic shows the difference in the Teams Store for the apps available in the US and other countries." lightbox="../../../../assets/images/app-fundamentals/geo-fencing-infographic.png":::
+
+# [Mobile](#tab/mobile)
+
+The following image shows the use of Geo-filtering for apps in the Teams mobile client:
+
+ :::image type="content" source="../../../../assets/images/app-fundamentals/mobile-infographic.png" alt-text="Infographic shows the difference in the Teams Store for the apps available in the US and other countries in mobile." :::
+
+---
+
+> [!NOTE]
+> Geo-filtering isn't supported in Government community cloud (GCC), GCC-High, and Department of Defence (DoD) tenants.
+
+Geo-filtering helps you improve your app's visibility in the Teams store. When you publish your app to the store, you can select from the available list of countries in the Partner Center to target your app to users in specific countries. For more information on supported geographic locations in Partner Center, see [Geographic availability and currencies](/partner-center/marketplace/marketplace-geo-availability-currencies).
+
+:::image type="content" source="../../../../assets/images/app-fundamentals/select-countries-app-partner-center.png" alt-text="Screenshot shows the list of available countries in Microsoft Partner Center.":::
+
+#### Determine user location
+
+Teams uses the `UsageLocation` property from the [user resource type](/graph/api/resources/user?view=graph-rest-#properties&preserve-view=true) API to determine the location of the user and displays the apps available in the user's country.
+
+If a user wants to install an app available in another country, they can use the following methods:
+
+* Use a deep link to install the app.
+
+* Install the app from [Microsoft AppSource](https://appsource.microsoft.com/en-US/?exp=ubp8).
 
 ### Localize your store listing
 

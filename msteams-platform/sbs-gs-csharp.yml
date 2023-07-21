@@ -7,8 +7,8 @@ metadata:
   level: Beginner
   ms.date: 08/24/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: ~/get-started/get-started-overview.md
-  nextTutorialTitle: Back to Get started overview
+  nextTutorialHref: toolkit/teams-toolkit-tutorial.md
+  nextTutorialTitle: Teams app tutorials
   ms.custom: mvc
   ms.localizationpriority: high
 items:
@@ -34,8 +34,8 @@ items:
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install the <br> **ASP.NET and web development** workload.| You can install the enterprise version in Visual Studio 2022, and install the workloads. |
-    | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
-    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
+    | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | A Visual Studio extension that creates a project scaffolding for your app. Use the latest version.|
+    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place. |
 
     ## Install Teams Toolkit
 
@@ -54,7 +54,7 @@ items:
       1. Select the box **Microsoft Teams development tools** in the installation details panel.
       1. Select **Install**.
 
-          :::image type="content" source="~/assets/images/teams-toolkit-overview/visual-studio-install_1.png" alt-text="Visual studio-installation":::
+          :::image type="content" source="~/assets/images/teams-toolkit-overview/visual-studio-install_1.png" alt-text="Visual studio-installation" lightbox="~/assets/images/teams-toolkit-overview/visual-studio-install_1.png":::
 
       1. Select **Launch** to open Visual Studio.
 
@@ -69,11 +69,11 @@ items:
 
          The following Manage Extension window appears:
 
-          :::image type="content" source="~/assets/images/teams-toolkit-v2/manage-extension.png" alt-text="Manage Extensions.":::
+          :::image type="content" source="~/assets/images/teams-toolkit-v2/manage-extension.png" alt-text="Manage Extensions." lightbox="~/assets/images/teams-toolkit-v2/manage-extension.png":::
 
       1. Select **Installed** and you can see **Teams Toolkit** extension installed.
     
-          :::image type="content" source="~/assets/images/teams-toolkit-v2/select-ttk.png" alt-text="Select Teams Toolkit":::
+          :::image type="content" source="~/assets/images/teams-toolkit-v2/select-ttk.png" alt-text="Select Teams Toolkit" lightbox="~/assets/images/teams-toolkit-v2/select-ttk.png":::
 
     ## Set up your Teams development tenant
 
@@ -90,7 +90,7 @@ items:
 
     Verify if you can sideload apps in Teams:
 
-    1. In the Teams client, select **Store** icon.
+    1. In the Teams client, select **Apps** icon.
     1. Select **Manage your apps**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
@@ -116,7 +116,7 @@ items:
 
     If you wish to host your app or access resources in Azure, you must have an Azure subscription. Create a free account before you begin.
 
-    Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building! Select the app you want to do first
+    Now you’ve got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to create first.
 
 - title: Create project workspace for your tab app using C#
   durationInMinutes: 1
@@ -141,7 +141,7 @@ items:
     1. Enter **Teams** in the search box.
     1. Select **Microsoft Teams App** and select **Next**.
     
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/enter-teams.png" alt-text="Enter Teams":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/enter-teams.png" alt-text="Enter Teams" lightbox="~/assets/images/teams-toolkit-v2/enter-teams.png":::
 
        Configure your new project page appears.
 
@@ -161,7 +161,7 @@ items:
 
        Now Teams tab app is created in a few seconds.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/tap-app-in-vs.png" alt-text="Project Creation":::     
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/tap-app-in-vs.png" alt-text="Project Creation" lightbox="~/assets/images/teams-toolkit-v2/tap-app-in-vs.png":::     
 
     ## Take a tour of tab app source code
       
@@ -201,7 +201,7 @@ items:
 
     1. Select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-app-dependencies.png" alt-text="Teams app Dependencies":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-app-dependencies.png" alt-text="Teams app Dependencies" lightbox="~/assets/images/teams-toolkit-v2/teams-app-dependencies.png":::
     
     1. Select **Microsoft 365 Account** and select **Continue**. 
 

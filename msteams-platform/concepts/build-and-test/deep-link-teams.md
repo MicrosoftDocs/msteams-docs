@@ -5,6 +5,7 @@ description:  Learn how to create deep links to a teams chat and navigate using 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 01/31/2023
 ---
 
 # Deep link to Teams chat
@@ -61,9 +62,9 @@ The query parameters are:
 
 Use the following deep link format to navigate a user to a message in a personal or group chat in Teams:
 
-`http://teams.microsoft.com/l/message/{chatId}/{messageId}?context={"contextType":"chat"}`
+`https://teams.microsoft.com/l/message/{chatId}/{messageId}?context={"contextType":"chat"}`
 
-Example: `http://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces/1563480968434?context=%7B%22contextType%22:%22chat%22%7D`
+Example: `https://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces/1563480968434?context=%7B%22contextType%22:%22chat%22%7D`
 
 The query parameters are:
 

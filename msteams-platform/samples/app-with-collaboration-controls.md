@@ -5,6 +5,7 @@ description: In this module, learn how to build a model-driven app with Collabor
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
+ms.date: 10/07/2022
 ---
 
 # Create a new model-driven app with Collaboration controls for Teams

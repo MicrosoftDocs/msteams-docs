@@ -3,6 +3,7 @@ title: DevTools for Microsoft Teams tabs
 description: In this module, learn how to get to the DevTools when using the Microsoft Teams Desktop Client and debugging
 ms.localizationpriority: medium
 ms.topic: how-to
+ms.date: 08/29/2022
 ---
 
 # DevTools for Microsoft Teams tabs
@@ -25,15 +26,15 @@ While the web version and the desktop version of Teams are almost the same, ther
 1. Open the DevTools one of the following ways:
     * On Windows, you open DevTools via the Microsoft Teams icon in the desktop tray.
 
-      :::image type="content" source="../../assets/images/dev-preview/devtools-right-click.png" alt-text="developer-tool-windows":::
+      :::image type="content" source="../../assets/images/dev-preview/devtools-right-click.png" alt-text="Screenshot shows the option to open DevTools from Windows desktop.":::
 
     * On MacOS, select the Microsoft Teams icon in the Dock.
 
-      :::image type="content" source="../../assets/images/dev-preview/mac-os-developer-tools.PNG" alt-text="mac-os-dev-tools":::
+      :::image type="content" source="../../assets/images/dev-preview/mac-os-developer-tools.PNG" alt-text="Screenshot shows the option to open DevTools from MacOS dock.":::
 
 The following example shows DevTools open and inspecting a tab configuration dialog:
 
-   [![Tab and DevTools](~/assets/images/dev-preview/tab-and-devtools.png)](~/assets/images/dev-preview/tab-and-devtools.png#lightbox)
+   :::image type="content" source="../../assets/images/dev-preview/tab-and-devtools.png" alt-text="Screenshot shows the Tab and DevTools."  lightbox="../../assets/images/dev-preview/tab-and-devtools.png":::
 
 ## Access DevTools from an Android device
 
@@ -44,7 +45,7 @@ You can also enable the DevTools from the Teams Android client. To enable DevToo
 1. In your Chrome browser, open `chrome://inspect/#devices`.
 1. Select **inspect** under the tab you wish to debug, as in the following image:
 
-   ![Android DevTools](~/assets/images/android-devtools.png)
+   :::image type="content" source="../../assets/images/android-devtools.png" alt-text="Screenshot shows the Android DevTools.":::
 
 ## See also
 

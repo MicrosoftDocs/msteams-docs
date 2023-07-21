@@ -3,7 +3,7 @@ title: One-on-one conversations with bots
 description: In this module, learn end-to-end scenario of having a one-on-one conversation with a bot in Microsoft Teams
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.date: 05/20/2019
+ms.date: 04/02/2023
 ---
 # Have a personal (one-on-one) conversation with a Microsoft Teams bot
 

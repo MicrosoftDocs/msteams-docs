@@ -859,6 +859,14 @@
       {
         "source_path": "msteams-platform/apps-in-teams-meetings/app-caching-for-your-tab-app.md",
         "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/build-tabs-for-meeting"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/Integrate-with-developer-portal.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/publish-your-teams-apps-using-developer-portal"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/sideload-and-test-app.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/sideload-and-test-app-v4.md"
       }
     ]
 }
