@@ -109,7 +109,7 @@ items:
   content: |
        1. Open **Visual Studio**.
 
-       1. Go to **File** > **Open** > **Project/Solution**.
+       1. Go to **File** > **Open** > **Project/Solution...**.
     
            :::image type="content" source="./assets/images/sbs-messagingextension-action/vsopenfile.png" alt-text="Screenshot of Visual Studio showing the Project/Solution option.":::
 
@@ -154,7 +154,7 @@ items:
   content: |
     Did you come up with something like this?
 
-       :::image type="content" source="./assets/images/sbs-outgoing-webhooks/output-result1.png" alt-text="Screenshot shows the meeting chat that displays new message on desktop and mobile.":::
+       :::image type="content" source="./assets/images/sbs-outgoing-webhooks/complete-challenge.png" alt-text="Screenshot shows the meeting chat that displays new message on desktop and mobile.":::
 
 - content: |
     You've completed the tutorial to get started with an Outgoing Webhook app!
