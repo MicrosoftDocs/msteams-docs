@@ -427,14 +427,14 @@ Adaptive Cards support four action types:
 
 ### Action.Submit
 
-`Action.Submit` type is used to gather the input, combine the `data` properties, and send an event to the bot. When a user selects the submit action, Teams sends a message activity to the bot which includes the user's input in key-value pairs for all input fields and hidden data that is defined in the card payload. 
+`Action.Submit` type is used to gather the input, combine the `data` properties, and send an event to the bot. When a user selects the submit action, Teams sends a message activity to the bot, which includes the user's input in key-value pairs for all input fields and hidden data that is defined in the card payload. 
 
 In the Adaptive Card schema, the `data` property for Action.Submit is either a `string` or an `object`. A submit action behaves differently for each data property:
 
 * `string`: A string submit action automatically sends a message from the user to the bot and is visible in the conversation history. 
 * `object`:  An object submit action automatically sends an invisible message from the user to the bot that contains hidden data.  An object submit action populates the activity’s value property while the text property is empty.
 
-Action.submit is equivalent to the Bot Framework actions. You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. When you define the `msteams` property under `data`, the `action.submit` behavior is defined by Teams client. If the `msteams` property isn't defined in the schema,  `action.submit` works like a regular Bot Framework invoke action, where; the submit action triggers an invoke call to the bot and the bot receives the payload with all in the input values defined in the input fields.
+Action.Submit is equivalent to the Bot Framework actions. You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. When you define the `msteams` property under `data`, the `Action.Submit` behavior is defined by Teams client. If the `msteams` property isn't defined in the schema,  `Action.Submit` works like a regular Bot Framework invoke action, where; the submit action triggers an invoke call to the bot and the bot receives the payload with all the input values defined in the input fields.
 
 > [!NOTE]
 >
@@ -445,9 +445,9 @@ Action.submit is equivalent to the Bot Framework actions. You can also modify th
 
 #### Example
 
-The following is an example of a `action.submit` card payload:
+The following is an example of a `Action.Submit` card payload:
 
-The payload consists a text input field `"id": "text-1"` and hidden data payload `"hiddenKey": 123.45`.
+The payload consists of a text input field `"id": "text-1"` and hidden data payload `"hiddenKey": 123.45`.
 
 ```json
 
@@ -507,7 +507,7 @@ The payload consists a text input field `"id": "text-1"` and hidden data payload
 
 :::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-action-submit.png" alt-text="Screenshot shows an example of an Adaptive Card with the submit button.":::
  
-The following is an example of the incoming activity to a bot when user types something in the input field and selects **Submit**. The `value` attribute includes the users input in the `text-1` property and a hidden data payload in the `hiddenKey` property:
+The following is an example of the incoming activity to a bot when user types something in the input field and selects **Submit**. The `value` attribute includes the user's input in the `text-1` property and a hidden data payload in the `hiddenKey` property:
 
  ```json
  
