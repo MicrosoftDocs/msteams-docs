@@ -91,7 +91,7 @@ items:
     1. Select your **Subscription** from the dropdown list.
     1. Select your **Resource group** from the dropdown list.
      
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-review-plus-create_1.png" alt-text="Screenshot that showsan Azure bot to create with bot handle details.":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-review-plus-create_1.png" alt-text="Screenshot that shows an Azure bot to create with bot handle details.":::
 
        To create a new resource group, select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
        
@@ -278,11 +278,11 @@ items:
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-addclientapp-mobile.png" alt-text="Screenshot that shows the the client ID for mobile or desktop.":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-addclientapp-mobile.png" alt-text="Screenshot that shows the client ID for mobile or desktop.":::
 
        You can enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-addclientapp-web.png" alt-text="Screenshot that shows the the client ID for web.":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-addclientapp-web.png" alt-text="Screenshot that shows the client ID for web.":::
 
     1. Select **Authorized scopes**.
 
