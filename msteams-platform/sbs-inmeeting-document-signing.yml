@@ -35,7 +35,6 @@ items:
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
-     | **Required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
      | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. Use the latest version or install the portable version. |
@@ -49,11 +48,11 @@ items:
 
     ## Set up your Teams development tenant
 
-       A **tenant** is like a space or a container where you chat, share files, and run meetings for your organization in Teams. You can also sideload and test the app.
+       A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
 
     ### Check for sideloading option
 
-       After creating the app, you must load your app in Teams without distributing it. It's known as sideloading. Sign in to your Microsoft 365 account to view this option.
+       After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
        > [!NOTE]
        > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
@@ -67,7 +66,7 @@ items:
     1. Select **Upload an app**
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/upload-custom-app1.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 
         > [!NOTE]
         > Contact your Teams administrator, if you don't find the option to upload a custom app.  
@@ -92,11 +91,11 @@ items:
 
     1. Go to the [Azure portal](https://ms.portal.azure.com/).
     
-    2. Select the **App registrations** icon.
+    2. Select the **App registrations**.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/azure-portal.png" alt-text="Screenshot shows the Azure AD Portal page.":::
 
-    3. Select **+ New registration** icon.
+    3. Select **+ New registration**.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-registrations.png" alt-text="Screenshot shows the New registration page on Azure AD Portal.":::
 
@@ -173,19 +172,19 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/addascope.png" alt-text="Screenshot shows to Add Scope with Add a scope highlighted in red.":::
     
-    1. Enter 'access_as_user' as the **Scope name**.
+    1. Enter **access_as_user** as the **Scope name**.
 
     1. Set **Who can consent?** to **Admins and users**.
 
-    1. Configure the admin and user consent prompts with appropriate values for `access_as_user` scope:</br>
+    1. Configure the admin and user consent prompts with appropriate values for **access_as_user** scope:</br>
 
-        * Enter 'Teams can access the user’s profile' as **Admin consent display name**.
+        * Enter **Teams can access the user’s profile** as **Admin consent display name**.
 
-        * Enter 'Allows Teams to call the app’s web APIs as the current user' as **Admin consent description**.
+        * Enter **Allows Teams to call the app’s web APIs as the current user** as **Admin consent description**.
 
-        * Enter 'Teams can access the user profile and make requests on the user’s behalf' as **User consent display name**.
+        * Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**.
 
-        * Enter 'Enable Teams to call this app’s APIs with the same rights as the user' as **User consent description**.
+        * Enter **Enable Teams to call this app’s APIs with the same rights as the user** as **User consent description**.
 
     1. Ensure that **State** is set to **Enabled**.
 
@@ -302,7 +301,8 @@ items:
          * Replace all occurrences of `<<deployment-url>` with your fully qualified ngrok domain name.
          * Replace all occurrences of `<<aad-id>>` with your app's **Microsoft App ID**.
 
-         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifest-file1.png" alt-text="Manifest image2":::
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifest-update-file.png" alt-text="Screenshot shows the Manifest file." lightbox="~/assets\images\sbs-inmeeting-doc-signing\manifest.png":::
+
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -327,7 +327,7 @@ items:
 
           The following webpage opens.
 
-           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appisready1.png" alt-text="App ready"::: 
+           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-ready.png" alt-text="App ready"::: 
 
 - title: Add Meeting Signing app to Teams
   durationInMinutes: 1
@@ -335,11 +335,11 @@ items:
 
     1. In your cloned repository, go to **Source > MeetingSigning.Web > Manifest**.
 
-    1. Create a .zip with the following files that are present in the **Manifest** folder:
+    1. Create a .zip file with the following files that are present in the **Manifest** folder:
 
        * manifest.json
-       * outline.png
-       * color.png
+       * outlineIcon.png
+       * colorIcon.png
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/zipfile.png" alt-text="Zip file"::: 
     
@@ -347,7 +347,7 @@ items:
 
     1. Join the meeting.
    
-    1. After the meeting is started, Select **+ Apps** > 
+    1. After the meeting is started, Select **+ Apps**.
     
     1. In the pop-up window, select **Manage apps**.
 
@@ -412,7 +412,7 @@ items:
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/view-doc-in-sidepanel.png" alt-text="View doc in sidepanel":::
 
-     1. Select **Click to Sign**.
+     1. Select **Click to Sign!**.
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/doc-shared-in-meeting.png" alt-text="Document shared in meeting":::
         

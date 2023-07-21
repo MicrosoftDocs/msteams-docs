@@ -38,7 +38,6 @@ items:
 
      &nbsp; | Install | For using... |
      | --- | --- | --- |
-     | **Required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
      | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. Use the latest version or install the portable version. |
@@ -56,12 +55,6 @@ items:
     1. Create client secret that enables single sign-on (SSO) authentication of the bot.
     1. Add Microsoft Teams channel to deploy the bot to a Teams channel.
     1. Add messaging endpoint to the ngrok tunnel you created.
-
-    Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
-
-    ```bash
-    ngrok http --host-header=rewrite 3978
-    ```
 
     **To create Azure Bot resource**
 
@@ -161,6 +154,14 @@ items:
     1. Select **Agree**.
 
        :::image type="content" source="~/assets/images/adaptive-cards/select-teams.png" alt-text="Screenshot of Configure Microsoft Teams displaying the selection of Microsoft Teams Commercial (most common).":::
+
+    **To create a ngrok tunnel**
+
+    Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+
+    ```bash
+    ngrok http --host-header=rewrite 3978
+    ```
 
     **To add messaging endpoint**
 
