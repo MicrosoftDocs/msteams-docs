@@ -1,6 +1,6 @@
 ---
 title: Plan your SaaS offer for the marketplace
-description: Learn to monetize your Microsoft Teams app by selling subscription plans directly from your Teams store listing. Understand publish app, end-user, admin purchase experience. 
+description: Learn how to plan your SaaS offer, basic information for your plan, and about the features and its functionalities.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
@@ -13,13 +13,6 @@ ms.date: 03/21/2023
 SaaS apps published to Microsoft commercial marketplace, either Azure Marketplace or Microsoft AppSource, are known as SaaS offers. Based on the SaaS offer configurations, the offers are available in one or both the marketplaces. This guide helps you to add premium and enterprise SaaS offers on top of the existing basic free app.
 
 :::image type="content" source="~/assets/images/saas-offer/monetize-flow-2.png" alt-text="Diagram shows the process for how to include a SaaS offer with your Teams app with the first phase highlighted.":::
-
-The basic information to be provided for any SaaS offer you create are:
-
-1. Offer categories and industries: For the users to identify your app easily in the marketplace.
-1. Legal terms and condition: For the users to be aware of the terms of use for your app.
-1. Logos, keywords, and descriptions: For the users to know the value of the app.
-1. Customer Relationship Management (CRM): For you to receive customer lead.
 
 ## Offer features to plan
 
@@ -119,11 +112,13 @@ To avoid violating third-party app store policies, your app can't include links 
 
 ### Plan for other details
 
-Apart from the detailed discussion on planning, you can also plan on the following information that helps the users to find your offer easily in the marketplace.
+Apart from the features discussed earlier, you also need to plan on the basic yet important information to be furnished with your offer. It helps the users to find your offer easily in the marketplace.
 
-* Offer categories: Decide on the primary and secondary categories of the offer that in turn decides the store where the offer is published.
-* Offer details: Decide the logos, keywords, and description that helps to improve the discovery of your offer in the marketplace
+* Offer categories and industries: Decide on the primary and secondary categories of the offer. It decides the store where the offer is published and to identify your app in the marketplace.
+* Offer details: Decide the logos, keywords, and description that helps to improve the discovery and value of your offer in the marketplace
 * Preview audience: Decide the audience and collate their email address that enables them to use and verify the preview offer before live. The email addresses must be either of Azure Active Directory or Microsoft.
+* Legal terms and condition: Provide relevant information for the users to be aware of the terms of use of your app.
+* Customer Relationship Management (CRM): Provide the details to receive customer leads.
 
 For comprehensive guidance, see [how to plan a SaaS offer for the Microsoft commercial marketplace](/azure/marketplace/plan-saas-offer).
 

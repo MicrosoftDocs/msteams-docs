@@ -1,6 +1,6 @@
 ---
 title: Monetize your app overview
-description: Monetize your app. Supported pricing models are free trials, in-app purchases, and include a SaaS offer with your app.
+description: Learn about monetizing your app and the supported pricing models such as free trials, in-app purchases, and test drives. Learn in detail on monetizing you app through SaaS offers.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
@@ -14,9 +14,9 @@ Microsoft Teams app Store provides features to monetize your app that help you a
 
 Microsoft commercial marketplace hosts to publish offers through two main online store, Azure Marketplace and Microsoft AppSource. The offers for your applications and solutions are published in the store and made available for customers.
 
-There are four ways you can monetize your app by choosing a suitable publishing option:
+There are four ways you can monetize your app:
 
-* **Get It Now**: Provide offers as subscriptions (transactable) or free app, or let your customer bring their own licenses (bring your own license).
+* **Subscription**: Provide offers as subscriptions (transactable) or free app, or let your customer bring their own licenses (bring your own license).
 * **Free Trail**: Allow to use app for free for a definite period based on the offer type.
 * **Test Drive**: Allow to use the preconfigured environment for a fixed period.
 * **Contact Me**: Allow the users to reach you for offer details and enquire of their needs.
@@ -26,16 +26,16 @@ The publishing option decides the way you want to engage with your customers and
 > [!NOTE]
 > Before you start creating an offer, you must first decide the listing or publishing option. The listing options differ based on the offer type.
 
-Let's get to know about monetizing your Software as a Service (SaaS) applications in Teams store and the features.
+Let's get to know about monetizing your Software as a Service (SaaS) applications in Teams store.
 
 ## SaaS offer
 
-SaaS applications published in Microsoft commercial marketplace are SaaS offers. The availability of the offer in the online store is based on the industry it's built for and the related configurations done in the offer. As a publisher, create your marketplace offers in Partner Center and have them in either of the online stores.
+SaaS applications published in Microsoft commercial marketplace are SaaS offers. The availability of the offer in one of the online stores is based on the industry it's built for and the related configurations done in the offer. As a publisher, create your marketplace offers in Partner Center and publish in the online store.
 
 > [!NOTE]
 > To create and publish your offer, you must have a commercial marketplace account in Partner Center.
 
-In this module, you learn about the entire process from planning the SaaS offer to publishing the app with the offer. Here are some features you can opt to integrate with your SaaS to enable better service and expand the customer base.
+In this module, you learn about the entire process from planning the SaaS offer to publishing your app with the offer. Here are some features you can opt to integrate with your SaaS to enable better service and expand the customer base.
 
 ### Decide a publishing option
 
