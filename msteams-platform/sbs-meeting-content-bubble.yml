@@ -108,7 +108,7 @@ items:
 
     1. Select **Review + create**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/Review-create_1.png" alt-text="Screenshot shows the create resource Azure bot with Type of App and Review plus Create option highlighted in red.":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/Review-create-id.png" alt-text="Screenshot shows the create resource Azure bot with Type of App and Review plus Create option highlighted in red.":::
 
     1. If the validation passes, select **Create**.
 
@@ -116,11 +116,11 @@ items:
 
     1. Select **Go to resource**. 
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-botdeployment_1.png" alt-text="Screenshot shows the deployment with Go to resource option highlighted in red.":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-bot-deployment.png" alt-text="Screenshot shows the deployment with Go to resource option highlighted in red.":::
         
         Your Azure bot is created.
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-creating-resource-group_1.png" alt-text="Screenshot shows the Azure bot resource created.":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-creating-resourcegroup.png" alt-text="Screenshot shows the Azure bot resource created.":::
 
     **To create client secret**
 
@@ -137,7 +137,7 @@ items:
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-newclientsecret_1.png" alt-text="Screenshot shows the configuration with New client secret option highlighted in red.":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-new-client-secret.png" alt-text="Screenshot shows the configuration with New client secret option highlighted in red.":::
         
        The **Add a client secret** window appears.  
 
@@ -145,11 +145,11 @@ items:
     
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-clientsecret_1.png" alt-text="Screenshot shows to add a client secret with Description and Add option highlighted in red.":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-clientsecret-description.png" alt-text="Screenshot shows to add a client secret with Description and Add option highlighted in red.":::
 
     1. In the **Value** column, select **Copy to clipboard**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-client-secret_1.png" alt-text="Screenshot shows the Value of client secret with copy option highlighted in red.":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-client-secret-value.png" alt-text="Screenshot shows the Value of client secret with copy option highlighted in red.":::
        
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
@@ -168,7 +168,7 @@ items:
     
     1. Select **Agree**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-terms_1.png" alt-text="Screenshot shows the Terms of service with Agree option highlighted in red.":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-terms-service.png" alt-text="Screenshot shows the Terms of service with Agree option highlighted in red.":::
 
     1. Select **Apply**.
     
@@ -191,7 +191,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL.
 
-       :::image type="content" source="../msteams-platform/assets/images/ngrok-url_2.png" alt-text="Screenshot shows the ngrok with HTTPS URL highlighted in red.":::
+       :::image type="content" source="../msteams-platform/assets/images/meeting-content-bubble/ngrok-url.png" alt-text="Screenshot shows the ngrok with HTTPS URL highlighted in red.":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -201,7 +201,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-config-messaging-end-point_1.png" alt-text="Screenshot shows the configuration with Messaging Endpoint highlighted in red.":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-configuration-messaging.png" alt-text="Screenshot shows the configuration with Messaging Endpoint highlighted in red.":::
 
     1. Select **Apply**.
 
@@ -241,19 +241,19 @@ items:
 
         :::image type="content" source="~/assets/images/meetings-side-panel/selectscope_1.png" alt-text="Screenshot shows to Add Scope with Add a scope highlighted in red.":::
             
-    1. Enter `access_as_user` as the **Scope name**.
+    1. Enter **access_as_user** as the **Scope name**.
   
     1. Set **Who can consent?** to `Admins and users`.
   
-    1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:
+    1. To configure the admin and user consent prompts with appropriate values for **access_as_user** scope, provide the following information in the fields:
     
-         * Enter `Teams can access the user’s profile` as **Admin consent display name**.
+         * Enter **Teams can access the user’s profile** as **Admin consent display name**.
 
-         * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**.
+         * Enter **Allows Teams to call the app’s web APIs as the current user** as **Admin consent description**.
 
-         * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**.
+         * Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**.
 
-         * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**.
+         * Enter **Enable Teams to call this app’s APIs with the same rights as the user** as **User consent description**.
     
     1. Ensure that **State** is set to **Enabled**.
   
@@ -261,7 +261,7 @@ items:
   
        The following image shows the fields and the values:
 
-          :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-access-as-user_1.png" alt-text="Screenshot shows to Add a scope with Add scope highlighted in red.":::
+          :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-access-user-add-scope.png" alt-text="Screenshot shows to Add a scope with Add scope highlighted in red.":::
 
 
        > [!NOTE]
@@ -274,19 +274,19 @@ items:
 
     1. Select **Add a client application**. 
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-selectclientapp_1.png" alt-text="Screenshot shows the Authorised client application with Add a client application.":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-select-client-app.png" alt-text="Screenshot shows the Authorised client application with Add a client application.":::
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-addclientapp1.png" alt-text="Screenshot shows to Add a client application with client ID.":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-addclientapp-mobile.png" alt-text="Screenshot shows to Add a client application with client ID.":::
 
        You can enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-addclientapp2.png" alt-text="Screenshot shows to Add a client application with client ID 2.":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-addclientapp-web.png" alt-text="Screenshot shows to Add a client application with client ID 2.":::
 
     1. Select **Authorized scopes**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-add-client-app_1.png" alt-text="Screenshot shows the Authorized scopes.":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-authorized-scopes.png" alt-text="Screenshot shows the Authorized scopes.":::
 
        The following image displays the Client ID:
 
@@ -299,7 +299,7 @@ items:
 
     1. Select **Add a permission**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/add-permission_1.png" alt-text="Screenshot shows to Add a Permission with Add a permission highlighted in red.":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/add-permission.png" alt-text="Screenshot shows to Add a Permission with Add a permission highlighted in red.":::
 
     1. Select **Microsoft Graph**.
 
@@ -321,10 +321,9 @@ items:
        > [!NOTE]
        > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
                
-         1. Select **Add a platform**.
-         1. Select **Web**.
+         1. Select **Add a platform** > *Web**.
 
-             :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-platform-web_1.png" alt-text="Screenshot shows the authentication with Add  a platform and Web highlighted in red.":::
+             :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-add-platform-web.png" alt-text="Screenshot shows the authentication with Add  a platform and Web highlighted in red.":::
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name: `https://your ngrok/auth-end`.
 
@@ -334,14 +333,14 @@ items:
    
          1. Select **Configure**.
 
-             :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-config-web_1.png" alt-text="Screenshot shows to configure with URI and access tokens highlighted in red.":::
+             :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-configure-web" alt-text="Screenshot shows to configure with URI and access tokens highlighted in red.":::
 
 - title: Set up app settings
   durationInMinutes: 1
   content: |
     1. Go to the **appsettings.json** file in cloned repository.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/navigate-to-meeting-content-bubble-repo_1.png" alt-text="Screenshot shows the App settings location.":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/navigate-to-meeting-content-bubble-cloned-repo.png" alt-text="Screenshot shows the App settings location.":::
 
     1. Open the **appsettings.json** file and update the following information:  
 
@@ -349,7 +348,7 @@ items:
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"BaseURL"` to the fully qualified `ngrok` domain name.
 
-          :::image type="content" source="~/assets/images/meeting-content-bubble/appsettings-json1_1.png" alt-text="Screenshot shows the App settings.":::
+          :::image type="content" source="~/assets/images/meeting-content-bubble/appsettings-json.png" alt-text="Screenshot shows the App settings.":::
 
 - title: Set up manifest file
   durationInMinutes: 1
@@ -367,7 +366,7 @@ items:
           > `WebAppDomain` is your ngrok domain.
           > If the ngrok ID end with `*.ngrok-free.app` valid domain is optional.
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/manifest-set_1.png" alt-text="Screenshot shows the Manifest cloned repository.":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/manifest.png" alt-text="Screenshot shows the Manifest cloned repository.":::
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -377,11 +376,11 @@ items:
        1. Open **Visual Studio**.
        1. Go to **File** > **Open** > **Project/Solution...**.
     
-           :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-VSopenfile_1.png" alt-text="Screenshot shows the Visual Studio with File, Open and Project-Solution highlighted in red.":::
+           :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-VSopen-file.png" alt-text="Screenshot shows the Visual Studio with File, Open and Project-Solution highlighted in red.":::
 
        1. Open the **InMeetingNotifications.sln** file in Visual Studio.
 
-           :::image type="content" source="~/assets/images/meeting-content-bubble/proj-sln_1.png" alt-text="Screenshot shows the cloned repository with InMeetingNotifications.sln file highlighted in red.":::
+           :::image type="content" source="~/assets/images/meeting-content-bubble/project-sln.png" alt-text="Screenshot shows the cloned repository with InMeetingNotifications.sln file highlighted in red.":::
 
        1. Press **F5** to run the project.
 
@@ -400,7 +399,7 @@ items:
        * outline.png
        * color.png
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/create-manifest-zip_1.png" alt-text="Screenshot shows the cloned repository with path and in-meeting notification demo zip file highlighted in red."::: 
+        :::image type="content" source="~/assets/images/meeting-content-bubble/create-manifest-zip-file.png" alt-text="Screenshot shows the cloned repository with path and in-meeting notification demo zip file highlighted in red."::: 
     
     1. Create a meeting with a few presenters and attendees.
 
@@ -412,19 +411,19 @@ items:
    
     1. In the pop-up window, select **Manage apps**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/manage-apps_1.png" alt-text="Screenshot shows the Teams apps with Manage apps highlighted in red."::: 
+        :::image type="content" source="~/assets/images/meeting-content-bubble/manage-apps-popup.png" alt-text="Screenshot shows the Teams apps with Manage apps highlighted in red."::: 
    
     1. Select **Upload an app** > **Upload a custom app**. 
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/upload-custom-app_1.png" alt-text="Screenshot shows the Teams apps with Upload a custom app highlighted in red."::: 
+        :::image type="content" source="~/assets/images/meeting-content-bubble/upload-a-custom-app.png" alt-text="Screenshot shows the Teams apps with Upload a custom app highlighted in red."::: 
 
     1. Select the .zip file you've created in the **Manifest** folder and select **Open**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/Zip-file_1.png" alt-text="Screenshot shows the manifest folder with in-meeting notification demo zip file and Open option highlighted in red.":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/manifest-zip-file.png" alt-text="Screenshot shows the manifest folder with in-meeting notification demo zip file and Open option highlighted in red.":::
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/content-bubble-demo_1.png" alt-text="Screenshot shows the Targeted notification with Add option highlighted in red."::: 
+        :::image type="content" source="~/assets/images/meeting-content-bubble/content-bubble-demo-add.png" alt-text="Screenshot shows the Targeted notification with Add option highlighted in red."::: 
 
     1. The **Manage apps** section displays the list of applications.
 
