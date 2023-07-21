@@ -14,15 +14,15 @@ SaaS apps published to Microsoft commercial marketplace, either Azure Marketplac
 
 :::image type="content" source="~/assets/images/saas-offer/monetize-flow-2.png" alt-text="Diagram shows the process for how to include a SaaS offer with your Teams app with the first phase highlighted.":::
 
-## Offer features to plan
+## Plan the features
 
 To create your SaaS offer and sell through commercial marketplace, it's recommended to plan the offer initially. Planning helps you to understand the suitable features for your offer. Here are the detailing about the features you need to decide before creating an offer.
 
-### Choose a publishing option
+### Decide a publishing option
 
 The initial step to create any SaaS offer is to choose how the offer must be available in the marketplace. The publishing option is available as a call-to-action button on the offer landing page.
 
-You can choose to sell through Microsoft where Microsoft host all your transactions. The other option is to manage your transactions independently that further has three list offers. The type of listing option decides the information required to create the specific offer in Partner Center.
+You can choose to sell through Microsoft where Microsoft host all your transactions. The other option is to manage your transactions independently that further has three listing options. The type of listing option decides the information required to create the specific offer in Partner Center.
 
 :::row:::
     :::column:::
@@ -34,8 +34,6 @@ You can choose to sell through Microsoft where Microsoft host all your transacti
 
 Offers sold through Microsoft are termed as transactable offers where Microsoft handles transactions for the licenses. With a transactable [Software-as-a-Service (SaaS) offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md), you can monetize your Teams app by selling subscription plans directly from your Teams store listing.
 
-You need to further select if you like Microsoft to manage licenses for you. If yes, you must integrate with Microsoft Graph APIs to verify customer eligibility. For details on how to integrate, see Integrate your SaaS offer with Graph API for License Management.
-
     :::column-end:::
 :::row-end:::
 
@@ -44,6 +42,8 @@ You need to further select if you like Microsoft to manage licenses for you. If 
      :::image type="content" source="../../../../assets/images/saas-offer/pricing-free-trial.png" alt-text="Free trials":::
     :::column-end:::
     :::column span="2":::
+
+You need to further select if you like Microsoft to manage licenses for you. If yes, you must integrate with Microsoft Graph APIs to verify customer eligibility. For details on how to integrate, see [Integrate your SaaS offer with Graph API for License Management](prerequisites.md#integrate-with-graph-usagerights-api).
 
 **Free trials**
 
@@ -59,7 +59,7 @@ You can offer a free trial version of your app to get more customers to try it. 
 
 **Get it now (Free)**
 
-Allow your user to subscribe and use your application at no cost for a certain period.
+You can allow the user to subscribe and use your application at no cost. The options in free versions can be limited and the user can upgrade with subscriptions.
 
     :::column-end:::
 :::row-end:::
@@ -78,7 +78,7 @@ Customers can share their details and ask that you contact them about the offer 
 
 The technical configurations and requirements differ based on the listing option you select. Fulfill the [prerequisites](prerequisites.md) before you start creating the plan.
 
-### Choose the Plan visibility/subscription model
+### Decide on plan visibility
 
 SaaS offers through Microsoft must have at least one plan added. Plan visibility or the subscription model decides if the plans of the offer can be public or private. Public plans are available for all customers while private plans are customized for specific customers and visible only for targeted customers. For more information, see [Private plans in Microsoft commercial marketplace](/partner-center/marketplace/private-plans?branch=main).
 
@@ -98,11 +98,11 @@ The [billing terms](/partner-center/marketplace/plan-saas-offer?branch=main) ind
 > [!NOTE]
 > Pricing model and billing term can’t be changed once the offer is published.
 
-### Free trails
+### Plan for free trails
 
 You can opt to provide free trials for your SaaS offer. Microsoft allows a free trial period of one month, after which the offer is billed based on the subscription model. When you sell through Microsoft, you can offer free trial of one month, and Microsoft converts it to a paid subscription by the end of the trial period.
 
-### Plan to provide Test drive
+### Plan for test drive
 
 You can opt to add test drive for your SaaS app that provides customers access to preconfigured environment of your app for fixed hours. For more information, check [Test drive for SaaS offer](/partner-center/marketplace/create-new-saas-offer).
 
@@ -114,11 +114,11 @@ To avoid violating third-party app store policies, your app can't include links 
 
 Apart from the features discussed earlier, you also need to plan on the basic yet important information to be furnished with your offer. It helps the users to find your offer easily in the marketplace.
 
-* Offer categories and industries: Decide on the primary and secondary categories of the offer. It decides the store where the offer is published and to identify your app in the marketplace.
-* Offer details: Decide the logos, keywords, and description that helps to improve the discovery and value of your offer in the marketplace
-* Preview audience: Decide the audience and collate their email address that enables them to use and verify the preview offer before live. The email addresses must be either of Azure Active Directory or Microsoft.
-* Legal terms and condition: Provide relevant information for the users to be aware of the terms of use of your app.
-* Customer Relationship Management (CRM): Provide the details to receive customer leads.
+* **Offer categories and industries**: Decide on the primary and secondary categories of the offer. It decides the store where the offer is published and to identify your app in the marketplace.
+* **Offer details**: Decide the logos, keywords, and description that helps to improve the discovery and value of your offer in the marketplace
+* **Preview audience**: Decide the audience and collate their email address that enables them to use and verify the preview offer before live. The email addresses must be either of Azure Active Directory or Microsoft.
+* **Legal terms and conditions**: Provide relevant information for the users to be aware of the terms of use of your app.
+* **Customer Relationship Management (CRM)**: Provide the details to receive customer leads.
 
 For comprehensive guidance, see [how to plan a SaaS offer for the Microsoft commercial marketplace](/azure/marketplace/plan-saas-offer).
 
@@ -132,3 +132,4 @@ For comprehensive guidance, see [how to plan a SaaS offer for the Microsoft comm
 * [Monetize your app](monetize-overview.md)
 * [Maintaining and supporting your published app](../post-publish/overview.md)
 * [Validation guidelines for apps linked to SaaS offer](teams-store-validation-guidelines.md#apps-linked-to-saas-offer)
+* [Marketplace categories](/partner-center/marketplace/marketplace-categories-industries)

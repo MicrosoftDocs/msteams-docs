@@ -9,20 +9,23 @@ ms.date: 01/31/2023
 ---
 # Prerequisites to create an offer
 
-SaaS offers that are
-
-If you decide to sell your SaaS offer through Microsoft, you need to fulfill the technical configurations and gather the required technical information. Before you create a SaaS offer, ensure the technical fulfillments are in place.
+This article helps you prepare to create a SaaS offer. If you decide to sell your SaaS offer through Microsoft, you need to fulfill the technical configurations and gather the required technical information. Before you create a SaaS offer, ensure the technical fulfillments are in place.
 
 :::image type="content" source="~/assets/images/saas-offer/monetize-flow.png" alt-text="Diagram shows the process for how to include a SaaS offer with your Teams app with the first phase highlighted.":::
+
+> [!NOTE]
+> If you choose the listing option as Contact me, there are no technical requirements.
 
 ## Technical configuration
 
 The technical configurations differ based on the listing option you opt for your SaaS offer. It helps negate any blockers while creating the offer.
 
-> [!NOTE]
-> If you choose the listing option as Contact me, there are no technical requirements.
+If you choose one of the three options apart from Contact me, you need to do the account setup and create a landing page.
 
-Enable Microsoft Accounts (link) and Azure Active Directory (Azure AD)
+### Account setup
+
+Azure Active Directory (Azure AD)
+Microsoft Accounts (link)
 
 ### Create a landing page
 
@@ -112,3 +115,4 @@ Now that we have the technical requirements to create a SaaS offer, it's essenti
 ## See also
 
 * [Monetize your app](monetize-overview.md)
+* [SaaS app listing requirements](/partner-center/marketplace/marketplace-criteria-content-validation)

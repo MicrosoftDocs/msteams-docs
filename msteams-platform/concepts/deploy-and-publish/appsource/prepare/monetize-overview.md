@@ -39,7 +39,7 @@ In this module, you learn about the entire process from planning the SaaS offer 
 
 ### Decide a publishing option
 
-When you're creating an offer, you're asked if you want to sell through Microsoft or not. Based on your response, the published offer has the suitable call-to-action button on the offer listing page. The listing option you select also decides the technical requirements to create an offer. Let's learn in detail about it when you [plan your SaaS offer](include-saas-offer.md).
+When you're creating an offer, you're asked if you want to sell through Microsoft or not. Based on your response, the published offer has the suitable call-to-action button on the offer listing page. The publishing option you select also decides the technical requirements to create an offer. Let's learn in detail about it when you [plan your SaaS offer](include-saas-offer.md).
 
 ### In-app purchases
 
@@ -66,4 +66,6 @@ Now that we know about a SaaS offer and the listing methods, let's get started t
 
 ## See also
 
-[Microsoft Teams store validation guidelines](teams-store-validation-guidelines.md)
+* [Microsoft commercial marketplace](/partner-center/marketplace/overview)
+* [Microsoft Teams store validation guidelines](teams-store-validation-guidelines.md)
+* [Publisher guide](/partner-center/marketplace/publisher-guide-by-offer-type)
