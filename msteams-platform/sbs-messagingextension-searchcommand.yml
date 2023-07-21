@@ -276,7 +276,7 @@ items:
 
         :::image type="content" source="~/assets/images/meetings-side-panel/clientapps.png" alt-text="Screenshot of Authorized client applications under Expose an API with the client IDs highlighted in red."::: 
   
-    1. In the left panel, select **API Permissions**. 
+    1. In the left pane, select **API Permissions**. 
 
        > [!NOTE]
        > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
