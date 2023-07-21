@@ -241,19 +241,19 @@ items:
 
         :::image type="content" source="~/assets/images/meetings-side-panel/selectscope_1.png" alt-text="Screenshot shows to Add Scope with Add a scope highlighted in red.":::
             
-    1. Enter **access_as_user** as the **Scope name**.
+    1. Enter *access_as_user* as the **Scope name**.
   
     1. Set **Who can consent?** to `Admins and users`.
   
     1. To configure the admin and user consent prompts with appropriate values for **access_as_user** scope, provide the following information in the fields:
     
-         * Enter **Teams can access the user’s profile** as **Admin consent display name**.
+         * Enter *Teams can access the user’s profile* as **Admin consent display name**.
 
-         * Enter **Allows Teams to call the app’s web APIs as the current user** as **Admin consent description**.
+         * Enter *Allows Teams to call the app’s web APIs as the current user* as **Admin consent description**.
 
-         * Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**.
+         * Enter *Teams can access the user profile and make requests on the user’s behalf* as **User consent display name**.
 
-         * Enter **Enable Teams to call this app’s APIs with the same rights as the user** as **User consent description**.
+         * Enter *Enable Teams to call this app’s APIs with the same rights as the user* as **User consent description**.
     
     1. Ensure that **State** is set to **Enabled**.
   
@@ -333,7 +333,7 @@ items:
    
          1. Select **Configure**.
 
-             :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-configure-web" alt-text="Screenshot shows to configure with URI and access tokens highlighted in red.":::
+             :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-configure-web.png" alt-text="Screenshot shows to configure with URI and access tokens highlighted in red.":::
 
 - title: Set up app settings
   durationInMinutes: 1
