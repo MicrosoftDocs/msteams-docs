@@ -79,7 +79,7 @@ items:
     1. Select your **Subscription** from the dropdown list.
     1. Select your **Resource group** from the dropdown list.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/selection-of-resource_1.png" alt-text="azure resource selection":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/create-azure-bot.png" alt-text="azure resource selection":::
        
        To create a new resource group, select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
        
@@ -191,7 +191,7 @@ items:
           > The HTTPS URL in your ngrok is your fully qualified domain name.
           > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
 
-       1.  In **Settings** for the Azure bot that you created, select **Configuration**.
+       1.  Go to the Azure bot you've created in Azure portal. In the left pane, under **Settings**, select **Configuration**.
 
        1.  In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
@@ -208,7 +208,7 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. From the left pane, select **App Registrations**.
+    1. From the left pane, select **App registrations**.
 
     1. Select your bot.
        
@@ -431,7 +431,7 @@ items:
   content: | 
      1. In your cloned repository, Go to **Microsoft-Teams-Samples** > **samples** > **bot-file-upload** > **csharp** > **TeamsAppManifest**.
 
-     1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder: 
+     1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder:
        * manifest.json
        * outline.png
        * color.png 

@@ -68,24 +68,22 @@ items:
 
     **To create Azure Bot resource**
 
-    1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
+    1. Go to the [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
     1. In the search box, enter **Azure Bot**.
     1. Select **Enter**.
     1. Select **Azure Bot**.
   
-       :::image type="content" source="./assets/images/azure-bot_1.png" alt-text="Azure bot.":::
+       :::image type="content" source="./assets/images/Teams-link-unfurling/azure-bot.png" alt-text="Azure bot.":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. Select your **Subscription** and **Resource group** from the respective dropdown list.
-    1. Select required **Data residency (preview)**.
+    1. Select your **Subscription** from the dropdown list.
+    1. Select your **Resource group** from the dropdown list.
     
-       :::image type="content" source="./assets/images/conversation-bot/create-azure-bot.png" alt-text="Screenshot shows how to create Azure bot.":::
+       :::image type="content" source="./assets/images/Teams-link-unfurling/create-azure-bot.png" alt-text="Screenshot shows how to create Azure bot.":::
        
-       You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
-    
-    1. Select the required location from **New resource group location** dropdown list, if you've created a new resource group.
+       To create a new resource group, select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
 
         :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the new resource group location.":::
 
@@ -102,7 +100,7 @@ items:
 
        :::image type="content" source="~/assets/images/Teams-link-unfurling/register-bot-2_1.png" alt-text="Screenshot showing the creation of Microsoft App ID.":::
 
-    1. Once the validation is passed, select **Create**.
+    1. If the validation is passed, select **Create**.
 
        It takes a few moments for your bot service to be provisioned. 
 
@@ -110,7 +108,7 @@ items:
 
         :::image type="content" source="~/assets/images/Teams-link-unfurling/botdeployment_1.png" alt-text="Screenshot showing the navigation of go to resource.":::
 
-       Your Azure bot is created, and you can see the **Resource group** and **Subscription ID** in the Azure bot.
+       Your Azure bot is created.
 
         :::image type="content" source="~/assets/images/Teams-link-unfurling/bot-page_1.png" alt-text="Azure bot resource created":::
         
@@ -123,9 +121,9 @@ items:
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
-    1. Next to **Microsoft App ID**, select **Manage**.
+    1. Next to **Microsoft App ID**, select **Manage Password**.
 
-       :::image type="content" source="~/assets/images/manage-bot-label_1.png" alt-text="Screenshot showing the selection of manage option.":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/manage-bot-label.png" alt-text="Screenshot showing the selection of manage option.":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
@@ -154,9 +152,7 @@ items:
        
     1. Select your bot from **Recent resources**.
 
-    1. Select **Channels** in the left pane.
-
-    1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
+    1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
     1. Select the checkbox to accept the **Terms of Service**.
     
@@ -168,7 +164,7 @@ items:
 
        :::image type="content" source="~/assets/images/Teams-link-unfurling/apply.png" alt-text="Screenshot showing the selection of Teams.":::
       
-    **To create tunnel for local web server**
+    **To create a ngrok tunnel**
 
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
@@ -189,7 +185,7 @@ items:
         > The HTTPS URL in your ngrok is your fully qualified domain name.
         > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
 
-    1. In **Settings**, select **Configuration**.
+    1. Go to the Azure bot you've created in Azure portal. In the left pane, under **Settings**, select **Configuration**.
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
@@ -212,13 +208,15 @@ items:
        
        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appregister_1.png" alt-text="App registration":::
        
-    1. Select **Expose an API**.
+    1. Under **Manage**, select **Expose an API**.
 
-    1. Select **Set**.
+    1. Select **Add**.
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/exposeanapi_1.png" alt-text="Expose an API":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/exposeanapi-add.png" alt-text="Expose an API":::
       
-    1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{your AppID}`.
+    1. Use the `api://your ngrok/botid-{AppID}` format for the **Application ID URI**.
+
+    1. Update the **Application ID URI** and select **Save**.
 
        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/setlink_1.png" alt-text="Set link":::
                
@@ -234,7 +232,7 @@ items:
        
        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/selectscope_1.png" alt-text="Select scope":::
     
-    1. In the panel that appears, enter `access_as_user` as the **Scope name**.
+    1. Enter `access_as_user` as the **Scope name**.
 
     1. Set **Who can consent?** to `Admins and users`.
   
@@ -251,6 +249,8 @@ items:
     1. Ensure that **State** is set to **Enabled**.
   
     1. Select **Add scope** to save.
+
+         The following image shows the fields and the values:
 
         :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/addscope.png" alt-text="Screenshot showing how to Add scope."::: 
         
@@ -289,14 +289,16 @@ items:
 
     1. Select **Add a permission**.
 
-    1. Select **Microsoft Graph** > **Delegated permissions**.
+    1. Select **Microsoft Graph**.
+
+    1. Select **Delegated permissions**.
 
        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/addpermission_1.png" alt-text="Screenshot showing adding of permission.":::
       
     1. Select the following permissions:</br>
          * **email**
          * **offline_access**
-         * **OpenId**
+         * **openid**
          * **profile**
          * **User.Read**
 
@@ -309,8 +311,7 @@ items:
        > [!NOTE]
        > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
                
-         1. Select **Add a platform**.
-         1. Select **Web**.
+         1. Select **Add a platform** > **Web**.
 
             :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/webauth_1.png" alt-text="Web":::
          
@@ -329,26 +330,24 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    1. Go to **appsettings.json** in cloned repository.
+    1. Go to the **appsettings.json** file in cloned repository.
  
        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appsettings-file-location.png" alt-text="Screenshot showing the navigation of app settings location.":::
       
-    1. Open **appsettings.json** in Visual Studio.
-    
-    1. Update the following information:  
+    1. Open the **appsettings.json** file and update the following information:  
 
          * Set `"MicrosoftAppType"` to **MultiTenant**.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"MicrosoftAppTenantId"` as blank for MultiTenant bot.
 
-           :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appsettings_1.png" alt-text="Screenshot showing the app settings.":::
+         :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appsettings_1.png" alt-text="Screenshot showing the app settings.":::
         
-    1. Go to **manifest.json** in cloned repository.
+    1. Go to the **manifest.json** file in cloned repository.
 
        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manifest-file-location.png" alt-text="Screenshot showing the manifest file location.":::
         
-    1. Open **manifest.json** in Visual Studio.
+    1. Open the **manifest.json** file.
 
     1. Add the following code snippet to your manifest file, if not already present:
 
@@ -373,12 +372,12 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using latest version of Visual Studio  or Command line**
+    To build and run the service using latest version of Visual Studio  or Command line
 
     # [Visual Studio](#tab/vs)
 
-       1. Launch the latest version of Visual Studio.
-       1. Go to **File** > **Open** > **Project/Solution**.
+       1. Open Visual Studio.
+       1. Go to **File** > **Open** > **Project/Solution...**.
 
           :::image type="content" source="~/assets/images/Teams-link-unfurling/VSopenfile_1.png" alt-text="Screenshot showing the navigation of open file.":::
           
@@ -418,38 +417,33 @@ items:
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
-       * icon-outline.png
-       * icon-color.png
+       * outline.png
+       * color.png
 
          :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manifest-file-zip.png" alt-text="Screenshot showing the zipping of file.":::
        
-    1. Go to **Microsoft Teams**.
+    1. In the Teams client, select the **Apps** icon.
+    1. Select **Manage your apps**.
+    1. Select **Upload an app**
+    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-    1. Select **Apps** > **Manage your apps**.
-
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manageapps_1.png" alt-text="Manage apps":::
-          
-    1. Select **Upload an app** and select **Upload a custom app**. 
-
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/uploadapp_1.png" alt-text="Upload custom app":::
+       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/custom-upload" alt-text="Upload custom app":::
       
-    1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
+    1. Select the .zip file you've created in the **TeamsAppManifest** folder and select **Open**.
 
        :::image type="content" source="~/assets/images/Teams-link-unfurling/upload-manifest-zip.png" alt-text="Screenshot showing the selection of zip file.":::
       
     1. Select **Add**.
 
        :::image type="content" source="~/assets/images/Teams-link-unfurling/addapp.png" alt-text="Screenshot shows the adding of app.":::
-       
-       The app opens in a chat.
-   
+         
     1. In the compose message area, enter `https://www.BotFramework.com`.
 
        The link unfurls as shown in the following image:
 
        :::image type="content" source="~/assets/images/Teams-link-unfurling/result.png" alt-text="Screenshot showing the Link unfurling result.":::
        
-    1. Press Enter.
+    1. Select **Send**.
 
        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/result-1.png" alt-text="Screenshot showing the output.":::
  
