@@ -20,17 +20,7 @@ If your app is production ready, you can begin the process of getting it listed 
 > [!TIP]
 > Following the pre-submission steps closely can increase the possibility that Microsoft approves your app for publishing.
 
-:::row:::
-   :::column span="":::
-
-   :::column-end:::
-   :::column span="3":::
-      :::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Teams app store publishing process" lightbox="../../../assets/images/submission/teams-app-store-publish-process.png":::
-   :::column-end:::
-   :::column span="":::
-
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Teams app store publishing process" lightbox="../../../assets/images/submission/teams-app-store-publish-process.png":::
 
 1. [Review the Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) to ensure your app meets Teams app and store standards.
 
