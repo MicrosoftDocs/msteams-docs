@@ -99,7 +99,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-registrations.png" alt-text="Screenshot shows the New registration page on Azure AD Portal.":::
 
-    4. Enter the name of your app, which is displayed to the user. The app name can be changed in later, if required..
+    4. Enter the name of your app, which is displayed to the user. The app name can be changed in later, if required.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/register-app.png" alt-text="Screenshot shows the App registration page on Azure AD Portal.":::
 
@@ -152,13 +152,13 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-set.png" alt-text="Screenshot shows to select Set.":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-set.png" alt-text="Screenshot that shows the Application ID URI to Add.":::
 
     1. Use the `api://your ngrok/botid-{AppID}` format for the **Application ID URI**.
 
-    1. Update the **Application ID URI** and select **Save**
+    1. Update the **Application ID URI** and select **Save**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-uri1.png" alt-text="Screenshot shows to Set the App ID URI with Save option highlighted in red.":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-uri1.png" alt-text="Screenshot that shows the App ID URI with Save option highlighted in red.":::
         
        The following image shows the Application ID URI:
         
@@ -170,21 +170,21 @@ items:
 
     1. Select **Add a scope**. 
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/addascope.png" alt-text="Screenshot shows to Add Scope with Add a scope highlighted in red.":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/addascope.png" alt-text="Screenshot that shows the Add a scope highlighted in red.":::
     
-    1. Enter **access_as_user** as the **Scope name**.
+    1. Enter *access_as_user* as the **Scope name**.
 
     1. Set **Who can consent?** to **Admins and users**.
 
     1. Configure the admin and user consent prompts with appropriate values for **access_as_user** scope:</br>
 
-        * Enter **Teams can access the user’s profile** as **Admin consent display name**.
+        * Enter *Teams can access the user’s profile* as **Admin consent display name**.
 
-        * Enter **Allows Teams to call the app’s web APIs as the current user** as **Admin consent description**.
+        * Enter *Allows Teams to call the app’s web APIs as the current user* as **Admin consent description**.
 
-        * Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**.
+        * Enter *Teams can access the user profile and make requests on the user’s behalf* as **User consent display name**.
 
-        * Enter **Enable Teams to call this app’s APIs with the same rights as the user** as **User consent description**.
+        * Enter *Enable Teams to call this app’s APIs with the same rights as the user* as **User consent description**.
 
     1. Ensure that **State** is set to **Enabled**.
 
