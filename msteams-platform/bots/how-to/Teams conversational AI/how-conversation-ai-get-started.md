@@ -12,7 +12,7 @@ ms.author: surbhigupta
 >
 > Teams AI library is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
-Teams AI library streamlines the process to build intelligent Microsoft Teams applications by using the AI components.  It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
+Teams AI library streamlines the process to build intelligent Microsoft Teams applications by using the AI components. It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
 
 You can easily integrate Teams AI library, prompt management, and safety moderation into your apps and enhance the user experience. It also facilitates the creation of bots that uses an OpenAI API key or Azure OpenAI to provide an AI-driven conversational experience.
 
@@ -23,45 +23,49 @@ Teams AI library is built on top of the Bot Framework SDK and uses its fundament
 > [!NOTE]
 > The adapter class that handles connectivity with the channels is imported from [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0#the-bot-adapter&preserve-view=true).
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L9)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/d127f765b6a4a2689f5e6602070d025063f52794/dotnet/samples/04.ai.a.teamsChefBot/Program.cs#L2-L4)
 
-```typescript
+```csharp
 // Import required bot services.
 // See https://aka.ms/bot-services to learn more about the different parts of a bot.
-import {
-    CloudAdapter,
-    ConfigurationBotFrameworkAuthentication,
-    ConfigurationServiceClientCredentialFactory,
-    MemoryStorage
-} from 'botbuilder';
+using Microsoft.Bot.Builder;
+using Microsoft.Bot.Builder.Integration.AspNet.Core;
+using Microsoft.Bot.Connector.Authentication;
 
-const botFrameworkAuthentication = new ConfigurationBotFrameworkAuthentication(
-    {},
-    new ConfigurationServiceClientCredentialFactory({
-        MicrosoftAppId: process.env.BOT_ID,
-        MicrosoftAppPassword: process.env.BOT_PASSWORD,
-        MicrosoftAppType: 'MultiTenant'
-    })
-);
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers();
+builder.Services.AddHttpClient("WebClient", client => client.Timeout = TimeSpan.FromSeconds(600));
+builder.Services.AddHttpContextAccessor();
+
+var config = builder.Configuration.Get<ConfigOptions>()!;
+builder.Configuration["MicrosoftAppType"] = "MultiTenant";
+builder.Configuration["MicrosoftAppId"] = config.BOT_ID;
+builder.Configuration["MicrosoftAppPassword"] = config.BOT_PASSWORD;
+builder.Services.AddSingleton<BotFrameworkAuthentication, ConfigurationBotFrameworkAuthentication>();
 
 // Create adapter.
 // See https://aka.ms/about-bot-adapter to learn more about how bots work.
-const adapter = new CloudAdapter(botFrameworkAuthentication);
-
-  ```
+builder.Services.AddSingleton<CloudAdapter, AdapterWithErrorHandler>();
+builder.Services.AddSingleton<IBotFrameworkHttpAdapter>(sp => sp.GetService<CloudAdapter>()!);
+builder.Services.AddSingleton<BotAdapter>(sp => sp.GetService<CloudAdapter>()!);
+```
 
 ### Import Teams AI library
 
-Import all the classes from `@microsoft/teams-ai` to build your bot and use the Teams AI library capabilities.
+Import all the classes from `Microsoft.TeamsAI` to build your bot and use the Teams AI library capabilities.
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L64)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/d127f765b6a4a2689f5e6602070d025063f52794/dotnet/samples/04.ai.a.teamsChefBot/Program.cs#L5-L10)
 
-```typescript
+```csharp
 ///// Teams AI library /////
 
 // import Teams AI library
-import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnState, OpenAIModerator, OpenAIPlanner, AI } from `@microsoft/teams-ai`;
-import path from "path";
+using Microsoft.TeamsAI;
+using Microsoft.TeamsAI.AI.Moderator;
+using Microsoft.TeamsAI.AI.Planner;
+using Microsoft.TeamsAI.AI.Prompt;
+using Microsoft.TeamsAI.State;
 ```
 
 ## Create AI components
@@ -70,58 +74,61 @@ Add AI capabilities to your existing app or a new Bot Framework app.
 
 **Planner**: OpenAI planner is the main component that calls the large language model (LLM) OpenAI or Azure OpenAI. The OpenAI API is powered by a diverse set of models with different capabilities. You can also make limited customizations to our original base models for your specific use case.
 
-**Prompt manager**: The prompt manager manages prompt creation. It calls functions and injects  from your code into the prompt. It copies the conversation state and the user state into the prompt for you automatically.
+**Prompt manager**: The prompt manager manages prompt creation. It calls functions and injects from your code into the prompt. It copies the conversation state and the user state into the prompt for you automatically.
 
 **Moderator**: A moderator adds safety moderation to the input and output. It allows you to identify the user input, flag prompt injection techniques, review the output from the bot, and run it through a business logic for filtering to ensure that the bot complies with OpenAI's usage policies. You can either moderate the input or the output, or both. OpenAI moderator is the default moderator.
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L70)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/d127f765b6a4a2689f5e6602070d025063f52794/dotnet/samples/04.ai.a.teamsChefBot/Program.cs#L42-L53)
 
-```javascript
+```csharp
 // Create AI components
-const planner = new OpenAIPlanner({
-    apiKey: process.env.OpenAIKey!,
-    defaultModel: 'text-davinci-003',
-    logRequests: true
-});
-const moderator = new OpenAIModerator({
-    apiKey: process.env.OpenAIKey!,
-    moderate: 'both'
-});
-// You can also modify this to out the `chatGPT` prompt.
-const promptManager = new DefaultPromptManager(path.join(__dirname, '../src/prompts/chat'));
+builder.Services.AddSingleton<OpenAIPlannerOptions>(_ => new OpenAIPlannerOptions(config.OpenAI.ApiKey, "text-davinci-003"));
+builder.Services.AddSingleton<OpenAIModeratorOptions>(_ => new OpenAIModeratorOptions(config.OpenAI.ApiKey, ModerationType.Both));
+
+ILoggerFactory loggerFactory = sp.GetService<ILoggerFactory>()!;
+
+IPlanner<TurnState> planner = new OpenAIPlanner<TurnState>(sp.GetService<OpenAIPlannerOptions>()!, loggerFactory.CreateLogger<OpenAIPlanner<TurnState>>());
+IModerator<TurnState> moderator = new OpenAIModerator<TurnState>(sp.GetService<OpenAIModeratorOptions>()!, loggerFactory.CreateLogger<OpenAIModerator<TurnState>>());
+IPromptManager<TurnState> promptManager = new PromptManager<TurnState>("./Prompts");
+```
 
 The `defaultModel` type `text-davinci-003` can perform any language task with better quality, longer output, and consistent instruction.
-
-```
 
 ## Define storage and application
 
 The application object automatically manages the conversation and user state of your bot.
 
-* **Storage**: Create a storage provider to store the conversation and the user state for your bot.
+- **Storage**: Create a storage provider to store the conversation and the user state for your bot.
 
-* **Application**: The application class has all the information and bot logic required for an app. You can register actions or activity handlers for the app in this class.
+- **Application**: The application class has all the information and bot logic required for an app. You can register actions or activity handlers for the app in this class.
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L82)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/DOTNET/dotnet/samples/04.e.twentyQuestions/Program.cs#L46-L83)
 
-```javascript
+```csharp
 // Define storage and application
-const storage = new MemoryStorage();
-const app = new Application<ApplicationTurnState>({
-    storage,
-    ai: {
-        planner,
-        moderator,
-        promptManager,
-        prompt: 'skprompt',
-        history: {
-            assistantHistoryType: 'text'
-        }
-    }
+builder.Services.AddSingleton<IStorage, MemoryStorage>();
+
+builder.Services.AddTransient<IBot, TeamsChefBotApplication>(sp =>
+{
+    ApplicationOptions<TurnState, TurnStateManager> applicationOptions = new ApplicationOptions<TurnState, TurnStateManager>()
+    {
+        AI = new AIOptions<TurnState>(planner, promptManager)
+        {
+            Moderator = moderator,
+            Prompt = "Chat",
+            History = new AIHistoryOptions()
+            {
+                AssistantHistoryType = AssistantHistoryType.Text
+            }
+        },
+        Storage = sp.GetService<IStorage>()
+    };
+
+    return new TeamsChefBotApplication(applicationOptions);
 });
 ```
 
-The `MemoryStorage()` function stores all the state for your bot. The `Application` class replaces the Teams Activity Handler class. You can configure your `ai` by adding the planner, moderator, prompt manager, default prompt and history. The `ai` object is passed into the `Application`, which receives the AI components and the default prompt defined earlier.
+The `MemoryStorage` stores all the state for your bot. The `Application` class replaces the Teams Activity Handler class. You can configure your `AI` by adding the planner, moderator, prompt manager, default prompt and history. The `AI` object is passed into the `Application`, which receives the AI components and the default prompt defined earlier.
 
 ## Prompt
 
@@ -129,64 +136,60 @@ Prompts are pieces of text that can be used to create conversational experiences
 
 The following are a few guidelines to create prompts:
 
-* Provide instructions, examples, or both.
-* Provide quality data. Ensure that there are enough examples and proofread your examples. The model is usually smart enough to see through basic spelling mistakes and give you a response, but it also might assume that the input is intentional and it might affect the response.
-* Check your prompt settings. The temperature and top_p settings control how deterministic the model is in generating a response.  Higher value such as 0.8 makes the output random, while lower value such as 0.2 makes the output focused and deterministic.
+- Provide instructions, examples, or both.
+- Provide quality data. Ensure that there are enough examples and proofread your examples. The model is usually smart enough to see through basic spelling mistakes and give you a response, but it also might assume that the input is intentional and it might affect the response.
+- Check your prompt settings. The temperature and top_p settings control how deterministic the model is in generating a response. Higher value such as 0.8 makes the output random, while lower value such as 0.2 makes the output focused and deterministic.
 
 Create a folder called prompts and define your prompts in the folder. When the user interacts with the bot by entering a text prompt, the bot responds with a text completion.
 
-* `skprompt.txt`:  Contains the prompts text and supports template variables and functions. Define all your text prompts in the `skprompt.txt` file.
-  
-* `config.json`: Contains the prompt model settings. Provide the right configuration to ensure bot responses are aligned with your requirement. Configure `max_tokens`, `temperature`, and other properties to pass into OpenAI or Azure OpenAI.
+- `skprompt.txt`: Contains the prompts text and supports template variables and functions. Define all your text prompts in the `skprompt.txt` file.
+- `config.json`: Contains the prompt model settings. Provide the right configuration to ensure bot responses are aligned with your requirement. Configure `max_tokens`, `temperature`, and other properties to pass into OpenAI or Azure OpenAI.
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/prompts/chat/config.json)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/DOTNET/dotnet/samples/04.ai.a.teamsChefBot/Prompts/Chat/config.json)
 
-   ```json
-   {
-    "schema": 1,
-    "description": "Chat with Santa Clause",
-    "type": "completion",
-    "completion": {
-      "max_tokens": 150,
-      "temperature": 0.9,
-      "top_p": 0.0,
-      "presence_penalty": 0.6,
-      "frequency_penalty": 0.0,
-      "stop_sequences": [
-        "Human:",
-        "AI:"
-      ]
-    }
-   }
-   ```
+```json
+{
+  "schema": 1,
+  "description": "Chat with Teams Chef",
+  "type": "completion",
+  "completion": {
+    "max_tokens": 150,
+    "temperature": 0.9,
+    "top_p": 0.0,
+    "presence_penalty": 0.6,
+    "frequency_penalty": 0.0,
+    "stop_sequences": ["Human:", "AI:"]
+  }
+}
+```
 
 ### Query parameters
 
 The following table includes the query parameters:
 
-|**Value**  |**Description**  |
-|---------|---------|
-|`max_tokens`     | The maximum number of tokens to generate in the completion. The token count of your prompt plus max_tokens can't exceed the model's context length.        |
-|`temperature`    | What sampling temperature to use, between 0 and 2. Higher values like 0.8 makes the output more random, while lower values like 0.2 makes it more focused and deterministic.        |
-|`top_p`    |An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. Therefore, 0.1 means only the tokens comprising the top 10% probability mass are considered.         |
-|`presence_penalty`     |  Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.       |
-|`frequency_penalty`     |Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.         |
-|`stop_sequences`     |  Up to four sequences where the API stops generating further tokens. The returned text won't contain the stop sequence. |
+| **Value**           | **Description**                                                                                                                                                                                                                                     |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `max_tokens`        | The maximum number of tokens to generate in the completion. The token count of your prompt plus max_tokens can't exceed the model's context length.                                                                                                 |
+| `temperature`       | What sampling temperature to use, between 0 and 2. Higher values like 0.8 makes the output more random, while lower values like 0.2 makes it more focused and deterministic.                                                                        |
+| `top_p`             | An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. Therefore, 0.1 means only the tokens comprising the top 10% probability mass are considered. |
+| `presence_penalty`  | Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.                                                                       |
+| `frequency_penalty` | Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.                                                          |
+| `stop_sequences`    | Up to four sequences where the API stops generating further tokens. The returned text won't contain the stop sequence.                                                                                                                              |
 
 ### Prompt actions
 
 Plans let the model perform actions or respond to the user. You can create a schema of the plan and add a list of actions that you support to perform an action and pass arguments. The OpenAI endpoint figures out the actions required to be used, extracts all the entities, and passes those as arguments to the action call.
 
 ```text
-    The following is a conversation with an AI assistant. 
-    The AI is Santa Clause and the Human is a child meeting Santa for the first time. 
-    The AI should always reply the way Santa would. 
-    The AI should always greet the human the way Santa would, ask them their name, and then what they would like for Christmas.
-    
-    {{$history}}
-    Human: {{$input}}
-    AI:
-  ```
+The following is a conversation with an AI assistant, its name is Teams Chef.
+Teams Chef is an expert in Microsoft Teams apps development and the Human is junior developer learning Microsoft Teams development for the first time.
+Teams Chef should always reply by explaining new concepts in simple terms using cooking as parallel concepts.
+Teams Chef should always greet the human, ask them their name, and then guide the junior developer in his journey to build new apps for Microsoft Teams.
+
+{{$history}}
+Human: {{$input}}
+TeamsChef:
+```
 
 ### Prompt template
 
@@ -194,32 +197,40 @@ Prompt template is a simple and powerful way to define and compose AI functions 
 
 The language supports features that allow you to include variables, call external functions, and pass parameters to functions. You don't need to write any code or import any external libraries, just use the curly braces {{...}} to embed expressions in your prompts. Teams parses your template and execute the logic behind it. This way, you can easily integrate AI into your apps with minimal effort and maximum flexibility.
 
-* ``{{function}}``:  Calls a registered function and inserts its return value string.​
+- `{{function}}`: Calls a registered function and inserts its return value string.​
 
-* ``{{$input}}``:  Inserts the message text. It gets it's value from state.temp.input.
+- `{{$input}}`: Inserts the message text. It gets it's value from state.temp.input.
 
-* ``{{$history}}``: Inserts the conversation history.​ It gets it's value from state.temp.history
+- `{{$history}}`: Inserts the conversation history.​ It gets it's value from state.temp.history
 
-* ``{{$state.[property]}}``: Inserts state properties.
+- `{{$state.[property]}}`: Inserts state properties.
 
 ## Actions
 
 Actions handle events triggered by AI components.
 
-`FlaggedInputAction` and `FlaggedOutputAction` are the built-in action handlers to handle the moderator flags. If the moderator flags an incoming message input, the moderator redirects to the `FlaggedInputAction` handler and the `context.sendActivity` sends a message to the user about the flag.
+`FlaggedInputAction` and `FlaggedOutputAction` are the built-in action handlers to handle the moderator flags. If the moderator flags an incoming message input, the moderator redirects to the `FlaggedInputAction` handler and the `turnContext.SendActivityAsync` sends a message to the user about the flag.
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L97)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/DOTNET/dotnet/samples/04.ai.a.teamsChefBot/TeamsChefBotApplication.cs#L33-L49)
 
-```javascript
-app.ai.action(AI.FlaggedInputActionName, async (context: TurnContext, state: TurnState, data: TData) => {
-    await context.sendActivity(`I'm sorry your message was flagged: ${JSON.stringify(data)}`);
-    return false;
-});
+```csharp
+internal class TeamsChefBotActions
+{
+    [Action(DefaultActionTypes.FlaggedInputActionName)]
+    public async Task<bool> FlaggedInputAction([ActionTurnContext] ITurnContext turnContext, [ActionEntities] Dictionary<string, object> entities)
+    {
+        string entitiesJsonString = JsonSerializer.Serialize(entities);
+        await turnContext.SendActivityAsync($"I'm sorry your message was flagged: {entitiesJsonString}");
+        return false;
+    }
 
-app.ai.action(AI.FlaggedOutputActionName, async (context: TurnContext, state: ApplicationTurnState, data: TData) => {
-    await context.sendActivity(`I'm not allowed to talk about such things.`);
-    return false;
-});
+    [Action(DefaultActionTypes.FlaggedOutputActionName)]
+    public async Task<bool> FlaggedOutputAction([ActionTurnContext] ITurnContext turnContext)
+    {
+        await turnContext.SendActivityAsync("I'm not allowed to talk about such things.");
+        return false;
+    }
+}
 ```
 
 ### Register Action Handlers
@@ -230,39 +241,65 @@ One of the key aspects in action handlers is that you must first register the ac
 
 You must register a handler for each action listed in the prompt and also add a handler to deal with unknown actions.
 
-In the following example of a light bot, we have the `LightsOn`, `LightsOff`, and `Pause`  action. Every time an action is called, you return `true` or `false`. ​Returning `false` from a handler prevents the planner from running additional `DO` or `SAY` commands. When the bot receives an unknown action, we're telling the bot to terminate the action.
+In the following example of a light bot, we have the `LightsOn`, `LightsOff`, and `Pause` action. Every time an action is called, you return `true` or `false`. ​Returning `false` from a handler prevents the planner from running additional `DO` or `SAY` commands. When the bot receives an unknown action, we're telling the bot to terminate the action.
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.c.actionMapping.lightBot/src/index.ts#L107)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/DOTNET/dotnet/samples/04.ai.c.actionMapping.lightBot/LightBotActions.cs#L7-L58)
 
-```javascript
-// Register action handlers
-app.ai.action('LightsOn', async (context: TurnContext, state: ApplicationTurnState) => {
-    state.conversation.value.lightsOn = true;
-    await context.sendActivity(`[lights on]`);
-    return true;
-});
+```csharp
+// Define action handlers
+public class LightBotActions
+{
+    [Action("LightsOn")]
+    public async Task<bool> LightsOn([ActionTurnContext] ITurnContext turnContext, [ActionTurnState] AppState turnState)
+    {
+        turnState.Conversation!.LightsOn = true;
+        await turnContext.SendActivityAsync(MessageFactory.Text("[lights on]"));
+        return true;
+    }
 
-app.ai.action('LightsOff', async (context: TurnContext, state: ApplicationTurnState) => {
-    state.conversation.value.lightsOn = false;
-    await context.sendActivity(`[lights off]`);
-    return true;
-});
+    [Action("LightsOff")]
+    public async Task<bool> LightsOff([ActionTurnContext] ITurnContext turnContext, [ActionTurnState] AppState turnState)
+    {
+        turnState.Conversation!.LightsOn = false;
+        await turnContext.SendActivityAsync(MessageFactory.Text("[lights off]"));
+        return true;
+    }
 
-app.ai.action('Pause', async (context: TurnContext, state: ApplicationTurnState, data: TData) => {
-    const time = data.time ? parseInt(data.time) : 1000;
-    await context.sendActivity(`[pausing for ${time / 1000} seconds]`);
-    await new Promise((resolve) => setTimeout(resolve, time));
-    return true;
-});
+    [Action("Pause")]
+    public async Task<bool> LightsOff([ActionTurnContext] ITurnContext turnContext, [ActionEntities] Dictionary<string, object> entities)
+    {
+        if (entities.TryGetValue("time", out object time))
+        {
+            if (time is string timeString)
+            {
+                if (int.TryParse(timeString, out int timeInt))
+                {
+                    await turnContext.SendActivityAsync(MessageFactory.Text($"[pausing for {timeInt / 1000} seconds]"));
+                    await Task.Delay(timeInt);
+                }
+            }
+        }
 
-// Register a handler to handle unknown actions that might be predicted
-app.ai.action(
-    AI.UnknownActionName,
-    async (context: TurnContext, state: ApplicationTurnState, data: TData, action: string | undefined) => {
-        await context.sendActivity(responses.unknownAction(action || 'unknown'));
+        return true;
+    }
+
+    // Register a handler to handle unknown actions that might be predicted
+    [Action(DefaultActionTypes.UnknownActionName)]
+    public async Task<bool> UnknownAction([ActionTurnContext] TurnContext turnContext, [ActionName] string action)
+    {
+        await turnContext.SendActivityAsync(ResponseGenerator.UnknownAction(action ?? "Unknown"));
         return false;
     }
-);
+}
+
+// Register action handlers
+public class TeamsLightBot : Application<AppState, AppStateManager>
+{
+    public TeamsLightBot(ApplicationOptions<AppState, AppStateManager> options) : base(options)
+    {
+        AI.ImportActions(new LightBotActions());
+    }
+}
 ```
 
 ## Next step
