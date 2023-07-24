@@ -61,6 +61,10 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 
 [People Picker](cards/people-picker.md#people-picker-in-adaptive-cards) added as an input control in Adaptive Cards enable search and selection of people. You can use it in chats, channels, task modules, and tabs. The mobile and desktop clients support People Picker, which provides an inline typing experience.
 
+### People icon in an Adaptive Card
+
+[People icon](cards/people-picker.md#people-icon-in-an-adaptive-card) helps users to view the images of users in an Adaptive Card. You can view the image of a single user or multiple users. People icon is supported in Teams mobile and desktop clients.
+
 ### Typeahead search in Adaptive Cards  
 
 Typeahead search added as an input control in Adaptive Cards enable [dynamic search](~/task-modules-and-cards/cards/dynamic-search.md) experience from a dynamically loaded dataset. It also allows users to do a type-ahead static search within a list with limited number of choices. The mobile and desktop clients support type ahead dynamic search experience.
