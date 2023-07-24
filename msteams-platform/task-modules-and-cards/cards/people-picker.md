@@ -386,27 +386,25 @@ The following table lists the query parameters:
 |`type`     |    `component`     |
 |`name`     |   `graph.microsoft.com/users`. Search all members across the organization.      |
 |`view`     |   `compact`      |
-|`properties`|Passed directly to the component template|
-|`id`     | User's MRI    |
+|`properties`|Passed to the component template|
+|`id`     | User's MRI  |
 |`displayName`     |   Name of the user     |
-|`userPrincipalName`|The user principal name of the account in Azure AD.|
+|`userPrincipalName`|The user's principal name of the account in Azure AD|
 
 
 Adaptive Components are high-level components powered by [templating](/adaptive-cards/templating/) and native Adaptive Card elements. The type `component` can be used anywhere inside the card body and the component data is defined in the `properties` attribute.  The component data under `properties` is passed directly to the component. The `properties` property defines the format for Persona and Persona Set and all other  properties under `properties` is ignored by `component` type in the Adaptive Card schema.
 
 Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Azure Active Directory (Azure AD) information, such as `name`, `id` and `userPrincipalName`. For more information, see [Fetch the roster or user profile](../../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
-The following is the behavior of the people icon in an Adaptive Card on Teams desktop and mobile clients:
+The following is an example of the people icon in an Adaptive Card on Teams desktop and mobile clients:
 
 # [Desktop](#tab/desktop)
 
-Desktop: When a user hovers on a people icon, the people card of that user is displayed.
-
 :::image type="content" source="../../assets/images/adaptive-cards/people-icon-persona-persona-set.png" alt-text="Screenshot shows a persona and persona set icons in an Adaptive Card in Teams desktop client.":::
 
-# [Mobile](#tab/mobile)
+When a user hovers on a people icon, the people card of that user is displayed.
 
-Mobile: When a users selects a people icon, the people card of that user is displayed.
+# [Mobile](#tab/mobile)
 
 :::row:::
     :::column:::
@@ -420,6 +418,8 @@ Mobile: When a users selects a people icon, the people card of that user is disp
         
     :::column-end:::
 :::row-end:::
+
+When a user selects a people icon, it displays the people card of that user.
 
 ---
 
