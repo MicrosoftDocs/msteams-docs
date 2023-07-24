@@ -23,7 +23,7 @@ Teams AI library is built on top of the Bot Framework SDK and uses its fundament
 > [!NOTE]
 > The adapter class that handles connectivity with the channels is imported from [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0#the-bot-adapter&preserve-view=true).
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/d127f765b6a4a2689f5e6602070d025063f52794/dotnet/samples/04.ai.a.teamsChefBot/Program.cs#L2C2-L4)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/d127f765b6a4a2689f5e6602070d025063f52794/dotnet/samples/04.ai.a.teamsChefBot/Program.cs#L2-L4)
 
 ```csharp
 // Import required bot services.
@@ -283,6 +283,7 @@ public class LightBotActions
         return true;
     }
 
+    // Register a handler to handle unknown actions that might be predicted
     [Action(DefaultActionTypes.UnknownActionName)]
     public async Task<bool> UnknownAction([ActionTurnContext] TurnContext turnContext, [ActionName] string action)
     {
@@ -303,4 +304,5 @@ public class TeamsLightBot : Application<AppState, AppStateManager>
 
 ## Next step
 
-> [!div class="nextstepaction"] > [Teams AI library quick start guide](conversation-ai-quick-start.md)
+> [!div class="nextstepaction"]
+> [Teams AI library quick start guide](conversation-ai-quick-start.md)
