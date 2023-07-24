@@ -18,7 +18,7 @@ Create your offer in Partner Center and configure the offer to publish in the ma
 
 1. Sign in to [Partner Center](https://partner.microsoft.com/) and select **Partner Center**.
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/partner-center-home-page.png" alt-text="The screenshots shows how to log in to the Partner Center account.":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/partner-center-home-page.png" alt-text="The screenshots shows how to sign in to the Partner Center account.":::
 
 1. In the **Home** page, select **Marketplace offers** tab to define commercial marketplace offers.
 
@@ -45,27 +45,29 @@ Make the required configurations and setups for the offer. The offer setup, offe
 
 ### Offer setup
 
-On the **Offer setup** tab, under **Setup** details, choose whether to sell your offer through Microsoft or manage your transactions independently. Offers sold through Microsoft are called transactable offers, which means that Microsoft facilitates the exchange of money for a software license on the publisher's behalf.
+On the **Offer setup** tab, under **Setup** details, select whether to sell your offer through Microsoft or manage your transactions independently. Offers sold through Microsoft are called transactable offers, which means that Microsoft facilitates the exchange of money for a software license on the publisher's behalf.
 
 1. If you haven't added Offer Alias while creating the offer, enter a suitable Offer Alias name.
 
-1. To sell through Microsoft and have Microsoft facilitate transactions for you, in the Offer setup page, under **Setup** details, select the checkbox **Yes, I would like Microsoft to manage customer licenses on my behalf**.
+1. Select if you want to sell through Microsoft or not.
+    1. To sell through Microsoft and have Microsoft facilitate transactions for you, in the Offer setup page, under **Setup** details, select the checkbox **Yes, I would like Microsoft to manage customer licenses on my behalf**.
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="The screenshots shows the offer setup page to set up license to manage for your app within Teams.":::
+       :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="The screenshots shows the offer setup page to set up license to manage for your app within Teams.":::
 
-    * If you would like Microsoft to manage customer licenses for you, select **Yes**.
-    * If you want to manage customer licenses yourself, select **No**.
+        * If you would like Microsoft to manage customer licenses for you, select **Yes**. For Microsoft to mange your licenses, [set up Microsoft License management](manage-third-party-apps-license.md).
+        * If you want to manage customer licenses yourself, select **No**.
 
-   > [!NOTE]
-   >
-   > * This is a one-time setting and you can't change it once your offer is published. This allows the customer to manage licenses for your app within Teams.
-   > * The App manifest supports only one offer for an app. Choose an appropriate license management solution for all the plans available in your offer and you can't change this option after the offer is pushed to live.
+       > [!NOTE]
+       >
+       > * This is a one-time setting and you can't change it once your offer is published. This allows the customer to manage licenses for your app within Teams.
+       > * The App manifest supports only one offer for an app. Select an appropriate license management solution for all the plans available in your offer and you can't change this option after the offer is pushed to live.
 
-1. If you want to manage transactions independently, To list your offer through the commercial marketplace and process transactions independently, select **No**.
+    1. To list your offer through the commercial marketplace and process transactions independently, select **No**.
 
-    The technical requirements and configuration differ based on the selection.
+        * Select from the [listed options](/partner-center/marketplace/plan-saas-offer). You can change to a different listing option after publishing the offer.
 
-1. Select from the [listed options](/partner-center/marketplace/plan-saas-offer). You can change to a different listing option after publishing the offer.
+    > [!NOTE]
+    > The technical requirements and configuration differ based on the selection.
 
 1. To enable a test drive, under **Test drive**, select the **Enable a test drive** checkbox.
 
@@ -77,48 +79,49 @@ On the **Offer setup** tab, under **Setup** details, choose whether to sell your
 
 On the Properties tab, you define the categories and industries applicable to your offer, your app version, and legal contracts. Be sure to provide complete and accurate details about your offer on this page, so that it's displayed appropriately and offered to the right set of customers.
 
-* Under **Category**, select at least one and up to two categories for grouping your offer into the appropriate marketplace search areas.
-* Under **Industries**, you can select up to two industries and up to two sub-industries (also called verticals) for each industry.
-* In the App version box, enter a version number. The app version is used in the AppSource marketplace to identify the version number of your offer.
-* Under **Legal**, provide terms and conditions for your offer. You can use standard contract with some amendments or use own terms and conditions.
+1. Under **Category**, select at least one and up to two categories for grouping your offer into the appropriate marketplace search areas.
+1. Under **Industries**, select up to two industries and up to two subindustries (also called verticals) for each industry.
+1. In the App version box, enter a version number.
+1. Under **Legal**, provide terms and conditions for your offer. You can use standard contract with some amendments or use own terms and conditions.
+1. Select **Save draft**.
 
 ### Offer listing
 
 On the Offer listing page, under Marketplace details, complete the following steps.
 
-* The Name box is prefilled with the name you entered earlier in the New offer dialog box. You can change the name at any time.
-* In the Search results summary box, enter up to 100 characters of text. This summary is used in the marketplace listing search results.
-* In the **Description** box, enter a description for your offer.
-* In the **Getting started** instructions box, provide instructions to help customers connect to your SaaS offer.
-* Optionally, you can add up to three search keywords.
-* In the **Privacy policy** link box, enter a link to your organization's privacy policy, starting with https.
+1. The Name box is prefilled with the name you entered earlier in the New offer dialog box. You can change the name at any time.
+1. In the Search results summary box, enter up to 100 characters of text. This summary is used in the marketplace listing search results.
+1. In the **Description** box, enter a description for your offer.
+1. In the **Getting started** instructions box, provide instructions to help customers connect to your SaaS offer.
+1. Optionally, you can add up to three search keywords.
+1. In the **Privacy policy** link box, enter a link to your organization's privacy policy, starting with https.
+1. Select **Save draft**.
 
 ### Preview audience
 
 You can define a limited audience who can review your SaaS offer before you publish it live to the broader marketplace audience.
 
-* On the **Preview Audience** page, add a single Azure AD or MSA email address and an optional description in the boxes provided.
-* To add another email address, select the Add another email link.
-* Select **Save draft** before continuing to the next tab: Technical configuration.
+1. On the **Preview Audience** page, add a single Azure AD or MSA email address and an optional description in the boxes provided.
+1. To add another email address, select the Add another email link.
+1. Select **Save draft**.
 
 ### Technical configuration
 
 On the Technical configuration tab, you define the technical details that the commercial marketplace uses to communicate to your SaaS application or solution.
 
-1. Enter the landing page URL, that customers will land on after acquiring your offer from the commercial marketplace and triggering the configuration process from the newly created SaaS subscription.
+1. Enter the landing page URL, that customers land on after acquiring your offer from the commercial marketplace and triggering the configuration process from the newly created SaaS subscription.
 1. Enter Connection webhook URL, for all asynchronous events that Microsoft needs to send to your SaaS subscription.
 1. Enter Azure Active Directory tenant ID.
 1. Enter Azure Active Directory application ID.
-
-Select **Save draft** before continuing to the next tab: Plan overview.
+1. Select **Save draft**.
 
 ### Plan Overview
 
-Offers sold through the Microsoft commercial marketplace must have at least one plan. To create one or more plans for your offer, check [Set up license management](manage-third-party-apps-license.md).
+Offers sold as transactable SaaS offers must have at least one plan. If you opt Microsoft to manage your licenses, [create a plan and set up Microsoft license management](manage-third-party-apps-license.md).
 
 ### Submit the offer
 
-When you finish configuring your offer, validate the offer and submit your offer for publishing. The Offer overview page shows the Publish status where you can track the progress.
+When you finish configuring the offer, validate the offer and submit your offer for publishing. The offer overview page shows the Publish status where you can track the progress.
 
 When the offer is in Publisher sign-off state, preview links for the respective platforms are given below the **Go live** button to test the offer. It's recommended to [preview and test the offer](Test-preview-for-monetized-apps.md) before you publish the offer live.
 

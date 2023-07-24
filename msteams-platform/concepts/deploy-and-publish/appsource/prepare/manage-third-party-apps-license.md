@@ -1,5 +1,5 @@
 ---
-title: Set up Microsoft license management
+title: Create a plan and set up Microsoft license management
 description: Learn to manage SaaS licenses for third-party apps purchased from Teams storefront. 
 author: heath-hamilton
 ms.author: surbhigupta

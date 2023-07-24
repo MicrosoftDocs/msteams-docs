@@ -88,19 +88,18 @@ If the Preview offer is specified in the app manifest and the preview audience i
 
 ## Make the offer go live
 
-Up on successful testing, your offer is now ready to go live. Check for any validation errors, fix and resumbit the offer for publishing. You can track the publishing status in the Offer overview page.
+Up on successful testing, your offer is now ready to go live. Check for any validation errors, fix, and resumbit the offer for publishing. You can track the publishing status in the Offer overview page.
 
 When all the check are done, click **Go live** for the offer to be available in the commercial marketplace. After the validation checks are done for the live offer, the offer is available for purchase.
 
 > [!NOTE]
 > You need to first make your offer live in the marketplace and link the offer to your app. Then you need to publish the updated app to the store with the configured offer.
 
-To understand more about the validation and certification, check Review and publish offers.
+To understand more about the validation and certification, check [Review and publish offers](/partner-center/marketplace/review-publish-offer).
 
 ## See also
 
 * [Monetize your app](monetize-overview.md)
-* [Include a SaaS offer with your Microsoft Teams app](include-saas-offer.md)
 * [Add a preview audience for a SaaS offer](/azure/marketplace/create-new-saas-offer-preview)
 * [Preview creation phase](/azure/marketplace/review-publish-offer)
 * [Review and publish an offer to the commercial marketplace](/azure/marketplace/review-publish-offer#validation-and-publishing-steps)
