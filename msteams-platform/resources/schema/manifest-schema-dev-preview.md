@@ -836,7 +836,7 @@ Specifies the set of client or host requirements for an extension. If a client d
 
 ### extensions.runtimes
 
-Configures the sets of runtimes and actions that can be used by each extension point.  
+Configures the sets of runtimes and actions that can be used by each extension point.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
