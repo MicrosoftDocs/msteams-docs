@@ -29,18 +29,6 @@ You can build your Microsoft Teams app using following different tools and SDKs:
 
 :::row:::
     :::column span="1":::
-        **Teams AI library**
-    :::column-end:::
-    :::column span="2":::
-        Teams AI library is a Teams-centric interface to GPT-based common language models and user intent engines. The AI library provides a simple capabilities-driven approach and helps you create intelligent apps with prebuilt, reusable code snippets so that you can focus on building the business logic rather than learning the semantics of Teams conversational applications.
-
-        > [!div class="nextstepaction"]
-        > [Teams AI library](../../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column span="1":::
         **Teams JavaScript client library**
     :::column-end:::
     :::column span="2":::
@@ -72,6 +60,18 @@ You can build your Microsoft Teams app using following different tools and SDKs:
 
         > [!div class="nextstepaction"]
         > [Live Share SDK](~/apps-in-teams-meetings/teams-live-share-overview.md)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        **Teams AI library**
+    :::column-end:::
+    :::column span="2":::
+        Teams AI library is a Teams-centric interface to GPT-based common language models and user intent engines. The AI library provides a simple capabilities-driven approach and helps you create intelligent apps with prebuilt, reusable code snippets so that you can focus on building the business logic rather than learning the semantics of Teams conversational applications.
+
+        > [!div class="nextstepaction"]
+        > [Teams AI library](../../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
     :::column-end:::
 :::row-end:::
 
@@ -200,3 +200,10 @@ You can build your Microsoft Teams app using following different tools and SDKs:
         > [Azure Fluid Relay](/azure/azure-fluid-relay/overview/overview)
     :::column-end:::
 :::row-end:::
+
+## Teams toolkit
+
+Teams Toolkit makes it simple to get started with app development for Microsoft Teams. You can start a project template for common line-of-business app scenarios or from a sample and save setup time with automated app registration and configuration. You can debug to Teams directly from familiar tools. Teams toolkit's smart defaults help you host in Azure using infrastructure-as-code and Bicep. It helps you to create unique configurations using the environment features such as, dev, test, and prod.
+
+> [!div class="nextstepaction"]
+> [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md)
