@@ -24,10 +24,10 @@ The following table lists the events that your bot can receive and take action o
 
 | Event type | Payload object | Scope |
 | ---- | ---------| ------ |
-| [Receive a message](#receive-a-message) | `Activity` | All |
-| [Get edit message event](#get-edit-message-event) | `OnTeamsMessageEditAsync` | All |
-| [Get undelete message event](#get-undelete-message-event) | `OnTeamsMessageUndeleteAsync` | All |
-| [Get soft delete message event](#get-soft-delete-message-event) | `OnTeamsMessageSoftDeleteAsync` | All |
+| [Receive a message activity](#receive-a-message) | Message activity | All |
+| [Receive edit message activity](#get-edit-message-event) | Message edit activity | All |
+| [Receive undelete message activity](#get-undelete-message-event) | Message undelete activity | All |
+| [Get soft delete message activity](#get-soft-delete-message-event) | Message soft delete activity | All |
 
 ## Receive a message
 
@@ -259,7 +259,7 @@ Messages sent between users and bots include internal channel data within the me
 
 ## Get edit message event
 
-When you edit a message in the group chat or channel, the bot gets a notification of the edit message event.
+When you edit a message, the bot gets a notification of the edit message activity.
 
 To get an edit message event notification in a bot, you can override `OnTeamsMessageEditAsync` handler.
 
@@ -364,7 +364,7 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ## Get undelete message event
 
-When you undelete a message in the group chat or channel, the bot gets a notification of the undelete message event.
+When you undelete a message, the bot gets a notification of the undelete message activity.
 
 To get an undelete message event notification in a bot, you can override `OnTeamsMessageUndeleteAsync` handler.
 
@@ -471,7 +471,7 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ## Get soft delete message event
 
-When you soft delete a message in the group chat or channel, the bot gets a notification of the soft delete message event.
+When you soft delete a message, the bot gets a notification of the soft delete message activity.
 
 To get a soft delete message event notification in a bot, you can override `OnTeamsMessageSoftDeleteAsync` handler.
 
