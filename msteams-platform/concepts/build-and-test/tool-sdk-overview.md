@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Tools and SDKs
 
-You can build your Microsoft Teams app using following different tools and SDKs:
+Teams Platform brings you different tools, SDKs, and APIs to build and develop your apps. It allows you to secure your app with  Azure AD and there are several libraries available to support various aspects of Teams app development.
 
 :::image type="content" source="../../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png" alt-text="Screenshot shows you the list of all tools and SDKs that are available for you to build Teams apps."lightbox="../../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png":::
 
