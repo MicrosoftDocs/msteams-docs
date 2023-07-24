@@ -61,37 +61,36 @@ items:
     1. Open [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
 
-       :::image type="content" source="~/assets/images/adaptive-cards/create-azure-bot_1.png" alt-text="Azure bot.":::
+       :::image type="content" source="~/assets/images/adaptive-cards/create-resource.png" alt-text="Screenshots shows the selection of Azure services.":::
 
     1. Search for **Azure Bot** in the search box.
     1. Select **Azure Bot**.
     1. Select **Create**.
 
-       :::image type="content" source="~/assets/images/adaptive-cards/azure-bot_1.png" alt-text="create Azure bot.":::
+       :::image type="content" source="~/assets/images/adaptive-cards/azure-bot.png" alt-text="Screenshot shows the selection of Create Azure bot.":::
 
     1. In the **Create an Azure Bot** window that appears, enter the required bot handle name in **Bot handle**.
-    1. Select your **Subscription** and **Resource group** from the dropdown list.
+    1. Select your **Subscription** from the dropdown list.
+    1. Select your **Resource group** from the dropdown list.
             
-       :::image type="content" source="~/assets/images/adaptive-cards/resource-group_1.png" alt-text="resource group.":::
+       :::image type="content" source="~/assets/images/adaptive-cards/resource-group.png" alt-text="resource group.":::
 
-       You can optionally create a new resource group. Select **Create new** > enter resource name > select **OK**. Select the required location from the **New resource group location** dropdown list.
+       To create a new resource group, select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
 
-        :::image type="content" source="~/assets/images/adaptive-cards/newresource_1.png" alt-text="Screenshot showing the new resource group location.":::
+        :::image type="content" source="~/assets/images/adaptive-cards/newresource.png" alt-text="Screenshot showing the new resource group location.":::
 
-    1. In the **Microsoft App ID** section, select **Type of App** as **Multi Tenant**.
-
-        :::image type="content" source="./assets/images/adaptive-cards/tenant-review_1.png" alt-text="tenant review.":::
-
-    1. In the **Creation type**, by default **Create new Microsoft App ID** is selected. 
+    1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
-       You can select **Use existing app registration** and enter **App ID**, **App tenant ID**, and **MSI resource ID**.
+       You can also select **Use existing app registration** and enter **App ID**, **App tenant ID**, and **MSI resource ID**.
 
        > [!NOTE]
-       > You can't create more than one bot with the same **Microsoft App ID**. 
+       > You can't create more than one bot with the same **Microsoft App ID**.
+
+    1. Select **Type of App** as **Multi Tenant**.
 
     1. Select **Review + create**.
 
-        :::image type="content" source="~/assets/images/adaptive-cards/create-azure-bot.png" alt-text="Screenshot shows the Review plus create option is highlighted in red in the Create an Azure Bot page .":::
+        :::image type="content" source="./assets/images/adaptive-cards/tenant-review.png" alt-text="Screenshot shows the selection of tenant and to review.":::
 
     1. If the validation passes, select **Create**.
 
@@ -103,7 +102,7 @@ items:
 
         :::image type="content" source="~/assets/images/adaptive-cards/go-to-resource-card.png" alt-text="Screenshot of deployment complete with Go to resource option highlighted in red.":::
 
-        Now your Azure bot is created.
+        Your Azure bot is created.
 
         :::image type="content" source="~/assets/images/adaptive-cards/azure-bot-ui.png" alt-text="Screenshot of the Azure bot Home page that is created.":::
 
@@ -114,44 +113,47 @@ items:
     Perform the following steps if you've created a new **Microsoft App ID**:
 
     1. In left pane, select **Configuration**.
-        :::image type="content" source="~/assets/images/adaptive-cards/config-microsoft-app-id.png" alt-text="Screenshot of Configuration with Microsoft App ID highlighted in red.":::
-
-    1. Next to **Microsoft App ID**, select **Manage**.
+    
+    1. Next to **Microsoft App ID**, select **Manage Password**.
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
-       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="Screenshot of Microsoft App ID option under Configuration page with the Manage option highlighted.":::
+       :::image type="content" source="~/assets/images/adaptive-cards/manage-bot-label.png" alt-text="Screenshot of Microsoft App ID option under Configuration page with the Manage option highlighted.":::
 
     1. In the **Client secrets** section, select **New client secret**.  
 
         :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret.png" alt-text="Screenshot of Client secret section with New client secret option highlighted in red.":::
 
-        **Add a client secret** window appears.
+        The **Add a client secret** window appears.
         
-    1. Enter **Description** and select **Add**.
+    1. Enter **Description** to the client secret,
+    
+    1. Select **Add**.
  
         :::image type="content" source="~/assets/images/adaptive-cards/client-secret.png" alt-text="Screenshot of Add a client secret window with the Add option highlighted in red.":::
 
-    1. In the **Value** column, select **Copy to clipboard** and save the client secret ID for future reference.
+    1. In the **Value** column, select **Copy to clipboard**.
 
         :::image type="content" source="~/assets/images/adaptive-cards/client-secret-value.png" alt-text="Screenshot of Client secret value and the Copy to clipboard icon highlighted in red.":::
        
     **To add the Microsoft Teams channel**
 
-    1. Go to **Home**.
+    1. Select **Home**.
 
-    1. Select your bot from **Resources** > **Recent**.
+    1. Select your bot from **Recent resources**.
 
-    1. Select **Channels** in the left pane.
-
-    1. Select **Microsoft Teams**.
+    1. Select **Channels** in the left pane and select **Microsoft Teams**.
 
        :::image type="content" source="~/assets/images/Tab-ME-SSO/channel-teams_1.png" alt-text="Select Teams in channels":::
     
     1. Select the checkbox to accept the **Terms of Service**.
     
     1. Select **Agree**.
+
+       :::image type="content" source="~/assets/images/adaptive-cards/terms.png" alt-text="Screenshot shows the terms and services.":::
+
+    1. Select **Apply**.
 
        :::image type="content" source="~/assets/images/adaptive-cards/select-teams.png" alt-text="Screenshot of Configure Microsoft Teams displaying the selection of Microsoft Teams Commercial (most common).":::
 
@@ -218,11 +220,11 @@ items:
 
     **To add Redirect URI to the Azure Bot resource**
 
-    1. Select **Manage** next to **Microsoft App ID**.
+    1. Next to **Microsoft App ID**, select **Manage Password**.
 
-       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="Screenshot of Azure bot resource with Manage option highlighted in red.":::
+       :::image type="content" source="~/assets/images/adaptive-cards/manage-bot-label.png" alt-text="Screenshot of Microsoft App ID option under Configuration page with the Manage option highlighted.":::
 
-    1. Select **Authentication** from the left pane of your bot resource.
+    1. From the left pane, select **Authentication** to set a redirect URI
     1. In **Platform configurations**, select **Add a platform**.
     1. Select **Web**.
     1. Enter **Redirect URIs** as `https://token.botframework.com/.auth/web/redirect` and select **Configure**.

@@ -95,7 +95,7 @@ items:
 
     1. Select **Review + create**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/review-create_1.png" alt-text="creation of new bot":::   
+        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/review-create-app-id.png" alt-text="Screenshow shows th creation of new bot.":::   
 
     1. If the validation passes, select **Create**. 
     
@@ -103,11 +103,11 @@ items:
 
     1. Select **Go to resource**. 
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/deployment_1.png" alt-text="select resource":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/deployment-resources.png" alt-text="Screenshot shows the selection of resources.":::
         
         Your Azure bot is created.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/azure-bot-created_1.png" alt-text="creation of bot":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/azure-bot-created-output.png" alt-text="Screenshot shows the creation of a bot.":::
 
      **To create client secret**
 
@@ -237,23 +237,25 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectscope_2.png" alt-text="selection of scope":::
 
-    1. Enter **access_as_user** as the **Scope name**.
+    1. Enter *access_as_user* as the **Scope name**.
   
-    1. Set **Who can consent?** to `Admins and users`.
+    1. Set **Who can consent?** to **Admins and users**.
   
     1. To configure the admin and user consent prompts with appropriate values for **access_as_user** scope, provide the following information in the fields:</br>
     
-         * Enter **Teams can access the user’s profile** as **Admin consent display name**.
+         * Enter *Teams can access the user’s profile* as **Admin consent display name**.
 
-         * Enter **Allows Teams to call the app’s web APIs as the current user** as **Admin consent description**.
+         * Enter *Allows Teams to call the app’s web APIs as the current user* as **Admin consent description**.
 
-         * Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**.
+         * Enter *Teams can access the user profile and make requests on the user’s behalf* as **User consent display name**.
 
-         * Enter **Enable Teams to call this app’s APIs with the same rights as the user** as **User consent description**.
+         * Enter *Enable Teams to call this app’s APIs with the same rights as the user* as **User consent description**.
   
     1. Ensure that **State** is set to **Enabled**.
   
     1. Select **Add scope** to save.
+
+       The following image shows the fields and the values:
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-a-scope_1.png" alt-text="adding scope":::
 
@@ -428,33 +430,33 @@ items:
 - title: Add file upload bot in Teams
   durationInMinutes: 2
   content: | 
-     1. In your cloned repository, Go to **Microsoft-Teams-Samples** > **samples** > **bot-file-upload** > **csharp** > **TeamsAppManifest**.
+    1. In your cloned repository, Go to **Microsoft-Teams-Samples** > **samples** > **bot-file-upload** > **csharp** > **TeamsAppManifest**.
 
-     1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder:
+    1. Create a .zip file with the following files that are present in the **TeamsAppManifest** folder:
        * manifest.json
-       * outline.png
-       * color.png 
+       * icon-outline.png
+       * icon-color.png 
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-zip-file-location.png" alt-text="manifest folder":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-zip-file-location.png" alt-text="manifest folder":::
 
-     1. In the Teams client, select the **Apps** icon.
-     1. Select **Manage your apps**.
-     1. Select **Upload an app**
-     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. In the Teams client, select the **Apps** icon.
+    1. Select **Manage your apps**.
+    1. Select **Upload an app**
+    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-        :::image type="content" source="assets/images/teams-file-upload-bot/custom-upload.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
+       :::image type="content" source="assets/images/teams-file-upload-bot/custom-upload.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
 
-     1. Select the .zip file you've created in the **TeamsAppManifest** folder and select **Open**.
+    1. Select the .zip file you've created in the **TeamsAppManifest** folder and select **Open**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/upload-manifest-zip.png" alt-text="manifest open"::: 
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/upload-manifest-zip.png" alt-text="manifest open"::: 
 
-     1. Select **Add**.
+    1. Select **Add**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-bot-file.png" alt-text="add"::: 
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-bot-file.png" alt-text="add"::: 
 
-     1. In the compose message area, type **hi** and bot sends an Adaptive card.
+    1. In the compose message area, type **hi** and bot sends an Adaptive card.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/respond-bot.png" alt-text="card send by bot":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/respond-bot.png" alt-text="card send by bot":::
 
 - title: Interacting with the bot in Teams
   durationInMinutes: 2
