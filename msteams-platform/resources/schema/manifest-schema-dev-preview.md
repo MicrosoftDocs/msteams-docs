@@ -850,7 +850,7 @@ Configures the sets of runtimes and actions that can be used by each extension p
 |`actions[0].id`| string | 64 characters | ✔️ | Identifier for this action which is passed to the code file. |
 |`actions.type`| string | | ✔️ | `executeFunction` runs a script function without waiting for it to finish. `openPage` opens a page in a given view. |
 |`actions.displayName`| string | 64 characters | | Display name for the action. |
-|`actions.pinnable`| boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. Defaults to `false`.
+|`actions.pinnable`| boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. Defaults to `false`.|
 |`actions.view`| string | 64 characters | | View where the page should be opened.|
 
 ### extensions.ribbons
@@ -870,7 +870,7 @@ Provides the ability to add items associated with the extension to the Ribbon. O
 |`tabs.position.align`| string enum | | |  Defines alignment of this custom tab relative to the specified built-in tab. Supported values: `after`, `before`|
 |`tabs.groups`| string |64 characters | | Defines tab groups.|
 |`tabs.groups.id`| string |64 characters | | Unique identifier for this tab group within the app.|
-|`tabs.groups.label`| string | 64 characters | | | Displayed text for the group.|
+|`tabs.groups.label`| string | 64 characters | | Displayed text for the group.|
 |`tabs.groups.icons`| array | | | Displayed icons for the group. |
 |`tabs.groups.icons.size`| number | |✔️| Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
 |`tabs.groups.icons.url`| URL| | | URL to the icon.|
@@ -881,7 +881,7 @@ Provides the ability to add items associated with the extension to the Ribbon. O
 |`tabs.groups.controls.items.id`| string | | ✔️ | Unique identifier for this control within the app. |
 |`tabs.groups.controls.items.type`| string enum | | ✔️ | Supported values: `menuItem`. |
 |`tabs.groups.controls.items.label`| string | 64 characters| ✔️ | Displayed text for the control. |
-|`tabs.groups.controls.items.icons`| | | ||
+|`tabs.groups.controls.items.icons`| array | | | |
 |`tabs.groups.controls.items.icons.size`| number | |✔️| Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
 |`tabs.groups.controls.items.icons.url`| URL| | | URL to the icon.|
 |`tabs.groups.controls.items.icons.file`| string | 2048 characters| | Relative path to the file that contains the icon. This property is currently not supported as a relative path.|
@@ -894,7 +894,7 @@ Provides the ability to add items associated with the extension to the Ribbon. O
 |`tabs.groups.controls.type`| string | | ✔️ | Supported values: `button`, `menu`.|
 |`tabs.groups.controls.builtinControlId`| string | 64 characters | ✔️ | Id of the existing Office control.|
 |`tabs.groups.controls.label`| string | 64 characters | ✔️ | Displayed text for the control.|
-|`tabs.groups.controls.icons`| array | | |  |
+|`tabs.groups.controls.icons`| array | | | |
 |`tabs.groups.controls.icons.size`| number | | ✔️ | Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
 |`tabs.groups.controls.icons.url`| URL| | | URL to the icon.|
 |`tabs.groups.controls.icons.file`| string | 2048 characters| | Relative path to the file that contains the icon. This property is currently not supported as a relative path.|
@@ -931,7 +931,7 @@ Provides the ability to prefer or hide particular in-market Add-ins for the purp
 |`hide.storeOfficeAddin`| object | | | Specifies an Office Add-in available in the Microsoft store.|
 |`hide.storeOfficeAddin.officeAddinId`| string | 64 characters | ✔️ |Solution ID of an in-market add-in to hide.|
 |`hide.storeOfficeAddin.assetId`| string | 64 characters | ✔️ | Asset ID of the in-market add-in to hide.|
-|`hide.customOfficeAddin`| | | |
+|`hide.customOfficeAddin`| | | | |
 |`hide.customOfficeAddin.officeAddinId`|string | 64 characters | ✔️ | Solution ID of the in-market add-in to hide.|
 
 ## See also
