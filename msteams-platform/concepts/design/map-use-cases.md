@@ -138,7 +138,7 @@ For example:
       :::image type="icon" source="~/assets/images/overview/microsoft-teams-app.png" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="~/assets/images/overview/apps-for-meetings.png border="false":::
+      :::image type="icon" source="~/assets/images/overview/apps-for-meetings.png" border="false":::
    :::column-end:::
      :::image type="content" source="~/assets/images/overview/apps-for-meetings-extension.png" alt-text="Microsoft Teams apps for meeting details." border="false":::
 :::row-end:::
