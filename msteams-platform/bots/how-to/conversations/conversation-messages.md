@@ -22,13 +22,13 @@ For more information, see [user attribution for bot messages](/microsoftteams/pl
 
 The following table lists the events that your bot can receive and take action on:
 
-| Type | Payload object | Description | Scope |
-| ---- | ---------| ------ | ------- |
-| Receive a message event | `Activity` | [Receive a message](#receive-a-message) | All |
-| Send a message event | `SendActivityAsync` | [Send a message](#send-a-message) | All |
-| Get edit message event | `OnTeamsMessageEditAsync` | [Get edit message event](#get-edit-message-event)| All |
-| Get undelete message event | `OnTeamsMessageUndeleteAsync` | [Get undelete message event](#get-undelete-message-event) | All |
-| Get soft delete message event | `OnTeamsMessageSoftDeleteAsync` | [Get soft delete message event](#get-soft-delete-message-event) | All |
+| Event type | Payload object | Scope |
+| ---- | ---------| ------ |
+| [Receive a message](#receive-a-message) | `Activity` | All |
+| [Send a message](#send-a-message) | `SendActivityAsync` | All |
+| [Get edit message event](#get-edit-message-event) | `OnTeamsMessageEditAsync` | All |
+| [Get undelete message event](#get-undelete-message-event) | `OnTeamsMessageUndeleteAsync` | All |
+| [Get soft delete message event](#get-soft-delete-message-event) | `OnTeamsMessageSoftDeleteAsync` | All |
 
 ## Receive a message
 
