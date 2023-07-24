@@ -25,7 +25,6 @@ The following table lists the events that your bot can receive and take action o
 | Event type | Payload object | Scope |
 | ---- | ---------| ------ |
 | [Receive a message](#receive-a-message) | `Activity` | All |
-| [Send a message](#send-a-message) | `SendActivityAsync` | All |
 | [Get edit message event](#get-edit-message-event) | `OnTeamsMessageEditAsync` | All |
 | [Get undelete message event](#get-undelete-message-event) | `OnTeamsMessageUndeleteAsync` | All |
 | [Get soft delete message event](#get-soft-delete-message-event) | `OnTeamsMessageSoftDeleteAsync` | All |
