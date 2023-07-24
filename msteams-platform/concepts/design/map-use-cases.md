@@ -133,6 +133,16 @@ For example:
      :::image type="content" source="~/assets/images/overview/adaptive-cards-extension.png" alt-text="Microsoft Teams app adaptive card details." border="false":::
 :::row-end:::
 
+:::row:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/overview/microsoft-teams-app.png" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="~/assets/images/overview/apps-for-meetings.png border="false":::
+   :::column-end:::
+     :::image type="content" source="~/assets/images/overview/apps-for-meetings-extension.png" alt-text="Microsoft Teams apps for meeting details." border="false":::
+:::row-end:::
+
 ## See also
 
 * [Plan your app with Teams features](../app-fundamentals-overview.md)
