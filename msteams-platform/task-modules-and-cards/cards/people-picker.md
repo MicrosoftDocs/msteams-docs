@@ -398,8 +398,31 @@ Your bot can query for the list of members and their basic user profiles, includ
 
 The following is the behavior of the people icon in an Adaptive Card on Teams desktop and mobile clients:
 
-* Desktop: When a user hovers on a people icon, the people card of that user is displayed.
-* Mobile: When a users selects a people icon, the people card of that user is displayed.
+# [Desktop](#tab/desktop)
+
+Desktop: When a user hovers on a people icon, the people card of that user is displayed.
+
+:::image type="content" source="../../assets/images/adaptive-cards/people-icon-persona-persona-set.png" alt-text="Screenshot shows a persona and persona set icons in an Adaptive Card in Teams desktop client.":::
+
+# [Mobile](#tab/mobile)
+
+Mobile: When a users selects a people icon, the people card of that user is displayed.
+
+:::row:::
+    :::column:::
+
+    :::image type="content" source="../../assets/images/adaptive-cards/people-icon-mobile-1.png" alt-text="Screenshot shows an example of people icon in a persona and persona set in Teams mobile client.":::
+        
+    :::column-end:::
+    :::column:::
+
+    :::image type="content" source="../../assets/images/adaptive-cards/people-icon-mobile-2.png" alt-text="Screenshot shows an example of people icon in a persona and persona set in Teams mobile.":::
+        
+    :::column-end:::
+:::row-end:::
+
+---
+
 
 ## Code sample
 
