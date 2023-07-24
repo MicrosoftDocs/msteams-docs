@@ -323,9 +323,9 @@ There are two types of people icons that are supported in an Adaptive Card:
           "name": "graph.microsoft.com/user",
           "view": "compact",
           "properties": {
-            "id": "97b1ec61-45bf-453c-9059-6e8984e0cef4",
-            "displayName": "Robin Liao",
-            "userPrincipalName": "yilia@microsoft.com"
+            "id": "65f50003-e15d-434a-9e14-0fcfeb3d7817",
+            "displayName": "Daniela Mandera",
+            "userPrincipalName": "damandera@microsoft.com"
           }
         }
       ]
@@ -354,14 +354,14 @@ There are two types of people icons that are supported in an Adaptive Card:
           "properties": {
             "users": [
               {
-                "id": "97b1ec61-45bf-453c-9059-6e8984e0cef4",
-                "displayName": "Robin Liao",
-                "userPrincipalName": "yilia@microsoft.com"
+                "id": "65f50003-e15d-434a-9e14-0fcfeb3d7817",
+                "displayName": "Daniela Mandera",
+                "userPrincipalName": "damandera@microsoft.com"
               },
               {
-                "id": "97b1ec61-45bf-453c-9059-6e8984e0cef4",
-                "displayName": "Robin Liao",
-                "userPrincipalName": "yilia@microsoft.com"
+                "id": "65f50003-e15d-434a-9e14-0fcfeb3d7817",
+                "displayName": "Daniela Mandera",
+                "userPrincipalName": "damandera@microsoft.com"
               }
             ]
           }
