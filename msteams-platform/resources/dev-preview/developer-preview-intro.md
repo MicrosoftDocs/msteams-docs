@@ -45,6 +45,9 @@ To enable the public developer preview on a mobile client:
 1. Select **About**.
 1. Turn on the **Developer preview** toggle.
 
+> [!NOTE]
+> If you [enable custom Teams apps and turn on custom app uploading](../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) doesn't enable developer preview features in Microsoft Teams [set the update policy](/MicrosoftTeams/public-preview-doc-updates).
+
 ## Disable developer preview
 
 Use the same menu item under About → Developer preview, and select it to turn it off.
