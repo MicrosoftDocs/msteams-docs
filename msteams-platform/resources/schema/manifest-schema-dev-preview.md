@@ -815,24 +815,24 @@ The set of extensions for this app. Used to specify Outlook Extensions (Add-ins)
 |`requirements`| object | | | Specifies the set of client or host requirements for the extension. |
 |`runtimes`| array | | | Configures the sets of runtimes and actions that can be used by each extension point.  |
 |`ribbons`| array | | | Defines the ribbons extension point. |
-|`autoRunEvents`| array | | | Defines the *autoRunEvents* extension point. |
+|`autoRunEvents`| array | | | Defines event-based activation extension points. |
 |`prefer`| array | | | Specifies relationship to alternate existing Microsoft 365 solutions. Used for de-duping and backwards compatibility. |
-|`audienceClaimUrl`| string | 2048 | | The URL for your extension. Used to validate Exchange user identity tokens. |
+|`audienceClaimUrl`| string | 2048 characters | | The URL for your extension. Used to validate Exchange user identity tokens. |
 
-For more information, see [extension property](/office/dev/add-ins/develop/unified-manifest-overview) in the Office Add-ins manifest documentation.
+For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview) documentation.
 
 ### extensions.requirements
 
-This section specifies the set of client or host requirements for the extension. If a client doesn't support the specified requirements, the extension will not be available in that client. Requirements are supported at the element and sub-element level. In both cases, the service only returns items that match the host.
+Specifies the set of client or host requirements for an extension. If a client doesn't support the specified requirements, the extension will not be available in that client. Requirements are supported at the element and sub-element level. In both cases, the service only returns items that match the host.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`requirements.capabilities`| array | | | Identifies the requirement sets that the extension needs to be installable. Each object in the array is made up of three strings `name` (required), `minVersion`, and `maxVersion`. |
-|`requirements.capabilities.name`| string | | ✔️ | Identifies the name of the requirement sets that the extension needs to run. |
+|`requirements.capabilities.name`| string | | ✔️ | Identifies the name of the [requirement sets](/javascript/api/requirement-sets) that the extension needs to run. |
 |`requirements.capabilities.minVersion`| string | | | Identifies the minimum version for the requirement sets that the extension needs to run. |
 |`requirements.capabilities.maxVersion`| string | | | Identifies the maximum version for the requirement sets that the extension needs to run. |
-|`requirements.scopes`| array of enums | (Min of 1) | ✔️ | Identifies the scopes in which the extension can run. Currently the only supported enum value is `mail`. |
-|`requirements.formFactors`| array of enums | (Min of 1) | | Identifies the form factors that support the extension. Currently only `mobile` and `desktop` are supported. |
+|`requirements.scopes`| array of enums | 1 scope | | Identifies the scopes in which the extension can run. Currently the only supported enum value is `mail`. |
+|`requirements.formFactors`| array of enums | | | Identifies the form factors that support the extension. Supported values: `mobile`, `desktop`. |
 
 ### extensions.runtimes
 
@@ -844,11 +844,11 @@ Configures the sets of runtimes and actions that can be used by each extension p
 |`type`| string enum | | ✔️ | Specifies the type of runtime. Currently supports `general` for browser-based runtime. |
 |`code`| object | | ✔️ | Specifies the location of code for this runtime. Extensions can use a page, script, or both. |
 |`code.page`| url | | ✔️ | URL of the web page to be loaded in browser-based runtimes. |
-|`code.script`| url | | ✔️ | URL of the script file t be loaded in runtimes without UI. |
-|`lifetime`| string enum | | | Either `short` or `long`. TODO |
+|`code.script`| url | | ✔️ | URL of the script file to be loaded in runtimes without UI. |
+|`lifetime`| string enum | | | Runtimes with a `short` lifetime do not preserve state across executions; runtimes with a `long`` lifetime do. |
 |`actions`| array | | | Specifies the set of actions supported by this runtime.|
-|`actions[0].id`| string | 64 characters | ✔️ | Identifier for this action which is passed to thecode file. |
-|`actions.type`| string | | ✔️ | `executeFunction` runs the specified action; `openPage` opens a page in a given view. |
+|`actions[0].id`| string | 64 characters | ✔️ | Identifier for this action which is passed to the code file. |
+|`actions.type`| string | | ✔️ | `executeFunction` runs a script function without waiting for it to finish. `openPage` opens a page in a given view. |
 |`actions.displayName`| string | 64 characters | | Display name for the action. |
 |`actions.pinnable`| boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. Defaults to `false`.
 |`actions.view`| string | 64 characters | | View where the page should be opened.|
@@ -859,30 +859,33 @@ Provides the ability to add items associated with the extension to the Ribbon. O
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`type`| object | | | TODO |
-|`contexts`| array | | | TODO|
-|`contexts.type` TODO| string enum | 4 values | | Any of the following supported extension points: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`|
-|`tabs`| array | |✔️| TODO|
+|`type`| object | | | |
+|`contexts`| array | 4 | | |
+|`contexts.type` | string enum | 4 values | | Any of the following supported extension points: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`|
+|`tabs`| array | |✔️| |
 |`tabs.id`| string | 64 characters | | Unique identifier for this tab within the app.|
-|`tabs.label`| string | 64 characters | | Display text for the tab.|
-|`tabs.position`| object | | | TODO
-|`tabs.position.builtinTabId`| string | 64 characters | The ID of the built-in tab.|
-|`tabs.position.align`| string enum | | | TODO Defines alignment of this custom tab relative to the specified built-in tab. Supported values: `after`, `before`|
-|`tabs.groups`| string |64 characters | | | Defines tab groups.|
+|`tabs.label`| string | 64 characters | | Displayed text for the tab.|
+|`tabs.position`| object | | | |
+|`tabs.position.builtinTabId`| string | 64 characters | | The ID of the built-in tab.|
+|`tabs.position.align`| string enum | | |  Defines alignment of this custom tab relative to the specified built-in tab. Supported values: `after`, `before`|
+|`tabs.groups`| string |64 characters | | Defines tab groups.|
+|`tabs.groups.id`| string |64 characters | | Unique identifier for this tab group within the app.|
 |`tabs.groups.label`| string | 64 characters | | | Displayed text for the group.|
 |`tabs.groups.icons`| array | | | Displayed icons for the group. |
 |`tabs.groups.icons.size`| number | |✔️| Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
 |`tabs.groups.icons.url`| URL| | | URL to the icon.|
-|`tabs.groups.icons.file`| relative path| | | Relative path to the file that contains the icon. This property is currently not supported as a relative path.|
-|`tabs.groups.controls`| array | | | TODO |
-|`tabs.groups.controls.id`| string | 64 characters| | Unique identifier for this control within the app. |
-|`tabs.groups.controls.items`| object | | | TODO |
-|`tabs.groups.controls.items.type`| string enum | | | Supported values: `menuItem`. |
-|`tabs.groups.controls.items.icons`| | | |TODO|
+|`tabs.groups.icons.file`| string | 2048 characters| | Relative path to the file that contains the icon. This property is currently not supported as a relative path.|
+|`tabs.groups.controls`| array | | |  |
+|`tabs.groups.controls.id`| string | 64 characters| ✔️ | Unique identifier for this control within the app. |
+|`tabs.groups.controls.items`| object | | | |
+|`tabs.groups.controls.items.id`| string | | ✔️ | Unique identifier for this control within the app. |
+|`tabs.groups.controls.items.type`| string enum | | ✔️ | Supported values: `menuItem`. |
+|`tabs.groups.controls.items.label`| string | 64 characters| ✔️ | Displayed text for the control. |
+|`tabs.groups.controls.items.icons`| | | ||
 |`tabs.groups.controls.items.icons.size`| number | |✔️| Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
 |`tabs.groups.controls.items.icons.url`| URL| | | URL to the icon.|
-|`tabs.groups.controls.items.icons.file`| relative path| | | Relative path to the file that contains the icon. This property is currently not supported as a relative path.|
-|`tabs.groups.controls.items.supertip`| | |✔️| TODO|
+|`tabs.groups.controls.items.icons.file`| string | 2048 characters| | Relative path to the file that contains the icon. This property is currently not supported as a relative path.|
+|`tabs.groups.controls.items.supertip`| | |✔️| |
 |`tabs.groups.controls.items.supertip.title`| string | 64 characters | ✔️ | Title text of the super tip.|
 |`tabs.groups.controls.items.supertip.description`| string | 128 characters | ✔️ | Description of the super tip.|
 |`tabs.groups.controls.items.actionID`| string | 64 characters | ✔️ | Unique identifier for this control within the app.|
@@ -891,11 +894,11 @@ Provides the ability to add items associated with the extension to the Ribbon. O
 |`tabs.groups.controls.type`| string | | ✔️ | Supported values: `button`, `menu`.|
 |`tabs.groups.controls.builtinControlId`| string | 64 characters | ✔️ | Id of the existing Office control.|
 |`tabs.groups.controls.label`| string | 64 characters | ✔️ | Displayed text for the control.|
-|`tabs.groups.controls.icons`| array | | | TODO |
+|`tabs.groups.controls.icons`| array | | |  |
 |`tabs.groups.controls.icons.size`| number | | ✔️ | Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
 |`tabs.groups.controls.icons.url`| URL| | | URL to the icon.|
-|`tabs.groups.controls.icons.file`| relative path| | | Relative path to the file that contains the icon. This property is currently not supported as a relative path.|
-|`tabs.groups.controls.supertip`| object | | ✔️ | TODO|
+|`tabs.groups.controls.icons.file`| string | 2048 characters| | Relative path to the file that contains the icon. This property is currently not supported as a relative path.|
+|`tabs.groups.controls.supertip`| object | | ✔️ | |
 |`tabs.groups.controls.supertip.title`| string | 64 characters | ✔️ |Title text of the super tip.|
 |`tabs.groups.controls.supertip.description`| string | 128 characters | ✔️ | Description of the super tip.|
 |`tabs.groups.controls.actionId`| string | 64 characters | ✔️ | Unique identifier for an action defined in runtimes.|
@@ -905,14 +908,14 @@ Provides the ability to add items associated with the extension to the Ribbon. O
 
 ### extensions.autoRunEvents
 
-Runtimes that are triggered by an event.
+Defines event-based activation extension points.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`events`| array | | ✔️ | TODO|
-|`events.type`| string | 64 characters | | TODO |
-|`events.actionId`| string | 64 characters | The ID of an action defined in runtimes. |
-|`events.options`| object | | | TODO |
+|`events`| array | | ✔️ | |
+|`events.type`| string | 64 characters | | |
+|`events.actionId`| string | 64 characters | | The ID of an action defined in runtimes. |
+|`events.options`| object | | | |
 |`events.options.sendMode`| string | | ✔️ | Actions to take during a mail send action. Supported values: `promptUser`, `softBlock`, `block`.|
 
 ### extensions.prefer
@@ -921,15 +924,15 @@ Provides the ability to prefer or hide particular in-market Add-ins for the purp
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`prefer`| object | | | |
+|`prefer`| object | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both.|
 |`prefer.comAddin`| object | | | |
 |`prefer.comAddin.progId`| string | 64 characters | ✔️ | Identifies the application type in which the extension can run.|
 |`hide`| object | | | |
-|`hide.storeOfficeAddin`| object | | | Specifies an Office Add-in available in Microsoft storefronts|
+|`hide.storeOfficeAddin`| object | | | Specifies an Office Add-in available in the Microsoft store.|
 |`hide.storeOfficeAddin.officeAddinId`| string | 64 characters | ✔️ |Solution ID of an in-market add-in to hide.|
-|`hide.storeOfficeAddin.assetId`| string | 64 characters | | Asset ID of the in-market add-in to hide.|
+|`hide.storeOfficeAddin.assetId`| string | 64 characters | ✔️ | Asset ID of the in-market add-in to hide.|
 |`hide.customOfficeAddin`| | | |
-|`hide.customOfficeAddin.officeAddinId`|string | 64 characters | | Solution ID of the in-market add-in to hide.|
+|`hide.customOfficeAddin.officeAddinId`|string | 64 characters | ✔️ | Solution ID of the in-market add-in to hide.|
 
 ## See also
 
