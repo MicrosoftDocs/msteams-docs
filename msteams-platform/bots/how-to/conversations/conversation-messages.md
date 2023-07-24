@@ -22,7 +22,7 @@ For more information, see [user attribution for bot messages](/microsoftteams/pl
 
 The following table lists the events that your bot can receive and take action on:
 
-| Event type | Payload object | Scope |
+| Type | Payload object | Scope |
 | ---- | ---------| ------ |
 | [Receive a message activity](#receive-a-message) | Message activity | All |
 | [Receive edit message activity](#get-edit-message-event) | Message edit activity | All |
