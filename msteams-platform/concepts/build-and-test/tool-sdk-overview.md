@@ -29,10 +29,22 @@ You can build your Microsoft Teams app using following different tools and SDKs:
 
 :::row:::
     :::column span="1":::
+        **Teams AI library**
+    :::column-end:::
+    :::column span="2":::
+        Teams AI library is a Teams-centric interface to GPT-based common language models and user intent engines. The AI library provides a simple capabilities-driven approach and helps you create intelligent apps with prebuilt, reusable code snippets so that you can focus on building the business logic rather than learning the semantics of Teams conversational applications.
+
+        > [!div class="nextstepaction"]
+        > [Teams AI library](../../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
         **Teams JavaScript client library**
     :::column-end:::
     :::column span="2":::
-        The Microsoft Teams JavaScript client library (TeamsJS) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook, where your app content is hosted in an iFrame.
+        The Microsoft Teams JavaScript client library (TeamsJS) enables you to create hosted experiences within Teams, Microsoft 365 app, and Outlook. These experiences involve hosting your app content in an iFrame.
 
         > [!div class="nextstepaction"]
         > [Teams JavaScript client library](~/tabs/how-to/using-teams-client-library.md)
@@ -82,7 +94,7 @@ You can build your Microsoft Teams app using following different tools and SDKs:
         **Microsoft Graph SDKs**
     :::column-end:::
     :::column span="2":::
-        The Microsoft Graph SDKs are designed to simplify building high-quality, efficient, and resilient applications that access Microsoft Graph.
+        The design of the Microsoft Graph SDKs aims to simplify the process of building high-quality, efficient, and resilient applications that access Microsoft Graph.
 
         > [!div class="nextstepaction"]
         > [Microsoft Graph SDKs](/graph/sdks/sdks-overview)
@@ -90,18 +102,6 @@ You can build your Microsoft Teams app using following different tools and SDKs:
 :::row-end:::
 
 ## Additional libraries and UI utilities to build Teams apps
-
-:::row:::
-    :::column span="1":::
-        **Teams AI library**
-    :::column-end:::
-    :::column span="2":::
-        Teams AI library is a Teams-centric interface to GPT-based common language models and user intent engines. The AI library provides a simple capabilities-driven approach and helps you create intelligent apps quickly and easily with prebuilt, reusable code snippets so that you can focus on building the business logic rather than learning the semantics of Teams conversational applications.
-
-        > [!div class="nextstepaction"]
-        > [Teams AI library](../../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
-    :::column-end:::
-:::row-end:::
 
 :::row:::
     :::column span="1":::
@@ -132,7 +132,7 @@ You can build your Microsoft Teams app using following different tools and SDKs:
         **Fluid Framework**
     :::column-end:::
     :::column span="2":::
-        Fluid Framework is a collection of client libraries for distributing and synchronizing shared state. These libraries allow multiple clients to simultaneously create and operate on shared data structures using coding patterns similar to those used to work with local data.
+        Fluid Framework is a collection of client libraries for distributing and synchronizing shared state. These libraries allow multiple clients to simultaneously create and operate on shared data structures using coding patterns like those used to work with local data.
 
         > [!div class="nextstepaction"]
         > [Fluid Framework](https://fluidframework.com/docs/)
@@ -158,7 +158,7 @@ You can build your Microsoft Teams app using following different tools and SDKs:
         **Azure OpenAI**
     :::column-end:::
     :::column span="2":::
-        Azure OpenAI Service provides REST API access to OpenAI's powerful language models including the GPT-3, Codex and Embeddings model series. In addition, the new GPT-4 and ChatGPT (gpt-35-turbo) model series are now available in preview. These models can be easily adapted to your specific task including but not limited to content generation, summarization, semantic search, and natural language to code translation. Users can access the service through REST APIs, Python SDK, or our web-based interface in the Azure OpenAI Studio.
+        Azure OpenAI Service provides REST API access to OpenAI's powerful language models including the GPT-3, Codex and Embeddings model series. Besides, the new GPT-4 and ChatGPT (gpt-35-turbo) model series are now available in preview. These models can be adapted to your specific task including but not limited to content generation, summarization, semantic search, and natural language to code translation. Users can access the service through REST APIs, Python SDK, or our web-based interface in the Azure OpenAI Studio.
 
         > [!div class="nextstepaction"]
         > [Azure OpenAI](/azure/cognitive-services/openai/overview)
@@ -194,7 +194,7 @@ You can build your Microsoft Teams app using following different tools and SDKs:
         **Azure Fluid Relay**
     :::column-end:::
     :::column span="2":::
-        The Fluid Framework is an open source, platform independent framework. Azure Fluid Relay is a managed offering for the Fluid Framework that helps developers build real-time collaborative experiences and replicate state across connected JavaScript clients in real-time.
+        The Fluid Framework is an open source, platform independent framework. Azure Fluid Relay is a managed offering for the Fluid Framework that helps developers build real-time collaborative experiences and replicate states across connected JavaScript clients in real-time.
 
         > [!div class="nextstepaction"]
         > [Azure Fluid Relay](/azure/azure-fluid-relay/overview/overview)
