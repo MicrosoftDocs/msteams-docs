@@ -37,8 +37,6 @@ Teams platform features that are available to all app developers.
 
 **2023 July**
 
-* ***July 24, 2023***: [Media elements in Adaptive Card](task-modules-and-cards/cards/media-elements-in-adaptive-cards.md)
-
 * ***July 20, 2023***: [App caching for iOS personal tray](tabs/how-to/app-caching.md)
 
 * ***July 06, 2023***: [Use app icon badging to identify any app activity during a meeting](apps-in-teams-meetings/app-icon-badging-for-your-app.md).
