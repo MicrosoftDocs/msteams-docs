@@ -20,16 +20,16 @@ Your bot receives messages from Teams using the `Text` property and it sends sin
 
 For more information, see [user attribution for bot messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1#user-attribution-for-bots-messages).
 
-The following table lists the events that your bot can receive and take action on:
+The following table lists the activity that your bot can receive and take action on:
 
 | Type | Payload object | Scope |
 | ---- | ---------| ------ |
-| [Receive a message activity](#receive-a-message) | Message activity | All |
-| [Receive edit message activity](#get-edit-message-event) | Message edit activity | All |
-| [Receive undelete message activity](#get-undelete-message-event) | Message undelete activity | All |
-| [Get soft delete message activity](#get-soft-delete-message-event) | Message soft delete activity | All |
+| [Receive a message activity](#receive-a-message-activity) | Message activity | All |
+| [Receive edit message activity](#get-edit-message-activity) | Message edit activity | All |
+| [Receive undelete message activity](#get-undelete-message-activity) | Message undelete activity | All |
+| [Get soft delete message activity](#get-soft-delete-message-activity) | Message soft delete activity | All |
 
-## Receive a message
+## Receive a message activity
 
 To receive a text message, use the `Text` property of an `Activity` object. In the bot's activity handler, use the turn context object's `Activity` to read a single message request.
 
@@ -257,13 +257,13 @@ POST {Service URL of your bot}/v3/conversations
 
 Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
 
-## Get edit message event
+## Get edit message activity
 
 When you edit a message, the bot gets a notification of the edit message activity.
 
-To get an edit message event notification in a bot, you can override `OnTeamsMessageEditAsync` handler.
+To get an edit message activity notification in a bot, you can override `OnTeamsMessageEditAsync` handler.
 
-Following is an example of an edit message event notification using `OnTeamsMessageEditAsync` when a sent message is edited:
+Following is an example of an edit message activity notification using `OnTeamsMessageEditAsync` when a sent message is edited:
 
 # [C#](#tab/dotnet3)
 
@@ -322,7 +322,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [JavaScript](#tab/javascript3)
 
-You can either use **​event function registration** or **​method override** method to get event notifications to handle the message updates using the Bot SDK:
+You can either use **​event function registration** or **​method override** method to get activity notifications to handle the message updates using the Bot SDK:
 
 **​Event function registration**:
 
@@ -362,13 +362,13 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ---
 
-## Get undelete message event
+## Get undelete message activity
 
 When you undelete a message, the bot gets a notification of the undelete message activity.
 
-To get an undelete message event notification in a bot, you can override `OnTeamsMessageUndeleteAsync` handler.
+To get an undelete message activity notification in a bot, you can override `OnTeamsMessageUndeleteAsync` handler.
 
-The following is an example of an undelete message event notification using `OnTeamsMessageUndeleteAsync` when a deleted message is restored:
+The following is an example of an undelete message activity notification using `OnTeamsMessageUndeleteAsync` when a deleted message is restored:
 
 # [C#](#tab/dotnet4)
 
@@ -427,7 +427,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [JavaScript](#tab/javascript4)
 
-You can either use **​event function registration** or **​method override** method to get event notifications to handle the message updates using the Bot SDK:
+You can either use **​event function registration** or **​method override** method to get activity notifications to handle the message updates using the Bot SDK:
 
 **​Event function registration**:
 
@@ -469,13 +469,13 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ---
 
-## Get soft delete message event
+## Get soft delete message activity
 
 When you soft delete a message, the bot gets a notification of the soft delete message activity.
 
-To get a soft delete message event notification in a bot, you can override `OnTeamsMessageSoftDeleteAsync` handler.
+To get a soft delete message activity notification in a bot, you can override `OnTeamsMessageSoftDeleteAsync` handler.
 
-Following is an example of a soft delete message event notification using `OnTeamsMessageSoftDeleteAsync` when a message is soft deleted:
+Following is an example of a soft delete message activity notification using `OnTeamsMessageSoftDeleteAsync` when a message is soft deleted:
 
 # [C#](#tab/dotnet5)
 
@@ -534,7 +534,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [JavaScript](#tab/javascript5)
 
-You can either use **​event function registration** or **​method override** method to get event notifications to handle the message updates using the Bot SDK:
+You can either use **​event function registration** or **​method override** method to get activity notifications to handle the message updates using the Bot SDK:
 
 **​Event function registration**:
 
