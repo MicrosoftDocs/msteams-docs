@@ -20,6 +20,16 @@ Your bot receives messages from Teams using the `Text` property and it sends sin
 
 For more information, see [user attribution for bot messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1#user-attribution-for-bots-messages).
 
+The following table lists the events that your bot can receive and take action on:
+
+| Type | Payload object | Description | Scope |
+| ---- | ---------| ------ | ------- |
+| Receive a message event | `Activity` | [Receive a message](#receive-a-message) | All |
+| Send a message event | `SendActivityAsync` | [Send a message](#send-a-message) | All |
+| Get edit message event | `OnTeamsMessageEditAsync` | [Get edit message event](#get-edit-message-event)| All |
+| Get undelete message event | `OnTeamsMessageUndeleteAsync` | [Get undelete message event](#get-undelete-message-event) | All |
+| Get soft delete message event | `OnTeamsMessageSoftDeleteAsync` | [Get soft delete message event](#get-soft-delete-message-event) | All |
+
 ## Receive a message
 
 To receive a text message, use the `Text` property of an `Activity` object. In the bot's activity handler, use the turn context object's `Activity` to read a single message request.
