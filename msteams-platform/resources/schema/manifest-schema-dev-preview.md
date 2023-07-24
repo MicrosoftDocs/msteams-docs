@@ -845,6 +845,13 @@ Configures the sets of runtimes and actions that can be used by each extension p
 |`code`| object | | ✔️ | Specifies the location of code for this runtime. Extensions can use a page, script, or both. |
 |`code.page`| url | | ✔️ | URL of the web page to be loaded in browser-based runtimes. |
 |`code.script`| url | | ✔️ | URL of the script file to be loaded in runtimes without UI. |
+|`lifetime`| string enum | | | Runtimes with a `short` lifetime do not preserve state across executions; runtimes with a `long` lifetime do. |
+|`actions`| array | | | Specifies the set of actions supported by this runtime.|
+|`actions[0].id`| string | 64 characters | ✔️ | Identifier for this action which is passed to the code file. |
+|`actions.type`| string | | ✔️ | `executeFunction` runs a script function without waiting for it to finish. `openPage` opens a page in a given view. |
+|`actions.displayName`| string | 64 characters | | Display name for the action. |
+|`actions.pinnable`| boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. Defaults to `false`.|
+|`actions.view`| string | 64 characters | | View where the page should be opened.|
 
 ### extensions.ribbons
 
