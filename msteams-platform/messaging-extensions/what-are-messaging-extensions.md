@@ -5,6 +5,7 @@ description: Learn how message extensions are used, its types, and scenarios whe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
+ms.date: 02/24/2023
 ---
 # Message extensions
 

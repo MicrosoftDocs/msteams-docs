@@ -188,6 +188,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
     {
         Mentioned = turnContext.Activity.From,
         Text = $"<at>{XmlConvert.EncodeName(turnContext.Activity.From.Name)}</at>",
+        Type = "mention",
     };
 
     // Returns a simple text message.
@@ -207,6 +208,7 @@ this.onMessage(async (turnContext, next) => {
     const mention = {
         mentioned: turnContext.activity.from,
         text: `<at>${ new TextEncoder().encode(turnContext.activity.from.name) }</at>`,
+        type: "mention",
     } as Mention;
 
     // Returns a simple text message.

@@ -5,6 +5,7 @@ description: In this module, learn what is typeahead search in adaptive cards wi
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
+ms.date: 05/25/2023
 ---
 
 # Typeahead search in Adaptive Cards
@@ -79,6 +80,7 @@ The following properties are the new additions to the [`Input.ChoiceSet`](https:
 |-----------|------|----------|-------------|
 | style | Compact <br/> Expanded <br/> Filtered | No | Adds filtered style to the list of supported validations for static typeahead.|
 | choices.data | Data.Query | No | Enables dynamic typeahead as the user types, by fetching a remote set of choices from a backend. |
+| value | String | No | The initial choice (or set of choices) that must be selected. For multi-select, specify a comma-separated string of values. |
 
 ### Data.Query definition
 
@@ -222,6 +224,7 @@ The example payload which contains static and dynamic typeahead search with sing
                   "value": "static_option_3"
                 }
               ],
+              "value": "Static_option_2",
               "isMultiSelect": true,
               "style": "filtered",
               "choices.data": {

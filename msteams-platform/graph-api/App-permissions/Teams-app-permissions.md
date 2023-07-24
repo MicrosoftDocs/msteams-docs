@@ -5,22 +5,25 @@ description: In this module, learn how Teams apps are managed in different place
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
+ms.date: 10/31/2022
 ---
 
 # Permissions in Teams app
 
 Permission for Teams app is managed in two places, depending on the app feature:
 
-* [Resource-specific consent (RSC)](#resource-specific-consent)
 * [Azure Active Directory (Azure AD)](#azure-active-directory)
+* [Resource-specific consent (RSC)](#resource-specific-consent)
 
-:::image type="content" source="../../assets/images/teams-app-permissions.png" alt-text="The screenshot describes the different Teams app permissions.":::
+:::image type="content" source="../../assets/images/teams-app-permissions-3.png" alt-text="The screenshot describes the different Teams app permissions." border="false":::
 
 ## Resource-specific consent
 
 RSC is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources, either teams or chats, within an organization. For more information, see [enable resource-specific consent in Teams](../rsc/resource-specific-consent.md).
 
-RSC permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure AD portal and are declared in the Teams app manifest (JSON) file.
+RSC permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure AD portal and are declared in the Teams app manifest (JSON) file. You can manage RSC permissions for Teams apps in Developer Portal from the **Permissions** section under **Configure**.
+
+:::image type="content" source="../../assets/images/dev-portal-permissions.png" alt-text="Screenshot shows the RSC permissions managed from Developer Portal. " lightbox="../../assets/images/dev-portal-permissions1.png":::
 
 ## Azure Active Directory
 
