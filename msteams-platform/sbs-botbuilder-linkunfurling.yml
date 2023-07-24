@@ -178,7 +178,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
-       :::image type="content" source="~/assets/images/images/Teams-link-unfurling/ngrok-url.png" alt-text="Screenshot showing the ngrok https url.":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/ngrok-url.png" alt-text="Screenshot showing the ngrok https url.":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.

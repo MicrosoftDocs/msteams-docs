@@ -45,8 +45,7 @@ items:
 
 - title: Set up local environment
   durationInMinutes: 1
-  content: |
-  
+  content: |  
     1. Open [Microsoft-Teams-Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
     1. Select **Code**.
     1. Select **Open with GitHub Desktop** from the dropdown menu.
