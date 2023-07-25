@@ -120,7 +120,7 @@ items:
 
     1. In your cloned repository, go to **samples** > **tab-device-permissions** > **nodejs** > **appPackage**.
 
-    1. Create a .zip with the following files that are present in the **appPackage** folder: 
+    1. Create a .zip file with the following files that are present in the **appPackage** folder: 
        * manifest.json
        * outline.png
        * color.png
