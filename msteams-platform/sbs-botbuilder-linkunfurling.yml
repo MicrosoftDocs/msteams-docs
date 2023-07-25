@@ -126,7 +126,7 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="Screenshot showing the selection of manage option.":::
+       :::image type="content" source="~/assets/images/manage-bot-label_1.png" alt-text="Screenshot showing the selection of manage option.":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
