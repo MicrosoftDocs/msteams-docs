@@ -346,18 +346,28 @@ items:
 
        ```
 
-    1. Go to **Explorer** > **env** > **.env.local.user**.
-    
-    1. Add the following code after `SECRET_BOT_PASSWORD` and update the OpenAI key that you've generated.
+    1. Go to **Explorer** > **env** > **.env.local.user** and add the following code after `SECRET_BOT_PASSWORD` and enter the OpenAI key that you've generated.
 
        ```env/.env.local.user
         SECRET_OPENAI_API_KEY=sk***********************
+       ```
+
+    1. If you're using Azure OpenAI, add this code to your **Explorer** > **env** > **.env.local** file as well.
+
+       ```env/.env.local
+        AZURE_OPENAI_ENDPOINT=https://********.openai.azure.com/
        ```
 
     1. Go to the `config.ts` file and add the following code after `botId` and `botPassword`:
     
        ```config.ts
        openAIKey: process.env.SECRET_OPENAI_API_KEY
+       ```
+
+       If you're using Azure OpenAI, add this as well:
+
+       ```config.ts
+       openAIEndpoint: process.env.AZURE_OPENAI_ENDPOINT
        ```
 
        When you debug the app, the OpenAI key defined here processes the OpenAI key from the `.env.local.user` during local debug.
@@ -368,7 +378,12 @@ items:
        SECRET_OPENAI_API_KEY: ${{SECRET_OPENAI_API_KEY}}
        ```
 
-       When you run the app locally, the OpenAI key defined here is used in the local settings.
+       If you're using Azure OpenAI, add this as well:
+
+       ```teamsapp.local.yml
+        AZURE_OPENAI_ENDPOINT: ${{AZURE_OPENAI_ENDPOINT}}
+        ```
+       When you run the app locally, the values defined here are used in the local settings.
 
     1. Go to the `index.ts` file :
 
@@ -412,6 +427,16 @@ items:
 
             * Moderator: The `OpenAIModerator` reviews both user's input and the model output to detect harmful speech, such as hate speech, self-harm, and violence.
 
+        1. If you are using Azure OpenAI, use AzureOpenAIPlanner instead of `OpenAIPlanner` with this statement:
+        
+            ```typescript
+            const planner = new AzureOpenAIPlanner({
+                apiKey: apiKey,
+                endpoint: config.endpoint,
+                defaultModel: 'text-davinci-003',
+                logRequests: true
+            });
+            ```
 
         1. After `const promptManager`, add the following code in a new line to define storage and application:
 
