@@ -91,7 +91,7 @@ items:
 
     1. Go to the [Azure portal](https://ms.portal.azure.com/).
     
-    2. Select the **App registrations**.
+    2. Select **App registrations**.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/azure-portal.png" alt-text="Screenshot shows the Azure AD Portal page.":::
 
@@ -221,7 +221,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/clientapps.png" alt-text="Client applications"::: 
   
-    1. In the left pane, select **API Permissions**. 
+    1. In the left pane, select **API permissions**. 
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-api-permissions.png" alt-text="Select API permissions"::: 
         
@@ -347,7 +347,7 @@ items:
 
     1. Join the meeting.
    
-    1. After the meeting is started, Select **+ Apps**.
+    1. After the meeting has started, Select **+ Apps**.
     
     1. In the pop-up window, select **Manage apps**.
 
@@ -412,7 +412,7 @@ items:
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/view-doc-in-sidepanel.png" alt-text="View doc in sidepanel":::
 
-     1. Select **Click to Sign!**.
+     1. Select **Click to sign!**.
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/doc-shared-in-meeting.png" alt-text="Document shared in meeting":::
         

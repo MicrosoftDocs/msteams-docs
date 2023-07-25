@@ -86,14 +86,14 @@ items:
        
         :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="New resource group location":::
 
-    1. Select **Type of App** as **MultiTenant**.
-
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
        You can also select **Use existing app registration** and enter **App ID**, **App tenant ID**, and **MSI resource ID**.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
+    
+    1. Select **Type of App** as **Multi Tenant**.  
 
     1. Select **Review + create**.
 
@@ -178,7 +178,7 @@ items:
 
     **To add messaging endpoint**
 
-    1. From ngrok, copy the HTTPS URL.
+    1. From ngrok, copy the HTTPS URL (https to io).
 
        :::image type="content" source="../msteams-platform/assets/images/ngrok-url1_1.png" alt-text="ngrok HTTPS URL":::
 
@@ -283,7 +283,7 @@ items:
 
         :::image type="content" source="~/assets/images/meetings-side-panel/clientapps.png" alt-text="Client applications"::: 
   
-    1. In the left pane, select **API Permissions**. 
+    1. In the left pane, select **API permissions**. 
 
        > [!NOTE]
        > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
@@ -371,7 +371,7 @@ items:
 
           :::image type="content" source="~/assets/images/Teams-task-module/project-file-location.png" alt-text="CS proj file":::
 
-       1. Open **Solution Explorer** from **View**.
+       1. From **View**, open **Solution Explorer**.
 
           :::image type="content" source="~/assets/images/Teams-task-module/solutionexplorer_1.png" alt-text="Screenshot shows the open solution explorer.":::
 

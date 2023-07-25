@@ -182,7 +182,7 @@ items:
 
     **To add messaging endpoint**
 
-       1. From ngrok, copy the HTTPS URL.
+       1. From ngrok, copy the HTTPS URL (https to io).
        
           :::image type="content" source="../msteams-platform/assets/images/ngrok-url_3.png" alt-text="ngrok HTTPS URL":::
           
@@ -221,7 +221,7 @@ items:
 
     1. Use the `api://your ngrok/botid-{AppID}` format for the **Application ID URI**.
     
-    1. Update the **Application ID URI** and select Save.
+    1. Update the **Application ID URI** and select **Save**.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/app-id-uri.png" alt-text="redirect uri":::
 
@@ -287,7 +287,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/client-id-teams-bot.png" alt-text="shows ids":::   
 
-    1. In the left pane, select **API Permissions**. 
+    1. In the left pane, select **API permissions**. 
 
        > [!NOTE]
        > Users need to consent to the API permissions only if the Azure Active Directory app is registered in a different tenant.
@@ -339,19 +339,19 @@ items:
 
       **To set up Bot Service connection**
 
-      1. Go to **Configuration page** > **Add OAuth Connection Settings**.
+      1. Go to **Configuration page**.
 
       1. Select **Add OAuth Connection Settings**.
 
       1. In **New Connection Setting**, enter the following details:
 
-          * **Name** enter `name for your new connection setting. You can use the name in the settings of your bot service code`.
-          * **Service Provider** select `Azure Active Directory V2`.
-          * **Client ID** update you're `Microsoft App ID`.
-          * **Client secret**  update the value of the `client secret ID`.
-          * **Token Exchange URL** use the `Application ID URI`.
-          * **Tenant ID** enter `common`.
-          * **Scopes** enter `User.Read`.
+          * **Name** enter **name for your new connection setting. You can use the name in the settings of your bot service code**.
+          * **Service Provider** select **Azure Active Directory V2**.
+          * **Client ID** update you're **Microsoft App ID**.
+          * **Client secret**  update the value of the **client secret ID**.
+          * **Token Exchange URL** use the **Application ID URI**.
+          * **Tenant ID** enter **common**.
+          * **Scopes** enter **User.Read**.
      
       1. Select **Save**.
 
@@ -381,7 +381,7 @@ items:
     
        Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/bot-id_1.png" alt-text="replace bot id."lightbox="../msteams-platform/assets/images/teams-file-upload-bot/bot-id_1.png"::: 
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/bot-id_1.png" alt-text="replace bot id.
 
 - title: Build and run the service
   durationInMinutes: 2
@@ -400,7 +400,7 @@ items:
 
            :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/project-file-location.png" alt-text="folder":::        
 
-       1. Open **Solution Explorer** from **View**.
+       1. From **View**, open **Solution Explorer**.
 
           :::image type="content" source="../msteams-platform/assets/images/Teams-task-module/solutionexplorer_1.png" alt-text="view":::
           
@@ -469,11 +469,11 @@ items:
          
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-allow.png" alt-text="teams logo":::
     
-    1. Send a file to the bot as an attachment in Teams. It responds with a message `Received and Saved`. You can view the attachment from the **Files** tab.
+    1. Send a file to the bot as an attachment in Teams. It responds with a message **Received and Saved**. You can view the attachment from the **Files** tab.
         
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-file.png" alt-text="send file":::
    
-    1. Send an image as an attachment. It responds with a message `Received and saved`. You can view the image on the chat window and from **Files** tab.
+    1. Send an image as an attachment. It responds with a message **Received and saved**. You can view the image on the chat window and from **Files** tab.
        
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-image.png" alt-text="received":::
       

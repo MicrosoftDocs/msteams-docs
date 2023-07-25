@@ -17,7 +17,7 @@ items:
     Microsoft Bot Framework extends the cards specification by adding a set of pre-defined cards that bots can use as a part of bot messaging. Link unfurling using bot in Teams helps you to register your app. And helps to receive an invoke activity, when the URL with domain is pasted into the compose message area. The invoke activity contains the full URL and you can respond with a card. Users can unfurl the link using bot with additional information to get an enhanced experience.
 
      > [!NOTE]
-     > Currently, link unfurling isn't supported on mobile clients.
+     > Link unfurling isn't supported on mobile clients.
 
      **Key features of link unfurling** 
 
@@ -109,7 +109,7 @@ items:
 
        Your Azure bot is created.
 
-        :::image type="content" source="~/assets/images/Teams-link-unfurling/bot-page_1.png" alt-text="Azure bot resource created":::
+        :::image type="content" source="~/assets/images/Teams-link-unfurling/bot-page_1.png" alt-text="Azure bot resource created.":::
         
       **To create client secret**
 
@@ -281,7 +281,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/clientapps.png" alt-text="Screenshot showing the client app."::: 
          
-    1. In the left pane, select **API Permissions**. 
+    1. In the left pane, select **API permissions**. 
 
        > [!NOTE]
        > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
@@ -290,9 +290,9 @@ items:
 
     1. Select **Microsoft Graph**.
 
-    1. Select **Delegated permissions**.
+        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/addpermission_1.png" alt-text="Screenshot showing adding of permission.":::
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/addpermission_1.png" alt-text="Screenshot showing adding of permission.":::
+    1. Select **Delegated permissions**.
       
     1. Select the following permissions:</br>
          * **email**
@@ -384,7 +384,7 @@ items:
 
           :::image type="content" source="~/assets/images/Teams-link-unfurling/project-file-location.png" alt-text="Screenshot showing the select of folder.":::
       
-       1. Open **Solution Explorer** from **View**.
+       1. From **View**, open **Solution Explorer**.
 
           :::image type="content" source="~/assets/images/Teams-link-unfurling/solutionexplorer_1.png" alt-text="Screenshot showing the Solution Explorer.":::
           

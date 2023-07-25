@@ -159,31 +159,7 @@ items:
 
     **To create a ngrok tunnel**
 
-    Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
-
-    ```bash
-    ngrok http --host-header=rewrite 3978
-    ```
-
-    **To add messaging endpoint**
-
-    1. Go to **Home** page and select **Configuration** under **Settings** from the left pane.
-    1. Go to ngrok.
-    1. Copy the HTTPS URL (https to io) as shown in the following image:
-
-       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="Screenshot of ngrok showing the HTTPS URL.":::
-
-    1. In **Messaging endpoint**, add the HTTPS URL generated from ngrok and at the end of the URL add **/api/messages**.
-
-        :::image type="content" source="~/assets/images/adaptive-cards/ngrok-messaging-endpoint.png" alt-text="Screenshot of Azure bot Configuration page. The Messaging endpoint with the ngork URL highlighted in red.":::
-
-    1. Select **Apply**.
-
-       :::image type="content" source="~/assets/images//Tab-ME-SSO/apply.png" alt-text="Screenshot showing the selection of Teams.":::
-
-    **To create tunnel for local web server**
-
-    Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+      Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
      ```bash
      ngrok http --host-header=localhost 3978
@@ -197,7 +173,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images//adaptive-cards/ngrok-url_1.png" alt-text="ngrok HTTPS URL":::
    
-    1. In **Settings**, select **Configuration**.
+    1. Go to the Azure bot you've created in Azure portal. In the left pane, under **Settings**, select **Configuration**.
 
     1. In **Messaging endpoint**, add the HTTPS URL from ngrok and at the end of the URL add **/api/messages**.
 
@@ -228,7 +204,7 @@ items:
 
     1. Select your bot.
 
-    1. Under **Manage**,**Authentication** to set a redirect URI.
+    1. Under **Manage**, select **Authentication** to set a redirect URI.
 
     1. Select **Add a platform** > **Web**.
 
@@ -303,7 +279,7 @@ items:
 
         :::image type="content" source="~/assets/images/meetings-side-panel/clientapps.png" alt-text="Client applications"::: 
 
-    1. In the left pane, select **API Permissions**. 
+    1. In the left pane, select **API permissions**. 
 
        > [!NOTE]
        > Users need to consent to the API permissions only if the Azure Active Directory app is registered in a different tenant.
@@ -335,19 +311,19 @@ items:
 
       **To set up Bot Service connection**
 
-      1. Go to **Configuration page** > **Add OAuth Connection Settings**.
+      1. Go to **Configuration page**.
 
       1. Select **Add OAuth Connection Settings**.
 
       1. In **New Connection Setting**, enter the following details:
 
-          * **Name** enter `name for your new connection setting. You can use the name in the settings of your bot service code`.
-          * **Service Provider** select `Azure Active Directory V2`.
-          * **Client ID** update you're `Microsoft App ID`.
-          * **Client secret**  update the value of the `client secret ID`.
-          * **Token Exchange URL** use the `Application ID URI`.
-          * **Tenant ID** enter `common`.
-          * **Scopes** enter `User.Read`.
+          * **Name** enter **name for your new connection setting. You can use the name in the settings of your bot service code**.
+          * **Service Provider** select **Azure Active Directory V2**.
+          * **Client ID** update your **Microsoft App ID**.
+          * **Client secret**  update the value of the `client secret ID**.
+          * **Token Exchange URL** use the **Application ID URI**.
+          * **Tenant ID** enter **common**.
+          * **Scopes** enter **User.Read**.
      
       1. Select **Save**.
 
@@ -440,7 +416,7 @@ items:
     
     Perform the following steps to use the tab:
 
-    1. In the left pane of the Teams, select ●●●.
+    1. In the left pane of the Teams, select More added apps (●●●).
     1. Select your app from the list. The tab displays the Adaptive Card with action controls.
     1. Select **Sign In** and choose an account to access the tab.
 
