@@ -82,6 +82,8 @@ The following are the supported micro-capability templates for Teams client:
 
 # [Article](#tab/article)
 
+The following is a JSON code sample for the Article template:
+
 ```json
 {
     "type": "AdaptiveCard",
@@ -164,6 +166,8 @@ Example of the unfurling experience for article type:
 
 # [Product](#tab/product)
 
+The following is a JSON code sample for the Product template:
+
 ```json
 {
     "type": "AdaptiveCard",
@@ -227,6 +231,8 @@ Example of the unfurling experience for the product type:
 :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-product.png" alt-text="Screenshot shows a unfurling experience of the product template in Microsoft Teams.":::
 
 # [Event](#tab/event)
+
+The following is a JSON code sample for the Event template:
 
 ```json
 {
@@ -348,6 +354,8 @@ Example of the unfurling experience for the event type:
 :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-event.png" alt-text="Screenshot shows the unfurling experience of the event template in Microsoft Teams.":::
 
 # [Local business](#tab/local-buisness)
+
+The following is a JSON code sample for the Local business template:
 
 ```json
 
@@ -514,6 +522,8 @@ Example of the unfurling experience for the local business type:
 
 # [Education](#tab/education)
 
+The following is a JSON code sample for the Education template:
+
 ```json
 {
     "type": "AdaptiveCard",
@@ -642,6 +652,8 @@ Example of the unfurling experience for the course type:
 :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-course.png" alt-text="Screenshot shows the unfurling experience of the course template in Microsoft Teams.":::
 
 # [Restaurant](#tab/restaurant)
+
+The following is a JSON code sample for the Restaurant template:
 
 ```json
 
