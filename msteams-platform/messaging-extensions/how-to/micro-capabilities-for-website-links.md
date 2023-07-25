@@ -65,11 +65,6 @@ To enable rich unfurl previews of your links, follow these steps:
           "@type": "Article",
           "name": "Contoso news"
       }
-      {
-
-
-
-      }
     </script>
 
     ```
@@ -77,6 +72,8 @@ To enable rich unfurl previews of your links, follow these steps:
     You can also add the properties for each type available in the schema.org to your website. Teams recognizes all the properties for the supported micro-capability templates available at schema.org.
 
 1. After you've added all the properties to the script tag, add the script tag to your website HTML page.
+
+### Micro-capability templates
 
 The following are the supported micro-capability templates for Teams client:
 
@@ -160,7 +157,6 @@ The following are the supported micro-capability templates for Teams client:
 |name    |  Name of the author.       |
 |headline    | Headline for the article.        |
 |creator     | Author of the article.        |
-|description    | Summary about the article.        |
 |url     |  URL of the article's official website.      |
 
 Example of the unfurling experience for article type:
@@ -224,7 +220,6 @@ Example of the unfurling experience for article type:
 |name    |  Name of the product.       |
 |offers.price     | Price of the product.         |
 |offers.priceCurrency      |  Currency of the Product.       |
-|description    |  Summary about the product.       |
 |url     | URL of the product's website.        |
 
 Example of the unfurling experience for the product type:
@@ -342,7 +337,6 @@ Example of the unfurling experience for the product type:
 |`@type`     |  Event       |
 |image    | URL of the image of for the event.        |
 |name    |  Name of the event.       |
-|description     |  Description of the even.t       |
 |startDate       |  Start date and time of the event in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.       |
 |address       |  Address of the event.       |
 |geo.latitude     | Latitude of the event location.        |
@@ -511,6 +505,8 @@ Example of the unfurling experience for the event type:
 |geo.longitude      | Longitude of the business location.        |
 |aggregateRating.reviewCount      | Average number of reviews for the business.        |
 |aggregateRating.ratingCount       | Average number of ratings for the business.        |
+|menu|Either the actual menu as a structured representation, as text, or a URL of the menu.|
+|priceRange|The price range of the business. For example, $$$.|
 
 Example of the unfurling experience for the local business type:
 
