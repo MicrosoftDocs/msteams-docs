@@ -226,7 +226,7 @@ items:
         
        The following image shows the domain name:
         
-       :::image type="content" source="~/assets/images/meetings-side-panel/appl-Duri_1.png" alt-text="Screenshot of Expose an API with the domain name highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/appl-Duri.png" alt-text="Screenshot of Expose an API with the domain name highlighted in red.":::
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
