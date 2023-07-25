@@ -381,7 +381,7 @@ items:
     
        Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/bot-id_1.png" alt-text="replace bot id.
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/bot-id_1.png" alt-text="replace bot id.":::
 
 - title: Build and run the service
   durationInMinutes: 2
