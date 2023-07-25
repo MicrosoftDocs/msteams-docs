@@ -118,7 +118,7 @@ items:
       1. Enter the **Description** of the client secret.
       1. Select **Add**.
  
-         :::image type="content" source="./assets/images/calls-and-meetings/add-client_2.png" alt-text="Screenshot of Certificates and secrets with client and secrets, client secrets, and +New client secret highlighted in red."lightbox="./assets/images/calls-and-meetings/add-client_3.png":::
+         :::image type="content" source="./assets/images/calls-and-meetings/add-client_sceret.png" alt-text="Screenshot of Certificates and secrets with client and secrets, client secrets, and +New client secret highlighted in red."lightbox="./assets/images/calls-and-meetings/add-a-client-sceret.png":::
 
       1. Select **Copy to clipboard** icon to copy the **Value** details.
 
@@ -158,7 +158,7 @@ items:
      1. Select **Run query**. A response is generated under **Response preview**.
      1. Copy the value of the `id` property from the **Response preview** and replace with the object ID in the PowerShell script.
 
-         :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer-id.png" alt-text="Screenshot of graph explorer displaying the response preview." lightbox="~/assets/images/calls-and-meetings/graph-explorer-id_1.png":::
+         :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer-id.png" alt-text="Screenshot of graph explorer displaying the response preview." lightbox="~/assets/images/calls-and-meetings/graph-explorer-run-query.png":::
        
      1. Execute the PowerShell script. 
      
@@ -172,7 +172,7 @@ items:
         Get-CsApplicationAccessPolicy -Identity “<<policy-identity/policy-name>>”
         ```
 
-         :::image type="content" source="~/assets/images/calls-and-meetings/powershell_id.png" alt-text="Screenshot of Windows PowerShell ISE with Account details highlighted in red." lightbox="~/assets/images/calls-and-meetings/powershell_id_1.png":::
+         :::image type="content" source="~/assets/images/calls-and-meetings/powershell-id.png" alt-text="Screenshot of Windows PowerShell ISE with Account details highlighted in red." lightbox="~/assets/images/calls-and-meetings/powershell-tenant-id.png":::
 
     > [!NOTE]
     > Ensure running scripts aren't disabled in your system. For more information, see [execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2).
@@ -311,7 +311,7 @@ items:
     1. In the `manifest.json` file, replace {id} and {BotId} with your Microsoft App ID.
     1. Add ngrok url in **validDomains** excluding https://.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/manifest_1.png" alt-text="Screenshot of manifest displaying the details of manifest." lightbox= "./assets/images/calls-and-meetings/manifest_1_lb.png" :::
+        :::image type="content" source="./assets/images/calls-and-meetings/manifest_1.png" alt-text="Screenshot of manifest displaying the details of manifest." lightbox= "./assets/images/calls-and-meetings/app_manifest.png" :::
 
     1. Zip the contents of the **Manifest** folder to create `manifest.zip`.
     
@@ -328,7 +328,7 @@ items:
 
        A webpage opens with a message **Your bot is ready!**.
 
-       :::image type="content" source="~/assets/images/calls-and-meetings/bot-is-ready.png" alt-text="Screenshot of localhost displaying your bot is ready." lightbox="~/assets/images/calls-and-meetings/bot-is-ready-1.png":::
+       :::image type="content" source="~/assets/images/calls-and-meetings/bot-is-ready.png" alt-text="Screenshot of localhost displaying your bot is ready." lightbox="~/assets/images/calls-and-meetings/your-bot-is-ready.png":::
     
     1. Go to **Microsoft Teams** and select the **Apps** icon.
     
@@ -336,7 +336,7 @@ items:
    
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled. 
 
-       :::image type="content" source="~/assets/images/upload-custom-app1.PNG" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
+       :::image type="content" source="~/assets/images/upload-an-app.PNG" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
 
     1. Open `manifest.zip` from the repository folder in File Explorer.
 
