@@ -785,3 +785,4 @@ You can test formatting in your own cards by modifying this code.
 * [Schema explorer for Adaptive Cards](https://adaptivecards.io/explorer/TextBlock.html)
 * [Create connectors for Microsoft 365 Groups](../../webhooks-and-connectors/how-to/connectors-creating.md)
 * [Create Incoming Webhooks](../../webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Adaptive Card Templating SDKs](/adaptive-cards/templating/sdk)

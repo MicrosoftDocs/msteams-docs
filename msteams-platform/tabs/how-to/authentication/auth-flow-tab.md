@@ -66,3 +66,4 @@ For a detailed implementation for tab authentication using Azure AD, see:
 
 * [Authenticate a user in a Teams tab](~/tabs/how-to/authentication/auth-tab-AAD.md)
 * [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md)
+* [validDomains](../../../resources/schema/manifest-schema.md#validdomains)

@@ -86,3 +86,4 @@ If you are sideloading your app or publishing to an organization's app catalog, 
 * [Test your app](../../concepts/build-and-test/test-app-overview.md)
 * [Distribute your Microsoft Teams app](../../concepts/deploy-and-publish/apps-publish-overview.md)
 * [Create Teams app package](../../concepts/build-and-test/apps-package.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md#statictabs)

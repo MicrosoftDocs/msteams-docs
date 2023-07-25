@@ -128,6 +128,8 @@ You can edit the manifest template file `appPackage\manifest.json` to update the
 ]
 ```
 
+For more information, see [app manifest](../../../resources/schema/manifest-schema.md#botscommandlistscommands).
+
 <br>
 </details>
 

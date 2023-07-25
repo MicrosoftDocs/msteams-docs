@@ -88,6 +88,8 @@ Each property allows you to prompt the users to ask for their consent:
 | midi          | Permission to send and receive  Musical Instrument Digital Interface (MIDI) information from a digital musical instrument.   |
 | openExternal  | Permission to open links in external applications.  |
 
+For more information, see [app manifest](../../resources/schema/manifest-schema.md#devicepermissions).
+
 ## Check permissions from your app
 
 After adding `devicePermissions` to your app manifest, check permissions using the **HTML5 permissions API** without causing a prompt:
@@ -268,5 +270,4 @@ Device permissions are stored for every sign in session. It means that if you si
 * [Integrate media capabilities](media-capabilities.md)
 * [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Meeting apps APIs](../../apps-in-teams-meetings/meeting-apps-apis.md)
