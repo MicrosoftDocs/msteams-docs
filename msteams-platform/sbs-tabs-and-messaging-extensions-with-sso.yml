@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-   The Azure Active Directory single sign-on (Azure AD SSO) helps to authenticate users in Microsoft Teams.
+   The Azure Active Directory single sign-on (Azure AD SSO) helps to authenticate users in Microsoft Teams. 
 
    **Key aspects of Azure AD SSO**:
 
