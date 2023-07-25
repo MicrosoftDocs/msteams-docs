@@ -139,7 +139,7 @@ items:
         :::image type="content" source="./assets/images/conversation-bot/value_1.png" alt-text="Value card.":::
 
        > [!TIP]
-       > Save the Client secrets **Value** or app password for future reference.
+       > Save the **Client secrets** **Value** or app password for future reference.
 
     **To add API permissions for downstream calls**
 
@@ -228,7 +228,7 @@ items:
         
           1. Select **Teams**.
 
-          1. Select ●●●.
+          1. Select More options (●●●).
 
           1. Select **Get link to team**.
 
@@ -290,7 +290,7 @@ items:
 
     **To upload the app to Teams**
 
-    1. Go to **Microsoft Teams**, select the **Apps** icon.
+    1. In the Teams client, select the **Apps** icon.
 
     1. Select **Manage your apps**.
 
@@ -318,7 +318,7 @@ items:
   content: |
     You can interact with the bot in Teams by sending it a message, or selecting a command from the command list. The bot responds to the strings.
 
-    In the left pane of the Teams, select ●●●, and then select your app from the list. The bot shows **Suggestions** as follows:
+    In the left pane of the Teams, select More added apps (●●●), and then select your app from the list. The bot shows **Suggestions** as follows:
        * **MentionMe**
        * **Show Welcome**
        * **MessageAllMembers**

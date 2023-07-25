@@ -198,7 +198,7 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. In the left pane, select **App Registrations**.
+    1. In the left pane, select **App registrations**.
 
     1. Select your bot.
 
@@ -232,7 +232,7 @@ items:
   
     1. Set **Who can consent?** to **Admins and users**.
   
-    1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
+    1. To configure the admin and user consent prompts with appropriate values for **access_as_user** scope, provide the following information in the fields:</br>
     
          * Enter **Teams can access the user’s profile** as **Admin consent display name**.
 
@@ -276,7 +276,7 @@ items:
 
         :::image type="content" source="~/assets/images/meetings-side-panel/clientapps.png" alt-text="Screenshot of Authorized client applications under Expose an API with the client IDs highlighted in red."::: 
   
-    1. In the left pane, select **API Permissions**. 
+    1. In the left pane, select **API permissions**. 
 
        > [!NOTE]
        > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
@@ -362,7 +362,7 @@ items:
     
           :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/VS-open-file_1.png" alt-text="Screenshot of Visual Studio with the File, Open, and Project/Solution highlighted in red.":::
 
-       1. Select **TeamsMessagingExtensionsSearch.csproj** file from **msgext-search** > **csharp** folder.
+       1. From **msgext-search** > **csharp** folder, select **TeamsMessagingExtensionsSearch.csproj** file.
 
           :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/fileready_1.png" alt-text="Screenshot of cloned repository with the TeamsMessagingExtensionsSearch.csproj highlighted in red.":::
 
@@ -404,8 +404,8 @@ items:
 
     1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder: 
        * manifest.json
-       * outline.png
-       * color.png
+       * icon-outline.png
+       * icon-color.png
 
        :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/zipfile_1.png" alt-text="Screenshot of cloned repository with the Search Command zip file highlighted in red."::: 
 

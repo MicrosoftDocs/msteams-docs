@@ -196,7 +196,7 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. In the left pane, select **App Registrations**.
+    1. In the left pane, select **App registrations**.
 
     1. Select your bot.
 
@@ -233,7 +233,7 @@ items:
   
     1. Set **Who can consent?** to **Admins and users**.
   
-    1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
+    1. To configure the admin and user consent prompts with appropriate values for **access_as_user** scope, provide the following information in the fields:</br>
     
          * Enter **Teams can access the user’s profile** as **Admin consent display name**.
 
@@ -362,7 +362,7 @@ items:
     
           :::image type="content" source="./assets/images/sbs-messagingextension-action/VSopenfile.png" alt-text="Screenshot of Visual Studio with the Project/Solution highlighted in red.":::
 
-       1. Select **TeamsMessagingExtensionsAction.csproj** file from **csharp** folder.
+       1. From **csharp** folder, select the **TeamsMessagingExtensionsAction.csproj** file.
 
           :::image type="content" source="./assets/images/sbs-messagingextension-action/openproject.png" alt-text="Screenshot of cloned repository with the TeamsMessagingExtensionsAction.csproj highlighted in red.":::
 

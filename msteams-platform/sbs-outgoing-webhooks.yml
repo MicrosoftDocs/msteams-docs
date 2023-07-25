@@ -113,7 +113,7 @@ items:
     
            :::image type="content" source="./assets/images/sbs-messagingextension-action/vsopenfile.png" alt-text="Screenshot of Visual Studio showing the Project/Solution option.":::
 
-       1. Select **WebhookSampleBot.sln** file from **csharp** folder.
+       1. From **csharp** folder, select **WebhookSampleBot.sln** file.
 
            :::image type="content" source="./assets/images//sbs-outgoing-webhooks/open-project.png" alt-text="Screenshot shows to select WebhookSampleBot.sln from csharp folder.":::
 
