@@ -87,7 +87,7 @@ items:
 
     1. In the **Microsoft App ID** section, select **Type of App** as **Multi Tenant**.
 
-       :::image type="content" source="./assets/images/conversation-bot/tenant-review_1.png" alt-text="tenant review.":::
+       :::image type="content" source="./assets/images/conversation-bot/multi-tenant-app.png" alt-text="tenant review.":::
 
     1. In the **Creation Type**, by default **Create new Microsoft App ID** is selected.
        You can optionally select **Use existing app registration** and enter **App ID**, **App tenant ID**, and **MSI resource ID**.
