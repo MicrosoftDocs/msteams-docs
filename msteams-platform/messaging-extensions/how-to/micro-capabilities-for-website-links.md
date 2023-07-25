@@ -85,6 +85,74 @@ The following are the supported micro-capability templates for Teams client:
 
 # [Article](#tab/article)
 
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.4",
+    "body":
+    [
+        {
+            "type": "Container",
+            "$when": "${image != null}",
+            "backgroundImage":
+            {
+                "url": "${image}",
+                "horizontalAlignment": "Center",
+                "verticalAlignment": "Center"
+            },
+            "minHeight": "180px",
+            "bleed": true,
+            "items":
+            []
+        },
+        {
+            "type": "TextBlock",
+            "$when": "${name != null}",
+            "text": "${name}",
+            "size": "Medium",
+            "weight": "Bolder",
+            "wrap": true,
+            "spacing": "Small",
+            "maxLines": 2
+        },
+        {
+            "type": "TextBlock",
+            "$when": "${name == null && headline != null}",
+            "text": "${headline}",
+            "size": "Medium",
+            "weight": "Bolder",
+            "wrap": true,
+            "spacing": "Small",
+            "maxLines": 2
+        },
+        {
+            "type": "TextBlock",
+            "$when": "${creator != null}",
+            "text": "${creator}",
+            "isSubtle": true,
+            "spacing": "Small",
+            "size": "Small"
+        },
+        {
+            "type": "TextBlock",
+            "$when": "${description != null}",
+            "text": "${description}",
+            "isSubtle": true,
+            "spacing": "Small",
+            "wrap": true,
+            "maxLines": 2,
+            "size": "Small"
+        }
+    ],
+    "selectAction":
+    {
+        "type": "Action.OpenUrl",
+        "url": "${url}"
+    }
+}
+```
+
 |Property |Description  |
 |---------|---------|
 |`@type`     | Article        |
@@ -99,6 +167,55 @@ Example of the unfurling experience for article type:
 :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-article.png" alt-text="Screenshot shows a unfurling experience of the article template in Microsoft Teams.":::
 
 # [Product](#tab/product)
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.4",
+    "body":
+    [
+        {
+            "type": "Container",
+            "$when": "${image != null}",
+            "backgroundImage":
+            {
+                "url": "${image}",
+                "horizontalAlignment": "Center",
+                "verticalAlignment": "Center"
+            },
+            "minHeight": "180px",
+            "bleed": true,
+            "items":
+            []
+        },
+        {
+            "type": "TextBlock",
+            "$when": "${name != null}",
+            "text": "${name}",
+            "size": "Medium",
+            "weight": "Bolder",
+            "wrap": true,
+            "spacing": "Small",
+            "maxLines": 2
+        },
+        {
+            "type": "TextBlock",
+            "$when": "${offers.price != null}",
+            "text": "${offers.price} ${offers.priceCurrency}",
+            "isSubtle": true,
+            "spacing": "Small",
+            "size": "Small"
+        }
+    ],
+    "selectAction":
+    {
+        "type": "Action.OpenUrl",
+        "url": "${url}"
+    }
+}
+
+```
 
 |Property |Description  |
 |---------|---------|
@@ -115,6 +232,110 @@ Example of the unfurling experience for the product type:
 :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-product.png" alt-text="Screenshot shows a unfurling experience of the product template in Microsoft Teams.":::
 
 # [Event](#tab/event)
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.4",
+    "body":
+    [
+        {
+            "type": "Container",
+            "items":
+            [
+                {
+                    "type": "Container",
+                    "$when": "${image != null}",
+                    "backgroundImage":
+                    {
+                        "url": "${image}",
+                        "horizontalAlignment": "Center",
+                        "verticalAlignment": "Center"
+                    },
+                    "items":
+                    [],
+                    "minHeight": "180px",
+                    "bleed": true
+                },
+                {
+                    "type": "TextBlock",
+                    "$when": "${name != null}",
+                    "text": "${name}",
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "wrap": true,
+                    "spacing": "Small",
+                    "maxLines": 2
+                },
+                {
+                    "type": "TextBlock",
+                    "$when": "${startDate != null}",
+                    "text": "${formatDateTime(startDate, 'ddd, MMM d, yyyy')} at ${formatDateTime(startDate, 'h:mm tt')}",
+                    "isSubtle": true,
+                    "spacing": "Small",
+                    "size": "Small"
+                },
+                {
+                    "type": "TextBlock",
+                    "$when": "${address != null}",
+                    "text": "${address}",
+                    "isSubtle": true,
+                    "spacing": "Small",
+                    "size": "Small"
+                }
+            ],
+            "spacing": "None",
+            "selectAction":
+            {
+                "type": "Action.OpenUrl",
+                "url": "${url}"
+            }
+        },
+        {
+            "type": "ActionSet",
+            "actions":
+            [
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Tickets",
+                    "url": "${url}"
+                },
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Directions",
+                    "url": "https://www.bing.com/maps/directions?rtp=adr.~pos.${geo.latitude}_${geo.longitude}"
+                }
+            ],
+            "$when": "${url != null && geo != null}"
+        },
+        {
+            "type": "ActionSet",
+            "actions":
+            [
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Tickets",
+                    "url": "${url}"
+                }
+            ],
+            "$when": "${url != null && geo == null}"
+        },
+        {
+            "type": "ActionSet",
+            "actions":
+            [
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Directions",
+                    "url": "https://www.bing.com/maps/directions?rtp=adr.~pos.${geo.latitude}_${geo.longitude}"
+                }
+            ],
+            "$when": "${geo != null && url == null}"
+        }
+    ]
+}
+```
 
 |Property |Description  |
 |---------|---------|
@@ -134,6 +355,151 @@ Example of the unfurling experience for the event type:
 
 # [Local business](#tab/local-buisness)
 
+```json
+
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.4",
+    "body":
+    [
+        {
+            "type": "Container",
+            "items":
+            [
+                {
+                    "type": "Container",
+                    "$when": "${image != null}",
+                    "backgroundImage":
+                    {
+                        "url": "${image}",
+                        "horizontalAlignment": "Center",
+                        "verticalAlignment": "Center"
+                    },
+                    "minHeight": "180px",
+                    "bleed": true,
+                    "items":
+                    []
+                },
+                {
+                    "type": "TextBlock",
+                    "$when": "${name != null}",
+                    "text": "${name}",
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "wrap": true,
+                    "spacing": "Small",
+                    "maxLines": 2
+                },
+                {
+                    "type": "ColumnSet",
+                    "columns":
+                    [
+                        {
+                            "type": "Column",
+                            "width": "auto",
+                            "items":
+                            [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${if(priceRange != null, priceRange + ' ·', '')} ${aggregateRating.ratingValue} ★☆☆☆☆ ${if(aggregateRating.reviewCount != null, '(' + aggregateRating.reviewCount + ')', '')}${if(aggregateRating.reviewCount == null && aggregateRating.ratingCount != null, '(' + aggregateRating.ratingCount + ')', '')}",
+                                    "isSubtle": true,
+                                    "spacing": "None",
+                                    "$when": "${float(aggregateRating.ratingValue) >= 1 && float(aggregateRating.ratingValue) < 2}",
+                                    "size": "Small",
+                                    "wrap": true
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${if(priceRange != null, priceRange + ' ·', '')} ${aggregateRating.ratingValue} ★★☆☆☆ ${if(aggregateRating.reviewCount != null, '(' + aggregateRating.reviewCount + ')', '')}${if(aggregateRating.reviewCount == null && aggregateRating.ratingCount != null, '(' + aggregateRating.ratingCount + ')', '')}",
+                                    "isSubtle": true,
+                                    "spacing": "None",
+                                    "$when": "${float(aggregateRating.ratingValue) >= 2 && float(aggregateRating.ratingValue) < 3}",
+                                    "size": "Small",
+                                    "wrap": true
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${if(priceRange != null, priceRange + ' ·', '')} ${aggregateRating.ratingValue} ★★★☆☆ ${if(aggregateRating.reviewCount != null, '(' + aggregateRating.reviewCount + ')', '')}${if(aggregateRating.reviewCount == null && aggregateRating.ratingCount != null, '(' + aggregateRating.ratingCount + ')', '')}",
+                                    "isSubtle": true,
+                                    "spacing": "None",
+                                    "$when": "${float(aggregateRating.ratingValue) >= 3 && float(aggregateRating.ratingValue) < 4}",
+                                    "size": "Small",
+                                    "wrap": true
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${if(priceRange != null, priceRange + ' ·', '')} ${aggregateRating.ratingValue} ★★★★☆ ${if(aggregateRating.reviewCount != null, '(' + aggregateRating.reviewCount + ')', '')}${if(aggregateRating.reviewCount == null && aggregateRating.ratingCount != null, '(' + aggregateRating.ratingCount + ')', '')}",
+                                    "isSubtle": true,
+                                    "spacing": "None",
+                                    "$when": "${float(aggregateRating.ratingValue) >= 4 && float(aggregateRating.ratingValue) < 5}",
+                                    "size": "Small",
+                                    "wrap": true
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${if(priceRange != null, priceRange + ' ·', '')} ${aggregateRating.ratingValue} ★★★★★ ${if(aggregateRating.reviewCount != null, '(' + aggregateRating.reviewCount + ')', '')}${if(aggregateRating.reviewCount == null && aggregateRating.ratingCount != null, '(' + aggregateRating.ratingCount + ')', '')}",
+                                    "isSubtle": true,
+                                    "spacing": "None",
+                                    "$when": "${float(aggregateRating.ratingValue) >= 5}",
+                                    "size": "Small",
+                                    "wrap": true
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${priceRange}",
+                                    "isSubtle": true,
+                                    "spacing": "None",
+                                    "$when": "${aggregateRating == null && priceRange != null}",
+                                    "size": "Small",
+                                    "wrap": true
+                                }
+                            ],
+                            "spacing": "Small"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "${address}",
+                    "$when": "${address != null}",
+                    "isSubtle": true,
+                    "spacing": "Small",
+                    "size": "Small"
+                }
+            ],
+            "spacing": "None",
+            "selectAction":
+            {
+                "type": "Action.OpenUrl",
+                "url": "${url}"
+            }
+        },
+        {
+            "type": "ActionSet",
+            "actions":
+            [
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Directions",
+                    "url": "https://www.bing.com/maps/directions?rtp=adr.~pos.${geo.latitude}_${geo.longitude}"
+                }
+            ],
+            "$when": "${geo != null}"
+        },
+        {
+            "type": "TextBlock",
+            "text": "[See more on web](${bingSearchUrl})",
+            "wrap": true,
+            "spacing": "Small",
+            "$when": "${bingSearchUrl != null}"
+        }
+    ]
+}
+
+```
+
 |Property |Description  |
 |---------|---------|
 |`@type`     |  Local business       |
@@ -152,6 +518,117 @@ Example of the unfurling experience for the local business type:
 
 # [Education](#tab/education)
 
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.4",
+    "body":
+    [
+        {
+            "type": "Container",
+            "$when": "${image != null}",
+            "backgroundImage":
+            {
+                "url": "${image}",
+                "horizontalAlignment": "Center",
+                "verticalAlignment": "Center"
+            },
+            "minHeight": "180px",
+            "bleed": true,
+            "items":
+            []
+        },
+        {
+            "type": "TextBlock",
+            "$when": "${name != null}",
+            "text": "${name}",
+            "size": "Medium",
+            "weight": "Bolder",
+            "wrap": true,
+            "spacing": "Small",
+            "maxLines": 2
+        },
+        {
+            "type": "ColumnSet",
+            "columns":
+            [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items":
+                    [
+                        {
+                            "type": "TextBlock",
+                            "text": "${if(priceRange != null, priceRange + ' ·', '')} ${aggregateRating.ratingValue} ★☆☆☆☆ ${if(aggregateRating.reviewCount != null, '(' + aggregateRating.reviewCount + ')', '')}${if(aggregateRating.reviewCount == null && aggregateRating.ratingCount != null, '(' + aggregateRating.ratingCount + ')', '')}",
+                            "isSubtle": true,
+                            "spacing": "None",
+                            "$when": "${float(aggregateRating.ratingValue) >= 1 && float(aggregateRating.ratingValue) < 2}",
+                            "size": "Small",
+                            "wrap": true
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "${if(priceRange != null, priceRange + ' ·', '')} ${aggregateRating.ratingValue} ★★☆☆☆ ${if(aggregateRating.reviewCount != null, '(' + aggregateRating.reviewCount + ')', '')}${if(aggregateRating.reviewCount == null && aggregateRating.ratingCount != null, '(' + aggregateRating.ratingCount + ')', '')}",
+                            "isSubtle": true,
+                            "spacing": "None",
+                            "$when": "${float(aggregateRating.ratingValue) >= 2 && float(aggregateRating.ratingValue) < 3}",
+                            "size": "Small",
+                            "wrap": true
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "${if(priceRange != null, priceRange + ' ·', '')} ${aggregateRating.ratingValue} ★★★☆☆ ${if(aggregateRating.reviewCount != null, '(' + aggregateRating.reviewCount + ')', '')}${if(aggregateRating.reviewCount == null && aggregateRating.ratingCount != null, '(' + aggregateRating.ratingCount + ')', '')}",
+                            "isSubtle": true,
+                            "spacing": "None",
+                            "$when": "${float(aggregateRating.ratingValue) >= 3 && float(aggregateRating.ratingValue) < 4}",
+                            "size": "Small",
+                            "wrap": true
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "${if(priceRange != null, priceRange + ' ·', '')} ${aggregateRating.ratingValue} ★★★★☆ ${if(aggregateRating.reviewCount != null, '(' + aggregateRating.reviewCount + ')', '')}${if(aggregateRating.reviewCount == null && aggregateRating.ratingCount != null, '(' + aggregateRating.ratingCount + ')', '')}",
+                            "isSubtle": true,
+                            "spacing": "None",
+                            "$when": "${float(aggregateRating.ratingValue) >= 4 && float(aggregateRating.ratingValue) < 5}",
+                            "size": "Small",
+                            "wrap": true
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "${if(priceRange != null, priceRange + ' ·', '')} ${aggregateRating.ratingValue} ★★★★★ ${if(aggregateRating.reviewCount != null, '(' + aggregateRating.reviewCount + ')', '')}${if(aggregateRating.reviewCount == null && aggregateRating.ratingCount != null, '(' + aggregateRating.ratingCount + ')', '')}",
+                            "isSubtle": true,
+                            "spacing": "None",
+                            "$when": "${float(aggregateRating.ratingValue) >= 5}",
+                            "size": "Small",
+                            "wrap": true
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "${priceRange}",
+                            "isSubtle": true,
+                            "spacing": "None",
+                            "$when": "${aggregateRating == null && priceRange != null}",
+                            "size": "Small",
+                            "wrap": true
+                        }
+                    ],
+                    "spacing": "Small"
+                }
+            ],
+            "spacing": "Small"
+        }
+    ],
+    "selectAction":
+    {
+        "type": "Action.OpenUrl",
+        "url": "${url}"
+    }
+}
+
+```
+
+
 |Property |Description  |
 |---------|---------|
 |`@type`     |   Course      |
@@ -169,6 +646,227 @@ Example of the unfurling experience for the course type:
 :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-course.png" alt-text="Screenshot shows the unfurling experience of the course template in Microsoft Teams.":::
 
 # [Restaurant](#tab/restaurant)
+
+```json
+
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.4",
+    "body":
+    [
+        {
+            "type": "Container",
+            "items":
+            [
+                {
+                    "type": "Container",
+                    "$when": "${image != null}",
+                    "backgroundImage":
+                    {
+                        "url": "${image}",
+                        "horizontalAlignment": "Center",
+                        "verticalAlignment": "Center"
+                    },
+                    "minHeight": "180px",
+                    "bleed": true,
+                    "items":
+                    []
+                },
+                {
+                    "type": "TextBlock",
+                    "$when": "${name != null}",
+                    "text": "${name}",
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "wrap": true,
+                    "spacing": "Small",
+                    "maxLines": 2
+                },
+                {
+                    "type": "ColumnSet",
+                    "columns":
+                    [
+                        {
+                            "type": "Column",
+                            "width": "auto",
+                            "items":
+                            [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${if(priceRange != null, priceRange + ' ·', '')} ${aggregateRating.ratingValue} ★☆☆☆☆ ${if(aggregateRating.reviewCount != null, '(' + aggregateRating.reviewCount + ')', '')}${if(aggregateRating.reviewCount == null && aggregateRating.ratingCount != null, '(' + aggregateRating.ratingCount + ')', '')}",
+                                    "isSubtle": true,
+                                    "spacing": "None",
+                                    "$when": "${float(aggregateRating.ratingValue) >= 1 && float(aggregateRating.ratingValue) < 2}",
+                                    "size": "Small",
+                                    "wrap": true
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${if(priceRange != null, priceRange + ' ·', '')} ${aggregateRating.ratingValue} ★★☆☆☆ ${if(aggregateRating.reviewCount != null, '(' + aggregateRating.reviewCount + ')', '')}${if(aggregateRating.reviewCount == null && aggregateRating.ratingCount != null, '(' + aggregateRating.ratingCount + ')', '')}",
+                                    "isSubtle": true,
+                                    "spacing": "None",
+                                    "$when": "${float(aggregateRating.ratingValue) >= 2 && float(aggregateRating.ratingValue) < 3}",
+                                    "size": "Small",
+                                    "wrap": true
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${if(priceRange != null, priceRange + ' ·', '')} ${aggregateRating.ratingValue} ★★★☆☆ ${if(aggregateRating.reviewCount != null, '(' + aggregateRating.reviewCount + ')', '')}${if(aggregateRating.reviewCount == null && aggregateRating.ratingCount != null, '(' + aggregateRating.ratingCount + ')', '')}",
+                                    "isSubtle": true,
+                                    "spacing": "None",
+                                    "$when": "${float(aggregateRating.ratingValue) >= 3 && float(aggregateRating.ratingValue) < 4}",
+                                    "size": "Small",
+                                    "wrap": true
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${if(priceRange != null, priceRange + ' ·', '')} ${aggregateRating.ratingValue} ★★★★☆ ${if(aggregateRating.reviewCount != null, '(' + aggregateRating.reviewCount + ')', '')}${if(aggregateRating.reviewCount == null && aggregateRating.ratingCount != null, '(' + aggregateRating.ratingCount + ')', '')}",
+                                    "isSubtle": true,
+                                    "spacing": "None",
+                                    "$when": "${float(aggregateRating.ratingValue) >= 4 && float(aggregateRating.ratingValue) < 5}",
+                                    "size": "Small",
+                                    "wrap": true
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${if(priceRange != null, priceRange + ' ·', '')} ${aggregateRating.ratingValue} ★★★★★ ${if(aggregateRating.reviewCount != null, '(' + aggregateRating.reviewCount + ')', '')}${if(aggregateRating.reviewCount == null && aggregateRating.ratingCount != null, '(' + aggregateRating.ratingCount + ')', '')}",
+                                    "isSubtle": true,
+                                    "spacing": "None",
+                                    "$when": "${float(aggregateRating.ratingValue) >= 5}",
+                                    "size": "Small",
+                                    "wrap": true
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${priceRange}",
+                                    "isSubtle": true,
+                                    "spacing": "None",
+                                    "$when": "${aggregateRating == null && priceRange != null}",
+                                    "size": "Small",
+                                    "wrap": true
+                                }
+                            ],
+                            "spacing": "Small"
+                        }
+                    ],
+                    "spacing": "Small"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "${address}",
+                    "$when": "${address != null}",
+                    "isSubtle": true,
+                    "spacing": "Small",
+                    "size": "Small",
+                    "wrap": true
+                }
+            ],
+            "spacing": "None",
+            "selectAction":
+            {
+                "type": "Action.OpenUrl",
+                "url": "${url}"
+            }
+        },
+        {
+            "type": "ActionSet",
+            "actions":
+            [
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Menu",
+                    "url": "${menu}"
+                },
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Reservations",
+                    "url": "${url}"
+                }
+            ],
+            "$when": "${menu != null && url != null}"
+        },
+        {
+            "type": "ActionSet",
+            "actions":
+            [
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Menu",
+                    "url": "${menu}"
+                },
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Directions",
+                    "url": "https://www.bing.com/maps/directions?rtp=adr.~pos.${geo.latitude}_${geo.longitude}"
+                }
+            ],
+            "$when": "${menu != null && geo != null && url == null}"
+        },
+        {
+            "type": "ActionSet",
+            "actions":
+            [
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Reservations",
+                    "url": "${url}"
+                },
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Directions",
+                    "url": "https://www.bing.com/maps/directions?rtp=adr.~pos.${geo.latitude}_${geo.longitude}"
+                }
+            ],
+            "$when": "${geo != null && url != null && menu == null}"
+        },
+        {
+            "type": "ActionSet",
+            "actions":
+            [
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Menu",
+                    "url": "${menu}"
+                }
+            ],
+            "$when": "${menu != null && url == null && geo == null}"
+        },
+        {
+            "type": "ActionSet",
+            "actions":
+            [
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Reservations",
+                    "url": "${url}"
+                }
+            ],
+            "$when": "${url != null && menu == null && geo == null}"
+        },
+        {
+            "type": "ActionSet",
+            "actions":
+            [
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Directions",
+                    "url": "https://www.bing.com/maps/directions?rtp=adr.~pos.${geo.latitude}_${geo.longitude}"
+                }
+            ],
+            "$when": "${geo != null && menu == null && url == null}"
+        },
+        {
+            "type": "TextBlock",
+            "text": "[See more on web](${bingSearchUrl})",
+            "wrap": true,
+            "spacing": "Small",
+            "$when": "${bingSearchUrl != null}"
+        }
+    ]
+}
+
+```
 
 |Property |Description  |
 |---------|---------|
