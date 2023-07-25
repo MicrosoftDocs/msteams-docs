@@ -14,7 +14,7 @@ You can create a Software as a Service (SaaS) offer and test the end-to-end purc
 
 :::image type="content" source="~/assets/images/saas-offer/monetize-flow5.png" alt-text="Diagram shows the process of testing the SaaS offer.":::
 
-When the offer is in Publisher sign-off state, preview links for the respective platforms are given below the Go live button. We recommend that you verify the end-to-end purchasing experience before publishing your SaaS offer. You can test and verify the end-to-end transaction in Teams by creating a separate offer just for testing.
+When the offer is in **Publisher signoff** stage, preview links for the respective platforms are given below the **Go live** option. We recommend that you verify the end-to-end purchasing experience before publishing your SaaS offer. You can test and verify the end-to-end transaction in Teams by creating a separate offer just for testing.
 
 ## Create a Preview offer ID
 

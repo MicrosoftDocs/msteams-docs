@@ -8,25 +8,25 @@ ms.localizationpriority: high
 ms.date: 04/06/2023
 ---
 
-# Set up Microsoft license management
+# Create a plan and set up Microsoft license management
 
 Independent software vendors (ISVs) can configure Microsoft license management for third-party SaaS apps in Partner Center as part of the offer publishing. This allows Teams admins or users to easily assign, unassign, use, and track SaaS licenses for their third-party app subscriptions within Teams.
 
 :::image type="content" source="~/assets/images/saas-offer/monetize-flow4.png" alt-text="Diagram shows the process to set up license management for the SaaS offer.":::
 
-To enable Microsoft to manage license for a third-party app in Teams, you must create a plan for the offer and configure pricing and availability of the plan.
+To enable Microsoft to manage license for a third-party app in Teams, your must have opted for Microsoft to manage licenses on your behalf while creating the offer. You must then create one or more plans that has subscription pricing, where the user can purchase subscriptions with licenses to use your app. Microsoft then manages the purchased licenses on your behalf.
 
 ## Create a plan
 
-Offers sold through the Microsoft commercial marketplace must have at least one plan. You can create a variety of plans with different options within the same offer.
+Transactable SaaS offers sold through the Microsoft commercial marketplace must have at least one plan. You can create a variety of plans with different options within the same offer.
 
 1. Select **Plan overview** from the left pane, and then select **+ Create new plan**.
 
-1. Enter Plan ID and Plan name, and then select **Create**.
+1. Enter **Plan ID** and **Plan name**, and then select **Create**.
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/plan-overview.png" alt-text="The screenshots shows plan overview to create a new plan for your apps in the Partner Center.":::
 
-1. Select the plan to add pricing and availability information
+1. Select the plan to add pricing and availability information.
 
 ### Define plan listing
 
@@ -44,7 +44,7 @@ Every plan must be available in at least one market. On the Pricing and availabi
 
 1. Select **Pricing and availability** from the left pane.
 1. Under **Market**s, select **Edit markets**.
-1. In the dialog that appears, select the market locations where you want to make your plan available. You must select a minimum of one and maximum of 141 markets.
+1. In the dialog that appears, select the market locations where you want to make your plan available. You must select a minimum of one and can select maximum of 141 markets.
 
 ### Define pricing
 
@@ -58,7 +58,7 @@ You must associate a pricing model with each plan either flat rate or per user. 
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/pricing-availability.png" alt-text="The screenshots shows pricing and availability page to add SaaS offer for your app.":::
 
-1. Select Save draft.
+1. Select **Save draft**.
 1. Select **Plan overview** at the top of the page to go to the listing page that shows all the plans you've created for this offer.
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/list-of-plans-created.png" alt-text="The screenshots shows plan listing page with service ID, pricing model, availability, status and action.":::
@@ -75,7 +75,7 @@ You can configure a free trial for each plan in your offer. Select the check box
 
 After you create one or more plans, you'll see your plan name, plan ID, pricing model, availability (Public or Private), current publishing status, and any available actions on the **Plan overview** tab.
 
-As explained in [create your offer](create-saas-offer.md#submit-the-offer) section, you can now submit the offer with the plans from Partner Center for validation. Upon successful validation, test the offer with the preview links given and make the offer go live.
+As explained in [create your offer](create-saas-offer.md#submit-the-offer) section, you can now submit the offer with the plans from Partner Center for validation. Upon successful validation, it's recommended to [test the offer](Test-preview-for-monetized-apps.md) with the given preview links.
 
 ## Check license usage in Partner Center analytics
 
