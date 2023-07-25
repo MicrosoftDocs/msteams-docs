@@ -55,7 +55,7 @@ items:
 
     To verify sideload apps in Teams:
 
-    1. In the Teams client, select **Apps**.
+    1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps** > **Upload an app**.
     1. Look for the option **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
@@ -183,7 +183,7 @@ items:
  
         :::image type="content" source="~/assets/images/bots/addclientsecret_1.png" alt-text="Screenshot of Add a client secret with the Add option highlighted in red.":::
 
-    1. In the **Value** column, select copy to clipboard icon to copy the value details. 
+    1. In the **Value** column, select **Copy to clipboard** icon to copy the value details. 
 
         :::image type="content" source="~/assets/images/bots/valueclientsecret.png" alt-text="Screenshot of Client secrets section with the Copy to clipboard icon highlighted in red.":::
 
@@ -316,22 +316,22 @@ items:
 
     1. Enter the details to configure scope.    
 
-          1. Enter `access_as_user` as the **Scope name**.
+          1. Enter **access_as_user** as the **Scope name**.
 
              > [!NOTE]
              > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.
 
-          1. Set **Who can consent?** to `Admins and users`.
+          1. Set **Who can consent?** to **Admins and users**.
 
-          1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
+          1. To configure the admin and user consent prompts with appropriate values for **access_as_user** scope, provide the following information in the fields:</br>
     
-              * Enter `Teams can access the user’s profile` as **Admin consent display name**.
+              * Enter **Teams can access the user’s profile** as **Admin consent display name**.
 
-              * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**.
+              * Enter **Allows Teams to call the app’s web APIs** as the current user** as **Admin consent description**.
 
-              * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**.
+              * Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**.
 
-              * Enter `Enable Teams to call this app’s APIs with the same rights as you have` as **User consent description**.
+              * Enter **Enable Teams to call this app’s APIs with the same rights as you have** as **User consent description**.
 
           1. Ensure that **State** is set to **Enabled**.
 
@@ -370,7 +370,7 @@ items:
 
     **Configure Graph permissions**
 
-    1. In the left pane, select **API Permissions**.
+    1. In the left pane, select **API permissions**.
 
           :::image type="content" source="~/assets/images/bots/select-api-permissions_1.png" alt-text="Screenshot of Azure portal with API permissions in the left pane highlighted in red.":::
 
@@ -477,7 +477,7 @@ items:
 
         :::image type="content" source="~/assets/images/bots/certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
 
-       A webpage opens with a message **Bot is Ready**.
+       A webpage opens with a message **Your bot is ready!**.
 
         :::image type="content" source="~/assets/images/bots/yourbot.png" alt-text="Screenshot of the webpage that displays Your bot is ready.":::
         
@@ -507,14 +507,14 @@ items:
 
     1. Open the **manifest.json** file.
 
-    1. Replace all occurrences of **{TODO: MicrosoftAppId}** with your bot's **Microsoft App ID**.
+    1. Replace all occurrences of `TODO: MicrosoftAppId` with your bot's **Microsoft App ID**.
     
     1. In your cloned repository, go to **bot-conversation-sso-quickstart** > **csharp_dotnetcore** > **BotConversationSsoQuickstart** > **appPackage**.
     
-    1. Create a .zip with the following files that are present in the **appPackage** folder: 
+    1. Create a .zip file with the following files that are present in the **appPackage** folder: 
        * manifest.json
-       * icon-outline.png
-       * icon-color.png
+       * outline.png
+       * color.png
 
         :::image type="content" source="~/assets/images/bots/manifest_1.png" alt-text="Screenshot of Manifest folder with the Teams Bot zip folder highlighted in red.":::
 
@@ -540,14 +540,14 @@ items:
 
     1. Send a message to the bot. The conversation bot asks for consent for the first time.
 
-    1. Select **Continue** to give permissions to Teams client for accessing the bot.
+    1. For desktop, select **Continue** to give permissions to Teams client for accessing the bot.
 
          :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request1.png" alt-text="Screenshot of additional permissions with Continue option highlighted in red.":::
         
         > [!NOTE]
         > Now you have configured SSO with your bot app and it's the only time you'll have to give consent.
 
-    1. For mobile device, select **Accept** for **Permissions requested**.
+    1. For mobile device, select **Accept**.
 
         > [!NOTE]
         > Now you have configured SSO with your bot app in mobile, and this is the only time you'll have to give consent.
