@@ -185,7 +185,7 @@ The following table describes the newly supported user mention IDs:
 |IDs  | Supporting capabilities | Description | Example |
 |----------|--------|---------------|---------|
 | Azure AD Object ID | Bot, Connector |  Azure AD user’s Object ID | 49c4641c-ab91-4248-aebb-6a7de286397b |
-| UPN | Bot, Connector | Azure AD user’s UPN | john.smith@microsoft.com |
+| UPN | Bot, Connector | Azure AD user’s UPN | `john.smith@microsoft.com` |
 
 #### User mention in bots with Adaptive Cards
 
@@ -394,31 +394,26 @@ The following table lists the query parameters:
 |`displayName`     |   Name of the user     |
 |`userPrincipalName`|The user's principal name of the account in Azure AD|
 
-
 Adaptive Components are high-level components powered by [templating](/adaptive-cards/templating/) and native Adaptive Card elements. The type `component` can be used anywhere inside the card body and the component data is defined in the `properties` attribute.  The component data under `properties` is passed directly to the component. The `properties` property defines the format for Persona and Persona Set and all other  properties under `properties` is ignored by `component` type in the Adaptive Card schema.
 
 Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Azure Active Directory (Azure AD) information, such as `name`, `id` and `userPrincipalName`. For more information, see [Fetch the roster or user profile](../../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
 The following is an example of the people icon in an Adaptive Card on Teams desktop and mobile clients:
 
-# [Desktop](#tab/desktop2)
+# [Desktop](#tab/desktop)
 
 :::image type="content" source="../../assets/images/adaptive-cards/people-icon-persona-persona-set.png" alt-text="Screenshot shows a persona and persona set icons in an Adaptive Card in Teams desktop client.":::
 
 When a user hovers on a people icon, the people card of that user is displayed.
 
-# [Mobile](#tab/mobile2)
+# [Mobile](#tab/mobile)
 
 :::row:::
     :::column:::
-
-    :::image type="content" source="../../assets/images/adaptive-cards/people-icon-mobile-1.png" alt-text="Screenshot shows an example of people icon in a persona and persona set in Teams mobile client.":::
-        
+     :::image type="content" source="../../assets/images/adaptive-cards/people-icon-mobile-1.png" alt-text="Screenshot shows an example of people icon in a persona and persona set in Teams mobile client.":::
     :::column-end:::
     :::column:::
-
     :::image type="content" source="../../assets/images/adaptive-cards/people-icon-mobile-2.png" alt-text="Screenshot shows an example of people icon in a persona and persona set in Teams mobile.":::
-        
     :::column-end:::
 :::row-end:::
 
