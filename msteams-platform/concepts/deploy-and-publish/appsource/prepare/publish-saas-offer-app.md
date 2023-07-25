@@ -1,5 +1,5 @@
 ---
-title: Publish your app with SaaS offer
+title: Publish your monetized app with SaaS offer
 description: Learn how to configure the SaaS offer to your app and publish the app to Teams store.
 author: v-preethah
 ms.author: surbhigupta
@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ms.date: 07/11/2023
 ---
 
-# Publish your app with the SaaS offer configuration
+# Publish your app with the integrated SaaS offer
 
 After the offer is live in the marketplace, you need to link the offer to your app and publish the updated app in the store. The customers can purchase paid apps from the marketplace.
 
