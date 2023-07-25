@@ -20,9 +20,9 @@ To enable Microsoft to manage license for a third-party app in Teams, you must c
 
 Offers sold through the Microsoft commercial marketplace must have at least one plan. You can create a variety of plans with different options within the same offer.
 
-1. Select Plan overview from the left pane, and then select Create new plan.
+1. Select **Plan overview** from the left pane, and then select **+ Create new plan**.
 
-1. Enter Plan ID and Plan name, and then select Create.
+1. Enter Plan ID and Plan name, and then select **Create**.
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/plan-overview.png" alt-text="The screenshots shows plan overview to create a new plan for your apps in the Partner Center.":::
 
@@ -32,27 +32,28 @@ Offers sold through the Microsoft commercial marketplace must have at least one 
 
 On the **Plan listing** tab, you can define the plan name and description as you want them to appear in the commercial marketplace.
 
-1. Under Plan listing, enter the Plan name and Plan description.
+1. Under Plan listing, enter the **Plan name** and **Plan description**.
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/plan-listing.png" alt-text="The screenshots shows plan page to add plan name and plan description for your app.":::
 
-1. Select Save draft.
+1. Select **Save draft**.
 
 ### Define markets
 
 Every plan must be available in at least one market. On the Pricing and availability tab, you can configure the markets this plan will be available
 
-1. Under Markets, select the Edit markets link.
-1. In the dialog box that appears, select the market locations where you want to make your plan available. You must select a minimum of one and maximum of 141 markets.
+1. Select **Pricing and availability** from the left pane.
+1. Under **Market**s, select **Edit markets**.
+1. In the dialog that appears, select the market locations where you want to make your plan available. You must select a minimum of one and maximum of 141 markets.
 
 ### Define pricing
 
-You must associate a pricing model with each plan: either flat rate or per user. All plans in the same offer must use the same pricing model.
+You must associate a pricing model with each plan either flat rate or per user. All plans in the same offer must use the same pricing model.
 
-1. Select Pricing and availability from the left pane.
-1. Under Pricing, select Flat rate or Per User.
-1. Add the billing terms you want: 1-month, 1-year, 2-year, and 3-year billing terms can be added.
-1. For each billing term, select the payment option to set the payment schedule. Only one payment option per term can be configured on the same plan.
+1. Select **Pricing and availability** from the left pane.
+1. Under **Pricing**, select **Flat rate** or **Per User**.
+1. Add the billing terms you want: Monthly, Annual, 2-year, and 3-year billing terms can be added.
+1. For each billing term, select the payment option to set the payment schedule.
 1. Enter the price for each payment occurrence.
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/pricing-availability.png" alt-text="The screenshots shows pricing and availability page to add SaaS offer for your app.":::
@@ -64,15 +65,17 @@ You must associate a pricing model with each plan: either flat rate or per user.
 
 1. Copy the service ID of the plan you created to integrate with Microsoft Graph usageRights API.
 
-Integrate with Graph usageRights API to manage user permissions at the time of app launch by a customer who has a purchase license.
+[Integrate with Graph usageRights API](prerequisites.md#integrate-with-graph-usagerights-api) to manage user permissions at the time of app launch by a customer who has a purchase license.
 
 ### Free trial
 
 You can configure a free trial for each plan in your offer. Select the check box to allow a one-month free trial.
 
-* Under Free Trial, select the Allow a one-month free trial check box.
+* Under **Free Trial**, select **Allow a one-month free trial**.
 
-After you create one or more plans, you'll see your plan name, plan ID, pricing model, availability (Public or Private), current publishing status, and any available actions on the Plan overview tab.
+After you create one or more plans, you'll see your plan name, plan ID, pricing model, availability (Public or Private), current publishing status, and any available actions on the **Plan overview** tab.
+
+As explained in [create your offer](create-saas-offer.md#submit-the-offer) section, you can now submit the offer with the plans from Partner Center for validation. Upon successful validation, test the offer with the preview links given and make the offer go live.
 
 ## Check license usage in Partner Center analytics
 
@@ -87,4 +90,6 @@ After you create one or more plans, you'll see your plan name, plan ID, pricing 
 
 ## See also
 
-[Monetize your app](monetize-overview.md)
+* [Monetize your app](monetize-overview.md)
+* [Create plans for SaaS offer](/partner-center/marketplace/create-new-saas-offer-plans)
+* [Test and publish SaaS offer](/partner-center/marketplace/test-publish-saas-offer)

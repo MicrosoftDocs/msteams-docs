@@ -41,11 +41,11 @@ Create your offer in Partner Center and configure the offer to publish in the ma
 
 ## Configure your SaaS offer
 
-Make the required configurations and setups for the offer. The offer setup, offer listing, technical configuration, plan, and pricing are to be configured for your offer to be published and linked to your SaaS app. All that you have planned in the Plan your offer phase are done in the offer configuration.
+Make the required configurations to setup the offer. The offer setup, offer listing, technical configuration, plan, and pricing are to be configured for your offer to be published and linked to your SaaS app. All that you have planned in the Plan your offer phase are done in the offer configuration.
 
 ### Offer setup
 
-On the **Offer setup** tab, under **Setup** details, select whether to sell your offer through Microsoft or manage your transactions independently. Offers sold through Microsoft are called transactable offers, which means that Microsoft facilitates the exchange of money for a software license on the publisher's behalf.
+On the **Offer setup** tab, under **Setup** details, select whether to sell your offer through Microsoft or manage your transactions independently. Offers sold through Microsoft are called transactable offers, which means Microsoft facilitates the exchange of money for a software license on the publisher's behalf.
 
 1. If you haven't added Offer Alias while creating the offer, enter a suitable Offer Alias name.
 
@@ -77,7 +77,7 @@ On the **Offer setup** tab, under **Setup** details, select whether to sell your
 
 ### Configure Properties
 
-On the Properties tab, you define the categories and industries applicable to your offer, your app version, and legal contracts. Be sure to provide complete and accurate details about your offer on this page, so that it's displayed appropriately and offered to the right set of customers.
+On the Properties tab, you define the categories and industries applicable to your offer, your app version, and legal contracts. You must provide complete and accurate details for the offer to be identified by the right set of customers.
 
 1. Under **Category**, select at least one and up to two categories for grouping your offer into the appropriate marketplace search areas.
 1. Under **Industries**, select up to two industries and up to two subindustries (also called verticals) for each industry.
@@ -121,9 +121,9 @@ Offers sold as transactable SaaS offers must have at least one plan. If you opt 
 
 ### Submit the offer
 
-When you finish configuring the offer, validate the offer and submit your offer for publishing. The offer overview page shows the Publish status where you can track the progress.
+When you finish configuring the offer along with the plans, validate the offer and submit your offer for publishing. The offer overview page displays the **Publish status** where you can track the progress.
 
-When the offer is in Publisher sign-off state, preview links for the respective platforms are given below the **Go live** button to test the offer. It's recommended to [preview and test the offer](Test-preview-for-monetized-apps.md) before you publish the offer live.
+When the offer reaches the **Publisher signoff** stage, preview links for the respective platforms are given below the **Go live** button to test the offer. It's recommended to [preview and test the offer](Test-preview-for-monetized-apps.md) before you publish the offer live.
 
 ## Code sample
 
@@ -135,3 +135,10 @@ When the offer is in Publisher sign-off state, preview links for the respective 
 
 > [!div class="nextstepaction"]
 > [Set up Microsoft license management](manage-third-party-apps-license.md)
+
+## See also
+
+* [Configure properties](/partner-center/marketplace/create-new-saas-offer-properties)
+* [Configure offer listing](/partner-center/marketplace/create-new-saas-offer-listing)
+* Configure [preview audience](/partner-center/marketplace/create-new-saas-offer-preview) and [technical details](/partner-center/marketplace/create-new-saas-offer-technical)
+* [Test and publish SaaS offer](/partner-center/marketplace/test-publish-saas-offer)
