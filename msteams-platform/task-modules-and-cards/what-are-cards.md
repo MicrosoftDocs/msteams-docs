@@ -63,7 +63,7 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 
 ### People icon in an Adaptive Card
 
-[People icon](cards/people-picker.md#people-icon-in-an-adaptive-card) helps users to view the images of users in an Adaptive Card. You can view the image of a single user or multiple users. People icon is supported in Teams mobile and desktop clients.
+[People icon in an Adaptive Card](cards/cards-format.md#people-icon-in-an-adaptive-card) helps users to view the images of users in the Adaptive Card in Teams. You can view the image of a single user or multiple users. People icon is supported in Teams mobile and desktop clients.
 
 ### Typeahead search in Adaptive Cards  
 
