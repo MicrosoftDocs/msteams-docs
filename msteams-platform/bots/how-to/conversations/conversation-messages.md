@@ -27,7 +27,7 @@ The following table lists the activity that your bot can receive and take action
 | [Receive a message activity](#receive-a-message-activity) | Message activity | All |
 | [Receive edit message activity](#get-edit-message-activity) | Message edit activity | All |
 | [Receive undelete message activity](#get-undelete-message-activity) | Message undelete activity | All |
-| [Get soft delete message activity](#get-soft-delete-message-activity) | Message soft delete activity | All |
+| [Receive soft delete message activity](#get-soft-delete-message-activity) | Message soft delete activity | All |
 
 ## Receive a message activity
 
