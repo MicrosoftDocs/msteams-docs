@@ -401,13 +401,13 @@ Your bot can query for the list of members and their basic user profiles, includ
 
 The following is an example of the people icon in an Adaptive Card on Teams desktop and mobile clients:
 
-# [Desktop](#tab/desktop)
+# [Desktop](#tab/desktop2)
 
 :::image type="content" source="../../assets/images/adaptive-cards/people-icon-persona-persona-set.png" alt-text="Screenshot shows a persona and persona set icons in an Adaptive Card in Teams desktop client.":::
 
 When a user hovers on a people icon, the people card of that user is displayed.
 
-# [Mobile](#tab/mobile)
+# [Mobile](#tab/mobile2)
 
 :::row:::
     :::column:::
