@@ -83,7 +83,7 @@ items:
 
        You can optionally create a new resource group. Select **Create new** > enter resource name > select **OK**. Select the required location from the **New resource group location** dropdown list.
    
-       :::image type="content" source="~/assets/images/conversation-bot/newresource_1.png" alt-text="Screenshot showing the new resource group location.":::
+       :::image type="content" source="~/assets/images/conversation-bot/newresource-group-location.png" alt-text="Screenshot showing the new resource group location.":::
 
     1. In the **Microsoft App ID** section, select **Type of App** as **Multi Tenant**.
 
@@ -107,7 +107,7 @@ items:
 
     1. Select **Go to resource**. 
 
-       :::image type="content" source="./assets/images/conversation-bot/go-to-resource_1.png" alt-text="Go to resource card.":::
+       :::image type="content" source="./assets/images/conversation-bot/deployment-go-to-resource.png" alt-text="Go to resource card.":::
 
        Your Azure Bot is created and you can see the **Resource group** and **Subscription ID** in the Azure Bot.
 
