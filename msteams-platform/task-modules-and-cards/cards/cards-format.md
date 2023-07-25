@@ -400,13 +400,13 @@ Your bot can query for the list of members and their basic user profiles, includ
 
 The following is an example of the people icon in an Adaptive Card on Teams desktop and mobile clients:
 
-# [Desktop](#tab/desktop)
+# [Desktop client](#tab/desktop-client)
 
 :::image type="content" source="../../assets/images/adaptive-cards/people-icon-persona-persona-set.png" alt-text="Screenshot shows a persona and persona set icons in an Adaptive Card in Teams desktop client.":::
 
 When a user hovers on a people icon, the people card of that user is displayed.
 
-# [Mobile](#tab/mobile)
+# [Mobile client](#tab/mobile-client)
 
 :::row:::
     :::column:::
@@ -728,7 +728,7 @@ In the following example, all the actions are marked as secondary, therefore, a 
 
 The following is an example of the overflow menu experience in Teams desktop and mobile:
 
-# [Desktop](#tab/desktop1)
+# [Desktop](#tab/desktop)
 
 When a user selects the overflow menu on a desktop, the buttons that are set as secondary appear in the Adaptive Card.
 
@@ -738,7 +738,7 @@ When a user selects the overflow menu on a desktop, the buttons that are set as 
   
   :::image type="content" source="../../assets/images/Cards/desktop-overflow-menu-image-3.png" alt-text="Screenshot shows an example of an Adaptive Card with the buttons that are set as secondary as options in an overflow menu on Teams desktop.":::
 
-# [Mobile](#tab/mobile1)
+# [Mobile](#tab/mobile)
 
 When a user selects the overflow menu on mobile, the Adaptive Card displays the buttons that are defined. There's an integrated sheet that displays an overflow menu with card related tasks with a message option. A long press on any message displays a list of related messages. This option is available only for actions.
 
