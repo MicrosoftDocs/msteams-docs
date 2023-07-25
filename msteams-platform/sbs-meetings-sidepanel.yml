@@ -88,7 +88,7 @@ items:
     
        You can optionally create a new resource group. Select **Create new** > enter resource name > select **OK**. Select required location from **New resource group location** dropdown list.
 
-       :::image type="content" source="~/assets/images/conversation-bot/newresource.png" alt-text="Screenshot of New resource group location displaying the New resource group location.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/newresource.png" alt-text="Screenshot of New resource group location displaying the New resource group location.":::
 
     1. In the **Microsoft App ID** section, select **Type of App** as **Multi Tenant**.
     1. In the **Creation Type**, by default **Create new Microsoft App ID** is selected. You can optionally select **Use existing app registration** and enter **App ID**, **App tenant ID**, and **MSI resource ID**.
@@ -98,7 +98,7 @@ items:
 
     1. Select **Review + create**.
 
-       :::image type="content" source="./assets/images/conversation-bot/tenant-review-type-of-app.png" alt-text="Screenshot of Microsoft App ID section under Create an Azure Bot. The Type of App selected and Review plus create options are highlighted in red.":::
+       :::image type="content" source="./assets/images/meetings-side-panel/tenant-review.png" alt-text="Screenshot of Microsoft App ID section under Create an Azure Bot. The Type of App selected and Review plus create options are highlighted in red.":::
 
     1. If the validation is passed, select **Create**.
 
@@ -108,11 +108,11 @@ items:
 
     1. Select **Go to resource**. 
 
-       :::image type="content" source="./assets/images/conversation-bot/resource.png" alt-text="Screenshot of deployment complete with the Go to resource option highlighted in red.":::
+       :::image type="content" source="./assets/images/meetings-side-panel/go-to-resource.png" alt-text="Screenshot of deployment complete with the Go to resource option highlighted in red.":::
 
         Your Azure bot is created and you can see the **Resource group** and **Subscription ID** in the Azure Bot.
 
-        :::image type="content" source="./assets/images/conversation-bot/app-overview.png" alt-text="Screenshot of the Azure bot Home page that is created.":::
+        :::image type="content" source="./assets/images/meetings-side-panel/app-overview.png" alt-text="Screenshot of the Azure bot Home page that is created.":::
 
     **To create client secret**
 
