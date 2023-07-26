@@ -928,7 +928,7 @@ Provides the ability to prefer or hide particular in-market Add-ins for the purp
 |`prefer.comAddin`| object | | | |
 |`prefer.comAddin.progId`| string | 64 characters | ✔️ | Identifies the application type in which the extension can run.|
 |`hide`| object | | | |
-|`hide.storeOfficeAddin`| object | | | Specifies an Office Add-in available in the Microsoft store.|
+|`alternates.hide.storeOfficeAddin`| object | | | Specifies an Office Add-in available in AppSource.|
 |`hide.storeOfficeAddin.officeAddinId`| string | 64 characters | ✔️ |Solution ID of an in-market add-in to hide.|
 |`hide.storeOfficeAddin.assetId`| string | 64 characters | ✔️ | Asset ID of the in-market add-in to hide.|
 |`hide.customOfficeAddin`| | | | |
