@@ -875,7 +875,7 @@ Provides the ability to add buttons and menu items, collectively called "[add-in
 |`tabs.groups.icons.size`| number | |✔️| Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
 |`tabs.groups.icons.url`| URL| | | URL to the icon.|
 |`tabs.groups.icons.file`| string | 2048 characters| | Relative path to the file that contains the icon. This property is currently not supported as a relative path.|
-|`tabs.groups.controls`| array | | |  |
+|`tabs.groups.controls`| array | | | Configures the buttons and menus in the group. |
 |`tabs.groups.controls.id`| string | 64 characters| ✔️ | Unique identifier for this control within the app. |
 |`tabs.groups.controls.items`| object | | | |
 |`tabs.groups.controls.items.id`| string | | ✔️ | Unique identifier for this control within the app. |
