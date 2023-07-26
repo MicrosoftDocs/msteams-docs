@@ -836,7 +836,7 @@ Specifies the Office applications and [requirement sets](/javascript/api/require
 
 ### extensions.runtimes
 
-Configures the sets of runtimes and actions that can be used by each extension point.
+Configures the sets of [runtimes](office/dev/add-ins/testing/runtimes) and actions that can be used by each extension point. For concrete examples of using `extensions.runtimes`, see [Create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), especially, [Configure the runtime for a task pane](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-task-pane-command) and [Configure the runtime for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-function-command).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
