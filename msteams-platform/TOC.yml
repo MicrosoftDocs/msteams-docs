@@ -1048,7 +1048,9 @@
     - name: Deep link to Teams chat
       href: concepts/build-and-test/deep-link-teams.md   
     - name: Deep link to a workflow in Teams
-      href: concepts/build-and-test/deep-link-workflow.md  
+      href: concepts/build-and-test/deep-link-workflow.md
+    - name: Execution and handling of deep links
+      href: concepts/build-and-test/deep-links-execution-handling.md    
   - name: Integrate People Picker  
     href: concepts/device-capabilities/people-picker-capability.md
 - name: Resources
