@@ -675,16 +675,31 @@ Remember the following:
 
 ### Videos
 
-A video in your app listing is one of the most effective ways to communicate why people should use your app. You can add a URL for your YouTube or Vimeo video.
+A video in your app listing is one of the most effective ways to communicate why people should use your app. You can add an app value video and demo or scenario walkthrough video URLs. You can add a URL for your YouTube or Vimeo video. [*Suggested fix*]
 
-If you choose to submit a video as part of your app listing in your Partner Center account, ensure the following:
+If you choose to submit a video as part of your app listing in your Partner Center account, ensure the following criteria is met for each type of video.
 
-* The duration of the video doesn't exceed 90 seconds. [*Suggested Fix*]
+App value video:
+
+* The video must be short, clear, and engaging.
+* The video must be of good quality.
+* The duration of the video must be within 60-90 seconds. [*Suggested Fix*]
 * You turn off advertisements from your YouTube or Vimeo account settings before submitting the video link in the app listing. [*Mandatory Fix*]
 * The video showcases your app’s functionality and integration within Teams. [*Mandatory Fix*]
 * The video is available as a functional link. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/video-app-listing-partner-center.png" alt-text="Screenshot shows the failed scenario of video submitted as part of app listing in partner center.":::
+
+App demo or scenario walkthrough video:
+
+* The video must demonstrate how to set up and use the app.
+* The video must be of good quality.
+* The duration of the video must be within three-five minutes. [*Suggested Fix*]
+* You turn off advertisements from your YouTube or Vimeo account settings before submitting the video link in the app listing. [*Mandatory Fix*]
+* The video should give the first run experience for the users and train to use the app.
+* The video mustn’t have marketing content. [*Mandatory Fix*]
+* The video must demonstrate how the product works.
+* The video is available as a functional link. [*Mandatory Fix*]
 
 <br></br>
 
