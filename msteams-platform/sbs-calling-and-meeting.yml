@@ -103,7 +103,7 @@ items:
 
     1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
 
-         :::image type="content" source="./assets/images/calls-and-meetings/go-to-resource_1.png" alt-text="Screenshot of Home page that shows the deployment complete status with Go to resource button highlighted in red.":::
+         :::image type="content" source="./assets/images/calls-and-meetings/go-to-resource.png" alt-text="Screenshot of Home page that shows the deployment complete status with Go to resource button highlighted in red.":::
 
         Now your Azure bot has been created.
 
