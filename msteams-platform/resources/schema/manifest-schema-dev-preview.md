@@ -878,7 +878,7 @@ Provides the ability to add buttons and menu items, collectively called "[add-in
 |`tabs.groups.controls`| array | | | Configures the buttons and menus in the group. |
 |`tabs.groups.controls.id`| string | 64 characters| ✔️ | Unique identifier for this control within the app. Must be different from any built-in control id in the Office application and any other custom control.|
 |`tabs.groups.controls.items`| object | | | Configures the items for a menu control. |
-|`tabs.groups.controls.items.id`| string | | ✔️ | Unique identifier for this control within the app. |
+|`tabs.groups.controls.items.id`| string | | ✔️ | Unique identifier for this item within the app. |
 |`tabs.groups.controls.items.type`| string enum | | ✔️ | Supported values: `menuItem`. |
 |`tabs.groups.controls.items.label`| string | 64 characters| ✔️ | Displayed text for the control. |
 |`tabs.groups.controls.items.icons`| array | | | |
