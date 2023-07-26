@@ -299,7 +299,7 @@ The unique Microsoft-generated identifier for this app. If you've registered a b
 
 Required:
 
-Specifies information about your company. For apps submitted to AppSource (formerly Office Store), these values must match the information in your AppSource entry.
+Specifies information about your company. For apps submitted to Microsoft AppSource (formerly Office Store), these values must match the information in your AppSource entry.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -332,7 +332,7 @@ An array of objects specifying additional language translations.
 
 Required:
 
-The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` shouldn't be the same.
+The name of your app experience, displayed to users in the Teams experience. For apps submitted to Microsoft AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` shouldn't be the same.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -343,7 +343,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 
 Required:
 
-Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry.
+Describes your app to users. For apps submitted to Microsoft AppSource, these values must match the information in your AppSource entry.
 
 Ensure that your description accurately describes your experience and provides information to help potential customers understand what your experience does. You should also note, in the full description, if an external account is required for use. The values of `short` and `full` shouldn't be the same.  Your short description must not be repeated within the long description and must not include any other app name.
 
@@ -886,9 +886,9 @@ Provides the ability to add buttons and menu items, collectively called "[add-in
 |`tabs.groups.controls.items.icons.url`| URL| | | URL to the icon.|
 |`tabs.groups.controls.items.icons.file`| string | 2048 characters| | Relative path to the file that contains the icon. This property is currently not supported as a relative path.|
 |`tabs.groups.controls.items.supertip`| | |✔️| Configures a supertip for the custom item.|
-|`tabs.groups.controls.items.supertip.title`| string | 64 characters | ✔️ | Title text of the super tip.|
-|`tabs.groups.controls.items.supertip.description`| string | 128 characters | ✔️ | Description of the super tip.|
-|`tabs.groups.controls.items.actionID`| string | 64 characters | ✔️ | Identifies the action that is taken when a user selects the control or menu item. The "actionId" must be an exact match for a "runtime.actions.id". |
+|`tabs.groups.controls.items.supertip.title`| string | 64 characters | ✔️ | Title text of the supertip.|
+|`tabs.groups.controls.items.supertip.description`| string | 128 characters | ✔️ | Description of the supertip.|
+|`tabs.groups.controls.items.actionId`| string | 64 characters | ✔️ | Identifies the action that is taken when a user selects the control or menu item. The *actionId* must be an exact match for a `runtime.actions.id`. |
 |`tabs.groups.controls.items.enabled`| boolean | | | Indicates whether the control is initially enabled. Default is `true`.|
 |`tabs.groups.controls.items.overriddenByRibbonApi`| boolean | | | Specifies whether a group, button, menu, or menu item will be hidden on application and platform combinations that support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. Default is `false`.|
 |`tabs.groups.controls.type`| string | | ✔️ | Supported values: `button`, `menu`.|
@@ -898,10 +898,10 @@ Provides the ability to add buttons and menu items, collectively called "[add-in
 |`tabs.groups.controls.icons.size`| number | | ✔️ | Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
 |`tabs.groups.controls.icons.url`| URL| | | URL to the icon.|
 |`tabs.groups.controls.icons.file`| string | 2048 characters| | Relative path to the file that contains the icon. This property is currently not supported as a relative path.|
-|`tabs.groups.controls.supertip`| object | | ✔️ | Configures a super tip for the control. |
-|`tabs.groups.controls.supertip.title`| string | 64 characters | ✔️ |Title text of the super tip.|
-|`tabs.groups.controls.supertip.description`| string | 128 characters | ✔️ | Description of the super tip.|
-|`tabs.groups.controls.actionId`| string | 64 characters | ✔️ | Identifies the action that is taken when a user selects the control. The "actionId" must be an exact match for a "runtime.actions.id".|
+|`tabs.groups.controls.supertip`| object | | ✔️ | Configures a supertip for the control. |
+|`tabs.groups.controls.supertip.title`| string | 64 characters | ✔️ |Title text of the supertip.|
+|`tabs.groups.controls.supertip.description`| string | 128 characters | ✔️ | Description of the supertip.|
+|`tabs.groups.controls.actionId`| string | 64 characters | ✔️ | Identifies the action that is taken when a user selects the control. The *actionId* must be an exact match for a `runtime.actions.id`.|
 |`tabs.groups.controls.enabled`| boolean | | | Indicates whether the control is initially enabled. Default is `true`.|
 |`tabs.groups.controls.overriddenByRibbonApi`| boolean | | | Specifies whether a button, menu, or menu item will be hidden on application and platform combinations that support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. Default is `false`.|
 |`tabs.groups.builtinGroupId`| string | 64 characters | | ID of a built-in Group. See [Find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
@@ -914,7 +914,7 @@ Defines event-based activation extension points.
 |---|---|---|---|---|
 |`events`| array | | ✔️ | Configures events that cause actions in an Outlook add-in to run automatically. For a concrete example, see [Use Smart Alerts and the OnMessageSend and OnAppointmentSend events in your Outlook add-in](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest).|
 |`events.type`| string | 64 characters | | Specifies the type of event. For supported types, see [Supported events](/office/dev/add-ins/outlook/autolaunch?tabs=xmlmanifest#supported-events).|
-|`events.actionId`| string | 64 characters | | Identifies the action that is taken when the event fires. The "actionId" must be an exact match for a "runtime.actions.id". |
+|`events.actionId`| string | 64 characters | | Identifies the action that is taken when the event fires. The *actionId* must be an exact match for a `runtime.actions.id`. |
 |`events.options`| object | | | Configures how Outlook responds to the event.|
 |`events.options.sendMode`| string | | ✔️ | Actions to take during a mail send action. Supported values: `promptUser`, `softBlock`, `block`. For details about these values and their meaning, see [Available send mode options](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest#available-send-mode-options).|
 
@@ -928,11 +928,11 @@ Provides the ability to prefer or hide particular in-market add-ins when you hav
 |`alternates.prefer.comAddin`| object | | | Specifies a COM add-in that should be used in place of the Office Web Add-in when the OS is Windows.|
 |`alternates.prefer.comAddin.progId`| string | 64 characters | ✔️ | Identifies the application type in which the extension can run.|
 |`alternates.hide`| object | | | Configures how to hide another add-in that you have published whenever this add-in is installed, so users don't see both in the Office UI. For example, use this when you have previously published an add-in that uses the old XML manifest and you are replacing it with a version that uses the new JSON manifest. For more information and a concrete example, see [Manage both a unified manifest and an XML manifest version of your Office Add-in](/office/dev/add-ins/concepts/duplicate-legacy-metaos-add-ins).|
-|`alternates.hide.storeOfficeAddin`| object | | | Specifies an Office Add-in available in AppSource.|
-|`alternates.hide.storeOfficeAddin.officeAddinId`| string | 64 characters | ✔️ |ID of an in-market add-in to hide. This is GUID from the manifest's "id" property, if the in-market add-in uses the JSON manifest, or from the `<Id>` element, if the in-market add-in uses the XML manifest.|
+|`alternates.hide.storeOfficeAddin`| object | | | Specifies an Office Add-in available in Microsoft AppSource.|
+|`alternates.hide.storeOfficeAddin.officeAddinId`| string | 64 characters | ✔️ |ID of an in-market add-in to hide. This GUID is from the manifest `id` property, if the in-market add-in uses the JSON manifest, or from the `<Id>` element, if the in-market add-in uses the XML manifest.|
 |`alternates.hide.storeOfficeAddin.assetId`| string | 64 characters | ✔️ | The AppSource asset ID of the in-market add-in to hide.|
 |`alternates.hide.customOfficeAddin`| | | | Configures hiding an in-market add-in that is not distributed through AppSource.|
-|`alternates.hide.customOfficeAddin.officeAddinId`|string | 64 characters | ✔️ | ID of the in-market add-in to hide. This is GUID from the manifest's "id" property, if the in-market add-in uses the JSON manifest, or from the `<Id>` element, if the in-market add-in uses the XML manifest.|
+|`alternates.hide.customOfficeAddin.officeAddinId`|string | 64 characters | ✔️ | ID of the in-market add-in to hide. This GUID is from the manifest `id` property, if the in-market add-in uses the JSON manifest, or from the `<Id>` element, if the in-market add-in uses the XML manifest.|
 
 ## See also
 
