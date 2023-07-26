@@ -915,7 +915,7 @@ Defines event-based activation extension points.
 |`events`| array | | ✔️ | Configures events that cause actions in an Outlook add-in to run automatically. For a concrete example, see [Use Smart Alerts and the OnMessageSend and OnAppointmentSend events in your Outlook add-in](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest).|
 |`events.type`| string | 64 characters | | Specifies the type of event. For supported types, see [Supported events](/office/dev/add-ins/outlook/autolaunch?tabs=xmlmanifest#supported-events).|
 |`events.actionId`| string | 64 characters | | Identifies the action that is taken when the event fires. The "actionId" must be an exact match for a "runtime.actions.id". |
-|`events.options`| object | | | |
+|`events.options`| object | | | Configures how Outlook responds to the event.|
 |`events.options.sendMode`| string | | ✔️ | Actions to take during a mail send action. Supported values: `promptUser`, `softBlock`, `block`.|
 
 ### extensions.prefer
