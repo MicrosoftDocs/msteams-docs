@@ -38,7 +38,7 @@ items:
      | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |   
-     | &nbsp; | [.NET Core SDK version](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. You can install the .NET 3.1 (or later) SDK globally, or you can install the portable version. |
+     | &nbsp; | [.NET Core SDK version](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the latest version, install the portable version. |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place. |
      | &nbsp; | [Windows PowerShell](/microsoftteams/teams-powershell-install) | Install by executing all the commands. |
 
@@ -125,7 +125,7 @@ items:
          :::image type="content" source="./assets/images/calls-and-meetings/client-secret_2.png" alt-text="Screenshot of Client secrets tab with client secret Value highlighted in red.":::
 
           > [!TIP]
-          > Save the client secrets **Value** or app password for future reference.
+          > Save the **Client secrets** **Value** or app password for future reference.
 
     **Create a policy for a demo tenant user to create online meetings using the following PowerShell script**:
 
@@ -270,7 +270,7 @@ items:
           
            1. Select **Teams**.
 
-           1. Select **More** (**...**).
+           1. Select More options (...).
 
            1. Select **Get link to team**.
 
@@ -330,19 +330,21 @@ items:
 
        :::image type="content" source="~/assets/images/calls-and-meetings/bot-is-ready.png" alt-text="Screenshot of localhost displaying your bot is ready." lightbox="~/assets/images/calls-and-meetings/your-bot-is-ready.png":::
     
-    1. Go to **Microsoft Teams** and select the **Apps** icon.
+    1. In the Teams client, select the **Apps** icon.
     
     1. Select **Manage your apps**.
+
+    1. Select **Upload an app**.
    
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled. 
 
-       :::image type="content" source="~/assets/images/upload-an-app.PNG" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
+       :::image type="content" source="~/assets/images/custom-app-upload.PNG" alt-text="Screenshot showing the selection of Upload a custom app.":::
 
     1. Open `manifest.zip` from the repository folder in File Explorer.
 
     1. Select **Add** to install the **Calling bot** app in Teams.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/output_1.png" alt-text="Screenshot of Calling bot with Add option highlighted in red.":::
+        :::image type="content" source="./assets/images/calls-and-meetings/calling-bot-add.png" alt-text="Screenshot of Calling bot with Add option highlighted in red.":::
 
         You can interact with this bot after debugging in Visual Studio.
 
