@@ -912,7 +912,7 @@ Defines event-based activation extension points.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`events`| array | | ✔️ | |
+|`events`| array | | ✔️ | Configures events that cause actions in an Outlook add-in to run automatically. For a concrete example, see [Use Smart Alerts and the OnMessageSend and OnAppointmentSend events in your Outlook add-in](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest).|
 |`events.type`| string | 64 characters | | |
 |`events.actionId`| string | 64 characters | | The ID of an action defined in runtimes. |
 |`events.options`| object | | | |
