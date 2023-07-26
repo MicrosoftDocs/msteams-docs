@@ -855,7 +855,7 @@ Configures the sets of [runtimes](office/dev/add-ins/testing/runtimes) and actio
 
 ### extensions.ribbons
 
-Provides the ability to add items associated with the extension to the Ribbon. One Ribbon definition is selected from the array based on the requirements, based on first-of order.
+Provides the ability to add buttons and menu items, collectively called "[add-in commands](/office/dev/add-ins/design/add-in-commands)", to the Office application's ribbon. One ribbon definition is selected from the array based on the requirements, based on first-of order. For concrete examples of using `extensions.ribbons`, see [Create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), especially, [Configure the UI for the task pane command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-task-pane-command) and [Configure the UI for the function command](https://learn.microsoft.com/en-us/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-function-command).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
