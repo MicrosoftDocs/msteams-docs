@@ -880,7 +880,7 @@ Provides the ability to add buttons and menu items, collectively called "[add-in
 |`tabs.groups.controls.items`| object | | | Configures the items for a menu control. |
 |`tabs.groups.controls.items.id`| string | | ✔️ | Unique identifier for this item within the app. |
 |`tabs.groups.controls.items.type`| string enum | | ✔️ | Supported values: `menuItem`. |
-|`tabs.groups.controls.items.label`| string | 64 characters| ✔️ | Displayed text for the control. |
+|`tabs.groups.controls.items.label`| string | 64 characters| ✔️ | Displayed text for the item. |
 |`tabs.groups.controls.items.icons`| array | | | |
 |`tabs.groups.controls.items.icons.size`| number | |✔️| Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
 |`tabs.groups.controls.items.icons.url`| URL| | | URL to the icon.|
