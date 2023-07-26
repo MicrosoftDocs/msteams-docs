@@ -366,7 +366,7 @@ items:
           > `WebAppDomain` is your ngrok domain.
           > If the ngrok ID end with `*.ngrok-free.app` valid domain is optional.
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/manifest.png" alt-text="Screenshot shows the Manifest cloned repository.":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/manifest-file.png" alt-text="Screenshot shows the Manifest cloned repository."lightbox="~/assets/images/meeting-content-bubble/manifest.png":::
 
 - title: Build and run the service
   durationInMinutes: 1
