@@ -108,7 +108,7 @@ items:
 
     1. Select **Create**.
 
-        :::image type="content" source="./assets/images/bots/azure-bot_1.png" alt-text="Screenshot of the Azure Bot create page.":::
+        :::image type="content" source="./assets/images/bots/azure-bot.png" alt-text="Screenshot of the Azure Bot create page.":::
 
        The **Create an Azure Bot** window appears.
 
@@ -162,14 +162,12 @@ items:
 
     1. In the left pane, select **Configuration**.
 
-        :::image type="content" source="~/assets/images/bots/selectconfigure_1.png" alt-text="Screenshot of Configuration page under Azure portal with the Microsoft App ID option highlighted in red.":::
-
        > [!Tip]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
     
-    1. Next to **Microsoft App ID**, select **Manage**.
+    1. Next to **Microsoft App ID**, select **Manage Password**.
 
-         :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="Screenshot of Microsoft App ID option under Configuration page with the Manage option highlighted in red.":::
+         :::image type="content" source="~/assets/images/bots/manage-password-bot-label.png" alt-text="Screenshot of Microsoft App ID option under Configuration page with the Manage option highlighted in red.":::
 
     1. In the **Client secrets** section, select **New client secret**.
 
@@ -269,7 +267,7 @@ items:
 
     1. In **Platform configurations**, select **Add a platform** to choose the platform on which you want to host the bot app. 
 
-    1. For this tutorial, select **Web**.
+    1. Select **Web**.
 
         :::image type="content" source="~/assets/images/bots/select-web_1.png" alt-text="Screenshot of Authentication page of Azure portal. The Authentication option in the left pane, Add a platform, and Web options are highlighted in red.":::
         
@@ -349,25 +347,24 @@ items:
 
         :::image type="content" source="~/assets/images/bots/addaclientapplication.png" alt-text="Screenshot of Authorized client applications with Add a client application highlighted in red.":::
 
-       The **Add a client application** window appears.
+    1. Enter each of the following client IDs:
 
-    1. Enter the Client ID you want to authorize for desktop and web application separately. It's the application ID of client application that you want to authorize.
-       
-       |**Client ID**|**For authorizing**|
-       |--------|-------------|
-       | `1fec8e78-bce4-4aaf-ab1b-5451cc387264` | Teams desktop or mobile application |
-       | `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` | Teams web application |
+       * Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
-    1. Select **Authorized scopes** to determine which type of token will be returned by the service.
+         :::image type="content" source="~/assets/images/meetings-side-panel/addclientapplication1.png" alt-text="Screenshot of Add a client application page with the Client ID 1 highlighted in red."::: 
 
-        :::image type="content" source="~/assets/images/bots/add-desktop-app.png" alt-text="Screenshot of Add a client application with Add application highlighted in red.":::
-       
-    1. Select **Add application**.
+       * Enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-        The following image displays the Client id:
+         :::image type="content" source="~/assets/images/meetings-side-panel/addclientapplication2.png" alt-text="Screenshot of Add a client application with the Client ID 2 highlighted in red.":::
 
-          :::image type="content" source="~/assets/images/bots/clientapps.png" alt-text="Screenshot of Authorized client applications with the Client IDs displayed.":::
+    1. Select **Authorized scopes**.
 
+         :::image type="content" source="~/assets/images/meetings-side-panel/authorizedscope_1.png" alt-text="Screenshot of Authorized scopes section under Expose an API page with the scope highlighted in red":::
+
+       The following image displays the client Id:
+
+         :::image type="content" source="~/assets/images/meetings-side-panel/clientapps.png" alt-text="Screenshot of Authorized client applications under Expose an API with the client IDs highlighted in red."::: 
+         
     **Configure Graph permissions**
 
     1. In the left pane, select **API permissions**.
@@ -520,13 +517,12 @@ items:
 
     1. Go to **Microsoft Teams**.
     
-    1. Select **Apps** > **Manage your apps**.
+        1. In the Teams client, select the **Apps** icon.
+        1. Select **Manage your apps**.
+        1. Select **Upload an app**.
+        1. Look for the option to **Upload a custom app**.
 
-         :::image type="content" source="~/assets/images/bots/manage-apps_3.png" alt-text="Screenshot of Teams app with the Apps icon and Manage your apps option highlighted in red.":::
-
-    1. Select **Upload an app**.
-    
-         :::image type="content" source="~/assets/images/bots/custom-app-upload.png" alt-text="Screenshot of Teams app with the Apps icon, Manage your apps, and showing the selection of Upload a custom app option highlighted in red.":::
+            :::image type="content" source="~/assets/images/bots/custom-app-upload.png" alt-text="Screenshot of Teams app with the Apps icon, Manage your apps, and showing the selection of Upload a custom app option highlighted in red.":::
 
     1. Select **Open** to upload the .zip file that you've created in the **Manifest** folder.
 
