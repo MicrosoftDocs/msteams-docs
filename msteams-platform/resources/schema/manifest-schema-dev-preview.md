@@ -813,7 +813,7 @@ The set of add-ins for this app. Used to specify Outlook Add-ins within an app m
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`requirements`| object | | | Specifies the set of client or host requirements for the extension. |
-|`runtimes`| array | | | Configures the sets of runtimes and actions that can be used by each extension point.  |
+|`runtimes`| array | | | Configures the sets of runtimes and actions that can be used by each extension point. See [Runtimes in Office Add-ins](office/dev/add-ins/testing/runtimes). |
 |`ribbons`| array | | | Defines the ribbons extension point. |
 |`autoRunEvents`| array | | | Defines event-based activation extension points. |
 |`prefer`| array | | | Specifies relationship to alternate existing Microsoft 365 solutions. Used for de-duping and backwards compatibility. |
