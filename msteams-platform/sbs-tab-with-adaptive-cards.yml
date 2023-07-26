@@ -210,7 +210,7 @@ items:
 
         :::image type="content" source="~/assets/images/adaptive-cards/web-auth.png" alt-text="Screenshot of Authentication with Add a platform, Configure Web, Redirect URLs, and Configure options are highlighted in red.":::
 
-    1. Enter the **Redirect URIs** as `https://token.botframework.com/.auth/web/redirect`.
+    1. Enter the **Redirect URIs** as **https://token.botframework.com/.auth/web/redirect**.
 
     1. Select the following to enable **Implicit grant and hybrid flows**:</br>
        * **ID tokens**
@@ -235,19 +235,19 @@ items:
 
        :::image type="content" source="~/assets/images/meetings-side-panel/selectscope_2.png" alt-text="Select scope":::
 
-    1. Enter *access_as_user* as the **Scope name**.
+    1. Enter **access_as_user** as the **Scope name**.
 
     1. Set **Who can consent?** to **Admins and users**.
   
     1. To configure the admin and user consent prompts with appropriate values for **access_as_user** scope, provide the following information in the fields:</br>
     
-         * Enter *Teams can access the user’s profile* as **Admin consent display name**.
+         * Enter **Teams can access the user’s profile** as **Admin consent display name**.
 
-         * Enter *Allows Teams to call the app’s web APIs as the current user* as **Admin consent description**.
+         * Enter **Allows Teams to call the app’s web APIs as the current user** as **Admin consent description**.
 
-         * Enter *Teams can access the user profile and make requests on the user’s behalf* as **User consent display name**.
+         * Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**.
 
-         * Enter *Enable Teams to call this app’s APIs with the same rights as the user* as **User consent description**.
+         * Enter **Enable Teams to call this app’s APIs with the same rights as the user** as **User consent description**.
   
     1. Ensure that **State** is set to **Enabled**.
   
