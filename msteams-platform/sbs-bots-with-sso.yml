@@ -443,7 +443,7 @@ items:
 
     1. In the **Repository location**, enter `https://github.com/OfficeDev/Microsoft-Teams-Samples.git`. Ensure that you note the **Path** where the repository is cloned.
     
-    1. Go to **File** > **Open** > **Project/Solution**.
+    1. Go to **File** > **Open** > **Project/Solution...**.
 
         :::image type="content" source="~/assets/images/bots/project-solution_1.png" alt-text="Screenshot of Visual Studio file menu. The menu entries titled Open under File menu and Project/Solution under Open are highlighted in red.":::
 
@@ -545,12 +545,12 @@ items:
         > [!NOTE]
         > Now you have configured SSO with your bot app and it's the only time you'll have to give consent.
 
-      For mobile device, select **Accept**.
+       For mobile device, select **Accept**.
 
         > [!NOTE]
         > Now you have configured SSO with your bot app in mobile, and this is the only time you'll have to give consent.
 
-        :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Screenshot of bot SSO output after you have successfully completed the step-by-step guide.":::
+         :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Screenshot of bot SSO output after you have successfully completed the step-by-step guide.":::        
 
 - title: Complete challenge
   durationInMinutes: 1
