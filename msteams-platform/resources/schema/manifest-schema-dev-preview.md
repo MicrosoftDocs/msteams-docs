@@ -823,7 +823,7 @@ For more information, see [Office Add-ins manifest for Microsoft 365](/office/de
 
 ### extensions.requirements
 
-Specifies the set of client or host requirements for an extension. If a client doesn't support the specified requirements, the extension will not be available in that client. Requirements are supported at the element and sub-element level. In both cases, the service only returns items that match the host.
+Specifies the Office applications and [requirement sets](/javascript/api/requirement-sets) for an add-in. If the user's Office version doesn't support the specified requirements, the extension will not be available in that client. Requirements are supported at the element and sub-element level. In both cases, the service only returns items that match the host.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
