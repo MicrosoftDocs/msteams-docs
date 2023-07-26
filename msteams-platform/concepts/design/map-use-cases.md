@@ -100,7 +100,9 @@ For example:
    :::column span="":::
       :::image type="icon" source="~/assets/images/overview/tab.png" border="false":::
    :::column-end:::
+   :::column span="":::
 :::image type="icon" source="~/assets/images/overview/line-1.png" border="false":::
+   :::column-end:::
      :::image type="content" source="~/assets/images/overview/tab-extension.png" alt-text="Microsoft Teams app tab details." border="false":::
 :::row-end:::
 
@@ -181,7 +183,7 @@ For example:
    :::column span="":::
       :::image type="icon" source="~/assets/images/overview/graph-conversational-interface.png" border="false":::
    :::column-end:::
-     :::image type="content" source="~/assets/images/overview/graph-conversational-interface-extension.png" alt-text="Microsoft Teams apps for office 365 connector details." border="false":::
+     :::image type="content" source="~/assets/images/overview/graph-conversational-interface-extension.png" alt-text="Microsoft Teams apps for graph conversational interface details." border="false":::
 :::row-end:::
 
 ## See also
