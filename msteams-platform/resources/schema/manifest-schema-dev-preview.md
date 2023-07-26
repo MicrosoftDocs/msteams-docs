@@ -827,7 +827,7 @@ Specifies the Office applications and [requirement sets](/javascript/api/require
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`requirements.capabilities`| array | | | Identifies the requirement sets that the add-in needs to be installable. Each object in the array is made up of three strings `name` (required), `minVersion`, and `maxVersion`. |
+|`requirements.capabilities`| array | | | Identifies the requirement sets that the add-in needs to be installable. Each object in the array is made up of three strings: `name` (required), `minVersion`, and `maxVersion`. |
 |`requirements.capabilities.name`| string | | ✔️ | Identifies the name of the [requirement sets](/javascript/api/requirement-sets) that the add-in needs to run. |
 |`requirements.capabilities.minVersion`| string | | | Identifies the minimum version for the requirement sets that the add-in needs to run. |
 |`requirements.capabilities.maxVersion`| string | | | Identifies the maximum version for the requirement sets that the add-in needs to run. |
@@ -836,26 +836,26 @@ Specifies the Office applications and [requirement sets](/javascript/api/require
 
 ### extensions.runtimes
 
-Configures the sets of [runtimes](office/dev/add-ins/testing/runtimes) and actions that can be used by each extension point. For concrete examples of using `extensions.runtimes`, see [Create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), especially, [Configure the runtime for a task pane](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-task-pane-command) and [Configure the runtime for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-function-command).
+Configures the sets of [runtimes](office/dev/add-ins/testing/runtimes) and actions that can be used by each extension point. For concrete examples of using `extensions.runtimes`, see [Create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), especially [Configure the runtime for a task pane](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-task-pane-command) and [Configure the runtime for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-function-command).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`| string | 64 characters | ✔️ | The ID for the runtime. |
 |`type`| string enum | | ✔️ | Specifies the type of runtime. Currently supports `general` for [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime). |
-|`code`| object | | ✔️ | Specifies the location of code for this runtime. Depending on the `runtime.type`, add-ins use either a JavaScript file or an HTML page, with an embedded `<script>` tag that specifies the URL of a JavaScript file. URLs for both are required because there are scenarios in which you can't know which type of runtime your add-in will use.|
-|`code.page`| url | | ✔️ | URL of the web page, that contains an embedded `<script>` tag that specifies the URL of a JavaScript file, to be loaded in [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime). |
+|`code`| object | | ✔️ | Specifies the location of code for this runtime. Depending on the `runtime.type`, add-ins use either a JavaScript file or an HTML page with an embedded `<script>` tag that specifies the URL of a JavaScript file. URLs for both are required because there are scenarios in which you can't know which type of runtime your add-in will use.|
+|`code.page`| url | | ✔️ | URL of the web page that contains an embedded `<script>` tag which specifies the URL of a JavaScript file (to be loaded in a [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime)). |
 |`code.script`| url | | ✔️ | URL of the JavaScript file to be loaded in [JavaScript only](/office/dev/add-ins/testing/runtimes#javascript-only-runtime) runtimes. |
 |`lifetime`| string enum | | | Runtimes with a `short` lifetime do not preserve state across executions; runtimes with a `long` lifetime do. For more information about runtime lifetime, see [Runtimes in Office Add-ins](office/dev/add-ins/testing/runtimes).|
 |`actions`| array | | | Specifies the set of actions supported by this runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
 |`actions[0].id`| string | 64 characters | ✔️ | Identifier for this action which is passed to the code file. |
-|`actions.type`| string | | ✔️ | `executeFunction` runs a JavaScript function without waiting for it to finish. `openPage` opens a page in a given view. |
-|`actions.displayName`| string | 64 characters | | Display name for the action. Currently, this is not used. In particular, it is *not* the label of a button or menu item that invokes the action. That string is configured with `tabs.groups.controls.label`. See below.|
+|`actions.type`| string | | ✔️ | Supported values: `executeFunction` runs a JavaScript function without waiting for it to finish, `openPage` opens a page in a given view. |
+|`actions.displayName`| string | 64 characters | | Display name for the action. Currently, this is not used. In particular, it is *not* the label of a button or menu item that invokes the action (which is configured with `tabs.groups.controls.label`).|
 |`actions.pinnable`| boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. Defaults to `false`.|
 |`actions.view`| string | 64 characters | | Used only when `actions.type` is `openPage`. A description of the page that opens in the view; for example, "home page".|
 
 ### extensions.ribbons
 
-Provides the ability to add buttons and menu items, collectively called "[add-in commands](/office/dev/add-ins/design/add-in-commands)", to the Office application's ribbon. One ribbon definition is selected from the array based on the requirements, based on first-of order. For concrete examples of using `extensions.ribbons`, see [Create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), especially, [Configure the UI for the task pane command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-task-pane-command) and [Configure the UI for the function command](https://learn.microsoft.com/en-us/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-function-command).
+Provides the ability to add buttons and menu items, collectively called "[add-in commands](/office/dev/add-ins/design/add-in-commands)", to the Office application's ribbon. One ribbon definition is selected from the array based on the requirements, based on first-of order. For concrete examples of using `extensions.ribbons`, see [Create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), especially [Configure the UI for the task pane command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-task-pane-command) and [Configure the UI for the function command](https://learn.microsoft.com/en-us/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-function-command).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
