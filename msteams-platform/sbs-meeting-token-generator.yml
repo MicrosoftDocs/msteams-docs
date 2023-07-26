@@ -257,7 +257,7 @@ items:
     
     1. In the pane that appears, enter **access_as_user** as the **Scope name**.
   
-    1. Set **Who can consent?** to `Admins and users`.
+    1. Set **Who can consent?** to **Admins and users**.
   
     1. To configure the admin and user consent prompts with appropriate values for **access_as_user** scope, provide the following information in the fields:</br>
     
@@ -304,7 +304,7 @@ items:
 
          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-clientapps.png" alt-text="Screenshot of Authorized client applications under Expose an API with the client IDs highlighted in red.":::
   
-    1. In the left pane, select **API Permissions**. 
+    1. In the left pane, select **API permissions**. 
 
        > [!NOTE]
        > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
@@ -376,11 +376,11 @@ items:
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
-    1. Go to `manifest.json` in cloned repository.
+    1. Go to `manifest.json` file in cloned repository.
 
         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-manifest.png" alt-text="Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red.":::
     
-    1. Open `manifest.json` in **Visual Studio Code** and make the following changes:
+    1. Open `manifest.json` file in **Visual Studio Code** and make the following changes:
 
          * Set `manifestVersion` to the latest version.
          * Set `$schema` to `https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json`.
@@ -407,12 +407,12 @@ items:
 
        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-command-prompt-new1.png" alt-text="Screenshot of Command Prompt displaying C# path.":::
 
-    1. Run the following command in the **Command Prompt** to download packages and dependencies.
+    1. Run the following command in the **Command-Prompt** to download packages and dependencies.
     
        ```Command-Prompt
        npm install
        ```
-    1. Run the following command in the **Command Prompt** to start the app.
+    1. Run the following command in the **Command-Prompt** to start the app.
 
        ```Command-Prompt
        npm start
@@ -478,7 +478,7 @@ items:
 
           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-turnonsideload.png" alt-text="Screenshot of Microsoft Teams admin center that shows the Global settings option highlighted in red.":::
 
-       1. Toggle **Upload custom apps** to **On** position.
+       1. Enable **On** position in **Upload custom apps**.
 
           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png" alt-text="Screenshot of the Upload custom apps toggle turned on is highlighted in red.":::
 
@@ -491,7 +491,7 @@ items:
 
     1. Go to **Microsoft Teams**.
     
-    1. From the upper right corner of your Teams interface, select `...`.
+    1. From the upper right corner of your Teams interface, select **Settings and more(...)**.
     
     1. Select **About** > **Developer preview**.
 
@@ -531,7 +531,7 @@ items:
 
        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-selectzip.png" alt-text="Screenshot of the cloned repository path and Meeting token generator .zip file highlighted in red. ":::
 
-    1. Select an **Add**.
+    1. Select **Add**.
 
        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-addtheapp.png" alt-text="Screenshot of Meeting Token App with Add option highlighted in red.":::
 
@@ -541,9 +541,7 @@ items:
    
     1. Go to Teams meeting.
     
-    1. Select **Add an app**. 
-    
-       In the app selection page, the app displays as **Meeting Token App**.
+    1. Select **App** icon. In the app selection page, the app displays as **Meeting Token App**.
   
        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-appicon.png" alt-text="Screenshot of Find an app with Meeting Token App highlighted in red. ":::
 

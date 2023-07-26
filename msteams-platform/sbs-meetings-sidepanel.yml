@@ -232,15 +232,13 @@ items:
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
         > For example: `api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
 
-    1. Select ** Add a scope**. 
+    1. Select **Add a scope**. 
 
        :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/select-scope.png" alt-text="Screenshot of Scopes defined by this API section with the Add a scope option highlighted in red.":::
     
-       **Add a scope** window appears.
-
-    1. In the panel that appears, enter **access_as_user** as the **Scope name**.
+    1.  In the panel that appears, enter **access_as_user** as the **Scope name**.
   
-    1. Set **Who can consent?** to `Admins and users`.
+    1. Set **Who can consent?** to **Admins and users**.
   
     1. To configure the admin and user consent prompts with appropriate values for **access_as_user** scope, provide the following information in the fields:</br>
     
@@ -252,11 +250,13 @@ items:
 
          * Enter **Enable Teams to call this app’s APIs with the same rights as the user** as **User consent description**.
   
-    The following image shows the fields and the values:
+      The following image shows the fields and the values:
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/addascope_2.png" alt-text="Screenshot of Add a scope window with Add scope highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/add-a-scope.png" alt-text="Screenshot of Add a scope window with Add scope highlighted in red.":::
 
     1. Ensure that "State" is set to "Enabled".
+
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/sbs-enabled.png" alt-text="Screenshot of Scopes defined by this API section with the Add a scope option highlighted in red.":::
 
     1. Select "Add scope" to save.
 
@@ -272,11 +272,11 @@ items:
 
        :::image type="content" source="~/assets/images/meetings-side-panel/selectclientapp.png" alt-text="Screenshot of Authorized client applications section with Add a Client application highlighted in red.":::
 
-    1. Enter each of the following client IDs and select the authorized scope:
+    1. Enter each of the following client IDs:
 
        * Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/addclientapplication1.png" alt-text="Screenshot of Add a client application page with the Client ID 1 highlighted in red."::: 
+         :::image type="content" source="~/assets/images/meetings-side-panel/addclientapplication1.png" alt-text="Screenshot of Add a client application page with the Client ID 1 highlighted in red."::: 
 
        * Enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
@@ -286,7 +286,7 @@ items:
 
          :::image type="content" source="~/assets/images/meetings-side-panel/authorizedscope_1.png" alt-text="Screenshot of Authorized scopes section under Expose an API page with the scope highlighted in red":::
 
-       The following image displays the client ID:
+       The following image displays the client Id:
 
          :::image type="content" source="~/assets/images/meetings-side-panel/clientapps.png" alt-text="Screenshot of Authorized client applications under Expose an API with the client IDs highlighted in red."::: 
   
@@ -301,7 +301,7 @@ items:
 
     1. Select **Delegated permissions**.
 
-    1. Add the following API permissions:</br>
+    1. Add the following **API permissions**:</br>
          * **email**
          * **offline_access**
          * **openid**
@@ -312,7 +312,7 @@ items:
 
         :::image type="content" source="~/assets/images/meetings-side-panel/other-permissions_1.png" alt-text="Screenshot of Request API permissions with the Add permissions highlighted in red after selecting the required permissions.":::
 
-    1. From the left pane, select **Authentication** to set a redirect URI. 
+    1. From the left pane, select **Authentication**.
 
        > [!NOTE]
        > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
@@ -335,11 +335,11 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    1. Go to **appsettings.json** in the cloned repository.
+    1. Go to **appsettings.json** file in the cloned repository.
 
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettingslocation_1.png" alt-text="Screenshot shows the appsettings JSON file with appsettings information.":::
 
-    1. Open **appsettings.json** in Visual Studio and update the following information:  
+    1. Open **appsettings.json** file in Visual Studio and update the following information:  
 
          * Replace `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Replace `"MicrosoftAppPassword"` to your bot's client secret ID **Value**.
@@ -347,11 +347,11 @@ items:
 
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettings_1.png" alt-text="Screenshot of appsettings JSON file with appsettings highlighted.":::
           
-    1. Go to **manifest.json** in the cloned repository.
+    1. Go to **manifest.json** file in the cloned repository.
 
          :::image type="content" source="~/assets/images/meetings-side-panel/manifestlocation_1.png" alt-text="Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red.":::
     
-    1. Open **manifest.json** in Visual Studio and make the following changes:
+    1. Open **manifest.json** file in Visual Studio and make the following changes:
 
          * Replace all occurrences of `<<Your_Domain_URL>>` with your ngrok domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
@@ -376,7 +376,7 @@ items:
 
        1. Press **F5** to run the project. You can run using Visual Studio or .NET in the appropriate folder.
 
-       1. Navigate to `samples\meetings-sidepanel\csharp\ClientApp` folder and execute the command.
+       1. Navigate to `samples\meetings-sidepanel\csharp\ClientApp` **folder** and execute the command.
 
            ```bash
            npx @fluidframework/azure-local-service@latest
@@ -403,7 +403,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    1. In your cloned repository, go to **csharp > Side Panel > Manifest**.
+    1. In your cloned repository, go to **csharp > SidePanel > Manifest**.
 
     1. Create a .zip file with the following files that are present in the **manifest** folder: 
        * manifest.json
@@ -414,13 +414,13 @@ items:
     
     1. Create a meeting with a few presenters and attendees.
    
-    1. After the meeting is created, go to the meeting details page, and select **Apps** to add an app.
+    1. After the meeting is created, go to the meeting details page, and select the **Apps** icon to add an app.
  
     1. In the pop-up window, select **Manage apps**.
 
         :::image type="content" source="~/assets/images/meetings-side-panel/manageapps_1.png" alt-text="Screenshot of Teams Slide Panel with the add Apps icon and Manage apps option highlighted in red."::: 
    
-    1. Select **Upload an app** and select **Upload a custom app**
+    1. Select **Upload an app**.
 
         :::image type="content" source="~/assets/images/meetings-side-panel/uploadcustomapp_1.png" alt-text="Screenshot of a banner displayed to build your own app where the Upload a custom app option highlighted in red."::: 
 
@@ -430,7 +430,7 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/addtheapp_1.png" alt-text="Screenshot of Side Panel in Teams with the Add option highlighted in red."::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/add-the-app.png" alt-text="Screenshot of Side Panel in Teams with the Add option highlighted in red."::: 
 
        The **Manage apps** section displays the list of applications.
    
