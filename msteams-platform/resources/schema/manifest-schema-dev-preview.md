@@ -832,7 +832,7 @@ Specifies the Office applications and [requirement sets](/javascript/api/require
 |`requirements.capabilities.minVersion`| string | | | Identifies the minimum version for the requirement sets that the add-in needs to run. |
 |`requirements.capabilities.maxVersion`| string | | | Identifies the maximum version for the requirement sets that the add-in needs to run. |
 |`requirements.scopes`| array of enums | 1 scope | | Identifies the scopes in which the add-in can run. Currently the only supported enum value is `mail`.  This effectively defines the Office applications in which the extension can run. For example, `mail` means Outlook. |
-|`requirements.formFactors`| array of enums | | | Identifies the form factors that support the extension. Supported values: `mobile`, `desktop`. |
+|`requirements.formFactors`| array of enums | | | Identifies the form factors that support the add-in. Supported values: `mobile`, `desktop`. |
 
 ### extensions.runtimes
 
