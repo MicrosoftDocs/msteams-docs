@@ -924,7 +924,7 @@ Provides the ability to prefer or hide particular in-market add-ins when you hav
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`prefer`| object | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both.|
+|`alternates.prefer`| object | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both.|
 |`prefer.comAddin`| object | | | |
 |`prefer.comAddin.progId`| string | 64 characters | ✔️ | Identifies the application type in which the extension can run.|
 |`hide`| object | | | |
