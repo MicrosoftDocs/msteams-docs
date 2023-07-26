@@ -346,7 +346,7 @@ Sample 3
    :::column span="":::
       :::image type="icon" source="~/assets/images/overview/graph-conversational-interface.png" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\sample3-graph-conversational-interface-extension.png" alt-text="Microsoft Teams apps for graph conversational interface details." border="false":::
+     :::image type="content" source="~\assets\images\overview\sample3-graph-conversational-interface-extension.png" alt-text="Microsoft Teams apps for graph conversational interface details sample 3." border="false":::
 :::row-end:::
 
 ## See also
