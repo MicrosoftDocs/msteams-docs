@@ -931,7 +931,7 @@ Provides the ability to prefer or hide particular in-market add-ins when you hav
 |`alternates.hide.storeOfficeAddin`| object | | | Specifies an Office Add-in available in AppSource.|
 |`alternates.hide.storeOfficeAddin.officeAddinId`| string | 64 characters | ✔️ |ID of an in-market add-in to hide. This is GUID from the manifest's "id" property, if the in-market add-in uses the JSON manifest, or from the `<Id>` element, if the in-market add-in uses the XML manifest.|
 |`alternates.hide.storeOfficeAddin.assetId`| string | 64 characters | ✔️ | The AppSource asset ID of the in-market add-in to hide.|
-|`hide.customOfficeAddin`| | | | |
+|`alternates.hide.customOfficeAddin`| | | | Configures hiding an in-market add-in that is not distributed through AppSource.|
 |`hide.customOfficeAddin.officeAddinId`|string | 64 characters | ✔️ | Solution ID of the in-market add-in to hide.|
 
 ## See also
