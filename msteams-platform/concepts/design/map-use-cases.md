@@ -127,7 +127,7 @@ Sample - 1
 
 :::row:::
    :::column:::
-      :::image type="icon" source="~/assets/images/overview/empty-for-alignment.png" border="false":::
+      :::image type="icon" source="~\assets\images\overview\microsoft-teams-app.png" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="~/assets/images/overview/adaptive-cards.png" border="false":::
