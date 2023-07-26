@@ -625,7 +625,7 @@
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-cards.md
-      displayName: People picker, type-ahead
+      displayName: People picker, type-ahead, people icon
     - name: Types of cards
       href: task-modules-and-cards/cards/cards-reference.md
       displayName: MessageCard, correlationId, Markdown, what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card
@@ -637,7 +637,7 @@
       displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin
     - name: People Picker in Adaptive Cards
       href: task-modules-and-cards/cards/people-picker.md
-      displayName: Setting, channel, static typeahead
+      displayName: Setting, channel, static typeahead, persona, persona set
     - name: Typeahead search in Adaptive Cards
       href: task-modules-and-cards/cards/dynamic-search.md
       displayName: Static and dynamic typeahead search  
