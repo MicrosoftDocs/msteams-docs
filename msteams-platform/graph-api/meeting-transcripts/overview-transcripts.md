@@ -19,7 +19,7 @@ Here are some use cases for fetching meeting transcripts and recordings using Gr
 You can fetch meeting transcript, recording, or both using Graph APIs.
 
 > [!NOTE]
-> In the future, Microsoft may require you or your customers to pay additional fees based on the amount of data accessed through the API.
+> The APIs to fetch meeting transcript and recording content are metered APIs. For more information, see [payment models for meeting APIs](/graph/teams-licenses#payment-models-for-meeting-apis).
 
 To fetch the transcript and recording for a particular meeting:
 
