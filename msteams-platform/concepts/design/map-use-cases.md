@@ -151,9 +151,11 @@ For example:
       :::image type="icon" source="~/assets/images/overview/webhook-connectors.png" border="false":::
    :::column-end:::
      :::image type="content" source="~\assets\images\overview\outgoing-webhook-extension.png" alt-text="Microsoft Teams apps for outgoing webhook details." border="false":::
-
+:::row-end:::
+:::row:::
      :::image type="content" source="~\assets\images\overview\incoming-webhook-extension.png" alt-text="Microsoft Teams apps for incoming webhook details." border="false":::
-
+:::row-end:::
+:::row:::
      :::image type="content" source="~\assets\images\overview\office365-connectors-extension.png" alt-text="Microsoft Teams apps for office 365 connector details." border="false":::
 :::row-end:::
 
