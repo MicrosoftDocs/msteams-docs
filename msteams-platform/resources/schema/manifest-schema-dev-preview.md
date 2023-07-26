@@ -848,7 +848,7 @@ Configures the sets of [runtimes](office/dev/add-ins/testing/runtimes) and actio
 |`lifetime`| string enum | | | Runtimes with a `short` lifetime do not preserve state across executions; runtimes with a `long` lifetime do. For more information about runtime lifetime, see [Runtimes in Office Add-ins](office/dev/add-ins/testing/runtimes).|
 |`actions`| array | | | Specifies the set of actions supported by this runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
 |`actions[0].id`| string | 64 characters | ✔️ | Identifier for this action which is passed to the code file. |
-|`actions.type`| string | | ✔️ | `executeFunction` runs a script function without waiting for it to finish. `openPage` opens a page in a given view. |
+|`actions.type`| string | | ✔️ | `executeFunction` runs a JavaScript function without waiting for it to finish. `openPage` opens a page in a given view. |
 |`actions.displayName`| string | 64 characters | | Display name for the action. |
 |`actions.pinnable`| boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. Defaults to `false`.|
 |`actions.view`| string | 64 characters | | View where the page should be opened.|
