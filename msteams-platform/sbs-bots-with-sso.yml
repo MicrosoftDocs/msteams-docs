@@ -522,15 +522,13 @@ items:
     
     1. Select **Apps** > **Manage your apps**.
 
-        :::image type="content" source="~/assets/images/bots/manage-apps_3.png" alt-text="Screenshot of Teams app with the Apps icon and Manage your apps option highlighted in red.":::
+    1. Select **Upload an app**.
 
-    1. Select **Upload an app** and select **Upload a custom app**.
-    
-        :::image type="content" source="assets/images/upload-custom-app.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
+        :::image type="content" source="~/assets/images/bots/custom-app-upload.png" alt-text="Screenshot of Teams app with the Apps icon, Manage your apps, and showing the selection of Upload a custom app option highlighted in red.":::
 
     1. Select **Open** to upload the .zip file that you've created in the **Manifest** folder.
 
-        :::image type="content" source="~/assets/images/bots/open-app.png" alt-text="Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.":::
+        :::image type="content" source="~/assets/images/bots/app-open.png" alt-text="Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.":::
 
     1. Select **Add** to add the bot to your chat.
 
@@ -547,7 +545,7 @@ items:
         > [!NOTE]
         > Now you have configured SSO with your bot app and it's the only time you'll have to give consent.
 
-    1. For mobile device, select **Accept**.
+      For mobile device, select **Accept**.
 
         > [!NOTE]
         > Now you have configured SSO with your bot app in mobile, and this is the only time you'll have to give consent.
