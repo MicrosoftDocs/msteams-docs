@@ -890,7 +890,7 @@ Provides the ability to add buttons and menu items, collectively called "[add-in
 |`tabs.groups.controls.items.supertip.description`| string | 128 characters | ✔️ | Description of the super tip.|
 |`tabs.groups.controls.items.actionID`| string | 64 characters | ✔️ | Identifies the action that is taken when a user selects the control or menu item. The "actionId" must be an exact match for a "runtime.actions.id". |
 |`tabs.groups.controls.items.enabled`| boolean | | | Indicates whether the control is initially enabled. Default is `true`.|
-|`tabs.groups.controls.items.overriddenByRibbonApi`| boolean | | | Default is `false`.|
+|`tabs.groups.controls.items.overriddenByRibbonApi`| boolean | | | Specifies whether a group, button, menu, or menu item will be hidden on application and platform combinations that support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. Default is `false`.|
 |`tabs.groups.controls.type`| string | | ✔️ | Supported values: `button`, `menu`.|
 |`tabs.groups.controls.builtinControlId`| string | 64 characters | ✔️ | Id of the existing Office control.|
 |`tabs.groups.controls.label`| string | 64 characters | ✔️ | Displayed text for the control.|
