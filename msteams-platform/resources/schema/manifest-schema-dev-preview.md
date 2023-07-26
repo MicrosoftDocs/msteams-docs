@@ -860,7 +860,7 @@ Provides the ability to add buttons and menu items, collectively called "[add-in
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`type`| object | | | |
-|`contexts`| array | 4 | | |
+|`contexts`| array | 4 | | Specifies the Office application windows in which the ribbon customization is available to the user.|
 |`contexts.type` | string enum | 4 values | | Any of the following supported extension points: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`|
 |`tabs`| array | |✔️| |
 |`tabs.id`| string | 64 characters | | Unique identifier for this tab within the app.|
