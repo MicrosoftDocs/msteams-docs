@@ -843,7 +843,7 @@ Configures the sets of [runtimes](office/dev/add-ins/testing/runtimes) and actio
 |`id`| string | 64 characters | ✔️ | The ID for the runtime. |
 |`type`| string enum | | ✔️ | Specifies the type of runtime. Currently supports `general` for [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime). |
 |`code`| object | | ✔️ | Specifies the location of code for this runtime. Depending on the `runtime.type`, add-ins use either a JavaScript file or an HTML page, with an embedded `<script>` tag that specifies the URL of a JavaScript file. URLs for both are required because there are scenarios in which you can't know which type of runtime your add-in will use.|
-|`code.page`| url | | ✔️ | URL of the web page to be loaded in browser-based runtimes. |
+|`code.page`| url | | ✔️ | URL of the web page, that contains an embedded `<script>` tag that specifies the URL of a JavaScript file, to be loaded in [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime). |
 |`code.script`| url | | ✔️ | URL of the JavaScript file to be loaded in [JavaScript only](/office/dev/add-ins/testing/runtimes#javascript-only-runtime) runtimes. |
 |`lifetime`| string enum | | | Runtimes with a `short` lifetime do not preserve state across executions; runtimes with a `long` lifetime do. For more information about runtime lifetime, see [Runtimes in Office Add-ins](office/dev/add-ins/testing/runtimes).|
 |`actions`| array | | | Specifies the set of actions supported by this runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
