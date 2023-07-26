@@ -292,7 +292,7 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-client-applications.png" alt-text="Screenshot shows the Client IDs":::
 
-    1. In the left pane, select **API Permissions**. 
+    1. In the left pane, select **API permissions**. 
 
        > [!NOTE]
        > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
@@ -358,7 +358,7 @@ items:
     1. Open the **manifest.json** file and update the following information:
     
          * Set `ID` to **Microsoft App ID**.
-         * Set `botId` to **Microsoft App ID**.[]
+         * Set `botId` to **Microsoft App ID**.
          * Set `webApplicationInfo` Id to **Microsoft App ID**.
          * Set `validDomains` to **Web App Domain Name**.
 
@@ -394,7 +394,7 @@ items:
 
     1. In your cloned repository, go to **csharp > InMeetingNotifications > Manifest**.
 
-    1. Create a .zip with the following files that are present in the **Manifest** folder: 
+    1. Create a .zip file with the following files that are present in the **Manifest** folder: 
        * manifest.json
        * outline.png
        * color.png
@@ -433,42 +433,40 @@ items:
     
     1. **In-meeting notifications Demo** app sends an automatic reply to the meeting chat. 
 
-    1. @mention the `In-Meeting Notification` bot and select `SendTargetedNotification` or `SendInMeetingNotification`.
+    1. @mention the **In-Meeting Notification** bot and select `SendTargetedNotification` or `SendInMeetingNotification`.
     
          :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-final.png" alt-text="Screenshot shows the suggestions in the Teams chat.":::
 
     1. Select **Send**.
+
+    To send targeted notification or in-meeting notification, follow the steps:
     
-    # [SendTargetedNotification](#tab/sendtargetednotification)
-
-    To send targeted notification, follow the steps:
-        
-    1. Bot sends an Adaptive Card with the list of participant in the meeting.
+      # [SendTargetedNotification](#tab/sendtargetednotification)
+          
+      1. Bot sends an Adaptive Card in Teams with the list of participants in the meeting.
+      
+      1. Select the checkbox for the targeted participant.
+      
+      1. Select **Send Notification**.
+  
+            :::image type="content" source="~/assets/images/meeting-content-bubble/targeted-meeting-notification.png" alt-text="Screenshot shows the responses for the send targeted notification.":::
+  
+      1. The targeted participant receives a pop-up notification in the meeting window.
+  
+            :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
     
-    1. Select the checkbox for the targeted participant.
-    
-    1. Select **Send Notification**.
-
-          :::image type="content" source="~/assets/images/meeting-content-bubble/targeted-meeting-notification.png" alt-text="Screenshot shows the responses for the send targeted notification.":::
-
-    1. The targeted participant receives a pop-up notification in the meeting window.
-
-          :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
-    
-    # [SendInMeetingNotification](#tab/sendinmeetingnotification)
-
-    To send in-meeting notification, follow the steps:
-
-    1. Bot sends an Adaptive Card with the list of agenda.
-    
-    1. Select any option from the list and select **Push Agenda**.
-
-          :::image type="content" source="~/assets/images/meeting-content-bubble/send-in-meeting-notification.png" alt-text="Screenshot shows the responses for the send in-meeting notification.":::
-
-    1. All the participants receive a pop-up notification in the meeting.
-
-          :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
-
+      # [SendInMeetingNotification](#tab/sendinmeetingnotification)
+   
+      1. Bot sends an Adaptive Card in Teams with a list of agenda.
+      
+      1. Select any option from the list and select **Push Agenda**.
+  
+            :::image type="content" source="~/assets/images/meeting-content-bubble/send-in-meeting-notification.png" alt-text="Screenshot shows the responses for the send in-meeting notification.":::
+  
+      1. All the participants receive a pop-up notification in the meeting.
+  
+            :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
+  
     ---
       
 - title: Complete challenge
