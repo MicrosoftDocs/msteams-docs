@@ -916,7 +916,7 @@ Defines event-based activation extension points.
 |`events.type`| string | 64 characters | | Specifies the type of event. For supported types, see [Supported events](/office/dev/add-ins/outlook/autolaunch?tabs=xmlmanifest#supported-events).|
 |`events.actionId`| string | 64 characters | | Identifies the action that is taken when the event fires. The "actionId" must be an exact match for a "runtime.actions.id". |
 |`events.options`| object | | | Configures how Outlook responds to the event.|
-|`events.options.sendMode`| string | | ✔️ | Actions to take during a mail send action. Supported values: `promptUser`, `softBlock`, `block`.|
+|`events.options.sendMode`| string | | ✔️ | Actions to take during a mail send action. Supported values: `promptUser`, `softBlock`, `block`. For details about these values and their meaning, see [Available send mode options](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest#available-send-mode-options).|
 
 ### extensions.prefer
 
