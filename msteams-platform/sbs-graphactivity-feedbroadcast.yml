@@ -27,7 +27,7 @@ items:
 
     This step-by-step guide helps you to broadcast messages and notify all the members of an organization using activity feed notification. You'll see the following output:
 
-      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output-ready1.png" alt-text="Output of feed broad cast" border="true":::
+      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/msg-broadcast-output-ready.png" alt-text="Output of feed broad cast" border="true":::
 
       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/notification-recipient1.png" alt-text="Final output" border="true"::: 
 
@@ -67,13 +67,12 @@ items:
 
     To verify sideload apps in Teams:
 
-    1. Go to **Microsoft Teams**.
-    1. Select **Apps** > **Manage your apps**.
-    1. Select **Upload an app**.
+         1. In the Teams client, select the **Apps** icon.
+         1. Select **Manage your apps**.
+         1. Select **Upload an app**.
+         1. Look for the option to **Upload a custom app**.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-app.png" alt-text=" upload an app in Teams.":::
-
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+            :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-app.png" alt-text=" upload an app in Teams.":::
 
         :::image type="content" source="~/assets/images/upload-a-custom-app.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
 
@@ -120,7 +119,7 @@ items:
      
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-azure-active.png" alt-text="New registration" border="true":::
 
-    1. In the left navigation panel, select **App Registrations**.
+    1. In the left navigation panel, select **App registrations**.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-app-registration.png" alt-text="New registration" border="true":::
 
@@ -196,22 +195,22 @@ items:
 
     1. Enter the details for configuring scope.
      
-        1. Enter `access_as_user` as the **Scope name**.
+        1. Enter **access_as_user** as the **Scope name**.
 
           > [!NOTE]
           > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://bff2****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`.
 
-        1. Set **Who can consent** to `Admins and users`.
+        1. Set **Who can consent** to **Admins and users**.
         1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
     
-            * Enter `Teams can access the user’s profile` as **Admin consent display name**
+            * Enter **Teams can access the user’s profile** as **Admin consent display name**
 
-            * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**
+            * Enter **Allows Teams to call the app’s web APIs as the current user** as **Admin consent description**
 
-            * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**
+            * Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**
 
-            * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**
+            * Enter **Enable Teams to call this app’s APIs with the same rights as the user** as **User consent description**
   
         1. Ensure that **State** is set to **Enabled**.
 
@@ -366,11 +365,11 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    1. Go to **appsettings.json** in cloned repository.
+    1. Go to **appsettings.json** file in cloned repository.
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appsettings-location.png" alt-text="App settings location" border="true":::
 
-    1. Open **appsettings.json** in the latest version of Visual Studio and update the following information:  
+    1. Open **appsettings.json** file in the latest version of Visual Studio and update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"TenantID"` to **Directory (tenant) ID**.
@@ -379,11 +378,11 @@ items:
       
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-settings-details1.png" alt-text="Appsettings" border="true":::
 
-    1. Go to **manifest.json** in cloned repository.
+    1. Go to **manifest.json** file in cloned repository.
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifest-location-package.png" alt-text="Manifest location" border="true":::
 
-    1. Open **manifest.json** in the latest version of Visual Studio and make the following changes:
+    1. Open **manifest.json** file in the latest version of Visual Studio and make the following changes:
 
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
          * Replace all occurrences of `<<Base_URL>>` with your fully qualified domain name.
