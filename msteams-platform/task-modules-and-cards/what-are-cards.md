@@ -3,6 +3,7 @@ title: Cards
 description: In this module, learn what are cards and how they're used in bots, connectors, and message extensions.
 ms.localizationpriority: high
 ms.topic: overview
+ms.date: 01/08/2023
 ---
 
 # Cards
@@ -59,6 +60,10 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 ### People Picker in Adaptive Cards
 
 [People Picker](cards/people-picker.md#people-picker-in-adaptive-cards) added as an input control in Adaptive Cards enable search and selection of people. You can use it in chats, channels, task modules, and tabs. The mobile and desktop clients support People Picker, which provides an inline typing experience.
+
+### People icon in an Adaptive Card
+
+[People icon in an Adaptive Card](cards/cards-format.md#people-icon-in-an-adaptive-card) helps users to view the images of users in the Adaptive Card in Teams. You can view the image of a single user or multiple users. People icon is supported in Teams mobile and desktop clients.
 
 ### Typeahead search in Adaptive Cards  
 

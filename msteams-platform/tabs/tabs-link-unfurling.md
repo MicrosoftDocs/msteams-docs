@@ -5,6 +5,7 @@ description: Learn about Stage View and Collaborative Stage View, a full screen 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 06/05/2023
 ---
 
 # Tabs link unfurling and Stage View
@@ -195,7 +196,7 @@ Following is the process to invoke Collaborative Stage View:
 
 * [Build tabs for Teams](what-are-tabs.md)
 * [Add link unfurling](../messaging-extensions/how-to/link-unfurling.md)
-* [composeExtensions](../resources/schema/manifest-schema.md#composeextensions)
 * [Build tabs with Adaptive Cards](how-to/build-adaptive-card-tabs.md)
 * [Create deep links](../concepts/build-and-test/deep-links.md)
 * [Cards](../task-modules-and-cards/what-are-cards.md)
+* [App manifest schema for Teams](../resources/schema/manifest-schema.md)

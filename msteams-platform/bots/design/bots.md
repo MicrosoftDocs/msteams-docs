@@ -4,6 +4,7 @@ description: In this module, learn how to design and add a Teams bot and its use
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
+ms.date: 04/13/2023
 ---
 # Designing your Microsoft Teams bot
 
