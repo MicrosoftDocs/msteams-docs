@@ -845,7 +845,7 @@ Configures the sets of [runtimes](office/dev/add-ins/testing/runtimes) and actio
 |`code`| object | | ✔️ | Specifies the location of code for this runtime. Extensions can use a page, script, or both. |
 |`code.page`| url | | ✔️ | URL of the web page to be loaded in browser-based runtimes. |
 |`code.script`| url | | ✔️ | URL of the JavaScript file to be loaded in [JavaScript only](/office/dev/add-ins/testing/runtimes#javascript-only-runtime) runtimes. |
-|`lifetime`| string enum | | | Runtimes with a `short` lifetime do not preserve state across executions; runtimes with a `long` lifetime do. |
+|`lifetime`| string enum | | | Runtimes with a `short` lifetime do not preserve state across executions; runtimes with a `long` lifetime do. For more information about runtime lifetime, see [Runtimes in Office Add-ins](office/dev/add-ins/testing/runtimes).|
 |`actions`| array | | | Specifies the set of actions supported by this runtime.|
 |`actions[0].id`| string | 64 characters | ✔️ | Identifier for this action which is passed to the code file. |
 |`actions.type`| string | | ✔️ | `executeFunction` runs a script function without waiting for it to finish. `openPage` opens a page in a given view. |
