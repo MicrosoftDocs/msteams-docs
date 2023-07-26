@@ -114,14 +114,16 @@ Make sure your short description adheres to the [store validation guidelines](~/
 
 #### Long description
 
-The long description can provide a narrative that highlights your apps:
+The long description can provide a narrative that highlights your apps features, benefits, functionality, and usage.
 
-* What your produce is and the industries it’s aligned with.
+It's strongly recommended that your long description has information on the following pointers:
+
+* What your produce is and the industries it’s aligned with?
 * Target audience and customer segments.
-* Unique value in Microsoft Teams.
-* Resolution on customer problems.
-* Key benefits, added up to three.
-* Main features and requirements.
+* Unique value of your app in Microsoft Teams.
+* Resolution that your app provides on customer problems.
+* Key benefits of your app. Add up to three benefits.
+* Main features of your app and the requirements to use your app.
 
 While this description can be as long as 4,000 characters, most users only read between 300-500 words.
 
@@ -171,35 +173,28 @@ For best practices, see the following resources:
 
 ### Create a video
 
-A video in your listing can be the most effective way to communicate why people should use your app. You can add value video and demo or scenario walkthrough video of your app. The URLs can be of your YouTube or Vimeo video.
+A video in your listing can be the most effective way to communicate why people should use your app. You can add an app value video and a demo or scenario walkthrough video of your app. You can add the YouTube or Vimeo video URL.
 
-Address the following questions in your app value video:
+An app video value is focused on the marketing aspects. It's mandatory to address the following questions in your app value video:
 
-* Why can the user opt for you app?
-* Who is the target audience and customer segment?
+* Why the user wants to choose your app?
+* Who's the target audience and customer segment?
 * What’s the unique value of the product and impact on measurable business indicators?
-* What problems can your app solve?
-* How does your app work?
+* What are the problems that your app resolves?
 * What are the key benefits of using your app?
+* What are the main features of your app?
 
-Address the following information in your demo or scenario walkthrough video:
+A demo or scenario walkthrough video is more like a educational video and should give a first-run experience of your app. It's mandatory to address the following information in your demo or scenario walkthrough video:
 
 * How can the users set up the app?
 * How to use the app?
 * What are the major features of your app?
-* Steps to train the users.
+* Demonstrate how the product works?
+* Demonstrate end-to-end scenarios of the app.
+* Steps to train the users on how to use the app?
 * Voice over instructions for users understanding.
 
-Demo or scenario walkthrough video can also be used in validate cycle to enhance understanding and accelerate the validation process.
-
-For best practices, check [store validation guidelines](teams-store-validation-guidelines.md).
-
-#### Best practices for videos
-
-* Keep your video between 60-90 seconds.
-* Aim for quality. In a listing, users see your video before screenshots.
-* Communicate the value of the product in narrative form.
-* Demonstrate how the product works.
+For best practices on creating videos, check [store validation guidelines](teams-store-validation-guidelines.md).
 
 ### Select a category for your app
 

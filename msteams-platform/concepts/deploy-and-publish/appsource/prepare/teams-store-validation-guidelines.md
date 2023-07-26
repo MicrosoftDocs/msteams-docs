@@ -493,7 +493,7 @@ You must have a short and long description for your app. The descriptions in you
 <br></br>
 <details><summary>Expand to know more</summary>
 
-Descriptions mustn't directly or through insinuation disparage another brand (Microsoft owned or otherwise). Ensure that your description doesn’t include claims that can’t be substantiated. For example, Guaranteed 200 percent increase in efficiency.
+Descriptions mustn't directly or through suggestion derogate another brand (Microsoft owned or otherwise). Ensure that your description doesn’t include claims that can’t be substantiated. For example, Guaranteed 200 percent increase in efficiency.
 
 * App description mustn't contain comparative marketing information. For example, don't use competitor logos or trademarks in the offer listing including tags or other metadata that references competing offers or marketplaces. [*Mandatory Fix*]
 
@@ -551,13 +551,15 @@ Use the word **app** in the short description.
 
 #### Long description
 
-The long description can provide an engaging narrative that highlights your app's value proposition, primary audience, and target industry. While this description can be as long as 4,000 characters, most users will only read between 300-500 words.
+The long description can provide an engaging narrative that highlights your app's value proposition, primary audience, and target industry. While this description can be as long as 4,000 characters, most users only read between 300-500 words.
 
 **Dos:**
 
 * Use [Markdown](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) to format your description.
 
 * Use active voice and speak to users directly. For example, **You can ...**.
+
+* List the key benefits to highlight the advantages of using your app. Add up to minimum of three benefits.
 
 * List features with bullet points so it's easier to scan the description.
 
@@ -675,31 +677,33 @@ Remember the following:
 
 ### Videos
 
-A video in your app listing is one of the most effective ways to communicate why people should use your app. You can add an app value video and demo or scenario walkthrough video URLs. You can add a URL for your YouTube or Vimeo video. [*Suggested fix*]
+A video in your app listing is one of the most effective ways to communicate why people should use your app. You can add an app value video and a demo or scenario walkthrough video URLs. You can add URLs of your YouTube or Vimeo video. [*Suggested fix*]
 
-If you choose to submit a video as part of your app listing in your Partner Center account, ensure the following criteria is met for each type of video.
-
-App value video:
+If you choose to submit a video as part of your app listing in your Partner Center account, ensure the following criteria is met for app value video:
 
 * The video must be short, clear, and engaging.
 * The video must be of good quality.
+* The video must in a narrative form.
 * The duration of the video must be within 60-90 seconds. [*Suggested Fix*]
 * You turn off advertisements from your YouTube or Vimeo account settings before submitting the video link in the app listing. [*Mandatory Fix*]
 * The video showcases your app’s functionality and integration within Teams. [*Mandatory Fix*]
 * The video is available as a functional link. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/video-app-listing-partner-center.png" alt-text="Screenshot shows the failed scenario of video submitted as part of app listing in partner center.":::
+* The video can be surfaced in the first position of the screenshots or videos caroussel in AppDetails (Teams Store and Admin Center) and AppSource. [*Suggested Fix*]
 
-App demo or scenario walkthrough video:
+If you choose to submit a video as part of your app listing in your Partner Center account, ensure the following criteria is met for demo or scenario walkthrough video:
 
 * The video must demonstrate how to set up and use the app.
 * The video must be of good quality.
 * The duration of the video must be within three-five minutes. [*Suggested Fix*]
 * You turn off advertisements from your YouTube or Vimeo account settings before submitting the video link in the app listing. [*Mandatory Fix*]
 * The video should give the first run experience for the users and train to use the app.
-* The video mustn’t have marketing content. [*Mandatory Fix*]
+* The video mustn’t have any marketing content. [*Mandatory Fix*]
 * The video must demonstrate how the product works.
 * The video is available as a functional link. [*Mandatory Fix*]
+* The video can be surfaced in the last position of the screenshots or videos caroussel in AppDetails (Teams Store and Admin Center) and AppSource​. [*Suggested Fix*]
+* The video can be used in validation cycle to enhance understanding and accelerate the validation process. [*Suggested Fix*]
 
 <br></br>
 
