@@ -925,7 +925,7 @@ Provides the ability to prefer or hide particular in-market add-ins when you hav
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`alternates.prefer`| object | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both.|
-|`prefer.comAddin`| object | | | |
+|`alternates.prefer.comAddin`| object | | | Specifies a COM add-in that should be used in place of the Office Web Add-in when the OS is Windows.|
 |`prefer.comAddin.progId`| string | 64 characters | ✔️ | Identifies the application type in which the extension can run.|
 |`hide`| object | | | |
 |`alternates.hide.storeOfficeAddin`| object | | | Specifies an Office Add-in available in AppSource.|
