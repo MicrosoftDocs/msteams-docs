@@ -1,6 +1,6 @@
 ---
 title: Messages in bot conversations
-description: Learn how to send, receive, edit, undelete, and soft delete a message, suggested actions, notification, attachments, images, Adaptive Card and status error code responses.
+description: Learn how to send, receive, edit, undelete, and soft delete a message in bot conversations with suggested actions, notification, attachments, images, Adaptive Card, and status error code responses.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
@@ -248,20 +248,16 @@ POST {Service URL of your bot}/v3/conversations
 
 Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
 
-## Update message
+## Get edit message event
 
-When you edit or undelete a message in a chat, the bot gets a notification of the edit message or undelete message event.
+When you edit a message in a chat, the bot gets a notification of the edit message event.
 
-To get an edit or undelete message event notification in a bot, you can override the following handlers:
-
-* For edit: `OnTeamsMessageEditAsync`
-* For undelete: `OnTeamsMessageUndeleteAsync`
+To get an edit message event notification in a bot, you can override `OnTeamsMessageEditAsync` handler.
 
 > [!NOTE]
->
->The `OnTeamsMessageEditAsync` and `OnTeamsMessageUndeleteAsync` handlers aren’t supported in group chat and Teams channel scopes.
+> The `OnTeamsMessageEditAsync` handler isn’t supported in group chat and Teams channel scopes.
 
-The following is an example of an edit message event notification when a sent message is edited:
+Following is an example of an edit message event notification using `OnTeamsMessageEditAsync` when a sent message is edited:
 
 # [C#](#tab/dotnet3)
 
@@ -289,7 +285,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 "from": {
     "id":"29:1BLjP9j3_PM4mubmQZsYPx7jDyLeLf_YVA9sVPV08KMAFMjJWB_EUGveb9EVDh9TslNp9qjnzEBy3kgw01Jf1Kg",
     "name":"Mike Wilber",
-    "aadObjectId":"520e4d1e-2108-43ee-a092-46a9507c6200"
+    "aadObjectId":"520e4d1e-2108-43ee-a092-46a9507c6200"caching
 },
 "conversation":{
     "conversationType":"personal",
@@ -360,7 +356,16 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ---
 
-The following is an example of an undelete message event notification when a deleted message is restored:
+## Get undelete message event
+
+When you undelete a message in a chat, the bot gets a notification of the undelete message event.
+
+To get an undelete message event notification in a bot, you can override `OnTeamsMessageUndeleteAsync` handler.
+
+> [!NOTE]
+> The `OnTeamsMessageUndeleteAsync` handler isn’t supported in group chat and Teams channel scopes.
+
+The following is an example of an undelete message event notification using `OnTeamsMessageUndeleteAsync` when a deleted message is restored:
 
 # [C#](#tab/dotnet4)
 
@@ -400,7 +405,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 },
 "entities":[
     {
-        "locale":"en-US",
+           "locale":"en-US",
         "country":"US",
         "platform":"Web",
         "timezone":"America/Los_Angeles",
@@ -428,8 +433,8 @@ You can either use **​event function registration** or **​method override** 
 this.onTeamsMessageUndeleteEvent(async (context, next) => {
     let undeletedMessage = context.activity.text;
     let messageId = context.activity.id;
-        await context.sendActivity(`Previously the message was deleted. After undeleting, the message is now: "${undeletedMessage}"`);
-    next();
+    await context.sendActivity(`Previously the message was deleted. After undeleting, the message is now: "${undeletedMessage}"`);
+next();
 })
 
 ```
@@ -461,17 +466,16 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ---
 
-## Soft delete message
+## Get soft delete message event
 
 When you soft delete a message in a chat, the bot gets a notification of the soft delete message event.
 
-To get a soft delete message event notification in a bot, you can override the `OnTeamsMessageSoftDeleteAsync` handler.
+To get a soft delete message event notification in a bot, you can override `OnTeamsMessageSoftDeleteAsync` handler.
 
 > [!NOTE]
->
->The `OnTeamsMessageSoftDeleteAsync` handler isn’t supported in group chat and Teams channel scopes.
+> The `OnTeamsMessageSoftDeleteAsync` handler isn’t supported in group chat and Teams channel scopes.
 
-The following is an example of a soft delete message event notification when a message is soft deleted:
+Following is an example of a soft delete message event notification using `OnTeamsMessageSoftDeleteAsync` when a message is soft deleted:
 
 # [C#](#tab/dotnet5)
 

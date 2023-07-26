@@ -16,7 +16,7 @@ To invoke share to stage, users can select the **Share to Stage** icon on the up
 
 ## App manifest settings for apps in meeting stage
 
-To share an app to the meeting stage, you must configure the context and RSC permissions in the app manifest:
+To share an app to the meeting stage, you must configure the context and RSC permissions in the [app manifest](../resources/schema/manifest-schema.md):
 
 1. Update the `context` property in the app manifest as follows:
 
