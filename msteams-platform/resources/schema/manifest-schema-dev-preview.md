@@ -827,7 +827,7 @@ Specifies the Office applications and [requirement sets](/javascript/api/require
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`requirements.capabilities`| array | | | Identifies the requirement sets that the extension needs to be installable. Each object in the array is made up of three strings `name` (required), `minVersion`, and `maxVersion`. |
+|`requirements.capabilities`| array | | | Identifies the requirement sets that the add-in needs to be installable. Each object in the array is made up of three strings `name` (required), `minVersion`, and `maxVersion`. |
 |`requirements.capabilities.name`| string | | ✔️ | Identifies the name of the [requirement sets](/javascript/api/requirement-sets) that the extension needs to run. |
 |`requirements.capabilities.minVersion`| string | | | Identifies the minimum version for the requirement sets that the extension needs to run. |
 |`requirements.capabilities.maxVersion`| string | | | Identifies the maximum version for the requirement sets that the extension needs to run. |
