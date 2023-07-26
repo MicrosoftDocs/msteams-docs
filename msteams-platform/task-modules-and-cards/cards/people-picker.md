@@ -295,7 +295,8 @@ The following image illustrates People Picker in Adaptive Cards with static choi
 
 :::image type="content" source="../../assets/images/Cards/peoplepicker-static-choice.png" alt-text="people-picker-static-choice":::
 
-You can implement People Picker for efficient task management in different scenarios.  
+You can implement People Picker for efficient task management in different scenarios.
+
 
 ## Code sample
 
