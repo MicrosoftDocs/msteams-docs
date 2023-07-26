@@ -816,7 +816,7 @@ The set of add-ins for this app. Used to specify Outlook Add-ins within an app m
 |`runtimes`| array | | | Configures the sets of runtimes and actions that can be used by each extension point. See [Runtimes in Office Add-ins](office/dev/add-ins/testing/runtimes). |
 |`ribbons`| array | | | Defines the ribbons extension point. |
 |`autoRunEvents`| array | | | Defines event-based activation extension points. |
-|`prefer`| array | | | Specifies relationship to alternate existing Microsoft 365 solutions. Used for de-duping and backwards compatibility. |
+|`alternates`| array | | | Specifies relationship to alternate existing Microsoft 365 solutions. Used for hiding or prioritizing add-ins from the same publisher that have overlapping functionality. |
 |`audienceClaimUrl`| string | 2048 characters | | The URL for your extension. Used to validate Exchange user identity tokens. |
 
 For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview) documentation.
