@@ -849,7 +849,7 @@ Configures the sets of [runtimes](office/dev/add-ins/testing/runtimes) and actio
 |`actions`| array | | | Specifies the set of actions supported by this runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
 |`actions[0].id`| string | 64 characters | ✔️ | Identifier for this action which is passed to the code file. |
 |`actions.type`| string | | ✔️ | `executeFunction` runs a JavaScript function without waiting for it to finish. `openPage` opens a page in a given view. |
-|`actions.displayName`| string | 64 characters | | Display name for the action. |
+|`actions.displayName`| string | 64 characters | | Display name for the action. Currently, this is not used. In particular, it is *not* the label of a button or menu item that invokes the action. That string is configured with `tabs.groups.controls.label`. See below.|
 |`actions.pinnable`| boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. Defaults to `false`.|
 |`actions.view`| string | 64 characters | | View where the page should be opened.|
 
