@@ -14,6 +14,8 @@ Create your offer in Partner Center and configure the offer to publish in the ma
 
 :::image type="content" source="~/assets/images/saas-offer/monetize-flow3.png" alt-text="Diagram shows the process on how to create a SaaS offer.":::
 
+This guide helps you to create premium and enterprise SaaS offers on top of the existing basic free app.
+
 ## Create an offer in Partner Center
 
 1. Sign in to [Partner Center](https://partner.microsoft.com/) and select **Partner Center**.
@@ -33,7 +35,7 @@ Create your offer in Partner Center and configure the offer to publish in the ma
 1. Enter **Offer ID** and **Offer alias**.
 
    > [!NOTE]
-   > If you're creating an offer for testing purpose, add the text **-ISVPILOT** to the end of your offer alias. This indicates the certification team that the offer is for testing purposes. Microsoft delete offers with **-ISVPILOT** periodically. So, don't use this tag for reasons other than testing the license management capability.
+   > If you're creating an offer for testing purpose, append the text **-ISVPILOT** to the end of your offer alias. This informs the certification team that the offer is for testing purposes. Microsoft periodically delete offers with **-ISVPILOT**. Therefore, refrain from using this tag for reasons other than testing the license management capability.
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/saas.png" alt-text="The screenshots shows how to enter Offer ID and Offer alias in the Partner Center.":::
 
@@ -41,7 +43,7 @@ Create your offer in Partner Center and configure the offer to publish in the ma
 
 ## Configure your SaaS offer
 
-Make the required configurations to setup the offer. The offer setup, offer listing, technical configuration, plan, and pricing are to be configured for your offer to be published and linked to your SaaS app. All that you have planned in the Plan your offer phase are done in the offer configuration.
+Set up the offer by making the required configurations. You need to configure the offer setup, offer listing, technical configuration, plan, and pricing to publish and link your offer to your SaaS app. All that you have planned in the Plan your offer phase are done in the offer configuration.
 
 ### Offer setup
 
@@ -54,7 +56,7 @@ On the **Offer setup** tab, under **Setup** details, select whether to sell your
 
        :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="The screenshots shows the offer setup page to set up license to manage for your app within Teams.":::
 
-        * If you would like Microsoft to manage customer licenses for you, select **Yes**. For Microsoft to mange your licenses, [set up Microsoft License management](manage-third-party-apps-license.md).
+        * If you would like Microsoft to manage customer licenses for you, select **Yes**. For Microsoft to manage your licenses, [set up Microsoft License management](manage-third-party-apps-license.md).
         * If you want to manage customer licenses yourself, select **No**.
 
        > [!NOTE]
@@ -71,7 +73,7 @@ On the **Offer setup** tab, under **Setup** details, select whether to sell your
 
 1. To enable a test drive, under **Test drive**, select the **Enable a test drive** checkbox.
 
-    A test drive is a great way to showcase your offer to potential customers by giving them access to a preconfigured environment for a fixed number of hours.
+    A test drive is a great way to highlight your offer to potential customers by giving them access to a preconfigured environment for a fixed number of hours.
 
 1. Select **Save draft**.
 
@@ -82,7 +84,7 @@ On the Properties tab, you define the categories and industries applicable to yo
 1. Under **Category**, select at least one and up to two categories for grouping your offer into the appropriate marketplace search areas.
 1. Under **Industries**, select up to two industries and up to two subindustries (also called verticals) for each industry.
 1. In the App version box, enter a version number.
-1. Under **Legal**, provide terms and conditions for your offer. You can use standard contract with some amendments or use own terms and conditions.
+1. Under **Legal**, provide terms and conditions for your offer. You can use standard contracts with some amendments or use your own terms and conditions.
 1. Select **Save draft**.
 
 ### Offer listing
