@@ -52,12 +52,12 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 
 For example, in your app manifest if you set your tab *configurationUrl* attribute to `"https://www.contoso.com/config?name={user.loginHint}&tenant={user.tenant.id}&group={team.groupId}&theme={app.theme}"` and the signed-in user has the following attributes:
 
-* Their username is **<user@example.com>**.
+* Their username is **user@example.com**.
 * Their company tenant ID is **e2653c-etc**.
 * They're a member of the Office 365 group with ID **00209384-etc**.
 * The user has set their Teams theme to **dark**.
 
-. . . then Teams will call the following URL when configuring the tab:
+Teams will call the following URL when configuring the tab:
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
