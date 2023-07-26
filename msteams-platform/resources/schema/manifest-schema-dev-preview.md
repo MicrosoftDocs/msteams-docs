@@ -918,7 +918,7 @@ Defines event-based activation extension points.
 |`events.options`| object | | | Configures how Outlook responds to the event.|
 |`events.options.sendMode`| string | | ✔️ | Actions to take during a mail send action. Supported values: `promptUser`, `softBlock`, `block`. For details about these values and their meaning, see [Available send mode options](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest#available-send-mode-options).|
 
-### extensions.prefer
+### extensions.alternates
 
 Provides the ability to prefer or hide particular in-market Add-ins for the purposes of de-duping titles and backwards compatibility.
 
