@@ -94,7 +94,7 @@ items:
 
     1.   Go to **Microsoft Teams**.
     
-    1.   From the upper-right corner of your Teams interface, select **Settings and more(...)**.
+    1.   From the upper-right corner of your Teams interface, select ....
     
     1.   Select **About**.
     
@@ -109,7 +109,7 @@ items:
   durationInMinutes: 1
   content: | 
 
-    1. Go to **TeamsToDoAppconnector.sln** in the cloned repository.
+    1. Go to **TeamsToDoAppconnector.sln** in cloned repository.
 
        :::image type="content" source="~/assets/images/sbs-connector/sln_1.png" alt-text="Screenshot of cloned repository with TeamsToDoAppConnector.sln highlighted in red.":::
 
@@ -180,12 +180,8 @@ items:
        :::image type="content" source="~/assets/images/sbs-connector/zip_1.png" alt-text="Screenshot of Manifest folder with Teams connector highlighted in red.":::
 
     1. Go to **Microsoft Teams**.
-    1. In the left pane
-      1. Select the **Apps** icon.
-      1. Select **Manage your apps**.
-      1. Select **Upload an app**.
-      1. Look for the option to **Upload a custom app**.
-
+    1. In the left pane, select **Apps** > **Manage your apps**.
+      
        :::image type="content" source="~/assets/images/sbs-connector/manageapp_1.png" alt-text="Screenshot of Microsoft Teams with App icons and Manage your apps highlighted in red.":::
 
     1. Select **Upload an app** and select **Upload a custom app**.
@@ -218,23 +214,23 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-connector/notification.png" alt-text="Screenshot of Teams ToDo Notification Inline Config displaying the confirmation of Teams ToDo Notification In-line Config set up details. ":::
 
-    1. Go to **Task Manager Portal**.
+    12. Go to **Task Manager Portal**.
 
         :::image type="content" source="~/assets/images/sbs-connector/taskportal_1.png" alt-text="Screenshot of Teams ToDo Notification-Inline Config with Task Manager Portal highlighted in red.":::
 
-    1. Select **Create New**.
+    13. Select **Create New**.
        
         :::image type="content" source="~/assets/images/sbs-connector/tasks_1.png" alt-text="Screenshot of Teams ToDo App with Create New option highlighted in red.":::
        
-    1. Enter the new task details:
+    14. Enter the new task details:
 
-        * **Title**
-        * **Description**
-        * **Assign To**
+        * Title
+        * Description
+        * Assign To
        
-    1. Select **Save**.  
-
         :::image type="content" source="~/assets/images/sbs-connector/details_1.png" alt-text="Screenshot of Teams ToDo App displaying the new task details.":::
+
+    15. Select **Save**.     
     
         The message card appears in registered Teams channel.
        
