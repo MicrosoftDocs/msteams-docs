@@ -930,7 +930,7 @@ Provides the ability to prefer or hide particular in-market Add-ins for the purp
 |`hide`| object | | | |
 |`alternates.hide.storeOfficeAddin`| object | | | Specifies an Office Add-in available in AppSource.|
 |`hide.storeOfficeAddin.officeAddinId`| string | 64 characters | ✔️ |Solution ID of an in-market add-in to hide.|
-|`hide.storeOfficeAddin.assetId`| string | 64 characters | ✔️ | Asset ID of the in-market add-in to hide.|
+|`alternates.hide.storeOfficeAddin.assetId`| string | 64 characters | ✔️ | The AppSource asset ID of the in-market add-in to hide.|
 |`hide.customOfficeAddin`| | | | |
 |`hide.customOfficeAddin.officeAddinId`|string | 64 characters | ✔️ | Solution ID of the in-market add-in to hide.|
 
