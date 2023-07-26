@@ -19,7 +19,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 | 25/05/2023 | Use a deep link to open a tab app in meeting side panel in Teams mobile client. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) |
 |23/05/2023 |  Live Share SDK is now generally available. Use Live Share to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. | Build apps for Teams meetings and calls > Enhanced collaboration with Live Share > [Live Share SDK](apps-in-teams-meetings/teams-live-share-overview.md)|
 |23/05/2023 | Use Teams app design guidelines to help you make quick and right decisions to design your app. | Design your app > [Overview](concepts/design/design-teams-app-overview.md)|
-|17/05/2023 | Cater your app to a specific audience from the available list of countries. | Distribute your app > Publish to the Teams store > Prepare your Teams store submission > [Distribute your app to specific countries](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries)|
+Cater your app to a specific audience from the available list of countries or regions. | Distribute your app > Publish to the Teams store > Prepare your Teams store submission > [Distribute your app to specific countries or regions](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries-or-regions)|
 | 17/05/2023 | Use the Teams Toolkit v5 extension with many new app development features to get started with app development for Teams using Visual Studio Code. | Tools and SDKs > Teams Toolkit > [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md)|
 | 17/05/2023 | Updated Get started module with GitHub Codespaces and step-by-step guides aligned with Teams Toolkit v5. It also includes details for extending Teams app over Microsoft 365 and Outlook. | [Get started](get-started/get-started-overview.md)|
 
@@ -37,7 +37,11 @@ Teams platform features that are available to all app developers.
 
 **2023 July**
 
-***July 06, 2023***: [Use app icon badging to identify any app activity during a meeting](apps-in-teams-meetings/app-icon-badging-for-your-app.md).
+* ***July 25, 2023***: [Use people icon in an Adaptive Card to view the images of users](task-modules-and-cards/cards/cards-format.md#people-icon-in-an-adaptive-card).
+
+* ***July 20, 2023***: [App caching for iOS personal tray](tabs/how-to/app-caching.md).
+
+* ***July 06, 2023***: [Use app icon badging to identify any app activity during a meeting](apps-in-teams-meetings/app-icon-badging-for-your-app.md).
 
 :::column-end:::
 :::row-end:::
@@ -343,9 +347,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2023 June**
+**2023 July**
 
-***June 19, 2023***: [Use Collaborative Stage View to engage with your app content in a new Teams window](tabs/tabs-link-unfurling.md#collaborative-stage-view).
+* ***July 13, 2023***: [Extend static tabs to group chat or meetings with a customizable experience.](tabs/what-are-tabs.md)
 
 :::column-end:::
 :::row-end:::
@@ -356,8 +360,9 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|19/07/2023| Use Collaborative Stage View to engage with your app content in a new Teams window | Build tabs > [Tabs link unfurling and Stage View](tabs/tabs-link-unfurling.md#collaborative-stage-view) |
 |31/01/2023| Send notifications to specific participants on a meeting stage with targeted in-meeting notification. |Build apps for Teams meetings and calls > Enable and configure apps for meetings > Build in-meeting notification for Teams meeting > Build tabs for meeting > [Targeted in-meeting notification](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification)|
-|30/01/2023| Enable app caching to improve subsequent launch time of the apps to the meeting side panel.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > [App caching](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching) |
+|30/01/2023| Enable app caching to improve subsequent launch time of the apps to the meeting side panel.|Build tabs > [App caching for your tab app](tabs/how-to/app-caching.md) |
 
 </details>
 </br>

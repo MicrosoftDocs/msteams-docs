@@ -15,8 +15,8 @@ You can allow customers to customize some aspects of your Microsoft Teams app in
 Some possible uses of this feature are:
 
 * Changing the app's accent color to match an org's brand.
-* Updating the app name from *Contoso* to *Contoso Agent*, which is the name users in the org will see.
-(Note: Users adding a connector to a chat or a channel will still see the original app name, *Contoso*.)
+* Updating the app name from *Contoso* to *Contoso Agent*, which is the name users in the org can see.
+(Note: Users adding a connector to a chat or a channel can still see the original app name, *Contoso*.)
 * Changing the description to include language and guidance that is better understood by your organization's end-users.
 * Changing logo and logo outline to inspire confidence to the end-users to use the app since it seems provided by their organization.
 
@@ -31,6 +31,5 @@ Provide guidelines for customers (specifically Teams admins) who want to customi
 
 ## See also
 
-* [App manifest schema](/microsoftteams/platform/resources/schema/manifest-schema)
 * [Customize apps in the Teams admin center](/microsoftteams/customize-apps)
 * [Distribute your Microsoft Teams app](../deploy-and-publish/apps-publish-overview.md)
