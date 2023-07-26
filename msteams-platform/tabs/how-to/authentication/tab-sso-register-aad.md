@@ -4,6 +4,7 @@ description: Configure Single sign-on (SSO) with Azure AD by configuring App ID 
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) access token SSO tenancy scope 
+ms.date: 02/01/2023
 ---
 # Configure your tab app in Azure AD
 

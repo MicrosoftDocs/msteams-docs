@@ -1,10 +1,9 @@
 ---
 title: Create an Incoming Webhook
-author: laujan
 description: Create Incoming Webhook to Teams app and post external requests to Teams. Remove Incoming Webhook. Sample code(C#, Node.js) to  send card using Incoming Webhook.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.author: lajanuar
+ms.date: 01/25/2023
 ---
 
 # Create Incoming Webhooks
@@ -83,11 +82,33 @@ You can create and send actionable messages through Incoming Webhook or connecto
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/incoming-webhook/csharp/IncomingWebhook/Controllers/CardController.cs#L28)
 
 ```csharp
-url = {{Webhook_URL}};
-HttpClient client = new HttpClient();
+var adaptiveCardJson = @"{
+  ""type"": ""message"",
+  ""attachments"": [
+    {
+      ""contentType"": ""application/vnd.microsoft.card.adaptive"",
+      ""content"": {
+        ""type"": ""AdaptiveCard"",
+        ""body"": [
+          {
+            ""type"": ""TextBlock"",
+            ""text"": ""Message Text""
+          }
+        ],
+        ""$schema"": ""http://adaptivecards.io/schemas/adaptive-card.json"",
+        ""version"": ""1.0""
+      }
+    }
+  ]
+}";
+
+var webhookUrl = "https://xxxxx.webhook.office.com/xxxxxxxxx";
+
+var client = new HttpClient();
 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-var content = new StringContent({{formatted_Card_Payload}}(Adaptive_Card_Json), System.Text.Encoding.UTF8, "application/json");
-var response = await client.PostAsync({{WebhookUrl}}, content);
+
+var content = new StringContent(adaptiveCardJson, System.Text.Encoding.UTF8, "application/json");
+var response = await client.PostAsync(webhookUrl, content);
 ```
 
 # [JavaScript](#tab/javascript)
@@ -104,6 +125,7 @@ var response = await client.PostAsync({{WebhookUrl}}, content);
         console.error(error)
     })
 ```
+
 ---
 
 ## Remove Incoming Webhooks
@@ -115,7 +137,7 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 1. Select **Configured** under **MANAGE**.
 1. Select the **1 Configured** to see a list of your current connectors.
 
-   :::image type="content" source="../../assets/images/configured_1.png" alt-text="This screenshot shows how to configured to see list of your current connectors.":::
+   :::image type="content" source="../../assets/images/configured_1.png" alt-text="This screenshot shows how to configure to see list of your current connectors.":::
 
 1. Select **Manage** for the connector that you want to remove.
 
@@ -134,9 +156,9 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 
 ## Code sample
 
-| Sample Name       | Description | .NET    |  Node.js |Manifest |
-|---------------------|--------------|---------|--------|--------|
-|Task module sample bots-V4 | This sample shows how to create task modules using bot framework v4 and teams tabs. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)|
+| Sample Name       | Description | .NET    |  Node.js |
+|---------------------|--------------|---------|--------|
+| Incoming Webhook |This sample shows how to implement and use Incoming Webhook. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs)|
 
 ## See also
 

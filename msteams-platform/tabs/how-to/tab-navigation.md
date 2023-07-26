@@ -1,10 +1,12 @@
 ---
+author: joshuapartlow
 title: Tab app navigation
 description: Learn about the options for navigation within a tab app using the Microsoft Teams JavaScript client library (TeamsJS).
-ms.date: 10/26/2022
+ms.date: 05/31/2023
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
+ms.author: joshuapa
 ---
 
 # Navigate within a tab app
@@ -28,7 +30,12 @@ if (pages.currentApp.isSupported()) {
         then((result) => {/*Successful navigation*/}).
         catch((error) => {/*Failed navigation*/});
 }
-else {/*Handle situation where capability isn't supported*/}
+else {/*Handle situation where capability isn't supported*/
+    const navPromise = pages.navigateToApp({appId: <appId>, pageId: <pageId>});
+    navPromise.
+        then((result) => {/*Successful navigation*/}).
+        catch((error) => {/*Failed navigation*/});
+}
 ```
 
 The following code illustrates how to navigate to the app's default tab:
@@ -43,7 +50,7 @@ if (pages.currentApp.isSupported()) {
 else {/*Handle situation where capability isn't supported*/}
 ```
 
-You can also use the `pages.navigateToApp()` function, `pages.tabs.navigateToTab()` function, or deep links for tab navigation, as shown in [Create deep links](~/concepts/build-and-test/deep-link-application.md#navigate-within-your-app).
+You can use the `pages.navigateToApp()` function. You can also use deep links for tab navigation as shown in [create deep links](~/concepts/build-and-test/deep-link-application.md#navigate-within-your-app).
 
 ## Configure back button navigation
 

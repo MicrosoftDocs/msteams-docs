@@ -1,10 +1,8 @@
 ---
 title: Get Teams specific context for your bot
-author: surbhigupta
 description: Get Teams specific context for your bot, fetch user profile, get single member, team's, list of channels in a team details. Sample on create a new channel thread.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: lajanuar
 ---
 # Get Teams specific context for your bot
 
@@ -165,7 +163,7 @@ public class MyBot : TeamsActivityHandler
 
 * [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest#botbuilder-teamsinfo-getmember&preserve-view=true)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L157)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L186)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {

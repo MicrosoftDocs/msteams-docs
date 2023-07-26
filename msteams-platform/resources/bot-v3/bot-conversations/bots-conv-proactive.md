@@ -3,6 +3,7 @@ title:  Proactive messaging for bots
 description: In this module, learn how to use proactive messaging for bots and best practices for proactive messaging in Microsoft Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.date: 04/02/2023
 ---
 # Proactive messaging for bots
 
@@ -14,7 +15,7 @@ A proactive message is a message that is sent by a bot to start a conversation. 
 * Poll responses.
 * External event notifications.
 
-Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation. When your bot starts a new conversation, there's no pre-existing conversation to post the message to. To send a proactive message, you need to:
+Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation. When your bot starts a new conversation, there's no preexisting conversation to post the message to. To send a proactive message, you need to:
 
 1. [Decide what you're going to say](#best-practices-for-proactive-messaging)
 1. [Obtain the user's unique ID and tenant ID](#obtain-necessary-user-information)
@@ -165,6 +166,92 @@ Alternatively, you can use the REST API and issue a POST request to [`/conversat
 
 ### Examples for creating a channel conversation
 
+# [C#](#tab/csharp)
+
+The .NET example is from [this sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-complete-sample/csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)
+
+```csharp
+using Microsoft.Bot.Builder.Dialogs;
+using Microsoft.Bot.Connector;
+using Microsoft.Bot.Connector.Teams.Models;
+using Microsoft.Teams.TemplateBotCSharp.Properties;
+using System;
+using System.Threading.Tasks;
+
+namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
+{
+    [Serializable]
+    public class ProactiveMsgTo1to1Dialog : IDialog<object>
+    {
+        public async Task StartAsync(IDialogContext context)
+        {
+            if (context == null)
+            {
+                throw new ArgumentNullException(nameof(context));
+            }
+
+            var channelData = context.Activity.GetChannelData<TeamsChannelData>();
+            var message = Activity.CreateMessageActivity();
+            message.Text = "Hello World";
+
+            var conversationParameters = new ConversationParameters
+            {
+                  IsGroup = true,
+                  ChannelData = new TeamsChannelData
+                  {
+                      Channel = new ChannelInfo(channelData.Channel.Id),
+                  },
+                  Activity = (Activity) message
+            };
+
+            MicrosoftAppCredentials.TrustServiceUrl(serviceUrl, DateTime.MaxValue);
+            var connectorClient = new ConnectorClient(new Uri(activity.ServiceUrl));
+            var response = await connectorClient.Conversations.CreateConversationAsync(conversationParameters);
+
+            context.Done<object>(null);
+        }
+    }
+}
+```
+
+# [Node.js](#tab/nodejs)
+
+```Javascript
+export async function startReplyChain(chatConnector: builder.ChatConnector, message: builder.Message, channelId: string): Promise<builder.IChatConnectorAddress> {
+    let activity = message.toMessage();
+
+    // Build request
+    let options: request.Options = {
+        method: "POST",
+        // We use urlJoin to concatenate urls. url.resolve should not be used here,
+        // since it resolves urls as hrefs are resolved, which could result in losing
+        // the last fragment of the serviceUrl
+        url: urlJoin((activity.address as any).serviceUrl, "/v3/conversations"),
+        body: {
+            isGroup: true,
+            activity: activity,
+            channelData: {
+                teamsChannelId: channelId,
+            },
+        },
+        json: true,
+    };
+
+    let response = await sendRequestWithAccessToken(chatConnector, options);
+    if (response && response.hasOwnProperty("id")) {
+        let address = createAddressFromResponse(activity.address, response) as any;
+        if (address.user) {
+            delete address.user;
+        }
+        if (address.correlationId) {
+            delete address.correlationId;
+        }
+        return address;
+    } else {
+        throw new Error("Failed to start reply chain: no conversation ID returned.");
+    }
+}
+```
 # [HTTP](#tab/http)
 
 ```http
@@ -209,54 +296,6 @@ If the call succeeds, the API returns with the following response object:
 {
     "id": "{{conversationID}}",
     "activityId": "{{activityID}}"
-}
-```
-
-# [C#](#tab/csharp)
-
-The .NET example is from [this sample](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)
-
-```csharp
-using Microsoft.Bot.Builder.Dialogs;
-using Microsoft.Bot.Connector;
-using Microsoft.Bot.Connector.Teams.Models;
-using Microsoft.Teams.TemplateBotCSharp.Properties;
-using System;
-using System.Threading.Tasks;
-
-namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
-{
-    [Serializable]
-    public class ProactiveMsgTo1to1Dialog : IDialog<object>
-    {
-        public async Task StartAsync(IDialogContext context)
-        {
-            if (context == null)
-            {
-                throw new ArgumentNullException(nameof(context));
-            }
-
-            var channelData = context.Activity.GetChannelData<TeamsChannelData>();
-            var message = Activity.CreateMessageActivity();
-            message.Text = "Hello World";
-
-            var conversationParameters = new ConversationParameters
-            {
-                  IsGroup = true,
-                  ChannelData = new TeamsChannelData
-                  {
-                      Channel = new ChannelInfo(channelData.Channel.Id),
-                  },
-                  Activity = (Activity) message
-            };
-
-            MicrosoftAppCredentials.TrustServiceUrl(serviceUrl, DateTime.MaxValue);
-            var connectorClient = new ConnectorClient(new Uri(activity.ServiceUrl));
-            var response = await connectorClient.Conversations.CreateConversationAsync(conversationParameters);
-
-            context.Done<object>(null);
-        }
-    }
 }
 ```
 

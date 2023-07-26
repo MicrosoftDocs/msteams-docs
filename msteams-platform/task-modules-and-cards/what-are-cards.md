@@ -3,6 +3,7 @@ title: Cards
 description: In this module, learn what are cards and how they're used in bots, connectors, and message extensions.
 ms.localizationpriority: high
 ms.topic: overview
+ms.date: 01/08/2023
 ---
 
 # Cards
@@ -16,7 +17,7 @@ The bots for Teams support the following types of cards:
 - List card
 - Connector card for Microsoft 365 Groups
 - Receipt card
-- Sign-in card
+- Sign in card
 - Thumbnail card
 - Card collections
 - Overflow menu on Adaptive Cards
