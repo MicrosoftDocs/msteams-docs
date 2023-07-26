@@ -100,6 +100,7 @@ For example:
    :::column span="":::
       :::image type="icon" source="~/assets/images/overview/tab.png" border="false":::
    :::column-end:::
+:::image type="icon" source="~/assets/images/overview/line-1.png" border="false":::
      :::image type="content" source="~/assets/images/overview/tab-extension.png" alt-text="Microsoft Teams app tab details." border="false":::
 :::row-end:::
 
