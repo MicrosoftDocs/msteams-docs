@@ -841,7 +841,7 @@ Configures the sets of [runtimes](office/dev/add-ins/testing/runtimes) and actio
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`| string | 64 characters | ✔️ | The ID for the runtime. |
-|`type`| string enum | | ✔️ | Specifies the type of runtime. Currently supports `general` for browser-based runtime. |
+|`type`| string enum | | ✔️ | Specifies the type of runtime. Currently supports `general` for [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime). |
 |`code`| object | | ✔️ | Specifies the location of code for this runtime. Extensions can use a page, script, or both. |
 |`code.page`| url | | ✔️ | URL of the web page to be loaded in browser-based runtimes. |
 |`code.script`| url | | ✔️ | URL of the script file to be loaded in runtimes without UI. |
