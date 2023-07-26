@@ -277,6 +277,78 @@ Sample - 2
      :::image type="content" source="~/assets/images/overview/graph-conversational-interface-extension.png" alt-text="Microsoft Teams apps for graph conversational interface details sample 2." border="false":::
 :::row-end:::
 
+Sample 3
+
+:::row:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/overview/empty-for-alignment.png" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="~/assets/images/overview/tab.png" border="false":::
+   :::column-end:::
+     :::image type="content" source="~\assets\images\overview\sample3-tab-extension.png" alt-text="Microsoft Teams app tab details sample 3." border="false":::
+:::row-end:::
+
+:::row:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/overview/empty-for-alignment.png" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="~/assets/images/overview/bot.png" border="false":::
+   :::column-end:::
+     :::image type="content" source="~\assets\images\overview\sample3-bot-extension.png" alt-text="Microsoft Teams app bot details sample 3." border="false":::
+:::row-end:::
+
+:::row:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/overview/empty-for-alignment.png" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="~/assets/images/overview/message-extension.png" border="false":::
+   :::column-end:::
+     :::image type="content" source="~\assets\images\overview\sample3-message-extension-extension.png" alt-text="Microsoft Teams app message extension details sample 3." border="false":::
+:::row-end:::
+
+:::row:::
+   :::column:::
+      :::image type="icon" source="~\assets\images\overview\microsoft-teams-app.png" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="~/assets/images/overview/adaptive-cards.png" border="false":::
+   :::column-end:::
+     :::image type="content" source="~\assets\images\overview\sample3-adaptive-card-extension.png" alt-text="Microsoft Teams app adaptive card details sample 3." border="false":::
+:::row-end:::
+
+:::row:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/overview/empty-for-alignment.png" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="~/assets/images/overview/apps-for-meetings.png" border="false":::
+   :::column-end:::
+     :::image type="content" source="~\assets\images\overview\sample3-apps-for-meeting-extension.png" alt-text="Microsoft Teams apps for meeting details sample 3." border="false":::
+:::row-end:::
+
+:::row:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/overview/empty-for-alignment.png" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="~/assets/images/overview/webhook-connectors.png" border="false":::
+   :::column-end:::
+     :::image type="content" source="~\assets\images\overview\sample3-webhhok-connectors-extension.png" alt-text="Microsoft Teams apps for incoming webhook details sample 3." border="false":::
+:::row-end:::
+
+:::row:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/overview/empty-for-alignment.png" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="~/assets/images/overview/graph-conversational-interface.png" border="false":::
+   :::column-end:::
+     :::image type="content" source="~\assets\images\overview\sample3-graph-conversational-interface-extension.png" alt-text="Microsoft Teams apps for graph conversational interface details." border="false":::
+:::row-end:::
+
 ## See also
 
 * [Plan your app with Teams features](../app-fundamentals-overview.md)
