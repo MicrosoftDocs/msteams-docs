@@ -831,7 +831,7 @@ Specifies the set of client or host requirements for an extension. If a client d
 |`requirements.capabilities.name`| string | | ✔️ | Identifies the name of the [requirement sets](/javascript/api/requirement-sets) that the extension needs to run. |
 |`requirements.capabilities.minVersion`| string | | | Identifies the minimum version for the requirement sets that the extension needs to run. |
 |`requirements.capabilities.maxVersion`| string | | | Identifies the maximum version for the requirement sets that the extension needs to run. |
-|`requirements.scopes`| array of enums | 1 scope | | Identifies the scopes in which the extension can run. Currently the only supported enum value is `mail`. |
+|`requirements.scopes`| array of enums | 1 scope | | Identifies the scopes in which the add-in can run. Currently the only supported enum value is `mail`.  This effectively defines the Office applications in which the extension can run. For example, `mail` means Outlook. |
 |`requirements.formFactors`| array of enums | | | Identifies the form factors that support the extension. Supported values: `mobile`, `desktop`. |
 
 ### extensions.runtimes
