@@ -844,7 +844,7 @@ Configures the sets of [runtimes](office/dev/add-ins/testing/runtimes) and actio
 |`type`| string enum | | ✔️ | Specifies the type of runtime. Currently supports `general` for [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime). |
 |`code`| object | | ✔️ | Specifies the location of code for this runtime. Extensions can use a page, script, or both. |
 |`code.page`| url | | ✔️ | URL of the web page to be loaded in browser-based runtimes. |
-|`code.script`| url | | ✔️ | URL of the script file to be loaded in runtimes without UI. |
+|`code.script`| url | | ✔️ | URL of the JavaScript file to be loaded in [JavaScript only](/office/dev/add-ins/testing/runtimes#javascript-only-runtime) runtimes. |
 |`lifetime`| string enum | | | Runtimes with a `short` lifetime do not preserve state across executions; runtimes with a `long` lifetime do. |
 |`actions`| array | | | Specifies the set of actions supported by this runtime.|
 |`actions[0].id`| string | 64 characters | ✔️ | Identifier for this action which is passed to the code file. |
