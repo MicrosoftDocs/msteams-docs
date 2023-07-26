@@ -15,7 +15,7 @@ The Microsoft Teams activity feed enables users to triage items that require att
 * **News**: Helps users to stay updated with the latest information like new assignment or new post.
 * **Collaboration**: When you share a file or @ mention a user in a comment, users can see a text preview in the notification banner.
 * **Reminders**: A notification to let you know about an event or a task. For example, you have a training due date today, and the app sends you a reminder notification to help you remember the task or event.
-* **Alerts**: Notifications, which require urgent or immediate attention. For example, the due date for a training is passed or an admin sends a request to fix a bug with the highest priority.
+* **Alerts**: Notifications, which require urgent or immediate attention. For example, a training's due date has passed, or an admin has sent a request to fix a bug with the highest priority.
 
 ## Advantages of activity feed notifications
 
@@ -23,12 +23,12 @@ The Microsoft Teams activity feed enables users to triage items that require att
 * Activity feed notification comes with an OS notification in Teams desktop and mobile clients, so that user attention is grabbed from the system pop-up and sound.
 * Notification content is highly customizable, allowing users to preview the summary of the notified events.
 * You can deep link your app to a notification so that when a user selects the notification it increases user app engagement.
-* You can send activity feed notification to various of recipients. For example, sending a personal notification or sending batch notifications to a group of users.
-* Teams manifest localization is supported for the templated text in activity feed notifications.
+* You can send activity feed notification to various recipients. For example, sending a personal notification or sending batch notifications to a group of users.
+* Teams manifest localization supports the templated text in activity feed notifications.
 
 ## Understand the basics of activity feed notifications
 
-Activity feed notifications in Microsoft Teams are comprised of multiple bits of information, displayed together, as shown in the following image.
+In Microsoft Teams, activity feed notifications consist of multiple bits of information displayed together, as shown in the following image:
 
 :::image type="content" source="../assets/images/activity-feed/notification-template.png" alt-text="Screenshot shows the components of an activity feed notification.":::
 
@@ -37,7 +37,7 @@ The components include:
 |Counter|Description|
 |----------|-----------|
 |1|**Avatar**: Shows who initiated the activity.|
-|2|**Activity type or app icon**: Depicts the type of activity. For app notifications, the line icon is replaced with an app icon.|
+|2|**Activity type or app icon**: The activity type or app icon depicts the type of activity. For app notifications, the line icon gets replaced with an app icon. |
 |3|**Title: Actor + reason**: *Actor*: Name of the user or app that initiated the activity. *Reason*: Describes the activity.|
 |4|**Timestamp**: Shows when the activity happened.|
 |5|**Text preview**: Shows a truncated line from the start of the notification.|
@@ -76,9 +76,9 @@ The following variants show the kinds of activity feed notification cards you ca
 
 Activity feed APIs work with a Teams app. The following are the requirements for sending activity feed notifications:
 
-* The Teams app manifest must have the Azure AD app ID added to the webApplicationInfo section. For details, see manifest schema.
-* Activity types must be declared in the activities section. For details, see manifest schema.
-The Teams app must be installed for the recipient, either personally, or in a team or chat they're part of. For more information, see Teams app installation.
+* The Teams app manifest must have the Azure AD app ID added to the webApplicationInfo section. For more information, see [manifest schema](../resources/schema/manifest-schema.md#webapplicationinfo).
+* Activity types must be declared in the activities section. For more information, see [manifest schema](../resources/schema/manifest-schema.md#activities).
+* The Teams app must be installed for the recipient, either personally, or in a team or chat they're part of.
 
 ### Teams app manifest changes
 
@@ -138,23 +138,23 @@ This section describes the changes that need to be added to Teams app manifest. 
 
 ### Install the Teams app
 
-Teams apps must be installed in a team, chat, or for a user in personal scope for users to receive activity feed notifications. For details, see [Teams app distribution methods](/microsoftteams/platform/concepts/deploy-and-publish/overview). Typically, [sideloading](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload) is preferred for development purposes. After development, you can choose the right distribution method based on whether you want to distribute to one tenant or to all tenants.
+Teams apps must be installed in a team, chat, or for a user in personal scope for users to receive activity feed notifications. For details, see [Teams app distribution methods](/microsoftteams/platform/concepts/deploy-and-publish/overview). For development purposes, we prefer [sideloading](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload). After development, you can choose the right distribution method based on whether you want to distribute to one tenant or to all tenants.
 
 You can also use [Teams app installation](/graph/api/resources/teamsappinstallation) APIs to manage Teams app installations.
 
 ## Send activity feed notifications to users
 
-Because a Teams app can be installed for a user, in a team, or in a chat, the notifications can be sent in these three contexts as well:
+Because a Teams app can be installed for a user, in a team, or in a chat, it can also send notifications in the following three contexts:
 
 * [Send notification to user in a chat](/graph/api/chat-sendactivitynotification)
 * [Send notification to user in a team](/graph/api/team-sendactivitynotification)
 * [Send notification to user](/graph/api/userteamwork-sendactivitynotification)
 
-Additionally, notifications can be sent in bulk up to 100 users at a time:
+Additionally, you can send notifications in bulk to up to 100 users at a time:
 
 * [Send notifications to multiple users in bulk](/graph/api/teamwork-sendactivitynotificationtorecipients)
 
-For details about what topics are supported for each scenario, see the specific APIs. Custom text-based topics are supported for all scenarios.
+To find details about the supported topics for each scenario, refer to the specific APIs. Custom text-based topics are supported for all scenarios.
 
 You can use Activity feed notification in the following scenarios:
 
@@ -174,10 +174,9 @@ Microsoft Teams users can customize the notifications they see in their feed or 
 
 :::image type="content" source="../assets/images/activity-feed/notification-settings.png" alt-text="Screenshot shows the Notifications settings in Teams, with the Custom option highlighted.":::
 
-Users can select **Edit** next to an app and customize the notifications. The `description` field in the Teams app manifest is displayed.
+Users can select **Edit** next to an app and customize the notifications. The Teams app manifest displays the `description` field.
 
 :::image type="content" source="../assets/images/activity-feed/app-level-notification-settings.png" alt-text="Screenshot shows notifications customized to Banner and feed for a Teams app.":::
-
 
 ## Examples
 
