@@ -892,7 +892,7 @@ Provides the ability to add buttons and menu items, collectively called "[add-in
 |`tabs.groups.controls.items.enabled`| boolean | | | Indicates whether the control is initially enabled. Default is `true`.|
 |`tabs.groups.controls.items.overriddenByRibbonApi`| boolean | | | Specifies whether a group, button, menu, or menu item will be hidden on application and platform combinations that support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. Default is `false`.|
 |`tabs.groups.controls.type`| string | | ✔️ | Supported values: `button`, `menu`.|
-|`tabs.groups.controls.builtinControlId`| string | 64 characters | ✔️ | Id of the existing Office control.|
+|`tabs.groups.controls.builtinControlId`| string | 64 characters | ✔️ | Id of the existing Office control. See [Find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
 |`tabs.groups.controls.label`| string | 64 characters | ✔️ | Displayed text for the control.|
 |`tabs.groups.controls.icons`| array | | | |
 |`tabs.groups.controls.icons.size`| number | | ✔️ | Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
