@@ -920,7 +920,7 @@ Defines event-based activation extension points.
 
 ### extensions.alternates
 
-Provides the ability to prefer or hide particular in-market Add-ins for the purposes of de-duping titles and backwards compatibility.
+Provides the ability to prefer or hide particular in-market add-ins when you have published multiple add-ins with overlapping functionality.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
