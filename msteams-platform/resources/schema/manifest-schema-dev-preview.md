@@ -865,7 +865,7 @@ Provides the ability to add buttons and menu items, collectively called "[add-in
 |`tabs`| array | |✔️| Configures custom tabs on the Office application ribbon. |
 |`tabs.id`| string | 64 characters | | Unique identifier for this tab within the app.|
 |`tabs.label`| string | 64 characters | | Displayed text for the tab.|
-|`tabs.position`| object | | | |
+|`tabs.position`| object | | | Configures the position of the custom tab relative to other tabs on the ribbon.|
 |`tabs.position.builtinTabId`| string | 64 characters | | The ID of the built-in tab.|
 |`tabs.position.align`| string enum | | |  Defines alignment of this custom tab relative to the specified built-in tab. Supported values: `after`, `before`|
 |`tabs.groups`| string |64 characters | | Defines tab groups.|
