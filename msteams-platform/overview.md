@@ -4,8 +4,7 @@ author: heath-hamilton
 description: Learn about Microsoft Teams, why should you build apps on Teams platform, and how does Teams app help meet business needs.
 ms.topic: overview
 ms.localizationpriority: high
-ms.author: lajanuar
-ms.date: 04/02/2023
+ms.date: 05/24/2021
 ---
 # Teams app that fits
 
@@ -27,7 +26,7 @@ Let's look at some areas where an app helps to meet a business need.
 | --- | --- |
 | - Desktop app <br> - Web app <br> - Mobile app | - Increase user engagements <br> - Make your app discoverable on Teams store |
 | **Customer benefits** | **Internal workflows** |
-| - On-the-go accessibility <br> - Secure customer data <br> - Ease of communication | - Automate repetitive tasks <br> - Simplify tasks with bots, such as Q&A and help-desk |
+| - On-the-go accessibility <br> - Secure customer data <br> - Ease of communication | - Automate repetitive tasks <br> - Simplify tasks with bots, such as Q&A and helpdesk |
 
 You can build apps with Teams platform by extending app capabilities to fit your needs. Create something brand new for Teams or integrate an existing app.
 
@@ -43,7 +42,7 @@ Teams apps help your collaborative workspace to be more productive by bringing k
 
 The benefits of building apps span from meeting organizational goals to increasing internal productivity.
 
-Here's why Teams is best-suited for your app needs:
+Here's why Teams is best suited for your app needs:
 
 * **Communication and collaboration**
 
@@ -73,7 +72,7 @@ Here's why Teams is best-suited for your app needs:
 
     If you've got an existing web app, SharePoint site (or SPFx extension), PowerApp, or other web-based application, it may make sense to enable some or all of it in Teams. Extending existing apps and porting interactive functionalities to Teams helps to grow user base and user engagement for your app.
 
-    :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-dashboard.png" alt-text="Screenshot shows you the sharePoint site ported as a Teams tab.":::
+    :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-dashboard.png" alt-text="Screenshot shows you the SharePoint site ported as a Teams tab.":::
 
 * **Teams store advantage**
 

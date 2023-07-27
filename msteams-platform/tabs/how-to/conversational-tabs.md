@@ -5,6 +5,7 @@ description: Learn to create conversational tabs in Microsoft Teams to start, co
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: high
+ms.date: 01/30/2023
 ---
 
 # Create conversational tabs

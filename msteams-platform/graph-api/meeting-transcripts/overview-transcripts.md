@@ -3,6 +3,7 @@ title: Use Microsoft Graph to fetch transcripts for a Teams meeting
 description: Describes the process, scenarios, and APIs to fetch transcripts in the post-meeting scenario.
 ms.localizationpriority: high
 ms.topic: conceptual
+ms.date: 02/20/2023
 ---
 # Get meeting transcripts using Graph APIs
 
@@ -40,10 +41,7 @@ If you want your app to fetch transcripts only for the Teams meeting where it's 
 
 For more information about the meeting-specific RSC permissions, see [RSC permissions for a chat or meeting](../rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting).
 
-After you've configured the permissions, configure your app to receive change notifications for all relevant meeting events. Notifications contain meeting ID and organizer ID that help in accessing transcript content. Your app can fetch the transcript for a meeting when it's generated after it ends. The content of the transcript is available as `.vtt` or `.docx` file.
-
-> [!NOTE]
-> The docx format for transcripts will be deprecated starting May 31, 2023. For more information, see [Get callTranscript](/graph/api/calltranscript-get).
+After you've configured the permissions, configure your app to receive change notifications for all relevant meeting events. Notifications contain meeting ID and organizer ID that help in accessing transcript content. Your app can fetch the transcript for a meeting when it's generated after it ends. The content of the transcript is available as a `.vtt` file.
 
 For more information about how your app can know when the meetings ends, see [subscribe to change notifications](fetch-id.md#subscribe-to-change-notifications) and [use Bot Framework to get meeting ID and organizer ID](fetch-id.md#use-bot-framework-to-get-meeting-id-and-organizer-id).
 
@@ -61,3 +59,4 @@ For more information about how your app can know when the meetings ends, see [su
 - [Meeting app APIs](../../apps-in-teams-meetings/meeting-apps-apis.md)
 - [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 - [Microsoft Graph API to get information about online meeting](/graph/api/resources/onlinemeeting)
+- [Considerations when choosing an API](/graph/choose-online-meeting-api)

@@ -5,6 +5,7 @@ description: In this article, use conversational bots in Microsoft Teams to shar
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
+ms.date: 01/29/2023
 ---
 # Build bots for Teams
 

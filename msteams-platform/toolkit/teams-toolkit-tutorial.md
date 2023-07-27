@@ -3,6 +3,7 @@ title: Teams toolkit tutorial and code samples
 description: The article lists the app that you want to build and the associated guides. 
 ms.localizationpriority: medium
 ms.topic: reference
+ms.date: 05/16/2023
 ---
 # Teams app tutorials and related code samples
 

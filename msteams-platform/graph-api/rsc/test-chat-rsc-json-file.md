@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: jecha
 ms.author: jecha
 ms.topic: how-to
+ms.date: 12/15/2022
 ---
 
 # Test chat RSC Postman collection for JSON

@@ -1,9 +1,10 @@
 ---
 title: Extend tab app with Microsoft Graph permissions
-description: Configure additional permissions and scopes, get access token with Microsoft Graph for to enable single sign-on (SSO).
+description: Configure additional permissions and scopes, get access token with Microsoft Graph to enable single sign-on (SSO).
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token scope
+ms.date: 04/06/2023
 ---
 # Extend tab app with Microsoft Graph permissions and scopes
 
@@ -39,7 +40,7 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
 
 4. Select **Microsoft Graph**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/request-api-permission.png" alt-text="The screenshot shows shows the request API permissions page.":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/request-api-permission.png" alt-text="The screenshot shows the request API permissions page.":::
 
     The options for Graph permissions display.
 
@@ -86,7 +87,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
 1. Select **+ Add a platform**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="The screenshot shows the options to add add a platform.":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="The screenshot shows the options to add a platform.":::
 
     The **Configure platforms** page appears.
 
@@ -206,32 +207,49 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 1. Validate the access token. For more information, see [Validate the access token](tab-sso-code.md#validate-the-access-token).
 1. Initiate the OAuth 2.0 OBO flow with a call to the Microsoft identity platform that includes the access token, some metadata about the user, and the credentials of the tab app (its app ID and client secret). The Microsoft identity platform will return a new access token that can be used to access Microsoft Graph.
 1. Get data from Microsoft Graph by using the new token.
-1. Use token cache serialization in MSAL.NET to cache the new access token for multiple, if required.
+1. Use token cache serialization in MSAL.NET to cache the new access token for multiple, if necessary.
 
 > [!IMPORTANT]
-> * As a best practice for security, always use the [server-side code to make Microsoft Graph calls](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow#middle-tier-access-token-request) or other calls that require passing an access token. You must not return the OBO token to the client because it enables the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked.
-> 
-> * Don’t use `notifySuccess` result to return the token information to the parent page. Use `localStorage` to save the token and pass the item key via `notifySuccess`.
+>
+> - As a best practice for security, always use the [server-side code to make Microsoft Graph calls](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow#middle-tier-access-token-request) or other calls that require passing an access token. You must not return the OBO token to the client because it enables the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked.
+>
+> - Don’t use `notifySuccess` result to return the token information to the parent page. Use `localStorage` to save the token and pass the item key via `notifySuccess`.
 
 ## Known limitations
 
-Tenant admin consent: A simple way of [consenting on behalf of an organization as a tenant admin](/azure/active-directory/manage-apps/consent-and-permissions-overview#admin-consent) is by getting [consent from admin](/azure/active-directory/manage-apps/grant-admin-consent).
+1. Tenant admin consent: A simple way of [consenting on behalf of an organization as a tenant admin](/azure/active-directory/manage-apps/consent-and-permissions-overview#admin-consent) is by getting [consent from admin](/azure/active-directory/manage-apps/grant-admin-consent).
 
-You can ask for consent using the Auth API. Another approach for getting Graph scopes is to present a consent dialog using our existing [third party OAuth provider authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves popping up an Azure AD consent dialog box.
+    You can ask for consent using the Auth API. Another approach for getting Graph scopes is to present a consent dialog using our existing [third party OAuth provider authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves popping up an Azure AD consent dialog box.
 
-<details>
-<summary>To ask for additional consent using the Auth API, follow these steps:</summary>
+    <details>
+    <summary>To ask for additional consent using the Auth API, follow these steps:</summary>
 
-1. The token retrieved using `getAuthToken()` must be exchanged on the server-side using Azure AD [on-behalf-of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to those other Graph APIs. Ensure you use the v2 Graph endpoint for this exchange.
-2. If the exchange fails, Azure AD returns an invalid grant exception. It usually responds with one of the two error messages, `invalid_grant` or `interaction_required`.
-3. When the exchange fails, you must ask for consent. Use the user interface (UI) to ask the app user to grant other consent. This UI must include a button that triggers an Azure AD consent dialog using [Silent authentication](~/concepts/authentication/auth-silent-aad.md).
-4. When asking for more consent from Azure AD, you must include `prompt=consent` in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) to Azure AD, otherwise Azure AD wouldn't ask for other scopes.
-    - Instead of `?scope={scopes}`, use `?prompt=consent&scope={scopes}`
-    - Ensure that `{scopes}` includes all the scopes you're prompting the user for, for example, `Mail.Read` or `User.Read`.
+    1. The token retrieved using `getAuthToken()` must be exchanged on the server-side using Azure AD [on-behalf-of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to those other Graph APIs. Ensure you use the v2 Graph endpoint for this exchange.
+    2. If the exchange fails, Azure AD returns an invalid grant exception. It usually responds with one of the two error messages, `invalid_grant` or `interaction_required`.
+    3. When the exchange fails, you must ask for consent. Use the user interface (UI) to ask the app user to grant other consent. This UI must include a button that triggers an Azure AD consent dialog using [Silent authentication](~/concepts/authentication/auth-silent-aad.md).
+    4. When asking for more consent from Azure AD, you must include `prompt=consent` in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) to Azure AD, otherwise Azure AD wouldn't ask for other scopes.
+        - Instead of `?scope={scopes}`, use `?prompt=consent&scope={scopes}`
+        - Ensure that `{scopes}` includes all the scopes you're prompting the user for, for example, `Mail.Read` or `User.Read`.
 
-    To handle incremental consent for tab app, see [incremental and dynamic user consent](/azure/active-directory/develop/v2-permissions-and-consent).
-5. After the app user has granted more permissions, retry the OBO flow to get access to these other APIs.
+        To handle incremental consent for tab app, see [incremental and dynamic user consent](/azure/active-directory/develop/v2-permissions-and-consent).
+    5. After the app user has granted more permissions, retry the OBO flow to get access to these other APIs.
     </details>
+
+1. Race condition in fetching Graph access token via on-behalf-of (OBO) flow after consent: If your app calls Microsoft Graph, you might use the on-behalf-of (OBO) flow in your API to get a valid Graph token for that user.
+
+   If a user hasn't granted Azure AD application consent for these scopes, your OBO call will fail with `invalid_grant` or `interaction_required` error. This error informs you that you need to prompt the user for their consent.
+
+   When the user has provided their consent and you try to make an OBO call immediately, sometimes there's a race condition between Azure AD propagating this consent and the OBO request taking place. This can lead to OBO call failing with the same `invalid_grant` or `interaction_required` errors.
+
+   If your application is unaware of this behaviour, it might ask the user for consent multiple times.
+
+   There's no workaround to this limitation. Azure AD recommends that you can build a meaningful wait-and-retry mechanism to overcome this issue.
+
+   This wait-and-retry mechanism should keep track if a user has consented to the required scopes. If an API call that includes an OBO request fails with the above errors, but the user has already consented, avoid showing the consent prompt to the user. Instead, wait for some time before retrying the API call. Usually, Azure AD sends the consent within three to five seconds. In one of our [sample applications](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/8f266c33608d6d7b4cf89c81779ccf49e7664c1e/samples/bot-tab-conversations/csharp/Source/ConversationalTabs.Web/ClientApp/src/utils/UtilsFunctions.ts#LL8C1-L8C1), we retry up to three times with double the wait time between each retry, starting at a one second wait.
+
+   If after three to five attempts the OBO flow still fails, the user might not have consented to all the required scopes, and you may have to prompt them to consent again.
+
+   This approach helps reduce the possibility of user being prompted for consent more than once.
 
 ## Code sample
 
@@ -244,4 +262,4 @@ You can ask for consent using the Auth API. Another approach for getting Graph s
 - [OAuth 2.0 On-Behalf-Of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)
 - [Get access for MS Graph](/graph/auth-v2-user)
 - [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet)
-- [Microsoft Teams MSAL2 provider](/graph/toolkit/providers/teams-msal2)
+- [Microsoft Teams MSAL2 provider](/graph/toolkit/providers/msal2)

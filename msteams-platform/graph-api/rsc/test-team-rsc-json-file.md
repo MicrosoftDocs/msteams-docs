@@ -1,10 +1,10 @@
 ---
 title: Test resource-specific consent for a team in Teams
-description: In this module, learn How to test resource-specific consent for a team in Teams using Postman with a sample JSON file.
+description: In this module, learn how to test resource-specific consent for a team in Teams using Postman with a sample JSON file.
 ms.localizationpriority: medium
 author: akjo
-ms.author: lajanuar
 ms.topic: how-to
+ms.date: 12/15/2022
 ---
 
 # Test team RSC Postman collection JSON
