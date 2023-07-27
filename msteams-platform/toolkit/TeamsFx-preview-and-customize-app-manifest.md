@@ -233,7 +233,8 @@ You can also sync the local changes to Developer Portal from the context menu of
 
 The changes are updated to Developer Portal.
 
->[!Tips] Select **Overwrite and update** from the **Warning** dialog box to make any manual updates that can be overwritten in Teams Developer Portal.
+>[!TIPS]
+> Select **Overwrite and update** from the **Warning** dialog box to make any manual updates that can be overwritten in Teams Developer Portal.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-overwrite.png" alt-text="Screenshot shows overwrite of app in teams developer portal.":::
 
