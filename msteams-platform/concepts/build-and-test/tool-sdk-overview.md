@@ -205,7 +205,15 @@ Teams Platform brings you different tools, SDKs, and APIs to build and develop y
 
 Teams Toolkit makes it simple to get started with app development for Microsoft Teams. You can start a project template for common line-of-business app scenarios or from a sample and save setup time with automated app registration and configuration. You can debug to Teams directly from familiar tools. Teams toolkit's smart defaults help you host in Azure using infrastructure-as-code and Bicep. It helps you to create unique configurations using the environment features such as, dev, test, and prod.
 
-## Teams Developer Platform SDKs & libraries
+## SDKs and libraries
+
+Teams Platform brings you different SDKs, and APIs to build and develop your apps and there're several libraries available to support various aspects of Teams app development.
+
+The following flow diagram explains you the different SDKs, libraries and its relations:
+
+:::image type="content" source="../../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png" alt-text="Screenshot shows you the list of all tools and SDKs that are available for you to build Teams apps."lightbox="../../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png":::
+
+### Teams Developer Platform SDKs & libraries
 
 | SDKs and libraries | Why you need? | How to use? | Related SDKs and Libraries |
 | ----------------- | -------------- | ----------------------- | --------------- |
