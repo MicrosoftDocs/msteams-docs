@@ -11,11 +11,26 @@ zone_pivot_groups: teams-app-platform
 
 # Teams Toolkit Overview
 
+::: zone pivot="visual-studio-code"
+
 > [!IMPORTANT]
 >
 > * We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
 > * Teams Toolkit isn't supported in Government Community Cloud (GCC) and GCC-High environments.
 > * [Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
+
+::: zone-end
+
+
+::: zone pivot="visual-studio-code"
+
+> [!IMPORTANT]
+>
+> * "We've introduced the important changes in Teams Toolkit extension within Visual Studio v17.7. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v17.7 for building your Teams app." 
+> * [Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
+
+::: zone-end
+
 
 ::: zone pivot="visual-studio-code"
 
@@ -30,7 +45,7 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 > [!NOTE]
 > Before you get started, we strongly recommend that you visit [Teams Toolkit v5 Guide](https://aka.ms/teamsfx-v5.0-guide) to learn key features, such as life cycles and actions.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-user-journey.png" alt-text="Screenshot shows the User Journey of the Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-user-journey.png":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-user-journey.png" alt-text="Screenshot shows the User Journey of the Teams Toolkit." lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-user-journey.png":::
 
 ## Available for Visual Studio Code
 
