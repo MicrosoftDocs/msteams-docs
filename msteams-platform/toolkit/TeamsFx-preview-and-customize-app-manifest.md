@@ -6,7 +6,7 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-zone_pivot_groups: teams-toolkit
+zone_pivot_groups: teams-app-platform
 ---
 
 # Customize Teams app manifest in Teams Toolkit
