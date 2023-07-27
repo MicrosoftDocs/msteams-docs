@@ -61,7 +61,7 @@ items:
   content: |
     1. Go to **Teams** and select **Teams** from the left pane.
 
-    1. Go to a team that you want, select **More options** (•••), and then select **Manage team**.
+    1. Go to a team that you want, select More options (•••), and then select **Manage team**.
 
        :::image type="content" source="./assets/images/sbs-outgoing-webhooks/manage-team.png" alt-text="Screenshot of Teams app with Manage team option under Contoso dropdown menu highlighted in red.":::
 
