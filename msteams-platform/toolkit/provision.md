@@ -1,16 +1,19 @@
 ---
 title: Use Teams Toolkit to provision cloud resources
 author: MuyangAmigo
-description: Learn how to do provision cloud resources using Teams Toolkit in Visual Studio Code, resource creation and customize resource provision.
+description: Learn how to do provision cloud resources using Teams Toolkit in Visual Studio Code and Visual Studio, resource creation and customize resource provision.
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+zone_pivot_groups: teams-app-platform
 ---
 
 # Provision cloud resources
 
 TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place your app in Azure with a single command. TeamsFx integrates with Azure Resource Manager (ARM), which enables to provision Azure resources that your application needs for code approach.
+
+::: zone pivot="visual-studio-code"
 
 ## Provision using Teams Toolkit in Microsoft Visual Studio Code
 
@@ -427,6 +430,20 @@ You can follow the steps to add environment variables to the .env files to use a
 > * If you don't use `botAadApp/create` action to create Azure AD application, you can add necessary environment variables with your preferred name without following above steps.
 > * Ensure not to share the same Azure AD app in multiple environments.
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+adksjhflksdjglks
+
+
+
+
+
+
+::: zone-end
 ## See also
 
 * [Deploy Teams app to the cloud](deploy.md)
+
+
+
