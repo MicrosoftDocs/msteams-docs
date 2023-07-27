@@ -10,7 +10,7 @@ ms.date: 01/31/2023
 
 # In-app purchases
 
-Microsoft Teams provides APIs that you can use to implement the in-app purchases to upgrade from free to paid Teams apps. In-app purchase allows you to convert users from free to paid plans directly from your app.
+In-app purchases provides options for the users to upgrade from free to paid plans from within your app. To do so, Microsoft Teams provides APIs that you can use to implement to upgrade from free to paid Teams apps. In-app purchase option is applicable only if the app is enabled with a transactable SaaS offer.
 
 In-app purchases allow users to purchase a new paid subscription and it doesn't enable the users to purchase additional or different licenses with existing paid subscriptions. To switch between plans, an existing user subscription must be canceled before a new subscription can be purchased through in-app purchases.
 

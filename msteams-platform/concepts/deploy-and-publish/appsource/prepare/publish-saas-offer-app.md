@@ -10,7 +10,7 @@ ms.date: 07/11/2023
 
 # Publish your app with the integrated SaaS offer
 
-After the offer is live in the marketplace, you need to link the offer to your app and publish the updated app in the store. The customers can purchase paid apps from the marketplace.
+When the offer is live, you can link the offer to your SaaS app and publish the subscriptions in the store. The SaaS app is now available in the store for purchase with the configured SaaS offers. The customers can purchase paid apps from the marketplace.
 
 :::image type="content" source="~/assets/images/saas-offer/monetize-flow6.png" alt-text="Diagram shows the process of creating a SaaS offer with publish stage highlighted.":::
 
@@ -20,14 +20,14 @@ For users to see your subscription plans in the Teams store, there are two ways 
 * App manifest update
 
 > [!NOTE]
-> You need the Publisher ID and Offer ID from Microsoft partner Center to configure the SaaS offer to your app.
+> You need the publisher ID and offer ID from Microsoft Partner Center to configure the SaaS offer to your app.
 
 To configure from Teams Developer Portal, follow the given steps:
 
 1. Go to the **Developer Portal** and select **Apps**.
 1. On the **Apps** page, select the app you're linking the SaaS offer to.
 1. Go to the Plans and pricing page and specify your publisher and offer IDs.
-1. Select View to preview your SaaS offer's subscription plans.
+1. Select **View** to preview your SaaS offer's subscription plans.
 1. If everything looks good, select **Save**.
 
 To configure through app manifest:
@@ -47,15 +47,21 @@ For more information to map the paid functionality to your offer and publish, se
 
 ## Publish your app
 
-You’ve created your SaaS offer and linked it to your Teams app—now it's time to publish your app to the Teams store. For complete instructions, see [publish your app to the Teams store](../publish.md).
+After successfully linking the offer to your app, you can now to publish your app to the Teams store. Before you publish your monetized app, do the following checks.
+
+* Ensure your app adheres to the [store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines?branch=main).
+* [Prepare for store submission](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist?branch=main&tabs=desktop).
+* [Perform the required pre-checks](/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish?branch=pr-en-us-8990) before submission.
+* [Submit app for validation](/office/dev/store/add-in-submission-guide).
+
+For complete instructions, see [publish your app to the Teams store](../publish.md).
 
 > [!IMPORTANT]
 >
 > * Even if your app is already listed on the Teams store, you still must go through the store validation process again to include your SaaS offer.
-> * Flat rate offers created without the Offer ID and Publisher ID in the app manifest should be updated and resubmitted for validation.
-Once published, users will see a Buy a subscription option in the app details dialog when they try to add your app to Teams.
+> * Flat rate offers created without the offer ID and publisher ID in the app manifest should be updated and resubmitted for validation.
 
-Once published, users see a **Buy a subscription** option in the app details dialog when they try to add your app to Teams.
+Once published, users can view the **Buy a subscription** option in the app details dialog when they try to add your app to Teams.
 
 ## Post purchase
 

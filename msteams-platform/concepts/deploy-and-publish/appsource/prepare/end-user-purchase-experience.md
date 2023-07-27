@@ -10,7 +10,7 @@ ms.date: 04/06/2023
 
 # Purchase and manage app subscriptions and licenses
 
-The information given below help you understand purchase experience from the customer end. You can add additional features and functionality for your Teams app through subscriptions. Users can purchase subscriptions and manage licenses for themselves, team, or organization directly from the Teams store.
+The information in this article helps you understand purchase experience from the customer end. You can add additional features and functionality for your Teams app through subscriptions. Users can purchase subscriptions and manage licenses for themselves, team, or organization directly from the Teams store.
 
 ## Subscription experience
 
@@ -22,10 +22,12 @@ The following example shows how users can purchase subscription plans for a fict
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app.":::
 
-Select your country or region to see subscription plans for your location. 
+1. Select your country or region to see subscription plans for your location.
 
+1. In the **Choose a subscription plan** dialog, choose the plan you want and select **Checkout**.
 
-1. In the **Choose a subscription plan** dialog, choose the plan you want and select **Checkout**. (Note: Private plans are visible only to users in orgs you're providing the offer to. These plans are indicated with a **Special offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon.)
+    > [!NOTE]
+    > Private plans are visible only to users in orgs you're providing the offer to. These plans are indicated with a **Special offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon.
 
     :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Screenshot shows selecting the appropriate subscription plan.":::
 
@@ -37,7 +39,7 @@ Select your country or region to see subscription plans for your location.
 
     :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="Screenshot shows the option to set up your subscription.":::
 
-1. Manage your subscription plan through the *Recloud* website (also known as a landing page (add link)).
+1. Manage your subscription plan through the *Recloud* website (also known as a [landing page](prerequisites.md#create-a-landing-page)).
 
     :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Screenshot shows User and Licenses screen to assign license.":::
 
@@ -77,12 +79,6 @@ The following example shows how users can manage licenses for third-party apps f
 1. If you want to unassign a license for a user or a team, select the users or a team from the list and select **Unassign**.
 
     :::image type="content" source="../../../../assets/images/saas-offer/unassign-button.png" alt-text="Screenshot shows the Unassign option highlighted in red to unassign the selected users.":::
-
-### Best practices for implementing subscription management
-
-* With transactable SaaS offers for Teams apps, subscription plans (licenses) should be assigned to individual users rather than groups or an entire org.
-* When users are assigned a subscription plan, notify them through a Teams bot or email. In the messaging, include information on how to add the app to Teams and get started.
-* Support the idea of multiple admins. In other words, multiple users in the same org can purchase and manage their own subscriptions.
 
 ## Admin purchasing experience
 

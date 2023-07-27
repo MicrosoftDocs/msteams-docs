@@ -77,7 +77,15 @@ After you create one or more plans, you'll see your plan name, plan ID, pricing 
 
 As explained in [create your offer](create-saas-offer.md#submit-the-offer) section, you can now submit the offer with the plans from Partner Center for validation. Upon successful validation, it's recommended to [test the offer](Test-preview-for-monetized-apps.md) with the given preview links.
 
-## Check license usage in Partner Center analytics
+## License management
+
+Based on the subscriptions the user purchase, the licenses are available. To get the best out of Microsoft license management, here are some best practices for implementing subscription management
+
+* With transactable SaaS offers for Teams apps, subscription plans (licenses) should be assigned to individual users rather than groups or an entire org.
+* When users are assigned a subscription plan, notify them through a Teams bot or email. In the messaging, include information on how to add the app to Teams and get started.
+* Support the idea of multiple admins. In other words, multiple users in the same org can purchase and manage their own subscriptions.
+
+### Check license usage in Partner Center analytics
 
 1. Sign in to [Partner Center](https://partner.microsoft.com/).
 1. In the left pane, go to **Commercial Marketplace > Analyze > Licensing**.
