@@ -808,7 +808,7 @@ When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidd
 
 **Maximum size** - 128 characters
 
-The value of the `publisherDocsUrl` parameter is a secure, HTTPS URL to the app documentation and information page that app developers choose to provide. Specifically, tenant admins get documentation about the app via this URL in the Teams admin center. The documentation may include the instructions for admins before they allow the app to facilitate app adoption and app rollout. The URL destination can also include instructions or information about the app that is useful for the tenant admin, users, and other business stakeholders.
+The value of the `publisherDocsUrl` parameter is a secure HTTPS URL to the app documentation and information page that app developers choose to provide. Tenant admins get documentation about the app at this URL. Teams admin center displays the URL in the app details page. The documentation may include the instructions for admins to facilitate app adoption and app rollout. In the app documentation, you can also include instructions or information about the app that is useful for the tenant admin, users, and other business stakeholders.
 
 ## subscriptionOffer
 
