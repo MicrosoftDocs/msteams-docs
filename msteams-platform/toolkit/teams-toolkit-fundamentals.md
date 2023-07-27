@@ -21,8 +21,7 @@ zone_pivot_groups: teams-app-platform
 
 ::: zone-end
 
-
-::: zone pivot="visual-studio-code"
+::: zone pivot="visual-studio"
 
 > [!IMPORTANT]
 >
@@ -30,7 +29,6 @@ zone_pivot_groups: teams-app-platform
 > * [Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
 
 ::: zone-end
-
 
 ::: zone pivot="visual-studio-code"
 
