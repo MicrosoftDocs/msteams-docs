@@ -10,7 +10,7 @@ zone_pivot_groups: teams-app-platform
 ---
 # Install Teams Toolkit
 
-::: zone pivot="visual-studio Code"
+::: zone pivot="visual-studio-code"
 
 > [!IMPORTANT]
 >
