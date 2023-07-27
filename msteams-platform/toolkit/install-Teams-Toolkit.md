@@ -6,7 +6,7 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 07/29/2022
-Zone_pivot_groups: teams-app-platform
+zone_pivot_groups: teams-app-platform
 ---
 # Install Teams Toolkit
 
