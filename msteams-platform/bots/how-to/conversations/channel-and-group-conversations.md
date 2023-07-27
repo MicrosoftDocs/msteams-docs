@@ -318,7 +318,7 @@ Example:
 
 The `type:tag` is added as a `Properties` in ChannelAccount.
 
-[SDK reference](/dotnet/api/microsoft.bot.schema.channelaccount?view=botbuilder-dotnet-stable&branch=main)
+[SDK reference](/dotnet/api/microsoft.bot.schema.channelaccount?view=botbuilder-dotnet-stable&branch=main&preserve-view=true)
 
 ```csharp
 ​var mention = new ChannelAccount(tagId, "Test Tag"); 
