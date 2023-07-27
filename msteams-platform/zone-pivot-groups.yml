@@ -68,4 +68,12 @@ groups:
     title: TeamsFx CLI v1
   - id: version-two
     title: TeamsFx CLI v2   
+- id: teams-toolkit
+  title: Teams toolkit
+  prompt: Before you begin, choose your development environment.
+  pivots:
+  - id: visual-studio-code
+    title: Visual Studio Code
+  - id: visual-studio
+    title: Visual Studio 
 
