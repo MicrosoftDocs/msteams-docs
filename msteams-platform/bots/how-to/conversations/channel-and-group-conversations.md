@@ -316,6 +316,10 @@ In the `mention.properties` object, add the property `'type': 'tag'`. If the pro
 
 Example:
 
+The `type:tag` is added as a `Properties` in ChannelAccount.
+
+[SDK reference](/dotnet/api/microsoft.bot.schema.channelaccount?view=botbuilder-dotnet-stable&branch=main)
+
 ```csharp
 ​var mention = new ChannelAccount(tagId, "Test Tag"); 
 ​mention.Properties = JObject.Parse("{'type': 'tag'}"); 
