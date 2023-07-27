@@ -207,3 +207,12 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 
 > [!div class="nextstepaction"]
 > [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md)
+
+* Blue line (“Depends on”): SDK A requires SDK B. When you use A, your project will automatically pull in B
+* Pink line (“Provides a reference to”): SDK A has a feature that hands your app a reference to SDK B
+* Yellow line (“Often used with”): You may find SDK B is helpful when using SDK A, but there is no formal dependency
+* Dotted line (“Underlying services and APIs”): shows an SDK’s underlying service and/or raw API
+
+| SDKs and libraries | Why you need? | Related SDKs and Libraries |
+| ----------------- | -------------- | ----------------------- |
+| **TeamsFx SDK** | TeamsFx helps to reduce your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources down to single line statements with zero configuration. | :::image type="icon" source="../../assets/icons/blue-dot.png" border="false"::: Depends on **Bot Framework SDK**, **Teams JavaScript client library**, and **Microsoft Graph SDK** </br> :::image type="icon" source="../../assets/icons/yellow-dot.png" border="false"::: You can also use it with **Teams AI Library** and **Adaptive Cards**. |
