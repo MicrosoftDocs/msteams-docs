@@ -51,7 +51,7 @@ landingContent:
       - text: Bots can mention tags in Adaptive Cards
         url: bots/how-to/conversations/channel-and-group-conversations.md#tag-mention
       - text: Distribute your app to specific countries
-        url: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries
+        url: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries-or-regions
       - text: People icon in an Adaptive Card
         url: task-modules-and-cards/cards/cards-format.md#people-icon-in-an-adaptive-card
       - text: Deep link to the meeting side panel

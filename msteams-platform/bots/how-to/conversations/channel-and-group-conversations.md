@@ -316,7 +316,7 @@ In the `mention.properties` object, add the property `'type': 'tag'`. If the pro
 
 Example:
 
-```javascript
+```csharp
 ​var mention = new ChannelAccount(tagId, "Test Tag"); 
 ​mention.Properties = JObject.Parse("{'type': 'tag'}"); 
 ​var mentionObj = new Mention 
@@ -355,7 +355,7 @@ Example:
 |Name |Description |
 |---------|----------------|
 |`type`| The type of mention. The supported type is `tag`.|
-|`id`|The tag format is base 64 encoded ID​. For example, `NTI4ZGJlM2YtMTVlMC00ZTM3LTg0YTEtMDBjYzMwNTg0N2RkIyNlYzgwMTVmMC1iMmYxLTQxZTItODA0OC1hMGE2OTcwNmM5ZGIjI3RxRE04YndyVQ==​`|
+|`id`|The unique identifier for the tag. For more information, see [teamworkTag](/graph/api/resources/teamworktag?view=graph-rest-1.0).|
 
 ###### Error code
 
@@ -384,7 +384,7 @@ The following table lists the throttling limits for tag mentions in a bot:
 * Tag mentions are supported only in bot to client message flow with text and Adaptive Card.
 * Tag mentions aren't supported in shared and private channels.
 * Tag mentions aren't supported in connectors.
-* Tag mentions don't support the invoke function in a bot.
+* Tag mentions don't support the invoke flow in a bot.
 
 ## Send a message on installation
 
