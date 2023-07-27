@@ -376,7 +376,7 @@ Ensure that you don't exceed the throttling limits to avoid failed message deliv
 
 The following table lists the throttling limits for tag mentions in a bot:
 
-|​Scope   |​Window Type  |Number of tags per message  |​Time windows (sec)  |​Maximum number of messages per time window  |
+| ​Scope   | ​Window Type  | Number of tags per message  | ​Time windows (sec)  | ​Maximum number of messages per time window  |
 |------------------------|------------|-----------|----------|----------|
 |​Per bot per thread     |   ​Short     |    10     |     5    |     2    |
 | &nbsp;                |   ​Long      |    10     |     60   |     5    |
