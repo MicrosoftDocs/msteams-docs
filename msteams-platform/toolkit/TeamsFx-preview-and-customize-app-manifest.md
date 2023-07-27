@@ -10,7 +10,7 @@ ms.date: 05/13/2022
 
 # Customize Teams app manifest in Teams Toolkit
 
-::: zone pivot="visual-studio-code"
+:::zone pivot="visual-studio-code"
 
 ## Customize Teams app manifest for Visual Studio Code
 
@@ -45,7 +45,7 @@ You can also trigger Zip Teams App Package from tree view or `Teams: Zip Teams a
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/zip-app-package (1).png" alt-text="Screenshot showing the selection of zip Teams app package in preview manifest file.":::
 
-## Customize Teams app manifest for Visual Studio Code
+## Customize your Teams app manifest
 
 During local debug or provision, Teams Toolkit loads manifest from `appPackage/manifest.json`, and resolves manifest by environment variables defined in `env/.env.xx`, then creates or updates Teams app in [Teams Developer Portal](https://dev.teams.microsoft.com/home).
 
@@ -157,10 +157,9 @@ You can go to `.env` file by selecting the CodeLens, which provide a dropdown li
 To preview values for all the environment, you can hover over the placeholder. It shows a list of environment names and corresponding values. If you haven't provisioned the environment or executed the local debug, the environment variable may not exist. Select `Trigger Teams: Provision in the cloud command to see placeholder value` or `Trigger local debug to see placeholder value`.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/hover-v5.png" alt-text="Screenshot showing the placeholder when hovered displays a list with environment names and corresponding values.":::
+:::zone-end
 
-::: zone-end
-
-::: zone pivot="visual-studio"
+:::zone pivot="visual-studio"
 
 ## Customize Teams app manifest for Visual Studio
 
@@ -235,15 +234,14 @@ The changes are updated to Developer Portal.
 
 >[!Tips] Select **Overwrite and update** from the **Warning** dialog box to make any manual updates that can be overwritten in Teams Developer Portal.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-overwrite.png" alt-text="Screenshot shows overwrite and update in teams developer portal.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-overwrite.png" alt-text="Screenshot shows overwrite of app in teams developer portal.":::
 
 When you create a Teams command bot using Visual Studio, two app IDs are registered in Microsoft Azure Active Directory (Azure AD). You can identify the app IDs in the Developer Portal as **Application (client) ID** under **Basic information** and existing **bot ID** under **App features**.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-dev-portal-basic-info.png" alt-text="Screenshot shows basic information of the app in teams developer portal.":::
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-dev-portal-app-features.png" alt-text="Screenshot shows overwrite and update in teams developer portal.":::
-
-::: zone-end
+:::zone-end
 
 ## See also
 
