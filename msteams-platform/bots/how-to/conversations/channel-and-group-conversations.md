@@ -355,7 +355,7 @@ Example:
 |Name |Description |
 |---------|----------------|
 |`type`| The type of mention. The supported type is `tag`.|
-|`id`|The unique identifier for the tag. For more information, see [teamworkTag](/graph/api/resources/teamworktag?view=graph-rest-1.0).|
+|`id`|The unique identifier for the tag. For more information, see [teamworkTag](/graph/api/resources/teamworktag?view=graph-rest-1.0&preserve-view=true).|
 
 ###### Error code
 
