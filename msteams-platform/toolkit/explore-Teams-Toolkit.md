@@ -39,7 +39,7 @@ This section gives you a tour of Teams Toolkit and its features.
 
 Teams Toolkit appears within Visual Studio Code as an extension. After you install Teams Toolkit, it opens within the Visual Studio Code window.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/overview-vsc.png" alt-text="Screenshot shows the Overview of Teams Toolkit." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview-vsc.png":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/overview-vsc.png" alt-text="Screenshot shows the Overview of Teams Toolkit." lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/overview-vsc.png":::
 
 | Serial No. | UI Elements | Definition |
 | --- | --- | --- |
@@ -207,7 +207,7 @@ You can access Teams Toolkit under **Project**.
 1. Select **Project** > **Teams Toolkit**.
 1. You can access different Teams Toolkit options:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-installed.png" alt-text="Screenshot shows the Teams toolkit project menu"  lightbox="images/../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-installed.png":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-installed.png" alt-text="Screenshot shows the Teams toolkit project menu"  lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-installed.png":::
 
 # [Solution Explorer](#tab/solutionexplorer)
 
