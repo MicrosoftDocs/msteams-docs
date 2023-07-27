@@ -6,7 +6,7 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 07/29/2022
-one_pivot_groups: teams-app-platform
+Zone_pivot_groups: teams-app-platform
 ---
 # Install Teams Toolkit
 
@@ -178,4 +178,4 @@ Teams Toolkit menu options are available in Visual Studio only when an app proje
 * [Prepare to build apps](build-environments.md)
 * [Provision cloud resources](provision.md)
 * [Deploy Teams app to the cloud](deploy.md)
-* [Create new Teams app](create-new-project.md#create-new-teams-app-in-visual-studio)
+* [Create new Teams app](create-new-project.md)
