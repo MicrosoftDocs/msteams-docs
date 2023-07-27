@@ -30,7 +30,7 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 > [!NOTE]
 > Before you get started, we strongly recommend that you visit [Teams Toolkit v5 Guide](https://aka.ms/teamsfx-v5.0-guide) to learn key features, such as life cycles and actions.
 
-:::image type="content" source=":::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-user-journey.png" alt-text="Screenshot shows the User Journey of the Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-user-journey.png":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-user-journey.png" alt-text="Screenshot shows the User Journey of the Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-user-journey.png":::
 
 ## Available for Visual Studio Code
 
@@ -53,11 +53,11 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 * Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
 * Bring your app to your organization or the Teams App Store using built-in publishing tools.
 
-:::image type="content" source=":::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-user-journey.png" alt-text="Screenshot shows the User Journey of the Teams Toolkit." lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-user-journey.png":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-user-journey.png" alt-text="Screenshot shows the User Journey of the Teams Toolkit." lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-user-journey.png":::
 
 ## Available for Visual Studio
 
-Teams Toolkit v4 is available for free for Visual Studio 2022 Community, Professional, and Enterprise. For more information about installation and setup, see [install Teams Toolkit](./install-Teams-Toolkit-v4.md).
+Teams Toolkit v5 is available for free for Visual Studio 2022 Community, Professional, and Enterprise. For more information about installation and setup, see [install Teams Toolkit](./install-Teams-Toolkit.md).
 
 | Teams Toolkit | Visual Studio |
 | - | ------------- |
@@ -91,11 +91,11 @@ The following list provides the key features of Teams Toolkit:
 You can start directly with the capability-focused templates such as tabs, bots, and message extensions or by following the existing samples if you're already familiar with Teams app development. Teams Toolkit reduces the complexity of getting started with the help of templates for common line-of-business app scenarios and smart defaults to accelerate your time to production.
 
 ::: zone pivot="visual-studio-code"
-:::image type="content" source=":::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/create-new-app.PNG" alt-text="Screenshot shows the creation of new Teams app menu in Visual Studio Code.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/create-new-app.PNG" alt-text="Screenshot shows the creation of new Teams app menu in Visual Studio Code.":::
 ::: zone-end
 
 ::: zone pivot="visual-studio"
-:::image type="content" source=":::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/create-new-app-vs.PNG" alt-text="Screenshot shows the creation of new Teams app menu in Visual Studio.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/create-new-app-vs.PNG" alt-text="Screenshot shows the creation of new Teams app menu in Visual Studio.":::
 ::: zone-end
 
 ### Automatic registration and configuration
