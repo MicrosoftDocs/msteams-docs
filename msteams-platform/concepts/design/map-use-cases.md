@@ -484,7 +484,7 @@ sample 5
    :::column span="":::
       :::image type="icon" source="~\assets\images\overview\flowchart-graph-interface.png" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\fc-graph-interface-details.png" alt-text="Microsoft Teams apps for graph conversational interface details sample 5,." border="false":::
+     :::image type="content" source="~\assets\images\overview\fc-graph-interface-details.png" alt-text="Microsoft Teams apps for graph conversational interface details sample 5." border="false":::
 :::row-end:::
 
 ## See also
