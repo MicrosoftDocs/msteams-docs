@@ -421,6 +421,10 @@ Sample 3.1
      :::image type="content" source="~\assets\images\overview\sample3-graph-conversational-interface-extension.png" alt-text="Microsoft Teams apps for graph conversational interface details sample 3." border="false":::
 :::row-end:::
 
+Sample 4
+flowchart LR
+    image type="icon" source="~/assets/images/overview/empty-for-alignment.png" --> image type="content" source="~\assets\images\overview\sample3-graph-conversational-interface-extension.png" alt-text="Microsoft Teams apps for graph conversational interface details sample 3."
+
 ## See also
 
 * [Plan your app with Teams features](../app-fundamentals-overview.md)
