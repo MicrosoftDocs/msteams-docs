@@ -429,25 +429,25 @@ sample 5
    :::column span="":::
       :::image type="icon" source="~\assets\images\overview\flowchart-tab.png" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\flowchart-tab-details.png" alt-text="Microsoft Teams app tab details sample 3." border="false":::
+     :::image type="content" source="~\assets\images\overview\fc-tab-details.png" alt-text="Microsoft Teams app tab details sample 5." border="false":::
 :::row-end:::
 
 :::row:::
    :::column:::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="~\assets\images\overview\sample3-bot.png" border="false":::
+      :::image type="icon" source="~\assets\images\overview\flowchart-bot.png" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\sample3-bot-extension.png" alt-text="Microsoft Teams app bot details sample 3." border="false":::
+     :::image type="content" source="~\assets\images\overview\fc-bot-details.png" alt-text="Microsoft Teams app bot details sample 5." border="false":::
 :::row-end:::
 
 :::row:::
    :::column:::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="~\assets\images\overview\sample3-message-extension.png" border="false":::
+      :::image type="icon" source="~\assets\images\overview\flowchart-message-extension.png" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\sample3-message-extension-extension.png" alt-text="Microsoft Teams app message extension details sample 3." border="false":::
+     :::image type="content" source="~\assets\images\overview\fc-message-extension-details.png" alt-text="Microsoft Teams app message extension details sample 5." border="false":::
 :::row-end:::
 
 :::row:::
@@ -455,36 +455,36 @@ sample 5
       :::image type="icon" source="~\assets\images\overview\flowchart-teams-app.png" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="~\assets\images\overview\sample3-adaptive-card.png" border="false":::
+      :::image type="icon" source="~\assets\images\overview\flowchart-adaptive-card.png" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\sample3-adaptive-card-extension.png" alt-text="Microsoft Teams app adaptive card details sample 3." border="false":::
+     :::image type="content" source="~\assets\images\overview\fc-adaptive-cards-details.png" alt-text="Microsoft Teams app adaptive card details sample 5." border="false":::
 :::row-end:::
 
 :::row:::
    :::column:::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="~\assets\images\overview\sample3-apps-for-meetings.png" border="false":::
+      :::image type="icon" source="~\assets\images\overview\flowchart-apps-for-meeting.png" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\sample3-apps-for-meeting-extension.png" alt-text="Microsoft Teams apps for meeting details sample 3." border="false":::
+     :::image type="content" source="~\assets\images\overview\fc-apps-meeting-details.png" alt-text="Microsoft Teams apps for meeting details sample 5." border="false":::
 :::row-end:::
 
 :::row:::
    :::column:::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="~\assets\images\overview\sample3-webhook-connectors.png" border="false":::
+      :::image type="icon" source="~\assets\images\overview\flowchart-webhook-connectors.png" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\sample3-webhhok-connectors-extension.png" alt-text="Microsoft Teams apps for incoming webhook details sample 3." border="false":::
+     :::image type="content" source="~\assets\images\overview\fc-webhook-connector-details.png" alt-text="Microsoft Teams apps for incoming webhook details sample 5." border="false":::
 :::row-end:::
 
 :::row:::
    :::column:::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="~\assets\images\overview\sample3-graph-conversational-interface.png" border="false":::
+      :::image type="icon" source="~\assets\images\overview\flowchart-graph-interface.png" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\sample3-graph-conversational-interface-extension.png" alt-text="Microsoft Teams apps for graph conversational interface details sample 3." border="false":::
+     :::image type="content" source="~\assets\images\overview\fc-graph-interface-details.png" alt-text="Microsoft Teams apps for graph conversational interface details sample 5." border="false":::
 :::row-end:::
 
 ## See also
