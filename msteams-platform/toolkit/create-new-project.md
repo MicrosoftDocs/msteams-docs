@@ -186,7 +186,7 @@ The steps to create a new Teams app are similar for all types of apps except not
 
     * Select **New project** under **Quick actions** to select a project template.
     
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5//new-project-vs.png" alt-text="Screenshot shows the selection of new project from quick actions.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/new-project-vs.png" alt-text="Screenshot shows the selection of new project from quick actions.":::
 
     * Select **File > New > Project** in Visual Studio to create a Teams app.
 
@@ -227,7 +227,7 @@ You can select any type of Teams app for your project.
 
    The **GettingStarted .txt** window appears.
 
-   :::image type="content" source="images/vs-getting-started-page_1-v4.png" alt-text="Select the Getting Started teams toolkit":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/get-started-tab-vs.png" alt-text="Screenshot shows the Getting Started teams toolkit page.":::
 
 You have created the app project scaffolding for your Teams app using Teams Toolkit template.
 
@@ -237,11 +237,11 @@ Teams Toolkit provides all components for building an app. After creating the pr
 
 * **Directory structure for basic Teams apps**
 
-  :::image type="content" source="images/vs-create-new-project-solution-explorer_1_3-v4.png" alt-text="Select the tab Solution Explorer teams toolkit":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/basic-app-directory.png" alt-text="Screenshot shows the tab Solution Explorer teams toolkit for basic tab.":::
 
 * **Directory structure for scenario-based Teams apps**
 
-  :::image type="content" source="images/vs-create-new-project-solution-explorer_2-v4.png" alt-text="Select the Solution Explorer teams toolkit":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/scenario-based-directory.png" alt-text="Screenshot shows the scenario based Solution Explorer teams toolkit.":::
 
 ## Teams app templates in Teams Toolkit for Visual Studio
 
@@ -251,6 +251,7 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 |---------|---------|
 |**Notification Bot**     |Notification bot app can send notifications to your Teams client. There are multiple ways to trigger the notification. For example, trigger the notification by HTTP request, or by time. You can select triggered notification based on your business scenario.         |
 |**Command Bot**     |You can type a command to interact with the bot using the command bot app.         |
+|**Workflow Bot**     |You can interact with the bot using the automate repetitive workflow action.         |
 |**Tab**     |Tab app shows a webpage inside Teams, and it enables single sign-on (SSO) using Teams account.         |
 |**Message Extension**     |Message extension app implements simple features like creating an Adaptive Card, searching Nugget packages, unfurling links for the `dev.botframework.com` domain.         |
 
