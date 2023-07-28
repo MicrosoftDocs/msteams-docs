@@ -1,5 +1,5 @@
 ---
-title: In-app purchase flow for the monetization of apps
+title: In-app purchase flow for monetization of apps
 description: Learn the basic tasks and concepts needed to implement in-app purchases and trial functionality in teams apps.
 author: v-npaladugu
 ms.author: surbhigupta

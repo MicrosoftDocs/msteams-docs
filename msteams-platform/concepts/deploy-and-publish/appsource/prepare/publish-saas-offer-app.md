@@ -14,6 +14,8 @@ When the offer is live, you can link the offer to your SaaS app and publish the 
 
 :::image type="content" source="~/assets/images/saas-offer/monetize-flow6.png" alt-text="Diagram shows the process of creating a SaaS offer with publish stage highlighted.":::
 
+## Configure SaaS offer to your app
+
 For users to see your subscription plans in the Teams store, there are two ways you can link the published SaaS offer to your Teams app.
 
 * Teams Developer Portal

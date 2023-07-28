@@ -1,5 +1,5 @@
 ---
-title: Create your SaaS offer for apps
+title: Create your SaaS offer
 description: Learn how to create a SaaS offer in Partner Center and configure the offer.
 author: v-preethah
 ms.author: surbhigupta

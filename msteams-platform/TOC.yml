@@ -911,10 +911,10 @@
   - name: Test and publish SaaS offer in the marketplace
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
     displayName: paid, AppSource, fee
-  - name: Publish your monetized app
+  - name: Publish monetized app to Teams store
     href: concepts/deploy-and-publish/appsource/prepare/publish-saas-offer-app.md
     displayName: configure, apps, publish app
-  - name: In-app purchases
+  - name: Configure in-app purchases
     href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
     displayName: manifest, purchase experience API, purchase
   - name: Purchase and manage app subscriptions and licenses
