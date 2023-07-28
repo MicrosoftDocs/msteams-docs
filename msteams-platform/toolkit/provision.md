@@ -481,7 +481,7 @@ The following steps help you to provision cloud resources using Visual Studio:
 
 After you open your project in Visual Studio:
 
-1. Select **Project** > **Teams Toolkit** > **Provision in the cloud**.
+1. Select **Project** > **Teams Toolkit** > **Provision in the cloud...**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-provision-in-cloud.png" alt-text="Screenshot shows how to provision in cloud.":::
 
@@ -512,15 +512,15 @@ The following list shows the actions designed for provision.
 
 ### teamsApp/create
 
-#### What it is
+#### What is teamsApp/create?
 
 If the environment variable that stores Teams app ID is empty or the app ID isn't found from Teams Developer Portal, then this action creates a new Teams app.
 
-#### What resource it operates
+#### What resource teamsApp/create operates on?
 
 Teams app in Teams Developer Portal.
 
-#### How to use it
+#### How to use teamsApp/create?
 
 ```yml
   - uses: teamsApp/create
@@ -534,16 +534,16 @@ Teams app in Teams Developer Portal.
 ```
 
 ### teamsApp/update
-
-#### What it is
+a
+#### What is teamsApp/update?
 
 Apply the Teams app manifest to an existing Teams app in Teams Developer Portal. It uses the app ID in manifest.json file to determine which Teams app to update.
 
-#### What resource it operates
+#### What resource teamsApp/update operates on?
 
 Teams app in Teams Developer Portal.
 
-#### How to use it
+#### How to use teamsApp/update?
 
 ```yml
 - uses: teamsApp/update
@@ -554,15 +554,15 @@ Teams app in Teams Developer Portal.
 
 ### teamsApp/validateManifest
 
-#### What it is
+#### What is teamsApp/validateManifest?
 
-This action renders Teams app manifest template with environment variables and validates Teams app manifest file using its schema.
+teamsApp/validateManifest action renders Teams app manifest template with environment variables and validates Teams app manifest file using its schema.
 
-#### What resource it operates
+#### What resource teamsApp/validateManifest operates on?
 
 N/A
 
-#### How to use it
+#### How to use teamsApp/validateManifest?
 
 ```yml
   - uses: teamsApp/validate
@@ -573,15 +573,15 @@ N/A
 
 ### teamsApp/validateAppPackage
 
-#### What it is
+#### What is teamsApp/validateAppPackage?
 
-This action validates Teams app package using validation rules.
+teamsApp/validateAppPackage action validates Teams app package using validation rules.
 
-#### What resource it operates
+#### What resource teamsApp/validateAppPackage operates?
 
 N/A
 
-#### How to use it
+#### How to use teamsApp/validateAppPackage?
 
 ```yml
   - uses: teamsApp/validateAppPackage
@@ -592,15 +592,15 @@ N/A
 
 ### teamsApp/zipAppPackage
 
-#### What it is
+#### What is teamsApp/zipAppPackage?
 
 This action renders Teams app manifest template with environment variables and compresses the manifest file with two icons into a zip file.
 
-#### What resource it operates
+#### What resource teamsApp/zipAppPackage operates?
 
 N/A
 
-#### How to use it
+#### How to use teamsApp/zipAppPackage?
 
 ```yml
 - uses: teamsApp/zipAppPackage
@@ -615,15 +615,15 @@ N/A
 
 ### teamsApp/publishAppPackage
 
-#### What it is
+#### What is teamsApp/publishAppPackage?
 
-This action publishes built Teams app zip file to tenant app catalog.
+teamsApp/publishAppPackage action publishes built Teams app zip file to tenant app catalog.
 
-#### What resource it operates
+#### What resource teamsApp/publishAppPackage operates on?
 
-Teams app in Microsoft 365 tenant app catalog.
+teamsApp/publishAppPackage operates in Microsoft 365 tenant app catalog.
 
-#### How to use it
+#### How to use teamsApp/publishAppPackage?
 
 ```yml
 - uses: teamsApp/publishAppPackage
@@ -638,15 +638,15 @@ Teams app in Microsoft 365 tenant app catalog.
 
 ### aadApp/create
 
-#### What it is
+#### What is aadApp/create?
 
-This action creates a new Azure Active Directory (Azure AD) application to authenticate users if the environment variable that stores clientId is empty.
+aadApp/create action creates a new Azure Active Directory (Azure AD) application to authenticate users if the environment variable that stores clientId is empty.
 
-#### What resource it operates
+#### What resource aadApp/create operates on?
 
-Azure AD in your Microsoft 365 tenant.
+aadApp/create operates in Azure AD in Microsoft 365 tenant.
 
-#### How to use it
+#### How to use aadApp/create?
 
 ```yml
 - uses: aadApp/create
@@ -675,15 +675,15 @@ Azure AD in your Microsoft 365 tenant.
   
 ### aadApp/update
 
-#### What it is
+#### What is aadApp/update?
 
-This action updates your Azure AD application based on give Azure AD app manifest. It refers to the ID property in Azure AD app manifest to determine which Azure AD app to update.
+aadApp/update action updates your Azure AD application based on give Azure AD app manifest. It refers to the ID property in Azure AD app manifest to determine which Azure AD app to update.
 
-#### What resource it operates
+#### What resource vaadApp/update operates on?
 
-Azure AD in your Microsoft 365 tenant.
+aadApp/update operates on Azure AD in your Microsoft 365 tenant.
 
-#### How to use it
+#### How to use aadApp/update?
 
 ```yaml
 - uses: aadApp/update
@@ -696,15 +696,15 @@ Azure AD in your Microsoft 365 tenant.
 
 ### botAadApp/create
 
-#### What it is
+#### What is botAadApp/create?
 
 This action creates a new or reuses an existing Azure AD application for bot.
 
-#### What resource it operates
+#### What resource botAadApp/create operates on?
 
-Azure AD in your Microsoft 365 tenant.
+botAadApp/create operates on Azure AD in Microsoft 365 tenant.
 
-#### How to use it
+#### How to use botAadApp/create?
 
 ```yml
 - uses: botAadApp/create
@@ -720,15 +720,15 @@ Azure AD in your Microsoft 365 tenant.
   
 ### arm/deploy
 
-#### What it is
+#### What is arm/deploy?
 
-This action deploys given ARM templates in parallel.
+arm/deploy action deploys given ARM templates in parallel.
 
-#### What resource it operates
+#### What resource  arm/deploy operates on?
 
-Azure subscription.
+ arm/deploy operates on Azure subscription.
 
-#### How to use it
+#### How to use arm/deploy?
 
 ```yml
 - uses: arm/deploy
@@ -751,15 +751,15 @@ Azure subscription.
 
 ### azureStorage/enableStaticWebsite
 
-#### What it is
+#### What is azureStorage/enableStaticWebsite
 
-This action enables static website setting in Azure Storage.
+azureStorage/enableStaticWebsite action enables static website setting in Azure Storage.
 
-#### What resource it operates
+#### What resource azureStorage/enableStaticWebsite operates on?
 
-Azure Storage.
+azureStorage/enableStaticWebsite operates on Azure Storage.
 
-#### How to use it
+#### How to use azureStorage/enableStaticWebsite?
 
 ```yml
 - uses: azureStorage/enableStaticWebsite
@@ -774,15 +774,15 @@ Azure Storage.
 
 ### script
 
-#### What it is
+#### What is script?
 
-This action executes a user-defined script.
+script action executes a user-defined script.
 
-#### What resource it operates
+#### What resource script operates?
 
 N/A
 
-#### How to use it
+#### How to use script?
 
 ```yml
 - uses: script
@@ -922,12 +922,8 @@ You can follow the steps to add environment variables to the .env files to use a
 > * If you don't use `botAadApp/create` action to create Azure AD application, you can add necessary environment variables with your preferred name without following above steps.
 > * Ensure not to share the same Azure AD app in multiple environments.
 
-
-
-
-
-
 ::: zone-end
+
 ## See also
 
 * [Deploy Teams app to the cloud](deploy.md)

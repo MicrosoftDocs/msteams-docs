@@ -1,16 +1,19 @@
 ---
 title: Deploy to the cloud
 author: MuyangAmigo
-description: Learn how to deploy app to the cloud, Azure, or SharePoint using Teams Toolkit in Visual Studio Code.
+description: Learn how to deploy app to the cloud, Azure, or SharePoint using Teams Toolkit in Visual Studio Code and Visual Studio.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+zone_pivot_groups: teams-app-platform
 ---
 
 # Deploy Teams app to the cloud
 
 Teams Toolkit helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
+
+::: zone pivot="visual-studio-code"
 
 ## Deploy Teams app to the cloud using Microsoft Visual Studio Code
 
@@ -226,6 +229,175 @@ This action upload and deploys generated sppkg to SharePoint app catalog. You ca
 |createAppCatalogIfNotExist | If the value is true, this action creates tenant app catalog first if not exist. |No | False |
 |packageSolutionPath | Path to package-solution.json in SPFx project. This action honors the configuration to get target sppkg.| Yes | |
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+# Deploy Teams app to the cloud
+
+Teams Toolkit helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
+
+# Deploy Teams app to the cloud using Microsoft Visual Studio
+You can deploy to the following types of cloud resources:
+* Azure App Services
+* Azure Functions
+* Azure Storage (as static website)
+* SharePoint
+
+> [!Note]
+>
+> Before you deploy app code to Azure cloud, you need to successfully complete the provisioning of cloud resources.
+
+# Deploy Teams apps using Teams Toolkit
+The Get started guide helps to deploy using Teams Toolkit. You can use the following to deploy your Teams app:
+
+## Deploy to Azure
+1. Open Visual Studio.
+1. Select Create a new project or open an existing project from the list.
+1. Select **Deploy to the cloud** from the Project menu.
+
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/deploy-to-the-cloud-button.png" alt-text="Screenshot shows how to select to deploy to the cloud.":::
+
+1. In the pop-up window that appears, select Deploy.
+
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/deploy_warning.png" alt-text="Screenshot shows deploy warning window.":::
+
+# Customize deploy lifecycle in Teams
+To customize the deployment process, you can edit the `deploy` sections in 'teamsapp.yml'.
+
+## cli/runNpmCommand
+This action will execute `npm` commands under specified directory with parameters.
+### Sample
+```yaml
+  - uses: cli/runNpmCommand
+    with:
+      workingDirectory: ./src
+      args: install
+```
+### Parameters
+| parameter | description | required | default value |
+|---|---|---|---|
+| workingDirectory | represents the folder where you want to run the command. If your input value is a relative path, it is relative to the workingDirectory. | No | Project root |
+| args |  command arguments | Yes | - |
+
+## cli/runDotnetCommand
+This action will execute `dotnet` commands under specified directory with parameters.
+### Sample
+```yaml
+  - uses: cli/runDotnetCommand
+    with:
+      workingDirectory: ./src
+      execPath: /YOU_DOTNET_INSTALL_PATH
+      args: publish --configuration Release --runtime win-x86 --self-contained
+```
+### Parameters
+| parameter | description | required | default value |
+|---|---|---|---|
+| workingDirectory | represents the folder where you want to run the command. If your input value is a relative path, it is relative to the workingDirectory. | No | Project root |
+| args |  npm command arguments | Yes | - |
+| execPath | executor path | No | System PATH |
+
+## cli/runNpxCommand
+This action will execute `npx` commands under specified directory with parameters. It can be used to run `gulp` commands to bundle and package sppkg.
+### Sample
+```yaml
+  - uses: cli/runNpxCommand
+    with:
+      workingDirectory: ./src
+      args: gulp package-solution --ship --no-color
+```
+| parameter | description | required | default value |
+|---|---|---|---|
+| workingDirectory | represents the folder where you want to run the command. If your input value is a relative path, it is relative to the workingDirectory. | No | Project root |
+| args |  command arguments | Yes | - |
+
+## azureAppService/zipDeploy
+
+This action will upload and deploy the project to Azure App Service using [the zip deploy feature](zip-deploy-to-app-services).
+### Sample
+```yaml
+  - uses: azureAppService/zipDeploy
+    with:
+      workingDirectory: ./src
+      artifactFolder: .
+      ignoreFile: ./.webappignore
+      resourceId: ${{BOT_AZURE_APP_SERVICE_RESOURCE_ID}}
+      dryRun: false
+      outputZipFile: ./.deployment/deployment.zip
+```
+### Parameters
+| parameter | description | required | default value |
+|---|---|---|---|
+| workingDirectory | represents the folder where you want to upload the artifact. If your input value is a relative path, it is relative to the workingDirectory. | No | Project root |
+| artifactFolder |  represents the folder where you want to upload the artifact. If your input value is a relative path, it is relative to the workingDirectory. | Yes | - |
+| ignoreFile | specifies the file path of the ignore file used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
+| resourceId |  indicates the resource ID of an Azure App Service. It is generated automatically after running the provision command. If you already have an Azure App Service, you can find its resource ID in the Azure portal (see [this link](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/) for more information). | Yes | - |
+| dryRun | You can set the dryRun parameter to true if you only want to test the preparation of the upload and do not intend to deploy it. This will help you verify that the packaging zip file is correct. | No | false |
+| outputZipFile |  indicates the path of the zip file for the packaged artifact folder. It is relative to the workingDirectory. This file will be reconstructed during deployment, reflecting all folders and files in your artifactFolder, and removing any non-existent files or folders. | No | ./.deployment/deployment.zip |
+
+## azureFunctions/zipDeploy
+This action will upload and deploy the project to Azure Functions using [the zip deploy feature](https://aka.ms/zip-deploy-to-azure-functions). 
+
+### Sample
+```yaml
+  - uses: azureFunctions/zipDeploy
+    with:
+      workingDirectory: ./src
+      artifactFolder: .
+      ignoreFile: ./.webappignore
+      resourceId: ${{BOT_AZURE_APP_SERVICE_RESOURCE_ID}}
+      dryRun: false
+      outputZipFile: ./.deployment/deployment.zip
+```
+### Parameters
+| parameter | description | required | default value |
+|---|---|---|---|
+| workingDirectory | represents the folder where you want to upload the artifact. If your input value is a relative path, it is relative to the workingDirectory. | No | Project root |
+| artifactFolder |  represents the folder where you want to upload the artifact. If your input value is a relative path, it is relative to the workingDirectory. | Yes | - |
+| ignoreFile | specifies the file path of the ignore file used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
+| resourceId |  indicates the resource ID of an Azure Functions. It is generated automatically after running the provision command. If you already have an Azure Functions, you can find its resource ID in the Azure portal (see [this link](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/) for more information). | Yes | - |
+| dryRun | You can set the dryRun parameter to true if you only want to test the preparation of the upload and do not intend to deploy it. This will help you verify that the packaging zip file is correct. | No | false |
+| outputZipFile |  indicates the path of the zip file for the packaged artifact folder. It is relative to the workingDirectory. This file will be reconstructed during deployment, reflecting all folders and files in your artifactFolder, and removing any non-existent files or folders. | No | ./.deployment/deployment.zip |
+
+## azureStorage/deploy
+This action will upload and deploy the project to Azure Storage.
+
+### Sample
+```yaml
+  - uses: azureStorage/deploy
+    with:
+      workingDirectory: ./src
+      artifactFolder: .
+      ignoreFile: ./.webappignore
+      resourceId: ${{BOT_AZURE_APP_SERVICE_RESOURCE_ID}} 
+```
+
+### Parameters
+| parameter | description | required | default value |
+|---|---|---|---|
+| workingDirectory | represents the folder where you want to upload the artifact. If your input value is a relative path, it is relative to the workingDirectory. | No | Project root |
+| artifactFolder |  represents the folder where you want to upload the artifact. If your input value is a relative path, it is relative to the workingDirectory. | Yes | - |
+| ignoreFile | specifies the file path of the ignore file used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
+| resourceId |  indicates the resource ID of an Azure Storage. It is generated automatically after running the provision command. If you already have an Azure Storage, you can find its resource ID in the Azure portal (see [this link](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/) for more information). | Yes | - |
+
+## spfx/deploy
+This action will upload and deploy generated sppkg to SharePoint app catalog. You can create tenant app catalog manually or by setting createAppCatalogIfNotExist to true if you don't have one in current M365 tenant.
+
+### Sample
+```yaml
+- uses: spfx/deploy
+    with:
+      createAppCatalogIfNotExist: false
+      packageSolutionPath: ./src/config/package-solution.json
+```
+### Parameters
+| parameter | description | required | default value |
+|---|---|---|---|
+| createAppCatalogIfNotExist | If the value is true, this action will create tenant app catalog first if not exist. | No | false |
+| packageSolutionPath | Path to package-solution.json in SPFx project. This action will honor the configuration to get target sppkg. | Yes | - |
+
+::: zone-end
+
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
@@ -234,3 +406,6 @@ This action upload and deploys generated sppkg to SharePoint app catalog. You ca
 * [Add cloud resources to Microsoft Teams app](add-resource.md)
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
 * [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
+
+
+
