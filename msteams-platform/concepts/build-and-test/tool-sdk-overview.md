@@ -15,10 +15,10 @@ The following flow diagram explains you the different SDKs, libraries and its re
 
 :::image type="content" source="../../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png" alt-text="Screenshot shows you the list of all tools and SDKs that are available for you to build Teams apps."lightbox="../../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png":::
 
-* :::image type="icon" source="../../assets/icons/blue-dot.png" border="false"::: Teams developer platform SDKs require core SDKs to build apps.
-* :::image type="icon" source="../../assets/icons/red-dot.png" border="false"::: Teams developer platform SDKs provide a reference to core SDKs.
-* :::image type="icon" source="../../assets/icons/yellow-dot.png" border="false"::: Teams developer platform SDKs often used with core SDKs, other libraries and UI utilities.
-* :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Services and APIs used for Teams developer platform SDKs and core SDKs.
+:::image type="icon" source="../../assets/icons/blue-dot.png" border="false"::: Teams developer platform SDKs require core SDKs to build apps. </br>
+:::image type="icon" source="../../assets/icons/red-dot.png" border="false"::: Teams developer platform SDKs provide a reference to core SDKs. </br>
+:::image type="icon" source="../../assets/icons/yellow-dot.png" border="false"::: Teams developer platform SDKs often used with core SDKs, other libraries and UI utilities. </br>
+:::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Services and APIs used for Teams developer platform SDKs and core SDKs. </br>
 
 ### Teams Developer Platform SDKs & libraries
 
