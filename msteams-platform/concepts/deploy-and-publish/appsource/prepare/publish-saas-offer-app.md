@@ -47,7 +47,7 @@ For more information to map the paid functionality to your offer and publish, se
 
 ## Publish your app
 
-After successfully linking the offer to your app, you can now to publish your app to the Teams store. Before you publish your monetized app, do the following checks.
+After successfully linking the offer to your app, you can now publish your app to the Teams store. Before you publish your monetized app, do the following checks.
 
 * Ensure your app adheres to the [store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines?branch=main).
 * [Prepare for store submission](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist?branch=main&tabs=desktop).
@@ -65,7 +65,7 @@ Once published, users can view the **Buy a subscription** option in the app deta
 
 ## Post purchase
 
-1. After activation, customer is redirected from landing page to Teams License Management.
+1. After activation, the customer is redirected from the landing page to Teams License Management.
 
 1. Upon successful completion of subscription purchase, the customer is redirected to the app landing page for subscription activation. This is the existing experience for user purchasing [Monetized apps in Teams](https://aka.ms/TMTG).
 
@@ -78,6 +78,13 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
 1. Go to the [Developer Portal](https://dev.teams.microsoft.com/) and select **Apps**.
 1. On the **Apps** page, select the app you're removing the offer from.
 1. Go to the **Plans and pricing** page and select **Revert**.
-1. After the offer is unlinked, do the following to update your store listing:
+1. After unlinking the offer, do the following steps to update your store listing:
    1. Select **Distribute > Publish to the Teams store**.
    1. Select **Open Partner Center** to begin the process of republishing your app without the offer.
+
+## See also
+
+* [Monetize your app](monetize-overview.md)
+* [Prepare your Teams store submission](submission-checklist.md)
+* [Submit your app](/partner-center/marketplace/add-in-submission-guide?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json)
+* [Purchase and manage subscriptions and licenses](end-user-purchase-experience.md)
