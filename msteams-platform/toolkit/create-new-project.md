@@ -6,16 +6,19 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
+zone_pivot_groups: teams-app-platform
 ---
 # Create a new Teams project
 
-In this section, you can learn how to create a new Teams project using Microsoft Visual Studio Code.
+In this section, you can learn how to create a new Teams project using Microsoft Visual Studio Code and Visual Studio.
+
+::: zone pivot="visual-studio-code"
 
 ## Create a new Teams project using Visual Studio Code
 
 You can build a new Teams project by selecting **Create a New App** in Teams Toolkit. You can start from built-in Teams app templates or start from official Teams app samples in Teams Toolkit. What's more, Teams Toolkit v5 supports to start with Outlook Add-in templates to build your own Outlook Add-ins.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the App Capability options.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/select-new-project.png" alt-text="Screenshot shows the selection of new project from the list of options.":::
 
 To start with Teams capabilities, you can create the following types of Teams app:
 
@@ -35,45 +38,45 @@ To create a basic Teams app:
 
 1. Select the **Teams Toolkit** > **Create a New App**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Screenshot shows the Create New Project button in the Teams Toolkit sidebar.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/create-new-app.png" alt-text="Screenshot shows the selection of Create a New App in the Teams Toolkit sidebar.":::
 
-1. In this example, select **Tab** as app capability.
+1. In this example, select **Tab** as new project.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the App Capability to select.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/select-new-project.png" alt-text="Screenshot shows the selection of new project from the list of options.":::
 
-1. Select **Basic Tab** as app capability.
+1. Select **Basic Tab** as app features using a tab.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-basic-tab.png" alt-text="Screenshot shows to select App Feature using a Tab as Basic Tab.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/select-basic-tab.png" alt-text="Screenshot shows to select App Feature using a Tab as Basic Tab.":::
 
 1. Select **JavaScript** as the programming language.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-language-tab_1.png" alt-text="Screenshot shows the programming language to select.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/select-programming-language.png" alt-text="Screenshot shows the programming language to select.":::
 
 1. Select **Default folder** to store your project root folder in the default location.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-default-location.png" alt-text="Screenshot shows the default location option to select.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/select-default-location.png" alt-text="Screenshot shows the default location option to select.":::
 
     <details>
     <summary>Learn to change the default folder:</summary>
 
     1. Select **Browse**.
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-browse_1.png" alt-text="Screenshot shows the Browse option highlighted to browse for storage.":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/select-browse.png" alt-text="Screenshot shows the Browse option highlighted to browse for storage.":::
 
     1. Select the location for project workspace.
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder_1.png" alt-text="Screenshot shows the Select Folder option highlighted.":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/select-folder.png" alt-text="Screenshot shows the Select Folder option highlighted.":::
 
     The folder you select is the location for your project workspace.
     </details>
 
     1. Enter a suitable name for your app, such as helloworld, as the application name. Ensure that you use only alphanumeric characters. Press **Enter**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot shows where to enter the app name.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/enter-application-name-tab.png" alt-text="Screenshot shows where to enter the app name.":::
 
    The Teams tab app is created in a few seconds.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/tab-app-created.png" alt-text="Screenshot shows the app created." lightbox="../assets/images/teams-toolkit-v2/first-tab/tab-app-created.png":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/tab-app-created.png" alt-text="Screenshot shows the app created." lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/tab-app-created.png":::
 
 ### Directory structure for different app types
 
@@ -151,6 +154,110 @@ To learn more about the directory structure of different types of scenario-based
 </details>
 <br>
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## Create new Teams app in Visual Studio
+
+Teams Toolkit provides Microsoft Teams app templates in Visual Studio to create Teams apps.  You can search and select the Teams app template that you require when you create a new project. Teams Toolkit for Visual Studio provides Teams app templates for creating:
+
+* Notification Bot
+* Command Bot
+* Workflow Bot
+* Tab
+* Message Extension
+
+## Prerequisites
+
+| &nbsp; | Install | For using... |
+| --- | --- | --- |
+| &nbsp; | Visual Studio latest version | You can install the enterprise edition of Visual Studio, and then select the **ASP.NET and web development** workload and **Microsoft Teams Development Tools** for installing.|
+| &nbsp; | Teams Toolkit | A Visual Studio workload that creates a project scaffolding for your app. Use latest version. |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to sideload your Teams app into local Teams environment for testing app behavior. |
+ | &nbsp; | [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Microsoft 365 account with the appropriate permissions to install an app. |
+
+## Create a new Teams app
+
+The steps to create a new Teams app are similar for all types of apps except notification bot. The following steps help you to create a new tab app:
+
+1. Open Visual Studio.
+1. Create a new project by using one of the following two options:
+
+    * Select **New project** under **Quick actions** to select a project template.
+    
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5//new-project-vs.png" alt-text="Screenshot shows the selection of new project from quick actions.":::
+
+    * Select **File > New > Project** in Visual Studio to create a Teams app.
+
+       :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/file-new-project.png" alt-text="Screenshot shows the selection of new project from file menu.":::
+
+    * The **Create a new project** window appears.  
+
+1. Enter **teams** in the search box and then list, select **Microsoft Teams App** from the search results.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/new-project-template-vs.png" alt-text="Screenshot shows the search and select Microsoft Teams app":::
+
+1. Select **Next**.
+
+   The **Configure your new project** window appears.
+
+     :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-app-project-name.png" alt-text="Screenshot shows the configure the project name of your application":::
+
+    1. Enter a suitable name for your project.
+
+         > [!NOTE]
+         > The project name you are entering is automatically filled in the **Solution name**. If you want, you can change the solution name with no effect on the project name.
+
+    1. Select the folder location where you want to create the project workspace.
+    1. Enter a different solution name, if you want.
+    1. If required, select the checkbox to save the project and solution in the same folder. For this tutorial, you don't need this option.
+    1. Select **Create**.
+
+   The **Create a new Teams application** window appears.
+
+1. Ensure **Tab** is selected, then select **Create**.
+
+   > [!NOTE]
+   > If you want to add single sign-on capability to your Teams app, select the Configure with single sign-on checkbox. For more information on single sign-in in Teams app created using Teams Toolkit, see [Add single sign-on to your Teams apps](/microsoftteams/platform/toolkit/add-single-sign-on?pivots=visual-studio).
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/create-new-app-vs.png" alt-text="Screenshot shows the selection of teams app type.":::
+
+You can select any type of Teams app for your project.
+
+   The **GettingStarted .txt** window appears.
+
+   :::image type="content" source="images/vs-getting-started-page_1-v4.png" alt-text="Select the Getting Started teams toolkit":::
+
+You have created the app project scaffolding for your Teams app using Teams Toolkit template.
+
+### Directory Structure
+
+Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under **Solution Explorer**.
+
+* **Directory structure for basic Teams apps**
+
+  :::image type="content" source="images/vs-create-new-project-solution-explorer_1_3-v4.png" alt-text="Select the tab Solution Explorer teams toolkit":::
+
+* **Directory structure for scenario-based Teams apps**
+
+  :::image type="content" source="images/vs-create-new-project-solution-explorer_2-v4.png" alt-text="Select the Solution Explorer teams toolkit":::
+
+## Teams app templates in Teams Toolkit for Visual Studio
+
+You can see Teams app templates already populated in Teams Toolkit for various Teams app types. The following table lists all the templates available:
+
+|Teams app templates  |Description  |
+|---------|---------|
+|**Notification Bot**     |Notification bot app can send notifications to your Teams client. There are multiple ways to trigger the notification. For example, trigger the notification by HTTP request, or by time. You can select triggered notification based on your business scenario.         |
+|**Command Bot**     |You can type a command to interact with the bot using the command bot app.         |
+|**Tab**     |Tab app shows a webpage inside Teams, and it enables single sign-on (SSO) using Teams account.         |
+|**Message Extension**     |Message extension app implements simple features like creating an Adaptive Card, searching Nugget packages, unfurling links for the `dev.botframework.com` domain.         |
+
+After the project is created, Teams Toolkit automatically opens **GettingStarted** window. You can see the instructions in **GettingStarted** window and check out the different features in Teams Toolkit.
+
+::: zone-end
+
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
@@ -158,3 +265,5 @@ To learn more about the directory structure of different types of scenario-based
 * [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
 * [Prerequisites for all types of environment and create your Teams app](tools-prerequisites.md)
 * [Prepare to build apps using Microsoft Teams Toolkit](build-environments.md)
+* [Provision cloud resources using Visual Studio](provision.md)
+* [Deploy Teams app to the cloud using Visual Studio](deploy.md)
