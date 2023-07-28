@@ -425,7 +425,6 @@ sample 5
 
 :::row:::
    :::column:::
-      :::image type="icon" source="~\assets\images\overview\flowchart-teams-app.png" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="~\assets\images\overview\flowchart-tab.png" border="false":::
@@ -435,7 +434,6 @@ sample 5
 
 :::row:::
    :::column:::
-      :::image type="icon" source="~\assets\images\overview\flowchart-teams-app.png" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="~\assets\images\overview\flowchart-bot.png" border="false":::
@@ -445,7 +443,6 @@ sample 5
 
 :::row:::
    :::column:::
-      :::image type="icon" source="~\assets\images\overview\flowchart-teams-app.png" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="~\assets\images\overview\flowchart-message-extension.png" border="false":::
@@ -465,7 +462,6 @@ sample 5
 
 :::row:::
    :::column:::
-      :::image type="icon" source="~\assets\images\overview\flowchart-teams-app.png" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="~\assets\images\overview\flowchart-apps-for-meeting.png" border="false":::
@@ -475,7 +471,6 @@ sample 5
 
 :::row:::
    :::column:::
-      :::image type="icon" source="~\assets\images\overview\flowchart-teams-app.png" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="~\assets\images\overview\flowchart-webhook-connectors.png" border="false":::
@@ -485,7 +480,6 @@ sample 5
 
 :::row:::
    :::column:::
-      :::image type="icon" source="~\assets\images\overview\flowchart-teams-app.png" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="~\assets\images\overview\flowchart-graph-interface.png" border="false":::
