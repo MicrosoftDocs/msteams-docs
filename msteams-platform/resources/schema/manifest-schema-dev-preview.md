@@ -923,15 +923,15 @@ Provides the ability to prefer or hide particular in-market add-ins when you hav
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`alternates.prefer`| object | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both.|
-|`alternates.prefer.comAddin`| object | | | Specifies a COM add-in that should be used in place of the Office Web Add-in when the OS is Windows.|
-|`alternates.prefer.comAddin.progId`| string | 64 characters | ✔️ | Identifies the application type in which the extension can run.|
-|`alternates.hide`| object | | | Configures how to hide another add-in that you have published whenever this add-in is installed, so users don't see both in the Office UI. For example, use this when you have previously published an add-in that uses the old XML manifest and you are replacing it with a version that uses the new JSON manifest. For more information and a concrete example, see [Manage both a unified manifest and an XML manifest version of your Office Add-in](/office/dev/add-ins/concepts/duplicate-legacy-metaos-add-ins).|
-|`alternates.hide.storeOfficeAddin`| object | | | Specifies an Office Add-in available in Microsoft AppSource.|
-|`alternates.hide.storeOfficeAddin.officeAddinId`| string | 64 characters | ✔️ |ID of an in-market add-in to hide. This GUID is from the manifest `id` property, if the in-market add-in uses the JSON manifest, or from the `<Id>` element, if the in-market add-in uses the XML manifest.|
-|`alternates.hide.storeOfficeAddin.assetId`| string | 64 characters | ✔️ | The AppSource asset ID of the in-market add-in to hide.|
-|`alternates.hide.customOfficeAddin`| | | | Configures hiding an in-market add-in that is not distributed through AppSource.|
-|`alternates.hide.customOfficeAddin.officeAddinId`|string | 64 characters | ✔️ | ID of the in-market add-in to hide. This GUID is from the manifest `id` property, if the in-market add-in uses the JSON manifest, or from the `<Id>` element, if the in-market add-in uses the XML manifest.|
+|`prefer`| object | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both.|
+|`prefer.comAddin`| object | | | Specifies a COM add-in that should be used in place of the Office Web Add-in when the OS is Windows.|
+|`prefer.comAddin.progId`| string | 64 characters | ✔️ | Identifies the application type in which the extension can run.|
+|`hide`| object | | | Configures how to hide another add-in that you have published whenever this add-in is installed, so users don't see both in the Office UI. For example, use this when you have previously published an add-in that uses the old XML manifest and you are replacing it with a version that uses the new JSON manifest. For more information and a concrete example, see [Manage both a unified manifest and an XML manifest version of your Office Add-in](/office/dev/add-ins/concepts/duplicate-legacy-metaos-add-ins).|
+|`hide.storeOfficeAddin`| object | | | Specifies an Office Add-in available in Microsoft AppSource.|
+|`hide.storeOfficeAddin.officeAddinId`| string | 64 characters | ✔️ |ID of an in-market add-in to hide. This GUID is from the manifest `id` property, if the in-market add-in uses the JSON manifest, or from the `<Id>` element, if the in-market add-in uses the XML manifest.|
+|`hide.storeOfficeAddin.assetId`| string | 64 characters | ✔️ | The AppSource asset ID of the in-market add-in to hide.|
+|`hide.customOfficeAddin`| | | | Configures hiding an in-market add-in that is not distributed through AppSource.|
+|`hide.customOfficeAddin.officeAddinId`|string | 64 characters | ✔️ | ID of the in-market add-in to hide. This GUID is from the manifest `id` property, if the in-market add-in uses the JSON manifest, or from the `<Id>` element, if the in-market add-in uses the XML manifest.|
 
 ## See also
 
