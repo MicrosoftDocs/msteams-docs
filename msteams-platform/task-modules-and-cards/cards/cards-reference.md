@@ -296,6 +296,8 @@ To know more about Adaptive Cards, see [Adaptive Cards](/adaptive-cards/).
 
 You can now work with a hero card, which is a multipurpose card used to visually highlight a potential user selection.
 
+Your bot can mention tags in an Adaptive Card posted into channels. For more information, see [Tag mention](../../bots/how-to/conversations/channel-and-group-conversations.md#tag-mention).
+
 ## Hero card
 
 A card that typically contains a single large image, one or more buttons, and text.
