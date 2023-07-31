@@ -233,7 +233,7 @@ This action upload and deploys generated sppkg to SharePoint app catalog. You ca
 
 ::: zone pivot="visual-studio"
 
-# Deploy Teams app to the cloud using Microsoft Visual Studio
+## Deploy Teams app to the cloud using Microsoft Visual Studio
 You can deploy to the following types of cloud resources:
 * Azure App Services
 * Azure Functions
@@ -244,10 +244,10 @@ You can deploy to the following types of cloud resources:
 >
 > Before you deploy app code to Azure cloud, you need to successfully complete the provisioning of cloud resources.
 
-# Deploy Teams apps using Teams Toolkit
+## Deploy Teams apps using Teams Toolkit
 The Get started guide helps to deploy using Teams Toolkit. You can use the following to deploy your Teams app:
 
-## Deploy to Azure
+### Deploy to Azure
 1. Open Visual Studio.
 1. Select Create a new project or open an existing project from the list.
 1. Select **Deploy to the cloud** from the Project menu.
@@ -258,27 +258,27 @@ The Get started guide helps to deploy using Teams Toolkit. You can use the follo
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/deploy_warning.png" alt-text="Screenshot shows deploy warning window.":::
 
-# Customize deploy lifecycle in Teams using Visual Studio
+## Customize deploy lifecycle in Teams using Visual Studio
 To customize the deployment process, you can edit the `deploy` sections in 'teamsapp.yml'.
 
-## cli/runNpmCommand
+### cli/runNpmCommand
 This action will execute `npm` commands under specified directory with parameters.
-### Sample
+#### Sample
 ```yaml
   - uses: cli/runNpmCommand
     with:
       workingDirectory: ./src
       args: install
 ```
-### Parameters
+#### Parameters
 | parameter | description | required | default value |
 |---|---|---|---|
 | workingDirectory | represents the folder where you want to run the command. If your input value is a relative path, it is relative to the workingDirectory. | No | Project root |
 | args |  command arguments | Yes | - |
 
-## cli/runDotnetCommand
+### cli/runDotnetCommand
 This action will execute `dotnet` commands under specified directory with parameters.
-### Sample
+#### Sample
 ```yaml
   - uses: cli/runDotnetCommand
     with:
@@ -286,31 +286,33 @@ This action will execute `dotnet` commands under specified directory with parame
       execPath: /YOU_DOTNET_INSTALL_PATH
       args: publish --configuration Release --runtime win-x86 --self-contained
 ```
-### Parameters
+#### Parameters
 | parameter | description | required | default value |
 |---|---|---|---|
 | workingDirectory | represents the folder where you want to run the command. If your input value is a relative path, it is relative to the workingDirectory. | No | Project root |
 | args |  npm command arguments | Yes | - |
 | execPath | executor path | No | System PATH |
 
-## cli/runNpxCommand
+### cli/runNpxCommand
 This action will execute `npx` commands under specified directory with parameters. It can be used to run `gulp` commands to bundle and package sppkg.
-### Sample
+#### Sample
 ```yaml
   - uses: cli/runNpxCommand
     with:
       workingDirectory: ./src
       args: gulp package-solution --ship --no-color
 ```
+#### Parameters
 | parameter | description | required | default value |
 |---|---|---|---|
 | workingDirectory | represents the folder where you want to run the command. If your input value is a relative path, it is relative to the workingDirectory. | No | Project root |
 | args |  command arguments | Yes | - |
 
-## azureAppService/zipDeploy
+### azureAppService/zipDeploy
 
-This action will upload and deploy the project to Azure App Service using [the zip deploy feature](zip-deploy-to-app-services).
-### Sample
+This action will upload and deploy the project to Azure App Service using [the zip deploy feature](https://aka.ms/zip-deploy-to-azure-functions).
+
+#### Sample
 ```yaml
   - uses: azureAppService/zipDeploy
     with:
@@ -321,7 +323,7 @@ This action will upload and deploy the project to Azure App Service using [the z
       dryRun: false
       outputZipFile: ./.deployment/deployment.zip
 ```
-### Parameters
+#### Parameters
 | parameter | description | required | default value |
 |---|---|---|---|
 | workingDirectory | represents the folder where you want to upload the artifact. If your input value is a relative path, it is relative to the workingDirectory. | No | Project root |
@@ -331,10 +333,10 @@ This action will upload and deploy the project to Azure App Service using [the z
 | dryRun | You can set the dryRun parameter to true if you only want to test the preparation of the upload and do not intend to deploy it. This will help you verify that the packaging zip file is correct. | No | false |
 | outputZipFile |  indicates the path of the zip file for the packaged artifact folder. It is relative to the workingDirectory. This file will be reconstructed during deployment, reflecting all folders and files in your artifactFolder, and removing any non-existent files or folders. | No | ./.deployment/deployment.zip |
 
-## azureFunctions/zipDeploy
+### azureFunctions/zipDeploy
 This action will upload and deploy the project to Azure Functions using [the zip deploy feature](https://aka.ms/zip-deploy-to-azure-functions). 
 
-### Sample
+#### Sample
 ```yaml
   - uses: azureFunctions/zipDeploy
     with:
@@ -345,7 +347,7 @@ This action will upload and deploy the project to Azure Functions using [the zip
       dryRun: false
       outputZipFile: ./.deployment/deployment.zip
 ```
-### Parameters
+#### Parameters
 | parameter | description | required | default value |
 |---|---|---|---|
 | workingDirectory | represents the folder where you want to upload the artifact. If your input value is a relative path, it is relative to the workingDirectory. | No | Project root |
@@ -355,10 +357,10 @@ This action will upload and deploy the project to Azure Functions using [the zip
 | dryRun | You can set the dryRun parameter to true if you only want to test the preparation of the upload and do not intend to deploy it. This will help you verify that the packaging zip file is correct. | No | false |
 | outputZipFile |  indicates the path of the zip file for the packaged artifact folder. It is relative to the workingDirectory. This file will be reconstructed during deployment, reflecting all folders and files in your artifactFolder, and removing any non-existent files or folders. | No | ./.deployment/deployment.zip |
 
-## azureStorage/deploy
+### azureStorage/deploy
 This action will upload and deploy the project to Azure Storage.
 
-### Sample
+#### Sample
 ```yaml
   - uses: azureStorage/deploy
     with:
@@ -368,7 +370,7 @@ This action will upload and deploy the project to Azure Storage.
       resourceId: ${{BOT_AZURE_APP_SERVICE_RESOURCE_ID}} 
 ```
 
-### Parameters
+#### Parameters
 | parameter | description | required | default value |
 |---|---|---|---|
 | workingDirectory | represents the folder where you want to upload the artifact. If your input value is a relative path, it is relative to the workingDirectory. | No | Project root |
@@ -376,17 +378,17 @@ This action will upload and deploy the project to Azure Storage.
 | ignoreFile | specifies the file path of the ignore file used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
 | resourceId |  indicates the resource ID of an Azure Storage. It is generated automatically after running the provision command. If you already have an Azure Storage, you can find its resource ID in the Azure portal (see [this link](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/) for more information). | Yes | - |
 
-## spfx/deploy
+### spfx/deploy
 This action will upload and deploy generated sppkg to SharePoint app catalog. You can create tenant app catalog manually or by setting createAppCatalogIfNotExist to true if you don't have one in current M365 tenant.
 
-### Sample
+#### Sample
 ```yaml
 - uses: spfx/deploy
     with:
       createAppCatalogIfNotExist: false
       packageSolutionPath: ./src/config/package-solution.json
 ```
-### Parameters
+#### Parameters
 | parameter | description | required | default value |
 |---|---|---|---|
 | createAppCatalogIfNotExist | If the value is true, this action will create tenant app catalog first if not exist. | No | false |

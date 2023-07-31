@@ -452,7 +452,7 @@ The following steps help you to provision cloud resources using Visual Studio:
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-prepare.png" alt-text="Sign in to Microsoft":::
    
     > [!NOTE]
-    > If you are already singed in, your username displays, or you have an option to **Add an account**.
+    > If you are already signed in, your username displays, or you have an option to **Add an account**.
 
 1. Your default web browser opens to let you [sign in](https://developer.microsoft.com/en-us/microsoft-365/dev-program) to the account.
 
