@@ -83,7 +83,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
   1. Review the [store validation guidelines](prepare/teams-store-validation-guidelines.md) again to ensure that your app is in alignment with the store requirements. Review helps reduce the number of issues observed in your app and so, the time taken to approve your app.
 
-  1. Test and re-test your app:
+  1. Test and retest your app:
 
      1. Validate your app package using the Teams [Developer Portal](https://dev.teams.microsoft.com/home) to identify and fix any package errors.
 
@@ -121,7 +121,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
 * **During design phase**
 
-  Review the [store validation guidelines specific to apps published with linked SaaS offers](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements and [Microsoft Commercial Marketplace policies applicable to Teams apps linked to SaaS offers](/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers). If you build your app in line with these guidelines, then it prevents any rework due to non-adherence to store policies.
+  Review the [store validation guidelines specific to apps published with linked SaaS offers](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements and [Microsoft Commercial Marketplace policies applicable to Teams apps linked to SaaS offers](/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers). If you build your app in line with these guidelines, then it prevents any rework due to nonadherence to store policies.
 
 * **Prior to app submission**
 
