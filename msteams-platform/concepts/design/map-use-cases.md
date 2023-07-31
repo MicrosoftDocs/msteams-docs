@@ -487,6 +487,57 @@ sample 5
      :::image type="content" source="~\assets\images\overview\fc-graph-interface-details.png" alt-text="Microsoft Teams apps for graph conversational interface details sample 5." border="false":::
 :::row-end:::
 
+sample 6
+
+:::row:::
+   :::column:::
+      :::image type="icon" source="~\assets\images\overview\flowchart-tab-icon.png" link="[Tab](../../tabs/design/tabs.md)" border="false":::
+   :::column-end:::
+     :::image type="content" source="~\assets\images\overview\fc-tab-details.png" alt-text="Microsoft Teams app tab details sample 6." border="false":::
+:::row-end:::
+
+:::row:::
+   :::column:::
+      :::image type="icon" source="~\assets\images\overview\flowchart-bot-icon.png" border="false":::
+   :::column-end:::
+     :::image type="content" source="~\assets\images\overview\fc-bot-details.png" alt-text="Microsoft Teams app bot details sample 6." border="false":::
+:::row-end:::
+
+:::row:::
+   :::column:::
+      :::image type="icon" source="~\assets\images\overview\flowchart-message-extension-icon.png" border="false":::
+   :::column-end:::
+     :::image type="content" source="~\assets\images\overview\fc-message-extension-details.png" alt-text="Microsoft Teams app message extension details sample 6." border="false":::
+:::row-end:::
+
+:::row:::
+   :::column:::
+      :::image type="icon" source="~\assets\images\overview\flowchart-adaptive-card-icon.png" border="false":::
+   :::column-end:::
+     :::image type="content" source="~\assets\images\overview\fc-adaptive-cards-details.png" alt-text="Microsoft Teams app adaptive card details sample 6." border="false":::
+:::row-end:::
+
+:::row:::
+   :::column:::
+      :::image type="icon" source="~\assets\images\overview\flowchart-apps-for-meetings-icon.png" border="false":::
+   :::column-end:::
+     :::image type="content" source="~\assets\images\overview\fc-apps-meeting-details.png" alt-text="Microsoft Teams apps for meeting details sample 6." border="false":::
+:::row-end:::
+
+:::row:::
+   :::column:::
+      :::image type="icon" source="~\assets\images\overview\flowchart-webhook-and-connectors-icon.png" border="false":::
+   :::column-end::::
+     :::image type="content" source="~\assets\images\overview\fc-webhook-connector-details.png" alt-text="Microsoft Teams apps for incoming webhook details sample 6." border="false":::
+:::row-end:::
+
+:::row:::
+   :::column:::
+      :::image type="icon" source="~\assets\images\overview\flowchart-graph-conversational-interface-icon.png" border="false":::
+   :::column-end:::
+     :::image type="content" source="~\assets\images\overview\fc-graph-interface-details.png" alt-text="Microsoft Teams apps for graph conversational interface details sample 5." border="false":::
+:::row-end:::
+
 ## See also
 
 * [Plan your app with Teams features](../app-fundamentals-overview.md)
