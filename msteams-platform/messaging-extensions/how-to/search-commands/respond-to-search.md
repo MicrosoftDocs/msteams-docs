@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-After the user submits the search command, your web service receives a `composeExtension/query` invoke message that contains a `value` object with the search parameters. The invoke is triggered with the following conditions:
+After the user submits the search command, your web service receives a `composeExtensions/query` invoke message that contains a `value` object with the search parameters. The invoke is triggered with the following conditions:
 
 * As characters are entered into the search box.
 * `initialRun` is set to true in your [app manifest](../../../resources/schema/manifest-schema.md#composeextensions), you receive the invoke message as soon as the search command is invoked. For more information, see [default query](#default-query).
