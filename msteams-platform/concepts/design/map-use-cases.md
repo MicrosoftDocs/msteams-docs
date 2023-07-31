@@ -491,14 +491,14 @@ sample 6
 
 :::row:::
    :::column:::
-      :::image type="icon" source="~\assets\images\overview\flowchart-tab-icon.png" link="[Tab](../../tabs/design/tabs.md)" border="false":::
+      :::image type="icon" source="~\assets\images\overview\flowchart-tab-icon.png" border="false":::
    :::column-end:::
      :::image type="content" source="~\assets\images\overview\fc-tab-details.png" alt-text="Microsoft Teams app tab details sample 6." border="false":::
 :::row-end:::
 
 :::row:::
    :::column:::
-      :::image type="icon" source="~\assets\images\overview\flowchart-bot-icon.png" link="[Bot](../../bots/design/bots.md)" border="false":::
+      :::image type="icon" source="~\assets\images\overview\flowchart-bot-icon.png" border="false":::
    :::column-end:::
      :::image type="content" source="~\assets\images\overview\fc-bot-details.png" alt-text="Microsoft Teams app bot details sample 6." border="false":::
 :::row-end:::
