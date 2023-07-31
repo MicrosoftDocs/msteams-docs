@@ -589,8 +589,8 @@ Define the properties your app uses to post a user activity feed.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`type`|string|32 characters|✔️|The notification type.|
-|`description`|string|128 characters|✔️|A brief description of the notification.|
+|`type`|string|32 characters|✔️|The notification type. |
+|`description`|string|128 characters|✔️|A brief description of the notification. |
 |`templateText`|string|128 characters|✔️|Ex: "{actor} created task {taskId} for you"|
 
 ```json
