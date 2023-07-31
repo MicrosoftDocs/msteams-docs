@@ -4,6 +4,7 @@ author: heath-hamilton
 description: In this module, learn how to design task modules for your Teams apps and get the Microsoft Teams UI Kit.
 ms.localizationpriority: high
 ms.topic: reference
+ms.date: 05/25/2023
 ---
 # Designing task modules for your Microsoft Teams app
 

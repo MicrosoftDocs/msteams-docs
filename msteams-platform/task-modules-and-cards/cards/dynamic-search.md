@@ -5,6 +5,7 @@ description: In this module, learn what is typeahead search in adaptive cards wi
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
+ms.date: 05/25/2023
 ---
 
 # Typeahead search in Adaptive Cards

@@ -4,6 +4,7 @@ description: With this learning module, learn about Azure bot channels for regis
 localization_priority: Normal
 ms.topic: overview
 ms.author: surbhigupta12
+ms.date: 06/02/2022
 ---
 
 1. In the [Microsoft Azure portal](https://ms.portal.azure.com/#home), under Azure services, select **Create a resource**.

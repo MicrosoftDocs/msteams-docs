@@ -5,6 +5,7 @@ description: In this module, learn about Virtual tables for Tasks, Meetings, and
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
+ms.date: 01/11/2023
 ---
 
 # Virtual tables for Tasks, Meetings, Files

@@ -4,6 +4,7 @@ description: Update code in your tab app for requesting and receiving access tok
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
+ms.date: 12/13/2022
 ---
 # Add code to enable SSO
 

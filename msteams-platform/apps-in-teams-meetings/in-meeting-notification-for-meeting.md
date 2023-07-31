@@ -160,7 +160,9 @@ To enable the targeted in-meeting notification:
 
      Targeted in-meeting notification is enabled.
 
-For more information on `targetedMeetingNotification`, see [Targeted meeting notification API](meeting-apps-apis.md#targeted-meeting-notification-api).
+For more information on `targetedMeetingNotification`, see [Targeted meeting notification and app icon badging API](meeting-apps-apis.md#targeted-meeting-notification-and-app-icon-badging-api).
+
+After you've built in-meeting notification for your app, you can use the `targetedMeetingNotification` API to enable app icon badging for your meeting app. This helps meeting participants to get a notification whenever there's new activity in the app. For more information, see [enable app icon badging for your Teams app](app-icon-badging-for-your-app.md).
 
 ## Code sample
 
