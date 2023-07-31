@@ -307,6 +307,7 @@ Your bot can mention tags in text messages and Adaptive Cards posted in channels
 
 > [!NOTE]
 >
+> * Tah mentions are available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 > * Tag mentions are supported in Teams desktop and web clients. However, it's not supported in Teams mobile client.
 > * Tag mentions are supported in Government Community Cloud (GCC) and GCC-High tenants, and not supported in  Department of Defense (DoD) tenant.
 
