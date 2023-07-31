@@ -30,7 +30,7 @@ The following image displays the business functions of Virtual Assistant:
 
 ## Create a Teams-focused Virtual Assistant
 
-Microsoft has published a [Microsoft template](https://botbuilder.myget.org/feed/aitemplates/package/nuget/Microsoft.Bot.Solutions.VirtualAssistantTemplate) for building Virtual Assistants and skills. With the template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We've enhanced template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, task modules, teams or group chats, and message extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
+Microsoft has published a [Microsoft template](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template/) for building Virtual Assistants and skills. With the template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We've enhanced template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, task modules, teams or group chats, and message extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
 The following image displays the high level diagram of a Virtual Assistant solution:
 
 :::image type="content" source="../assets/images/bots/virtual-assistant/high-level-diagram.png" alt-text="Diagram that shows Virtual Assistant solution.":::
@@ -320,7 +320,7 @@ Once the commands are invoked by a user, the Virtual Assistant can identify an a
     }
 ```
 
-Some message extension activities don't include the command ID. For example, `composeExtension/selectItem` contains only the value of the invoke tap action. To identify the associated skill, `skillId`  is attached to each item card while forming a response for `OnTeamsMessagingExtensionQueryAsync`. This is similar to the approach for [adding adaptive  cards to your Virtual Assistant](#add-adaptive-cards-to-your-virtual-assistant).
+Some message extension activities don't include the command ID. For example, `composeExtensions/selectItem` contains only the value of the invoke tap action. To identify the associated skill, `skillId`  is attached to each item card while forming a response for `OnTeamsMessagingExtensionQueryAsync`. This is similar to the approach for [adding adaptive  cards to your Virtual Assistant](#add-adaptive-cards-to-your-virtual-assistant).
 
 ```csharp
     // Invoked when a 'composeExtension/selectItem' invoke activity is received for compose extension query command.
