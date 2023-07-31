@@ -132,4 +132,4 @@ var adaptiveCardResponse = JObject.FromObject(new
 * [Adaptive Card actions in Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [How bots work](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
-* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Form completion feedback](../cards-format.md#form-completion-feedback)
