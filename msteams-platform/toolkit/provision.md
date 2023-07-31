@@ -28,15 +28,15 @@ The following list shows the actions designed for provision.
 
 ### teamsApp/create
 
-#### What it is
+#### What is teamsApp/create?
 
 If the environment variable that stores Teams app ID is empty or the app ID isn't found from Teams Developer Portal, then this action creates a new Teams app.
 
-#### What resource it operates
+#### What resource teamsApp/create operate?
 
 Teams app in Teams Developer Portal.
 
-#### How to use it
+#### How to use teamsApp/create?
 
 ```yml
   - uses: teamsApp/create
@@ -51,15 +51,15 @@ Teams app in Teams Developer Portal.
 
 ### teamsApp/update
 
-#### What it is
+#### What is teamsApp/update?
 
 Apply the Teams app manifest to an existing Teams app in Teams Developer Portal. It uses the app ID in manifest.json file to determine which Teams app to update.
 
-#### What resource it operates
+#### What resource teamsApp/update operate?
 
 Teams app in Teams Developer Portal.
 
-#### How to use it
+#### How to use teamsApp/update?
 
 ```yml
 - uses: teamsApp/update
@@ -70,15 +70,15 @@ Teams app in Teams Developer Portal.
 
 ### teamsApp/validateManifest
 
-#### What it is
+#### What is teamsApp/validateManifest?
 
 This action renders Teams app manifest template with environment variables and validates Teams app manifest file using its schema.
 
-#### What resource it operates
+#### What resource teamsApp/validateManifest operate?
 
 N/A
 
-#### How to use it
+#### How to use teamsApp/validateManifest?
 
 ```yml
   - uses: teamsApp/validate
@@ -89,15 +89,15 @@ N/A
 
 ### teamsApp/validateAppPackage
 
-#### What it is
+#### What is teamsApp/validateAppPackage?
 
 This action validates Teams app package using validation rules.
 
-#### What resource it operates
+#### What resource teamsApp/validateAppPackage operate?
 
 N/A
 
-#### How to use it
+#### How to use teamsApp/validateAppPackage?
 
 ```yml
   - uses: teamsApp/validateAppPackage
@@ -108,15 +108,15 @@ N/A
 
 ### teamsApp/zipAppPackage
 
-#### What it is
+#### What is teamsApp/zipAppPackage?
 
 This action renders Teams app manifest template with environment variables and compresses the manifest file with two icons into a zip file.
 
-#### What resource it operates
+#### What resource teamsApp/zipAppPackage operate?
 
 N/A
 
-#### How to use it
+#### How to use teamsApp/zipAppPackage?
 
 ```yml
 - uses: teamsApp/zipAppPackage
@@ -131,15 +131,15 @@ N/A
 
 ### teamsApp/publishAppPackage
 
-#### What it is
+#### What is teamsApp/publishAppPackage?
 
 This action publishes built Teams app zip file to tenant app catalog.
 
-#### What resource it operates
+#### What resource teamsApp/publishAppPackage operate?
 
 Teams app in Microsoft 365 tenant app catalog.
 
-#### How to use it
+#### How to use teamsApp/publishAppPackage?
 
 ```yml
 - uses: teamsApp/publishAppPackage
@@ -154,15 +154,15 @@ Teams app in Microsoft 365 tenant app catalog.
 
 ### aadApp/create
 
-#### What it is
+#### What is aadApp/create?
 
 This action creates a new Azure Active Directory (Azure AD) application to authenticate users if the environment variable that stores clientId is empty.
 
-#### What resource it operates
+#### What resource aadApp/create operate?
 
 Azure AD in your Microsoft 365 tenant.
 
-#### How to use it
+#### How to use aadApp/create?
 
 ```yml
 - uses: aadApp/create
@@ -191,15 +191,15 @@ Azure AD in your Microsoft 365 tenant.
   
 ### aadApp/update
 
-#### What it is
+#### What is aadApp/update?
 
 This action updates your Azure AD application based on give Azure AD app manifest. It refers to the ID property in Azure AD app manifest to determine which Azure AD app to update.
 
-#### What resource it operates
+#### What resource aadApp/update operate?
 
 Azure AD in your Microsoft 365 tenant.
 
-#### How to use it
+#### How to use aadApp/update?
 
 ```yaml
 - uses: aadApp/update
@@ -212,15 +212,15 @@ Azure AD in your Microsoft 365 tenant.
 
 ### botAadApp/create
 
-#### What it is
+#### What is botAadApp/create?
 
 This action creates a new or reuses an existing Azure AD application for bot.
 
-#### What resource it operates
+#### What resource botAadApp/create operate?
 
 Azure AD in your Microsoft 365 tenant.
 
-#### How to use it
+#### How to use botAadApp/create?
 
 ```yml
 - uses: botAadApp/create
@@ -236,15 +236,15 @@ Azure AD in your Microsoft 365 tenant.
   
 ### arm/deploy
 
-#### What it is
+#### What is arm/deploy?
 
 This action deploys given ARM templates in parallel.
 
-#### What resource it operates
+#### What resource arm/deploy operate?
 
 Azure subscription.
 
-#### How to use it
+#### How to use arm/deploy?
 
 ```yml
 - uses: arm/deploy
@@ -267,15 +267,15 @@ Azure subscription.
 
 ### azureStorage/enableStaticWebsite
 
-#### What it is
+#### What is arm/deploy?
 
 This action enables static website setting in Azure Storage.
 
-#### What resource it operates
+#### What resource arm/deploy operate?
 
 Azure Storage.
 
-#### How to use it
+#### How to use arm/deploy?
 
 ```yml
 - uses: azureStorage/enableStaticWebsite
@@ -290,15 +290,15 @@ Azure Storage.
 
 ### script
 
-#### What it is
+#### What is script?
 
 This action executes a user-defined script.
 
-#### What resource it operates
+#### What resource script operate?
 
 N/A
 
-#### How to use it
+#### How to use script?
 
 ```yml
 - uses: script
@@ -355,7 +355,7 @@ You can customize your bot or the Teams app by adding environment variables to u
 
 #### Use an existing Azure AD app for your Teams app
 
-You can follow the steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app yet or you already have one but don't know where to find the correct value, see [how to use existing Azure AD app in TeamsFx project](use-existing-aad-app.md).
+You can follow the steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app yet or you have one but don't know where to find the correct value, see [how to use existing Azure AD app in TeamsFx project](use-existing-aad-app.md).
 
 1. Open `teamsapp.yml` and find the `aadApp/create` action.
 
@@ -398,7 +398,7 @@ You can follow the steps to add environment variables to the .env files to use a
 
 #### Use an existing Azure AD app for your bot
 
-You can follow the steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app for your bot yet or you already have one but don't know where to find the correct values, see [Use existing Azure AD app in TeamsFx project](use-existing-aad-app.md).
+You can follow the steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app for your bot yet or you have one but don't know where to find the correct values, see [Use existing Azure AD app in TeamsFx project](use-existing-aad-app.md).
 
 1. Open `teamsapp.yml` and find the `botAadApp/create` action.
 
@@ -516,7 +516,7 @@ The following list shows the actions designed for provision.
 
 If the environment variable that stores Teams app ID is empty or the app ID isn't found from Teams Developer Portal, then this action creates a new Teams app.
 
-#### What resource teamsApp/create operates on?
+#### What resource teamsApp/create operate?
 
 Teams app in Teams Developer Portal.
 
@@ -539,7 +539,7 @@ a
 
 Apply the Teams app manifest to an existing Teams app in Teams Developer Portal. It uses the app ID in manifest.json file to determine which Teams app to update.
 
-#### What resource teamsApp/update operates on?
+#### What resource teamsApp/update operate?
 
 Teams app in Teams Developer Portal.
 
@@ -558,7 +558,7 @@ Teams app in Teams Developer Portal.
 
 teamsApp/validateManifest action renders Teams app manifest template with environment variables and validates Teams app manifest file using its schema.
 
-#### What resource teamsApp/validateManifest operates on?
+#### What resource teamsApp/validateManifest operate?
 
 N/A
 
@@ -577,7 +577,7 @@ N/A
 
 teamsApp/validateAppPackage action validates Teams app package using validation rules.
 
-#### What resource teamsApp/validateAppPackage operates?
+#### What resource teamsApp/validateAppPackage operate?
 
 N/A
 
@@ -596,7 +596,7 @@ N/A
 
 This action renders Teams app manifest template with environment variables and compresses the manifest file with two icons into a zip file.
 
-#### What resource teamsApp/zipAppPackage operates?
+#### What resource teamsApp/zipAppPackage operate?
 
 N/A
 
@@ -619,7 +619,7 @@ N/A
 
 teamsApp/publishAppPackage action publishes built Teams app zip file to tenant app catalog.
 
-#### What resource teamsApp/publishAppPackage operates on?
+#### What resource teamsApp/publishAppPackage operate?
 
 teamsApp/publishAppPackage operates in Microsoft 365 tenant app catalog.
 
@@ -642,7 +642,7 @@ teamsApp/publishAppPackage operates in Microsoft 365 tenant app catalog.
 
 aadApp/create action creates a new Azure Active Directory (Azure AD) application to authenticate users if the environment variable that stores clientId is empty.
 
-#### What resource aadApp/create operates on?
+#### What resource aadApp/create operate?
 
 aadApp/create operates in Azure AD in Microsoft 365 tenant.
 
@@ -679,7 +679,7 @@ aadApp/create operates in Azure AD in Microsoft 365 tenant.
 
 aadApp/update action updates your Azure AD application based on give Azure AD app manifest. It refers to the ID property in Azure AD app manifest to determine which Azure AD app to update.
 
-#### What resource vaadApp/update operates on?
+#### What resource vaadApp/update operate?
 
 aadApp/update operates on Azure AD in your Microsoft 365 tenant.
 
@@ -700,7 +700,7 @@ aadApp/update operates on Azure AD in your Microsoft 365 tenant.
 
 This action creates a new or reuses an existing Azure AD application for bot.
 
-#### What resource botAadApp/create operates on?
+#### What resource botAadApp/create operate?
 
 botAadApp/create operates on Azure AD in Microsoft 365 tenant.
 
@@ -724,7 +724,7 @@ botAadApp/create operates on Azure AD in Microsoft 365 tenant.
 
 arm/deploy action deploys given ARM templates in parallel.
 
-#### What resource  arm/deploy operates on?
+#### What resource arm/deploy operate?
 
  arm/deploy operates on Azure subscription.
 
@@ -755,7 +755,7 @@ arm/deploy action deploys given ARM templates in parallel.
 
 azureStorage/enableStaticWebsite action enables static website setting in Azure Storage.
 
-#### What resource azureStorage/enableStaticWebsite operates on?
+#### What resource azureStorage/enableStaticWebsite operate?
 
 azureStorage/enableStaticWebsite operates on Azure Storage.
 
@@ -778,7 +778,7 @@ azureStorage/enableStaticWebsite operates on Azure Storage.
 
 script action executes a user-defined script.
 
-#### What resource script operates?
+#### What resource script operate?
 
 N/A
 
@@ -847,7 +847,7 @@ You can customize your bot or the Teams app by adding environment variables to u
 
 #### Use an existing Azure AD app for your Teams app
 
-You can follow the steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app yet or you already have one but don't know where to find the correct value, see [how to use existing Azure AD app in TeamsFx project](use-existing-aad-app.md).
+You can follow the steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app yet or you have one but don't know where to find the correct value, see [how to use existing Azure AD app in TeamsFx project](use-existing-aad-app.md).
 
 1. Open `teamsapp.yml` and find the `aadApp/create` action.
 
@@ -890,7 +890,7 @@ You can follow the steps to add environment variables to the .env files to use a
 
 #### Use an existing Azure AD app for your bot
 
-You can follow the steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app for your bot yet or you already have one but don't know where to find the correct values, see [Use existing Azure AD app in TeamsFx project](use-existing-aad-app.md).
+You can follow the steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app for your bot yet or you have one but don't know where to find the correct values, see [Use existing Azure AD app in TeamsFx project](use-existing-aad-app.md).
 
 1. Open `teamsapp.yml` and find the `botAadApp/create` action.
 
