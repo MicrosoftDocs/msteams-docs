@@ -85,9 +85,9 @@ Refer this list for content areas where your icon shows in the product, dependin
    :::column span="":::
 :::image type="content" source="../../assets/images/design-guidelines/safe-area-do.png" alt-text="Example shows a logo within the safe area.":::
 
-#### Do: Follow the recommendation for safe area (96 x 96)
+#### Do: Follow the recommendation for safe area (120 x 120)
 
-It is recommended that if you have a logo, keep it within the 96 x 96 safe area inside of the 192 x 192 PNG format icon.
+It is recommended that if you have a logo, keep it within the 120 x 120 safe area inside of the 192 x 192 PNG format icon.
 
    :::column-end:::
    :::column span="":::
