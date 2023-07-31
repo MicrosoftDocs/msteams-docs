@@ -10,7 +10,7 @@ ms.date: 07/14/2023
 
 You can extend your tab app by using Microsoft Graph to allow additional user permissions, such as to view app user profile, read mail, and more. Your app must ask for specific permission scopes to obtain the access tokens upon app user consent.
 
-Graph scopes, such as `User.Read` or `Mail.Read`, indicate what your app can access from a Teams user account. You'll need to specify your scopes in the authorization request. This article will walk you through the steps to configure Microsoft Graph permissions and scopes for your Teams tab app.
+Graph scopes, such as `User.Read` or `Mail.Read`, indicate what your app can access from a Teams user account. You need to specify your scopes in the authorization request. This article walks you through the steps to configure Microsoft Graph permissions and scopes for your Teams tab app.
 
 ## Configure API permissions in Azure AD
 
@@ -64,7 +64,7 @@ Depending on the platform or device where you want to target your app, additiona
 
 > [!NOTE]
 >
-> - If your tab app hasn't been granted IT admin consent, app users will need to provide consent the first time they use your app on a different platform.
+> - If your tab app hasn't been granted IT admin consent, app users need to provide consent the first time they use your app on a different platform.
 > - Implicit grant isn't required if SSO is enabled on a tab app.
 
 You can configure authentication for multiple platforms as long as the URL is unique.
@@ -94,7 +94,7 @@ You can configure authentication for multiple platforms as long as the URL is un
     The Configure Web page appears.
 
     > [!NOTE]
-    > The configurations will be different based on the platform you select.
+    > The configurations are different based on the platform you select.
 
 1. Enter the configuration details for the platform.
 
@@ -110,7 +110,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
 ## Acquire access token for MS Graph
 
-You'll need to acquire an access token for Microsoft Graph. You can do so by using Azure AD on-behalf-of (OBO) flow.
+You need to acquire an access token for Microsoft Graph. You can do so by using Azure AD on-behalf-of (OBO) flow.
 
 The current implementation for single sign-on (SSO) is limited to user-level permissions, which aren't usable for making Graph calls. To get the permissions and scopes needed to make a Graph call, SSO apps must implement a custom web service to exchange the token received from the Teams JavaScript library for a token that includes the needed scopes. You can use Microsoft Authentication Library (MSAL) for fetching the token from the client side.
 
@@ -193,7 +193,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 If you need to access Microsoft Graph data, configure your server-side code to:
 
 1. Validate the access token. For more information, see [Validate the access token](tab-sso-code.md#validate-the-access-token).
-1. Initiate the OAuth 2.0 OBO flow with a call to the Microsoft identity platform that includes the access token, some metadata about the user, and the credentials of the tab app (its app ID and client secret). The Microsoft identity platform will return a new access token that can be used to access Microsoft Graph.
+1. Initiate the OAuth 2.0 OBO flow with a call to the Microsoft identity platform that includes the access token, some metadata about the user, and the credentials of the tab app (its app ID and client secret). The Microsoft identity platform returns a new access token that can be used to access Microsoft Graph.
 1. Get data from Microsoft Graph by using the new token.
 1. Use token cache serialization in MSAL.NET to cache the new access token for multiple, if necessary.
 
@@ -219,7 +219,7 @@ When asking for additional user consent using the Microsoft Teams JavaScript cli
 > [Teams Personal Tab SSO Authentication](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-personal-sso-quickstart/js/src/components/Tab.js#L64-L101) sample provides code demonstrating following steps.
 
 1. The token retrieved using `getAuthToken()` must be exchanged on the server-side using Azure AD [OBO flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to those other Graph APIs. Ensure that you use the Azure AD v2 endpoint for this exchange.
-1. When you try to execute the token exchange for a user for the first time, if Azure AD refuses to exchange tokens it might be because the user has not consented to give your app permission to the user's data. In these cases, your exchange will fail with either the `invalid_grant` or `interaction_required` error.  Examples of *invalid_grant* errors include when consent is required or *auth_code*, assertion, or the refresh token is expired, revoked, malformed, or absent. Examples of *interaction_required* include when multi-factor authentication or corporate device enrollment is required.
+1. When you try to execute the token exchange for a user for the first time, if Azure AD refuses to exchange tokens it might be because the user hasn't consented to give your app permission to the user's data. In these cases, your exchange fails with either the `invalid_grant` or `interaction_required` error.  Examples of *invalid_grant* errors include when consent is required or *auth_code*, assertion, or the refresh token is expired, revoked, malformed, or absent. Examples of *interaction_required* include when multi-factor authentication or corporate device enrollment is required.
 1. If the exchange fails because of the `invalid_grant` or `interaction_required` errors, you must prompt the user for consent. Since user interaction can only happen from the client, your server needs to return an indication to your client app that consent is required. You can then use the user interface (UI) to ask the app user to grant other consent. The UI must include a button that triggers an [Azure AD consent dialog](../../../tabs/how-to/authentication/tab-sso-code.md#consent-dialog-for-getting-access-token).
 1. To ask the user for consent for your app to access their data, you must include the `prompt=consent` property in your [query-string-parameter](/azure/active-directory/develop/v2-oauth2-implicit-grant-flow#send-the-sign-in-request) to Azure AD.
     - Instead of `?scope={scopes}`, use `?prompt=consent&scope={scopes}`
