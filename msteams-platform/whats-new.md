@@ -349,6 +349,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 July**
 
+* ***July 31, 2023***:  [Bots can mention tags in Adaptive Cards](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention).
+
 * ***July 13, 2023***: [Extend static tabs to group chat or meetings with a customizable experience.](tabs/what-are-tabs.md)
 
 :::column-end:::
