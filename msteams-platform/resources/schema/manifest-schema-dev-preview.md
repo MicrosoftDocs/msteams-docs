@@ -283,7 +283,7 @@ The version of the manifest schema this manifest is using.
 
 **Required**—String
 
-The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it overwrites the existing one and the user will get the new functionality. If this app was submitted to the store, the new manifest has to be resubmitted and revalidated. Then, users of this app will get the new updated manifest automatically in a few hours, after it's approved.
+The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it overwrites the existing one and the user gets the new functionality. If this app was submitted to the store, the new manifest has to be resubmitted and revalidated. Then, users of this app will get the new updated manifest automatically in a few hours, after it's approved.
 
 If the app requested permissions change, users are prompted to upgrade and re-consent to the app.
 
@@ -589,8 +589,8 @@ Define the properties your app uses to post a user activity feed.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`type`|string|32 characters|✔️|The notification type. *See below*.|
-|`description`|string|128 characters|✔️|A brief description of the notification. *See below*.|
+|`type`|string|32 characters|✔️|The notification type.|
+|`description`|string|128 characters|✔️|A brief description of the notification.|
 |`templateText`|string|128 characters|✔️|Ex: "{actor} created task {taskId} for you"|
 
 ```json
