@@ -11,7 +11,7 @@ zone_pivot_groups: teams-app-platform
 
 # Debug your Teams app locally
 
-Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and sideloads the Teams app. You can preview your Teams app in Teams web client locally after debugging.
+Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. During the debugging process, Teams Toolkit automatically starts app services, launches debuggers, and sideloads the Teams app. You can preview your Teams app in Teams web client locally after debugging.
 
 :::zone pivot="visual-studio-code"
 
@@ -214,7 +214,7 @@ The configuration **Attach to Frontend** or **Launch App** launches Microsoft Ed
 
 ## Debug your Teams app locally using Visual Studio
 
-Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. Visual Studio allows you to debug tab, bot, and message extension. You can debug your app locally in Visual Studio using Teams Toolkit by performing:
+Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. Visual Studio allows you to debug tabs, bots, and message extensions. You can debug your app locally in Visual Studio using Teams Toolkit by performing:
 
 ### Set up dev tunnel (Only for Bot and Message Extension app)
 
@@ -257,13 +257,13 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-localdebug-add-loadapp.png" alt-text="Screenshot shows to add app.":::
 
    > [!TIP]
-   > You can also use hot reload function of Visual Studio during debug. For more information, see <https://aka.ms/teamsfx-vs-hotreload>.
+   > You can also use the hot reload function of Visual Studio during debug. For more information, see <https://aka.ms/teamsfx-vs-hotreload>.
 
    > [!NOTE]
-   > Ensure to post HTTP request to `http://localhost:5130/api/notification` to trigger notification, when you're debugging Notification Bot app. If you've selected HTTP trigger when creating the project, you can use any API tools such as curl (Windows Command Prompt), Postman, or any other API tool.
+   > Ensure to post HTTP request to `http://localhost:5130/api/notification` in order to trigger notification, when you're debugging Notification Bot app. If you've selected HTTP trigger when creating the project, you can use any API tools such as curl (Windows Command Prompt), Postman, or any other API tool.
 
    > [!Tip]
-   > If you make any changes to Teams app manifest file (`/appPackage/manifest.json`), ensure that you perform the **Prepare Teams App Dependencies** command. Before you try to run the Teams app locally.
+   > If you make any changes to the Teams app manifest file (`/appPackage/manifest.json`), ensure that you perform the **Prepare Teams App Dependencies** command. Before you try to run the Teams app locally.
 
 :::zone-end
 

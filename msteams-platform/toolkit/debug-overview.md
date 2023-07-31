@@ -300,7 +300,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 ## Debug your Teams app using Visual Studio
 
-Teams Toolkit automates app startup services, initiates debug, and side loads Teams app. After debug, you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app. Visual Studio allows you to debug tab, bot, and message extension. During the debug process, Teams Toolkit supports the following debug features:
+Teams Toolkit automates app startup services, initiates debugging, and side loads Teams app. After debugging, you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app. Visual Studio allows you to debug tabs, bots, and message extensions. During the debugging process, the Teams Toolkit supports the following debug features:
 
 * Prepare Teams app dependencies
 * Start debugging
@@ -317,11 +317,11 @@ Teams Toolkit automates app startup services, initiates debug, and side loads Te
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place. |
 | &nbsp; | [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Teams account with the appropriate permissions to install an app. |
 | &nbsp; | [Microsoft 365 developer account](~/concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Teams account with the appropriate permissions to install an app. |
-| &nbsp; | Azure Tools and [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
+| &nbsp; | Azure Tools and [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or deploy a cloud-based backend for your Teams app in Azure. |
 
 ## Key features of Teams Toolkit
 
-You can see the following key features of Teams Toolkit, that automates the local debugging process of your Teams app:
+You can see the following key features of Teams Toolkit, which automates the local debugging process of your Teams app:
 
 ### Prepare Teams app dependencies
 
@@ -333,14 +333,14 @@ You can perform debugging with a single operation, press **F5** to start debuggi
 
 ### Toggle breakpoints
 
-You can toggle breakpoints in the source codes of tabs, bots, message extensions, and Azure Functions. The breakpoints execute when you interact with the Teams app in your web browser.
+You can toggle breakpoints in the source code of tabs, bots, message extensions, and Azure Functions. The breakpoints execute when you interact with the Teams app in your web browser.
 The following image shows the toggle breakpoints:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-localdebug-toggle-breakpoint.png" alt-text="Screenshot shows the local debug toggle breakpoints." lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-localdebug-toggle-breakpoint.png":::
 
 ### Hot reload
 
-Select **Hot Reload** to apply your changes in your Teams app when you want to update and save the source codes simultaneously during debugging.
+Select **Hot Reload** to apply your changes in your Teams app when you want to update and save the source code during debugging.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-localdebug-hot-reload.png" alt-text="Screenshot shows the select hot reload icon.":::
 
