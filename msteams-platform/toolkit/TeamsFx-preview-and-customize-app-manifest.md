@@ -164,7 +164,7 @@ To preview values for all the environment, you can hover over the placeholder. I
 
 ## Customize Teams app manifest for Visual Studio
 
-Teams Toolkit in Visual Studio loads manifest from `appPackage/manifest.json` with environment variables from `env/.env.{env}` file while provisioning and preparing app dependencies. It's shared between local and remote environment.
+Teams Toolkit in Visual Studio loads manifest from `appPackage/manifest.json` with environment variables from `env/.env.{env}` file while provisioning and preparing app dependencies. It's shared between local and remote environments.
 
 ### Customize app manifest in Teams Toolkit
 
@@ -197,7 +197,7 @@ You can either sideload for local or deploy for Azure to preview the manifest fi
 
 There are two ways to upload zip app package before you can preview the manifest file:
 
-1. From the list of menu select, **Project** > **Teams Toolkit**.
+1. Select, **Project** > **Teams Toolkit**.
 
 1. Select **Zip App Package**, then select either **For Local** or **For Azure**.
 
