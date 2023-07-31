@@ -15,13 +15,31 @@ The app template is built using the TeamsFx SDK, which provides a simple set of 
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-new-scenario-diagram.png" alt-text="weather forecast sample notification scenario" lightbox="../../../assets/images/notification-bot/notification-new-scenario-diagram.png":::
 
-You can create notification bot in other scenarios, such as a notification can be sent in teams DevOps channel if there's a build failure.
+You can create notification bot in other scenarios, such as a notification can be sent in Teams DevOps channel if there's a build failure.
+
+You can send a bot notification in the following scenarios:
+
+* You want to notify everyone in a channel or chat about the same or related content​.
+
+* Highly customizable UI in a Card​
+
+* Need quick response, include media content, or action buttons​.
+
+* Send scheduled notifications​
+
+* Light up double badges on both Activity and Chat, Channel or App​
+
+* Add template in source code​.
+
+* Handling localization manually.
 
 **Advantages**
 
 * Facilitates notifications to a personal, group chat, and in a channel, using APIs from TeamsFx SDK.
 * Enhances user experience by customizing notification with an Adaptive Card.
 * Provides multiple mechanisms to trigger notifications such as HTTP and schedule timer trigger with Azure Functions.
+
+* A notification card easily integrates with a bot and provides a consistent user experience within the Bot app.​
 
 > [!NOTE]
 > Bot application needs to be installed with the corresponding scope before sending notification.
@@ -108,7 +126,7 @@ You can customize the following triggers:
 
 * `Restify` based notification:
 
-  * When a HTTP request is sent to `src/index.js` entry point, the default implementation sends an Adaptive Card to Teams. You can customize this event by modifying `src/index.js`. A typical implementation can call an API to retrieve events, data, or both that can send an Adaptive Card as required. You can perform the following to add more triggers:
+  * When an HTTP request is sent to `src/index.js` entry point, the default implementation sends an Adaptive Card to Teams. You can customize this event by modifying `src/index.js`. A typical implementation can call an API to retrieve events, data, or both that can send an Adaptive Card as required. You can perform the following to add more triggers:
 
     * Create a new routing: `server.post("/api/new-trigger", ...)`.
     * Add timer trigger(s) from widely used npm packages, such as [cron](https://www.npmjs.com/package/cron), [node-schedule](https://www.npmjs.com/package/node-schedule), or from other packages.
@@ -492,6 +510,11 @@ TeamsFx provides you with an [Incoming Webhook notification sample](https://gith
 
 [Back to top](#notification-bot-in-teams)
 
+
+### Send activity feed notifications
+
+If you want to send activity feed notifications for your app, you can use the activity feed notification APIs in Microsoft Graph. For more information, see [Send activity feed notifications to users in Microsoft Teams](../../../tabs/send-activity-feed-notification.md).
+
 ## FAQ
 
 <br>
@@ -520,7 +543,7 @@ Notification target connections are stored in the persistence storage. If you're
 
 <summary><b>Why Bad Request or Bad Argument error occurs when sending notification?</b></summary>
 
-If the notification installation doesn't match the bot ID or password, you can get a **Failed to decrypt conversation ID** error. One possible cause for this error is that the bot ID or password is changed due to cleaning local state or re-provisioning.
+If the notification installation doesn't match the bot ID or password, you can get a **Failed to decrypt conversation ID** error. One possible cause for this error is that the bot ID or password is changed due to cleaning local state or reprovisioning.
 
 You can resolve this issue by cleaning your notification storage. After cleaning, notify in Teams to reinstall your bot, and ensure that the new installation is up to date. Each stored notification installation is bound with one bot. If you're able to check your notification storage, its bot field should match the bot you're running such as the bot ID with the same GUID.
 
