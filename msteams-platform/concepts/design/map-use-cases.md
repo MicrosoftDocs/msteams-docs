@@ -498,7 +498,7 @@ sample 6
 
 :::row:::
    :::column:::
-      :::image type="icon" source="~\assets\images\overview\flowchart-bot-icon.png" border="false":::
+      :::image type="icon" source="~\assets\images\overview\flowchart-bot-icon.png" link="[Bot](../../bots/design/bots.md)" border="false":::
    :::column-end:::
      :::image type="content" source="~\assets\images\overview\fc-bot-details.png" alt-text="Microsoft Teams app bot details sample 6." border="false":::
 :::row-end:::
@@ -527,7 +527,7 @@ sample 6
 :::row:::
    :::column:::
       :::image type="icon" source="~\assets\images\overview\flowchart-webhook-and-connectors-icon.png" border="false":::
-   :::column-end::::
+   :::column-end:::
      :::image type="content" source="~\assets\images\overview\fc-webhook-connector-details.png" alt-text="Microsoft Teams apps for incoming webhook details sample 6." border="false":::
 :::row-end:::
 
