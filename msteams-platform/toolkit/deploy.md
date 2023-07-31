@@ -67,7 +67,7 @@ Congratulations, you've created a Teams app! Now let's go ahead and learn how to
 
 1. Select the Teams Toolkit icon in the sidebar.
 
-### Customize deploy lifecycle in Teams
+### Customize deploy lifecycle in Teams using Visual Studio code
 
 To customize the deployment process, you can edit the deploy sections in 'teamsapp.yml'.
 
@@ -233,10 +233,6 @@ This action upload and deploys generated sppkg to SharePoint app catalog. You ca
 
 ::: zone pivot="visual-studio"
 
-# Deploy Teams app to the cloud
-
-Teams Toolkit helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
-
 # Deploy Teams app to the cloud using Microsoft Visual Studio
 You can deploy to the following types of cloud resources:
 * Azure App Services
@@ -262,7 +258,7 @@ The Get started guide helps to deploy using Teams Toolkit. You can use the follo
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/deploy_warning.png" alt-text="Screenshot shows deploy warning window.":::
 
-# Customize deploy lifecycle in Teams
+# Customize deploy lifecycle in Teams using Visual Studio
 To customize the deployment process, you can edit the `deploy` sections in 'teamsapp.yml'.
 
 ## cli/runNpmCommand
