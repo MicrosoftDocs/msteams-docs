@@ -28,18 +28,17 @@ items:
     
     This step-by-step guide helps you to create Outgoing Webhooks in Teams. You'll see the following output:
 
-    :::image type="content" source="./assets/images/sbs-outgoing-webhooks/output-result1.png" alt-text="Screenshot shows Outgoing Webhooks in Teams channel.":::
+    :::image type="content" source="./assets/images/sbs-outgoing-webhooks/introduction-output.png" alt-text="Screenshot shows Outgoing Webhooks in Teams channel.":::
 
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure you install the following tools and set up your development environment:  
+    Ensure that you install the following tools and set up your development environment:  
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
-     | **Required** | &nbsp; | &nbsp; |
-     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call, and all in one place.|
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install the <br> **ASP.NET and web development** workload. | You can install the enterprise version in Visual Studio 2022 and install the workloads. |
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
+     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     
       > [!NOTE]
@@ -51,8 +50,7 @@ items:
    Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
 
     1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
-    1. Select **Code**.
-    1. From the dropdown menu, select **Open with GitHub Desktop**.
+    1. Select **Code**. From the dropdown menu, select **Open with GitHub Desktop**.
  
        :::image type="content" source="./assets/images/sbs-outgoing-webhooks/clone-repository.png" alt-text="Screenshot of GitHub web page.  The menu entry titled Open with GitHub Desktop under Code dropdown menu is highlighted in red.":::
 
@@ -61,9 +59,9 @@ items:
 - title: Create Outgoing Webhooks
   durationInMinutes: 5
   content: |
-    1. Go to **Microsoft Teams** and select **Teams** from the left pane.
+    1. Go to **Teams** and select **Teams** from the left pane.
 
-    1. Go to a team that you want, select **More options** (•••), and then select **Manage team**.
+    1. Go to a team that you want, select More options (•••), and then select **Manage team**.
 
        :::image type="content" source="./assets/images/sbs-outgoing-webhooks/manage-team.png" alt-text="Screenshot of Teams app with Manage team option under Contoso dropdown menu highlighted in red.":::
 
@@ -111,11 +109,11 @@ items:
   content: |
        1. Open **Visual Studio**.
 
-       1. Go to **File** > **Open** > **Project/Solution**.
+       1. Go to **File** > **Open** > **Project/Solution...**.
     
            :::image type="content" source="./assets/images/sbs-messagingextension-action/vsopenfile.png" alt-text="Screenshot of Visual Studio showing the Project/Solution option.":::
 
-       1. Select **WebhookSampleBot.sln** file from **csharp** folder.
+       1. From **csharp** folder, select **WebhookSampleBot.sln** file.
 
            :::image type="content" source="./assets/images//sbs-outgoing-webhooks/open-project.png" alt-text="Screenshot shows to select WebhookSampleBot.sln from csharp folder.":::
 
@@ -156,7 +154,7 @@ items:
   content: |
     Did you come up with something like this?
 
-       :::image type="content" source="./assets/images/sbs-outgoing-webhooks/output-result1.png" alt-text="Screenshot shows the meeting chat that displays new message on desktop and mobile.":::
+       :::image type="content" source="./assets/images/sbs-outgoing-webhooks/complete-challenge.png" alt-text="Screenshot shows the meeting chat that displays new message on desktop and mobile.":::
 
 - content: |
     You've completed the tutorial to get started with an Outgoing Webhook app!
