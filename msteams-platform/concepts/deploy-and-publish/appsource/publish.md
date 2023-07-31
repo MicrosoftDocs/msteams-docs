@@ -75,7 +75,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
 * **During design phase**
 
-  Review the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements. If you build your app in line with these guidelines, then it prevents any rework due to non-adherence to store policies.
+  Review the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements. If you build your app in line with these guidelines, then it prevents any rework due to nonadherence to store policies.
 
 * **Prior to app submission**
 
