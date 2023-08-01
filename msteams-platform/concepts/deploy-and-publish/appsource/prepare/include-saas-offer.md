@@ -133,3 +133,4 @@ For comprehensive guidance, see [how to plan a SaaS offer for the Microsoft comm
 * [Maintaining and supporting your published app](../post-publish/overview.md)
 * [Validation guidelines for apps linked to SaaS offer](teams-store-validation-guidelines.md#apps-linked-to-saas-offer)
 * [Marketplace categories](/partner-center/marketplace/marketplace-categories-industries)
+* [Microsoft commercial marketplace](/partner-center/marketplace/overview)
