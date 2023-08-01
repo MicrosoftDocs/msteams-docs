@@ -353,7 +353,7 @@ This action will upload and deploy the project to Azure Functions using [the zip
 |---|---|---|---|
 | workingDirectory | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory. | No | Project root |
 | artifactFolder |  Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory. | Yes | - |
-| ignoreFile | Specifies the file path of the ignore file used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
+| ignoreFile | Specifies the file path of the ignore file used during upload. You can utilize this file to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
 | resourceId | Indicates the resource ID of an Azure Functions. It's generated automatically after running the provision command. If you already have an Azure Functions, you can find its resource ID in the Azure portal (see [this link](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/) for more information). | Yes | - |
 | dryRun | You can set the dryRun parameter to true if you only want to test the preparation of the upload and don't intend to deploy it. This helps you verify that the packaging zip file is correct. | No | false |
 | outputZipFile | Indicates the path of the zip file for the packaged artifact folder. It's relative to the workingDirectory. During deployment, it reconstructs this file, reflecting all folders and files in your artifactFolder, and removes any non-existent files or folder. | No | ./.deployment/deployment.zip |
@@ -376,7 +376,7 @@ This action uploads and deploys the project to Azure Storage.
 |---|---|---|---|
 | workingDirectory | represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory. | No | Project root |
 | artifactFolder |  represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory. | Yes | - |
-| ignoreFile | specifies the file path of the ignore file used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
+| ignoreFile | specifies the file path of the ignore file used during upload. You can utilize this file to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
 | resourceId |  indicates the resource ID of an Azure Storage. It's generated automatically after running the provision command. If you already have an Azure Storage, you can find its resource ID in the Azure portal (see [this link](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/) for more information). | Yes | - |
 
 ### spfx/deploy
@@ -392,7 +392,7 @@ This action uploads and deploys generated sppkg to SharePoint app catalog. You c
 #### Parameters
 | parameter | description | required | default value |
 |---|---|---|---|
-| createAppCatalogIfNotExist | If the value is true, this action creates tenant app catalog first if not exist. | No | false |
+| createAppCatalogIfNotExist | If the value is true, this action creates tenant app catalog first if it does not exist. | No | false |
 | packageSolutionPath | Path to package-solution.json in SPFx project. This action honors the configuration to get target sppkg. | Yes | - |
 
 ::: zone-end
