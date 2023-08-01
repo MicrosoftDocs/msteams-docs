@@ -62,7 +62,7 @@ An example of connector message is as follows:
     "sections": [{
         "activityTitle": "Larry Bryant created a new task",
         "activitySubtitle": "On Project Tango",
-        "activityImage": "https://teamsnodesample.azurewebsites.net/static/img/image5.png",
+        "activityImage": "https://adaptivecards.io/content/cats/3.png",
         "facts": [{
             "name": "Assigned to",
             "value": "Unassigned"
@@ -137,9 +137,9 @@ An example of connector message is as follows:
 }
 ```
 
-This message provides the following card in the channel:
+The following image is an example of the connector message card in a channel:
 
-:::image type="content" source="../../assets/images/connectorcard_1.png" alt-text="Screenshot of a coonector card.":::
+:::image type="content" source="../../assets/images/connectorcard.png" alt-text="Screenshot shows an example of a connector card in a channel.":::
 
 ## Send messages using cURL and PowerShell
 

@@ -18,7 +18,7 @@ The document guides you on how to add link unfurling to your app manifest using 
 >
 > * The link unfurling result is cached for 30 minutes.
 > * Link unfurling supports Adaptive Cards version 1.3 and earlier.
-> * Messaging extension commands aren't required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema).
+> * Messaging extension commands aren't required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions).
 > * For mobile client, link unfurling is supported only for links that don't require authentication.
 
 The following image is an example of link unfurling in Teams desktop and mobile clients:
@@ -107,7 +107,7 @@ First, you must add the `messageHandlers` array to your app manifest and enable 
 
 For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
 
-## Handle the `composeExtension/queryLink` invoke
+## Handle the `composeExtensions/queryLink` invoke
 
 After adding the domain to the app manifest, you must update your web service code to handle the invoke request. Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
 
@@ -123,7 +123,7 @@ The following card types are supported:
 
 For more information, see [Action type invoke](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
 
-The following is an example of the `invoke` request:
+The following code is an example of the `invoke` request:
 
 # [JSON](#tab/json)
 
@@ -246,13 +246,13 @@ The following image provides a sequential flow to enable and use zero install li
 
 To get your app ready for zero install link unfurling, follow these steps:
 
-1. Set the property `supportsAnonymizedPayloads` to true in the [manifest schema](../../resources/schema/manifest-schema.md).
+1. Set the property `supportsAnonymizedPayloads` to true in the [manifest schema](../../resources/schema/manifest-schema.md#composeextensions).
 
-1. Set your app to handle the new invoke request `composeExtension/anonymousQueryLink`.
+1. Set your app to handle the new invoke request `composeExtensions/anonymousQueryLink`.
 
    Example of the new invoke request:
 
-   :::image type="content" source="../../assets/images/tdp/link-unfurl_1.png" alt-text="Screenshot of the invoke request  `composeExtension/anonymousQueryLink` declaration in the manifest." lightbox="../../assets/images/tdp/link-unfurl_1.png":::
+   :::image type="content" source="../../assets/images/tdp/link-unfurl_1.png" alt-text="Screenshot of the invoke request  `composeExtensions/anonymousQueryLink` declaration in the manifest." lightbox="../../assets/images/tdp/link-unfurl_1.png":::
 
    Example of the invoke request payload:
 
@@ -305,7 +305,7 @@ To get your app ready for zero install link unfurling, follow these steps:
    }
    ```
 
-1. Respond to the `composeExtension/anonymousQueryLink` payload.
+1. Respond to the `composeExtensions/anonymousQueryLink` payload.
 
    1. For non-auth scenarios: You must send back a response with the `type` as `result` and a card. Use the following template:
 
@@ -391,28 +391,28 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 1. **Advantages and limitations**:
 
-    # [Advantages](#tab/advantages)
-    
-    Zero install link unfurling helps you provide enhanced experience to the users, such as:
-    
-    * Unfurl previews for your links that users share in Teams even before they've installed your app.
-    * Create a welcome card for your app to show a preview with the placeholder fields.
-    
-    # [Limitations](#tab/limitations)
-    
-    The following are the limitations:
-    
-    * The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtension/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, *silentAuth* and *config*.
-    
-    * The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
-    
-    * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
-    
-      * The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
-    
-        * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
-    
-    ---
+# [Advantages](#tab/advantages)
+
+Zero install link unfurling helps you provide enhanced experience to the users, such as:
+
+* Unfurl previews for your links that users share in Teams even before they've installed your app.
+* Create a welcome card for your app to show a preview with the placeholder fields.
+
+# [Limitations](#tab/limitations)
+
+The following are the limitations:
+
+* The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtensions/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, *silentAuth* and *config*.
+
+* The bot can't send back an acv2 card in response to the `composeExtensions/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
+
+* If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
+
+* The bot can't send back an acv2 card in response to the `composeExtensions/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
+
+* If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
+
+---
 
 ## Remove link unfurling cache
 
@@ -441,12 +441,11 @@ Follow the [step-by-step guide](../../sbs-botbuilder-linkunfurling.yml) to unfur
 
 |**Sample name** | **Description** | **.NET** | **Node.js**| **Manifest**
 |----------------|-----------------|--------------|----------------|----------------|
-| Zero install link unfurling. | This sample shows how to use Search-based Messaging Extension with a configuration page. This sampe also features zero install link unfurling. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)|
+| Zero install link unfurling. | This sample shows how to use Search-based Messaging Extension with a configuration page. This sample also features zero install link unfurling. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)|
 
 ## See also
 
 * [Message extensions](../what-are-messaging-extensions.md)
 * [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [Tabs link unfurling and Stage View](../../tabs/tabs-link-unfurling.md)
-* [composeExtensions](../../resources/schema/manifest-schema.md#composeextensions)
 * [Bot activity handlers](../../bots/bot-basics.md)
