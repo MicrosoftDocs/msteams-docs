@@ -115,7 +115,7 @@ Every request to your message extension is done via an `Activity` object that is
 
 ### Receive user requests
 
-When a user performs a query, Microsoft Teams sends your service a standard Bot Framework `Activity` object. Your service should perform its logic for an `Activity` that has `type` set to `invoke` and `name` set to a supported `composeExtension` type, as shown in the following table.
+When a user performs a query, Microsoft Teams sends your service a standard Bot Framework `Activity` object. Your service should perform its logic for an `Activity` that has `type` set to `invoke` and `name` set to a supported `composeExtensions` type, as shown in the following table.
 
 In addition to the standard bot activity properties, the payload contains the following request metadata:
 
