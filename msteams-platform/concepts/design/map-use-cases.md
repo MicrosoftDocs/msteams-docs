@@ -491,7 +491,7 @@ sample 6
 
 :::row:::
    :::column:::
-      :::image type="icon" source="~\assets\images\overview\flowchart-tab-icon.png" border="false":::
+      :::image type="icon" source="~\assets\images\overview\flowchart-tab-icon.png" link="~/tabs/what-are-tabs.md" border="false":::
    :::column-end:::
      :::image type="content" source="~\assets\images\overview\fc-tab-details.png" alt-text="Microsoft Teams app tab details sample 6." border="false":::
 :::row-end:::
