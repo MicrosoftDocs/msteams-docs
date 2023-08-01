@@ -56,6 +56,8 @@ Learn how to promote your apps and content in the Teams App Store. These guideli
 
 We’ve created special promotional badges to help you drive more customers to your app's listing in the Teams App Store. Keep in mind that there are certain requirements you need to follow when using these images; these requirements, along with usage examples and guidelines, are available in a PDF file.
 
+:::image type="content" source="../../../../assets/downloads/Teams app store marketing guidelines.pdf" alt-text="Teams app store marketing guidelines.":::
+
 [![Download button](images/downloadbutton.png)](https://download.microsoft.com/download/0/7/D/07DF43D4-B1A8-4D38-BC02-4903BB36CEE8/Microsoft_Store_Badge_Guidelines.pdf) **Teams App Store Badge Guidelines (PDF, English)**
 
 ### Badge generator and images
@@ -65,6 +67,8 @@ You can use our [badge generator](https://apps.microsoft.com/store/app-badge) to
 You can also download the complete set of badge images (in PNG and PDF format) from the link below.
 
 [![Download button](images/downloadbutton.png)](https://download.microsoft.com/download/6/6/6/66641831-E662-4898-BB21-75D6C193A8F9/All%20Badges.zip) **All badge images**
+
+:::image type="content" source="../../../../assets/downloads/Teams app store marketing guidelines.pdf" alt-text="Teams app store marketing guidelines.":::
 
 ### License to Microsoft Marks
 
