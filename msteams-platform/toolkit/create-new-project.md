@@ -46,7 +46,7 @@ To create a basic Teams app:
 
 1. Select **Basic Tab** as app features using a tab.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/select-basic-tab.png" alt-text="Screenshot shows to select App Feature using a Tab as Basic Tab.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/select-basic-tab.png" alt-text="Screenshot shows the selection of App Feature using a Tab as Basic Tab.":::
 
 1. Select **JavaScript** as the programming language.
 
@@ -172,8 +172,8 @@ Teams Toolkit provides Microsoft Teams app templates in Visual Studio to create 
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
-| &nbsp; | Visual Studio latest version | You can install the enterprise edition of Visual Studio, and then select the **ASP.NET and web development** workload and **Microsoft Teams Development Tools** for installing.|
-| &nbsp; | Teams Toolkit | A Visual Studio workload that creates a project scaffolding for your app. Use latest version. |
+| &nbsp; | Visual Studio latest version | You can install the enterprise edition of Visual Studio, and then select the **ASP.NET and web development** workload and **Microsoft Teams Development Tools** for installation.|
+| &nbsp; | Teams Toolkit | A Visual Studio workload that creates a project scaffolding for your app. Use the latest version. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to sideload your Teams app into local Teams environment for testing app behavior. |
  | &nbsp; | [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Microsoft 365 account with the appropriate permissions to install an app. |
 
@@ -196,7 +196,7 @@ The steps to create a new Teams app are similar for all types of apps except not
 
 1. Enter **teams** in the search box and then list, select **Microsoft Teams App** from the search results.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/new-project-template-vs.png" alt-text="Screenshot shows the search and select Microsoft Teams app":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/new-project-template-vs.png" alt-text="Screenshot shows the search and select Microsoft Teams app" lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/new-project-template-vs.png":::
 
 1. Select **Next**.
 
@@ -221,13 +221,13 @@ The steps to create a new Teams app are similar for all types of apps except not
    > [!NOTE]
    > If you want to add single sign-on capability to your Teams app, select the Configure with single sign-on checkbox. For more information on single sign-in in Teams app created using Teams Toolkit, see [Add single sign-on to your Teams apps](/microsoftteams/platform/toolkit/add-single-sign-on?pivots=visual-studio).
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/create-new-app-vs.png" alt-text="Screenshot shows the selection of teams app type.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/create-new-app-vs.png" alt-text="Screenshot shows the selection of teams app type." lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/create-new-app-vs.png":::
 
 You can select any type of Teams app for your project.
 
    The **GettingStarted .txt** window appears.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/get-started-tab-vs.png" alt-text="Screenshot shows the Getting Started teams toolkit page.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/get-started-tab-vs.png" alt-text="Screenshot shows the Getting Started teams toolkit page." lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/get-started-tab-vs.png":::
 
 You have created the app project scaffolding for your Teams app using Teams Toolkit template.
 
@@ -249,7 +249,7 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 
 |Teams app templates  |Description  |
 |---------|---------|
-|**Notification Bot**     |Notification bot app can send notifications to your Teams client. There are multiple ways to trigger the notification. For example, trigger the notification by HTTP request, or by time. You can select triggered notification based on your business scenario.         |
+|**Notification Bot**     |The Notification bot app can send notifications to your Teams client. There are multiple ways to trigger the notification. For example, trigger the notification by HTTP request, or by time. You can select triggered notification based on your business scenario.         |
 |**Command Bot**     |You can type a command to interact with the bot using the command bot app.         |
 |**Workflow Bot**     |You can interact with the bot using the automate repetitive workflow action.         |
 |**Tab**     |Tab app shows a webpage inside Teams, and it enables single sign-on (SSO) using Teams account.         |

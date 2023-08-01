@@ -47,7 +47,7 @@ Teams Toolkit appears within Visual Studio Code as an extension. After you insta
 | 2 | **How-to Guides** | Access the how-to guides for app scenario and app development. |
 | 3 | **Create a New App** | Create a new Teams app based on your requirement. |
 | 4 | **View Samples** | Select and build existing app samples based on common use cases for a Teams app. |
-| 5 | • **New File** <br> • **Open File** <br> • **Open Folder** <br> • **Clone Git Repository** | • Create a new file. <br> • Open an existing file. <br> • Open an existing folder. <br> • Clone an Git repository of your app project. |
+| 5 | • **New File** <br> • **Open File** <br> • **Open Folder** <br> • **Clone Git Repository** | • Create a new file. <br> • Open an existing file. <br> • Open an existing folder. <br> • Clone a Git repository of your app project. |
 | 6 | **Recent** | View the recent files. |
 | 7 | **Get Started** | Explore Teams Toolkit and get an overview of the fundamentals. |
 
@@ -137,7 +137,7 @@ From the task pane, you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/utility.png" alt-text="Screenshot shows the the Utility section.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/utility.png" alt-text="Screenshot shows the Utility section.":::
    :::column-end:::
    :::column span="":::
 

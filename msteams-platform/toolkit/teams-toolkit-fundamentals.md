@@ -60,7 +60,7 @@ Teams Toolkit is available for free for Visual Studio Code. For more information
 
 Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio.
 
-* Start with a project templates for common line-of-business app scenarios or from a sample.
+* Start with a project template for common line-of-business app scenarios or from a sample.
 * Save setup time with automated app registration and configuration.
 * Run and debug to Teams directly from familiar tools.
 * Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
@@ -70,7 +70,7 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 
 ## Available for Visual Studio
 
-Teams Toolkit v5 is available for free for Visual Studio 2022 Community, Professional, and Enterprise. For more information about installation and setup, see [install Teams Toolkit](./install-Teams-Toolkit.md).
+Teams Toolkit v5 is available for free for Visual Studio 2022 Community, Professional, and Enterprise. For more information about installation and setup, see [Install Teams Toolkit](./install-Teams-Toolkit.md).
 
 | Teams Toolkit | Visual Studio |
 | - | ------------- |
@@ -108,7 +108,7 @@ You can start directly with the capability-focused templates such as tabs, bots,
 ::: zone-end
 
 ::: zone pivot="visual-studio"
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/create-new-app-vs.PNG" alt-text="Screenshot shows the creation of new Teams app menu in Visual Studio.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/create-new-app-vs.PNG" alt-text="Screenshot shows the creation of new Teams app menu in Visual Studio."lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/create-new-app-vs.png":::
 ::: zone-end
 
 ### Automatic registration and configuration
