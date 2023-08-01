@@ -533,7 +533,7 @@ sample 6
 
 :::row:::
    :::column:::
-      :::image type="icon" source="~\assets\images\overview\flowchart-graph-conversational-interface-icon.png" border="false":::
+      :::image type="icon" source="~\assets\images\overview\flowchart-graph-conversational-interface-icon.png" link="~/webhooks-and-connectors/what-are-webhooks-and-connectors.md" border="false":::
    :::column-end:::
      :::image type="content" source="~\assets\images\overview\fc-graph-interface-details.png" alt-text="Microsoft Teams apps for graph conversational interface details sample 5." border="false":::
 :::row-end:::
