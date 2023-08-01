@@ -6,7 +6,10 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
+zone_pivot_groups: teams-app-platform
 ---
+
+::: zone pivot="visual-studio-code"
 
 # Debug background process
 
@@ -119,6 +122,54 @@ You can view the project folders and files under **Explorer** in Visual Studio C
 | `.localConfigs` | Environment variables file for the app code. | The values of each environment variable are generated during debugging. |
 
 For more information on the project folder structure, see [Teams Toolkit project](https://aka.ms/teamsfx-v5.0-guide#teams-toolkit-project).
+
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+# launchSettings.json
+
+`launchSettings.json` is a file used to store configuration information that describes how to start an ASP.NET Core application using Visual Studio. It contains settings that are required to run the application and is used only during development on the local machine. The file is placed in the Properties folder of a project and can specify things like the command to run, which url the browser should be opened in, and which environment variables should be set.
+
+After **Prepare Teams App Dependencies**, Teams Toolkit will update the launchUrl using the real Teams app ID, Teams tenant ID, and M365 account.
+
+## Start local tunnel
+For bot and message extension, you can use Dev Tunnel starts a local tunnel service to make the bot messaging endpoint public. For more information, see [Dev tunnels in Visual Studio](https://learn.microsoft.com/en-us/aspnet/core/test/dev-tunnels?view=aspnetcore-7.0).
+
+In the debug dropdown, select **Dev Tunnels > Create A Tunnel** or select an existing public dev tunnel
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-create-devtunnel.png" alt-text="Screenshoot shows the steps to create a tunnel":::
+
+The tunnel creation dialog opens.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-create-devtunnel-detail.png" alt-text="Screenshot shows how to create a dev tunnel.":::
+
+* Select the account to use to create the tunnel. Account types that can be used to create tunnels include Azure, Microsoft Account (MSA), and GitHub.
+* Enter a name for the tunnel. This name identifies the tunnel in the Visual Studio UI.
+* Choose the tunnel type, Persistent or Temporary
+* Choose the **public authentication** that is required for access to the tunnel.
+* Select **OK**.
+* Visual Studio displays confirmation of tunnel creation.
+
+The tunnel appears in the debug dropdown **Dev Tunnels** flyout. You can select the previously created dev tunnel at this location.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-select-devtunnel.png" alt-text="Screenshot shows how to select dev tunnel.":::
+
+
+## Create the debug resources
+Teams Toolkit runs lifecycle `provision` defined in `teamsapp.local.yml` to create Teams app related resources required for debugging. For more information, see [Provision task](https://aka.ms/teamsfx-tasks/provision) and [available actions](https://aka.ms/teamsfx-actions).
+
+## Take a tour of your app source code
+
+You can view the project folders and files under **Explorer** in Visual Studio after debugging. The following table lists the files related to debugging:
+
+| Folder name| Contents| Description |
+| --- | --- | --- |
+| `teamsapp.local.yml` | The main Teams Toolkit project file for debugging | This file defines the lifecycles and actions required for debugging. |
+| `env/.env.local` | Environment variables file for Teams Toolkit project | The values of each environment variable are consumed or generated during preparing Teams app dependencies. |
+| `appsettings.Development.json` | Environment variables file for the app code | The values of each environment variable are generated during preparing Teams app dependencies. |
+
+::: zone-end
 
 ## See also
 
