@@ -3,6 +3,7 @@ title: Obtain meeting ID and organizer ID for fetching meeting transcripts
 description: Describes the process of Obtain meeting ID and organizer ID for fetching meeting transcripts
 ms.localizationpriority: high
 ms.topic: conceptual
+ms.date: 01/05/2023
 ---
 # Obtain meeting ID and organizer ID
 
@@ -532,3 +533,4 @@ You can try the following code sample for a bot app:
 
 - [Apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
 - [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
+- [Receive notifications for Teams meetings start, end, and roster events](/graph/changenotifications-for-onlinemeeting)

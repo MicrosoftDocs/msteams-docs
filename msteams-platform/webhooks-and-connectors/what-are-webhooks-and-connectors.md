@@ -5,6 +5,7 @@ description: Learn how webhooks and connectors help to connect the web services 
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: anclear
+ms.date: 11/23/2022
 ---
 
 # Webhooks and connectors
@@ -41,12 +42,12 @@ Learn more about the differences between a notification bot and Incoming Webhook
 | Installation required | Yes | No |
 | Suitable scenarios | • Receive regular notifications and messages periodically, for example, receive daily notification of team tasks. <br>  • Receive notifications and messages based on real events. For example, once teammates upload files, you receive notifications. | Communicate with external apps and receive notifications and messages from other apps. |
 | Scope configuration | • Teams channel <br> • Group chat <br> • Personal chat | Teams channel |
-| Message process | A notification not works as a Teams application. You can define your business logic to process data and show data in a customized format. | Webhook is a Teams feature rather than a Teams application, so it only receives and shows data without processing. |
+| Message process | A notification bot works as a Teams application. You can define your business logic to process data and show data in a customized format. | Webhook is a Teams feature rather than a Teams application, so it only receives and shows data without processing. |
 | Retrieve Teams context | Notification bot can retrieve Teams context such as the channel or user information, messages, etc. | No |
 | Send Adaptive Card | Yes | Yes |
 | Send a welcome message | Yes | No |
 | Trigger supported | All triggers are supported. If you use Teams Toolkit, you can quickly get a template project with the following triggers: <br> • Time trigger hosted on Azure functions. <br> • Restify HTTP trigger hosted on Azure app service. <br> • HTTP trigger hosted on Azure Functions. | All triggers are supported. |
-| Building Tools | • [Teams Toolkit Overview for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) <br> • [Teams Toolkit overview for Visual Studio](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio) <br> • [TeamsFx Library](../toolkit/TeamsFx-CLI.md) <br> • [TeamsFx SDK](../toolkit/TeamsFx-SDK.md) | No tools are required. |
+| Building Tools | • [Teams Toolkit Overview for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) <br> •[Teams Toolkit v4 Overview for Visual Studio](../toolkit/toolkit-v4/teams-toolkit-fundamentals-v4.md#available-for-visual-studio) <br> • [TeamsFx Library](../toolkit/TeamsFx-CLI.md) <br> • [TeamsFx SDK](../toolkit/TeamsFx-SDK.md) | No tools are required. |
 | Cloud resource required | Azure Bot Framework | No resources are required. |
 | Tutorial | [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) | [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification) |
 

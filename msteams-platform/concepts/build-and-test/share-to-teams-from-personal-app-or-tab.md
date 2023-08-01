@@ -3,6 +3,7 @@ title: Share to Teams from personal app or tab
 description: Learn how to enable the Share to Teams button on your personal app or tab, limitations and end user experience.
 ms.topic: reference
 ms.localizationpriority: medium
+ms.date: 12/13/2022
 ---
 # Share to Teams from personal app or tab
 
@@ -76,8 +77,7 @@ The following table provides the response codes:
 
 ## Limitations
 
-The limitations to add Share to Teams button:
-
+* Share to Teams is supported for desktop and web clients but isn't supported for mobile client.
 * The Share to Teams button can be hosted or embedded in an app running inside Teams.
 * You can add Share to Teams button to the app created by using **Teams Javascript client library**.
 

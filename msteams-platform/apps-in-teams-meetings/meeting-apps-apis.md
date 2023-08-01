@@ -1,9 +1,8 @@
 ---
 title: Meeting apps APIs
 author: v-sdhakshina
-description: In this article, learn meeting apps API references that are available for Teams client and Bot Framework SDK's with examples, code samples, and response codes.
+description: Learn meeting apps API references that are available for Teams client and Bot Framework SDKs with examples, code samples, and response codes.
 ms.topic: conceptual
-ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
 ---
@@ -17,33 +16,577 @@ The meeting extensibility provides APIs to enhance meeting experience. You can p
 * Select required APIs to improve the meeting experience.
 
 > [!NOTE]
-> Use the [TeamsJS](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) library (*Version*: 1.10 and later) for SSO to work in meeting side panel.
+> Use the [Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) (*Version*: 1.10 and later) for single sign-on (SSO) to work in meeting side panel.
 
 The following table provides a list of APIs available across the Microsoft Teams JavaScript library and Microsoft Bot Framework SDKs:
 
 |Method| Description| Source|
 |---|---|----|
-|[**Get user context**](#get-user-context-api)| Get contextual information to display relevant content in a Microsoft Teams tab.| [Microsoft Teams JavaScript library](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
+|[**Get user context**](#get-user-context-api)| Get contextual information to display relevant content in a Microsoft Teams tab.| [TeamsJS library](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
 |[**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
-|[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provide meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting notification. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
+|[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provides meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting notification. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
-|[**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. | [Microsoft Teams JavaScript library](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
-|[**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [Microsoft Teams JavaScript library](/javascript/api/@microsoft/teams-js/meeting) |
+|[**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. | [TeamsJS library](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
+|[**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
 |[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
-| [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio state setting for the meeting user.| [Microsoft Teams JavaScript library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-| [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa.| [Microsoft Teams JavaScript library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio state setting for the meeting user.| [TeamsJS library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa.| [TeamsJS library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
 ## Get user context API
 
 To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab running in the meeting context and is added for the response payload.
 
+### Examples
+
+The following are the TeamsJS v2 responses for Get user context API based on meeting type, user type, and call type:
+
+* Meeting type
+
+   # [Channel meeting](#tab/channel-meeting)
+
+   The following is a JSON payload response for a channel meeting for in-tenant users:
+
+   ```json
+    {
+     "app": {
+      "locale": "en-us",
+      "sessionId": "ff47ec00-e6a7-4dc1-a6ae-f44110f50c94",
+      "theme": "default",
+      "iconPositionVertical": 0,
+      "osLocaleInfo": {
+       "platform": "windows",
+       "regionalFormat": "en-in",
+       "shortDate": "dd-MM-yyyy",
+       "longDate": "dd MMMM yyyy",
+       "shortTime": "HH:mm",
+       "longTime": "HH:mm:ss"
+      },
+      "parentMessageId": "1678109354022",
+      "userClickTime": 1678109521159,
+      "userFileOpenPreference": "inline",
+      "host": {
+       "name": "Teams",
+       "clientType": "desktop",
+       "sessionId": "c3c3c0a0-f7a1-b070-6b89-c8cd1f380042",
+       "ringId": "ring1"
+      },
+      "appLaunchId": "7346ae66-5cac-47f9-8a0d-1228dac474cb"
+     },
+     "page": {
+      "id": "Test",
+      "frameContext": "sidePanel",
+      "subPageId": "",
+      "isFullScreen": false,
+      "isMultiWindow": true,
+      "sourceOrigin": ""
+     },
+     "user": {
+      "id": "57efa5f3-273c-47e2-a871-4879e5d849cf",
+      "displayName": "",
+      "isCallingAllowed": undefined,
+      "isPSTNCallingAllowed": undefined,
+      "licenseType": "Unknown",
+      "loginHint": "v-prkamble@microsoft.com",
+      "userPrincipalName": "v-prkamble@microsoft.com",
+      "tenant": {
+       "id": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+       "teamsSku": "enterprise"
+      }
+     },
+     "channel": {
+      "id": "19:49683807ffce4318ad6d6d7a24dbde45@thread.tacv2",
+      "displayName": undefined,
+      "relativeUrl": undefined,
+      "membershipType": undefined,
+      "defaultOneNoteSectionId": undefined,
+      "ownerGroupId": undefined,
+      "ownerTenantId": undefined
+     },
+     "chat": {
+      "id": "19:49683807ffce4318ad6d6d7a24dbde45@thread.tacv2"
+     },
+     "meeting": {
+      "id": "MCMxOTo0OTY4MzgwN2ZmY2U0MzE4YWQ2ZDZkN2EyNGRiZGU0NUB0aHJlYWQudGFjdjIjMTY3ODEwOTM1NDAyMg=="
+     },
+     "sharepoint": undefined,
+     "team": {
+      "internalId": "19:b34aeec3f8e54240a5c283e86bfc4878@thread.tacv2",
+      "displayName": undefined,
+      "type": undefined,
+      "groupId": undefined,
+      "templateId": undefined,
+      "isArchived": undefined,
+      "userRole": 1
+     },
+     "sharePointSite": {
+      "teamSiteUrl": "",
+      "teamSiteDomain": "microsoft.sharepoint.com",
+      "teamSitePath": "",
+      "teamSiteId": "",
+      "mySitePath": undefined,
+      "mySiteDomain": undefined
+     }
+    }
+   ```
+
+   # [Scheduled meeting](#tab/scheduled-meeting)
+
+   The following is a JSON payload response for a scheduled meeting for in-tenant users:
+
+   ```json
+     {
+      "app": {
+       "locale": "en-us",
+       "sessionId": "e746c935-0991-47b8-b7f4-16db7646771f",
+       "theme": "default",
+       "iconPositionVertical": 22.998046875,
+       "osLocaleInfo": null,
+       "parentMessageId": "",
+       "userClickTime": 1678023107126,
+       "userFileOpenPreference": "inline",
+       "host": {
+        "name": "Teams",
+        "clientType": "web",
+        "sessionId": "5f2a15f6-75bd-2612-c0ff-2e1085dd165a",
+        "ringId": "general"
+       },
+       "appLaunchId": "e07b6f2c-dc0f-4de2-9b1f-44dba2ea733c"
+      },
+      "page": {
+       "id": "Test",
+       "frameContext": "content",
+       "subPageId": "",
+       "isFullScreen": false,
+       "isMultiWindow": false,
+       "sourceOrigin": NULL
+      },
+      "user": {
+       "id": "e652dd92-dd63-4fcc-b5b2-2005681e8e9f",
+       "displayName": null,
+       "isCallingAllowed": null,
+       "isPSTNCallingAllowed": null,
+       "licenseType": "Unknown",
+       "loginHint": "admin@M365x94626565.onmicrosoft.com",
+       "userPrincipalName": "admin@M365x94626565.onmicrosoft.com",
+       "tenant": {
+        "id": "aa923623-ae61-49ee-b401-81f414b6ad5a",
+        "teamsSku": "enterprise"
+       }
+      },
+      "channel": null,
+      "chat": {
+       "id": "19:meeting_YmU5NWM3NGEtZjMyMi00ZDg4LTk4OGUtMjUzMGJkZjRhMDhm@thread.v2"
+      },
+      "meeting": {
+       "id": "MCMxOTptZWV0aW5nX1ltVTVOV00zTkdFdFpqTXlNaTAwWkRnNExUazRPR1V0TWpVek1HSmtaalJoTURobUB0aHJlYWQudjIjMA=="
+      },
+      "sharepoint": null,
+      "team": null,
+      "sharePointSite": {
+       "teamSiteUrl": "",
+       "teamSiteDomain": "m365x94626565.sharepoint.com",
+       "teamSitePath": "",
+       "teamSiteId": null,
+       "mySitePath": "/personal/admin_m365x94626565_onmicrosoft_com",
+       "mySiteDomain": "m365x94626565-my.sharepoint.com"
+      }
+     }
+
+   ```
+
+   # [Instant meeting](#tab/instant-meeting)
+
+   The following is a JSON payload response for a Instant meeting (Meet now) for in-tenant users:
+
+   ```json
+      {
+      "app": {
+        "locale": "en-us",
+        "sessionId": "4b2b69ef-6030-4379-a07b-02a64ff3bd37",
+        "theme": "default",
+        "iconPositionVertical": 23,
+        "parentMessageId": "",
+        "userClickTime": 1681216672213,
+        "userFileOpenPreference": "inline",
+        "host": {
+          "name": "Teams",
+          "clientType": "web",
+          "sessionId": "a384245b-c4ee-0c76-377b-7394bd040532",
+          "ringId": "ring3_6"
+        },
+        "appLaunchId": "f7e97fbd-0b2e-477f-9599-91a5155418d5"
+      },
+      "page": {
+        "id": "Test",
+        "frameContext": "content",
+        "subPageId": "",
+        "isFullScreen": false,
+        "isMultiWindow": false,
+        "sourceOrigin": null
+      },
+      "user": {
+        "id": "4ebcc4d0-291b-4154-a85f-a89cd77aefa8",
+        "licenseType": "Unknown",
+        "loginHint": "admin@M365x654992.onmicrosoft.com",
+        "userPrincipalName": "admin@M365x654992.onmicrosoft.com",
+        "tenant": {
+          "id": "36a708ef-700d-4d60-9de0-0a5f7b7693df",
+          "teamsSku": "unknown"
+        }
+      },
+      "chat": {
+        "id": "19:meeting_OWRiMjg0N2YtNDc1Ni00YWEyLWE4YjgtODkwZTliMzczYzg1@thread.v2"
+      },
+      "meeting": {
+        "id": "MCMxOTptZWV0aW5nX09XUmlNamcwTjJZdE5EYzFOaTAwWVdFeUxXRTRZamd0T0Rrd1pUbGlNemN6WXpnMUB0aHJlYWQudjIjMA=="
+      },
+      "sharePointSite": {
+        "teamSiteUrl": "",
+        "teamSiteDomain": "m365x654992.sharepoint.com",
+        "teamSitePath": "",
+        "mySitePath": "/personal/admin_m365x654992_onmicrosoft_com",
+        "mySiteDomain": "m365x654992-my.sharepoint.com"
+      }
+    }
+   ```
+
+   ---
+
+* User type
+
+   # [Guest user](#tab/guest-user)
+
+   The following is a JSON payload response in a scheduled private meeting for a guest user :
+
+   ```json
+     {
+      "app": {
+       "locale": "en-us",
+       "sessionId": "268beeb4-a52d-4ba8-b1c8-8b9f0b9b3492",
+       "theme": "default",
+       "iconPositionVertical": 23,
+       "osLocaleInfo": {
+        "platform": "windows",
+        "regionalFormat": "en-in",
+        "longDate": "dd MMMM yyyy",
+        "shortDate": "dd-MM-yyyy",
+        "longTime": "HH:mm:ss",
+        "shortTime": "HH:mm"
+       },
+       "parentMessageId": "",
+       "userClickTime": 1678023265131,
+       "userFileOpenPreference": "inline",
+       "host": {
+        "name": "Teams",
+        "clientType": "desktop",
+        "sessionId": "967c980b-1e41-a2cd-eac0-a4bff8f73ce7",
+        "ringId": "ring1"
+       },
+       "appLaunchId": "c35c4496-f28c-4107-8e6c-2dba09fb881a"
+      },
+      "page": {
+       "id": "Test",
+       "frameContext": "content",
+       "subPageId": "",
+       "isFullScreen": false,
+       "isMultiWindow": false,
+       "sourceOrigin": NULL
+      },
+      "user": {
+       "id": "57efa5f3-273c-47e2-a871-4879e5d849cf",
+       "displayName": undefined,
+       "isCallingAllowed": undefined,
+       "isPSTNCallingAllowed": undefined,
+       "licenseType": "Unknown",
+       "loginHint": "v-prkamble@microsoft.com",
+       "userPrincipalName": "v-prkamble@microsoft.com",
+       "tenant": {
+        "id": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+        "teamsSku": "enterprise"
+       }
+      },
+      "channel": undefined,
+      "chat": {
+       "id": "19:meeting_YmU5NWM3NGEtZjMyMi00ZDg4LTk4OGUtMjUzMGJkZjRhMDhm@thread.v2"
+      },
+      "meeting": {
+       "id": "MCMxOTptZWV0aW5nX1ltVTVOV00zTkdFdFpqTXlNaTAwWkRnNExUazRPR1V0TWpVek1HSmtaalJoTURobUB0aHJlYWQudjIjMA=="
+      },
+      "sharepoint": undefined,
+      "team": undefined,
+      "sharePointSite": {
+       "teamSiteUrl": "",
+       "teamSiteDomain": "microsoft.sharepoint.com",
+       "teamSitePath": "",
+       "teamSiteId": undefined,
+       "mySitePath": "/personal/v-prkamble_microsoft_com",
+       "mySiteDomain": "microsoft-my.sharepoint.com"
+      }
+     }
+   ```
+
+   # [Anonymous user](#tab/anonymous-user)
+
+   The following is a JSON payload response in a scheduled private meeting for an anonymous user:
+
+   ```json
+    {
+        "app": {
+            "locale": "en-us",
+            "sessionId": "a57af773-73b1-480c-a525-0c9487a51792",
+            "theme": "dark",
+            "parentMessageId": "",
+            "userClickTime": 1678369341888,
+            "host": {
+                "name": "Teams",
+                "clientType": "web",
+                "sessionId": "",
+                "ringId": "general"
+            }
+        },
+        "page": {
+            "frameContext": "meetingStage",
+            "subPageId": "",
+            "isMultiWindow": false,
+            "sourceOrigin": ""
+        },
+        "user": {
+            "id": "",
+            "licenseType": "Anonymous",
+            "loginHint": "",
+            "userPrincipalName": ""
+        },
+        "chat": {
+            "id": "19:meeting_NTZmNTI3ODgtOWZkOS00NjgzLWJhNTMtMDhlNjE5ZjAwYWYx@thread.v2"
+        },
+        "meeting": {
+            "id": "MCMxOTptZWV0aW5nX05UWm1OVEkzT0RndE9XWmtPUzAwTmpnekxXSmhOVE10TURobE5qRTVaakF3WVdZeEB0aHJlYWQudjIjMA=="
+        }
+    }
+   ```
+
+   # [External user](#tab/external-user)
+
+   The following is a JSON payload response in a scheduled private meeting for an external user:
+
+   ```json
+    {
+     "app": {
+      "locale": "en-us",
+      "sessionId": "fe4d7f01-e049-4238-8c5a-3c6bcf4517cd",
+      "theme": "default",
+      "iconPositionVertical": 0,
+      "osLocaleInfo": {
+       "platform": "windows",
+       "regionalFormat": "en-us",
+       "shortDate": "M/d/yyyy",
+       "longDate": "dddd, MMMM d, yyyy",
+       "shortTime": "h:mm tt",
+       "longTime": "h:mm:ss tt"
+      },
+      "parentMessageId": "",
+      "userClickTime": 0,
+      "userFileOpenPreference": "inline",
+      "host": {
+       "name": "Teams",
+       "clientType": "desktop",
+       "sessionId": "d6d8d834-b13c-95bb-96bd-3bed74fdad4c",
+       "ringId": "ring1"
+      },
+      "appLaunchId": "4ce26ee3-a6b6-4dad-9484-3b218d5603be"
+     },
+     "page": {
+      "id": "Test",
+      "frameContext": "sidePanel",
+      "subPageId": "",
+      "isFullScreen": false,
+      "isMultiWindow": true,
+      "sourceOrigin": ""
+     },
+     "user": {
+      "id": "aeee11b1-7838-4b4a-8064-12ce5b01258f",
+      "displayName": "",
+      "licenseType": "Unknown",
+      "loginHint": "v-hrajandira@microsoft.com",
+      "userPrincipalName": "v-hrajandira@microsoft.com",
+      "tenant": {
+       "id": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+       "teamsSku": "enterprise"
+      }
+     },
+     "chat": {
+      "id": "19:meeting_Mzg5ZmQwYzItY2U3NS00MDE4LThkZjQtMzNjNWZiMzM5MzNi@thread.v2"
+     },
+     "meeting": {
+      "id": "MCMxOTptZWV0aW5nX016ZzVabVF3WXpJdFkyVTNOUzAwTURFNExUaGtaalF0TXpOak5XWmlNek01TXpOaUB0aHJlYWQudjIjMA=="
+     },
+     "sharePointSite": {
+      "teamSiteUrl": "",
+      "teamSiteDomain": "microsoft.sharepoint.com",
+      "teamSitePath": "",
+      "teamSiteId": ""
+     }
+    }
+
+   ```
+
+   ---
+
+* Call type
+
+   # [One-on-One call](#tab/one-on-one-call)
+
+   The following is a JSON payload response for a one-on-one call for an in-tenant user:
+
+   ```json
+    {
+     "app": {
+      "locale": "en-us",
+      "sessionId": "1b3dc47e-f6ae-4fe2-8ed6-844a505f3186",
+      "theme": "dark",
+      "iconPositionVertical": null,
+      "osLocaleInfo": {
+       "platform": "windows",
+       "regionalFormat": "en-in",
+       "shortDate": "dd-MM-yyyy",
+       "longDate": "dd MMMM yyyy",
+       "shortTime": "HH:mm",
+       "longTime": "HH:mm:ss"
+      },
+      "parentMessageId": "",
+      "userClickTime": 1678088052473,
+      "userFileOpenPreference": undefined,
+      "host": {
+       "name": "Teams",
+       "clientType": "desktop",
+       "sessionId": "",
+       "ringId": "general"
+      },
+      "appLaunchId": undefined
+     },
+     "page": {
+      "id": "Test",
+      "frameContext": "sidePanel",
+      "subPageId": "",
+      "isFullScreen": undefined,
+      "isMultiWindow": true,
+      "sourceOrigin": ""
+     },
+     "user": {
+      "id": "e652dd92-dd63-4fcc-b5b2-2005681e8e9f",
+      "displayName": undefined,
+      "isCallingAllowed": undefined,
+      "isPSTNCallingAllowed": undefined,
+      "licenseType": "Unknown",
+      "loginHint": "admin@M365x94626565.onmicrosoft.com",
+      "userPrincipalName": "admin@M365x94626565.onmicrosoft.com",
+      "tenant": {
+       "id": "aa923623-ae61-49ee-b401-81f414b6ad5a",
+       "teamsSku": "unknown"
+      }
+     },
+     "channel": undefined,
+     "chat": {
+      "id": "19:a74d8489-4455-4670-9581-7b38a8017c58_e652dd92-dd63-4fcc-b5b2-2005681e8e9f@unq.gbl.spaces"
+     },
+     "meeting": {
+      "id": "MCMxOTphNzRkODQ4OS00NDU1LTQ2NzAtOTU4MS03YjM4YTgwMTdjNThfZTY1MmRkOTItZGQ2My00ZmNjLWI1YjItMjAwNTY4MWU4ZTlmQHVucS5nYmwuc3BhY2VzIzA="
+     },
+     "sharepoint": undefined,
+     "team": undefined,
+     "sharePointSite": {
+      "teamSiteUrl": undefined,
+      "teamSiteDomain": "m365x94626565.sharepoint.com",
+      "teamSitePath": undefined,
+      "teamSiteId": undefined,
+      "mySitePath": undefined,
+      "mySiteDomain": undefined
+     }
+    }
+
+   ```
+
+   # [Group call](#tab/group-call)
+
+   The following is a JSON payload response for a group chat call for an in-tenant user:
+
+   ```json
+    {
+     "app": {
+      "locale": "en-us",
+      "sessionId": "cbc005c1-8c10-4dfb-a7c6-711353009cc3",
+      "theme": "dark",
+      "iconPositionVertical": undefined,
+      "osLocaleInfo": {
+       "platform": "windows",
+       "regionalFormat": "en-in",
+       "shortDate": "dd-MM-yyyy",
+       "longDate": "dd MMMM yyyy",
+       "shortTime": "HH:mm",
+       "longTime": "HH:mm:ss"
+      },
+      "parentMessageId": "",
+      "userClickTime": 1678087909562,
+      "userFileOpenPreference": undefined,
+      "host": {
+       "name": "Teams",
+       "clientType": "desktop",
+       "sessionId": "",
+       "ringId": "general"
+      },
+      "appLaunchId": undefined
+     },
+     "page": {
+      "id": "Test",
+      "frameContext": "sidePanel",
+      "subPageId": "",
+      "isFullScreen": undefined,
+      "isMultiWindow": true,
+      "sourceOrigin": ""
+     },
+     "user": {
+      "id": "e652dd92-dd63-4fcc-b5b2-2005681e8e9f",
+      "displayName": undefined,
+      "isCallingAllowed": undefined,
+      "isPSTNCallingAllowed": undefined,
+      "licenseType": "Unknown",
+      "loginHint": "admin@M365x94626565.onmicrosoft.com",
+      "userPrincipalName": "admin@M365x94626565.onmicrosoft.com",
+      "tenant": {
+       "id": "aa923623-ae61-49ee-b401-81f414b6ad5a",
+       "teamsSku": "unknown"
+      }
+     },
+     "channel": undefined,
+     "chat": {
+      "id": "19:a91b5c5f7dbc4eb58e8592240db70299@thread.v2"
+     },
+     "meeting": {
+      "id": "MCMxOTphOTFiNWM1ZjdkYmM0ZWI1OGU4NTkyMjQwZGI3MDI5OUB0aHJlYWQudjIjMA=="
+     },
+     "sharepoint": undefined,
+     "team": undefined,
+     "sharePointSite": {
+      "teamSiteUrl": undefined,
+      "teamSiteDomain": "m365x94626565.sharepoint.com",
+      "teamSitePath": undefined,
+      "teamSiteId": undefined,
+      "mySitePath": undefined,
+      "mySiteDomain": undefined
+     }
+    }
+    
+   ```
+
+   ---
+
 ## Get participant API
 
-The `GetParticipant` API must have a bot registration and ID to generate auth tokens. For more information, see [bot registration and ID](../build-your-first-app/build-bot.md).
+The `GetParticipant` API must have a bot registration and ID to generate auth tokens. For more information, see [bot registration and ID](/azure/bot-service/bot-service-quickstart-registration).
 
 > [!NOTE]
 >
-> * The user type is not included in the **getParticipantRole** API.
+> * The user type isn't included in the **getParticipantRole** API.
 > * Do not cache participant roles since the meeting organizer can change the roles any time.
 > * Currently, the `GetParticipant` API is only supported for distributions lists or rosters with less than 350 participants.
 
@@ -52,13 +595,13 @@ The `GetParticipant` API must have a bot registration and ID to generate auth to
 > [!TIP]
 > Get participant IDs and tenant IDs from the [tab SSO authentication](../tabs/how-to/authentication/tab-sso-overview.md).
 
-The `Meeting` API must have `meetingId`, `participantId`, and `tenantId` as URL parameters. The parameters are available as part of the TeamsJS library and bot activity.
+The `Meeting` API must have `meetingId`, `participantId`, and `tenantId` as URL parameters. The parameters are available as part of the Microsoft Teams JavaScript client library (TeamsJS) library and bot activity.
 
 The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and TeamsJS library.|
+|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and TeamsJS library. |
 |**participantId**| String | Yes | The participant ID is the user ID. It's available in Tab SSO, Bot Invoke, and TeamsJS library. It's recommended to get a participant ID from the Tab SSO. |
 |**tenantId**| String | Yes | The tenant ID is required for the tenant users. It's available in Tab SSO, Bot Invoke, and TeamsJS library. It's recommended to get a tenant ID from the Tab SSO. |
 
@@ -176,11 +719,12 @@ The following table provides the response codes:
 
 All users in a meeting receive the notifications sent through in-meeting notification payload. In-meeting notification payload triggers an in-meeting notification and enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. You can send an in-meeting notification based on user action. The payload is available through Bot Services.
 
+You can also send targeted in-meeting notification to a specific participant in a meeting. For more information, see [Targeted in-meeting notification](in-meeting-notification-for-meeting.md#targeted-in-meeting-notification).
+
 > [!NOTE]
 >
 > * When an in-meeting notification is invoked, the content is presented as a chat message.
-> * Currently, sending targeted notifications and support for webapp are not supported.
-> * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see TeamsJS library [task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+> * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 > * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Microsoft Azure Active Directory (Azure AD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### Query parameter
@@ -268,8 +812,8 @@ POST /v3/conversations/{conversationId}/activities
 | **channelData.notification.alertInMeeting** | Boolean indicating if a notification is to be shown to the user while in a meeting. |
 | **channelData.notification.externalResourceUrl** | The value of the notification's external resource URL.|
 | **replyToId** | The ID of the parent or root message of the thread. |
-| **APP_ID** | App Id declared in manifest. |
-| **completionBotId** | Bot app Id |
+| **APP_ID** | App ID declared in manifest. |
+| **completionBotId** | Bot app ID. |
 
 ### Response codes
 
@@ -282,15 +826,149 @@ The following table includes the response codes:
 | **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the tenant admin disables and blocks the app during live site migration. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat doesn't exist. |
 
-## Get meeting details API
+## Targeted meeting notification and app icon badging API
 
-The Meeting Details API enables your app to get a meeting's static metadata. The metadata provides data points that don't change dynamically. The API is available through Bot Services. Currently, both private scheduled or recurring meetings and channel scheduled or recurring meetings support API with different RSC permissions respectively.
-
-The `Meeting Details` API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`. To use the Meeting Details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
+The `targetedMeetingNotification` API allows apps to send targeted in-meeting notifications and shows app icon badging to specific participants in a meeting. Apps send targeted in-meeting notifications and app icon badging based on user action. The API is available through bot API.
 
 ### Prerequisite
 
-To use the Meeting Details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
+You must configure your [app manifest](../resources/schema/manifest-schema.md) with [RSC permissions](../graph-api/rsc/resource-specific-consent.md) under the `webApplicationInfo` property to send targeted in-meeting notifications and shows app icon badging to specific participants in a meeting. Use the following examples to configure your manifest:
+
+<br>
+
+<details>
+
+<summary><b>For app manifest version 1.12 and later</b></summary>
+
+```json
+"webApplicationInfo": {
+    "id": "<<MICROSOFT-APP-ID>>",
+    "resource": "https://RscBasedStoreApp"  },
+  "authorization": {
+    "permissions": {
+      "resourceSpecific": [
+            {
+                "name": "OnlineMeetingNotification.Send.Chat",
+                "type": "Application"
+            }
+        ]    
+    }
+}
+ ```
+
+<br>
+
+</details>
+
+<br>
+
+<details>
+
+<summary><b>For app manifest version 1.11 and earlier</b></summary>
+
+```json
+"webApplicationInfo": {
+    "id": "<<MICROSOFT-APP-ID>>",
+    "resource": "https://RscBasedStoreApp",
+    "applicationPermissions": [
+      "OnlineMeetingNotification.Send.Chat"
+    ]
+}
+ ```
+
+<br>
+
+</details>
+
+> [!NOTE]
+>
+> * The API payload only permits a task module with a URL.
+> * The user ID formats **aadObjectid** and **UPN** aren't supported.
+
+Get supported user ID format for targeted in-meeting notification and app icon badging:
+
+* [Get participant API](#get-participant-api)
+* [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)
+
+### Example
+
+Following is an example of request payload for targeted in-meeting notification and app icon badging:
+
+```http
+POST /v1/meetings/{meetingId}/notification
+```
+
+```json
+{
+
+  "type": "targetedMeetingNotification",
+  "value": {
+    "recipients": [ 
+"29:1I12M_iy2wTa97T6LbjTh4rJCWrtw2PZ3lxpD3yFv8j2YPnweY2lpCPPAn3RI0PP7rghfHauUz48I1t7ANhj4CA"
+     ], 
+    "surfaces": [ 
+      { 
+        "surface": "meetingStage", 
+        "contentType": "task", 
+        "content": { 
+          "value": { 
+            "height": "300", 
+            "width": "400", 
+            "title": "Targeted meeting Notification", 
+            "url": "https://somevalidurl.com"           
+}
+        } 
+      } 
+    ] 
+  },
+  "channelData": { // optional if a developer doesn't want to support user attributes.
+    "onBehalfOf": [ 
+      { 
+        "itemid": 0, 
+        "mentionType": "person", 
+        "mri": "29:1mDOCfGM9825lMHlwP8NjIVMJeQAbN-ojYBT5VzQfPpnst1IFQeYB1QXC8Zupn2RhgfLIW27HmynQk-4bdx_YhA", 
+        "displayName": "yunny chung"      } 
+    ] 
+  }
+}
+```
+
+| Property name | Description |
+|---|---|
+| `meetingId` | The meeting ID is available through bot invoke and TeamsJS library. |
+| `type` |`targetedMeetingNotification` |
+| `recipients` | List of user IDs. Get user IDs for meeting participants through [Get participant API](#get-participant-api). Get the entire list of chat roster using [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Empty or null recipients list will return 400.|
+| `surface` | A type of surface. The supported surface type are `meetingStage` and `meetingTabIcon`. |
+| `surfaces` | List of surfaces where notifications can be rendered. |
+| `contentType` | Type of content that the targeted in-meeting notification renders. The supported value is `task`. |
+| `content` | [TaskModuleContinueResponse](/dotnet/api/microsoft.bot.schema.teams.taskmodulecontinueresponse?view=botbuilder-dotnet-stable&preserve-view=true) |
+| `content.value.height` | **Optional**; requested height of the notification. |
+|`content.value.width` | **Optional**; requested width of the notification. |
+| `content.value.title` | **Optional**; title of the notification. |
+| `content.value.url` | **Optional**; URL to be rendered in the notification. Make sure the URL is part of `validDomains` in app manifest. If empty string or no URL is provided, nothing will be rendered on a meeting notification. |
+| `ChannelData.OnBehalfOf` | **Optional**; this is to support [User attributes](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#user-attribution-for-bots-messages). |
+| `onBehalfOf.itemid` | Describes identification of the item. Its value must be 0. |
+| `onBehalfOf.mentionType` |`person` keyword. Describes the mention of a person. |
+| `onBehalfOf.mri` | User MRI shown as sender. |
+| `onBehalfOf.displayName` | **Optional**; name of the `person`. Used as fallback in case the name resolution is unavailable. |
+
+> [!NOTE]
+> If you provide an invalid input, the API returns the status code 400.
+
+[!INCLUDE [Response code](../includes/meeting-response-code.md)]
+
+## Get meeting details API
+
+The meeting details API enables your app to get a meeting's static metadata. The metadata provides data points that don't change dynamically. The API is available through Bot Services. Currently, both private scheduled or recurring meetings and channel scheduled or recurring meetings support API with different RSC permissions respectively.
+
+The meeting details API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`. To use the meeting details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
+
+> [!NOTE]
+> The meeting details API is supported for scheduled private meetings, scheduled channel meeting, instant meetings (Meet now), one-on-one calls, and group calls in Teams desktop and mobile clients.
+
+### Prerequisite
+
+To use the meeting details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
 
 <br>
 
@@ -376,7 +1054,7 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
 
 > [!NOTE]
 >
-> * The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for RSC permission.
+> * If the `ChannelMeeting.ReadBasic.Group` permission is added to the manifest, the bot receives the meeting start or end events automatically from the channel meetings created in all the teams where the bot is added.
 > * For a one-on-one call `organizer` is the initiator of the chat and for group calls `organizer` is the call initiator. For public channel meetings `organizer` is the person who created the channel post.
 
 ### Query parameter
@@ -385,7 +1063,7 @@ The following table lists the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and TeamsJS client library. |
+|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and the TeamsJS library.|
 
 ### Example
 
@@ -406,7 +1084,12 @@ await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 
 ```javascript
 
-Not available
+this.onMessage(async(context, next) =>{
+  TurnContext.removeRecipientMention(context.activity);
+ 
+  const details=await TeamsInfo.getMeetingInfo(context);
+  await context.sendActivity(JSON.stringify(details, null, 2));
+});
 
 ```
 
@@ -416,7 +1099,7 @@ Not available
 GET /v1/meetings/{meetingId}
 ```
 
-The JSON response body for Meeting Details API is as follows:
+The JSON response body for meeting details API is as follows:
 
 * **Scheduled meetings:**
 
@@ -568,9 +1251,9 @@ The JSON response body for Meeting Details API is as follows:
 
 In case of Recurring meeting type,
 
-**startDate**: Specifies the date to start applying the pattern. The value of startDate must correspond to the date value of the start property on the event resource. Note that the first occurrence of the meeting may not occur on this date if it doesn't fit the pattern.
+**startDate**: Specifies the date to start applying the pattern. The value of startDate must correspond to the date value of the start property on the event resource. The first occurrence of the meeting might not occur on this date if it doesn't fit the pattern.
 
-**endDate**: Specifies the date to stop applying the pattern. Note that the last occurrence of the meeting may not occur on this date if it doesn't fit the pattern.
+**endDate**: Specifies the date to stop applying the pattern. The last occurrence of the meeting might not occur on this date if it doesn't fit the pattern.
 
 ## Send real-time captions API
 
@@ -586,7 +1269,7 @@ The CART URL includes the following query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|----|
-|**meetingId**| String | Yes |The meeting identifier is available through Bot Invoke and TeamsJS client library. <br/>For example, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
+|**meetingId**| String | Yes |The meeting identifier is available through Bot Invoke and the TeamsJS library. <br/>For example, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
 |**token**| String | Yes |Authorization token.<br/> For example, token=04751eac |
 
 #### Example
@@ -631,11 +1314,11 @@ The following table provides the error codes:
 ## Get real-time Teams meeting events API
 
 > [!NOTE]
-> Real-time Teams meeting events are only supported for scheduled meetings.
+> Real-time Teams meeting events are supported for scheduled and channel meetings.
 
-The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot. The actual start and end time of a meeting are different from scheduled start and end time. The Meeting Details API provides the scheduled start and end time. The event provides the actual start and end time.
+The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot. The actual start and end time of a meeting are different from scheduled start and end time. The meeting details API provides the scheduled start and end time. The event provides the actual start and end time.
 
-You must be familiar with the `TurnContext` object available through the Bot SDK. The `Activity` object in `TurnContext` contains the payload with the actual start and end time. Real-time meeting events require a registered bot ID from the Teams platform. The bot can automatically receive meeting start or end event by adding `ChannelMeeting.ReadBasic.Group` in the manifest.
+If the `ChannelMeeting.ReadBasic.Group` and `OnlineMeeting.ReadBasic.Chat` permissions are added in the manifest, the bot automatically starts receiving the meeting start or end events for the scheduled and channel meeting types.
 
 ### Prerequisite
 
@@ -659,6 +1342,10 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
                 "name": "OnlineMeeting.ReadBasic.Chat",
                 "type": "Application"
             }
+            {
+                "name": "ChannelMeeting.ReadBasic.Group",
+                "type": "Application"
+            }
         ]    
     }
 }
@@ -679,7 +1366,8 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
-      "OnlineMeeting.ReadBasic.Chat"
+      "OnlineMeeting.ReadBasic.Chat",
+      "ChannelMeeting.ReadBasic.Group"
     ]
 }
  ```
@@ -688,9 +1376,9 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
 
 </details>
 
-### Example of getting `MeetingStartEndEventvalue`
+### Example of getting meeting start or end events
 
-The bot receives event through the `OnEventActivityAsync` handler. To deserialize the JSON payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting is in the `value` property in the event payload. The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under the `value` property in the event payload.
+The bot receives the meeting start and meeting end events through the `OnTeamsMeetingStartAsync` and `OnTeamsMeetingEndAsync` handlers. The information related to the meeting event is part of the `MeetingStartEventDetails` object, which includes the metadata fields such as, `meetingType`, `title`, `id`, `joinUrl`, `startTime`, and `EndTime`.
 
 > [!NOTE]
 >
@@ -698,9 +1386,9 @@ The bot receives event through the `OnEventActivityAsync` handler. To deserializ
 > * Do not use conversation ID as meeting ID.
 > * Do not use meeting ID from meeting events payload `turncontext.activity.value`.
 
-The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start/end event:
+The following examples show how to capture the meeting start and end events:
 
-Meeting Start Event
+**Meeting Start Event**
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingstartasync(microsoft-bot-schema-teams-meetingstarteventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
@@ -714,7 +1402,7 @@ protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails 
 }
 ```
 
-Meeting End Event
+**Meeting End Event**
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingendasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingendasync(microsoft-bot-schema-teams-meetingendeventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
@@ -733,50 +1421,36 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 The following code provides an example of meeting start event payload:
 
 ```json
-{ 
-    "name": "application/vnd.microsoft.meetingStart", 
-    "type": "event", 
-    "timestamp": "2021-04-29T16:10:41.1252256Z", 
-    "id": "123", 
-    "channelId": "msteams", 
-    "serviceUrl": "https://microsoft.com", 
-    "from": { 
-        "id": "userID", 
-        "aadObjectId": "aadOnjectId" 
-    }, 
-    "conversation": { 
-        "isGroup": true, 
-        "tenantId": "tenantId", 
-        "id": "thread id" 
-    }, 
-    "recipient": { 
-        "id": "user Id", 
-        "name": "user name" 
-    }, 
-    "entities": [ 
-        { 
-            "locale": "en-US", 
-            "country": "US", 
-            "type": "clientInfo" 
-        } 
-    ], 
-    "channelData": { 
-        "tenant": { 
-            "id": "channel id" 
-        }, 
-        "source": null, 
-        "meeting": { 
-            "id": "meeting id" 
-        } 
-    }, 
-    "value": { 
-        "MeetingType": "Scheduled", 
-        "Title": "Meeting Start/End Event", 
-        "Id": "meeting id", 
-        "JoinUrl": "url" 
-        "StartTime": "2021-04-29T16:17:17.4388966Z" 
-    }, 
-    "locale": "en-US" 
+{
+  "name": " application/vnd.microsoft.meetingStart",
+  "type": "event",
+  "timestamp": "2023-02-23T19:34:07.478Z",
+  "localTimestamp": "2023-02-23T11:34:07.478-8",
+  "channelId": "msteams",
+  "serviceUrl": "https://smba.trafficmanager.net/teams/",
+  "from": {
+    "id": "user_id"
+  },
+  "conversation": {
+    "isGroup": true,
+    "conversationType": "groupchat",
+    "id": "conversation_id"
+  },
+  "recipient": {
+    "id": "28:65f50003-e15d-434a-9e14-0fcfeb3d7817"
+  },
+  "value": {
+    "id": "meeting_id",
+    "joinUrl": "join_url",
+    "title": "Example meeting",
+    "meetingType": "Scheduled",
+    "startTime": "2023-02-23T19:34:07.478Z"
+  },
+  "channelData": {
+    "tenant": {
+      "id": "tenant_id"
+    }
+  }
 }
 ```
 
@@ -785,50 +1459,36 @@ The following code provides an example of meeting start event payload:
 The following code provides an example of meeting end event payload:
 
 ```json
-{ 
-    "name": "application/vnd.microsoft.meetingEnd", 
-    "type": "event", 
-    "timestamp": "2021-04-29T16:17:17.4388966Z", 
-    "id": "123", 
-    "channelId": "msteams", 
-    "serviceUrl": "https://microsoft.com", 
-    "from": { 
-        "id": "user id", 
-        "aadObjectId": "aadObjectId" 
-    }, 
-    "conversation": { 
-        "isGroup": true, 
-        "tenantId": "tenantId", 
-        "id": "thread id" 
-    }, 
-    "recipient": { 
-        "id": "user id", 
-        "name": "user name" 
-    }, 
-    "entities": [ 
-        { 
-            "locale": "en-US", 
-            "country": "US", 
-            "type": "clientInfo" 
-        } 
-    ], 
-    "channelData": { 
-        "tenant": { 
-            "id": "channel id" 
-        }, 
-        "source": null, 
-        "meeting": { 
-            "id": "meeting Id" 
-        } 
-    }, 
-    "value": { 
-        "MeetingType": "Scheduled", 
-        "Title": "Meeting Start/End Event in Canary", 
-        "Id": "19:meeting_NTM3ZDJjOTUtZGRhOS00MzYxLTk5NDAtMzY4M2IzZWFjZGE1@thread.v2", 
-        "JoinUrl": "url", 
-        "EndTime": "2021-04-29T16:17:17.4388966Z" 
-    }, 
-    "locale": "en-US" 
+{
+  "name": " application/vnd.microsoft.meetingEnd",
+  "type": "event",
+  "timestamp": "2023-02-23T19:34:07.478Z",
+  "localTimestamp": "2023-02-23T11:34:07.478-8",
+  "channelId": "msteams",
+  "serviceUrl": "https://smba.trafficmanager.net/teams/",
+  "from": {
+    "id": "user_id"
+  },
+  "conversation": {
+    "isGroup": true,
+    "conversationType": "groupchat",
+    "id": "conversation_id"
+  },
+  "recipient": {
+    "id": "28:65f50003-e15d-434a-9e14-0fcfeb3d7817"
+  },
+  "value": {
+    "id": "meeting_id",
+    "joinUrl": "join_url",
+    "title": "Example meeting",
+    "meetingType": "Scheduled",
+    "EndTime": "2023-02-23T20:30:07.478Z"
+  },
+  "channelData": {
+    "tenant": {
+      "id": "tenant_id"
+    }
+  }
 }
 ```
 
@@ -845,11 +1505,11 @@ The following code provides an example of meeting end event payload:
 | **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
 | **conversation.tenantId** | Azure Active Directory tenant ID of the conversation or meeting. |
 | **conversation.id** | The meeting chat ID. |
-| **recipient.id** | ID of the user that receive the request. |
-| **recipient.name** | Name of the user that receive the request. |
-| **entities.locale** | entity which contains metadata about locale. |
-| **entities.country** | entity which contains metadata about country. |
-| **entities.type** | entity which contains metadata about client. |
+| **recipient.id** | ID of the user that receives the request. |
+| **recipient.name** | Name of the user that receives the request. |
+| **entities.locale** | entity that contains metadata about locale. |
+| **entities.country** | entity that contains metadata about country. |
+| **entities.type** | entity that contains metadata about client. |
 | **channelData.tenant.id** | Azure Active Directory tenant ID. |
 | **channelData.source** | The source name from where event is fired or invoked. |
 | **channelData.meeting.id** | The default ID associated with the meeting. |
@@ -863,11 +1523,11 @@ The following code provides an example of meeting end event payload:
 
 ## Get incoming audio state
 
-The `getIncomingClientAudioState` API allows an app to get the incoming audio state setting for the meeting user. The API is available through the TeamsJS client library.
+The `getIncomingClientAudioState` API allows an app to get the incoming audio state setting for the meeting user. The API is available through the TeamsJS library.
 
 > [!NOTE]
 >
-> * The `getIncomingClientAudioState` API for mobile is available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> * The `getIncomingClientAudioState` API for mobile is available in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
 > * Resource specific consent is available for manifest version 1.12 and later versions, hence this API doesn't work for manifest version 1.11 and earlier versions.
 
 ### Manifest
@@ -920,11 +1580,11 @@ The following table provides the response codes:
 
 ## Toggle incoming audio
 
-The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa. The API is available through the TeamsJS client library.
+The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa. The API is available through the TeamsJS library.
 
 > [!NOTE]
 >
-> * The `toggleIncomingClientAudio` API for mobile is available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> * The `toggleIncomingClientAudio` API for mobile is available in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
 > * Resource specific consent is available for manifest version 1.12 and later versions, hence this API doesn't work for manifest version 1.11 and earlier versions.
 
 ### Manifest
@@ -977,20 +1637,14 @@ The following table provides the response codes:
 
 ## Code sample
 
-|Sample name | Description | .NET | Node.js |
-|----------------|-----------------|--------------|--------------|
-| Meetings extensibility | Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| Meeting content bubble bot | Teams meeting extensibility sample for interacting with content bubble bot in a meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| Meeting side panel | Teams meeting extensibility sample for interacting with the side panel in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| Details Tab in Meeting | Teams meeting extensibility sample for interacting with Details Tab in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
-| Meeting Events Sample | Sample app to show real-time Teams meeting events|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
-| Meeting Recruitment Sample |Sample app to show meeting experience for recruitment scenario.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
-| App installation using QR code |Sample app that generates the QR code and installs the app using the QR code|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Build tabs for meeting](build-tabs-for-meeting.md)
+|Sample name | Description | .NET | Node.js | Manifest|
+|----------------|-----------------|--------------|--------------|------|
+| Meetings extensibility | Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp/demo-manifest/meetings-token-app.zip)|
+| In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp/demo-manifest/meetings-notification.zip) |
+| Meeting side panel | Teams meeting extensibility sample for interacting with the side panel in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)||
+| Details Tab in Meeting | This sample app shows Teams meeting extensibility feature where user can create a poll, and members can answer the poll in meeting.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp/demo-manifest/meetings-details-tab.zip)|
+| Meeting Events Sample | This sample shows real-time Teams meeting events using bot.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp/demo-manifest/Meetings-Events.zip)|
+| Meeting Recruitment Sample |This sample app shows a meeting experience for recruitment scenario using Apps In Meetings.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp/demo-manifest/Meeting-Recruitment-App.zip)|
 
 ## See also
 
@@ -998,4 +1652,7 @@ The following table provides the response codes:
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
 * [Live Share SDK](teams-live-share-overview.md)
 * [Teams cloud meeting recording](/microsoftteams/cloud-recording)
-* [Get change notifications for Microsoft Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)
+* [Get the attendance report for an online meeting](/graph/api/meetingattendancereport-get)
+* [Build in-meeting notification for Teams meeting](in-meeting-notification-for-meeting.md)
+* [Get notifications for Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)
+* [Get participants presence API](/graph/api/presence-get?&tabs=http)

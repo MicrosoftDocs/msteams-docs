@@ -3,6 +3,7 @@ title: Use Task Modules in Microsoft Teams bots
 description: Learn how to use task modules with Microsoft Teams bots, including Bot Framework cards, Adaptive cards, and deep links.
 ms.localizationpriority: medium
 ms.topic: how-to
+ms.date: 01/31/2023
 ---
 
 # Use task modules from bots
@@ -46,7 +47,7 @@ The following steps provide the invoke task module using `task/fetch`:
     }
     ```
 
-    The `task/fetch` event and its response for bots is similar to the `microsoftTeams.tasks.startTask()` function in the TeamsJS library.
+    The `task/fetch` event and its response for bots is similar to the `microsoftTeams.tasks.startTask()` function in the Microsoft Teams JavaScript client library (TeamsJS).
 
 1. Microsoft Teams displays the task module.
 
@@ -201,9 +202,9 @@ The schema for Bot Framework card actions is different from Adaptive Card `Actio
 
 ## Code sample
 
-|Sample name | Description | .NET | Node.js|
-|----------------|-----------------|--------------|----------------|
-|Task module sample bots-V4 | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|
+|Sample name | Description | .NET | Node.js | Manifest|
+|----------------|-----------------|--------------|----------------|----------------|
+|Task module sample bots-V4 | This sample shows how to create task modules using bot framework v4 and Teams tab. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
 
 ## Step-by-step guide
 

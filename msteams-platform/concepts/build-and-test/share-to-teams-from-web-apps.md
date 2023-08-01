@@ -3,6 +3,7 @@ title: Share to Teams from web apps
 description: Learn to add the Share to Teams embedded button on your website, with a website preview, using Code samples 
 ms.topic: reference
 ms.localizationpriority: medium
+ms.date: 07/22/2022
 ---
 
 # Share to Teams from web apps

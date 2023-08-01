@@ -4,6 +4,7 @@ description: In this article, learn how to use Teams JavaScript client library t
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.date: 02/24/2023
 ---
 
 # Integrate People Picker
@@ -48,7 +49,7 @@ The People Picker input control allows the user to search and add people using t
 1. Type the name of the required person. The list appears with name suggestions.
 1. Select the name of the required person from the list.
 
-   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Picker Picker mobile":::
+   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Screenshot shows the Picker Picker on mobile.":::
 
 # [Desktop](#tab/Sampledesktop)
 
@@ -57,7 +58,7 @@ The People Picker control on web or desktop is launched in a modal window on top
 1. Type the name of the required person. The list appears with name suggestions.
 1. Select the name of the required person from the list.
 
-   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="People picker by name desktop":::
+   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="Screenshot shows the People Picker by name on desktop.":::
 
 ---
 
@@ -110,6 +111,12 @@ The following table lists the error codes and their descriptions:
 | **4000** | INVALID_ARGUMENTS | API is invoked with wrong or insufficient mandatory arguments.|
 | **8000** | USER_ABORT |User canceled the operation.|
 | **9000** | OLD_PLATFORM | User is on an old platform build where implementation of the API is unavailable. Upgrade to the latest version of the build to resolve the issue.|
+
+## Code sample
+
+| Sample name           | Description | .NET |Node.js    | Manifest|
+|:---------------------|:--------------|:---------|:---------|:---------|
+|Tab people picker | This sample shows the feature of people picker using teams js client sdk inside tab. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/csharp/demo-manifest/Tab-People-Picker.zip)
 
 ## See also
 

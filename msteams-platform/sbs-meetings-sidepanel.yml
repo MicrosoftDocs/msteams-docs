@@ -33,15 +33,15 @@ items:
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
-     | **Required** | &nbsp; | &nbsp; |
-     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • ASP.NET and web development <br> • .NET Core cross-platform development | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all-in-one place.|
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
      | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
-     | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
-     | &nbsp; | [Latest version of TeamsJS library](/javascript/api/overview/msteams-client) | You can install the package using npm or yarn. |
+     | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
+     | &nbsp; | [Latest version of Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client) | You can install the package using npm or yarn. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
      | &nbsp; | [SignalR](/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) | Install to update agenda in real-time. |
     
+     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
@@ -75,49 +75,44 @@ items:
 
     1. Go to the [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
-    1. In the search box, enter **Azure Bot**.
-    1. Select **Enter**.
+    1. Search for **Azure Bot** in the search box.
     1. Select **Azure Bot**.
     1. Select **Create**.
 
-       :::image type="content" source="./assets/images/meetings-side-panel/azure-bot_1.png" alt-text="Screenshot of Azure bot create page with the Create option highlighted in red.":::
+       :::image type="content" source="./assets/images/meetings-side-panel/create-azure-bot.png" alt-text="Screenshot of Azure bot create page with the Create option highlighted in red.":::
 
-    **Create an Azure Bot** window appears.
-    
-    1. Enter required bot handle name in **Bot handle**.
-    1. Select your **Subscription** and **Resource group** from the respective dropdown list.
+    1. In the **Create an Azure Bot** window that appears, enter the required bot handle name in **Bot handle**.
+    1. Select your **Subscription** and **Resource group** from the dropdown list.
        
-       :::image type="content" source="~/assets/images/meetings-side-panel/review-plus-create.png" alt-text="Screenshot of Create an Azure Bot with the Resource group option highlighted in red.":::
+       :::image type="content" source="./assets/images/conversation-bot/create-azure-bot.png" alt-text="Screenshot of Create an Azure Bot with the Resource group option highlighted in red.":::
     
-       You can create a new resource group. Select **Create new** > enter resource name > select **OK**. Select required location from **New resource group location** dropdown list.
-       For more information, see [create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
+       You can optionally create a new resource group. Select **Create new** > enter resource name > select **OK**. Select required location from **New resource group location** dropdown list.
 
-       :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot of New resource group location displaying the New resource group location.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/newresource.png" alt-text="Screenshot of New resource group location displaying the New resource group location.":::
 
-    1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
-    
-        You can select **Use existing app registration** and enter existing **App ID**, **App tenant ID**, and **MSI resource ID**.
+    1. In the **Microsoft App ID** section, select **Type of App** as **Multi Tenant**.
+    1. In the **Creation Type**, by default **Create new Microsoft App ID** is selected. You can optionally select **Use existing app registration** and enter **App ID**, **App tenant ID**, and **MSI resource ID**.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
 
-    1. Select **Type of App** as **Multi Tenant**.
-
     1. Select **Review + create**.
 
-       :::image type="content" source="./assets/images/meetings-side-panel/tenant-review_1.png" alt-text="Screenshot of Microsoft App ID section under Create an Azure Bot. The Type of App selected and Review plus create options are highlighted in red.":::
+       :::image type="content" source="./assets/images/meetings-side-panel/tenant-review.png" alt-text="Screenshot of Microsoft App ID section under Create an Azure Bot. The Type of App selected and Review plus create options are highlighted in red.":::
 
     1. If the validation is passed, select **Create**.
 
         It takes a few moments for your bot service to be provisioned. 
 
+       :::image type="content" source="./assets/images/conversation-bot/validation-passed.png" alt-text="Screenshot of deployment complete with the Go to resource option highlighted in red.":::       
+
     1. Select **Go to resource**. 
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/botdeployment_1.png" alt-text="Screenshot of deployment complete with the Go to resource option highlighted in red.":::
+       :::image type="content" source="./assets/images/meetings-side-panel/go-to-resource.png" alt-text="Screenshot of deployment complete with the Go to resource option highlighted in red.":::
 
-        Your Azure bot is created.
+        Your Azure bot is created and you can see the **Resource group** and **Subscription ID** in the Azure Bot.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/bot-page_1.png" alt-text="Screenshot of the Azure bot Home page that is created.":::
+        :::image type="content" source="./assets/images/meetings-side-panel/app-overview.png" alt-text="Screenshot of the Azure bot Home page that is created.":::
 
     **To create client secret**
 
@@ -128,20 +123,16 @@ items:
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
-    1. Next to **Microsoft App ID**, select **Manage**.
+    1. Next to **Microsoft App ID**, select **Manage Password**.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/manage-bot-label_1.png" alt-text="Screenshot of the Configuration page with the Manage option highlighted in red.":::
+       :::image type="content" source="~/assets/images/manage-password-bot-label.png" alt-text="Screenshot of Microsoft App ID option under Configuration page with the Manage option highlighted in red.":::
 
-    1. In the **Client secrets** section, select **New client secret**. 
+    1. In the **Client secrets** section, select **+ New client secret**. 
 
        :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret_2.png" alt-text="Screenshot of client secrets section with New client secret highlighted in red.":::
     
-       **Add a client secret** window appears.  
-
-    1. Enter **Description** to the client secret.
+    1. In the **Add a client secret** window that appears, enter **Description** of the client secret and select **Add**.
     
-    1. Select **Add**.
-
          :::image type="content" source="~/assets/images/meetings-side-panel/clientsecret_1.png" alt-text="Screenshot of Add a client secret window with the Add option highlighted in red.":::
 
     1. Select **Copy to clipboard** to copy the **Value** details.
@@ -153,13 +144,15 @@ items:
 
     **To add the Teams channel**
 
-    1. Select **Home**.
+    1. Go to **Home**.
 
        :::image type="content" source="~/assets/images/meetings-side-panel/gotohome_1.png" alt-text="Screenshot of Azure bot Home page with the Home option highlighted in red.":::
 
     1. Select your bot from **Recent resources**.
 
-    1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
+    1. Select **Channels** in the left pane 
+
+    1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
        :::image type="content" source="./assets/images/meetings-side-panel/channel-teams_1.png" alt-text="Screenshot of Azure bot Home page. The Channels option in the left pane and Microsoft Teams under Channels are highlighted in red.":::
 
@@ -215,6 +208,8 @@ items:
 
     1. In the left navigation pane, select **App registrations**.
 
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-app-registration -screen.png" alt-text="New registration" border="true":::    
+
     1. Select your bot.
 
        :::image type="content" source="~/assets/images/meetings-side-panel/appregister_2.png" alt-text="Screenshot of Azure Active Directory page. The App registrations in the left panel and the bot selected are highlighted in red.":::
@@ -223,47 +218,47 @@ items:
 
     1. Select **Set**.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/exposeanapi_1.png" alt-text="Screenshot of Expose an API with the Set option highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/expose-an-api.png" alt-text="Screenshot of Expose an API with the Set option highlighted in red.":::
 
     1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{AppID}`.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/setlink_1.png" alt-text="Screenshot of Expose an API with the Application ID highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/set-link.png" alt-text="Screenshot of Expose an API with the Application ID highlighted in red.":::
         
        The following image shows the domain name:
         
-       :::image type="content" source="~/assets/images/meetings-side-panel/appIDuri_1.png" alt-text="Screenshot of Expose an API with the domain name highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/appI-Duri.png" alt-text="Screenshot of Expose an API with the domain name highlighted in red.":::
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
         > For example: `api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
 
-    1. Select ** Add a scope**. 
+    1. Select **Add a scope**. 
 
-       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectscope_1.png" alt-text="Screenshot of Scopes defined by this API section with the Add a scope option highlighted in red.":::
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/select-scope.png" alt-text="Screenshot of Scopes defined by this API section with the Add a scope option highlighted in red.":::
     
-       **Add a scope** window appears.
-
-    1. Enter the following details to configure scope:
-
-         * Enter `access_as_user` as the **Scope name**.
+    1.  In the panel that appears, enter **access_as_user** as the **Scope name**.
   
-         * Set **Who can consent?** to `Admins and users`.
+    1. Set **Who can consent?** to **Admins and users**.
   
-    1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
+    1. To configure the admin and user consent prompts with appropriate values for **access_as_user** scope, provide the following information in the fields:</br>
     
-         * Enter `Teams can access the user’s profile` as **Admin consent display name**.
+         * Enter **Teams can access the user’s profile** as **Admin consent display name**.
 
-         * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**.
+         * Enter **Allows Teams to call the app’s web APIs as the current user** as **Admin consent description**.
 
-         * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**.
+         * Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**.
 
-         * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**.
+         * Enter **Enable Teams to call this app’s APIs with the same rights as the user** as **User consent description**.
   
-    1. Ensure that the **State** is set to **Enabled**.
-  
-    1. Select **Add scope** to save.
+      The following image shows the fields and the values:
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/addascope_2.png" alt-text="Screenshot of Add a scope window with Add scope highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/add-a-scope.png" alt-text="Screenshot of Add a scope window with Add scope highlighted in red.":::
+
+    1. Ensure that "State" is set to "Enabled".
+
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/sbs-enabled.png" alt-text="Screenshot of Scopes defined by this API section with the Add a scope option highlighted in red.":::
+
+    1. Select "Add scope" to save.
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
@@ -277,7 +272,7 @@ items:
 
        :::image type="content" source="~/assets/images/meetings-side-panel/selectclientapp.png" alt-text="Screenshot of Authorized client applications section with Add a Client application highlighted in red.":::
 
-    1. Enter each of the following client IDs and select the authorized scope:
+    1. Enter each of the following client IDs:
 
        * Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
@@ -291,7 +286,7 @@ items:
 
          :::image type="content" source="~/assets/images/meetings-side-panel/authorizedscope_1.png" alt-text="Screenshot of Authorized scopes section under Expose an API page with the scope highlighted in red":::
 
-       The following image displays the client ID:
+       The following image displays the client Id:
 
          :::image type="content" source="~/assets/images/meetings-side-panel/clientapps.png" alt-text="Screenshot of Authorized client applications under Expose an API with the client IDs highlighted in red."::: 
   
@@ -306,10 +301,10 @@ items:
 
     1. Select **Delegated permissions**.
 
-    1. Add the following API permissions:</br>
+    1. Add the following **API permissions**:</br>
          * **email**
          * **offline_access**
-         * **OpenId**
+         * **openid**
          * **profile**
          * **User.Read**
 
@@ -317,7 +312,7 @@ items:
 
         :::image type="content" source="~/assets/images/meetings-side-panel/other-permissions_1.png" alt-text="Screenshot of Request API permissions with the Add permissions highlighted in red after selecting the required permissions.":::
 
-    1. From the left pane, select **Authentication** to set a redirect URI. 
+    1. From the left pane, select **Authentication**.
 
        > [!NOTE]
        > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
@@ -340,11 +335,11 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    1. Go to **appsettings.json** in the cloned repository.
+    1. Go to **appsettings.json** file in the cloned repository.
 
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettingslocation_1.png" alt-text="Screenshot shows the appsettings JSON file with appsettings information.":::
 
-    1. Open **appsettings.json** in Visual Studio and update the following information:  
+    1. Open **appsettings.json** file in Visual Studio and update the following information:  
 
          * Replace `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Replace `"MicrosoftAppPassword"` to your bot's client secret ID **Value**.
@@ -352,11 +347,11 @@ items:
 
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettings_1.png" alt-text="Screenshot of appsettings JSON file with appsettings highlighted.":::
           
-    1. Go to **manifest.json** in the cloned repository.
+    1. Go to **manifest.json** file in the cloned repository.
 
          :::image type="content" source="~/assets/images/meetings-side-panel/manifestlocation_1.png" alt-text="Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red.":::
     
-    1. Open **manifest.json** in Visual Studio and make the following changes:
+    1. Open **manifest.json** file in Visual Studio and make the following changes:
 
          * Replace all occurrences of `<<Your_Domain_URL>>` with your ngrok domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
@@ -366,12 +361,12 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using the latest version of Visual Studio or Command line:**
+    To build and run the service use Visual Studio or Command line:
 
     # [Visual Studio](#tab/vs)
 
        1. Open **Visual Studio**.
-       1. Go to **File** > **Open** > **Project/Solution**.
+       1. Go to **File** > **Open** > **Project/Solution..**.
     
            :::image type="content" source="~/assets/images/meetings-side-panel/open-project1.png" alt-text="Screenshot of Visual Studio with the File, Open, and Project/Solution highlighted in red.":::
 
@@ -381,7 +376,7 @@ items:
 
        1. Press **F5** to run the project. You can run using Visual Studio or .NET in the appropriate folder.
 
-       1. Navigate to `samples\meetings-sidepanel\csharp\ClientApp` folder and execute the command.
+       1. Navigate to `samples\meetings-sidepanel\csharp\ClientApp` **folder** and execute the command.
 
            ```bash
            npx @fluidframework/azure-local-service@latest
@@ -408,24 +403,24 @@ items:
   durationInMinutes: 1
   content: |
 
-    1. In your cloned repository, go to **csharp > Side Panel > Manifest**.
+    1. In your cloned repository, go to **csharp > SidePanel > Manifest**.
 
-    1. Create a .zip with the following files that are present in the **manifest** folder: 
+    1. Create a .zip file with the following files that are present in the **manifest** folder: 
        * manifest.json
-       * icon-outline.png
-       * icon-color.png
+       * outline.png
+       * color.png
 
          :::image type="content" source="~/assets/images/meetings-side-panel/zipfile_1.png" alt-text="Screenshot of cloned repository with the Side Manifest zip file highlighted in red."::: 
     
     1. Create a meeting with a few presenters and attendees.
    
-    1. After the meeting is created, go to the meeting details page, and select **Apps** to add an app.
+    1. After the meeting is created, go to the meeting details page, and select the **Apps** icon to add an app.
  
     1. In the pop-up window, select **Manage apps**.
 
         :::image type="content" source="~/assets/images/meetings-side-panel/manageapps_1.png" alt-text="Screenshot of Teams Slide Panel with the add Apps icon and Manage apps option highlighted in red."::: 
    
-    1. Select **Upload a custom app**. 
+    1. Select **Upload an app**.
 
         :::image type="content" source="~/assets/images/meetings-side-panel/uploadcustomapp_1.png" alt-text="Screenshot of a banner displayed to build your own app where the Upload a custom app option highlighted in red."::: 
 
@@ -435,7 +430,7 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/addtheapp_1.png" alt-text="Screenshot of Side Panel in Teams with the Add option highlighted in red."::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/add-the-app.png" alt-text="Screenshot of Side Panel in Teams with the Add option highlighted in red."::: 
 
        The **Manage apps** section displays the list of applications.
    

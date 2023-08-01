@@ -5,6 +5,7 @@ description: Identify how your app's use cases can work within the Teams experie
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
+ms.date: 12/01/2022
 ---
 # Map your use cases to Teams app features
 
@@ -82,12 +83,15 @@ The Microsoft Teams platform offers a large variety of features. Each feature is
 
 Let's look at how Teams capabilities enable different features for your app.
 
-:::image type="content" source="../../assets/images/overview/teams-apps-capabilities.png" alt-text="Image showing Teams capabilities":::
+:::image type="content" source="../../assets/images/overview/teams-apps-capabilities.png" alt-text="screenshot showing the graphical representation." lightbox="../../assets/images/overview/teams-apps-capabilities.png":::
 
 For example:
 
 * Use the **tab** capability to display task modules, request device permissions, display <`iframe`> content, or using deep links.
 * Use the **message extension** capability to send cards, unfurl links, or take action on messages.
+
+> [!NOTE]
+> You can also explore the capability to add meeting app extensibility to your Teams app. For more information, see [apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md).
 
 ## See also
 

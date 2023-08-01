@@ -14,7 +14,7 @@ For information on how to enable developer preview, see [public developer previe
 
 The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams platform. Your manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
 
-## Sample full manifest
+## Sample manifest
 
 ```json
 {
@@ -275,17 +275,17 @@ The `https://` URL referencing the JSON Schema for the manifest.
 
 ## manifestVersion
 
-**Required** &ndash; String
+**Required**—String
 
 The version of the manifest schema this manifest is using.
 
 ## version
 
-**Required** &ndash; String
+**Required**—String
 
-The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it will overwrite the existing one and the user will get the new functionality. If this app was submitted to the store, the new manifest will have to be resubmitted and revalidated. Then, users of this app will get the new updated manifest automatically in a few hours, after it's approved.
+The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it overwrites the existing one and the user will get the new functionality. If this app was submitted to the store, the new manifest has to be resubmitted and revalidated. Then, users of this app will get the new updated manifest automatically in a few hours, after it's approved.
 
-If the app requested permissions change, users will be prompted to upgrade and re-consent to the app.
+If the app requested permissions change, users are prompted to upgrade and re-consent to the app.
 
 This version string must follow the [semver](http://semver.org/) standard (MAJOR.MINOR.PATCH).
 
@@ -365,7 +365,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 ## accentColor
 
-**Required** &ndash; String
+**Required**—String
 
 A color to use with and as a background for your outline icons.
 
@@ -386,7 +386,7 @@ The object is an array with all elements of the type `object`. This block is req
 |`scopes`|Array of enum|1|✔️|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
 |`context` |array of enums|6||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, and `meetingStage`.|
 |`sharePointPreviewImage`|String|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
-|`supportedSharePointHosts`|Array of enum|1||Defines how your tab will be made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
+|`supportedSharePointHosts`|Array of enum|1||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
 
 ## staticTabs
 
@@ -405,7 +405,7 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |`contentUrl`|String|2048 characters|✔️|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
 |`contentBotId`|   | | | The Microsoft Teams app ID specified for the bot in the Bot Framework portal. |
 |`websiteUrl`|String|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
-|`scopes`|Array of enum|1|✔️|Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
+|`scopes`|Array of enum|1|✔️|Static tabs support the `personal`, `team` and `groupChat` scopes, which means it can be provisioned as part of the personal, group chat, and channel meetings experience.|
 
 ## bots
 
@@ -422,6 +422,8 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: `false`|
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: `false`|
 |`scopes`|Array of enum|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
+|`supportsCalling`|Boolean|||A value indicating where a bot supports audio calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. Default: `false`|
+|`supportsVideo`|Boolean|||A value indicating where a bot supports video calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. Default: `false`|
 
 ### bots.commandLists
 
@@ -500,12 +502,12 @@ Each command item is an object with the following structure:
 
 Optional:
 
-An array of `string`, which specifies which permissions the app requests, which let end users know how the extension will perform. The following options are non-exclusive:
+An array of `string`, which specifies which permissions the app requests, which let end users know how the extension performs. The following options are non-exclusive:
 
 * `identity` &emsp; Requires user identity information.
 * `messageTeamMembers` &emsp; Requires permission to send direct messages to team members.
 
-Changing these permissions when updating your app will cause your users to repeat the consent process the first time they run the updated app.
+Changing these permissions when updating your app causes your users to repeat the consent process the first time they run the updated app.
 
 ## devicePermissions
 
@@ -639,7 +641,7 @@ Define the properties your app uses to post a user activity feed.
 
 ## configurableProperties
 
-**Optional** - array
+**Optional**—array
 
 The `configurableProperties` block defines the app properties that Teams admins can customize. For more information, see [enable app customization](~/concepts/design/enable-app-customization.md).
 
@@ -660,7 +662,7 @@ You can define any of the following properties:
 
 ## supportedChannelTypes
 
-**Optional** - array
+**Optional**—array
 
 Enables your app in non-standard channels. If your app supports a team scope and this property is defined, Teams enables your app in each channel type accordingly. Currently, the private and shared channel types are supported.
 
@@ -671,9 +673,9 @@ Enables your app in non-standard channels. If your app supports a team scope and
 
 ## defaultInstallScope
 
-**Optional** - string
+**Optional**—string
 
-Specifies the install scope defined for this app by default. The defined scope will be the option displayed on the button when a user tries to add the app. Options are:
+Specifies the install scope defined for this app by default. The defined scope is the option displayed on the button when a user tries to add the app. Options are:
 
 * `personal`
 * `team`
@@ -682,9 +684,9 @@ Specifies the install scope defined for this app by default. The defined scope w
 
 ## defaultGroupCapability
 
-**Optional** - object
+**Optional**—object
 
-When a group install scope is selected, it will define the default capability when the user installs the app. Options are:
+When a group install scope is selected, it defines the default capability when the user installs the app. Options are:
 
 * `team`
 * `groupchat`
@@ -698,7 +700,7 @@ When a group install scope is selected, it will define the default capability wh
 
 ## subscriptionOffer
 
-**Optional** - object
+**Optional**—object
 
 Specifies the SaaS offer associated with your app.
 
@@ -708,7 +710,7 @@ Specifies the SaaS offer associated with your app.
 
 ## meetingExtensionDefinition
 
-**Optional** - object
+**Optional**—object
 
 Specify meeting extension definition. For more information, see [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md).
 
@@ -730,60 +732,96 @@ Specify meeting extension definition. For more information, see [custom Together
 
 ## authorization
 
-**Optional** - object
+**Optional**—object
+
+> [!NOTE]
+> `authorization` is only supported for manifest version 1.12 or later.
 
 Specify and consolidate authorization related information for the app.
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`permissions`||||List of permissions that the app needs to function.|
+|`permissions`|NA|NA|NA|List of permissions that the app needs to function.|
 
 ### authorization.permissions
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`resourceSpecific`| array of objects|16 items||Permissions that guard data access on resource instance level.|
+|`resourceSpecific`| array of objects|16 items|NA|Permissions that guard data access on resource instance level.|
 
 ### authorization.permissions.resourceSpecific
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`type`|string||✔️| The type of the resource-specific permission. Options: `Application` and `Delegated`.|
-|`name`|string|128 characters|✔️|The name of the resource-specific permission. For more information, see [Resource-specific application permissions](#resource-specific-application-permissions) and [Resource-specific delegated permissions](#resource-specific-delegated-permissions)|
+|`type`|string|NA|✔️| The type of the resource-specific consent (RSC) permission. Options: `Application` and `Delegated`.|
+|`name`|string|128 characters|✔️|The name of the RSC permission. For more information, see [RSC application permissions](#rsc-application-permissions) and [RSC delegated permissions](#rsc-delegated-permissions)|
 
-#### Resource-specific application permissions
+#### RSC application permissions
 
-Application permissions allow the app to access data without a signed-in user. For information on application permissions, see [Resource Specific Consent for MS Graph and MS BotSDK](../../graph-api/rsc/resource-specific-consent.md).
+Application permissions allow the app to access data without a signed-in user. For information on application permissions, see [RSC permissions for Microsoft Graph and Microsoft BotSDK](../../graph-api/rsc/resource-specific-consent.md).
 
-#### Resource-specific delegated permissions
+#### RSC delegated permissions
 
 Delegated permissions allow the app to access data on behalf of the signed-in user.
 
-* **Resource-specific delegated permissions for teams**
+* **RSC delegated permissions for a team**
 
     |**Name**|**Description**|
     |---|---|
     |`ChannelMeetingParticipant.Read.Group`| Allows the app to read participant information, including name, role, id, joined, and left times, of channel meetings associated with this team, on behalf of the signed-in user.|
-    |`InAppPurchase.Allow.Group`| Allows the app to show marketplace offers to users in this team and complete their purchases within the app, on behalf of the signed-in user.|
-    |`ChannelMeetingStage.Write.Group`| Allows the app to show content on the meeting stage in channel meetings associated with this team, on behalf of the signed-in user.|
-    |`LiveShareSession.ReadWrite.Group`|Allows the app to create and synchronize Live Share sessions for meetings associated with this team, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
+    |`ChannelMeetingIncomingAudio.Detect.Group`| Allows the app to detect incoming audio in channel meetings associated with the team. |
+    | `ChannelMeetingActiveSpeaker.Read.Group`| Allows the app to read the participants who are currently sending audio into the channel meetings associated with the team.|
+    |`ChannelMeetingAudioVideo.Stream.Group`| Allows the app to stream audio-video content from channel meetings associated with the team. |
+    |`InAppPurchase.Allow.Group`| Allows the app to show marketplace offers to users in the team and complete their purchases within the app, on behalf of the signed-in user.|
+    |`ChannelMeetingStage.Write.Group`| Allows the app to show content on the meeting stage in channel meetings associated with the team, on behalf of the signed-in user.|
+    |`LiveShareSession.ReadWrite.Group`|Allows the app to create and synchronize Live Share sessions for meetings associated with the team, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
+    |`MeetingParticipantReaction.Read.Group`| Allows the app to read reactions of participants in channel meetings associated with the team.|
 
-* **Resource-specific delegated permissions for chats or meetings**
-
-    |**Name**|**Description**|
-    |---|---|
-    |`InAppPurchase.Allow.Chat`|Allows the app to show marketplace offers to the users in this chat, and any associated meeting, and complete their purchases within the app, on behalf of the signed-in user.|
-    |`MeetingStage.Write.Chat`|Allows the app to show content on the meeting stage in meetings associated with this chat, on behalf of the signed-in user.|
-    |`OnlineMeetingParticipant.Read.Chat`|Allows the app to read participant information, including name, role, id, joined, and left times, of meeting associated with this chat, on behalf of the signed-in user.|
-    |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Allows the app to toggle incoming audio for participants in meetings associated with this chat, on behalf of the signed-in user.|
-    |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for meetings associated with this chat, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
-   |`OnlineMeetingIncomingAudio.Detect.Chat`|Allows the app to detect changes in the status of incoming audio in meetings associated with this chat, on behalf of the signed-in user.|
-
-* **Resource-specific delegated permissions for users**
+* **RSC delegated permissions for chats or meetings**
 
     |**Name**|**Description**|
     |---|---|
+    |`InAppPurchase.Allow.Chat`|Allows the app to show marketplace offers to the users in the chat, and any associated meeting, and complete their purchases within the app, on behalf of the signed-in user.|
+    |`MeetingStage.Write.Chat`|Allows the app to show content on the meeting stage in meetings associated with the chat, on behalf of the signed-in user.|
+    |`OnlineMeetingParticipant.Read.Chat`|Allows the app to read participant information, including name, role, id, joined, and left times, of meeting associated with the chat, on behalf of the signed-in user.|
+    |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Allows the app to toggle incoming audio for participants in meetings associated with the chat, on behalf of the signed-in user.|
+    |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for meetings associated with the chat, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
+    |`MeetingParticipantReaction.Read.Chat`| Allows the app to read reactions of participants in meetings associated with the chat.|
+    |`OnlineMeetingIncomingAudio.Detect.Chat`|Allows the app to detect changes in the status of incoming audio in meetings associated with the chat, on behalf of the signed-in user.|
+    |`OnlineMeetingActiveSpeaker.Read.Chat`| Allows the app to read participants who are currently sending audio into the meetings associated with the chat.|
+    |`OnlineMeetingAudioVideo.Stream.Chat`| Allows the app to stream audio-video content of meetings associated with the chat.|
+
+* **RSC delegated permissions for users**
+
+    |**Name**|**Description**|
+    |---|---|
+    |`CameraStream.Read.User`|Allows the app to read user's camera stream.|
     |`InAppPurchase.Allow.User`|Allows the app to show the user marketplace offers and complete the user's purchases within the app, on behalf of the signed-in user.|
+    |`OutgoingVideoStream.Write.User`| Allows the app to modify the user's outgoing video.|
+    |`MicrophoneStream.Read.User`| Allows the app to read user's microphone stream.|
+    |`MeetingParticipantReaction.Read.User`| Allows the app to read user's reactions while participating in a meeting.|
+
+## extensions
+
+**Optional**—array
+
+Contains objects that define the set of extensions for the app. Used to specify Outlook Add-ins within an app manifest for simplified distribution and acquisition within the Microsoft 365 ecosystem.
+
+> [!NOTE]
+> Only one extension per app is supported.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`requirements.capabilities`| array | | | Identifies the requirement sets that the add-in needs to be installable. Each object in the array is made up of three strings `name` (required), `minVersion`, and `maxVersion`. |
+|`requirements.scopes`| array | 1 | | Identifies the Office applications, by enum, in which the add-in can be installed. The only supported enum value is `mail`. |
+|`requirements.formFactors`| array | | | Identifies the form factors, by enum `mobile` and `desktop`, in which the add-in can be installed. |
+|`runtimes`| array | | | Configures various kinds of add-ins that have little or no UI, such as custom function-only add-ins and [function commands](/office/dev/add-ins/design/add-in-commands). |
+|`ribbons`| array | | | The ribbons that the add-in customizes. This property is an array of objects that combine the child properties `requirements`, `contexts`, and `tabs`. `Contexts` specify the command surfaces that the add-in customizes, while the `tabs` property configures custom ribbon tabs. |
+|`autoRunEvents`| array | | | Configures an event handler for a specified event. |
+|`alternates`| array | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both. For more information on background, see [EquivalentAddins](/javascript/api/manifest/equivalentaddins). |
+|`audienceClaimUrl`| string | 2048 | | The url for your extension, used to validate Exchange user identity tokens. |
+
+For more information, see [extension property](/office/dev/add-ins/develop/json-manifest-overview) in the Office Add-ins manifest documentation.
 
 ## See also
 

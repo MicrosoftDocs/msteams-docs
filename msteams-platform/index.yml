@@ -12,14 +12,14 @@ metadata:
   ms.topic: hub-page # Required
   ms.collection: collection # Optional; Remove if no collection is used.
   author: akjo #Required; your GitHub user alias, with correct capitalization.
-  ms.author: lajanuar #Required; microsoft alias of author; optional team alias.
+  ms.author: surbhigupta #Required; microsoft alias of author; optional team alias.
   ms.date: 05/29/2020 #Required; mm/dd/yyyy format.
 
 
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
    items: 
-    - title: What's new?
+    - title: Microsoft Build 2023
       itemType: whats-new
       url: /microsoftteams/platform/whats-new
     - title: New to Teams development? 🚀Start here! 
@@ -104,6 +104,12 @@ conceptualContent:
    # Card
     - title: Explore
       links:
+        - url: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
+          itemType: concept
+          text: Teams AI library
+        - url: concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
+          itemType: reference
+          text: Plan your app growth in Teams
         - url: concepts/design/overview-analytics.md
           itemType: reference
           text: Plan analytics for Teams apps
@@ -212,7 +218,7 @@ tools:
       imageSrc: ./assets/icons/graph-icon-1.png
       url: https://learn.microsoft.com/graph/sdks/sdks-overview
     # Card
-    - title: TeamsJS client library for tabs and other hosted experiences
+    - title: Microsoft Teams JavaScript client library (TeamsJS) for tabs and other hosted experiences
       # imageSrc should be square in ratio with no whitespace
       imageSrc: ./assets/icons/logo_js.png
       url: /microsoftteams/platform/tabs/how-to/using-teams-client-library
