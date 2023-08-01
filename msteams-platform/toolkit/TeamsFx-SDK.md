@@ -819,7 +819,7 @@ setLogFunction((level: LogLevel, message: string) => {
 
 ## Upgrade to latest SDK version
 
-If you are using the version of SDK that has `loadConfiguration()`, you can follow these steps to upgrade to the latest SDK version.
+If you're using the version of SDK that has `loadConfiguration()`, you can perform the following steps to upgrade to the latest SDK version:
 
 1. Instead of calling `loadConfiguration()`, use the specific auth config classes to customize the settings for each credential type. For example, use `AppCredentialAuthConfig` for `AppCredential`, `OnBehalfOfUserCredentialAuthConfig` for `OnBehalfOfUserCredential`, and `TeamsUserCredentialAuthConfig` for `TeamsUserCredential`.
 2. Replace `new TeamsUserCredential()` with `new TeamsUserCredential(authConfig)`.
