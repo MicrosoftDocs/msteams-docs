@@ -134,7 +134,7 @@ For more information on the project folder structure, see [Teams Toolkit project
 After **Prepare Teams App Dependencies**, Teams Toolkit will update the launchUrl using the real Teams app ID, Teams tenant ID, and M365 account.
 
 ## Start local tunnel
-For bot and message extension, you can use Dev Tunnel starts a local tunnel service to make the bot messaging endpoint public. For more information, see [Dev tunnels in Visual Studio](https://learn.microsoft.com/aspnet/core/test/dev-tunnels?view=aspnetcore-7.0&preserve-view=true).
+For bot and message extension, you can use Dev Tunnel starts a local tunnel service to make the bot messaging endpoint public. For more information, see [Dev tunnels in Visual Studio](https://learn.microsoft.com/aspnet/core/test/dev-tunnels?view=aspnetcore&preserve-view=true).
 
 In the debug dropdown, select **Dev Tunnels > Create A Tunnel** or select an existing public dev tunnel
 
