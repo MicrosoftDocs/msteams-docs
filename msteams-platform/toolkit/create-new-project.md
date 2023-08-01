@@ -194,7 +194,7 @@ The steps to create a new Teams app are similar for all types of apps except not
 
     * The **Create a new project** window appears.  
 
-1. Enter **teams** in the search box and then list, select **Microsoft Teams App** from the search results.
+1. Enter **teams** in the search box and in the list, select **Microsoft Teams App** from the search results.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/new-project-template-vs.png" alt-text="Screenshot shows the search and select Microsoft Teams app" lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/new-project-template-vs.png":::
 
