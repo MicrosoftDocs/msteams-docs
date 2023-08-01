@@ -127,14 +127,14 @@ For more information on the project folder structure, see [Teams Toolkit project
 
 ::: zone pivot="visual-studio"
 
-# launchSettings.json
+## launchSettings.json
 
 `launchSettings.json` is a file used to store configuration information that describes how to start an ASP.NET Core application using Visual Studio. It contains settings that are required to run the application and is used only during development on the local machine. The file is placed in the Properties folder of a project and can specify things like the command to run, which url the browser should be opened in, and which environment variables should be set.
 
 After **Prepare Teams App Dependencies**, Teams Toolkit will update the launchUrl using the real Teams app ID, Teams tenant ID, and M365 account.
 
 ## Start local tunnel
-For bot and message extension, you can use Dev Tunnel starts a local tunnel service to make the bot messaging endpoint public. For more information, see [Dev tunnels in Visual Studio](https://learn.microsoft.com/en-us/aspnet/core/test/dev-tunnels?view=aspnetcore-7.0).
+For bot and message extension, you can use Dev Tunnel starts a local tunnel service to make the bot messaging endpoint public. For more information, see [Dev tunnels in Visual Studio](https://learn.microsoft.com/aspnet/core/test/dev-tunnels?view=aspnetcore-7.0&preserve-view=true).
 
 In the debug dropdown, select **Dev Tunnels > Create A Tunnel** or select an existing public dev tunnel
 
