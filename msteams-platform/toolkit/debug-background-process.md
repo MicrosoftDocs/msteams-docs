@@ -129,7 +129,7 @@ For more information on the project folder structure, see [Teams Toolkit project
 
 ## launchSettings.json
 
-`launchSettings.json` is a file used to store configuration information that describes how to start an ASP.NET Core application using Visual Studio. It contains settings that are required to run the application and is used only during development on the local machine. The file is placed in the Properties folder of a project and can specify things like the command to run, which url the browser should be opened in, and which environment variables should be set.
+`launchSettings.json` is a file used to store configuration information that describes how to start an ASP.NET Core application using Visual Studio. The file holds essential application settings used solely during development on the local machine. You can find it in the Properties folder of your project. It specifies details like the command to run, the browser's URL, and the required environment variables to be set. 
 
 After **Prepare Teams App Dependencies**, Teams Toolkit will update the launchUrl using the real Teams app ID, Teams tenant ID, and M365 account.
 
@@ -144,10 +144,10 @@ The tunnel creation dialog opens.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-create-devtunnel-detail.png" alt-text="Screenshot shows how to create a dev tunnel.":::
 
-* Select the account to use to create the tunnel. Account types that can be used to create tunnels include Azure, Microsoft Account (MSA), and GitHub.
+* Select the account to use to create the tunnel. Microsoft Account (MSA), and GitHub are the account types that can create tunnels. 
 * Enter a name for the tunnel. This name identifies the tunnel in Visual Studio UI.
-* Choose the tunnel type, Persistent or Temporary
-* Choose the **public authentication** that is required for access to the tunnel.
+* Choose the tunnel type, Persistent or Temporary.
+* Choose the  required **public authentication** to access to the tunnel.
 * Select **OK**.
 * Visual Studio displays confirmation of tunnel creation.
 
