@@ -441,7 +441,7 @@ The following steps help you to provision cloud resources using Visual Studio:
 ### Sign in to your Microsoft 365 account
 
 1. Open **Visual Studio**.
-1. Open the Microsoft Teams app project.
+1. Open the **Microsoft Teams App project**.
 1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
 
@@ -452,7 +452,7 @@ The following steps help you to provision cloud resources using Visual Studio:
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-prepare.png" alt-text="Sign in to Microsoft":::
    
     > [!NOTE]
-    > If you are already signed in, your username displays, or you have an option to **Add an account**.
+    > If you're already signed in, your username is displayed, or you've an option to **Add an account**.
 
 1. Your default web browser opens to let you [sign in](https://developer.microsoft.com/en-us/microsoft-365/dev-program) to the account.
 
@@ -463,8 +463,8 @@ The following steps help you to provision cloud resources using Visual Studio:
 ### Sign in to your Azure account
 
 1. Open **Visual Studio**.
-1. Open the Teams App project.
-1. Select **Project** > **Teams Toolkit** > **Provision in the cloud**.
+1. Open the **Microsoft Teams App project**.
+1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-provision-in-cloud.png" alt-text="Sign in to Azure account.":::
 
@@ -473,7 +473,7 @@ The following steps help you to provision cloud resources using Visual Studio:
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-provision-start.png" alt-text="Screenshot shows the sign in to Azure account.":::
 
    > [!NOTE]
-   > If you're already signed in, your username is displayed, or you have an option to **Add an account**.
+   > If you're already signed in, your username is displayed, or you've an option to **Add an account**.
 
    After sign in to your Azure account using your credentials, the browser closes automatically.
 
@@ -481,7 +481,7 @@ The following steps help you to provision cloud resources using Visual Studio:
 
 After you open your project in Visual Studio:
 
-1. Select **Project** > **Teams Toolkit** > **Provision in the cloud...**.
+1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud...**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-provision-in-cloud.png" alt-text="Screenshot shows how to provision in cloud.":::
 
@@ -508,17 +508,24 @@ After you open your project in Visual Studio:
 
 ## Provision actions
 
-The following list shows the actions designed for provision.
+The following actions are designed for provision.
+
+  * [teamsApp/create](#teamsappcreate)
+  * [teamsApp/update](#teamsappupdate)
+  * [teamsApp/validateManifest](#teamsappvalidatemanifest)
+  * [teamsApp/validateAppPackage](#teamsappvalidateapppackage)
+  * [teamsApp/zipAppPackage](#teamsappzipapppackage)
+  * [teamsApp/publishAppPackage](#teamsapppublishapppackage)
+  * [aadApp/create](#aadappcreate)
+  * [aadApp/update](#aadappupdate)
+  * [botAadApp/create](#botaadappcreate)
+  * [arm/deploy](#armdeploy)
+  * [azureStorage/enableStaticWebsite](#azurestorageenablestaticwebsite)
+  * [script](#script)
 
 ### teamsApp/create
 
-#### What is teamsApp/create?
-
-If the environment variable that stores Teams app ID is empty or the app ID isn't found from Teams Developer Portal, then this action creates a new Teams app.
-
-#### What resource teamsApp/create operate?
-
-Teams app in Teams Developer Portal.
+If the environment variable that stores Teams app ID is empty or the app ID isn't found from Teams Developer Portal, then the teamsApp/create action creates a new Teams app. It operates on Teams app in Teams Developer Portal.
 
 #### How to use teamsApp/create?
 
@@ -534,14 +541,8 @@ Teams app in Teams Developer Portal.
 ```
 
 ### teamsApp/update
-a
-#### What is teamsApp/update?
 
-Apply the Teams app manifest to an existing Teams app in Teams Developer Portal. It uses the app ID in manifest.json file to determine which Teams app to update.
-
-#### What resource teamsApp/update operate?
-
-Teams app in Teams Developer Portal.
+When you apply the Teams app manifest to an existing Teams app in Teams Developer Portal. teamsApp/update uses the app ID in manifest.json file to determine which Teams app to update. It operates on Teams app in Teams Developer Portal.
 
 #### How to use teamsApp/update?
 
@@ -554,13 +555,7 @@ Teams app in Teams Developer Portal.
 
 ### teamsApp/validateManifest
 
-#### What is teamsApp/validateManifest?
-
 teamsApp/validateManifest action renders Teams app manifest template with environment variables and validates Teams app manifest file using its schema.
-
-#### What resource teamsApp/validateManifest operate?
-
-N/A
 
 #### How to use teamsApp/validateManifest?
 
@@ -573,13 +568,7 @@ N/A
 
 ### teamsApp/validateAppPackage
 
-#### What is teamsApp/validateAppPackage?
-
 teamsApp/validateAppPackage action validates Teams app package using validation rules.
-
-#### What resource teamsApp/validateAppPackage operate?
-
-N/A
 
 #### How to use teamsApp/validateAppPackage?
 
@@ -592,13 +581,7 @@ N/A
 
 ### teamsApp/zipAppPackage
 
-#### What is teamsApp/zipAppPackage?
-
-This action renders Teams app manifest template with environment variables and compresses the manifest file with two icons into a zip file.
-
-#### What resource teamsApp/zipAppPackage operate?
-
-N/A
+teamsApp/zipAppPackage action renders Teams app manifest template with environment variables and compresses the manifest file with two icons into a zip file.
 
 #### How to use teamsApp/zipAppPackage?
 
@@ -638,8 +621,6 @@ teamsApp/publishAppPackage operates in Microsoft 365 tenant app catalog.
 
 ### aadApp/create
 
-#### What is aadApp/create?
-
 aadApp/create action creates a new Azure Active Directory (Azure AD) application to authenticate users if the environment variable that stores clientId is empty.
 
 #### What resource aadApp/create operate?
@@ -677,11 +658,7 @@ aadApp/create operates in Azure AD in Microsoft 365 tenant.
 
 #### What is aadApp/update?
 
-aadApp/update action updates your Azure AD application based on give Azure AD app manifest. It refers to the ID property in Azure AD app manifest to determine which Azure AD app to update.
-
-#### What resource vaadApp/update operate?
-
-aadApp/update operates on Azure AD in your Microsoft 365 tenant.
+aadApp/update action updates your Azure AD application based on give Azure AD app manifest. It refers to the ID property in Azure AD app manifest to determine which Azure AD app to update. It operates on Azure AD in your Microsoft 365 tenant.
 
 #### How to use aadApp/update?
 
@@ -696,13 +673,7 @@ aadApp/update operates on Azure AD in your Microsoft 365 tenant.
 
 ### botAadApp/create
 
-#### What is botAadApp/create?
-
-This action creates a new or reuses an existing Azure AD application for bot.
-
-#### What resource botAadApp/create operate?
-
-botAadApp/create operates on Azure AD in Microsoft 365 tenant.
+botAadApp/create action creates a new or reuses an existing Azure AD application for bot. It operates on Azure AD in Microsoft 365 tenant.
 
 #### How to use botAadApp/create?
 
@@ -720,13 +691,7 @@ botAadApp/create operates on Azure AD in Microsoft 365 tenant.
   
 ### arm/deploy
 
-#### What is arm/deploy?
-
-arm/deploy action deploys given ARM templates in parallel.
-
-#### What resource arm/deploy operate?
-
- arm/deploy operates on Azure subscription.
+arm/deploy action deploys given ARM templates in parallel. It operates on Azure subscription.
 
 #### How to use arm/deploy?
 
@@ -750,14 +715,7 @@ arm/deploy action deploys given ARM templates in parallel.
 ```
 
 ### azureStorage/enableStaticWebsite
-
-#### What is azureStorage/enableStaticWebsite
-
-azureStorage/enableStaticWebsite action enables static website setting in Azure Storage.
-
-#### What resource azureStorage/enableStaticWebsite operate?
-
-azureStorage/enableStaticWebsite operates on Azure Storage.
+azureStorage/enableStaticWebsite action enables static website setting in Azure Storage. It operates on Azure Storage.
 
 #### How to use azureStorage/enableStaticWebsite?
 
@@ -774,13 +732,7 @@ azureStorage/enableStaticWebsite operates on Azure Storage.
 
 ### script
 
-#### What is script?
-
 script action executes a user-defined script.
-
-#### What resource script operate?
-
-N/A
 
 #### How to use script?
 
@@ -847,7 +799,7 @@ You can customize your bot or the Teams app by adding environment variables to u
 
 #### Use an existing Azure AD app for your Teams app
 
-You can follow the steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app yet or you have one but don't know where to find the correct value, see [how to use existing Azure AD app in TeamsFx project](use-existing-aad-app.md).
+You can follow the steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app yet or you've one but don't know where to find the correct value, see [how to use existing Azure AD app in TeamsFx project](use-existing-aad-app.md).
 
 1. Open `teamsapp.yml` and find the `aadApp/create` action.
 
@@ -890,7 +842,7 @@ You can follow the steps to add environment variables to the .env files to use a
 
 #### Use an existing Azure AD app for your bot
 
-You can follow the steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app for your bot yet or you have one but don't know where to find the correct values, see [Use existing Azure AD app in TeamsFx project](use-existing-aad-app.md).
+You can follow the steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app for your bot yet or you've one but don't know where to find the correct values, see [Use existing Azure AD app in TeamsFx project](use-existing-aad-app.md).
 
 1. Open `teamsapp.yml` and find the `botAadApp/create` action.
 
