@@ -136,7 +136,7 @@ After **Prepare Teams App Dependencies**, Teams Toolkit will update the launchUr
 ## Start local tunnel
 For bot and message extension, you can use Dev Tunnel starts a local tunnel service to make the bot messaging endpoint public. For more information, see [Dev tunnels in Visual Studio](/aspnet/core/test/dev-tunnels?view=aspnetcore&preserve-view=true).
 
-In the debug dropdown, select **Dev Tunnels > Create A Tunnel** or select an existing public dev tunnel
+In the debug dropdown, select **Dev Tunnels > Create A Tunnel** or select an existing public dev tunnel.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-create-devtunnel.png" alt-text="Screenshoot shows the steps to create a tunnel":::
 
@@ -145,7 +145,7 @@ The tunnel creation dialog opens.
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-create-devtunnel-detail.png" alt-text="Screenshot shows how to create a dev tunnel.":::
 
 * Select the account to use to create the tunnel. Account types that can be used to create tunnels include Azure, Microsoft Account (MSA), and GitHub.
-* Enter a name for the tunnel. This name identifies the tunnel in the Visual Studio UI.
+* Enter a name for the tunnel. This name identifies the tunnel in Visual Studio UI.
 * Choose the tunnel type, Persistent or Temporary
 * Choose the **public authentication** that is required for access to the tunnel.
 * Select **OK**.
