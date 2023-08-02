@@ -97,49 +97,49 @@ For example:
    :::column:::
       :::image type="icon" source="~\assets\images\overview\flowchart-tab-icon.png" link="~/tabs/what-are-tabs.md" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\flowchart-tab-features.png" alt-text="Microsoft Teams app tab details sample 6." border="false":::
+     :::image type="content" source="~\assets\images\overview\flowchart-tab-features.png" alt-text="Microsoft Teams app for tab features." border="false":::
 :::row-end:::
 
 :::row:::
    :::column:::
       :::image type="icon" source="~\assets\images\overview\flowchart-bot-icon.png" link="~/bots/what-are-bots.md" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\flowchart-bot-features.png" alt-text="Microsoft Teams app bot details sample 6." border="false":::
+     :::image type="content" source="~\assets\images\overview\flowchart-bot-features.png" alt-text="Microsoft Teams app for bot features." border="false":::
 :::row-end:::
 
 :::row:::
    :::column:::
       :::image type="icon" source="~\assets\images\overview\flowchart-message-extension-icon.png" link="~/messaging-extensions/what-are-messaging-extensions.md" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\flowchart-message-extension-features.png" alt-text="Microsoft Teams app message extension details sample 6." border="false":::
+     :::image type="content" source="~\assets\images\overview\flowchart-message-extension-features.png" alt-text="Microsoft Teams app for message extension features." border="false":::
 :::row-end:::
 
 :::row:::
    :::column:::
       :::image type="icon" source="~\assets\images\overview\flowchart-adaptive-card-icon.png" link="~/task-modules-and-cards/cards/design-effective-cards.md" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\flowchart-adaptive-cards-features.png" alt-text="Microsoft Teams app adaptive card details sample 6." border="false":::
+     :::image type="content" source="~\assets\images\overview\flowchart-adaptive-cards-features.png" alt-text="Microsoft Teams app for adaptive card features." border="false":::
 :::row-end:::
 
 :::row:::
    :::column:::
       :::image type="icon" source="~\assets\images\overview\flowchart-apps-for-meetings-icon.png" link="~/apps-in-teams-meetings/teams-apps-in-meetings.md" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\flowchart-apps-meeting-features.png" alt-text="Microsoft Teams apps for meeting details sample 6." border="false":::
+     :::image type="content" source="~\assets\images\overview\flowchart-apps-meeting-features.png" alt-text="Microsoft Teams apps for meeting features." border="false":::
 :::row-end:::
 
 :::row:::
    :::column:::
       :::image type="icon" source="~\assets\images\overview\flowchart-webhook-and-connectors-icon.png" link="~/webhooks-and-connectors/what-are-webhooks-and-connectors.md" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\flowchart-webhook-connector-features.png" alt-text="Microsoft Teams apps for incoming webhook details sample 6." border="false":::
+     :::image type="content" source="~\assets\images\overview\flowchart-webhook-connector-features.png" alt-text="Microsoft Teams apps for webhook and connector features." border="false":::
 :::row-end:::
 
 :::row:::
    :::column:::
       :::image type="icon" source="~\assets\images\overview\flowchart-graph-conversational-interface-icon.png" link="/graph/overview" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\flowchart-graph-conversational-interface-features.png" alt-text="Microsoft Teams apps for graph conversational interface details sample 5." border="false":::
+     :::image type="content" source="~\assets\images\overview\flowchart-graph-conversational-interface-features.png" alt-text="Microsoft Teams apps for graph conversational interface features." border="false":::
 :::row-end:::
 
 ## See also
