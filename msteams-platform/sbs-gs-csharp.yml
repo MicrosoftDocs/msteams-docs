@@ -54,8 +54,7 @@ items:
       1. Select **Install**.
 
           :::image type="content" source="~/assets/images/sbs-csharp/visual-studio-install.png" alt-text="Visual studio-installation" lightbox="~/assets/images/sbs-csharp/visual-studio-install.png":::
-          no-loc:
-          - 
+          
       1. Select **Launch** to open Visual Studio.
 
           :::image type="content" source="~/assets/images/sbs-csharp/visual-studio-launch.png" alt-text="Launch visual studio":::
@@ -84,9 +83,9 @@ items:
     After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams local environment.
     
-    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+    Do you already have a tenant, and an admin access? Let's check if you really do!
 
     Verify if you can sideload apps in Teams:
 
@@ -98,7 +97,7 @@ items:
         :::image type="content" source="~/assets/images/sbs-csharp/custom-upload.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 
         > [!NOTE]
-        > Contact your Teams administrator, if you don't find the option to upload a custom app..
+        > Contact your Teams administrator, if you don't find the option to upload a custom app.
 
     ### Create a free Teams developer tenant (optional)
 
@@ -106,7 +105,7 @@ items:
 
     1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
     1. Select **Join Now** and follow the onscreen instructions.
-    1. In the welcome screen, select **Set up E5 subscription**.
+    1. In the welcome screen, select **Setup E5 subscription**.
     1. Set up your administrator account. After you finish, the following screen appears:
 
         :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
@@ -142,18 +141,14 @@ items:
     
         :::image type="content" source="~/assets/images/sbs-csharp/new-project-template-vs.png" alt-text="Enter Teams" lightbox="~/assets/images/sbs-csharp/new-project-template-vs.png":::
 
-       Configure your new project page appears.
-
     1. Enter the following details to configure your new project.
-
-        :::image type="content" source="~/assets/images/sbs-csharp/teams-app-project-name.png" alt-text="Enter Project name":::
 
         1. Enter required project name in **Project name**.
         1. Select required location to save project files and folders.
         1. Select **Create**.
+        
+        :::image type="content" source="~/assets/images/sbs-csharp/teams-app-project-name.png" alt-text="Enter Project name":::
     
-       Create a new Teams application window displays:
-
     1. Select **Tab** and select **Create**.   
 
         :::image type="content" source="~/assets/images/sbs-csharp/select-tab.png" alt-text="Select tab":::
@@ -194,8 +189,7 @@ items:
   content: |
 
     After you set up your project workspace with Teams Toolkit, build your tab app. 
-    You'll need to sign in to your Microsoft 365 account.
-
+    
     ## Sign in to your Microsoft 365 account
 
     Use your Microsoft 365 account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
