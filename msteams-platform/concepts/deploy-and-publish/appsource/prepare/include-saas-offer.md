@@ -10,17 +10,39 @@ ms.date: 03/21/2023
 
 # Plan your SaaS offer
 
-SaaS apps available for purchase in Microsoft commercial marketplace, either Azure Marketplace or Microsoft AppSource, are known as SaaS offers. Based on the SaaS offer configurations, the offers are available in one or both the marketplaces. This guide helps plan for premium and enterprise SaaS offers for your existing basic free app.
+SaaS apps available for purchase in Microsoft commercial marketplace, either Azure Marketplace or Microsoft AppSource, are known as SaaS offers. Based on the SaaS offer configurations, the offers are available in one or both marketplaces. This guide helps plan for premium and enterprise SaaS offers for your existing basic free app.
 
-:::image type="content" source="~/assets/images/saas-offer/monetize-flow-2.png" alt-text="Diagram shows the process for how to include a SaaS offer with your Teams app with the first phase highlighted.":::
+:::row:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow.png" link="#prerequisites.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-2.png" link="#include-saas-offer.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-3.png" link="#create-saas-offer.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-4.png" link="#manage-third-party-apps-license.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-5.png" link="#Test-preview-for-monetized-app.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-6.png" link="#publish-saas-offer-app.md" border="false":::
+   :::column-end:::
+:::row-end:::
 
-## Plan the features
+## Plan for offer features
 
-To create your SaaS offer and sell through commercial marketplace, it's recommended to plan the offer. Planning helps you to understand the suitable features for your offer. Here is the detailing about the features you need to decide before creating an offer.
+To create your SaaS offer and sell through commercial marketplace, it's recommended to plan the offer. Planning helps you to understand the suitable features for your offer. Here's the detail about the features you need to decide before creating an offer.
 
 ### Decide a publishing option
 
 The initial step to create any SaaS offer is to decide how the offer must be available in the marketplace. The publishing option is available as a call-to-action button on the offer landing page.
+
+> [!NOTE]
+> Before you start creating an offer, you must decide the listing or publishing option.
 
 You can opt to sell through Microsoft where Microsoft hosts all your transactions. The other option is to manage your transactions independently that further has three listing options. The type of listing option decides the information required to create the specific offer in Partner Center.
 
@@ -47,7 +69,7 @@ You can further allow Microsoft to manage licenses on your behalf. If yes, you m
 
 **Free trials**
 
-You can offer a free trial version of your app to get more customers to try it. To entice customers to buy the full version, you can limit the features in the trial version (for example, only including limited number of responses for a week) or specify a period for the trial.
+You can offer a free trial version of your app to get more customers to try it. To entice customers to buy the full version, you can limit the features in the trial version (for example, include only limited number of responses for a week) or specify a period for the trial.
 
     :::column-end:::
 :::row-end:::
@@ -76,15 +98,15 @@ Customers can share their details and ask that you contact them about the offer 
     :::column-end:::
 :::row-end:::
 
-The technical configurations and requirements differ based on the listing option you select. You must fulfill the [prerequisites](prerequisites.md) before you start creating the plan.
+The technical configurations and requirements differ based on the listing option you select. You must fulfil the [prerequisites](prerequisites.md) before you start creating the plan.
 
 ### Plan for offer details
 
-To start with, you need to plan on the basic yet important features that decides the information available on the landing page, where your offer is published, and terms of use. It helps the users to find your offer easily in the marketplace and enhances usability.
+To start with, you need to plan on the basic yet key features that decide the information available on the landing page, where your offer is published, and terms of use. It helps the users to find your offer easily in the marketplace and enhances usability.
 
 * **Offer categories and industries**: Decide on the primary and secondary categories of the offer. It decides the store where the offer is published and to identify your app in the marketplace.
 * **Offer details**: Decide the logos, keywords, and description that helps to improve the discovery and value of your offer in the marketplace.
-* **Preview audience**: Decide the audience and collate their email address to enables them to use and verify the preview offer before live. The email addresses must be either of Azure Active Directory or Microsoft.
+* **Preview audience**: Decide the audience and collate their email address to allow them to use and verify the preview offer before live. The email addresses must be either of Azure Active Directory or Microsoft.
 * **Legal terms and conditions**: Provide relevant information for the users to be aware of the terms of use of your app.
 * **Customer Relationship Management (CRM)**: Provide the details to receive customer leads and reach you for queries.
 
@@ -92,21 +114,21 @@ To start with, you need to plan on the basic yet important features that decides
 
 SaaS offers published through Microsoft must have at least one plan added. Plan visibility or the subscription model decides if the plans of the offer can be public or private. Public plans are available for all customers while private plans are customized for specific customers and visible only for targeted customers. For more information, see [Private plans in Microsoft commercial marketplace](/partner-center/marketplace/private-plans?branch=main).
 
-Offers with private plans are published in Azure portal. Private plan can be converted to public plans later, but can't be configured as private plan again.
+Offers with private plans are published in Azure portal. Private plan can be converted to public plan later but can't be configured as private plan again.
 
 ### Decide the pricing model and billing term
 
 When creating a plan for your SaaS offer, you can decide between two [pricing models](/partner-center/marketplace/plan-saas-offer?branch=main) available.
 
-* **Flat rate**: To charge based on the software usage across their organization. For the flat rate pricing model, you can opt to use [metered billing](/partner-center/marketplace/plans-pricing?branch=main) for consumption-based pricing.
+* **Flat rate**: To charge based on the software usage across the organization. For the flat rate pricing model, you can opt to use [metered billing](/partner-center/marketplace/plans-pricing?branch=main) for consumption-based pricing.
 * **Per user**: To charge for each unique user.
 
-An offer can have only one pricing model. For example, a SaaS offer can't have one plan that's flat rate and another plan that’s per user.
+An offer can have only one pricing model. For example, a SaaS offer can't have one plan that is a flat rate and another plan that is per user.
 
 The [billing terms](/partner-center/marketplace/plan-saas-offer?branch=main) indicate the subscription period and can be set to monthly or annual billing terms.
 
 > [!NOTE]
-> Pricing model and billing term can’t be changed once the offer is published.
+> The pricing model and billing terms can’t be changed once the offer is published.
 
 ### Plan for free trails
 
@@ -114,7 +136,7 @@ You can opt to provide free trials for your SaaS offer. Microsoft allows a free 
 
 ### Plan for test drive
 
-You can opt to add a test drive for your SaaS app that provides customers access to preconfigured environment of your app for fixed hours. For more information, check [Test drive for SaaS offer](/partner-center/marketplace/create-new-saas-offer).
+You can opt to add a test drive for your SaaS app that provides access to the preconfigured environment of your app for fixed hours. For more information, check [Test drive for SaaS offer](/partner-center/marketplace/create-new-saas-offer).
 
 ### Plan for mobile
 

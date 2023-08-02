@@ -16,7 +16,7 @@ The technical configurations differ based on the listing option you opt for your
 :::image type="content" source="~/assets/images/saas-offer/monetize-flow.png" alt-text="Diagram shows the process for how to include a SaaS offer with your Teams app with the first phase highlighted.":::
 
 > [!NOTE]
-> *Contact me* listing option have no technical requirements to be met.
+> The *Contact me* listing option have no technical requirements to be met.
 
 ## Technical configuration
 
@@ -28,7 +28,7 @@ To start with, you must first set up the required accounts to create an offer.
 
 * Enable Microsoft Accounts and ensure you have a Microsoft Partner Center account.
 
-* Enable [Azure Active Directory (Azure AD)](https://azure.microsoft.com/services/active-directory/) for authenticating buyers on your site.  With [Azure AD integration](/partner-center/marketplace/azure-ad-saas), you can provision the users to their SaaS apps. You must let buyers with an Azure AD account sign in to your application using Azure AD with single sign-on (SSO). Azure AD provides easier and secure purchase experience.
+* Enable [Azure Active Directory (Azure AD)](https://azure.microsoft.com/services/active-directory/) for authenticating buyers on your site.  With [Azure AD integration](/partner-center/marketplace/azure-ad-saas), you can provision the users to their SaaS apps. You must let buyers with an Azure AD account sign in to your application using Azure AD with single sign-on (SSO). Azure AD provides an easier and secure purchase experience.
 
 ### Create a landing page
 
@@ -57,7 +57,7 @@ Consider the following approaches when building a landing page for the Teams app
 
 ### Integrate with APIs
 
-Sell through Microsoft or transactable offer has further technical requirements added to account configurations and landing page. When the users are redirected to the landing page from the configuration link, set of user information is required to confirm and activate the subscription. Integrate Microsoft Graph API and SaaS Fulfillment APIs to retrieve user information.
+Sell through Microsoft or transactable offer has further technical requirements added to account configurations and landing page. When the users are redirected to the landing page from the configuration link, a set of user information is required to confirm and activate the subscription. Integrate Microsoft Graph API and SaaS Fulfillment APIs to retrieve user information.
 
 #### Integrate with SaaS fulfillment API
 
@@ -79,13 +79,13 @@ You can call Graph APIs to determine if the currently logged in user with a vali
 
   1. Get user OBO token: [Get access on behalf of a user](/graph/auth-v2-user).
 
-  1. Call Graph to get user’s object ID: [Use the Microsoft Graph API](/graph/use-the-api).
+  1. Call Graph to get the user’s object ID: [Use the Microsoft Graph API](/graph/use-the-api).
 
-  1. Call usageRights API to determine the user has license to the plan: [List user usageRights API](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http&preserve-view=true).
+  1. Call usageRights API to determine the user has a license to the plan: [List user usageRights API](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http&preserve-view=true).
 
   > [!NOTE]
   >
-  > * You need to have minimum `User.Read` permissions to call usageRights.
+  > * You need to have a minimum `User.Read` permissions to call usageRights.
   > The usageRights API is currently in beta version. After the version is updated to V1, users must upgrade from beta to V1 version.
   > * If the Azure AD app is used for both SaaS Fulfillment APIs and usageRights API, ensure that the tenant under which the Azure AD app is created is either the publishing tenant or the associated tenant in the Partner Center.
 
@@ -97,7 +97,7 @@ To determine if the tenant for the Azure AD app is part of the Partner Center se
   1. On the left pane, select **Tenants**.
     You can see all tenants associated with the Microsoft Partner Network (MPN) account. The tenant, who is the owner of the Azure AD app, must be available in the list. If the tenant isn’t on the list, you can use the **Associate Azure ID** button to link the tenant.
 
-Integrating the APIs and building your landing page to manage subscriptions helps to manage and track your offers right from the start and provides seamless user experience.
+Integrating the APIs and building your landing page to manage subscriptions helps to manage and track your offers right from the start and provides a seamless user experience.
 
 ## Technical requirements
 
@@ -111,7 +111,7 @@ To configure your SaaS offer, you must furnish the following technical informati
 
 * **Azure AD application ID**: The Azure AD application ID is associated with your publisher ID in your Partner Center account. You must use the same application ID for all offers in that account.
 
-Now that we have the technical requirements and also planned for the SaaS offer, let's get started to create an offer.
+Now that we have the technical requirements and planned for the SaaS offer, let's get started to create an offer.
 
 :::image type="content" source="~/assets/images/saas-offer/saas-offer-diagram.png" alt-text="Diagram showing process for how to include a SaaS offer with your Teams app.":::
 

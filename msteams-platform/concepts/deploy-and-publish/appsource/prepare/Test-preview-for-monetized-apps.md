@@ -10,11 +10,11 @@ ms.date: 12/26/2022
 
 # Test preview the offer and publish live
 
-You can create a Software as a Service (SaaS) offer and test the end-to-end purchase experience for your monetized apps in Teams. Users who are added as the preview audience for the Teams app can review your SaaS offer before you publish.
+You can create a Software as a Service (SaaS) offer and test the end-to-end purchase experience for your monetized apps in Teams. Users added as the preview audience for the Teams app can review your SaaS offer before you publish.
 
 :::image type="content" source="~/assets/images/saas-offer/monetize-flow5.png" alt-text="Diagram shows the process of testing the SaaS offer.":::
 
-When the offer is in **Publisher signoff** stage, preview links for the respective platforms are given below the **Go live** option. We recommend that you verify the end-to-end purchasing experience before publishing your SaaS offer. You can test and verify the end-to-end transaction in Teams by creating a separate offer for testing.
+When the offer is in **Publisher signoff** stage, preview links for the respective platforms are given below the **Go live** option. We recommend you to verify the end-to-end purchasing experience before publishing your SaaS offer. You can test and verify the end-to-end transaction in Teams by creating a separate offer for testing.
 
 ## Create a Preview offer ID
 
@@ -33,7 +33,7 @@ You can generate the Preview offer ID from the **AppSource preview** link in the
       :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="Screenshot shows the Preview offer ID." :::
 
     > [!NOTE]
-    > Unlike a public offer ID, the Preview offer ID can be recognized with the *-preview* suffix. For example, **publisherId.offerId-preview**.
+    > Unlike a public offer ID, you can recognize the Preview offer ID with the *-preview* suffix, for example, **publisherId.offerId-preview**.
 
 ## Configure your app with the preview offer ID
 
@@ -45,7 +45,7 @@ After you've generated your Preview offer ID, link the offer ID to your Teams ap
 1. Select **Apps** from the left pane.
 1. Select the app to link the SaaS offer to.
 1. Select **Plans and pricing** and enter the **Publisher ID** and **Offer ID**.  
-  Ensure the offer ID contains *-preview* suffix.
+  Ensure the offer ID has *-preview* as suffix.
 1. Select **View** to preview your subscription plans.
 1. Review the plans listed under **Apps Subscription** and select **Save**.
 
@@ -62,19 +62,19 @@ The `subscriptionOffer` property is added to your [app manifest](../../../../res
 >[!NOTE]
 >
 > * Check for the label *Preview offer* next to **Apps subscription** to confirm if the offer is a Preview Offer.
-> * The `subscriptionOffer` property is supported in manifest schema version 1.10 or later.
+> * The manifest schema version 1.10 or later supports the `subscriptionOffer` property.
 
 ## Sideload the app to Teams
 
-After you configure your app with the Preview Offer ID, create an updated app package and upload it to Teams to test the end-to-end purchase experience. For more information, see [Upload your app in Microsoft Teams](../../apps-upload.md). You can also select **Preview in Teams** in the Developer Portal for Teams to launch your app quickly in the Teams client.
+After configuring your app with the Preview Offer ID, create an updated app package and upload it to Teams to test the end-to-end purchase experience. For more information, see [Upload your app in Microsoft Teams](../../apps-upload.md). You can also select **Preview in Teams** in the Developer Portal for Teams to launch your app quickly in the Teams client.
 
-If the Preview offer is specified in the app manifest and the preview audience is defined in the Partner center for the offer, the user can see the **Buy a subscription** button.
+If the Preview offer is specified in the app manifest and the preview audience is defined in the Partner Center for the offer, the user can see the **Buy a subscription** button.
 
 :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-buy-subscription.png" alt-text="Screenshot shows the Buy a subscription option.":::
 
 ### Error scenarios
 
-* If the offer ID is specified, but the user isn't part of the **Preview audience** defined in the Partner Center, the **Buy a subscription** button isn't enabled and the app shows the following warning message to the user:
+* If the offer ID is specified but the user isn't part of the **Preview audience** defined in the Partner Center, the **Buy a subscription** button isn't enabled and the app shows the following warning message to the user:
 
   No plans found with **-preview**. Make sure you're in the preview audience.
 
@@ -88,7 +88,7 @@ If the Preview offer is specified in the app manifest and the preview audience i
 
 ## Make the offer go live
 
-Up on successful testing, your offer is now ready to go live. Check for any validation errors, fix, and resumbit the offer for publishing. You can track the publishing status in the Offer overview page.
+Upon successful testing, your offer is now ready to go live. Check for any validation errors, fix, and resumbit the offer for publishing. You can track the publishing status in the Offer overview page.
 
 When all the check are done, click **Go live** for the offer to be available in the commercial marketplace. After the validation checks are done for the live offer, the offer is available for purchase.
 

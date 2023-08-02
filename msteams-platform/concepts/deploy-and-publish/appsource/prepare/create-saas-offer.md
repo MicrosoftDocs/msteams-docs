@@ -22,7 +22,7 @@ This guide helps you to create premium and enterprise SaaS offers on top of the 
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/partner-center-home-page.png" alt-text="The screenshots shows how to sign in to the Partner Center account.":::
 
-1. In the **Home** page, select **Marketplace offers** tab to define commercial marketplace offers.
+1. On the **Home** page, select **Marketplace offers** tab to define commercial marketplace offers.
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/home-page.png" alt-text="The screenshots shows the home page and Marketplace offer tab in the Partner Center.":::
 
@@ -35,7 +35,7 @@ This guide helps you to create premium and enterprise SaaS offers on top of the 
 1. Enter **Offer ID** and **Offer alias**.
 
    > [!NOTE]
-   > If you're creating an offer for testing purpose, append the text **-ISVPILOT** to the end of your offer alias. This informs the certification team that the offer is for testing purposes. Microsoft periodically delete offers with **-ISVPILOT**. Therefore, refrain from using this tag for reasons other than testing the license management capability.
+   > If you're creating an offer for testing purposes, append the text **-ISVPILOT** to the end of your offer alias. This informs the certification team that the offer is for testing purposes. Microsoft periodically deletes offers with **-ISVPILOT**. Therefore, refrain from using this tag for reasons other than testing the license management capability.
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/saas.png" alt-text="The screenshots shows how to enter Offer ID and Offer alias in the Partner Center.":::
 
@@ -43,7 +43,7 @@ This guide helps you to create premium and enterprise SaaS offers on top of the 
 
 ## Configure your SaaS offer
 
-Set up the offer by making the required configurations. You need to configure the offer setup, offer listing, technical configuration, plan, and pricing to publish and link your offer to your SaaS app. All that you have planned in the Plan your offer phase are done in the offer configuration.
+Set up the offer by making the required configurations. You need to configure the offer setup, offer listing, technical configuration, plan, and pricing to publish and link your offer to your SaaS app. All that you have planned in the Plan your offer phase is done in the offer configuration.
 
 ### Offer setup
 
@@ -112,14 +112,14 @@ You can define a limited audience who can review your SaaS offer before you publ
 On the Technical configuration tab, you define the technical details that the commercial marketplace uses to communicate to your SaaS application or solution.
 
 1. Enter the landing page URL, that customers land on after acquiring your offer from the commercial marketplace and triggering the configuration process from the newly created SaaS subscription.
-1. Enter Connection webhook URL, for all asynchronous events that Microsoft needs to send to your SaaS subscription.
+1. Enter the Connection webhook URL, for all asynchronous events that Microsoft needs to send to your SaaS subscription.
 1. Enter Azure Active Directory tenant ID.
 1. Enter Azure Active Directory application ID.
 1. Select **Save draft**.
 
 ### Plan Overview
 
-Offers sold as transactable SaaS offers must have at least one plan. If you opt Microsoft to manage your licenses, [create a plan and set up Microsoft license management](manage-third-party-apps-license.md).
+Offers sold as transactable SaaS offers must have at least one plan. If you opt for Microsoft to manage your licenses, [create a plan and set up Microsoft license management](manage-third-party-apps-license.md).
 
 ### Submit the offer
 
@@ -131,7 +131,7 @@ When the offer reaches the **Publisher signoff** stage, preview links for the re
 
 | **Sample name** | **Description** | **Node.js** | **Manifest**|
 |-----------------|-----------------|----------------|----------------|----------------|
-| Tab App Monetization | This is a sample tab application that shows how to open purchase dialog and trigger purchase flow using Teams JS SDK.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs/demo-manifest/tab-app-monetization.zip)|
+| Tab App Monetization | This is a sample tab application that shows how to open a purchase dialog and trigger purchase flow using Teams JS SDK.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs/demo-manifest/tab-app-monetization.zip)|
 
 ## Next step
 

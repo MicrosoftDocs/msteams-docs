@@ -10,7 +10,7 @@ ms.date: 04/06/2023
 
 # Purchase and manage app subscriptions and licenses
 
-The information in this article helps you understand purchase experience from the customer end. You can add additional features and functionality for your Teams app through subscriptions. Users can purchase subscriptions and manage licenses for themselves, team, or organization directly from the Teams store.
+The information in this article helps you understand the purchase experience from the customer end. You can add additional features and functionality to your Teams app through subscriptions. Users can purchase subscriptions and manage licenses for themselves, their team, or their organization directly from the Teams store.
 
 ## Subscription experience
 
@@ -27,7 +27,7 @@ The following example shows how users can purchase subscription plans for a fict
 1. In the **Choose a subscription plan** dialog, choose the plan you want and select **Checkout**.
 
     > [!NOTE]
-    > Private plans are visible only to users in orgs you're providing the offer to. These plans are indicated with a **Special offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon.
+    > Private plans are visible only to users of the organizations to whom the plans are made available. These plans are indicated with a **Special offer**:::image type="icon" source="~/assets/icons/special-icon.png"::: icon.
 
     :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Screenshot shows selecting the appropriate subscription plan.":::
 
@@ -45,7 +45,7 @@ The following example shows how users can purchase subscription plans for a fict
 
 When a new user launches the app for the first time, they're requested to provide consent to the app. Following is an example of the consent screen shown when calling for user profile data with minimum User.Read permission.
 
-Consent dialog is part of the flow to get the users license information and may vary based on ISV’s integration approach.
+Consent dialog is part of the flow to get the users' license information and may vary based on ISV’s integration approach.
 
 :::image type="content" source="../../../../assets/images/saas-offer/permissions-requested.png" alt-text="Screenshot shows the Permissions requested consent dialog.":::
 

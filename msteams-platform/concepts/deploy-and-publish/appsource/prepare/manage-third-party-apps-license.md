@@ -14,7 +14,7 @@ Independent software vendors (ISVs) can configure Microsoft license management f
 
 :::image type="content" source="~/assets/images/saas-offer/monetize-flow4.png" alt-text="Diagram shows the process to set up license management for the SaaS offer.":::
 
-To enable Microsoft to manage license for a third-party app in Teams, your must have opted for Microsoft to manage licenses on your behalf while creating the offer. You must then create one or more plans that has subscription pricing, where the user can purchase subscriptions with licenses to use your app. Microsoft then manages the purchased licenses on your behalf.
+To enable Microsoft to manage licenses for a third-party app in Teams, you must have opted for Microsoft to manage licenses on your behalf while creating the offer. You must then create one or more plans that have subscription pricing, where the user can purchase subscriptions with licenses to use your app. Microsoft then manages the purchased licenses on your behalf.
 
 ## Create a plan
 
@@ -44,7 +44,7 @@ Every plan must be available in at least one market. On the Pricing and availabi
 
 1. Select **Pricing and availability** from the left pane.
 1. Under **Market**s, select **Edit markets**.
-1. In the dialog that appears, select the market locations where you want to make your plan available. You must select a minimum of one and can select maximum of 141 markets.
+1. In the dialog that appears, select the market locations where you want to make your plan available. You must select a minimum of one and can select a maximum of 141 markets.
 
 ### Define pricing
 
@@ -83,13 +83,13 @@ Based on the subscriptions the user purchase, the licenses are available. To get
 
 * With transactable SaaS offers for Teams apps, subscription plans (licenses) should be assigned to individual users rather than groups or an entire org.
 * When users are assigned a subscription plan, notify them through a Teams bot or email. In the messaging, include information on how to add the app to Teams and get started.
-* Support the idea of multiple admins. In other words, multiple users in the same org can purchase and manage their own subscriptions.
+* Support the idea of multiple admins. In other words, multiple users in the same org can purchase and manage their subscriptions.
 
 ### Check license usage in Partner Center analytics
 
 1. Sign in to [Partner Center](https://partner.microsoft.com/).
 1. In the left pane, go to **Commercial Marketplace > Analyze > Licensing**.
-1. Select **Plan and Tenant** in the reporting widget to see the month wise usage.
+1. Select **Plan and Tenant** in the reporting widget to see the month-wise usage.
 
 ## Next step
 

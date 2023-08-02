@@ -10,7 +10,7 @@ ms.date: 07/11/2023
 
 # Publish your app with the integrated SaaS offer
 
-When the offer is live, you can link the offer to your SaaS app and publish the subscriptions in the store. The SaaS app is now available in the store for purchase with the configured SaaS offers. The customers can purchase paid apps from the marketplace.
+When the offer is live, you can link the offer to your SaaS app and publish the subscriptions in the store. The SaaS app is now available in the store for purchase with the configured SaaS offers. The users can purchase paid apps from the marketplace.
 
 :::image type="content" source="~/assets/images/saas-offer/monetize-flow6.png" alt-text="Diagram shows the process of creating a SaaS offer with publish stage highlighted.":::
 
@@ -34,7 +34,7 @@ To configure from Teams Developer Portal, follow the given steps:
 
 To configure through app manifest:
 
-Update the subscriptionOffer property in your app manifest.
+Update the `subscriptionOffer` property in your app manifest.
 
    ```json
       "subscriptionOffer": {
@@ -43,7 +43,7 @@ Update the subscriptionOffer property in your app manifest.
    ```
 
 > [!NOTE]
-> The subscriptionOffer property is supported in manifest schema version 1.10 or later.
+> The `subscriptionOffer` property is supported in manifest schema version 1.10 or later.
 
 For more information to map the paid functionality to your offer and publish, see [Map your Teams app](https://aka.ms/TMTG).
 
@@ -67,11 +67,11 @@ Once published, users can view the **Buy a subscription** option in the app deta
 
 ## Post purchase
 
-1. After activation, the customer is redirected from the landing page to Teams License Management.
+1. After activation, the user is redirected from the landing page to Teams License Management.
 
-1. Upon successful completion of subscription purchase, the customer is redirected to the app landing page for subscription activation. This is the existing experience for user purchasing [Monetized apps in Teams](https://aka.ms/TMTG).
+1. Upon successful subscription purchase, the user is redirected to the app landing page for subscription activation. This is the existing experience for user purchasing [Monetized apps in Teams](https://aka.ms/TMTG).
 
-1. After the customer activates the subscription purchase on landing page, customer is redirected to subscriptions page in Teams via a [redirect URL](https://teams.microsoft.com/_#/subscriptionManagement) link or button that the customer selects on the publisher landing page.
+1. After the user activates the subscription purchase on the landing page, the user is redirected to the subscription page in Teams via a [redirect URL](https://teams.microsoft.com/_#/subscriptionManagement) link or button that the user selects on the publisher landing page.
 
 ## Remove a SaaS offer from your app
 
