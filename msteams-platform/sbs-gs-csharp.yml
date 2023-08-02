@@ -53,26 +53,26 @@ items:
       1. Select the box **Microsoft Teams development tools** in the installation details panel.
       1. Select **Install**.
 
-          :::image type="content" source="~/assets/images/sbs-csharp/visual-studio-install.png" alt-text="Visual studio-installation" lightbox="~/assets/images/sbs-csharp/visual-studio-install.png":::
+          :::image type="content" source="~/assets/images/sbs-csharp/visual-studio-install.png" alt-text="Screenshot shows the Visual Studio installation." lightbox="~/assets/images/sbs-csharp/visual-studio-install.png":::
           
       1. Select **Launch** to open Visual Studio.
 
-          :::image type="content" source="~/assets/images/sbs-csharp/visual-studio-launch.png" alt-text="Launch visual studio":::
+          :::image type="content" source="~/assets/images/sbs-csharp/visual-studio-launch.png" alt-text="Screenshot shows the selection of Launch in visual studio.":::
           
          > [!IMPORTANT]
          > You're recommended to download Visual Studio 2022 17.7.0 version, since Teams Toolkit for Visual Studio is GA in this version. This article is written for Visual Studio 2022 17.7.0 version. Teams Toolkit version 17.7.* or higher.
 
       1. Select **Extensions** > **Manage Extensions**.
 
-          :::image type="content" source="~/assets/images/sbs-csharp/select-extension.png" alt-text="Select Extensions.":::
+          :::image type="content" source="~/assets/images/sbs-csharp/select-extension.png" alt-text="Screenshot shows the selection of Extensions.":::
 
          The following Manage Extension window appears:
 
-          :::image type="content" source="~/assets/images/sbs-csharp/manage-extension.png" alt-text="Manage Extensions." lightbox="~/assets/images/sbs-csharp/manage-extension.png":::
+          :::image type="content" source="~/assets/images/sbs-csharp/manage-extension.png" alt-text="Screenshot shows the Manage Extensions." lightbox="~/assets/images/sbs-csharp/manage-extension.png":::
 
       1. Select **Installed** and you can see **Teams Toolkit** extension installed.
     
-          :::image type="content" source="~/assets/images/sbs-csharp/select-installed-ttk.png" alt-text="Select Teams Toolkit" lightbox="~/assets/images/sbs-csharp/select-installed-ttk.png":::
+          :::image type="content" source="~/assets/images/sbs-csharp/select-installed-ttk.png" alt-text="Screenshot shows the selection of Teams Toolkit." lightbox="~/assets/images/sbs-csharp/select-installed-ttk.png":::
 
     ## Set up your Teams development tenant
 
@@ -108,7 +108,7 @@ items:
     1. In the welcome screen, select **Setup E5 subscription**.
     1. Set up your administrator account. After you finish, the following screen appears:
 
-        :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
+        :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Screenshot shows the example of what you see after signing up for the Microsoft 365 developer program.":::
 
     1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
@@ -131,12 +131,12 @@ items:
     1. Open Visual Studio.
     1. Select **New Project**.
 
-        :::image type="content" source="~/assets/images/sbs-csharp/visual-studio-welcome.png" alt-text="Open Visual Studio":::
+        :::image type="content" source="~/assets/images/sbs-csharp/visual-studio-welcome.png" alt-text="Screenshot shows the selection of New Project in Visual Studio.":::
 
     1. Enter **Teams** in the search box.
     1. Select **Microsoft Teams App** and select **Next**.
     
-        :::image type="content" source="~/assets/images/sbs-csharp/new-project-template-vs.png" alt-text="Enter Teams" lightbox="~/assets/images/sbs-csharp/new-project-template-vs.png":::
+        :::image type="content" source="~/assets/images/sbs-csharp/new-project-template-vs.png" alt-text="Screenshot shows the selection of Teams." lightbox="~/assets/images/sbs-csharp/new-project-template-vs.png":::
 
     1. Enter the following details to configure your new project.
 
@@ -144,21 +144,21 @@ items:
         1. Select required location to save project files and folders.
         1. Select **Create**.
         
-        :::image type="content" source="~/assets/images/sbs-csharp/teams-app-project-name.png" alt-text="Enter Project name":::
+        :::image type="content" source="~/assets/images/sbs-csharp/teams-app-project-name.png" alt-text="Screenshot shows the creation of Project name.":::
     
     1. Select **Tab** and select **Create**.   
 
-        :::image type="content" source="~/assets/images/sbs-csharp/select-tab.png" alt-text="Select tab":::
+        :::image type="content" source="~/assets/images/sbs-csharp/select-tab.png" alt-text="Screenshot shows the selection of tab.":::
 
        Now Teams tab app is created in a few seconds.
 
-        :::image type="content" source="~/assets/images/sbs-csharp/get-started-tab-vs.png" alt-text="Project Creation" lightbox="~/assets/images/sbs-csharp/get-started-tab-vs.png":::     
+        :::image type="content" source="~/assets/images/sbs-csharp/get-started-tab-vs.png" alt-text="Screenshot shows the Project Creation." lightbox="~/assets/images/sbs-csharp/get-started-tab-vs.png":::     
 
     ## Take a tour of tab app source code
       
     Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under **Solution Explorer**.  
 
-      :::image type="content" source="~/assets/images/sbs-csharp/basic-app-directory.png" alt-text="Solution Explorer"::: 
+      :::image type="content" source="~/assets/images/sbs-csharp/basic-app-directory.png" alt-text="Screenshot shows the Solution Explorer."::: 
 
      <!--
 
@@ -195,11 +195,11 @@ items:
 
     1. Select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-        :::image type="content" source="~/assets/images/sbs-csharp/teams-app-dependencies.png" alt-text="Teams app Dependencies" lightbox="~/assets/images/sbs-csharp/teams-app-dependencies.png":::
+        :::image type="content" source="~/assets/images/sbs-csharp/teams-app-dependencies.png" alt-text="Screenshot shows the selection of Teams app Dependencies." lightbox="~/assets/images/sbs-csharp/teams-app-dependencies.png":::
     
     1. Select **Microsoft 365 Account** and select **Continue**. 
 
-        :::image type="content" source="~/assets/images/sbs-csharp/select-m365-account.png" alt-text="Select-M365-account":::
+        :::image type="content" source="~/assets/images/sbs-csharp/select-m365-account.png" alt-text="Screenshot shows the Selection of M365-account.":::
 
     ## Build and run your app locally in Visual Studio
 
@@ -207,7 +207,7 @@ items:
 
     1. Select **F5** or **Debug** > **Start Debugging** to run the application in debug mode.
 
-        :::image type="content" source="~/assets/images/sbs-csharp/start-debugging.png" alt-text="Start Debugging":::
+        :::image type="content" source="~/assets/images/sbs-csharp/start-debugging.png" alt-text="Screenshot shows the selection of start debugging action.":::
 
        Teams web client opens in a browser window.
 
@@ -215,7 +215,7 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/sbs-csharp/select-add.png" alt-text="Select Add":::
+        :::image type="content" source="~/assets/images/sbs-csharp/select-add.png" alt-text="Screenshot shows the selection of Add.":::
 
        Congratulations, your first tab app is running on Teams!
 
