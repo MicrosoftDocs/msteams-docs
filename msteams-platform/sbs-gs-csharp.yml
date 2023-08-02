@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Start Microsoft Teams app development with your first Teams app with a tab, a bot, and a message extension capability.
+    Start Microsoft Teams app development by building your first Teams app with a tab, a bot, or a message extension capability.
 
     In this tutorial, you'll learn:
 
@@ -129,12 +129,9 @@ items:
     The following steps help you to create project workspace for your tab app in Visual Studio
 
     1. Open Visual Studio.
-
-        :::image type="content" source="~/assets/images/sbs-csharp/visual-studio-welcome.png" alt-text="Open Visual Studio":::
-
     1. Select **New Project**.
 
-        :::image type="content" source="~/assets/images/sbs-csharp/new-project-vs.png" alt-text="Select create project":::
+        :::image type="content" source="~/assets/images/sbs-csharp/visual-studio-welcome.png" alt-text="Open Visual Studio":::
 
     1. Enter **Teams** in the search box.
     1. Select **Microsoft Teams App** and select **Next**.
@@ -194,7 +191,7 @@ items:
 
     Use your Microsoft 365 account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
-    1. Right-click on **Mytabapp** under **Solution Mytabapp**.
+    1. Right-click on **MyTeamsApp** under **Solution MyTeamsApp**.
 
     1. Select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
@@ -208,7 +205,7 @@ items:
 
     To build and run your app locally:
 
-    1. From Visual Studio, select **F5** or **Debug** > **Start Debugging** to run the application in debug mode.
+    1. Select **F5** or **Debug** > **Start Debugging** to run the application in debug mode.
 
         :::image type="content" source="~/assets/images/sbs-csharp/start-debugging.png" alt-text="Start Debugging":::
 
@@ -216,7 +213,7 @@ items:
 
     1. Sign in with your Microsoft 365 account, if prompted. 
 
-    1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
+    1. Select **Add**.
 
         :::image type="content" source="~/assets/images/sbs-csharp/select-add.png" alt-text="Select Add":::
 
