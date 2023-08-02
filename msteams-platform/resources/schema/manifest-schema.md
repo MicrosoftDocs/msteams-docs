@@ -789,7 +789,7 @@ You can define any of the following properties:
 
 **Optional** - array
 
-Enables your app in non-standard channels. If your app supports a team scope and this property is defined, Teams enables your app in each channel type accordingly. Currently, `sharedChannels` and `privateChannels` are supported.
+Enables your app in non-standard channels. If your app supports a team scope and this property is defined, Teams enables your app in each channel type accordingly. The supportedChannelTypes property only supports`sharedChannels` and `privateChannels`.
 
 > [!NOTE]
 >
