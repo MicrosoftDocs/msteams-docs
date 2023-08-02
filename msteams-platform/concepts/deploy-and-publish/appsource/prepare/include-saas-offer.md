@@ -14,22 +14,22 @@ SaaS apps available for purchase in Microsoft commercial marketplace, either Azu
 
 :::row:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow.png" link="#prerequisites.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow.png" link="prerequisites.md" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-2.png" link="#include-saas-offer.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-2.png" link="include-saas-offer.md" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-3.png" link="#create-saas-offer.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow3.png" link="create-saas-offer.md" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-4.png" link="#manage-third-party-apps-license.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow4.png" link="manage-third-party-apps-license.md" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-5.png" link="#Test-preview-for-monetized-app.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow5.png" link="Test-preview-for-monetized-app.md" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-6.png" link="#publish-saas-offer-app.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow6.png" link="publish-saas-offer-app.md" border="false":::
    :::column-end:::
 :::row-end:::
 
