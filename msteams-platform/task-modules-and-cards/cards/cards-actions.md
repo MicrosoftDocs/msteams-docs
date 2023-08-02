@@ -546,11 +546,11 @@ You can build form completion feedback using an Adaptive Card. Form completion m
   * Service dependency issue
   * Gateway Timeout
 
-     :::image type="content" source="../../../assets/images/Cards/error-message.png" alt-text="Error message"border="true":::
+     :::image type="content" source="../../assets/images/Cards/error-message.png" alt-text="Screenshot shows an Error message in an Adaptive Card."  :::
 
 * **Success**: When a response sent to the bot is successful, **Your response was sent to the app** message appears.
 
-     :::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Success message"border="true":::
+     :::image type="content" source="../../assets/images/Cards/success.PNG" alt-text="Screenshot shows a success message in an Adaptive Card.":::
 
      You can select **Close** or switch chat to dismiss the message.
 
