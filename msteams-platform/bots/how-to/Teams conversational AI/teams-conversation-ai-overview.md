@@ -16,7 +16,7 @@ Teams AI library is a Teams-centric interface to GPT-based common language model
 
 :::image type="content" border="false" source="../../../assets/images/bots/teams-ai-library.png" alt-text="Visual representation of a user input and a bot response."lightbox="../../../assets/images/bots/teams-ai-library.png":::
 
-The AI library provides a simple capabilities-driven approach and helps you create intelligent apps quickly and easily with prebuilt, reusable code snippets so that you can focus on building the business logic rather than learning the semantics of Teams conversational applications.
+The AI library provides a simple capabilities-driven approach and helps you to create intelligent apps quickly and easily with prebuilt, reusable code snippets so that you can focus on building the business logic rather than learning the semantics of Teams conversational applications.
 
 The following are some of the main features available through Teams AI library:
 
@@ -41,7 +41,7 @@ Bots can run in-context and assist when the bot recognizes a user intent that ma
 
 ## Prompt engineering
 
-Prompt engineering helps you design prompts considering user's intent, context of the conversation, and the bot personality. Bots can be personalized and customized to meet user needs.
+Prompt engineering helps you to design prompts considering user's intent, context of the conversation, and the bot personality. Bots can be personalized and customized to meet user needs.
 
 ## Conversational session history
 
@@ -49,13 +49,13 @@ Teams AI library remembers context across messages and helps improve the bot per
 
 ## Localization
 
-Since Teams AI library is backed by GPT, localization is available. When a user inputs in any language, the input is consistently translated to intents, entities, and resultant actions that the app understands without the need to build and maintain localization records.
+Since Teams AI library uses OpenAI's GPT model, localization is available. When a user inputs in any language, the input is consistently translated to intents, entities, and resultant actions that the app understands without the need to build and maintain localization records.
 
 ## LLM modularity
 
 Large language model (LLM) is an advanced language model that utilizes latent variables to generate coherent and diverse natural language text and style.
 
-Although, Teams AI library is built to use Open AI’s GPT model, you have the flexibility to swap with any LLM of your choice without changing the bot logic.
+Although, Teams AI library is built to use Open AI’s GPT model, you have the flexibility to swap with any LLM of your choice without changing the bot logic. This means you can choose to keep your app's content outside the public domain and confined to your preferred LLM model.
 
 ## Responsible AI
 
@@ -75,36 +75,21 @@ A simple interface for actions and predictions allows bots to react when the bot
 1. Allows prompts to make summarizations over a period of time focused on the user’s manager.
 1. Provides actions to summarize chat content for users to consume.
 
-## Why build apps with Teams AI library?
+## Why use Teams AI library?
 
-Teams AI library makes Teams apps conversational, not driven by rigid command structures. The library is designed to seamlessly integrate with the Teams Bot Framework SDK. Building apps for Teams is simpler, with rich natural language features that bring any app experience into the conversation.
+The AI Library is a Teams-centric interface to Large Language Models. Your apps can leverage LLMs to facilitate more natural conversational interactions with users, guiding that conversation into your apps skills.
 
-Here are some key benefits of the Teams AI library:
+You can focus on writing your business logic, and allow Teams to handle the complexities of conversational bots so that you can easily extract and utilize user intent within your apps.
 
-* ​Strong proof of value with Teams app components​. You can instantiate your bot activity handler and invoke any Teams capabilities by just invoking the function.
+:::image type="content" source="../../../assets/images/bots/teams-ai-library-benefits.png" alt-text="Screenshot shows the benefits of using Teams AI library.":::
 
-* ​Easy to use powerful conversational language models versus building your model​.
+* The AI Library is a Teams-centric interface to Large Language Models. Use prebuilt templates to add Teams app capabilities.
 
-* ​Guardrails to steer responsible conversation with moderation​.
+* Use techniques like prompt engineering to add ChatGPT like conversational experiences to your bot and built-in safety features, like moderation, help ensure your bot always responds in an appropriate manner.
 
-* ​Out of the box localization with LLMs.
+* The library includes a planning engine that lets the model identify the user's intent and then maps that intent to actions that you implement.
 
-* You can select any LLM.
-
-* You can talk to Teams apps like you’d talk to a human as opposed to a set of commands​.
-
-* ​Any app that uses the library offers consistency for interactions, and the app handles steering natural conversation into actionable outcomes.
-
-* Multiple safety layers to ensure that the bot works in a safe and responsible manner. The safety layers are as follows:
-
-  * Skype Messaging Bot API (SMBA): Endpoint for all bot related activities. Performs throttling and sanitization on bot payload.
-  * Other IC3 services: Bot roster membership check.
-  * Agent Provisioning Service (APS): Bot metadata retrieval and bot validation.
-  * Teams Middle Tier (MT): App policy or tenant settings checks.
-  * Partner Lookup Service (PLS): User or tenant region lookups.
-  * Experimental Config Service (ECS): Feature flags and scenario configuration data.
-  * Microsoft Graph: App install state and resource specific consent validation.
-  * Bot Framework Services: Bot authentication, SDK, and token store.
+* You can easily add support for any LLM of your choice without changing the bot logic.
 
 <!-- ## Bots Architecture overview
 

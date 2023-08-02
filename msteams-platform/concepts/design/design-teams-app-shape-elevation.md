@@ -5,6 +5,7 @@ author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: Shape and elevation 
+ms.date: 05/23/2023
 ---
 # Shape and elevation for designing your Teams app
 

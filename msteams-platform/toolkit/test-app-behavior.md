@@ -81,3 +81,4 @@ To host your development and production code and their HTTPS endpoints, you need
 * [Deploy to the cloud](deploy.md)
 * [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)
+* [validDomains](../resources/schema/manifest-schema.md#validdomains)

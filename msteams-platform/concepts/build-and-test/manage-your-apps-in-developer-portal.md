@@ -4,6 +4,7 @@ description: Learn how to configure, distribute, and manage your apps using the 
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
+ms.date: 02/28/2023
 ---
 
 # Manage your apps in Developer Portal
@@ -13,7 +14,7 @@ After you create or upload your app, you can manage your apps in Developer Porta
 * [Overview](#overview)
 * [Configure](#configure)
 * [Advanced](#advanced)
-* [Develop (Preview)](#develop-preview)
+* [Develop](#develop)
 * [Publish](#publish)
 * [Manage rollouts](#manage-rollouts)
 
@@ -111,9 +112,9 @@ In the **Advanced** section, you can see the following components to manage your
   * **App Customization**: You can customize your app by selecting different properties, such as **Name**, **Short description**, **Small icon**, and other properties.  
   * **Block app by default**: You can block your app by default for users until a tenant admin selects to enable it.
 
-## Develop (Preview)
+## Develop
 
-In the **Develop (Preview)** section, you can open and develop your app in Teams Toolkit in the Visual Studio Code and Visual Studio. For more information, see [develop your app with Teams Toolkit](develop-your-apps-with-teams-toolkit.md).
+In the **Develop** section, you can open and develop your app in Teams Toolkit in the Visual Studio Code and Visual Studio. For more information, see [develop your app with Teams Toolkit](develop-your-apps-with-teams-toolkit.md).
 
 ## Publish
 
@@ -144,12 +145,12 @@ In the **Manage rollouts** section, you can see the following components to mana
 
 * **Pull request history**: This page allows you to create a new pull request and to control who gets app updates. For example, you can release an update to Microsoft employees to identify and fix bugs before releasing it to the public.
 
-* **Distribute your app**: This page allows you to create a request to distribute your app to specific audience. You can distribute your app to non-GA rings or GA rings. It's recommended to not distribute to several rings simultaneously. Instead, roll out gradually to higher order rings. For help, see [aka.ms/teamsAppIngestion](https://domoreexp.visualstudio.com/Teamspace/_wiki/wikis/Teamspace.wiki/26278/Publishing-apps).
+* **Distribute your app**: This page allows you to create a request to distribute your app to specific audience in Teams. We recommend you not to distribute your app to different versions of Teams simultaneously. Instead, roll out gradually to higher order Teams versions. For help, see [aka.ms/teamsAppIngestion](https://domoreexp.visualstudio.com/Teamspace/_wiki/wikis/Teamspace.wiki/26278/Publishing-apps).
 
 * **Withdraw your app**: This page allows you to create a request to withdraw your app from a specific audience.
 
    > [!NOTE]
-   > DevX team is allowed to withdraw your app from **Ring 4**.
+   > DevX team is allowed to withdraw your app from Teams generally available (GA) version.
 
 ## Test your app directly in Teams
 

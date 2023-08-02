@@ -5,6 +5,7 @@ ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 02/22/2023
 ---
 
 # Distribute your Microsoft Teams app

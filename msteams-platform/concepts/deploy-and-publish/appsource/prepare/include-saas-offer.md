@@ -5,6 +5,7 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
+ms.date: 03/21/2023
 ---
 
 # Include a SaaS offer with your Teams app
@@ -179,3 +180,4 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
 * [Monetize your app](monetize-overview.md)
 * [Maintaining and supporting your published app](../post-publish/overview.md)
 * [Validation guidelines for apps linked to SaaS offer](teams-store-validation-guidelines.md#apps-linked-to-saas-offer)
+* [Microsoft commercial marketplace](/partner-center/marketplace/overview)
