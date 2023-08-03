@@ -476,10 +476,10 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 |---|---|---|---|---|
 |`entityId`|string|64 characters|✔️|A unique identifier for the entity that the tab displays.|
 |`name`|string|128 characters||The display name of the tab in the channel interface.|
-|`contentUrl`|string|||The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
-|`contentBotId`|string|||The Microsoft app ID specified for the bot in the [Bot Framework portal](https://dev.botframework.com/bots).|
-|`websiteUrl`|string|||The https:// URL to point to if a user opts to view in a browser.|
-|`searchUrl`|string|||The https:// URL to point to for a user's search queries.|
+|`contentUrl`|string|2048 characters||The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
+|`contentBotId`|string|128 characters||The Microsoft app ID specified for the bot in the [Bot Framework portal](https://dev.botframework.com/bots).|
+|`websiteUrl`|string|2048 characters||The https:// URL to point to if a user opts to view in a browser.|
+|`searchUrl`|string|2048 characters||The https:// URL to point to for a user's search queries.|
 |`scopes`|array of enums|3|✔️| Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
 |`context` | array of enums| 8|| The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: **[personalTab, channelTab, privateChatTab, meetingChatTab, meetingDetailsTab, meetingStage, meetingSidepanel, teamLevelApp]**.|
 
@@ -531,7 +531,7 @@ The object is an array (maximum of one element) with all elements of type `objec
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`configurationUrl`|string|2048 characters|✔️|The https:// URL to use when configuring the connector.|
+|`configurationUrl`|string|2048 characters| |The https:// URL to use when configuring the connector.|
 |`scopes`|array of enums|1|✔️|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
 |`connectorId`|string|64 characters|✔️|A unique identifier for the Connector that matches its ID in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).|
 
@@ -643,7 +643,7 @@ Provide your Azure Active Directory App ID and Microsoft Graph information to he
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|string|128 characters|✔️|Azure AD application ID of the app. This ID must be a GUID.|
-|`resource`|string|2048 characters|✔️|Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you aren't using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, `https://example` to avoid an error response. |
+|`resource`|string|2048 characters||Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you aren't using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, `https://example` to avoid an error response. |
 
 ## graphConnector
 
@@ -810,7 +810,7 @@ When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidd
 
 **Optional**—string
 
-**Maximum size** - 128 characters
+**Maximum size** - 2048 characters
 
 The `publisherDocsUrl` is an HTTPS URL to an information page for admins to get guidelines before allowing an app, which is blocked by default. It can also be used to provide any instructions or information about the app, which can be useful for the tenant admin.
 
@@ -840,10 +840,10 @@ Specify meeting extension definition. For more information, see [custom Together
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`id`|||✔️| The unique identifier for the scene. This id must be a GUID. |
+|`id`|string | 128 characters|✔️| The unique identifier for the scene. This id must be a GUID. |
 |`name`| string | 128 characters |✔️| The name of the scene. |
-|`file`|||✔️| The relative file path to the scenes' metadata json file. |
-|`preview`|||✔️| The relative file path to the scenes' PNG preview icon. |
+|`file`|string|2048 characters|✔️| The relative file path to the scenes' metadata json file. |
+|`preview`|string|2048 characters|✔️| The relative file path to the scenes' PNG preview icon. |
 |`maxAudience`| integer | 50  |✔️| The maximum number of audiences supported in the scene. |
 |`seatsReservedForOrganizersOrPresenters`| integer | 50 |✔️| The number of seats reserved for organizers or presenters.|
 
