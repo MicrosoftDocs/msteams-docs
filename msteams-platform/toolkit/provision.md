@@ -475,7 +475,7 @@ The following steps help you to provision cloud resources using Visual Studio:
    > [!NOTE]
    > If you're already signed in, your username is displayed, or you've an option to **Add an account**.
 
-   After sign in to your Azure account using your credentials, the browser closes automatically.
+   After signing in to your Azure account using your credentials, the browser closes automatically.
 
 ### To provision cloud resources
 
@@ -510,41 +510,36 @@ After you open your project in Visual Studio:
 
 The following actions are designed for provision.
 
-  * [teamsApp/create](#teamsappcreate)
-  * [teamsApp/update](#teamsappupdate)
-  * [teamsApp/validateManifest](#teamsappvalidatemanifest)
-  * [teamsApp/validateAppPackage](#teamsappvalidateapppackage)
-  * [teamsApp/zipAppPackage](#teamsappzipapppackage)
-  * [teamsApp/publishAppPackage](#teamsapppublishapppackage)
-  * [aadApp/create](#aadappcreate)
-  * [aadApp/update](#aadappupdate)
-  * [botAadApp/create](#botaadappcreate)
-  * [arm/deploy](#armdeploy)
-  * [azureStorage/enableStaticWebsite](#azurestorageenablestaticwebsite)
-  * [script](#script)
+  * [teamsApp/create](#teamsappcreate-1)
+  * [teamsApp/update](#teamsappupdate-1)
+  * [teamsApp/validateManifest](#teamsappvalidatemanifest-1)
+  * [teamsApp/validateAppPackage](#teamsappvalidateapppackage-1)
+  * [teamsApp/zipAppPackage](#teamsappzipapppackage-1)
+  * [teamsApp/publishAppPackage](#teamsapppublishapppackage-1)
+  * [aadApp/create](#aadappcreate-1)
+  * [aadApp/update](#aadappupdate-1)
+  * [botAadApp/create](#botaadappcreate-1)
+  * [arm/deploy](#armdeploy-1)
+  * [azureStorage/enableStaticWebsite](#azurestorageenablestaticwebsite-1)
+  * [script](#script-1)
 
 ### teamsApp/create
 
 If the environment variable that stores Teams app ID is empty or the app ID isn't found from Teams Developer Portal, then the teamsApp/create action creates a new Teams app. It operates on Teams app in Teams Developer Portal.
 
-#### How to use teamsApp/create?
-
 ```yml
   - uses: teamsApp/create
-    with:
+    with: 
       # #required. Name of Teams app
       name: <your-preferred-app-name>
-    # Write the information of created resources into environment file for the specified environment variable(s).
+      # Write the information of created resources into environment file for the specified environment variable(s).
     writeToEnvironmentFile:
       # The id for Teams app
       teamsAppId: <your-preferred-env-var-name>
 ```
-
 ### teamsApp/update
 
 When you apply the Teams app manifest to an existing Teams app in Teams Developer Portal. teamsApp/update uses the app ID in manifest.json file to determine which Teams app to update. It operates on Teams app in Teams Developer Portal.
-
-#### How to use teamsApp/update?
 
 ```yml
 - uses: teamsApp/update
@@ -557,75 +552,57 @@ When you apply the Teams app manifest to an existing Teams app in Teams Develope
 
 teamsApp/validateManifest action renders Teams app manifest template with environment variables and validates Teams app manifest file using its schema.
 
-#### How to use teamsApp/validateManifest?
-
 ```yml
-  - uses: teamsApp/validate
+- uses: teamsApp/validate
     with:
       # Required. Relative path to the yaml file. Path to Teams app manifest file
-      manifestPath: <path-to-manifest-file>
+    manifestPath: <path-to-manifest-file>
 ```
 
 ### teamsApp/validateAppPackage
 
 teamsApp/validateAppPackage action validates Teams app package using validation rules.
 
-#### How to use teamsApp/validateAppPackage?
-
 ```yml
   - uses: teamsApp/validateAppPackage
-    with:
+      with:
       # Required. Relative path to the yaml file. This is the path for built zip file.
-      appPackagePath: <path-to-teams-app-package-file>
+    appPackagePath: <path-to-teams-app-package-file>
 ```
 
 ### teamsApp/zipAppPackage
 
 teamsApp/zipAppPackage action renders Teams app manifest template with environment variables and compresses the manifest file with two icons into a zip file.
 
-#### How to use teamsApp/zipAppPackage?
-
 ```yml
 - uses: teamsApp/zipAppPackage
     with:
       # Required. Relative path to the yaml file. This is the path for Teams app manifest file. Environment variables in manifest will be replaced before apply to AAD app.
-      manifestPath: <path-to-manifest-file>
+    manifestPath: <path-to-manifest-file>
       # Required. Relative path to the yaml file. This is the path for built zip file.
-      outputZipPath: <path-to-generated-zip-file>
+    outputZipPath: <path-to-generated-zip-file>
       # Required. Relative path to the yaml file. This is the path for built manifest json file.
-      outputJsonPath: <path-to-generated-json-file>
+    outputJsonPath: <path-to-generated-json-file>
 ```
 
 ### teamsApp/publishAppPackage
 
-#### What is teamsApp/publishAppPackage?
-
-teamsApp/publishAppPackage action publishes built Teams app zip file to tenant app catalog.
-
-#### What resource teamsApp/publishAppPackage operate?
-
-teamsApp/publishAppPackage operates in Microsoft 365 tenant app catalog.
-
-#### How to use teamsApp/publishAppPackage?
+teamsApp/publishAppPackage action publishes built Teams app zip file to tenant app catalog. It operates in Microsoft 365 tenant app catalog.
 
 ```yml
 - uses: teamsApp/publishAppPackage
     with:
       # Required. Relative path to this file. This is the path for built zip file.
-      appPackagePath: <path-to-teams-app-package>
+    appPackagePath: <path-to-teams-app-package>
     # Write the information of created resources into environment file for the specified environment variable(s).
     writeToEnvironmentFile:
       # The Teams app id in tenant app catalog.
-      publishedAppId: <your-preferred-env-var-name>
+    publishedAppId: <your-preferred-env-var-name>
 ```
 
 ### aadApp/create
 
-aadApp/create action creates a new Azure Active Directory (Azure AD) application to authenticate users if the environment variable that stores clientId is empty.
-
-#### What resource aadApp/create operate?
-
-aadApp/create operates in Azure AD in Microsoft 365 tenant.
+aadApp/create action creates a new Azure Active Directory (Azure AD) application to authenticate users if the environment variable that stores clientId is empty. It operates in Azure AD in Microsoft 365 tenant.
 
 #### How to use aadApp/create?
 
@@ -675,8 +652,6 @@ aadApp/update action updates your Azure AD application based on give Azure AD ap
 
 botAadApp/create action creates a new or reuses an existing Azure AD application for bot. It operates on Azure AD in Microsoft 365 tenant.
 
-#### How to use botAadApp/create?
-
 ```yml
 - uses: botAadApp/create
     with:
@@ -688,12 +663,10 @@ botAadApp/create action creates a new or reuses an existing Azure AD application
       # The The AAD app's client secret created for bot. 
       botPassword: <your-preferred-env-var-name>
 ```
-  
+
 ### arm/deploy
 
 arm/deploy action deploys given ARM templates in parallel. It operates on Azure subscription.
-
-#### How to use arm/deploy?
 
 ```yml
 - uses: arm/deploy
@@ -717,8 +690,6 @@ arm/deploy action deploys given ARM templates in parallel. It operates on Azure 
 ### azureStorage/enableStaticWebsite
 azureStorage/enableStaticWebsite action enables static website setting in Azure Storage. It operates on Azure Storage.
 
-#### How to use azureStorage/enableStaticWebsite?
-
 ```yml
 - uses: azureStorage/enableStaticWebsite
     with:
@@ -733,8 +704,6 @@ azureStorage/enableStaticWebsite action enables static website setting in Azure 
 ### script
 
 script action executes a user-defined script.
-
-#### How to use script?
 
 ```yml
 - uses: script
@@ -876,9 +845,7 @@ You can follow the steps to add environment variables to the .env files to use a
 
 ::: zone-end
 
-## See also
+## Next step
 
-* [Deploy Teams app to the cloud](deploy.md)
-
-
-
+> [!div class="nextstepaction"]
+> [Deploy Teams app to the cloud](deploy.md)
