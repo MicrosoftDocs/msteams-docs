@@ -118,12 +118,12 @@ The long description can provide a narrative that highlights your apps features,
 
 It's strongly recommended that your long description has information on the following pointers:
 
-* What your produce is and the industries it’s aligned with?
-* Target audience and customer segments.
-* Unique value of your app in Microsoft Teams.
-* Resolution that your app provides on customer problems.
-* Key benefits of your app. Add up to three benefits.
-* Main features of your app and the requirements to use your app.
+* Define about your product is and the industries it’s aligned with.
+* Specify the target audience and customer segments.
+* Denote the unique values of your app in Microsoft Teams.
+* Highlight the resolutions that your app provides on customer problems.
+* Mention the key benefits of your app, add up to three benefits.
+* Brief about the main features of your app and the requirements to use your app.
 
 While this description can be as long as 4,000 characters, most users only read between 300-500 words.
 
