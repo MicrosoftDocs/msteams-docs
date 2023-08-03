@@ -99,9 +99,7 @@ Encoded URL:
 ## Collaborative Stage View
 
 > [!NOTE]
->
-> * Collaborative Stage View is available only in [public developer preview](/microsoftteams/platform/resources/dev-preview/developer-preview-intro).
-> * Collaborative Stage View isn't supported in Teams web and mobile clients.
+> Collaborative Stage View isn't supported in Teams web and mobile clients.
 
 Collaborative Stage View is an enhancement to Stage View that allows users to engage with your app content in a new Teams window. When a user opens Collaborative Stage View from an Adaptive Card, the app content pops-out in a new Teams window instead of the default Stage View modal.
 
