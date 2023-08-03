@@ -77,7 +77,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 `TeamsFx-Auth/aad.manifest.template.json`file is an Azure AD manifest template. You can copy and paste this file to any folder of your project, and rename as `aad.manifest.json` file and take note of the path to this file. The following updates in the template to create/update an Azure AD app for SSO:
 
     1. `identifierUris`: Uniquely identify and access the resource.
-    [HelpLink.](https://learn.microsoft.com/azure/active-directory/develop/reference-app-manifest#identifieruris-attribute)
+
     Set correct redirect Uris into `identifierUris` to successfully identify this app.
 
     ```json
@@ -87,7 +87,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
     ```
 
     1. `replyUrlsWithType`: List of registered redirect_uri values that Azure AD accept as destinations when returning tokens.
-    [HelpLink.](https://learn.microsoft.com/azure/active-directory/develop/reference-app-manifest#replyurlswithtype-attribute)
+
     Set necessary redirect Uris into `replyUrlsWithType` to successfully returning token.
 
     ```json
@@ -121,7 +121,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
     1. "name": Replace the value with your expected Azure AD app name.
 
-1. Open your Teams app manifest file, add `WebApplicationInfo` property with the value of your SSO app.[HelpLink.](https://learn.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#webapplicationinfo)
+1. Open your Teams app manifest file, add `WebApplicationInfo` property with the value of your SSO app.
 
 ```JSON
     "webApplicationInfo": {
@@ -130,8 +130,8 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
     }
 ```
 
-    > [!NOTE]
-    > Update the value of resource to your `identifierUris` configed in step 1, and use `${{ENV_NAME}}` to reference envs in `env/.env.{TEAMSFX_ENV}`.
+   > [!NOTE]
+   > Update the value of resource to your `identifierUris` configed in step 1, and use `${{ENV_NAME}}` to reference envs in `env/.env.{TEAMSFX_ENV}`.
 
     Open `appPackage/manifest.json`file, and add the following property:
 
@@ -397,7 +397,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
 1. Update AAD app manifest. `TeamsFx-Auth/aad.manifest.template.json` is an Azure AD manifest template. You can copy and paste this file to any folder of your project, rename as `aad.manifest.json` and take notes of the path to this file. Because the path will be useful later. And you need to make the following updates in the template to create/update an Azure AD app for SSO:
 
-   1. "identifierUris": Used to uniquely identify and access the resource.[HelpLink.](https://learn.microsoft.com/azure/active-directory/develop/reference-app-manifest#identifieruris-attribute) You need to set correct Redirect Uris into "identifierUris" for successfully identify this app.
+   1. "identifierUris": Used to uniquely identify and access the resource. You need to set correct Redirect Uris into "identifierUris" for successfully identify this app.
 
     Example for TeamsFx Bot Template:
 
@@ -409,7 +409,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
     > Note: You can use use `${{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}`.
 
-   1. "replyUrlsWithType": List of registered redirect_uri values that Azure AD will accept as destinations when returning tokens.[HelpLink.](https://learn.microsoft.com/azure/active-directory/develop/reference-app-manifest#replyurlswithtype-attribute) You need to set necessary Redirect Uris into "replyUrlsWithType" for successfully returning token.
+   1. "replyUrlsWithType": List of registered redirect_uri values that Azure AD will accept as destinations when returning tokens. You need to set necessary Redirect Uris into "replyUrlsWithType" for successfully returning token.
 
     For example:
 
@@ -440,7 +440,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
 1. Update Teams app manifest
   
-   1. A `WebApplicationInfo` object needs to be added into your Teams app manifest to enable SSO in the Teams app.[HelpLink.](https://learn.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#webapplicationinfo)
+   1. A `WebApplicationInfo` object needs to be added into your Teams app manifest to enable SSO in the Teams app.
 
     For example: open your Teams app manifest template, and append the following object in the manifest:
 
