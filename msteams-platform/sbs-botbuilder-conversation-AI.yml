@@ -15,7 +15,7 @@ items:
 - durationInMinutes: 1
   content: |
     > [!NOTE]
-    > Teams AI library is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).  
+    > Teams AI library is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
     
     Start Microsoft Teams app development with your first Teams AI library app. 
     
@@ -95,7 +95,7 @@ items:
 
    This condition is more common on Linux and macOS systems.
 
-   Ensure you add the npm global cache to your path. This step is normally done as part of the Node.js installer.  
+   Ensure you add the npm global cache to your path. This step is normally done as part of the Node.js installer.
 
    You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
 
@@ -238,7 +238,7 @@ items:
 
     # [Command line](#tab/cli)
 
-    Use the `teamsfx` CLI to create your first project.  Start from the folder where you want to create the project folder.
+    Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
 
     ``` bash
     teamsfx new
@@ -292,7 +292,7 @@ items:
     # [Visual Studio Code](#tab/viscode)
 
     1. Open Visual Studio Code.
-    1. Select the Teams Toolkit  :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
+    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
     1. Select **Sign in to M365**.
 
         Your default web browser opens to let you sign in to the account.
@@ -346,13 +346,13 @@ items:
 
        ```
 
-    1. Go to **Explorer** > **env** > **.env.local.user** and add the following code after `SECRET_BOT_PASSWORD` and enter the OpenAI key that you've generated.
+    1. Go to **Explorer** > **env** > **.env.local.user**. After `SECRET_BOT_PASSWORD`, enter the OpenAI key that you've generated.
 
        ```env/.env.local.user
         SECRET_OPENAI_API_KEY=sk***********************
        ```
 
-    1. If you're using Azure OpenAI, add this code to your **Explorer** > **env** > **.env.local** file as well.
+       1. If you're using Azure OpenAI, add the following code to the **.env.local**:
 
        ```env/.env.local
         AZURE_OPENAI_ENDPOINT=https://********.openai.azure.com/
@@ -364,7 +364,7 @@ items:
        openAIKey: process.env.SECRET_OPENAI_API_KEY
        ```
 
-       If you're using Azure OpenAI, add this as well:
+       1. If you're using Azure OpenAI, add the following code to the `config.ts` file:
 
        ```config.ts
        openAIEndpoint: process.env.AZURE_OPENAI_ENDPOINT
@@ -378,7 +378,7 @@ items:
        SECRET_OPENAI_API_KEY: ${{SECRET_OPENAI_API_KEY}}
        ```
 
-       If you're using Azure OpenAI, add this as well:
+       1. If you're using Azure OpenAI, add the following code to the `teamsapp.local.yml` file::
 
        ```teamsapp.local.yml
         AZURE_OPENAI_ENDPOINT: ${{AZURE_OPENAI_ENDPOINT}}
@@ -421,22 +421,23 @@ items:
             });
             const promptManager = new DefaultPromptManager(path.join(__dirname, './prompts' ));
             ````
-            * Planner: The `OpenAIPlanner` is a class that implements an interface called `Planner`. Planner calls the OpenAI's large language model (LLM)s  `text-davinci-003` model for text completion. You can use the `OpenAIPlanner` or AzureOpenAIPlanner. If your using the AzureOpenAIPlanner, ensure that you define the endpoint property.
+
+            * Planner: The `OpenAIPlanner` is a class that implements an interface called `Planner`. Planner calls the OpenAI's large language model (LLM)s `text-davinci-003` model for text completion. You can use the `OpenAIPlanner` or AzureOpenAIPlanner. If your using the AzureOpenAIPlanner, ensure that you define the endpoint property.
 
             * PromptManager: `promptManager` Allows you to register your prompts and load a prompt template into the AI component. All the functions related to the prompt manager are available in the `DefaultPromptManager`.  The prompt manager parses the prompts defined in the `prompt` folder. You can replace or override your own functionality in the prompt manager. 
 
             * Moderator: The `OpenAIModerator` reviews both user's input and the model output to detect harmful speech, such as hate speech, self-harm, and violence.
 
-        1. If you are using Azure OpenAI, use AzureOpenAIPlanner instead of `OpenAIPlanner` with this statement:
+           If you are using Azure OpenAI, use `AzureOpenAIPlanner` instead of `OpenAIPlanner`:
         
-            ```typescript
-            const planner = new AzureOpenAIPlanner({
-                apiKey: apiKey,
-                endpoint: config.endpoint,
-                defaultModel: 'text-davinci-003',
-                logRequests: true
-            });
-            ```
+             ```typescript
+                const planner = new AzureOpenAIPlanner({
+                    apiKey: apiKey,
+                    endpoint: config.endpoint,
+                    defaultModel: 'text-davinci-003',
+                    logRequests: true
+                });
+              ```
 
         1. After `const promptManager`, add the following code in a new line to define storage and application:
 
@@ -815,8 +816,3 @@ items:
 
     You've completed the tutorial.
 
-   
-
-
-    
-    
