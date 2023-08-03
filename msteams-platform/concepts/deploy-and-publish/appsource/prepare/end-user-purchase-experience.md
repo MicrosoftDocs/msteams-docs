@@ -14,18 +14,22 @@ Add functionality to your Teams experience by subscribing and managing licenses 
 
 ## Subscription experience
 
-The following example shows how users can purchase subscription plans for a fictional Teams app called *Recloud*:
+The following example shows how users can purchase subscription plans for a Teams app:
 
-1. In the Teams store, find and select the *Recloud* app.
+1. In the Teams store, find and select the app you want to purchase the subscription.
 
 1. In the app details dialog, select **Buy a subscription**.
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app.":::
 
-Select your country or region to see subscription plans for your location. 
+1. Select your country or region to see subscription plans for your location.
 
+    :::image type="content" source="~/assets/images/saas-offer/add-region.png" alt-text="Screenshot shows option to select the country or region.":::
 
-1. In the **Choose a subscription plan** dialog, choose the plan you want and select **Checkout**. (Note: Private plans are visible only to users in orgs you're providing the offer to. These plans are indicated with a **Special offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon.)
+1. In the **Choose a subscription plan** dialog, decide the plan you want and select **Start trail**.
+
+    > [!NOTE]
+    > Private plans are visible only to users in orgs you're providing the offer to. These plans are indicated with a **Special offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon.
 
     :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Screenshot shows selecting the appropriate subscription plan.":::
 
