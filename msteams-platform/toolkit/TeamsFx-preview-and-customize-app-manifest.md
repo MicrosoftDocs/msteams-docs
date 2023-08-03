@@ -191,7 +191,7 @@ You can either sideload for local or deploy for Azure to preview the manifest fi
 
 1. Select **Project** > **Teams Toolkit**.
 
-1. To trigger, select **Prepare Teams App Dependencies** or **Provision in the Cloud** that generates environment variables for local or remote Teams app.
+1. To trigger, select **Prepare Teams App Dependencies** or **Provision in the Cloud...** that generates environment variables for local or remote Teams app.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/provision-in-the-cloud.png" alt-text="Screenshot shows the app trigger in local or remote.":::
 
@@ -203,7 +203,7 @@ Upload zip app package before you can preview the manifest file:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/zip-app-package.png" alt-text="Screenshot shows the zip app package for local or azure.":::
 
-1. You can also upload zip app package from **Solution Explorer** section, right-click on **MyTeamsApp2**. In this scenario the project name is MyTeamsApp8.
+1. You can also upload zip app package from **Solution Explorer** section, right-click on **MyTeamsApp2**. In this scenario the project name is MyTeamsApp2.
 
 1. Select **Teams Toolkit** > **Zip App Package**, then select either **For Local** or **For Azure**.
 
@@ -227,7 +227,9 @@ Select **Project** > **Teams Toolkit** > **Update Manifest in Teams Developer Po
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/update-teams-app.png" alt-text="Screenshot shows update manifest in teams developer portal.":::
 
-You can also sync the local changes to Developer Portal from the context menu of **Solution Explorer** section. After the local changes are synced, you can preview the manifest file in Teams Developer Portal.
+You can also sync the local changes to Developer Portal from the context menu of **Solution Explorer** section, right-click on **MyTeamsApp2**.
+
+Select **Teams Toolkit** > **Update Manifest in Teams Developer Portal**.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/solution-update-teams-app.png" alt-text="Screenshot shows solution update to teams app.":::
 
@@ -238,7 +240,7 @@ The changes are updated to Developer Portal.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-overwrite.png" alt-text="Screenshot shows overwrite of app in teams developer portal.":::
 
-When you create a Teams command bot using Visual Studio, two app IDs are registered in Microsoft Azure Active Directory (Azure AD). You can identify the app IDs in the Developer Portal as **Application (client) ID** under **Basic information** and existing **bot ID** under **App features**.
+When you create a Teams command bot using Visual Studio, two app IDs are registered in Azure Active Directory (Azure AD). You can identify the app IDs in the Developer Portal as **Application (client) ID** under **Basic information** and existing **bot ID** under **App features**.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-dev-portal-basic-info.png" alt-text="Screenshot shows basic information of the app in teams developer portal.":::
 
