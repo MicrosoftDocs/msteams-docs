@@ -203,7 +203,7 @@ Upload zip app package before you can preview the manifest file:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/zip-app-package.png" alt-text="Screenshot shows the zip app package for local or azure.":::
 
-1. You can also upload zip app package from **Solution Explorer** section, right-click on **MyTeamsApp2**. In this scenario the project name is MyTeamsApp2.
+1. You can also upload zip app package from **Solution Explorer** section, right-click on **MyTeamsApp2**. In this scenario, the project name is MyTeamsApp2.
 
 1. Select **Teams Toolkit** > **Zip App Package**, then select either **For Local** or **For Azure**.
 
@@ -217,7 +217,7 @@ To preview the manifest file, Teams Toolkit generates the zip app package. The f
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/preview-manifest.png" alt-text="Screenshot shows the preview of manifest.":::
 
-This displays the preview of the manifest file under `appPackage/build` in Visual Studio.
+The preview of the manifest file under `appPackage/build` in Visual Studio is displayed.
 
 ### Sync local changes to Developer Portal
 
