@@ -118,7 +118,7 @@ The long description can provide a narrative that highlights your apps features,
 
 It's strongly recommended that your long description has information on the following pointers:
 
-* Define about your product is and the industries it’s aligned with.
+* Define about your product and the industries it’s aligned with.
 * Specify the target audience and customer segments.
 * Denote the unique values of your app in Microsoft Teams.
 * Highlight the resolutions that your app provides on customer problems.
