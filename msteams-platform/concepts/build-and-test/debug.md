@@ -3,6 +3,7 @@ title: Choosing a setup to test and debug your app
 description: In this module, learn options for testing and debugging Microsoft Teams apps in local and cloud-hosted environment.
 ms.localizationpriority: medium
 ms.topic: conceptual
+ms.date: 08/28/2022
 ---
 
 # Choose a test setup and debug your Teams app

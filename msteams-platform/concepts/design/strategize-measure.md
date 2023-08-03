@@ -5,6 +5,7 @@ description: Learn about deciding what to measure using instrumentation data for
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.date: 12/09/2022
 ---
 
 # Strategize and decide what to measure

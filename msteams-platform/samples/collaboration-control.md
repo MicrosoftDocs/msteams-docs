@@ -5,6 +5,7 @@ description: In this module, learn how Collaboration controls allow makers to bu
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
+ms.date: 01/18/2023
 ---
 
 # Collaboration controls

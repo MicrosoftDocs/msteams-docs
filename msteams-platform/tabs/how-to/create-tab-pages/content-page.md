@@ -3,6 +3,7 @@ title: Create a content page
 description: Learn about webpage within Teams client, and is part of personal, channel, or group custom tab. Create content page and embed it as webview inside task module.
 ms.localizationpriority: high
 ms.topic: conceptual
+ms.date: 11/23/2022
 ---
 
 # Create a content page
