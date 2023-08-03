@@ -4,6 +4,7 @@ description: Learn about invoking and dismissing task modules, task info object,
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.date: 01/29/2023
 ---
 
 # Invoke and dismiss task modules

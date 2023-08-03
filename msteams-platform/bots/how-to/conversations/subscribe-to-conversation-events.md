@@ -1,11 +1,10 @@
 ---
 title: Conversation events
 author: WashingtonKayaker
-description: Work with conversation events from your Microsoft Teams bot, channel event updates, team member events, and message reaction events with samples (.NET,Node.js,Python).
+description: In this module, learn about conversation update, message reaction, app installation update events, uninstall behavior, and events and error handling for Microsoft Teams bots.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-keywords: events bot channel message reaction conversation
 ---
 
 # Conversation events in your Teams bot

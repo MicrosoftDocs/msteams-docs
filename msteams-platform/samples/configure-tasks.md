@@ -5,6 +5,7 @@ description: In this module, learn how to configure Tasks for external clients i
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
+ms.date: 09/30/2022
 ---
 
 # Configure Tasks for external clients

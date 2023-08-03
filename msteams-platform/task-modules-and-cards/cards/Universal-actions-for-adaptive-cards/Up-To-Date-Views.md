@@ -4,6 +4,7 @@ description: In this module, learn about up to date cards views using Universal 
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.date: 12/14/2022
 ---
 
 # Up to date cards
@@ -265,4 +266,4 @@ The following code provides an example of Adaptive Cards sent as response of `ad
 * [Cards and task modules](../../cards-and-task-modules.md)
 * [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
 * [User Specific Views](User-Specific-Views.md)
-* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)*
+* [Form completion feedback](../cards-format.md#form-completion-feedback)

@@ -4,6 +4,7 @@ description: Update Teams manifest for enabling Single sign-on (SSO) for tabs an
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
+ms.date: 11/21/2022
 ---
 # Update manifest for SSO and preview app
 
@@ -63,7 +64,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
    1. `contentUrl`
    2. `configurationUrl`
    3. `validDomains`
-6. Save the Teams app manifest file.
+6. Save the Teams app manifest file. For more information, see [app manifest](../../../resources/schema/manifest-schema.md).
 
 <br>
 <details>

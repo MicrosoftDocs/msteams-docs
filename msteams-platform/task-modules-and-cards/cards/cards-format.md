@@ -185,7 +185,7 @@ The following table describes the newly supported user mention IDs:
 |IDs  | Supporting capabilities | Description | Example |
 |----------|--------|---------------|---------|
 | Azure AD Object ID | Bot, Connector |  Azure AD user’s Object ID | 49c4641c-ab91-4248-aebb-6a7de286397b |
-| UPN | Bot, Connector | Azure AD user’s UPN | john.smith@microsoft.com |
+| UPN | Bot, Connector | Azure AD user’s UPN | `john.smith@microsoft.com` |
 
 #### User mention in bots with Adaptive Cards
 
@@ -299,6 +299,127 @@ Example for user mention in Incoming Webhook as follows:
 Following image illustrates user mention in Incoming Webhook:
 
 :::image type="content" source="../../assets/images/authentication/user-mention-in-incoming-webhook.png" alt-text="User mention in Incoming Webhook":::
+
+### People icon in an Adaptive Card
+
+People icon helps users to view the images of users in an Adaptive Card. You can insert an image and apply all the properties supported on images.
+
+There are two types of people icons that are supported in an Adaptive Card:
+
+* Persona: If you want to show a single user in an Adaptive Card, the Adaptive Card displays the people icon and the name of the user.
+
+    The following is a JSON example of a Persona card:
+
+    ```json
+    {
+      "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+      "type": "AdaptiveCard",
+      "version": "1.0.0",
+      "body": [
+    {
+          "type": "TextBlock",
+          "text": "Persona",
+          "weight": "bolder"
+        },
+        {
+          "type": "Component",
+          "name": "graph.microsoft.com/user",
+          "view": "compact",
+          "properties": {
+            "id": "65f50003-e15d-434a-9e14-0fcfeb3d7817",
+            "displayName": "Daniela Mandera",
+            "userPrincipalName": "damandera@microsoft.com"
+          }
+        }
+      ]
+    }
+    ```
+
+* Persona Set: If you want to show multiple users in an Adaptive Card, the Adaptive Card displays only the people icon of the users.
+
+    The following is a JSON example of a Persona Set:
+
+    ```json
+    {
+      "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+      "type": "AdaptiveCard",
+      "version": "1.0.0",
+      "body": [
+        {
+          "type": "TextBlock",
+          "text": "Persona Set",
+          "weight": "bolder"
+        },
+        {
+          "type": "Component",
+          "name": "graph.microsoft.com/users",
+          "view": "compact",
+          "properties": {
+            "users": [
+              {
+                "id": "65f50003-e15d-434a-9e14-0fcfeb3d7817",
+                "displayName": "Daniela Mandera",
+                "userPrincipalName": "damandera@microsoft.com"
+              },
+              {
+                "id": "65f50003-e15d-434a-9e14-0fcfeb3d7817",
+                "displayName": "Daniela Mandera",
+                "userPrincipalName": "damandera@microsoft.com"
+              }
+            ]
+          }
+        }
+      ]
+    }
+    ```
+
+  > [!NOTE]
+  > You can't customize the style of the Persona and Persona Set in an Adaptive Card.
+
+The following image is an example of the people icon in an Adaptive Card:
+
+:::image type="content" source="../../assets/images/adaptive-cards/people-icon-persona-persona-set.png" alt-text="Screenshot shows an example of the persona and persona set type people icon in an Adaptive Card.":::
+
+#### Query parameters
+
+The following table lists the query parameters:
+
+|Property name  |description  |
+|---------|---------|
+|`type`     |    `component`     |
+|`name`     |   `graph.microsoft.com/users`. Search all members across the organization.      |
+|`view`     |   `compact`      |
+|`properties`|Passed to the component template|
+|`id`     | User's MRI  |
+|`displayName`     |   Name of the user     |
+|`userPrincipalName`|The user's principal name of the account in Azure AD|
+
+Adaptive Components are high-level components powered by [templating](/adaptive-cards/templating/) and native Adaptive Card elements. The type `component` can be used anywhere inside the card body and the component data is defined in the `properties` attribute.  The component data under `properties` is passed directly to the component. The `properties` property defines the format for Persona and Persona Set and all other  properties under `properties` is ignored by `component` type in the Adaptive Card schema.
+
+Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Azure Active Directory (Azure AD) information, such as `name`, `id` and `userPrincipalName`. For more information, see [Fetch the roster or user profile](../../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
+
+The following is an example of the people icon in an Adaptive Card on Teams desktop and mobile clients:
+
+**Desktop client**:
+
+:::image type="content" source="../../assets/images/adaptive-cards/people-icon-persona-persona-set.png" alt-text="Screenshot shows a persona and persona set icons in an Adaptive Card in Teams desktop client.":::
+
+When a user hovers on a people icon, the people card of that user is displayed.
+
+**Mobile client**
+
+:::row:::
+
+:::column:::
+  :::image type="content" source="../../assets/images/adaptive-cards/people-icon-mobile-1.png" alt-text="Screenshot shows an example of people icon in a persona and persona set in Teams mobile client.":::
+:::column-end:::
+:::column:::
+  :::image type="content" source="../../assets/images/adaptive-cards/people-icon-mobile-2.png" alt-text="Screenshot shows an example of people icon in a persona and persona set in Teams mobile.":::
+:::column-end:::
+
+:::row-end:::
+
+When a user selects a people icon, it displays the people card of that user.
 
 ### Information masking in Adaptive Cards
 
@@ -517,6 +638,43 @@ The following code shows an example of formatting for Markdown connector cards:
 ```
 
 ---
+
+### Form completion feedback
+
+You can build form completion feedback using an Adaptive Card. Form completion message appears in Adaptive Cards while sending a response to the bot. The message can be of two types, error or success:
+
+* **Error**: When a response sent to the bot is unsuccessful, **Something went wrong, Try again** message appears.
+
+    :::image type="content" source="../../assets/images/Cards/error-message.png" alt-text="Error message" border="false":::
+
+* **Success**: When a response sent to the bot is successful, **Your response was sent to the app** message appears.
+
+    :::image type="content" source="../../assets/images/Cards/success.PNG" alt-text="Success message"border="true":::
+
+    You can select **Close** or switch chat to dismiss the message.
+
+    If you don't want to display the success message, set the attribute `hide` to `true` in the `msTeams` `feedback` property. Following is an example:
+
+     ```json
+        "content": {
+            "type": "AdaptiveCard",
+            "title": "Card with hidden footer messages",
+            "version": "1.0",
+            "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Submit",
+                "msTeams": {
+                    "feedback": {
+                    "hide": true
+                    }
+                }
+            }
+            ]
+        } 
+     ```
+
+For more information on cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
 
 ## Adaptive Cards overflow menu
 
@@ -785,3 +943,4 @@ You can test formatting in your own cards by modifying this code.
 * [Schema explorer for Adaptive Cards](https://adaptivecards.io/explorer/TextBlock.html)
 * [Create connectors for Microsoft 365 Groups](../../webhooks-and-connectors/how-to/connectors-creating.md)
 * [Create Incoming Webhooks](../../webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Adaptive Card Templating SDKs](/adaptive-cards/templating/sdk)
