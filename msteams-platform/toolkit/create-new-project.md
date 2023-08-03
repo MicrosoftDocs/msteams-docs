@@ -95,7 +95,7 @@ The following example shows a basic Teams tab app directory structure:
 | `env` | Stores different environment parameters. |
 | `infra` | Azure `bicep` template files. Used for deploy your Teams app to Azure. |
 | `src` | Source code for the Tab capability, including your front-end app, UI components and the privacy notice, terms of use, |
-| `src\components\` | The main app which handles the initialization and routing. |
+| `src\components\` | The main app, which handles the initialization and routing. |
 | `src\index.jsx` | Entry point for the front-end app. |
 | `teamsapp.yml` | This configuration file defines the Teams Toolkit behavior for provision, deploy, and publish lifecycle. You can customize this file to change the behavior of Teams Toolkit in each lifecycle. |
 | `teamsapp.local.yml` | This overrides teamsapp.yml with actions that enable local execution and debugging. |
@@ -194,7 +194,7 @@ The steps to create a new Teams app are similar for all types of apps except not
 
     * The **Create a new project** window appears.  
 
-1. Enter **teams** in the search box and in the list, select **Microsoft Teams App** from the search results.
+1. Enter **Teams** in the search box and in the list, select **Microsoft Teams App** from the search results.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/new-project-template-vs.png" alt-text="Screenshot shows the search and select Microsoft Teams app" lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/new-project-template-vs.png":::
 
@@ -211,7 +211,7 @@ The steps to create a new Teams app are similar for all types of apps except not
 
     1. Select the folder location where you want to create the project workspace.
     1. Enter a different solution name, if you want.
-    1. If required, select the checkbox to save the project and solution in the same folder. For this tutorial, you don't need this option.
+    1. If necessary, select the checkbox to save the project and solution in the same folder. For this tutorial, you don't need this option.
     1. Select **Create**.
 
    The **Create a new Teams application** window appears.
@@ -251,7 +251,7 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 |---------|---------|
 |**Notification Bot**     |The Notification bot app can send notifications to your Teams client. There are multiple ways to trigger the notification. For example, trigger the notification by HTTP request, or by time. You can select triggered notification based on your business scenario.         |
 |**Command Bot**     |You can type a command to interact with the bot using the command bot app.         |
-|**Workflow Bot**     |You can interact with the bot using the automate repetitive workflow action.         |
+|**Workflow Bot**     |You can interact with the bot using automate repetitive workflow action.         |
 |**Tab**     |Tab app shows a webpage inside Teams, and it enables single sign-on (SSO) using Teams account.         |
 |**Message Extension**     |Message extension app implements simple features like creating an Adaptive Card, searching Nugget packages, unfurling links for the `dev.botframework.com` domain.         |
 
@@ -266,5 +266,5 @@ After the project is created, Teams Toolkit automatically opens **GettingStarted
 * [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
 * [Prerequisites for all types of environment and create your Teams app](tools-prerequisites.md)
 * [Prepare to build apps using Microsoft Teams Toolkit](build-environments.md)
-* [Provision cloud resources using Visual Studio](provision.md)
-* [Deploy Teams app to the cloud using Visual Studio](deploy.md)
+* [Provision cloud resources](provision.md)
+* [Deploy Teams app to the cloud](deploy.md)
