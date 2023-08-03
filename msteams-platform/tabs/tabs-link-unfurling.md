@@ -158,14 +158,14 @@ The following is a JSON code example to create a Collaborative Stage View button
 
 Following is the process to invoke Collaborative Stage View:
 
-* When the user shares a URL in a Teams chat, the bot receives an `composeExtension/queryLink` invoke request. The bot returns an Adaptive Card with the type `tab/tabInfoAction`.
+* When the user shares a URL in a Teams chat, the bot receives an `composeExtensions/queryLink` invoke request. The bot returns an Adaptive Card with the type `tab/tabInfoAction`.
 * When the user selects the action button on the Adaptive Card, Collaborative Stage View opens based on the content in the Adaptive Card.
 
 > [!NOTE]
 >
 > * Passing a Stage View deep link into an Adaptive Card doesn't open the Collaborative Stage View. A Stage View deep link always opens the Stage View Modal.
 > * Ensure that the URL of the content is within the list of `validDomains` in your app manifest.
-> * The invoke request type must be a `composeExtension/queryLink`.
+> * The invoke request type must be a `composeExtensions/queryLink`.
 > * `invoke` workflow is similar to the `appLinking` workflow.
 > * To maintain consistency, it is recommended to name `Action.Submit` as `Open`.
 > * `websiteUrl` is a required property to be passed in the `TabInfo` object.
