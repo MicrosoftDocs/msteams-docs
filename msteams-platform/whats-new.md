@@ -37,7 +37,7 @@ Teams platform features that are available to all app developers.
 
 **2023 August**
 
-***August 03,2023***: [Send a proactive message using AAD ID](bots/how-to/conversations/send-proactive-messages.md)
+***August 03, 2023***: [Send a proactive message using AAD ID](bots/how-to/conversations/send-proactive-messages.md)
 
 :::column-end:::
 :::row-end:::
