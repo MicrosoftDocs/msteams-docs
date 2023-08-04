@@ -12,7 +12,26 @@ ms.date: 12/26/2022
 
 You can create a Software as a Service (SaaS) offer and test the end-to-end purchase experience for your monetized apps in Teams. Users added as the preview audience for the Teams app can review your SaaS offer before you publish.
 
-:::image type="content" source="~/assets/images/saas-offer/monetize-flow5.png" alt-text="Diagram shows the process of testing the SaaS offer.":::
+:::row:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow.png" link="include-saas-offer.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-2.png" link="prerequisites.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow3.png" link="create-saas-offer.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow4.png" link="manage-third-party-apps-license.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow5.png" link="Test-preview-for-monetized-app.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow6.png" link="publish-saas-offer-app.md" border="false":::
+   :::column-end:::
+:::row-end:::
 
 When the offer is in **Publisher signoff** stage, preview links for the respective platforms are given below the **Go live** option. We recommend you to verify the end-to-end purchasing experience before publishing your SaaS offer. You can test and verify the end-to-end transaction in Teams by creating a separate offer for testing.
 

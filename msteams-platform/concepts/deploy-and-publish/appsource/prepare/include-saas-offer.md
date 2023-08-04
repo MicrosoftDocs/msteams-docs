@@ -14,10 +14,10 @@ SaaS apps available for purchase in Microsoft commercial marketplace, either Azu
 
 :::row:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow.png" link="prerequisites.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow.png" link="include-saas-offer.md" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-2.png" link="include-saas-offer.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-2.png" link="prerequisites.md" border="false":::
    :::column-end:::
    :::column:::
       :::image type="icon" source="~/assets/images/saas-offer/monetize-flow3.png" link="create-saas-offer.md" border="false":::

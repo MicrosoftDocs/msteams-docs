@@ -11,9 +11,28 @@ ms.date: 01/31/2023
 
 If you decide to sell your SaaS offer through Microsoft, you need to fulfill the technical configurations and gather the required technical information. It helps to prevent any blockers while creating the offer. This article helps you prepare the technical configurations and requirements to create a SaaS offer.
 
-The technical configurations differ based on the listing option you opt for your SaaS offer. Before creating a SaaS offer, you must ensure that the technical fulfillments are in place.
+:::row:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow.png" link="include-saas-offer.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-2.png" link="prerequisites.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow3.png" link="create-saas-offer.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow4.png" link="manage-third-party-apps-license.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow5.png" link="Test-preview-for-monetized-app.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow6.png" link="publish-saas-offer-app.md" border="false":::
+   :::column-end:::
+:::row-end:::
 
-:::image type="content" source="~/assets/images/saas-offer/monetize-flow.png" alt-text="Diagram shows the process for how to include a SaaS offer with your Teams app with the first phase highlighted.":::
+The technical configurations differ based on the listing option you opt for your SaaS offer. Before creating a SaaS offer, you must ensure that the technical fulfillments are in place.
 
 > [!NOTE]
 > The *Contact me* listing option have no technical requirements to be met.

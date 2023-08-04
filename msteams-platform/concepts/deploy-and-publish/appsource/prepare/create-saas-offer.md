@@ -12,7 +12,26 @@ ms.date: 07/11/2023
 
 Create your offer in Partner Center and configure the offer to publish in the marketplace. The decision to sell through Microsoft, details of the offer, and pricing are configured after creating the offer. Check if the prerequisites are done before you create a SaaS offer. You must also have a commercial marketplace account in Partner Center.
 
-:::image type="content" source="~/assets/images/saas-offer/monetize-flow3.png" alt-text="Diagram shows the process on how to create a SaaS offer.":::
+:::row:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow.png" link="include-saas-offer.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-2.png" link="prerequisites.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow3.png" link="create-saas-offer.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow4.png" link="manage-third-party-apps-license.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow5.png" link="Test-preview-for-monetized-app.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow6.png" link="publish-saas-offer-app.md" border="false":::
+   :::column-end:::
+:::row-end:::
 
 This guide helps you to create premium and enterprise SaaS offers on top of the existing basic free app.
 

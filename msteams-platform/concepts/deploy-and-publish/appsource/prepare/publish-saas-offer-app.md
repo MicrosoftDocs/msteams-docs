@@ -12,7 +12,26 @@ ms.date: 07/11/2023
 
 When the offer is live, you can link the offer to your SaaS app and publish the subscriptions in the store. The SaaS app is now available in the store for purchase with the configured SaaS offers. The users can purchase paid apps from the marketplace.
 
-:::image type="content" source="~/assets/images/saas-offer/monetize-flow6.png" alt-text="Diagram shows the process of creating a SaaS offer with publish stage highlighted.":::
+:::row:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow.png" link="include-saas-offer.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-2.png" link="prerequisites.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow3.png" link="create-saas-offer.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow4.png" link="manage-third-party-apps-license.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow5.png" link="Test-preview-for-monetized-app.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow6.png" link="publish-saas-offer-app.md" border="false":::
+   :::column-end:::
+:::row-end:::
 
 ## Configure SaaS offer to your app
 

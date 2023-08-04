@@ -12,7 +12,26 @@ ms.date: 04/06/2023
 
 Independent software vendors (ISVs) can configure Microsoft license management for third-party SaaS apps in Partner Center as part of the offer publishing. This allows Teams admins or users to easily assign, unassign, use, and track SaaS licenses for their third-party app subscriptions within Teams.
 
-:::image type="content" source="~/assets/images/saas-offer/monetize-flow4.png" alt-text="Diagram shows the process to set up license management for the SaaS offer.":::
+:::row:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow.png" link="include-saas-offer.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-2.png" link="prerequisites.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow3.png" link="create-saas-offer.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow4.png" link="manage-third-party-apps-license.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow5.png" link="Test-preview-for-monetized-app.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow6.png" link="publish-saas-offer-app.md" border="false":::
+   :::column-end:::
+:::row-end:::
 
 To enable Microsoft to manage licenses for a third-party app in Teams, you must have opted for Microsoft to manage licenses on your behalf while creating the offer. You must then create one or more plans that have subscription pricing, where the user can purchase subscriptions with licenses to use your app. Microsoft then manages the purchased licenses on your behalf.
 
