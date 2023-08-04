@@ -212,7 +212,7 @@ No. Apps will get this capability by default.
 <summary><b>What if my app doesn't support one of the modes, or if the scenario is only intended to work in one of the modes?</b></summary>
 
 Teams support both modes by default and it's not possible to have the app work in only one mode.
- However, if this is a hard requirement for your app, please reach out to Teams support so that we can understand the new requirement and put it in our backlog.
+ If this requirement is demanding for your app, reach out to Teams support.
 
 <br>
 
@@ -222,7 +222,7 @@ Teams support both modes by default and it's not possible to have the app work i
 
 <details>
 
-<summary><b>In app empty state I see scroll missing, how do I fix that?</b></summary>
+<summary><b>How can I fix the scroll missing in the app empty state?</b></summary>
 
 Add `<FlexColumn scroll></FlexColumn>` to the empty state for the app.
 
