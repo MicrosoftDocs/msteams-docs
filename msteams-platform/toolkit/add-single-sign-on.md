@@ -148,13 +148,13 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
     * Update `file/createOrUpdateJsonFile`:
       Add the following environment variables when you debug locally:
-        a. ClientId: Azure AD app client ID
-        b. ClientSecret: Azure AD app client secret
-        c. OAuthAuthority: Azure AD app oauth authority
-      For more information, see [HelpLink](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#fileupdatejson)
+        1. ClientId: Azure AD app client ID.
+        1. ClientSecret: Azure AD app client secret.
+        1. OAuthAuthority: Azure AD app oauth authority.
+      
+        For more information, see [HelpLink](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#fileupdatejson)
 
-    In both `teamsapp.yml` and `teamsapp.local.yml` files:
-    * Add the following lines under `provision` to create Azure AD app.
+    * In both `teamsapp.yml` and `teamsapp.local.yml` files add the following lines under `provision` to create Azure AD app.
 
       ```yml
       - uses: aadApp/create
@@ -203,7 +203,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
      ```
 
 1. Update Infra
-   Azure AD related configs needs to be configured in your remote service. Following example shows the configs on Azure Webapp.
+   Azure AD related configs need to be configured in your remote service. The following example shows the configs on Azure Webapp.
      1. TeamsFx__Authentication__ClientId: Azure AD app client ID.
      2. TeamsFx__Authentication__ClientSecret: Azure AD app client secret.
      3. TeamsFx__Authentication__OAuthAuthority: Azure AD app oauth authority.
@@ -232,7 +232,6 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
    ```
    param location string = resourceGroup().location
    ```
-
    and add following lines:
 
    ```
@@ -294,8 +293,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
     }
    ```
 
-1. Update `appsettings.json` and `appsettings.Development.json`
-  Azure AD related configs needs to be configure to your .Net project settings:
+1. Update `appsettings.json` and `appsettings.Development.json`. Azure AD related configs needs to be configure to your .Net project settings:
 
     ```
     TeamsFx: {
@@ -326,8 +324,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
    }
    ```
 
-1. Update source code. With all changes above, your environment is ready and can update your code to add SSO to your Teams app.
-   You can find samples in following pages:
+1. Update source code. With all changes above, your environment is ready and you can update your code to add SSO to your Teams app. You can find samples in following pages:
     * TeamsFx SDK: <https://www.nuget.org/packages/Microsoft.TeamsFx/>
     * Sample Code: under `TeamsFx-Auth/Tab`
   
@@ -391,7 +388,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
 ## Teams bot application
 
-1. Update AAD app manifest. `TeamsFx-Auth/aad.manifest.template.json` is an Azure AD manifest template. You can copy and paste this file to any folder of your project, rename as `aad.manifest.json` and take notes of the path to this file. Because the path will be useful later. And you need to make the following updates in the template to create/update an Azure AD app for SSO:
+1. Update AAD app manifest. `TeamsFx-Auth/aad.manifest.template.json` is an Azure AD manifest template. You can copy and paste this file to any folder of your project, rename as `aad.manifest.json` and note the path to this file for later reference. Make the following updates in the template to create/update an Azure AD app for SSO.
 
    1. "identifierUris": Used to uniquely identify and access the resource. You need to set correct Redirect Uris into "identifierUris" for successfully identify this app.
 
@@ -403,9 +400,9 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
     ]
     ```
 
-    > Note: You can use use `${{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}`.
+    > Note: You can use `${{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}`.
 
-   1. "replyUrlsWithType": List of registered redirect_uri values that Azure AD will accept as destinations when returning tokens. You need to set necessary Redirect Uris into "replyUrlsWithType" for successfully returning token.
+   1. "replyUrlsWithType": It lists registered redirect_uri values that Azure AD will accept as destinations when returning tokens. You need to set necessary Redirect Uris into "replyUrlsWithType" for successfully returning token.
 
     For example:
 
@@ -447,7 +444,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
     }
     ```
 
-    > Note: You need to update the value of resource to your `identifierUris` configed in step 1.i, and use ${{ENV_NAME}} to reference envs in `env/.env.{TEAMSFX_ENV}`.
+    > Note: You need to update the value of resource to your `identifierUris` configured in step 1.i, and use ${{ENV_NAME}} to reference envs in `env/.env.{TEAMSFX_ENV}`.
 
     Example for TeamsFx Bot template
 
@@ -490,23 +487,17 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
 1. Update `teamsapp.yml` and `teamsapp.local.yml` files:
    Azure AD related changes and configs needs to be added into your `yml` files:
-    * add `aadApp/create` under `provision`:
-      For creating new Azure AD apps used for SSO.
-      [HelpLink](https://aka.ms/teamsfx-actions/aadapp-create)
-    * add `aadApp/update` under `provision`
-      For updating your Azure AD app with AAD app manifest in step 1.
-      [HelpLink](https://aka.ms/teamsfx-actions/aadapp-update)
-    * update `file/createOrUpdateJsonFile`
-      For adding following environment variables when local debug:
-        a. ClientId: Azure AD app client id
-        b. ClientSecret: Azure AD app client secret
-        c. OAuthAuthority: Azure AD app oauth authority
-      [HelpLink](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#fileupdatejson)
+    * Add `aadApp/create` under `provision` for creating new Azure AD apps used for SSO. For more information [See this](https://aka.ms/teamsfx-actions/aadapp-create)
+    * Add `aadApp/update` under `provision` for updating your Azure AD app with AAD app manifest in step 1. For more information [See this](https://aka.ms/teamsfx-actions/aadapp-update)
+    * Update `file/createOrUpdateJsonFile` for adding the following environment variables during local debug:
+        1. ClientId: Azure AD app client id.
+        1. ClientSecret: Azure AD app client secret.
+        1. OAuthAuthority: Azure AD app oauth authority. For more information [See this](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#fileupdatejson)
 
    Example for TeamsFx Bot template
 
    In both `teamsapp.yml` and `teamsapp.local.yml` files:
-    * Add following lines under `provision` to create AAD app.
+    * Add the following lines under `provision` to create AAD app.
 
       ```
       - uses: aadApp/create
@@ -525,7 +516,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
       > Note: Replace the value of "name" with your expected AAD app name.
 
-    * Add following lines under `provision` to configure AAD app with AAD app template in the step 1.
+    * Add the following lines under `provision` to configure AAD app with AAD app template in the step 1.
 
       ```
       - uses: aadApp/update
@@ -558,7 +549,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
                   InitiateLoginEndpoint: https://${{BOT_DOMAIN}}/bot-auth-start
       ```
 
-1. Update Infra. AAD related configs needs to be configure to your remote service. Following example shows the configs on Azure Webapp.
+1. Update Infra. AAD related configs to configure remote service. The following example shows the configs on Azure Webapp.
     1. TeamsFx__Authentication__ClientId: Azure AD app client ID.
     1. TeamsFx__Authentication__ClientSecret: Azure AD app client secret.
     1. TeamsFx__Authentication__OAuthAuthority: Azure AD app oauth authority.
@@ -567,7 +558,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
    Example for TeamsFx Bot template
 
-   Open `infra/azure.parameters.json` and add following lines into `parameters`:
+   Open `infra/azure.parameters.json` and add the following lines into `parameters`:
 
    ```
    "m365ClientId": {
@@ -590,7 +581,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
    param location string = resourceGroup().location
    ```
 
-   and add following lines:
+   and add the following lines:
 
    ```
    param m365ClientId string
@@ -601,7 +592,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
    param m365ClientSecret string
    ```
 
-   Add following lines before output
+   Add the following lines before output
 
    ```
    resource webAppSettings 'Microsoft.Web/sites/config@2021-02-01' = {
@@ -621,7 +612,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
    > Note: If you want add additional configs to your Azure Webapp, please add the configs in the webAppSettings.
 
-1. Update `appsettings.json` and `appsettings.Development.json`. AAD related configs needs to be configure to your .Net project settings:
+1. Update `appsettings.json` and `appsettings.Development.json`. AAD related configs needs to be configured to your .Net project settings:
 
     ```
     TeamsFx: {
@@ -638,7 +629,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
     ```
 
     > [!NOTE]
-    > You can use use `$ENV_NAME$` to reference envs in local/remote service.
+    > You can use `$ENV_NAME$` to reference envs in local/remote service.
 
    Example for TeamsFx Bot template
 
@@ -658,15 +649,15 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
    }
    ```
 
-1. Update source code. With all changes above, your environment is ready and can update your code to add SSO to your Teams app.
+1. Update your code to add SSO to your Teams app.
   
-   You can find samples in following pages:
+   You can find samples in the following pages:
     * TeamsFx SDK: <https://www.nuget.org/packages/Microsoft.TeamsFx/>
     * Sample Code: under `TeamsFx-Auth/Bot`
 
    Example for TeamsFx Bot template
 
-   1. Open `Config.cs` and replace all with following lines:
+   1. Open `Config.cs` and replace all with the following lines:
 
     ```
     using Microsoft.TeamsFx.Configuration;
@@ -688,19 +679,20 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
     ```
 
     > [!NOTE]
-    > You need to replace {{YOUR_NAMESPACE}} with your namespace name
+    > You need to replace `{{YOUR_NAMESPACE}}` with your namespace name
   
    2. Move `TeamsFx-Auth/Bot/SSO` and `TeamsFx-Auth/Bot/Pages` to `/`
+   
      > [!NOTE]
-     > Remember to replace '{YOUR_NAMESPACE}' with your project namespace.
+     > Remember to replace `{{YOUR_NAMESPACE}}` with your project namespace.
 
-   3. Open `Program.cs`, find following line:
+   3. Open `Program.cs`, find the following line:
 
     ```
     builder.Services.AddSingleton<BotFrameworkAuthentication, ConfigurationBotFrameworkAuthentication>();
     ```
 
-Add the following code:
+      Add the following code:
 
     ```
     builder.Services.AddRazorPages();
@@ -786,13 +778,13 @@ Add the following code:
       ```
       app.UseEndpoints(endpoints =>
       {
-          endpoints.MapControllers();
+        endpoints.MapControllers();
         endpoints.MapRazorPages();
       });
       ```
   
     > [!NOTE]
-    > You need to exclude the sample code under `TeamsFx-Auth` to avoid build failure by adding following lines into your `.csproj` file:
+    > You need to exclude the sample code under `TeamsFx-Auth` to avoid build failure by adding the following lines into your `.csproj` file:
 
     ```
     <ItemGroup>
@@ -802,7 +794,7 @@ Add the following code:
     </ItemGroup>
     ```
 
-1. To check the SSO app works as expected, run `Local Debug` in Visual Studio. Or run the app in cloud by clicking `Provision in the cloud` and then `Deploy to the cloud` to make the updates take effects.
+1. To check if SSO app works as expected, run `Local Debug` in Visual Studio or run the app in cloud by selecting `Provision in the cloud` and then select `Deploy to the cloud` to update your app.
 
 :::zone-end
 
