@@ -9,6 +9,23 @@ ms.author: surbhigupta
 
 # Tools and SDKs
 
+## Tools
+
+Introduction to be added
+
+:::image type="content" source="../../assets/images/Tools-and-SDK-revamp/scaffolding-tools.png" alt-text="Screenshot shows you the Teams toolkit and Yo teams generator information.":::
+
+### Teams toolkit
+
+Teams Toolkit makes it simple to get started with app development for Microsoft Teams. You can start a project template for common line-of-business app scenarios or from a sample and save setup time with automated app registration and configuration. You can debug to Teams directly from familiar tools. Teams toolkit's smart defaults help you host in Azure using infrastructure-as-code and Bicep. It helps you to create unique configurations using the environment features such as, dev, test, and prod.
+
+> [!div class="nextstepaction"]
+> [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md)
+
+###
+
+## SDKs and libraries
+
 Teams Platform brings you different SDKs, libraries, and APIs to build and develop your Teams apps.
 
 The following flow diagram explains you the different SDKs, libraries and its relations:
@@ -54,12 +71,5 @@ The following flow diagram explains you the different SDKs, libraries and its re
 | **Microsoft Graph** | Microsoft Graph is the gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access the tremendous amount of data in Microsoft 365, Windows, and Enterprise Mobility + Security. Use the wealth of data in Microsoft Graph to build apps for organizations and consumers that interact with millions of users. | :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Used for **Microsoft Graph SDK**. | To know how it works, see [Microsoft Graph](/graph/sdks/sdks-overview). |
 | **SharePoint REST API** | You can interact remotely with SharePoint data by using any technology that supports Representational State Transfer (REST) web requests. You can perform basic create, read, update, and delete (CRUD) operations by using the REST interface provided by SharePoint. |  :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Used for **SharePoint Framework (SPFx)**. | To know how it works, see [SharePoint REST API](/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service?tabs=csom). |
 | **Azure Fluid Relay** | The Fluid Framework is an open source, platform independent framework. Azure Fluid Relay is a managed offering for the Fluid Framework that helps developers build real-time collaborative experiences and replicate states across connected JavaScript clients in real-time. | :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Used for **Fluid Framework**. | To know how it works, see [Azure Fluid Relay](/azure/azure-fluid-relay/overview/overview). |
-
-## Teams toolkit
-
-Teams Toolkit makes it simple to get started with app development for Microsoft Teams. You can start a project template for common line-of-business app scenarios or from a sample and save setup time with automated app registration and configuration. You can debug to Teams directly from familiar tools. Teams toolkit's smart defaults help you host in Azure using infrastructure-as-code and Bicep. It helps you to create unique configurations using the environment features such as, dev, test, and prod.
-
-> [!div class="nextstepaction"]
-> [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md)
 
 [Table to be added for all Tools]
