@@ -15,7 +15,7 @@ zone_pivot_groups: teams-app-platform
 
 > [!IMPORTANT]
 >
-> * We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+> * We've introduced the Teams Toolkit v5 extension within Microsoft Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
 > * Teams Toolkit isn't supported in Government Community Cloud (GCC) and GCC-High environments.
 > * [Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
 
@@ -25,7 +25,7 @@ zone_pivot_groups: teams-app-platform
 
 > [!IMPORTANT]
 >
-> * "We've introduced the important changes in Teams Toolkit extension within Visual Studio v17.7. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v17.7 for building your Teams app." 
+> * We've introduced the important changes in Teams Toolkit extension within Microsoft Visual Studio v17.7. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v17.7 for building your Teams app.
 > * [Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
 
 ::: zone-end
@@ -37,7 +37,7 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 * Start with a project template for common line-of-business app scenarios or from a sample.
 * Save setup time with automated app registration and configuration.
 * Run and debug to Teams directly from familiar tools.
-* Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
+* Smart defaults for hosting in Microsoft Azure using infrastructure-as-code and Bicep.
 * Create unique configurations like dev, test, and prod using the environment features.
 
 > [!NOTE]
@@ -108,7 +108,7 @@ You can start directly with the capability-focused templates such as tabs, bots,
 ::: zone-end
 
 ::: zone pivot="visual-studio"
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/create-new-app-vs.PNG" alt-text="Screenshot shows the creation of new Teams app menu in Visual Studio."lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/create-new-app-vs.png":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/create-new-app-vs.PNG" alt-text="Screenshot shows the creation of new Teams app menu in Visual Studio.:::
 ::: zone-end
 
 ### Automatic registration and configuration

@@ -132,7 +132,7 @@
     items:
     - name: Teams Toolkit overview
       href: toolkit/teams-toolkit-fundamentals.md
-      displayName: TTK, version
+      displayName: TTK, version, Visual Studio, Visual Studio Code
     - name: Install Teams Toolkit
       href: toolkit/install-Teams-Toolkit.md
       displayName: download
