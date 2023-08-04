@@ -223,7 +223,7 @@ Teams support both modes by default and the capability to have the app work in o
 
 <summary><b>In app empty state I see scroll missing, how do I fix that?</b></summary>
 
-Add *<FlexColumn scroll></FlexColumn>* to the empty state for the app.
+Add `<FlexColumn scroll></FlexColumn>` to the empty state for the app.
 
 <br>
 
