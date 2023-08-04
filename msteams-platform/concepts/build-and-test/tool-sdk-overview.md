@@ -15,14 +15,20 @@ Introduction to be added
 
 :::image type="content" source="../../assets/images/Tools-and-SDK-revamp/scaffolding-tools.png" alt-text="Screenshot shows you the Teams toolkit and Yo teams generator information.":::
 
-### Teams toolkit
+Following are the different way to start building Teams app with Teams Toolkit and Yeoman Teams Project:
 
-Teams Toolkit makes it simple to get started with app development for Microsoft Teams. You can start a project template for common line-of-business app scenarios or from a sample and save setup time with automated app registration and configuration. You can debug to Teams directly from familiar tools. Teams toolkit's smart defaults help you host in Azure using infrastructure-as-code and Bicep. It helps you to create unique configurations using the environment features such as, dev, test, and prod.
-
-> [!div class="nextstepaction"]
-> [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md)
-
-###
+| &nbsp | Teams Toolkit | Yeoman Teams project | Microsoft Teams samples |
+| -------- | ------------- | ----------------- | ---------------------- |
+| Description | Teams Toolkit makes it simple to get started with app development for Microsoft Teams. You can start a project template for common line-of-business app scenarios or from a sample and save setup time with automated app registration and configuration. | Yo Teams allows you to build Microsoft Teams applications based on TypeScript and node.js on your terms, in your editor of choice, without any external or online dependencies. | Microsoft Teams samples are designed to help you understand and build your own Teams app with different capabilities and scenarios. |
+| Environment variables | Use `.env` file | Use `.env` file | Use `.env` or `config.json` files |
+| Generate manifest | Teams Toolkit auto-generate when create project. | gulp manifest | Manual |
+| Deploy Teams app | Auto-update use command `Teams: Update Teams App` |gulp tenant: deploy | Manual |
+| Create AAD app | Auto-create when debug or provision the project. User can also use their existing AAD app by filling in Teams app ID in `.env` file. | Manual | Manual |
+| Add SSO | Provide SSO-enabled samples and how-to guides to add SSO. | Manual | Manual |
+| Bot/ME Registration | Auto-create when debug or provision the project. User can also specify their own Bot ID. | Manual (Azure Bot) | Manual |
+| Expose Node.js app | Tab: localhost + HTTPS and Others: Dev Tunnel | gulp ngrok-serve | Manual (ngrok) |
+| Run Node.js app | npm run teamsfx:dev | gulp serve | npm start or others |
+| One-click debug | F5 or debug in Visual Studio Code and Visual Studio | N/A | N/A |
 
 ## SDKs and libraries
 
