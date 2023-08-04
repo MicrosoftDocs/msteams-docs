@@ -108,7 +108,7 @@ You can start directly with the capability-focused templates such as tabs, bots,
 ::: zone-end
 
 ::: zone pivot="visual-studio"
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/create-new-app-vs.PNG" alt-text="Screenshot shows the creation of new Teams app menu in Visual Studio.:::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/create-new-app-vs.PNG" alt-text="Screenshot shows the creation of new Teams app menu in Visual Studio.":::
 ::: zone-end
 
 ### Automatic registration and configuration

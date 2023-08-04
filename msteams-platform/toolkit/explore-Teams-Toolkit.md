@@ -1,7 +1,7 @@
 ---
 title: Explore Teams Toolkit 
 author: zyxiaoyuer
-description: Learn about Teams Toolkit UI elements and task pane for Visual Studio Code and Visual Studioś.
+description: Learn about Teams Toolkit UI elements and task pane for Visual Studio Code and Visual Studio.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -24,12 +24,12 @@ zone_pivot_groups: teams-app-platform
 
 > [!IMPORTANT]
 >
-> * "śWe've introduced the important changes in Teams Toolkit extension within Visual Studio v17.7. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v17.7 for building your Teams app."
+> * We've introduced the important changes in Teams Toolkit extension within Microsoft Visual Studio v17.7. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v17.7 for building your Teams app.
 > * [Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
 
 ::: zone-end
 
-You can explore the look and feel of Teams Toolkit within the Visual Studio Code and Visual Studio.
+You can explore the look and feel of Teams Toolkit within the Visual Studio.
 
 This section gives you a tour of Teams Toolkit and its features.
 
