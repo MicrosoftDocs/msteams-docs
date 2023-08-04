@@ -40,7 +40,7 @@ Mobile designs must be 320 pixels.
 :::image type="content" source="../../assets/images/design-guidelines/responsive-mobile.png" alt-text="Example shows a responsive layout on mobile.":::
 
 > [!NOTE]
-> Apps in Teams mobile is supported on both landscape and portrait mode.
+> Apps in Teams mobile are supported on both landscape and portrait mode.
 
 ### Desktop
 
@@ -191,7 +191,7 @@ Your app won't pass Teams submission if it has illegible headers without a hover
 
 ## FAQ
 
-Get answers to some common questions when resolving app submission issues.
+Get answers to some frequent questions related to the modes.
 
 <br>
 
@@ -209,9 +209,9 @@ No. Apps will get this capability out of the box.
 
 <details>
 
-<summary><b>What if my app doesn’t support one of the modes aka scenario is meant to work only in either of the modes?</b></summary>
+<summary><b>What if my app doesn’t support one of the modes or scenarios and it's meant to work only in either of the modes?</b></summary>
 
-As of now since teams support both modes by default the capability to have the app work in only 1 mode is not possible. However if this is a hard requirement for your app, please reach out to us so that we can understand the new requirement and put it in our backlog.
+Teams support both modes by default and the capability to have the app work in only 1 mode is not possible. However, if this is a hard requirement for your app, please reach out to Teams support so that we can understand the new requirement and put it in our backlog.
 
 <br>
 
@@ -223,7 +223,7 @@ As of now since teams support both modes by default the capability to have the a
 
 <summary><b>In app empty state I see scroll missing, how do I fix that?</b></summary>
 
-Add *<FlexColumn scroll></FlexColumn>* to the empty state for the app
+Add *<FlexColumn scroll></FlexColumn>* to the empty state for the app.
 
 <br>
 
