@@ -128,7 +128,7 @@
       displayName: notify, notification
 - name: Tools and SDKs
   items:
-  - name: Teams Toolkit 
+  - name: Tools 
     items:					  
     - name: Teams Toolkit for Visual Studio Code
       items:
@@ -277,10 +277,7 @@
       - name: Teams app tutorials and code samples VS
         href: toolkit/toolkit-v4/teams-toolkit-tutorial-v4.md
       - name: FAQ
-        href: toolkit/toolkit-v4/faq-v4.md
-    - name: TeamsFx SDK
-      href: toolkit/TeamsFx-SDK.md
-      displayName: getUserinfo    
+        href: toolkit/toolkit-v4/faq-v4.md    
     - name: Teams Toolkit CLI
       href: toolkit/TeamsFx-CLI.md
     - name: Developer Portal for Teams
@@ -297,15 +294,20 @@
       - name: Analyze your apps usage in Developer Portal
         href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  
         displayName: dashboard
+    - name: Yeoman generator for Teams (GitHub)
+      href: https://github.com/pnp/generator-teams 
+  - name: SDKs
+    items:
+    - name: TeamsFx SDK
+      href: toolkit/TeamsFx-SDK.md
+      displayName: getUserinfo
     - name: Teams JavaScript client library
       href: tabs/how-to/using-teams-client-library.md
       displayName: execute URL, getTabInstances
-    - name: Node.js Bot Framework for bots and message extensions (GitHub)
+    - name: Bot Framework SDK for Node.js
       href: https://github.com/Microsoft/botbuilder-js
-    - name: .NET Bot Framework for bots and message extensions (GitHub)
+    - name: Bot Framework SDK for .NET
       href: https://github.com/Microsoft/botbuilder-dotnet
-    - name: Yeoman generator for Teams (GitHub)
-      href: https://github.com/pnp/generator-teams  
     - name: Microsoft Graph SDKs
       href: /graph/sdks/sdks-overview
     - name: Legacy SDKs
