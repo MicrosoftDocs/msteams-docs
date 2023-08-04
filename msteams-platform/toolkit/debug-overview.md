@@ -302,17 +302,17 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 Teams Toolkit automates app startup services, initiates debugging, and side loads Teams app. After debugging, you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app. Visual Studio allows you to debug tabs, bots, and message extensions. During the debugging process, the Teams Toolkit supports the following debug features:
 
-* Prepare Teams app dependencies
-* Start debugging
-* Toggle breakpoints
-* Hot reload
-* Stop debugging
+* [Prepare Teams app dependencies](#prepare-teams-app-dependencies)
+* [Start debugging](#start-debugging-1)
+* [Toggle breakpoints](#toggle-breakpoints-2)
+* [Hot reload](#hot-reload-1)
+* [Stop debugging](#stop-debugging-1)
 
 ## Prerequisites
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
-| &nbsp; | Visual Studio 2022 version 17.7 | You can install the enterprise edition of Visual Studio, and install the "ASP.NET "workload and Microsoft Teams Development Tools. |
+| &nbsp; | Visual Studio 2022 | You can install the enterprise edition of Visual Studio, and install the "ASP.NET "workload and Microsoft Teams Development Tools. Use the latest version |
 | &nbsp; | Teams Toolkit | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place. |
 | &nbsp; | [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Teams account with the appropriate permissions to install an app. |
