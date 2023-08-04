@@ -16,7 +16,7 @@ Add functionality to your Teams experience by subscribing and managing licenses 
 
 The following example shows how users can purchase subscription plans for a Teams app:
 
-1. In the Teams store, find and select the app you want to purchase the subscription.
+1. In the Teams store, find and select the app for which you want to purchase the subscription.
 
 1. In the app details dialog, select **Buy a subscription**.
 
@@ -29,25 +29,25 @@ The following example shows how users can purchase subscription plans for a Team
 1. In the **Choose a subscription plan** dialog, decide the plan you want and select **Start trail**.
 
     > [!NOTE]
-    > Private plans are visible only to users in orgs you're providing the offer to. These plans are indicated with a **Special offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon.
+    > Private plans are visible only to users of the organization you're providing the offer. These plans are indicated with a **Special offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon.
 
     :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Screenshot shows selecting the appropriate subscription plan.":::
 
-1. In the **Checkout** dialog, provide any required information and select **Place order**.
+1. In the **Checkout** dialog, provide the required information and select **Place order**.
 
     :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Screenshot shows placing the subscription order.":::
 
-1. When prompted, select **Set up now** to set up your subscription.
+1. Select **Set up now**.
 
     :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="Screenshot shows the option to set up your subscription.":::
 
-1. Manage your subscription plan through the *Recloud* website (also known as a [landing page](include-saas-offer.md#build-a-landing-page-for-subscription-management)).
+1. Manage your subscription plan through the app website (also known as a [landing page](include-saas-offer.md#build-a-landing-page-for-subscription-management)).
 
     :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Screenshot shows User and Licenses screen to assign license.":::
 
 When a new user launches the app for the first time, they're requested to provide consent to the app. Following is an example of the consent screen shown when calling for user profile data with minimum User.Read permission.
 
-Consent dialog is part of the flow to get the users license information and may vary based on ISV’s integration approach.
+Consent dialog is part of the flow to get the users' license information and may vary based on ISV’s integration approach.
 
 :::image type="content" source="../../../../assets/images/saas-offer/permissions-requested.png" alt-text="Screenshot shows the Permissions requested consent dialog.":::
 
@@ -62,6 +62,7 @@ The following example shows how users can manage licenses for third-party apps f
     :::image type="content" source="../../../../assets/images/saas-offer/client-experience-1.png" alt-text="Screenshot shows the Apps screen to select Manage your app option.":::
 
 1. Select **Subscriptions**. A tab appears with a list of purchases made in the tenant.
+
 1. Choose an existing subscription from the list and select **Assign licenses**.
 
     :::image type="content" source="../../../../assets/images/saas-offer/client-experience-2.png" alt-text="Screenshot shows the Assign licenses option of the respective app under Subscription tab.":::
