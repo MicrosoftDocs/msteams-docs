@@ -83,7 +83,7 @@ The following code provides an example of the app manifest version 1.12 or highe
     },
     "description": {
         "short": "Echo bot with RSC configured for all channel and chat messages",
-        "full": "Echo bot configured with all channel and chat messsages RSC permission in manifest"
+        "full": "Echo bot configured with all channel and chat messages RSC permission in manifest"
     },
     "accentColor": "#FFFFFF",
     "staticTabs": [
