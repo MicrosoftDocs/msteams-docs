@@ -192,7 +192,7 @@ This section gives you a tour of Teams Toolkit v4 and its features.
 
 Teams Toolkit appears within Visual Studio Code as an extension. After you install Teams Toolkit, it opens within the Visual Studio Code window.
 
-:::image type="content" source="images/overview1_1-v4.png" alt-text="Overview of Teams Toolkit"  lightbox="images/overview1_1-v4.png":::
+:::image type="content" source="toolkit-v4/images/overview1_1-v4.png" alt-text="Overview of Teams Toolkit"  lightbox="images/overview1_1-v4.png":::
 
 | Serial No. | UI Elements | Definition |
 | --- | --- | --- |
@@ -208,11 +208,11 @@ Teams Toolkit appears within Visual Studio Code as an extension. After you insta
 
 You can explore the available functionalities from the Teams Toolkit task pane. The task pane appears only after you've created an app project using Teams Toolkit. The following video helps you to learn about the process of creating a new Teams app:
 
-   :::image type="content" source="images/javascript-bot-app1_1-v4.gif" alt-text="Create a Teams app":::
+   :::image type="content" source="toolkit-v4/images/javascript-bot-app1_1-v4.gif" alt-text="Create a Teams app":::
 
 After you create a new Teams app project, the directory structure of the app appears in the left panel and the **`README`** file in the right panel.
 
-:::image type="content" source="images/first-page_1-v4.png" alt-text="First page of Teams Toolkit"  lightbox="images/first-page_1-v4.png":::
+:::image type="content" source="toolkit-v4/images/first-page_1-v4.png" alt-text="First page of Teams Toolkit"  lightbox="images/first-page_1-v4.png":::
 
 Let's take a tour of Teams Toolkit.
 
@@ -220,15 +220,15 @@ Let's take a tour of Teams Toolkit.
 
 | Select | To... |
 | --- | --- |
-| **Explorer** :::image type="icon" source="images/file-explorer-icon-v4.png" border="false":::  | View the directory structure of the app. |
-| **Run and Debug** :::image type="icon" source="images/run-debug-icon-v4.png" border="false":::  | Start the local or remote debug process. |
-| **Teams Toolkit** :::image type="icon" source="images/teams-toolkit-sidebar-icon-v4.PNG" border="false"::: | View the task pane  in the Teams Toolkit. |
+| **Explorer** :::image type="icon" source="toolkit-v4/images/file-explorer-icon-v4.png" border="false":::  | View the directory structure of the app. |
+| **Run and Debug** :::image type="icon" source="toolkit-v4/images/run-debug-icon-v4.png" border="false":::  | Start the local or remote debug process. |
+| **Teams Toolkit** :::image type="icon" source="toolkit-v4/images/teams-toolkit-sidebar-icon-v4.PNG" border="false"::: | View the task pane  in the Teams Toolkit. |
 
 From the task pane, you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="images/accounts1_1-v4.png" alt-text="accounts section":::
+      :::image type="content" source="toolkit-v4/images/accounts1_1-v4.png" alt-text="accounts section":::
    :::column-end:::
    :::column span="":::
 
@@ -242,7 +242,7 @@ From the task pane, you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="images/environment1-v4.png" alt-text="Environment section"::::::
+      :::image type="content" source="toolkit-v4/images/environment1-v4.png" alt-text="Environment section"::::::
    :::column-end:::
    :::column span="":::
 
@@ -258,7 +258,7 @@ From the task pane, you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="images/development-vsc-v4.png" alt-text="Development section":::
+      :::image type="content" source="toolkit-v4/images/development-vsc-v4.png" alt-text="Development section":::
    :::column-end:::
    :::column span="":::
 
@@ -280,7 +280,7 @@ From the task pane, you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="images/deployment1-v4.png" alt-text="Deployment section":::
+      :::image type="content" source="toolkit-v4/images/deployment1-v4.png" alt-text="Deployment section":::
    :::column-end:::
    :::column span="":::
 
@@ -300,7 +300,7 @@ From the task pane, you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="images/help-and-feedback1-v4.png" alt-text="Help and feedback section":::
+      :::image type="content" source="toolkit-v4/images/help-and-feedback1-v4.png" alt-text="Help and feedback section":::
    :::column-end:::
    :::column span="":::
 
@@ -322,7 +322,7 @@ From the task pane, you can see the following sections:
 
 2. Select the type of how-to guide that you want to view.
 
-   :::image type="content" source="images/view-how-to-guides-v4.png" alt-text="Screenshot showing the how-to guides menu options." lightbox="images/view-how-to-guides-v4.png":::
+   :::image type="content" source="toolkit-v4/images/view-how-to-guides-v4.png" alt-text="Screenshot showing the how-to guides menu options." lightbox="images/view-how-to-guides-v4.png":::
 
     * Select any one of the Teams app scenario guides to view the guide to develop an app for a common app scenario, such as sending notifications using a bot.
 
