@@ -197,9 +197,9 @@ Get answers to some frequent questions related to the modes.
 
 <details>
 
-<summary><b>Do app developers need to do any change for this to take place?</b></summary>
+<summary><b>Do app developers need to make any changes in the app to get the landscape mode capability?</b></summary>
 
-No. Apps will get this capability out of the box.
+No. Apps will get this capability by default.
 
 <br>
 
@@ -209,9 +209,10 @@ No. Apps will get this capability out of the box.
 
 <details>
 
-<summary><b>What if my app doesn’t support one of the modes or scenarios and it's meant to work only in either of the modes?</b></summary>
+<summary><b>What if my app doesn't support one of the modes, or if the scenario is only intended to work in one of the modes?</b></summary>
 
-Teams support both modes by default and the capability to have the app work in only 1 mode is not possible. However, if this is a hard requirement for your app, please reach out to Teams support so that we can understand the new requirement and put it in our backlog.
+Teams support both modes by default and it's not possible to have the app work in only one mode.
+ However, if this is a hard requirement for your app, please reach out to Teams support so that we can understand the new requirement and put it in our backlog.
 
 <br>
 
