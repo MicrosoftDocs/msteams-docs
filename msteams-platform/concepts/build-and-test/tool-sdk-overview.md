@@ -17,7 +17,7 @@ Introduction to be added
 
 Following are the different way to start building Teams app with Teams Toolkit and Yeoman Teams Project:
 
-| &nbsp | Teams Toolkit | Yeoman Teams project | Microsoft Teams samples |
+| &nbsp; | Teams Toolkit | Yeoman Teams project | Microsoft Teams samples |
 | -------- | ------------- | ----------------- | ---------------------- |
 | Description | Teams Toolkit makes it simple to get started with app development for Microsoft Teams. You can start a project template for common line-of-business app scenarios or from a sample and save setup time with automated app registration and configuration. | Yo Teams allows you to build Microsoft Teams applications based on TypeScript and node.js on your terms, in your editor of choice, without any external or online dependencies. | Microsoft Teams samples are designed to help you understand and build your own Teams app with different capabilities and scenarios. |
 | Environment variables | Use `.env` file | Use `.env` file | Use `.env` or `config.json` files |
