@@ -14,7 +14,7 @@ zone_pivot_groups: teams-toolkit-platform
 >
 > * We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
 > * Teams Toolkit isn't supported in Government Community Cloud (GCC) and GCC-High environments.
-> * [Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
+> * Teams Toolkit v4 extension will soon be deprecated.
 
 ::: zone pivot="visual-studio-code-v5"
 
