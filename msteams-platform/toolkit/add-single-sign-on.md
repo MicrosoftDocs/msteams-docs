@@ -133,7 +133,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
    > [!NOTE]
    > Update the value of resource to your `identifierUris` configed in step 1, and use `${{ENV_NAME}}` to reference envs in `env/.env.{TEAMSFX_ENV}`.
 
-    Open `appPackage/manifest.json`file, and add the following property:
+Open `appPackage/manifest.json`file, and add the following property:
 
     ```JSON
     "webApplicationInfo": {
