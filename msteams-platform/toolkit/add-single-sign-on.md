@@ -67,80 +67,76 @@ Microsoft Teams provides single sign-on (SSO) function for an app using the Team
 
 Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** folder, including a manifest template file for Azure Active Directory (Azure AD) application and authentication redirect pages. Link the files to your Teams application by updating authentication configurations to ensure the SSO works for your application.
 
-* In the Azure AD manifest file, specify the URIs such as the URI to identify the Azure AD authentication app and the redirect URI for returning token.
+* In the Azure AD manifest file, specify the URIs such as, the URI to identify the Azure AD authentication app and the redirect URI for returning token.
 * In the Teams manifests file, add the SSO application to link it with Teams application.
-* Add SSO application information in Teams Toolkit configuration files in order to make sure the authentication app can be registered on backend service and started by Teams Toolkit when you debugging or previewing Teams application.
+* Add SSO application information in Teams Toolkit configuration files in order to make sure the authentication app can be registered on backend service and start Teams Toolkit when you are debugging or previewing Teams application.
 
 ## Teams tab application
 
 1. Update Azure AD app manifest:
-`TeamsFx-Auth/aad.manifest.template.json`file is an Azure AD manifest template. You can copy and paste this file to any folder of your project, and rename as `aad.manifest.json` file and take note of the path to this file. The following updates in the template to create/update an Azure AD app for SSO:
+`TeamsFx-Auth/aad.manifest.template.json` file is an Azure AD manifest template. You can copy and paste this file to any folder of your project, and rename as `aad.manifest.json` and take note of the path to this file. The following updates in the template to create/update an Azure AD app for SSO:
 
-    1. `identifierUris`: Uniquely identify and access the resource.
+    1. `identifierUris`: It is used to uniquely identify and access the resource. Set correct redirect Uris into `identifierUris` to successfully identify this app.
 
-    Set correct redirect Uris into `identifierUris` to successfully identify this app.
+        ```json
+            "identifierUris":[
+              "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
+            ]
+        ```
+        
+    1. `replyUrlsWithType`: It lists registered redirect_uri values that Azure AD accepts as destinations when returning tokens. Set necessary redirect Uris into `replyUrlsWithType` to successfully return token.
 
-    ```json
-        "identifierUris":[
-      "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
-    ]
-    ```
+        ```json
+            "replyUrlsWithType":[
+          {
+            "url": "${{TAB_ENDPOINT}}/auth-end.html",
+            "type": "Web"
+          }
+        ]    
+        ```
 
-    1. `replyUrlsWithType`: List of registered redirect_uri values that Azure AD accepts as destinations when returning tokens.
+        > [!NOTE]
+        > Use `${{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}`.
+    
+        ```json
+            "replyUrlsWithType":[
+          {
+            "url": "${{TAB_ENDPOINT}}/auth-end.html",
+            "type": "Web"
+          },
+          {
+            "url": "${{TAB_ENDPOINT}}/auth-end.html?clientId=${{AAD_APP_CLIENT_ID}}",
+            "type": "Spa"
+          },
+          {
+            "url": "${{TAB_ENDPOINT}}/blank-auth-end.html",
+            "type": "Spa"
+          }
+        ]
+        ```
 
-    Set necessary redirect Uris into `replyUrlsWithType` to successfully returning token.
-
-    ```json
-    "replyUrlsWithType":[
-      {
-        "url": "${{TAB_ENDPOINT}}/auth-end.html",
-        "type": "Web"
-      }
-    ]    
-    ```
-
-    > [!NOTE]
-    > Use `${{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}`.
-
-    ```json
-        "replyUrlsWithType":[
-      {
-        "url": "${{TAB_ENDPOINT}}/auth-end.html",
-        "type": "Web"
-      },
-      {
-        "url": "${{TAB_ENDPOINT}}/auth-end.html?clientId=${{AAD_APP_CLIENT_ID}}",
-        "type": "Spa"
-      },
-      {
-        "url": "${{TAB_ENDPOINT}}/blank-auth-end.html",
-        "type": "Spa"
-      }
-    ]
-    ```
-
-    1. "name": Replace the value with your expected Azure AD app name.
+    1. "name": It replaces the value with your expected Azure AD app name.
 
 1. Open your Teams app manifest file, add `WebApplicationInfo` property with the value of your SSO app.
 
-```JSON
-    "webApplicationInfo": {
-      "id": "${{AAD_APP_CLIENT_ID}}",
-      "resource": "SAME_AS_YOUR_IDENTIFIERURIS"
-    }
-```
-
-   > [!NOTE]
-   > Update the value of resource to your `identifierUris` configed in step 1, and use `${{ENV_NAME}}` to reference envs in `env/.env.{TEAMSFX_ENV}`.
-
-Open `appPackage/manifest.json`file, and add the following property:
-
     ```JSON
-    "webApplicationInfo": {
-      "id": "${{AAD_APP_CLIENT_ID}}",
-      "resource": "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
-    }
+        "webApplicationInfo": {
+          "id": "${{AAD_APP_CLIENT_ID}}",
+          "resource": "SAME_AS_YOUR_IDENTIFIERURIS"
+        }
     ```
+
+       > [!NOTE]
+       > Update the value of resource to your `identifierUris` configed in step 1, and use `${{ENV_NAME}}` to reference envs in `env/.env.{TEAMSFX_ENV}`.
+    
+1. Open `appPackage/manifest.json`file, and add the following property:
+
+        ```JSON
+        "webApplicationInfo": {
+          "id": "${{AAD_APP_CLIENT_ID}}",
+          "resource": "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
+        }
+        ```
 
 1. Update `teamsapp.yml` and `teamsapp.local.yml`
 
