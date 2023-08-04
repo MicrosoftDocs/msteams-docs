@@ -534,7 +534,7 @@ Descriptions mustn't directly or through suggestion derogate another brand (Micr
 
 #### Short description
 
-A short description is a concise summary of your app that highlights its value proposition and is directed at your target audience.
+A short description must be a concise summary of your app that highlights its value proposition and is directed at your target audience.
 
 **Dos:**
 
@@ -551,7 +551,7 @@ Use the word **app** in the short description.
 
 #### Long description
 
-The long description can provide an engaging narrative that highlights your app's value proposition, primary audience, and target industry. While this description can be as long as 4,000 characters, most users only read between 300-500 words.
+The long description must provide an engaging narrative that highlights your app's value proposition, primary audience, and target industry. While the description can be as long as 4,000 characters, it's recommended to have a concise description of around 1000 characters.
 
 **Dos:**
 
@@ -615,6 +615,8 @@ The long description can provide an engaging narrative that highlights your app'
 * Make unverified claims. For example, best, top, and ranked, unless it comes with the source of the claim.
 * Compare your offer with other marketplace offers.
 
+For an ideal example of an app listing with an accurate, concise and informative short and log description, check Descriptions section. Check the link. - submission
+
 </details>
 
 ### Screenshots
@@ -677,33 +679,24 @@ Remember the following:
 
 ### Videos
 
-A video in your app listing is one of the most effective ways to communicate why people should use your app. You can add an app value video and a demo or scenario walkthrough video URLs. You can add URLs of your YouTube or Vimeo video. [*Suggested fix*]
+A video in your app listing is one of the most effective ways to communicate why people should use your app. You can add URLs of your YouTube or Vimeo video that provides the value of your app and another video that provides the demo or scenario walkthrough of your app. [*Suggested fix*]
 
-If you choose to submit a video as part of your app listing in your Partner Center account, ensure the following criteria is met for app value video:
+If you choose to submit a video as part of your app listing in your Partner Center account, ensure the following criteria is met:
 
 * The video must be short, clear, and engaging.
+* The video must demonstrate how to set up and use the app.
 * The video must be of good quality.
 * The video must in a narrative form.
-* The duration of the video must be within 60-90 seconds. [*Suggested Fix*]
-* You turn off advertisements from your YouTube or Vimeo account settings before submitting the video link in the app listing. [*Mandatory Fix*]
-* The video showcases your app’s functionality and integration within Teams. [*Mandatory Fix*]
-* The video is available as a functional link. [*Mandatory Fix*]
+* The duration of the video should be within 60-90 seconds for a value video and the recommended duration for a walkthrough video is three-five minutes. [*Suggested Fix*]
+* You must turn off advertisements from your YouTube or Vimeo account settings before submitting the video link in the app listing. [*Mandatory Fix*]
+* The video must showcases your app’s functionality and integration within Teams. [*Mandatory Fix*]
+* The video must be available as a functional link. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/video-app-listing-partner-center.png" alt-text="Screenshot shows the failed scenario of video submitted as part of app listing in partner center.":::
 * The video can be surfaced in the first position of the screenshots or videos caroussel in AppDetails (Teams Store and Admin Center) and AppSource. [*Suggested Fix*]
+* You mustn't add marketing information in a demo or scenario walkthrough video.
 
-If you choose to submit a video as part of your app listing in your Partner Center account, ensure the following criteria is met for demo or scenario walkthrough video:
-
-* The video must demonstrate how to set up and use the app.
-* The video must be of good quality.
-* The duration of the video must be within three-five minutes. [*Suggested Fix*]
-* You turn off advertisements from your YouTube or Vimeo account settings before submitting the video link in the app listing. [*Mandatory Fix*]
-* The video should give the first run experience for the users and train to use the app.
-* The video mustn’t have any marketing content. [*Mandatory Fix*]
-* The video must demonstrate how the product works.
-* The video is available as a functional link. [*Mandatory Fix*]
-* The video can be surfaced in the last position of the screenshots or videos caroussel in AppDetails (Teams Store and Admin Center) and AppSource​. [*Suggested Fix*]
-* The video can be used in validation cycle to enhance understanding and accelerate the validation process. [*Suggested Fix*]
+For more detailed information on the criteria for creating an app value video or walkthrough video, refer to the guidelines and checklist to create a video.
 
 <br></br>
 
