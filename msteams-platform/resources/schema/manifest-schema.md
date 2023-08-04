@@ -96,6 +96,10 @@ The following is the sample manifest schema:
             "searchUrl": "https://contoso.com/content (displayed in web browser)"
         }
     ],
+    "supportedChannelTypes": [
+        "sharedChannels",
+        "privateChannels"
+    ],
     "bots": [
         {
             "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
@@ -789,7 +793,7 @@ You can define any of the following properties:
 
 **Optional**—array
 
-Enables your app in non-standard channels. If your app supports a team scope and this property is defined, Teams enables your app in each channel type accordingly. Currently, the private and shared channel types are supported.
+Enables your app in non-standard channels. If your app supports a team scope and this property is defined, Teams enables your app in each channel type accordingly. The supportedChannelTypes property only supports `sharedChannels` and `privateChannels`.
 
 > [!NOTE]
 >

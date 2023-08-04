@@ -536,6 +536,47 @@ The following is an example of the incoming activity to a bot when user types so
 
 The next section provides details on how to use existing Bot Framework actions with Adaptive Cards.
 
+#### Form completion feedback
+
+You can build form completion feedback using an Adaptive Card. Form completion message appears in Adaptive Cards while sending a response to the bot. The message can be of two types, error or success:
+
+* **Error**: When a response sent to the bot is unsuccessful, **Something went wrong, Try again** message appears. The error occurs due to various reasons, such as:
+  * Too many requests
+  * Multiple concurrent operations on the same conversation
+  * Service dependency issue
+  * Gateway Timeout
+
+     :::image type="content" source="../../assets/images/Cards/error-message.png" alt-text="Screenshot shows an Error message in an Adaptive Card."  :::
+
+* **Success**: When a response sent to the bot is successful, **Your response was sent to the app** message appears.
+
+     :::image type="content" source="../../assets/images/Cards/success.PNG" alt-text="Screenshot shows a success message in an Adaptive Card.":::
+
+     You can select **Close** or switch chat to dismiss the message.
+
+     If you don't want to display the success message, set the attribute `hide` to `true` in the `msTeams` `feedback` property. Following is an example:
+
+     ```json
+        "content": {
+            "type": "AdaptiveCard",
+            "title": "Card with hidden footer messages",
+            "version": "1.0",
+            "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Submit",
+                "msTeams": {
+                    "feedback": {
+                    "hide": true
+                    }
+                }
+            }
+            ]
+        } 
+     ```
+
+For more information on cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
+
 ### Adaptive Cards with messageBack action
 
 To include a `messageBack` action with an Adaptive Card include the following details in the `msteams` object:
@@ -684,4 +725,3 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 * [Types of cards](cards-reference.md)
 * [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Adaptive Cards in bots](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
-* [Form completion feedback](cards-format.md#form-completion-feedback)
