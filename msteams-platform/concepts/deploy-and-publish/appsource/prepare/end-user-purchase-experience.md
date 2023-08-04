@@ -10,7 +10,7 @@ ms.date: 04/06/2023
 
 # Purchase and manage app subscriptions and licenses
 
-Add functionality to your Teams experience by subscribing and managing licenses for apps made just for Teams. When you add an app to Teams, check if additional features are available through subscription. You can purchase subscriptions and manage licenses for yourself, your team, or your organization directly from the Teams store.
+The information in this article helps you understand the purchase experience from the customer end. You can add more features and functionality to your Teams app through subscriptions. Users can purchase subscriptions and manage licenses for themselves, their team, or their organization directly from the Teams store.
 
 ## Subscription experience
 
@@ -73,7 +73,7 @@ The following example shows how users can manage licenses for third-party apps f
 
 1. Search for the users or a team in the search box and select **Assign**. The license is assigned to the users or a team.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/assign-licenses.png" alt-text="Screenshot shows assigning license to a Team with a single click highlighted in red.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/assign-licenses.png" alt-text="Screenshot shows assigning license to a Team highlighted in red.":::
 
     You can view the list of assigned users or teams for the subscription and also check the status of the assignment.
 
