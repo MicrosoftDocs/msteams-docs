@@ -165,9 +165,9 @@ You can view the project folders and files under **Explorer** in Visual Studio a
 
 | Folder name| Contents| Description |
 | --- | --- | --- |
-| `teamsapp.local.yml` | The main Teams Toolkit project file for debugging | This file defines the lifecycles and actions required for debugging. |
-| `env/.env.local` | Environment variables file for Teams Toolkit project | The values of each environment variable are consumed or generated during preparing Teams app dependencies. |
-| `appsettings.Development.json` | Environment variables file for the app code | The values of each environment variable are generated during preparing Teams app dependencies. |
+| `teamsapp.local.yml` | The main Teams Toolkit project file for debugging. | This file defines the lifecycles and actions required for debugging. |
+| `env/.env.local` | Environment variables file for Teams Toolkit project. | The values of each environment variable are consumed or generated during preparing Teams app dependencies. |
+| `appsettings.Development.json` | Environment variables file for the app code. | The values of each environment variable are generated during preparing Teams app dependencies. |
 
 ::: zone-end
 
