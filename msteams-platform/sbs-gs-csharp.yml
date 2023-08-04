@@ -232,12 +232,6 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've done it!
-
-    You've created a tab app.
-
-    Now that you've learned to create a basic app.
-
-    That's it! Teams Toolkit adds the scaffolding for the new capability to your app's directory structure. 
-
-    You've completed the tutorial to build tab app using C#.
+    You have successfully created a tab app using C#. Teams Toolkit has added the necessary scaffolding to your app's directory structure. 
+    The tutorial is now complete.
+    
