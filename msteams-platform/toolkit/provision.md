@@ -450,7 +450,7 @@ TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place
 > [!NOTE]
 > Teams toolkit doesn't provide support to deploy resources to other cloud platforms except Azure, however, the user can deploy manually.
 
-## Provision using Teams Toolkit in Microsoft Visual Studio Code
+## Provision using Teams Toolkit in Microsoft Visual Studio Code version 4
 
 Provision Azure resources with a single command in Teams Toolkit for Visual Studio Code or TeamsFx CLI. For more information, see [how to provision Azure-based app](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8).
 

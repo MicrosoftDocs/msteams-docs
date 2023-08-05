@@ -8,9 +8,10 @@ ms.topic: overview
 ms.date: 05/13/2022
 zone_pivot_groups: teams-toolkit-platform
 ---
-::: zone pivot="visual-studio-code-v5"
 
 # Customize Teams app manifest
+
+::: zone pivot="visual-studio-code-v5"
 
 The Teams app manifest describes how your app integrates into Teams. After scaffolding, the default manifest file is available at `appPackage/manifest.json`. The manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Teams Toolkit with env files like `env/.env.dev` and `env/.env.local`.
 
@@ -170,7 +171,7 @@ To preview values for all the environment, you can hover over the placeholder. I
 ::: zone pivot="visual-studio-code-v4"
 > [!IMPORTANT]
 >
-> We've introduced the [Teams Toolkit v5](../teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+> We've introduced the [Teams Toolkit v5](teams-toolkit-fundamentals.md#teams-toolkit-overview) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
 >
 > Teams Toolkit v4 extension will soon be deprecated.
 
@@ -416,11 +417,11 @@ To preview values for all the environments, you can hover over the placeholder. 
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md#available-for-visual-studio-code-1)
-* [App manifest schema for Teams](~/resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](../resources/schema/manifest-schema.md)
 * [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md)
 * [Manage multiple environments](TeamsFx-multi-env-v4.md)
-* [Public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md)
-* [Provision cloud resources using Visual Studio](provision-v4.md)
+* [Public developer preview for Teams](../resources/dev-preview/developer-preview-intro.md)
+* [Provision using Teams Toolkit in Microsoft Visual Studio Code](provision.md#provision-using-teams-toolkit-in-microsoft-visual-studio-code-version-4)
 * [Deploy Teams app to the cloud using Visual Studio](deploy-v4.md#deploy-teams-app-to-the-cloud-using-visual-studio)
 
 ::: zone-end
