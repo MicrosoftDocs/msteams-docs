@@ -164,7 +164,7 @@ To preview values for all the environment, you can hover over the placeholder. I
 * [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)
-* [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
+* [Provision cloud resources using Visual Studio Code](provision-cloud-resources.md)
 
 ::: zone-end
 
@@ -419,9 +419,10 @@ To preview values for all the environments, you can hover over the placeholder. 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md#available-for-visual-studio-code-1)
 * [App manifest schema for Teams](../resources/schema/manifest-schema.md)
 * [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md)
-* [Manage multiple environments](TeamsFx-multi-env-v4.md)
+* [Environments in Teams Toolkit](TeamsFx-multi-env.md)
 * [Public developer preview for Teams](../resources/dev-preview/developer-preview-intro.md)
 * [Provision using Teams Toolkit in Microsoft Visual Studio Code](provision.md#provision-using-teams-toolkit-in-microsoft-visual-studio-code-version-4)
+* [Deploy Teams app to the cloud using Microsoft Visual Studio Code](deploy.md#deploy-teams-app-to-the-cloud-using-microsoft-visual-studio-code-1)
 * [Deploy Teams app to the cloud using Visual Studio](deploy-v4.md#deploy-teams-app-to-the-cloud-using-visual-studio)
 
 ::: zone-end
