@@ -166,7 +166,7 @@ To learn more about the directory structure of different types of scenario-based
 
 ::: zone pivot="visual-studio-code-v4"
 
-# Create a new Teams project using Teams Toolkit
+## Create a new Teams project using Teams Toolkit
 
 > [!IMPORTANT]
 >
