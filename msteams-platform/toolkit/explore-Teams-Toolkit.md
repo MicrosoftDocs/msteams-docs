@@ -192,7 +192,7 @@ This section gives you a tour of Teams Toolkit v4 and its features.
 
 Teams Toolkit appears within Visual Studio Code as an extension. After you install Teams Toolkit, it opens within the Visual Studio Code window.
 
-:::image type="content" source="toolkit-v4/images/overview1_1-v4.png" alt-text="Overview of Teams Toolkit"  lightbox="images/overview1_1-v4.png":::
+:::image type="content" source="toolkit-v4/images/overview1_1-v4.png" alt-text="Overview of Teams Toolkit"  lightbox="toolkit-v4/images/overview1_1-v4.png":::
 
 | Serial No. | UI Elements | Definition |
 | --- | --- | --- |
@@ -212,7 +212,7 @@ You can explore the available functionalities from the Teams Toolkit task pane. 
 
 After you create a new Teams app project, the directory structure of the app appears in the left panel and the **`README`** file in the right panel.
 
-:::image type="content" source="toolkit-v4/images/first-page_1-v4.png" alt-text="First page of Teams Toolkit"  lightbox="images/first-page_1-v4.png":::
+:::image type="content" source="toolkit-v4/images/first-page_1-v4.png" alt-text="First page of Teams Toolkit"  lightbox="toolkit-v4/images/first-page_1-v4.png":::
 
 Let's take a tour of Teams Toolkit.
 
@@ -322,7 +322,7 @@ From the task pane, you can see the following sections:
 
 2. Select the type of how-to guide that you want to view.
 
-   :::image type="content" source="toolkit-v4/images/view-how-to-guides-v4.png" alt-text="Screenshot showing the how-to guides menu options." lightbox="images/view-how-to-guides-v4.png":::
+   :::image type="content" source="toolkit-v4/images/view-how-to-guides-v4.png" alt-text="Screenshot showing the how-to guides menu options." lightbox="toolkit-v4/images/view-how-to-guides-v4.png":::
 
     * Select any one of the Teams app scenario guides to view the guide to develop an app for a common app scenario, such as sending notifications using a bot.
 
