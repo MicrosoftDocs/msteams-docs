@@ -514,15 +514,14 @@ With TeamsFx SDK, you can write user authentication code in a simplified way usi
 
 For more information about TeamsFx SDK, see:
 
-* [TeamsFx SDK](../TeamsFx-SDK.md) or [API reference](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)
+* [TeamsFx SDK](TeamsFx-SDK.md) or [API reference](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)
 * [Microsoft Teams Framework (TeamsFx) Sample Gallery](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2)
 
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md#available-for-visual-studio-code-1)
-* [Prerequisites for creating your Teams app](tools-prerequisites-v4.md)
+* [Prerequisites for creating your Teams app](tools-prerequisites.md)
 * [Enable SSO for tab app](~/tabs/how-to/authentication/tab-sso-overview.md)
-* [Enable SSO for your bot and message extension](~/bots/how-to/authentication/bot-sso-overview.md)
-* [Prepare Accounts to build your Teams app](tools-prerequisites-v4.md#accounts-to-build-your-teams-app)
+* [Enable SSO for your bot and message extension](~/bots/how-to/authentication/bot-sso-overview.md)[Prepare Accounts to build your Teams app](tools-prerequisites.md#accounts-to-build-your-teams-app)
 
 ::: zone-end
