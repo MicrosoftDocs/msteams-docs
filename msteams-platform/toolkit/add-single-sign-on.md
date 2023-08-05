@@ -64,7 +64,7 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
 ::: zone pivot="visual-studio-code-v4"
 > [!IMPORTANT]
 >
-> We've introduced the [Teams Toolkit v5](../teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+> We've introduced the [Teams Toolkit v5](teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
 >
 > Teams Toolkit v4 extension will soon be deprecated.
 
@@ -254,7 +254,7 @@ SSO command handler `ProfileSsoCommandHandler` uses an Azure AD token to call Mi
    });
    ```
 
-1. Register your command in the Teams [app manifest](../../resources/schema/manifest-schema.md#botscommandlists). Open `templates\appPackage\manifest.template.json`, and add the following lines under `commands` in `commandLists` of your bot:
+1. Register your command in the Teams [app manifest](../resources/schema/manifest-schema.md#botscommandlists). Open `templates\appPackage\manifest.template.json`, and add the following lines under `commands` in `commandLists` of your bot:
 
    ```json
    {
@@ -482,7 +482,7 @@ To make this work in your app:
 
 ## Debug your app
 
-Press **F5** to debug your application. Teams Toolkit uses the Azure AD manifest file to register an Azure AD app for SSO. For Teams Toolkit local debug functionalities, see [how to debug your Teams app locally](debug-local-v4.md).
+Press **F5** to debug your application. Teams Toolkit uses the Azure AD manifest file to register an Azure AD app for SSO. For Teams Toolkit local debug functionalities, see [how to debug your](/microsoftteams/platform/toolkit/debug-local?tabs=Windows&pivots=visual-studio-code-v4).
 
 ## Customize Azure AD app registration
 
