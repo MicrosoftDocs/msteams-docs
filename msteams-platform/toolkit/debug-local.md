@@ -228,7 +228,7 @@ The configuration **Attach to Frontend** or **Launch App** launches Microsoft Ed
 
 > [!IMPORTANT]
 >
-> We've introduced the [Teams Toolkit v5](../teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+> We've introduced the [Teams Toolkit v5](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code-v5) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
 >
 > Teams Toolkit v4 extension will soon be deprecated.
 
@@ -327,7 +327,7 @@ Runs tasks as defined in `.vscode/tasks.json`.
 
 The following image displays task names in the **OUTPUT** and **TERMINAL** tabs of the Visual Studio Code while running tab, bot or message extension, and Azure Functions.
 
-:::image type="content" source="toolkit-v4/images/Terminal1-v4.png" alt-text="Start app services" lightbox="images/Terminal1-v4.png":::
+:::image type="content" source="toolkit-v4/images/Terminal1-v4.png" alt-text="Start app services" lightbox="toolkit-v4/images/Terminal1-v4.png":::
 
 ### Launches debug configurations
 
@@ -362,15 +362,15 @@ The configuration **Attach to Frontend** or **Launch Bot** launches Microsoft Ed
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Debug background process](debug-background-process-v4.md)
+> [Debug background process](/microsoftteams/platform/toolkit/debug-background-process)
 
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md#available-for-visual-studio-code-1)
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
-* [Use Teams Toolkit to provision cloud resources](provision-v4.md)
+* [Use Teams Toolkit to provision cloud resources](/microsoftteams/platform/toolkit/provision?pivots=visual-studio-code-v4)
 * [Add capabilities to your Teams apps](add-capability-v4.md)
-* [Deploy to the cloud](deploy-v4.md)
-* [Manage multiple environments in Teams Toolkit](TeamsFx-multi-env-v4.md)
+* [Deploy to the cloud](/microsoftteams/platform/toolkit/provision?branch=main)
+* [Manage multiple environments in Teams Toolkit](/microsoftteams/platform/toolkit/teamsfx-multi-env?branch=main)
 
 ::: zone-end

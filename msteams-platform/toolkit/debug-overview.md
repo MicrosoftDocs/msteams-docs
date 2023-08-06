@@ -313,7 +313,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 > [!IMPORTANT]
 >
-> We've introduced the [Teams Toolkit v5](../teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+> We've introduced the [Teams Toolkit v5](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code-v5) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
 >
 > Teams Toolkit v4 extension will soon be deprecated.
 
@@ -375,7 +375,7 @@ The following steps help you to prepare for debug:
 
 ### Sign in to Microsoft 365
 
-If you've signed up for Microsoft 365 already, sign in to Microsoft 365. For more information, see [Microsoft 365 developer program](tools-prerequisites-v4.md#microsoft-365-developer-program)
+If you've signed up for Microsoft 365 already, sign in to Microsoft 365. For more information, see [Microsoft 365 developer program](/microsoftteams/platform/toolkit/tools-prerequisites).
 
 ### Toggle breakpoints
 
@@ -538,13 +538,14 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 ## Next
 
 > [!div class="nextstepaction"]
-> [Debug your app locally](debug-local-v4.md)
+> [Debug your app locally](/microsoftteams/platform/toolkit/debug-local?tabs=Windows&pivots=visual-studio-code-v4)
 
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md#available-for-visual-studio-code-1)
-* [Debug background process](debug-background-process-v4.md)
-* [Use Teams Toolkit to provision cloud resources](provision-v4.md)
-* [Deploy to the cloud](deploy-v4.md)
-* [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest-v4.md)
+* [Debug background process](/microsoftteams/platform/toolkit/debug-background-process)
+* [Deploy to the cloud](/microsoftteams/platform/toolkit/deploy?pivots=visual-studio-code-v4)
+* [Use Teams Toolkit to provision cloud resources](/microsoftteams/platform/toolkit/provision?branch=main)
+* [Preview and customize Teams app manifest](/microsoftteams/platform/toolkit/teamsfx-preview-and-customize-app-manifest?branch=main)
+
 ::: zone-end
