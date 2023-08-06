@@ -209,11 +209,11 @@
     - name: Teams Toolkit for Visual Studio
       items:
       - name: Teams Toolkit VS overview
-        href: toolkit/toolkit-v4/teams-toolkit-fundamentals-v4.md
+        href: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md
       - name: Install Teams Toolkit VS
-        href: toolkit/toolkit-v4/install-Teams-Toolkit-v4.md
+        href: toolkit/toolkit-v4/install-Teams-Toolkit-vs.md
       - name: Explore Teams Toolkit VS
-        href: toolkit/toolkit-v4/explore-Teams-Toolkit-v4.md
+        href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
       - name: Prepare to build apps using Teams Toolkit VS
         href: toolkit/toolkit-v4/build-environments-v4.md
         items:
@@ -221,7 +221,7 @@
           href: toolkit/toolkit-v4/tools-prerequisites-v4.md
           displayName: Accounts to build your Teams app    
         - name: Create a new Teams app project
-          href: toolkit/toolkit-v4/create-new-project-v4.md
+          href: toolkit/toolkit-v4/create-new-project-vs.md
         - name: Develop your Teams app
           items: 
           - name: Add and manage environment
@@ -236,27 +236,27 @@
             href: toolkit/toolkit-v4/add-API-connection-v4.md
             displayName: endpoint
           - name: Add single sign-on to Teams app
-            href: toolkit/toolkit-v4/add-single-sign-on-v4.md  
+            href: toolkit/toolkit-v4/add-single-sign-on-vs.md  
         - name: Customize Manifest
           items:
           - name: Customize Teams app Manifest
-            href: toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-v4.md
+            href: toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md
           - name: Edit Azure AD manifest
             href: toolkit/toolkit-v4/AAD-manifest-customization-v4.md
         - name: Debug your Teams app
           items: 
           - name: Overview
-            href: toolkit/toolkit-v4/debug-overview-v4.md
+            href: toolkit/toolkit-v4/debug-overview-vs.md
           - name: Debug your Teams app locally
-            href: toolkit/toolkit-v4/debug-local-v4.md
+            href: toolkit/toolkit-v4/debug-local-vs.md
           - name: Debug background process
             href: toolkit/toolkit-v4/debug-background-process-v4.md
         - name: Host your app on Azure
           items:    
           - name: Provision cloud resources
-            href: toolkit/toolkit-v4/provision-v4.md
+            href: toolkit/toolkit-v4/provision-vs.md
           - name: Deploy Teams app to the cloud
-            href: toolkit/toolkit-v4/deploy-v4.md
+            href: toolkit/toolkit-v4/deploy-vs.md
         - name: Test your Teams app
           items: 
           - name: Integrate and collaborate
