@@ -369,7 +369,6 @@ The configuration **Attach to Frontend** or **Launch Bot** launches Microsoft Ed
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md#available-for-visual-studio-code-1)
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
 * [Use Teams Toolkit to provision cloud resources](/microsoftteams/platform/toolkit/provision?pivots=visual-studio-code-v4)
-* [Add capabilities to your Teams apps](add-capability-v4.md)
 * [Deploy to the cloud](/microsoftteams/platform/toolkit/provision?branch=main)
 * [Manage multiple environments in Teams Toolkit](/microsoftteams/platform/toolkit/teamsfx-multi-env?branch=main)
 

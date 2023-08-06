@@ -441,7 +441,7 @@ You can follow the steps to add environment variables to the .env files to use a
 
 > [!IMPORTANT]
 >
-> We've introduced the [Teams Toolkit v5](../teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+> We've introduced the [Teams Toolkit v5](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code-v5) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
 >
 > Teams Toolkit v4 extension will soon be deprecated.
 
@@ -462,7 +462,7 @@ When you trigger the provision command in Teams Toolkit or TeamsFx CLI, you can 
 * Teams app registration under your Microsoft 365 tenant's Teams platform.
 * Azure resources under your selected Azure subscription.
 
-When you create a new project, you also need to create Azure resources. The ARM template defines all the Azure resources and helps to create required Azure resources during provision. When you [add a new capability resource](./add-resource-v4.md) to an existing project, the updated ARM template reflects the latest change.
+When you create a new project, you also need to create Azure resources. The ARM template defines all the Azure resources and helps to create required Azure resources during provision. When you [add a new capability resource](/microsoftteams/platform/toolkit/add-resource) to an existing project, the updated ARM template reflects the latest change.
 
 > [!NOTE]
 > Azure services incur costs in your subscription. For more information on cost estimation, see [pricing calculator](https://azure.microsoft.com/pricing/calculator/).
@@ -717,7 +717,7 @@ To add other Azure resource or storage to the app, consider the following scenar
 Add Azure storage to your Azure function back-end to store blob data. There's no auto flow to update the `bicep` template with the Azure storage support. However, you can edit the `bicep` file and add the resource. Follow these steps:
 
 1. Create a tab project.
-2. Add function to the project. For more information, see [how to add resources](./add-resource-v4.md).
+2. Add function to the project. For more information, see [add a new capability resource](/microsoftteams/platform/toolkit/add-resource).
 3. Declare the new storage account in ARM template. You can declare the resource at `templates\azure\provision\function.bicep` directly. You can declare the resources in other places.
 
     `````````bicep
@@ -746,8 +746,9 @@ Add Azure storage to your Azure function back-end to store blob data. There's no
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md#available-for-visual-studio-code-1)
-* [Deploy Teams app to the cloud](deploy-v4.md)
-* [Manage multiple environments](TeamsFx-multi-env-v4.md)
-* [Collaborate with other developers on Teams project](TeamsFx-collaboration-v4.md)
-* [Edit Teams app manifest using Visual Studio](TeamsFx-preview-and-customize-app-manifest-v4.md)
+* [Deploy Teams app to the cloud](/microsoftteams/platform/toolkit/deploy?pivots=visual-studio-code-v4)
+* [Manage multiple environments](/microsoftteams/platform/toolkit/teamsfx-multi-env)
+* [Collaborate with other developers on Teams project](/microsoftteams/platform/toolkit/teamsfx-collaboration)
+* [Edit Teams app manifest using Visual Studio](/microsoftteams/platform/toolkit/teamsfx-preview-and-customize-app-manifest?pivots=visual-studio-code-v4)
+
 ::: zone-end

@@ -220,14 +220,14 @@ The Teams Toolkit for Visual Studio Code extension is available in a pre-release
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Explore Teams Toolkit](explore-Teams-Toolkit-v4.md)
+> [Explore Teams Toolkit](/microsoftteams/platform/toolkit/explore-teams-toolkit?pivots=visual-studio-code-v4)
 
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md#available-for-visual-studio-code-1)
-* [Prepare to build apps](build-environments-v4.md)
-* [Provision cloud resources](provision-v4.md)
-* [Deploy Teams app to the cloud](deploy-v4.md)
-* [Create new Teams app](create-new-project-v4.md#create-new-teams-app-in-visual-studio)
+* [Prepare to build apps](/microsoftteams/platform/toolkit/build-environments)
+* [Provision cloud resources](/microsoftteams/platform/toolkit/provision?pivots=visual-studio-code-v4)
+* [Deploy Teams app to the cloud](/microsoftteams/platform/toolkit/deploy?pivots=visual-studio-code-v4)
+* [Create new Teams app](/microsoftteams/platform/toolkit/create-new-project?pivots=visual-studio-code-v4)
 
 ::: zone-end
