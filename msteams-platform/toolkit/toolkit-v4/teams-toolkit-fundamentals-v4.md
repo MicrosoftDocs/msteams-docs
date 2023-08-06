@@ -6,12 +6,9 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
-zone_pivot_groups: teams-app-platform
 ---
 
 # Teams Toolkit Visual Studio Overview
-
-::: zone pivot="visual-studio-v17.6"
 
 Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio.
 
@@ -32,32 +29,22 @@ Teams Toolkit v4 is available for free for Visual Studio 2022 Community, Profess
 | Installation | Available in the Visual Studio Installer |
 | Build with | C#, .NET, ASP.NET, Blazor |
 
-::: zone-end
-
 ## Features
 
 The following list provides the key features of Teams Toolkit:
 
-::: zone pivot="visual-studio-v17.6"
-
 * [Project templates](#project-templates)
 * [Automatic registration and configuration](#automatic-registration-and-configuration)
-
-::: zone-end
 
 ### Project templates
 
 You can start directly with the capability-focused templates such as tabs, bots, and message extensions or by following existing samples if you're already familiar with Teams app development. Teams Toolkit reduces the complexity of getting started with templates for common line-of-business app scenarios and smart defaults to accelerate your time to production.
 
-::: zone pivot="visual-studio-v17.6"
 :::image type="content" source="images/create-new-app-vs_2-v4.png" alt-text="Create new Teams app menu in VS Code":::
-::: zone-end
 
 ### Automatic registration and configuration
 
 You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, configure settings, such as Azure Active Directory (Azure AD) automatically. Sign in with your Microsoft 365 account to control where the app is configured and customized the included Azure AD manifest when you need flexibility.
-
-::: zone pivot="visual-studio-v17.6"
 
 #### TeamsFx .NET SDK Reference docs
 
@@ -66,8 +53,6 @@ You can save time and let the toolkit automatically register the app in Teams De
 * [Microsoft.TeamsFx.Configuration Namespace](/../dotnet/api/Microsoft.TeamsFx.Configuration)
 * [Microsoft.TeamsFx.Conversation Namespace](/../dotnet/api/Microsoft.TeamsFx.Conversation)
 * [Microsoft.TeamsFx.Helper Namespace](/../dotnet/api/Microsoft.TeamsFx.Helper)
-
-::: zone-end
 
 ## See also
 
