@@ -116,12 +116,12 @@ Make sure your short description adheres to the [store validation guidelines](~/
 
 The long description must provide a narrative information that highlights about your app's basic functions, key features, benefits for the users, and specific user guidance.
 
-The long description that you are adding to your offer listing must contain information on the following pointers for the benefit of the users who want to install and use your app. Also, ensure to provide the required information for the app to be validated successfully.
+The long description that you're adding to your offer listing must contain information on the following pointers for the benefit of the users who want to install and use your app. Also, ensure to provide the required information for the app to be validated successfully.
 
 * Define about your product and the industries it’s aligned with.
 * Specify about the target audience and customer segments the app focuses.
 * Denote the unique values of your app in Microsoft Teams.
-* Highlight how your app helps to resolve the customers problems and with their everyday work routine.
+* Highlight how your app helps to resolve the customers' problems and with their everyday work routine.
 * Clearly list the key benefits that your app provides the customers. We recommend that you add up to three benefits.
 * Brief about the primary features of your app.
 * If there are specific requirements to use your app, mention them clearly in the description for the benefit of users and admins looking to use your app.
