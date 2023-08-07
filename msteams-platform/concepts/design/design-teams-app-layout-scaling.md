@@ -35,12 +35,12 @@ The 4-pixel base unit of grid allows components to scale consistently across all
 
 ### Mobile
 
+> [!NOTE]
+> Apps in Teams mobile supports both landscape and portrait mode.
+
 Mobile designs must be 320 pixels.
 
 :::image type="content" source="../../assets/images/design-guidelines/responsive-mobile.png" alt-text="Example shows a responsive layout on mobile.":::
-
-> [!NOTE]
-> Apps in Teams mobile are supported on both landscape and portrait mode.
 
 ### Desktop
 
@@ -212,7 +212,7 @@ No. Apps get this capability by default.
 <summary><b>What if my app doesn't support one of the modes, or if the scenario is only intended to work in one of the modes?</b></summary>
 
 Teams supports both modes by default and it's not possible to have the app work in only one mode.
- If this requirement is demanding for your app, reach out to Teams support.
+ If this requirement is demanding for your app, reach out to support team.
 
 <br>
 
@@ -272,7 +272,7 @@ Yes, landscape mode is supported on both Android and iOS Teams apps, providing c
 
 <summary><b>Can I customize the app's behavior differently for landscape and portrait modes?</b></summary>
 
-The behavior of the app remains consistent across both modes. However, reach out to us with your feedback and suggestions if you have specific use cases or requirements that necessitate different behaviors in each mode.
+The behavior of the app remains consistent across both modes. However, reach out to support team with your feedback and suggestions if you have specific use cases or requirements that necessitate different behaviors in each mode.
 
 <br>
 
