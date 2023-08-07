@@ -679,24 +679,24 @@ Remember the following:
 
 ### Videos
 
-A video in your app listing is one of the most effective ways to communicate why people should use your app. You can add URLs of your YouTube or Vimeo video that provides the value of your app and another video that provides the demo or scenario walkthrough of your app. [*Suggested fix*]
+A video in your app listing is one of the most effective ways to communicate why people should use your app. You can add URLs of your YouTube or Vimeo video that provides the value of your app. It's also recommended as a best practice to add a video that provides the demo or scenario walkthrough of your app. [*Suggested fix*]
 
 If you choose to submit a video as part of your app listing in your Partner Center account, ensure the following criteria is met:
 
 * The video must be short, clear, and engaging.
 * The video must demonstrate how to set up and use the app.
 * The video must be of good quality.
-* The video must in a narrative form.
+* The video must be in a narrative form.
 * The duration of the video should be within 60-90 seconds for a value video and the recommended duration for a walkthrough video is three-five minutes. [*Suggested Fix*]
 * You must turn off advertisements from your YouTube or Vimeo account settings before submitting the video link in the app listing. [*Mandatory Fix*]
-* The video must showcases your app’s functionality and integration within Teams. [*Mandatory Fix*]
+* The video must showcase your app’s functionality and integration within Teams. [*Mandatory Fix*]
 * The video must be available as a functional link. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/video-app-listing-partner-center.png" alt-text="Screenshot shows the failed scenario of video submitted as part of app listing in partner center.":::
 * The video can be surfaced in the first position of the screenshots or videos caroussel in AppDetails (Teams Store and Admin Center) and AppSource. [*Suggested Fix*]
 * You mustn't add marketing information in a demo or scenario walkthrough video.
 
-For more detailed information on the criteria for creating an app value video or walkthrough video, refer to the guidelines and checklist to create a video.
+For more detailed information on the criteria for creating an app value video or walkthrough video, refer to the [checklist to create a video](submission-checklist.md#create-a-video).
 
 <br></br>
 
