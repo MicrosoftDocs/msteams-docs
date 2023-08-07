@@ -416,12 +416,11 @@ To preview values for all the environments, you can hover over the placeholder. 
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md#available-for-visual-studio-code-1)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md).
 * [App manifest schema for Teams](../resources/schema/manifest-schema.md)
-* [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md)
+* [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
 * [Environments in Teams Toolkit](TeamsFx-multi-env.md)
-* [Public developer preview for Teams](../resources/dev-preview/developer-preview-intro.md)
-* [Provision using Teams Toolkit in Microsoft Visual Studio Code](provision.md#provision-using-teams-toolkit-in-microsoft-visual-studio-code-version-4)
-* [Deploy Teams app to the cloud using Microsoft Visual Studio Code](deploy.md#deploy-teams-app-to-the-cloud-using-microsoft-visual-studio-code-1)
+* [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)
+* [Provision cloud resources using Visual Studio Code](provision-cloud-resources.md)
 
 ::: zone-end

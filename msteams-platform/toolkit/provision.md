@@ -745,10 +745,10 @@ Add Azure storage to your Azure function back-end to store blob data. There's no
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md#available-for-visual-studio-code-1)
-* [Deploy Teams app to the cloud](/microsoftteams/platform/toolkit/deploy?pivots=visual-studio-code-v4)
-* [Manage multiple environments](/microsoftteams/platform/toolkit/teamsfx-multi-env)
-* [Collaborate with other developers on Teams project](/microsoftteams/platform/toolkit/teamsfx-collaboration)
-* [Edit Teams app manifest using Visual Studio](/microsoftteams/platform/toolkit/teamsfx-preview-and-customize-app-manifest?pivots=visual-studio-code-v4)
+* [Teams Toolkit Overview](~/toolkit/teams-toolkit-fundamentals.md)
+* [Deploy Teams app to the cloud](deploy.md)
+* [Manage multiple environments](~/toolkit/TeamsFx-multi-env.md)
+* [Collaborate with other developers on Teams project](~/toolkit/TeamsFx-collaboration.md)
+* [Edit Teams app manifest using Visual Studio](~/toolkit/TeamsFx-preview-and-customize-app-manifest.md)
 
 ::: zone-end

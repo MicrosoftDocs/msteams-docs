@@ -184,7 +184,7 @@ From the task pane, you can see the following sections:
 
 ::: zone pivot="visual-studio-code-v4"
 
-You can explore the Teams Toolkit v4 look and feel within the Visual Studio Code or Visual Studio.
+You can explore the Teams Toolkit v4 look and feel within the Visual Studio Code.
 
 This section gives you a tour of Teams Toolkit v4 and its features.
 
@@ -330,9 +330,9 @@ From the task pane, you can see the following sections:
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md#available-for-visual-studio-code-1)
-* [Create a new Teams app using Teams Toolkit](/microsoftteams/platform/toolkit/create-new-project?pivots=visual-studio-code-v4)
+* [Teams Toolkit Overview](~/toolkit/teams-toolkit-fundamentals.md)
+* [Create a new Teams app using Teams Toolkit](~/toolkit/create-new-project.md)
 * [App manifest schema](~/resources/schema/manifest-schema.md)
-* [Prepare to build apps using Teams Toolkit](/microsoftteams/platform/toolkit/build-environments)
+* [Prepare to build apps using Teams Toolkit](build-environments.md)
 
 ::: zone-end

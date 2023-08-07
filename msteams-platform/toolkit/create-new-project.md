@@ -170,7 +170,7 @@ To learn more about the directory structure of different types of scenario-based
 
 > [!IMPORTANT]
 >
-> We've introduced the [Teams Toolkit v5](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code-v5) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+> We've introduced the [Teams Toolkit v5](~/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code-v5) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
 >
 > Teams Toolkit v4 extension will soon be deprecated.
 
@@ -332,12 +332,12 @@ The following image shows the directory structure of tab app with bot feature:
 
 ## See also
 
-* [Teams Toolkit Overview](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code-v4)
+* [Teams Toolkit Overview](~/toolkit/teams-toolkit-fundamentals.md)
 * [Build a Teams app with Blazor](~/sbs-gs-blazorupdate.yml)
 * [Build a Teams app with C# or .NET](~/sbs-gs-csharp.yml)
-* [Prerequisites for all types of environment and create your Teams appPre](/microsoftteams/platform/toolkit/tools-prerequisites)
-* [Prepare to build apps using Teams Toolkit](build-environments.md)
-* [Provision cloud resources](provision.md)
-* [Deploy Teams app to the cloud](deploy.md)
+* [Prerequisites for all types of environment and create your Teams appPre](~/toolkit/tools-prerequisites.md)
+* [Prepare to build apps using Teams Toolkit](~/toolkit/build-environments.md)
+* [Provision cloud resources](~/toolkit/provision.md)
+* [Deploy Teams app to the cloud](~/toolkit/deploy.md)
 
 ::: zone-end

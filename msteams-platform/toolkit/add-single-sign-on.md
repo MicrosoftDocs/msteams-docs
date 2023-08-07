@@ -482,7 +482,7 @@ To make this work in your app:
 
 ## Debug your app
 
-Press **F5** to debug your application. Teams Toolkit uses the Azure AD manifest file to register an Azure AD app for SSO. For Teams Toolkit local debug functionalities, see [how to debug your](/microsoftteams/platform/toolkit/debug-local?tabs=Windows&pivots=visual-studio-code-v4).
+Press **F5** to debug your application. Teams Toolkit uses the Azure AD manifest file to register an Azure AD app for SSO. For Teams Toolkit local debug functionalities, see [how to debug your app locally](~/toolkit/debug-local.md).
 
 ## Customize Azure AD app registration
 
@@ -519,9 +519,10 @@ For more information about TeamsFx SDK, see:
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md#available-for-visual-studio-code-1)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Prerequisites for creating your Teams app](tools-prerequisites.md)
-* [Enable SSO for tab app](~/tabs/how-to/authentication/tab-sso-overview.md)
-* [Enable SSO for your bot and message extension](~/bots/how-to/authentication/bot-sso-overview.md)[Prepare Accounts to build your Teams app](tools-prerequisites.md#accounts-to-build-your-teams-app)
+* [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
+* [Enable SSO for your bot and message extension](../bots/how-to/authentication/bot-sso-overview.md)
+* [Prepare Accounts to build your Teams app](tools-prerequisites.md#accounts-to-build-your-teams-app)
 
 ::: zone-end

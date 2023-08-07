@@ -542,10 +542,10 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md#available-for-visual-studio-code-1)
-* [Debug background process](/microsoftteams/platform/toolkit/debug-background-process)
-* [Deploy to the cloud](/microsoftteams/platform/toolkit/deploy?pivots=visual-studio-code-v4)
-* [Use Teams Toolkit to provision cloud resources](/microsoftteams/platform/toolkit/provision?branch=main)
-* [Preview and customize Teams app manifest](/microsoftteams/platform/toolkit/teamsfx-preview-and-customize-app-manifest?branch=main)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Debug background process](debug-background-process.md)
+* [Use Teams Toolkit to provision cloud resources](provision.md)
+* [Deploy to the cloud](deploy.md)
+* [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest.md)
 
 ::: zone-end

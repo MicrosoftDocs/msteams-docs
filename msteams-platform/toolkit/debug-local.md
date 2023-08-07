@@ -362,14 +362,15 @@ The configuration **Attach to Frontend** or **Launch Bot** launches Microsoft Ed
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Debug background process](/microsoftteams/platform/toolkit/debug-background-process)
+> [Debug background process](debug-background-process.md)
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md#available-for-visual-studio-code-1)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
-* [Use Teams Toolkit to provision cloud resources](/microsoftteams/platform/toolkit/provision?pivots=visual-studio-code-v4)
-* [Deploy to the cloud](/microsoftteams/platform/toolkit/provision?branch=main)
-* [Manage multiple environments in Teams Toolkit](/microsoftteams/platform/toolkit/teamsfx-multi-env?branch=main)
+* [Use Teams Toolkit to provision cloud resources](provision.md)
+* [Add capabilities to your Teams apps](add-capability.md)
+* [Deploy to the cloud](deploy.md)
+* [Manage multiple environments in Teams Toolkit](TeamsFx-multi-env.md)
 
 ::: zone-end
