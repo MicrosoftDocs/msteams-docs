@@ -64,10 +64,10 @@ groups:
   title: Teams Toolkit platform-vs
   prompt: Before you begin, choose your tool version.
   pivots:
-  - id: visual-studio-v17.7
-    title: Version 17.7
-  - id: visual-studio-v17.6
-    title: Version 17.6
+  - id: visual-studio-v17,7
+    title: Version 17,7
+  - id: visual-studio-v17,6
+    title: Version 17,6
 - id: enable-sso
   title: Add code to enable SSO for your app
   prompt: Before you begin, select the app for which you want to add code to enable SSO.

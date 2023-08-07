@@ -11,7 +11,7 @@ zone_pivot_groups: teams-toolkit-platform-vs
 
 # Teams Toolkit Visual Studio Overview
 
-::: zone pivot="visual-studio-v17.7"
+::: zone pivot="visual-studio-v17,7"
 
 Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio.
 
@@ -23,7 +23,7 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 
 ::: zone-end
 
-::: zone pivot="visual-studio-v17.6"
+::: zone pivot="visual-studio-v17,6"
 
 Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio.
 
