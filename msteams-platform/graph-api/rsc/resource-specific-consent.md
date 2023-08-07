@@ -53,9 +53,9 @@ Use RSC permissions to determine the data access methods for your app. A user's 
 
 A team owner can add, remove or upload apps with RSC permissions to a team or channel in Teams.  For a team owner to install an app using RSC, group owner consent for that user must be enabled. For more information, see [Configure consent settings](grant-resource-specific-consent.md#configure-consent-settings).
 
-Team owners can allow members to install and consent to apps with RSC permissions in a team as follows:
+Team owners can perform the following steps to allow members to add or remove apps with RSC permissions in a team:
 
-1. In Teams, go to a team, and select **More options ...** > **Manage team**.
+1. In Teams, go to a team, and select **More options (...)** > **Manage team**.
 
 1. Select **Settings** and expand **Member permissions**.
 
