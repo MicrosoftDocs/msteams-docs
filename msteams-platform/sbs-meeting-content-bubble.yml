@@ -321,7 +321,7 @@ items:
        > [!NOTE]
        > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
                
-         1. Select **Add a platform** > *Web**.
+         1. Select **Add a platform** > **Web**.
 
              :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-add-platform-web.png" alt-text="Screenshot shows the authentication with Add  a platform and Web highlighted in red.":::
 
