@@ -305,6 +305,8 @@ All entities are required parameters to actions
     {{conversation.listNames}} 
     ```
 
+    ```text
+
     Examples:  
 
     Human: remind me to buy milk
@@ -323,6 +325,8 @@ All entities are required parameters to actions
     AI: DO summarizeLists
     Human: show me all lists as a card and sort the lists alphabetically
     AI: DO summarizeLists
+
+    ```
 
 * Conversation history:
 
