@@ -85,7 +85,7 @@ Let's look at how Teams capabilities enable different features for your Teams ap
 
 :::row:::
    :::column:::
-      :::image type="icon" source="~\assets\images\overview\flowchart-tab-icon.png" link="~/tabs/what-are-tabs.md" border="false":::
+      :::image type="icon" source="~\assets\images\overview\flowchart-tab-icon.png" link="~/tabs/what-are-tabs.md" border="false" align="center":::
    :::column-end:::
      :::image type="content" source="~\assets\images\overview\flowchart-tab-features.png" alt-text="Microsoft Teams app for tab features." border="false":::
 :::row-end:::
