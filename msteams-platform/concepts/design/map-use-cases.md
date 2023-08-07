@@ -106,7 +106,7 @@ Let's look at how Teams capabilities enable different features for your Teams ap
 
 :::row:::
    :::column:::
-      :::image type="icon" source="~\assets\images\overview\flowchart-adaptive-card-icon.png" link="~/task-modules-and-cards/cards/design-effective-cards.md" border="false":::
+      :::image type="icon" source="~\assets\images\overview\flowchart-adaptive-card-icon.png" link="~/task-modules-and-cards/cards/cards-reference.md#adaptive-card" border="false":::
    :::column-end:::
      :::image type="content" source="~\assets\images\overview\flowchart-adaptive-cards-features.png" alt-text="Microsoft Teams app for adaptive card features." border="false":::
 :::row-end:::
