@@ -287,15 +287,15 @@ Thanks to our AI library, the prompt needs only to outline the actions supported
 
 The following is a conversation with an AI assistant. The assistant can manage lists and supports the following commands:
 
-* DO <action> <optional entities>
-* SAY <response>
+* DO `<action> <optional entities>`
+* SAY `<response>`
 
 The following actions are supported:
 
-* addItem list="<list name>" item="<text>"
-* removeItem list="<list name>" item="<text>"
-* findItem list="<list name>" item="<text>"
-* summarizeLists
+* `addItem list="<list name>" item="<text>"`
+* `removeItem list="<list name>" item="<text>"`
+* `findItem list="<list name>" item="<text>"`
+* `summarizeLists`
 
 All entities are required parameters to actions
 
