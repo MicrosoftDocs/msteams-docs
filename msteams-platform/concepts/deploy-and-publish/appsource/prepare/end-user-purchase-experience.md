@@ -10,7 +10,7 @@ ms.date: 04/06/2023
 
 # Purchase and manage app subscriptions and licenses
 
-The information in this article helps you understand the purchase experience from the customer end. You can add more features and functionality to your Teams app through subscriptions. Users can purchase subscriptions and manage licenses for themselves, their team, or their organization directly from the Teams store.
+The information in this article helps you understand the purchase experience from the customer end. You can add more features and functionality to your Teams app through subscriptions. Users can purchase subscriptions and manage licenses for themselves, their team, or their organization from within the Teams store.
 
 ## Subscription experience
 
@@ -22,14 +22,14 @@ The following example shows how users can purchase subscription plans for a Team
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app.":::
 
-1. Select your country or region to see subscription plans for your location.
+1. Select your country or region to see subscription plans for your location ans select **Save and continue**.
 
     :::image type="content" source="~/assets/images/saas-offer/add-region.png" alt-text="Screenshot shows option to select the country or region.":::
 
 1. In the **Choose a subscription plan** dialog, decide the plan you want and select **Start trail**.
 
     > [!NOTE]
-    > Private plans are visible only to users of the organization you're providing the offer. These plans are indicated with a **Special offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon.
+    > Private plans are visible only to users of the organization you're providing the offer. A **Private offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon indicates such plans.
 
     :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Screenshot shows selecting the appropriate subscription plan.":::
 
@@ -71,7 +71,7 @@ The following example shows how users can manage licenses for third-party apps f
 
     :::image type="content" source="../../../../assets/images/saas-offer/view-license.png" alt-text="Screenshot shows the selected assigned licenses highlighted in red.":::
 
-1. Search for the users or a team in the search box and select **Assign**. The license is assigned to the users or a team.
+1. Search for the users or a team in the search box and select **Assign**. The users or a team are assigned with the license.
 
     :::image type="content" source="../../../../assets/images/saas-offer/assign-licenses.png" alt-text="Screenshot shows assigning license to a Team highlighted in red.":::
 
