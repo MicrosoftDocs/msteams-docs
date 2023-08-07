@@ -15,7 +15,7 @@ Scaling and responsive design are essential to all Teams apps so that users can 
 
 ## Layout design
 
-The 4-pixel base unit of grid allows components to scale consistently across all display size in Teams. In the following example, the corner radius of each button is 4 pixels.
+The 4-pixel base unit of grid allows components to scale consistently across all display sizes in Teams. In the following example, the corner radius of each button is 4 pixels.
 
 :::image type="content" source="../../assets/images/design-guidelines/layout-pixel.png" alt-text="Example shows an example of pixels in layout." lightbox="../../assets/images/design-guidelines/layout-pixel.png":::
 
@@ -62,7 +62,7 @@ The minimum size for desktop is 550 pixels.
 
 #### Do: Use word wrap so that text is legible at all zoom levels
 
-Avoid text overlap and truncation.
+Avoid text overlapping and truncation.
 
    :::column-end:::
    :::column span="":::
@@ -100,7 +100,7 @@ Without word wrapping, the text and CTAs aren't usable.
 
 #### Do: Ensure your app is legible at 200% scale
 
-Use responsive design to avoid text overlap and truncation.
+Use responsive design to avoid text overlapping and truncation.
 
    :::column-end:::
    :::column span="":::
@@ -134,7 +134,7 @@ Teams apps need to be accessible to all users with any level of visual impairmen
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/design-guidelines/resolution-do.png" alt-text="Example shows a resolution to avoid overlap and truncation.":::
+:::image type="content" source="../../assets/images/design-guidelines/resolution-do.png" alt-text="Example shows a resolution to avoid overlapping and truncation.":::
 
 ##### Do: Test your app at 1920 x 1080 resolution
 
@@ -236,7 +236,7 @@ Add `<FlexColumn scroll></FlexColumn>` to the empty state for the app.
 
 <summary><b>How can I test my app compatibility in both landscape and portrait modes?</b></summary>
 
-To test your app's compatibility in both modes, run the app on Teams mobile in different device orientations. Ensure that all elements, including buttons, text, and images, are correctly aligned and displayed without any UI distortions or cut-offs.
+To test your app's compatibility in both modes, run the app on Teams mobile in different device orientations. Ensure that all elements, including buttons, text, and images, are correctly aligned, and displayed without any UI distortions or cut-offs.
 
 <br>
 
@@ -258,9 +258,9 @@ Yes, when designing apps for Teams, it's essential to follow responsive design p
 
 <details>
 
-<summary><b>Does landscape mode is supported on both Android and iOS Teams apps?</b></summary>
+<summary><b>Does landscape mode support on both Android and iOS Teams apps?</b></summary>
 
-Yes, landscape mode is supported on both Android and iOS Teams apps, providing a consistent experience for users across both platforms.
+Yes, landscape mode is supported on both Android and iOS Teams apps, providing consistent experience for users across both platforms.
 
 <br>
 
