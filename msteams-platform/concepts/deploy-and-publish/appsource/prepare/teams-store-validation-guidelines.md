@@ -615,7 +615,7 @@ The long description must provide an engaging narrative that highlights your app
 * Make unverified claims. For example, best, top, and ranked, unless it comes with the source of the claim.
 * Compare your offer with other marketplace offers.
 
-For an ideal example of an app listing with an accurate, concise and informative short and log description, check Descriptions section. Check the link. - submission
+For guidance on how to create an accurate, concise, and informative short and long description, see [checklist to write app descriptions](submission-checklist.md#write-descriptions).
 
 </details>
 
