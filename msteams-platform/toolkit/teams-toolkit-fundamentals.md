@@ -90,7 +90,7 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 
 ## Available for Visual Studio Code
 
-Teams Toolkit v4 is available for free for Visual Studio Code. For more information about installation and setup, see [install Teams Toolkit](toolkit-v4/install-Teams-Toolkit-v4.md).
+Teams Toolkit v4 is available for free for Visual Studio Code. For more information about installation and setup, see [install Teams Toolkit](~/toolkit/install-teams-toolkit.md&pivots=visual-studio-code-v4).
 
 | Teams Toolkit | Visual Studio Code |
 | - | ------------------ |
