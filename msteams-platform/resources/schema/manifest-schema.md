@@ -96,6 +96,10 @@ The following is the sample manifest schema:
             "searchUrl": "https://contoso.com/content (displayed in web browser)"
         }
     ],
+    "supportedChannelTypes": [
+        "sharedChannels",
+        "privateChannels"
+    ],
     "bots": [
         {
             "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
@@ -456,7 +460,7 @@ Used when your app experience has a team channel tab experience that requires ex
 |`scopes`|array of enums|2|✔️|Currently, configurable tabs support only the `team` and `groupChat` scopes. |
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: **true**.|
 |`meetingSurfaces`|array of enums|2||The set of `meetingSurfaceItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: **[sidepanel, stage]**. |
-|`context` |array of enums|8||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: **[personalTab, channelTab, privateChatTab, meetingChatTab, meetingDetailsTab, meetingStage, callingSidepanel]**.|
+|`context` |array of enums|8||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Accepted value: **[personalTab, channelTab, privateChatTab, meetingChatTab, meetingDetailsTab, meetingSidePanel, meetingStage, callingSidepanel]**.|
 |`sharePointPreviewImage`|string|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
 |`supportedSharePointHosts`|array of enums|2||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart`. |
 
@@ -493,7 +497,7 @@ The item is an array (maximum of only one element&mdash;currently only one bot i
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`botId`|string|64 characters|✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
+|`botId`|string|128 characters|✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
 |`scopes`|array of enums|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupChat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
 |`needsChannelSelector`|Boolean|||Describes whether or not the bot uses a user hint to add the bot to a specific channel. Default: **`false`**|
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: **`false`**|
@@ -544,7 +548,7 @@ The item is an array (maximum of one element) with all elements of type `object`
 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
-|`botId`|string|64|✔️|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall App ID.|
+|`botId`|string|128 characters|✔️|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall App ID.|
 |`commands`|array of objects|10|✔️|Array of commands the message extension supports.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. Default: **false**.|
 |`messageHandlers`|array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met.|
@@ -562,7 +566,7 @@ Each command item is an object with the following structure:
 |---|---|---|---|---|
 |`id`|string|64 characters|✔️|The ID for the command.|
 |`title`|string|32 characters|✔️|The user-friendly command name.|
-|`type`|string|64 characters||Type of the command. One of `query` or `action`. Default: **query**.|
+|`type`|string|||Type of the command. One of `query` or `action`. Default: **query**.|
 |`description`|string|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value indicates whether the command runs initially with no parameters. Default is **false**.|
 |`context`|array of Strings|3||Defines where the message extension can be invoked from. Any combination of`compose`,`commandBox`,`message`. Default is `["compose","commandBox"]`.|
@@ -577,7 +581,7 @@ Each command item is an object with the following structure:
 |`parameters.title`|string|32 characters|✔️|User-friendly title for the parameter.|
 |`parameters.description`|string|128 characters||User-friendly string that describes this parameter’s purpose.|
 |`parameters.value`|string|512 characters||Initial value for the parameter. Currently the value isn't supported|
-|`parameters.inputType`|string|128 characters||Defines the type of control displayed on a task module for`fetchTask: false` . One of `text, textarea, number, date, time, toggle, choiceset` .|
+|`parameters.inputType`|string|||Defines the type of control displayed on a task module for`fetchTask: false` . Input value can only be one of `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|array of objects|10 items||The choice options for the`choiceset`. Use only when`parameter.inputType` is `choiceset`.|
 |`parameters.choices.title`|string|128 characters|✔️|Title of the choice.|
 |`parameters.choices.value`|string|512 characters|✔️|Value of the choice.|
@@ -638,7 +642,7 @@ Provide your Azure Active Directory App ID and Microsoft Graph information to he
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|string|36 characters|✔️|Azure AD application ID of the app. This ID must be a GUID.|
+|`id`|string|128 characters|✔️|Azure AD application ID of the app. This ID must be a GUID.|
 |`resource`|string|2048 characters|✔️|Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you aren't using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, `https://example` to avoid an error response. |
 
 ## graphConnector
@@ -739,7 +743,7 @@ Define the properties your app uses to post a user activity feed.
 
 ## defaultInstallScope
 
-**Optional** - string
+**Optional**—string
 
 Specifies the install scope defined for this app by default. The defined scope is the option displayed on the button when a user tries to add the app. Options are:
 
@@ -750,7 +754,7 @@ Specifies the install scope defined for this app by default. The defined scope i
 
 ## defaultGroupCapability
 
-**Optional** - object
+**Optional**—object
 
 When a group install scope is selected, it defines the default capability when the user installs the app. Options are:
 
@@ -766,7 +770,7 @@ When a group install scope is selected, it defines the default capability when t
 
 ## configurableProperties
 
-**Optional** - array
+**Optional**—array
 
 The `configurableProperties` block defines the app properties that Teams admins can customize. For more information, see [enable app customization](~/concepts/design/enable-app-customization.md). The app customization feature isn't supported in custom or LOB apps.
 
@@ -787,9 +791,9 @@ You can define any of the following properties:
 
 ## supportedChannelTypes
 
-**Optional** - array
+**Optional**—array
 
-Enables your app in non-standard channels. If your app supports a team scope and this property is defined, Teams enables your app in each channel type accordingly. Currently, the private and shared channel types are supported.
+Enables your app in non-standard channels. If your app supports a team scope and this property is defined, Teams enables your app in each channel type accordingly. The supportedChannelTypes property only supports `sharedChannels` and `privateChannels`.
 
 > [!NOTE]
 >
@@ -798,13 +802,13 @@ Enables your app in non-standard channels. If your app supports a team scope and
 
 ## defaultBlockUntilAdminAction
 
-**Optional** - Boolean
+**Optional**—Boolean
 
 When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidden from users by default until admin allows it. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**. For more information on default app block, see [Block apps by default for users until an admin approves](../../concepts/deploy-and-publish/add-default-install-scope.md#block-apps-by-default-for-users-until-an-admin-approves).
 
 ## publisherDocsUrl
 
-**Optional** - string
+**Optional**—string
 
 **Maximum size** - 128 characters
 
@@ -812,7 +816,7 @@ The `publisherDocsUrl` is an HTTPS URL to an information page for admins to get 
 
 ## subscriptionOffer
 
-**Optional** - object
+**Optional**—object
 
 Specifies the SaaS offer associated with your app.
 
@@ -822,7 +826,7 @@ Specifies the SaaS offer associated with your app.
 
 ## meetingExtensionDefinition
 
-**Optional** - object
+**Optional**—object
 
 Specify meeting extension definition. For more information, see [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md).
 
@@ -845,7 +849,7 @@ Specify meeting extension definition. For more information, see [custom Together
 
 ## authorization
 
-**Optional** — object
+**Optional**—object
 
 > [!NOTE]
 > `authorization` is only supported for manifest version 1.12 or later.

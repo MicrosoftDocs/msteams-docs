@@ -23,6 +23,7 @@ To fetch the transcript for a particular meeting:
 
 - [Configure permissions on Azure AD to access transcript](#configure-permissions-on-azure-ad-to-access-transcript)
 - [Obtain meeting ID and organizer ID](fetch-id.md)
+- [Get notified when the meeting transcript is available](/graph/teams-changenotifications-callrecording-and-calltranscript)
 - [Use Graph APIs to fetch transcript](/graph/api/resources/calltranscript)
 
 ## Configure permissions on Azure AD to access transcript
@@ -59,3 +60,4 @@ For more information about how your app can know when the meetings ends, see [su
 - [Meeting app APIs](../../apps-in-teams-meetings/meeting-apps-apis.md)
 - [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 - [Microsoft Graph API to get information about online meeting](/graph/api/resources/onlinemeeting)
+- [Considerations when choosing an API](/graph/choose-online-meeting-api)
