@@ -85,51 +85,81 @@ Let's look at how Teams capabilities enable different features for your Teams ap
 
 :::row:::
    :::column:::
-      :::image type="content" source="~\assets\images\overview\flowchart-tab-icon.png" alt-text="Microsoft Teams app for tab icon." link="~/tabs/what-are-tabs.md" border="false":::
+      :::image type="content" source="~/assets/images/overview/flowchart-tab-icon.png" alt-text="Microsoft Teams app for tab icon." link="~/tabs/what-are-tabs.md" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\flowchart-tab-features.png" alt-text="Microsoft Teams app for tab features." border="false":::
+     :::image type="content" source="~/assets/images/overview/flowchart-tab-features.png" alt-text="Microsoft Teams app for tab features." border="false":::
 :::row-end:::
 
 :::row:::
    :::column:::
-      :::image type="content" source="~\assets\images\overview\flowchart-bot-icon.png" alt-text="Microsoft Teams app for bot icon." link="~/bots/what-are-bots.md" border="false":::
+      :::image type="content" source="~/assets/images/overview/flowchart-bot-icon.png" alt-text="Microsoft Teams app for bot icon." link="~/bots/what-are-bots.md" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\flowchart-bot-features.png" alt-text="Microsoft Teams app for bot features." border="false":::
+     :::image type="content" source="~/assets/images/overview/flowchart-bot-features.png" alt-text="Microsoft Teams app for bot features." border="false":::
 :::row-end:::
 
 :::row:::
    :::column:::
-      :::image type="content" source="~\assets\images\overview\flowchart-message-extension-icon.png" alt-text="Microsoft Teams app for message extensions icon." link="~/messaging-extensions/what-are-messaging-extensions.md" border="false":::
+      :::image type="content" source="~/assets/images/overview/flowchart-message-extension-icon.png" alt-text="Microsoft Teams app for message extensions icon." link="~/messaging-extensions/what-are-messaging-extensions.md" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\flowchart-message-extension-features.png" alt-text="Microsoft Teams app for message extension features." border="false":::
+     :::image type="content" source="~/assets/images/overview/flowchart-message-extension-features.png" alt-text="Microsoft Teams app for message extension features." border="false":::
 :::row-end:::
 
 :::row:::
    :::column:::
-      :::image type="content" source="~\assets\images\overview\flowchart-adaptive-card-icon.png" alt-text="Microsoft Teams app for adaptive cards icon." link="~/task-modules-and-cards/cards/cards-reference.md#adaptive-card" border="false":::
+      :::image type="content" source="~/assets/images/overview/flowchart-adaptive-card-icon.png" alt-text="Microsoft Teams app for adaptive cards icon." link="~/task-modules-and-cards/cards/cards-reference.md#adaptive-card" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\flowchart-adaptive-cards-features.png" alt-text="Microsoft Teams app for adaptive card features." border="false":::
+     :::image type="content" source="~/assets/images/overview/flowchart-adaptive-cards-features.png" alt-text="Microsoft Teams app for adaptive card features." border="false":::
 :::row-end:::
 
 :::row:::
    :::column:::
-      :::image type="content" source="~\assets\images\overview\flowchart-apps-for-meetings-icon.png" alt-text="Microsoft Teams app for apps for meetings icon." link="~/apps-in-teams-meetings/teams-apps-in-meetings.md" border="false":::
+      :::image type="content" source="~/assets/images/overview/flowchart-apps-for-meetings-icon.png" alt-text="Microsoft Teams app for apps for meetings icon." link="~/apps-in-teams-meetings/teams-apps-in-meetings.md" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\flowchart-apps-meeting-features.png" alt-text="Microsoft Teams apps for meeting features." border="false":::
+     :::image type="content" source="~/assets/images/overview/flowchart-apps-meeting-features.png" alt-text="Microsoft Teams apps for meeting features." border="false":::
 :::row-end:::
 
 :::row:::
    :::column:::
-      :::image type="content" source="~\assets\images\overview\flowchart-webhook-and-connectors-icon.png" alt-text="Microsoft Teams app for webhook and connector icon." link="~/webhooks-and-connectors/what-are-webhooks-and-connectors.md" border="false":::
+      :::image type="content" source="~/assets/images/overview/flowchart-webhook-and-connectors-icon.png" alt-text="Microsoft Teams app for webhook and connector icon." link="~/webhooks-and-connectors/what-are-webhooks-and-connectors.md" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\flowchart-webhook-connector-features.png" alt-text="Microsoft Teams apps for webhook and connector features." border="false":::
+     :::image type="content" source="~/assets/images/overview/flowchart-webhook-connector-features.png" alt-text="Microsoft Teams apps for webhook and connector features." border="false":::
 :::row-end:::
 
 :::row:::
    :::column:::
-      :::image type="content" source="~\assets\images\overview\flowchart-graph-conversational-interface-icon.png" alt-text="Microsoft Teams app for graph conversational interface icon." link="/graph/overview" border="false":::
+      :::image type="content" source="~/assets/images/overview/flowchart-graph-conversational-interface-icon.png" alt-text="Microsoft Teams app for graph conversational interface icon." link="/graph/overview" border="false":::
    :::column-end:::
-     :::image type="content" source="~\assets\images\overview\flowchart-graph-conversational-interface-features.png" alt-text="Microsoft Teams apps for graph conversational interface features." border="false":::
+     :::image type="content" source="~/assets/images/overview/flowchart-graph-conversational-interface-features.png" alt-text="Microsoft Teams apps for graph conversational interface features." border="false":::
+:::row-end:::
+
+Sample 2
+
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-tab.png" alt-text="Microsoft Teams app for tab icon-2." link="~/tabs/what-are-tabs.md" border="false":::
+:::row-end:::
+
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-bot.png" alt-text="Microsoft Teams app for bot icon-2." link="~/bots/what-are-bots.md" border="false":::
+:::row-end:::
+
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-message-extension.png" alt-text="Microsoft Teams app for message extensions icon-2." link="~/messaging-extensions/what-are-messaging-extensions.md" border="false":::
+:::row-end:::
+
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-adaptive-card.png" alt-text="Microsoft Teams app for adaptive cards icon-2." link="~/task-modules-and-cards/cards/cards-reference.md#adaptive-card" border="false":::
+:::row-end:::
+
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-apps-for-meetings.png" alt-text="Microsoft Teams app for apps for meetings icon-2." link="~/apps-in-teams-meetings/teams-apps-in-meetings.md" border="false":::
+:::row-end:::
+
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-webhook-and-connectors.png" alt-text="Microsoft Teams app for webhook and connector icon-2." link="~/webhooks-and-connectors/what-are-webhooks-and-connectors.md" border="false":::
+:::row-end:::
+
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-graph-conversational-interface.png" alt-text="Microsoft Teams app for graph conversational interface icon-2." link="/graph/overview" border="false"::::
 :::row-end:::
 
 For example:
