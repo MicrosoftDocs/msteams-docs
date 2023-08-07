@@ -41,7 +41,7 @@ To host your development and production code and their HTTPS endpoints, You need
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Debug your Microsoft Teams app locally](debug-local-v4.md)
 * [Debug background process](debug-background-process-v4.md)
 * [Use Teams Toolkit to provision cloud resources](provision-v4.md)

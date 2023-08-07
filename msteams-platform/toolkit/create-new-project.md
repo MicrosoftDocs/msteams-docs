@@ -1,7 +1,7 @@
 ---
 title: Create a new Teams app
 author: zyxiaoyuer
-description: In this module, learn how to create a new Teams app using Teams Toolkit.
+description: In this module, learn how to create a new Teams app using Teams Toolkit using Visual Studio Code.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -10,7 +10,7 @@ zone_pivot_groups: teams-toolkit-platform
 ---
 ::: zone pivot="visual-studio-code-v5"
 
-# Create a new Teams project
+# Create a new Teams app
 
 In this section, you can learn how to create a new Teams project using Microsoft Visual Studio Code.
 
@@ -170,7 +170,7 @@ To learn more about the directory structure of different types of scenario-based
 
 > [!IMPORTANT]
 >
-> We've introduced the [Teams Toolkit v5](~/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code-v5) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+> We've introduced the [Teams Toolkit v5](~/toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
 >
 > Teams Toolkit v4 extension will soon be deprecated.
 
