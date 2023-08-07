@@ -234,9 +234,9 @@ Add `<FlexColumn scroll></FlexColumn>` to the empty state for the app.
 
 <details>
 
-<summary><b>How can I test my app's compatibility with both landscape and portrait modes?</b></summary>
+<summary><b>How can I test my app compatibility in both landscape and portrait modes?</b></summary>
 
-You can test your app's compatibility with both modes by running it on Teams mobile in different device orientations. Ensure that all elements, including buttons, text, and images, are correctly aligned and displayed without any cut-offs or UI distortions.
+To test your app's compatibility in both modes, run the app on Teams mobile in different device orientations. Make sure that all elements, including buttons, text, and images, are correctly aligned and displayed without any UI distortions or cut-offs.
 
 <br>
 
@@ -258,7 +258,7 @@ Yes, when designing apps for Teams, it's essential to follow responsive design p
 
 <details>
 
-<summary><b>Will landscape mode be available on both Teams-Android and Teams-iOS apps?</b></summary>
+<summary><b>Does landscape mode is supported on both Teams-Android and Teams-iOS apps?</b></summary>
 
 Yes, landscape mode is supported on both Teams-Android and Teams-iOS apps, providing a consistent experience for users across both platforms.
 
