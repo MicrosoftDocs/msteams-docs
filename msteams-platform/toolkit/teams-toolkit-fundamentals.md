@@ -33,7 +33,7 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 
 ## Available for Visual Studio Code
 
-Teams Toolkit is available for free for Visual Studio Code. For more information about installation and set up, see [Install Teams Toolkit](./install-Teams-Toolkit.md).
+Teams Toolkit is available for free for Visual Studio Code. For more information about installation and set up, see [Install Teams Toolkit](install-Teams-Toolkit.md).
 
 | Teams Toolkit | Visual Studio Code |
 | - | ------------------ |
@@ -131,9 +131,9 @@ You can access Teams Developer Portal quickly, where you can configure, distribu
 * [Build tabs for Teams](~/tabs/what-are-tabs.md)
 * [Build bots for Teams](~/bots/what-are-bots.md)
 * [Build Message extensions](~/messaging-extensions/what-are-messaging-extensions.md)
-* [Create a new Teams app](toolkit-v4/create-new-project-v4.md)
-* [Provision cloud resources](toolkit-v4/provision-v4.md)
-* [Deploy Teams app to the cloud](toolkit-v4/deploy-v4.md)
-* [Publish Teams apps](toolkit-v4/publish-v4.md)
+* [Create a new Teams app](~/toolkit/create-new-project.md)
+* [Provision cloud resources](~/toolkit/provision.md)
+* [Deploy Teams app to the cloud](~/toolkit/deploy.md)
+* [Publish Teams apps](~/toolkit/publish.md)
 
 ::: zone-end
