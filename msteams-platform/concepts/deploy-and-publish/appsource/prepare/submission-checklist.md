@@ -94,7 +94,7 @@ Make sure your short name adheres to the [store validation guidelines](~/concept
 
 ### Write descriptions
 
-You must have a short and long description that displays the core values and helps understand the significance of your app.
+You must have a short and long description that displays the core values and helps the users to understand the significance of your app.
 
 #### Short description
 
