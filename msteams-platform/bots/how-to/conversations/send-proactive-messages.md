@@ -421,3 +421,4 @@ The following table provides a simple code sample that incorporates basic conver
 * [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml)
 * [Build notification bot with JavaScript to send a proactive message](../../../sbs-gs-notificationbot.yml)
 * [TurnContext](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest"&preserve-view=true")
+* [Implement custom storage for bot](/azure/bot-service/bot-builder-custom-storage)

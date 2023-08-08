@@ -401,6 +401,9 @@
   - name: Create conversational tabs
     href: tabs/how-to/conversational-tabs.md
     displayName: configurable
+  - name: Send activity feed notifications
+    href: tabs/send-activity-feed-notification.md
+    displayName: activity feed, notification, customize notification
   - name: Tab margin changes
     href: resources/removing-tab-margins.md
     displayName: margins align, extra padding effect, size of the tab margins, changing margins
@@ -434,7 +437,7 @@
       displayName: compose
     - name: Channel and group chat conversations with a bot
       href: bots/how-to/conversations/channel-and-group-conversations.md
-      displayName: Teams conversational bots, mention
+      displayName: Teams conversational bots, mention, tag mention, user mention
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md 
       displayName: activity, Message reaction events, event handling for install and uninstall events
@@ -568,9 +571,8 @@
     - name: Fetch meeting ID and organizer ID
       href: graph-api/meeting-transcripts/fetch-id.md
       displayName: Obtain meeting details using user-level notification, tenant-level notification
-    - name: Get notified when transcripts is available
-      href: /graph/transcripts
-      displayName: Get notified, transcript
+    - name: Get notified when the meeting transcript and recording is available
+      href: /graph/teams-changenotifications-callrecording-and-calltranscripts
     - name: Get transcripts
       href: /graph/api/resources/calltranscript
     - name: Get recordings
@@ -630,7 +632,7 @@
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-cards.md
-      displayName: People picker, type-ahead
+      displayName: People picker, type-ahead, people icon
     - name: Types of cards
       href: task-modules-and-cards/cards/cards-reference.md
       displayName: MessageCard, correlationId, Markdown, what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card
@@ -642,7 +644,7 @@
       displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin
     - name: People Picker in Adaptive Cards
       href: task-modules-and-cards/cards/people-picker.md
-      displayName: Setting, channel, static typeahead
+      displayName: Setting, channel, static typeahead, persona, persona set
     - name: Typeahead search in Adaptive Cards
       href: task-modules-and-cards/cards/dynamic-search.md
       displayName: Static and dynamic typeahead search  
@@ -771,9 +773,6 @@
     displayName: Permissions, delegated
   - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
-  - name: Send activity feed notifications
-    href: /graph/teams-send-activityfeednotifications
-    displayName: activity feed, notification
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
   - name: Code samples
@@ -1053,7 +1052,9 @@
     - name: Deep link to Teams chat
       href: concepts/build-and-test/deep-link-teams.md   
     - name: Deep link to a workflow in Teams
-      href: concepts/build-and-test/deep-link-workflow.md  
+      href: concepts/build-and-test/deep-link-workflow.md
+    - name: Execution and handling of deep links
+      href: concepts/build-and-test/deep-links-execution-handling.md    
   - name: Integrate People Picker  
     href: concepts/device-capabilities/people-picker-capability.md
 - name: Resources
