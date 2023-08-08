@@ -25,13 +25,12 @@ The icons are intended to create a uniform layout. These guidelines help you cre
 
 Microsoft Teams needs three assets during app submission to generate the app icons.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-icon-assets-needed.png" alt-text="Example shows the three assets to generate app icons." lightbox="../../assets/images/design-guidelines/app-icon-assets-needed.png":::
+:::image type="content" source="../../assets/images/design-guidelines/app-icon-asset-needed.png" alt-text="Example shows the three assets to generate app icons." lightbox="../../assets/images/design-guidelines/app-icon-assets-needed.png":::
 
 |Counter|Description|
 |----------|-----------|
 |1|A full bleed PNG format at 192 x 192 pixels. Utilize the full asset space as the background. This is used in the app store or fly-outs.|
 |2|A default or rest PNG format icon at 32 x 32 pixels. This icon is used as **rest/default** state in the app bar and other locations in the product. |
-|3|A focus or pressed  PNG format icon at 32 x 32 pixels. This icon is used as **focus** state in the app bar.|
 
 ### Color icon architecture
 
