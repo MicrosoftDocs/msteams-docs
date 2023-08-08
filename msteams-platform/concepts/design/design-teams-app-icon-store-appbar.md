@@ -23,7 +23,7 @@ The icons are intended to create a uniform layout. These guidelines help you cre
 
 ### Creating your assets
 
-Microsoft Teams needs three assets during app submission to generate the app icons.
+Microsoft Teams needs two assets during app submission to generate the app icons.
 
 :::image type="content" source="../../assets/images/design-guidelines/app-icon-asset-needed.png" alt-text="Example shows the three assets to generate app icons." lightbox="../../assets/images/design-guidelines/app-icon-assets-needed.png":::
 
