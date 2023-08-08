@@ -16,47 +16,35 @@ Microsoft commercial marketplace hosts publishing offers through Azure Marketpla
 
 There are four ways you can monetize your app:
 
-* **Subscription**: Provide offers as subscriptions (transactable), free app, or let your customer bring their licenses (bring your own license).
-* **Free Trail**: Provide free access to your app for a definite period based on the offer type.
-* **Test Drive**: Provide access to the preconfigured environment for a fixed period.
-* **Contact Me**: Provide contact information for the users to reach you for offer details and enquire about their needs.
+:::row:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/images/saas-offer/monetize-app.png" alt-text="Screenshot shows the monetization options.":::
+   :::column-end:::
+   :::column span="":::
+      1. Subscription: Provide offers as subscriptions (transactable), free app, or let your customer bring their licenses (bring your own license).
+      1. Free Trail: Provide free access to your app for a definite period based on the offer type.
+      1. Test Drive: Provide access to the preconfigured environment for a fixed period.
+      1. Contact Me: Provide contact information for the users to reach you for offer details and enquire about their needs.
+   :::column-end:::
+:::row-end:::
 
-Commercial marketplace provides various offer types and based on the offer type you select, the listing options differ.
+ Let's get to know about monetizing your Software as a Service (SaaS) applications in the Teams store through SaaS offers.
 
- Let's get to know about monetizing your Software as a Service (SaaS) applications in the Teams store through SaaS offer type.
+## what's a SaaS offer?
 
-## SaaS offer
-
-SaaS applications published in Microsoft commercial marketplace for purchase are SaaS offers. The availability of the offer in one of the online stores is based on the industry it's built for and the related configurations in the offer. As a publisher, create your marketplace offers in Partner Center and publish in the online store.
+SaaS applications published in Microsoft commercial marketplace for purchase are SaaS offers. The offers are available in one of the online stores based on the industry it's built for and the related configurations in the offer. As a publisher, you can create your marketplace offers in Partner Center and publish in the online store.
 
 > [!NOTE]
 > To create and publish your offer, you must have a commercial marketplace account in Partner Center.
 
-In this module, you learn about the entire process from planning the SaaS offer to publishing your app with the offer. Here are some features you can opt to integrate with your SaaS to enable a better user experience and expand the customer base.
+In this module, get to learn about the entire process from planning the SaaS offer to publishing your app with the offer. Here are some features you can opt to integrate with your SaaS offer to enable a better user experience and expand the customer base.
 
-### Decide a publishing option
+* **Publishing option**: Selecting a publishing option is mandatory, yet you can select a suitable option based on your requirements. You can either choose to sell through Microsoft or manage the transactions on your own. Let's learn in detail about it when [planning for SaaS offer](include-saas-offer.md).
+* **In-app purchases**: The in-app purchase option allows the customers to upgrade from a free to a paid version of your app from within the app. Whether you charge a price for your app or offer it for free, you can use in-app purchases in your app to provide an ongoing revenue stream.
+* **Test drive**: With a transactable SaaS offer, you can allow customers to test the end-to-end purchase experience of your monetized apps for a fixed time. Test drive and free trials are different, and you can offer one or both features to the customers.
+* **Set up Microsoft license management**: You can allow Microsoft to manage app licenses on your behalf or manage licenses yourself. If you select to use Microsoft license management to manage a SaaS license purchased in Teams, you can assign, unassign, use, and track SaaS licenses from the Teams store. [Set up Microsoft license management](manage-third-party-apps-license.md).
 
-When you're creating an offer, you're asked if you want to sell through Microsoft or not. Based on your response, the published offer has a suitable call-to-action button on the offer listing page. The publishing option you select also decides the technical requirements to create an offer. Let's learn in detail about it when you [plan your SaaS offer](include-saas-offer.md).
-
-The publishing option decides the way you want to engage with your customers and the purchase experience you want to provide.
-
-### In-app purchases
-
-The in-app purchase option allows the customers to upgrade from a free to a paid version of your app from within the app. Whether you charge a price for your app or offer it for free, you can use in-app purchases in your app to provide an ongoing revenue stream.
-
-[Use in-app purchases](~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
-
-### Test drive
-
-With a transactable SaaS offer, you can allow customers to test the end-to-end purchase experience of your monetized apps for a fixed time. Test drive and free trials are different, and you can offer one or both features to the customers.
-
-### Set up Microsoft license management
-
-You can allow Microsoft to manage app licenses on your behalf or manage licenses yourself. If you select to use Microsoft license management to manage a SaaS license purchased in Teams, you can assign, unassign, use, and track SaaS licenses from the Teams store.
-
-[Set up Microsoft license management](manage-third-party-apps-license.md).
-
-Now that we know about a SaaS offer and the listing methods, let's get started to create, configure, manage, test, and publish the SaaS offer. Let's also learn to configure the SaaS offer to your app and publish the app with the offer.
+Now that we know about monetizing options and SaaS offer, let's get started to create, configure, manage, test, and publish the SaaS offer. Let's also learn to configure the SaaS offer to your app and publish the app with the offer.
 
 ## Next step
 

@@ -10,7 +10,7 @@ ms.date: 03/21/2023
 
 # Plan your SaaS offer
 
-SaaS apps available for purchase in Microsoft commercial marketplace, either Azure Marketplace or Microsoft AppSource, are known as SaaS offers. Based on the SaaS offer configurations, the offers are available in one or both marketplaces. This guide helps plan for premium and enterprise SaaS offers for your existing basic free app.
+SaaS apps available for purchase in Microsoft commercial marketplace, either Azure Marketplace or Microsoft AppSource, are known as SaaS offers. Based on the SaaS offer configurations, the offers are available in one or both marketplaces. This guide helps to create plans for premium and enterprise SaaS offers for your existing basic free app.
 
 :::row:::
    :::column:::
@@ -33,11 +33,9 @@ SaaS apps available for purchase in Microsoft commercial marketplace, either Azu
    :::column-end:::
 :::row-end:::
 
-## Plan for offer features
+To create your SaaS offer and sell through commercial marketplace, it's recommended to plan the offer. Planning helps you to understand the suitable features for your offer. Here are the details about the features you need to decide before creating an offer.
 
-To create your SaaS offer and sell through commercial marketplace, it's recommended to plan the offer. Planning helps you to understand the suitable features for your offer. Here's the detail about the features you need to decide before creating an offer.
-
-### Decide a publishing option
+## Plan on the publishing option
 
 The initial step to create any SaaS offer is to decide how the offer must be available in the marketplace. The publishing option is available as a call-to-action button on the offer landing page.
 
@@ -54,12 +52,12 @@ You can opt to sell through Microsoft where Microsoft hosts all your transaction
 
 **Sell through Microsoft**
 
-Offers sold through Microsoft are transactable offers where Microsoft handles transactions for the licenses. With a transactable [Software-as-a-Service (SaaS) offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md), you can monetize your Teams app by selling subscription plans directly from your Teams store listing.
+Offers sold through Microsoft are transactable offers where Microsoft handles transactions for the licenses purchased. With a transactable [Software-as-a-Service (SaaS) offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md), you can monetize your Teams app by selling subscription plans directly from your Teams store listing.
 
     :::column-end:::
 :::row-end:::
 
-You can further allow Microsoft to manage licenses on your behalf. If yes, you must integrate with Microsoft Graph APIs to verify customer eligibility. For details on how to integrate, see [Integrate your SaaS offer with Graph API for License Management](prerequisites.md#integrate-with-graph-usagerights-api).
+You can further allow Microsoft to manage licenses on your behalf. If you choose Microsoft to manage licenses, you must integrate with Microsoft Graph APIs to verify customer eligibility. For details on how to integrate, see [Integrate your SaaS offer with Graph API for License Management](prerequisites.md#integrate-with-graph-usagerights-api).
 
 :::row:::
     :::column:::
@@ -100,7 +98,7 @@ Customers can share their details and ask that you contact them about the offer 
 
 The technical configurations and requirements differ based on the listing option you select. You must fulfil the [prerequisites](prerequisites.md) before you start creating the plan.
 
-### Plan for offer details
+## Plan for offer details
 
 To start with, you need to plan on the basic yet key features that decide the information available on the landing page, where your offer is published, and terms of use. It helps the users to find your offer easily in the marketplace and enhances usability.
 
