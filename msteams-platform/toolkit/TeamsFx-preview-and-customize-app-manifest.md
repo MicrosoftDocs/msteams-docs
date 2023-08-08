@@ -164,11 +164,9 @@ To preview values for all the environment, you can hover over the placeholder. I
 
 ## Customize Teams app manifest for Visual Studio
 
-Teams Toolkit in Visual Studio loads manifest from `appPackage/manifest.json` with environment variables from `env/.env.{env}` file while provisioning and preparing app dependencies. It's shared between local and remote environments.
+The Teams app manifest describes how your app integrates into Teams and is shared between local and remote environments. The default manifest file is available at the `appPackage/manifest.json` file and the environment variables available from the `env/.env.{env}` file
 
-### Customize app manifest in Teams Toolkit
-
-The manifest file contains some environment variables with format of `${{XX_XX}}`. You can define your own environment variables, add placeholders in `manifest.json` file. The following are the examples:
+The manifest file contains some environment variables with the `${{XX_XX}}` format. You can define your own environment variables and add placeholders in the `manifest.json` file. The following are the .env and .json file examples:
 
 ```env
 TEAMS_APP_DESCRIPTION=This is an amazing app
@@ -187,56 +185,58 @@ TEAMS_APP_DESCRIPTION=This is an amazing app
 
 ### Preview manifest file
 
-You can either sideload for local or deploy for Azure to preview the manifest file. The following are the steps:
+You can preview the manifest file either For Local or For Azure.  To preview the manifest file, follow these steps:To preview the manifest file:
 
 1. Select **Project** > **Teams Toolkit**.
 
-1. To trigger, select **Prepare Teams App Dependencies** or **Provision in the Cloud...** that generates environment variables for local or remote Teams app.
+1. Select **Prepare Teams App Dependencies** or **Provision in the Cloud...** to generate environment variables for local or remote Teams app..
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/provision-in-the-cloud.png" alt-text="Screenshot shows the app trigger in local or remote.":::
 
-Upload zip app package before you can preview the manifest file:
+1. Upload the **Zip App Package**. There are two ways to upload zip app package:
 
-1. Select **Project** > **Teams Toolkit**.
+    1. Select **Project** > **Teams Toolkit** > **Zip App Package** and then select either **For Local** or **For Azure**
 
-1. Select **Zip App Package**, then select either **For Local** or **For Azure**.
+        :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/zip-app-package.png" alt-text="Screenshot shows the zip app package for local or azure.":::
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/zip-app-package.png" alt-text="Screenshot shows the zip app package for local or azure.":::
+    1. From **Solution Explorer**, right-click on **MyTeamsApp2** (In this scenario the project name is MyTeamsApp2). Go to **Teams Toolkit** > **Zip App Package** and then select either **For Local** or **For Azure**.
 
-1. You can also upload zip app package from **Solution Explorer** section, right-click on **MyTeamsApp2**. In this scenario, the project name is MyTeamsApp2.
+        :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/solution-zip.png" alt-text="Screenshot shows the solution zip app package for local or azure.":::
 
-1. Select **Teams Toolkit** > **Zip App Package**, then select either **For Local** or **For Azure**.
+     Teams Toolkit generates the zip app package.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/solution-zip.png" alt-text="Screenshot shows the solution zip app package for local or azure.":::
+1. Under `appPackage` folder, right-click on the `manifest.json` file.
 
-To preview the manifest file, Teams Toolkit generates the zip app package. The following are the steps:
+1. Select **Preview Manifest File**.
 
-1. Right-click on the `manifest.json` file under `appPackage` folder.
-
-1. Select **Preview Manifest File**, then select either **For Local** or **For Azure**.
+1. Select either **For Local** or **For Azure**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/preview-manifest.png" alt-text="Screenshot shows the preview of manifest.":::
 
-The preview of the manifest file under `appPackage/build` in Visual Studio is displayed.
+You can preview the app manifest file under `appPackage/build` in Visual Studio is displayed.
 
 ### Sync local changes to Developer Portal
 
-After you've previewed the manifest file in Visual Studio, you can sync the local changes to Developer Portal.
+After you've previewed the manifest file in Visual Studio, you can sync the local changes to Developer Portal. To sync changes to Developer Portal follow these steps:
 
-Select **Project** > **Teams Toolkit** > **Update Manifest in Teams Developer Portal**.
+1. Select **Project**.
+1. Select **Teams Toolkit**.
+1. Select **Update Manifest in Teams Developer Portal**.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/update-teams-app.png" alt-text="Screenshot shows update manifest in teams developer portal.":::
 
-You can also sync the local changes to Developer Portal from the context menu of **Solution Explorer** section, right-click on **MyTeamsApp2**.
+You can also sync the local changes to Developer Portal from **Solution Explorer**:
 
-Select **Teams Toolkit** > **Update Manifest in Teams Developer Portal**.
+1. Right-click on **MyTeamsApp2**.
+1. Select **Teams Toolkit**.
+1. Select **Update Manifest in Teams Developer Portal**
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/solution-update-teams-app.png" alt-text="Screenshot shows solution update to teams app.":::
 
 The changes are updated to Developer Portal.
 
 > [!Tip]
-> Select **Overwrite and update** from the **Warning** dialog box to make any manual updates that can be overwritten in Teams Developer Portal.
+> If you want to make any manual updates that can be overwritten in Teams Developer Portal, from the **Warning** dialog box select **Overwrite and update**.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-overwrite.png" alt-text="Screenshot shows overwrite of app in teams developer portal.":::
 
