@@ -1013,7 +1013,7 @@ Preview. Namespace providing functionality to start a chat with others.
 
 [Reference](/javascript/api/@microsoft/teams-js/dialog) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Dialog.tsx)
 
-Preview. This group of capabilities enables apps to show modal dialogs. There are two primary types of dialogs: URL-based dialogs and Adaptive Card dialogs. Both types of dialogs are shown on top of your app, preventing interaction with your app while they're displayed.
+Preview. This group of capabilities enables apps to show modal task modules (dialogs). There are two primary types of dialogs: URL-based dialogs and Adaptive Card dialogs. Both types of dialogs are shown on top of your app, preventing interaction with your app while they're displayed.
 
 - URL-based dialogs allow you to specify a URL from which the contents are shown inside the dialog. For URL dialogs, use the functions and interfaces in the url namespace.
 - Adaptive Card-based dialogs allow you to provide JSON describing an Adaptive Card that is shown inside the dialog. For Adaptive Card dialogs, use the functions and interfaces in the adaptiveCard namespace.
