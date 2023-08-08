@@ -35,9 +35,6 @@ The 4-pixel base unit of grid allows components to scale consistently across all
 
 ### Mobile
 
-> [!NOTE]
-> Apps in Teams mobile supports both landscape and portrait mode.
-
 Mobile designs must be 320 pixels.
 
 :::image type="content" source="../../assets/images/design-guidelines/responsive-mobile.png" alt-text="Example shows a responsive layout on mobile.":::
@@ -53,6 +50,20 @@ The minimum size for desktop is 550 pixels.
 ##### Example for 2560 pixels
 
 :::image type="content" source="../../assets/images/design-guidelines/responsive-desktop.png" alt-text="Example shows a responsive layout on desktop.":::
+
+## Page orientation
+
+### Mobile
+
+Apps in Teams mobile supports both landscape and portrait mode.
+
+Portrait mode
+
+:::image type="content" source="~/assets/images/design-guidelines/mobile-portrait-mode.png" alt-text="Example shows a portrait mode page orientation in Teams mobile.":::
+
+Landscape mode
+
+:::image type="content" source="~/assets/images/design-guidelines/mobile-landscape-mode.png" alt-text="Example shows a landscape mode page orientation in Teams mobile.":::
 
 ## Best practices
 
