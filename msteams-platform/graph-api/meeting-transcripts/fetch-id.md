@@ -584,7 +584,7 @@ You can try the following code sample for a bot app:
 > [Graph APIs for fetching transcripts](/graph/api/resources/calltranscript)
 
 > [!div class="nextstepaction"]
-> [Graph APIs for fetching recordings](/graph/api/resources/callrecording)
+> [Graph APIs for fetching recordings](/graph/api/resources/callrecording?view=graph-rest-beta&preserve-view=true)
 
 ## See also
 

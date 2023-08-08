@@ -576,7 +576,7 @@
     - name: Get transcripts
       href: /graph/api/resources/calltranscript
     - name: Get recordings
-      href: /graph/api/resources/callrecording
+      href: /graph/api/resources/callrecording?view=graph-rest-beta&preserve-view=true
   - name: Enhanced collaboration with Live Share
     items:
     - name: Overview
