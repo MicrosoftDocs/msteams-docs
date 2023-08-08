@@ -79,7 +79,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Fetch meeting recording in the post meeting scenario using Graph API
-        url: graph-api/meeting-transcripts/overview-transcripts
+        url: graph-api/meeting-transcripts/overview-transcripts.md
       - text: App caching for iOS personal tray
         url: tabs/how-to/app-caching.md
       - text: Extend static tabs to group chat or meetings with a customizable experience.
