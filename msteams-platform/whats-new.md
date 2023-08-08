@@ -351,7 +351,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 August**
 
-***August 08, 2023***: [Fetch meeting recording in the post meeting scenario using Graph API.](graph-api/meeting-transcripts/overview-transcripts.md)
+***August 08, 2023***: [Use callRecording API to fetch meeting recording from all meetings.](graph-api/meeting-transcripts/overview-transcripts.md)
 
 :::column-end:::
 :::row-end:::
