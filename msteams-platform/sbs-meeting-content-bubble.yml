@@ -24,12 +24,11 @@ items:
     * Send targeted notifications to a specific user in a meeting.
     
     > [!NOTE]
-    > In-meeting notifications is available only for Azure AD users and not for anonymous users.
+    > In-meeting notifications are available only for Azure AD users and not for anonymous users.
     
     This step-by-step guide helps you to generate in-meeting notifications using a bot in Teams meeting. You'll see the following output:
 
       :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="Screenshot shows the final output of in-meeting notification.":::
-
      
 
 - title: Prerequisites
@@ -63,7 +62,7 @@ items:
    1. Select **Clone**. 
 
       > [!NOTE]
-      > If you encounter the error **Filename too long** apply the git command `git config --system core.longpaths true` in your administrator terminal of choice.
+      > If you encounter the error **Filename too long** execute the git command `git config --system core.longpaths true` in your administrator terminal of choice.
 
 - title: Create and register your bot 
   durationInMinutes: 5
@@ -194,8 +193,7 @@ items:
        :::image type="content" source="../msteams-platform/assets/images/meeting-content-bubble/ngrok-url.png" alt-text="Screenshot shows the ngrok with HTTPS URL highlighted in red.":::
 
         > [!NOTE]
-        > The HTTPS URL in your ngrok is your fully qualified domain name.
-        > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
+        > Your ngrok's HTTPS URL is your qualified domain name. The WebAppDomain is also a qualified domain name, but it doesn't include "https://" in it.
 
     1. Go to the Azure bot you've created in Azure portal. In the left pane, under **Settings**, select **Configuration**
 
@@ -295,7 +293,7 @@ items:
     1. In the left pane, select **API permissions**. 
 
        > [!NOTE]
-       > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
+       > Users need to consent to these permissions only if the Azure AD app is registered with a different tenant.
 
     1. Select **Add a permission**.
 
@@ -325,7 +323,7 @@ items:
 
              :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-add-platform-web.png" alt-text="Screenshot shows the authentication with Add  a platform and Web highlighted in red.":::
 
-         1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name: `https://your ngrok/auth-end`.
+         1. Enter the redirect URI for your app by appending `auth-end` to qualified domain name: `https://your ngrok/auth-end`.
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
              * **ID tokens**
@@ -346,7 +344,7 @@ items:
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
-         * Set `"BaseURL"` to the fully qualified `ngrok` domain name.
+         * Set `"BaseURL"` to the qualified `ngrok` domain name.
 
           :::image type="content" source="~/assets/images/meeting-content-bubble/appsettings-json.png" alt-text="Screenshot shows the App settings.":::
 
@@ -364,7 +362,7 @@ items:
 
           > [!NOTE]
           > `WebAppDomain` is your ngrok domain.
-          > If the ngrok ID end with `*.ngrok-free.app` valid domain is optional.
+          > If the ngrok ID ends with `*.ngrok-free.app` valid domain is optional.
 
          :::image type="content" source="~/assets/images/meeting-content-bubble/manifest-file.png" alt-text="Screenshot shows the Manifest cloned repository."lightbox="~/assets/images/meeting-content-bubble/manifest.png":::
 
@@ -489,5 +487,5 @@ items:
     ---
 
 - content: |
-    You've completed the tutorial to get started with generate in-meeting notifications app.
+    You have successfully completed this tutorial.
 
