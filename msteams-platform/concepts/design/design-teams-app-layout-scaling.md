@@ -57,11 +57,11 @@ The minimum size for desktop is 550 pixels.
 
 Apps in Teams mobile supports both landscape and portrait mode.
 
-Portrait mode
+#### Portrait mode
 
 :::image type="content" source="~/assets/images/design-guidelines/mobile-portrait-mode.png" alt-text="Example shows a portrait mode page orientation in Teams mobile.":::
 
-Landscape mode
+#### Landscape mode
 
 :::image type="content" source="~/assets/images/design-guidelines/mobile-landscape-mode.png" alt-text="Example shows a landscape mode page orientation in Teams mobile.":::
 
