@@ -570,7 +570,7 @@
       displayName: get meeting transcripts, teams meeting transcript, get meeting recordings, teams meeting recording
     - name: Fetch meeting ID and organizer ID
       href: graph-api/meeting-transcripts/fetch-id.md
-      displayName: Obtain meeting details using user-level notification, tenant-level notification
+      displayName: Obtain meeting details using user-level notification, tenant-level notification, transcript, recording
     - name: Get notified when the meeting transcript is available
       href: /graph/teams-changenotifications-callrecording-and-calltranscript
     - name: Get transcripts
