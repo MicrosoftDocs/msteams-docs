@@ -197,16 +197,9 @@ From the task pane, you can see the following sections:
 
 ## Explore Teams Toolkit for Visual Studio
 
-Teams Toolkit appears within Visual Studio as a workload. When you've created a Teams Toolkit app, you can view Teams Toolkit in Visual studio in the following ways:
+Teams Toolkit appears within Visual Studio as a workload. When you've [created a Teams Toolkit app](create-new-project.md). 
 
-You can explore the available functionalities from the Teams Toolkit task pane. The task pane appears only after you've created an app project using Teams Toolkit. If you haven't created an app using Teams Toolkit, follow the steps:
-
-To create an app project using Visual Studio:
-
-1. Open Visual Studio.
-1. Select Microsoft Teams App.
-1. Select the capability.
-1.
+You can view Teams Toolkit in Visual studio in the following ways:
 
 * Project
 * Solution Explorer
