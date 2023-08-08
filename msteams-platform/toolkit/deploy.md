@@ -268,7 +268,6 @@ To customize the deployment process, you can edit the following `deploy` section
  * [azureAppService/zipDeploy](#azureappservicezipdeploy)
  * [azureFunctions/zipDeploy](#azurefunctionszipdeploy)
  * [azureStorage/deploy](#azurestoragedeploy)
- * [spfx/deploy](#spfxdeploy)
 
 ### cli/runNpmCommand
 This action executes `npm` commands under specified directory with parameters.
@@ -389,22 +388,6 @@ This action uploads and deploys the project to Azure Storage.
 | artifactFolder |  Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory. | Yes | NA |
 | ignoreFile | Specifies the file path of the ignore file used during upload. You can utilize this file to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
 | resourceId |  Indicates the resource ID of an Azure Storage. It's generated automatically after running the provision command. If you already have an Azure Storage, you can find its resource ID in the Azure portal (see [this link](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/) for more information). | Yes | NA |
-
-### spfx/deploy
-This action uploads and deploys generated sppkg to SharePoint app catalog. You can create tenant app catalog manually or by setting createAppCatalogIfNotExist to true if you don't have one in current Microsoft 365 tenant.
-
-#### Sample
-```yaml
-- uses: spfx/deploy
-    with:
-      createAppCatalogIfNotExist: false
-      packageSolutionPath: ./src/config/package-solution.json
-```
-#### Parameters
-| parameter | description | required | default value |
-|---|---|---|---|
-| createAppCatalogIfNotExist | If the value is true, this action creates tenant app catalog first if it does not exist. | No | false |
-| packageSolutionPath | Path to package-solution.json in SPFx project. This action honors the configuration to get target sppkg. | Yes | NA |
 
 ::: zone-end
 
