@@ -205,27 +205,26 @@ To Create a new Teams app, follow the steps:
     1. Enter a suitable name for your project.
 
          > [!NOTE]
-         > The project name you enter is updated in the **Solution name** field. If you want, you can change the solution name with no effect on the project name.
+         > * The project name you enter is updated in the **Solution name** field. You can change the solution name with no effect on the project name.
+         > * You can select the **Place solution and project in the same directory** checkbox to save the project and solution in the same folder.
 
     1. Select the folder location where you want to create the project workspace.
-    1. Enter a different solution name, if you want.
-    1. If necessary, select the checkbox to save the project and solution in the same folder. For this tutorial, you don't need this option.
     1. Select **Create**.
     
-     :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-app-project-name.png" alt-text="Screenshot shows the configure the project name of your application":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-app-project-name.png" alt-text="Screenshot shows the configure the project name of your application.":::
 
-   The **Create a new Teams application** window appears.
+   The **Create a new Teams application** window appears. 
 
 1. Ensure **Tab** is selected, then select **Create**.
 
+   You can select any type of Teams app for your project.
+
    > [!NOTE]
-   > If you want to add single sign-on capability to your Teams app, select the Configure with single sign-on checkbox. For more information on single sign-in in Teams app created using Teams Toolkit, see [Add single sign-on to your Teams apps](/microsoftteams/platform/toolkit/add-single-sign-on?pivots=visual-studio).
+   > If you want to add single sign-on (SSO) capability to your Teams app, select the **Configure with single sign-on** checkbox. For more information, see [ how to add single sign-on to your Teams apps](/microsoftteams/platform/toolkit/add-single-sign-on?pivots=visual-studio).
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/create-new-app-vs.png" alt-text="Screenshot shows the selection of teams app type." lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/create-new-app-vs.png":::
 
-You can select any type of Teams app for your project.
-
-   The **GettingStarted .txt** window appears.
+   The **GettingStarted .txt** tab appears. You can see the instructions in **GettingStarted** window and check out the different features in Teams Toolkit.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/get-started-tab-vs.png" alt-text="Screenshot shows the Getting Started teams toolkit page." lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/get-started-tab-vs.png":::
 
@@ -235,13 +234,13 @@ The steps to create the other apps are similarlar except notification bot.
 
 ### Directory Structure
 
-Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under **Solution Explorer**.
+Teams Toolkit provides all components for building an app. After you're created the project, you can view the project folders and files under **Solution Explorer**.
 
-* **Directory structure for basic Teams apps**
+* Directory structure for a basic Teams app
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/basic-app-directory.png" alt-text="Screenshot shows the tab Solution Explorer teams toolkit for basic tab.":::
 
-* **Directory structure for scenario-based Teams apps**
+* Directory structure for a scenario-based Teams app
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/scenario-based-directory.png" alt-text="Screenshot shows the scenario based Solution Explorer teams toolkit.":::
 
@@ -251,13 +250,11 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 
 |Teams app templates  |Description  |
 |---------|---------|
-|**Notification Bot**     |The Notification bot app can send notifications to your Teams client. There are multiple ways to trigger the notification. For example, trigger the notification by HTTP request, or by time. You can select triggered notification based on your business scenario.         |
+|**Notification Bot**     |You can use the notification bot app to send notifications to your Teams client. There are multiple ways to trigger the notification. For example, trigger the notification by HTTP request, or by time. You can select triggered notification based on your business scenario.         |
 |**Command Bot**     |You can type a command to interact with the bot using the command bot app.         |
 |**Workflow Bot**     |You can interact with the bot using automate repetitive workflow action.         |
-|**Tab**     |Tab app shows a webpage inside Teams, and it enables single sign-on (SSO) using Teams account.         |
-|**Message Extension**     |Message extension app implements simple features like creating an Adaptive Card, searching Nugget packages, unfurling links for the `dev.botframework.com` domain.         |
-
-After the project is created, Teams Toolkit automatically opens **GettingStarted** window. You can see the instructions in **GettingStarted** window and check out the different features in Teams Toolkit.
+|**Tab**     |Tab app shows a webpage inside Teams, and it enables SSO using Teams account.         |
+|**Message Extension**     |The message extension app implements simple features such as creating an Adaptive Card, searching Nugget packages, or unfurling links for the `dev.botframework.com` domain.         |
 
 ::: zone-end
 
