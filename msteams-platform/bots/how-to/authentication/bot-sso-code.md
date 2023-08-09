@@ -56,7 +56,7 @@ To update your app's code:
 
 1. Add code snippet for `TeamsSSOTokenExchangeMiddleware`.
 
-   # [C#](#tab/cs1)
+# [C#](#tab/cs1)
 
     Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
@@ -64,7 +64,7 @@ To update your app's code:
     base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
     ```
 
-   # [JavaScript](#tab/js1)
+# [JavaScript](#tab/js1)
 
     Add the following code snippet to `index.js` (or the equivalent class in your app's code):
 
@@ -81,7 +81,7 @@ To update your app's code:
 
 1. Use the following code snippet for requesting a token.
 
-   # [C#](#tab/cs2)
+# [C#](#tab/cs2)
 
     After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
 
@@ -136,7 +136,7 @@ To update your app's code:
     }
     ```
 
-   # [JavaScript](#tab/js2)
+# [JavaScript](#tab/js2)
 
     After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, your code should be as shown below:
 
@@ -477,7 +477,7 @@ Use the following code snippet to handle the access token in case the app user l
 
 | **Sample name** | **Description** | **C#** | **Node.js** |
 | --- | --- | --- | --- |
-| Bot framework SDK | This sample code shows how to get started with authentication in a bot for Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)  |
+| Bot conversation SSO quick-start | This sample code shows how to get started with SSO in a bot for Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)  |
 
 ::: zone-end
 
