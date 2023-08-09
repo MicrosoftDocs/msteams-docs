@@ -55,7 +55,7 @@ The minimum size for desktop is 550 pixels.
 
 ### Mobile
 
-Apps in Teams mobile supports both landscape and portrait mode.
+Apps in Teams mobile support both landscape and portrait mode.
 
 #### Portrait mode
 
@@ -202,7 +202,7 @@ Your app won't pass Teams submission if it has illegible headers without hover f
 
 ## FAQ
 
-Get answers to some frequent questions related to the modes.
+Get answers to the frequent questions related to the modes.
 
 <br>
 
@@ -222,7 +222,7 @@ No. Apps get this capability by default.
 
 <summary><b>What if my app doesn't support one of the modes, or if the scenario is only intended to work in one of the modes?</b></summary>
 
-Teams supports both modes by default and it's not possible to have the app work in only one mode.
+Teams support both modes by default and it's not possible to have the app work in only one mode.
  If this requirement is demanding for your app, reach out to support team.
 
 <br>
@@ -269,7 +269,7 @@ Yes, when designing apps for Teams, it's essential to follow responsive design p
 
 <details>
 
-<summary><b>Does landscape mode support on both Android and iOS Teams apps?</b></summary>
+<summary><b>Does landscape mode support both Android and iOS Teams apps?</b></summary>
 
 Yes, landscape mode is supported on both Android and iOS Teams apps, providing consistent experience for users across both platforms.
 
@@ -295,7 +295,7 @@ The behavior of the app remains consistent across both modes. However, reach out
 
 <summary><b>Is there any impact on the performance of apps in landscape mode?</b></summary>
 
-No, landscape mode support in Teams doesn't have any negative effect on app performance. Teams ensures a smooth and seamless experience for users, regardless of the device orientation.
+No, landscape mode support in Teams doesn't have any negative effect on app performance. Teams ensure a smooth and seamless experience for users, regardless of the device orientation.
 
 <br>
 
