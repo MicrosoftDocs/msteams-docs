@@ -8,7 +8,7 @@ ms.date: 02/01/2023
 ---
 # Configure your tab app in Azure AD
 
-Azure Active Directory (Azure AD) provides access to your tab app based on the app user's Teams identity. You'll need to register your tab app with Azure AD so that the app user who has signed into Teams can be given access to your tab app.
+Azure Active Directory (Azure AD) provides access to your tab app based on the app user's Teams identity. You need to register your tab app with Azure AD so that the app user who has signed into Teams can be given access to your tab app.
 
 ## Enabling SSO in Azure AD
 
@@ -46,7 +46,7 @@ To create and configure your app in Azure AD for enabling SSO:
 
 You can configure your tab app in Azure AD to configure the scope and permissions for access tokens.
 
-You'll need to register your app in Azure AD and configure the tenancy and app's platform, before you can enable it for SSO. Azure AD generates a new app ID that you must note. You'll need to update it later in the Teams app manifest file.
+You need to register your app in Azure AD and configure the tenancy and app's platform, before you can enable it for SSO. Azure AD generates a new app ID that you must note. You need to update it later in the Teams app manifest file.
 
 > [!NOTE]
 > Microsoft Teams Toolkit registers the Azure AD application in an SSO project. You can skip this section if you've used Teams Toolkit to create your app. However, you would need to configure permissions and scope, and trust client applications.
@@ -101,7 +101,7 @@ You'll need to register your app in Azure AD and configure the tenancy and app's
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="App registration is successful.":::
 
-8. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
+8. Note and save the app ID from **Application (client) ID**. You need it for updating the Teams app manifest later.
 
     Your app is registered in Azure AD. You now have app ID for your tab app.
 
@@ -170,7 +170,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="Application ID URI updated":::
 
-1. Note and save the Application ID URI. You'll need it for updating the Teams app manifest later.
+1. Note and save the Application ID URI. You need it for updating the Teams app manifest later.
 
 #### To configure API scope
 
