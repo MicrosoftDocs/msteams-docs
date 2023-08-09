@@ -80,6 +80,8 @@ landingContent:
       links:
       - text: Send a proactive message using AAD ID
         url: bots/how-to/conversations/send-proactive-messages.md
+      - text: Use callRecording API to fetch meeting recording from all meetings (Developer preview)
+        url: graph-api/meeting-transcripts/overview-transcripts.md
       - text: App caching for iOS personal tray
         url: tabs/how-to/app-caching.md
       - text: Extend static tabs to group chat or meetings with a customizable experience
@@ -96,8 +98,6 @@ landingContent:
         url: promote-app-adoption.md
       - text: Changelog for Developer Portal
         url: concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal
-      - text: SSO authentication for your Adaptive Cards Universal Actions
-        url: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
 
     - linkListType: whats-new
       links:

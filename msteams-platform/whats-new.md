@@ -347,11 +347,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2023 July**
+**2023 August**
 
-* ***July 31, 2023***:  [Bots can mention tags in Adaptive Cards](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention).
-
-* ***July 13, 2023***: [Extend static tabs to group chat or meetings with a customizable experience.](tabs/what-are-tabs.md)
+***August 08, 2023***: [Use callRecording API to fetch meeting recording from all meetings.](graph-api/meeting-transcripts/overview-transcripts.md)
 
 :::column-end:::
 :::row-end:::
@@ -362,6 +360,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|31/07/2023| Bots can mention tags in Adaptive Cards. |Build bots > Bot conversations > Message in bot conversations > Channel and group chat conversation with a bot > [Bots can mention tags in Adaptive Cards](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention)|
+|13/07/2023| Extend static tabs to group chat or meetings with a customizable experience. |Build tabs > [Overview](tabs/what-are-tabs.md)|
 |31/01/2023| Send notifications to specific participants on a meeting stage with targeted in-meeting notification. |Build apps for Teams meetings and calls > Enable and configure apps for meetings > Build in-meeting notification for Teams meeting > Build tabs for meeting > [Targeted in-meeting notification](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification)|
 |30/01/2023| Enable app caching to improve subsequent launch time of the apps to the meeting side panel.|Build tabs > [App caching for your tab app](tabs/how-to/app-caching.md) |
 
