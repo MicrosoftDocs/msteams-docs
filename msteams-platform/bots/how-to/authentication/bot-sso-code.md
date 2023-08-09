@@ -7,7 +7,7 @@ zone_pivot_groups: enable-sso
 ---
 # Add code to enable SSO in your bot app
 
-Before you add code to enable SSO, ensure that you've configured your app and bot resource in Azure AD portal.
+Before you add code to enable single sign-on (SSO), ensure that you've configured your app and bot resource in Azure AD portal.
 
 > [!div class="nextstepaction"]
 > [Configure bot app in Azure AD](bot-sso-register-aad.md)
