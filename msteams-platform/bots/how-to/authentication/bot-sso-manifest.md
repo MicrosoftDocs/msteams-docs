@@ -49,8 +49,8 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
         ```json
         "webApplicationInfo": 
         {
-            "id": "{Azure AD AppId}",
-            ""resource": "api://botid-{Azure AD AppId}"
+        "id": "{Azure AD AppId}",
+        ""resource": "api://botid-{Azure AD AppId}"
         }
         ```
 
@@ -59,14 +59,14 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
         ```json
         "webApplicationInfo": 
         {
-            "id": "{Azure AD AppId}",
-            "resource": "api://subdomain.example.com/botid-{Azure AD AppId}"
+        "id": "{Azure AD AppId}",
+        "resource": "api://subdomain.example.com/botid-{Azure AD AppId}"
         }
         ```
 
         where,
         - {Azure AD AppId} is the app ID you created when you registered your app in Azure AD. It's the GUID.
-        - {{Subdomain}.app ID URI} is the application ID URI that you registered when creating scope in Azure AD.
+        - subdomain.example.com is the application ID URI that you registered when creating scope in Azure AD.
 
 4. Update the app ID from Azure AD in the **id** property.
 5. Update the subdomain URL in the following properties:
