@@ -44,4 +44,4 @@ In both cases, use event notifications wisely and never spam the user with unnec
 
 ## See also
 
-* [Add capabilities to Microsoft Teams app](../../toolkit/add-capability.md)
+* [Add capabilities to Microsoft Teams app](../../toolkit/add-capability-v4.md)
