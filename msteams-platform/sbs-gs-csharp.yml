@@ -21,7 +21,7 @@ items:
     - How to set up a new project.
     - How to build apps with tab capability using C# and Microsoft Visual Studio 2022.
 
-    This step-by-step guide helps you to build tab with Teams Toolkit. You'll see the following output after you've completed this guide:
+    This step-by-step guide helps you to build a tab with Teams Toolkit. You'll see the following output after you've completed this guide:
 
     :::image type="content" source="~/assets/images/sbs-csharp/final-output.png" alt-text=" Screenshot shows the final output of the Teams tab app.":::
 
@@ -40,43 +40,35 @@ items:
 
     Teams Toolkit helps simplify the development process with tools to create a project scaffolding for your app. It creates the necessary directory structure for all selected capabilities with the required files in place, ready to build the project.
 
-    Teams Toolkit is available as an extension in Visual Studio.
-
-    You can download the latest Visual Studio installer from the [Visual Studio download page](https://visualstudio.microsoft.com).
-
-    > [!NOTE]
-    > You'll need to first install the Visual Studio installer before installing Visual Studio.
+    You can download the latest [Visual Studio installer](https://visualstudio.microsoft.com). Teams Toolkit is available as an extension in Visual Studio.
 
     After you open the Visual Studio installer, in the pop-up workloads window.
 
-      1. Select the box **ASP.NET and web development** workload.
-      1. Select the box **Microsoft Teams development tools** in the installation details panel.
+      1. Select **ASP.NET and web development**.
+      1. Under **installation details** > **Optional**, select **Microsoft Teams development tools**.
       1. Select **Install**.
 
           :::image type="content" source="~/assets/images/sbs-csharp/visual-studio-install.png" alt-text="Screenshot shows the Visual Studio installation." lightbox="~/assets/images/sbs-csharp/visual-studio-install.png":::
           
-      1. Select **Launch** to open Visual Studio.
+      1. Select **Launch**. Visual Studio 2022 app window appears.
 
           :::image type="content" source="~/assets/images/sbs-csharp/visual-studio-launch.png" alt-text="Screenshot shows the selection of Launch in visual studio.":::
-          
-         > [!IMPORTANT]
-         > You're recommended to download Visual Studio 2022 17.7.0 version, since Teams Toolkit for Visual Studio is general availability(GA) in this version. This article is written for Visual Studio 2022 17.7.0 version. Teams Toolkit version 17.7.* or later.
-
-      1. Select **Extensions** > **Manage Extensions**.
+        
+      1. Go to **Extensions** > **Manage Extensions**.
 
           :::image type="content" source="~/assets/images/sbs-csharp/select-extension.png" alt-text="Screenshot shows the selection of Extensions.":::
 
-         The following Manage Extension window appears:
+         The Manage Extension window appears:
 
           :::image type="content" source="~/assets/images/sbs-csharp/manage-ext.png" alt-text="Screenshot shows the Manage Extensions." lightbox="~/assets/images/sbs-csharp/manage-extension.png":::
 
-      1. Select **Installed** and you can see **Teams Toolkit** extension installed.
+      1. From the left pane, select **Installed**. The **Teams Toolkit** extension is avaialble.
     
           :::image type="content" source="~/assets/images/sbs-csharp/select-ttk.png" alt-text="Screenshot shows the selection of Teams Toolkit." lightbox="~/assets/images/sbs-csharp/select-installed-ttk.png":::
 
     ## Set up your Teams development tenant
 
-    A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
+    A **tenant** is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
 
     ### Check for sideloading option
 
@@ -89,19 +81,19 @@ items:
 
     Verify if you can sideload apps in Teams:
 
-    1. In the Teams client, select **Apps** icon.
+    1. Open Microsoft Teams, select the **Apps** icon.
     1. Select **Manage your apps**.
     1. Select **Upload an app**.
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. Look for the **Upload a custom app** option. If you see the option, sideloading is enabled.
 
-        :::image type="content" source="~/assets/images/sbs-csharp/custom-upload.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
-
-        > [!NOTE]
-        > Contact your Teams administrator, if you don't find the option to upload a custom app.
+       :::image type="content" source="~/assets/images/sbs-csharp/custom-upload.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::     
+       
+     > [!NOTE]
+     > If you don't find the option to upload a custom app, contact your Teams administrator.
 
     ### Create a free Teams developer tenant (optional)
 
-    If you don't have a Teams account, you can get it free. Join the Microsoft 365 developer program!
+    If you don't have a Teams account, you can get it for free. Join the Microsoft 365 developer program!
 
     1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
     1. Select **Join Now** and follow the onscreen instructions.
@@ -110,11 +102,11 @@ items:
 
         :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Screenshot shows the example of what you see after signing up for the Microsoft 365 developer program.":::
 
-    1. Sign in to Teams using the administrator account you set up. Verify that you have the **Upload a custom app** option in Teams.
+    1. Sign in to Teams using the administrator account you set up. Verify that you've the **Upload a custom app** option in Teams.
 
     ## Get a free Azure account
 
-    If you wish to host your app or access resources in Azure, you must have an Azure subscription. Create a free account before you begin.
+    If you wish to host your app or access resources in Azure, you must have an [Azure subscription](https://azure.microsoft.com/en-in/free/). Create a free account before you begin.
 
     Now you've got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to create first.
 
@@ -126,15 +118,15 @@ items:
     
     If the prerequisites are in place, let's begin!
 
-    The following steps help you to create project workspace for your tab app in Visual Studio
+    The following steps help you to create project workspace for your tab app in Visual Studio:
 
     1. Open Visual Studio.
     1. Select **New Project**.
 
         :::image type="content" source="~/assets/images/sbs-csharp/visual-studio-welcome.png" alt-text="Screenshot shows the selection of New Project in Visual Studio.":::
 
-    1. Enter **Teams** in the search box.
-    1. Select **Microsoft Teams App** and select **Next**.
+    1. In the search box, enter **Teams**.
+    1. Select **Microsoft Teams App** > **Next**.
     
         :::image type="content" source="~/assets/images/sbs-csharp/project-template.png" alt-text="Screenshot shows the selection of Teams." lightbox="~/assets/images/sbs-csharp/new-project-template-vs.png":::
 
@@ -146,7 +138,7 @@ items:
         
         :::image type="content" source="~/assets/images/sbs-csharp/teams-app-project-name.png" alt-text="Screenshot shows the creation of Project name.":::
     
-    1. Select **Tab** and select **Create**.   
+    1. Select **Tab** > **Create**.   
 
         :::image type="content" source="~/assets/images/sbs-csharp/select-tab.png" alt-text="Screenshot shows the selection of tab.":::
 
@@ -191,13 +183,13 @@ items:
 
     Use your Microsoft 365 account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
-    1. Right-click on **MyTeamsApp** under **Solution MyTeamsApp**.
+    1. In the **Solution Explorer**, under **Solution MyTeamsApp**, right-click on **MyTeamsApp**.
 
     1. Select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
         :::image type="content" source="~/assets/images/sbs-csharp/app-dependencies.png" alt-text="Screenshot shows the selection of Teams app Dependencies." lightbox="~/assets/images/sbs-csharp/teams-app-dependencies.png":::
     
-    1. Select **Microsoft 365 Account** and select **Continue**. 
+    1. Select **Microsoft 365 Account** > **Continue**. 
 
         :::image type="content" source="~/assets/images/sbs-csharp/select-m365-account.png" alt-text="Screenshot shows the Selection of M365-account.":::
 
@@ -205,13 +197,11 @@ items:
 
     To build and run your app locally:
 
-    1. Select **F5** or **Debug** > **Start Debugging** to run the application in debug mode.
+    1. Select **Debug** > **Start Debugging** or enter **F5**.
 
         :::image type="content" source="~/assets/images/sbs-csharp/start-debugging.png" alt-text="Screenshot shows the selection of start debugging action.":::
 
-       Teams web client opens in a browser window.
-
-    1. Sign in with your Microsoft 365 account, if prompted. 
+       Visual Studio starts the debugging process and opens the Teams web client in a browser. If prompted, sign in with your Microsoft 365 account.
 
     1. Select **Add**.
 
@@ -224,7 +214,7 @@ items:
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-      To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
+      To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the [Prerequisites](sbs-gs-csharp.yml?tutorial-step=1) section.
 
       </details>   
            
