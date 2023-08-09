@@ -24,21 +24,19 @@ zone_pivot_groups: teams-app-platform
 ::: zone pivot="visual-studio"
 
 > [!IMPORTANT]
->
-> * We've introduced the important changes in Teams Toolkit extension within Microsoft Visual Studio v17.7. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v17.7 for building your Teams app.
-> * [Teams Toolkit v4](toolkit-v4/teams-toolkit-fundamentals-v4.md) extension will soon be deprecated.
+> We've introduced the important changes in Teams Toolkit extension within Microsoft Visual Studio v17.7 with many new app development features. We recommend that you use Teams Toolkit v17.7 for building your Teams app.
 
 ::: zone-end
 
 ::: zone pivot="visual-studio-code"
 
-Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio Code.
+Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio Code. The following are the advantages: 
 
-* Start with a project template for common line-of-business app scenarios or from a sample.
+* Start with a project template for custom apps built for org scenarios or from a sample.
 * Save setup time with automated app registration and configuration.
 * Run and debug to Teams directly from familiar tools.
-* Smart defaults for hosting in Microsoft Azure using infrastructure-as-code and Bicep.
-* Create unique configurations like dev, test, and prod using the environment features.
+* Use infrastructure-as-code and Bicep for smart defaults to host in Microsoft Azure. 
+* Create unique configurations such as dev, test, and prod using the environment features.
 
 > [!NOTE]
 > Before you get started, we strongly recommend that you visit [Teams Toolkit v5 Guide](https://aka.ms/teamsfx-v5.0-guide) to learn key features, such as life cycles and actions.
@@ -70,18 +68,18 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 
 ## Available for Visual Studio
 
-Teams Toolkit v5 is available for free for Visual Studio 2022 Community, Professional, and Enterprise. For more information about installation and setup, see [Install Teams Toolkit](./install-Teams-Toolkit.md).
+Teams Toolkit v17.7 is available for free for Visual Studio 2022 Community, Professional, and Enterprise. For more information about installation and setup, see how to [install Teams Toolkit](./install-Teams-Toolkit.md).
 
 | Teams Toolkit | Visual Studio |
 | - | ------------- |
 | Installation | Available in the Visual Studio Installer |
-| Build with | C#, .NET, ASP.NET, Blazor |
+| Build with | C#, .NET, ASP.NET, and Blazor |
 
 ::: zone-end
 
 ## Features
 
-The following list provides the key features of Teams Toolkit:
+The following are the key features of Teams Toolkit:
 
 ::: zone pivot="visual-studio-code"
 
@@ -101,7 +99,7 @@ The following list provides the key features of Teams Toolkit:
 
 ### Project templates
 
-You can start directly with the capability-focused templates such as tabs, bots, and message extensions or by following the existing samples if you're already familiar with Teams app development. Teams Toolkit reduces the complexity of getting started with the help of templates for common line-of-business app scenarios and smart defaults to accelerate your time to production.
+You can start directly with the capability-focused templates such as tabs, bots, and message extensions or by following the existing samples if you're already familiar with Teams app development. Teams Toolkit reduces the complexity of getting started with the help of templates for custom app built for org scenarios and smart defaults to accelerate your time to production.
 
 ::: zone pivot="visual-studio-code"
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/select-new-project.PNG" alt-text="Screenshot shows the creation of new Teams app menu in Visual Studio Code.":::
@@ -113,7 +111,7 @@ You can start directly with the capability-focused templates such as tabs, bots,
 
 ### Automatic registration and configuration
 
-You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, Teams Toolkit automatically registers the Teams app to your Microsoft 365 tenant and configures settings such as Azure Active Directory (Azure AD) for your Teams app. Sign in with your Microsoft 365 account to control where the app is configured and customize the included Azure AD manifest when you need flexibility.
+You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, Teams Toolkit automatically registers the Teams app to your Microsoft 365 tenant and configures settings such as Azure Active Directory (Azure AD) for your Teams app. Sign in with your Microsoft 365 account to control where the app is configured and customize the Azure AD manifest. 
 
 ::: zone pivot="visual-studio-code"
 
@@ -131,7 +129,7 @@ You can access Teams Developer Portal where you can configure, distribute, and m
 
 ::: zone pivot="visual-studio"
 
-#### TeamsFx .NET SDK Reference docs
+#### TeamsFx .NET SDK reference
 
 * [Microsoft.Extensions.DependencyInjection Namespace](/../dotnet/api/Microsoft.Extensions.DependencyInjection)
 * [Microsoft.TeamsFx Namespace](/../dotnet/api/Microsoft.TeamsFx)
