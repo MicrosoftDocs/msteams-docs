@@ -137,6 +137,47 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ---
 
+## Receive a read-receipt
+
+
+
+```json
+
+{
+    "name": "ReadReceipt",
+    "type": "event",
+    "timestamp": "2021-12-13T06:42:46.8080275Z",
+    "id": "1639377757164",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
+    "from": {
+        // user who read the bot’s message
+        "id": "29:1SDmXi1RdC-QBzk90U81Hr68ooQac9OduJDydLd_kKb4wi8IS8Tmq6BDAqLQr-3Pv75UxRP6ckrz6fBQp5j4yMg",
+        "aadObjectId": "cf41f188-30ee-4698-9a65-8af95b9eb9c3"
+    },
+    "conversation": {
+        "conversationType": "personal",
+        "tenantId": "1eabcbf3-c625-466a-88e6-bfd660d41b5b",
+        "id": "a:14G1N4QRiy4W3zD4H9h8nB2jSzfihTr7OS-zkNScEAY5FwvL0snFkXlSMsflBCfQLKFdoSiI_bzNxmsN1p3i1vI98brvpZrsistuDm71mLgiJmhQ_zLLtEwH9F-7LPrFm"
+    },
+    "recipient": {
+        // bot information.
+        "id": "28:e23cded7-1d12-456c-a93d-15e166a83e10",
+        "name": "Echobot1_WorkMachine2"
+    },
+    "channelData": {
+        "tenant": {
+            "id": "1eabcbf3-c625-466a-88e6-bfd660d41b5b"
+        }
+    },
+    "value": { 
+        // the id of the last read message by the user in 1:bot chat
+        “lastReadMessageId” : 1638835053529
+    }
+}
+
+```
+
 ## Send a message
 
 To send a text message, specify the string you want to send as an activity. In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response. Use the object's `SendActivitiesAsync` method to send multiple responses.
