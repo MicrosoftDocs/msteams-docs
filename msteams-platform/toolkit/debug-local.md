@@ -218,7 +218,7 @@ The configuration **Attach to Frontend** or **Launch App** launches Microsoft Ed
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
-* [Add capabilities to your Teams apps](add-capability-v4.md)
+* [Add capabilities to your Teams apps](toolkit-v4/add-capability-v4.md)
 * [Deploy to the cloud](deploy.md)
 * [Manage multiple environments in Teams Toolkit](TeamsFx-multi-env.md)
 

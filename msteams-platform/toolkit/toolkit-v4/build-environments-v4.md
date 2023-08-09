@@ -78,7 +78,7 @@ Azure Functions integrates with an array of [cloud services](add-resource-v4.md#
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Teams Toolkit Overview](../teams-toolkit-fundamentals.md)
 * [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md)
-* [Create a new Teams project](create-new-project.md)
+* [Create a new Teams project](../create-new-project.md)
 * [Build your first Teams app](~/get-started/get-started-overview.md#build-your-first-teams-app)
