@@ -189,18 +189,18 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
     In the `teamsapp.local.yml` file:
     * Add the following code under `provision` to add Azure AD related configs to local debug service.
 
-     ```json
-        - uses: file/createOrUpdateJsonFile
-          with:
-            target: ./appsettings.Development.json
-            appsettings:
-              TeamsFx:
-                Authentication:
-                  ClientId: ${{AAD_APP_CLIENT_ID}}
-                  ClientSecret: ${{SECRET_AAD_APP_CLIENT_SECRET}}
-                  InitiateLoginEndpoint: ${{TAB_ENDPOINT}}/auth-start.html
-                  OAuthAuthority: ${{AAD_APP_OAUTH_AUTHORITY}}
-     ```
+         ```json
+            - uses: file/createOrUpdateJsonFile
+              with:
+                target: ./appsettings.Development.json
+                appsettings:
+                  TeamsFx:
+                    Authentication:
+                      ClientId: ${{AAD_APP_CLIENT_ID}}
+                      ClientSecret: ${{SECRET_AAD_APP_CLIENT_SECRET}}
+                      InitiateLoginEndpoint: ${{TAB_ENDPOINT}}/auth-start.html
+                      OAuthAuthority: ${{AAD_APP_OAUTH_AUTHORITY}}
+         ```
 
 1. Update Infra
    Azure AD related configs need to be configured in your remote service. The following example shows the configs on Azure Webapp.
@@ -296,34 +296,34 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
 1. Update `appsettings.json` and `appsettings.Development.json` files for Azure AD related configs needs to be configure to your .Net project settings:
 
-    ```
+    ```json
     TeamsFx: {
-      Authentication: {
-        ClientId: AAD app client id
-        ClientSecret: AAD app client secret,
-        InitiateLoginEndpoint: Login Endpoint,
-        OAuthAuthority: AAD app oauth authority
-      }
-    }
+          Authentication: {
+            ClientId: AAD app client id
+            ClientSecret: AAD app client secret,
+            InitiateLoginEndpoint: Login Endpoint,
+            OAuthAuthority: AAD app oauth authority
+          }
+        }
     ```
 
-   > [!NOTE]
-   > You can use use `$ENV_NAME$` to reference envs in local/remote service.
+    > [!NOTE]
+    > You can use use `$ENV_NAME$` to reference envs in local/remote service.
 
    Example for TeamsFx Tab template.
   
    Open `appsettings.json` and `appsettings.Development.json` files, and update the code:
 
-   ```
-   "TeamsFx": { 
-     "Authentication": { 
-       "ClientId": "$clientId$", 
-       "ClientSecret": "$client-secret$",
-       "InitiateLoginEndpoint": "$TAB_ENDPOINT$/auth-start.html",
-       "OAuthAuthority": "$oauthAuthority$"
-     } 
-   }
-   ```
+    ```json
+    "TeamsFx": { 
+         "Authentication": { 
+           "ClientId": "$clientId$", 
+           "ClientSecret": "$client-secret$",
+           "InitiateLoginEndpoint": "$TAB_ENDPOINT$/auth-start.html",
+           "OAuthAuthority": "$oauthAuthority$"
+         } 
+       }
+    ```
 
 1. Your environment is ready and you can update your code to add SSO to your Teams app. You can find samples:
     * TeamsFx SDK: <https://www.nuget.org/packages/Microsoft.TeamsFx/>
@@ -333,55 +333,56 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
    * Create `Config.cs` and update the code as:
 
-    ```
+    ```c
     using Microsoft.TeamsFx.Configuration;
-
-    namespace {{YOUR_NAMESPACE}}
-    {
-        public class ConfigOptions
-        {
-            public TeamsFxOptions TeamsFx { get; set; }
-        }
-        public class TeamsFxOptions
-        {
-            public AuthenticationOptions Authentication { get; set; }
-        }
-    }
+    
+         namespace {{YOUR_NAMESPACE}}
+         {
+             public class ConfigOptions
+             {
+                 public TeamsFxOptions TeamsFx { get; set; }
+             }
+             public class TeamsFxOptions
+             {
+                 public AuthenticationOptions Authentication { get; set; }
+             }
+         }
     ```
 
      > [!NOTE]
      > You need to replace `{{YOUR_NAMESPACE}}` with your namespace name.
+
     * Move the `TeamsFx-Auth/Tab/GetUserProfile.razor` file to `Components/`.
     * Add the `GetUserProfile` component to your razor page, for example:
 
-     ```
-     <h1>Hello, World</h1>
-     <GetUserProfile />
-     ```
+      ```
+      <h1>Hello, World</h1>
+      <GetUserProfile />
+      ```
 
     * Open the `Program.cs` file, find the code:
 
-    ```
-    builder.Services.AddScoped<MicrosoftTeams>();
-    ```
+        ```csharp
+        builder.Services.AddScoped<MicrosoftTeams>();
+        ``````
 
     and update the code as:
 
-    ```
-    var config = builder.Configuration.Get<ConfigOptions>();
-    builder.Services.AddTeamsFx(config.TeamsFx.Authentication);
-    ```
+        ```csharp
+                var config = builder.Configuration.Get<ConfigOptions>();
+                builder.Services.AddTeamsFx(config.TeamsFx.Authentication);
+          ```
 
     > [!NOTE]
     > You need to exclude the sample code under the `TeamsFx-Auth` file to avoid build failure by adding following code into the `.csproj` file:
 
-   ```
-   <ItemGroup>
-     <Compile Remove="TeamsFx-Auth/**/*" />
-     <None Include="TeamsFx-Auth/**/*" />
-     <Content Remove="TeamsFx-Auth/Tab/GetUserProfile.razor"/>
-   </ItemGroup>
-   ```
+       ```
+       <ItemGroup>
+         <Compile Remove="TeamsFx-Auth/**/*" />
+         <None Include="TeamsFx-Auth/**/*" />
+         <Content Remove="TeamsFx-Auth/Tab/GetUserProfile.razor"/>
+       </ItemGroup>
+       ```
 
    * Download `auth-start.html` and `auth-end.html` files from [GitHub Repo](https://github.com/OfficeDev/TeamsFx/tree/dev/templates/csharp/sso-tab/wwwroot) to `{ProjectDirectory}/wwwroot`.
 
@@ -508,32 +509,32 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
    In both `teamsapp.yml` and `teamsapp.local.yml` files:
     * Add the code under `provision` to create Azure AD app.
 
-   ```
-   - uses: aadApp/create
-    with:
-      name: "YOUR_AAD_APP_NAME"
-      generateClientSecret: true
-      signInAudience: "AzureADMyOrg"
-    writeToEnvironmentFile:
-        clientId: AAD_APP_CLIENT_ID
-        clientSecret: SECRET_AAD_APP_CLIENT_SECRET
-        objectId: AAD_APP_OBJECT_ID
-        tenantId: AAD_APP_TENANT_ID
-        authority: AAD_APP_OAUTH_AUTHORITY
-        authorityHost: AAD_APP_OAUTH_AUTHORITY_HOST
-   ```
+    ```yml
+    - uses: aadApp/create
+         with:
+           name: "YOUR_AAD_APP_NAME"
+           generateClientSecret: true
+           signInAudience: "AzureADMyOrg"
+         writeToEnvironmentFile:
+             clientId: AAD_APP_CLIENT_ID
+             clientSecret: SECRET_AAD_APP_CLIENT_SECRET
+             objectId: AAD_APP_OBJECT_ID
+             tenantId: AAD_APP_TENANT_ID
+             authority: AAD_APP_OAUTH_AUTHORITY
+             authorityHost: AAD_APP_OAUTH_AUTHORITY_HOST
+    ```
 
       > [!NOTE]
       > Replace the value of "name" with your expected Azure AD app name.
 
     * Add the code under `provision` to configure Azure AD app with Azure AD app template in the step 1.
 
-      ```
-      - uses: aadApp/update
-        with:
-          manifestPath: "./aad.manifest.json"
-          outputFilePath : ./build/aad.manifest.${{TEAMSFX_ENV}}.json
-      ```
+        ```json
+        - uses: aadApp/update
+                with:
+                  manifestPath: "./aad.manifest.json"
+                  outputFilePath : ./build/aad.manifest.${{TEAMSFX_ENV}}.json
+        ```
 
       > [!NOTE]
       > Replace the value of "manifestPath" with the relative path of Azure AD app manifest noted in step 1.
@@ -542,22 +543,22 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
    In the `teamsapp.local.yml` file:
     * Update `file/createOrUpdateJsonFile` under `provision` to add Azure AD related configs to local debug service.
 
-      ```
-      - uses: file/createOrUpdateJsonFile
-        with:
-          target: ./appsettings.Development.json
-          appsettings:
-            BOT_ID: ${{BOT_ID}}
-            BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
-            TeamsFx:
-              Authentication:
-                ClientId: ${{AAD_APP_CLIENT_ID}}
-                ClientSecret: ${{SECRET_AAD_APP_CLIENT_SECRET}}
-                OAuthAuthority: ${{AAD_APP_OAUTH_AUTHORITY}}/${{AAD_APP_TENANT_ID}}
-                ApplicationIdUri: api://botid-${{BOT_ID}}
-                Bot:
-                  InitiateLoginEndpoint: https://${{BOT_DOMAIN}}/bot-auth-start
-      ```
+        ```json
+        - uses: file/createOrUpdateJsonFile
+                with:
+                  target: ./appsettings.Development.json
+                  appsettings:
+                    BOT_ID: ${{BOT_ID}}
+                    BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
+                    TeamsFx:
+                      Authentication:
+                        ClientId: ${{AAD_APP_CLIENT_ID}}
+                        ClientSecret: ${{SECRET_AAD_APP_CLIENT_SECRET}}
+                        OAuthAuthority: ${{AAD_APP_OAUTH_AUTHORITY}}/${{AAD_APP_TENANT_ID}}
+                        ApplicationIdUri: api://botid-${{BOT_ID}}
+                        Bot:
+                          InitiateLoginEndpoint: https://${{BOT_DOMAIN}}/bot-auth-start
+        ```
 
 1. Update Infra Azure AD related configs to configure remote service. The following example shows the configs on Azure Webapp.
     1. TeamsFx__Authentication__ClientId: Azure AD app client ID.
