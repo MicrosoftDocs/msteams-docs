@@ -1,5 +1,5 @@
 ---
-title: Add single sign-on of Teams Toolkit to your Teams apps
+title: Add single sign-on to your Teams app
 author: surbhigupta
 description: In this module, learn how to add single sign-on (SSO) of Teams Toolkit, enable SSO support, update your application to use SSO
 ms.author: surbhigupta
@@ -8,11 +8,11 @@ ms.topic: overview
 ms.date: 05/20/2022
 ---
 
-# Add single sign-on of Teams Toolkit to Teams app
+# Add single sign-on to your Teams app
 
 Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Microsoft Azure Active Directory (Azure AD) flows and integrations behind some simple APIs. This enables you to add SSO features easily to your Teams app.
 
-## Add SSO to Teams app for Visual Studio
+## Add SSO to Teams app in Visual Studio
 
 For applications that interact with the user in a chat, Team, or channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Azure AD consent flow.
 

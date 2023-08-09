@@ -1,5 +1,5 @@
 ---
-title: Install Teams Toolkit vs
+title: Install Teams Toolkit in Visual Studio
 author: zyxiaoyuer
 description: Learn about installation of Teams Toolkit of different versions in Visual Studio, and marketplace.
 ms.author: zhany
@@ -8,15 +8,13 @@ ms.topic: overview
 ms.date: 07/29/2022
 ---
 
-# Install Teams Toolkit vs
+# Install Teams Toolkit in Visual Studio
 
 The Microsoft Azure Active Directory (Azure AD) manifest contain definitions of all the attributes of an Azure AD application object in the Microsoft identity platform.
 
 ## Prerequisites
 
 Before installing Teams Toolkit for Visual Studio, you need to [download and install Visual Studio 2022](https://aka.ms/VSDownload) using the Visual Studio Installer.
-
-## Install Teams Toolkit for Visual Studio
 
    > [!IMPORTANT]
    > It's recommend you use Visual Studio 2022 version 17.4.1 or later for Teams Toolkit. It is the latest release to fix several known issues in previous versions of Visual Studio.

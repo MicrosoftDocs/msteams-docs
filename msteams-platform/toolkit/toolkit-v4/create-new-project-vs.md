@@ -7,11 +7,9 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
 ---
-# Create a new Teams project using Teams Toolkit
+# Create a new Teams project using Teams Toolkit in Visual Studio
 
-In this section, you can learn how to create a new Teams project using Microsoft Visual Studio.
-
-## Create new Teams app in Visual Studio
+In this article, learn how to create a new Teams project using Microsoft Visual Studio.
 
 Teams Toolkit provides Microsoft Teams app templates in Visual Studio to create Teams apps.  You can search and select the Teams app template that you require when you create a new project. Teams Toolkit for Visual Studio provides Teams app templates for creating:
 

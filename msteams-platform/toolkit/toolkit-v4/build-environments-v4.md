@@ -1,5 +1,5 @@
 ---
-title: Prepare to build apps with Teams Toolkit vs
+title: Prepare to build apps with Teams Toolkit in Visual Studio
 author: surbhigupta
 description: Learn about build environments such as C# and blazor of Teams Toolkit in Visual Studio. Toolkit integrates Azure Functions capabilities for building apps.
 ms.author: surbhigupta
@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Prepare to build apps using Teams Toolkit vs
+# Prepare to build apps using Teams Toolkit in Visual Studio
 
 Teams Toolkit supports different build environments for creating apps. It helps to integrate Azure Functions capabilities and cloud services in the Teams app that you've built.
 

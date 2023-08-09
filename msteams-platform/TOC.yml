@@ -217,7 +217,7 @@
         href: toolkit/toolkit-v4/install-Teams-Toolkit-vs.md
       - name: Explore Teams Toolkit
         href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
-      - name: Prepare to build apps using Teams Toolkit VS
+      - name: Prepare to build apps using Teams Toolkit
         href: toolkit/toolkit-v4/build-environments-v4.md
         items:
         - name: Prerequisites for creating your Teams app
@@ -239,8 +239,6 @@
             href: toolkit/toolkit-v4/debug-overview-vs.md
           - name: Debug your Teams app locally
             href: toolkit/toolkit-v4/debug-local-vs.md
-          - name: Debug background process
-            href: toolkit/toolkit-v4/debug-background-process-v4.md
         - name: Host your app on Azure
           items:    
           - name: Provision cloud resources

@@ -67,7 +67,7 @@ Ensure that you have the following accounts before you start building your Teams
 ### Microsoft 365 developer program
 
 > [!NOTE]
-> If you're creating a Teams app using Teams Toolkit, ensure that you have a Microsoft 365 account. However, if you're creating a Teams app using tools other than Teams Toolkit, ensure that you have an Azure account.
+> If you're creating a Teams app using Teams Toolkit, ensure that you have a [Microsoft 365 account](#microsoft-365-developer-program). However, if you're creating a Teams app using tools other than Teams Toolkit, ensure that you have an [Azure account](#azure-account).
 
 To create a Microsoft 365 account, sign up for a Microsoft 365 developer program subscription. The subscription is free for 90 days and continues to renew as long as you're using it for development activity.
 

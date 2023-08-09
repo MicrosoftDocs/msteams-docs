@@ -1,13 +1,13 @@
 ---
-title: Explore Teams Toolkit vs
+title: Explore Teams Toolkit in Visual Studio
 author: zyxiaoyuer
-description: Learn about Teams Toolkit UI elements and task pane for  Visual Studio.
+description: Learn about Teams Toolkit UI elements and task pane in Visual Studio.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 07/29/2022
 ---
-# Explore Teams Toolkit for Visual Studio
+# Explore Teams Toolkit in Visual Studio
 
 Teams Toolkit appears within Visual Studio as a workload. When you've created a Teams Toolkit app, you can see Teams Toolkit options in the following ways:
 
