@@ -10,7 +10,7 @@ zone_pivot_groups: teams-app-platform
 ---
 # Create a new Teams project
 
-In this section, you can learn how to create a new Teams project using Microsoft Visual Studio Code and Visual Studio.
+In this article, learn how to create a new Teams project using Teams Toolkit.
 
 ::: zone pivot="visual-studio-code"
 
@@ -160,7 +160,7 @@ To learn more about the directory structure of different types of scenario-based
 
 ## Create new Teams app in Visual Studio
 
-Teams Toolkit provides Microsoft Teams app templates in Visual Studio to create Teams apps.  You can search and select the Teams app template that you require when you create a new project. Teams Toolkit for Visual Studio provides Teams app templates for creating:
+You can create Teams apps in Visual Studio using the app templates. You can search and select any of the following Teams template to create a new app.
 
 * Notification Bot
 * Command Bot
@@ -172,47 +172,47 @@ Teams Toolkit provides Microsoft Teams app templates in Visual Studio to create 
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
-| &nbsp; | Visual Studio latest version | You can install the enterprise edition of Visual Studio, and then select the **ASP.NET and web development** workload and **Microsoft Teams Development Tools** for installation.|
+| &nbsp; | Visual Studio latest version | Install the latest enterprise edition of Visual Studio, and select the **ASP.NET and web development** workload and **Microsoft Teams Development Tools** for installation.|
 | &nbsp; | Teams Toolkit | A Visual Studio workload that creates a project scaffolding for your app. Use the latest version. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to sideload your Teams app into local Teams environment for testing app behavior. |
  | &nbsp; | [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Microsoft 365 account with the appropriate permissions to install an app. |
 
 ## Create a new Teams app
 
-The steps to create a new Teams app are similar for all types of apps except notification bot. The following steps help you to create a new tab app:
+To Create a new Teams app, follow the steps:  
 
-1. Open Visual Studio.
-1. Create a new project by using one of the following two options:
+1. Open **Visual Studio**.
+1. Create a new app by using one of the following two options:
 
     * Select **New project** under **Quick actions** to select a project template.
     
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/new-project-vs.png" alt-text="Screenshot shows the selection of new project from quick actions.":::
 
-    * Select **File > New > Project** in Visual Studio to create a Teams app.
+    * Select **File > New > Project**.
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/file-new-project.png" alt-text="Screenshot shows the selection of new project from file menu.":::
 
-    * The **Create a new project** window appears.  
+      The **Create a new project** window appears.  
 
-1. Enter **Teams** in the search box and in the list, select **Microsoft Teams App** from the search results.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/new-project-template-vs.png" alt-text="Screenshot shows the search and select Microsoft Teams app" lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/new-project-template-vs.png":::
+1. Enter **Teams** in the search box and from search results, select **Microsoft Teams App**.
 
 1. Select **Next**.
 
-   The **Configure your new project** window appears.
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/new-project-template-vs.png" alt-text="Screenshot shows the search and select Microsoft Teams app.":::
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-app-project-name.png" alt-text="Screenshot shows the configure the project name of your application":::
+   The **Configure your new project** window appears.
 
     1. Enter a suitable name for your project.
 
          > [!NOTE]
-         > The project name you are entering is automatically filled in the **Solution name**. If you want, you can change the solution name with no effect on the project name.
+         > The project name you enter is updated in the **Solution name** field. If you want, you can change the solution name with no effect on the project name.
 
     1. Select the folder location where you want to create the project workspace.
     1. Enter a different solution name, if you want.
     1. If necessary, select the checkbox to save the project and solution in the same folder. For this tutorial, you don't need this option.
     1. Select **Create**.
+    
+     :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-app-project-name.png" alt-text="Screenshot shows the configure the project name of your application":::
 
    The **Create a new Teams application** window appears.
 
@@ -230,6 +230,8 @@ You can select any type of Teams app for your project.
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/get-started-tab-vs.png" alt-text="Screenshot shows the Getting Started teams toolkit page." lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/get-started-tab-vs.png":::
 
 You have created the app project scaffolding for your Teams app using Teams Toolkit template.
+
+The steps to create the other apps are similarlar except notification bot. 
 
 ### Directory Structure
 
