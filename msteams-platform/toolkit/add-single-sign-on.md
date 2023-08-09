@@ -227,13 +227,13 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
    }
     ```
   
-   Open the `infra/azure.bicep` file find the code line:
+   Open the `infra/azure.bicep` file, find the code:
 
    ```
    param location string = resourceGroup().location
    ```
 
-   and add the code lines:
+   Update the code as:
 
    ```
    param tabAadAppClientId string
@@ -243,7 +243,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
    param tabAadAppClientSecret string
    ```
 
-   In the `infra/azure.bicep` file, update the code:
+   In the `infra/azure.bicep` file, find the code:
 
    ```
    resource webApp 'Microsoft.Web/sites@2021-02-01' = {
@@ -266,7 +266,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
     }
    ```
 
-   with:
+   Update the code as:
 
    ```
    resource webApp 'Microsoft.Web/sites@2021-02-01' = {
@@ -331,7 +331,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
   
    Example for TeamsFx Tab template.
 
-   1. Create `Config.cs` and update the code:
+   * Create `Config.cs` and update the code as:
 
     ```
     using Microsoft.TeamsFx.Configuration;
@@ -351,16 +351,15 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
      > [!NOTE]
      > You need to replace `{{YOUR_NAMESPACE}}` with your namespace name.
-  
-   1. Move the `TeamsFx-Auth/Tab/GetUserProfile.razor` file to `Components/`.
-   1. Add the `GetUserProfile` component to your razor page, for example:
+    * Move the `TeamsFx-Auth/Tab/GetUserProfile.razor` file to `Components/`.
+    * Add the `GetUserProfile` component to your razor page, for example:
 
-    ```
-    <h1>Hello, World</h1>
-    <GetUserProfile />
-    ```
+     ```
+     <h1>Hello, World</h1>
+     <GetUserProfile />
+     ```
 
-   1. Open the `Program.cs` file, find the code:
+    * Open the `Program.cs` file, find the code:
 
     ```
     builder.Services.AddScoped<MicrosoftTeams>();
@@ -384,7 +383,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
    </ItemGroup>
    ```
 
-   1. Download `auth-start.html` and `auth-end.html` files from [GitHub Repo](https://github.com/OfficeDev/TeamsFx/tree/dev/templates/csharp/sso-tab/wwwroot) to `{ProjectDirectory}/wwwroot`.
+   * Download `auth-start.html` and `auth-end.html` files from [GitHub Repo](https://github.com/OfficeDev/TeamsFx/tree/dev/templates/csharp/sso-tab/wwwroot) to `{ProjectDirectory}/wwwroot`.
 
 1. To check the SSO app works as expected, run the `Local Debug` in Visual Studio.
 
@@ -592,7 +591,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
    param location string = resourceGroup().location
    ```
 
-   and update the code as:
+   Update the code as:
 
    ```
    param m365ClientId string
@@ -752,7 +751,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
     });
     ```
 
-    and update as:
+    Update the code as:
 
     ```
     builder.Services.AddSingleton(sp =>
@@ -786,7 +785,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
       });
       ```
 
-      and update as:
+      Update the code as:
 
       ```
       app.UseEndpoints(endpoints =>
