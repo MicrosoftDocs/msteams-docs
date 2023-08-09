@@ -233,7 +233,6 @@ This action upload and deploys generated sppkg to SharePoint app catalog. You ca
 
 ::: zone pivot="visual-studio"
 
-## Deploy Teams app to the cloud using Microsoft Visual Studio
 You can deploy your Teams app to the following cloud resources:
 * Azure App Services
 * Azure Functions
@@ -245,11 +244,11 @@ You can deploy your Teams app to the following cloud resources:
 > Before you deploy your app code to Azure cloud, you need to complete the provisioning of cloud resources.
 
 ## Deploy Teams apps using Teams Toolkit
-To deploy Teams app yousing using Teams Toolkit follow these steps:
+To deploy Teams app using Teams Toolkit, follow these steps:
 
 1. Open **Visual Studio**.
 1. Select **Create a new project** or open an existing project from the recent list.
-1. Select **Project** > **Teams Toolkit** > ;**Deploy to the Cloud** from the Project menu.
+1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/deploy-to-the-cloud-button.png" alt-text="Screenshot shows steps to deploy to the cloud.":::
 
@@ -260,7 +259,7 @@ To deploy Teams app yousing using Teams Toolkit follow these steps:
 The app is deployed to Azure cloud.
 
 ## Customize deploy lifecycle in Teams using Visual Studio
-To customize the deployment process, you can edit the following `deploy` sections in the 'teamsapp.yml'.
+To customize the deployment process, you can edit the following `deploy` sections in the `teamsapp.yml` file:
 
  * [cli/runNpmCommand](#clirunnpmcommand)
  * [cli/runDotnetCommand](#clirundotnetcommand)
@@ -338,13 +337,13 @@ This action uploads and deploys the project to Azure App Service using [the zip 
 | workingDirectory | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory. | No | Project root |
 | artifactFolder |  Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory. | Yes | NA |
 | ignoreFile | Specifies the file path of the ignore file used during upload. You can utilize this file to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
-| resourceId |  Indicates the resource ID of an Azure App Service. It's generated automatically after running the provision command. If you already have an Azure App Service, you can find its resource ID in the Azure portal (for more information see [this link](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/)). | Yes | NA |
+| resourceId |  Indicates the resource ID of an Azure App Service. It's generated automatically after running the provision command. If you already have an Azure App Service, you can find its resource ID in the Azure portal. For more information, see [how to find resource ID](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/). | Yes | NA |
 | dryRun | You can set the dryRun parameter to true if you only want to test the preparation of the upload and don't intend to deploy it. This helps you verify that the packaging zip file is correct. | No | false |
-| outputZipFile |  Indicates the path of the zip file for the packaged artifact folder. It's relative to the workingDirectory. During deployment, it reconstructs this file, reflecting all folders and files in your artifactFolder, and removes any non-existent files or folder. | No | ./.deployment/deployment.zip |
+| outputZipFile |  Indicates the path of the zip file for the packaged artifact folder. It's relative to the workingDirectory. During deployment, it reconstructs this file reflects all folders and files in your artifactFolder, and removes any non-existent files or folder. | No | ./.deployment/deployment.zip |
 
 ### azureFunctions/zipDeploy
 
-This action uploads and deploys the project to Azure Functions using [the zip deploy feature](https://aka.ms/zip-deploy-to-azure-functions). 
+This action uploads and deploys the project to Azure Functions using. For more information, see [the zip deploy feature](https://aka.ms/zip-deploy-to-azure-functions). 
 
 #### Sample
 ```yaml
@@ -363,7 +362,7 @@ This action uploads and deploys the project to Azure Functions using [the zip de
 | workingDirectory | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory. | No | Project root |
 | artifactFolder |  Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory. | Yes | NA |
 | ignoreFile | Specifies the file path of the ignore file used during upload. You can utilize this file to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
-| resourceId | Indicates the resource ID of an Azure Functions. It's generated automatically after running the provision command. If you already have an Azure Functions, you can find its resource ID in the Azure portal (for more information see [this link](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/)). | Yes | NA |
+| resourceId | Indicates the resource ID of an Azure Functions. It's generated automatically after running the provision command. If you already have an Azure Functions, you can find its resource ID in the Azure portal. For more information, see [how to find resource ID](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/). | Yes | NA |
 | dryRun | You can set the dryRun parameter to true if you only want to test the preparation of the upload and don't intend to deploy it. This helps you verify that the packaging zip file is correct. | No | false |
 | outputZipFile | Indicates the path of the zip file for the packaged artifact folder. It's relative to the workingDirectory. During deployment, it reconstructs this file, reflecting all folders and files in your artifactFolder, and removes any non-existent files or folder. | No | ./.deployment/deployment.zip |
 

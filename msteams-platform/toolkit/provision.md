@@ -436,32 +436,29 @@ You can follow the steps to add environment variables to the .env files to use a
 
 ## Provision using Teams Toolkit in Visual Studio
 
-The following steps help you to provision cloud resources using Visual Studio.
+The following steps help you to provision cloud resources using Visual Studio:
 
-### Sign in to your Microsoft 365 account
 To sign in to your Microsoft account follow these steps:
 
 1. Open **Visual Studio**.
-1. Select a **Microsoft Teams App project**.
+1. Select **Microsoft Teams App project**.
 1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-prepare-app-dependencies.png" alt-text="Prepare teams app dependencies":::
 
-1. Select **Sign in** to sign in to Microsoft 365 account. 
+1. Select **Sign in...**. 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-prepare.png" alt-text="Sign in to Microsoft":::
    
     > [!NOTE]
     > If you're already signed in, your username is displayed, or you've an option to **Add an account**.
 
-1. Your default web browser opens to let you [sign in](https://developer.microsoft.com/en-us/microsoft-365/dev-program) to the account.
-
-1. Select **Continue** after you've signed in to your account.
+1. After you've signed in to your account, select **Continue**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-signin-m365.png" alt-text="Confirm by selecting continue.":::
 
-### Sign in to your Azure account
+### To sign in to your Azure account
 
 1. Open **Visual Studio**.
 1. Open the **Microsoft Teams App project**.
@@ -469,7 +466,7 @@ To sign in to your Microsoft account follow these steps:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-provision-in-cloud.png" alt-text="Sign in to Azure account.":::
 
-1. Select **Sign in...** to sign in to your Azure account.
+1. Select **Sign in...**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-provision-start.png" alt-text="Screenshot shows the sign in to Azure account.":::
 
@@ -480,13 +477,13 @@ To sign in to your Microsoft account follow these steps:
 
 ### Provision cloud resources
 
-After you open your project in Visual Studio, to provision cloud resources follow these steps.
+After you open your project in Visual Studio, to provision cloud resources follow these steps:
 
 1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud...**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-provision-in-cloud.png" alt-text="Screenshot shows how to provision in cloud.":::
 
-   **Provision** window appears.
+   The **Provision** window appears.
 
 1. Enter the following details to provision your resources:
 
@@ -495,7 +492,7 @@ After you open your project in Visual Studio, to provision cloud resources follo
    1. Select your **Region** from the dropdown menu.
    1. Select **Provision**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-provision-select-subscription.png" alt-text="Screenshot shows the selection of resource group.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-provision-select-subscription.png" alt-text="Screenshot shows the selection of resource group." lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-provision-select-subscription.png":::
 
 1. In the pop-up window that appears, select **Provision**. 
 
@@ -503,13 +500,13 @@ After you open your project in Visual Studio, to provision cloud resources follo
 
    The provisioning process creates resources in the Azure cloud. You can monitor the progress by observing the Teams Toolkit output window.
 
-1. In the pop-up window that appears, select **View provisioned resources** to view all the resources that are provisioned. 
+1. In the pop-up window that appears, to view all the resources that are provisioned, select **View provisioned resources**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-provision-provision-success.png" alt-text="Screenshot shows the provisioned resources.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-provision-provision-success-info.png" alt-text="Screenshot shows the provisioned resources.":::
 
 ## Provision actions
 
-The following actions are designed for provision.
+The following actions are designed for provision:
 
   * [teamsApp/create](#teamsappcreate-1)
   * [teamsApp/update](#teamsappupdate-1)
@@ -540,7 +537,7 @@ If the environment variable that stores Teams app ID is empty or the app ID isn'
 ```
 ### teamsApp/update
 
-When you apply the Teams app manifest to an existing Teams app in Teams Developer Portal. teamsApp/update uses the app ID in manifest.json file to determine which Teams app to update. It operates on Teams app in Teams Developer Portal.
+When you apply the Teams app manifest to an existing Teams app in Teams Developer Portal. teamsApp/update action uses the app ID in manifest.json file to determine which Teams app to update. It operates on Teams app in Teams Developer Portal.
 
 ```yml
 - uses: teamsApp/update
@@ -551,7 +548,7 @@ When you apply the Teams app manifest to an existing Teams app in Teams Develope
 
 ### teamsApp/validateManifest
 
-teamsApp/validateManifest action renders Teams app manifest template with environment variables and validates Teams app manifest file using its schema.
+The teamsApp/validateManifest action renders Teams app manifest template with environment variables and validates Teams app manifest file using its schema.
 
 ```yml
 - uses: teamsApp/validate
@@ -562,7 +559,7 @@ teamsApp/validateManifest action renders Teams app manifest template with enviro
 
 ### teamsApp/validateAppPackage
 
-teamsApp/validateAppPackage action validates Teams app package using validation rules.
+The teamsApp/validateAppPackage action validates Teams app package using validation rules.
 
 ```yml
   - uses: teamsApp/validateAppPackage
@@ -573,7 +570,7 @@ teamsApp/validateAppPackage action validates Teams app package using validation 
 
 ### teamsApp/zipAppPackage
 
-teamsApp/zipAppPackage action renders Teams app manifest template with environment variables and compresses the manifest file with two icons into a zip file.
+The teamsApp/zipAppPackage action renders Teams app manifest template with environment variables and compresses the manifest file with two icons into a zip file.
 
 ```yml
 - uses: teamsApp/zipAppPackage
@@ -588,7 +585,7 @@ teamsApp/zipAppPackage action renders Teams app manifest template with environme
 
 ### teamsApp/publishAppPackage
 
-teamsApp/publishAppPackage action publishes built Teams app zip file to tenant app catalog. It operates in Microsoft 365 tenant app catalog.
+The teamsApp/publishAppPackage action publishes built Teams app zip file to tenant app catalog. It operates in Microsoft 365 tenant app catalog.
 
 ```yml
 - uses: teamsApp/publishAppPackage
@@ -603,7 +600,7 @@ teamsApp/publishAppPackage action publishes built Teams app zip file to tenant a
 
 ### aadApp/create
 
-aadApp/create action creates a new Azure Active Directory (Azure AD) application to authenticate users if the environment variable that stores clientId is empty. It operates in Azure AD in Microsoft 365 tenant.
+The aadApp/create action creates a new Azure Active Directory (Azure AD) application to authenticate users if the environment variable that stores the `clientId` is empty. It operates in Azure AD in Microsoft 365 tenant.
 
 ```yml
 - uses: aadApp/create
@@ -632,7 +629,7 @@ aadApp/create action creates a new Azure Active Directory (Azure AD) application
   
 ### aadApp/update
 
-aadApp/update action updates your Azure AD application based on give Azure AD app manifest. It refers to the ID property in Azure AD app manifest to determine which Azure AD app to update. aadApp/update operates on Azure AD in your Microsoft 365 tenant.
+aadApp/update action updates your Azure AD application based on Azure AD app manifest. It refers to the ID property in Azure AD app manifest to determine which Azure AD app to update. aadApp/update operates on Azure AD in your Microsoft 365 tenant.
 
 ```yaml
 - uses: aadApp/update
@@ -645,7 +642,7 @@ aadApp/update action updates your Azure AD application based on give Azure AD ap
 
 ### botAadApp/create
 
-botAadApp/create action creates a new or reuses an existing Azure AD application for bot. It operates on Azure AD in Microsoft 365 tenant.
+The botAadApp/create action creates a new or reuses an existing Azure AD application for bot. It operates on Azure AD in the Microsoft 365 tenant.
 
 ```yml
 - uses: botAadApp/create
@@ -661,7 +658,7 @@ botAadApp/create action creates a new or reuses an existing Azure AD application
 
 ### arm/deploy
 
-arm/deploy action deploys given ARM templates in parallel. It operates on Azure subscription.
+The arm/deploy action deploys given ARM templates in parallel. It operates on Azure subscription.
 
 ```yml
 - uses: arm/deploy
@@ -683,7 +680,7 @@ arm/deploy action deploys given ARM templates in parallel. It operates on Azure 
 ```
 
 ### azureStorage/enableStaticWebsite
-azureStorage/enableStaticWebsite action enables static website setting in Azure Storage. It operates on Azure Storage.
+The azureStorage/enableStaticWebsite action enables static website setting in Azure Storage. It operates on Azure Storage.
 
 ```yml
 - uses: azureStorage/enableStaticWebsite
@@ -698,7 +695,7 @@ azureStorage/enableStaticWebsite action enables static website setting in Azure 
 
 ### script
 
-script action executes a user-defined script.
+The script action executes a user-defined script.
 
 ```yml
 - uses: script
@@ -717,11 +714,11 @@ script action executes a user-defined script.
 
 ### Customize resource provision
 
-The provision steps are defined in `teamsapp.yml` file, under `provision` property. You can add, remove, or update actions to the `provision` property to define the expected actions you want to do during provision.
+The provision steps are defined in the `teamsapp.yml` file, under the `provision` property. You can add, remove, or update actions to the `provision` property to define the expected actions you want to do during provision.
 
 #### Reference environment variables in parameter files
 
-Teams Toolkit supports referencing the values from environment variables in `teamsapp.yml`, Teams app manifest, Azure AD app manifest, and Azure parameter files. You can use the syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
+Teams Toolkit supports referencing the values from environment variables in the `teamsapp.yml` file, Teams app manifest, Azure AD app manifest, and Azure parameter files. You can use the syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
 
 The following example sets the value of environment variable `MY_AZURE_SUBSCRIPTION_ID` to `subscriptionId`:
 
@@ -745,7 +742,7 @@ If the predefined templates don't meet your app requirements, you can create you
       bicepCliVersion: <bicep-cli-version>
 ```
   
-The `arm/deploy` action support ARM templates that are written in bicep and json format. If you use json format, you can omit the `bicepCliVersion` parameter. You need to have basic knowledge of Azure Resource Manager. For more information see [Azure Resource Manager documentation](/azure/azure-resource-manager/).
+The `arm/deploy` action support ARM templates that are written in bicep and json format. If you use json format, you can omit the `bicepCliVersion` parameter. You need to have basic knowledge of Azure Resource Manager. For more information, see [Azure Resource Manager documentation](/azure/azure-resource-manager/).
 
 ### Manage your resources
 
@@ -758,16 +755,16 @@ You can sign in to [Azure portal](https://portal.azure.com/) and manage all reso
 
 You can customize your bot or the Teams app by adding environment variables to use an Azure AD app that you've created. You can customize the Teams app in the following ways:
 
-* [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app)
+* [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app-1)
 * [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot)
 
 #### Use an existing Azure AD app for your Teams app
 
-You can follow the steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app yet or you've one but don't know where to find the correct value, see [how to use existing Azure AD app in TeamsFx project](use-existing-aad-app.md).
+To use an Azure AD app created for your Teams app and to add environment variables to the .env files, follow these steps.
 
-1. Open `teamsapp.yml` and find the `aadApp/create` action.
+1. Open the `teamsapp.yml` file and find the `aadApp/create` action.
 
-1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. If you create projects using Teams Toolkit the default  `writeToenvironmentFile` definition is as follows:
+1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. If you create projects using Teams Toolkit the default  `writeToenvironmentFile` property definition is as follows:
 
      ```yml
       writeToEnvironmentFile:
@@ -781,7 +778,7 @@ You can follow the steps to add environment variables to the .env files to use a
 
 1. Add values for each environment variable from step 2.
 
-    1. Add the following environment variables and their values to `env\.env.{env}` file.
+    1. Add the following environment variables and their values to `env\.env.{env}` file. For example:
 
        ```env
         AAD_APP_CLIENT_ID=<value of Azure AD application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000
@@ -792,11 +789,13 @@ You can follow the steps to add environment variables to the .env files to use a
         AAD_APP_ACCESS_AS_USER_PERMISSION_ID=<id of access_as_user permission> # example: 00000000-0000-0000-0000-000000000000
        ```  
 
-    1. If your application requires an Azure AD app client secret, add the following environment variable and its value to `env\.env.{env}.user` file.
+    1. If your application requires an Azure AD app client secret, add the following environment variable and its value to `env\.env.{env}.user` file. For example:
 
        ```env
        SECRET_AAD_APP_CLIENT_SECRET=<value of Azure AD application's client secret>
        ```
+
+If you don't have an Azure AD app yet or you've one but don't know where to find the correct value, see [how to use existing Azure AD app in TeamsFx project](use-existing-aad-app.md).
 
 >[!NOTE]
 >
@@ -806,9 +805,9 @@ You can follow the steps to add environment variables to the .env files to use a
 
 #### Use an existing Azure AD app for your bot
 
-You can follow the steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app for your bot yet or you've one but don't know where to find the correct values, see [Use existing Azure AD app in TeamsFx project](use-existing-aad-app.md).
+You can follow the steps to add environment variables to the .env files to use an Azure AD app created for your Teams app.
 
-1. Open `teamsapp.yml` and find the `botAadApp/create` action.
+1. Open the `teamsapp.yml` file and find the `botAadApp/create` action.
 
 1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. The default `writeToEnvironmentFile` definition if you create projects using Teams Toolkit is as follows:
 
@@ -820,17 +819,19 @@ You can follow the steps to add environment variables to the .env files to use a
 
 1. Add values for each environment variable from step 2.
 
-    1. Add the following environment variable and its value to `env\.env.{env}` file.
+    1. Add the environment variable and its value to `env\.env.{env}` file. For example:
 
        ```env
        BOT_ID=<value of Azure AD application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000    
        ```
 
-    1. Add the following environment variable and its value to `env\.env.{env}.user` file.
+    1. Add the environment variable and its value to `env\.env.{env}.user` file. For example:
 
        ```env
        SECRET_BOT_PASSWORD=<value of Azure AD application's client secret>
        ```
+
+If you don't have an Azure AD app for your bot yet or you've one but don't know where to find the correct values, see [Use existing Azure AD app in TeamsFx project](use-existing-aad-app.md).
 
 > [!NOTE]
 >

@@ -127,16 +127,14 @@ For more information on the project folder structure, see [Teams Toolkit project
 
 ::: zone pivot="visual-studio"
 
-## What is launchSettings.json file?
+Visual Studio uses the `launchSettings.json` file to store configuration information that describes how to start an ASP.NET Core application. The file holds essential application settings used solely during development on the local machine. You can find it in the Properties folder of your project. It specifies details like the command to run, the browser's URL, and the required environment variables to be set. 
 
-`launchSettings.json` is a file used to store configuration information that describes how to start an ASP.NET Core application using Visual Studio. The file holds essential application settings used solely during development on the local machine. You can find it in the Properties folder of your project. It specifies details like the command to run, the browser's URL, and the required environment variables to be set. 
-
-After selecting **Prepare Teams App Dependencies**, Teams Toolkit will update the launchUrl using the real Teams app ID, Teams tenant ID, and Microsoft 365 account.
+After selecting **Prepare Teams App Dependencies**, Teams Toolkit updates the launchUrl using the real Teams app ID, Teams tenant ID, and Microsoft 365 account.
 
 ## Start local tunnel
 For bot and message extension, you can use Dev Tunnel. It starts a local tunnel service to make the bot messaging endpoint public. For more information, see [Dev tunnels in Visual Studio](/aspnet/core/test/dev-tunnels?view=aspnetcore&preserve-view=true).
 
-In the debug dropdown, select **Dev Tunnels(no active tunnel)** > **Create a Tunnel** or select an existing public dev tunnel.
+In the debug dropdown, select **Dev Tunnels (no active tunnel)** > **Create a Tunnel** or select an existing public dev tunnel.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-create-devtunnel.png" alt-text="Screenshoot shows the steps to create a tunnel":::
 
@@ -144,20 +142,19 @@ The tunnel creation dialog opens.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-create-devtunnel-detail.png" alt-text="Screenshot shows how to create a dev tunnel.":::
 
-* Select the **Account** to use to create the tunnel. Azure, Microsoft Account (MSA), and GitHub are the account types that can create tunnels. 
-* Enter a **Name** for the tunnel. This name identifies the tunnel in Visual Studio UI.
-* Choose the **Tunnel Type**, Persistent or Temporary.
-* Choose the  required public authentication in **Access** dropdown to access the tunnel.
-* Select **OK**.
-* Visual Studio displays confirmation of tunnel creation.
+* Select the **Account** to use to create the tunnel. Azure, Microsoft Account (MSA), and GitHub are the account types that are supported. 
+* Enter a **Name** for the tunnel. 
+* Select the **Tunnel Type**, Persistent or Temporary.
+* From the dropdown, select the  required public authentication in **Access**.
+* Select **OK**. Visual Studio displays confirmation of tunnel creation.
 
-The tunnel appears in the debug dropdown **Dev Tunnels(MyPublicDevTunnel)**  > **MyPublicDevTunnel** flyout. You can select the previously created dev tunnel at this location.
+The tunnel you have created will be under **Dev Tunnels(MyPublicDevTunnel)** > **MyPublicDevTunnel**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-select-devtunnel.png" alt-text="Screenshot shows how to select dev tunnel.":::
 
 
 ## Create the debug resources
-Teams Toolkit executes lifecycle `provision` defined in `teamsapp.local.yml` to create necessary resources for debugging Teams apps. For more information, see [Provision task](https://aka.ms/teamsfx-tasks/provision) and [available actions](https://aka.ms/teamsfx-actions).
+Teams Toolkit executes lifecycle `provision` defined in the `teamsapp.local.yml` file to create necessary resources for debugging Teams apps. For more information, see [Provision task](https://aka.ms/teamsfx-tasks/provision) and [available actions](https://aka.ms/teamsfx-actions).
 
 ## Take a tour of your app source code
 
