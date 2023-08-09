@@ -22,14 +22,14 @@ The following example shows how users can purchase subscription plans for a Team
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app.":::
 
-1. Select your country or region to see subscription plans for your location ans select **Save and continue**.
+1. Select your country or region to see subscription plans for your location and select **Save and continue**.
 
     :::image type="content" source="~/assets/images/saas-offer/add-region.png" alt-text="Screenshot shows option to select the country or region.":::
 
 1. In the **Choose a subscription plan** dialog, decide the plan you want and select **Start trail**.
 
     > [!NOTE]
-    > Private plans are visible only to users of the organization you're providing the offer. A **Private offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon indicates such plans.
+    > Private plans are visible only to users of the organization you're providing the offer. A **Private offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon indicates such private plans.
 
     :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Screenshot shows selecting the appropriate subscription plan.":::
 
@@ -47,7 +47,7 @@ The following example shows how users can purchase subscription plans for a Team
 
 When a new user launches the app for the first time, they're requested to provide consent to the app. Following is an example of the consent screen shown when calling for user profile data with minimum User.Read permission.
 
-Consent dialog is part of the flow to get the users' license information and may vary based on ISV’s integration approach.
+Consent dialog is part of the flow to get the user's license information and may vary based on ISV’s integration approach.
 
 :::image type="content" source="../../../../assets/images/saas-offer/permissions-requested.png" alt-text="Screenshot shows the Permissions requested consent dialog.":::
 
