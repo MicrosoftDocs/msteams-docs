@@ -1,61 +1,22 @@
 ---
-title: Prepare to build apps with Teams Toolkit v4
+title: Prepare to build apps with Teams Toolkit vs
 author: surbhigupta
-description: Learn about build environments such as SPFx of Teams Toolkit v4 in Visual Studio Code. Toolkit integrates Azure Functions capabilities for building apps.
+description: Learn about build environments such as C# and blazor of Teams Toolkit in Visual Studio. Toolkit integrates Azure Functions capabilities for building apps.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Prepare to build apps using Teams Toolkit v4
-
-> [!IMPORTANT]
->
-> We've introduced the [Teams Toolkit v5](../teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> Teams Toolkit v4 extension will soon be deprecated.
+# Prepare to build apps using Teams Toolkit vs
 
 Teams Toolkit supports different build environments for creating apps. It helps to integrate Azure Functions capabilities and cloud services in the Teams app that you've built.
 
-:::image type="content" source="images/buildapps-TTK_1-v4.png" alt-text="Prepare to build apps using Teams Toolkit"  lightbox="images/buildapps-TTK_1-v4.png":::
+:::image type="content" source="images/buildapps-TTK-vs.png" alt-text="Prepare to build apps using Teams Toolkit in visual studio."  lightbox="images/buildapps-TTK-vs.png":::
 
 ## Build environments
 
-Teams Toolkit in Visual Studio Code offers a set of environments to build your Teams app. You can choose any of the following environments:
-
-* JavaScript or TypeScript
-* SharePoint Framework (SPFx)
-* C# using Blazor framework
-
-### Create your Teams app using JavaScript or TypeScript
-
-The apps built with JavaScript or TypeScript have the following advantages:
-
-* App comes with its own UI and UX capabilities that are rich and user friendly.
-* Provides quick upgrades to the existing apps.
-* Distributes apps on multiple platforms, such as Android and iOS.
-* Compatible for creating an app with the existing APIs.
-
-Teams Toolkit in Visual Studio Code supports building the following apps using JavaScript or TypeScript:
-
-* Tab app: Your tab app can have web-based content. You can have a custom tab for your web content in Teams or add Teams-specific functionality to your web content.
-* Bot app: A bot can be chatbot or conversational bot that allows you to do simple and repetitive tasks, such as customer service or support staff.
-* Notification bot: You can send messages in Teams channel or group or personal chat by notification bots with HTTP request.
-* Command bot: You can automate repetitive tasks using a command bot. Command bot helps you to respond simple queries or commands sent in chats.
-* Workflow bot: You can interact with an Adaptive Card enabled by the Adaptive Card action handler feature in the workflow bot app.
-* Message extension: You can interact with your web service through buttons and forms in the Microsoft Teams client.
-
-### Create your Teams app using SPFx
-
-Teams Toolkit in Visual Studio Code allows you to create tab apps using SPFx. These apps have the following advantages:
-
-* Provides easy integration with data residing in SPFx to your Teams.
-* Integrates your SPFx solution with your business APIs secured with Microsoft Azure Active Directory (Azure AD).
-* Gives access to various open-source tools.
-* Creates powerful applications that can deliver a great UX.
-* Integrates with other Microsoft 365 workloads easily.
-* Delivers flexibility to host applications wherever needed.
+Teams Toolkit in Visual Studio offers a set of environments to build your Teams app in C# using Blazor framework.
 
 ### Create your Teams app using C# and Blazor
 
@@ -75,6 +36,17 @@ Azure Functions integrates with an array of [cloud services](add-resource-v4.md#
 * Processing to database changes
 * Processing IoT data streams
 * Managing message queues
+
+## Node.js version compatibility table for project type
+
+|Teams Toolkit Version | Project Type | Supported Node.js Versions  |
+|---|---|---|
+| 4.2.2 | Notify with http or timer trigger <br> Azure functions <br> SPFx <br> Other | 14, 16, 18 (Preview) <br> 14, 16, 18 (Preview) <br> 16 <br> 14, 16, 18 |
+| 4.2.0 | SPFx | 16 |
+| 4.0.3 | SPFx | 14, 16 |
+| 4.0.0 | Non-SPFx | 14, 16 |
+| 3.7.0 | SPFx | 12, 14 |
+| <3.7.0 | SPFx <br> Azure functions <br> Other | 10, 12, 14 <br> 10, 12, 14 <br> 10, 12, 14, 16 |
 
 ## See also
 

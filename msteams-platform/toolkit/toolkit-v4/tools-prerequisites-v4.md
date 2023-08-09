@@ -1,19 +1,13 @@
 ---
 title: Prerequisites for creating your Teams app
 author: zyxiaoyuer
-description: In this module, learn the prerequisites required for Tools and SDK, and Teams Toolkit v4.
+description: In this module, learn the prerequisites required for Tools and SDK, and Teams Toolkit.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
 ---
-# Prerequisites for creating your Teams app using Visual Studio Code
-
-> [!IMPORTANT]
->
-> We've introduced the [Teams Toolkit v5](../teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> Teams Toolkit v4 extension will soon be deprecated.
+# Prerequisites for creating your Teams app using Visual Studio
 
 Before you create your Teams app project, ensure that the prerequisites are in place. You must:
 
@@ -63,17 +57,6 @@ Ensure that the following tools are installed on the device where you’ll creat
 
 It's recommended that you bookmark the Microsoft Graph Explorer to learn about Microsoft Graph services. This browser-based tool allows you to run a query and access the Microsoft Graph API.
 
-### Node.js version compatibility table for project type
-
-|Teams Toolkit Version | Project Type | Supported Node.js Versions  |
-|---|---|---|
-| 4.2.2 | Notify with http or timer trigger <br> Azure functions <br> SPFx <br> Other | 14, 16, 18 (Preview) <br> 14, 16, 18 (Preview) <br> 16 <br> 14, 16, 18 |
-| 4.2.0 | SPFx | 16 |
-| 4.0.3 | SPFx | 14, 16 |
-| 4.0.0 | Non-SPFx | 14, 16 |
-| 3.7.0 | SPFx | 12, 14 |
-| <3.7.0 | SPFx <br> Azure functions <br> Other | 10, 12, 14 <br> 10, 12, 14 <br> 10, 12, 14, 16 |
-
 ## Accounts to build your Teams app
 
 Ensure that you have the following accounts before you start building your Teams app:
@@ -85,6 +68,10 @@ Ensure that you have the following accounts before you start building your Teams
 |[SharePoint collection site administrator account](#sharepoint-collection-site-administrator-account) |Deployment for hosting.| SPFx. |
 
 ### Microsoft 365 developer program
+
+> [!NOTE]
+
+> If you're creating a Teams app using Teams Toolkit, ensure that you have a Microsoft 365 account. However, if you're creating a Teams app using tools other than Teams Toolkit, ensure that you have an Azure account.
 
 To create a Microsoft 365 account, sign up for a Microsoft 365 developer program subscription. The subscription is free for 90 days and continues to renew as long as you're using it for development activity.
 

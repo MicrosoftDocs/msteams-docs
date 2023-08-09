@@ -211,11 +211,11 @@
           href: toolkit/faq.md
     - name: Teams Toolkit for Visual Studio
       items:
-      - name: Teams Toolkit VS overview
+      - name: Overview
         href: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md
-      - name: Install Teams Toolkit VS
+      - name: Install Teams Toolkit
         href: toolkit/toolkit-v4/install-Teams-Toolkit-vs.md
-      - name: Explore Teams Toolkit VS
+      - name: Explore Teams Toolkit
         href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
       - name: Prepare to build apps using Teams Toolkit VS
         href: toolkit/toolkit-v4/build-environments-v4.md
