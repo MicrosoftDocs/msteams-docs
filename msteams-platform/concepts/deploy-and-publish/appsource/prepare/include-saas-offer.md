@@ -10,7 +10,7 @@ ms.date: 03/21/2023
 
 # Plan your SaaS offer
 
-SaaS apps available for purchase in Microsoft commercial marketplace, either Azure Marketplace or Microsoft AppSource, are known as SaaS offers. Based on the SaaS offer configurations, the offers are available in one or both marketplaces. This guide helps to create plans for premium and enterprise SaaS offers for your existing basic free app.
+SaaS apps available for purchase in Microsoft commercial marketplace, either Azure Marketplace or Microsoft AppSource, are known as SaaS offers. Based on the SaaS offer configurations, the offers are available in one or both marketplaces. This guide provides you an overview of the features in an offer and helps you to plan the offer.
 
 :::row:::
    :::column:::
@@ -26,7 +26,7 @@ SaaS apps available for purchase in Microsoft commercial marketplace, either Azu
       :::image type="icon" source="~/assets/images/saas-offer/monetize-flow4.png" link="manage-third-party-apps-license.md" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow5.png" link="Test-preview-for-monetized-app.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow5.png" link="Test-preview-for-monetized-apps.md" border="false":::
    :::column-end:::
    :::column:::
       :::image type="icon" source="~/assets/images/saas-offer/monetize-flow6.png" link="publish-saas-offer-app.md" border="false":::
@@ -98,7 +98,7 @@ Customers can share their details and ask that you contact them about the offer 
 
 The technical configurations and requirements differ based on the listing option you select. You must fulfil the [prerequisites](prerequisites.md) before you start creating the plan.
 
-## Plan for offer details
+## Plan for the offer details
 
 To start with, you need to plan on the basic yet key features that decide the information available on the landing page, where your offer is published, and terms of use. It helps the users to find your offer easily in the marketplace and enhances usability.
 
@@ -108,25 +108,32 @@ To start with, you need to plan on the basic yet key features that decide the in
 * **Legal terms and conditions**: Provide relevant information for the users to be aware of the terms of use of your app.
 * **Customer Relationship Management (CRM)**: Provide the details to receive customer leads and reach you for queries.
 
-### Decide on plan visibility
+SaaS offers published through Microsoft must have at least one plan added. Determining the plan features contributes in providing appropriate purchase options for the target users.
 
-SaaS offers published through Microsoft must have at least one plan added. Plan visibility or the subscription model decides if the plans of the offer can be public or private. Public plans are available for all customers while private plans are customized for specific customers and visible only for targeted customers. For more information, see [Private plans in Microsoft commercial marketplace](/partner-center/marketplace/private-plans?branch=main).
+### Plan for the subscription model
+
+The subscription model or plan visibility decides if the plans can be public or private. Public plans are available for all customers while private plans are customized for specific customers and visible only for targeted customers. For more information, see [Private plans in Microsoft commercial marketplace](/partner-center/marketplace/private-plans?branch=main).
 
 Offers with private plans are published in Azure portal. Private plan can be converted to public plan later but can't be configured as private plan again.
 
-### Decide the pricing model and billing term
+### Plan the pricing model and billing term
 
-When creating a plan for your SaaS offer, you can decide between two [pricing models](/partner-center/marketplace/plan-saas-offer?branch=main) available.
+When creating a plan, you can decide between two [pricing models](/partner-center/marketplace/plan-saas-offer?branch=main) available for SaaS offers.
 
 * **Flat rate**: To charge based on the software usage across the organization. For the flat rate pricing model, you can opt to use [metered billing](/partner-center/marketplace/plans-pricing?branch=main) for consumption-based pricing.
 * **Per user**: To charge for each unique user.
 
-An offer can have only one pricing model. For example, a SaaS offer can't have one plan that is a flat rate and another plan that is per user.
+> [!NOTE]
+> An offer can have only one pricing model. For example, a SaaS offer can't have one plan that is a flat rate and another plan that is per user.
 
-The [billing terms](/partner-center/marketplace/plan-saas-offer?branch=main) indicate the subscription period and can be set to monthly or annual billing terms.
+The [billing terms](/partner-center/marketplace/plan-saas-offer?branch=main) indicate the subscription period and you can be set the billing term to monthly or annual.
 
 > [!NOTE]
 > The pricing model and billing terms can’t be changed once the offer is published.
+
+## Plan for additional features
+
+In addition to the basic and essential planning you did, you can also provide additional features to promote user engagement and eventually help the users to purchase your plans. These features help the users get a hands on experience of using your app before they decide to purchase offers.
 
 ### Plan for free trails
 

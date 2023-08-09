@@ -9,7 +9,7 @@ ms.date: 01/31/2023
 ---
 # Prerequisites to create an offer
 
-If you decide to sell your SaaS offer through Microsoft, you need to fulfill the technical configurations and gather the required technical information. It helps to prevent any blockers while creating the offer. This article helps you prepare the technical configurations and requirements to create a SaaS offer.
+If you decide to sell your SaaS offer through Microsoft, you need to fulfill the technical configurations and collate the required technical information. It helps to prevent any blockers while creating the offer. This article helps you prepare the technical configurations and requirements to create a SaaS offer.
 
 :::row:::
    :::column:::
@@ -25,7 +25,7 @@ If you decide to sell your SaaS offer through Microsoft, you need to fulfill the
       :::image type="icon" source="~/assets/images/saas-offer/monetize-flow4.png" link="manage-third-party-apps-license.md" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow5.png" link="Test-preview-for-monetized-app.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow5.png" link="Test-preview-for-monetized-apps.md" border="false":::
    :::column-end:::
    :::column:::
       :::image type="icon" source="~/assets/images/saas-offer/monetize-flow6.png" link="publish-saas-offer-app.md" border="false":::
@@ -116,11 +116,11 @@ To determine if the tenant for the Azure AD app is part of the Partner Center se
   1. On the left pane, select **Tenants**.
     You can see all tenants associated with the Microsoft Partner Network (MPN) account. The tenant, who is the owner of the Azure AD app, must be available in the list. If the tenant isn’t on the list, you can use the **Associate Azure ID** button to link the tenant.
 
-Integrating the APIs and building your landing page to manage subscriptions helps to manage and track your offers right from the start and provides a seamless user experience.
+Integrating the APIs and building your landing page to manage subscriptions helps to manage and track your offers right from the start and provide a seamless user experience.
 
 ## Technical requirements
 
-To configure your SaaS offer, you must furnish the following technical information during the Offer setup. When you create your SaaS offer, have the following technical information handy.
+To configure your SaaS offer, you must furnish the following technical information during the offer setup. When you create your SaaS offer, have the following technical information handy.
 
 * **Landing page URL**: The SaaS site URL that users get redirected to after acquiring your offer from the commercial marketplace. It triggers the configuration process from the newly created SaaS subscription. This URL receives a token that can be used to call the fulfillment APIs to get provisioning details for your interactive registration page.
 

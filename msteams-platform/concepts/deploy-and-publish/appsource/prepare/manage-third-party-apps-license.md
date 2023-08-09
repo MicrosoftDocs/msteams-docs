@@ -26,7 +26,7 @@ Independent software vendors (ISVs) can configure Microsoft license management f
       :::image type="icon" source="~/assets/images/saas-offer/monetize-flow4.png" link="manage-third-party-apps-license.md" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow5.png" link="Test-preview-for-monetized-app.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow5.png" link="Test-preview-for-monetized-apps.md" border="false":::
    :::column-end:::
    :::column:::
       :::image type="icon" source="~/assets/images/saas-offer/monetize-flow6.png" link="publish-saas-offer-app.md" border="false":::
@@ -86,7 +86,7 @@ You must associate a pricing model with each plan either flat rate or per user. 
 
 [Integrate with Graph usageRights API](prerequisites.md#integrate-with-graph-usagerights-api) to manage user permissions at the time of app launch by a customer who has a purchase license.
 
-### Free trial
+### Add free trial
 
 You can configure a free trial for each plan in your offer. Select the check box to allow a one-month free trial.
 
@@ -94,11 +94,17 @@ You can configure a free trial for each plan in your offer. Select the check box
 
 After you create one or more plans, you'll see your plan name, plan ID, pricing model, availability (Public or Private), current publishing status, and any available actions on the **Plan overview** tab.
 
+## Submit the offer
+
+When you finish configuring the offer along with the plans, validate the offer and submit your offer for publishing. The offer overview page displays the **Publish status** where you can track the progress.
+
+When the offer reaches the **Publisher signoff** stage, preview links for the respective platforms are given below the **Go live** button to test the offer. It's recommended to [preview and test the offer](Test-preview-for-monetized-apps.md) before you publish the offer live.
+
 As explained in [create your offer](create-saas-offer.md#submit-the-offer) section, you can now submit the offer with the plans from Partner Center for validation. Upon successful validation, it's recommended to [test the offer](Test-preview-for-monetized-apps.md) with the given preview links.
 
 ## License management
 
-Based on the subscriptions the user purchase, the licenses are available. To get the best out of Microsoft license management, here are some best practices for implementing subscription management
+Based on the subscriptions the user purchase, the licenses are available. To get the best out of Microsoft license management, here are some best practices for implementing subscription management.
 
 * With transactable SaaS offers for Teams apps, subscription plans (licenses) should be assigned to individual users rather than groups or an entire org.
 * When users are assigned a subscription plan, notify them through a Teams bot or email. In the messaging, include information on how to add the app to Teams and get started.
@@ -107,7 +113,7 @@ Based on the subscriptions the user purchase, the licenses are available. To get
 ### Check license usage in Partner Center analytics
 
 1. Sign in to [Partner Center](https://partner.microsoft.com/).
-1. In the left pane, go to **Commercial Marketplace > Analyze > Licensing**.
+1. In the left pane, go to **Commercial Marketplace** > **Analyze** > **Licensing**.
 1. Select **Plan and Tenant** in the reporting widget to see the month-wise usage.
 
 ## Next step

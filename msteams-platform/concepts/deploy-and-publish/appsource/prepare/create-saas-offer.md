@@ -26,7 +26,7 @@ Create your offer in Partner Center and configure the offer to publish in the ma
       :::image type="icon" source="~/assets/images/saas-offer/monetize-flow4.png" link="manage-third-party-apps-license.md" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow5.png" link="Test-preview-for-monetized-app.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow5.png" link="Test-preview-for-monetized-apps.md" border="false":::
    :::column-end:::
    :::column:::
       :::image type="icon" source="~/assets/images/saas-offer/monetize-flow6.png" link="publish-saas-offer-app.md" border="false":::
@@ -35,7 +35,7 @@ Create your offer in Partner Center and configure the offer to publish in the ma
 
 This guide helps you to create premium and enterprise SaaS offers on top of the existing basic free app.
 
-## Create an offer in Partner Center
+## Create the offer in Partner Center
 
 1. Sign in to [Partner Center](https://partner.microsoft.com/) and select **Partner Center**.
 
@@ -64,7 +64,7 @@ This guide helps you to create premium and enterprise SaaS offers on top of the 
 
 Set up the offer by making the required configurations. You need to configure the offer setup, offer listing, technical configuration, plan, and pricing to publish and link your offer to your SaaS app. All that you have planned in the Plan your offer phase is done in the offer configuration.
 
-### Offer setup
+### Set up offer selling and license management
 
 On the **Offer setup** tab, under **Setup** details, select whether to sell your offer through Microsoft or manage your transactions independently. Offers sold through Microsoft are called transactable offers, which means Microsoft facilitates the exchange of money for a software license on the publisher's behalf.
 
@@ -96,9 +96,9 @@ On the **Offer setup** tab, under **Setup** details, select whether to sell your
 
 1. Select **Save draft**.
 
-### Configure Properties
+### Set up the offer properties
 
-On the Properties tab, you define the categories and industries applicable to your offer, your app version, and legal contracts. You must provide complete and accurate details for the offer to be identified by the right set of customers.
+On the **Properties** tab, you define the categories and industries applicable to your offer, your app version, and legal contracts. You must provide complete and accurate details for the offer to be identified by the right set of customers.
 
 1. Under **Category**, select at least one and up to two categories for grouping your offer into the appropriate marketplace search areas.
 1. Under **Industries**, select up to two industries and up to two subindustries (also called verticals) for each industry.
@@ -106,9 +106,9 @@ On the Properties tab, you define the categories and industries applicable to yo
 1. Under **Legal**, provide terms and conditions for your offer. You can use standard contracts with some amendments or use your own terms and conditions.
 1. Select **Save draft**.
 
-### Offer listing
+### Set up offer details
 
-On the Offer listing page, under Marketplace details, complete the following steps.
+On the **Offer listing** page, under **Marketplace details**, complete the following steps.
 
 1. The Name box is prefilled with the name you entered earlier in the New offer dialog box. You can change the name at any time.
 1. In the Search results summary box, enter up to 100 characters of text. This summary is used in the marketplace listing search results.
@@ -118,7 +118,7 @@ On the Offer listing page, under Marketplace details, complete the following ste
 1. In the **Privacy policy** link box, enter a link to your organization's privacy policy, starting with https.
 1. Select **Save draft**.
 
-### Preview audience
+### Set the preview audience
 
 You can define a limited audience who can review your SaaS offer before you publish it live to the broader marketplace audience.
 
@@ -126,9 +126,9 @@ You can define a limited audience who can review your SaaS offer before you publ
 1. To add another email address, select the Add another email link.
 1. Select **Save draft**.
 
-### Technical configuration
+### Add the technical information
 
-On the Technical configuration tab, you define the technical details that the commercial marketplace uses to communicate to your SaaS application or solution.
+On the **Technical configuration** tab, you define the technical details that the commercial marketplace uses to communicate to your SaaS application or solution.
 
 1. Enter the landing page URL, that customers land on after acquiring your offer from the commercial marketplace and triggering the configuration process from the newly created SaaS subscription.
 1. Enter the Connection webhook URL, for all asynchronous events that Microsoft needs to send to your SaaS subscription.
@@ -136,15 +136,11 @@ On the Technical configuration tab, you define the technical details that the co
 1. Enter Azure Active Directory application ID.
 1. Select **Save draft**.
 
-### Plan Overview
+After the initial configurations are done, you need to create plans with suitable purchase options for the offer to be available in the marketplace.
 
-Offers sold as transactable SaaS offers must have at least one plan. If you opt for Microsoft to manage your licenses, [create a plan and set up Microsoft license management](manage-third-party-apps-license.md).
+### Create a plan
 
-### Submit the offer
-
-When you finish configuring the offer along with the plans, validate the offer and submit your offer for publishing. The offer overview page displays the **Publish status** where you can track the progress.
-
-When the offer reaches the **Publisher signoff** stage, preview links for the respective platforms are given below the **Go live** button to test the offer. It's recommended to [preview and test the offer](Test-preview-for-monetized-apps.md) before you publish the offer live.
+Offers sold as transactable SaaS offers must have at least one plan. If you opt for Microsoft to manage your licenses, [create a plan and set up Microsoft license management](manage-third-party-apps-license.md). You sell through Microsoft and also allow Microsoft to manage licenses on your behalf.
 
 ## Code sample
 
