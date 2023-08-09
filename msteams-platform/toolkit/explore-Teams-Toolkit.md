@@ -159,6 +159,8 @@ From the task pane, you can see the following sections:
         * **Get Started**: View Teams Toolkit Get started help within Visual Studio Code.
 
         * **Report Issues on GitHub**: Select to access GitHub page and raise any issues.
+        
+        * ** Feedback**: You can help us improve by giving us your feedbacks!.
    :::column-end:::
 :::row-end:::
 
