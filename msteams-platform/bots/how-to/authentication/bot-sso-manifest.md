@@ -50,7 +50,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
         "webApplicationInfo": 
         {
         "id": "{Azure AD AppId}",
-        ""resource": "api://botid-{Azure AD AppId}"
+        "resource": "api://botid-{Azure AD AppId}"
         }
         ```
 
