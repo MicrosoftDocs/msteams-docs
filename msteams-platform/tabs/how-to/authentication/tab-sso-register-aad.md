@@ -111,7 +111,7 @@ You need to register your app in Azure AD and configure the tenancy and app's pl
 
 After you've created a new app registration, configure scope (permission) options for sending access token to Teams Client, and authorizing trusted client applications to enable SSO.
 
-To configure scope and authorize trusted client applications, you'll need:
+To configure scope and authorize trusted client applications, you need:
 
 - [To expose an API](#to-expose-an-api): Configure scope (permission) options for your app. You'll expose a web API, and configure the application ID URI.
 - [To configure API scope](#to-configure-api-scope): Define scope for the API, and the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
