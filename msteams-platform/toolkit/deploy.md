@@ -233,7 +233,7 @@ This action upload and deploys generated sppkg to SharePoint app catalog. You ca
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Create and deploy an Azure cloud service](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
-* [Create multi-capability Teams apps](add-capability.md)
+* [Create multi-capability Teams apps](add-capability-v4.md)
 * [Add cloud resources to Microsoft Teams app](add-resource.md)
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
 * [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
@@ -284,7 +284,7 @@ The Get started guide helps to deploy using Teams Toolkit. You can use the follo
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Create and deploy an Azure cloud service](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
-* [Create multi-capability Teams apps](add-capability.md)
+* [Create multi-capability Teams apps](add-capability-v4.md)
 * [Add cloud resources to Microsoft Teams app](add-resource.md)
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
 * [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
