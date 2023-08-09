@@ -103,7 +103,7 @@ A concise summary of your app that is original, engaging, and directed at your t
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/specifying-short-description-under-submission.png" alt-text="Example screenshot highlights where an app's short description displays in a store listing.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-short-description-under-submission.png" alt-text="Screenshot highlights where an app's short description displays in a store listing.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -131,7 +131,7 @@ Your Partner Center account allows you to add a long description of 4000 charact
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/specifying-long-description-under-submission.png" alt-text="Example screenshot highlights where an app's long description displays in a store listing.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-long-description-under-submission.png" alt-text="Screenshot shows the sample of an app's long description in a store listing.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
