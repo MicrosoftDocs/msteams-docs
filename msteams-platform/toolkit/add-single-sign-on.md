@@ -368,7 +368,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
     and update the code as:
 
-        ```csharp
+      ```csharp
                 var config = builder.Configuration.Get<ConfigOptions>();
                 builder.Services.AddTeamsFx(config.TeamsFx.Authentication);
           ```
