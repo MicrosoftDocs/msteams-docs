@@ -152,8 +152,11 @@
           items: 
           - name: Add and manage environment
             href: toolkit/TeamsFx-multi-env.md
-          - name: Create multi capability app
-            href: toolkit/add-capability.md
+          - name: Create multi capability app v4
+            href: toolkit/add-capability-v4.
+            displayName: Multiple capabilities app 
+          - name: Create How-to Guides v5
+            href: toolkit/add-How-to guides-v5.md
             displayName: Multiple capabilities app 
           - name: Create capability based cloud resources
             href: toolkit/add-resource.md  
@@ -226,9 +229,6 @@
           items: 
           - name: Add and manage environment
             href: toolkit/toolkit-v4/TeamsFx-multi-env-v4.md
-          - name: Create multi capability app
-            href: toolkit/toolkit-v4/add-capability-v4.md
-            displayName: Multiple capabilities app 
           - name: Create capability based cloud resources
             href: toolkit/toolkit-v4/add-resource-v4.md  
             displayName: application 

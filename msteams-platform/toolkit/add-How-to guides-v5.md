@@ -1,14 +1,14 @@
 ---
-title: Add Capabilities to Your Teams apps
+title: Add How-to guides to Your Teams apps v5
 author: surbhigupta
-description:  In this module, learn how to add capabilities of Teams Toolkit.
+description:  In this module, learn to add How-to guides to Teams Toolkit.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Add capabilities to Microsoft Teams app
+# Add How-to guides to Microsoft Teams app v5
 
 Teams Toolkit project templates focus on getting started with an app that implements a single [app capability](~/concepts/design/app-structure.md). However, apps can have multiple capabilities. We've created a set of How-to guides with the steps needed to add different capabilities to a project created with Teams Toolkit.
 
