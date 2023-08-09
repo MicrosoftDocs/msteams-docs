@@ -49,8 +49,8 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
         ```json
         "webApplicationInfo": 
         {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "resource": "api://botid-00000000-0000-0000-0000-000000000000"
+            "id": "{Azure AD AppId}",
+            ""resource": "api://botid-{Azure AD AppId}"
         }
         ```
 
@@ -59,8 +59,8 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
         ```json
         "webApplicationInfo": 
         {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "resource": "api://subdomain.example.com/botid-00000000-0000-0000-0000-000000000000"
+            "id": "{Azure AD AppId}",
+            "resource": "api://subdomain.example.com/botid-{Azure AD AppId}"
         }
         ```
 

@@ -51,7 +51,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
     ```json
     "webApplicationInfo": {
     "id": "{Azure AD AppId}",
-    "resource": "api://{Subdomain}.example.com/{Azure AD AppId}"
+    "resource": "api://subdomain.example.com/{Azure AD AppId}"
     }
     ```
 
