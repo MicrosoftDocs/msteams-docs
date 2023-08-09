@@ -57,7 +57,7 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
 
 ## Enable Single Sign-on in Teams Toolkit for Visual Studio
 
-Microsoft Teams provides single sign-on (SSO) function for an app using the Teams Toolkit for Visual Studio.
+Microsoft Teams provides single sign-on (SSO) function for an app using the Teams Toolkit for Microsoft Visual Studio.
 
 1. Open **Visual Studio**.
 
@@ -83,7 +83,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
               "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
             ]
         ```
-        
+
     1. `replyUrlsWithType`: It lists registered redirect_uri values that Azure AD accepts as destinations when returning tokens. Set necessary redirect Uris into `replyUrlsWithType` to successfully return token.
 
         ```json
@@ -97,7 +97,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
         > [!NOTE]
         > Use `${{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}`.
-    
+
         ```json
             "replyUrlsWithType":[
           {
@@ -126,17 +126,17 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
         }
     ```
 
-       > [!NOTE]
-       > Update the value of resource to your `identifierUris` configed in step 1, and use `${{ENV_NAME}}` to reference envs in `env/.env.{TEAMSFX_ENV}`.
-    
+      > [!NOTE]
+      > Update the value of resource to your `identifierUris` configed in step 1, and use `${{ENV_NAME}}` to reference envs in `env/.env.{TEAMSFX_ENV}`.
+
 1. Open `appPackage/manifest.json`file, and add the following property:
 
-        ```JSON
-        "webApplicationInfo": {
-          "id": "${{AAD_APP_CLIENT_ID}}",
-          "resource": "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
-        }
-        ```
+      ```JSON
+      "webApplicationInfo": {
+        "id": "${{AAD_APP_CLIENT_ID}}",
+        "resource": "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
+      }
+      ```
 
 1. Update `teamsapp.yml` and `teamsapp.local.yml`
 
@@ -151,7 +151,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
         1. ClientId: Azure AD app client ID.
         1. ClientSecret: Azure AD app client secret.
         1. OAuthAuthority: Azure AD app oauth authority.
-      
+
         For more information, see [HelpLink](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#fileupdatejson)
 
     * In both `teamsapp.yml` and `teamsapp.local.yml` files add the following lines under `provision` to create Azure AD app.
@@ -232,6 +232,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
    ```
    param location string = resourceGroup().location
    ```
+
    and add following lines:
 
    ```
@@ -682,7 +683,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
     > You need to replace `{{YOUR_NAMESPACE}}` with your namespace name
   
    2. Move `TeamsFx-Auth/Bot/SSO` and `TeamsFx-Auth/Bot/Pages` to `/`
-   
+
      > [!NOTE]
      > Remember to replace `{{YOUR_NAMESPACE}}` with your project namespace.
 
