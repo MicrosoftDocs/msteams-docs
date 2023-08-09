@@ -6,24 +6,9 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
-zone_pivot_groups: teams-toolkit-platform-vs
 ---
 
 # Teams Toolkit Visual Studio Overview
-
-::: zone pivot="visual-studio-v17-7"
-
-Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio.
-
-* Start with a project templates for common line-of-business app scenarios or from a sample.
-* Save setup time with automated app registration and configuration.
-* Run and debug to Teams directly from familiar tools.
-* Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
-* Bring your app to your organization or the Teams App Store using built-in publishing tools.
-
-::: zone-end
-
-::: zone pivot="visual-studio-v17-6"
 
 Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio.
 
@@ -78,5 +63,3 @@ You can save time and let the toolkit automatically register the app in Teams De
 * [Provision cloud resources](provision-vs.md)
 * [Deploy Teams app to the cloud](deploy-vs.md)
 * [Publish Teams apps](publish-v4.md)
-
-::: zone-end
