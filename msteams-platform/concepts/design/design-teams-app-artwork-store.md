@@ -5,6 +5,7 @@ author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: App artwork
+ms.date: 05/23/2023
 ---
 # Microsoft Teams app artwork for store
 

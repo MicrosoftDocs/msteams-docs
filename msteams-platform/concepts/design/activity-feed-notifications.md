@@ -5,6 +5,7 @@ description: Learn how to design activity feed notifications for your Teams app 
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
+ms.date: 06/28/2022
 ---
 # Designing activity feed notifications for your Microsoft Teams app
 

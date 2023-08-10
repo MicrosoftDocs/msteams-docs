@@ -3,6 +3,7 @@ title: Overview of Universal Actions for Adaptive Cards
 description: Learn Universal Actions for Adaptive Cards, such as user-specific views, sequential workflow support, and more for desktop and mobile environments
 ms.topic: overview
 ms.localizationpriority: medium
+ms.date: 02/28/2023
 ---
 
 # Universal Actions for Adaptive Cards

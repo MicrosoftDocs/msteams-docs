@@ -36,10 +36,10 @@ items:
    | &nbsp; | Install | For using... |
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
-   | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use latest version. |
-   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Teams Toolkit v5.|
+   | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use the latest version. |
+   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
-   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
+   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
    | **Optional** | &nbsp; | &nbsp; |
@@ -73,14 +73,10 @@ items:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation." lightbox="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion-1.png":::
 
-    The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
-
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
+    The Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
 
    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-   > [!NOTE]
-   > The latest version of Teams Toolkit is v5.
    
    # [Command line](#tab/cli)
 
@@ -234,7 +230,7 @@ items:
 
         After your app is created, the Teams Toolkit displays the following message: 
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project.png" alt-text="Screenshot shows the localdebug.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project-msg.png" alt-text="Screenshot shows the localdebug.":::
 
         You can select **Local debug** to preview your project. 
 
@@ -301,11 +297,10 @@ items:
 
     1. Open Visual Studio Code.
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
-    1. Select **Sign in to M365**.
+    1. Select **Sign in to M365** using your credentials..
 
         Your default web browser opens to let you sign in to the account.
 
-    1. Sign in to your Microsoft 365 account.
     1. Close the browser when prompted and return to Visual Studio Code.
     1. Return to Teams Toolkit within Visual Studio Code.
 
@@ -382,7 +377,7 @@ items:
     1. Sign in with your Microsoft 365 account, if prompted.
     1. Select **Add** to add the app to your account.
     
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug.png" alt-text="Screenshot shows message to add the app." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug-latest.png" alt-text="Screenshot shows message to add the app." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug.png":::
 
         The toolkit displays a message to indicate that the app is added to Teams.
 
@@ -531,18 +526,15 @@ items:
     1. Open Visual Studio Code.
     1. Open the project folder in which you created the message extension app.
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
-    1. Select **Sign in to Azure**.
+    1. Select **Sign in to Azure** using your credentials.
 
         > [!TIP]
-        > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
+        > If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
 
         Your default web browser opens to let you sign in to the account.
-    1. Sign in to your Azure account using your credentials.
     1. Close the browser when prompted and return to Visual Studio Code.
 
         The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
-
-        Now you're ready to deploy your app to Azure!
 
         Congratulations, you have signed in your Azure account! 
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.

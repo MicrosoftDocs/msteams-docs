@@ -24,7 +24,7 @@ items:
 
    This step-by-step guide helps you to upload file in Teams using bot. You'll see the following output:
 
-   :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/output-sbs.png" alt-text="Screenshot showing the final output":::
+   :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/output-sbs.png" alt-text="Screenshot shows the final output":::
    
 - title: Prerequisites
   durationInMinutes: 1 
@@ -33,10 +33,8 @@ items:
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
-     | **Required** | &nbsp; | &nbsp; |
-     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install the <br> ASP.NET and web development workload.| You can install the enterprise version in Visual Studio 2022, and install the workloads. |
-     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
+     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
    
       > [!NOTE]
@@ -73,14 +71,14 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-       :::image type="content" source="./assets/images/azure-bot_1.png" alt-text="Azure bot.":::
+       :::image type="content" source="./assets/images/teams-file-upload-bot/azure-bot.png" alt-text="Screenshot shows the Azure bot.":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. From the **Subscription** dropdown list, select your subscription.
-    1. From the **Resource group** dropdown list, select your existing resource group.
+    1. Select your **Subscription** from the dropdown list.
+    1. Select your **Resource group** from the dropdown list.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/selection-of-resource_1.png" alt-text="azure resource selection":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/create-azure-bot.png" alt-text="azure resource selection":::
        
        To create a new resource group, select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
        
@@ -97,7 +95,7 @@ items:
 
     1. Select **Review + create**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/review-create_1.png" alt-text="creation of new bot":::   
+        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/review-create-app-id.png" alt-text="Screenshow shows th creation of new bot.":::   
 
     1. If the validation passes, select **Create**. 
     
@@ -105,24 +103,24 @@ items:
 
     1. Select **Go to resource**. 
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/deployment_1.png" alt-text="select resource":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/deployment-resources.png" alt-text="Screenshot shows the selection of resources.":::
         
         Your Azure bot is created.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/azure-bot-created_1.png" alt-text="creation of bot":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/azure-bot-created-output.png" alt-text="Screenshot shows the creation of a bot.":::
 
      **To create client secret**
 
        Perform the following steps if you've created a new **Microsoft App ID**:
 
-    1. In the left panel, select **Configuration**. 
+    1. In the left pane, select **Configuration**. 
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
-    1. Next to **Microsoft App ID**, select **Manage**.
+    1. Next to **Microsoft App ID**, select **Manage Password**.
 
-       :::image type="content" source="~/assets/images/manage-bot-label_1.png" alt-text="manage bot":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/manage-bot-label.png" alt-text="manage bot":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
@@ -171,7 +169,7 @@ items:
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/apply-teams_1.png" alt-text="microsoft teams":::
 
       
-    **To create tunnel for local web server**
+    **To create a ngrok tunnel**
 
     Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
@@ -184,7 +182,7 @@ items:
 
     **To add messaging endpoint**
 
-       1. From ngrok, copy the HTTPS URL.
+       1. From ngrok, copy the HTTPS URL (https to io).
        
           :::image type="content" source="../msteams-platform/assets/images/ngrok-url_3.png" alt-text="ngrok HTTPS URL":::
           
@@ -192,7 +190,7 @@ items:
           > The HTTPS URL in your ngrok is your fully qualified domain name.
           > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
 
-       1.  In **Settings** for the Azure bot that you created, select **Configuration**.
+       1.  Go to the Azure bot you've created in Azure portal. In the left pane, under **Settings**, select **Configuration**.
 
        1.  In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
@@ -209,21 +207,23 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. From the left pane, select **App Registrations**.
+    1. From the left pane, select **App registrations**.
 
     1. Select your bot.
        
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-your-bot_1.png" alt-text="selection of bot":::
 
-    1. Select **Expose an API**.
+    1. Under **Manage**, select **Expose an API**.
 
-    1. Select **Set**.
+    1. Select **Add**.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/set-api_1.png" alt-text="setting api":::
 
-    1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{your AppID}`.
+    1. Use the `api://your ngrok/botid-{AppID}` format for the **Application ID URI**.
+    
+    1. Update the **Application ID URI** and select **Save**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/app-id-uri1_1.png" alt-text="redirect uri":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/app-id-uri.png" alt-text="redirect uri":::
 
        The following image shows the domain name:
 
@@ -237,23 +237,25 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectscope_2.png" alt-text="selection of scope":::
 
-    1. In the panel that appears, enter `access_as_user` as the **Scope name**.
+    1. Enter **access_as_user** as the **Scope name**.
   
-    1. Set **Who can consent?** to `Admins and users`.
+    1. Set **Who can consent?** to **Admins and users**.
   
-    1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
+    1. To configure the admin and user consent prompts with appropriate values for **access_as_user** scope, provide the following information in the fields:</br>
     
-         * Enter `Teams can access the user’s profile` as **Admin consent display name**.
+         * Enter **Teams can access the user’s profile** as **Admin consent display name**.
 
-         * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**.
+         * Enter **Allows Teams to call the app’s web APIs as the current user** as **Admin consent description**.
 
-         * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**.
+         * Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**.
 
-         * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**.
+         * Enter **Enable Teams to call this app’s APIs with the same rights as the user** as **User consent description**.
   
     1. Ensure that **State** is set to **Enabled**.
   
     1. Select **Add scope** to save.
+
+       The following image shows the fields and the values:
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-a-scope_1.png" alt-text="adding scope":::
 
@@ -271,17 +273,21 @@ items:
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/client-id-mobile_1.png" alt-text="client mobile":::  
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/clientid-mobile.png" alt-text="client mobile":::  
  
        You can enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/client-web_1.png" alt-text="client id web":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/clientid-web.png" alt-text="client id web":::
+
+    1. Select **Authorized scopes**.
+
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/authorizedscope.png" alt-text="client mobile":::
 
        The following image displays the **Client ID**:
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/client-id-teams-bot.png" alt-text="shows ids":::   
 
-    1. In the left panel, select **API Permissions**. 
+    1. In the left pane, select **API permissions**. 
 
        > [!NOTE]
        > Users need to consent to the API permissions only if the Azure Active Directory app is registered in a different tenant.
@@ -300,14 +306,12 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-permissions_1.png" alt-text="delegated permissions added":::
 
-    1. From the left panel, select **Authentication** to set a redirect URI.
+    1. From the left pane, select **Authentication** to set a redirect URI.
 
        > [!NOTE]
        > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
 
-         1. Select **Add a platform**.
-        
-         1. Select **Web**.
+         1. Select **Add a platform** > **Web**.
 
             :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/configure-web_1.png" alt-text="web configuration"::: 
 
@@ -335,19 +339,19 @@ items:
 
       **To set up Bot Service connection**
 
-      1. Go to **Configuration page** > **Add OAuth Connection Settings**.
+      1. Go to **Configuration page**.
 
       1. Select **Add OAuth Connection Settings**.
 
       1. In **New Connection Setting**, enter the following details:
 
-          * **Name** enter `name for your new connection setting. You can use the name in the settings of your bot service code`.
-          * **Service Provider** select `Azure Active Directory V2`.
-          * **Client ID** you are `Microsoft App ID`.
-          * **Client secret** `Value of the client secret ID`.
-          * **Token Exchange URL** use the `Application ID URI` obtained previously while exposing API endpoint.
-          * **Tenant ID** enter `common`.
-          * **Scopes** enter `User.Read`.
+          * **Name** enter **name for your new connection setting. You can use the name in the settings of your bot service code**.
+          * **Service Provider** select **Azure Active Directory V2**.
+          * **Client ID** update you're **Microsoft App ID**.
+          * **Client secret**  update the value of the **client secret ID**.
+          * **Token Exchange URL** use the **Application ID URI**.
+          * **Tenant ID** enter **common**.
+          * **Scopes** enter **User.Read**.
      
       1. Select **Save**.
 
@@ -356,13 +360,11 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 2
   content: |
-    1. Go to **appsettings.json** in the cloned repository.
+    1. Go to the **appsettings.json** file in the cloned repository.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/appsettings-file-location.png" alt-text="app settings manifest":::
                       
-    1. Open **appsettings.json** in Visual Studio.
-
-    1. Update the following information:
+    1. Open the **appsettings.json** file and update the following information:
 
          * Set `"MicrosoftAppType"` to **MultiTenant**.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
@@ -371,26 +373,26 @@ items:
 
            :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/appsettings-json1_1.png" alt-text="appsettings file in visual studio":::
            
-    1. Go to **manifest.json** in the cloned repository.
+    1. Go to the **manifest.json** file in the cloned repository.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-file-location.png" alt-text="open manifest file":::
          
-    1. Open **manifest.json** in Visual Studio and make the following changes:
+    1. Open the **manifest.json** file and update the following changes:
     
        Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/bot-id_1.png" alt-text="replace bot id."lightbox="../msteams-platform/assets/images/teams-file-upload-bot/bot-id_1.png"::: 
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/bot-id_1.png" alt-text="replace bot id.":::
 
 - title: Build and run the service
   durationInMinutes: 2
   content: |
-     **To build and run the service using Visual Studio or Command line**
+     To build and run the service using Visual Studio or Command line.
 
      # [Visual Studio](#tab/visualstudio)
 
-       1. Launch Visual Studio.
+       1. Open Visual Studio.
        
-       1. Go to **File** > **Open** > **Project/Solution**.
+       1. Go to **File** > **Open** > **Project/Solution...**.
 
            :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/VS-open-file_1.png" alt-text="visual studio":::      
         
@@ -398,7 +400,7 @@ items:
 
            :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/project-file-location.png" alt-text="folder":::        
 
-       1. Open **Solution Explorer** from **View**.
+       1. From **View**, open **Solution Explorer**.
 
           :::image type="content" source="../msteams-platform/assets/images/Teams-task-module/solutionexplorer_1.png" alt-text="view":::
           
@@ -428,55 +430,52 @@ items:
 - title: Add file upload bot in Teams
   durationInMinutes: 2
   content: | 
-     1. In your cloned repository, Go to **Microsoft-Teams-Samples** > **samples** > **bot-file-upload** > **csharp** > **TeamsAppManifest**.
+    1. In your cloned repository, Go to **Microsoft-Teams-Samples** > **samples** > **bot-file-upload** > **csharp** > **TeamsAppManifest**.
 
-     1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder: 
+    1. Create a .zip file with the following files that are present in the **TeamsAppManifest** folder:
        * manifest.json
        * icon-outline.png
        * icon-color.png 
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-zip-file-location.png" alt-text="manifest folder":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-zip-file-location.png" alt-text="manifest folder":::
 
-      1. Go to **Microsoft Teams**.
+    1. In the Teams client, select the **Apps** icon.
+    1. Select **Manage your apps**.
+    1. Select **Upload an app**
+    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-      1. Select **Apps** > **Manage your apps**.
+       :::image type="content" source="assets/images/teams-file-upload-bot/custom-upload.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/AppStore1_1.png" alt-text="adding app":::
+    1. Select the .zip file you've created in the **TeamsAppManifest** folder and select **Open**.
 
-      1. Select **Upload an app** and select **Upload a custom app**.
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/upload-manifest-zip.png" alt-text="manifest open"::: 
 
-         :::image type="content" source="assets/images/upload-custom-app.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
+    1. Select **Add**.
 
-      1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-bot-file.png" alt-text="add"::: 
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/upload-manifest-zip.png" alt-text="manifest open"::: 
+    1. In the compose message area, type **hi** and bot sends an Adaptive card.
 
-      1. Select **Add**.
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/respond-bot.png" alt-text="card send by bot":::
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-file-bot_1.png" alt-text="add"::: 
-
-       1. In the compose message area, type **hi** and wait for few seconds for it to respond with a card.
-
-          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/respond-bot.png" alt-text="card send by bot":::
- 
 - title: Interacting with the bot in Teams
   durationInMinutes: 2
   content: |
-    1. Send a message to the bot. It responds with a card for the permission to upload the file.
+    1. Send a message to the bot. Bot sends an Adaptive Card with the permission to upload the file.
        
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-1.png" alt-text="bot sending card":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-adaptive-card.png" alt-text="bot sending card":::
     
     1. Select **Allow**. A `teams-logo.png` file is uploaded to the file directory, which is ready for download.
          
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-2.png" alt-text="teams logo":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-allow.png" alt-text="teams logo":::
     
-    1. Send a file to the bot as an attachment in Teams. It responds with a message `Received and Saved`. You can view the attachment from the **Files** tab.
+    1. Send a file to the bot as an attachment in Teams. It responds with a message **Received and Saved**. You can view the attachment from the **Files** tab.
         
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-3.png" alt-text="send file":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-file.png" alt-text="send file":::
    
-    1. Send an image as an attachment. It responds with a message `Received and saved`. You can view the image on the chat window and from **Files** tab.
+    1. Send an image as an attachment. It responds with a message **Received and saved**. You can view the image on the chat window and from **Files** tab.
        
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-4.png" alt-text="received":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-image.png" alt-text="received":::
       
         > [!NOTE]
         >  After the bot is installed in the personal scope, the user enters into a one-on-one chat conversation with the bot.

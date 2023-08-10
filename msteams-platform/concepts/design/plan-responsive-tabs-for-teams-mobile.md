@@ -5,6 +5,7 @@ description: With this learning module, you'll learn how to plan for creating an
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
+ms.date: 12/09/2022
 ---
 # Plan responsive tabs for Teams mobile
 

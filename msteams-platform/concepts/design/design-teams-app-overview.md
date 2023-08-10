@@ -5,6 +5,7 @@ description: Learn how to design Microsoft Teams apps and resources include the 
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
+ms.date: 12/27/2022
 ---
 # Designing your Microsoft Teams app
 
