@@ -10,7 +10,7 @@ ms.date: 07/11/2023
 
 # Create your SaaS offer
 
-Create your offer in Partner Center and configure the offer to publish in the marketplace. The decision to sell through Microsoft, details of the offer, and pricing are configured after creating the offer. Check if the prerequisites are done before you create a SaaS offer. You must also have a commercial marketplace account in Partner Center.
+Create your offer in Partner Center and configure the offer to publish in the marketplace. The option to sell through Microsoft, details of the offer, and pricing are configured after creating the offer. Check if the prerequisites are fulfilled before you create a SaaS offer. You must also have a commercial marketplace account in Partner Center.
 
 :::row:::
    :::column:::
@@ -64,31 +64,39 @@ This guide helps you to create premium and enterprise SaaS offers on top of the 
 
 Set up the offer by making the required configurations. You need to configure the offer setup, offer listing, technical configuration, plan, and pricing to publish and link your offer to your SaaS app. All that you have planned in the Plan your offer phase is done in the offer configuration.
 
-### Set up offer selling and license management
+### Set up offer selling
 
 On the **Offer setup** tab, under **Setup** details, select whether to sell your offer through Microsoft or manage your transactions independently. Offers sold through Microsoft are called transactable offers, which means Microsoft facilitates the exchange of money for a software license on the publisher's behalf.
 
 1. If you haven't added Offer Alias while creating the offer, enter a suitable Offer Alias name.
 
 1. Select if you want to sell through Microsoft or not.
+
     1. To sell through Microsoft and have Microsoft facilitate transactions for you, in the Offer setup page, under **Setup** details, select the checkbox **Yes, I would like Microsoft to manage customer licenses on my behalf**.
 
-       :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="The screenshots shows the offer setup page to set up license to manage for your app within Teams.":::
-
-        * If you would like Microsoft to manage customer licenses for you, select **Yes**. For Microsoft to manage your licenses, [set up Microsoft License management](manage-third-party-apps-license.md).
-        * If you want to manage customer licenses yourself, select **No**.
-
-       > [!NOTE]
-       >
-       > * This is a one-time setting and you can't change it once your offer is published. This allows the customer to manage licenses for your app within Teams.
-       > * The App manifest supports only one offer for an app. Select an appropriate license management solution for all the plans available in your offer and you can't change this option after the offer is pushed to live.
+    :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="The screenshots shows the offer setup page to set up license to manage for your app within Teams.":::
 
     1. To list your offer through the commercial marketplace and process transactions independently, select **No**.
 
         * Select from the [listed options](/partner-center/marketplace/plan-saas-offer). You can change to a different listing option after publishing the offer.
 
-    > [!NOTE]
-    > The technical requirements and configuration differ based on the selection.
+        > [!NOTE]
+        > The technical requirements and configuration differ based on the selection.
+
+### Set up Microsoft License management
+
+1. If you would like Microsoft to manage customer licenses for you, select **Yes, I would like Microsoft to manage customer licenses on my behalf**.
+
+1. If you want to manage customer licenses yourself, select **No, I would prefer to manage customer licenses myself**.
+
+:::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="The screenshots shows the offer setup page to set up license to manage for your app within Teams.":::
+
+> [!NOTE]
+>
+> * This is a one-time setting and you can't change it once your offer is published. This allows the customer to manage licenses for your app within Teams.
+> * The App manifest supports only one offer for an app. Select an appropriate license management solution for all the plans available in your offer and you can't change this option after the offer is pushed to live.
+
+You can sell through Microsoft and also allow Microsoft to manage licenses on your behalf.
 
 1. To enable a test drive, under **Test drive**, select the **Enable a test drive** checkbox.
 
@@ -140,7 +148,7 @@ After the initial configurations are done, you need to create plans with suitabl
 
 ### Create a plan
 
-Offers sold as transactable SaaS offers must have at least one plan. If you opt for Microsoft to manage your licenses, [create a plan and set up Microsoft license management](manage-third-party-apps-license.md). You sell through Microsoft and also allow Microsoft to manage licenses on your behalf.
+Offers sold as transactable SaaS offers must have at least one plan. To create a plan and submit the offer for validation, check [create a plan tp purchase license](manage-third-party-apps-license.md).
 
 ## Code sample
 

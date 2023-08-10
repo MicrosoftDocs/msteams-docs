@@ -912,7 +912,7 @@
   - name: Create plan and set up license management
     href: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
     displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
-  - name: Test and publish SaaS offer in the marketplace
+  - name: Test preview and publish SaaS offer in the marketplace
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
     displayName: paid, AppSource, fee
   - name: Publish monetized app to Teams store
