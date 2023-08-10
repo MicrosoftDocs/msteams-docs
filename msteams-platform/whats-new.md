@@ -35,15 +35,9 @@ Cater your app to a specific audience from the available list of countries or re
 
 Teams platform features that are available to all app developers.
 
-**2023 July**
+**2023 August**
 
-* ***July 28, 2023***: [Use Collaborative Stage View to engage with your app content in a new Teams window](tabs/tabs-link-unfurling.md#collaborative-stage-view).
-
-* ***July 25, 2023***: [Use people icon in an Adaptive Card to view the images of users](task-modules-and-cards/cards/cards-format.md#people-icon-in-an-adaptive-card).
-
-* ***July 20, 2023***: [App caching for iOS personal tray](tabs/how-to/app-caching.md).
-
-* ***July 06, 2023***: [Use app icon badging to identify any app activity during a meeting](apps-in-teams-meetings/app-icon-badging-for-your-app.md).
+***August 10, 2023***: [Send a proactive message using AAD ID](bots/how-to/conversations/send-proactive-messages.md)
 
 :::column-end:::
 :::row-end:::
@@ -54,6 +48,10 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 25/07/2023 | Use Collaborative Stage View to engage with your app content in a new Teams window | Build tabs > [Tabs link unfurling and Stage View](tabs/tabs-link-unfurling.md#collaborative-stage-view).
+| 25/07/2023 | Use people icon in an Adaptive Card to view the images of users | Build cards and task modules > Build cards > Review store validation guidelines > [Build cards](task-modules-and-cards/cards/cards-format.md#people-icon-in-an-adaptive-card) |
+| 20/07/2023 | App caching for iOS personal tray | Build tabs > [App caching for iOS personal tray](tabs/how-to/app-caching.md) |
+| 06/07/2023 | Use app icon badging to identify any app activity during a meeting | Build apps for Teams meetings and calls > Build in-meeting notification and app icon badging > [Use app icon badging to identify any app activity during a meeting](apps-in-teams-meetings/app-icon-badging-for-your-app.md) |
 | 14/06/2023 | Added validation guidelines for Teams app powered by Artificial Intelligence (AI). | Distribute your app > Publish to the Teams store > Review store validation guidelines > [Apps powered by Artificial Intelligence](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-powered-by-artificial-intelligence) |
 | 02/06/2023 | Get real-time meeting events for channel meetings. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > Meeting apps APIs > [Get real-time Teams meeting events API](apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api) |
 | 24/04/2023 | Develop your apps with a seamless transition between Teams Developer Portal and Teams Toolkit. | Tools and SDKs > Developer Portal for Teams > [Develop your apps with Teams Toolkit](concepts/build-and-test/develop-your-apps-with-teams-toolkit.md) |
@@ -349,11 +347,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2023 July**
+**2023 August**
 
-* ***July 31, 2023***:  [Bots can mention tags in Adaptive Cards](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention).
-
-* ***July 13, 2023***: [Extend static tabs to group chat or meetings with a customizable experience.](tabs/what-are-tabs.md)
+***August 08, 2023***: [Use callRecording API to fetch meeting recording from all meetings.](graph-api/meeting-transcripts/overview-transcripts.md)
 
 :::column-end:::
 :::row-end:::
@@ -364,6 +360,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|31/07/2023| Bots can mention tags in Adaptive Cards. |Build bots > Bot conversations > Message in bot conversations > Channel and group chat conversation with a bot > [Bots can mention tags in Adaptive Cards](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention)|
+|13/07/2023| Extend static tabs to group chat or meetings with a customizable experience. |Build tabs > [Overview](tabs/what-are-tabs.md)|
 |31/01/2023| Send notifications to specific participants on a meeting stage with targeted in-meeting notification. |Build apps for Teams meetings and calls > Enable and configure apps for meetings > Build in-meeting notification for Teams meeting > Build tabs for meeting > [Targeted in-meeting notification](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification)|
 |30/01/2023| Enable app caching to improve subsequent launch time of the apps to the meeting side panel.|Build tabs > [App caching for your tab app](tabs/how-to/app-caching.md) |
 

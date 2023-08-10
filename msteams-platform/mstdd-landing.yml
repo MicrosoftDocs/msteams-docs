@@ -65,7 +65,7 @@ landingContent:
       - text: Extend Microsoft 365 Copilot
         url: copilot/how-to-extend-copilot.md
       - text: Distribute your app to specific countries or regions
-        url: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries-or-regions
+        url: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
       - text: Teams Toolkit v5 extension within Visual Studio Code
         url: toolkit/teams-toolkit-fundamentals.md
 
@@ -78,9 +78,13 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Send a proactive message using AAD ID
+        url: bots/how-to/conversations/send-proactive-messages.md
+      - text: Use callRecording API to fetch meeting recording from all meetings (Developer preview)
+        url: graph-api/meeting-transcripts/overview-transcripts.md
       - text: App caching for iOS personal tray
         url: tabs/how-to/app-caching.md
-      - text: Extend static tabs to group chat or meetings with a customizable experience.
+      - text: Extend static tabs to group chat or meetings with a customizable experience
         url: tabs/what-are-tabs.md
       - text: App icon badging for your Teams app
         url: apps-in-teams-meetings/app-icon-badging-for-your-app.md
@@ -94,11 +98,6 @@ landingContent:
         url: promote-app-adoption.md
       - text: Changelog for Developer Portal
         url: concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal
-      - text: SSO authentication for your Adaptive Cards Universal Actions
-        url: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
-      - text: Third party authentication for Adaptive Cards Universal Actions
-        url: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
-
 
     - linkListType: whats-new
       links:
