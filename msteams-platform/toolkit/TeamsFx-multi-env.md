@@ -63,4 +63,3 @@ When you have multiple environments and select the Production, dev, or local men
 * [Add more cloud resources](add-resource.md)
 * [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
 * [Test app behavior in different environment](test-app-behavior.md)
-* [Node.js version compatibility table for project type](/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type)
