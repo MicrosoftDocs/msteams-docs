@@ -35,7 +35,7 @@ Teams Toolkit checks the following prerequisites during the debug process:
   |Bot |  14, 16 (recommended)|
   |Message extension | 14, 16 (recommended) |
 
-For more information, see [Node.js version compatibility table for project type](tools-prerequisites-v4.md#nodejs-version-compatibility-table-for-project-type).
+For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).
 
 * Teams Toolkit prompts you to sign in to Microsoft 365 account, if you haven't signed in with your valid credentials.
 * Custom app uploading or sideloading for your developer tenant is turned on, to prevent local debug termination.

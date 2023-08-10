@@ -50,4 +50,3 @@ Teams Toolkit menu options are available in Visual Studio only when an app proje
 * [Prepare to build apps](build-environments-v4.md)
 * [Provision cloud resources](provision-vs.md)
 * [Deploy Teams app to the cloud](deploy-vs.md)
-* [Create new Teams app](create-new-project-vs.md#create-new-teams-app-in-visual-studio)
