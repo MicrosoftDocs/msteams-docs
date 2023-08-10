@@ -37,17 +37,6 @@ Azure Functions integrates with an array of [cloud services](add-resource-v4.md#
 * Processing IoT data streams
 * Managing message queues
 
-## Node.js version compatibility table for project type
-
-|Teams Toolkit Version | Project Type | Supported Node.js Versions  |
-|---|---|---|
-| 4.2.2 | Notify with http or timer trigger <br> Azure functions <br> SPFx <br> Other | 14, 16, 18 (Preview) <br> 14, 16, 18 (Preview) <br> 16 <br> 14, 16, 18 |
-| 4.2.0 | SPFx | 16 |
-| 4.0.3 | SPFx | 14, 16 |
-| 4.0.0 | Non-SPFx | 14, 16 |
-| 3.7.0 | SPFx | 12, 14 |
-| <3.7.0 | SPFx <br> Azure functions <br> Other | 10, 12, 14 <br> 10, 12, 14 <br> 10, 12, 14, 16 |
-
 ## See also
 
 * [Teams Toolkit Overview](../teams-toolkit-fundamentals.md)
