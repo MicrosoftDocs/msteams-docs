@@ -71,36 +71,35 @@ Government Community Cloud (GCC) is a government focused copy of the commercial 
 
 The following table includes Teams features and availability for GCC, GCC-High, DOD, AG 08, 09 (US), and Gallatin (China):
 
-| &nbsp; | GCC | GCC-High | DOD | AG 08, 09 (US) | Gallatin (China)|
-|-------------|---------|---|---|---|
-| **Apps** | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| &nbsp; | GCC | GCC-High | DOD |
+|-------------|---------|---|
+| **Apps** | &nbsp; | &nbsp; | &nbsp; |
 | Microsoft apps | ✔️ Microsoft apps compliant with GCC. | ✔️ Microsoft apps compliant with GCC-High. | ✔️ Microsoft apps compliant with DOD. |
-| 3P or third-party apps built by external developers. | ✔️ | ❌ | ❌ | ❌ | ❌ |
-|Line-of-business apps are built, distributed and used for specific tenant.  | ✔️ | ✔️ | ✔️ | ❌ | ❌ |
+| 3P or third-party apps built by external developers. | ✔️ | ❌ | ❌ |
+|Line-of-business apps are built, distributed and used for specific tenant.  | ✔️ | ✔️ | ✔️ |
 |Custom apps| ✔️ | ✔️ | ✔️ |
 |Sideloading apps | ✔️ | ❌ | ❌ |
-|1P apps built by Teams engineering such as Kudos and Tasks. | ✔️ | ✔️ | ✔️ | ❌ | Coming soon|
-|2P apps built by internal MS Teams such as Azure DevOps, Planner, and Word. | ✔️ | ✔️ | ✔️ | ❌ | ❌ |
-|Personal apps | ✔️ | ✔️ | ✔️ | ❌ | ❌ |
-| **Capabilities** | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| Tabs | ✔️ | ✔️ | ✔️ | ❌ |  ❌ |
-| Bots and Message extensions | ✔️ | ✔️ | ✔️ | ❌ | ❌ |
-| Message actions | ✔️ | Partially available | Partially available | ❌ | ❌ |
-| Cards: Adaptive, Hero, Thumbnail, O365 connector, Receipt, Sign in, and OAuth cards. | ✔️ | Partially available | Partially available | ❌ | ❌ |
-| Task modules | ✔️ | ❌ | ❌ | ❌ | ❌ |
-| Link unfurling | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Meetings extensibility | ✔️ | ❌ | ❌ | ❌ | ❌ |
-| Connectors and webhooks | ✔️ | Coming soon | ❌ | ❌ | ❌ |
-| Workflows| ✔️ | ❌ | ❌ | ❌ | ❌ |
-| LiveShare | ❌ | ❌ | ❌ | ❌ | ❌ |
-| MetaOS Hub | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Store | ✔️ | ✔️ | ✔️ | ❌ |  ❌ |
-| Store 2.0 | ❌ | ❌ | ❌ | ❌ |  ❌ |
-| In-context stores or flyouts | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Manage your apps page | ✔️ | ❌ | ❌ | ❌ |  ❌ |
-| Teams admin center | ✔️ | ❌ | ❌ | ❌ | ❌ |
-| Graph | ✔️ | ✔️ | ✔️ | Partially available | Coming soon |
-| Teams developer portal  | ❌ | ❌ | ❌ | ❌ | ❌ |
+|1P apps built by Teams engineering such as Kudos and Tasks. | ✔️ | ✔️ | ✔️ |
+|2P apps built by internal MS Teams such as Azure DevOps, Planner, and Word. | ✔️ | ✔️ | ✔️ |
+|Personal apps | ✔️ | ✔️ | ✔️ |
+| **Capabilities** | &nbsp; | &nbsp; | &nbsp; |
+| Tabs | ✔️ | ✔️ | ✔️ |
+| Bots and Message extensions | ✔️ | ✔️ | ✔️ |
+| Message actions | ✔️ | Partially available | Partially available |
+| Cards: Adaptive, Hero, Thumbnail, O365 connector, Receipt, Sign in, and OAuth cards. | ✔️ | Partially available | Partially available |
+| Task modules | ✔️ | ❌ | ❌ |
+| Link unfurling | ❌ | ❌ | ❌ |
+| Meetings extensibility | ✔️ | ❌ | ❌ |
+| Connectors and webhooks | ✔️ | Coming soon | ❌ |
+| Workflows| ✔️ | ❌ | ❌ |
+| LiveShare | ❌ | ❌ | ❌ |
+| MetaOS Hub | ❌ | ❌ | ❌ |
+| Teams store | ✔️ | ✔️ | ✔️ |
+| In-context stores or flyouts | ❌ | ❌ | ❌ |
+| Manage your apps page | ✔️ | ❌ | ❌ |
+| Teams admin center | ✔️ | ❌ | ❌ |
+| Graph | ✔️ | ✔️ | ✔️ |
+| Teams developer portal  | ❌ | ❌ | ❌ |
 
 **Compliance UI**: By enabling third-party communications, customers accept that such communication is being processed through the third party and not Microsoft. The customer is solely responsible for mitigating risks associated with connecting with third party bots in their services. Microsoft doesn't endorse and makes no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service. Enabling bots extend your system boundary beyond this tenant based on the bot you choose to use. It is your responsibility to ensure that meets your compliance requirements including FedRAMP, DFARS, ITAR, and so on. It is your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
 
