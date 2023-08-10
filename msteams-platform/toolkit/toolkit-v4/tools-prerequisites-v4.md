@@ -222,7 +222,7 @@ If you have admin rights, you can enable sideloading:
 
 ## See also
 
-* [Teams Toolkit Overview](../teams-toolkit-fundamentals-vs.md)
+* [Teams Toolkit Visual Studio Overview](teams-toolkit-fundamentals-vs.md)
 * [Manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings)
 * [Manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies)
 * [Provision cloud resources using Teams Toolkit](../provision.md)
