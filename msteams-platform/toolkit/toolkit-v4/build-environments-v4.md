@@ -12,7 +12,7 @@ ms.date: 11/29/2021
 
 Teams Toolkit supports different build environments for creating apps. It helps to integrate Azure Functions capabilities and cloud services in the Teams app that you've built.
 
-:::image type="content" source="images/buildapps-visual-studio.png" alt-text="Prepare to build apps using Teams Toolkit in visual studio." lightbox="images/buildapps-visual-studio.png":::
+:::image type="content" source="../../assets/images/teams-toolkit-v2/buildapps-visual-studio.png" alt-text="Prepare to build apps using Teams Toolkit in visual studio.":::
 
 ## Build environments
 
