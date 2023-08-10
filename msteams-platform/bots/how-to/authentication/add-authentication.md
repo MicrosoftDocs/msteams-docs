@@ -33,7 +33,7 @@ In this article you'll learn:
     | Sample | BotBuilder version | Demonstrates |
     |:---|:---:|:---|
     | **Bot authentication** in [cs-auth-sample][teams-auth-bot-cs] | v4 | OAuthCard support |
-    | **Bot authentication** in [js-auth-sample][teams-auth-bot-js] | v4| OAuthCard support  |
+    | **Bot authentication** in [js-auth-sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/nodejs) | v4 | OAuthCard support |
     | **Bot authentication** in [py-auth-sample][teams-auth-bot-py] | v4 | OAuthCard support |
 
 ## Create the resource group
