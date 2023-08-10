@@ -69,18 +69,15 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 Government Community Cloud (GCC) is a government focused copy of the commercial environment. Department of Defense (DOD) and Federal contractors must meet the stringent cybersecurity and compliance requirements. For this purpose, GCC-High was created to meet the needs of DOD and Federal contractors. GCC-High is a copy of the DOD cloud but exists in its own sovereign environment. The DOD cloud is built for the Department of Defense only.
 
-The following table includes Teams features and availability for GCC, GCC-High, DOD, AG 08, 09 (US), and Gallatin (China):
+The following table includes Teams features and availability for GCC, GCC-High, and DOD:
 
 | &nbsp; | GCC | GCC-High | DOD |
 |-------------|---------|---|
 | **Apps** | &nbsp; | &nbsp; | &nbsp; |
 | Microsoft apps | ✔️ Microsoft apps compliant with GCC. | ✔️ Microsoft apps compliant with GCC-High. | ✔️ Microsoft apps compliant with DOD. |
 | 3P or third-party apps built by external developers. | ✔️ | ❌ | ❌ |
-|Line-of-business apps are built, distributed and used for specific tenant.  | ✔️ | ✔️ | ✔️ |
-|Custom apps| ✔️ | ✔️ | ✔️ |
+|Line-of-business apps are built, distributed, and used for specific tenant. | ✔️ | ✔️ | ✔️ |
 |Sideloading apps | ✔️ | ❌ | ❌ |
-|1P apps built by Teams engineering such as Kudos and Tasks. | ✔️ | ✔️ | ✔️ |
-|2P apps built by internal MS Teams such as Azure DevOps, Planner, and Word. | ✔️ | ✔️ | ✔️ |
 |Personal apps | ✔️ | ✔️ | ✔️ |
 | **Capabilities** | &nbsp; | &nbsp; | &nbsp; |
 | Tabs | ✔️ | ✔️ | ✔️ |
@@ -92,16 +89,18 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 | Meetings extensibility | ✔️ | ❌ | ❌ |
 | Connectors and webhooks | ✔️ | Coming soon | ❌ |
 | Workflows| ✔️ | ❌ | ❌ |
-| LiveShare | ❌ | ❌ | ❌ |
-| MetaOS Hub | ❌ | ❌ | ❌ |
 | Teams store | ✔️ | ✔️ | ✔️ |
 | In-context stores or flyouts | ❌ | ❌ | ❌ |
 | Manage your apps page | ✔️ | ❌ | ❌ |
-| Teams admin center | ✔️ | ❌ | ❌ |
+| Teams Admin Center | ✔️ | ❌ | ❌ |
 | Graph | ✔️ | ✔️ | ✔️ |
-| Teams developer portal  | ❌ | ❌ | ❌ |
+| Teams Developer Portal | ❌ | ❌ | ❌ |
 
-**Compliance UI**: By enabling third-party communications, customers accept that such communication is being processed through the third party and not Microsoft. The customer is solely responsible for mitigating risks associated with connecting with third party bots in their services. Microsoft doesn't endorse and makes no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service. Enabling bots extend your system boundary beyond this tenant based on the bot you choose to use. It is your responsibility to ensure that meets your compliance requirements including FedRAMP, DFARS, ITAR, and so on. It is your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
+#### Compliance UI
+
+By enabling third-party communications, customers accept that such communication is being processed through the third party and not Microsoft. The customer is solely responsible for mitigating risks associated with connecting with third party bots in their services. Microsoft doesn't endorse and makes no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service.
+
+Enabling bots extend your system boundary beyond this tenant based on the bot you choose to use. It is your responsibility to ensure that meets your compliance requirements including FedRAMP, DFARS, ITAR, and so on. It is your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
 
 The following list helps to identify the availability of GCC, GCC-High, and DOD for the features:
 
