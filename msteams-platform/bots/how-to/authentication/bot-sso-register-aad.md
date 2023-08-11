@@ -236,16 +236,16 @@ The scope and permissions are now configured. Next, you must configure the autho
 
 1. Choose one of the following client IDs:
 
-| Use client ID | For authorizing... |
-| --- | --- |
-| 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams mobile or desktop application |
-| 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
-| 4765445b-32c6-49b0-83e6-1d93765276ca | Microsoft 365 web application |
-| 0ec893e0-5785-4de6-99da-4ed124e5296c | Microsoft 365 desktop application |
-| d3590ed6-52b3-4102-aeff-aad2292ab01c | Microsoft 365 mobile application |
-| d3590ed6-52b3-4102-aeff-aad2292ab01c | Outlook desktop application |
-| bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Outlook web application |
-| 27922004-5251-4030-b22d-91ecd9a37ea4 | Outlook mobile application |
+   | Use client ID | For authorizing... |
+   | --- | --- |
+   | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams mobile or desktop application |
+   | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
+   | 4765445b-32c6-49b0-83e6-1d93765276ca | Microsoft 365 web application |
+   | 0ec893e0-5785-4de6-99da-4ed124e5296c | Microsoft 365 desktop application |
+   | d3590ed6-52b3-4102-aeff-aad2292ab01c | Microsoft 365 mobile application |
+   | d3590ed6-52b3-4102-aeff-aad2292ab01c | Outlook desktop application |
+   | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Outlook web application |
+   | 27922004-5251-4030-b22d-91ecd9a37ea4 | Outlook mobile application |
 
 1. Select the application ID URI you created for your app in **Authorized scopes** to add the scope to the web API you exposed.
 
@@ -599,16 +599,16 @@ The scope and permissions are now configured. Next, you must configure the autho
 
 1. Choose one of the following client IDs:
 
-| Use client ID | For authorizing... |
-| --- | --- |
-| 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams mobile or desktop application |
-| 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
-| 4765445b-32c6-49b0-83e6-1d93765276ca | Microsoft 365 web application |
-| 0ec893e0-5785-4de6-99da-4ed124e5296c | Microsoft 365 desktop application |
-| d3590ed6-52b3-4102-aeff-aad2292ab01c | Microsoft 365 mobile application |
-| d3590ed6-52b3-4102-aeff-aad2292ab01c | Outlook desktop application |
-| bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Outlook web application |
-| 27922004-5251-4030-b22d-91ecd9a37ea4 | Outlook mobile application |
+   | Use client ID | For authorizing... |
+   | --- | --- |
+   | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams mobile or desktop application |
+   | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
+   | 4765445b-32c6-49b0-83e6-1d93765276ca | Microsoft 365 web application |
+   | 0ec893e0-5785-4de6-99da-4ed124e5296c | Microsoft 365 desktop application |
+   | d3590ed6-52b3-4102-aeff-aad2292ab01c | Microsoft 365 mobile application |
+   | d3590ed6-52b3-4102-aeff-aad2292ab01c | Outlook desktop application |
+   | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Outlook web application |
+   | 27922004-5251-4030-b22d-91ecd9a37ea4 | Outlook mobile application |
 
 1. Select the application ID URI you created for your app in **Authorized scopes** to add the scope to the web API you exposed.
 
