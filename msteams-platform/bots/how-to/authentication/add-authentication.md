@@ -326,7 +326,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
    :::image type="content" source="../../../assets/images/authentication/auth-bot-app-service.png" alt-text="Screenshot shows how to enter required information for auth app service.":::
 
 1. Select **Create**.
-1. If the deployment completes successfully, you should see it reflected in Visual Studio. A page is displayed in your default browser as *Your bot is ready!*. The URL will be similar to this: `https://botteamsauth.azurewebsites.net/`. Save it to a file.
+1. If the deployment completes successfully, you should see it reflected in Visual Studio. A page is displayed in your default browser as *Your bot is ready!*. The URL is similar to this: `https://botteamsauth.azurewebsites.net/`. Save it to a file.
 1. In your browser, go to the [**Azure portal**][azure-portal].
 1. Check your resource group, the bot should be listed along with the other resources. The following image is an example:
 
