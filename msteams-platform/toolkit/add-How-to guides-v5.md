@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Add How-to guides to Microsoft Teams app v5
+# Add How-to guides to Microsoft Teams app
 
 > [!NOTE]
 > This article is applicable only to Teams Toolkit version 5.
