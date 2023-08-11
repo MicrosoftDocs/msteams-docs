@@ -96,11 +96,11 @@ Customers can share their details and ask that you contact them about the offer 
     :::column-end:::
 :::row-end:::
 
-The technical configurations and requirements differ based on the listing option you select. You must fulfil the [prerequisites](prerequisites.md) before you start creating the plan.
+The technical configurations and requirements differ based on the listing option you select. You must fulfill the [prerequisites](prerequisites.md) before you start creating the plan.
 
 ## Plan for the offer details
 
-To start with, you need to plan on the basic yet key features that decide the information available on the landing page, where your offer is published, and terms of use. It helps the users to find your offer easily in the marketplace and enhances usability.
+To start with, you need to plan on the basic yet key features that decide the information available on the landing page, the marketplace where your offer is published, and terms of use. It helps the users to find your offer easily in the marketplace and enhances usability.
 
 * **Offer categories and industries**: Decide on the primary and secondary categories of the offer. It decides the store where the offer is published and to identify your app in the marketplace.
 * **Offer details**: Decide the logos, keywords, and description that helps to improve the discovery and value of your offer in the marketplace.
