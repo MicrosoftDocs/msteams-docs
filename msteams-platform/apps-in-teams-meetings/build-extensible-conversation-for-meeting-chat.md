@@ -47,7 +47,7 @@ The following table provides the user types and lists the features that each use
 | Anonymous |  Can view and interact with the messages sent by the bot. Can't invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
 
 > [!Note]
-> * If federated user is participant of the meeting, then the tenant user won't be able to see the message extensions.
+> * If federated user is participant of the meeting, then the tenant user can't see the message extensions.
 > * If anonymous user and tenant user are participants of the meeting, then the tenant user can see the message extensions.
 
 ## See also
