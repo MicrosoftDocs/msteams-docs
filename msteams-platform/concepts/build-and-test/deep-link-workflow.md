@@ -171,9 +171,7 @@ You can generate a deep link to [share the app to stage](~/apps-in-teams-meeting
 For deep links to share content to stage, see [deep link to share content to stage in meetings](~/concepts/build-and-test/share-in-meeting.md#generate-a-deep-link-to-share-content-to-stage-in-meetings).
 
 > [!NOTE]
->
-> * Generating a deep link to share content to stage in meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-> * Deep link to share content to stage in meeting is supported in Teams desktop client only.
+> Deep link to share content to stage in meeting is supported in Teams desktop client only.
 
 ## Deep link to meeting side panel
 
