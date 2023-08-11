@@ -188,8 +188,8 @@
               items:    
               - name: Provision cloud resources
                 href: toolkit/provision.md
-              - name: Deploy Teams app to the cloud
-              href: toolkit/deploy.md
+              - name: Deploy to the cloud
+                href: toolkit/deploy.md
             - name: Test your Teams app
               items: 
               - name: Integrate and collaborate
