@@ -48,7 +48,7 @@ The following table provides the user types and lists the features that each use
 
 > [!Note]
 > * If a federated user is a participant in the meeting, the tenant user can't view the message extensions.
-> * If  an anonymous user and a tenant user are participants in the meeting, the tenant user can view the message extensions.
+> * If an anonymous user and a tenant user are participants in the meeting, the tenant user can view the message extensions.
 
 ## See also
 
