@@ -591,7 +591,7 @@ Within the following dialog step, check for the presence of a token in the resul
 
 [!code-javascript[AddOAuthPrompt](~/../Microsoft-Teams-Samples/samples/bot-conversation-sso-quickstart/js/dialogs/mainDialog.js?range=50-64)]
 
-**bots/logoutDialog.js**
+**dialogs/logoutDialog.js**
 
 [!code-javascript[allow-logout](~/../Microsoft-Teams-Samples/samples/bot-conversation-sso-quickstart/js/dialogs/logoutDialog.js?range=31-42&highlight=7)]
 
