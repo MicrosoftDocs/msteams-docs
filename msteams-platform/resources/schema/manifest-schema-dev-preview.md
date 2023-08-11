@@ -297,7 +297,7 @@ The unique Microsoft-generated identifier for this app. The format of the ID is 
 
 ## developer
 
-Required:
+Required-object
 
 Specifies information about your company. For apps submitted to AppSource (formerly Office Store), these values must match the information in your AppSource entry.
 
@@ -307,7 +307,7 @@ Specifies information about your company. For apps submitted to AppSource (forme
 |`websiteUrl`|2048 characters|✔️|The https:// URL to the developer's website. This link should take users to your company or product-specific landing page.|
 |`privacyUrl`|2048 characters|✔️|The https:// URL to the developer's privacy policy.|
 |`termsOfUseUrl`|2048 characters|✔️|The https:// URL to the developer's terms of use.|
-|`mpnId`|10 characters|✔️|**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
+|`mpnId`|10 characters||**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
 
 ## localizationInfo
 
@@ -315,9 +315,9 @@ Optional:
 
 Allows the specification of a default language, and pointers to additional language files. See [localization](~/concepts/build-and-test/apps-localization.md).
 
-|Name| Maximum size | Required | Description|
-|---|---|---|---|
-|`defaultLanguageTag`|4 characters|✔️|The language tag of the strings in this top level manifest file.|
+|Name| Type | Maximum size | Required | Description|
+|---|---|---|---|---|
+|`defaultLanguageTag`|object|4 characters|✔️|The language tag of the strings in this top level manifest file.|
 
 ### localizationInfo.additionalLanguages
 
@@ -326,22 +326,22 @@ An array of objects specifying additional language translations.
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
 |`languageTag`|4 characters|✔️|The language tag of the strings in the provided file.|
-|`file`|4 characters|✔️|A relative file path to the .json file containing the translated strings.|
+|`file`|2048 characters|✔️|A relative file path to the .json file containing the translated strings.|
 
 ## name
 
-Required:
+Required-object
 
 The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` shouldn't be the same.
 
-|Name| Maximum size | Required | Description|
-|---|---|---|---|
-|`short`|30 characters|✔️|The short display name for the app.|
-|`full`|100 characters||The full name of the app, used if the full app name exceeds 30 characters.|
+|Name| Type | Maximum size | Required | Description|
+|---|---|---|---|---|
+|`short`|string|30 characters|✔️|The short display name for the app.|
+|`full`|string|100 characters||The full name of the app, used if the full app name exceeds 30 characters.|
 
 ## description
 
-Required:
+Required-object
 
 Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry.
 
@@ -354,13 +354,13 @@ Ensure that your description accurately describes your experience and provides i
 
 ## icons
 
-Required:
+Required-object
 
 Icons used within the Teams app. The icon files must be included as part of the upload package.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
-|`outline`|2048 characters|✔️|A relative file path to a transparent 32x32 PNG outline icon.|
+|`outline`|2048 characters|✔️|A relative file path to a transparent 32x32 PNG outline icon. The order color needs to be white.|
 |`color`|2048 characters|✔️|A relative file path to a full color 192x192 PNG icon.|
 
 ## accentColor
@@ -383,10 +383,12 @@ The object is an array with all elements of the type `object`. This block is req
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 characters|✔️|The https:// URL to use when configuring the tab.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: `true`|
-|`scopes`|Array of enum|1|✔️|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
-|`context` |array of enums|6||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, and `meetingStage`.|
+|`scopes`|array of enum|2|✔️|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
+|`context` |array of enums|8||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, `personalTab`, and `callingSidePanel`.|
 |`sharePointPreviewImage`|String|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
-|`supportedSharePointHosts`|Array of enum|1||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
+|`supportedSharePointHosts`|array of enum|2||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
+|`meetingSurfaces`|array of enum|2||The set of meetingSurfaceItem scopes to which a tab belongs. Options are `sidePanel` and `stage`.|
+|`supportedPlatform`|array of enum|3||The set of supportedPlatform scopes to which a tab belongs. Options are `desktop`, `mobile`, and `teamsMeetingDevices`.|
 
 ## staticTabs
 
@@ -403,9 +405,12 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |`entityId`|String|64 characters|✔️|A unique identifier for the entity that the tab displays.|
 |`name`|String|128 characters|✔️|The display name of the tab in the channel interface.|
 |`contentUrl`|String|2048 characters|✔️|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
-|`contentBotId`|   | | | The Microsoft Teams app ID specified for the bot in the Bot Framework portal. |
+|`contentBotId`|string| | | The Microsoft Teams app ID specified for the bot in the Bot Framework portal. |
 |`websiteUrl`|String|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
-|`scopes`|Array of enum|1|✔️|Static tabs support the `personal`, `team` and `groupChat` scopes, which means it can be provisioned as part of the personal, group chat, and channel meetings experience.|
+|`scopes`|Array of enum|3|✔️|Static tabs support the `personal`, `team` and `groupChat` scopes, which means it can be provisioned as part of the personal, group chat, and channel meetings experience.|
+|`searchUrl`|String|2048 characters||The url to direct a user's search queries.|
+|`context`|Array of enum|8||The set of contextItem scopes to which a tab belongs. The options are `personalTab`, `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, and `teamLevelApp`.|
+|`supportedPlatform`|Array of enum|3||The set of supportedPlatform scopes to which a tab belongs. the options are `desktop`, `mobile`, and `teamsMeetingDevices`.|
 
 ## bots
 
@@ -417,13 +422,14 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`botId`|String|64 characters|✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
+|`botId`|String| |✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
 |`needsChannelSelector`|Boolean|||Describes whether or not the bot utilizes a user hint to add the bot to a specific channel. Default: `false`|
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: `false`|
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: `false`|
 |`scopes`|Array of enum|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
 |`supportsCalling`|Boolean|||A value indicating where a bot supports audio calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. Default: `false`|
 |`supportsVideo`|Boolean|||A value indicating where a bot supports video calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. Default: `false`|
+|`requiresSecurityEnabledGroup`|Boolean|||A value indicating whether the team's Office group needs to be security enabled. Default: `false`|
 
 ### bots.commandLists
 
@@ -440,7 +446,7 @@ Optional:
 
 The `connectors` block defines a connector for Microsoft 365 Groups for the app.
 
-The object is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a Connector.
+The object is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a Connector. Only one connector per app is supported.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
