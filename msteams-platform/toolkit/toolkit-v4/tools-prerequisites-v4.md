@@ -1,19 +1,13 @@
 ---
 title: Prerequisites for creating your Teams app
 author: zyxiaoyuer
-description: In this module, learn the prerequisites required for Tools and SDK, and Teams Toolkit v4.
+description: In this module, learn the prerequisites required for Tools and SDK, and Teams Toolkit.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
 ---
-# Prerequisites for creating your Teams app using Visual Studio Code
-
-> [!IMPORTANT]
->
-> We've introduced the [Teams Toolkit v5](../teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> Teams Toolkit v4 extension will soon be deprecated.
+# Prerequisites for creating your Teams app using Visual Studio
 
 Before you create your Teams app project, ensure that the prerequisites are in place. You must:
 
@@ -31,10 +25,8 @@ Ensure the following requirements are met before you start building your Teams a
    | **Required** | &nbsp; | &nbsp; | &nbsp; |
    | &nbsp; | Teams Toolkit| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. | JavaScript and SharePoint Framework (SPFx)|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Collaborate with everyone you work with through apps for chat, meetings, and call - all in one place.| JavaScript and SPFx|
-   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility](#nodejs-version-compatibility-table-for-project-type).| JavaScript and SPFx|
    | &nbsp; |[Node Package Manager (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) | Install and manage packages for use in both Node.js and ASP.NET Core applications.| JavaScript and SPFx|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. | JavaScript and SPFx|
-   | &nbsp; | [Microsoft Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SPFx build environments. Use version 1.55 or later. | JavaScript and SPFx|
    | **Optional** | &nbsp; | &nbsp; | &nbsp; |
    | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Access stored data or deploy a cloud-based back-end for your Teams app in Azure. | JavaScript|
    | &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) or [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | A browser DevTools extension for the open-source React JavaScript library. | JavaScript|
@@ -45,34 +37,22 @@ Ensure the following requirements are met before you start building your Teams a
 
 Ensure that the following tools are installed on the device where you’ll create your app project before you start building your Teams app:
 
-| Tools | For using | For environment type |
-| --- | --- | --- |
-| **Required** | &nbsp; | &nbsp; |
-| [Microsoft Visual Studio Code](https://visualstudio.microsoft.com/downloads/) | JavaScript, TypeScript, or SPFx build environments to build your Teams app. Use version 1.55 or later. | JavaScript, TypeScript, and SPFx. |
-| [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | The Microsoft Visual Studio Code extension to create a Teams app project. Use the latest version. | JavaScript, TypeScript, and SPFx. |
-| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Sideloading feature to test your app behavior within your local Teams environment.| JavaScript, TypeScript, SPFx, and C# or Blazor. |
-| [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.| JavaScript, TypeScript, and SPFx. |
-| [Node Package Manager (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) | Installing and managing packages for use in both Node.js and ASP.NET core applications.| JavaScript, TypeScript, and SPFx. |
-| [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. | JavaScript, TypeScript, SPFx, and C# or Blazor. |
-| [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/) | Version 17.4.1 or later, *ASP.NET and web development* workload, and *Microsoft Teams development tools* option. | C# or Blazor. |
-| **Optional** | &nbsp; | &nbsp; |
-| [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Stored data or deploy a cloud-based back-end for your Teams app in Azure. | JavaScript and TypeScript. |
-| [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) or [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | The browser based DevTools extension for the open-source React JavaScript library. | JavaScript, TypeScript, and SPFx. |
-| [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | The browser-based tool that lets you run a query from Microsoft Graph data. | JavaScript, TypeScript, SPFx, and C# or Blazor. |
-| [Developer Portal for Teams](https://dev.teams.microsoft.com/) | The web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store.| JavaScript, TypeScript, SPFx, and C# or Blazor. |
+| &nbsp; | Tools | For using | For environment type |
+   | --- | --- | --- |
+   | **Required** | &nbsp; | &nbsp; |
+   | [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/) | Use the latest version, *ASP.NET and web development* workload, and *Microsoft Teams development tools* option. | C# or Blazor. |
+   | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | The Microsoft Visual Studio Code extension to create a Teams app project. Use the latest version. | JavaScript, TypeScript, and SPFx. |
+   | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Sideloading feature to test your app behavior within your local Teams environment.| JavaScript, TypeScript, SPFx, and C# or Blazor. |
+   | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.| JavaScript, TypeScript, and SPFx. |
+   | [Node Package Manager (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) | Installing and managing packages for use in both Node.js and ASP.NET core applications.| JavaScript, TypeScript, and SPFx. |
+   | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. | JavaScript, TypeScript, SPFx, and C# or Blazor. |
+   | **Optional** | &nbsp; | &nbsp; |
+   | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Stored data or deploy a cloud-based back-end for your Teams app in Azure. | JavaScript and TypeScript. |
+   | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) or [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | The browser based DevTools extension for the open-source React JavaScript library. | JavaScript, TypeScript, and SPFx. |
+   | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | The browser-based tool that lets you run a query from Microsoft Graph data. | JavaScript, TypeScript, SPFx, and C# or Blazor. |
+   | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | The web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store.| JavaScript, TypeScript, SPFx, and C# or Blazor. |
 
 It's recommended that you bookmark the Microsoft Graph Explorer to learn about Microsoft Graph services. This browser-based tool allows you to run a query and access the Microsoft Graph API.
-
-### Node.js version compatibility table for project type
-
-|Teams Toolkit Version | Project Type | Supported Node.js Versions  |
-|---|---|---|
-| 4.2.2 | Notify with http or timer trigger <br> Azure functions <br> SPFx <br> Other | 14, 16, 18 (Preview) <br> 14, 16, 18 (Preview) <br> 16 <br> 14, 16, 18 |
-| 4.2.0 | SPFx | 16 |
-| 4.0.3 | SPFx | 14, 16 |
-| 4.0.0 | Non-SPFx | 14, 16 |
-| 3.7.0 | SPFx | 12, 14 |
-| <3.7.0 | SPFx <br> Azure functions <br> Other | 10, 12, 14 <br> 10, 12, 14 <br> 10, 12, 14, 16 |
 
 ## Accounts to build your Teams app
 
@@ -86,7 +66,10 @@ Ensure that you have the following accounts before you start building your Teams
 
 ### Microsoft 365 developer program
 
-To create a Microsoft 365 account, sign up for a Microsoft 365 developer program subscription. The subscription is free for 90 days and continues to renew as long as you're using it for development activity.
+> [!NOTE]
+> To build Teams apps, you must have a work or school [Microsoft 365 account](#microsoft-365-developer-program). Microsoft 365 personal account can't be used.
+
+If you don't have any, to create a developer account, sign up for a Microsoft 365 developer program subscription. The subscription is free for 90 days and continues to renew as long as you're using it for development activity.
 
 If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It's active as long as your Visual Studio subscription is active. For more information, see [Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program).
 
@@ -146,7 +129,7 @@ An Azure account allows you to host a Teams app or the back-end resources for yo
 * If you want to host the back-end resources for your app using another cloud provider, or on your own servers if they're available in the public domain.
 
 > [!NOTE]
-> You must [create a free account](https://azure.microsoft.com/free/) before you begin.
+> You can use Azure account to provision Azure resource to host your Teams app. You can [create a free account](https://azure.microsoft.com/free/) in case you don't have any. If you don't use Teams Toolkit to provision and deploy, Azure account isn't required.
 
 ### SharePoint collection site administrator account
 
@@ -168,7 +151,7 @@ You can use this method to verify sideloading permission only after you have cre
 1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
 
    > [!NOTE]
-   > If you're unable to see the option, see [install Teams Toolkit](install-Teams-Toolkit-v4.md) to install Teams Toolkit extension in Visual Studio Code.
+   > If you're unable to see the option, see [install Teams Toolkit](../install-Teams-Toolkit.md) to install Teams Toolkit extension in Visual Studio Code.
 
 1. Create a new Teams Toolkit app project or open an existing app project.
 
@@ -239,8 +222,8 @@ If you have admin rights, you can enable sideloading:
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
+* [Teams Toolkit Visual Studio Overview](teams-toolkit-fundamentals-vs.md)
 * [Manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings)
 * [Manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies)
-* [Provision cloud resources using Teams Toolkit](provision-v4.md)
-* [Deploy Teams app to the cloud](deploy-v4.md)
+* [Provision cloud resources in Visual Studio](provision-vs.md)
+* [Deploy Teams app to the cloud VS](deploy-vs.md)

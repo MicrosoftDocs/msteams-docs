@@ -137,5 +137,5 @@ The base command of this feature is `teamsfx add api-connection [authentication 
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
+* [Teams Toolkit Overview](../teams-toolkit-fundamentals.md)
 * [Publish Teams apps using Teams Toolkit](publish-v4.md)
