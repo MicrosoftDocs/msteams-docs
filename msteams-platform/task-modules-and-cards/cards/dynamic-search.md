@@ -71,7 +71,7 @@ The following image illustrates mobile experience of typeahead search:
 >
 > * The `Input.ChoiceSet` control is based on the style and `isMultiSelect` properties.
 > * To use dynamic typeahead search in group chat, the user must add `groupchat` scope to the bot installation scope in the app manifest and install it to that particular group chat.
-> * The number of options in the dropdown is limited to 15 or lower.
+> * The number of options in the dropdown is limited up to 15.
 
 ### Schema properties
 
