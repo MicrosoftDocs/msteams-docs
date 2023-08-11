@@ -515,9 +515,9 @@ The object is an array with all elements of type `object`.
 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
-|`botId`|String||✔️|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
-|`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. The default is `false`.|
-|`commands`|Array of object|10|✔️|Array of commands the message extension supports|
+|`tbd`|String||✔️|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
+|`tbd`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. The default is `false`.|
+|`tbd`|Array of object|10|✔️|Array of commands the message extension supports|
 
 ## permissions
 
@@ -553,19 +553,18 @@ It is **not** necessary to include the domains of identity providers you want to
 > [!IMPORTANT]
 > Do not add domains that are outside your control, either directly or via wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid.
 
-The object is an array with all elements of the type `string`.
+The object is an array with all elements of the type `string`. The maxItems for the object is 16 and maxLength is 2048.
 
 ## webApplicationInfo
 
-Optional:
+Optional-object
 
 Specify your Microsoft Azure Active Directory (Azure AD) App ID and Graph information to help users seamlessly sign into your Azure AD app.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String|36 characters|✔️|Microsoft Azure Active Directory (Azure AD) application ID of the app. This ID must be a GUID.|
-|`resource`|String|2048 characters|✔️|Resource URL of the app for acquiring auth token for SSO.|
-|`applicationPermissions`|Array|Maximum 100 items|✔️|Resource permissions for application.|
+|`id`|String| |✔️|Microsoft Azure Active Directory (Azure AD) application ID of the app. This ID must be a GUID.|
+|`resource`|String|2048 characters||Resource URL of the app for acquiring auth token for SSO.|
 
 ## graphConnector
 
@@ -744,10 +743,10 @@ Specify meeting extension definition. For more information, see [custom Together
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`id`|||✔️| The unique identifier for the scene. This id must be a GUID. |
+|`id`|string||✔️| The unique identifier for the scene. This id must be a GUID. |
 |`name`| string | 128 characters |✔️| The name of the scene. |
-|`file`|||✔️| The relative file path to the scenes' metadata json file. |
-|`preview`|||✔️| The relative file path to the scenes' PNG preview icon. |
+|`file`|string|2048|✔️| The relative file path to the scenes' metadata json file. |
+|`preview`|string|2048|✔️| The relative file path to the scenes' PNG preview icon. |
 |`maxAudience`| integer | 50  |✔️| The maximum number of audiences supported in the scene. |
 |`seatsReservedForOrganizersOrPresenters`| integer | 50 |✔️| The number of seats reserved for organizers or presenters.|
 
@@ -762,7 +761,7 @@ Specify and consolidate authorization related information for the app.
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`permissions`|NA|NA|NA|List of permissions that the app needs to function.|
+|`permissions`|object|NA|NA|List of permissions that the app needs to function.|
 
 ### authorization.permissions
 
