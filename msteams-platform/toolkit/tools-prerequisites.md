@@ -67,9 +67,9 @@ Ensure that you have the following accounts before you start building your Teams
 ### Microsoft 365 developer program
 
 > [!NOTE]
-> If you're creating a Teams app using Teams Toolkit, ensure that you have a [Microsoft 365 account](#microsoft-365-developer-program). However, if you're creating a Teams app using tools other than Teams Toolkit, ensure that you have an [Azure account](#azure-account).
+> To build Teams apps, you must have a work or school [Microsoft 365 account](#microsoft-365-developer-program). Microsoft 365 personal account can't be used.
 
-To create a Microsoft 365 account, sign up for a Microsoft 365 developer program subscription. The subscription is free for 90 days and continues to renew as long as you're using it for development activity.
+If you don't have any, to create a developer account, sign up for a Microsoft 365 developer program subscription. The subscription is free for 90 days and continues to renew as long as you're using it for development activity.
 
 If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It's active as long as your Visual Studio subscription is active. For more information, see [Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program).
 
@@ -129,7 +129,7 @@ An Azure account allows you to host a Teams app or the back-end resources for yo
 * If you want to host the back-end resources for your app using another cloud provider, or on your own servers if they're available in the public domain.
 
 > [!NOTE]
-> You must [create a free account](https://azure.microsoft.com/free/) before you begin.
+> You can use Azure account to provision Azure resource to host your Teams app. You can [create a free account](https://azure.microsoft.com/free/) in case you don't have any. If you don't use Teams Toolkit to provision and deploy, Azure account isn't required.
 
 ### SharePoint collection site administrator account
 
