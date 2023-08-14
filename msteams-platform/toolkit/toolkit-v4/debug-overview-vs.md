@@ -100,7 +100,7 @@ You can launch Teams app as a web app instead of running the app in Teams client
 
 :::zone  pivot="visual-studio-v17-6"
 
-# Debug your Teams app using Visual Studio
+## Debug your Teams app using Visual Studio
 
 Teams Toolkit helps you to debug and preview your Microsoft Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
 
@@ -112,7 +112,7 @@ Teams Toolkit automates app startup services, initiates debug, and side loads Te
 * Hot reload
 * Stop debugging
 
-## Prerequisites
+### Prerequisites
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |

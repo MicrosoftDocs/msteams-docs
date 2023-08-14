@@ -109,7 +109,7 @@ When you create a Teams command bot using Visual Studio, two app IDs are registe
 
 :::zone pivot="visual-studio-v17-6"
 
-# Customize Teams app manifest in Teams Toolkit
+## Customize Teams app manifest in Teams Toolkit
 
 Teams Toolkit in Visual Studio loads manifest from `manifest.template.json` with configurations from `state.{env}.json` and `config.{env}.json` while provisioning and preparing app dependencies. You can also create Teams app in Developer Portal with manifest.
 
@@ -120,7 +120,7 @@ In the manifest template, select **Project** > **Teams Toolkit** > **Open Manife
 
 :::image type="content" source="images/vs-open-manifest-v4.png" alt-text="Screenshot is an example of showing the navigation to open manifest file." lightbox="images/vs-open-manifest-v4.png":::
 
-## Customize app manifest in Teams Toolkit
+### Customize app manifest in Teams Toolkit
 
 The following list provides two types of placeholders in `manifest.template.json`:
 
