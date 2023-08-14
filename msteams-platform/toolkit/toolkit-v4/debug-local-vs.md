@@ -23,9 +23,10 @@ In the debug dropdown menu:
 
 1. If you have already have an existing dev tunnel, select the existing tunnel from the list. For example, in the following image **PublicDevTunnel** is an existing dev tunnel.
 
+1. If you haven't already created a tunnel, select **Create a Tunnel...**. A new window appears.
+
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-devtunnel.PNG" alt-text="Screenshot shows the dev tunnel for debug option.":::
 
-1. If you haven't already created a tunnel, select **Create a Tunnel...**. A new window appears.
 1. Enter the name of the dev tunnel and under **Access** select **Public** from the dropdown.
 1. Select **OK**.
 
