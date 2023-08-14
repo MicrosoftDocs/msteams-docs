@@ -42,7 +42,7 @@ You can preview the manifest file either For Local or For Azure.  To preview the
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/provision-in-the-cloud.png" alt-text="Screenshot shows the app trigger in local or remote.":::
 
-1. Upload the **Zip App Package**. There are two ways to upload zip app package:
+1. Upload the **Zip App Package** in the following ways:
 
     1. Select **Project** > **Teams Toolkit** > **Zip App Package** and then select either **For Local** or **For Azure**
 
@@ -62,7 +62,7 @@ You can preview the manifest file either For Local or For Azure.  To preview the
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/preview-manifest.png" alt-text="Screenshot shows the preview of manifest.":::
 
-You can preview the app manifest file under `appPackage/build` in Visual Studio is displayed.
+You can preview the app manifest file under `appPackage/build` in Visual Studio.
 
 ### Sync local changes to Developer Portal
 
@@ -89,7 +89,7 @@ The changes are updated to Developer Portal.
 
 :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-overwrite.png" alt-text="Screenshot shows overwrite of app in teams developer portal.":::
 
-When you create a Teams command bot using Visual Studio, two app IDs are registered in Azure Active Directory (Azure AD). You can identify the app IDs in the Developer Portal as **Application (client) ID** under **Basic information** and existing **bot ID** under **App features**.
+When you create a Teams command bot using Visual Studio, two app IDs are registered in Azure Active Directory (Azure AD). You can identify the app IDs in Developer Portal as **Application (client) ID** under **Basic information** and existing **bot ID** under **App features**.
 
 :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-dev-portal-basic-info.png" alt-text="Screenshot shows basic information of the app in teams developer portal.":::
 
