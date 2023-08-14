@@ -29,7 +29,7 @@ You can deploy your Teams app to the following cloud resources:
 To deploy Teams app using Teams Toolkit, follow these steps:
 
 1. Open **Visual Studio**.
-1. Select **Create a new project** or open an existing project from the recent list.
+1. Select **Create a new project** or open an existing project from the list.
 1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
 
       :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-v5/deploy-to-the-cloud-button.png" alt-text="Screenshot shows steps to deploy to the cloud.":::
@@ -66,10 +66,10 @@ This action executes `npm` commands under specified directory with parameters.
 
 #### Parameters
 
-| parameter | description | required | default value |
+| Parameter | Description | Required | Default value |
 |---|---|---|---|
-| workingDirectory | Represents the folder where you want to run the command. If your input value is a relative path, it's relative to the workingDirectory. | No | Project root |
-| args |  command arguments | Yes | NA |
+| `workingDirectory` | Represents the folder where you want to run the command. If your input value is a relative path, it's relative to the `workingDirectory`. | No | Project root |
+| `args` |  command arguments | Yes | NA |
 
 ### cli/runDotnetCommand
 
