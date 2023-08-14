@@ -108,6 +108,16 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 |**Tab**     |Tab app shows a webpage inside Teams, and it enables SSO using Teams account.         |
 |**Message Extension**     |The message extension app implements simple features such as creating an Adaptive Card, searching Nugget packages, or unfurling links for the `dev.botframework.com` domain.         |
 
+## See also
+
+* [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
+* [Build a Teams app with Blazor](~/sbs-gs-blazorupdate.yml)
+* [Build a Teams app with C# or .NET](~/sbs-gs-csharp.yml)
+* [Prerequisites for all types of environment and create your Teams app](tools-prerequisites-v4.md)
+* [Prepare to build apps using Microsoft Teams Toolkit](build-environments-v4.md)
+* [Provision cloud resources using Visual Studio](provision-vs.md)
+* [Deploy Teams app to the cloud using Visual Studio](deploy-vs.md#deploy-teams-app-to-the-cloud-using-visual-studio)
+
 ::: zone-end
 
 ::: zone pivot="visual-studio-v17-6"
@@ -210,9 +220,6 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 |**Message Extension**     |Message extension app implements simple features like creating an Adaptive Card, searching Nugget packages, unfurling links for the `dev.botframework.com` domain.         |
 
 After the project is created, Teams Toolkit automatically opens **GettingStarted** window. You can see the instructions in **GettingStarted** window and check out the different features in Teams Toolkit.
-
-::: zone-end
-
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
@@ -222,3 +229,7 @@ After the project is created, Teams Toolkit automatically opens **GettingStarted
 * [Prepare to build apps using Microsoft Teams Toolkit](build-environments-v4.md)
 * [Provision cloud resources using Visual Studio](provision-vs.md)
 * [Deploy Teams app to the cloud using Visual Studio](deploy-vs.md#deploy-teams-app-to-the-cloud-using-visual-studio)
+
+::: zone-end
+
+

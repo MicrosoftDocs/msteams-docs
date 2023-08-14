@@ -64,6 +64,13 @@ After you've created your Teams app project, you can use the following options t
 |Preview in Teams     | Launches the Teams web client and lets you preview the Teams app in your browser.         |
 |Zip App Package     | Generates a Teams app package in the **Build** folder under the project. You can upload the app package to the Teams client and run the Teams app.         |
 
+## See also
+
+* [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
+* [Create a new Teams app using Teams Toolkit](create-new-project-vs.md)
+* [App manifest schema](~/resources/schema/manifest-schema.md)
+* [Prepare to build apps using Teams Toolkit](build-environments-v4.md)
+
 ::: zone-end
 
 ::: zone pivot="visual-studio-v17-6"
@@ -109,11 +116,11 @@ After you've created your Teams app project, you can use the following options t
 |Preview in Teams     | This option launches the Teams web client and lets you preview the Teams app in your browser.         |
 |Zip App Package     | This option generates a Teams app package in the `Build` folder under the project. You can upload the app package to the Teams client and run the Teams app.         |
 
-::: zone-end
-
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
 * [Create a new Teams app using Teams Toolkit](create-new-project-vs.md)
 * [App manifest schema](~/resources/schema/manifest-schema.md)
 * [Prepare to build apps using Teams Toolkit](build-environments-v4.md)
+
+::: zone-end

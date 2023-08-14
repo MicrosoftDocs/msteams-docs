@@ -43,6 +43,13 @@ The Visual Studio 2022 window appears.
 > [!div class="nextstepaction"]
 > [Explore Teams Toolkit](explore-Teams-Toolkit-vs.md)
 
+## See also
+
+* [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
+* [Prepare to build apps](build-environments-v4.md)
+* [Provision cloud resources](provision-vs.md)
+* [Deploy Teams app to the cloud](deploy-vs.md)
+
 ::: zone-end
 
 ::: zone pivot="visual-studio-v17-6"
@@ -81,11 +88,11 @@ Teams Toolkit menu options are available in Visual Studio only when an app proje
 > [!div class="nextstepaction"]
 > [Explore Teams Toolkit](explore-Teams-Toolkit-vs.md)
 
-::: zone-end
-
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
 * [Prepare to build apps](build-environments-v4.md)
 * [Provision cloud resources](provision-vs.md)
 * [Deploy Teams app to the cloud](deploy-vs.md)
+
+::: zone-end
