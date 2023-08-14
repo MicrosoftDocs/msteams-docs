@@ -14,23 +14,23 @@ ms.localizationpriority: medium
 
 Loop component is an evolution of Fluid component - a way to collaborate with a team through loop whether it’s in chat, email, meeting, or Loop page. Loop component stays in sync no matter how many places the content lives across Microsoft 365 apps.
 
-Adaptive Card-based Loop component allow M365 developers to build Loop experiences while building upon their existing message extension-based M365 integrations. Adaptive Card-based Loop components are live and actionable units of productivity that stay in sync and can move freely across Microsoft 365 apps, starting with Microsoft Teams and Outlook.
-
-With AC-based Loop components your users are empowered to bring live business data into chats and email messages, the collaboration hubs in the modern-day digital first and hybrid work culture, and complete workflows while staying in the flow of their work. For the developers, these components adhere to M365 platform's 'build once, works everywhere' philosophy which ensure that your Loop component will automatically work seamlessly across Teams and Outlook, and in every additional host app we enable, including the new Loop app.
+Adaptive Card-based Loop component allows M365 developers to build Loop experiences while building upon their existing message extension-based M365 integrations. With AC-based Loop components, users are empowered to bring live business data into chats and email messages, and complete workflows without switching apps . For developers, components adhere to M365 platform's 'build once, works everywhere' philosophy which ensure that your Loop component will automatically work seamlessly across Teams and Outlook, and in every additional host app enabled, including the new Loop app.
 
 > [!NOTE]
 > Adaptive Card-based Loop components are available in public preview.
 
 ## Getting started
 
-There are a few pre-requisites you need to fulfill before building an Adaptive Card-based Loop component.
+There are a few pre-requisites needed before building an Adaptive Card-based Loop component:
 
-1. Build a search-based Message Extension
-1. Add link unfurling support to the Message Extension
-1. Use Universal Actions for Adaptive Cards
-1. Extend your Teams Message Extension across Microsoft 365
+> [!div class="checklist"]
+>
+> 1. Build a search-based Message Extension
+> 1. Add link unfurling support to the Message Extension
+> 1. Use Universal Actions for Adaptive Cards
+> 1. Extend your Teams Message Extension across Microsoft 365
 
-In the subsequent sections we dive deeper into these pre-requisites
+In the subsequent sections we dive deeper into these pre-requisites.
 
 ### Build a search-based message extension
 
@@ -73,19 +73,9 @@ To configure, distribute, and manage your application use the Developer Portal f
 
 To turn on the Adaptive Card based Loop component in Outlook.com:
 
-1. [Launch Outlook Web with feature flight override](https://outlook-sdf.office.com/mail/?&cardLoop.componentEnabled=on)
-1. Login with the test tenant credentials shared with you by Microsoft
-1. Click on the rollout override button in the top ribbon
-1. Make sure to **turn on** these flights - **cmp-fluid-devOnlyGenericLoaderAllLinks, cmp-fluid-chapterThree** and to
-   turn off this flight, **cmp-fluid-useProvidersForME**
-   > [!NOTE]
-   > The above flags should be turned on/ off at both sender’s and receiver’s end for the experiences to work seamlessly.
-
-/_ addition _/
-
-1. Follow Teams App Camp (microsoft.github.io) to create a search-based ME.
-1. Create a free M365 dev tenant following these steps
-1. Move the M365 dev tenant to Targeted Release. Move all the users to the release ring by choosing Targeted Release for everyone. Follow Set up the Standard or Targeted release options - Microsoft 365 admin | Microsoft Learn
+1. Follow the steps on [Teams App Camp (microsoft.github.io)](https://microsoft.github.io/app-camp/) to create a search-based ME.
+1. Create a M365 dev tenant following [these steps](https://developer.microsoft.com/en-us/microsoft-365/dev-program) or login with your test tenant credentials.
+1. In the admin center of your test tenant, [enable Targeted Release for everyone](../microsoft-365/admin/manage/release-options-in-office-365.md).
 1. Send an email from the tenant admin account to the help alias: acloops-preview-help@microsoft.com. Microsoft will verify the admin user and enable support for Loop components for this tenant.
 
    > [!NOTE]
