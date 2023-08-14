@@ -23,7 +23,7 @@ Teams provides SSO function for an app using the Teams Toolkit for Microsoft Vis
 
 1. Select **Project** > **Teams Toolkit** > **Add Authentication Code**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-add-authentication-code.png" alt-text="Screenshot shows the add authentication code.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-add-authentication-code.PNG" alt-text="Screenshot shows the add authentication code.":::
 
 Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** folder, including a manifest template file for Azure AD application and authentication redirect pages. Link the files to your Teams application by updating authentication configurations to ensure the SSO works for your application.
 
@@ -77,7 +77,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
     1. "name": It replaces the value with your expected Azure AD app name.
 
-1. Open your Teams app manifest file, add `WebApplicationInfo` property with the value of your SSO app. For more information, see [webApplicationInfo](../resources/schema/manifest-schema.md#webapplicationinfo).
+1. Open your Teams app manifest file, add `WebApplicationInfo` property with the value of your SSO app. For more information, see [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo).
 
     ```JSON
         "webApplicationInfo": {
@@ -399,7 +399,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
 1. Update Teams app manifest
   
-   1. A `WebApplicationInfo` object needs to be added into your Teams app manifest to enable SSO in the Teams app. For more information, see [webApplicationInfo](../resources/schema/manifest-schema.md#webapplicationinfo).
+   1. A `WebApplicationInfo` object needs to be added into your Teams app manifest to enable SSO in the Teams app. For more information, see [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo).
 
     For example: open your Teams app manifest template, and append the following object in the manifest:
 
