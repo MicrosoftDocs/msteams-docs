@@ -1,6 +1,6 @@
 ---
 title: Register your tab app with Azure AD
-description: Configure Single sign-on (SSO) with Azure AD by configuring App ID URI, scope for access token, and pre-authorize trusted clients.
+description: Configure Single sign-on (SSO) with Azure AD by configuring App ID URI, scope for access token, and preauthorize trusted clients.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) access token SSO tenancy scope 
@@ -12,11 +12,11 @@ Azure Active Directory (Azure AD) provides access to your tab app based on the a
 
 ## Enable SSO in Azure AD
 
-Register your tab app in Azure AD and enable it for SSO requires making app configurations, such as generating app ID, defining API scope, and pre-authorize client IDs for trusted applications.
+Register your tab app in Azure AD and enable it for SSO requires making app configurations, such as generating app ID, defining API scope, and preauthorize client IDs for trusted applications.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configure Azure AD to send access token to Teams Client app":::
 
-Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It allows Teams Client to obtain an access token on behalf of your application and the logged-in user. You can add client IDs for the trusted mobile, desktop, and web applications that you want to pre-authorize.
+Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It allows Teams Client to obtain an access token on behalf of your application and the logged-in user. You can add client IDs for the trusted mobile, desktop, and web applications that you want to preauthorize.
 
 You may also need to configure additional details, such as authenticating app users on the platform or device where you want to target your tab app.
 
@@ -115,7 +115,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
 - [To expose an API](#to-expose-an-api): Configure scope (permission) options for your app. You'll expose a web API, and configure the application ID URI.
 - [To configure API scope](#to-configure-api-scope): Define scope for the API, and the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
-- [To configure authorized client application](#to-configure-authorized-client-application): Create authorized client IDs for applications that you want to pre-authorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Pre-authorize only those client applications you trust as your app users won't have the opportunity to decline consent.
+- [To configure authorized client application](#to-configure-authorized-client-application): Create authorized client IDs for applications that you want to preauthorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Preauthorize only those client applications you trust as your app users won't have the opportunity to decline consent.
 
 #### To expose an API
 
