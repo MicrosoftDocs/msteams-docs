@@ -36,7 +36,7 @@ You can learn how to install Teams Toolkit and enjoy enhanced experience for app
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/visual-studio-launch.png" alt-text="Screenshot shows how to launch visual studio.":::
 
-Visual Studio 2022 window appears.
+The Visual Studio 2022 window appears.
 
 ## Next step
 

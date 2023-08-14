@@ -44,17 +44,17 @@ The following are the key features of Teams Toolkit:
 
 ### Project templates
 
-We can follow the steps to select templates and app capbaility:
+You can start with the capability-focused templates such as tabs, bots, and message extensions or by following the existing samples if you're already familiar with Teams app development. Teams Toolkit reduces the complexity of getting started with the help of templates for custom app built for org scenarios and smart defaults to accelerate your time to production. 
+
+Perform the following the steps to select templates and app capbaility:
 
 1. Select **File > New > Project**.
 
 1. Enter **Teams** in the search box and from search results, select **Microsoft Teams App** template.
+ 
+1. Select **Next**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/new-project-template-vs.png" alt-text="Screenshot shows the search and select Microsoft Teams app.":::
-
-You can start with the capability-focused templates such as tabs, bots, and message extensions or by following the existing samples if you're already familiar with Teams app development. Teams Toolkit reduces the complexity of getting started with the help of templates for custom app built for org scenarios and smart defaults to accelerate your time to production.
-
-:::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-template-vs.PNG" alt-text="Screenshot shows the creation of new Teams app menu in Visual Studio.":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/new-project-template-vs.png" alt-text="Screenshot shows the search and select Microsoft Teams app." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/new-project-template-vs.png":::
 
 ### Automatic registration and configuration
 
