@@ -80,11 +80,11 @@ The following table lists host application support for TeamsJS capabilities that
             <th><a href="#app">app</a></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713*;</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
@@ -118,7 +118,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
@@ -135,7 +135,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -148,11 +148,11 @@ The following table lists host application support for TeamsJS capabilities that
             <th><a href="#dialog">dialog</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
@@ -182,11 +182,11 @@ The following table lists host application support for TeamsJS capabilities that
             <th><a href="#mail">mail</a></th>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -199,11 +199,11 @@ The following table lists host application support for TeamsJS capabilities that
             <th><a href="#pages">pages</a></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
@@ -220,7 +220,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -564,11 +564,11 @@ The `app` namespace is supported globally across all application hosts and, ther
             <th>app</th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
@@ -749,11 +749,11 @@ The `authentication` namespace is supported globally across all application host
             <th>authentication</th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
@@ -875,7 +875,7 @@ Namespace providing calendar-related functionality.
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1057,11 +1057,11 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <th>dialog <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
@@ -1108,11 +1108,11 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <th><a href="#dialogupdate">dialog.update</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1125,11 +1125,11 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <th><a href="#dialogurl">dialog.url</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
@@ -1146,7 +1146,7 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
@@ -1392,18 +1392,18 @@ Namespace providing email-related functionality.
             <th>mail</th>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;*</td>
         </tr>
     </tbody>
 </table>
@@ -1650,11 +1650,11 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <th><a href="#pages">pages</a></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
@@ -1891,7 +1891,7 @@ Preview. Namespace providing for profile-related functionality.
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1948,12 +1948,12 @@ Preview. Allows your application to interact with the host Microsoft 365 applica
             <th>search <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
