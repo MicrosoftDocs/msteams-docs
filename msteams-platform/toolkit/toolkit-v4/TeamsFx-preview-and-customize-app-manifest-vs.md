@@ -34,11 +34,11 @@ TEAMS_APP_DESCRIPTION=This is an amazing app
 
 ### Preview manifest file
 
-You can preview the manifest file either For Local or For Azure.  To preview the manifest file, follow these steps:To preview the manifest file:
+You can preview the manifest file either For Local or For Azure.  To preview the manifest file, follow these steps: To preview the manifest file:
 
 1. Select **Project** > **Teams Toolkit**.
 
-1. Select **Prepare Teams App Dependencies** or **Provision in the Cloud...** to generate environment variables for local or remote Teams app..
+1. Select **Prepare Teams App Dependencies** or **Provision in the Cloud...** to generate environment variables for local or remote Teams app.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/provision-in-the-cloud.png" alt-text="Screenshot shows the app trigger in local or remote.":::
 
@@ -46,11 +46,11 @@ You can preview the manifest file either For Local or For Azure.  To preview the
 
     1. Select **Project** > **Teams Toolkit** > **Zip App Package** and then select either **For Local** or **For Azure**
 
-        :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/zip-app-package.png" alt-text="Screenshot shows the zip app package for local or azure.":::
+        :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/zip-app-package.png" alt-text="Screenshot shows the zip app package for local or Azure.":::
 
     1. From **Solution Explorer**, right-click on **MyTeamsApp2** (In this scenario the project name is MyTeamsApp2). Go to **Teams Toolkit** > **Zip App Package** and then select either **For Local** or **For Azure**.
 
-        :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/solution-zip.png" alt-text="Screenshot shows the solution zip app package for local or azure.":::
+        :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/solution-zip.png" alt-text="Screenshot shows the solution zip app package for local or Azure.":::
 
      Teams Toolkit generates the zip app package.
 
@@ -124,7 +124,7 @@ In the manifest template, select **Project** > **Teams Toolkit** > **Open Manife
 
 The following list provides two types of placeholders in `manifest.template.json`:
 
-* `{{state.xx}}` is pre-defined placeholder, whose value is resolved by Teams Toolkit defined in `state.{env}.json`. Its recommended not to modify the values in `state.{env}.json`.
+* `{{state.xx}}` is predefined placeholder, whose value is resolved by Teams Toolkit defined in `state.{env}.json`. It's recommended not to modify the values in `state.{env}.json`.
 * `{{config.manifest.xx}}` is customized placeholder, whose value is resolved from `config.{env}.json`.
 
 You can add a customized parameter by:
@@ -152,7 +152,7 @@ You can preview values in app manifest in two ways:
 
    :::image type="content" source="images/vs-hover-key-placeholder-v4.png" alt-text="Screenshot is an example showing when you hover over key beside placeholder can view the same values for dev and local environment." lightbox="images/vs-hover-key-placeholder-v4.png":::
 
-If the environment has not been provisioned, or the Teams app dependencies have not been prepared, it indicates that the values for the placeholder have not been generated. You can follow the guidance inside the hover to generate corresponding values.
+If the environment hasn't been provisioned, or the Teams app dependencies haven't been prepared, it indicates that the values for the placeholder haven't been generated. You can follow the guidance inside the hover to generate corresponding values.
 
 ## Preview manifest file
 
@@ -172,7 +172,7 @@ There are two ways to upload zip app package before you can preview the manifest
 
    :::image type="content" source="images/vs-zip1-v4.png" alt-text="Screenshot is an example of showing the navigation to zip app package for local and Azure." lightbox="images/vs-zip1-v4.png":::
 
-1. You can also upload zip app package from **Solution Explorer** section, if you right-click on **MyTeamsApp1**. In this scenario the project name is MyTeamsApp1.
+1. You can also upload zip app package from **Solution Explorer** section, if you right-click on **MyTeamsApp1**. In this scenario, the project name is MyTeamsApp1.
 
 1. Select **Teams Toolkit** > **Zip App Package** > **For Local** or **For Azure**.
 
