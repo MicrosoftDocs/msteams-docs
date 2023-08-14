@@ -691,6 +691,18 @@ Enables your app in non-standard channels. If your app supports a team scope and
 > * If your app supports a team scope, it functions in the standard channels regardless of the values that are defined in this property.
 > * Your app can account for the unique properties of each of the channel types to function properly. To enable your tab for private and shared channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) and [get context in shared channels](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
 
+## defaultBlockUntilAdminAction
+
+**Optional**-Boolean
+
+A value that indicates whether an app is blocked by default until admin allows it. The default value is **false**.
+
+## publisherDocsUrl
+
+**Optional**-String
+
+The url to the page that provides additional app information for the admins. The maxLength of the string is 2048.
+
 ## defaultInstallScope
 
 **Optional**—string
@@ -738,6 +750,9 @@ Specify meeting extension definition. For more information, see [custom Together
 |---|---|---|---|---|
 |`scenes`|array of objects| 5 items||Meeting supported scenes.|
 |`supportsStreaming`|Boolean|||A value that indicates whether an app can stream the meeting's audio and video content to a real-time meeting protocol (RTMP) endpoint. The default value is **false**.|
+|`videoFilters`|object|||This object indicates meeting supported video filters. The properties are `id`, `name` and `thumbnail`.|
+|`videoFiltersConfigurationUrl`|string|2048||A URL for configuring the video filters.|
+|`supportsAnonymousGuestUsers`|boolean|||A boolean value that indicates whether the app supports access by anonymous guest users. The default value is **false**.|
 
 ### meetingExtensionDefinition.scenes
 
