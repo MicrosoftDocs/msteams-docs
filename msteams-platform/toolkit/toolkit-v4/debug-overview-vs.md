@@ -38,7 +38,7 @@ Teams Toolkit automates the local debugging process for the following key featur
 
   The following image shows the toggle breakpoints:
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-toggle-breakpoint.png" alt-text="Screenshot shows the local debug toggle breakpoints." lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/vs-localdebug-toggle-breakpoint.png":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-toggle-breakpoint.png" alt-text="Screenshot shows the local debug toggle breakpoints." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-toggle-breakpoint.png":::
 
 * Hot Reload: Select **Hot Reload** to apply your changes in your Teams app when you want to update and save the source code during debugging.
 
