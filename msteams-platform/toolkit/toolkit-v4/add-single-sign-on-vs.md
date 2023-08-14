@@ -293,27 +293,27 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
    * Create `Config.cs` and update the code as:
 
-    ```c
-    using Microsoft.TeamsFx.Configuration;
-    
-         namespace {{YOUR_NAMESPACE}}
-         {
-             public class ConfigOptions
+        ```c
+        using Microsoft.TeamsFx.Configuration;
+        
+             namespace {{YOUR_NAMESPACE}}
              {
-                 public TeamsFxOptions TeamsFx { get; set; }
+                 public class ConfigOptions
+                 {
+                     public TeamsFxOptions TeamsFx { get; set; }
+                 }
+                 public class TeamsFxOptions
+                 {
+                     public AuthenticationOptions Authentication { get; set; }
+                 }
              }
-             public class TeamsFxOptions
-             {
-                 public AuthenticationOptions Authentication { get; set; }
-             }
-         }
-    ```
+        ```
 
      > [!NOTE]
      > You need to replace `{{YOUR_NAMESPACE}}` with your namespace name.
 
-    * Move the `TeamsFx-Auth/Tab/GetUserProfile.razor` file to `Components/`.
-    * Add the `GetUserProfile` component to your razor page, for example:
+   * Move the `TeamsFx-Auth/Tab/GetUserProfile.razor` file to `Components/`.
+   * Add the `GetUserProfile` component to your razor page, for example:
 
       ```
       <h1>Hello, World</h1>
@@ -333,16 +333,16 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
                 builder.Services.AddTeamsFx(config.TeamsFx.Authentication);
           ```
 
-    > [!NOTE]
-    > You need to exclude the sample code under the `TeamsFx-Auth` file to avoid build failure by adding following code into the `.csproj` file:
+     > [!NOTE]
+     > You need to exclude the sample code under the `TeamsFx-Auth` file to avoid build failure by adding following code into the `.csproj` file:
 
-     ```csharp
-              <ItemGroup>
-        <Compile Remove="TeamsFx-Auth/**/*" />
-        <None Include="TeamsFx-Auth/**/*" />
-        <Content Remove="TeamsFx-Auth/Tab/GetUserProfile.razor"/>
-      </ItemGroup>
-        ``````
+      ```csharp
+          <ItemGroup>
+          <Compile Remove="TeamsFx-Auth/**/*" />
+          <None Include="TeamsFx-Auth/**/*" />
+          <Content Remove="TeamsFx-Auth/Tab/GetUserProfile.razor"/>
+        </ItemGroup>
+          ```
 
    * Download `auth-start.html` and `auth-end.html` files from [GitHub Repo](https://github.com/OfficeDev/TeamsFx/tree/dev/templates/csharp/sso-tab/wwwroot) to `{ProjectDirectory}/wwwroot`.
 
