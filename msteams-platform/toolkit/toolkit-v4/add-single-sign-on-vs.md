@@ -336,13 +336,13 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
     > [!NOTE]
     > You need to exclude the sample code under the `TeamsFx-Auth` file to avoid build failure by adding following code into the `.csproj` file:
 
-       ```
-       <ItemGroup>
-         <Compile Remove="TeamsFx-Auth/**/*" />
-         <None Include="TeamsFx-Auth/**/*" />
-         <Content Remove="TeamsFx-Auth/Tab/GetUserProfile.razor"/>
-       </ItemGroup>
-       ```
+     ```csharp
+              <ItemGroup>
+        <Compile Remove="TeamsFx-Auth/**/*" />
+        <None Include="TeamsFx-Auth/**/*" />
+        <Content Remove="TeamsFx-Auth/Tab/GetUserProfile.razor"/>
+      </ItemGroup>
+        ``````
 
    * Download `auth-start.html` and `auth-end.html` files from [GitHub Repo](https://github.com/OfficeDev/TeamsFx/tree/dev/templates/csharp/sso-tab/wwwroot) to `{ProjectDirectory}/wwwroot`.
 
