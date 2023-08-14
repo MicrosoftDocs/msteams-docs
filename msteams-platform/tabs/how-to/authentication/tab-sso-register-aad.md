@@ -75,7 +75,7 @@ You'll need to register your app in Azure AD and configure the tenancy and app's
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="App registration page on Azure AD Portal.":::
 
-5. Select the type of user account that can access your app. You can choose from single- or multi-tenant options, or Private Microsoft account.
+5. Select the type of user account that can access your app. You can select from single- or multi-tenant options, or Private Microsoft account.
 
     <details>
     <summary><b>Options for supported account types</b></summary>
@@ -218,7 +218,7 @@ To configure scope and authorize trusted client applications, you'll need:
     > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
     > - For a Teams tab app, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
 
-    1. Choose one of the following client IDs:
+    1. Select one of the following client IDs:
 
        | Use client ID | For authorizing... |
        | --- | --- |

@@ -234,7 +234,7 @@ The scope and permissions are now configured. Next, you must configure the autho
     > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
     > - If your app has a tab app, you'll need either web or SPA, as you can't have a mobile or desktop client application in Teams.
 
-1. Choose one of the following client IDs:
+1. Select one of the following client IDs:
 
    | Use client ID | For authorizing... |
    | --- | --- |
@@ -597,7 +597,7 @@ The scope and permissions are now configured. Next, you must configure the autho
     > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
     > - If your app has a tab app, you'll need either web or SPA, as you can't have a mobile or desktop client application in Teams.
 
-1. Choose one of the following client IDs:
+1. Select one of the following client IDs:
 
    | Use client ID | For authorizing... |
    | --- | --- |
@@ -713,7 +713,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
     The **Configure platforms** page appears.
 
-1. Select the platform that you want to configure for your app. You can choose the platform type from web or SPA.
+1. Select the platform that you want to configure for your app. You can select the platform type from web or SPA.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/configure-platform.png" alt-text="Screenshot shows the selection of web platform." :::
 
