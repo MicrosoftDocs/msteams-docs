@@ -768,7 +768,7 @@ Connector cards support limited Markdown and HTML formatting.
 | Unordered list | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | Ordered list | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | Preformatted text | `text` | `<pre>text</pre>` |
-| Blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
+| Blockquote | text | `text` |
 | Hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | Image link | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
@@ -837,7 +837,7 @@ The following code shows an example of formatting for HTML connector cards:
             "text": "Paragraphs <p>Line a</p><p>Line b</p>"
         },
         {
-            "text": "<blockquote>Blockquote text</blockquote>"
+            "text": "Blockquote text"
         }
      ]
   }
@@ -858,7 +858,7 @@ HTML tags are supported for simple cards, such as the hero and thumbnail cards. 
 | Unordered list | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | Ordered list | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | Preformatted text | `text` | `<pre>text</pre>` |
-| Blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
+| Blockquote | text | `text` |
 | Hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | Image link |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
@@ -886,7 +886,7 @@ Character formatting, such as bold and italic displays correctly on Android.
 
 The images in the previous section were created using Teams **App Studio**, where the text property of a hero card is set to the following string:
 
-`<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
+`<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre>blockquote text</p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 
 You can test formatting in your own cards by modifying this code.
 
