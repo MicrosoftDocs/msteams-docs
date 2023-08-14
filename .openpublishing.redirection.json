@@ -913,7 +913,7 @@
         "redirect_url": "/msteams-platform/toolkit/TeamsFx-preview-and-customize-app-manifest"
       },
       {
-        "source_path": "microsoftteams/platform/toolkit/teams-toolkit-tutorial.md",
+        "source_path": "microsoftteams/platform/sbs-gs-csharp.md",
         "redirect_url": "/microsoftteams/platform/get-started/teams-toolkit-tutorial"
       }
     ]
