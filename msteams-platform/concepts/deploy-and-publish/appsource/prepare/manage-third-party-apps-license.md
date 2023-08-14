@@ -1,6 +1,6 @@
 ---
 title: Create an offer plan for license purchase
-description: Learn to create a offer plan for the third-party apps purchased from Teams storefront and submit the offer for validation.
+description: Learn to create an offer plan for the third-party apps purchased from Teams storefront and submit the offer for validation.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
@@ -37,7 +37,7 @@ To enable Microsoft to manage licenses for a third-party app in Teams, you must 
 
 ## Create a plan
 
-Transactable SaaS offers sold through the Microsoft commercial marketplace must have at least one plan. You can create a variety of plans with different options within the same offer.
+Transactable SaaS offers sold through the Microsoft commercial marketplace must have at least one plan. You can create various plans with different options within the same offer.
 
 1. Select **Plan overview** from the left pane, and then select **+ Create new plan**.
 
@@ -59,7 +59,7 @@ On the **Plan listing** tab, you can define the plan name and description as you
 
 ### Define markets
 
-Every plan must be available in at least one market. On the **Pricing and availability** tab, you can configure the markets this plan will be available
+Every plan must be available in at least one market. On the **Pricing and availability** tab, you can configure the markets this plan is available.
 
 1. Select **Pricing and availability** from the left pane.
 1. Under **Markets**, select **Edit markets**.

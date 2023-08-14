@@ -1,6 +1,6 @@
 ---
 title: Monetize your app overview
-description: Learn about monetizing your app and the supported pricing models such as free trials, in-app purchases, and test drives. Learn in detail on monetizing you app through SaaS offers.
+description: Learn about monetizing your app and the supported pricing models such as free trials, in-app purchases, and test drives. Learn in detail on monetizing your app through SaaS offers.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
@@ -21,8 +21,8 @@ There are four ways you can monetize your app:
       :::image type="content" source="../../../../assets/images/saas-offer/monetize-app.png" alt-text="Screenshot shows the monetization options.":::
    :::column-end:::
    :::column span="":::
-      1. Subscription: Provide offers as subscriptions (transactable), free app, or let your customer bring their licenses (bring your own license).
-      1. Free Trail: Provide free access to your app for a definite period based on the offer type, and direct the user to purchase post free trial period.
+      1. Subscription: To provide offers as subscriptions (transactable), free app, or allow your customer bring their licenses (bring your own license).
+      1. Free Trail: To provide free access to your app for a definite period based on the offer type, and direct the user to purchase after the free trial period.
       1. Test Drive: Provide access to the preconfigured environment for a fixed period.
       1. Contact Me: Provide contact information for the users to reach you for offer details and enquire about their needs.
    :::column-end:::
@@ -37,7 +37,7 @@ SaaS applications published in Microsoft commercial marketplace for purchase are
 > [!NOTE]
 > To create and publish your offer, you must have a commercial marketplace account in Partner Center.
 
-In this module, get to learn about the entire process from planning the SaaS offer to publishing your app with the offer. Here are some features you can opt to integrate with your SaaS offer to enable a better user experience and expand the customer base.
+In this module, get to learn about the entire process from planning the SaaS offer for your app to publishing your app with the SaaS offer. Here are some features you can opt to integrate with your SaaS offer to enable better user experience and expand the customer base.
 
 * **Publishing option**: Selecting a publishing option is mandatory, however you can select a suitable option based on your requirements. You can either choose to sell through Microsoft or manage the transactions on your own. Let's learn in detail about it when [planning for SaaS offer](include-saas-offer.md).
 * **In-app purchases**: The in-app purchase option allows the customers to upgrade from a free to a paid version of your app from within the app. Whether you charge a price for your app or offer it for free, you can use in-app purchases in your app to provide an ongoing revenue stream.

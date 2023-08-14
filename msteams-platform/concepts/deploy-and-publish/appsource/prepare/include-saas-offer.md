@@ -10,7 +10,7 @@ ms.date: 03/21/2023
 
 # Plan your SaaS offer
 
-SaaS apps available for purchase in Microsoft commercial marketplace, either Azure Marketplace or Microsoft AppSource, are known as SaaS offers. Based on the SaaS offer configurations, the offers are available in one or both marketplaces. This guide provides you an overview of the features in an offer and helps you to plan the offer.
+SaaS apps available for purchase in Microsoft commercial marketplace, either Azure Marketplace or Microsoft AppSource, are known as SaaS offers. Based on the SaaS offer configurations, the offers are available in one or both marketplaces. This guide provides you with an overview of the features in an offer and helps you to plan the offer.
 
 :::row:::
    :::column:::

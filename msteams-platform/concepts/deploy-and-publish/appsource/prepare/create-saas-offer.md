@@ -148,7 +148,7 @@ After the initial configurations are done, you need to create plans with suitabl
 
 ### Create a plan
 
-Offers sold as transactable SaaS offers must have at least one plan. To create a plan and submit the offer for validation, check [create a plan tp purchase license](manage-third-party-apps-license.md).
+Offers sold as transactable SaaS offers must have at least one plan. To create a plan and submit the offer for validation, check [create a plan to purchase license](manage-third-party-apps-license.md).
 
 ## Code sample
 
