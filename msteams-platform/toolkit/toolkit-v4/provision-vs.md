@@ -21,7 +21,7 @@ TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place
 1. Open the **Microsoft Teams App project**.
 1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-provision-in-cloud.png" alt-text="Sign in to Azure account.":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-provision-in-cloud.png" alt-text="Screenshot shows sign in to Azure account.":::
 
 1. Select **Sign in...**.
 
@@ -65,18 +65,18 @@ After you open your project in Visual Studio, to provision cloud resources follo
 
 The following actions are designed for provision:
 
-* [teamsApp/create](#teamsappcreate-1)
-* [teamsApp/update](#teamsappupdate-1)
-* [teamsApp/validateManifest](#teamsappvalidatemanifest-1)
-* [teamsApp/validateAppPackage](#teamsappvalidateapppackage-1)
-* [teamsApp/zipAppPackage](#teamsappzipapppackage-1)
-* [teamsApp/publishAppPackage](#teamsapppublishapppackage-1)
-* [aadApp/create](#aadappcreate-1)
-* [aadApp/update](#aadappupdate-1)
-* [botAadApp/create](#botaadappcreate-1)
-* [arm/deploy](#armdeploy-1)
-* [azureStorage/enableStaticWebsite](#azurestorageenablestaticwebsite-1)
-* [script](#script-1)
+* [teamsApp/create](#teamsappcreate)
+* [teamsApp/update](#teamsappupdate)
+* [teamsApp/validateManifest](#teamsappvalidatemanifest)
+* [teamsApp/validateAppPackage](#teamsappvalidateapppackage)
+* [teamsApp/zipAppPackage](#teamsappzipapppackage)
+* [teamsApp/publishAppPackage](#teamsapppublishapppackage)
+* [aadApp/create](#aadappcreate)
+* [aadApp/update](#aadappupdate)
+* [botAadApp/create](#botaadappcreate)
+* [arm/deploy](#armdeploy)
+* [azureStorage/enableStaticWebsite](#azurestorageenablestaticwebsite)
+* [script](#script)
 
 ### teamsApp/create
 
@@ -354,7 +354,7 @@ To use an Azure AD app created for your Teams app and to add environment variabl
        SECRET_AAD_APP_CLIENT_SECRET=<value of Azure AD application's client secret>
        ```
 
-If you don't have an Azure AD app yet or you've one but don't know where to find the correct value, see [how to use existing Azure AD app in TeamsFx project](use-existing-aad-app.md).
+If you don't have an Azure AD app yet or you've one but don't know where to find the correct value, see [Use existing Azure AD app in TeamsFx project](../use-existing-aad-app.md).
 
 >[!NOTE]
 >
@@ -390,7 +390,7 @@ You can follow the steps to add environment variables to the .env files to use a
        SECRET_BOT_PASSWORD=<value of Azure AD application's client secret>
        ```
 
-If you don't have an Azure AD app for your bot yet or you've one but don't know where to find the correct values, see [Use existing Azure AD app in TeamsFx project](use-existing-aad-app.md).
+If you don't have an Azure AD app for your bot yet or you've one but don't know where to find the correct values, see [Use existing Azure AD app in TeamsFx project](../use-existing-aad-app.md).
 
 > [!NOTE]
 >
