@@ -1,7 +1,7 @@
 ---
 title: Edit Azure Active Directory manifest in Teams Toolkit v4
 author: zyxiaoyuer
-description:  Describes Managing Azure Active Directory application in Teams Toolkit v4
+description: In this module, learn how to edit, customize, and preview the Azure AD manifest with CodeLens in Teams Toolkit v4.
 ms.author: surbhigupta
 ms.localizationpriority: medium 
 ms.topic: overview
@@ -72,8 +72,6 @@ You can customize Azure AD manifest template to update Azure AD application.
 
     - The `resourceAccess.type` property is used for delegated permission or application permission. `Scope` means delegated permission and `Role` means application permission.
 
-    <br>
-
     </details>
 
     <details>
@@ -103,8 +101,6 @@ You can customize Azure AD manifest template to update Azure AD application.
 
      1. Select the application name and get the application ID from the overview page.
 
-    <br>
-
     </details>
 
     <details>
@@ -123,11 +119,7 @@ You can customize Azure AD manifest template to update Azure AD application.
       ]
       ```
 
-    <br>
-
     </details>
-
-<br>
 
 <details>
 <summary>3. Deploy Azure AD application changes for local environment</summary>
@@ -146,11 +138,7 @@ You can customize Azure AD manifest template to update Azure AD application.
 
    4. The changes for Azure AD application used in local environment are deployed.
 
-<br>
-
 </details>
-  
-<br>
 
 <details>
 
@@ -163,8 +151,6 @@ You can customize Azure AD manifest template to update Azure AD application.
 - Additionally you can right click on the `aad.template.json` and select **Deploy Azure Active Directory app manifest** from the context menu.
   
     :::image type="content" source="images/add deploy5-v4.png" alt-text="deploy5":::
-
-<br>
 
 </details>
 
@@ -282,7 +268,7 @@ You need to interact with Azure AD application during various stages of your Tea
 
 1. **To create Project**
 
-      You can create a project with Teams Toolkit that comes with single sign-on (SSO) support by default such as `SSO-enabled tab`. For more information on how to create a new app, see [create new Teams application using Teams Toolkit](create-new-project-v4.md). An Azure AD manifest file is automatically created for you in `templates\appPackage\aad.template.json`. Teams Toolkit creates or updates the Azure AD application during local development or while you move the application to the cloud.
+      You can create a project with Teams Toolkit that comes with single sign-on (SSO) support by default such as `SSO-enabled tab`. For more information on how to create a new app, see [Create a new Teams app](../create-new-project.md). An Azure AD manifest file is automatically created for you in `templates\appPackage\aad.template.json`. Teams Toolkit creates or updates the Azure AD application during local development or while you move the application to the cloud.
 
 2. **To add SSO to your Bot or Tab**
 
@@ -345,8 +331,8 @@ You need to interact with Azure AD application during various stages of your Tea
 
 ## See also
 
-- [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
+- [Teams Toolkit Overview](../teams-toolkit-fundamentals.md)
 - [Azure AD manifest](/azure/active-directory/develop/reference-app-manifest)
-- [Preview and Customize app manifest in Toolkit](TeamsFx-preview-and-customize-app-manifest-v4.md)
-- [Debug your Teams app](debug-overview-v4.md)
-- [Debug your Teams app locally](debug-local-v4.md)
+- [Customize Teams app manifest](../TeamsFx-preview-and-customize-app-manifest.md)
+- [Debug your Teams app](../debug-overview.md)
+- [Debug your Teams app locally](../debug-local.md)

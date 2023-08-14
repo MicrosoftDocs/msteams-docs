@@ -3,6 +3,7 @@ title: Prepare your Microsoft 365 tenant
 description: In this module, learn how to get started with Teams in Microsoft 365 and create your development environment
 ms.topic: how-to
 ms.localizationpriority: medium
+ms.date: 01/31/2023
 ---
 
 # Prepare your Microsoft 365 tenant
@@ -35,27 +36,25 @@ Enable Teams for your organization and for more information, see [enabling Teams
 
 To turn on the custom app uploading or sideloading for your developer tenant:
 
-1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
+1. Sign in to [Microsoft Teams admin center](https://admin.teams.microsoft.com/dashboard) with your admin credentials.
 
-2. Select **Show All** > **Teams**.
-
-    ![Admin center menu](~/assets/images/prepare-test-tenant/admin-center.png)
+    :::image type="content" source="../../assets/images/prepare-test-tenant/admin-center-menu.png" alt-text="Screenshot shows the Teams admin center menu.":::
 
     > [!Note]
     > It can take up to 24 hours for the **Teams** option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps#validate) for testing and validation in that time.
 
-3. Go to **Teams apps** > **Setup Policies** > **Global**.
+2. Go to **Teams apps** > **Setup Policies** > **Global**.
 
-   ![Turn on sideload view](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
+    :::image type="content" source="../../assets/images/prepare-test-tenant/turn-on-sideload.png" alt-text="Screenshot shows the turn on sideload view.":::
 
-4. Toggle **Upload custom apps** to the **On** position.
+3. Toggle **Upload custom apps** to the **On** position.
 
-5. Select **Save**. Your test tenant can permit custom app sideloading.
+4. Select **Save**. Your test tenant can permit custom app sideloading.
 
     > [!Note]
     > It can take up to 24 hours for the sideloading to be active. In the interim, you can use **upload for \<your tenant>** to test your app. To upload the .zip package file of the app, see [upload custom apps](/microsoftteams/upload-custom-apps#upload).
 
-    ![Upload app view](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
+    :::image type="content" source="../../assets/images/prepare-test-tenant/upload-for-contoso.png" alt-text="Screenshot shows the upload app view.":::
 
 For complete information on how these settings interact, see [manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings) and [manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies).
 

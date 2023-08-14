@@ -5,6 +5,7 @@ description: Learn what you can do during the scale stage of your app to grow yo
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.date: 02/21/2023
 ---
 # Scale your collaborative app
 
@@ -26,7 +27,7 @@ To scale your app, become CSP channel ready (see [CSP Channel Readiness Guide fo
 <details>
 <summary>Onboard CSP resellers to extend your app’s sales reach</summary>
 
-After you become CSP channel ready by completing the pre-requisites, browse through the CSP list on the Partner Center to find resellers to negotiate a partnership.
+After you become CSP channel ready by completing the prerequisites, browse through the CSP list on the Partner Center to find resellers to negotiate a partnership.
 
 You can find detailed partner profile information in the Partner Center or using the public [partner finder](https://appsource.microsoft.com/marketplace/partner-dir) on AppSource.
 
@@ -36,7 +37,7 @@ You can find detailed partner profile information in the Partner Center or using
 <details>
 <summary>Tailor SaaS offers for customers and CSP resellers</summary>
 
-Teams marketplace allows you to create private offers, that is, time-bound pricing of your SaaS subscription for Teams app with customized, pre-negotiated terms for [CSPs](/azure/marketplace/isv-csp-reseller). You can also create [private plans](/marketplace/private-plans) for targeted customers to offer negotiated pricing.
+Teams marketplace allows you to create private offers, that is, time-bound pricing of your SaaS subscription for Teams app with customized, prenegotiated terms for [CSPs](/azure/marketplace/isv-csp-reseller). You can also create [private plans](/marketplace/private-plans) for targeted customers to offer negotiated pricing.
 
 Help your sales team secure large new customer deals leading with your Teams collaborative app. Offer private pricing to your customers via the Teams marketplace, leaving tax remittance, payments, and subscription billing to Microsoft.
 
@@ -46,7 +47,7 @@ Help your sales team secure large new customer deals leading with your Teams col
 <details>
 <summary>Digital webinars for existing customers and new prospects</summary>
 
-Host digital webinars at regular cadences to showcase the value of your Teams app to customers. Your customer success team and pre-sales or sales team must funnel relevant existing customers and new prospects as preferred leads to invite for the webinars. Ensure that you include links to sign up for the webinars on your app’s landing page on your website and your app store listing. It attracts new, exploratory users who may be interested in learning more about your app.
+Host digital webinars at regular cadences to showcase the value of your Teams app to customers. Your customer success team and presales or sales team must funnel relevant existing customers and new prospects as preferred leads to invite for the webinars. Ensure that you include links to sign up for the webinars on your app’s landing page on your website and your app store listing. It attracts new, exploratory users who may be interested in learning more about your app.
 
 Get in touch with your field, account, or engineering representatives from Microsoft to request their participation in hero instances of these direct-to-customer webinars.
 
@@ -81,7 +82,7 @@ After developing it, host these customer stories on the landing page of the Team
 <details>
 <summary>Showcase Teams app in leading industry events</summary>
 
-While building traction, you showcased the collaborative app in Teams during your annual customer conference. It’s time to expand the coverage to well-known public industry events where you've a prominent presence or conferences which you sponsor. Your executives can include the Teams app in their keynote or showcase your innovation centre stage. Doing so is bound to attract both existing and new prospective customers.
+While building traction, you showcased the collaborative app in Teams during your annual customer conference. It’s time to expand the coverage to well-known public industry events where you've a prominent presence or conferences which you sponsor. Your executives can include the Teams app in their keynote or showcase your innovation center stage. Doing so is bound to attract both existing and new prospective customers.
 
 [Back to top](#what-should-you-do-during-the-scale-stage)
 </details>
@@ -97,9 +98,9 @@ Remember, your goal is to get users to experience value at the earliest by using
 </details>
 <br>
 <details>
-<summary>Co-activation in mutually identified existing customers</summary>
+<summary>Coactivation in mutually identified existing customers</summary>
 
-Based on the list you’ve shared with your Microsoft field, account, or engineering representatives while building traction, it’s time to execute co-activation and adoption of your collaborative app in customer accounts with significant seat sizes. Your customer success team will play a major driving role in this motion. They can work alongside business decision makers, IT decision makers, and end-users, that is, employees of the customer organization who are going to use your app inside Teams.
+Based on the list you’ve shared with your Microsoft field, account, or engineering representatives while building traction, it’s time to execute coactivation and adoption of your collaborative app in customer accounts with significant seat sizes. Your customer success team will play a major driving role in this motion. They can work alongside business decision makers, IT decision makers, and end-users, that is, employees of the customer organization who are going to use your app inside Teams.
 
 Remember, just enabling the app inside Teams won't be enough. Instead, adoption and change management practices led by your customer success team such as organization-wide emails at regular cadences, flyers, retention campaigns, user trainings, identifying and scaling through app champions in each team, gamification and constantly keeping an eye on app usage metrics within the customer’s tenant is required to form a habit among users.
 
@@ -121,9 +122,9 @@ Ensure that you [instrument code and track analytics](../../../../design/overvie
 ## Where can Microsoft help?
 
 <details>
-<summary>Co-activation in mutually identified existing customers</summary>
+<summary>Coactivation in mutually identified existing customers</summary>
 
-Microsoft will evaluate co-activation opportunities in large customer accounts. Evaluation is based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria.
+Microsoft will evaluate coactivation opportunities in large customer accounts. Evaluation is based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria.
 
 </details>
 <br>
@@ -137,7 +138,7 @@ Connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@m
 <details>
 <summary>Select, area-specific marketing to local Teams customers</summary>
 
-Your field, account or engineering representatives from Microsoft will reach out to include your collaborative app in specific, local subsidiary-drive GTM opportunities focused on Teams customers located in the subsidiary’s market.
+Your field, account, or engineering representatives from Microsoft will reach out to include your collaborative app in specific, local subsidiary-drive GTM opportunities focused on Teams customers located in the subsidiary’s market.
 
 </details>
 <br>
@@ -158,7 +159,7 @@ Get in touch with the Microsoft field, account or engineering representatives to
 <details>
 <summary>Include your app in global outreach to Microsoft sellers</summary>
 
-Expose your solution to Microsoft field sellers and executives through an on-demand webinar featuring your speakers and content. Microsoft will post your on-demand webinar to an internal site and promote it to Microsoft sellers. Share the internal Microsoft on-demand webinar link with your Microsoft contacts as well. Connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to check eligibility, seek guidance and execute this motion.
+Expose your solution to Microsoft field sellers and executives through an on-demand webinar featuring your speakers and content. Microsoft posts your on-demand webinar to an internal site and promote it to Microsoft sellers. Share the internal Microsoft on-demand webinar link with your Microsoft contacts as well. Connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to check eligibility, seek guidance and execute this motion.
 
 </details>
 <br>
