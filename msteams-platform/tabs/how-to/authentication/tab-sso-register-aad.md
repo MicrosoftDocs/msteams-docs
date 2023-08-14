@@ -10,7 +10,7 @@ ms.date: 02/01/2023
 
 Azure Active Directory (Azure AD) provides access to your tab app based on the app user's Teams identity. You'll need to register your tab app with Azure AD so that the app user who has signed into Teams can be given access to your tab app.
 
-## Enabling SSO in Azure AD
+## Enable SSO in Azure AD
 
 Register your tab app in Azure AD and enable it for SSO requires making app configurations, such as generating app ID, defining API scope, and pre-authorize client IDs for trusted applications.
 
