@@ -24,7 +24,7 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 * Smart defaults for hosting in Microsoft Azure using infrastructure-as-code and Bicep.
 * Bring your app to your organization or the Teams App Store using built-in publishing tools.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-user-journey.png" alt-text="Screenshot shows the User Journey of the Teams Toolkit." lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-user-journey.png":::
+:::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-user-journey.png" alt-text="Screenshot shows the User Journey of the Teams Toolkit." lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-user-journey.png":::
 
 ## Available for Visual Studio
 
@@ -50,11 +50,11 @@ We can follow the steps to select templates and app capbaility:
 
 1. Enter **Teams** in the search box and from search results, select **Microsoft Teams App** template.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-vs/new-project-template-vs.png" alt-text="Screenshot shows the search and select Microsoft Teams app.":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/new-project-template-vs.png" alt-text="Screenshot shows the search and select Microsoft Teams app.":::
 
 You can start with the capability-focused templates such as tabs, bots, and message extensions or by following the existing samples if you're already familiar with Teams app development. Teams Toolkit reduces the complexity of getting started with the help of templates for custom app built for org scenarios and smart defaults to accelerate your time to production.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-template-vs.PNG" alt-text="Screenshot shows the creation of new Teams app menu in Visual Studio.":::
+:::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-template-vs.PNG" alt-text="Screenshot shows the creation of new Teams app menu in Visual Studio.":::
 
 ### Automatic registration and configuration
 
