@@ -9,9 +9,9 @@ ms.date: 05/24/2022
 zone_pivot_groups: teams-toolkit-platform-vs
 ---
 
-::: zone pivot="visual-studio-v17-7"
+# Teams Toolkit Visual Studio Overview
 
-# Teams Toolkit Overview
+::: zone pivot="visual-studio-v17-7"
 
 > [!IMPORTANT]
 > We've introduced the important changes in Teams Toolkit extension within Microsoft Visual Studio v17.7 with many new app development features. We recommend that you use Teams Toolkit v17.7 for building your Teams app.
@@ -28,7 +28,7 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 
 ## Available for Visual Studio
 
-Teams Toolkit v17.7 is available for free for Visual Studio 2022 Community, Professional, and Enterprise. For more information about installation and setup, see how to [install Teams Toolkit](./install-Teams-Toolkit.md).
+Teams Toolkit v17.7 is available for free for Visual Studio 2022 Community, Professional, and Enterprise. For more information about installation and setup, see how to [install Teams Toolkit](./install-Teams-Toolkit-vs.md).
 
 | Teams Toolkit | Visual Studio |
 | - | ------------- |
@@ -54,7 +54,7 @@ We can follow the steps to select templates and app capbaility:
 
 You can start with the capability-focused templates such as tabs, bots, and message extensions or by following the existing samples if you're already familiar with Teams app development. Teams Toolkit reduces the complexity of getting started with the help of templates for custom app built for org scenarios and smart defaults to accelerate your time to production.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-vs/create-new-app-vs.PNG" alt-text="Screenshot shows the creation of new Teams app menu in Visual Studio.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-template-vs.PNG" alt-text="Screenshot shows the creation of new Teams app menu in Visual Studio.":::
 
 ### Automatic registration and configuration
 
@@ -70,13 +70,11 @@ You can save time and let the toolkit automatically register the app in Teams De
 
 ## See also
 
-[Install Teams Toolkit](install-Teams-Toolkit.md)
+[Install Teams Toolkit](install-Teams-Toolkit-vs.md)
 
 ::: zone-end
 
 ::: zone pivot="visual-studio-v17-6"
-
-# Teams Toolkit Visual Studio Overview
 
 Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio.
 
@@ -124,12 +122,6 @@ You can save time and let the toolkit automatically register the app in Teams De
 
 ## See also
 
-* [Build tabs for Teams](~/tabs/what-are-tabs.md)
-* [Build bots for Teams](~/bots/what-are-bots.md)
-* [Build Message extensions](~/messaging-extensions/what-are-messaging-extensions.md)
-* [Create a new Teams app](create-new-project-vs.md)
-* [Provision cloud resources](provision-vs.md)
-* [Deploy Teams app to the cloud](deploy-vs.md)
-* [Publish Teams apps](publish-v4.md)
+[Install Teams Toolkit](install-Teams-Toolkit-vs.md)
 
 ::: zone-end
