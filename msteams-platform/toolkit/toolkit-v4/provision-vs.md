@@ -80,7 +80,7 @@ The following actions are designed for provision:
 
 ### teamsApp/create
 
-If the environment variable that stores Teams app ID is empty or the app ID isn't found from Teams Developer Portal, then the teamsApp/create action creates a new Teams app. It operates on Teams app in Teams Developer Portal.
+If the environment variable that stores Teams app ID is empty or the app ID isn't found from Teams Developer Portal, then the `teamsApp/create` action creates a new Teams app. It operates on Teams app in Teams Developer Portal.
 
 ```yml
   - uses: teamsApp/create
@@ -95,7 +95,7 @@ If the environment variable that stores Teams app ID is empty or the app ID isn'
 
 ### teamsApp/update
 
-When you apply the Teams app manifest to an existing Teams app in Teams Developer Portal. teamsApp/update action uses the app ID in manifest.json file to determine which Teams app to update. It operates on Teams app in Teams Developer Portal.
+When you apply the Teams app manifest to an existing Teams app in Teams Developer Portal. `teamsApp/update` action uses the app ID in manifest.json file to determine which Teams app to update. It operates on Teams app in Teams Developer Portal.
 
 ```yml
 - uses: teamsApp/update
@@ -106,10 +106,10 @@ When you apply the Teams app manifest to an existing Teams app in Teams Develope
 
 ### teamsApp/validateManifest
 
-The teamsApp/validateManifest action renders Teams app manifest template with environment variables and validates Teams app manifest file using its schema.
+The `teamsApp/validateManifest` action renders Teams app manifest template with environment variables and validates Teams app manifest file using its schema.
 
 ```yml
-- uses: teamsApp/validate
+- uses: teamsApp/validateManifest
     with:
       # Required. Relative path to the yaml file. Path to Teams app manifest file
     manifestPath: <path-to-manifest-file>
@@ -117,7 +117,7 @@ The teamsApp/validateManifest action renders Teams app manifest template with en
 
 ### teamsApp/validateAppPackage
 
-The teamsApp/validateAppPackage action validates Teams app package using validation rules.
+The `teamsApp/validateAppPackage` action validates Teams app package using validation rules.
 
 ```yml
   - uses: teamsApp/validateAppPackage
@@ -128,7 +128,7 @@ The teamsApp/validateAppPackage action validates Teams app package using validat
 
 ### teamsApp/zipAppPackage
 
-The teamsApp/zipAppPackage action renders Teams app manifest template with environment variables and compresses the manifest file with two icons into a zip file.
+The `teamsApp/zipAppPackage` action renders Teams app manifest template with environment variables and compresses the manifest file with two icons into a zip file.
 
 ```yml
 - uses: teamsApp/zipAppPackage
@@ -143,7 +143,7 @@ The teamsApp/zipAppPackage action renders Teams app manifest template with envir
 
 ### teamsApp/publishAppPackage
 
-The teamsApp/publishAppPackage action publishes built Teams app zip file to tenant app catalog. It operates in Microsoft 365 tenant app catalog.
+The `teamsApp/publishAppPackage` action publishes built Teams app zip file to tenant app catalog. It operates in Microsoft 365 tenant app catalog.
 
 ```yml
 - uses: teamsApp/publishAppPackage
@@ -158,7 +158,7 @@ The teamsApp/publishAppPackage action publishes built Teams app zip file to tena
 
 ### aadApp/create
 
-The aadApp/create action creates a new Azure Active Directory (Azure AD) application to authenticate users if the environment variable that stores the `clientId` is empty. It operates in Azure AD in Microsoft 365 tenant.
+The `aadApp/create` action creates a new Azure Active Directory (Azure AD) application to authenticate users if the environment variable that stores the `clientId` is empty. It operates in Azure AD in Microsoft 365 tenant.
 
 ```yml
 - uses: aadApp/create
@@ -187,7 +187,7 @@ The aadApp/create action creates a new Azure Active Directory (Azure AD) applica
   
 ### aadApp/update
 
-aadApp/update action updates your Azure AD application based on Azure AD app manifest. It refers to the ID property in Azure AD app manifest to determine which Azure AD app to update. aadApp/update operates on Azure AD in your Microsoft 365 tenant.
+`aadApp/update` action updates your Azure AD application based on Azure AD app manifest. It refers to the ID property in Azure AD app manifest to determine which Azure AD app to update. aadApp/update operates on Azure AD in your Microsoft 365 tenant.
 
 ```yaml
 - uses: aadApp/update
@@ -200,7 +200,7 @@ aadApp/update action updates your Azure AD application based on Azure AD app man
 
 ### botAadApp/create
 
-The botAadApp/create action creates a new or reuses an existing Azure AD application for bot. It operates on Azure AD in the Microsoft 365 tenant.
+The `botAadApp/create` action creates a new or reuses an existing Azure AD application for bot. It operates on Azure AD in the Microsoft 365 tenant.
 
 ```yml
 - uses: botAadApp/create
@@ -216,7 +216,7 @@ The botAadApp/create action creates a new or reuses an existing Azure AD applica
 
 ### arm/deploy
 
-The arm/deploy action deploys given ARM templates in parallel. It operates on Azure subscription.
+The `arm/deploy` action deploys given ARM templates in parallel. It operates on Azure subscription.
 
 ```yml
 - uses: arm/deploy
@@ -239,7 +239,7 @@ The arm/deploy action deploys given ARM templates in parallel. It operates on Az
 
 ### azureStorage/enableStaticWebsite
 
-The azureStorage/enableStaticWebsite action enables static website setting in Azure Storage. It operates on Azure Storage.
+The `azureStorage/enableStaticWebsite` action enables static website setting in Azure Storage. It operates on Azure Storage.
 
 ```yml
 - uses: azureStorage/enableStaticWebsite
@@ -254,7 +254,7 @@ The azureStorage/enableStaticWebsite action enables static website setting in Az
 
 ### script
 
-The script action executes a user-defined script.
+The `script` action executes a user-defined script.
 
 ```yml
 - uses: script
