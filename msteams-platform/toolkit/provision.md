@@ -314,6 +314,7 @@ N/A
      # Optional. Redirect stdout and stderr to a file.
      redirectTo: <path-to-output-file>
 ```
+
 ### Customize resource provision
 
 The provision steps are defined in `teamsapp.yml` file, under `provision` property. You can add, remove, or update actions to the `provision` property to define the expected actions you want to do during provision.
@@ -434,31 +435,7 @@ You can follow the steps to add environment variables to the .env files to use a
 
 ::: zone pivot="visual-studio"
 
-## Provision using Teams Toolkit in Visual Studio
-
-The following steps help you to provision cloud resources using Visual Studio:
-
-To sign in to your Microsoft account follow these steps:
-
-1. Open **Visual Studio**.
-1. Select **Microsoft Teams App project**.
-1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
-
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-prepare-app-dependencies.png" alt-text="Prepare teams app dependencies":::
-
-1. Select **Sign in...**. 
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-prepare.png" alt-text="Sign in to Microsoft":::
-   
-    > [!NOTE]
-    > If you're already signed in, your username is displayed, or you've an option to **Add an account**.
-
-1. After you've signed in to your account, select **Continue**.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-signin-m365.png" alt-text="Confirm by selecting continue.":::
-
-### To sign in to your Azure account
+## Sign in to your Azure account
 
 1. Open **Visual Studio**.
 1. Open the **Microsoft Teams App project**.
@@ -494,7 +471,7 @@ After you open your project in Visual Studio, to provision cloud resources follo
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-provision-select-subscription.png" alt-text="Screenshot shows the selection of resource group." lightbox="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-provision-select-subscription.png":::
 
-1. In the pop-up window that appears, select **Provision**. 
+1. In the pop-up window that appears, select **Provision**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/teams-toolkit-vs-provision-warning.png" alt-text="Screenshot shows the provision warning.":::
 
@@ -508,18 +485,18 @@ After you open your project in Visual Studio, to provision cloud resources follo
 
 The following actions are designed for provision:
 
-  * [teamsApp/create](#teamsappcreate-1)
-  * [teamsApp/update](#teamsappupdate-1)
-  * [teamsApp/validateManifest](#teamsappvalidatemanifest-1)
-  * [teamsApp/validateAppPackage](#teamsappvalidateapppackage-1)
-  * [teamsApp/zipAppPackage](#teamsappzipapppackage-1)
-  * [teamsApp/publishAppPackage](#teamsapppublishapppackage-1)
-  * [aadApp/create](#aadappcreate-1)
-  * [aadApp/update](#aadappupdate-1)
-  * [botAadApp/create](#botaadappcreate-1)
-  * [arm/deploy](#armdeploy-1)
-  * [azureStorage/enableStaticWebsite](#azurestorageenablestaticwebsite-1)
-  * [script](#script-1)
+* [teamsApp/create](#teamsappcreate-1)
+* [teamsApp/update](#teamsappupdate-1)
+* [teamsApp/validateManifest](#teamsappvalidatemanifest-1)
+* [teamsApp/validateAppPackage](#teamsappvalidateapppackage-1)
+* [teamsApp/zipAppPackage](#teamsappzipapppackage-1)
+* [teamsApp/publishAppPackage](#teamsapppublishapppackage-1)
+* [aadApp/create](#aadappcreate-1)
+* [aadApp/update](#aadappupdate-1)
+* [botAadApp/create](#botaadappcreate-1)
+* [arm/deploy](#armdeploy-1)
+* [azureStorage/enableStaticWebsite](#azurestorageenablestaticwebsite-1)
+* [script](#script-1)
 
 ### teamsApp/create
 
@@ -535,6 +512,7 @@ If the environment variable that stores Teams app ID is empty or the app ID isn'
       # The id for Teams app
       teamsAppId: <your-preferred-env-var-name>
 ```
+
 ### teamsApp/update
 
 When you apply the Teams app manifest to an existing Teams app in Teams Developer Portal. teamsApp/update action uses the app ID in manifest.json file to determine which Teams app to update. It operates on Teams app in Teams Developer Portal.
@@ -680,6 +658,7 @@ The arm/deploy action deploys given ARM templates in parallel. It operates on Az
 ```
 
 ### azureStorage/enableStaticWebsite
+
 The azureStorage/enableStaticWebsite action enables static website setting in Azure Storage. It operates on Azure Storage.
 
 ```yml
