@@ -75,7 +75,7 @@ You'll need to register your app in Azure AD and configure the tenancy and app's
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="App registration page on Azure AD Portal.":::
 
-5. Select the type of user account that can access your app. You can choose from single- or multi-tenant options, or Private Microsoft account.
+5. Select the type of user account that can access your app. You can select from single- or multi-tenant options, or Private Microsoft account.
 
     <details>
     <summary><b>Options for supported account types</b></summary>

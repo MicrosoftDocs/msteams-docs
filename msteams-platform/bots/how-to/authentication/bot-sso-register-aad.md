@@ -352,7 +352,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
     The **Configure platforms** page appears.
 
-1. Select the platform that you want to configure for your app. You can choose the platform type from Web or SPA.
+1. Select the platform that you want to configure for your app. You can select the platform type from Web or SPA.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/configure-platform.png" alt-text="Screenshot shows the selection of web platform." :::
 
@@ -713,7 +713,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
     The **Configure platforms** page appears.
 
-1. Select the platform that you want to configure for your app. You can choose the platform type from web or SPA.
+1. Select the platform that you want to configure for your app. You can select the platform type from web or SPA.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/configure-platform.png" alt-text="Screenshot shows the selection of web platform." :::
 
