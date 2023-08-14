@@ -784,6 +784,12 @@
       - name: Teams message extension vs. Outlook add-in
         href: m365-apps/me-or-outlook-add-in.md
         displayName: mail, Microsoft 365, Office 365, Outlook add-in, message extension
+  - name: Adaptive Card Loop components
+    items:
+      - name: Building Adaptive Card based Loop components
+        href: m365-apps/loop-component.md
+      - name: Loop components UX guidelines
+        href: m365-apps/loop-ux-guide.md
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Extend Microsoft 365 Copilot

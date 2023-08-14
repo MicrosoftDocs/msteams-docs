@@ -1,14 +1,14 @@
 ---
-title: Guidelines for building Loop components
+title: Building Adaptive Card based Loop components
 description: In this article, learn how to build a Adaptive card based Loop component.
 ms.author: mobajemu
-ms.date: 06/15/2023
+ms.date: 08/14/2023
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
 ---
 
-# Guidelines for building Loop components
+# Building Adaptive Card based Loop components
 
 ## Overview
 
