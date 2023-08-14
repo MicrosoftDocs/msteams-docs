@@ -99,13 +99,25 @@ The following are the key features of Teams Toolkit:
 
 ### Project templates
 
+::: zone pivot="visual-studio-code"
+
 You can start directly with the capability-focused templates such as tabs, bots, and message extensions or by following the existing samples if you're already familiar with Teams app development. Teams Toolkit reduces the complexity of getting started with the help of templates for custom app built for org scenarios and smart defaults to accelerate your time to production.
 
-::: zone pivot="visual-studio-code"
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/select-new-project.PNG" alt-text="Screenshot shows the creation of new Teams app menu in Visual Studio Code.":::
 ::: zone-end
 
 ::: zone pivot="visual-studio"
+
+We can follow the steps to select templates and app capbaility:
+
+1. Select **File > New > Project**.
+
+1. Enter **Teams** in the search box and from search results, select **Microsoft Teams App** template.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/new-project-template-vs.png" alt-text="Screenshot shows the search and select Microsoft Teams app.":::
+
+You can start with the capability-focused templates such as tabs, bots, and message extensions or by following the existing samples if you're already familiar with Teams app development. Teams Toolkit reduces the complexity of getting started with the help of templates for custom app built for org scenarios and smart defaults to accelerate your time to production.
+
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-v5/create-new-app-vs.PNG" alt-text="Screenshot shows the creation of new Teams app menu in Visual Studio.":::
 ::: zone-end
 
