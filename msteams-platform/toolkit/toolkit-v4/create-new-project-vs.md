@@ -96,7 +96,7 @@ Teams Toolkit provides all components for building an app. After you're created 
 
   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/scenario-based-directory.png" alt-text="Screenshot shows the scenario based Solution Explorer teams toolkit.":::
 
-## Teams app templates in Teams Toolkit for Visual Studio
+## Teams app templates in Teams Toolkit
 
 You can see Teams app templates already populated in Teams Toolkit for various Teams app types. The following table lists all the templates available:
 

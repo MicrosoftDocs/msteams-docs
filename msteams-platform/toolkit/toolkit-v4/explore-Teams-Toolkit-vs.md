@@ -17,8 +17,6 @@ zone_pivot_groups: teams-toolkit-platform-vs
 
 In this article, learn how to explore Teams Toolkit and its features in Visual Studio.
 
-## Explore Teams Toolkit for Visual Studio
-
 Teams Toolkit appears as a workload in the app you've created in Visual Studio. For more information, see [How to create a Teams app](create-new-project-vs.md). 
 
 You can view Teams Toolkit in Visual studio in the following ways:
