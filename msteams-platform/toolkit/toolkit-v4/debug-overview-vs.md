@@ -9,9 +9,9 @@ ms.date: 03/21/2022
 zone_pivot_groups: teams-toolkit-platform-vs
 ---
 
-:::zone  pivot="visual-studio-v17-7"
+# Debug your Teams app using Visual Studio
 
-## Debug your Teams app using Visual Studio
+:::zone  pivot="visual-studio-v17-7"
 
 Teams Toolkit automates app startup services, initiates debugging, and side loads Teams app. After debugging, you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app. Visual Studio allows you to debug tabs, bots, and message extensions.
 

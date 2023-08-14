@@ -9,9 +9,9 @@ ms.date: 05/13/2022
 zone_pivot_groups: teams-toolkit-platform-vs
 ---
 
-:::zone pivot="visual-studio-v17-7"
+# Customize Teams app manifest for Visual Studio
 
-## Customize Teams app manifest for Visual Studio
+:::zone pivot="visual-studio-v17-7"
 
 The Teams app manifest describes how your app integrates into Teams and is shared between local and remote environments. The default manifest file is available at the `appPackage/manifest.json` file and the environment variables available from the `env/.env.{env}` file
 
@@ -32,7 +32,7 @@ TEAMS_APP_DESCRIPTION=This is an amazing app
 }
 ```
 
-### Preview manifest file
+## Preview manifest file
 
 You can preview the manifest file either For Local or For Azure.  To preview the manifest file, follow these steps: To preview the manifest file:
 
