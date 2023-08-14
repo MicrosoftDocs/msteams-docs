@@ -34,7 +34,7 @@ TEAMS_APP_DESCRIPTION=This is an amazing app
 
 ## Preview manifest file
 
-You can preview the manifest file either For Local or For Azure.  To preview the manifest file, follow these steps: To preview the manifest file:
+You can preview the manifest file either **For Local** or **For Azure**.  To preview the manifest file, follow these steps: To preview the manifest file:
 
 1. Select **Project** > **Teams Toolkit**.
 
@@ -48,7 +48,7 @@ You can preview the manifest file either For Local or For Azure.  To preview the
 
         :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/zip-app-package.png" alt-text="Screenshot shows the zip app package for local or Azure.":::
 
-    1. From **Solution Explorer**, right-click on **MyTeamsApp2** (In this scenario the project name is MyTeamsApp2). Go to **Teams Toolkit** > **Zip App Package** and then select either **For Local** or **For Azure**.
+    1. From **Solution Explorer**, right-click on **MyTeamsApp2** (in this scenario the project name is MyTeamsApp2). Go to **Teams Toolkit** > **Zip App Package** and then select either **For Local** or **For Azure**.
 
         :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/solution-zip.png" alt-text="Screenshot shows the solution zip app package for local or Azure.":::
 
@@ -208,7 +208,7 @@ The changes are updated to Developer Portal.
 
 :::image type="content" source="images/vs-overwrite-v4.png" alt-text="Screenshot is an example of showing the update warning." lightbox="images/vs-overwrite-v4.png":::
 
-When you create a Teams command bot using Visual Studio, two app IDs are registered in Microsoft Azure Active Directory (Azure AD). You can identify the app IDs in the Developer Portal as **Application (client) ID** under **Basic information** and existing **bot ID** under **App features**.
+When you create a Teams command bot using Visual Studio, two app IDs are registered in Microsoft Azure Active Directory (Azure AD). You can identify the app IDs in Developer Portal as **Application (client) ID** under **Basic information** and existing **bot ID** under **App features**.
 
 :::image type="content" source="images/vs-dev-portal-basic-info-v4.png" alt-text="Developer portal showing basic info app id" lightbox="images/vs-dev-portal-basic-info-v4.png":::
 

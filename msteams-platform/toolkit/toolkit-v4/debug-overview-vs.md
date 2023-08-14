@@ -71,7 +71,7 @@ You can launch Teams app as a web app instead of running the app in Teams client
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-launch-teamsapp-webapp.png" alt-text="Screenshot shows the launch teams as a web app by removing launchurl." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-launch-teamsapp-webapp.png":::
 
-1. Right-click on **Solution** and select **Properties**.
+1. Right-click on **Solution** (in this scenario the project name is MyTeamsApp1) and select **Properties**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-solution-properties.png" alt-text="Screenshot shows the right click solution and select properties." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-solution-properties.png":::
 

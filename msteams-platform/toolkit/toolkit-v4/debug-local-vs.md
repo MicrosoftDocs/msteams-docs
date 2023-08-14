@@ -26,7 +26,8 @@ In the debug dropdown menu:
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-devtunnel.PNG" alt-text="Screenshot shows the dev tunnel for debug option.":::
 
 1. If you haven't already created a tunnel, select **Create a Tunnel...**. A new window appears.
-1. Enter the name of the dev tunnel and under **Access** select **Public** from the dropdown.1. Select **OK**.
+1. Enter the name of the dev tunnel and under **Access** select **Public** from the dropdown.
+1. Select **OK**.
 
 ### Set up your Teams Toolkit
 
