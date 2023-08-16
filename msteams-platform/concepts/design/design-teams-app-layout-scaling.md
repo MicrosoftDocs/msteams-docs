@@ -74,7 +74,7 @@ The minimum size for desktop is 550 pixels.
 
 #### Do: Use word wrap so that text is legible at all zoom levels
 
-Avoid text overlapping and truncation.
+Avoid text overlap and truncation.
 
    :::column-end:::
    :::column span="":::
@@ -112,7 +112,7 @@ Without word wrapping, the text and CTAs aren't usable.
 
 #### Do: Ensure your app is legible at 200% scale
 
-Use responsive design to avoid text overlapping and truncation.
+Use responsive design to avoid text overlap and truncation.
 
    :::column-end:::
    :::column span="":::
@@ -146,7 +146,7 @@ Teams apps need to be accessible to all users with any level of visual impairmen
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/design-guidelines/resolution-do.png" alt-text="Example shows a resolution to avoid overlapping and truncation.":::
+:::image type="content" source="../../assets/images/design-guidelines/resolution-do.png" alt-text="Example shows a resolution to avoid overlap and truncation.":::
 
 ##### Do: Test your app at 1920 x 1080 resolution
 
@@ -203,7 +203,7 @@ Your app won't pass Teams submission if it has illegible headers without hover f
 
 ## FAQ
 
-Get answers to the frequent questions related to the modes.
+Get answers to some of your queries related to the modes in Teams mobile.
 
 <br>
 
