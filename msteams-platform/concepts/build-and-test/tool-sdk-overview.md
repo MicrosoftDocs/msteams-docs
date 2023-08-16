@@ -20,9 +20,8 @@ Teams Platform brings you different tools to build and develop your Teams apps. 
 | [TeamsFx CLI](../../toolkit/TeamsFx-CLI.md) | TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications. | JavaScript and .NET | Use command prompt |
 | [Developer Portal for Teams](teams-developer-portal.md) | Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Teams apps. With Developer Portal, you can create a basic Teams app manifest and distribute the app to Teams.  | Supports all languages | Yes |
 
-:::image type="content" source="../../assets/images/Tools-and-SDK-revamp/scaffolding-tools.png" alt-text="Screenshot shows you the Teams toolkit and Yo teams generator information.":::
-
-Following are the different way to start building Teams app with Teams Toolkit and Yeoman Teams Project:
+<details>
+<summary><b>For more information on building Teams app with Teams Toolkit, Yeoman Teams Project, and Microsoft Teams samples</b></summary>
 
 | &nbsp; | Teams Toolkit | Yeoman Teams project | Microsoft Teams samples |
 | -------- | ------------- | ----------------- | ---------------------- |
@@ -35,6 +34,8 @@ Following are the different way to start building Teams app with Teams Toolkit a
 | Expose Node.js app | Tab: localhost + HTTPS and Others: Dev Tunnel | gulp ngrok-serve | Manual (ngrok) |
 | Run Node.js app | npm run teamsfx:dev | gulp serve | npm start or others |
 | One-click debug | F5 or debug in Visual Studio Code and Visual Studio | N/A | N/A |
+
+</details>
 
 ## SDKs and libraries
 
