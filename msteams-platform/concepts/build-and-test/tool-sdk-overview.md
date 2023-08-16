@@ -28,7 +28,7 @@ Teams Platform brings you different tools to build and develop your Teams apps. 
 </br>
 
 <details>
-<summary><b>For more information on building Teams app with Teams Toolkit, Yeoman Teams Project, and Microsoft Teams samples.</b></summary>
+<summary><b>More information on building Teams app with Teams Toolkit, Yeoman Teams Project, and Microsoft Teams samples.</b></summary>
 
 | &nbsp; | Teams Toolkit | Yeoman Teams project | Microsoft Teams samples |
 | -------- | ------------- | ----------------- | ---------------------- |
