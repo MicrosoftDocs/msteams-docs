@@ -211,7 +211,7 @@ Get answers to some of your queries related to the modes in Teams mobile.
 
 <summary><b>Do app developers need to make any changes in the app to get the landscape mode capability?</b></summary>
 
-No. Apps get this capability by default.
+No. Apps get the capability by default.
 
 <br>
 
