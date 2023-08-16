@@ -19,9 +19,10 @@ Teams Platform brings you different tools to build and develop your Teams apps. 
 | [Yeoman generator for Teams](https://github.com/pnp/generator-teams) | Yo Teams allows you to build Microsoft Teams applications based on TypeScript and node.js on your terms, in your editor of choice, without any external or online dependencies. | TypeScript and node.js | - |
 | [TeamsFx CLI](../../toolkit/TeamsFx-CLI.md) | TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications. | JavaScript and .NET | Use command prompt |
 | [Developer Portal for Teams](teams-developer-portal.md) | Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Teams apps. With Developer Portal, you can create a basic Teams app manifest and distribute the app to Teams.  | Supports all languages | Yes |
+</br>
 
 <details>
-<summary><b>For more information on building Teams app with Teams Toolkit, Yeoman Teams Project, and Microsoft Teams samples</b></summary>
+<summary><b>For more information on building Teams app with Teams Toolkit, Yeoman Teams Project, and Microsoft Teams samples.</b></summary>
 
 | &nbsp; | Teams Toolkit | Yeoman Teams project | Microsoft Teams samples |
 | -------- | ------------- | ----------------- | ---------------------- |
