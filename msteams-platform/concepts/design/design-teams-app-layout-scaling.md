@@ -223,7 +223,7 @@ No. Apps get this capability by default.
 
 <summary><b>What if my app doesn't support one of the modes, or if the scenario is only intended to work in one of the modes?</b></summary>
 
-Teams support both modes by default and it's not possible to have the app work in only one mode.
+Teams supports both modes by default and it's not possible to have the app work in only one mode.
  If this requirement is demanding for your app, reach out to support team.
 
 <br>
@@ -296,7 +296,7 @@ The behavior of the app remains consistent across both modes. However, reach out
 
 <summary><b>Is there any impact on the performance of apps in landscape mode?</b></summary>
 
-No, landscape mode support in Teams doesn't have any negative effect on app performance. Teams ensure a smooth and seamless experience for users, regardless of the device orientation.
+No, landscape mode support in Teams doesn't have any negative effect on app performance. Teams ensures a smooth and seamless experience for users, regardless of the device orientation.
 
 <br>
 
