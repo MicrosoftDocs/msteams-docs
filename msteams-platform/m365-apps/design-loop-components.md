@@ -58,13 +58,11 @@ The following are the best practices for a loop component body:
 
 * [Adaptive Cards Home](https://adaptivecards.io): Start here for all Adaptive Card information
 * Review Adaptive Cards Overview to understand the basics and core design principles of Adaptive Cards
-* Follow the Adaptive Card Design Guidelines - this article includes design tools, examples, notes about
-responsive design, pixel density, and more
-Loop component-specific considerations:
-* Ensure your component is true to the Loop components attributes: live, actionable, embedded and
-portable
-* [Don’t add a separate button to open in browser](#dont-add-a-separate-button-to-open-in-browser)
-* [Don’t add a duplicate header or border](#dont-add-a-duplicate-header-or-border)
+* Follow the [Adaptive Card Design Guidelines](../task-modules-and-cards/cards/design-effective-cards.md): Guidelines for Adaptive Card design which include tools, examples, notes about responsive design, pixel density, and more.
+* Loop component-specific considerations:
+  * Ensure your component is true to the Loop components attributes: live, actionable, embedded, and portable.
+  * [Don’t add a separate button to open in browser](#dont-add-a-separate-button-to-open-in-browser)
+  * [Don’t add a duplicate header or border](#dont-add-a-duplicate-header-or-border)
 
 ### Don’t add a separate button to open in browser
 
@@ -84,11 +82,11 @@ The platform provides the component header and includes standard elements such a
 
 |Counter  |Description  |
 |---------|---------|
-|1     |  App icon       |
-|2     |  App name       |
+|1     |  App logo: Full color app logo of your app.       |
+|2     |  App name:  Full name of your app.       |
 |3     |  Component locations (Loop control)       |
 |4     |  Copy component      |
-|5     |  Collaborators (Collab panel)  OPTIONAL       |
+|5     |  Collaborators (OPTIONAL)       |
 
 The **app name** is drawn from the component contract. When possible, use a concise name.
 
