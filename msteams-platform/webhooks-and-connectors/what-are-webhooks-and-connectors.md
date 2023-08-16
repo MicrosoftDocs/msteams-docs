@@ -8,7 +8,7 @@ ms.author: anclear
 ms.date: 11/23/2022
 ---
 
-# Webhooks and connectors
+# Build webhooks and connectors
 
 Webhooks and connectors help to connect the web services to channels and teams in Microsoft Teams. Webhooks are user-defined HTTP callback that notifies users about any action that has taken place in the Teams channel. It's a way for an app to get real-time data. Connectors allow users to subscribe to receive notifications and messages from your web services. They expose an HTTPS endpoint for your service to post messages in the form of cards.
 
@@ -47,7 +47,7 @@ Learn more about the differences between a notification bot and Incoming Webhook
 | Send Adaptive Card | Yes | Yes |
 | Send a welcome message | Yes | No |
 | Trigger supported | All triggers are supported. If you use Teams Toolkit, you can quickly get a template project with the following triggers: <br> • Time trigger hosted on Azure functions. <br> • Restify HTTP trigger hosted on Azure app service. <br> • HTTP trigger hosted on Azure Functions. | All triggers are supported. |
-| Building Tools | • [Teams Toolkit Overview for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) <br> •[Teams Toolkit v4 Overview for Visual Studio](../toolkit/toolkit-v4/teams-toolkit-fundamentals-v4.md#available-for-visual-studio) <br> • [TeamsFx Library](../toolkit/TeamsFx-CLI.md) <br> • [TeamsFx SDK](../toolkit/TeamsFx-SDK.md) | No tools are required. |
+| Building Tools | • [Teams Toolkit Overview for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) <br> •[Teams Toolkit Overview for Visual Studio](../toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md) <br> • [TeamsFx Library](../toolkit/TeamsFx-CLI.md) <br> • [TeamsFx SDK](../toolkit/TeamsFx-SDK.md) | No tools are required. |
 | Cloud resource required | Azure Bot Framework | No resources are required. |
 | Tutorial | [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) | [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification) |
 
