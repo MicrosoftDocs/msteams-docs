@@ -551,7 +551,7 @@ Use the word **app** in the short description.
 
 #### Long description
 
-The long description must provide an engaging narrative that highlights your app's value proposition, primary audience, and target industry. While the description can be as long as 4,000 characters, it's recommended to have a concise description of around 1000 characters.
+The long description must provide an engaging narrative that highlights your app's value proposition, primary audience, and target industry. While the description can be as long as 4,000 characters, we recommended you to have a concise description of around 1000 characters.
 
 **Dos:**
 
@@ -559,7 +559,7 @@ The long description must provide an engaging narrative that highlights your app
 
 * Use active voice and speak to users directly. For example, **You can ...**.
 
-* List the key benefits to highlight the advantages of using your app. Add up to minimum of three benefits.
+* List the key benefits to highlight the advantages of using your app. Add up to three benefits.
 
 * List features with bullet points so it's easier to scan the description.
 
@@ -679,7 +679,7 @@ Remember the following:
 
 ### Videos
 
-A video in your app listing is one of the most effective ways to communicate why people should use your app. You can add URLs of your YouTube or Vimeo video that provides the value of your app. It's also recommended as a best practice to add a video that provides the demo or scenario walkthrough of your app. [*Suggested fix*]
+A video in your app listing is one of the most effective ways to communicate why people should use your app. You can add URLs of your YouTube or Vimeo video that provides the value of your app. Also, as a best practice, we recommended that you add a video that provides the demo or scenario walkthrough of your app. [*Suggested fix*]
 
 If you choose to submit a video as part of your app listing in your Partner Center account, ensure the following criteria are met:
 
@@ -696,7 +696,7 @@ If you choose to submit a video as part of your app listing in your Partner Cent
 * The video can be surfaced in the first position of the screenshots or videos carousel in AppDetails (Teams Store and Admin Center) and AppSource. [*Suggested Fix*]
 * The video on demo or scenario walkthrough mustn't have marketing information.
 
-For more detailed information on the criteria for creating an app value video or walkthrough video, refer the [checklist to create a video](submission-checklist.md#create-a-video).
+For more detailed information on the criteria for creating an app value video or walkthrough video, see the [checklist to create a video](submission-checklist.md#create-a-video).
 
 <br></br>
 
