@@ -750,9 +750,18 @@ Specify meeting extension definition. For more information, see [custom Together
 |---|---|---|---|---|
 |`scenes`|array of objects| 5 items||Meeting supported scenes.|
 |`supportsStreaming`|Boolean|||A value that indicates whether an app can stream the meeting's audio and video content to a real-time meeting protocol (RTMP) endpoint. The default value is **false**.|
-|`videoFilters`|object|||This object indicates meeting supported video filters. The properties are `id`, `name` and `thumbnail`.|
 |`videoFiltersConfigurationUrl`|string|2048||A URL for configuring the video filters.|
 |`supportsAnonymousGuestUsers`|boolean|||A boolean value that indicates whether the app supports access by anonymous guest users. The default value is **false**.|
+
+### meetingExtensionDefinition.videoFilters
+
+This object indicates meeting supported video filters.
+
+|Name| Type|Maximum size|Required |Description|
+|---|---|---|---|---|
+|`id`|string||✔️| The unique identifier for the video filter. This id must be a GUID. |
+|`name`| string | 128 characters |✔️| The name of the video filter. |
+|`thumbnail`|string|2048|✔️| The relative file path to the video filter's thumbnail. |
 
 ### meetingExtensionDefinition.scenes
 
