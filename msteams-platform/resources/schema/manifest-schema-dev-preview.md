@@ -447,8 +447,8 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |`teams.parameters.choices.value`|string|512|✔️|Value of te choice.|
 |`taskInfo`|object||||
 |`taskInfo.title`|string|64||Title of the task module.|
-|`taskInfo.width`|string|16||Task module width - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
-|`taskInfo.height`|string|16||Task module height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
+|`taskInfo.width`|string|16||Width of the task module. The value is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
+|`taskInfo.height`|string|16||Height of the task module. The value is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`taskInfo.url`|string|2048||Task module URL.|
 
 ### bots.commandLists
