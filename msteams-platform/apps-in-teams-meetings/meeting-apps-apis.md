@@ -1535,7 +1535,7 @@ To subscribe to participant events, follow these steps:
 1. In [Developer Portal](https://dev.teams.microsoft.com/) open your bot app or import an existing app.
 1. Ensure that the `OnlineMeetingParticipant.Read.Chat` RSC delegated permissions is configured in your app manifest for scheduled private meetings.
 
-   If your app doesn't have these permissions, add them through the **Configure** > **Permissions** section of your app in Developer Portal. For more information, see [RSC delegated permissions.](~/resources/schema/manifest-schema.md#rsc-delegated-permissions)
+   If your app doesn't have the RSC permission, add it through the **Configure** > **Permissions** section of your app in Developer Portal. For more information, see [RSC delegated permissions.](~/resources/schema/manifest-schema.md#rsc-delegated-permissions)
 1. In the **Meeting events** section, select the required events:
     * Participant join the meeting
     * Participant leave the meeting
