@@ -180,7 +180,7 @@ You need:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-id-uri-added.png" alt-text="Screenshot shows the updated Application ID URI." :::
 
-1. Note and save the application ID URI. You'll need it for updating the Teams app manifest later.
+1. Note and save the application ID URI. You'll need it for updating the app manifest (previously called Teams app manifest) later.
 
 The application ID URI is configured. You can now define scope and permissions for your app.
 
@@ -465,7 +465,7 @@ To create and configure your app for enabling SSO in Azure AD:
 You must configure permissions and scopes, authorize client applications, update manifest, and create client secret for your Azure AD app. These configurations help invoke SSO for your bot app.
 
 > [!IMPORTANT]
-> Ensure that you've [registered your app](../../../tabs/how-to/authentication/tab-sso-register-aad.md#to-register-a-new-app-in-azure-ad) in Azure AD. At registration, Azure AD generates a new app ID that you must note. You'll need to update it later in the Teams app manifest file.
+> Ensure that you've [registered your app](../../../tabs/how-to/authentication/tab-sso-register-aad.md#to-register-a-new-app-in-azure-ad) in Azure AD. At registration, Azure AD generates a new app ID that you must note. You'll need to update it later in the app manifest file.
 
 ### Configure scope for access token
 
@@ -543,7 +543,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-id-uri-added.png" alt-text="Screenshot shows the updated Application ID URI." :::
 
-1. Note and save the application ID URI. You'll need it for updating the Teams app manifest later.
+1. Note and save the application ID URI. You'll need it for updating the app manifest later.
 
 The application ID URI is configured. You can now define scope and permissions for your app.
 

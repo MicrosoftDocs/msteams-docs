@@ -420,7 +420,7 @@ App packages must be correctly formatted and include all required information an
 
 [*Mandatory Fix*]
 
-The Teams app manifest defines your app's configuration.
+The app manifest (previously called Teams app manifest) defines your app's configuration.
 
 * Your manifest must conform to a publicly released manifest schema. For more information, see [manifest reference](~/resources/schema/manifest-schema.md). Don't submit your app using a preview version of the manifest.
 * If your app includes a bot or message extension, details in the app manifest must be consistent with Bot Framework metadata including bot name, logo, privacy policy link, and terms of service link.
