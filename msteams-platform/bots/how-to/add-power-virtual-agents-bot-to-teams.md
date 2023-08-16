@@ -56,11 +56,11 @@ If [uploading custom apps is enabled](/microsoftteams/admin-settings) in your Te
 
       :::image type="content" source="../../assets/images/tdp/home-page-dev-portal.png" alt-text="Screenshot shows home page of the Developer Portal apps in Teams client.":::
 
-1. **Create the Teams app manifest in Developer Portal**
+1. **Create the app manifest (previously called Teams app manifest) in Developer Portal**
 
    1. Bots in Teams are defined by an app manifest JSON file that provides the basic information about your bot and its capabilities. In **Developer Portal**, select **Apps**, and select **New app**.
 
-      :::image type="content" source="../../assets/images/tdp/create-new-app.png" alt-text="Screenshot shows how to create Teams app manifest in Developer Portal.":::
+      :::image type="content" source="../../assets/images/tdp/create-new-app.png" alt-text="Screenshot shows how to create app manifest in Developer Portal.":::
 
    1. Enter your app name and select **Save**.
 

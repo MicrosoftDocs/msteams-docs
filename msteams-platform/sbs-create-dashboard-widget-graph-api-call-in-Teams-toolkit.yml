@@ -424,9 +424,9 @@ items:
         </details>
 
         <details>
-        <summary>2. Update Teams app manifest.</summary>
+        <summary>2. Update app manifest (previously called Teams app manifest).</summary>
 
-        To update Teams app manifest, follow these steps:
+        To update app manifest, follow these steps:
 
         1. In Visual Studio Code, go to **EXPLORER** > **appPackage** > **manifest.json**.
 

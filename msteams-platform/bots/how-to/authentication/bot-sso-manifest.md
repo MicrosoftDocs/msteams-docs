@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 # Update app manifest for SSO and preview your app
 
-Before you update app manifest, ensure that you've configured code to enable SSO in your app.
+Before you update app manifest (previously called Teams app manifest), ensure that you've configured code to enable SSO in your app.
 
 > [!div class="nextstepaction"]
 > [Add code](bot-sso-code.md)
