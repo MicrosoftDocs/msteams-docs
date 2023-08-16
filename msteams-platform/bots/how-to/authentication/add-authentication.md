@@ -3,7 +3,7 @@ title: Add authentication to your Teams bot
 author: surbhigupta
 description: Learn how to enable authentication using third-party provider to a bot app in Teams using Azure AD.
 ms.topic: how-to
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ---
 
 # Add authentication to your Teams bot
