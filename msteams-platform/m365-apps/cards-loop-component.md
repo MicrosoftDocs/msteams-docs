@@ -10,7 +10,7 @@ ms.date: 08/16/2023
 
 > [!NOTE]
 >
-> * Adaptive Card-based Loop components are available in only [public preview](../../resources/dev-preview/developer-preview-intro.md).
+> * Adaptive Card-based Loop components are available in only [public preview](../resources/dev-preview/developer-preview-intro.md).
 > * Adaptive Card based Loop component is available from Adaptive Card version 1.6.
 
 Loop component is an evolution of Fluid component - a way to collaborate with a team through loop whether it’s in chat, email, meeting, or Loop page. Loop components  sync across Microsoft 365 apps such as Teams and Outlook. Loop components in Teams chat offer a new way to ideate, create, share, and collaborate content across Microsoft 365, and complete tasks in the flow of work. You can share a component such as a table, task list, or paragraph in a chat and make edits in real time. For more information, see [Loop components](https://support.microsoft.com/office/first-things-to-know-about-loop-components-ee2a584b-5785-4dd6-8a2d-956131a29c81).
@@ -74,13 +74,13 @@ You can test the loop component in Microsoft Teams and Outlook.
 
 ### Set up your dev environment to test in Teams
 
-To configure, distribute, and manage your application use the Developer Portal for Teams. More detailed instructions on registering your application can be found at [Manage your apps with the Developer Portal](../../concepts/build-and-test/teams-developer-portal.md). The Developer Portal provides options for testing and debugging your app:
+To configure, distribute, and manage your application use the Developer Portal for Teams. More detailed instructions on registering your application can be found at [Manage your apps with the Developer Portal](../concepts/build-and-test/teams-developer-portal.md). The Developer Portal provides options for testing and debugging your app:
 
 * On the **Overview page**, you can see a snapshot of whether your app's configurations validate against Teams store
   test cases.
 * The **Preview in Teams** button lets you launch your app quickly in the Teams client for debugging.
 
-:::image type="content" source="../../assets/images/developer-portal-overview.png" alt-text="A screenshot of the Developer Portal overview page with the Preview in Teams button highlighted":::
+:::image type="content" source="../assets/images/developer-portal-overview.png" alt-text="A screenshot of the Developer Portal overview page with the Preview in Teams button highlighted":::
 
 ### Set up your dev environment to test in Outlook
 
