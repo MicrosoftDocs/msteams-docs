@@ -28,19 +28,19 @@ Teams Platform brings you different tools to build and develop your Teams apps. 
 </br>
 
 <details>
-<summary><b>More information on building Teams app with Teams Toolkit, Yeoman Teams Project, and Microsoft Teams samples.</b></summary>
+<summary><b>More information on building Teams app with Teams Toolkit and Yeoman Teams Project.</b></summary>
 
-| &nbsp; | Teams Toolkit | Yeoman Teams project | Microsoft Teams samples |
-| -------- | ------------- | ----------------- | ---------------------- |
-| Environment variables | Use `.env` file | Use `.env` file | Use `.env` or `config.json` files |
-| Generate manifest | Teams Toolkit auto-generate when create project. | gulp manifest | Manual |
-| Deploy Teams app | Auto-update use command `Teams: Update Teams App` |gulp tenant: deploy | Manual |
-| Create AAD app | Auto-create when debug or provision the project. User can also use their existing AAD app by filling in Teams app ID in `.env` file. | Manual | Manual |
-| Add SSO | Provide SSO-enabled samples and how-to guides to add SSO. | Manual | Manual |
-| Bot/ME Registration | Auto-create when debug or provision the project. User can also specify their own Bot ID. | Manual (Azure Bot) | Manual |
-| Expose Node.js app | Tab: localhost + HTTPS and Others: Dev Tunnel | gulp ngrok-serve | Manual (ngrok) |
-| Run Node.js app | npm run teamsfx:dev | gulp serve | npm start or others |
-| One-click debug | F5 or debug in Visual Studio Code and Visual Studio | N/A | N/A |
+| &nbsp; | Teams Toolkit | Yeoman Teams project |
+| -------- | ------------- | ----------------- |
+| Environment variables | Use `.env` file | Use `.env` file |
+| Generate manifest | Teams Toolkit auto-generate when create project. | gulp manifest |
+| Deploy Teams app | Auto-update use command `Teams: Update Teams App` |gulp tenant: deploy |
+| Create AAD app | Auto-create when debug or provision the project. User can also use their existing AAD app by filling in Teams app ID in `.env` file. | Manual |
+| Add SSO | Provide SSO-enabled samples and how-to guides to add SSO. | Manual |
+| Bot/ME Registration | Auto-create when debug or provision the project. User can also specify their own Bot ID. | Manual (Azure Bot) |
+| Expose Node.js app | Tab: localhost + HTTPS and Others: Dev Tunnel | gulp ngrok-serve |
+| Run Node.js app | npm run teamsfx:dev | gulp serve |
+| One-click debug | F5 or debug in Visual Studio Code and Visual Studio | N/A |
 
 </details>
 
