@@ -36,7 +36,7 @@ The following example shows how users can purchase subscription plans for a Team
 1. In the **Checkout** dialog, provide the following required information:
     1. Select the number of plans.
     1. Provide the name and address.
-    1. Provide details on the payment method.
+    1. Provide the payment details.
 1. Select **Place order**.
 
     :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Screenshot shows placing the subscription order.":::
