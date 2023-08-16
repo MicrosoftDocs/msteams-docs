@@ -31,7 +31,7 @@ There are a few pre-requisites needed before building an Adaptive Card-based Loo
 
 Once you have met all the requirements, you can now upgrade the Adaptive Card into a Loop component that is rich, actionable, and portable across Microsoft 365 applications. There are two steps to building a Loop component based Adaptive Card:
 
-1. Ensure the Adaptive Card adheres to the [Loop component UX guidelines](loop-ux-guide.md) to build an actionable and coherent Adaptive Card based experience for your end users.
+1. Ensure the Adaptive Card adheres to the [Loop component design guidelines](design-loop-components.md) to build an actionable and coherent Adaptive Card based experience for your end users.
 1. Enable Loop component by including the URL that uniquely identifies the card in the [metadata.webUrl](https://adaptivecards.io/explorer/Metadata.html) field of your Adaptive Card payload. This is required to support portability via the Copy button present in the Loop header.
 
 ### Adaptive Card based Loop component
@@ -233,7 +233,7 @@ The following code shows an example of an Adaptive Card based Loop component wit
 
 ### Setup your dev environment to test in Teams
 
-To configure, distribute, and manage your application use the Developer Portal for Teams. More detailed instructions on registering your application can be found at [Manage your apps with the Developer Portal](../concepts/build-and-test/teams-developer-portal.md). The Developer Portal provides options for testing and debugging your app:
+To configure, distribute, and manage your application use the Developer Portal for Teams. More detailed instructions on registering your application can be found at [Manage your apps with the Developer Portal](../../concepts/build-and-test/teams-developer-portal.md). The Developer Portal provides options for testing and debugging your app:
 
 - On the **Overview page**, you can see a snapshot of whether your app's configurations validate against Teams store
   test cases.
