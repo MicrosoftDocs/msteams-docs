@@ -2,7 +2,7 @@
 title: Use Fluid with Teams
 author: timtwang
 ms.author: mobajemu
-description: Tutorial for integrating Fluid-powered real-time collaboration features into a Microsoft Teams tab application
+description: Tutorial for integrating Fluid-powered real-time collaboration features into a Microsoft Teams tab application.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 12/13/2022
