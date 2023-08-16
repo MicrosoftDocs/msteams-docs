@@ -777,7 +777,7 @@
         displayName: mail, Microsoft 365, Office 365, Outlook add-in, message extension
   - name: Adaptive Card loop component
     items:
-      - name: Adaptive Card loop component design guidelines
+      - name: Adaptive Card Loop component design guidelines
         href: m365-apps/design-loop-components.md
         displayName: loop component, weburl, metadata
       - name: Build Adaptive Card loop component

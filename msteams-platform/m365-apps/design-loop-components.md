@@ -8,7 +8,7 @@ ms.custom: m365apps
 ms.localizationpriority: medium
 ---
 
-# Designing Loop components for your Microsoft Teams app
+# Designing Loop components
 
 Microsoft Loop components are live, actionable units of productivity that stay in sync and move freely across Microsoft 365 apps. It includes the capability for developers to create Loop components by evolving an existing Adaptive Card into a Loop component or creating a new Adaptive Card-based Loop component.
 
