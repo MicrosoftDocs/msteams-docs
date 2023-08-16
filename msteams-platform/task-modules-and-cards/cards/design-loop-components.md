@@ -40,7 +40,7 @@ Examples of actionability may include approving an expense report, adding a comm
 
 An Adaptive Card-based Loop component comprises the Body, Header, and Border.
 
-:::image type="content" source="images/loop-element-overview.png" alt-text="The screenshot graphic of highlighting the spacing on a card and which belongs to the header, border, and body ":::
+:::image type="content" source="~/assets/images/loop-element-overview.png" alt-text="The screenshot graphic of highlighting the spacing on a card and which belongs to the header, border, and body ":::
 
 |Loop Component Element | Developer Provides | Platform Provides|
 |---|---|---|

@@ -239,15 +239,15 @@ To configure, distribute, and manage your application use the Developer Portal f
   test cases.
 - The **Preview in Teams** button lets you launch your app quickly in the Teams client for debugging.
 
-:::image type="content" source="images/developer-portal-overview.png" alt-text="A screenshot of the Developer Portal overview page with the Preview in Teams button highlighted":::
+:::image type="content" source="../../assets/images/developer-portal-overview.png" alt-text="A screenshot of the Developer Portal overview page with the Preview in Teams button highlighted":::
 
 ### Set up your dev environment to test in Outlook
 
 To turn on the Adaptive Card based Loop component in Outlook.com:
 
 1. Follow the steps on [Teams App Camp (microsoft.github.io)](https://microsoft.github.io/app-camp/) to create a search-based ME.
-1. Create a Microsoft 365 dev tenant following [these steps](https://developer.microsoft.com/en-us/microsoft-365/dev-program) or sign in with your test tenant credentials.
-1. In the admin center of your test tenant, [enable Targeted Release for everyone](../microsoft-365/admin/manage/release-options-in-office-365.md).
+1. Create a Microsoft 365 dev tenant following [these steps](https://developer.microsoft.com/microsoft-365/dev-program) or sign in with your test tenant credentials.
+1. In the admin center of your test tenant, [enable Targeted Release for everyone](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true).
 1. Send an email from the tenant admin account to the help alias: <acloops-preview-help@microsoft.com>. Microsoft will verify the admin user and enable support for Loop components for this tenant.
 
    > [!NOTE]
