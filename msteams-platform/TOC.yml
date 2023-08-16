@@ -241,11 +241,15 @@
             href: toolkit/toolkit-v4/debug-overview-vs.md
           - name: Debug your Teams app locally
             href: toolkit/toolkit-v4/debug-local-vs.md
+          - name: Debug background process
+            href: toolkit/toolkit-v4/debug-background-process-v4.md            
             displayName: DevTunnel
         - name: Host your app on Azure
           items:    
           - name: Provision cloud resources
             href: toolkit/toolkit-v4/provision-vs.md
+          - name: Deploy to the cloud
+            href: toolkit/toolkit-v4/deploy-vs.md            
     - name: Teams Toolkit CLI
       href: toolkit/TeamsFx-CLI.md
     - name: Developer Portal for Teams
