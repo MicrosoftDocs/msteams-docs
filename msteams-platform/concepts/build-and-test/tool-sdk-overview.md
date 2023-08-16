@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Tools and SDKs
 
-Build and develop your own Microsoft Teams app with the help of various tools, SDKs, and libraries. Building apps for Teams is now quick and easier as we help you understand the how to work on the various tools and SDKs available. Microsoft provides the platform that helps you to create, develop, test, debug, and publish your Teams app with the following:
+Build and develop your Microsoft Teams app using tools, SDKs, and libraries. The entire process is now quick, easy and streamlined as Microsoft offers a comprehensive platform to create, develop, test, debug, and publish your Teams app with the following:
 
 * [Tools](#tools)
 * [SDKs and libraries](#sdks-and-libraries)
