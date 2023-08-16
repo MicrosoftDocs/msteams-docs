@@ -25,20 +25,20 @@ Following is an example of an Adaptive Card based loop component:
 
 Before you build an Adaptive Card-based Loop component, ensure that you meet the following prerequisites:
 
-1. [Build a Message Extension with a Search command and Link unfurling](~/messaging-extensions/what-are-messaging-extensions.md).
+1. [Build a Message Extension with a Search command](../messaging-extensions/what-are-messaging-extensions.md).
 
-1. Add [link unfurling](~/messaging-extensions/how-to/link-unfurling.md) support to the Message Extension
+1. Add [link unfurling](../messaging-extensions/how-to/link-unfurling.md) support to the Message Extension
 
-1. Use [Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md)
+1. Use [Universal Actions for Adaptive Cards](../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md)
 
-1. [Extend your Teams message across Microsoft 365](../../m365-apps/extend-m365-teams-message-extension.md)
+1. [Extend your Teams message across Microsoft 365](extend-m365-teams-message-extension.md)
 
 ## Build Loop components
 
 After you've met all the requirements, upgrade the Adaptive Card into a Loop component using the following steps:
 
-1. Ensure the Adaptive Card adheres to the [Loop component design guidelines](design-loop-components.md) to build an actionable and coherent Adaptive Card based experience for your end users.
-1. Enable Loop component by including the URL that uniquely identifies the card in the [metadata.webUrl](https://adaptivecards.io/explorer/Metadata.html) field of your Adaptive Card payload. This is required to support portability via the Copy button present in the Loop header.
+1. Ensure the Adaptive Card adheres to the [design guidelines](design-loop-components.md) to build an actionable and coherent Adaptive Card based experience for your end users.
+1. Enable Loop component by including the URL that uniquely identifies the card in the [metadata.webUrl](https://adaptivecards.io/explorer/Metadata.html) field of your Adaptive Card payload to support portability via the Copy button present in the Loop header.
 
 To enable an Adaptive Card based Loop component, add the `metadata` and `webUrl` properties to the [Adaptive Card schema](https://adaptivecards.io/explorer/).
 
@@ -55,168 +55,10 @@ The following is a JSON example of an Adaptive Card based Loop component with th
   },
   "body": [
     {
-      "size": "large",
-      "text": "Overflow Action Test Card",
-      "weight": "bolder",
-      "type": "TextBlock"
+      ....
     },
-    {
-      "text": "ActionSet **all secondary actions**",
-      "type": "TextBlock"
-    },
-    {
-      "actions": [
-        {
-          "data": {
-            "key": "Submit from overflow menu"
-          },
-          "title": "Action Submit",
-          "mode": "secondary",
-          "type": "Action.Submit"
-        },
-        {
-          "url": "https://github.com/Microsoft/AdaptiveCards",
-          "title": "OpenUrl",
-          "iconUrl": "https://us-prod.asyncgw.teams.microsoft.com/urlp/v1/url/content?url=https://toppng.com/uploads/preview/mario-mushroom-free-png-image-super-mario-mushroom-11562945955cv6up3e91x.png",
-          "mode": "secondary",
-          "type": "Action.OpenUrl"
-        },
-        {
-          "card": {
-            "type": "AdaptiveCard",
-            "body": [
-              {
-                "text": "What do you think?",
-                "type": "TextBlock"
-              }
-            ],
-            "actions": [
-              {
-                "title": "Neat!",
-                "type": "Action.Submit"
-              }
-            ]
-          },
-          "title": "Action.ShowCard",
-          "mode": "secondary",
-          "type": "Action.ShowCard"
-        }
-      ],
-      "type": "ActionSet"
-    },
-    {
-      "text": "ActionSet **primary + secondary actions**",
-      "type": "TextBlock"
-    },
-    {
-      "actions": [
-        {
-          "data": {
-            "key": "View"
-          },
-          "title": "View",
-          "type": "Action.Submit"
-        },
-        {
-          "data": {
-            "key": "Edit"
-          },
-          "title": "Edit",
-          "mode": "secondary",
-          "type": "Action.Submit"
-        },
-        {
-          "data": {
-            "key": "Delete"
-          },
-          "title": "Delete",
-          "mode": "secondary",
-          "type": "Action.Submit"
-        }
-      ],
-      "type": "ActionSet"
-    },
-    {
-      "text": "Check actions.length > maxActions",
-      "type": "TextBlock"
-    },
-    {
-      "actions": [
-        {
-          "title": "Action 1",
-          "type": "Action.Submit"
-        },
-        {
-          "title": "Action 2",
-          "type": "Action.Submit"
-        },
-        {
-          "title": "Action 3",
-          "type": "Action.Submit"
-        },
-        {
-          "title": "Action 4",
-          "type": "Action.Submit"
-        },
-        ...
-      ],
-      "type": "ActionSet"
-    },
-    {
-      "text": "========= I am bottom line of body =========",
-      "type": "TextBlock"
-    }
-  ],
-  "actions": [
-    {
-      "url": "https://adaptivecards.io",
-      "title": "OpenUrl 1",
-      "type": "Action.OpenUrl"
-    },
-    {
-      "data": {
-        "key": "Submit from overflow menu"
-      },
-      "title": "Action Submit",
-      "mode": "secondary",
-      "type": "Action.Submit"
-    },
-    {
-      "url": "https://github.com/Microsoft/AdaptiveCards",
-      "title": "OpenUrl",
-      "iconUrl": "https://us-prod.asyncgw.teams.microsoft.com/urlp/v1/url/content?url=https://toppng.com/uploads/preview/mario-mushroom-free-png-image-super-mario-mushroom-11562945955cv6up3e91x.png",
-      "mode": "secondary",
-      "type": "Action.OpenUrl"
-    },
-    {
-      "card": {
-        "type": "AdaptiveCard",
-        "body": [
-          {
-            "text": "What do you think?",
-            "type": "TextBlock"
-          }
-        ],
-        "actions": [
-          {
-            "title": "Neat!",
-            "type": "Action.Submit"
-          }
-        ]
-      },
-      "title": "Action.ShowCard",
-      "mode": "secondary",
-      "type": "Action.ShowCard"
-    }
-  ],
-  "refresh": {
-    "action": {
-      "verb": "refreshCard",
-      "title": "See Latest",
-      "type": "Action.Execute"
-    }
+  ]
   }
-}
 ```
 
 ### Query parameters

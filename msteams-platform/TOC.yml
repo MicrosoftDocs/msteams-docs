@@ -126,9 +126,6 @@
     - name: Activity feed notifications
       href: concepts/design/activity-feed-notifications.md
       displayName: notify, notification
-    - name: Adaptive Card loop component
-      href: task-modules-and-cards/cards/design-loop-components.md
-      displayName: loop component, weburl, metadata
 - name: Tools and SDKs
   items:
   - name: Tools 
@@ -627,9 +624,6 @@
     - name: Typeahead search in Adaptive Cards
       href: task-modules-and-cards/cards/dynamic-search.md
       displayName: Static and dynamic typeahead search
-    - name: Adaptive Card loop component
-      href: task-modules-and-cards/cards/cards-loop-component.md
-      displayName: loop component, weburl, metadata
     - name: Universal Actions for Adaptive Cards
       items:
       - name: Overview
@@ -781,6 +775,14 @@
       - name: Teams message extension vs. Outlook add-in
         href: m365-apps/me-or-outlook-add-in.md
         displayName: mail, Microsoft 365, Office 365, Outlook add-in, message extension
+  - name: Adaptive Card loop component
+    items:
+      - name: Adaptive Card loop component design guidelines
+        href: m365-apps/design-loop-components.md
+        displayName: loop component, weburl, metadata
+      - name: Build Adaptive Card loop component
+        href: m365-apps/cards-loop-component.md
+        displayName: loop component, weburl, metadata
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Extend Microsoft 365 Copilot
