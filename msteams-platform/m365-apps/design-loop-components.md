@@ -82,6 +82,14 @@ The platform provides the component header and includes standard elements such a
 
 :::image type="content" source="../assets/images/adaptive-cards/loop-component-header.png" alt-text="Infographic shows the UX elements in a Loop component header.":::
 
+|Counter  |Description  |
+|---------|---------|
+|1     |  App icon       |
+|2     |  App name       |
+|3     |  Component locations (Loop control)       |
+|4     |  Copy component      |
+|5     |  Collaborators (Collab panel)  OPTIONAL       |
+
 The **app name** is drawn from the component contract. When possible, use a concise name.
 
 The **app logo** is drawn from the component contract. Ensure the logo provided works on both light and dark backgrounds since the same asset is used for light and dark modes and high contrast.
