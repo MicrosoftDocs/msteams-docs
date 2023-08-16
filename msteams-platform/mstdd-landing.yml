@@ -78,6 +78,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Enable RSC permissions for a user using the Graph APIs
+        url: graph-api/rsc/grant-resource-specific-consent.md 
       - text: Teams Toolkit v17.7 extension within Visual Studio
         url: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md      
       - text: Send a proactive message using AAD ID
@@ -96,8 +98,7 @@ landingContent:
         url: apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api
       - text: Resource-specific consent for your Teams app
         url: graph-api/rsc/resource-specific-consent.md      
-      - text: Drive customer adoption of your app
-        url: promote-app-adoption.md
+
 
 
     - linkListType: whats-new
