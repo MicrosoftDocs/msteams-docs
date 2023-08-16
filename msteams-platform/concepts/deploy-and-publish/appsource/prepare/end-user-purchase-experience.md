@@ -22,18 +22,22 @@ The following example shows how users can purchase subscription plans for a Team
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app.":::
 
-1. Select your country or region to see subscription plans for your location and select **Save and continue**.
+1. To view subscription plans for your location, select your country or region > **Save and continue**.
 
     :::image type="content" source="~/assets/images/saas-offer/add-region.png" alt-text="Screenshot shows option to select the country or region.":::
 
-1. In the **Choose a subscription plan** dialog, decide the plan you want and select **Start trail**.
+1. In the **Choose a subscription plan** dialog, select **Start trail** to purchase a plan.
 
     > [!NOTE]
-    > Private plans are visible only to users of the organization you're providing the offer. A **Private offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon indicates such private plans.
+    > Private plans are visible only to users of the organization you're providing the specific offer. A **Private offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon indicates such private plans.
 
     :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Screenshot shows selecting the appropriate subscription plan.":::
 
-1. In the **Checkout** dialog, provide the required information and select **Place order**.
+1. In the **Checkout** dialog, provide the following required information:
+    1. Select the number of plans.
+    1. Provide the name and address.
+    1. Provide details on the payment method.
+1. Select **Place order**.
 
     :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Screenshot shows placing the subscription order.":::
 
