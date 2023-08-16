@@ -80,6 +80,8 @@ landingContent:
       links:
       - text: Get participant events
         url: apps-in-teams-meetings/meeting-apps-apis.md#get-participant-events
+      - text: Teams Toolkit v17.7 extension within Visual Studio
+        url: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md      
       - text: Send a proactive message using AAD ID
         url: bots/how-to/conversations/send-proactive-messages.md
       - text: Use callRecording API to fetch meeting recording from all meetings (Developer preview)
@@ -96,8 +98,6 @@ landingContent:
         url: apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api
       - text: Resource-specific consent for your Teams app
         url: graph-api/rsc/resource-specific-consent.md      
-      - text: Drive customer adoption of your app
-        url: promote-app-adoption.md
 
     - linkListType: whats-new
       links:
