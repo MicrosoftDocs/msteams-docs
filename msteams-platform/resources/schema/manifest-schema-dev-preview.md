@@ -431,6 +431,26 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |`supportsVideo`|Boolean|||A value indicating where a bot supports video calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. Default: `false`|
 |`requiresSecurityEnabledGroup`|Boolean|||A value indicating whether the team's Office group needs to be security enabled. Default: `false`|
 
+### bots.configuration
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`teams`|object||||
+|`teams.parameters`|array|5||The minItems is 1 and maxItems is 5.|
+|`teams.parameters.name`|string|64|✔️|The name of the parameter.|
+|`teams.parameters.inputType`|string|||Type of the parameter. Options are `text`, `textarea`, `number`, `date`, `time`, `toggle`, and `choiceset`. Default value is `text`.|
+|`teams.parameters.title`|string|32|✔️|Title of the parameter.|
+|`teams.parameters.description`|string|128||Description of the parameter.|
+|`teams.parameters.value`|string|512||The initial value of the parameter.|
+|`teams.parameters.choices`|array|10||The choice options for the parameter.|
+|`teams.parameters.choices.title`|string|128|✔️|Title of the choice.|
+|`teams.parameters.choices.value`|string|512|✔️|Value of te choice.|
+|`taskInfo`|object||||
+|`taskInfo.title`|string|64||Title of the task module.|
+|`taskInfo.width`|string|16||Task module width - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
+|`taskInfo.height`|string|16||Task module height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
+|`taskInfo.url`|string|2048||Task module URL.|
+
 ### bots.commandLists
 
 An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. For more information, see [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md).
