@@ -9,6 +9,11 @@ ms.author: surbhigupta
 
 # Tools and SDKs
 
+Lets build and develop your own Microsoft Teams app with the helps of various tools, SDKs, and libraries. Microsoft provides the platform that helps you to create, develop, test, debug, and publish your Teams app with the following:
+
+* [Tools](#tools)
+* [SDKs and libraries](#sdks-and-libraries)
+
 ## Tools
 
 Teams Platform brings you different tools to build and develop your Teams apps. Following are different tools which are available for you to build your own app:
@@ -16,9 +21,9 @@ Teams Platform brings you different tools to build and develop your Teams apps. 
 | Tools | Why you need? | Environment | Test and debug |
 | -------- | ------------- | ----------------- | ---------------------- |
 | [Teams Toolkit](../../toolkit/teams-toolkit-fundamentals.md) | Teams Toolkit makes it simple to get started with app development for Microsoft Teams. You can start a project template for common line-of-business app scenarios or from a sample and save setup time with automated app registration and configuration using Visual Studio Code and Visual Studio. | **Visual Studio Code**: JavaScript and TypeScript </br> **Visual Studio**: .NET and Blazor | In Visual Studio Code and Visual Studio |
-| [Yeoman generator for Teams](https://github.com/pnp/generator-teams) | Yo Teams allows you to build Microsoft Teams applications based on TypeScript and node.js on your terms, in your editor of choice, without any external or online dependencies. | TypeScript and node.js | - |
+| [Yeoman generator for Teams](https://github.com/pnp/generator-teams) | Yo Teams allows you to build Microsoft Teams applications based on TypeScript and node.js on your terms, in your editor of choice, without any external or online dependencies. | TypeScript and node.js | NA |
 | [TeamsFx CLI](../../toolkit/TeamsFx-CLI.md) | TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications. | JavaScript and .NET | Use command prompt |
-| [Developer Portal for Teams](teams-developer-portal.md) | Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Teams apps. With Developer Portal, you can create a basic Teams app manifest and distribute the app to Teams.  | Supports all languages | Yes |
+| [Developer Portal for Teams](teams-developer-portal.md) | Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Teams apps. With Developer Portal, you can create a basic Teams app manifest and distribute the app to Teams.  | Supports all languages | Developer Portal for Teams |
 </br>
 
 <details>
