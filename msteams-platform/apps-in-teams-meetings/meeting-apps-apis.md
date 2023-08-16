@@ -1527,17 +1527,15 @@ Your bot can receive real-time meeting details such as participant join and leav
 
 > [!NOTE]
 >
-> * Participant events is supported in scheduled private and channel meetings only.
+> * Participant events is supported only in scheduled private meetings.
 > * For a bot to receive participant events, ensure that you add the bot to the meeting before a participant joins or leaves the meeting.
 
 To subscribe to participant events, follow these steps:
 
 1. In [Developer Portal](https://dev.teams.microsoft.com/) open your bot app or import an existing app.
-1. Ensure that the following RSC delegated permissions are configured in your app manifest:
-    * `OnlineMeetingParticipant.Read.Chat` for scheduled private meetings.
-    * `ChannelMeetingParticipant.Read.Group` for scheduled channel meetings.
-    
-    If your app doesn't have these permissions, add them through the **Configure** > **Permissions** section of your app in Developer Portal. For more information, see [RSC delegated permissions.](~/resources/schema/manifest-schema.md#rsc-delegated-permissions)
+1. Ensure that the `OnlineMeetingParticipant.Read.Chat` RSC delegated permissions is configured in your app manifest for scheduled private meetings.
+
+   If your app doesn't have these permissions, add them through the **Configure** > **Permissions** section of your app in Developer Portal. For more information, see [RSC delegated permissions.](~/resources/schema/manifest-schema.md#rsc-delegated-permissions)
 1. In the **Meeting events** section, select the required events:
     * Participant join the meeting
     * Participant leave the meeting
