@@ -35,7 +35,7 @@ When the offer is live, you can link the offer to your SaaS app and publish the 
 
 ## Configure SaaS offer to your app
 
-For users to see your subscription plans in the Teams store, there are two ways you can link the published SaaS offer to your Teams app.
+For users to see your subscription plan in the Teams store, there are two ways you can link the published SaaS offer to your Teams app.
 
 * Teams Developer Portal
 * App manifest update
@@ -72,7 +72,7 @@ After successfully linking the offer to your app, you can now publish your app t
 
 * Ensure your app adheres to the [store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines?branch=main).
 * [Prepare for store submission](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist?branch=main&tabs=desktop).
-* [Perform the required pre-checks](/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish?branch=pr-en-us-8990) before submission.
+* [Perform the required prechecks](/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish?branch=pr-en-us-8990) before submission.
 * [Submit app for validation](/office/dev/store/add-in-submission-guide).
 
 For complete instructions, see [publish your app to the Teams store](../publish.md).

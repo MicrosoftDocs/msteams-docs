@@ -70,7 +70,7 @@ The following example shows how users can manage licenses for third-party apps f
 
 1. Search for the users or a team in the search box and select **Assign**. The license is assigned to the users or a team.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/assign-licenses.png" alt-text="Screenshot shows assigning license to a Team with a single click highlighted in red.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/assign-licenses.png" alt-text="Screenshot shows assigning license to a Team highlighted in red.":::
 
     You can view the list of assigned users or teams for the subscription and also check the status of the assignment.
 
