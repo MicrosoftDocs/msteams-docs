@@ -52,6 +52,8 @@ The Loop component body is what makes your component unique. Building a componen
 
 The details of the component body will be determined by the specifics of your users’ needs and scenarios.
 
+:::image type="content" source="../assets/images/adaptive-cards/loop-component-body.png" alt-text="Infographic shows the UX elemts of a loop component body.":::
+
 The following are the best practices for a loop component body:
 
 * [Adaptive Cards Home](https://adaptivecards.io): Start here for all Adaptive Card information
@@ -77,6 +79,8 @@ As described above, all Loop components have a standard header and border; your 
 ## Loop component header
 
 The platform provides the component header and includes standard elements such as Logo, Name, and Copy.
+
+:::image type="content" source="../assets/images/adaptive-cards/loop-component-header.png" alt-text="Infographic shows the UX elements in a Loop component header.":::
 
 The **app name** is drawn from the component contract. When possible, use a concise name.
 
