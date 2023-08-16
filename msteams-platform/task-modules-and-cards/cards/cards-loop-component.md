@@ -10,12 +10,12 @@ ms.date: 08/16/2023
 
 Loop component is an evolution of Fluid component - a way to collaborate with a team through loop whether it’s in chat, email, meeting, or Loop page. Loop component stays in sync no matter how many places the content lives across Microsoft 365 apps.
 
-Adaptive Card-based Loop component allows M365 developers to build Loop experiences while building upon their existing message extension-based M365 integrations. With AC-based Loop components, users are empowered to bring live business data into chats and email messages, and complete workflows without switching apps . For developers, components adhere to M365 platform's 'build once, works everywhere' philosophy which ensure that your Loop component will automatically work seamlessly across Teams and Outlook, and in every additional host app enabled, including the new Loop app.
+Adaptive Card-based Loop component allows Microsoft 365 developers to build Loop experiences while building upon their existing message extension-based Microsoft 365 integrations. With AC-based Loop components, users are empowered to bring live business data into chats and email messages, and complete workflows without switching apps. For developers, components adhere to Microsoft 365 platform's 'build once, works everywhere' philosophy, which ensures that your Loop component will automatically work seamlessly across Teams and Outlook, and in every additional host app enabled, including the new Loop app.
 
 > [!NOTE]
 > Adaptive Card-based Loop components are available in public preview.
 
-## Gett started
+## Get started
 
 There are a few pre-requisites needed before building an Adaptive Card-based Loop component:
 
@@ -241,12 +241,12 @@ To configure, distribute, and manage your application use the Developer Portal f
 
 :::image type="content" source="images/developer-portal-overview.png" alt-text="A screenshot of the Developer Portal overview page with the Preview in Teams button highlighted":::
 
-### Setup your dev environment to test in Outlook
+### Set up your dev environment to test in Outlook
 
 To turn on the Adaptive Card based Loop component in Outlook.com:
 
 1. Follow the steps on [Teams App Camp (microsoft.github.io)](https://microsoft.github.io/app-camp/) to create a search-based ME.
-1. Create a M365 dev tenant following [these steps](https://developer.microsoft.com/en-us/microsoft-365/dev-program) or login with your test tenant credentials.
+1. Create a Microsoft 365 dev tenant following [these steps](https://developer.microsoft.com/en-us/microsoft-365/dev-program) or sign in with your test tenant credentials.
 1. In the admin center of your test tenant, [enable Targeted Release for everyone](../microsoft-365/admin/manage/release-options-in-office-365.md).
 1. Send an email from the tenant admin account to the help alias: <acloops-preview-help@microsoft.com>. Microsoft will verify the admin user and enable support for Loop components for this tenant.
 
