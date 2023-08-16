@@ -35,15 +35,9 @@ Cater your app to a specific audience from the available list of countries or re
 
 Teams platform features that are available to all app developers.
 
-**2023 July**
+**2023 August**
 
-* ***July 28, 2023***: [Use Collaborative Stage View to engage with your app content in a new Teams window](tabs/tabs-link-unfurling.md#collaborative-stage-view).
-
-* ***July 25, 2023***: [Use people icon in an Adaptive Card to view the images of users](task-modules-and-cards/cards/cards-format.md#people-icon-in-an-adaptive-card).
-
-* ***July 20, 2023***: [App caching for iOS personal tray](tabs/how-to/app-caching.md).
-
-* ***July 06, 2023***: [Use app icon badging to identify any app activity during a meeting](apps-in-teams-meetings/app-icon-badging-for-your-app.md).
+***August 10, 2023***: [Send a proactive message using AAD ID](bots/how-to/conversations/send-proactive-messages.md)
 
 :::column-end:::
 :::row-end:::
@@ -54,6 +48,10 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 25/07/2023 | Use Collaborative Stage View to engage with your app content in a new Teams window | Build tabs > [Tabs link unfurling and Stage View](tabs/tabs-link-unfurling.md#collaborative-stage-view).
+| 25/07/2023 | Use people icon in an Adaptive Card to view the images of users | Build cards and task modules > Build cards > Review store validation guidelines > [Build cards](task-modules-and-cards/cards/cards-format.md#people-icon-in-an-adaptive-card) |
+| 20/07/2023 | App caching for iOS personal tray | Build tabs > [App caching for iOS personal tray](tabs/how-to/app-caching.md) |
+| 06/07/2023 | Use app icon badging to identify any app activity during a meeting | Build apps for Teams meetings and calls > Build in-meeting notification and app icon badging > [Use app icon badging to identify any app activity during a meeting](apps-in-teams-meetings/app-icon-badging-for-your-app.md) |
 | 14/06/2023 | Added validation guidelines for Teams app powered by Artificial Intelligence (AI). | Distribute your app > Publish to the Teams store > Review store validation guidelines > [Apps powered by Artificial Intelligence](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-powered-by-artificial-intelligence) |
 | 02/06/2023 | Get real-time meeting events for channel meetings. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > Meeting apps APIs > [Get real-time Teams meeting events API](apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api) |
 | 24/04/2023 | Develop your apps with a seamless transition between Teams Developer Portal and Teams Toolkit. | Tools and SDKs > Developer Portal for Teams > [Develop your apps with Teams Toolkit](concepts/build-and-test/develop-your-apps-with-teams-toolkit.md) |
@@ -119,7 +117,7 @@ Teams platform features that are available to all app developers.
 | 05/24/2022 | Additional tips for rapid approval to publish your app linked to a SaaS offer | Publish to the Teams store > Overview > [Additional tips for rapid approval to publish your app linked to a SaaS offer](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
 | 05/24/2022 | Submit your Outlook- and Office-enabled apps to the Teams store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
 | 05/24/2022 | App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-library.md)  |
-| 05/24/2022 | Teams Toolkit version 4.0.0 for Visual Studio Code is now GA | Tools and SDKs > Teams Toolkit for Visual Studio Code > <br> •  [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md) <br> • [Build command bot with JavaScript](toolkit/add-capability.md) <br> • [Build notification bot with JavaScript](toolkit/add-capability.md) <br> • [Preview and customize Teams app manifest](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [Connect to existing APIs](toolkit/add-API-connection.md) <br> • [Add capabilities to your Teams apps](toolkit/add-capability.md) <br> • [Add single sign-on experience](toolkit/add-single-sign-on.md) <br> • [Add cloud resources to Teams app](toolkit/add-resource.md) |
+| 05/24/2022 | Teams Toolkit version 4.0.0 for Visual Studio Code is now GA | Tools and SDKs > Teams Toolkit for Visual Studio Code > <br> • [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md) <br> • [Build command bot with JavaScript](toolkit/toolkit-v4/add-capability-v4.md) <br> • [Build notification bot with JavaScript](toolkit/toolkit-v4/add-capability-v4.md) <br> • [Preview and customize Teams app manifest](toolkit/toolkit-v4/add-capability-v4.md) <br> • [Connect to existing APIs](toolkit/add-API-connection.md) <br> • [Add capabilities to your Teams apps](toolkit/toolkit-v4/add-capability-v4.md) <br> • [Add single sign-on experience](toolkit/add-single-sign-on.md) <br> • [Add cloud resources to Teams app](toolkit/add-resource.md) |
 | 05/24/2022 | Introduced app manifest version 1.13 | App manifest > [Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md) |
 | 5/24/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
 |04/26/2022|Uninstall behavior for personal app with bot | Build bots > Bot conversations > [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
@@ -401,7 +399,7 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 17/05/2023 | [Teams Toolkit v4](~/toolkit/toolkit-v4/teams-toolkit-fundamentals-v4.md) extension within Visual Studio Code **will be** deprecated. We recommend that you use Teams Toolkit v5 within Visual Studio Code for building your Teams app. | Tools and SDKs > Teams Toolkit > [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md)|
+| 17/05/2023 | [Teams Toolkit v4](toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code **will be** deprecated. We recommend that you use Teams Toolkit v5 within Visual Studio Code for building your Teams app. | Tools and SDKs > Teams Toolkit > [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md)|
 
 ## Deprecated
 

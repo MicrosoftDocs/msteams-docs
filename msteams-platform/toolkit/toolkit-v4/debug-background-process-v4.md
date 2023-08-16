@@ -1,5 +1,5 @@
 ---
-title: Debug background processes v4
+title: Debug background processes using Visual Studio
 author: surbhigupta
 description: In this module, learn how Visual Studio Code and Teams Toolkit work during local debug process. Also learn how to register and configure your Teams app in Teams toolkit v4.
 ms.author: surbhigupta
@@ -8,13 +8,7 @@ ms.topic: overview
 ms.date: 03/03/2022
 ---
 
-# Debug background process v4
-
-> [!IMPORTANT]
->
-> We've introduced the [Teams Toolkit v5](../teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> Teams Toolkit v4 extension will soon be deprecated.
+# Debug background processes using Visual Studio
 
 The local debug process involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debugger in Microsoft Visual Studio Code. The Visual Studio Code launches the debuggers, and Microsoft Edge or Google Chrome launches a new browser instance.
 
@@ -41,7 +35,7 @@ Teams Toolkit checks the following prerequisites during the debug process:
   |Bot |  14, 16 (recommended)|
   |Message extension | 14, 16 (recommended) |
 
-For more information, see [Node.js version compatibility table for project type](tools-prerequisites-v4.md#nodejs-version-compatibility-table-for-project-type).
+For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).
 
 * Teams Toolkit prompts you to sign in to Microsoft 365 account, if you haven't signed in with your valid credentials.
 * Custom app uploading or sideloading for your developer tenant is turned on, to prevent local debug termination.
@@ -183,8 +177,8 @@ You can view the project folders and files under **Explorer** in Visual Studio C
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
-* [Debug your Teams app using Teams Toolkit](debug-local-v4.md)
-* [Use Teams Toolkit to provision cloud resources](provision-v4.md)
-* [Deploy to the cloud](deploy-v4.md)
-* [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest-v4.md)
+* [Teams Toolkit Overview](../teams-toolkit-fundamentals.md)
+* [Debug your Teams app using Teams Toolkit](../debug-local.md)
+* [Use Teams Toolkit to provision cloud resources](../provision.md)
+* [Deploy to the cloud](../deploy.md)
+* [Preview and customize Teams app manifest](../TeamsFx-preview-and-customize-app-manifest.md)
