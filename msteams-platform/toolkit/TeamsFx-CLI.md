@@ -470,7 +470,7 @@ The following table lists different features to your Teams application along wit
 | `teamsfx add azure-apim` | A hybrid, multi-cloud management platform for APIs across all environments.|
 | `teamsfx add azure-sql` | An always-up-to-date relational database service built for the cloud. |
 | `teamsfx add azure-keyvault` | A cloud service for securely storing and accessing secrets. |
-| `teamsfx add sso` | Develop a single sign-on (SSO) feature for Teams Launch pages and Bot capability. |
+| `teamsfx add sso` | Develop a single sign-on (SSO) feature for Teams tabs and bot capability. |
 | `teamsfx add api-connection [auth-type]` | Connect to an API with authentication support using TeamsFx SDK. |
 | `teamsfx add cicd` | Add CI/CD Workflows for GitHub, Azure DevOps or Jenkins.|
 
