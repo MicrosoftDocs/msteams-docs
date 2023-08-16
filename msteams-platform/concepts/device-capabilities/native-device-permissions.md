@@ -2,7 +2,7 @@
 title: Request device permissions for your Microsoft Teams app
 author: surbhigupta
 description: How to update your app manifest in order to request access to native features that require user consent, such as scan QR, barcode, image, audio, and video capabilities
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: how-to
 ms.author: surbhigupta
 ms.date: 03/21/2023
@@ -87,6 +87,8 @@ Each property allows you to prompt the users to ask for their consent:
 | notifications | Permission to send the user notifications.      |
 | midi          | Permission to send and receive  Musical Instrument Digital Interface (MIDI) information from a digital musical instrument.   |
 | openExternal  | Permission to open links in external applications.  |
+
+For more information, see [app manifest](../../resources/schema/manifest-schema.md#devicepermissions).
 
 ## Check permissions from your app
 
@@ -268,5 +270,4 @@ Device permissions are stored for every sign in session. It means that if you si
 * [Integrate media capabilities](media-capabilities.md)
 * [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Meeting apps APIs](../../apps-in-teams-meetings/meeting-apps-apis.md)
