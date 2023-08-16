@@ -65,7 +65,7 @@ To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
 1. Select **Teams: Create a New App**.
 1. From the dropdown list that appears, select **Message Extension**.
-1. Select **Custom Search Results** to download the sample code for a Teams message extension using the latest Teams app manifest. For more information, see [Teams developer manifest](../resources/schema/manifest-schema.md).
+1. Select **Custom Search Results** to download the sample code for a Teams message extension using the latest app manifest (previously called Teams app manifest). For more information, see [Teams developer manifest](../resources/schema/manifest-schema.md).
 
     :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams sample options.":::
 
@@ -98,7 +98,7 @@ You have two options for updating your app manifest:
 
 # [Manual steps](#tab/manifest-manual)
 
-Open your Teams app manifest and update the `$schema` and `manifestVersion` with the following values:
+Open your app manifest and update the `$schema` and `manifestVersion` with the following values:
 
 ```json
 {

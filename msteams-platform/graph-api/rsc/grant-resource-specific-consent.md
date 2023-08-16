@@ -23,7 +23,7 @@ In this section, you'll learn to:
 To add RSC permissions to your app, follow these steps:
 
 1. [Register your app with Microsoft identity platform using the Azure AD portal](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
-1. [Update your Teams app manifest](#update-your-teams-app-manifest).
+1. [Update your app manifest](#update-your-app-manifest).
 
 ### Register your app with Microsoft identity platform using the Azure AD portal
 
@@ -32,13 +32,13 @@ The Azure Active Directory (Azure AD) portal provides a central platform for you
 > [!WARNING]
 > You mustn't share your Azure AD app ID across multiple Teams apps. There must be a 1:1 mapping between a Teams app and an Azure AD app. Attempts to install multiple Teams apps which are associated with the same Azure AD app ID will cause installation or runtime failures.
 
-### Update your Teams app manifest
+### Update your app manifest
 
 You must declare RSC permissions in your Teams app **manifest.json** file. You don't need to add the non-RSC permissions to the app manifest as Azure AD portal stores them.
 
 #### Request RSC permissions for Teams app
 
-To request RSC permissions for an app, list the permissions that the app requires in the authorization section of the Teams app manifest. The instructions can vary based on the manifest version of the app.
+To request RSC permissions for an app, list the permissions that the app requires in the authorization section of the app manifest (previously called Teams app manifest). The instructions can vary based on the manifest version of the app.
 
 > [!NOTE]
 > For delegated permissions, use app manifest v1.12 or later.
@@ -402,7 +402,7 @@ After the app has been installed to a resource, you can use [Microsoft Graph Exp
 1. Sign in to **Graph Explorer**.
 1. Make a **GET** call to this endpoint: `https://graph.microsoft.com/beta/teams/{teamGroupId}/permissionGrants`.
 
-   The `clientAppId` field in the response must map to the `webApplicationInfo.id` specified in the Teams app manifest.
+   The `clientAppId` field in the response must map to the `webApplicationInfo.id` specified in the app manifest.
 
     :::image type="content" source="../../assets/images/team-graph-permissions.png" alt-text="Screenshot shows the Graph explorer response to GET call for team RSC permissions.":::
 
@@ -420,7 +420,7 @@ For more information on how to get details of the apps installed in a specific t
 1. Sign in to **Graph Explorer**.
 1. Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants`.
 
-   The `clientAppId` field in the response must map to the `webApplicationInfo.id` specified in the Teams app manifest.
+   The `clientAppId` field in the response must map to the `webApplicationInfo.id` specified in the app manifest.
 
     :::image type="content" source="../../assets/images/chat-graph-permissions.png" alt-text="Screenshot shows the Graph explorer response to GET call for chat RSC permissions.":::
 
