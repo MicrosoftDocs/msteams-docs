@@ -157,22 +157,18 @@ To receive Read-receipts for your bot ensure the following:
 
 Add the [RSC](/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) `ChatMessageReadReceipt.Read.Chat` permission in the app manifest, as follows: 
 
-# [Version < 1.12](#tab/version-<-1.12)
+# [Version < 1.12](#tab/version-112)
 
 ```json
 
-“webApplicationInfo”: {
+ “webApplicationInfo”: {
 
-    "id": "123456c8-67d2-4f54-b74e-408b195c4cbc",
-
-    "resource": "https: //AnyString",
-
-    "applicationPermissions": [
-
-        "ChatMessageReadReceipt.Read.Chat"
-
-    ]
-},
+     "id": "123456c8-67d2-4f54-b74e-408b195c4cbc",
+     "resource": "https: //AnyString",
+     "applicationPermissions": [
+         "ChatMessageReadReceipt.Read.Chat"
+     ]
+ },
 
 ```
 
