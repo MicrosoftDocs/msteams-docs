@@ -174,7 +174,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 | [People Picker](../task-modules-and-cards/cards/people-picker.md) | A native control in Teams platform to search and select people, which can be integrated in web apps, Adaptive Cards, and more. |
-| [People icon](../task-modules-and-cards/cards/cards-format.md#people-icon-in-an-adaptive-card) | People icon helps users to view the images of users in an Adaptive Card |
+| [People icon](../task-modules-and-cards/cards/cards-format.md#people-icon-in-an-adaptive-card) | People icon helps users to view the images of users in an Adaptive Card. |
 | [Permission](../tabs/how-to/authentication/tab-sso-register-aad.md) | While authentication and providing access token for app user, a client application gains access to a resource server by declaring permission requests. Two types are available, Delegated permissions and Application permissions. <br> **See also**: [Scope](#s); [SSO](#s); [Authentication flow](#a) |
 | [Personal app](../concepts/design/personal-apps.md) | A personal app is a Teams application with a personal scope. It focuses on interactions with a single user. It can be a conversational bot to engage in one-to-one conversations with a user or a personal tab providing an embedded web experience, or both. <br>**See also**: [Shared app](#s); [Static app](#s) |
 | [Power Virtual Agents](../bots/how-to/add-power-virtual-agents-bot-to-teams.md) | A no-code, guided graphical interface solution that empowers every member of your team to create rich, conversational chat bots that easily integrate with the Teams platform. |
