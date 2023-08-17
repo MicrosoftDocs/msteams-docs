@@ -527,17 +527,12 @@ Each command item is an object with the following structure:
 
 ## scopeConstraints
 
-Optional:
-
-A list of team thread ids to which your app is restricted.
-
 The object is an array with all elements of type `object`.
 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
-|`tbd`|String||✔️|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
-|`tbd`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. The default is `false`.|
-|`tbd`|Array of object|10|✔️|Array of commands the message extension supports|
+|`teams`|array|128||A list of team thread ids to which your app is restricted.|
+|`teams.id`|string|64|✔️|Team's thread Id.|
 
 ## permissions
 
