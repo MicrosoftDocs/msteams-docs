@@ -34,15 +34,15 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 ## To configure app manifest
 
 1. Open the app project.
-2. Open the manifest folder.
+2. Open the app manifest folder.
 
     > [!NOTE]
     >
-    > - The manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
+    > - The app manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
     > - For more information on learning how to create a manifest.json, see [Reference: Manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
 
 1. Open the `manifest.json` file.
-1. Add one of the following code snippets to the manifest file to add the new property:
+1. Add one of the following code snippets to the app manifest file to add the new property:
 
     - If your app has a standalone bot, add the following code snippet:
 

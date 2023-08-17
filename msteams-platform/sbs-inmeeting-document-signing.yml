@@ -272,10 +272,10 @@ items:
             
              :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/authend.png" alt-text="Auth-end":::
 
-- title: Set up app settings and manifest files
+- title: Set up app settings and app manifest files
   durationInMinutes: 1
   content: |
-    After you've configured the Azure AD app, you need to configure app details in the app settings and manifest file. 
+    After you've configured the Azure AD app, you need to configure app details in the app settings and app manifest file. 
 
     **To configure app settings**
 
