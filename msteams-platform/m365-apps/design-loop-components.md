@@ -86,7 +86,6 @@ The platform provides the component header and includes standard elements such a
 |2     |  App name:  Full name of your app.       |
 |3     |  Component locations (Loop control)       |
 |4     |  Copy component      |
-|5     |  Collaborators (OPTIONAL)       |
 
 The **app name** is drawn from the component contract. When possible, use a concise name.
 
