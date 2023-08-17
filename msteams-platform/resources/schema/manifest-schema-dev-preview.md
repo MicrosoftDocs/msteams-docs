@@ -337,7 +337,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 |Name| Type | Maximum size | Required | Description|
 |---|---|---|---|---|
 |`short`|string|30 characters|✔️|The short display name for the app.|
-|`full`|string|100 characters||The full name of the app, used if the full app name exceeds 30 characters.|
+|`full`|string|100 characters|✔️|The full name of the app, used if the full app name exceeds 30 characters.|
 
 ## description
 
@@ -386,7 +386,7 @@ The object is an array with all elements of the type `object`. This block is req
 |`scopes`|array of enum|2|✔️|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
 |`context` |array of enums|8||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, `personalTab`, and `callingSidePanel`.|
 |`sharePointPreviewImage`|String|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
-|`supportedSharePointHosts`|array of enum|2||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
+|`supportedSharePointHosts`|array of enum|2||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart`. |
 |`meetingSurfaces`|array of enum|2||The set of meetingSurfaceItem scopes to which a tab belongs. Options are `sidePanel` and `stage`.|
 |`supportedPlatform`|array of enum|3||The set of supportedPlatform scopes to which a tab belongs. Options are `desktop`, `mobile`, and `teamsMeetingDevices`.|
 
@@ -708,13 +708,13 @@ Enables your app in non-standard channels. If your app supports a team scope and
 
 ## defaultBlockUntilAdminAction
 
-**Optional**-Boolean
+Boolean
 
 A value that indicates whether an app is blocked by default until admin allows it. The default value is **false**.
 
 ## publisherDocsUrl
 
-**Optional**-String
+String
 
 The url to the page that provides additional app information for the admins. The maxLength of the string is 2048.
 
