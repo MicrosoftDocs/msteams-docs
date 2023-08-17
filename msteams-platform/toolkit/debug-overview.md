@@ -463,7 +463,7 @@ In `.fx/configs/tasks.json`, set npmInstallArgs under `"Install npm packages"`.
 <details>
 <summary><b>Use your own app package</b></summary>
 
-In `.fx/configs/tasks.json`, set `"appPackagePath"` under `"Build & upload Teams manifest"` to your app package's path.
+In `.fx/configs/tasks.json`, set `"appPackagePath"` under `"Build & upload app manifest"` to your app package's path.
 
   :::image type="content" source="toolkit-v4/images/app-package-path-v4.png" alt-text="use your own app package path":::
 

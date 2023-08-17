@@ -92,15 +92,15 @@ For more information on application ID URI, see [To expose an API](tab-sso-regis
 <details>
 <summary>7. Error: Generic error when running the tab app.</summary>
 <br>
-A generic error may show up when one or more of app configurations made in Azure AD are incorrect. To resolve this error, check if the app details configured in your code and Teams manifest matches the values in Azure AD.
+A generic error may show up when one or more of app configurations made in Azure AD are incorrect. To resolve this error, check if the app details configured in your code and app manifest (previously called Teams app manifest) matches the values in Azure AD.
 
 The following image shows an example of the app details configured in Azure AD.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="App configuration values in Azure AD":::
 
-Check that the following values match between Azure AD, client-side code, and app manifest (previously called Teams app manifest):
+Check that the following values match between Azure AD, client-side code, and app manifest:
 
-- **App ID**: The app ID you generated in Azure AD should be the same in the code and in Teams manifest file. Check the app ID in Teams manifest matches the **Application (client) ID** in Azure AD.
+- **App ID**: The app ID you generated in Azure AD should be the same in the code and in app manifest file. Check the app ID in app manifest matches the **Application (client) ID** in Azure AD.
 
 - **App secret**: The app secret configured in the backend of your app should match the **Client credentials** in Azure AD.
     You should also check if the client secret is expired.
