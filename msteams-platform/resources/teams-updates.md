@@ -12,7 +12,7 @@ ms.topic: reference
 
 The following are the advantages the new Teams client:  
 
-* The new Teams client uses the Evergreen version of Edge WebView2 to ensure Teams client is always up to date with the latest fixes and improvements available in Edge and Chromium.
+* The new Teams client uses the Evergreen version of Microsoft Edge WebView2 to ensure Teams client is always up to date with the latest fixes and improvements available in Microsoft Edge and Chromium.
 
 * The new Teams client has been rebuilt from the ground up with performance in mind and includes all the platform infrastructure responsible for bootstrapping your app and powering the SDK APIs that it uses.  
 
@@ -35,8 +35,8 @@ To ensure a smooth transition, a phased rollout of the new platform is planned a
 
 > [!NOTE]
 >
-> * It's recommended to test apps, tabs, messaging extensions, bots, and link unfurling after switching from the Classic Teams client to the new Teams client.
-> * Adaptive Card tabs arn't supported in the new Teams client. If your app is using Adaptive Card tabs, it's recommended to rebuild the tab as a web-based tab. For more information, see [Build tabs for Teams](../tabs/how-to/build-adaptive-card-tabs.md).
+> * We recommend to test apps, tabs, messaging extensions, bots, and link unfurling after switching from the Classic Teams client to the new Teams client.
+> * Adaptive Card tabs arn't supported in the new Teams client. If your app is using Adaptive Card tabs, we recommend to rebuild the tab as a web-based tab. For more information, see [Build tabs for Teams](../tabs/how-to/build-adaptive-card-tabs.md).
 
 **Teams features that will be supported soon**
 
@@ -46,9 +46,9 @@ To ensure a smooth transition, a phased rollout of the new platform is planned a
 
 * If you have a [meeting extension](../apps-in-teams-meetings/teams-apps-in-meetings.md) app, the app might not support all the meeting extensibility features.
 
-* You can't pin, and unpin apps in the new Teams client. It's recommended to perform these actions in the Classic Teams client and the changes are reflected in the new Teams client. For more information, see [pin apps in Microsoft Teams](https://support.microsoft.com/office/pin-an-app-for-easy-access-3045fd44-6604-4ba7-8ecc-1c0d525e89ec).
+* You can't pin, and unpin apps in the new Teams client. We recommend to perform these actions in the Classic Teams client and the changes are reflected in the new Teams client. For more information, see [pin apps in Microsoft Teams](https://support.microsoft.com/office/pin-an-app-for-easy-access-3045fd44-6604-4ba7-8ecc-1c0d525e89ec).
 
-* You can't add, update, rename, and remove tabs from chats and channels in the new Teams client. It's recommended to perform these actions in the Classic Teams client and the changes are reflected in the new Teams client. For more information, see [use an app in a tab in a channel or chat](https://support.microsoft.com/office/use-an-app-in-a-tab-in-a-channel-or-chat-83d0514f-2134-4db5-80f2-e9b43e111d57).
+* You can't add, update, rename, and remove tabs from chats and channels in the new Teams client. We recommend to perform these actions in the Classic Teams client and the changes are reflected in the new Teams client. For more information, see [use an app in a tab in a channel or chat](https://support.microsoft.com/office/use-an-app-in-a-tab-in-a-channel-or-chat-83d0514f-2134-4db5-80f2-e9b43e111d57).
 
 For more information on known issues and gaps in the new Teams client, see [new Microsoft Teams](/microsoftteams/new-teams-desktop-admin?tabs=teams-admin-center#known-issues).
 

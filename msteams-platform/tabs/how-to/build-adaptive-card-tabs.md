@@ -441,3 +441,4 @@ Follow the [step-by-step](../../sbs-tab-with-adaptive-cards.yml) guide to build 
 * [Cards](../../task-modules-and-cards/what-are-cards.md)
 * [Use task modules in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
 * [Form completion feedback](../../task-modules-and-cards/cards/cards-actions.md#form-completion-feedback)
+* [Microsoft Teams update](../../resources/teams-updates.md)
