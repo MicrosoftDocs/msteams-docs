@@ -350,6 +350,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 August**
 
+***August 18, 2023***: [Build Adaptive Card-based Loop components to serve self-updating content from your message extensions.](m365-apps/design-loop-components.md)
+
 ***August 08, 2023***: [Use callRecording API to fetch meeting recording from all meetings.](graph-api/meeting-transcripts/overview-transcripts.md)
 
 :::column-end:::
