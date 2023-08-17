@@ -102,7 +102,7 @@ You've configured the messaging endpoint for your bot resource. Next, you must e
 
 ## Configure SSO for Azure AD app
 
-You must configure permissions and scopes, authorize client applications, update manifest, and create client secret for your Azure AD app. These configurations help to invoke SSO for your bot app.
+You must configure permissions and scopes, authorize client applications, update app manifest (previously called Teams app manifest), and create client secret for your Azure AD app. These configurations help to invoke SSO for your bot app.
 
 ### Configure scope for the access token
 
@@ -134,7 +134,7 @@ You need:
 
     The Azure AD app page appears.
 
-    The new app ID (client ID) for the app appears on this page. Note and save this app ID. You'll need to update it in the Teams manifest later. If you used the ID of an existing app when you created the bot resource, then ID of that app appears in this page.
+    The new app ID (client ID) for the app appears on this page. Note and save this app ID. You'll need to update it in the app manifest later. If you used the ID of an existing app when you created the bot resource, then ID of that app appears in this page.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/aad-app-regd.png" alt-text="Screenshot shows the Bot app page with Application client ID highlighted.":::
 
@@ -180,7 +180,7 @@ You need:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-id-uri-added.png" alt-text="Screenshot shows the updated Application ID URI." :::
 
-1. Note and save the application ID URI. You'll need it for updating the app manifest (previously called Teams app manifest) later.
+1. Note and save the application ID URI. You'll need it for updating the app manifest later.
 
 The application ID URI is configured. You can now define scope and permissions for your app.
 
@@ -282,7 +282,7 @@ You must define the access token version for your app in the Azure AD applicatio
 
 1. Select **Save**.
 
-    A message appears on the browser stating that the manifest was updated successfully.
+    A message appears on the browser stating that the app manifest was updated successfully.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Screenshot shows the Manifest updated message.":::
 
@@ -462,7 +462,7 @@ To create and configure your app for enabling SSO in Azure AD:
 
 ## Configure your Azure AD app for SSO
 
-You must configure permissions and scopes, authorize client applications, update manifest, and create client secret for your Azure AD app. These configurations help invoke SSO for your bot app.
+You must configure permissions and scopes, authorize client applications, update app manifest, and create client secret for your Azure AD app. These configurations help invoke SSO for your bot app.
 
 > [!IMPORTANT]
 > Ensure that you've [registered your app](../../../tabs/how-to/authentication/tab-sso-register-aad.md#to-register-a-new-app-in-azure-ad) in Azure AD. At registration, Azure AD generates a new app ID that you must note. You'll need to update it later in the app manifest file.
@@ -497,7 +497,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
     The Azure AD app page appears.
 
-    The new app ID (client ID) for the app appears on this page. Note and save this app ID. You'll need to update it in the Teams manifest later. If you used the ID of an existing app when you created the bot resource, then ID of that app appears in this page.
+    The new app ID (client ID) for the app appears on this page. Note and save this app ID. You'll need to update it in the app manifest later. If you used the ID of an existing app when you created the bot resource, then ID of that app appears in this page.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/aad-app-regd.png" alt-text="Screenshot shows the Bot app page with Application client ID highlighted.":::
 
@@ -645,7 +645,7 @@ You must define the access token version for your app in the Azure AD applicatio
 
 1. Select **Save**.
 
-    A message appears on the browser stating that the manifest was updated successfully.
+    A message appears on the browser stating that the app manifest was updated successfully.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Screenshot shows the Manifest updated message.":::
 
