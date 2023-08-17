@@ -59,7 +59,7 @@ You can view the project folders and files under **Explorer** in Visual Studio a
 * [Debug your Teams app locally using Visual Studio](debug-local-vs.md)
 * [Provision cloud resources in Visual Studio](provision-vs.md)
 * [Deploy Teams app to the cloud VS](deploy-vs.md)
-* [Customize Teams app manifest in Teams Toolkit](TeamsFx-preview-and-customize-app-manifest-vs.md)
+* [Customize app manifest in Teams Toolkit](TeamsFx-preview-and-customize-app-manifest-vs.md)
 
 ::: zone-end
 
@@ -225,7 +225,7 @@ You can view the project folders and files under **Explorer** in Visual Studio C
 | Folder name| Contents| Debug configuration type |
 | --- | --- | --- |
 |  `.fx/configs/config.local.json` | Local debug configuration file | The values of each configuration generate and saves during local debug. |
-|  `templates/appPackage/manifest.template.json` | Teams app manifest template file for local debug | The placeholders in the file during local debug. |
+|  `templates/appPackage/manifest.template.json` | app manifest (previously called Teams app manifest) template file for local debug | The placeholders in the file during local debug. |
 |  `tabs/.env.teams.local`  | Environment variables file for tab | The values of each environment variable generate and saves during local debug. |
 |  `bot/.env.teamsfx.local` | Environment variables file for bot and message extension| The values of each environment variable generate and saves during local debug. |
 | `api/.env.teamsfx.local`  | Environment variables file for Azure Functions | The values of each environment variable generate and saves during local debug. |
@@ -236,6 +236,6 @@ You can view the project folders and files under **Explorer** in Visual Studio C
 * [Debug your Teams app locally using Visual Studio](debug-local-vs.md)
 * [Provision cloud resources in Visual Studio](provision-vs.md)
 * [Deploy Teams app to the cloud VS](deploy-vs.md)
-* [Customize Teams app manifest in Teams Toolkit](TeamsFx-preview-and-customize-app-manifest-vs.md)
+* [Customize app manifest in Teams Toolkit](TeamsFx-preview-and-customize-app-manifest-vs.md)
 
 ::: zone-end

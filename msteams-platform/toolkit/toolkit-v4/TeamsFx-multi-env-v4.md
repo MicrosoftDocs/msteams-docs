@@ -154,7 +154,7 @@ Follow these steps customizing the environment description:
 3. Create a new environment and name it **staging**, if a staging environment doesn’t exist.
 4. Open the configuration file `.fx\configs\config.staging.json`.
 5. Add a new property as you did in config.dev.json and enter its value as **my app description for staging**.
-6. Open Teams app manifest template `templates\appPackage\manifest.template.json`.
+6. Open app manifest (previously called Teams app manifest) template `templates\appPackage\manifest.template.json`.
 7. Update the value of property `description` > `short` to use the variable defined in configure files with braces. Use the  following syntax `{{config.manifest.description.short}}`.
   
     The updates to `manifest.template.json` are:
@@ -187,9 +187,9 @@ Follow these steps customizing the environment description:
 
 You can set the description of Teams app to **my app description** for all the environments.
 
-Teams Toolkit shares the same Teams app manifest templates across all environments, you can update the description value in it for your target:
+Teams Toolkit shares the same app manifest templates across all environments, you can update the description value in it for your target:
 
-1. Open the Teams app manifest template `templates\appPackage\manifest.template.json`.
+1. Open the app manifest template `templates\appPackage\manifest.template.json`.
 2. Update the value of the property `description` > `short` with the permanent string **my app description**.
   
     The updates to `manifest.template.json` are:

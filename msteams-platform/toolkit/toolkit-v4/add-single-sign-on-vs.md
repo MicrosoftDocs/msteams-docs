@@ -77,7 +77,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
     * "name": It replaces the value with your expected Azure AD app name.
 
-1. Open your Teams app manifest file, add `WebApplicationInfo` property with the value of your SSO app. For more information, see [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo).
+1. Open your app manifest (previously called Teams app manifest) file, add `WebApplicationInfo` property with the value of your SSO app. For more information, see [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo).
 
     ```JSON
         "webApplicationInfo": {
@@ -397,11 +397,11 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
    * "name": Replace the value with your expected Azure AD app name.
 
-1. Update Teams app manifest
+1. Update app manifest
   
-   * A `WebApplicationInfo` object needs to be added into your Teams app manifest to enable SSO in the Teams app. For more information, see [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo).
+   * A `WebApplicationInfo` object needs to be added into your app manifest to enable SSO in the Teams app. For more information, see [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo).
 
-    For example: open your Teams app manifest template, and append the following object in the manifest:
+    For example: open your app manifest template, and append the following object in the manifest:
 
     ```
     "webApplicationInfo": {
@@ -855,7 +855,7 @@ The following table lists the changes by Teams Toolkit:
    |**Type**|**File**|**Purpose**|
    |--------|--------|-----------|
    |Create|`aad.template.json` under `template\appPackage`|Azure AD application manifest represents your Azure AD app. `template\appPackage` helps you to register an Azure AD app during local debug or provision.|
-   |Modify|`manifest.template.json` under `template\appPackage`|`webApplicationInfo` object is added into your Teams app manifest template. Teams requires this field to enable SSO. When local debugging or provisioning is triggered, you can see the change.|
+   |Modify|`manifest.template.json` under `template\appPackage`|`webApplicationInfo` object is added into your app manifest template. Teams requires this field to enable SSO. When local debugging or provisioning is triggered, you can see the change.|
    |Modify|`appsettings.json` and `appsettings.Development.json`|Configs are added and used by TeamsFx SDK to your app settings. You can update and add the `TeamsFx` object if you have other `appsettings` files.|
    |Create|`Auth\tab`|Reference code, auth redirect pages and a `README.md` file are generated in the folder `Auth\tab` for a tab project.|
    |Create|`Auth\bot`|Reference code, auth redirect pages and a `README.md` file are generated in the folder `Auth\bot` for a bot project.|
@@ -962,7 +962,7 @@ The following steps help you to enable SSO in your app:
         });
         ```
 
-5. You can open `Templates\appPackage\manifest.template.json`, and add the following lines under `command` in `commandLists` of your bot to register your command in the Teams app manifest:
+5. You can open `Templates\appPackage\manifest.template.json`, and add the following lines under `command` in `commandLists` of your bot to register your command in the app manifest:
 
    ```JSON
    {
@@ -1012,7 +1012,7 @@ The following steps help to add a new command, after you've added SSO in your pr
        ((SsoDialog)_dialog).addCommand("getUserImageInfo", "photo", SsoOperations.GetUserImageInfo);
     ```
 
-1. Open the file `templates\appPackage\manifest.template.json`, and add the following lines under `command` in `commandLists` of your bot to register your command in the Teams app manifest:
+1. Open the file `templates\appPackage\manifest.template.json`, and add the following lines under `command` in `commandLists` of your bot to register your command in the app manifest:
 
    ```JSON
        {

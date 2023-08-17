@@ -289,7 +289,7 @@ The new project folder contains the following content:
 | `.fx` | Project level settings, configuration, and environment information. |
 | `.vscode` | VS code files for local debug. |
 | `bot` | The bot source code. |
-| `templates` | Templates for Teams app manifest and corresponding Azure resources. |
+| `templates` | Templates for app manifest and corresponding Azure resources. |
 
 The core notification implementation is stored in the **bot** folder, and it contains:
 

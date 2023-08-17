@@ -9,11 +9,11 @@ ms.date: 05/13/2022
 zone_pivot_groups: teams-toolkit-platform-vs
 ---
 
-# Customize Teams app manifest for Visual Studio
+# Customize app manifest for Visual Studio
 
 :::zone pivot="visual-studio-v17-7"
 
-The Teams app manifest describes how your app integrates into Teams and is shared between local and remote environments. The default manifest file is available at the `appPackage/manifest.json` file and the environment variables available from the `env/.env.{env}` file
+The app manifest (previously called Teams app manifest) describes how your app integrates into Teams and is shared between local and remote environments. The default manifest file is available at the `appPackage/manifest.json` file and the environment variables available from the `env/.env.{env}` file
 
 The manifest file contains some environment variables with the `${{XX_XX}}` format. You can define your own environment variables and add placeholders in the `manifest.json` file. The following are the .env and .json file examples:
 
@@ -109,7 +109,7 @@ When you create a Teams command bot using Visual Studio, two app IDs are registe
 
 :::zone pivot="visual-studio-v17-6"
 
-## Customize Teams app manifest in Teams Toolkit
+## Customize app manifest in Teams Toolkit
 
 Teams Toolkit in Visual Studio loads manifest from `manifest.template.json` with configurations from `state.{env}.json` and `config.{env}.json` while provisioning and preparing app dependencies. You can also create Teams app in Developer Portal with manifest.
 
