@@ -283,7 +283,7 @@ The version of the manifest schema this manifest is using.
 
 **Required** &ndash; String
 
-The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it overwrites the existing one and the user will get the new functionality. If this app was submitted to the store, the new manifest has to be resubmitted and revalidated. Then, users of this app will get the new updated manifest automatically in a few hours, after it's approved.
+The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it overwrites the existing one and the user gets the new functionality. If this app was submitted to the store, the new manifest has to be resubmitted and revalidated. Then, users of this app will get the new updated manifest automatically in a few hours, after it's approved.
 
 If the app requested permissions change, users are prompted to upgrade and re-consent to the app.
 
@@ -422,7 +422,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`botId`|String| |✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
+|`botId`|String| |✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
 |`needsChannelSelector`|Boolean|||Describes whether or not the bot utilizes a user hint to add the bot to a specific channel. Default: `false`|
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: `false`|
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: `false`|
@@ -487,7 +487,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
-|`botId`|String||✔️|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
+|`botId`|String||✔️|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. The default is `false`.|
 |`commands`|Array of object|10|✔️|Array of commands the message extension supports|
 |`messageHandlers`|Array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
@@ -512,8 +512,8 @@ Each command item is an object with the following structure:
 |`fetchTask`|Boolean|||A Boolean value that indicates if it should fetch the task module dynamically.|
 |`taskInfo`|Object|||Specify the task module to preload when using a message extension command.|
 |`taskInfo.title`|String|64||Initial dialog title.|
-|`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
-|`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
+|`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as `large`, `medium`, or `small`.|
+|`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`taskInfo.url`|String|2048 characters||Initial webview URL.|
 |`parameters`|Array of object|5|✔️|The list of parameters the command takes. Minimum: 1; maximum: 5|
 |`parameter.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. This is included in the user request.|
@@ -529,9 +529,9 @@ Each command item is an object with the following structure:
 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
-|`teams`|Array|128||A list of team thread ids to which your app is restricted to.|
+|`teams`|Array|128||A list of team thread ids to which your app is restricted.|
 |`teams.id`|String|64|✔️|Team's thread Id.|
-|`groupChats`|Array|128||A list of chat thread ids to which your app is restricted to.|
+|`groupChats`|Array|128||A list of chat thread ids to which your app is restricted.|
 |`groupChats.id`|String|64|✔️|Chat's thread Id.|
 
 ## permissions
@@ -561,14 +561,14 @@ Specifies the native features on a user's device that your app may request acces
 
 **Optional**, except **Required** where noted
 
-A list of valid domains from which the app expects to load any content. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI needs to go to any other domain besides the one use for tab configuration, that domain must be specified here.
+A list of valid domains from which the app expects to load any content. Domain listings can include wildcards, for example `*.example.com`. The valid domain matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI needs to go to any other domain besides the one use for tab configuration, that domain must be specified here.
 
 It is **not** necessary to include the domains of identity providers you want to support in your app, however. For example, to authenticate using a Google ID, it's necessary to redirect to accounts.google.com, but you shouldn't include accounts.google.com in `validDomains[]`.
 
 > [!IMPORTANT]
 > Do not add domains that are outside your control, either directly or via wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid.
 
-The object is an array with all elements of the type `string`. The maximum items for the object is 16 and maximum length is 2048 characters.
+The object is an array with all elements of the type `string`. The maximum item of the object is 16 and maximum length is 2048 characters.
 
 ## webApplicationInfo
 
