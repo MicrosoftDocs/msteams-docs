@@ -1,12 +1,12 @@
 ---
-title: Adaptive Card loop component
+title: Build Adaptive Card-based Loop component
 description: In this module, learn and build Adaptive Card loop components.
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 08/16/2023
 ---
 
-# Adaptive Card loop component
+# Adaptive Card-based Loop components
 
 > [!NOTE]
 >
@@ -33,7 +33,7 @@ Before you build an Adaptive Card-based Loop component, ensure that you meet the
 
 1. [Extend your Teams message across Microsoft 365](extend-m365-teams-message-extension.md)
 
-## Build Loop components
+## Build Adaptive Card-based Loop component
 
 After you've met all the requirements, upgrade the Adaptive Card into a Loop component using the following steps:
 

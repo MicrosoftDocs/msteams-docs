@@ -1,5 +1,5 @@
 ---
-title: Loop components 
+title: Loop component design guidelines 
 description: In this article, learn how to design Adaptive Card based Loop components.
 ms.author: mobajemu
 ms.date: 06/15/2023
@@ -8,7 +8,7 @@ ms.custom: m365apps
 ms.localizationpriority: medium
 ---
 
-# Designing Loop components
+# Loop component design guidelines
 
 Microsoft Loop components are live, actionable units of productivity that stay in sync and move freely across Microsoft 365 apps. It includes the capability for developers to create Loop components by evolving an existing Adaptive Card into a Loop component or creating a new Adaptive Card-based Loop component.
 

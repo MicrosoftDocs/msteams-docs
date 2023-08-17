@@ -725,4 +725,4 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 * [Types of cards](cards-reference.md)
 * [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Adaptive Cards in bots](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
-* [Adaptive Card loop component](../../m365-apps/cards-loop-component.md)
+* [Adaptive Card-based Loop component](../../m365-apps/cards-loop-component.md)
