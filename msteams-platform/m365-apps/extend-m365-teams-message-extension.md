@@ -20,7 +20,7 @@ The process to update your search-based Teams message extension involves the fol
 
 > [!div class="checklist"]
 >
-> * Update your app manifest.
+> * Update your app manifest (previously called Teams app manifest).
 > * Add the Microsoft 365 channel for your bot.
 > * Sideload your updated app in Teams.
 
@@ -51,7 +51,7 @@ The [code sample](#code-sample) section provides a Stage View app for testing.
 
 ## Prepare your message extension for the upgrade
 
-If you have an existing message extension in production, make a copy or a branch of your project for testing and update your App ID in the app manifest (previously called Teams app manifest) to use a new identifier (distinct from the production App ID, for testing).
+If you have an existing message extension in production, make a copy or a branch of your project for testing and update your App ID in the app manifest to use a new identifier (distinct from the production App ID, for testing).
 
 If you'd like to use sample code to complete the full tutorial on updating an existing Teams app, follow the setup steps in [Teams message extension search sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs) to quickly build a Microsoft Teams search-based message extension.
 
@@ -65,7 +65,7 @@ To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
 1. Select **Teams: Create a New App**.
 1. From the dropdown list that appears, select **Message Extension**.
-1. Select **Custom Search Results** to download the sample code for a Teams message extension using the latest app manifest. For more information, see [Teams developer manifest](../resources/schema/manifest-schema.md).
+1. Select **Custom Search Results** to download the sample code for a Teams message extension using the latest app manifest. For more information, see [app manifest](../resources/schema/manifest-schema.md).
 
     :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams sample options.":::
 
@@ -87,14 +87,14 @@ From here, you can skip ahead to [Add Microsoft 365 channel for your bot](#add-m
 
 ## Update the app manifest
 
-You need to use the Teams developer manifest schema version `1.13` (or higher) to enable your Teams message extension to run in Outlook. For more information on schema version, see [Teams developer manifest](../resources/schema/manifest-schema.md).
+You need to use the app manifest schema version `1.13` (or later) to enable your Teams message extension to run in Outlook. For more information on schema version, see [app manifest](../resources/schema/manifest-schema.md).
 
 You have two options for updating your app manifest:
 
 # [Teams Toolkit](#tab/manifest-teams-toolkit)
 
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
-1. Run the `Teams: Upgrade Teams manifest` command and select your app manifest file. Your app manifest files are updated with the latest changes.
+1. Run the `Teams: Upgrade app manifest` command and select your app manifest file. Your app manifest files are updated with the latest changes.
 
 # [Manual steps](#tab/manifest-manual)
 
