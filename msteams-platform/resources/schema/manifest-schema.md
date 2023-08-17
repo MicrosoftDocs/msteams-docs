@@ -573,8 +573,8 @@ Each command item is an object with the following structure:
 |`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the task module dynamically. Default is **false**.|
 |`taskInfo`|object|||Specify the task module to pre-load when using a message extension command.|
 |`taskInfo.title`|string|64 characters||Initial dialog title.|
-|`taskInfo.width`|string|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
-|`taskInfo.height`|string|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
+|`taskInfo.width`|string|||Dialog width - either a number in pixels or default layout such as `large`, `medium`, or `small`.|
+|`taskInfo.height`|string|||Dialog height - either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`taskInfo.url`|string|2048 characters||Initial webview URL.|
 |`parameters`|array of object|5 items|✔️|The list of parameters the command takes. Minimum: 1; maximum: 5.|
 |`parameters.name`|string|64 characters|✔️|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
@@ -632,7 +632,7 @@ Teams apps that require their own SharePoint URLs to function well, includes "{t
 >
 > For example, *\*.\*.domain.com* is valid, but *foo.\*.myteam.domain.com* is not valid.
 
-The object is an array with all elements of the type `string`. The maximum items for the object is 16 and maximum length is 2048 characters.
+The object is an array with all elements of the type `string`. The maximum item of the object is 16 and maximum length is 2048 characters.
 
 ## webApplicationInfo
 
