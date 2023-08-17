@@ -10,14 +10,14 @@ ms.date: 03/21/2023
 
 # Plan your SaaS offer
 
-SaaS apps available for purchase in Microsoft commercial marketplace, either Azure Marketplace or Microsoft AppSource, are known as SaaS offers. Based on the SaaS offer configurations, the offers are available in one or both marketplaces. This guide provides you with an overview of the features in an offer and helps you to plan the offer.
+SaaS apps available for purchase in Microsoft commercial marketplace, either Azure Marketplace or Microsoft AppSource, are known as SaaS offers. Based on the SaaS offer configurations, the offers are available in one or both marketplaces. This article provides you an overview of the features in an offer and helps you to plan the offer.
 
 :::row:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow.png" link="include-saas-offer.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow1a.png" link="include-saas-offer.md" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-2.png" link="prerequisites.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow2.png" link="prerequisites.md" border="false":::
    :::column-end:::
    :::column:::
       :::image type="icon" source="~/assets/images/saas-offer/monetize-flow3.png" link="create-saas-offer.md" border="false":::
@@ -100,11 +100,11 @@ The technical configurations and requirements differ based on the listing option
 
 ## Plan for the offer details
 
-To start with, you need to plan on the basic yet key features that decide the information available on the landing page, the marketplace where your offer is published, and terms of use. It helps the users to find your offer easily in the marketplace and enhances usability.
+To start with, you need to plan on the basic yet key features that decide the information available on the landing page, marketplace where the offer is published, and terms of use. It helps the users to find your offer easily in the marketplace and enhances usability.
 
 * **Offer categories and industries**: Decide on the primary and secondary categories of the offer. It decides the store where the offer is published and to identify your app in the marketplace.
 * **Offer details**: Decide the logos, keywords, and description that helps to improve the discovery and value of your offer in the marketplace.
-* **Preview audience**: Decide the audience and collate their email address to allow them to use and verify the preview offer before live. The email addresses must be either of Azure Active Directory or Microsoft.
+* **Preview audience**: Decide the audience and collate their email address to allow them to use and verify the preview offer before publishing live. The email address must be either of Azure Active Directory or Microsoft.
 * **Legal terms and conditions**: Provide relevant information for the users to be aware of the terms of use of your app.
 * **Customer Relationship Management (CRM)**: Provide the details to receive customer leads and reach you for queries.
 
@@ -141,7 +141,7 @@ You can opt to provide free trials for your SaaS offer. Microsoft allows a free 
 
 ### Plan for test drive
 
-You can opt to add a test drive for your SaaS app that provides access to the preconfigured environment of your app for fixed hours. For more information, check [Test drive for SaaS offer](/partner-center/marketplace/create-new-saas-offer).
+You can opt to add a test drive for your SaaS app that provides access to the preconfigured environment of your app for fixed hours. For more information, see [Test drive for SaaS offer](/partner-center/marketplace/create-new-saas-offer).
 
 ### Plan for mobile
 

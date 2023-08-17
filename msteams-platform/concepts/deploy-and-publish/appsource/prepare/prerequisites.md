@@ -13,10 +13,10 @@ If you decide to sell your SaaS offer through Microsoft, you need to fulfill the
 
 :::row:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow.png" link="include-saas-offer.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow1.png" link="include-saas-offer.md" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-2.png" link="prerequisites.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow-2a.png" link="prerequisites.md" border="false":::
    :::column-end:::
    :::column:::
       :::image type="icon" source="~/assets/images/saas-offer/monetize-flow3.png" link="create-saas-offer.md" border="false":::
@@ -39,7 +39,7 @@ The technical configurations differ based on the listing option you opt for your
 
 ## Technical configuration
 
-If you select *Get it now (Free)*, *Free trial*, and *Sell through Microsoft* as the listing option, you must do the account setup and create a landing page.
+If you select **Get it now (Free)**, **Free trial**, and **Sell through Microsoft** as the listing option, you must do the account setup and create a landing page.
 
 ### Set up Microsoft and Azure AD
 
