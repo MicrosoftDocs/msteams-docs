@@ -210,7 +210,7 @@ The following *manifest.json* example contains the elements needed to test and s
 
 ## Test your connector
 
-To test your connector, upload it to a team with any other app. You can create a .zip package using the manifest file from the two icon files and Connectors Developer Dashboard, modified as directed in [Include the connector in your app Manifest](#include-the-connector-in-your-manifest).
+To test your connector, upload it to a team with any other app. You can create a .zip package using the manifest file from the two icon files and Connectors Developer Dashboard, modified as directed in [Include the connector in your app Manifest](#include-the-connector-in-your-app-manifest).
 
 After you upload the app, open the connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section.
 
