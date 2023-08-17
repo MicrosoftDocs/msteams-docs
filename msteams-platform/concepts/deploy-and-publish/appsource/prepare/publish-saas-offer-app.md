@@ -86,11 +86,27 @@ Once published, users can view the **Buy a subscription** option in the app deta
 
 ## Post purchase
 
-1. After activation, the user is redirected from the landing page to Teams License Management.
-
 1. Upon successful subscription purchase, the user is redirected to the app landing page for subscription activation. This is the existing experience for user purchasing [Monetized apps in Teams](https://aka.ms/TMTG).
 
 1. After the user activates the subscription purchase on the landing page, the user is redirected to the subscription page in Teams via a [redirect URL](https://teams.microsoft.com/_#/subscriptionManagement) link or button that the user selects on the publisher landing page.
+
+## License management
+
+After activating the subscription, the user is redirected from the landing page to Teams License Management.
+
+Based on the subscriptions the user purchase, the licenses are available. Here are some best practices you can implement for license management.
+
+* With transactable SaaS offers for Teams apps, subscription plans (licenses) should be assigned to individual users rather than groups or an entire org.
+* When users are assigned a subscription plan, notify them through a Teams bot or email. In the messaging, include information on how to add the app to Teams and get started.
+* Support the idea of multiple admins. In other words, multiple users in the same org can purchase and manage their subscriptions.
+
+Microsoft manages licenses on your behalf if you've opted for the same during offer configuration.
+
+### Check license usage in Partner Center analytics
+
+1. Sign in to [Partner Center](https://partner.microsoft.com/).
+1. In the left pane, go to **Commercial Marketplace** > **Analyze** > **Licensing**.
+1. Select **Plan and Tenant** in the reporting widget to see the month-wise usage.
 
 ## Remove a SaaS offer from your app
 

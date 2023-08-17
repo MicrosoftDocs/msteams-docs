@@ -39,11 +39,11 @@ To enable Microsoft to manage licenses for a third-party app in Teams, you must 
 
 Transactable SaaS offers sold through the Microsoft commercial marketplace must have at least one plan. You can create various plans with different options within the same offer.
 
-1. Select **Plan overview** from the left pane, and then select **+ Create new plan**.
+1. From the left pane, select **Plan overview** > **+ Create new plan**.
 
 1. Enter **Plan ID** and **Plan name**, and then select **Create**.
 
-    :::image type="content" source="~/assets/images/first-party-license-mgt/plan-overview.png" alt-text="The screenshots shows plan overview to create a new plan for your apps in the Partner Center.":::
+    :::image type="content" source="~/assets/images/first-party-license-mgt/plan-overview.png" alt-text="Screenshot shows plan overview to create a new plan for your apps in the Partner Center.":::
 
 1. Select the plan to add pricing and availability information.
 
@@ -53,13 +53,13 @@ On the **Plan listing** tab, you can define the plan name and description as you
 
 1. Under **Plan listing**, enter the **Plan name** and **Plan description**.
 
-    :::image type="content" source="~/assets/images/first-party-license-mgt/plan-listing.png" alt-text="The screenshots shows plan page to add plan name and plan description for your app.":::
+    :::image type="content" source="~/assets/images/first-party-license-mgt/plan-listing.png" alt-text="Screenshot shows the plan page to add plan name and plan description for your app.":::
 
 1. Select **Save draft**.
 
 ### Define markets
 
-Every plan must be available in at least one market. On the **Pricing and availability** tab, you can configure the markets this plan is available.
+Every plan must be available in at least one market. On the **Pricing and availability** tab, you can configure the markets for the plan.
 
 1. Select **Pricing and availability** from the left pane.
 1. Under **Markets**, select **Edit markets**.
@@ -71,7 +71,7 @@ You must associate a pricing model with each plan either flat rate or per user. 
 
 1. Select **Pricing and availability** from the left pane.
 1. Under **Pricing**, select **Flat rate** or **Per User**.
-1. Add the billing terms you want: Monthly, Annual, 2-year, and 3-year billing terms.
+1. Add the billing terms you want: Monthly, Annual.
 1. For each billing term, select the payment option to set the payment schedule.
 1. Enter the price for each payment occurrence.
 
@@ -93,27 +93,13 @@ You can configure a free trial for each plan in your offer.
 
 1. Copy the service ID of the plan you created to integrate with Microsoft Graph usageRights API.
 
-[Integrate with Graph usageRights API](prerequisites.md#integrate-with-graph-usagerights-api) to manage user permissions at the time of app launch by a customer who has a purchased license.
+[Integrate with Graph usageRights API](prerequisites.md#integrate-with-graph-usagerights-api) to manage user permissions at the time of app launch by a customer who has a purchase license.
 
 ## Submit the offer
 
 When you finish configuring the offer along with the plans, validate the offer. You can then submit the offer with the plans from Partner Center for validation and publishing. The offer overview page displays the **Publish status** where you can track the progress.
 
-When the offer reaches the **Publisher signoff** stage, preview links for the respective platforms are given under the **Go live** button to test the offer. Upon successful validation, it's recommended to [test the offer](Test-preview-for-monetized-apps.md) with the given preview links before you publish the offer live.
-
-## License management
-
-Based on the subscriptions the user purchase, the licenses are available. To get the best out of Microsoft license management, here are some best practices you can implement for subscription management.
-
-* With transactable SaaS offers for Teams apps, subscription plans (licenses) should be assigned to individual users rather than groups or an entire org.
-* When users are assigned a subscription plan, notify them through a Teams bot or email. In the messaging, include information on how to add the app to Teams and get started.
-* Support the idea of multiple admins. In other words, multiple users in the same org can purchase and manage their subscriptions.
-
-### Check license usage in Partner Center analytics
-
-1. Sign in to [Partner Center](https://partner.microsoft.com/).
-1. In the left pane, go to **Commercial Marketplace** > **Analyze** > **Licensing**.
-1. Select **Plan and Tenant** in the reporting widget to see the month-wise usage.
+When the offer reaches the **Publisher signoff** phase, preview links for the respective platforms are given under the **Go live** button to test the offer. Upon successful validation, it's recommended to [test the offer](Test-preview-for-monetized-apps.md) with the given preview links before you publish the offer live.
 
 ## Next step
 

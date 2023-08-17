@@ -33,7 +33,7 @@ You can create a Software as a Service (SaaS) offer and test the end-to-end purc
    :::column-end:::
 :::row-end:::
 
-When the offer is in **Publisher signoff** stage, preview links for the respective platforms are given below the **Go live** option. We recommend you to verify the end-to-end purchasing experience before publishing your SaaS offer. You can test and verify the end-to-end transaction in Teams by creating a separate offer for testing.
+When the offer is in **Publisher signoff** stage, preview links for the respective platforms are given under the **Go live** option. We recommend you to verify the end-to-end purchasing experience before publishing your SaaS offer. You can test and verify the end-to-end transaction in Teams by creating a separate offer for testing.
 
 ## Create a Preview offer ID
 
@@ -56,15 +56,14 @@ You can generate the Preview offer ID from the **AppSource preview** link in the
 
 ## Configure your app with the preview offer ID
 
-Before you begin, sign in to the **Developer Portal** using a developer account with **preview audience** for users to see your subscription plans in the Teams store.
+Before you begin, sign in to the **Developer Portal** using a developer account with **Preview audience** for users to see your subscription plans in the Teams store.
 
 After you've generated your Preview offer ID, link the offer ID to your Teams app. To link the offer ID:
 
 1. Go to [Developer Portal](https://dev.teams.microsoft.com/) and sign in using your developer credentials.
 1. Select **Apps** from the left pane.
 1. Select the app to link the SaaS offer to.
-1. Select **Plans and pricing** and enter the **Publisher ID** and **Offer ID**.  
-  Ensure the offer ID has *-preview* as suffix.
+1. Select **Plans and pricing** and enter the **Publisher ID** and **Offer ID**. Ensure the offer ID has *-preview* as suffix.
 1. Select **View** to preview your subscription plans.
 1. Review the plans listed under **Apps Subscription** and select **Save**.
 
@@ -107,12 +106,12 @@ If the Preview offer is specified in the app manifest and the preview audience i
 
 ## Make the offer go live
 
-Upon successful testing, your offer is now ready to go live. Check for any validation errors, fix, and resumbit the offer for publishing. You can track the publishing status in the Offer overview page.
+Upon successful testing, your offer is now ready to go live. Check for any validation errors, fix, and resumbit the offer for publishing. You can track the publishing status in the **Offer overview** page.
 
 When all the check are done, click **Go live** for the offer to be available in the commercial marketplace. After the validation checks are done for the live offer, the offer is available for purchase.
 
 > [!NOTE]
-> You need to first make your offer live in the marketplace and link the offer to your app. Then you need to publish the updated app to the store with the configured offer.
+> You need to first make your offer live in the marketplace and link the offer to your app. Then you need to publish the updated app with the offer to the store.
 
 To understand more about the validation and certification, check [Review and publish offers](/partner-center/marketplace/review-publish-offer).
 
