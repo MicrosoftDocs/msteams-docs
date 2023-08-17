@@ -172,10 +172,7 @@ Add the [RSC](/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-
 
 ```
 
----
-
-
-To receive Read-receipts add the `ChatMessageReadReceipt.Read.Chat` [RSC permission](~/graph-api/rsc/resource-specific-consent#rsc-permissions-for-a-chat-or-meeting) into the app manifest (version 1.12 or later) in the `authorization` and also `webApplicationInfo` which is as follows:
+# [Version >= 1.12](#tab/version-112+)
 
 ```json
 
@@ -197,6 +194,8 @@ To receive Read-receipts add the `ChatMessageReadReceipt.Read.Chat` [RSC permiss
 }
 
 ```
+
+---
 
 If your bot uses the following method, override the method to receive read receipts:
 
