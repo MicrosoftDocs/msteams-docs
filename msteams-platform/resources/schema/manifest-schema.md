@@ -8,7 +8,7 @@ ms.date: 02/09/2023
 
 # App manifest schema for Teams
 
-The Microsoft Teams app manifest describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json`](https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.15, and the current version is 1.16 are each supported (using "v1.x" in the URL).
+The Microsoft app manifest (previously called Teams app manifest) describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json`](https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.15, and the current version is 1.16 are each supported (using "v1.x" in the URL).
 For more information on the changes made in each version, see [manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 The following table lists TeamsJS version and app manifest versions as per different app scenarios:
@@ -920,9 +920,9 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 
 ## Create a manifest file
 
-If your app doesn't have a Teams app manifest file, you need to create it.
+If your app doesn't have a app manifest file, you need to create it.
 
-To create a Teams app manifest file:
+To create a app manifest file:
 
 1. Use the [sample manifest schema](#sample-manifest) to create a .json file.
 1. Save it in the root of your project folder as `manifest.json`.

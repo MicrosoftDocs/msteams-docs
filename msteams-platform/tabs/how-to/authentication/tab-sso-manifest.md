@@ -8,18 +8,18 @@ ms.date: 11/21/2022
 ---
 # Update manifest for SSO and preview app
 
-Before you update Teams app manifest, ensure that you've configured code to enable SSO in your tab app.
+Before you update app manifest (previously called Teams app manifest), ensure that you've configured code to enable SSO in your tab app.
 
 > [!div class="nextstepaction"]
 > [Configure code](tab-sso-code.md)
 
-You've registered your tab app in Azure AD, and obtained an app ID. You've also configured your code to call `getAuthToken()` and handle the access token. Now, you must update the Teams app manifest to enable SSO for your tab app. The Teams app manifest describes how an app integrates into Teams.
+You've registered your tab app in Azure AD, and obtained an app ID. You've also configured your code to call `getAuthToken()` and handle the access token. Now, you must update the app manifest to enable SSO for your tab app. The app manifest describes how an app integrates into Teams.
 
 ## webApplicationInfo property
 
-Configure the `webApplicationInfo` property in the Teams app manifest file. This property enables SSO for your app to help app users access your tab app seamlessly.
+Configure the `webApplicationInfo` property in the app manifest file. This property enables SSO for your app to help app users access your tab app seamlessly.
 
-&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Teams app manifest configuration":::
+&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Screenshot shows the app manifest configuration.":::
 
 `webApplicationInfo` has two elements, `id` and `resource`.
 
@@ -31,11 +31,11 @@ Configure the `webApplicationInfo` property in the Teams app manifest file. This
 > [!NOTE]
 > Use manifest version 1.5 or higher to implement the `webApplicationInfo` property.
 
-The application ID URI that you registered in Azure AD is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in Teams app manifest.
+The application ID URI that you registered in Azure AD is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in app manifest.
 
 For more information, see [webApplicationInfo](../../../resources/schema/manifest-schema.md#webapplicationinfo).
 
-## To configure Teams app manifest
+## To configure app manifest
 
 1. Open the tab app project.
 2. Open the manifest folder.
@@ -65,7 +65,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
    1. `contentUrl`
    2. `configurationUrl`
    3. `validDomains`
-6. Save the Teams app manifest file. For more information, see [app manifest](../../../resources/schema/manifest-schema.md).
+6. Save the app manifest file. For more information, see [app manifest](../../../resources/schema/manifest-schema.md).
 
 <br>
 <details>

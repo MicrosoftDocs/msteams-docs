@@ -377,7 +377,7 @@ If you're updating a Teams app to run in Microsoft 365 app and Outlook, you'll a
 
 # [Manual steps](#tab/manifest-manual)
 
-Open your Teams app manifest and update the `$schema` and `manifestVersion` with the following values:
+Open your app manifest (previously called Teams app manifest) and update the `$schema` and `manifestVersion` with the following values:
 
 ```json
 {

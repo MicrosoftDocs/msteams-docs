@@ -76,13 +76,13 @@ The following variants show the kinds of activity feed notification cards you ca
 
 Activity feed APIs work with a Teams app. The following are the requirements for sending activity feed notifications:
 
-* The Teams app manifest must have the Azure AD app ID added to the webApplicationInfo section. For more information, see [manifest schema](../resources/schema/manifest-schema.md#webapplicationinfo).
+* The app manifest (previously called Teams app manifest) must have the Azure AD app ID added to the webApplicationInfo section. For more information, see [manifest schema](../resources/schema/manifest-schema.md#webapplicationinfo).
 * Activity types must be declared in the activities section. For more information, see [manifest schema](../resources/schema/manifest-schema.md#activities).
 * The Teams app must be installed for the recipient, either personally, or in a team or chat they're part of.
 
-### Teams app manifest changes
+### App manifest changes
 
-This section describes the changes that need to be added to Teams app manifest. Ensure that you use the [Teams app manifest](/microsoftteams/platform/resources/schema/manifest-schema) version `1.7` or greater.
+This section describes the changes that need to be added to app manifest. Ensure that you use the [app manifest](/microsoftteams/platform/resources/schema/manifest-schema) version `1.7` or greater.
 
 ```json
 "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
@@ -174,7 +174,7 @@ Microsoft Teams users can customize the notifications they see in their feed or 
 
 :::image type="content" source="../assets/images/activity-feed/notification-settings.png" alt-text="Screenshot shows the Notifications settings in Teams, with the Custom option highlighted.":::
 
-Users can select **Edit** next to an app and customize the notifications. The Teams app manifest displays the `description` field.
+Users can select **Edit** next to an app and customize the notifications. The app manifest displays the `description` field.
 
 :::image type="content" source="../assets/images/activity-feed/app-level-notification-settings.png" alt-text="Screenshot shows notifications customized to Banner and feed for a Teams app.":::
 
