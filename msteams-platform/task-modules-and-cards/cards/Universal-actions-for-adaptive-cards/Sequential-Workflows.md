@@ -4,6 +4,7 @@ description: In this module, learn about Sequential Workflows for Adaptive cards
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.date: 12/14/2022
 ---
 
 # Sequential Workflows
@@ -131,4 +132,4 @@ var adaptiveCardResponse = JObject.FromObject(new
 * [Adaptive Card actions in Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [How bots work](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
-* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Form completion feedback](../cards-actions.md#form-completion-feedback)

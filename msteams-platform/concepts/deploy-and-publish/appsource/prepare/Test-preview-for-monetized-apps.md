@@ -5,6 +5,7 @@ description: Create and test SaaS Preview offers for Teams app before pushing th
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
+ms.date: 12/26/2022
 ---
 
 # Test preview for monetized apps
@@ -46,7 +47,7 @@ After you've generated your Preview offer ID, link the offer ID to your Teams ap
 
     :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-add-offer-id.png" alt-text="Screenshot shows the Plan and pricing screen to add offer ID." :::
 
-The subscriptionOffer property is added to your app manifest.
+The `subscriptionOffer` property is added to your [app manifest](../../../../resources/schema/manifest-schema.md#subscriptionoffer).
 
 ```json
 "subscriptionOffer": {

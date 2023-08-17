@@ -5,6 +5,7 @@ description: Learn to design your app faster with standardized UI components, la
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
+ms.date: 12/27/2022
 ---
 # Designing your Microsoft Teams app with UI templates
 

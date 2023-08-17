@@ -5,6 +5,7 @@ description: Learn how to use Teams JavaScript client library to leverage locati
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.date: 12/13/2022
 ---
 
 # Integrate location capabilities

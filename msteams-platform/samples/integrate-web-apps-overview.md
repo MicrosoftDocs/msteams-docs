@@ -5,6 +5,7 @@ description: In this article, you'll get started with integrating web applicatio
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 12/15/2022
 ---
 
 # Integrate web apps

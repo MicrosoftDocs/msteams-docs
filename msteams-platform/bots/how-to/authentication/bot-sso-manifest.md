@@ -42,15 +42,15 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
     > - For more information on learning how to create a manifest.json, see [Reference: Manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
 
 1. Open the `manifest.json` file.
-1. Add one of the following code snippets to the manifest file to add the new property.
+1. Add one of the following code snippets to the manifest file to add the new property:
 
     - If your app has a standalone bot, add the following code snippet:
 
         ```json
         "webApplicationInfo": 
         {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "resource": "api://botid-00000000-0000-0000-0000-000000000000"
+        "id": "{Azure AD AppId}",
+        "resource": "api://botid-{Azure AD AppId}"
         }
         ```
 
@@ -59,21 +59,21 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
         ```json
         "webApplicationInfo": 
         {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "resource": "api://subdomain.example.com/botid-00000000-0000-0000-0000-000000000000"
+        "id": "{Azure AD AppId}",
+        "resource": "api://subdomain.example.com/botid-{Azure AD AppId}"
         }
         ```
 
         where,
-        - {Azure AD AppId} is the app ID you created when you registered your app in Azure AD. It's the GUID.
-        - {{Subdomain}.app ID URI} is the application ID URI that you registered when creating scope in Azure AD.
+        - `{Azure AD AppId}` is the app ID you created when you registered your app in Azure AD. It's the GUID.
+        - `subdomain.example.com` is the application ID URI that you registered when creating scope in Azure AD.
 
 4. Update the app ID from Azure AD in the **id** property.
 5. Update the subdomain URL in the following properties:
    1. `contentUrl`
    2. `configurationUrl`
    3. `validDomains`
-6. Save the Teams app manifest file.
+6. Save the Teams app manifest file. For more information, see [app manifest](../../../resources/schema/manifest-schema.md).
 
 <br>
 <details>

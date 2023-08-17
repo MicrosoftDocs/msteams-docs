@@ -4,6 +4,7 @@ description: Install app proactively using Graph APIs. Check if your bot is curr
 ms.localizationpriority: medium
 author: akjo
 ms.topic: Overview
+ms.date: 12/15/2022
 ---
 
 # Send proactive installation messages
@@ -82,6 +83,9 @@ You can retrieve the `teamsAppId` in the following ways:
       ]
     }
     ```
+
+    > [!NOTE]
+    > When the app is in the store, the `teamsAppId` is same as `IdFromManifest` and the `externalId` must not be used in this case.
 
 * If your app has already been uploaded or sideloaded for a user in personal scope:
 
@@ -253,4 +257,3 @@ server.get('/api/notify', async (req, res) => {
 * [Send activity feed notifications to users in Microsoft Teams](/graph/teams-send-activityfeednotifications)
 * [Add app to team - Microsoft Graph v1.0](/graph/api/team-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [Microsoft Teams service limits](/graph/throttling-limits#microsoft-teams-service-limits)
-* [Protected APIs in Microsoft Teams](/graph/teams-protected-apis)

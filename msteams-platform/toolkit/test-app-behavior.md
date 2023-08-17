@@ -20,7 +20,6 @@ You can sideload your Teams app to Microsoft Teams without having to publish to 
 > [!IMPORTANT]
 >
 > * Sideloading of apps is possible only in Government Community Cloud (GCC) and isn't possible in GCC-High and Department of Defense (DOD).
->
 > * App installation is supported only on Teams desktop client.
 
 ## Prerequisites
@@ -81,3 +80,4 @@ To host your development and production code and their HTTPS endpoints, you need
 * [Deploy to the cloud](deploy.md)
 * [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)
+* [validDomains](../resources/schema/manifest-schema.md#validdomains)

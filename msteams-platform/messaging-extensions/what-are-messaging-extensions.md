@@ -5,8 +5,9 @@ description: Learn how message extensions are used, its types, and scenarios whe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
+ms.date: 02/24/2023
 ---
-# Message extensions
+# Build message extensions
 
 Message extensions allow the users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Teams client in the form of a richly formatted card.
 

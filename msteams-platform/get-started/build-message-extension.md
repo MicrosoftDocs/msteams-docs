@@ -2,6 +2,7 @@
 title: Build message extension
 description: In this module, learn how to build your first message extension for your Teams app.
 ms.localizationpriority: medium
+ms.date: 06/07/2023
 ms.topic: reference
 ---
 
@@ -16,36 +17,36 @@ In this tutorial, you'll learn to build a search-based message extension app, an
 Get familiarized with search based message extension app in one of the following ways:
 
 * **GitHub Codespaces**: The codespace instance allows you to experience a Teams app instantaneously. It opens Visual Studio Code (VS Code), where the Teams Toolkit extension, the app source code, and all the dependencies are pre-packaged for you.
-* **Step-by-step guide**: Allows you to create a Teams app from scratch with all development environment setup.
+* **Step-by-step guide**: Allows you to set up your development environment and build a Teams app from start.
 
 # [GitHub Codespaces](#tab/teamstoolkitcodespaces)
 
-Before you create your codespace, ensure that you have:
+Before you create your codespace, ensure that you have the following prerequisites:
 
-* A GitHub account to create your codespace instance.
-* A [Microsoft 365 account](https://developer.microsoft.com/microsoft-365/dev-program) with sideloading permission.
+* A GitHub account to create your codespace instance
+* A [Microsoft 365 account](https://developer.microsoft.com/microsoft-365/dev-program) with sideloading permission
 * A [Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
 
 > [!TIP]
-> [GitHub Codespaces](https://github.com/features/codespaces) offers free plan up to a fixed amount of usage every month. If you need to free up the space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespaces that you no longer need.
+> [GitHub Codespaces](https://github.com/features/codespaces) offers free plan up to a fixed amount of usage per month. If you need to free up more space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespaces that you no longer need.
 
-To create a search-based message extension app with GitHub Codespaces, follow the steps:
+To create a search-based message extension app with GitHub Codespaces, follow these steps:
 
 1. Select the following button to open GitHub Codespaces.
 
     <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=v3&repo=348288141&machine=basicLinux32gb&location=WestUs2&devcontainer_path=.devcontainer%2Fnpm-search-message-extension-codespaces%2Fdevcontainer.json&resume=1" target="_blank"><img src="https://github.com/codespaces/badge.svg" alt="Open message extension in GitHub Codespaces"></a>
 
-   You might be asked to sign in to GitHub account if you haven't.
+   You might be asked to sign in to GitHub account if you haven't already.
 
 1. Select **Create new codespace**.
 
-   :::image type="content" source="../assets/images/get-started/codespace.png" alt-text="Screenshot shows you the GitHub page to create a codespace for message extension."lightbox="../assets/images/get-started/codespace.png":::
+   :::image type="content" source="../assets/images/get-started/codespace.png" alt-text="Screenshot shows you the GitHub page to create a codespace for message extension.":::
 
    The **Setting up your codespace** page appears.
 
    :::image type="content" source="../assets/images/get-started/building-codespace.png" alt-text="Screenshot shows you the codespace building your message extension.":::
 
-   Teams Toolkit prepares the message extension for you and opens it in VS Code in the browser. Teams Toolkit icon appears in the activity bar of VS Code.
+   Teams Toolkit prepares the message extension for you and opens it in VS Code in the browser. The Teams Toolkit icon appears in the activity bar of VS Code.
 
 1. Select **Sign in to your Microsoft 365** and **Sign in to Azure** to sign in with your Microsoft 365 account.
 
@@ -53,13 +54,13 @@ To create a search-based message extension app with GitHub Codespaces, follow th
 
     > [!NOTE]
     >
-    > When you build your app, GitHub Codespaces loads it to Teams client in a new tab. If your browser blocks pop-up tabs or windows, you'll need to allow pop-ups to let your app open.
+    > When you build your app, GitHub Codespaces loads it to the Teams client in a new tab. If your browser blocks pop-up tabs or windows, you'll need to allow pop-ups for your app to open.
 
 1. Select **Preview your Teams App (F5)** to build your message extension.
 
       :::image type="content" source="../assets/images/get-started/codespace/me-preview-teams.png" alt-text="Screenshot shows you the Teams Toolkit window in browser with your message extension."lightbox="../assets/images/get-started/codespace/me-preview-teams.png":::
 
-      GitHub Codespaces builds your message extension app, loads it to Teams client, and opens in another browser tab or window.
+      GitHub Codespaces builds your message extension app, loads it to Teams client, and opens in a separate browser tab.
 
    Your message extension app is sideloaded to Teams.
 
@@ -73,9 +74,7 @@ To create a search-based message extension app with GitHub Codespaces, follow th
 
 # [Step-by-step guide](#tab/step-by-step-guide)
 
-If you would want to learn how to start a project with Teams Toolkit from scratch, let's go through the step-by-step guide.
-
-Unlike GitHub Codespaces, you need to set up your development environment. Let's start building your message extension app.
+If you want to learn how to start a project with Teams Toolkit from the beginning, you'll need to set up your development environment. Select the following button to start building your message extension app.
 
 > [!div class="nextstepaction"]
 > [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml)
@@ -84,12 +83,12 @@ Unlike GitHub Codespaces, you need to set up your development environment. Let's
 
 For more information on message extensions, see [message extensions](../messaging-extensions/what-are-messaging-extensions.md).
 
-If a bot is what you are interested in, go to:
+If a bot is what you are interested in, select the following:
 
 > [!div class="nextstepaction"]
 > [Start building a bot](build-notification-bot.md)
 
-If you want to build basic tab app, go to:
+If you want to build basic tab app, select the following:
 
 > [!div class="nextstepaction"]
 > [Build your basic tab app](build-basic-tab-app.md)

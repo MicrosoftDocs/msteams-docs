@@ -5,6 +5,7 @@ description: Learn to build tabs using Adaptive Cards where front end is rendere
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 05/02/2023
 ---
 
 # Build tabs with Adaptive Cards
@@ -439,4 +440,4 @@ Follow the [step-by-step](../../sbs-tab-with-adaptive-cards.yml) guide to build 
 * [Tabs on mobile](../design/tabs-mobile.md)
 * [Cards](../../task-modules-and-cards/what-are-cards.md)
 * [Use task modules in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
-* [Form completion feedback](../../bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Form completion feedback](../../task-modules-and-cards/cards/cards-actions.md#form-completion-feedback)
