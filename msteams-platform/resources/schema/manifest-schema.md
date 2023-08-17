@@ -365,7 +365,7 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 **Required**—Microsoft app ID
 
-The ID is a unique Microsoft-generated identifier for the app. You have an ID if your bot is registered through the Microsoft Bot Framework. You have an ID if your tab's web app already signs in with Microsoft. You must enter the ID here. Otherwise, you must generate a new ID at the [Microsoft Application Registration Portal](https://aka.ms/appregistrations). Use the same ID if you add a bot.
+The ID is a unique Microsoft-generated identifier for the app. The format of the ID is GUID. You have an ID if your bot is registered through the Microsoft Bot Framework. You have an ID if your tab's web app already signs in with Microsoft. You must enter the ID here. Otherwise, you must generate a new ID at the [Microsoft Application Registration Portal](https://aka.ms/appregistrations). Use the same ID if you add a bot.
 
 The ID stored in Teams Admin Center is the **External App ID** and it's visible as **ExternalID** on the traces.
 
@@ -427,7 +427,7 @@ An array of objects specifying more language translations.
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
 |`languageTag`||✔️|The language tag of the strings in the provided file.|
-|`file`||✔️|A relative file path to the .json file containing the translated strings.|
+|`file`|2048 characters|✔️|A relative file path to the .json file containing the translated strings.|
 
 ## icons
 
@@ -437,7 +437,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
-|`outline`|32 x 32 pixels|✔️|A relative file path to a transparent 32x32 PNG outline icon.|
+|`outline`|32 x 32 pixels|✔️|A relative file path to a transparent 32x32 PNG outline icon. The border color must be white.|
 |`color`|192 x 192 pixels|✔️|A relative file path to a full color 192x192 PNG icon.|
 
 ## accentColor
@@ -475,9 +475,9 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`entityId`|string|64 characters|✔️|A unique identifier for the entity that the tab displays.|
-|`name`|string|128 characters||The display name of the tab in the channel interface.|
-|`contentUrl`|string|2048 characters||The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
-|`contentBotId`|string|128 characters||The Microsoft app ID specified for the bot in the [Bot Framework portal](https://dev.botframework.com/bots).|
+|`name`|string|128 characters|✔️|The display name of the tab in the channel interface.|
+|`contentUrl`|string|2048 characters|✔️|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
+|`contentBotId`|string|||The Microsoft app ID specified for the bot in the [Bot Framework portal](https://dev.botframework.com/bots).|
 |`websiteUrl`|string|2048 characters||The https:// URL to point to if a user opts to view in a browser.|
 |`searchUrl`|string|2048 characters||The https:// URL to point to for a user's search queries.|
 |`scopes`|array of enums|3|✔️| Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
@@ -497,7 +497,7 @@ The item is an array (maximum of only one element&mdash;currently only one bot i
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`botId`|string|128 characters|✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
+|`botId`|string||✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
 |`scopes`|array of enums|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupChat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
 |`needsChannelSelector`|Boolean|||Describes whether or not the bot uses a user hint to add the bot to a specific channel. Default: **`false`**|
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: **`false`**|
@@ -531,7 +531,7 @@ The object is an array (maximum of one element) with all elements of type `objec
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`configurationUrl`|string|2048 characters| |The https:// URL to use when configuring the connector.|
+|`configurationUrl`|string|2048 characters|✔️|The https:// URL to use when configuring the connector using the inline configuration experience.|
 |`scopes`|array of enums|1|✔️|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
 |`connectorId`|string|64 characters|✔️|A unique identifier for the Connector that matches its ID in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).|
 
@@ -548,7 +548,7 @@ The item is an array (maximum of one element) with all elements of type `object`
 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
-|`botId`|string|128 characters|✔️|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall App ID.|
+|`botId`|string||✔️|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall App ID.|
 |`commands`|array of objects|10|✔️|Array of commands the message extension supports.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. Default: **false**.|
 |`messageHandlers`|array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met.|
@@ -575,12 +575,12 @@ Each command item is an object with the following structure:
 |`taskInfo.title`|string|64 characters||Initial dialog title.|
 |`taskInfo.width`|string|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
 |`taskInfo.height`|string|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
-|`taskInfo.url`|string|||Initial webview URL.|
+|`taskInfo.url`|string|2048 characters||Initial webview URL.|
 |`parameters`|array of object|5 items|✔️|The list of parameters the command takes. Minimum: 1; maximum: 5.|
 |`parameters.name`|string|64 characters|✔️|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
 |`parameters.title`|string|32 characters|✔️|User-friendly title for the parameter.|
 |`parameters.description`|string|128 characters||User-friendly string that describes this parameter’s purpose.|
-|`parameters.value`|string|512 characters||Initial value for the parameter. Currently the value isn't supported|
+|`parameters.value`|string|512 characters||Initial value for the parameter. Currently the value isn't supported.|
 |`parameters.inputType`|string|||Defines the type of control displayed on a task module for`fetchTask: false` . Input value can only be one of `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|array of objects|10 items||The choice options for the`choiceset`. Use only when`parameter.inputType` is `choiceset`.|
 |`parameters.choices.title`|string|128 characters|✔️|Title of the choice.|
@@ -632,7 +632,7 @@ Teams apps that require their own SharePoint URLs to function well, includes "{t
 >
 > For example, *\*.\*.domain.com* is valid, but *foo.\*.myteam.domain.com* is not valid.
 
-The object is an array with all elements of the type `string`.
+The object is an array with all elements of the type `string`. The maximum items for the object is 16 and maximum length is 2048 characters.
 
 ## webApplicationInfo
 
@@ -642,7 +642,7 @@ Provide your Azure Active Directory App ID and Microsoft Graph information to he
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|string|128 characters|✔️|Azure AD application ID of the app. This ID must be a GUID.|
+|`id`|string||✔️|Azure AD application ID of the app. This ID must be a GUID.|
 |`resource`|string|2048 characters||Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you aren't using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, `https://example` to avoid an error response. |
 
 ## graphConnector
@@ -840,7 +840,7 @@ Specify meeting extension definition. For more information, see [custom Together
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`id`|string | 128 characters|✔️| The unique identifier for the scene. This id must be a GUID. |
+|`id`|string | |✔️| The unique identifier for the scene. This id must be a GUID. |
 |`name`| string | 128 characters |✔️| The name of the scene. |
 |`file`|string|2048 characters|✔️| The relative file path to the scenes' metadata json file. |
 |`preview`|string|2048 characters|✔️| The relative file path to the scenes' PNG preview icon. |
@@ -858,7 +858,7 @@ Specify and consolidate authorization related information for the app.
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`permissions`|NA|NA|NA|List of permissions that the app needs to function.|
+|`permissions`|Object|NA|NA|List of permissions that the app needs to function.|
 
 ### authorization.permissions
 
