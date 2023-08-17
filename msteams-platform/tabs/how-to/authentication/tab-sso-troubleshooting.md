@@ -98,14 +98,14 @@ The following image shows an example of the app details configured in Azure AD.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="App configuration values in Azure AD":::
 
-Check that the following values match between Azure AD, client-side code, and Teams app manifest:
+Check that the following values match between Azure AD, client-side code, and app manifest (previously called Teams app manifest):
 
 - **App ID**: The app ID you generated in Azure AD should be the same in the code and in Teams manifest file. Check the app ID in Teams manifest matches the **Application (client) ID** in Azure AD.
 
 - **App secret**: The app secret configured in the backend of your app should match the **Client credentials** in Azure AD.
     You should also check if the client secret is expired.
 
-- **Application ID URI**: The app ID URI in the code and in Teams app manifest file should match the **Application ID URI** in Azure AD.
+- **Application ID URI**: The app ID URI in the code and in app manifest file should match the **Application ID URI** in Azure AD.
 
 - **App permissions**: Check if the permissions you defined in the scope are as per your app requirement. If so, check if they had been granted to the user in the access token.
 

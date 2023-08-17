@@ -53,7 +53,7 @@ Teams app in Teams Developer Portal.
 
 #### What it is
 
-Apply the Teams app manifest to an existing Teams app in Teams Developer Portal. It uses the app ID in manifest.json file to determine which Teams app to update.
+Apply the app manifest (previously called Teams app manifest) to an existing Teams app in Teams Developer Portal. It uses the app ID in manifest.json file to determine which Teams app to update.
 
 #### What resource it operates
 
@@ -72,7 +72,7 @@ Teams app in Teams Developer Portal.
 
 #### What it is
 
-This action renders Teams app manifest template with environment variables and validates Teams app manifest file using its schema.
+This action renders app manifest template with environment variables and validates app manifest file using its schema.
 
 #### What resource it operates
 
@@ -83,7 +83,7 @@ N/A
 ```yml
   - uses: teamsApp/validate
     with:
-      # Required. Relative path to the yaml file. Path to Teams app manifest file
+      # Required. Relative path to the yaml file. Path to app manifest file
       manifestPath: <path-to-manifest-file>
 ```
 
@@ -110,7 +110,7 @@ N/A
 
 #### What it is
 
-This action renders Teams app manifest template with environment variables and compresses the manifest file with two icons into a zip file.
+This action renders app manifest template with environment variables and compresses the manifest file with two icons into a zip file.
 
 #### What resource it operates
 
@@ -121,7 +121,7 @@ N/A
 ```yml
 - uses: teamsApp/zipAppPackage
     with:
-      # Required. Relative path to the yaml file. This is the path for Teams app manifest file. Environment variables in manifest will be replaced before apply to AAD app.
+      # Required. Relative path to the yaml file. This is the path for app manifest file. Environment variables in manifest will be replaced before apply to AAD app.
       manifestPath: <path-to-manifest-file>
       # Required. Relative path to the yaml file. This is the path for built zip file.
       outputZipPath: <path-to-generated-zip-file>
@@ -321,7 +321,7 @@ The provision steps are defined in `teamsapp.yml` file, under `provision` proper
 
 #### Reference environment variables in parameter files
 
-Teams Toolkit supports referencing the values from environment variables in `teamsapp.yml`, Teams app manifest, Azure AD app manifest, and Azure parameter files. You can use syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
+Teams Toolkit supports referencing the values from environment variables in `teamsapp.yml`, app manifest, Azure AD app manifest, and Azure parameter files. You can use syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
 
 The following example sets the value of environment variable `MY_AZURE_SUBSCRIPTION_ID` to `subscriptionId`:
 
@@ -749,6 +749,6 @@ Add Azure storage to your Azure function back-end to store blob data. There's no
 * [Deploy Teams app to the cloud](deploy.md)
 * [Manage multiple environments](~/toolkit/TeamsFx-multi-env.md)
 * [Collaborate with other developers on Teams project](~/toolkit/TeamsFx-collaboration.md)
-* [Edit Teams app manifest using Visual Studio](~/toolkit/TeamsFx-preview-and-customize-app-manifest.md)
+* [Edit app manifest using Visual Studio](~/toolkit/TeamsFx-preview-and-customize-app-manifest.md)
 
 ::: zone-end
