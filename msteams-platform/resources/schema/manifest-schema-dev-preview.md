@@ -275,13 +275,13 @@ The `https://` URL referencing the JSON Schema for the manifest.
 
 ## manifestVersion
 
-**Required**—String
+**Required** — String
 
 The version of the manifest schema this manifest is using.
 
 ## version
 
-**Required**—String
+**Required** — String
 
 The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it overwrites the existing one and the user will get the new functionality. If this app was submitted to the store, the new manifest has to be resubmitted and revalidated. Then, users of this app will get the new updated manifest automatically in a few hours, after it's approved.
 
@@ -291,13 +291,13 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 ## id
 
-**Required** &ndash; Microsoft app ID
+**Required** — Microsoft app ID
 
 The unique Microsoft-generated identifier for this app. The format of the ID is GUID. If you've registered a bot via the Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, then you should already have an ID and must enter it here. Otherwise, you must generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/bots/how-to/create-a-bot-for-teams.md).
 
 ## developer
 
-Required-object
+**Required** — Object
 
 Specifies information about your company. For apps submitted to AppSource (formerly Office Store), these values must match the information in your AppSource entry.
 
@@ -311,13 +311,13 @@ Specifies information about your company. For apps submitted to AppSource (forme
 
 ## localizationInfo
 
-Optional:
+**Optional**:
 
 Allows the specification of a default language, and pointers to additional language files. See [localization](~/concepts/build-and-test/apps-localization.md).
 
 |Name| Type | Maximum size | Required | Description|
 |---|---|---|---|---|
-|`defaultLanguageTag`|object|4 characters|✔️|The language tag of the strings in this top level manifest file.|
+|`defaultLanguageTag`|Object|4 characters|✔️|The language tag of the strings in this top level manifest file.|
 
 ### localizationInfo.additionalLanguages
 
@@ -330,18 +330,18 @@ An array of objects specifying additional language translations.
 
 ## name
 
-Required-object
+*Required** — Object
 
 The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` shouldn't be the same.
 
 |Name| Type | Maximum size | Required | Description|
 |---|---|---|---|---|
-|`short`|string|30 characters|✔️|The short display name for the app.|
-|`full`|string|100 characters|✔️|The full name of the app, used if the full app name exceeds 30 characters.|
+|`short`|String|30 characters|✔️|The short display name for the app.|
+|`full`|String|100 characters|✔️|The full name of the app, used if the full app name exceeds 30 characters.|
 
 ## description
 
-Required-object
+*Required** — Object
 
 Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry.
 
@@ -354,7 +354,7 @@ Ensure that your description accurately describes your experience and provides i
 
 ## icons
 
-Required-object
+*Required** — Object
 
 Icons used within the Teams app. The icon files must be included as part of the upload package.
 
@@ -365,7 +365,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 ## accentColor
 
-**Required**—String
+**Required** — String
 
 A color to use with and as a background for your outline icons.
 
@@ -373,7 +373,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 ## configurableTabs
 
-Optional:
+**Optional**:
 
 Used when your app experience has a team channel tab experience that requires extra configuration before it's added. Configurable tabs are supported only in the teams scope, and currently only one tab per app is supported.
 
@@ -384,15 +384,15 @@ The object is an array with all elements of the type `object`. This block is req
 |`configurationUrl`|String|2048 characters|✔️|The https:// URL to use when configuring the tab.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: `true`|
 |`scopes`|array of enum|2|✔️|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
-|`context` |array of enums|8||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, `personalTab`, and `callingSidePanel`.|
+|`context` |Array of enums|8||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, `personalTab`, and `callingSidePanel`.|
 |`sharePointPreviewImage`|String|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
-|`supportedSharePointHosts`|array of enum|2||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart`. |
-|`meetingSurfaces`|array of enum|2||The set of meetingSurfaceItem scopes to which a tab belongs. Options are `sidePanel` and `stage`.|
-|`supportedPlatform`|array of enum|3||The set of supportedPlatform scopes to which a tab belongs. Options are `desktop`, `mobile`, and `teamsMeetingDevices`.|
+|`supportedSharePointHosts`|Array of enum|2||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart`. |
+|`meetingSurfaces`|Array of enum|2||The set of meetingSurfaceItem scopes to which a tab belongs. Options are `sidePanel` and `stage`.|
+|`supportedPlatform`|Array of enum|3||The set of supportedPlatform scopes to which a tab belongs. Options are `desktop`, `mobile`, and `teamsMeetingDevices`.|
 
 ## staticTabs
 
-Optional:
+**Optional**:
 
 Defines a set of tabs that can be "pinned" by default, without the user adding them manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience. Static tabs declared in the `team` scope are currently not supported.
 
@@ -405,7 +405,7 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |`entityId`|String|64 characters|✔️|A unique identifier for the entity that the tab displays.|
 |`name`|String|128 characters|✔️|The display name of the tab in the channel interface.|
 |`contentUrl`|String|2048 characters|✔️|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
-|`contentBotId`|string| | | The Microsoft Teams app ID specified for the bot in the Bot Framework portal. |
+|`contentBotId`|String| | | The Microsoft Teams app ID specified for the bot in the Bot Framework portal. |
 |`websiteUrl`|String|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
 |`scopes`|Array of enum|3|✔️|Static tabs support the `personal`, `team` and `groupChat` scopes, which means it can be provisioned as part of the personal, group chat, and channel meetings experience.|
 |`searchUrl`|String|2048 characters||The url to direct a user's search queries.|
@@ -414,7 +414,7 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 
 ## bots
 
-Optional:
+**Optional**:
 
 Defines a bot solution, along with optional information such as default command properties.
 
@@ -436,20 +436,20 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`teams`|object||||
-|`teams.parameters`|array|5||The minItems is 1 and maxItems is 5.|
-|`teams.parameters.name`|string|64|✔️|The name of the parameter.|
-|`teams.parameters.inputType`|string|||Type of the parameter. Options are `text`, `textarea`, `number`, `date`, `time`, `toggle`, and `choiceset`. Default value is `text`.|
-|`teams.parameters.title`|string|32|✔️|Title of the parameter.|
-|`teams.parameters.description`|string|128||Description of the parameter.|
-|`teams.parameters.value`|string|512||The initial value of the parameter.|
-|`teams.parameters.choices`|array|10||The choice options for the parameter.|
-|`teams.parameters.choices.title`|string|128|✔️|Title of the choice.|
-|`teams.parameters.choices.value`|string|512|✔️|Value of te choice.|
-|`taskInfo`|object||||
-|`taskInfo.title`|string|64||Title of the task module.|
-|`taskInfo.width`|string|16||Width of the task module. The value is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
-|`taskInfo.height`|string|16||Height of the task module. The value is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
-|`taskInfo.url`|string|2048||Task module URL.|
+|`teams.parameters`|Array|5||The minItems is 1 and maxItems is 5.|
+|`teams.parameters.name`|String|64|✔️|The name of the parameter.|
+|`teams.parameters.inputType`|String|||Type of the parameter. Options are `text`, `textarea`, `number`, `date`, `time`, `toggle`, and `choiceset`. Default value is `text`.|
+|`teams.parameters.title`|String|32|✔️|Title of the parameter.|
+|`teams.parameters.description`|String|128||Description of the parameter.|
+|`teams.parameters.value`|String|512||The initial value of the parameter.|
+|`teams.parameters.choices`|Array|10||The choice options for the parameter.|
+|`teams.parameters.choices.title`|String|128|✔️|Title of the choice.|
+|`teams.parameters.choices.value`|String|512|✔️|Value of te choice.|
+|`taskInfo`|Object||||
+|`taskInfo.title`|String|64||Title of the task module.|
+|`taskInfo.width`|String|16||Width of the task module. The value is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
+|`taskInfo.height`|String|16||Height of the task module. The value is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
+|`taskInfo.url`|String|2048||Task module URL.|
 
 ### bots.commandLists
 
@@ -457,12 +457,12 @@ An optional list of commands that your bot can recommend to users. The object is
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`items.scopes`|array of enum|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupchat`.|
-|`items.commands`|array of objects|10|✔️|An array of commands the bot supports:<br>`title`: the bot command name (string, 32).<br>`description`: a simple description or example of the command syntax and its argument (string, 128).|
+|`items.scopes`|Array of enum|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupchat`.|
+|`items.commands`|Array of objects|10|✔️|An array of commands the bot supports:<br>`title`: the bot command name (string, 32).<br>`description`: a simple description or example of the command syntax and its argument (string, 128).|
 
 ## connectors
 
-Optional:
+**Optional**:
 
 The `connectors` block defines a connector for Microsoft 365 Groups for the app.
 
@@ -476,7 +476,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 ## composeExtensions
 
-Optional:
+**Optional**:
 
 Defines a message extension for the app.
 
@@ -531,12 +531,12 @@ The object is an array with all elements of type `object`.
 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
-|`teams`|array|128||A list of team thread ids to which your app is restricted.|
-|`teams.id`|string|64|✔️|Team's thread Id.|
+|`teams`|Array|128||A list of team thread ids to which your app is restricted.|
+|`teams.id`|String|64|✔️|Team's thread Id.|
 
 ## permissions
 
-Optional:
+**Optional**:
 
 An array of `string`, which specifies which permissions the app requests, which let end users know how the extension performs. The following options are non-exclusive:
 
@@ -547,7 +547,7 @@ Changing these permissions when updating your app causes your users to repeat th
 
 ## devicePermissions
 
-**Optional** Array of Strings
+**Optional** —Array of Strings
 
 Specifies the native features on a user's device that your app may request access to. Options are:
 
@@ -572,7 +572,7 @@ The object is an array with all elements of the type `string`. The maxItems for 
 
 ## webApplicationInfo
 
-Optional-object
+**Optional** — Object
 
 Specify your Microsoft Azure Active Directory (Azure AD) App ID and Graph information to help users seamlessly sign into your Azure AD app.
 
@@ -583,7 +583,7 @@ Specify your Microsoft Azure Active Directory (Azure AD) App ID and Graph inform
 
 ## graphConnector
 
-**Optional**—object
+**Optional** — Object
 
 Specify the app's Graph connector configuration. If this is present, then [webApplicationInfo.id](#webapplicationinfo) must also be specified.
 
@@ -593,9 +593,9 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 
 ## showLoadingIndicator
 
-**Optional**—Boolean
+**Optional** — Boolean
 
-Indicates whether or not to show the loading indicator when an app or tab is loading. Default is **false**.
+Indicates whether or not to show the loading indicator when an app or tab is loading. Default is `false`.
 > [!NOTE]
 >
 > * If you select`showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
@@ -603,30 +603,30 @@ Indicates whether or not to show the loading indicator when an app or tab is loa
 
 ## isFullScreen
 
- **Optional**—Boolean
+ **Optional** — Boolean
 
-Indicate where a personal app is rendered with or without a tab header bar. Default is **false**.
+Indicate where a personal app is rendered with or without a tab header bar. Default is `false`.
 
 > [!NOTE]
 > `isFullScreen` works only for apps published to your organization.
 
 ## activities
 
-**Optional**—object
+**Optional** — Object
 
 Define the properties your app uses to post a user activity feed.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`activityTypes`|array of Objects|128 items| | Provide the types of activities that your app can post to a users activity feed.|
+|`activityTypes`|Array of Objects|128 items| | Provide the types of activities that your app can post to a users activity feed.|
 
 ### activities.activityTypes
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`type`|string|32 characters|✔️|The notification type. *See below*.|
-|`description`|string|128 characters|✔️|A brief description of the notification. *See below*.|
-|`templateText`|string|128 characters|✔️|Ex: "{actor} created task {taskId} for you"|
+|`type`|String|32 characters|✔️|The notification type. *See below*.|
+|`description`|String|128 characters|✔️|A brief description of the notification. *See below*.|
+|`templateText`|String|128 characters|✔️|Ex: "{actor} created task {taskId} for you"|
 
 ```json
 {
@@ -676,7 +676,7 @@ Define the properties your app uses to post a user activity feed.
 
 ## configurableProperties
 
-**Optional**—array
+**Optional** — Array
 
 The `configurableProperties` block defines the app properties that Teams admins can customize. For more information, see [enable app customization](~/concepts/design/enable-app-customization.md).
 
@@ -697,7 +697,7 @@ You can define any of the following properties:
 
 ## supportedChannelTypes
 
-**Optional**—array
+**Optional** — Array
 
 Enables your app in non-standard channels. If your app supports a team scope and this property is defined, Teams enables your app in each channel type accordingly. Currently, the private and shared channel types are supported.
 
@@ -710,7 +710,7 @@ Enables your app in non-standard channels. If your app supports a team scope and
 
 Boolean
 
-A value that indicates whether an app is blocked by default until admin allows it. The default value is **false**.
+A value that indicates whether an app is blocked by default until admin allows it. The default value is `false`.
 
 ## publisherDocsUrl
 
@@ -720,7 +720,7 @@ The url to the page that provides additional app information for the admins. The
 
 ## defaultInstallScope
 
-**Optional**—string
+**Optional** — String
 
 Specifies the install scope defined for this app by default. The defined scope is the option displayed on the button when a user tries to add the app. Options are:
 
@@ -731,7 +731,7 @@ Specifies the install scope defined for this app by default. The defined scope i
 
 ## defaultGroupCapability
 
-**Optional**—object
+**Optional** — Object
 
 When a group install scope is selected, it defines the default capability when the user installs the app. Options are:
 
@@ -741,13 +741,13 @@ When a group install scope is selected, it defines the default capability when t
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`team`|string|||When the install scope selected is `team`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
-|`groupchat`|string|||When the install scope selected is `groupchat`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
-|`meetings`|string|||When the install scope selected is `meetings`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`team`|String|||When the install scope selected is `team`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`groupchat`|String|||When the install scope selected is `groupchat`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`meetings`|String|||When the install scope selected is `meetings`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 
 ## subscriptionOffer
 
-**Optional**—object
+**Optional** — Object
 
 Specifies the SaaS offer associated with your app.
 
@@ -757,16 +757,16 @@ Specifies the SaaS offer associated with your app.
 
 ## meetingExtensionDefinition
 
-**Optional**—object
+**Optional** — Object
 
 Specify meeting extension definition. For more information, see [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`scenes`|array of objects| 5 items||Meeting supported scenes.|
-|`supportsStreaming`|Boolean|||A value that indicates whether an app can stream the meeting's audio and video content to a real-time meeting protocol (RTMP) endpoint. The default value is **false**.|
-|`videoFiltersConfigurationUrl`|string|2048||A URL for configuring the video filters.|
-|`supportsAnonymousGuestUsers`|boolean|||A boolean value that indicates whether the app supports access by anonymous guest users. The default value is **false**.|
+|`scenes`|Array of objects| 5 items||Meeting supported scenes.|
+|`supportsStreaming`|Boolean|||A value that indicates whether an app can stream the meeting's audio and video content to a real-time meeting protocol (RTMP) endpoint. The default value is `false`.|
+|`videoFiltersConfigurationUrl`|String|2048||A URL for configuring the video filters.|
+|`supportsAnonymousGuestUsers`|Boolean|||A boolean value that indicates whether the app supports access by anonymous guest users. The default value is `false`.|
 
 ### meetingExtensionDefinition.videoFilters
 
@@ -774,24 +774,24 @@ This object indicates meeting supported video filters.
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`id`|string||✔️| The unique identifier for the video filter. This id must be a GUID. |
-|`name`| string | 128 characters |✔️| The name of the video filter. |
-|`thumbnail`|string|2048|✔️| The relative file path to the video filter's thumbnail. |
+|`id`|String||✔️| The unique identifier for the video filter. This id must be a GUID. |
+|`name`| String | 128 characters |✔️| The name of the video filter. |
+|`thumbnail`|String|2048|✔️| The relative file path to the video filter's thumbnail. |
 
 ### meetingExtensionDefinition.scenes
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`id`|string||✔️| The unique identifier for the scene. This id must be a GUID. |
-|`name`| string | 128 characters |✔️| The name of the scene. |
-|`file`|string|2048|✔️| The relative file path to the scenes' metadata json file. |
-|`preview`|string|2048|✔️| The relative file path to the scenes' PNG preview icon. |
-|`maxAudience`| integer | 50  |✔️| The maximum number of audiences supported in the scene. |
-|`seatsReservedForOrganizersOrPresenters`| integer | 50 |✔️| The number of seats reserved for organizers or presenters.|
+|`id`|String||✔️| The unique identifier for the scene. This id must be a GUID. |
+|`name`| String | 128 characters |✔️| The name of the scene. |
+|`file`|String|2048|✔️| The relative file path to the scenes' metadata json file. |
+|`preview`|String|2048|✔️| The relative file path to the scenes' PNG preview icon. |
+|`maxAudience`| Integer | 50  |✔️| The maximum number of audiences supported in the scene. |
+|`seatsReservedForOrganizersOrPresenters`| Integer | 50 |✔️| The number of seats reserved for organizers or presenters.|
 
 ## authorization
 
-**Optional**—object
+**Optional** — Object
 
 > [!NOTE]
 > `authorization` is only supported for manifest version 1.12 or later.
@@ -800,20 +800,20 @@ Specify and consolidate authorization related information for the app.
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`permissions`|object|NA|NA|List of permissions that the app needs to function.|
+|`permissions`|Object|NA|NA|List of permissions that the app needs to function.|
 
 ### authorization.permissions
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`resourceSpecific`| array of objects|16 items|NA|Permissions that guard data access on resource instance level.|
+|`resourceSpecific`| Array of objects|16 items|NA|Permissions that guard data access on resource instance level.|
 
 ### authorization.permissions.resourceSpecific
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`type`|string|NA|✔️| The type of the resource-specific consent (RSC) permission. Options: `Application` and `Delegated`.|
-|`name`|string|128 characters|✔️|The name of the RSC permission. For more information, see [RSC application permissions](#rsc-application-permissions) and [RSC delegated permissions](#rsc-delegated-permissions)|
+|`type`|String|NA|✔️| The type of the resource-specific consent (RSC) permission. Options: `Application` and `Delegated`.|
+|`name`|String|128 characters|✔️|The name of the RSC permission. For more information, see [RSC application permissions](#rsc-application-permissions) and [RSC delegated permissions](#rsc-delegated-permissions)|
 
 #### RSC application permissions
 
@@ -862,7 +862,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 
 ## extensions
 
-**Optional**—array
+**Optional** — Array
 
 Contains objects that define the set of extensions for the app. Used to specify Outlook Add-ins within an app manifest for simplified distribution and acquisition within the Microsoft 365 ecosystem.
 
@@ -871,14 +871,14 @@ Contains objects that define the set of extensions for the app. Used to specify 
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`requirements.capabilities`| array | | | Identifies the requirement sets that the add-in needs to be installable. Each object in the array is made up of three strings `name` (required), `minVersion`, and `maxVersion`. |
-|`requirements.scopes`| array | 1 | | Identifies the Office applications, by enum, in which the add-in can be installed. The only supported enum value is `mail`. |
-|`requirements.formFactors`| array | | | Identifies the form factors, by enum `mobile` and `desktop`, in which the add-in can be installed. |
-|`runtimes`| array | | | Configures various kinds of add-ins that have little or no UI, such as custom function-only add-ins and [function commands](/office/dev/add-ins/design/add-in-commands). |
-|`ribbons`| array | | | The ribbons that the add-in customizes. This property is an array of objects that combine the child properties `requirements`, `contexts`, and `tabs`. `Contexts` specify the command surfaces that the add-in customizes, while the `tabs` property configures custom ribbon tabs. |
-|`autoRunEvents`| array | | | Configures an event handler for a specified event. |
-|`alternates`| array | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both. For more information on background, see [EquivalentAddins](/javascript/api/manifest/equivalentaddins). |
-|`audienceClaimUrl`| string | 2048 | | The url for your extension, used to validate Exchange user identity tokens. |
+|`requirements.capabilities`| Array | | | Identifies the requirement sets that the add-in needs to be installable. Each object in the array is made up of three strings `name` (required), `minVersion`, and `maxVersion`. |
+|`requirements.scopes`| Array | 1 | | Identifies the Office applications, by enum, in which the add-in can be installed. The only supported enum value is `mail`. |
+|`requirements.formFactors`| Array | | | Identifies the form factors, by enum `mobile` and `desktop`, in which the add-in can be installed. |
+|`runtimes`| Array | | | Configures various kinds of add-ins that have little or no UI, such as custom function-only add-ins and [function commands](/office/dev/add-ins/design/add-in-commands). |
+|`ribbons`| Array | | | The ribbons that the add-in customizes. This property is an array of objects that combine the child properties `requirements`, `contexts`, and `tabs`. `Contexts` specify the command surfaces that the add-in customizes, while the `tabs` property configures custom ribbon tabs. |
+|`autoRunEvents`| Array | | | Configures an event handler for a specified event. |
+|`alternates`| Array | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both. For more information on background, see [EquivalentAddins](/javascript/api/manifest/equivalentaddins). |
+|`audienceClaimUrl`| String | 2048 | | The url for your extension, used to validate Exchange user identity tokens. |
 
 For more information, see [extension property](/office/dev/add-ins/develop/json-manifest-overview) in the Office Add-ins manifest documentation.
 
