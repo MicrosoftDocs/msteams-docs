@@ -589,7 +589,7 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`notificationUrl`|string|2048 characters|✔️|The url where Graph-connector notifications for the application should be sent.|
+|`notificationUrl`|string|2048 characters|✔️|The https:// URL where Graph-connector notifications for the application should be sent.|
 
 ## showLoadingIndicator
 
@@ -878,7 +878,7 @@ Contains objects that define the set of extensions for the app. Used to specify 
 |`ribbons`| Array | | | The ribbons that the add-in customizes. This property is an array of objects that combine the child properties `requirements`, `contexts`, and `tabs`. `Contexts` specify the command surfaces that the add-in customizes, while the `tabs` property configures custom ribbon tabs. |
 |`autoRunEvents`| Array | | | Configures an event handler for a specified event. |
 |`alternates`| Array | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both. For more information on background, see [EquivalentAddins](/javascript/api/manifest/equivalentaddins). |
-|`audienceClaimUrl`| String | 2048 | | The url for your extension, used to validate Exchange user identity tokens. |
+|`audienceClaimUrl`| String | 2048 | | The https:// URL for your extension, used to validate Exchange user identity tokens. |
 
 For more information, see [extension property](/office/dev/add-ins/develop/json-manifest-overview) in the Office Add-ins manifest documentation.
 
