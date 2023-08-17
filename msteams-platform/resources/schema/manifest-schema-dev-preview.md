@@ -311,13 +311,13 @@ Specifies information about your company. For apps submitted to AppSource (forme
 
 ## localizationInfo
 
-**Optional**:
+**Optional** &ndash; Object
 
 Allows the specification of a default language, and pointers to additional language files. See [localization](~/concepts/build-and-test/apps-localization.md).
 
-|Name| Type | Maximum size | Required | Description|
+|Name| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`defaultLanguageTag`|Object|4 characters|✔️|The language tag of the strings in this top level manifest file.|
+|`defaultLanguageTag`|4 characters|✔️|The language tag of the strings in this top level manifest file.|
 
 ### localizationInfo.additionalLanguages
 
@@ -360,7 +360,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
-|`outline`|2048 characters|✔️|A relative file path to a transparent 32x32 PNG outline icon. The order color needs to be white.|
+|`outline`|2048 characters|✔️|A relative file path to a transparent 32x32 PNG outline icon. The border color must be white.|
 |`color`|2048 characters|✔️|A relative file path to a full color 192x192 PNG icon.|
 
 ## accentColor
@@ -387,8 +387,8 @@ The object is an array with all elements of the type `object`. This block is req
 |`context` |Array of enums|8||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, `personalTab`, and `callingSidePanel`.|
 |`sharePointPreviewImage`|String|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
 |`supportedSharePointHosts`|Array of enum|2||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart`. |
-|`meetingSurfaces`|Array of enum|2||The set of meetingSurfaceItem scopes to which a tab belongs. Options are `sidePanel` and `stage`.|
-|`supportedPlatform`|Array of enum|3||The set of supportedPlatform scopes to which a tab belongs. Options are `desktop`, `mobile`, and `teamsMeetingDevices`.|
+|`meetingSurfaces`|Array of enum|2||The set of `meetingSurfaceItem` scopes to which a tab belongs. Default: `sidePanel` and `stage`.|
+|`supportedPlatform`|Array of enum|3||The set of `supportedPlatform` scopes to which a tab belongs. Default: `desktop`, `mobile`, and `teamsMeetingDevices`.|
 
 ## staticTabs
 
@@ -408,9 +408,9 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |`contentBotId`|String| | | The Microsoft Teams app ID specified for the bot in the Bot Framework portal. |
 |`websiteUrl`|String|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
 |`scopes`|Array of enum|3|✔️|Static tabs support the `personal`, `team` and `groupChat` scopes, which means it can be provisioned as part of the personal, group chat, and channel meetings experience.|
-|`searchUrl`|String|2048 characters||The url to direct a user's search queries.|
-|`context`|Array of enum|8||The set of contextItem scopes to which a tab belongs. The options are `personalTab`, `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, and `teamLevelApp`.|
-|`supportedPlatform`|Array of enum|3||The set of supportedPlatform scopes to which a tab belongs. the options are `desktop`, `mobile`, and `teamsMeetingDevices`.|
+|`searchUrl`|String|2048 characters||The https:// URL to direct a user's search queries.|
+|`context`|Array of enum|8||The set of `contextItem` scopes to which a tab belongs. Default: `personalTab`, `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, and `teamLevelApp`.|
+|`supportedPlatform`|Array of enum|3||The set of `supportedPlatform` scopes to which a tab belongs. Default: `desktop`, `mobile`, and `teamsMeetingDevices`.|
 
 ## bots
 
@@ -437,19 +437,19 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |---|---|---|---|---|
 |`teams`|object||||
 |`teams.parameters`|Array|5||The minItems is 1 and maxItems is 5.|
-|`teams.parameters.name`|String|64|✔️|The name of the parameter.|
+|`teams.parameters.name`|String|64 characters|✔️|Name of the parameter.|
 |`teams.parameters.inputType`|String|||Type of the parameter. Options are `text`, `textarea`, `number`, `date`, `time`, `toggle`, and `choiceset`. Default value is `text`.|
-|`teams.parameters.title`|String|32|✔️|Title of the parameter.|
-|`teams.parameters.description`|String|128||Description of the parameter.|
+|`teams.parameters.title`|String|32 characters|✔️|Title of the parameter.|
+|`teams.parameters.description`|String|128 characters||Description of the parameter.|
 |`teams.parameters.value`|String|512||The initial value of the parameter.|
 |`teams.parameters.choices`|Array|10||The choice options for the parameter.|
 |`teams.parameters.choices.title`|String|128|✔️|Title of the choice.|
-|`teams.parameters.choices.value`|String|512|✔️|Value of te choice.|
+|`teams.parameters.choices.value`|String|512|✔️|Value of the choice.|
 |`taskInfo`|Object||||
-|`taskInfo.title`|String|64||Title of the task module.|
+|`taskInfo.title`|String|64 characters||Title of the task module.|
 |`taskInfo.width`|String|16||Width of the task module. The value is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`taskInfo.height`|String|16||Height of the task module. The value is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
-|`taskInfo.url`|String|2048||Task module URL.|
+|`taskInfo.url`|String|2048 characters||Task module URL.|
 
 ### bots.commandLists
 
@@ -470,7 +470,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 characters|✔️|The https:// URL to use when configuring the connector. The url to use for configuring the connector using the inline configuration experience.|
+|`configurationUrl`|String|2048 characters|✔️|The https:// URL to use when configuring the connector using the inline configuration experience.|
 |`connectorId`|String|64 characters|✔️|A unique identifier for the Connector that matches its ID in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).|
 |`scopes`|Array of enum|1|✔️|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
 
@@ -490,6 +490,10 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |`botId`|String||✔️|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. The default is `false`.|
 |`commands`|Array of object|10|✔️|Array of commands the message extension supports|
+|`messageHandlers`|Array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
+|`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
+|`messageHandlers.value.domains`|Array of Strings|2048||Array of domains that the link message handler can register for.|
+|`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A boolean value that indicates whether the app's link message handler supports anonymous invoke flow. The default value is `false`. To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
 
 ### composeExtensions.commands
 
@@ -510,11 +514,7 @@ Each command item is an object with the following structure:
 |`taskInfo.title`|String|64||Initial dialog title.|
 |`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
-|`taskInfo.url`|String|2048||Initial webview URL.|
-|`messageHandlers`|Array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
-|`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
-|`messageHandlers.value.domains`|Array of Strings|2048||Array of domains that the link message handler can register for.|
-|`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A boolean value that indicates whether the app's link message handler supports anonymous invoke flow. The default value is `false`. To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
+|`taskInfo.url`|String|2048 characters||Initial webview URL.|
 |`parameters`|Array of object|5|✔️|The list of parameters the command takes. Minimum: 1; maximum: 5|
 |`parameter.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. This is included in the user request.|
 |`parameter.title`|String|32 characters|✔️|User-friendly title for the parameter.|
@@ -527,12 +527,12 @@ Each command item is an object with the following structure:
 
 ## scopeConstraints
 
-The object is an array with all elements of type `object`.
-
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
-|`teams`|Array|128||A list of team thread ids to which your app is restricted.|
+|`teams`|Array|128||A list of team thread ids to which your app is restricted to.|
 |`teams.id`|String|64|✔️|Team's thread Id.|
+|`groupChats`|Array|128||A list of chat thread ids to which your app is restricted to.|
+|`groupChats.id`|String|64|✔️|Chat's thread Id.|
 
 ## permissions
 
@@ -568,7 +568,7 @@ It is **not** necessary to include the domains of identity providers you want to
 > [!IMPORTANT]
 > Do not add domains that are outside your control, either directly or via wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid.
 
-The object is an array with all elements of the type `string`. The maxItems for the object is 16 and maxLength is 2048.
+The object is an array with all elements of the type `string`. The maximum items for the object is 16 and maximum length is 2048 characters.
 
 ## webApplicationInfo
 
@@ -708,15 +708,15 @@ Enables your app in non-standard channels. If your app supports a team scope and
 
 ## defaultBlockUntilAdminAction
 
-Boolean
+**Optional** &ndash; Boolean
 
 A value that indicates whether an app is blocked by default until admin allows it. The default value is `false`.
 
 ## publisherDocsUrl
 
-String
+**Optional** &ndash; String
 
-The url to the page that provides additional app information for the admins. The maxLength of the string is 2048.
+The https:// URL to the page that provides additional app information for the admins. The maximum length of the string is 2048 characters.
 
 ## defaultInstallScope
 
@@ -765,18 +765,8 @@ Specify meeting extension definition. For more information, see [custom Together
 |---|---|---|---|---|
 |`scenes`|Array of objects| 5 items||Meeting supported scenes.|
 |`supportsStreaming`|Boolean|||A value that indicates whether an app can stream the meeting's audio and video content to a real-time meeting protocol (RTMP) endpoint. The default value is `false`.|
-|`videoFiltersConfigurationUrl`|String|2048||A URL for configuring the video filters.|
+|`videoFiltersConfigurationUrl`|String|2048 characters||The https:// URL for configuring the video filters.|
 |`supportsAnonymousGuestUsers`|Boolean|||A boolean value that indicates whether the app supports access by anonymous guest users. The default value is `false`.|
-
-### meetingExtensionDefinition.videoFilters
-
-This object indicates meeting supported video filters.
-
-|Name| Type|Maximum size|Required |Description|
-|---|---|---|---|---|
-|`id`|String||✔️| The unique identifier for the video filter. This id must be a GUID. |
-|`name`| String | 128 characters |✔️| The name of the video filter. |
-|`thumbnail`|String|2048|✔️| The relative file path to the video filter's thumbnail. |
 
 ### meetingExtensionDefinition.scenes
 
@@ -788,6 +778,16 @@ This object indicates meeting supported video filters.
 |`preview`|String|2048|✔️| The relative file path to the scenes' PNG preview icon. |
 |`maxAudience`| Integer | 50  |✔️| The maximum number of audiences supported in the scene. |
 |`seatsReservedForOrganizersOrPresenters`| Integer | 50 |✔️| The number of seats reserved for organizers or presenters.|
+
+### meetingExtensionDefinition.videoFilters
+
+This object indicates meeting supported video filters.
+
+|Name| Type|Maximum size|Required |Description|
+|---|---|---|---|---|
+|`id`|String||✔️| The unique identifier for the video filter. This id must be a GUID. |
+|`name`| String | 128 characters |✔️| The name of the video filter. |
+|`thumbnail`|String|2048 characters|✔️| The relative file path to the video filter's thumbnail. |
 
 ## authorization
 
