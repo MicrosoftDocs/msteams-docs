@@ -25,7 +25,7 @@ Configure the `webApplicationInfo` property in the app manifest file. This prope
 | `resource` | Enter your app's subdomain URI and the application ID URI that you created in Azure AD when creating scope. You can copy it from the **Azure AD** > **Expose an API** section. |
 
 > [!NOTE]
-> Use manifest version 1.5 or higher to implement the `webApplicationInfo` property.
+> Use app manifest version 1.5 or later to implement the `webApplicationInfo` property.
 
 The application ID URI that you registered in Azure AD is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in app manifest.
 
@@ -39,7 +39,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
     > [!NOTE]
     >
     > - The app manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
-    > - For more information on learning how to create a manifest.json, see [Reference: Manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
+    > - For more information on learning how to create a manifest.json, see [Reference: App Manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
 
 1. Open the `manifest.json` file.
 1. Add one of the following code snippets to the app manifest file to add the new property:
