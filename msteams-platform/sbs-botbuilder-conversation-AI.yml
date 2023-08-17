@@ -45,7 +45,7 @@ items:
    |[Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    |[Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-   |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) or [Azure OpenAI ](https://azure.microsoft.com/free/)|First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must have an Azure OpenAI key before you begin.|
+   |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) or [Azure OpenAI ](https://azure.microsoft.com/free/)|First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must have create an [Azure OpenAI service](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal) before you begin.|
    |[Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
    | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
 
@@ -346,39 +346,45 @@ items:
 
        ```
 
-    1. Go to **Explorer** > **env** > **.env.local.user**. After `SECRET_BOT_PASSWORD`, enter the OpenAI key that you've generated.
+    1. Go to **Explorer** > **env**. 
+    
+       1. For OpenAI: Go to **.env.local.user**, after `SECRET_BOT_PASSWORD`, enter the OpenAI key that you've generated.
 
        ```env/.env.local.user
         SECRET_OPENAI_API_KEY=sk***********************
        ```
 
-       1. If you're using Azure OpenAI, add the following code to the **.env.local**:
+       1. For Azure OpenAI: Go to **.env.local**, after `SECRET_BOT_PASSWORD` add the Azure OpenAI endpoint that you've generated.
 
        ```env/.env.local
         AZURE_OPENAI_ENDPOINT=https://********.openai.azure.com/
        ```
 
     1. Go to the `config.ts` file and add the following code after `botId` and `botPassword`:
+
+       1. For OpenAI:
     
        ```config.ts
        openAIKey: process.env.SECRET_OPENAI_API_KEY
        ```
 
-       1. If you're using Azure OpenAI, add the following code to the `config.ts` file:
+       1. For Azure OpenAI:
 
        ```config.ts
        openAIEndpoint: process.env.AZURE_OPENAI_ENDPOINT
        ```
 
-       When you debug the app, the OpenAI key defined here processes the OpenAI key from the `.env.local.user` during local debug.
+       When you debug the app, the `OpenAIKey` or `openAIEndpoint` processes the `SECRET_OPENAI_API_KEY` or `AZURE_OPENAI_ENDPOINT` from the `.env.local.user` or `.env.local` file during local debug.
 
     1. Go to the `teamsapp.local.yml` file, under **Generate runtime environment variables**, add the following code after `BOT_ID` and `BOT_PASSWORD`:
+
+       1. For Open AI:
 
        ```teamsapp.local.yml
        SECRET_OPENAI_API_KEY: ${{SECRET_OPENAI_API_KEY}}
        ```
 
-       1. If you're using Azure OpenAI, add the following code to the `teamsapp.local.yml` file::
+       1. For Azure OpenAI:
 
        ```teamsapp.local.yml
         AZURE_OPENAI_ENDPOINT: ${{AZURE_OPENAI_ENDPOINT}}
@@ -393,6 +399,7 @@ items:
             import { Application, ConversationHistory, DefaultPromptManager, DefaultTurnState, OpenAIModerator, OpenAIPlanner, AI } from '@microsoft/teams-ai';
             import path from "path";
             ```
+            For Azure OpenAI, add AzureOpenAIPlanner in the import.
 
             You need to import the required classes to use the functions and variables available in the class to build your app. You can leverage pre-built templates and add your business logic to this scaffold.
 
@@ -406,7 +413,9 @@ items:
 
             The `ApplicationTurnState` is the typescript **type** of the turn state object state. End users can create their own **conversation** or **user** concrete type implementations and provide it to the `DefaultTurnState` interface.
         
-        1. After `type ApplicationTurnState`, add the following code in a new line to create `planner`, `moderator`, and `promptManager`:
+        1. After `type ApplicationTurnState`.
+        
+           1. For Open AI: Add the following code in a new line to create `planner`, `moderator`, and `promptManager`:
 
             ```typescript
             // Create AI components
@@ -428,16 +437,19 @@ items:
 
             * Moderator: The `OpenAIModerator` reviews both user's input and the model output to detect harmful speech, such as hate speech, self-harm, and violence.
 
-           If you are using Azure OpenAI, use `AzureOpenAIPlanner` instead of `OpenAIPlanner`:
+           1. For Azure OpenAI: Use `AzureOpenAIPlanner` instead of `OpenAIPlanner`. Add the following code in a new line:
         
-             ```typescript
-                const planner = new AzureOpenAIPlanner({
-                    apiKey: apiKey,
-                    endpoint: config.endpoint,
-                    defaultModel: 'text-davinci-003',
-                    logRequests: true
+                ```typescript
+                    const planner = new AzureOpenAIPlanner({
+                    apiKey: config.openAIKey,
+                    endpoint: config.openAIEndpoint,
+                    apiVersion:'2023-03-15-preview',
+                    defaultModel: ‘name of your deployment on Azure OpenAI’,
+                    logRequests: true,
+                    useSystemMessage: true
                 });
-              ```
+                ```
+                
 
         1. After `const promptManager`, add the following code in a new line to define storage and application:
 
