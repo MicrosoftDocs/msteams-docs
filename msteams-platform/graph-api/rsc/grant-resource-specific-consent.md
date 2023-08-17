@@ -34,11 +34,11 @@ The Azure Active Directory (Azure AD) portal provides a central platform for you
 
 ### Update your app manifest
 
-You must declare RSC permissions in your Teams app **manifest.json** file. You don't need to add the non-RSC permissions to the app manifest as Azure AD portal stores them.
+You must declare RSC permissions in your Teams app **manifest.json** file. You don't need to add the non-RSC permissions to the app manifest (previously called Teams app manifest) as Azure AD portal stores them.
 
 #### Request RSC permissions for Teams app
 
-To request RSC permissions for an app, list the permissions that the app requires in the authorization section of the app manifest (previously called Teams app manifest). The instructions can vary based on the manifest version of the app.
+To request RSC permissions for an app, list the permissions that the app requires in the authorization section of the app manifest. The instructions can vary based on the app manifest version of the app.
 
 > [!NOTE]
 > For delegated permissions, use app manifest v1.12 or later.
@@ -66,7 +66,7 @@ To add RSC permission in app manifest:
     |---|---|---|
     |`authorization`|Object|List of permissions that the app needs to function. For more information, see [authorization in manifest](../../resources/schema/manifest-schema.md#authorization). |
 
-    If an app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `authorization`.
+    If an app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same app manifest under `authorization`.
 
 Example for RSC permissions in a team:
 
@@ -245,7 +245,7 @@ Add the [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplic
 |`resource`|String| This field has no operation in RSC but you must add a value to avoid an error response. You can add any string as value.|
 |`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [Supported RSC permissions](resource-specific-consent.md#supported-rsc-permissions).|
 
-If an app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `applicationPermissions`.
+If an app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same app manifest under `applicationPermissions`.
 
 Example for RSC permissions in a team:
 

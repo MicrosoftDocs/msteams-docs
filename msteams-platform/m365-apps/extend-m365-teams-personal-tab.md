@@ -39,7 +39,7 @@ To complete this tutorial, you need:
 
 ## Prepare your personal tab for the upgrade
 
-If you have an existing personal tab app, make a copy or a branch of your production project for testing and update your App ID in the app manifest to use a new identifier (distinct from the production App ID, for testing).
+If you have an existing personal tab app, make a copy or a branch of your production project for testing and update your App ID in the app manifest (previously called Teams app manifest) to use a new identifier (distinct from the production App ID, for testing).
 
 If you'd like to use sample code instead of your own production code, you can use the Todo List sample. You can either follow the setup steps in the [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/todo-list-with-Azure-backend) GitHub repository or use the Teams Toolkit extension to create a new Teams app (select **Start from a sample** > **Todo List with backend on Azure**). After you've created a personal tab, return to this article to extend it across Microsoft 365.
 
@@ -98,7 +98,7 @@ You have two options for updating your app manifest:
 
 # [Manual steps](#tab/manifest-manual)
 
-Open your app manifest (previously called Teams app manifest) and update the `$schema` and `manifestVersion` manually with the appropriate version. Refer to [Teams developer manifest](../resources/schema/manifest-schema.md) for version information:
+Open your app manifest and update the `$schema` and `manifestVersion` manually with the appropriate version. Refer to [Teams developer manifest](../resources/schema/manifest-schema.md) for version information:
 
 ```json
 {
@@ -109,7 +109,7 @@ Open your app manifest (previously called Teams app manifest) and update the `$s
 
 ---
 
-If you used Teams Toolkit to create your personal app, you can also use it to validate the changes to your manifest file and identify any errors. Open the command palette (`Ctrl+Shift+P`) and find **Teams: Validate manifest file**.
+If you used Teams Toolkit to create your personal app, you can also use it to validate the changes to your app manifest file and identify any errors. Open the command palette (`Ctrl+Shift+P`) and find **Teams: Validate manifest file**.
 
 ## Update TeamsJS references
 
