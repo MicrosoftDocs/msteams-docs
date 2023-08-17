@@ -48,7 +48,7 @@ Services that need access to all Teams message data must use the Graph APIs that
 
 ## Update app manifest
 
-For your bot to receive all conversation messages, the relevant RSC permission strings must be specified in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information about manifest schema, see [app manifest schema for Teams](../../../resources/schema/manifest-schema.md).
+For your bot to receive all conversation messages, the relevant RSC permission strings must be specified in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information, see [app manifest schema for Teams](../../../resources/schema/manifest-schema.md).
 
 :::image type="content" source="../../../assets/images/bots/RSC/appmanifest_2.png" alt-text="app manifest":::
 
@@ -246,7 +246,7 @@ this.onMessage(async (context, next) => {
 
 ## Code sample
 
-| Sample name | Description | .NET |Node.js| Manifest
+| Sample name | Description | .NET |Node.js| App manifest
 |-------------|-------------|------|----|----|
 |Channel messages with RSC permissions| This sample app shows how a bot can receive all channel messages with RSC without being @mentioned.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-receive-channel-messages-withRSC/csharp/demo-manifest/Bot-RSC.zip) |
 

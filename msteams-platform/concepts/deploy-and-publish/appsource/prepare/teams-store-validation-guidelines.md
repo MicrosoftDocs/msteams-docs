@@ -422,23 +422,23 @@ App packages must be correctly formatted and include all required information an
 
 The app manifest defines your app's configuration.
 
-* Your app manifest must conform to a publicly released manifest schema. For more information, see [manifest reference](~/resources/schema/manifest-schema.md). Don't submit your app using a preview version of the app manifest.
+* Your app manifest must conform to a publicly released app manifest schema. For more information, see [app manifest reference](~/resources/schema/manifest-schema.md). Don't submit your app using a preview version of the app manifest.
 * If your app includes a bot or message extension, details in the app manifest must be consistent with Bot Framework metadata including bot name, logo, privacy policy link, and terms of service link.
-* If your app uses Azure Active Directory for authentication, include the Microsoft Azure Active Directory (Azure AD) Application (client) ID in the app manifest. For more information, see the [manifest reference](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* If your app uses Azure Active Directory for authentication, include the Microsoft Azure Active Directory (Azure AD) Application (client) ID in the app manifest. For more information, see the [app manifest reference](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
-### Uses of Latest manifest schema
+### Uses of latest app manifest schema
 
 * If your app uses Single sign-on (SSO), you must declare Microsoft Azure Active Directory (Azure AD) ID in the app manifest for user authentication. [*Mandatory Fix*]
 
-* You must use a publicly released manifest schema. You can update your app package to use a public version of manifest schema 1.10 or later. [*Mandatory Fix*]
+* You must use a publicly released app manifest schema. You can update your app package to use a public version of app manifest schema 1.10 or later. [*Mandatory Fix*]
 
 * When you submit an app update, only increase the app version number. App ID of the updated app must match the App ID of the published app. [*Mandatory Fix*]
 
 * The presence of additional files within the app package isn't acceptable. [*Mandatory Fix*]
 
-* The version number must be the same in the app manifest file schema and additional languages manifest schema. [*Mandatory Fix*]
+* The version number must be the same in the app manifest file schema and additional languages app manifest schema. [*Mandatory Fix*]
 
-* You must use the Teams manifest schema version 1.5 or later to localize your app. To use the app schema version 1.5 or later in your manifest.json file, update the `$schema` attribute to 1.5 or later. Update the `manifestVersion` property to `$schema` version (1.5 in this case). [*Mandatory Fix*]
+* You must use the app manifest schema version 1.5 or later to localize your app. To use the app schema version 1.5 or later in your manifest.json file, update the `$schema` attribute to 1.5 or later. Update the `manifestVersion` property to `$schema` version (1.5 in this case). [*Mandatory Fix*]
 
 * When you add, update, or remove an existing capability, add or remove app manifest or Partner Center metadata, you must increase the app version number and submit the new app manifest in your Partner Center account for validation. [*Mandatory Fix*]
 
@@ -761,7 +761,7 @@ Support URLs must include your contact details or a way forward for users to rai
 <details><summary>Offer metadata</summary>
 
 * Offer metadata must match across the app manifest, the Teams app listing in AppSource, and the SaaS offer in AppSource.
-* Teams app and SaaS offer must be from the same publisher or developer. The SaaS offer referenced in the App manifest must belong to the same publisher as the Teams app is submitted to the commercial marketplace.
+* Teams app and SaaS offer must be from the same publisher or developer. The SaaS offer referenced in the app manifest must belong to the same publisher as the Teams app is submitted to the commercial marketplace.
 * As your submitted offer is a Teams app linked to SaaS offer, you must select **Additional purchases** as **Yes, my product requires purchase of a service or offers additional in-app purchases​** in Partner Center product set-up section of your offer listing.
 * Plan descriptions and pricing details must provide enough information for users to clearly understand the offer listings.
 * Any limitations, dependencies on additional services, and exceptions to features offered must be accurately called out in plan descriptions.

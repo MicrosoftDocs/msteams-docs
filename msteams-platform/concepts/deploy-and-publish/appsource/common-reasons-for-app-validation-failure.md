@@ -241,11 +241,11 @@ Your app name plays a critical role for users to discover your app on the Micros
 
 [Back to top](#common-reasons-for-app-validation-failure)
 
-## Manifest schema
+## App manifest schema
 
-The app manifest describes how the app integrates into the Microsoft Teams product. Your app manifest must conform to a publicly released [manifest schema](../../../resources/schema/manifest-schema.md). If your app supports localization, ensure that use a localization manifest schema version 1.5 or later. App packages that contain preview schemas (not publicly released) fail app review.
+The app manifest describes how the app integrates into the Microsoft Teams product. Your app manifest must conform to a publicly released [app manifest schema](../../../resources/schema/manifest-schema.md). If your app supports localization, ensure that use a localization app manifest schema version 1.5 or later. App packages that contain preview schemas (not publicly released) fail app review.
 
-You must update the app version declared in the app manifest if you're submitting an app update. It's recommended to always use the latest publicly released manifest schema when submitting a new app or an app update and ensure that the manifest schema version in Microsoft Teams store and Microsoft AppSource is the same.
+You must update the app version declared in the app manifest if you're submitting an app update. It's recommended to always use the latest publicly released app manifest schema when submitting a new app or an app update and ensure that the  app manifest schema version in Microsoft Teams store and Microsoft AppSource is the same.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-app-version-number.png" alt-text="Screenshot to show the app version number incremented.":::
 
