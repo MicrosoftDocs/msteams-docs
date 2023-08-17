@@ -201,9 +201,9 @@ Your app won't pass Teams submission if it has illegible headers without hover f
    :::column-end:::
 :::row-end:::
 
-## FAQ
+## Page orientation FAQ
 
-Get answers to some of your queries related to the modes in Teams mobile.
+Get answers to some of your questions related to the page orientation modes in Teams mobile.
 
 <br>
 
@@ -224,7 +224,7 @@ No. Apps get the capability by default.
 <summary><b>What if my app doesn't support one of the modes, or if the scenario is only intended to work in one of the modes?</b></summary>
 
 Teams supports both modes by default and it's not possible to have the app work in only one mode.
- If this requirement is demanding for your app, reach out to support team.
+ If this requirement is demanding for your app, reach out to [support team](../../feedback.md).
 
 <br>
 
@@ -284,7 +284,7 @@ Yes, landscape mode is supported on both Android and iOS Teams apps, providing c
 
 <summary><b>Can I customize the app's behavior differently for landscape and portrait modes?</b></summary>
 
-The behavior of the app remains consistent across both modes. However, reach out to support team with your feedback and suggestions if you have specific use cases or requirements that necessitate different behaviors in each mode.
+The behavior of the app remains consistent across both modes. However, reach out to [support team](../../feedback.md) with your feedback and suggestions if you have specific use cases or requirements that necessitate different behaviors in each mode.
 
 <br>
 
