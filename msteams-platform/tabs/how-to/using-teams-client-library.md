@@ -368,7 +368,7 @@ After completion, the utility will have updated your `package.json` file with th
 
 ### 3. Update the manifest (optional)
 
-If you're updating a Teams app to run in Microsoft 365 app and Outlook, you'll also need to update the app manifest to version 1.13 or later. You can do this easily with Teams Toolkit, or manually.
+If you're updating a Teams app to run in Microsoft 365 app and Outlook, you'll also need to update the app manifest (previously called Teams app manifest) to version 1.13 or later. You can do this easily with Teams Toolkit, or manually.
 
 # [Teams Toolkit](#tab/manifest-teams-toolkit)
 
@@ -377,7 +377,7 @@ If you're updating a Teams app to run in Microsoft 365 app and Outlook, you'll a
 
 # [Manual steps](#tab/manifest-manual)
 
-Open your app manifest (previously called Teams app manifest) and update the `$schema` and `manifestVersion` with the following values:
+Open your app manifest and update the `$schema` and `manifestVersion` with the following values:
 
 ```json
 {
@@ -388,7 +388,7 @@ Open your app manifest (previously called Teams app manifest) and update the `$s
 
 ---
 
-If you used Teams Toolkit to create your personal app, you can also use it to validate the changes to your manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file** or select the option from the Deployment menu of the Teams Toolkit (look for the Teams icon on the left side of Visual Studio Code).
+If you used Teams Toolkit to create your personal app, you can also use it to validate the changes to your app manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file** or select the option from the Deployment menu of the Teams Toolkit (look for the Teams icon on the left side of Visual Studio Code).
 
 :::image type="content" source="../../m365-apps/images/toolkit-validate-manifest-file.png" alt-text="Teams Toolkit 'Validate manifest file' option under 'Deployment' menu":::
 

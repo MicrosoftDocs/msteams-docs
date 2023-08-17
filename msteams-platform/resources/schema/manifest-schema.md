@@ -355,7 +355,7 @@ The version of the manifest schema that this manifest is using. Use `1.13` to en
 
 **Required**—string
 
-The version of a specific app. When you update something in your manifest, the version must be incremented too. This way, when the new manifest is installed, it overwrites the existing one and the user receives the new functionality. When this app was submitted to the store, the new manifest must be resubmitted and revalidated. The app users receive the new updated manifest automatically within few hours after the manifest is approved.
+The version of a specific app. When you update something in your app manifest, the version must be incremented too. This way, when the new app manifest is installed, it overwrites the existing one and the user receives the new functionality. When this app was submitted to the store, the new app manifest must be resubmitted and revalidated. The app users receive the new updated app manifest automatically within few hours after the app manifest is approved.
 
 If the app requests for permissions change, the users are prompted to upgrade and reconsent to the app.
 
@@ -370,7 +370,7 @@ The ID is a unique Microsoft-generated identifier for the app. You have an ID if
 The ID stored in Teams Admin Center is the **External App ID** and it's visible as **ExternalID** on the traces.
 
 > [!NOTE]
-> If you are submitting an update to your existing app in AppSource, the ID in your manifest must not be modified.
+> If you are submitting an update to your existing app in AppSource, the ID in your app manifest must not be modified.
 
 ## developer
 
@@ -418,7 +418,7 @@ Allows the specification of a default language and provides pointers to more lan
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
-|`defaultLanguageTag`||✔️|The language tag of the strings in this top-level manifest file.|
+|`defaultLanguageTag`||✔️|The language tag of the strings in this top-level app manifest file.|
 
 ### localizationInfo.additionalLanguages
 
@@ -452,7 +452,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional**—array
 
-Used when your app experience has a team channel tab experience that requires extra configuration before it's added. Configurable tabs are supported only in the `team` and `groupChat` scopes and you can configure the same tabs multiple times. However, you can define it in the manifest only once.
+Used when your app experience has a team channel tab experience that requires extra configuration before it's added. Configurable tabs are supported only in the `team` and `groupChat` scopes and you can configure the same tabs multiple times. However, you can define it in the app manifest only once.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -542,7 +542,7 @@ The object is an array (maximum of one element) with all elements of type `objec
 Defines a message extension for the app.
 
 > [!NOTE]
-> The name of the feature was changed from "compose extension" to "message extension" in November, 2017, but the manifest name remains the same so that existing extensions continue to function.
+> The name of the feature was changed from "compose extension" to "message extension" in November, 2017, but the app manifest name remains the same so that existing extensions continue to function.
 
 The item is an array (maximum of one element) with all elements of type `object`. This block is required only for solutions that provide a message extension.
 

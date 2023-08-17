@@ -24,7 +24,7 @@ The Microsoft Teams activity feed enables users to triage items that require att
 * Notification content is highly customizable, allowing users to preview the summary of the notified events.
 * You can deep link your app to a notification so that when a user selects the notification it increases user app engagement.
 * You can send activity feed notification to various recipients. For example, sending a personal notification or sending batch notifications to a group of users.
-* Teams manifest localization supports the templated text in activity feed notifications.
+* App manifest (previously called Teams app manifest) localization supports the templated text in activity feed notifications.
 
 ## Understand the basics of activity feed notifications
 
@@ -76,7 +76,7 @@ The following variants show the kinds of activity feed notification cards you ca
 
 Activity feed APIs work with a Teams app. The following are the requirements for sending activity feed notifications:
 
-* The app manifest (previously called Teams app manifest) must have the Azure AD app ID added to the webApplicationInfo section. For more information, see [manifest schema](../resources/schema/manifest-schema.md#webapplicationinfo).
+* The app manifest must have the Azure AD app ID added to the webApplicationInfo section. For more information, see [manifest schema](../resources/schema/manifest-schema.md#webapplicationinfo).
 * Activity types must be declared in the activities section. For more information, see [manifest schema](../resources/schema/manifest-schema.md#activities).
 * The Teams app must be installed for the recipient, either personally, or in a team or chat they're part of.
 
@@ -129,7 +129,7 @@ This section describes the changes that need to be added to app manifest. Ensure
 
 |Parameter|Type|Description|
 |:---|:---|:---|
-|type|string|Type of activity. This needs to be unique in a specific manifest.|
+|type|string|Type of activity. This needs to be unique in a specific app manifest.|
 |description|string|Human-readable short description. This is visible on the Microsoft Teams client.|
 |templateText|string|Template text for the activity notification. You can declare your parameters by encapsulating parameters in `{}`.|
 
@@ -162,7 +162,7 @@ You can use Activity feed notification in the following scenarios:
 * Show rich content in Tab app or URL​.
 * Support complex user interactions​.
 * Send delegated notifications from the user who initiated the notification​.
-* Put template in the manifest​.
+* Put template in the app manifest​.
 * Teams handles localization for notifications.
 
 > [!NOTE]

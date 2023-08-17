@@ -250,7 +250,7 @@ You've successfully configured app scope, permissions, and client applications. 
 
 ### Configure access token version
 
-You must define the access token version for your app. This configuration is made in the Azure AD application manifest.
+You must define the access token version for your app. This configuration is made in the Azure AD application app manifest.
 
 #### To define the access token version
 
@@ -258,7 +258,7 @@ You must define the access token version for your app. This configuration is mad
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="Azure AD portal Manifest":::
 
-    The Azure AD application manifest appears.
+    The Azure AD application app manifest appears.
 
 1. Enter **2** as the value for the `accessTokenAcceptedVersion` property.
 
@@ -269,7 +269,7 @@ You must define the access token version for your app. This configuration is mad
 
 1. Select **Save**
 
-    A message pops up on the browser stating that the manifest was updated successfully.
+    A message pops up on the browser stating that the app manifest was updated successfully.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Manifest updated message":::
 

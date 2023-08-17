@@ -46,7 +46,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
     > - For more information on learning how to create a manifest.json, see [Reference: Manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
 
 1. Open the `manifest.json` file
-1. Add the following code snippet to the manifest file to add the new property:
+1. Add the following code snippet to the app manifest file to add the new property:
 
     ```json
     "webApplicationInfo":
@@ -131,7 +131,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 
 ## Sideload and Preview in Teams
 
-You've configured the tab app to enable SSO in Azure AD, in app code, and in Teams manifest file. You can now sideload your tab app in Teams, and preview it in Teams environment.
+You've configured the tab app to enable SSO in Azure AD, in app code, and in app manifest file. You can now sideload your tab app in Teams, and preview it in Teams environment.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="SSO app":::
 
