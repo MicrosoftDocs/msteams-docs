@@ -42,7 +42,7 @@ Following are the most common reasons for your app to get rejected:
       :::image type="icon" source="../../../assets/icons/support-link-icon.png" link="#support-link":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../assets/icons/schema-icon.png" link="#manifest-schema":::
+      :::image type="icon" source="../../../assets/icons/schema-icon.png" link="#app-manifest-schema":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../assets/icons/app-ui-icon.png" link="#app-ui":::
