@@ -9,35 +9,33 @@ ms.localizationpriority: high
 
 # Bot configuration experience
 
-Bot configuration feature was designed to provide a way for users to configure bots after installation, so that the initial interaction doesn’t feel like a cold start.
-Apart from being able to configure a bot  on first installation , it is necessary that bots can be reconfigured at any time. The configuration is supported for bots in channel scope within a team, and in personal/group chat. The idea is to support bot configuration for all entry points that bot installation can be initiated from.
+Bot configuration feature is designed to provide a way for users to configure bots after installation.
+Bots can be configured whenever it is necessary. The configuration is supported for bots in channel, personal, and group chat.
+
+To configure the bot
 
 ## Manifest schema
 
 ```json
+{
  configuration:{  
-
-personal:{<same as team>},  //not needed for now 
-groupChat:{<same as team >},  
-
+ personal, 
+ groupChat,  
  team:{  
 
-fetchTask: true/false,       
-taskInfo: {  
-
- __typename: “”,  
+    fetchTask: true/false,       
+    taskInfo: {  
+    typename: “”,  
 
  title: null,  
-
  height: null,  
-
  width: null,  
-
  url: null, 
-
  }  
 
-        }  
+  } 
+ }
+}
 ```
 
 ## Config/fetch
