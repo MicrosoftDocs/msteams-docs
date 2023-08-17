@@ -172,7 +172,7 @@ Add the [RSC](/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-
 
 ```
 
-# [Version >= 1.12](#tab/version-112+)
+# [Version >= 1.12](#tab/version-113)
 
 ```json
 
