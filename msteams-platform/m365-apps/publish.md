@@ -13,7 +13,7 @@ ms.subservice: m365apps
 Microsoft Teams supports Microsoft 365-enabled Teams apps for production. You can distribute these apps to users who use:
 
 * *Targeted Release* (dev preview) versions of Outlook.com and microsoft365.com (formerly office.com)
-* *Beta Channels* build of Outlook for Windows desktop, Outlook for Android, and Microsoft 365 Current Channel (dev preview) build of Microsoft 365 app for Android
+* *Beta Channels* build of Outlook for Windows desktop, Outlook for Android, and Microsoft 365 Current Channel build of Microsoft 365 app for Android
 
 Distribution options and processes for Microsoft 365-enabled Teams apps are the same as for traditional Teams apps.
 
