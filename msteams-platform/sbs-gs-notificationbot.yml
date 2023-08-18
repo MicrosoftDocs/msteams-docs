@@ -234,7 +234,7 @@ items:
     | Folder/file name | Contents |
     | --- | --- |
     | `.vscode` | VSCode files for debugging. |
-    | `appPackage` | Templates for the Teams application manifest. |
+    | `appPackage` | Templates for the app manifest. |
     | `env` | Name / value pairs are stored in environment files and used by teamsapp.yml to customize the provisioning and deployment rules. |
     | `infra` | Templates for provisioning Azure resources. |
     | `src\`| The source code for the notification Teams application. |
