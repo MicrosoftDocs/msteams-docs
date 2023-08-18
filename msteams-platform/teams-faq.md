@@ -368,7 +368,9 @@ It's recommended that you save conversation references to database and use the s
 
 > [!NOTE]
 > The FAQs are applicable for Teams mobile only.
+
 <br>
+
 <details>
 <summary>Do I need to make any changes in the app to get the landscape mode?</summary>
 
