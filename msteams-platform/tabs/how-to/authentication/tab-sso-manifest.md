@@ -6,7 +6,7 @@ ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ms.date: 11/21/2022
 ---
-# Update manifest for SSO and preview app
+# Update app manifest for SSO and preview app
 
 Before you update app manifest (previously called Teams app manifest), ensure that you've configured code to enable SSO in your tab app.
 
@@ -29,7 +29,7 @@ Configure the `webApplicationInfo` property in the app manifest file. This prope
 | resource | Enter your app's subdomain URI and the application ID URI that you created in Azure AD when creating scope. You can copy it from the **Azure AD** > **Expose an API** section. |
 
 > [!NOTE]
-> Use manifest version 1.5 or higher to implement the `webApplicationInfo` property.
+> Use app manifest version 1.5 or later to implement the `webApplicationInfo` property.
 
 The application ID URI that you registered in Azure AD is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in app manifest.
 
@@ -38,12 +38,12 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 ## To configure app manifest
 
 1. Open the tab app project.
-2. Open the manifest folder.
+2. Open the app manifest folder.
 
     > [!NOTE]
     >
-    > - The manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
-    > - For more information on learning how to create a manifest.json, see [Reference: Manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
+    > - The app manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
+    > - For more information on learning how to create a manifest.json, see [Reference: App manifest schema](../../../resources/schema/manifest-schema.md).
 
 1. Open the `manifest.json` file
 1. Add the following code snippet to the app manifest file to add the new property:
@@ -171,6 +171,6 @@ To preview your tab app in Teams:
 
 ## See also
 
-- [Manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md)
-- [Manifest schema format](https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json)
+- [App Manifest schema](../../../resources/schema/manifest-schema.md)
+- [App Manifest schema format](https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json)
 - [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md)

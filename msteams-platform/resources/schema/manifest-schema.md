@@ -6,21 +6,21 @@ ms.localizationpriority: high
 ms.date: 02/09/2023
 ---
 
-# App manifest schema for Teams
+# App manifest schema
 
 The Microsoft app manifest (previously called Teams app manifest) describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json`](https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.15, and the current version is 1.16 are each supported (using "v1.x" in the URL).
-For more information on the changes made in each version, see [manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
+For more information on the changes made in each version, see [app manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 The following table lists TeamsJS version and app manifest versions as per different app scenarios:
 
 [!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
 > [!NOTE]
-> If your Teams app is using the manifest version 1.13 or later, ensure that your app meets the criteria to [extend your app to run across Microsoft 365 or Outlook](../../m365-apps/extend-m365-teams-personal-tab.md).
+> If your Teams app is using the app manifest version 1.13 or later, ensure that your app meets the criteria to [extend your app to run across Microsoft 365 or Outlook](../../m365-apps/extend-m365-teams-personal-tab.md).
 
-The following is the sample manifest schema:
+The following is the sample app manifest schema:
 
-## Sample manifest
+## Sample app manifest
 
 ```json
 {
@@ -343,13 +343,13 @@ The schema defines the following properties:
 
 Optional, but recommended—string
 
-The https:// URL referencing the JSON Schema for the manifest.
+The https:// URL referencing the JSON Schema for the app smanifest.
 
 ## manifestVersion
 
 **Required**—string
 
-The version of the manifest schema that this manifest is using. Use `1.13` to enable Teams app support in Outlook and Microsoft 365 app; use `1.12` (or earlier) for Teams-only apps.
+The version of the app manifest schema that this manifest is using. Use `1.13` to enable Teams app support in Outlook and Microsoft 365 app; use `1.12` (or earlier) for Teams-only apps.
 
 ## version
 
@@ -918,22 +918,22 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`MicrophoneStream.Read.User`| Allows the app to read user's microphone stream.|
     |`MeetingParticipantReaction.Read.User`| Allows the app to read user's reactions while participating in a meeting.|
 
-## Create a manifest file
+## Create an app manifest file
 
-If your app doesn't have a app manifest file, you need to create it.
+If your app doesn't have an app manifest file, you need to create it.
 
-To create a app manifest file:
+To create an app manifest file:
 
-1. Use the [sample manifest schema](#sample-manifest) to create a .json file.
+1. Use the [sample app manifest schema](#sample-manifest) to create a .json file.
 1. Save it in the root of your project folder as `manifest.json`.
 
 <br>
 <details>
-<summary>Here's an example of manifest schema for a tab app with SSO enabled:</summary>
+<summary>Here's an example of app manifest schema for a tab app with SSO enabled:</summary>
 <br>
 
 > [!NOTE]
-> The manifest example content shown here is only for a tab app. It uses example values for subdomain URI. For more information, see [sample manifest schema](#sample-manifest).
+> The app manifest example content shown here is only for a tab app. It uses example values for subdomain URI. For more information, see [sample app manifest schema](#sample-manifest).
 
   ```json
 { 
@@ -1002,4 +1002,4 @@ To create a app manifest file:
 * [Enable app customization](~/concepts/design/enable-app-customization.md)
 * [Localize your app](~/concepts/build-and-test/apps-localization.md)
 * [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
-* [Public developer preview manifest schema for Microsoft Teams](manifest-schema-dev-preview.md)
+* [Public developer preview app manifest schema](manifest-schema-dev-preview.md)

@@ -59,7 +59,7 @@ Enabling an existing Teams app to run in Outlook and Microsoft 365 requires all 
 
 2. [Modifying existing application code](#2-update-teamsjs-references) according to the required changes described in this article, and
 
-3. [Updating your app manifest](#3-update-the-manifest-optional) to version 1.13 or later.
+3. [Updating your app manifest(previously called Teams app manifest)](#3-update-the-app-manifest-optional) to version 1.13 or later.
 
 For more info, see [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
 
@@ -366,9 +366,9 @@ After completion, the utility will have updated your `package.json` file with th
 > [!IMPORTANT]
 > Code inside html files is not supported by the upgrade tooling and will require manual changes.
 
-### 3. Update the manifest (optional)
+### 3. Update the app manifest (optional)
 
-If you're updating a Teams app to run in Microsoft 365 app and Outlook, you'll also need to update the app manifest (previously called Teams app manifest) to version 1.13 or later. You can do this easily with Teams Toolkit, or manually.
+If you're updating a Teams app to run in Microsoft 365 app and Outlook, you'll also need to update the app manifest to version 1.13 or later. You can do this easily with Teams Toolkit, or manually.
 
 # [Teams Toolkit](#tab/manifest-teams-toolkit)
 
