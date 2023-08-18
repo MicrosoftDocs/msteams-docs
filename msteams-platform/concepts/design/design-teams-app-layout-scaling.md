@@ -201,7 +201,7 @@ Your app won't pass Teams submission if it has illegible headers without hover f
    :::column-end:::
 :::row-end:::
 
-## Page orientation FAQ
+## Page orientation FAQs
 
 Get answers to some of your questions related to the page orientation modes in Teams mobile.
 
