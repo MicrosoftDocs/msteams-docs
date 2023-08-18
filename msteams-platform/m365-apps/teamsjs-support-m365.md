@@ -90,7 +90,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
             <td>&#x2713;*</td>
         </tr>
         <tr>
@@ -124,7 +124,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
             <td>&#x2713;*</td>
         </tr>
         <tr>
@@ -209,7 +209,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
             <td>&#x2713;*</td>
         </tr>
         <tr>
@@ -592,7 +592,7 @@ The `app` namespace is supported globally across all application hosts and, ther
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
             <td>&#x2713;*</td>
         </tr>
     </tbody>
@@ -777,7 +777,7 @@ The `authentication` namespace is supported globally across all application host
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
             <td>&#x2713;*</td>
         </tr>
     </tbody>
@@ -1678,7 +1678,7 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
             <td>&#x2713;*</td>
         </tr>
         <tr>
@@ -1729,7 +1729,7 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
             <td>&#x2713;*</td>
         </tr>
         <tr>
