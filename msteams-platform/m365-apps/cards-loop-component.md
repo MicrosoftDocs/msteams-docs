@@ -10,16 +10,18 @@ ms.date: 08/16/2023
 
 > [!NOTE]
 >
-> * Adaptive Card-based Loop components are available in only [public preview](../resources/dev-preview/developer-preview-intro.md).
-> * Adaptive Card-based Loop component is available from Adaptive Card version 1.6.
+> * Adaptive Card-based Loop components are available in [public preview](../resources/dev-preview/developer-preview-intro.md).
+> * Adaptive Card-based Loop components require Adaptive Cards version 1.6 or later.
 
-Loop component is an evolution of Fluid component - a way to collaborate with a team through loop whether it’s in chat, email, meeting, or Loop page. Loop components  sync across Microsoft 365 apps such as Teams and Outlook. Loop components in Teams chat offer a new way to ideate, create, share, and collaborate content across Microsoft 365, and complete tasks in the flow of work. You can share a component such as a table, task list, or paragraph in a chat and make edits in real time. For more information, see [Loop components](https://support.microsoft.com/office/first-things-to-know-about-loop-components-ee2a584b-5785-4dd6-8a2d-956131a29c81).
+Adaptive Card-based Loop components enable you to build collaborative experiences within your Teams [message extensions](../messaging-extensions/what-are-messaging-extensions.md) that work across Microsoft 365. Adaptive Card-based Loop components have actionable content that enable users to make live updates without having to switch context between Microsoft 365 apps, such as Teams and Outlook.
 
-Adaptive Card-based Loop component allows Microsoft 365 developers to build Loop experiences while building upon their existing message extension-based Microsoft 365 integrations. Adaptive Card-based Loop component has actionable content and enables users to make quick updates without switching context. Loop components adhere to Microsoft 365 platform's 'build once, works everywhere' philosophy, which ensures that your Loop component automatically works seamlessly across Teams and Outlook, and other Microsoft 365 hub apps.
+[Loop components](https://support.microsoft.com/office/first-things-to-know-about-loop-components-in-microsoft-teams-ee2a584b-5785-4dd6-8a2d-956131a29c81) were first released in Teams followed by other Microsoft 365 apps such as Outlook, Whiteboard, and Loop app. Loop components allow users to collaborate and share live content with others in the chat, email, meeting, Whiteboard or Loop app. Because Loop components stay in sync across different Microsoft 365 apps, they enable users to co-author content and make real-time updates on their content. For more information, see [Overview of Loop components in the Microsoft 365 ecosystem](/microsoft-365/loop/loop-components-teams).
 
 Following is an example of an Adaptive Card-based Loop component:
 
 :::image type="content" source="~/assets/images/adaptive-cards/adaptive-card-loop.png" alt-text="Example of an Adaptive Card loop component.":::
+
+This article provides an overview of how to build and test your Adaptive Card-based Loop components.
 
 ## Prerequisites
 
@@ -37,8 +39,8 @@ Before you build an Adaptive Card-based Loop component, ensure that you meet the
 
 After you've met all the requirements, upgrade the Adaptive Card into a Loop component using the following steps:
 
-1. Ensure the Adaptive Card adheres to the [design guidelines](design-loop-components.md) to build an actionable and coherent Adaptive Card based experience for your end users.
-1. To enable Loop component, add the URL that uniquely identifies the card in the [metadata.webUrl](https://adaptivecards.io/explorer/Metadata.html) property in the [Adaptive Card schema](https://adaptivecards.io/explorer/) to support portability via the Copy button present in the Loop header.
+1. Ensure the Adaptive Card adheres to the [design guidelines](design-loop-components.md) to build an actionable and coherent Adaptive Card-based experience for your end users.
+1. To enable Loop component, add the URL that uniquely identifies the card in the [metadata.webUrl](https://adaptivecards.io/explorer/Metadata.html) property in the [Adaptive Card schema](https://adaptivecards.io/explorer/) to support portability via the Copy button present in the Loop component header.
 
 ### Example
 

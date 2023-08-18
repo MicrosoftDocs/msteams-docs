@@ -30,7 +30,7 @@ Microsoft Loop components are live, actionable units of productivity that stay i
 |Property|Function|
 |---|---|
 |Live| The latest information is populated in the card. If there are multiple instances, they remain in sync as updates are made. |
-|Embedded |  I Cards can be placed into documents and conversations that are separate from the rest of the content. |
+|Embedded |  Cards can be placed into documents and conversations that are separate from the rest of the content. |
 | Actionable | Tasks can be completed inline. |
 | Portable | Components can work across to Microsoft 365 app that supports Loop components |
 
