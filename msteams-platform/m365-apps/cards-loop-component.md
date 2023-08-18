@@ -39,8 +39,8 @@ Before you build an Adaptive Card-based Loop component, ensure that you meet the
 
 After you've met all the requirements, upgrade the Adaptive Card into a Loop component using the following steps:
 
-1. Ensure the Adaptive Card adheres to the [design guidelines](design-loop-components.md) to build an actionable and coherent Adaptive Card-based experience for your end users.
-1. To enable Loop component, add the URL that uniquely identifies the card in the [metadata.webUrl](https://adaptivecards.io/explorer/Metadata.html) property in the [Adaptive Card schema](https://adaptivecards.io/explorer/) to support portability via the Copy button present in the Loop component header.
+1. Ensure that the Adaptive Card adheres to the [design guidelines](design-loop-components.md) to build an actionable and coherent Adaptive Card-based experience for your end users.
+1. To enable Loop component, add the URL that uniquely identifies the card in the [metadata.webUrl](https://adaptivecards.io/explorer/Metadata.html) property in the [Adaptive Card schema](https://adaptivecards.io/explorer/). The `metadata.webUrl` property supports portability via the Copy button present in the Loop component header.
 
 ### Example
 
@@ -65,8 +65,8 @@ The following is a JSON example of an Adaptive Card-based Loop component with th
 
 |Property|Type|Description|Required|
 |---|---|---|---|
-| `metadata`| Metadata | Defines various metadata properties typically not used for rendering the card | No |
-| `webUrl` | String | URL that uniquely identifies the card and serves as a browser fallback that can be used by some hosts.|No|
+| `metadata`| Metadata | Defines various metadata properties typically not used for rendering the card. | No |
+| `webUrl` | String | URL that uniquely identifies the card and serves as a browser fallback that can be used by some hosts.| No |
 
 ## Test your Loop component
 
@@ -76,7 +76,7 @@ You can test the loop component in the developer preview environments of Microso
 
 To configure, distribute, and manage your application use the [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md). You can test and debug your app in the Developer Portal using the following options:
 
-* **Overview page**: On the **Overview page**, you can see a snapshot of whether your app's configurations validate against Teams store test cases.
+* **Overview page**: On the **Overview page**, under **Teams store validation**, you can see a snapshot of your app's configuration and check if your app validates against Teams store test cases.
 * **Preview in Teams**: The **Preview in Teams** button lets you launch your app quickly in the Teams client for debugging.
 
 :::image type="content" source="../assets/images/developer-portal-overview.png" alt-text="A screenshot of the Developer Portal overview page with the Preview in Teams button highlighted":::
