@@ -80,7 +80,7 @@ The following table lists host application support for TeamsJS capabilities that
             <th><a href="#app">app</a></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713*;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
@@ -230,15 +230,15 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
         </tr>
         <tr>
-            <th>search <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
+            <th><a href="#search">search</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
             <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
             <td>&#x2713;*</td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1970,8 +1970,8 @@ Preview. Allows your application to interact with the host Microsoft 365 applica
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
             <td>&#x2713;*</td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
