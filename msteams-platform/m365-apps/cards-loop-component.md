@@ -29,11 +29,11 @@ Before you build an Adaptive Card-based Loop component, ensure that you meet the
 
 1. [Build a Message Extension with a Search command](../messaging-extensions/what-are-messaging-extensions.md).
 
-1. Add [link unfurling](../messaging-extensions/how-to/link-unfurling.md) support to the Message Extension
+1. Add [link unfurling](../messaging-extensions/how-to/link-unfurling.md) support to the Message Extension.
 
-1. Use [Universal Actions for Adaptive Cards](../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md)
+1. Use [Universal Actions for Adaptive Cards](../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md).
 
-1. [Extend your Teams message across Microsoft 365](extend-m365-teams-message-extension.md)
+1. [Extend your Teams message across Microsoft 365](extend-m365-teams-message-extension.md).
 
 ## Build Adaptive Card-based Loop component
 
