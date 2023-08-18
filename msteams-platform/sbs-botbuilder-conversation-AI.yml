@@ -450,7 +450,7 @@ items:
                 });
                 ```
 
-                Azure OpenAI is built with Azure AI Content Safety which detects harmful user-generated and AI-generated content in applications and services. Content Safety includes text and image APIs that allow you to detect material that is harmful. For more information, see [Azure AI Content Safety](/azure/ai-services/content-safety/overview). You can also use [Moderation APIs](/azure/ai-services/content-moderator/overview#moderation-apis) to personalize your bot to a specific language or a style.
+                Teams AI library for Azure OpenAI is built with Azure AI Content Safety which detects harmful user-generated and AI-generated content in applications and services. Content Safety includes text and image APIs that allow you to detect material that is harmful. For more information, see [Azure AI Content Safety](/azure/ai-services/content-safety/overview). You can also use [Moderation APIs](/azure/ai-services/content-moderator/overview#moderation-apis) to personalize your bot to a specific language or a style.
 
         1. After `const promptManager`, add the following code in a new line to define storage and application:
 
