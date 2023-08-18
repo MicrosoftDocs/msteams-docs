@@ -10,7 +10,7 @@ ms.topic: reference
 
 [The new Microsoft Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) is reimagined from the ground up with performance in mind. It's faster, simpler, smarter, and flexible to provide better experience for your apps and users. The new Teams client supports all the existing Teams app capabilities except Adaptive Card tabs. If you have an app that runs inside the Classic Teams, the app will most likely run in the new Teams client without any issues.
 
-The following are the advantages the new Teams client:  
+The following are the advantages of the new Teams client:  
 
 * The new Teams client uses the Evergreen version of Microsoft Edge WebView2 to ensure Teams client is always up to date with the latest fixes and improvements available in Microsoft Edge and Chromium.
 
@@ -18,8 +18,11 @@ The following are the advantages the new Teams client:
 
 You can use the following property to identify your app usage in the new Teams or Classic Teams client:
 
-* For TeamsJS v1.x: [`hostName`](/javascript/api/@microsoft/teams-js/hostname?view=msteams-client-js-latest&preserve-view=true)
+* For TeamsJS v1.x: [`hostName`](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest#@microsoft-teams-js-context-hostname&preserve-view=true)
 * For TeamsJS v2.x: [`AppHostInfo`](/javascript/api/@microsoft/teams-js/app.appinfo?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-app-appinfo-host)
+
+> [!NOTE]
+> If hostName isn't defined, then assume that your app is running in the Classic Teams client.
 
 The new Teams or Classic Teams client are represented using the `teams` and `teamsModern` fields, respectively.
 
@@ -42,13 +45,7 @@ To ensure a smooth transition, a phased rollout of the new platform is planned a
 
 * [Share in Teams](../concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md).
 
-* APIs used in Teams that require [device permissions](../concepts/device-capabilities/native-device-permissions.md).
-
-* If you have a [meeting extension](../apps-in-teams-meetings/teams-apps-in-meetings.md) app, the app might not support all the meeting extensibility features.
-
-* You can't pin, and unpin apps in the new Teams client. We recommend to perform these actions in the Classic Teams client and the changes are reflected in the new Teams client. For more information, see [pin apps in Microsoft Teams](https://support.microsoft.com/office/pin-an-app-for-easy-access-3045fd44-6604-4ba7-8ecc-1c0d525e89ec).
-
-* You can't add, update, rename, and remove tabs from chats and channels in the new Teams client. We recommend to perform these actions in the Classic Teams client and the changes are reflected in the new Teams client. For more information, see [use an app in a tab in a channel or chat](https://support.microsoft.com/office/use-an-app-in-a-tab-in-a-channel-or-chat-83d0514f-2134-4db5-80f2-e9b43e111d57).
+* [Sideloading of apps](../concepts/deploy-and-publish/apps-upload.md) isn't supported in the new Teams client. You can sideload an app in the Classic Teams client and use it in new Teams client.
 
 For more information on known issues and gaps in the new Teams client, see [new Microsoft Teams](/microsoftteams/new-teams-desktop-admin?tabs=teams-admin-center#known-issues).
 
