@@ -60,7 +60,9 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 1. Select the app for which you need to choose the settings.
 1. Select your desired settings.
 
-   :::image type="content" source="~/assets/images/tabs/device-permissions.png" alt-text="Screenshot shows the device permissions.":::
+   :::image type="content" source="~/assets/images/tabs/device-permissions-new-one.png" alt-text="Screenshot shows the device permissions.":::
+
+   :::image type="content" source="~/assets/images/tabs/device-permissions-new-two.png" alt-text="Screenshot shows the device permissions.":::
 
 ---
 
@@ -118,7 +120,7 @@ Leverage appropriate HTML5 or Teams API to display a prompt for getting consent 
 
 > [!IMPORTANT]
 >
-> * Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true). Use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) for a single image capture.
+> * Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true). Use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-1.13.1#functions) for a single image capture.
 > * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?.view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). You must use this `getLocation API` for location, as HTML5 geolocation API is currently not fully supported on Teams desktop.
 
 For example:
