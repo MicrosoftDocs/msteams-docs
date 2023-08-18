@@ -22,7 +22,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [App Caching](../tabs/how-to/app-caching.md) | App caching improves subsequent launch time of the apps within Teams by allowing you to keep some resources and assets in memory that you can use when rehydrating your app.|
 | [App manifest](../resources/schema/manifest-schema.md) | The app manifest (previously called Teams app manifest) describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the [manifest schema](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json). |
 | [App package](../concepts/build-and-test/apps-package.md) | A Teams app package is a zip file that contains the app manifest file, color icon, and outline icon.  |
-| [App permission](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | An option in a Teams app to enable device permissions. It's available only when the manifest file of the app declares that the app needs device permissions. <br> **See also**: [Device permissions](#d) |
+| [Application permission](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | An option in a Teams app to enable device permissions. It's available only when the manifest file of the app declares that the app needs device permissions. <br> **See also**: [Device permissions](#d) |
 | [App scope](../concepts/design/understand-use-cases.md#app-scope) | An area in Teams where people can use your app. Apps can have one or many scopes, including personal, channels, chats, and meetings. A Teams app can exist across scopes. |
 | App tray | An application tray located on the bottom bar of a Teams mobile app. It collects all apps that are open but not currently used or active. <br>**See also**: [Teams Mobile](#t) |
 | [Application ID](../tabs/how-to/authentication/tab-sso-register-aad.md) | The application ID, or client ID, is a value the Microsoft identity platform assigns to your application when you register it in Azure AD. The application ID is a GUID value that uniquely identifies the application and its configuration within the identity platform. <br> **See also**: [GUID](#g); [Client ID](#c); [Application ID URI](#a); [Subdomain ID](#s) |
@@ -31,6 +31,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft’s cloud-based identity and access management service. It helps authenticated users access internal and external resources. |
 | [Authentication](../concepts/authentication/authentication.md) | The process to validate a user's identity to access your app. <br> **See also**: [Identity providers](#i); [SSO](#s) |
 | [Authentication flow](../concepts/authentication/authentication.md) | The way a user is authenticated to use your app. For Teams apps, we recommend using Single Sign-on (SSO) using Azure Active Directory (AD); but an alternative is to use a third-party IdP. <br> **See also**: [SSO](#s); [Identity provider](#i) |
+|Authorization||
 
 ## B
 
@@ -211,6 +212,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Redirect URL](../bots/how-to/authentication/bot-sso-register-aad.md) | A redirect URI is the location where the authorization server sends the user after the app has been successfully authorized and granted an authorization code or access token. It's also called or reply URL. |
 | [Role-based views](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/user-specific-views.md) | A feature of tabs where the tab experience may be different for users depending on their permission level. |
 | [RSC permission](../graph-api/rsc/resource-specific-consent.md) | Resource-specific consent (RSC) permission feature is needed by team owners to let a bot app receive messages across channels in a team without being @mentioned. |
+|Real-time meeting protocol (RTMP)||
 
 ## S
 
