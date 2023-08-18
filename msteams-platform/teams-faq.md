@@ -207,7 +207,6 @@ For more information, see [Graph explorer](https://developer.microsoft.com/graph
 
 ## Moodle
 
-<br>
 <details>
 <summary>What should I do if one or more of the course teams weren't created after synchronization?</summary>
 
