@@ -854,7 +854,7 @@ The following table lists the changes by Teams Toolkit:
 
    |**Type**|**File**|**Purpose**|
    |--------|--------|-----------|
-   |Create|`aad.template.json` under `template\appPackage`|Azure AD application manifest represents your Azure AD app. `template\appPackage` helps you to register an Azure AD app during local debug or provision.|
+   |Create|`aad.template.json` under `template\appPackage`|Azure AD app manifest represents your Azure AD app. `template\appPackage` helps you to register an Azure AD app during local debug or provision.|
    |Modify|`manifest.template.json` under `template\appPackage`|`webApplicationInfo` object is added into your app manifest template. Teams requires this field to enable SSO. When local debugging or provisioning is triggered, you can see the change.|
    |Modify|`appsettings.json` and `appsettings.Development.json`|Configs are added and used by TeamsFx SDK to your app settings. You can update and add the `TeamsFx` object if you have other `appsettings` files.|
    |Create|`Auth\tab`|Reference code, auth redirect pages and a `README.md` file are generated in the folder `Auth\tab` for a tab project.|

@@ -91,7 +91,7 @@ The following example shows a basic Teams tab app directory structure:
 | Folder name | Contents |
 | --- | --- |
 | `.vscode` | Settings for VS Code to build and debug your Teams app. |
-| `appPackage` | Teams app manifest file and icon files that Teams used to recognize your Teams app. |
+| `appPackage` | App manifest(previously called Teams app manifest) file and icon files that Teams used to recognize your Teams app. |
 | `env` | Stores different environment parameters. |
 | `infra` | Azure `bicep` template files. Used for deploy your Teams app to Azure. |
 | `src` | Source code for the Tab capability, including your front-end app, UI components and the privacy notice, terms of use, |
@@ -123,7 +123,7 @@ The new project folder contains the following content:
 | Folder name | Contents |
 | --- | --- |
 | `.vscode` | Settings for VS Code to build and debug your Teams app. |
-| `appPackage` | Teams app manifest file and icon files that Teams used to recognized your Teams app. |
+| `appPackage` | App manifest file and icon files that Teams used to recognized your Teams app. |
 | `env` | Stores different environment parameters. |
 | `infra` | Azure `bicep` template files. Used for deploy your Teams app to Azure. |
 | `teamsapp.yml` | This configuration file defines the Teams Toolkit behavior for provision, deploy, and publish lifecycle. You can customize this file to change the behavior of Teams Toolkit in each lifecycle. |

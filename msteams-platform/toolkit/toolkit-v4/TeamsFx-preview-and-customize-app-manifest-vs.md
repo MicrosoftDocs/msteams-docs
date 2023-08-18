@@ -70,7 +70,7 @@ After you've previewed the app manifest file in Visual Studio, you can sync the 
 
 1. Select **Project**.
 1. Select **Teams Toolkit**.
-1. Select **Update app Manifest in Teams Developer Portal**.
+1. Select **Update Manifest in Teams Developer Portal**.
 
 :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/update-teams-app.png" alt-text="Screenshot shows update app manifest in teams developer portal.":::
 
@@ -78,7 +78,7 @@ You can also sync the local changes to Developer Portal from **Solution Explorer
 
 1. Right-click on **MyTeamsApp2**.
 1. Select **Teams Toolkit**.
-1. Select **Update app Manifest in Teams Developer Portal**
+1. Select **Update Manifest in Teams Developer Portal**
 
 :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/solution-update-teams-app.png" alt-text="Screenshot shows solution update to teams app.":::
 
@@ -98,7 +98,7 @@ When you create a Teams command bot using Visual Studio, two app IDs are registe
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
-* [App manifest schema for Teams](~/resources/schema/manifest-schema.md)
+* [App manifest schema](~/resources/schema/manifest-schema.md)
 * [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md)
 * [Manage multiple environments](TeamsFx-multi-env-v4.md)
 * [Public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md)
@@ -182,7 +182,7 @@ Teams Toolkit generates the zip app package, the following steps help to preview
 
 1. Right-click on **manifest.template.json** file under **appPackage** folder.
 
-1. Select **Preview app Manifest File** > **For Local** or **For Azure**.
+1. Select **Preview Manifest File** > **For Local** or **For Azure**.
 
    :::image type="content" source="images/vs-preview1-v4.png" alt-text="Screenshot is an example of showing the preview app manifest menu for local and Azure." lightbox="images/vs-preview1-v4.png":::
 

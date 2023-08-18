@@ -224,7 +224,7 @@ For more information on Bicep template and parameter files, see [how to provisio
 ## See also
 
 * [Teams Toolkit Overview](../teams-toolkit-fundamentals.md)
-* [App manifest schema for Teams](~/resources/schema/manifest-schema.md)
+* [App manifest schema](~/resources/schema/manifest-schema.md)
 * [Add more cloud resources](add-resource-v4.md)
 * [Collaborate with other developers on Teams project](TeamsFx-collaboration-v4.md)
 * [Test app behavior in different environment](test-app-behavior-v4.md)
