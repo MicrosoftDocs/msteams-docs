@@ -379,7 +379,7 @@ No. You can use apps in landscape mode by default.
 <details>
 <summary>What if my app doesn't support one of the modes, or if the scenario is only intended to work in one of the modes?</summary>
 
-Teams supports both modes by default. The apps in Teams aren't supported to work in one mode only. If your app demands this requirement, reach out to the [support team](../../feedback.md).
+Teams supports both modes by default. The apps in Teams aren't supported to work in one mode only. If your app demands this requirement, reach out to the [support team](feedback.md).
 <br>
 &nbsp;
 </details>
@@ -414,7 +414,7 @@ Yes, the landscape mode is supported on both Android and iOS Teams apps, providi
 <details>
 <summary>Can I customize the app's behavior differently for landscape and portrait modes?</summary>
 
-The behavior of the app remains consistent across both modes. However, if you have specific use cases or requirements that require different behaviors in each mode, reach out to the [support team](../../feedback.md) with your feedback and suggestions.
+The behavior of the app remains consistent across both modes. However, if you have specific use cases or requirements that require different behaviors in each mode, reach out to the [support team](feedback.md) with your feedback and suggestions.
 <br>
 &nbsp;
 </details>
