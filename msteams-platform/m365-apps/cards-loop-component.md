@@ -76,10 +76,10 @@ You can test the loop component in the developer preview environments of Microso
 
 To configure, distribute, and manage your application use the [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md). You can test and debug your app in the Developer Portal using the following options:
 
-* **Overview page**: On the **Overview page**, under **Teams store validation**, you can see a snapshot of your app's configuration and check if your app validates against Teams store test cases.
+* **Overview page**: On the **Overview page**, under **Teams store validation**, you can see a snapshot of your app's configuration and check if your app package validates against Teams store test cases.
 * **Preview in Teams**: The **Preview in Teams** button lets you launch your app quickly in the Teams client for debugging.
 
-:::image type="content" source="../assets/images/developer-portal-overview.png" alt-text="A screenshot of the Developer Portal overview page with the Preview in Teams button highlighted":::
+:::image type="content" source="../assets/images/developer-portal-overview.png" alt-text="A screenshot of the Developer Portal overview page with the Preview in Teams button highlighted." lightbox="../assets/images/developer-portal-overview.png" :::
 
 ### Test in Outlook for web
 
