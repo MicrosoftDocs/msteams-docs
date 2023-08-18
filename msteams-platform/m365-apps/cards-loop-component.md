@@ -51,7 +51,7 @@ The following is a JSON example of an Adaptive Card-based Loop component with th
   "type": "AdaptiveCard",
   "version": "1.6",
   "metadata": {
-    "webUrl": "https://jarvisacloopsbot.azurewebsites.net/refreshCard"
+    "webUrl": "https://msdn.microsoft.com/microsoft-teams/tabs"
   },
   "body": [
     {
