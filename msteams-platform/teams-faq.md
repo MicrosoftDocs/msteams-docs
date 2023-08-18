@@ -364,6 +364,68 @@ It's recommended that you save conversation references to database and use the s
 
 </details>
 
+## Page orientation
+
+> [!NOTE]
+> This FAQ is applicable only for page orientation in Teams mobile.
+
+<details>
+<summary>Do I need to make any changes in the app to get the landscape mode?</summary>
+
+No. You can use apps in landscape mode by default.
+<br>
+&nbsp;
+</details>
+<details>
+<summary>What if my app doesn't support one of the modes, or if the scenario is only intended to work in one of the modes?</summary>
+
+Teams supports both modes by default. The apps in Teams aren't supported to work in one mode only. If your app demands this requirement, reach out to the [support team](../../feedback.md).
+<br>
+&nbsp;
+</details>
+<details>
+<summary>How can I fix the scroll missing in the app empty state?</summary>
+
+Add `<FlexColumn scroll></FlexColumn>` to the empty state for the app.
+<br>
+&nbsp;
+</details>
+<details>
+<summary>How can I test my app compatibility in both landscape and portrait modes?</summary>
+
+To test your app's compatibility in both modes, run the app on Teams mobile in different device orientations. Ensure that all elements, including buttons, text, and images are correctly aligned and displayed without any UI distortions or cut-offs.
+<br>
+&nbsp;
+</details>
+<details>
+<summary>Are there any best practices for designing apps that work well in both landscape and portrait modes?</summary>
+Yes, when designing apps for Teams, it's essential to follow responsive design principles to ensure optimal performance and user experience in both landscape and portrait modes. Use flexible layouts and adaptive components to accommodate different screen sizes and orientations.
+<br>
+&nbsp;
+</details>
+<details>
+
+<summary>Does landscape mode support both Android and iOS Teams apps?</summary>
+
+Yes, the landscape mode is supported on both Android and iOS Teams apps, providing consistent experience for users across both platforms.
+<br>
+&nbsp;
+</details>
+<details>
+<summary>Can I customize the app's behavior differently for landscape and portrait modes?</summary>
+
+The behavior of the app remains consistent across both modes. However, if you have specific use cases or requirements that require different behaviors in each mode, reach out to the [support team](../../feedback.md) with your feedback and suggestions.
+<br>
+&nbsp;
+</details>
+<details>
+<summary>Is there any impact on the performance of apps in landscape mode?</summary>
+
+No, the landscape mode support in Teams doesn't have any negative effect on app performance. Teams ensures a smooth and seamless experience for users, regardless of the device orientation.
+<br>
+&nbsp;
+</details>
+
 ## Partner Center
 
 <details>
@@ -459,7 +521,7 @@ After the verification process is complete, the status of your enrollment on the
 <details>
 <summary>My account verification status hasn't advanced beyond Email Ownership. How should I proceed?</summary>
 
-During the **Email Ownership** verification process, a verification email is sent to the primary contact. Check your primary contact inbox for an email from **maccount@microsoft.com** with the subject line **Action needed: Verify your email account with Microsoft** and complete the email verification process. The verification email is sent to the address listed on your Partner Center account settings.
+During the **Email Ownership** verification process, a verification email is sent to the primary contact. Check your primary contact inbox for an email from **<maccount@microsoft.com>** with the subject line **Action needed: Verify your email account with Microsoft** and complete the email verification process. The verification email is sent to the address listed on your Partner Center account settings.
 
 Remember the following points about the email verification process:
 
@@ -479,7 +541,7 @@ Try the following steps:
 * Clear the browser cache, go to your Partner Center account dashboard, and select **Resend verification email**.
 * Try accessing the **Resend verification email** link from a different browser.
 * Work with your IT department to ensure that the verification emails are not blocked by your email server.
-* Adjust your server's spam filter to allow or safe-list all emails from **maccount@microsoft.com**.
+* Adjust your server's spam filter to allow or safe-list all emails from **<maccount@microsoft.com>**.
 <br>
 &nbsp;
 
@@ -593,7 +655,7 @@ Upgrade the Teams JavaScript client SDK to (@microsoft/teams-js": "^2.0.0") to r
 <br>
 </details>
 <br>
-<details> 
+<details>
 <summary>Which tab gets pinned if both configurable tab and static tab are defined in the app manifest for a specific scope?</summary>
 
 <br>
@@ -604,11 +666,9 @@ If you have both configurable tab and static tab defined in your app manifest fo
 <summary>What if I already have pre-existing pinned configurable tabs after switching to static tabs?</summary>
 
 <br>
-Pre-existing pinned configurable tab instances of your app continue to work the same. You don't have the option to pin new instances of these configurable tabs. When you select to pin your tab, then Teams pins the static tab of your app. 
+Pre-existing pinned configurable tab instances of your app continue to work the same. You don't have the option to pin new instances of these configurable tabs. When you select to pin your tab, then Teams pins the static tab of your app.
 <br>
 </details>
-
-
 
 ## Teams toolkit
 
