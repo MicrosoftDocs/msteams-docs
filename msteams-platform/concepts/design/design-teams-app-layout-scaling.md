@@ -203,92 +203,59 @@ Your app won't pass Teams submission if it has illegible headers without hover f
 
 ## Page orientation FAQs
 
-Get answers to common questions related to page orientation in Teams mobile.
-
-<br>
-
 <details>
-
 <summary>Do I need to make any changes in the app to get the landscape mode?</summary>
+
 No. You can use apps in landscape mode by default.
-
 <br>
-
+&nbsp;
 </details>
-
-<br>
-
 <details>
-
 <summary>What if my app doesn't support one of the modes, or if the scenario is only intended to work in one of the modes?</summary>
+
 Teams supports both modes by default. The apps in Teams aren't supported to work in one mode only. If your app demands this requirement, reach out to the [support team](../../feedback.md).
-
 <br>
-
+&nbsp;
 </details>
-
-<br>
-
 <details>
-
 <summary>How can I fix the scroll missing in the app empty state?</summary>
+
 Add `<FlexColumn scroll></FlexColumn>` to the empty state for the app.
-
 <br>
-
+&nbsp;
 </details>
-
-<br>
-
 <details>
-
 <summary>How can I test my app compatibility in both landscape and portrait modes?</summary>
+
 To test your app's compatibility in both modes, run the app on Teams mobile in different device orientations. Ensure that all elements, including buttons, text, and images are correctly aligned and displayed without any UI distortions or cut-offs.
-
 <br>
-
+&nbsp;
 </details>
-
-<br>
-
 <details>
-
 <summary>Are there any best practices for designing apps that work well in both landscape and portrait modes?</summary>
 Yes, when designing apps for Teams, it's essential to follow responsive design principles to ensure optimal performance and user experience in both landscape and portrait modes. Use flexible layouts and adaptive components to accommodate different screen sizes and orientations.
-
 <br>
-
+&nbsp;
 </details>
-
-<br>
-
 <details>
 
 <summary>Does landscape mode support both Android and iOS Teams apps?</summary>
+
 Yes, the landscape mode is supported on both Android and iOS Teams apps, providing consistent experience for users across both platforms.
-
 <br>
-
+&nbsp;
 </details>
-
-<br>
-
 <details>
-
 <summary>Can I customize the app's behavior differently for landscape and portrait modes?</summary>
+
 The behavior of the app remains consistent across both modes. However, if you have specific use cases or requirements that require different behaviors in each mode, reach out to the [support team](../../feedback.md) with your feedback and suggestions.
-
 <br>
-
+&nbsp;
 </details>
-
-<br>
-
 <details>
-
 <summary>Is there any impact on the performance of apps in landscape mode?</summary>
+
 No, the landscape mode support in Teams doesn't have any negative effect on app performance. Teams ensures a smooth and seamless experience for users, regardless of the device orientation.
-
 <br>
-
+&nbsp;
 </details>
