@@ -210,7 +210,7 @@ The following *manifest.json* example contains the elements needed to test and s
 
 ## Test your connector
 
-To test your connector, upload it to a team with any other app. You can create a .zip package using the manifest file from the two icon files and Connectors Developer Dashboard, modified as directed in [Include the connector in your app Manifest](#include-the-connector-in-your-app-manifest).
+To test your connector, upload it to a team with any other app. You can create a .zip package using the app manifest file from the two icon files and Connectors Developer Dashboard, modified as directed in [Include the connector in your app Manifest](#include-the-connector-in-your-app-manifest).
 
 After you upload the app, open the connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section.
 
@@ -252,4 +252,4 @@ Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to build and tes
 * [Create and send messages](connectors-using.md)
 * [How admins can enable or disable connectors](/microsoftteams/office-365-custom-connectors#enable-or-disable-connectors-in-teams)
 * [How admins can publish custom connectors within their org](/microsoftteams/office-365-custom-connectors)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [App manifest schema](../../resources/schema/manifest-schema.md)

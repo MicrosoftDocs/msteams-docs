@@ -13,7 +13,7 @@ zone_pivot_groups: teams-toolkit-platform
 
 ::: zone pivot="visual-studio-code-v5"
 
-The app manifest (previously called Teams app manifest) describes how your app integrates into Teams. After scaffolding, the default manifest file is available at `appPackage/manifest.json`. The app manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Teams Toolkit with env files like `env/.env.dev` and `env/.env.local`.
+The app manifest (previously called Teams app manifest) describes how your app integrates into Teams. After scaffolding, the default app manifest file is available at `appPackage/manifest.json`. The app manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Teams Toolkit with env files like `env/.env.dev` and `env/.env.local`.
 
 To preview app manifest with actual content, Teams Toolkit generates preview app manifest files under `appPackage/build` folder:
 
@@ -40,7 +40,7 @@ You can also trigger `Zip Teams App Package` from tree view or `Teams: Zip Teams
 
 To preview app manifest file in remote environment, you can trigger `Provision` from tree view or `Teams: Provision in the cloud` from command palette. It generates environment variables for remote Teams app, build app package and preview app manifest under `appPackage/build` folder.
 
-You can also trigger Zip Teams App Package from tree view or `Teams: Zip Teams app Package` from command palette to generate preview manifest and app package.
+You can also trigger Zip Teams App Package from tree view or `Teams: Zip Teams app Package` from command palette to generate preview app manifest and app package.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/zip-app-package (1).png" alt-text="Screenshot showing the selection of zip Teams app package in preview app manifest file.":::
 
@@ -87,7 +87,7 @@ After customization, you may want to validate your app manifest or app package. 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/validate-application.png" alt-text="Screenshot showing the selection of validate application under utility.":::
 
-### Validate using manifest schema
+### Validate using app manifest schema
 
 This option renders `appPackage/manifest.json` with environment variables, and then validates your app manifest with its schema.
 
@@ -115,7 +115,7 @@ CLI command:
 teamsfx validate --app-package-file-path YOUR-PATH-TO-APP-PACKAGE
 ```
 
-It has additional validation rules than manifest schema. For example, if static tab section has entityId "conversations" and name, the following error appears:
+It has additional validation rules than app manifest schema. For example, if static tab section has entityId "conversations" and name, the following error appears:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/validation-output.png" alt-text="Screenshot showing the validation output.":::
 
@@ -160,7 +160,7 @@ To preview values for all the environment, you can hover over the placeholder. I
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md).
-* [App manifest schema for Teams](../resources/schema/manifest-schema.md)
+* [App manifest schema](../resources/schema/manifest-schema.md)
 * [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)
@@ -177,7 +177,7 @@ To preview values for all the environment, you can hover over the placeholder. I
 
 ## Customize app manifest for Visual Studio Code
 
-The app manifest describes how your app integrates into Teams. The manifest template file `manifest.template.json` is available under `templates/appPackage` folder after scaffolding. The template file with placeholders, and the actual values are resolved by Teams Toolkit using files under `.fx/configs` and `.fx/states` for different environments.
+The app manifest describes how your app integrates into Teams. The app manifest template file `manifest.template.json` is available under `templates/appPackage` folder after scaffolding. The template file with placeholders, and the actual values are resolved by Teams Toolkit using files under `.fx/configs` and `.fx/states` for different environments.
 
 To preview app manifest with actual content, Teams Toolkit generates preview app manifest files under `build/appPackage` folder:
 
@@ -302,11 +302,11 @@ After previewing the app manifest file, you can sync your local changes to Devel
 
    You can deploy app manifest in any of the following ways:
 
-   * Right-click the `manifest.template.json` file, and select **Deploy app manifest** from context menu.
+   * Right-click the `manifest.template.json` file, and select **Deploy Teams app manifest** from context menu.
 
       :::image type="content" source="toolkit-v4/images/deploy-manifest-v4.png" alt-text="Screenshot is an example of showing the selection of deploy app manifest.":::
 
-   * Trigger **Teams: Deploy app manifest** by selecting it from the command palette.
+   * Trigger **Teams: Deploy Teams app manifest** by selecting it from the command palette.
 
       :::image type="content" source="toolkit-v4/images/deploy-command-v4.png" alt-text="Screenshot is an example of showing the deploy from command palette.":::
 
@@ -320,7 +320,7 @@ After previewing the app manifest file, you can sync your local changes to Devel
 
       :::image type="content" source="toolkit-v4/images/update-to-teams-v4.png" alt-text="Screenshot is an example of showing the update to Teams platform on the menu bar of manifest." lightbox="toolkit-v4/images/update-to-teams-v4.png":::
 
-You can also trigger **Teams: Update app manifest to Teams platform** from the command palette:
+You can also trigger **Teams: Update manifest to Teams platform** from the command palette:
 
 :::image type="content" source="toolkit-v4/images/pre-v4.png" alt-text="Screenshot is an example of showing the selection of Teams: update app manifest to Teams platform from the command palette.":::
 
@@ -417,7 +417,7 @@ To preview values for all the environments, you can hover over the placeholder. 
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md).
-* [App manifest schema for Teams](../resources/schema/manifest-schema.md)
+* [App manifest schema](../resources/schema/manifest-schema.md)
 * [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
 * [Environments in Teams Toolkit](TeamsFx-multi-env.md)
 * [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)

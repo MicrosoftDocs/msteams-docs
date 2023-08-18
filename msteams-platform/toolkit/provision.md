@@ -110,7 +110,7 @@ N/A
 
 #### What it is
 
-This action renders app manifest template with environment variables and compresses the manifest file with two icons into a zip file.
+This action renders app manifest template with environment variables and compresses the app manifest file with two icons into a zip file.
 
 #### What resource it operates
 
