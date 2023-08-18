@@ -174,30 +174,30 @@
             href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
           - name: Edit Azure AD manifest
             href: toolkit/AAD-manifest-customization.md
-          - name: Debug your Teams app
-            items:
-            - name: Overview
-              href: toolkit/debug-overview.md
-            - name: Debug your Teams app locally
-              href: toolkit/debug-local.md
-            - name: Debug background process
-              href: toolkit/debug-background-process.md
-            - name: Debug for mobile
-              href: toolkit/debug-mobile.md        
-            - name: Host your app on Azure
-              items:    
-              - name: Provision cloud resources
-                href: toolkit/provision.md
-              - name: Deploy to the cloud
-                href: toolkit/deploy.md
-            - name: Test your Teams app
-              items: 
-              - name: Integrate and collaborate
-                href: toolkit/TeamsFx-collaboration.md
-              - name: Set up CI/CD pipelines
-                href: toolkit/use-CICD-template.md  
-              - name: Test app behavior in different environment
-                href: toolkit/test-app-behavior.md
+        - name: Debug your Teams app
+          items:
+          - name: Overview
+            href: toolkit/debug-overview.md
+          - name: Debug your Teams app locally
+            href: toolkit/debug-local.md
+          - name: Debug background process
+            href: toolkit/debug-background-process.md
+          - name: Debug for mobile
+            href: toolkit/debug-mobile.md        
+        - name: Host your app on Azure
+          items:    
+          - name: Provision cloud resources
+            href: toolkit/provision.md
+          - name: Deploy to the cloud
+            href: toolkit/deploy.md
+        - name: Test your Teams app
+          items: 
+          - name: Integrate and collaborate
+            href: toolkit/TeamsFx-collaboration.md
+          - name: Set up CI/CD pipelines
+            href: toolkit/use-CICD-template.md  
+          - name: Test app behavior in different environment
+            href: toolkit/test-app-behavior.md
       - name: Publish your Teams app
         items:
         - name: Publish Teams apps using Teams Toolkit 
@@ -241,11 +241,15 @@
             href: toolkit/toolkit-v4/debug-overview-vs.md
           - name: Debug your Teams app locally
             href: toolkit/toolkit-v4/debug-local-vs.md
+          - name: Debug background process
+            href: toolkit/toolkit-v4/debug-background-process-v4.md            
             displayName: DevTunnel
         - name: Host your app on Azure
           items:    
           - name: Provision cloud resources
             href: toolkit/toolkit-v4/provision-vs.md
+          - name: Deploy to the cloud
+            href: toolkit/toolkit-v4/deploy-vs.md            
     - name: Teams Toolkit CLI
       href: toolkit/TeamsFx-CLI.md
     - name: Developer Portal for Teams
