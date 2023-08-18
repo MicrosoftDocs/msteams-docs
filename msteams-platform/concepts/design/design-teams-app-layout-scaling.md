@@ -211,7 +211,7 @@ Get answers to common questions related to page orientation in Teams mobile.
 
 <summary><b>Do app developers need to make any changes in the app to get the landscape mode?</b></summary>
 
-No. You can use Apps in landscape mode by default.
+No. You can use apps in landscape mode by default.
 
 <br>
 
@@ -223,7 +223,7 @@ No. You can use Apps in landscape mode by default.
 
 <summary><b>What if my app doesn't support one of the modes, or if the scenario is only intended to work in one of the modes?</b></summary>
 
-Teams supports both modes by default. The apps in Teams aren't supported to work in one mode only. If Your app demands this requirement, reach out to the [support team](../../feedback.md).
+Teams supports both modes by default. The apps in Teams aren't supported to work in one mode only. If your app demands this requirement, reach out to the [support team](../../feedback.md).
 
 <br>
 
