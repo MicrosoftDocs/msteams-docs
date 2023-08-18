@@ -352,7 +352,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 August**
 
-***Aug 17, 2023***: [Introduced New Microsoft Teams client to provide better experience for your apps and users](resources/teams-updates.md).
+***Aug 18, 2023***: [Introduced New Microsoft Teams client to provide better experience for your apps and users](resources/teams-updates.md).
 
 ***August 08, 2023***: [Use callRecording API to fetch meeting recording from all meetings.](graph-api/meeting-transcripts/overview-transcripts.md)
 
