@@ -924,7 +924,7 @@ If your app doesn't have an app manifest file, you need to create it.
 
 To create an app manifest file:
 
-1. Use the [sample app manifest schema](#sample-manifest) to create a .json file.
+1. Use the [sample app manifest schema](#sample-app-manifest) to create a .json file.
 1. Save it in the root of your project folder as `manifest.json`.
 
 <br>
@@ -933,7 +933,7 @@ To create an app manifest file:
 <br>
 
 > [!NOTE]
-> The app manifest example content shown here is only for a tab app. It uses example values for subdomain URI. For more information, see [sample app manifest schema](#sample-manifest).
+> The app manifest example content shown here is only for a tab app. It uses example values for subdomain URI. For more information, see [sample app manifest schema](#sample-app-manifest).
 
   ```json
 { 
