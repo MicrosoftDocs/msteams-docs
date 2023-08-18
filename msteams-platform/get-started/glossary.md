@@ -76,6 +76,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Conversational bot](../bots/how-to/conversations/conversation-messages.md) |  It lets a user interact with your web service using text, interactive cards, and task modules. <br>**See also** [Chat bot](#c) |
 |[Copilot](../copilot/how-to-extend-copilot.md)|Microsoft 365 Copilot is powered by an advanced processing and orchestration engine that seamlessly integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to turn your words into the most powerful productivity tool. |
 | Customer-owned apps | An app created by you or your organization that is meant for use by other Teams app users outside the organization. It can be made available on Teams store. <br> **See also**: [Store validation guidelines](#s); [Microsoft store](#s); [LOB apps](#l); [Personal apps](#p); [Shared apps](#s) |
+|Custom together mode||
 
 ## D
 
@@ -140,6 +141,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | --- | --- |
 | [Link unfurling](../messaging-extensions/how-to/link-unfurling.md) | A feature used with message extension and meeting to unfold links pasted into a compose message area. The links expand to show additional information about the link in Adaptive Cards or in the meeting Stage View. |
 | [Link Share SDK](../apps-in-teams-meetings/teams-live-share-overview.md) | An SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. With Live Share, your users can co-watch, co-create, and co-edit during meetings. |
+|Live share canvas|
 | [LOB apps](../tabs/how-to/authentication/tab-sso-register-aad.md) | Line of business (LOB) applications are internal or specific within an organization or business. It's custom to the organization that created it. Your organization can make LOB applications available through Microsoft store. <br> **See also**: [Store validation guidelines](#s); [Teams store](#t); [Personal app](#p); [Shared app](#s); [Customer-owned app](#c) |
 | [Local environment](../toolkit/TeamsFx-multi-env.md#create-a-new-environment-manually-in-visual-studio-code) | A default development environment created by Teams Toolkit.  <br>**See also**: [Environment](#e); [Dev environment](#d) |
 | [Local workbench](../sbs-gs-spfx.yml) | The default option to run and debug a Teams app in Visual Studio Code (VS Code) that is created using SPFx. <br>**See also**: [Workbench](#w); [Teams workbench](#t) |
@@ -219,6 +221,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 |SaaS||
+|Scene|You can build a scene using the scene studio.|
 | [Scope](../tabs/how-to/authentication/tab-sso-register-aad.md) | Scopes are used to implement scope-based access control, for a client application that has been given delegated access to the resource by its owner. They're resource-defined strings. For example, **Mail.Read**, **Directory.ReadWrite.All**; managed in the Azure portal. <br> **See also**: [SSO](#s); [Authentication flow](#a); [Delegated permission](#d); [Permission](#p) |
 | [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md) | A type of message extension app that lets users search external systems and include the search result into a message using a card. <br>**See also**: [Message extensions](#m); [Action commands](#a) |
 | [Sequential workflow](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md) | A workflow that lets a bot carry out a conversation with a user based on the user response. |
