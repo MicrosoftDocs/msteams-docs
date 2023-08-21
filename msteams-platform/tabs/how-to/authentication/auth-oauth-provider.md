@@ -19,7 +19,7 @@ function authenticate(authenticateParameters: AuthenticatePopUpParameters): Prom
 The following are added to the `authenticate()` API to support external OAuth providers:
 
 * `isExternal` parameter
-* Two placeholder values in the existing `url` parameter
+* Three placeholder values in the existing `url` parameter
 
 The following table provides the list of `authenticate()` API parameters (`AuthenticatePopUpParameters`) and functions along with their descriptions:
 
@@ -27,7 +27,7 @@ The following table provides the list of `authenticate()` API parameters (`Authe
 | --- | --- |
 |`isExternal` | The type of parameter is Boolean, which indicates that the auth window opens in an external browser.|
 |`height` |The preferred height for the pop-up. The value can be ignored if outside the acceptable bounds.|
-|`url`  <br>|The URL of 3P app server for the authentication pop-up, with the following two parameter placeholders:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. This placeholder is replaced by deeplink or web page by Teams platform, which informs app server if the call is coming from mobile platform.</br> <br> - `authId`: This placeholder is replaced by UUID. The app server uses it to maintain session.|
+|`url`  <br>|The URL of 3P app server for the authentication pop-up, with the following three parameter placeholders:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. This placeholder is replaced by deeplink or web page by Teams platform, which informs app server if the call is coming from mobile platform.</br> <br> - `authId`: This placeholder is replaced by UUID. The app server uses it to maintain session. <br> - `hostRedirectUrl`: pass placeholder in {}. This placeholder is replaced by a redirect URL by the current platform and client, which will redirect the user to the correct client after authentication is complete. </br>|
 |`width`|The preferred width for the pop-up. The value can be ignored if outside the acceptable bounds.|
 
 For more information on parameters, see the [authenticate(AuthenticatePopUpParameters)](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate) function.
