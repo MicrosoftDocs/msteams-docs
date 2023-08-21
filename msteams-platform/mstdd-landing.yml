@@ -48,7 +48,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Adaptive Card-based Loop component
+      - text: Adaptive Card-based Loop component (Developer preview)
         url: m365-apps/cards-loop-component.md
       - text: Teams Toolkit v17.7 extension within Visual Studio
         url: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md
@@ -111,15 +111,15 @@ landingContent:
         url: bots/what-are-bots.md
       - text: Message extensions are available in Department of Defense (DOD) environment
         url:  messaging-extensions/what-are-messaging-extensions.md
-      - text: Use the resources and best practices to support the rollout of your Teams app in your customers’ organizations and facilitate adoption of your app
+      - text: Drive customer adoption of your app
         url:  promote-app-adoption.md
-      - text: Use Changelog to view the latest updates on Developer Portal about features, recent changes in APIs, and important bug fixes
+      - text: Changelog for Developer Portal
         url: concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal
-      - text: Enable single sign-on (SSO) authentication to access Adaptive Cards Universal Actions in a bot
+      - text: Enable SSO authentication to access Adaptive Cards Universal Actions
         url: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
-      - text: Enable third party authentication to add user-specific views in instances where an Adaptive Card with Universal Action is shared
+      - text: Add third party authentication to Adaptive Card Universal Action
         url: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
-      - text: Send notifications to specific participants on a meeting stage with targeted in-meeting notification
+      - text: Targeted in-meeting notification
         url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
 
 - title: Get started
