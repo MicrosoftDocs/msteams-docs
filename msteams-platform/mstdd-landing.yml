@@ -118,9 +118,9 @@ landingContent:
       - text: Enable single sign-on (SSO) authentication to access Adaptive Cards Universal Actions in a bot
         url: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
       - text: Enable third party authentication to add user-specific views in instances where an Adaptive Card with Universal Action is shared
-        url: authentication-flow-in-universal-action-for-adaptive-cards.md
+        url: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
       - text: Send notifications to specific participants on a meeting stage with targeted in-meeting notification
-        url: in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
+        url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
 
 - title: Get started
   linkLists:
