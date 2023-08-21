@@ -40,11 +40,11 @@ An Adaptive Card-based Loop component comprises of the **Body**, **Header**, and
 
 :::image type="content" source="~/assets/images/loop-element-overview.png" alt-text="The screenshot graphic of highlighting the spacing on a card and which belongs to the header, border, and body ":::
 
-|Loop component element | Developer provides | Platform provides|
-|---|---|---|
-|Body| Contents fully controlled by developer |Rendering and styling of controls based on developer code|.
-|Header | Icon and name | Elements and layout are standard and provided by platform. |
-|Border | NA | Standard border for all Loop components.|
+|Loop component element  |Developer provides  |Platform provides  |
+|---------|---------|---------|
+|Body    | Contents fully controlled by developer        | Rendering and styling of controls based on developer code.        |
+|Header    |  Icon and name       |  Elements and layout are standard and provided by platform       |
+|Border     |     NA    |   Standard border for all Loop components.      |
 
 ## Loop component body
 
