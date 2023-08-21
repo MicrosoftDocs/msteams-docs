@@ -78,6 +78,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Adaptive Card-based Loop component
+        url: m365-apps/cards-loop-component.md
       - text: Teams Toolkit v17.7 extension within Visual Studio
         url: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md      
       - text: Send a proactive message using AAD ID
