@@ -165,7 +165,7 @@ items:
 
     **To add messaging endpoint**
 
-    1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
+    1. In **Messaging endpoint**, use the HTTPS URL available from dev tunnel and add **/api/messages** at the end of the URL.
 
         :::image type="content" source="~/assets/images/Teams-task-module/messaging-endpoint_1.png" alt-text="Messaging Endpoint":::
 
@@ -192,7 +192,7 @@ items:
 
        :::image type="content" source="~/assets/images/Teams-task-module/exposeanapi-add.png" alt-text="Expose an API":::
 
-    1. Use the `api://your ngrok/botid-{AppID}` format for the **Application ID URI**.
+    1. Use the `api://your dev tunnel/botid-{AppID}` format for the **Application ID URI**.
 
     1. Update the **Application ID URI** and select **Save**.
 
@@ -234,7 +234,7 @@ items:
 
         > [!NOTE]
         > The **Scope name** must match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
-           `api://d4b8****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
+           `api://wf2vp42q-****.inc1.devtunnels.ms/00000000-0000-0000-0000-000000000000/access_as_user`
 
         :::image type="content" source="~/assets/images/Teams-task-module/scopes_3.png" alt-text="Scopes"::: 
   
