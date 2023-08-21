@@ -14,14 +14,14 @@ Microsoft Loop components are live, actionable units of productivity that stay i
 
 ## Loop components are live, embedded, actionable, and portable
 
-**Live**: Your Adaptive Card should be self-updating when the card is loaded (such as when opening an email or chat) to reflect the latest information.
+**Live**: Your Adaptive Card must be self-updating when the card is loaded, such as when opening an email or chat, to reflect the latest information.
 
-**Embedded**: By their nature, Adaptive Cards are embedded, so there's nothing specific needed from the developer.
+**Embedded**: Adaptive Cards are embedded, so there's nothing specific needed from the developer.
 
-**Actionable**: Loop components allow the user to take action to complete a flow within the component itself; beyond simply viewing information or opening a browser. If your Adaptive Card is a view-only experience, look for opportunities to make it actionable, as this is a core element of delighting users. It's OK to have a view-only Adaptive Card, but in that case, it should remain an Adaptive Card rather than become a Loop component.
+**Actionable**: Loop components allow the user to take action to complete a flow within the component itself; beyond simply viewing information or opening a browser. If your Adaptive Card is a view-only experience, look for opportunities to make it actionable, as this is a core element to delight users. It's Ok to have a view-only Adaptive Card, but in that case, it must remain an Adaptive Card rather than become a Loop component.
 
    > [!NOTE]
-   > Certain user permissions or modes of your component may not be actionable, but the common cases should be actionable.
+   > Certain user permissions or modes of your component might not be actionable, but the common cases must be actionable.
 
    Examples of actionability may include approving an expense report, adding a comment, updating a date, dollar amount, or other data, changing an assignment or status value, and the like.
 
