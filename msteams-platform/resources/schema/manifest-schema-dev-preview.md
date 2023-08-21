@@ -384,7 +384,7 @@ The object is an array with all elements of the type `object`. This block is req
 |`configurationUrl`|String|2048 characters|✔️|The https:// URL to use when configuring the tab.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: `true`|
 |`scopes`|Array of enum|2|✔️|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
-|`context` |Array of enums|8||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, `personalTab`, and `callingSidePanel`.|
+|`context` |Array of enum|8||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, `personalTab`, and `callingSidePanel`.|
 |`sharePointPreviewImage`|String|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
 |`supportedSharePointHosts`|Array of enum|2||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart`. |
 |`meetingSurfaces`|Array of enum|2||The set of `meetingSurfaceItem` scopes to which a tab belongs. Default: `sidePanel` and `stage`.|
@@ -407,7 +407,7 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |`contentUrl`|String|2048 characters|✔️|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
 |`contentBotId`|String| | | The Microsoft Teams app ID specified for the bot in the Bot Framework portal. |
 |`websiteUrl`|String|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
-|`scopes`|Array of enum|3|✔️|Static tabs support the `personal`, `team` and `groupChat` scopes, which means it can be provisioned as part of the personal, group chat, and channel meetings experience.|
+|`scopes`|Array of enum|3|✔️|Static tabs support the `personal`, `team`, and `groupChat` scopes, which means it can be provisioned as part of the personal, group chat, and channel meetings experience.|
 |`searchUrl`|String|2048 characters||The https:// URL to direct a user's search queries.|
 |`context`|Array of enum|8||The set of `contextItem` scopes to which a tab belongs. Default: `personalTab`, `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, and `teamLevelApp`.|
 |`supportedPlatform`|Array of enum|3||The set of `supportedPlatform` scopes to which a tab belongs. Default: `desktop`, `mobile`, and `teamsMeetingDevices`.|
@@ -429,7 +429,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |`scopes`|Array of enum|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
 |`supportsCalling`|Boolean|||A value indicating where a bot supports audio calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. Default: `false`|
 |`supportsVideo`|Boolean|||A value indicating where a bot supports video calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. Default: `false`|
-|`requiresSecurityEnabledGroup`|Boolean|||A value indicating whether the team's Office group needs to be security enabled. Default: `false`|
+|`requiresSecurityEnabledGroup`|Boolean|||A value indicating whether the team's office group needs to be security enabled. Default: `false`|
 
 ### bots.configuration
 
@@ -529,10 +529,10 @@ Each command item is an object with the following structure:
 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
-|`teams`|Array|128||A list of team thread ids to which your app is restricted.|
-|`teams.id`|String|64|✔️|Team's thread Id.|
-|`groupChats`|Array|128||A list of chat thread ids to which your app is restricted.|
-|`groupChats.id`|String|64|✔️|Chat's thread Id.|
+|`teams`|Array|128||A list of team thread IDs to which your app is restricted.|
+|`teams.id`|String|64|✔️|Team's thread ID.|
+|`groupChats`|Array|128||A list of chat thread IDs to which your app is restricted.|
+|`groupChats.id`|String|64|✔️|Chat's thread ID.|
 
 ## permissions
 
@@ -764,7 +764,7 @@ Specify meeting extension definition. For more information, see [custom Together
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`scenes`|Array of objects| 5 items||Meeting supported scenes.|
-|`supportsStreaming`|Boolean|||A value that indicates whether an app can stream the meeting's audio and video content to a real-time meeting protocol (RTMP) endpoint. The default value is `false`.|
+|`supportsStreaming`|Boolean|||A boolean value that indicates whether an app can stream the meeting's audio and video content to a real-time meeting protocol (RTMP) endpoint. The default value is `false`.|
 |`videoFiltersConfigurationUrl`|String|2048 characters||The https:// URL for configuring the video filters.|
 |`supportsAnonymousGuestUsers`|Boolean|||A boolean value that indicates whether the app supports access by anonymous guest users. The default value is `false`.|
 
@@ -772,7 +772,7 @@ Specify meeting extension definition. For more information, see [custom Together
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`id`|String||✔️| The unique identifier for the scene. This id must be a GUID. |
+|`id`|String||✔️| The unique identifier for the scene. This ID must be a GUID. |
 |`name`| String | 128 characters |✔️| The name of the scene. |
 |`file`|String|2048|✔️| The relative file path to the scenes' metadata json file. |
 |`preview`|String|2048|✔️| The relative file path to the scenes' PNG preview icon. |
@@ -785,7 +785,7 @@ This object indicates meeting supported video filters.
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`id`|String||✔️| The unique identifier for the video filter. This id must be a GUID. |
+|`id`|String||✔️| The unique identifier for the video filter. This ID must be a GUID. |
 |`name`| String | 128 characters |✔️| The name of the video filter. |
 |`thumbnail`|String|2048 characters|✔️| The relative file path to the video filter's thumbnail. |
 
