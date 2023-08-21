@@ -10,7 +10,7 @@ ms.date: 04/06/2023
 
 # Purchase and manage app subscriptions and licenses
 
-The information in this article helps you understand the purchase experience from the customer end. You can add more features and functionality to your Teams app through subscriptions. Users can purchase subscriptions and manage licenses for themselves, their team, or their organization from within the Teams store.
+The information in this article helps you understand the purchase experience from the user end. You can add more features and functionality to your Teams app through subscriptions. Users can purchase subscriptions and manage licenses for themselves, their team, or their organization from within the Teams store.
 
 ## Subscription experience
 
@@ -22,11 +22,12 @@ The following example shows how users can purchase subscription plans for a Team
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app.":::
 
-1. To view subscription plans for your location, select your country or region > **Save and continue**.
+1. To view subscription plans for your location, select your country or region.
+1. Select **Save and continue**.
 
     :::image type="content" source="~/assets/images/saas-offer/add-region.png" alt-text="Screenshot shows option to select the country or region.":::
 
-1. In the **Choose a subscription plan** dialog, select **Start trail** to purchase a plan.
+1. In the **Choose a subscription plan** dialog, select **Start trail** for the plan you want to purchase.
 
     > [!NOTE]
     > Private plans are visible only to users of the organization you're providing the specific offer. A **Private offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon indicates such private plans.
@@ -34,9 +35,9 @@ The following example shows how users can purchase subscription plans for a Team
     :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Screenshot shows selecting the appropriate subscription plan.":::
 
 1. In the **Checkout** dialog, provide the following required information:
-    1. Select the number of plans.
-    1. Provide the name and address.
-    1. Provide the payment details.
+    1. Select the number of plans under **Basic plan** > **Quantity**.
+    1. Add the name and address in **Sold to**.
+    1. Add the payment details in **Payment method**.
 1. Select **Place order**.
 
     :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Screenshot shows placing the subscription order.":::
@@ -49,11 +50,14 @@ The following example shows how users can purchase subscription plans for a Team
 
     :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Screenshot shows User and Licenses screen to assign license.":::
 
-When a new user launches the app for the first time, they're requested to provide consent to the app. Following is an example of the consent screen shown when calling for user profile data with minimum User.Read permission.
+    When a new user launches the app for the first time, they're requested to provide consent to the app.
 
-Consent dialog is part of the flow to get the user's license information and may vary based on ISV’s integration approach.
+    > [!NOTE]
+    > Consent dialog is part of the flow to get the user's license information and may vary based on ISV’s integration approach.
 
-:::image type="content" source="../../../../assets/images/saas-offer/permissions-requested.png" alt-text="Screenshot shows the Permissions requested consent dialog.":::
+    Following is an example of the consent screen shown when calling for user profile data with minimum User.Read permission:
+
+    :::image type="content" source="../../../../assets/images/saas-offer/permissions-requested.png" alt-text="Screenshot shows the Permissions requested consent dialog.":::
 
 ## License management experience
 
