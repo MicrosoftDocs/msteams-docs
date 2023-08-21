@@ -39,9 +39,9 @@ To ensure a smooth transition, a phased rollout of the new platform is planned a
 > [!NOTE]
 >
 > * We recommend to test apps, tabs, messaging extensions, bots, and link unfurling after switching from the Classic Teams client to the new Teams client.
-> * Adaptive Card tabs aren't supported in the new Teams client. If your app is using Adaptive Card tabs, we recommend to rebuild the tab as a web-based tab. For more information, see [Build tabs for Teams](../tabs/how-to/build-adaptive-card-tabs.md).
+> * Adaptive Card tabs aren't supported in the new Teams client. If your app is using Adaptive Card tabs, we recommend you to rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
 
-The following are rge Teams features that will be supported soon:
+The following are the Teams features that will be supported soon:
 
 * [Share in Teams](../concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md).
 

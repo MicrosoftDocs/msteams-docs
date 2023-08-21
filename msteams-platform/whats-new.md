@@ -352,7 +352,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 August**
 
-***Aug 21, 2023***: [Introduced New Microsoft Teams client to provide better experience for your apps and users](resources/teams-updates.md).
+***Aug 21, 2023***: [Introduced the new Microsoft Teams client to provide better experience for your apps and users](resources/teams-updates.md).
 
 ***August 21, 2023***: [Use Adaptive Card-based Loop components to build collaborative experiences within Teams message extensions that work across Microsoft 365.](m365-apps/design-loop-components.md)
 
