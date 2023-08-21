@@ -683,9 +683,8 @@ A video in your app listing is one of the most effective ways to communicate why
 
 If you choose to submit a video as part of your app listing in your Partner Center account, ensure the following criteria are met:
 
-* The video must be short, clear, and engaging.
+* The video must be short, clear, engaging, and of good quality.
 * The video must demonstrate how to set up and use the app.
-* The video must be of good quality.
 * The video must be in a narrative form.
 * The duration of the video should be within 60-90 seconds for a value video and the recommended duration for a walkthrough video is three-five minutes. [*Suggested Fix*]
 * You must turn off advertisements from your YouTube or Vimeo account settings before submitting the video link in the app listing. [*Mandatory Fix*]
@@ -693,10 +692,10 @@ If you choose to submit a video as part of your app listing in your Partner Cent
 * The video must be available as a functional link. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/video-app-listing-partner-center.png" alt-text="Screenshot shows the failed scenario of video submitted as part of app listing in partner center.":::
-* The video can be surfaced in the first position of the screenshots or videos carousel in AppDetails (Teams Store and Admin Center) and AppSource. [*Suggested Fix*]
+* The video can be surfaced in the first position of the screenshots or videos carousel in **App details** (Teams Store and Admin Center) and AppSource. [*Suggested Fix*]
 * The video on demo or scenario walkthrough mustn't have marketing information.
 
-For more detailed information on the criteria for creating an app value video or walkthrough video, see the [checklist to create a video](submission-checklist.md#create-a-video).
+For more information on the criteria for creating an app value video or walkthrough video, see the [checklist to create a video](submission-checklist.md#create-a-video).
 
 <br></br>
 
@@ -706,7 +705,7 @@ For more detailed information on the criteria for creating an app value video or
 
 The privacy policy can be specific to your Teams app or an overall policy for all your services.
 
-* If you use a generic privacy policy template, you must add a reference to **services**, **applications**, or **platforms in the scope of your privacy policy**. You don’t need to specify your Teams app in the scope, if you include a reference to **services**, **applications**, and **platforms**. The app validation process interprets these references to include your Teams app along with your other services or websites.
+* If you use a generic privacy policy template, you must add a reference to services, applications, or platforms in the scope of your privacy policy. You don’t need to specify your Teams app in the scope, if you include a reference to services, applications, and platforms. The app validation process interprets these references to include your Teams app along with your other services or websites.
 * Must include how you handle user data storage, retention, and deletion. You must describe the security controls for data protection.
 * Must include your contact information.
 * Must not include URLs that are broken or for beta or staging purposes.
@@ -1483,7 +1482,7 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 
    :::image type="content" source="../../../../assets/images/submission/validation-apps-redirecting-competitor-chat-platform.png" alt-text="Graphic shows an example of an app redirecting to competitor chat based platform.":::
 
-* If your app supports role based views and certain workflows are unavailable to all participants, we recommend that you implement proper messaging for participants in tab and side-panel stating that the app is currently for organizer's view and provide details about how the attendees receive the meeting notes, action items, and update agendas. [*Mandatory Fix*]
+* If your app supports role based views and certain workflows are unavailable to all participants, we recommend that you implement proper messaging for participants in tab and side-panel stating that the app is for organizer's view and provide details about how the attendees receive the meeting notes, action items, and update agendas. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-way-forward-not-available-for-role-based-views.png" alt-text="Graphic shows an example of an app without a way forward for participants in a role based view.":::
 

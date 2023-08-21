@@ -188,7 +188,7 @@ An app value video focuses on the marketing aspects. When providing a video that
 * Are there other key benefits of using your app? If so, we recommended to add up to three benefits.
 * What are the primary features of your app?
 
-A demo or scenario walkthrough video is more like an educational video that provides the users or admins with a comprehensive walkthrough experience. If you choose to provide a demo or walkthrough video, provide details on the following pointers:
+A demo or scenario walkthrough video is more like an educational video that provides the users or admins with a comprehensive walkthrough experience. If you choose to add a demo or walkthrough video, provide details on the following pointers:
 
 * How can the users start with your app as first-time users and how do they set up your app?
 * How do they use the different capabilities or features in your app?
