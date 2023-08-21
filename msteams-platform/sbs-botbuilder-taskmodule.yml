@@ -36,13 +36,8 @@ items:
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
      | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. Use the latest version or install the portable version. |
-     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
-
-      > [!NOTE]
-      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
     
-
 - title: Set up local environment
   durationInMinutes: 1
   content: |  
@@ -62,8 +57,7 @@ items:
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret ID and value details to enable single sign-on (SSO) authentication of the bot.
     * Add Teams channel to deploy the bot to a Teams channel.
-    * Create a tunnel to your web server's endpoints by using ngrok.
-    * Add messaging endpoint to the ngrok tunnel you created.
+    * Create a tunnel to your web server's endpoints by using dev tunnels in Visual Studio.
 
     **To create Azure Bot resource**
 
@@ -149,7 +143,7 @@ items:
 
         :::image type="content" source="~/assets/images/Teams-task-module/gotohome_2.png" alt-text="Home page":::
 
-    1. Select your bot from **Recent resources**.
+    1. Select your bot from **Recent** tab of **Resources** section.
 
     1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
@@ -165,28 +159,11 @@ items:
 
           :::image type="content" source="~/assets/images/Teams-task-module/configteams_2.png" alt-text="Select Teams":::  
     
-    **To create a ngrok tunnel**
+    **To create a dev tunnel**
 
-    Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
-
-     ```bash
-     ngrok http --host-header=rewrite 3978
-     ```
-
-    > [!TIP]
-    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
+    > Create dev tunnel in Visual Studio.
 
     **To add messaging endpoint**
-
-    1. From ngrok, copy the HTTPS URL (https to io).
-
-       :::image type="content" source="../msteams-platform/assets/images/ngrok-url1_1.png" alt-text="ngrok HTTPS URL":::
-
-        > [!NOTE]
-        > The HTTPS URL in your ngrok is your fully qualified domain name.
-        > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
-
-    1. Go to the Azure bot you've created in Azure portal. In the left pane, under **Settings**, select **Configuration**.
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
