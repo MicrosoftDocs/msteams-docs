@@ -131,8 +131,8 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
-| [Identity provider](../concepts/authentication/authentication.md) |Identity provide (IDP) is an entity that stores and provides credentials to the user. It also allows users to register themselves.  <br>**See also**: [Authentication](#a) |
-| [Identity token](../tabs/how-to/authentication/tab-sso-overview.md) | An identity token is used for authenticating app users. It's used by an application to verify if the app user is as per the declared identity. <br> **See also**: [Access token](#a) <br> For more information, see [ID tokens](/azure/active-directory/develop/id-tokens).
+| [Identity provider](../concepts/authentication/authentication.md) | Identity provide (IDP) is an entity that stores and provides credentials to the user. It also allows users to register themselves.  <br>**See also**: [Authentication](#a) |
+| [Identity token](../tabs/how-to/authentication/tab-sso-overview.md) | An identity token is used for authenticating app users. It's used by an application to verify if the app user is as per the declared identity. <br> **See also**: [Access token](#a) <br> For more information, see [ID tokens](/azure/active-directory/develop/id-tokens).|
 | [Incoming Webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | It lets an external app share content in Teams channels. These webhooks are used as tracking and notifying tools. <br>**See also**: [Webhook](#w); [Outgoing Webhook](#o) |
 | [Instant tab](../tabs/how-to/create-personal-tab.md)| Tabs are Teams-aware webpages embedded in Microsoft Teams. They're simple HTML <iframe/> tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user.|
 | [In-meeting app experience](../apps-in-teams-meetings/teams-apps-in-meetings.md) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**See also**: [Meeting lifecycle](#m) |
