@@ -1060,6 +1060,7 @@
     href: resources/troubleshoot.md
   - name: Microsoft Teams updates
     href: resources/teams-updates.md
+    displayName: Classic Teams, new Teams client, Teams 2.1
 - name: Support and feedback
   href: feedback.md
   displayName: Developer community help, questions, suggestions, contact, issues
