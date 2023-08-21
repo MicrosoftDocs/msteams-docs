@@ -149,12 +149,12 @@ The bots in Teams also act as core channel for reaching out to users, in the for
 
 To receive Read-receipts for your bot ensure the following:
 
-* RSC permission `ChatMessageReadReceipt.Read.Chat` is added to your app manifest.
-* override the method `OnTeamsReadReceiptAsync` with `IsMessageRead` handler. 
+* [RSC permission `ChatMessageReadReceipt.Read.Chat` is added to your app manifest.](#rsc-permission-for-read-receipts)
+* [Override the method `OnTeamsReadReceiptAsync` with `IsMessageRead` handler.](#onteamsreadreceiptasync)
 
-##### RSC permission for read receipts 
+#### RSC permission for read receipts 
 
-Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) `ChatMessageReadReceipt.Read.Chat` permission in the app manifest, as follows: 
+Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) `ChatMessageReadReceipt.Read.Chat` permission in the [app manifest](~/resources/schema/manifest-schema.md), as follows: 
 
 # [Version < 1.12](#tab/version-112)
 
@@ -193,10 +193,13 @@ Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a
 }
 
 ```
-
 ---
 
-If your bot uses the following method, override the method to receive read receipts:
+To add RSC permissions through Graph API, see [`consentedPermissionSet`](/graph/api/userteamwork-teamsappinstallation-upgrade#http-request)
+
+#### Override `OnTeamsReadReceiptAsync`
+
+Override the `OnTeamsReadReceiptAsync` method to receive Read receipts with [`IsMessageRead`](/dotnet/api/microsoft.bot.schema.teams.readreceiptinfo.ismessageread#microsoft-bot-schema-teams-readreceiptinfo-ismessageread(system-string)) handler:
 
 ```javascript
 
@@ -204,44 +207,42 @@ protected override async Task OnTeamsReadReceiptAsync(ReadReceiptInfo readReceip
 
 ```
 
-Following is an implementation example of read receipts for bot messages:
+Following is an implementation example of read receipts event request that a bot receives:
 
 ```json
-
 {
-    "name": "ReadReceipt",
+    "name": "application/vnd.microsoft.readReceipt",
     "type": "event",
-    "timestamp": "2021-12-13T06:42:46.8080275Z",
-    "id": "1639377757164",
+    "timestamp": "2023-08-16T17:23:11.1366686Z",
+    "id": "f:b4783e72-9d7b-2ed9-ccef-ab446c873007",
     "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer/",
+    "serviceUrl": "https://canary.botapi.skype.com/amer/",
     "from": {
-        // user who read the bot’s message
-        "id": "29:1SDmXi1RdC-QBzk90U81Hr68ooQac9OduJDydLd_kKb4wi8IS8Tmq6BDAqLQr-3Pv75UxRP6ckrz6fBQp5j4yMg",
-        "aadObjectId": "cf41f188-30ee-4698-9a65-8af95b9eb9c3"
+        "id": "29:1-8Iuh70W9pRqV8tQK8o2nVjxz33RRGDKLf4Bh7gKnrzN8s7e4vCyrFwjkPbTCX_Co8c4aXwWvq3RBLr-WkkVMw",
+        "aadObjectId": "ee6e242f-5885-4303-9c85-648d51a7609d"
     },
     "conversation": {
         "conversationType": "personal",
-        "tenantId": "1eabcbf3-c625-466a-88e6-bfd660d41b5b",
-        "id": "a:14G1N4QRiy4W3zD4H9h8nB2jSzfihTr7OS-zkNScEAY5FwvL0snFkXlSMsflBCfQLKFdoSiI_bzNxmsN1p3i1vI98brvpZrsistuDm71mLgiJmhQ_zLLtEwH9F-7LPrFm"
+        "tenantId": "528dbe3f-15e0-4e37-84a1-00cc305847dd",
+        "id": "a:1xlimp68NSUxEqK0ap2rXuwC9ITauHgV2M4RaDPkeRhV8qMaFn-RyilMZ62YiVdqs8pp43yQaRKvv_U2S2gOS5nM-y_pOxVe4BW1qMGPtqD0Bv3pw-nJXF0zhDlZHMZ1Z"
     },
     "recipient": {
-        // bot information.
-        "id": "28:e23cded7-1d12-456c-a93d-15e166a83e10",
-        "name": "Echobot1_WorkMachine2"
+        "id": "28:9901a8b6-4fef-428b-80b1-ddb59361adeb",
+        "name": "Quan Test Bot"
     },
     "channelData": {
         "tenant": {
-            "id": "1eabcbf3-c625-466a-88e6-bfd660d41b5b"
+            "id": "528dbe3f-15e0-4e37-84a1-00cc305847dd"
         }
     },
-    "value": { 
-        // the id of the last read message by the user in 1:bot chat
-        “lastReadMessageId” : 1638835053529
+    "value": {
+        "lastReadMessageId": "1692206589131"
     }
 }
 
 ```
+
+
 
 ## Send a message
 
