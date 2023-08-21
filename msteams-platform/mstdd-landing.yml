@@ -79,7 +79,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: New Microsoft Teams client
-        url: resources/teams-updates.md 
+        url: resources/teams-updates.md
       - text: Teams Toolkit v17.7 extension within Visual Studio
         url: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md      
       - text: Send a proactive message using AAD ID
