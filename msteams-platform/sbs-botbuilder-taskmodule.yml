@@ -294,7 +294,7 @@ items:
             :::image type="content" source="~/assets/images/Teams-task-module/webauth_1.png" alt-text="Web":::
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
-           `https://d4b8****.ngrok.io/auth-end`. </br>
+           `https://wf2vp42q-****.inc1.devtunnels.ms/auth-end`. </br>
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
              * **ID tokens**
