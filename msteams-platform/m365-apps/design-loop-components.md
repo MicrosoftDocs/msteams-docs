@@ -18,12 +18,19 @@ Microsoft Loop components are live, actionable units of productivity that stay i
 
 **Embedded**: Adaptive Cards are embedded, so there's nothing specific needed from the developer.
 
-**Actionable**: Loop components allow the user to take action to complete a flow within the component itself; beyond simply viewing information or opening a browser. If your Adaptive Card is a view-only experience, look for opportunities to make it actionable, as this is a core element to delight users. It's Ok to have a view-only Adaptive Card, but in that case, it must remain an Adaptive Card rather than become a Loop component.
+**Actionable**: Loop components allow the user to take action to complete a flow within the component itself; beyond simply viewing information or opening a browser. If your Adaptive Card is a view-only experience, look for opportunities to make it actionable, as this is a core element to delight users. Ensure that an Adaptive Card with view-only experience doesn't change to a Loop component, in this case, it must remain an Adaptive Card only.
 
    > [!NOTE]
    > Certain user permissions or modes of your component might not be actionable, but the common cases must be actionable.
 
-   Examples of actionability might include approving an expense report, adding a comment, updating a date, dollar amount, or other data, and changing an assignment or status value.
+You can make your Adaptive Card actionable by including any of the following actions:
+
+* Approve an expense report
+* Add a comment
+* Update a date
+* Update price, such as dollar amount
+* Change an assignment or status value
+* Add or update data
 
 **Portable**: Adding the URL attribute as required in the developer guidance ensures that your component can be live-copied anywhere the Adaptive Card-based Loop component is supported.
 
@@ -56,10 +63,9 @@ The details of the component body is determined by the specifics of your users�
 
 The following are the best practices for a Loop component body:
 
-* [Adaptive Cards Home](https://adaptivecards.io): Start here for all Adaptive Card information.
-* Review Adaptive Cards overview to understand the basics and core design principles of Adaptive Cards.
-* Follow the [Adaptive Card design guidelines](../task-modules-and-cards/cards/design-effective-cards.md): Guidelines for Adaptive Card design, which include tools, examples, notes about responsive design, and pixel density.
-* Loop component-specific considerations:
+* Go to [Adaptive Cards Home](https://adaptivecards.io) and review the [Adaptive Cards overview](/adaptive-cards/) article to understand the basics and core design principles of Adaptive Cards.
+* Follow the [Adaptive Card design guidelines](../task-modules-and-cards/cards/design-effective-cards.md), which include tools, examples, notes about responsive design, and pixel density.
+* The following list provides the Loop component specific considerations:
   * Ensure that your component is true to the Loop components attributes such as, live, actionable, embedded, and portable.
   * [Don’t add a separate button to open in browser.](#dont-add-a-separate-button-to-open-in-browser)
   * [Don’t add a duplicate header or border.](#dont-add-a-duplicate-header-or-border)
@@ -68,11 +74,11 @@ The following are the best practices for a Loop component body:
 
 The Loop component header provides a standard way to open a browser-based view of the component based on your URL. Thus, there's no need to add a separate button to your component for actions like **View Details**, or **Open on Web**.
 
-Adding buttons or links for more specific views as needed is acceptable, for example, **View Related Items**. When possible, provide the needed information and interaction within the card itself.
+You can add buttons or links for more specific views, for example, **View Related Items**. When possible, provide the required information and interaction within the card.
 
 ### Don’t add a duplicate header or border
 
-All Loop components have a standard header and border; your Adaptive Card code must not duplicate these. You can have an item-specific title for your component, but avoid duplicating the app name and icon.
+All Loop components have a standard header and border; your Adaptive Card code must not duplicate these. You can have an item-specific title for your component, but ensure that the app name and icon isn't the same.
 
 ## Loop component header
 
