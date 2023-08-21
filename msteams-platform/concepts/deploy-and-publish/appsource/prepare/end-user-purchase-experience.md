@@ -10,11 +10,11 @@ ms.date: 04/06/2023
 
 # Purchase and manage app subscriptions and licenses
 
-The information in this article helps you understand the purchase experience from the user end. You can add more features and functionality to your Teams app through subscriptions. Users can purchase subscriptions and manage licenses for themselves, their team, or their organization from within the Teams store.
+This article helps you understand the user's purchase experience for apps in Teams. You can add more features and functionality to your Teams app through subscriptions. Users can purchase subscriptions and manage licenses for themselves, their team, or their organization from the Teams store.
 
 ## Subscription experience
 
-The following example shows how users can purchase subscription plans for a Teams app:
+To purchase a subscription plan for a Teams app, follow these steps:
 
 1. In the Teams store, find and select the app for which you want to purchase the subscription.
 
@@ -22,7 +22,7 @@ The following example shows how users can purchase subscription plans for a Team
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app.":::
 
-1. To view subscription plans for your location, select your country or region.
+1. To view the available plans for your location, select your country or region.
 1. Select **Save and continue**.
 
     :::image type="content" source="~/assets/images/saas-offer/add-region.png" alt-text="Screenshot shows option to select the country or region.":::
@@ -34,10 +34,10 @@ The following example shows how users can purchase subscription plans for a Team
 
     :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Screenshot shows selecting the appropriate subscription plan.":::
 
-1. In the **Checkout** dialog, provide the following required information:
-    1. Select the number of plans under **Basic plan** > **Quantity**.
-    1. Add the name and address in **Sold to**.
-    1. Add the payment details in **Payment method**.
+1. In the **Checkout** dialog, enter the following information:
+    * Under **Basic plan** > **Quantity**, select the number of plans.
+    * Under **Sold to**, add the name and address.
+    * Under **Payment method**, add the payment details.
 1. Select **Place order**.
 
     :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Screenshot shows placing the subscription order.":::
