@@ -337,6 +337,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 August**
 
+***August 21, 2023***: [Use Adaptive Card-based Loop components to build collaborative experiences within Teams message extensions that work across Microsoft 365.](m365-apps/design-loop-components.md)
+
 ***August 08, 2023***: [Use callRecording API to fetch meeting recording from all meetings.](graph-api/meeting-transcripts/overview-transcripts.md)
 
 :::column-end:::
