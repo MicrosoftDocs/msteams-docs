@@ -150,7 +150,7 @@ The bots in Teams also act as core channel for reaching out to users, in the for
 To receive Read-receipts for your bot ensure the following:
 
 * [RSC permission `ChatMessageReadReceipt.Read.Chat` is added to your app manifest.](#rsc-permission-for-read-receipts)
-* [Override the method `OnTeamsReadReceiptAsync` with `IsMessageRead` handler.](#onteamsreadreceiptasync)
+* [Override the method `OnTeamsReadReceiptAsync` with `IsMessageRead` handler.](#override-onteamsreadreceiptasync)
 
 #### RSC permission for read receipts 
 
