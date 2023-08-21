@@ -115,11 +115,11 @@ If you used Teams Toolkit to create your message extension app, you can use it t
 
 In Microsoft Teams, a message extension consists of a web service that you host and an app manifest, which defines where your web service is hosted. The web service takes advantage of the [Bot Framework SDK](/azure/bot-service/bot-service-overview) messaging schema and secure communication protocol through a Teams channel registered for your bot.
 
-For users to interact with your message extension from Outlook, you need to enable the *Microsoft 365* channel for your bot in Azure.
+For users to interact with your message extension from Outlook, you need to enable the *Microsoft 365* channel for your Azure bot resource (message extension).
 
 > [!NOTE]
 >
-> If you previously enabled the *Outlook* channel for your bot, you'll need to now enable **Microsoft 365** channel in order for your message extension to continue functioning correctly in Outlook. The *Outlook* channel is no longer needed for message extensions running in Outlook and can be disabled.
+> If you previously enabled the *Outlook* channel for your bot, you'll need to now enable **Microsoft 365** channel in order for your message extension to continue functioning correctly in Outlook. The *Outlook* channel is no longer used for message extensions running in Outlook and can be disabled.
 
 1. From [Microsoft Azure portal](https://portal.azure.com) (or [Bot Framework portal](https://dev.botframework.com) if you previously registered there), go to your bot resource.
 
