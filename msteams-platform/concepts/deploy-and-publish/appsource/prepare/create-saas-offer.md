@@ -39,24 +39,24 @@ This guide helps you to create premium and enterprise SaaS offers on top of the 
 
 1. Sign in to [Partner Center](https://partner.microsoft.com/) and select **Partner Center**.
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/partner-center-home-page.png" alt-text="The screenshots shows how to sign in to the Partner Center account.":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/partner-center-home-page.png" alt-text="Screenshot shows how to sign in to the Partner Center account.":::
 
 1. On the **Home** page, select **Marketplace offers** tab to define commercial marketplace offers.
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/home-page.png" alt-text="The screenshots shows the home page and Marketplace offer tab in the Partner Center.":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/home-page.png" alt-text="Screenshot shows the home page and Marketplace offer tab in the Partner Center.":::
 
 1. Select **Overview** from the left pane.
 
 1. Select **New Offer** > **Software as a Service**.
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/commercial-marketplace.png" alt-text="The screenshots shows the marketplace offer page where you can select new offer.":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/commercial-marketplace.png" alt-text="Screenshot shows the marketplace offer page where you can select new offer.":::
 
 1. Enter **Offer ID** and **Offer alias**.
 
    > [!NOTE]
    > If you're creating an offer for testing purposes, append the text **-ISVPILOT** to the end of your offer alias. This informs the certification team that the offer is for testing purposes. Microsoft periodically deletes offers with **-ISVPILOT**. Therefore, refrain from using this tag for reasons other than testing the license management capability.
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/saas.png" alt-text="The screenshots shows how to enter Offer ID and Offer alias in the Partner Center.":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/saas.png" alt-text="Screenshot shows how to enter Offer ID and Offer alias in the Partner Center.":::
 
 1. Select **Create**.
 
@@ -91,7 +91,7 @@ Offers sold through Microsoft are called transactable offers, which means Micros
         > [!NOTE]
         > The technical requirements and configuration differ based on the selection.
 
-### Set up Microsoft License management
+### Set up Microsoft license management
 
 You can sell through Microsoft and also allow Microsoft to manage licenses on your behalf.
 
@@ -104,7 +104,7 @@ You can sell through Microsoft and also allow Microsoft to manage licenses on yo
     > [!NOTE]
     >
     > * This is a one-time setting and you can't change it once your offer is published. This allows the customer to manage licenses for your app within Teams.
-    > * The App manifest supports only one offer for an app. Select an appropriate license management solution for all the plans available in your offer and you can't change this option after the offer is pushed to live.
+    > * The app manifest supports only one offer for an app. Select an appropriate license management solution for all the plans available in your offer and you can't change this option after the offer is pushed to live.
 
 1. To enable a test drive, under **Test drive**, select the **Enable a test drive** checkbox.
 
@@ -118,7 +118,7 @@ On the **Properties** tab, you define the categories and industries applicable t
 
 1. Under **Category**, select at least one and up to two categories for grouping your offer into the appropriate marketplace search areas.
 1. Under **Industries**, select up to two industries and two subindustries (also called verticals) for each industry.
-1. In the App version box, enter a version number.
+1. In the **App version** box, enter a version number.
 1. Under **Legal**, provide terms and conditions for your offer. You can use standard contracts with some amendments or use your own terms and conditions.
 1. Select **Save draft**.
 
@@ -138,7 +138,7 @@ On the **Offer listing** page, under **Marketplace details**, complete the follo
 
 You can define a limited audience who can review your SaaS offer before you publish it live in the marketplace.
 
-1. On the **Preview Audience** page, add a single Azure AD or MSA email address and an optional description in the boxes provided.
+1. On the **Preview Audience** page, add a single Azure Active Directory or MSA email address and an optional description in the boxes provided.
 1. To add another email address, select the **Add another email** link.
 1. Select **Save draft**.
 
@@ -152,7 +152,7 @@ On the **Technical configuration** tab, define the technical details that the co
 1. Enter **Azure Active Directory application ID**.
 1. Select **Save draft**.
 
-After the initial configurations are done, you can create one or more plans with suitable purchase options for the offer that's to be published in the marketplace.
+After the initial configurations are done, you must create one or more plans with suitable purchase options for the offer that's to be published in the marketplace.
 
 ### Create a plan
 
