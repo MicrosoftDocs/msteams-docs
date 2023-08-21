@@ -97,9 +97,7 @@ landingContent:
       - text: Real-time meeting events are supported in channel meetings
         url: apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api
       - text: Resource-specific consent for your Teams app
-        url: graph-api/rsc/resource-specific-consent.md      
-      - text: Drive customer adoption of your app
-        url: promote-app-adoption.md
+        url: graph-api/rsc/resource-specific-consent.md
 
 
     - linkListType: whats-new
