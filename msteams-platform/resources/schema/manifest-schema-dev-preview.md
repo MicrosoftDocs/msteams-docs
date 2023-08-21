@@ -423,7 +423,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`botId`|String| |✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
-|`needsChannelSelector`|Boolean|||Describes whether or not the bot utilizes a user hint to add the bot to a specific channel. Default: `false`|
+|`needsChannelSelector`|Boolean|||Describes whether the bot utilizes a user hint to add the bot to a specific channel. Default: `false`|
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: `false`|
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: `false`|
 |`scopes`|Array of enum|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
@@ -595,10 +595,10 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 
 **Optional** &ndash; Boolean
 
-Indicates whether or not to show the loading indicator when an app or tab is loading. Default is `false`.
+Indicates whether to show the loading indicator when an app or tab is loading. Default is `false`.
 > [!NOTE]
 >
-> * If you select`showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+> * If you select `showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
 > * If you don't modify the content pages of your tab, the tab app doesn't load and shows the error `There was a problem reaching this app`.
 
 ## isFullScreen
@@ -812,7 +812,7 @@ Specify and consolidate authorization related information for the app.
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`type`|String|NA|✔️| The type of the resource-specific consent (RSC) permission. Options: `Application` and `Delegated`.|
+|`type`|String|NA|✔️| The type of resource-specific consent (RSC) permission. Options: `Application` and `Delegated`.|
 |`name`|String|128 characters|✔️|The name of the RSC permission. For more information, see [RSC application permissions](#rsc-application-permissions) and [RSC delegated permissions](#rsc-delegated-permissions)|
 
 #### RSC application permissions
