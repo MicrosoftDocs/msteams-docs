@@ -433,7 +433,7 @@ items:
 
     1. You can send a targeted meeting notification or an in-meeting notification as follows:
 
-        # [SendTargetedNotification](#tab/sendtargetednotification)
+        # [Send targeted notification](#tab/send-targeted-notification)
 
         To send a targeted notification, follow the steps:
 
@@ -455,7 +455,7 @@ items:
     
             :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
     
-        # [SendInMeetingNotification](#tab/sendinmeetingnotification)
+        # [Send in-meeting notification](#tab/send-in-meeting-notification)
 
         To send an in-meeting notification, follow the steps:
 
