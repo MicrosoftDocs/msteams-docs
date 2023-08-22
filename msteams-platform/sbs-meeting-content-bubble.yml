@@ -439,7 +439,7 @@ items:
 
         1. In the chat, @mention the **In-Meeting Notification** bot and select `SendTargetedNotification`.
 
-                :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-final.png" alt-text="Screenshot shows the suggestions in the Teams chat.":::
+            :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-final.png" alt-text="Screenshot shows the suggestions in the Teams chat.":::
 
         1. Select **Send**.
           
@@ -449,11 +449,11 @@ items:
         
         1. Select **Send Notification**.
     
-                :::image type="content" source="~/assets/images/meeting-content-bubble/targeted-meeting-notification.png" alt-text="Screenshot shows the responses for the send targeted notification.":::
+            :::image type="content" source="~/assets/images/meeting-content-bubble/targeted-meeting-notification.png" alt-text="Screenshot shows the responses for the send targeted notification.":::
     
         1. The targeted participant receives a pop-up notification in the meeting window.
     
-                :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
+            :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
     
         # [SendInMeetingNotification](#tab/sendinmeetingnotification)
 
@@ -461,7 +461,7 @@ items:
 
         1. In the chat, @mention the **In-Meeting Notification** bot and select `SendInMeetingNotification`.
 
-                :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-final.png" alt-text="Screenshot shows the suggestions in the Teams chat.":::
+            :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-final.png" alt-text="Screenshot shows the suggestions in the Teams chat.":::
 
         1. Select **Send**.
     
@@ -469,11 +469,11 @@ items:
         
         1. Select any option from the list and select **Push Agenda**.
     
-                :::image type="content" source="~/assets/images/meeting-content-bubble/send-in-meeting-notification.png" alt-text="Screenshot shows the responses for the send in-meeting notification.":::
+            :::image type="content" source="~/assets/images/meeting-content-bubble/send-in-meeting-notification.png" alt-text="Screenshot shows the responses for the send in-meeting notification.":::
     
         1. All the participants receive a pop-up notification in the meeting.
     
-                :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
+            :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
   
     ---
       
