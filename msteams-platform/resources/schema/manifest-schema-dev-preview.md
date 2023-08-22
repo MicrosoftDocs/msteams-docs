@@ -385,7 +385,7 @@ The object is an array with all elements of the type `object`. This block is req
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: `true`|
 |`scopes`|Array of enum|2|✔️|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
 |`context` |Array of enum|8||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, `personalTab`, and `callingSidePanel`.|
-|`sharePointPreviewImage`|String|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
+|`sharePointPreviewImage`|String|2048 characters||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
 |`supportedSharePointHosts`|Array of enum|2||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart`. |
 |`meetingSurfaces`|Array of enum|2||The set of `meetingSurfaceItem` scopes to which a tab belongs. Default: `sidePanel` and `stage`.|
 |`supportedPlatform`|Array of enum|3||The set of `supportedPlatform` scopes to which a tab belongs. Default: `desktop`, `mobile`, and `teamsMeetingDevices`.|
@@ -492,7 +492,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |`commands`|Array of object|10|✔️|Array of commands the message extension supports|
 |`messageHandlers`|Array of objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
 |`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
-|`messageHandlers.value.domains`|Array of Strings|2048||Array of domains that the link message handler can register for.|
+|`messageHandlers.value.domains`|Array of Strings|2048 characters||Array of domains that the link message handler can register for.|
 |`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. The default value is `false`. To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
 
 ### composeExtensions.commands
@@ -774,8 +774,8 @@ Specify meeting extension definition. For more information, see [custom Together
 |---|---|---|---|---|
 |`id`|String||✔️| The unique identifier for the scene. This ID must be a GUID. |
 |`name`| String | 128 characters |✔️| The name of the scene. |
-|`file`|String|2048|✔️| The relative file path to the scenes' metadata json file. |
-|`preview`|String|2048|✔️| The relative file path to the scenes' PNG preview icon. |
+|`file`|String|2048 characters|✔️| The relative file path to the scenes' metadata json file. |
+|`preview`|String|2048 characters|✔️| The relative file path to the scenes' PNG preview icon. |
 |`maxAudience`| Integer | 50  |✔️| The maximum number of audiences supported in the scene. |
 |`seatsReservedForOrganizersOrPresenters`| Integer | 50 |✔️| The number of seats reserved for organizers or presenters.|
 
@@ -878,7 +878,7 @@ Contains objects that define the set of extensions for the app. Used to specify 
 |`ribbons`| Array | | | The ribbons that the add-in customizes. This property is an array of objects that combine the child properties `requirements`, `contexts`, and `tabs`. `Contexts` specify the command surfaces that the add-in customizes, while the `tabs` property configures custom ribbon tabs. |
 |`autoRunEvents`| Array | | | Configures an event handler for a specified event. |
 |`alternates`| Array | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both. For more information on background, see [EquivalentAddins](/javascript/api/manifest/equivalentaddins). |
-|`audienceClaimUrl`| String | 2048 | | The https:// URL for your extension, used to validate Exchange user identity tokens. |
+|`audienceClaimUrl`| String | 2048 characters | | The https:// URL for your extension, used to validate Exchange user identity tokens. |
 
 For more information, see [extension property](/office/dev/add-ins/develop/json-manifest-overview) in the Office Add-ins manifest documentation.
 
