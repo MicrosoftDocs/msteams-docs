@@ -3,6 +3,7 @@ title: Overview to authentication for tabs using SSO in Teams with Azure AD
 description: Learn about Single sign-on (SSO) authentication in Teams and how to enable it in tabs.
 ms.topic: conceptual
 ms.localizationpriority: high
+ms.date: 01/17/2023
 ---
 # Enable SSO for tab app
 
@@ -39,9 +40,6 @@ Here's what your app users get with SSO experience:
   - Alternatively, the tenant administrator can grant consent on behalf of the app users. In this scenario, when the tenant administrator consents for the app users in the tenant, the app users don't need to be prompted for consent at all. It means that the app users don't see the consent dialogs and can access the app seamlessly.
 - The access token is pre-fetched by Teams to improve performance and load time of the app in the Teams environment.
 - The app users don't need to memorize or record several passwords to access and use apps in Teams environment.
-
-> [!NOTE]
-> App users can't give permission to some permission scopes, such as `Sites.ReadWrite.All`, which allows the app user to read and write to all SharePoint and OneDrive assets in the tenant. For such scopes, only the tenant administrator can grant consent on an app user's behalf.
 
 Now, let's see what happens at the backend during runtime to achieve SSO experience within Teams.
 

@@ -4,6 +4,7 @@ description: In this module, learn about up to date cards views using Universal 
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.date: 12/14/2022
 ---
 
 # Up to date cards
@@ -256,13 +257,13 @@ The following code provides an example of Adaptive Cards sent as response of `ad
 
 ## Code sample
 
-|Sample name | Description | .NET | Node.js |
-|----------------|-----------------|--------------|--------------|
-| Sequential Workflows Adaptive Cards | Demonstrate how to implement Sequential Workflows, User Specific Views, and up to date Adaptive Cards in bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+|Sample name | Description | .NET | Node.js | Manifest
+|----------------|-----------------|--------------|--------------|--------------|
+| Sequential Workflows Adaptive Cards | This sample shows how to implement Sequential Workflows, User Specific Views, and up to date Adaptive Cards in bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp/demo-manifest/bot-adaptivecards-user-specific-views.zip)
 
 ## See also
 
 * [Cards and task modules](../../cards-and-task-modules.md)
 * [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
 * [User Specific Views](User-Specific-Views.md)
-* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)*
+* [Form completion feedback](../cards-actions.md#form-completion-feedback)

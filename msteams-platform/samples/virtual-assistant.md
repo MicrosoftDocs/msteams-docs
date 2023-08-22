@@ -3,6 +3,7 @@ title: Create Virtual Assistant
 description: Learn how to create Virtual Assistant bot for Teams using Code examples and snippets with features such as, Adaptive cards, handling interruptions and more.
 ms.localizationpriority: medium
 ms.topic: how-to
+ms.date: 12/21/2022
 ---
 
 # Create Virtual Assistant
@@ -29,7 +30,7 @@ The following image displays the business functions of Virtual Assistant:
 
 ## Create a Teams-focused Virtual Assistant
 
-Microsoft has published a [Microsoft template](https://botbuilder.myget.org/feed/aitemplates/package/nuget/Microsoft.Bot.Solutions.VirtualAssistantTemplate) for building Virtual Assistants and skills. With the template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We've enhanced template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, task modules, teams or group chats, and message extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
+Microsoft has published a [Microsoft template](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template/) for building Virtual Assistants and skills. With the template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We've enhanced template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, task modules, teams or group chats, and message extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
 The following image displays the high level diagram of a Virtual Assistant solution:
 
 :::image type="content" source="../assets/images/bots/virtual-assistant/high-level-diagram.png" alt-text="Diagram that shows Virtual Assistant solution.":::
@@ -215,7 +216,7 @@ The code snippet for `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitA
     }
 ```
 
-Additionally, you must include all skill domains in the `validDomains` section in Virtual Assistant's manifest file so that task modules invoked through a skill render properly.
+Additionally, you must include all skill domains in the `validDomains` section in Virtual Assistant's [app manifest](../resources/schema/manifest-schema.md#validdomains) file so that task modules invoked through a skill render properly.
 
 ### Handle collaborative app scopes
 
@@ -319,7 +320,7 @@ Once the commands are invoked by a user, the Virtual Assistant can identify an a
     }
 ```
 
-Some message extension activities don't include the command ID. For example, `composeExtension/selectItem` contains only the value of the invoke tap action. To identify the associated skill, `skillId`  is attached to each item card while forming a response for `OnTeamsMessagingExtensionQueryAsync`. This is similar to the approach for [adding adaptive  cards to your Virtual Assistant](#add-adaptive-cards-to-your-virtual-assistant).
+Some message extension activities don't include the command ID. For example, `composeExtensions/selectItem` contains only the value of the invoke tap action. To identify the associated skill, `skillId`  is attached to each item card while forming a response for `OnTeamsMessagingExtensionQueryAsync`. This is similar to the approach for [adding adaptive  cards to your Virtual Assistant](#add-adaptive-cards-to-your-virtual-assistant).
 
 ```csharp
     // Invoked when a 'composeExtension/selectItem' invoke activity is received for compose extension query command.
@@ -539,7 +540,7 @@ Updating activity, such as card refresh isn't supported yet through Virtual Assi
 To forward card action or task module activities to an associated skill, the skill must embed `skillId` to it.
 `Book-a-room` bot card action, task module fetch and submit action payloads are modified to contain `skillId` as a parameter.
 
-For more information,, refer [this](/microsoftteams/platform/samples/virtual-assistant#add-adaptive-cards-to-your-virtual-assistant) section from this documentation.
+For more information, see [Add Adaptive Cards to your Virtual Assistant](/microsoftteams/platform/samples/virtual-assistant#add-adaptive-cards-to-your-virtual-assistant).
 
 ### Handle activities from group chat or channel scope
 
@@ -584,6 +585,5 @@ You can also leverage existing skills from [Bot Framework Solutions repository](
 
 * [Integrate web apps](~/samples/integrate-web-apps-overview.md)
 * [Adaptive Cards](../task-modules-and-cards/what-are-cards.md#adaptive-cards)
-* [App manifest](../resources/schema/manifest-schema.md)
 * [Book-a-room](app-templates.md#app-template-code-samples)
 * [Microsoft Teams bot](../bots/what-are-bots.md)

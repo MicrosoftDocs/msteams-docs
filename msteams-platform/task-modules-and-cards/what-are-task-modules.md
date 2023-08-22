@@ -5,6 +5,7 @@ description: In this module, learn how to add modal pop-up experiences to collec
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
+ms.date: 12/16/2022
 ---
 
 # Task modules

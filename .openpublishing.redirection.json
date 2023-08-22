@@ -855,6 +855,62 @@
       {
         "source_path": "msteams-platform/tabs/how-to/dashboard-teams-toolkit.md",
         "redirect_url": "/microsoftteams/platform/tabs/how-to/build-a-dashboard-tab-app"
+      },
+      {
+        "source_path": "msteams-platform/apps-in-teams-meetings/app-caching-for-your-tab-app.md",
+        "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/build-tabs-for-meeting"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/Integrate-with-developer-portal.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/publish-your-teams-apps-using-developer-portal"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/sideload-and-test-app.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/sideload-and-test-app-v4.md"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/teams-toolkit-fundamentals-v4.md",
+        "redirect_url": "/msteams-platform/toolkit/teams-toolkit-fundamentals"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/deploy-v4.md",
+        "redirect_url": "/msteams-platform/toolkit/deploy"
+      },    
+      {
+        "source_path": "msteams-platform/toolkit/add-capability.md",
+        "redirect_url": "/msteams-platform/toolkit/toolkit-v4/add-capability-v4"
+      },     
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/provision-v4.md",
+        "redirect_url": "/msteams-platform/toolkit/provision"
+      },   
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/install-Teams-Toolkit-v4.md",
+        "redirect_url": "/msteams-platform/toolkit/install-Teams-Toolkit"
+      }, 
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/explore-Teams-Toolkit-v4.md",
+        "redirect_url": "/msteams-platform/toolkit/explore-Teams-Toolkit"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/debug-overview-v4.md",
+        "redirect_url": "/msteams-platform/toolkit/debug-overview"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/debug-local-v4.md",
+        "redirect_url": "/msteams-platform/toolkit/debug-local"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/create-new-project-v4.md",
+        "redirect_url": "/msteams-platform/toolkit/create-new-project"
+      },   
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/add-single-sign-on-v4.md",
+        "redirect_url": "/msteams-platform/toolkit/add-single-sign-on"
+      }, 
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-v4.md",
+        "redirect_url": "/msteams-platform/toolkit/TeamsFx-preview-and-customize-app-manifest"
       }
     ]
 }

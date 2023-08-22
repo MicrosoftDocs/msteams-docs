@@ -5,11 +5,12 @@ description: Learn about Microsoft Teams app capabilities such as, tabs, bots, m
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
+ms.date: 12/09/2022
 ---
 
 # Understand your use cases
 
-In the collaborative social framework of Teams, there's a wide variety of user needs that you can solve with a Teams app. For example, an app that bridges gap in achieving effective collaboration is a great fit.
+In the collaborative social framework of Teams, there's a wide variety of user needs that you can solve with a Teams app. For example, an app that bridges the gap in achieving effective collaboration is a great fit.
 
 The app user and their app's requirements are the basic guidelines that determine all app choices you'll make. Building app design, selecting capabilities, determining build and test environment, and app distribution follow the user's requirement from the app.
 

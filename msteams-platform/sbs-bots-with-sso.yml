@@ -28,13 +28,12 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure you install the following tools and set up your development environment:  
+    Ensure that you install the following tools and set up your development environment:  
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
-     | **Required** | &nbsp; | &nbsp; |
-     | &nbsp; | [Microsoft Teams with an account (not a guest account)](https://www.microsoft.com/microsoft-teams/download-app) |  Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, calls, and all in one place. |
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • ASP.NET and web development <br> • .NET Core cross-platform development | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) |  Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, calls, and all-in-one place. |
+     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
      | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
@@ -56,7 +55,7 @@ items:
 
     To verify sideload apps in Teams:
 
-    1. In the Teams client, select **Apps**.
+    1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps** > **Upload an app**.
     1. Look for the option **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
@@ -109,7 +108,7 @@ items:
 
     1. Select **Create**.
 
-        :::image type="content" source="./assets/images/bots/azure-bot_1.png" alt-text="Screenshot of the Azure Bot create page.":::
+        :::image type="content" source="./assets/images/bots/azure-bot.png" alt-text="Screenshot of the Azure Bot create page.":::
 
        The **Create an Azure Bot** window appears.
 
@@ -163,14 +162,12 @@ items:
 
     1. In the left pane, select **Configuration**.
 
-        :::image type="content" source="~/assets/images/bots/selectconfigure_1.png" alt-text="Screenshot of Configuration page under Azure portal with the Microsoft App ID option highlighted in red.":::
-
        > [!Tip]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
     
-    1. Next to **Microsoft App ID**, select **Manage**.
+    1. Next to **Microsoft App ID**, select **Manage Password**.
 
-       :::image type="content" source="~/assets/images/manage-bot-label_1.png" alt-text="Screenshot of Microsoft App ID option under Configuration page with the Manage option highlighted in red.":::
+         :::image type="content" source="~/assets/images/bots/manage-password-bot-label.png" alt-text="Screenshot of Microsoft App ID option under Configuration page with the Manage option highlighted in red.":::
 
     1. In the **Client secrets** section, select **New client secret**.
 
@@ -184,7 +181,7 @@ items:
  
         :::image type="content" source="~/assets/images/bots/addclientsecret_1.png" alt-text="Screenshot of Add a client secret with the Add option highlighted in red.":::
 
-    1. In the **Value** column, select copy to clipboard icon to copy the value details. 
+    1. In the **Value** column, select **Copy to clipboard** icon to copy the value details. 
 
         :::image type="content" source="~/assets/images/bots/valueclientsecret.png" alt-text="Screenshot of Client secrets section with the Copy to clipboard icon highlighted in red.":::
 
@@ -270,7 +267,7 @@ items:
 
     1. In **Platform configurations**, select **Add a platform** to choose the platform on which you want to host the bot app. 
 
-    1. For this tutorial, select **Web**.
+    1. Select **Web**.
 
         :::image type="content" source="~/assets/images/bots/select-web_1.png" alt-text="Screenshot of Authentication page of Azure portal. The Authentication option in the left pane, Add a platform, and Web options are highlighted in red.":::
         
@@ -317,22 +314,22 @@ items:
 
     1. Enter the details to configure scope.    
 
-          1. Enter `access_as_user` as the **Scope name**.
+          1. Enter **access_as_user** as the **Scope name**.
 
              > [!NOTE]
              > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.
 
-          1. Set **Who can consent?** to `Admins and users`.
+          1. Set **Who can consent?** to **Admins and users**.
 
-          1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
+          1. To configure the admin and user consent prompts with appropriate values for **access_as_user** scope, provide the following information in the fields:</br>
     
-              * Enter `Teams can access the user’s profile` as **Admin consent display name**.
+              * Enter **Teams can access the user’s profile** as **Admin consent display name**.
 
-              * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**.
+              * Enter **Allows Teams to call the app’s web APIs as the current user** as **Admin consent description**.
 
-              * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**.
+              * Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**.
 
-              * Enter `Enable Teams to call this app’s APIs with the same rights as you have` as **User consent description**.
+              * Enter **Enable Teams to call this app’s APIs with the same rights as you have** as **User consent description**.
 
           1. Ensure that **State** is set to **Enabled**.
 
@@ -350,28 +347,27 @@ items:
 
         :::image type="content" source="~/assets/images/bots/addaclientapplication.png" alt-text="Screenshot of Authorized client applications with Add a client application highlighted in red.":::
 
-       The **Add a client application** window appears.
+    1. Enter each of the following client IDs:
 
-    1. Enter the Client ID for desktop and web application separately that you want to authorize. It's the application ID of client application that you want to authorize.
-       
-       |**Client ID**|**For authorizing**|
-       |--------|-------------|
-       | `1fec8e78-bce4-4aaf-ab1b-5451cc387264` | Teams desktop or mobile application |
-       | `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` | Teams web application |
+       * Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
-    1. Select **Authorized scopes** to determine which type of token will be returned by the service.
+         :::image type="content" source="~/assets/images/meetings-side-panel/addclientapplication1.png" alt-text="Screenshot of Add a client application page with the Client ID 1 highlighted in red."::: 
 
-        :::image type="content" source="~/assets/images/bots/add-desktop-app.png" alt-text="Screenshot of Add a client application with Add application highlighted in red.":::
-       
-    1. Select **Add application**.
+       * Enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-        The following image displays the Client ID:
+         :::image type="content" source="~/assets/images/meetings-side-panel/addclientapplication2.png" alt-text="Screenshot of Add a client application with the Client ID 2 highlighted in red.":::
 
-          :::image type="content" source="~/assets/images/bots/clientapps.png" alt-text="Screenshot of Authorized client applications with the Client IDs displayed.":::
+    1. Select **Authorized scopes**.
 
+         :::image type="content" source="~/assets/images/meetings-side-panel/authorizedscope_1.png" alt-text="Screenshot of Authorized scopes section under Expose an API page with the scope highlighted in red":::
+
+       The following image displays the client Id:
+
+         :::image type="content" source="~/assets/images/meetings-side-panel/clientapps.png" alt-text="Screenshot of Authorized client applications under Expose an API with the client IDs highlighted in red."::: 
+         
     **Configure Graph permissions**
 
-    1. In the left pane, select **API Permissions**.
+    1. In the left pane, select **API permissions**.
 
           :::image type="content" source="~/assets/images/bots/select-api-permissions_1.png" alt-text="Screenshot of Azure portal with API permissions in the left pane highlighted in red.":::
 
@@ -444,7 +440,7 @@ items:
 
     1. In the **Repository location**, enter `https://github.com/OfficeDev/Microsoft-Teams-Samples.git`. Ensure that you note the **Path** where the repository is cloned.
     
-    1. Go to **File** > **Open** > **Project/Solution**.
+    1. Go to **File** > **Open** > **Project/Solution...**.
 
         :::image type="content" source="~/assets/images/bots/project-solution_1.png" alt-text="Screenshot of Visual Studio file menu. The menu entries titled Open under File menu and Project/Solution under Open are highlighted in red.":::
 
@@ -478,7 +474,7 @@ items:
 
         :::image type="content" source="~/assets/images/bots/certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
 
-       A webpage opens with a message **Bot is Ready**.
+       A webpage opens with a message **Your bot is ready!**.
 
         :::image type="content" source="~/assets/images/bots/yourbot.png" alt-text="Screenshot of the webpage that displays Your bot is ready.":::
         
@@ -508,52 +504,51 @@ items:
 
     1. Open the **manifest.json** file.
 
-    1. Replace all occurrences of **{TODO: MicrosoftAppId}** with your bot's **Microsoft App ID**.
+    1. Replace all occurrences of `TODO: MicrosoftAppId` with your bot's **Microsoft App ID**.
     
     1. In your cloned repository, go to **bot-conversation-sso-quickstart** > **csharp_dotnetcore** > **BotConversationSsoQuickstart** > **appPackage**.
     
-    1. Create a .zip with the following files that are present in the **appPackage** folder: 
+    1. Create a .zip file with the following files that are present in the **appPackage** folder: 
        * manifest.json
-       * icon-outline.png
-       * icon-color.png
+       * outline.png
+       * color.png
 
         :::image type="content" source="~/assets/images/bots/manifest_1.png" alt-text="Screenshot of Manifest folder with the Teams Bot zip folder highlighted in red.":::
 
     1. Go to **Microsoft Teams**.
     
-    1. Select **Apps** > **Manage your apps**.
+        1. In the Teams client, select the **Apps** icon.
+        1. Select **Manage your apps**.
+        1. Select **Upload an app**.
+        1. Look for the option to **Upload a custom app**.
 
-        :::image type="content" source="~/assets/images/bots/manage-apps_3.png" alt-text="Screenshot of Teams app with the Apps icon and Manage your apps option highlighted in red.":::
-
-    1. Select **Upload an app** and select **Upload a custom app**.
-    
-        :::image type="content" source="assets/images/upload-custom-app.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
+            :::image type="content" source="~/assets/images/bots/custom-app-upload.png" alt-text="Screenshot of Teams app with the Apps icon, Manage your apps, and showing the selection of Upload a custom app option highlighted in red.":::
 
     1. Select **Open** to upload the .zip file that you've created in the **Manifest** folder.
 
-        :::image type="content" source="~/assets/images/bots/open-app.png" alt-text="Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.":::
+         :::image type="content" source="~/assets/images/bots/app-open.png" alt-text="Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.":::
 
     1. Select **Add** to add the bot to your chat.
 
-        :::image type="content" source="~/assets/images/bots/add-conversation-bot-1.png" alt-text="Screenshot of Conversation Bot with Add option highlighted in red.":::
+         :::image type="content" source="~/assets/images/bots/conversation-bot-add.png" alt-text="Screenshot of Conversation Bot with Add option highlighted in red.":::
 
         You can interact with the bot by sending it a message. The bot exchanges an SSO token and calls the Graph API on your behalf. It keeps you signed in unless you send a message to sign out.
 
     1. Send a message to the bot. The conversation bot asks for consent for the first time.
 
-    1. Select **Continue** to give permissions to Teams client for accessing the bot.
+    1. For desktop, select **Continue** to give permissions to Teams client for accessing the bot.
 
          :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request1.png" alt-text="Screenshot of additional permissions with Continue option highlighted in red.":::
         
         > [!NOTE]
         > Now you have configured SSO with your bot app and it's the only time you'll have to give consent.
 
-    1. For mobile device, select **Accept** for **Permissions requested**.
+    1. For mobile device, select **Accept**.
 
         > [!NOTE]
         > Now you have configured SSO with your bot app in mobile, and this is the only time you'll have to give consent.
 
-        :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Screenshot of bot SSO output after you have successfully completed the step-by-step guide.":::
+         :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Screenshot of bot SSO output after you have successfully completed the step-by-step guide.":::
 
 - title: Complete challenge
   durationInMinutes: 1

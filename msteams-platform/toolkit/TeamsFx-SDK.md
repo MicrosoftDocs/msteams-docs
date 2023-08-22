@@ -5,7 +5,7 @@ description: In this module, learn about TeamsFx SDK, core concepts and code str
 ms.author: v-npaladugu
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/29/2021
+ms.date: 04/16/2023
 ---
 
 # TeamsFx SDK
@@ -24,7 +24,7 @@ You need to install the following tools and set up your development environment:
    | --- | --- | --- |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
    | &nbsp; | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
-   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type). |
+   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 
@@ -353,7 +353,7 @@ This section provides several code snippets for common scenarios that are relate
        }
        ```
 
-    For more information on sample to use Graph API in tab app, see [hello-world-tab sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab).
+    For more information on sample to use Graph API in tab app, see [Graph Conector app sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/graph-connector-app).
 
     </details>
 
@@ -817,15 +817,14 @@ setLogFunction((level: LogLevel, message: string) => {
 > [!NOTE]
 > Log functions don't take effect if you set a custom logger.
 
-## Upgrade latest SDK version
+## Upgrade to latest SDK version
 
-If you're using the version of SDK that has `loadConfiguration()`, you can follow these steps to upgrade to the latest SDK version:
+If you're using the version of SDK that has `loadConfiguration()`, you can perform the following steps to upgrade to the latest SDK version:
 
-1. Remove `loadConfiguration()` and pass customized settings using `new TeamsFx(IdentityType.User, { ...customConfig })`.
-2. Replace `new TeamsUserCredential()` with `new TeamsFx()`.
-3. Replace `new M365TenantCredential()` with `new TeamsFx(IdentityType.App)`.
-4. Replace `new OnBehalfOfUserCredential(ssoToken)` with `new TeamsFx().setSsoToken(ssoToken)`.
-5. Pass the instance of `TeamsFx` to helper functions to replace credential instance.
+1. Instead of calling `loadConfiguration()`, use the specific auth config classes to customize the settings for each credential type. For example, use `AppCredentialAuthConfig` for `AppCredential`, `OnBehalfOfUserCredentialAuthConfig` for `OnBehalfOfUserCredential`, and `TeamsUserCredentialAuthConfig` for `TeamsUserCredential`.
+2. Replace `new TeamsUserCredential()` with `new TeamsUserCredential(authConfig)`.
+3. Replace `new M365TenantCredential()` with `new AppCredential(authConfig)`.
+4. Replace `new OnBehalfOfUserCredential(ssoToken)` with `new OnBehalfOfUserCredential(authConfig)`.
 
 ## See also
 

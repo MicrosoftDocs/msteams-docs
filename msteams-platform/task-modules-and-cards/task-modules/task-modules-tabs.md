@@ -3,6 +3,7 @@ title: Use Task Modules in Microsoft Teams tabs
 description: Learn how to invoke task modules from Teams tabs and submitting its result using the Microsoft Teams JavaScript client library (TeamsJS). It includes code samples.
 ms.localizationpriority: medium
 ms.topic: how-to
+ms.date: 02/22/2023
 ---
 
 # Use task modules in tabs
@@ -231,9 +232,9 @@ The following table provides the possible values of `err` that can be received b
 
 ## Code sample
 
-|Sample name | Description | .NET | Node.js|Manifest|
+|Sample name | Description | .NET | Node.js | Manifest
 |----------------|-----------------|--------------|----------------|----------------|
-|Task module sample using bot and tab | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)|
+|Task module sample bots-V4 | This sample shows how to create task modules using bot framework v4 and teams tabs. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
 
 ## Next step
 

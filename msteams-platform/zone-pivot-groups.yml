@@ -20,6 +20,8 @@ groups:
     title: ASP.NET Core
   - id: mvc-csharp
     title: ASP.NET Core MVC
+  - id: blazor-app
+    title: Blazor  
 - id: teams-app-environment-blazor
   title: Teams app environment
   prompt: Before you begin, select the environment in which you want to build
@@ -49,7 +51,23 @@ groups:
   - id: visual-studio-code
     title: Visual Studio Code
   - id: visual-studio
-    title: Visual Studio   
+    title: Visual Studio
+- id: teams-toolkit-platform
+  title: Teams Toolkit platform
+  prompt: Before you begin, choose your tool version.
+  pivots:
+  - id: visual-studio-code-v5
+    title: Version 5
+  - id: visual-studio-code-v4
+    title: Version 4   
+- id: teams-toolkit-platform-vs
+  title: Teams Toolkit platform-vs
+  prompt: Before you begin, choose your tool version.
+  pivots:
+  - id: visual-studio-v17-7
+    title: Version 17.7
+  - id: visual-studio-v17-6
+    title: Version 17.6
 - id: enable-sso
   title: Add code to enable SSO for your app
   prompt: Before you begin, select the app for which you want to add code to enable SSO.
@@ -57,5 +75,13 @@ groups:
   - id: bot-app
     title: Add code for bot app
   - id: mex-app
-    title: Add code for message extension app    
+    title: Add code for message extension app
+- id: toolkit-cli
+  title: TeamsFx command line interface
+  prompt: Before you begin, select the command line interface version.
+  pivots:
+  - id: version-one
+    title: TeamsFx CLI v1
+  - id: version-two
+    title: TeamsFx CLI v2   
 

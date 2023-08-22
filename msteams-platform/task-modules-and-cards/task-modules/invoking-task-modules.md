@@ -4,6 +4,7 @@ description: Learn about invoking and dismissing task modules, task info object,
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.date: 01/29/2023
 ---
 
 # Invoke and dismiss task modules
@@ -196,7 +197,7 @@ Microsoft Teams ensures that keyboard navigation works properly from the task mo
 
 |Sample name | Description | .NET | Node.js | Manifest|
 |----------------|-----------------|--------------|----------------|----------------|
-|Task module sample bots-V4 | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)|
+|Task module sample bots-V4 | This sample shows how to create task modules using bot framework v4 and Teams tab. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
 
 ## Next step
 

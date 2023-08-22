@@ -5,6 +5,7 @@ description: In this article, use conversational bots in Microsoft Teams to shar
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
+ms.date: 01/29/2023
 ---
 # Build bots for Teams
 
@@ -14,11 +15,11 @@ It's recommended to start with [build your first bot app using JavaScript](../sb
 
 > [!IMPORTANT]
 >
-> * Bots are available in Government Community Cloud (GCC) and GCC-High but not in Department of Defense (DOD).
+> * Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments. Bot applications within Microsoft Teams for GCC-High and DOD are available through [Azure bot Service](/azure/bot-service/how-to-deploy-gov-cloud-high) and bot channel registration must be done in Azure Government portal.
 >
-> * Bot applications within Microsoft Teams are available in GCC-High through [Azure bot Service](/azure/bot-service/how-to-deploy-gov-cloud-high) and bot channel registration must be done in Azure Government portal.
+> * Image URLs in Adaptive Cards aren't supported in GCC-High and DOD environments. You can replace an image URL with Base64 encoded DataUri.
 >
-> * Applications in GCCH only support up to manifest version v1.10. Image URLs in Adaptive Cards aren't supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri.
+> * When a user changes the Teams theme in a bot, the theme doesn’t apply to the content shared using an Adaptive Card.
 
 Conversational bots allow users to interact with your web service using text, interactive cards, and task modules.
 
@@ -60,9 +61,9 @@ You can add single sign-on authentication to your conversation bot using the fol
 
 ## Code samples
 
-|Sample name | Description |.NET | Node.js |
-|----------------|-----------------|--------------|--------------|
-| Bot daily task reminder| Demonstrate how to schedule a recurring task and get a reminder at a scheduled time. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
+|Sample name | Description |.NET | Node.js | Manifest
+|----------------|-----------------|--------------|--------------|--------------|
+| Bot daily task reminder| This sample shows how to schedule a recurring task and get a reminder at a scheduled time using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-daily-task-reminder/csharp/demo-manifest/Bot-Daily-Task-Reminder.zip) |
 | Hello World Bot | This is a simple hello world application with both Bot and Message extension capabilities. | NA | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/hello-world-bot) |
 | Adaptive Card Notification | This is a sample, which shows how to send notifications with different adaptive cards using Bots. | NA | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
 | Incoming Webhook Notification | This is a sample, which shows how to send notifications via Incoming Webhook in Microsoft Teams channels. | NA | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/incoming-webhook-notification) |

@@ -5,6 +5,7 @@ description:  Learn about Teams Connect shared channels to securely collaborate 
 ms.author: surbhigupta
 localization_priority: Normal
 ms.topic: conceptual
+ms.date: 11/02/2022
 ---
 
 # Microsoft Teams Connect shared channels
@@ -15,26 +16,22 @@ Microsoft Teams Connect shared channels allow members of a channel to collaborat
 * Individuals within the same organization.
 * Individuals and other teams of other organizations.
 
+> [!NOTE]
+> Tab apps in shared channels are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
+
 Teams Connect shared channels facilitate secure collaboration seamlessly. Allow external users outside of your organization to collaborate with internal users in Teams without changing their user context. Enhance user experience unlike using guest accounts, for example, the members must sign out of Teams and sign in again using a guest account. Teams applications extend the powerful collaboration space.
 
-:::image type="content" source="~/assets/images/app-fundamentals/shared-channels-teams.png" alt-text="Diagram that shows Team B from organization A and Team C from organization B collaborating in a shared Channel as Team A." border="true" :::
+:::image type="content" source="~/assets/images/app-fundamentals/shared-channels-teams.png" alt-text="Diagram that shows Team B from organization A and Team C from organization B collaborating in a shared Channel as Team A.":::
 
 ## Enable your app for shared channels
 
 SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and the property is defined, Teams enables your app in each channel type accordingly. Private and shared channels are currently supported. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes).
 
 ```JSON
-"supportedChannelTypes": {
-      "type": "array",
-      "description": "List of ‘non-standard’ channel types that the app supports. Note: Channels of standard type are supported by default if the app supports team scope. ",
-      "maxItems": 2,
-      "items": { 
-        "enum": [
-          "sharedChannels",
-          "privateChannels"
-        ]
-      }
-    }
+    "supportedChannelTypes": [
+        "sharedChannels",
+        "privateChannels"
+    ]
 ```
 
 > [!NOTE]
