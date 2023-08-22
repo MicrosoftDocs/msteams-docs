@@ -623,7 +623,7 @@
       displayName: Setting, channel, static typeahead, persona, persona set
     - name: Typeahead search in Adaptive Cards
       href: task-modules-and-cards/cards/dynamic-search.md
-      displayName: Static and dynamic typeahead search  
+      displayName: Static and dynamic typeahead search
     - name: Universal Actions for Adaptive Cards
       items:
       - name: Overview
@@ -775,6 +775,14 @@
       - name: Teams message extension vs. Outlook add-in
         href: m365-apps/me-or-outlook-add-in.md
         displayName: mail, Microsoft 365, Office 365, Outlook add-in, message extension
+  - name: Adaptive Card-based Loop components
+    items:
+      - name: Design your Loop component
+        href: m365-apps/design-loop-components.md
+        displayName: loop component
+      - name: Build Adaptive Card-based Loop component
+        href: m365-apps/cards-loop-component.md
+        displayName: loop component, weburl, metadata
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Extend Microsoft 365 Copilot
@@ -1060,6 +1068,9 @@
     href: resources/teams-contributor-reference.md
   - name: Troubleshoot your Microsoft Teams app
     href: resources/troubleshoot.md
+  - name: Microsoft Teams updates
+    href: resources/teams-updates.md
+    displayName: Classic Teams, new Teams client, Teams 2.1
 - name: Support and feedback
   href: feedback.md
   displayName: Developer community help, questions, suggestions, contact, issues
