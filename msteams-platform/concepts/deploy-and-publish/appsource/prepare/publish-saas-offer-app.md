@@ -1,5 +1,5 @@
 ---
-title: Publish your monetized app with SaaS offer
+title: Publish a monetized app to Teams store
 description: Learn how to configure the SaaS offer to your app and publish the app to Teams store.
 author: v-preethah
 ms.author: surbhigupta
@@ -8,9 +8,9 @@ ms.localizationpriority: high
 ms.date: 07/11/2023
 ---
 
-# Publish your app with the integrated SaaS offer
+# Publish the monetized app to Teams store
 
-When the offer is live, you can link the offer to your SaaS app and publish the subscriptions in the store. The SaaS app is now available in the store for purchase with the configured SaaS offers. The users can purchase paid apps from the marketplace.
+When the SaaS offer that you created is published live, you must link the offer to your SaaS app and publish the subscriptions in the store. This article helps you to configure your SaaS offer to the app and publish the monetized app in the marketplace. The SaaS app with the offer is available in the store for purchase where the users can purchase subscriptions from the store or marketplace.
 
 :::row:::
    :::column:::
@@ -35,19 +35,19 @@ When the offer is live, you can link the offer to your SaaS app and publish the 
 
 ## Configure SaaS offer to your app
 
-For users to see your subscription plan in the Teams store, there are two ways you can link the published SaaS offer to your Teams app.
+For users to see your subscription plan in the Teams store, you need to configure the SaaS offer created and published from Partner Center to your app. There are two ways you can link the published SaaS offer to your Teams app.
 
 * Teams Developer Portal
 * App manifest update
 
 > [!NOTE]
-> You need the publisher ID and offer ID from Microsoft Partner Center to configure the SaaS offer to your app.
+> You need the publisher ID and offer ID from Partner Center to configure the SaaS offer to your app.
 
 To configure from Teams Developer Portal, follow the given steps:
 
 1. Go to the **Developer Portal** and select **Apps**.
 1. On the **Apps** page, select the app you're linking the SaaS offer to.
-1. Go to the Plans and pricing page and specify your publisher and offer IDs.
+1. Go to the **Plans and pricing** page and specify your publisher ID and offer ID.
 1. Select **View** to preview your SaaS offer's subscription plans.
 1. If everything looks good, select **Save**.
 
@@ -68,7 +68,7 @@ For more information to map the paid functionality to your offer and publish, se
 
 ## Publish your app
 
-After successfully linking the offer to your app, you can now publish your app to the Teams store. Before you publish your monetized app, do the following checks.
+After linking the offer to your app, you can now publish your app to the Teams store. Before you publish your monetized app, do the following checks.
 
 * Ensure your app adheres to the [store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines?branch=main).
 * [Prepare for store submission](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist?branch=main&tabs=desktop).
@@ -84,7 +84,7 @@ For complete instructions, see [publish your app to the Teams store](../publish.
 
 Once published, users can view the **Buy a subscription** option in the app details dialog when they try to add your app to Teams.
 
-## Post purchase
+### Post purchase
 
 1. Upon successful subscription purchase, the user is redirected to the app landing page for subscription activation. This is the existing experience for user purchasing [Monetized apps in Teams](https://aka.ms/TMTG).
 
@@ -92,7 +92,7 @@ Once published, users can view the **Buy a subscription** option in the app deta
 
 ## License management
 
-After activating the subscription, the user is redirected from the landing page to Teams License Management.
+After activating the subscription, the user is redirected from the landing page to Teams license management. Microsoft manages licenses on your behalf if you've opted for the same during offer configuration.
 
 Based on the subscriptions the user purchase, the licenses are available. Here are some best practices you can implement for license management.
 
@@ -100,7 +100,7 @@ Based on the subscriptions the user purchase, the licenses are available. Here a
 * When users are assigned a subscription plan, notify them through a Teams bot or email. In the messaging, include information on how to add the app to Teams and get started.
 * Support the idea of multiple admins. In other words, multiple users in the same org can purchase and manage their subscriptions.
 
-Microsoft manages licenses on your behalf if you've opted for the same during offer configuration.
+For more information on license management, see [manage app licenses](/microsoftteams/purchase-third-party-apps).
 
 ### Check license usage in Partner Center analytics
 
@@ -116,7 +116,7 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
 1. On the **Apps** page, select the app you're removing the offer from.
 1. Go to the **Plans and pricing** page and select **Revert**.
 1. After unlinking the offer, do the following steps to update your store listing:
-   1. Select **Distribute > Publish to the Teams store**.
+   1. Select **Distribute** > **Publish to the Teams store**.
    1. Select **Open Partner Center** to begin the process of republishing your app without the offer.
 
 ## See also

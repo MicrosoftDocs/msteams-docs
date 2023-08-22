@@ -45,7 +45,7 @@ If you select **Get it now (Free)**, **Free trial**, and **Sell through Microsof
 
 To start with, you must set up the required accounts to create an offer.
 
-* Enable Microsoft Accounts and ensure you have a Microsoft Partner Center account.
+* Enable Microsoft Accounts and ensure you have a [Microsoft Partner Center account](/partner-center/marketplace/open-a-developer-account).
 
 * Azure Active Directory (Azure AD) provides an easier and secure purchase experience. Enable [Azure AD](https://azure.microsoft.com/services/active-directory/) for authenticating buyers on your site.  With [Azure AD integration](/partner-center/marketplace/azure-ad-saas), you can automatically provision the users to their SaaS apps and also allow buyers with Azure AD account to sign in to your app using Azure AD single sign-on (SSO).
 

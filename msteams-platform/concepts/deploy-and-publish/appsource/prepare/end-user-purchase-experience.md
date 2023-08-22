@@ -10,7 +10,7 @@ ms.date: 04/06/2023
 
 # Purchase and manage app subscriptions and licenses
 
-The information in this article helps you understand the purchase experience from the customer end. You can add additional features and functionality to your Teams app through subscriptions. Users can purchase subscriptions and manage licenses for themselves, their team, or their organization directly from the Teams store.
+This article helps you understand the purchase experience from the user end. You can add additional features and functionality to your Teams app through subscriptions. Users can purchase subscriptions and manage licenses for themselves, their team, or their organization directly from the Teams store.
 
 ## Subscription experience
 
@@ -43,9 +43,12 @@ The following example shows how users can purchase subscription plans for a fict
 
     :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Screenshot shows User and Licenses screen to assign license.":::
 
-When a new user launches the app for the first time, they're requested to provide consent to the app. Following is an example of the consent screen shown when calling for user profile data with minimum User.Read permission.
+When a new user launches the app for the first time, they're requested to provide consent to the app.
 
-Consent dialog is part of the flow to get the users' license information and may vary based on ISV’s integration approach.
+> [!NOTE]
+> Consent dialog is part of the flow to get the users' license information and may vary based on ISV’s integration approach.
+
+Following is an example of the consent screen shown when calling for user profile data with minimum User.Read permission.
 
 :::image type="content" source="../../../../assets/images/saas-offer/permissions-requested.png" alt-text="Screenshot shows the Permissions requested consent dialog.":::
 
@@ -59,8 +62,8 @@ The following example shows how users can manage licenses for third-party apps f
 
     :::image type="content" source="../../../../assets/images/saas-offer/client-experience-1.png" alt-text="Screenshot shows the Apps screen to select Manage your app option.":::
 
-1. Select **Subscriptions**. A tab appears with a list of purchases made in the tenant.
-1. Choose an existing subscription from the list and select **Assign licenses**.
+1. Select **Subscriptions**. The list of purchases made in the tenant appears.
+1. From the existing subscription list, select **Assign licenses**.
 
     :::image type="content" source="../../../../assets/images/saas-offer/client-experience-2.png" alt-text="Screenshot shows the Assign licenses option of the respective app under Subscription tab.":::
 

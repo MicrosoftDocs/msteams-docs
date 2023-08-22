@@ -12,14 +12,14 @@ ms.date: 01/31/2023
 
 Microsoft Teams provides APIs to implement in-app purchases that allow users to upgrade from free to paid plans within your app. The in-app purchase option is applicable only if the app is enabled with a transactable SaaS offer.
 
-Users can buy new paid subscriptions through in-app purchases, but they can't purchase additional or different licenses with existing paid subscriptions. If users want to switch between plans, existing subscription must be canceled before purchasing a new one through in-app purchases.
+Users can buy new paid subscriptions through in-app purchases, but they can't purchase additional or different licenses with existing paid subscriptions. If users want to switch between plans, existing subscription must be canceled before purchasing a new plan through in-app purchases.
 
 > [!NOTE]
 > In-app purchases are supported only in [personal app contexts](~/concepts/design/app-structure.md#personal-apps).
 
 ## Implement in-app purchases
 
-To offer an in-app purchase experience to the users of your app, ensure the following:
+To offer an in-app purchase experience to the users of your app, ensure the following criteria are met:
 
 * The app is built with [Microsoft Teams JavaScript client library (TeamsJS)](https://github.com/OfficeDev/microsoft-teams-library-js).
 
@@ -53,7 +53,7 @@ To enable the in-app purchase experience, update your Teams app `manifest.json` 
 
 To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API from your web app.
 
-The following code snippet is an example of calling the API from the Teams app built using Microsoft Teams JavaScript client library:
+The following code snippet is an example of calling the API from the Teams app built using TeamsJS:
 
 # [TeamsJS v1](#tab/jsonV11)
 

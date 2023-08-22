@@ -33,7 +33,7 @@ Independent software vendors (ISVs) can configure Microsoft license management f
    :::column-end:::
 :::row-end:::
 
-To enable Microsoft to manage licenses for a third-party app in Teams, you must have opted for Microsoft to manage licenses on your behalf while creating the offer. You must then create one or more plans that have subscription pricing, where the user can purchase subscriptions with licenses to use your app. Microsoft then manages the purchased licenses on your behalf.
+To enable Microsoft to manage licenses for a third-party app in Teams, you must have opted for Microsoft to manage licenses on your behalf while creating the offer. You must then create one or more plans for your offer with subscriptions, where the user can purchase suitable subscription= as license to use your app. Microsoft then manages the purchased licenses on your behalf.
 
 ## Create a plan
 
@@ -45,7 +45,7 @@ Transactable SaaS offers sold through the Microsoft commercial marketplace must 
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/plan-overview.png" alt-text="Screenshot shows plan overview to create a new plan for your apps in the Partner Center.":::
 
-1. Select the plan to add pricing and availability information.
+1. Select the plan listed under **Plan overview** to add pricing and availability information.
 
 ### Define plan listing
 
@@ -65,17 +65,16 @@ Every plan must be available in at least one market. On the **Pricing and availa
 1. Under **Markets**, select **Edit markets**.
 1. In the dialog that appears, select the market locations where you want to make your plan available. You must select a minimum of one and can select a maximum of 141 markets.
 
-### Define pricing
+### Define the pricing
 
-You must associate a pricing model with each plan either flat rate or per user. All plans in the same offer must use the same pricing model.
+You must associate a pricing model with each plan either flat rate or per user. All plans in an offer must use the same pricing model.
 
 1. Select **Pricing and availability** from the left pane.
 1. Under **Pricing**, select **Flat rate** or **Per User**.
-1. Add the billing terms you want: Monthly, Annual.
-1. For each billing term, select the payment option to set the payment schedule.
-1. Enter the price for each payment occurrence.
+1. Under **Billing term**, select the billing terms. You can select **Monthly**, **Annual**, or both.
+1. For each billing term, enter the **Price** for each payment occurrence.
 
-    :::image type="content" source="~/assets/images/first-party-license-mgt/pricing-availability.png" alt-text="The screenshots shows pricing and availability page to add SaaS offer for your app.":::
+    :::image type="content" source="~/assets/images/first-party-license-mgt/pricing-availability.png" alt-text="Screenshot shows the pricing and availability page to add SaaS offer for your app.":::
 
 1. Select **Save draft**.
 
@@ -89,17 +88,17 @@ You can configure a free trial for each plan in your offer.
 
     After you create one or more plans, you'll see your plan name, plan ID, pricing model, availability (Public or Private), current publishing status, and any available actions on the **Plan overview** tab.
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/list-of-plans-created.png" alt-text="The screenshots shows plan listing page with service ID, pricing model, availability, status and action.":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/list-of-plans-created.png" alt-text="Screenshot shows plan listing page with service ID, pricing model, availability, status and action.":::
 
-1. Copy the service ID of the plan you created to integrate with Microsoft Graph usageRights API.
+1. Copy the service ID of the plan you created to integrate with Microsoft Graph [usageRights API](/partner-center/marketplace/isv-app-license-saas).
 
 [Integrate with Graph usageRights API](prerequisites.md#integrate-with-graph-usagerights-api) to manage user permissions at the time of app launch by a customer who has a purchase license.
 
 ## Submit the offer
 
-When you finish configuring the offer along with the plans, validate the offer. You can then submit the offer with the plans from Partner Center for validation and publishing. The offer overview page displays the **Publish status** where you can track the progress.
+After you create the plans for your offer and finish the required configurations for the offer, you must validate the offer. You can then submit the offer with the plans from Partner Center for validation and publishing. The **Offer overview** page displays the **Publish status** where you can track the progress.
 
-When the offer reaches the **Publisher signoff** phase, preview links for the respective platforms are given under the **Go live** button to test the offer. Upon successful validation, it's recommended to [test the offer](Test-preview-for-monetized-apps.md) with the given preview links before you publish the offer live.
+When the offer reaches the **Publisher signoff** phase, preview links for the respective platforms are given under the **Go live** button to test the offer. Upon successful validation, it's recommended to [test the offer](Test-preview-for-monetized-apps.md) with the given preview links before you publish the offer in the marketplace.
 
 ## Next step
 

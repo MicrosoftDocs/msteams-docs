@@ -893,13 +893,13 @@
   - name: Create your SaaS offer
     href: concepts/deploy-and-publish/appsource/prepare/create-saas-offer.md
     displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
-  - name: Create plan and set up license management
+  - name: Create an offer plan for license purchase
     href: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
     displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
-  - name: Test preview and publish SaaS offer in the marketplace
+  - name: Test and publish a SaaS offer in the marketplace
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
     displayName: paid, AppSource, fee
-  - name: Publish monetized app to Teams store
+  - name: Publish a monetized app to Teams store
     href: concepts/deploy-and-publish/appsource/prepare/publish-saas-offer-app.md
     displayName: configure, apps, publish app
   - name: Configure in-app purchases

@@ -30,7 +30,7 @@ There are four ways you can monetize your app:
 
  Let's get to know about monetizing your Software as a Service (SaaS) applications in the Teams store through SaaS offers.
 
-## what's a SaaS offer?
+## What's a SaaS offer?
 
 SaaS applications published in Microsoft commercial marketplace for purchase are SaaS offers. The offers are available in one of the online stores based on the industry it's built for and the related configurations in the offer. As a publisher, you can create your marketplace offers in Partner Center and publish in the online store.
 
