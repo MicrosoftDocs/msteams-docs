@@ -293,7 +293,7 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 **Required** &ndash; Microsoft app ID
 
-The unique Microsoft-generated identifier for this app. The format of the ID is GUID. If you've registered a bot via the Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, then you should already have an ID and must enter it here. Otherwise, you must generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/bots/how-to/create-a-bot-for-teams.md).
+The unique Microsoft-generated identifier for this app. The format of the ID is GUID. If you've registered a bot through Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, then you might already have an ID and must enter it here. Otherwise, you must generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/bots/how-to/create-a-bot-for-teams.md).
 
 ## developer
 
@@ -304,7 +304,7 @@ Specifies information about your company. For apps submitted to AppSource (forme
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
 |`name`|32 characters|✔️|The display name for the developer.|
-|`websiteUrl`|2048 characters|✔️|The https:// URL to the developer's website. This link should take users to your company or product-specific landing page.|
+|`websiteUrl`|2048 characters|✔️|The https:// URL to the developer's website. This link must take users to your company or product-specific landing page.|
 |`privacyUrl`|2048 characters|✔️|The https:// URL to the developer's privacy policy.|
 |`termsOfUseUrl`|2048 characters|✔️|The https:// URL to the developer's terms of use.|
 |`mpnId`|10 characters||**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
@@ -326,18 +326,18 @@ An array of objects specifying additional language translations.
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
 |`languageTag`|4 characters|✔️|The language tag of the strings in the provided file.|
-|`file`|2048 characters|✔️|A relative file path to the .json file containing the translated strings.|
+|`file`|2048 characters|✔️|A relative file path to the .json file that contains the translated strings.|
 
 ## name
 
 **Required** &ndash; Object
 
-The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` shouldn't be the same.
+The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` must be different.
 
 |Name| Type | Maximum size | Required | Description|
 |---|---|---|---|---|
 |`short`|String|30 characters|✔️|The short display name for the app.|
-|`full`|String|100 characters|✔️|The full name of the app, used if the full app name exceeds 30 characters.|
+|`full`|String|100 characters|✔️|The full name of the app. It is used if the full app name exceeds 30 characters.|
 
 ## description
 
@@ -345,7 +345,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 
 Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry.
 
-Ensure that your description accurately describes your experience and provides information to help potential customers understand what your experience does. You should also note, in the full description, if an external account is required for use. The values of `short` and `full` shouldn't be the same.  Your short description must not be repeated within the long description and must not include any other app name.
+Ensure that your description accurately describes your experience and provides information to help potential customers understand what your experience does. You must note in the full description, if an external account is required for use. The values of `short` and `full` must be different.  Your short description must not be repeated within the long description and must not include any other app name.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -373,7 +373,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 ## configurableTabs
 
-**Optional**:
+**Optional** &ndash; Array
 
 Used when your app experience has a team channel tab experience that requires extra configuration before it's added. Configurable tabs are supported only in the teams scope, and currently only one tab per app is supported.
 
@@ -392,7 +392,7 @@ The object is an array with all elements of the type `object`. This block is req
 
 ## staticTabs
 
-**Optional**:
+**Optional** &ndash; Array
 
 Defines a set of tabs that can be "pinned" by default, without the user adding them manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience. Static tabs declared in the `team` scope are currently not supported.
 
@@ -414,7 +414,7 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 
 ## bots
 
-**Optional**:
+**Optional** &ndash; Array
 
 Defines a bot solution, along with optional information such as default command properties.
 
@@ -435,8 +435,8 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`teams`|object||||
-|`teams.parameters`|Array|5||The minItems is 1 and maxItems is 5.|
+|`teams`|Object||||
+|`teams.parameters`|Array|5||The minimum item is 1.|
 |`teams.parameters.name`|String|64 characters|✔️|Name of the parameter.|
 |`teams.parameters.inputType`|String|||Type of the parameter. Options are `text`, `textarea`, `number`, `date`, `time`, `toggle`, and `choiceset`. Default value is `text`.|
 |`teams.parameters.title`|String|32 characters|✔️|Title of the parameter.|
@@ -447,8 +447,8 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |`teams.parameters.choices.value`|String|512|✔️|Value of the choice.|
 |`taskInfo`|Object||||
 |`taskInfo.title`|String|64 characters||Title of the task module.|
-|`taskInfo.width`|String|16||Width of the task module. The value is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
-|`taskInfo.height`|String|16||Height of the task module. The value is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
+|`taskInfo.width`|String|16||Width of the task module. The value is either a number in pixels or a default layout such as `large`, `medium`, or `small`.|
+|`taskInfo.height`|String|16||Height of the task module. The value is either a number in pixels or a default layout such as `large`, `medium`, or `small`.|
 |`taskInfo.url`|String|2048 characters||Task module URL.|
 
 ### bots.commandLists
@@ -462,7 +462,7 @@ An optional list of commands that your bot can recommend to users. The object is
 
 ## connectors
 
-**Optional**:
+**Optional** &ndash; Array
 
 The `connectors` block defines a connector for Microsoft 365 Groups for the app.
 
@@ -476,7 +476,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 ## composeExtensions
 
-**Optional**:
+**Optional** &ndash; Array
 
 Defines a message extension for the app.
 
@@ -490,14 +490,14 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |`botId`|String||✔️|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. The default is `false`.|
 |`commands`|Array of object|10|✔️|Array of commands the message extension supports|
-|`messageHandlers`|Array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
+|`messageHandlers`|Array of objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
 |`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|Array of Strings|2048||Array of domains that the link message handler can register for.|
-|`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A boolean value that indicates whether the app's link message handler supports anonymous invoke flow. The default value is `false`. To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
+|`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. The default value is `false`. To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
 
 ### composeExtensions.commands
 
-Your message extension should declare one or more commands. Each command appears in Teams as a potential interaction from the UI-based entry point. There's a maximum of 10 commands.
+Your message extension must declare one or more commands. Each command appears in Teams as a potential interaction from the UI-based entry point. There's a maximum of 10 commands.
 
 Each command item is an object with the following structure:
 
@@ -507,9 +507,9 @@ Each command item is an object with the following structure:
 |`type`|String|64 characters||Type of the command. One of `query` or `action`. Default: `query`|
 |`title`|String|32 characters|✔️|The user-friendly command name.|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
-|`initialRun`|Boolean|||A Boolean value that indicates whether the command should be run initially with no parameters. Default: `false`|
+|`initialRun`|Boolean|||A Boolean value that indicates whether the command runs initially with no parameters. Default: `false`|
 |`context`|Array of Strings|3||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. Default is `["compose", "commandBox"]`|
-|`fetchTask`|Boolean|||A Boolean value that indicates if it should fetch the task module dynamically.|
+|`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the task module dynamically.|
 |`taskInfo`|Object|||Specify the task module to preload when using a message extension command.|
 |`taskInfo.title`|String|64||Initial dialog title.|
 |`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as `large`, `medium`, or `small`.|
@@ -521,7 +521,7 @@ Each command item is an object with the following structure:
 |`parameter.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
 |`parameter.inputType`|String|||Defines the type of control displayed on a task module for `fetchTask: false`. One of `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`.|
 |`parameter.value`|String|512||Initial value for the parameter.|
-|`parameter.choices`|Array of Objects|10||The choice options for the `choiceset`. Use only when `parameter.inputType` is `choiceset`.|
+|`parameter.choices`|Array of objects|10||The choice options for the `choiceset`. Use only when `parameter.inputType` is `choiceset`.|
 |`parameter.choices.title`|String|128||Title of the choice.|
 |`parameter.choices.value`|String|512||Value of the choice.|
 
@@ -536,7 +536,7 @@ Each command item is an object with the following structure:
 
 ## permissions
 
-**Optional**:
+**Optional** &ndash; Array of strings
 
 An array of `string`, which specifies which permissions the app requests, which let end users know how the extension performs. The following options are non-exclusive:
 
@@ -563,10 +563,10 @@ Specifies the native features on a user's device that your app may request acces
 
 A list of valid domains from which the app expects to load any content. Domain listings can include wildcards, for example `*.example.com`. The valid domain matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI needs to go to any other domain besides the one use for tab configuration, that domain must be specified here.
 
-It is **not** necessary to include the domains of identity providers you want to support in your app, however. For example, to authenticate using a Google ID, it's necessary to redirect to accounts.google.com, but you shouldn't include accounts.google.com in `validDomains[]`.
+It is **not** necessary to include the domains of identity providers you want to support in your app, however. For example, to authenticate using a Google ID, it's necessary to redirect to accounts.google.com, but you must not include accounts.google.com in `validDomains[]`.
 
 > [!IMPORTANT]
-> Do not add domains that are outside your control, either directly or via wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid.
+> Do not add domains that are outside your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid.
 
 The object is an array with all elements of the type `string`. The maximum item of the object is 16 and maximum length is 2048 characters.
 
@@ -589,7 +589,7 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`notificationUrl`|string|2048 characters|✔️|The https:// URL where Graph-connector notifications for the application should be sent.|
+|`notificationUrl`|string|2048 characters|✔️|The https:// URL where Graph-connector notifications for the application must be sent.|
 
 ## showLoadingIndicator
 
@@ -618,7 +618,7 @@ Define the properties your app uses to post a user activity feed.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`activityTypes`|Array of Objects|128 items| | Provide the types of activities that your app can post to a users activity feed.|
+|`activityTypes`|Array of objects|128 items| | Provide the types of activities that your app can post to a users activity feed.|
 
 ### activities.activityTypes
 
@@ -764,9 +764,9 @@ Specify meeting extension definition. For more information, see [custom Together
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`scenes`|Array of objects| 5 items||Meeting supported scenes.|
-|`supportsStreaming`|Boolean|||A boolean value that indicates whether an app can stream the meeting's audio and video content to a real-time meeting protocol (RTMP) endpoint. The default value is `false`.|
+|`supportsStreaming`|Boolean|||A Boolean value that indicates whether an app can stream the meeting's audio and video content to a real-time meeting protocol (RTMP) endpoint. The default value is `false`.|
 |`videoFiltersConfigurationUrl`|String|2048 characters||The https:// URL for configuring the video filters.|
-|`supportsAnonymousGuestUsers`|Boolean|||A boolean value that indicates whether the app supports access by anonymous guest users. The default value is `false`.|
+|`supportsAnonymousGuestUsers`|Boolean|||A Boolean value that indicates whether the app supports access by anonymous guest users. The default value is `false`.|
 
 ### meetingExtensionDefinition.scenes
 
@@ -800,19 +800,19 @@ Specify and consolidate authorization related information for the app.
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`permissions`|Object|NA|NA|List of permissions that the app needs to function.|
+|`permissions`|Object|||List of permissions that the app needs to function.|
 
 ### authorization.permissions
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`resourceSpecific`| Array of objects|16 items|NA|Permissions that guard data access on resource instance level.|
+|`resourceSpecific`| Array of objects|16 items||Permissions that guard data access on resource instance level.|
 
 ### authorization.permissions.resourceSpecific
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`type`|String|NA|✔️| The type of resource-specific consent (RSC) permission. Options: `Application` and `Delegated`.|
+|`type`|String||✔️| The type of resource-specific consent (RSC) permission. Options: `Application` and `Delegated`.|
 |`name`|String|128 characters|✔️|The name of the RSC permission. For more information, see [RSC application permissions](#rsc-application-permissions) and [RSC delegated permissions](#rsc-delegated-permissions)|
 
 #### RSC application permissions
