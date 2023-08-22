@@ -357,7 +357,7 @@ items:
     
          * Set `ID` to **Microsoft App ID**.
          * Set `botId` to **Microsoft App ID**.
-         * Set `webApplicationInfo` `id` to **Microsoft App ID**.
+         * Set the `id` to `webApplicationInfo`  to **Microsoft App ID**.
          * Set `validDomains` to **Web App Domain Name**.
 
           > [!NOTE]
@@ -403,7 +403,7 @@ items:
 
     1. Join the meeting.
    
-    1. After the meeting has started, select **+ Apps** to add an App.
+    1. After the meeting has started, select **+ Apps** to add an app.
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/add-an-app.png" alt-text="Screenshot shows the Teams call with Apps option highlighted in red."::: 
    
@@ -427,15 +427,13 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/Manage.png" alt-text="Screenshot shows the section showing the list applications."::: 
 
-    1. Go to Teams meeting chat.
-    
-    1. **In-meeting notifications Demo** app sends an automatic reply to the meeting chat. 
+    1. Go to the meeting chat. 
 
     1. You can send a targeted notification or an in-meeting notification as follows:
 
         # [Send targeted notification](#tab/send-targeted-notification)
 
-        To send a targeted notification, follow the steps:
+        To send a targeted notification, follow these steps:
 
         1. In the chat, @mention the **In-Meeting Notification** bot and select `SendTargetedNotification`.
 
@@ -457,7 +455,7 @@ items:
     
         # [Send in-meeting notification](#tab/send-in-meeting-notification)
 
-        To send an in-meeting notification, follow the steps:
+        To send an in-meeting notification, follow these steps:
 
         1. In the chat, @mention the **In-Meeting Notification** bot and select `SendInMeetingNotification`.
 
@@ -482,15 +480,15 @@ items:
   content: |
     Did you come up with something like this?
 
-    # [SendTargetedNotification](#tab/sendtargetednotification)
+    # [Send targeted notification](#tab/send-targeted-notification2)
 
-    The following image shows a pop-up for the send targeted notification:
+    The following image is an example of a targeted notification:
     
      :::image type="content" source="~/assets/images/meeting-content-bubble/send-targeted-notification.png" alt-text="Screenshot shows the final output pop-up for the send targeted notification.":::
     
-    # [SendInMeetingNotification](#tab/sendinmeetingnotification)
+    # [Send in-meeting notification](#tab/send-in-meeting-notification2)
 
-    The following image shows a pop-up for the send in-meeting notification:
+    The following image an example of an in-meeting notification:
     
      :::image type="content" source="~/assets/images/meeting-content-bubble/send-inmeeting-notification.png" alt-text="Screenshot shows the final output pop-up for the send in-meeting notification.":::
 
