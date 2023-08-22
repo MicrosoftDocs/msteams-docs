@@ -78,7 +78,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Enable RSC permissions for a user using the Graph APIs
+      - text: Enable RSC permissions for a user using the Graph APIs (Developer preview)
         url: graph-api/rsc/grant-resource-specific-consent.md 
       - text: New Microsoft Teams client
         url: resources/teams-updates.md

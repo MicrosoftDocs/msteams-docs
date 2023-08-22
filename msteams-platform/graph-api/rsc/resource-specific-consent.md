@@ -154,6 +154,9 @@ For more information, see [chat resource-specific consent permissions](/graph/pe
 
 ### RSC permissions for user access
 
+> [!NOTE]
+> The `TeamsActivity.Send.User` RSC  permission is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+
 The following table provides RSC permissions for a user and their applicable data access mode:
 
 | Permission name | Action | Type: Delegated | Type: Application |
