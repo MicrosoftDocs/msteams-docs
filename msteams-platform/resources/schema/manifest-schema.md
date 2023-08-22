@@ -343,7 +343,7 @@ The schema defines the following properties:
 
 Optional, but recommended—string
 
-The https:// URL referencing the JSON Schema for the app smanifest.
+The https:// URL referencing the JSON Schema for the app manifest.
 
 ## manifestVersion
 
