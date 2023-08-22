@@ -431,7 +431,7 @@ items:
     
     1. **In-meeting notifications Demo** app sends an automatic reply to the meeting chat. 
 
-    1. You can send a targeted meeting notification or an in-meeting notification as follows:
+    1. You can send a targeted notification or an in-meeting notification as follows:
 
         # [Send targeted notification](#tab/send-targeted-notification)
 
