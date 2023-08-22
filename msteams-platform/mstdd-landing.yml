@@ -230,7 +230,7 @@ landingContent:
           url: ~/sbs-bots-with-sso.yml
         - text: Generate meeting token
           url: ~/sbs-meeting-token-generator.yml
-        - text: Generate meeting sidepanel
+        - text: Generate meeting side panel
           url: ~/sbs-meetings-sidepanel.yml
         - text: Send activity feed notification 
           url:  ~/sbs-graphactivity-feedbroadcast.yml
