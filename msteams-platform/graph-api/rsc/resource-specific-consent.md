@@ -59,7 +59,7 @@ Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft TeamsJS client l
 | Delegated | Microsoft Teams Client | >=v1.12 | Teams, chats, meetings, and users | Always on | Any user authorized to install an app in the specific scope. |
 
 > [!NOTE]
-> `TeamsActivity.Send` RSC application permission is always enabled at the tenant level. App users don't need admin consent to use the permission.
+> The `TeamsActivity.Send` RSC application permission is always enabled at the tenant level. App users don't need admin consent to use the permission.
 
 ## Supported RSC permissions
 

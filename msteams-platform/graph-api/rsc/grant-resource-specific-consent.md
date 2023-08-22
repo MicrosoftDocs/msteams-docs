@@ -510,3 +510,4 @@ For more information on how to get details of the apps installed for the user, s
 * [Resource-specific consent in Microsoft Teams for admins](/MicrosoftTeams/resource-specific-consent)
 * [Group owner consent](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal)
 * [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true)
+* [List permissionGrants of a user](/graph/api/user-list-permissiongrants?view=graph-rest-beta)
