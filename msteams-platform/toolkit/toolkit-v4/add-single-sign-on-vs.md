@@ -25,7 +25,7 @@ Teams provides SSO function for an app using the Teams Toolkit for Microsoft Vis
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-add-authentication-code.PNG" alt-text="Screenshot shows the add authentication code.":::
 
-Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** folder, including a app manifest (previously called Teams app manifest) template file for Azure AD application and authentication redirect pages. Link the files to your Teams application by updating authentication configurations to ensure the SSO works for your application.
+Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** folder, including a app manifest template file for Azure AD application and authentication redirect pages. Link the files to your Teams application by updating authentication configurations to ensure the SSO works for your application.
 
 * In the Azure AD app manifest file, specify the URIs such as, the URI to identify the Azure AD authentication app and the redirect URI for returning token.
 * In the app manifest file, add the SSO application to link it with Teams application.
@@ -854,7 +854,7 @@ The following table lists the changes by Teams Toolkit:
 
    |**Type**|**File**|**Purpose**|
    |--------|--------|-----------|
-   |Create|`aad.template.json` under `template\appPackage`|Azure AD app manifest represents your Azure AD app. `template\appPackage` helps you to register an Azure AD app during local debug or provision.|
+   |Create|`aad.template.json` under `template\appPackage`|Azure AD manifest represents your Azure AD app. `template\appPackage` helps you to register an Azure AD app during local debug or provision.|
    |Modify|`manifest.template.json` under `template\appPackage`|`webApplicationInfo` object is added into your app manifest template. Teams requires this field to enable SSO. When local debugging or provisioning is triggered, you can see the change.|
    |Modify|`appsettings.json` and `appsettings.Development.json`|Configs are added and used by TeamsFx SDK to your app settings. You can update and add the `TeamsFx` object if you have other `appsettings` files.|
    |Create|`Auth\tab`|Reference code, auth redirect pages and a `README.md` file are generated in the folder `Auth\tab` for a tab project.|
