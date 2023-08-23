@@ -1,4 +1,4 @@
-## Tunneling steps for messaging endpoint
+### Tunneling steps for messaging endpoint
 
 # [dev](#tab/dev)
 
@@ -80,7 +80,7 @@
 
 1.  In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-    :::image type="content" source="../../assets/images/include-files/ngrok-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding api.":::
+    :::image type="content" source="../../assets/images/include-files/devtunnels-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding api.":::
 
 1. Select **Apply**.
 

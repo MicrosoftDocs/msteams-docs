@@ -1,4 +1,4 @@
-## Add the Teams channel
+### Add Teams channel
 
 1. Select **Home**.
 
