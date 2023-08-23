@@ -114,9 +114,9 @@ landingContent:
       - text: Enable SSO authentication to access Adaptive Cards Universal Actions
         url: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
       - text: Add third party authentication to Adaptive Card Universal Action
-        url: authentication-flow-in-universal-action-for-adaptive-cards.md
+        url: task-modules-and-cards/cards/universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards
       - text: Targeted in-meeting notification
-        url: in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
+        url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
       - text: Plan, strategize, and execute your app growth in Teams to make it a successful app on the marketplace
         url: concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
       - text: Build a dashboard tab app
