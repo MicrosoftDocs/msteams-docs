@@ -16,7 +16,7 @@ Custom Together Mode scenes in Microsoft Teams provide an immersive and engaging
 * Combine participants digitally into a single virtual scene.
 * Place the participants' video streams in predetermined seats designed and fixed by the scene creator.
 
-In custom Together Mode scenes, the scene is an artifact. The scene is created by the scene developer using Microsoft Scene studio. *In a conceived scene setting, participants have seats with video streams. The videos are rendered in those seats*. Scene only apps are recommended as the experience for such apps is clear.
+In custom Together Mode scenes, the scene is an artifact. The scene is created by the scene developer using Microsoft Scene studio. In a conceived scene setting, participants have seats with video streams. The videos are rendered in those seats. Scene only apps are recommended as the experience for such apps is clear.
 
 A scene only app is still an app in Teams. The Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
 
@@ -46,11 +46,11 @@ Consider the following practices for a scene building experience:
 
 Microsoft has a Scene studio that allows you to build scenes. It's available on [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes). This document refers to Scene studio in the Teams Developer Portal. A scene in the context of the Scene studio contains the following elements:
 
-* Seats reserved for meeting organizer and meeting presenters. The presenter doesn't refer to the user who is actively sharing. For more information, check [meeting role](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
+* Seats reserved for meeting organizer and meeting presenters. The presenter doesn't refer to the user who is actively sharing. For more information, see [meeting role](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
 * Seat and image for each participant with an adjustable width and height.
 
-* XYZ coordinates of all the seats and images.
+* Seat and image XYZ coordinates.
 
 * Collection of images that are camouflaged as one image.
 
@@ -102,8 +102,7 @@ To build a scene using the Scene studio, follow these steps:
 
     * Selecting **View in Teams** automatically creates a Teams app that can be viewed in the **Apps** page in the Teams Developer Portal.
     * Selecting **View in Teams** automatically creates an app package that is appmanifest.json behind the scene. You can go to  **Apps** from the menu and access the automatically created app package.
-    * To delete a scene you created, select **Delete scene** on the top bar.
-
+    
 1. Select **View in Teams** in the dialog box that appears, select **Add**.
 
     The scene is tested or accessed by creating a test meeting and launching custom Together Mode scenes. For more information, see [Use custom together mode scenes in Teams](#use-custom-together-mode-scenes-in-teams).
@@ -112,11 +111,13 @@ To build a scene using the Scene studio, follow these steps:
 
     The scene can then be viewed in the custom Together Mode scenes gallery.
 
-     1. Optionally, you can select **Share** from the **Save** drop-down menu. You can create a shareable link to distribute your scenes for others to use. The user can open the link to install the scene and start using it.       After preview, the scene is shipped as an app to Teams by following the steps for app submission. This step requires the app package. The app package is different from the scene package, for the scene that was designed. The app package created automatically is found in the **Apps** section in the Teams Developer Center.
+     1. Share: From the **Save** drop-down menu, select **Share** to create a shareable link of your scenes to share for others to use. The user can open the link to install the scene and start using it. After preview, the scene is shipped as an app to Teams by following the steps for app submission. This step requires the app package. The app package is different from the scene package, for the scene that was designed. The app package created automatically is found in the **Apps** section in the Teams Developer Center.
 
-     1. Optionally, the scene package is retrieved by selecting **Export** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded. Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes:
+     1. Export: From the **Save** drop-down menu, select **Export** to retrieve the scene package. A .zip file, that is the scene package, is downloaded. The Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes.
 
 :::image type="content" source="../assets/images/apps-in-meetings/build-a-scene.png" alt-text="Screenshot shows the Export option to export a scene.":::
+
+1. To delete a scene you created, select **Delete scene** on the top bar.
 
 A complex scene that uses the Z-axis is demonstrated in the step-by-step getting started sample.
 
