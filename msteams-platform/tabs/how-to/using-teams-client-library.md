@@ -51,6 +51,10 @@ Even if you intend your app to only run in Teams (and not Microsoft 365 app and 
 
 Once you're able, the next step is to [update existing application code](#2-update-teamsjs-references) with the changes described in this article. In the meantime, the v.1 to v.2 API translation layer provides backwards compatibility, ensuring your existing Teams app continues to work in TeamsJS version 2.0.
 
+#### Authentication
+
+In the current version of Teams-JS (x.0.0), apps mut provide an URL in the authentication redirection parameter to call to authenticate. Apps implemented on the previous version of Teams-JS (@x.0.0) will only support Teams following this update, as the `oauthRedirectmethod` and `authId` query parameters will continue to be passed to the 3P app server. To enable muti-hub support, add a `hostRedirectUrl` parameter to your hub to insert the deeplink used to redirect back to the hub. 
+
 #### Teams apps running across Microsoft 365
 
 Enabling an existing Teams app to run in Outlook and Microsoft 365 requires all of the following:
