@@ -48,7 +48,7 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 
 1. Open Teams.
 1. Go to **Settings** > **App permissions**.
-1. Select the app for which you need to choose the settings.
+1. Select the app for which you want to customize the settings.
 1. Select your desired settings.
 
     :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="Screenshot shows the mobile App permissions.":::
@@ -57,7 +57,7 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 
 1. Open Teams.
 1. Go to **Settings** > **App permissions**.
-1. Select the app for which you need to choose the settings.
+1. Select the app for which you want to customize the settings.
 1. Select your desired settings.
 
    :::image type="content" source="~/assets/images/tabs/device-permissions-new-one.png" alt-text="Screenshot shows the device permissions.":::
