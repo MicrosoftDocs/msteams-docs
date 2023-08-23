@@ -63,10 +63,10 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 
      :::row:::
         :::column:::
-        :::image type="content" source="~/assets/images/tabs/device-permissions-new-one.png" alt-text="Screenshot shows the device permissions.":::
+        :::image type="content" source="~/assets/images/tabs/device-permissions-new-one.png" alt-text="Screenshot shows the device permissions." lightbox="~/assets/images/tabs/device-permissions-new-one.png":::
         :::column-end:::
         :::column:::
-        :::image type="content" source="~/assets/images/tabs/device-permissions-new-two.png" alt-text="Screenshot shows different apps to select the device permissions.":::
+        :::image type="content" source="~/assets/images/tabs/device-permissions-new-two.png" alt-text="Screenshot shows different apps to select the device permissions." lightbox="~/assets/images/tabs/device-permissions-new-two.png":::
         :::column-end:::
     :::row-end:::
 
