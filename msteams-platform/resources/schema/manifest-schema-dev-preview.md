@@ -283,7 +283,7 @@ The version of the manifest schema this manifest is using.
 
 **Required**—String
 
-The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it overwrites the existing one and the user will get the new functionality. If this app was submitted to the store, the new manifest has to be resubmitted and revalidated. Then, users of this app will get the new updated manifest automatically in a few hours, after it's approved.
+The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it overwrites the existing one and the user gets the new functionality. If this app was submitted to the store, the new manifest has to be resubmitted and revalidated. Then, users of this app will get the new updated manifest automatically in a few hours, after it's approved.
 
 If the app requested permissions change, users are prompted to upgrade and re-consent to the app.
 
@@ -401,11 +401,11 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`entityId`|String|64 characters|✔️|A unique identifier for the entity that the tab displays.|
-|`name`|String|128 characters|✔️|The display name of the tab in the channel interface.|
+|`name`|String|128 characters|✔️|The display name of the tab.|
 |`contentUrl`|String|2048 characters|✔️|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
 |`contentBotId`|   | | | The Microsoft Teams app ID specified for the bot in the Bot Framework portal. |
 |`websiteUrl`|String|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
-|`scopes`|Array of enum|1|✔️|Static tabs support the `personal`, `team` and `groupChat` scopes, which means it can be provisioned as part of the personal, group chat, and channel meetings experience.|
+|`scopes`|Array of enum|3|✔️|Static tabs support the `personal`, `team` and `groupChat` scopes, which means it can be provisioned as part of the personal, group chat, and channel meetings experience.|
 
 ## bots
 
@@ -589,8 +589,8 @@ Define the properties your app uses to post a user activity feed.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`type`|string|32 characters|✔️|The notification type. *See below*.|
-|`description`|string|128 characters|✔️|A brief description of the notification. *See below*.|
+|`type`|string|32 characters|✔️|The notification type. |
+|`description`|string|128 characters|✔️|A brief description of the notification. |
 |`templateText`|string|128 characters|✔️|Ex: "{actor} created task {taskId} for you"|
 
 ```json
