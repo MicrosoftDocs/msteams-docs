@@ -73,41 +73,11 @@ items:
 
    [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
 
-   [!INCLUDE [Azure clientapplication](includes/get-started/azure-client-application.md)]
+   [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
 
    [!INCLUDE [Azure api permission](includes/get-started/azure-user-api-permissions.md)]
 
-   **To update Manifest**
-
-   1. Select **Manifest** from the left pane.
-
-   1. Set the configuration item **"accessTokenAcceptedVersion":2**. If not set, change its value to `2` and select **Save**.
-
-      :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-value.png" alt-text="open the manifest file":::
-      
-      > [!NOTE]
-      > If you're already testing your bot in Teams, sign out of this app and sign out of Teams. To see this change, sign in again.
-
-   **To set up Bot Service connection**
-
-   1. Go to **Configuration page**.
-
-   1. Select **Add OAuth Connection Settings**.
-
-   1. In **New Connection Setting**, enter the following details:
-
-         * **Name** enter **name for your new connection setting. You can use the name in the settings of your bot service code**.
-         * **Service Provider** select **Azure Active Directory V2**.
-         * **Client ID** update you're **Microsoft App ID**.
-         * **Client secret**  update the value of the **client secret ID**.
-         * **Token Exchange URL** use the **Application ID URI**.
-         * **Tenant ID** enter **common**.
-         * **Scopes** enter **User.Read**.
-   
-   1. Select **Save**.
-
-      :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/new-connection-setting_1.png" alt-text="setting new connection":::
-
+   [!INCLUDE [Manifest and new connection](includes/get-started/azure-manifest-service-connection.md.md)]
 
 - title: Set up app settings and manifest files
   durationInMinutes: 2
