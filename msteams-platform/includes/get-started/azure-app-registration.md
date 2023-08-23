@@ -7,13 +7,13 @@
 
 1. Select your bot.
 
-   :::image type="content" source="../../assets/images/include-files/app-registration.png" alt-text="App registration":::
+   :::image type="content" source="../../assets/images/include-files/app-registrations.png" alt-text="App registration":::
 
 1. In the left pane, under **Manage**, select **Expose an API**.
 
 1. Select **Add**.
 
-   :::image type="content" source="../../assets/images/include-files/exposeanapi-add.png" alt-text="Expose an API":::
+   :::image type="content" source="../../assets/images/include-files/expose-api-add.png" alt-text="Expose an API":::
 
 1. Use the `api://your-devtunnel-domain/{AppID}` or `api://your-ngrok-domain/{AppID}` format for the **Application ID URI**.
 
