@@ -11,7 +11,7 @@ ms.date: 05/02/2023
 # Build tabs with Adaptive Cards
 
 > [!WARNING]
-> Adaptive Card tabs will be deprecated in the new Microsoft Teams. Apps are expected to be available in the new Microsoft Teams by June 2023. If your app is using Adaptive Card tabs, it's recommended to rebuild the tab as a web-based tab. For more information, see [Build tabs for Teams](../what-are-tabs.md).
+> Adaptive Card tabs aren't supported in the new Teams client. If your app is using Adaptive Card tabs, we recommend to rebuild the tab as a web-based tab. For more information, see [Build tabs for Teams](../what-are-tabs.md).
 
 When developing a tab using the traditional method, you might run into these issues:
 
@@ -440,4 +440,5 @@ Follow the [step-by-step](../../sbs-tab-with-adaptive-cards.yml) guide to build 
 * [Tabs on mobile](../design/tabs-mobile.md)
 * [Cards](../../task-modules-and-cards/what-are-cards.md)
 * [Use task modules in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
-* [Form completion feedback](../../bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Form completion feedback](../../task-modules-and-cards/cards/cards-actions.md#form-completion-feedback)
+* [Microsoft Teams update](../../resources/teams-updates.md)

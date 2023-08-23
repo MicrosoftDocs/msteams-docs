@@ -19,7 +19,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 | 25/05/2023 | Use a deep link to open a tab app in meeting side panel in Teams mobile client. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) |
 |23/05/2023 |  Live Share SDK is now generally available. Use Live Share to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. | Build apps for Teams meetings and calls > Enhanced collaboration with Live Share > [Live Share SDK](apps-in-teams-meetings/teams-live-share-overview.md)|
 |23/05/2023 | Use Teams app design guidelines to help you make quick and right decisions to design your app. | Design your app > [Overview](concepts/design/design-teams-app-overview.md)|
-Cater your app to a specific audience from the available list of countries or regions. | Distribute your app > Publish to the Teams store > Prepare your Teams store submission > [Distribute your app to specific countries or regions](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries-or-regions)|
+|21/05/2023 |Cater your app to a specific audience from the available list of countries or regions. | Distribute your app > Publish to the Teams store > Prepare your Teams store submission > [Distribute your app to specific countries or regions](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries-or-regions)|
 | 17/05/2023 | Use the Teams Toolkit v5 extension with many new app development features to get started with app development for Teams using Visual Studio Code. | Tools and SDKs > Teams Toolkit > [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md)|
 | 17/05/2023 | Updated Get started module with GitHub Codespaces and step-by-step guides aligned with Teams Toolkit v5. It also includes details for extending Teams app over Microsoft 365 and Outlook. | [Get started](get-started/get-started-overview.md)|
 
@@ -35,23 +35,26 @@ Cater your app to a specific audience from the available list of countries or re
 
 Teams platform features that are available to all app developers.
 
-**2023 July**
+**2023 August**
 
-* ***July 25, 2023***: [Use people icon in an Adaptive Card to view the images of users](task-modules-and-cards/cards/cards-format.md#people-icon-in-an-adaptive-card).
-
-* ***July 20, 2023***: [App caching for iOS personal tray](tabs/how-to/app-caching.md).
-
-* ***July 06, 2023***: [Use app icon badging to identify any app activity during a meeting](apps-in-teams-meetings/app-icon-badging-for-your-app.md).
+* ***August 16, 2023***: [Use Teams Toolkit Visual Studio v17.7 extension with many new app development features to get started with app development for Teams.](toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md)
+* ***August 10, 2023***: [Send a proactive message using AAD ID](bots/how-to/conversations/send-proactive-messages.md).
 
 :::column-end:::
 :::row-end:::
 
-<br>
+<br/>
+
 <details>
+
 <summary><b>2023</b></summary>
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 25/07/2023 | Use Collaborative Stage View to engage with your app content in a new Teams window | Build tabs > [Tabs link unfurling and Stage View](tabs/tabs-link-unfurling.md#collaborative-stage-view).
+| 25/07/2023 | Use people icon in an Adaptive Card to view the images of users | Build cards and task modules > Build cards > Review store validation guidelines > [Build cards](task-modules-and-cards/cards/cards-format.md#people-icon-in-an-adaptive-card) |
+| 20/07/2023 | App caching for iOS personal tray | Build tabs > [App caching for iOS personal tray](tabs/how-to/app-caching.md) |
+| 06/07/2023 | Use app icon badging to identify any app activity during a meeting | Build apps for Teams meetings and calls > Build in-meeting notification and app icon badging > [Use app icon badging to identify any app activity during a meeting](apps-in-teams-meetings/app-icon-badging-for-your-app.md) |
 | 14/06/2023 | Added validation guidelines for Teams app powered by Artificial Intelligence (AI). | Distribute your app > Publish to the Teams store > Review store validation guidelines > [Apps powered by Artificial Intelligence](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-powered-by-artificial-intelligence) |
 | 02/06/2023 | Get real-time meeting events for channel meetings. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > Meeting apps APIs > [Get real-time Teams meeting events API](apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api) |
 | 24/04/2023 | Develop your apps with a seamless transition between Teams Developer Portal and Teams Toolkit. | Tools and SDKs > Developer Portal for Teams > [Develop your apps with Teams Toolkit](concepts/build-and-test/develop-your-apps-with-teams-toolkit.md) |
@@ -112,12 +115,12 @@ Teams platform features that are available to all app developers.
 | 07/21/2022 | Introduced step by step guide to send activity feed notifications | Design your app > UI components> Activity feed notifications > [Send activity feed notification](sbs-graphactivity-feedbroadcast.yml) |
 | 07/08/2022| Updates to send channel ID selected by user during app installation to bots via conversation and installation update events |  Build bots > Bot conversations > Conversation events in your Teams bot > [Conversation events in your Teams bot](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 | 06/16/2022 | Updated media capabilities to support desktop and mobile| Integrate device capabilities > [Integrate media capabilities](concepts/device-capabilities/media-capabilities.md)|
-| 06/08/2022 | Optional card feedback for success message| Build bots > Bot conversations > [Messages in bot conversations](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
+| 06/08/2022 | Optional card feedback for success message| Build cards and task modules > Build cards > [Form completion feedback](task-modules-and-cards/cards/cards-actions.md#form-completion-feedback)|
 | 06/03/2022 | Updated Add authentication module for enabling SSO for tab app with new structure and procedures | Add authentication > Tabs > [Enable single sign-on in a tab app](tabs/how-to/authentication/tab-sso-overview.md) |
 | 05/24/2022 | Additional tips for rapid approval to publish your app linked to a SaaS offer | Publish to the Teams store > Overview > [Additional tips for rapid approval to publish your app linked to a SaaS offer](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
 | 05/24/2022 | Submit your Outlook- and Office-enabled apps to the Teams store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
 | 05/24/2022 | App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-library.md)  |
-| 05/24/2022 | Teams Toolkit version 4.0.0 for Visual Studio Code is now GA | Tools and SDKs > Teams Toolkit for Visual Studio Code > <br> •  [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md) <br> • [Build command bot with JavaScript](toolkit/add-capability.md) <br> • [Build notification bot with JavaScript](toolkit/add-capability.md) <br> • [Preview and customize Teams app manifest](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [Connect to existing APIs](toolkit/add-API-connection.md) <br> • [Add capabilities to your Teams apps](toolkit/add-capability.md) <br> • [Add single sign-on experience](toolkit/add-single-sign-on.md) <br> • [Add cloud resources to Teams app](toolkit/add-resource.md) |
+| 05/24/2022 | Teams Toolkit version 4.0.0 for Visual Studio Code is now GA | Tools and SDKs > Teams Toolkit for Visual Studio Code > <br> • [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md) <br> • [Build command bot with JavaScript](toolkit/toolkit-v4/add-capability-v4.md) <br> • [Build notification bot with JavaScript](toolkit/toolkit-v4/add-capability-v4.md) <br> • [Preview and customize Teams app manifest](toolkit/toolkit-v4/add-capability-v4.md) <br> • [Connect to existing APIs](toolkit/add-API-connection.md) <br> • [Add capabilities to your Teams apps](toolkit/toolkit-v4/add-capability-v4.md) <br> • [Add single sign-on experience](toolkit/add-single-sign-on.md) <br> • [Add cloud resources to Teams app](toolkit/add-resource.md) |
 | 05/24/2022 | Introduced app manifest version 1.13 | App manifest > [Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md) |
 | 5/24/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
 |04/26/2022|Uninstall behavior for personal app with bot | Build bots > Bot conversations > [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
@@ -149,7 +152,7 @@ Teams platform features that are available to all app developers.
 | 02/08/2022 | Introduced step-by-step guide to create Calling and Meeting bot| Build bots > Calls and meetings bots > Register calls and meetings bot > [Step-by-step guide to create Calling and Meeting bot](sbs-calling-and-meeting.yml) |
 | 02/02/2022 | Introduced app manifest version 1.12 | App manifest > [App manifest schema](resources/schema/manifest-schema.md) |
 | 01/25/2022 | Send real-time captions API | Build apps for Teams meetings > Meeting apps API references> [Advanced meeting APIs](apps-in-teams-meetings/meeting-apps-apis.md)|
-| 01/19/2022 | Adaptive Cards form completion feedback | Build bots > Bot conversations > Messages in bot conversations > [Form completion feedback](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
+| 01/19/2022 | Adaptive Cards form completion feedback |  Build cards and task modules > Build cards > [Form completion feedback](task-modules-and-cards/cards/cards-actions.md#form-completion-feedback)|
 | 01/17/2022 | People Picker in Adaptive cards for desktop | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 
 </details>
@@ -290,7 +293,7 @@ Explore updates from the previous GA releases listed here.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-| 11/12/2018 | Tabs in group chat is now available in the released version of Teams. The tabs section is updated for clarity.| [Configurable tabs](~/concepts/tabs/tabs-configurable.md) |
+| 11/12/2018 | Tabs in group chat are now available in the released version of Teams. The tabs section is updated for clarity.| [Configurable tabs](~/concepts/tabs/tabs-configurable.md) |
 | 11/09/2018 | You can now create deep links to private chats between users. | [Deep linking to a chat](concepts/build-and-test/deep-link-teams.md#deep-links-to-navigate-to-chat-messages) |
 | 11/08/2018 | SharePoint Framework 1.7 and a new feature to use Microsoft Teams tab as a SharePoint Framework web part is shipped. | [Tabs in SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
 | 11/05/2018 | The **task module** feature is released. A task module allows you to create modal pop-up experiences in your Teams application, from both bots and tabs. Inside the pop-up, you can run your own custom HTML/JavaScript code, show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video, or display an [Adaptive card](/adaptive-cards/). | [Task module Overview](~/concepts/task-modules/task-modules-overview.md), [task module in tabs](~/concepts/task-modules/task-modules-tabs.md),  [task module in bots](~/concepts/task-modules/task-modules-bots.md) |
@@ -347,9 +350,15 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2023 July**
+**2023 August**
 
-* ***July 13, 2023***: [Extend static tabs to group chat or meetings with a customizable experience.](tabs/what-are-tabs.md)
+* ***August 22, 2023***: [Enable RSC permissions for a user using the Graph APIs](graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings).
+
+* ***August 21, 2023***: [Introduced the new Microsoft Teams client to provide better experience for your apps and users](resources/teams-updates.md).
+
+* ***August 21, 2023***: [Use Adaptive Card-based Loop components to build collaborative experiences within Teams message extensions that work across Microsoft 365.](m365-apps/design-loop-components.md)
+
+* ***August 08, 2023***: [Use callRecording API to fetch meeting recording from all meetings.](graph-api/meeting-transcripts/overview-transcripts.md)
 
 :::column-end:::
 :::row-end:::
@@ -360,7 +369,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|19/07/2023| Use Collaborative Stage View to engage with your app content in a new Teams window | Build tabs > [Tabs link unfurling and Stage View](tabs/tabs-link-unfurling.md#collaborative-stage-view) |
+|31/07/2023| Bots can mention tags in Adaptive Cards. |Build bots > Bot conversations > Message in bot conversations > Channel and group chat conversation with a bot > [Bots can mention tags in Adaptive Cards](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention)|
+|13/07/2023| Extend static tabs to group chat or meetings with a customizable experience. |Build tabs > [Overview](tabs/what-are-tabs.md)|
 |31/01/2023| Send notifications to specific participants on a meeting stage with targeted in-meeting notification. |Build apps for Teams meetings and calls > Enable and configure apps for meetings > Build in-meeting notification for Teams meeting > Build tabs for meeting > [Targeted in-meeting notification](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification)|
 |30/01/2023| Enable app caching to improve subsequent launch time of the apps to the meeting side panel.|Build tabs > [App caching for your tab app](tabs/how-to/app-caching.md) |
 
@@ -398,7 +408,7 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 17/05/2023 | [Teams Toolkit v4](~/toolkit/toolkit-v4/teams-toolkit-fundamentals-v4.md) extension within Visual Studio Code **will be** deprecated. We recommend that you use Teams Toolkit v5 within Visual Studio Code for building your Teams app. | Tools and SDKs > Teams Toolkit > [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md)|
+| 17/05/2023 | [Teams Toolkit v4](toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code **will be** deprecated. We recommend that you use Teams Toolkit v5 within Visual Studio Code for building your Teams app. | Tools and SDKs > Teams Toolkit > [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md)|
 
 ## Deprecated
 

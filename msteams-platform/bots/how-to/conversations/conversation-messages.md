@@ -690,43 +690,6 @@ The following code shows an example of sending a simple Adaptive Card:
 }
 ```
 
-#### Form completion feedback
-
-You can build form completion feedback using an Adaptive Card. Form completion message appears in Adaptive Cards while sending a response to the bot. The message can be of two types, error or success:
-
-* **Error**: When a response sent to the bot is unsuccessful, **Something went wrong, Try again** message appears.
-
-     :::image type="content" source="../../../assets/images/Cards/error-message.png" alt-text="Error message"border="true":::
-
-* **Success**: When a response sent to the bot is successful, **Your response was sent to the app** message appears.
-
-     :::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Success message"border="true":::
-
-     You can select **Close** or switch chat to dismiss the message.
-
-     If you don't want to display the success message, set the attribute `hide` to `true` in the `msTeams` `feedback` property. Following is an example:
-
-     ```json
-        "content": {
-            "type": "AdaptiveCard",
-            "title": "Card with hidden footer messages",
-            "version": "1.0",
-            "actions": [
-            {
-                "type": "Action.Submit",
-                "title": "Submit",
-                "msTeams": {
-                    "feedback": {
-                    "hide": true
-                    }
-                }
-            }
-            ]
-        } 
-     ```
-
-For more information on cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
-
 ## Add notifications to your message
 
 There are two ways to send a notification from your application:
@@ -839,6 +802,7 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 | 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this bot | Tenant admin has blocked interactions between user and the bot app. Tenant admin needs to allow the app for the user inside of app policies. For more information, see [app policies](/microsoftteams/app-policies). | No | Stop posting to conversation until interaction with bot is explicitly initiated by a user in the conversation indicating that the bot is no longer blocked. |
 | 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot isn't part of the conversation roster. | The bot isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send another conversation request, wait for an [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) event, which indicates that the bot has been added again.|
 | 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the bot. | User has blocked the bot in personal chat or a channel through moderation settings. | No | Delete the conversation from cache. Stop attempting to post to conversations until interaction with bot is explicitly initiated by a user in the conversation, indicating that the bot is no longer blocked. |
+| 403 |**Code**: `ForbiddenOperationException` <br/> **Message**: Bot is not installed in user's personal scope | Proactive message is sent by a bot, which isn't installed in a personal scope. | No | Before attempting to send another conversation request, install the app in personal scope. |
 | 403 |**Code**: `InvalidBotApiHost` <br/> **Message**: Invalid bot api host. For GCC tenants, please call `https://smba.infra.gcc.teams.microsoft.com`.|The bot called the public API endpoint for a conversation that belongs to a GCC tenant.| No | Update the service URL for the conversation to `https://smba.infra.gcc.teams.microsoft.com` and retry the request.|
 | 403 | **Code**: `NotEnoughPermissions` <br/> **Message**: *scenario specific | Bot doesn't have required permissions to perform the requested action. | No | Determine the required action from the error message. |
 | 404 | **Code**: `ActivityNotFoundInConversation` <br/> **Message**: Conversation not found. | The message ID provided couldn't be found in the conversation. Message doesn't exist or it has been deleted. | No | Check if message ID sent is an expected value. Remove the ID if it was cached. |
