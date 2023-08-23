@@ -9,13 +9,11 @@ ms.date: 11/29/2021
 zone_pivot_groups: teams-toolkit-platform
 ---
 
-# Deploy Teams app to the cloud
+# Deploy Teams app to the cloud using Microsoft Visual Studio Code
 
 Teams Toolkit helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
 
 ::: zone pivot="visual-studio-code-v5"
-
-## Deploy Teams app to the cloud using Microsoft Visual Studio Code
 
 You can deploy to the following types of cloud resources:
 
