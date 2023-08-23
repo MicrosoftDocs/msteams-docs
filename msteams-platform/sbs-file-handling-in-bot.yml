@@ -77,7 +77,7 @@ items:
 
    [!INCLUDE [Azure api permission](includes/get-started/azure-user-api-permissions.md)]
 
-   [!INCLUDE [Manifest and new connection](includes/get-started/azure-manifest-service-connection.md.md)]
+   [!INCLUDE [Manifest and new connection](includes/get-started/azure-manifest-service-connection.md)]
 
 - title: Set up app settings and manifest files
   durationInMinutes: 2
