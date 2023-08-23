@@ -1,4 +1,3 @@
-## Set up local environment 
 
 1. Open [Microsoft-Teams-Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
 1. Select **Code**.
