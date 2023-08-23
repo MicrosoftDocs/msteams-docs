@@ -78,6 +78,14 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Enable RSC permissions for a user using the Graph APIs (Developer preview)
+        url: graph-api/rsc/grant-resource-specific-consent.md 
+      - text: New Microsoft Teams client (Developer preview)
+        url: resources/teams-updates.md
+      - text: Adaptive Card-based Loop component (Developer preview)
+        url: m365-apps/cards-loop-component.md
+      - text: Teams Toolkit v17.7 extension within Visual Studio
+        url: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md      
       - text: Send a proactive message using AAD ID
         url: bots/how-to/conversations/send-proactive-messages.md
       - text: Use callRecording API to fetch meeting recording from all meetings (Developer preview)
@@ -90,14 +98,8 @@ landingContent:
         url: apps-in-teams-meetings/app-icon-badging-for-your-app.md
       - text: Collaborative Stage View
         url: tabs/tabs-link-unfurling.md#collaborative-stage-view
-      - text: Real-time meeting events are supported in channel meetings
-        url: apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api
-      - text: Resource-specific consent for your Teams app
-        url: graph-api/rsc/resource-specific-consent.md      
-      - text: Drive customer adoption of your app
-        url: promote-app-adoption.md
-      - text: Changelog for Developer Portal
-        url: concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal
+ 
+
 
     - linkListType: whats-new
       links:

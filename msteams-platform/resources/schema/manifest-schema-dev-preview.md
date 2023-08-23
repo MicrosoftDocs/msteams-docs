@@ -403,7 +403,7 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`entityId`|String|64 characters|✔️|A unique identifier for the entity that the tab displays.|
-|`name`|String|128 characters|✔️|The display name of the tab in the channel interface.|
+|`name`|String|128 characters|✔️|The display name of the tab.|
 |`contentUrl`|String|2048 characters|✔️|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
 |`contentBotId`|String| | | The Microsoft Teams app ID specified for the bot in the Bot Framework portal. |
 |`websiteUrl`|String|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
