@@ -54,10 +54,18 @@ items:
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
     * Add Teams channel to deploy the bot.
-    * Create a tunnel to your web server's endpoints by using ngrok.
-    * Add messaging endpoint to the ngrok tunnel you created.
+    * Create a tunnel to your web server's endpoints by using devtunnel alternative ngrok.
+    * Add messaging endpoint to the devtunnel you created.
 
-    **To create Azure Bot resource**
+    [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
+
+    [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
+
+    [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
+
+    [!INCLUDE [Tunnel](includes/get-started/dev-ngrok-tunnel.md)]
+
+    <!--**To create Azure Bot resource**
 
     1. Go to the [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
@@ -192,7 +200,8 @@ items:
         
        1. Select **Apply**.
 
-          You have successfully set up a bot in Azure Bot Service.
+          You have successfully set up a bot in Azure Bot Service.    
+    -->
    
 - title: Update the Azure AD app registration 
   durationInMinutes: 5
