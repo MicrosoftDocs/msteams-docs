@@ -106,7 +106,10 @@ To build a scene using the Scene studio, follow these steps:
 
 1. Select **View in Teams** in the dialog box that appears, select **Add**.
 
-    The scene is tested or accessed by creating a test meeting and launching custom Together Mode scenes. For more information, see [Use custom Together Mode scenes in Teams](#use-custom-together-mode-scenes-in-Teams):
+    The scene is tested or accessed by creating a test meeting and launching custom Together Mode scenes. For more information, see [Use custom together mode scenes in Teams](#use-custom-together-mode-scenes-in-teams).
+
+
+[use-custom-together-mode-scenes-in-teams](#use custom-together-mode-scenes-in-Teams)
 
      :::image type="content" source="../assets/images/apps-in-meetings/launchtogethermode.png" alt-text="Screenshot shows the custom scene launched in a Teams meeting.":::
 
