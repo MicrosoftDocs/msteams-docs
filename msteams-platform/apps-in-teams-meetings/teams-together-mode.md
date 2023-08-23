@@ -28,9 +28,9 @@ A scene only app is still an app in Teams. The Scene studio handles the app pack
 You must have a basic understanding of the following to use custom Together Mode scenes:
 
 * Define scene and seats in a scene.
-* Have a Microsoft Developer account and be familiar with the Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
+* Create a Microsoft Developer account and be familiar with the Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
 * Understand the [concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
-* Ensure that the Administrator has granted permission to [**Upload a custom app**](../concepts/deploy-and-publish/apps-upload.md) and select all filters as part of App Setup and Meeting policies respectively.
+* Ensure that the administrator has granted permission to [**Upload a custom app**](../concepts/deploy-and-publish/apps-upload.md) and select all filters as part of App Setup and Meeting policies respectively.
 
 ## Best practices for creating a scene
 
@@ -64,7 +64,7 @@ To build a scene using the Scene studio, follow these steps:
 
     Alternately, to open *Scene studio* you can go to the home page of [Teams Developer Portal](https://dev.teams.microsoft.com/home):
     * Select **Create custom scenes for meetings**.
-    * Select **Tools** from the left-hand section, and select **Scene studio** from the **Tools** section.
+    * From the left pane select **Tools** and select **Scene studio**.
 
 1. In **Scenes Editor**, select **Create a new scene**.
 
@@ -101,7 +101,7 @@ To build a scene using the Scene studio, follow these steps:
 1. Select **Save** and select **View in Teams** to quickly test your scene in Teams.
 
     * Selecting **View in Teams** automatically creates a Teams app that can be viewed in the **Apps** page in the Teams Developer Portal.
-    * Selecting **View in Teams** automatically creates an app package that is appmanifest.json behind the scene. You can go to  **Apps** from the menu and access the automatically created app package.
+    * Selecting **View in Teams** automatically creates an app package that is appmanifest.json behind the scene. You can go to  **Apps** from the menu and access the created app package.
     
 1. Select **View in Teams** in the dialog box that appears, select **Add**.
 
@@ -225,7 +225,7 @@ To select scenes and use custom Together Mode scenes, follow these steps:
 
 ## Open a custom Together Mode scenes Scene Package
 
-You can share the Scene Package that is a .zip file retrieved from the Scene studio to other creators to further enhance the scene. The **Import a Scene** functionality helps unwrap a scene package to let the creator continue building the scene.
+You can share the Scene Package that is a .zip file retrieved from the Scene studio to other creators to further enhance the scene. The **Import a scene** functionality helps unwrap a scene package to let the creator continue building the scene.
 
 :::image type="content" source="../assets/images/apps-in-meetings/scene-zip-file.png" alt-text="Screenshot shows the Import a scene option highlighted in red in the scene studio.":::
 
