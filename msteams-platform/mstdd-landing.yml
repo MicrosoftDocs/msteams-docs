@@ -92,17 +92,15 @@ landingContent:
         url: copilot/how-to-extend-copilot.md
       - text: Distribute your app to specific countries
         url: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries-or-regions
-      - text: Distribute your app to specific countries or regions
-        url: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
       - text: Teams Toolkit v5 extension within Visual Studio Code
         url: toolkit/teams-toolkit-fundamentals.md
       - text: Develop your apps with a seamless transition between Teams Developer Portal and Teams Toolkit
         url: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
+      - text: Set up Microsoft license management
+        url: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
 
     - linkListType: whats-new
       links:
-      - text: Set up Microsoft license management
-        url: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
       - text: Tab apps in shared channels are available in Department of Defense (DOD) environment
         url: concepts/build-and-test/shared-channels.md
       - text: Use apps in Teams meetings scheduled through public channels
