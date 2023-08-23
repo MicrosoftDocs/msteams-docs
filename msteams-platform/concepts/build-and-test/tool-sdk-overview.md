@@ -16,14 +16,14 @@ Build and develop your Microsoft Teams app using tools, SDKs, and libraries. Now
 
 ## Tools
 
-Teams Platform brings you different tools to build and develop your Teams apps. Following are different tools which are available for you to build your own app:
+Teams platform brings you different tools to build and develop your Teams apps. The following are tools are available for you to build your app:
 
 | Tools | Why you need? | Environment | Test and debug |
 | -------- | ------------- | ----------------- | ---------------------- |
-| [Teams Toolkit](../../toolkit/teams-toolkit-fundamentals.md) | Teams Toolkit makes it simple to get started with app development for Microsoft Teams. You can begin with a project template for common line-of-business app scenarios or start from a sample. Save time on setup through automated app registration and configuration using Visual Studio Code and Visual Studio. | **Visual Studio Code**: JavaScript and TypeScript </br> **Visual Studio**: .NET and Blazor | In Visual Studio Code and Visual Studio |
-| [Yeoman generator for Teams](https://github.com/pnp/generator-teams) | Yo Teams allows you to create Microsoft Teams apps using TypeScript and node.js on your terms, in your preferred editor, and without any external or online dependencies. | TypeScript and node.js | NA |
-| [TeamsFx CLI](../../toolkit/TeamsFx-CLI.md) | TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications. | JavaScript and .NET | Use command prompt |
-| [Developer Portal for Teams](teams-developer-portal.md) | Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Teams apps. With Developer Portal, you can create a basic Teams app manifest and distribute the app to Teams.  | Supports all languages | Developer Portal for Teams |
+| [Teams Toolkit](../../toolkit/teams-toolkit-fundamentals.md) | Teams Toolkit makes it simple to get started with app development for Teams. You can begin with a project template for common line-of-business app scenarios or start from a sample. Save time on setup through automated app registration and configuration using Visual Studio Code and Visual Studio. | **Visual Studio Code**: JavaScript and TypeScript </br> **Visual Studio**: .NET and Blazor | In Visual Studio Code and Visual Studio |
+| [Yeoman generator for Teams](https://github.com/pnp/generator-teams) | Yeoman generator allows you to create Teams apps using TypeScript and JavaScript on your terms, in your preferred editor, and without any external or online dependencies. | TypeScript and JavaScript | NA |
+| [TeamsFx CLI](../../toolkit/TeamsFx-CLI.md) | TeamsFx CLI is a text-based command line interface (CLI) that accelerates Teams application development. It aims to provide keyboard centric experience when building Teams applications. | JavaScript and .NET | Use command prompt |
+| [Developer Portal for Teams](teams-developer-portal.md) | Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Teams apps. With Developer Portal, you can create a basic app manifest (previously known as Teams app manifest) and distribute the app to Teams.  | Supports all languages | Developer Portal for Teams |
 
 </br>
 
@@ -34,10 +34,10 @@ Teams Platform brings you different tools to build and develop your Teams apps. 
 | -------- | ------------- | ----------------- |
 | Environment variables | Use `.env` file | Use `.env` file |
 | Generate manifest | Teams Toolkit auto-generate when creating projects. | gulp manifest |
-| Deploy Teams app | Auto-update use command `Teams: Update Teams App` |gulp tenant: deploy |
+| Deploy Teams app | Automatically update use command `Teams: Update Teams App` |gulp tenant: deploy |
 | Create AAD app | Automatically create when debugging or provisioning the project. Users can also use their existing AAD app by filling in Teams app ID in `.env` file. | Manual |
 | Add SSO | Provide SSO-enabled samples and how-to guides to add SSO. | Manual |
-| Bot/ME Registration | Automatically create when debugging or provisioning the project. User can also specify their own Bot ID. | Manual (Azure Bot) |
+| Bot or Message extension Registration | Automatically create when debugging or provisioning the project. User can also specify their own Bot ID. | Manual (Azure Bot) |
 | Expose Node.js app | Tab: localhost + HTTPS and Others: Dev Tunnel | gulp ngrok-serve |
 | Run Node.js app | npm run teamsfx:dev | gulp serve |
 | One-click debug | F5 or debug in Visual Studio Code and Visual Studio | N/A |
@@ -61,8 +61,8 @@ The following flow diagram explains you the different SDKs, libraries, and its r
 
 | SDKs and libraries | Why you need? | Related SDKs and libraries |
 | ----------------- | -------------- | ----------------------- |
-| [TeamsFx SDK](~/toolkit/teamsfx-sdk.md) | TeamsFx simplifies your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources into single-line statements with zero configuration. | :::image type="icon" source="../../assets/icons/blue-dot.png" border="false"::: Depends on **Bot Framework SDK**, **Teams JavaScript client library**, and **Microsoft Graph SDK**. </br> :::image type="icon" source="../../assets/icons/yellow-dot.png" border="false"::: You can use it with **Teams AI Library** and **Adaptive Cards**. |
-| [Teams JavaScript client library](~/tabs/how-to/using-teams-client-library.md) | The Microsoft Teams JavaScript client library (TeamsJS) enables you to create hosted experiences within Teams, Microsoft 365 app, and Outlook. These experiences involve hosting your app content in an iFrame. | :::image type="icon" source="../../assets/icons/red-dot.png" border="false"::: You can pass the reference to **SharePoint Framework (SPFx)**. </br> :::image type="icon" source="../../assets/icons/yellow-dot.png" border="false"::: You can use it with **Microsoft Graph SDK**, **Adaptive Cards**, and **Fluent UI React components**. |
+| [TeamsFx SDK](~/toolkit/teamsfx-sdk.md) | TeamsFx simplifies your tasks by using Teams single sign-on (SSO) and accessing cloud resources into single-line statements with zero configuration. | :::image type="icon" source="../../assets/icons/blue-dot.png" border="false"::: Depends on **Bot Framework SDK**, **Teams JavaScript client library**, and **Microsoft Graph SDK**. </br> :::image type="icon" source="../../assets/icons/yellow-dot.png" border="false"::: You can use it with **Teams AI Library** and **Adaptive Cards**. |
+| [Teams JavaScript client library](~/tabs/how-to/using-teams-client-library.md) | The Teams JavaScript client library (TeamsJS) enables you to create hosted experiences within Teams, Microsoft 365 app, and Outlook. These experiences involve hosting your app content in an iFrame. | :::image type="icon" source="../../assets/icons/red-dot.png" border="false"::: You can pass the reference to **SharePoint Framework (SPFx)**. </br> :::image type="icon" source="../../assets/icons/yellow-dot.png" border="false"::: You can use it with **Microsoft Graph SDK**, **Adaptive Cards**, and **Fluent UI React components**. |
 | [SharePoint Framework (SPFx)](/sharepoint/dev/spfx/sharepoint-framework-overview) | The SharePoint Framework (SPFx) offers a page and web part model that fully supports client-side SharePoint development, seamlessly integrates with SharePoint data, and extends Microsoft Teams and Microsoft Viva. | :::image type="icon" source="../../assets/icons/yellow-dot.png" border="false"::: You can use it with **Microsoft Graph SDK**, **Adaptive Cards**, and **Fluent UI React components**. </br> :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Based on **SharePoint REST API**. |
 | [Live Share SDK](~/apps-in-teams-meetings/teams-live-share-overview.md) | Live Share is an SDK created to turn Teams apps into collaborative multi-user experiences without requiring dedicated back-end code to be written. | :::image type="icon" source="../../assets/icons/yellow-dot.png" border="false"::: You can use it with **Microsoft Graph SDK**, **Adaptive Cards**, and **Fluent UI React components**. </br> :::image type="icon" source="../../assets/icons/red-dot.png" border="false"::: You can pass the reference to **Teams JavaScript client library**. |
 
