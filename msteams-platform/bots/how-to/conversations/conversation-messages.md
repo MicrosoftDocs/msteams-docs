@@ -139,9 +139,9 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## Receive a read receipt
 
-Read receipt settings in Teams enables users to check whether the message has been read or not. If your app user has not read the message in the personal chat, then the bot can send a follow up message to remind the user to read the same message for enhancing the user experience. After the bot is enabled, the bot receives an event only in user:bot chat as soon as the user reads the bot's message. You can track the user engagement with `ReadStatus` that counts the number of events, and you can also send a context aware message. 
+In Teams, the read receipt settings allow users to verify whether recipients have read the message or not. If your app user has not read the message in the personal chat, then the bot can send a follow up message to remind the user to read the same message for enhancing the user experience. After the bot is enabled, it promptly receives an event exclusively within the user:bot chat when the user reads the bot's message. You can track the user engagement with `ReadStatus` that counts the number of events, and you can also send a context aware message. 
 
-The bots in Teams also act as core channel for reaching out to users, in the form of applications such as company communicators to send company-wide announcements. This enables admins to reach multiple users through chat and accomplish core scenarios such as broadcasting information, employee onboarding, and modern learning. To improve the effectiveness of Teams as a communication platform, creating a feedback loop using Read receipt enables you to tune into your bot’s experience based on user engagement.
+The bots in Teams also act as core channel for reaching out to users, in the form of applications such as company communicators to send company-wide announcements. This enables admins to reach multiple users through chat and do core scenarios such as broadcasting information, employee onboarding, and modern learning. To improve the effectiveness of Teams as a communication platform, creating a feedback loop using Read receipt enables you to tune into your bot’s experience based on user engagement.
 
 > [!NOTE]
 > * Read receipts for bots doesn’t support team, channel, group chat, and user:user:bot chat, it works only in user:bot chat. 
