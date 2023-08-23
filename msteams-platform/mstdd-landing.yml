@@ -103,8 +103,6 @@ landingContent:
 
     - linkListType: whats-new
       links:
-      - text: Set up Microsoft license management
-        url: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
       - text: Tab apps in shared channels are available in Department of Defense (DOD) environment
         url: concepts/build-and-test/shared-channels.md
       - text: Use apps in Teams meetings scheduled through public channels
