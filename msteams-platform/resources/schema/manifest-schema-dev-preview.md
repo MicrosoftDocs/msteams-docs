@@ -527,6 +527,8 @@ Each command item is an object with the following structure:
 
 ## scopeConstraints
 
+**Optional** &ndash; Object
+
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
 |`teams`|Array|128||A list of team thread IDs to which your app is restricted.|
