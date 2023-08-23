@@ -206,6 +206,16 @@ items:
 - title: Update the Azure AD app registration 
   durationInMinutes: 5
   content: |
+
+   [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
+
+   [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
+
+   [!INCLUDE [Azure clientapplication](includes/get-started/azure-client-application.md)]
+
+   [!INCLUDE [Azure api permission](includes/get-started/azure-user-api-permissions.md)]
+
+   <!--
     1. Go to the [Azure portal](https://portal.azure.com/).
 
     1. Select **Azure Active Directory**.
@@ -359,6 +369,7 @@ items:
       1. Select **Save**.
 
          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/new-connection-setting_1.png" alt-text="setting new connection":::
+   -->  
 
 - title: Set up app settings and manifest files
   durationInMinutes: 2
@@ -442,12 +453,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-zip-file-location.png" alt-text="manifest folder":::
 
-    1. In the Teams client, select the **Apps** icon.
-    1. Select **Manage your apps**.
-    1. Select **Upload an app**
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
-
-       :::image type="content" source="assets/images/teams-file-upload-bot/custom-upload.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
+       [!INCLUDE [Upload custom app](includes/get-started/app-upload.md)]
 
     1. Select the .zip file you've created in the **TeamsAppManifest** folder and select **Open**.
 
