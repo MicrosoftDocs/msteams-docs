@@ -85,7 +85,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 | [Deep linking](../concepts/build-and-test/deep-links.md) | In a Teams app, you can create deep links to information and features within Teams or to help the user navigate to content in your app. |
-| [DefaultInstallScope](../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-install-scope)| The install scope defined for this app by default. This will be the option displayed on the button when a user tries to add the app. <br> **See also**: [App manifest](#a)|
+| [Default install scope](../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-install-scope)| The install scope defined for the app by default. When a user tries to add the app, the option displays on the button. <br> **See also**: [App manifest](#a)|
 | [Delegated permission](../tabs/how-to/authentication/tab-sso-graph-api.md) | They're used by apps that have a signed-in user present. For these apps, either the user or an administrator consents to the permissions that the app requests and the app can act as the signed-in user when making calls to Microsoft Graph.  <br> **See also**: [SSO](#s); [Permission](#p); [Scope](#s) |
 | [Department of Defense (DoD)](../concepts/app-fundamentals-overview.md#government-community-cloud)| DoD environments deliver compliance with Department of Defense Security Requirements Guidelines, Defense Federal Acquisition Regulations Supplement (DFARS), and International Traffic in Arms Regulations (ITAR).|
 | [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md) | The primary tool for configuring, distributing, and managing your Microsoft Teams apps. With Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more. |
@@ -110,9 +110,9 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
-|[Federated or external user](../apps-in-teams-meetings/teams-apps-in-meetings.md#user-types-in-teams)|A federated or an external user is a Teams user from another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. <br>**See also**: [Anonymous](#a); [In-tenant user](#i); [Guest user](#g) |
+|[Federated or external](../apps-in-teams-meetings/teams-apps-in-meetings.md#user-types-in-teams)|A federated or an external user is a Teams user from another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. <br>**See also**: [Anonymous](#a); [In-tenant user](#i); [Guest user](#g) |
 | [First-run Experience](../concepts/design/design-teams-app-ui-templates.md)|A First-run Experience (FRE) is a user's introduction to your product. The FRE helps users to get started with the functions, features, and benefits of the product and influences users to come back and continue using your product.|
-| [Fluent UI](../concepts/design/design-teams-app-basic-ui-components.md)| Design and build your Teams app from scratch with the basic Fluent UI components.|
+| [Fluent UI](../concepts/design/design-teams-app-basic-ui-components.md)| Design and build your Teams app from scratch with the basic Fluent UI components. These components can work across different use cases, themes, and screen sizes. <br>**See also**: [Fluent UI React Components](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)|
 | [Fully qualified domain name (FQDN)](../tabs/how-to/authentication/tab-sso-register-aad.md) | A fully qualified domain name (FQDN) represents a domain name of a host or IP address(es). |
 
 ## G
@@ -145,12 +145,12 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Link unfurling](../messaging-extensions/how-to/link-unfurling.md) | A feature used with message extension and meeting to unfold links pasted into a compose message area. The links expand to show additional information about the link in Adaptive Cards or in the meeting Stage View. |
 | [Link Share SDK](../apps-in-teams-meetings/teams-live-share-overview.md) | An SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. With Live Share, your users can co-watch, co-create, and co-edit during meetings. |
 | [Live Share canvas](../apps-in-teams-meetings/teams-live-share-canvas.md)| When collaborating in meetings, it's essential for users to be able to point out and emphasize content on the screen. Live Share canvas makes it easy to add inking, laser pointers, and cursors to your app for seamless collaboration. |
-| [Live share media](../apps-in-teams-meetings/teams-live-share-overview.md#live-share-media)| Live Share media enables media synchronization for any media player with just a few lines of code. By synchronizing media at the player state and transport controls layer, you can individually attribute views, while providing the highest possible quality available through your app.|
+| [Live share media](../apps-in-teams-meetings/teams-live-share-overview.md#live-share-media)| Live Share media enables media synchronization for any media player. By synchronizing media at the player state and transport controls layer, you can individually attribute views, when providing the highest possible quality available through your app.|
 | [LOB apps](../tabs/how-to/authentication/tab-sso-register-aad.md) | Line of business (LOB) applications are internal or specific within an organization or business. It's custom to the organization that created it. Your organization can make LOB applications available through Microsoft store. <br> **See also**: [Store validation guidelines](#s); [Teams store](#t); [Personal app](#p); [Shared app](#s); [Customer-owned app](#c) |
 | [Local environment](../toolkit/TeamsFx-multi-env.md#create-a-new-environment-manually-in-visual-studio-code) | A default development environment created by Teams Toolkit.  <br>**See also**: [Environment](#e); [Dev environment](#d) |
 | [Local workbench](../sbs-gs-spfx.yml) | The default option to run and debug a Teams app in Visual Studio Code (VS Code) that is created using SPFx. <br>**See also**: [Workbench](#w); [Teams workbench](#t) |
 | [Location capability](../concepts/device-capabilities/location-capability.md) | A device capability that you can integrate with your app to know the geographical location of the app user for an enhanced collaborative experience. This feature is currently available only for Teams mobile clients only. <br>**See also**: [Capability](#c); [Media capability](#m); [Device Capability](#d); [Teams Mobile](#t) |
-| [Long description](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#long-description) | The long description can provide a narrative that highlights your apps. <br>**See also**: [Short description](#s)|
+| [Long description](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#long-description) | The long description can provide a narrative that highlights your apps main features, the problems it solves, and target audience. <br>**See also**: [Short description](#s)|
 | [Low code apps](../samples/teams-low-code-solutions.md) | A custom Teams app built from scratch using Microsoft Power Platform that requires little or no coding, and can be developed and deployed quickly. |
 
 ## M
@@ -164,7 +164,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Messaging endpoint](../bots/how-to/authentication/bot-sso-register-aad.md) | It's the endpoint where messages are sent to your bot. <br> **See also**: [Endpoint address](#e); [Bot handle](#b); [OAuth connection](#o); [SSO](#s) |
 | [Message extension](../messaging-extensions/what-are-messaging-extensions.md) | Message extensions (previously called [composeExtensions](../resources/schema/manifest-schema.md#composeextensions)) are shortcuts for inserting app content or acting on a message. You can use a message extension without navigating away from the conversation. <br>**See also**: [Search commands](#s); [Action commands](#a) |
 | [Meeting extension](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | An app designed to be used during the meeting lifecycle to make it more productive, such as whiteboard, dashboard, and more. |
-| [Meeting surfaces](../resources/schema/manifest-schema.md#configurabletabs) | The set of meetingSurfaceItem scopes that a tab belong to. <br>**See also**: [Configurable tab](#c); [Configuration URL](#c)|
+| [Meeting surfaces](../resources/schema/manifest-schema.md#configurabletabs) | The set of `meetingSurfaceItem` scopes that a tab belong to. <br>**See also**: [Configurable tab](#c)|
 | [Microsoft 365 account](../toolkit/accounts.md#microsoft-365-developer-account-types) | Microsoft 365 account includes 25 user licenses, including the administrator, for development purposes only. |
 | Microsoft 365 client ID | See [Client ID](#c) |
 | [Add Microsoft 365 channel for your bot](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-bot) | A feature of Teams message extension app that lets the users interact with it from Microsoft 365. |
@@ -207,10 +207,10 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Personal app](../concepts/design/personal-apps.md) | A personal app is a Teams application with a personal scope. It focuses on interactions with a single user. It can be a conversational bot to engage in one-to-one conversations with a user or a personal tab providing an embedded web experience, or both. <br>**See also**: [Shared app](#s); [Static app](#s) |
 | [Policy](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#privacy-policy) | The privacy policy can be specific to your Teams app or an overall policy for all your services.|
 | [Power Virtual Agents](../bots/how-to/add-power-virtual-agents-bot-to-teams.md) | A no-code, guided graphical interface solution that empowers every member of your team to create rich, conversational chat bots that easily integrate with the Teams platform. |
-| [Privacy URL](../resources/schema/manifest-schema.md#developer)| The url to the page that provides privacy information for the app.|
+| [Privacy URL](../resources/schema/manifest-schema.md#developer)| The https:// URL to the page that provides privacy information for the app.|
 | [Proactive messages](../bots/how-to/conversations/send-proactive-messages.md) | A message sent by a bot that isn't in response to a request from a user, such as welcome messages, notifications, scheduled messages. |
 | [Provision](../toolkit/provision.md) | A process that creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. It's a prerequisite to deployment. <br>**See also**: [Deploy](#d) |
-| [publisherDocsUrl](../resources/schema/manifest-schema.md#publisherdocsurl)| The url to the page that provides additional app information for the admins.|
+| [Publisher docs URL](../resources/schema/manifest-schema.md#publisherdocsurl)| The https:// URL to an information page for admins to get guidelines before allowing an app, which is blocked by default.|
 
 ## R
 
@@ -220,20 +220,20 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Redirect URL](../bots/how-to/authentication/bot-sso-register-aad.md) | A redirect URI is the location where the authorization server sends the user after the app has been successfully authorized and granted an authorization code or access token. It's also called or reply URL. |
 | [Role-based views](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/user-specific-views.md) | A feature of tabs where the tab experience may be different for users depending on their permission level. |
 | [RSC permission](../graph-api/rsc/resource-specific-consent.md) | Resource-specific consent (RSC) permission feature is needed by team owners to let a bot app receive messages across channels in a team without being @mentioned. |
-| [Real-time meeting protocol (RTMP)](../resources/schema/manifest-schema.md#meetingextensiondefinition)| A boolean value indicating whether this app can stream the meeting's audio video content to an RTMP endpoint.|
+| [Real-time meeting protocol (RTMP)](../resources/schema/manifest-schema.md#meetingextensiondefinition)| A Boolean value indicating whether this app can stream the meeting's audio and video content to an RTMP endpoint.|
 
 ## S
 
 | Term | Definition |
 | --- | --- |
-|[SaaS](../concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)| With a transactable Software-as-a-Service (SaaS) offer, you can monetize your Teams app by selling subscription plans directly from your Teams store listing. <br> **See also**: [Monetization](#m)|
+|[SaaS](../concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)| You can monetize your Teams app by selling subscription plans directly from your Teams store listing with a transactable Software-as-a-Service (SaaS) offer. <br> **See also**: [Monetization](#m)|
 |Scene|You can build a scene using the scene studio.|
 | [Scope](../tabs/how-to/authentication/tab-sso-register-aad.md) | Scopes are used to implement scope-based access control, for a client application that has been given delegated access to the resource by its owner. They're resource-defined strings. For example, **Mail.Read**, **Directory.ReadWrite.All**; managed in the Azure portal. <br> **See also**: [SSO](#s); [Authentication flow](#a); [Delegated permission](#d); [Permission](#p) |
 | [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md) | A type of message extension app that lets users search external systems and include the search result into a message using a card. <br>**See also**: [Message extensions](#m); [Action commands](#a) |
 | [Sequential workflow](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md) | A workflow that lets a bot carry out a conversation with a user based on the user response. |
 | [Shared app](../concepts/extensibility-points.md#shared-app-experiences) | An app that exists in a team, channel, or chat where users can collaborate and interact. <br>**See also:** [Personal app](#p) |
 | [SharePoint site collection](../sbs-gs-spfx.yml) | A collection site for SharePoint apps. You need to have an administrator account for this site before you can deploy your SPFx-based app on the SharePoint site. <br>**See also**: [SPFx](#s) |
-| [Short description](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#short-description) | A concise summary of your app that should be original, engaging, and directed at your target audience. <br> **See also**: [Long description](#l)|
+| [Short description](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#short-description) | A concise summary of your app that must be original, engaging, and directed at your target audience. <br> **See also**: [Long description](#l)|
 | [Sideloading](../toolkit/publish.md#publish-to-individual-scope-or-sideload-permission) | A process where a Teams app is loaded to the Teams client to test it in the Teams environment before distributing it. |
 | [SidePanel](../sbs-meetings-sidepanel.yml) | A feature of Teams meeting app that enables you to customize experiences in a meeting that allow organizers and presenters to have different set of views and actions. |
 | [Single-tenant app](../tabs/how-to/authentication/tab-sso-register-aad.md) | Single-tenant apps are only available in the tenant they were registered in, also known as their home tenant. <br> **See also**: [Multi-tenant apps](#m) |
@@ -246,7 +246,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Static search](../task-modules-and-cards/cards/dynamic-search.md) | A method of typeahead search that lets users search from pre-specified values in the Adaptive Cards payload. <br>**See also**: [Dynamic search](#d) |
 | [Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) | A set of Teams-specific guidelines for validating an app before it can be submitted to Teams store. <br>**See also**: [Teams store](#t) |
 | [Subdomain ID](../tabs/how-to/authentication/tab-sso-register-aad.md) | It's the application ID URI that you registered when configuring scope for your app in Azure AD. <br> **See also**: [SSO](#s); [Application ID URI](#a); [Application ID](#a) |
-| [subscription offer](../resources/schema/manifest-schema.md#subscriptionoffer) | A unique identifier for the Commercial Marketplace Software as a Service Offer.|
+| [Subscription offer](../resources/schema/manifest-schema.md#subscriptionoffer) | Specifies the SaaS offer associated with your app. A unique identifier that includes your Publisher ID and Offer ID, which you can find in Partner Center.|
 
 ## T
 
