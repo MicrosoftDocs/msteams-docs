@@ -1,3 +1,4 @@
+## Create client secret
 
 Perform the following steps if you've created a new **Microsoft App ID**:
 
