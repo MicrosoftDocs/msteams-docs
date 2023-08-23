@@ -16,7 +16,7 @@
     
     To create a new resource group, select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
     
-    :::image type="content" source="../../assets/images/include-files/newresource.png" alt-text="Screenshot shows the selection of new resource location.":::
+    :::image type="content" source="../../assets/images/include-files/new-resource-location.png" alt-text="Screenshot shows the selection of new resource location.":::
 
 1. In the **Microsoft App ID** section, select **Type of App** as **Multi Tenant**. 
 
@@ -37,7 +37,7 @@
 
 1. Select **Go to resource**. 
 
-    :::image type="content" source="../../assets/images/include-files/deployment-resources.png" alt-text="Screenshot shows the selection of resources.":::
+    :::image type="content" source="../../assets/images/include-files/resource-deployment.png" alt-text="Screenshot shows the selection of resources.":::
     
     You have successfully created your Azure bot.
 

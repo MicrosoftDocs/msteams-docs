@@ -85,8 +85,6 @@
 
     You have successfully set up a bot in Azure Bot Service.
 
----
-
 # [ngrok](#tab/ngrok)
     
 Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
