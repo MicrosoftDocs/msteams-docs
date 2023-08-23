@@ -341,19 +341,19 @@ The schema defines the following properties:
 
 ## $schema
 
-Optional, but recommended—string
+Optional, but recommended &ndash; string
 
 The https:// URL referencing the JSON Schema for the manifest.
 
 ## manifestVersion
 
-**Required**—String
+**Required** &ndash; String
 
 The version of the manifest schema that this manifest is using. Use `1.13` to enable Teams app support in Outlook and Microsoft 365 app; use `1.12` (or earlier) for Teams-only apps.
 
 ## version
 
-**Required**—String
+**Required** &ndash; String
 
 The version of a specific app. When you update something in your manifest, the version must be incremented too. This way, when the new manifest is installed, it overwrites the existing one and the user receives the new functionality. When this app was submitted to the store, the new manifest must be resubmitted and revalidated. The app users receive the new updated manifest automatically within few hours after the manifest is approved.
 
@@ -363,7 +363,7 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 ## ID
 
-**Required**—Microsoft app ID
+**Required** &ndash; Microsoft app ID
 
 The ID is a unique Microsoft-generated identifier for the app. The format of the ID is GUID. You have an ID if your bot is registered through the Microsoft Bot Framework. You have an ID if your tab's web app already signs in with Microsoft. You must enter the ID here. Otherwise, you must generate a new ID at the [Microsoft Application Registration Portal](https://aka.ms/appregistrations). Use the same ID if you add a bot.
 
@@ -374,7 +374,7 @@ The ID stored in Teams Admin Center is the **External App ID** and it's visible 
 
 ## developer
 
-**Required**—Object
+**Required** &ndash; Object
 
 Specifies information about your company. For apps submitted to the Teams store, these values must match the information in your store listing. For more information, see the [Teams store publishing guidelines](~/concepts/deploy-and-publish/appsource/publish.md).
 
@@ -388,7 +388,7 @@ Specifies information about your company. For apps submitted to the Teams store,
 
 ## name
 
-**Required**—Object
+**Required** &ndash; Object
 
 The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` must be different.
 
@@ -399,7 +399,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 
 ## description
 
-**Required**—Object
+**Required** &ndash; Object
 
 Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry.
 
@@ -412,7 +412,7 @@ Ensure that your description describes your experience and helps potential custo
 
 ## localizationInfo
 
-**Optional**—Object
+**Optional** &ndash; Object
 
 Allows the specification of a default language and provides pointers to more language files. For more information, see [localization](~/concepts/build-and-test/apps-localization.md).
 
@@ -431,7 +431,7 @@ An array of objects specifying more language translations.
 
 ## icons
 
-**Required**—Object
+**Required** &ndash; Object
 
 Icons used within the Teams app. The icon files must be included as part of the upload package. For more information, see [Icons](../../concepts/build-and-test/apps-package.md#app-icons).
 
@@ -442,7 +442,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 ## accentColor
 
-**Required**—HTML Hex color code
+**Required** &ndash; HTML Hex color code
 
 A color to use and as a background for your color icons.
 
@@ -450,7 +450,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 ## configurableTabs
 
-**Optional**—Array
+**Optional** &ndash; Array
 
 Used when your app experience has a team channel tab experience that requires extra configuration before it's added. Configurable tabs are supported only in the `team` and `groupChat` scopes and you can configure the same tabs multiple times. However, you can define it in the manifest only once.
 
@@ -466,7 +466,7 @@ Used when your app experience has a team channel tab experience that requires ex
 
 ## staticTabs
 
-**Optional**—Array
+**Optional** &ndash; Array
 
 Defines a set of tabs that can be "pinned" by default, without the user adding them manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience. Static tabs declared in the `team` scope are currently not supported.
 
@@ -492,7 +492,7 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 
 ## bots
 
-**Optional**—Array
+**Optional** &ndash; Array
 
 Defines a bot solution, along with optional information such as default command properties.
 
@@ -526,7 +526,7 @@ A list of commands that your bot can recommend to users. The object is an array 
 
 ## connectors
 
-**Optional**—Array
+**Optional** &ndash; Array
 
 The `connectors` block defines a connector card for Microsoft 365 Groups for the app.
 
@@ -540,7 +540,7 @@ The object is an array (maximum of one element) with all elements of type `objec
 
 ## composeExtensions
 
-**Optional**—Array
+**Optional** &ndash; Array
 
 Defines a message extension for the app.
 
@@ -591,7 +591,7 @@ Each command item is an object with the following structure:
 
 ## permissions
 
-**Optional**—Array of strings
+**Optional** &ndash; Array of strings
 
 An array of `string`, which specifies which permissions the app requests, which let end users know how the extension does. The following options are non-exclusive:
 
@@ -605,7 +605,7 @@ Changing these permissions during app update, causes your users to repeat the co
 
 ## devicePermissions
 
-**Optional**—Array of strings
+**Optional** &ndash; Array of strings
 
 Provides the native features on a user's device that your app requests access to. Options are:
 
@@ -639,7 +639,7 @@ The object is an array with all elements of the type `string`. The maximum item 
 
 ## webApplicationInfo
 
-**Optional**—Object
+**Optional** &ndash; Object
 
 Provide your Azure Active Directory App ID and Microsoft Graph information to help users seamlessly sign into your app. If your app is registered in Microsoft Azure Active Directory (Azure AD), you must provide the App ID. Administrators can easily review permissions and grant consent in Teams admin center.
 
@@ -650,7 +650,7 @@ Provide your Azure Active Directory App ID and Microsoft Graph information to he
 
 ## graphConnector
 
-**Optional**—Object
+**Optional** &ndash; Object
 
 Specify the app's Graph connector configuration. If this is present, then [webApplicationInfo.id](#webapplicationinfo) must also be specified.
 
@@ -660,7 +660,7 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 
 ## showLoadingIndicator
 
-**Optional**—Boolean
+**Optional** &ndash; Boolean
 
 Indicates if or not to show the loading indicator when an app or tab is loading. Default is **false**.
 >[!NOTE]
@@ -670,7 +670,7 @@ Indicates if or not to show the loading indicator when an app or tab is loading.
 
 ## isFullScreen
 
- **Optional**—Boolean
+ **Optional** &ndash; Boolean
 
 Indicates if a personal app is rendered without a tab header bar (signifying full screen mode). Default is **false**.
 
@@ -682,7 +682,7 @@ Indicates if a personal app is rendered without a tab header bar (signifying ful
 
 ## activities
 
-**Optional**—Object
+**Optional** &ndash; Object
 
 Define the properties your app uses to post a user activity feed.
 
@@ -746,7 +746,7 @@ Define the properties your app uses to post a user activity feed.
 
 ## defaultInstallScope
 
-**Optional**—String
+**Optional** &ndash; String
 
 Specifies the install scope defined for this app by default. The defined scope is the option displayed on the button when a user tries to add the app. Options are:
 
@@ -757,7 +757,7 @@ Specifies the install scope defined for this app by default. The defined scope i
 
 ## defaultGroupCapability
 
-**Optional**—Object
+**Optional** &ndash; Object
 
 When a group install scope is selected, it defines the default capability when the user installs the app. Options are:
 
@@ -773,7 +773,7 @@ When a group install scope is selected, it defines the default capability when t
 
 ## configurableProperties
 
-**Optional**—Array
+**Optional** &ndash; Array
 
 The `configurableProperties` block defines the app properties that Teams admins can customize. For more information, see [enable app customization](~/concepts/design/enable-app-customization.md). The app customization feature isn't supported in custom or LOB apps.
 
@@ -794,7 +794,7 @@ You can define any of the following properties:
 
 ## supportedChannelTypes
 
-**Optional**—Array
+**Optional** &ndash; Array
 
 Enables your app in non-standard channels. If your app supports a team scope and this property is defined, Teams enables your app in each channel type accordingly. The supportedChannelTypes property only supports `sharedChannels` and `privateChannels`.
 
@@ -805,13 +805,13 @@ Enables your app in non-standard channels. If your app supports a team scope and
 
 ## defaultBlockUntilAdminAction
 
-**Optional**—Boolean
+**Optional** &ndash; Boolean
 
 When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidden from users by default until admin allows it. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**. For more information on default app block, see [Block apps by default for users until an admin approves](../../concepts/deploy-and-publish/add-default-install-scope.md#block-apps-by-default-for-users-until-an-admin-approves).
 
 ## publisherDocsUrl
 
-**Optional**—String
+**Optional** &ndash; String
 
 **Maximum size** - 2048 characters
 
@@ -819,7 +819,7 @@ The `publisherDocsUrl` is an HTTPS URL to an information page for admins to get 
 
 ## subscriptionOffer
 
-**Optional**—Object
+**Optional** &ndash; Object
 
 Specifies the SaaS offer associated with your app.
 
@@ -829,7 +829,7 @@ Specifies the SaaS offer associated with your app.
 
 ## meetingExtensionDefinition
 
-**Optional**—Object
+**Optional** &ndash; Object
 
 Specify meeting extension definition. For more information, see [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md).
 
@@ -852,7 +852,7 @@ Specify meeting extension definition. For more information, see [custom Together
 
 ## authorization
 
-**Optional**—Object
+**Optional** &ndash; Object
 
 > [!NOTE]
 > `authorization` is only supported for manifest version 1.12 or later.
