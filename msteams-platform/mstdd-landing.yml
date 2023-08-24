@@ -48,6 +48,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Configure Teams bots to receive read receipts
+        url: bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt
       - text: Bots can mention tags in Adaptive Cards
         url: bots/how-to/conversations/channel-and-group-conversations.md#tag-mention
       - text: Distribute your app to specific countries
