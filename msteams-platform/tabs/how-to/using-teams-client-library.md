@@ -53,7 +53,9 @@ Once you're able, the next step is to [update existing application code](#2-upda
 
 #### Authentication
 
-In the current version of Teams-JS (x.0.0), apps mut provide an URL in the authentication redirection parameter to call to authenticate. Apps implemented on the previous version of Teams-JS (@x.0.0) will only support Teams following this update, as the `oauthRedirectmethod` and `authId` query parameters will continue to be passed to the 3P app server. To enable muti-hub support, add a `hostRedirectUrl` parameter to your hub to insert the deeplink used to redirect back to the hub. 
+In the current version of `TeamsJS` (2.11.0 or newer), apps must provide a third url parameter, `hostRedirectUrl`, in the authentication API, to redirect users to the correct client after the completion of authentication. The `hostRedirectUrl` authentication parameter will be necessary to enable your client to be supported across Microsoft 365 host applications. Apps implemented on older version of `TeamsJS` will only support Teams following this update, as the `oauthRedirectmethod` and `authId` query parameters will continue to be passed to the 3P app server.
+
+For more information regarding the authentication parameter, see [Use external OAuth providers](authentication/auth-oauth-provider.md)
 
 #### Teams apps running across Microsoft 365
 
