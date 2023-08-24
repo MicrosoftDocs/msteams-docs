@@ -73,7 +73,7 @@ To build a scene using the Scene studio, follow these steps:
     * You can select **Close** to toggle between closing or reopening the right pane.
     * You can zoom in or zoom out of the scene using the zoom bar for a better view of the scene.
 
-1. Select **Add images** to add the image into the environment:
+1. To add the image to the environment, select **Add images**.
 
    :::image type="content" source="../assets/images/apps-in-meetings/addimages.png" alt-text="Screenshot shows the Add images option highlighted in red in the scene studio.":::
 
@@ -192,11 +192,11 @@ The following code is the scene.json sample:
 }
 ```
 
-Each scene has a unique ID and name. The scene JSON also contains information on all the assets used for the scene. Each asset contains a filename, width, height, and position on the X and Y-axis. Similarly, each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is generated automatically and is altered as per preference. The seating order number corresponds to the order of people joining the call.
+Each scene has a unique ID and name. The scene.json file also contains information on all the assets used for the scene. Each asset contains a filename, width, height, and position on the X and Y-axis. Similarly, each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is generated automatically and is altered as per preference. The seating order number corresponds to the order of people joining the call.
 
 The `zOrder` represents the order of placing images and seats along the Z-axis. It gives a sense of depth or partition if necessary. See the step-by-step getting started sample. The sample uses the `zOrder`.
 
-Now that you've gone through the sample scene.json, you can use the custom Together Mode scenes to engage in scenes.
+Now that you've gone through the sample scene.json file, you can use the custom Together Mode scenes to engage in scenes.
 
 ## Use custom Together Mode scenes in Teams
 
