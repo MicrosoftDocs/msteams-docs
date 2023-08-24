@@ -13,11 +13,11 @@
 1. Select your **Subscription** from the dropdown list.
 1. Select your **Resource group** from the dropdown list.
 
-    :::image type="content" source="../../assets/images/include-files/create-azure-bot.png" alt-text="Screenshot shows the selection of azure resource.":::
+    :::image type="content" source="../../assets/images/include-files/create-azure-bot.png" alt-text="Screenshot shows the option resource group and subscription in the Azure portal.":::
     
     To create a new resource group, select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
     
-    :::image type="content" source="../../assets/images/include-files/new-resource-location.png" alt-text="Screenshot shows the selection of new resource location.":::
+    :::image type="content" source="../../assets/images/include-files/new-resource-location.png" alt-text="Screenshot shows the new resource group option in Azure portal.":::
 
 1. In the **Microsoft App ID** section, select **Type of App** as **Multi Tenant**. 
 
@@ -38,8 +38,8 @@
 
 1. Select **Go to resource**. 
 
-    :::image type="content" source="../../assets/images/include-files/resource-deployment.png" alt-text="Screenshot shows the selection of resources.":::
+    :::image type="content" source="../../assets/images/include-files/resource-deployment.png" alt-text="Screenshot shows the Go to resource option in the Azure portal.":::
     
     You have successfully created your Azure bot.
 
-    :::image type="content" source="../../assets/images/include-files/azure-bot-created-output.png" alt-text="Screenshot shows the output of a bot in azure.":::
+    :::image type="content" source="../../assets/images/include-files/azure-bot-created-output.png" alt-text="Screenshot shows the output of a bot in Azure Portal.":::

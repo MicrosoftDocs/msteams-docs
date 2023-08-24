@@ -7,7 +7,7 @@
 
 1. Select **Add a permission**.
 
-   :::image type="content" source="../../assets/images/include-files/add-permission.png" alt-text="Add permission":::
+   :::image type="content" source="../../assets/images/include-files/add-permission.png" alt-text="Screenshot show the option to select Add permission.":::
 
 1. Select **Microsoft Graph**.
 
@@ -19,7 +19,7 @@
 
 1. Select **Add permissions**.
 
-   :::image type="content" source="../../assets/images/include-files/select-add-permission.png" alt-text="Other permissions":::
+   :::image type="content" source="../../assets/images/include-files/select-add-permission.png" alt-text="Screenshot show the option to select permissions.":::
 
 1. In the left pane, select **Authentication** to set a redirect URI. 
 
@@ -28,7 +28,7 @@
          
 1. Select **Add a platform** > **Web**.
 
-    :::image type="content" source="../../assets/images/include-files/platform-web.png" alt-text="Web":::
+    :::image type="content" source="../../assets/images/include-files/platform-web.png" alt-text="Screenshot shows the selection of web authentication.":::
 
 1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:
 
@@ -40,4 +40,4 @@
 
 1. Select **Configure**.
 
-    :::image type="content" source="../../assets/images/include-files/configure-web.png" alt-text="Auth-end":::
+    :::image type="content" source="../../assets/images/include-files/configure-web.png" alt-text="Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.":::

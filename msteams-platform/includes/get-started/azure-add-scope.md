@@ -2,7 +2,7 @@
 
 1. Select **Add a scope**. 
 
-   :::image type="content" source="../../assets/images/include-files/select-add-scope.png" alt-text="Select scope":::
+   :::image type="content" source="../../assets/images/include-files/select-add-scope.png" alt-text="Screenshot shows the selection to Add a Scope.":::
 
 1. Enter **access_as_user** as the **Scope name**.
 
@@ -24,12 +24,12 @@
 
    The following image shows the fields and the values:
 
-   :::image type="content" source="../../assets/images/include-files/set-add-scope.png" alt-text="Add a scope":::
+   :::image type="content" source="../../assets/images/include-files/set-add-scope.png" alt-text="Screenshot shows the values filled in the field to Add a scope.":::
 
    > [!NOTE]
    > The **Scope name** must match with the **Application ID** URI with `/access_as_user` appended at the end.
 
     <!--  `api://d4b8****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`-->  
 
-   :::image type="content" source="../../assets/images/include-files/add-scope.png" alt-text="Scopes"::: 
+   :::image type="content" source="../../assets/images/include-files/add-scope.png" alt-text="Screenshot shows the details in Scopes."::: 
 

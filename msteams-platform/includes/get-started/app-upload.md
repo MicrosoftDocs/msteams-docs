@@ -8,4 +8,4 @@
 
 1. Look for the option to **Upload a custom app**. If the option is visible, you have enabled sideloading apps. 
 
-    :::image type="content" source="../../assets/images/include-files/custom-upload.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
+    :::image type="content" source="../../assets/images/include-files/custom-upload.png" alt-text="Screenshot shows the selection of Upload a custom app highlighted in red.":::

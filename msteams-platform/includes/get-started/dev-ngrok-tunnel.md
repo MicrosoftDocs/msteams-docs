@@ -56,7 +56,7 @@
 
 1.	Select **Yes** if the following dialog appears.
 
-    :::image type="content" source="../../assets/images/include-files/security-warning.png" alt-text="Screenshot shows the tunnel is active and selected."::: 
+    :::image type="content" source="../../assets/images/include-files/security-warning.png" alt-text="Screenshot shows the dialog box to accept the security warning."::: 
 
 1.	A pop-up window appears, select **Continue**.
 
