@@ -352,7 +352,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 August**
 
-* ***August 24, 2023***: [Configure Teams bots to receive read receipts](~/bots/how-to/conversations/conversation-messages#receive-a-read-receipt)
+* ***August 24, 2023***: [Configure Teams bots to receive read receipts](~/bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt)
 
 * ***August 22, 2023***: [Enable RSC permissions for a user using the Graph APIs](graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings).
 
