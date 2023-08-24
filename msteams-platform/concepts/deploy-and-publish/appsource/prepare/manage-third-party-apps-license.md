@@ -33,7 +33,7 @@ Independent software vendors (ISVs) can configure Microsoft license management f
    :::column-end:::
 :::row-end:::
 
-To enable Microsoft to manage licenses for a third-party app in Teams, you must have opted for Microsoft to manage licenses on your behalf while creating the offer. You must then create one or more plans for your offer with subscriptions, where the user can purchase suitable subscription= as license to use your app. Microsoft then manages the purchased licenses on your behalf.
+To enable Microsoft to manage licenses for a third-party app in Teams, you must have opted for Microsoft to manage licenses on your behalf while creating the offer. You must then create one or more plans for your offer with subscriptions, where the user can purchase suitable subscription as license to use your app. Microsoft then manages the purchased licenses on your behalf.
 
 ## Create a plan
 

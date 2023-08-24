@@ -21,14 +21,14 @@ There are four ways you can monetize your app:
       :::image type="content" source="../../../../assets/images/saas-offer/monetize-app.png" alt-text="Screenshot shows the monetization options.":::
    :::column-end:::
    :::column span="":::
-      1. Subscription: To provide offers as subscriptions (transactable), free app, or allow your customer bring their licenses (bring your own license).
-      1. Free Trail: To provide free access to your app for a definite period based on the offer type, and direct the user to purchase after the free trial period.
-      1. Test Drive: Provide access to the preconfigured environment for a fixed period.
-      1. Contact Me: Provide contact information for the users to reach you for offer details and enquire about their needs.
+      1. **Subscription**: To provide offers as subscriptions (transactable), free app, or allow your customer bring their licenses (bring your own license).
+      1. **Free Trail**: To provide free access to your app for a definite period based on the offer type, and direct the user to purchase after the free trial period.
+      1. **Test Drive**: Provide access to the preconfigured environment for a fixed period.
+      1. **Contact Me**: Provide contact information for the users to reach you for offer details and enquire about their needs.
    :::column-end:::
 :::row-end:::
 
- Let's get to know about monetizing your Software as a Service (SaaS) applications in the Teams store through SaaS offers.
+ Let's get to know about monetizing your software as a service (SaaS) applications in the Teams store through SaaS offers.
 
 ## What's a SaaS offer?
 

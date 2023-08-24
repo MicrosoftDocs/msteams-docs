@@ -115,6 +115,11 @@ When all the check are done, click **Go live** for the offer to be available in 
 
 To understand more about the validation and certification, check [Review and publish offers](/partner-center/marketplace/review-publish-offer).
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Publish your app with configured SaaS offer](publish-saas-offer-app.md)
+
 ## See also
 
 * [Monetize your app](monetize-overview.md)
@@ -122,8 +127,3 @@ To understand more about the validation and certification, check [Review and pub
 * [Preview creation phase](/azure/marketplace/review-publish-offer)
 * [Review and publish an offer to the commercial marketplace](/azure/marketplace/review-publish-offer#validation-and-publishing-steps)
 * [App Manifest](../../../../resources/schema/manifest-schema-dev-preview.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Publish your app with configured SaaS offer](publish-saas-offer-app.md)

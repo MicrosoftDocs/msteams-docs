@@ -10,7 +10,7 @@ ms.date: 07/11/2023
 
 # Create your SaaS offer
 
-Create your offer in Partner Center and configure the offer to publish in the marketplace. The option to sell through Microsoft, details of the offer, and pricing are configured after creating the offer. Check if the prerequisites are fulfilled before you create a SaaS offer. You must also have a commercial marketplace account in Partner Center.
+This article helps you to create an offer in Partner Center and configure the offer with suitable publishing options. You can configure sell through Microsoft option, details of the offer, and pricing after creating the offer. Check if the prerequisites are fulfilled before you create a SaaS offer. You must also have a commercial marketplace account in Partner Center.
 
 :::row:::
    :::column:::
@@ -33,7 +33,7 @@ Create your offer in Partner Center and configure the offer to publish in the ma
    :::column-end:::
 :::row-end:::
 
-This guide helps you to create premium and enterprise SaaS offers on top of the existing basic free app.
+You can create premium and enterprise SaaS offers on top of the existing basic free app.
 
 ## Create the offer in Partner Center
 
@@ -82,7 +82,7 @@ Offers sold through Microsoft are called transactable offers, which means Micros
 
     1. To sell through Microsoft and have Microsoft facilitate transactions for you, select **Yes, I would like Microsoft to manage customer licenses on my behalf**.
 
-        :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="The screenshots shows the offer setup page to set up license to manage for your app within Teams.":::
+        :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="Screenshot shows the offer setup page to set up license to manage for your app within Teams.":::
 
     1. To list your offer through the commercial marketplace and process transactions independently, select **No, I would prefer to only list my offer through the marketplace and process transactions independently**.
 
@@ -99,7 +99,7 @@ You can sell through Microsoft and also allow Microsoft to manage licenses on yo
 
 1. If you want to manage customer licenses yourself, select **No, I would prefer to manage customer licenses myself**.
 
-    :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="The screenshots shows the offer setup page to set up license to manage for your app within Teams.":::
+    :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="Screenshot shows the offer setup page to set up license to manage for your app within Teams.":::
 
     > [!NOTE]
     >

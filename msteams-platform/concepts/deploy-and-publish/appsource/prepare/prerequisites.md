@@ -51,7 +51,7 @@ To start with, you must set up the required accounts to create an offer.
 
 ### Create a landing page
 
-When the user successfully purchases a subscription plan for your app in the Teams store, the commercial marketplace directs them to your landing page where they can manage the subscription (such as assign a license to a specific user in their org).
+When the user successfully purchases a subscription plan for your app in the Teams store, the commercial marketplace directs them to your landing page where they can manage the subscription (such as assign a license to a specific user in their organization).
 
 Ensure to register your landing page as an Azure AD application. Enable SSO using Azure AD and Microsoft Graph to obtain important information about the buyer and to confirm and activate the subscription.
 
@@ -61,7 +61,7 @@ For complete instructions, see [build the landing page for your SaaS offer](/par
 
 Consider the following approaches when building a landing page for the Teams app you’re monetizing. See an example landing page in the [End-user purchase experience](end-user-purchase-experience.md).
 
-* Enable users to sign in to your landing page only using the same Azure AD credentials they used to buy the subscription.
+* Enable users to sign in from offer landing page only using the same Azure AD credentials they used to buy the subscription.
 * Allow users to take the following actions on your landing page. Don’t forget to consider what’s appropriate for a user’s role and permissions.
   * Search for users in their org using email or another form of identity.
   * View users in a list for whom they can assign licenses.
@@ -76,15 +76,15 @@ Consider the following approaches when building a landing page for the Teams app
 
 ### Integrate with APIs
 
-Sell through Microsoft or transactable offer has further technical requirements added to account configurations and landing page. When the users are redirected to the landing page from the configuration link, a set of user information is required to confirm and activate the subscription. Integrate Microsoft Graph API and SaaS Fulfillment APIs to retrieve user information.
+Sell through Microsoft or transactable offer has further technical requirements added to account setup and landing page. When the users are redirected to the landing page from the configuration link, a set of user information is required to confirm and activate the subscription. You must integrate Microsoft Graph API and SaaS Fulfillment APIs to retrieve user information.
 
 #### Integrate with SaaS fulfillment API
 
-Integrating with the SaaS Fulfillment APIs helps to monetize and manage the lifecycle of a subscription plan once the user purchases the plan.
+Integrating with the SaaS Fulfillment APIs helps to manage the lifecycle of a subscription plan once the user purchases the plan.
 
 In general, you implement the following steps using the APIs once a subscription is purchased and the customer selects to configure:
 
-  1. You receive a notification about the purchase where your landing page URL opens with the purchase identification token.
+  1. You receive a notification about the purchase where your landing page URL opens with the [purchase identification token](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-life-cycle).
   1. You must pass the token by calling SaaS Resolve API to retrieve subscription details.
   1. After the user sign in and configuration, you must then call the Activate Subscription API to notify the commercial marketplace that the subscription is activated.
 
@@ -126,7 +126,7 @@ To configure your SaaS offer, you must furnish the following technical informati
 
 * **Connection webhook**: For all asynchronous events that Microsoft needs to send to you (for example, when a SaaS subscription has been canceled), we require you to provide a connection webhook URL. We call this URL to notify you of the event. Define it in the **Technical configuration** page and you receive subscription changes from the user.
 
-* **Azure AD tenant ID**: Inside the Azure portal, we need you to register an Azure AD app so we can add it to the access control list (ACL) of the API to make sure you're authorized to call it. You can find the tenant ID under the App registrations blade in Azure portal.
+* **Azure AD tenant ID**: Inside the Azure portal, we need you to register an Azure AD app so we can add it to the access control list (ACL) of the API to make sure you're authorized to call it. You can find the tenant ID under **App registrations** in Azure portal.
 
 * **Azure AD application ID**: The Azure AD application ID is associated with your publisher ID in your Partner Center account. You must use the same application ID for all offers in that account.
 
