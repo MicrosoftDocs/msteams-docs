@@ -10,7 +10,7 @@ ms.localizationpriority: high
 # Bot configuration experience
 
 Bot configuration feature is designed to provide a way for users to configure bots after installation.
-Bots can be configured whenever it is necessary. The configuration is supported for bots in channel, personal, and group chat.
+Bots can be configured whenever it is necessary. The configuration is supported for bots in channel, personal, and group chat. - Personal need to be confirmed.
 
 To configure the bot
 
@@ -135,7 +135,7 @@ To configure the bot
 
 ```
 
-## Config/continue
+## Config/continue - not required.   config/submit
 
 ```json
 Config/continue 
