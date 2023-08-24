@@ -88,7 +88,7 @@ To build a scene using the Scene studio, follow these steps:
 
 1. Select an area outside of the image.
 
-1. In the upper-right corner, select **Participants** under **Layers**.
+1. In the upper-right corner, under **Layers**, select **Participants**. 
 
 1. Select the number of participants for the scene from the **Number of participants** box, and select **Add**. After the scene is shipped, the avatar placements are replaced with actual participant's video streams. You can drag the images of the participants around the scene and place them in the required position. You can resize them using the resize arrow.
 
@@ -103,7 +103,7 @@ To build a scene using the Scene studio, follow these steps:
     * Selecting **View in Teams** automatically creates a Teams app that can be viewed in the **Apps** page in the Teams Developer Portal.
     * Selecting **View in Teams** automatically creates an app package that is appmanifest.json behind the scene. You can go to  **Apps** from the menu and access the created app package.
     
-1. Select **View in Teams** in the dialog box that appears, select **Add**.
+1. Select **View in Teams**, in the dialog box that appears select **Add**.
 
     The scene is tested or accessed by creating a test meeting and launching custom Together Mode scenes. For more information, see [Use custom together mode scenes in Teams](#use-custom-together-mode-scenes-in-teams).
 
@@ -111,9 +111,9 @@ To build a scene using the Scene studio, follow these steps:
 
     The scene can then be viewed in the custom Together Mode scenes gallery.
 
-     1. Share: From the **Save** drop-down menu, select **Share** to create a shareable link of your scenes to share for others to use. The user can open the link to install the scene and start using it. After preview, the scene is shipped as an app to Teams by following the steps for app submission. This step requires the app package. The app package is different from the scene package, for the scene that was designed. The app package created automatically is found in the **Apps** section in the Teams Developer Center.
+     1. **Share**: From the **Save** drop-down menu, select **Share** to create a shareable link of your scenes to share for others to use. The user can open the link to install the scene and start using it. After preview, the scene is shipped as an app to Teams by following the steps for app submission. This step requires the app package. The app package is different from the scene package, for the scene that was designed. The app package created automatically is found in the **Apps** section in the Teams Developer Center.
 
-     1. Export: From the **Save** drop-down menu, select **Export** to retrieve the scene package. A .zip file, that is the scene package, is downloaded. The Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes.
+     1. **Export**: From the **Save** drop-down menu, select **Export** to retrieve the scene package. A .zip file, that is the scene package, is downloaded. The Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes.
 
 :::image type="content" source="../assets/images/apps-in-meetings/build-a-scene.png" alt-text="Screenshot shows the Export option to export a scene.":::
 
