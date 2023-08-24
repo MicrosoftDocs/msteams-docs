@@ -68,7 +68,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Collaborative Stage View](../tabs/tabs-link-unfurling.md) | Collaborative Stage View is an enhancement to Stage View that allows users to engage with your app content in a new Teams window. |
 | [Compose Extensions](../resources/schema/manifest-schema.md#composeextensions) | A property in app manifest (`composeExtensions`) that refers to message extension capability. It's used when your extension needs to either authenticate or configure to continue. <br>**See also**: [App manifest](#a); [Message extension](#m) |
 | [Command Box](../resources/schema/manifest-schema.md) | A type of context in app manifest (`commandBox`) that you can configure to invoke a message extension from Teams command box. |
-| [Command lists](../resources/schema/manifest-schema.md#botscommandlists)| The list of commands that the bot supplies, including their usage, description, and the scope for which the commands are valid. A separate command list should be used for each scope. <br> **See also**: [App manifest](#a)|
+| [Command lists](../resources/schema/manifest-schema.md#botscommandlists)| The list of commands that the bot supplies, including their usage, description, and the scope for which the commands are valid. For each scope, you must use a specific command list. <br> **See also**: [App manifest](#a)|
 | Connection Name | The name of OAuth connection that you configure for enabling SSO connection for your bot resource. <br> **See also**: [OAuth connection](#o) |
 | [Connector](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | It lets users subscribe to receive notifications and messages from the web services. Connectors expose the HTTPS endpoint for the service to post messages to Teams channels, typically in the form of cards. <br> **See also**: [Webhook](#w) |
 | [Connector ID](../resources/schema/manifest-schema.md#connectors) | A unique identifier for the Connector that matches its ID. <br> **See also**: [Include the connector in your manifest](../webhooks-and-connectors/how-to/connectors-creating.md#include-the-connector-in-your-manifest) |
@@ -164,7 +164,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Messaging endpoint](../bots/how-to/authentication/bot-sso-register-aad.md) | It's the endpoint where messages are sent to your bot. <br> **See also**: [Endpoint address](#e); [Bot handle](#b); [OAuth connection](#o); [SSO](#s) |
 | [Message extension](../messaging-extensions/what-are-messaging-extensions.md) | Message extensions (previously called [composeExtensions](../resources/schema/manifest-schema.md#composeextensions)) are shortcuts for inserting app content or acting on a message. You can use a message extension without navigating away from the conversation. <br>**See also**: [Search commands](#s); [Action commands](#a) |
 | [Meeting extension](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | An app designed to be used during the meeting lifecycle to make it more productive, such as whiteboard, dashboard, and more. |
-| [Meeting surfaces](../resources/schema/manifest-schema.md#configurabletabs) | The set of `meetingSurfaceItem` scopes that a tab belong to. <br>**See also**: [Configurable tab](#c)|
+| [Meeting surfaces](../resources/schema/manifest-schema.md#configurabletabs) | The set of `meetingSurfaceItem` scopes where a tab is supported. <br>**See also**: [Configurable tab](#c)|
 | [Microsoft 365 account](../toolkit/accounts.md#microsoft-365-developer-account-types) | Microsoft 365 account includes 25 user licenses, including the administrator, for development purposes only. |
 | Microsoft 365 client ID | See [Client ID](#c) |
 | [Add Microsoft 365 channel for your bot](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-bot) | A feature of Teams message extension app that lets the users interact with it from Microsoft 365. |
@@ -210,7 +210,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Privacy URL](../resources/schema/manifest-schema.md#developer)| The https:// URL to the page that provides privacy information for the app.|
 | [Proactive messages](../bots/how-to/conversations/send-proactive-messages.md) | A message sent by a bot that isn't in response to a request from a user, such as welcome messages, notifications, scheduled messages. |
 | [Provision](../toolkit/provision.md) | A process that creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. It's a prerequisite to deployment. <br>**See also**: [Deploy](#d) |
-| [Publisher docs URL](../resources/schema/manifest-schema.md#publisherdocsurl)| The https:// URL to an information page for admins to get guidelines before allowing an app, which is blocked by default.|
+| [Publisher docs URL](../resources/schema/manifest-schema.md#publisherdocsurl)| The value of the `publisherDocsUrl` parameter is a secure HTTPS URL to the app documentation and information page that app developers choose to provide. Tenant admins get documentation about the app at this URL. Teams admin center displays the URL in the app details page. The documentation may include the instructions for admins to facilitate app adoption and app rollout. In the app documentation, you can also include instructions or information about the app that is useful for the tenant admin, users, and other business stakeholders.|
 
 ## R
 
@@ -246,7 +246,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Static search](../task-modules-and-cards/cards/dynamic-search.md) | A method of typeahead search that lets users search from pre-specified values in the Adaptive Cards payload. <br>**See also**: [Dynamic search](#d) |
 | [Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) | A set of Teams-specific guidelines for validating an app before it can be submitted to Teams store. <br>**See also**: [Teams store](#t) |
 | [Subdomain ID](../tabs/how-to/authentication/tab-sso-register-aad.md) | It's the application ID URI that you registered when configuring scope for your app in Azure AD. <br> **See also**: [SSO](#s); [Application ID URI](#a); [Application ID](#a) |
-| [Subscription offer](../resources/schema/manifest-schema.md#subscriptionoffer) | Specifies the SaaS offer associated with your app. A unique identifier that includes your Publisher ID and Offer ID, which you can find in Partner Center.|
+| [Subscription offer](../resources/schema/manifest-schema.md#subscriptionoffer) | This specifies the SaaS offer associated with your app. A unique identifier that includes your Publisher ID and Offer ID, which you can find in Partner Center.|
 
 ## T
 
