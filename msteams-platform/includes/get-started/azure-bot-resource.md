@@ -1,8 +1,8 @@
-### Create Azure Bot resource
+**Create Azure bot resource**
 
 1. Go to the [Azure portal](https://portal.azure.com/).
 1. Select **Create a resource**.
-1. In the search box, enter **Azure bot**.
+1. In the search box, enter **Azure Bot**.
 1. Select **Enter**.
 1. Select **Azure Bot**.
 

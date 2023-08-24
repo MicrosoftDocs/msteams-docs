@@ -1,3 +1,4 @@
+**Client Application**
 
 In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
 
@@ -13,10 +14,12 @@ In the **Authorized client applications** section, identify the applications tha
 
    :::image type="content" source="../../assets/images/include-files/client-id-web.png" alt-text="Add client application 2"::: 
 
-1. Select **Authorized scopes** > **Add application**.
+1. Check **Authorized scopes**.
+
+1. Select **Add application**.
 
    :::image type="content" source="../../assets/images/include-files/authorized-scope-add.png" alt-text="Add client application 2"::: 
 
-   The following image displays the client IDs:
+   The following image displays the **client Ids**:
 
    :::image type="content" source="../../assets/images/include-files/add-client-application-output.png" alt-text="Client applications"::: 

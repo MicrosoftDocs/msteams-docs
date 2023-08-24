@@ -1,3 +1,4 @@
+**API Permission**
 
 1. In the left pane, select **API permissions**. 
 
@@ -28,7 +29,7 @@
    :::image type="content" source="../../assets/images/include-files/platform-web.png" alt-text="Web":::
 
 1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name.
->`https://your-devtunnel-domain/auth-end` or `https://your-ngrok-domain/auth-end`.
+    `https://your-devtunnel-domain/auth-end` or `https://your-ngrok-domain/auth-end`.
 
 1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
       * **ID tokens**

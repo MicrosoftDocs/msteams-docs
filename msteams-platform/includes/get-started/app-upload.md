@@ -1,5 +1,4 @@
-
-### Upload a custom app
+**Upload a custom app**
 
 1. In the Teams client, select the **Apps** icon.
 

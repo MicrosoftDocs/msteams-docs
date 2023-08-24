@@ -1,3 +1,4 @@
+**Azure add scope**
 
 1. Select **Add a scope**. 
 

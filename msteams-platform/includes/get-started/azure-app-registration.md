@@ -1,3 +1,4 @@
+**Azure app registration**
 
 1. Go to the [Azure portal](https://portal.azure.com/).
 

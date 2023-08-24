@@ -1,4 +1,4 @@
-**Update Manifest and Bot Service connection**
+**Update manifest and bot service connection**
 
 1. Select **Manifest** from the left pane.
 
