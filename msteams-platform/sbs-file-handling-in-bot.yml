@@ -92,7 +92,7 @@ items:
 
          * Set `"MicrosoftAppType"` to **MultiTenant**.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
+         * Set `"MicrosoftAppPassword"` to your bot's client secret ID **value**.
          * Set `"MicrosoftAppTenantId"` as blank for MultiTenant bot.
 
            :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/appsettings-json1_1.png" alt-text="appsettings file in visual studio":::

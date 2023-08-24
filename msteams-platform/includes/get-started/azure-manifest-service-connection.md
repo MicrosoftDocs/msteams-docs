@@ -29,4 +29,4 @@
 
 1. Select **Save**.
 
-:::image type="content" source="../../assets/images/include-files/new-connection-setting.png" alt-text="setting new connection":::
+    :::image type="content" source="../../assets/images/include-files/new-connection-setting.png" alt-text="setting new connection":::

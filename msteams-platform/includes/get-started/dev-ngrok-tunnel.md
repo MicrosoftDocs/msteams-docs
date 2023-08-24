@@ -92,6 +92,6 @@ Use ngrok or Command Prompt to create a tunnel to your locally running web serve
 
 The window shows the HTTPS URL (https to io).
 
-    :::image type="content" source="../../assets/images/include-files/ngrok-url.png" alt-text="Screenshot shows the ngrok HTTPS URL.":::
+:::image type="content" source="../../assets/images/include-files/ngrok-url.png" alt-text="Screenshot shows the ngrok HTTPS URL.":::
 
 ---   
