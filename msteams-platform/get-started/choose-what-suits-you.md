@@ -64,7 +64,7 @@ To start building your Teams app, you can select the tools and SDKs based on you
 
 You can also create and build your Teams app with various SDKs. Teams supports all the SDKs shown in the following image and you can choose SDKs based on your requirements:
 
-:::image type="content" source="../assets/images/get-started/sdk-and-api.png" alt-text="Diagram shows you the list of tools and SDKs for you to build your Teams app."lightbox="../assets/images/get-started/sdk-and-api.png":::
+:::image type="content" source="../../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png" alt-text="Diagram shows you the list of tools and SDKs for you to build your Teams app."lightbox="../../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png":::
 
 ### Explore Tools
 
