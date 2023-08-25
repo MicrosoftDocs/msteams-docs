@@ -80,7 +80,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-connector/Global_1.png" alt-text="Screenshot of App setup policies with Global Org-wide default highlighted in red.":::
 
-    1.   Turn on the **Upload custom apps** toggle .
+    1.   Turn on the **Upload custom apps** toggle.
 
           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-toggle-on-connectors.png" alt-text="Screenshot of Global Org-wide default with Upload custom apps showing the toggle button on and highlighted in red. ":::
    
@@ -93,11 +93,11 @@ items:
 
     1.   Go to **Microsoft Teams**.
     
-    1.   From the upper-right corner of your Teams interface, select **Settings and more(...)**.
+    1.   From the upper-right corner of your Teams, select **...**.
     
     1.   Select **About** > **Developer preview**.
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-devpreview_1.png" alt-text="Screenshot of General with Developer preview and About highlighted in red.":::
+          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-devpreview_1.png" alt-text="Screenshot shows the dropdown list with About and Developer preview highlighted in red.":::
    
     1.   Select **Switch to developer preview**.
    
@@ -110,7 +110,7 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-connector/sln_1.png" alt-text="Screenshot of cloned repository with TeamsToDoAppConnector.sln highlighted in red.":::
 
-    2. Use ngrok or Command prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+    2. Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
         ```bash
         ngrok http --host-header=localhost 3978
@@ -133,8 +133,8 @@ items:
        * Detailed description of what your Connector does (3-5 sentences).
        * Company website.
        * Configuration page for your Connector as `https://[BASE_URI]/connector/setup`.
-       * Valid domain as `https Base URL`.
-       * Select **Yes** to enable the action on connector card.
+       * Valid domain as `https>//[Base URI]`.
+       * Select **Yes** to enable the action on Connector cards.
        * Actions URL as `https://[BASE_URI]/Task/Update`.
        * Select **I accept the terms and conditions of the App Developer Agreement**.
        * Select **Save**.
@@ -148,7 +148,7 @@ items:
        > [!TIP]
        > Save the Connector ID for future reference.
 
-    6. Select **TeamsToDoAppConnector.csproj** file from **TeamsToDoAppConnector folder**.
+    6. Select **TeamsToDoAppConnector.csproj** file from the cloned repository.
 
        :::image type="content" source="~/assets/images/sbs-connector/web_1.png" alt-text="Screenshot of cloned repository with TeamsToDoAppConnector.csproj highlighted in red."::: 
 
@@ -170,7 +170,7 @@ items:
     1. In your cloned repository, go to **csharp** > **TeamsToDoAppConnector** > **TeamsAppPackages**.
 
     1. Create a .zip file with the following files that are present in the **Manifest** folder: 
-       * manifest(1).json
+       * manifest.json
        * outline-icon.png
        * color-icon.png
 
@@ -229,7 +229,7 @@ items:
 
     1. Select **Save**. 
       
-        The message card appears in registered Teams channel.
+        The message card appears in the registered Teams channel.
        
         :::image type="content" source="~/assets/images/sbs-connector/messagecard.png" alt-text="Screenshot of Teams ToDo Notification-Inline Config displaying the details of task created.":::
 
