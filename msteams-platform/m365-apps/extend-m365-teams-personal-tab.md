@@ -16,7 +16,7 @@ Updating your Teams personal app to run in other Microsoft 365 applications invo
 
 > [!div class="checklist"]
 >
-> * [Update your app manifest](#update-the-app-manifest).
+> * [Update your app manifest (previously called Teams app manifest)](#update-the-app-manifest).
 > * [Update your Microsoft Teams JavaScript client library (TeamsJS) references](#update-teamsjs-references).
 > * [Amend your Content Security Policy headers](#configure-content-security-policy-headers).
 > * [Update your Microsoft Azure Active Directory (Azure AD) App Registration for Single Sign-On (SSO)](#update-azure-ad-app-registration-for-sso).
@@ -39,7 +39,7 @@ To complete this tutorial, you need:
 
 ## Prepare your personal tab for the upgrade
 
-If you have an existing personal tab app, make a copy or a branch of your production project for testing and update your App ID in the app manifest (previously called Teams app manifest) to use a new identifier (distinct from the production App ID, for testing).
+If you have an existing personal tab app, make a copy or a branch of your production project for testing and update your App ID in the app manifest to use a new identifier (distinct from the production App ID, for testing).
 
 If you'd like to use sample code instead of your own production code, you can use the Todo List sample. You can either follow the setup steps in the [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/todo-list-with-Azure-backend) GitHub repository or use the Teams Toolkit extension to create a new Teams app (select **Start from a sample** > **Todo List with backend on Azure**). After you've created a personal tab, return to this article to extend it across Microsoft 365.
 
@@ -68,7 +68,7 @@ To start with a personal tab that's already enabled to run in Teams, Outlook, an
 1. Enter **Teams: Deploy** to deploy the sample code to the provisioned resources in Azure and start the app. Alternatively, you can select **Deploy** under the **LIFECYCLE** section of the extension.
 1. Select **Deploy**.
 
-From here, you can skip ahead to [sideload your app in Teams](#sideload-your-app-in-teams) and preview your app in Outlook and the Microsoft 365 app. (The app manifest and TeamsJS API calls have already been updated for Microsoft 365 app.)
+From here, you can skip ahead to [sideload your app in Teams](#sideload-your-app-in-teams) and preview your app in Outlook and the Microsoft 365 app. The app manifest and TeamsJS API calls have already been updated for Microsoft 365 app.
 
 ### SharePoint Framework (SPFx) apps
 
@@ -87,7 +87,7 @@ After you update TeamsJS references, [sideload your app in Teams](#sideload-your
 
 ## Update the app manifest
 
-You need to use the Teams developer manifest schema version `1.13` (or higher) to enable your Teams personal tab to run in Outlook and Microsoft 365 app. For more information on schema version, see [Teams developer manifest](../resources/schema/manifest-schema.md).
+You need to use the app manifest schema version `1.13` (or higher) to enable your Teams personal tab to run in Outlook and Microsoft 365 app. For more information on schema version, see [app manifest](../resources/schema/manifest-schema.md).
 
 You have two options for updating your app manifest:
 
@@ -171,7 +171,7 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
 
 The final step to running your app in Microsoft 365 and Outlook is to sideload your updated personal tab [app package](..//concepts/build-and-test/apps-package.md) in Microsoft Teams.
 
-1. Package your Teams application ([manifest](../resources/schema/manifest-schema.md) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you used Teams Toolkit to create your app, you can easily do this using the **Zip Teams App Package** option in the **UTILITY** section of Teams Toolkit. Select the `manifest.json` file for your app and the appropriate environment.
+1. Package your ([app manifest](../resources/schema/manifest-schema.md) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you used Teams Toolkit to create your app, you can easily do this using the **Zip Teams App Package** option in the **UTILITY** section of Teams Toolkit. Select the `manifest.json` file for your app and the appropriate environment.
 
     :::image type="content" source="images/toolkit-zip-teams-app-package.png" alt-text="Screenshot shows the Zip Teams App Package option in Teams Toolkit extension for Visual Studio Code.":::
 
