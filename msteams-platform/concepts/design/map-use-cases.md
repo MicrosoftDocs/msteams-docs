@@ -108,7 +108,7 @@ Let's look at how Teams capabilities enable different features for your Teams ap
 :::row-end:::
 
 :::row:::
-      :::image type="content" source="~/assets/images/overview/flowchart-graph-conversational-interface.png" alt-text="Microsoft Teams app capabilities for graph conversational interface." link="/graph/overview" border="false"::::
+      :::image type="content" source="~/assets/images/overview/flowchart-graph-conversational-interface.png" alt-text="Microsoft Teams app capabilities for graph conversational interface." link="/graph/overview" border="false":::
 :::row-end:::
 
 For example:
