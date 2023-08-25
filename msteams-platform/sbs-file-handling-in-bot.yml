@@ -24,7 +24,7 @@ items:
 
    This step-by-step guide helps you to upload file in Teams using bot. You'll see the following output:
 
-   :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/output-sbs.png" alt-text="Screenshot shows the final output":::
+   :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/output-sbs.png" alt-text="Screenshot shows the final output.":::
    
 - title: Prerequisites
   durationInMinutes: 1 
@@ -86,7 +86,7 @@ items:
   content: |
     1. Go to the **appsettings.json** file in the cloned repository.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/appsettings-file-location.png" alt-text="app settings manifest":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/appsettings-file-location.png" alt-text="Screenshot shows the selection of app settings json file.":::
                       
     1. Open the **appsettings.json** file and update the following information:
 
@@ -95,17 +95,17 @@ items:
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID **value**.
          * Set `"MicrosoftAppTenantId"` as blank for MultiTenant bot.
 
-           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/appsettings-json1_1.png" alt-text="appsettings file in visual studio":::
+           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/appsettings-json.png" alt-text="Screenshot shows the details filled app settings file in visual studio.":::
            
     1. Go to the **manifest.json** file in the cloned repository.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-file-location.png" alt-text="open manifest file":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-file-location.png" alt-text="Screenshot shows the selection of manifest json file.":::
          
     1. Open the **manifest.json** file and update the following changes:
     
        Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/bot-id_1.png" alt-text="replace bot id.":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-bot-id.png" alt-text="Screenshot shows the details filled manifest file in visual studio.":::
 
 - title: Build and run the service
   durationInMinutes: 2
@@ -118,26 +118,26 @@ items:
        
        1. Go to **File** > **Open** > **Project/Solution...**.
 
-           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/VS-open-file_1.png" alt-text="visual studio":::      
+           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/VS-file-open.png" alt-text="Screenshot shows the Project/Solution option in Visual studio.":::      
         
        1. Select **TeamsFileUpload.csproj** file from **samples** > **bot-file-upload** > **csharp** folder.
 
-           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/project-file-location.png" alt-text="folder":::        
+           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/project-file-location.png" alt-text="Screenshot shows the option to select sample folder.":::        
 
        1. From **View**, open **Solution Explorer**.
 
-          :::image type="content" source="../msteams-platform/assets/images/Teams-task-module/solutionexplorer_1.png" alt-text="view":::
+          :::image type="content" source="../msteams-platform/assets/images/Teams-task-module/solution-explorer.png" alt-text="Screenshot shot show the View option to select Solution explorer.":::
           
        1. Press **F5** to run the project.
     
        1. Select **Yes** if the following dialog appears:
 
-          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/certificate_1.png" alt-text="ca":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/security-warning.png" alt-text="Screenshot shows the security warning certificate to accpet.":::
 
           
           A webpage opens with a message **Your bot is ready!**.
 
-          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/file-bot.png" alt-text="your bot is ready":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/file-bot.png" alt-text="Screenshot shows that your bot is ready.":::
 
        
  
@@ -161,40 +161,40 @@ items:
        * icon-outline.png
        * icon-color.png 
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-zip-file-location.png" alt-text="manifest folder":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-zip-file-location.png" alt-text="Screenshot shows the app manifest folder.":::
 
        [!INCLUDE [Upload custom app](includes/get-started/app-upload.md)]
 
     1. Select the .zip file you've created in the **TeamsAppManifest** folder and select **Open**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/upload-manifest-zip.png" alt-text="manifest open"::: 
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/upload-manifest-zip.png" alt-text="Screenshot shows the option to upload the manifest zpi file in Teams."::: 
 
     1. Select **Add**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-bot-file.png" alt-text="add"::: 
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-bot-file.png" alt-text="Screenshot show the option to add the app in Teams sideloading."::: 
 
     1. In the compose message area, type **hi** and bot sends an Adaptive card.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/respond-bot.png" alt-text="card send by bot":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/respond-bot.png" alt-text="Screenshot show the responsive message with an adaptive card sent by bot.":::
 
 - title: Interacting with the bot in Teams
   durationInMinutes: 2
   content: |
     1. Send a message to the bot. Bot sends an Adaptive Card with the permission to upload the file.
        
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-adaptive-card.png" alt-text="bot sending card":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-adaptive-card.png" alt-text="Screenshot show the responsive message with an adaptive card sent by bot.":::
     
     1. Select **Allow**. A `teams-logo.png` file is uploaded to the file directory, which is ready for download.
          
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-allow.png" alt-text="teams logo":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-allow.png" alt-text="Screenshot shows the option to download the teams logo.":::
     
     1. Send a file to the bot as an attachment in Teams. It responds with a message **Received and Saved**. You can view the attachment from the **Files** tab.
         
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-file.png" alt-text="send file":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-file.png" alt-text="Screenshot show the option to send a file to bot and a response is received.":::
    
     1. Send an image as an attachment. It responds with a message **Received and saved**. You can view the image on the chat window and from **Files** tab.
        
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-image.png" alt-text="received":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-image.png" alt-text="Screenshot show the option to send a iamge to bot and a response is received.":::
       
         > [!NOTE]
         >  After the bot is installed in the personal scope, the user enters into a one-on-one chat conversation with the bot.
@@ -204,7 +204,7 @@ items:
   content: |
     Did you come up with something like this?
     
-    :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/output-sbs.png" alt-text="final image"::: 
+    :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/output-sbs.png" alt-text="Screenshot shows the output of desktop and mobile Teams application."::: 
 
 - content: |
     You've completed the tutorial. Now you can upload files in Teams using bot.
