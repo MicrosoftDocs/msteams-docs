@@ -65,15 +65,15 @@
     The dev tunnel is active.
 
     :::image type="content" source="../../assets/images/include-files/developer-tunnel-web.png" alt-text="Screenshot shows the dev tunnel welcome page in browser.":::
-    
-1.    Go to Visual Studio, select **View > Output**.
 
-1.    From the output console dropdown menu, select **Dev Tunnels**.
+1. Go to Visual Studio, select **View > Output**.
+
+1. From the output console dropdown menu, select **Dev Tunnels**.
 
     The output console shows the URL.
-
+    
     :::image type="content" source="../../assets/images/include-files/output-console-url.png" alt-text="Screenshot shows the url in the Visual S+tudio output console.":::
-
+    
 
 # [ngrok](#tab/ngrok)
     
