@@ -8,7 +8,7 @@ ms.date: 11/21/2022
 ---
 # Update app manifest for SSO and preview app
 
-Before you update app manifest (previously called Teams app manifest), ensure that you've configured code to enable SSO in your tab app.
+Before you update the app manifest (previously called Teams app manifest), ensure that you've configured code to enable SSO in your tab app.
 
 > [!div class="nextstepaction"]
 > [Configure code](tab-sso-code.md)
@@ -29,9 +29,9 @@ Configure the `webApplicationInfo` property in the app manifest file. This prope
 | resource | Enter your app's subdomain URI and the application ID URI that you created in Azure AD when creating scope. You can copy it from the **Azure AD** > **Expose an API** section. |
 
 > [!NOTE]
-> Use app manifest version 1.5 or later to implement the `webApplicationInfo` property.
+> Use the app manifest version 1.5 or later to implement the `webApplicationInfo` property.
 
-The application ID URI that you registered in Azure AD is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in app manifest.
+The application ID URI that you registered in Azure AD is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in the app manifest.
 
 For more information, see [webApplicationInfo](../../../resources/schema/manifest-schema.md#webapplicationinfo).
 
@@ -43,7 +43,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
     > [!NOTE]
     >
     > - The app manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
-    > - For more information on learning how to create a manifest.json, see [Reference: App manifest schema](../../../resources/schema/manifest-schema.md).
+    > - For more information on learning how to create a manifest.json, see [the app manifest schema](../../../resources/schema/manifest-schema.md).
 
 1. Open the `manifest.json` file
 1. Add the following code snippet to the app manifest file to add the new property:
@@ -69,7 +69,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 
 <br>
 <details>
-<summary>Here's an example of app manifest after it's updated</summary>
+<summary>Here's an example of the app manifest after it's updated</summary>
 
 ```json
 {
@@ -131,7 +131,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 
 ## Sideload and Preview in Teams
 
-You've configured the tab app to enable SSO in Azure AD, in app code, and in app manifest file. You can now sideload your tab app in Teams, and preview it in Teams environment.
+You've configured the tab app to enable SSO in Azure AD, in app code, and in the app manifest file. You can now sideload your tab app in Teams, and preview it in Teams environment.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="SSO app":::
 
@@ -171,6 +171,6 @@ To preview your tab app in Teams:
 
 ## See also
 
-- [App Manifest schema](../../../resources/schema/manifest-schema.md)
-- [App Manifest schema format](https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json)
+- [App manifest schema](../../../resources/schema/manifest-schema.md)
+- [App manifest schema format](https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json)
 - [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md)

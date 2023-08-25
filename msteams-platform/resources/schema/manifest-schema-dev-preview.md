@@ -735,7 +735,7 @@ Specify meeting extension definition. For more information, see [custom Together
 **Optional**—object
 
 > [!NOTE]
-> `authorization` is only supported for app manifest version 1.12 or later.
+> `authorization` is only supported for the app manifest version 1.12 or later.
 
 Specify and consolidate authorization related information for the app.
 

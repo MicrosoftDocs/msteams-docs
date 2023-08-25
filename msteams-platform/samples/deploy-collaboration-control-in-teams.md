@@ -64,7 +64,7 @@ To add the app to Teams, select **Add to Teams**.
 
 :::image type="content" source="../assets/images/collaboration-control/add-to-teams.png" alt-text="Add to Teams.":::
 
-Selecting **Add to Teams** opens a dialog where you can review the details and select **Download app**, which saves the Microsoft app manifest (previously called Teams app manifest) to your device.
+Selecting **Add to Teams** opens a dialog where you can review the details and select **Download app**, which saves the app manifest (previously called Teams app manifest) to your device.
 
 :::image type="content" source="../assets/images/collaboration-control/colab-manager-inspection.png" alt-text="The screenshot is an example that shows the collaboration manager inspection.":::
 

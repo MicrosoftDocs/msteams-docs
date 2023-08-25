@@ -82,7 +82,7 @@ Activity feed APIs work with a Teams app. The following are the requirements for
 
 ### App manifest changes
 
-This section describes the changes that need to be added to app manifest. Ensure that you use the [app manifest](/microsoftteams/platform/resources/schema/manifest-schema) version `1.7` or later.
+This section describes the changes that need to be added to the app manifest. Ensure that you use the [app manifest](/microsoftteams/platform/resources/schema/manifest-schema) version `1.7` or later.
 
 ```json
 "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",

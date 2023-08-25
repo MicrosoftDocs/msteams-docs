@@ -8,7 +8,7 @@ ms.date: 02/09/2023
 
 # App manifest schema
 
-The Microsoft app manifest (previously called Teams app manifest) describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json`](https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.15, and the current version is 1.16 are each supported (using "v1.x" in the URL).
+The app manifest (previously called Teams app manifest) describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json`](https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.15, and the current version is 1.16 are each supported (using "v1.x" in the URL).
 For more information on the changes made in each version, see [app manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 The following table lists TeamsJS version and app manifest versions as per different app scenarios:
@@ -855,7 +855,7 @@ Specify meeting extension definition. For more information, see [custom Together
 **Optional**—Object
 
 > [!NOTE]
-> `authorization` is only supported for app manifest version 1.12 or later.
+> `authorization` is only supported for the app manifest version 1.12 or later.
 
 Specify and consolidate authorization related information for the app.
 
@@ -932,7 +932,7 @@ To create an app manifest file:
 
 <br>
 <details>
-<summary>Here's an example of app manifest schema for a tab app with SSO enabled:</summary>
+<summary>Here's an example of the app manifest schema for a tab app with SSO enabled:</summary>
 <br>
 
 > [!NOTE]
