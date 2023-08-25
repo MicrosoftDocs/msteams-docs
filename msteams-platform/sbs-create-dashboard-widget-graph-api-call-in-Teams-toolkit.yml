@@ -123,7 +123,7 @@ items:
       | Folder | Contents |
       | ----- | ----- |
       | `.vscode` | VSCode files for debugging. |
-      | `appPackage` | Templates for the Teams application manifest. |
+      | `appPackage` | Templates for the app manifest(previously called Teams app manifest). |
       | `env` | Environment files. |
       | `infra` | Templates for provisioning Azure resources. |
       | `src` | The source code for the dashboard Teams application. |
@@ -424,7 +424,7 @@ items:
         </details>
 
         <details>
-        <summary>2. Update app manifest (previously called Teams app manifest).</summary>
+        <summary>2. Update app manifest.</summary>
 
         To update app manifest, follow these steps:
 
