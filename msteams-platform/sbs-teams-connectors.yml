@@ -167,7 +167,7 @@ items:
   durationInMinutes: 5
   content: |
 
-    1. In your cloned repository, go to **csharp** > **TeamsToDoAppConnector** > **TeamsAppPackages**.
+    1. In your cloned repository, go to **csharp** > **TeamsAppPackages**.
 
     1. Create a .zip file with the following files that are present in the **Manifest** folder: 
        * manifest.json
@@ -177,15 +177,14 @@ items:
        :::image type="content" source="~/assets/images/sbs-connector/zip_1.png" alt-text="Screenshot of Manifest folder with Teams connector highlighted in red.":::
 
     1. Go to **Microsoft Teams**.
-    1. In the left pane
-         1. Select the **Apps** icon.
+         1. In the left pane, select the **Apps** icon.
          1. Select **Manage your apps**.
          1. Select **Upload an app**.
          1. Look for the option to **Upload a custom app**.
  
             :::image type="content" source="~/assets/images/sbs-connector/upload-a-custom-app.png" alt-text="Screenshot of Upload an app with Upload a custom app highlighted in red.":::
       
-    1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
+    1. Select the .zip file that you created in the **Manifest** folder and select **Open**.
 
        :::image type="content" source="~/assets/images/sbs-connector/open_1.png" alt-text="Screenshot of TeamsAppPackages folder with Teams connector zip file highlighted in red.":::
 
