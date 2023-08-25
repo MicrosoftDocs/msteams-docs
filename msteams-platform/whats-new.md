@@ -26,7 +26,10 @@ Teams platform features that are available to all app developers.
 
 **2023 August**
 
+* ***August 25, 2023***: **Teams app manifest is now referred to as app manifest**.
+
 * ***August 16, 2023***: [Use Teams Toolkit Visual Studio v17.7 extension with many new app development features to get started with app development for Teams.](toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md)
+
 * ***August 10, 2023***: [Send a proactive message using AAD ID](bots/how-to/conversations/send-proactive-messages.md).
 
 :::column-end:::
@@ -338,6 +341,8 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
 **2023 August**
+
+* ***August 25, 2023***: **Teams app manifest is now referred to as app manifest**.
 
 * ***August 22, 2023***: [Enable RSC permissions for a user using the Graph APIs](graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings).
 

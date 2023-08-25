@@ -48,7 +48,7 @@ Services that need access to all Teams message data must use the Graph APIs that
 
 ## Update app manifest
 
-For your bot to receive all conversation messages, the relevant RSC permission strings must be specified in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information, see [app manifest schema for Teams](../../../resources/schema/manifest-schema.md).
+For your bot to receive all conversation messages, the relevant RSC permission strings must be specified in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information, see [app manifest schema](../../../resources/schema/manifest-schema.md).
 
 :::image type="content" source="../../../assets/images/bots/RSC/appmanifest_2.png" alt-text="app manifest":::
 
@@ -58,7 +58,7 @@ The following code provides an example of the app manifest:
 * **webApplicationInfo.resource**: Any string. The resource field has no operation in RSC, but must be added with a value to avoid error response.
 * **authorization.permissions.resourceSpecific**: RSC permissions for your app with either or both `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` specified. For more information, see [resource-specific permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions).
 
-The following code provides an example of the app manifest version 1.12 or higher:
+The following code provides an example of the app manifest version 1.12 or later:
 
 ```json
 {

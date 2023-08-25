@@ -119,7 +119,7 @@ A great description can make your app stand out in the Microsoft Teams store and
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reasons-region-specific-app.png" alt-text="Screenshot shows an example for failed scenario of region specific app name.":::
 
-* Limitations or account dependency on external accounts or services to complete Sign-In, Sign-Out, and Sign-Up experience aren't called out in app manifest and long description.
+* Limitations or account dependency on external accounts or services to complete Sign-In, Sign-Out, and Sign-Up experience aren't called out in the app manifest and long description.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-passed-limitation-called-out.png" alt-text="Screenshot of passed image to show the called out limitations.":::
 
