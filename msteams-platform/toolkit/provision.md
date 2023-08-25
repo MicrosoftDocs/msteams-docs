@@ -53,7 +53,7 @@ Teams app in Teams Developer Portal.
 
 #### What it is
 
-Apply the app manifest (previously called Teams app manifest) to an existing Teams app in Teams Developer Portal. It uses the app ID in manifest.json file to determine which Teams app to update.
+Apply the app manifest (previously called Teams app manifest) to an existing Teams app in Teams Developer Portal. It uses the app ID in the manifest.json file to determine which Teams app to update.
 
 #### What resource it operates
 
@@ -72,7 +72,7 @@ Teams app in Teams Developer Portal.
 
 #### What it is
 
-This action renders app manifest template with environment variables and validates app manifest file using its schema.
+This action renders the app manifest template with environment variables and validates the app manifest file using its schema.
 
 #### What resource it operates
 
@@ -110,7 +110,7 @@ N/A
 
 #### What it is
 
-This action renders app manifest template with environment variables and compresses the app manifest file with two icons into a zip file.
+This action renders the app manifest template with environment variables and compresses the app manifest file with two icons into a zip file.
 
 #### What resource it operates
 
@@ -617,7 +617,7 @@ To ensure the TeamsFx tool functions properly, customize ARM template that satis
 
 * Ensure that the folder structure and file name remain unchanged. The tool may append new content to the existing files when you add more resources or capabilities to your project.
 * Ensure that the names of the auto-generated parameters and its property names remain unchanged. The auto-generated parameters may be used when you add more resources or capabilities to your project.
-* Ensure that the output of the auto-generated ARM template remains unchanged. You can add more outputs to the ARM template. The output is `.fx\states\state.{env}.json` and can be used in other features, such as deploy and validate app manifest file.
+* Ensure that the output of the auto-generated ARM template remains unchanged. You can add more outputs to the ARM template. The output is `.fx\states\state.{env}.json` and can be used in other features, such as deploy and validate the app manifest (previously called Teams app manifest) file.
 
 ### Customize Teams apps
 
