@@ -62,7 +62,7 @@ After creating the project, you can view the project folders and files under **E
   * `state.<envName>.json`: Provision output file for the environment. This file exists for every environment individually.
   * `<env>.userdata`: User data for the provision output for the environment. This file exists for every environment individually.
 * `templates`
-  * `appPackage`: App manifest template files.
+  * `appPackage`: The app manifest (previously called Teams app manifest) template files.
   * `azure`: `bicep` template files.
 
 ## Customize resource provision
@@ -77,7 +77,7 @@ The following table lists the common scenarios for customized resource provision
 | Reuse existing Microsoft Azure Active Directory (Azure AD) app for Teams app | `auth` section in`.fx\config.<envName>.json`|  [Use an existing Azure AD app for your Teams app](../provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
 | Reuse existing Azure AD app for bot |`bot` section in`.fx\config.<envName>.json`| [Use an existing Azure AD app for your bot](../provision.md#use-an-existing-azure-ad-app-for-your-bot) |
 | Skip adding user while provisioning SQL |`skipAddingSqlUser` property in`.fx\config.<envName>.json`| [Skip adding user for SQL database](../provision.md#skip-adding-user-for-sql-database) |
-| Customize app manifest |`manifest.template.json` file is available under `templates\appPackage`| [Preview app manifest (previously called Teams app manifest) in Toolkit](../TeamsFx-preview-and-customize-app-manifest.md)|
+| Customize the app manifest |`manifest.template.json` file is available under `templates\appPackage`| [Preview the app manifest in Toolkit](../TeamsFx-preview-and-customize-app-manifest.md)|
 
 ## Scenarios
 
@@ -154,7 +154,7 @@ Follow these steps customizing the environment description:
 3. Create a new environment and name it **staging**, if a staging environment doesn’t exist.
 4. Open the configuration file `.fx\configs\config.staging.json`.
 5. Add a new property as you did in config.dev.json and enter its value as **my app description for staging**.
-6. Open app manifest template `templates\appPackage\manifest.template.json`.
+6. Open the app manifest template `templates\appPackage\manifest.template.json`.
 7. Update the value of property `description` > `short` to use the variable defined in configure files with braces. Use the  following syntax `{{config.manifest.description.short}}`.
   
     The updates to `manifest.template.json` are:

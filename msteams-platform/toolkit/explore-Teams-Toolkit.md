@@ -132,7 +132,7 @@ From the task pane, you can see the following sections:
 
         * **Zip Teams App Package**: Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest (previously called Teams app manifest) and app icons.
         
-        * **Validate Application**: Validate if app manifest file is in right schema or validate the app package.
+        * **Validate Application**: Validate if the app manifest file is in right schema or validate the app package.
         
         * **Open Developer Portal to Publish**: Use Developer Portal to publish and manage your Teams app. 
    :::column-end:::
@@ -274,7 +274,7 @@ From the task pane, you can see the following sections:
        
         * **Preview your Teams app (F5)**: Press **F5** to debug and preview your Teams app.
 
-        * **Edit manifest file**: Edit the app manifest file with the Teams client.
+        * **Edit manifest file**: Edit the app manifest (previously called Teams app manifest)file with the Teams client.
    :::column-end:::
 :::row-end:::
 

@@ -91,7 +91,7 @@ The following example shows a basic Teams tab app directory structure:
 | Folder name | Contents |
 | --- | --- |
 | `.vscode` | Settings for VS Code to build and debug your Teams app. |
-| `appPackage` | App manifest(previously called Teams app manifest) file and icon files that Teams used to recognize your Teams app. |
+| `appPackage` | The app manifest (previously called Teams app manifest) file and icon files that Teams used to recognize your Teams app. |
 | `env` | Stores different environment parameters. |
 | `infra` | Azure `bicep` template files. Used for deploy your Teams app to Azure. |
 | `src` | Source code for the Tab capability, including your front-end app, UI components and the privacy notice, terms of use, |
@@ -123,7 +123,7 @@ The new project folder contains the following content:
 | Folder name | Contents |
 | --- | --- |
 | `.vscode` | Settings for VS Code to build and debug your Teams app. |
-| `appPackage` | App manifest file and icon files that Teams used to recognized your Teams app. |
+| `appPackage` | The app manifest file and icon files that Teams used to recognized your Teams app. |
 | `env` | Stores different environment parameters. |
 | `infra` | Azure `bicep` template files. Used for deploy your Teams app to Azure. |
 | `teamsapp.yml` | This configuration file defines the Teams Toolkit behavior for provision, deploy, and publish lifecycle. You can customize this file to change the behavior of Teams Toolkit in each lifecycle. |
@@ -260,8 +260,8 @@ The following example shows a basic Teams tab app directory structure:
 | - `tabs\src\components\App.jsx` | Code for handling URL routing in the app. It calls the [Microsoft Teams JavaScript client library](~/tabs/how-to/using-teams-client-library.md) to establish communication between your app and Teams. |
 | - `tabs\src\components\Tab.jsx` | Code to implement the UI of your app. |
 | - `tabs\src\components\TabConfig.jsx` | Code to implement the UI that configures your app. |
-| `templates\appPackage` | App manifest template files, and the app icons: color.png and outline.png. |
-| - `templates\appPackage\manifest.template.json` | App manifest for running the app in local or remote environment.  |
+| `templates\appPackage` | The app manifest template files, and the app icons: color.png and outline.png. |
+| - `templates\appPackage\manifest.template.json` | The app manifest for running the app in local or remote environment.  |
 | `templates\azure` | `bicep` template files. |
 
 > [!NOTE]
@@ -289,7 +289,7 @@ The new project folder contains the following content:
 | `.fx` | Project level settings, configuration, and environment information. |
 | `.vscode` | VS code files for local debug. |
 | `bot` | The bot source code. |
-| `templates` | Templates for app manifest and corresponding Azure resources. |
+| `templates` | Templates for the app manifest and corresponding Azure resources. |
 
 The core notification implementation is stored in the **bot** folder, and it contains:
 

@@ -225,7 +225,7 @@ You can view the project folders and files under **Explorer** in Visual Studio C
 | Folder name| Contents| Debug configuration type |
 | --- | --- | --- |
 |  `.fx/configs/config.local.json` | Local debug configuration file | The values of each configuration generate and saves during local debug. |
-|  `templates/appPackage/manifest.template.json` | app manifest template file for local debug | The placeholders in the file during local debug. |
+|  `templates/appPackage/manifest.template.json` | The app manifest template file for local debug | The placeholders in the file during local debug. |
 |  `tabs/.env.teams.local`  | Environment variables file for tab | The values of each environment variable generate and saves during local debug. |
 |  `bot/.env.teamsfx.local` | Environment variables file for bot and message extension| The values of each environment variable generate and saves during local debug. |
 | `api/.env.teamsfx.local`  | Environment variables file for Azure Functions | The values of each environment variable generate and saves during local debug. |
