@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    This step-by-step guide helps you to create a dashboard tab, add a new widget to the dashboard, and implement Graph API. You see the following output:
+    This step-by-step guide helps you to create a dashboard tab, add a new widget to the dashboard, and implement Graph API. You'll see the following output:
 
     :::image type="content" source="assets/images/sbs-create-a-new-dashboard/dashboard1.png" alt-text="Screenshot shows the final output of dashboard.":::
     
