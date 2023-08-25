@@ -10,7 +10,7 @@ ms.date: 04/06/2023
 
 # Purchase and manage app subscriptions and licenses
 
-This article helps you understand the user's purchase experience for apps in Teams. You can add more features and functionality to your Teams app through subscriptions. Users can purchase subscriptions and manage licenses for themselves, their team, or their organization from the Teams store.
+This article helps you understand the user's purchase experience for apps in Teams. Users can purchase subscriptions and manage licenses from the Teams store for an individual, team, or an organization. You can add more features and functionality to your Teams app through subscriptions.
 
 ## Subscription experience
 
@@ -46,18 +46,18 @@ To purchase a subscription plan for a Teams app, follow these steps:
 
     :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="Screenshot shows the option to set up your subscription.":::
 
-1. Manage your subscription plan through the app website (also known as a [landing page](include-saas-offer.md#build-a-landing-page-for-subscription-management)).
+You're redirected to the app website (also known as a [landing page](include-saas-offer.md#build-a-landing-page-for-subscription-management)) where you can manage your subscriptions.
 
-    :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Screenshot shows User and Licenses screen to assign license.":::
+:::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Screenshot shows User and Licenses screen to assign license.":::
 
-    When a new user launches the app for the first time, they're requested to provide consent to the app.
+When a new user launches the app for the first time, they're requested to provide consent to the app.
 
-    > [!NOTE]
-    > Consent dialog is part of the flow to get the user's license information and may vary based on ISV’s integration approach.
+> [!NOTE]
+> Consent dialog is part of the flow to get the user's license information and may vary based on Independent software vendors (ISVs) integration approach.
 
-    Following is an example of the consent screen shown when calling for user profile data with minimum User.Read permission:
+Following is an example of the consent screen:
 
-    :::image type="content" source="../../../../assets/images/saas-offer/permissions-requested.png" alt-text="Screenshot shows the Permissions requested consent dialog.":::
+:::image type="content" source="../../../../assets/images/saas-offer/permissions-requested.png" alt-text="Screenshot shows the Permissions requested consent dialog.":::
 
 ## License management experience
 
@@ -71,7 +71,7 @@ The following example shows how users can manage licenses for third-party apps f
 
 1. Select **Subscriptions**. A tab appears with a list of purchases made in the tenant.
 
-1. Choose an existing subscription from the list and select **Assign licenses**.
+1. Select an existing subscription from the list and then select **Assign licenses**.
 
     :::image type="content" source="../../../../assets/images/saas-offer/client-experience-2.png" alt-text="Screenshot shows the Assign licenses option of the respective app under Subscription tab.":::
 
