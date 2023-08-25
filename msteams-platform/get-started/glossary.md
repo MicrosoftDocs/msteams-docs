@@ -122,7 +122,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Government community cloud (GCC) High](../concepts/app-fundamentals-overview.md#government-community-cloud)|GCC high environments deliver compliance with Department of Defense (DoD) Security Requirements Guidelines, Defense Federal Acquisition Regulations Supplement (DFARS), and International Traffic in Arms Regulations (ITAR).<br>**See also**: [Department of Defense (DoD)](#d)|
 | [Graph API](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | A RESTful web API for Microsoft Graph that enables you to access Microsoft Cloud service resources. <br>**See also**: [Microsoft Graph Explorer](#m) |
 | [Group chat](../resources/bot-v3/bot-conversations/bots-conversations.md) | A chat feature where a user is able to chat with a bot in a group setting by using @mention to invoke the bot. <br>**See also**: [One-on-one chat](#o); [Chat bot](#c) |
-| [GUID](../tabs/how-to/authentication/tab-sso-register-aad.md) | The GUID, also knows as the application ID or client ID, is a value the Microsoft identity platform assigns to your app when you register it in Azure AD. The GUID value uniquely identifies the app and its configuration within the identity platform. <br> **See also**: [Application ID](#a) |
+| [GUID](../tabs/how-to/authentication/tab-sso-register-aad.md) | The GUID, also known as the application ID or client ID, is a value the Microsoft identity platform assigns to your app when you register it in Azure AD. The GUID value uniquely identifies the app and its configuration within the identity platform. <br> **See also**: [Application ID](#a) |
 | [Guest](../apps-in-teams-meetings/teams-apps-in-meetings.md#user-types-in-teams)| A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s Azure AD and have same Teams capabilities as a native team member. They have access to team chats, meetings, and files. A guest can be an organizer, presenter, or attendee.  <br>**See also**: [Anonymous](#a); [In-tenant](#i); [Federated or external](#f)|
 
 ## I
@@ -148,7 +148,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Local workbench](../sbs-gs-spfx.yml) | The default option to run and debug a Teams app in Visual Studio Code (VS Code) that is created using SPFx. <br>**See also**: [Workbench](#w); [Teams workbench](#t) |
 | [Location capability](../concepts/device-capabilities/location-capability.md) | A device capability that you can integrate with your app to know the geographical location of the app user for an enhanced collaborative experience. This feature is currently available only for Teams mobile clients only. <br>**See also**: [Capability](#c); [Media capability](#m); [Device Capability](#d); [Teams Mobile](#t) |
 | [Long description](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#long-description) | The long description can provide a narrative that highlights your apps main features, the problems it solves, and target audience. <br>**See also**: [Short description](#s)|
-| [Low code apps](../samples/teams-low-code-solutions.md) | A custom Teams app built from scratch using Microsoft Power Platform that requires little or no coding, and can be developed and deployed quickly. |
+| [Low code apps](../samples/teams-low-code-solutions.md) | A custom Teams app built from scratch using Microsoft Power Platform that requires little or no coding and can be developed and deployed quickly. |
 
 ## M
 
@@ -175,7 +175,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Microsoft Teams UI Library](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Library helps you view and test individual Teams UI templates and related components in your browser. |
 | [Microsoft Teams UI Toolkit](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. |
 | Microsoft store | It's a digital distribution platform operated by Microsoft. it's also known as Windows store. <br> [Teams store](#t) |
-| [Monetization](../concepts/deploy-and-publish/appsource/prepare/monetize-overview.md)| Microsoft Teams store provides features that enables you to monetize your apps and gain customers by engaging with your users. <br> **See also**: [SaaS](#s)|
+| [Monetization](../concepts/deploy-and-publish/appsource/prepare/monetize-overview.md)| Microsoft Teams store provides features that enable you to monetize your apps and gain customers by engaging with your users. <br> **See also**: [SaaS](#s)|
 | [Multi-tenant app](../tabs/how-to/authentication/tab-sso-register-aad.md) | A class of applications that enables sign-in and consent by users provisioned in any Azure AD tenant, including tenants other than the one where the client app is registered. <br> **See also**: [Single-tenant apps](#s) |
 
 ## N
@@ -215,10 +215,10 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 | [Rate-limiting](../bots/how-to/rate-limit.md) | A method to limit messages to a certain maximum frequency to ensure that number of messages are sufficient and don't appear as spam. |
-| [Redirect URL](../bots/how-to/authentication/bot-sso-register-aad.md) | A redirect URI is the location where the authorization server sends the user after the app has been successfully authorized and granted an authorization code or access token. It's also called or reply URL. |
+| [Redirect URL](../bots/how-to/authentication/bot-sso-register-aad.md) | A redirect URI is the location where the authorization server sends the user after the app has been successfully authorized and granted an authorization code or access token. It's also called reply URL. |
 | [Role-based views](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/user-specific-views.md) | A feature of tabs where the tab experience may be different for users depending on their permission level. |
 | [RSC permission](../graph-api/rsc/resource-specific-consent.md) | Resource-specific consent (RSC) permission feature is needed by team owners to let a bot app receive messages across channels in a team without being @mentioned. |
-| [Real-time meeting protocol](../resources/schema/manifest-schema.md#meetingextensiondefinition)| A Boolean value indicating whether this app can stream the meeting's audio and video content to an Real-time meeting protocol (RTMP) endpoint.|
+| [Real-time meeting protocol](../resources/schema/manifest-schema.md#meetingextensiondefinition)| A Boolean value indicating whether this app can stream the meeting's audio and video content to a Real-time meeting protocol (RTMP) endpoint.|
 
 ## S
 
@@ -284,7 +284,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
-| [Valid domains](../resources/schema/manifest-schema.md#validdomains) | A property in the app manifest file (`validDomains`). A list of valid domains for websites the app expects to load within the Teams client. Domain listings can include wildcards, for example, *.example.com.|
+| [Valid domains](../resources/schema/manifest-schema.md#validdomains) | A property in the app manifest file (`validDomains`). A list of valid domains for websites the app expects to load within the Teams client. Domain listings can include wildcards, for example, `*.example.com`.|
 | [Virtual assistant](../samples/virtual-assistant.md) | A Microsoft open-source template that enables you to create a robust conversational solution. |
 
 ## W
