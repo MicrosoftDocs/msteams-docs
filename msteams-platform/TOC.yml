@@ -770,6 +770,8 @@
       displayName: Microsoft 365, Office 365
     - name: TeamsJS capability support across Microsoft 365
       href: m365-apps/teamsjs-support-m365.md
+  - name: Teams meeting apps in Outlook
+    href: m365-apps/extend-m365-meeting-app.md
   - name: Teams message extensions in Outlook
     items:
       - name: Enable a Teams message extension for Outlook
@@ -786,8 +788,6 @@
       - name: Build Adaptive Card-based Loop component
         href: m365-apps/cards-loop-component.md
         displayName: loop component, weburl, metadata
-  - name: Teams meeting apps in Outlook
-    href: m365-apps/extend-m365-meeting-app.md
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Extend Microsoft 365 Copilot
