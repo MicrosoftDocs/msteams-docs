@@ -29,7 +29,7 @@ items:
     | [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) | Teams account with the appropriate permissions to install an app. |
     | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
     | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
-    | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+    | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 
 - title: Create a new dashboard
   content: |
@@ -122,7 +122,7 @@ items:
 
       | Folder | Contents |
       | ----- | ----- |
-      | `.vscode` | VSCode files for debugging. |
+      | `.vscode` | Visual Studio Code files for debugging. |
       | `appPackage` | Templates for the app manifest(previously called Teams app manifest). |
       | `env` | Environment files. |
       | `infra` | Templates for provisioning Azure resources. |
@@ -419,7 +419,7 @@ items:
             }        
             ```
 
-            :::image type="content" source="assets/images/sbs-create-a-new-dashboard/aad-app-manifest.png" alt-text="Screenshot shows the azure active dirctory code addition. ":::
+            :::image type="content" source="assets/images/sbs-create-a-new-dashboard/aad-app-manifest.png" alt-text="Screenshot shows the Azure active directory code addition. ":::
 
         </details>
 
@@ -482,7 +482,7 @@ items:
              REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
            ```
 
-            :::image type="content" source="assets/images/sbs-create-a-new-dashboard/cli-teams-app.png" alt-text="Screenshot shows the information to react code for cli.":::
+            :::image type="content" source="assets/images/sbs-create-a-new-dashboard/cli-teams-app.png" alt-text="Screenshot shows the information to react code for CLI.":::
 
         # [teamsapp.local.yml](#tab/teamsapplocalyml)
         
@@ -594,7 +594,7 @@ items:
           
             ```html
               <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
-              <!--If you're not familiar with this, do not alter or remove this file from your project.-->
+              <!--If you're not familiar with this, don't alter or remove this file from your project.-->
               <html>
                 <head>
                   <title>Login End Page</title>
@@ -665,7 +665,7 @@ items:
 
         ```typescript
         /**
-          * Retrive sample data
+          * Retrieve sample data
           * @returns data for list widget
           */
         import {TeamsUserCredentialContext} from "../internal/singletonContext";
@@ -711,7 +711,7 @@ items:
 
       1. Go to **EXPLORER** > **src** > **services** > **ListWidget.tsx**.
 
-      1. Update the `export default class ListWidget()` to add user pofile widget.
+      1. Update the `export default class ListWidget()` to add user profile widget.
 
          ```typescript
           export default class ListWidget extends BaseWidget<any, IListWidgetState> {
