@@ -432,7 +432,7 @@ No, the landscape mode support in Teams doesn't have any negative effect on app 
 <details>
 <summary>Where do you find MPN ID?</summary>
 
-You can find your MPN ID by fetching the PC ID.
+You can find your MPN ID by fetching the Partner Center ID.
 <br>
 &nbsp;
 </details>
