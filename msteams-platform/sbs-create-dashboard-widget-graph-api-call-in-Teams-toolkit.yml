@@ -72,7 +72,7 @@ items:
 
      1. Select the Teams Toolkit icon in sidebar.
 
-     1. Select **Sign in to Microsoft 365**. A prompt appears.
+     1. Select **Sign in to Microsoft 365**. A pop-up appears.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/M365-account-signin.png" alt-text="Screenshot shows the Microsoft sign in.":::
 
@@ -450,7 +450,7 @@ items:
 
         # [teamsapp.yml](#tab/teamsappyml)
 
-        1. Add the code under provision.
+        1. Add the code under `provision`.
         
             ```yaml 
               - uses: aadApp/create
@@ -486,7 +486,7 @@ items:
 
         # [teamsapp.local.yml](#tab/teamsapplocalyml)
         
-        1. Add the code under provision.
+        1. Add the code under `provision`.
         
             ```yaml 
               - uses: aadApp/create
@@ -537,8 +537,8 @@ items:
             Add the following code in **auth-start.html**:
 
             ```html
-              <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
-              <!--If you're not familiar with this, do not alter or remove this file from your project.-->
+              <!--The file is used during the Teams authentication flow to assist with retrieval of the access token.-->
+              <!--If you're not familiar with the file, don't alter or remove the file from your project.-->
               <html>
                 <head>
                   <title>Login Start Page</title>
@@ -593,8 +593,8 @@ items:
             Add the following code in **auth-end.html**:
           
             ```html
-              <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
-              <!--If you're not familiar with this, don't alter or remove this file from your project.-->
+              <!--The file is used during the Teams authentication flow to assist with retrieval of the access token.-->
+              <!--If you're not familiar with the file, don't alter or remove the file from your project.-->
               <html>
                 <head>
                   <title>Login End Page</title>
