@@ -18,11 +18,12 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 
 | Teams app features| App manifest element | Teams support |Outlook support | Microsoft 365 app support | Notes |
 |--|--|--|--|--|--|
-| [**Tabs-personal scope**](../tabs/how-to/create-personal-tab.md)     |`staticTabs`  | Web, Desktop, Mobile | Web, Desktop, Mobile (Android Beta*) | Web, Desktop, Mobile (Android)| *Rollout to Android current release in progress. Channel and group scope not yet supported for Microsoft 365. See [notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
-| [**Message extensions-search-based**](../messaging-extensions/how-to/search-commands/define-search-command.md)| `composeExtensions` | Web, Desktop, Mobile| Web, Desktop | - |Action-based not yet supported for Microsoft 365. See [notes](extend-m365-teams-message-extension.md#troubleshooting). |
-| [**Link unfurling (including Stage View)**](../tabs/tabs-link-unfurling.md) | `composeExtensions.messageHandlers` | Web, Desktop | Web, Desktop | - | See notes on [link unfurling](extend-m365-teams-message-extension.md#link-unfurling) and [Stage View](extend-m365-teams-message-extension.md#stage-view)|
-| [**Adaptive Card Loop components**](./design-loop-components.md)|`composeExtensions.messageHandlers`|Web (preview), Desktop (preview) |Web (preview), Desktop (only for [new Outlook](https://support.microsoft.com/office/getting-started-with-the-new-outlook-for-windows-656bb8d9-5a60-49b2-a98b-ba7822bc7627) preview) |-| Viewable (not composable) in Teams/Outlook mobile preview (iOS, Android). See [notes](cards-loop-component.md).|
-| [**Stage View**](extend-m365-teams-message-extension.md#stage-view)|`composeExtensions.messageHandlers`|Web, Desktop, Mobile|Web (preview), Desktop (preview)|-| Viewable/actionable (not composable) in Outlook mobile preview (iOS, Android). See [notes](extend-m365-teams-message-extension.md#stage-view).|
+| [**Tabs-personal scope**](../tabs/how-to/create-personal-tab.md)     |`staticTabs`  | Web, Desktop, Mobile | Web (preview), Desktop (preview), Mobile (Android preview, iOS preview) | Web, Desktop, Mobile (Android, iOS)| Channel and group scope not yet supported for Microsoft 365. See [notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
+| [**Message extensions-search-based**](../messaging-extensions/how-to/search-commands/define-search-command.md)| `composeExtensions` | Web, Desktop, Mobile| Web (preview), Desktop (preview) | - | Viewable/actionable (not composable) in Teams/Outlook mobile preview (iOS, Android). See [notes](extend-m365-teams-message-extension.md#troubleshooting). |
+| [**Link unfurling**](../tabs/tabs-link-unfurling.md) | `composeExtensions.messageHandlers` | Web, Desktop, Mobile | Web (preview), Desktop (preview) | - | Viewable/actionable (not composable) in Teams/Outlook mobile preview (iOS, Android). See [notes](extend-m365-teams-message-extension.md#link-unfurling). |
+| [**Adaptive Card Loop components**](./design-loop-components.md)|`composeExtensions.messageHandlers`|Web (preview), Desktop (preview) |Web (preview), Desktop (only for [new Outlook](https://support.microsoft.com/office/getting-started-with-the-new-outlook-for-windows-656bb8d9-5a60-49b2-a98b-ba7822bc7627) preview) |-| Viewable/actionable (not composable) in Teams/Outlook mobile preview (iOS, Android). See [notes](cards-loop-component.md).
+| [**Stage View**](extend-m365-teams-message-extension.md#stage-view)|`composeExtensions.messageHandlers`|Web, Desktop, Mobile|Web (preview), Desktop (preview)|-| Viewable/actionable (not composable) in Outlook mobile preview (iOS, Android). See [notes](extend-m365-teams-message-extension.md#stage-view).
+| [**Meeting apps**](extend-m365-meeting-app.md)|`configurableTabs`|Web, Desktop, Mobile|Desktop (preview)|-|Stage view not supported. See [notes](extend-m365-meeting-app.md).|
 | [**Office Add-ins**](/office/dev/add-ins/develop/json-manifest-overview) (preview) | `extensions` | - | Web, Desktop | - | Only available in [devPreview](../resources/schema/manifest-schema-dev-preview.md) manifest version. See [notes](#office-add-ins-preview).|
 
 Enrollment to [Microsoft 365 Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365) and [Microsoft 365 Apps update channel](/deployoffice/change-update-channels) requires admin opt-in for the entire organization or selected users. Update channels are device specific and apply only to installations of Microsoft 365 running on Windows.
@@ -32,7 +33,7 @@ Enrollment to [Microsoft 365 Targeted Release](/microsoft-365/admin/manage/relea
 
 For guidance about the Teams app manifest and TeamsJS versioning guidance, and further details about current Teams platform capability support across Microsoft 365, see the [Teams JavaScript client library overview](../tabs/how-to/using-teams-client-library.md).
 
-## Personal tabs and messaging extensions in Outlook and Microsoft 365 app
+## Personal tabs in Outlook and Microsoft 365 app
 
 Reach your users where they are, right in the context of their work by extending your web app as a [Teams personal tab](extend-m365-teams-personal-tab.md) application that also runs in both Outlook and Microsoft 365 app. Teams personal tabs built and hosted with [SharePoint Framework](extend-m365-teams-personal-tab.md#sharepoint-framework-spfx-apps) (SPFx) version 1.16 and later are also supported in Outlook and Microsoft 365 app.
 
@@ -48,9 +49,9 @@ On mobile, you can test and debug your Teams personal tab running on Microsoft 3
 
 :::image type="content" source="images/m365-mobile-personal-tab.png" alt-text="The screenshot is an example that shows personal tab running in Microsoft 365 on iOS.":::
 
----
+## Message extensions in Outlook
 
-You can also extend your search-based [Teams message extensions](extend-m365-teams-message-extension.md) to Outlook on the web and Windows desktop, enabling your customers to search and share results through the compose message area of Outlook, in addition to Microsoft Teams clients.
+You can extend your search-based [Teams message extensions](extend-m365-teams-message-extension.md) to Outlook on the web and Windows desktop, enabling your customers to search and share results through the compose message area of Outlook, in addition to Microsoft Teams clients.
 
 :::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="The screenshot is an example that shows Message extension running in Outlook and Teams.":::
 
@@ -59,6 +60,12 @@ Link unfurling works in Outlook web and Windows environments the same way it doe
 :::image type="content" source="images/outlook-teams-link-unfurling.png" alt-text="The screenshot is an example that shows Link unfurling running in Outlook and Teams.":::
 
 Build your app with the latest [Teams app manifest](../resources/schema/manifest-schema.md) and [Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) to benefit the latest consolidated Microsoft 365 app development process. Then deliver a streamlined deployment, installation, and admin experience for your customers that expands the reach and usage of your app.
+
+## Meeting apps in Outlook
+
+Users can discover and use your meeting app right in the flow of their work when you [extend your meeting app to Outlook](extend-m365-meeting-app.md) for Windows desktop.
+
+:::image type="content" source="images/outlook-teams-meeting-app.png" alt-text="Screenshot of a sample meeting app running in both Teams and Outlook":::
 
 ## Use Teams app manifest across Microsoft 365
 

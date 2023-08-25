@@ -339,6 +339,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 August**
 
+***August 28, 2023***: [Add, configure, and run meeting apps in Outlook for Windows desktop.](m365-apps/extend-m365-meeting-app.md)
+
 * ***August 22, 2023***: [Enable RSC permissions for a user using the Graph APIs](graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings).
 
 * ***August 21, 2023***: [Introduced the new Microsoft Teams client to provide better experience for your apps and users](resources/teams-updates.md).
