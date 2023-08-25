@@ -187,7 +187,7 @@ Thanks for previewing Teams meeting app support in Outlook! Please use the [Micr
 
 | **Sample Name** | **Description** | **Node.js** |
 |---------------|--------------|--------|
-| Meetings SidePanel| Microsoft Teams meeting extensibility sample for iteracting with Side Panel in-meeting. Works in Teams, Outlook. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)  |
+| HelloWorld In-meeting app| Simple meeting app demonstrating meeting details view, chat view, and side panel. Works in Teams, Outlook. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-in-meeting)  |
 
 ## See also
 
