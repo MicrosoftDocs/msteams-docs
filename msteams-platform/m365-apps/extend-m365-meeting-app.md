@@ -8,7 +8,11 @@ ms.topic: tutorial
 ms.localizationpriority: medium
 ms.subservice: m365apps
 ---
-# Extend a Teams meeting app to Outlook (preview)
+# Extend a Teams meeting app to Outlook
+
+> [!NOTE]
+>
+> * Outlook support for Teams meeting apps is only available in Outlook for Windows desktop [BetaChannel preview builds](https://insider.microsoft365.com/en-us/join/windows).
 
 Across the Microsoft 365 ecosystem, most monthly users schedule their Teams meetings from Outlook. To help users stay in the flow of their work, **Teams meeting apps are now supported (in preview) on Outlook for Windows desktop**. Not only can you configure and add meeting apps to Teams meetings scheduled from Outlook, you can also run meeting apps within the Outlook calendar! Here's how to ensure your Teams meeting app experience works seamlessly when extended to Outlook.
 
