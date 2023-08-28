@@ -18,7 +18,7 @@
 
 # [ngrok](#tab/ngrok)
 
-1. From ngrok, copy the HTTPS URL (https to io).
+1. From ngrok, copy the HTTPS URL.
 
     :::image type="content" source="../../assets/images/include-files/ngrok-url.png" alt-text="Screenshot shows the ngrok HTTPS URL.":::
     
