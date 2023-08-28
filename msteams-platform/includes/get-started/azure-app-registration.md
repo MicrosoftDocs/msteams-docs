@@ -6,19 +6,17 @@
 
 1. In the left pane, select **App registrations**.
 
-1. Select your bot.
+1. Under **Owned applications**, select your bot from the list of available applications.
 
    :::image type="content" source="../../assets/images/include-files/app-registrations.png" alt-text="Screenshot shows the selection of App registration and bot created in Azure portal.":::
 
 1. In the left pane, under **Manage**, select **Expose an API**.
 
-1. Select **Add**.
+1. Next to **Application ID URI**, select **Add**.
 
    :::image type="content" source="../../assets/images/include-files/expose-api-add.png" alt-text="Screenshot shows the Application ID URI add option.":::
 
-1. Use the `api://your-devtunnel-domain/{AppID}` or `api://your-ngrok-domain/{AppID}` format for the **Application ID URI**.
-
-1. Update the **Application ID URI** and select **Save**.
+1. Update the **Application ID URI** in the `api://your-devtunnel-domain/{AppID}` or `api://your-ngrok-domain/{AppID}`format and select **Save**.
 
    :::image type="content" source="../../assets/images/include-files/app-id-uri.png" alt-text="Screenshot shows the option to add redirect uri and save.":::
 
