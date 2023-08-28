@@ -1,6 +1,6 @@
 ---
 title: Overview to authentication using SSO in Teams with Azure AD
-description: Learn about Single sign-on (SSO) authentication in Teams and how to enable it in bots and message extension.
+description: Learn about Single sign-on (SSO) authentication in Microsoft Teams and how to enable it in bots and message extension.
 ms.topic: conceptual
 ms.localizationpriority: high
 ---
@@ -65,7 +65,7 @@ This section describes the tasks involved in implementing SSO for a Teams bot or
     > [!NOTE]
     > This section allows you to select the app for which you want to add code for enabling SSO.
 
-1. **Update Teams app manifest**: Update your Teams client app manifest with the app ID and application ID URI generated in Azure AD to allow Teams to request access tokens on behalf of your app. The update required in the manifest file is the same for bot and message extension apps.
+1. **Update app manifest (previously called Teams app manifest)**: Update your app manifest with the app ID and application ID URI generated in Azure AD to allow Teams to request access tokens on behalf of your app. The update required in the app manifest file is the same for bot and message extension apps.
 
 1. **Configure Graph scopes and permissions**: You can add more scopes to your app by extending your app with Microsoft Graph permissions and scopes.
 
