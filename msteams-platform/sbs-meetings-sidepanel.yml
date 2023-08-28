@@ -67,8 +67,8 @@ items:
     * Create Azure Bot resource to register bot with Azure Bot service.
     * Create client secret to enable single sign-on (SSO) authentication of the bot.
     * Add Teams channel to deploy the bot.
-    * Create a ngrok tunnel to your web server's endpoints.
-    * Add messaging endpoint to the ngrok tunnel you created.
+    * Create a ngrok or dev tunnel to your web server's endpoints.
+    * Add messaging endpoint to the ngrok or dev tunnel you created.
 
     **To create Azure bot resource**
 
@@ -203,7 +203,7 @@ items:
 
     1. Select **Azure Active Directory**.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/AAD.png" alt-text="Screenshot of Azure services with Azure Active Directory highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/AAD.png" alt-text="Screenshot of Azure services with Azure AD highlighted in red.":::
 
     1. In the left navigation pane, select **App registrations**.
 
@@ -211,7 +211,7 @@ items:
 
     1. Select your bot.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/appregister_2.png" alt-text="Screenshot of Azure Active Directory page. The App registrations in the left panel and the bot selected are highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/appregister_2.png" alt-text="Screenshot of Azure AD page. The App registrations in the left panel and the bot selected are highlighted in red.":::
 
     1. Under **Manage**, select **Expose an API**.
 
@@ -285,7 +285,7 @@ items:
 
          :::image type="content" source="~/assets/images/meetings-side-panel/authorizedscope_1.png" alt-text="Screenshot of Authorized scopes section under Expose an API page with the scope highlighted in red":::
 
-       The following image displays the client Id:
+       The following image displays the client ID:
 
          :::image type="content" source="~/assets/images/meetings-side-panel/clientapps.png" alt-text="Screenshot of Authorized client applications under Expose an API with the client IDs highlighted in red."::: 
   
@@ -342,7 +342,7 @@ items:
 
          * Replace `<<Microsoft-App-ID>>"` to your bot's **Microsoft App ID**.
          * Replace `"<<Microsoft-App-Secret>>"` to your bot's client secret ID **Value**.
-         * Replace `<<Your_Domain_URL>>` to the ngrok domain name.
+         * Replace `<<Your_Domain_URL>>` to the ngrok or dev tunnel domain name.
 
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettings_1.png" alt-text="Screenshot of appsettings JSON file with appsettings highlighted.":::
           
@@ -353,7 +353,7 @@ items:
     1. Open **manifest.json** file in Visual Studio and make the following changes:
 
          * Replace `<<Manifest-id>>` to a unique manifest ID. You can also enter your **Microsoft App ID**.
-         * Replace all occurrences of `{{domain-name}}` and `{{Base_URL}}` with your ngrok domain name.
+         * Replace all occurrences of `{{domain-name}}` and `{{Base_URL}}` with your ngrok or dev tunnel domain name.
          * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
 
          :::image type="content" source="~/assets/images/meetings-side-panel/manifest-2_1.png" alt-text="Screenshot of ID and bot ID highlighted in red.":::
