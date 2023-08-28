@@ -8,7 +8,7 @@
 
 1. Under **Who can consent?**, select **Admins and users**.
 
-1. To configure the admin and user consent prompt with the appropriate values for **access_as_user** scope, provide the following information:
+1. Update the values for the rest of the fileds as follows:
 
    * Enter **Teams can access the user’s profile** as **Admin consent display name**.
 
