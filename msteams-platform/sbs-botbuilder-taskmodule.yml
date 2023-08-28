@@ -329,7 +329,7 @@ items:
     
     1. Open the **manifest.json** file and update the following information: 
 
-         * Replace all occurrences of `<<Domain-Name>>` with your ngrok or devtunnel domain.
+         * Replace all occurrences of `<<Domain-Name>>` with your ngrok or dev tunnel domain.
          * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
 
         :::image type="content" source="~/assets/images/Teams-task-module/manifest_1.png" lightbox="~\assets\images\Teams-task-module\manifest_2.png" alt-text="Manifest image2.":::
@@ -360,7 +360,7 @@ items:
 
           :::image type="content" source="~/assets/images/Teams-task-module/certificate_1.png" alt-text="Trust Certificate":::
 
-          A webpage opens with a message. **Your bot is ready!**.
+          A webpage opens with a message. **Your bot is ready!**
 
           :::image type="content" source="~/assets/images/Teams-task-module/appisready.png" alt-text="App ready"::: 
 
