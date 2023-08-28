@@ -8,7 +8,7 @@
 
 1.  Go to Azure portal and select the bot that you've created. In the left pane, under **Settings**, select **Configuration**.
 
-1.  Update the **messaging endpoint** in the format `https://your-devtunnel-domain/api/messages`.
+1.  Update the **Messaging endpoint** in the format `https://your-devtunnel-domain/api/messages`.
 
     :::image type="content" source="../../assets/images/include-files/devtunnels-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding api.":::
 
@@ -28,7 +28,7 @@
 
 1.  Go to the Azure bot you've created in Azure portal. In the left pane, under **Settings**, select **Configuration**.
 
-1. Update the **messaging endpoint** in the format `https://your-ngrok-domain/api/messages`.
+1. Update the **Messaging endpoint** in the format `https://your-ngrok-domain/api/messages`.
 
     :::image type="content" source="../../assets/images/include-files/ngrok-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding api.":::
 
