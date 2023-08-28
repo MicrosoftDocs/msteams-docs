@@ -23,6 +23,6 @@ The following steps are applicable only if you've created a new **Microsoft App 
 
     :::image type="content" source="../../assets/images/include-files/add-client-secret.png" alt-text="Screenshot show the client secret description option to add."::: 
 
-1. Under **Value**, select **Copy to clipboard** to save the client secret value for your refernce.
+1. Under **Value**, select **Copy to clipboard** to save the client secret value for your reference.
 
-    :::image type="content" source="../../assets/images/include-files/client-secret-value.png" alt-text="Screenshot show the option to copy the client scrent id value to copy value to clipboard.":::
+    :::image type="content" source="../../assets/images/include-files/client-secret-value.png" alt-text="Screenshot show the option to copy the client secret ID value to copy value to clipboard.":::

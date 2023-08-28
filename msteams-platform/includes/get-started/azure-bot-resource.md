@@ -42,4 +42,4 @@
     
     You have successfully created your Azure bot.
 
-    :::image type="content" source="../../assets/images/include-files/azure-bot-created-output.png" alt-text="Screenshot shows the output of a bot in Azure Portal.":::
+    :::image type="content" source="../../assets/images/include-files/azure-bot-created-output.png" alt-text="Screenshot shows the output of a bot.":::

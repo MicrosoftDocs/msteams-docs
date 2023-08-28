@@ -16,4 +16,4 @@
 
 1. Select **Apply**.
 
-    :::image type="content" source="../../assets/images/include-files/teams-apply.png" alt-text="Screenshot shows the microsoft teamsas messaging to apply.":::
+    :::image type="content" source="../../assets/images/include-files/teams-apply.png" alt-text="Screenshot shows the Microsoft Teams as messaging to apply.":::

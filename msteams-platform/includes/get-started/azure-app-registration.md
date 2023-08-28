@@ -14,13 +14,13 @@
 
 1. Select **Add**.
 
-   :::image type="content" source="../../assets/images/include-files/expose-api-add.png" alt-text="Screenshot shows to add the Application ID URI.":::
+   :::image type="content" source="../../assets/images/include-files/expose-api-add.png" alt-text="Screenshot shows the Application ID URI add option.":::
 
 1. Use the `api://your-devtunnel-domain/{AppID}` or `api://your-ngrok-domain/{AppID}` format for the **Application ID URI**.
 
 1. Update the **Application ID URI** and select **Save**.
 
-   :::image type="content" source="../../assets/images/include-files/app-id-uri.png" alt-text="Screenshot shows to add redirect uri and save.":::
+   :::image type="content" source="../../assets/images/include-files/app-id-uri.png" alt-text="Screenshot shows the option to add redirect uri and save.":::
 
    The following image shows the domain name:
 

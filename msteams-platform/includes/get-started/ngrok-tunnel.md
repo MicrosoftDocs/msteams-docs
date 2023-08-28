@@ -7,6 +7,6 @@ ngrok http --host-header=localhost 3978
 > [!TIP]
 > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
 
-The window shows the HTTPS URL (https to io).
+The window shows the HTTPS URL.
 
  :::image type="content" source="../../assets/images/include-files/ngrok-url.png" alt-text="Screenshot shows the ngrok HTTPS URL.":::

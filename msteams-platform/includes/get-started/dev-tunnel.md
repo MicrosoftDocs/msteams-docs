@@ -7,7 +7,7 @@
 
 1. Select **Next**.
 
-    :::image type="content" source="../../assets/images/include-files/template-search.png" alt-text="Screenshot shows the search and selection asp.net template.":::
+    :::image type="content" source="../../assets/images/include-files/template-search.png" alt-text="Screenshot shows the search and selection of the template.":::
 
 
 
@@ -21,7 +21,7 @@
 
     An overview window appears.
 
-    :::image type="content" source="../../assets/images/include-files/asp-net-output.png" alt-text="Screenshot shows the asp.net project window.":::
+    :::image type="content" source="../../assets/images/include-files/asp-net-output.png" alt-text="Screenshot shows the overview window.":::
 
 1. In the debug dropdown, select **Dev Tunnels (no active tunnel) > Create A Tunnel...**.
 
@@ -31,7 +31,7 @@
 
 1. Update the following details in the pop-up window.
 
-    1. **Account**: Enter a Microsoft or Github account.
+    1. **Account**: Enter a Microsoft or GitHub account.
     1. **Name**: Enter a name for your tunnel.
     1. **Tunnel Type**: From the dropdown, select **Temporary**.
     1. **Access**: From the dropdown, select **Public**.
@@ -72,5 +72,5 @@
 
     The output console shows the dev tunnel URL.
     
-    :::image type="content" source="../../assets/images/include-files/output-console-url.png" alt-text="Screenshot shows the url in the Visual S+tudio output console.":::
+    :::image type="content" source="../../assets/images/include-files/output-console-url.png" alt-text="Screenshot shows the url in the Visual Studio output console.":::
     

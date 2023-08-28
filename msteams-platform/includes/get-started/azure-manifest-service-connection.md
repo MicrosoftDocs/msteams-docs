@@ -4,7 +4,7 @@
 
 1. Set the configuration item **"accessTokenAcceptedVersion":2**. If not set, change its value to `2` and select **Save**.
 
-    :::image type="content" source="../../assets/images/include-files/manifest-token.png" alt-text="Screenshot shows the manifest option and accesstoken details in Azure potal.":::
+    :::image type="content" source="../../assets/images/include-files/manifest-token.png" alt-text="Screenshot shows the manifest option and accesstoken details in Azure portal.":::
 
     > [!NOTE]
     > If you're already testing your bot in Teams, sign out of this app and sign out of Teams. To see this change, sign in again.
