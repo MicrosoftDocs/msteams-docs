@@ -1,5 +1,5 @@
 ---
-title: Teams JavaScript client library support across Microsoft 365
+title: The Teams JavaScript client library support across Microsoft 365
 date: 06/26/2023
 author: erikadoyle
 ms.author: mosdevdocs
