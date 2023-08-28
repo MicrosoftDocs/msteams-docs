@@ -122,7 +122,7 @@ An app's name plays a critical role in how users discover it in the store. Use t
 
 * Don’t use parenthesis in naming to include Microsoft products. [*Mandatory Fix*]
 
-* Developer name must be the same in the app manifest (previously called Teams app manifest)and AppSource. [*Mandatory Fix*]
+* Developer name must be the same in the app manifest (previously called Teams app manifest) and AppSource. [*Mandatory Fix*]
 
 * App manifests submitted must be production manifests. Accordingly, app name mustn't indicate that the app is a preproduction app. For example, app name mustn't contain words such as Beta, Dev, Preview, and UAT. [*Mandatory Fix*]
 
