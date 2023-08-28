@@ -33,14 +33,13 @@ items:
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
-     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all-in-one place.|
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
-     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
+     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
+     | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. Use the latest version or install the portable version |
      | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-     | &nbsp; | [Latest version of Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client) | You can install the package using npm or yarn. |
-     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
-     | &nbsp; | [SignalR](/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) | Install to update agenda in real-time. |
-    
+     | &nbsp; | [Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client) | You can install the package using npm or yarn. Use the latest version. |
+     | &nbsp; | [Live Share SDK](https://github.com/microsoft/live-share-sdk) | Live Share enables collaborative app experiences. |
+     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
      
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -341,9 +340,9 @@ items:
 
     1. Open **appsettings.json** file in Visual Studio and update the following information:  
 
-         * Replace `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Replace `"MicrosoftAppPassword"` to your bot's client secret ID **Value**.
-         * Replace `"BaseUrl"` to the ngrok domain name.
+         * Replace `<<Microsoft-App-ID>>"` to your bot's **Microsoft App ID**.
+         * Replace `"<<Microsoft-App-Secret>>"` to your bot's client secret ID **Value**.
+         * Replace `<<Your_Domain_URL>>` to the ngrok domain name.
 
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettings_1.png" alt-text="Screenshot of appsettings JSON file with appsettings highlighted.":::
           
@@ -353,8 +352,9 @@ items:
     
     1. Open **manifest.json** file in Visual Studio and make the following changes:
 
-         * Replace all occurrences of `<<Your_Domain_URL>>` with your ngrok domain name.
-         * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
+         * Replace `<<Manifest-id>>` to a unique manifest ID. You can also enter your **Microsoft App ID**.
+         * Replace all occurrences of `{{domain-name}}` and `{{Base_URL}}` with your ngrok domain name.
+         * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
 
          :::image type="content" source="~/assets/images/meetings-side-panel/manifest-2_1.png" alt-text="Screenshot of ID and bot ID highlighted in red.":::
 
