@@ -27,7 +27,7 @@ Configure the `webApplicationInfo` property in the app manifest file. This prope
 > [!NOTE]
 > Use the app manifest version 1.5 or later to implement the `webApplicationInfo` property.
 
-The application ID URI that you registered in Azure AD is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in the app manifest.
+The application ID URI that you registered in Azure AD is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in app manifest.
 
 For more information, see [webApplicationInfo](../../../resources/schema/manifest-schema.md#webapplicationinfo).
 
