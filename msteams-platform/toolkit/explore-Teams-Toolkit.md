@@ -274,7 +274,7 @@ From the task pane, you can see the following sections:
        
         * **Preview your Teams app (F5)**: Press **F5** to debug and preview your Teams app.
 
-        * **Edit manifest file**: Edit the app manifest (previously called Teams app manifest)file with the Teams client.
+        * **Edit manifest file**: Edit the app manifest (previously called Teams app manifest) file with the Teams client.
    :::column-end:::
 :::row-end:::
 

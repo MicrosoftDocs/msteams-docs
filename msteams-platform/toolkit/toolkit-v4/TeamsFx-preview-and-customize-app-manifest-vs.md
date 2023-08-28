@@ -9,7 +9,7 @@ ms.date: 05/13/2022
 zone_pivot_groups: teams-toolkit-platform-vs
 ---
 
-# Customize the app manifest for Visual Studio
+# Customize app manifest for Visual Studio
 
 :::zone pivot="visual-studio-v17-7"
 
@@ -32,7 +32,7 @@ TEAMS_APP_DESCRIPTION=This is an amazing app
 }
 ```
 
-## Preview the app manifest file
+## Preview app manifest file
 
 You can preview the app manifest file either **For Local** or **For Azure**.  To preview the app manifest file, follow these steps: To preview the app manifest file:
 
@@ -62,7 +62,7 @@ You can preview the app manifest file either **For Local** or **For Azure**.  To
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/preview-manifest.png" alt-text="Screenshot shows the preview of app manifest.":::
 
-You can preview the app manifest file under `appPackage/build` in Visual Studio.
+You can preview app manifest file under `appPackage/build` in Visual Studio.
 
 ### Sync local changes to Developer Portal
 
@@ -109,9 +109,9 @@ When you create a Teams command bot using Visual Studio, two app IDs are registe
 
 :::zone pivot="visual-studio-v17-6"
 
-## Customize the app manifest in Teams Toolkit
+## Customize app manifest in Teams Toolkit
 
-Teams Toolkit in Visual Studio loads the app manifest (previously called Teams app manifest) from `manifest.template.json` with configurations from `state.{env}.json` and `config.{env}.json` while provisioning and preparing app dependencies. You can also create Teams app in Developer Portal with app manifest.
+Teams Toolkit in Visual Studio loads app manifest (previously called Teams app manifest) from `manifest.template.json` with configurations from `state.{env}.json` and `config.{env}.json` while provisioning and preparing app dependencies. You can also create Teams app in Developer Portal with app manifest.
 
 After scaffolding, in the app manifest template file under `templates/appPackage` folder,
 `manifest.template.json` is shared between local and remote environment.
@@ -120,7 +120,7 @@ In the app manifest template, select **Project** > **Teams Toolkit** > **Open Ma
 
 :::image type="content" source="images/vs-open-manifest-v4.png" alt-text="Screenshot is an example of showing the navigation to open manifest file." lightbox="images/vs-open-manifest-v4.png":::
 
-### Customize the app manifest in Teams Toolkit
+### Customize app manifest in Teams Toolkit
 
 The following list provides two types of placeholders in `manifest.template.json`:
 
@@ -140,9 +140,9 @@ You can add a customized parameter by:
     }
     ```
 
-## Preview the app manifest in Teams Toolkit
+## Preview app manifest in Teams Toolkit
 
-You can preview values in the app manifest in two ways:
+You can preview values in app manifest in two ways:
 
 * When you hover over the placeholder in `manifest.template.json`, you can see the values for **dev** and **local** environment.
 
@@ -154,7 +154,7 @@ You can preview values in the app manifest in two ways:
 
 If the environment hasn't been provisioned, or the Teams app dependencies haven't been prepared, it indicates that the values for the placeholder haven't been generated. You can follow the guidance inside the hover to generate corresponding values.
 
-## Preview the app manifest file
+## Preview app manifest file
 
 You can either sideload for local, or deploy for Azure to preview the app manifest file. You can preview the app manifest file by performing the following steps:
 
@@ -162,7 +162,7 @@ You can either sideload for local, or deploy for Azure to preview the app manife
 
 1. Select to trigger **Prepare Teams App Dependencies** or **Provision in the Cloud** that generates configuration for either for local or remote Teams app.
 
-   :::image type="content" source="images/vs-preview-manifest1-v4.png" alt-text="Screenshot is an example of showing preview the app manifest file." lightbox="images/vs-preview-manifest1-v4.png":::
+   :::image type="content" source="images/vs-preview-manifest1-v4.png" alt-text="Screenshot is an example of showing the preview app manifest file." lightbox="images/vs-preview-manifest1-v4.png":::
 
 There are two ways to upload zip app package before you can preview the app manifest file:
 

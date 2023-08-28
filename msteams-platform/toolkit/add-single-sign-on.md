@@ -410,7 +410,7 @@ After successfully adding SSO in your project, you can add a new SSO command:
 
    ```
 
-1. Register your command in the app manifest. Open `templates\appPackage\manifest.template.json`, and add following lines under `commands` in `commandLists` of your bot:
+1. Register your command in app manifest. Open `templates\appPackage\manifest.template.json`, and add following lines under `commands` in `commandLists` of your bot:
 
    ```JSON
 

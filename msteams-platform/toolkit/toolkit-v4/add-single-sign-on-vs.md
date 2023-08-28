@@ -25,7 +25,7 @@ Teams provides SSO function for an app using the Teams Toolkit for Microsoft Vis
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-add-authentication-code.PNG" alt-text="Screenshot shows the add authentication code.":::
 
-Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** folder, including a app manifest (previously called Teams app manifest) template file for Azure AD application and authentication redirect pages. Link the files to your Teams application by updating authentication configurations to ensure the SSO works for your application.
+Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** folder, including the app manifest (previously called Teams app manifest) template file for Azure AD application and authentication redirect pages. Link the files to your Teams application by updating authentication configurations to ensure the SSO works for your application.
 
 * In the Azure AD app manifest file, specify the URIs such as, the URI to identify the Azure AD authentication app and the redirect URI for returning token.
 * In the app manifest file, add the SSO application to link it with Teams application.
@@ -397,11 +397,11 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
    * "name": Replace the value with your expected Azure AD app name.
 
-1. Update the app manifest
+1. Update app manifest.
   
    * A `WebApplicationInfo` object needs to be added into your app manifest to enable SSO in the Teams app. For more information, see [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo).
 
-    For example: open your app manifest template, and append the following object in the app manifest:
+    For example: open your app manifest template, and append the following object in app manifest:
 
     ```
     "webApplicationInfo": {

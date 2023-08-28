@@ -62,7 +62,7 @@ After creating the project, you can view the project folders and files under **E
   * `state.<envName>.json`: Provision output file for the environment. This file exists for every environment individually.
   * `<env>.userdata`: User data for the provision output for the environment. This file exists for every environment individually.
 * `templates`
-  * `appPackage`: The app manifest (previously called Teams app manifest) template files.
+  * `appPackage`: App manifest (previously called Teams app manifest) template files.
   * `azure`: `bicep` template files.
 
 ## Customize resource provision
@@ -77,7 +77,7 @@ The following table lists the common scenarios for customized resource provision
 | Reuse existing Microsoft Azure Active Directory (Azure AD) app for Teams app | `auth` section in`.fx\config.<envName>.json`|  [Use an existing Azure AD app for your Teams app](../provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
 | Reuse existing Azure AD app for bot |`bot` section in`.fx\config.<envName>.json`| [Use an existing Azure AD app for your bot](../provision.md#use-an-existing-azure-ad-app-for-your-bot) |
 | Skip adding user while provisioning SQL |`skipAddingSqlUser` property in`.fx\config.<envName>.json`| [Skip adding user for SQL database](../provision.md#skip-adding-user-for-sql-database) |
-| Customize the app manifest |`manifest.template.json` file is available under `templates\appPackage`| [Preview the app manifest in Toolkit](../TeamsFx-preview-and-customize-app-manifest.md)|
+| Customize app manifest |`manifest.template.json` file is available under `templates\appPackage`| [Preview app manifest in Toolkit](../TeamsFx-preview-and-customize-app-manifest.md)|
 
 ## Scenarios
 
