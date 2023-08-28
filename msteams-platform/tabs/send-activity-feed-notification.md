@@ -79,6 +79,7 @@ Activity feed APIs work with a Teams app. The following are the requirements for
 * The Teams app manifest must have the Azure AD app ID added to the webApplicationInfo section. For more information, see [manifest schema](../resources/schema/manifest-schema.md#webapplicationinfo).
 * Activity types must be declared in the activities section. For more information, see [manifest schema](../resources/schema/manifest-schema.md#activities).
 * The Teams app must be installed for the recipient, either personally, or in a team or chat they're part of.
+* Use delegated or application permissions to send activity feed notifications. [Resource-specific consent (RSC)](../graph-api/rsc/resource-specific-consent.md) is recommended, while using application permissions for `TeamsActivity.Send.User` permission can be consented by the user to send activity notifications. You must declare RSC permissions in your Teams app **manifest.json** file.
 
 ### Teams app manifest changes
 
@@ -135,6 +136,35 @@ This section describes the changes that need to be added to Teams app manifest. 
 
 > [!NOTE]
 > `actor` is a special parameter that always takes the name of the caller. In delegated calls, `actor` is the user's name. In application-only calls, it takes the name of the Teams app.
+
+#### Authorization section changes
+
+```json
+"authorization": 
+{ 
+  "permissions": { 
+    "resourceSpecific": [ 
+      {
+        "type": "Application", 
+         "name": "TeamsActivity.Send.User" 
+      }, 
+      { 
+        "type": "Application",
+        "name": "TeamsActivity.Send.Group"
+      }, 
+      { 
+        "type": "Application", 
+        "name": "TeamsActivity.Send.Chat" 
+      } 
+    ] 
+  }
+}
+```
+
+|Parameter|Type|Description|
+|:---|:---|:---|
+|type|string|The type of the RSC permission.|
+|name|string|The name of the RSC permission. For more information, see [supported RSC permissions.](../graph-api/rsc/resource-specific-consent.md#supported-rsc-permissions) |
 
 ### Install the Teams app
 
