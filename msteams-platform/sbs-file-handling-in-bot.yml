@@ -86,7 +86,7 @@ items:
 
    1. Select **Add a permission**.
 
-      :::image type="content" source="../../assets/images/include-files/add-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
 
    1. Select **Microsoft Graph**.
 
@@ -96,7 +96,7 @@ items:
 
    1. Select **Add permissions**.
 
-      :::image type="content" source="../../assets/images/include-files/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
 
    [!INCLUDE [Azure api permission](includes/get-started/azure-web-authentication.md)]
 
