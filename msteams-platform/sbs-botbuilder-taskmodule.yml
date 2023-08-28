@@ -75,7 +75,6 @@ items:
 - title: Update the Azure AD app registration
   durationInMinutes: 1
   content: |
-    
     [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
     [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
