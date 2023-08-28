@@ -70,8 +70,8 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 
 Shared references to deploy the code using toolkit:
 
-* [Create a new Teams app using Teams Toolkit](toolkit/create-new-project.md)
-* [TeamsFx Command Line Interface](toolkit/TeamsFx-CLI.md)
+* [Create a new Teams app using Teams Toolkit](create-new-project.md)
+* [TeamsFx Command Line Interface](TeamsFx-CLI.md)
 
 You can call Graph API to get the app user's profile photo.
 
