@@ -1,27 +1,27 @@
-**Create Azure bot resource**
+**Create an Azure bot resource**
 
 1. Go to the [Azure portal](https://portal.azure.com/).
 1. Select **Create a resource**.
 1. In the search box, enter **Azure Bot**.
 1. Select **Enter**.
 1. Select **Azure Bot**.
+1. Select **Create**.
 
     :::image type="content" source="../../assets/images/include-files/azure-bot.png" alt-text="Screenshot shows the creation of Azure bot.":::
 
-1. Select **Create**.
-1. Enter required bot handle name in **Bot handle**.
+1. Enter the bot name in **Bot handle**.
 1. Select your **Subscription** from the dropdown list.
 1. Select your **Resource group** from the dropdown list.
 
     :::image type="content" source="../../assets/images/include-files/create-azure-bot.png" alt-text="Screenshot shows the option resource group and subscription in the Azure portal.":::
     
-    To create a new resource group, select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
+    If you don't have an existing resource group, you can create a new resource group. To create a new resource group, select **Create new** > enter the resource name > select **OK**. Select a location from **New resource group location** dropdown list.
     
     :::image type="content" source="../../assets/images/include-files/new-resource-location.png" alt-text="Screenshot shows the new resource group option in Azure portal.":::
 
-1. In the **Microsoft App ID** section, select **Type of App** as **Multi Tenant**. 
+1. Under **Microsoft App ID**, select **Type of App** as **Multi Tenant**. 
 
-1. In the **Creation type** by default **Create new Microsoft App ID** is selected.
+1. In the **Creation type**, by default, **Create new Microsoft App ID** is selected.
 
     You can also select **Use existing app registration** and enter existing **App ID**, **App tenant ID**, and **MSI resource ID**.
 
@@ -34,7 +34,7 @@
 
 1. If the validation passes, select **Create**. 
 
-    Provisioning your bot takes a few minutes to complete.
+    The bot takes a few minutes to provision.
 
 1. Select **Go to resource**. 
 

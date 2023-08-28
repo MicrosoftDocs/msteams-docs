@@ -14,9 +14,9 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-   The bot uses Teams API to send and receive files with users in personal chats. The files shared in Teams can appear as cards and allow rich in-app viewing. The bot also helps in implementing features like expense reporting, image recognition, file archival, and e-signatures that involve editing file content. 
+   The bot uses Teams API to send and receive files with users in personal chats. The files shared in Teams can appear as cards and allow rich in-app viewing. The bot also helps in implementing features, such as expense reporting, image recognition, file archival, and e-signatures that involve editing the file content. 
    
-   **Key features of uploading file in Teams using bot:** 
+   **Key features to upload file in Teams using bot:** 
    
      * Upload files to Teams using a bot.
      * Receive a file sent to bot as an attachment.
@@ -54,8 +54,8 @@ items:
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
     * Add Teams channel to deploy the bot.
-    * Create a tunnel to your web server's endpoints by using dev tunnel alternative ngrok.
-    * Add messaging endpoint to the dev tunnel you created.
+    * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
+    * Add messaging endpoint to the dev tunnel that you created.
 
     [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
 
@@ -63,7 +63,17 @@ items:
 
     [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
 
-    [!INCLUDE [Tunnel](includes/get-started/dev-ngrok-tunnel.md)]
+    **Create a tunnel**
+
+      # [dev tunnel](#tab/dev)
+
+      [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+
+      # [ngrok](#tab/ngrok)
+      
+      [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+
+      ---     
 
     [!INCLUDE [messaging endpoint](includes/get-started/messaging-endpoint.md)]
    
@@ -218,7 +228,7 @@ items:
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-image.png" alt-text="Screenshot show the option to send a iamge to bot and a response is received.":::
       
         > [!NOTE]
-        >  After the bot is installed in the personal scope, the user enters a one-on-one chat conversation with the bot.
+        >  After the bot is installed in the personal scope, the user enters a personal chat conversation with the bot.
       
 - title: Complete challenge
   durationInMinutes: 1

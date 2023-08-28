@@ -1,10 +1,10 @@
-**Add Teams channel**
+**Add a Teams channel**
 
 1. Select **Home**.
 
-1. Under **Resources**, select you bot from the **Recent**.
+1. Go to **Resources** > **Recent**. Select your bot from the list of available resources.
 
-1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="../../assets/images/include-files/teams-icon.png" alt="Teams icon" width="20"/>.
+1. In the left pane, select **Channels**. Under **Available Channels**, select **Microsoft Teams** <img src="../../assets/images/include-files/teams-icon.png" alt="Teams icon" width="20"/>.
 
     :::image type="content" source="../../assets/images/include-files/channels-teams.png" alt-text="Screenshot shows the selection of Teams in channels.":::
 

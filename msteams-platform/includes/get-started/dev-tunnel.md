@@ -1,17 +1,15 @@
-**Tunneling for messaging endpoint**
-
-# [dev tunnel](#tab/dev)
-
 1. Open Visual Studio.
 1. Select **Create a new project**.
     
     :::image type="content" source="../../assets/images/include-files/create-new-project.png" alt-text="Screenshot shows the selection to create a new project.":::
 
-1. In the search box, enter **ASP.NET Core Web App**. From the search results, select **ASP.NET Core Web App**.
+1. In the search box, enter **ASP.NET**. From the search results, select **ASP.NET Core Web App**.
+
+1. Select **Next**.
 
     :::image type="content" source="../../assets/images/include-files/template-search.png" alt-text="Screenshot shows the search and selection asp.net template.":::
 
-1. Select **Next**.
+
 
 1. Enter **Project name** and select **Next**.
 
@@ -21,7 +19,7 @@
 
     :::image type="content" source="../../assets/images/include-files/additional-information.png" alt-text="Screenshot shows the project additional information.":::
 
-    The ASP.NET window appears.
+    An overview window appears.
 
     :::image type="content" source="../../assets/images/include-files/asp-net-output.png" alt-text="Screenshot shows the asp.net project window.":::
 
@@ -33,7 +31,7 @@
 
 1. Update the following details in the pop-up window.
 
-    1. **Account**: Enter the account to use to create the tunnel.
+    1. **Account**: Enter a Microsoft or Github account.
     1. **Name**: Enter a name for your tunnel.
     1. **Tunnel Type**: From the dropdown, select **Temporary**.
     1. **Access**: From the dropdown, select **Public**.
@@ -48,21 +46,23 @@
 
     :::image type="content" source="../../assets/images/include-files/tunnel-created.png" alt-text="Screenshot shows the pop-up message that the tunnel is created.":::
 
-    You can find the tunnel you've created as shown in the image:
+    You can find the tunnel you've created in the debug dropdown as follows:
 
     :::image type="content" source="../../assets/images/include-files/tunnel-active.png" alt-text="Screenshot shows the tunnel is active and selected.":::
     
 1. Select **F5** to run the application in the debug mode.
 
-1. Select **Yes** if the following dialog appears.
+1. If a **Security Warning** dialog appears, select **Yes**.
 
     :::image type="content" source="../../assets/images/include-files/security-warning.png" alt-text="Screenshot shows the dialog box to accept the security warning."::: 
 
-1. A pop-up window appears, select **Continue**.
+    A pop-up window appears.
+
+1. Select **Continue**.
 
     :::image type="content" source="../../assets/images/include-files/developer-tunnel.png" alt-text="Screenshot shows the url for the tunnel.":::
 
-    The dev tunnel is active.
+    The dev tunnel home page opens in a new browser window and the dev tunnel is now active.
 
     :::image type="content" source="../../assets/images/include-files/developer-tunnel-web.png" alt-text="Screenshot shows the dev tunnel welcome page in browser.":::
 
@@ -70,27 +70,7 @@
 
 1. From the output console dropdown menu, select **Dev Tunnels**.
 
-    The output console shows the URL.
+    The output console shows the dev tunnel URL.
     
     :::image type="content" source="../../assets/images/include-files/output-console-url.png" alt-text="Screenshot shows the url in the Visual S+tudio output console.":::
     
-
-# [ngrok](#tab/ngrok)
-    
-Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
-
-```bash
-ngrok http --host-header=localhost 3978
-```
-
-> [!NOTE]
-> In this scenario ngrok command is 3978.
-
-> [!TIP]
-> If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
-
-The window shows the HTTPS URL (https to io).
-
-:::image type="content" source="../../assets/images/include-files/ngrok-url.png" alt-text="Screenshot shows the ngrok HTTPS URL.":::
-
----   
