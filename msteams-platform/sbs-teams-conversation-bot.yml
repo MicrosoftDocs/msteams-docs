@@ -2,7 +2,7 @@
 title: Create Teams conversation bot
 metadata:
   title: Create Teams conversation bot
-  description: With this learning module, you can learn to create basic conversation bot in Microsoft Teams application.
+  description: In this learn module, you can learn to create basic conversation bot in Microsoft Teams application.
   audience: Developer
   level: Beginner
   ms.date: 04/01/2022
@@ -220,10 +220,10 @@ items:
     1. In the **File Explorer**, go to **Microsoft-Teams-Samples** > **samples** > **bot-conversation** > **csharp**.
     1. Open the **appsettings.json** file in Visual Studio and update the configuration for the bot.
    
-        * Replace `"MicrosoftAppType"`to **Multitenant**.
-        * Replace `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-        * Replace `"MicrosoftAppPassword"` to your bot's client secret ID **Value**.
-        * Replace your `"MicrosoftAppTenantId"` to your tenant ID. You can obtain the tenant ID from the link of the account used to sign in to the Teams. 
+        * Set `"MicrosoftAppType"`to **Multitenant**.
+        * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
+        * Set `"MicrosoftAppPassword"` to your bot's client secret ID **Value**.
+        * Set your `"MicrosoftAppTenantId"` to your tenant ID. You can obtain the tenant ID from the link of the account used to sign in to the Teams. 
           Following are the steps to get the link for **tenantId**:
         
           1. Select **Teams**.
