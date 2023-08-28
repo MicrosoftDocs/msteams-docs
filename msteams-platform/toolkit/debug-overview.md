@@ -202,7 +202,7 @@ Teams Toolkit by default creates a set of `teamsApp` actions to manage app packa
     ...
   - uses: teamsApp/validateAppPackage # Validate app package using validation rules
     ...
-  - uses: teamsApp/update # Apply the Teams app manifest to an existing Teams app in Teams Developer Portal.
+  - uses: teamsApp/update # Apply the app manifest (previously called Teams app manifest) to an existing Teams app in Teams Developer Portal.
     ...
 ...
 ```
@@ -305,7 +305,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 * [Debug background process](debug-background-process.md)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)
-* [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest.md)
+* [Preview and customize app manifest](TeamsFx-preview-and-customize-app-manifest.md)
 
 ::: zone-end
 
@@ -546,6 +546,6 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 * [Debug background process](debug-background-process.md)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)
-* [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest.md)
+* [Preview and customize app manifest](TeamsFx-preview-and-customize-app-manifest.md)
 
 ::: zone-end
