@@ -128,6 +128,9 @@
       displayName: notify, notification
 - name: Tools and SDKs
   items:
+  - name: Overview
+    href: concepts/build-and-test/tool-sdk-overview.md
+    displayName: Tools and SDKs
   - name: Tools 
     items:					  
     - name: Teams Toolkit for Visual Studio Code
