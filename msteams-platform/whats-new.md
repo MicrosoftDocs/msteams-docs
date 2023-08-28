@@ -342,7 +342,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 August**
 
-* ***August 28, 2023***: [Teams app manifest is now referred to as app manifest](resources/schema/manifest-schema.md).
+* ***August 28, 2023***: [Teams app manifest is now referred to as app manifest](resources/schema/manifest-schema-dev-preview.md)
 
 * ***August 22, 2023***: [Enable RSC permissions for a user using the Graph APIs](graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings).
 
