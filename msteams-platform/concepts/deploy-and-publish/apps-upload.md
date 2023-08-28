@@ -5,6 +5,7 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 04/16/2023
 ---
 
 # Upload your app in Teams
@@ -134,3 +135,4 @@ To remove app from Teams, follow the steps:
 * [Configure default install options](~/concepts/deploy-and-publish/add-default-install-scope.md)
 * [Maintain your published Microsoft Teams app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)
 * [Add app to chat](/graph/api/chat-post-installedapps)
+* [Manage custom and sideloaded apps](/microsoftteams/teams-custom-app-policies-and-settings)

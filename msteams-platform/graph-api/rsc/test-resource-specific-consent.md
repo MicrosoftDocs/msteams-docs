@@ -3,9 +3,9 @@ title: Test resource-specific consent permissions in Teams
 description: Details testing resource-specific consent in Teams using Postman with Code Samples
 ms.localizationpriority: medium
 author: akjo
-ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams authorization OAuth SSO Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
+ms.date: 03/28/2023
 ---
 
 # Test resource-specific consent permissions in Teams
@@ -73,6 +73,10 @@ Example for RSC in a team
             },
             {
                 "name": "ChannelMessage.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "ChannelMeeting.ReadBasic.Group",
                 "type": "Application"
             },
             {
@@ -212,6 +216,7 @@ Example for RSC in a team
         "Channel.Create.Group",
         "Channel.Delete.Group",
         "ChannelMessage.Read.Group",
+        "ChannelMeeting.ReadBasic.Group",
         "TeamsAppInstallation.Read.Group",
         "TeamsTab.Read.Group",
         "TeamsTab.Create.Group",

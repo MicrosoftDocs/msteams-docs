@@ -1,25 +1,26 @@
 ---
 title: Register your tab app with Azure AD
-description: Configure Single sign-on (SSO) with Azure AD by configuring App ID URI, scope for access token, and pre-authorize trusted clients.
+description: Configure Single sign-on (SSO) with Azure AD by configuring App ID URI, scope for access token, and preauthorize trusted clients.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) access token SSO tenancy scope 
+ms.date: 02/01/2023
 ---
 # Configure your tab app in Azure AD
 
 Azure Active Directory (Azure AD) provides access to your tab app based on the app user's Teams identity. You'll need to register your tab app with Azure AD so that the app user who has signed into Teams can be given access to your tab app.
 
-## Enabling SSO in Azure AD
+## Enable SSO in Azure AD
 
-Register your tab app in Azure AD and enable it for SSO requires making app configurations, such as generating app ID, defining API scope, and pre-authorize client IDs for trusted applications.
+Register your tab app in Azure AD and enable it for SSO requires making app configurations, such as generating app ID, defining API scope, and preauthorize client IDs for trusted applications.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configure Azure AD to send access token to Teams Client app":::
 
-Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It allows Teams Client to obtain an access token on behalf of your application and the logged-in user. You can add client IDs for the trusted mobile, desktop, and web applications that you want to pre-authorize.
+Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It allows Teams Client to obtain an access token on behalf of your application and the logged-in user. You can add client IDs for the trusted mobile, desktop, and web applications that you want to preauthorize.
 
 You may also need to configure additional details, such as authenticating app users on the platform or device where you want to target your tab app.
 
-User-level Graph API permissions are supported, that is, email, profile, offline_access, and OpenId. If you require access to additional Graph scopes, such as `User.Read` or `Mail.Read`, see [Get an access token with Graph permissions](tab-sso-graph-api.md).
+User-level Graph API permissions are supported, that is, email, profile, offline_access, and OpenId. If you require access to additional Graph scopes, such as `User.Read` or `Mail.Read`, see [get an access token with Graph permissions](tab-sso-graph-api.md#acquire-access-token-for-ms-graph).
 
 Azure AD configuration enables SSO for your tab app in Teams. It responds with an access token for validating the app user.
 
@@ -74,7 +75,7 @@ You'll need to register your app in Azure AD and configure the tenancy and app's
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="App registration page on Azure AD Portal.":::
 
-5. Select the type of user account that can access your app. You can choose from single- or multi-tenant options, or Private Microsoft account.
+5. Select the type of user account that can access your app. You can select from single- or multi-tenant options, or Private Microsoft account.
 
     <details>
     <summary><b>Options for supported account types</b></summary>
@@ -114,7 +115,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
 - [To expose an API](#to-expose-an-api): Configure scope (permission) options for your app. You'll expose a web API, and configure the application ID URI.
 - [To configure API scope](#to-configure-api-scope): Define scope for the API, and the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
-- [To configure authorized client application](#to-configure-authorized-client-application): Create authorized client IDs for applications that you want to pre-authorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Pre-authorize only those client applications you trust as your app users won't have the opportunity to decline consent.
+- [To configure authorized client application](#to-configure-authorized-client-application): Create authorized client IDs for applications that you want to preauthorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Preauthorize only those client applications you trust as your app users won't have the opportunity to decline consent.
 
 #### To expose an API
 
@@ -217,7 +218,7 @@ To configure scope and authorize trusted client applications, you'll need:
     > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
     > - For a Teams tab app, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
 
-    1. Choose one of the following client IDs:
+    1. Select one of the following client IDs:
 
        | Use client ID | For authorizing... |
        | --- | --- |
@@ -225,6 +226,7 @@ To configure scope and authorize trusted client applications, you'll need:
        | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
        | 4765445b-32c6-49b0-83e6-1d93765276ca | Microsoft 365 web application |
        | 0ec893e0-5785-4de6-99da-4ed124e5296c | Microsoft 365 desktop application |
+       | d3590ed6-52b3-4102-aeff-aad2292ab01c | Microsoft 365 mobile application |
        | d3590ed6-52b3-4102-aeff-aad2292ab01c | Outlook desktop application |
        | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Outlook web application |
        | 27922004-5251-4030-b22d-91ecd9a37ea4 | Outlook mobile application |

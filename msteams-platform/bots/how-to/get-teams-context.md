@@ -1,10 +1,8 @@
 ---
 title: Get Teams specific context for your bot
-author: surbhigupta
 description: Get Teams specific context for your bot, fetch user profile, get single member, team's, list of channels in a team details. Sample on create a new channel thread.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: lajanuar
 ---
 # Get Teams specific context for your bot
 

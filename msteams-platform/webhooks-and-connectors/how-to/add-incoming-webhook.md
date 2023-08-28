@@ -1,15 +1,14 @@
 ---
 title: Create an Incoming Webhook
-author: laujan
 description: Create Incoming Webhook to Teams app and post external requests to Teams. Remove Incoming Webhook. Sample code(C#, Node.js) to  send card using Incoming Webhook.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.author: lajanuar
+ms.date: 01/25/2023
 ---
 
 # Create Incoming Webhooks
 
-An Incoming Webhook lets external applications to share content in Microsoft Teams channels. The webhooks are used as tools to track and notify. The webhooks provide a unique URL, to send a JSON payload with a message in card format. Cards are user interface containers that include content and actions related to a single article. You can use cards in the following capabilities:
+An Incoming Webhook lets external applications share content in Microsoft Teams channels. The webhooks are used as tools to track and notify. The webhooks provide a unique URL, to send a JSON payload with a message in card format. Cards are user interface containers that include content and actions related to a single article. You can use cards in the following capabilities:
 
 * Bots
 * Message extensions
@@ -126,6 +125,7 @@ var response = await client.PostAsync(webhookUrl, content);
         console.error(error)
     })
 ```
+
 ---
 
 ## Remove Incoming Webhooks
@@ -137,7 +137,7 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 1. Select **Configured** under **MANAGE**.
 1. Select the **1 Configured** to see a list of your current connectors.
 
-   :::image type="content" source="../../assets/images/configured_1.png" alt-text="This screenshot shows how to configured to see list of your current connectors.":::
+   :::image type="content" source="../../assets/images/configured_1.png" alt-text="This screenshot shows how to configure to see list of your current connectors.":::
 
 1. Select **Manage** for the connector that you want to remove.
 
