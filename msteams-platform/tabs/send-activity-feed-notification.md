@@ -79,7 +79,7 @@ Activity feed APIs work with a Teams app. The following are the requirements for
 * The Teams app manifest must have the Azure AD app ID added to the webApplicationInfo section. For more information, see [manifest schema](../resources/schema/manifest-schema.md#webapplicationinfo).
 * Activity types must be declared in the activities section. For more information, see [manifest schema](../resources/schema/manifest-schema.md#activities).
 * The Teams app must be installed for the recipient, either personally, or in a team or chat they're part of.
-* Use delegated or application permissions to send activity feed notifications. [Resource-specific consent (RSC)](../graph-api/rsc/resource-specific-consent.md) is recommended, while using application permissions for `TeamsActivity.Send.User` permission can be consented by the user to send activity notifications. You must declare RSC permissions in your Teams app **manifest.json** file.
+* Use delegated or application permissions to send activity feed notifications. We recommend to use [Resource-specific consent (RSC)](../graph-api/rsc/resource-specific-consent.md), while using application permissions as the `TeamsActivity.Send.User` permission is consented by the user to send activity notifications. Ensure that you declare RSC permissions in your Teams app **manifest.json** file.
 
 ### Teams app manifest changes
 
