@@ -82,7 +82,7 @@ items:
 
     1.   Turn on the **Upload custom apps** toggle.
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-toggle-on-connectors.png" alt-text="Screenshot of Global Org-wide default with Upload custom apps showing the toggle button on and highlighted in red. ":::
+          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-toggle-on-connectors.png" alt-text="Screenshot of Global Org-wide default with Upload custom apps showing the toggle button on and highlighted in red.":::
    
     1.   Select **Save**.
        
@@ -197,7 +197,7 @@ items:
 
     1. Select **Add to a team**.
 
-       :::image type="content" source="~/assets/images/sbs-connector/addtoteam_1.png" alt-text="Screenshot of TeamsTodo Connector in .NET/C# with Add to a team highlighted in red. ":::
+       :::image type="content" source="~/assets/images/sbs-connector/addtoteam_1.png" alt-text="Screenshot of TeamsTodo Connector in .NET/C# with Add to a team highlighted in red.":::
 
     1. Select the team or channel name from the list.
 
@@ -215,7 +215,7 @@ items:
 
        After configuration, you can see notification in channel with link to **Task Manager Portal**.
 
-       :::image type="content" source="~/assets/images/sbs-connector/notification.png" alt-text="Screenshot of Teams ToDo Notification Inline Config displaying the confirmation of Teams ToDo Notification In-line Config set up details. ":::
+       :::image type="content" source="~/assets/images/sbs-connector/notification.png" alt-text="Screenshot of Teams ToDo Notification Inline Config displaying the confirmation of Teams ToDo Notification In-line Config set up details.":::
 
     1. Go to **Task Manager Portal**.
 
