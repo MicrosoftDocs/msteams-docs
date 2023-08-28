@@ -85,7 +85,7 @@ items:
     
     ## Create an app registration in Azure AD
 
-    Register a new app in Azure AD and configure the tenancy and app's platform. You'll generate a new app ID that will be updated later in your app manifest (previously called Teams app manifest) file.
+    Register a new app in Azure AD and configure the tenancy and app's platform. You'll generate a new app ID that will be updated later in your Teams app manifest file.
 
     ### To register a new app in Azure AD
 
@@ -114,7 +114,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-created.png" alt-text="App registration is successful.":::
 
-    7. Note and save the app ID from **Application (client) ID**. You'll need it for updating the app manifest later.
+    7. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
 
     Your app is registered in Azure AD. You should now have the app ID for your app.
 
@@ -272,10 +272,10 @@ items:
             
              :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/authend.png" alt-text="Auth-end":::
 
-- title: Set up app settings and app manifest files
+- title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    After you've configured the Azure AD app, you need to configure app details in the app settings and app manifest file. 
+    After you've configured the Azure AD app, you need to configure app details in the app settings and manifest file. 
 
     **To configure app settings**
 
