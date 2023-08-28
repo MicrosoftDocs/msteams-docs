@@ -617,9 +617,9 @@ A typical `channelData` object in an activity sent to your bot contains the foll
 * `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
 * `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
 
-### Example channelData object (channelCreated event)
+### Example channelData object
 
-The following code shows an example of channelData object:
+The following code shows an example of channelData object (channelCreated event):
 
 ```json
 "channelData": {
