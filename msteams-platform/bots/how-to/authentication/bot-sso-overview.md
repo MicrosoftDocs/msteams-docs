@@ -1,6 +1,6 @@
 ---
 title: Overview to authentication using SSO in Teams with Azure AD
-description: Learn about Single sign-on (SSO) authentication in Teams and how to enable it in bots and message extension.
+description: Learn about Single sign-on (SSO) authentication in Microsoft Teams and how to enable it in bots and message extension.
 ms.topic: conceptual
 ms.localizationpriority: high
 ---
