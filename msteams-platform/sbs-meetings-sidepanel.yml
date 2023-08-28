@@ -341,7 +341,7 @@ items:
     1. Open **appsettings.json** file in Visual Studio and update the following information:  
 
          * Replace `<<Microsoft-App-ID>>"` to your bot's **Microsoft App ID**.
-         * Replace `"<<Microsoft-App-Secret>>"` to your bot's client secret ID **Value**.
+         * Replace `"<<Microsoft-App-Secret>>"` to **Value** of your bot's **Client secret**.
          * Replace `<<Your_Domain_URL>>` to the ngrok or dev tunnel domain name.
 
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettings_1.png" alt-text="Screenshot of appsettings JSON file with appsettings highlighted.":::
@@ -386,7 +386,7 @@ items:
 
             :::image type="content" source="~/assets/images/meetings-side-panel/certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
 
-          A webpage appears with a message **Your bot is ready!**.
+          A webpage appears with a message **Your bot is ready!**
 
            :::image type="content" source="~/assets/images/meetings-side-panel/appisready_1.png" alt-text="Screenshot of the webpage that displays Your bot is ready!."::: 
  
