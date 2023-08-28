@@ -1,20 +1,20 @@
-**To add messaging endpoint**
+**To add a messaging endpoint**
 
-# [devtunnel](#tab/dev)
+# [dev tunnel](#tab/dev)
     
-1.	Use the URL in the output console as the messaging endpoint.
+1.	Use the dev tunnel URL in the output console as the messaging endpoint.
 
     :::image type="content" source="../../assets/images/include-files/output-console-url.png" alt-text="Screenshot shows the url in the Visual studio output console.":::
 
-1.  Go to the Azure bot you've created in Azure portal. In the left pane, under **Settings**, select **Configuration**.
+1.  Go to Azure portal and select the bot that you've created. In the left pane, under **Settings**, select **Configuration**.
 
-1.  In **Messaging endpoint**, use the HTTPS URL available from dev tunnels and at the end of the URL add **/api/messages**.
+1.  Update the **messaging endpoint** in the format `https://your-devtunnel-domain/api/messages`.
 
     :::image type="content" source="../../assets/images/include-files/devtunnels-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding api.":::
 
 1. Select **Apply**.
 
-    You have successfully set up a bot in Azure Bot Service.
+    You have successfully set up a bot in Azure Bot service.
 
 # [ngrok](#tab/ngrok)
 
@@ -28,11 +28,11 @@
 
 1.  Go to the Azure bot you've created in Azure portal. In the left pane, under **Settings**, select **Configuration**.
 
-1.  In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
+1. Update the **messaging endpoint** in the format `https://your-ngrok-domain/api/messages`.
 
     :::image type="content" source="../../assets/images/include-files/ngrok-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding api.":::
 
 1. Select **Apply**.
 
-    You have successfully set up a bot in Azure Bot Service.
+    You have successfully set up a bot in Azure Bot service.
 ---   
