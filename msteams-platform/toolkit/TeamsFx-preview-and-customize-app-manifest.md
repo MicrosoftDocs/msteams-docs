@@ -13,9 +13,9 @@ zone_pivot_groups: teams-toolkit-platform
 
 ::: zone pivot="visual-studio-code-v5"
 
-The app manifest (previously called Teams app manifest) describes how your app integrates into Teams. After scaffolding, the default app manifest file is available at `appPackage/manifest.json`. The app manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Teams Toolkit with env files like `env/.env.dev` and `env/.env.local`.
+App manifest (previously called Teams app manifest) describes how your app integrates into Teams. After scaffolding, the default app manifest file is available at `appPackage/manifest.json`. The app manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Teams Toolkit with env files like `env/.env.dev` and `env/.env.local`.
 
-To preview the app manifest with actual content, Teams Toolkit generates preview the app manifest files under `appPackage/build` folder:
+To preview app manifest with actual content, Teams Toolkit generates the preview app manifest files under `appPackage/build` folder:
 
 ```text
 └───appPackage
@@ -46,7 +46,7 @@ You can also trigger Zip Teams App Package from tree view or `Teams: Zip Teams a
 
 ## Customize the app manifest for Visual Studio Code
 
-During local debug or provision, Teams Toolkit loads the app manifest from `appPackage/manifest.json`, and resolves the app manifest by environment variables defined in `env/.env.xx`, then creates or updates Teams app in [Teams Developer Portal](https://dev.teams.microsoft.com/home).
+During local debug or provision, Teams Toolkit loads app manifest from `appPackage/manifest.json` and resolves app manifest by environment variables defined in `env/.env.xx`, then creates or updates Teams app in [Teams Developer Portal](https://dev.teams.microsoft.com/home).
 
 1. You can define your own manifest.json file in `teamsapp.yml` and `teamsapp.local.yml`.
 For example, you can put your manifest.json file in `test/test.json`, and update the  `manifestPath` parameters in yaml files.
@@ -83,7 +83,7 @@ For example, you can customize app description by defining a new environment var
 
 ## Validate Application
 
-After customization, you may want to validate your The app manifest or app package. You can trigger `Validate Application` from tree view, or `Teams: ValidateApplication` from command palette. There are two options, `Validate using manifest schema` or `Validate app package using validation rules`.
+After customization, you may want to validate your app manifest or app package. You can trigger `Validate Application` from tree view, or `Teams: ValidateApplication` from command palette. There are two options, `Validate using manifest schema` or `Validate app package using validation rules`.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/validate-application.png" alt-text="Screenshot showing the selection of validate application under utility.":::
 
@@ -175,11 +175,11 @@ To preview values for all the environment, you can hover over the placeholder. I
 >
 > Teams Toolkit v4 extension will soon be deprecated.
 
-## Customize the app manifest for Visual Studio Code
+## Customize app manifest for Visual Studio Code
 
-The app manifest describes how your app integrates into Teams. The app manifest (Previously called Teams app manifest) template file `manifest.template.json` is available under `templates/appPackage` folder after scaffolding. The template file with placeholders, and the actual values are resolved by Teams Toolkit using files under `.fx/configs` and `.fx/states` for different environments.
+App manifest (previously called Teams app manifest) describes how your app integrates into Teams. The app manifest template file `manifest.template.json` is available under `templates/appPackage` folder after scaffolding. The template file with placeholders, and the actual values are resolved by Teams Toolkit using files under `.fx/configs` and `.fx/states` for different environments.
 
-To preview the app manifest with actual content, Teams Toolkit generates preview the app manifest files under `build/appPackage` folder:
+To preview app manifest with actual content, Teams Toolkit generates the preview app manifest files under `build/appPackage` folder:
 
 ```text
 └───build
@@ -215,7 +215,7 @@ The following steps help to preview local app manifest file by using preview opt
 
    :::image type="content" source="toolkit-v4/images/select-env1-v4.png" alt-text="Screenshot is an example of showing the selection of local in the environment.":::
 
-To preview local app manifest file by using **Zip Teams metadata package** option:
+To preview the local app manifest file by using **Zip Teams metadata package** option:
 
 1. Select `manifest.template.json` file.
 
@@ -298,7 +298,7 @@ To preview the app manifest file by selecting **Zip Teams metadata package** in 
 
 After previewing the app manifest file, you can sync your local changes to Developer Portal by the following ways:
 
-1. Deploy the app manifest.
+1. Deploy app manifest.
 
    You can deploy the app manifest in any of the following ways:
 
@@ -322,7 +322,7 @@ After previewing the app manifest file, you can sync your local changes to Devel
 
 You can also trigger **Teams: Update manifest to Teams platform** from the command palette:
 
-:::image type="content" source="toolkit-v4/images/pre-v4.png" alt-text="Screenshot is an example of showing the selection of Teams: update the app manifest to Teams platform from the command palette.":::
+:::image type="content" source="toolkit-v4/images/pre-v4.png" alt-text="Screenshot is an example of showing the selection of Teams: update app manifest to Teams platform from the command palette.":::
 
 > [!NOTE]
 >
@@ -355,7 +355,7 @@ Teams Toolkit consists of the following app manifest template files under `manif
 * `manifest.template.json`
 * `templates/appPackage`
 
-During the local debug or provision, Teams Toolkit loads the app manifest from `manifest.template.json` with the configurations from `state.{env}.json`, `config.{env}.json`, and creates Teams app in [Developer Portal](https://dev.teams.microsoft.com/apps).
+During the local debug or provision, Teams Toolkit loads the app manifest file from `manifest.template.json` with the configurations from `state.{env}.json`, `config.{env}.json`, and creates Teams app in [Developer Portal](https://dev.teams.microsoft.com/apps).
 
 ### Supported placeholders in manifest.template.json
 
@@ -380,13 +380,13 @@ The following list provides supported placeholders in `manifest.template.json`:
 
 2. You can go to configuration file by selecting any one of the config placeholders **Go to config file** or **View the state file** in `manifest.template.json`.
 
-### Validate the app manifest
+### Validate app manifest
 
-During operations such as **Zip Teams metadata package**, Teams Toolkit validates the app manifest against its schema. The following list provides different ways to validate the app manifest:
+During operations such as **Zip Teams metadata package**, Teams Toolkit validates app manifest against its schema. The following list provides different ways to validate app manifest:
 
 * In Visual Studio Code, trigger **Teams: Validate manifest file** from command palette:
 
-  :::image type="content" source="toolkit-v4/images/validate-v4.png" alt-text="Screenshot is an example of showing Teams validate app manifest file from command palette.":::
+  :::image type="content" source="toolkit-v4/images/validate-v4.png" alt-text="Screenshot is an example of showing Teams validate the app manifest file from command palette.":::
 
 * In CLI, use command:
 

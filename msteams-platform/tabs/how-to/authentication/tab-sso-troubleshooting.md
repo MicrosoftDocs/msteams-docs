@@ -98,9 +98,9 @@ The following image shows an example of the app details configured in Azure AD.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="App configuration values in Azure AD":::
 
-Check that the following values match between Azure AD, client-side code, and the app manifest:
+Check that the following values match between Azure AD, client-side code, and app manifest:
 
-- **App ID**: The app ID you generated in Azure AD should be the same in the code and in the app manifest file. Check the app ID in the app manifest matches the **Application (client) ID** in Azure AD.
+- **App ID**: The app ID you generated in Azure AD should be the same in the code and in the app manifest file. Check if the app ID in the app manifest schema matches the **Application (client) ID** in Azure AD.
 
 - **App secret**: The app secret configured in the backend of your app should match the **Client credentials** in Azure AD.
     You should also check if the client secret is expired.
