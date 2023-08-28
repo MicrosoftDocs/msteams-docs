@@ -28,7 +28,7 @@ items:
       * Generates content randomly. 
       * Simulates notification to be sent to Microsoft Teams channel. 
     
-    This step-by-step guide helps you to create and test a connector in Microsoft Teams. You'll see the following output:
+    This step-by-step guide helps you to create and test a connector in Microsoft Teams. You see the following output:
        
     :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/mobile.png" alt-text="Screenshot of the build Team connector output after you have successfully completed the step-by-step guide.":::
        
@@ -41,7 +41,7 @@ items:
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call, and all-in-one place.|
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version.|
+     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version.|
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
    
       > [!NOTE]
@@ -86,7 +86,7 @@ items:
    
     1.   Select **Save**.
        
-          Your test tenant can permit custom app sideloading.
+          Your test tenant can now permit custom app sideloading.
 
           > [!TIP]
           > The sideloading takes some time to become active.
@@ -110,7 +110,7 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-connector/sln_1.png" alt-text="Screenshot of cloned repository with TeamsToDoAppConnector.sln highlighted in red.":::
 
-    2. Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+    1. Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
         ```bash
         ngrok http --host-header=localhost 3978
@@ -120,12 +120,12 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-connector/ngrok1_1.png" alt-text="Screenshot of ngrok with URL highlighted in red.":::
 
-    3. Go to [Connector Developer Portal](https://outlook.office.com/connectors/publish).
-    4. Select **New Connector**.
+    1. Go to [Connector Developer Portal](https://outlook.office.com/connectors/publish).
+    1. Select **New Connector**.
      
        :::image type="content" source="~/assets/images/sbs-connector/connector-new.png" alt-text="Screenshot of Connectors Developer Dashboard with +New Connector highlighted in red.":::
       
-    5. Enter the following details to register a new connector:
+    1. Enter the following details to register a new connector:
 
        * Connector name.
        * Logo
@@ -133,9 +133,9 @@ items:
        * Detailed description of what your Connector does (3-5 sentences).
        * Company website.
        * Configuration page for your Connector as `https://[BASE_URI]/connector/setup`.
-       * Valid domain as `https>//[Base URI]`.
+       * Set **Valid domains** as `https>//[Base URI]`.
        * Select **Yes** to enable the action on Connector cards.
-       * Actions URL as `https://[BASE_URI]/Task/Update`.
+       * Set **Actions URL** as `https://[BASE_URI]/Task/Update`.
        * Select **I accept the terms and conditions of the App Developer Agreement**.
        * Select **Save**.
 
@@ -148,17 +148,18 @@ items:
        > [!TIP]
        > Save the Connector ID for future reference.
 
-    6. Select **TeamsToDoAppConnector.csproj** file from the cloned repository.
+    1. Select **TeamsToDoAppConnector.csproj** file from the cloned repository.
 
        :::image type="content" source="~/assets/images/sbs-connector/web_1.png" alt-text="Screenshot of cloned repository with TeamsToDoAppConnector.csproj highlighted in red."::: 
 
-    7. Open in Visual Studio. 
+    1. Open in **Visual Studio** and do the following updates. 
 
-    8. Replace the `configuration.appSettings.BaseUrl` variable with `ngrok https forwarding url`.
+         * Replace the `BASE_URL` with `ngork URL` or `dev tunnel URL`.
+         * Replace `CONNECTOR_ID` with the connector ID created.
        
-       :::image type="content" source="~/assets/images/sbs-connector/manifest_1.png" alt-text="Screenshot of Visual Studio with BaseUrl highlighted in red after the replacement of configuration.appSettings.BaseUrl."::: 
+       :::image type="content" source="~/assets/images/sbs-connector/manifest_1.png" alt-text="Screenshot of Visual Studio with BaseUrl and connector ID highlighted in red after the replacement of required information."::: 
 
-    9. Press **F5** to run the project.
+    1. Press **F5** to run the project.
        A web page opens. 
 
        :::image type="content" source="~/assets/images/sbs-connector/local-host.png" alt-text="Screenshot of Teams ToDo App displaying the details of tasks.":::   
@@ -167,7 +168,13 @@ items:
   durationInMinutes: 5
   content: |
 
-    1. In your cloned repository, go to **csharp** > **TeamsAppPackages**.
+    1. In your cloned repository, go to **Microsoft-Teams-Samples** > **samples** > **connector-todo-notification** > **csharp** > **TeamsAppPackages**.
+    1. Open the manifest.json file in Visual Studio and make the following changes:
+
+      * Replace `CONNECTOR_ID` with the connector ID created.
+      * Replace `VALID-DOMAIN` to your ngrok OR dev tunnel domain excluding https://.
+
+      :::image type="content" source="~/assets/images/sbs-connector/manifest_2.png" alt-text="Screenshot of Visual Studio with connector ID and valid domain highlighted in red after the required updates."::: 
 
     1. Create a .zip file with the following files that are present in the **Manifest** folder: 
        * manifest.json
