@@ -3,6 +3,7 @@ title: Real-time media calls and online meetings with Microsoft Teams
 description: Learn how Real-time Media Platform enables bots to interact with Microsoft Teams calls and meetings. Explore, media sessions, frames and frame rate, audio and video format, active speakers, video subscription. 
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.date: 06/02/2022
 ---
 
 # Real-time media calls and meetings with Microsoft Teams
@@ -37,13 +38,13 @@ In video format, several formats are supported. Two key properties of a video fo
 
 A 720-p video frame contains 921,600 pixels that is 1280 times 720. In the RGB24 color format, each pixel is represented as 3 bytes that is 24 bits including 1 byte each of red, green, and blue color components. A single 720p RGB24 video frame requires 2,764,800 bytes of data that is 921,600 pixels times 3 bytes per pixel. At a variable frame rate, sending 720p RGB24 video frames means processing approximately 80 megabytes per second of content. 80 megabytes is substantially compressed by the H.264 video codec before network transmission.
 
-An advanced capability of the platform allows a bot to send or receive video as encoded H.264 frames. Bots that provide their own H.264 encoder or decoder are supported, or the video stream decoded into raw RGB24 or NV12 bitmaps is not required.
+An advanced capability of the platform allows a bot to send or receive video as encoded H.264 frames. Bots that provide their own H.264 encoder or decoder are supported, or the video stream decoded into raw RGB24 or NV12 bitmaps isn't required.
 
 The next section provides details about which meeting participants are speaking that is which are active and dominant speakers.
 
 ## Active and dominant speakers
 
-When joined to a Teams meeting consisting of multiple participants, a bot can identify which meeting participants are currently speaking. Active speakers identify which participants are being heard in each received audio frame. Dominant speakers identify which participants are currently most active or dominant in the group conversation, though their voice is not heard in every audio frame. The set of dominant speakers can change as different participants take turns speaking.
+When joined to a Teams meeting consisting of multiple participants, a bot can identify which meeting participants are currently speaking. Active speakers identify which participants are being heard in each received audio frame. Dominant speakers identify which participants are currently most active or dominant in the group conversation, though their voice isn't heard in every audio frame. The set of dominant speakers can change as different participants take turns speaking.
 
 The next section provides details about video subscription requests made by a bot.
 
@@ -58,6 +59,12 @@ The next section provides details about what you must install and the requiremen
 To develop an application-hosted media bot, you must install the [Microsoft.Graph.Calls.Media .NET library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) NuGet package within your Visual Studio project.
 
 Application-hosted media bots require .NET or C# and Windows Server. For more information, see [requirements and considerations for application-hosted media bots](requirements-considerations-application-hosted-media-bots.md#c-or-net-and-windows-server-for-development).
+
+## Code sample
+
+| **Sample name** | **Description** | **Graph** |
+|---------------|----------|--------|
+| Policy recording bot | This sample demonstrates how a bot can receive media streams for recording. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/PolicyRecordingBot) |
 
 ## Next step
 

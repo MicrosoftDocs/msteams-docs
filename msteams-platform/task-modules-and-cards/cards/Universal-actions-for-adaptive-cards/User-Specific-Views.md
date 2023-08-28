@@ -4,6 +4,7 @@ description: In this module, learn about User Specific Views using Universal Act
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.date: 12/14/2022
 ---
 
 # User Specific Views
@@ -248,4 +249,4 @@ The following list provides card design guidelines for User Specific Views:
 * [Work with Universal Actions for Adaptive Cards](Work-with-Universal-Actions-for-Adaptive-Cards.md)
 * [Up to date cards](Up-To-Date-Views.md)
 * [Cards](../../what-are-cards.md)
-* [Form completion feedback](../../../bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Form completion feedback](../cards-actions.md#form-completion-feedback)

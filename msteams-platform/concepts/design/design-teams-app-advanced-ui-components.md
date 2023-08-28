@@ -1,10 +1,11 @@
 ---
 title: Design your app with advanced UI components
 author: heath-hamilton
-description: Learn about the Teams UI components, such as breadcrumbs, notification bar, stage view along with relevant use cases. 
+description: Learn about the Teams UI components, such as breadcrumbs, notification bar, Stage View along with relevant use cases. 
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
+ms.date: 05/17/2023
 ---
 # Designing your Microsoft Teams app with advanced UI components
 
@@ -12,7 +13,7 @@ The following components are a combination of [basic UI components](~/concepts/d
 
 ## Microsoft Teams UI Kit
 
-Based on [Fluent UI](https://fluentsite.z22.web.core.windows.net/), the Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. In the UI kit, you can grab and insert the components listed here directly into your design and see more examples of how to use each component.
+Based on [Fluent UI](https://react.fluentui.dev/?path=/docs/), the Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. In the UI kit, you can grab and insert the components listed here directly into your design and see more examples of how to use each component.
 
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -49,13 +50,13 @@ Use the left nav to browse multiple pages within your Teams tab. In the followin
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Example shows a left nav template on desktop.":::
+:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Example shows a left nav template on desktop." lightbox="../../assets/images/ui-templates/left-nav.png":::
 
 ## Notification bar
 
 A notification bar is a dedicated area for displaying a brief, important messages that do not require the user to take immediate action. Specific background colors and icons are associated with specific types of messages (see below).
 
-You can implement a notification bar using the Fluent UI [alert](https://fluentsite.z22.web.core.windows.net/0.59.0/components/alert/definition) component.
+You can implement a notification bar using the Fluent UI [alert](https://react.fluentui.dev/?path=/docs/preview-components-alert--default) component.
 
 ### Top use cases
 
@@ -71,11 +72,11 @@ You can implement a notification bar using the Fluent UI [alert](https://fluents
 
 :::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Example shows notification bar UI templates on desktop.":::
 
-## Stage view
+## Stage View
 
-Stage view lets users see content—like an image, file, or website—on a large surface in Teams without switching context. This component is primarily for viewing content. Don't use it for complex interactions.
+Stage View lets users see content—like an image, file, or website—on a large surface in Teams without switching context. This component is primarily for viewing content. Don't use it for complex interactions.
 
-See how to implement [stage view](~/tabs/tabs-link-unfurling.md).
+See how to implement [Stage View](~/tabs/tabs-link-unfurling.md).
 
 ### Top use cases
 
@@ -90,7 +91,7 @@ Your app can launch a stage from an Adaptive Card, shared link, or visual compon
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="Example shows a stage template on desktop.":::
+:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="Example shows a stage template on desktop." lightbox="../../assets/images/ui-templates/stage.png":::
 
 ## Toolbar
 

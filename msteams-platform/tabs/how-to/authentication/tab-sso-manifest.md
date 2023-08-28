@@ -4,6 +4,7 @@ description: Update Teams manifest for enabling Single sign-on (SSO) for tabs an
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
+ms.date: 11/21/2022
 ---
 # Update manifest for SSO and preview app
 
@@ -45,25 +46,26 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
     > - For more information on learning how to create a manifest.json, see [Reference: Manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
 
 1. Open the `manifest.json` file
-1. Append the following code snippet to the manifest file to add the new property:
+1. Add the following code snippet to the manifest file to add the new property:
 
     ```json
-    "webApplicationInfo": {
+    "webApplicationInfo":
+    {
     "id": "{Azure AD AppId}",
-    "resource": "api://{Subdomain}.example.com/{Azure AD AppId}"
+    "resource": "api://subdomain.example.com/{Azure AD AppId}"
     }
     ```
 
     where,
-    - {Azure AD AppId} is the app ID you created when you registered your app in Azure AD. It's the GUID.
-    - {{Subdomain}.app ID URI} is the application ID URI that you registered when creating scope in Azure AD.
+    - `{Azure AD AppId}` is the app ID you created when you registered your app in Azure AD. It's the GUID.
+    - `subdomain.example.com` is the application ID URI that you registered when creating scope in Azure AD.
 
 4. Update the app ID from Azure AD in the **id** property.
 5. Update the subdomain URL in the following properties:
    1. `contentUrl`
    2. `configurationUrl`
    3. `validDomains`
-6. Save the Teams app manifest file.
+6. Save the Teams app manifest file. For more information, see [app manifest](../../../resources/schema/manifest-schema.md).
 
 <br>
 <details>

@@ -4,6 +4,7 @@ description: Learn about types of cards supported in bots for Teams, such as, Ad
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.date: 01/09/2023
 ---
 
 # Cards and task modules

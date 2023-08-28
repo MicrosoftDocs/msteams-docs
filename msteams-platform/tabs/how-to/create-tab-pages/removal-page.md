@@ -1,10 +1,9 @@
 ---
 title: Create a tab removal page
-author: surbhigupta
 description: Learn to enable your tab to be reconfigured after installation. Extend user experience by supporting removal and modification options in Microsoft Teams app.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.author: lajanuar
+ms.date: 12/05/2022
 ---
 # Create a removal page
 

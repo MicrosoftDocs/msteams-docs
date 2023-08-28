@@ -5,6 +5,7 @@ description: Learn about Types of cookies, including SameSite cookies, their att
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
+ms.date: 05/18/2022
 ---
 
 # SameSite cookie attribute
