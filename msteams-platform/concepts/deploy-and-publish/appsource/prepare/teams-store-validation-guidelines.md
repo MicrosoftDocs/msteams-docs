@@ -679,20 +679,20 @@ Remember the following:
 
 ### Videos
 
-A video in your app listing is one of the most effective ways to communicate why people should use your app. You can add URLs of your YouTube or Vimeo video that provides the value of your app. Also, as a best practice, we recommended that you add a video that provides the demo or scenario walkthrough of your app. [*Suggested fix*]
+A video in your app listing is one of the most effective ways to communicate why people should use your app. You can add your YouTube or Vimeo video URL that provides the value of your app. Also, as a best practice, we recommended that you add a video that provides the demo or scenario walkthrough of your app. [*Suggested fix*]
 
-If you choose to submit a video as part of your app listing in your Partner Center account, ensure the following criteria are met:
+If you choose to submit a video as part of your app listing in your Partner Center account, ensure that you meet the following criteria:
 
 * The video must be short, clear, engaging, and of good quality.
 * The video must demonstrate how to set up and use the app.
 * The video must be in a narrative form.
-* The duration of the video should be within 60-90 seconds for a value video and the recommended duration for a walkthrough video is three-five minutes. [*Suggested Fix*]
+* The duration of the video should be within 60-90 seconds for a value video and the recommended duration for a walkthrough video is three to five minutes. [*Suggested Fix*]
 * You must turn off advertisements from your YouTube or Vimeo account settings before submitting the video link in the app listing. [*Mandatory Fix*]
 * The video must highlight your app’s functionality and integration within Teams. [*Mandatory Fix*]
 * The video must be available as a functional link. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/video-app-listing-partner-center.png" alt-text="Screenshot shows the failed scenario of video submitted as part of app listing in partner center.":::
-* The video can be surfaced in the first position of the screenshots or videos carousel in **App details** (Teams Store and Admin Center) and AppSource. [*Suggested Fix*]
+* The video can be surfaced in the first position of the screenshots or videos carousel in the app details (Teams Store and Admin Center) and AppSource pages. [*Suggested Fix*]
 * The video on demo or scenario walkthrough mustn't have marketing information.
 
 For more information on the criteria for creating an app value video or walkthrough video, see the [checklist to create a video](submission-checklist.md#create-a-video).

@@ -94,7 +94,7 @@ Make sure your short name adheres to the [store validation guidelines](~/concept
 
 ### Write descriptions
 
-You must have a short and long description that displays the core values and helps the users to understand the significance of your app.
+You must have a short and long description that displays the app's core values and helps the user to understand the significance of your app.
 
 #### Short description
 
@@ -114,9 +114,9 @@ Make sure your short description adheres to the [store validation guidelines](~/
 
 #### Long description
 
-The long description must provide narrative information that highlights your app's basic functions, key features, benefits for the users, and specific user guidance.
+The long description must provide narrative information that highlights your app's basic functions, key features, user benefits, and specific user guidance.
 
-The long description that you're adding to your **Offer listing** must contain information on the following pointers for the benefit of the users who want to install and use your app. Ensure to provide these information for the app to be validated successfully.
+The long description that you're adding to your **Offer listing** must contain information for the benefit of the users who want to install and use your app. Ensure that you provide the following information for the app to be validated successfully:
 
 * Define your product and the industries it’s aligned with.
 * Specify the target audience and customer segments the app focuses.
@@ -176,9 +176,9 @@ For best practices, see the following resources:
 
 A video in your listing can be the most effective way to communicate with the users about your app. You can add the URL of YouTube or Vimeo video.
 
-For the benefit of the customers and admins who wants to install and use your app, we recommend that you add a video that addresses the value your app brings for the users. Also, as a best practice, it's suggested that you add a demo or scenario walkthrough video that describes the end-to-end usage of your app to the users.
+For the benefit of the customers and admins who wants to install and use your app, we recommend that you add a video that addresses the value your app brings to the users. Also, as a best practice, we recommend that you add a demo or scenario walkthrough video that describes the end-to-end usage of your app to the users.
 
-An app value video focuses on the marketing aspects. When providing a video that educates the users of the value your app provides, ensure to cover the following pointers in the video:
+An app value video focuses on the marketing aspects. When providing a video that educates the users of the value your app provides, ensure to cover the following information in the video:
 
 * Why should the users choose your app over other similar apps in the Teams store?
 * Who's the intended target audience and customer for your app?
@@ -194,9 +194,9 @@ A demo or scenario walkthrough video is more like an educational video that prov
 * How do they use the different capabilities or features in your app?
 * What are the major features of your app and how do they get to use them?
 * Provide an end-to-end demonstration of your app with all the key workflows and key scenarios that your app supports.
-* If there are any specific training materials on how users can learn and use app workflows, ensure to provide the related information.
-* Use voice-over instructions for easier understanding of the users wherever applicable.
-* Ensure not to add any marketing content.
+* If there are any specific training materials on how users can learn and use app workflows, ensure that you provide the related information.
+* Use voice-over instructions wherever applicable to make it easier for the users to understand.
+* Ensure that you don't add any marketing content.
 
 For best practices on creating videos, see [store validation guidelines](teams-store-validation-guidelines.md#videos).
 
