@@ -163,7 +163,7 @@ items:
     
        1. Select **Yes** if the following dialog appears:
 
-          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/security-warning.png" alt-text="Screenshot shows the security warning certificate to accpet.":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/security-warning.png" alt-text="Screenshot shows the security warning certificate to accept.":::
 
           
           A webpage opens with a message **Your bot is ready!**.
@@ -198,13 +198,13 @@ items:
 
     1. Select the .zip file you've created in the **TeamsAppManifest** folder and select **Open**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/upload-manifest-zip.png" alt-text="Screenshot shows the option to upload the manifest zpi file in Teams."::: 
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/upload-manifest-zip.png" alt-text="Screenshot shows the option to upload the manifest zip file in Teams."::: 
 
     1. Select **Add**.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-bot-file.png" alt-text="Screenshot show the option to add the app in Teams sideloading."::: 
 
-    1. In the compose message area, type **hi** and bot sends an Adaptive card.
+    1. In the, compose message area, type **hi** and bot sends an Adaptive card.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/respond-bot.png" alt-text="Screenshot show the responsive message with an adaptive card sent by bot.":::
 
@@ -225,7 +225,7 @@ items:
    
     1. Send an image as an attachment. It responds with a message **Received and saved**. You can view the image on the chat window and from the **Files** tab.
        
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-image.png" alt-text="Screenshot show the option to send a iamge to bot and a response is received.":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-image.png" alt-text="Screenshot show the option to send an image to bot and a response is received.":::
       
         > [!NOTE]
         >  After the bot is installed in the personal scope, the user enters a personal chat conversation with the bot.
