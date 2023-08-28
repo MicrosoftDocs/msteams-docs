@@ -171,17 +171,17 @@ items:
     1. In your cloned repository, go to **Microsoft-Teams-Samples** > **samples** > **connector-todo-notification** > **csharp** > **TeamsAppPackages**.
     1. Open the manifest.json file in Visual Studio and make the following changes:
 
-      * Replace `CONNECTOR_ID` with the connector ID created.
-      * Replace `VALID-DOMAIN` to your ngrok OR dev tunnel domain excluding https://.
+         * Replace `CONNECTOR_ID` with the connector ID created.
+         * Replace `VALID-DOMAIN` to your ngrok OR dev tunnel domain excluding https://.
 
-      :::image type="content" source="~/assets/images/sbs-connector/manifest_2.png" alt-text="Screenshot of Visual Studio with connector ID and valid domain highlighted in red after the required updates."::: 
+            :::image type="content" source="~/assets/images/sbs-connector/manifest_2.png" alt-text="Screenshot of Visual Studio with connector ID and valid domain highlighted in red after the required updates."::: 
 
     1. Create a .zip file with the following files that are present in the **Manifest** folder: 
-       * manifest.json
-       * outline-icon.png
-       * color-icon.png
+         * manifest.json
+         * outline-icon.png
+         * color-icon.png
 
-       :::image type="content" source="~/assets/images/sbs-connector/zip_1.png" alt-text="Screenshot of Manifest folder with Teams connector highlighted in red.":::
+            :::image type="content" source="~/assets/images/sbs-connector/zip_1.png" alt-text="Screenshot of Manifest folder with Teams connector highlighted in red.":::
 
     1. Go to **Microsoft Teams**.
          1. In the left pane, select the **Apps** icon.
