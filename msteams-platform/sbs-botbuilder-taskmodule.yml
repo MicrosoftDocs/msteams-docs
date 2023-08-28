@@ -36,7 +36,9 @@ items:
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
      | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. Use the latest version or install the portable version. |
-
+     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+      > [!NOTE]
+      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
     
 - title: Set up local environment
   durationInMinutes: 1
@@ -327,8 +329,8 @@ items:
     
     1. Open the **manifest.json** file and update the following information: 
 
-         * Replace all occurrences of `YourDeployedBotUrl.com` with `WebAppDomain` name.
-         * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with bot's **Microsoft App ID**.
+         * Replace all occurrences of `<<Domain-Name>>` with your ngrok or devtunnel domain.
+         * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
 
         :::image type="content" source="~/assets/images/Teams-task-module/manifest_1.png" lightbox="~\assets\images\Teams-task-module\manifest_2.png" alt-text="Manifest image2.":::
 
@@ -387,7 +389,7 @@ items:
 
     1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps**.
-    1. Select **Upload an app**
+    1. Select **Upload an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
        :::image type="content" source="~/assets/images/Teams-task-module/custom-upload.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
