@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-   The bot uses Teams API to send and receive files with users in the personal chats. The files shared in Teams can appear as cards and allow rich in-app viewing. The bot also helps in implementing features like expense reporting, image recognition, file archival, and e-signatures that involve editing of file content. 
+   The bot uses Teams API to send and receive files with users in personal chats. The files shared in Teams can appear as cards and allow rich in-app viewing. The bot also helps in implementing features like expense reporting, image recognition, file archival, and e-signatures that involve editing file content. 
    
    **Key features of uploading file in Teams using bot:** 
    
@@ -35,7 +35,7 @@ items:
      | --- | --- | --- |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
-     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
    
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -54,8 +54,8 @@ items:
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
     * Add Teams channel to deploy the bot.
-    * Create a tunnel to your web server's endpoints by using devtunnel alternative ngrok.
-    * Add messaging endpoint to the devtunnel you created.
+    * Create a tunnel to your web server's endpoints by using dev tunnel alternative ngrok.
+    * Add messaging endpoint to the dev tunnel you created.
 
     [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
 
@@ -77,7 +77,28 @@ items:
 
    [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
 
-   [!INCLUDE [Azure api permission](includes/get-started/azure-user-api-permissions.md)]
+   **API Permission**
+
+   1. In the left pane, select **API permissions**. 
+
+      > [!NOTE]
+      > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
+
+   1. Select **Add a permission**.
+
+      :::image type="content" source="../../assets/images/include-files/add-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
+
+   1. Select **Microsoft Graph**.
+
+   1. Select **Delegated permissions**.
+
+   1. Select **User** > **User.Read**.
+
+   1. Select **Add permissions**.
+
+      :::image type="content" source="../../assets/images/include-files/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
+
+   [!INCLUDE [Azure api permission](includes/get-started/azure-web-authentication.md)]
 
    [!INCLUDE [Manifest and new connection](includes/get-started/azure-manifest-service-connection.md)]
 
@@ -192,12 +213,12 @@ items:
         
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-file.png" alt-text="Screenshot show the option to send a file to bot and a response is received.":::
    
-    1. Send an image as an attachment. It responds with a message **Received and saved**. You can view the image on the chat window and from **Files** tab.
+    1. Send an image as an attachment. It responds with a message **Received and saved**. You can view the image on the chat window and from the **Files** tab.
        
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-image.png" alt-text="Screenshot show the option to send a iamge to bot and a response is received.":::
       
         > [!NOTE]
-        >  After the bot is installed in the personal scope, the user enters into a one-on-one chat conversation with the bot.
+        >  After the bot is installed in the personal scope, the user enters a one-on-one chat conversation with the bot.
       
 - title: Complete challenge
   durationInMinutes: 1

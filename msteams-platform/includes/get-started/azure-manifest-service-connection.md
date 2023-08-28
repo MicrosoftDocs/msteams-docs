@@ -21,7 +21,7 @@
 
     * **Name**: Enter **name** for your new connection setting. You can use the name in the settings of your bot service code.
     * **Service Provider**: From the dropdown list, select **Azure Active Directory V2**.
-    * **Client ID**: Update you're **Microsoft App ID**.
+    * **Client ID**: Update your **Microsoft App ID**.
     * **Client secret**: Update the client secret **Value**.
     * **Token Exchange URL**: Update the **Application ID URI**.
     * **Tenant ID**: Enter **common**.

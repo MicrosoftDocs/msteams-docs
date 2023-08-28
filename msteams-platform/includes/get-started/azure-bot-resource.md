@@ -34,7 +34,7 @@
 
 1. If the validation passes, select **Create**. 
 
-    Provisioning your bot takes few minutes to complete.
+    Provisioning your bot takes a few minutes to complete.
 
 1. Select **Go to resource**. 
 
