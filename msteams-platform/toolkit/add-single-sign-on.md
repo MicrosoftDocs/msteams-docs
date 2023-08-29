@@ -115,7 +115,7 @@ The following table lists the changes Teams Toolkit makes to your project:
 | **Type** | **File**                                             | **Purpose**                                                                                                                                                                               |
 | -------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Create   | `aad.template.json` under `template\appPackage`      | Azure AD application manifest represents your Azure AD app. `template\appPackage` helps to register an Azure AD app during local debug or provision stage.                                |
-| Modify   | `manifest.template.json` under `template\appPackage` | A `webApplicationInfo` object is added into your Teams app manifest template. Teams requires this field to enable SSO. The change is in effect when you trigger local debugging or provisioning. |
+| Modify   | `manifest.template.json` under `template\appPackage` | A `webApplicationInfo` object is added into your app manifest (previously called Teams app manifest) template. Teams requires this field to enable SSO. The change is in effect when you trigger local debugging or provisioning. |
 | Create   | `auth\tab`                                           | Reference code, auth redirect pages, and `README.md` files are generated in this path for a tab project.                                                                                  |
 | Create   | `auth\bot`                                           | Reference code, auth redirect pages, and `README.md` files are generated in this path for a bot project.                                                                                  |
 
@@ -410,7 +410,7 @@ After successfully adding SSO in your project, you can add a new SSO command:
 
    ```
 
-1. Register your command in the Teams app manifest. Open `templates\appPackage\manifest.template.json`, and add following lines under `commands` in `commandLists` of your bot:
+1. Register your command in app manifest. Open `templates\appPackage\manifest.template.json`, and add following lines under `commands` in `commandLists` of your bot:
 
    ```JSON
 
@@ -482,11 +482,11 @@ To make this work in your app:
 
 ## Debug your app
 
-Press **F5** to debug your application. Teams Toolkit uses the Azure AD manifest file to register an Azure AD app for SSO. For Teams Toolkit local debug functionalities, see [how to debug your app locally](~/toolkit/debug-local.md).
+Press **F5** to debug your application. Teams Toolkit uses the Azure AD app manifest file to register an Azure AD app for SSO. For Teams Toolkit local debug functionalities, see [how to debug your app locally](~/toolkit/debug-local.md).
 
 ## Customize Azure AD app registration
 
-The [Azure AD app manifest](/azure/active-directory/develop/reference-app-manifest) allows you to customize various aspects of app registration. You can update the manifest as needed. If you need to include more API permissions to access your desired APIs, see [API permissions to access your desired APIs](https://github.com/OfficeDev/TeamsFx/wiki/#customize-aad-manifest-template).
+The [Azure AD app manifest](/azure/active-directory/develop/reference-app-manifest) allows you to customize various aspects of app registration. You can update the app manifest as needed. If you need to include more API permissions to access your desired APIs, see [API permissions to access your desired APIs](https://github.com/OfficeDev/TeamsFx/wiki/#customize-aad-manifest-template).
 To view your Azure AD app in Azure portal, see [view Azure AD app in Azure portal](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal).
 
 ## SSO authentication concepts
