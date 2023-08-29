@@ -22,6 +22,6 @@ Under **Authorized client applications**, identify the applications that you wan
 
    :::image type="content" source="../../assets/images/include-files/authorized-scope-add.png" alt-text="Screenshot shows the option to select authorized scopes and add application."::: 
 
-   The following image displays the **Client Ids**:
+   The following image displays the **Client Id**:
 
    :::image type="content" source="../../assets/images/include-files/add-client-application-output.png" alt-text="Screenshot shows the output of Client applications."::: 

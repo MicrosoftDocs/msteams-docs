@@ -16,7 +16,7 @@ items:
   content: |
    The bot uses Teams API to send and receive files with users in personal chats. The files shared in Teams can appear as cards and allow rich in-app viewing. The bot also helps in implementing features, such as expense reporting, image recognition, file archival, and e-signatures that involve editing the file content. 
    
-   **Key features to upload file in Teams using bot:** 
+   **Key features to upload file in Teams using bot**: 
    
      * Upload files to Teams using a bot.
      * Receive a file sent to bot as an attachment.
@@ -124,7 +124,7 @@ items:
          * Set `"MicrosoftAppType"` to **MultiTenant**.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID **value**.
-      s
+      
            :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/appsettings-json.png" alt-text="Screenshot shows the details filled app settings file in visual studio.":::
            
     1. Go to the **manifest.json** file in the cloned repository.
