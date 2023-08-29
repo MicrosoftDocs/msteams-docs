@@ -20,7 +20,7 @@ Some possible uses of this feature are:
 * Changing the description to include language and guidance that is better understood by your organization's end-users.
 * Changing logo and logo outline to inspire confidence to the end-users to use the app since it seems provided by their organization.
 
-You can enable the feature by defining the app properties that your customers can customize in the [`configurableProperties` section in the Teams app manifest](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties), starting with version 1.11. You can use [Developer Portal for Teams](https://dev.teams.microsoft.com/home) to edit the manifest of your app.
+You can enable the feature by defining the app properties that your customers can customize in the [`configurableProperties` section in the app manifest](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties) (previously called Teams app manifest), starting with version 1.11. You can use [Developer Portal for Teams](https://dev.teams.microsoft.com/home) to edit the app manifest of your app.
 
 > [!IMPORTANT]
 > You can't test this feature during development. App customization isn't supported when sideloading or publishing to an org's app catalog.
