@@ -194,7 +194,7 @@ items:
          * Replace all occurrences of `<<aad-id>>` with your app's Microsoft App ID.
          * Replace all occurrences of `<<client secret>>` with your app's client secret.
 
-          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appsettings2.png" alt-text="App settings":::
+          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appsettings2.png" alt-text="App settings"::: 
 
     **To configure app manifest file**
 
