@@ -48,7 +48,7 @@ items:
   content: |
    Clone **Microsoft-Teams-Samples** repository to your local GitHub:  
 
-   [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
+   [INCLUDE [Set up local environment](includes/get-started/clone-repository)]
 
 - title: Create and register your bot in Azure AD portal
   durationInMinutes: 5
@@ -63,27 +63,27 @@ items:
 
     **To create Azure Bot resource**
 
-      [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
+      [INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource)]
         
     **To create client secret**
 
-      [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
+      [INCLUDE [Client secret](includes/get-started/create-client-secret)]
 
     **To add the Teams channel**
 
-      [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
+      [INCLUDE [Teams channel](includes/get-started/add-teams-channel)]
     
     **To create a ngrok tunnel**
 
       [Dev tunnel](#tab/Dev tunnel)
-      [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+      [INCLUDE [Tunnel](includes/get-started/dev-tunnel)]
 
       [ngork](#tab/ngork)
-      [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+      [INCLUDE [Tunnel](includes/get-started/ngrok-tunnel)]
     
     **To add messaging endpoint**
 
-      [!INCLUDE [messaging endpoint](includes/get-started/messaging-endpoint.md)]
+      [INCLUDE [messaging endpoint](includes/get-started/messaging-endpoint)]
 
 - title: Configure SSO for your tab 
   durationInMinutes: 1
@@ -91,12 +91,12 @@ items:
 
    To configure SSO for your tab:
 
-   [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
-   [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
-   [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
-   [!INCLUDE [API permission](includes/get-started/azure-api-permissions.md)]
-   [!INCLUDE [Azure api permission](includes/get-started/azure-web-authentication.md)]    
-   [!INCLUDE [Manifest and new connection](includes/get-started/azure-manifest-service-connection.md)]
+   [INCLUDE [Azure app registration](includes/get-started/azure-app-registration)]
+   [INCLUDE [Azure add scope](includes/get-started/azure-add-scope)]
+   [INCLUDE [Azure client application](includes/get-started/azure-client-application)]
+   [INCLUDE [API permission](includes/get-started/azure-api-permissions)]
+   [INCLUDE [Azure api permission](includes/get-started/azure-web-authentication)]
+   [INCLUDE [Manifest and new connection](includes/get-started/azure-manifest-service-connection)]
 
 - title: Set up app settings
   durationInMinutes: 1
@@ -255,8 +255,6 @@ items:
     Did you come up with output like this?
 
     :::image type="content" source="./assets/images/Tab-ME-SSO//hello-megan-profile245_1.png" alt-text="Screenshot of the output after you have successfully completed the step-by-step guide.":::
-    
-    
-
+        
 - content: |
     You've completed the tutorial to get started with SSO for tab and message extension app.
