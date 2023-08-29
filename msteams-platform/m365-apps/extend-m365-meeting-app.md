@@ -149,13 +149,13 @@ The final step to running your app in Microsoft 365 and Outlook is to sideload y
 
 1. The preview for Teams meeting app support in Outlook requires you to sideload your app package using TeamsFx CLI. (Sideloading from the *Manage your apps* option in Teams client is not currently supported.) Ensure TeamsFx CLI is installed:
 
-    ```cmd
+    ```bash
     npm install -g @microsoft/teamsfx-cli
     ```
 
 1. Use the following command to sideload your app package to Teams, replacing *<path\to\appPackage.zip>* with the path to your app package.
 
-    ```cmd
+    ```bash
     teamsfx m365 sideloading --file-path <path\to\appPackage.zip>
     ```
 
