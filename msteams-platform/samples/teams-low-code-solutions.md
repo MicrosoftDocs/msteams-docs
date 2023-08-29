@@ -16,7 +16,7 @@ Low code platforms provide an intuitive approach to software development with mi
 
 Microsoft Power Platform combines four robust Microsoft technologies, such as Power BI, Power Apps, Power Automate, formerly Microsoft Flow, and Power Virtual Agents in one powerful application platform. These technologies empower you to build solutions, automate processes, analyze data, and create virtual agents within a unified and integrated environment:
 
-:::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Screenshot show the Power Platform services.":::
+:::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Screenshot shows the Power Platform services.":::
 
 > [!NOTE]
 >

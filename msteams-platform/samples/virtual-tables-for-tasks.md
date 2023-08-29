@@ -454,7 +454,7 @@ To acquire the correct bearer token, an app registration in Azure is required. F
 1. Add the **user_impersonation** delegated permission from Dynamics CRM.
 1. Grant admin consent for this permission.
 
-     :::image type="content" source="../assets/images/collaboration-control/power-automate-api-permission.png" alt-text="Screenshot shows the Power Automate API permission":::
+     :::image type="content" source="../assets/images/collaboration-control/power-automate-api-permission.png" alt-text="Screenshot shows the Power Automate API permission.":::
 
 1. Browse to **Manifest**.
 1. Set the value of the following attributes to true:
@@ -464,7 +464,7 @@ To acquire the correct bearer token, an app registration in Azure is required. F
 
 1. Select Save.
 
-     :::image type="content" source="../assets/images/collaboration-control/power-automate-manifest.png" alt-text="Screenshot shows the Power Automate manifest":::
+     :::image type="content" source="../assets/images/collaboration-control/power-automate-manifest.png" alt-text="Screenshot shows the Power Automate manifest.":::
 
 ### PowerApps environment permissions
 
@@ -478,7 +478,7 @@ After the app registration has been set up, you must set up an application user 
    1. The **System Administrator** role is applied to allow authentication for any users that have a lower security role. For example, **Collaboration controls User**.
    1. This can be restricted by applying a lower role to the application. For example, **Collaboration controls Administrator**.
 
-     :::image type="content" source="../assets/images/collaboration-control/power-automate-admin-center.png" alt-text="Screenshot shows the Power automate admin center":::
+     :::image type="content" source="../assets/images/collaboration-control/power-automate-admin-center.png" alt-text="Screenshot shows the Power automate admin center.":::
 
 ### Getting the bearer token
 
@@ -501,7 +501,7 @@ POST https://login.microsoftonline.com/<AZURE_APP_TENANT_ID>/oauth2/token
 
 From the response payload, copy the value of the **access_token** property. You can then pass this Bearer token as the part of the authorization header when making requests to the Virtual tables.
 
-:::image type="content" source="../assets/images/collaboration-control/power-automate-authorization.png" alt-text="Screenshot shows the Power automate authorization":::
+:::image type="content" source="../assets/images/collaboration-control/power-automate-authorization.png" alt-text="Screenshot shows the Power automate authorization.":::
 
 ## Virtual tables error handling
 
