@@ -144,9 +144,7 @@ items:
  
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-select-teams-app.png" alt-text="Screenshot shows to create a new project with Next option.":::
         
-    1.  Enter **Project name** and select **Next**.
-
-    1.  Select **Create**.  
+    1.  Enter **Project name** and select **Create**. 
 
          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project.png" alt-text="Screenshot shows to configure your new project with Create option.":::
 
@@ -248,7 +246,7 @@ items:
 
        1. Select your **Subscription name** from the dropdown list.
        1. Select your **Resource group** from the dropdown list.
-       1. If you don't have an existing resource group, you can create a new resource group. To create a new resource group, select New > enter the resource name > select OK. Select a location from New resource group location dropdown list.
+       1. If you don't have an existing resource group, you can create a new resource group. To create a new resource group, select **New** > enter the resource name > select **OK**. Select a location from New resource group location dropdown list.
        1. Select **Provision**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-subscription.png" alt-text="Screenshot of Provision with New and Provision highlighted in red.":::
@@ -322,73 +320,35 @@ items:
     
     :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-helloworld-app-bot.png" alt-text="Screenshot displaying workspace for your bot app.":::    
 
-    This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
-
-    In this section, you can learn:
-    
-    1. [How to set up a new bot project with Teams Toolkit](#create-your-bot-project)
-    1. [About the directory structure of your app](#take-a-tour-of-the-source-code-for-teams-bot-app)
-
     ## Create your bot project
-
-    Use Teams Toolkit to create your first project. The toolkit takes you through a series of pages to create and configure your Teams app project:
-
-    1. **Create a new project** page: You select the project type.
-    1. **Configure your new project** page: You enter the project details.
-    1. **Create a new Teams application** page: You select the Teams app capabilities.
-
-    **To create your bot project workspace**
-
-    1. Open the latest version of Visual Studio.
+    
+    1. Open Visual Studio.
 
     1. Select **Create a new project**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-select-project.png" alt-text="Screenshot of Visual Studio 2022 with Create a new project option highlighted in red.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-select-project.png" alt-text="Screenshot shows Visual Studio 2022 with Create a new project.":::
 
-        The **Create a new project** window appears.
+        The **Create a new project** page appears.
 
-    1. Select the project details.
+    1. In the search box, enter **Microsoft Teams**. From the search results, select **Microsoft Teams App**.
 
-          Select the project type:
+    1. Select **Next**.
 
-          1. Select **Microsoft Teams** from **All platforms** dropdown list.  
-        
-          1. Select **Microsoft Teams App** as the template.
-
-          1. Select **Next**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Screenshot of Create a new project with Next option highlighted in red.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Screenshot shows Create a new project with Next option.":::
 
           The **Configure your new project** window appears.
 
-    1.  Configure the new project details.  
-
-          Select the following project configuration details:
-
-          1. Enter a suitable name for your project.
-
-              > [!NOTE] 
-              > You can note that the project name you enter is automatically filled in as the **Solution name** also. If you want, you can change the solution name with no affect on project name.
-
-          1. Select the folder path where you want to create the project workspace.
-
-          1. Enter a different solution name, if you want.
-
-          1. Check the option to save the project and solution in the same folder, if you want. For this tutorial, you don't need this option.
-
-          1. Select **Create**.   
-
-          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project-bot.png" alt-text="Screenshot of Configure your new project with Create option highlighted in red.":::
+    1.  Enter **Project name** and Select **Create**.
+        
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project-bot.png" alt-text="Screenshot of Configure your new project with Create option highlighted in red.":::
 
           The **Create a new Teams application** window appears.  
 
     1.  Select Teams app feature. 
 
-        Select app feature: 
+    1.  Select the **Command Bot** app as the capability for your app.
 
-        1. Select the **Command Bot** app as the capability for your app.
-
-        1. Select **Create**.     
+    1. Select **Create**.     
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-bot_1.png" alt-text="Screenshot of Create a new Teams application with Command Bot and Create options highlighted in red.":::
 
@@ -426,41 +386,25 @@ items:
 
     To build and run your app locally:
 
-    1.  Use ngrok or Command prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
-
-        ```bash
-        ngrok http --host-header=localhost 5130
-        ```
+    # [ngrok](#tab/ngrok)
     
+    [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+
+    # [dev-tunnel](#tab/devtunnel)
+
+    [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+
     1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with project, Teams Toolkit, and Prepare Teams App Dependencies options highlighted in red." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_2.png":::
 
-    1. Select your Microsoft 365 account or **Add an account** to sign in.
+    1. Sign in to your **Microsoft 365 account** and then select **Continue**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/M365-account_1.png" alt-text="Screenshot of Microsoft 365 Account with Add an account and Continue options highlighted in red.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/sign in M365 account.png" alt-text="Screenshot shows Microsoft 365 Account with Continue option.":::
 
-     1. Select **Debug** > **Start Debugging** or select **F5** to run your app in debug mode.
-        <!-- markdownlint-disable MD033 -->
-        <details>
-        <summary>Learn what happens when you run your app locally in the debugger.</summary>
+    1. Select **Debug** > **Start Debugging** or select **F5** to run your app in debug mode.
 
-        When you select **F5**, Teams Toolkit:
-
-        1. Registers your application with Azure Active Directory.
-        1. Registers your application for sideloading in Teams.
-        1. Starts your application backend running locally.
-        1. Starts your application front-end hosted locally.
-        1. Starts Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
-    
-        </details>
-        
-        >[!NOTE]
-        > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens when the build is complete. This process can take 3-5 minutes to complete.
-
-        Your web browser starts to run the app.
-
-    1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
+    1. Select **Add** to install your app in Teams..
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/add-bot.png" alt-text="Screenshot of Teams displaying the Add option for adding Blazor app. The Add option is highlighted in red.":::
 
@@ -468,7 +412,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/bot-running.png" alt-text="Screenshot of Microsoft Teams with Welcome option highlighted under Suggestions.":::
 
-        You can type `hellowworld` to show an introduction card for an adaptive card and bot command documentation.
+        You can type `hellowworld` to show an introduction card for an adaptive card.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/bot-welcome.png" alt-text="Screenshot of Microsoft Teams displaying an introduction card.":::       
 
@@ -484,15 +428,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've learned to create, build, and run Teams app with bot capability. The following final steps are to deploy your app on Azure and Preview on Teams:
-
-    1. [Provision your bot app in the cloud](#to-provision-your-bot-app-in-the-cloud): You can provision your bot app in the cloud.
-    1. [Deploy your bot app to cloud](#to-deploy-your-bot-app-to-cloud): You can deploy your bot app to cloud. 
-    1. [Preview your bot app in Teams](#to-preview-your-bot-app-in-teams): Your bot app opens in Teams. 
-
-    Let's deploy the first bot app on Azure using Teams Toolkit.
-
-    #### **To provision your bot app in the cloud**
+    #### **To provision your bot app in the Azure**
     
     1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
@@ -500,9 +436,9 @@ items:
 
     1. Enter the subscription and resource group details in the **Provision** dialog:
 
-        1. Select the subscription name from **Subscription name** dropdown list.
-        1. Select the resource group from the **Resource group** dropdown list or select **New** to add the resource group generated for your app.
-        1. Select your **Region**, if new resource group is created.
+        1. Select your **Subscription name** from the dropdown list.
+        1. Select your **Resource group** from the dropdown list.
+        1. If you don't have an existing resource group, you can create a new resource group. To create a new resource group, select **New** > enter the resource name > select **OK**. Select a location from New resource group location dropdown list.
         1. Select **Provision**.
 
            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-azure_1.png" alt-text="Screenshot of Provision with provision option highlighted in red. ":::
@@ -535,11 +471,11 @@ items:
 
      1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
 
-          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-to-cloud-azure_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Deploy to the Cloud options highlighted in red." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-to-cloud-azure_2.png":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-to-cloud-azure_1.png" alt-text="Screenshot shows Visual Studio with Project, Teams Toolkit, and Deploy to the Cloud options highlighted in red." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-to-cloud-azure_2.png":::
 
      1. Select **OK**. 
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-success.png" alt-text="Screenshot of Teams Toolkit with OK option highlighted in red.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-success.png" alt-text="Screenshot shows Teams Toolkit with OK option highlighted in red.":::
 
         Your bot app is successfully deployed to the cloud!
 
@@ -547,17 +483,17 @@ items:
 
      1. Select **Project** > **Teams Toolkit** > **Preview in Teams**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/preview-azure_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit and Preview in Teams options highlighted in red." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/preview-azure_2.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/preview-azure_1.png" alt-text="Screenshot shows Visual Studio with Project, Teams Toolkit and Preview in Teams options." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/preview-azure_2.png":::
 
-     1. Select **Add** when prompted to install the app to Teams.
+     1. Select **Add**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/add-app-azure.png" alt-text="Screenshot of Teams displaying the Add option for adding Blazor app. The Add option is highlighted in red.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/add-app-azure.png" alt-text="Screenshot shows Teams displaying the Add option for adding Blazor app.":::
 
         Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
  
          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/welcome.png" alt-text="Screenshot of Microsoft Teams displaying an introduction card.":::
 
-     1. You can type `hellowworld` to show an introduction card for an adaptive card and bot command documentation.
+     1. You can type `hellowworld` to show an introduction card for an adaptive card.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/learn.png" alt-text="Screenshot of Microsoft Teams displaying the Learn Adaptive Card and Commands.":::
 
