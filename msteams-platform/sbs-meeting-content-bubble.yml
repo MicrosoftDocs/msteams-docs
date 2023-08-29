@@ -130,7 +130,7 @@ items:
           > `WebAppDomain` is your devtunnel or ngrok domain.
           > If the ngrok ID ends with `*.ngrok-free.app` valid domain is optional.
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/manifest-file.png" alt-text="Screenshot shows the Manifest cloned repository.":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/manifest-file.png" alt-text="Screenshot shows the Manifest cloned repository."::: 
 
 - title: Build and run the service
   durationInMinutes: 1
