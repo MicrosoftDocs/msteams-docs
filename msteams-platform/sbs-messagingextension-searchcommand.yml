@@ -35,7 +35,7 @@ items:
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
      | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the latest version, install the portable version. |
-     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm devDependencies). |
 
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -44,12 +44,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    1. Open [Microsoft-Teams-Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
-    1. Select **Code**. From the dropdown menu, select **Open with GitHub Desktop**.
-
-       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/clonerepository_1.png" alt-text="Screenshot of GitHub web page. The option titled Open with GitHub Desktop under Code dropdown menu is highlighted in red.":::
-
-    1. Select **Clone**. 
+   [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
 - title: Create and register your bot
   durationInMinutes: 5
@@ -59,267 +54,44 @@ items:
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret that enables single sign-on (SSO) authentication of the bot.
     * Add Teams channel to deploy the bot to a Teams channel.
-    * Create a ngrok tunnel to the endpoints of your web server.
-    * Add messaging endpoint to the ngrok tunnel you created.
+    * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
+    * Add messaging endpoint to the dev tunnel that you created.
 
-    **To create Azure Bot resource**
+    [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
 
-    1. Go to the [Azure portal](https://portal.azure.com/).
-    1. Select **Create a resource**.
-    1. Search for **Azure Bot** in the search box.
-    1. Select **Azure Bot**.
-    1. Select **Create**.
+    [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
 
-         :::image type="content" source="./assets/images/create-bot-in-azure.png" alt-text="Screenshot of Azure bot create page with the Create option highlighted in red.":::
+    [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
 
-    1. In the **Create an Azure Bot** window that appears, enter the required bot handle name in **Bot handle**.
-    1. Select your **Subscription** and **Resource group** from the dropdown list.
-    
-       :::image type="content" source="./assets/images/conversation-bot/create-azure-bot.png" alt-text="Screenshot shows the create Azure bot."::: 
-    
-    1. You can optionally create a new resource group. Select **Create new** > enter resource name > select **OK**. Select the required location from the **New resource group location** dropdown list.
+    **Create a tunnel**
 
-         :::image type="content" source="~/assets/images/conversation-bot/newresource-group.png" alt-text="Screenshot shows the new resource group location.":::
+      # [dev tunnel](#tab/dev)
 
-    1. In the **Microsoft App ID** section, select **Type of App** as **Multi Tenant**.
+      [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
 
-       :::image type="content" source="./assets/images/conversation-bot/multi-tenant.png" alt-text="tenant review.":::
+      # [ngrok](#tab/ngrok)
+      
+      [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
 
-    1. In the **Creation Type**, by default **Create new Microsoft App ID** is selected.
-       You can optionally select **Use existing app registration** and enter **App ID**, **App tenant ID**, and **MSI resource ID**.
+      ---     
 
-       > [!NOTE]
-       > You can't create more than one bot with the same **Microsoft App ID**.
-
-    1. Select **Review + create**.
-
-       :::image type="content" source="./assets/images/conversation-bot/review-create-app.png" alt-text="tenant review.":::
-
-    1. If the validation passes, select **Create**.
-
-       It takes a few minutes for your bot service to be provisioned.
-
-        :::image type="content" source="./assets/images/conversation-bot/validation-passed.png" alt-text="Validation of the bot.":::
-
-    1. Select **Go to resource**. 
-
-        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/botdeployment_1.png" alt-text="Screenshot of deployment complete with Go to resource option highlighted in red.":::
-
-        Your Azure Bot is created and you can see the **Resource group** and **Subscription ID** in the Azure Bot.
-
-        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/bot-page_1.png" alt-text="Screenshot of the Azure bot Home page that is created.":::
-
-    **To create client secret**
-
-      Perform the following steps if you've created a new **Microsoft App ID**:
-
-    1. In the left pane, select **Configuration**. 
-
-       > [!TIP]
-       > Save the **Microsoft App ID** or **Client ID** for future reference.
-
-    1. Next to **Microsoft App ID**, select **Manage Password**.
-
-        :::image type="content" source="./assets/images/conversation-bot/microsoft-app-id-password.png" alt-text="Microsoft App Id.":::
-
-    1. In the **Client secrets** section, select **+ New client secret**. 
-
-        :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret_1.png" alt-text="Screenshot of Client secrets section with the New client secret option highlighted in red.":::
-    
-    1. In the **Add a client secret** window that appears, enter **Description** of the client secret and select **Add**.  
-
-        :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/clientsecret_1.png" alt-text="Screenshot of Add a client secret with the Add option highlighted in red.":::
-
-    1. Select **Copy to clipboard** to copy the **Value** details.
-
-         :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/clientvalue_1.png" alt-text="Screenshot of Client secret section with the Copy to clipboard icon highlighted in red.":::
-       
-       > [!TIP]
-       > Save the **Client secrets** **Value** or app password for future reference.
-
-    **To add the Teams channel**
-
-    1. Select **Home**.
-
-        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/gotohome_1.png" alt-text="Screenshot of Azure bot home page with the Home option highlighted in red.":::
-
-    1. Select your bot from **Recent resources**.
-
-    1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
-
-        :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Screenshot of Azure bot home page. The Channels option in the left pane and Microsoft Teams under Channel are highlighted in red.":::
-
-    1. Select the checkbox to accept the **Terms of Service**.
-    
-    1. Select **Agree**.
-
-          :::image type="content" source="./assets/images/meetings-side-panel/terms_1.png" alt-text="Screenshot of Terms of Service page with the Agree option highlighted in red.":::
-
-    1. Select **Apply**.
-
-          :::image type="content" source="./assets/images/sbs-messagingextension-action/configure-msteams_1.png" alt-text="Screenshot of Microsoft Teams Messaging channel with the Apply option highlighted in red."::: 
-    
-    **To create a ngrok tunnel**
-
-    Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
-
-      ```bash
-      ngrok http --host-header=localhost 3978
-      ```
-
-      > [!TIP]
-      > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
-
-    **To add messaging endpoint**
-
-    1. From ngrok, copy the HTTPS URL (https to io).
-
-       :::image type="content" source="../msteams-platform/assets/images/ngrok-url_1.png" alt-text="Screenshot of ngrok with the HTTPS URL highlighted in red.":::
-
-        > [!NOTE]
-        > The HTTPS URL in your ngrok is your fully qualified domain name.
-        > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
-
-    1. In **Settings** for the Azure bot that you created, select **Configuration**.
-
-    1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
-
-        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/messaging-endpoint_1.png" alt-text="Screenshot of Azure bot Configuration page. The Messaging endpoint with the ngork URL highlighted in red.":::
-
-    1. Select **Apply**.
-
-        You have successfully set up a bot in Azure Bot Service.
+    [!INCLUDE [messaging endpoint](includes/get-started/messaging-endpoint.md)]
 
 - title: Update the Azure AD app registration
   durationInMinutes: 1
   content: |
 
-    1. Go to the [Azure portal](https://portal.azure.com/).
+   [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
-    1. Select **Azure Active Directory**.
+   [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
 
-    1. In the left pane, select **App registrations**.
+   [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
 
-    1. Select your bot.
+   [!INCLUDE [API permission](includes/get-started/azure-api-permissions.md)]
 
-       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/appregister_1.png" alt-text="Screenshot of Azure Active Directory page. The App registrations in the left pane and the bot selected are highlighted in red.":::
+   [!INCLUDE [Azure authentication](includes/get-started/azure-web-authentication.md)]
 
-    1. Under **Manage**, select **Expose an API**.
-
-    1. Select **Set**.
-
-       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/exposeanapi_2.png" alt-text="Screenshot of Expose an API with the Set option highlighted in red.":::
-
-    1. Use the `api://WebAppDomain/{AppID}` format for the **Application ID URI**.
-
-    1. Update the **Application ID URI** and select **Save**.
-
-       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/setlink_1.png" alt-text="Screenshot of Expose an API with the Save option highlighted in red.":::
-        
-       The following image shows the domain name:
-        
-        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/appIDuri_1.png" alt-text="Screenshot of Expose an API with the domain name highlighted in red.":::
-
-        > [!NOTE]
-        > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
-        > For example: `api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
-
-    1. Select **Add a scope**. 
-
-       :::image type="content" source="~/assets/images/meetings-side-panel/selectscope_2.png" alt-text="Screenshot of Scopes defined by this API section with the Add a scope option highlighted in red.":::
-    
-    1. Enter **access_as_user** as the **Scope name**.
-  
-    1. Set **Who can consent?** to **Admins and users**.
-  
-    1. To configure the admin and user consent prompts with appropriate values for **access_as_user** scope, provide the following information in the fields:</br>
-    
-         * Enter **Teams can access the user’s profile** as **Admin consent display name**.
-
-         * Enter **Allows Teams to call the app’s web APIs as the current user** as **Admin consent description**.
-
-         * Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**.
-
-         * Enter **Enable Teams to call this app’s APIs with the same rights as the user** as **User consent description**.
-  
-    1. Ensure that **State** is set to **Enabled**.
-  
-    1. Select **Add scope** to save.
-
-        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/addascope_1.png" alt-text="Screenshot of Add a scope with Add scope highlighted in red.":::
-
-        > [!NOTE]
-        > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
-           `api://9179****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
-
-        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/scopes_1.png" alt-text="Screenshot of Scopes defined by this API section with the Scope highlighted in red."::: 
-  
-    1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
-    
-    1. Select **Add a client application**. 
-
-        :::image type="content" source="~/assets/images/meetings-side-panel/selectclientapp_1.png" alt-text="Screenshot of Authorized client applications with Add a Client application highlighted in red."::: 
-
-    1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
-
-        :::image type="content" source="~/assets/images/meetings-side-panel/addclientapplication1.png" alt-text="Screenshot of Add a client application page with the Client ID 1 highlighted in red."::: 
-
-       You can enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
-
-        :::image type="content" source="~/assets/images/meetings-side-panel/addclientapplication2.png" alt-text="Screenshot of Add a client application page with the Client ID 2 highlighted in red."::: 
-
-    1. Select **Authorized scopes**.
-
-        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/authorizedscope_1.png" alt-text="Screenshot of Authorized scopes section under Expose an API page with the scope highlighted in red."::: 
-
-       The following image displays the client IDs:
-
-        :::image type="content" source="~/assets/images/meetings-side-panel/clientapps.png" alt-text="Screenshot of Authorized client applications under Expose an API with the client IDs highlighted in red."::: 
-  
-    1. In the left pane, select **API permissions**. 
-
-       > [!NOTE]
-       > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
-
-    1. Select **Add a permission**.
-
-        :::image type="content" source="~/assets/images/meetings-side-panel/add-permission_2.png" alt-text="Screenshot of Configured permissions with Add a permission highlighted in red.":::
-
-    1. Select **Microsoft Graph**.
-
-    1. Select **Delegated permissions**.
-
-    1. Add the following permissions:</br>
-         * **email**
-         * **offline_access**
-         * **openid**
-         * **profile**
-         * **User.Read**
-
-    1. Select **Add permissions**.
-
-        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/token-generator-otherpermissions.png" alt-text="Other permissions.":::
-
-    1. From the left panel, select **Authentication** to set a redirect URI. 
-
-       > [!NOTE]
-       > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
-               
-         1. Select **Add a platform**.
-         1. Select **Web**.
-
-            :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/webauth_1.png" alt-text="Screenshot of Authentication page with Add a platform and the Web option highlighted in red.":::
-
-         1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
-           `https://9179****.ngrok.io/auth-end`. </br>
-
-         1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
-             * **Access tokens (used for implicit flows)**
-             * **ID tokens (used for implicit and hybrid flows)**
-   
-         1. Select **Configure**.
-
-            :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/authend_1.png" alt-text="Screenshot of Configure Web page with the options Redirect URLs, token selections and Configure are highlighted in red.":::
+   [!INCLUDE [Manifest and new connection](includes/get-started/azure-manifest-service-connection.md)] 
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
@@ -334,7 +106,7 @@ items:
          * Set `"MicrosoftAppId"` to bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to **Value** of **Client secret**.
          * Set `"MicrosoftAppTenantId"` as blank.
-         * Set `"BaseUrl"` to the fully qualified domain name (https to io).
+         * Set `"BaseUrl"` to the fully qualified domain name.
 
         :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/appsettings_1.png" alt-text="Screenshot of appsettings JSON file with appsettings information.":::
 
