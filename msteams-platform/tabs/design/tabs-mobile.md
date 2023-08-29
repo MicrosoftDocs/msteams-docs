@@ -8,16 +8,14 @@ ms.date: 11/02/2022
 
 # Tabs on mobile
 
-When you are building a Microsoft Teams app that includes a tab, you must test how your tab functions on both the Android and iOS Microsoft Teams clients. This article outlines some of the key scenarios you must consider.
-
-To ensure optimal user experience, you must follow the guidance for tabs on mobile in this article when creating your tabs.
+When you are building a Microsoft Teams app that includes a tab, you must test how your tab functions on both the Android and iOS Microsoft Teams clients. This article outlines some of the key scenarios you must consider to ensure optimal user expereince.
 
 Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsource/publish.md) have a separate approval process for mobile clients. The default behavior of such apps is as follows:
 
 | **App capability** | **Behavior if app is approved** | **Behavior if app is not approved** |
 | --- | --- | --- |
 | **Personal tabs** | App appears in the bottom bar of the mobile clients. Tabs open in the Teams client. | App does not appear in the bottom bar of the mobile clients. |
-| **Channel and group tabs** | The tab opens in the Teams client using `contentUrl`. | If `websiteUrl` is available, the tab opens in a browser outside the Teams mobile client, else the tab isn’t accessible. |
+| **Channel and group tabs** | The tab opens in the Teams client using `contentUrl`. | If `websiteUrl` is available in the app manifest file, the tab opens in a browser outside Teams. </br> If `websiteUrl` isn’t available in the app manifest file, the tab isn’t accessible on Teams mobile. |
 
 > [!NOTE]
 >
