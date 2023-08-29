@@ -38,7 +38,7 @@ items:
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
      | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. Use the latest version or install the portable version. |
-     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm devDependencies). |
      | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
 
       > [!NOTE]
@@ -75,13 +75,19 @@ items:
 
       You must use the [In-Meeting Document Signing](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-share-to-stage-signing/csharp) code sample for this step-by-step guide. To use the code sample, clone the repository from GitHub.
 
+- title: Set up local environment
+  durationInMinutes: 1
+  content: |  
+
+   [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
+
 - title: Create and register your app
   durationInMinutes: 5
   content: |
     The following steps help you to create and register your app in Azure portal.
 
     * Create an app registration in Azure AD.
-    * Use ngrok to create a tunnel.
+    * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
     
     ## Create an app registration in Azure AD
 
@@ -118,9 +124,15 @@ items:
 
     Your app is registered in Azure AD. You should now have the app ID for your app.
 
-    ## To create a ngrok tunnel
+     **Create a tunnel**
 
-    Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+      # [dev tunnel](#tab/dev)
+
+      [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+
+      # [ngrok](#tab/ngrok)
+      
+      Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
      ```bash
      ngrok http https://localhost:44326 -host-header=localhost:44326
@@ -130,147 +142,41 @@ items:
 
       :::image type="content" source="../msteams-platform/assets/images/sbs-inmeeting-doc-signing/ngrok1.png" alt-text="ngrok HTTPS URL":::
 
+      ---  
 - title: Update the Azure AD app registration
   durationInMinutes: 1
   content: |
 
-    1. Go to the [Azure portal](https://portal.azure.com/).
+    [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
-    1. Select **Azure Active Directory**.
+    [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-azure-directory.png" alt-text="Select Azure active directory":::
+    [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
 
-    1. In the left pane, select **App Registrations**.
+    **Add API permissions**
 
-    1. Select your app.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-registration.png" alt-text="App registration":::
-
-    1. Under **Manage**, select **Expose an API**.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/exposeanapi.png" alt-text="Expose an API":::
-
-    1. Select **Add**.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-set.png" alt-text="Screenshot that shows the Application ID URI to Add.":::
-
-    1. Use the `api://your ngrok/botid-{AppID}` format for the **Application ID URI**.
-
-    1. Update the **Application ID URI** and select **Save**.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-uri1.png" alt-text="Screenshot that shows the App ID URI with Save option highlighted in red.":::
-        
-       The following image shows the Application ID URI:
-        
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appIDuri1.png" alt-text="Screenshot shows the Expose an API showing application ID URI.":::
-
-        > [!NOTE]
-        > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
-        > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
-
-    1. Select **Add a scope**. 
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/addascope.png" alt-text="Screenshot that shows the Add a scope highlighted in red.":::
-    
-    1. Enter **access_as_user** as the **Scope name**.
-
-    1. Set **Who can consent?** to **Admins and users**.
-
-    1. Configure the admin and user consent prompts with appropriate values for **access_as_user** scope:</br>
-
-        * Enter **Teams can access the user’s profile** as **Admin consent display name**.
-
-        * Enter **Allows Teams to call the app’s web APIs as the current user** as **Admin consent description**.
-
-        * Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**.
-
-        * Enter **Enable Teams to call this app’s APIs with the same rights as the user** as **User consent description**.
-
-    1. Ensure that **State** is set to **Enabled**.
-
-    1. Select **Add scope** to save.
-
-       The following image shows the fields and the values:
-
-       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-a-scope-page1.png" alt-text="Add a scope page":::
-
-        > [!NOTE]
-        > The **Scope name** must match with the **Application ID URI** with `/access_as_user` appended at the end.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/scopes1.png" alt-text="Scopes":::
-    
-    1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
-
-    1. Select **Add a client application**. 
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-client-application.png" alt-text="Select client application":::
-
-    1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/meeting-token-generator-addclientapp1.png" alt-text="Add client application 1":::
-
-       You can enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/meeting-token-generator-addclientapp2.png" alt-text="Add client application 2":::
-
-    1. Select **Authorized scopes**.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/authorizedscope1.png" alt-text="Add authorozation":::
-
-        The following image displays the client ID:
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/clientapps.png" alt-text="Client applications"::: 
-  
     1. In the left pane, select **API permissions**. 
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-api-permissions.png" alt-text="Select API permissions"::: 
-        
-       > [!NOTE]
-       > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
+      > [!NOTE]
+      > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
 
-    1. Select **Add a permission**.
+    1. Select **+ Add a permission**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/addpermission.png" alt-text="Add permission"::: 
+      :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
 
     1. Select **Microsoft Graph**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/microsoft-graph.png" alt-text="Microsoft Graph"::: 
-
     1. Select **Delegated permissions**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/delegated-permission.png" alt-text="Delegated-permission"::: 
+    1. Select the following permissions:
+        * **OpenId permissions** > **email**, **offline_access**, **openid**, **profile**.
+        * **User** > **User.Read**, **User.ReadBasic.All**
 
-    1. Add the following permissions:
-         * **email**
-         * **offline_access**
-         * **openid**
-         * **profile**
-         * **User.Read**
-         * **User.ReadBasic.All**
+    1. Select **Add permissions**.
 
-    1. Select **Add permissions**.  
+      :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/permissions.png" alt-text="Delegated-permission":::
-
-    1. From the left pane, select **Authentication** to set a redirect URI. 
-
-       > [!NOTE]
-       > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
-               
-         1. Select **Add a platform** > **Web**.
-
-             :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-authentication.png" alt-text="Select Authentication":::
-
-         1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
-            `https://your ngrok/auth-end`. </br>
-
-         1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
-             * **ID tokens**
-             * **Access tokens**
-
-         1. Select **Configure**.
-            
-             :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/authend.png" alt-text="Auth-end":::
+    [!INCLUDE [Azure api permission](includes/get-started/azure-web-authentication.md)]
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
