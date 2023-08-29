@@ -52,7 +52,6 @@ items:
 - title: Set up local environment
   durationInMinutes: 1
   content: | 
-   
    <--![!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]-->
 
    1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
