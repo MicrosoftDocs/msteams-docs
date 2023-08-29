@@ -52,7 +52,7 @@ items:
 - title: Set up local environment
   durationInMinutes: 1
   content: | 
-   <--![!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]-->
+   <!-- [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)] -->
 
    1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
    1. Select **Code**.
@@ -76,7 +76,7 @@ items:
     * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
     * Add messaging endpoint to the dev tunnel that you created.
 
-    <--! [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
+    <!-- [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
 
     [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
 
@@ -94,7 +94,7 @@ items:
 
       ---     
 
-    [!INCLUDE [messaging endpoint](includes/get-started/messaging-endpoint.md)]-->
+    [!INCLUDE [messaging endpoint](includes/get-started/messaging-endpoint.md)] -->
 
     **To create Azure Bot resource**
 
@@ -229,7 +229,7 @@ items:
 - title: Update the Azure AD app registration
   durationInMinutes: 1
   content: | 
-    <--! [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
+    <!-- [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
     [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
 
@@ -237,7 +237,7 @@ items:
 
     [!INCLUDE [API permission](includes/get-started/azure-api-permissions.md)]
    
-    [!INCLUDE [Azure api permission](includes/get-started/azure-web-authentication.md)]-->
+    [!INCLUDE [Azure api permission](includes/get-started/azure-web-authentication.md)] -->
 
     1. Go to the [Azure portal](https://portal.azure.com/).
 
