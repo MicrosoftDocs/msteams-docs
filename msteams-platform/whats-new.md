@@ -342,7 +342,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 August**
 
-* ***August 29, 2023***: [Configure your bot with read receipt events to identify if the message sent by the bot is read by the recipient.](~/bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt)
+* ***August 29, 2023***: [Configure your bot with read receipt events to identify if the recipient has read the message sent by the bot.](~/bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt)
 
 * ***August 28, 2023***: [Teams app manifest is now referred to as app manifest.](resources/schema/manifest-schema-dev-preview.md)
 

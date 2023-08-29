@@ -156,7 +156,7 @@ To receive read receipts for your bot, ensure the following:
 * [Override the method `OnTeamsReadReceiptAsync` with `IsMessageRead` handler.](#override-onteamsreadreceiptasync)
 * [Read receipt admin setting or user setting is turned on for the tenant](#enable-read-receipt-setting-to-receive-events).
 
-The bot is now enabled to receive read receipts. After the bot is enabled in a user to bot chat scenario, when the user reads the bot's message the bot promptly receives a read receipt event. You can track the user engagement with `ReadStatus` property that counts the number of events, and you can also send a context aware message. 
+The bot is now enabled to receive read receipts. After the bot is enabled in a user to bot chat scenario the bot promptly receives a read receipt event when the user reads the bot's message. You can track the user engagement with `ReadStatus` property that counts the number of events, and you can also send a context aware message. 
 
 #### RSC permission for read receipts 
 
@@ -206,7 +206,7 @@ You can also add RSC permissions through Graph API. For more information, see [`
 
 #### Override `OnTeamsReadReceiptAsync`
 
-The `IsMessageRead` helper method is useful to determine if the message has been read. If the `compareMessageId` is less than or equal to the `LastReadMessageId`, then the message has been read. Override the `OnTeamsReadReceiptAsync` method to receive read receipts with [`IsMessageRead`](/dotnet/api/microsoft.bot.schema.teams.readreceiptinfo.ismessageread#microsoft-bot-schema-teams-readreceiptinfo-ismessageread(system-string)) helper method:
+The `IsMessageRead` helper method is useful to determine if the message is read by the recipients. If the `compareMessageId` is less than or equal to the `LastReadMessageId`, then the message has been read. Override the `OnTeamsReadReceiptAsync` method to receive read receipts with [`IsMessageRead`](/dotnet/api/microsoft.bot.schema.teams.readreceiptinfo.ismessageread#microsoft-bot-schema-teams-readreceiptinfo-ismessageread(system-string)) helper method:
 
 ```javascript
 
@@ -251,7 +251,7 @@ Following is an example of read receipts event request that a bot receives:
 
 ### Enable read receipt setting to receive events
 
-Read receipt setting can be enabled or disabled by the tenant admin or the user. To receive a read receipt event by your bot, ensure that the read receipt [admin setting](/microsoftteams/messaging-policies-in-teams#messaging-policy-settings) or [user setting](https://support.microsoft.com/office/use-read-receipts-for-messages-in-microsoft-teams-533f2334-32ef-424b-8d56-ed30e019f856) is turned on for the tenant.
+The tenant admin or the user can enable or disable the read receipt setting. To receive a read receipt event by your bot, ensure that the read receipt [admin setting](/microsoftteams/messaging-policies-in-teams#messaging-policy-settings) or [user setting](https://support.microsoft.com/office/use-read-receipts-for-messages-in-microsoft-teams-533f2334-32ef-424b-8d56-ed30e019f856) is turned on for the tenant.
 
 ## Send a message
 
