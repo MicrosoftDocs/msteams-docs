@@ -143,7 +143,7 @@ You can configure your bot to receive read receipt event through read receipt se
 
 * You can configure your bot to send a follow up message to remind the user to read the message if your app user hasn't read the message in the personal chat.
 
-* You can create a feedback loop using read receipt which enables you to tune your bot’s experience and improve the effectiveness of Teams as a communication platform.
+* You can create a feedback loop using read receipts which enables you to tune your bot’s experience and improve the effectiveness of Teams as a communication platform.
 
 > [!NOTE]
 > * Read receipts are supported only in user to bot chat scenarios.
