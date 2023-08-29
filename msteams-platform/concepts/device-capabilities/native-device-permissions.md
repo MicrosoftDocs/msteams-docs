@@ -1,5 +1,5 @@
 ---
-title: Request device permissions for your Teams app
+title: Request device permissions for your Microsoft Teams app
 author: surbhigupta
 description: How to update your app manifest in order to request access to native features that require user consent, such as scan QR, barcode, image, audio, and video capabilities
 ms.localizationpriority: high
@@ -60,16 +60,7 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 1. Select the app for which you want to customize the settings.
 1. Select your desired settings.
 
-
-     :::row:::
-        :::column:::
-        :::image type="content" source="~/assets/images/tabs/device-permissions-new-one.png" alt-text="Screenshot shows the device permissions." lightbox="~/assets/images/tabs/device-permissions-new-one.png":::
-        :::column-end:::
-        :::column:::
-        :::image type="content" source="~/assets/images/tabs/device-permissions-new-two.png" alt-text="Screenshot shows different apps to select the device permissions." lightbox="~/assets/images/tabs/device-permissions-new-two.png":::
-        :::column-end:::
-    :::row-end:::
-
+    :::image type="content" source="../../assets/images/tabs/device-permissions-new.png" alt-text="Screenshot shows the device permissions." lightbox="~/assets/images/tabs/device-permissions-new.png":::
 ---
 
 ## Specify permissions
