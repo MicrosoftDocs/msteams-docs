@@ -229,7 +229,6 @@ items:
 - title: Update the Azure AD app registration
   durationInMinutes: 1
   content: | 
-    
     <--! [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
     [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
@@ -420,7 +419,6 @@ items:
 - title: Add in-meeting notifications app to Teams
   durationInMinutes: 1
   content: |
-
     1. In your cloned repository, go to **csharp > InMeetingNotifications > Manifest**.
 
     1. Create a .zip file with the following files that are present in the **Manifest** folder: 
