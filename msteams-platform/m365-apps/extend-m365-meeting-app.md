@@ -12,7 +12,7 @@ ms.subservice: m365apps
 
 > [!NOTE]
 >
-> * Outlook support for Teams meeting apps is only available in Outlook for Windows desktop [BetaChannel preview builds](https://insider.microsoft365.com/en-us/join/windows).
+> * While in preview, Outlook support for Teams meeting apps is only available in [Beta Channel builds](https://insider.microsoft365.com/en-us/join/windows) of the Outlook for Windows desktop client.
 
 Across the Microsoft 365 ecosystem, most monthly users schedule their Teams meetings from Outlook. To help users stay in the flow of their work, **Teams meeting apps are now supported (in preview) on Outlook for Windows desktop**. Not only can you configure and add meeting apps to Teams meetings scheduled from Outlook, you can also run meeting apps within the Outlook calendar! Here's how to ensure your Teams meeting app experience works seamlessly when extended to Outlook.
 
@@ -159,7 +159,7 @@ The final step to running your app in Microsoft 365 and Outlook is to sideload y
     teamsfx m365 sideloading --file-path <path\to\appPackage.zip>
     ```
 
-After it's sideloaded to Teams, your meeting app will be available for use in both Teams and Outlook. It may take several minutes to appear in your **Apps** menu in the meeting scheduling UI in both Teams and Outlook clients.
+After it's sideloaded to Teams, your meeting app will be available for use in both Teams and Outlook. It may take several minutes and a restart of the Outlook for Windows desktop client for your app to appear in the **Apps** menu.
 
 ## Preview your meeting app in Outlook
 
@@ -175,7 +175,10 @@ Here's how to preview your meeting app running on Outlook for Windows desktop:
 1. Select your meeting app. This opens its configuration dialog, where your user will configure any relevant app settings for their specific meeting.
 :::image type="content" source="images/outlook-meeting-app-configuration.png" alt-text="Meeting app configuration page showing from Outlook meeting scheduler":::
 
-1. Click **Add** to dismiss the dialog. Your meeting app will display in the side panel of the scheduling window and the **Apps** field will indicate its availability to participants in the meeting. You can expand its entry to return to the app configuration page from **Settings**.
+1. Click **Add** to dismiss the dialog. Your meeting app will display in the side panel of the scheduling window and the **Apps** field will indicate its availability to participants in the meeting. From the **Apps* list, you can open the dropdown menu on your app to see how the app appears in the Store (About), update the app configuration for this meeting (Settings), or remove the app from this meeting (Remove).
+
+App developers can configure the appearance of *Settings* and *Remove* in Outlook, the same as with [other configurable tabs in Teams](../tabs/how-to/create-tab-pages/removal-page.md#enable-your-tab-to-be-reconfigured-after-installation).
+
 :::image type="content" source="images/outlook-meeting-app-side-panel.png" alt-text="Meeting app running in Outlook meeting scheduler side panel":::
 
 1. To uninstall the meeting app (so its no longer available from the *All Apps* menu in Outlook), open Teams and select *Apps* > **Manage your apps**. Select your sideloaded meeting app in the list, and then select **Remove**. You will need to restart Outlook to see the change reflected in the *All Apps* menu from the meeting scheduler.
