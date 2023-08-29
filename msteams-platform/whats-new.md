@@ -26,7 +26,10 @@ Teams platform features that are available to all app developers.
 
 **2023 August**
 
+* ***August 28, 2023***: [Teams app manifest is now referred to as app manifest](resources/schema/manifest-schema.md).
+
 * ***August 16, 2023***: [Use Teams Toolkit Visual Studio v17.7 extension with many new app development features to get started with app development for Teams.](toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md)
+
 * ***August 10, 2023***: [Send a proactive message using AAD ID](bots/how-to/conversations/send-proactive-messages.md).
 
 :::column-end:::
@@ -340,6 +343,8 @@ Developer preview is a public program that provides early access to unreleased T
 **2023 August**
 
 * ***August 29, 2023***: [Configure your bot with read receipts events to identify if the message sent by the bot is read by the recipient.](~/bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt)
+
+* ***August 28, 2023***: [Teams app manifest is now referred to as app manifest](resources/schema/manifest-schema-dev-preview.md)
 
 * ***August 22, 2023***: [Enable RSC permissions for a user using the Graph APIs](graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings).
 
