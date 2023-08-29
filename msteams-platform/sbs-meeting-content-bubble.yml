@@ -44,14 +44,16 @@ items:
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the workloads. Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** |
      | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. Use the latest version or install the portable version. |
-     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
-    
+     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm devDependencies). |
+
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
 - title: Set up local environment
   durationInMinutes: 1
   content: | 
+   
+   <--![!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]-->
 
    1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
    1. Select **Code**.
@@ -72,8 +74,28 @@ items:
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
     * Add Teams channel to deploy the bot.
-    * Use ngrok to create a tunnel to your web server's endpoints.
-    * Add messaging endpoint to the ngrok tunnel you created.
+    * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
+    * Add messaging endpoint to the dev tunnel that you created.
+
+    <--! [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
+
+    [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
+
+    [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
+
+    **Create a tunnel**
+
+      # [dev tunnel](#tab/dev)
+
+      [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+
+      # [ngrok](#tab/ngrok)
+      
+      [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+
+      ---     
+
+    [!INCLUDE [messaging endpoint](includes/get-started/messaging-endpoint.md)]-->
 
     **To create Azure Bot resource**
 
@@ -208,6 +230,16 @@ items:
 - title: Update the Azure AD app registration
   durationInMinutes: 1
   content: | 
+    
+    <--! [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
+
+    [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
+
+    [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
+
+    [!INCLUDE [API permission](includes/get-started/azure-api-permissions.md)]
+   
+    [!INCLUDE [Azure api permission](includes/get-started/azure-web-authentication.md)]-->
 
     1. Go to the [Azure portal](https://portal.azure.com/).
 
@@ -344,7 +376,7 @@ items:
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
-         * Set `"BaseURL"` to the qualified `ngrok` domain name.
+         * Set `"BaseURL"` to the qualified `dev tunnel` domain name.
 
           :::image type="content" source="~/assets/images/meeting-content-bubble/appsettings-json.png" alt-text="Screenshot shows the App settings.":::
 
@@ -357,11 +389,11 @@ items:
     
          * Set `ID` to **Microsoft App ID**.
          * Set `botId` to **Microsoft App ID**.
-         * Set the `id` to `webApplicationInfo`  to **Microsoft App ID**.
+         * Set `webApplicationInfo id` to **Microsoft App ID**.
          * Set `validDomains` to **Web App Domain Name**.
 
           > [!NOTE]
-          > `WebAppDomain` is your ngrok domain.
+          > `WebAppDomain` is your devtunnel (recommend) or ngrok domain.
           > If the ngrok ID ends with `*.ngrok-free.app` valid domain is optional.
 
          :::image type="content" source="~/assets/images/meeting-content-bubble/manifest-file.png" alt-text="Screenshot shows the Manifest cloned repository."lightbox="~/assets/images/meeting-content-bubble/manifest.png":::
