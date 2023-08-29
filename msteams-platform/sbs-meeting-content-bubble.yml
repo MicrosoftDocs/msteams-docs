@@ -52,18 +52,7 @@ items:
 - title: Set up local environment
   durationInMinutes: 1
   content: | 
-   <!-- [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)] -->
-
-   1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
-   1. Select **Code**.
-   1. From the dropdown menu, select **Open with GitHub Desktop**.
-
-      :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-clonerepository_1.png" alt-text="Screenshot shows the Microsoft-Teams Samples Clone repository with Open with GitHub Desktop highlighted in red under Code.":::
-
-   1. Select **Clone**. 
-
-      > [!NOTE]
-      > If you encounter the error **Filename too long** execute the git command `git config --system core.longpaths true` in your administrator terminal of choice.
+   [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
 - title: Create and register your bot 
   durationInMinutes: 5
@@ -76,7 +65,7 @@ items:
     * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
     * Add messaging endpoint to the dev tunnel that you created.
 
-    <!-- [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
+    [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
 
     [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
 
@@ -94,142 +83,12 @@ items:
 
       ---     
 
-    [!INCLUDE [messaging endpoint](includes/get-started/messaging-endpoint.md)] -->
-
-    **To create Azure Bot resource**
-
-    1. Go to the [Azure portal](https://portal.azure.com/).
-    1. Select **Create a resource**.
-    1. In the search box, enter **Azure Bot**.
-    1. Select **Enter**.
-    1. Select **Azure Bot**.
-
-        :::image type="content" source="./assets/images/meeting-content-bubble/azure-bot.png" alt-text="Screenshot of Azure bot with Create option highlighted in red.":::
-
-    1. Select **Create**.
-    1. Enter required bot handle name in **Bot handle**.
-    1. Select your **Subscription** from the dropdown list.
-    1. Select your **Resource group** from the dropdown list.
-     
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-review-plus-create_1.png" alt-text="Screenshot that shows an Azure bot to create with bot handle details.":::
-
-       To create a new resource group, select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
-       
-         :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot of Create resource Azure bot with location highlighted in red.":::
-
-    1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
-    
-       You can also select **Use existing app registration** and enter existing **App ID**, **App tenant ID**, and **MSI resource ID**.
-
-       > [!NOTE]
-       > You can't create more than one bot with the same **Microsoft App ID**.
-
-    1. Select **Type of App** as **Multi Tenant**.
-
-    1. Select **Review + create**.
-
-        :::image type="content" source="~/assets/images/meeting-content-bubble/Review-create-id.png" alt-text="Screenshot shows the create resource Azure bot with Type of App and Review plus Create option highlighted in red.":::
-
-    1. If the validation passes, select **Create**.
-
-        It takes a few moments for your bot service to be provisioned.
-
-    1. Select **Go to resource**. 
-
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-bot-deployment.png" alt-text="Screenshot shows the deployment with Go to resource option highlighted in red.":::
-        
-        Your Azure bot is created.
-
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-creating-resourcegroup.png" alt-text="Screenshot shows the Azure bot resource created.":::
-
-    **To create client secret**
-
-      Perform the following steps if you've created a new **Microsoft App ID**:
-
-    1. In the left pane, select **Configuration**. 
-
-       > [!TIP]
-       > Save the **Microsoft App ID** or **Client ID** for future reference.      
-
-    1. Next to **Microsoft App ID**, select **Manage Password**.
-
-       :::image type="content" source="~/assets/images/meeting-content-bubble/manage-bot-label.png" alt-text="Screenshot shows the configuration with Manage option highlighted in red.":::
-
-    1. In the **Client secrets** section, select **New client secret**. 
-
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-new-client-secret.png" alt-text="Screenshot shows the configuration with New client secret option highlighted in red.":::
-        
-       The **Add a client secret** window appears.  
-
-    1. Enter **Description**.
-    
-    1. Select **Add**.
-
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-clientsecret-description.png" alt-text="Screenshot that shows the client to enter the Description and Add option highlighted in red.":::
-
-    1. In the **Value** column, select **Copy to clipboard**.
-
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-client-secret-value.png" alt-text="Screenshot shows the Value of client secret with copy option highlighted in red.":::
-       
-       > [!TIP]
-       > Save the **Client secrets** value or app password for future reference.
-
-    **To add the Teams channel**
-
-    1. Select **Home**.
-
-    1. Select your bot from **Recent resources**.
-
-    1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
-
-        :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Screenshot shows the Channels with Microsoft Teams highlighted in red.":::
-
-    1. Select the checkbox to accept the **Terms of Service**.
-    
-    1. Select **Agree**.
-
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-terms-service.png" alt-text="Screenshot shows the Terms of service with Agree option highlighted in red.":::
-
-    1. Select **Apply**.
-    
-    **To create a ngrok tunnel**
-
-    Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
-
-     ```bash
-     ngrok http --host-header=localhost 3978
-     ```
-
-     > [!NOTE]
-     > If you choose **Command line** to run your app, while creating ngrok tunnel, use `localhost 5000` instead of `3978`.
-     
-     > [!TIP]
-     > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
-    
-    
-    **To add messaging endpoint**
-
-    1. From ngrok, copy the HTTPS URL.
-
-       :::image type="content" source="../msteams-platform/assets/images/meeting-content-bubble/ngrok-url.png" alt-text="Screenshot shows the ngrok with HTTPS URL highlighted in red.":::
-
-        > [!NOTE]
-        > Your ngrok's HTTPS URL is your qualified domain name. The WebAppDomain is also a qualified domain name, but it doesn't include "https://" in it.
-
-    1. Go to the Azure bot you've created in Azure portal. In the left pane, under **Settings**, select **Configuration**
-
-    1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
-
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-configuration-messaging.png" alt-text="Screenshot shows the configuration with Messaging Endpoint highlighted in red.":::
-
-    1. Select **Apply**.
-
-        You have successfully set up a bot in Azure Bot Service.
+    [!INCLUDE [messaging endpoint](includes/get-started/messaging-endpoint.md)]
 
 - title: Update the Azure AD app registration
   durationInMinutes: 1
   content: | 
-    <!-- [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
+    [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
     [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
 
@@ -237,131 +96,7 @@ items:
 
     [!INCLUDE [API permission](includes/get-started/azure-api-permissions.md)]
    
-    [!INCLUDE [Azure api permission](includes/get-started/azure-web-authentication.md)] -->
-
-    1. Go to the [Azure portal](https://portal.azure.com/).
-
-    1. Select **Azure Active Directory**.
-
-    1. In the left pane, select **App Registrations**.
-
-    1. Select your bot.
-
-    1. Under **Manage**, select **Expose an API**.
-
-    1. Select **Add**.
-
-    1. Use the `api://your ngrok/botid-{AppID}` format for the **Application ID URI**. 
-
-    1. Update the **Application ID URI** and select **Save**.
-
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-set-api_1.png" alt-text="Screenshot shows the Save option highlighted in red.":::
-
-       The following image shows the domain name:
-        
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-exposeapi_1.png" alt-text="Screenshot shows the Expose an API showing application ID URI.":::
-
-        > [!NOTE]
-        > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
-        > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
-
-    1. Select **Add a scope**. 
-
-        :::image type="content" source="~/assets/images/meetings-side-panel/selectscope_1.png" alt-text="Screenshot that shows the Add a scope highlighted in red.":::
-            
-    1. Enter **access_as_user** as the **Scope name**.
-  
-    1. Set **Who can consent?** to **Admins and users**.
-  
-    1. To configure the admin and user consent prompts with appropriate values for **access_as_user** scope, provide the following information in the fields:
-    
-         * Enter **Teams can access the user’s profile** as **Admin consent display name**.
-
-         * Enter **Allows Teams to call the app’s web APIs as the current user** as **Admin consent description**.
-
-         * Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**.
-
-         * Enter **Enable Teams to call this app’s APIs with the same rights as the user** as **User consent description**.
-    
-    1. Ensure that **State** is set to **Enabled**.
-  
-    1. Select **Add scope** to save.
-  
-       The following image shows the fields and the values:
-
-          :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-access-user-add-scope.png" alt-text="Screenshot that shows the Add scope highlighted in red.":::
-
-
-       > [!NOTE]
-       > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.
-           `api://****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
-  
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-add-scope_1.png" alt-text="Screenshot that shows the application ID URI highlighted in red.":::
-
-    1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
-
-    1. Select **Add a client application**. 
-
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-select-client-app.png" alt-text="Screenshot shows the Authorized client application with Add a client application.":::
-
-    1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
-
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-addclientapp-mobile.png" alt-text="Screenshot that shows the client ID for mobile or desktop.":::
-
-       You can enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
-
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-addclientapp-web.png" alt-text="Screenshot that shows the client ID for web.":::
-
-    1. Select **Authorized scopes**.
-
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-authorized-scopes.png" alt-text="Screenshot shows the Authorized scopes.":::
-
-       The following image displays the Client ID:
-
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-client-applications.png" alt-text="Screenshot shows the Client IDs":::
-
-    1. In the left pane, select **API permissions**. 
-
-       > [!NOTE]
-       > Users need to consent to these permissions only if the Azure AD app is registered with a different tenant.
-
-    1. Select **Add a permission**.
-
-        :::image type="content" source="~/assets/images/meeting-content-bubble/add-permission.png" alt-text="Screenshot that shows the Add a permission highlighted in red.":::
-
-    1. Select **Microsoft Graph**.
-
-    1. Select **Delegated permissions**.
-
-    1. Add the following permissions:
-         * **email**
-         * **offline_access**
-         * **openid**
-         * **profile**
-         * **User.Read**
-
-    1. Select **Add permissions**.
-
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-otherpermissions.png" alt-text="Screenshot shows the Add permissions":::
-
-    1. From the left pane, select **Authentication** to set a redirect URI. 
-
-       > [!NOTE]
-       > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
-               
-         1. Select **Add a platform** > **Web**.
-
-             :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-add-platform-web.png" alt-text="Screenshot shows the authentication with Add  a platform and Web highlighted in red.":::
-
-         1. Enter the redirect URI for your app by appending `auth-end` to qualified domain name: `https://your ngrok/auth-end`.
-
-         1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
-             * **ID tokens**
-             * **Access tokens**
-   
-         1. Select **Configure**.
-
-             :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-configure-web.png" alt-text="Screenshot that shows the configuration with URI and access tokens highlighted in red.":::
+    [!INCLUDE [Azure api permission](includes/get-started/azure-web-authentication.md)]
 
 - title: Set up app settings
   durationInMinutes: 1
@@ -391,7 +126,7 @@ items:
          * Set `validDomains` to **Web App Domain Name**.
 
           > [!NOTE]
-          > `WebAppDomain` is your devtunnel (recommend) or ngrok domain.
+          > `WebAppDomain` is your devtunnel or ngrok domain.
           > If the ngrok ID ends with `*.ngrok-free.app` valid domain is optional.
 
          :::image type="content" source="~/assets/images/meeting-content-bubble/manifest-file.png" alt-text="Screenshot shows the Manifest cloned repository."lightbox="~/assets/images/meeting-content-bubble/manifest.png":::
