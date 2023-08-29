@@ -224,7 +224,7 @@ To view your app running in Outlook for Android app:
 1. Select the **More** icon. Your sideloaded app appears among installed apps.
 1. Select your app icon to open your app in Outlook for Android.
 
-    :::image type="content" source="images/outlook-mobile-more.png" alt-text="Screenshot shows the More option on the side bar of the Outlook app to see your installed personal tabs in Android.":::
+    :::image type="content" source="images/outlook-mobile-android-more.png" alt-text="Screenshot shows the More option on the side bar of the Outlook app to see your installed personal tabs in Android.":::
 
 ### Outlook app for iOS
 
