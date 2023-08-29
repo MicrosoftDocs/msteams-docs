@@ -88,7 +88,9 @@ items:
 - title: Configure SSO for your tab 
   durationInMinutes: 1
   content: | 
-    
+
+   To configure SSO for your tab:
+
    [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
    [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
    [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
