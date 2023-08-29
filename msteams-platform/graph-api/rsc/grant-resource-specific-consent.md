@@ -512,3 +512,4 @@ For more information on how to get details of the apps installed for the user, s
 * [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true)
 * [List permissionGrants of a user](/graph/api/user-list-permissiongrants?view=graph-rest-beta&preserve-view=true)
 * [Send notification to a user](/graph/api/userteamwork-sendactivitynotification?view=graph-rest-beta&tabs=http&preserve-view=true)
+* [Messages in bot conversations](~/bots/how-to/conversations/conversation-messages.md)

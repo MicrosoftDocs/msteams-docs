@@ -139,9 +139,9 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## Receive a read receipt
 
-In Teams users can verify if the recipients in a chat have read the message through the read receipt settings. You can also configure your bot to receive read receipts through read receipt settings. This can help you enhance the user experience in the following ways:
+You can configure your bot to receive read receipt event through read receipt settings. This can help you enhance the user experience in the following ways:
 
-* If your app user hasn't read the message in the personal chat, then you can configure your bot to send a follow up message to remind the user to read the message. 
+* You can configure your bot to send a follow up message to remind the user to read the message if your app user hasn't read the message in the personal chat.
 
 * You can create a feedback loop using read receipt which enables you to tune your bot’s experience and improve the effectiveness of Teams as a communication platform.
 
@@ -154,28 +154,13 @@ To receive read receipts for your bot, ensure the following:
 
 * [RSC permission `ChatMessageReadReceipt.Read.Chat` is added to your app manifest.](#rsc-permission-for-read-receipts)
 * [Override the method `OnTeamsReadReceiptAsync` with `IsMessageRead` handler.](#override-onteamsreadreceiptasync)
-* Read receipt [admin setting](/microsoftteams/messaging-policies-in-teams#messaging-policy-settings) or [user setting](https://support.microsoft.com/office/use-read-receipts-for-messages-in-microsoft-teams-533f2334-32ef-424b-8d56-ed30e019f856) is turned on for the tenant.
+* [Read receipt admin setting or user setting is turned on for the tenant](#read-receipt-setting).
 
 The bot is now enabled to receive read receipts. After the bot is enabled in a user to bot chat scenario, when the user reads the bot's message the bot promptly receives a read receipt event. You can track the user engagement with `ReadStatus` property that counts the number of events, and you can also send a context aware message. 
 
 #### RSC permission for read receipts 
 
 Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) `ChatMessageReadReceipt.Read.Chat` permission in the [app manifest](~/resources/schema/manifest-schema.md), as follows: 
-
-# [App manifest v1.11 or earlier](#tab/app-manifest-v111-or-earlier)
-
-```json
-
- “webApplicationInfo”: {
-
-     "id": "123456c8-67d2-4f54-b74e-408b195c4cbc",
-     "resource": "https: //AnyString",
-     "applicationPermissions": [
-         "ChatMessageReadReceipt.Read.Chat"
-     ]
- },
-
-```
 
 # [App manifest v1.12 or later](#tab/app-manifest-v112-or-later)
 
@@ -199,6 +184,22 @@ Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a
 }
 
 ```
+
+# [App manifest v1.11 or earlier](#tab/app-manifest-v111-or-earlier)
+
+```json
+
+ “webApplicationInfo”: {
+
+     "id": "123456c8-67d2-4f54-b74e-408b195c4cbc",
+     "resource": "https: //AnyString",
+     "applicationPermissions": [
+         "ChatMessageReadReceipt.Read.Chat"
+     ]
+ },
+
+```
+
 ---
 
 You can also add RSC permissions through Graph API. For more information, see [`consentedPermissionSet`](/graph/api/userteamwork-teamsappinstallation-upgrade#http-request).
@@ -248,7 +249,9 @@ Following is an example of read receipts event request that a bot receives:
 
 ```
 
+### Read receipt setting
 
+Read receipt setting can be enabled or disabled by the tenant admin or the user. To receive read receipt event by your bot ensure that the read receipt [admin setting](/microsoftteams/messaging-policies-in-teams#messaging-policy-settings) or [user setting](https://support.microsoft.com/office/use-read-receipts-for-messages-in-microsoft-teams-533f2334-32ef-424b-8d56-ed30e019f856) is turned on for the tenant.
 
 ## Send a message
 
