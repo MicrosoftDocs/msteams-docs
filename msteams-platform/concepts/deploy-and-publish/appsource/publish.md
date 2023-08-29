@@ -129,7 +129,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
       1. Your app is linked to a live (already published) SaaS offer on AppSource with at least one plan with pricing information.
 
-      1. You've correctly mentioned the `subscriptionOffer` details in your [app manifest](../../../resources/schema/manifest-schema.md#subscriptionoffer) in the format `publisherId.offerId`.
+      1. You've correctly mentioned the `subscriptionOffer` details in your [app manifest](../../../resources/schema/manifest-schema.md#subscriptionoffer) (previously called Teams app manifest) in the format `publisherId.offerId`.
 
       1. You must ensure your linked SaaS offer is designed to support licenses assigned on a [SaaS pricing model](/azure/marketplace/create-new-saas-offer-plans).
 
@@ -159,7 +159,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
 After an app is published to the Teams store, users can find apps by going to the **Apps** icon from the left pane in Teams. Users can use the search box in the upper left corner or browse by category to see if a particular app or program has a version for Teams.
 
-Teams provides intelligent search experience by matching the user input to the fields provided by the developer across appName, publisher name, short description, long description, specific keywords and category names in the app manifest or Partner Center. The search results display apps that are closest match to the user's specified characters.
+Teams provides intelligent search experience by matching the user input to the fields provided by the developer across appName, publisher name, short description, long description, specific keywords and category names in app manifest or Partner Center. The search results display apps that are closest match to the user's specified characters.
 
 ## Training module
 
