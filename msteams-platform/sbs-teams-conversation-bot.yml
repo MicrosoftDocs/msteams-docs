@@ -26,7 +26,7 @@ items:
  
     This step-by-step guide helps you to create a conversation bot in the Teams application. You can see the following output:
 
-    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Final output."lightbox="assets/images/conversation-bot/final-output.png":::
+    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Screenshot shows the final output."lightbox="assets/images/conversation-bot/final-output.png":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -76,7 +76,7 @@ items:
        **Request API permissions** window appears.
     1. Select **Microsoft APIs** > **Microsoft Graph**.
 
-       :::image type="content" source="./assets/images/conversation-bot/api-permissions_1.png" alt-text="Add API permissions."lightbox="assets/images/conversation-bot/api-permissions_1.png":::
+       :::image type="content" source="./assets/images/conversation-bot/api-permissions-1.png" alt-text="Screenshot shows the Add API permissions."lightbox="assets/images/conversation-bot/api-permissions_1.png":::
 
     1. Select **Application permissions**.
 
@@ -84,7 +84,7 @@ items:
     
     1. Select **Add permissions**.
 
-       :::image type="content" source="./assets/images/conversation-bot/api-permissions_3.png" alt-text="Add API permissions."lightbox="assets/images/conversation-bot/api-permissions.png":::
+       :::image type="content" source="./assets/images/conversation-bot/api-permissions-3.png" alt-text="Screenshot shows the Add API permissions."lightbox="assets/images/conversation-bot/api-permissions.png":::
 
     **To add messaging endpoint**
 
@@ -121,7 +121,7 @@ items:
    
         * Set `"MicrosoftAppType"`to **Multitenant**.
         * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-        * Set `"MicrosoftAppPassword"` to your bot's client secret ID **Value**.
+        * Set `"MicrosoftAppPassword"` to your bot's client secret ID4 **Value**.
         * Set your `"MicrosoftAppTenantId"` to your tenant ID. You can obtain the tenant ID from the link of the account used to sign in to the Teams. 
           Following are the steps to get the link for **tenantId**:
         
@@ -131,17 +131,17 @@ items:
 
           1. Select **Get link to team**.
 
-             :::image type="content" source="./assets/images/conversation-bot/teams-link-new_1.png" alt-text="Tenant ID path in Teams.":::
+             :::image type="content" source="./assets/images/conversation-bot/teams-link-new-1.png" alt-text="Screenshot shows the Tenant ID path in Teams.":::
             
           1. Select **Copy**.
 
-             :::image type="content" source="./assets/images/conversation-bot/tenant-id.png" alt-text="Copy Teams link.":::
+             :::image type="content" source="./assets/images/conversation-bot/tenant-id.png" alt-text="Screenshot shows the Copy Teams link.":::
 
           1. Copy the **tenant ID** from the URL.
 
-             :::image type="content" source="./assets/images/conversation-bot/url-tenantid_1.png" alt-text="TenantID.":::
+             :::image type="content" source="./assets/images/conversation-bot/url-tenantid-1.png" alt-text="Screenshot shows the TenantID.":::
 
-        :::image type="content" source="./assets/images/conversation-bot/appsettings_1.png" alt-text="Appsettings Json.":::
+      :::image type="content" source="./assets/images/conversation-bot/appsettings-1.png" alt-text="Screenshot shows the Appsettings Json.":::
 
     1. Select **Save**.
 
@@ -149,13 +149,13 @@ items:
 
     1. In the **File Explorer**, go to **Microsoft-Teams-Samples** > **samples** > **bot-conversation** > **csharp** > **TeamsAppManifest**.
     
-       :::image type="content" source="./assets/images/conversation-bot/manifest-file-location.png" alt-text="Manifest.":::
+       :::image type="content" source="./assets/images/conversation-bot/manifest-file-location.png" alt-text="Screenshot shows the Manifest.":::
 
     1. Open the **manifest.json** file in Visual Studio and make the following changes:
        * Replace `"id"`and `"botId"` to your bot's **Microsoft App ID**.
        * Replace `"validDomains"` to your ngrok domain excluding `https://`.
 
-        :::image type="content" source="./assets/images/conversation-bot/manifest_1.png" alt-text="Manifest.":::
+        :::image type="content" source="./assets/images/conversation-bot/manifest1.png" alt-text="Screenshot shows the Manifest.":::
 
     1. Zip the contents of the **TeamsAppManifest** folder to create manifest.zip.
     
@@ -175,17 +175,17 @@ items:
 
     1. Select **TeamsConversationBot.c#proj** file.
 
-        :::image type="content" source="./assets/images/conversation-bot/project-file-location.png" alt-text="Visual Studio debug.":::
+        :::image type="content" source="./assets/images/conversation-bot/project-file-location.png" alt-text="Screenshot shows the Visual Studio debug.":::
 
     1. Select **F5** to run the project.
 
     1. Select **Yes** to install the certificate.
 
-       :::image type="content" source="./assets/images/conversation-bot/certificate.png" alt-text="Trust Certificate.":::
+       :::image type="content" source="./assets/images/conversation-bot/certificate.png" alt-text="Screenshot shows the Trust Certificate.":::
     
        A webpage appears with a message **Your bot is ready!**
 
-       :::image type="content" source="./assets/images/conversation-bot/bot.png" alt-text="Bot ready screen.":::
+       :::image type="content" source="./assets/images/conversation-bot/bot.png" alt-text="Screenshot shows the Bot ready screen.":::
 
     **To upload the app to Teams**
 
@@ -204,11 +204,11 @@ items:
   
     1. Select **Open** to upload the .zip file that you created in the **TeamAppManifest** folder.
     
-        :::image type="content" source="./assets/images/conversation-bot/upload-manifest-zip.png" alt-text="Manifest upload in Teams.":::
+        :::image type="content" source="./assets/images/conversation-bot/upload-manifest-zip.png" alt-text="Screenshot shows the Manifest upload in Teams.":::
 
     1. Select **Add**.
 
-       :::image type="content" source="./assets/images/conversation-bot/add-app-teams.png" alt-text="Add App to Teams.":::
+       :::image type="content" source="./assets/images/conversation-bot/add-app-teams.png" alt-text="Screenshot shows the Add App to Teams.":::
 
         You can interact with the bot.
 
@@ -221,25 +221,26 @@ items:
        * **MentionMe**
        * **Show Welcome**
        * **MessageAllMembers**
+       * **MessageAllMembersUsingAadId
 
-    :::image type="content" source="./assets/images/conversation-bot/suggestions_1.png" alt-text="Suggestions card.":::
+    :::image type="content" source="./assets/images/conversation-bot/suggestions1.png" alt-text="Screenshot shows the Suggestions card.":::
 
     | MentionMe    | Show Welcome   | MessageAllMembers |
     | --- | --- | --- |
-    | :::image type="content" source="./assets/images/conversation-bot/mentionme-new.png" alt-text="Mentionme card"lightbox="assets/images/conversation-bot/mentionme-new.png"::: | :::image type="content" source="./assets/images/conversation-bot/show-welcome-new.png" alt-text="Show Welcome card"lightbox="assets/images/conversation-bot/show-welcome-new.png"::: | :::image type="content" source="./assets/images/conversation-bot/message-all-members-new.png" alt-text="MessageAllMembers card"lightbox="assets/images/conversation-bot/message-all-members-new.png"::: |
+    | :::image type="content" source="./assets/images/conversation-bot/mentionme-new.png" alt-text="Screenshot shows the Mentionme card."lightbox="assets/images/conversation-bot/mentionme-new.png"::: | :::image type="content" source="./assets/images/conversation-bot/show-welcome-new.png" alt-text="Screenshot shows the Welcome card."lightbox="assets/images/conversation-bot/show-welcome-new.png"::: | :::image type="content" source="./assets/images/conversation-bot/message-all-members-new.png" alt-text="Screenshot shows the MessageAllMembers card."lightbox="assets/images/conversation-bot/message-all-members-new.png"::: |
     | **Result:** The bot responds to the message and mention the user. | **Result:** The bot sends the welcome card for you to interact with. |  **Result:** The bot sends a one-on-one message to each member in the current conversation. |
     | **Valid scopes:** personal, group chat, team chat. | **Valid scopes:** personal, group chat, team chat. |  **Valid scopes:** personal, group chat, team chat. |
 
     You can select an option from the command list by typing **@TeamsConversationBot** or **What can I do?** text in the compose area and send it.
 
-    :::image type="content" source="./assets/images/conversation-bot/final-output_1.png" alt-text="Final output":::
+    :::image type="content" source="./assets/images/conversation-bot/final-output-1.png" alt-text="Screenshot shows the Final output.":::
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Final output.":::
+    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Screenshot shows the Final output.":::
     
 - content: |
     You've completed the tutorial to get started with conversation bot for Microsoft Teams.
