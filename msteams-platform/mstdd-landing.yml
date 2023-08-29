@@ -101,7 +101,7 @@ landingContent:
  
     - linkListType: whats-new
       links:
-      - text: Configure your bot with read receipts events to identify if the message sent by the bot is read by the recipient.
+      - text: Receive read receipt event for your bot (Developer preview)
         url:  bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt
       - text: Plan your app growth in Teams
         url:  concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md

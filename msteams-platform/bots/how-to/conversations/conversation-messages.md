@@ -249,7 +249,7 @@ Following is an example of read receipts event request that a bot receives:
 
 ```
 
-### Read receipt setting
+### Enable read receipt setting to receive events
 
 Read receipt setting can be enabled or disabled by the tenant admin or the user. To receive read receipt event by your bot ensure that the read receipt [admin setting](/microsoftteams/messaging-policies-in-teams#messaging-policy-settings) or [user setting](https://support.microsoft.com/office/use-read-receipts-for-messages-in-microsoft-teams-533f2334-32ef-424b-8d56-ed30e019f856) is turned on for the tenant.
 
