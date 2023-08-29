@@ -5,7 +5,7 @@
    > [!NOTE]
    > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
 
-1. Select **Add a permission**.
+1. Select **+ Add a permission**.
 
    :::image type="content" source="../../assets/images/include-files/add-permission.png" alt-text="Screenshot show the option to select Add permission.":::
 
