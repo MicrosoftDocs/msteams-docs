@@ -682,7 +682,7 @@
         href: bots/how-to/authentication/bot-sso-register-aad.md
       - name: Add code to enable SSO
         href: bots/how-to/authentication/bot-sso-code.md
-      - name: Update manifest for SSO and preview app
+      - name: Update app manifest for SSO and preview app
         href: bots/how-to/authentication/bot-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: bots/how-to/authentication/bot-sso-graph-api.md
@@ -928,14 +928,14 @@
         displayName: TAM, PQL, metrics, success, ROI
 - name: App manifest
   items:
-    - name: App manifest schema for Teams
+    - name: App manifest schema
       href: resources/schema/manifest-schema.md
       displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
     - name: Public developer preview
       items:
         - name: Overview
           href: resources/dev-preview/developer-preview-intro.md          
-        - name: Public developer preview manifest schema for Teams
+        - name: Public developer preview app manifest schema
           href: resources/schema/manifest-schema-dev-preview.md
           displayName: properties
 - name: Integrate with Teams
