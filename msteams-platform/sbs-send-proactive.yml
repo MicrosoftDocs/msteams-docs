@@ -2,7 +2,7 @@
 title: Send Proactive Messages
 metadata:
   title: Send Proactive Messages
-  description: In this article, you'll learn how to send proactive messages, such as welcome messages, scheduled messages, and notifications from a bot.
+  description: In this module, learn how to send proactive messages, such as welcome messages, scheduled messages, and notifications from a bot.
   audience: Developer
   level: Beginner
   ms.date: 06/23/2021
@@ -70,10 +70,7 @@ items:
         <br>
 
         </details>
-        
-    1. Unzip to install ngrok.
-       * Windows: Double-click `ngrok.zip`.
-       * Linux or OS X: Unzip ngrok from the terminal and run the `unzip /path/to/ngrok.zip` command.
+
     1. Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
         ```bash
@@ -91,8 +88,39 @@ items:
         1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
         1. In the left pane, select **Show All**.
         1. Select **Teams**.
+ 
+           :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-admincenter-1.png" alt-text="Screenshot of Admin centers with Teams option highlighted in red.":::
+
+    1.  In the left pane, select **Teams apps**.
+       
+    1.  Select **Setup policies**.
+ 
+           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies-1.png" alt-text="Screenshot of Microsoft Teams admin center with Teams apps and Setup policies highlighted in red.":::
+   
+    1.  Select **Global (Org-wide default)**.
+
+          :::image type="content" source="~/assets/images/sbs-connector/Global-1.png" alt-text="Screenshot of App setup policies with Global Org-wide default highlighted in red.":::
+
+    1.   Turn on the **Upload custom apps** toggle.
+
+          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-toggle-on-connectors.png" alt-text="Screenshot of Global Org-wide default with Upload custom apps showing the toggle button on and highlighted in red.":::
+   
+    1.   Select **Save**.
+       
+          Your test tenant can now permit custom app sideloading.
+
+          > [!TIP]
+          > The sideloading takes some time to become active.
+
+    1.   Go to **Microsoft Teams**.
     
-           :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-admincenter_1.png" alt-text="Screenshot shows the Admin centers menu with Teams highlighted in red." border="true":::
+    1.   From the upper-right corner of your Teams, select **...**.
+    
+    1.   Select **About** > **Developer preview**.
+
+          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-devpreview-1.png" alt-text="Screenshot shows the dropdown list with About and Developer preview highlighted in red.":::
+   
+    1.   Select **Switch to developer preview**.
 
 - title: Create and install Teams app
   durationInMinutes: 5
