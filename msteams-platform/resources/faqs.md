@@ -21,9 +21,9 @@ Each Moodle course must have at least one faculty and one student matched to a M
 
 Each team course instance must have an owner, and the synchronization sets the faculty as the owner, with assumption that the faculty has Teams license.
 
-<br>
-
 </details>
+
+<br>
 
 <details>
 
@@ -34,9 +34,9 @@ The users have multiple sign in options from the Moodle login page.
 * To sign in exclusively using Microsoft 365 credentials, enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled, user can see the Microsoft sign in page.
 * To sign in manually to the Moodle portal, see [Moodle](https://moodle.org/login/index.php).
 
-<br>
-
 </details>
+
+<br>
 
 <details>
 
@@ -53,9 +53,9 @@ The following image shows user creation restrictions options:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure ad":::
 
-<br>
-
 </details>
+
+<br>
 
 <details>
 
@@ -73,9 +73,9 @@ The following image shows synchronization of courses:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-5.png" alt-text="synchronization":::
 
-<br>
-
 </details>
+
+<br>
 
 <details>
 
@@ -92,9 +92,10 @@ The following table provides the actions and dependencies to be performed and ch
 | Full sync| Verify that **Perform a full sync each run** is enabled, and review the **Task Logs** for **Sync users with Azure AD**.| For more information, see [Enable full sync](https://docs.moodle.org/311/en/local_o365)</br>For more information, see [Check task logs](https://docs.moodle.org/311/en/local_o365#Sync_users_with_Azure_AD). |
 |Token refresh|Clean the **User sync delta token** in the local_o365 plugin.| For more information, see, [Token refresh](https://docs.moodle.org/38/en/Office365).|
 <!-- |Token refresh|Clean the **User sync delta token** in the local_o365 plugin| {moodle_url}\local_o365\acp.php?Mode=maintenance_cleandeltatoken| -->
-<br>
 
 </details>
+
+<br>
 
 <details>
 
@@ -107,9 +108,9 @@ The reason for inconsistencies with users being able unable to sign using their 
 * Clean up the **Token Issue** and retry.
 * Check if the users have **Permissions** to access the Azure application.
 
-<br>
-
 </details>
+
+<br>
 
 <details>
 
@@ -127,9 +128,9 @@ The following image shows the error in Azure portal:
 
 If the **Client secret** has expired, then user needs to generate a new **Client secret**, and update the configuration found on page. Users can sign in again after the **Client secret** has been updated, which can take up to 24 hours to re-provision.
 
-<br>
-
 </details>
+
+<br>
 
 <details>
 
@@ -141,9 +142,9 @@ The following image shows the teams instance:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-8.png" alt-text="teams instance":::
 
-<br>
-
 </details>
+
+<br>
 
 <details>
 
@@ -164,9 +165,10 @@ For more information on editing Atto toolbar, see:
 
 * [Atto editor-ModdleDocs](https://docs.moodle.org/311/en/Atto_editor)
 * [Atto editor-Icon mapping](https://docs.moodle.org/311/en/Atto_editor#:~:text=in%20the%20editor.-,Atto%20editor%20toolbar,-Atto%20Row%201)
-<br>
 
 </details>
+
+<br>
 
 <details>
 
@@ -176,9 +178,9 @@ The meetings scheduled through the app don't appear in the scheduler’s Outlook
 
 However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars. The standard timelines are based on the date the user specifies when the meeting is created. For more information, see [Limits and specifications for Teams](/microsoftteams/limits-specifications-teams).
 
-<br>
-
 </details>
+
+<br>
 
 <details>
 
