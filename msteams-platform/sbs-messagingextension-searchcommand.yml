@@ -98,7 +98,7 @@ items:
   content: |
     1. Go to the **appsettings.json** file in the cloned repository.
 
-        :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/appsettingslocation_1.png" alt-text="Screenshot of cloned repository with the file path and appsettings JSON file highlighted in red.":::
+        :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/appsettings-location.png" alt-text="Screenshot of cloned repository with the file path and appsettings JSON file highlighted in red.":::
     
     1. Open the **appsettings.json** file and update the following information:  
 
@@ -112,7 +112,7 @@ items:
 
     1. Go to the **manifest.json** file in the cloned repository.
 
-        :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/manifestlocation_1.png" alt-text="Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red.":::
+        :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/manifest-json-location.png" alt-text="Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red.":::
 
     1. Open the **manifest.json** file and make the following changes:
 
@@ -134,9 +134,9 @@ items:
     
           :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/VS-open-file_1.png" alt-text="Screenshot of Visual Studio with the File, Open, and Project/Solution highlighted in red.":::
 
-       1. From **msgext-search** > **csharp** folder, select **TeamsMessagingExtensionsSearch.csproj** file.
+       1. Open the **TeamsMessagingExtensionsSearch.csproj** file in Visual Studio.
 
-          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/fileready_1.png" alt-text="Screenshot of cloned repository with the TeamsMessagingExtensionsSearch.csproj highlighted in red.":::
+          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/file-ready.png" alt-text="Screenshot of cloned repository with the TeamsMessagingExtensionsSearch.csproj highlighted in red.":::
 
        1. Open **Solution Explorer** from **View**.
 
@@ -179,7 +179,7 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/zipfile_1.png" alt-text="Screenshot of cloned repository with the Search Command zip file highlighted in red."::: 
+       :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/zip-file.png" alt-text="Screenshot of cloned repository with the Search Command zip file highlighted in red."::: 
 
     1. In the Teams client, select the **Apps** icon.
 
