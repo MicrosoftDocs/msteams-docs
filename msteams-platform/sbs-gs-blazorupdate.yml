@@ -384,13 +384,17 @@ items:
 
     To build and run your app locally:
 
-    # [ngrok](#tab/ngrok)
-    
-    [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel)]
+    **Create a tunnel**
 
-    # [dev-tunnel](#tab/devtunnel)
+      # [dev tunnel](#tab/dev)
 
-    [!INCLUDE [Tunnel](includes/get-started/dev-tunnel)]
+      [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+
+      # [ngrok](#tab/ngrok)
+      
+      [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+
+      ---     
 
     1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
