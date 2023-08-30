@@ -96,7 +96,7 @@ items:
 
     [!INCLUDE [API permission](includes/get-started/azure-api-permissions.md)]
    
-    [!INCLUDE [Azure api permission](includes/get-started/azure-web-authentication.md)]
+    [!INCLUDE [Azure Authentication](includes/get-started/azure-web-authentication.md)]
 
 - title: Set up app settings
   durationInMinutes: 1
