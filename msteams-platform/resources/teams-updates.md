@@ -24,7 +24,7 @@ You can use the following property to identify your app usage in the new Teams o
 > [!NOTE]
 > If hostName isn't defined, then assume that your app is running in the Classic Teams client.
 
-The new Teams or Classic Teams client are represented using the `teams` and `teamsModern` fields, respectively.
+The Classic Teams client is represented using the `teams` field and the new Teams client is represented using the `teamsModern` field.
 
 ## Timelines and rollout
 
