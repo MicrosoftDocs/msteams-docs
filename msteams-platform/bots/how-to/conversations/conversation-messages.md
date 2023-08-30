@@ -594,7 +594,8 @@ The following illustrates an example of suggested actions:
 
 > [!NOTE]
 >
-> * `SuggestedActions` are only supported for one-on-one chat bots and text based messages and not for Adaptive Cards or attachments.
+> * `SuggestedActions` are only supported for one-on-one chat bots with both text based messages and Adaptive Cards.
+> * `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
 > * `imBack` is the only supported action type and Teams display up to three suggested actions.
 
 ## Teams channel data
@@ -616,9 +617,9 @@ A typical `channelData` object in an activity sent to your bot contains the foll
 * `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
 * `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
 
-### Example channelData object (channelCreated event)
+### Example channelData object
 
-The following code shows an example of channelData object:
+The following code shows an example of channelData object (channelCreated event):
 
 ```json
 "channelData": {
