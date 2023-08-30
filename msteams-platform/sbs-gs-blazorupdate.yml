@@ -265,7 +265,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource.png" alt-text="Screenshot of Teams Toolkit with View Provisioned Resources highlighted in red.":::
 
-    1. Sign in to your Azure portal account on sign-in prompt. 
+    1. Sign in to your Azure portal. 
 
         Your app-dev-rg appears.
 
@@ -457,7 +457,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource-azure.png" alt-text="Screenshot of Teams Toolkit with View Provisioned Resources highlighted in red.":::
 
-    1. Sign in to your Azure portal account on sign-in prompt. 
+    1. Sign in to your Azure portal. 
 
         Your app-dev-rg appears.
 
