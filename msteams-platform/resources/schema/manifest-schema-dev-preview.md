@@ -382,7 +382,7 @@ The object is an array with all elements of the type `object`. This block is req
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 characters|✔️|The https:// URL to use when configuring the tab.|
-|`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: `true`|
+|`canUpdateConfiguration`|Boolean|||A value indicating whether the user can update an instance of the tab's configuration after creation. Default: `true`|
 |`scopes`|Array of enum|1|✔️|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
 |`context` |array of enums|6||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, and `meetingStage`.|
 |`sharePointPreviewImage`|String|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
@@ -421,7 +421,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |`needsChannelSelector`|Boolean|||Describes whether or not the bot utilizes a user hint to add the bot to a specific channel. Default: `false`|
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: `false`|
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: `false`|
-|`scopes`|Array of enum|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
+|`scopes`|Array of enum|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are nonexclusive.|
 |`supportsCalling`|Boolean|||A value indicating where a bot supports audio calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. Default: `false`|
 |`supportsVideo`|Boolean|||A value indicating where a bot supports video calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. Default: `false`|
 
@@ -440,7 +440,7 @@ The object is a Boolean value with the `fetchTask` element. You must define a se
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`fetchTask`|Boolean|||A value indicating whether the configuration expderience for the bot is available. The default is `true`.|
+|`fetchTask`|Boolean|||A value indicating whether the configuration experience for the bot is available. The default is `true`.|
 
 ## connectors
 
@@ -470,7 +470,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
 |`botId`|String|64|✔️|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
-|`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. The default is `false`.|
+|`canUpdateConfiguration`|Boolean|||A value indicating whether the user can update the configuration of a message extension. The default is `false`.|
 |`commands`|Array of object|10|✔️|Array of commands the message extension supports|
 
 ### composeExtensions.commands
@@ -510,7 +510,7 @@ Each command item is an object with the following structure:
 
 Optional:
 
-An array of `string`, which specifies which permissions the app requests, which let end users know how the extension performs. The following options are non-exclusive:
+An array of `string`, which specifies which permissions the app requests, which let end users know how the extension performs. The following options are nonexclusive:
 
 * `identity` &emsp; Requires user identity information.
 * `messageTeamMembers` &emsp; Requires permission to send direct messages to team members.
@@ -550,7 +550,7 @@ Specify your Microsoft Azure Active Directory (Azure AD) App ID and Graph inform
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String|36 characters|✔️|Microsoft Azure Active Directory (Azure AD) application ID of the app. This ID must be a GUID.|
+|`id`|String|36 characters|✔️|Azure AD application ID of the app. This ID must be a GUID.|
 |`resource`|String|2048 characters|✔️|Resource URL of the app for acquiring auth token for SSO.|
 |`applicationPermissions`|Array|Maximum 100 items|✔️|Resource permissions for application.|
 
@@ -672,7 +672,7 @@ You can define any of the following properties:
 
 **Optional**—array
 
-Enables your app in non-standard channels. If your app supports a team scope and this property is defined, Teams enables your app in each channel type accordingly. Currently, the private and shared channel types are supported.
+Enables your app in nonstandard channels. If your app supports a team scope and this property is defined, Teams enables your app in each channel type accordingly. Currently, the private and shared channel types are supported.
 
 > [!NOTE]
 >
@@ -731,7 +731,7 @@ Specify meeting extension definition. For more information, see [custom Together
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`id`|||✔️| The unique identifier for the scene. This id must be a GUID. |
+|`id`|||✔️| The unique identifier for the scene. This `id` must be a GUID. |
 |`name`| string | 128 characters |✔️| The name of the scene. |
 |`file`|||✔️| The relative file path to the scenes' metadata json file. |
 |`preview`|||✔️| The relative file path to the scenes' PNG preview icon. |
@@ -782,7 +782,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`ChannelMeetingAudioVideo.Stream.Group`| Allows the app to stream audio-video content from channel meetings associated with the team. |
     |`InAppPurchase.Allow.Group`| Allows the app to show marketplace offers to users in the team and complete their purchases within the app, on behalf of the signed-in user.|
     |`ChannelMeetingStage.Write.Group`| Allows the app to show content on the meeting stage in channel meetings associated with the team, on behalf of the signed-in user.|
-    |`LiveShareSession.ReadWrite.Group`|Allows the app to create and synchronize Live Share sessions for meetings associated with the team, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
+    |`LiveShareSession.ReadWrite.Group`|Allows the app to create and synchronize Live Share sessions for meetings associated with the team. Provide access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
     |`MeetingParticipantReaction.Read.Group`| Allows the app to read reactions of participants in channel meetings associated with the team.|
 
 * **RSC delegated permissions for chats or meetings**
@@ -793,7 +793,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`MeetingStage.Write.Chat`|Allows the app to show content on the meeting stage in meetings associated with the chat, on behalf of the signed-in user.|
     |`OnlineMeetingParticipant.Read.Chat`|Allows the app to read participant information, including name, role, id, joined, and left times, of meeting associated with the chat, on behalf of the signed-in user.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Allows the app to toggle incoming audio for participants in meetings associated with the chat, on behalf of the signed-in user.|
-    |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for meetings associated with the chat, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
+    |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for meetings associated with the chat. Provide access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
     |`MeetingParticipantReaction.Read.Chat`| Allows the app to read reactions of participants in meetings associated with the chat.|
     |`OnlineMeetingIncomingAudio.Detect.Chat`|Allows the app to detect changes in the status of incoming audio in meetings associated with the chat, on behalf of the signed-in user.|
     |`OnlineMeetingActiveSpeaker.Read.Chat`| Allows the app to read participants who are currently sending audio into the meetings associated with the chat.|
