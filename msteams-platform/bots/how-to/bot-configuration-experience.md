@@ -14,15 +14,22 @@ ms.localizationpriority: high
 > * Bot configuration experience is available in [public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md).
 > * Bot configuration is supported in channel or group chat scopes.
 
-You can configure your bot during installation or you can also configure the bot after installation from the installed scope. The bot configuration experience helps the user to configure their bot without uninstalling the same.
+You can configure your bot during installation or you can also configure the bot after installation from the channel or group chat where the bot is installed. The bot configuration experience helps the user to configure their bot without uninstalling the same.
 
 In the following image, the bot is installed in a group chat and when the users hover over the bot an Adaptive Card appears. The user can select the settings icon in the Adaptive Card to update or change the bot's configuration:
 
 :::image type="content" source="../../assets/images/messaging-extension/bot-configuration-experience.PNG" alt-text="Screenshot shows the configuration option for the bot in a Teams group chat.":::
 
-## Enable app manifest settings for bot configuration experience
+## Enable bot configuration experience
 
-To enable the bot configuration experience, you must configure the `fetchTask` under `bots.configuration` property in the app manifest (previously called Teams app manifest) as follows:
+To enable the bot configuration experience, follow these steps:
+
+* [Update app manifest schema](#update-app-manifest-schema)
+* [Configure your bot](#configure-your-bot)
+
+### Update app manifest schema
+
+You must configure the `fetchTask` under `bots.configuration` property in the app manifest (previously called Teams app manifest) as follows:
 
 ```json
 "bots": [
@@ -47,7 +54,7 @@ To enable the bot configuration experience, you must configure the `fetchTask` u
   ],
 ```
 
-## Configure your bot
+### Configure your bot
 
 When a user installs the bot in a team or group chat scope, the `fetchTask` property in the app manifest file initiates `config/fetch` defined in the teamsBot.js. The bot responds with an Adaptive Card and the user provides relevant information in the Adaptive Card and select **Submit**. After the user selects **Submit**, a `config/submit` is returned to the bot.
 
