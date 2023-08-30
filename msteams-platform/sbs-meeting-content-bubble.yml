@@ -110,7 +110,6 @@ items:
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"BaseURL"` to the qualified `dev tunnel` domain name.
-         * Set `"TenandId"` to your bot's **Directory (tenant) ID**.
 
           :::image type="content" source="~/assets/images/meeting-content-bubble/appsettings-json.png" alt-text="Screenshot shows the App settings.":::
 
