@@ -27,7 +27,7 @@ items:
 
     This step-by-step guide helps you to broadcast messages and notify all the members of an organization using activity feed notification. You'll see the following output:
 
-      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output-ready1.png" alt-text="Output of feed broad cast" border="true":::
+      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/msg-broadcast-output-ready.png" alt-text="Output of feed broad cast" border="true":::
 
       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/notification-recipient1.png" alt-text="Final output" border="true"::: 
 
@@ -38,9 +38,8 @@ items:
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
-     | **Required** | &nbsp; | &nbsp; |
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
-     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
+     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version to be installed. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
       > [!NOTE]
@@ -67,15 +66,12 @@ items:
 
     To verify sideload apps in Teams:
 
-    1. In the Teams client, select **Store**.
-    1. Select **Manage your apps**.
-    1. Select **Upload an app**.
+         1. In the Teams client, select the **Apps** icon.
+         1. Select **Manage your apps**.
+         1. Select **Upload an app**.
+         1. Look for the option to **Upload a custom app**.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-app.png" alt-text=" upload an app in Teams.":::
-
-    1. Look for the option to **Upload a customised app**. If you see the option, sideloading apps is enabled.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app1.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+            :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-app.png" alt-text=" upload an app in Teams.":::
 
         > [!NOTE]
         > Contact Teams administrator, if you can't upload a custom app.
@@ -120,9 +116,9 @@ items:
      
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-azure-active.png" alt-text="New registration" border="true":::
 
-    1. In the left navigation panel, select **App Registrations**.
+    1. In the left navigation pane, select **App Registrations**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-app-registration.png" alt-text="New registration" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-app-registration -screen.png" alt-text="New registration" border="true":::
 
     1. Select **New registration**.
 
@@ -163,7 +159,7 @@ items:
 - title: Update the Azure AD app registration
   durationInMinutes: 1
   content: |
-    1. In the left navigation panel, select **Expose an API**.
+    1. In the left navigation pane, select **Expose an API**.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-exposeanapi.png" alt-text="Expose an API" border="true":::
 
@@ -196,22 +192,22 @@ items:
 
     1. Enter the details for configuring scope.
      
-        1. Enter `access_as_user` as the **Scope name**.
+        1. Enter **access_as_user** as the **Scope name**.
 
           > [!NOTE]
           > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://bff2****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`.
 
-        1. Set **Who can consent** to `Admins and users`.
-        1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
+        1. Set **Who can consent** to **Admins and users**.
+        1. To configure the admin and user consent prompts with appropriate values for **access_as_user** scope, provide the following information in the fields:</br>
     
-            * Enter `Teams can access the user’s profile` as **Admin consent display name**
+            * Enter **Teams can access the user’s profile** as **Admin consent display name**
 
-            * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**
+            * Enter **Allows Teams to call the app’s web APIs** as the current user as **Admin consent description**
 
-            * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**
+            * Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**
 
-            * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**
+            * Enter **Enable Teams to call this app’s APIs with the same rights as the user** as **User consent description**
   
         1. Ensure that **State** is set to **Enabled**.
 
@@ -227,7 +223,7 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-a-client.png" alt-text="Add client" border="true":::
 
-       Add a client application panel appears.
+       Add a client application pane appears.
 
     1. Enter the Client ID for desktop and web application separately that you want to authorize. It's the application ID of client application that you want to authorize.
        
@@ -236,7 +232,7 @@ items:
        | `1fec8e78-bce4-4aaf-ab1b-5451cc387264` | Teams desktop or mobile application |
        | `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` | Teams web application |
 
-    1. Select **Authorized scopes** to determine, which type of token will be returned by the service.
+    1. Select **Authorized scopes** to determine, which type of token return the service.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-desktop-app.png" alt-text="Authroized scope" border="true":::
 
@@ -244,7 +240,7 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clientapplications.png" alt-text="Client application" border="true":::
 
-    1. In the left panel, select **API Permissions**. 
+    1. In the left pane, select **API Permissions**. 
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-api-permission.png" alt-text="Client application" border="true":::
 
@@ -307,7 +303,7 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/admin-consent.png" alt-text="Add platform" border="true":::
 
-    1. From the left panel, select **Authentication** to set a redirect URI. 
+    1. From the left pane, select **Authentication** to set a redirect URI. 
 
         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-authentication.png" alt-text="Select Authentication" border="true":::
 
@@ -339,7 +335,7 @@ items:
 
     **To create client secret**
 
-    1. In the left panel, select **Certificates & secrets**. 
+    1. In the left pane, select **Certificates & secrets**. 
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-certificate.png" alt-text="Select Certificate" border="true":::
 
@@ -366,11 +362,11 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    1. Go to **appsettings.json** in cloned repository.
+    1. Go to **appsettings.json** file in cloned repository.
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appsettings-location.png" alt-text="App settings location" border="true":::
 
-    1. Open **appsettings.json** in the latest version of Visual Studio and update the following information:  
+    1. Open **appsettings.json** file in the latest version of Visual Studio and update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"TenantID"` to **Directory (tenant) ID**.
@@ -379,11 +375,11 @@ items:
       
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-settings-details1.png" alt-text="Appsettings" border="true":::
 
-    1. Go to **manifest.json** in cloned repository.
+    1. Go to **manifest.json** file in cloned repository.
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifest-location-package.png" alt-text="Manifest location" border="true":::
 
-    1. Open **manifest.json** in the latest version of Visual Studio and make the following changes:
+    1. Open **manifest.json** file in the latest version of Visual Studio and make the following changes:
 
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
          * Replace all occurrences of `<<Base_URL>>` with your fully qualified domain name.
@@ -395,7 +391,7 @@ items:
   durationInMinutes: 1
   content: |
        1. Open Visual Studio.
-       1. Go to **File** > **Open** > **Project/Solution**.
+       1. Go to **File** > **Open** > **Project/Solution...**.
     
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/VSopenfile.png" alt-text="Open file in Visual Studio" border="true":::
 
@@ -420,25 +416,23 @@ items:
   content: |      
     1. In your cloned repository, go to  **graph-activity-feed-broadcast** > **csharp** > **ActivityFeedBroadcast** > **AppPackage**.
 
-    1. Create a .zip with the following files that are present in the **AppPackage** folder: 
+    1. Create a .zip file with the following files that are present in the **AppPackage** folder: 
        * manifest.json
-       * icon-outline.png
-       * icon-color.png
+       * outline.png
+       * color.png
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectzip.png" alt-text="Select zip file" border="true":::
     
-    1. Go to **Teams** client.
+    1. Go to **Microsoft Teams**.
 
-    1. Select **Apps**.
+    1. Select **Apps** > **Manage your apps**.
 
-    1. Select **Manage your apps**.
-
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manage-your-app.png" alt-text="Manage your app" border="true":::
+       :::image type="content" source="~/assets/images/Teams-task-module/manage-apps_3.png" alt-text="Manage apps":::
     
-    1. Select **Upload an app to your org's app catalog**. 
+    1. Select **Submit an app to your org**. 
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/upload-app-org.png" alt-text="Upload a custom app" border="true":::
-
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/submit-an-app-to-your-org.png" alt-text="Screenshot showing the selection of submit an app to your org highlighted in red.":::
+       
     1. Select **Open** to upload the .zip file that you created in the **AppPackage** folder.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/open-a-custom-app.png" alt-text="Open a custom app" border="true":::
@@ -461,7 +455,7 @@ items:
 
        The Message broadcasted successfully appears.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output-ready1.png" alt-text="Final output" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/msg-broadcast-output-ready.png" alt-text="Final output" border="true":::
 
     1. Activity feed notification displays in the **Activity** tab of the recipient with the same Tenant ID.  
 
@@ -476,9 +470,9 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output-ready1.png" alt-text="Final output" border="true"::: 
+    :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/completion-broadcast-output-ready.png" alt-text="Final output" border="true"::: 
 
-    :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/notification-recipient1.png" alt-text="Final output" border="true"::: 
+    :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/completion-notification-recipient.png" alt-text="Final output" border="true"::: 
 
 - content: |
     You've completed the tutorial to get started with the **activity feed broadcast** app!

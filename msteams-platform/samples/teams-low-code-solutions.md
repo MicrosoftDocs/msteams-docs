@@ -1,10 +1,9 @@
 ---
 title: Create low-code custom apps for Microsoft Teams
-author: surbhigupta
-description: Learn about the available Microsoft low and no code solutions with Teams an Microsoft Power Platform.
+description: Learn about the available Microsoft low and no code solutions and how to create an app with Teams and Microsoft Power Platform.
 ms.localizationpriority: medium
-ms.author: lajanuar
 ms.topic: conceptual
+ms.date: 02/28/2023
 ---
 
 # Create low-code custom apps for Teams
@@ -44,7 +43,7 @@ You can [create flows to automate repetitive work tasks](https://flow.microsoft.
 
 [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a no code, guided graphical interface solution, built on the Microsoft Power Platform and the Bot Framework. It empowers every member of your team to create and maintain rich, conversational chatbots that easily integrate with the Teams platform. All content authored in Power Virtual Agents renders naturally in Teams and Power Virtual Agents bots engage with users in the Teams native chat canvas. You can [integrate your Power Virtual Agents chatbot](/power-virtual-agents/publication-add-bot-to-microsoft-teams) to Teams through the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com).
 
-Use the new [Power Virtual Agents app](https://aka.ms/pva-teams-docs) in Teams, to create, manage, and publish conversational chatbots easily from within Teams. You can share your bots with other people in your organization to chat and get answers for their questions.
+Use the new [Power Virtual Agents](/power-virtual-agents/teams/fundamentals-what-is-power-virtual-agents-teams) app in Teams, to create, manage, and publish conversational chatbots easily from within Teams. You can share your bots with other people in your organization to chat and get answers for their questions.
 
 ### ✔ Virtual Assistant for Teams
 
@@ -82,4 +81,5 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 
 ## See also
 
-[Integrate web apps](~/samples/integrate-web-apps-overview.md)
+- [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+- [Power Platform Connectors overview](/connectors/connectors)

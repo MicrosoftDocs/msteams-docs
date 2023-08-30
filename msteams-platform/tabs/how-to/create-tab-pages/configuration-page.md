@@ -4,7 +4,8 @@ author: surbhigupta
 description: Create configuration page to collect information from user. Also, get context data for Microsoft Teams tabs, know about authentication, modify or remove tabs.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.author: lajanuar
+ms.author: v-npaladugu
+ms.date: 01/31/2023
 ---
 # Create a configuration page
 
@@ -12,13 +13,13 @@ A configuration page is a special type of [content page](content-page.md). The u
 
 * A channel or group chat tab: Collect information from the users and set the `contentUrl` of the content page to be displayed.
 * A [message extension](~/messaging-extensions/what-are-messaging-extensions.md).
-* An [Office 365 Connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+* A [connector for Microsoft 365 Groups](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
-## Configure a channel or group chat tab
+## Configuration page for tabs
 
-The application must reference the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and are available from the cloud.
+The application must refer the [TeamsJS library](/javascript/api/overview/msteams-client) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and are available from the cloud.
 
 ### Example
 
@@ -181,9 +182,9 @@ Your tab requires contextual information to display relevant content. Contextual
 
 For more information on the properties used for tab configuration, see [context interface](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true). Collect the values of context data variables in the following two ways:
 
-* Insert URL query string placeholders in your manifest's `configurationURL`.
+* Insert URL query string placeholders in `configurationURL`of your [app manifest](../../../resources/schema/manifest-schema.md#configurabletabs).
 
-* Use the [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `app.getContext()` method.
+* Use the [TeamsJS library](/javascript/api/overview/msteams-client) `app.getContext()` method.
 
 #### Insert placeholders in the `configurationUrl`
 
@@ -289,7 +290,7 @@ Authenticate before allowing a user to configure your app. Otherwise, your conte
 
 ## Modify or remove a tab
 
-Set your manifest's `canUpdateConfiguration` property to `true`. It enables the users to modify or reconfigure a channel or group tab. You can rename your tab only through Teams user interface. Inform the user about the impact on content when a tab is removed. To do this, include a removal options page in the app, and set a value for the `removeUrl` property in the `setConfig()` (formerly `setSettings()`) configuration. The user can uninstall personal tabs but can't modify them. For more information, see [create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
+Set your manifest's `canUpdateConfiguration` property to `true`. It enables the users to modify or reconfigure a channel or group tab. You can rename your tab only through Teams user interface. Inform the user about the impact on content when a tab is removed. To do this, include a removal options page in the app, and set a value for the `removeUrl` property in the `setConfig()` (formerly `setSettings()`) configuration. The user can uninstall static tabs but can't modify them. For more information, see [create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 Microsoft Teams `setConfig()` (formerly `setSettings()`) configuration for removal page:
 
@@ -305,7 +306,7 @@ const configPromise = pages.config.setConfig({
     removeUrl: "add removal page URL here"
 });
 configPromise.
-    then((result) => {/*Successful operation*/).
+    then((result) => {/*Successful operation*/}).
     catch((error) => {/*Unsuccessful operation*/});
 ```
 
@@ -337,6 +338,6 @@ If you choose to have your channel or group tab appear on the Teams mobile clien
 * [Build tabs for Teams](../../what-are-tabs.md)
 * [Update manifest for SSO and preview app](../authentication/tab-sso-manifest.md)
 * [Configure third party OAuth IdP authentication](../authentication/auth-tab-aad.md)
-* [Create Office 365 Connectors](../../../webhooks-and-connectors/how-to/connectors-creating.md)
+* [Create connectors for Microsoft 365 Groups](../../../webhooks-and-connectors/how-to/connectors-creating.md)
 * [Get context for your tab](../access-teams-context.md)
 * [Tabs on mobile](../../design/tabs-mobile.md)

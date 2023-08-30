@@ -3,6 +3,7 @@ title: Initiate actions with message extensions
 description: In this module, learn create Action-based message extensions to allow users to trigger external services.
 ms.localizationpriority: medium
 ms.topic: how-to
+ms.date: 04/02/2023
 ---
 # Initiate actions with message extensions
 
@@ -16,12 +17,14 @@ Action-based message extensions allow your users to trigger actions in external 
 
 ## Action type message extensions
 
-To initiate actions from a message extension, set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single message extension can have up to 10 different commands and include multiple search-based and action-based commands.
+To initiate actions from a message extension, set the `type` parameter to `action`. A single message extension can have up to 10 different commands and include multiple search-based and action-based commands.
 
  > [!NOTE]
  >`justInTimeInstall` functions when you upload an app to the app catalog but fails when you sideload an app.
 
 ### Complete app manifest example
+
+The following code is an example of a manifest with a search and a create command:
 
 ```json
 {
@@ -150,7 +153,7 @@ To enable your message extension to work from a message, add the `context` param
 
 ```
 
-Below is an example of the `value` object containing the message details that will be sent as part of the `composeExtension` request to your bot.
+The following code is an example of the `value` object containing the message details that is sent as part of the `composeExtensions` request to your bot:
 
 ```json
 {
@@ -234,13 +237,13 @@ There are three ways to collect information from a user in Teams.
 
 In this method, all you need to do is define a static list of parameters in the manifest as shown above in the "Create To Do" command. To use this method, ensure `fetchTask` is set to `false` and that you define your parameters in the manifest.
 
-When a user chooses a command with static parameters, Teams will generate a form in a task module with the defined parameters in the manifest. On hitting Submit, a `composeExtension/submitAction` is sent to the bot. For more information on the expected set of responses, see [Responding to submit](#responding-to-submit).
+When a user chooses a command with static parameters, Teams generates a form in a task module with the defined parameters in the manifest. On hitting Submit, a `composeExtensions/submitAction` is sent to the bot. For more information on the expected set of responses, see [Responding to submit](#responding-to-submit).
 
 ### Dynamic input using an adaptive card
 
 In this method, your service can define a custom adaptive card to collect the user input. For this approach, set the `fetchTask` parameter to `true` in the manifest. If you set `fetchTask` to `true`, any static parameters defined for the command will be ignored.
 
-In this method, your service receives a `composeExtension/fetchTask` event and responds with an adaptive card based [task module response](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object). Following is a sample response with an adaptive card:
+In this method, your service receives a `composeExtensions/fetchTask` event and responds with an adaptive card based [task module response](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object). Following is a sample response with an adaptive card:
 
 ```json
 {
@@ -308,7 +311,7 @@ Just like in the adaptive card flow, your service sends a `fetchTask` event and 
 
 If your app contains a conversation bot, ensure it's installed in the conversation before loading your task module to get more context for your task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team.
 
-To facilitate this flow, when your message extension first receives the `composeExtension/fetchTask` invoke, check to see if your bot is installed in the current context. You can get this, by attempting the get roster call. For example, if your bot isn't installed, you return an Adaptive Card with an action that requests the user to install your bot. The user needs to have permission to install apps in that location. If they can’t install, the message prompts to contact the administrator.
+To facilitate this flow, when your message extension first receives the `composeExtensions/fetchTask` invoke, check to see if your bot is installed in the current context. You can get this, by attempting the get roster call. For example, if your bot isn't installed, you return an Adaptive Card with an action that requests the user to install your bot. The user needs to have permission to install apps in that location. If they can’t install, the message prompts to contact the administrator.
 
 Here's an example of the response:
 
@@ -336,7 +339,7 @@ Here's an example of the response:
 }
 ```
 
-Once the user completes the installation, your bot will receive another invoke message with `name = composeExtension/submitAction` and `value.data.msteams.justInTimeInstall = true`.
+Once the user completes the installation, your bot receives another invoke message with `name = composeExtensions/submitAction` and `value.data.msteams.justInTimeInstall = true`.
 
 Here's an example of the invoke:
 
@@ -366,7 +369,7 @@ Respond to the invoke with the same task response you would have responded with 
 
 ## Responding to submit
 
-Once a user completes entering their input, bot will receive a `composeExtension/submitAction` event with the command ID and parameter values set.
+Once a user completes entering their input, bot receives a `composeExtensions/submitAction` event with the command ID and parameter values set.
 
 These are the different expected responses to a `submitAction`.
 
@@ -374,13 +377,13 @@ These are the different expected responses to a `submitAction`.
 
 Task module response is used when your extension needs to chain dialogs together to get more information. The response is same as `fetchTask` mentioned earlier.
 
-### Compose extension auth/config response
+### Compose extensions auth/config response
 
-Compose extension auth/config response is used when your extension needs to either authenticate or configure to continue. For more information, see [authentication section](~/resources/messaging-extension-v3/search-extensions.md#authentication) in the search section.
+Compose extensions auth/config response is used when your extension needs to either authenticate or configure to continue. For more information, see [authentication section](~/resources/messaging-extension-v3/search-extensions.md#authentication) in the search section.
 
-### Compose extension result response
+### Compose extensions result response
 
-Compose extension result response is used to insert a card into the compose box as a result of the command. It's the same response that's used in the search command, but it's limited to one card or one result in the array.
+Compose extensions result response is used to insert a card into the compose box as a result of the command. It's the same response that's used in the search command, but it's limited to one card or one result in the array.
 
 ```json
 {
@@ -435,14 +438,15 @@ Respond to the submit action by inserting a message with an Adaptive Card into t
 1. The user selects the message extension to trigger the task module.
 1. The user uses the task module to configure the poll.
 1. After submitting the configuration task module, the app uses the information provided in the task module to craft an adaptive card and sends it as a `botMessagePreview` response to the client.
-1. The user can then preview the adaptive card message before the bot inserts it into the channel. If the bot isn't already a member of the channel, clicking `Send` will add the bot.
-1. Interacting with the adaptive card will change the message before sending it.
+1. The user can then preview the adaptive card message before the bot inserts it into the channel. If the bot isn't already a member of the channel, clicking `Send` adds the bot.
+1. Interacting with the adaptive card changes the message before sending it.
 1. Once the user selects `Send`, the bot will post the message to the channel.
 
-To enable this flow your task module should respond as in the example below, which will present the preview message to the user.
 
 > [!NOTE]
 > The `activityPreview` must contain a `message` activity with exactly one adaptive card attachment.
+
+To enable this flow your task module should respond as in the following example, which presents the preview message to the user:
 
 ```json
 {
@@ -461,7 +465,7 @@ To enable this flow your task module should respond as in the example below, whi
 }
 ```
 
-Your message extension will now need to respond to two new types of interactions, `value.botMessagePreviewAction = "send"` and `value.botMessagePreviewAction = "edit"`. Below is an example of the `value` object you'll need to process:
+Your message extension will now need to respond to two new types of interactions, `value.botMessagePreviewAction = "send"` and `value.botMessagePreviewAction = "edit"`. The following code is an example of the `value` object you need to process:
 
 ```json
 {
@@ -496,6 +500,8 @@ When responding to the `edit` request, you should respond with a `task` response
 
 # [TypeScript/Node.js](#tab/typescript)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search/nodejs/bots/teamsMessagingExtensionsSearchBot.js#L115)
+
 ```typescript
 teamChatConnector.onComposeExtensionSubmitAction((
     event: builder.IEvent,
@@ -513,7 +519,7 @@ teamChatConnector.onComposeExtensionSubmitAction((
                 teamChatConnector.send([msg.toMessage()],
                     (error) => {
                         if(error){
-                            //TODO: Handle error and callback
+                            // TODO: Handle error and callback.
                         }
                         else {
                             callback(null, null, 200);
@@ -523,7 +529,7 @@ teamChatConnector.onComposeExtensionSubmitAction((
             }
 
             else if (invokeValue.botMessagePreviewAction === 'edit') {
-              // Create the card and populate with user-inputted information
+              // Create the card and populate with user-inputted information.
               let card = { ... }
 
               let taskResponse = {
@@ -543,7 +549,7 @@ teamChatConnector.onComposeExtensionSubmitAction((
 
         else {
             let attachment = {
-                  //create adaptive card
+                  // Create adaptive card.
                 };
             let activity = new builder.Message().addAttachment(attachment).toMessage();
             let response = teamBuilder.ComposeExtensionResponse.messagePreview()
@@ -573,7 +579,7 @@ public class MessagesController : ApiController
 
         if (activity.Type == ActivityTypes.Invoke)
         {
-            // Initial task module presented to the user
+            // Initial task module presented to the user.
             if (activity.Name == "composeExtension/fetchTask")
             {
                 string task = GetTaskModule();
@@ -585,7 +591,7 @@ public class MessagesController : ApiController
                 dynamic activityValue = JObject.FromObject(activity.Value);
                 string botMessagePreviewAction = activityValue["botMessagePreviewAction"];
 
-                //This is the initial card response sent after the task module is submitted
+                // This is the initial card response sent after the task module is submitted.
                 if (botMessagePreviewAction is null)
                 {
                     string text = activityValue.data.cardMessage;
@@ -627,7 +633,7 @@ public class MessagesController : ApiController
                 }
                 else
                 {
-                    //This is the "send the card to the channel" event
+                    // This is the "send the card to the channel" event.
                     if (botMessagePreviewAction.Equals("send"))
                     {
                         string cardJson = JsonConvert.SerializeObject(activityValue.botActivityPreview[0].attachments[0].content);
@@ -646,7 +652,7 @@ public class MessagesController : ApiController
 
                         var result = await connectorClient.Conversations.SendToConversationAsync(response);
                     }
-                    //This is fired if the user edits the card before sending it
+                    // This is fired if the user edits the card before sending it.
                     else if (botMessagePreviewAction.Equals("edit"))
                     {
                         string task = GetTaskModule();
@@ -690,7 +696,7 @@ public class MessagesController : ApiController
 
         string cardJson = card.ToJson();
 
-        //Create the task module response
+        // Create the task module response.
         string task = $@"{{
                             'task': {{
                                 'type': 'continue',
@@ -712,4 +718,4 @@ public class MessagesController : ApiController
 
 ## See also
 
-[Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md).
+[Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md)

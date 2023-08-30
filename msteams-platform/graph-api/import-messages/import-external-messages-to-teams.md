@@ -2,9 +2,9 @@
 title: Use Microsoft Graph to import external platform messages to Teams
 description: Describes how to use Microsoft Graph to import messages from an external platform to Teams.
 ms.localizationpriority: high
-author: "akjo" 
-ms.author: "lajanuar"
+author: "akjo"
 ms.topic: Overview
+ms.date: 09/02/2022
 ---
 
 # Import third-party platform messages to Teams using Microsoft Graph
@@ -33,9 +33,9 @@ At a high level, the import process consists of the following:
 * Map the third-party chat structure to the Teams structure.  
 * Convert import data into format needed for migration.  
 
-### Set up your Office 365 tenant
+### Set up your Microsoft 365 tenant
 
-* Ensure that an Office 365 tenant exists for the import data. For more information on setting up an Office 365 tenancy for Teams, see [prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
+* Ensure that a Microsoft 365 tenant exists for the import data. For more information on setting up a Microsoft 365 tenancy for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
 * Make sure that team members are in Azure Active Directory. For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Azure AD.
 
 ## Step 1: Create a team
@@ -354,7 +354,7 @@ HTTP/1.1 204 No Content
 
 * Throttling: Messages import at five RPS per channel.
 
-* If you need to make a correction to the migration results, you must delete the team and repeat the steps to create the team and channel and re-migrate the messages.
+* If you need to make a correction to the migration results, you must delete the team, repeat the steps to create the team and channel and re-migrate the messages.
 
 > [!NOTE]
 > Currently, inline images are the only type of media supported by the import message API schema.

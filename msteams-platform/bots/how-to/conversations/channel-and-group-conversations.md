@@ -1,7 +1,7 @@
 ---
 title: Create conversation bots for channel or group chat
 author: surbhigupta
-description: Learn how to create new conversation threads, work on mentions, and send message on install. Explore Teams file upload sample (.NET, JavaScript, Python).
+description: Learn how to create new conversation threads, work on user and tag mentions, and send message on install. Explore Teams file upload sample (.NET, JavaScript, Python).
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
@@ -15,11 +15,10 @@ To install the Microsoft Teams bot in a team or group chat, add the `teams` or `
 Bots in a group or channel only receive messages when they're mentioned @botname. They don't receive any other messages sent to the conversation. The bot must be @mentioned directly. Your bot doesn't receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.
 
 > [!NOTE]
-> This feature is currently available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md) only.
 >
-> Using resource-specific consent (RSC), bots can receive all channel messages in teams that it's installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
->
-> Posting a message or Adaptive Card to a private channel is currently not supported.
+> * RSC for all *chat* messages is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
+> * Using resource-specific consent (RSC), bots can receive all channel messages in teams that it's installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
+> * Posting a message or Adaptive Card to a private channel is currently not supported.
 
 See the following video to learn about channel and group chat conversations with a bot:
 <br>
@@ -55,17 +54,25 @@ The following code shows an example of retrieving mentions:
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](/dotnet/api/microsoft.bot.schema.activity.getmentions?view=botbuilder-dotnet-stable#microsoft-bot-schema-activity-getmentions&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-archive-groupchat-messages/csharp/FetchGroupChatMessages/Bots/ActivityBot.cs#L182)
+
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
+    // Resolves the mentions from the entities activity.
     Mention[] mentions = turnContext.Activity.GetMentions();
     if(mentions != null)
     {
         ChannelAccount firstMention = mentions[0].Mentioned;
+
+        // Sends a message activity to the sender of the incoming activity.
         await turnContext.SendActivityAsync($"Hello {firstMention.Name}");
     }
     else
     {
+        // Sends a message activity to the sender of the incoming activity.
         await turnContext.SendActivityAsync("Aw, no one was mentioned.");
     }
 }
@@ -73,21 +80,31 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 # [TypeScript](#tab/typescript)
 
+[SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-getmentions&preserve-view=true)
+
 ```typescript
 this.onMessage(async (turnContext, next) => {
+    
+    // Resolves the mentions from the entities activity.
     const mentions = TurnContext.getMentions(turnContext.activity);
     if (mentions){
         const firstMention = mentions[0].mentioned;
+
+        // Sends a message activity to the sender of the incoming activity.
         await turnContext.sendActivity(`Hello ${firstMention.name}.`);
     } else {
+        // Sends a message activity to the sender of the incoming activity.
         await turnContext.sendActivity(`Aw, no one was mentioned.`);
     }
 
     await next();
 });
+
 ```
 
 # [JSON](#tab/json)
+
+[SDK reference](/microsoftteams/platform/resources/bot-v3/bot-conversations/bots-conv-channel#example-outgoing-message-with-user-mentioned)
 
 ```json
 {
@@ -131,8 +148,11 @@ this.onMessage(async (turnContext, next) => {
 
 # [Python](#tab/python)
 
+[SDK reference](/python/api/botbuilder-schema/botbuilder.schema.activity?view=botbuilder-py-latest#botbuilder-schema-activity-get-mentions&preserve-view=true)
+
 ```python
 @staticmethod
+// Resolves the mentions from the entities of this activity.
 def get_mentions(activity: Activity) -> List[Mention]:
     result: List[Mention] = []
     if activity.entities is not None:
@@ -146,7 +166,14 @@ def get_mentions(activity: Activity) -> List[Mention]:
 
 ### Add mentions to your messages
 
-Your bot can mention other users in messages posted into channels.
+There are two types of mentions:
+
+* [User mention](#user-mention)
+* [Tag mention](#tag-mention)
+
+#### User mention
+
+Your bot can mention other users in messages posted in channels.
 
 The `Mention` object has two properties that you must set using the following:
 
@@ -159,6 +186,9 @@ The following code shows an example of adding mentions to your messages:
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](/dotnet/api/microsoft.bot.schema.mention?view=botbuilder-dotnet-stable&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L300)
+
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
@@ -166,13 +196,17 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
     {
         Mentioned = turnContext.Activity.From,
         Text = $"<at>{XmlConvert.EncodeName(turnContext.Activity.From.Name)}</at>",
+        Type = "mention",
     };
 
+    // Returns a simple text message.
     var replyActivity = MessageFactory.Text($"Hello {mention.Text}.");
     replyActivity.Entities = new List<Entity> { mention };
 
+    // Sends an activity to the sender of the incoming activity.
     await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 }
+
 ```
 
 # [TypeScript](#tab/typescript)
@@ -182,21 +216,27 @@ this.onMessage(async (turnContext, next) => {
     const mention = {
         mentioned: turnContext.activity.from,
         text: `<at>${ new TextEncoder().encode(turnContext.activity.from.name) }</at>`,
+        type: "mention",
     } as Mention;
 
+    // Returns a simple text message.
     const replyActivity = MessageFactory.text(`Hello ${mention.text}`);
     replyActivity.entities = [mention];
 
+    // Sends a message activity to the sender of the incoming activity.
     await turnContext.sendActivity(replyActivity);
 
     // By calling next() you ensure that the next BotHandler is run.
     await next();
 });
+
 ```
 
 # [JSON](#tab/json)
 
 The `text` field in the object in the `entities` array must match a portion of the message `text` field. If it doesn't, the mention is ignored.
+
+* [SDK reference](/microsoftteams/platform/resources/bot-v3/bot-conversations/bots-conv-channel#example-outgoing-message-with-user-mentioned)
 
 ```json
 {
@@ -240,6 +280,9 @@ The `text` field in the object in the `entities` array must match a portion of t
 
 # [Python](#tab/python)
 
+* [SDK reference](/python/api/botbuilder-schema/botbuilder.schema.mention?view=botbuilder-py-latest&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L94)
+
 ```python
 async def _mention_activity(self, turn_context: TurnContext):
         mention = Mention(
@@ -247,8 +290,9 @@ async def _mention_activity(self, turn_context: TurnContext):
             text=f"<at>{turn_context.activity.from_property.name}</at>",
             type="mention"
         )
-
+        // Returns a simple text message.
         reply_activity = MessageFactory.text(f"Hello {mention.text}")
+        # Sends a message activity to the sender of the incoming activity.
         reply_activity.entities = [Mention().deserialize(mention.serialize())]
         await turn_context.send_activity(reply_activity)
 ```
@@ -256,6 +300,96 @@ async def _mention_activity(self, turn_context: TurnContext):
 * * *
 
 Now you can send an introduction message when your bot is first installed or added to a group or team.
+
+#### Tag mention
+
+Your bot can mention tags in text messages and Adaptive Cards posted in channels. When the bot @mentions the tag in a channel, the tag is highlighted and the people associated with the tag get notified. When a user hovers over the tag, a pop-up appears with the tag details.
+
+> [!NOTE]
+>
+> * Tag mentions are available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
+> * Tag mentions are supported in Teams desktop and web clients. However, it's not supported in Teams mobile client.
+> * Tag mentions are supported in Government Community Cloud (GCC) and GCC-High tenants, and not supported in  Department of Defense (DoD) tenant.
+
+##### Mention tags in a text message
+
+In the `mention.properties` object, add the property `'type': 'tag'`. If the property `'type': 'tag'` isn't added, the bot treats the mention as a user mention.
+
+Example:
+
+The `type:tag` is added as a `Properties` in ChannelAccount.
+
+[SDK reference](/dotnet/api/microsoft.bot.schema.channelaccount?view=botbuilder-dotnet-stable&branch=main&preserve-view=true)
+
+```csharp
+​var mention = new ChannelAccount(tagId, "Test Tag"); 
+​mention.Properties = JObject.Parse("{'type': 'tag'}"); 
+​var mentionObj = new Mention 
+​{ 
+​    Mentioned = mention, 
+​    Text = "<at>Test Tag</at>" 
+​}; 
+
+​var replyActivity = MessageFactory.Text("Hello " + mentionObj.Text); 
+​replyActivity.Entities = new List<Microsoft.Bot.Schema.Entity> { mentionObj }; 
+​await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+```
+
+##### Mention tags in an Adaptive Card
+
+In the Adaptive Card schema,  under the `mentioned` object, add the `"type": "tag"` property.  If the  `"type": "tag"` property isn't added, the bot treats the mention as a user mention.
+
+You can get the list of the tags available in the channel using the [List teamworkTags](/graph/api/teamworktag-list?view=graph-rest-1.0&tabs=http&preserve-view=true) API.
+
+Example:
+
+```json
+​{ 
+​    "type": "mention", 
+    ​"text": "<at>Test Tag</at>", 
+​    "mentioned": { 
+            ​"id": "base64 encoded id" ,// tag graph 64 base ID
+​            "name": "Test Tag", 
+            ​"type": "tag" 
+​    } 
+​} 
+```
+
+###### Query Parameters
+
+|Name |Description |
+|---------|----------------|
+|`type`| The type of mention. The supported type is `tag`.|
+|`id`|The unique identifier for the tag. For more information, see [teamworkTag](/graph/api/resources/teamworktag?view=graph-rest-1.0&preserve-view=true).|
+
+###### Error code
+
+| Status code | Error code | Message values | Retry request | Developer action|
+|----------------|-----------------|-----------------|----------------|----------------|
+| 400 | **Code**: `Bad Request` | ​Mentioned tag with ID {id string} doesn't exist in current team<br/>​Tag can only be mentioned in channel<br/>Invalid mentioned tag because no tag exists in the team| No | Reevaluate request payload for errors. Check returned error message for details. |
+| 502 | **Code**: `Bad Gateway` | Invalid team group ID<br/> ​Malformed tenant ID for the tag<br/> ​Mention ID can't be resolved | No |Retry manually.|
+
+##### Throttling limits
+
+Any request can be evaluated against multiple limits, depending on the scope, the window type (short and long), number of tags per message, and other factors. The first limit to be reached triggers throttling behavior.
+
+Ensure that you don't exceed the throttling limits to avoid failed message delivery. For example, a bot can send only two messages with tags mention in a five-second window and each message can have only up to 10 tags.
+
+The following table lists the throttling limits for tag mentions in a bot:
+
+| ​Scope   | ​Window Type  | Number of tags per message  | ​Time windows (sec)  | ​Maximum number of messages per time window  |
+|------------------------|------------|-----------|----------|----------|
+|​Per bot per thread     |   ​Short     |    10     |     5    |     2    |
+| &nbsp;                |   ​Long      |    10     |     60   |     5    |
+|​All bots per thread    |   ​Short     |    10     |     5    |     4    |
+| &nbsp;                |   Long      |    10     |     60   |     5    |
+
+##### Limitations
+
+* Tag mentions are supported only in bot to client message flow with text and Adaptive Card.
+* Tag mentions aren't supported in shared and private channels.
+* Tag mentions aren't supported in connectors.
+* Tag mentions don't support the invoke flow in a bot.
 
 ## Send a message on installation
 
@@ -282,14 +416,10 @@ Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), create
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Conversation events in your Teams bot](subscribe-to-conversation-events.md)
+> [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 
 ## See also
 
-* [Build bots for Teams](../../what-are-bots.md)
-* [Authenticate users in Microsoft Teams](../../../concepts/authentication/authentication.md)
-* [Task modules](../../../task-modules-and-cards/what-are-task-modules.md)
-* [Upload file in Teams using bot](../../../sbs-file-handling-in-bot.yml)
-* [Get Teams specific context for your bot](../get-teams-context.md)
+* [Get Teams context](~/bots/how-to/get-teams-context.md)
 * [Create private channel on behalf of user](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
 * [Connect a bot to Web Chat channel](/azure/bot-service/bot-service-channel-connect-webchat)

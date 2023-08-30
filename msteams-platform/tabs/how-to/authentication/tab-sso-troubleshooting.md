@@ -4,6 +4,7 @@ description: Troubleshoot Single sign-on (SSO) authentication issues in Teams an
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) SSO errors questions
+ms.date: 01/31/2023
 ---
 # Troubleshoot SSO authentication in Teams
 
@@ -91,20 +92,20 @@ For more information on application ID URI, see [To expose an API](tab-sso-regis
 <details>
 <summary>7. Error: Generic error when running the tab app.</summary>
 <br>
-A generic error may show up when one or more of app configurations made in Azure AD are incorrect. To resolve this error, check if the app details configured in your code and Teams manifest matches the values in Azure AD.
+A generic error may show up when one or more of app configurations made in Azure AD are incorrect. To resolve this error, check if the app details configured in your code and the app manifest (previously called Teams app manifest) matches the values in Azure AD.
 
 The following image shows an example of the app details configured in Azure AD.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="App configuration values in Azure AD":::
 
-Check that the following values match between Azure AD, client-side code, and Teams app manifest:
+Check that the following values match between Azure AD, client-side code, and app manifest:
 
-- **App ID**: The app ID you generated in Azure AD should be the same in the code and in Teams manifest file. Check the app ID in Teams manifest matches the **Application (client) ID** in Azure AD.
+- **App ID**: The app ID you generated in Azure AD should be the same in the code and in the app manifest file. Check if the app ID in the app manifest schema matches the **Application (client) ID** in Azure AD.
 
 - **App secret**: The app secret configured in the backend of your app should match the **Client credentials** in Azure AD.
     You should also check if the client secret is expired.
 
-- **Application ID URI**: The app ID URI in the code and in Teams app manifest file should match the **Application ID URI** in Azure AD.
+- **Application ID URI**: The app ID URI in the code and in the app manifest file should match the **Application ID URI** in Azure AD.
 
 - **App permissions**: Check if the permissions you defined in the scope are as per your app requirement. If so, check if they had been granted to the user in the access token.
 
@@ -123,6 +124,7 @@ You can use [JWT](https://jwt.ms) for inspecting the token.
 </details>
 
 ## Bot SSO token error
+
 <br>
 <details>
 <summary>Token exchange failure.</summary>
@@ -149,7 +151,7 @@ To understand the bot behavior when the token exchange fails to trigger a consen
 1. The client starts a conversation with the bot triggering an OAuth scenario.
 2. The bot sends back an OAuth card to the client.
 3. The client intercepts the OAuth card before displaying it to the app user. It checks if it contains a `TokenExchangeResource` property.
-4. If the property exists, the client sends a `TokenExchangeInvokeRequest` to the bot. The client must have an exchangeable token for the user. This token must be an Azure AD v2 token whose audience must be the same as `TokenExchangeResource.Uri` property. 
+4. If the property exists, the client sends a `TokenExchangeInvokeRequest` to the bot. The client must have an exchangeable token for the user. This token must be an Azure AD v2 token whose audience must be the same as `TokenExchangeResource.Uri` property.
 1. The client sends an invoke activity to the bot with the following code:
 
     ```json
@@ -181,4 +183,12 @@ To understand the bot behavior when the token exchange fails to trigger a consen
 
 6. If the `TokenExchangeInvokeResponse` has a `status` of `200`, then the client doesn't show the OAuth card. See the [normal flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). For any other `status` or if the `TokenExchangeInvokeResponse` isn't received, then the client shows the OAuth card to the user. See the [fallback flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). If there are any errors or unmet dependencies like user consent, this activity ensures that the SSO flow falls back to normal OAuthCard flow.
 
+   > [!NOTE]
+   >
+   > In Teams web client, the password prompt doesn't appear as there is an active Azure AD session in the browser, which is used for authentication and to acquire a token. In Teams desktop client, the password prompt appears because the desktop client doesn't have any Azure AD session to be shared and is asked to login.
+
 </details>
+
+## See also
+
+[Security best practices for application properties in Azure Active Directory](/azure/active-directory/develop/security-best-practices-for-app-registration)

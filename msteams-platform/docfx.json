@@ -37,12 +37,11 @@
       "globalMetadata": {
         "uhfHeaderId": "MSDocsHeader-MicrosoftTeams",
         "breadcrumb_path": "/microsoftteams/platform/breadcrumb/TOC.json",
-        "extendBreadcrumb": true,
         "manager": "billbl",
         "author": "surbhigupta",
         "ms.suite": "office365",
         "ms.service": "msteams",
-        "ms.author": "lajanuar",
+        "ms.author": "surbhigupta",
         "searchScope": [ "Teams" ],
         "feedback_system": "GitHub",
         "feedback_github_repo": "MicrosoftDocs/msteams-docs",

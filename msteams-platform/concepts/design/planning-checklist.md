@@ -4,6 +4,7 @@ author: heath-hamilton
 description: Learn to plan your app using the checklist to ensure your plan covers the important details of app development. Plan app's lifecycle. Plan to host your Teams app.
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.date: 07/28/2022
 ---
 
 # Teams app planning checklist
@@ -152,3 +153,15 @@ Teams doesn't host your app. When a user installs your app in Teams, they instal
 - **Plan the onboarding experience**: Craft your onboarding experience with your key users in mind. How you introduce a chat bot installed in a channel with a thousand people, is different when it's installed in a one-to-one chat.
 
 - **Plan for the future**: Identify new features the user will prefer in the current solution. Any new features may impact app design and architecture.
+
+## See also
+
+- [Plan your app with Teams features](../app-fundamentals-overview.md)
+- [Teams overview](/graph/teams-concept-overview)
+- [Build bots for Teams](../../bots/what-are-bots.md)
+- [Build tabs for Teams](../../tabs/what-are-tabs.md)
+- [Build message extensions for Teams](../../messaging-extensions/what-are-messaging-extensions.md)
+- [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+- [Enable SSO for tab app](../../tabs/how-to/authentication/tab-sso-overview.md)
+- [Enable SSO for your bot and message extension](../../bots/how-to/authentication/bot-sso-overview.md)
+- [Create deep links](../build-and-test/deep-links.md)

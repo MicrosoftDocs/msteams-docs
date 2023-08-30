@@ -32,7 +32,7 @@ If you're hosting your bot locally during development, you need to use a tunneli
 ngrok http <port> --host-header=localhost:<port>
 ```
 
-Use the https endpoint provided by ngrok in your app manifest.
+Use the https endpoint provided by ngrok in your [app manifest](../../../resources/schema/manifest-schema.md).
 
 > [!NOTE]
 > If you close your command window and restart, a new URL is generated and you need to update your bot endpoint address to use it.
@@ -95,5 +95,7 @@ To remove your bot completely from Teams, go to your **Bot Dashboard** and edit 
 
 ## See also
 
+* [Test your app](../../../concepts/build-and-test/test-app-overview.md)
 * [Debug your bot with inspection middleware](/azure/bot-service/bot-service-debug-inspection-middleware)
 * [Debug your calling and meeting bot locally](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
+* [Build bots for Teams](../../what-are-bots.md)

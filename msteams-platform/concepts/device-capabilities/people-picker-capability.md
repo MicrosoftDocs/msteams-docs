@@ -1,16 +1,17 @@
 ---
 title: Integrate People Picker
-description: In this article, learn how to use Teams JavaScript client SDK to integrate People Picker control and advantages of using people picker.
+description: In this article, learn how to use Teams JavaScript client library to integrate People Picker control and advantages of using people picker.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.date: 02/24/2023
 ---
 
 # Integrate People Picker
 
 People Picker is an input control in Teams that allows users to search and select people. You can integrate People Picker input control in a web app, which allows end users to perform different functions such as, search and select people in a chat, channel, or across the organization within Teams. The People Picker control is available across all Teams clients, such as web, desktop, and mobile.
 
-You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the `selectPeople` API to integrate the People Picker input control in your web app.
+You can use [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the `selectPeople` API to integrate the People Picker input control in your web app.
 
 ## Advantages of using People Picker
 
@@ -48,7 +49,7 @@ The People Picker input control allows the user to search and add people using t
 1. Type the name of the required person. The list appears with name suggestions.
 1. Select the name of the required person from the list.
 
-   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Picker Picker mobile":::
+   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Screenshot shows the Picker Picker on mobile.":::
 
 # [Desktop](#tab/Sampledesktop)
 
@@ -57,7 +58,7 @@ The People Picker control on web or desktop is launched in a modal window on top
 1. Type the name of the required person. The list appears with name suggestions.
 1. Select the name of the required person from the list.
 
-   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="People picker by name desktop":::
+   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="Screenshot shows the People Picker by name on desktop.":::
 
 ---
 
@@ -108,11 +109,18 @@ The following table lists the error codes and their descriptions:
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API isn't supported on the current platform.|
 | **500** | INTERNAL_ERROR | Internal error encountered while launching People Picker.|
 | **4000** | INVALID_ARGUMENTS | API is invoked with wrong or insufficient mandatory arguments.|
-| **8000** | USER_ABORT |User cancelled the operation.|
+| **8000** | USER_ABORT |User canceled the operation.|
 | **9000** | OLD_PLATFORM | User is on an old platform build where implementation of the API is unavailable. Upgrade to the latest version of the build to resolve the issue.|
+
+## Code sample
+
+| Sample name           | Description | .NET |Node.js    | Manifest|
+|:---------------------|:--------------|:---------|:---------|:---------|
+|Tab people picker | This sample shows the feature of people picker using teams js client sdk inside tab. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/csharp/demo-manifest/Tab-People-Picker.zip)
 
 ## See also
 
+* [Integrate web apps](../../samples/integrate-web-apps-overview.md)
 * [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
 * [Integrate QR code or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)

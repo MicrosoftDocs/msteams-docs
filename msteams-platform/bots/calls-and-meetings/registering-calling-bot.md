@@ -3,16 +3,17 @@ title: Register calls and meetings bot for Microsoft Teams
 description: Learn how to register a new audio/video calling bot for Microsoft Teams, create new bot or add calling capability, add graph permissions. Sample to create call, join meeting and transfer call.
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.date: 11/23/2022
 ---
 # Register calls and meetings bot for Microsoft Teams
 
 A bot that participates in audio or video calls and online meetings is a regular Microsoft Teams bot with the following extra features used to register the bot:
 
-* There's a new version of the Teams app manifest with two additional settings, `supportsCalling` and `supportsVideo`. These settings are included in the [Manifest schema for Microsoft Teams](../../resources/schema/manifest-schema.md).
+* There's a new version of app manifest (previously called Teams app manifest) with two additional settings, `supportsCalling` and `supportsVideo`. These settings are included in the [app manifest](../../resources/schema/manifest-schema.md#bots).
 * [Microsoft Graph permissions](./registering-calling-bot.md#add-graph-permissions) must be configured for your bot's Microsoft App ID.
 * The Graph calls and online meetings APIs permissions require tenant admin consent.
 
-## New manifest settings
+## New app manifest settings
 
 Calls and online meetings bots have the following two additional settings in the manifest.json that enable audio or video for your bot in Teams.
 
@@ -43,9 +44,24 @@ The next section provides a list of application permissions supported for calls 
 
 ## Add Graph permissions
 
-The Graph provides granular permissions to control the access that apps have to resources. You decide which permissions for Graph your app requests. The Graph calling APIs support application permissions, which are used by apps that run without a signed-in user present. A tenant administrator must grant consent to application permissions.
+The Graph provides granular permissions to control the access that apps have to resources. You decide which permissions for Graph your app requests. The Graph calling APIs support Resource-specific consent (RSC) permissions and application permissions.
+
+### RSC permissions for calls
+
+RSC is an authorization framework built by Teams and Microsoft identity platform that allows for granting scoped access to an app. Through RSC, an authorized user can give an app access to the data of a specific instance of a resource type.
+
+If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
+
+The following table provides RSC application permissions for calls:
+
+| Permission name | Action |
+| ----- | ----- |
+| `Calls.AccessMedia.Chat` | Access media streams in calls associated with this chat or meeting. |
+| `Calls.JoinGroupCalls.Chat` | Join calls associated with this chat or meeting. |
 
 ### Application permissions for calls
+
+The application permissions for calls are used by apps that run without a signed-in user present. A tenant administrator must grant consent to application permissions.
 
 The following table provides a list of application permissions for calls:
 
@@ -80,14 +96,14 @@ For apps using the Azure AD V1 endpoint, a tenant administrator can consent to t
 You can rely on an administrator to grant the permissions your app needs at the [Microsoft Azure portal](https://portal.azure.com). A better option is to provide a sign-up experience for administrators by using the Azure AD V2 `/adminconsent` endpoint. For more information, see [instructions on constructing an Admin consent URL](/graph/auth-v2-service#3-get-administrator-consent).
 
 > [!NOTE]
-> To construct the tenant Admin consent URL, a configured redirect URI or reply URL in the [app registration portal](https://apps.dev.microsoft.com/) is required. To add reply URLs for your bot, access your bot registration, choose **Advanced Options** > **Edit Application Manifest**. Add your redirect URL to the `replyUrls` collection.
+> To construct the tenant Admin consent URL, a configured redirect URI or a reply URL in the [app registration portal](https://apps.dev.microsoft.com/) is required. To add reply URLs for your bot, access your bot registration, choose **Advanced Options** > **Edit Application Manifest**. Add your redirect URL to the `replyUrls` collection.
 
 > [!IMPORTANT]
 > Anytime you make a change to your application's permissions, you must also repeat the Admin consent process. Changes made in the app registration portal are not reflected until the consent has been reapplied by the tenant's administrator.
 
 ## Code sample
 
-| **Sample name** | **Description** | **C#** |
+| **Sample name** | **Description** | **.NET** |
 |---------------|----------|--------|
 | Calling and meeting bot | The sample app demonstrates how Bot can create call, join meeting and transfer call. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 | Realtime meeting events |The sample app demonstrates how Bot can receive real-time meeting events.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|
@@ -106,6 +122,6 @@ Follow the [step-by-step guide](../../sbs-calling-and-meeting.yml) to set up Tea
 * [Build bots for Teams](../what-are-bots.md)
 * [Calls and online meetings bots](calls-meetings-bots-overview.md)
 * [Develop calling and online meeting bots on your local PC](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
-* [View app permission and grant admin consent](/MicrosoftTeams/app-permissions-admin-center)
+* [View app permission and grant admin consent](/microsoftteams/app-permissions-admin-center)
 * [Work with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview)
 * [Webhooks and connectors](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md)

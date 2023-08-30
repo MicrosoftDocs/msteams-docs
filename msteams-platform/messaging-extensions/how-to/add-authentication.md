@@ -71,7 +71,7 @@ To prompt an unauthenticated user, to sign in, respond with a suggested action o
 
 ### Start the sign in flow
 
-Your sign in experience must be responsive and fit within a pop-up window. It should integrate with the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client), which uses message passing.
+Your sign in experience must be responsive and fit within a pop-up window. It should integrate with the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client), which uses message passing.
 
 As with other embedded experiences running inside Microsoft Teams, your code inside the window needs to first call `app.initialize()`. If your code performs an OAuth flow, you can pass the Teams user ID into your window, which then passes it to the OAuth sign-in URL.
 
@@ -135,9 +135,9 @@ At this point, the window closes and the control is passed to the Teams client. 
 
 ## Code sample
 
-|**Sample name** | **Description** |**.NET** | **Node.js**|
-|----------------|-----------------|--------------|----------------|
-|Message extensions - auth and config | A Message Extension that has a configuration page, accepts search requests, and returns results after the user has signed in. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs)|
+|**Sample name** | **Description** |**.NET** | **Node.js**| **Manifest**|
+|----------------|-----------------|--------------|----------------|----------------|
+|Message extensions - auth and config | A message extension that has a configuration page, accepts search requests, and returns results after the user has signed in. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)|
 
 ## See also
 

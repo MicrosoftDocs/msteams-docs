@@ -4,14 +4,13 @@ author: surbhigupta
 description: Learn to integrate a Power Virtual Agents chatbot in the Teams platform to create conversational chatbots and to integrate it with Teams
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.author: lajanuar
 ---
 
 # Add Power Virtual Agents chatbot
 
 Power Virtual Agents is a no-code, guided graphical interface solution that empowers every member of your team to create rich, conversational chatbots that easily integrate with the Teams platform. All content authored in Power Virtual Agents renders naturally in Teams. Power Virtual Agents bots engage with users in the Teams native chat canvas. The IT administrators, business analysts, domain specialists, and skilled app developers can design, develop, and publish intelligent virtual agents for Teams without having to setup a development environment. They can create a web service, or directly register with the Bot Framework.
 
-This document guides you on how to make your chatbot available in Teams through the Power Virtual Agents portal, and add your bot to Teams using Developer Portal.
+This document guides you on how to make your chatbot available in Teams through the Power Virtual Agents portal and add your bot to Teams using Developer Portal.
 
 Power Virtual Agents lets you create powerful chatbots that can answer questions posed by your customers, other employees, or visitors to your website or service.
 
@@ -57,11 +56,11 @@ If [uploading custom apps is enabled](/microsoftteams/admin-settings) in your Te
 
       :::image type="content" source="../../assets/images/tdp/home-page-dev-portal.png" alt-text="Screenshot shows home page of the Developer Portal apps in Teams client.":::
 
-1. **Create the Teams app manifest in Developer Portal**
+1. **Create the app manifest (previously called Teams app manifest) in Developer Portal**
 
    1. Bots in Teams are defined by an app manifest JSON file that provides the basic information about your bot and its capabilities. In **Developer Portal**, select **Apps**, and select **New app**.
 
-      :::image type="content" source="../../assets/images/tdp/create-new-app.png" alt-text="Screenshot shows how to create Teams app manifest in Developer Portal.":::
+      :::image type="content" source="../../assets/images/tdp/create-new-app.png" alt-text="Screenshot shows how to create app manifest in Developer Portal.":::
 
    1. Enter your app name and select **Save**.
 
@@ -91,17 +90,14 @@ If [uploading custom apps is enabled](/microsoftteams/admin-settings) in your Te
 
    The set up process for adding your Power Virtual Agents chat bot to Teams is complete. You can now start a conversation with your bot in a personal chat.
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Create a Virtual Assistant](~/samples/virtual-assistant.md)
-
 ## See also
 
+* [Integrate web apps](../../samples/integrate-web-apps-overview.md)
+* [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md)
 * [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
 * [Create a chatbot for Teams with Microsoft Power Virtual Agents](../bot-features.md#bots-with-power-virtual-agents)
 * [Power Virtual Agents portal](https://powervirtualagents.microsoft.com)
 * [Publish your Power Virtual Agents bot](/power-virtual-agents/publication-fundamentals-publish-channels)
-* [Security and compliance in Microsoft Teams](/MicrosoftTeams/security-compliance-overview)
+* [Security and compliance in Microsoft Teams](/microsoftteams/security-compliance-overview)
 * [Human resources Power Virtual Agents bot](/power-virtual-agents/teams/fundamentals-get-started-teams)
 * [Add a chatbot to Microsoft Teams from within the Teams app](/power-virtual-agents/teams/publication-add-bot-to-microsoft-teams-teams)

@@ -5,6 +5,7 @@ description: In this module, learn about virtual tables entity reference and the
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
+ms.date: 09/30/2022
 ---
 
 # Virtual tables entity reference
@@ -291,3 +292,8 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 |`m365_video` |String |If the current item is also available as a special folder, this facet is returned. Read-only. This attribute is a JSON encoded string. For example, {"bitrate": 10646968, "duration": 1050683, "height": 720,  "width": 1280,  "audioBitsPerSample": 16, "audioChannels": 1, "audioFormat": "PCM", "audioSamplesPerSecond": 32000, "fourCC": "H264", "frameRate": 60} |
 |`m365_webdavurl` |String | WebDAV compatible URL for the item. |
 |`m365_weburl` |String |URL that displays the resource in the browser. Read-only. |
+
+## See also
+
+* [Integrate web apps](integrate-web-apps-overview.md)
+* [Microsoft Graph overview](/graph/teams-concept-overview)

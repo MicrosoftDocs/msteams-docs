@@ -3,6 +3,7 @@ title: Tabs on mobile
 description: Learn how tab functions on Android and iOS Microsoft Teams clients (mobile), their authentication, low bandwidth connection, testing, or distribution.
 ms.topic: conceptual
 ms.localizationpriority: high
+ms.date: 11/02/2022
 ---
 
 # Tabs on mobile
@@ -24,10 +25,11 @@ Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsour
 > * For all apps that are not distributed through the AppSource, the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
 > * The default behavior of apps is only applicable if distributed through the Teams store. By default, all tabs open in the Teams client.
 > * To initiate an evaluation of your app for mobile-friendliness, reach out to teamsubm@microsoft.com with your app details.
+> * If a mobile app has multiple tabs, whenever the user switches a tab, the tab doesn't reload.
 
 ## Authentication
 
-For authentication to work on mobile clients, you must upgrade you Teams JavaScript SDK to at least version 1.4.1.
+For authentication to work on mobile clients, you must upgrade you Teams JavaScript library to at least version 1.4.1.
 
 ## Low bandwidth and intermittent connections
 
@@ -60,9 +62,9 @@ The following table describes tab availability and behavior when the app is list
 |Personal app|No|Not applicable|
 
 > [!NOTE]
-> The bot messages are shown in the chat section if a mobile app has both the bot and tab capabilities.
 >
-> When you select **Chat** of the bot app and select **More (...)**, you can't see the tab capability of that app in the list. However, if you select **More (...)** from the lower right of the **Chat** section, you can view the tab app with a link to the bot app capability of that app.
+> * The bot messages are shown in the chat section if a mobile app has both the bot and tab capabilities.
+> * When you select **Chat** of the bot app and select **More (...)**, you can't see the tab capability of that app in the list. However, if you select **More (...)** from the lower right of the **Chat** section, you can view the tab app with a link to the bot app capability of that app.
 
 ### Apps not on Teams store
 
@@ -84,3 +86,4 @@ If you are sideloading your app or publishing to an organization's app catalog, 
 * [Test your app](../../concepts/build-and-test/test-app-overview.md)
 * [Distribute your Microsoft Teams app](../../concepts/deploy-and-publish/apps-publish-overview.md)
 * [Create Teams app package](../../concepts/build-and-test/apps-package.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md#statictabs)

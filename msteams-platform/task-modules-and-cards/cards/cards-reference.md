@@ -3,11 +3,12 @@ title: Types of cards
 description: In this module, learn what are cards and card actions available to bots in Teams and create a hero, thumbnail and adaptive cards.
 ms.localizationpriority: high
 ms.topic: reference
+ms.date: 06/13/2023
 ---
 
 # Types of cards
 
-Adaptive, hero, list, Office 365 Connector, receipt, sign in, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They're based on cards defined by the Bot Framework, but Teams doesn't support all Bot Framework cards and has added some of its own.
+Adaptive, hero, list, connector card for Microsoft 365 Groups, receipt, sign in, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They're based on cards defined by the Bot Framework, but Teams doesn't support all Bot Framework cards and has added some of its own.
 
 Before you identify the different card types, understand how to create a hero card, thumbnail card, or Adaptive Card.
 
@@ -47,29 +48,29 @@ You can identify and use different types of cards based on your application requ
 | [Adaptive Card](#adaptive-card) | This card is highly customizable and can contain any combination of text, speech, images, buttons, and input fields. |
 | [Hero card](#hero-card) | This card typically contains a single large image, one or more buttons, and a small amount of text. |
 | [List card](#list-card) | This card contains a scrolling list of items. |
-| [Office 365 Connector card](#office-365-connector-card) | This card has a flexible layout with multiple sections, fields, images, and actions. |
+| [Connector card for Microsoft 365 Groups](#connector-card-for-microsoft-365-groups) | This card has a flexible layout with multiple sections, fields, images, and actions. |
 | [Receipt card](#receipt-card) | This card provides a receipt to the user. |
-| [Signin card](#signin-card) | This card enables a bot to request that a user signs in. |
+| [Signin card](#sign-in-card) | This card enables a bot to request that a user signs in. |
 | [Thumbnail card](#thumbnail-card) | This card typically contains a single thumbnail image, some short text, and one or more buttons. |
 | [Card collections](#card-collections) | This card collection is used to return multiple items in a single response. |
 
 ## Features that support different card types
 
-| Card type | Bots | Message extension previews | Message extension results | Task modules | Outgoing Webhooks | Incoming Webhooks | Office 365 Connectors |
+| Card type | Bots | Message extension previews | Message extension results | Task modules | Outgoing Webhooks | Incoming Webhooks | Connectors for Microsoft 365 Groups|
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Adaptive Card | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
-| Office 365 Connector card | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ | ✔️ |
+| Connector card for Microsoft 365 Groups | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ | ✔️ |
 | Hero card | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
 | Thumbnail card | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
 | List card | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ❌ |
 | Receipt card | ✔️ | ❌ | ❌ | ❌ | ❌ | ✔️ | ❌ |
-| Signin card | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Sign in card | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > [!NOTE]
 >
 > * For Adaptive Cards in Incoming Webhooks, all native Adaptive Card schema elements, except `Action.Submit`, are fully supported. The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 >
-> * Adaptive Card supports only Incoming Webhook O365 Connector type and not any other O365 Connector types.
+> * Adaptive Card supports only Incoming Webhook connectors for Microsoft 365 groups type. For these connectors, you can send the Adaptive Card using the following [format](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook).
 
 ## Common properties for all cards
 
@@ -84,7 +85,7 @@ The card can contain an inline image by including a link to the publicly availab
 
 Images are scaled up or down in size to maintain the aspect ratio for covering the image area. Images are then cropped from center to achieve the appropriate aspect ratio for the card.
 
-Images must be at most 1024×1024 and in PNG, JPEG, or GIF format. Animated GIF isn't supported.
+Images must be at most 1024 × 1024 and in PNG, JPEG, or GIF format. Animated GIF isn't supported.
 
 The following table provides the properties of inline card images:
 
@@ -122,8 +123,8 @@ The following table provides the features that support Adaptive Cards:
 
 > [!NOTE]
 >
-> * Teams platform supports v1.4 or earlier of Adaptive Card features for bot sent cards and action based message extensions.
-> * Teams platform supports v1.3 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), tabs, and task modules.
+> * Teams platform supports v1.5 or earlier of Adaptive Card features for bot sent cards and action based message extensions.
+> * Teams platform supports v1.5 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), tabs, and task modules.
 > * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
 > * Media elements are currently not supported in Adaptive Card on the Teams platform.
 > * Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content is not truncated.
@@ -269,6 +270,9 @@ The following code shows an example of an Adaptive Card:
 
 #### Additional information on Adaptive Cards
 
+> [!Note]
+> The `speak` property in an Adaptive Card for Teams bots is supported for immersive readers only.
+
 You can pass dynamic values in an Adaptive Card using the dollar symbol ($) and curly braces. For more information, see [Adaptive Cards Templating](/adaptive-cards/templating/).
 
 Example:
@@ -291,6 +295,8 @@ Bot Framework reference:
 To know more about Adaptive Cards, see [Adaptive Cards](/adaptive-cards/).
 
 You can now work with a hero card, which is a multipurpose card used to visually highlight a potential user selection.
+
+Your bot can mention tags in an Adaptive Card posted into channels. For more information, see [Tag mention](../../bots/how-to/conversations/channel-and-group-conversations.md#tag-mention).
 
 ## Hero card
 
@@ -437,32 +443,34 @@ The following code shows an example of a list card:
 }
 ```
 
-## Office 365 connector card
+## Connector card for Microsoft 365 Groups
 
-You can work with an Office 365 Connector card that provides a flexible layout and is a great way to get useful information. The Office 365 connector card is supported in Teams, not in Bot Framework. This card provides a flexible layout with multiple sections, fields, images, and actions. This card contains a connector card so that it can be used by bots. For differences between connector cards and the Office 365 Connector card, see [Additional information on the Office 365 Connector card](#additional-information-on-the-office-365-connector-card).
+You can work with an connector cards for Microsoft 365 Groups that provides a flexible layout and is a great way to get useful information. The connector card for Microsoft 365 Groups is supported in Teams, not in Bot Framework. This card provides a flexible layout with multiple sections, fields, images, and actions. This card contains a connector card so that it can be used by bots. For differences between connector cards and the connector card for Microsoft 365 Groups, see [Connector card for Microsoft 365 Groupsd](#additional-information-on-the-connector-card-for-microsoft-365-groups).
 
-### Support for Office 365 Connector cards
+### Support for connector cards for Microsoft 365 Groups
 
-The following table provides the features that support Office 365 Connector cards:
+The following table provides the features that support connector cards for Microsoft 365 Groups:
 
 | Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔️ | ✔️ | ✔️ | ❌ |
 
-### Properties of the Office 365 Connector card
+### Properties of the connector card for Microsoft 365 Groups
 
-The following table provides the properties of the Office 365 connector card:
+The following table provides the properties of the connector card for Microsoft 365 Groups:
 
 | Property | Type  | Description |
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum two lines. |
-| summary | Rich text | Summary of the card. Maximum two lines. |
+| summary | Rich text | Required if the card does not contain a text property, otherwise optional. The summary property is typically displayed in the notification pop-up in Teams, as a way to quickly determine what the card is all about.<br><br> **Do** always include a summary.<br> **Don't** include the details in the summary. For example, for a Twitter post, a summary might simply read **New tweet from @someuser** without mentioning the content of the tweet itself.|
 | text | Rich text | Text appears under the subtitle. For formatting options, see [card formatting](~/task-modules-and-cards/cards/cards-format.md). |
 | themeColor | HEX string | Color that overrides the `accentColor` provided from the application manifest. |
 
-### Additional information on the Office 365 Connector card
+For more information on the properties of the connector card for Microsoft 365 Groups, see [card fields](/outlook/actionable-messages/message-card-reference).
 
-Office 365 Connector cards function properly in Microsoft Teams, including [`ActionCard` actions](/outlook/actionable-messages/card-reference#actioncard-action).
+### Additional information on the connector card for Microsoft 365 Groups
+
+Connector cards for Microsoft 365 Groups function properly in Microsoft Teams, including [`ActionCard` actions](/outlook/actionable-messages/card-reference#actioncard-action).
 
 The important difference between using connector cards from a connector and using connector cards in your bot is the handling of card actions. The following table lists the difference:
 
@@ -494,9 +502,9 @@ For all other details about connector card properties, see [actionable message c
 * `originator`
 * `correlationId`
 
-### Example of an Office 365 Connector card
+### Example of a connector card for Microsoft 365 Groups
 
-The following code shows an example of an Office 365 Connector card:
+The following code shows an example of a connector card for Microsoft 365 Groups:
 
 ```json
 {
@@ -631,15 +639,15 @@ Bot Framework reference:
 * [Receipt card Node.js](/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
 * [Receipt card C#](/dotnet/api/microsoft.bot.schema.receiptcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
-## Signin card
+## Sign in card
 
-The sign in card in Teams is similar to the signin card in the Bot Framework except that the signin card in Teams only supports two actions `signin` and `openUrl`.
+The sign in card in Teams is similar to the sign in card in the Bot Framework except that the sign in card in Teams only supports two actions `signin` and `openUrl`.
 
-The signin action can be used from any card in Teams, not just the sign in card. For more information, see [Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
+The sign in action can be used from any card in Teams, not just the sign in card. For more information, see [Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
 ### Support for login cards
 
-The following table provides the features that support sign-in cards:
+The following table provides the features that support sign in cards:
 
 | Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
@@ -964,12 +972,18 @@ The following cards are implemented by the Bot Framework, but aren't supported b
 * Audio cards
 * Video cards
 
+## Code samples
+
+|S.No.| Description|.NET|Node.js|Manifest
+|--|--|--------------------------------------------------------|-----|-----|
+|1|This sample shows how user can send different types of cards using bot which are supported in Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-all-cards/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-all-cards/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-all-cards/csharp/demo-manifest/bot-all-cards.zip)
+
 ## See also
 
-* [Task modules](~/task-modules-and-cards/what-are-task-modules.md)
-* [Format cards](~/task-modules-and-cards/cards/cards-format.md)
+* [Cards and task modules](../cards-and-task-modules.md)
 * [Up to date cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
 * [Work with Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
 * [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)
-* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
-* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Create connectors for Microsoft 365 Groups](../../webhooks-and-connectors/how-to/connectors-creating.md)
+* [Form completion feedback](cards-actions.md#form-completion-feedback)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)

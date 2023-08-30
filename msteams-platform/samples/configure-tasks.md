@@ -5,6 +5,7 @@ description: In this module, learn how to configure Tasks for external clients i
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
+ms.date: 09/30/2022
 ---
 
 # Configure Tasks for external clients
@@ -93,3 +94,8 @@ To create external tasks, follow the steps:
 1. Select **Ok** in Configure Property "Custom Tasks" and Set Properties windows.
 
 1. Save and Publish.
+
+## See also
+
+* [Integrate web apps](integrate-web-apps-overview.md)
+* [Public developer preview manifest schema for Teams](../resources/schema/manifest-schema-dev-preview.md)

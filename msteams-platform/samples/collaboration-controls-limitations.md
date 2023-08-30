@@ -5,6 +5,7 @@ description: In this module, learn about limitations and known issues in Collabo
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
+ms.date: 09/30/2022
 ---
 
 # Limitations and known issues
@@ -94,7 +95,7 @@ This would render in the console log as:
 
 Solution: Refresh your browser or if in Teams app, reload the tab.
 
-If you want to change the app name, icon, or description after uploading it to Teams, see [customize appearance of apps](/MicrosoftTeams/customize-apps#customize-details-of-an-app)
+If you want to change the app name, icon, or description after uploading it to Teams, see [customize appearance of apps](/microsoftteams/customize-apps#customize-details-of-an-app)
 
 ## Error logging
 

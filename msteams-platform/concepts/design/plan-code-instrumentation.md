@@ -5,6 +5,7 @@ description: Learn about planning code instrumentation using an analytics servic
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.date: 11/28/2022
 ---
 
 # Plan code instrumentation using analytics service
@@ -14,7 +15,7 @@ ms.author: surbhigupta
 Your application instrumentation can be captured and analyzed in any analytics service of your choice. It's recommended that you use a analytics service that allows tracking custom events and reporting it with custom context-based attributes.
 
 [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview), a feature of [Azure Monitor](/azure/azure-monitor/), helps in tracking and monitoring app instrumentation. It allows developers to instrument the app, track relevant metrics, and custom business events. You can track events in your Teams app across desktop, web, or mobile clients.
- 
+
 Azure Applications Insights does auto-instrumentation to automatically collect performance, error data, and HTTP requests without code changes. Note that the instrumentation described in the [previous section](strategize-measure.md) requires capturing custom events. It requires adding Application Insights SDK to your application code.
 
 - Follow the guidance [here](/azure/azure-monitor/app/api-custom-events-metrics#prep) to add Application Insights SDK to your code.
@@ -22,7 +23,7 @@ Azure Applications Insights does auto-instrumentation to automatically collect p
 - The [retention workbook](/azure/azure-monitor/app/usage-retention) provides user retention analysis out of box. The workbook allows measuring retention by pre-defined custom events.
 - [User Flows](/azure/azure-monitor/app/usage-flows) provides useful insight on how your users navigate through the app and can be used for tracking custom events as well.
 
-## Telemetry as an Investment
+## Telemetry as an investment
 
 Collecting instrumentation data using the generated analytics is important for improving your app experience and guiding your roadmap. However, your investment in planning analytics and using instrumentation goes beyond the solution. It provides a window into your user’s mind and collects behavior patterns that can help you find the crucial product market fit.
 

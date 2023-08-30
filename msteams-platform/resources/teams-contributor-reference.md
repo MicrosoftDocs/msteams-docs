@@ -1,10 +1,9 @@
 ---
 title: Contribute to Teams documentation
 description: Learn steps for creating and publishing Teams documentation
-author: surbhigupta
-ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
+ms.date: 07/27/2022
 ---
 
 # Contribute to Teams documentation
@@ -67,13 +66,15 @@ Code samples play an important role to use APIs and SDKs effectively. Well prese
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Get Microsoft Learn updates and the latest announcements](/teamblog)
+> [Troubleshoot your Microsoft Teams app](troubleshoot.md)
 
 ## See also
 
+* [Localize your app](../concepts/build-and-test/apps-localization.md)
 * [Microsoft Learn](/)
 * [Microsoft Learn documentation contributor guide](/contribute)
 * [Microsoft Learn style and voice quickstart](/contribute/style-quick-start)
 * [Cutting edge: source code readability tips](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
 * [Teams documentation](/microsoftteams/platform/overview)
 * [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)
+* [Get Microsoft Learn updates and the latest announcements](/teamblog)

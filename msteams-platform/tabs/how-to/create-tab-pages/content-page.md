@@ -1,10 +1,9 @@
 ---
 title: Create a content page
-author: surbhigupta
 description: Learn about webpage within Teams client, and is part of personal, channel, or group custom tab. Create content page and embed it as webview inside task module.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.author: lajanuar
+ms.date: 11/23/2022
 ---
 
 # Create a content page
@@ -27,7 +26,7 @@ You need to focus on making your tab design clean, navigation intuitive, and con
 
 ## Integrate your code with Teams
 
-For your page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and include a call to `app.initialize()` after your page loads.
+For your page to display in Teams, you must include the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and include a call to `app.initialize()` after your page loads.
 
 > [!NOTE]
 > It takes close to 24-48 hours for any content or UI changes to reflect in the tab app due to cache.
@@ -79,11 +78,11 @@ The following code provides an example of how your page and the Teams client com
 
 ## Access additional content
 
-You can access additional content by using the SDK to interact with Teams, creating deep links, using task modules, and verifying if URL domains are included in the `validDomains` array.
+You can access additional content by using TeamsJS to interact with Teams, creating deep links, using task modules, and verifying if URL domains are included in the `validDomains` array.
 
-### Use the SDK to interact with Teams
+### Use TeamsJS to interact with Teams
 
-The [Teams client JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) provides many more functions that you can find useful while developing your content page.
+The [Teams client JavaScript library](~/tabs/how-to/using-teams-client-library.md) provides many more functions that you can find useful while developing your content page.
 
 ### Deep links
 
