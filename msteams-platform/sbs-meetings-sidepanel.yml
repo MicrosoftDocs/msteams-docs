@@ -120,7 +120,7 @@ items:
          * Replace all occurrences of `{{domain-name}}` and `{{Base_URL}}` with your ngrok or dev tunnel domain name.
          * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/manifest-2_1.png" alt-text="Screenshot of ID and bot ID highlighted in red.":::
+         :::image type="content" source="~/assets/images/meetings-side-panel/manifest-2_1.png" alt-text="Screenshot of ID and bot ID highlighted in red." lightbox="~\assets\images\meetings-side-panel\manifest-2_2.png":::
 
 - title: Build and run the service
   durationInMinutes: 1
