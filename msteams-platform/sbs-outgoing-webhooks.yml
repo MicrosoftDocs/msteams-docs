@@ -80,6 +80,7 @@ items:
       [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
       
       ---     
+      
     1. Select **Create an outgoing webhook** from the lower-right corner of the window.
 
        :::image type="content" source="./assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png" alt-text="Screenshot shows the option Create an outgoing webhook highlighted in red.":::
