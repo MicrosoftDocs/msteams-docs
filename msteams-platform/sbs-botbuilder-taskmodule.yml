@@ -44,7 +44,7 @@ items:
   durationInMinutes: 1
   content: | 
 
-   include file - setup local enviornment
+   file - setup local enviornment
 
 - title: Create and register your bot in Azure AD portal
   durationInMinutes: 5
@@ -56,33 +56,33 @@ items:
     * Add Teams channel to deploy the bot to a Teams channel.
     * Create a tunnel to your web server's endpoints by using dev tunnel (recommended) or ngrok.
 
-     Include file Azure bot resource
+     file Azure bot resource
 
-     INCLUDE file Client secret
+     file Client secret
 
-     INCLUDE file Teams channel
+     file Teams channel
 
       # [dev tunnel](#tab/dev)
 
-      INCLUDE file dev Tunnel
+      file dev Tunnel
 
       # [ngrok](#tab/ngrok)
 
-      INCLUDE file ngrok-tunnel
+      file ngrok-tunnel
       ---
 
 - title: Update the Azure AD app registration
   durationInMinutes: 1
   content: |
-    INCLUDE file azure-app-registration
+    file azure-app-registration
 
-    INCLUDE azure-add-scope
+    azure-add-scope
 
-    INCLUDE azure-client-application
+    azure-client-application
 
-    INCLUDE azure-api-permissions
+    azure-api-permissions
 
-    INCLUDE azure-web-authentication
+    azure-web-authentication
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
