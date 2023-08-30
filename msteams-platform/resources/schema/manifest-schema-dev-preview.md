@@ -435,8 +435,6 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`teams`|Object||||
-|`teams.parameters`|Array|5||The minimum item is 1.|
 |`teams.parameters.name`|String|64 characters|✔️|Name of the parameter.|
 |`teams.parameters.inputType`|String|||Type of the parameter. Options are `text`, `textarea`, `number`, `date`, `time`, `toggle`, and `choiceset`. Default value is `text`.|
 |`teams.parameters.title`|String|32 characters|✔️|Title of the parameter.|
@@ -445,7 +443,6 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |`teams.parameters.choices`|Array|10||The choice options for the parameter.|
 |`teams.parameters.choices.title`|String|128|✔️|Title of the choice.|
 |`teams.parameters.choices.value`|String|512|✔️|Value of the choice.|
-|`taskInfo`|Object||||
 |`taskInfo.title`|String|64 characters||Title of the task module.|
 |`taskInfo.width`|String|16||Width of the task module. The value is either a number in pixels or a default layout such as `large`, `medium`, or `small`.|
 |`taskInfo.height`|String|16||Height of the task module. The value is either a number in pixels or a default layout such as `large`, `medium`, or `small`.|
