@@ -106,15 +106,15 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-connector/sln-1.png" alt-text="Screenshot of cloned repository with TeamsToDoAppConnector.sln highlighted in red.":::
 
-    **Create a tunnel**
+      **Create a tunnel**
 
-      # [dev tunnel](#tab/dev)
+        # [dev tunnel](#tab/dev)
 
-      [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+        [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
 
-      # [ngrok](#tab/ngrok)
-      
-      [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+        # [ngrok](#tab/ngrok)
+        
+        [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
 
     1. Go to [Connector Developer Portal](https://outlook.office.com/connectors/publish).
     1. Select **New Connector**.
