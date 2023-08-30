@@ -12,7 +12,7 @@ This section contains the frequently asked questions and the answers.
 ## App validation
 
 <details>
-<summary><br>How can I connect Azure AD to an MPN account?</b><summary>
+<summary><b>How can I connect Azure AD to an MPN account?</b><summary>
 
 <!--Question: Publisher Attestation issue - the app needed to be published first (I attached the screenshot when I tried to submit the attestation). Before doing the Publisher Attestation. I think this is most likely to connect the Azure AD to an MPN account.-->
 
@@ -30,7 +30,7 @@ Resolution - Connect Azure AD to MPN settings](/partner-center/mpn-benefits-azur
 </details>
 <!--
 <details>
-<summary><br>How can I remove the 'white screen' showing under the 'more' section on Teams mobile iOS client for Teams dark mode?</b><summary>
+<summary><b>How can I remove the 'white screen' showing under the 'more' section on Teams mobile iOS client for Teams dark mode?</b><summary>
 
 <!--Question: Partner reported that the tab menu was showing a white screen under the "more" section on the Teams mobile iOS client and for Teams dark mode. We've reproduced the issue with the provided details and observed that it's a common issue for Teams mobile iOS clients and only for dark mode. So, we've raised a bug request for the same
 
@@ -41,7 +41,7 @@ Platform Bug
 ## Bots
 
 <details>
-<summary><br>How can I use Adaptive Cards with a bot so that the desktop app behavior is consistent between web and mobile apps?</b><summary>
+<summary><b>How can I use Adaptive Cards with a bot so that the desktop app behavior is consistent between web and mobile apps?</b><summary>
 
 <!--Question: The bot isn't supposed to crash when the card is invalid. It can fail to display it, but it shouldn't crash. Also the behavior should be consistent between web and mobile.-->
 
@@ -50,19 +50,19 @@ For more information about using Adaptive Cards with a bot, see [Work with Unive
 &nbsp;
 </details>
 <details>
-<summary><br>How can I remove specific messages from bot history? Is there a way to get the chat history and find an activity ID of a specific message?</b><summary>
+<summary><b>How can I remove specific messages from bot history? Is there a way to get the chat history and find an activity ID of a specific message?</b><summary>
 
 Use Delete messages-Bot framework's `DeleteActivity` method: [Update and delete messages sent from bot](bots/how-to/update-and-delete-bot-messages.md#delete-messages).
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>How can I test the validity of the card schema via code?</b><summary>
+<summary><b>How can I test the validity of the card schema via code?</b><summary>
 
 You can test or validate the Adaptive Card schema using the **Adaptive cards editor (preview)** option in [Developer Portal > Tools](https://dev.teams.microsoft.com/tools).
 </details>
 <details>
-<summary><br>Why am I unable to create a bot in Developer Portal?</b><summary>
+<summary><b>Why am I unable to create a bot in Developer Portal?</b><summary>
 
 App registration is disabled for the user or the user doesn't have enough permissions to create an app. For more information, see [limitations and known issues.](~/bots/bot-features.md#limitations-and-known-issues)
 </details>
@@ -70,7 +70,7 @@ App registration is disabled for the user or the user doesn't have enough permis
 ## Live share
 
 <details>
-<summary><br>Can I use my own Azure Fluid Relay service?</b><summary>
+<summary><b>Can I use my own Azure Fluid Relay service?</b><summary>
 
 Yes! When initializing Live Share, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, but you'll need to implement the `ITokenProvider` interface to sign tokens for your containers. For example, you can use a provided `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
 
@@ -85,21 +85,21 @@ For more information, see [how to guide](apps-in-teams-meetings/teams-live-share
 &nbsp;
 </details>
 <details>
-<summary><br>How long is data stored in Live Share's hosted service accessible?</b><summary>
+<summary><b>How long is data stored in Live Share's hosted service accessible?</b><summary>
 
 Any data sent or stored through Fluid containers created by Live Share's hosted Azure Fluid Relay service is accessible for 24 hours. If you want to persist data beyond 24 hours, you can replace our hosted Azure Fluid Relay service with your own. Alternatively, you can use your own storage provider in parallel to Live Share's hosted service.
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>What meeting types does Live Share support?</b><summary>
+<summary><b>What meeting types does Live Share support?</b><summary>
 
 Live Share supports scheduled meetings, one-on-one calls, group calls, and meet now. Channel meetings aren't yet supported.
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>Will Live Share's media package work with DRM content?</b><summary>
+<summary><b>Will Live Share's media package work with DRM content?</b><summary>
 
 Live Share's media package work doesn't with DRM content. Currently, Teams doesn't support encrypted media for tab applications on desktop. Chrome, Edge, and mobile clients are supported.
 
@@ -108,28 +108,28 @@ For more information, you can [track the issue here](https://github.com/microsof
 &nbsp;
 </details>
 <details>
-<summary><br>How many people can attend a Live Share session?</b><summary>
+<summary><b>How many people can attend a Live Share session?</b><summary>
 
 Currently, Live Share supports a maximum of 100 attendees per session. If it's something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>Can I use Live Share's data structures outside of Teams?</b><summary>
+<summary><b>Can I use Live Share's data structures outside of Teams?</b><summary>
 
 Currently, Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` won't work outside Microsoft Teams. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>Can I use multiple Fluid containers?</b><summary>
+<summary><b>Can I use multiple Fluid containers?</b><summary>
 
 Currently, Live Share only supports having one container using our provided Azure Fluid Relay service. However, it's possible to use both a Live Share container and a container created by your own Azure Fluid Relay instance.
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>Can I change my Fluid container schema after creating the container?</b><summary>
+<summary><b>Can I change my Fluid container schema after creating the container?</b><summary>
 
 Currently, Live Share doesn't support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. Because Live Share sessions are short-lived, this is most commonly an issue during development after adding new features to your app.
 
@@ -150,7 +150,7 @@ If you plan to update your app with new `SharedObject` or `LiveObject` instances
 &nbsp;
 </details>
 <details>
-<summary><br>Are there limits to how many change events I can emit through Live Share?</b><summary>
+<summary><b>Are there limits to how many change events I can emit through Live Share?</b><summary>
 
 While Live Share is in Preview, any limit to events emitted through Live Share isn't enforced. For optimal performance, you must debounce changes emitted through `SharedObject` or `LiveObject` instances to one message per 50 milliseconds or more. This is especially important when sending changes based on mouse or touch coordinates, such as when synchronizing cursor positions, inking, and dragging objects around a page.
 <br>
@@ -158,7 +158,7 @@ While Live Share is in Preview, any limit to events emitted through Live Share i
 </details>
 
 <details>
-<summary><br>Is Live Share supported for Government Community Cloud (GCC), Government Community Cloud High (GCC-High), and Department of Defense (DOD) tenants?</b><summary>
+<summary><b>Is Live Share supported for Government Community Cloud (GCC), Government Community Cloud High (GCC-High), and Department of Defense (DOD) tenants?</b><summary>
 
 Live Share isn't supported for GCC, GCC-High, and DOD tenants.
 
@@ -167,7 +167,7 @@ Live Share isn't supported for GCC, GCC-High, and DOD tenants.
 </details>
 
 <details>
-<summary><br><b>Does Live Share support external and guest users?</b></b><summary>
+<summary><b><b>Does Live Share support external and guest users?</b></b><summary>
 
 Yes, Live Share supports guest and external users for most meeting types. However, guest users aren't supported in channel meetings.
 
@@ -176,7 +176,7 @@ Yes, Live Share supports guest and external users for most meeting types. Howeve
 </details>
 
 <details>
-<summary><br><b>Does Live Share support Teams Rooms devices?</b></b><summary>
+<summary><b><b>Does Live Share support Teams Rooms devices?</b></b><summary>
 
 No, Live Share doesn't support Teams Rooms devices.
 
@@ -185,7 +185,7 @@ No, Live Share doesn't support Teams Rooms devices.
 </details>
 
 <details>
-<summary><br><b>Do Live Share apps support meeting recordings?</b></b><summary>
+<summary><b><b>Do Live Share apps support meeting recordings?</b></b><summary>
 
 No, Live Share doesn't support Teams Rooms devices.
 
@@ -196,7 +196,7 @@ No, Live Share doesn't support Teams Rooms devices.
 ## Microsoft Graph
 
 <details>
-<summary><br>How can a user set their timezone to get notifications at a preferred time?</b><summary>
+<summary><b>How can a user set their timezone to get notifications at a preferred time?</b><summary>
 
 You can use the following Graph API [Get user mailbox settings](/graph/api/user-get-mailboxsettings#permissions). You can get the user’s time zone as follows:
 
@@ -207,14 +207,14 @@ You can use the following Graph API [Get user mailbox settings](/graph/api/user-
 
 </details>
 <details>
-<summary><br>How can I deploy the code in Azure using Teams Toolkit, and use Graph API to get a user profile photo?</b><summary>
+<summary><b>How can I deploy the code in Azure using Teams Toolkit, and use Graph API to get a user profile photo?</b><summary>
 
 For more information on Teams Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [TeamsFx Library](toolkit/TeamsFx-CLI.md).
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>Does Graph API work in Postman?</b><summary>
+<summary><b>Does Graph API work in Postman?</b><summary>
 
 You can use the Microsoft Graph Postman collection with Microsoft Graph APIs.
 
@@ -223,7 +223,7 @@ For more information, see [Use Postman with the Microsoft Graph API](/graph/use-
 &nbsp;
 </details>
 <details>
-<summary><br>Does Graph API work in Microsoft Graph explorer?</b><summary>
+<summary><b>Does Graph API work in Microsoft Graph explorer?</b><summary>
 
 Yes, Graph API works in Microsoft Graph explorer.
 
@@ -235,7 +235,7 @@ For more information, see [Graph explorer](https://developer.microsoft.com/graph
 ## Moodle
 
 <details>
-<summary><br>What should I do if one or more of the course teams weren't created after synchronization?</b><summary>
+<summary><b>What should I do if one or more of the course teams weren't created after synchronization?</b><summary>
 
 Each Moodle course must have at least one faculty and one student matched to a Microsoft 365 AAD UPN account. The team can't be created if the synchronization doesn't find a match.
 
@@ -244,7 +244,7 @@ Each team course instance must have an owner, and the synchronization sets the f
 &nbsp;
 </details>
 <details>
-<summary><br>What should we do to remove Moodle login page when working from Teams? Can we force single sign-on (SSO)?</b><summary>
+<summary><b>What should we do to remove Moodle login page when working from Teams? Can we force single sign-on (SSO)?</b><summary>
 
 The app users have multiple sign-in options from the Moodle login page.
 
@@ -255,7 +255,7 @@ The app users have multiple sign-in options from the Moodle login page.
 
 </details>
 <details>
-<summary><br>How can I specify which users to sync? I don’t want all Azure AD users synchronized with the Moodle website. </b><summary>
+<summary><b>How can I specify which users to sync? I don’t want all Azure AD users synchronized with the Moodle website. </b><summary>
 
 Use the **User Creation Restriction** option to specify the app users by synchronizing the configuration options of the **local_o365** plugin. The dropdown menu to the left of the **filter** offers options, such as Country or region, Company Name, and Language.
 
@@ -271,7 +271,7 @@ The following image shows user creation restrictions options:
 &nbsp;
 </details>
 <details>
-<summary><br>We would like our faculty to be able to synchronize courses to Teams. Are Moodle administrators the only ones who can control synchronization of courses?</b><summary>
+<summary><b>We would like our faculty to be able to synchronize courses to Teams. Are Moodle administrators the only ones who can control synchronization of courses?</b><summary>
 
 By default, only Moodle administrators can configure synchronization. The team owner can control if a course is synchronized to Teams and **Allow configure course sync in course** is enabled. In this case, the team owner is the faculty. The block displays the configuration option to individuals with the appropriate owner permissions.
 
@@ -286,7 +286,7 @@ The following image shows synchronization of courses:
 &nbsp;
 </details>
 <details>
-<summary><br>We have followed the documentation, but the user accounts fail to sync AAD and Moodle. What should we do?</b><summary>
+<summary><b>We have followed the documentation, but the user accounts fail to sync AAD and Moodle. What should we do?</b><summary>
 
 The issue can be resolved before users perform the **Delta token clean up** as a final troubleshooting step.
 
@@ -303,7 +303,7 @@ The following table provides the actions and dependencies to be performed and ch
 &nbsp;
 </details>
 <details>
-<summary><br>One or more users are unable to sign in using their Microsoft 365 credentials, although most users can sign in without an issue. What would be the cause of this inconsistency?</b><summary>
+<summary><b>One or more users are unable to sign in using their Microsoft 365 credentials, although most users can sign in without an issue. What would be the cause of this inconsistency?</b><summary>
 
 The reason for inconsistencies with users being able unable to sign using their Microsoft 365 credentials can be related to the user mapping operation during synchronization. To resolve the issue, perform the following steps:
 
@@ -316,7 +316,7 @@ The reason for inconsistencies with users being able unable to sign using their 
 
 </details>
 <details>
-<summary><br>All users are unable to sign in using their Microsoft 365 credentials. What can we do to resolve this?</b><summary>
+<summary><b>All users are unable to sign in using their Microsoft 365 credentials. What can we do to resolve this?</b><summary>
 
 Users who were unable to sign in at the start need to report the issue and verify that the application's **Client secret** hasn't expired.
 
@@ -333,7 +333,7 @@ If the **Client secret** has expired, then the app user needs to generate a new 
 &nbsp;
 </details>
 <details>
-<summary><br>How to change the Teams instance that is linked to a course?</b><summary>
+<summary><b>How to change the Teams instance that is linked to a course?</b><summary>
 
 Administrators can change the Teams instance associated with a course through the **Manage Teams Connections** page. Select **Connect** next to the course to be changed and select a Teams instance. If you use course reset to archive a team, you can link it back to the previous team.
 
@@ -344,7 +344,7 @@ The following image shows the Teams instance:
 &nbsp;
 </details>
 <details>
-<summary><br>Why isn’t the Atto Teams meeting integration showing up within the Atto editor?</b><summary>
+<summary><b>Why isn’t the Atto Teams meeting integration showing up within the Atto editor?</b><summary>
 
 The user can face Atto Teams meeting issue if the icon reference is missing in the **Toolbar config**, which displays the Teams icon within the Atto editor. The user needs to add Teams meeting icon to the right of the links icon using the following steps:
 
@@ -366,7 +366,7 @@ For more information on editing Atto toolbar, see:
 &nbsp;
 </details>
 <details>
-<summary><br>Do the meetings scheduled through Microsoft integration appear in Outlook or in Teams calendars? What is the standard timeline for the meetings to be displayed?</b><summary>
+<summary><b>Do the meetings scheduled through Microsoft integration appear in Outlook or in Teams calendars? What is the standard timeline for the meetings to be displayed?</b><summary>
 
 The meetings scheduled through the app don't appear in the scheduler’s Outlook or Teams calendar as they're similar to Channel Meetings. All the members in the course channel can attend the meeting directly from the embedded channel link. For more information, see [Channel meetings](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
 
@@ -375,7 +375,7 @@ However, you can access the invite and manually add participant names to the **R
 &nbsp;
 </details>
 <details>
-<summary><br>Is there any support site where we can get more help on products and other issues?</b><summary>
+<summary><b>Is there any support site where we can get more help on products and other issues?</b><summary>
 
 For support and help on the product and services issues or developer community help see, [Support and feedback](feedback.md).
 
@@ -384,7 +384,7 @@ For support and help on the product and services issues or developer community h
 ## Notifications
 
 <details>
-<summary><br>How can I save conservation reference in a proactive bot?</b><summary>
+<summary><b>How can I save conservation reference in a proactive bot?</b><summary>
 
 It's recommended that you save conversation references to database and use the same for building conversation object to send proactive message.
 
@@ -398,56 +398,56 @@ It's recommended that you save conversation references to database and use the s
 <br>
 
 <details>
-<summary><br>Do I need to make any changes in the app to get the landscape mode?</b><summary>
+<summary><b>Do I need to make any changes in the app to get the landscape mode?</b><summary>
 
 No. You can use apps in landscape mode by default.
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>What if my app doesn't support one of the modes, or if the scenario is only intended to work in one of the modes?</b><summary>
+<summary><b>What if my app doesn't support one of the modes, or if the scenario is only intended to work in one of the modes?</b><summary>
 
 Teams supports both modes by default. The apps in Teams aren't supported to work in one mode only. If your app demands this requirement, reach out to the [support team](feedback.md).
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>How can I fix the scroll missing in the app empty state?</b><summary>
+<summary><b>How can I fix the scroll missing in the app empty state?</b><summary>
 
 Add `<FlexColumn scroll></FlexColumn>` to the empty state for the app.
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>How can I test my app compatibility in both landscape and portrait modes?</b><summary>
+<summary><b>How can I test my app compatibility in both landscape and portrait modes?</b><summary>
 
 To test your app's compatibility in both modes, run the app on Teams mobile in different device orientations. Ensure that all elements, including buttons, text, and images are correctly aligned and displayed without any UI distortions or cut-offs.
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>Are there any best practices for designing apps that work well in both landscape and portrait modes?</b><summary>
+<summary><b>Are there any best practices for designing apps that work well in both landscape and portrait modes?</b><summary>
 Yes, when designing apps for Teams, it's essential to follow responsive design principles to ensure optimal performance and user experience in both landscape and portrait modes. Use flexible layouts and adaptive components to accommodate different screen sizes and orientations.
 <br>
 &nbsp;
 </details>
 <details>
 
-<summary><br>Does landscape mode support both Android and iOS Teams apps?</b><summary>
+<summary><b>Does landscape mode support both Android and iOS Teams apps?</b><summary>
 
 Yes, the landscape mode is supported on both Android and iOS Teams apps, providing consistent experience for users across both platforms.
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>Can I customize the app's behavior differently for landscape and portrait modes?</b><summary>
+<summary><b>Can I customize the app's behavior differently for landscape and portrait modes?</b><summary>
 
 The behavior of the app remains consistent across both modes. However, if you have specific use cases or requirements that require different behaviors in each mode, reach out to the [support team](feedback.md) with your feedback and suggestions.
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>Is there any impact on the performance of apps in landscape mode?</b><summary>
+<summary><b>Is there any impact on the performance of apps in landscape mode?</b><summary>
 
 No, the landscape mode support in Teams doesn't have any negative effect on app performance. Teams ensures a smooth and seamless experience for users, regardless of the device orientation.
 <br>
@@ -457,14 +457,14 @@ No, the landscape mode support in Teams doesn't have any negative effect on app 
 ## Partner Center
 
 <details>
-<summary><br>Where do you find MPN ID?</b><summary>
+<summary><b>Where do you find MPN ID?</b><summary>
 
 You can find your MPN ID by fetching the Partner Center ID.
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>I can't see the Developer Tab in Partner Center. How can I fix it?</b><summary>
+<summary><b>I can't see the Developer Tab in Partner Center. How can I fix it?</b><summary>
 
 If you can't see the Developer tab, you can raise a ticket in Partner Center.
 
@@ -473,7 +473,7 @@ For more information about raising a ticket, see [Get help or open a support tic
 &nbsp;
 </details>
 <details>
-<summary><br>How do I create a Partner Center account?</b><summary>
+<summary><b>How do I create a Partner Center account?</b><summary>
 
 You can create a Partner Center account one of the following ways:
 
@@ -484,7 +484,7 @@ You can create a Partner Center account one of the following ways:
 
 </details>
 <details>
-<summary><br>How can I find my account in Partner Center?</b><summary>
+<summary><b>How can I find my account in Partner Center?</b><summary>
 
 Open a [Partner Center support ticket](https://partner.microsoft.com/support/v2/?stage=1) and select the following:
 
@@ -498,21 +498,21 @@ Open a [Partner Center support ticket](https://partner.microsoft.com/support/v2/
 
 </details>
 <details>
-<summary><br>Where can I get support for my Partner Center account issues?</b><summary>
+<summary><b>Where can I get support for my Partner Center account issues?</b><summary>
 
 Visit the [publishers support page](https://aka.ms/marketplacepublishersupport) to search for your issue. If the guidance isn't helpful, create a [Partner Center support ticket](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>How do I manage my Microsoft 365 Store account in Partner Center?</b><summary>
+<summary><b>How do I manage my Microsoft 365 Store account in Partner Center?</b><summary>
 
 See [manage your account through Partner Center](/office/dev/store/manage-account-settings-and-profile) for information.
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>My phone number doesn't have an area code, so how do I add it to my profile?</b><summary>
+<summary><b>My phone number doesn't have an area code, so how do I add it to my profile?</b><summary>
 
 The phone number has three parts: country code, area code, and telephone number. If your phone number doesn't include an area code, leave the second box empty and complete the third box.
 <br>
@@ -520,14 +520,14 @@ The phone number has three parts: country code, area code, and telephone number.
 </details>
 <details>
 
-<summary><br>How do I manage my account settings and partner profile in Partner Center?</b><summary>
+<summary><b>How do I manage my account settings and partner profile in Partner Center?</b><summary>
 
 See [manage account settings and profile info](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) for information.
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>Why do I see a, "This account is not publish eligible," message when I try to submit my app?</b><summary>
+<summary><b>Why do I see a, "This account is not publish eligible," message when I try to submit my app?</b><summary>
 
 You received this error message because your [account verification status](/partner-center/verification-responses) is pending. Check your status in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select the **Settings** gear icon and choose **Developer settings > Account > Account settings**.
 
@@ -536,7 +536,7 @@ You received this error message because your [account verification status](/part
 &nbsp;
 </details>
 <details>
-<summary><br>What is verified in the Partner Center account verification process?</b><summary>
+<summary><b>What is verified in the Partner Center account verification process?</b><summary>
 
 There are three verification areas, **Email Ownership**, **Employment**, and **Business**. For more information, see [what is verified and how to respond](/partner-center/verification-responses#what-is-verified-and-how-to-respond).
 
@@ -547,7 +547,7 @@ After the verification process is complete, the status of your enrollment on the
 &nbsp;
 </details>
 <details>
-<summary><br>My account verification status hasn't advanced beyond Email Ownership. How should I proceed?</b><summary>
+<summary><b>My account verification status hasn't advanced beyond Email Ownership. How should I proceed?</b><summary>
 
 During the **Email Ownership** verification process, a verification email is sent to the primary contact. Check your primary contact inbox for an email from **<maccount@microsoft.com>** with the subject line **Action needed: Verify your email account with Microsoft** and complete the email verification process. The verification email is sent to the address listed on your Partner Center account settings.
 
@@ -561,7 +561,7 @@ Remember the following points about the email verification process:
 
 </details>
 <details>
-<summary><br>I've checked my mail folders and haven't received the verification email. What must I do next?</b><summary>
+<summary><b>I've checked my mail folders and haven't received the verification email. What must I do next?</b><summary>
 
 Try the following steps:
 
@@ -575,28 +575,28 @@ Try the following steps:
 
 </details>
 <details>
-<summary><br>How long does the employment verification process usually take?</b><summary>
+<summary><b>How long does the employment verification process usually take?</b><summary>
 
 If all the submitted details are correct, the employment verification process takes about two hours to complete.
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>How long does the business verification process usually take?</b><summary>
+<summary><b>How long does the business verification process usually take?</b><summary>
 
 If all the required documents are submitted, business verification takes one to two business days to complete.
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>If I reach out to the support team, will my ticket be expedited?</b><summary>
+<summary><b>If I reach out to the support team, will my ticket be expedited?</b><summary>
 
 Support tickets get resolved in a week. Check for updates sent to the email you provided when creating the support ticket.
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>I created a support ticket but haven't received an update in seven business days. Where can I get help?</b><summary>
+<summary><b>I created a support ticket but haven't received an update in seven business days. Where can I get help?</b><summary>
 
 Send an email to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> with the following details:
 
@@ -610,7 +610,7 @@ Send an email to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com<
 
 </details>
 <details>
-<summary><br>Where else can I go for Partner Center help?</b><summary>
+<summary><b>Where else can I go for Partner Center help?</b><summary>
 
 The following resources can also assist:
 
@@ -623,7 +623,7 @@ The following resources can also assist:
 ## Single sign-on
 
 <details>
-<summary><br>How can I validate a user when they invoke an Adaptive Card? </b><summary>
+<summary><b>How can I validate a user when they invoke an Adaptive Card? </b><summary>
 
 You can open the authentication page in the task module when the user selects the button.
 
@@ -634,14 +634,14 @@ You can use the [code sample](https://github.com/OfficeDev/Microsoft-Teams-Sampl
 </details>
 </details>
 <details>
-<summary><br>How can I change application ID URI of SSO scope to use bot ID also so that the consent window won't be required for a bot app?</b><summary>
+<summary><b>How can I change application ID URI of SSO scope to use bot ID also so that the consent window won't be required for a bot app?</b><summary>
 
 For more information, see [Configure your app in Azure AD](bots/how-to/authentication/bot-sso-register-aad.md).
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>I want to open an iframe that contains a React app (that displays confidential information) from a bot task module securely. Can you suggest what is the best, easiest, and standard approach to perform this operation?</b><summary>
+<summary><b>I want to open an iframe that contains a React app (that displays confidential information) from a bot task module securely. Can you suggest what is the best, easiest, and standard approach to perform this operation?</b><summary>
 
 Implement react page with tab SSO and render the content as required. You can open the same tab URL as task module from bot.
 
@@ -650,21 +650,21 @@ For more information, see [Enable SSO for tab app](tabs/how-to/authentication/ta
 &nbsp;
 </details>
 <details>
-<summary><br>How can I avoid SDK timeout error while the app user signs in?</b><summary>
+<summary><b>How can I avoid SDK timeout error while the app user signs in?</b><summary>
 
 Open the sign in simple start page instead of opening login page directly to resolve the issue.
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>How can I generate the access token using the endpoint oauth2/v2.0/token with grant type as "authorization_code"?</b><summary>
+<summary><b>How can I generate the access token using the endpoint oauth2/v2.0/token with grant type as "authorization_code"?</b><summary>
 
 Configure the application you're using to only execute HTML encoding of the scopes once, so the scopes can be correctly sent and evaluated by Azure AD.
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>How can I implement Bot SSO using React?</b><summary>
+<summary><b>How can I implement Bot SSO using React?</b><summary>
 
 If you use Teams Toolkit to build your app, see [Add single sign-on to Teams app](toolkit/add-single-sign-on.md) for more information.
 
@@ -676,21 +676,21 @@ For more information about Node js code sample, see [Bot SSO quick-start](https:
 ## Tabs
 
 <details>
-<summary><br>How can I use deeplink to get the subEntityId or subPageId on mobile client while navigating from one tab to another tab?</b><summary>
+<summary><b>How can I use deeplink to get the subEntityId or subPageId on mobile client while navigating from one tab to another tab?</b><summary>
 
 Upgrade the Teams JavaScript client SDK to (@microsoft/teams-js": "^2.0.0") to resolve the issue.
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>Which tab gets pinned if both configurable tab and static tab are defined in the app manifest for a specific scope?</b><summary>
+<summary><b>Which tab gets pinned if both configurable tab and static tab are defined in the app manifest for a specific scope?</b><summary>
 
 If you have both configurable tab and static tab defined in your app manifest for a specific scope, Teams pins the static tab by default.
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>What if I already have pre-existing pinned configurable tabs after switching to static tabs?</b><summary>
+<summary><b>What if I already have pre-existing pinned configurable tabs after switching to static tabs?</b><summary>
 
 Pre-existing pinned configurable tab instances of your app continue to work the same. You don't have the option to pin new instances of these configurable tabs. When you select to pin your tab, then Teams pins the static tab of your app.
 <br>
@@ -703,14 +703,14 @@ FAQ for [Provision cloud resources](toolkit/provision.md) using Teams Toolkit.
 <br>
 
 <details>
-<summary><br>How to troubleshoot?</b><summary>
+<summary><b>How to troubleshoot?</b><summary>
 
 If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there will be a hyperlink at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>How can I switch to another Azure subscription while provisioning?</b><summary>
+<summary><b>How can I switch to another Azure subscription while provisioning?</b><summary>
 
 1. Switch subscription in current account or log out and select a new subscription.
 2. If you have already provisioned current environment, you need to create a new environment and perform provision because ARM doesn't support moving resources.
@@ -720,14 +720,14 @@ If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get
 
 </details>
 <details>
-<summary><br>How can I change resource group while provisioning?</b><summary>
+<summary><b>How can I change resource group while provisioning?</b><summary>
 
 Before provision, the toolkit asks you if you want to create a new resource group or use an existing one. You can provide a new resource group name or choose an existing one in this step.
 <br>
 &nbsp;
 </details>
 <details>
-<summary><br>How can I provision a SharePoint-based app?</b><summary>
+<summary><b>How can I provision a SharePoint-based app?</b><summary>
 
 You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 
@@ -738,7 +738,7 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 &nbsp;
 </details>
 <details>
-<summary><br>How can I deploy the code in Azure AD using Teams Toolkit, and use Graph API to get the app user's profile photo?</b><summary>
+<summary><b>How can I deploy the code in Azure AD using Teams Toolkit, and use Graph API to get the app user's profile photo?</b><summary>
 
 Shared references to deploy the code using toolkit:
 
