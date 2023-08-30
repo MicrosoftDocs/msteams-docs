@@ -53,7 +53,7 @@ items:
 
     Clone **Microsoft-Teams-Samples** repository to your local GitHub:  
 
-      [INCLUDE [Set up local environment](includes/get-started/clone-repository)] 
+      [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)] 
 
 - title: Enable developer preview
   durationInMinutes: 1
@@ -102,19 +102,19 @@ items:
   durationInMinutes: 1
   content: | 
 
-    1. Go to **TeamsToDoAppconnector.sln** in the cloned repository.
+   1. Go to **TeamsToDoAppconnector.sln** in the cloned repository.
 
        :::image type="content" source="~/assets/images/sbs-connector/sln-1.png" alt-text="Screenshot of cloned repository with TeamsToDoAppConnector.sln highlighted in red.":::
 
-    1. Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+    **Create a tunnel**
 
-        ```bash
-        ngrok http --host-header=localhost 3978
-        ``` 
-       > [!TIP]
-       > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the command prompt to sign in and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
+      # [dev tunnel](#tab/dev)
 
-       :::image type="content" source="~/assets/images/sbs-connector/ngrok1-1.png" alt-text="Screenshot of ngrok with URL highlighted in red.":::
+      [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+
+      # [ngrok](#tab/ngrok)
+      
+      [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
 
     1. Go to [Connector Developer Portal](https://outlook.office.com/connectors/publish).
     1. Select **New Connector**.
