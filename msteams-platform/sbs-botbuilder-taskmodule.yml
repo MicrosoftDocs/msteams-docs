@@ -45,7 +45,7 @@ items:
   durationInMinutes: 1
   content: | 
 
-   file - setup local enviornment
+   [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
 - title: Create and register your bot in Azure AD portal
   durationInMinutes: 5
@@ -57,33 +57,33 @@ items:
     * Add Teams channel to deploy the bot to a Teams channel.
     * Create a tunnel to your web server's endpoints by using dev tunnel (recommended) or ngrok.
 
-     file Azure bot resource
+     [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
 
-     file Client secret
+     [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
 
-     file Teams channel
+     [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
 
       # [dev tunnel](#tab/dev)
 
-      file dev Tunnel
+         [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
 
       # [ngrok](#tab/ngrok)
 
-      file ngrok-tunnel
+         [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
       ---
 
 - title: Update the Azure AD app registration
   durationInMinutes: 1
   content: |
-    file azure-app-registration
+    [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
-    azure-add-scope
+    [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
 
-    azure-client-application
+    [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
 
-    azure-api-permissions
+    [!INCLUDE [API permission](includes/get-started/azure-api-permissions.md)]
 
-    azure-web-authentication
+    [!INCLUDE [Authentication](includes/get-started/azure-web-authentication.md)]
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
