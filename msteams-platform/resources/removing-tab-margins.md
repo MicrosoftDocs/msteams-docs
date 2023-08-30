@@ -25,23 +25,25 @@ Tab margins removal affects your Teams apps that use tabs. In such cases, you ca
 ## FAQ
 
 <details>
-<summary>Is it OK for app chrome, such as header bar or taskbar, to touch the edges of our designs?</summary>
+<summary><b>Is it OK for app chrome, such as header bar or taskbar, to touch the edges of our designs?</b></summary>
 
 Yes, it's allowed and Teams encourages such designs that help the app to feel native.
 
 </details>
 
 </details>
+</br>
 
 <details>
-<summary>Is it OK for app content, such as text, logos, and images, to touch the left and right edges of our designs?</summary>
+<summary><b>Is it OK for app content, such as text, logos, and images, to touch the left and right edges of our designs?</b></summary>
 
 No, you must provide your own padding or margins of all app content to ensure that it doesn't touch the left and right edges of your UI. You can also add margins at the top of your tab, if necessary.
 
 </details>
+</br>
 
 <details>
-<summary>What's the size of the tab margins that Teams applied previously?</summary>
+<summary><b>What's the size of the tab margins that Teams applied previously?</b></summary>
 
 * Left and right: 20 pixels
 * Top: 16 pixels
