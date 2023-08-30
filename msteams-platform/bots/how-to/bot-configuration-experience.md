@@ -7,12 +7,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ---
 
+# Bot configuration experience
+
 > [!NOTE]
 >
 > * Bot configuration experience is available in [public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md).
 > * Bot configuration is supported in channel or group chat scopes.
-
-# Bot configuration experience
 
 You can configure your bot during installation or you can also configure the bot after installation from the installed scope. The bot configuration experience helps the user to configure their bot without uninstalling the same.
 
@@ -122,5 +122,3 @@ You can use `config/fetch` and `config/submit` properties in the `teamsBot.js` f
               }
           }
     ```
-
-## See also
