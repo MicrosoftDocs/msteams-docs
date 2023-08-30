@@ -69,9 +69,15 @@ items:
 
        :::image type="content" source="./assets/images/sbs-outgoing-webhooks/app-selection.png" alt-text="Screenshot shows the selection of Apps tab under Contoso.":::
 
-    [INCLUDE [Tunnel](includes/get-started/dev-tunnel)]
+    **Create a tunnel**
 
-    [INCLUDE [Tunnel](includes/get-started/ngrok-tunnel)]
+      # [dev tunnel](#tab/dev)
+
+      [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+
+      # [ngrok](#tab/ngrok)
+      
+      [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
 
     1. Select **Create an outgoing webhook** from the lower-right corner of the window.
 
