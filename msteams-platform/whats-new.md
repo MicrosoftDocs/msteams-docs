@@ -26,7 +26,9 @@ Teams platform features that are available to all app developers.
 
 **2023 August**
 
-* ***August 28, 2023***: [Teams app manifest is now referred to as app manifest](resources/schema/manifest-schema.md).
+* ***August 29, 2023***: [Use Teams store with intelligent search experience to display apps that are closest match to the user's specified characters.](concepts/deploy-and-publish/appsource/publish.md#teams-store-search-experience)
+
+* ***August 28, 2023***: [Teams app manifest is now referred to as app manifest.](resources/schema/manifest-schema-dev-preview.md)
 
 * ***August 16, 2023***: [Use Teams Toolkit Visual Studio v17.7 extension with many new app development features to get started with app development for Teams.](toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md)
 
@@ -342,7 +344,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 August**
 
-* ***August 28, 2023***: [Teams app manifest is now referred to as app manifest](resources/schema/manifest-schema-dev-preview.md)
+* ***August 28, 2023***: [Teams app manifest is now referred to as app manifest.](resources/schema/manifest-schema-dev-preview.md)
 
 * ***August 22, 2023***: [Enable RSC permissions for a user using the Graph APIs](graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings).
 
