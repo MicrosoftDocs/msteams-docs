@@ -15,7 +15,7 @@ Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsour
 | **App capability** | **Behavior if app is approved** | **Behavior if app is not approved** |
 | --- | --- | --- |
 | **Personal tabs** | App appears in the bottom bar of the mobile clients. Tabs open in the Teams client. | App does not appear in the bottom bar of the mobile clients. |
-| **Channel and group tabs** | The tab opens in the Teams client using `contentUrl`. | If `websiteUrl` is available in the app manifest file, the tab opens in a browser outside Teams. </br> If `websiteUrl` isn’t available in the app manifest file, the tab isn’t accessible on Teams mobile. However, `websiteUrl` is still accessible on Desktop and web. |
+| **Channel and group tabs** | The tab opens in the Teams client using `contentUrl`. | If `websiteUrl` is available in the app manifest file, the tab opens in a browser outside Teams. </br> If `websiteUrl` isn’t available in the app manifest file, the tab isn’t accessible on Teams mobile. However, tab is still accessible on Desktop and web. |
 
 > [!NOTE]
 >
