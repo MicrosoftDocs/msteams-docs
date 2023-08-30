@@ -6,21 +6,21 @@ ms.localizationpriority: high
 ms.date: 02/09/2023
 ---
 
-# App manifest schema for Teams
+# App manifest schema
 
-The Microsoft Teams app manifest describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json`](https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.15, and the current version is 1.16 are each supported (using "v1.x" in the URL).
-For more information on the changes made in each version, see [manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
+The app manifest (previously called Teams app manifest) describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json`](https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.15, and the current version is 1.16 are each supported (using "v1.x" in the URL).
+For more information on the changes made in each version, see [app manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 The following table lists TeamsJS version and app manifest versions as per different app scenarios:
 
 [!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
 > [!NOTE]
-> If your Teams app is using the manifest version 1.13 or later, ensure that your app meets the criteria to [extend your app to run across Microsoft 365 or Outlook](../../m365-apps/extend-m365-teams-personal-tab.md).
+> If your Teams app is using the app manifest version 1.13 or later, ensure that your app meets the criteria to [extend your app to run across Microsoft 365 or Outlook](../../m365-apps/extend-m365-teams-personal-tab.md).
 
-The following is the sample manifest schema:
+The following is the sample app manifest schema:
 
-## Sample manifest
+## Sample app manifest
 
 ```json
 {
@@ -343,19 +343,19 @@ The schema defines the following properties:
 
 Optional, but recommended—string
 
-The https:// URL referencing the JSON Schema for the manifest.
+The https:// URL referencing the JSON Schema for the app manifest.
 
 ## manifestVersion
 
 **Required**—String
 
-The version of the manifest schema that this manifest is using. Use `1.13` to enable Teams app support in Outlook and Microsoft 365 app; use `1.12` (or earlier) for Teams-only apps.
+The version of the app manifest schema that this manifest is using. Use `1.13` to enable Teams app support in Outlook and Microsoft 365 app; use `1.12` (or earlier) for Teams-only apps.
 
 ## version
 
 **Required**—String
 
-The version of a specific app. When you update something in your manifest, the version must be incremented too. This way, when the new manifest is installed, it overwrites the existing one and the user receives the new functionality. When this app was submitted to the store, the new manifest must be resubmitted and revalidated. The app users receive the new updated manifest automatically within few hours after the manifest is approved.
+The version of a specific app. When you update something in your app manifest, the version must be incremented too. This way, when the new app manifest is installed, it overwrites the existing one and the user receives the new functionality. When this app was submitted to the store, the new app manifest must be resubmitted and revalidated. The app users receive the new updated app manifest automatically within few hours after the app manifest is approved.
 
 If the app requests for permissions change, the users are prompted to upgrade and reconsent to the app.
 
@@ -370,13 +370,13 @@ The ID is a unique Microsoft-generated identifier for the app. You have an ID if
 The ID stored in Teams Admin Center is the **External App ID** and it's visible as **ExternalID** on the traces.
 
 > [!NOTE]
-> If you are submitting an update to your existing app in AppSource, the ID in your manifest must not be modified.
+> If you are submitting an update to your existing app in AppSource, the ID in your app manifest must not be modified.
 
 ## developer
 
 **Required**—Object
 
-Specifies information about your company. For apps submitted to the Teams store, these values must match the information in your store listing. For more information, see the [Teams store publishing guidelines](~/concepts/deploy-and-publish/appsource/publish.md).
+Specifies information about your company. For apps submitted to the Teams store, these values must match the information in your store listing. For more information, see the [Teams store publishing guidelines](~/concepts/deploy-and-publish/appsource/publish.md). Developer name helps improve your app discoverability in the Teams store.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -390,7 +390,7 @@ Specifies information about your company. For apps submitted to the Teams store,
 
 **Required**—Object
 
-The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` must be different.
+The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` must be different. App name helps improve your app discoverability in the Teams store.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -401,7 +401,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 
 **Required**—Object
 
-Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry.
+Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry. App description helps improve your app discoverability in the Teams store.
 
 Ensure that your description describes your experience and helps potential customers understand what your experience does. You must note in the full description, if an external account is required for use. The values of `short` and `full` must be different. Your short description can't be repeated within the long description and must not include any other app name.
 
@@ -418,7 +418,7 @@ Allows the specification of a default language and provides pointers to more lan
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
-|`defaultLanguageTag`||✔️|The language tag of the strings in this top-level manifest file.|
+|`defaultLanguageTag`||✔️|The language tag of the strings in this top-level app manifest file.|
 
 ### localizationInfo.additionalLanguages
 
@@ -452,7 +452,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional**—Array
 
-Used when your app experience has a team channel tab experience that requires extra configuration before it's added. Configurable tabs are supported only in the `team` and `groupChat` scopes and you can configure the same tabs multiple times. However, you can define it in the manifest only once.
+Used when your app experience has a team channel tab experience that requires extra configuration before it's added. Configurable tabs are supported only in the `team` and `groupChat` scopes and you can configure the same tabs multiple times. However, you can define it in the app manifest only once.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -545,7 +545,7 @@ The object is an array (maximum of one element) with all elements of type `objec
 Defines a message extension for the app.
 
 > [!NOTE]
-> The name of the feature was changed from "compose extension" to "message extension" in November, 2017, but the manifest name remains the same so that existing extensions continue to function.
+> The name of the feature was changed from "compose extension" to "message extension" in November, 2017, but the app manifest name remains the same so that existing extensions continue to function.
 
 The item is an array (maximum of one element) with all elements of type `object`. This block is required only for solutions that provide a message extension.
 
@@ -855,7 +855,7 @@ Specify meeting extension definition. For more information, see [custom Together
 **Optional**—Object
 
 > [!NOTE]
-> `authorization` is only supported for manifest version 1.12 or later.
+> `authorization` is only supported for the app manifest version 1.12 or later.
 
 Specify and consolidate authorization related information for the app.
 
@@ -921,22 +921,22 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`MicrophoneStream.Read.User`| Allows the app to read user's microphone stream.|
     |`MeetingParticipantReaction.Read.User`| Allows the app to read user's reactions while participating in a meeting.|
 
-## Create a manifest file
+## Create an app manifest file
 
-If your app doesn't have a Teams app manifest file, you need to create it.
+If your app doesn't have an app manifest file, you need to create it.
 
-To create a Teams app manifest file:
+To create an app manifest file:
 
-1. Use the [sample manifest schema](#sample-manifest) to create a .json file.
+1. Use the [sample app manifest schema](#sample-app-manifest) to create a .json file.
 1. Save it in the root of your project folder as `manifest.json`.
 
 <br>
 <details>
-<summary>Here's an example of manifest schema for a tab app with SSO enabled:</summary>
+<summary>Here's an example of the app manifest schema for a tab app with SSO enabled:</summary>
 <br>
 
 > [!NOTE]
-> The manifest example content shown here is only for a tab app. It uses example values for subdomain URI. For more information, see [sample manifest schema](#sample-manifest).
+> The app manifest example content shown here is only for a tab app. It uses example values for subdomain URI. For more information, see [sample app manifest schema](#sample-app-manifest).
 
   ```json
 { 
@@ -1005,4 +1005,4 @@ To create a Teams app manifest file:
 * [Enable app customization](~/concepts/design/enable-app-customization.md)
 * [Localize your app](~/concepts/build-and-test/apps-localization.md)
 * [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
-* [Public developer preview manifest schema for Microsoft Teams](manifest-schema-dev-preview.md)
+* [Public developer preview app manifest schema](manifest-schema-dev-preview.md)
