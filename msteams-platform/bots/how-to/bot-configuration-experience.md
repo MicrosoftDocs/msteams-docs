@@ -122,3 +122,8 @@ You can use `config/fetch` and `config/submit` properties in the `teamsBot.js` f
               }
           }
     ```
+
+## See also
+
+[Build bots for Teams](../what-are-bots.md)
+[Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
