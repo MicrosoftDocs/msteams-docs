@@ -18,7 +18,7 @@ ms.date: 11/29/2021
 
 Following are the FAQs for [Provision cloud resources using Teams Toolkit](provision.md):
 
-<br>
+</br>
 
 <details>
 
@@ -26,7 +26,7 @@ Following are the FAQs for [Provision cloud resources using Teams Toolkit](provi
 
 If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there'll be a hyperlink at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
 
-<br>
+</br>
 
 </details>
 
@@ -38,7 +38,7 @@ If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get
 2. If you've already provisioned current environment, you need to create a new environment and perform provision because ARM doesn't support moving resources.
 3. If you didn't provision current environment, you can trigger provision directly.
 
-<br>
+</br>
 
 </details>
 
@@ -48,7 +48,7 @@ If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get
 
 Before provision, the tool asks you if you want to create a new resource group or use an existing one. You can provide a new resource group name or choose an existing one in this step.
 
-<br>
+</br>
 
 </details>
 
@@ -61,7 +61,7 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 > [!NOTE]
 > Currently, the building Teams app with SharePoint framework with Teams Toolkit doesn't have direct integration with Azure, the contents in the doc doesn't apply to SPFx-based apps.
 
-<br>
+</br>
 
 </details>
 
