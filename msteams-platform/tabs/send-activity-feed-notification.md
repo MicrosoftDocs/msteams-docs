@@ -12,7 +12,7 @@ The Microsoft Teams activity feed enables users to triage items that require att
 
 ## Use cases of activity feed notifications
 
-* **News**: Helps users to stay updated with the latest information like new assignment or new post.
+* **News**: Helps users to stay updated with the latest information like new assignments or new posts.
 * **Collaboration**: When you share a file or @ mention a user in a comment, users can see a text preview in the notification banner.
 * **Reminders**: A notification to let you know about an event or a task. For example, you have a training due date today, and the app sends you a reminder notification to help you remember the task or event.
 * **Alerts**: Notifications, which require urgent or immediate attention. For example, a training's due date has passed, or an admin has sent a request to fix a bug with the highest priority.
