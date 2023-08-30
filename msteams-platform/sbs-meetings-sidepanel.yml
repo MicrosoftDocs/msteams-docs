@@ -67,17 +67,19 @@ items:
 
     [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
 
+    **Create a tunnel**
+
       # [dev tunnel](#tab/dev)
 
       [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
 
       # [ngrok](#tab/ngrok)
-
+      
       [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
 
+      ---     
+
     [!INCLUDE [messaging endpoint](includes/get-started/messaging-endpoint.md)]
-
-
 
 - title: Update the Azure AD app registration
   durationInMinutes: 1
