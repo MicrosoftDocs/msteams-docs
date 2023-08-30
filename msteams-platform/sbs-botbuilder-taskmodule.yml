@@ -72,6 +72,8 @@ items:
       [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
       ---
 
+     [!INCLUDE [messaging endpoint](includes/get-started/messaging-endpoint.md)]
+
 - title: Update the Azure AD app registration
   durationInMinutes: 1
   content: |
