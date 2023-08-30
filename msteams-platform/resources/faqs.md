@@ -15,7 +15,7 @@ Get answers to some of your queries when using Moodle LMS.<br>
 
 <details>
 
-<summary><b>What should I do if one or more of the course teams weren't created after synchronization?</b><summary>
+<summary><b>What should I do if one or more of the course teams weren't created after synchronization?</b></summary>
 
 Each Moodle course must have at least one faculty and one student matched to a Microsoft 365 AAD UPN account. The team can't be created, if the synchronization doesn't find a match.
 
@@ -27,7 +27,7 @@ Each team course instance must have an owner, and the synchronization sets the f
 
 <details>
 
-<summary><b>What should we do to remove Moodle login page when working from Teams? Can we force single sign-on (SSO)?</b><summary>
+<summary><b>What should we do to remove Moodle login page when working from Teams? Can we force single sign-on (SSO)?</b></summary>
 
 The users have multiple sign in options from the Moodle login page.
 
@@ -40,7 +40,7 @@ The users have multiple sign in options from the Moodle login page.
 
 <details>
 
-<summary><b>How can I specify which users to sync? I don’t want all Azure AD users synchronized with the Moodle website. </b><summary>
+<summary><b>How can I specify which users to sync? I don’t want all Azure AD users synchronized with the Moodle website. </b></summary>
 
 Use the **User Creation Restriction** option to specify the users by synchronizing the configuration options of the **local_o365** plugin. The dropdown menu to the left of the **filter** offers options such as Country or Region, Company Name, and Language.
 
@@ -59,7 +59,7 @@ The following image shows user creation restrictions options:
 
 <details>
 
-<summary><b>We would like our faculty to be able to synchronize courses to Teams? Are Moodle administrators the only ones who can control synchronization of courses?</b><summary>
+<summary><b>We would like our faculty to be able to synchronize courses to Teams? Are Moodle administrators the only ones who can control synchronization of courses?</b></summary>
 
 By default only Moodle administrators can configure synchronization. The team owner can control if a course is synchronized to Teams and **Allow configure course sync in course** is enabled. In this case, the team owner is the faculty. The block displays the configuration option to individuals with the appropriate owner permissions.
 
@@ -79,7 +79,7 @@ The following image shows synchronization of courses:
 
 <details>
 
-<summary><b>We have followed the documentation, but the user accounts fail to sync AAD and Moodle. What should we do?</b><summary>
+<summary><b>We have followed the documentation, but the user accounts fail to sync AAD and Moodle. What should we do?</b></summary>
 
 The issue can be resolved before users perform the **Delta token clean up** as a final troubleshooting step.
 
@@ -98,7 +98,7 @@ The following table provides the actions and dependencies to be performed and ch
 
 <details>
 
-<summary><b>One or more users are unable to sign in using their Microsoft 365 credentials, although most users can sign in without an issue. What would be the cause of this inconsistency?</b><summary>
+<summary><b>One or more users are unable to sign in using their Microsoft 365 credentials, although most users can sign in without an issue. What would be the cause of this inconsistency?</b></summary>
 
 The reason for inconsistencies with users being able unable to sign using their Microsoft 365 credentials can be related to the user mapping operation during synchronization. To resolve the issue, perform the following steps:
 
@@ -113,7 +113,7 @@ The reason for inconsistencies with users being able unable to sign using their 
 
 <details>
 
-<summary><b>All users are unable to sign in using their Microsoft 365 credentials. What can we do to resolve this?</b><summary>
+<summary><b>All users are unable to sign in using their Microsoft 365 credentials. What can we do to resolve this?</b></summary>
 
 Users who were unable to sign in at the start need to report the issue and verify that the application **Client secret** hasn't expired.
 
@@ -133,7 +133,7 @@ If the **Client secret** has expired, then user needs to generate a new **Client
 
 <details>
 
-<summary><b>How to change the teams instance that is linked to a course?</b><summary>
+<summary><b>How to change the teams instance that is linked to a course?</b></summary>
 
 Administrators can change the teams instance associated with a course through the **Manage Teams Connections** page. Select **Connect** next to the course to be changed and select teams instance. If you use course reset to archive a team, you can link it back to the previous team.
 
@@ -147,7 +147,7 @@ The following image shows the teams instance:
 
 <details>
 
-<summary><b>Why isn’t the Atto Teams meeting integration showing up within the Atto editor?</b><summary>
+<summary><b>Why isn’t the Atto Teams meeting integration showing up within the Atto editor?</b></summary>
 
 The user can face Atto Teams meeting issue if the icon reference is missing in the **Toolbar config**, which displays the Teams icon within the Atto editor. User needs to add Teams meeting icon to the right of the links icon using the following steps:
 
@@ -170,7 +170,7 @@ For more information on editing Atto toolbar, see:
 
 <details>
 
-<summary><b>Do the meetings scheduled through Microsoft integration appear in Outlook or in Teams calendars? What is the standard timeline for the meetings to be displayed?</b><summary>
+<summary><b>Do the meetings scheduled through Microsoft integration appear in Outlook or in Teams calendars? What is the standard timeline for the meetings to be displayed?</b></summary>
 
 The meetings scheduled through the app don't appear in the scheduler’s Outlook or Teams calendar as they're similar to Channel Meetings. All the members in the course channel can attend the meeting directly from the embedded channel link. For more information, see [Channel meetings](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
 
@@ -182,6 +182,6 @@ However, you can access the invite and manually add participant names to the **R
 
 <details>
 
-<summary><b>Is there any support site where we can get more help on products and other issues?</b><summary>
+<summary><b>Is there any support site where we can get more help on products and other issues?</b></summary>
 
 For support and help on the product and services issues or developer community help see, [Support and Feedback](/microsoftteams/platform/feedback).
