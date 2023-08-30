@@ -65,11 +65,11 @@ items:
 
       # [dev tunnel](#tab/dev)
 
-         [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+      [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
 
       # [ngrok](#tab/ngrok)
 
-         [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+      [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
       ---
 
 - title: Update the Azure AD app registration
