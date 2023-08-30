@@ -166,12 +166,7 @@ If meeting extension isn't installed:
 
 ## Generate a deep link to share content to stage in meetings
 
-You can also generate a deep link to share the app to stage and start or join a meeting.
-
-> [!NOTE]
-> Deep link to share content to stage in meeting is supported in Teams desktop client only.
-
-When a deep link is selected in an app by a user who is part of an ongoing meeting, then the app is shared to the stage and a permission pop-up window appears. Users can grant access to the participants to collaborate with an app.
+You can also generate a deep link to share the app to stage and start or join a meeting. When a deep link is selected in an app by a user who is part of an ongoing meeting, then the app is shared to the stage and a permission pop-up window appears. Users can grant access to the participants to collaborate with an app.
 
 :::image type="content" source="../../assets/images/integrate-with-teams/screenshot-of-pop-up-permission.png" alt-text="The screenshot is an example that shows a permission pop-up window.":::
 
