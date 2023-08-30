@@ -16,7 +16,7 @@ ms.localizationpriority: high
 
 You can configure your bot during installation or you can also configure the bot after installation from the installed scope. The bot configuration experience helps the user to configure their bot without uninstalling the same.
 
-In the following image the bot is installed in a group chat and when the users hover over the bot an Adaptive Card appears. The user can select the settings icon in the Adaptive Card to update or change the bot's configuration:
+In the following image, the bot is installed in a group chat and when the users hover over the bot an Adaptive Card appears. The user can select the settings icon in the Adaptive Card to update or change the bot's configuration:
 
 :::image type="content" source="../../assets/images/messaging-extension/bot-configuration-experience.PNG" alt-text="Screenshot shows the configuration option for the bot in a Teams group chat.":::
 
@@ -49,11 +49,11 @@ To enable the bot configuration experience, you must configure the `fetchTask` u
 
 ## Configure your bot
 
-When a users installs the bot in a team or group chat scope, the `fetchTask` property in the app manifest file initiates `config/fetch` defined in the teamsBot.js. The bot responds with an Adaptive Card and the user provides relevant information in the Adaptive Card and select **Submit**. After the user selects **Submit**, a `config/submit` is returned to the bot.
+When a user installs the bot in a team or group chat scope, the `fetchTask` property in the app manifest file initiates `config/fetch` defined in the teamsBot.js. The bot responds with an Adaptive Card and the user provides relevant information in the Adaptive Card and select **Submit**. After the user selects **Submit**, a `config/submit` is returned to the bot.
 
 You can use `config/fetch` and `config/submit` properties in the `teamsBot.js` file to enable the bot configuration experience in a team or group chat.
 
-* Invoke `config/fetch`: Invoke `config/fetch` task to start the bot configuration flow and define the bot repsonse as required.
+* Invoke `config/fetch`: Invoke `config/fetch` task to start the bot configuration flow and define the bot response as required.
 
   In the following example, when an `config/fetch` invoke activity is received from the bot, the bot responds with an Adaptive Card:
 

@@ -434,6 +434,14 @@ An optional list of commands that your bot can recommend to users. The object is
 |`items.scopes`|array of enum|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupchat`.|
 |`items.commands`|array of objects|10|✔️|An array of commands the bot supports:<br>`title`: the bot command name (string, 32).<br>`description`: a simple description or example of the command syntax and its argument (string, 128).|
 
+### bots.configuration
+
+The object is a Boolean value with the `fetchTask` element. You must define a separate `fetchTask` property for each scope that your bot supports.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`fetchTask`|Boolean|||A value indicating whether the configuration expderience for the bot is available. The default is `true`.|
+
 ## connectors
 
 Optional:
