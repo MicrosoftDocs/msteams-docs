@@ -36,7 +36,6 @@ items:
     | &nbsp; | Install | For using... |
      | --- | --- | --- |
      | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
-     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |   
      | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments.  If you haven't installed the latest version, install the portable version. |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place |
@@ -77,7 +76,7 @@ items:
       ---     
       [!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
 
-      [INCLUDE [Client secret](includes/get-started/create-client-secret)]
+      [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
 
     **Add API permissions**
 
@@ -137,7 +136,7 @@ items:
         * Set `"MicrosoftAppPassword"` to your bot's client secret ID4 **Value**.
         * Set your `"MicrosoftAppTenantId"` to your tenant ID.
 
-      :::image type="content" source="./assets/images/conversation-bot/appsettings-1.png" alt-text="Screenshot shows the Appsettings Json.":::
+        :::image type="content" source="./assets/images/conversation-bot/appsettings-1.png" alt-text="Screenshot shows the Appsettings Json.":::
 
     1. Select **Save**.
 
