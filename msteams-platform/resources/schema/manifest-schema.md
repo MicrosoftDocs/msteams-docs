@@ -341,7 +341,7 @@ The schema defines the following properties:
 
 ## $schema
 
-Optional, but recommended &ndash; string
+Optional, but recommended &ndash; String
 
 The https:// URL referencing the JSON Schema for the app manifest.
 
@@ -500,8 +500,8 @@ The item is an array (maximum of only one element&mdash;currently only one bot i
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`botId`|string||✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
-|`scopes`|array of enums|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupChat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
+|`botId`|String||✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
+|`scopes`|Array of enums|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupChat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
 |`needsChannelSelector`|Boolean|||Describes whether or not the bot uses a user hint to add the bot to a specific channel. Default: **`false`**|
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: **`false`**|
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: **`false`**|
@@ -534,9 +534,9 @@ The object is an array (maximum of one element) with all elements of type `objec
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`configurationUrl`|string|2048 characters|✔️|The https:// URL to use when configuring the connector using the inline configuration experience.|
-|`scopes`|array of enums|1|✔️|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
-|`connectorId`|string|64 characters|✔️|A unique identifier for the Connector that matches its ID in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).|
+|`configurationUrl`|String|2048 characters|✔️|The https:// URL to use when configuring the connector using the inline configuration experience.|
+|`scopes`|Array of enums|1|✔️|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
+|`connectorId`|String|64 characters|✔️|A unique identifier for the Connector that matches its ID in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).|
 
 ## composeExtensions
 
