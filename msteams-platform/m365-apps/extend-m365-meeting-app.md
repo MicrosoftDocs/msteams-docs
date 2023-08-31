@@ -74,7 +74,7 @@ Extending your Teams meeting app in Outlook involves the following:
 
 If you have an existing meeting app, make a copy or a branch of your production project and update your App ID in the app manifest to use a new identifier which is different from the production App ID for testing.
 
-### Use app manifest version 1.13+
+### Use app manifest version 1.13 or later
 
 Use app manifest schema version 1.13 or later for extending Teams apps to run across other Microsoft 365 hosts including Outlook. If you need to upgrade your app manifest from an earlier version, you have two options:
 
