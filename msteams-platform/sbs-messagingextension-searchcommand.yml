@@ -71,8 +71,6 @@ items:
 
       ---     
 
-    [!INCLUDE [Azure authentication](includes/get-started/azure-web-authentication.md)]
-
     [!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
     
     [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
@@ -144,7 +142,7 @@ items:
 
           :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/file-ready.png" alt-text="Screenshot of cloned repository with the TeamsMessagingExtensionsSearch.csproj highlighted in red.":::
 
-       1. Open **Solution Explorer** from **View**.
+       1. From **View**, select **Solution Explorer** .
 
           :::image type="content" source="./assets/images/Teams-task-module/solutionexplorer_1.png" alt-text="Screenshot of Visual Studio with the menu item Solution Explorer under View is highlighted in red.":::
 
@@ -208,15 +206,13 @@ items:
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/me-addapp.png" alt-text="Screenshot of Search Messaging Extension in Teams with the Add option highlighted in red.":::
 
-       A pop-up opens in a chat.
-
-       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/popup.png" alt-text="Screenshot of a pop-up window opens in a chat displaying the option of your search query.":::
-   
 - title: Interact with the app in Teams
   durationInMinutes: 1
   content: |
     1. Select any option from the pop-up.
 
+       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/popup.png" alt-text="Screenshot of a pop-up window opens in a chat displaying the option of your search query.":::
+   
     1. Enter text and select **send**.
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/option1.png" alt-text="Screenshot of compose message box with the options from pop-up chat being displayed.":::
