@@ -121,11 +121,11 @@ items:
 
        1. From **csharp** folder, select **WebhookSampleBot.sln** file.
 
-           :::image type="content" source="./assets/images//sbs-outgoing-webhooks/open-project.png" alt-text="Screenshot shows to select WebhookSampleBot.sln from csharp folder.":::
+           :::image type="content" source="./assets/images//sbs-outgoing-webhooks/open-project.png" alt-text="Screenshot shows how to select WebhookSampleBot.sln from csharp folder.":::
 
        1. Go to **AuthProvider.cs** file. Update `contoso` to `M365x712764` and add HMAC.  
 
-           :::image type="content" source="./assets/images//sbs-outgoing-webhooks/update-hmac2.png" alt-text="Screenshot shows to update Contoso to M365x712764 and HMAC in AuthProvider.cs file highlighted in red.":::
+           :::image type="content" source="./assets/images//sbs-outgoing-webhooks/update-hmac2.png" alt-text="Screenshot shows how to update Contoso to M365x712764 and HMAC in AuthProvider.cs file highlighted in red.":::
       
        1. Press **F5** to run the project.
 
