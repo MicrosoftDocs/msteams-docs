@@ -414,7 +414,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/bot-running.png" alt-text="Screenshot of Microsoft Teams with Welcome option highlighted under Suggestions.":::
 
-        You can type `hellowworld` to show an introduction card for an Adaptive Card.
+        You can type `helloworld` to show an introduction card for an Adaptive Card.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/bot-welcome.png" alt-text="Screenshot of Microsoft Teams displaying an introduction card.":::       
 
