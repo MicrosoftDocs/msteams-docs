@@ -346,7 +346,7 @@ For more information on shared channels, see [shared channels](~/concepts/build-
 
 > [!IMPORTANT]
 >
-> * By default, the new Teams client supports light theme for apps in Teams meetings. When the `app.theme` property in getContext API returns the `default` value, Teams client is in light theme.
+> * By default, the [new Teams client](https://www.microsoft.com/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) supports light theme for apps in Teams meetings. When the `app.theme` property in getContext API returns the `default` value, Teams client is in light theme.
 > * Earlier version of Teams clients only support Dark and Contrast theme for apps in Teams meetings.
 
 You can register your app to be informed if the theme changes by calling `microsoftTeams.app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.

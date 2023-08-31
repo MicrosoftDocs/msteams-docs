@@ -36,7 +36,7 @@ The following table provides a list of APIs available across the Microsoft Teams
 
 > [!IMPORTANT]
 >
-> * By default, the new Teams client supports light theme for apps in Teams meetings. When the `app.theme` property in getContext API returns the `default` value, Teams client is in light theme.
+> * By default, the [new Teams client](https://www.microsoft.com/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) supports light theme for apps in Teams meetings. When the `app.theme` property in getContext API returns the `default` value, Teams client is in light theme.
 > * Earlier version of Teams clients only support Dark and Contrast theme for apps in Teams meetings
 
 To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab running in the meeting context and is added for the response payload.
@@ -47,7 +47,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
 * Meeting type
 
-   # [Channel meeting](#tab/channel-meeting)
+# [Channel meeting](#tab/channel-meeting)
 
    The following is a JSON payload response for a channel meeting for in-tenant users:
 
@@ -134,7 +134,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
     }
    ```
 
-   # [Scheduled meeting](#tab/scheduled-meeting)
+# [Scheduled meeting](#tab/scheduled-meeting)
 
    The following is a JSON payload response for a scheduled meeting for in-tenant users:
 
@@ -199,7 +199,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
    ```
 
-   # [Instant meeting](#tab/instant-meeting)
+# [Instant meeting](#tab/instant-meeting)
 
    The following is a JSON payload response for a Instant meeting (Meet now) for in-tenant users:
 
@@ -259,7 +259,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
 * User type
 
-   # [Guest user](#tab/guest-user)
+# [Guest user](#tab/guest-user)
 
    The following is a JSON payload response in a scheduled private meeting for a guest user :
 
@@ -330,7 +330,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
      }
    ```
 
-   # [Anonymous user](#tab/anonymous-user)
+# [Anonymous user](#tab/anonymous-user)
 
    The following is a JSON payload response in a scheduled private meeting for an anonymous user:
 
@@ -370,7 +370,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
     }
    ```
 
-   # [External user](#tab/external-user)
+# [External user](#tab/external-user)
 
    The following is a JSON payload response in a scheduled private meeting for an external user:
 
@@ -439,7 +439,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
 * Call type
 
-   # [One-on-One call](#tab/one-on-one-call)
+# [One-on-One call](#tab/one-on-one-call)
 
    The following is a JSON payload response for a one-on-one call for an in-tenant user:
 
@@ -511,7 +511,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
    ```
 
-   # [Group call](#tab/group-call)
+# [Group call](#tab/group-call)
 
    The following is a JSON payload response for a group chat call for an in-tenant user:
 
