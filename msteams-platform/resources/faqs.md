@@ -9,7 +9,7 @@ ms.date: 06/29/2022
 
 # Moodle FAQ
 
-Get answers to some of your queries when using Moodle LMS.<br>
+Get answers to some of your queries when using Moodle LMS.
 
 <br>
 
@@ -23,8 +23,6 @@ Each team course instance must have an owner, and the synchronization sets the f
 
 </details>
 
-<br>
-
 <details>
 
 <summary>What should we do to remove Moodle login page when working from Teams? Can we force single sign-on (SSO)?</summary>
@@ -35,8 +33,6 @@ The users have multiple sign in options from the Moodle login page.
 * To sign in manually to the Moodle portal, see [Moodle](https://moodle.org/login/index.php).
 
 </details>
-
-<br>
 
 <details>
 
@@ -54,8 +50,6 @@ The following image shows user creation restrictions options:
 :::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure ad":::
 
 </details>
-
-<br>
 
 <details>
 
@@ -75,8 +69,6 @@ The following image shows synchronization of courses:
 
 </details>
 
-<br>
-
 <details>
 
 <summary>We have followed the documentation, but the user accounts fail to sync AAD and Moodle. What should we do?</summary>
@@ -95,8 +87,6 @@ The following table provides the actions and dependencies to be performed and ch
 
 </details>
 
-<br>
-
 <details>
 
 <summary>One or more users are unable to sign in using their Microsoft 365 credentials, although most users can sign in without an issue. What would be the cause of this inconsistency?</summary>
@@ -109,8 +99,6 @@ The reason for inconsistencies with users being able unable to sign using their 
 * Check if the users have **Permissions** to access the Azure application.
 
 </details>
-
-<br>
 
 <details>
 
@@ -130,8 +118,6 @@ If the **Client secret** has expired, then user needs to generate a new **Client
 
 </details>
 
-<br>
-
 <details>
 
 <summary>How to change the teams instance that is linked to a course?</summary>
@@ -143,8 +129,6 @@ The following image shows the teams instance:
 :::image type="content" source="../assets/images/MoodleInstructions/faq-8.png" alt-text="teams instance":::
 
 </details>
-
-<br>
 
 <details>
 
@@ -168,8 +152,6 @@ For more information on editing Atto toolbar, see:
 
 </details>
 
-<br>
-
 <details>
 
 <summary>Do the meetings scheduled through Microsoft integration appear in Outlook or in Teams calendars? What is the standard timeline for the meetings to be displayed?</summary>
@@ -179,8 +161,6 @@ The meetings scheduled through the app don't appear in the scheduler’s Outlook
 However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars. The standard timelines are based on the date the user specifies when the meeting is created. For more information, see [Limits and specifications for Teams](/microsoftteams/limits-specifications-teams).
 
 </details>
-
-<br>
 
 <details>
 
