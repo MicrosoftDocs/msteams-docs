@@ -1,6 +1,8 @@
 **Client Application**
 
-Under **Authorized client applications**, identify the applications that you want to authorize for your app’s web application. 
+1. In the left pane, under **Manage**, select **Expose an API**.
+
+   Under **Authorized client applications**, identify the applications that you want to authorize for your app’s web application. 
 
 1. Select **+ Add a client application**. 
 

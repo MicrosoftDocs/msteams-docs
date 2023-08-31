@@ -45,7 +45,7 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-- title: Create and register your bot 
+- title: Register Azure AD app 
   durationInMinutes: 5
   content: |
     The following steps help you to create and register your bot in Azure portal:
@@ -56,11 +56,7 @@ items:
     * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
     * Add messaging endpoint to the dev tunnel that you created.
 
-    [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
-
-    [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
-
-    [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
+    [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
     **Create a tunnel**
 
@@ -74,42 +70,50 @@ items:
 
       ---     
 
+    [!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
+    
     [!INCLUDE [messaging endpoint](includes/get-started/messaging-endpoint.md)]
-   
-- title: Update the Azure AD app registration 
-  durationInMinutes: 5
-  content: |
 
-   [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
+    [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
 
-   [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
+    **Add API permissions**
 
-   [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
-
-   **Add API permissions**
-
-   1. In the left pane, select **API permissions**. 
+    1. In the left pane, select **API permissions**. 
 
       > [!NOTE]
       > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
 
-   1. Select **+ Add a permission**.
+    1. Select **+ Add a permission**.
 
       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
 
-   1. Select **Microsoft Graph**.
+    1. Select **Microsoft Graph**.
 
-   1. Select **Delegated permissions**.
+    1. Select **Delegated permissions**.
 
-   1. Select **User** > **User.Read**.
+    1. Select **User** > **User.Read**.
 
-   1. Select **Add permissions**.
+    1. Select **Add permissions**.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
 
-   [!INCLUDE [Azure api permission](includes/get-started/azure-web-authentication.md)]
+    [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
 
-   [!INCLUDE [Manifest and new connection](includes/get-started/azure-manifest-service-connection.md)]
+    [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
+
+    [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
+
+    [!INCLUDE [Manifest](includes/get-started/azure-manifest.md)]
+
+- title: Create your bot 
+  durationInMinutes: 5
+  content: |
+
+    [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]    
+
+    [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
+
+    [!INCLUDE [Service connection](includes/get-started/oauth-connection-settings.md)]
 
 - title: Set up app settings and manifest files
   durationInMinutes: 2

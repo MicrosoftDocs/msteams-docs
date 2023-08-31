@@ -6,7 +6,7 @@
 
     :::image type="content" source="../../assets/images/include-files/output-console-url.png" alt-text="Screenshot shows the url in the Visual studio output console.":::
 
-1.  Go to Azure portal and select the bot that you've created. In the left pane, under **Settings**, select **Configuration**.
+1.  In the left pane, under **Settings**, select **Configuration**.
 
 1.  Update the **Messaging endpoint** in the format `https://your-devtunnel-domain/api/messages`.
 
@@ -15,6 +15,9 @@
 1. Select **Apply**.
 
     You have successfully set up a bot in Azure Bot service.
+
+    > [!NOTE]
+    > If the **Application Insights Instrumentation key** shows an error update with **APP ID**.
 
 # [ngrok](#tab/ngrok)
 
@@ -26,7 +29,7 @@
     > The HTTPS URL in your ngrok is your fully qualified domain name.
     > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
 
-1.  Go to the Azure bot you've created in Azure portal. In the left pane, under **Settings**, select **Configuration**.
+1.  In the left pane, under **Settings**, select **Configuration**.
 
 1. Update the **Messaging endpoint** in the format `https://your-ngrok-domain/api/messages`.
 
@@ -35,4 +38,7 @@
 1. Select **Apply**.
 
     You have successfully set up a bot in Azure Bot service.
+
+    > [!NOTE]
+    > If the **Application Insights Instrumentation key** shows an error update with **APP ID**.
 ---   

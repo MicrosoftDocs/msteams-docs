@@ -1,5 +1,7 @@
 **Add a scope**
 
+1. In the left pane, under **Manage**, select **Expose an API**.
+
 1. Select **+ Add a scope**. 
 
    :::image type="content" source="../../assets/images/include-files/select-add-scope.png" alt-text="Screenshot shows the selection to Add a Scope.":::

@@ -1,6 +1,6 @@
 **API Permission**
 
-1. In the left pane, select **API permissions**. 
+1. In the left pane, under **Manage**, select **API permissions**. 
 
    > [!NOTE]
    > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
