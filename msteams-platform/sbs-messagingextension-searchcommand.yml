@@ -108,7 +108,7 @@ items:
          * Set `"MicrosoftAppTenantId"` as blank.
          * Set `"BaseUrl"` to the fully qualified domain name.
 
-        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/appsettings_1.png" alt-text="Screenshot of appsettings JSON file with appsettings information.":::
+        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/appsettings-file.png" alt-text="Screenshot of appsettings JSON file with appsettings information.":::
 
     1. Go to the **manifest.json** file in the cloned repository.
 
@@ -119,7 +119,7 @@ items:
          * Replace `<<YOUR-BASE-URL-DOMAIN>>` with `WebAppDomain` name.
          * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with bot's **Microsoft App ID**.
 
-        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/manifest_1.png" alt-text="Screenshot of manifest page with the ID, bot ID, and Valid domains highlighted in red.":::
+        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/manifest-file.png" alt-text="Screenshot of manifest page with the ID, bot ID, and Valid domains highlighted in red.":::
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -132,7 +132,7 @@ items:
 
        1. Go to **File** > **Open** > **Project/Solution...**.
     
-          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/VS-open-file_1.png" alt-text="Screenshot of Visual Studio with the File, Open, and Project/Solution highlighted in red.":::
+          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/VS-open-file.png" alt-text="Screenshot of Visual Studio with the File, Open, and Project/Solution highlighted in red.":::
 
        1. Open the **TeamsMessagingExtensionsSearch.csproj** file in Visual Studio.
 
@@ -140,23 +140,23 @@ items:
 
        1. From **View**, select **Solution Explorer** .
 
-          :::image type="content" source="./assets/images/Teams-task-module/solutionexplorer_1.png" alt-text="Screenshot of Visual Studio with the menu item Solution Explorer under View is highlighted in red.":::
+          :::image type="content" source="./assets/images/Teams-task-module/solution-explorer.png" alt-text="Screenshot of Visual Studio with the menu item Solution Explorer under View is highlighted in red.":::
 
        1. Right-click to select **TeamsMessagingExtensionsSearch**.
 
        1. Select **Set as Startup Project**.
 
-          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/startup_1.png" alt-text="Screenshot of Solution Explorer with Set as Startup Project and TeamsMessagingExtensionsSearch highlighted in red.":::
+          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/start-up.png" alt-text="Screenshot of Solution Explorer with Set as Startup Project and TeamsMessagingExtensionsSearch highlighted in red.":::
 
        1. Press **F5** to run the project.
     
        1. Select **Yes** if the following dialog appears:
 
-          :::image type="content" source="~/assets/images/sbs-messagingextension-action/certificate_1.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
+          :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
 
           A webpage opens with a message **Your bot is ready!**.
 
-          :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/appisready.png" alt-text="Screenshot of the webpage that displays Your bot is ready!."::: 
+          :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/appisready.png" alt-text="Screenshot of the webpage that displays Your bot is ready."::: 
    
     # [Command line](#tab/cli)
 
@@ -196,7 +196,7 @@ items:
 
     1. Select **Open** to upload the **Search Command**.zip file that you created in the **TeamsAppManifest** folder.
 
-       :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/selectzipopen_1.png" alt-text="Screenshot of the cloned repository with the Search Command zip file and Open option highlighted in red.":::
+       :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/selectzip-open.png" alt-text="Screenshot of the cloned repository with the Search Command zip file and Open option highlighted in red.":::
 
     1. Select **Add**.
 
@@ -215,7 +215,7 @@ items:
 
        1. Select **Packages**.
 
-          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/nuget_1.png" alt-text="Screenshot of nuget webpage displaying the nuget package details.":::
+          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/nuget-package.png" alt-text="Screenshot of nuget webpage displaying the nuget package details.":::
 
        1. Select **Project**.
 
