@@ -99,28 +99,7 @@ items:
     
     [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
 
-    **Add API permissions**
-
-    1. In the left pane, select **API permissions**. 
-
-    1. Select **+ Add a permission**.
-
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
-
-    1. Select **Microsoft Graph**.
-
-    1. Select **Delegated permissions**.
-
-    1. Select **User** > **User.Read**.
-
-    1. Select **Add permissions**.
-
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
-
-      > [!NOTE]
-      > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
-      > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
-
+    [!INCLUDE [API Permission](includes/get-started/azure-api-permissions.md)]
 
     [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
 
@@ -163,6 +142,7 @@ items:
         > `WebAppDomain` is your ngrok domain, so the content bubble URL is similar to `https://ae57****.ngrok.io/contentBubble.html`.
 
         :::image type="content" source="~/assets/images/meeting-token-generator/sbs app setting Latest.png" alt-text="Screenshot of appsettings JSON file with appsettings information.":::
+
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
