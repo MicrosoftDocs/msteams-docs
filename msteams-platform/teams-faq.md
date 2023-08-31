@@ -166,6 +166,33 @@ Live Share isn't supported for GCC, GCC-High, and DOD tenants.
 
 </details>
 
+<details>
+<summary><b>Does Live Share support external and guest users?</b></summary>
+
+Yes, Live Share supports guest and external users for most meeting types. However, guest users aren't supported in channel meetings.
+
+<br>
+
+</details>
+
+<details>
+<summary><b>Does Live Share support Teams Rooms devices?</b></summary>
+
+No, Live Share doesn't support Teams Rooms devices.
+
+<br>
+
+</details>
+
+<details>
+<summary><b>Do Live Share apps support meeting recordings?</b></summary>
+
+No, Live Share doesn't support Teams Rooms devices.
+
+<br>
+
+</details>
+
 ## Microsoft Graph
 
 <details>
