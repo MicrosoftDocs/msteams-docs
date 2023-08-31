@@ -27,9 +27,9 @@ The following table shows the Teams meeting app contexts supported in Outlook:
 | [Meeting side panel view](../apps-in-teams-meetings/build-tabs-for-meeting.md#meeting-side-panel-view) | `meetingSidePanel` | `frameContext.sidePanel` | ✔️ |
 | [Meeting stage view](../apps-in-teams-meetings/build-tabs-for-meeting.md#meeting-stage-view) | `meetingStage` | `frameContext.meetingStage` | ❌ |
 
-If your meeting app supports stage view, other in-meeting effects, or contains elements such as message extensions and bots, these will continue to work in Teams when the meeting is scheduled from Outlook, but will not appear or run in Outlook.
+If your meeting app supports stage view, other in-meeting effects, or contains elements such as message extensions and bots, these continue to work in Teams when the meeting is scheduled from Outlook, but won't appear or run in Outlook.
 
-This article walks your through the steps to ensure your Teams meeting app experience works seamlessly when extended to Outlook.
+This article walks you through the steps to ensure your Teams meeting app experience works seamlessly when extended to Outlook.
 
 ## Prerequisites
 
@@ -55,13 +55,13 @@ Follow these steps to quickly build a simplified Teams meeting app without any a
 
 1. Select **My First Meeting App**, press the **Create** button, and specify a folder for creating the workspace.
 
-1. Press `F5` to run the sample locally in Teams. If you have an Microsoft Azure subscription, you can use Teams Toolkit to **Provision** resources and **Deploy** your app to run remotely in Microsoft Azure. (This requires first signing in to Azure from Teams Toolkit.)
+1. Press `F5` to run the sample locally in Teams. If you have a Microsoft Azure subscription, you can use Teams Toolkit to **Provision** resources and **Deploy** your app to run remotely in Microsoft Azure. (This requires first signing in to Azure from Teams Toolkit.)
 
 1. Microsoft Teams will launch and prompt you to install the app. Select **Add to a meeting** from the dropdown and select the meeting you created earlier.
 
     :::image type="content" source="images/teams-add-to-meeting.png" alt-text="Add app to meeting option in Microsoft Teams":::
 
-1. The sample tab configuration dialog will open. Select **Save** to view your meeting app from meeting chat view.
+1. The sample tab configuration dialog opens. Select **Save** to view your meeting app from meeting chat view.
 
     :::image type="content" source="images/teams-meeting-chat-view.png" alt-text="{alt-text}":::
 
@@ -69,7 +69,7 @@ Now you can skip ahead to [sideload your app with TeamsFx CLI](#sideload-your-ap
 
 ## Checklist for enabling meeting apps in Outlook
 
-The requirements for extending meeting apps in Outlook are similar to [extending personal tabs to Outlook](./extend-m365-teams-personal-tab.md), however you'll need to use TeamsFx CLI for sideloading, as sideloading from Teams is not supported.
+The requirements for extending meeting apps in Outlook are similar to [extending personal tabs to Outlook](./extend-m365-teams-personal-tab.md), however you need to use TeamsFx CLI for sideloading, as sideloading from Teams isn't supported.
 
 Extending your Teams meeting app in Outlook involves the following:
 
@@ -83,7 +83,7 @@ Extending your Teams meeting app in Outlook involves the following:
 >
 > * [Sideload your updated app using TeamsFx CLI](#sideload-your-app-using-teamsfx-cli).
 
-If you have an existing meeting app, make a copy or a branch of your production project and update your App ID in the app manifest to use a new identifier which is different from the production App ID for testing.
+If you have an existing meeting app, make a copy or a branch of your production project and update your App ID in the app manifest to use a new identifier that is different from the production App ID for testing.
 
 ### Use app manifest version 1.13 or later
 
@@ -92,7 +92,7 @@ Use app manifest schema version 1.13 or later for extending Teams apps to run ac
 # [Teams Toolkit](#tab/manifest-teams-toolkit)
 
 1. Open the command palette: `Ctrl+Shift+P`.
-1. Run the `Teams: Upgrade Teams manifest` command and select your app manifest file. Changes will be applied within the file.
+1. Run the `Teams: Upgrade Teams manifest` command and select your app manifest file. Changes are applied within the file.
 
 # [Manual steps](#tab/manifest-manual)
 
@@ -177,7 +177,7 @@ To run your app in Microsoft 365 and Outlook sideload your [app package](..//con
     teamsfx m365 sideloading --file-path <path\to\appPackage.zip>
     ```
 
-After your meeting app is sideloaded to Teams, it is available for use in both Teams and Outlook. It might take several minutes and a restart of the Outlook for Windows desktop client for your app to appear in the **Apps** menu.
+After your meeting app is sideloaded to Teams, it's available for use in both Teams and Outlook. It might take several minutes and a restart of the Outlook for Windows desktop client for your app to appear in the **Apps** menu.
 
 ## Preview your meeting app in Outlook
 
@@ -191,11 +191,13 @@ Here's how to preview your meeting app running on Outlook for Windows desktop:
 
     :::image type="content" source="images/outlook-meeting-all-apps.png" alt-text="Sideloaded meeting app showing in `All Apps` menu of Outlook meeting scheduler":::
 
-1. Select your meeting app. This opens a configuration dialog, where your app user will configure any relevant app settings for their specific meeting.
+1. Select your meeting app. This opens a configuration dialog, where your app user configures any relevant app settings for their specific meeting.
 
     :::image type="content" source="images/outlook-meeting-app-configuration.png" alt-text="Meeting app configuration page showing from Outlook meeting scheduler":::
 
-1. Click **Add** to dismiss the dialog. Your meeting app will display in the side panel of the scheduling window and the **Apps** field will indicate its availability to participants in the meeting. From the **Apps* list, you can open the dropdown menu on your app to see how the app appears in the Store (About), update the app configuration for this meeting (Settings), or remove the app from this meeting (Remove).
+1. Select **Add** to dismiss the dialog. Your meeting app displays in the side panel of the scheduling window and the **Apps** field will indicate its availability to participants in the meeting.
+
+1. From the **Apps* list, you can open the dropdown menu on your app to see how the app appears in the Store (About), update the app configuration for this meeting (Settings), or remove the app from this meeting (Remove).
 
     You can configure the appearance of **Settings** and **Remove** in Outlook, the same as with [other configurable tabs in Teams](../tabs/how-to/create-tab-pages/removal-page.md#enable-your-tab-to-be-reconfigured-after-installation).
 
@@ -205,7 +207,7 @@ Here's how to preview your meeting app running on Outlook for Windows desktop:
 
     :::image type="content" source="images/teams-manage-your-apps-remove.png" alt-text=" `Manage your apps` pane of Microsoft Teams showing the sideloaded meeting app `Remove` option":::
 
-Thanks for previewing Teams meeting app support in Outlook! Please use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
+Thanks for previewing Teams meeting app support in Outlook! Use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
 
 ## Code sample
 
