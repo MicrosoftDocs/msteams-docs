@@ -26,6 +26,8 @@ Teams platform features that are available to all app developers.
 
 **2023 August**
 
+* ***August 31, 2023***: [The new Teams client supports light theme for apps in Teams meetings.](tabs/how-to/access-teams-context.md#handle-theme-change)
+
 * ***August 29, 2023***: [Use Teams store with intelligent search experience to display apps that are closest match to the user's specified characters.](concepts/deploy-and-publish/appsource/publish.md#teams-store-search-experience)
 
 * ***August 28, 2023***: [Teams app manifest is now referred to as app manifest.](resources/schema/manifest-schema-dev-preview.md)
