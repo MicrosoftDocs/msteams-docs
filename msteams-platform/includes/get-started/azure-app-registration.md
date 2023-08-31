@@ -16,10 +16,10 @@
 
 1. Select **Register**.
 
-    :::image type="content" source="../../assets/images/include-files/app-register.png" alt-text="Screenshot shows the option to register the bot in Azure AD Portal.":::4
+    :::image type="content" source="../../assets/images/include-files/app-register.png" alt-text="Screenshot shows the option to register the bot in Azure AD Portal.":::
 
     Your app is registered in Azure AD. The app overview page appears.
 
-    :::image type="content" source="../../assets/images/include-files/app-registration-overview.png" alt-text="Screenshot shows the app resgistration overview page.":::
+    :::image type="content" source="../../assets/images/include-files/app-registration-overview.png" alt-text="Screenshot shows the app registration overview page.":::
 
-    Save the app ID from **Application (client) ID** and **Directory (tenant) ID**, for future refernce.
+    Save the app ID from **Application (client) ID** and **Directory (tenant) ID**, for future reference.
