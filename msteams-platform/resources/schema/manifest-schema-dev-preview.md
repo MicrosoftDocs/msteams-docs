@@ -5,16 +5,16 @@ ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
 ---
-# Public developer preview manifest schema for Teams
+# Public developer preview app manifest schema
 
 For information on how to enable developer preview, see [public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
 > [!NOTE]
-> If you aren't using developer preview features, including running [Teams personal tabs and message extensions in Outlook and Microsoft 365 app](../../m365-apps/overview.md), use the [app manifest for GA features](~/resources/schema/manifest-schema.md) instead.
+> If you aren't using developer preview features, including running [Teams personal tabs and message extensions in Outlook and Microsoft 365 app](../../m365-apps/overview.md), use the [app manifest](~/resources/schema/manifest-schema.md) (previously called Teams app manifest) for generally available (GA) features instead.
 
-The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams platform. Your manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
+The app manifest describes how the app integrates into the Microsoft Teams platform. Your app manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
 
-## Sample manifest
+## Sample app manifest
 
 ```json
 {
@@ -271,19 +271,19 @@ The schema defines the following properties:
 
 *Optional, but recommended* &ndash; String
 
-The `https://` URL referencing the JSON Schema for the manifest.
+The `https://` URL referencing the JSON Schema for the app manifest.
 
 ## manifestVersion
 
 **Required**—String
 
-The version of the manifest schema this manifest is using.
+The version of the app manifest schema this manifest is using.
 
 ## version
 
 **Required**—String
 
-The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it overwrites the existing one and the user will get the new functionality. If this app was submitted to the store, the new manifest has to be resubmitted and revalidated. Then, users of this app will get the new updated manifest automatically in a few hours, after it's approved.
+The version of the specific app. If you update something in your app manifest, the version must be incremented as well. This way, when the new app manifest is installed, it overwrites the existing one and the user gets the new functionality. If this app was submitted to the store, the new app manifest has to be resubmitted and revalidated. Then, users of this app will get the new updated app manifest automatically in a few hours, after it's approved.
 
 If the app requested permissions change, users are prompted to upgrade and re-consent to the app.
 
@@ -317,7 +317,7 @@ Allows the specification of a default language, and pointers to additional langu
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
-|`defaultLanguageTag`|4 characters|✔️|The language tag of the strings in this top level manifest file.|
+|`defaultLanguageTag`|4 characters|✔️|The language tag of the strings in this top level app manifest file.|
 
 ### localizationInfo.additionalLanguages
 
@@ -401,11 +401,11 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`entityId`|String|64 characters|✔️|A unique identifier for the entity that the tab displays.|
-|`name`|String|128 characters|✔️|The display name of the tab in the channel interface.|
+|`name`|String|128 characters|✔️|The display name of the tab.|
 |`contentUrl`|String|2048 characters|✔️|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
 |`contentBotId`|   | | | The Microsoft Teams app ID specified for the bot in the Bot Framework portal. |
 |`websiteUrl`|String|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
-|`scopes`|Array of enum|1|✔️|Static tabs support the `personal`, `team` and `groupChat` scopes, which means it can be provisioned as part of the personal, group chat, and channel meetings experience.|
+|`scopes`|Array of enum|3|✔️|Static tabs support the `personal`, `team` and `groupChat` scopes, which means it can be provisioned as part of the personal, group chat, and channel meetings experience.|
 
 ## bots
 
@@ -455,7 +455,7 @@ Optional:
 Defines a message extension for the app.
 
 > [!NOTE]
-> The name of the feature was changed from "compose extension" to "message extension" in November, 2017, but the manifest name remains the same so that existing extensions continue to function.
+> The name of the feature was changed from "compose extension" to "message extension" in November, 2017, but the app manifest name remains the same so that existing extensions continue to function.
 
 The object is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a message extension.
 
@@ -589,8 +589,8 @@ Define the properties your app uses to post a user activity feed.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`type`|string|32 characters|✔️|The notification type. *See below*.|
-|`description`|string|128 characters|✔️|A brief description of the notification. *See below*.|
+|`type`|string|32 characters|✔️|The notification type. |
+|`description`|string|128 characters|✔️|A brief description of the notification. |
 |`templateText`|string|128 characters|✔️|Ex: "{actor} created task {taskId} for you"|
 
 ```json
@@ -735,7 +735,7 @@ Specify meeting extension definition. For more information, see [custom Together
 **Optional**—object
 
 > [!NOTE]
-> `authorization` is only supported for manifest version 1.12 or later.
+> `authorization` is only supported for the app manifest version 1.12 or later.
 
 Specify and consolidate authorization related information for the app.
 
