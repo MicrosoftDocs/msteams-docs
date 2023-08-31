@@ -554,9 +554,9 @@ The item is an array (maximum of one element) with all elements of type `object`
 |`botId`|String||✔️|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall App ID.|
 |`commands`|Array of objects|10|✔️|Array of commands the message extension supports.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. Default: **false**.|
-|`messageHandlers`|Array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met.|
+|`messageHandlers`|Array of objects|5||A list of handlers that allow apps to be invoked when certain conditions are met.|
 |`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
-|`messageHandlers.value.domains`|Array of Strings|2048 characters||Array of domains that the link message handler can register for.|
+|`messageHandlers.value.domains`|Array of strings|2048 characters||Array of domains that the link message handler can register for.|
 |`messageHandlers.value.supportsAnonymizedPayloads`|Boolean||| A boolean value that indicates whether the app's link message handler supports anonymous invoke flow. Default is false.|
 
 ### composeExtensions.commands
@@ -572,7 +572,7 @@ Each command item is an object with the following structure:
 |`type`|String|||Type of the command. One of `query` or `action`. Default: **query**.|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value indicates whether the command runs initially with no parameters. Default is **false**.|
-|`context`|Array of Strings|3||Defines where the message extension can be invoked from. Any combination of`compose`,`commandBox`,`message`. Default is `["compose","commandBox"]`.|
+|`context`|Array of strings|3||Defines where the message extension can be invoked from. Any combination of`compose`,`commandBox`,`message`. Default is `["compose","commandBox"]`.|
 |`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the task module dynamically. Default is **false**.|
 |`taskInfo`|Object|||Specify the task module to pre-load when using a message extension command.|
 |`taskInfo.title`|String|64 characters||Initial dialog title.|
@@ -688,7 +688,7 @@ Define the properties your app uses to post a user activity feed.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`activityTypes`|Array of Objects|128 items| | Provide the types of activities that your app can post to a users activity feed.|
+|`activityTypes`|Array of objects|128 items| | Provide the types of activities that your app can post to a users activity feed.|
 
 ### activities.activityTypes
 
