@@ -342,7 +342,7 @@ The following example shows how to convert the Book-a-room app template to a Vir
 Book-a-room is a Teams that allows users quickly to find and reserve a meeting room for 30, 60, or 90 minutes starting from the current time. The default time is 30 minutes. The Book-a-room bot scopes to personal or 1:1 conversations.
 The following image displays a Virtual Assistant with a **book a room** skill:
 
-:::image type="content" source="../assets/images/bots/virtual-assistant/book-a-room-skill.png" alt-text=" Diagram that shows a Virtual Assistant with book a room skill.":::
+:::image type="content" source="../assets/images/bots/virtual-assistant/book-a-room-skill.png" alt-text="Diagram shows a Virtual Assistant with book a room skill.":::
 
 Followings are the delta changes introduced to convert it to a skill, which is attached to a Virtual Assistant. Similar guidelines are followed to convert any existing v4 bot to a skill.
 
