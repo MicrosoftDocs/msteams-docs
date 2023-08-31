@@ -174,9 +174,9 @@ items:
     | Folder name | Contents |
     | --- | --- |
     | App icons | The app icons are stored as PNG files in `color.png` and `outline.png`. |
-    | `manifest.json` | The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
+    | `manifest.json` | App manifest (previously called Teams app manifest) for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
     | `BackendController.cs` | A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication. |
-    | `Pages/Tab.razor` | The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
+    | `Pages/Tab.razor` | App manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
     | `TeamsFx.cs` and `JS/src/index.js` | The content is used for initializing communications with the Teams host. |
     
     You can add backend functionality by adding other ASP.NET Core controllers to your application.
@@ -210,7 +210,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/app-local.png" alt-text="Screenshot of Microsoft Teams with Your app is running in your local environment highlighted in red.":::
 
-    1. Select **Authorize** to let your app retrieve user details using Microsoft Graph.
+    1. To let your app retrieve user details using Microsoft Graph, select **Authorize**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot of Microsoft Teams with Authorize option highlighted in red.":::
 
@@ -234,7 +234,7 @@ items:
 
     Let's deploy the first app with tab capability on Microsoft Azure using Teams Toolkit.
 
-    #### **To provision your tab app in the Azure**
+    #### **To provision your tab app in Azure**
     
     1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
@@ -244,7 +244,7 @@ items:
 
        1. Select your **Subscription name** from the dropdown list.
        1. Select your **Resource group** from the dropdown list.
-       1. If you don't have an existing resource group, you can create a new resource group. To create a new resource group, select **New** > enter the resource name > select **OK**. Select a location from New resource group location dropdown list.
+       1. If you don't have an existing resource group, you can create a new resource group. To create a new resource group, select **New** > enter the resource name > select **OK**. Select a location from the new resource group location dropdown list.
        1. Select **Provision**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-subscription.png" alt-text="Screenshot of Provision with New and Provision highlighted in red.":::
@@ -336,7 +336,7 @@ items:
 
           The **Configure your new project** window appears.
 
-    1.  Enter **Project name** and Select **Create**.
+    1.  Enter **Project name** and select **Create**.
         
          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project-bot.png" alt-text="Screenshot of Configure your new project with Create option highlighted in red.":::
 
@@ -414,7 +414,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/bot-running.png" alt-text="Screenshot of Microsoft Teams with Welcome option highlighted under Suggestions.":::
 
-        You can type `hellowworld` to show an introduction card for an adaptive card.
+        You can type `hellowworld` to show an introduction card for an Adaptive Card.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/bot-welcome.png" alt-text="Screenshot of Microsoft Teams displaying an introduction card.":::       
 
@@ -430,7 +430,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    #### **To provision your bot app in the Azure**
+    #### **To provision your bot app in Azure**
     
     1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
@@ -440,7 +440,7 @@ items:
 
         1. Select your **Subscription name** from the dropdown list.
         1. Select your **Resource group** from the dropdown list.
-        1. If you don't have an existing resource group, you can create a new resource group. To create a new resource group, select **New** > enter the resource name > select **OK**. Select a location from New resource group location dropdown list.
+        1. If you don't have an existing resource group, you can create a new resource group. To create a new resource group, select **New** > enter the resource name > select **OK**. Select a location from new resource group location dropdown list.
         1. Select **Provision**.
 
            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-azure_1.png" alt-text="Screenshot of Provision with provision option highlighted in red. ":::
@@ -495,7 +495,7 @@ items:
  
          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/welcome.png" alt-text="Screenshot of Microsoft Teams displaying an introduction card.":::
 
-     1. You can type `hellowworld` to show an introduction card for an adaptive card.
+     1. You can type `helloworld` to show an introduction card for an Adaptive Card.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/learn.png" alt-text="Screenshot of Microsoft Teams displaying the Learn Adaptive Card and Commands.":::
 
