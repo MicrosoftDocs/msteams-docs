@@ -36,7 +36,7 @@ Following are the prerequisites to install Moodle:
 
 ## Install the Microsoft 365 Moodle Plugins
 
-Moodle integration in Microsoft Teams is powered by the open source [Microsoft 365 Moodle plugins set](https://moodle.org/plugins/browse.php?list=set&id=72).
+Moodle integration in Microsoft Teams is powered by the open-source [Microsoft 365 Moodle plugins set](https://moodle.org/plugins/browse.php?list=set&id=72).
 
 ### Requisite applications and plugins
 
