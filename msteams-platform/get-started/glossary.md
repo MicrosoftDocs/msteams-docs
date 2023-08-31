@@ -291,7 +291,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
-| [Website URL](../tabs/design/tabs-mobile.md) | A property in the app manifest file (`websiteUrl`) that links the app to the website of the organization or landing page of the relevant product. It's a mandatory configuration for Teams mobile client. <br>**See also**: [App manifest](#a); [Teams Mobile](#t) |
+| [Website URL](../tabs/design/tabs-mobile.md) | A property in the app manifest file (`websiteUrl`) that links the app to the website of the organization or landing page of the relevant product. <br>**See also**: [App manifest](#a); [Teams Mobile](#t) |
 | [Web app](../samples/integrate-web-apps-overview.md) | An app that runs on a web server. It can be integrated with Microsoft Teams Platform. |
 | [Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | It's a feature of a Teams app used to integrate it with external apps. <br>**See also**: [Incoming Webhook](#i) ; [Outgoing Webhook](#o); [Connector](#c) |
 | [Web application info](../resources/schema/manifest-schema.md#webapplicationinfo) | Provide your Azure AD App ID and Microsoft Graph information to help users seamlessly sign into your app. If your app is registered in Azure AD, you must provide the App ID. If your app requires admins to review permissions and grant consent in Teams admin center, you must declare `webapplicationinfo` in the manifest. |
