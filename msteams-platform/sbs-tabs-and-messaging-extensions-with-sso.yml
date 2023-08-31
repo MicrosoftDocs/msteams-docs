@@ -24,7 +24,7 @@ items:
 
    This step-by-step guide helps you to create tabs and message extensions enabling Azure AD SSO authentication. You'll see the following output:
 
-     :::image type="content" source="./assets/images/Tab-ME-SSO/hello-megan-profile245_1.png" alt-text="Screenshot of the tab and message extension with SSO authentication output after you have successfully completed the step-by-step guide.":::
+     :::image type="content" source="./assets/images/Tab-ME-SSO/hello-megan-profile245-1.png" alt-text="Screenshot of the tab and message extension with SSO authentication output after you have successfully completed the step-by-step guide.":::
    
 
 - title: Prerequisites
@@ -38,7 +38,7 @@ items:
      | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
      | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the latest version, install the portable version. |
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
-     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm devDependencies). |
 
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -46,64 +46,87 @@ items:
 - title: Set up local environment
   durationInMinutes: 1
   content: |
-   Clone **Microsoft-Teams-Samples** repository to your local GitHub:  
 
-   [INCLUDE [Set up local environment](includes/get-started/clone-repository)]
+   [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-- title: Create and register your bot in Azure AD portal
+- title: Register Azure AD app 
   durationInMinutes: 5
   content: |
-    To create and register your bot in Microsoft Azure AD, perform the following steps:
-
-    * Create Azure Bot resource to register bot with Azure Bot Service.
-    * Create client secret that enables SSO authentication of the bot.
-    * Add Teams channel to deploy the bot to a Teams channel.
-    * Create a ngrok or dev tunnel to the endpoints of your web server.
-    * Add messaging endpoint to the ngrok or dev tunnel you created.
-
-    **To create Azure Bot resource**
-
-      [INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource)]
-        
-    **To create client secret**
-
-      [INCLUDE [Client secret](includes/get-started/create-client-secret)]
-
-    **To add the Teams channel**
-
-      [INCLUDE [Teams channel](includes/get-started/add-teams-channel)]
+    The following steps help you to create and register your bot in Azure portal:
     
-    **To create a ngrok tunnel**
+    * Create and register your Azure app. 
+    * Create client secret to enable SSO authentication of the bot.
+    * Add Teams channel to deploy the bot.
+    * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
+    * Add messaging endpoint to the dev tunnel that you created.
 
-      [Dev tunnel](#tab/Dev tunnel)
-      [INCLUDE [Tunnel](includes/get-started/dev-tunnel)]
+    [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
-      [ngork](#tab/ngork)
-      [INCLUDE [Tunnel](includes/get-started/ngrok-tunnel)]
+    **Create a tunnel**
+
+      # [dev tunnel](#tab/dev)
+
+      [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+
+      # [ngrok](#tab/ngrok)
+      
+      [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+
+      ---     
+
+    [!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
     
-    **To add messaging endpoint**
+    [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
 
-      [INCLUDE [messaging endpoint](includes/get-started/messaging-endpoint)]
+    **Add API permissions**
 
-- title: Configure SSO for your tab 
-  durationInMinutes: 1
-  content: | 
+    1. In the left pane, select **API permissions**. 
 
-   To configure SSO for your tab:
+    1. Select **+ Add a permission**.
 
-   [INCLUDE [Azure app registration](includes/get-started/azure-app-registration)]
-   [INCLUDE [Azure add scope](includes/get-started/azure-add-scope)]
-   [INCLUDE [Azure client application](includes/get-started/azure-client-application)]
-   [INCLUDE [API permission](includes/get-started/azure-api-permissions)]
-   [INCLUDE [Azure api permission](includes/get-started/azure-web-authentication)]
-   [INCLUDE [Manifest and new connection](includes/get-started/azure-manifest-service-connection)]
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
+
+    1. Select **Microsoft Graph**.
+
+    1. Select **Delegated permissions**.
+
+    1. Select **User** > **User.Read**.
+
+    1. Select **Add permissions**.
+
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
+
+      > [!NOTE]
+      > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+      > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
+
+
+    [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
+
+    [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
+
+    [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
+
+    [!INCLUDE [Manifest](includes/get-started/azure-manifest.md)]
+
+- title: Create your bot 
+  durationInMinutes: 5
+  content: |
+
+    [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]    
+
+    [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
+
+    [!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
+
+    [!INCLUDE [Service connection](includes/get-started/oauth-connection-settings.md)]
 
 - title: Set up app settings
   durationInMinutes: 1
   content: |
     1. Go to the **appsettings.json** file in the cloned repository.
 
-       :::image type="content" source="./assets/images/Tab-ME-SSO/app-setting-folder_1.png" alt-text="Screenshot of Project file with appsettings.json file highlighted in red.":::
+       :::image type="content" source="./assets/images/Tab-ME-SSO/app-setting-folder-1.png" alt-text="Screenshot of Project file with appsettings.json file highlighted in red.":::
 
     1. Open the **appsettings.json** file in Visual Studio.
 
@@ -125,7 +148,7 @@ items:
   content: |
     1. Go to the **manifest.json** file in the cloned repository.
 
-        :::image type="content" source="./assets/images/Tab-ME-SSO/folder-manifest_1.png" alt-text="Screenshot of Manifest folder with the manifest file highlighted in red.":::
+        :::image type="content" source="./assets/images/Tab-ME-SSO/folder-manifest-1.png" alt-text="Screenshot of Manifest folder with the manifest file highlighted in red.":::
     
     1. Open the **manifest.json** file in **Visual Studio** and make the following changes:
 
@@ -152,7 +175,7 @@ items:
 
        1. In the **csharp** folder, select **App SSO Sample.csproj** file.
 
-          :::image type="content" source="./assets/images/Tab-ME-SSO/project-folder1_1.png" alt-text= "Screenshot of Project file with App SSO Sample.csproj file highlighted in red.":::
+          :::image type="content" source="./assets/images/Tab-ME-SSO/project-folder1-1.png" alt-text= "Screenshot of Project file with App SSO Sample.csproj file highlighted in red.":::
 
        1. Press **F5** to run the project.
     
@@ -202,34 +225,34 @@ items:
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-       :::image type="content" source="./assets/images/Tab-ME-SSO/upload-tab-me-sso-open_1.png" alt-text="Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.":::
+       :::image type="content" source="./assets/images/Tab-ME-SSO/upload-tab-me-sso-open-1.png" alt-text="Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.":::
 
     1. Select **Add**.
 
-       :::image type="content" source="./assets/images/Tab-ME-SSO/add-sso-app_1.png" alt-text="Screenshot of Conversation Bot with Add option highlighted in red.":::
+       :::image type="content" source="./assets/images/Tab-ME-SSO/add-sso-app-1.png" alt-text="Screenshot of Conversation Bot with Add option highlighted in red.":::
     
     1. Send a message to the bot. 
     1. The bot performs SSO and displays profile card along with option prompt to view token.
 
-       :::image type="content" source="./assets/images/Tab-ME-SSO/Congratulation-image_1.png" alt-text="Screenshot of the profile card received in Teams.":::
+       :::image type="content" source="./assets/images/Tab-ME-SSO/Congratulation-image-1.png" alt-text="Screenshot of the profile card received in Teams.":::
 
     1. Select **Yes** to view token or **No** to continue with chat.
       
-       :::image type="content" source="./assets/images/Tab-ME-SSO/token-view1_1.png" alt-text="Screenshot of the dialog to either select Yes or No.":::
+       :::image type="content" source="./assets/images/Tab-ME-SSO/token-view1-1.png" alt-text="Screenshot of the dialog to either select Yes or No.":::
 
       1. If SSO isn't performed, then the bot performs default authentication method for your tab.
 
-         :::image type="content" source="./assets/images/Tab-ME-SSO/not-login11_1.png" alt-text="Screenshot of the default SSO page in Teams.":::
+         :::image type="content" source="./assets/images/Tab-ME-SSO/not-login11-1.png" alt-text="Screenshot of the default SSO page in Teams.":::
 
       1. In the left pane of the Teams, select More added apps (●●●).
              
       1. Select your new SSO application.
 
-          :::image type="content" source="./assets/images/Tab-ME-SSO/recent-app-sso_1.png" alt-text="Screenshot of your app highlighted in red in Apps section.":::
+          :::image type="content" source="./assets/images/Tab-ME-SSO/recent-app-sso-1.png" alt-text="Screenshot of your app highlighted in red in Apps section.":::
 
       1. Select **sign in**.
 
-          :::image type="content" source="./assets/images/Tab-ME-SSO/sign-in-sso1_1.png" alt-text= "Screenshot of your app with sign in highlighted in red.":::
+          :::image type="content" source="./assets/images/Tab-ME-SSO/sign-in-sso1-1.png" alt-text= "Screenshot of your app with sign in highlighted in red.":::
 
       1. Enter your credentials in **Sign in** window, and select **Next**.
 
@@ -243,18 +266,18 @@ items:
 
       1. Select your profile under search box. You'll see the following output:
 
-          :::image type="content" source="./assets/images/Tab-ME-SSO/hello-megan-profile_1.png" alt-text= "Screenshot of the selected profile.":::
+          :::image type="content" source="./assets/images/Tab-ME-SSO/hello-megan-profile-1.png" alt-text= "Screenshot of the selected profile.":::
 
       1. Send `https://profile.botframework.com` to the application to get a profile card.
        
-          :::image type="content" source="./assets/images/Tab-ME-SSO/profile-card_1.png" alt-text= "Screenshot of the selected profile after entering the URL.":::
+          :::image type="content" source="./assets/images/Tab-ME-SSO/profile-card-1.png" alt-text= "Screenshot of the selected profile after entering the URL.":::
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with output like this?
 
-    :::image type="content" source="./assets/images/Tab-ME-SSO//hello-megan-profile245_1.png" alt-text="Screenshot of the output after you have successfully completed the step-by-step guide.":::
+    :::image type="content" source="./assets/images/Tab-ME-SSO//hello-megan-profile245-1.png" alt-text="Screenshot of the output after you have successfully completed the step-by-step guide.":::
         
 - content: |
     You've completed the tutorial to get started with SSO for tab and message extension app.
