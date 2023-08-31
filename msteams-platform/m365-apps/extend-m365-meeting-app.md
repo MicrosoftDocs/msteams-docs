@@ -169,7 +169,7 @@ Here's how to preview your meeting app running on Outlook for Windows desktop:
 
 1. Open *Calendar*, then select **New Meeting**. By default, new meetings are *Microsoft Teams* meetings. For a meeting app to run in Outlook, the meeting must be a Teams meeting (meeting apps are not supported in non-Teams meetings scheduled from Outlook).
 
-1. From the meeting scheduling window, select **All Apps**. Your sideloaded meeting app should appear among your installed meeting apps.
+1. From the meeting scheduling window, select **All Apps**. Your sideloaded meeting app appears among your installed meeting apps.
 :::image type="content" source="images/outlook-meeting-all-apps.png" alt-text="Sideloaded meeting app showing in `All Apps` menu of Outlook meeting scheduler":::
 
 1. Select your meeting app. This opens a configuration dialog, where your app user will configure any relevant app settings for their specific meeting.
