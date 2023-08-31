@@ -40,69 +40,82 @@ items:
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |   
      | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments.  If you haven't installed the latest version, install the portable version. |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place |
-      
+     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm devDependencies).|
+
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
 - title: Set up local environment
   durationInMinutes: 1
-  content: |
-   Clone **Microsoft-Teams-Samples** repository to your local GitHub:  
+  content: |  
 
-   [INCLUDE [Set up local environment](includes/get-started/clone-repository)]
+   [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-- title: Create and register your bot
+- title: Register Azure AD app
   durationInMinutes: 5
   content: |
     Register your bot with Azure Bot service when you develop and host it in Azure. Following are the steps:
 
-    1. Create bot channel registration in Azure account.
-    1. Create client secret that enables single sign-on (SSO) authentication of the bot.
-    1. Add API permissions for downstream calls.
-    1. Add Teams channel to deploy the bot to a Teams channel.
-    1. Create a ngrok tunnel to the endpoints of your web server.
-    1. Add messaging endpoint to the ngrok tunnel you created.
+    * Create and register your Azure app.
+    * Create client secret that enables single sign-on (SSO) authentication of the bot.
+    * Add Teams channel to deploy the bot.
+    * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
+    * Add messaging endpoint to dev tunnel you created.
 
-      [INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource)]
-    
-    **To create client secret**
+      [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
+
+      **Create a tunnel**
+
+      # [dev tunnel](#tab/dev)
+
+      [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+
+      # [ngrok](#tab/ngrok)
+      
+      [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+
+      ---     
+      [!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
 
       [INCLUDE [Client secret](includes/get-started/create-client-secret)]
 
-    **To add API permissions for downstream calls**
+    **Add API permissions**
 
-    1. In the left pane, select **API permissions**.
-    1. Select **Add a permission**. 
-       **Request API permissions** window appears.
-    1. Select **Microsoft APIs** > **Microsoft Graph**.
+    1. In the left pane, select **API permissions**. 
 
-       :::image type="content" source="./assets/images/conversation-bot/api-permissions-1.png" alt-text="Screenshot shows the Add API permissions."lightbox="assets/images/conversation-bot/api-permissions_1.png":::
+    1. Select **+ Add a permission**.
+
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
+
+    1. Select **Microsoft Graph**.
 
     1. Select **Application permissions**.
 
-    1. Select the required user permissions, for example, `User.Read.All`.
-    
+    1. Select **User** > **User.Read.All**.
+
     1. Select **Add permissions**.
 
-       :::image type="content" source="./assets/images/conversation-bot/api-permissions-3.png" alt-text="Screenshot shows the Add API permissions."lightbox="assets/images/conversation-bot/api-permissions.png":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
 
-    **To add messaging endpoint**
+      > [!NOTE]
+      > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+      > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
 
-      [INCLUDE [messaging endpoint](includes/get-started/messaging-endpoint)]
+    [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
 
-    **To add the Microsoft Teams channel**
+    [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
 
-      [INCLUDE [Teams channel](includes/get-started/add-teams-channel)]
+    [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
+      
+- title: Create your bot 
+  durationInMinutes: 5
+  content: |
 
-      [Dev tunnel](#tab/Dev tunnel)
-      [INCLUDE [Tunnel](includes/get-started/dev-tunnel)]
+    [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]    
 
-      [ngork](#tab/ngork)
-      [INCLUDE [Tunnel](includes/get-started/ngrok-tunnel)]
+    [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
 
-      [INCLUDE [messaging endpoint](includes/get-started/messaging-endpoint)]
-
-    You have successfully set up a bot in Azure Bot service and you need to set up bot service connection.
+    [!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
 
 - title: Set up bot service connection
   durationInMinutes: 1
@@ -122,24 +135,7 @@ items:
         * Set `"MicrosoftAppType"`to **Multitenant**.
         * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
         * Set `"MicrosoftAppPassword"` to your bot's client secret ID4 **Value**.
-        * Set your `"MicrosoftAppTenantId"` to your tenant ID. You can obtain the tenant ID from the link of the account used to sign in to the Teams. 
-          Following are the steps to get the link for **tenantId**:
-        
-          1. Select **Teams**.
-
-          1. Select More options (●●●).
-
-          1. Select **Get link to team**.
-
-             :::image type="content" source="./assets/images/conversation-bot/teams-link-new-1.png" alt-text="Screenshot shows the Tenant ID path in Teams.":::
-            
-          1. Select **Copy**.
-
-             :::image type="content" source="./assets/images/conversation-bot/tenant-id.png" alt-text="Screenshot shows the Copy Teams link.":::
-
-          1. Copy the **tenant ID** from the URL.
-
-             :::image type="content" source="./assets/images/conversation-bot/url-tenantid-1.png" alt-text="Screenshot shows the TenantID.":::
+        * Set your `"MicrosoftAppTenantId"` to your tenant ID.
 
       :::image type="content" source="./assets/images/conversation-bot/appsettings-1.png" alt-text="Screenshot shows the Appsettings Json.":::
 
