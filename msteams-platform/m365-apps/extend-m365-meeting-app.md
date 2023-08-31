@@ -16,7 +16,7 @@ ms.subservice: m365apps
 
 Across the Microsoft 365 ecosystem, most monthly users schedule their Teams meetings from Outlook. To help users stay in the flow of their work, Teams meeting apps are now supported on Outlook for Windows. You can configure and add meeting apps to the Teams meetings scheduled from Outlook and also run meeting apps within the Outlook calendar. 
 
-[Meeting apps](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) are essentially Teams tab apps that are designed to foster collaboration before, during, and after meetings. As a developer, you can specify which *contexts* (UI locations within a Teams meeting) your meeting app supports from the app manifest ([configurableTabs.context](../resources/schema/manifest-schema.md#configurabletabs)).
+[Meeting apps](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) are essentially Teams tab apps that are designed to foster collaboration before, during, and after meetings. You can specify which contexts your meeting app supports from the app manifest (previously called Teams app manifest) through [configurableTabs.context](../resources/schema/manifest-schema.md#configurabletabs)).
 
 The following table shows the Teams meeting app contexts supported in Outlook:
 
