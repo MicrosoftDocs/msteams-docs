@@ -72,20 +72,15 @@ items:
 
     [!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
     
-    [!INCLUDE [messaging endpoint](includes/get-started/messaging-endpoint.md)]
-
     [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
 
     **Add API permissions**
 
     1. In the left pane, select **API permissions**. 
 
-      > [!NOTE]
-      > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
-
     1. Select **+ Add a permission**.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
 
     1. Select **Microsoft Graph**.
 
@@ -96,6 +91,11 @@ items:
     1. Select **Add permissions**.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
+
+      > [!NOTE]
+      > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+      > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
+
 
     [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
 
@@ -112,6 +112,8 @@ items:
     [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]    
 
     [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
+
+    [!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
 
     [!INCLUDE [Service connection](includes/get-started/oauth-connection-settings.md)]
 

@@ -10,9 +10,9 @@
 
     :::image type="content" source="../../assets/images/include-files/new-registration.png" alt-text="Screenshot shows the New registration page on Azure AD Portal.":::
 
-4. Enter the name of your app, which is displayed to the user. The app name can be changed in later, if required.
+4. Enter the name of your app, which is displayed to the user. The app name can be changed later, if required.
 
-5. Select **Multitenant** as the type of user account that can access your app.
+5. Select **Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant)**.
 
 6. Select **Register**.
 

@@ -40,5 +40,5 @@
     You have successfully set up a bot in Azure Bot service.
 
     > [!NOTE]
-    > If the **Application Insights Instrumentation key** shows an error update with **APP ID**.
+    > If the **Application Insights Instrumentation key** shows an error update with **App ID**.
 ---   

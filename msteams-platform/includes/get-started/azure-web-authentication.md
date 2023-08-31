@@ -1,9 +1,6 @@
 **Add a web authentication**
 
 1. In the left pane, under **Manage**, select **Authentication**. 
-
-   > [!NOTE]
-   > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
          
 1. Select **Add a platform** > **Web**.
 

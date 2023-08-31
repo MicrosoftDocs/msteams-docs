@@ -1,7 +1,7 @@
 **Create an Azure bot resource**
 
 1. Go to **Home**.
-1. Select **Create a resource**.
+1. Select **+ Create a resource**.
 1. In the search box, enter **Azure Bot**.
 1. Select **Enter**.
 1. Select **Azure Bot**.
@@ -24,6 +24,8 @@
     :::image type="content" source="../../assets/images/include-files/pricing-tier.png" alt-text="Screenshot shows the pricing option in Azure portal.":::
 
 1. Select **Free** > **Select**.
+
+    :::image type="content" source="../../assets/images/include-files/pricing-free.png" alt-text="Screenshot shows the option to select free.":::
 
 1. Under **Microsoft App ID**, select **Type of App** as **Multi Tenant**. 
 
