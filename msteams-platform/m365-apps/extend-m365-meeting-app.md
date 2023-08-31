@@ -76,7 +76,7 @@ If you have an existing meeting app, make a copy or a branch of your production 
 
 ### Use app manifest version 1.13+
 
-Use app manifest schema version `1.13` or higher for extending Teams apps to run across other Microsoft 365 hosts, including Outlook. If you need to upgrade your app manifest from an earlier version, you have two options:
+Use app manifest schema version 1.13 or later for extending Teams apps to run across other Microsoft 365 hosts including Outlook. If you need to upgrade your app manifest from an earlier version, you have two options:
 
 # [Teams Toolkit](#tab/manifest-teams-toolkit)
 
