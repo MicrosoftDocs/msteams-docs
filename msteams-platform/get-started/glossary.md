@@ -69,7 +69,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Command lists](../resources/schema/manifest-schema.md#botscommandlists)| An app manifest property (`commandLists`) that consists of a list of commands that the bot supplies, including their usage, description, and the scope for which the commands are valid. For each scope, you must use a specific command list. <br> **See also**: [App manifest](#a)|
 | Connection Name | The name of OAuth connection that you configure for enabling SSO connection for your bot resource. <br> **See also**: [OAuth connection](#o) |
 | [Connector](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | It lets users subscribe to receive notifications and messages from the web services. Connectors expose the HTTPS endpoint for the service to post messages to Teams channels, typically in the form of cards. <br> **See also**: [Webhook](#w) |
-| [Connector ID](../resources/schema/manifest-schema.md#connectors) | A unique identifier for the Connector that matches its ID in the [Connectors Developer Dashboard](https://outlook.office.com/connectors/publish). <br> For more information, see [Include the connector in your manifest](../webhooks-and-connectors/how-to/connectors-creating.md#include-the-connector-in-your-manifest) |
+| [Connector ID](../resources/schema/manifest-schema.md#connectors) | A unique identifier for the Connector that matches its ID in the [Connectors Developer Dashboard](https://outlook.office.com/connectors/publish). <br> For more information, see [Include the connector in your manifest](../webhooks-and-connectors/how-to/connectors-creating.md#include-the-connector-in-your-app-manifest) |
 | [Consent dialog](../tabs/how-to/authentication/tab-sso-code.md) | The process of a user granting authorization to an application to access protected resources on their behalf. An admin or user can be asked for consent to allow access to their organization or individual data. <br> **See also**: [SSO](#s); [Authentication flow](#a); [Administrator consent](#a); [User consent](#u) |
 | [Content URL](../resources/schema/manifest-schema.md#statictabs)| An app manifest property (`contentUrl`) where the HTTPS URL points to the entity UI to be displayed in the Teams canvas. <br> **See also**: [App manifest](#a)|
 | Conversation | A series of messages sent between your Microsoft Teams app (tab or bot) and one or more users. A conversation can have three scopes: channel, personal, and group chat. <br>**See also**: [One-on-one chat](#o); [Group chat](#g); [Channel](#c) |
@@ -122,7 +122,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Government community cloud (GCC) High](../concepts/app-fundamentals-overview.md#government-community-cloud)|GCC high environments deliver compliance with Department of Defense (DoD) Security Requirements Guidelines, Defense Federal Acquisition Regulations Supplement (DFARS), and International Traffic in Arms Regulations (ITAR).<br>**See also**: [Department of Defense (DoD)](#d)|
 | [Graph API](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | A RESTful web API for Microsoft Graph that enables you to access Microsoft Cloud service resources. <br>**See also**: [Microsoft Graph Explorer](#m) |
 | [Group chat](../resources/bot-v3/bot-conversations/bots-conversations.md) | A chat feature where a user is able to chat with a bot in a group setting by using @mention to invoke the bot. <br>**See also**: [One-on-one chat](#o); [Chat bot](#c) |
-| [GUID](../tabs/how-to/authentication/tab-sso-register-aad.md) | The GUID, also knows as the application ID or client ID, is a value the Microsoft identity platform assigns to your app when you register it in Azure AD. The GUID value uniquely identifies the app and its configuration within the identity platform. <br> **See also**: [Application ID](#a) |
+| [GUID](../tabs/how-to/authentication/tab-sso-register-aad.md) | The GUID, also known as the application ID or client ID, is a value the Microsoft identity platform assigns to your app when you register it in Azure AD. The GUID value uniquely identifies the app and its configuration within the identity platform. <br> **See also**: [Application ID](#a) |
 | [Guest](../apps-in-teams-meetings/teams-apps-in-meetings.md#user-types-in-teams)| A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s Azure AD and have same Teams capabilities as a native team member. They have access to team chats, meetings, and files. A guest can be an organizer, presenter, or attendee.  <br>**See also**: [Anonymous](#a); [In-tenant](#i); [Federated or external](#f)|
 
 ## I
@@ -148,7 +148,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Local workbench](../sbs-gs-spfx.yml) | The default option to run and debug a Teams app in Visual Studio Code (VS Code) that is created using SPFx. <br>**See also**: [Workbench](#w); [Teams workbench](#t) |
 | [Location capability](../concepts/device-capabilities/location-capability.md) | A device capability that you can integrate with your app to know the geographical location of the app user for an enhanced collaborative experience. This feature is currently available only for Teams mobile clients only. <br>**See also**: [Capability](#c); [Media capability](#m); [Device Capability](#d); [Teams Mobile](#t) |
 | [Long description](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#long-description) | The long description can provide a narrative that highlights your apps main features, the problems it solves, and target audience. <br>**See also**: [Short description](#s)|
-| [Low code apps](../samples/teams-low-code-solutions.md) | A custom Teams app built from scratch using Microsoft Power Platform that requires little or no coding, and can be developed and deployed quickly. |
+| [Low code apps](../samples/teams-low-code-solutions.md) | A custom Teams app built from scratch using Microsoft Power Platform that requires little or no coding and can be developed and deployed quickly. |
 
 ## M
 
@@ -169,13 +169,13 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Microsoft App Password | A secret string that the application uses to prove its identity when requesting a token. Also, it can be referred to as application password. <br> **See also**: [Client secret](#c) |
 | [Microsoft Graph Explorer](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | The gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access data in Microsoft 365, Windows 10, and Enterprise Mobility + Security. |
 | [Microsoft Partner Center](/partner-center/overview) | Microsoft Partner Center streamlines several business processes to make it easier for Microsoft partners to manage their relationship with Microsoft and their customers. Partner Center gives you access to the tools you need to get work done.|
-| [Microsoft Partner Network ID](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#uses-of-latest-manifest-schema) | The Microsoft Partner Network ID (MPN ID) that identifies the partner organization building the app. You can find your MPN ID by fetching the Partner Center ID.|
+| [Microsoft Partner Network ID](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#uses-of-latest-app-manifest-schema) | The Microsoft Partner Network ID (MPN ID) that identifies the partner organization building the app. You can find your MPN ID by fetching the Partner Center ID.|
 | [Microsoft Teams](../overview.md) | Microsoft Teams is a group collaboration software that can be used to help teams work together remotely. |
 | [Microsoft Teams Platform](../concepts/app-fundamentals-overview.md) | The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services with Teams. |
 | [Microsoft Teams UI Library](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Library helps you view and test individual Teams UI templates and related components in your browser. |
 | [Microsoft Teams UI Toolkit](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. |
 | Microsoft store | It's a digital distribution platform operated by Microsoft. it's also known as Windows store. <br> [Teams store](#t) |
-| [Monetization](../concepts/deploy-and-publish/appsource/prepare/monetize-overview.md)| Microsoft Teams store provides features that enables you to monetize your apps and gain customers by engaging with your users. <br> **See also**: [SaaS](#s)|
+| [Monetization](../concepts/deploy-and-publish/appsource/prepare/monetize-overview.md)| Microsoft Teams store provides features that enable you to monetize your apps and gain customers by engaging with your users. <br> **See also**: [SaaS](#s)|
 | [Multi-tenant app](../tabs/how-to/authentication/tab-sso-register-aad.md) | A class of applications that enables sign-in and consent by users provisioned in any Azure AD tenant, including tenants other than the one where the client app is registered. <br> **See also**: [Single-tenant apps](#s) |
 
 ## N
@@ -215,10 +215,10 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 | [Rate-limiting](../bots/how-to/rate-limit.md) | A method to limit messages to a certain maximum frequency to ensure that number of messages are sufficient and don't appear as spam. |
-| [Redirect URL](../bots/how-to/authentication/bot-sso-register-aad.md) | A redirect URI is the location where the authorization server sends the user after the app has been successfully authorized and granted an authorization code or access token. It's also called or reply URL. |
+| [Redirect URL](../bots/how-to/authentication/bot-sso-register-aad.md) | A redirect URL is the location where the authorization server sends the user after the app has been successfully authorized and granted an authorization code or access token. It's also called or reply URL. |
 | [Role-based views](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/user-specific-views.md) | A feature of tabs where the tab experience may be different for users depending on their permission level. |
 | [RSC permission](../graph-api/rsc/resource-specific-consent.md) | Resource-specific consent (RSC) permission feature is needed by team owners to let a bot app receive messages across channels in a team without being @mentioned. |
-| [Real-time meeting protocol](../resources/schema/manifest-schema.md#meetingextensiondefinition)| A Boolean value indicating whether this app can stream the meeting's audio and video content to an Real-time meeting protocol (RTMP) endpoint.|
+| [Real-time meeting protocol](../resources/schema/manifest-schema.md#meetingextensiondefinition)| A Boolean value indicating whether this app can stream the meeting's audio and video content to a Real-time meeting protocol (RTMP) endpoint.|
 
 ## S
 
@@ -284,14 +284,14 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
-| [Valid domains](../resources/schema/manifest-schema.md#validdomains) | A property in the app manifest file (`validDomains`). A list of valid domains for websites the app expects to load within the Teams client. Domain listings can include wildcards, for example, *.example.com.|
+| [Valid domains](../resources/schema/manifest-schema.md#validdomains) | A property in the app manifest file (`validDomains`). A list of valid domains for websites the app expects to load within the Teams client. Domain listings can include wildcards, for example, `*.example.com`.|
 | [Virtual assistant](../samples/virtual-assistant.md) | A Microsoft open-source template that enables you to create a robust conversational solution. |
 
 ## W
 
 | Term | Definition |
 | --- | --- |
-| [Website URL](../tabs/design/tabs-mobile.md) | A property in the app manifest file (`websiteUrl`) that links the app to the website of the organization or landing page of the relevant product. It's a mandatory configuration for Teams mobile client. <br>**See also**: [App manifest](#a); [Teams Mobile](#t) |
+| [Website URL](../tabs/design/tabs-mobile.md) | A property in the app manifest file (`websiteUrl`) that links the app to the website of the organization or landing page of the relevant product. <br>**See also**: [App manifest](#a); [Teams Mobile](#t) |
 | [Web app](../samples/integrate-web-apps-overview.md) | An app that runs on a web server. It can be integrated with Microsoft Teams Platform. |
 | [Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | It's a feature of a Teams app used to integrate it with external apps. <br>**See also**: [Incoming Webhook](#i) ; [Outgoing Webhook](#o); [Connector](#c) |
 | [Web application info](../resources/schema/manifest-schema.md#webapplicationinfo) | Provide your Azure AD App ID and Microsoft Graph information to help users seamlessly sign into your app. If your app is registered in Azure AD, you must provide the App ID. If your app requires admins to review permissions and grant consent in Teams admin center, you must declare `webapplicationinfo` in the manifest. |
