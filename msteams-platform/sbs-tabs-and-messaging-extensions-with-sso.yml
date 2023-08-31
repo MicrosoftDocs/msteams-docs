@@ -208,7 +208,7 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       :::image type="content" source="./assets/images/Tab-ME-SSO/upload-tab-me-sso_1.png" alt-text="Screenshot of Manifest folder with tab manifest zip folder highlighted in red.":::
+       :::image type="content" source="./assets/images/Tab-ME-SSO/upload-tab-me-sso-1.png" alt-text="Screenshot of Manifest folder with tab manifest zip folder highlighted in red.":::
    
     1. In the Teams client, select the **Apps** icon.
 
@@ -244,29 +244,30 @@ items:
 
          :::image type="content" source="./assets/images/Tab-ME-SSO/not-login11-1.png" alt-text="Screenshot of the default SSO page in Teams.":::
 
-      1. In the left pane of the Teams, select More added apps (●●●).
-             
-      1. Select your new SSO application.
+      1. To sign in, if SSO isn't performed:
+          1. In the left pane of the Teams, select More added apps (●●●).
+              
+          1. Select your new SSO application.
 
-          :::image type="content" source="./assets/images/Tab-ME-SSO/recent-app-sso-1.png" alt-text="Screenshot of your app highlighted in red in Apps section.":::
+              :::image type="content" source="./assets/images/Tab-ME-SSO/recent-app-sso-1.png" alt-text="Screenshot of your app highlighted in red in Apps section.":::
 
-      1. Select **sign in**.
+          1. Select **sign in**.
 
-          :::image type="content" source="./assets/images/Tab-ME-SSO/sign-in-sso1-1.png" alt-text= "Screenshot of your app with sign in highlighted in red.":::
+              :::image type="content" source="./assets/images/Tab-ME-SSO/sign-in-sso1-1.png" alt-text= "Screenshot of your app with sign in highlighted in red.":::
 
-      1. Enter your credentials in **Sign in** window, and select **Next**.
+          1. Enter your credentials in **Sign in** window, and select **Next**.
 
-          :::image type="content" source="./assets/images/Tab-ME-SSO/sign-in-box.png" alt-text= "Screenshot of Microsoft Sign in page with Next highlighted in red.":::
-      
-      1. Select **Accept**.
+              :::image type="content" source="./assets/images/Tab-ME-SSO/sign-in-box.png" alt-text= "Screenshot of Microsoft Sign in page with Next highlighted in red.":::
+        
+          1. Select **Accept**.
 
-          :::image type="content" source="./assets/images/Tab-ME-SSO/consent-box.png" alt-text= "Screenshot of Microsoft consent dialog with Accept highlighted in red.":::
+              :::image type="content" source="./assets/images/Tab-ME-SSO/consent-box.png" alt-text= "Screenshot of Microsoft consent dialog with Accept highlighted in red.":::
 
-      1. Select message extension and your application.
+          1. Select message extension and your application.
 
-      1. Select your profile under search box. You'll see the following output:
+          1. Select your profile under search box. You'll see the following output:
 
-          :::image type="content" source="./assets/images/Tab-ME-SSO/hello-megan-profile-1.png" alt-text= "Screenshot of the selected profile.":::
+              :::image type="content" source="./assets/images/Tab-ME-SSO/hello-megan-profile-1.png" alt-text= "Screenshot of the selected profile.":::
 
       1. Send `https://profile.botframework.com` to the application to get a profile card.
        
