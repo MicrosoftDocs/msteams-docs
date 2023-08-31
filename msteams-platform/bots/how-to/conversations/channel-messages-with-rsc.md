@@ -8,7 +8,10 @@ ms.localizationpriority: medium
 
 # Receive all conversation messages with RSC
 
-The resource-specific consent (RSC) permissions model, originally developed for Microsoft Teams Graph APIs, is being extended to bot scenarios. With RSC, conversation owners can consent for a bot to receive all user messages in standard channels and chats without being @mentioned. This can be enabled by specifying the `ChannelMessage.Read.Group` or `ChatMessage.Read.Chat` permission strings in your Teams app manifest. Conversation owners can grant consent during the app installation or upgrade process after the app updates are published. For more information about enabling RSC for your app and inside of a tenant, see [resource-specific consent](../../../graph-api/rsc/resource-specific-consent.md).
+The resource-specific consent (RSC) permissions model, originally developed for Microsoft Teams Graph APIs, is being extended to bot scenarios. With RSC, conversation owners can consent for a bot to receive all user messages in standard channels and chats without being @mentioned. This can be enabled by specifying the `ChannelMessage.Read.Group` or `ChatMessage.Read.Chat` permission strings in your app manifest (previously called Teams app manifest). Conversation owners can grant consent during the app installation or upgrade process after the app updates are published. For more information about enabling RSC for your app and inside of a tenant, see [resource-specific consent](../../../graph-api/rsc/resource-specific-consent.md).
+
+> [!NOTE]
+> Bots that receive all conversation messages with RSC aren't supported in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD) environments.
 
 ## Enable bots to receive all channel or chat messages
 
@@ -45,7 +48,7 @@ Services that need access to all Teams message data must use the Graph APIs that
 
 ## Update app manifest
 
-For your bot to receive all conversation messages, the relevant RSC permission strings must be specified in the `authorization.permissions.resourceSpecific` property of your Teams app manifest. For more information about manifest schema, see [app manifest schema for Teams](../../../resources/schema/manifest-schema.md).
+For your bot to receive all conversation messages, the relevant RSC permission strings must be specified in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information, see [app manifest schema](../../../resources/schema/manifest-schema.md).
 
 :::image type="content" source="../../../assets/images/bots/RSC/appmanifest_2.png" alt-text="app manifest":::
 
@@ -55,7 +58,7 @@ The following code provides an example of the app manifest:
 * **webApplicationInfo.resource**: Any string. The resource field has no operation in RSC, but must be added with a value to avoid error response.
 * **authorization.permissions.resourceSpecific**: RSC permissions for your app with either or both `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` specified. For more information, see [resource-specific permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions).
 
-The following code provides an example of the app manifest version 1.12 or higher:
+The following code provides an example of the app manifest version 1.12 or later:
 
 ```json
 {
@@ -243,7 +246,7 @@ this.onMessage(async (context, next) => {
 
 ## Code sample
 
-| Sample name | Description | .NET |Node.js| Manifest
+| Sample name | Description | .NET |Node.js| App manifest
 |-------------|-------------|------|----|----|
 |Channel messages with RSC permissions| This sample app shows how a bot can receive all channel messages with RSC without being @mentioned.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-receive-channel-messages-withRSC/csharp/demo-manifest/Bot-RSC.zip) |
 
