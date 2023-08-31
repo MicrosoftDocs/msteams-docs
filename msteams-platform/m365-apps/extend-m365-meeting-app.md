@@ -85,7 +85,7 @@ Use app manifest schema version 1.13 or later for extending Teams apps to run ac
 
 # [Manual steps](#tab/manifest-manual)
 
-Open your Teams app manifest and update the `$schema` and `manifestVersion` manually with the appropriate version. Refer to [Teams developer manifest](../resources/schema/manifest-schema.md) for version information:
+Open your Teams app manifest and update the `$schema` and `manifestVersion` manually with the appropriate version. For more information, see [app manifest](../resources/schema/manifest-schema.md):
 
 ```json
 {
