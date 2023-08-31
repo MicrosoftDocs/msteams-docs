@@ -181,7 +181,7 @@ You can configure the appearance of **Settings** and **Remove** in Outlook, the 
 
     :::image type="content" source="images/outlook-meeting-app-side-panel.png" alt-text="Meeting app running in Outlook meeting scheduler side panel":::
 
-1. To uninstall the meeting app (so its no longer available from the *All Apps* menu in Outlook), open Teams and select *Apps* > **Manage your apps**. Select your sideloaded meeting app in the list, and then select **Remove**. You will need to restart Outlook to see the change reflected in the *All Apps* menu from the meeting scheduler.
+1. To uninstall the meeting app, open Teams and select **Apps** > **Manage your apps**. Select your sideloaded meeting app in the list, and **Remove**. You need to restart Outlook to see the change reflected in the **All Apps** menu from the meeting scheduler.
 :::image type="content" source="images/teams-manage-your-apps-remove.png" alt-text=" `Manage your apps` pane of Microsoft Teams showing the sideloaded meeting app `Remove` option":::
 
 Thanks for previewing Teams meeting app support in Outlook! Please use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
