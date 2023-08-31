@@ -148,7 +148,7 @@ items:
     [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
 
 
-- title: Update the Azure AD app registration
+- title: Create your bot
   durationInMinutes: 1
   content: |
 
