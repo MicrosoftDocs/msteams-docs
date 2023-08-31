@@ -81,48 +81,18 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-- title: Create and register your app
+- title: Register Azure AD app 
   durationInMinutes: 5
   content: |
-    The following steps help you to create and register your app in Azure portal.
-
-    * Create an app registration in Azure AD.
+    The following steps help you to create and register your bot in Azure portal:
+    
+    * Create and register your Azure app. 
+    * Create client secret to enable SSO authentication of the bot.
+    * Add Teams channel to deploy the bot.
     * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
-    
-    ## Create an app registration in Azure AD
+    * Add messaging endpoint to the dev tunnel that you created.
 
-    Register a new app in Azure AD and configure the tenancy and app's platform. You'll generate a new app ID that will be updated later in your Teams app manifest file.
-
-    ### To register a new app in Azure AD
-
-    1. Go to the [Azure portal](https://ms.portal.azure.com/).
-    
-    2. Select **App registrations**.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/azure-portal.png" alt-text="Screenshot shows the Azure AD Portal page.":::
-
-    3. Select **+ New registration**.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-registrations.png" alt-text="Screenshot shows the New registration page on Azure AD Portal.":::
-
-    4. Enter the name of your app, which is displayed to the user. The app name can be changed in later, if required.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/register-app.png" alt-text="Screenshot shows the App registration page on Azure AD Portal.":::
-
-    5. Select **Multitenant** as the type of user account that can access your app.
-
-    6. Select **Register**.
-        A message pops up on the browser stating that the app was created.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-created-msg.png" alt-text="Register app on Azure AD Portal.":::
-
-        The page with app ID and other configurations is displayed.
-
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-created.png" alt-text="App registration is successful.":::
-
-    7. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
-
-    Your app is registered in Azure AD. You should now have the app ID for your app.
+    [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
      **Create a tunnel**
 
@@ -143,15 +113,10 @@ items:
       :::image type="content" source="../msteams-platform/assets/images/sbs-inmeeting-doc-signing/ngrok1.png" alt-text="ngrok HTTPS URL":::
 
       ---  
-- title: Update the Azure AD app registration
-  durationInMinutes: 1
-  content: |
 
-    [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
-
-    [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
-
-    [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
+    [!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
+    
+    [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
 
     **Add API permissions**
 
@@ -176,7 +141,22 @@ items:
 
       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
 
-    [!INCLUDE [Azure api permission](includes/get-started/azure-web-authentication.md)]
+    [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
+
+    [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
+
+    [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
+
+
+- title: Update the Azure AD app registration
+  durationInMinutes: 1
+  content: |
+
+    [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]    
+
+    [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
+
+    [!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
