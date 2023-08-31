@@ -26,7 +26,7 @@
 
     :::image type="content" source="../../assets/images/include-files/pricing-tier.png" alt-text="Screenshot shows the pricing option in Azure portal.":::
 
-1. Select **Free** > **Select**.
+1. Select **FO Free** > **Select**.
 
     :::image type="content" source="../../assets/images/include-files/pricing-free.png" alt-text="Screenshot shows the option to select free.":::
 
