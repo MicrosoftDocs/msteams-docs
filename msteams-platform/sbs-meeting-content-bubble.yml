@@ -54,49 +54,52 @@ items:
   content: | 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-- title: Create and register your bot 
+- title: Register Azure AD app 
   durationInMinutes: 5
   content: |
-    The following steps help you to create and register your bot in Azure portal.
-
-    * Create Azure Bot resource to register bot with Azure Bot Service.
+    The following steps help you to create and register your bot in Azure portal:
+    
+    * Create and register your Azure app. 
     * Create client secret to enable SSO authentication of the bot.
     * Add Teams channel to deploy the bot.
     * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
     * Add messaging endpoint to the dev tunnel that you created.
 
-    [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
-
-    [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
-
-    [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
+    [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
     **Create a tunnel**
 
-      # [dev tunnel](#tab/dev)
+    # [dev tunnel](#tab/dev)
 
-      [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+    [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
 
-      # [ngrok](#tab/ngrok)
-      
-      [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+    # [ngrok](#tab/ngrok)
+    
+    [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
 
-      ---     
+    ---     
 
-    [!INCLUDE [messaging endpoint](includes/get-started/messaging-endpoint.md)]
+    [!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
 
-- title: Update the Azure AD app registration
-  durationInMinutes: 1
-  content: | 
-    [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
+    [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
+
+    [!INCLUDE [API permission](includes/get-started/azure-api-permissions.md)]
+
+    [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
 
     [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
 
     [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
 
-    [!INCLUDE [API permission](includes/get-started/azure-api-permissions.md)]
-   
-    [!INCLUDE [Azure Authentication](includes/get-started/azure-web-authentication.md)]
+- title: Create your bot 
+  durationInMinutes: 5
+  content: |
+
+    [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]    
+
+    [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
+
+    [!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
 
 - title: Set up app settings
   durationInMinutes: 1
