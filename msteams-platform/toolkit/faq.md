@@ -22,7 +22,7 @@ Following are the FAQs for [Provision cloud resources using Teams Toolkit](provi
 
 <details>
 
-<summary><b>How to troubleshoot?</b></summary>
+<summary>How to troubleshoot?</summary>
 
 If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there'll be a hyperlink at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
 
@@ -32,7 +32,7 @@ If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get
 
 <details>
 
-<summary><b>How can I switch to another Azure subscription while provisioning?</b></summary>
+<summary>How can I switch to another Azure subscription while provisioning?</summary>
 
 1. Switch subscription in current account or sign out and select a new subscription.
 2. If you've already provisioned current environment, you need to create a new environment and perform provision because ARM doesn't support moving resources.
@@ -44,7 +44,7 @@ If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get
 
 <details>
 
-<summary><b>How can I change resource group while provisioning?</b></summary>
+<summary>How can I change resource group while provisioning?</summary>
 
 Before provision, the tool asks you if you want to create a new resource group or use an existing one. You can provide a new resource group name or choose an existing one in this step.
 
@@ -54,7 +54,7 @@ Before provision, the tool asks you if you want to create a new resource group o
 
 <details>
 
-<summary><b>How can I provision SharePoint-based app?</b></summary>
+<summary>How can I provision SharePoint-based app?</summary>
 
 You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 
@@ -66,7 +66,7 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 </details>
 
 <details>
-<summary><b>How can I deploy the code in Azure AD using Teams Toolkit, and use Graph API to get the app user's profile photo?</b></summary>
+<summary>How can I deploy the code in Azure AD using Teams Toolkit, and use Graph API to get the app user's profile photo?</summary>
 
 Shared references to deploy the code using toolkit:
 
