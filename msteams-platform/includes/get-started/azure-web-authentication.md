@@ -1,9 +1,6 @@
 **Add a web authentication**
 
-1. In the left pane, select **Authentication**. 
-
-   > [!NOTE]
-   > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+1. In the left pane, under **Manage**, select **Authentication**. 
          
 1. Select **Add a platform** > **Web**.
 
@@ -16,3 +13,11 @@
 1. Select **Configure**.
 
    :::image type="content" source="../../assets/images/include-files/configure-web.png" alt-text="Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.":::
+
+1. Under **Web** > select **Add URI**.
+
+1. Enter `https://token.botframework.com/.auth/web/redirect`.
+
+1. Select **Save**.
+
+    :::image type="content" source="../../assets/images/include-files/web-add-uri.png" alt-text="Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.":::
