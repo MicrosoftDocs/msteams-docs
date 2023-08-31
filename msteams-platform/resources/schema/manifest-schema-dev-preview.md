@@ -429,7 +429,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |`scopes`|Array of enum|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
 |`supportsCalling`|Boolean|||A value indicating where a bot supports audio calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. Default: `false`|
 |`supportsVideo`|Boolean|||A value indicating where a bot supports video calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. Default: `false`|
-|`requiresSecurityEnabledGroup`|Boolean|||A value indicating whether the team's office group needs to be security enabled. Default: `false`|
+|`requiresSecurityEnabledGroup`|Boolean|||A value indicating whether the team's Office group needs to be security enabled. Default: `false`|
 
 ### bots.configuration
 
@@ -505,10 +505,10 @@ Each command item is an object with the following structure:
 |`title`|String|32 characters|✔️|The user-friendly command name.|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value that indicates whether the command runs initially with no parameters. Default: `false`|
-|`context`|Array of Strings|3||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. Default is `["compose", "commandBox"]`|
+|`context`|Array of Strings|3 characters||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. Default is `["compose", "commandBox"]`|
 |`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the task module dynamically.|
 |`taskInfo`|Object|||Specify the task module to preload when using a message extension command.|
-|`taskInfo.title`|String|64||Initial dialog title.|
+|`taskInfo.title`|String|64 characters||Initial dialog title.|
 |`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`taskInfo.url`|String|2048 characters||Initial webview URL.|
@@ -517,10 +517,10 @@ Each command item is an object with the following structure:
 |`parameter.title`|String|32 characters|✔️|User-friendly title for the parameter.|
 |`parameter.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
 |`parameter.inputType`|String|||Defines the type of control displayed on a task module for `fetchTask: false`. One of `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`.|
-|`parameter.value`|String|512||Initial value for the parameter.|
+|`parameter.value`|String|512 characters||Initial value for the parameter.|
 |`parameter.choices`|Array of objects|10||The choice options for the `choiceset`. Use only when `parameter.inputType` is `choiceset`.|
-|`parameter.choices.title`|String|128||Title of the choice.|
-|`parameter.choices.value`|String|512||Value of the choice.|
+|`parameter.choices.title`|String|128 characters||Title of the choice.|
+|`parameter.choices.value`|String|512 characters||Value of the choice.|
 
 ## scopeConstraints
 
@@ -529,9 +529,9 @@ Each command item is an object with the following structure:
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
 |`teams`|Array|128||A list of team thread IDs to which your app is restricted.|
-|`teams.id`|String|64|✔️|Team's thread ID.|
+|`teams.id`|String|64 characters|✔️|Team's thread ID.|
 |`groupChats`|Array|128||A list of chat thread IDs to which your app is restricted.|
-|`groupChats.id`|String|64|✔️|Chat's thread ID.|
+|`groupChats.id`|String|64 characters|✔️|Chat's thread ID.|
 
 ## permissions
 
