@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-   The bot uses Teams API to send and receive files with users in personal chats. The files shared in Teams can appear as cards and allow rich in-app viewing. The bot also helps in implementing features, such as expense reporting, image recognition, file archival, and e-signatures that involve editing the file content. 
+   The bot uses Microsoft Teams API to send and receive files with users in personal chats. The files shared in Teams can appear as cards and allow rich in-app viewing. The bot also helps in implementing features, such as expense reporting, image recognition, file archival, and e-signatures that involve editing the file content. 
    
    **Key features to upload file in Teams using bot**: 
    
@@ -50,7 +50,7 @@ items:
   content: |
     The following steps help you to create and register your bot in Azure portal:
     
-    * Create Azure Bot resource to register bot with Azure Bot Service.
+    * Create and register your Azure app. 
     * Create client secret to enable SSO authentication of the bot.
     * Add Teams channel to deploy the bot.
     * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.

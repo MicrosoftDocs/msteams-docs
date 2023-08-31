@@ -14,10 +14,10 @@
 
    :::image type="content" source="../../assets/images/include-files/configure-web.png" alt-text="Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.":::
 
-1. Under Web > select **Add URI**.
+1. Under **Web** > select **Add URI**.
 
 1. Enter `https://token.botframework.com/.auth/web/redirect`.
 
-    :::image type="content" source="../../assets/images/include-files/web-add-uri.png" alt-text="Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.":::
-
 1. Select **Save**.
+
+    :::image type="content" source="../../assets/images/include-files/web-add-uri.png" alt-text="Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.":::

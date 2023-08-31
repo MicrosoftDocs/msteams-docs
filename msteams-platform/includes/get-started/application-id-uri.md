@@ -6,7 +6,7 @@
 
    :::image type="content" source="../../assets/images/include-files/expose-api-add.png" alt-text="Screenshot shows the Application ID URI add option.":::
 
-1. Update the **Application ID URI** in the `api://your-devtunnel-domain/botid-{AppID}` or `api://your-ngrok-domain/botid-{AppID}`format and select **Save**.
+1. Update the **Application ID URI** in the `api://your-devtunnel-domain/botid-{AppID}` or `api://your-ngrok-domain/botid-{AppID}` format and select **Save**.
 
    :::image type="content" source="../../assets/images/include-files/app-id-uri.png" alt-text="Screenshot shows the option to add redirect uri and save.":::
 

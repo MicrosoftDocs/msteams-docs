@@ -10,7 +10,7 @@
 
 1. Under **Who can consent?**, select **Admins and users**.
 
-1. Update the values for the rest of the fileds as follows:
+1. Update the values for the rest of the fields as follows:
 
    * Enter **Teams can access the user’s profile** as **Admin consent display name**.
 
