@@ -21,7 +21,7 @@
 
 1. Under **Pricing**, select **Change plan**. 
 
-    :::image type="content" source="../../assets/images/include-files/pricing-tier.png alt-text="Screenshot shows the pricing option in Azure portal.":::
+    :::image type="content" source="../../assets/images/include-files/pricing-tier.png" alt-text="Screenshot shows the pricing option in Azure portal.":::
 
 1. Select **Free** > **Select**.
 
