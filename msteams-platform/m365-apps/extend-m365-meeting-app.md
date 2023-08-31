@@ -177,7 +177,7 @@ Here's how to preview your meeting app running on Outlook for Windows desktop:
 
 1. Click **Add** to dismiss the dialog. Your meeting app will display in the side panel of the scheduling window and the **Apps** field will indicate its availability to participants in the meeting. From the **Apps* list, you can open the dropdown menu on your app to see how the app appears in the Store (About), update the app configuration for this meeting (Settings), or remove the app from this meeting (Remove).
 
-    App developers can configure the appearance of *Settings* and *Remove* in Outlook, the same as with [other configurable tabs in Teams](../tabs/how-to/create-tab-pages/removal-page.md#enable-your-tab-to-be-reconfigured-after-installation).
+You can configure the appearance of **Settings** and **Remove** in Outlook, the same as with [other configurable tabs in Teams](../tabs/how-to/create-tab-pages/removal-page.md#enable-your-tab-to-be-reconfigured-after-installation).
 
     :::image type="content" source="images/outlook-meeting-app-side-panel.png" alt-text="Meeting app running in Outlook meeting scheduler side panel":::
 
