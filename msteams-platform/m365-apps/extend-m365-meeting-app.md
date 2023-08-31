@@ -172,7 +172,7 @@ Here's how to preview your meeting app running on Outlook for Windows desktop:
 1. From the meeting scheduling window, select **All Apps**. Your sideloaded meeting app should appear among your installed meeting apps.
 :::image type="content" source="images/outlook-meeting-all-apps.png" alt-text="Sideloaded meeting app showing in `All Apps` menu of Outlook meeting scheduler":::
 
-1. Select your meeting app. This opens its configuration dialog, where your user will configure any relevant app settings for their specific meeting.
+1. Select your meeting app. This opens a configuration dialog, where your app user will configure any relevant app settings for their specific meeting.
 :::image type="content" source="images/outlook-meeting-app-configuration.png" alt-text="Meeting app configuration page showing from Outlook meeting scheduler":::
 
 1. Click **Add** to dismiss the dialog. Your meeting app will display in the side panel of the scheduling window and the **Apps** field will indicate its availability to participants in the meeting. From the **Apps* list, you can open the dropdown menu on your app to see how the app appears in the Store (About), update the app configuration for this meeting (Settings), or remove the app from this meeting (Remove).
