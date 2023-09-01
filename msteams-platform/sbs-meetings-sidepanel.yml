@@ -90,6 +90,16 @@ items:
     
     [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
 
+    [!INCLUDE [Client secret](includes/get-started/azure-api-permissions.md)]
+
+    [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
+
+    [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
+
+    [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
+
+    [!INCLUDE [Manifest](includes/get-started/azure-manifest.md)]
+
 - title: Create your bot
   durationInMinutes: 1
   content: |
