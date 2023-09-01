@@ -133,7 +133,7 @@ Teams tab applications are hosted within [iframe elements](https://developer.moz
 
 ### Update Azure AD app registration for SSO
 
-[Azure AD SSO](../tabs/how-to/authentication/tab-sso-overview.md) for meeting apps works the same way in Outlook as it does in Teams. However, you need to manually add the Outlook application ID to your Azure AD app registration in your tenant's *App registrations* portal.
+[Azure AD SSO](../tabs/how-to/authentication/tab-sso-overview.md) for meeting apps works the same way in Outlook as it does in Teams. However, you need to manually add the Outlook application ID to your Azure AD app registration in your tenant's **App registrations** portal.
 
 1. Sign in to [Azure portal](https://portal.azure.com) with your test tenant account.
 1. Open **App registrations**.
