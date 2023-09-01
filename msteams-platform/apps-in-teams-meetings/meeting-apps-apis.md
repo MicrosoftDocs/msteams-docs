@@ -24,7 +24,7 @@ The following table provides a list of APIs available across the Microsoft Teams
 |---|---|----|
 |[**Get user context**](#get-user-context-api)| Get contextual information to display relevant content in a Microsoft Teams tab.| [TeamsJS library](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) |
 |[**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
-|[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provides meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting notification. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
+|[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provides meeting signals using the existing conversation notification API for user-bot chat and allows the bot to notify user action that shows an in-meeting notification. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. | [TeamsJS library](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
 |[**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
@@ -201,7 +201,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
 # [Instant meeting](#tab/instant-meeting)
 
-   The following is a JSON payload response for a Instant meeting (Meet now) for in-tenant users:
+   The following is a JSON payload response for an Instant meeting (Meet now) for in-tenant users:
 
    ```json
       {
@@ -261,7 +261,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
 # [Guest user](#tab/guest-user)
 
-   The following is a JSON payload response in a scheduled private meeting for a guest user :
+   The following is a JSON payload response in a scheduled private meeting for a guest user:
 
    ```json
      {
@@ -943,7 +943,7 @@ POST /v1/meetings/{meetingId}/notification
 | `meetingId` | The meeting ID is available through bot invoke and TeamsJS library. |
 | `type` |`targetedMeetingNotification` |
 | `recipients` | List of user IDs. Get user IDs for meeting participants through [Get participant API](#get-participant-api). Get the entire list of chat roster using [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Empty or null recipients list will return 400.|
-| `surface` | A type of surface. The supported surface type are `meetingStage` and `meetingTabIcon`. |
+| `surface` | A type of surface. The supported surface types are `meetingStage` and `meetingTabIcon`. |
 | `surfaces` | List of surfaces where notifications can be rendered. |
 | `contentType` | Type of content that the targeted in-meeting notification renders. The supported value is `task`. |
 | `content` | [TaskModuleContinueResponse](/dotnet/api/microsoft.bot.schema.teams.taskmodulecontinueresponse?view=botbuilder-dotnet-stable&preserve-view=true) |
@@ -1254,7 +1254,7 @@ The JSON response body for meeting details API is as follows:
 | **organizer.aadObjectId** | The Organizer's Azure Active Directory object ID. |
 | **organizer.tenantId** | The Organizer's Azure Active Directory tenant ID. |
 
-In case of Recurring meeting type,
+In case of recurring meeting type:
 
 **startDate**: Specifies the date to start applying the pattern. The value of startDate must correspond to the date value of the start property on the event resource. The first occurrence of the meeting might not occur on this date if it doesn't fit the pattern.
 
