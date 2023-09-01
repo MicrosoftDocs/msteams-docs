@@ -98,8 +98,6 @@ landingContent:
         url: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries-or-regions
       - text: Teams Toolkit v5 extension within Visual Studio Code
         url: toolkit/teams-toolkit-fundamentals.md
-      - text: Develop your apps with a seamless transition between Teams Developer Portal and Teams Toolkit
-        url: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
  
     - linkListType: whats-new
       links:
