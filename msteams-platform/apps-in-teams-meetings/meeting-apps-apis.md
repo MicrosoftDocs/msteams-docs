@@ -47,40 +47,39 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
 * Meeting type
 
-    # [Channel meeting](#tab/channel-meeting)
+  # [Channel meeting](#tab/channel-meeting)
 
-    The following is a JSON payload response for a channel meeting for in-tenant users:
-
-       ```json
-        {
-         "app": {
-          "locale": "en-us",
-          "sessionId": "ff47ec00-e6a7-4dc1-a6ae-f44110f50c94",
-          "theme": "default",
-          "iconPositionVertical": 0,
-          "osLocaleInfo": {
-           "platform": "windows",
-           "regionalFormat": "en-in",
-           "shortDate": "dd-MM-yyyy",
-           "longDate": "dd MMMM yyyy",
-           "shortTime": "HH:mm",
-           "longTime": "HH:mm:ss"
-          },
-          "parentMessageId": "1678109354022",
-          "userClickTime": 1678109521159,
-          "userFileOpenPreference": "inline",
-          "host": {
-           "name": "Teams",
-           "clientType": "desktop",
-           "sessionId": "c3c3c0a0-f7a1-b070-6b89-c8cd1f380042",
-           "ringId": "ring1"
-          },
-          "appLaunchId": "7346ae66-5cac-47f9-8a0d-1228dac474cb"
-         },
-         "page": {
-          "id": "Test",
-          "frameContext": "sidePanel",
-          "subPageId": "",
+  The following is a JSON payload response for a channel meeting for in-tenant users:
+  ```json
+  {
+      "app": {
+      "locale": "en-us",
+      "sessionId": "ff47ec00-e6a7-4dc1-a6ae-f44110f50c94",
+      "theme": "default",
+      "iconPositionVertical": 0,
+      "osLocaleInfo": {
+        "platform": "windows",
+        "regionalFormat": "en-in",
+        "shortDate": "dd-MM-yyyy",
+        "longDate": "dd MMMM yyyy",
+        "shortTime": "HH:mm",
+        "longTime": "HH:mm:ss"
+      },
+      "parentMessageId": "1678109354022",
+      "userClickTime": 1678109521159,
+      "userFileOpenPreference": "inline",
+      "host": {
+        "name": "Teams",
+        "clientType": "desktop",
+        "sessionId": "c3c3c0a0-f7a1-b070-6b89-c8cd1f380042",
+        "ringId": "ring1"
+      },
+      "appLaunchId": "7346ae66-5cac-47f9-8a0d-1228dac474cb"
+      },
+      "page": {
+      "id": "Test",
+      "frameContext": "sidePanel",
+      "subPageId": "",
           "isFullScreen": false,
           "isMultiWindow": true,
           "sourceOrigin": ""
@@ -132,14 +131,14 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           "mySiteDomain": undefined
          }
         }
-       ```
+  ```
 
-    # [Scheduled meeting](#tab/scheduled-meeting)
+  # [Scheduled meeting](#tab/scheduled-meeting)
 
-    The following is a JSON payload response for a scheduled meeting for in-tenant users:
-    
-       ```json
-         {
+  The following is a JSON payload response for a scheduled meeting for in-tenant users:
+
+  ```json
+  {
           "app": {
            "locale": "en-us",
            "sessionId": "e746c935-0991-47b8-b7f4-16db7646771f",
@@ -199,12 +198,12 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
     
        ```
 
-    # [Instant meeting](#tab/instant-meeting)
+  # [Instant meeting](#tab/instant-meeting)
 
-    The following is a JSON payload response for an Instant meeting (Meet now) for in-tenant users:
-    
-       ```json
-          {
+  The following is a JSON payload response for an Instant meeting (Meet now) for in-tenant users:
+
+  ```json
+  {
           "app": {
             "locale": "en-us",
             "sessionId": "4b2b69ef-6030-4379-a07b-02a64ff3bd37",
@@ -253,18 +252,17 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
             "mySiteDomain": "m365x654992-my.sharepoint.com"
           }
         }
-       ```
-
+  ```
 ---
 
 * User type
 
-    # [Guest user](#tab/guest-user)
+  # [Guest user](#tab/guest-user)
 
-    The following is a JSON payload response in a scheduled private meeting for a guest user:
-    
-       ```json
-         {
+  The following is a JSON payload response in a scheduled private meeting for a guest user:
+
+  ```json
+   {
           "app": {
            "locale": "en-us",
            "sessionId": "268beeb4-a52d-4ba8-b1c8-8b9f0b9b3492",
@@ -330,11 +328,11 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
          }
        ```
 
-    # [Anonymous user](#tab/anonymous-user)
+  # [Anonymous user](#tab/anonymous-user)
 
-    The following is a JSON payload response in a scheduled private meeting for an anonymous user:
-    
-       ```json
+  The following is a JSON payload response in a scheduled private meeting for an anonymous user:
+
+  ```json
         {
             "app": {
                 "locale": "en-us",
@@ -368,13 +366,14 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
                 "id": "MCMxOTptZWV0aW5nX05UWm1OVEkzT0RndE9XWmtPUzAwTmpnekxXSmhOVE10TURobE5qRTVaakF3WVdZeEB0aHJlYWQudjIjMA=="
             }
         }
-       ```
+        
+   ```
 
-    # [External user](#tab/external-user)
+  # [External user](#tab/external-user)
 
-    The following is a JSON payload response in a scheduled private meeting for an external user:
-    
-       ```json
+  The following is a JSON payload response in a scheduled private meeting for an external user:
+
+  ```json
         {
          "app": {
           "locale": "en-us",
@@ -432,18 +431,17 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           "teamSiteId": ""
          }
         }
-    
-       ```
-    
-       ---
+
+  ```
+---
 
 * Call type
 
-    # [One-on-One call](#tab/one-on-one-call)
-    
-    The following is a JSON payload response for a one-on-one call for an in-tenant user:
-    
-       ```json
+  # [One-on-One call](#tab/one-on-one-call)
+
+  The following is a JSON payload response for a one-on-one call for an in-tenant user:
+
+  ```json
         {
          "app": {
           "locale": "en-us",
@@ -509,13 +507,13 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
          }
         }
     
-       ```
+  ```
     
-    # [Group call](#tab/group-call)
+  # [Group call](#tab/group-call)
     
-    The following is a JSON payload response for a group chat call for an in-tenant user:
+  The following is a JSON payload response for a group chat call for an in-tenant user:
     
-       ```json
+  ```json
         {
          "app": {
           "locale": "en-us",
@@ -581,7 +579,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
          }
         }
         
-       ```
+  ```
 
 ---
 
