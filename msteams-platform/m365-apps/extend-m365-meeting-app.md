@@ -47,6 +47,7 @@ To preview your meeting app in Outlook, you need:
 Follow these steps to quickly build a simplified Teams meeting app without any authentication that you can use to preview in Outlook:
 
 1. Open Microsoft Teams signed in with your test tenant, select **Calendar**, and create a **New meeting**.
+
 :::image type="content" source="images/teams-new-meeting.png" alt-text="New meeting panel in Teams":::
 
 1. Launch Visual Studio Code, open the Teams Toolkit extension, and select **View Samples**.
