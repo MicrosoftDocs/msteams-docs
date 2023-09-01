@@ -108,7 +108,7 @@ Open your Teams app manifest and update the `$schema` and `manifestVersion` manu
 
 ### Use TeamsJS version 2.5.0 or later
 
-Use TeamsJS client library version `2.5.0` or later to extend your Teams meeting app to run in Outlook. If your app uses TeamsJS v2.5.0 or later, application code changes aren't required to run in Outlook.
+Use TeamsJS client library version 2.5.0 or later to extend your Teams meeting app to run in Outlook. If your app uses TeamsJS v2.5.0 or later, application code changes aren't required to run in Outlook.
 
 If you need to upgrade your TeamsJS npm package from v1.x.x to the latest v2.x.x TeamsJS, you can use Teams Toolkit to help identify and automate the required code changes. Also, you can perform the same steps manually. For more information, see [TeamsJS library](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx) for details.
 
