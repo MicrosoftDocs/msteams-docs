@@ -81,16 +81,16 @@ Activity feed APIs work with a Teams app. The following are the requirements for
 * The Teams app must be installed for the recipient, either personally, or in a team or chat they're part of.
 * Use delegated or application permissions to send activity feed notifications. When you use application permissions, we recommend using [resource-specific consent (RSC)](../graph-api/rsc/resource-specific-consent.md) as the `TeamsActivity.Send.User` permission is consented by the user to send activity notifications. Ensure that you declare RSC permissions in your Teams app **manifest.json** file.
 
-### App manifest changes
+### App manifest update
 
-This section describes the changes that need to be added to the app manifest. Ensure that you use the [app manifest](/microsoftteams/platform/resources/schema/manifest-schema) version `1.7` or later.
+This section describes the updates that need to be added to the app manifest. Ensure that you use the [app manifest](/microsoftteams/platform/resources/schema/manifest-schema) version `1.7` or later.
 
 ```json
 "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
 "manifestVersion": "1.7",
 ```
 
-#### webApplicationInfo section changes
+#### webApplicationInfo update
 
 ```json
 "webApplicationInfo":
@@ -108,7 +108,7 @@ This section describes the changes that need to be added to the app manifest. En
 > [!NOTE]
 > You might get an error if multiple Teams apps in the same scope (team, chat, or user) are using the same Azure AD app. Make sure that you're using unique Azure AD apps.
 
-#### Activities section changes
+#### Activities update
 
 ```json
 "activities":
@@ -137,7 +137,7 @@ This section describes the changes that need to be added to the app manifest. En
 > [!NOTE]
 > The `actor` property is a special parameter that always takes the name of the caller. In delegated calls, `actor` is the user's name. In application-only calls, it takes the name of the Teams app.
 
-#### Authorization section changes
+#### Authorization update
 
 ```json
 "authorization": 
