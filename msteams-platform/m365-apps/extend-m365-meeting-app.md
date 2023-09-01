@@ -77,7 +77,7 @@ Extending your Teams meeting app in Outlook involves the following:
 > [!div class="checklist"]
 >
 > * [Use app manifest version 1.13 or later](#use-app-manifest-version-113-or-later).
-> * [Use TeamsJS library v2.5.0 or later](#use-teamsjs-version-250-or-later).
+> * [Use JavaScript client library (TeamsJS) v2.5.0 or later](#use-teamsjs-version-250-or-later).
 > * [Configure Content Security Policy headers](#configure-csp-headers-for-outlook).
 > * [Update Azure Active Directory (Azure AD) app registration for single sign-on (SSO)](#update-azure-ad-app-registration-for-sso).
 > * [Sideload your updated app using TeamsFx CLI](#sideload-your-app-using-teamsfx-cli).
