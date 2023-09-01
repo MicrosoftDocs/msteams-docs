@@ -62,7 +62,7 @@ After creating the project, you can view the project folders and files under **E
   * `state.<envName>.json`: Provision output file for the environment. This file exists for every environment individually.
   * `<env>.userdata`: User data for the provision output for the environment. This file exists for every environment individually.
 * `templates`
-  * `appPackage`: App manifest template files.
+  * `appPackage`: App manifest (previously called Teams app manifest) template files.
   * `azure`: `bicep` template files.
 
 ## Customize resource provision
@@ -154,7 +154,7 @@ Follow these steps customizing the environment description:
 3. Create a new environment and name it **staging**, if a staging environment doesn’t exist.
 4. Open the configuration file `.fx\configs\config.staging.json`.
 5. Add a new property as you did in config.dev.json and enter its value as **my app description for staging**.
-6. Open Teams app manifest template `templates\appPackage\manifest.template.json`.
+6. Open the app manifest template `templates\appPackage\manifest.template.json`.
 7. Update the value of property `description` > `short` to use the variable defined in configure files with braces. Use the  following syntax `{{config.manifest.description.short}}`.
   
     The updates to `manifest.template.json` are:
@@ -187,9 +187,9 @@ Follow these steps customizing the environment description:
 
 You can set the description of Teams app to **my app description** for all the environments.
 
-Teams Toolkit shares the same Teams app manifest templates across all environments, you can update the description value in it for your target:
+Teams Toolkit shares the same app manifest templates across all environments, you can update the description value in it for your target:
 
-1. Open the Teams app manifest template `templates\appPackage\manifest.template.json`.
+1. Open the app manifest template `templates\appPackage\manifest.template.json`.
 2. Update the value of the property `description` > `short` with the permanent string **my app description**.
   
     The updates to `manifest.template.json` are:
@@ -224,7 +224,7 @@ For more information on Bicep template and parameter files, see [how to provisio
 ## See also
 
 * [Teams Toolkit Overview](../teams-toolkit-fundamentals.md)
-* [App manifest schema for Teams](~/resources/schema/manifest-schema.md)
+* [App manifest schema](~/resources/schema/manifest-schema.md)
 * [Add more cloud resources](add-resource-v4.md)
 * [Collaborate with other developers on Teams project](TeamsFx-collaboration-v4.md)
 * [Test app behavior in different environment](test-app-behavior-v4.md)

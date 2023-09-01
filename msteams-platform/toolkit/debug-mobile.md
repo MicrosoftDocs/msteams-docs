@@ -173,7 +173,7 @@ You'll be prompted to sideload the app into Teams. Select **Add**.
 1. To test your bot in mobile client, follow the steps listed in [Test your tab app on mobile client](#test-your-tab-app-on-mobile-client) for your bot.
 
     > [!NOTE]
-    > If a you have debugged the bot app previously and the Teams app manifest file is changed, it's recommended to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
+    > If a you have debugged the bot app previously and the app manifest (previously called Teams app manifest) file is changed, we recommend to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
 
     # [iOS](#tab/ios2)
 
