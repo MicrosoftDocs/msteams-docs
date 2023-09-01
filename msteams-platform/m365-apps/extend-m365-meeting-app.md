@@ -44,9 +44,9 @@ To preview your meeting app in Outlook, you need:
 
 ### Quickstart
 
-Follow these steps to quickly build a simplified Teams meeting app (without authentication) that you can use to preview in Outlook:
+Follow these steps to quickly build a simplified Teams meeting app without any authentication that you can use to preview in Outlook:
 
-1. Open Microsoft Teams signed in to your test tenant, select **Calendar**, and create a **New meeting**.
+1. Open Microsoft Teams signed in with your test tenant, select **Calendar**, and create a **New meeting**.
 :::image type="content" source="images/teams-new-meeting.png" alt-text="New meeting panel in Teams":::
 
 1. Launch Visual Studio Code, open the Teams Toolkit extension, and select **View Samples**.
@@ -127,9 +127,7 @@ On completion, your *package.json* file references `@microsoft/teams-js@2.x.x` a
 
 ### Configure CSP headers for Outlook
 
-Teams tab applications are hosted within [iframe elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) in Outlook, as they are in Microsoft Teams.
-
-If your app uses [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) headers, add `outlook.office.com` as a [frame-ancestor](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors).
+Teams tab applications are hosted within [iframe elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) in Outlook, as they are in Microsoft Teams. If your app uses [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) headers, add `outlook.office.com` as a [frame-ancestor](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors).
 
 ### Update Azure AD app registration for SSO
 
@@ -205,7 +203,6 @@ Here's how to preview your meeting app running on Outlook for Windows desktop:
 
     :::image type="content" source="images/teams-manage-your-apps-remove.png" alt-text=" `Manage your apps` pane of Microsoft Teams showing the sideloaded meeting app `Remove` option":::
 
-Please use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
 
 ## Code sample
 
@@ -216,4 +213,4 @@ Please use the [Microsoft Teams developer community channels](/microsoftteams/pl
 ## See also
 
 * [Extend Teams apps across Microsoft 365](overview.md)
-* [Public developer preview for Teams](../resources/dev-preview/developer-preview-intro.md)
+* [Support and feedback](~/feedback.md)
