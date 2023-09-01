@@ -53,7 +53,7 @@ Follow these steps to quickly build a simplified Teams meeting app (without auth
 
     :::image type="content" source="images/toolkit-meeting-app-sample.png" alt-text="`My First Meeting App` sample in Teams Toolkit":::
 
-1. Select **My First Meeting App**, press the **Create** button, and specify a folder for creating the workspace.
+1. Select **My First Meeting App** > **Create** and specify the folder for creating the workspace.
 
 1. Press `F5` to run the sample locally in Teams. If you have a Microsoft Azure subscription, you can use Teams Toolkit to **Provision** resources and **Deploy** your app to run remotely in Microsoft Azure. (This requires first signing in to Azure from Teams Toolkit.)
 
