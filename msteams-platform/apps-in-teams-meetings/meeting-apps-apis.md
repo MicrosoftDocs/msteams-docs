@@ -36,7 +36,7 @@ The following table provides a list of APIs available across the Microsoft Teams
 
 > [!IMPORTANT]
 >
-> * By default, the [new Teams client](https://www.microsoft.com/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) supports light theme for apps in Teams meetings. When the `app.theme` property in getContext API returns the `default` value, Teams client is in light theme.
+> * By default, the [new Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) supports light theme for apps in Teams meetings. When the `app.theme` property in getContext API returns the `default` value, Teams client is in light theme.
 > * Earlier version of Teams clients only support Dark and Contrast theme for apps in Teams meetings
 
 To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab running in the meeting context and is added for the response payload.

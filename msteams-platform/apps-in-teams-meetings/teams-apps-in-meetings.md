@@ -105,7 +105,7 @@ You can configure your tab app to enable app caching to reduce the reload time o
 
 ### Default theme for meeting apps
 
-By default, the [new Teams client](https://www.microsoft.com/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) supports light theme for Teams meetings. Your app can update the app UI based on the user's theme by using the [getContext API](meeting-apps-apis.md#get-user-context-api). Earlier version of Teams clients only support dark and contrast theme for apps in Teams meetings.
+By default, the [new Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) supports light theme for Teams meetings. Your app can update the app UI based on the user's theme by using the [getContext API](meeting-apps-apis.md#get-user-context-api). Earlier version of Teams clients only support dark and contrast theme for apps in Teams meetings.
 
 ## User types in Teams
 
