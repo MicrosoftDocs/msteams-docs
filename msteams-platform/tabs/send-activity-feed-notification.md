@@ -82,7 +82,7 @@ Activity feed APIs work with a Teams app. The following are the requirements for
 
 ### Permissions
 
-Use delegated or application permissions to send activity feed notifications. When you use application permissions, we recommend using [resource-specific consent (RSC)](../graph-api/rsc/resource-specific-consent.md) as the `TeamsActivity.Send.User` permission is consented by the user to send activity notifications. Ensure that you declare RSC permissions in your Teams app **manifest.json** file.
+Use delegated or application permissions to send activity feed notifications. When you use application permissions, we recommend using [resource-specific consent (RSC)](../graph-api/rsc/resource-specific-consent.md) as the `TeamsActivity.Send.User` permission is consented by the user to send activity notifications. Ensure that you declare RSC permissions in your app manifest file.
 
 ### App manifest update
 
