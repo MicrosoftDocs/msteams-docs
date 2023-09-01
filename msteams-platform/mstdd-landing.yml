@@ -78,6 +78,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Extend a Teams meeting app to Outlook
+        url: m365-apps/extend-m365-meeting-app.md
       - text: App caching for iOS personal tray
         url: tabs/how-to/app-caching.md
       - text: App icon badging for your Teams app
