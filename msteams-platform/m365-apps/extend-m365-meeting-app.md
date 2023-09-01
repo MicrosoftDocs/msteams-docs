@@ -57,7 +57,7 @@ Follow these steps to quickly build a simplified Teams meeting app without any a
 
 1. Press `F5` to debug and run the sample locally in Teams. If you have Microsoft Azure subscription, you can use Teams Toolkit to **Provision** the resources and **Deploy** your app to run remotely in Microsoft Azure, which requires signing in to Azure from Teams Toolkit.
 
-1. Microsoft Teams will launch and prompt you to install the app. Select **Add to a meeting** from the dropdown and select the meeting you created earlier.
+1. Microsoft Teams will launch and prompt you to install the app. Select **Add to a meeting** from the dropdown and select the meeting that you've created earlier.
 
     :::image type="content" source="images/teams-add-to-meeting.png" alt-text="Add app to meeting option in Microsoft Teams":::
 
