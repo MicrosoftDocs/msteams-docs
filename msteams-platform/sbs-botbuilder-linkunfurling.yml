@@ -111,7 +111,7 @@ items:
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"MicrosoftAppTenantId"` as blank for MultiTenant bot.
 
-         :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appsettings_1.png" alt-text="Screenshot showing the app settings.":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/appsettings-json.png" alt-text="Screenshot showing the app settings.":::
         
     1. Go to the **manifest.json** file in cloned repository.
 
@@ -165,7 +165,7 @@ items:
 
           :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/certificate_1.png" alt-text="Screenshot showing the trust Certificate.":::
           
-          A webpage opens with a message **Your bot is ready!**.
+          A webpage opens with a message **Your bot is ready!**
 
           :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appisready.png" alt-text="Screenshot showing the webpage saying bot is ready.":::
                   
