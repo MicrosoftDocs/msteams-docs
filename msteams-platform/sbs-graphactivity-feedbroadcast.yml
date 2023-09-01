@@ -38,9 +38,9 @@ items:
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
+     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
      | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version to be installed. |
-     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm devDependencies). |
 
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -93,13 +93,8 @@ items:
   durationInMinutes: 1 
   content: | 
 
-    1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
-    1. Select **Code**.
-    1. From the dropdown menu, select **Open with GitHub Desktop**.
+   [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clone-repository-sbs-graph1.png" alt-text="Clone repository" border="true":::
-
-    1. Select **Clone**. 
 
 - title: Register your Teams Auth SSO with Azure AD
   durationInMinutes: 1
@@ -393,7 +388,7 @@ items:
        1. Open Visual Studio.
        1. Go to **File** > **Open** > **Project/Solution...**.
     
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/VSopenfile.png" alt-text="Open file in Visual Studio" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/vsopenproject.png" alt-text="Open file in Visual Studio" border="true":::
 
        1. Select **ActivityFeedBroadcast.sln** file from **csharp** folder.
 
@@ -423,19 +418,15 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectzip.png" alt-text="Select zip file" border="true":::
     
-    1. Go to **Microsoft Teams**.
+    1. In the Teams client, select the **Apps** icon.
 
-    1. Select **Apps** > **Manage your apps**.
+    1. Select **Manage your apps**.
 
-       :::image type="content" source="~/assets/images/Teams-task-module/manage-apps_3.png" alt-text="Manage apps":::
-    
-    1. Select **Submit an app to your org**. 
+    1. Select **Upload an app**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/submit-an-app-to-your-org.png" alt-text="Screenshot showing the selection of submit an app to your org highlighted in red.":::
-       
-    1. Select **Open** to upload the .zip file that you created in the **AppPackage** folder.
+    1. Look for the option to **Upload a custom app**. If the option is visible, you have enabled sideloading apps. 
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/open-a-custom-app.png" alt-text="Open a custom app" border="true":::
+       :::image type="content" source="assets/images/teams-file-upload-bot/custom-upload.png" alt-text="Screenshot shows the selection of Upload a custom app highlighted in red.":::
 
     1. Select **Add**.
 
