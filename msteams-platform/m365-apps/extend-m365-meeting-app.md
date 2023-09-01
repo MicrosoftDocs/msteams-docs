@@ -142,7 +142,7 @@ Teams tab applications are hosted within [iframe elements](https://developer.moz
 
     :::image type="content" source="images/azure-app-registration-clients.png" alt-text="Screenshot shows the Authorized client Ids from the App registrations blade on Azure portal.":::
 
-1. In the **Authorized client applications** section, add following `Client Id` value:
+1. In the **Authorized client applications** section, add the following `Client Id` value:
 
     |Microsoft 365 client application | Client ID |
     |--|--|
