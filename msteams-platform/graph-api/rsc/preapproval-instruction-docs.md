@@ -39,7 +39,7 @@ Preapproval of RSC permissions allows admins to approve resource-specific consen
 
 Preapproval of RSC permissions is managed through Microsoft Teams PowerShell. You can learn more about managing Microsoft Teams with PowerShell [here](/manage-teams-with-microsoft-teams-powershell)
 
-Before you can create and manage pre-approvals. You need to connect PowerShell to your tenant using Microsoft Graph. You can use the `Connect-MgGraph` cmdlet to do this. You'll need to connect with the following permissions to create, manage, and delete pre-approval policies.
+Before you can create and manage pre-approvals, you need to connect PowerShell to your tenant using Microsoft Graph. You can use the `Connect-MgGraph` cmdlet to do this. You need to connect with the following permissions to create, manage, and delete pre-approval policies.
 
 1. `TeamworkAppSettings.ReadWrite.All`
 1. `Policy.ReadWrite.Authorization`
@@ -51,13 +51,13 @@ connect-MgGraph -Scopes @('TeamworkAppSettings.ReadWrite.All', 'Policy.ReadWrite
 
 ## Enable preapproval for RSC permissions
 
-For pre-approval to function you need to change your RSC settings to allow pre-approved apps only. You can do this using the `Set-MgBetaChatRscConfiguration` and `Set-MgBetaTeamRscConfiguration` cmdlets. Below are the available configurations available for these settings.
+For pre-approval to function you need to change your RSC settings to allow pre-approved apps only. You can do this using the `Set-MgBetaChatRscConfiguration` and `Set-MgBetaTeamRscConfiguration` cmdlets. The following are the available configurations available for these settings:
 
 |Configuration| Description|
 |---|---|
 |`ApprovedForAllApps`|Any RSC enabled app can be consented to by users in your tenant. With these settings enabled, preapproval of RSC permissions isn't needed as all RSC enabled apps are approved for use
 |`ApprovedForPreApprovedAppsOnly`|RSC enabled apps can be consented on an app-by-app basis. Admins can choose which apps are approved for which RSC permissions.
-|`DisabledForAllApps`| No RSC permissions can be consented to by users. In this state, preapproval of RSC permissions will have no effect on users ability to consent to RSC enabled apps
+|`DisabledForAllApps`| No RSC permissions can be consented to by users. In this state, preapproval of RSC permissions have no effect on users ability to consent to RSC enabled apps
 
    >[!WARNING]
    >Changing your Chat RSC or Team RSC configuration to DisabledForAllApps will disable pre-approval in your tenant and users will encounter errors when attempting to install RSC enabled apps.
@@ -78,7 +78,7 @@ You can check the current state of your Team RSC configurations by using the `Ge
 
 ## Create a preapproval
 
-Preapprovals can be created to preapprove RSC permissions against certain sensitivity labels in your tenant. This means you can dictate what data RSC-enabled apps have access to. In this section, we'll create a pre-approval without a sensitivity label for use with any sensitivity group, and with a sensitivity label for use against certain data. To create a pre-approval, you'll need the following information:
+Preapprovals can be created to preapprove RSC permissions against certain sensitivity labels in your tenant. This means you can dictate what data RSC-enabled apps have access to. In this section, we'll create a pre-approval without a sensitivity label for use with any sensitivity group, and with a sensitivity label for use against certain data. To create a pre-approval, you need the following information:
 
 1. The Teams App ID of the app you wish to pre-approve
 2. The RSC permissions associated with the app you want to pre-approve
@@ -95,7 +95,7 @@ You must distinguish what type of RSC permissions you're pre-approving in the cm
 
 ### Create a preapproval without a sensitivity label
 
-When you create your cmdlet, you should use the option appropriate to the permissions included in the app you're trying to pre-approve. You can also include both if the app you're pre-approving has both Chat RSC and Team RSC permissions. Examples below show multiple ways to build cmndlets to pre-approve apps with varying permissions without specifying a sensitivity label:
+When you create your cmdlet, you should use the option appropriate to the permissions included in the app you're trying to pre-approve. You can also include both if the app you're pre-approving has both Chat RSC and Team RSC permissions. Teh following examples show multiple ways to build cmndlets to pre-approve apps with varying permissions without specifying a sensitivity label:
 
 #### Preapprove an app with Team RSC permissions
 
@@ -121,7 +121,7 @@ Create a pre-approval with a sensitivity label
 
 ### Create a preapproval with a sensitivity label
 
-The same process can be used to create a pre-approval that applies to data within certain sensitivity labels in Microsoft Teams. You can use the `TeamLevelSensitivityLabelCondition` and `SpecificSensitivityLabel` arguments to define specific sensitivity labels to apply the RSC pre-approval policy to. Examples of cmndlets using these arguments are below:
+The same process can be used to create a pre-approval that applies to data within certain sensitivity labels in Microsoft Teams. You can use the `TeamLevelSensitivityLabelCondition` and `SpecificSensitivityLabel` arguments to define specific sensitivity labels to apply the RSC pre-approval policy to. The following are examples of cmndlets using these arguments:
 
 #### Preapprove an app with Team RSC permissions and a defined sensitivity label
 
@@ -162,7 +162,7 @@ Update-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e
 Update-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForTeams @('OnlineMeeting.ReadBasic.Group', 'TeamsAppInstallation.Read.Group)
 ```
 
-If you're changing your pre-approval from a defined sensitivity label to all sensitivity labels you must reset the value of the `SpecificSensitivityLabel` argument in your pre-approval. You can do so by setting the `SpecificSensitivityLabel` argument to null, example below:
+If you're changing your pre-approval from a defined sensitivity label to all sensitivity labels you must reset the value of the `SpecificSensitivityLabel` argument in your pre-approval. You can do so by setting the `SpecificSensitivityLabel` argument to null, as the following example:
 
 ```powershell
 New-MgBetaTeamAppPreApproval  -TeamsAppId d46d75f9-d445-457e-b555-24bd2f54c15a -ResourceSpecificApplicationPermissionsAllowedForTeams @('ChannelMessage.Read.Group') -TeamLevelSensitivityLabelCondition SpecificSensivityLabel -SpecificSensitivityLabelIdsApplicableToTeams @(‘null’)
