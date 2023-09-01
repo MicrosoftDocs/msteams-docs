@@ -1,12 +1,12 @@
 ---
-title: Microsoft Teams updates
+title: Introducing the new Microsoft Teams client
 description: Learn about the latest updates to Microsoft Teams.
 author: v-ypalikila
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
 ---
-# Microsoft Teams update
+# Introducing the new Microsoft Teams client
 
 [The new Microsoft Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) is reimagined from the ground up with performance in mind. It's faster, simpler, smarter, and flexible to provide better experience for your apps and users. The new Teams client supports all the existing Teams app capabilities except Adaptive Card tabs. If you have an app that runs inside the Classic Teams, the app will most likely run in the new Teams client without any issues.
 
@@ -48,6 +48,8 @@ The following are the Teams features that will be supported soon:
 * [Sideloading of apps](../concepts/deploy-and-publish/apps-upload.md) isn't supported in the new Teams client. You can sideload an app in the Classic Teams client and use it in new Teams client.
 
 * [External authentication](../tabs/how-to/authentication/auth-oauth-provider.md) isn't supported in the new Teams client. We recommend you use the [authentication using third-party OAuth provider](../tabs/how-to/authentication/auth-flow-tab.md) or use the app in the Classic Teams client.
+
+* [Message Extensions](../get-started/build-message-extension.md) can't be invoked from the Teams search bar in the new Teams client.
 
 For more information on known issues and gaps in the new Teams client, see [new Microsoft Teams](/microsoftteams/new-teams-desktop-admin?tabs=teams-admin-center#known-issues).
 
