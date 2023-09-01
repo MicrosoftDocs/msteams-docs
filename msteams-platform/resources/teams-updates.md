@@ -57,4 +57,5 @@ If your app is working fine in the Classic Teams client but has issues in the ne
 
 ## See also
 
-[Teams app that fits](../overview.md)
+* [Teams app that fits](../overview.md)
+* [Handle theme change](../tabs/how-to/access-teams-context.md#handle-theme-change)

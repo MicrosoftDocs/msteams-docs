@@ -52,7 +52,7 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 
 For example, in your app manifest if you set your tab *configurationUrl* attribute to `"https://www.contoso.com/config?name={user.loginHint}&tenant={user.tenant.id}&group={team.groupId}&theme={app.theme}"` and the signed-in user has the following attributes:
 
-* Their username is **user@example.com**.
+* Their username is **<user@example.com>**.
 * Their company tenant ID is **e2653c-etc**.
 * They're a member of the Office 365 group with ID **00209384-etc**.
 * The user has set their Teams theme to **dark**.
@@ -367,3 +367,4 @@ The `theme` argument in the function is a string with a value of `default`, `dar
 * [Microsoft Teams Connect shared channels](../../concepts/build-and-test/shared-channels.md)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Use task modules in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Introducing the new Microsoft Teams client](../../resources/teams-updates.md)
