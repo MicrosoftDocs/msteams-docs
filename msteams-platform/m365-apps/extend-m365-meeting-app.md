@@ -20,7 +20,7 @@ Across the Microsoft 365 ecosystem, most monthly users schedule their Teams meet
 
 The following table shows the Teams meeting app contexts supported in Outlook:
 
-| Teams meeting context | app manifest value | TeamsJS value | Outlook support
+| Teams meeting context | App manifest value | TeamsJS value | Outlook support |
 |--|--|--|--|
 | [Meeting details view](../apps-in-teams-meetings/build-tabs-for-meeting.md#meeting-details-view) | `meetingDetailsTab` | `frameContext.content` | ✔️ |
 | [Meeting chat view](../apps-in-teams-meetings/build-tabs-for-meeting.md#meeting-chat-view) | `meetingChatTab` | `frameContext.content` | ✔️ |
