@@ -152,7 +152,7 @@ For more information on client application IDs used to extend Teams apps across 
 
 To run your app in Microsoft 365 and Outlook sideload your [app package](..//concepts/build-and-test/apps-package.md) using the TeamsFx CLI.
 
-1. Package your Teams ([app manifest](../resources/schema/manifest-schema.md) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you've used Teams Toolkit to create your app, you can use the **Zip Teams App Package** option in the **UTILITY** section of Teams Toolkit. Select the `manifest.json` file of your app and the appropriate environment (**local** or **dev**). Teams Toolkit will then display a dialog linking to the zip file location.
+1. Package your Teams [app manifest](../resources/schema/manifest-schema.md) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons) in a zip file. If you've used Teams Toolkit to create your app, you can use the **Zip Teams App Package** option in the **UTILITY** section of Teams Toolkit. Select the `manifest.json` file of your app and the appropriate environment (**local** or **dev**). Teams Toolkit displays a dialog linking to the zip file location.
 
     :::image type="content" source="images/toolkit-zip-teams-app-package.png" alt-text="Screenshot shows the Zip Teams App Package option in Teams Toolkit extension for Visual Studio Code.":::
 
