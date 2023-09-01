@@ -50,22 +50,18 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-- title: Create and register your bot
+- title: Register Azure AD app
   durationInMinutes: 5
   content: |
     To create and register your bot in Microsoft Azure Active Directory (Azure AD), perform the following steps:
 
-    * Create Azure Bot resource to register bot with Azure Bot service.
+    * Create and register your Azure app. 
     * Create client secret to enable single sign-on (SSO) authentication of the bot.
     * Add Teams channel to deploy the bot.
     * Create a ngrok or dev tunnel to your web server's endpoints.
     * Add messaging endpoint to the ngrok or dev tunnel you created.
 
-    [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
-
-    [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
-
-    [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
+    [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
     **Create a tunnel**
 
@@ -90,21 +86,21 @@ items:
 
       ---     
 
-    [!INCLUDE [messaging endpoint](includes/get-started/messaging-endpoint.md)]
+    [!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
+    
+    [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
 
-- title: Update the Azure AD app registration
+- title: Create your bot
   durationInMinutes: 1
   content: |
 
-    [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
+    [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]    
 
-    [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
+    [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
 
-    [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
+    [!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
 
-    [!INCLUDE [API permission](includes/get-started/azure-api-permissions.md)]
-
-    [!INCLUDE [Authentication](includes/get-started/azure-web-authentication.md)]
+    [!INCLUDE [Service connection](includes/get-started/oauth-connection-settings.md)]
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
