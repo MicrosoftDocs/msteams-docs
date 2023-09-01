@@ -52,9 +52,9 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 
 For example, in your app manifest if you set your tab *configurationUrl* attribute to `"https://www.contoso.com/config?name={user.loginHint}&tenant={user.tenant.id}&group={team.groupId}&theme={app.theme}"` and the signed-in user has the following attributes:
 
-* Their username is **user@example.com**.
+* Their username is **<user@example.com>**.
 * Their company tenant ID is **e2653c-etc**.
-* They're a member of the Office 365 group with ID **00209384-etc**.
+* They're a member of the Microsoft 365 group with ID **00209384-etc**.
 * The user has set their Teams theme to **dark**.
 
 Teams will call the following URL when configuring the tab:
@@ -344,9 +344,28 @@ For more information on shared channels, see [shared channels](~/concepts/build-
 
 ## Handle theme change
 
+> [!IMPORTANT]
+>
+> * By default, the [new Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) supports light theme for apps in Teams meetings. When the `app.theme` property in getContext API returns the `default` value, Teams client is in light theme.
+> * Earlier version of Teams clients only support Dark and Contrast theme for apps in Teams meetings.
+
 You can register your app to be informed if the theme changes by calling `microsoftTeams.app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
 The `theme` argument in the function is a string with a value of `default`, `dark`, or `contrast`.
+
+# [Default](#tab/default)
+
+The following image shows the default theme option in the Teams:
+
+:::image type="content" source="../../assets/images/tabs/light-theme-teams-default.png" alt-text="Screenshot shows the default theme in Teams desktop client.":::
+
+# [Dark](#tab/dark)
+
+The following image shows the dark theme option in the Teams:
+
+:::image type="content" source="../../assets/images/tabs/dark-theme-teams.png" alt-text="Screenshot shows the dark theme in Teams desktop client.":::
+
+---
 
 ## Code sample
 
@@ -367,3 +386,4 @@ The `theme` argument in the function is a string with a value of `default`, `dar
 * [Microsoft Teams Connect shared channels](../../concepts/build-and-test/shared-channels.md)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Use task modules in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Introducing the new Teams client](../../resources/teams-updates.md)

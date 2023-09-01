@@ -26,7 +26,12 @@ Teams platform features that are available to all app developers.
 
 **2023 August**
 
+* ***August 29, 2023***: [Use Teams store with intelligent search experience to display apps that are closest match to the user's specified characters.](concepts/deploy-and-publish/appsource/publish.md#teams-store-search-experience)
+
+* ***August 28, 2023***: [Teams app manifest is now referred to as app manifest.](resources/schema/manifest-schema-dev-preview.md)
+
 * ***August 16, 2023***: [Use Teams Toolkit Visual Studio v17.7 extension with many new app development features to get started with app development for Teams.](toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md)
+
 * ***August 10, 2023***: [Send a proactive message using AAD ID](bots/how-to/conversations/send-proactive-messages.md).
 
 :::column-end:::
@@ -294,7 +299,7 @@ Explore updates from the previous GA releases listed here.
 | 11/05/2018 | The **task module** feature is released. A task module allows you to create modal pop-up experiences in your Teams application, from both bots and tabs. Inside the pop-up, you can run your own custom HTML/JavaScript code, show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video, or display an [Adaptive card](/adaptive-cards/). | [Task module Overview](~/concepts/task-modules/task-modules-overview.md), [task module in tabs](~/concepts/task-modules/task-modules-tabs.md),  [task module in bots](~/concepts/task-modules/task-modules-bots.md) |
 | 10/05/2018 | Formatting information for cards is updated and tested in the desktop, iOS, and Android clients for Teams. | [Cards](~/concepts/cards/cards.md), [Card formatting](~/concepts/cards/cards-format.md) |
 | 09/24/2018 | Calls and online meetings APIs for Microsoft Graph is released to beta, and Teams apps can now interact with users in rich ways using voice and video. | [Calls and online meetings bots](~/concepts/calls-and-meetings/registering-calling-bot.md), [Real-time media concepts](~/concepts/calls-and-meetings/real-time-media-concepts.md), [Registering a calling bot](~/concepts/calls-and-meetings/registering-calling-bot.md), [Debugging and local testing](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md), [Application-hosted media](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md), [Handling incoming call notifications](~/concepts/calls-and-meetings/call-notifications.md) |
-| 09/11/2018 | Tab configuration pages are now significantly taller. | [Tab Design](tabs/design/tabs.md) |
+| 09/11/2018 | Tab configuration pages are now taller. | [Tab Design](tabs/design/tabs.md) |
 | 08/15/2018 | Adaptive cards are now supported in Teams.|[Adaptive card actions in Teams](task-modules-and-cards/cards/cards-reference.md#adaptive-card) |
 | 08/10/2018 | Client support for DevTools.| [DevTools for the Microsoft Teams Desktop Client](~/resources/dev-preview/developer-preview-tools.md)|
 | 08/08/2018 | Message extensions now supports multiple commands. | [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
@@ -338,6 +343,10 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
 **2023 August**
+
+* ***August 31, 2023***: [The new Teams client supports light theme for apps in Teams meetings.](tabs/how-to/access-teams-context.md#handle-theme-change)
+
+* ***August 28, 2023***: [Teams app manifest is now referred to as app manifest.](resources/schema/manifest-schema-dev-preview.md)
 
 * ***August 22, 2023***: [Enable RSC permissions for a user using the Graph APIs](graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings).
 

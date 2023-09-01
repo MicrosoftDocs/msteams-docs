@@ -20,7 +20,7 @@ The process to update your search-based Teams message extension involves the fol
 
 > [!div class="checklist"]
 >
-> * Update your app manifest.
+> * Update your app manifest (previously called Teams app manifest).
 > * Add the Microsoft 365 channel for your bot.
 > * Sideload your updated app in Teams.
 
@@ -65,7 +65,7 @@ To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
 1. Select **Teams: Create a New App**.
 1. From the dropdown list that appears, select **Message Extension**.
-1. Select **Custom Search Results** to download the sample code for a Teams message extension using the latest Teams app manifest. For more information, see [Teams developer manifest](../resources/schema/manifest-schema.md).
+1. Select **Custom Search Results** to download the sample code for a Teams message extension using the latest app manifest. For more information, see [app manifest](../resources/schema/manifest-schema.md).
 
     :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams sample options.":::
 
@@ -83,22 +83,22 @@ To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-
 1. Enter **Teams: Deploy** to deploy the sample code to the provisioned resources in Azure and start the app. Alternatively, you can select **Deploy** under **LIFECYCLE** section of the extension.
 1. Select **Deploy**.
 
-From here, you can skip ahead to [Add Microsoft 365 channel for your bot](#add-microsoft-365-channel-for-your-bot) to complete the final step of enabling the Teams message extension to work in Outlook. (The app manifest is already referencing the correct version, so no updates are necessary).
+From here, you can skip ahead to [Add Microsoft 365 channel for your bot](#add-microsoft-365-channel-for-your-bot) to complete the final step of enabling the Teams message extension to work in Outlook. The app manifest is already referencing the correct version, so no updates are necessary.
 
 ## Update the app manifest
 
-You need to use the Teams developer manifest schema version `1.13` (or higher) to enable your Teams message extension to run in Outlook. For more information on schema version, see [Teams developer manifest](../resources/schema/manifest-schema.md).
+You need to use the app manifest schema version `1.13` (or later) to enable your Teams message extension to run in Outlook. For more information on schema version, see [app manifest](../resources/schema/manifest-schema.md).
 
 You have two options for updating your app manifest:
 
 # [Teams Toolkit](#tab/manifest-teams-toolkit)
 
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
-1. Run the `Teams: Upgrade Teams manifest` command and select your app manifest file. Your app manifest files are updated with the latest changes.
+1. Run the `Teams: Upgrade app manifest` command and select your app manifest file. Your app manifest files are updated with the latest changes.
 
 # [Manual steps](#tab/manifest-manual)
 
-Open your Teams app manifest and update the `$schema` and `manifestVersion` with the following values:
+Open your app manifest and update the `$schema` and `manifestVersion` with the following values:
 
 ```json
 {
@@ -109,7 +109,7 @@ Open your Teams app manifest and update the `$schema` and `manifestVersion` with
 
 ---
 
-If you used Teams Toolkit to create your message extension app, you can use it to validate the changes to your manifest file and identify any errors. Open the command palette (`Ctrl+Shift+P`) and find **Teams: Validate manifest file**.
+If you used Teams Toolkit to create your message extension app, you can use it to validate the changes to your app manifest file and identify any errors. Open the command palette (`Ctrl+Shift+P`) and find **Teams: Validate manifest file**.
 
 ## Add Microsoft 365 channel for your bot
 
@@ -204,7 +204,7 @@ Your message extension is listed, it opens an adjacent pane to display search re
 
  While your updated message extension continues to run in Teams with full [feature support for message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions), there are limitations in this early preview of the Outlook-enabled experience to be aware of:
 
-* Message extensions in Outlook are limited to the mail [*compose* context](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions). Even if your Teams message extension includes `commandBox` as a *context* in its manifest, the current preview is limited to the mail composition (`compose`) option. Invoking a message extension from the global Outlook *Search* box isn't supported.
+* Message extensions in Outlook are limited to the mail [*compose* context](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions). Even if your Teams message extension includes `commandBox` as a *context* in its app manifest, the current preview is limited to the mail composition (`compose`) option. Invoking a message extension from the global Outlook *Search* box isn't supported.
 * [Action-based message extension](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) commands aren't supported in Outlook. If your app has both search- and action-based commands, it surfaces in Outlook, but the action menu isn't available.
 * Insertion of more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email isn't supported; Adaptive Cards v1.5 and later aren't supported.
 * [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) of type `messageBack`, `imBack`, `invoke`, and `signin` aren't supported for inserted cards. Support is limited to `openURL`: when selected, the user is redirected to the specified URL in a new tab.
