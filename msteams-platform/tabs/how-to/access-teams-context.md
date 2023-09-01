@@ -386,4 +386,4 @@ The following image shows the dark theme option in the Teams:
 * [Microsoft Teams Connect shared channels](../../concepts/build-and-test/shared-channels.md)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Use task modules in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
-* [Introducing the new Teams client](../../resources/teams-updates.md).
+* [Introducing the new Teams client](../../resources/teams-updates.md)
