@@ -42,7 +42,7 @@ Following are the most common reasons for your app to get rejected:
       :::image type="icon" source="../../../assets/icons/support-link-icon.png" link="#support-link":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../assets/icons/schema-icon.png" link="#manifest-schema":::
+      :::image type="icon" source="../../../assets/icons/schema-icon.png" link="#app-manifest-schema":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../assets/icons/app-ui-icon.png" link="#app-ui":::
@@ -107,19 +107,19 @@ A great description can make your app stand out in the Microsoft Teams store and
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reasons-fail-inadequate-app-description.png" alt-text="Screenshot to show the failed scenarios with inadequate app description.":::
 
-* Way forward information for new users such as, Sign Up or Get Started, or Help and Contact Us links aren't included in the manifest and AppSource full description.
+* Way forward information for new users such as, Sign Up or Get Started, or Help and Contact Us links aren't included in the app manifest (previously called Teams app manifest) and AppSource full description.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-sign-up-app-description.png" alt-text="Screenshot of passed scenario of sign-up, contact details in app description must be hyperlinked.":::
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-sign-up-app-description.png" alt-text="Screenshot of failed scenario of sign-up, contact details in app description must be hyperlinked.":::
 
-* Region specific app name or functionality isn't called out in manifest and Partner Center app descriptions.
+* Region specific app name or functionality isn't called out in app manifest and Partner Center app descriptions.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reasons-region-specific-pass-app.png" alt-text="Screenshot shows an example for pass scenario of region specific app name.":::
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reasons-region-specific-app.png" alt-text="Screenshot shows an example for failed scenario of region specific app name.":::
 
-* Limitations or account dependency on external accounts or services to complete Sign-In, Sign-Out, and Sign-Up experience aren't called out in app manifest and long description.
+* Limitations or account dependency on external accounts or services to complete Sign-In, Sign-Out, and Sign-Up experience aren't called out in the app manifest and long description.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-passed-limitation-called-out.png" alt-text="Screenshot of passed image to show the called out limitations.":::
 
@@ -241,11 +241,11 @@ Your app name plays a critical role for users to discover your app on the Micros
 
 [Back to top](#common-reasons-for-app-validation-failure)
 
-## Manifest schema
+## App manifest schema
 
-The Teams app manifest describes how the app integrates into the Microsoft Teams product. Your app manifest must conform to a publicly released [manifest schema](../../../resources/schema/manifest-schema.md). If your app supports localization, ensure that use a localization manifest schema version 1.5 or later. App packages that contain preview schemas (not publicly released) fail app review.
+The app manifest describes how the app integrates into the Microsoft Teams product. Your app manifest must conform to a publicly released [app manifest schema](../../../resources/schema/manifest-schema.md). If your app supports localization, ensure that use a localization app manifest schema version 1.5 or later. App packages that contain preview schemas (not publicly released) fail app review.
 
-You must update the app version declared in the manifest if you're submitting an app update. It's recommended to always use the latest publicly released manifest schema when submitting a new app or an app update and ensure that the manifest schema version in Microsoft Teams store and Microsoft AppSource is the same.
+You must update the app version declared in the app manifest if you're submitting an app update. It's recommended to always use the latest publicly released app manifest schema when submitting a new app or an app update and ensure that the app manifest schema version in Microsoft Teams store and Microsoft AppSource is the same.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-app-version-number.png" alt-text="Screenshot to show the app version number incremented.":::
 
@@ -357,17 +357,17 @@ You must avoid the following issues in your app before you submit for review:
 
 1. App isn't responsive to 100 percent screen resolution.
 
-### App package and store listing (metadata and manifest)
+### App package and store listing (metadata and app manifest)
 
 You must avoid the following issues in your app before you submit for review:
 
 * App listing screenshots are only relevant to the Teams client.
 
-* App description in the manifest or metadata is only relevant to the Teams client.
+* App description in the app manifest or metadata is only relevant to the Teams client.
 
 * App has incorrect reference to the Teams app extensible across Microsoft 365.
 
-* Support URL, privacy policy, or terms of use content in the manifest or metadata is only relevant to the Teams client.
+* Support URL, privacy policy, or terms of use content in the app manifest or metadata is only relevant to the Teams client.
 
 [Back to top](#common-reasons-for-app-validation-failure)
 
