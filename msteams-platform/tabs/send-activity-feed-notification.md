@@ -79,7 +79,7 @@ Activity feed APIs work with a Teams app. The following are the requirements for
 * The app manifest must have the Azure AD app ID added to the webApplicationInfo section. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#webapplicationinfo).
 * Activity types must be declared in the activities section. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#activities).
 * The Teams app must be installed for the recipient, either personally, or in a team or chat they're part of.
-* Use delegated or application permissions to send activity feed notifications. We recommend to use [resource-specific consent (RSC)](../graph-api/rsc/resource-specific-consent.md), while using application permissions as the `TeamsActivity.Send.User` permission is consented by the user to send activity notifications. Ensure that you declare RSC permissions in your Teams app **manifest.json** file.
+* Use delegated or application permissions to send activity feed notifications. When you use application permissions, we recommend using [resource-specific consent (RSC)](../graph-api/rsc/resource-specific-consent.md) as the `TeamsActivity.Send.User` permission is consented by the user to send activity notifications. Ensure that you declare RSC permissions in your Teams app **manifest.json** file.
 
 ### App manifest changes
 
@@ -135,7 +135,7 @@ This section describes the changes that need to be added to the app manifest. En
 |templateText|string|Template text for the activity notification. You can declare your parameters by encapsulating parameters in `{}`.|
 
 > [!NOTE]
-> `actor` is a special parameter that always takes the name of the caller. In delegated calls, `actor` is the user's name. In application-only calls, it takes the name of the Teams app.
+> The `actor` property is a special parameter that always takes the name of the caller. In delegated calls, `actor` is the user's name. In application-only calls, it takes the name of the Teams app.
 
 #### Authorization section changes
 
