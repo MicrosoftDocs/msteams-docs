@@ -1,6 +1,6 @@
 **App registration**
 
-1. Go to the [Azure portal](https://ms.portal.azure.com/).
+1. Go to [Azure portal](https://ms.portal.azure.com/).
 
 1. Select **App registrations**.
 
@@ -22,4 +22,5 @@
 
     :::image type="content" source="../../assets/images/include-files/app-registration-overview.png" alt-text="Screenshot shows the app registration overview page.":::
 
-    Save the app ID from **Application (client) ID** and **Directory (tenant) ID**, for future reference.
+    >[!NOTE]
+    > Save the app ID from **Application (client) ID** and **Directory (tenant) ID**, for future reference.
