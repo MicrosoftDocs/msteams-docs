@@ -94,7 +94,7 @@ Make sure your short name adheres to the [store validation guidelines](~/concept
 
 ### Write descriptions
 
-You must have a short and long description of your app.
+You must have a short and long description of your app. App description helps improve app discoverability in the Teams store.
 
 #### Short description
 
@@ -186,7 +186,7 @@ You can add a URL for your YouTube or Vimeo video.
 
 ### Select a category for your app
 
-During submission, you're asked to categorize your app. You can categorize your app based on the following categories:
+During submission, you're asked to categorize your app. App category helps improve your app discoverability in the Teams store. You can categorize your app based on the following categories:
 
 |Categories  |
 |--------------|
@@ -217,36 +217,36 @@ During submission, you're asked to categorize your app. You can categorize your 
 | Maps and feeds |
 | Other |
 
-### Distribute your app to specific countries
+### Distribute your app to specific countries or regions
 
-If you want to cater your app to a specific audience, you can select from the available list of countries and communicate what’s great about your app in ways that are relevant to users. This is known as Geo-filtering. Geo-filtering is applicable only for apps listed in the Teams store. For example, a Contoso US app, which sells gift cards that are valid within the US and Canada is only visible in the Teams store for the users in the US and Canada.
+If you want to cater your app to a specific audience, you can select from the available list of countries or regions and communicate what’s great about your app in ways that are relevant to users. This is known as Geo-filtering. Geo-filtering is applicable only for apps listed in the Teams store. For example, a Contoso US app, which sells gift cards that are valid within the US and Canada is only visible in the Teams store for the users in the US and Canada.
 
 # [Desktop](#tab/desktop)
 
 The following image shows the use of Geo-filtering for apps in the Teams desktop client:
 
- :::image type="content" source="../../../../assets/images/app-fundamentals/geo-fencing-infographic.png" alt-text="Infographic shows the difference in the Teams Store for the apps available in the US and other countries." lightbox="../../../../assets/images/app-fundamentals/geo-fencing-infographic.png":::
+ :::image type="content" source="../../../../assets/images/app-fundamentals/geo-fencing-infographic.png" alt-text="Infographic shows the difference in the Teams Store for the apps available in the US and other countries or regions." lightbox="../../../../assets/images/app-fundamentals/geo-fencing-infographic.png":::
 
 # [Mobile](#tab/mobile)
 
 The following image shows the use of Geo-filtering for apps in the Teams mobile client:
 
- :::image type="content" source="../../../../assets/images/app-fundamentals/mobile-infographic.png" alt-text="Infographic shows the difference in the Teams Store for the apps available in the US and other countries in mobile." :::
+:::image type="content" source="../../../../assets/images/app-fundamentals/mobile-infographic.png" alt-text="Infographic shows the difference in the Teams Store for the apps available in the US and other countries or regions in mobile." :::
 
 ---
 
 > [!NOTE]
 > Geo-filtering isn't supported in Government community cloud (GCC), GCC-High, and Department of Defence (DoD) tenants.
 
-Geo-filtering helps you improve your app's visibility in the Teams store. When you publish your app to the store, you can select from the available list of countries in the Partner Center to target your app to users in specific countries. For more information on supported geographic locations in Partner Center, see [Geographic availability and currencies](/partner-center/marketplace/marketplace-geo-availability-currencies).
+Geo-filtering helps you improve your app's visibility in the Teams store. When you publish your app to the store, you can select from the available list of countries/regions in the Partner Center to target your app to users in specific countries or regions. For more information on supported geographic locations in Partner Center, see [Geographic availability and currencies](/partner-center/marketplace/marketplace-geo-availability-currencies).
 
-:::image type="content" source="../../../../assets/images/app-fundamentals/select-countries-app-partner-center.png" alt-text="Screenshot shows the list of available countries in Microsoft Partner Center.":::
+:::image type="content" source="../../../../assets/images/app-fundamentals/select-countries-app-partner-center.png" alt-text="Screenshot shows the list of available countries or regions in Microsoft Partner Center.":::
 
 #### Determine user location
 
-Teams uses the `UsageLocation` property from the [user resource type](/graph/api/resources/user?view=graph-rest-#properties&preserve-view=true) API to determine the location of the user and displays the apps available in the user's country.
+Teams uses the `UsageLocation` property from the [user resource type](/graph/api/resources/user?view=graph-rest-#properties&preserve-view=true) API to determine the location of the user and displays the apps available in the user's country or region.
 
-If a user wants to install an app available in another country, they can use the following methods:
+If a user wants to install an app available in another country or region, they can use the following methods:
 
 * Use a deep link to install the app.
 

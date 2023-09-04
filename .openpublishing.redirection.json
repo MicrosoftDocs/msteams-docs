@@ -867,6 +867,50 @@
       {
         "source_path": "msteams-platform/apps-in-teams-meetings/app-caching-for-your-tab-app.md",
         "redirect_url": "/microsoftteams/platform/tab/hpw-to/app-caching-for-your-tab-app"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/teams-toolkit-fundamentals-v4.md",
+        "redirect_url": "/msteams-platform/toolkit/teams-toolkit-fundamentals"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/deploy-v4.md",
+        "redirect_url": "/msteams-platform/toolkit/deploy"
+      },    
+      {
+        "source_path": "msteams-platform/toolkit/add-capability.md",
+        "redirect_url": "/msteams-platform/toolkit/toolkit-v4/add-capability-v4"
+      },     
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/provision-v4.md",
+        "redirect_url": "/msteams-platform/toolkit/provision"
+      },   
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/install-Teams-Toolkit-v4.md",
+        "redirect_url": "/msteams-platform/toolkit/install-Teams-Toolkit"
+      }, 
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/explore-Teams-Toolkit-v4.md",
+        "redirect_url": "/msteams-platform/toolkit/explore-Teams-Toolkit"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/debug-overview-v4.md",
+        "redirect_url": "/msteams-platform/toolkit/debug-overview"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/debug-local-v4.md",
+        "redirect_url": "/msteams-platform/toolkit/debug-local"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/create-new-project-v4.md",
+        "redirect_url": "/msteams-platform/toolkit/create-new-project"
+      },   
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/add-single-sign-on-v4.md",
+        "redirect_url": "/msteams-platform/toolkit/add-single-sign-on"
+      }, 
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-v4.md",
+        "redirect_url": "/msteams-platform/toolkit/TeamsFx-preview-and-customize-app-manifest"
       }
     ]
 }

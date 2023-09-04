@@ -30,7 +30,7 @@ The following image displays the business functions of Virtual Assistant:
 
 ## Create a Teams-focused Virtual Assistant
 
-Microsoft has published a [Microsoft template](https://botbuilder.myget.org/feed/aitemplates/package/nuget/Microsoft.Bot.Solutions.VirtualAssistantTemplate) for building Virtual Assistants and skills. With the template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We've enhanced template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, task modules, teams or group chats, and message extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
+Microsoft has published a [Microsoft template](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template/) for building Virtual Assistants and skills. With the template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We've enhanced template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, task modules, teams or group chats, and message extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
 The following image displays the high level diagram of a Virtual Assistant solution:
 
 :::image type="content" source="../assets/images/bots/virtual-assistant/high-level-diagram.png" alt-text="Diagram that shows Virtual Assistant solution.":::
@@ -166,7 +166,7 @@ Request forwarding is done through the [SkillHttpClient](/dotnet/api/microsoft.b
 ```
 
 A similar approach is followed for card action dispatching and task module responses. Task module fetch and submit action data is updated to include `skillId`.
-Activity Extension method `GetSkillId` extracts `skillId` from the payload which provides details about the skill that needs to be invoked.
+Activity Extension method `GetSkillId` extracts `skillId` from the payload, which provides details about the skill that needs to be invoked.
 
 The code snippet for `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitAsync` methods are given in the following section:
 
@@ -320,7 +320,7 @@ Once the commands are invoked by a user, the Virtual Assistant can identify an a
     }
 ```
 
-Some message extension activities don't include the command ID. For example, `composeExtension/selectItem` contains only the value of the invoke tap action. To identify the associated skill, `skillId`  is attached to each item card while forming a response for `OnTeamsMessagingExtensionQueryAsync`. This is similar to the approach for [adding adaptive  cards to your Virtual Assistant](#add-adaptive-cards-to-your-virtual-assistant).
+Some message extension activities don't include the command ID. For example, `composeExtensions/selectItem` contains only the value of the invoke tap action. To identify the associated skill, `skillId`  is attached to each item card while forming a response for `OnTeamsMessagingExtensionQueryAsync`. This is similar to the approach for [adding adaptive  cards to your Virtual Assistant](#add-adaptive-cards-to-your-virtual-assistant).
 
 ```csharp
     // Invoked when a 'composeExtension/selectItem' invoke activity is received for compose extension query command.
@@ -342,7 +342,7 @@ The following example shows how to convert the Book-a-room app template to a Vir
 Book-a-room is a Teams that allows users quickly to find and reserve a meeting room for 30, 60, or 90 minutes starting from the current time. The default time is 30 minutes. The Book-a-room bot scopes to personal or 1:1 conversations.
 The following image displays a Virtual Assistant with a **book a room** skill:
 
-:::image type="content" source="../assets/images/bots/virtual-assistant/book-a-room-skill.png" alt-text=" Diagram that shows a Virtual Assistant with book a room skill.":::
+:::image type="content" source="../assets/images/bots/virtual-assistant/book-a-room-skill.png" alt-text="Screenshot shows a Virtual Assistant with a book a room skill.":::
 
 Followings are the delta changes introduced to convert it to a skill, which is attached to a Virtual Assistant. Similar guidelines are followed to convert any existing v4 bot to a skill.
 
@@ -513,7 +513,7 @@ To modify `languages` parameter, update bot skills command as follows:
 botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<path to luisFolder>" --languages "en-us, your_language_culture" --cs
 ```
 
-Virtual Assistant uses `SetLocaleMiddleware` to identify current locale and invoke corresponding dispatch model. Bot framework activity has locale field which is used by this middleware. You can use the same for your skill as well. Book-a-room bot doesn't use this middleware and instead gets locale from Bot framework activity's [clientInfo entity](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).
+Virtual Assistant uses `SetLocaleMiddleware` to identify current locale and invoke corresponding dispatch model. Bot framework activity has locale field, which is used by this middleware. You can use the same for your skill as well. Book-a-room bot doesn't use this middleware and instead gets locale from Bot framework activity's [clientInfo entity](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).
 
 ### Claim validation
 
@@ -568,11 +568,11 @@ You can also leverage existing skills from [Bot Framework Solutions repository](
 * **EndOfConversation**: A skill must send an `endOfConversation` activity when it finishes a conversation. Based on the activity, a Virtual Assistant ends context with that particular skill and gets back into Virtual Assistant's root context. For Book-a-room bot, there's no clear state where conversation is ended. Hence we haven't sent `endOfConversation` from `Book-a-room` bot and when user wants to go back to root context they can simply do that by `start over` command.  
 * **Card refresh**: Card refresh isn't yet supported through Virtual Assistant.  
 * **Message extensions**:
-  * Currently, a Virtual Assistant can support a maximum of ten commands for message extensions.
+  * Currently, a Virtual Assistant can support a maximum of 10 commands for message extensions.
   * Configuration of message extensions isn't scoped to individual commands but for the entire extension itself. This limits configuration for each individual skill through Virtual Assistant.
   * Message extensions command IDs have a maximum length of [64 characters](../resources/schema/manifest-schema.md#composeextensions) and 37 characters are used for embedding skill information. Thus, updated constraints for command ID are limited to 27 characters.
 
-You can also leverage existing skills from [Bot Framework Solutions repository](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) or create a new skill altogether from scratch. Tutorials for the later can be found [here](https://microsoft.github.io/botframework-solutions/overview/skills/). Please refer to [documentation](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) for Virtual Assistant and skills architecture.
+You can also leverage existing skills from [Bot Framework Solutions repository](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) or create a new skill altogether from scratch. Tutorials for the later can be found [here](https://microsoft.github.io/botframework-solutions/overview/skills/). Refer to [documentation](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) for Virtual Assistant and skills architecture.
 
 ## Code sample
 

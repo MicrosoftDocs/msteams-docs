@@ -20,17 +20,7 @@ If your app is production ready, you can begin the process of getting it listed 
 > [!TIP]
 > Following the pre-submission steps closely can increase the possibility that Microsoft approves your app for publishing.
 
-:::row:::
-   :::column span="":::
-
-   :::column-end:::
-   :::column span="3":::
-      :::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Teams app store publishing process" lightbox="../../../assets/images/submission/teams-app-store-publish-process.png":::
-   :::column-end:::
-   :::column span="":::
-
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Diagram shows the Teams store publishing process for Teams apps." lightbox="../../../assets/images/submission/teams-app-store-publish-process.png":::
 
 1. [Review the Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) to ensure your app meets Teams app and store standards.
 
@@ -93,7 +83,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
   1. Review the [store validation guidelines](prepare/teams-store-validation-guidelines.md) again to ensure that your app is in alignment with the store requirements. Review helps reduce the number of issues observed in your app and so, the time taken to approve your app.
 
-  1. Test and re-test your app:
+  1. Test and retest your app:
 
      1. Validate your app package using the Teams [Developer Portal](https://dev.teams.microsoft.com/home) to identify and fix any package errors.
 
@@ -131,7 +121,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
 * **During design phase**
 
-  Review the [store validation guidelines specific to apps published with linked SaaS offers](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements and [Microsoft Commercial Marketplace policies applicable to Teams apps linked to SaaS offers](/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers). If you build your app in line with these guidelines, then it prevents any rework due to non-adherence to store policies.
+  Review the [store validation guidelines specific to apps published with linked SaaS offers](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements and [Microsoft Commercial Marketplace policies applicable to Teams apps linked to SaaS offers](/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers). If you build your app in line with these guidelines, then it prevents any rework due to nonadherence to store policies.
 
 * **Prior to app submission**
 
@@ -139,7 +129,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
       1. Your app is linked to a live (already published) SaaS offer on AppSource with at least one plan with pricing information.
 
-      1. You've correctly mentioned the `subscriptionOffer` details in your [app manifest](../../../resources/schema/manifest-schema.md#subscriptionoffer) in the format `publisherId.offerId`.
+      1. You've correctly mentioned the `subscriptionOffer` details in your [app manifest](../../../resources/schema/manifest-schema.md#subscriptionoffer) (previously called Teams app manifest) in the format `publisherId.offerId`.
 
       1. You must ensure your linked SaaS offer is designed to support licenses assigned on a [SaaS pricing model](/azure/marketplace/create-new-saas-offer-plans).
 
@@ -164,6 +154,12 @@ If your app is production ready, you can begin the process of getting it listed 
   1. You must test and ensure both minimum and bulk license purchase flows are working as expected.
   
   1. You must ensure users who are assigned licenses have access to the accurate purchased plan features described in your plan’s listing.
+
+## Teams store search experience
+
+After an app is published to the Teams store, users can find apps by going to the **Apps** icon from the left pane in Teams. Users can use the search box in the upper left corner or browse by category to see if a particular app or program has a version for Teams.
+
+Teams provides intelligent search experience by matching the user input to the fields provided by the developer across appName, publisher name, short description, long description, specific keywords and category names in app manifest or Partner Center. The search results display apps that are closest match to the user's specified characters.
 
 ## Training module
 
