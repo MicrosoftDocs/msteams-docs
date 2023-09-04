@@ -22,8 +22,7 @@ The following example shows how users can purchase subscription plans for a fict
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app.":::
 
-Select your country or region to see subscription plans for your location. 
-
+Select your country or region to see subscription plans for your location.
 
 1. In the **Choose a subscription plan** dialog, choose the plan you want and select **Checkout**. (Note: Private plans are visible only to users in orgs you're providing the offer to. These plans are indicated with a **Special offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon.)
 
@@ -99,6 +98,8 @@ If you've purchased a Teams app subscription or if you want to manage one for yo
 1. Select **Apps** > **Manage your apps**.
 
 1. Select the **Subscriptions** tab to view your list of subscriptions.
+
+    :::image type="content" source="../../../../assets/images/saas-offer/subscription-list.png" alt-text="Screenshot shows the list of subscriptions.":::
 
 1. Find the app that you want to cancel and select **More options ...** > **View subscription**.
 
