@@ -130,6 +130,54 @@ You can use `config/fetch` and `config/submit` properties in the `teamsBot.js` f
           }
     ```
 
+## End user experience on bot configuration experience
+
+You can configure the bot in Teams by sending a message or a command. Follow the steps:
+
+1. Select **Add to a team**, **Add to a chat**, or **Add to a meeting**.
+
+:::image type="content" source="../../assets/images/bots/group-chat-add-Bot.png" alt-text="Screenshot shows add your bot to chat.":::
+
+1. Select **Set up a bot**.
+
+:::image type="content" source="../../assets/images/bots/set-up-a-bot.png" alt-text="Screenshot shows to set up a bot in chat.":::
+
+1. When the users hover over the bot an Adaptive Card appears with fetch response, select an option from the dropdown and select **Submit**.
+
+:::image type="content" source="../../assets/images/bots/configurable-card-fetch-response.png" alt-text="Screenshot shows the interaction of Adaptive Card with fetch reponse.":::
+
+1. An Adaptive Card appears with submit response, select an option from the dropdown and select **Submit**.
+
+:::image type="content" source="../../assets/images/bots/configurable-card-submit-reponse.png" alt-text="Screenshot shows the interaction of Adaptive Card with submit reponse.":::
+
+1. Response message is displayed.
+
+:::image type="content" source="../../assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows Adaptive Card with response message.":::
+
+To reconfigure the bot after adding to team or group chat. Follow the steps:
+
+1. When the users hover over the bot an Adaptive Card appears, select settings icon.
+
+:::image type="content" source="../../assets/images/bots/Bot-description-card-interaction.png" alt-text="Screenshot shows the Adaptive Card with settings icon.":::
+
+1. An Adaptive Card appears with fetch response, select an option from the dropdown and select **Submit**.
+
+:::image type="content" source="../../assets/images/bots/configurable-card-fetch-response.png" alt-text="Screenshot shows the interaction of Adaptive Card with fetch reponse.":::
+
+1.An Adaptive Card appears with submit response, select an option from the dropdown and select **Submit**.
+
+:::image type="content" source="../../assets/images/bots/configurable-card-submit-reponse.png" alt-text="Screenshot shows the interaction of Adaptive Card with submit reponse.":::
+
+1. Response message is displayed.
+
+:::image type="content" source="../../assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows Adaptive Card with response message.":::
+
+## Code sample
+
+| **Sample name** | **Description** | **Node.js** |
+|-----------------|-----------------|----------------|
+| Bot configuration experience | This sample code describes how to configure the bot. | View |
+
 ## See also
 
 [Build bots for Teams](../what-are-bots.md)
