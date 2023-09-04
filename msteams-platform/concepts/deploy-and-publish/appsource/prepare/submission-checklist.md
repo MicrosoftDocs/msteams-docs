@@ -124,7 +124,7 @@ Ensure that you provide the following information in your app's long description
 * List key benefits that your app provides to customers. We recommend that you add up to three benefits.
 * If there are specific requirements to use your app, mention them clearly in the description for the benefit of users and admins looking to install and use your app.
 
-Your Partner Center account allows you to add a long description of upto 4000 characters. However, for better readability, we recommended you keep your app's long description concise.
+Your Partner Center account allows you to add a long description of up to 4000 characters. However, for better readability, we recommended you keep your app's long description concise.
 
 :::row:::
 
