@@ -187,7 +187,7 @@ No, Live Share doesn't support Teams Rooms devices.
 <details>
 <summary><b>Do Live Share apps support meeting recordings?</b></summary>
 
-No, Live Share doesn't support Teams Rooms devices.
+No, Live Share doesn't support meeting recordings.
 
 <br>
 
