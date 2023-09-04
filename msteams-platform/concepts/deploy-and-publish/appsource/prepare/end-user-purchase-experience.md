@@ -1,6 +1,6 @@
 ---
 title: Purchase and manage app subscriptions and licenses
-description: Learn how to purchase, assign, and manage licenses for third-party apps in Teams.
+description: Learn how to purchase, assign, and manage licenses for third-party apps in Microsoft Teams.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
@@ -10,31 +10,37 @@ ms.date: 04/06/2023
 
 # Purchase and manage app subscriptions and licenses
 
-Add functionality to your Teams experience by subscribing and managing licenses for apps made just for Teams. When you add an app to Teams, check if additional features are available through subscription. You can purchase subscriptions and manage licenses for yourself, your team, or your organization directly from the Teams store.
+This article helps you understand the user's purchase experience for apps in Teams. Users can purchase subscriptions and manage licenses from the Teams store for an individual, team, or an organization. You can add more features and functionality to your Teams app through subscriptions.
 
 ## Subscription experience
 
-The following example shows how users can purchase subscription plans for a fictional Teams app called *Recloud*:
+To purchase a subscription plan for a Teams app, follow these steps:
 
-1. In the Teams store, find and select the *Recloud* app.
+1. In the Teams store, find and select the app for which you want to purchase the subscription.
 
 1. In the app details dialog, select **Buy a subscription**.
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app.":::
 
-Select your country or region to see subscription plans for your location.
+1. To view the available plans for your location, select your country or region.
+1. Select **Save and continue**.
 
-1. In the **Choose a subscription plan** dialog, choose the plan you want and select **Checkout**. (Note: Private plans are visible only to users in orgs you're providing the offer to. These plans are indicated with a **Special offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon.)
+    :::image type="content" source="~/assets/images/saas-offer/add-region.png" alt-text="Screenshot shows option to select the country or region.":::
+
+1. In the **Choose a subscription plan** dialog, select **Start trail** for the plan you want to purchase.
+
+    > [!NOTE]
+    > Private plans are visible only to users of the organization you're providing the specific offer. A **Private offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon indicates such private plans.
 
     :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Screenshot shows selecting the appropriate subscription plan.":::
 
-1. In the **Checkout** dialog, provide any required information and select **Place order**.
+1. In the **Checkout** dialog, enter the following information:
+    * Under **Basic plan** > **Quantity**, select the number of plans.
+    * Under **Sold to**, add the name and address. For **Sold-to address**, enter the address of the legal entity responsible for payment and identified on the invoice (business or residence). The **Sold-to address** determines the estimated tax rate for your purchase.
+    * Under **Payment method**, add the payment details.
+1. Select **Place order**.
 
     :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Screenshot shows placing the subscription order.":::
-
-1. During checkout, select how many subscription licenses you want, enter a **Sold-to address**, and provide a payment method. For **Sold-to address**, enter the address of the legal entity responsible for payment and identified on the invoice (business or residence). The **Sold-to address** determines the estimated tax rate for your purchase.
-
-1. Select **Place order**.
 
 1. When prompted, select **Set up now** to activate your subscription.
 
@@ -44,11 +50,18 @@ Select your country or region to see subscription plans for your location.
 
 1. Manage your subscription plan through the *Recloud* website (also known as a [landing page](include-saas-offer.md#build-a-landing-page-for-subscription-management)).
 
-    :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Screenshot shows User and Licenses screen to assign license.":::
+    :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="Screenshot shows the option to set up your subscription.":::
 
-When a new user launches the app for the first time, they're requested to provide consent to the app. Following is an example of the consent screen shown when calling for user profile data with minimum User.Read permission.
+You're redirected to the app website (also known as a [landing page](include-saas-offer.md#build-a-landing-page-for-subscription-management)) where you can manage your subscriptions.
 
-Consent dialog is part of the flow to get the users license information and may vary based on ISV’s integration approach.
+:::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Screenshot shows User and Licenses screen to assign license.":::
+
+When a new user launches the app for the first time, they're requested to provide consent to the app.
+
+> [!NOTE]
+> Consent dialog is part of the flow to get the user's license information and may vary based on Independent software vendors (ISVs) integration approach.
+
+Following is an example of the consent screen:
 
 :::image type="content" source="../../../../assets/images/saas-offer/permissions-requested.png" alt-text="Screenshot shows the Permissions requested consent dialog.":::
 
@@ -123,7 +136,8 @@ The following example shows how users can manage licenses for third-party apps f
     :::image type="content" source="../../../../assets/images/saas-offer/client-experience-1.png" alt-text="Screenshot shows the Apps screen to select Manage your app option.":::
 
 1. Select **Subscriptions**. A tab appears with a list of purchases made in the tenant.
-1. Choose an existing subscription from the list and select **Assign licenses**.
+
+1. Select an existing subscription from the list and then select **Assign licenses**.
 
     :::image type="content" source="../../../../assets/images/saas-offer/client-experience-2.png" alt-text="Screenshot shows the Assign licenses option of the respective app under Subscription tab.":::
 
@@ -131,9 +145,9 @@ The following example shows how users can manage licenses for third-party apps f
 
     :::image type="content" source="../../../../assets/images/saas-offer/view-license.png" alt-text="Screenshot shows the selected assigned licenses highlighted in red.":::
 
-1. Search for the users or a team in the search box and select **Assign**. The license is assigned to the users or a team.
+1. Search for the users or a team in the search box and select **Assign**. The users or a team are assigned with the license.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/assign-licenses.png" alt-text="Screenshot shows assigning license to a Team with a single click highlighted in red.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/assign-licenses.png" alt-text="Screenshot shows assigning license to a Team highlighted in red.":::
 
     You can view the list of assigned users or teams for the subscription and also check the status of the assignment.
 
