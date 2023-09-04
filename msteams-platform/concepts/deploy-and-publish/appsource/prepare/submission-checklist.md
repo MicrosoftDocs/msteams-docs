@@ -114,19 +114,17 @@ Make sure your short description adheres to the [store validation guidelines](~/
 
 #### Long description
 
-The long description must provide narrative information that highlights your app's basic functions, key features, user benefits, and specific user guidance.
+The long description must provide information that highlights your app's key features, user benefits, and any specific user guidance.
 
-The long description that you're adding to your **Offer listing** must contain information for the benefit of the users who want to install and use your app. Ensure that you provide the following information for the app to be validated successfully:
+Ensure that you provide the following information in your app's long description:
 
-* Define your product and the industries it’s aligned with.
-* Specify the target audience and customer segments the app focuses.
-* Denote the unique values of your app in Microsoft Teams.
-* Highlight how your app contributes in resolving customer problems and assist them in their everyday work.
-* List the key benefits that your app provides to customers. We recommend that you add up to three benefits.
-* Brief about the primary features of your app.
-* If there are specific requirements to use your app, mention them clearly in the description for the benefit of users and admins looking to use your app.
+* Define your product, state its primary features, and its target audience.
+* Describe the unique value proposition of your app within Microsoft Teams.
+* Highlight how your app contributes to resolving customer problems and assists them in their everyday work.
+* List key benefits that your app provides to customers. We recommend that you add up to three benefits.
+* If there are specific requirements to use your app, mention them clearly in the description for the benefit of users and admins looking to install and use your app.
 
-Your Partner Center account allows you to add a long description of 4000 characters. However, for better readability, we recommended you to have a concise description of up to 1000 characters.
+Your Partner Center account allows you to add a long description of upto 4000 characters. However, for better readability, we recommended you keep your app's long description concise.
 
 :::row:::
 
@@ -174,21 +172,23 @@ For best practices, see the following resources:
 
 ### Create a video
 
-A video in your listing can be the most effective way to communicate with the users about your app. You can add the URL of YouTube or Vimeo video.
+A video in your listing can be the most effective way to communicate with the users about your app. You can add the URL of videos hosted on YouTube or Vimeo.
 
-For the benefit of the customers and admins who wants to install and use your app, we recommend that you add a video that addresses the value your app brings to the users. Also, as a best practice, we recommend that you add a demo or scenario walkthrough video that describes the end-to-end usage of your app to the users.
+For the benefit of the customers and admins who want to install and use your app, we recommend that you add a video that addresses the value your app brings to the users.
 
-An app value video focuses on the marketing aspects. When providing a video that educates the users of the value your app provides, ensure to cover the following information in the video:
+Also, as a best practice, we recommend that you add a demo or scenario walkthrough video that describes the end-to-end usage of your app to the users.
+
+When providing a video that educates the users of the value your app provides, ensure to cover the following information in the video:
 
 * Why should the users choose your app over other similar apps in the Teams store?
 * Who's the intended target audience and customer for your app?
-* What unique values does your product provide to the users?
+* What unique value does your app provide to the users?
 * Is there any measurable impact that your app guarantees to deliver for users?
 * What are the key problems that your app resolves for users?
-* Are there other key benefits of using your app? If so, we recommended to add up to three benefits.
+* Are there other key benefits of using your app?
 * What are the primary features of your app?
 
-A demo or scenario walkthrough video is more like an educational video that provides the users or admins with a comprehensive walkthrough experience. If you choose to add a demo or walkthrough video, provide details on the following pointers:
+A demo or scenario walkthrough video is more like an educational video that provides the users or IT admins with a comprehensive walkthrough of your app experience. If you choose to add a demo or walkthrough video, provide the following details:
 
 * How can the users start with your app as first-time users and how do they set up your app?
 * How do they use the different capabilities or features in your app?
@@ -196,9 +196,9 @@ A demo or scenario walkthrough video is more like an educational video that prov
 * Provide an end-to-end demonstration of your app with all the key workflows and key scenarios that your app supports.
 * If there are any specific training materials on how users can learn and use app workflows, ensure that you provide the related information.
 * Use voice-over instructions wherever applicable to make it easier for the users to understand.
-* Ensure that you don't add any marketing content.
+* Ensure that you don't add any marketing content in the scenario walkthrough video.
 
-For best practices on creating videos, see [store validation guidelines](teams-store-validation-guidelines.md#videos).
+For other best practices on creating videos, see [store validation guidelines](teams-store-validation-guidelines.md#videos).
 
 ### Select a category for your app
 
