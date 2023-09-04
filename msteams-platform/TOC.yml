@@ -551,7 +551,7 @@
       href: graph-api/meeting-transcripts/fetch-id.md
       displayName: Obtain meeting details using user-level notification, tenant-level notification, transcript, recording
     - name: Get notified when transcripts and recordings are available
-      href: /graph/transcripts-and-recordings
+      href: /graph/teams-changenotifications-callrecording-and-calltranscript
     - name: Get transcripts
       href: /graph/api/resources/calltranscript
     - name: Get recordings
