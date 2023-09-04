@@ -3,6 +3,7 @@ title: Obtain meeting ID and organizer ID for fetching meeting transcripts and r
 description: Describes the process of Obtain meeting ID and organizer ID for fetching meeting transcripts and recordings
 ms.localizationpriority: high
 ms.topic: conceptual
+ms.date: 01/05/2023
 ---
 # Obtain meeting ID and organizer ID
 
@@ -583,7 +584,7 @@ You can try the following code sample for a bot app:
 > [Graph APIs for fetching transcripts](/graph/api/resources/calltranscript)
 
 > [!div class="nextstepaction"]
-> [Graph APIs for fetching recordings](/graph/api/resources/callrecording)
+> [Graph APIs for fetching recordings](/graph/api/resources/callrecording?view=graph-rest-beta&preserve-view=true)
 
 ## See also
 

@@ -5,6 +5,7 @@ localization_priority: Medium
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
+ms.date: 01/19/2023
 ---
 
 # People Picker in Adaptive Cards
@@ -294,7 +295,8 @@ The following image illustrates People Picker in Adaptive Cards with static choi
 
 :::image type="content" source="../../assets/images/Cards/peoplepicker-static-choice.png" alt-text="people-picker-static-choice":::
 
-You can implement People Picker for efficient task management in different scenarios.  
+You can implement People Picker for efficient task management in different scenarios.
+
 
 ## Code sample
 
@@ -308,3 +310,4 @@ You can implement People Picker for efficient task management in different scena
 * [Bots and SDKs](../../bots/bot-features.md)
 * [Build message extensions for Teams](../../messaging-extensions/what-are-messaging-extensions.md)
 * [Create connectors for Microsoft 365 Groups](../../webhooks-and-connectors/how-to/connectors-creating.md)
+* [Tag mention](../../bots/how-to/conversations/channel-and-group-conversations.md#tag-mention)

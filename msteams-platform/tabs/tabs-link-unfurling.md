@@ -5,6 +5,7 @@ description: Learn about Stage View and Collaborative Stage View, a full screen 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 06/05/2023
 ---
 
 # Tabs link unfurling and Stage View
@@ -98,9 +99,7 @@ Encoded URL:
 ## Collaborative Stage View
 
 > [!NOTE]
->
-> * Collaborative Stage View is available only in [public developer preview](/microsoftteams/platform/resources/dev-preview/developer-preview-intro).
-> * Collaborative Stage View isn't supported in Teams web and mobile clients.
+> Collaborative Stage View isn't supported in Teams web and mobile clients.
 
 Collaborative Stage View is an enhancement to Stage View that allows users to engage with your app content in a new Teams window. When a user opens Collaborative Stage View from an Adaptive Card, the app content pops-out in a new Teams window instead of the default Stage View modal.
 
@@ -157,14 +156,14 @@ The following is a JSON code example to create a Collaborative Stage View button
 
 Following is the process to invoke Collaborative Stage View:
 
-* When the user shares a URL in a Teams chat, the bot receives an `composeExtension/queryLink` invoke request. The bot returns an Adaptive Card with the type `tab/tabInfoAction`.
+* When the user shares a URL in a Teams chat, the bot receives an `composeExtensions/queryLink` invoke request. The bot returns an Adaptive Card with the type `tab/tabInfoAction`.
 * When the user selects the action button on the Adaptive Card, Collaborative Stage View opens based on the content in the Adaptive Card.
 
 > [!NOTE]
 >
 > * Passing a Stage View deep link into an Adaptive Card doesn't open the Collaborative Stage View. A Stage View deep link always opens the Stage View Modal.
 > * Ensure that the URL of the content is within the list of `validDomains` in your app manifest.
-> * The invoke request type must be a `composeExtension/queryLink`.
+> * The invoke request type must be a `composeExtensions/queryLink`.
 > * `invoke` workflow is similar to the `appLinking` workflow.
 > * To maintain consistency, it is recommended to name `Action.Submit` as `Open`.
 > * `websiteUrl` is a required property to be passed in the `TabInfo` object.
@@ -195,7 +194,7 @@ Following is the process to invoke Collaborative Stage View:
 
 * [Build tabs for Teams](what-are-tabs.md)
 * [Add link unfurling](../messaging-extensions/how-to/link-unfurling.md)
-* [composeExtensions](../resources/schema/manifest-schema.md#composeextensions)
 * [Build tabs with Adaptive Cards](how-to/build-adaptive-card-tabs.md)
 * [Create deep links](../concepts/build-and-test/deep-links.md)
 * [Cards](../task-modules-and-cards/what-are-cards.md)
+* [App manifest schema for Teams](../resources/schema/manifest-schema.md)

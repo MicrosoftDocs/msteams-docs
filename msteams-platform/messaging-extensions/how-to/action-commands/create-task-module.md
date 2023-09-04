@@ -17,7 +17,7 @@ the initial invoke request, payload activity properties when a task module is in
 
 ## The initial invoke request
 
-In the process of the initial invoke request, your service receives an `Activity` object of type `composeExtension/fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a URL to the embedded web view. Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:
+In the process of the initial invoke request, your service receives an `Activity` object of type `composeExtensions/fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a URL to the embedded web view. Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:
 
 |Property name|Purpose|
 |---|---|
@@ -895,7 +895,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 If the app contains a conversational bot, install the bot in the conversation and then load the task module. The bot is useful to get additional context for the task module. An example for this scenario is to fetch the roster to populate a people picker control or the list of channels in a team.
 
-When the message extension receives the `composeExtension/fetchTask` invoke, check if the bot is installed in the current context to facilitate the flow. For example, check the flow with a get roster call. If the bot is not installed, return an Adaptive Card with an action that requests the user to install the bot. The user must have the permission to install the apps in that location for checking. If the app installation is unsuccessful, the user receives a message to contact the administrator.
+When the message extension receives the `composeExtensions/fetchTask` invoke, check if the bot is installed in the current context to facilitate the flow. For example, check the flow with a get roster call. If the bot is not installed, return an Adaptive Card with an action that requests the user to install the bot. The user must have the permission to install the apps in that location for checking. If the app installation is unsuccessful, the user receives a message to contact the administrator.
 
 #### Example
 
@@ -925,7 +925,7 @@ The following code section is an example of the response:
 }
 ```
 
-After the installation of conversational bot, it receives another invoke message with `name = composeExtension/submitAction`, and `value.data.msteams.justInTimeInstall = true`.
+After the installation of conversational bot, it receives another invoke message with `name = composeExtensions/submitAction`, and `value.data.msteams.justInTimeInstall = true`.
 
 #### Example
 

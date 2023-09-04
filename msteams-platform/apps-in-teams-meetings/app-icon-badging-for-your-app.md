@@ -21,7 +21,6 @@ The following image shows you the app icon badging in the meeting U-bar:
 
 > [!NOTE]
 >
-> * App icon badging for your Teams app is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * App icon badging isn't available for [Government Community Cloud (GCC)-High and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 > * App icon badging isn't supported for mobile clients.
 > * App icon badging isn't supported for channel meetings.
@@ -29,7 +28,7 @@ The following image shows you the app icon badging in the meeting U-bar:
 To enable app icon badging, follow these steps:
 
 1. [Enable app manifest settings for app icon badging](#enable-app-manifest-settings-for-app-icon-badging)
-1. [Enable app icon badging for your Teams app](#enable-app-icon-badging-for-your-teams-app)
+1. [Enable app icon badging for your app](#enable-app-icon-badging-for-your-app)
 
 ## Enable app manifest settings for app icon badging
 
@@ -54,7 +53,7 @@ To enable app icon badging, you must:
   }
 ```
 
-## Enable app icon badging for your Teams app
+## Enable app icon badging for your app
 
 To enable app icon badging, ensure that you've [enabled targeted in-meeting notification](in-meeting-notification-for-meeting.md#enable-targeted-in-meeting-notification).
 

@@ -4,6 +4,7 @@ description: In this module, learn about how to enable SSO for your Adaptive Car
 author: v-sdhakshina
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.date: 02/06/2023
 ---
 
 # Add code to enable SSO for Adaptive Cards Universal Actions
@@ -122,9 +123,9 @@ When the app user selects **View and accept**, the existing Azure AD permission 
 
 ## Code sample
 
-| **Sample name** | **Description** | **.NET** | **Node.js** |
+| **Sample name** | **Description** | **.NET** | **Node.js** | **Manifest** |
 | --- | --- | --- | --- | --- |
-| SSO for your Adaptive Cards Universal Actions | This sample code demonstrates how to enable SSO authentication for your Adaptive Cards Universal Actions in bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sso-adaptivecard/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sso-adaptivecard/nodejs) |
+| SSO for your Adaptive Cards Universal Actions | This sample code demonstrates how to enable SSO authentication for your Adaptive Cards Universal Actions in bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sso-adaptivecard/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sso-adaptivecard/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sso-adaptivecard/csharp/demo-manifest) |
 
 ## See also
 

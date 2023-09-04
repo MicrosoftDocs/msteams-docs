@@ -3,6 +3,7 @@ title: Types of cards
 description: In this module, learn what are cards and card actions available to bots in Teams and create a hero, thumbnail and adaptive cards.
 ms.localizationpriority: high
 ms.topic: reference
+ms.date: 06/13/2023
 ---
 
 # Types of cards
@@ -269,6 +270,9 @@ The following code shows an example of an Adaptive Card:
 
 #### Additional information on Adaptive Cards
 
+> [!Note]
+> The `speak` property in an Adaptive Card for Teams bots is supported for immersive readers only.
+
 You can pass dynamic values in an Adaptive Card using the dollar symbol ($) and curly braces. For more information, see [Adaptive Cards Templating](/adaptive-cards/templating/).
 
 Example:
@@ -291,6 +295,8 @@ Bot Framework reference:
 To know more about Adaptive Cards, see [Adaptive Cards](/adaptive-cards/).
 
 You can now work with a hero card, which is a multipurpose card used to visually highlight a potential user selection.
+
+Your bot can mention tags in an Adaptive Card posted into channels. For more information, see [Tag mention](../../bots/how-to/conversations/channel-and-group-conversations.md#tag-mention).
 
 ## Hero card
 
@@ -979,4 +985,5 @@ The following cards are implemented by the Bot Framework, but aren't supported b
 * [Work with Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
 * [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)
 * [Create connectors for Microsoft 365 Groups](../../webhooks-and-connectors/how-to/connectors-creating.md)
-* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Form completion feedback](cards-actions.md#form-completion-feedback)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)

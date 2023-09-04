@@ -4,6 +4,7 @@ description: Install app proactively using Graph APIs. Check if your bot is curr
 ms.localizationpriority: medium
 author: akjo
 ms.topic: Overview
+ms.date: 12/15/2022
 ---
 
 # Send proactive installation messages
@@ -30,7 +31,7 @@ Microsoft Graph [teamsAppInstallation resource type](/graph/api/resources/teamsa
 |`TeamsAppInstallation.ReadWriteSelfForUser.All`|Allows a Teams app to read, install, upgrade, and uninstall itself for any *user*, without prior sign in or use.|
 |`TeamsAppInstallation.ReadWriteSelfForTeam.All`|Allows a Teams app to read, install, upgrade, and uninstall itself in any *team*, without prior sign in or use.|
 
-To use these permissions, you must add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
+To use these permissions, you must add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest (previously called Teams app manifest) with the following values:
 
 * **id**: Your Azure Active Directory app ID.
 * **resource**: The resource URL for the app.
@@ -67,7 +68,7 @@ You can retrieve the `teamsAppId` in the following ways:
     GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
     ```
 
-    The request must return a `teamsApp` object `id`, which is the app's catalog generated app ID. This is different from the ID that you provided in your Teams app manifest:
+    The request must return a `teamsApp` object `id`, which is the app's catalog generated app ID. This is different from the ID that you provided in your app manifest:
 
     ```json
     {
@@ -82,6 +83,9 @@ You can retrieve the `teamsAppId` in the following ways:
       ]
     }
     ```
+
+    > [!NOTE]
+    > When the app is in the store, the `teamsAppId` is same as `IdFromManifest` and the `externalId` must not be used in this case.
 
 * If your app has already been uploaded or sideloaded for a user in personal scope:
 
@@ -253,4 +257,3 @@ server.get('/api/notify', async (req, res) => {
 * [Send activity feed notifications to users in Microsoft Teams](/graph/teams-send-activityfeednotifications)
 * [Add app to team - Microsoft Graph v1.0](/graph/api/team-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [Microsoft Teams service limits](/graph/throttling-limits#microsoft-teams-service-limits)
-* [Protected APIs in Microsoft Teams](/graph/teams-protected-apis)

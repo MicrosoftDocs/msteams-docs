@@ -7,13 +7,14 @@ author: erikadoyle
 ms.subservice: m365apps
 ms.topic: conceptual
 keywords: SDK TeamsJS Teams client JavaScript library
+ms.date: 05/05/2023
 ---
 # Teams JavaScript client library
 
 The Microsoft Teams JavaScript client library (TeamsJS) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook, where your app content is hosted in an [iFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). The library is helpful for developing apps with the following Teams capabilities:
 
 * [Tabs](../../tabs/what-are-tabs.md)
-* [Dialogs (Task modules)](../../task-modules-and-cards/what-are-task-modules.md)
+* [Task modules (Dialogs)](../../task-modules-and-cards/what-are-task-modules.md)
 
 Starting with version `2.0.0`, the existing TeamsJS library (`@microsoft/teams-js`, or simply `TeamsJS`) has been refactored to enable [Teams apps to run in Outlook and Microsoft 365 app](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Microsoft 365 app.
 
@@ -58,7 +59,7 @@ Enabling an existing Teams app to run in Outlook and Microsoft 365 requires all 
 
 2. [Modifying existing application code](#2-update-teamsjs-references) according to the required changes described in this article, and
 
-3. [Updating your app manifest](#3-update-the-manifest-optional) to version 1.13 or later.
+3. [Updating your app manifest](#3-update-the-app-manifest-optional) (previously called Teams app manifest) to version 1.13 or later.
 
 For more info, see [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
 
@@ -365,7 +366,7 @@ After completion, the utility will have updated your `package.json` file with th
 > [!IMPORTANT]
 > Code inside html files is not supported by the upgrade tooling and will require manual changes.
 
-### 3. Update the manifest (optional)
+### 3. Update the app manifest (optional)
 
 If you're updating a Teams app to run in Microsoft 365 app and Outlook, you'll also need to update the app manifest to version 1.13 or later. You can do this easily with Teams Toolkit, or manually.
 
@@ -376,7 +377,7 @@ If you're updating a Teams app to run in Microsoft 365 app and Outlook, you'll a
 
 # [Manual steps](#tab/manifest-manual)
 
-Open your Teams app manifest and update the `$schema` and `manifestVersion` with the following values:
+Open your app manifest and update the `$schema` and `manifestVersion` with the following values:
 
 ```json
 {
@@ -387,7 +388,7 @@ Open your Teams app manifest and update the `$schema` and `manifestVersion` with
 
 ---
 
-If you used Teams Toolkit to create your personal app, you can also use it to validate the changes to your manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file** or select the option from the Deployment menu of the Teams Toolkit (look for the Teams icon on the left side of Visual Studio Code).
+If you used Teams Toolkit to create your personal app, you can also use it to validate the changes to your app manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file** or select the option from the Deployment menu of the Teams Toolkit (look for the Teams icon on the left side of Visual Studio Code).
 
 :::image type="content" source="../../m365-apps/images/toolkit-validate-manifest-file.png" alt-text="Teams Toolkit 'Validate manifest file' option under 'Deployment' menu":::
 
