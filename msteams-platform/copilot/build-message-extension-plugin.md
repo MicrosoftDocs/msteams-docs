@@ -316,4 +316,44 @@ To update the command details for each command listed in the API:
    1. Create a new copilot plugin and keep my existing message extension as  default.
 1. Select Continue.
 
-### Create a Message extension using Teams toolkit
+### Create a API based message extension using Teams toolkit
+
+1. Open Visual Studio code.
+1. From the left pane, Select Teams Toolkit.
+1. Select **Plugin for Copilot**.
+1. Select any of the following options:
+    1. Start with a new API.
+    1. Start with an OpenAPI specification.
+    1. Start with an OpenAI plugin.
+1. Follow these steps for the respective API types:
+
+# [New API](#new-api)
+
+  1. Select a programming language.
+  1. Select Default folder.
+  1. Enter the name of your app and select Enter.
+
+# [OpenAPI specification](#openapi-specification)
+
+   1. Enter or browse the OpenAPI specification doc location.
+   1. From the API list, select the GET API and select OK.
+   1. Select Default folder.
+   1. Enter the name of your app and select Enter.
+
+# [Open AI plugin](#open-ai-plugin)
+
+  1. Enter your website domain where you've hosted the Open AI plugin manifest.
+  1. Select Enter.
+
+---
+
+### Create a bot based message extension using Teams toolkit
+
+1. Open Visual Studio code.
+1. From the left pane, Select Teams Toolkit.
+1. Select Create a New App.
+1. Select Message Extension.
+1. Select Custom Search Results.
+1. Select a programming language.
+1. Select Default folder.
+1. Enter the name of your app and select Enter.
