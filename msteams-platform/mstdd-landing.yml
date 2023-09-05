@@ -79,7 +79,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Receive participant events
-        url: apps-in-teams-meetings/meeting-apps-apis.md#get-participant-events
+        url: apps-in-teams-meetings/meeting-apps-apis.md#receive-participant-events
       - text: Teams Toolkit v17.7 extension within Visual Studio
         url: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md      
       - text: Send a proactive message using AAD ID
@@ -93,7 +93,7 @@ landingContent:
       - text: Collaborative Stage View
         url: tabs/tabs-link-unfurling.md#collaborative-stage-view
       - text: Real-time meeting events are supported in channel meetings
-        url: apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api
+        url: apps-in-teams-meetings/meeting-apps-apis.md#receive-meeting-start-and-end-events
       - text: Resource-specific consent for your Teams app
         url: graph-api/rsc/resource-specific-consent.md      
       - text: Deep link to the meeting side panel
