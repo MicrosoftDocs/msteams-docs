@@ -327,20 +327,20 @@ To update the command details for each command listed in the API:
     1. Start with an OpenAI plugin.
 1. Follow these steps for the respective API types:
 
-   # [New API](#new-api)
+   # [New API](#tab/new-api)
 
    1. Select a programming language.
    1. Select Default folder.
    1. Enter the name of your app and select Enter.
 
-   # [OpenAPI specification](#openapi-specification)
+   # [OpenAPI specification](#tab/openapi-specification)
 
    1. Enter or browse the OpenAPI specification doc location.
    1. From the API list, select the GET API and select OK.
    1. Select Default folder.
    1. Enter the name of your app and select Enter.
 
-   # [Open AI plugin](#open-ai-plugin)
+   # [Open AI plugin](#tab/open-ai-plugin)
 
    1. Enter your website domain where you've hosted the Open AI plugin manifest.
    1. Select Enter.
