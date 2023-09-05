@@ -44,7 +44,7 @@
 
     :::image type="content" source="../../assets/images/include-files/tunnel-created.png" alt-text="Screenshot shows the pop-up message that the tunnel is created.":::
 
-    You can find the tunnel you've created in the debug dropdown as follows:
+    You can find the tunnel you've created in the debug dropdown list as follows:
 
     :::image type="content" source="../../assets/images/include-files/tunnel-active.png" alt-text="Screenshot shows the tunnel is active and selected.":::
 
@@ -66,7 +66,7 @@
 
 1. Go to Visual Studio, select **View > Output**.
 
-1. From the output console dropdown menu, select **Dev Tunnels**.
+1. From the Output console dropdown menu, select **Dev Tunnels**.
 
     The Output console shows the dev tunnel URL.
 
