@@ -550,7 +550,7 @@
     - name: Fetch meeting ID and organizer ID
       href: graph-api/meeting-transcripts/fetch-id.md
       displayName: Obtain meeting details using user-level notification, tenant-level notification, transcript, recording
-    - name: Get notified when the meeting transcript is available
+    - name: Get notified when transcripts and recordings are available
       href: /graph/teams-changenotifications-callrecording-and-calltranscript
     - name: Get transcripts
       href: /graph/api/resources/calltranscript
@@ -682,7 +682,7 @@
         href: bots/how-to/authentication/bot-sso-register-aad.md
       - name: Add code to enable SSO
         href: bots/how-to/authentication/bot-sso-code.md
-      - name: Update manifest for SSO and preview app
+      - name: Update app manifest for SSO and preview app
         href: bots/how-to/authentication/bot-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: bots/how-to/authentication/bot-sso-graph-api.md
@@ -928,14 +928,14 @@
         displayName: TAM, PQL, metrics, success, ROI
 - name: App manifest
   items:
-    - name: App manifest schema for Teams
+    - name: App manifest schema
       href: resources/schema/manifest-schema.md
       displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
     - name: Public developer preview
       items:
         - name: Overview
           href: resources/dev-preview/developer-preview-intro.md          
-        - name: Public developer preview manifest schema for Teams
+        - name: Public developer preview app manifest schema
           href: resources/schema/manifest-schema-dev-preview.md
           displayName: properties
 - name: Integrate with Teams
@@ -1061,7 +1061,7 @@
     href: resources/teams-contributor-reference.md
   - name: Troubleshoot your Microsoft Teams app
     href: resources/troubleshoot.md
-  - name: Microsoft Teams updates
+  - name: Introducing the new Microsoft Teams client
     href: resources/teams-updates.md
     displayName: Classic Teams, new Teams client, Teams 2.1
 - name: Support and feedback

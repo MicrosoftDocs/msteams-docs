@@ -48,7 +48,7 @@ The controls run within a Power Apps Model Driven Application (MDA) that can be 
 
 * Data can be read from Dataverse via standard OData APIs and submitted to external sources such as a system of record or a portal.
 
-:::image type="content" source="~/assets/images/collaboration-control/consumption-mda.png" alt-text="Collaboration lifecycle":::
+:::image type="content" source="~/assets/images/collaboration-control/consumption-mda.png" alt-text="Screenshot shows the Collaboration lifecycle.":::
 
 ## See also
 
