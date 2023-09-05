@@ -1,15 +1,6 @@
 **Create a client secret**
 
-The following steps are applicable only if you've created a new **Microsoft App ID**. To create client secret, follow these steps:
-
-1. In the left pane, select **Configuration**. 
-
-    > [!TIP]
-    > Save the **Microsoft App ID** or **Client ID** for future reference.
-
-1. Next to **Microsoft App ID**, select **Manage Password**.
-
-    :::image type="content" source="../../assets/images/include-files/manage-bot-label.png" alt-text="Screenshot show the manage password option.":::
+1. In the left pane, under **Manage**, select **Certificates & secrets**. 
 
 1. Under **Client secrets**, select **+ New client secret**. 
 

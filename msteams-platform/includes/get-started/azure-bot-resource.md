@@ -1,7 +1,10 @@
 **Create an Azure bot resource**
 
-1. Go to the [Azure portal](https://portal.azure.com/).
-1. Select **Create a resource**.
+> [!NOTE]
+> If you're already testing your bot in Teams, sign out of this app and Teams. To see this change, sign in again.
+
+1. Go to **Home**.
+1. Select **+ Create a resource**.
 1. In the search box, enter **Azure Bot**.
 1. Select **Enter**.
 1. Select **Azure Bot**.
@@ -19,11 +22,21 @@
     
     :::image type="content" source="../../assets/images/include-files/new-resource-location.png" alt-text="Screenshot shows the new resource group option in Azure portal.":::
 
+1. Under **Pricing**, select **Change plan**. 
+
+    :::image type="content" source="../../assets/images/include-files/pricing-tier.png" alt-text="Screenshot shows the pricing option in Azure portal.":::
+
+1. Select **FO Free** > **Select**.
+
+    :::image type="content" source="../../assets/images/include-files/pricing-free.png" alt-text="Screenshot shows the option to select free.":::
+
 1. Under **Microsoft App ID**, select **Type of App** as **Multi Tenant**. 
 
-1. In the **Creation type**, by default, **Create new Microsoft App ID** is selected.
+1. In the **Creation type**, select, **Use existing app registration**.
 
-    You can also select **Use existing app registration** and enter existing **App ID**, **App tenant ID**, and **MSI resource ID**.
+1. Enter the **App ID**.
+
+   <!-- You can also select **Use existing app registration** and enter existing **App ID**, **App tenant ID**, and **MSI resource ID**. -->
 
     > [!NOTE]
     > You can't create more than one bot with the same **Microsoft App ID**.
