@@ -84,11 +84,11 @@ The following image provides the flow to add authentication to external browsers
    |`authId` | The request-id Teams created for this specific authentication request that needs to be sent back to Teams through deeplink.|
 
     > [!TIP]
-    > The 3P app can marshal `authId`, `oauthRedirectMethod` in the OAuth `state` query parameter while generating the login URL for the OAuthProvider. The `state` contains the passed `authId` and `oauthRedirectMethod`, when OAuthProvider redirects back to the 3P server and the 3P app uses the values for sending authentication response back to Teams as described in **6. The 3P app server response to Teams**.
+    > The app can marshal `authId`, `oauthRedirectMethod` in the OAuth `state` query parameter while generating the login URL for the OAuthProvider. The `state` contains the passed `authId` and `oauthRedirectMethod`, when OAuthProvider redirects back to the server and the app uses the values for sending authentication response back to Teams as described in **6. The 3P app server response to Teams**.
 
 4. The 3P app server redirects to specified `url`.
 
-   The 3P app server redirects to OAuth providers auth page in the external browser. The `redirect_uri` is a dedicated route on the 3P app server. You can register `redirect_uri` in the OAuth provider’s dev console as static, the parameters need to be sent through the state object.
+   The 3P app server redirects to OAuth providers auth page in the external browser. The `redirect_uri` is a dedicated route on the app server. You can register `redirect_uri` in the OAuth provider’s dev console as static, the parameters need to be sent through the state object.
 
    #### Example
 
@@ -124,7 +124,7 @@ The following image provides the flow to add authentication to external browsers
 
 8. Teams calls success callback and sends result.
 
-    Teams calls the success callback and sends the result (auth code) to the 3P app. The 3P app receives the code in the success callback and uses the code to retrieve the token, then the user information and update the user interface.
+    Teams calls the success callback and sends the result (auth code) to the 3P app. The app receives the code in the success callback and uses the code to retrieve the token, then the user information and update the user interface.
 
       ```JavaScript
       successCallback: function (result) { 
