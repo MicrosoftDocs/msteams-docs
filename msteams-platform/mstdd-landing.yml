@@ -79,7 +79,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: App caching for iOS personal tray
-        url: tabs/how-to/app-caching.md
+        url: tabs/how-to/app-caching-for-your-tab-app.md
       - text: App icon badging for your Teams app
         url: apps-in-teams-meetings/app-icon-badging-for-your-app.md
       - text: Deep link to the meeting side panel

@@ -387,7 +387,7 @@
     href: resources/removing-tab-margins.md
     displayName: margins align, extra padding effect, size of the tab margins, changing margins
   - name: App caching for your tab app
-    href: tabs/how-to/app-caching.md
+    href: tabs/how-to/app-caching-for-your-tab-app.md
     displayName: App caching, caching, launch time, cache
 - name: Build bots
   items:
