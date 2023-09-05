@@ -136,41 +136,41 @@ You can configure the bot by adding it to Teams. Follow the steps:
 
 1. Select **Add to a team**, **Add to a chat**, or **Add to a meeting**.
 
-:::image type="content" source="../../assets/images/bots/group-chat-add-Bot.png" alt-text="Screenshot shows add your bot to chat.":::
+   :::image type="content" source="../../assets/images/bots/group-chat-add-Bot.png" alt-text="Screenshot shows add your bot to chat.":::
 
 1. Select **Set up a bot**.
 
-:::image type="content" source="../../assets/images/bots/set-up-a-bot.png" alt-text="Screenshot shows to set up a bot in chat.":::
+   :::image type="content" source="../../assets/images/bots/set-up-a-bot.png" alt-text="Screenshot shows to set up a bot in chat.":::
 
 1. When the users hover over the bot an Adaptive Card appears with fetch response, select an option from the dropdown and select **Submit**.
 
-:::image type="content" source="../../assets/images/bots/configurable-card-fetch-response.png" alt-text="Screenshot shows the interaction of Adaptive Card with fetch response.":::
+   :::image type="content" source="../../assets/images/bots/configurable-card-fetch-response.png" alt-text="Screenshot shows the interaction of Adaptive Card with fetch response.":::
 
 1. An Adaptive Card appears with submit response, select an option from the dropdown and select **Submit**.
 
-:::image type="content" source="../../assets/images/bots/configurable-card-submit-reponse.png" alt-text="Screenshot shows the interaction of Adaptive Card with submit response.":::
+   :::image type="content" source="../../assets/images/bots/configurable-card-submit-reponse.png" alt-text="Screenshot shows the interaction of Adaptive Card with submit response.":::
 
 1. Response message is displayed.
 
-:::image type="content" source="../../assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows Adaptive Card with response message.":::
+   :::image type="content" source="../../assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows Adaptive Card with response message.":::
 
 To reconfigure the bot after adding to team or group chat. Follow the steps:
 
 1. When the users hover over the bot an Adaptive Card appears, select settings icon.
 
-:::image type="content" source="../../assets/images/bots/Bot-description-card-interaction.png" alt-text="Screenshot shows the Adaptive Card with settings icon.":::
+   :::image type="content" source="../../assets/images/bots/Bot-description-card-interaction.png" alt-text="Screenshot shows the Adaptive Card with settings icon.":::
 
 1. An Adaptive Card appears with fetch response, select an option from the dropdown and select **Submit**.
 
-:::image type="content" source="../../assets/images/bots/configurable-card-fetch-response.png" alt-text="Screenshot shows the interaction of Adaptive Card with fetch response.":::
+   :::image type="content" source="../../assets/images/bots/configurable-card-fetch-response.png" alt-text="Screenshot shows the interaction of Adaptive Card with fetch response.":::
 
 1. An Adaptive Card appears with submit response, select an option from the dropdown and select **Submit**.
 
-:::image type="content" source="../../assets/images/bots/configurable-card-submit-reponse.png" alt-text="Screenshot shows the interaction of Adaptive Card with submit response.":::
+   :::image type="content" source="../../assets/images/bots/configurable-card-submit-reponse.png" alt-text="Screenshot shows the interaction of Adaptive Card with submit response.":::
 
 1. Response message is displayed.
 
-:::image type="content" source="../../assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows Adaptive Card with response message.":::
+   :::image type="content" source="../../assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows Adaptive Card with response message.":::
 
 ## See also
 
