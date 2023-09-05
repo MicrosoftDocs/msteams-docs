@@ -129,7 +129,7 @@ items:
     1. Open the **appsettings.json** file in **Visual Studio Code** and update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
+         * Set `"MicrosoftAppPassword"` to your bot's client secret **Value**.
          * Set `"AzureAd"."TenantId"` to the tenant ID of the tenant where the app is used.
 
         > [!NOTE]
@@ -177,14 +177,14 @@ items:
 
        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-command-prompt-new1.png" alt-text="Screenshot of Command Prompt displaying C# path.":::
 
-    1. Run the following command in the **Command-Prompt** to download packages and dependencies.
+    1. Run the following command in the **Command Prompt** to download packages and dependencies.
     
-       ```Command-Prompt
+       ```Command Prompt
        npm install
        ```
-    1. Run the following command in the **Command-Prompt** to start the app.
+    1. Run the following command in the **Command Prompt** to start the app.
 
-       ```Command-Prompt
+       ```Command Prompt
        npm start
        ```
        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-buildapp.png" alt-text="Screenshot of Command Prompt displaying the commands.":::
@@ -196,11 +196,11 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-   To build and run the service use Visual Studio or Command line.
+   To build and run the service, use Visual Studio or Command line.
 
    # [Visual Studio](#tab/vs)
 
-      1. Open the Visual Studio.
+      1. Open Visual Studio.
       1. Go to **File** > **Open** > **Project/Solution...**.
           
          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png" alt-text="Screenshot of Visual Studio with the File, Open, and Project/Solution options highlighted in red.":::
@@ -315,7 +315,7 @@ items:
   
        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-appicon.png" alt-text="Screenshot of Find an app with Meeting Token App highlighted in red. ":::
 
-    1. Select the **Meeting Token App**.
+    1. Select **Meeting Token App**.
     
     1. Select **Save**.
 
