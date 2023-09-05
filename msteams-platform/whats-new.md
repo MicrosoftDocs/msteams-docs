@@ -27,7 +27,7 @@ Teams platform features that are available to all app developers.
 **2023 August**
 
 
-* ***August 31, 2023***: [Get participant events](apps-in-teams-meetings/meeting-apps-apis.md#get-participant-events)
+* ***August 31, 2023***: [Receive participant events](apps-in-teams-meetings/meeting-apps-apis.md#get-participant-events)
 
 * ***August 29, 2023***: [Use Teams store with intelligent search experience to display apps that are closest match to the user's specified characters.](concepts/deploy-and-publish/appsource/publish.md#teams-store-search-experience)
 

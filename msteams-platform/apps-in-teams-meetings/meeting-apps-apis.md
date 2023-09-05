@@ -1314,10 +1314,10 @@ The following table provides the error codes:
 | **404** | Meeting not found or not started. If you receive this error, ensure that you start the meeting and select start captions. After captions are enabled in the meeting, you can begin POSTing captions into the meeting.|
 | **500** |Internal server error. For more information, [contact support or provide feedback](../feedback.md).|
 
-## Get real-time Teams meeting events API
+## Receive meeting start and end events
 
 > [!NOTE]
-> Real-time Teams meeting events are supported for scheduled and channel meetings.
+> Meeting start and end events are supported for scheduled and channel meetings.
 
 The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot. The actual start and end time of a meeting are different from scheduled start and end time. The meeting details API provides the scheduled start and end time. The event provides the actual start and end time.
 
@@ -1524,27 +1524,27 @@ The following code provides an example of meeting end event payload:
 | **value.EndTime** | The meeting end time in UTC. |
 | **locale**| The locale of the message set by the client. |
 
-## Get participant events
+## Receive meeting participant events
 
 Your bot can receive real-time meeting details such as participant join and leave events through the meeting event subscription in Developer Portal. For example, if you want your bot app to notify or return the time stamp when an attendee joined or left the meeting, subscribe to these participant events in Developer Portal.
 
 > [!NOTE]
 >
-> * Participant events is supported only in scheduled private meetings.
+> * Participant events are supported only for scheduled meetings.
 > * For a bot to receive participant events, ensure that you add the bot to the meeting before a participant joins or leaves the meeting.
 
 To subscribe to participant events, follow these steps:
 
 1. In [Developer Portal](https://dev.teams.microsoft.com/) open your bot app or import an existing app.
-1. Ensure that the `OnlineMeetingParticipant.Read.Chat` RSC delegated permissions is configured in your app manifest for scheduled private meetings.
-
-   If your app doesn't have the RSC permission, add it through the **Configure** > **Permissions** section of your app in Developer Portal. For more information, see [RSC delegated permissions.](~/resources/schema/manifest-schema.md#rsc-delegated-permissions)
-1. In the **Meeting events** section, select the required events:
-    * Participant join the meeting
-    * Participant leave the meeting
+1. In the **Meeting event subscriptions** section, select the required events:
+    * Participant join
+    * Participant leave
 1. Select **Save**
 
    :::image type="content" source="~/assets/images/apps-in-meetings/participant-events.png" alt-text="Screenshot shows how developer portal display for participant events.":::
+1. Ensure that the `OnlineMeetingParticipant.Read.Chat` RSC permission is configured in your app manifest.
+
+   If your app doesn't have the RSC permission, add it through the **Configure** > **Permissions** section of your app in Developer Portal. For more information, see [RSC permissions.](~/graph-api/rsc/resource-specific-consent.md)
 
 Following are the examples of the participant join and leave event payloads:
 
