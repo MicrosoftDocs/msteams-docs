@@ -1,0 +1,319 @@
+---
+title: Message extension plugin
+author: v-ypalikila
+description: Learn how to build an API and bot based message extensions for Teams with openAPI specification or chatGPT plugin manifest.
+ms.localizationpriority: medium
+ms.topic: overview
+ms.author: anclear
+ms.date: 09/05/2023
+---
+
+# Message extension plugin
+
+Meetings users can interact with copilot to perform search and action-based scenarios with 1P and 3P plugins (existing bot-based message extensions) via natural language and custom prompts. For example, users can perform an action with a  plugin in a meeting or query and discover content from the plugins.
+
+Meetings copilot will process these actions and render them appropriately and provide extensibility actions such - open URL, share content in meeting, launch task module and app acquisition without leaving meeting copilot.
+
+## Build an API Copilot plugin and API ME
+
+1. Create a ChatGPT plugin or OpenAPI specification document in JSON or YAML format.
+
+   The following is an example of an API spec in YAML format:
+
+   ```json
+    {
+      openapi: "3.0.0"
+      info:
+      version: 1.0.0
+      title: Swagger
+      Todo
+      license:
+      name: MIT
+      servers: -
+      url:
+      http: //todo.swagger.io/v1 
+    
+      paths:
+      /todos:
+      get:
+      summary: Get
+      upcoming todos
+      operationId: getTodos
+      parameters: -
+      name: limit
+      in: query
+      description: How
+      many items
+      to return
+      at one
+      time (max
+      5)
+      required: false
+      schema:
+      type: integer
+      maximum: 5
+      format: int32
+      responses:
+      '200':
+      description: A
+      list of
+      upcoming Todos
+      content:
+      application/json:
+      schema:
+      $ref: "#/components/schemas/Todos"
+      default:
+      description: unexpected
+      error
+      content:
+      application/json:
+      schema:
+      $ref: "#/components/schemas/Error"
+      post:
+      summary: Add
+      a todo
+      operationId: addTodo
+      requestBody:
+      required: true
+      content:
+      application/json:
+      schema:
+      type: object
+      properties:
+      title:
+      type: string
+      description: The
+      title of
+      the todo
+      item
+      content:
+      type: string
+      description: The
+      content of
+      the todo
+      item
+      responses:
+      '201':
+      description: Null
+      response
+      default:
+      description: unexpected
+      error
+      content:
+      application/json:
+      schema:
+      $ref: "#/components/schemas/Error"
+      /todos/ { todId }
+      :
+      get:
+      summary: Info
+      for a
+      specific Todo
+      operationId: getTodoByIdif
+      A
+      parameters: -
+      name: todoId
+      in: path
+      required: true
+      description: The
+      id of
+      the Todo
+      to retrieve
+      schema:
+      type: string
+      responses:
+      '200':
+      description: Expected
+      response to
+      a valid
+      request
+      content:
+      application/json:
+      schema:
+      $ref: "#/components/schemas/Todo"
+      default:
+      description: unexpected
+      error
+      content:
+      application/json:
+      schema:
+      $ref: "#/components/schemas/Error"
+      components:
+      schemas:
+      Todo:
+      type: object
+      required: -
+      title -
+      content
+      properties:
+      title:
+      type: string
+      content:
+      type: string
+      Todos:
+      type: array
+      maxItems: 5
+      items:
+      $ref: "#/components/schemas/Todo"
+      Error:
+      type: object
+      required: -
+      code -
+      message
+      properties:
+      code:
+      type: integer
+      format: int32
+      message:
+      type: string
+    
+    }
+   ```
+
+## Manifest Update
+
+ Update the app manifest with the composeExtensions property. The following is an example of the app manifest with the `composeExtensions` property:
+
+   ```json
+   {
+      "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+      "manifestVersion": "1.17",
+      "version": "1.0.0",
+      "id": "%MICROSOFT-APP-ID%",
+      "localizationInfo": {
+        "defaultLanguageTag": "en-us",
+        "additionalLanguages": [
+          {
+            "languageTag": "es-es",
+            "file": "en-us.json"
+          }
+        ]
+      },
+      "developer": {
+        "name": "Publisher Name",
+        "websiteUrl": "https://example.com/",
+        "privacyUrl": "https://example.com/privacy",
+        "termsOfUseUrl": "https://example.com/app-tos",
+        "mpnId": "1234567890"
+      },
+      "name": {
+        "short": "Name of your app (<=30 chars)",
+        "full": "Full name of app, if longer than 30 characters (<=100 chars)"
+      },
+      "description": {
+        "short": "Short description of your app (<= 80 chars)",
+        "full": "Full description of your app (<= 4000 chars)"
+      },
+      "icons": {
+        "outline": "A relative path to a transparent .png icon — 32px X 32px",
+        "color": "A relative path to a full color .png icon — 192px X 192px"
+      },
+      "accentColor": "A valid HTML color code.",
+      "composeExtensions": [
+        {
+          "type": "ApiBased",
+          "apiSpecFile": "listrepairsapispec.yaml",
+          "commands": [
+            {
+              "context": [
+                "compose"
+              ],
+              "type": "query",
+              "id": "listRepairs",
+              "title": "List repairs",
+              "parameters": [
+                {
+                  "title": "Filter",
+                  "name": "filter",
+                  "description": "Filter repairs by who they're assigned to."
+                }
+              ],
+              "apiResponseRenderingTemplateFile": "listrepairsresponsetemplate.json"
+            }
+          ]
+        }
+      ],
+      "validDomains": [
+        "repairs-api-2023.azurewebsites.net"
+      ]
+    }
+
+   ```
+
+In the app manifest, Include a JSON path for the response schema. If you don't have a JSON path, Teams will check the root object/array for the JSON file. Ensure that the app has the following information:
+
+* App name
+* App color icon
+* App outline icon
+* Terms of Service URL
+* Privacy policy URL
+* The authentication type in `composeExtension.auth`: no auth, aad, oauth, or service_http.
+
+### Query Parameters
+
+|Name  |Description  |
+|---------|---------|
+|`composeExtension.type`     |   We take an OpenAPI spec and it can either be used by BizChat to figure out how/when to call the API, or used by dev toolkit to help generate manifest/Adaptive Card templates.  Update the value as `apiSpecification`. |
+|`composeExtension.apiSpecificationFile`     | Include when type is `ApiBased`. This references an OpenAPI spec file in the app package. Used to get the endpoint url, if not specified, construct the http request and also used by Biz chat to figure out how to call and process a response.        |
+|ComposeExtension.supportsConversationalAI     |  If you want the app to work in a BizChat or API Copilot plugins, set the value to **true**.  The default is **false**.  |
+|ComposeExtension.auth     | AUthentication option when calling an API. Supported options are no, auth, aad, oauth, and service_http|
+|`ComposeExtension.LLMdescription`     | For API Plugin. LLM description        |
+|`composeExtension.command.ID`      |  For API MEs. The ID must  match the `OperationID` available in the  OpenAPI spec.       |
+|`composeExtension.command.context`      |For API MEs.  An existing array where the entry points for ME is defined.The supported values are **compose**: Message Extension to show up as compose extension, **commandBox**: Message Extension to show up in Powerbar, and **message**: Message action |
+|`composeExtension.command.parameters`    |For API MEs. Include Title, Name, Description. The Name must map to the parameter name in the OpenAPI spec.     |
+|`composeExtension.command.apiResponseRenderingTemplateFile`| A template used to format the JSON response from developer’s API to Adaptive card response. The property is mandatory for `ApiBased` composeExtensions type.   |
+|`ComposeExtension.LLMdescription`|Description for the LLM |
+
+## Create an API ME or plugin using Teams Developer Portal or Teams Toolkit
+
+### Create a Message extensions using Developer Portal for Teams
+
+1. Go to Teams developer portal.
+1. Go to Apps.
+1. Create a new app.
+1. Under Configure, select App features.
+1. Select Copilot/Messaging extension.
+1. Select Add an API based message extension.
+1. To upload an API based message extension, select Upload an API.
+   1. To upload an Open API URL, select Enter API URL and add the URL.
+1. Select the Open API specification file in JSON or YAML.
+   1. To extend the message extension as a copilot plugin, turn on the toggle.
+1. Add a description.
+1. A list of all the available APIs from the Open API specification doc is displayed. Select the APIs that you want to convert as a command.
+1. Select Save.
+
+#### Update command details
+
+To update the command details for each command listed in the API:
+
+1. Select the /actions command.
+1. Under Command details update the following:
+   * Command type
+   * Command ID
+   * Command title
+   * Command description
+   * Context in which the command works
+   * Parameter name
+   * Parameter title
+   * Parameter description
+   * Parameter description type
+1. To upload an Adaptive Card template, select Upload.
+1. Select the template file and select Open. The card is uploaded to the Teams developer portal.
+1. Select Save.
+
+### Create an API ME or plugin using an existing Bot based ME
+
+1. Go to Teams developer portal.
+1. Select an app with an existing bot based ME.
+1. Under Configure, select App features.
+1. Select Copilot/Messaging extension.
+1. Select Add an API based message extension.
+
+   You can only publish a message extension or a copilot plugin at a time. A suggestion dialog opens.
+
+1. Select the any of the following options:
+   1. Create a new copilot plugin and make this as default.
+   1. Create a new copilot plugin and keep my existing message extension as  default.
+1. Select Continue.
+
+### Create a Message extensions using Teams toolkit
