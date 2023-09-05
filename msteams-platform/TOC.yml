@@ -550,7 +550,7 @@
     - name: Fetch meeting ID and organizer ID
       href: graph-api/meeting-transcripts/fetch-id.md
       displayName: Obtain meeting details using user-level notification, tenant-level notification, transcript, recording
-    - name: Get notified when the meeting transcript is available
+    - name: Get notified when transcripts and recordings are available
       href: /graph/teams-changenotifications-callrecording-and-calltranscript
     - name: Get transcripts
       href: /graph/api/resources/calltranscript
@@ -1064,7 +1064,7 @@
     href: resources/teams-contributor-reference.md
   - name: Troubleshoot your Microsoft Teams app
     href: resources/troubleshoot.md
-  - name: Microsoft Teams updates
+  - name: Introducing the new Microsoft Teams client
     href: resources/teams-updates.md
     displayName: Classic Teams, new Teams client, Teams 2.1
 - name: Support and feedback
