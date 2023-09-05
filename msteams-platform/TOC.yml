@@ -514,10 +514,10 @@
   - name: Copilot
     items:
     - name: Overview
-      href: messaging-extensions/Copilot/copilot-overview.md
+      href: copilot/copilot-overview.md
       displayName: Copilot, Copilot API, Copilot service
     - name: Build message extension plugin  
-      href: messaging-extensions/Copilot/build-message-extension-plugin.md
+      href: copilot/build-message-extension-plugin.md
       displayName: plugin, Copilot plugin, API based ME, OpenAPI specification 
 - name: Build apps for Teams meetings and calls
   items:
