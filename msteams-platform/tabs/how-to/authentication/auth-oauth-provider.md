@@ -27,7 +27,7 @@ The following table provides the list of `authenticate()` API parameters (`Authe
 | --- | --- |
 |`isExternal` | The type of parameter is Boolean, which indicates that the auth window opens in an external browser.|
 |`height` |The preferred height for the pop-up. The value can be ignored if outside the acceptable bounds.|
-|`url`  <br>|The URL of 3P app server for the authentication pop-up, with the following three parameter placeholders:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. This placeholder is replaced by deeplink or web page by Teams platform, which informs app server if the call is coming from mobile platform.</br> <br> - `authId`: This placeholder is replaced by UUID. The app server uses it to maintain session. <br> - `hostRedirectUrl`: pass placeholder in {}. This placeholder is replaced by a redirect URL by the current platform and client, which will redirect the user to the correct client after authentication is complete. </br>|
+|`url`  <br>|The URL of 3P app server for the authentication pop-up, with the following three parameter placeholders:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. The Teams platform replaces this placeholder with a deeplink or web page, which informs the app server if the call comes from a mobile platform.</br> <br> - `authId`: UUID replaces this placeholder. The app server uses it to maintain session. <br> - `hostRedirectUrl`: pass placeholder in {}. The current platform and client replace this placeholder with a redirect URL, which will redirect the user to the correct client after completing authentication. </br>|
 |`width`|The preferred width for the pop-up. The value can be ignored if outside the acceptable bounds.|
 
 For more information on parameters, see the [authenticate(AuthenticatePopUpParameters)](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate) function.
@@ -98,7 +98,7 @@ The following image provides the flow to add authentication to external browsers
 
 5. Sign in to external browser.
 
-   User signs in to the external browser. The OAuth providers redirects back to the `redirect_uri` with the auth code and the state object.
+   User signs in to the external browser. The OAuth providers redirect back to the `redirect_uri` with the auth code and the state object.
 
 6. The 3P app server checks and responds to Teams.
 
@@ -124,7 +124,7 @@ The following image provides the flow to add authentication to external browsers
 
 8. Teams calls success callback and sends result.
 
-    Teams calls the success callback and sends the result (auth code) to the 3P app. The 3P app receives the code in the success callback and use the code to retrieve the token, then the user information and update the user interface.
+    Teams calls the success callback and sends the result (auth code) to the 3P app. The 3P app receives the code in the success callback and uses the code to retrieve the token, then the user information and update the user interface.
 
       ```JavaScript
       successCallback: function (result) { 
