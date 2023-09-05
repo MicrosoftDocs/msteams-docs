@@ -111,8 +111,8 @@ items:
     1. Open the **appsettings.json** file and update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
-         * Set `"BaseURL"` to the qualified `dev tunnel` domain name.
+         * Set `"MicrosoftAppPassword"` to your bot's client secret **Value**.
+         * Set `"BaseUrl"` to the qualified `dev tunnel` or `ngrok` domain name.
 
           :::image type="content" source="~/assets/images/meeting-content-bubble/appsettings-json.png" alt-text="Screenshot shows the App settings.":::
 
@@ -150,14 +150,14 @@ items:
 
        1. Press **F5** to run the project.
 
-          A webpage opens with a message, **Your bot is ready!**.
+          A webpage opens with a message **Your bot is ready!**.
 
            :::image type="content" source="~/assets/images/meeting-content-bubble/your-bot-is-ready.png" alt-text="Screenshot shows the Echo bot showing your bot is ready."::: 
     
 - title: Add in-meeting notifications app to Teams
   durationInMinutes: 1
   content: |
-    1. In your cloned repository, go to **csharp > InMeetingNotifications > Manifest**.
+    1. In your cloned repository, go to **csharp** > **InMeetingNotifications** > **Manifest**.
 
     1. Create a .zip file with the following files that are present in the **Manifest** folder: 
        * manifest.json
