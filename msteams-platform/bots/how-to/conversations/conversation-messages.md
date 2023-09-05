@@ -219,20 +219,20 @@ To receive read receipts for your bot, ensure the following:
         "serviceUrl": "https://canary.botapi.skype.com/amer/",
         "from": {
             "id": "29:1-8Iuh70W9pRqV8tQK8o2nVjxz33RRGDKLf4Bh7gKnrzN8s7e4vCyrFwjkPbTCX_Co8c4aXwWvq3RBLr-WkkVMw",
-            "aadObjectId": "ee6e242f-5885-4303-9c85-648d51a7609d"
+            "aadObjectId": "5b649834-7412-4cce-9e69-176e95a394f5"
         },
         "conversation": {
             "conversationType": "personal",
-            "tenantId": "528dbe3f-15e0-4e37-84a1-00cc305847dd",
+            "tenantId": "528dbe3f-16e0-4e37-84a2-00cc305847ed",
             "id": "a:1xlimp68NSUxEqK0ap2rXuwC9ITauHgV2M4RaDPkeRhV8qMaFn-RyilMZ62YiVdqs8pp43yQaRKvv_U2S2gOS5nM-y_pOxVe4BW1qMGPtqD0Bv3pw-nJXF0zhDlZHMZ1Z"
         },
         "recipient": {
             "id": "28:9901a8b6-4fef-428b-80b1-ddb59361adeb",
-            "name": "Quan Test Bot"
+            "name": "Test Bot"
         },
         "channelData": {
             "tenant": {
-                "id": "528dbe3f-15e0-4e37-84a1-00cc305847dd"
+                "id": "6babcaad-604b-40ac-a9d7-9fd97c0b779f"
             }
         },
         "value": {
