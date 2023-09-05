@@ -21,11 +21,11 @@ A plugin allows Copilot to interact directly with third-party data, apps, and se
 * Retrieve knowledge-based information, for example, my team’s design files in Figma.
 * Perform actions on behalf of the user, for example, create a Jira ticket.
 
-All Message Extensions will be supported as plugins pending validation to ensure the plugin meets quality, security, privacy, and usefulness expectations. For developers that do not already have a ME, there are two ways to build one:
+All Message Extensions will be supported as plugins pending validation to ensure the plugin meets quality, security, privacy, and usefulness expectations. For developers that don't already have a ME, there are two ways to build one:
 
 * Build an API-backed ME: Using the Teams Toolkit, developers can easily create a API-backed ME from an existing API or ChatGPT plugin. This method requires an OpenAPI specification, documenting the API.
 
-* Build a bot-backed ME: For developers that want a 1-on-1 conversational experience in addition to their plugin, they can create a new message extension from a bot using the Teams Toolkit.
+* Build a bot-backed ME: For developers that want a one-on-one conversational experience in addition to their plugin, they can create a new message extension from a bot using the Teams Toolkit.
 OpenAPI Specification
 
 To assist copilot in understanding when and how to use your plugin, OpenAPI specification documents are provided with plugins to describe the underlying API. This document is required when building a plugin from an API.

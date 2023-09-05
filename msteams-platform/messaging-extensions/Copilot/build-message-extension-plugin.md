@@ -10,7 +10,7 @@ ms.date: 09/05/2023
 
 # Message extension plugin
 
-Meetings users can interact with copilot to perform search and action-based scenarios with 1P and 3P plugins (existing bot-based message extensions) via natural language and custom prompts. For example, users can perform an action with a  plugin in a meeting or query and discover content from the plugins.
+Meetings users can interact with copilot to perform search and action-based scenarios with Microsoft and third-party plugins (existing bot-based message extensions) via natural language and custom prompts. For example, users can perform an action with a  plugin in a meeting or query and discover content from the plugins.
 
 Meetings copilot will process these actions and render them appropriately and provide extensibility actions such - open URL, share content in meeting, launch task module and app acquisition without leaving meeting copilot.
 
@@ -256,10 +256,10 @@ In the app manifest, Include a JSON path for the response schema. If you don't h
 |`composeExtension.type`     |   We take an OpenAPI spec and it can either be used by BizChat to figure out how/when to call the API, or used by dev toolkit to help generate manifest/Adaptive Card templates.  Update the value as `apiSpecification`. |
 |`composeExtension.apiSpecificationFile`     | Include when type is `ApiBased`. This references an OpenAPI spec file in the app package. Used to get the endpoint url, if not specified, construct the http request and also used by Biz chat to figure out how to call and process a response.        |
 |ComposeExtension.supportsConversationalAI     |  If you want the app to work in a BizChat or API Copilot plugins, set the value to **true**.  The default is **false**.  |
-|ComposeExtension.auth     | AUthentication option when calling an API. Supported options are no, auth, aad, oauth, and service_http|
+|ComposeExtension.auth     | Authentication option when calling an API. Supported options are no, auth, aad, oauth, and service_http|
 |`ComposeExtension.LLMdescription`     | For API Plugin. LLM description        |
 |`composeExtension.command.ID`      |  For API MEs. The ID must  match the `OperationID` available in the  OpenAPI spec.       |
-|`composeExtension.command.context`      |For API MEs.  An existing array where the entry points for ME is defined.The supported values are **compose**: Message Extension to show up as compose extension, **commandBox**: Message Extension to show up in Powerbar, and **message**: Message action |
+|`composeExtension.command.context`      |For API MEs.  An existing array where the entry points for ME is defined. The supported values are **compose**: Message Extension to show up as compose extension, **commandBox**: Message Extension to show up in Powerbar, and **message**: Message action |
 |`composeExtension.command.parameters`    |For API MEs. Include Title, Name, Description. The Name must map to the parameter name in the OpenAPI spec.     |
 |`composeExtension.command.apiResponseRenderingTemplateFile`| A template used to format the JSON response from developer’s API to Adaptive card response. The property is mandatory for `ApiBased` composeExtensions type.   |
 |`ComposeExtension.LLMdescription`|Description for the LLM |
@@ -311,9 +311,9 @@ To update the command details for each command listed in the API:
 
    You can only publish a message extension or a copilot plugin at a time. A suggestion dialog opens.
 
-1. Select the any of the following options:
+1. Select any of the following options:
    1. Create a new copilot plugin and make this as default.
    1. Create a new copilot plugin and keep my existing message extension as  default.
 1. Select Continue.
 
-### Create a Message extensions using Teams toolkit
+### Create a Message extension using Teams toolkit
