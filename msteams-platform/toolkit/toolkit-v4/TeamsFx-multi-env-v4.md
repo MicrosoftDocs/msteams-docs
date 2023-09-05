@@ -62,7 +62,7 @@ After creating the project, you can view the project folders and files under **E
   * `state.<envName>.json`: Provision output file for the environment. This file exists for every environment individually.
   * `<env>.userdata`: User data for the provision output for the environment. This file exists for every environment individually.
 * `templates`
-  * `appPackage`: App manifest template files.
+  * `appPackage`: App manifest (previously called Teams app manifest) template files.
   * `azure`: `bicep` template files.
 
 ## Customize resource provision
@@ -73,11 +73,11 @@ The following table lists the common scenarios for customized resource provision
 
 | Scenarios | Location| Description |
 | --- | --- | --- |
-| Customize Azure Resource |`bicep` files under `templates\azure` `.fx\azure.parameters.<envName>.json` | [Customize ARM parameters and templates](provision-v4.md#customize-arm-template-files) |
-| Reuse existing Microsoft Azure Active Directory (Azure AD) app for Teams app | `auth` section in`.fx\config.<envName>.json`|  [Use an existing Azure AD app for your Teams app](provision-v4.md#use-an-existing-azure-ad-app-for-your-teams-app) |
-| Reuse existing Azure AD app for bot |`bot` section in`.fx\config.<envName>.json`| [Use an existing Azure AD app for your bot](provision-v4.md#use-an-existing-azure-ad-app-for-your-bot) |
-| Skip adding user while provisioning SQL |`skipAddingSqlUser` property in`.fx\config.<envName>.json`| [Skip adding user for SQL database](provision-v4.md#skip-adding-user-for-sql-database) |
-| Customize app manifest |`manifest.template.json` file is available under `templates\appPackage`| [Preview app manifest in Toolkit](TeamsFx-preview-and-customize-app-manifest-v4.md)|
+| Customize Azure Resource |`bicep` files under `templates\azure` `.fx\azure.parameters.<envName>.json` | [Customize ARM parameters and templates](../provision.md#customize-arm-template-files) |
+| Reuse existing Microsoft Azure Active Directory (Azure AD) app for Teams app | `auth` section in`.fx\config.<envName>.json`|  [Use an existing Azure AD app for your Teams app](../provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
+| Reuse existing Azure AD app for bot |`bot` section in`.fx\config.<envName>.json`| [Use an existing Azure AD app for your bot](../provision.md#use-an-existing-azure-ad-app-for-your-bot) |
+| Skip adding user while provisioning SQL |`skipAddingSqlUser` property in`.fx\config.<envName>.json`| [Skip adding user for SQL database](../provision.md#skip-adding-user-for-sql-database) |
+| Customize app manifest |`manifest.template.json` file is available under `templates\appPackage`| [Preview app manifest in Toolkit](../TeamsFx-preview-and-customize-app-manifest.md)|
 
 ## Scenarios
 
@@ -117,7 +117,7 @@ Steps for customization:
 6. Run provision command on **dev** and **staging** environments to update the app name in remote environments.
 
    > [!NOTE]
-   > For more information on running provision command with Teams Toolkit, see [how to provision using Teams Toolkit in Microsoft Visual Studio Code](provision-v4.md#provision-using-teams-toolkit-in-microsoft-visual-studio-code).
+   > For more information on running provision command with Teams Toolkit, see [how to provision using Teams Toolkit in Microsoft Visual Studio Code](../provision.md#provision-using-teams-toolkit-in-microsoft-visual-studio-code).
 
 </details>
 
@@ -154,7 +154,7 @@ Follow these steps customizing the environment description:
 3. Create a new environment and name it **staging**, if a staging environment doesn’t exist.
 4. Open the configuration file `.fx\configs\config.staging.json`.
 5. Add a new property as you did in config.dev.json and enter its value as **my app description for staging**.
-6. Open Teams app manifest template `templates\appPackage\manifest.template.json`.
+6. Open the app manifest template `templates\appPackage\manifest.template.json`.
 7. Update the value of property `description` > `short` to use the variable defined in configure files with braces. Use the  following syntax `{{config.manifest.description.short}}`.
   
     The updates to `manifest.template.json` are:
@@ -178,7 +178,7 @@ Follow these steps customizing the environment description:
 8. Run provision command against **dev** and **staging** environments to update the app name in remote environments.
 
    > [!NOTE]
-   > For more information on running provision command with Teams Toolkit, see [how to provision using Teams Toolkit in Microsoft Visual Studio Code](provision-v4.md#provision-using-teams-toolkit-in-microsoft-visual-studio-code).
+   > For more information on running provision command with Teams Toolkit, see [how to provision using Teams Toolkit in Microsoft Visual Studio Code](../provision.md#provision-using-teams-toolkit-in-microsoft-visual-studio-code).
 
 </details>
 
@@ -187,9 +187,9 @@ Follow these steps customizing the environment description:
 
 You can set the description of Teams app to **my app description** for all the environments.
 
-Teams Toolkit shares the same Teams app manifest templates across all environments, you can update the description value in it for your target:
+Teams Toolkit shares the same app manifest templates across all environments, you can update the description value in it for your target:
 
-1. Open the Teams app manifest template `templates\appPackage\manifest.template.json`.
+1. Open the app manifest template `templates\appPackage\manifest.template.json`.
 2. Update the value of the property `description` > `short` with the permanent string **my app description**.
   
     The updates to `manifest.template.json` are:
@@ -218,13 +218,13 @@ Teams Toolkit shares the same Teams app manifest templates across all environmen
 
 You can customize Azure resources provisioned for each environment. For example, edit the environment corresponding to `.fx\configs\azure.parameters.{env}.json` file to specify an Azure Function name.
 
-For more information on Bicep template and parameter files, see [how to provision cloud resources](provision-v4.md).
+For more information on Bicep template and parameter files, see [how to provision cloud resources](../provision.md).
 </details>
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
-* [App manifest schema for Teams](~/resources/schema/manifest-schema.md)
+* [Teams Toolkit Overview](../teams-toolkit-fundamentals.md)
+* [App manifest schema](~/resources/schema/manifest-schema.md)
 * [Add more cloud resources](add-resource-v4.md)
 * [Collaborate with other developers on Teams project](TeamsFx-collaboration-v4.md)
 * [Test app behavior in different environment](test-app-behavior-v4.md)

@@ -94,7 +94,7 @@ Make sure your short name adheres to the [store validation guidelines](~/concept
 
 ### Write descriptions
 
-You must have a short and long description of your app.
+You must have a short and long description of your app. App description helps improve app discoverability in the Teams store.
 
 #### Short description
 
@@ -186,7 +186,7 @@ You can add a URL for your YouTube or Vimeo video.
 
 ### Select a category for your app
 
-During submission, you're asked to categorize your app. You can categorize your app based on the following categories:
+During submission, you're asked to categorize your app. App category helps improve your app discoverability in the Teams store. You can categorize your app based on the following categories:
 
 |Categories  |
 |--------------|
@@ -217,7 +217,7 @@ During submission, you're asked to categorize your app. You can categorize your 
 | Maps and feeds |
 | Other |
 
-Distribute your app to specific countries or regions.
+### Distribute your app to specific countries or regions
 
 If you want to cater your app to a specific audience, you can select from the available list of countries or regions and communicate what’s great about your app in ways that are relevant to users. This is known as Geo-filtering. Geo-filtering is applicable only for apps listed in the Teams store. For example, a Contoso US app, which sells gift cards that are valid within the US and Canada is only visible in the Teams store for the users in the US and Canada.
 
