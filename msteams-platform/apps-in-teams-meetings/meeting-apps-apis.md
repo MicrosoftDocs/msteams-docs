@@ -1526,7 +1526,7 @@ The following code provides an example of meeting end event payload:
 
 ## Receive meeting participant events
 
-Your bot can receive real-time meeting details such as participant join and leave events through the meeting event subscription in Developer Portal. For example, if you want your bot app to notify or return the time stamp when an attendee joined or left the meeting, subscribe to these participant events in Developer Portal.
+Your bot can receive real-time meeting details such as participant join and leave events through the meeting event subscription in Developer Portal. A bot receives the participant events only if subscribed to these events. For example, if you want your bot app to notify or return the time stamp when an attendee joined or left the meeting, subscribe to these participant events in Developer Portal.
 
 > [!NOTE]
 >
@@ -1536,7 +1536,7 @@ Your bot can receive real-time meeting details such as participant join and leav
 To subscribe to participant events, follow these steps:
 
 1. In [Developer Portal](https://dev.teams.microsoft.com/) open your bot app or import an existing app.
-1. In the **Meeting event subscriptions** section, select the required events:
+1. In the **Meeting event subscriptions** section, select the events:
     * Participant join
     * Participant leave
 1. Select **Save**
