@@ -198,7 +198,7 @@ The language supports features that allow you to include variables, call externa
 
 * ``{{$input}}``:  Inserts the message text. It gets its value from state.temp.input.
 
-* ``{{$history}}``: Inserts the conversation history.​ It gets its value from state.temp.history
+* ``{{$history}}``: Inserts the conversation history.​ It gets its value from state.temp.history.
 
 * ``{{$state.[property]}}``: Inserts state properties.
 
