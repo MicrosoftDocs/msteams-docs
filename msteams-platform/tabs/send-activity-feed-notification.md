@@ -12,7 +12,7 @@ The Microsoft Teams activity feed enables users to triage items that require att
 
 ## Use cases of activity feed notifications
 
-* **News**: Helps users to stay updated with the latest information like new assignment or new post.
+* **News**: Helps users to stay updated with the latest information like new assignments or new posts.
 * **Collaboration**: When you share a file or @ mention a user in a comment, users can see a text preview in the notification banner.
 * **Reminders**: A notification to let you know about an event or a task. For example, you have a training due date today, and the app sends you a reminder notification to help you remember the task or event.
 * **Alerts**: Notifications, which require urgent or immediate attention. For example, a training's due date has passed, or an admin has sent a request to fix a bug with the highest priority.
@@ -80,16 +80,20 @@ Activity feed APIs work with a Teams app. The following are the requirements for
 * Activity types must be declared in the activities section. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#activities).
 * The Teams app must be installed for the recipient, either personally, or in a team or chat they're part of.
 
-### App manifest changes
+### Permissions
 
-This section describes the changes that need to be added to the app manifest. Ensure that you use the [app manifest](/microsoftteams/platform/resources/schema/manifest-schema) version `1.7` or later.
+Use delegated or application permissions to send activity feed notifications. When you use application permissions, we recommend to use [resource-specific consent (RSC)](../graph-api/rsc/resource-specific-consent.md) as the `TeamsActivity.Send.User` permission is consented by the user to send activity notifications. Ensure that you declare RSC permissions in your app manifest file.
+
+### App manifest update
+
+This section describes the updates that need to be added to the app manifest. Ensure that you use the [app manifest](/microsoftteams/platform/resources/schema/manifest-schema) version `1.7` or later.
 
 ```json
 "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
 "manifestVersion": "1.7",
 ```
 
-#### webApplicationInfo section changes
+#### webApplicationInfo update
 
 ```json
 "webApplicationInfo":
@@ -107,7 +111,7 @@ This section describes the changes that need to be added to the app manifest. En
 > [!NOTE]
 > You might get an error if multiple Teams apps in the same scope (team, chat, or user) are using the same Azure AD app. Make sure that you're using unique Azure AD apps.
 
-#### Activities section changes
+#### Activities update
 
 ```json
 "activities":
@@ -134,7 +138,36 @@ This section describes the changes that need to be added to the app manifest. En
 |templateText|string|Template text for the activity notification. You can declare your parameters by encapsulating parameters in `{}`.|
 
 > [!NOTE]
-> `actor` is a special parameter that always takes the name of the caller. In delegated calls, `actor` is the user's name. In application-only calls, it takes the name of the Teams app.
+> The `actor` property is a special parameter that always takes the name of the caller. In delegated calls, `actor` is the user's name. In application-only calls, it takes the name of the Teams app.
+
+#### Authorization update
+
+```json
+"authorization": 
+{ 
+  "permissions": { 
+    "resourceSpecific": [ 
+      {
+        "type": "Application", 
+         "name": "TeamsActivity.Send.User" 
+      }, 
+      { 
+        "type": "Application",
+        "name": "TeamsActivity.Send.Group"
+      }, 
+      { 
+        "type": "Application", 
+        "name": "TeamsActivity.Send.Chat" 
+      } 
+    ] 
+  }
+}
+```
+
+|Parameter|Type|Description|
+|:---|:---|:---|
+|type|string|The type of the RSC permission.|
+|name|string|The name of the RSC permission. For more information, see [supported RSC permissions.](../graph-api/rsc/resource-specific-consent.md#supported-rsc-permissions) |
 
 ### Install the Teams app
 
