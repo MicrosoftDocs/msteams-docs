@@ -196,31 +196,15 @@ The language supports features that allow you to include variables, call externa
 
 * ``{{function}}``:  Calls a registered function and inserts its return value string.​
 
-* ``{{$input}}``:  Inserts the message text. It gets it's value from state.temp.input.
+* ``{{$input}}``:  Inserts the message text. It gets its value from state.temp.input.
 
-* ``{{$history}}``: Inserts the conversation history.​ It gets it's value from state.temp.history
+* ``{{$history}}``: Inserts the conversation history.​ It gets its value from state.temp.history.
 
 * ``{{$state.[property]}}``: Inserts state properties.
 
 ## Actions
 
 Actions handle events triggered by AI components.
-
-`FlaggedInputAction` and `FlaggedOutputAction` are the built-in action handlers to handle the moderator flags. If the moderator flags an incoming message input, the moderator redirects to the `FlaggedInputAction` handler and the `context.sendActivity` sends a message to the user about the flag.
-
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L97)
-
-```javascript
-app.ai.action(AI.FlaggedInputActionName, async (context: TurnContext, state: TurnState, data: TData) => {
-    await context.sendActivity(`I'm sorry your message was flagged: ${JSON.stringify(data)}`);
-    return false;
-});
-
-app.ai.action(AI.FlaggedOutputActionName, async (context: TurnContext, state: ApplicationTurnState, data: TData) => {
-    await context.sendActivity(`I'm not allowed to talk about such things.`);
-    return false;
-});
-```
 
 ### Register Action Handlers
 
@@ -263,6 +247,24 @@ app.ai.action(
         return false;
     }
 );
+```
+
+### Moderation
+
+`FlaggedInputAction` and `FlaggedOutputAction` are the built-in action handlers to handle the moderator flags. If the moderator flags an incoming message input, the moderator redirects to the `FlaggedInputAction` handler and the `context.sendActivity` sends a message to the user about the flag.
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L97)
+
+```javascript
+app.ai.action(AI.FlaggedInputActionName, async (context: TurnContext, state: TurnState, data: TData) => {
+    await context.sendActivity(`I'm sorry your message was flagged: ${JSON.stringify(data)}`);
+    return false;
+});
+
+app.ai.action(AI.FlaggedOutputActionName, async (context: TurnContext, state: ApplicationTurnState, data: TData) => {
+    await context.sendActivity(`I'm not allowed to talk about such things.`);
+    return false;
+});
 ```
 
 ## Next step
