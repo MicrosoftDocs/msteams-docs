@@ -146,7 +146,7 @@ Following are the query parameters:
 
 * `users`: A comma-separated list of user IDs representing the participants of the call. The user ID field supports the Azure AD `UserPrincipalName`, typically an email address, or in a PSTN call, it supports a pstn mri 4:&lt;phonenumber&gt;.
 * `withVideo`: An optional parameter, which you can use to make a video call. Setting this parameter only turns on the caller's camera. The receiver of the call has a choice to answer through an audio or an audio and video call through the Teams call notification window.
-* `Source`: An optional parameter, which informs about the source of the deep link for telemetry purposes. Source can have any one of the following as it's value:
+* `Source`: An optional parameter, which informs about the source of the deep link for telemetry purposes. Source parameter can have any one of the following values:
     * `app-source`
     * `deeplink-service`
     * `store-copy-link`
