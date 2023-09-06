@@ -14,7 +14,7 @@ Meetings users can interact with copilot to perform search and action-based scen
 
 Meetings copilot will process these actions and render them appropriately and provide extensibility actions such - open URL, share content in meeting, launch task module and app acquisition without leaving meeting copilot.
 
-## Build an API Copilot plugin and API ME
+## Build message extension plugin
 
 1. Create a ChatGPT plugin or OpenAPI specification document in JSON or YAML format.
 
@@ -264,9 +264,9 @@ In the app manifest, Include a JSON path for the response schema. If you don't h
 |`composeExtension.command.apiResponseRenderingTemplateFile`| A template used to format the JSON response from developer’s API to Adaptive card response. The property is mandatory for `ApiBased` composeExtensions type.   |
 |`ComposeExtension.LLMdescription`|Description for the LLM |
 
-## Create an API ME or plugin using Teams Developer Portal or Teams Toolkit
+### Build API based Message extension
 
-### Create a Message extensions using Developer Portal for Teams
+# [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
 1. Go to Teams developer portal.
 1. Go to Apps.
@@ -316,7 +316,7 @@ To update the command details for each command listed in the API:
    1. Create a new copilot plugin and keep my existing message extension as  default.
 1. Select Continue.
 
-### Create a API based message extension using Teams toolkit
+# [Teams toolkit](#tab/Teams-toolkit)
 
 1. Open Visual Studio code.
 1. From the left pane, Select Teams Toolkit.
@@ -344,8 +344,13 @@ To update the command details for each command listed in the API:
 
    1. Enter your website domain where you've hosted the Open AI plugin manifest.
    1. Select Enter.
+   ---
+
+You can also build bot based message extensions.
 
 ---
+
+### Build API based Message extension
 
 ### Create a bot based message extension using Teams toolkit
 
