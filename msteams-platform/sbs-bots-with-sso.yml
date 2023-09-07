@@ -193,6 +193,53 @@ items:
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-bot-id.png" alt-text="Screenshot shows the details filled manifest file in visual studio.":::
 
 - title: Build and run the service
+  durationInMinutes: 1
+  content: |
+    1. Open **Visual Studio**.
+
+    1. Select **Clone a repository**.
+
+    1. In the **Repository location**, enter `https://github.com/OfficeDev/Microsoft-Teams-Samples.git`. Ensure that you note the **Path** where the repository is cloned.
+    
+    1. Go to **File** > **Open** > **Project/Solution...**.
+
+        :::image type="content" source="~/assets/images/bots/project-solution_1.png" alt-text="Screenshot of Visual Studio file menu. The menu entries titled Open under File menu and Project/Solution under Open are highlighted in red.":::
+
+    1. Select **BotConversationSsoQuickstart.sln** file from **bot-conversation-sso-quickstart** > **csharp_dotnetcore** folder.
+
+        :::image type="content" source="~/assets/images/bots/filepath_1.png" alt-text="Screenshot of Project file with the file path and BotSSOCSharp.csproj file highlighted in red.":::
+
+
+
+    1. Select **F5**  to run the project.
+
+    1. Select **Yes** if the following dialog appears:
+
+        :::image type="content" source="~/assets/images/bots/certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
+
+       A webpage opens with a message **Your bot is ready!**.
+
+        :::image type="content" source="~/assets/images/bots/yourbot.png" alt-text="Screenshot of the webpage that displays Your bot is ready.":::
+        
+        <br>
+
+        <details>
+
+        <summary><b>Troubleshooting</b></summary>
+
+        If you get the **Unable to find package** error, follow these steps:
+
+        1.  Go to **Tools** > **NuGet Package Manager** > **Package Manager Settings**.
+        1.	In the **Options** window that appears, select **NuGet Package Manager** > **Package Sources**.
+        1.	Select **Add**.
+        1.	In **Name**, enter `nuget.org` and in **Source**, enter `https://api.nuget.org/v3/index.json`.
+        1.	Select **Update** and **OK**.
+        1.	Rebuild your project.
+        <br>
+
+        </details>
+
+- title: Upload the bot in Teams
   durationInMinutes: 2
   content: |
     To build and run the service using Visual Studio.
@@ -244,52 +291,7 @@ items:
 
          :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Screenshot of bot SSO output after you have successfully completed the step-by-step guide.":::
 
-- title: Configure and run your bot sample
-  durationInMinutes: 1
-  content: |
-    1. Open **Visual Studio**.
 
-    1. Select **Clone a repository**.
-
-    1. In the **Repository location**, enter `https://github.com/OfficeDev/Microsoft-Teams-Samples.git`. Ensure that you note the **Path** where the repository is cloned.
-    
-    1. Go to **File** > **Open** > **Project/Solution...**.
-
-        :::image type="content" source="~/assets/images/bots/project-solution_1.png" alt-text="Screenshot of Visual Studio file menu. The menu entries titled Open under File menu and Project/Solution under Open are highlighted in red.":::
-
-    1. Select **BotConversationSsoQuickstart.sln** file from **bot-conversation-sso-quickstart** > **csharp_dotnetcore** folder.
-
-        :::image type="content" source="~/assets/images/bots/filepath_1.png" alt-text="Screenshot of Project file with the file path and BotSSOCSharp.csproj file highlighted in red.":::
-
-
-
-    1. Select **F5**  to run the project.
-
-    1. Select **Yes** if the following dialog appears:
-
-        :::image type="content" source="~/assets/images/bots/certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
-
-       A webpage opens with a message **Your bot is ready!**.
-
-        :::image type="content" source="~/assets/images/bots/yourbot.png" alt-text="Screenshot of the webpage that displays Your bot is ready.":::
-        
-        <br>
-
-        <details>
-
-        <summary><b>Troubleshooting</b></summary>
-
-        If you get the **Unable to find package** error, follow these steps:
-
-        1.  Go to **Tools** > **NuGet Package Manager** > **Package Manager Settings**.
-        1.	In the **Options** window that appears, select **NuGet Package Manager** > **Package Sources**.
-        1.	Select **Add**.
-        1.	In **Name**, enter `nuget.org` and in **Source**, enter `https://api.nuget.org/v3/index.json`.
-        1.	Select **Update** and **OK**.
-        1.	Rebuild your project.
-        <br>
-
-        </details>
 
 
 - title: Complete challenge
