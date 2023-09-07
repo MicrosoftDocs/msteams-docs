@@ -20,154 +20,92 @@ Meetings copilot will process these actions and render them appropriately and pr
 
    The following is an example of an API spec in YAML format:
 
-   ```json
-    {
-      openapi: "3.0.0"
-      info:
+   ```yml
+   openapi: 3.0.0
+    info:
+      title: Repair Service
+      description: A simple service to manage repairs for various items
       version: 1.0.0
-      title: Swagger
-      Todo
-      license:
-      name: MIT
-      servers: -
-      url:
-      http: //todo.swagger.io/v1 
-    
-      paths:
-      /todos:
-      get:
-      summary: Get
-      upcoming todos
-      operationId: getTodos
-      parameters: -
-      name: limit
-      in: query
-      description: How
-      many items
-      to return
-      at one
-      time (max
-      5)
-      required: false
-      schema:
-      type: integer
-      maximum: 5
-      format: int32
-      responses:
-      '200':
-      description: A
-      list of
-      upcoming Todos
-      content:
-      application/json:
-      schema:
-      $ref: "#/components/schemas/Todos"
-      default:
-      description: unexpected
-      error
-      content:
-      application/json:
-      schema:
-      $ref: "#/components/schemas/Error"
-      post:
-      summary: Add
-      a todo
-      operationId: addTodo
-      requestBody:
-      required: true
-      content:
-      application/json:
-      schema:
-      type: object
-      properties:
-      title:
-      type: string
-      description: The
-      title of
-      the todo
-      item
-      content:
-      type: string
-      description: The
-      content of
-      the todo
-      item
-      responses:
-      '201':
-      description: Null
-      response
-      default:
-      description: unexpected
-      error
-      content:
-      application/json:
-      schema:
-      $ref: "#/components/schemas/Error"
-      /todos/ { todId }
-      :
-      get:
-      summary: Info
-      for a
-      specific Todo
-      operationId: getTodoByIdif
-      A
-      parameters: -
-      name: todoId
-      in: path
-      required: true
-      description: The
-      id of
-      the Todo
-      to retrieve
-      schema:
-      type: string
-      responses:
-      '200':
-      description: Expected
-      response to
-      a valid
-      request
-      content:
-      application/json:
-      schema:
-      $ref: "#/components/schemas/Todo"
-      default:
-      description: unexpected
-      error
-      content:
-      application/json:
-      schema:
-      $ref: "#/components/schemas/Error"
-      components:
-      schemas:
-      Todo:
-      type: object
-      required: -
-      title -
-      content
-      properties:
-      title:
-      type: string
-      content:
-      type: string
-      Todos:
-      type: array
-      maxItems: 5
-      items:
-      $ref: "#/components/schemas/Todo"
-      Error:
-      type: object
-      required: -
-      code -
-      message
-      properties:
-      code:
-      type: integer
-      format: int32
-      message:
-      type: string
-    
-    }
+    servers:
+      - url: https://repairs-api-2023.azurewebsites.net/
+    paths:
+      /repairs:
+        get:
+          operationId: listRepairs
+          summary: List all repairs
+          description: Returns a list of repairs with their details and images
+          parameters:
+            - name: assignedTo
+              in: query
+              description: Filter repairs by who they're assigned to
+              schema:
+                type: string
+              required: false
+          responses:
+            '200':
+              description: A successful response
+              content:
+                application/json:
+                  schema:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          description: The unique identifier of the repair
+                        title:
+                          type: string
+                          description: The short summary of the repair
+                        description:
+                          type: string
+                          description: The detailed description of the repair
+                        assignedTo:
+                          type: string
+                          description: The user who is responsible for the repair
+                        date:
+                          type: string
+                          format: date-time
+                          description: The date and time when the repair is scheduled or completed
+                        image:
+                          type: string
+                          format: uri
+                          description: The URL of the image of the item to be repaired or the repair process
+        post:
+          operationId: createRepair
+          summary: Create a new repair
+          description: Adds a new repair to the list with the given details and image URL
+          requestBody:
+            required: true
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    title:
+                      type: string
+                      description: The short summary of the repair
+                    description:
+                      type: string
+                      description: The detailed description of the repair
+                    assignedTo:
+                      type: string
+                      description: The user who is responsible for the repair
+                    date:
+                      type: string
+                      format: date-time
+                      description: The optional date and time when the repair is scheduled or completed
+                    image:
+                      type: string
+                      format: uri
+                      description: The URL of the image of the item to be repaired or the repair process
+                  required:
+                    - title
+                    - description
+                    - assignedTo
+          responses:
+            '201':
+              description: A successful response indicating that the repair was created
    ```
 
 ## Manifest Update
@@ -268,26 +206,33 @@ In the app manifest, Include a JSON path for the response schema. If you don't h
 
 # [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
-1. Go to Teams developer portal.
-1. Go to Apps.
-1. Create a new app.
-1. Under Configure, select App features.
-1. Select Copilot/Messaging extension.
-1. Select Add an API based message extension.
-1. To upload an API based message extension, select Upload an API.
-   1. To upload an Open API URL, select Enter API URL and add the URL.
-1. Select the Open API specification file in JSON or YAML.
-   1. To extend the message extension as a copilot plugin, turn on the toggle.
-1. Add a description.
-1. A list of all the available APIs from the Open API specification doc is displayed. Select the APIs that you want to convert as a command.
-1. Select Save.
+1. Go to **Teams developer portal**.
+1. Go to **Apps**.
+1. Select **Create a new app**.
+1. Under **Configure**, select **App features**.
+1. Select **Plugin for copilot**.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the plugin of copilot option in Teams developer portal.":::
+
+1. Select **Upload now**.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-upload.png" alt-text="Screenshot shows the Upload now option in Teams developer portal.":::
+
+1. Select the Open API specification file in JSON or YAML and select **Open**.
+
+   A list of all the available APIs from the Open API specification are uploaded as commands and displayed in the page.
+
+1. Select the APIs that you want to convert as a command and select **Save**.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-convert-api-commands.png" alt-text="Screenshot shows the list of APIs from the Open API spec document converted as commands.":::
 
 #### Update command details
 
 To update the command details for each command listed in the API:
 
-1. Select the /actions command.
-1. Under Command details update the following:
+1. Select the arrow next to any of the Get commands.
+1. Select **View details**. A command details page appears.
+1. In the Command details page, update the following:
    * Command type
    * Command ID
    * Command title
@@ -297,9 +242,7 @@ To update the command details for each command listed in the API:
    * Parameter title
    * Parameter description
    * Parameter description type
-1. To upload an Adaptive Card template, select Upload.
-1. Select the template file and select Open. The card is uploaded to the Teams developer portal.
-1. Select Save.
+1. Select **Save**.
 
 ### Create an API ME or plugin using an existing Bot based ME
 
@@ -344,6 +287,7 @@ To update the command details for each command listed in the API:
 
    1. Enter your website domain where you've hosted the Open AI plugin manifest.
    1. Select Enter.
+
    ---
 
 You can also build bot based message extensions.
