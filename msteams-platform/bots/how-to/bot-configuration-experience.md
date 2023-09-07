@@ -150,25 +150,25 @@ To add and configure your bot in Teams, follow these steps:
 
 1. Go to the chat and @**mention** the bot in the message compose area.
 
-   :::image type="content" source="../../assets/images/bots/configurable-card-fetch-response.png" alt-text="Screenshot shows the interaction of Adaptive Card with fetch response.":::
+   :::image type="content" source="../../assets/images/bots/mention-bot.png" alt-text="Screenshot shows the interaction of bot.":::
 
 1. When a user hovers over the **Bot Conversation Sample App** an Adaptive Card appears, select the Settings icon.
 
-   :::image type="content" source="../../assets/images/bots/bot-description-card-interaction.png" alt-text="Screenshot shows the Adaptive Card with settings icon."::::
+   :::image type="content" source="../../assets/images/bots/bot-adaptive-card-interaction.png" alt-text="Screenshot shows the Adaptive Card with settings icon.":::
 
 A bot sends an response message.
 
    :::image type="content" source="../../assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows Adaptive Card with response message.":::
 
-1. To reconfigure the bot. Follow the steps:
+To reconfigure the bot. Follow the steps:
 
 1. Go to the chat and @**mention** the bot in the message compose area.
 
-   :::image type="content" source="../../assets/images/bots/configurable-card-fetch-response.png" alt-text="Screenshot shows the interaction of Adaptive Card with fetch response.":::
+   :::image type="content" source="../../assets/images/bots/mention-bot.png" alt-text="Screenshot shows the interaction of bot.":::
 
 1. User can also hovers over the **Bot Conversation Sample App** an Adaptive Card appears, select the Settings icon.
 
-   :::image type="content" source="../../assets/images/bots/bot-description-card-interaction.png" alt-text="Screenshot shows the Adaptive Card with settings icon."::::
+   :::image type="content" source="../../assets/images/bots/bot-adaptive-card-interaction.png" alt-text="Screenshot shows the Adaptive Card with settings icon.":::
 
 A bot sends an response message.
 
