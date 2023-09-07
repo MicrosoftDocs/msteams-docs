@@ -30,6 +30,7 @@ You can generate the Preview offer ID from the **AppSource preview** link in the
 
     > [!NOTE]
     > Unlike a public offer ID, the Preview offer ID can be recognized with the *-preview* suffix. For example, **publisherId.offerId-preview**.
+    > "If the offer you want to preview is limited to non-US regions, the Developer Portal may report being unable to find your offer when you click “view”. If this situation occurs, you can either (1) temporarily add "United States" to the list of markets in which you specified your offer is available in Partner Center here [https://docs.microsoft.com/en-us/azure/marketplace/create-new-saas-offer-plans#define-markets-pricing-and-availability](/azure/marketplace/create-new-saas-offer-plans) or (2) disregard the error and proceed to sideload the app into your Teams client by clicking “preview in Teams
 
 ## Configure your app with the preview offer ID
 
