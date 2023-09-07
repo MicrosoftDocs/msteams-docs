@@ -40,7 +40,7 @@ Teams platform features that are available to all app developers.
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
 | 29/08/2023 | Use Teams store with intelligent search experience to display apps that are closest match to the user's specified characters. | Distribute your app > [Publish to the Teams store](concepts/deploy-and-publish/appsource/publish.md#teams-store-search-experience) |
-| 28/08/2023 | Teams app manifest is now referred to as app manifest. | App manifest > [Overview](resources/schema/manifest-schema-dev-preview.md)|
+| 28/08/2023 | Teams app manifest is now referred to as app manifest. | App manifest > [Overview](resources/schema/manifest-schema.md)|
 | 16/08/2023 | Use Teams Toolkit Visual Studio v17.7 extension with many new app development features to get started with app development for Teams. | Tools and SDKs > Tools > [Teams Toolkit for Visual Studio](toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md) |
 | 10/08/2023 | Send a proactive message using AAD ID | Build bots > Bot conversations > [Proactive messages](bots/how-to/conversations/send-proactive-messages.md)|
 | 25/07/2023 | Use Collaborative Stage View to engage with your app content in a new Teams window | Build tabs > [Tabs link unfurling and Stage View](tabs/tabs-link-unfurling.md#collaborative-stage-view).
