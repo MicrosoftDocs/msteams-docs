@@ -135,7 +135,27 @@ items:
       > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
 
 
-    [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
+    **Application ID URI**
+
+    1. In the left pane, under **Manage**, select **Expose an API**.
+
+    1. Next to **Application ID URI**, select **Add**.
+
+       :::image type="content" source="../../assets/images/include-files/expose-api-add.png" alt-text="Screenshot shows the option to add Application ID URI.":::
+
+    1. Update the **Application ID URI** in the `api://botid-{AppID}` or `api://botid-{AppID}` format and select **Save**.
+
+       :::image type="content" source="../../assets/images/bots/app-id-uri1.png" alt-text="Screenshot shows the option to add the app id uri and save.":::
+
+    The following image shows the domain name:
+
+    :::image type="content" source="../../assets/images/include-files/app-id-uri-output.png" alt-text="Screenshot shows the redirect uri":::
+    
+    <!--
+       > [!NOTE]
+       > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
+       > For example: `api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
+    -->  
 
     [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
 
@@ -160,27 +180,18 @@ items:
   content: |
     1. Go to the **appsettings.json** file in the cloned repository.
 
-    1. Replace all occurrences of `TODO: MicrosoftAppId` with your bot's **Microsoft App ID**.
+    :::image type="content" source="../../assets/images/teams-file-upload-bot/appsettings-file-location-bot-sso.png" alt-text="Screenshot shows the location of appsettings json file.":::
     
-    1. Open the **appsettings.json** file from **BotConversationSsoQuickstart** folder.
+    1. Open the **appsettings.json** file and update the following information:
 
-    1. Update the following in **appsettings.json** file:
+    :::image type="content" source="../../assets/images/teams-file-upload-bot/appsettings-json-bot-sso.png" alt-text="Screenshot shows the appsettings json.":::
 
-       ```json
-       {
-        "MicrosoftAppId": "{TODO: MicrosoftAppId}",
-        "MicrosoftAppPassword": "{TODO: ClientSecret}",
-        "ConnectionName": "{TODO: ConnectionName}",
-        "MicrosoftAppType": "MultiTenant", // Set this to SingleTenant if you are using a single tenant app registration
-        "MicrosoftAppTenantId": "common" // Set your tenantId here if you are using single tenant app registration.
-        }
-       ```
 
-       * Update the `MicrosoftAppId` and `MicrosoftAppPassword` for your bot.
-         You can obtain the `MicrosoftAppId` from the bot's configuration page. The `MicrosoftAppPassword` is the value for client secret ID that you saved previously in Azure portal.
-       * Update `MicrosoftAppType` as `MultiTenant` if your bot is supported on multiple tenants. If your bot is supported on single tenant, update `MicrosoftAppType` as `SingleTenant`.
-       * Update `MicrosoftAppTenantId` as `common` if you're using a multi-tenant app registration. If you're using a single tenant app registration, update `tenantId` as the value for `MicrosoftAppTenantId`.
-       * Use the OAuth connection name as the **Connection Name**.
+       * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
+       * Set `"MicrosoftAppPassword"` to your bot's client secret ID **value**.
+       * Set `ConnectionName` as OAuth connection name.
+       * Set `"MicrosoftAppType"` to **MultiTenant**.
+       * Set `"MicrosoftAppTenantId"` to **common**.
 
     1. Go to the **manifest.json** file in the cloned repository.
 
@@ -188,9 +199,10 @@ items:
          
     1. Open the **manifest.json** file and update the following changes:
     
-       Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your **Microsoft App ID**.
+       * Replace all occurrences of `"{TODO: MicrosoftAppId}"` with your **Microsoft App ID**.
+       * Set `"<<domain-name>>"` to your ngrok or dev tunnel domain.
  
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-bot-id.png" alt-text="Screenshot shows the details filled manifest file in visual studio.":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-bot-id-botsso.png" alt-text="Screenshot shows the details filled in the manifest file in visual studio." lightbox="~/assets/images/teams-file-upload-bot/manifest-bot-id-botsso1.png":::
 
 - title: Build and run the service
   durationInMinutes: 1
