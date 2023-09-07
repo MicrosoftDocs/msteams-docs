@@ -141,15 +141,11 @@ items:
 
     1. Next to **Application ID URI**, select **Add**.
 
-       :::image type="content" source="../../assets/images/include-files/expose-api-add.png" alt-text="Screenshot shows the option to add Application ID URI.":::
+       :::image type="content" source="~/assets/images/bots/expose-api-add-uri.png" alt-text="Screenshot shows the option to add Application ID URI.":::
 
     1. Update the **Application ID URI** in the `api://botid-{AppID}` or `api://botid-{AppID}` format and select **Save**.
 
-       :::image type="content" source="../../assets/images/bots/app-id-uri1.png" alt-text="Screenshot shows the option to add the app id uri and save.":::
-
-    The following image shows the domain name:
-
-    :::image type="content" source="../../assets/images/include-files/app-id-uri-output.png" alt-text="Screenshot shows the redirect uri":::
+       :::image type="content" source="~/assets/images/bots/app-id-uri1.png" alt-text="Screenshot shows the option to add the app id uri and save.":::
     
     <!--
        > [!NOTE]
@@ -180,12 +176,11 @@ items:
   content: |
     1. Go to the **appsettings.json** file in the cloned repository.
 
-    :::image type="content" source="../../assets/images/teams-file-upload-bot/appsettings-file-location-bot-sso.png" alt-text="Screenshot shows the location of appsettings json file.":::
+    :::image type="content" source="~/assets/images/teams-file-upload-bot/appsettings-file-location-bot-sso.png" alt-text="Screenshot shows the location of appsettings json file.":::
     
     1. Open the **appsettings.json** file and update the following information:
 
-    :::image type="content" source="../../assets/images/teams-file-upload-bot/appsettings-json-bot-sso.png" alt-text="Screenshot shows the appsettings json.":::
-
+    :::image type="content" source="~/assets/images/teams-file-upload-bot/appsettings-json-bot-sso.png" alt-text="Screenshot shows the appsettings json.":::
 
        * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
        * Set `"MicrosoftAppPassword"` to your bot's client secret ID **value**.
@@ -207,17 +202,13 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    1. Open **Visual Studio**.
-
-    1. Select **Clone a repository**.
-
-    1. In the **Repository location**, enter `https://github.com/OfficeDev/Microsoft-Teams-Samples.git`. Ensure that you note the **Path** where the repository is cloned.
+    1. Open Visual Studio.    
     
     1. Go to **File** > **Open** > **Project/Solution...**.
 
         :::image type="content" source="~/assets/images/bots/project-solution_1.png" alt-text="Screenshot of Visual Studio file menu. The menu entries titled Open under File menu and Project/Solution under Open are highlighted in red.":::
 
-    1. Select **BotConversationSsoQuickstart.sln** file from **bot-conversation-sso-quickstart** > **csharp_dotnetcore** folder.
+    1. From **bot-conversation-sso-quickstart** > **csharp_dotnetcore** folder, Select **BotConversationSsoQuickstart.sln** file.
 
         :::image type="content" source="~/assets/images/bots/filepath_1.png" alt-text="Screenshot of Project file with the file path and BotSSOCSharp.csproj file highlighted in red.":::
 
@@ -254,17 +245,12 @@ items:
 - title: Upload the bot in Teams
   durationInMinutes: 2
   content: |
-    To build and run the service using Visual Studio.
-
-     1. Open Visual Studio.
-       
-     1. Go to **File** > **Open** > **Project/Solution...**. 
-
-     1. From **samples** > **bot-file-upload** > **csharp** folder, select **TeamsFileUpload.csproj** file. 
+     1. In your cloned repository, Go to **Microsoft-Teams-Samples > samples** > **bot-file-upload** > **csharp** folder, select **TeamsFileUpload.csproj** file. 
      1. Create a .zip file with the following files that are present in the **appPackage** folder: 
-       * manifest.json
-       * outline.png
-       * color.png
+
+        * manifest.json
+        * outline.png
+        * color.png
 
         :::image type="content" source="~/assets/images/bots/manifest_1.png" alt-text="Screenshot of Manifest folder with the Teams Bot zip folder highlighted in red.":::
 
@@ -277,26 +263,26 @@ items:
 
             :::image type="content" source="~/assets/images/bots/custom-app-upload.png" alt-text="Screenshot of Teams app with the Apps icon, Manage your apps, and showing the selection of Upload a custom app option highlighted in red.":::
 
-    1. Select **Open** to upload the .zip file that you've created in the **Manifest** folder.
+      1. Select **Open** to upload the .zip file that you've created in the **Manifest** folder.
 
          :::image type="content" source="~/assets/images/bots/app-open.png" alt-text="Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.":::
 
-    1. Select **Add** to add the bot to your chat.
+      1. Select **Add** to add the bot to your chat.
 
          :::image type="content" source="~/assets/images/bots/conversation-bot-add.png" alt-text="Screenshot of Conversation Bot with Add option highlighted in red.":::
 
         You can interact with the bot by sending it a message. The bot exchanges an SSO token and calls the Graph API on your behalf. It keeps you signed in unless you send a message to sign out.
 
-    1. Send a message to the bot. The conversation bot asks for consent for the first time.
+      1. Send a message to the bot. The conversation bot asks for consent for the first time.
 
-    1. For desktop, select **Continue** to give permissions to Teams client for accessing the bot.
+      1. For desktop, select **Continue** to give permissions to Teams client for accessing the bot.
 
          :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request1.png" alt-text="Screenshot of additional permissions with Continue option highlighted in red.":::
         
         > [!NOTE]
         > Now you have configured SSO with your bot app and it's the only time you'll have to give consent.
 
-    1. For mobile device, select **Accept**.
+      1. For mobile device, select **Accept**.
 
         > [!NOTE]
         > Now you have configured SSO with your bot app in mobile, and this is the only time you'll have to give consent.
