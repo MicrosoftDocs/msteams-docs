@@ -148,21 +148,38 @@ To add and configure your bot in Teams, follow these steps:
 
    :::image type="content" source="../../assets/images/bots/set-up-a-bot.png" alt-text="Screenshot shows set up a bot in chat.":::
 
-1. When the users hover over the bot an Adaptive Card appears with fetch response, select an option from the dropdown and select **Submit**.
+1. When you hover over the bot, a task module fetch response Adaptive Card appears. Select an option from the dropdown and select **Submit**.
 
    :::image type="content" source="../../assets/images/bots/configurable-card-fetch-response.png" alt-text="Screenshot shows the interaction of Adaptive Card with fetch response.":::
 
-1. An Adaptive Card appears with submit response, select an option from the dropdown and select **Submit**.
+1. When a user hovers over the bot, a task module submit response Adaptive Card appears. Select an option from the dropdown and select **Submit**.
 
    :::image type="content" source="../../assets/images/bots/configurable-card-submit-reponse.png" alt-text="Screenshot shows the interaction of Adaptive Card with submit response.":::
 
-1. Response message is displayed.
+A bot sends an response message.
 
    :::image type="content" source="../../assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows Adaptive Card with response message.":::
 
-To reconfigure the bot after adding to team or group chat. Follow the steps:
+To reconfigure the bot after adding to team, group chat, or meeting. Follow the steps:
 
-1. When the users hover over the bot an Adaptive Card appears, select settings icon.
+1. Go to the chat and @**mention** the bot in the message compose area.
+
+1. From the **Suggestions** list select **settings**. An Adaptive Card appears.
+
+1. From the Adaptive Card select Settings icon.
+
+1. Go to the chat and @**mention** the bot in the message compose area.
+
+1.
+1. hover over the Bot Conversation Sample Appbo where the bot i
+1.
+1.
+1.
+1. s installed.
+
+1. Select the Bot conversation
+
+1. When a user hovers over the bot an Adaptive Card appears, select the Settings icon.
 
    :::image type="content" source="../../assets/images/bots/Bot-description-card-interaction.png" alt-text="Screenshot shows the Adaptive Card with settings icon.":::
 
@@ -174,7 +191,7 @@ To reconfigure the bot after adding to team or group chat. Follow the steps:
 
    :::image type="content" source="../../assets/images/bots/configurable-card-submit-reponse.png" alt-text="Screenshot shows the interaction of Adaptive Card with submit response.":::
 
-1. Response message is displayed.
+A bot sends an response message.
 
    :::image type="content" source="../../assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows Adaptive Card with response message.":::
 
