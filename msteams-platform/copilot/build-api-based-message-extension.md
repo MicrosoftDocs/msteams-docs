@@ -34,7 +34,7 @@ You can build an API based message extension plugin using Developer portal for T
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-convert-api-commands.png" alt-text="Screenshot shows the list of APIs from the Open API spec document converted as commands.":::
 
-#### Update command details
+## Update command details
 
 To update the command details for each command listed in the API:
 
@@ -65,7 +65,7 @@ To update the command details for each command listed in the API:
 
 :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams developer portal.":::
 
-### Create message extension when copilot plugin already exists
+## Create message extension when copilot plugin already exists
 
 1. Go to **Teams developer portal**.
 1. Go to **Apps**.
@@ -95,7 +95,7 @@ To update the command details for each command listed in the API:
 
 :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-copilot-message-extension-created.png" alt-text="Screenshot shows the message extension app created in the App features page in Teams developer portal.":::
 
-### Create a API plugin
+## Create a API plugin
 
 If you have a chatGPT plugin manifest. You can build an API plugin using Teams developer portal.
 
@@ -152,8 +152,6 @@ If you have a chatGPT plugin manifest. You can build an API plugin using Teams d
 You can also build bot based message extensions.
 
 ---
-
-
 
 
 ## See also

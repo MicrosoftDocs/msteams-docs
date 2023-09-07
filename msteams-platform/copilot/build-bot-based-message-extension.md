@@ -12,7 +12,7 @@ ms.date: 09/07/2023
 
 <font color="red">Need more information </font>
 
-# Create a bot based message extension using Teams toolkit
+## Create a bot based message extension using Teams toolkit
 
 1. Open Visual Studio Code.
 1. From the left pane, Select Teams Toolkit.
@@ -23,6 +23,6 @@ ms.date: 09/07/2023
 1. Select Default folder.
 1. Enter the name of your app and select Enter.
 
-# Create a bot based message extension using developer portal for Teams
+## Create a bot based message extension using developer portal for Teams
 
 <font color="red">Need more information </font>

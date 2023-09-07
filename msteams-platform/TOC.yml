@@ -527,7 +527,7 @@
     displayName: OpenAPI specification, bot, mos
   - name: Copilot message extension FAQ 
     href: copilot/copilot-plugin-faq.md
-    displayName: FAQ,         
+    displayName: FAQ      
 - name: Build apps for Teams meetings and calls
   items:
   - name: Overview
