@@ -42,40 +42,37 @@ items:
 
     ## Set up your Teams development tenant
 
-    A **tenant** is like a space or a container where you chat, share files, and run meetings for your organization in Teams. You can also sideload and test the app.
+    A tenant is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
 
-    ### Check for sideloading option
+    ### Enable sideloading option
 
-    After creating the app, you must load your app in Teams without distributing it. This loading is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
      > [!NOTE]
      > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
 
-    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
-
-    To verify sideload apps in Teams:
-
-    1. In the Teams client, select the **Apps** icon.
-    1. Select **Manage your apps** > **Upload an app**.
-    1. Look for the option **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. In the Teams client, select **Apps** icon.
+    1. Select **Manage your apps**.
+    1. Select **Upload an app**
+    1. Look for the option to **Upload a custom app**.  If the option is visible, you have enabled sideloading apps.
 
         :::image type="content" source="~/assets/images/bots/upload-a-custom-app-sso-bot-authentication.png" alt-text="Screenshot showing the Teams apps, Manage your apps, Upload an app and Upload a custom app highlighted in red.":::
 
         > [!NOTE]
-        > If you don't have the option to upload a custom app, contact Teams administrator.
+        > Contact Teams administrator, if you don't have the option to upload a custom app.
 
     ### Create a free Teams developer tenant (optional)
 
-    If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
+    If you don't have a Teams developer account, you can get it for free. Join the Microsoft 365 developer program!
 
     1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
     1. Select **Join Now** and follow the onscreen instructions.
-    1. Select **Setup E5 subscription** from the welcome screen.
+    1. In the welcome screen, select **Setup E5 subscription**.
     1. Set up administrator account. After you finish, the following screen displays.
 
           :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot of the Microsoft 365 Developer Program subscription.":::
 
-    1. Sign in to Teams using the new administrator account. Now you should have the **Upload a custom app** option.
+    1. Sign in to Teams using the new administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -145,7 +142,7 @@ items:
 
     1. Update the **Application ID URI** in the `api://botid-{AppID}` or `api://botid-{AppID}` format and select **Save**.
 
-       :::image type="content" source="~/assets/images/bots/app-id-uri1.png" alt-text="Screenshot shows the option to add the app id uri and save.":::
+       :::image type="content" source="~/assets/images/bots/app-id-uri1.png" alt-text="Screenshot shows the option to add the app ID URI and save.":::
     
     <!--
        > [!NOTE]
