@@ -14,7 +14,7 @@ ms.localizationpriority: high
 > * Bot configuration experience is available in [public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md).
 > * Bot configuration is supported in channel or group chat scopes.
 
-You can configure your bot during installation or you can also configure the bot after installation from the channel or group chat where the bot is installed. The bot configuration experience helps the user to configure their bot without uninstalling the same.
+You can configure your bot during installation, or you can also configure the bot after installation from the channel or group chat where the bot is installed. The bot configuration experience helps the user to configure their bot without uninstalling the same.
 
 In the following image, the bot is installed in a group chat and when the users hover over the bot an Adaptive Card appears. The user can select the settings icon in the Adaptive Card to update or change the bot's configuration:
 
@@ -146,7 +146,7 @@ To add and configure your bot in Teams, follow these steps:
 
 1. Select **Set up a bot**.
 
-   :::image type="content" source="../../assets/images/bots/set-up-a-bot.png" alt-text="Screenshot shows to set up a bot in chat.":::
+   :::image type="content" source="../../assets/images/bots/set-up-a-bot.png" alt-text="Screenshot shows set up a bot in chat.":::
 
 1. When the users hover over the bot an Adaptive Card appears with fetch response, select an option from the dropdown and select **Submit**.
 
