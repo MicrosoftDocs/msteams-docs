@@ -231,7 +231,15 @@ In the app manifest, Include a JSON path for the response schema. If you don't h
 To update the command details for each command listed in the API:
 
 1. Select the arrow next to any of the Get commands.
-1. Select **View details**. A command details page appears.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-edit-get-commands.png" alt-text="Screenshit shows the option to edit get commands in Teams developer portal.":::
+
+1. Select **View details**.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-commands-view-details.png" alt-text="Screenshot shows the view details option for the Get command.":::
+
+   A command details page appears.
+
 1. In the Command details page, update the following:
    * Command type
    * Command ID
@@ -242,7 +250,12 @@ To update the command details for each command listed in the API:
    * Parameter title
    * Parameter description
    * Parameter description type
-1. Select **Save**.
+
+  :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-command-details.png" alt-text="Screenshot shows the fields available in the command details page.":::
+
+1. Select **Save**. The API based message extension plugin for copilot is created.
+
+:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams developer portal.":::
 
 ### Create an API ME or plugin using an existing Bot based ME
 
