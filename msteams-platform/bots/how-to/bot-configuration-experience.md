@@ -136,11 +136,11 @@ To add and configure your bot in Teams, follow these steps:
 
 1. Go to Microsoft Teams.
 
-1. Select Apps.
+1. Select **Apps**.
 
 1. From the Teams store, select a bot app you want to install.
 
-1. Select the dropdown next to **Add**  and select **Add to a team**, **Add to a chat**, or **Add to a meeting**.
+1. From the dropdown next to **Add**  and select **Add to a team**, **Add to a chat**, or **Add to a meeting**.
 
    :::image type="content" source="../../assets/images/bots/group-chat-add-Bot.png" alt-text="Screenshot shows add your bot to chat.":::
 
@@ -148,29 +148,25 @@ To add and configure your bot in Teams, follow these steps:
 
    :::image type="content" source="../../assets/images/bots/set-up-a-bot.png" alt-text="Screenshot shows set up a bot in chat.":::
 
-1. Go to the chat and @**mention** the bot in the message compose area.
+   The bot is installed in the chat.
+
+To reconfigure the bot, follow these steps:
+
+1. Go to the chat and **@mention** the bot in the message compose area and select **Send**.
 
    :::image type="content" source="../../assets/images/bots/mention-bot.png" alt-text="Screenshot shows the interaction of bot.":::
 
-1. When a user hovers over the **Bot Conversation Sample App** an Adaptive Card appears, select the Settings icon.
+1. Hover over the bot from the conversation, an Adaptive Card appears. Select the **Settings** icon.
 
    :::image type="content" source="../../assets/images/bots/bot-adaptive-card-interaction.png" alt-text="Screenshot shows the Adaptive Card with settings icon.":::
 
-A bot sends an response message.
+   A bot configuration Adaptive Card appears.
 
-   :::image type="content" source="../../assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows Adaptive Card with response message.":::
+1. Reconfigure the bot settings and select **Submit**.
 
-To reconfigure the bot. Follow the steps:
+   :::image type="content" source="../../assets/images/bots/reconfigure-bot-settings.png" alt-text="Screenshot shows the Adaptive Card with settings icon.":::
 
-1. Go to the chat and @**mention** the bot in the message compose area.
-
-   :::image type="content" source="../../assets/images/bots/mention-bot.png" alt-text="Screenshot shows the interaction of bot.":::
-
-1. User can also hovers over the **Bot Conversation Sample App** an Adaptive Card appears, select the Settings icon.
-
-   :::image type="content" source="../../assets/images/bots/bot-adaptive-card-interaction.png" alt-text="Screenshot shows the Adaptive Card with settings icon.":::
-
-A bot sends an response message.
+The bot sends a response message.
 
    :::image type="content" source="../../assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows Adaptive Card with response message.":::
 
