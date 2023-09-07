@@ -130,7 +130,7 @@ You can use `config/fetch` and `config/submit` properties in the `teamsBot.js` f
           }
     ```
 
-## End user experience
+## User experience in Teams
 
 To add and configure your bot in Teams, follow these steps:
 
