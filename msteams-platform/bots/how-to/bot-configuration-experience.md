@@ -164,7 +164,7 @@ To reconfigure the bot, follow these steps:
 
 1. Reconfigure the bot settings and select **Submit**.
 
-   :::image type="content" source="../../assets/images/bots/reconfigure-bot-settings.png" alt-text="Screenshot shows the Adaptive Card with settings icon.":::
+   :::image type="content" source="../../assets/images/bots/reconfigure-bot-settings.png" alt-text="Screenshot shows the Adaptive Card with settings icon to reconfigure.":::
 
 The bot sends a response message.
 
