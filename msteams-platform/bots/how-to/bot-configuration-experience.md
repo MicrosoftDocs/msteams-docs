@@ -130,11 +130,17 @@ You can use `config/fetch` and `config/submit` properties in the `teamsBot.js` f
           }
     ```
 
-## End user experience on bot configuration experience
+## End user experience
 
-You can configure the bot by adding it to Teams. Follow the steps:
+To add and configure your bot in Teams, follow these steps:
 
-1. Select **Add to a team**, **Add to a chat**, or **Add to a meeting**.
+1. Go to Microsoft Teams.
+
+1. Select Apps.
+
+1. From the Teams store, select a bot app you want to install.
+
+1. Select the dropdown next to **Add**  and select **Add to a team**, **Add to a chat**, or **Add to a meeting**.
 
    :::image type="content" source="../../assets/images/bots/group-chat-add-Bot.png" alt-text="Screenshot shows add your bot to chat.":::
 
