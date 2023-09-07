@@ -257,7 +257,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Thread discussion](../tabs/design/tabs.md#thread-discussion) | A conversation posted on a channel or chat between users. <br>**See also** [Conversation](#c); [Channel](#c) |
 | [Teams](../overview.md) | Microsoft Teams is the ultimate message app for your organization. It's a workspace for real-time collaboration and communication, meetings, file and app sharing. |
 | [Teams AI library](../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md) | A Teams-centric interface to GPT-based common language models and user intent engines. You can take on complex and expensive tasks of writing and maintaining conversational bot logic to integrate with large language models (LLMs).|
-|[teamsCore](../m365-apps/teamsjs-support-m365.md#teamscore)|`teamsCore` is a TeamsJS library namespace which contains the set of APIs that support Teams-specific functionalities.|
+|[teamsCore](../m365-apps/teamsjs-support-m365.md#teamscore)|`teamsCore` is a TeamsJS library namespace, which contains the set of APIs that support Teams-specific functionalities.|
 | [Teams identity](../tabs/how-to/authentication/tab-sso-overview.md) | The Microsoft account or Microsoft 365 account of an app user that is used to log in to Teams client, web, or mobile app. |
 | [Teams Toolkit](../toolkit/teams-toolkit-fundamentals.md) | The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the VS Code environment.  |
 | [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx is a text-based command line interface that accelerates Teams application development. It's also called TeamsFx CLI.|
