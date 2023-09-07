@@ -70,6 +70,14 @@ To ensure your plugin works as intended, it's important to include good descript
 
 5. Deep Content Retrieval: To further enhance your plugin’s functionality, it’s recommended that your API supports deep content retrieval scenarios that can be leveraged by the LLMs to obtain grounding data. This involves enabling Copilot to send targeted requests, such as limiting a search to a specific date range, to your API for particular tasks and queries.
 
+## Message extensions plugin type
+
+The following table differentiates the types of Message extensions plugins:
+
+|API based message extension  |API plugin  |Bot based message extension  |
+|---------|---------|---------|
+|[Information to be added]     |  [Information to be added]        |   [Information to be added]       |
+
 ## Upgrading your plugin to a rich conversational Teams app  
 
 When you connect your API to Teams, you've built a simple, powerful Microsoft 365 Copilot plugin. Teams makes it easier and helps you enhance this experience by adding rich conversational components. In addition to your plugin, you can use Teams Toolkit to add a bot to your manifest file. Developing a bot has never been easier with the release of the new [Teams AI library](../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md). By bot, your plugin becomes a full conversational Teams app, allowing you to develop link unfurling experiences, message extensions, message actions, search bar actions, and end-to-end conversational bots.

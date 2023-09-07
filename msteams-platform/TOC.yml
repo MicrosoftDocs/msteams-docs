@@ -511,14 +511,14 @@
   - name: Add link unfurling
     href: messaging-extensions/how-to/link-unfurling.md
     displayName: Domain listings can include wildcards, cache
-  - name: Copilot
-    items:
-    - name: Overview
-      href: copilot/copilot-overview.md
-      displayName: Copilot, Copilot API, Copilot service
-    - name: Build message extension plugin  
-      href: copilot/build-message-extension-plugin.md
-      displayName: plugin, Copilot plugin, API based ME, OpenAPI specification 
+- name: Copilot
+  items:
+  - name: Overview
+    href: copilot/copilot-overview.md
+    displayName: Copilot, Copilot API, Copilot service
+  - name: Build message extension plugin  
+    href: copilot/build-message-extension-plugin.md
+    displayName: plugin, Copilot plugin, API based ME, OpenAPI specification 
 - name: Build apps for Teams meetings and calls
   items:
   - name: Overview
