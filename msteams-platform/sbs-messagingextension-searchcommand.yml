@@ -21,7 +21,7 @@ items:
     * Allow users to search external systems.
     * Insert search results into a message in the form of a card.
 
-    This step-by-step guide helps you to build a search based message extension. You'll see the following output:
+    This step-by-step guide helps you to build a search based message extension. You see the following output:
 
     :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/output.png" alt-text="Screenshot shows the search based message extension output after you have successfully completed the step-by-step guide.":::
 
@@ -35,7 +35,7 @@ items:
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
      | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the latest version, install the portable version. |
-     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm devDependencies). |
+     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -124,11 +124,11 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    To build and run the service use Visual Studio or Command line.
+    To build and run the service, use Visual Studio or Command line.
 
     # [Visual Studio](#tab/latestversionofvisualstudio)
 
-       1. Open the Visual Studio.
+       1. Open Visual Studio.
 
        1. Go to **File** > **Open** > **Project/Solution...**.
     
@@ -187,7 +187,7 @@ items:
 
     1. Select **Upload an app**.
 
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. Look for the option to **Upload a custom app**. If the option is visible, you can sideload apps.
 
        :::image type="content" source="~/assets/images/tab-device-permission/custom-upload.png" alt-text="Screenshot shows the upload a custom app.":::
 
@@ -205,7 +205,7 @@ items:
 - title: Interact with the app in Teams
   durationInMinutes: 1
   content: |
-    1. Select any option from the pop-up.
+    1. Select any option from the pop-up list.
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/popup.png" alt-text="Screenshot of a pop-up window opens in a chat displaying the option of your search query.":::
    
@@ -213,7 +213,7 @@ items:
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/option1.png" alt-text="Screenshot of compose message box with the options from pop-up chat being displayed.":::
 
-       1. Select **Packages**.
+       1. Select **Nuget Package**.
 
           :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/nuget-package.png" alt-text="Screenshot of nuget webpage displaying the nuget package details.":::
 

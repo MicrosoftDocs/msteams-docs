@@ -2,7 +2,7 @@
 title: Build your first app using Blazor
 metadata:
   title: Hello World with Blazor
-  description: In this tutorial, you'll learn to build Hello World app with Blazor, build interactive web UIs using C#, and create tab app and bot app. 
+  description: In this tutorial, you can learn to build Hello World app with Blazor, build interactive web UIs using C#, and create tab app and bot app. 
   audience: Developer
   level: Beginner
   ms.date: 04/03/2022
@@ -35,7 +35,7 @@ items:
     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&ch=pre&rel=17)| You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place. |
     | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-    | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm devDependencies).
+    | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`).
 
     After you've installed the required tools, set up the development environment.
 
@@ -46,7 +46,7 @@ items:
     
     # [Visual Studio](#tab/vs)
 
-    1. Download the latest version of the Visual Studio.
+    1. Download the latest version of Visual Studio.
     1. Open `vs_enterprise__3bed52501a604464b1eff2ce580fd4eb.exe` from your download folder.
     1. Select **Continue** in the **Visual Studio Installer** page to configure your installation.
 
@@ -249,7 +249,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-subscription.png" alt-text="Screenshot of Provision with New and Provision highlighted in red.":::
 
-        Provision warning displays. 
+        The provision warning dialog appears. 
 
     1. Select **Provision**.
     
@@ -275,7 +275,7 @@ items:
 
     #### **To deploy your tab app to cloud**
 
-    1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
+    1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud...**.
 
          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Deploy to the Cloud options highlighted in red." lightbox="../msteams-platform\assets\images\teams-toolkit-v2\blazor-vs-preview2\vs-build-deploytocloud_2.png":::
 
@@ -445,7 +445,7 @@ items:
 
            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-azure_1.png" alt-text="Screenshot of Provision with provision option highlighted in red. ":::
 
-           Provision warning displays. 
+           The provision warning dialog appears. 
 
     1. Select **Provision**.
 
