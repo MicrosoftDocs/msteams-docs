@@ -518,7 +518,16 @@
     displayName: Copilot, Copilot API, Copilot service
   - name: Build message extension plugin  
     href: copilot/build-message-extension-plugin.md
-    displayName: plugin, Copilot plugin, API based ME, OpenAPI specification 
+    displayName: plugin, Copilot plugin, API based ME, OpenAPI specification
+  - name: Build API based message extension  
+    href: copilot/build-api-based-message-extension.md
+    displayName: plugin, OpenAPI specification, chat GPT
+  - name: Build bot based message extension  
+    href: copilot/build-bot-based-message-extension.md
+    displayName: OpenAPI specification, bot, mos
+  - name: Copilot message extension FAQ 
+    href: copilot/copilot-plugin-faq.md
+    displayName: FAQ,         
 - name: Build apps for Teams meetings and calls
   items:
   - name: Overview

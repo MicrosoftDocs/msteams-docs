@@ -76,7 +76,7 @@ The following table differentiates the types of Message extensions plugins:
 
 |API based message extension  |API plugin  |Bot based message extension  |
 |---------|---------|---------|
-|[Information to be added]     |  [Information to be added]        |   [Information to be added]       |
+|<font color="red">Need more information </font>  |  <font color="red">Need more information </font>       |   <font color="red">Need more information </font>      |
 
 ## Upgrading your plugin to a rich conversational Teams app  
 
@@ -85,3 +85,21 @@ When you connect your API to Teams, you've built a simple, powerful Microsoft 36
 ## Connecting external data sources
 
 If you have an existing Microsoft Graph Connector, it works with Copilot without any changes. With a Graph Connector, your data is included in Copilot responses, and also participate in other Microsoft 365 experiences such as search, content recommendations. For more information, see [building a Microsoft Graph connector](https://developer.microsoft.com/graph/connectors).
+
+## How to make your Graph connector work better with Copilot?
+
+<font color="red">Need to validate information </font>
+
+To ensure your Graph connector works well with Copilot, there are several things you should do. Following these tips improves relevance for your connector content with Microsoft Search:
+
+1. Include `urlToItemResolver`. By including `urlToItemResolver` in your connector’s [activity settings](/graph/connecting-external-content-manage-connections#activity-settings), Copilot will become aware when users share URLs to your content with one another. When users share an item with one another, Copilot boosts its importance for including the item in its response.  
+2. Provide a rich human-readable name and detailed description when you [create the connection](/graph/api/externalconnectors-external-post-connections). This helps Copilot understand what the data source is, so it includes the data source in its response if it’s relevant.
+3. Apply [semantic labels](/graph/connecting-external-content-manage-schema#semantic-labels). Semantic labels help Copilot understand the semantic meaning of your schema. You must apply as many of them to your schema as applicable.
+4. Add [user activities](/graph/api/externalconnectors-externalitem-addactivities). In addition to adding your content `externalItems` to the Microsoft Graph, your connector should also add user activities around you’re content. Supported activity types are shown [here](/graph/api/resources/externalconnectors-externalactivity). Items that have more activities are boosted in their importance.
+
+## Validation guidelines for copilot plugin
+
+<font color="red">Need to validate information </font>
+
+## See also
+
