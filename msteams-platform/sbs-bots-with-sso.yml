@@ -284,7 +284,7 @@ items:
         > [!NOTE]
         > Now you have configured SSO with your bot app in mobile, and this is the only time you'll have to give consent.
 
-         :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Screenshot of bot SSO output after you have successfully completed the step-by-step guide.":::
+      :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Screenshot of bot SSO output after you have successfully completed the step-by-step guide.":::
 
 
 
