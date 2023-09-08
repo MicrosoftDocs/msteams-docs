@@ -102,4 +102,3 @@ To ensure your Graph connector works well with Copilot, there are several things
 <font color="red">Need to validate information </font>
 
 ## See also
-

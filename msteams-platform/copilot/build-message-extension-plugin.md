@@ -289,6 +289,6 @@ In the app manifest, Include a JSON path for the response schema. If you don't h
 |`composeExtension.command.apiResponseRenderingTemplateFile`| A template used to format the JSON response from developer’s API to Adaptive card response. The property is mandatory for `ApiBased` composeExtensions type.   |
 |`ComposeExtension.LLMdescription`|Description for the LLM |
 
-# See also
+## See also
 
 [Copilot](copilot-overview.md)
