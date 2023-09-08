@@ -399,6 +399,9 @@
   - name: Bot activity handlers
     href: bots/bot-basics.md
     displayName: OnMessageActivityAsync, Bot logic, core Bot Framework handlers
+  - name: Communication flow for Teams bot app
+    href: bots/communication-flow.md
+    displayName: communication flow for Teams bot app
   - name: Bot conversations
     items:
     - name: Overview
