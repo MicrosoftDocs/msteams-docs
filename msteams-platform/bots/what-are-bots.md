@@ -68,6 +68,10 @@ You can add single sign-on authentication to your conversation bot using the fol
 | Adaptive Card Notification | This is a sample, which shows how to send notifications with different adaptive cards using Bots. | NA | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
 | Incoming Webhook Notification | This is a sample, which shows how to send notifications via Incoming Webhook in Microsoft Teams channels. | NA | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/incoming-webhook-notification) |
 
+## Bot configuration experience
+
+You can create a bot to enable the bot configuration settings for the user during the bot installation and also from the channel or group chat scope after the bot is installed. For more information, see [bot configuration experience](how-to/bot-configuration-experience.md).
+
 ## Next step
 
 > [!div class="nextstepaction"]

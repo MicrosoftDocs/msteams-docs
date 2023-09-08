@@ -14,22 +14,22 @@ ms.localizationpriority: high
 > * Bot configuration experience is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 > * Bot configuration experience is supported in channel or group chat scopes only.
 
-You can configure your bot during installation, or also configure the bot after installation from the channel or group chat where the bot is installed. The bot configuration experience helps the user to configure their bot without uninstalling the same.
+You can create a bot to enable the bot configuration settings for the user during the bot installation and also from the channel or group chat scope after the bot is installed.
 
-In the following image, the bot is installed in a group chat, when the user hovers over the bot an Adaptive Card appears. The user can select the settings icon in the Adaptive Card to update or change the bot's configuration:
+In the following image, the bot is installed in a group chat. When the user hovers over the bot, an Adaptive Card appears. The user can select the settings icon in the Adaptive Card to update or change the bot's configuration settings:
 
 :::image type="content" source="../../assets/images/messaging-extension/bot-configuration-experience.PNG" alt-text="Screenshot shows the configuration option for the bot in a Teams group chat.":::
 
 ## Enable bot configuration experience
 
-To enable the bot configuration experience, follow these steps:
+To enable the bot configuration settings from a channel or group chat scope, follow these steps:
 
 1. [Update app manifest schema](#update-app-manifest-schema)
 1. [Configure your bot](#configure-your-bot)
 
 ### Update app manifest schema
 
-You must configure the `fetchTask` property under `bots.configuration` object in the app manifest (previously called Teams app manifest) as follows:
+You must configure the `fetchTask` property under `bots.configuration` object in the app manifest (previously called Teams app manifest) file as follows:
 
 ```json
 "bots": [
@@ -134,7 +134,9 @@ You can use `config/fetch` and `config/submit` properties in the `teamsBot.js` f
 
 ## Bot configuration experience in Teams
 
-To add and configure your bot in Teams, follow these steps:
+After you've created a bot to enable the bot configuration settings from a team or groupchat scope, the user can configure and reconfigure the bot in Teams.
+
+To configure the bot, follow these steps:
 
 1. Go to **Microsoft Teams**.
 
@@ -178,5 +180,5 @@ To reconfigure the bot, follow these steps:
 
 ## See also
 
-[Build bots for Teams](../what-are-bots.md)
-[Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [Build bots for Teams](../what-are-bots.md)
+* [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
