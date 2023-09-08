@@ -435,6 +435,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
+|`fetchTask`|Boolean|||A Boolean value that indicates whether the configuration experience for the bot is available. The default is `true`.|
 |`teams.parameters.name`|String|64 characters|✔️|Name of the parameter.|
 |`teams.parameters.inputType`|String|||Type of the parameter. Options are `text`, `textarea`, `number`, `date`, `time`, `toggle`, and `choiceset`. Default value is `text`.|
 |`teams.parameters.title`|String|32 characters|✔️|Title of the parameter.|
@@ -456,14 +457,6 @@ An optional list of commands that your bot can recommend to users. The object is
 |---|---|---|---|---|
 |`items.scopes`|Array of enum|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupchat`.|
 |`items.commands`|Array of objects|10|✔️|An array of commands the bot supports:<br>`title`: the bot command name (string, 32).<br>`description`: a simple description or example of the command syntax and its argument (string, 128).|
-
-### bots.configuration
-
-The object is a Boolean value with the `fetchTask` element. You must define a separate `fetchTask` property for each scope that your bot supports.
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-|`fetchTask`|Boolean|||A value indicating whether the configuration experience for the bot is available. The default is `true`.|
 
 ## connectors
 
