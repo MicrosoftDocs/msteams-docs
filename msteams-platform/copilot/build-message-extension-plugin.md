@@ -14,6 +14,13 @@ Meetings users can interact with copilot to perform search and action-based scen
 
 Meetings copilot will process these actions and render them appropriately and provide extensibility actions such - open URL, share content in meeting, launch task module and app acquisition without leaving meeting copilot.
 
+## Prerequisites
+
+1. **App manifest**: The app manifest version should 1.13 or later.
+2. **Microsoft 365** (For bot based plugin): You need to register your Bot on Azure bot service under Microsoft 365 Channel. 
+3. **Single Sign-on (SSO)**: if your apps needs SSO authentication then need to configure authorized client application.
+
+
 ## Build message extension plugin
 
 1. Create a ChatGPT plugin or OpenAPI specification document in JSON or YAML format.
