@@ -49,20 +49,6 @@ Use RSC permissions to determine the data access methods for your app. A user's 
 
 * **Delegated context RSC permissions (delegated permission)**: Allows an app to access data only on behalf of a signed-in user. No access is allowed in the absence of a signed-in user. Only authorized users can install an app in a specific scope. They can also grant any delegated RSC permissions that the app requests in that specific scope at app installation. For example, if regular members have the permission to install an app inside a team, then they can also grant delegated RSC permission to the app in that specific team.
 
-### Add remove or upload apps with RSC permissions
-
-A team owner can add, remove, or upload apps with RSC permissions to a team or channel in Teams. For a team owner to install an app using RSC, ensure that **Allow group owner consent for all group owners** is enabled. For more information, see [Configure consent settings](grant-resource-specific-consent.md#configure-consent-settings).
-
-Team owners can perform the following steps to allow members to add or remove apps with RSC permissions in a team:
-
-1. In Teams, go to a team, and select **More options (...)** > **Manage team**.
-
-1. Select **Settings** and expand **Member permissions**.
-
-1. Select **Allow members to add and remove apps**.
-
-Team owners can also allow members to upload and install custom apps. For more information, see [allow members to upload custom apps](/microsoftteams/teams-custom-app-policies-and-settings?branch=main).
-
 ### RSC-based data access APIs
 
 Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft TeamsJS client library support fine-grained data access through RSC. The supported modes and resource types vary across the API surfaces.
@@ -192,3 +178,5 @@ The following table provides RSC permissions for a user and their applicable dat
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Permissions in Teams app](../App-permissions/Teams-app-permissions.md)
 * [Manage custom apps in Teams admin center](/microsoftteams/teams-custom-app-policies-and-settings)
+
+* [Allow members to upload custom apps](/microsoftteams/teams-custom-app-policies-and-settings?branch=main).
