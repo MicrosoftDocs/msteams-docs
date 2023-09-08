@@ -104,7 +104,7 @@ To create an action command:
 
 1. Select **Add a command** in the **Command** section to include the commands, which decides the behavior of message extension.
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="Screenshot shows how to add a command to define the behavior of the message extension.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-new.PNG" alt-text="Screenshot shows how to add a command to define the behavior of the message extension.":::
 
 1. Select **Action** and then select parameter type.
 
