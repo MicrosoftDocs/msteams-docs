@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams bots are conversational bots that run repetitive automated tasks done by the users, such as customer service. The user needs to sign in multiple times without single sign-on (SSO) authentication. With SSO authentication methods, the users don't need to sign in to the bot multiple times.
+    Conversational bots in Microsoft Teams perform repetitive automated tasks initiated by users, such as customer service. The user needs to sign in multiple times without single sign-on (SSO) authentication. With SSO authentication methods, the users don't need to sign in to the bot multiple times.
     
     A bot behaves differently depending on the conversation it's involved in:
 
@@ -23,7 +23,7 @@ items:
     
     This step-by-step guide helps you to build a bot with SSO authentication. You'll see the following output:
 
-     :::image type="content" source="~/assets/images/bots/sbs-desktop-mobile.png" alt-text=" Screenshot of the bot with SSO authentication output after you have successfully completed the step-by-step guide.":::
+     :::image type="content" source="~/assets/images/bots/sbs-desktop-mobile.png" alt-text=" Screenshot of the bot with SSO authentication output after you’ve successfully completed the step-by-step guide.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -54,7 +54,7 @@ items:
     1. In the Teams client, select **Apps** icon.
     1. Select **Manage your apps**.
     1. Select **Upload an app**
-    1. Look for the option to **Upload a custom app**.  If the option is visible, you have enabled sideloading apps.
+    1. Look for the option to **Upload a custom app**.  If the option is visible, you've enabled sideloading apps.
 
         :::image type="content" source="~/assets/images/bots/upload-a-custom-app-sso-bot-authentication.png" alt-text="Screenshot showing the Teams apps, Manage your apps, Upload an app and Upload a custom app highlighted in red.":::
 
@@ -68,11 +68,11 @@ items:
     1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
     1. Select **Join Now** and follow the onscreen instructions.
     1. In the welcome screen, select **Setup E5 subscription**.
-    1. Set up administrator account. After you finish, the following screen displays.
+    1. Set up an administrator account. After you finish, the following screen displays.
 
           :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot of the Microsoft 365 Developer Program subscription.":::
 
-    1. Sign in to Teams using the new administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
+    1. Sign in to Teams using the new administrator account you just set up. Verify that you’ve the **Upload a custom app** option in Teams.
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -205,7 +205,7 @@ items:
 
         :::image type="content" source="~/assets/images/bots/project-solution_1.png" alt-text="Screenshot of Visual Studio file menu. The menu entries titled Open under File menu and Project/Solution under Open are highlighted in red.":::
 
-    1. From **bot-conversation-sso-quickstart** > **csharp_dotnetcore** folder, Select **BotConversationSsoQuickstart.sln** file.
+    1. From **bot-conversation-sso-quickstart** > **csharp_dotnetcore** folder, and select **BotConversationSsoQuickstart.sln** file.
 
         :::image type="content" source="~/assets/images/bots/filepath_1.png" alt-text="Screenshot of Project file with the file path and BotSSOCSharp.csproj file highlighted in red.":::
 
@@ -242,7 +242,7 @@ items:
 - title: Upload the bot in Teams
   durationInMinutes: 2
   content: |
-     1. In your cloned repository, Go to **Microsoft-Teams-Samples > samples** > **bot-file-upload** > **csharp** folder, select **TeamsFileUpload.csproj** file. 
+     1. In your cloned repository, go to **Microsoft-Teams-Samples > samples** > **bot-file-upload** > **csharp** folder, and select **TeamsFileUpload.csproj** file. 
      1. Create a .zip file with the following files that are present in the **appPackage** folder: 
 
         * manifest.json
@@ -277,14 +277,14 @@ items:
          :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request1.png" alt-text="Screenshot of additional permissions with Continue option highlighted in red.":::
         
         > [!NOTE]
-        > Now you have configured SSO with your bot app and it's the only time you'll have to give consent.
+        > Now you’ve configured SSO with your bot app and it's the only time you'll have to give consent.
 
       1. For mobile device, select **Accept**.
 
         > [!NOTE]
-        > Now you have configured SSO with your bot app in mobile, and this is the only time you'll have to give consent.
+        > Now you’ve configured SSO with your bot app in mobile, and this is the only time you'll have to give consent.
 
-      :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Screenshot of bot SSO output after you have successfully completed the step-by-step guide.":::
+      :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Screenshot of bot SSO output after you’ve successfully completed the step-by-step guide.":::
 
 
 
@@ -294,7 +294,7 @@ items:
   content: |
     Did you come up with something like this?
 
-     :::image type="content" source="~/assets/images/bots/sbs-desktop-mobile.png" alt-text="Screenshot of the output after you have successfully completed the step-by-step guide.":::
+     :::image type="content" source="~/assets/images/bots/sbs-desktop-mobile.png" alt-text="Screenshot of the output after you’ve successfully completed the step-by-step guide.":::
     
 - content: |
     You've completed the tutorial to get started with build a bot with SSO authentication.
