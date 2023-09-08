@@ -12,7 +12,7 @@ ms.localizationpriority: high
 > [!NOTE]
 >
 > * Bot configuration experience is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-> * Bot configuration is supported in channel or group chat scopes only.
+> * Bot configuration experience is supported in channel or group chat scopes only.
 
 You can configure your bot during installation, or also configure the bot after installation from the channel or group chat where the bot is installed. The bot configuration experience helps the user to configure their bot without uninstalling the same.
 
@@ -145,6 +145,10 @@ To add and configure your bot in Teams, follow these steps:
 1. From the dropdown next to **Add**, select **Add to a team**, **Add to a chat**, or **Add to a meeting**.
 
    :::image type="content" source="../../assets/images/bots/group-chat-add-Bot.png" alt-text="Screenshot shows add your bot to chat.":::
+
+1. Enter the name of a person or chat in the search field.
+
+   :::image type="content" source="../../assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot shows bot added to a chat.":::
 
 1. Select **Set up a bot**.
 
