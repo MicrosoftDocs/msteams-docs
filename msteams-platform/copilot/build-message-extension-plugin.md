@@ -17,13 +17,12 @@ Meetings copilot will process these actions and render them appropriately and pr
 ## Prerequisites
 
 1. **App manifest**: Use app manifest version 1.13 or later.
-2. **Microsoft 365** (For bot based plugin): You need to register your Bot on Azure bot service under Microsoft 365 Channel. 
+2. **Microsoft 365** (For bot based plugin): You need to register your Bot on Azure bot service under Microsoft 365 Channel.
 3. **Single Sign-on (SSO)**: if your apps need SSO authentication then need to configure authorized client application.
-
 
 ## Build message extension plugin
 
-1. Create a ChatGPT plugin or OpenAPI specification document in JSON or YAML format.
+Create a ChatGPT plugin or OpenAPI specification document in JSON or YAML format.
 
    The following code is an example of an API spec in YAML format:
 
@@ -114,6 +113,87 @@ Meetings copilot will process these actions and render them appropriately and pr
             '201':
               description: A successful response indicating that the repair was created
    ```
+
+If you've created an OpenAPI specification document, you must create an Adaptive Card template for the bot to respond to the Get requests.
+
+The following is an example of the Adaptive Card template:
+
+```json
+{
+    "version": "1.0",
+    "responseLayout": "grid",
+    "responseCardTemplate": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.4",
+        "body": [
+            {
+                "type": "Container",
+                "items": [
+                    {
+                        "type": "ColumnSet",
+                        "columns": [
+                            {
+                                "type": "Column",
+                                "width": "stretch",
+                                "items": [
+                                    {
+                                        "type": "TextBlock",
+                                        "text": "Title: ${if(title, title, 'N/A')}",
+                                        "wrap": true
+                                    },
+                                    {
+                                        "type": "TextBlock",
+                                        "text": "Description: ${if(description, description, 'N/A')}",
+                                        "wrap": true
+                                    },
+                                    {
+                                        "type": "TextBlock",
+                                        "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
+                                        "wrap": true
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Column",
+                                "width": "auto",
+                                "items": [
+                                    {
+                                        "type": "Image",
+                                        "url": "${if(image, image, '')}",
+                                        "size": "Medium"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "FactSet",
+                        "facts": [
+                            {
+                                "title": "Repair ID:",
+                                "value": "${if(id, id, 'N/A')}"
+                            },
+                            {
+                                "title": "Date:",
+                                "value": "${if(date, date, 'N/A')}"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "previewCardTemplate": {
+        "title": "Title: ${if(title, title, 'N/A')}",
+        "subtitle": "Description: ${if(description, description, 'N/A')}",
+        "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
+        "image": {
+            "url": "${if(image, image, '')}"
+        }
+    }
+}
+```
 
 ## Manifest Update
 
@@ -209,7 +289,6 @@ In the app manifest, Include a JSON path for the response schema. If you don't h
 |`composeExtension.command.apiResponseRenderingTemplateFile`| A template used to format the JSON response from developer’s API to Adaptive card response. The property is mandatory for `ApiBased` composeExtensions type.   |
 |`ComposeExtension.LLMdescription`|Description for the LLM |
 
-
 # See also
 
-
+[Copilot](copilot-overview.md)
