@@ -16,16 +16,16 @@ Meetings copilot will process these actions and render them appropriately and pr
 
 ## Prerequisites
 
-1. **App manifest**: The app manifest version should 1.13 or later.
+1. **App manifest**: Use app manifest version 1.13 or later.
 2. **Microsoft 365** (For bot based plugin): You need to register your Bot on Azure bot service under Microsoft 365 Channel. 
-3. **Single Sign-on (SSO)**: if your apps needs SSO authentication then need to configure authorized client application.
+3. **Single Sign-on (SSO)**: if your apps need SSO authentication then need to configure authorized client application.
 
 
 ## Build message extension plugin
 
 1. Create a ChatGPT plugin or OpenAPI specification document in JSON or YAML format.
 
-   The following is an example of an API spec in YAML format:
+   The following code is an example of an API spec in YAML format:
 
    ```yml
    openapi: 3.0.0
