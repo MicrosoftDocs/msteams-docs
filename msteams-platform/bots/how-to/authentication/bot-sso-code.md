@@ -7,7 +7,7 @@ zone_pivot_groups: enable-sso
 ---
 # Add code to enable SSO in your bot app
 
-Before you add code to enable SSO, ensure that you've configured your app and bot resource in Azure AD portal.
+Before you add code to enable single sign-on (SSO), ensure that you've configured your app and bot resource in Azure AD portal.
 
 > [!div class="nextstepaction"]
 > [Configure bot app in Azure AD](bot-sso-register-aad.md)
@@ -56,36 +56,36 @@ To update your app's code:
 
 1. Add code snippet for `TeamsSSOTokenExchangeMiddleware`.
 
-   # [C#](#tab/cs1)
+# [C#](#tab/cs1)
 
-    Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
+Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
-    ```csharp
-    base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
-    ```
+```csharp
+base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
+```
 
-   # [JavaScript](#tab/js1)
+# [JavaScript](#tab/js1)
 
-    Add the following code snippet to `index.js` (or the equivalent class in your app's code):
+Add the following code snippet to `index.js` (or the equivalent class in your app's code):
 
-    ```JavaScript
-    const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
-    const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
-    adapter.use(tokenExchangeMiddleware);
-    ```
+```JavaScript
+const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
+const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
+adapter.use(tokenExchangeMiddleware);
+```
 
-    ---
+---
 
-    > [!NOTE]
-    > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about signin/tokenExchange, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
+> [!NOTE]
+> You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about signin/tokenExchange, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
 
 1. Use the following code snippet for requesting a token.
 
-   # [C#](#tab/cs2)
+# [C#](#tab/cs2)
 
-    After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
+After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
 
-    ```csharp
+```csharp
     public class AdapterWithErrorHandler : CloudAdapter
     {
         public AdapterWithErrorHandler(
@@ -134,13 +134,13 @@ To update your app's code:
             };
         }
     }
-    ```
+```
 
-   # [JavaScript](#tab/js2)
+# [JavaScript](#tab/js2)
 
-    After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, your code should be as shown below:
+After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, your code should be as shown below:
 
-    ```JavaScript
+```JavaScript
     // index.js is used to setup and configure your bot.
 
     // Import required packages
@@ -231,9 +231,9 @@ To update your app's code:
         // Route received a request to adapter for processing.
         await adapter.process(req, res, (context) => bot.run(context));
     });
-    ```
+```
 
-    ---
+---
 
 ### Consent dialog for getting access token
 
@@ -477,7 +477,7 @@ Use the following code snippet to handle the access token in case the app user l
 
 | **Sample name** | **Description** | **C#** | **Node.js** |
 | --- | --- | --- | --- |
-| Bot framework SDK | This sample code shows how to get started with authentication in a bot for Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)  |
+| Bot conversation SSO quick start | This sample code shows how to get started with SSO in a bot for Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)  |
 
 ::: zone-end
 
