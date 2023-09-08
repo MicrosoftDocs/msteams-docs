@@ -6,7 +6,6 @@
       "capabilityId": "IssueResponder",
       "subCapability": "IssuesOnlyResponder",
       "version": "1.0",
-      "id": "0M-ZJTy-A",
       "config": {
         "conditions": {
           "operator": "and",
@@ -63,7 +62,6 @@
       "capabilityId": "IssueResponder",
       "subCapability": "IssuesOnlyResponder",
       "version": "1.0",
-      "id": "6fagSzDiQ",
       "config": {
         "conditions": {
           "operator": "and",
@@ -181,8 +179,7 @@
           "issues",
           "project_card"
         ]
-      },
-      "id": "85WQN8ZMm"
+      }
     },
     {
       "taskType": "trigger",
@@ -245,8 +242,7 @@
         "eventNames": [
           "issue_comment"
         ]
-      },
-      "id": "vsy_ke_SCg"
+      }
     },
     {
       "taskType": "trigger",
@@ -290,8 +286,7 @@
           "issues",
           "project_card"
         ]
-      },
-      "id": "JOcvCH-Sgv"
+      }
     },
     {
       "taskType": "trigger",
@@ -323,8 +318,7 @@
         "eventNames": [
           "issue_comment"
         ]
-      },
-      "id": "GmHCQ2d7uk"
+      }
     },
     {
       "taskType": "scheduled",
@@ -432,8 +426,7 @@
             "parameters": {}
           }
         ]
-      },
-      "id": "sr3KLOY3po"
+      }
     },
     {
       "taskType": "scheduled",
@@ -556,8 +549,7 @@
             }
           }
         ]
-      },
-      "id": "qUoNofnwpo"
+      }
     },
     {
       "taskType": "scheduled",
@@ -672,8 +664,7 @@
             "parameters": {}
           }
         ]
-      },
-      "id": "2kCxTrNJ5J"
+      }
     },
     {
       "taskType": "trigger",
@@ -685,15 +676,13 @@
         "inPrLabelText": "Status: In PR",
         "fixedLabelText": "Status: Fixed",
         "fixedLabelEnabled": true
-      },
-      "id": "P0zQIaC5ZZ"
+      }
     },
     {
       "taskType": "trigger",
       "capabilityId": "IssueResponder",
       "subCapability": "IssuesOnlyResponder",
       "version": "1.0",
-      "id": "Y0i8Q0vtF",
       "config": {
         "conditions": {
           "operator": "and",
@@ -740,7 +729,6 @@
       "capabilityId": "IssueResponder",
       "subCapability": "IssuesOnlyResponder",
       "version": "1.0",
-      "id": "OE67zmklL",
       "config": {
         "conditions": {
           "operator": "and",
@@ -796,7 +784,6 @@
       "capabilityId": "IssueResponder",
       "subCapability": "IssuesOnlyResponder",
       "version": "1.0",
-      "id": "2N0mcWpZZ",
       "config": {
         "conditions": {
           "operator": "and",
@@ -877,7 +864,6 @@
       "capabilityId": "IssueResponder",
       "subCapability": "IssuesOnlyResponder",
       "version": "1.0",
-      "id": "ep1z6IX1D",
       "config": {
         "conditions": {
           "operator": "and",
@@ -1013,8 +999,7 @@
             }
           }
         ]
-      },
-      "id": "jAohe0WTH"
+      }
     },
     {
       "taskType": "trigger",
@@ -1076,8 +1061,7 @@
             }
           }
         ]
-      },
-      "id": "p08eSA3H8w"
+      }
     },
     {
       "taskType": "scheduled",
@@ -1179,15 +1163,13 @@
             }
           }
         ]
-      },
-      "id": "jswAoDAgIX"
+      }
     },
     {
       "taskType": "scheduled",
       "capabilityId": "ScheduledSearch",
       "subCapability": "ScheduledSearch",
       "version": "1.1",
-      "id": "kA-v1HWK5",
       "config": {
         "frequency": [
           {
@@ -1292,7 +1274,6 @@
       "capabilityId": "ScheduledSearch",
       "subCapability": "ScheduledSearch",
       "version": "1.1",
-      "id": "e1pqIioWi",
       "config": {
         "frequency": [
           {
