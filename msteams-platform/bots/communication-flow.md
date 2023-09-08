@@ -1,14 +1,14 @@
 ---
 title: Communication flow for Teams bot applications
 author: surbhigupta
-description: In this article, learn about tools and Bot Framework SDKs(C#, Python, Java, JavaScript) for Microsoft Teams bots and its advantages and disadvantages.
+description: In this article, learn about the communication flow and how traffic routed between Teams and an Azure bot app 
 ms.topic: overview
 ms.localizationpriority: medium
 ---
 
 # Communication flow for Teams bot apps
 
-This article describes the communication flow and how the traffic is routed between a user in Microsoft Teams and a bot application running in Azure. This information will help you learn how to inspect the traffic and understand the user data flow in transit and at rest for bots in Teams.
+This article describes the communication flow and how the traffic is routed between a user in Microsoft Teams and a bot application running in Azure. This information helps you learn how to inspect the traffic and understand the user data flow in transit and at rest for bots in Teams.
 
 This article covers two use cases that involve messaging bots and calling bots for Microsoft Teams. It answers frequently asked questions and provides best practices for how to integrate and secure the network connectivity for your Teams bots.
 
@@ -44,7 +44,7 @@ The Azure Bot Service is required for the registration of your bot, including:
 * Activated channels and bot endpoints
 * Other settings like OAuth provider or public access  
 
-The Teams channel should be activated with the appropriate endpoints set for messaging bots and calling bots in your Azure Bot configuration. Note that the endpoints for Teams messaging (4a) and calling (4b) bots are configured independently and do not have the same requirements for network configuration.
+The Teams channel should be activated with the appropriate endpoints set for messaging bots and calling bots in your Azure Bot configuration. Note that the endpoints for Teams messaging (4a) and calling (4b) bots are configured independently and don't have the same requirements for network configuration.
 
 Your bot application receives activities coming from the Teams service directly, not from the Teams client. For messaging bots, the Teams service provides a reply to URL in the form `https://smba.trafficmanager.net/{region}`, where region depends on the location for your Microsoft 365 service (for example, emea, amer, in, apac).
 
@@ -54,7 +54,7 @@ Your bot needs access to Microsoft services to do operations like validate the J
 
 ### Bot permissions on Microsoft Graph API
 
-If your bot requires additional permissions to perform operations on your Microsoft 365 environment, you need to trigger an authentication flow to get the appropriate access token from Azure AD. A best practice is to implement user-managed identities; this simplifies and secures the management of application secrets. Messaging bots will generally use a delegated permission (on-behalf-of the connected user), whereas calling bots will require application permission to have control over the call (hang up, redirect, join participants, access the audio stream).
+If your bot requires additional permissions to perform operations on your Microsoft 365 environment, you need to trigger an authentication flow to get the appropriate access token from Azure AD. A best practice is to implement user-managed identities; this simplifies and secures the management of application secrets. Messaging bots will generally use a delegated permission (on-behalf-of the connected user), whereas calling bots require application permission to have control over the call (hang up, redirect, join participants, access the audio stream).
 
 Your bot needs access to the graph.microsoft.com domain to query the Microsoft Graph API (required for calling bots; optional for messaging bots, depending on the use case).
 
@@ -62,7 +62,7 @@ Your bot needs access to the graph.microsoft.com domain to query the Microsoft G
 
 Bots allow Teams users to interact with web services through text, interactive cards, and task modules. The Microsoft Bot Framework and Azure Bot Services give you an easy-to-use set of tools for creating and managing these bots.
 
-You can develop bots by using a variety of languages, such as C#, JavaScript, and Python. After you develop your bots, you can deploy them to Azure. A key component of a bot is the web app, which contains the core logic and interface that users communicate with. One of the key requirements for the bot to work is that it must expose a publicly accessible HTTPS endpoint.
+You can develop bots by using various languages, such as C#, JavaScript, and Python. After you develop your bots, you can deploy them to Azure. A key component of a bot is the web app, which contains the core logic and interface that users communicate with. One of the key requirements for the bot to work is that it must expose a publicly accessible HTTPS endpoint.
 
 InfoSec policy commonly requires that all incoming traffic to web apps go through a corporate firewall. This means that all traffic that goes to a bot, and responses from the bot, must route through a corporate firewall, as with any other web app.
 
@@ -89,7 +89,7 @@ Organizations can use bots for mobile and desktop users. Some examples include:
 <details>
 <summary>Does user data (such as chat messages) transit via the Azure Bot Service with Microsoft Teams channel? </summary>
 
-No. No user data transits via the Azure Bot Service for the Teams channel (both for the messaging and calling endpoints). For first-party channels such as Teams, Outlook, Skype, Search (Preview), and Direct Line Speech, user data goes directly to the Microsoft service endpoint and does not transit via the Azure Bot Service.
+No. No user data transits via the Azure Bot Service for the Teams channel (both for the messaging and calling endpoints). For first-party channels such as Teams, Outlook, Skype, Search (Preview), and Direct Line Speech, user data goes directly to the Microsoft service endpoint and doesn't transit via the Azure Bot Service.
 <br>
 &nbsp;
 </details>
@@ -103,7 +103,7 @@ For first-party channels such as Teams, user data transits via the Microsoft 365
 <details>
 <summary>Can we disable public access and use private access for bots in Teams?</summary>
 
-No. Teams is SaaS (software as a service) and only provides public endpoints that Teams clients need to join. Disabling public access is only supported in combination with [Direct Line App Service extension](/azure/bot-service/dl-network-isolation-concept) and is not supported for Teams.
+No. Teams is SaaS (software as a service) and only provides public endpoints that Teams clients need to join. Disabling public access is only supported in combination with [Direct Line App Service extension](/azure/bot-service/dl-network-isolation-concept) and isn't supported for Teams.
 <br>
 &nbsp;
 </details>
