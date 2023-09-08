@@ -270,7 +270,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Token exchange URL](../bots/how-to/authentication/bot-sso-register-aad.md) | It's the application ID URI that is used for exchanging token. It's configured while configuring the OAuth connection for bot resource. <br> **See also**: [Application ID URI](#u); [SSO](#s) |
 | [TokenExchangeResource property](../bots/how-to/authentication/bot-sso-code.md) | It's a property of `OAuthCard` class that gets or sets the resource to try to perform token exchange with. Teams refreshes the token if the `TokenExchangeResource` property is populated on the card. <br> **See also**: [OAuth card](#o); [SSO](#s) <br> For more information, see [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard) |
 | [TeamsSSOTokenExchangeMiddleware](../bots/how-to/authentication/bot-sso-code.md) | This middleware exchanges the token if the activity name is `signin` or `tokenExchange`. It also ensures only one exchange request is processed. <br> **See also**: [SSO](#s) |
-|[Translatable Teams SaaS offer](../resources/schema/manifest-schema.md#subscriptionoffer) | Translatable Teams SaaS offer [TSaaS] specifies the SaaS offer associated with your app. A unique identifier that includes your Publisher ID and Offer ID, which you can find in Partner Center. <br>**See also**: [SaaS](#s)|
+|[Transactable Teams SaaS offer](../resources/schema/manifest-schema.md#subscriptionoffer) | Transactable Teams SaaS offer [T-SaaS] specifies the SaaS offer associated with your app. A unique identifier that includes your Publisher ID and Offer ID, which you can find in Partner Center. <br>**See also**: [SaaS](#s)|
 
 ## U
 
