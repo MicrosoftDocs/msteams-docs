@@ -337,7 +337,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 |Name| Type | Maximum size | Required | Description|
 |---|---|---|---|---|
 |`short`|String|30 characters|✔️|The short display name for the app.|
-|`full`|String|100 characters|✔️|The full name of the app. It is used if the full app name exceeds 30 characters.|
+|`full`|String|100 characters||The full name of the app. It is used if the full app name exceeds 30 characters.|
 
 ## description
 
@@ -435,18 +435,12 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`teams.parameters.name`|String|64 characters|✔️|Name of the parameter.|
-|`teams.parameters.inputType`|String|||Type of the parameter. Options are `text`, `textarea`, `number`, `date`, `time`, `toggle`, and `choiceset`. Default value is `text`.|
-|`teams.parameters.title`|String|32 characters|✔️|Title of the parameter.|
-|`teams.parameters.description`|String|128 characters||Description of the parameter.|
-|`teams.parameters.value`|String|512||The initial value of the parameter.|
-|`teams.parameters.choices`|Array|10||The choice options for the parameter.|
-|`teams.parameters.choices.title`|String|128|✔️|Title of the choice.|
-|`teams.parameters.choices.value`|String|512|✔️|Value of the choice.|
-|`taskInfo.title`|String|64 characters||Title of the task module.|
-|`taskInfo.width`|String|16||Width of the task module. The value is either a number in pixels or a default layout such as `large`, `medium`, or `small`.|
-|`taskInfo.height`|String|16||Height of the task module. The value is either a number in pixels or a default layout such as `large`, `medium`, or `small`.|
-|`taskInfo.url`|String|2048 characters||Task module URL.|
+|`fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch task module dynamically. Default value is `false`.|
+|`taskInfo`|Object|||Default value is `false`.|
+|`taskInfo.title`|String|64 characters|✔️|Initial dialog title.|
+|`taskInfo.width`|String|16||The dialog width.is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
+|`taskInfo.height`|String|16||The dialog width.is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
+|`taskInfo.url`|String|2048 characters||Initial webview URL.|
 
 ### bots.commandLists
 
@@ -490,7 +484,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |`messageHandlers`|Array of objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
 |`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|Array of Strings|2048 characters||Array of domains that the link message handler can register for.|
-|`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. The default value is `false`. To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
+|`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. Value for `type` are `boolean` and `null`.eThe default value is `null`. To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
 
 ### composeExtensions.commands
 
@@ -785,7 +779,7 @@ This object indicates meeting supported video filters.
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
 |`id`|String||✔️| The unique identifier for the video filter. This ID must be a GUID. |
-|`name`| String | 128 characters |✔️| The name of the video filter. |
+|`name`| String | 128 characters |✔️| A/V filter's name. |
 |`thumbnail`|String|2048 characters|✔️| The relative file path to the video filter's thumbnail. |
 
 ## authorization
