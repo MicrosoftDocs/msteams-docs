@@ -16,9 +16,7 @@ ms.localizationpriority: high
 
 You can create a bot to enable the bot configuration settings for the user during the bot installation and also from the channel or group chat scope after the bot is installed.
 
-Configure a bot to interact in Teams either by sending a message or selecting a command from the command list. When a bot is installed in the group chat scope, multiple users can configure the bot. Bot responds to the last saved settings.
-
-In the following image, the bot is installed in a group chat. When the user hovers over the bot, an Adaptive Card appears. The user can select the settings icon in the Adaptive Card to update or change the bot's configuration settings:
+In the following graphic, the bot is installed in a group chat. When the user hovers over the bot, an Adaptive Card appears. The user can select the settings icon in the Adaptive Card to update or change the bot's configuration settings:
 
 :::image type="content" source="../../assets/images/bots/configurationbot.gif" alt-text="Screenshot shows the configuration option for the bot in a Teams group chat.":::
 
