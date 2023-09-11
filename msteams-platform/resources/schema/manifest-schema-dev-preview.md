@@ -484,7 +484,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |`messageHandlers`|Array of objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
 |`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|Array of Strings|2048 characters||Array of domains that the link message handler can register for.|
-|`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. Value for `type` are `boolean` and `null`.eThe default value is `null`. To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
+|`messageHandlers.supportsAnonymizedPayloads`|Boolean/Null|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. The default value is `null`. To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
 
 ### composeExtensions.commands
 
@@ -759,7 +759,8 @@ Specify meeting extension definition. For more information, see [custom Together
 |`scenes`|Array of objects| 5 items||Meeting supported scenes.|
 |`supportsStreaming`|Boolean|||A Boolean value that indicates whether an app can stream the meeting's audio and video content to a real-time meeting protocol (RTMP) endpoint. The default value is `false`.|
 |`videoFiltersConfigurationUrl`|String|2048 characters||The https:// URL for configuring the video filters.|
-|`supportsAnonymousGuestUsers`|Boolean|||A Boolean value that indicates whether the app supports access by anonymous guest users. The default value is `false`.|
+|`isAnonymousAccessAllowed`|Boolean/Null|||A boolean value indicating whether this app allows management by anonymous users. The default value is `null`.|
+|`supportsAnonymousGuestUsers`|Boolean/Null|||A Boolean value that indicates whether the app supports access by anonymous guest users. The default value is `false`.|
 
 ### meetingExtensionDefinition.scenes
 
@@ -799,7 +800,15 @@ Specify and consolidate authorization related information for the app.
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
+|`orgWide`| Array of objects|16 items||App's organization wide classic permissions provided by user.|
 |`resourceSpecific`| Array of objects|16 items||Permissions that guard data access on resource instance level.|
+
+### authorization.permissions.orgWide
+
+|Name| Type|Maximum size|Required |Description|
+|---|---|---|---|---|
+|`name`|String|128 characters|✔️|The Permission name of app's permission node.|
+|`type`|String||✔️| The Permission type of app's permission node. Options: `Application` and `Delegated`.|
 
 ### authorization.permissions.resourceSpecific
 
