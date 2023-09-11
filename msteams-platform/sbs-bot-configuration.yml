@@ -14,7 +14,6 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    
     > [!NOTE]
     >
     > * Bot configuration experience is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
