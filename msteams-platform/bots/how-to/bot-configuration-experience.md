@@ -134,7 +134,7 @@ You can use `config/fetch` and `config/submit` properties in the `teamsBot.js` f
 
 ## Bot configuration experience in Teams
 
-After you've created a bot to enable the bot configuration settings from a team or groupchat scope, the user can configure and reconfigure the bot in Teams.
+After you've created a bot to enable the bot configuration settings from a team or group chat scope, the user can configure and reconfigure the bot in Teams.
 
 To configure the bot, follow these steps:
 
