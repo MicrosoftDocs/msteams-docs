@@ -60,7 +60,8 @@ We’ve created special promotional badges to help you drive more customers to y
 
 You can download the complete set of badge images (in PNG and PDF format) from the link below.
 
-[Download](https://github.com/MicrosoftDocs/msteams-docs/raw/doc-improvement-store-marketing-guidelines/msteams-platform/assets/downloads/all-badges.zip) **All badge images**.
+[Download](https://github.com/MicrosoftDocs/msteams-docs/raw/doc-improvement-store-marketing-guidelines/msteams-platform/assets/downloads/Microsoft-Teams-all-badges.zip) **All badge images**.
+
 
 ### License to Microsoft Marks
 
