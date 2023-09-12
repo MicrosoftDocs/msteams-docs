@@ -29,7 +29,7 @@ Ensure that you check the following when you're publishing updates:
 
 ### App updates requiring user consent
 
-When a user installs your app, they must give the app permission to access the services, and information the app requires to function. In most cases, users must do this once and new version of your app install automatically.
+When a user installs your app, they must give the app permission to access the services, and information the app requires to function. In most cases, users must do this once and the new version of your app is installed automatically.
 If you make any of the following changes to your app, however, your existing users must accept another permission request to install the update:
 
 * Add or remove a bot.
@@ -117,7 +117,7 @@ If Microsoft doesn't receive a suitable response from you, it reaches out to you
 **Microsoft might remove your app without prior notice (other than to inform you of that action) when:**
 
 * Microsoft receives a takedown notice for your app alleging copyright or trademark infringement.
-* Your app appears to be unmaintained or abandoned and unused.
+* Your app isn't maintained or abandoned and unused.
 * There's no response from you on Microsoft's reach outs.
 
 ## Discontinuing your published app
