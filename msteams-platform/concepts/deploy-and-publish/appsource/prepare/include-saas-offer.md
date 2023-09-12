@@ -10,7 +10,7 @@ ms.date: 03/21/2023
 
 # Plan your SaaS offer
 
-Software as a service (SaaS) apps available for purchase in Microsoft commercial marketplace, either Azure Marketplace or Microsoft AppSource, are known as SaaS offers. Based on the SaaS offer configurations, the offers are available in one or both marketplaces. This article provides you an overview of the features in an offer and helps you to plan the offer.
+Software as a service (SaaS) apps available for purchase in Microsoft commercial marketplace, either Azure Marketplace or Microsoft AppSource, are SaaS offers. Based on the SaaS offer configurations, the offers are available in one or both marketplaces. This article provides an overview of the features in an offer and helps to plan the offer.
 
 :::row:::
    :::column:::
@@ -33,16 +33,16 @@ Software as a service (SaaS) apps available for purchase in Microsoft commercial
    :::column-end:::
 :::row-end:::
 
-To create your SaaS offer and sell through commercial marketplace, it's recommended to plan the offer. Planning helps you to understand the suitable features for your offer. Here are the details about the features you need to decide before creating an offer.
+Planning your SaaS offer helps you to understand the suitable features for the offer. Here are the features you need to plan for before creating an offer.
 
-## Plan on the publishing option
+## Plan the publishing option
 
-The initial step to create any SaaS offer is to decide how the offer must be available in the marketplace. The publishing option is available as a call-to-action button on the offer landing page.
+The initial step to create any SaaS offer is to decide the publishing option, that is how the offer must be available in the marketplace. The suitable option is available as a call-to-action button on the landing page.
 
 > [!NOTE]
 > Before you start creating an offer, you must decide the listing or publishing option.
 
-You can opt to sell through Microsoft where Microsoft hosts all your transactions. The other option is to manage your transactions independently that further has three listing options. The type of listing option decides the information required to create the specific offer in Partner Center.
+You can opt to sell through Microsoft where Microsoft hosts all your transactions. The other option is to manage your transactions independently that further has three listing options.
 
 :::row:::
     :::column:::
@@ -57,7 +57,7 @@ Offers sold through Microsoft are transactable offers where Microsoft handles tr
     :::column-end:::
 :::row-end:::
 
-You can further allow Microsoft to manage licenses on your behalf. If you choose Microsoft to manage licenses, you must integrate with Microsoft Graph APIs to verify customer eligibility. For details on how to integrate, see [Integrate your SaaS offer with Graph API for License Management](prerequisites.md#integrate-with-graph-usagerights-api).
+You can further allow Microsoft to manage licenses on your behalf. If you choose Microsoft to manage licenses, you must [integrate the offer with Microsoft Graph APIs](prerequisites.md#integrate-with-graph-usagerights-api) to verify customer eligibility.
 
 :::row:::
     :::column:::
@@ -96,7 +96,7 @@ Customers can share their details and ask that you contact them about the offer 
     :::column-end:::
 :::row-end:::
 
-The technical configurations and requirements differ based on the listing option you select. You must fulfill the [prerequisites](prerequisites.md) before you start creating the plan.
+The type of listing option decides the technical configurations and requirements to create the specific offer in Partner Center. You must fulfill the [prerequisites](prerequisites.md) before you start creating the plan.
 
 ## Plan for the offer details
 
@@ -110,7 +110,7 @@ To start with, you need to plan on the basic yet key features that decide the in
 
 SaaS offers published through Microsoft must have at least one plan added. Determining the plan features contributes in providing appropriate purchase options for the target users.
 
-### Plan for the subscription model
+### Plan the subscription model
 
 The subscription model or plan visibility decides if the plans can be public or private. Public plans are available for all customers while private plans are customized for specific customers and visible only for targeted customers. For more information, see [Private plans in Microsoft commercial marketplace](/partner-center/marketplace/private-plans?branch=main).
 

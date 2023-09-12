@@ -46,7 +46,7 @@ To purchase a subscription plan for a Teams app, follow these steps:
 
     :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="Screenshot shows the option to set up your subscription.":::
 
-You're redirected to the app website (also known as a [landing page](include-saas-offer.md#build-a-landing-page-for-subscription-management)) where you can manage your subscriptions.
+You're redirected to the app website (also known as a [landing page](prerequisites.md#create-a-landing-page)) where you can manage your subscriptions.
 
 :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Screenshot shows User and Licenses screen to assign license.":::
 
