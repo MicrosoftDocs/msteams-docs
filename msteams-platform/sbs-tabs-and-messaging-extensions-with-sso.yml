@@ -134,12 +134,12 @@ items:
     1. Update the following information:  
 
          * Replace `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Replace `"MicrosoftAppPassword"` to your bot's client secret **Value**.
+         * Replace `"MicrosoftAppPassword"` to your bot's client secrets **Value**.
          * Replace `"SiteUrl"` to your ngrok URL.
          * Replace `"ConnectionName"` to the name of OAuth connection setting.
          * Replace `"TenantId"` to the tenant ID of the tenant where the app is used.
          * Replace `"ClientId"` to your bot's **Microsoft App ID**.
-         * Replace `"AppSecret"` to your bot's client secret **Value**.
+         * Replace `"AppSecret"` to your bot's client secrets **Value**.
          * Replace `"ApplicationIdURI"` in the form of `api://*******.ngrok.io/botid-{AppID}`.
 
         :::image type="content" source="./assets/images/Tab-ME-SSO/app-setting.png" alt-text="Screenshot of the appsettings.json file with the values entered highlighted in red.":::

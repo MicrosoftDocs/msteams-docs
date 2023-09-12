@@ -35,7 +35,7 @@
 
 1. Under **Microsoft App ID**, select **Type of App** as **Multi Tenant**.
 
-1. In the **Creation type**, select, **Use existing app registration**.
+1. In the **Creation type**, select **Use existing app registration**.
 
 1. Enter the **App ID**.
 
