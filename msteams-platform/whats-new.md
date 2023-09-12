@@ -26,7 +26,9 @@ Teams platform features that are available to all app developers.
 
 **2023 September**
 
-***September 06, 2023***: [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md)
+* ***September 13, 2023***: [Bots that receive all conversation messages with RSC are supported in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD) environments.](bots/how-to/conversations/channel-messages-with-rsc.md)
+
+* ***September 06, 2023***: [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md)
 
 :::column-end:::
 :::row-end:::
