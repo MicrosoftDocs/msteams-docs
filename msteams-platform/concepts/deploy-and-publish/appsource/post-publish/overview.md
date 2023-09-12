@@ -67,11 +67,11 @@ You can download the complete set of badge images (in PNG and PDF format) from t
 
 *Microsoft Marks* means the *Microsoft badge* described on the [badge generator](https://apps.microsoft.com/store/app-badge) page. To use these badges, you must:
 
-* Have your app or other content available in the Microsoft Teams Store, or be part of the [Microsoft Affiliate Program](https://www.microsoftaffiliates.com/).
+* Have your app or other content available in the Teams Store, or be part of the [Microsoft Affiliate Program](https://www.microsoftaffiliates.com/).
 
 * If you are registered as an app developer in Partner Center, comply with the [“License to Microsoft Marks”](/legal/windows/agreements/app-developer-agreement#license_to_mark) section of the App Developer Agreement.
 
-* If you are not registered as an app developer in Partner Center, Microsoft grants you a worldwide, nonexclusive, nontransferable, royalty-free license to use the badges solely as described in the Microsoft Teams Store Badge Guidelines. Microsoft may change these guidelines, but if it does, Microsoft will use reasonable means to redirect you to any new URLs where these specifications are posted. Microsoft reserves all rights not expressly granted herein.
+* If you are not registered as an app developer in Partner Center, Microsoft grants you a worldwide, nonexclusive, nontransferable, royalty-free license to use the badges solely as described in the Teams Store Badge Guidelines. Microsoft may change these guidelines, but if it does, Microsoft will use reasonable means to redirect you to any new URLs where these specifications are posted. Microsoft reserves all rights not expressly granted herein.
 
 * Follow the logo usage specifications described in the [**Teams Store Badge Guidelines (PDF, English)**](https://github.com/MicrosoftDocs/msteams-docs/blob/doc-improvement-store-marketing-guidelines/msteams-platform/assets/downloads/MicrosoftTeams-Store-Marketing-Guidelines.pdf).
 
@@ -128,7 +128,7 @@ To discontinue your app:
 
 * To remove your app from Microsoft AppSource, in your Microsoft Partner Center account, go the **Product Overview** page and select **Stop Selling**.
 
-* Contact the Microsoft Teams App Health evaluation team at [apphealthevaluation@microsoft.com](mailto:apphealthevaluation@microsoft.com) or [teams-sas@microsoft.com](mailto:teams-sas@microsoft.com) to remove your app from the Microsoft Teams Store.
+* Contact the Microsoft Teams App Health evaluation team at [apphealthevaluation@microsoft.com](mailto:apphealthevaluation@microsoft.com) or [teams-sas@microsoft.com](mailto:teams-sas@microsoft.com) to remove your app from the Teams Store.
 
 * Contact your customers where appropriate. Delete or revoke any security or authorization tokens generated for your app.
 
