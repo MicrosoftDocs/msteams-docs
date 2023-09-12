@@ -1,6 +1,6 @@
 ---
 title: Maintain and support your published app
-description: Maintain your published Microsoft Teams app. Analyze app usage, publish updates, promote your app, complete Microsoft 365 Certification.
+description: Maintain your published Microsoft Teams app. Analyze app usage, publish updates, promote your app, check marketing guidelines, complete Microsoft 365 Certification.
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
@@ -48,13 +48,13 @@ When your app is listed in the Teams store, create a link that launches Teams an
 
 Create the link using the following URL appended with your app ID: `https://teams.microsoft.com/l/app/<your-app-id>`.
 
-## Teams App Store marketing guidelines for apps
+## Microsoft Teams Store marketing guidelines for apps
 
-Learn how to promote your apps and content in the Teams App Store. These guidelines cover how to use the assets that are available to you, along with recommendations for promoting your apps.
+Learn how to promote your apps and content in the Teams Store. These guidelines cover how to use the assets that are available to you, along with recommendations for promoting your apps.
 
 ### Store badges
 
-We’ve created special promotional badges to help you drive more customers to your app's listing in the Teams App Store. Keep in mind that there are certain requirements you need to follow when using these images; these requirements, along with usage examples and guidelines, are available in [**Teams App Store Badge Guidelines (PDF, English)**](https://github.com/MicrosoftDocs/msteams-docs/blob/doc-improvement-store-marketing-guidelines/msteams-platform/assets/downloads/MicrosoftTeams-app-store-marketing-guidelines.pdf).
+We’ve created special promotional badges to help you drive more customers to your app's listing in the Teams Store. Keep in mind that there are certain requirements you need to follow when using these images; these requirements, along with usage examples and guidelines, are available in [**Teams Store Badge Guidelines (PDF, English)**](https://github.com/MicrosoftDocs/msteams-docs/blob/doc-improvement-store-marketing-guidelines/msteams-platform/assets/downloads/MicrosoftTeams-app-store-marketing-guidelines.pdf).
 
 ### Badge generator and images
 
@@ -66,13 +66,13 @@ You can download the complete set of badge images (in PNG and PDF format) from t
 
 *Microsoft Marks* means the *Microsoft badge* described on the [badge generator](https://apps.microsoft.com/store/app-badge) page. To use these badges, you must:
 
-* Have your app or other content available in the Microsoft Teams App Store, or be part of the [Microsoft Affiliate Program](https://www.microsoftaffiliates.com/).
+* Have your app or other content available in the Microsoft Teams Store, or be part of the [Microsoft Affiliate Program](https://www.microsoftaffiliates.com/).
 
 * If you are registered as an app developer in Partner Center, comply with the [“License to Microsoft Marks”](/legal/windows/agreements/app-developer-agreement#license_to_mark) section of the App Developer Agreement.
 
-* If you are not registered as an app developer in Partner Center, Microsoft grants you a worldwide, nonexclusive, nontransferable, royalty-free license to use the badges solely as described in the Microsoft Teams App Store Badge Guidelines. Microsoft may change these guidelines, but if it does, Microsoft will use reasonable means to redirect you to any new URLs where these specifications are posted. Microsoft reserves all rights not expressly granted herein.
+* If you are not registered as an app developer in Partner Center, Microsoft grants you a worldwide, nonexclusive, nontransferable, royalty-free license to use the badges solely as described in the Microsoft Teams Store Badge Guidelines. Microsoft may change these guidelines, but if it does, Microsoft will use reasonable means to redirect you to any new URLs where these specifications are posted. Microsoft reserves all rights not expressly granted herein.
 
-* Follow the logo usage specifications described in the [Teams App Store Badge Guidelines](https://download.microsoft.com/download/0/7/D/07DF43D4-B1A8-4D38-BC02-4903BB36CEE8/Microsoft_Store_Badge_Guidelines.pdf).
+* Follow the logo usage specifications described in the [**Teams Store Badge Guidelines (PDF, English)**](https://github.com/MicrosoftDocs/msteams-docs/blob/doc-improvement-store-marketing-guidelines/msteams-platform/assets/downloads/MicrosoftTeams-app-store-marketing-guidelines.pdf).
 
 Microsoft is the sole owner of the Microsoft Marks and associated goodwill, and the sole beneficiary of the goodwill associated with your use of the Microsoft Marks. Microsoft may revoke this license at any time and at its sole discretion.
 
@@ -97,7 +97,7 @@ Microsoft runs daily automation tests on apps listed on the Teams store. If issu
 
 ## Possible enforcement actions
 
-Microsoft runs automated and manual continuous health checks for all the published apps. It's intended to maintain the health and user experience of the Microsoft commercial marketplace and the Teams App store. In certain situations, Microsoft might contact you and remove your app from the commercial marketplace and the Teams App store, temporarily halt new user acquisition for your app, or take further action on your app as deemed appropriate.
+Microsoft runs automated and manual continuous health checks for all the published apps. It's intended to maintain the health and user experience of the Microsoft commercial marketplace and the Teams Store. In certain situations, Microsoft might contact you and remove your app from the commercial marketplace and the Teams Store, temporarily halt new user acquisition for your app, or take further action on your app as deemed appropriate.
 
 **Microsoft might contact you for a resolution when:**
 
