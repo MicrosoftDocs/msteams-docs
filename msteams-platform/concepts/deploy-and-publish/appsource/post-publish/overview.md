@@ -54,7 +54,7 @@ Learn how to promote your apps and content in the Teams Store. These guidelines 
 
 ### Store badges
 
-We’ve created special promotional badges to help you drive more customers to your app's listing in the Teams Store. Keep in mind that there are certain requirements you need to follow when using these images; these requirements, along with usage examples and guidelines, are available in [**Teams Store Badge Guidelines (PDF, English)**](https://github.com/MicrosoftDocs/msteams-docs/blob/doc-improvement-store-marketing-guidelines/msteams-platform/assets/downloads/MicrosoftTeams-app-store-marketing-guidelines.pdf).
+We’ve created special promotional badges to help you drive more customers to your app's listing in the Teams Store. Keep in mind that there are certain requirements you need to follow when using these images; these requirements, along with usage examples and guidelines, are available in [**Teams Store Badge Guidelines (PDF, English)**](https://github.com/MicrosoftDocs/msteams-docs/blob/doc-improvement-store-marketing-guidelines/msteams-platform/assets/downloads/MicrosoftTeams-Store-Marketing-Guidelines.pdf).
 
 ### Badge generator and images
 
@@ -72,7 +72,7 @@ You can download the complete set of badge images (in PNG and PDF format) from t
 
 * If you are not registered as an app developer in Partner Center, Microsoft grants you a worldwide, nonexclusive, nontransferable, royalty-free license to use the badges solely as described in the Microsoft Teams Store Badge Guidelines. Microsoft may change these guidelines, but if it does, Microsoft will use reasonable means to redirect you to any new URLs where these specifications are posted. Microsoft reserves all rights not expressly granted herein.
 
-* Follow the logo usage specifications described in the [**Teams Store Badge Guidelines (PDF, English)**](https://github.com/MicrosoftDocs/msteams-docs/blob/doc-improvement-store-marketing-guidelines/msteams-platform/assets/downloads/MicrosoftTeams-app-store-marketing-guidelines.pdf).
+* Follow the logo usage specifications described in the [**Teams Store Badge Guidelines (PDF, English)**](https://github.com/MicrosoftDocs/msteams-docs/blob/doc-improvement-store-marketing-guidelines/msteams-platform/assets/downloads/MicrosoftTeams-Store-Marketing-Guidelines.pdf).
 
 Microsoft is the sole owner of the Microsoft Marks and associated goodwill, and the sole beneficiary of the goodwill associated with your use of the Microsoft Marks. Microsoft may revoke this license at any time and at its sole discretion.
 
