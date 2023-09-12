@@ -872,7 +872,7 @@
       displayName: Resubmit your app, multiple submission failures, Microsoft concierge, teamsubm@microsoft.com
     - name: Maintain your published app
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-      displayName: Promote your app, stop selling, stop app distribution, analyze app usage, best practices 
+      displayName: Promote your app, stop selling, stop app distribution, analyze app usage, best practices, marketing guidelines 
     - name: Microsoft Teams store ranking parameters
       href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
       displayName: Microsoft Publisher Agreement, app update or new release, user engagement data 

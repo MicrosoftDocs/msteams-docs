@@ -1,6 +1,6 @@
 ---
 title: Maintain and support your published app
-description: Maintain your published Microsoft Teams app. Analyze app usage, publish updates, promote your app, check marketing guidelines, complete Microsoft 365 Certification.
+description: Maintain your published Microsoft Teams app. Analyze app usage, publish updates, promote your app, check Teams Store marketing guidelines, and complete Microsoft 365 Certification.
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
@@ -9,7 +9,7 @@ ms.date: 10/19/2022
 ---
 # Maintain your published Microsoft Teams app
 
-With your app listed on the Microsoft Teams store, start thinking about how you'll maintain the app going forward and increase downloads and usage.
+With your app listed on the Microsoft Teams Store, start thinking about how you'll maintain the app going forward and increase downloads and usage.
 
 ## Analyze app usage
 
@@ -44,11 +44,11 @@ If you make any of the following changes to your app, however, your existing use
 
 ## Promote your app on another site
 
-When your app is listed in the Teams store, create a link that launches Teams and displays a dialog to install your app. For example, you can include this link as a download button on your product's marketing page.
+When your app is listed in the Teams Store, create a link that launches Teams and displays a dialog to install your app. For example, you can include this link as a download button on your product's marketing page.
 
 Create the link using the following URL appended with your app ID: `https://teams.microsoft.com/l/app/<your-app-id>`.
 
-## Microsoft Teams Store marketing guidelines for apps
+## Teams Store marketing guidelines for apps
 
 Learn how to promote your apps and content in the Teams Store. These guidelines cover how to use the assets that are available to you, along with recommendations for promoting your apps.
 
@@ -94,7 +94,7 @@ You must keep the following app details updated:
 
 ## Fix issues with your published app
 
-Microsoft runs daily automation tests on apps listed on the Teams store. If issues with your app are identified, Microsoft contacts you with a detailed report on how to reproduce the issues and then provide recommendations to resolve them. Your app listing might be removed from the store if you can't fix the problems within a stated timeline.
+Microsoft runs daily automation tests on apps listed on the Teams Store. If issues with your app are identified, Microsoft contacts you with a detailed report on how to reproduce the issues and then provide recommendations to resolve them. Your app listing might be removed from the store if you can't fix the problems within a stated timeline.
 
 ## Possible enforcement actions
 
@@ -128,7 +128,7 @@ To discontinue your app:
 
 * To remove your app from Microsoft AppSource, in your Microsoft Partner Center account, go the **Product Overview** page and select **Stop Selling**.
 
-* Contact the Microsoft Teams App Health evaluation team at [apphealthevaluation@microsoft.com](mailto:apphealthevaluation@microsoft.com) or [teams-sas@microsoft.com](mailto:teams-sas@microsoft.com) to remove your app from the Microsoft Teams store.
+* Contact the Microsoft Teams App Health evaluation team at [apphealthevaluation@microsoft.com](mailto:apphealthevaluation@microsoft.com) or [teams-sas@microsoft.com](mailto:teams-sas@microsoft.com) to remove your app from the Microsoft Teams Store.
 
 * Contact your customers where appropriate. Delete or revoke any security or authorization tokens generated for your app.
 
