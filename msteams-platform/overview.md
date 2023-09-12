@@ -24,7 +24,7 @@ Let's look at some areas where an app helps to meet a business need.
 
 | **Development options** | **Business opportunities** |
 | --- | --- |
-| - Desktop app <br> - Web app <br> - Mobile app | - Increase user engagements <br> - Make your app discoverable on Teams store |
+| - Desktop app <br> - Web app <br> - Mobile app | - Increase user engagements <br> - Make your app discoverable on Microsoft Teams Store |
 | **Customer benefits** | **Internal workflows** |
 | - On-the-go accessibility <br> - Secure customer data <br> - Ease of communication | - Automate repetitive tasks <br> - Simplify tasks with bots, such as Q&A and helpdesk |
 
