@@ -57,7 +57,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Capabilities](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)| Capabilities are the core functionalities that you can build in your app. They're also called entry or extension points because they enable integration and interaction. <br> **See also**: [App scope](#a)|
 | [Chat bot](../bots/how-to/conversations/conversation-basics.md) | A bot is also referred to as a chatbot or conversational bot. It's an app that runs simple and repetitive tasks for users such as customer service or support staff. <br> **See also**: [Conversational bot](#c) |
 | Channel | A single place for a team to share messages, tools, and files. You can use a channel for teamwork and communication. <br> **See also**: [Conversation](#c) |
-| Client | Client typically refers to an Office application. The Office applications, or clients, that support Office Add-ins are Excel, OneNote, Outlook, PowerPoint, Project, and Word. <br> **See also**: [Client ID](#c); [Application ID](#a); [GUID](#g); [Subdomain ID](#s) |
+| Contoso | Contoso Ltd. (also known as Contoso and Contoso University) is a fictional company used by Microsoft as an example company and domain. |
 | Client ID | The client ID, or the application ID is a value the Microsoft identity platform assigns to your application when you register it in Azure AD. It's a GUID value that uniquely identifies the application and its configuration within the identity platform. <br> **See also**: [Application ID](#a); [GUID](#g); [Subdomain ID](#s) |
 | [Client secret](../bots/how-to/authentication/bot-sso-register-aad.md) | A secret string that an app uses to prove its identity when requesting a token. Also, it can be referred to as application password. <br> **See also**: [Microsoft app password](#m) <br> For more information, see [Authentication](../concepts/authentication/authentication.md)|
 | [Cloud resources](../toolkit/add-resource.md) | A service that is available on cloud through internet that your Teams app can use. It could be storage accounts, web apps, databases, and more. |
@@ -298,6 +298,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | It's a feature of a Teams app used to integrate it with external apps. <br>**See also**: [Incoming Webhook](#i) ; [Outgoing Webhook](#o); [Connector](#c) |
 | [Web application info](../resources/schema/manifest-schema.md#webapplicationinfo) | Provide your Azure AD App ID and Microsoft Graph information to help users seamlessly sign into your app. If your app is registered in Azure AD, you must provide the App ID. If your app requires admins to review permissions and grant consent in Teams admin center, you must declare `webapplicationinfo` in the manifest. |
 | [Web part](../sbs-gs-spfx.yml) | A UI component used to build a page or a site in a Teams app created using VS Code and SharePoint Framework. <br>**See also**: [SPFx](#s) |
+| Webview | A webview is an element or view that displays web content inside an application. |
 | [Workbench](../sbs-gs-spfx.yml) | Overall VS Code UI that encompasses UI components, such as title bar, panel, and more. <br>**See also**: [Local workbench](#l); [Teams workbench](#t) |
 
 ## Y
