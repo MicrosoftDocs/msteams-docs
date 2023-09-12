@@ -205,7 +205,13 @@ To receive read receipts events for your bot, ensure the following:
     ```csharp
     
     protected override async Task OnTeamsReadReceiptAsync(ReadReceiptInfo readReceiptInfo, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken) 
-    
+    {
+        var lastReadMessageId = readReceiptInfo.LastReadMessageId;
+       if (IsMessageRead("{id of the message that you care}", LastReadMessageId))
+       {
+            await turnContext.SendActivityAsync(MessageFactory.Text("User read the bot's message"), cancellationToken);    
+        }
+    }
     ```
 
     Following is an example of read receipts event request that a bot receives:
@@ -217,14 +223,14 @@ To receive read receipts events for your bot, ensure the following:
         "timestamp": "2023-08-16T17:23:11.1366686Z",
         "id": "f:b4783e72-9d7b-2ed9-ccef-ab446c873007",
         "channelId": "msteams",
-        "serviceUrl": "https://canary.botapi.skype.com/amer/",
+        "serviceUrl": "https://smba.trafficmanager.net/amer/",
         "from": {
             "id": "29:1-8Iuh70W9pRqV8tQK8o2nVjxz33RRGDKLf4Bh7gKnrzN8s7e4vCyrFwjkPbTCX_Co8c4aXwWvq3RBLr-WkkVMw",
             "aadObjectId": "5b649834-7412-4cce-9e69-176e95a394f5"
         },
         "conversation": {
             "conversationType": "personal",
-            "tenantId": "528dbe3f-16e0-4e37-84a2-00cc305847ed",
+            "tenantId": "6babcaad-604b-40ac-a9d7-9fd97c0b779f",
             "id": "a:1xlimp68NSUxEqK0ap2rXuwC9ITauHgV2M4RaDPkeRhV8qMaFn-RyilMZ62YiVdqs8pp43yQaRKvv_U2S2gOS5nM-y_pOxVe4BW1qMGPtqD0Bv3pw-nJXF0zhDlZHMZ1Z"
         },
         "recipient": {
@@ -245,7 +251,7 @@ To receive read receipts events for your bot, ensure the following:
 
 * Read receipt [admin setting](/microsoftteams/messaging-policies-in-teams#messaging-policy-settings) or [user setting](https://support.microsoft.com/office/use-read-receipts-for-messages-in-microsoft-teams-533f2334-32ef-424b-8d56-ed30e019f856) is turned on for the tenant for the bot to receive the read receipt events. The tenant admin or the user can enable or disable the read receipt setting.
 
-After the bot is enabled in a user to bot chat scenario, the bot promptly receives a read receipt event when the user reads the bot's message. You can track the user engagement with the `ReadStatus` property that counts the number of events and you can also send a context aware message. 
+After the bot is enabled in a user to bot chat scenario, the bot promptly receives a read receipt event when the user reads the bot's message. You can track the user engagement by counting the number of events and you can also send a context aware message. 
 
 
 ## Send a message
