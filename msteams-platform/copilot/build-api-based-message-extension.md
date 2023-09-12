@@ -10,9 +10,11 @@ ms.date: 09/07/2023
 
 # Build API based Message extension
 
-You can build an API based message extension plugin using Developer portal for Teams or Teams Toolkit.
+You can create an message extension in Teams using an OpenAPI Specification. After you've created an OpenAPI Specification document for the APIs you want to use, upload the OpenAPI Specification document to Teams Toolkit or Developer portal for Teams to generate and integrate the client code in your app's project. Create an Adaptive Card template to handle the responses from the API.
 
 # [Developer portal for Teams](#tab/developer-portal-for-teams)
+
+To create an API base message extension using Developer portal, follow these steps:
 
 1. Go to **Teams developer portal**.
 1. Go to **Apps**.
@@ -34,7 +36,7 @@ You can build an API based message extension plugin using Developer portal for T
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-convert-api-commands.png" alt-text="Screenshot shows the list of APIs from the Open API spec document converted as commands.":::
 
-## Update command details
+**Update command details**
 
 To update the command details for each command listed in the API:
 
@@ -67,6 +69,8 @@ To update the command details for each command listed in the API:
 
 ## Create message extension when copilot plugin already exists
 
+If you already have an existing copilot plugin and you want to create a message extension, follow these steps:
+
 1. Go to **Teams developer portal**.
 1. Go to **Apps**.
 1. Select **Create a new app**.
@@ -96,6 +100,13 @@ To update the command details for each command listed in the API:
 :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-copilot-message-extension-created.png" alt-text="Screenshot shows the message extension app created in the App features page in Teams developer portal.":::
 
 ## Create a API plugin
+
+An API plugin requires a ChatGPT plugin manifest, which needs to be hosted on the API’s domain.
+
+Before you an API plugin, ensure that you have the following:
+
+* An API document in the OpenAPI yaml or JSON format.
+* A JSON manifest file that defines the relevant metadata such as name, logo, and OpenAPI spec for the endpoints for the plugin and host the file in a domain.
 
 If you have a chatGPT plugin manifest. You can build an API plugin using Teams developer portal.
 
