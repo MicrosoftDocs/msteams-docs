@@ -142,7 +142,7 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    To build and run the service, use latest version of Visual Studio  or Command line.
+    To build and run the service, use the latest version of Visual Studio  or Command line.
 
     # [Visual Studio](#tab/vs)
 
