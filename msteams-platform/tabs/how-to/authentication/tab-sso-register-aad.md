@@ -147,7 +147,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
     > [!IMPORTANT]
     >
-    > - **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/BotId-{YourClientId}`, where the BotID is your bot app ID.
+    > - **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/botid-{YourClientId}`, where {YourClientId} is your bot app ID.
     >
     > - **Format for domain name**: Use lower case letters for domain name. Don't use upper case.
     >
