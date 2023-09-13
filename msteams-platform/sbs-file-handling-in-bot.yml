@@ -204,7 +204,7 @@ items:
 
     1. Select **Upload an app**.
 
-    1. Look for the option to **Upload a custom app**. If the option is visible, you have enabled sideloading apps. 
+    1. Look for the option to **Upload a custom app**. If the option is visible, you have enabled uploading apps. 
 
        :::image type="content" source="assets/images/teams-file-upload-bot/custom-upload.png" alt-text="Screenshot shows the selection of Upload a custom app highlighted in red.":::
 
@@ -214,7 +214,7 @@ items:
 
     1. Select **Add**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-bot-file.png" alt-text="Screenshot show the option to add the app in Teams sideloading."::: 
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-bot-file.png" alt-text="Screenshot show the option to add the app in Teams uploading."::: 
 
 - title: Interacting with the bot in Teams
   durationInMinutes: 2
