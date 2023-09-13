@@ -66,8 +66,8 @@
 
 1. Go to Visual Studio, select **View > Output**.
 
-1. From the Output console dropdown menu, select **Dev Tunnels**.
+1. From the **Output** console dropdown menu, select **Dev Tunnels**.
 
-    The Output console shows the dev tunnel URL.
+    The **Output** console shows the dev tunnel URL.
 
     :::image type="content" source="../../assets/images/include-files/output-console-url.png" alt-text="Screenshot shows the url in the Visual Studio output console.":::

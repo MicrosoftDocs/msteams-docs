@@ -6,7 +6,7 @@
 
 1. Under **New Connection Setting**, update the following details:
 
-    * **Name**: Enter name for your new connection setting. You can use the name in the settings of your bot service code.
+    * **Name**: Enter a name for your new connection setting. You can use the name in the settings of your bot service code.
     * **Service Provider**: From the dropdown list, select **Azure Active Directory v2**.
     * **Client id**: Update your **Microsoft App ID**.
     * **Client secret**: Update the client secrets **Value**.

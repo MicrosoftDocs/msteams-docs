@@ -22,7 +22,7 @@ items:
     * Help users to keep track of the bot state.
     * Retrieve input from user and display custom web page content.
 
-    This step-by-step guide helps you to create a sample Azure bot to invoke Teams task module. You see the following output:
+    This step-by-step guide helps you to create a sample Azure bot to invoke Teams task module. You'll see the following output:
 
      :::image type="content" source="./assets/images/Teams-task-module/final-image.png" alt-text="Screenshot shows the final output of the Task module.":::
 
@@ -48,7 +48,7 @@ items:
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
 - title: Register Azure AD app
-  durationInMinutes: 1
+  durationInMinutes: 5
   content: |
    The following steps help you to create and register your bot in Azure portal:
 

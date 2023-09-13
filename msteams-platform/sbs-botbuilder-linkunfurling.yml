@@ -24,7 +24,7 @@ items:
      * Allows user to paste URLs and respond with a card.
      * Allows user to register the app and receives invoke activity.
 
-    This step-by-step guide helps you to create a bot to perform link unfurling in Microsoft Teams for `https://www.BotFramework.com`. You see the following output:
+    This step-by-step guide helps you to create a bot to perform link unfurling in Microsoft Teams for `https://www.BotFramework.com`. You'll see the following output:
 
     :::image type="content" source="~/assets/images/Teams-link-unfurling/final-image.png" alt-text="Screenshot shows link unfurling.":::
 

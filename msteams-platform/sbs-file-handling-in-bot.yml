@@ -22,7 +22,7 @@ items:
      * Receive a file sent to bot as an attachment.
      * Fetch inline images sent in message.
 
-   This step-by-step guide helps you to upload file in Teams using bot. You see the following output:
+   This step-by-step guide helps you to upload file in Teams using bot. You'll see the following output:
 
    :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/output-sbs.png" alt-text="Screenshot shows the final output.":::
    

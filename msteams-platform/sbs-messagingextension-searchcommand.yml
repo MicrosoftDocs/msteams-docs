@@ -21,7 +21,7 @@ items:
     * Allow users to search external systems.
     * Insert search results into a message in the form of a card.
 
-    This step-by-step guide helps you to build a search based message extension. You see the following output:
+    This step-by-step guide helps you to build a search based message extension. You'll see the following output:
 
     :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/output.png" alt-text="Screenshot shows the search based message extension output after you have successfully completed the step-by-step guide.":::
 

@@ -2,7 +2,7 @@
 title: Build your first app using Blazor
 metadata:
   title: Hello World with Blazor
-  description: In this tutorial, you can learn to build Hello World app with Blazor, build interactive web UIs using C#, and create tab app and bot app. 
+  description: In this tutorial, you'll learn to build Hello World app with Blazor, build interactive web UIs using C#, and create tab app and bot app. 
   audience: Developer
   level: Beginner
   ms.date: 04/03/2022
@@ -249,7 +249,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-subscription.png" alt-text="Screenshot of Provision with New and Provision highlighted in red.":::
 
-        The provision warning dialog appears. 
+        A **Teams Toolkit** warning dialog appears. 
 
     1. Select **Provision**.
     
@@ -445,7 +445,7 @@ items:
 
            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-azure_1.png" alt-text="Screenshot of Provision with provision option highlighted in red. ":::
 
-           The provision warning dialog appears. 
+           A **Teams Toolkit** warning dialog appears. 
 
     1. Select **Provision**.
 

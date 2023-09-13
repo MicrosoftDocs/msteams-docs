@@ -22,7 +22,7 @@ items:
     * Allows the user to sign in to other devices without entering credentials again.
     * Obtains token for the signed in user.
 
-   This step-by-step guide helps you to create tabs and message extensions enabling Azure AD SSO authentication. You see the following output:
+   This step-by-step guide helps you to create tabs and message extensions enabling Azure AD SSO authentication. You'll see the following output:
 
      :::image type="content" source="./assets/images/Tab-ME-SSO/hello-megan-profile245-1.png" alt-text="Screenshot of the tab and message extension with SSO authentication output after you have successfully completed the step-by-step guide.":::
    
@@ -264,7 +264,7 @@ items:
 
               :::image type="content" source="./assets/images/Tab-ME-SSO/consent-box.png" alt-text= "Screenshot of Microsoft consent dialog with Accept highlighted in red.":::
 
-          1. Select your profile under search box. You see the following output:
+          1. Select your profile under search box. You'll see the following output:
 
               :::image type="content" source="./assets/images/Tab-ME-SSO/hello-megan-profile-1.png" alt-text= "Screenshot of the selected profile.":::
 

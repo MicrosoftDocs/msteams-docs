@@ -2,7 +2,7 @@
 
 # [dev tunnel](#tab/dev)
 
-1. Use the dev tunnel URL in the Output console as the messaging endpoint.
+1. Use the dev tunnel URL in the **Output** console as the messaging endpoint.
 
     :::image type="content" source="../../assets/images/include-files/output-console-url.png" alt-text="Screenshot shows the url in the Visual studio output console.":::
 
@@ -14,7 +14,7 @@
 
 1. Select **Apply**.
 
-    You have successfully set up a bot in Azure Bot service.
+    You've successfully set up a bot in Azure Bot service.
 
     > [!NOTE]
     > If the **Application Insights Instrumentation key** shows an error, update with **App ID**.

@@ -26,7 +26,7 @@ items:
      > [!NOTE]
      > The Outgoing Webhooks can't access any other APIs, such as retrieve the roster or list of channels in a team.
     
-    This step-by-step guide helps you to create Outgoing Webhooks in Teams. You see the following output:
+    This step-by-step guide helps you to create Outgoing Webhooks in Teams. You'll see the following output:
 
     :::image type="content" source="./assets/images/sbs-outgoing-webhooks/introduction-output.png" alt-text="Screenshot shows Outgoing Webhooks in Teams channel.":::
 
@@ -89,11 +89,11 @@ items:
      
         * **Name**: The webhook title in @mention tab.
 
-        * **Callback URL**: The URL generated from ngrok that accepts JSON payloads and receives POST requests from Teams. To use the api/Sample or api/authenticatedSample, do the following:
+        * **Callback URL**: The URL generated from ngrok that accepts JSON payloads and receives POST requests from Teams. To use the `api/Sample` or `api/authenticatedSample`, do the following:
 
-            * For api/Sample, copy and paste the `dev tunnel` or `ngrok` URL and append it with /api/sample.
+            * For api sample, copy and paste the `dev tunnel` or `ngrok` URL and append it with `/api/sample`.
 
-            * For api/authenticatedSample, copy and paste the `dev tunnel` or `ngrok` URL and append it with /authenticatedSample?id=contoso.
+            * For api authenticatedSample, copy and paste the `dev tunnel` or `ngrok` URL and append it with `/authenticatedSample?id=contoso`.
 
         * **Description**: A detailed string that appears in the profile card and the team-level app dashboard.
 
