@@ -54,9 +54,10 @@ The following code shows an example of using exponential backoff using the trans
 public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy
     {
         // List of error codes to retry on
-        List<int> transientErrorStatusCodes = new List<int>() { 429 };
+        private static readonly List<int> transientErrorStatusCodes = new List<int>() { 429 };
 
-        public static bool IsTransient(Exception ex)
+        public bool IsTransient(Exception ex) 
+          {
           {
               if (ex.Message.Contains("429"))
                   return true;
