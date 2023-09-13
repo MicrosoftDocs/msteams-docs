@@ -20,7 +20,7 @@ Action-based message extensions allow your users to trigger actions in external 
 To initiate actions from a message extension, set the `type` parameter to `action`. A single message extension can have up to 10 different commands and include multiple search-based and action-based commands.
 
  > [!NOTE]
- >`justInTimeInstall` functions when you upload an app to the app catalog but fails when you sideload an app.
+ >`justInTimeInstall` functions when you upload an app to the app catalog but fails when you upload an app.
 
 ### Complete app manifest example
 
@@ -441,7 +441,6 @@ Respond to the submit action by inserting a message with an Adaptive Card into t
 1. The user can then preview the adaptive card message before the bot inserts it into the channel. If the bot isn't already a member of the channel, clicking `Send` adds the bot.
 1. Interacting with the adaptive card changes the message before sending it.
 1. Once the user selects `Send`, the bot will post the message to the channel.
-
 
 > [!NOTE]
 > The `activityPreview` must contain a `message` activity with exactly one adaptive card attachment.

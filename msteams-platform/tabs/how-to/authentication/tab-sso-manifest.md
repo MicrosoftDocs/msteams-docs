@@ -1,6 +1,6 @@
 ---
 title: Update manifest for enabling SSO for tabs
-description: Update Teams manifest for enabling Single sign-on (SSO) for tabs and sideload it into Teams client for testing SSO authentication.
+description: Update Teams manifest for enabling Single sign-on (SSO) for tabs and upload it into Teams client for testing SSO authentication.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
@@ -129,9 +129,9 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 > [!NOTE]
 > During debug, you can use ngrok to test your app in Azure AD. In that case, you need to replace the subdomain in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` with the ngrok URL. You'll need to update the URL whenever your ngrok subdomain changes. For example, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
 
-## Sideload and Preview in Teams
+## Upload and Preview in Teams
 
-You've configured the tab app to enable SSO in Azure AD, in app code, and in the app manifest file. You can now sideload your tab app in Teams, and preview it in Teams environment.
+You've configured the tab app to enable SSO in Azure AD, in app code, and in the app manifest file. You can now upload your tab app in Teams, and preview it in Teams environment.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="SSO app":::
 
@@ -147,11 +147,11 @@ To preview your tab app in Teams:
 
     The options to upload an app appear.
 
-1. Select **Upload a custom app** to sideload the tab app to Teams.
+1. Select **Upload a custom app** to upload the tab app to Teams.
 
 1. Select your app package zip file, and then select **Add**.
 
-    The tab app is sideloaded and the dialog appears to inform you of the additional permissions that may be required.
+    The tab app is uploaded and the dialog appears to inform you of the additional permissions that may be required.
 
 1. Select **Continue**.
 

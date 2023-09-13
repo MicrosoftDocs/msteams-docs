@@ -13,8 +13,8 @@ Before you create your Teams app project, ensure that the prerequisites are in p
 
 * [Install required tools to build your Teams app](#install-required-tools-to-build-your-teams-app)
 * [Prepare Accounts to build your Teams app](#accounts-to-build-your-teams-app)
-* [Sideload permission](tools-prerequisites.md)
-* [Verify sideloading permission](#verify-sideloading-permission)
+* [Upload permission](tools-prerequisites.md)
+* [Verify uploading permission](#verify-uploading-permission)
 
 ## Basic requirements to build your Teams app
 
@@ -135,17 +135,17 @@ An Azure account allows you to host a Teams app or the back-end resources for yo
 
 While creating Teams app using SPFx environment, you must have a SharePoint collection site administrator account. It’s required for deploying and hosting your app on SharePoint site. If you're using a Microsoft 365 developer program tenant, you can use the administrator account you created at the time.
 
-## Verify sideloading permission
+## Verify uploading permission
 
-After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+After creating the app, you must load your app in Teams without distributing it. This process is known as uploading. Sign in to your Microsoft 365 account to view this option.
 
-You can verify if the sideloading permission is enabled using either Visual Studio Code or Teams client.
+You can verify if the uploading permission is enabled using either Visual Studio Code or Teams client.
 
 <br>
 <details>
-<summary><b>Verify sideloading permission using Visual Studio Code</b></summary>
+<summary><b>Verify uploading permission using Visual Studio Code</b></summary>
 
-You can use this method to verify sideloading permission only after you have created an app project using Teams Toolkit. If you haven't created an app project, you can verify sideloading permission using Teams client.
+You can use this method to verify uploading permission only after you have created an app project using Teams Toolkit. If you haven't created an app project, you can verify uploading permission using Teams client.
 
 1. Open **Visual Studio Code**.
 1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
@@ -161,12 +161,12 @@ You can use this method to verify sideloading permission only after you have cre
 
 1. Verify if you can see the option **Sideloading enabled** as shown in the following image:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading_1.png" alt-text="Screenshot shows the Sideloading enabled option highlighted in red.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading_1.png" alt-text="Screenshot shows the Uploading enabled option highlighted in red.":::
 
 </details>
 <br>
 <details>
-<summary><b>Verify sideloading permission using Teams client</b></summary>
+<summary><b>Verify uploading permission using Teams client</b></summary>
 
 1. In the Teams client, select **Apps** > **Manage your apps** > **Upload an app**.
 
@@ -178,16 +178,16 @@ You can use this method to verify sideloading permission only after you have cre
 
 </details>
 
-### Enable sideloading using admin center
+### Enable uploading using admin center
 
-If sideloading option isn’t visible in Teams Toolkit extension in Visual Studio Code or if the option to upload a custom app isn’t available in Teams, it indicates that you don't have the required permission for sideloading.
+If uploading option isn’t visible in Teams Toolkit extension in Visual Studio Code or if the option to upload a custom app isn’t available in Teams, it indicates that you don't have the required permission for uploading.
 
-You must enable sideloading for your app in Teams:
+You must enable uploading for your app in Teams:
 
-* If you're a tenant admin, enable the sideloading setting for your tenant or organization in the Teams admin center.
-* If you aren't a tenant admin, contact your tenant admin to enable sideloading.
+* If you're a tenant admin, enable the uploading setting for your tenant or organization in the Teams admin center.
+* If you aren't a tenant admin, contact your tenant admin to enable uploading.
 
-If you have admin rights, you can enable sideloading:
+If you have admin rights, you can enable uploading:
 
   1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
 
@@ -214,9 +214,9 @@ If you have admin rights, you can enable sideloading:
   5. Select **Save**.
 
      > [!Note]
-     > It can take up to 24 hours for sideloading to become active. In the meantime, you can use **upload for your tenant** to test your app. To upload the .zip package file of the app, see [upload custom apps](/microsoftteams/teams-app-setup-policies).
+     > It can take up to 24 hours for uploading to become active. In the meantime, you can use **upload for your tenant** to test your app. To upload the .zip package file of the app, see [upload custom apps](/microsoftteams/teams-app-setup-policies).
 
-     Ensure that you have the sideloading permission using the steps mentioned in [verify sideloading permission using Visual Studio Code or Teams client](#verify-sideloading-permission).
+     Ensure that you have the uploading permission using the steps mentioned in [verify uploading permission using Visual Studio Code or Teams client](#verify-uploading-permission).
 
 </details>
 

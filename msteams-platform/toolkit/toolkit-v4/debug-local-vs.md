@@ -49,7 +49,7 @@ To debug your app after you create a project, perform the following steps:
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-signin-m365.png" alt-text="Screenshot shows sign in to Microsoft 365 account.":::
 
    > [!NOTE]
-   > Learn more about sideloading permission, see [Prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
+   > Learn more about uploading permission, see [Prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
 
 1. Select **Debug** > **Start Debugging** or select **F5**.
 
@@ -117,7 +117,7 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
    :::image type="content" source="images/vs-localdebug-signin-m365-v4.png" alt-text="Sign in to Microsoft 365 account":::
 
    > [!Note]
-   > Learn more about sideloading permission by visiting [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+   > Learn more about uploading permission by visiting [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
 1. Select **Debug** > **Start Debugging**, or directly select **F5**.
 

@@ -45,7 +45,7 @@ The following are the Teams features that will be supported soon:
 
 * [Share in Teams](../concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md).
 
-* [Sideloading of apps](../concepts/deploy-and-publish/apps-upload.md) isn't supported in the new Teams client. You can sideload an app in the Classic Teams client and use it in new Teams client.
+* [Uploading of apps](../concepts/deploy-and-publish/apps-upload.md) isn't supported in the new Teams client. You can upload an app in the Classic Teams client and use it in new Teams client.
 
 * [External authentication](../tabs/how-to/authentication/auth-oauth-provider.md) isn't supported in the new Teams client. We recommend you use the [authentication using third-party OAuth provider](../tabs/how-to/authentication/auth-flow-tab.md) or use the app in the Classic Teams client.
 

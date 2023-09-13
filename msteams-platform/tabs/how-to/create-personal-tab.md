@@ -410,7 +410,7 @@ ngrok http 3978 --host-header=localhost
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your app is sideloaded successfully. The **Add** page appears for your app in Teams.
+1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your app is uploaded successfully. The **Add** page appears for your app in Teams.
 
 1. Select **Add** to load the tab in Teams. Your tab is now available in Teams.
 
@@ -581,7 +581,7 @@ ngrok http 3978 --host-header=localhost
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your app is sideloaded successfully. The **Add** page appears for your app in Teams.
+1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your app is uploaded successfully. The **Add** page appears for your app in Teams.
 
 1. Select **Add** to load the tab on Teams. Your tab is now available in Teams.
 
@@ -668,19 +668,19 @@ You can use the CLI with the `teamsfx` command. Verify that the command is worki
 
 ## Set up your Teams development tenant
 
-A tenant is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
+A tenant is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your app. Let's verify if you're ready to develop with the tenant.
 
-### Enable sideloading option
+### Enable uploading option
 
-After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+After creating the app, you must load your app in Teams without distributing it. This process is known as uploading. Sign in to your Microsoft 365 account to view this option.
 
 Do you already have a tenant and the admin access? Let's check if you really do!
 
-Verify if you can sideload apps in Teams:
+Verify if you can upload apps in Teams:
 
 1. In the Teams client, select **Store** icon.
 1. Select **Manage your apps**.
-1. Select **Upload a custom app**. If you see Upload a custom app option, sideloading apps is enabled.
+1. Select **Upload a custom app**. If you see Upload a custom app option, uploading apps is enabled.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG" alt-text="Screenshot of Manage your apps in Teams with the Upload an app dialog open. Apps icon, Manage your apps, Upload an app, and Upload a custom app option highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG":::
 
@@ -831,7 +831,7 @@ To build and run your app:
     When you select **F5**, Teams Toolkit:
 
     1. Registers your application with Azure Active Directory.
-    1. Registers your application for sideloading in Teams.
+    1. Registers your application for uploading in Teams.
     1. Starts your application backend running locally.
     1. Starts your application front-end hosted locally.
     1. Starts Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
@@ -874,7 +874,7 @@ To build and run your app:
     <details>
     <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-    To run your app in Teams, you need a Microsoft 365 development account that allows app sideloading. You can learn more about it in the Prerequisites section.
+    To run your app in Teams, you need a Microsoft 365 development account that allows app uploading. You can learn more about it in the Prerequisites section.
 
     </details>
 
@@ -1003,6 +1003,7 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 ## Extend static tabs to group chat and meetings
 
 > [!NOTE]
+>
 > * Extend your static tabs to group chat and meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * To extend your static tabs to group chat and meetings, use the app manifest v1.16 or later.
 

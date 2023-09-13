@@ -33,7 +33,7 @@ You must have a basic understanding of the following to use custom Together Mode
 
 * Define scene and seats in a scene.
 * Have a Microsoft Developer account and be familiar with the Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
-* Understand the [concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
+* Understand the [concept of app uploading](../concepts/deploy-and-publish/apps-upload.md).
 * Ensure that the Administrator has granted permission to [**Upload a custom app**](../concepts/deploy-and-publish/apps-upload.md) and select all filters as part of App Setup and Meeting policies respectively.
 
 ## Best practices
@@ -218,7 +218,7 @@ To select scenes and use custom Together Mode scenes, follow these steps:
 1. Create a new test meeting.
 
     > [!NOTE]
-    > On selecting **Preview** in the Scene studio, the scene is installed as an app in Teams. This is the model for a developer to test and try out scenes from the Scene studio. After a scene is exported and sideloaded as a custom app, users can view the scenes in the scene gallery.
+    > On selecting **Preview** in the Scene studio, the scene is installed as an app in Teams. This is the model for a developer to test and try out scenes from the Scene studio. After a scene is exported and uploaded as a custom app, users can view the scenes in the scene gallery.
 
 1. From the **Gallery** drop-down in the upper-left corner, select **Together Mode**. The **Picker** dialog box appears and the scene that is added is available.
 

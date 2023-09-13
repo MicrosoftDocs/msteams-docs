@@ -128,7 +128,7 @@ You can view the project folders and files under **Explorer** in the Visual Stud
 
 ---
 
-You'll be prompted to sideload the app into Teams. Select **Add**.
+You'll be prompted to upload the app into Teams. Select **Add**.
 
 :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="The screenshot showing an app being installed.":::
 
@@ -141,18 +141,17 @@ You'll be prompted to sideload the app into Teams. Select **Add**.
     > [!NOTE]
     > If a you have debugged the app previously, it's recommended to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
 
-    # [iOS](#tab/ios1)
+# [iOS](#tab/ios1)
 
     To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
 
     :::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios-option.PNG" alt-text="The screenshot showing to clean the app data in iOS mobile client for tab." lightbox="../assets/images/debug-mobile/clear-app-data-ios.PNG":::
-    
 
-    # [Android](#tab/android1)
+# [Android](#tab/android1)
 
     To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
 
-    :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android-option.PNG" alt-text="The screenshot showing to clean the app data in android mobile client for tab." lightbox="../assets/images/debug-mobile/clear-app-data-android.PNG":::
+:::image type="content" source="../assets/images/debug-mobile/clear-app-data-android-option.PNG" alt-text="The screenshot showing to clean the app data in android mobile client for tab." lightbox="../assets/images/debug-mobile/clear-app-data-android.PNG"
     ---
 
 1. If you're accessing the dev tunnel for the first time, sign in to Microsoft 365 account and select **continue**.
@@ -175,14 +174,13 @@ You'll be prompted to sideload the app into Teams. Select **Add**.
     > [!NOTE]
     > If a you have debugged the bot app previously and the app manifest (previously called Teams app manifest) file is changed, we recommend to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
 
-    # [iOS](#tab/ios2)
+# [iOS](#tab/ios2)
 
     To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
 
       :::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios-option.PNG" alt-text="The screenshot showing to clean the app data in iOS mobile client for bot." lightbox="../assets/images/debug-mobile/clear-app-data-ios.PNG":::
-      
 
-    # [Android](#tab/android2)
+# [Android](#tab/android2)
 
     To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
 
