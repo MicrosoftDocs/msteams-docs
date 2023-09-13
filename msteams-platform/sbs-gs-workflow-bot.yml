@@ -44,7 +44,7 @@ items:
     After you've installed the required tools, set up the development environment.
     
     ### Install the Teams Toolkit
-    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. 
+    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Microsoft Teams Store, and more. 
     
     You can use the toolkit with Visual Studio Code or CLI (command-line interface) called `TeamsFx`.
     
