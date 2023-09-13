@@ -37,7 +37,7 @@ Planning your SaaS offer helps you to understand the suitable features for the o
 
 ## Plan the publishing option
 
-The initial step to create any SaaS offer is to decide the publishing option, that is how the offer must be available in the marketplace. The suitable option is available as a call-to-action button on the landing page.
+The initial step to create any SaaS offer is to decide the publishing option, that is how the offer must be available in the marketplace. The option you select when creating the offer is available as a call-to-action button on the landing page.
 
 > [!NOTE]
 > Before you start creating an offer, you must decide the listing or publishing option.
@@ -52,7 +52,7 @@ You can opt to sell through Microsoft where Microsoft hosts all your transaction
 
 **Sell through Microsoft**
 
-Offers sold through Microsoft are transactable offers where Microsoft handles transactions for the licenses purchased. With a transactable [SaaS offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md), you can monetize your Teams app by selling subscription plans directly from your Teams store listing.
+Offers sold through Microsoft are transactable offers where Microsoft handles transactions for the licenses purchased. With a transactable [SaaS offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md), you can sell subscription plans directly from your Teams store listing.
 
     :::column-end:::
 :::row-end:::
