@@ -321,6 +321,104 @@ items:
 
     ---
 
+    ## Update your bot app with bot configuration capabilities
+
+    Teams Toolkit is the easiest way to scaffold and get a bot running. Teams Toolkit creates the basic bot structure for you to get started with configuring your bot.
+
+    Let's get started to configure bot configuration capabilities.
+
+    1. Open the **manifest.json** file.
+
+    1. Add the following code to your manifest file:
+
+       ```json
+        "bots": [
+            {
+            "botId": "${{AAD_APP_CLIENT_ID}}",
+            "needsChannelSelector": false,
+            "scopes": [
+                "personal",
+                "team",
+                "groupChat"
+            ],
+            "configuration":{
+                "groupChat":{
+                "fetchTask": true
+                },
+                "team":{
+                "fetchTask": true
+                }
+            },
+            "isNotificationOnly": false
+        }
+        ],
+       ```
+    1. Open the `teamsBot.js` file.
+
+    1. Add the following code to your `teamsBot.js` file:
+
+    ```javascript
+    if (context._activity.name == "config/fetch") {
+      const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForDynamicSearch());
+      try {
+          return {
+              status: 200,
+              body: {
+                  config: {
+                      type: 'continue',
+                      value: {
+                          card: adaptiveCard,
+                          height: 400,
+                          title: 'Task module fetch response',
+                          width: 300
+                      }
+                  }
+              }
+          }
+      } catch (e) {
+          console.log(e);
+      }
+    }
+    ```
+    ```javascript
+    if (context._activity.name == "config/submit") {
+    
+      const choice = context._activity.value.data.choiceselect.split(" ")[0];
+      chosenFlow = choice;
+    
+      if (choice === "static_option_2") {
+          const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForStaticSearch());
+    
+          return {
+              status: 200,
+              body: {
+                  config: {
+                      type: 'continue',
+                      value: {
+                          card: adaptiveCard,
+                          height: 400,
+                          title: 'Task module submit response',
+                          width: 300
+                      }
+                  }
+              }
+          }
+      }
+      else {
+    
+          try {
+              return {
+                  status: 200,
+                  body: {
+                      config: {
+                          type: 'message',
+                          value: "end"
+                      }
+                  }
+              }
+          }
+    ```
+
     ## Build and run your first bot app locally
 
     To build and run your app in the local environment:
