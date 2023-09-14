@@ -1,19 +1,19 @@
 ---
-title: Design your app - App icon for store and app bar
-description: Learn about the app icons for store and app bar
+title: Design your app - App icon for Microsoft Teams Store and app bar
+description: Learn about the app icons for Teams Store and app bar
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: App icon
 ms.date: 05/23/2023
 ---
-# Microsoft Teams app icon for store and app bar
+# Microsoft Teams app icon for Teams Store and app bar
 
 This article provides the guidelines for creating icons in your app ecosystem to help designers and you submit the correct application icon. Following these guidelines creates uniformity and balance in your app ecosystem and emphasizes the artwork of your app icon.
 
 ## App icon
 
-When submitting your app package, include two PNG versions of the app icon, a color icon and an outline icon. For your app to pass Teams store review, these icons must meet certain size requirements. Follow the steps to ensure your app icons fit the Teams store standards.
+When submitting your app package, include two PNG versions of the app icon, a color icon and an outline icon. For your app to pass Teams Store review, these icons must meet certain size requirements. Follow the steps to ensure your app icons fit the Teams Store standards.
 
 ### Balanced layout
 
@@ -29,7 +29,7 @@ Microsoft Teams needs two assets during app submission to generate the app icons
 
 |Counter|Description|
 |----------|-----------|
-|1|A full bleed PNG format at 192 x 192 pixels. Utilize the full asset space as the background. This is used in the app store or fly-outs.|
+|1|A full bleed PNG format at 192 x 192 pixels. Utilize the full asset space as the background. This is used in the Teams Store or fly-outs.|
 |2|A default or rest PNG format icon at 32 x 32 pixels. This icon is used as **rest/default** state in the app bar and other locations in the product. |
 
 ### Color icon architecture
