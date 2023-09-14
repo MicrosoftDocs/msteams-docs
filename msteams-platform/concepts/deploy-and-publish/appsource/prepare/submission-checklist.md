@@ -1,6 +1,6 @@
 ---
-title: Prepare your store submission  
-description: Final steps before you submit your Microsoft Teams app to be listed on the store. Validate app package and complete publisher verification and attestation.
+title: Prepare your Microsoft Teams Store submission  
+description: Final steps before you submit your Microsoft Teams app to be listed on the Teams Store. Validate app package and complete publisher verification and attestation.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
@@ -8,11 +8,11 @@ ms.author: surbhigupta
 ms.date: 01/06/2023
 ---
 
-# Prepare your Teams store submission
+# Prepare your Microsoft Teams Store submission
 
 You've designed, built, and tested your Microsoft Teams app. Now you're ready to list it so people can discover and start using your app.
 
-See the following video to learn more about publishing your app to the Microsoft Teams store:
+See the following video to learn more about publishing your app to the Teams Store:
 <br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
@@ -24,7 +24,7 @@ Before you submit your app to [Partner Center](/office/dev/store/use-partner-cen
 
 While your app may be working in a test environment, you should check your app package to avoid running into issues during the submission process.
 
-The Microsoft Teams app validation tool helps you identify and fix issues before submitting to Partner Center. The tool automatically checks your app's configurations against the same test cases used during store validation.
+The Microsoft Teams app validation tool helps you identify and fix issues before submitting to Partner Center. The tool automatically checks your app's configurations against the same test cases used during Teams Store validation.
 
 1. Go to the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html).
 
@@ -70,31 +70,31 @@ You can find the following [sample test instructions](https://github.com/Microso
 * Sample 2: ERP Data transfer
 * Sample 3: Collaborative app
 
-## Create your store listing details
+## Create your Teams Store listing details
 
-The information that you submit to [Partner Center](https://partner.microsoft.com)&#8212;including your name, descriptions, icons, and images&#8212;becomes the Teams store and Microsoft AppSource listing for your app.
+The information that you submit to [Partner Center](https://partner.microsoft.com)&#8212;including your name, descriptions, icons, and images&#8212;becomes the Teams Store and Microsoft AppSource listing for your app.
 
-A store listing may be someone's first impression of your app. Increase installations with a listing that effectively conveys your app's benefits, functionality, and brand.
+A Teams Store listing may be someone's first impression of your app. Increase installations with a listing that effectively conveys your app's benefits, functionality, and brand.
 
 ### Specify a short name
 
-Your app's name (specifically, its *[short name](~/resources/schema/manifest-schema.md#name)*) plays a crucial role in how users discover it in the store.
+Your app's name (specifically, its *[short name](~/resources/schema/manifest-schema.md#name)*) plays a crucial role in how users discover it in the Teams Store.
 
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="../../../../assets/images/store-detail-page/specifying-short-name-under-submission.png" alt-text="Example screenshot highlights where an app's short name displays in a store listing.":::
+:::image type="content" source="../../../../assets/images/store-detail-page/specifying-short-name-under-submission.png" alt-text="Example screenshot highlights where an app's short name displays in a Teams Store listing.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
 
 :::row-end:::
 
-Make sure your short name adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-name).
+Make sure your short name adheres to the [Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-name).
 
 ### Write descriptions
 
-You must have a short and long description of your app. App description helps improve app discoverability in the Teams store.
+You must have a short and long description of your app. App description helps improve app discoverability in the Teams Store.
 
 #### Short description
 
@@ -103,14 +103,14 @@ A concise summary of your app that should be original, engaging, and directed at
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/specifying-short-description-under-submission.png" alt-text="Example screenshot highlights where an app's short description displays in a store listing.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-short-description-under-submission.png" alt-text="Example screenshot highlights where an app's short description displays in a Teams Store listing.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
 
 :::row-end:::
 
-Make sure your short description adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#short-description).
+Make sure your short description adheres to the [Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#short-description).
 
 #### Long description
 
@@ -125,18 +125,18 @@ While this description can be as long as 4,000 characters, most users only read 
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/specifying-long-description-under-submission.png" alt-text="Example screenshot highlights where an app's long description displays in a store listing.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-long-description-under-submission.png" alt-text="Example screenshot highlights where an app's long description displays in a Teams Store listing.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
 
 :::row-end:::
 
-Make sure your long description adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#long-description).
+Make sure your long description adheres to the [Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#long-description).
 
 ### Adhere to icon design guidelines
 
-Icons are one of the main elements users see when browsing the store. Your icons should communicate your app's brand and purpose while also adhering to Teams requirements.
+Icons are one of the main elements users see when browsing the Teams Store. Your icons should communicate your app's brand and purpose while also adhering to Teams requirements.
 
 For more information, see [guidance on creating Teams app icons](~/concepts/build-and-test/apps-package.md#app-icons).
 
@@ -147,7 +147,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/specifying-of-capturing-screenshots-submission.png" alt-text="Example screenshot highlights where app screenshots display in a store listing.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-of-capturing-screenshots-submission.png" alt-text="Example screenshot highlights where app screenshots display in a Teams Store listing.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -186,7 +186,7 @@ You can add a URL for your YouTube or Vimeo video.
 
 ### Select a category for your app
 
-During submission, you're asked to categorize your app. App category helps improve your app discoverability in the Teams store. You can categorize your app based on the following categories:
+During submission, you're asked to categorize your app. App category helps improve your app discoverability in the Teams Store. You can categorize your app based on the following categories:
 
 |Categories  |
 |--------------|
@@ -219,7 +219,7 @@ During submission, you're asked to categorize your app. App category helps impro
 
 ### Distribute your app to specific countries or regions
 
-If you want to cater your app to a specific audience, you can select from the available list of countries or regions and communicate what’s great about your app in ways that are relevant to users. This is known as Geo-filtering. Geo-filtering is applicable only for apps listed in the Teams store. For example, a Contoso US app, which sells gift cards that are valid within the US and Canada is only visible in the Teams store for the users in the US and Canada.
+If you want to cater your app to a specific audience, you can select from the available list of countries or regions and communicate what’s great about your app in ways that are relevant to users. This is known as Geo-filtering. Geo-filtering is applicable only for apps listed in the Teams Store. For example, a Contoso US app, which sells gift cards that are valid within the US and Canada is only visible in the Teams Store for the users in the US and Canada.
 
 # [Desktop](#tab/desktop)
 
@@ -238,7 +238,7 @@ The following image shows the use of Geo-filtering for apps in the Teams mobile 
 > [!NOTE]
 > Geo-filtering isn't supported in Government community cloud (GCC), GCC-High, and Department of Defence (DoD) tenants.
 
-Geo-filtering helps you improve your app's visibility in the Teams store. When you publish your app to the store, you can select from the available list of countries/regions in the Partner Center to target your app to users in specific countries or regions. For more information on supported geographic locations in Partner Center, see [Geographic availability and currencies](/partner-center/marketplace/marketplace-geo-availability-currencies).
+Geo-filtering helps you improve your app's visibility in the Teams Store. When you publish your app to the Teams Store, you can select from the available list of countries/regions in the Partner Center to target your app to users in specific countries or regions. For more information on supported geographic locations in Partner Center, see [Geographic availability and currencies](/partner-center/marketplace/marketplace-geo-availability-currencies).
 
 :::image type="content" source="../../../../assets/images/app-fundamentals/select-countries-app-partner-center.png" alt-text="Screenshot shows the list of available countries or regions in Microsoft Partner Center.":::
 
@@ -252,20 +252,20 @@ If a user wants to install an app available in another country or region, they c
 
 * Install the app from [Microsoft AppSource](https://appsource.microsoft.com/en-US/?exp=ubp8).
 
-### Localize your store listing
+### Localize your Teams Store listing
 
-Partner Center supports [localized store listings](/office/dev/store/prepare-localized-solutions). For more information, see [how to localize your Teams app listing](../../../../concepts/build-and-test/apps-localization.md).
+Partner Center supports [localized Teams Store listings](/office/dev/store/prepare-localized-solutions). For more information, see [how to localize your Teams app listing](../../../../concepts/build-and-test/apps-localization.md).
 
 ## Complete Publisher Verification
 
-[Publisher Verification](/azure/active-directory/develop/publisher-verification-overview) is required for Teams apps listed in the store. For more information, see [frequently asked questions](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions), [how to mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified), and [troubleshoot publisher verification](/azure/active-directory/develop/troubleshoot-publisher-verification).
+[Publisher Verification](/azure/active-directory/develop/publisher-verification-overview) is required for Teams apps listed in the Teams Store. For more information, see [frequently asked questions](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions), [how to mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified), and [troubleshoot publisher verification](/azure/active-directory/develop/troubleshoot-publisher-verification).
 
 ## Complete Publisher Attestation
 
 [Publisher Attestation](/microsoft-365-app-certification/docs/attestation) is also required for Teams apps listed in the Store. The process includes completing a self-assessment of your app's security, data handling, and compliance practices. The process can help potential customers make informed decisions about using your app.
 
 > [!NOTE]
-> If you're submitting a new app, you can't officially complete Publisher Attestation until your app is listed on the Teams store. If you're updating a listed app, complete Publisher Attestation before you submit the latest version of the app for validation.
+> If you're submitting a new app, you can't officially complete Publisher Attestation until your app is listed on the Teams Store. If you're updating a listed app, complete Publisher Attestation before you submit the latest version of the app for validation.
 
 ## Next step
 
@@ -274,6 +274,6 @@ Partner Center supports [localized store listings](/office/dev/store/prepare-loc
 
 ## See also
 
-* [Publish your app to the Microsoft Teams store](../publish.md)
+* [Publish your app to the Microsoft Teams Store](../publish.md)
 * [Prepare your Microsoft 365 tenant](../../../build-and-test/prepare-your-o365-tenant.md)
-* [Resolve issues if your Microsoft Teams store submission fails](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)
+* [Resolve issues if your Microsoft Teams Store submission fails](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)
