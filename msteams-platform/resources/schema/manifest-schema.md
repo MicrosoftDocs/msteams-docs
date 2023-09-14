@@ -550,14 +550,14 @@ Defines a message extension for the app.
 The item is an array (maximum of one element) with all elements of type `object`. This block is required only for solutions that provide a message extension.
 
 |Name| Type | Maximum Size | Required | Description|
-|---|---|---|---|---|
+|--|--|---|---|----------|
 |`botId`|String||✔️|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall App ID.|
 |`commands`|Array of objects|10|✔️|Array of commands the message extension supports.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. Default: **false**.|
 |`messageHandlers`|Array of objects|5||A list of handlers that allow apps to be invoked when certain conditions are met.|
 |`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|Array of strings|2048 characters||Array of domains that the link message handler can register for.|
-|`messageHandlers.value.`</br>`supportsAnonymizedPayloads`|Boolean||| A boolean value that indicates whether the app's link message handler supports anonymous invoke flow. Default is false.|
+|`messageHandlers.value.supportsAnonymizedPayloads`|Boolean||| A boolean value that indicates whether the app's link message handler supports anonymous invoke flow. Default is false.|
 
 ### composeExtensions.commands
 
