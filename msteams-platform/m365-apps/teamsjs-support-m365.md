@@ -229,6 +229,23 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td></td>
         </tr>
+        <tr>
+            <th><a href="#search">search</a></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
             <th><a href="#secondarybrowser">secondaryBrowser</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
@@ -1075,7 +1092,7 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1092,7 +1109,7 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1949,7 +1966,7 @@ Preview. Allows your application to interact with the host Microsoft 365 applica
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
