@@ -9,7 +9,7 @@ ms.date: 01/31/2023
 ---
 # Prerequisites to create an offer
 
-If you decide to sell your SaaS offer through Microsoft, you need to fulfill the technical configurations and collate the required technical information. It helps to prevent any blockers while creating the offer. This article gives details on the technical configurations and requirements to create a SaaS offer.
+If you decide to sell your SaaS offer through Microsoft, you need to fulfill the technical configurations and collate the required technical information. It helps negate any blockers while creating the offer. API integrations are part of technical configuration that needs to be done after the user purchase the offer. This article provides detailing on the technical configurations and requirements to create a SaaS offer.
 
 :::row:::
    :::column:::
@@ -37,14 +37,14 @@ The technical configurations differ based on the listing option you opt for your
 > [!NOTE]
 > The *Contact me* listing option have no technical configurations to be done.
 
-## Technical requirements
+## Technical configuration
 
 If you select **Get it now (Free)**, **Free trial**, and **Sell through Microsoft** as the listing option, you must do the following technical configurations:
 
 * [Set up Microsoft and Azure AD accounts](#set-up-microsoft-and-azure-ad-accounts)
 * [Create a landing page](#create-a-landing-page)
 
-For Sell through Microsoft or transactable offer, you need to do the [API integrations](#technical-configuration) in addition to the basic setup.
+For Sell through Microsoft or transactable offer, you need to do the [API integrations](#api-integration) after the user purchase the offer, in addition to the basic setup.
 
 ### Set up Microsoft and Azure AD accounts
 
@@ -79,7 +79,7 @@ Consider the following approaches when building a landing page for the Teams app
 * Add ways to get support, such as FAQs, knowledge base, or contact email.
 * Provide a link that makes it easy for the subscriber to get back to the landing page. For example, include this link in your app’s About tab.
 
-### Offer configuration requirements
+### Technical requirements
 
 To configure your SaaS offer, you must furnish the following technical information during the offer configuration. When you create your SaaS offer, have the following technical information handy.
 
@@ -91,7 +91,7 @@ To configure your SaaS offer, you must furnish the following technical informati
 
 * **Azure AD application ID**: The Azure AD application ID is associated with your publisher ID in your Partner Center account. You must use the same application ID for all offers in that account.
 
-## Technical configuration
+## API integration
 
 When the users are redirected to the landing page from the configuration link, a set of user information is required to confirm and activate the subscription. You must integrate Microsoft Graph API and SaaS Fulfillment APIs to retrieve user information.
 
