@@ -64,7 +64,10 @@ To ensure your plugin works as intended, it's important to include good descript
    { 
      "id": "Work item search query", 
      "type": "query", 
-     "context": "command box", 
+     "context": [  
+            "compose",  
+            "commandBox"  
+          ], 
      "parameters": [ 
        { 
          "name": "Work item search string", 
