@@ -234,7 +234,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td></td>
             <td>&#x2713;*</td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td>&#x2713;*</td>
