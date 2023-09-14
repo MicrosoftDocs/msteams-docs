@@ -353,71 +353,76 @@ items:
         }
         ],
        ```
+       `fetchTask`: In the process of the initial invoke request, your service receives an activity object of type `fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a message to the embedded web view. Along with the standard bot activity properties. 
     1. Open the `teamsBot.js` file.
 
     1. Add the following code to your `teamsBot.js` file:
 
-    ```javascript
-    if (context._activity.name == "config/fetch") {
-      const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForDynamicSearch());
-      try {
-          return {
-              status: 200,
-              body: {
-                  config: {
-                      type: 'continue',
-                      value: {
-                          card: adaptiveCard,
-                          height: 400,
-                          title: 'Task module fetch response',
-                          width: 300
-                      }
-                  }
-              }
-          }
-      } catch (e) {
-          console.log(e);
-      }
-    }
-    ```
-    ```javascript
-    if (context._activity.name == "config/submit") {
-    
-      const choice = context._activity.value.data.choiceselect.split(" ")[0];
-      chosenFlow = choice;
-    
-      if (choice === "static_option_2") {
-          const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForStaticSearch());
-    
-          return {
-              status: 200,
-              body: {
-                  config: {
-                      type: 'continue',
-                      value: {
-                          card: adaptiveCard,
-                          height: 400,
-                          title: 'Task module submit response',
-                          width: 300
-                      }
-                  }
-              }
-          }
-      }
-      else {
-    
-          try {
-              return {
-                  status: 200,
-                  body: {
-                      config: {
-                          type: 'message',
-                          value: "end"
-                      }
-                  }
-              }
-          }
-    ```
+        ```javascript
+        if (context._activity.name == "config/fetch") {
+        const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForDynamicSearch());
+        try {
+            return {
+                status: 200,
+                body: {
+                    config: {
+                        type: 'continue',
+                        value: {
+                            card: adaptiveCard,
+                            height: 400,
+                            title: 'Task module fetch response',
+                            width: 300
+                        }
+                    }
+                }
+            }
+        } catch (e) {
+            console.log(e);
+        }
+        }
+        ```
+        `config/fetch`: You must invoke `config/fetch` task to start the bot configuration flow with a task object that contains either a `taskInfo` object with the Adaptive Card or a simple string message.
+
+        ```javascript
+        if (context._activity.name == "config/submit") {
+        
+        const choice = context._activity.value.data.choiceselect.split(" ")[0];
+        chosenFlow = choice;
+        
+        if (choice === "static_option_2") {
+            const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForStaticSearch());
+        
+            return {
+                status: 200,
+                body: {
+                    config: {
+                        type: 'continue',
+                        value: {
+                            card: adaptiveCard,
+                            height: 400,
+                            title: 'Task module submit response',
+                            width: 300
+                        }
+                    }
+                }
+            }
+        }
+        else {
+        
+            try {
+                return {
+                    status: 200,
+                    body: {
+                        config: {
+                            type: 'message',
+                            value: "end"
+                        }
+                    }
+                }
+            }
+        ```
+
+        `config/submit`: You must invoke the `config/submit` task for the bot to respond a task object that contains either a `taskInfo` object with the Adaptive Card or a simple string message.
 
     ## Build and run your first bot app locally
 
