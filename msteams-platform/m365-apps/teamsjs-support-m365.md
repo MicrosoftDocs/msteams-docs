@@ -99,7 +99,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -234,8 +234,8 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td></td>
             <td>&#x2713;*</td>
-            <td>&#x2713;</td>
             <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;*</td>
             <td></td>
@@ -345,7 +345,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -430,7 +430,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -447,7 +447,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -481,7 +481,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -706,7 +706,7 @@ Namespace used to open a dialog for installing an application.
             <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -1013,7 +1013,7 @@ Preview. Namespace providing functionality to start a chat with others.
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1093,8 +1093,8 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
             <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1110,8 +1110,8 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
             <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1968,7 +1968,7 @@ Preview. Allows your application to interact with the host Microsoft 365 applica
             <td></td>
             <td>&#x2713;*</td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;*</td>
             <td></td>
@@ -2151,7 +2151,7 @@ Namespace to open a share dialog for web content. For more information, see [Sha
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -2212,7 +2212,7 @@ Preview. Namespace to interact with the Stage View specific part of the library.
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -2334,7 +2334,7 @@ Namespace containing the set of APIs that support Teams-specific functionalities
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
