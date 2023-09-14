@@ -37,7 +37,7 @@ highlightedContent:
     - title: Enhance your app with Microsoft Graph
       itemType: how-to-guide
       url:  /graph/teams-concept-overview
-    - title: Publish your app to the Teams Store
+    - title: Publish your app to the Microsoft Teams Store
       itemType: deploy
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
     - title: Code samples
