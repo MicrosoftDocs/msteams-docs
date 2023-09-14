@@ -10,7 +10,7 @@ ms.date: 05/04/2023
 
 # Deep link to an application
 
-You can configure deep links to a tab, to open an app install dialog, to browse within the app, and more. Use deep links in [bot](~/bots/what-are-bots.md) and [connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages that inform users about changes to your tab, or to items within it. Deep links to custom apps are supported, however, if there's an app in the Teams store with the same app ID as the custom app ID specified in its custom app manifest, then deep link opens the app from the Teams store instead of the custom app.
+You can configure deep links to a tab, to open an app install dialog, to browse within the app, and more. Use deep links in [bot](~/bots/what-are-bots.md) and [connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages that inform users about changes to your tab, or to items within it. Deep links to custom apps are supported, however, if there's an app in the Microsoft Teams Store with the same app ID as the custom app ID specified in its custom app manifest, then deep link opens the app from the Teams Store instead of the custom app.
 
 If your app is approved for Teams mobile platform, you can create a deep link to the app on mobile. If you want the deep link to work on Teams iOS, you need the Apple App Store Connect Team ID for the deep link to work. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
@@ -45,7 +45,7 @@ Following are the different app IDs that are used for deep links:
 
 * Side loaded apps: Manifest ID
 * Apps submitted to org catalog: Org catalog ID
-* Apps submitted to Teams app store: Store ID
+* Apps submitted to Teams Store: Store ID
 
 #### Configure deep link using TeamsJS library 
 

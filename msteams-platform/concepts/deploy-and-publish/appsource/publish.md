@@ -1,32 +1,32 @@
 ---
-title: Overview - Publish your app to the Microsoft Teams store
-description: Publish your app to Microsoft Teams store or AppSource. What to expect after you submit, tips for rapid approval and publishing apps linked to a SaaS offer.
+title: Overview - Publish your app to the Microsoft Teams Store
+description: Publish your app to Teams Store or AppSource. What to expect after you submit, tips for rapid approval and publishing apps linked to a SaaS offer.
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 12/15/2022
 ---
-# Publish your app to the Microsoft Teams store
+# Publish your app to the Microsoft Teams Store
 
-You can distribute your app directly to the store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the store, you can instantly reach potential customers.
+You can distribute your app directly to the Teams Store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the Teams Store, you can instantly reach potential customers.
 
-Apps published to the Teams store also automatically list on [the Microsoft commercial marketplace](https://appsource.microsoft.com), which is the official marketplace for Microsoft 365 apps and solutions.
+Apps published to the Teams Store also automatically list on [the Microsoft commercial marketplace](https://appsource.microsoft.com), which is the official marketplace for Microsoft 365 apps and solutions.
 
 ## Understand the publishing process
 
-If your app is production ready, you can begin the process of getting it listed on the Teams store.
+If your app is production ready, you can begin the process of getting it listed on the Teams Store.
 
 > [!TIP]
 > Following the pre-submission steps closely can increase the possibility that Microsoft approves your app for publishing.
 
-:::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Diagram shows the Teams store publishing process for Teams apps." lightbox="../../../assets/images/submission/teams-app-store-publish-process.png":::
+:::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Diagram shows the Teams Store publishing process for Teams apps." lightbox="../../../assets/images/submission/teams-app-store-publish-process.png":::
 
-1. [Review the Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) to ensure your app meets Teams app and store standards.
+1. [Review the Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) to ensure your app meets Teams app and Teams Store standards.
 
 1. [Create a Partner Center developer account](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md).
 
-1. [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md), which includes running automated tests, compiling test notes, creating a store listing, among other important tasks to help expedite the review process.
+1. [Prepare your Teams Store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md), which includes running automated tests, compiling test notes, creating a Teams Store listing, among other important tasks to help expedite the review process.
 
 1. [Submit your app](/office/dev/store/add-in-submission-guide) through Partner Center.
 
@@ -41,7 +41,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
 * **Guided app publish through concierge service**
 
-  If there are no issues observed with your app, then your app is approved and published to the Teams store. On the other hand, if the issues are present, then you receive an automated validation report from Partner Center with the failure details. To help you successfully publish your app to the Teams store and guide you through this process, the validation team sends you a personalized email from our concierge service [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) that includes the following information:
+  If there are no issues observed with your app, then your app is approved and published to the Teams Store. On the other hand, if the issues are present, then you receive an automated validation report from Partner Center with the failure details. To help you successfully publish your app to the Teams Store and guide you through this process, the validation team sends you a personalized email from our concierge service [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) that includes the following information:
 
   * Summary of all issues
 
@@ -61,9 +61,9 @@ If your app is production ready, you can begin the process of getting it listed 
 
   After you've reviewed the list of issues, fix all the reported issues and share the updated app package over email, for the validation team to revalidate your app thoroughly. If you've any queries related to the reported issues, contact the validation team at [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com).
 
-  If there are issues remaining or regression issues observed in your app, the validation team shares an updated validation report with you. If your app had blockers, you might see new issues reported when your app is validated after the blockers are resolved. Sometimes, the validation team has also noticed regression issues in apps post deployment of fixes. It takes a few resubmissions to close all the issues for an app that consists of bugs, and get it approved to publish to the Teams store.
+  If there are issues remaining or regression issues observed in your app, the validation team shares an updated validation report with you. If your app had blockers, you might see new issues reported when your app is validated after the blockers are resolved. Sometimes, the validation team has also noticed regression issues in apps post deployment of fixes. It takes a few resubmissions to close all the issues for an app that consists of bugs, and get it approved to publish to the Teams Store.
 
-  After all reported issues are closed and final submission is made in the Partner Center, the validation team will approve and publish your app. Allow at least one business day for the app to be available in the Teams store.
+  After all reported issues are closed and final submission is made in the Partner Center, the validation team will approve and publish your app. Allow at least one business day for the app to be available in the Teams Store.
 
 * **Analyze app usage**
 
@@ -75,21 +75,21 @@ If your app is production ready, you can begin the process of getting it listed 
 
 * **During design phase**
 
-  Review the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements. If you build your app in line with these guidelines, then it prevents any rework due to non-adherence to store policies.
+  Review the [Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the Teams Store requirements. If you build your app in line with these guidelines, then it prevents any rework due to non-adherence to Teams Store policies.
 
 * **Prior to app submission**
 
   1. [Create your Partner Center account](prepare/create-partner-center-dev-account.md) well in advance. If you run into any challenges with your [Partner Center account](prepare/create-partner-center-dev-account.md), create a [support ticket](/azure/marketplace/partner-center-portal/support).
 
-  1. Review the [store validation guidelines](prepare/teams-store-validation-guidelines.md) again to ensure that your app is in alignment with the store requirements. Review helps reduce the number of issues observed in your app and so, the time taken to approve your app.
+  1. Review the [Teams Store validation guidelines](prepare/teams-store-validation-guidelines.md) again to ensure that your app is in alignment with the Teams Store requirements. Review helps reduce the number of issues observed in your app and so, the time taken to approve your app.
 
   1. Test and retest your app:
 
      1. Validate your app package using the Teams [Developer Portal](https://dev.teams.microsoft.com/home) to identify and fix any package errors.
 
-        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Teams store app validation in Developer Portal" lightbox="../../../assets/images/submission/teams-validation-developer-portal.png":::
+        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Teams Store app validation in Developer Portal" lightbox="../../../assets/images/submission/teams-validation-developer-portal.png":::
 
-     1. Self-test your app thoroughly prior to app submission to ensure it adheres with store policies. Sideload the app in Teams and test the end to end user flows for your app. Ensure the functionality works as expected, links aren't broken, user experience isn't blocked, and any limitations are clearly highlighted.
+     1. Self-test your app thoroughly prior to app submission to ensure it adheres with Teams Store policies. Sideload the app in Teams and test the end to end user flows for your app. Ensure the functionality works as expected, links aren't broken, user experience isn't blocked, and any limitations are clearly highlighted.
 
      1. Test your app across desktop, web, and mobile clients. Ensure that the app is responsive across different form factors.
   
@@ -121,7 +121,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
 * **During design phase**
 
-  Review the [store validation guidelines specific to apps published with linked SaaS offers](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements and [Microsoft Commercial Marketplace policies applicable to Teams apps linked to SaaS offers](/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers). If you build your app in line with these guidelines, then it prevents any rework due to nonadherence to store policies.
+  Review the [Teams Store validation guidelines specific to apps published with linked SaaS offers](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the Teams Store requirements and [Microsoft Commercial Marketplace policies applicable to Teams apps linked to SaaS offers](/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers). If you build your app in line with these guidelines, then it prevents any rework due to nonadherence to Teams Store policies.
 
 * **Prior to app submission**
 
@@ -155,9 +155,9 @@ If your app is production ready, you can begin the process of getting it listed 
   
   1. You must ensure users who are assigned licenses have access to the accurate purchased plan features described in your plan’s listing.
 
-## Teams store search experience
+## Teams Store search experience
 
-After an app is published to the Teams store, users can find apps by going to the **Apps** icon from the left pane in Teams. Users can use the search box in the upper left corner or browse by category to see if a particular app or program has a version for Teams.
+After an app is published to the Teams Store, users can find apps by going to the **Apps** icon from the left pane in Teams. Users can use the search box in the upper left corner or browse by category to see if a particular app or program has a version for Teams.
 
 Teams provides intelligent search experience by matching the user input to the fields provided by the developer across appName, publisher name, short description, long description, specific keywords and category names in app manifest or Partner Center. The search results display apps that are closest match to the user's specified characters.
 
@@ -165,7 +165,7 @@ Teams provides intelligent search experience by matching the user input to the f
 
 | **Training name** | **Description** |
 |--- | --- |
-| [Publish Teams apps in Microsoft Teams store](/training/modules/microsoft-teams-publish-app-to-store/) | This training module is about publishing your app to Teams app store. It focuses primarily on app validation process. |
+| [Publish Teams apps in Microsoft Teams Store](/training/modules/microsoft-teams-publish-app-to-store/) | This training module is about publishing your app to Teams Store. It focuses primarily on app validation process. |
 
 ## See also
 
@@ -175,4 +175,4 @@ Teams provides intelligent search experience by matching the user input to the f
 * [Plan onboarding experience for users](../../design/planning-checklist.md#plan-beyond-app-building)
 * [Distribute tab apps on mobile](../../../tabs/design/tabs-mobile.md#distribution)
 * [Test preview for monetized apps](prepare/Test-preview-for-monetized-apps.md)
-* [Microsoft Teams store ranking parameters](post-publish/teams-store-ranking-parameters.md)
+* [Microsoft Teams Store ranking parameters](post-publish/teams-store-ranking-parameters.md)
