@@ -834,7 +834,7 @@ To build and run your app:
     1. Registers your application for uploading in Teams.
     1. Starts your application backend running locally.
     1. Starts your application front-end hosted locally.
-    1. Starts Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
+    1. Starts Teams in a web browser with a command to instruct Teams to upload the application (the URL is registered inside the application manifest).
 
     </details>
 

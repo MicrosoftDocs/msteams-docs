@@ -42,7 +42,7 @@ To debug your app after you create a project, perform the following steps:
    > [!NOTE]
    > In this scenario the project name is MyTeamsApp1.
 
-   Your Microsoft 365 account needs to have the side loading permission before you sign in. Ensure that your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
+   Your Microsoft 365 account needs to have the uploading permission before you sign in. Ensure that your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
 
 1. Sign in to your **Microsoft 365 Account** and then select **Continue**.
 
@@ -110,7 +110,7 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
    > [!NOTE]
    > In this scenario the project name is MyTeamsApp1.
 
-   Your Microsoft 365 account needs to have the side loading permission before you sign in.  Ensure your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
+   Your Microsoft 365 account needs to have the uploading permission before you sign in.  Ensure your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
 
 1. Sign in to your **Microsoft 365 Account**, then select **Continue**.
 
