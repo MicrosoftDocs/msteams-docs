@@ -18,13 +18,17 @@ Get started with Teams AI library using the **ChefBot** sample. It's designed to
 
 ## Set up your development environment
 
-To get started, ensure that you have the following tools:
+### Prerequisites
 
-* Microsoft Teams
-* [Teams Toolkit](../../../toolkit/install-Teams-Toolkit.md)
-* [NodeJS](https://nodejs.org/en/)
+* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+* [Node 18.x LTS](https://nodejs.org)
+
+Ensure that you have the following to run the sample:
+
+* Microsoft Teams with [custom apps enabled](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading), or get a [free sandbox developer tenant with the Microsoft 365 Developer Program.](https://learn.microsoft.com/microsoftteams/platform/m365-apps/prerequisites)
+* [Teams Toolkit for VS Code](../../../toolkit/install-Teams-Toolkit.md)
+* [Yarn](https://classic.yarnpkg.com/lang/en/docs/install)
 * [OpenAI](https://openai.com/api/) key
-* Global Administrator access to a [Microsoft 365 tenant](https://developer.microsoft.com/microsoft-365/dev-program?ocid=MSlearn&WT.mc_id=m365-16105-cxa) and [Enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading)
 
 ## Build and run the sample app
 
@@ -39,7 +43,7 @@ To get started, ensure that you have the following tools:
 1. Run the following command to go to the app folder:
 
    ```bash
-   cd samples/js/samples/04.ai.a.teamsChefBot
+   cd teams-ai/js/samples/04.ai.a.teamsChefBot
    ```
 
 1. Update the **SECRET_OPENAI_API_KEY** in the `.env.local.user` configuration file.
