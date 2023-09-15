@@ -249,7 +249,7 @@ After your tab is uploaded to Microsoft Teams through **ngrok** and successfully
 
 ### Upload your application to Teams
 
-1. Go to Teams and select **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
+1. Go to Teams and select **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Microsoft Teams Store":::.
 1. Select **Manage your apps** > **Upload an app** > **Upload a custom app**.
 1. Go to your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**.
 
@@ -617,7 +617,7 @@ After you've installed the required tools, set up the development environment.
 
 ### Install Microsoft Teams Toolkit
 
-The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. You can use the toolkit with Visual Studio, or as a Command Line Interface (called `teamsfx`).
+The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. You can use the toolkit with Visual Studio, or as a Command Line Interface (called `teamsfx`).
 
 # [Latest version of the Visual Studio](#tab/vs)
 
@@ -678,7 +678,7 @@ Do you already have a tenant and the admin access? Let's check if you really do!
 
 Verify if you can sideload apps in Teams:
 
-1. In the Teams client, select **Store** icon.
+1. In the Teams client, select **Apps**.
 1. Select **Manage your apps**.
 1. Select **Upload a custom app**. If you see Upload a custom app option, sideloading apps is enabled.
 
