@@ -468,22 +468,22 @@ items:
     1. Sign in with your Microsoft 365 account, if prompted.
 
     1. Select **Add to a team**, **Add to a chat**, or **Add to a meeting** when prompted to sideload the bot app onto Teams on your local machine.
-
-       :::image type="content" source="../../assets/images/bots/group-chat-add-Bot.png" alt-text="Screenshot shows add your bot to chat.":::
+     
+       :::image type="content" source="~/assets/images/bots/group-chat-add-Bot.png" alt-text="Screenshot shows add your bot to chat.":::
 
     1. Enter the name of a person or chat in the search field.
 
-       :::image type="content" source="../../assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot shows bot added to a chat.":::
+       :::image type="content" source="~/assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot shows bot added to a chat.":::
 
     1. Select **Set up a bot**.
         
-       :::image type="content" source="../../assets/images/bots/set-up-a-bot.png" alt-text="Screenshot shows set up a bot in chat.":::       
+       :::image type="content" source="~/assets/images/bots/set-up-a-bot.png" alt-text="Screenshot shows set up a bot in chat.":::       
 
         Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
 
     1. Go to the chat and **@mention** the bot in the message compose area and select **Send**.
     
-       :::image type="content" source="../../assets/images/bots/mention-bot.png" alt-text="Screenshot shows the interaction of bot.":::
+       :::image type="content" source="~/assets/images/bots/mention-bot.png" alt-text="Screenshot shows the interaction of bot.":::
     
       <!-- markdownlint-disable MD033 -->
       <details>
@@ -633,35 +633,35 @@ items:
 
     1. Select **Add to a team**, **Add to a chat**, or **Add to a meeting** when prompted to sideload the bot app onto Teams on your local machine.
 
-       :::image type="content" source="../../assets/images/bots/group-chat-add-Bot.png" alt-text="Screenshot shows add your bot to chat.":::
+       :::image type="content" source="~/assets/images/bots/group-chat-add-Bot.png" alt-text="Screenshot shows add your bot to chat.":::
 
     1. Enter the name of a person or chat in the search field.
 
-       :::image type="content" source="../../assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot shows bot added to a chat.":::
+       :::image type="content" source="~/assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot shows bot added to a chat.":::
 
     1. Select **Set up a bot**.
         
-       :::image type="content" source="../../assets/images/bots/set-up-a-bot.png" alt-text="Screenshot shows set up a bot in chat.":::       
+       :::image type="content" source="~/assets/images/bots/set-up-a-bot.png" alt-text="Screenshot shows set up a bot in chat.":::       
 
         Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
 
     1. Go to the chat and **@mention** the bot in the message compose area and select **Send**.
     
-       :::image type="content" source="../../assets/images/bots/mention-bot.png" alt-text="Screenshot shows the interaction of bot.":::
+       :::image type="content" source="~/assets/images/bots/mention-bot.png" alt-text="Screenshot shows the interaction of bot.":::
     
     1. When you hover over the bot from the conversation, an Adaptive Card appears. Select the **Settings** icon in the Adaptive Card.
 
-       :::image type="content" source="../../assets/images/bots/bot-adaptive-card-interaction.png" alt-text="Screenshot shows the Adaptive Card with settings icon.":::
+       :::image type="content" source="~/assets/images/bots/bot-adaptive-card-interaction.png" alt-text="Screenshot shows the Adaptive Card with settings icon.":::
 
        A bot configuration Adaptive Card appears.
 
     1. Reconfigure the bot settings and select **Submit**.
 
-       :::image type="content" source="../../assets/images/bots/reconfigure-bot-settings.png" alt-text="Screenshot shows the Adaptive Card with settings icon to reconfigure.":::
+       :::image type="content" source="~/assets/images/bots/reconfigure-bot-settings.png" alt-text="Screenshot shows the Adaptive Card with settings icon to reconfigure.":::
 
        The bot sends a response message.
 
-       :::image type="content" source="../../assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows Adaptive Card with response message.":::
+       :::image type="content" source="~/assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows Adaptive Card with response message.":::
       
       <!-- markdownlint-disable MD033 -->
       <details>
