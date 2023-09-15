@@ -161,7 +161,7 @@ You can use this method to verify uploading permission only after you have creat
 
 1. Verify if you can see the option **Sideloading enabled** as shown in the following image:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading_1.png" alt-text="Screenshot shows the Uploading enabled option highlighted in red.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading_1.png" alt-text="Screenshot shows the uploading enabled option highlighted in red.":::
 
 </details>
 <br>
