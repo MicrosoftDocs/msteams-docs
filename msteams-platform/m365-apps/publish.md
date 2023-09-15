@@ -17,7 +17,7 @@ Microsoft Teams supports Microsoft 365-enabled Teams apps for production. You ca
 
 Distribution options and processes for Microsoft 365-enabled Teams apps are the same as for traditional Teams apps.
 
-After it's published, your app will be discoverable as an installable app from the Outlook and Microsoft 365 app stores, in addition to the Teams store. Your app uses the permissions defined in Teams across Outlook and Microsoft 365. Teams admins can [manage access to Teams apps across Microsoft 365](/microsoftteams/manage-third-party-teams-apps) for users in their organization.
+After it's published, your app will be discoverable as an installable app from the Outlook and Microsoft 365 app stores, in addition to the Microsoft Teams Store. Your app uses the permissions defined in Teams across Outlook and Microsoft 365. Teams admins can [manage access to Teams apps across Microsoft 365](/microsoftteams/manage-third-party-teams-apps) for users in their organization.
 
 :::image type="content" source="images/outlook-office-app-store.png" alt-text="The screenshot is an example that shows Outlook and microsoft365.com (formerly office.com) install screens for the SurveyMonkey and MURAL Teams apps.":::
 
@@ -46,7 +46,7 @@ Global admin can upload and pre-install the app package from [Microsoft admin](h
 The [Microsoft commercial marketplace](https://appsource.microsoft.com/) (Microsoft AppSource) submission process for Teams apps enabled for Outlook and Microsoft 365 app is same as traditional Teams apps. The difference is you need to use app manifest (previously called Teams app manifest) [version 1.13](../tabs/how-to/using-teams-client-library.md) in your app package, which introduces support for Teams apps that run across Microsoft 365.
 
 > [!TIP]
-> Use Teams Developer Portal to [validate your app package](https://dev.teams.microsoft.com/validation) to resolve any errors or warnings before submitting it to the Teams store (through [Microsoft Partner Network](https://partner.microsoft.com/)).
+> Use Teams Developer Portal to [validate your app package](https://dev.teams.microsoft.com/validation) to resolve any errors or warnings before submitting it to the Teams Store (through [Microsoft Partner Network](https://partner.microsoft.com/)).
 
 See the following video to learn more about multi-tenant apps:
 

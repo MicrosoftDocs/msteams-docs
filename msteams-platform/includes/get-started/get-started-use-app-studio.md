@@ -9,7 +9,7 @@ Complete the following steps to update the app package:
 
 1. To install App Studio in Teams, select the **Apps** icon at the bottom of the left-hand bar, and search for **App Studio**:
 
-    <img  width="450px" alt="Finding App Studio in the Store View" src="~/assets/images/get-started/searchforAppStudio.png"/>
+    <img  width="450px" alt="Finding App Studio in the Microsoft Teams Store View" src="~/assets/images/get-started/searchforAppStudio.png"/>
 
 1. Select the **App Studio** tile and choose **Install**. The App Studio is installed:
 
