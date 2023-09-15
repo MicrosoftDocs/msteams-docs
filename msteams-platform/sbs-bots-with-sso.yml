@@ -32,7 +32,7 @@ items:
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
-     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) |  Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place. |
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) |  Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, calls, and all-in-one place. |
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
      | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
      | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
@@ -140,15 +140,9 @@ items:
 
        :::image type="content" source="~/assets/images/bots/expose-api-add-uri.png" alt-text="Screenshot shows the option to add Application ID URI.":::
 
-    1. Update the **Application ID URI** in the `api://botid-{AppID}` or `api://botid-{AppID}` format and select **Save**.
+    1. Update the **Application ID URI** in the `api://botid-{AppID}` format and select **Save**.
 
        :::image type="content" source="~/assets/images/bots/app-id-uri1.png" alt-text="Screenshot shows the option to add the app ID URI and save.":::
-    
-    <!--
-       > [!NOTE]
-       > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
-       > For example: `api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
-    -->  
 
     [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
 
@@ -213,7 +207,7 @@ items:
 
     1. Select **F5**  to run the project.
 
-    1. Select **Yes** if the following dialog appears:
+    1. If a **Security Warning** dialog appears, select **Yes**.
 
         :::image type="content" source="~/assets/images/bots/certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
 
@@ -242,7 +236,7 @@ items:
 - title: Upload the bot in Teams
   durationInMinutes: 2
   content: |
-     1. In your cloned repository, go to **Microsoft-Teams-Samples > samples** > **bot-file-upload** > **csharp** folder, and select **TeamsFileUpload.csproj** file. 
+     1. In your cloned repository, go to **Microsoft-Teams-Samples > samples** > **bot-conversation-sso-quickstart** > **csharp_dotnetcore** folder, and select **BotConversationSsoQuickstart.sln** file. 
      1. Create a .zip file with the following files that are present in the **appPackage** folder: 
 
         * manifest.json
@@ -276,15 +270,15 @@ items:
 
          :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request1.png" alt-text="Screenshot of additional permissions with Continue option highlighted in red.":::
         
-        > [!NOTE]
-        > Now you’ve configured SSO with your bot app and it's the only time you'll have to give consent.
+         > [!NOTE]
+         > Now you’ve configured SSO with your bot app and it's the only time you'll have to give consent.
 
       1. For mobile device, select **Accept**.
 
-        > [!NOTE]
-        > Now you’ve configured SSO with your bot app in mobile, and it's the only time you'll have to give consent.
+         > [!NOTE]
+         > Now you’ve configured SSO with your bot app in mobile, and it's the only time you'll have to give consent.
 
-      :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Screenshot of bot SSO output after you’ve successfully completed the step-by-step guide.":::
+         :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Screenshot of bot SSO output after you’ve successfully completed the step-by-step guide.":::
 
 
 
