@@ -13,13 +13,15 @@ ms.date: 12/09/2022
 
 Consider the following points before you start to implement the responsive tabs for your app in mobile:
 
-* **Start small on functionalities:** Consider cross-device functionality of Teams app.
+* **Start small on functionalities:** Consider cross-device functionality for the Teams app.
 
-For example, if you've a well performing app on desktop, you can explore to build similar app on mobile. Initially, it can be difficult to shift entire desktop experience on mobile. You can start with basic but common scenarios. Add functionalities and capabilities after you gather more insight and user feedback.
+    For example, if you've a well performing app on desktop, you can explore to build similar app on mobile. Initially, it can be difficult to shift entire desktop experience on mobile, but you can start with basic and common scenarios. Add functionalities and capabilities after you gather more insight and user feedback.
 
 * **Focus on user roles:** Ensure to target appropriate user role on mobile.
 
-For example, if you're building an app that provides data visualization tools to end users such as data analysts and senior managers, both of them can use your app on Teams mobile. You can decide to cater to all the roles that you have on your desktop app however, it's recommended to start with user role with a larger base and possible early adopters for smaller screen experience. For instance, as per previous example, the data analysts are the appropriate user roles to target first. You can gradually add functionalities to support other user roles on your Teams mobile.
+    For example, if you're building an app that provides data visualization tools to end users such as data analysts and senior managers, both of them can use your app on Teams mobile. You can decide to cater to all the roles that you have on your desktop app however, it's recommended to start with user role with a larger base and possible early adopters for smaller screen experience.
+
+    For instance, as per previous example, the data analysts are the appropriate user roles to target first. You can gradually add functionalities to support other user roles on your Teams mobile.
 
 ## Understand different stages to build apps
 
