@@ -45,7 +45,7 @@ items:
     After you've installed the required tools, set up the development environment.
     
     ### Install the Teams Toolkit
-    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. 
+    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Microsoft Teams Store, and more. 
     
     You can use the toolkit with Visual Studio Code or CLI (command-line interface) called `TeamsFx`.
     
@@ -88,7 +88,7 @@ items:
     
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
     To verify sideload apps in Teams:
-    1. In the Teams client, select **Store** .
+    1. In the Teams client, select **Apps** .
     1. Select **Manage your apps**.
     1. Select **Publish an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.

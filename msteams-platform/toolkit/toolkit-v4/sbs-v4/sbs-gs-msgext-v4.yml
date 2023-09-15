@@ -47,7 +47,7 @@ items:
    | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
    | &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OR [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | A browser DevTools extension for the open-source React JavaScript library. |
    | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, a browser-based tool that lets you run a query from Microsoft Graph data. |
-   | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
+   | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store. |
 
 
    > [!TIP]
@@ -61,7 +61,7 @@ items:
 
    ### Install the Teams Toolkit
 
-   The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. 
+   The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
     
    You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`.
 
@@ -123,7 +123,7 @@ items:
 
    Verify if you can sideload apps in Teams:
 
-    1. In the Teams client, select the **Store** icon.
+    1. In the Teams client, select the **Apps**.
     1. Select **Manage your apps**.
     1. Select **Publish an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
@@ -499,7 +499,7 @@ items:
 
     You can open a sideloaded Teams app from the list of sideloaded apps. 
 
-    1. Select the **Store** icon from the Teams sidebar.
+    1. Select the **Apps** from the Teams sidebar.
     1. Select the **Manage apps**.
 
         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/sideloaded-apps-v4.png" alt-text="Screenshot that shows sideloaded apps":::
