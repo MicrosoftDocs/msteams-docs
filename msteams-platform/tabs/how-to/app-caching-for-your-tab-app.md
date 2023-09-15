@@ -95,6 +95,8 @@ To enable app caching for your app, in the `app-cache-tab.tsx` file (or the equi
 
 1. Call `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs.
 1. Pass `contentUrl` and `entityId` into the load handler to route to the correct page within your app. It also invokes `notifySuccess` or `notifyFailure` to notify Teams client when the app initialization flow is complete.
+1. SDK passes the `contentUrl` and `entityId` parameters to the onload handlers to render the identified content and resume your app. Ensure that you call `notifySuccess` or `notifyFailure` to notify the Teams client when the app resume flow is complete.
+
    * [contentUrl](create-tab-pages/configuration-page.md#modify-or-remove-a-tab): Add content page URL.
    * [entityId](create-tab-pages/configuration-page.md#modify-or-remove-a-tab): Add a unique identifier.
 
