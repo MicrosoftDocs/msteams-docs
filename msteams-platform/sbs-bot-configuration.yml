@@ -156,9 +156,6 @@ items:
     1. [How to set up a new bot project with Teams Toolkit.](#create-your-bot-project-workspace)
     1. [About the directory structure of your app project.](#take-a-tour-of-the-bot-app-source-code)
 
-    > [!IMPORTANT]
-    > Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
-
     ## Create your bot project workspace
 
     If the prerequisites are in place, let's begin!
