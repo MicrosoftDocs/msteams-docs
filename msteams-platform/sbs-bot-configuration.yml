@@ -354,6 +354,7 @@ items:
         ],
        ```
        `fetchTask`: In the process of the initial invoke request, your service receives an activity object of type `fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a message to the embedded web view. Along with the standard bot activity properties. 
+    
     1. Open the `teamsBot.js` file.
 
     1. Add the following code to your `teamsBot.js` file:
@@ -466,20 +467,24 @@ items:
 
     1. Sign in with your Microsoft 365 account, if prompted.
 
-    1. Select **Add** when prompted to sideload the bot app onto Teams on your local machine or use the dropdown menu to add your bot app to a team, chat, or meeting.
+    1. Select **Add to a team**, **Add to a chat**, or **Add to a meeting** when prompted to sideload the bot app onto Teams on your local machine.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/add-bot-app-local-debug.png" alt-text="Screenshot shows the bot is being added on Teams client.":::
+       :::image type="content" source="../../assets/images/bots/group-chat-add-Bot.png" alt-text="Screenshot shows add your bot to chat.":::
+
+    1. Enter the name of a person or chat in the search field.
+
+       :::image type="content" source="../../assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot shows bot added to a chat.":::
+
+    1. Select **Set up a bot**.
+        
+       :::image type="content" source="../../assets/images/bots/set-up-a-bot.png" alt-text="Screenshot shows set up a bot in chat.":::       
 
         Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-added-bot-local-debug.png" alt-text="Screenshot shows the bot is running on Teams client.":::
-
-        You can type `welcome` to show an introduction card, and type `learn` to go to adaptive card and bot command documentation.
-
-         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/bot-app-learn-local-debug.png" alt-text="Screenshot shows the learn card in the bot on Teams client.":::       
-
-        You can do normal debugging activities, such as setting breakpoints, as with any other web application. Open the `bot/teamsBot.js` file and locate the `onMessage()` method. Set a breakpoint on any case. Then, type some text.
-
+    1. Go to the chat and **@mention** the bot in the message compose area and select **Send**.
+    
+       :::image type="content" source="../../assets/images/bots/mention-bot.png" alt-text="Screenshot shows the interaction of bot.":::
+    
       <!-- markdownlint-disable MD033 -->
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
@@ -545,8 +550,119 @@ items:
 
     ---
 
-      [!INCLUDE [Provision and Deploy your app on Azure](~/includes/get-started/azure-provisioning-instructions-bot.md)]
+    ## Deploy your app to Azure
 
+      Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the bot app.
+      <br>
+      <br>
+      <details>
+      <summary>What's the difference between Provision and Deploy?</summary>
+      <br>
+      The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. The <b>Deploy</b> step copies the code for your app to the resources you created during the provision step. It's common to deploy multiple times without provisioning new resources. Since the provision step can take some time to complete, it's separate from the deployment step.
+      </details>
+      <br>
+    # [Visual Studio Code](#tab/vscode)
+
+      Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+
+    1. Select **Provision**.
+
+         :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the selection of provision in the cloud under Teams toolkit.":::
+
+    1. Select a subscription to use for the Azure resources.
+
+         :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing the subscription to use for the Azure resources.":::
+
+      Your app is hosted using Azure resources.
+
+        A dialog warns you that costs may be incurred when running resources in Azure.
+
+    1. Select **Provision**.
+
+         :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot showing a dialog box that costs may be incurred when running resources in Azure.":::
+
+         The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
+
+         ::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing a notice which displays 'hellomsg' successfully provisioned in the cloud.":::
+
+         If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
+
+         The provisioned resource appears in the **ENVIRONMENT** section.
+
+         :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot showing the resource being provisioned in the environment section.":::
+
+    1. Select **Deploy** from the **LIFECYCLE** panel after provisioning is complete.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot showing deploy to cloud.":::
+
+       As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
+
+    Now, you can use the same process to deploy your Bot and Message Extension apps to Azure.
+
+    # [Command Line](#tab/cli)
+
+    In your terminal window:
+
+    1. Run `teamsfx provision`.
+
+        ``` bash
+        teamsfx provision
+        ```
+
+        When prompted, select an Azure subscription to use Azure resources.
+
+        Your app is hosted using Azure resources.
+
+    1. Run `teamsfx deploy`.
+
+        ``` bash
+        teamsfx deploy
+        ```
+
+    ---
+
+    ## Run the deployed app
+
+    Once the provisioning and deployment steps are complete:
+
+    1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
+    1. Select **Launch Remote (Edge)** from the launch configuration drop-down.
+    1. Select the **Start debugging (F5)**. You'll be prompted to sideload the bot app onto Teams.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely.":::
+
+    1. Select **Add to a team**, **Add to a chat**, or **Add to a meeting** when prompted to sideload the bot app onto Teams on your local machine.
+
+       :::image type="content" source="../../assets/images/bots/group-chat-add-Bot.png" alt-text="Screenshot shows add your bot to chat.":::
+
+    1. Enter the name of a person or chat in the search field.
+
+       :::image type="content" source="../../assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot shows bot added to a chat.":::
+
+    1. Select **Set up a bot**.
+        
+       :::image type="content" source="../../assets/images/bots/set-up-a-bot.png" alt-text="Screenshot shows set up a bot in chat.":::       
+
+        Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
+
+    1. Go to the chat and **@mention** the bot in the message compose area and select **Send**.
+    
+       :::image type="content" source="../../assets/images/bots/mention-bot.png" alt-text="Screenshot shows the interaction of bot.":::
+    
+    1. When you hover over the bot from the conversation, an Adaptive Card appears. Select the **Settings** icon in the Adaptive Card.
+
+       :::image type="content" source="../../assets/images/bots/bot-adaptive-card-interaction.png" alt-text="Screenshot shows the Adaptive Card with settings icon.":::
+
+       A bot configuration Adaptive Card appears.
+
+    1. Reconfigure the bot settings and select **Submit**.
+
+       :::image type="content" source="../../assets/images/bots/reconfigure-bot-settings.png" alt-text="Screenshot shows the Adaptive Card with settings icon to reconfigure.":::
+
+       The bot sends a response message.
+
+       :::image type="content" source="../../assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows Adaptive Card with response message.":::
+      
       <!-- markdownlint-disable MD033 -->
       <details>
       <summary>Learn what happens when you deployed your app to Azure</summary>
@@ -569,8 +685,8 @@ items:
 
     You've done it!
 
-    You've created a bot app.
+    You've created a bot configuration app.
 
-    Now that you've learned to create a basic app, you can move on to creating more complex apps. Follow the procedures to build and deploy the app, and your app will have multiple features.
+    Now that you've learned to create a bot configuration app.
 
-    You've completed the tutorial to build bot with JavaScript.
+    You've completed the tutorial.
