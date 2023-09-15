@@ -8,55 +8,57 @@ ms.localizationpriority: medium
 
 # Communication flow for Teams bot apps
 
-This article describes the communication flow and how the traffic is routed between a user in Microsoft Teams and a bot application running in Azure. This information helps you learn how to inspect the traffic and understand the user data flow in transit and at rest for bots in Teams.
+Quickly learn about the communication flow and how the traffic is routed between a user in Microsoft Teams and a bot application that runs in Azure. This information helps you learn how to inspect the traffic and understand the user data flow in transit and at rest for bots in Teams.
 
-This article covers two use cases that involve messaging bots and calling bots for Microsoft Teams. It answers frequently asked questions and provides best practices for how to integrate and secure the network connectivity for your Teams bots.
+The use cases explained here are messaging bots and calling bots for Microsoft Teams. This article provide answers to frequently asked questions and best practices for how to integrate and secure the network connectivity for your Teams bots.
 
 > [!NOTE]
-> This document applies to customers using Microsoft 365 worldwide or United States Government Community Cloud (GCC) – it does not apply to other cloud endpoints.
+> This article is applicable to customers using Microsoft 365 worldwide or United States Government Community Cloud (GCC) and not applicable to other cloud endpoints.
 
 ## Architecture and data flow
 
-The following diagram illustrates the communication flow between the Teams client and your bot application running on Azure
+The following diagram illustrates the communication flow between the Teams client and your bot application that runs on Azure.
 
-The following sections explain the data flow shown in the diagram.
+:::image type="content" source="../assets/images/bots/communication-flow.png" alt-text="The diagram illustrates the communication flow between Teams client and Azure bot application.":::
 
-### Teams app manifest
+The data flow shown in the diagram is explained as follows:
 
-The Teams app manifest contains the definition of the bot capabilities and application ID registered in Azure AD. Teams users can only send and receive messages to and from your bot if they have the application installed directly (personal scope) in Teams or if the user belongs to a team, group chat, or meeting where the bot is also installed with permissions to read the rosters.
+1. Teams app manifest
 
-### Teams client connection
+The app manifest contains the definition of bot capabilities and application ID registered in Azure AD. Teams users can send and receive messages to and from your bot if the application is installed directly (personal scope) in Teams or if the user belongs to a team, group chat, or a meeting where the bot is installed with permissions to read the rosters.
 
-The Teams client can run from any location or device (web, desktop, mobile) only if it has access to Microsoft Office 365 endpoints, as defined in [managing Office 365 endpoints](/microsoft-365/enterprise/managing-office-365-endpoints). No extra IP, port, protocol, or FQDN is required to use bots in Teams.
+2. Teams client connection
 
-### Bot messages and calls signaling transit via the Teams service
+The Teams client can run the bot from any location or device (web, desktop, and mobile) only if the bot has access to Microsoft Office 365 endpoints, as defined in [managing Office 365 endpoints](/microsoft-365/enterprise/managing-office-365-endpoints). Extra IP, port, protocol, or FQDN are not required to use bots in Teams.
 
-For messaging bots, chat messages are sent to and received from the Teams service, hosted by Microsoft (3a).
-For calling bots, the Teams service sends the notification for incoming calls and provides the endpoints for the media streams, call signaling, and control plane (3b).
+3. Bot messages and calls signaling transit through the Teams service
 
-### Azure bot registration
+For messaging bots, chat messages are sent to and received from the Teams service, hosted by Microsoft.
+For calling bots, the Teams service sends the notification for incoming calls and provides the endpoints for the media streams, call signaling, and control plane.
 
-The Azure Bot Service is required for the registration of your bot, including:
+4. Azure bot registration
+
+The Azure Bot Service is required for the registration of your bot, including the following details:
 
 * The bot's name, description, and logo
 * The supported authentication type (single-tenant, multi-tenant, or user-managed identities)
 * The associated app ID and app registration in Azure AD
 * Activated channels and bot endpoints
-* Other settings like OAuth provider or public access  
+* Other settings like OAuth provider or public access
 
-The Teams channel should be activated with the appropriate endpoints set for messaging bots and calling bots in your Azure Bot configuration. Note that the endpoints for Teams messaging (4a) and calling (4b) bots are configured independently and don't have the same requirements for network configuration.
+The Teams channel must be activated with the appropriate endpoints set for messaging bots and calling bots in your Azure Bot configuration. Ensure that the endpoints for Teams messaging and calling bots are configured independently and don't have the same requirements for network configuration.
 
-Your bot application receives activities coming from the Teams service directly, not from the Teams client. For messaging bots, the Teams service provides a reply to URL in the form `https://smba.trafficmanager.net/{region}`, where region depends on the location for your Microsoft 365 service (for example, emea, amer, in, apac).
+Your bot application receives activities from the Teams service directly, not from the Teams client. For messaging bots, the Teams service provides a reply to URL in the form `https://smba.trafficmanager.net/{region}`, where region depends on the location of your Microsoft 365 service (for example, emea, amer, in, apac).
 
-### Access to domains
+5. Access to domains
 
-Your bot needs access to Microsoft services to do operations like validate the JWT token sent in the HTTP Authorization header or facilitate user single sign-on (SSO). Because the list of IP addresses can vary over time, we recommend that you implement FQDN-based filtering.
+Your bot needs access to Microsoft services for operations like validate the JWT token sent in the HTTP Authorization header or facilitate user single sign-on (SSO). We recommend you to implement the FQDN-based filtering as the list of IP addresses can vary over time.
 
-### Bot permissions on Microsoft Graph API
+6. Bot permissions on Microsoft Graph API
 
-If your bot requires additional permissions to perform operations on your Microsoft 365 environment, you need to trigger an authentication flow to get the appropriate access token from Azure AD. A best practice is to implement user-managed identities; this simplifies and secures the management of application secrets. Messaging bots will generally use a delegated permission (on-behalf-of the connected user), whereas calling bots require application permission to have control over the call (hang up, redirect, join participants, access the audio stream).
+If your bot requires additional permissions to perform operations on your Microsoft 365 environment, you need to trigger an authentication flow to get the appropriate access token from Azure AD. A best practice is to implement user-managed identities which simplifies and secures the management of application secrets. Messaging bots generally use a delegated permission (on-behalf-of the connected user), whereas calling bots require application permission to have control over the call (hang up, redirect, join participants, and access the audio stream).
 
-Your bot needs access to the graph.microsoft.com domain to query the Microsoft Graph API (required for calling bots; optional for messaging bots, depending on the use case).
+Your bot needs access to the graph.microsoft.com domain to query the Microsoft Graph API (required for calling bots; optional for messaging bots, and depending on the use case).
 
 ## Scenario details
 
@@ -130,4 +132,3 @@ It depends on the scenario, as follows:
 &nbsp;
 
 </details>
-<details>
