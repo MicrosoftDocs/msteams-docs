@@ -23,7 +23,7 @@ The following diagram illustrates the communication flow between the Teams clien
 
 The data flow shown in the diagram is explained as follows:
 
-1. Teams app manifest
+1. App manifest
 
 The app manifest contains the definition of bot capabilities and application ID registered in Azure AD. Teams users can send and receive messages to and from your bot if the application is installed directly (personal scope) in Teams or if the user belongs to a team, group chat, or a meeting where the bot is installed with permissions to read the rosters.
 
@@ -34,7 +34,7 @@ The Teams client can run the bot from any location or device (web, desktop, and 
 3. Bot messages and calls signaling transit through the Teams service
 
 For messaging bots, chat messages are sent to and received from the Teams service, hosted by Microsoft.
-For calling bots, the Teams service sends the notification for incoming calls and provides the endpoints for the media streams, call signaling, and control plane.
+For calling bots, the Teams service sends the notification for incoming calls and provides the endpoints for the media streams, call signaling, and control planes.
 
 4. Azure bot registration
 
@@ -56,7 +56,7 @@ Your bot needs access to Microsoft services for operations like validate the JWT
 
 6. Bot permissions on Microsoft Graph API
 
-If your bot requires additional permissions to perform operations on your Microsoft 365 environment, you need to trigger an authentication flow to get the appropriate access token from Azure AD. A best practice is to implement user-managed identities which simplifies and secures the management of application secrets. Messaging bots generally use a delegated permission (on-behalf-of the connected user), whereas calling bots require application permission to have control over the call (hang up, redirect, join participants, and access the audio stream).
+If your bot requires additional permissions to perform operations on your Microsoft 365 environment, you need to trigger an authentication flow to get the appropriate access token from Azure AD. A best practice is to implement user-managed identities which simplifies and secure the management of application secrets. Messaging bots generally use delegated permission (on-behalf-of the connected user), whereas calling bots require application permission to have control over the call (hang up, redirect, join participants, and access the audio stream).
 
 Your bot needs access to the graph.microsoft.com domain to query the Microsoft Graph API (required for calling bots; optional for messaging bots, and depending on the use case).
 
@@ -82,7 +82,7 @@ Organizations can use bots for mobile and desktop users. Some examples include:
 
 * Simple queries. Bots can deliver an exact match to a query or a group of related matches to help with disambiguation.
 * Multi-turn interactions. Bots make the interactions easier for people to a complete task flow by helping to anticipate possible next steps.
-* Reaching out to users. Bots can send a message (notification) if any change in a document, or a work item is closed.
+* Reaching out to users. Bots can send a message (notification) if there is any change in a document, or a work item is closed.
 * Bots can be integrated in multiple ways into Microsoft Teams, as a personal application, in a channel or group chat, as a message extension (to easily search and share data), or in a meeting.
 * Calling bots are a specific use case enabled for Teams where the bot can respond to incoming calls, manage participants, process audio and video media streams, and more.
 
@@ -91,7 +91,7 @@ Organizations can use bots for mobile and desktop users. Some examples include:
 <details>
 <summary>Does user data (such as chat messages) transit through the Azure Bot Service with Microsoft Teams channel? </summary>
 
-No. No user data transits through the Azure Bot Service for the Teams channel (both for the messaging and calling endpoints). For first-party channels such as Teams, Outlook, Skype, Search (Preview), and Direct Line Speech, user data goes directly to the Microsoft service endpoint and doesn't transit via the Azure Bot Service.
+No. No user data transits through the Azure Bot Service for the Teams channel (both for the messaging and calling endpoints). For first-party channels such as Teams, Outlook, Skype, Search (Preview), and Direct Line Speech, user data goes directly to the Microsoft service endpoint and doesn't transit through the Azure Bot Service.
 <br>
 &nbsp;
 </details>
@@ -118,12 +118,13 @@ For your bot application, and bot users, to be able to authenticate on the Azure
 
 * botframework.com if the Azure Bot Service is configured for multi-tenant.
 * Your own company tenant (for example, contoso.com) if Azure Bot Service is configured for single-tenant.
-
 <br>
 &nbsp;
+
 </details>
 <details>
-<summary>Can we host a bot for Teams outside of Azure?</summary>
+<summary>Can we host a bot for Teams outside of Azure? </summary>
+
 It depends on the scenario, as follows:
 
 * Messaging bots can be hosted on any infrastructure if all required FQDN, IP addresses and ports (in and out) are on the allowlist.
