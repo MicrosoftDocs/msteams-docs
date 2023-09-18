@@ -220,7 +220,8 @@ To view your app in Outlook on the web:
 
 To view your app running in Outlook for Android app:
 
-1. Open the Outlook app on your Android device and sign in using your developer tenant account. If the Outlook for Android app was already running prior to sideloading your app, restart Outlook to see it in the installed apps section.
+1. Open the Outlook app on your Android device and sign in using your developer tenant account. If the Outlook app for Android was already running prior to sideloading your app, restart the Outlook app to see it in the installed apps section.
+
 1. Select the **Apps** icon. Your sideloaded app appears among installed apps.
 1. Select your app icon to open your app in Outlook for Android.
 
