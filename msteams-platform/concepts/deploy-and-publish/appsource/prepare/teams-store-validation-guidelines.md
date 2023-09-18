@@ -7,9 +7,9 @@ ms.topic: reference
 ms.localizationpriority: high
 ms.date: 03/21/2023
 ---
-# Microsoft Teams Store validation guidelines
+# Teams Store validation guidelines
 
-Following these guidelines increases the chances of your app to pass the Teams Store submission process. The Teams-specific guidelines complement the Microsoft [commercial marketplace certification policies](/legal/marketplace/certification-policies#1140-teams) and are updated frequently to reflect new capabilities, user feedback, and business rule changes.
+Following these guidelines increases the chances of your app to pass the Microsoft Teams Store submission process. The Teams-specific guidelines complement the Microsoft [commercial marketplace certification policies](/legal/marketplace/certification-policies#1140-teams) and are updated frequently to reflect new capabilities, user feedback, and business rule changes.
 
 > [!NOTE]
 >

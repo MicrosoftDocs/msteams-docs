@@ -7,9 +7,9 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 12/15/2022
 ---
-# Publish your app to the Microsoft Teams Store
+# Publish your app to the Teams Store
 
-You can distribute your app directly to the Teams Store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the Teams Store, you can instantly reach potential customers.
+You can distribute your app directly to the Microsoft Teams Store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the Teams Store, you can instantly reach potential customers.
 
 Apps published to the Teams Store also automatically list on [the Microsoft commercial marketplace](https://appsource.microsoft.com), which is the official marketplace for Microsoft 365 apps and solutions.
 

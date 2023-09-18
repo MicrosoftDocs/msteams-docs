@@ -8,11 +8,11 @@ ms.author: surbhigupta
 ms.date: 01/06/2023
 ---
 
-# Prepare your Microsoft Teams Store submission
+# Prepare your Teams Store submission
 
 You've designed, built, and tested your Microsoft Teams app. Now you're ready to list it so people can discover and start using your app.
 
-See the following video to learn more about publishing your app to the Teams Store:
+See the following video to learn more about publishing your app to the Microsoft Teams Store:
 <br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]

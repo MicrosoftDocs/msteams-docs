@@ -7,9 +7,9 @@ author: v-ypalikila
 ms.author: v-ypalikila
 ms.date: 01/09/2023
 ---
-# Microsoft Teams Store ranking parameters
+# Teams Store ranking parameters
 
-The information in this disclosure statement applies to the Teams Store in which Microsoft makes third-party apps available to users. The Teams Store ranks app search results in the Teams Store using a set of ranking parameters to deliver relevant search results to users.
+The information in this disclosure statement applies to the Microsoft Teams Store in which Microsoft makes third-party apps available to users. The Teams Store ranks app search results in the Teams Store using a set of ranking parameters to deliver relevant search results to users.
 
 The ranking parameters listed in this section aren't exhaustive. They're intended to provide our publisher community with a high-level understanding of the main parameters that the storefront uses in ranking determinations.
 
