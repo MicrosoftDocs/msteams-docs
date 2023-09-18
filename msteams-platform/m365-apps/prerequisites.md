@@ -69,6 +69,13 @@ For more information on Microsoft 365 release options, see [set up the Standard 
 
 ## Install Microsoft 365 apps in your test environment
 
+| **Outlook (for desktop) scenario** | **[Update Channel](/DeployOffice/office-deployment-tool-configuration-options#channel-attribute-part-of-updates-element)** | 
+|---------------|--------------|
+|Teams personal tabs in Outlook | `Current Preview`|
+|Teams search-based message extensions in Outlook | `CurrentPreview`|
+|Outlook Add-ins | `BetaChannel` |
+|Meeting apps in Outlook | `BetaChannel` |
+
 ### Desktop
 
 You can preview Teams apps running in Outlook on Windows desktop by using a recent *Current Channel (Preview)* build. Check if you have to [change the Microsoft 365 Apps update channel](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) for your test tenant to install a Microsoft 365 Current Channel (Preview) build.
