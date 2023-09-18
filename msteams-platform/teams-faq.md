@@ -67,6 +67,54 @@ You can test or validate the Adaptive Card schema using the **Adaptive cards edi
 App registration is disabled for the user or the user doesn't have enough permissions to create an app. For more information, see [limitations and known issues.](~/bots/bot-features.md#limitations-and-known-issues)
 </details>
 
+## Bot apps communication flow FAQs
+
+<details>
+<summary>Does user data (such as chat messages) transit through the Azure Bot Service with Microsoft Teams channel? </summary>
+
+No. No user data transits through the Azure Bot Service for the Teams channel (both for the messaging and calling endpoints). For first-party channels such as Teams, Outlook, Skype, Search (Preview), and Direct Line Speech, user data goes directly to the Microsoft service endpoint and doesn't transit through the Azure Bot Service.
+<br>
+&nbsp;
+</details>
+<details>
+<summary>How does user data transit from the Teams client to the bot application?</summary>
+
+For first-party channels such as Teams, user data transits through the Microsoft 365 location that you configured during the provisioning of your services. For more information, see [where your Microsoft 365 customer data is stored](/microsoft-365/enterprise/o365-data-locations).
+<br>
+&nbsp;
+</details>
+<details>
+<summary>Can we disable public access and use private access for bots in Teams?</summary>
+
+No. Teams is SaaS (software as a service) and only provides public endpoints that Teams clients need to join. Disabling public access is supported only in combination with [Direct Line App Service extension](/azure/bot-service/dl-network-isolation-concept) and isn't supported for Teams.
+<br>
+&nbsp;
+</details>
+<details>
+<summary>Can I activate Azure AD tenant restrictions with the Azure Bot Service?</summary>
+
+Yes. With tenant restrictions, organizations can specify the list of tenants that users on their network can access. Azure AD only grants access to permitted tenants and all other tenants are blocked, including guest members. For more information, see [restrict access to a tenant](/azure/active-directory/manage-apps/tenant-restrictions).
+
+For your bot application, and bot users, to be able to authenticate on the Azure Bot Service, your proxy server needs to add the following tenants to the allowlist:
+
+* botframework.com if the Azure Bot Service is configured for multi-tenant.
+* Your own company tenant (for example, contoso.com) if Azure Bot Service is configured for single-tenant.
+<br>
+&nbsp;
+
+</details>
+<details>
+<summary>Can we host a bot for Teams outside of Azure? </summary>
+
+It depends on the scenario, as follows:
+
+* Messaging bots can be hosted on any infrastructure if all required FQDN, IP addresses and ports (in and out) are on the allowlist.
+* Calling bots can only be hosted on Microsoft Azure and specific services. For details, see [requirements and considerations for application-hosted media bots](calls-and-meetings/requirements-considerations-application-hosted-media-bots.md).
+<br>
+&nbsp;
+
+</details>
+
 ## Live share
 
 <details>

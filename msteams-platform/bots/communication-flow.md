@@ -8,9 +8,9 @@ ms.localizationpriority: medium
 
 # Communication flow for Teams bot apps
 
-Quickly learn about the communication flow and how the traffic is routed between a user in Microsoft Teams and a bot application that runs in Azure. This information helps you learn how to inspect the traffic and understand the user data flow in transit and at rest for bots in Teams.
+Quickly learn about the communication flow and understand how the traffic is routed between a user in Microsoft Teams and a bot application running in Azure. This information helps you learn how to inspect the traffic and understand the user data flow in transit and at rest for bots in Teams.
 
-The use cases explained here are messaging bots and calling bots for Microsoft Teams. This article provides answers to frequently asked questions and best practices for how to integrate and secure the network connectivity for your Teams bots.
+The use cases explained here are messaging bots and calling bots for Microsoft Teams. This article answers frequently asked questions and offers best practices to integrate and secure the network connectivity for your Teams bots.
 
 > [!NOTE]
 > This article is applicable to customers using Microsoft 365 worldwide or United States Government Community Cloud (GCC) and not applicable to other cloud endpoints.
@@ -25,7 +25,7 @@ The data flow shown in the diagram is explained as follows:
 
 1. App manifest
 
-The app manifest contains the definition of bot capabilities and application ID registered in Azure AD. Teams users can send and receive messages to and from your bot if the application is installed directly (personal scope) in Teams or if the user belongs to a team, group chat, or a meeting where the bot is installed with permissions to read the rosters.
+The app manifest defines the bot capabilities and includes the application ID registered in Azure AD. Teams users can send and receive messages to and from your bot either if the application is installed directly (personal scope) in Teams or if the user belongs to a team, group chat, or a meeting where the bot is installed with permissions to read the rosters.
 
 2. Teams client connection
 
@@ -46,13 +46,13 @@ The Azure Bot Service is required for the registration of your bot, including th
 * Activated channels and bot endpoints
 * Other settings like OAuth provider or public access
 
-The Teams channel must be activated with the appropriate endpoints set for messaging bots and calling bots in your Azure Bot configuration. Ensure that the endpoints for Teams messaging and calling bots are configured independently and don't have the same requirements for network configuration.
+You must activate the Teams channel with appropriate endpoints set for messaging bots and calling bots in your Azure Bot configuration. Ensure to configure the endpoints for Teams messaging and calling bots separately, as they have different network configuration requirements.
 
-Your bot application receives activities from the Teams service directly, not from the Teams client. For messaging bots, the Teams service provides a reply to URL in the form `https://smba.trafficmanager.net/{region}`, where region depends on the location of your Microsoft 365 service (for example, emea, amer, in, apac).
+Your bot application receives activities from the Teams service directly, not from the Teams client. For messaging bots, the Teams service provides a reply to URL in the form `https://smba.trafficmanager.net/{region}`, where region depends on the location of your Microsoft 365 service (for example, EMEA, AMER, IN, APAC).
 
 5. Access to domains
 
-Your bot needs access to Microsoft services for operations like validate the JWT token sent in the HTTP Authorization header or facilitate user single sign-on (SSO). We recommend you to implement the FQDN-based filtering as the list of IP addresses can vary over time.
+Your bot needs access to Microsoft services for operations like validating the JWT token sent in the HTTP Authorization header or facilitate user single sign-on (SSO). We recommend you to implement the FQDN-based filtering as the list of IP addresses can vary over time.
 
 6. Bot permissions on Microsoft Graph API
 
@@ -76,17 +76,17 @@ Messaging bots are used to implement chat-based interaction between a user in Te
 
 ### Teams calling bots
 
-Calling bots are used to implement voice-based interaction between a user in Teams and your bot. The bot is capable to answer an incoming call, join a call, and manage its lifecycle. Calling bots are also used for compliance recording in regulated industries. For details about how to create a calling bot, see [calls and online meetings bots](calls-and-meetings/calls-meetings-bots-overview.md) and [compliance recording for calls and meetings](/MicrosoftTeams/teams-recording-policy).
+Calling bots implements voice-based interaction between a user in Teams and your bot. The bot is capable to answer an incoming call, join a call, and manage its lifecycle. Calling bots are also used for compliance recording in regulated industries. For details about how to create a calling bot, see [calls and online meetings bots](calls-and-meetings/calls-meetings-bots-overview.md) and [compliance recording for calls and meetings](/MicrosoftTeams/teams-recording-policy).
 
 Organizations can use bots for mobile and desktop users. Some examples include:
 
 * Simple queries. Bots can deliver an exact match to a query or a group of related matches to help with disambiguation.
-* Multi-turn interactions. Bots make the interactions easier for people to a complete task flow by helping to anticipate possible next steps.
+* Multi-turn interactions. Bots make the interactions easier for people to complete task flow by helping to anticipate possible next steps.
 * Reaching out to users. Bots can send a message (notification) if there is any change in a document, or a work item is closed.
 * Bots can be integrated in multiple ways into Microsoft Teams, as a personal application, in a channel or group chat, as a message extension (to easily search and share data), or in a meeting.
 * Calling bots are a specific use case enabled for Teams where the bot can respond to incoming calls, manage participants, process audio and video media streams, and more.
 
-## Communication flow FAQs
+## Bot apps communication flow FAQs
 
 <details>
 <summary>Does user data (such as chat messages) transit through the Azure Bot Service with Microsoft Teams channel? </summary>
