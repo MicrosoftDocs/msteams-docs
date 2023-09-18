@@ -18,7 +18,7 @@ You can configure default install options. For example, if your app's primary ca
 
 ## Enable customization for your Microsoft Teams app
 
-You can allow customers to customize some aspects of your Microsoft Teams app in the Teams admin center. This feature is supported only for apps published to the Teams Store.
+You can allow customers to customize some aspects of your Microsoft Teams app in the Teams admin center. This feature is supported only for apps published to the Microsoft Teams Store.
 
 ## Create Teams app package
 
