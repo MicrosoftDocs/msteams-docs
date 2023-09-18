@@ -1,6 +1,6 @@
 ---
 title: Resolve issues with your Microsoft Teams Store submission
-description: Troubleshoot and correct problems with your Teams Store submission. Get help directly from Microsoft, resolve issues and resubmit your app.
+description: Troubleshoot and correct problems with your Microsoft Teams Store submission. Get help directly from Microsoft, resolve issues and resubmit your app.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta

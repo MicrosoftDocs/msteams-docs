@@ -1,6 +1,6 @@
 ---
 title: Microsoft Teams Store ranking parameters
-description: Understand Teams Store ranking parameters like historical usage and user engagement data. Other parameters include app quality and values, audience relevance, and app update.
+description: Understand Microsoft Teams Store ranking parameters like historical usage and user engagement data. Other parameters include app quality and values, audience relevance, and app update.
 ms.topic: reference
 ms.localizationpriority: high
 author: v-ypalikila
