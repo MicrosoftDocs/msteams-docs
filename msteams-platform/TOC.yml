@@ -77,7 +77,7 @@
     - name: Layout and scaling
       href: concepts/design/design-teams-app-layout-scaling.md
       displayName: layout, scaling 
-    - name: App icons for Microsoft Teams Store and app bar
+    - name: App icons for Teams Store and app bar
       href: concepts/design/design-teams-app-icon-store-appbar.md
       displayName: icons, Font, Color 
     - name: App artwork for Teams Store
@@ -873,7 +873,7 @@
     - name: Maintain your published app
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
       displayName: Promote your app, stop selling, stop app distribution, analyze app usage, best practices 
-    - name: Microsoft Teams Store ranking parameters
+    - name: Teams Store ranking parameters
       href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
       displayName: Microsoft Publisher Agreement, app update or new release, user engagement data 
     -  name: Common reasons for app validation failure
