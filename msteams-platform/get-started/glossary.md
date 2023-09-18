@@ -242,7 +242,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Standalone app](../samples/integrating-web-apps.md) | A single-page or large, and complex app. The user can use some aspects of it in Teams. <br>**See also**: [Collaboration app](#c) |
 | Standalone bot | A type of bot app. It's a single bot app or not part of a larger application. <br> **See also**: [Chat bot](#c); [Conversational bot](#c) |
 | [Static search](../task-modules-and-cards/cards/dynamic-search.md) | A method of typeahead search that lets users search from pre-specified values in the Adaptive Cards payload. <br>**See also**: [Dynamic search](#d) |
-| [Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) | A set of Teams-specific guidelines for validating an app before it can be submitted to Teams store. <br>**See also**: [Teams store](#t) |
+| [Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) | A set of standards and principles for validating an app before submitting the app to Teams store. The guidelines are applicable for apps that work across Teams, Outlook, and M365. <br>**See also**: [Teams store](#t) |
 | [Subdomain ID](../tabs/how-to/authentication/tab-sso-register-aad.md) | It's the application ID URI that you registered when configuring scope for your app in Azure AD. <br> **See also**: [SSO](#s); [Application ID URI](#a); [Application ID](#a) |
 | [Subscription offer](../resources/schema/manifest-schema.md#subscriptionoffer) | This specifies the SaaS offer associated with your app. A unique identifier that includes your Publisher ID and Offer ID, which you can find in Partner Center. <br>**See also**: [SaaS](#s)|
 
