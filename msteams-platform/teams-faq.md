@@ -109,7 +109,7 @@ For your bot application, and bot users, to be able to authenticate on the Azure
 It depends on the scenario, as follows:
 
 * Messaging bots can be hosted on any infrastructure if all required FQDN, IP addresses and ports (in and out) are on the allowlist.
-* Calling bots can only be hosted on Microsoft Azure and specific services. For details, see [requirements and considerations for application-hosted media bots](calls-and-meetings/requirements-considerations-application-hosted-media-bots.md).
+* Calling bots can only be hosted on Microsoft Azure and specific services. For details, see [requirements and considerations for application-hosted media bots](bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md).
 <br>
 &nbsp;
 
