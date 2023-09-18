@@ -123,5 +123,6 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
 
 * [Monetize your app](monetize-overview.md)
 * [Prepare your Teams store submission](submission-checklist.md)
+* [Microsoft Teams store validation guidelines](teams-store-validation-guidelines.md)
 * [Submit your app](/partner-center/marketplace/add-in-submission-guide?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json)
 * [Purchase and manage subscriptions and licenses](end-user-purchase-experience.md)
