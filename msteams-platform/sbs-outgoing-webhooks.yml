@@ -10,7 +10,7 @@ metadata:
   nextTutorialHref: webhooks-and-connectors/how-to/add-outgoing-webhook.md
   nextTutorialTitle: Read more on Outgoing Webhooks
   ms.custom: mvc
-  ms.localizationpriority: High
+  ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
