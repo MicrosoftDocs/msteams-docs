@@ -4,7 +4,7 @@ description: Monetize your app. Supported pricing models are free trials, in-app
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
-ms.localizationpriority: high 
+ms.localizationpriority: high
 ms.date: 11/23/2022
 ---
 

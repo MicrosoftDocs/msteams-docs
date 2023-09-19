@@ -250,7 +250,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
-| [Tab](../tabs/what-are-tabs.md) | Tabs are Teams-aware webpages embedded in Microsoft Teams that point to domains declared in manifest. You can add it inside a team, group chat, or personal. |
+| [Tab](../tabs/what-are-tabs.md) | Tabs are client-aware webpages embedded in Microsoft Teams, Outlook, and Microsoft 365 that point to domains declared in app manifest. You can add it as part of a channel inside a team, group chat, or personal app for an individual user. |
 | [Tab chat](../tabs/how-to/conversational-tabs.md) | A type of tab that lets a user have a focused conversation experience in dynamic tabs. |
 | [Task modules](../task-modules-and-cards/what-are-task-modules.md) | A feature of Teams app to create modal pop-up for completing tasks, displaying videos, or dashboard. <br> **See also**: [Adaptive Card](#a) |
 | [Task info](../task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) | The `TaskInfo` object contains the metadata for a task module.|
@@ -261,7 +261,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Teams Toolkit](../toolkit/teams-toolkit-fundamentals.md) | The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the VS Code environment.  |
 | [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx is a text-based command line interface that accelerates Teams application development. It's also called TeamsFx CLI.|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | TeamsFx SDK is pre-configured in a scaffolded project using TeamsFx toolkit or CLI. |
-| [TeamsJS library](../tabs/how-to/using-teams-client-library.md) | The TeamsJS library enables you to create hosted experiences in Teams. Starting with TeamsJS v.2.0.0, you can extend Teams apps to run in Outlook and Office. |
+| [TeamsJS library](../tabs/how-to/using-teams-client-library.md) | The TeamsJS library enables you to create hosted experiences in supported clients including Teams, Outlook, and Microsoft 365. (**Note**: When using TeamsJS v.1.x, hosted experiences are for Teams client only.) |
 | [Teams Mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) | Microsoft Teams available as a mobile app. |
 | [Teams store](../concepts/deploy-and-publish/appsource/publish.md) | A store landing page that brings apps to users in a single place. The apps are categorized by usage, industry, and more. An app must follow Store validation guidelines and obtain an approval before it's available to users via the Teams store.  <br>**See also**: [Store validation guidelines](#s); [Microsoft store](#m) |
 | [Teams workbench](../sbs-gs-spfx.yml) | A workbench in VS Code used at build for Teams apps created using SPFx and Teams Toolkit. <br>**See also**: [Workbench](#w); [Local workbench](#l) |
@@ -285,7 +285,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
-| [Valid domains](../resources/schema/manifest-schema.md#validdomains) | A property in the app manifest file (`validDomains`). A list of valid domains for websites the app expects to load within the Teams client. Domain listings can include wildcards, for example, `*.example.com`.|
+| [Valid domains](../resources/schema/manifest-schema.md#validdomains) | A property in the app manifest file (`validDomains`). A list of valid domains for websites the app expects to load within the supported clients. Domain listings can include wildcards, for example, `*.example.com`.|
 | [Virtual assistant](../samples/virtual-assistant.md) | A Microsoft open-source template that enables you to create a robust conversational solution. |
 
 ## W
