@@ -147,7 +147,7 @@ You'll be prompted to sideload the app into Teams. Select **Add**.
 
 # [iOS](#tab/ios1)
 
-    To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
+   To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
 
     :::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios-option.PNG" alt-text="The screenshot showing to clean the app data in iOS mobile client for tab." lightbox="../assets/images/debug-mobile/clear-app-data-ios.PNG":::
 
