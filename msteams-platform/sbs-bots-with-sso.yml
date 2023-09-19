@@ -51,7 +51,7 @@ items:
      > [!NOTE]
      > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
 
-    1. In the Teams client, select **Apps** icon.
+    1. In the Teams client, select **Apps**.
     1. Select **Manage your apps**.
     1. Select **Upload an app**
     1. Look for the option to **Upload a custom app**.  If the option is visible, you've enabled sideloading apps.
