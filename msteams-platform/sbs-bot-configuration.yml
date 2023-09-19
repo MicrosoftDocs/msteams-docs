@@ -22,8 +22,7 @@ items:
     Start Microsoft Teams app development with your first Teams app. 
     You can create a bot app with Teams using Javascript. 
 
-    In the following image, the bot is installed in a group chat. When the user hovers over the bot, an Adaptive Card appears. The user can select the settings icon in the Adaptive Card to update or change the bot's configuration settings:
-
+    This step-by-step guide helps you to build configurable bot with Teams Toolkit. You'll see the following output after you've completed this guide, where the user can configure his bot from the channel or group chat:
     
     :::image type="content" source="~/assets/images/bots/configurationbot.gif" alt-text="Screenshot shows the configuration option for the bot in a Teams group chat.":::
 
@@ -318,15 +317,15 @@ items:
 
     ---
 
-    ## Update your bot app with bot configuration capabilities
+    ## Enable bot configuration experience
 
     Teams Toolkit is the easiest way to scaffold and get a bot running. Teams Toolkit creates the basic bot structure for you to get started with configuring your bot.
 
-    Let's get started to configure bot configuration capabilities.
+    Let's get started.
 
     1. Open the **manifest.json** file.
 
-    1. Add the following code to your manifest file:
+    1. Replace the existing code under `bots` with the following code:
 
        ```json
         "bots": [
@@ -334,7 +333,6 @@ items:
             "botId": "${{AAD_APP_CLIENT_ID}}",
             "needsChannelSelector": false,
             "scopes": [
-                "personal",
                 "team",
                 "groupChat"
             ],
@@ -350,11 +348,11 @@ items:
         }
         ],
        ```
-       `fetchTask`: In the process of the initial invoke request, your service receives an activity object of type `fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a message to the embedded web view. Along with the standard bot activity properties. 
+       `fetchTask`: The `fetchTask` property invokes request from the bot, this invokes `config/fetch` in `teamsBot.js`.
     
     1. Open the `teamsBot.js` file.
 
-    1. Add the following code to your `teamsBot.js` file:
+    1. Add the following code in `onInvokeActivity(context)` method:
 
         ```javascript
         if (context._activity.name == "config/fetch") {
@@ -379,8 +377,7 @@ items:
         }
         }
         ```
-        `config/fetch`: You must invoke `config/fetch` task to start the bot configuration flow with a task object that contains either a `taskInfo` object with the Adaptive Card or a simple string message.
-
+      
         ```javascript
         if (context._activity.name == "config/submit") {
         
@@ -420,8 +417,9 @@ items:
             }
         ```
 
+        `config/fetch`: You must invoke `config/fetch` task to start the bot configuration flow with a task object that contains either a `taskInfo` object with the Adaptive Card or a simple string message.
         `config/submit`: You must invoke the `config/submit` task for the bot to respond a task object that contains either a `taskInfo` object with the Adaptive Card or a simple string message.
-
+        
     ## Build and run your first bot app locally
 
     To build and run your app in the local environment:
