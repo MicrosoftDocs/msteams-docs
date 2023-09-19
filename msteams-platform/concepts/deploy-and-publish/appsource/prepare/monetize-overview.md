@@ -4,7 +4,7 @@ description: Learn about monetizing your app and the supported pricing models su
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
-ms.localizationpriority: high 
+ms.localizationpriority: high
 ms.date: 11/23/2022
 ---
 

@@ -2,7 +2,7 @@
 title: Add test data to your Microsoft 365 test tenant
 description: Learn to set up your Microsoft 365 developer program subscription for successful testing of Microsoft Teams Apps using code snippets
 ms.topic: how-to
-ms.localizationpriority: medium    
+ms.localizationpriority: medium
 ms.date: 11/01/2019
 ---
 
