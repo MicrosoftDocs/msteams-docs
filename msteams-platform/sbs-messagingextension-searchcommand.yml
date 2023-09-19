@@ -10,7 +10,7 @@ metadata:
   nextTutorialHref: messaging-extensions/how-to/search-commands/define-search-command.md
   nextTutorialTitle: Read more on search commands
   ms.custom: mvc
-  ms.localizationpriority: High
+  ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
