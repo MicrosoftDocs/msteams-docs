@@ -35,7 +35,9 @@ Preview versions for both Teams and Outlook (launched through *Try the new Teams
 | :-: | :-: |
 | :::image type="content" source="./images/teams-preview-icon.png" alt-text="Microsoft Teams (Preview) icon"::: | :::image type="content" source="./images/outlook-preview-icon.png" alt-text="Microsoft Outlook preview icon"::: |
 
-Entries marked with a check and asterisk (&#x2713;*) indicate support for that host is available only to preview audiences (enrolled in [Microsoft 365 Targeted Releases](prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional) for web clients or with [Beta Channel apps](./prerequisites.md#install-microsoft-365-apps-in-your-test-environment) installed for desktop clients). Select any TeamsJS Capability for further details, including reference docs, samples, and usage notes.
+Entries marked with a check and asterisk (&#x2713;*) indicate support for that host is available only to preview audiences (enrolled in [Microsoft 365 Targeted Releases](prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional) for web clients or with [Beta Channel apps](./prerequisites.md#install-microsoft-365-apps-in-your-test-environment) installed for desktop clients).
+
+Using the following table, select any TeamsJS Capability for further details including reference docs, samples, usage notes, and limitations.
 
 ## Cross-host capabilities
 
@@ -1548,6 +1550,14 @@ Namespace providing in-meeting app functionality.
     </tbody>
 </table>
 
+> [!NOTE]
+> The following methods are not supported on mobile for Microsoft Teams :
+>
+> - `meeting.requestStartLiveStreaming`
+> - `meeting.requestStopLiveStreaming`
+> - `meeting.getLiveStreamState`
+> - `meeting.registerLiveStreamChangedHandler`
+
 ## `menus`
 
 [Reference](/javascript/api/@microsoft/teams-js/menus) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Menus.tsx)
@@ -1769,6 +1779,16 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
     </tbody>
 </table>
 
+> [!NOTE]
+> The following methods are not supported on mobile for Microsoft Teams :
+>
+> - `pages.getConfig`
+> - `pages.setCurrentFrame`
+> - `pages.initializeWithFrameContext`
+> - `pages.tabs.navigateToTab`
+> - `pages.tabs.getMruTabInstances`
+> - `pages.tabs.getTabInstances`
+
 ### `pages.appButton`
 
 [Reference](/javascript/api/@microsoft/teams-js/pages.appbutton) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Pages.tsx)
@@ -1920,6 +1940,11 @@ Preview. Namespace providing for profile-related functionality.
         </tr>
     </tbody>
 </table>
+
+> [!NOTE]
+> The following methods are not supported on mobile for Microsoft Teams :
+>
+> - `profile.showProfile`
 
 ## `search`
 
@@ -2165,6 +2190,11 @@ Namespace to open a share dialog for web content. For more information, see [Sha
     </tbody>
 </table>
 
+> [!NOTE]
+> The following methods are not supported on mobile for Microsoft Teams :
+>
+> - `sharing.shareWebContent`
+
 ## `stageView`
 
 [Reference](/javascript/api/@microsoft/teams-js/stageview) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/StageView.tsx)
@@ -2286,6 +2316,11 @@ The earlier version of the capability for providing modal dialog (task module) s
         </tr>
     </tbody>
 </table>
+
+> [!NOTE]
+> The following methods are not supported on mobile for Microsoft Teams :
+>
+> - `task.getDefaultSizeIfNotProvided`
 
 ## `teamsCore`
 
@@ -2409,6 +2444,12 @@ Preview. Namespace representing functionality for in-meeting video effects.
     </tbody>
 </table>
 
+> [!NOTE]
+> The following methods are not supported on mobile for Microsoft Teams :
+>
+> - `video.notifySelectedVideoEffectChanged`
+> - `video.registerForVideoEffect`
+
 ## `webStorage`
 
 [Reference](/javascript/api/@microsoft/teams-js/webstorage) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/WebStorage.tsx)
@@ -2469,6 +2510,11 @@ Preview. Contains functionality to allow web apps to store data in webview cache
         </tr>
     </tbody>
 </table>
+
+> [!NOTE]
+> The following methods are not supported on mobile for Microsoft Teams :
+>
+> - `webStorage.isWebStorageClearedOnUserLogOut`
 
 ## Code sample
 
