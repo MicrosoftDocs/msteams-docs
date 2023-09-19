@@ -10,7 +10,7 @@ metadata:
   nextTutorialHref: task-modules-and-cards/task-modules/task-modules-bots.md
   nextTutorialTitle: Read more on task modules from bots
   ms.custom: mvc
-  ms.localizationpriority: High
+  ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |

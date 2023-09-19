@@ -10,7 +10,7 @@ metadata:
   nextTutorialHref: toolkit/teams-toolkit-tutorial.md
   nextTutorialTitle: Teams app tutorials
   ms.custom: mvc
-  ms.localizationpriority: none
+  ms.localizationpriority: null
 items:
 - durationInMinutes: 1
   content: |

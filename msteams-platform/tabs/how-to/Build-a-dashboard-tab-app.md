@@ -3,7 +3,7 @@ title: Build a dashboard tab app
 author: v-silakshmi
 description:  Describes Dashboard, widget and Graph API call in Teams toolkit 
 ms.author: surbhigupta
-ms.localizationpriority: medium 
+ms.localizationpriority: medium
 ms.topic: Dashboard, widget, and Graph API call in Teams toolkit
 ms.date: 01/17/2023
 ---
