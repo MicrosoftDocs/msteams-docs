@@ -165,7 +165,7 @@ When referring to Microsoft trademarks, products names, and services, you must f
 
 ## Testability  
 
- [Detailed test instructions](prepare/teams-store-validation-guidelines.md#app-package-and-store-listing) and credentials help you with a successful review of your app.
+ [Detailed test instructions](prepare/teams-store-validation-guidelines.md#app-package-and-teams-store-listing) and credentials help you with a successful review of your app.
 
 Ensure that you provide all the details required to review your app in the Notes for Certification Information section of Partner Center, valid demo credentials for features that require sign in and instructions to set any special configuration, a demo video or hardware for features that require an environment that is hard to replicate and complete. Also, ensure that you provide the latest contact information.
 
