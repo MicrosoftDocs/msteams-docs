@@ -83,7 +83,7 @@ items:
 - title: Register Azure AD app 
   durationInMinutes: 5
   content: |
-    The following steps help you to create and register your bot in Azure portal:
+    The following steps help you to create and register your bot in the Azure portal:
     
     * Create and register your Azure app. 
     * Create client secret to enable SSO authentication of the bot.
