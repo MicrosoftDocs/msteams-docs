@@ -285,7 +285,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
-| [Valid domains](../resources/schema/manifest-schema.md#validdomains) | A property in the app manifest file (`validDomains`). A list of valid domains for websites the app expects to load within the Teams client. Domain listings can include wildcards, for example, `*.example.com`.|
+| [Valid domains](../resources/schema/manifest-schema.md#validdomains) | A property in the app manifest file (`validDomains`). A list of valid domains for websites the app expects to load within the supported client. Domain listings can include wildcards, for example, `*.example.com`.|
 | [Virtual assistant](../samples/virtual-assistant.md) | A Microsoft open-source template that enables you to create a robust conversational solution. |
 
 ## W
