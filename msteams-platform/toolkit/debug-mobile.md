@@ -12,6 +12,10 @@ ms.date: 06/14/2023
 
 When you're building a Microsoft Teams app that includes a tab, bot, or message extension, you must debug your app to know how the app functions on both Android and iOS Microsoft Teams mobile clients. For more information, see [debug your Teams app locally](debug-local.md).
 
+See the following video to learn how to debug your Teams app in mobile clients.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW1aEur]
+
 ## Debug your tab app
 
 To debug your tab app follow these steps:
@@ -191,6 +195,4 @@ You'll be prompted to sideload the app into Teams. Select **Add**.
 
     :::image type="content" source="../assets/images/debug-mobile/debug-bot-mobile.PNG" alt-text="The screenshot showing to debug the bot app in mobile client.":::
 
-See the following video to learn how to debug your Teams app in mobile clients.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW1aEur]
