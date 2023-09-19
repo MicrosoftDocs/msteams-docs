@@ -2,7 +2,7 @@
 title: Configure your app in Azure AD
 description: Describes configuring your bot or message extension app with Azure AD for enabling SSO.
 ms.topic: how-to
-ms.localizationpriority: high 
+ms.localizationpriority: high
 ---
 # Configure your app in Azure AD
 
