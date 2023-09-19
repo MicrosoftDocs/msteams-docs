@@ -10,12 +10,7 @@ ms.date: 09/07/2023
 
 # Build Bot based Message extension
 
-A bot based message extension requires a ChatGPT plugin manifest, which needs to be hosted on the API’s domain.
 
-Before you build a bot based message extension, ensure that you have the following:
-
-* An API document in the OpenAPI yaml or JSON format.
-* A JSON manifest file that defines the relevant metadata such as name, logo, and OpenAPI spec for the endpoints for the plugin and host the file in a domain.
 
 <font color="red">Need more information </font>
 
