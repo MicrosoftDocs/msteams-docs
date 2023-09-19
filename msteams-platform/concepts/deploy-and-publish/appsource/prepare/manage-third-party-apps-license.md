@@ -10,7 +10,7 @@ ms.date: 04/06/2023
 
 # Create an offer plan for license purchase
 
-Independent software vendors (ISVs) can configure Microsoft license management for third-party SaaS apps in Partner Center as part of the offer publishing. This allows Teams admins or users to purchase, assign, unassign, use, and track SaaS licenses for their third-party app subscriptions within Teams.
+SaaS offer published in the marketplace must have suitable offers. After the offer configurations are done, you must then create one or more subscription plans for your offer, where the user can purchase suitable subscription as license to use your app. If you have enabled Microsoft license management, then Teams admins or users can purchase, assign, unassign, use, and track SaaS licenses for their third-party app subscriptions within Teams and manages the purchased licenses on your behalf.
 
 :::row:::
    :::column:::
@@ -33,11 +33,9 @@ Independent software vendors (ISVs) can configure Microsoft license management f
    :::column-end:::
 :::row-end:::
 
-To enable Microsoft to manage licenses for a third-party app in Teams, you must have opted for Microsoft to manage licenses on your behalf while creating the offer. You must then create one or more plans for your offer with subscriptions, where the user can purchase suitable subscription as license to use your app. Microsoft then manages the purchased licenses on your behalf.
-
 ## Create a plan
 
-Transactable SaaS offers sold through the Microsoft commercial marketplace must have at least one plan. You can create various plans with different options within the same offer.
+Transactable SaaS offers sold through the Microsoft commercial marketplace must have at least one plan. You can create various plans with different subscription options within the same offer.
 
 1. From the left pane, select **Plan overview** > **+ Create new plan**.
 

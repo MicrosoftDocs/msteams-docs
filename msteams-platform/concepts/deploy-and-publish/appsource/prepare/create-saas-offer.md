@@ -93,7 +93,9 @@ Offers sold through Microsoft are called transactable offers, which means Micros
 
 ### Set up Microsoft license management
 
-You can sell through Microsoft and also allow Microsoft to manage licenses on your behalf.
+Independent software vendors (ISVs) can configure Microsoft license management for third-party SaaS apps in Partner Center as part of the offer publishing.
+
+To enable Microsoft to manage licenses for a third-party app in Teams, you must allow Microsoft to manage licenses on your behalf while creating the offer.
 
 1. If you would like Microsoft to manage customer licenses for you, select **Yes, I would like Microsoft to manage customer licenses on my behalf**.
 
@@ -167,7 +169,7 @@ Offers sold as transactable SaaS offers must have at least one plan. Let's [crea
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create a plan to purchase licenses](manage-third-party-apps-license.md)
+> [Create an offer plan for license purchase](manage-third-party-apps-license.md)
 
 ## See also
 
