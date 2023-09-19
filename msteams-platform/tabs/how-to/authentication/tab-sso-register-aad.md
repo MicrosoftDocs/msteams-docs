@@ -151,7 +151,7 @@ To configure scope and authorize trusted client applications, you'll need:
     >
     > - **Format for domain name**: Use lower case letters for domain name. Don't use upper case.
     >
-    >   For example, to create an app service or web app with resource name, 'demoapplication':
+    >   For example, to create an app service or web app with resource name, `demoapplication`:
     >
     >   | If base resource name used is | URL will be... | Format is supported on... |
     >   | --- | --- | --- |
@@ -235,13 +235,13 @@ To configure scope and authorize trusted client applications, you'll need:
 
     1. Select **Add application**.
 
-    A message pops up on the browser stating that the authorized client app was added.
+       A message pops up on the browser stating that the authorized client app was added.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client application added message":::
+       :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client application added message":::
 
-    The authorized app's client ID displays on the page.
+       The authorized app's client ID displays on the page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client app added and displayed":::
+       :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client app added and displayed":::
 
 > [!NOTE]
 > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
@@ -263,7 +263,7 @@ You must define the access token version for your app. This configuration is mad
 1. Enter **2** as the value for the `accessTokenAcceptedVersion` property.
 
     > [!NOTE]
-    > If you've selected **Personal Microsoft accounts only** or **Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)** during app registration, update the value for the `accessTokenAcceptedVersion` property as 2.
+    > If you've selected **Personal Microsoft accounts only** or **Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (for example, Skype and Xbox)** during app registration, update the value for the `accessTokenAcceptedVersion` property as 2.
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Value for accepted access token version":::
 
