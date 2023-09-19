@@ -24,7 +24,7 @@ Here's what you'll learn in this section:
 
 * [Publish to individual scope or sideload permission](#publish-to-individual-scope-or-sideload-permission)
 * [Publish to your organization](#publish-to-your-organization)
-* [Publish to Microsoft Teams Store](#publish-to-microsoft-teams-store)
+* [Publish to Microsoft Teams Store](#publish-to-teams-store)
 
 ## Prerequisites
 
