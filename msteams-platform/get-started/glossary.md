@@ -250,7 +250,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
-| [Tab](../tabs/what-are-tabs.md) | Tabs are client-aware webpages embedded in Microsoft Teams, Outlook, and M365 that point to domains declared in app manifest. You can add it inside a team, group chat, or personal. |
+| [Tab](../tabs/what-are-tabs.md) | Tabs are client-aware webpages embedded in Microsoft Teams, Outlook, and Microsoft 365 that point to domains declared in app manifest. You can add it inside a team, group chat, or personal. |
 | [Tab chat](../tabs/how-to/conversational-tabs.md) | A type of tab that lets a user have a focused conversation experience in dynamic tabs. |
 | [Task modules](../task-modules-and-cards/what-are-task-modules.md) | A feature of Teams app to create modal pop-up for completing tasks, displaying videos, or dashboard. <br> **See also**: [Adaptive Card](#a) |
 | [Task info](../task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) | The `TaskInfo` object contains the metadata for a task module.|
