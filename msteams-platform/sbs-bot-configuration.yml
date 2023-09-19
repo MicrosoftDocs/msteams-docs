@@ -4,7 +4,7 @@ metadata:
   title: Bot configuration experience
   description: With this learning module, you learn how to configure your bot.
   audience: Developer
-  level: Beginner
+  level: Advanced
   ms.date: 10/21/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/how-to/bot-configuration-experience.md
