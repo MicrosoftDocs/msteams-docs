@@ -54,7 +54,7 @@ items:
     1. In the Teams client, select **Apps**.
     1. Select **Manage your apps**.
     1. Select **Upload an app**
-    1. Look for the option to **Upload a custom app**.  If the option is visible, you've enabled sideloading apps.
+    1. Look for the option **Upload a custom app**.  If the option is visible, you've enabled sideloading apps.
 
         :::image type="content" source="~/assets/images/bots/upload-a-custom-app-sso-bot-authentication.png" alt-text="Screenshot showing the Teams apps, Manage your apps, Upload an app and Upload a custom app highlighted in red.":::
 
