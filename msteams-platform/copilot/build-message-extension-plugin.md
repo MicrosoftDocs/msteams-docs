@@ -22,7 +22,11 @@ Meetings copilot will process these actions and render them appropriately and pr
 
 ## Build message extension plugin
 
-Create a ChatGPT plugin or OpenAPI specification document in JSON or YAML format.
+**OpenAPI Specification (OAS)** defines a standard, language-agnostic interface to HTTP APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. An OpenAPI Specification be used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases.
+
+**OpenAI plugins** connect ChatGPT to third-party applications. These plugins enable ChatGPT to interact with APIs defined by developers, enhancing ChatGPT's capabilities and allowing it to perform a wide range of actions.
+
+Create a ChatGPT plugin or OpenAPI Specification document in JSON or YAML format.
 
    The following code is an example of an API spec in YAML format:
 
