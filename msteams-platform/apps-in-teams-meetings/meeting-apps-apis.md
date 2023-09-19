@@ -1526,7 +1526,7 @@ The following code provides an example of meeting end event payload:
 
 ## Receive meeting participant events
 
-Your bot can receive real-time meeting details such as participant join and leave events through the meeting event subscription in Developer Portal. A bot receives the participant events only if subscribed to these events. For example, if you want your bot app to notify or return the time stamp when an attendee joined or left the meeting, subscribe to these participant events in Developer Portal.
+Your bot can receive real-time meeting details such as participant join and leave events through the meeting event subscription in Developer Portal. A bot receives the participant events only if subscribed to these events in Developer Portal.
 
 > [!NOTE]
 >
