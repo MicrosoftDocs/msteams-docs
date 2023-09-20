@@ -171,13 +171,13 @@ items:
     
     1. Open the **appsettings.json** file and update the following information:
 
-       :::image type="content" source="~/assets/images/teams-file-upload-bot/appsettings-json-bot-sso.png" alt-text="Screenshot shows the appsettings json.":::
-
        * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
        * Set `"MicrosoftAppPassword"` to your bot's client secret ID **value**.
        * Set `ConnectionName` as OAuth connection name.
        * Set `"MicrosoftAppType"` to **MultiTenant**.
        * Set `"MicrosoftAppTenantId"` to **common**.
+
+       :::image type="content" source="~/assets/images/teams-file-upload-bot/appsettings-json-bot-sso.png" alt-text="Screenshot shows the appsettings json.":::
 
     1. Go to the **manifest.json** file in the cloned repository.
 
