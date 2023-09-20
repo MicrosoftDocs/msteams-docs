@@ -10,7 +10,7 @@ metadata:
   nextTutorialHref: webhooks-and-connectors/how-to/connectors-creating.md
   nextTutorialTitle: Read more on Webhooks and Connectors
   ms.custom: mvc
-  ms.localizationpriority: none
+  ms.localizationpriority: null
 items:
 - durationInMinutes: 1
   content: |
