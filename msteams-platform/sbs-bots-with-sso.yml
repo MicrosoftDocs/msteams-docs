@@ -167,11 +167,11 @@ items:
   content: |
     1. Go to the **appsettings.json** file in the cloned repository.
 
-    :::image type="content" source="~/assets/images/teams-file-upload-bot/appsettings-file-location-bot-sso.png" alt-text="Screenshot shows the location of appsettings json file.":::
+       :::image type="content" source="~/assets/images/teams-file-upload-bot/appsettings-file-location-bot-sso.png" alt-text="Screenshot shows the location of appsettings json file.":::
     
     1. Open the **appsettings.json** file and update the following information:
 
-    :::image type="content" source="~/assets/images/teams-file-upload-bot/appsettings-json-bot-sso.png" alt-text="Screenshot shows the appsettings json.":::
+       :::image type="content" source="~/assets/images/teams-file-upload-bot/appsettings-json-bot-sso.png" alt-text="Screenshot shows the appsettings json.":::
 
        * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
        * Set `"MicrosoftAppPassword"` to your bot's client secret ID **value**.
