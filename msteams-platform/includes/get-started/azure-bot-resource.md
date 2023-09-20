@@ -19,6 +19,7 @@
     :::image type="content" source="../../assets/images/include-files/create-azure-bot.png" alt-text="Screenshot shows the option resource group and subscription in the Azure portal.":::
 
     If you don't have an existing resource group, you can create a new resource group. To create a new resource group, follow these steps:
+
     1. Select **Create new**.
     1. Enter the resource name and select **OK**.
     1. Select a location from **New resource group location** dropdown list.

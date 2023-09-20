@@ -23,4 +23,4 @@
     :::image type="content" source="../../assets/images/include-files/app-registration-overview.png" alt-text="Screenshot shows the app registration overview page.":::
 
     > [!NOTE]
-    > Save the app ID from **Application (client) ID** and **Directory (tenant) ID**, for future reference.
+    > Save the app ID from **Application (client) ID** and **Directory (tenant) ID** for further use.
