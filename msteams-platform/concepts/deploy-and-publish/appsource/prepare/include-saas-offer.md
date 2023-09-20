@@ -54,7 +54,7 @@ There are four listing options through which you can publish your SaaS offer:
 
 **Sell through Microsoft**
 
-You can opt to sell your SaaS apps through Microsoft where Microsoft hosts all your transactions for the licenses purchased. Offers sold through Microsoft are transactable [SaaS offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) where you can sell subscription plans directly from your Teams store listing.
+You can opt to sell your SaaS apps through Microsoft where Microsoft hosts all your transactions for the licenses purchased. Offers sold through Microsoft are transactable [SaaS offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) where you can sell subscription plans directly from your Teams Store.
 
     :::column-end:::
 :::row-end:::
@@ -89,7 +89,7 @@ You can allow the user to subscribe and use your application at no cost. The opt
 :::row-end:::
 :::row:::
     :::column:::
-        :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetize-app-image.png" alt-text="Diagram represents the test preview SaaS offer.":::
+        :::image type="content" source="../../../../assets/images/saas-offer/contact-me.png" alt-text="Diagram represents the test preview SaaS offer.":::
     :::column-end:::
     :::column span="2":::
 
@@ -104,7 +104,7 @@ The type of listing option decides the technical configurations and requirements
 
 ## Plan for the offer details
 
-To start with, you need to plan on the basic yet key features that decide the information available on the offer purchase landing page, marketplace where the offer is published, and terms of use. The offer details help the users to find your offer easily in the marketplace and enhances usability.
+To start with, you need to plan on the basic yet key features that decide the information available on the offer purchase landing page. It also decides the marketplace where the offer is published and terms of use. The offer details help the users to find your offer easily in the marketplace and enhances usability.
 
 * **Offer categories and industries**: Plan on the primary and secondary categories of the offer. It decides the store where the offer is published and to identify your app in the marketplace.
 * **Offer details**: Plan for the logo, keywords, and description that helps to improve the discovery and value of your offer in the marketplace.
@@ -160,7 +160,7 @@ For comprehensive guidance, see [how to plan a SaaS offer for the Microsoft comm
 ## See also
 
 * [Monetize your app](monetize-overview.md)
-* [Maintaining and supporting your published app](../post-publish/overview.md)
+* [Plan a SaaS offer](/partner-center/marketplace/plan-saas-offer)
 * [Validation guidelines for apps linked to SaaS offer](teams-store-validation-guidelines.md#apps-linked-to-saas-offer)
-* [Marketplace categories](/partner-center/marketplace/marketplace-categories-industries)
-* [Microsoft commercial marketplace](/partner-center/marketplace/overview)
+* [Marketplace categories and industries](/partner-center/marketplace/marketplace-categories-industries)
+* [Plans and pricing for commercial marketplace offers](/partner-center/marketplace/plans-pricing)

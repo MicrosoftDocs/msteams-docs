@@ -70,9 +70,9 @@ For more information to map the paid functionality to your offer and publish, se
 
 After linking the offer to your app, you can now publish your app to the Teams store. Before you publish your monetized app, do the following checks.
 
-* Ensure your app adheres to the [store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines?branch=main).
-* [Prepare for store submission](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist?branch=main&tabs=desktop).
-* [Perform the required prechecks](/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish?branch=pr-en-us-8990) before submission.
+* Ensure your app adheres to the [store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines).
+* [Prepare for store submission](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist).
+* [Perform the required prechecks](/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish) before submission.
 * [Submit app for validation](/office/dev/store/add-in-submission-guide).
 
 For complete instructions, see [publish your app to the Teams store](../publish.md).
@@ -122,7 +122,6 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
 ## See also
 
 * [Monetize your app](monetize-overview.md)
-* [Prepare your Teams store submission](submission-checklist.md)
-* [Microsoft Teams store validation guidelines](teams-store-validation-guidelines.md)
 * [Submit your app](/partner-center/marketplace/add-in-submission-guide?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json)
+* [Maintaining and supporting your published app](../post-publish/overview.md)
 * [Purchase and manage subscriptions and licenses](end-user-purchase-experience.md)

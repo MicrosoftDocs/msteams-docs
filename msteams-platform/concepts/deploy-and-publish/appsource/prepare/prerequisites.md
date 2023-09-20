@@ -9,7 +9,9 @@ ms.date: 01/31/2023
 ---
 # Prerequisites to create an offer
 
-If you decide to sell your SaaS offer through Microsoft, you need to fulfill the technical configurations and collate the required technical information. It helps negate any blockers while creating the offer. API integrations are part of technical configuration that needs to be done after the user purchase the offer. This article provides detailing on the technical configurations and requirements to create a SaaS offer.
+For any SaaS offer to be published in the marketplace, you need to fulfill the technical configurations and collate the required technical information. It helps negate any blockers while creating the offer. This article provides detailing on the technical configurations and requirements to create a SaaS offer.
+
+API integrations are part of technical configuration that needs to be done after the user purchase the offer.
 
 :::row:::
    :::column:::
@@ -32,7 +34,7 @@ If you decide to sell your SaaS offer through Microsoft, you need to fulfill the
    :::column-end:::
 :::row-end:::
 
-The technical configurations differ based on the listing option you opt for your SaaS offer. Before creating a SaaS offer, you must ensure that the technical fulfillments are in place.
+The technical configurations differ based on the listing option you opt for your SaaS offer. Before creating a SaaS offer, ensure that the required technical information are handy.
 
 > [!NOTE]
 > The *Contact me* listing option have no technical configurations to be done.
@@ -50,17 +52,15 @@ For Sell through Microsoft or transactable offer, you need to do the [API integr
 
 To start with, you must set up the required accounts to create an offer.
 
-* Enable Microsoft Accounts and ensure you have a [Microsoft Partner Center account](/partner-center/marketplace/open-a-developer-account).
+* Enable Microsoft Accounts (MSA) and ensure you have a [Microsoft Partner Center account](/partner-center/marketplace/open-a-developer-account).
 
-* Azure Active Directory (Azure AD) provides an easier and secure purchase experience. Enable [Azure AD](https://azure.microsoft.com/services/active-directory/) for authenticating buyers on your site.  With [Azure AD integration](/partner-center/marketplace/azure-ad-saas), you can automatically provision the users to their SaaS apps and also allow buyers with Azure AD account to sign in to your app using Azure AD single sign-on (SSO).
+* Azure Active Directory (Azure AD) provides an easier and secure purchase experience. Enable [Azure AD](https://azure.microsoft.com/services/active-directory/) for authenticating buyers on your site.  With [Azure AD integration](/partner-center/marketplace/azure-ad-saas), you can automatically provision the users to their SaaS apps and also allow buyers with Azure AD account to sign in to your app using Azure AD single sign-on (SSO). For more information, see [Azure AD and transactable SaaS offers](/partner-center/marketplace/azure-ad-saas).
 
 ### Create a landing page
 
 When the user successfully purchases a subscription plan for your app in the Teams store, the commercial marketplace directs them to your landing page where they can manage the subscription (such as assign a license to a specific user in their organization).
 
-Ensure to register your landing page as an Azure AD application. Enable SSO using Azure AD and Microsoft Graph to obtain important information about the buyer and to confirm and activate the subscription.
-
-For complete instructions, see [build the landing page for your SaaS offer](/partner-center/marketplace/azure-ad-transactable-saas-landing-page).
+Ensure to register your landing page as an Azure AD application. Enable SSO using Azure AD and Microsoft Graph to obtain important information about the buyer and to confirm and activate the subscription. For complete instructions, see [build the landing page for your SaaS offer](/partner-center/marketplace/azure-ad-transactable-saas-landing-page).
 
 #### Best practices for landing pages
 
@@ -81,11 +81,11 @@ Consider the following approaches when building a landing page for the Teams app
 
 ### Technical requirements
 
-To configure your SaaS offer, you must furnish the following technical information during the offer configuration. When you create your SaaS offer, have the following technical information handy.
+To configure your SaaS offer, you must furnish the following technical information during the [offer configuration](create-saas-offer.md#add-the-technical-information). When you create your SaaS offer, have the following technical information handy.
 
 * **Landing page URL**: The SaaS site URL that users get redirected to after purchasing your offer from the commercial marketplace. It triggers the configuration process from the newly created SaaS subscription. This URL receives a token that can be used to call the fulfillment APIs to get provisioning details for your interactive registration page.
 
-* **Connection webhook**: For all asynchronous events that Microsoft needs to send to you (for example, when a SaaS subscription has been canceled), we require you to provide a connection webhook URL. We call this URL to notify you of the event. Define it in the **Technical configuration** page and you receive subscription changes from the user.
+* **Connection webhook URL**: For all asynchronous events that Microsoft needs to send to you (for example, when a SaaS subscription has been canceled), we require you to provide a [connection webhook URL](/partner-center/marketplace/create-new-saas-offer-technical). We call this URL to notify you of the event. Define it in the **Technical configuration** page and you receive subscription changes from the user.
 
 * **Azure AD tenant ID**: Inside the Azure portal, we need you to register an Azure AD app so we can add it to the access control list (ACL) of the API to make sure you're authorized to call it. You can find the tenant ID under **App registrations** in Azure portal.
 

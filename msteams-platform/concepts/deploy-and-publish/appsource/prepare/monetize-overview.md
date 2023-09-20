@@ -61,4 +61,4 @@ Now that we know about the monetizing options and a SaaS offer, let's get to lea
 
 * [Microsoft commercial marketplace](/partner-center/marketplace/overview)
 * [Introduction to listing options](/partner-center/marketplace/determine-your-listing-type)
-* [Publisher guide](/partner-center/marketplace/publisher-guide-by-offer-type)
+* [Publishing guide by offer type](/partner-center/marketplace/publisher-guide-by-offer-type)
