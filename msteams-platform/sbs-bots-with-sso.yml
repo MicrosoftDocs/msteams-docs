@@ -238,7 +238,7 @@ items:
 - title: Upload the bot in Teams
   durationInMinutes: 2
   content: |
-     1. In your cloned repository, go to **Microsoft-Teams-Samples > samples** > **bot-conversation-sso-quickstart** > **csharp_dotnetcore > **BotConversationSsoQuickstart**. 
+     1. In your cloned repository, go to **Microsoft-Teams-Samples > samples** > **bot-conversation-sso-quickstart** > **csharp_dotnetcore** > **BotConversationSsoQuickstart**. 
      1. Create a .zip file with the following files that are present in the **appPackage** folder: 
 
         * manifest.json
