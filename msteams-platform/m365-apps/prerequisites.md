@@ -81,6 +81,7 @@ To install Microsoft 365 applications in your test environment:
 1. Go to the local folder and open *configuration-Office365-x86.xml* (or **x64.xml*, depending on your environment) in a text editor. Ensure the *Channel* value is set to the scenario you're previewing for. Refer to the Outlook scenarios to update channels table for guidance.
     
     **Outlook scenarios to update channels**
+
     | **Outlook scenario** | **[Update channel](/DeployOffice/office-deployment-tool-configuration-options#channel-attribute-part-of-updates-element)** | 
     |---------------|--------------|
     |Teams personal tabs in Outlook | `CurrentPreview`|
