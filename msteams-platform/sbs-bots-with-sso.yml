@@ -188,7 +188,9 @@ items:
        * Replace all occurrences of `"{TODO: MicrosoftAppId}"` with your **Microsoft App ID**.
        * Set `"<<domain-name>>"` to your ngrok or dev tunnel domain.
  
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-bot-id-botsso.png" alt-text="Screenshot shows the details filled in the manifest file in visual studio." lightbox="~/assets/images/teams-file-upload-bot/manifest-bot-id-botsso1.png":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-bot-id-botsso.png" alt-text="Screenshot shows the details filled in the manifest file in visual studio.":::
+
+
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -236,7 +238,7 @@ items:
 - title: Upload the bot in Teams
   durationInMinutes: 2
   content: |
-     1. In your cloned repository, go to **Microsoft-Teams-Samples > samples** > **bot-conversation-sso-quickstart** > **csharp_dotnetcore** folder, and select **BotConversationSsoQuickstart.sln** file. 
+     1. In your cloned repository, go to **Microsoft-Teams-Samples > samples** > **bot-conversation-sso-quickstart** > **csharp_dotnetcore > **BotConversationSsoQuickstart**. 
      1. Create a .zip file with the following files that are present in the **appPackage** folder: 
 
         * manifest.json
@@ -247,7 +249,7 @@ items:
 
      1. Go to **Microsoft Teams**.
     
-        1. In the Teams client, select the **Apps** icon.
+        1. In the Teams client, select **Apps**.
         1. Select **Manage your apps**.
         1. Select **Upload an app**.
         1. Look for the option to **Upload a custom app**.
@@ -266,19 +268,19 @@ items:
 
       1. Send a message to the bot. The conversation bot asks for consent for the first time.
 
-      1. For desktop, select **Continue** to give permissions to Teams client for accessing the bot.
+         1. For desktop: Select **Continue** to give permissions to Teams client for accessing the bot.
 
-         :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request1.png" alt-text="Screenshot of additional permissions with Continue option highlighted in red.":::
+            :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request1.png" alt-text="Screenshot of additional permissions with Continue option highlighted in red.":::
         
-         > [!NOTE]
-         > Now you’ve configured SSO with your bot app and it's the only time you'll have to give consent.
+            > [!NOTE]
+            > Now you’ve configured SSO with your bot app and it's the only time you'll have to give consent.
 
-      1. For mobile device, select **Accept**.
+         1. For mobile: Select **Accept**.
 
-         > [!NOTE]
-         > Now you’ve configured SSO with your bot app in mobile, and it's the only time you'll have to give consent.
+            > [!NOTE]
+            > Now you’ve configured SSO with your bot app in mobile, and it's the only time you'll have to give consent.
 
-         :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Screenshot of bot SSO output after you’ve successfully completed the step-by-step guide.":::
+            :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Screenshot of bot SSO output after you’ve successfully completed the step-by-step guide.":::
 
 
 
