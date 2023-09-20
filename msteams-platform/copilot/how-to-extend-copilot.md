@@ -51,9 +51,9 @@ To ensure your plugin works as intended, it's important to include good descript
 1. App description: Include detailed descriptions of the app, supported scenarios, feature capabilities, and related keywords using the `shortDescription` and `longDescription` fields.
 
    ```json
-   "name": { 
-     "shortDescription": "Work-item tracking and productivity app", 
-     "longDescription": "Contoso app is a work-item tracking and project management app that allows teams to create, manage, and track work items. This app helps teams manage projects more efficiently. " 
+   "description": { 
+     "short": "Work-item tracking and productivity app", 
+     "full": "Contoso app is a work-item tracking and project management app that allows teams to create, manage, and track work items. This app helps teams manage projects more efficiently. " 
    } 
    ```
 
@@ -64,7 +64,10 @@ To ensure your plugin works as intended, it's important to include good descript
    { 
      "id": "Work item search query", 
      "type": "query", 
-     "context": "command box", 
+     "context": [  
+            "compose",  
+            "commandBox"  
+          ], 
      "parameters": [ 
        { 
          "name": "Work item search string", 
