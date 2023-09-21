@@ -47,14 +47,7 @@ items:
 - title: Set up local environment
   durationInMinutes: 1
   content: |
-   Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
-
-    1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
-    1. Select **Code**. From the dropdown menu, select **Open with GitHub Desktop**.
- 
-       :::image type="content" source="./assets/images/sbs-outgoing-webhooks/clone-repository.png" alt-text="Screenshot of GitHub web page.  The menu entry titled Open with GitHub Desktop under Code dropdown menu is highlighted in red.":::
-
-    1. Select **Clone**. 
+   [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
 - title: Create Outgoing Webhooks
   durationInMinutes: 5
