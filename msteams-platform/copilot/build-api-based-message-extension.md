@@ -10,6 +10,8 @@ ms.date: 09/07/2023
 
 # Build API based Message extension
 
+API based plugins are message extensions that use a web service to handle user requests and responses. They do not require a bot registration or a bot framework SDK. They can be configured and deployed using the Developer Portal for Teams or the Teams Toolkit.
+
 You can create an message extension in Teams using an OpenAPI Specification. After you've created an OpenAPI Specification document for the APIs you want to use, upload the OpenAPI Specification document to Teams Toolkit or Developer portal for Teams to generate and integrate the client code in your app's project. Create an Adaptive Card template to handle the responses from the API.
 
 # [Developer portal for Teams](#tab/developer-portal-for-teams)
@@ -130,7 +132,7 @@ If you have a chatGPT plugin manifest. You can build an API plugin using Teams d
 
 1. Follow these steps for the respective API types:
 
-   # [New API](#tab/new-api)
+# [New API](#tab/new-api)
 
    1. Select a programming language.
 
@@ -140,7 +142,7 @@ If you have a chatGPT plugin manifest. You can build an API plugin using Teams d
 
    1. Enter the name of your app and select **Enter**. Teams Toolkit creates a new plugin with API from Azure functions.
 
-   # [OpenAPI specification](#tab/openapi-specification)
+# [OpenAPI specification](#tab/openapi-specification)
 
    1. Enter or browse the OpenAPI specification doc location.
 
@@ -150,7 +152,7 @@ If you have a chatGPT plugin manifest. You can build an API plugin using Teams d
    1. Select **Default folder**.
    1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI spec file and created a API based message extension.
 
-   # [Open AI plugin](#tab/open-ai-plugin)
+# [Open AI plugin](#tab/open-ai-plugin)
 
    1. Enter your website domain where you've hosted the Open AI plugin manifest.
 
@@ -164,5 +166,39 @@ You can also build bot based message extensions.
 
 ---
 
+## Best practices
+
+ The ID for the command in the Teams app manifest must match the corresponding operationId in the openAPI spec
+2. If there is a required parameter without a default value, then the parameter name of the command defined in the Teams app manifest, must match this parameter name
+
+   1. If there is no required parameter without a default value, then the parameter name in the Teams app manifest must match the name of an optional parameter defined for that operation
+   2. There must be exactly one parameter defined for the operation. Zero or more than one parameter are not supported
+   3. There must also be a response rendering template defined per command. The details and the schema for this file which is used to convert responses from an API can be found at Template Response Schema.docx. This file must be local just like the openAPI spec and the command portion of the manifest must also point to this template file under composeExtension.command.apiResponseRenderingTemplateFile with the app manifest. Each command will point to a different response rendering template file.
+
+## Best practices for openAPI spec
+
+Regardless of Plugin-only or ME
+
+Server url must be absolute endpoint
+
+2. Endpoint must be HTTPS
+
+Only for operations to be used as MEs
+
+1. Developers cannot require users to enter a parameter for a header or cookie
+
+    1. If they need headers passed, they can put a default value for the header in the spec
+
+2. oneOf, anyOf, allOf, not (swagger.io)
+
+3. Construcuting arrays for the request are not supported, nest objects with a JSON request body are supported
+
+4. Request body (if present) can only be application/json
+
+5. Only one required parameter without a default value is allowed. We are only supporting single parameter search right now
+
+6. The operation must have an operationId
+
+7. Only HTTP methods POST and GET are allowed
 
 ## See also
