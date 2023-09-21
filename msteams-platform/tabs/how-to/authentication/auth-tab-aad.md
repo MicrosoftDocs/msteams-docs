@@ -1,8 +1,9 @@
 ---
 title: Configure third party OAuth authentication
-description: In this article, learn Teams authentication tabs Microsoft Azure AD, authentication in Teams and how to use it in tabs.
+description: Learn Teams authentication tabs Microsoft Azure AD, authentication in Teams and how to use it in tabs.
 ms.topic: how-to
 ms.localizationpriority: medium
+ms.date: 12/13/2022
 ---
 # Configure third party OAuth IdP authentication
 
@@ -37,7 +38,7 @@ Identity providers that support OAuth 2.0 don't authenticate requests from unkno
 Replace `<hostname>` with your actual host. This host can be a dedicated hosting site such as Azure, Glitch, or a ngrok tunnel to localhost on your development machine, such as `abcd1234.ngrok.io`. If you don't have this information, ensure that you've completed or hosted your app (or the sample app). Resume this process when you have this information.
 
 > [!NOTE]
-> You can choose any third party OAuth provider, such as LinkedIn, Google, and others. The process to enable authentication for these providers is similar to using Azure AD as a third party OAuth provider. For more information on using any third party OAuth provider, please visit the website of the particular provider.
+> You can choose any third party OAuth provider, such as LinkedIn, Google, and others. The process to enable authentication for these providers is similar to using Azure AD as a third party OAuth provider. For more information on using any third party OAuth provider, visit the website of the particular provider.
 
 ## Initiate authentication flow
 
@@ -229,10 +230,10 @@ For more information on single sign-on (SSO), see the article [Silent authentica
 
 Sample code showing the tab authentication process using Azure AD:
 
-| Sample name | Description | .NET| Node.js |
-|---------------|---------------|------|--------------|
-| Tab SSO |This sample app shows Azure AD SSO for tabs in Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
-| Tab, Bot, and Message Extension (ME) SSO | This sample shows SSO for Tab, Bot, and ME - search, action, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) |
+| Sample name | Description | .NET| Node.js | Manifest |
+|---------------|---------------|------|--------------|--------------|
+| Tab SSO |This sample app shows Azure AD SSO for tabs in Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)| NA |
+| Tab, Bot, and Message Extension (ME) SSO | This sample shows SSO for Tab, Bot, and ME- search, action, link unfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/demo-manifest)|
 
 ## See also
 

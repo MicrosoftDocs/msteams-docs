@@ -2,9 +2,10 @@
 title: Request device permissions for your Microsoft Teams app
 author: surbhigupta
 description: How to update your app manifest in order to request access to native features that require user consent, such as scan QR, barcode, image, audio, and video capabilities
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: how-to
 ms.author: surbhigupta
+ms.date: 03/21/2023
 ---
 
 # Request device permissions for your Teams app
@@ -46,21 +47,20 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 # [Mobile](#tab/mobile)
 
 1. Open Teams.
-1. Go to **Settings** > **App Permissions**.
-1. Select the app for which you need to choose the settings.
+1. Go to **Settings** > **App permissions**.
+1. Select the app for which you want to customize the settings.
 1. Select your desired settings.
 
-    :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="Mobile Permissions." border="true":::
+    :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="Screenshot shows the mobile App permissions.":::
 
 # [Desktop](#tab/desktop)
 
-1. Open your Teams app.
-1. Select your profile icon in the upper right corner of the window.
-1. Select **Settings** > **Permissions** from the drop-down menu.
+1. Open Teams.
+1. Go to **Settings** > **App permissions**.
+1. Select the app for which you want to customize the settings.
 1. Select your desired settings.
 
-   :::image type="content" source="~/assets/images/tabs/device-permissions.png" alt-text="Device permission.":::
-
+    :::image type="content" source="../../assets/images/tabs/device-permissions-new.png" alt-text="Screenshot shows the device permissions." lightbox="~/assets/images/tabs/device-permissions-new.png":::
 ---
 
 ## Specify permissions
@@ -86,6 +86,8 @@ Each property allows you to prompt the users to ask for their consent:
 | notifications | Permission to send the user notifications.      |
 | midi          | Permission to send and receive  Musical Instrument Digital Interface (MIDI) information from a digital musical instrument.   |
 | openExternal  | Permission to open links in external applications.  |
+
+For more information, see [app manifest](../../resources/schema/manifest-schema.md#devicepermissions).
 
 ## Check permissions from your app
 
@@ -115,7 +117,7 @@ Leverage appropriate HTML5 or Teams API to display a prompt for getting consent 
 
 > [!IMPORTANT]
 >
-> * Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true). Use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) for a single image capture.
+> * Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true). Use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams.media#functions) for a single image capture.
 > * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?.view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). You must use this `getLocation API` for location, as HTML5 geolocation API is currently not fully supported on Teams desktop.
 
 For example:
@@ -233,13 +235,13 @@ Here's how the device permissions prompts appear to users on mobile and desktop.
 
 # [Mobile](#tab/mobile1)
 
-   :::image type="content" source="~/assets/images/tabs/MobileLocationPermission.png" alt-text="Mobile location permission." border="true":::
+   :::image type="content" source="~/assets/images/tabs/MobileLocationPermission.png" alt-text="Screenshot shows the mobile location permission.":::
 
 # [Desktop](#tab/desktop1)
 
    <!-- ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png) -->
 
-   :::image type="content" source="~/assets/images/tabs/device-permissions-prompt.png" alt-text="Device permission in desktop.":::
+   :::image type="content" source="~/assets/images/tabs/device-permissions-prompt.png" alt-text="Screenshot shows the device location permission in desktop.":::
 
 ---
 
@@ -267,5 +269,4 @@ Device permissions are stored for every sign in session. It means that if you si
 * [Integrate media capabilities](media-capabilities.md)
 * [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Meeting apps APIs](../../apps-in-teams-meetings/meeting-apps-apis.md)

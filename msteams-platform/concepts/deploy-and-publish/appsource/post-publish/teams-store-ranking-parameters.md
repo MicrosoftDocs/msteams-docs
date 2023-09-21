@@ -5,6 +5,7 @@ ms.topic: reference
 ms.localizationpriority: high
 author: v-ypalikila
 ms.author: v-ypalikila
+ms.date: 01/09/2023
 ---
 # Microsoft Teams store ranking parameters
 

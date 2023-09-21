@@ -5,6 +5,7 @@ description: Learn what you can do during the launch stage of your app to grow y
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.date: 02/21/2023
 ---
 # Launch your collaborative app
 
@@ -236,7 +237,7 @@ Get free, customizable marketing and sales resources, such as data sheets, prese
 <details>
 <summary>Partner press release and blog content review</summary>
 
-Publicly announce your Teams app by leveraging this service to review of a press release you draft and get a quote from a Microsoft representative. Watch this [short video](https://partner.microsoft.com/asset/detail/spm-20-how-to-write-a-press-release-mp4) to learn how to create an effective press release by using eight key pointers and connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) for using the offer.
+Publicly announce your Teams app by leveraging this service to review a press release you draft and get a quote from a Microsoft representative. Create an effective press release by using eight key pointers and connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to use the offer.
 
 </details>
 <br>

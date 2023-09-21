@@ -3,11 +3,12 @@ title: Package your app
 description: Learn how to package your Microsoft Teams app and upload it to Teams. Create app package, enable custom uploading, ensure your app is running and accessible using HTTPs.
 ms.localizationpriority: high
 ms.topic: conceptual
+ms.date: 09/28/2022
 ---
 
 # Create Teams app package
 
-You need an app package, however, you plan to distribute your Microsoft Teams app. A valid package is a ZIP file that contains the following:
+You need an app package, however, you plan to distribute your Microsoft Teams app. A valid package is a ZIP file (compressed zip file) that contains the following:
 
 * **App manifest**: Describes how your app is configured, including its capabilities, required resources, and other important attributes.
 * **App icons**: Each package requires a color and outline icon for your app.

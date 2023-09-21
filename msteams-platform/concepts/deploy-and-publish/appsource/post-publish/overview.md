@@ -5,6 +5,7 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
+ms.date: 10/19/2022
 ---
 # Maintain your published Microsoft Teams app
 
@@ -12,15 +13,15 @@ With your app listed on the Microsoft Teams Store, start thinking about how you'
 
 ## Analyze app usage
 
-You can track your app usage in the [Teams app usage report](/office/dev/store/teams-apps-usage) in Partner Center. Metrics include Monthly, Daily, and Weekly active users, and retention and intensity charts enabling you to track churn and frequency of usage.
+You can track your app usage in the [Teams app usage report](/office/dev/store/teams-apps-usage) in Partner Center. Metrics include Monthly, Daily, and Weekly active users, and retention and intensity charts. The metrics help you to track churn and frequency of usage.
 
 Data for newly published apps takes about a week to appear in the report.
 
 ## Publish updates to your app
 
-You can submit changes to your app (such as new features or even metadata) in Partner Center. These changes require a new review process.
+Submit changes to your app (such as new features or metadata) in Partner Center. These changes require a new review process.
 
-Ensure to check the following when you're publishing updates:
+Ensure that you check the following when you're publishing updates:
 
 * Don't change your app ID.
 * Increment your app's version number.
@@ -47,7 +48,7 @@ Microsoft runs daily automation tests on apps listed on the Teams Store. If issu
 
 ## Promote your app on another site
 
-When your app is listed in the Teams Store, you can create a link that launches Teams and displays a dialog to install your app. You could include this link, for example, with a download button on your product's marketing page.
+When your app is listed in the Teams Store, you can create a link that launches Teams and displays a dialog to install your app. You could include this link, for example, with a download button on your product's marketing page
 
 Create the link using the following URL appended with your app ID: `https://teams.microsoft.com/l/app/<your-app-id>`.
 
@@ -55,11 +56,16 @@ Create the link using the following URL appended with your app ID: `https://team
 
 [Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) offers assurances that data and privacy are adequately secured and protected when a third-party Microsoft 365 app or an add-in is installed in your Microsoft 365 ecosystem. The certification confirms that your app is compatible with Microsoft technologies, is compliant with cloud app security best practices, and is supported by Microsoft.
 
-## Stop app distribution
+## Keep your app details updated
 
 You can remove an app from the [Microsoft commercial marketplace](/azure/marketplace/overview) and the Microsoft Teams Store to prevent its discovery and use.
 
-To stop distribution of an app after you've published, follow the steps:
+| App details | Description |
+| --- | --- |
+| Your app's listing must be kept updated. | Any changes to functionality, pricing, visual appearance, or any other updates must be accurately reflected in your app's listing.|
+| You must regularly update your app to ensure that it remains compliant with the commercial marketplace policies.| Stay up to date with policy changes by subscribing to the changelog.|
+| Your contact details must be kept up to date in your Partner Center account. |Microsoft will contact you occasionally to resolve any bugs or commercial marketplace policy violations in your app. If your contact details aren't updated, you might miss important notices or updates from Microsoft.|
+| Maintain your app's functionality and user experience. | Your app's functionality and user experience must match or exceed the quality of experience at submission. You must maintain your app's performance.|
 
 1. In **Partner Center**, on the **Product overview** page, select **Stop selling**. It removes the app from the Microsoft AppSource.
 1. To initiate de-listing of the app from the Microsoft Teams Store, write to [apphealthevaluation](mailto:apphealthevaluation@microsoft.com).
@@ -73,8 +79,8 @@ Users can provide ratings and reviews to give feedback on their experience with 
 > [!NOTE]
 > Ratings and reviews aren't available for LOB apps.
 
-:::image type="content" source="../../../../assets/images/submission/review.gif" alt-text="Screenshot shows the ratings and review of an app.":::
+:::image type="content" source="../../../../assets/images/submission/review.gif" alt-text="Screenshot shows the ratings and review of an app."
 
 ## See also
 
-[Monetize your app through Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)
+[Monetize your app through Microsoft commercial marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)

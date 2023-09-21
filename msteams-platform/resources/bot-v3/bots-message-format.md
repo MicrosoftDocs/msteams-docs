@@ -3,7 +3,7 @@ title: Bot message format
 description: In this module, learn details of formatting for bot messages
 ms.topic: reference
 ms.localizationpriority: medium
-ms.date: 05/20/2019
+ms.date: 04/02/2023
 ---
 # Message formatting for bots
 

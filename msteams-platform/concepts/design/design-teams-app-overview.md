@@ -5,6 +5,7 @@ description: Learn how to design Microsoft Teams apps and resources include the 
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
+ms.date: 12/27/2022
 ---
 # Designing your Microsoft Teams app
 
@@ -168,7 +169,7 @@ To learn more, try one of the following resources:
 Get code samples and implementation details for the basic Fluent UI components used to build Teams experiences.
 
 > [!div class="nextstepaction"]
-> [Try Teams UI components (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
+> [Try Teams UI components (Fluent UI)](https://react.fluentui.dev/?path=/docs/)
 
 ### Adaptive Cards designer
 

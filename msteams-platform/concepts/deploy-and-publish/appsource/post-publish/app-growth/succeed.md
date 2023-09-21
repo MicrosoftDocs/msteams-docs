@@ -5,6 +5,7 @@ description: Learn what you can do during the final stage of your app to grow yo
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.date: 02/21/2023
 ---
 # Succeed with your collaborative app
 
@@ -39,7 +40,7 @@ A core product-led growth initiative is capturing Teams marketplace trials, tria
 <details>
 <summary>Deepen investment into Teams-app driven growth engine</summary>
 
-This stage is ripe to further sales, customer success and product-led initiatives to grow your SaaS business leading with the Teams collaborative app product line you’ve built. Consider making further investments into your sales, customer success, marketing and product teams who are responsible for the Teams app so that you can win more customer deals, collaborate with Microsoft on GTM and realize net new economic value through purchases and renewals on the commercial marketplace.
+This stage is ripe to further sales, customer success, and product-led initiatives to grow your SaaS business leading with the Teams collaborative app product line you’ve built. Consider making further investments into your sales, customer success, marketing and product teams who are responsible for the Teams app so that you can win more customer deals, collaborate with Microsoft on GTM and realize net new economic value through purchases and renewals on the commercial marketplace.
 
 </details>
 <br>
@@ -87,10 +88,9 @@ Impactful case studies of how investing in a collaborative app resulted in growt
 </details>
 <br>
 <details>
-<summary>Expand customer co-activation and joint new pitches</summary>
+<summary>Expand customer coactivation and joint new pitches</summary>
 
-Microsoft will evaluate co-activation opportunities in large customer accounts based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria. Get in touch with your Microsoft field, account, or engineering representatives to discuss potential joint customer pitches in large customer accounts.
-
+Microsoft will evaluate coactivation opportunities in large customer accounts based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria. Get in touch with your Microsoft field, account, or engineering representatives to discuss potential joint customer pitches in large customer accounts.
 </details>
 <br>
 <details>
