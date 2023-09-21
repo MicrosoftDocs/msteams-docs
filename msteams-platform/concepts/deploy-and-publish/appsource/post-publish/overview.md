@@ -8,7 +8,7 @@ ms.author: surbhigupta
 ---
 # Maintain your published Microsoft Teams app
 
-With your app listed on the Microsoft Teams store, start thinking about how you'll maintain the app going forward and increase downloads and usage.
+With your app listed on the Microsoft Teams Store, start thinking about how you'll maintain the app going forward and increase downloads and usage.
 
 ## Analyze app usage
 
@@ -43,11 +43,11 @@ If you make any of the following changes to your app, however, your existing use
 
 ## Fix issues with your published app
 
-Microsoft runs daily automation tests on apps listed on the Teams store. If issues with your app are identified, we contact you with a detailed report on how to reproduce the issues and recommendations to resolve them. If you can't fix the problems within a stated timeline, your app listing may be removed from the store.
+Microsoft runs daily automation tests on apps listed on the Teams Store. If issues with your app are identified, we contact you with a detailed report on how to reproduce the issues and recommendations to resolve them. If you can't fix the problems within a stated timeline, your app listing may be removed from the store.
 
 ## Promote your app on another site
 
-When your app is listed in the Teams store, you can create a link that launches Teams and displays a dialog to install your app. You could include this link, for example, with a download button on your product's marketing page.
+When your app is listed in the Teams Store, you can create a link that launches Teams and displays a dialog to install your app. You could include this link, for example, with a download button on your product's marketing page.
 
 Create the link using the following URL appended with your app ID: `https://teams.microsoft.com/l/app/<your-app-id>`.
 
@@ -57,23 +57,23 @@ Create the link using the following URL appended with your app ID: `https://team
 
 ## Stop app distribution
 
-You can remove an app from the [Microsoft commercial marketplace](/azure/marketplace/overview) and the Microsoft Teams store to prevent its discovery and use.
+You can remove an app from the [Microsoft commercial marketplace](/azure/marketplace/overview) and the Microsoft Teams Store to prevent its discovery and use.
 
 To stop distribution of an app after you've published, follow the steps:
 
 1. In **Partner Center**, on the **Product overview** page, select **Stop selling**. It removes the app from the Microsoft AppSource.
-1. To initiate de-listing of the app from the Microsoft Teams store, write to [apphealthevaluation](mailto:apphealthevaluation@microsoft.com).
+1. To initiate de-listing of the app from the Microsoft Teams Store, write to [apphealthevaluation](mailto:apphealthevaluation@microsoft.com).
 
-After you stop the distribution of an app, you can still see it in Partner Center with a **Not available** status. If you decide to list the app again, follow the instructions to [Publish your app to the Microsoft Teams store](../publish.md).
+After you stop the distribution of an app, you can still see it in Partner Center with a **Not available** status. If you decide to list the app again, follow the instructions to [Publish your app to the Microsoft Teams Store](../publish.md).
 
 ## Ratings and review for Teams apps
 
-Users can provide ratings and reviews to give feedback on their experience with an app on the Teams store. Users can rate your app from one to five stars and must provide a summary of their experience. These ratings are displayed on the app tile on store for users to view while browsing and in search results. You can view all the reviews and respond to the reviews in Partner Center, these responses are displayed on the Teams store and AppSource. Ratings and reviews help improve your app’s discoverability, user retention, and encourage downloads on Teams store.
+Users can provide ratings and reviews to give feedback on their experience with an app on the Teams Store. Users can rate your app from one to five stars and must provide a summary of their experience. These ratings are displayed on the app tile on Teams Store for users to view while browsing and in search results. You can view all the reviews and respond to the reviews in Partner Center, these responses are displayed on the Teams Store and AppSource. Ratings and reviews help improve your app’s discoverability, user retention, and encourage downloads on Teams Store.
 
->[!NOTE]
->Ratings and reviews are not provided for LOB apps.
+> [!NOTE]
+> Ratings and reviews aren't available for LOB apps.
 
-:::image type="content" source="../../../assets/images/submission/review.png" alt-text="Screenshot shows the ratings and review of an app.":::
+:::image type="content" source="../../../../assets/images/submission/review.gif" alt-text="Screenshot shows the ratings and review of an app.":::
 
 ## See also
 
