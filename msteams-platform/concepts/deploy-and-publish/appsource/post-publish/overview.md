@@ -73,6 +73,7 @@ Users can provide ratings and reviews to give feedback on their experience with 
 >[!NOTE]
 >Ratings and reviews are not provided for LOB apps.
 
+:::image type="content" source="../../../assets/images/submission/review.png" alt-text="Screenshot shows the ratings and review of an app.":::
 
 ## See also
 
