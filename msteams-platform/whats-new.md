@@ -28,7 +28,7 @@ Teams platform features that are available to all app developers.
 
 ***September 06, 2023***: [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md)
 
-***September 21, 2023***: [Ratings and review for Teams apps](concepts/deploy-and-publish/appsource/post-publish/overview.md)
+***September 21, 2023***: [Ratings and review for Teams apps](concepts/deploy-and-publish/appsource/post-publish/overview.md#ratings-and-review-for-teams-apps)
 
 :::column-end:::
 :::row-end:::
