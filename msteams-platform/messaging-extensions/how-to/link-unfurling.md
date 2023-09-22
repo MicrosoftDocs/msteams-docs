@@ -413,6 +413,24 @@ The following are the limitations:
 * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
 
 ---
+## How to test zero install link unfurling
+It is important **NOT** to install the app as a personal app at the moment of testing. The test for zero install link unfurling can be performed by sideloading the app into the tenant and not direct installation. Thus, avoid running the Teams test app directly from the Visual Studio debugger.
+
+To test your setup for zero install link unfurling, follow these steps:
+
+1. Login to the admin page of Teams tenant: [https://admin.teams.microsoft.com/](https://admin.teams.microsoft.com/) 
+2. Go to the "Managed apps" section
+:::image type="content" source="../../assets/images/teams-link-unfurling/manage-apps-admin.png" alt-text="Screenshot of Teams admin center and section for sideloading Teams apps":::
+
+3. Click "Upload new app
+:::image type="content" source="../../assets/images/teams-link-unfurling/upload-app-admin.png" alt-text="Screenshot of Teams admin center and where to upload custom apps":::
+
+4. Proceed with uploading the zip package for your test application
+
+5. After you upload the app to your tenant, you will see it under "Apps" -> "Build for your org" section in Teams. Do **NOT** click "Add" at this point.
+:::image type="content" source="../../assets/images/teams-link-unfurling/build-for-your-org.png" alt-text="Screenshot of Teams client with org sideloaded Teams app":::
+
+6. Now you are ready to receive the invoke request `composeExtensions/anonymousQueryLink`. You can test it by placing a breakpoint in your application in the method which implements an anonymousQueryLink request.
 
 ## Remove link unfurling cache
 
