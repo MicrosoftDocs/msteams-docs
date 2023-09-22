@@ -98,3 +98,5 @@ When a deep link to a tab app is triggered, ensure that all parameters are set i
 When Teams navigates to the tab through a deep link, Teams verifies if the subpage ID exists and retrieves it through the TeamsJS library.
 
 If the tab is navigated through a deep link, the [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) calls `microsoftTeams.getContext()` to verify if the subpage ID exists. In TeamsJS v1 library subpage ID is named as `subPageId` and in v2 it's `SubEntityId`. For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
+
+
