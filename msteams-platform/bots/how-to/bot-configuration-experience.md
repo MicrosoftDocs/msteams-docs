@@ -158,6 +158,8 @@ To configure the bot, follow these steps:
 
    The bot is installed in the chat.
 
+### Reconfigure the bot
+
 To reconfigure the bot, follow these steps:
 
 1. Go to the chat and **@mention** the bot in the message compose area and select **Send**.
@@ -175,8 +177,6 @@ To reconfigure the bot, follow these steps:
    :::image type="content" source="../../assets/images/bots/reconfigure-bot-settings.png" alt-text="Screenshot shows the Adaptive Card with settings icon to reconfigure.":::
 
    The bot sends a response message.
-
-   :::image type="content" source="../../assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows Adaptive Card with response message.":::
 
 ## See also
 
