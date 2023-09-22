@@ -55,7 +55,9 @@ items:
    > [!TIP]
    > If you work with Microsoft Graph data, you should learn about and bookmark the Microsoft Graph Explorer. This browser-based tool allows you to query Microsoft Graph outside of an app.
 
+   [!INCLUDE [Set up prerequisites](includes/get-started/prepare-teams-toolkit.md)]
 
+   <--!
    ## Prepare development environment
 
    After you've installed the required tools, set up the development environment.
@@ -149,7 +151,7 @@ items:
    If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
    Now you've got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to create first.
-
+   -->
 - title: Create project workspace for your tab app
   durationInMinutes: 1
   content: |
