@@ -33,6 +33,7 @@ You can generate the Preview offer ID from the **AppSource preview** link in the
     > You can't view the preview in the Developer Portal, when you select **view**, the offer is only applicable for non-US regions.
     > In the Developer Portal If the offer is only applicable for non-US regions,
     > If the offer you want to preview is limited to non-US regions, the Developer Portal may report being unable to find your offer when you click “view”. If this situation occurs, you can either temporarily add "United States" to the list of markets in which you specified your offer is available in Partner Center here [https://docs.microsoft.com/en-us/azure/marketplace/create-new-saas-offer-plans#define-markets-pricing-and-availability](/azure/marketplace/create-new-saas-offer-plans) or disregard the error and select **Preview in Teams** to sideload the app in the Teams client.
+    > :::image type="content" source="../../../../assets/images/apps-in-meetings/us-region.png" alt-text="Screenshot shows the user can select United States region.":::
 
 ## Configure your app with the preview offer ID
 
