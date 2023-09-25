@@ -36,7 +36,7 @@ You must have a basic understanding of the following to use custom Together Mode
 
 ## Best practices for creating a scene
 
-Consider the following practices for a scene building experience:
+Consider the following practices for best scene building experience:
 
 * Ensure that all images are in PNG format.
 * Ensure that the final package with all the images put together mustn't exceed 1920 x 1080 resolution. The resolution is an even number. This resolution is a requirement for scenes to be shown successfully.
@@ -92,9 +92,9 @@ To build a scene using the Scene studio, follow these steps:
 
 1. In the upper-right corner, under **Layers**, select **Participants**. 
 
-1. Select the number of participants for the scene from the **Number of participants** box, and select **Add**. After the scene is shipped, the avatar placements are replaced with actual participant's video streams. You can drag the images of the participants around the scene and place them in the required position. You can resize them using the resize arrow.
+1. Select the number of participants for the scene from the **Number of participants** box and select **Add**. After the scene is shipped, the avatar placements are replaced with actual participant's video streams. You can drag the images of the participants around the scene and place them in the required position. You can resize them using the resize arrow.
 
-1. Select any participant image, and select **Assign Spot** to assign the spot to the participant.
+1. Select any participant image and select **Assign Spot** to assign the spot to the participant.
 
 1. Select **Meeting Organizer** or **Presenter** role for the participant. In a meeting, one participant must be assigned the role of a meeting organizer:
 
@@ -117,7 +117,7 @@ The scene you have created can be viewed in the custom Together Mode scenes gall
 
    **Share**: From the **Save** drop-down menu, select **Share** to create a shareable link of your scenes to share for others to use. The user can open the link to install the scene and start using it. After preview, the scene is shipped as an app to Teams by following the steps for app submission. This step requires the app package. For the scene that is designed, the app package is different from the scene package. The app package created automatically is found in the **Apps** section in the Teams Developer Center. </br>
 
-   **Export**: From the **Save** drop-down menu, select **Export** to retrieve the scene package. A .zip file, that is the scene package, is downloaded. The Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes. </br>
+   **Export**: From the **Save** drop-down menu, select **Export** to retrieve the scene package. A .zip file, which is the scene package, is downloaded. The Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes. </br>
 
 :::image type="content" source="../assets/images/apps-in-meetings/build-a-scene.png" alt-text="Screenshot shows the Export option to export a scene.":::
 
@@ -196,8 +196,8 @@ Custom Together Mode scenes support zooming in on the current meeting participan
 
 A sprite is a static bitmap image positioned in the world. These sprites and participant boxes are defined in a world coordinate system. 
 
-•	The X-axis points to the right.
-•	The Y-axis points downwards.
+•	The X-axis points to the right.</br>
+•	The Y-axis points downwards.</br>
 •	 The Z value of the sprite determines the position of the sprite. Rendering starts with the sprite with lowest Z value, so higher Z value means it's closer to the camera.
 
 **Participants:** Each participant has its own video feed, which is segmented so only the foreground is rendered.
@@ -239,7 +239,7 @@ To select scenes and use custom Together Mode scenes, follow these steps:
 
 ## Open a custom Together Mode scenes Scene Package
 
-You can share the Scene Package that is a .zip file retrieved from the Scene studio to other creators to further enhance the scene. The **Import a scene** functionality helps unwrap a scene package to let the creator continue building the scene.
+You can share the Scene Package, which is a .zip file retrieved from the Scene studio to other creators to further enhance the scene. The **Import a scene** functionality helps unwrap a scene package to let the creator continue building the scene.
 
 :::image type="content" source="../assets/images/apps-in-meetings/scene-zip-file.png" alt-text="Screenshot shows the Import a scene option highlighted in red in the scene studio.":::
 
