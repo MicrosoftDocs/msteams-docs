@@ -31,7 +31,7 @@ Proactive messages generally fall into one of two categories, welcome messages o
 
 ### Welcome messages
 
-When using proactive messaging to send a welcome message to a user, ensure that from the user's perspective, the message appears unprompted. If there's a welcome message, it's be the first time that they’ve interacted with your app. The best welcome messages will include:
+When using proactive messaging to send a welcome message to a user, ensure that from the user's perspective, the message appears unprompted. If there's a welcome message, it's the first time that they’ve interacted with your app. The best welcome messages include:
 
 * **Why they are receiving this message**: It should be clear to the user why they're receiving this message. If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and potentially who installed it.
 * **What do you offer**: What can they do with your app? What value can you bring to them?
@@ -39,7 +39,7 @@ When using proactive messaging to send a welcome message to a user, ensure that 
 
 ### Notification messages
 
-When using proactive messaging to send notifications you need to make sure your users have a clear path to take common actions based on your notification, and a clear understanding of why the notification occurred. Good notification messages will generally include:
+When using proactive messaging to send notifications you need to make sure your users have a clear path to take common actions based on your notification, and a clear understanding of why the notification occurred. Good notification messages generally includes:
 
 * **What happened**: A clear indication of what happened to cause the notification.
 * **What it happened to**: It should be clear what item/thing was updated to cause the notification.
@@ -288,7 +288,7 @@ You can get the `channelData` from `TurnContext` object  like `turnContext.Activ
 
 Provide `id` as your bot app ID and `name` as your bot name. Similarly, `id` of tenant, from your bots `TurnContext` object such as `turnContext.Activity.ChannelData.Tenant.Id`.
 
-Similarly, you can provide the `teamID` for `teamsChannelId`, `teamsTeamId`, `channel`, `team` in `channelData` section which sends the message to general channel of team.
+Similarly, you can provide the `teamID` for `teamsChannelId`, `teamsTeamId`, `channel`, `team` in `channelData` section, which sends the message to general channel of team.
 
 If the call succeeds, the API returns with the following response object:
 
