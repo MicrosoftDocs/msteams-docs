@@ -1,6 +1,6 @@
 ---
 title: Publish Teams apps for Microsoft 365
-description: Learn how to make your Microsoft 365-enabled Teams apps discoverable to users in Teams, Outlook, and Microsoft 365 app through single tenant and multi-tenant distribution.
+description: Learn how to make your Microsoft 365-enabled Teams apps discoverable to users in Teams, Outlook, and Microsoft 365 app through single tenant and multi tenant distribution.
 ms.date: 10/10/2022
 ms.author: mosdevdocs
 author: erikadoyle
@@ -35,11 +35,11 @@ Use the [Teams Developer Portal](https://dev.teams.microsoft.com/) to upload and
 
 ### Microsoft Teams Admin Center
 
-Teams admin can upload and pre-install the app package for your organization's tenant from [Teams admin center](https://admin.teams.microsoft.com/). For more information, see [upload your custom apps in the Microsoft Teams admin center](/microsoftteams/upload-custom-apps).
+Teams admin can upload and preinstall the app package for your organization's tenant from [Teams admin center](https://admin.teams.microsoft.com/). For more information, see [upload your custom apps in the Microsoft Teams admin center](/microsoftteams/upload-custom-apps).
 
 ### Microsoft Admin Center
 
-Global admin can upload and pre-install the app package from [Microsoft admin](https://admin.microsoft.com/). For more information, see [test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps).
+Global admin can upload and preinstall the app package from [Microsoft admin](https://admin.microsoft.com/). For more information, see [test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps).
 
 ## Multitenant distribution
 
@@ -48,7 +48,7 @@ The [Microsoft commercial marketplace](https://appsource.microsoft.com/) (Micros
 > [!TIP]
 > Use Teams Developer Portal to [validate your app package](https://dev.teams.microsoft.com/validation) to resolve any errors or warnings before submitting it to the Teams Store (through [Microsoft Partner Network](https://partner.microsoft.com/)).
 
-See the following video to learn more about multi-tenant apps:
+See the following video to learn more about multi tenant apps:
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWZb0O]
 

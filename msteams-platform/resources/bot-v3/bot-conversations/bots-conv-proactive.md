@@ -9,29 +9,29 @@ ms.date: 04/02/2023
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-A proactive message is a message that is sent by a bot to start a conversation. You may want your bot to start a conversation for a number of reasons, including:
+A proactive message is a message that is sent by a bot to start a conversation. You may want your bot to start a conversation for many reasons, including:
 
 * Welcome messages for personal bot conversations.
 * Poll responses.
 * External event notifications.
 
-Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation. When your bot starts a new conversation, there's no preexisting conversation to post the message to. To send a proactive message, you need to:
+Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation. When your bot starts a new conversation, there's no pre-existing conversation to post the message to. To send a proactive message, you need to:
 
 1. [Decide what you're going to say](#best-practices-for-proactive-messaging)
 1. [Obtain the user's unique ID and tenant ID](#obtain-necessary-user-information)
 1. [Send the message](#examples)
 
-When creating proactive messages you **must** call `MicrosoftAppCredentials.TrustServiceUrl`, and pass in the service URL before creating the `ConnectorClient` used to send the message. If you don't, a `401: Unauthorized` response is received by your app. For more information, see [the samples below](#examples-for-creating-a-channel-conversation).
+When creating proactive messages you **must** call `MicrosoftAppCredentials.TrustServiceUrl`, and pass in the service URL before creating the `ConnectorClient` used to send the message. If you don't, a `401: Unauthorized` response is received by your app. For more information, see [the samples](#examples-for-creating-a-channel-conversation).
 
 ## Best practices for proactive messaging
 
-Sending proactive messages is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there's a welcome message, it will be the first time that they’ve interacted with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
+Sending proactive messages is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there's a welcome message, it's the first time that they’ve interacted with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
 
 Proactive messages generally fall into one of two categories, welcome messages or notifications.
 
 ### Welcome messages
 
-When using proactive messaging to send a welcome message to a user, ensure that from the user's perspective, the message appears unprompted. If there's a welcome message, it will be the first time that they’ve interacted with your app. The best welcome messages will include:
+When using proactive messaging to send a welcome message to a user, ensure that from the user's perspective, the message appears unprompted. If there's a welcome message, it's be the first time that they’ve interacted with your app. The best welcome messages will include:
 
 * **Why they are receiving this message**: It should be clear to the user why they're receiving this message. If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and potentially who installed it.
 * **What do you offer**: What can they do with your app? What value can you bring to them?
@@ -63,7 +63,7 @@ Bots can create new conversations with an individual Microsoft Teams user by obt
 
 Occasionally it may be necessary to proactively message users that haven't installed or interacted with your app previously. For example, you want to use the [company communicator](~/samples/app-templates.md#company-communicator) to send messages to your entire organization. For this scenario, you can use the Graph API to proactively install your app for your users, then cache the necessary values from the `conversationUpdate` event your app will receive upon install.
 
-You can only install apps that are in your organizational app catalogue, or the Microsoft Teams Store.
+You can only install apps that are in your organizational app catalog, or the Microsoft Teams Store.
 
 See [Install apps for users](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true) in the Graph documentation for complete details. There's also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
 
@@ -160,7 +160,7 @@ bot.send(msg);
 
 ## Creating a channel conversation
 
-Your team-added bot can post into a channel to create a new reply chain. If you're using the Node.js Teams SDK, use `startReplyChain()`, which gives you a fully populated address with the correct activity ID and conversation ID. If you're using C#, see the example below.
+Your team-added bot can post into a channel to create a new reply chain. If you're using the Node.js Teams SDK, use `startReplyChain()`, which gives you a fully populated address with the correct activity ID and conversation ID. If you're using C#, see the following example.
 
 Alternatively, you can use the REST API and issue a POST request to [`/conversations`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) resource.
 
