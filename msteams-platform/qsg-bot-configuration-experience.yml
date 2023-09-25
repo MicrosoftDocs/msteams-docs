@@ -8,7 +8,7 @@ metadata:
   ms.date: 04/07/2022
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/how-to/bot-configuration-experience.md
-  nextTutorialTitle: Bot configuration experience.
+  nextTutorialTitle: Bot configuration experience
   ms.custom: mvc
   ms.localizationpriority: high
 items:
@@ -87,13 +87,13 @@ items:
 
      1. Enter the name of a person or chat in the search field.
 
-       :::image type="content" source="~/assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot shows bot added to a chat.":::
+        :::image type="content" source="~/assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot shows bot added to a chat.":::
 
      1. Select **Set up a bot**.
 
-       :::image type="content" source="~/assets/images/bots/set-up-a-bot.png" alt-text="Screenshot shows set up a bot in chat.":::
+        :::image type="content" source="~/assets/images/bots/set-up-a-bot.png" alt-text="Screenshot shows set up a bot in chat.":::
 
-       The bot is installed in the chat.
+         The bot is installed in the chat.
 
 - title: Reconfigure the bot
   durationInMinutes: 1
@@ -107,7 +107,7 @@ items:
 
       :::image type="content" source="~/assets/images/bots/bot-adaptive-card-interaction.png" alt-text="Screenshot shows the Adaptive Card with settings icon.":::
 
-   A bot configuration Adaptive Card appears.
+      A bot configuration Adaptive Card appears.
 
    1. Reconfigure the bot settings and select **Submit**.
 
