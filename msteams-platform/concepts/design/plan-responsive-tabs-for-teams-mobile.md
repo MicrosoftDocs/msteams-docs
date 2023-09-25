@@ -13,13 +13,16 @@ Teams platform offers opportunity to build apps on mobile and desktop. Your app 
 
 Consider the following before you implement responsive tabs for your app in Teams mobile:
 
-* **Start small on functionalities:** Consider cross-device functionality for the Teams app.
+* **App functionalities:** Consider cross-device functionality for the Teams app.
 
     For example, if you've a well performing app on desktop, you can explore to build similar app on mobile. Initially, it can be difficult to shift entire desktop experience on mobile, but you can start with basic and common scenarios. Add functionalities and capabilities after you gather more insights and user feedback.
 
-* **Focus on user roles:** Ensure to target appropriate user role on Teams mobile.
+* **User roles:**
+Ensure to target appropriate user role on Teams mobile.
 
-    For example, if you're building an app that provides data visualization tools to end users such as data analysts and senior managers, both of them can use your app on Teams mobile. You can decide to cater to all the roles that you have on your desktop app. However, it's recommended to start with user role with a larger base and possible early adopters for smaller screen experience.
+    For example, if you're building an app that provides data visualization tools to end users such as data analysts and senior managers, both of them can use your app on Teams mobile. You can decide to cater to all the roles that you have on your desktop app.
+
+    However, it's recommended to start with user role with a larger base and possible early adopters for smaller screen experience.
 
     In this case, the data analysts are the appropriate user roles to target first. You can gradually add functionalities to support other user roles on your Teams mobile.
 
@@ -29,9 +32,9 @@ After you've identified the functionalities and user roles, it's time to underst
 
 | Stages | Description |
 | ----------- | ------------- |
-| **1. Consumption** | The first value that you want to deliver for your mobile users must be the right viewing experience on Teams mobile. To build an app on mobile, you can start with the consumption experience for your users. Since the mobile world has made scrolling for content a common practice, you can show relevant information. Additionally, you can use engagement mechanisms, such as notifications to inform updates. |
-| **2. Quick actions** | The next value that your users might want is the basic editing and querying experience on mobile. After your users start consuming the content on mobile, you can scale your app to the next step by migrating some actions from desktop app. You can also optimize and build new actions for mobile. |
-| **3. Enablement** | The final value that you can deliver to your users is the parity between desktop and mobile. As your users engage with your app, provide full immersive experience on mobile, either at par or better than desktop experience. To provide good experience for your users, make all use-cases, actions, and UI or UX elements responsive on mobile. </br> For more information on the design guidelines, see [design process for Teams apps](design-teams-app-process.md).|
+| **Consumption**| The first value that you want to deliver for your mobile users must be the right viewing experience on Teams mobile. To build an app on mobile, you can start with the consumption experience for your users. Since the mobile world has made scrolling for content a common practice, you can show relevant information. Additionally, you can use engagement mechanisms, such as notifications to inform updates. |
+| **Quick actions** | The next value that your users might want is the basic editing and querying experience on mobile. After your users start consuming the content on mobile, you can scale your app to the next step by migrating some actions from desktop app. You can also optimize and build new actions for mobile. |
+| **Enablement** | The final value that you can deliver to your users is the parity between desktop and mobile. As your users engage with your app, provide full immersive experience on mobile, either at par or better than desktop experience. To provide good experience for your users, make all use-cases, actions, and UI or UX elements responsive on mobile. </br> For more information on the design guidelines, see [design process for Teams apps](design-teams-app-process.md).|
 
 ## Use cases
 
