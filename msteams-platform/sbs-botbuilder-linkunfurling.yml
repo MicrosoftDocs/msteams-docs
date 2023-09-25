@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Bot Framework extends the cards specification by adding a set of pre-defined cards that bots can use as a part of bot messaging. Link unfurling using bot in Teams helps you to register your app. And helps to receive an invoke activity, when the URL with domain is pasted into the compose message area. The invoke activity contains the full URL and you can respond with a card. Users can unfurl the link using bot with additional information to get an enhanced experience.
+    Microsoft Bot Framework extends the cards specification by adding a set of predefined cards that bots can use as a part of bot messaging. Link unfurling using bot in Teams helps you to register your app and helps to receive an invoke activity, when the URL with domain is pasted into the compose message area. The invoke activity contains the full URL and you can respond with a card. Users can unfurl the link using bot with additional information to get an enhanced experience.
 
      > [!NOTE]
      > Link unfurling isn't supported on mobile clients.
@@ -26,7 +26,7 @@ items:
 
     This step-by-step guide helps you to create a bot to perform link unfurling in Microsoft Teams for `https://www.BotFramework.com`. You'll see the following output:
 
-    :::image type="content" source="~/assets/images/Teams-link-unfurling/final-image.png" alt-text="Link unfurling":::
+    :::image type="content" source="~/assets/images/Teams-link-unfurling/final-image.png" alt-text="Screenshot shows link unfurling.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -38,7 +38,7 @@ items:
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
      | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. Use the latest version or install the portable version. |
-      | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm devDependencies). |
+      | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
@@ -108,7 +108,7 @@ items:
 
          * Set `"MicrosoftAppType"` to **MultiTenant**.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
+         * Set `"MicrosoftAppPassword"` to your bot's client secrets **Value**.
          * Set `"MicrosoftAppTenantId"` as blank for MultiTenant bot.
 
          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/appsettings-json.png" alt-text="Screenshot showing the app settings.":::
@@ -142,7 +142,7 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    To build and run the service using latest version of Visual Studio  or Command line
+    To build and run the service, use the latest version of Visual Studio  or Command line.
 
     # [Visual Studio](#tab/vs)
 
@@ -195,7 +195,7 @@ items:
     1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps**.
     1. Select **Upload an app**
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. Look for the option to **Upload a custom app**. If you see the option, you can sideload apps.
 
        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/custom-upload.png" alt-text="Upload custom app":::
       
