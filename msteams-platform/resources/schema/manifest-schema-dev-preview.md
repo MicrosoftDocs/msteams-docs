@@ -435,7 +435,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`fetchTask`|Boolean|||A Boolean value that indicates if it should fetch bot config task module dynamically.|
+|`fetchTask`|Boolean|||A Boolean value that indicates whether fetch bot config task module dynamically.|
 |`teams.parameters.name`|String|64 characters|✔️|Name of the parameter.|
 |`teams.parameters.inputType`|String|||Type of the parameter. Options are `text`, `textarea`, `number`, `date`, `time`, `toggle`, and `choiceset`. Default value is `text`.|
 |`teams.parameters.title`|String|32 characters|✔️|Title of the parameter.|
