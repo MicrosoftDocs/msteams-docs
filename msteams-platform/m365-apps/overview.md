@@ -1,7 +1,7 @@
 ---
 title: Extend Teams apps across Microsoft 365
 description: Learn how to extend Teams apps across Microsoft 365 (running in Teams, Outlook, and Microsoft 365 as application hosts).
-ms.date: 02/28/2023
+ms.date: 09/20/2023
 ms.author: mosdevdocs
 author: erikadoyle
 ms.topic: Conceptual
@@ -19,7 +19,8 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 | Teams app features| App manifest element | Teams support |Outlook support | Microsoft 365 app support | Notes |
 |--|--|--|--|--|--|
 | [**Tabs-personal scope**](../tabs/how-to/create-personal-tab.md)     |`staticTabs`  | Web, Desktop, Mobile | Web, Desktop, Mobile (Android Beta*) | Web, Desktop, Mobile (Android)| *Rollout to Android current release in progress. Channel and group scope not yet supported for Microsoft 365. See [notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
-| [**Message extensions-search-based**](../messaging-extensions/how-to/search-commands/define-search-command.md)| `composeExtensions` | Web, Desktop, Mobile| Web, Desktop | - |Action-based not yet supported for Microsoft 365. See [notes](extend-m365-teams-message-extension.md#troubleshooting). |
+| [**Message extensions-search-based**](../messaging-extensions/how-to/search-commands/define-search-command.md)| `composeExtensions` | Web, Desktop, Mobile| Web, Desktop | - | For limitations and troubleshooting, see [notes](extend-m365-teams-message-extension.md#troubleshooting). |
+| [**Message extensions-action-based**](../messaging-extensions/how-to/action-commands/define-action-command.md)| `composeExtensions` | Web, Desktop, Mobile| Web | - | Viewable/actionable (not composable) in Teams/Outlook mobile preview (iOS, Android). For limitations and troubleshooting, see [notes](extend-m365-teams-message-extension.md#troubleshooting). |
 | [**Link unfurling (including Stage View)**](../tabs/tabs-link-unfurling.md) | `composeExtensions.messageHandlers` | Web, Desktop | Web, Desktop | - | See notes on [link unfurling](extend-m365-teams-message-extension.md#link-unfurling) and [Stage View](extend-m365-teams-message-extension.md#stage-view)|
 | [**Adaptive Card Loop components**](./design-loop-components.md)|`composeExtensions.messageHandlers`|Web (preview), Desktop (preview) |Web (preview), Desktop (only for [new Outlook](https://support.microsoft.com/office/getting-started-with-the-new-outlook-for-windows-656bb8d9-5a60-49b2-a98b-ba7822bc7627) preview) |-| Viewable (not composable) in Teams/Outlook mobile preview (iOS, Android). See [notes](cards-loop-component.md).|
 | [**Stage View**](extend-m365-teams-message-extension.md#stage-view)|`composeExtensions.messageHandlers`|Web, Desktop, Mobile|Web (preview), Desktop (preview)|-| Viewable/actionable (not composable) in Outlook mobile preview (iOS, Android). See [notes](extend-m365-teams-message-extension.md#stage-view).|
@@ -50,7 +51,7 @@ On mobile, you can test and debug your Teams personal tab running on Microsoft 3
 
 ---
 
-You can also extend your search-based [Teams message extensions](extend-m365-teams-message-extension.md) to Outlook on the web and Windows desktop, enabling your customers to search and share results through the compose message area of Outlook, in addition to Microsoft Teams clients.
+You can also extend your search and action-based [Teams message extensions](extend-m365-teams-message-extension.md) to Outlook. With search-based message extensions you can enables your customers to search and share results through the compose message area of Outlook, in addition to Microsoft Teams clients. And with action-based message extensions you can similiarly present your customers with modal pop-ups to collect or display information, process the interaction, and send the information back to the client as a rich card.
 
 :::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="The screenshot is an example that shows Message extension running in Outlook and Teams.":::
 
