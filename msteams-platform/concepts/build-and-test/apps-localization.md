@@ -83,17 +83,17 @@ You can provide additional .json files with translations of all the user facing 
 
 The Microsoft 365 host application applies the strings in the following order: default language strings -> user's language only strings -> user's language + user's region strings.
 
-For example, you provide a default language of 'fr' (French, all regions), and additional language files for 'en' (English, all regions) and 'en-gb' (English, Great Britain), the user's language is set to 'en-gb'. The following changes take place based on the language selection:
+For example, you provide a default language of `fr` (French, all regions), and additional language files for `en` (English, all regions) and `en-gb` (English, Great Britain), the user's language is set to `en-gb`. The following changes take place based on the language selection:
 
-1. The Microsoft 365 host application takes the 'fr' strings and overwrites them with the 'en' strings.
-1. Overwrite the 'en' strings with the 'en-gb' strings.
+1. The Microsoft 365 host application takes the `fr` strings and overwrites them with the `en` strings.
+1. Overwrite the `en` strings with the `en-gb` strings.
 
-If the user's language is set to 'en-ca', the following changes take place based on the language selection:
+If the user's language is set to `en-ca`, the following changes take place based on the language selection:
 
-1. The Microsoft 365 host application takes the 'fr' strings and overwrites them with the 'en' strings.
-1. Since no 'en-ca' localization is supplied, the 'en` localizations are used.
+1. The Microsoft 365 host application takes the `fr` strings and overwrites them with the `en` strings.
+1. Since no `en-ca` localization is supplied, the `en` localizations are used.
 
-If the user's language is set to 'es-es', the Microsoft 365 host application takes the 'fr' strings. The Microsoft 365 host application doesn't override the strings with any of the language files as no 'es' or 'es-es' translation is provided.
+If the user's language is set to `es-es`, the Microsoft 365 host application takes the `fr` strings. The Microsoft 365 host application doesn't override the strings with any of the language files as no `es` or `es-es` translation is provided.
 
 Therefore, you must provide top level, language only translations in your manifest. For example, `en` instead of `en-us`. You must provide region level overrides only for the few strings that need them.
 
