@@ -72,6 +72,26 @@ To get started, ensure that you have the following tools:
 
    The bot is installed in the chat.
 
+### Reconfigure the bot
+
+To reconfigure the bot, follow these steps:
+
+1. Go to the chat and **@mention** the bot in the message compose area and select **Send**.
+
+   :::image type="content" source="../../assets/images/bots/mention-bot.png" alt-text="Screenshot shows the interaction of bot.":::
+
+1. When you hover over the bot from the conversation, an Adaptive Card appears. Select the **Settings** icon in the Adaptive Card.
+
+   :::image type="content" source="../../assets/images/bots/bot-adaptive-card-interaction.png" alt-text="Screenshot shows the Adaptive Card with settings icon.":::
+
+   A bot configuration Adaptive Card appears.
+
+1. Reconfigure the bot settings and select **Submit**.
+
+   :::image type="content" source="../../assets/images/bots/reconfigure-bot-settings.png" alt-text="Screenshot shows the Adaptive Card with settings icon to reconfigure.":::
+
+   The bot sends a response message.
+
 ## See also
 
 [Bot configuration experience](bot-configuration-experience.md)
