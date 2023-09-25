@@ -20,19 +20,19 @@ In custom Together Mode scenes, the scene is an artifact. The scene developer cr
 
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Graphic shows the four steps to create scene only app in Teams.":::
 
-A scene only app is still an app in Teams. The Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
+A scene only app is still an app in Teams. Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
 
 > [!NOTE]
 > Users can't initiate Together Mode from mobile. However, after a user joins a meeting through mobile and Together Mode is turned on from desktop, the mobile users who have turned on the video, will appear in Together Mode on desktop.
 
 ## Prerequisites
 
-You must have a basic understanding of the following to use custom Together Mode scenes:
+You must've a basic understanding of the following to use custom Together Mode scenes:
 
 * Define scene and seats in a scene.
 * Create a Microsoft Developer account and be familiar with the Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
 * Understand the [concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
-* Ensure that the administrator has granted permission to [**Upload a custom app**](../concepts/deploy-and-publish/apps-upload.md) and select all filters as part of App Setup and Meeting policies respectively.
+* Ensure that the administrator has granted permission to [**Upload a custom app**](../concepts/deploy-and-publish/apps-upload.md) and select all filters as part of App Setup and meeting policies respectively.
 
 ## Best practices for creating a scene
 
@@ -54,7 +54,7 @@ Microsoft has a Scene studio that allows you to build scenes. It's available on 
 
 * Seat and image XYZ coordinates.
 
-* Collection of images that are camouflaged as one image.
+* Collection of images that're camouflaged as one image.
 
 The following image shows each seat represented as an avatar for building the scenes:
 
@@ -103,17 +103,17 @@ To build a scene using the Scene studio, follow these steps:
 1. Select **Save** and select **View in Teams** to quickly test your scene in Teams.
 
     * Selecting **View in Teams** automatically creates a Teams app that can be viewed in the **Apps** page in the Teams Developer Portal.
-    * Selecting **View in Teams** automatically creates an app package that is appmanifest.json behind the scene. You can go to  **Apps** from the menu and access the created app package.
+    * Selecting **View in Teams** automatically creates an app package that is appmanifest.json in the background. You can go to  **Apps** from the menu and access the created app package.
     
 1. Select **View in Teams**, in the dialog box that appears select **Add**.
 
-    The scene is tested or accessed by creating a test meeting and launching custom Together Mode scenes. For more information, see [Test custom Together Mode scenes in Teams](#test-custom-together-mode-scenes-in-teams).
+    To test or access the scene, create a test meeting and launch custom Together Mode scenes. For more information, see [Test custom Together Mode scenes in Teams](#test-custom-together-mode-scenes-in-teams).
 
      :::image type="content" source="../assets/images/apps-in-meetings/launchtogethermode.png" alt-text="Screenshot shows the custom scene launched in a Teams meeting.":::
 
 ## Share a scene using the Scene studio
 
-The scene you have created can be viewed in the custom Together Mode scenes gallery. You can also share and export the scene.
+You can view the scene you've created in the custom Together Mode scenes gallery. Additionally, you can share and export the scene.
 
    **Share**: From the **Save** drop-down menu, select **Share** to create a shareable link of your scenes to share for others to use. The user can open the link to install the scene and start using it. After preview, the scene is shipped as an app to Teams by following the steps for app submission. This step requires the app package. For the scene that is designed, the app package is different from the scene package. The app package created automatically is found in the **Apps** section in the Teams Developer Center. </br>
 
@@ -215,7 +215,7 @@ Now that you've gone through the sample scene.json file, you can use the custom 
 ## Test custom Together Mode scenes in Teams
 
 > [!NOTE]
-> You can apply a custom Together Mode scene that is deployed by your tenant admin only if you have a [Teams Premium license](/MicrosoftTeams/enhanced-teams-experience?branch=danismith-t-pre-licensing).
+> You can apply a custom Together Mode scene that is deployed by your tenant admin only if you've a [Teams Premium license](/MicrosoftTeams/enhanced-teams-experience?branch=danismith-t-pre-licensing).
 
 To select scenes and use custom Together Mode scenes, follow these steps:
 
