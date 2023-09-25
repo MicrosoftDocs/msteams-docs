@@ -148,7 +148,7 @@ To configure the bot, follow these steps:
 
    :::image type="content" source="../../assets/images/bots/group-chat-add-Bot.png" alt-text="Screenshot shows add your bot to chat.":::
 
-1. Enter the name of a person or chat in the search field.
+1. Enter the name of a chat or meeting in the search field.
 
    :::image type="content" source="../../assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot shows bot added to a chat.":::
 
