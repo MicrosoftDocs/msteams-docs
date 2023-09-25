@@ -12,7 +12,7 @@ keywords: TeamsJS Teams JavaScript library capability Microsoft 365 M365
 ---
 # TeamsJS capability support across Microsoft 365
 
-Starting with version 2.0.0, Teams JavaScript client library (TeamsJS) enables [certain types of Teams apps](./overview.md) to run across the Microsoft 365 ecosystem. Currently, Microsoft 365 applications that can host Teams apps (Microsoft 365 app and Outlook) support only a subset of the application types and capabilities you can build for the Teams platform. This support expands over time.
+Starting with version 2.0.0, Microsoft Teams JavaScript client library (TeamsJS) enables [certain types of Teams apps](./overview.md) to run across the Microsoft 365 ecosystem. Currently, Microsoft 365 applications that can host Teams apps (Microsoft 365 app and Outlook) support only a subset of the application types and capabilities you can build for the Teams platform. This support expands over time.
 
 This article details the level of support of TeamsJS version 2.x capabilities across various host applications. For more information on what's changed between TeamsJS versions 1.x and 2.x, see [What's new in TeamsJS version 2.x.x](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx).
 
@@ -25,23 +25,23 @@ The following *TeamsJS Capability* table lists TeamsJS capabilities (public name
 
 Microsoft 365 hosts are signified by the product icons in the following tables:
 
-| Microsoft Teams | Microsoft 365 app | Microsoft Outlook |
+| Teams | Microsoft 365 app | Microsoft Outlook |
 | :-: | :-: | :-: |
 | :::image type="content" source="./images/teams-icon.png" alt-text="Microsoft Teams icon"::: | :::image type="content" source="./images/microsoft-365-icon.png" alt-text="Microsoft 365 app icon"::: | :::image type="content" source="./images/outlook-icon.png" alt-text="Microsoft Outlook icon"::: |
 
 Preview versions for both Teams and Outlook (launched through *Try the new Teams* and *Try the new Outlook* toggle controls in Teams and Outlook clients respectively) have different levels of support. The preview versions are designated by the following **PRE** (preview) icons:
 
-| Microsoft Teams preview | Microsoft Outlook preview |
+| Teams preview | Microsoft Outlook preview |
 | :-: | :-: |
 | :::image type="content" source="./images/teams-preview-icon.png" alt-text="Microsoft Teams (Preview) icon"::: | :::image type="content" source="./images/outlook-preview-icon.png" alt-text="Microsoft Outlook preview icon"::: |
 
-Entries marked with a check and asterisk (&#x2713;*) indicate support for that host is available only to preview audiences (enrolled in [Microsoft 365 Targeted Releases](prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional) for web clients or with [Beta Channel apps](./prerequisites.md#install-microsoft-365-apps-in-your-test-environment) installed for desktop clients).
+Entries marked with a check and asterisk (&#x2713;*) indicate support for the host that is available only to preview audience who are enrolled in [Microsoft 365 Targeted Releases](prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional) for web clients or [Beta Channel apps](./prerequisites.md#install-microsoft-365-apps-in-your-test-environment) installed for desktop clients.
 
 Using the following table, select any TeamsJS Capability for further details including reference docs, samples, usage notes, and limitations.
 
 ## Cross-host capabilities
 
-The following table lists host application support for TeamsJS capabilities that can run outside of Microsoft Teams.
+The following table lists host application support for TeamsJS capabilities that can run outside of Teams.
 
 <br />
 <table border>
@@ -270,7 +270,7 @@ The following table lists host application support for TeamsJS capabilities that
 
 ## Teams-only capabilities
 
-The following table lists support for TeamsJS capabilities that run only in the Microsoft Teams environment.
+The following table lists support for TeamsJS capabilities that run only in the Teams environment.
 
 <br />
 <table border>
@@ -1551,7 +1551,7 @@ Namespace providing in-meeting app functionality.
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Microsoft Teams :
+> The following methods are not supported on mobile for Teams:
 >
 > - `meeting.requestStartLiveStreaming`
 > - `meeting.requestStopLiveStreaming`
@@ -1780,7 +1780,7 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Microsoft Teams :
+> The following methods are not supported on mobile for Teams:
 >
 > - `pages.getConfig`
 > - `pages.setCurrentFrame`
@@ -1942,9 +1942,9 @@ Preview. Namespace providing for profile-related functionality.
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Microsoft Teams :
+> The following methods are not supported on mobile for Teams:
 >
-> - `profile.showProfile`
+> `profile.showProfile`
 
 ## `search`
 
@@ -2191,9 +2191,9 @@ Namespace to open a share dialog for web content. For more information, see [Sha
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Microsoft Teams :
+> The following methods are not supported on mobile for Teams:
 >
-> - `sharing.shareWebContent`
+> `sharing.shareWebContent`
 
 ## `stageView`
 
@@ -2318,9 +2318,9 @@ The earlier version of the capability for providing modal dialog (task module) s
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Microsoft Teams :
+> The following methods are not supported on mobile for Teams:
 >
-> - `task.getDefaultSizeIfNotProvided`
+> `task.getDefaultSizeIfNotProvided`
 
 ## `teamsCore`
 
@@ -2445,7 +2445,7 @@ Preview. Namespace representing functionality for in-meeting video effects.
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Microsoft Teams :
+> The following methods are not supported on mobile for Teams:
 >
 > - `video.notifySelectedVideoEffectChanged`
 > - `video.registerForVideoEffect`
@@ -2512,15 +2512,15 @@ Preview. Contains functionality to allow web apps to store data in webview cache
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Microsoft Teams :
+> The following methods are not supported on mobile for Teams:
 >
-> - `webStorage.isWebStorageClearedOnUserLogOut`
+> `webStorage.isWebStorageClearedOnUserLogOut`
 
 ## Code sample
 
 | Sample name           | Description | Source|
 :---------------------|:--------------|:---------|
-| TeamsJS Capability Checker| Sample application to demonstrate the capabilities of TeamsJS library v2 in Microsoft Teams apps extended across Outlook and Microsoft 365. | [TypeScript](https://github.com/vikramtha/microsoft-teams-library-js/tree/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app)
+| TeamsJS Capability Checker| Sample application to demonstrate the capabilities of TeamsJS library v2 in Teams apps extended across Outlook and Microsoft 365. | [TypeScript](https://github.com/vikramtha/microsoft-teams-library-js/tree/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app)
 
 ## See also
 
