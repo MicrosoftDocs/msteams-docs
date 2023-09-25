@@ -127,10 +127,6 @@ A complex scene that uses the Z-axis is demonstrated in the step-by-step getting
 
 ## Sample
 
-Scene.json file along with the images indicate the exact position of the seats. A scene consists of bitmap images, sprites, and rectangles to put participant videos in. These sprites and participant boxes are defined in a world coordinate system. The X-axis points to the right and the Y-axis points downwards.
-
-Custom Together Mode scenes support zooming in on the current participants. This feature is helpful for small meetings in a large scene. A sprite is a static bitmap image positioned in the world. The Z value of the sprite determines the position of the sprite. Rendering starts with the sprite with lowest Z value, so higher Z value means it's closer to the camera. Each participant has its own video feed, which is segmented so only the foreground is rendered.
-
 The following code is the scene.json sample:
 
 ```json
@@ -196,7 +192,21 @@ The following code is the scene.json sample:
 }
 ```
 
-Each scene has a unique ID and name. The scene.json file also contains information on all the assets used for the scene. Each asset contains a filename, width, height, and position on the X and Y-axis. Similarly, each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is generated automatically and is altered as per preference. The seating order number corresponds to the order of people joining the call.
+Custom Together Mode scenes support zooming in on the current meeting participants. A scene consists of bitmap images, sprites, and rectangles to put participant videos in. 
+
+A sprite is a static bitmap image positioned in the world. These sprites and participant boxes are defined in a world coordinate system. 
+
+•	The X-axis points to the right.
+•	The Y-axis points downwards.
+•	 The Z value of the sprite determines the position of the sprite. Rendering starts with the sprite with lowest Z value, so higher Z value means it's closer to the camera.
+
+**Participants:** Each participant has its own video feed, which is segmented so only the foreground is rendered.
+
+**Scene:** Each scene has a unique ID and name. A scene.json file along with the images indicate the exact position of the seats. The scene.json file also contains information on all the assets used for the scene. 
+
+**Asset:** Each asset contains a filename, width, height, and position on the X and Y-axis. 
+
+**Seat:** Each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is generated automatically and is altered as per preference. The seating order number corresponds to the order of people joining the call.
 
 The `zOrder` represents the order of placing images and seats along the Z-axis. It gives a sense of depth or partition if necessary. See the step-by-step getting started sample. The sample uses the `zOrder`.
 
