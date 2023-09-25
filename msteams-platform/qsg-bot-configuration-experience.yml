@@ -115,7 +115,7 @@ items:
 
    1. The bot sends a response message.
 
-      :::image type="content" source="../../assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows the response message from the bot.":::
+      :::image type="content" source="~/assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows the response message from the bot.":::
   
 
 - title: Complete challenge
@@ -123,7 +123,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="../../assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows the response message from the bot.":::
+    :::image type="content" source="~/assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows the response message from the bot.":::
 
 - content: |
     You've completed the tutorial to get started with bot configuration!
