@@ -866,7 +866,7 @@ To build and run your app:
 
     Your photograph and details appear in your **Personal Tab**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/tab-user-info.png" alt-text="Screenshot of your Personal Tab displaying basic information.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/tab-user-info.png" alt-text="Screenshot of your Personal Tab in the app displaying basic information.":::
 
     You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
 
@@ -914,7 +914,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 1. After the provision is complete, select **OK**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/provision-complete.png" alt-text="Screenshot of Teams Toolkit with OK option highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/provision-complete.png" alt-text="Screenshot of Teams Toolkit app with OK option highlighted in red.":::
 
 1. Select **View Provisioned Resources** to view on Azure portal.
 
@@ -936,7 +936,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 1. Select **OK**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-success.PNG" alt-text="Screenshot of Teams Toolkit with OK option highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-success.PNG" alt-text="Screenshot of app built with Teams Toolkit with OK option highlighted in red.":::
 
     Your tab app is successfully deployed to the cloud!
 
@@ -968,7 +968,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
     Your photograph and details appear in your **Personal Tab**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-user-info.png" alt-text="Screenshot of your Personal Tab displaying basic information.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-user-info.png" alt-text="Screenshot of your app with personal tab displaying basic information.":::
 
 ## Congratulations
 
