@@ -55,7 +55,7 @@ Once you're able, the next step is to [update existing application code](#2-upda
 
 In `TeamsJS` version 2.11.0 or later, apps must provide a third url parameter, `hostRedirectUrl`, in the [authenticate API](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate), to redirect users to the correct client after the completion of authentication. The `hostRedirectUrl` authentication parameter will be necessary to enable your client to be supported across Microsoft 365 host applications. Apps implemented on older versions of `TeamsJS` only support Teams following this update, as the `oauthRedirectmethod` and `authId` query parameters are passed to the third-party app server.
 
-For more information regarding the authentication parameter, see [Use external OAuth providers](authentication/auth-oauth-provider.md).
+For more information regarding the authentication parameter, see [use external OAuth providers](authentication/auth-oauth-provider.md).
 
 #### Teams apps running across Microsoft 365
 

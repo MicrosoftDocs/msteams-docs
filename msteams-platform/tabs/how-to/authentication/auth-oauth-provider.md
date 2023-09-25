@@ -84,7 +84,7 @@ The following image provides the flow to add authentication to external browsers
    |`authId` | The request-id Teams created for this specific authentication request that needs to be sent back to Teams through deeplink.|
 
     > [!TIP]
-    > The app can marshal `authId`, `oauthRedirectMethod` in the OAuth `state` query parameter while generating the login URL for the OAuthProvider. The `state` contains the passed `authId` and `oauthRedirectMethod`, when OAuthProvider redirects back to the server and the app uses the values for sending authentication response back to Teams as described in **6. The third-party app server response to Teams**.
+    > The app can marshal `authId`, `oauthRedirectMethod` in the OAuth `state` query parameter while generating the login URL for the OAuthProvider. The `state` contains the passed `authId` and `oauthRedirectMethod`, when OAuthProvider redirects back to the server and the app uses the values for sending authentication response back to Teams as described in 6. The third-party app server response to Teams.
 
 4. The third-party app server redirects to specified `url`.
 
