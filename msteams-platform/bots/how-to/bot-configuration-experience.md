@@ -184,6 +184,11 @@ To reconfigure the bot, follow these steps:
 |-----------------|-----------------|----------------|----------------|----------------|
 | Bot configuration experience | This sample code describes to enable the bot configuration settings for the user. | |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/v-harikrishnan/bot-configuration-app/samples/bot-configuration-app/nodejs)| |
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Get started with Teams AI library](how-conversation-ai-get-started.md)
+
 ## See also
 
 * [Build bots for Teams](../what-are-bots.md)
