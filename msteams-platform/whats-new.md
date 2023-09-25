@@ -26,7 +26,9 @@ Teams platform features that are available to all app developers.
 
 **2023 September**
 
-***September 06, 2023***: [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md)
+* ***September 26, 2023***: [Configure your bot with read receipt events to identify if the recipient has read the message sent by the bot.](~/bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt)
+
+* ***September 06, 2023***: [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md)
 
 :::column-end:::
 :::row-end:::
@@ -342,8 +344,6 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 August**
 
-
-* ***August 31, 2023***: [Configure your bot with read receipt events to identify if the recipient has read the message sent by the bot.](~/bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt)
 
 * ***August 31, 2023***: [The new Teams client supports light theme for apps in Teams meetings.](tabs/how-to/access-teams-context.md#handle-theme-change)
 
