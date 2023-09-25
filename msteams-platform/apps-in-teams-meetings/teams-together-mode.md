@@ -121,7 +121,7 @@ The scene you have created can be viewed in the custom Together Mode scenes gall
 
 :::image type="content" source="../assets/images/apps-in-meetings/build-a-scene.png" alt-text="Screenshot shows the Export option to export a scene.":::
 
-1. To delete a scene you created, select **Delete scene** on the top bar.
+To delete a scene you created, select **Delete scene** on the top bar.
 
 A complex scene that uses the Z-axis is demonstrated in the step-by-step getting started sample.
 
