@@ -64,7 +64,7 @@ items:
   content: |    
      [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
 
-- title: Build and run client app
+- title: Build and run your app
   durationInMinutes: 1
   content: |
      1. Go to **Visual Studio Code**.
