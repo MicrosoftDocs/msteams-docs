@@ -37,7 +37,7 @@ After you've identified the functionalities and user roles, it's time to underst
 
 ## Use cases
 
-Let us go through the following use cases to understand how to plan different types of apps for Teams mobile:
+You can go through the following use cases to understand how to plan different types of apps for Teams mobile:
 
 <br>
 
