@@ -22,7 +22,7 @@ It's designed to quickly run a bot configuration based sample on your computer's
 To get started, ensure that you have the following tools:
 
 * Microsoft Teams
-* [Teams Toolkit](../../../toolkit/install-Teams-Toolkit.md)
+* [[Teams Toolkit](../../../toolkit/install-Teams-Toolkit.md)]
 * [NodeJS](https://nodejs.org/en/)
 * [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/)
 * [Visual Studio Code](https://code.visualstudio.com/download)
@@ -58,22 +58,20 @@ To get started, ensure that you have the following tools:
 
    A browser tab opens a Teams web client requesting to add the bot to your tenant.
 
-1. Select **Add**.
+1. From the dropdown next to **Add**, select **Add to a team**, **Add to a chat**, or **Add to a meeting**.
 
-   :::image type="content" source="../../../assets/images/bots/Conversation-AI-sample-app-add.png" alt-text="Screenshot shows the add option in Teams web client.":::
+   :::image type="content" source="../../assets/images/bots/group-chat-add-Bot.png" alt-text="Screenshot shows add your bot to chat.":::
 
-   A chat window opens.
+1. Enter the name of a person or chat in the search field.
 
-1. In the message compose area, @mention **TeamsChef-local** to invoke the bot and chat in a plain language.
+   :::image type="content" source="../../assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot shows bot added to a chat.":::
 
-   :::image type="content" source="../../../assets/images/bots/conversation-AI-quick-start-final.png" alt-text="Screenshot shows an example of conversation with Teams chef bot in Teams.":::
+1. Select **Set up a bot**.
 
-   The bot uses the text-davinci-003 model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
+   :::image type="content" source="../../assets/images/bots/set-up-a-bot.png" alt-text="Screenshot shows set up a bot in chat.":::
 
-> [!NOTE]
-> If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio code to build a bot, see [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml).
+   The bot is installed in the chat.
 
-## Next step
+## See also
 
-> [!div class="nextstepaction"]
-> [Build your first bot using Teams AI library](../../../sbs-botbuilder-conversation-AI.yml)
+[Bot configuration experience](bot-configuration-experience.md)
