@@ -138,7 +138,7 @@ Since message extensions are based on the bot channel, most of the above applies
 
 ## Aggregate and user-specific insights
 
-Besides the obvious metrics in the SaaS world such as daily, weekly, monthly active users, time spent in your app and so on., implementing analytics thoughtfully for your Teams app per the guidance above will allow you to get insights such as:
+Besides the obvious metrics in the SaaS world such as daily, weekly, monthly active users, and time spent in your app implementing analytics thoughtfully for your Teams app per the guidance above will allow you to get insights such as:
 
 - **Aggregate metrics**
   - Which platform capabilities, surface areas (for example, tabs, bots, message extensions) and UI constructs (cards, task modules, Stage Views) leveraged in your Teams app found the most usage by your users?
