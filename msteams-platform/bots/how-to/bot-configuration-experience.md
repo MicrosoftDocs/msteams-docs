@@ -187,7 +187,7 @@ To reconfigure the bot, follow these steps:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Get started with Teams AI library](how-conversation-ai-get-started.md)
+> [Bot configuration quick start guide](../../qsg-bot-configuration-experience.yml)
 
 ## See also
 
