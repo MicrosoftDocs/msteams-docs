@@ -22,7 +22,7 @@ items:
     Start Microsoft Teams app development with your first Teams app. 
     You can create a bot app with Teams using Javascript. 
 
-    This step-by-step guide helps you to build configurable bot with Teams Toolkit. You'll see the following output after you've completed this guide, where the user can configure his bot from the channel or group chat:
+    This quick start guide helps you to build configurable bot with Teams Toolkit. You'll see the following output after you've completed this guide, where the user can configure his bot from the channel or group chat:
     
     :::image type="content" source="~/assets/images/bots/configurationbot.gif" alt-text="Screenshot shows the configuration option for the bot in a Teams group chat.":::
 
