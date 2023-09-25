@@ -344,7 +344,6 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 August**
 
-
 * ***August 31, 2023***: [The new Teams client supports light theme for apps in Teams meetings.](tabs/how-to/access-teams-context.md#handle-theme-change)
 
 * ***August 28, 2023***: [Teams app manifest is now referred to as app manifest.](resources/schema/manifest-schema-dev-preview.md)
