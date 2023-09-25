@@ -22,7 +22,7 @@ It's designed to quickly run a bot configuration based sample on your computer's
 To get started, ensure that you have the following tools:
 
 * Microsoft Teams
-* [Install Teams Toolkit](../../toolkit/install-Teams-Toolkit.md)
+* [Teams Toolkit](../../toolkit/install-Teams-Toolkit.md)
 * [NodeJS](https://nodejs.org/en/)
 * [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/)
 * [Visual Studio Code](https://code.visualstudio.com/download)
