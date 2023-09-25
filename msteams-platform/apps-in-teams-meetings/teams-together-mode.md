@@ -107,7 +107,7 @@ To build a scene using the Scene studio, follow these steps:
     
 1. Select **View in Teams**, in the dialog box that appears select **Add**.
 
-    The scene is tested or accessed by creating a test meeting and launching custom Together Mode scenes. For more information, see [Test custom Together Mode scenes in Teams](#Test-custom-Together-Mode-scenes-in-teams).
+    The scene is tested or accessed by creating a test meeting and launching custom Together Mode scenes. For more information, see [Test custom Together Mode scenes in Teams](#test-custom-together-mode-scenes-in-teams).
 
      :::image type="content" source="../assets/images/apps-in-meetings/launchtogethermode.png" alt-text="Screenshot shows the custom scene launched in a Teams meeting.":::
 
@@ -115,9 +115,9 @@ To build a scene using the Scene studio, follow these steps:
 
 The scene you have created can be viewed in the custom Together Mode scenes gallery. You can also share and export the scene.
 
-      **Share**: From the **Save** drop-down menu, select **Share** to create a shareable link of your scenes to share for others to use. The user can open the link to install the scene and start using it. After preview, the scene is shipped as an app to Teams by following the steps for app submission. This step requires the app package. For the scene that is designed, the app package is different from the scene package. The app package created automatically is found in the **Apps** section in the Teams Developer Center. </br>
+   **Share**: From the **Save** drop-down menu, select **Share** to create a shareable link of your scenes to share for others to use. The user can open the link to install the scene and start using it. After preview, the scene is shipped as an app to Teams by following the steps for app submission. This step requires the app package. For the scene that is designed, the app package is different from the scene package. The app package created automatically is found in the **Apps** section in the Teams Developer Center. </br>
 
-      **Export**: From the **Save** drop-down menu, select **Export** to retrieve the scene package. A .zip file, that is the scene package, is downloaded. The Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes. </br>
+   **Export**: From the **Save** drop-down menu, select **Export** to retrieve the scene package. A .zip file, that is the scene package, is downloaded. The Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes. </br>
 
 :::image type="content" source="../assets/images/apps-in-meetings/build-a-scene.png" alt-text="Screenshot shows the Export option to export a scene.":::
 
