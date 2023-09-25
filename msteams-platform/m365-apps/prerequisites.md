@@ -71,7 +71,7 @@ For more information on Microsoft 365 release options, see [set up the Standard 
 
 ### Desktop
 
-Based on the the scenario you want to test, you can preview Teams apps running in Outlook on Windows desktop by using a [Microsoft 365 Apps update channel](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) for your tenant.
+Based on the scenario you want to test, you can preview Teams apps running in Outlook on Windows desktop by using a [Microsoft 365 Apps update channel](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) for your tenant.
 
 To install Microsoft 365 applications in your test environment:
 
