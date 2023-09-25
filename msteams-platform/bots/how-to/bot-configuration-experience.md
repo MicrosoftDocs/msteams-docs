@@ -178,6 +178,12 @@ To reconfigure the bot, follow these steps:
 
    The bot sends a response message.
 
+## Code sample
+
+| **Sample name** | **Description** | **.NET** |**Node.js** | **App manifest**|
+|-----------------|-----------------|----------------|----------------|----------------|
+| Bot configuration experience | This sample code describes to enable the bot configuration settings for the user. | |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/v-harikrishnan/bot-configuration-app/samples/bot-configuration-app/nodejs)| |
+
 ## See also
 
 * [Build bots for Teams](../what-are-bots.md)
