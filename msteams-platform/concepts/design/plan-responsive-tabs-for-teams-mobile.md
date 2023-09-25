@@ -1,7 +1,7 @@
 ---
 title: Plan for Teams mobile
 author: surbhigupta
-description: With this learning module, you'll learn how to plan for creating an app on Teams mobile and understand different stages to build app.
+description: In this module, learn how to plan for creating an app on Teams mobile and understand different stages to build app.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
@@ -9,20 +9,19 @@ ms.date: 12/09/2022
 ---
 # Plan responsive tabs for Teams mobile
 
-Teams platform offers opportunity to build apps on mobile and desktop. Your app users can prefer either desktop or mobile, or both. The users can prepare data on desktop but consume and share more data using mobile. The key to build any app is to understand and meet users' needs. There are capabilities like bots, message extensions, and connectors that work seamlessly on desktop and mobile. However, building tabs and task modules require planning for hosting your web experience on Teams mobile.
+Teams platform offers the opportunity to build apps on mobile and desktop. Your app users can prefer either desktop or mobile, or both. The users can prepare data on desktop but consume and share more data using mobile. The key to build any app is to understand and meet users needs. There are capabilities like bots, message extensions, and connectors that work seamlessly on desktop and mobile. However, building tabs and task modules require planning for hosting your web experience on Teams mobile.
 
 Consider the following before you implement responsive tabs for your app in Teams mobile:
 
 * **App functionalities:** Consider cross-device functionality for the Teams app.
 
-    For example, if you've a well performing app on desktop, you can explore to build similar app on mobile. Initially, it can be difficult to shift entire desktop experience on mobile, but you can start with basic and common scenarios. Add functionalities and capabilities after you gather more insights and user feedback.
+    For example, if you've a well performing app on desktop, you can explore to build similar app on mobile. Initially, it can be difficult to the shift entire desktop experience on mobile, but you can start with basic and common scenarios. Add functionalities and capabilities after you gather more insights and user feedback.
 
-* **User roles:**
-Ensure to target appropriate user role on Teams mobile.
+* **User roles:** Ensure to target appropriate user role on Teams mobile.
 
     For example, if you're building an app that provides data visualization tools to end users such as data analysts and senior managers, both of them can use your app on Teams mobile. You can decide to cater to all the roles that you have on your desktop app.
 
-    However, it's recommended to start with user role with a larger base and possible early adopters for smaller screen experience.
+    However, it's recommended to start with a user role with a larger base and possible early adopters for smaller screen experience.
 
     In this case, the data analysts are the appropriate user roles to target first. You can gradually add functionalities to support other user roles on your Teams mobile.
 
@@ -115,7 +114,7 @@ In the second stage, you can provide the following app access to users:
 
 **Enablement:**
 
-In the third stage, you can enable users' experience with the following activities:
+In the third stage, you can enable users experience with the following activities:
 
 * Add new projects and boards.
 * Add and modify different categories, such as **Proposed**, **Active**, and **Closed**.
@@ -160,7 +159,7 @@ In the second stage, you can introduce the following actions:
 
 **Enablement:**
 
-In the third stage, provide complete experience to your users. You can enable users' experience with the following activities:
+In the third stage, provide complete experience to your users. You can enable users experience with the following activities:
 
 * Adding text, shapes, and quick notes.
 * Navigate around content.
