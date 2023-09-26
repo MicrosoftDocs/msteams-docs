@@ -919,7 +919,7 @@ Provides the ability to add buttons and menu items, collectively called "[add-in
 |---|---|---|---|---|
 |`type`| object | | | |
 |`contexts`| array | 4 | | Specifies the Microsoft 365 application windows in which the ribbon customization is available to the user. Each item in the array is a member of a string array. Each item in the array is a member of a string array. Possible values are: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`|
-|`tabs`| array | |✔️| Configures custom tabs on the Office application ribbon. |
+|`tabs`| array | |✔️| Configures custom tabs on the Microsoft 365 application ribbon. |
 |`tabs.id`| string | 64 characters | | Unique identifier for this tab within the app.|
 |`tabs.label`| string | 64 characters | | Displayed text for the tab.|
 |`tabs.position`| object | | | Configures the position of the custom tab relative to other tabs on the ribbon.|
