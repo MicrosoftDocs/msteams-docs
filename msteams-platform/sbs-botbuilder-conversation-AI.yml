@@ -45,7 +45,7 @@ items:
    |[Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    |[Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-   |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) or [Azure OpenAI ](https://azure.microsoft.com/free/)|First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must have create an [Azure OpenAI service](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal) before you begin.|
+   |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) or [Azure OpenAI](https://azure.microsoft.com/free/)|First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must have create an [Azure OpenAI service](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal) before you begin.|
    |[Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
    | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store. |
 
@@ -271,7 +271,7 @@ items:
     | `teamsBot.ts` | Teams activity handler. |
     | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
     | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
-    | `config.ts` | `config.ts` wraps access to environment variables that is used to setup the bots adapter. |
+    | `config.ts` | `config.ts` wraps access to environment variables that is used to set up the bots adapter. |
     | `teamsapp.yml` |	This is the main Teams Toolkit project that defines properties and configuration stage definitions. |
     | `teamsapp.local.yml` |This overrides teamsapp.yml with actions that enable local execution and debugging. |
     | `infra/azure.parameters.json` | Parameters file for Azure BICEP provision for every environment. |
@@ -360,6 +360,9 @@ items:
         AZURE_OPENAI_ENDPOINT=https://********.openai.azure.com/
        ```
 
+       > [!NOTE]
+       > If you’re creating the sample through Teams Toolkit, you’ll find the `.env.local.user` file in the setup that is created automatically. If the file isn't available, create the .env.local.user file and update the OpenAI key or Azure Open AI endpoint.
+
     1. Go to the `config.ts` file and add the following code after `botId` and `botPassword`:
 
        1. For OpenAI:
@@ -391,7 +394,7 @@ items:
         ```
        When you run the app locally, the values defined here are used in the local settings.
 
-    1. Go to the `index.ts` file :
+    1. Go to the `index.ts` file:
 
         1. Under **Create HTTP server** after `console.log` method, add the following code in a new line to import Teams AI library:
 
@@ -401,7 +404,7 @@ items:
             ```
             For Azure OpenAI, add AzureOpenAIPlanner in the import.
 
-            You need to import the required classes to use the functions and variables available in the class to build your app. You can leverage pre-built templates and add your business logic to this scaffold.
+            You need to import the required classes to use the functions and variables available in the class to build your app. You can use pre-built templates and add your business logic to this scaffold.
 
         1. After `import path from "path"`, add the following code in a new line to define a state:
 
@@ -490,7 +493,7 @@ items:
             
             When the `OpenAIModerator` reviews and identifies a flag in an input or output, it triggers the action `AI.FlaggedInputActionName` or `AI.FlaggedOutputActionName` and the `context.sendActivity` sends a message to the user. If the user receives a message for an flagged  input or output, the user can control what he wants to do.
 
-        1. After adding the code to define actions, add the following code in a new line o define history:
+        1. After adding the code to define actions, add the following code in a new line to define history:
  
             ```typescript
             app.message('/history', async (context, state) => {
@@ -499,7 +502,7 @@ items:
             });
             ```
 
-           The `ConversationHistory` class is a utility class that makes it easier to manage the conversation history. When the user sends `/history`` to the bot in Teams, the server sends a log of the conversation history back to the user. The history is tracked and populated in the state.temp.history property where state is the `ApplicationTurnState`.
+           The `ConversationHistory` class is a utility class that makes it easier to manage the conversation history. When the user sends `/history` to the bot in Teams, the server sends a log of the conversation history back to the user. The history is tracked and populated in the state.temp.history property where state is the `ApplicationTurnState`.
 
            1. Under **Import required bot service**, after `TurnContext` add `MemoryStorage`.
 
@@ -513,7 +516,7 @@ items:
 
     1. Go to the `config.json` file and add the following code to create the prompt model settings:
     
-        ```javascript
+        ```config.json
         {
             "schema": 1,
             "description": "Chat with Teams Chef",
@@ -595,8 +598,8 @@ items:
           - Port required by bot app is available.
           
         2. Install npm packages.
-        3. Starts Dev Tunnel to create a HTTP tunnel.
-        4. Registers the app in Azure AD and configures the app.
+        3. Starts Dev Tunnel to create an HTTP tunnel.
+        4. Registers the app in Azure Active Directory (Azure AD) and configures the app.
         5. Registers the bot app in Bot Framework SDK and configures the bot app.
         6. Registers the app in Teams Developer Portal and configures the app.
         7. Starts the bot app.
@@ -729,7 +732,7 @@ items:
 
         The provisioning process creates resources in the Azure cloud. It might take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing a notice which displays 'hellomsg' successfully provisioned in the cloud.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing a notice, which displays 'hellomsg' successfully provisioned in the cloud.":::
 
         If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
 
