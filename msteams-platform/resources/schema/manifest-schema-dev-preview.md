@@ -861,7 +861,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 
 ## extensions
 
-**Optional**--object
+**Optional** &ndash; Object
 
 The set of add-ins for this app. Used to specify Outlook Add-ins within an app manifest for simplified distribution and acquisition across the Microsoft 365 ecosystem.
 
