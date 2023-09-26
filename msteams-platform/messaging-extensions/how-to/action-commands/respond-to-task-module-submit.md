@@ -1,7 +1,7 @@
 ---
 title: Respond to the task module submit action
 author: surbhigupta
-description: Learn how to respond to the task module submit action from a message extension action command with Proactive message. Define search commands and respond to searches.
+description: Learn how to respond to the task module submit action from a message extension action command with Proactive message. Define search commands and respond to searches. Response header attribution for action on message content.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -9,7 +9,7 @@ ms.author: anclear
 
 # Respond to the task module submit action
 
-[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)
 
 This document guides you on how your app responds to the action commands, such as user's task module submit action.
 After a user submits the task module, your web service receives a `composeExtensions/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to the invoke.
@@ -546,9 +546,9 @@ You receive a new `composeExtensions/submitAction` message similar to the follow
 
 ### User attribution for bots messages
 
-In scenarios where a bot sends messages on behalf of a user, attributing the message to that user helps with engagement and showcase a more natural interaction flow. This feature allows you to attribute a message from your bot to a user on whose behalf it was sent.
+A bot sends a message on behalf of a user mentioned in the header, attributing the message to the users helps with engagement and display a more natural interaction flow. This feature allows you to identify the individual on whose behalf your bot sent a message.
 
-In the following image, left side of the image is a card message sent by a bot without user attribution and right side of the image is a card sent by a bot with user attribution.
+In the following image, left side of the image is a card message sent by a bot without user attribution in the header and right side of the image is a card sent by a bot with user attribution in the header.
 
 :::image type="content" source="../../../assets/images/messaging-extension/user-attribution-bots.png" alt-text="User attribution bots":::
 
