@@ -10,7 +10,7 @@ ms.subservice: m365apps
 ---
 # Set up your dev environment for extending Teams apps across Microsoft 365
 
-The development environment for extending Teams apps across Microsoft 365 is similar to Microsoft Teams development. This article discusses specific configurations required to run preview builds of Microsoft Teams and Microsoft 365 applications in order to preview Teams apps running in Outlook and Microsoft 365 app.
+The development environment for extending Microsoft Teams apps across Microsoft 365 is similar to Teams development. This article discusses specific configurations required to run preview builds of Teams and Microsoft 365 applications in order to preview Teams apps running in Outlook and Microsoft 365 app.
 
 To set up your development environment:
 
@@ -71,7 +71,7 @@ For more information on Microsoft 365 release options, see [set up the Standard 
 
 ### Desktop
 
-You can preview Teams apps running in Outlook on Windows desktop by using a channel according to your testing scenario. Check if you have to [change the Microsoft 365 Apps update channel](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) for your test tenant.
+Based on the scenario you want to test, you can preview Teams apps running in Outlook on Windows desktop by using a [Microsoft 365 Apps update channel](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) for your tenant.
 
 To install Microsoft 365 applications in your test environment:
 
@@ -80,7 +80,7 @@ To install Microsoft 365 applications in your test environment:
 1. Select a local folder to store the extracted files.
 1. Go to the local folder and open *configuration-Office365-x86.xml* (or **x64.xml*, depending on your environment) in a text editor. Ensure the [*Channel*](/DeployOffice/office-deployment-tool-configuration-options#channel-attribute-part-of-updates-element) value is set according to the scenario you're testing:
 
-    | **Outlook scenario** | **[Update channel](/DeployOffice/office-deployment-tool-configuration-options#channel-attribute-part-of-updates-element)** | 
+    | **Outlook scenario** | **Update channel** | 
     |---------------|--------------|
     |Teams personal tabs in Outlook | `Current`|
     |Teams search-based message extensions in Outlook | `Current`|
