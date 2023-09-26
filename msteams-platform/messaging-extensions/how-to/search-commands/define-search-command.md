@@ -76,16 +76,6 @@ The following image displays command addition for message extension:
 
    :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="Screenshot shows how to save all your setting and parameters for your message extension.":::
 
-**To add additional parameters**
-
-1. Select ellipse under command section and then select **Edit parameter**.
-
-   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Screenshots shows how to edit parameters for your message extension.":::
-
-1. Select **Add a Parameters** and enter all the parameters.
-
-   :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Screenshot shows how to add additional parameters for your message extension."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
-
 ### Create a search command manually
 
 To manually add your message extension search command to your app manifest, you must add the following parameters to your `composeExtensions.commands` array of objects:

@@ -50,7 +50,7 @@ items:
 
    ### Install the Teams Toolkit
 
-   The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. 
+   The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Microsoft Teams Store, and more. 
     
    You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`.
 
@@ -234,7 +234,7 @@ items:
     | Folder/file name | Contents |
     | --- | --- |
     | `.vscode` | VSCode files for debugging. |
-    | `appPackage` | Templates for the Teams application manifest. |
+    | `appPackage` | Templates for the app manifest (previously called Teams app manifest). |
     | `env` | Name / value pairs are stored in environment files and used by teamsapp.yml to customize the provisioning and deployment rules. |
     | `infra` | Templates for provisioning Azure resources. |
     | `src\`| The source code for the notification Teams application. |

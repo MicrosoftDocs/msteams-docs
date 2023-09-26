@@ -46,7 +46,7 @@ To create and configure your app in Azure AD for enabling SSO:
 
 You can configure your tab app in Azure AD to configure the scope and permissions for access tokens.
 
-You'll need to register your app in Azure AD and configure the tenancy and app's platform, before you can enable it for SSO. Azure AD generates a new app ID that you must note. You'll need to update it later in the Teams app manifest file.
+You'll need to register your app in Azure AD and configure the tenancy and app's platform, before you can enable it for SSO. Azure AD generates a new app ID that you must note. You'll need to update it later in the app manifest (previously called Teams app manifest) file.
 
 > [!NOTE]
 > Microsoft Teams Toolkit registers the Azure AD application in an SSO project. You can skip this section if you've used Teams Toolkit to create your app. However, you would need to configure permissions and scope, and trust client applications.
@@ -101,7 +101,7 @@ You'll need to register your app in Azure AD and configure the tenancy and app's
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="App registration is successful.":::
 
-8. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
+8. Note and save the app ID from **Application (client) ID**. You'll need it for updating the app manifest later.
 
     Your app is registered in Azure AD. You now have app ID for your tab app.
 
@@ -147,11 +147,11 @@ To configure scope and authorize trusted client applications, you'll need:
 
     > [!IMPORTANT]
     >
-    > - **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/BotId-{YourClientId}`, where the BotID is your bot app ID.
+    > - **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/botid-{YourClientId}`, where {YourClientId} is your bot app ID.
     >
     > - **Format for domain name**: Use lower case letters for domain name. Don't use upper case.
     >
-    >   For example, to create an app service or web app with resource name, 'demoapplication':
+    >   For example, to create an app service or web app with resource name, `demoapplication`:
     >
     >   | If base resource name used is | URL will be... | Format is supported on... |
     >   | --- | --- | --- |
@@ -170,7 +170,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="Application ID URI updated":::
 
-1. Note and save the Application ID URI. You'll need it for updating the Teams app manifest later.
+1. Note and save the Application ID URI. You'll need it for updating the app manifest later.
 
 #### To configure API scope
 
@@ -235,13 +235,13 @@ To configure scope and authorize trusted client applications, you'll need:
 
     1. Select **Add application**.
 
-    A message pops up on the browser stating that the authorized client app was added.
+       A message pops up on the browser stating that the authorized client app was added.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client application added message":::
+       :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client application added message":::
 
-    The authorized app's client ID displays on the page.
+       The authorized app's client ID displays on the page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client app added and displayed":::
+       :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client app added and displayed":::
 
 > [!NOTE]
 > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
@@ -250,7 +250,7 @@ You've successfully configured app scope, permissions, and client applications. 
 
 ### Configure access token version
 
-You must define the access token version for your app. This configuration is made in the Azure AD application manifest.
+You must define the access token version for your app. This configuration is made in the Azure AD application app manifest.
 
 #### To define the access token version
 
@@ -258,18 +258,18 @@ You must define the access token version for your app. This configuration is mad
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="Azure AD portal Manifest":::
 
-    The Azure AD application manifest appears.
+    The Azure AD application app manifest appears.
 
 1. Enter **2** as the value for the `accessTokenAcceptedVersion` property.
 
     > [!NOTE]
-    > If you've selected **Personal Microsoft accounts only** or **Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)** during app registration, update the value for the `accessTokenAcceptedVersion` property as 2.
+    > If you've selected **Personal Microsoft accounts only** or **Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (for example, Skype and Xbox)** during app registration, update the value for the `accessTokenAcceptedVersion` property as 2.
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Value for accepted access token version":::
 
 1. Select **Save**
 
-    A message pops up on the browser stating that the manifest was updated successfully.
+    A message pops up on the browser stating that the app manifest was updated successfully.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Manifest updated message":::
 

@@ -29,7 +29,7 @@ You can use various tools and services to build your app. Following is an exampl
 1. Extend functionality by adding more Teams capabilities and Microsoft 365 data with :::image type="icon" source="../assets/icons/graph-small-icon.png"::: Microsoft Graph.
 1. Test the app on a developer tenant with sample user data.
 1. Deploy the app to Azure.
-1. Manage and publish the app to Teams store with Developer Portal. Monetize your app with options, such as SaaS offers, in-app purchases, and more.
+1. Manage and publish the app to Microsoft Teams Store with Developer Portal. Monetize your app with options, such as SaaS offers, in-app purchases, and more.
 
 ## Tools and SDKs
 
@@ -43,7 +43,7 @@ To start building your Teams app, you can select the tools and SDKs based on you
 1. **SDKs you need**: For example, if you're building AI capability for your bot app, you select Teams AI library.
 1. **UI  Components**: Choose the UI components to design your app based on your app capability.
 1. **Languages**: Choose the language in which you want to build your app.
-1. **Recommended Tools**: Choose the tools based on the language that you've selected. You can also use the Teams Developer Portal to manage and publish your app. The Teams Toolkit allows you to build your app with JavaScript, TypeScript, or C# in Visual Studio Code (VS Code) or Visual Studio.
+1. **Recommended Tools**: Choose the tools based on the language that you've selected. You can also use the Teams Developer Portal to manage and publish your app. The Teams Toolkit and Yo Teams allows you to build your app with JavaScript and TypeScript or with C# in Visual Studio Code (VS Code) or Visual Studio.
 
 | App capabilities | User interactions | Recommended tools | SDKs | Languages |
 |--------|-------------|--------|--------|--------|
@@ -64,7 +64,7 @@ To start building your Teams app, you can select the tools and SDKs based on you
 
 You can also create and build your Teams app with various SDKs. Teams supports all the SDKs shown in the following image and you can choose SDKs based on your requirements:
 
-:::image type="content" source="../assets/images/get-started/sdk-and-api.png" alt-text="Diagram shows you the list of tools and SDKs for you to build your Teams app."lightbox="../assets/images/get-started/sdk-and-api.png":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png" alt-text="Diagram shows you the list of tools and SDKs for you to build your Teams app."lightbox="../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png":::
 
 ### Explore Tools
 
@@ -75,7 +75,7 @@ The following tools in the Teams platform help you during app development:
 | Design | Teams UI kit and Teams UI library |
 | Build | Teams Toolkit, Tools and SDKs, and Microsoft Graph |
 | Test, deploy, and publish |Azure Active Directory (Azure AD) and Developer Portal |
-| Distribute | Partner Center and Teams store |
+| Distribute | Partner Center and Teams Store |
 
 ## See also
 
@@ -156,7 +156,7 @@ You can preview your Teams apps running in other high usage Microsoft 365 experi
         **Monetize your app**
     :::column-end:::
     :::column span="2":::
-        Teams store offers app monetizing options, such as SaaS offers and In-app purchases. Choose the best monetizing option suitable for your Teams app.
+        Teams Store offers app monetizing options, such as SaaS offers and In-app purchases. Choose the best monetizing option suitable for your Teams app.
 
         > [!div class="nextstepaction"]
         > [Monetize your app](~/concepts/deploy-and-publish/appsource/prepare/monetize-overview.md)
