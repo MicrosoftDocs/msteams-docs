@@ -1,6 +1,7 @@
 **Add a Teams channel**
 
-1. In the left pane, select **Channels**. Under **Available Channels**, select **Microsoft Teams**.
+1. In the left pane, select **Channels**.
+1. Under **Available Channels**, select **Microsoft Teams**.
 
     :::image type="content" source="../../assets/images/include-files/channels-teams.png" alt-text="Screenshot shows the selection of Teams in channels.":::
 
