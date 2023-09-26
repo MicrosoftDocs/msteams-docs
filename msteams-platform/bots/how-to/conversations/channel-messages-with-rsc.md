@@ -40,7 +40,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ### RSC permission
 
-Services that need access to all Teams message data must use the Graph APIs that provide access to archived data in channels and chats. Bots must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission appropriately to build and enhance engaging experience for users to pass the store approval. The app description must include how the bot uses the data it reads:
+Services that need access to all Teams message data must use the Graph APIs that provide access to archived data in channels and chats. Bots must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission appropriately to build and enhance engaging experience for users to pass the Microsoft Teams Store approval. The app description must include how the bot uses the data it reads:
 
 * The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission may not be used by bots to extract large amounts of customer data.
 * The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is only enabled after a re-installation or new installation into a chat.
