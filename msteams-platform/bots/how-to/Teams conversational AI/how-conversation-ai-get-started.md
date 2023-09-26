@@ -68,7 +68,7 @@ import path from "path";
 
 Add AI capabilities to your existing app or a new Bot Framework app.
 
-**Planner**: OpenAI planner is the main component that calls the large language model (LLM) OpenAI or Azure OpenAI. The OpenAI API is powered by a diverse set of models with different capabilities. You can also make limited customizations to our original base models for your specific use case.
+**Planner**: A planner is a function that takes in a user's ask and returns back a plan on how to accomplish the request. Planner is the main component that calls the large language model (LLM) OpenAI or Azure OpenAI. The OpenAI API is powered by a diverse set of models with different capabilities. You can also make limited customizations to our original base models for your specific use case.
 
 **Prompt manager**: The prompt manager manages prompt creation. It calls functions and injects  from your code into the prompt. It copies the conversation state and the user state into the prompt for you automatically.
 
@@ -204,15 +204,13 @@ The language supports features that allow you to include variables, call externa
 
 ## Actions
 
-Actions handle events triggered by AI components.
+Actions are atomic functions that are registered to the AI Module and serve as the fundamental building blocks of a plan. Actions allow you to define the specific tasks your app will perform and are pivotal in executing plans and enhancing your application's functionality. For instance, you might want your app to create a list, send a message, or perform a calculation. By creating and registering actions, you can control these behaviors and enhance your app's functionality.
 
 ### Register Action Handlers
 
-Action handlers help users achieve the goals, which is shared in the user intents.
+Action handlers help users achieve the goals, which is shared in the user intents. One of the key aspects in action handlers is that you must first register the actions in the prompts and then help user achieve the goal.
 
-One of the key aspects in action handlers is that you must first register the actions in the prompts and then help user achieve the goal.
-
-You must register a handler for each action listed in the prompt and also add a handler to deal with unknown actions.
+You must register a handler for each action listed in the prompt and also add a handler to deal with unknown actions. You can use the `app.ai.action` method to register an action.
 
 In the following example of a light bot, we have the `LightsOn`, `LightsOff`, and `Pause`  action. Every time an action is called, you return `true` or `false`. ​Returning `false` from a handler prevents the planner from running additional `DO` or `SAY` commands. When the bot receives an unknown action, we're telling the bot to terminate the action.
 
