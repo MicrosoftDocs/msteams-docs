@@ -870,7 +870,7 @@ Only one extension per app is supported.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`requirements`| object | | | Specifies the set of client or host requirements for the extension. |
+|`requirements`| Object | | | Specifies the set of client or host requirements for the extension. |
 |`runtimes`| array | | | Configures the sets of runtimes and actions that can be used by each extension point. See [Runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes). |
 |`ribbons`| array | | | Defines the ribbons extension point. |
 |`autoRunEvents`| array | | | Defines event-based activation extension points. |
