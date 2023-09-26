@@ -11,7 +11,7 @@ ms.date: 03/03/2022
 
 ## Upload your app to Teams
 
-You can sideload your Teams app to Microsoft Teams without having to publish to your organization or the Teams store in the following scenarios:
+You can sideload your Teams app to Microsoft Teams without having to publish to your organization or the Microsoft Teams Store in the following scenarios:
 
 * You want to test and debug an app locally or on your testing cloud environment.
 * You built an app for yourself to automate a workflow.
