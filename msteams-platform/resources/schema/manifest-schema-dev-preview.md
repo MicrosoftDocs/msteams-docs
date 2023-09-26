@@ -917,7 +917,6 @@ Provides the ability to add buttons and menu items, collectively called "[add-in
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`type`| object | | | |
 |`contexts`| array | 4 | | Specifies the Microsoft 365 application windows in which the ribbon customization is available to the user. Each item in the array is a member of a string array. Each item in the array is a member of a string array. Possible values are: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`|
 |`tabs`| array | |✔️| Configures custom tabs on the Microsoft 365 application ribbon. |
 |`tabs.id`| string | 64 characters | | Unique identifier for this tab within the app.|
@@ -936,7 +935,7 @@ Provides the ability to add buttons and menu items, collectively called "[add-in
 |`tabs.groups.controls.id`| string | 64 characters| ✔️ | Unique identifier for this control within the app. Must be different from any built-in control ID in the Microsoft 365 application and any other custom control. |
 |`tabs.groups.controls.items`| object | | | Configures the items for a menu control. |
 |`tabs.groups.controls.items.id`| string | | ✔️ | Unique identifier for this item within the app. |
-|`tabs.groups.controls.items.type`| string enum | | ✔️ | Supported values: `menuItem`. |
+|`tabs.groups.controls.items.type`| string enum | | ✔️ | Defines the control item type. Supported values: `menuItem`. |
 |`tabs.groups.controls.items.label`| string | 64 characters| ✔️ | Text displayed for the item. |
 |`tabs.groups.controls.items.icons`| array | | | Configures the icons for the custom item.|
 |`tabs.groups.controls.items.icons.size`| number | |✔️| Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
@@ -948,10 +947,10 @@ Provides the ability to add buttons and menu items, collectively called "[add-in
 |`tabs.groups.controls.items.actionId`| string | 64 characters | ✔️ | Identifies the action that is taken when a user selects the control or menu item. The *actionId* must be an exact match for a `runtime.actions.id`. |
 |`tabs.groups.controls.items.enabled`| boolean | | | Indicates whether the control is initially enabled. Default is `true`.|
 |`tabs.groups.controls.items.overriddenByRibbonApi`| boolean | | | Specifies whether a group, button, menu, or menu item will be hidden on application and platform combinations that support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. Default is `false`.|
-|`tabs.groups.controls.type`| string | | ✔️ | Supported values: `button`, `menu`.|
+|`tabs.groups.controls.type`| string | | ✔️ | Defines the control type. Supported values: `button`, `menu`.|
 |`tabs.groups.controls.builtinControlId`| string | 64 characters | ✔️ | ID of the existing Microsoft 365 control. For more information, see [Find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
 |`tabs.groups.controls.label`| String | 64 characters | ✔️ | Text displayed for the control.|
-|`tabs.groups.controls.icons`| array | | | |
+|`tabs.groups.controls.icons`| array | | | Defines the icon(s) for the control. |
 |`tabs.groups.controls.icons.size`| number | | ✔️ | Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
 |`tabs.groups.controls.icons.url`| URL| | | URL to the icon.|
 |`tabs.groups.controls.icons.file`| string | 2048 characters| | Relative path to the file that contains the icon. This property isn’t supported as a relative path. |
