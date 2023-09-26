@@ -297,7 +297,6 @@ The following image illustrates People Picker in Adaptive Cards with static choi
 
 You can implement People Picker for efficient task management in different scenarios.
 
-
 ## Code sample
 
 | Sample Name           | Description | .NET    | Node.js   | Manifest
@@ -310,4 +309,5 @@ You can implement People Picker for efficient task management in different scena
 * [Bots and SDKs](../../bots/bot-features.md)
 * [Build message extensions for Teams](../../messaging-extensions/what-are-messaging-extensions.md)
 * [Create connectors for Microsoft 365 Groups](../../webhooks-and-connectors/how-to/connectors-creating.md)
+* [Media elements in Adaptive Card](media-elements-in-adaptive-cards.md)
 * [Tag mention](../../bots/how-to/conversations/channel-and-group-conversations.md#tag-mention)
