@@ -8,7 +8,7 @@ ms.topic: reference
 ---
 # Introducing the new Microsoft Teams client
 
-[The new Microsoft Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) is reimagined from the ground up with performance in mind. It's faster, simpler, smarter, and flexible to provide better experience for your apps and users. The new Teams client supports all the existing Teams app capabilities except Adaptive Card tabs. If you have an app that runs inside the Classic Teams, the app most likely runs in the new Teams client without any issues.
+[The new Microsoft Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) is reimagined from the ground up with performance in mind. It's faster, simpler, smarter, and flexible to provide better experience for your apps and users. The new Teams client supports all the existing Teams app capabilities except Adaptive Card tabs. If you have an app that runs inside the Classic Teams, the app will most likely run in the new Teams client without any issues.
 
 The following are the advantages of the new Teams client:
 
@@ -32,7 +32,7 @@ To ensure a smooth transition, a phased rollout of the new platform is planned a
 
 * **Developer preview**: The new Teams client is available in [public developer preview](dev-preview/developer-preview-intro.md). You can access the new platform and test your apps. We encourage you to provide feedback to help refine the platform.
 
-* **Availability of all platform features from Classic Teams**: All apps are available in the new Teams Client. All platform features except the features listed under [known issues](#known-issues) are now available. Platform features under known issues are available by September 2023.
+* **Availability of all platform features from Classic Teams**: All apps are available in the new Teams Client. All platform features except the features listed under [known issues](#known-issues) are now available. Platform features under known issues will be available by September 2023.
 
 ## Known issues
 
@@ -41,7 +41,7 @@ To ensure a smooth transition, a phased rollout of the new platform is planned a
 > * We recommend to test apps, tabs, messaging extensions, bots, and link unfurling after switching from the Classic Teams client to the new Teams client.
 > * [Adaptive Card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client. If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
 
-The following are the Teams features that are to be supported soon:
+The following are the Teams features that will be supported soon:
 
 * [Share in Teams](../concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md).
 
