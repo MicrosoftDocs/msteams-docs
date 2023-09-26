@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 September**
 
-* ***September 07, 2023***: [Media elements in Adaptive Card](task-modules-and-cards/cards/media-elements-in-adaptive-cards.md)
+* ***September 26, 2023***: [Media elements in Adaptive Card.](task-modules-and-cards/cards/media-elements-in-adaptive-cards.md)
 
 * ***September 06, 2023***: [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md)
 
