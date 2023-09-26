@@ -47,7 +47,7 @@ items:
    |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
    |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) or [Azure OpenAI ](https://azure.microsoft.com/free/)|First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must have an Azure OpenAI key before you begin.|
    |[Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
-   | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
+   | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store. |
 
 
    ## Prepare development environment
@@ -57,7 +57,7 @@ items:
 
    ### Install the Teams Toolkit
 
-   The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. 
+   The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
     
    You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`.
 

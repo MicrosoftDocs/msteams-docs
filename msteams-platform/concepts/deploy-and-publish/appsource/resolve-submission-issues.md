@@ -1,21 +1,21 @@
 ---
-title: Resolve issues with your store submission
-description: Troubleshoot and correct problems with your Microsoft Teams store submission. Get help directly from Microsoft, resolve issues and resubmit your app.
+title: Resolve issues with your Microsoft Teams Store submission
+description: Troubleshoot and correct problems with your Microsoft Teams Store submission. Get help directly from Microsoft, resolve issues and resubmit your app.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.date: 09/28/2022
 ---
-# Resolve issues if your Teams store submission fails
+# Resolve issues if your Teams Store submission fails
 
-Apps published to the Microsoft Teams store must meet the [Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) and [commercial marketplace policies](/legal/marketplace/certification-policies).
+Apps published to the Microsoft Teams Store must meet the [Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) and [commercial marketplace policies](/legal/marketplace/certification-policies).
 
-If your store submission fails, Microsoft provides a concierge validation service to help get your app compliant and published.
+If your Teams Store submission fails, Microsoft provides a concierge validation service to help get your app compliant and published.
 
 ## Get help directly from Microsoft
 
-The concierge validation service provided by Microsoft helps developers get their apps published to the Teams store. As part of this service, Microsoft verifies if your app works as described, contains all appropriate metadata, and provides value to users.
+The concierge validation service provided by Microsoft helps developers get their apps published to the Teams Store. As part of this service, Microsoft verifies if your app works as described, contains all appropriate metadata, and provides value to users.
 
 If your app submission fails, Microsoft sends you a review report with recommendations within 24 hours of submission.
 
@@ -54,7 +54,7 @@ Get answers to some common questions when resolving app submission issues.
 
 <summary><b>How long will it take to publish my app?</b></summary>
 
-If your store submission has no issues, your app will publish within 1-2 business days. If your app fails, a team from Microsoft provides you with recommendations to fix the issues. Once you make those fixes and resend an updated app to that team, you'll be notified in 24 hours if your app is ready to publish, or still needs more work.
+If your Teams Store submission has no issues, your app will publish within 1-2 business days. If your app fails, a team from Microsoft provides you with recommendations to fix the issues. Once you make those fixes and resend an updated app to that team, you'll be notified in 24 hours if your app is ready to publish, or still needs more work.
 
 <br>
 
@@ -67,9 +67,9 @@ If your store submission has no issues, your app will publish within 1-2 busines
 Doing the following can lead to a successful submission:
 
 1. Develop your app based on the [Teams design guidelines](~/concepts/design/design-teams-app-overview.md).
-1. Make sure your app adheres to the [Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) and [Microsoft commercial marketplace certification policies](/legal/marketplace/certification-policies).
+1. Make sure your app adheres to the [Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) and [Microsoft commercial marketplace certification policies](/legal/marketplace/certification-policies).
 1. Test your app package with the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html).
-1. [Prepare your Teams store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
+1. [Prepare your Teams Store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
 
 <br>
 
@@ -97,7 +97,7 @@ No. Microsoft doesn't start validating your app until you submit your app for th
 
 <details>
 
-<summary><b>I received an email from Partner Center saying my app was approved to publish. Why isn't my app in the Teams store?</b></summary>
+<summary><b>I received an email from Partner Center saying my app was approved to publish. Why isn't my app in the Teams Store?</b></summary>
 
 Once your app is approved, publishing usually takes 1-2 business days depending on the app's capabilities. If your app hasn't published after two business days, contact <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
 

@@ -165,7 +165,7 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    To build and run the service use Visual Studio or Command line.
+    To build and run the service, use Visual Studio or Command line.
 
     # [Visual Studio](#tab/vs2019)
 

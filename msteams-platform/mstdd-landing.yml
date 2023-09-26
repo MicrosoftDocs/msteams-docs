@@ -48,7 +48,9 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Teams store search experience
+      - text: Media elements in Adaptive Card
+        url: task-modules-and-cards/cards/media-elements-in-adaptive-cards.md
+      - text: Microsoft Teams Store search experience
         url: concepts/deploy-and-publish/appsource/publish.md#teams-store-search-experience
       - text: Enable RSC permissions for a user using the Graph APIs (Developer preview)
         url: graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings
@@ -66,8 +68,6 @@ landingContent:
         url: bots/how-to/conversations/channel-and-group-conversations.md#tag-mention
       - text: Collaborative Stage View
         url: tabs/tabs-link-unfurling.md#collaborative-stage-view
-      - text: People icon in an Adaptive Card
-        url: task-modules-and-cards/cards/cards-format.md#people-icon-in-an-adaptive-card
 
     - linkListType: reference
       links:
@@ -78,6 +78,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: People icon in an Adaptive Card
+        url: task-modules-and-cards/cards/cards-format.md#people-icon-in-an-adaptive-card
       - text: App caching for iOS personal tray
         url: tabs/how-to/app-caching.md
       - text: App icon badging for your Teams app
@@ -96,11 +98,11 @@ landingContent:
         url: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries-or-regions
       - text: Teams Toolkit v5 extension within Visual Studio Code
         url: toolkit/teams-toolkit-fundamentals.md
-      - text: Develop your apps with a seamless transition between Teams Developer Portal and Teams Toolkit
-        url: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
  
     - linkListType: whats-new
       links:
+      - text: Develop your apps with a seamless transition between Teams Developer Portal and Teams Toolkit
+        url: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
       - text: Set up Microsoft license management
         url: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
       - text: Tab apps in shared channels are available in Department of Defense (DOD) environment
@@ -119,8 +121,6 @@ landingContent:
         url: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
       - text: Add third party authentication to Adaptive Card Universal Action
         url: task-modules-and-cards/cards/universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
-      - text: Targeted in-meeting notification
-        url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
 
 - title: Get started
   linkLists:
@@ -159,7 +159,7 @@ landingContent:
       links:
       - text: Guidelines for apps linked to SaaS offers
         url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
-      - text: Microsoft Teams store validation guidelines
+      - text: Microsoft Teams Store validation guidelines
         url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
       - text: Monetize your Teams app with a transactable SaaS offer
         url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
@@ -281,15 +281,15 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Publish Teams apps in Microsoft Teams store
+    - text: Publish Teams apps in Microsoft Teams Store
       url: /training/modules/microsoft-teams-publish-app-to-store
     - text: Distribution
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
     - text: Upload your app in Microsoft Teams
       url: ~/concepts/deploy-and-publish/apps-upload.md
-    - text: Publish to Teams Store
+    - text: Publish to Microsoft Teams Store
       url: ~/concepts/deploy-and-publish/appsource/publish.md
-    - text: Store validation guidelines
+    - text: Microsoft Teams Store validation guidelines
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
     - text: Common reasons for app validation failure
       url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md      
