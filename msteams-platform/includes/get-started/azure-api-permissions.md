@@ -1,6 +1,6 @@
-**API Permission**
+**Add API Permission**
 
-1. In the left pane, under **Manage**, select **API permissions**. 
+1. In the left pane, under **Manage**, select **API permissions**.
 
 1. Select **+ Add a permission**.
 

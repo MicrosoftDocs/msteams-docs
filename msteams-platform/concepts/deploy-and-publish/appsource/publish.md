@@ -89,7 +89,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
         :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Teams store app validation in Developer Portal" lightbox="../../../assets/images/submission/teams-validation-developer-portal.png":::
 
-     1. Self-test your app thoroughly prior to app submission to ensure it adheres with store policies. Sideload the app in Teams and test the end to end user flows for your app. Ensure the functionality works as expected, links aren't broken, user experience isn't blocked, and any limitations are clearly highlighted.
+     1. Self-test your app thoroughly prior to app submission to ensure it adheres to store policies. Sideload the app in Teams and test the end to end user flows for your app. Ensure the functionality works as expected, links aren't broken, user experience isn't blocked, and any limitations are clearly highlighted.
 
      1. Test your app across desktop, web, and mobile clients. Ensure that the app is responsive across different form factors.
   
