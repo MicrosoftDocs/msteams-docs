@@ -985,7 +985,7 @@ Provides the ability to prefer or hide particular in-market add-ins when you hav
 |`prefer.comAddin`| object | | | Specifies a COM add-in that must be used in place of the Microsoft 365 Web Add-in when the OS is Windows.|
 |`prefer.comAddin.progId`| string | 64 characters | ✔️ | Identifies the application type in which the extension can run.|
 |`hide`| object | | | Configures how to hide another add-in that you have published whenever this add-in is installed, so users don't see both in the Microsoft 365 UI. For example, use this when you have previously published an add-in that uses the old XML manifest and you are replacing it with a version that uses the new JSON manifest. |
-|`hide.storeOfficeAddin`| object | | | Specifies an Office Add-in available in Microsoft AppSource.|
+|`hide.storeOfficeAddin`| object | | | Specifies an Microsoft 365 Add-in available in Microsoft AppSource. |
 |`hide.storeOfficeAddin.officeAddinId`| string | 64 characters | ✔️ |ID of an in-market add-in to hide. This GUID is from the manifest `id` property, if the in-market add-in uses the JSON manifest, or from the `<Id>` element, if the in-market add-in uses the XML manifest.|
 |`hide.storeOfficeAddin.assetId`| string | 64 characters | ✔️ | The AppSource asset ID of the in-market add-in to hide.|
 |`hide.customOfficeAddin`| | | | Configures hiding an in-market add-in that is not distributed through AppSource.|
