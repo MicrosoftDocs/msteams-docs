@@ -28,7 +28,7 @@ The following image demonstrates static typeahead search:
 
 ## Dynamic typeahead search
 
-Dynamic typeahead search is useful to search and select data from large data sets. The data sets are loaded dynamically from the dataset specified in the card payload. The type ahead functionality helps to filter out the choices as the user types.
+Dynamic typeahead search is useful to search and select data from large data sets. The data sets are loaded dynamically from the dataset specified in the card payload. The typeahead functionality helps to filter out the choices as the user types.
 
 # [Desktop](#tab/desktop)
 
@@ -71,6 +71,7 @@ The following image illustrates mobile experience of typeahead search:
 >
 > * The `Input.ChoiceSet` control is based on the style and `isMultiSelect` properties.
 > * To use dynamic typeahead search in group chat, the user must add `groupchat` scope to the bot installation scope in the app manifest and install it to that particular group chat.
+> * The number of options in the dropdown is limited to 15.
 
 ### Schema properties
 
@@ -78,7 +79,7 @@ The following properties are the new additions to the [`Input.ChoiceSet`](https:
 
 | Property| Type | Required | Description |
 |-----------|------|----------|-------------|
-| style | Compact <br/> Expanded <br/> Filtered | No | Adds filtered style to the list of supported validations for static typeahead.|
+| style | Compact <br/> Expanded <br/> Filtered | No | Adds filtered style to the list of supported validations for static typeahead. |
 | choices.data | Data.Query | No | Enables dynamic typeahead as the user types, by fetching a remote set of choices from a backend. |
 | value | String | No | The initial choice (or set of choices) that must be selected. For multi-select, specify a comma-separated string of values. |
 
@@ -86,7 +87,7 @@ The following properties are the new additions to the [`Input.ChoiceSet`](https:
 
 | Property| Type | Required | Description |
 |-----------|------|----------|-------------|
-| type | Data.Query | Yes | Specifies that it's a Data.Query object.|
+| type | Data.Query | Yes | Specifies that it's a Data.Query object. |
 | dataset | String | Yes | Specifies the type of data that is fetched dynamically. |
 | value | String | No | Populates for the invoke request to the bot with the input that the user provided to the `ChoiceSet`. |
 | count | Number | No | Populates for the invoke request to the bot to specify the number of elements that must be returned. The bot ignores it if the users want to send a different amount. |
@@ -419,3 +420,4 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 * [Cards and task modules](../cards-and-task-modules.md)
 * [Universal Actions for Adaptive Cards](Universal-actions-for-adaptive-cards/Overview.md)
+* [Media elements in Adaptive Card](media-elements-in-adaptive-cards.md)

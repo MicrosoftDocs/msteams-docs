@@ -24,7 +24,7 @@ You can create a [package](~/concepts/build-and-test/apps-package.md) and [publi
 
 To distribute your connector, register it in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).
 
-For a connector to work only in Teams, follow the instructions to submit connector in [publish your app to the Microsoft Teams store](~/concepts/deploy-and-publish/appsource/publish.md) article. Otherwise, a registered connector works in all Microsoft 365 products that support applications, including Outlook and Teams.
+For a connector to work only in Teams, follow the instructions to submit connector in [publish your app to the Microsoft Teams Store](~/concepts/deploy-and-publish/appsource/publish.md) article. Otherwise, a registered connector works in all Microsoft 365 products that support applications, including Outlook and Teams.
 
 > [!IMPORTANT]
 > Your connector is registered after you select **Save** in the Connectors Developer Dashboard. If you want to publish your connector in AppSource, follow the instructions in [publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not want to publish your app in AppSource, distribute it directly to the organization. After publishing connectors for your organization, no further action is required on the Connector Dashboard.
@@ -157,12 +157,12 @@ This call is made as part of your save event handler. Then, when the `contentUrl
 
 You can execute an event handler when the user removes an existing connector configuration. You register this handler by calling `microsoftTeams.pages.config.registerOnRemoveHandler()`. This handler is used to perform cleanup operations, such as removing entries from a database.
 
-### Include the connector in your manifest
+### Include the connector in your app manifest
 
-Download the auto-generated *Teams app manifest* from the Developer Portal (<https://dev.teams.microsoft.com>). Perform the following steps, before testing or publishing the app:
+Download the auto-generated app manifest (previously called Teams app manifest) from the Developer Portal (<https://dev.teams.microsoft.com>). Perform the following steps, before testing or publishing the app:
 
 1. [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
-1. Modify the `icons` portion of the manifest to include the file names of the icons instead of URLs.
+1. Modify the `icons` portion in the app manifest file to include the file names of the icons instead of URLs.
 
 The following *manifest.json* example contains the elements needed to test and submit the app:
 
@@ -210,7 +210,7 @@ The following *manifest.json* example contains the elements needed to test and s
 
 ## Test your connector
 
-To test your connector, upload it to a team with any other app. You can create a .zip package using the manifest file from the two icon files and Connectors Developer Dashboard, modified as directed in [Include the connector in your Manifest](#include-the-connector-in-your-manifest).
+To test your connector, upload it to a team with any other app. You can create a .zip package using the app manifest file from the two icon files and Connectors Developer Dashboard, modified as directed in [Include the connector in your app manifest](#include-the-connector-in-your-app-manifest).
 
 After you upload the app, open the connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section.
 
@@ -252,4 +252,4 @@ Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to build and tes
 * [Create and send messages](connectors-using.md)
 * [How admins can enable or disable connectors](/microsoftteams/office-365-custom-connectors#enable-or-disable-connectors-in-teams)
 * [How admins can publish custom connectors within their org](/microsoftteams/office-365-custom-connectors)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [App manifest schema](../../resources/schema/manifest-schema.md)
