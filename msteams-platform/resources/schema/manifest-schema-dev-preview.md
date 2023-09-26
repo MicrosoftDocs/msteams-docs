@@ -874,7 +874,7 @@ Only one extension per app is supported.
 |`runtimes`| array | | | Configures the sets of runtimes and actions that can be used by each extension point. For more information, see [Runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes). |
 |`ribbons`| array | | | Defines the ribbons extension point. |
 |`autoRunEvents`| array | | | Defines event-based activation extension points. |
-|`alternates`| array | | | Specifies relationship to alternate existing Microsoft 365 solutions. Used for hiding or prioritizing add-ins from the same publisher that have overlapping functionality. |
+|`alternates`| array | | | Specifies relationship to alternate existing Microsoft 365 solutions. It is used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| string | 2048 characters | | The URL for your add-in. Used to validate Exchange user identity tokens. |
 
 For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview) documentation.
