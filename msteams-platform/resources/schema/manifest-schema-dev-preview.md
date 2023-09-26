@@ -889,7 +889,7 @@ Specifies the Microsoft 365 applications and [requirement sets](/javascript/api/
 |`requirements.capabilities.name`| string | | ✔️ | Identifies the name of the [requirement sets](/javascript/api/requirement-sets) that the add-in needs to run. |
 |`requirements.capabilities.minVersion`| string | | | Identifies the minimum version for the requirement sets that the add-in needs to run. |
 |`requirements.capabilities.maxVersion`| string | | | Identifies the maximum version for the requirement sets that the add-in needs to run. |
-|`requirements.scopes`| array of enums | 1 scope | | Identifies the scopes in which the add-in can run. Currently the only supported enum value is `mail`.  This effectively defines the Office applications in which the extension can run. For example, `mail` means Outlook. |
+|`requirements.scopes`| array of enums | 1 | | Identifies the scopes in which the add-in can run. `mail` is the only supported enum value.  This effectively defines the Microsoft 365 applications in which the extension can run. For example, `mail` means Outlook. |
 |`requirements.formFactors`| array of enums | | | Identifies the form factors that support the add-in. Supported values: `mobile`, `desktop`. |
 
 ### extensions.runtimes
