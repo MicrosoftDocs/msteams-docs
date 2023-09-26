@@ -84,7 +84,7 @@ In the **Advanced** section, you can see the following components to manage your
   * **Loading indicator**: Displays an indicator to let users know your hosted app content (for example, Tabs and Task modules) is loading.
   * **Full-screen mode**: Displays a personal app without an app header. It's supported for the published apps to your org.
   * **Supported channel types**: Lists the non-standard channel types that the app supports.
-  * **Default group capability**: For apps that support multiple group capabilities, such as teams, group chat, or meetings, select the default capability to navigate users when you add your app from the store.
+  * **Default group capability**: For apps that support multiple group capabilities, such as teams, group chat, or meetings, select the default capability to navigate users when you add your app from the Microsoft Teams Store.
 
 * **Environments**
 
@@ -105,7 +105,7 @@ In the **Advanced** section, you can see the following components to manage your
       Use the variable names instead of hard-coded values to set your app configurations.
 
       1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment along with the global variables appears.  
-      1. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment.
+      1. Before downloading your app package (for example, when getting ready to publish to the Teams Store), select the environment you want to use. Your app configurations update automatically based on the environment.
 
 * **Plan and pricing**: You can link a Software-as-a-Services (SaaS) offer that you've created in the Partner center for your app.
 * **Admin settings**:
@@ -118,7 +118,7 @@ In the **Develop** section, you can open and develop your app in Teams Toolkit i
 
 ## Publish
 
-In the **Publish** section, you can publish your app to your org or to the Teams store.
+In the **Publish** section, you can publish your app to your org or to the Teams Store.
 
 * **Publish to org**:
 
@@ -156,7 +156,7 @@ In the **Manage rollouts** section, you can see the following components to mana
 
 The Developer Portal provides options for testing and debugging your app:
 
-* On the **Overview** page, you can see a snapshot whether your app is configured and is validated against Teams store test cases.
+* On the **Overview** page, you can see a snapshot whether your app is configured and is validated against Teams Store test cases.
 * The **Preview in Teams** button launches your app quickly in the Teams client for debugging.
 
 ## Use tools to create app features
