@@ -31,13 +31,13 @@ You can generate the Preview offer ID from the **AppSource preview** link in the
     > [!NOTE]
     > Unlike a public offer ID, the Preview offer ID can be recognized with the *-preview* suffix. For example, **publisherId.offerId-preview**.
 
-If the offer you want to preview is limited to the non-US regions, the Developer Portal might report unable to find your offer when you select **view**. You can either temporarily add "United States" to the list of [markets, pricing, and availability](/azure/marketplace/create-new-saas-offer-plans) or you can ignore the error and select **preview in Teams** to sideload the app into your Teams client.  
+    If the offer you want to preview is limited to the non-US regions, Developer Portal might not be able to find your offer when you select **View**. You can either add United States to the list of [markets, pricing, and availability](/azure/marketplace/create-new-saas-offer-plans) or you can ignore the error and select **Preview in Teams** to sideload the app into Microsoft Teams.  
 
-:::image type="content" source="../../../../assets/images/apps-in-meetings/us-region.png" alt-text="Screenshot shows the user can select United States region.":::
+    :::image type="content" source="../../../../assets/images/apps-in-meetings/us-region.png" alt-text="Screenshot shows the user can select United States region.":::
 
 ## Configure your app with the preview offer ID
 
-Before you begin, sign in to the **Developer Portal** using a developer account with **preview audience** for users to see your subscription plans in the Teams store.
+Before you begin, sign in to the **Developer Portal** using a developer account with **preview audience** for users to see your subscription plans in the Microsoft Teams Store.
 
 After you've generated your Preview offer ID, link the offer ID to your Teams app. To link the offer ID:
 
@@ -66,7 +66,7 @@ The `subscriptionOffer` property is added to your [app manifest](../../../../res
 
 ## Sideload the app to Teams
 
-After you configure your app with the Preview Offer ID, create an updated app package and upload it to Teams to test the end-to-end purchase experience. For more information, see [Upload your app in Microsoft Teams](../../apps-upload.md). You can also select **Preview in Teams** in the Developer Portal for Teams to launch your app quickly in the Teams client.
+After you configure your app with the Preview Offer ID, create an updated app package and upload it to Teams to test the end-to-end purchase experience. For more information, see [Upload your app in Teams](../../apps-upload.md). You can also select **Preview in Teams** in the Developer Portal for Teams to launch your app quickly in the Teams client.
 
 If the Preview offer is specified in the app manifest and the preview audience is defined in the Partner center for the offer, the user can see the **Buy a subscription** button.
 
