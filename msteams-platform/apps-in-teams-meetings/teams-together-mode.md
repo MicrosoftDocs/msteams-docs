@@ -107,7 +107,7 @@ To build a scene using the Scene studio, follow these steps:
     
 1. Select **View in Teams**, in the dialog box that appears select **Add**.
 
-    To test or access the scene, create a test meeting and launch custom Together Mode scenes. For more information, see [Test custom Together Mode scenes in Teams](#test-custom-together-mode-scenes-in-teams).
+    To test or access the scene, create a test meeting and launch custom Together Mode scenes. For more information, see [test custom Together Mode scenes in Teams](#test-custom-together-mode-scenes-in-teams).
 
      :::image type="content" source="../assets/images/apps-in-meetings/launchtogethermode.png" alt-text="Screenshot shows the custom scene launched in a Teams meeting.":::
 
@@ -135,7 +135,6 @@ To select scenes and use custom Together Mode scenes, follow these steps:
     > At any point in time, only one scene is used homogeneously for the meeting. If a presenter or organizer changes a scene, it  changes for all. Switching in or out of custom Together Mode scenes is up to individual participants, but while in custom Together Mode scenes, all participants have the same scene.
 
 1. Select **Apply**. Teams installs the app for the user and applies the scene.
-
 
 ## Share a scene using the Scene studio
 
@@ -240,9 +239,9 @@ The `zOrder` represents the order of placing images and seats along the Z-axis. 
 
 Now that you've gone through the sample scene.json file, you can use the custom Together Mode scenes to engage in scenes.
 
-## Open a custom Together Mode scenes Scene Package
+## Open a custom Together Mode scenes Scene package
 
-You can share the Scene Package, which is a .zip file retrieved from the Scene studio to other creators to further enhance the scene. The **Import a scene** functionality helps unwrap a scene package to let the creator continue building the scene.
+You can share the Scene package, which is a .zip file retrieved from the Scene studio to other creators to further enhance the scene. The **Import a scene** functionality helps unwrap a scene package to let the creator continue building the scene.
 
 :::image type="content" source="../assets/images/apps-in-meetings/scene-zip-file.png" alt-text="Screenshot shows the Import a scene option highlighted in red in the scene studio.":::
 
