@@ -212,7 +212,7 @@ Action handlers help users achieve the goals, which is shared in the user intent
 
 You must register a handler for each action listed in the prompt and also add a handler to deal with unknown actions. You can use the `app.ai.action` method to register an action.
 
-In the following example of a light bot, we have the `LightsOn`, `LightsOff`, and `Pause`  action. Every time an action is called, you return `true` or `false`. ​Returning `false` from a handler prevents the planner from running additional `DO` or `SAY` commands. When the bot receives an unknown action, we're telling the bot to terminate the action.
+In the following example of a light bot, we have the `LightsOn`, `LightsOff`, and `Pause`  actions. Every time an action is called, you return `true` or `false`. ​Returning `false` from a handler prevents the planner from running additional `DO` or `SAY` commands. When the bot receives an unknown action, we're telling the bot to terminate the action.
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.c.actionMapping.lightBot/src/index.ts#L107)
 
