@@ -12,7 +12,7 @@ ms.subservice: m365apps
 
 > [!IMPORTANT]
 >
-> The **Microsoft 365** channel replaces the previous *Outlook* channel for message extensions running in Outlook. Existing message extensions require [Azure Bot registration for the Microsoft 365 channel](#add-microsoft-365-channel-for-your-bot) in order to continue working correctly in Outlook.
+> The **Microsoft 365** channel replaces the *Outlook* channel for message extensions. Existing message extensions require [Azure Bot registration for the Microsoft 365 channel](#add-microsoft-365-channel-for-your-bot) to work in Microsoft Outlook.
 
 Search-based [message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) allow users to search an external system and share results through the compose message area of the Microsoft Teams client. You can now bring production search-based Teams message extensions to preview audiences in Outlook for Windows desktop and outlook.com by [extending your Teams apps across Microsoft 365](overview.md).
 
@@ -119,7 +119,7 @@ For users to interact with your message extension from Outlook, you need to enab
 
 > [!NOTE]
 >
-> If you previously enabled the *Outlook* channel for your bot, you'll need to now enable **Microsoft 365** channel in order for your message extension to continue functioning correctly in Outlook. The *Outlook* channel is no longer used for message extensions running in Outlook and can be disabled.
+> If you've previously enabled the *Outlook* channel for your bot, you'll need to enable the **Microsoft 365** channel in order for your message extension to function correctly in Microsoft Outlook. The Outlook channel is no longer used for message extensions running in Outlook and can be disabled.
 
 1. From [Microsoft Azure portal](https://portal.azure.com) (or [Bot Framework portal](https://dev.botframework.com) if you previously registered there), go to your bot resource.
 
