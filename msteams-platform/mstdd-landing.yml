@@ -50,7 +50,7 @@ landingContent:
       links:
       - text: Media elements in Adaptive Card
         url: task-modules-and-cards/cards/media-elements-in-adaptive-cards.md
-      - text: Teams store search experience
+      - text: Microsoft Teams Store search experience
         url: concepts/deploy-and-publish/appsource/publish.md#teams-store-search-experience
       - text: Enable RSC permissions for a user using the Graph APIs (Developer preview)
         url: graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings
@@ -159,7 +159,7 @@ landingContent:
       links:
       - text: Guidelines for apps linked to SaaS offers
         url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
-      - text: Microsoft Teams store validation guidelines
+      - text: Microsoft Teams Store validation guidelines
         url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
       - text: Monetize your Teams app with a transactable SaaS offer
         url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
@@ -281,15 +281,15 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Publish Teams apps in Microsoft Teams store
+    - text: Publish Teams apps in Microsoft Teams Store
       url: /training/modules/microsoft-teams-publish-app-to-store
     - text: Distribution
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
     - text: Upload your app in Microsoft Teams
       url: ~/concepts/deploy-and-publish/apps-upload.md
-    - text: Publish to Teams Store
+    - text: Publish to Microsoft Teams Store
       url: ~/concepts/deploy-and-publish/appsource/publish.md
-    - text: Store validation guidelines
+    - text: Microsoft Teams Store validation guidelines
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
     - text: Common reasons for app validation failure
       url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md      

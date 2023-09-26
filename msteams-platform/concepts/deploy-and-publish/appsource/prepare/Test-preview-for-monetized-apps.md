@@ -33,7 +33,7 @@ You can generate the Preview offer ID from the **AppSource preview** link in the
 
 ## Configure your app with the preview offer ID
 
-Before you begin, sign in to the **Developer Portal** using a developer account with **preview audience** for users to see your subscription plans in the Teams store.
+Before you begin, sign in to the **Developer Portal** using a developer account with **preview audience** for users to see your subscription plans in the Microsoft Teams Store.
 
 After you've generated your Preview offer ID, link the offer ID to your Teams app. To link the offer ID:
 
