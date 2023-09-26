@@ -16,7 +16,7 @@ ms.date: 11/29/2021
 >
 > Teams Toolkit v4 extension will soon be deprecated.
 >
-> This article is applicable only to Teams Toolkit version 4. For information about Teams Toolkit version 5 capabilities refer to [Add How-to guides to Microsoft Teams app](../add-How-to%20guides-v5.md)
+> This article is applicable only to Teams Toolkit version 4. For information about Teams Toolkit version 5 capabilities refer to [Add How-to guides to Microsoft Teams app](../add-How-to-guides-v5.md)
 
 Adding capabilities with Teams Toolkit allows you to extend the functionality of your existing Microsoft Teams app. The advantage of adding more capabilities is that you can add more functions to your app by using Teams Toolkit to automatically add necessary code and project files. You can select different capabilities based on the app project you've created for your Teams app. The following table lists the Teams app capabilities:
 
