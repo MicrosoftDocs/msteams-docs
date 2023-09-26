@@ -332,7 +332,7 @@ An array of objects specifying additional language translations.
 
 **Required** &ndash; Object
 
-The name of your app experience, displayed to users in the Teams experience. For apps submitted to Microsoft AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` must be different.
+The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` must be different.
 
 |Name| Type | Maximum size | Required | Description|
 |---|---|---|---|---|
