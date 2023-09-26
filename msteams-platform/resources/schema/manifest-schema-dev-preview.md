@@ -961,7 +961,7 @@ Provides the ability to add buttons and menu items, collectively called "[add-in
 |`tabs.groups.controls.actionId`| string | 64 characters | ✔️ | Identifies the action that is taken when a user selects the control. The *actionId* must be an exact match for a `runtime.actions.id`.|
 |`tabs.groups.controls.enabled`| boolean | | | Indicates whether the control is initially enabled. Default is `true`.|
 |`tabs.groups.controls.overriddenByRibbonApi`| boolean | | | Specifies whether a button, menu, or menu item will be hidden on application and platform combinations that support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. Default is `false`.|
-|`tabs.groups.builtinGroupId`| string | 64 characters | | ID of a built-in Group. See [Find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
+|`tabs.groups.builtinGroupId`| string | 64 characters | | ID of a built-in group. For more information, see [Find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
 
 ### extensions.autoRunEvents
 
