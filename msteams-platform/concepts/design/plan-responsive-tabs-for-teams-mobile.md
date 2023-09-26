@@ -9,7 +9,7 @@ ms.date: 12/09/2022
 ---
 # Plan responsive tabs for Teams mobile
 
-Teams platform offers the opportunity to build apps on mobile and desktop. Your app users can prefer either desktop or mobile, or both. The users can prepare data on desktop but consume and share more data using mobile. The key to build any app is to understand and meet users needs.
+Teams platform offers the opportunity to build apps on mobile and desktop. Your app users can prefer either desktop or mobile, or both. The users can prepare data on desktop but consume and share more data using mobile. The key to build any app is to understand and meet user's needs.
 
 There are capabilities like bots, message extensions, and connectors that work seamlessly on desktop and mobile. However, building tabs and task modules require planning for hosting your web experience on Teams mobile.
 
@@ -21,7 +21,7 @@ Consider the following before you implement responsive tabs for your app in Team
 
 * **User roles:** Ensure to target appropriate user role on Teams mobile.
 
-    For example, if you're building an app that provides data visualization tools to end users such as data analysts and senior managers, both of them can use your app on Teams mobile. You can decide to cater to all the roles that you have on your desktop app.
+    For example, if you're building an app that provides data visualization tools to end users such as data analysts and senior managers, both can use your app on Teams mobile. You can decide to cater to all the roles that you have on your desktop app.
 
     However, it's recommended to start with a user role with a larger base and possible new users for smaller screen experience.
 
@@ -132,9 +132,9 @@ In the third stage, you can enable users experience with the following activitie
 
 <details>
 
-<summary><b>Coauthoring and whiteboarding apps</b></summary>
+<summary><b>Co-authoring and whiteboarding apps</b></summary>
 
-You can understand how to plan responsive tabs for coauthoring and whiteboarding apps on Teams mobile platform.
+You can understand how to plan responsive tabs for co-authoring and whiteboarding apps on Teams mobile platform.
 
 **Consumption:**
 
@@ -151,7 +151,7 @@ In the first stage, you can consider desktop experience to show the content and 
 In the second stage, you can introduce the following actions:
 
 * Create new board for collaboration or new documents for signing.
-* Share boards internally and also with guests.
+* Share boards internally and with guests.
 * Configure admin permissions.
 
 > [!TIP]
