@@ -899,7 +899,7 @@ Configures the sets of [runtimes](/office/dev/add-ins/testing/runtimes) and acti
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`| string | 64 characters | ✔️ | The ID for the runtime. |
-|`type`| string enum | | ✔️ | Specifies the type of runtime. Currently supports `general` for [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime). |
+|`type`| string enum | | ✔️ | Specifies the type of runtime. `general` is supported enum value for [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime). |
 |`code`| object | | ✔️ | Specifies the location of code for this runtime. Depending on the `runtime.type`, add-ins use either a JavaScript file or an HTML page with an embedded `<script>` tag that specifies the URL of a JavaScript file. URLs for both are required because there are scenarios in which you can't know which type of runtime your add-in will use.|
 |`code.page`| url | | ✔️ | URL of the web page that contains an embedded `<script>` tag which specifies the URL of a JavaScript file (to be loaded in a [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime)). |
 |`code.script`| url | | ✔️ | URL of the JavaScript file to be loaded in [JavaScript only](/office/dev/add-ins/testing/runtimes#javascript-only-runtime) runtimes. |
