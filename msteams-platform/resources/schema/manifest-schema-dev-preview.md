@@ -941,7 +941,7 @@ Provides the ability to add buttons and menu items, collectively called "[add-in
 |`tabs.groups.controls.items.icons`| array | | | Configures the icons for the custom item.|
 |`tabs.groups.controls.items.icons.size`| number | |✔️| Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
 |`tabs.groups.controls.items.icons.url`| URL| | | URL to the icon.|
-|`tabs.groups.controls.items.icons.file`| string | 2048 characters| | Relative path to the file that contains the icon. This property is currently not supported as a relative path.|
+|`tabs.groups.controls.items.icons.file`| string | 2048 characters| | Relative path to the file that contains the icon. This property isn’t supported as a relative path. |
 |`tabs.groups.controls.items.supertip`| | |✔️| Configures a supertip for the custom item. A *supertip* is a brief, possibly multi-line, box of help information about a control in a UI that becomes visible when the cursor hovers over the control.|
 |`tabs.groups.controls.items.supertip.title`| string | 64 characters | ✔️ | Title text of the supertip.|
 |`tabs.groups.controls.items.supertip.description`| string | 128 characters | ✔️ | Description of the supertip.|
