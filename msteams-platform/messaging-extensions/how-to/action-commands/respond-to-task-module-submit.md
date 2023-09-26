@@ -1,7 +1,7 @@
 ---
 title: Respond to the task module submit action
 author: surbhigupta
-description: Learn how to respond to the task module submit action from a message extension action command with Proactive message. Define search commands and respond to searches. Response header attribution for action on message content.
+description: Learn how to respond to the task module submit action from a message extension action command with Proactive message. Define search commands and respond to searches. Response header attribution for action on message content. User attribution for bot.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -9,7 +9,7 @@ ms.author: anclear
 
 # Respond to the task module submit action
 
-[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)
+[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 This document guides you on how your app responds to the action commands, such as user's task module submit action.
 After a user submits the task module, your web service receives a `composeExtensions/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to the invoke.
