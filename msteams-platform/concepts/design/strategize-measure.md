@@ -12,7 +12,7 @@ ms.date: 12/09/2022
 
 <!--Design instrumentation data for your Teams app-->
 
-After an app is distributed in an organization or in Teams public app store, it's important to track how users are interacting with the app. With growing app users, the number of app installs might not be a relevant metric.
+After an app is distributed in an organization or in Microsoft Teams Store, it's important to track how users are interacting with the app. With growing app users, the number of app installs might not be a relevant metric.
 
 It's important to plan for the kind of data, metrics, and events you want to monitor as you develop your Teams app. Your product’s North Star metric would guide you in establishing the right set of metrics, core user action, and key events relevant for your business.
 :::row:::
