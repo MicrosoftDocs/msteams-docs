@@ -776,14 +776,14 @@
   - name: Teams message extensions in Outlook
     items:
       - name: Overview
-        href:
-      - name: Teams message extensions for Outlook
+        href: m365-apps/messaging-extensions-outlook.md
+      - name: Enable Teams message extensions in Outlook
         items:
-        - name: Teams search based message extension for Outlook
+        - name: Teams search based message extension in Outlook
           href: m365-apps/extend-m365-teams-message-extension.md
           displayName: mail, Microsoft 365, Office 365
-        - name: Teams action based message extension for Outlook
-          href: m365-apps/extend-m365-teams-message-extension.md
+        - name: Teams action based message extension in Outlook
+          href: m365-apps/extend-m365-action-teams-message-extension.md
           displayName: mail, Microsoft 365, Office 365
       - name: Teams message extension vs. Outlook add-in
         href: m365-apps/me-or-outlook-add-in.md

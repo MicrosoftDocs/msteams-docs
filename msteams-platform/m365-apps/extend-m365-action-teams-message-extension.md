@@ -1,6 +1,6 @@
 ---
-title: Extend a Teams search based message extension across Microsoft 365
-description: Learn how to update your search-based message extension to run in Outlook and add Microsoft 365 channel for your bot.
+title: Extend a Teams action based message extension across Microsoft 365
+description: Learn how to update your action-based message extension to run in Outlook and add Microsoft 365 channel for your bot.
 ms.date: 01/31/2023
 ms.author: mosdevdocs
 author: erikadoyle
@@ -8,7 +8,7 @@ ms.topic: tutorial
 ms.localizationpriority: high
 ms.subservice: m365apps
 ---
-# Extend a Teams search based message extension across Microsoft 365
+# Extend a Teams action based message extension across Microsoft 365
 
 > [!NOTE]
 >
