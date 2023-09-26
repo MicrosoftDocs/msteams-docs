@@ -104,8 +104,6 @@ this.onMessage(async (turnContext, next) => {
 
 # [JSON](#tab/json)
 
-[SDK reference](/microsoftteams/platform/resources/bot-v3/bot-conversations/bots-conv-channel#example-outgoing-message-with-user-mentioned)
-
 ```json
 {
     "type": "message",
@@ -235,8 +233,6 @@ this.onMessage(async (turnContext, next) => {
 # [JSON](#tab/json)
 
 The `text` field in the object in the `entities` array must match a portion of the message `text` field. If it doesn't, the mention is ignored.
-
-* [SDK reference](/microsoftteams/platform/resources/bot-v3/bot-conversations/bots-conv-channel#example-outgoing-message-with-user-mentioned)
 
 ```json
 {
