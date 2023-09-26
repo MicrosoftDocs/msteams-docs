@@ -144,11 +144,11 @@ To configure the bot, follow these steps:
 
 1. From the Teams store, select a bot app you want to install.
 
-1. From the dropdown next to **Add**, select **Add to a team**, **Add to a chat**, or **Add to a meeting**.
+1. From the dropdown next to **Add**, select **Add to a team** or **Add to a chat**.
 
    :::image type="content" source="../../assets/images/bots/group-chat-add-Bot.png" alt-text="Screenshot shows add your bot to chat.":::
 
-1. Enter the name of a chat or meeting in the search field.
+1. Enter the name of a chat in the search field.
 
    :::image type="content" source="../../assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot shows bot added to a chat.":::
 
