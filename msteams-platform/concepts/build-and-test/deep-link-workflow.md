@@ -146,7 +146,6 @@ Following are the query parameters:
 
 * `users`: A comma-separated list of user IDs representing the participants of the call. The user ID field supports the Azure AD `UserPrincipalName`, typically an email address, or in a PSTN call, it supports a pstn mri 4:&lt;phonenumber&gt;.
 * `withVideo`: An optional parameter, which you can use to make a video call. Setting this parameter only turns on the caller's camera. The receiver of the call has a choice to answer through an audio or an audio and video call through the Teams call notification window.
-* `Source`: An optional parameter, which informs about the source of the deep link.
 
 #### Configure deep link using TeamsJS library to start audio-video call with users
 
@@ -169,11 +168,6 @@ else { /* handle case where capability isn't supported */ }
 You can generate a deep link to [share the app to stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#share-entire-app-to-stage) and to start or join a meeting.
 
 For deep links to share content to stage, see [deep link to share content to stage in meetings](~/concepts/build-and-test/share-in-meeting.md#generate-a-deep-link-to-share-content-to-stage-in-meetings).
-
-> [!NOTE]
->
-> * Generating a deep link to share content to stage in meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-> * Deep link to share content to stage in meeting is supported in Teams desktop client only.
 
 ## Deep link to meeting side panel
 

@@ -6,16 +6,16 @@ ms.localizationpriority: high
 ---
 # Update app manifest for SSO and preview your app
 
-Before you update Teams app manifest, ensure that you've configured code to enable SSO in your app.
+Before you update app manifest (previously called Teams app manifest), ensure that you've configured code to enable SSO in your app.
 
 > [!div class="nextstepaction"]
 > [Add code](bot-sso-code.md)
 
-You've registered your app and bot resource in Azure AD. You've also configured code to handle tokens. Now, you must update the Teams app manifest to enable SSO for your app. The Teams app manifest describes how an app integrates into Teams.
+You've registered your app and bot resource in Azure AD. You've also configured code to handle tokens. Now, you must update the app manifest to enable SSO for your app. The app manifest describes how an app integrates into Teams.
 
 ## webApplicationInfo property
 
-Configure the `webApplicationInfo` property in the Teams app manifest file. This property enables SSO for your app to help app users access your bot app seamlessly.
+Configure the `webApplicationInfo` property in the app manifest file. This property enables SSO for your app to help app users access your bot app seamlessly.
 
 `webApplicationInfo` has two elements, `id` and `resource`.
 
@@ -25,24 +25,24 @@ Configure the `webApplicationInfo` property in the Teams app manifest file. This
 | `resource` | Enter your app's subdomain URI and the application ID URI that you created in Azure AD when creating scope. You can copy it from the **Azure AD** > **Expose an API** section. |
 
 > [!NOTE]
-> Use manifest version 1.5 or higher to implement the `webApplicationInfo` property.
+> Use the app manifest version 1.5 or later to implement the `webApplicationInfo` property.
 
-The application ID URI that you registered in Azure AD is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in Teams app manifest.
+The application ID URI that you registered in Azure AD is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in app manifest.
 
 For more information, see [webApplicationInfo](../../../resources/schema/manifest-schema.md#webapplicationinfo).
 
-## To configure Teams app manifest
+## To configure app manifest
 
 1. Open the app project.
-2. Open the manifest folder.
+2. Open the app manifest folder.
 
     > [!NOTE]
     >
-    > - The manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
-    > - For more information on learning how to create a manifest.json, see [Reference: Manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
+    > - The app manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
+    > - For more information on learning how to create a manifest.json, see [the app manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
 
 1. Open the `manifest.json` file.
-1. Add one of the following code snippets to the manifest file to add the new property:
+1. Add one of the following code snippets to the app manifest file to add the new property:
 
     - If your app has a standalone bot, add the following code snippet:
 
@@ -73,11 +73,11 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
    1. `contentUrl`
    2. `configurationUrl`
    3. `validDomains`
-6. Save the Teams app manifest file. For more information, see [app manifest](../../../resources/schema/manifest-schema.md).
+6. Save the app manifest file. For more information, see [app manifest](../../../resources/schema/manifest-schema.md).
 
 <br>
 <details>
-<summary>Here's an example of app manifest after it's updated</summary>
+<summary>Here's an example of the app manifest after it's updated</summary>
 
 ```json
 {
