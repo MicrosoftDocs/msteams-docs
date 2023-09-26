@@ -493,7 +493,7 @@
     - name: Define action commands
       href: messaging-extensions/how-to/action-commands/define-action-command.md
       displayName: Command invoke locations, static list of parameters, action command manually
-    - name: Create and send task module
+    - name: Create and send task modules
       href: messaging-extensions/how-to/action-commands/create-task-module.md
       displayName: Initial invoke request, respond to fetchTask, payload activity, handleTeamsMessagingExtensionFetchTask
     - name: Respond to the task module submit action
