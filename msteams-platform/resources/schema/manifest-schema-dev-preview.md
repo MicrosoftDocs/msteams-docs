@@ -871,7 +871,7 @@ Only one extension per app is supported.
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`requirements`| Object | | | Specifies the set of client or host requirements for the extension. |
-|`runtimes`| array | | | Configures the sets of runtimes and actions that can be used by each extension point. See [Runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes). |
+|`runtimes`| array | | | Configures the sets of runtimes and actions that can be used by each extension point. For more information, see [Runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes). |
 |`ribbons`| array | | | Defines the ribbons extension point. |
 |`autoRunEvents`| array | | | Defines event-based activation extension points. |
 |`alternates`| array | | | Specifies relationship to alternate existing Microsoft 365 solutions. Used for hiding or prioritizing add-ins from the same publisher that have overlapping functionality. |
