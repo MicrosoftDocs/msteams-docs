@@ -131,7 +131,7 @@ The following steps help you to approve from admin center:
 
 You can distribute your app directly to the Teams Store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the Teams Store, you can instantly reach potential customers. The apps published to the Teams Store also automatically list on Microsoft AppSource, which is the official marketplace for Microsoft 365 apps and solutions.
 
-For more information, see [how to publish to the Teams Store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store).
+For more information, see [how to publish to the Teams Store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-teams-store).
 
 ## See also
 
