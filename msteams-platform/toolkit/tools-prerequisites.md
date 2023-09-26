@@ -13,7 +13,6 @@ Before you create your Teams app project, ensure that the prerequisites are in p
 
 * [Install required tools to build your Teams app](#install-required-tools-to-build-your-teams-app)
 * [Prepare Accounts to build your Teams app](#accounts-to-build-your-teams-app)
-* [Sideload permission](tools-prerequisites.md)
 * [Verify sideloading permission](#verify-sideloading-permission)
 
 ## Basic requirements to build your Teams app
