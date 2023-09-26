@@ -954,7 +954,7 @@ Provides the ability to add buttons and menu items, collectively called "[add-in
 |`tabs.groups.controls.icons`| array | | | |
 |`tabs.groups.controls.icons.size`| number | | ✔️ | Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
 |`tabs.groups.controls.icons.url`| URL| | | URL to the icon.|
-|`tabs.groups.controls.icons.file`| string | 2048 characters| | Relative path to the file that contains the icon. This property is currently not supported as a relative path.|
+|`tabs.groups.controls.icons.file`| string | 2048 characters| | Relative path to the file that contains the icon. This property isn’t supported as a relative path. |
 |`tabs.groups.controls.supertip`| object | | ✔️ | Configures a supertip for the control. |
 |`tabs.groups.controls.supertip.title`| string | 64 characters | ✔️ |Title text of the supertip.|
 |`tabs.groups.controls.supertip.description`| string | 128 characters | ✔️ | Description of the supertip.|
