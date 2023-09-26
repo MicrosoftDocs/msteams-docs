@@ -84,7 +84,7 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 * Run and debug to Teams directly from familiar tools.
 * Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
 * Create unique configurations like dev, test, and prod using the environments feature.
-* Bring your app to your organization or the Teams App Store using built-in publishing tools.
+* Bring your app to your organization or the Microsoft Teams Store using built-in publishing tools.
 
 :::image type="content" source="toolkit-v4/images/teams-toolkit-user-journey3VS-v4.png" alt-text="User Journey of the Teams Toolkit."  lightbox="toolkit-v4/images/teams-toolkit-user-journey3VS-v4.png":::
 
