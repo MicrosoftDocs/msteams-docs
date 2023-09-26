@@ -343,7 +343,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 
 **Required** &ndash; Object
 
-Describes your app to users. For apps submitted to Microsoft AppSource, these values must match the information in your AppSource entry.
+Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry.
 
 Ensure that your description accurately describes your experience and provides information to help potential customers understand what your experience does. You must note in the full description, if an external account is required for use. The values of `short` and `full` must be different.  Your short description must not be repeated within the long description and must not include any other app name.
 
