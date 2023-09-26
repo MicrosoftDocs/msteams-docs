@@ -111,6 +111,32 @@ To build a scene using the Scene studio, follow these steps:
 
      :::image type="content" source="../assets/images/apps-in-meetings/launchtogethermode.png" alt-text="Screenshot shows the custom scene launched in a Teams meeting.":::
 
+## Test custom Together Mode scenes in Teams
+
+> [!NOTE]
+> You can apply a custom Together Mode scene that is deployed by your tenant admin only if you've a [Teams Premium license](/MicrosoftTeams/enhanced-teams-experience?branch=danismith-t-pre-licensing).
+
+To select scenes and use custom Together Mode scenes, follow these steps:
+
+1. Create a new test meeting.
+
+    > [!NOTE]
+    > On selecting **View in Teams** in the Scene studio, the scene is installed as an app in Teams. This is the model for a developer to test and try out scenes from the Scene studio. After a scene is exported and sideloaded as a custom app, users can view the scenes in the scene gallery.
+
+1. From the **Gallery** drop-down in the upper-left corner, select **Together Mode**. The **Picker** dialog box appears and the scene that is added is available.
+
+1. Select **Change scene** to change the default scene.
+
+1. From the **Scene Gallery**, select the scene you want to use for your meeting.
+
+    Optionally, the meeting organizer and presenter can **Change scene for all participants** in the meeting.
+
+    >[!NOTE]
+    > At any point in time, only one scene is used homogeneously for the meeting. If a presenter or organizer changes a scene, it  changes for all. Switching in or out of custom Together Mode scenes is up to individual participants, but while in custom Together Mode scenes, all participants have the same scene.
+
+1. Select **Apply**. Teams installs the app for the user and applies the scene.
+
+
 ## Share a scene using the Scene studio
 
 You can view the scene you've created in the custom Together Mode scenes gallery. Additionally, you can share and export the scene.
@@ -200,42 +226,19 @@ A sprite is a static bitmap image positioned in the world. These sprites and par
 •	The Y-axis points downwards.</br>
 •	 The Z value of the sprite determines the position of the sprite. Rendering starts with the sprite with lowest Z value, so higher Z value means it's closer to the camera.
 
-**Participants:** Each participant has its own video feed, which is segmented so only the foreground is rendered.
+Ensure to go through the following list while creating a sample scene:  
 
 **Scene:** Each scene has a unique ID and name. A scene.json file along with the images indicate the exact position of the seats. The scene.json file also contains information on all the assets used for the scene. 
 
 **Asset:** Each asset contains a filename, width, height, and position on the X and Y-axis. 
+
+**Participants:** Each participant has its own video feed, which is segmented so only the foreground is rendered.
 
 **Seat:** Each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is generated automatically and is altered as per preference. The seating order number corresponds to the order of people joining the call.
 
 The `zOrder` represents the order of placing images and seats along the Z-axis. It gives a sense of depth or partition if necessary. See the step-by-step getting started sample. The sample uses the `zOrder`.
 
 Now that you've gone through the sample scene.json file, you can use the custom Together Mode scenes to engage in scenes.
-
-## Test custom Together Mode scenes in Teams
-
-> [!NOTE]
-> You can apply a custom Together Mode scene that is deployed by your tenant admin only if you've a [Teams Premium license](/MicrosoftTeams/enhanced-teams-experience?branch=danismith-t-pre-licensing).
-
-To select scenes and use custom Together Mode scenes, follow these steps:
-
-1. Create a new test meeting.
-
-    > [!NOTE]
-    > On selecting **View in Teams** in the Scene studio, the scene is installed as an app in Teams. This is the model for a developer to test and try out scenes from the Scene studio. After a scene is exported and sideloaded as a custom app, users can view the scenes in the scene gallery.
-
-1. From the **Gallery** drop-down in the upper-left corner, select **Together Mode**. The **Picker** dialog box appears and the scene that is added is available.
-
-1. Select **Change scene** to change the default scene.
-
-1. From the **Scene Gallery**, select the scene you want to use for your meeting.
-
-    Optionally, the meeting organizer and presenter can **Change scene for all participants** in the meeting.
-
-    >[!NOTE]
-    > At any point in time, only one scene is used homogeneously for the meeting. If a presenter or organizer changes a scene, it  changes for all. Switching in or out of custom Together Mode scenes is up to individual participants, but while in custom Together Mode scenes, all participants have the same scene.
-
-1. Select **Apply**. Teams installs the app for the user and applies the scene.
 
 ## Open a custom Together Mode scenes Scene Package
 
