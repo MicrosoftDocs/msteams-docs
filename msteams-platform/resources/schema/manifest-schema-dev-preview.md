@@ -926,7 +926,7 @@ Provides the ability to add buttons and menu items, collectively called "[add-in
 |`tabs.position.builtinTabId`| string | 64 characters | | The ID of the built-in tab. See [Find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
 |`tabs.position.align`| string enum | | |  Defines alignment of this custom tab relative to the specified built-in tab. Supported values: `after`, `before`|
 |`tabs.groups`| string |64 characters | | Defines tab groups.|
-|`tabs.groups.id`| string |64 characters | | Unique identifier for this tab group within the app. Must be different from any built-in group id in the Office application and any other custom group.|
+|`tabs.groups.id`| string |64 characters | | Unique identifier for this tab group within the app. Must be different from any built-in group ID in the Microsoft 365 application and any other custom group.|
 |`tabs.groups.label`| string | 64 characters | | Displayed text for the group.|
 |`tabs.groups.icons`| array | | | Displayed icons for the group. |
 |`tabs.groups.icons.size`| number | |✔️| Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
