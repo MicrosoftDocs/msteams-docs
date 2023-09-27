@@ -19,7 +19,7 @@ You can find comprehensive tab design guidelines, including elements that you ca
 
 ## Add a tab
 
-You can add a tab from the Teams store (AppSource) or in one of the following contexts:
+You can add a tab from the Microsoft Teams Store (AppSource) or in one of the following contexts:
 
 * Chat
 * Channel
