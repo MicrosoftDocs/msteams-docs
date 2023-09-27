@@ -1,5 +1,5 @@
 ---
-title: Message extension plugin
+title: Build Message extension plugin
 author: v-ypalikila
 description: Learn how to build an API and bot based message extensions for Teams with openAPI specification or chatGPT plugin manifest.
 ms.localizationpriority: medium
@@ -8,11 +8,13 @@ ms.author: anclear
 ms.date: 09/05/2023
 ---
 
-# Message extension plugin
+# Build Message extension plugin
 
-Meetings users can interact with copilot to perform search and action-based scenarios with Microsoft and third-party plugins (existing bot-based message extensions) via natural language and custom prompts. For example, users can perform an action with a  plugin in a meeting or query and discover content from the plugins.
+Meetings users can interact with copilot to perform search and action-based scenarios with Microsoft and third-party plugins (existing bot-based message extensions) using natural language and custom prompts. For example, users can perform an action with a  plugin in a meeting or query and discover content from the plugins.
 
 Meetings copilot will process these actions and render them appropriately and provide extensibility actions such - open URL, share content in meeting, launch task module and app acquisition without leaving meeting copilot.
+
+Message extensions and plugins are a way to extend the functionality of  Microsoft Teams by allowing users to interact with your app or service from the message compose box. They can be used to insert content, trigger actions, or display information in a task module or a card. FOr more information, see [Build message extensions](../messaging-extensions/what-are-messaging-extensions.md).
 
 ## Prerequisites
 
@@ -292,6 +294,41 @@ In the app manifest, Include a JSON path for the response schema. If you don't h
 |`composeExtension.command.parameters`    |For API MEs. Include Title, Name, Description. The Name must map to the parameter name in the OpenAPI spec.     |
 |`composeExtension.command.apiResponseRenderingTemplateFile`| A template used to format the JSON response from developer’s API to Adaptive card response. The property is mandatory for `ApiBased` composeExtensions type.   |
 |`ComposeExtension.LLMdescription`|Description for the LLM |
+
+## Best practices
+
+Message extension plugins are a type of Teams app that allows you to integrate your business chat functionality directly into Teams. This can enhance your app's usability and provide a seamless user experience. To implement this feature, you need to set specific parameters in the composeExtension section of your Teams app manifest:
+
+* Set composeExtension.composeExtensionType to `apiBased`.
+* Define `composeExtension.apiSpecificationFile` as the relative path to the OpenAPI specification file within the folder.
+
+### API based Message Extensions
+
+API based Message Extensions (MEs) are a powerful tool that allows you to extend the functionality of your Teams app by integrating with external APIs. This can greatly enhance the capabilities of your app and provide a richer user experience. To implement OpenAPI MEs, you need to follow these guidelines:
+
+* The ID for the command in the Teams app manifest must match the corresponding operationId in the OpenAPI specification.
+* If there is a required parameter without a default value, the parameter name of the command defined in the Teams app manifest must match this parameter name.
+* If there is no required parameter without a default value, the parameter name in the Teams app manifest must match the name of an optional parameter defined for that operation.
+Neither zero nor more than one parameter is supported.
+* A response rendering template must be defined per command. This file, used to convert responses from an API, must be local just like the OpenAPI specification. The command portion of the manifest must point to this template file under composeExtension.command.apiResponseRenderingTemplateFile within the app manifest. Each command will point to a different response rendering template file.
+
+### General Guidelines
+
+Regardless of whether you're implementing a API plugin or API ME , follow these guidelines:
+
+* The server URL must be an absolute endpoint. This ensures that your app can reliably connect to the server regardless of the user's location or network conditions.
+* The endpoint must be HTTPS. This is a security requirement that ensures the integrity and confidentiality of the data exchanged between your app and the server.
+Additional Guidelines for MEs
+
+### Best practices for OpenAPI specification
+
+Developers cannot require users to enter a parameter for a header or cookie. If headers need to be passed, a default value for the header can be set in the specification. This simplifies the user experience and reduces the risk of errors.
+* `oneOf`, `anyOf`, `allOf`, `not ` (swagger.io) are not supported. These constructs are not compatible with the Teams platform.
+* Constructing arrays for the request are not supported, but nested objects within a JSON request body are supported. This allows for complex data structures while maintaining compatibility with the Teams platform.
+* The request body (if present) can only be application/json. This is a common standard that ensures compatibility with a wide range of APIs.
+* Only one required parameter without a default value is allowed. We are only supporting single parameter search right now. This simplifies the user experience and reduces the risk of errors.
+* The operation must have an operationId. This is a unique identifier that allows the Teams platform to correctly route and process the operation.
+* Only HTTP methods POST and GET are allowed. These are the most commonly used methods for interacting with APIs, and they are supported by the Teams platform.
 
 ## See also
 
