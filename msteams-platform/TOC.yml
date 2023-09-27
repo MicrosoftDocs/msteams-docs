@@ -510,26 +510,7 @@
       displayName: Handle tap actions, Just-in-time install, JIT
   - name: Add link unfurling
     href: messaging-extensions/how-to/link-unfurling.md
-    displayName: Domain listings can include wildcards, cache
-- name: Copilot
-  items:
-  - name: Overview
-    href: copilot/copilot-overview.md
-    displayName: Copilot, Copilot API, Copilot service
-  - name: Build Copilot plugins
-    items:
-    - name: Copilot plugin overview 
-      href: copilot/build-message-extension-plugin.md
-      displayName: plugin, Copilot plugin, API based ME, OpenAPI specification
-    - name: Build API based message extension  
-      href: copilot/build-api-based-message-extension.md
-      displayName: plugin, OpenAPI specification, chat GPT
-    - name: Build bot based message extension
-      href: copilot/build-bot-based-message-extension.md
-      displayName: OpenAPI specification, bot, mos
-  - name: Copilot message extension FAQ 
-    href: copilot/copilot-plugin-faq.md
-    displayName: FAQ      
+    displayName: Domain listings can include wildcards, cache   
 - name: Build apps for Teams meetings and calls
   items:
   - name: Overview
@@ -808,6 +789,25 @@
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Extend Microsoft 365 Copilot
+- name: Build Copilot
+  items:
+  - name: Overview
+    href: copilot/copilot-overview.md
+    displayName: Copilot, Copilot API, Copilot service
+  - name: Build API plugins
+    items:
+    - name: API plugin overview 
+      href: copilot/build-message-extension-plugin.md
+      displayName: plugin, Copilot plugin, API based ME, OpenAPI specification
+    - name: Build API based message extension  
+      href: copilot/build-api-based-message-extension.md
+      displayName: plugin, OpenAPI specification, chat GPT
+    - name: Build bot based message extension
+      href: copilot/build-bot-based-message-extension.md
+      displayName: OpenAPI specification, bot, mos
+  - name: Message extension FAQ 
+    href: copilot/copilot-plugin-faq.md
+    displayName: FAQ   
   href: copilot/how-to-extend-copilot.md
 - name: Teams developer documentation FAQs
   href: teams-faq.md

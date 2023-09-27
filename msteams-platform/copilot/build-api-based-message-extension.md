@@ -101,7 +101,7 @@ If you already have an existing copilot plugin and you want to create a message 
 
 :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-copilot-message-extension-created.png" alt-text="Screenshot shows the message extension app created in the App features page in Teams developer portal.":::
 
-## Create a API plugin
+## Create an API plugin
 
 An API plugin requires a ChatGPT plugin manifest, which needs to be hosted on the API’s domain.
 
@@ -132,7 +132,7 @@ If you have a chatGPT plugin manifest. You can build an API plugin using Teams d
 
 1. Follow these steps for the respective API types:
 
-# [New API](#tab/new-api)
+   # [New API](#tab/new-api)
 
    1. Select a programming language.
 
@@ -142,7 +142,7 @@ If you have a chatGPT plugin manifest. You can build an API plugin using Teams d
 
    1. Enter the name of your app and select **Enter**. Teams Toolkit creates a new plugin with API from Azure functions.
 
-# [OpenAPI specification](#tab/openapi-specification)
+   # [OpenAPI specification](#tab/openapi-specification)
 
    1. Enter or browse the OpenAPI specification doc location.
 
@@ -151,15 +151,6 @@ If you have a chatGPT plugin manifest. You can build an API plugin using Teams d
    1. From the API list, select the GET API and select **OK**.
    1. Select **Default folder**.
    1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI spec file and created a API based message extension.
-
-# [Open AI plugin](#tab/open-ai-plugin)
-
-   1. Enter your website domain where you've hosted the Open AI plugin manifest.
-
-      :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot-openai-manifest.png" alt-text="Screenshot shows the filed to add the hosted domain url of the openAI plugin manifest.":::
-
-   1. Select **Enter**.
-
    ---
 
 You can also build bot based message extensions.
@@ -168,34 +159,37 @@ You can also build bot based message extensions.
 
 ## Best practices
 
- The ID for the command in the Teams app manifest must match the corresponding operationId in the openAPI spec
-2. If there is a required parameter without a default value, then the parameter name of the command defined in the Teams app manifest, must match this parameter name
+* The ID for the command in the Teams app manifest must match the corresponding operationId in the openAPI spec.
 
-   1. If there is no required parameter without a default value, then the parameter name in the Teams app manifest must match the name of an optional parameter defined for that operation
-   2. There must be exactly one parameter defined for the operation. Zero or more than one parameter are not supported
-   3. There must also be a response rendering template defined per command. The details and the schema for this file which is used to convert responses from an API can be found at Template Response Schema.docx. This file must be local just like the openAPI spec and the command portion of the manifest must also point to this template file under composeExtension.command.apiResponseRenderingTemplateFile with the app manifest. Each command will point to a different response rendering template file.
+* If there is a required parameter without a default value, then the parameter name of the command defined in the Teams app manifest, must match this parameter name.
+
+* If there is no required parameter without a default value, then the parameter name in the Teams app manifest must match the name of an optional parameter defined for that operation.
+
+* There must be exactly one parameter defined for the operation. Zero or more than one parameter are not supported.
+
+* There must also be a response rendering template defined per command. The details and the schema for this file which is used to convert responses from an API can be found at Template Response Schema.docx. This file must be local just like the openAPI spec and the command portion of the manifest must also point to this template file under composeExtension.command.apiResponseRenderingTemplateFile with the app manifest. Each command will point to a different response rendering template file.
 
 ## Best practices for openAPI spec
 
-Regardless of Plugin-only or ME
+* Regardless of Plugin-only or ME
 
-Server url must be absolute endpoint
+* Server url must be absolute endpoint
 
-2. Endpoint must be HTTPS
+* Endpoint must be HTTPS
 
 Only for operations to be used as MEs
 
-1. Developers cannot require users to enter a parameter for a header or cookie
+* Developers cannot require users to enter a parameter for a header or cookie
 
-    1. If they need headers passed, they can put a default value for the header in the spec
+* If they need headers passed, they can put a default value for the header in the spec
 
-2. oneOf, anyOf, allOf, not (swagger.io)
+* oneOf, anyOf, allOf, not (swagger.io)
 
-3. Construcuting arrays for the request are not supported, nest objects with a JSON request body are supported
+* Construcuting arrays for the request are not supported, nest objects with a JSON request body are supported.
 
-4. Request body (if present) can only be application/json
+* Request body (if present) can only be application/json
 
-5. Only one required parameter without a default value is allowed. We are only supporting single parameter search right now
+* Only one required parameter without a default value is allowed. We are only supporting single parameter search right now
 
 6. The operation must have an operationId
 
