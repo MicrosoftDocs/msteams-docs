@@ -789,7 +789,8 @@
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Extend Microsoft 365 Copilot
-- name: Build Copilot extension
+  href: copilot/how-to-extend-copilot.md
+- name: Build copilot extension
   items:
   - name: Overview
     href: copilot/copilot-overview.md
@@ -807,8 +808,7 @@
       displayName: OpenAPI specification, bot, mos
   - name: Message extension FAQ 
     href: copilot/copilot-plugin-faq.md
-    displayName: FAQ   
-  href: copilot/how-to-extend-copilot.md
+    displayName: FAQ
 - name: Teams developer documentation FAQs
   href: teams-faq.md
 - name: Test your app
