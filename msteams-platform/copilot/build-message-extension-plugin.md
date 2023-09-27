@@ -14,7 +14,7 @@ Meetings users can interact with copilot to perform search and action-based scen
 
 Meetings copilot will process these actions and render them appropriately and provide extensibility actions such - open URL, share content in meeting, launch task module and app acquisition without leaving meeting copilot.
 
-Message extensions and plugins are a way to extend the functionality of  Microsoft Teams by allowing users to interact with your app or service from the message compose box. They can be used to insert content, trigger actions, or display information in a task module or a card. FOr more information, see [Build message extensions](../messaging-extensions/what-are-messaging-extensions.md).
+Message extensions and plugins are a way to extend the functionality of  Microsoft Teams by allowing users to interact with your app or service from the message compose box. They can be used to insert content, trigger actions, or display information in a task module or a card. For more information, see [Build message extensions](../messaging-extensions/what-are-messaging-extensions.md).
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ Message extensions and plugins are a way to extend the functionality of  Microso
 
 ## Build message extension plugin
 
-**OpenAPI Specification (OAS)** defines a standard, language-agnostic interface to HTTP APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. An OpenAPI Specification be used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases.
+**OpenAPI Specification (OAS)** defines a standard, language-agnostic interface to HTTP APIs, which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. An OpenAPI Specification be used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases.
 
 **OpenAI plugins** connect ChatGPT to third-party applications. These plugins enable ChatGPT to interact with APIs defined by developers, enhancing ChatGPT's capabilities and allowing it to perform a wide range of actions.
 
@@ -307,14 +307,14 @@ Message extension plugins are a type of Teams app that allows you to integrate y
 API based Message Extensions (MEs) are a powerful tool that allows you to extend the functionality of your Teams app by integrating with external APIs. This can greatly enhance the capabilities of your app and provide a richer user experience. To implement OpenAPI MEs, you need to follow these guidelines:
 
 * The ID for the command in the Teams app manifest must match the corresponding operationId in the OpenAPI specification.
-* If there is a required parameter without a default value, the parameter name of the command defined in the Teams app manifest must match this parameter name.
-* If there is no required parameter without a default value, the parameter name in the Teams app manifest must match the name of an optional parameter defined for that operation.
+* If there's a required parameter without a default value, the parameter name of the command defined in the Teams app manifest must match this parameter name.
+* If there's no required parameter without a default value, the parameter name in the Teams app manifest must match the name of an optional parameter defined for that operation.
 Neither zero nor more than one parameter is supported.
 * A response rendering template must be defined per command. This file, used to convert responses from an API, must be local just like the OpenAPI specification. The command portion of the manifest must point to this template file under composeExtension.command.apiResponseRenderingTemplateFile within the app manifest. Each command will point to a different response rendering template file.
 
 ### General Guidelines
 
-Regardless of whether you're implementing a API plugin or API ME , follow these guidelines:
+Regardless of whether you're implementing an API plugin or API ME, follow these guidelines:
 
 * The server URL must be an absolute endpoint. This ensures that your app can reliably connect to the server regardless of the user's location or network conditions.
 * The endpoint must be HTTPS. This is a security requirement that ensures the integrity and confidentiality of the data exchanged between your app and the server.
@@ -322,13 +322,13 @@ Additional Guidelines for MEs
 
 ### Best practices for OpenAPI specification
 
-Developers cannot require users to enter a parameter for a header or cookie. If headers need to be passed, a default value for the header can be set in the specification. This simplifies the user experience and reduces the risk of errors.
-* `oneOf`, `anyOf`, `allOf`, `not ` (swagger.io) are not supported. These constructs are not compatible with the Teams platform.
-* Constructing arrays for the request are not supported, but nested objects within a JSON request body are supported. This allows for complex data structures while maintaining compatibility with the Teams platform.
+Developers can't require users to enter a parameter for a header or cookie. If headers need to be passed, a default value for the header can be set in the specification. This simplifies the user experience and reduces the risk of errors.
+* `oneOf`, `anyOf`, `allOf`, `not ` (swagger.io) aren't supported. These constructs aren't compatible with the Teams platform.
+* Constructing arrays for the request aren't supported, but nested objects within a JSON request body are supported. This allows for complex data structures while maintaining compatibility with the Teams platform.
 * The request body (if present) can only be application/json. This is a common standard that ensures compatibility with a wide range of APIs.
-* Only one required parameter without a default value is allowed. We are only supporting single parameter search right now. This simplifies the user experience and reduces the risk of errors.
+* Only one required parameter without a default value is allowed. We're only supporting single parameter search right now. This simplifies the user experience and reduces the risk of errors.
 * The operation must have an operationId. This is a unique identifier that allows the Teams platform to correctly route and process the operation.
-* Only HTTP methods POST and GET are allowed. These are the most commonly used methods for interacting with APIs, and they are supported by the Teams platform.
+* Only HTTP methods POST and GET are allowed. These are the most commonly used methods for interacting with APIs, and they're supported by the Teams platform.
 
 ## See also
 
