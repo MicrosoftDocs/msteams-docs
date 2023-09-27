@@ -498,7 +498,7 @@
       displayName: Initial invoke request, respond to fetchTask, payload activity, handleTeamsMessagingExtensionFetchTask
     - name: Respond to the task module submit action
       href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-      displayName: Compose, Respond to initial submit action, configure the poll, attribution header for bot messages, submit action
+      displayName: Compose, Respond to initial submit action, configure the poll, attribution for bot messages, submit action
   - name: Search commands
     items:
     - name: Define search commands
