@@ -78,7 +78,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Receive read receipt event for your bot (Developer preview)
+      - text: Receive read receipt event for your bot
         url:  bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt
       - text: People icon in an Adaptive Card
         url: task-modules-and-cards/cards/cards-format.md#people-icon-in-an-adaptive-card
