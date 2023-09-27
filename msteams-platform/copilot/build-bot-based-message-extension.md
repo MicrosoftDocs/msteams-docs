@@ -12,7 +12,7 @@ ms.date: 09/07/2023
 
 Bot ME based plugins are message extensions that use a bot to handle user requests and responses. They require a bot registration and a bot framework SDK. They can be configured and deployed using the App Studio or the Teams Toolkit.
 
-## Create a bot based message extension using Teams toolkit
+# [Teams toolkit](#tab/Teams-toolkit)
 
 1. Open Visual Studio Code.
 1. From the left pane, Select Teams Toolkit.
@@ -23,6 +23,40 @@ Bot ME based plugins are message extensions that use a bot to handle user reques
 1. Select Default folder.
 1. Enter the name of your app and select Enter.
 
-## Create a bot based message extension using developer portal for Teams
+# [Developer portal for Teams](#tab/developer-portal-for-teams)
 
-<font color="red">Need more information </font>
+1. Go to **Teams developer portal**.
+1. Go to **Apps**.
+1. Select **Create a new app**.
+1. Under **Configure**, select **App features**.
+1. Select **Messaging extension**.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the plugin of copilot option in Teams developer portal.":::
+
+1. Under **Message extension type**, select **Bot**.
+
+1. If you have an existing bot, select **Existing bot** or if you have a bot ID, select **Enter Bot ID**.
+
+   1. If don't have a Bot ID, you can select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you've created.
+
+1. Select the required scopes.
+
+1. Under **Command**, select **+ Add a command**.
+
+   A command details page appears.
+
+1. In the Command details page, select the **Search** or **Action** as the type of command and update the following:
+   * Command ID
+   * Command title
+   * Command description
+   * Context in which the command works
+   * Parameter name
+   * Parameter title
+   * Parameter description
+   * Parameter description type
+
+1. Select **Save**.
+
+A bot based ME is created.
+
+---
