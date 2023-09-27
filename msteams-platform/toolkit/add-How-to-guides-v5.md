@@ -11,7 +11,7 @@ ms.date: 11/29/2021
 # Add How-to guides to Microsoft Teams app
 
 > [!NOTE]
-> This article is applicable only to Teams Toolkit version 5. For more information on how to add capabilities for your app using Teams Toolkit version 4, see [Add capability](toolkit-v4/add-capability-v4.md).
+> This article is applicable only to Teams Toolkit version 5. For more information on how to add capabilities to your app using Teams Toolkit version 4, see [Add capability](toolkit-v4/add-capability-v4.md).
 
 Teams Toolkit project templates focus on getting started with an app that implements a single [app capability](~/concepts/design/app-structure.md). However, apps can have multiple capabilities. We've created a set of How-to guides with the steps needed to add different capabilities to a project created with Teams Toolkit.
 
