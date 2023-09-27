@@ -48,6 +48,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Receive read receipt event for your bot
+        url:  bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt
       - text: Media elements in Adaptive Card
         url: task-modules-and-cards/cards/media-elements-in-adaptive-cards.md
       - text: Microsoft Teams Store search experience
@@ -66,8 +68,6 @@ landingContent:
         url: graph-api/meeting-transcripts/overview-transcripts.md
       - text: Bots can mention tags in Adaptive Cards
         url: bots/how-to/conversations/channel-and-group-conversations.md#tag-mention
-      - text: Collaborative Stage View
-        url: tabs/tabs-link-unfurling.md#collaborative-stage-view
 
     - linkListType: reference
       links:
@@ -78,8 +78,6 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Receive read receipt event for your bot
-        url:  bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt
       - text: People icon in an Adaptive Card
         url: task-modules-and-cards/cards/cards-format.md#people-icon-in-an-adaptive-card
       - text: App caching for iOS personal tray
@@ -98,7 +96,9 @@ landingContent:
         url: copilot/how-to-extend-copilot.md
       - text: Distribute your app to specific countries
         url: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries-or-regions
- 
+      - text: Teams Toolkit v5 extension within Visual Studio Code
+        url: toolkit/teams-toolkit-fundamentals.md
+
     - linkListType: whats-new
       links:
       - text: Develop your apps with a seamless transition between Teams Developer Portal and Teams Toolkit
