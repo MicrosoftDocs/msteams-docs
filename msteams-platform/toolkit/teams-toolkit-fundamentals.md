@@ -42,7 +42,7 @@ Teams Toolkit is available for free for Visual Studio Code. For more information
 
 ## Version Mapping
 
-The Teams Toolkit lifecycle and support policy covers Generally available (GA) and future versions.
+The following table list out the version support for the Teams Toolkit extension for each release cycle:
 
 | &nbsp; | Teams Toolkit for Visual Studio Code|Teams Toolkit for Visual Studio| Teams Toolkit CLI | TeamsFx SDK |Teams SDK|Manifest|
 |----|----|----|----|----|----|----|
