@@ -14,7 +14,7 @@ Before you create your Teams app project, ensure that the prerequisites are in p
 * [Install required tools to build your Teams app](#install-required-tools-to-build-your-teams-app)
 * [Prepare Accounts to build your Teams app](#accounts-to-build-your-teams-app)
 * [Upload permission](tools-prerequisites.md)
-* [Verify uploading permission](#verify-uploading-permission)
+* [Verify app upload permission](#verify-uploading-permission)
 
 ## Basic requirements to build your Teams app
 
@@ -135,17 +135,17 @@ An Azure account allows you to host a Teams app or the back-end resources for yo
 
 While creating Teams app using SPFx environment, you must have a SharePoint collection site administrator account. It’s required for deploying and hosting your app on SharePoint site. If you're using a Microsoft 365 developer program tenant, you can use the administrator account you created at the time.
 
-## Verify uploading permission
+## Verify app upload permission
 
 After creating the app, you must load your app in Teams without distributing it. This process is known as uploading. Sign in to your Microsoft 365 account to view this option.
 
-You can verify if the uploading permission is enabled using either Visual Studio Code or Teams client.
+You can verify if the app upload permission is enabled using either Visual Studio Code or Teams client.
 
 <br>
 <details>
-<summary><b>Verify uploading permission using Visual Studio Code</b></summary>
+<summary><b>Verify app upload permission using Visual Studio Code</b></summary>
 
-You can use this method to verify uploading permission only after you have created an app project using Teams Toolkit. If you haven't created an app project, you can verify uploading permission using Teams client.
+You can use this method to verify app upload permission only after you have created an app project using Teams Toolkit. If you haven't created an app project, you can verify app upload permission using Teams client.
 
 1. Open **Visual Studio Code**.
 1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
@@ -166,7 +166,7 @@ You can use this method to verify uploading permission only after you have creat
 </details>
 <br>
 <details>
-<summary><b>Verify uploading permission using Teams client</b></summary>
+<summary><b>Verify app upload permission using Teams client</b></summary>
 
 1. In the Teams client, select **Apps** > **Manage your apps** > **Upload an app**.
 
@@ -216,7 +216,7 @@ If you have admin rights, you can enable uploading:
      > [!Note]
      > It can take up to 24 hours for uploading to become active. In the meantime, you can use **upload for your tenant** to test your app. To upload the .zip package file of the app, see [upload custom apps](/microsoftteams/teams-app-setup-policies).
 
-     Ensure that you have the uploading permission using the steps mentioned in [verify uploading permission using Visual Studio Code or Teams client](#verify-uploading-permission).
+     Ensure that you have the app upload permission using the steps mentioned in [verify app upload permission using Visual Studio Code or Teams client](#verify-app-upload-permission).
 
 </details>
 
