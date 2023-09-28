@@ -48,6 +48,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Bot configuration experience
+        url:  bots/how-to/bot-configuration-experience.md      
       - text: Receive read receipt event for your bot
         url:  bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt
       - text: Media elements in Adaptive Card
@@ -66,8 +68,6 @@ landingContent:
         url: bots/how-to/conversations/send-proactive-messages.md
       - text: Use callRecording API to fetch meeting recording from all meetings (Developer preview)
         url: graph-api/meeting-transcripts/overview-transcripts.md
-      - text: Bots can mention tags in Adaptive Cards
-        url: bots/how-to/conversations/channel-and-group-conversations.md#tag-mention
 
     - linkListType: reference
       links:

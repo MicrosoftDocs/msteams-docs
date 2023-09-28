@@ -182,7 +182,7 @@ To reconfigure the bot, follow these steps:
 
 | **Sample name** | **Description** |**Node.js** |
 |-----------------|-----------------|----------------|
-| Bot configuration experience | This sample code describes to enable the bot configuration settings for the user. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/v-harikrishnan/bot-configuration-app/samples/bot-configuration-app/nodejs)|
+| Bot configuration experience | This sample code describes to enable the bot configuration settings for the user. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)|
 
 ## Next step
 
