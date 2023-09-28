@@ -1551,7 +1551,7 @@ Namespace providing in-meeting app functionality.
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Teams:
+> The following methods aren't supported on the Teams mobile client:
 >
 > - `meeting.requestStartLiveStreaming`
 > - `meeting.requestStopLiveStreaming`
