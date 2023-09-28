@@ -48,6 +48,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Bot configuration experience
+        url:  bots/how-to/bot-configuration-experience.md      
       - text: Receive read receipt event for your bot
         url:  bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt
       - text: Media elements in Adaptive Card
@@ -66,8 +68,6 @@ landingContent:
         url: bots/how-to/conversations/send-proactive-messages.md
       - text: Use callRecording API to fetch meeting recording from all meetings (Developer preview)
         url: graph-api/meeting-transcripts/overview-transcripts.md
-      - text: Bots can mention tags in Adaptive Cards
-        url: bots/how-to/conversations/channel-and-group-conversations.md#tag-mention
 
     - linkListType: reference
       links:
@@ -166,8 +166,8 @@ landingContent:
   linkLists:        
     - linkListType: tutorial
       links:
-        - text: Grant tab device permissions
-          url: ~/sbs-tab-device-permissions.yml
+        - text: Bot configuration experience
+          url: ~/qsg-bot-configuration-experience.yml
         - text: Create Teams conversation bot
           url: ~/sbs-teams-conversation-bot.yml
         - text: Create Calling and meeting bot
@@ -184,8 +184,7 @@ landingContent:
           url: ~/sbs-meeting-token-generator.yml
         - text: Generate meeting side panel
           url: ~/sbs-meetings-sidepanel.yml
-        - text: Send activity feed notification 
-          url:  ~/sbs-graphactivity-feedbroadcast.yml
+
 
 
     - linkListType: tutorial
@@ -216,6 +215,8 @@ landingContent:
       links:
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
+        - text: Send activity feed notification 
+          url:  ~/sbs-graphactivity-feedbroadcast.yml          
         
            
 - title: Teams app scenarios
