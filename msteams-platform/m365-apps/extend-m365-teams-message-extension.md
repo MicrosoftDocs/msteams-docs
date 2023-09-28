@@ -14,12 +14,12 @@ ms.subservice: m365apps
 >
 > If you've connected your message extension bot to an **Outlook** channel, you must migrate to the **Microsoft 365** channel.
 
-[Message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) allow users to interact with your web service through buttons and forms through which they can search or initiate actions in an external system from Microsoft Teams and Microsoft Outlook. You can send back the result of that interaction to the client in the form of a richly formatted adaptive card. There are two types of message extensions:
+[Message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) allow users to interact with your web service through buttons and forms through which they can search or initiate actions in an external system from Microsoft Teams and Outlook. You can send back the result of that interaction to the client in the form of a richly formatted adaptive card. There are two types of message extensions:
 
 - [Search-based message extensions](../messaging-extensions/how-to/search-commands/define-search-command.md) allow users to search an external system and share results through the compose message area of the Microsoft Teams client.
 - [Action-based message extensions](../messaging-extensions/how-to/action-commands/define-action-command.md) allow you to present users with a modal pop-up to collect or display information, process the interaction, and send the information back to the client as a rich card.
 
-You can now bring Teams message extensions to Outlook by extending your Teams apps across Microsoft 365. For information about message extension support within Outlook for Windows desktop, Outlook on web, and Outlook on mobile see the support table in [Extend Teams apps across Microsoft 365](overview.md).
+You can now bring Teams message extensions to Outlook by extending your Teams apps across Microsoft 365. For more information about message extension support within Outlook for Windows desktop, Outlook on web, and Outlook on mobile, see the support table in [extend Teams apps across Microsoft 365](overview.md).
 
 The process to update your Teams message extension involves the following steps:
 
@@ -60,7 +60,7 @@ If you have an existing message extension in production, make a copy or a branch
 
 If you'd like to use sample code to complete the full tutorial on updating an existing Teams app, follow the setup steps in [Teams message extension search sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs) or [Teams message extension action sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) to quickly build a Microsoft Teams message extension.
 
-Alternately, you can use the ready-made Outlook-enabled apps for a message extension in the following section and skip the [*Update the app manifest*](#update-the-app-manifest) portion of this tutorial.
+Alternately, you can use the ready-made Outlook-enabled apps for a message extension in the following section and skip [update the app manifest](#update-the-app-manifest) portion of this tutorial.
 
 ### Quickstart
 
@@ -77,7 +77,7 @@ To start with a message extension that's already enabled to run in Outlook, use 
 
     :::image type="content" source="images/toolkit-palatte-action-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams action sample option.":::
 
-    As a note, the search-based message extension sample is also available as *NPM Search Connector* in the Teams Toolkit Samples gallery. From the Teams Toolkit pane, select **Development** > **View samples** > **NPM Search Connector**.
+    As a note, the search-based message extension sample is also available as *NPM Search Connector* in the Teams Toolkit samples gallery. From the Teams Toolkit pane, select **Development** > **View Samples** > **NPM Search Connector**.
 
     :::image type="content" source="images/toolkit-search-sample.png" alt-text="Screenshot shows the NPM Search Connector sample in Teams Toolkit Samples gallery.":::
 
@@ -214,8 +214,7 @@ Your message extension is listed, it opens an adjacent pane to display search re
 
 - Message extensions in Outlook are limited to the mail [*compose* context](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions). Even if your Teams message extension includes `commandBox` as a *context* in its app manifest, the current preview is limited to the mail composition (`compose`) option. Invoking a message extension from the global Outlook *Search* box isn't supported.
 - [Action-based message extension](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) commands aren't supported in Outlook desktop. If your app has action-based commands, it surfaces in Outlook, but the action menu is only available on the web and mobile.
-- [Action-based message extensions](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) that [send cards via the user](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box in Teams are supported in Outlook. However, using [bots to deliver cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#
-) is not supported. In this situation, you can convert a card to be sent by user to allow for support on Outlook.
+- [Action-based message extensions](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) that [send cards via the user](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box in Teams are supported in Outlook. However, using [bots to deliver cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#) isn't supported. In this situation, you can convert a card to be sent by user to allow for support on Outlook.
 - For action-based message extensions, there is a known issue that task modules launched in pop out windows show up behind the window.
 - Insertion of more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email isn't supported; Adaptive Cards v1.5 and later aren't supported.
 - [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) of type `messageBack`, `imBack`, `invoke`, and `signin` aren't supported for inserted cards. Support is limited to `openURL`: when selected, the user is redirected to the specified URL in a new tab.
@@ -228,8 +227,7 @@ Use the [Microsoft Teams developer community channels](/microsoftteams/platform/
 - Use `Action.Execute` instead of `Action.Submit` for sending responses to your app.
 - Keep your cards crisp by using actions like toggle visibility and `Action.ShowCard` to hide sections of your card for more details.
 - Use stage view or task modules for immersive experiences without taking your users away from Outlook.
-- Amend your [Content Security Policy](extend-m365-teams-personal-tab.md#configure-content-security-policy-headers
-) headers.
+- Amend your [Content Security Policy](extend-m365-teams-personal-tab.md#configure-content-security-policy-headers) headers.
 
 ### Debugging
 
