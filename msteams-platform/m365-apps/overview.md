@@ -51,7 +51,9 @@ On mobile, you can test and debug your Teams personal tab running on Microsoft 3
 
 ---
 
-You can also extend your search and action-based [Teams message extensions](extend-m365-teams-message-extension.md) to Outlook. With search-based message extensions you can enables your customers to search and share results through the compose message area of Outlook, in addition to Microsoft Teams clients. And with action-based message extensions you can similiarly present your customers with modal pop-ups to collect or display information, process the interaction, and send the information back to the client as a rich card.
+You can also extend your search and action-based [Teams message extensions](extend-m365-teams-message-extension.md) to Outlook. 
+* With search-based message extensions, you can enables your customers to search and share results through the compose message area of Outlook, in addition to Microsoft Teams clients. 
+* With action-based message extensions, you can similiarly present your customers with modal pop-ups to collect or display information, process the interaction, and send the information back to the client as a rich card.
 
 :::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="The screenshot is an example that shows Message extension running in Outlook and Teams.":::
 
