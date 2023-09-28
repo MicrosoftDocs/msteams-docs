@@ -182,12 +182,11 @@ To reconfigure the bot, follow these steps:
 
 | **Sample name** | **Description** |**Node.js** |
 |-----------------|-----------------|----------------|
-| Bot configuration experience | This sample code describes to enable the bot configuration settings for the user. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)|
+| Bot configuration experience | This sample code describes the configuration and reconfiguration for bots in team and group chat. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)|
 
-## Next step
+## Step-by-step guide
 
-> [!div class="nextstepaction"]
-> [Bot configuration quick start guide](../../qsg-bot-configuration-experience.yml)
+* Follow the [step-by-step guide](../../qsg-bot-configuration-experience.yml) to configure your bot during installation or after installation from the channel or group chat where the bot is installed.
 
 ## See also
 

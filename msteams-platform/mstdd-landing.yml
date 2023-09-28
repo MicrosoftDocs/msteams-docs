@@ -166,8 +166,8 @@ landingContent:
   linkLists:        
     - linkListType: tutorial
       links:
-        - text: Grant tab device permissions
-          url: ~/sbs-tab-device-permissions.yml
+        - text: Bot configuration experience
+          url: ~/qsg-bot-configuration-experience.yml
         - text: Create Teams conversation bot
           url: ~/sbs-teams-conversation-bot.yml
         - text: Create Calling and meeting bot
@@ -184,8 +184,7 @@ landingContent:
           url: ~/sbs-meeting-token-generator.yml
         - text: Generate meeting side panel
           url: ~/sbs-meetings-sidepanel.yml
-        - text: Send activity feed notification 
-          url:  ~/sbs-graphactivity-feedbroadcast.yml
+
 
 
     - linkListType: tutorial
@@ -216,6 +215,8 @@ landingContent:
       links:
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
+        - text: Send activity feed notification 
+          url:  ~/sbs-graphactivity-feedbroadcast.yml          
         
            
 - title: Teams app scenarios
