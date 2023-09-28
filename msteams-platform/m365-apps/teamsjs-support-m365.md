@@ -2512,7 +2512,7 @@ Preview. Contains functionality to allow web apps to store data in webview cache
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Teams:
+> The `webStorage.isWebStorageClearedOnUserLogOut` method isn't supported on the Teams mobile client.
 >
 > `webStorage.isWebStorageClearedOnUserLogOut`
 
