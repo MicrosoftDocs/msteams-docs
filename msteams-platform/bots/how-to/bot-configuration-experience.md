@@ -186,7 +186,7 @@ To reconfigure the bot, follow these steps:
 
 ## Step-by-step guide
 
-* Follow the [step-by-step guide](../../qsg-bot-configuration-experience.yml) to configure your bot during installation or after installation from the channel or group chat where the bot is installed.
+* Follow the [step-by-step guide](../../qsg-bot-configuration-experience.yml) to configure your bot during installation or after installation from the team or group chat where the bot is installed.
 
 ## See also
 

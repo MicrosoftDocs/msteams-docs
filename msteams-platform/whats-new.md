@@ -346,7 +346,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 September**
 
-* ***September 28, 2023***: [Configure your bot during installation or after installation from the channel or group chat where the bot is installed.](bots/how-to/bot-configuration-experience.md)
+* ***September 28, 2023***: [Configure your bot during installation or after installation from the team or group chat where the bot is installed.](bots/how-to/bot-configuration-experience.md)
 
 **2023 August**
 
