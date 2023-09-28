@@ -24,7 +24,7 @@ In the following graphic, the bot is installed in a group chat. When the user ho
 
 To enable the bot configuration settings from a channel or group chat scope, follow these steps:
 
-1. [Update app manifest schema](#update-app-manifest)
+1. [Update app manifest](#update-app-manifest)
 1. [Configure your bot](#configure-your-bot)
 
 ### Update app manifest
