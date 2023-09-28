@@ -31,7 +31,7 @@ Microsoft 365 hosts are signified by the product icons in the following tables:
 
 Preview versions for both Teams and Outlook (launched through *Try the new Teams* and *Try the new Outlook* toggle controls in Teams and Outlook clients respectively) have different levels of support. The preview versions are designated by the following **PRE** (preview) icons:
 
-| Teams preview | Microsoft Outlook preview |
+| Teams preview | Outlook preview |
 | :-: | :-: |
 | :::image type="content" source="./images/teams-preview-icon.png" alt-text="Microsoft Teams (Preview) icon"::: | :::image type="content" source="./images/outlook-preview-icon.png" alt-text="Microsoft Outlook preview icon"::: |
 
