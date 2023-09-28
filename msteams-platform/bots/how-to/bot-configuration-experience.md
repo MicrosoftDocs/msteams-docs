@@ -27,7 +27,7 @@ To enable the bot configuration settings from a channel or group chat scope, fol
 1. [Update app manifest schema](#update-app-manifest-schema)
 1. [Configure your bot](#configure-your-bot)
 
-### Update app manifest schema
+### Update app manifest
 
 You must configure the `fetchTask` property under `bots.configuration` object in the app manifest (previously called Teams app manifest) file as follows:
 
