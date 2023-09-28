@@ -51,6 +51,9 @@ The following table list out the version support for the Teams Toolkit extension
 |Latest*|v5.x.x|v17.6|-|v2.x.x|v2.x.x|v1.16|
 |Beta**|Prerelease|v17.7 Preview|v2.x.x-beta|v2.x.x-beta|v2.x.x-beta|devPreview|
 
+*Latest is aligned on the major version.
+**Beta indicates developer preview.
+
 ## Features
 
 The following list provides the key features of Teams Toolkit:
@@ -118,6 +121,9 @@ The Teams Toolkit lifecycle and support policy covers Generally available (GA) a
 |GA|v4.0.0|v17.3|v1.0.0|v1.0.0|v1.12.x|v1.11|
 |Latest*|v5.x.x|v17.6|-|v2.x.x|v2.x.x|v1.16|
 |Beta**|Prerelease|v17.7 Preview|v2.x.x-beta|v2.x.x-beta|v2.x.x-beta|devPreview|
+
+*Latest is aligned on the major version.
+**Beta indicates developer preview.
 
 ## Features
 
