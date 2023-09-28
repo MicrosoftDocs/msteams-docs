@@ -1943,8 +1943,6 @@ Preview. Namespace providing for profile-related functionality.
 
 > [!NOTE]
 > The `profile.showProfile` method isn't supported on the Teams mobile client.
->
-> `profile.showProfile`
 
 ## `search`
 
@@ -2191,7 +2189,7 @@ Namespace to open a share dialog for web content. For more information, see [Sha
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Teams:
+> The `sharing.shareWebContent` method isn't supported on the Teams mobile client.
 
 ## `stageView`
 
@@ -2316,9 +2314,7 @@ The earlier version of the capability for providing modal dialog (task module) s
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Teams:
->
-> `task.getDefaultSizeIfNotProvided`
+> The `task.getDefaultSizeIfNotProvided` method isn't supported on the Teams mobile client.
 
 ## `teamsCore`
 
@@ -2511,8 +2507,6 @@ Preview. Contains functionality to allow web apps to store data in webview cache
 
 > [!NOTE]
 > The `webStorage.isWebStorageClearedOnUserLogOut` method isn't supported on the Teams mobile client.
->
-> `webStorage.isWebStorageClearedOnUserLogOut`
 
 ## Code sample
 
