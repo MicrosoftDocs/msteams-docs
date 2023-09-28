@@ -25,7 +25,7 @@ The following *TeamsJS Capability* table lists TeamsJS capabilities (public name
 
 Microsoft 365 hosts are signified by the product icons in the following tables:
 
-| Teams | Microsoft 365 app | Microsoft Outlook |
+| Teams | Microsoft 365 app | Outlook |
 | :-: | :-: | :-: |
 | :::image type="content" source="./images/teams-icon.png" alt-text="Microsoft Teams icon"::: | :::image type="content" source="./images/microsoft-365-icon.png" alt-text="Microsoft 365 app icon"::: | :::image type="content" source="./images/outlook-icon.png" alt-text="Microsoft Outlook icon"::: |
 
