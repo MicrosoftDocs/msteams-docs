@@ -12,7 +12,7 @@ ms.subservice: m365apps
 
 Microsoft Teams supports Microsoft 365-enabled Teams apps for production. You can distribute these apps to users who use:
 
-* Web: *Current Channel* versions of outlook.com and microsoft365.com (formerly office.com)
+* Web: *Current Channel* version of microsoft365.com (formerly office.com) and *Targeted Release* version of outlook.com
 * Desktop: *Current Channel* builds of Outlook and Microsoft 365 (Office) app for Windows desktop
 * Mobile: Production builds of Microsoft 365 (Office) app on iOS and Android 
 
