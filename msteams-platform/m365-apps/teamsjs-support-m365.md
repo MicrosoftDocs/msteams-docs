@@ -2445,7 +2445,7 @@ Preview. Namespace representing functionality for in-meeting video effects.
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Teams:
+> The following methods aren't supported on the Teams mobile client:
 >
 > - `video.notifySelectedVideoEffectChanged`
 > - `video.registerForVideoEffect`
