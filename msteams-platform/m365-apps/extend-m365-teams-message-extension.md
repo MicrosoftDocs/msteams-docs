@@ -73,9 +73,9 @@ To start with a message extension that's already enabled to run in Outlook, use 
    1. Select **Custom Search Results** to download the sample code for a Teams search-based message extension using the latest app manifest.
    1. Select **Collect Form Input and Process Data** to download the sample code for a Teams action-based message extension using the latest app manifest.
 
-    :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams sample options.":::
+    :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams search sample option.":::
 
-    :::image type="content" source="images/toolkit-palatte-action-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams sample options.":::
+    :::image type="content" source="images/toolkit-palatte-action-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams action sample option.":::
 
     As a note, the search-based message extension sample is also available as *NPM Search Connector* in the Teams Toolkit Samples gallery. From the Teams Toolkit pane, select **Development** > **View samples** > **NPM Search Connector**.
 
