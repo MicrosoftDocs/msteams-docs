@@ -69,7 +69,7 @@ items:
   content: |
      1. Go to **Visual Studio Code**.
 
-     1. Select **Open a folder**, browse to the folder where bot configuration sample is available and then select **Select folder**.
+     1. Select **Open a folder**, go to **Microsoft-Teams-Samples** > **samples** > **bot-configuration-app** and then select **Select folder**.
 
      1. From the left pane, select **Teams Toolkit**.
 
