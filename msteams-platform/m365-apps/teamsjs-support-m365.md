@@ -2192,8 +2192,6 @@ Namespace to open a share dialog for web content. For more information, see [Sha
 
 > [!NOTE]
 > The following methods are not supported on mobile for Teams:
->
-> `sharing.shareWebContent`
 
 ## `stageView`
 
