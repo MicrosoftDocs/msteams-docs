@@ -1780,7 +1780,7 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Teams:
+> The following methods aren't supported on the Teams mobile client:
 >
 > - `pages.getConfig`
 > - `pages.setCurrentFrame`
