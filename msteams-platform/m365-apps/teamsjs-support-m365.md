@@ -1942,7 +1942,7 @@ Preview. Namespace providing for profile-related functionality.
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Teams:
+> The `profile.showProfile` method isn't supported on the Teams mobile client.
 >
 > `profile.showProfile`
 
