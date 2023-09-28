@@ -10,13 +10,13 @@ ms.date: 04/06/2023
 
 # Purchase and manage app subscriptions and licenses
 
-This article helps you understand the user's purchase experience for apps in Teams. Users can purchase subscriptions and manage licenses from the Teams store for an individual, team, or an organization. You can add more features and functionality to your Teams app through subscriptions.
+This article helps you understand the user's purchase experience for apps in Teams. Users can purchase subscriptions and manage licenses from the Microsoft Teams Store for an individual, team, or an organization. You can add more features and functionality to your Teams app through subscriptions.
 
 ## Subscription experience
 
 To purchase a subscription plan for a Teams app, follow these steps:
 
-1. In the Teams store, find and select the app for which you want to purchase the subscription.
+1. In the Teams Store, find and select the app for which you want to purchase the subscription.
 
 1. In the app details dialog, select **Buy a subscription**.
 
@@ -115,13 +115,13 @@ If you've purchased a Teams app subscription or if you want to manage one for yo
 > [!NOTE]
 > You can only manage subscriptions you purchased.
 
-Yac can take additional actions related to your subscription, such as editing your billing profile or recurring billing settings in [M365 admin center](https://www.microsoft.com/en-in/microsoft-365/business/office-365-administration?rtc=1).
+You can take additional actions related to your subscription, such as editing your billing profile or recurring billing settings in [M365 admin center](https://www.microsoft.com/en-in/microsoft-365/business/office-365-administration?rtc=1).
 
 :::image type="content" source="../../../../assets/images/saas-offer/manage more in M365 admin center.png" alt-text="Screenshot shows you to manage the additional subscriptions in M365 admin center.":::
 
 ## License management experience
 
-The following example shows how users can manage licenses for third-party apps from the Teams store:
+The following example shows how users can manage licenses for third-party apps from the Teams Store:
 
 1. Go to **Microsoft Teams**.
 

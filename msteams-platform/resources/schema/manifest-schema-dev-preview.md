@@ -283,7 +283,7 @@ The version of the app manifest schema this manifest is using.
 
 **Required** &ndash; String
 
-The version of the specific app. If you update something in your app manifest, the version must be incremented as well. This way, when the new app manifest is installed, it overwrites the existing one and the user gets the new functionality. If this app was submitted to the store, the new app manifest has to be resubmitted and revalidated. Then, users of this app will get the new updated app manifest automatically in a few hours, after it's approved.
+The version of the specific app. If you update something in your app manifest, the version must be incremented as well. This way, when the new app manifest is installed, it overwrites the existing one and the user gets the new functionality. If this app was submitted to the Microsoft Teams Store, the new app manifest has to be resubmitted and revalidated. Then, users of this app will get the new updated app manifest automatically in a few hours, after it's approved.
 
 If the app requested permissions change, users are prompted to upgrade and re-consent to the app.
 
