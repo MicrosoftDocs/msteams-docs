@@ -13,14 +13,13 @@ Before you create your Teams app project, ensure that the prerequisites are in p
 
 * [Install required tools to build your Teams app](#install-required-tools-to-build-your-teams-app)
 * [Prepare Accounts to build your Teams app](#accounts-to-build-your-teams-app)
-* [Upload permission](tools-prerequisites.md)
-* [Verify app upload permission](#verify-uploading-permission)
+* [Verify app upload permission](#verify-app-upload-permission)
 
-## Basic requirements to build your Teams app
+## Requirements to build your Teams app
 
 Ensure the following requirements are met before you start building your Teams app:
 
-| &nbsp; | Basic requirements | For using| For environment type|
+| &nbsp; | Requirements | For using| For environment type|
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; | &nbsp; |
    | &nbsp; | Teams Toolkit| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. | JavaScript and SharePoint Framework (SPFx)|
@@ -39,7 +38,7 @@ Ensure the following requirements are met before you start building your Teams a
 
 Ensure the following requirements are met before you start building your Teams app:
 
-| &nbsp; | Basic requirements | For using| For environment type|
+| &nbsp; | Requirements | For using| For environment type|
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; | &nbsp; |
    | &nbsp; | [Teams Toolkit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. | JavaScript and SPFx |
