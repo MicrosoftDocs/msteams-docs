@@ -11,7 +11,7 @@ ms.date: 05/23/2023
 
 A grid layout allows your app to be consistent and guarantees recognizable relationships between design components. You can learn about your grid system and tips for scaling and zoom levels in your app to pass submission criteria.
 
-Scaling and responsive design are essential to all Teams apps so that users can successfully interact with all interfaces with certainty. In order to pass Teams store review, the entire text must be visible and not truncated.
+Scaling and responsive design are essential to all Teams apps so that users can successfully interact with all interfaces with certainty. In order to pass Microsoft Teams Store review, the entire text must be visible and not truncated.
 
 ## Layout design
 

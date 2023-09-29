@@ -56,7 +56,8 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
         // List of error codes to retry on
         List<int> transientErrorStatusCodes = new List<int>() { 429 };
 
-        public static bool IsTransient(Exception ex)
+        public bool IsTransient(Exception ex) 
+          {
           {
               if (ex.Message.Contains("429"))
                   return true;
