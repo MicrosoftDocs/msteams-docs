@@ -25,13 +25,13 @@ The following *TeamsJS Capability* table lists TeamsJS capabilities (public name
 
 Microsoft 365 hosts are signified by the product icons in the following tables:
 
-| Teams | Microsoft 365 app | Microsoft Outlook |
+| Teams | Microsoft 365 app | Outlook |
 | :-: | :-: | :-: |
 | :::image type="content" source="./images/teams-icon.png" alt-text="Microsoft Teams icon"::: | :::image type="content" source="./images/microsoft-365-icon.png" alt-text="Microsoft 365 app icon"::: | :::image type="content" source="./images/outlook-icon.png" alt-text="Microsoft Outlook icon"::: |
 
 Preview versions for both Teams and Outlook (launched through *Try the new Teams* and *Try the new Outlook* toggle controls in Teams and Outlook clients respectively) have different levels of support. The preview versions are designated by the following **PRE** (preview) icons:
 
-| Teams preview | Microsoft Outlook preview |
+| Teams preview | Outlook preview |
 | :-: | :-: |
 | :::image type="content" source="./images/teams-preview-icon.png" alt-text="Microsoft Teams (Preview) icon"::: | :::image type="content" source="./images/outlook-preview-icon.png" alt-text="Microsoft Outlook preview icon"::: |
 
@@ -1551,7 +1551,7 @@ Namespace providing in-meeting app functionality.
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Teams:
+> The following methods aren't supported on the Teams mobile client:
 >
 > - `meeting.requestStartLiveStreaming`
 > - `meeting.requestStopLiveStreaming`
@@ -1780,7 +1780,7 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Teams:
+> The following methods aren't supported on the Teams mobile client:
 >
 > - `pages.getConfig`
 > - `pages.setCurrentFrame`
@@ -1942,9 +1942,7 @@ Preview. Namespace providing for profile-related functionality.
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Teams:
->
-> `profile.showProfile`
+> The `profile.showProfile` method isn't supported on the Teams mobile client.
 
 ## `search`
 
@@ -2191,9 +2189,7 @@ Namespace to open a share dialog for web content. For more information, see [Sha
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Teams:
->
-> `sharing.shareWebContent`
+> The `sharing.shareWebContent` method isn't supported on the Teams mobile client.
 
 ## `stageView`
 
@@ -2318,9 +2314,7 @@ The earlier version of the capability for providing modal dialog (task module) s
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Teams:
->
-> `task.getDefaultSizeIfNotProvided`
+> The `task.getDefaultSizeIfNotProvided` method isn't supported on the Teams mobile client.
 
 ## `teamsCore`
 
@@ -2445,7 +2439,7 @@ Preview. Namespace representing functionality for in-meeting video effects.
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Teams:
+> The following methods aren't supported on the Teams mobile client:
 >
 > - `video.notifySelectedVideoEffectChanged`
 > - `video.registerForVideoEffect`
@@ -2512,9 +2506,7 @@ Preview. Contains functionality to allow web apps to store data in webview cache
 </table>
 
 > [!NOTE]
-> The following methods are not supported on mobile for Teams:
->
-> `webStorage.isWebStorageClearedOnUserLogOut`
+> The `webStorage.isWebStorageClearedOnUserLogOut` method isn't supported on the Teams mobile client.
 
 ## Code sample
 
