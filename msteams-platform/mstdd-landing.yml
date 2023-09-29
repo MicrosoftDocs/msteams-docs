@@ -68,8 +68,6 @@ landingContent:
         url: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md
       - text: Send a proactive message using AAD ID
         url: bots/how-to/conversations/send-proactive-messages.md
-      - text: Use callRecording API to fetch meeting recording from all meetings (Developer preview)
-        url: graph-api/meeting-transcripts/overview-transcripts.md
 
     - linkListType: reference
       links:
