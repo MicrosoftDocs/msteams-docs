@@ -62,7 +62,7 @@ The following image provides the flow to add authentication to external browsers
     });
     ```
 
-The Teams clients open the URL in an external browser after automatically replacing the placeholders for `oauthRedirectMethod` and `authId` with suitable values.
+1. The Teams clients open the URL in an external browser after automatically replacing the placeholders for `oauthRedirectMethod` and `authId` with suitable values.
 
    **Example**
 
