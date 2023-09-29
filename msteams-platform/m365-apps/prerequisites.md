@@ -82,8 +82,8 @@ To install Microsoft 365 applications in your test environment:
 
     | **Outlook scenario** | **Update channel** | 
     |---------------|--------------|
-    |Teams personal tabs in Outlook | `CurrentPreview`|
-    |Teams search-based message extensions in Outlook | `CurrentPreview`|
+    |Teams personal tabs in Outlook | `Current`|
+    |Teams search-based message extensions in Outlook | `Current`|
     |Outlook Add-ins | `BetaChannel` |
     |Meeting apps in Outlook | `BetaChannel` |
 
