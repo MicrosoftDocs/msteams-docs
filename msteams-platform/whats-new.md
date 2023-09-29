@@ -26,6 +26,8 @@ Teams platform features that are available to all app developers.
 
 **2023 September**
 
+* ***September 27, 2023***: [Configure your bot with read receipt events to identify if the recipient has read the message sent by the bot.](~/bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt)
+
 * ***September 26, 2023***: [Media elements in Adaptive Card.](task-modules-and-cards/cards/media-elements-in-adaptive-cards.md)
 
 * ***September 06, 2023***: [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md)
@@ -341,6 +343,10 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 :::column span="2":::
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
+
+**2023 September**
+
+* ***September 28, 2023***: [Configure your bot during installation or after installation from the team or group chat where the bot is installed.](bots/how-to/bot-configuration-experience.md)
 
 **2023 August**
 
