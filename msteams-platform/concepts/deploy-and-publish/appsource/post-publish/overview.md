@@ -94,7 +94,7 @@ You must keep the following app details updated:
 
 ## Fix issues with your published app
 
-Microsoft runs daily automation tests on apps listed on the Teams Store. If issues with your app are identified, Microsoft contacts you with a detailed report on how to reproduce the issues and then provide recommendations to resolve them. Your app listing might be removed from the store if you can't fix the problems within a stated timeline.
+Microsoft runs daily automation tests on apps listed on the Teams Store. If issues with your app are identified, Microsoft contacts you with a detailed report on how to reproduce the issues and then provide recommendations to resolve them. Your app listing might be removed from the Teams Store if you can't fix the problems within a stated timeline.
 
 ## Possible enforcement actions
 
