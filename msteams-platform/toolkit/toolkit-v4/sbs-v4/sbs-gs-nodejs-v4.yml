@@ -117,12 +117,12 @@ items:
     
     Let's verify if you're ready to develop with the tenant.
 
-    ### Enable uploading option
+    ### Enable app upload
 
     After creating the app, you must load your app in Teams without distributing it. This process is known as uploading. Sign in to your Microsoft 365 account to view this option.
       
     > [!NOTE]
-    > Uploading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams locally.
+    > App uploading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams locally.
 
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 

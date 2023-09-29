@@ -2,7 +2,7 @@
 title: Build your first app with SPFx
 metadata:
   title: Hello World with SPFx
-  description: In this tutorial, you learn to build Hello World app with SPFx. The step-by-step guide helps you to install toolkit, setup development tenant, and you can enable uploading.
+  description: In this tutorial, you learn to build Hello World app with SPFx. The step-by-step guide helps you to install toolkit, setup development tenant, and you can enable app uploading.
   audience: Developer
   level: Beginner
   ms.date: 05/09/2022
@@ -99,12 +99,12 @@ items:
 
     A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your app. Let's verify if you're ready to develop with the tenant.
 
-    ### Enable uploading option
+    ### Enable app upload
 
-    After creating the app, you must load your app in Teams without distributing it. This process is known as uploading. Sign in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. This process is known as app uploading. Sign in to your Microsoft 365 account to view this option.
       
     > [!NOTE]
-    > Uploading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
+    > App uploading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
 
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 

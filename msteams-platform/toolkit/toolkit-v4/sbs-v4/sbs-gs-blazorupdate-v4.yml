@@ -99,7 +99,7 @@ items:
 
     ### Enable app upload
 
-    After creating the app, you must load your app in Teams without distributing it. This process is known as uploading. Sign in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. This process is known as app uploading. Sign in to your Microsoft 365 account to view this option.
       
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
@@ -262,7 +262,7 @@ items:
         When you select **F5**, Teams Toolkit:
 
         1. Registers your application with Azure Active Directory.
-        1. Registers your application for uploading in Teams.
+        1. Registers your application for app uploading in Teams.
         1. Starts your application backend running locally.
         1. Starts your application front-end hosted locally.
         1. Starts Teams in a web browser with a command to instruct Teams to upload the application (the URL is registered inside the application manifest).
@@ -566,7 +566,7 @@ items:
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-      To successfully run your app in Teams, ensure that you've enabled uploading in your Teams account. You can learn more about uploading in the Prerequisites section.
+      To successfully run your app in Teams, ensure that you've enabled app uploading in your Teams account. You can learn more about app uploading in the Prerequisites section.
 
 - title: Preview your first bot app
   durationInMinutes: 1

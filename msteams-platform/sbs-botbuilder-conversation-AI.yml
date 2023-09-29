@@ -108,12 +108,12 @@ items:
 
    A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your upload and test your app. Let's verify if you're ready to develop with the tenant.
 
-   ### Check for uploading option
+   ### Check for app upload option
 
-   After creating the app, you must load your app in Teams without distributing it. This process is known as uploading. Sign in to your Microsoft 365 account to view this option.
+   After creating the app, you must load your app in Teams without distributing it. This process is known as app uploading. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > Uploading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams local environment.
+    > App uploading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams local environment.
 
    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
@@ -122,7 +122,7 @@ items:
     1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps**.
     1. Select **Upload an app**.
-    1. Look for the option to **Upload a custom app**. If you see the option, uploading apps is enabled.
+    1. Look for the option to **Upload a custom app**. If you see the option, app upload is enabled.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="Screenshot shows the bot home.":::
 
@@ -593,7 +593,7 @@ items:
 
         1. Checks all the following prerequisites:
           - You're logged in with a Microsoft 365 account.
-          - Uploading is enabled for your Microsoft 365 account.
+          - App uploading is enabled for your Microsoft 365 account.
           - Supported Node.js version is installed.
           - Port required by bot app is available.
           
@@ -631,7 +631,7 @@ items:
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-      To successfully run your app in Teams, ensure that you've enabled uploading in your Teams account. You can learn more about uploading in the Prerequisites section.
+      To successfully run your app in Teams, ensure that you've enabled app uploading in your Teams account. You can learn more about app uploading in the Prerequisites section.
 
       > [!IMPORTANT]
       > Uploading apps are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](concepts/app-fundamentals-overview.md#government-community-cloud) environments.
