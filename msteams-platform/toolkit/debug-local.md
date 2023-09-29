@@ -313,7 +313,7 @@ After the initial setup process, Teams Toolkit starts the following processes:
 
 * [Starts app services](#starts-app-services)
 * [Launches debug configurations](#launches-debug-configurations)
-* [Uploads Teams app](#uploads-teams-app)
+* [Upload Teams app](#upload-teams-app)
 
 ### Starts app services
 

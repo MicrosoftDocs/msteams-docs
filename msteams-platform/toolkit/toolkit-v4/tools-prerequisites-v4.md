@@ -14,7 +14,7 @@ Before you create your Teams app project, ensure that the prerequisites are in p
 * [Install required tools to build your Teams app](#install-required-tools-to-build-your-teams-app)
 * [Prepare Accounts to build your Teams app](#accounts-to-build-your-teams-app)
 * [Upload permission](tools-prerequisites-v4.md)
-* [Verify app upload permission](#verify-uploading-permission)
+* [Verify app upload permission](#verify-app-upload-permission)
 
 ## Basic requirements to build your Teams app
 
