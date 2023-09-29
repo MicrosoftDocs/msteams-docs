@@ -43,7 +43,7 @@ items:
 
     ### Install Microsoft Teams Toolkit
 
-    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. 
+    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Microsoft Teams Store, and more. 
     You can use the toolkit with Visual Studio, or as a Command Line Interface (called `teamsfx`). 
     
     # [Latest version of the Visual Studio](#tab/vs)
@@ -105,7 +105,7 @@ items:
 
     Verify if you can upload apps in Teams:
 
-    1. In the Teams client, select **Store** icon.
+    1. In the Teams client, select **Apps** icon.
     1. Select **Manage your apps**.
     1. Select **Upload a custom app**. If you see Upload a customized app option, uploading apps is enabled.
 

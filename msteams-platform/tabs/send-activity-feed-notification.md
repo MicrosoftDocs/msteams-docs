@@ -3,7 +3,7 @@ title: Send activity feed notifications
 description: Learn to send activity feed notification to help keep users up to date with changes in the tools and workflows.
 author: surbhigupta
 ms.localizationpriority: medium
-ms.topic: concept
+ms.topic: concept-article
 ---
 
 # Send activity feed notifications to users in Microsoft Teams

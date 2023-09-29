@@ -90,7 +90,7 @@ items:
 
     Verify if you can upload apps in Teams:
 
-    1. In the Teams client, select **Store** icon.
+    1. In the Teams client, select **Apps**.
     1. Select **Manage your apps**.
     1. Look for the option to **Upload a custom app**. If you see the option, uploading apps is enabled.
 

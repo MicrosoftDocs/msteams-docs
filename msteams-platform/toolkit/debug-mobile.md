@@ -12,6 +12,10 @@ ms.date: 06/14/2023
 
 When you're building a Microsoft Teams app that includes a tab, bot, or message extension, you must debug your app to know how the app functions on both Android and iOS Microsoft Teams mobile clients. For more information, see [debug your Teams app locally](debug-local.md).
 
+See the following video to learn how to debug your Teams app in mobile clients:
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW1aEur]
+
 ## Debug your tab app
 
 To debug your tab app follow these steps:
@@ -145,13 +149,14 @@ You'll be prompted to upload the app into Teams. Select **Add**.
 
 To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
 
-:::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios-option.PNG" alt-text="The screenshot showing to clean the app data in iOS mobile client for tab." lightbox="../assets/images/debug-mobile/clear-app-data-ios.PNG":::
+    :::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios-option.PNG" alt-text="The screenshot showing to clean the app data in iOS mobile client for tab." lightbox="../assets/images/debug-mobile/clear-app-data-ios.PNG":::
 
 # [Android](#tab/android1)
 
 To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
 
-:::image type="content" source="../assets/images/debug-mobile/clear-app-data-android-option.PNG" alt-text="The screenshot showing to clean the app data in android mobile client for tab." lightbox="../assets/images/debug-mobile/clear-app-data-android.PNG":::
+    :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android-option.PNG" alt-text="The screenshot showing to clean the app data in android mobile client for tab." lightbox="../assets/images/debug-mobile/clear-app-data-android.PNG":::
+
     ---
 
 1. If you're accessing the dev tunnel for the first time, sign in to Microsoft 365 account and select **continue**.
@@ -176,7 +181,7 @@ To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage
 
 # [iOS](#tab/ios2)
 
-To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
+  To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
 
   :::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios-option.PNG" alt-text="The screenshot showing to clean the app data in iOS mobile client for bot." lightbox="../assets/images/debug-mobile/clear-app-data-ios.PNG":::
 

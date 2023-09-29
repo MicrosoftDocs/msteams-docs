@@ -3,13 +3,13 @@
 > [!TIP]
 > **Try the Developer Portal**: App Studio has evolved. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).
 
-App Studio is a Teams app that you can install from the Teams store. It simplifies the creation and registration of an app.
+App Studio is a Teams app that you can install from the Microsoft Teams Store. It simplifies the creation and registration of an app.
 
 Complete the following steps to update the app package:
 
 1. To install App Studio in Teams, select the **Apps** icon at the bottom of the left-hand bar, and search for **App Studio**:
 
-    <img  width="450px" alt="Finding App Studio in the Store View" src="~/assets/images/get-started/searchforAppStudio.png"/>
+    <img  width="450px" alt="Finding App Studio in the Teams Store View" src="~/assets/images/get-started/searchforAppStudio.png"/>
 
 1. Select the **App Studio** tile and choose **Install**. The App Studio is installed:
 
