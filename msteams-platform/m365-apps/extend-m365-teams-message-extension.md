@@ -29,12 +29,12 @@ Outlook mobile users on Android and [Microsoft Outlook beta TestFlight](https://
 The [code sample](#code-sample) section provides a Stage View app for testing.
 
 The process to extend your search-based Teams message extension to Outlook involves the following steps:
-    
-    > [!div class="checklist"]
-    >
-    > * Update your app manifest (previously called Teams app manifest).
-    > * Add the Microsoft 365 channel for your bot.
-    > * Sideload your updated app in Teams.
+
+> [!div class="checklist"]
+>
+> * Update your app manifest (previously called Teams app manifest).
+> * Add the Microsoft 365 channel for your bot.
+> * Sideload your updated app in Teams.
 
 In this article you'll learn how to extend your Teams message extension to Outlook
 
