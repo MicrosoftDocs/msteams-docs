@@ -1,6 +1,6 @@
 ---
 title: Monetize your app overview
-description: Monetize your app. Supported pricing models are free trials, in-app purchases, and include a SaaS offer with your app.
+description: Monetize your app and enable transactions. Supported pricing models are free trials, in-app purchases, and include a SaaS offer with your app.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
