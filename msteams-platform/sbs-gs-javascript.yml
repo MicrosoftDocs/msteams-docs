@@ -57,7 +57,7 @@ items:
 
    [!INCLUDE [Set up prerequisites](includes/get-started/prepare-teams-toolkit.md)]
 
-   <--!
+   <!--
    ## Prepare development environment
 
    After you've installed the required tools, set up the development environment.

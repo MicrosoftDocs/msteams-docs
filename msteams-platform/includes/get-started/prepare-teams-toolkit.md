@@ -49,23 +49,23 @@ You can use the CLI with the `teamsfx` command. Verify that the command is worki
 
 ## Set up your Teams development tenant
 
-A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
+A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your app. Let's verify if you're ready to develop with the tenant.
 
-### Check for sideloading option
+### Check for app upload option
 
-After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+After creating the app, you must load your app in Teams without distributing it. This process is known as app uploading. Sign in to your Microsoft 365 account to view this option.
 
    > [!NOTE]
-   > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams local environment.
+   > App uploading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams local environment.
 
 Do you already have a tenant, and an admin access? Let's check if you really do!
 
-Verify if you can sideload apps in Teams:
+Verify if you can upload apps in Teams:
 
 1. In the Teams client, select the **Apps** icon.
 1. Select **Manage your apps**.
 1. Select **Upload an app**.
-1. Look for the option to **Upload a custom app**. If the option is visible, you have enabled sideloading apps. 
+1. Look for the option to **Upload a custom app**. If the option is visible, you have enabled uploading apps. 
    
    :::image type="content" source="../../assets/images/include-files/custom-upload.png" alt-text="Screenshot shows the selection of Upload a custom app highlighted in red.":::
 
