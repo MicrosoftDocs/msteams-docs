@@ -1,5 +1,5 @@
 ---
-title: Extend a Teams search based message extension across Microsoft 365
+title: Extend a Teams message extension across Microsoft 365
 description: Learn how to update your search-based message extension to run in Outlook and add Microsoft 365 channel for your bot.
 ms.date: 01/31/2023
 ms.author: mosdevdocs
@@ -8,7 +8,7 @@ ms.topic: tutorial
 ms.localizationpriority: high
 ms.subservice: m365apps
 ---
-# Extend a Teams search based message extension across Microsoft 365
+# Extend a Teams message extension across Microsoft 365
 
 > [!NOTE]
 >
@@ -16,26 +16,7 @@ ms.subservice: m365apps
 
 Search-based [message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) allow users to search an external system and share results through the compose message area of the Microsoft Teams client. You can now bring production search-based Teams message extensions to preview audiences in Outlook for Windows desktop and outlook.com by [extending your Teams apps across Microsoft 365](overview.md).
 
-The process to update your search-based Teams message extension involves the following steps:
-
-> [!div class="checklist"]
->
-> * Update your app manifest (previously called Teams app manifest).
-> * Add the Microsoft 365 channel for your bot.
-> * Sideload your updated app in Teams.
-
 The rest of this guide walks you through these steps and shows how to preview your message extension in Outlook for Windows desktop and web.
-
-## Prerequisites
-
-To complete this tutorial, you need:
-
-* A Microsoft 365 Developer Program sandbox tenant.
-* A test environment with Microsoft 365 apps installed from the Microsoft 365 Apps *Current Channel*.
-* (Optional) Microsoft Visual Studio Code with the Teams Toolkit extension.
-
-> [!div class="nextstepaction"]
-> [Install prerequisites](prerequisites.md)
 
 ## Link unfurling
 
@@ -48,6 +29,27 @@ If your search-based message extension unfurls links that display cards to launc
 Outlook mobile users on Android and [Microsoft Outlook beta TestFlight](https://testflight.apple.com/join/AhS6fRDK) iOS rings can now receive and take actions on cards from your apps that were sent to them by users on Outlook on web and Windows desktop.
 
 The [code sample](#code-sample) section provides a Stage View app for testing.
+
+The process to update your Teams message extension involves the following steps:
+
+> [!div class="checklist"]
+>
+> * Update your app manifest (previously called Teams app manifest).
+> * Add the Microsoft 365 channel for your bot.
+> * Sideload your updated app in Teams.
+
+# [Action based Teams message extension](#tab/action-based-teams-message-extension)
+
+## Prerequisites
+
+To complete this tutorial, you need:
+
+* A Microsoft 365 Developer Program sandbox tenant.
+* A test environment with Microsoft 365 apps installed from the Microsoft 365 Apps *Current Channel*.
+* (Optional) Microsoft Visual Studio Code with the Teams Toolkit extension.
+
+> [!div class="nextstepaction"]
+> [Install prerequisites](prerequisites.md)
 
 ## Prepare your message extension for the upgrade
 
@@ -214,6 +216,11 @@ Use the [Microsoft Teams developer community channels](/microsoftteams/platform/
 ### Debugging
 
 As you test your message extension, you can identify the source (originating from Teams versus Outlook) of bot requests by the [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) of the [Activity](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md) object. When a user performs a query, your service receives a standard Bot Framework `Activity` object. One of the properties in the Activity object is `channelId`, which has the value of `msteams` or `outlook`, depending on where the bot request originates. For more information, see [search based message extensions SDK](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions).
+
+# [Search based Teams message extension](#tab/search-based-teams-message-extension)
+
+
+---
 
 ## Code sample
 
