@@ -159,7 +159,7 @@
             href: toolkit/toolkit-v4/add-capability-v4.md
             displayName: Multiple capabilities app 
           - name: Create How-to Guides
-            href: toolkit/add-How-to guides-v5.md
+            href: toolkit/add-How-to-guides-v5.md
             displayName: Multiple capabilities app 
           - name: Create capability based cloud resources
             href: toolkit/add-resource.md  
@@ -466,6 +466,9 @@
     - name: Supported media formats for bots
       href: resources/media-formats.md
       displayName: codec 
+  - name: Bot configuration experience
+    href: bots/how-to/bot-configuration-experience.md
+    displayName: configuration settings, fetchTask, config/fetch, config/submit
   - name: Teams bot API changes to fetch team or chat members
     href: resources/team-chat-member-api-changes.md
   - name: Teams AI library
