@@ -10,7 +10,7 @@ ms.date: 07/11/2023
 
 # Create your SaaS offer
 
-This article helps you to create an offer in Partner Center and configure the offer with suitable publishing options. You can configure sell through Microsoft option, details of the offer, and pricing after creating the offer. Check if the prerequisites are fulfilled before you create a SaaS offer. You must also have a commercial marketplace account in Partner Center.
+This article helps you to create an offer in Partner Center and configure the offer with suitable options. You can configure the publishing option and details about an offer. Creating a plan for your offer is given as a standalone content. Check if the prerequisites are fulfilled before you create a SaaS offer. You must also have a commercial marketplace account in Partner Center.
 
 :::row:::
    :::column:::
@@ -158,13 +158,7 @@ After the initial configurations are done, you must create one or more plans wit
 
 ### Create a plan
 
-Offers sold as transactable SaaS offers must have at least one plan. Let's [create a plan](manage-third-party-apps-license.md) that enables users to purchase licenses and submit the offer for validation.
-
-## Code sample
-
-| **Sample name** | **Description** | **Node.js** | **Manifest**|
-|-----------------|-----------------|----------------|----------------|----------------|
-| Tab App Monetization | This is a sample tab application that shows how to open a purchase dialog and trigger purchase flow using Teams JS SDK.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs/demo-manifest/tab-app-monetization.zip)|
+Offers sold as a transactable SaaS offers must have at least one plan. Let's [create a plan](manage-third-party-apps-license.md) that enables users to purchase licenses and submit the offer for validation.
 
 ## Next step
 

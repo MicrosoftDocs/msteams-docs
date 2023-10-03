@@ -31,7 +31,7 @@ There are four ways you can monetize your app:
 
 * **Contact me**: To provide contact information for the users to reach you for offer details and enquire about their needs.
 
- In this module, let's know about monetizing your apps in the Teams Store through SaaS offers.
+ In this module, let's get to know about monetizing your apps in the Teams Store through SaaS offers.
 
 ## What's a SaaS offer?
 

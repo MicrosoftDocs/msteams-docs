@@ -59,8 +59,6 @@ You can opt to sell your SaaS apps through Microsoft where Microsoft hosts all y
     :::column-end:::
 :::row-end:::
 
-You can further allow Microsoft to manage licenses on your behalf. If you choose Microsoft to manage licenses, you must [integrate the offer with Microsoft Graph APIs](prerequisites.md#integrate-with-graph-usagerights-api) to verify customer eligibility.
-
 If you don't opt to sell through Microsoft, you can manage your transactions independently through any one of the following listing options.
 
 :::row:::
@@ -102,15 +100,19 @@ Customers can share their details and ask that you contact them about the offer 
 
 The type of listing option decides the technical configurations and requirements to create the specific offer in Microsoft Partner Center. You must fulfill the [prerequisites](prerequisites.md) before you start creating the plan.
 
+You can further allow Microsoft to manage licenses on your behalf. If you choose Microsoft to manage licenses, you must [integrate the offer with Microsoft Graph APIs](prerequisites.md#integrate-with-graph-usagerights-api) to verify customer eligibility.
+
 ## Plan for the offer details
 
-To start with, you need to plan on the basic yet key features that decide the information available on the offer purchase landing page. It also decides the marketplace where the offer is published and terms of use. The offer details help the users to find your offer easily in the marketplace and enhances usability.
+To start with, you need to plan on the basic yet key features that decide the information available on the offer's landing page and the marketplace where the offer is published. The offer details help the users to find your offer easily in the marketplace and enhances usability.
 
 * **Offer categories and industries**: Plan on the primary and secondary categories of the offer. It decides the store where the offer is published and to identify your app in the marketplace.
 * **Offer details**: Plan for the logo, keywords, and description that helps to improve the discovery and value of your offer in the marketplace.
 * **Preview audience**: Decide the audience and collate their email address to allow them to use and verify the preview offer before publishing live. The email address must be either of Azure Active Directory (Azure AD) or Microsoft.
 * **Legal terms and conditions**: Provide relevant information for the users to be aware of the terms of use of your app.
 * **Customer Relationship Management (CRM)**: Provide the details to receive customer leads and reach you for queries.
+
+## Prepare for offer's plan
 
 SaaS offers published through Microsoft must have at least one plan added. Determining the plan features contributes in providing appropriate purchase options for the target users.
 
