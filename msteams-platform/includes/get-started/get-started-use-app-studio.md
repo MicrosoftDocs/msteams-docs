@@ -111,7 +111,7 @@ Complete the following steps to setup your bot:
 1. Add a bot name **Contoso bot** and select all three check boxes under **Scope**.
 1. Choose **Save** to exit the dialog box. App Studio registers your bot with Microsoft and displays your new bot in the bot list.
 1. Now open a text file in notepad and copy and paste your new bot ID into it.
-1. Click **Generate New Password**, and note the password in the same text file you noted your bot App ID.
+1. Select **Generate New Password**, and note the password in the same text file you noted your bot App ID.
 1. Update the **Bot endpoint address** to `https://yourteamsapp.ngrok.io/api/messages`, and replace `yourteamsapp.ngrok.io` with the URL that you used when hosting your app.
 1. Now save your text file as you must add the information from the file to your hosted app to allow secure communication with your bot.
 
