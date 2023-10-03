@@ -40,6 +40,20 @@ Teams Toolkit is available for free for Visual Studio Code. For more information
 | Installation | Available in the VS Code Marketplace |
 | Build with | JavaScript, TypeScript, React, SPFx |
 
+## Version Mapping
+
+The following table list out the version support for the Teams Toolkit extension for each release cycle:
+
+| &nbsp; | Teams Toolkit for Visual Studio Code|Teams Toolkit for Visual Studio| Teams Toolkit CLI | TeamsFx SDK |Teams SDK|Manifest|
+|----|----|----|----|----|----|----|
+|Public Preview|v3.8.x|v17.2|v0.14.x|v0.7.x|v1.11.x, v1.12.x|v1.11|
+|GA|v4.0.0|v17.3|v1.0.0|v1.0.0|v1.12.x|v1.11|
+|Latest*|v5.x.x|v17.6|-|v2.x.x|v2.x.x|v1.16|
+|Beta**|Prerelease|v17.7 Preview|v2.x.x-beta|v2.x.x-beta|v2.x.x-beta|Dev preview|
+
+*Latest is aligned on the major version.<br>
+**Beta indicates developer preview.
+
 ## Features
 
 The following list provides the key features of Teams Toolkit:
@@ -96,6 +110,20 @@ Teams Toolkit v4 is available for free for Visual Studio Code. For more informat
 | - | ------------------ |
 | Installation | Available in the VS Code Marketplace |
 | Build with | JavaScript, TypeScript, React, SPFx |
+
+## Version Mapping
+
+The Teams Toolkit lifecycle and support policy covers Generally available (GA) and future versions.
+
+| &nbsp; | Teams Toolkit for Visual Studio Code|Teams Toolkit for Visual Studio| Teams Toolkit CLI | TeamsFx SDK |Teams SDK|Manifest|
+|----|----|----|----|----|----|----|
+|Public Preview|v3.8.x|v17.2|v0.14.x|v0.7.x|v1.11.x, v1.12.x|v1.11|
+|GA|v4.0.0|v17.3|v1.0.0|v1.0.0|v1.12.x|v1.11|
+|Latest*|v5.x.x|v17.6|-|v2.x.x|v2.x.x|v1.16|
+|Beta**|Prerelease|v17.7 Preview|v2.x.x-beta|v2.x.x-beta|v2.x.x-beta|Dev preview|
+
+*Latest is aligned on the major version.<br>
+**Beta indicates developer preview.
 
 ## Features
 
