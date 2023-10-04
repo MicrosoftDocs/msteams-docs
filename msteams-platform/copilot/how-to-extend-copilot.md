@@ -25,7 +25,7 @@ Plugins allow Copilot to:
 ## How do I build a plugin?
 
 > [!NOTE]
-> Plugins for Microsoft 365 Copilot are in early access preview. This documentation is subject to change.
+> Plugins for Microsoft 365 Copilot are in early access preview.
 
 If you already have a Teams message extension, then you already have a plugin that works with Copilot. If not, create a [message extension using the Teams Toolkit](~/messaging-extensions/what-are-messaging-extensions.md).
 
