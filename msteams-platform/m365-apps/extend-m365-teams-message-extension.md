@@ -44,7 +44,7 @@ To extend your search-based Teams message extension to Outlook, you need:
 * A test environment with Microsoft 365 apps installed from the Microsoft 365 Apps *Current Channel*.
 * (Optional) Microsoft Visual Studio Code with the Teams Toolkit extension.
 
-To install the prerequisites, see [set up your dev environment](/m365-apps/prerequisites)
+To install the prerequisites, see [set up your dev environment](~/m365-apps/prerequisites.md)
 
 ### Build a message extension app
 
