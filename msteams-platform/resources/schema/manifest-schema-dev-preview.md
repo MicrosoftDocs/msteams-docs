@@ -490,7 +490,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |`messageHandlers`|Array of objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
 |`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|Array of Strings|2048 characters||Array of domains that the link message handler can register for.|
-|`messageHandlers.supportsAnonymizedPayloads`|Boolean/Null|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. The default value is `false`. To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
+|`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. The default value is `false`. To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
 
 ### composeExtensions.commands
 
