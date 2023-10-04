@@ -48,7 +48,7 @@ There are four listing options through which you can publish your SaaS offer:
 
 :::row:::
     :::column:::
-        :::image type="content" source="../../../../assets/images/saas-offer/pricing-charge-price.png" alt-text="Diagram represents charge a price for your app.":::
+        :::image type="content" source="../../../../assets/images/saas-offer/pricing-charge-price.png" alt-text="Diagram represents sell through Microsoft option.":::
     :::column-end:::
     :::column span="2":::
 
@@ -75,7 +75,7 @@ You can offer a free trial version of your app to get more customers to try it. 
 :::row-end:::
 :::row:::
     :::column:::
-        ![In-app purchases](~/assets/images/saas-offer/pricing-in-app-purchases.png)
+        image type="content" source="../../../../assets/images/saas-offer/pricing-in-app-purchases.png" alt-text="Diagram represents the free app.":::
     :::column-end:::
     :::column span="2":::
 
@@ -87,7 +87,7 @@ You can allow the user to subscribe and use your application at no cost. The opt
 :::row-end:::
 :::row:::
     :::column:::
-        :::image type="content" source="../../../../assets/images/saas-offer/contact-me.png" alt-text="Diagram represents the test preview SaaS offer.":::
+        :::image type="content" source="../../../../assets/images/saas-offer/contact-me.png" alt-text="Diagram represents the contact me option.":::
     :::column-end:::
     :::column span="2":::
 

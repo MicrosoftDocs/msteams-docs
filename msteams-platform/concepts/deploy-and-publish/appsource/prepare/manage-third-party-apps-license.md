@@ -103,7 +103,7 @@ When the offer reaches the **Publisher signoff** phase, preview links for the re
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Test preview for monetized apps](~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)
+> [Test and publish a SaaS offer](~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)
 
 ## See also
 

@@ -905,10 +905,10 @@
   - name: Create an offer plan for license purchase
     href: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
     displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
-  - name: Test and publish a SaaS offer in the marketplace
+  - name: Test and publish a SaaS offer to the marketplace
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
     displayName: paid, AppSource, fee
-  - name: Publish a monetized app to Teams store
+  - name: Publish a monetized app to Teams Store
     href: concepts/deploy-and-publish/appsource/prepare/publish-saas-offer-app.md
     displayName: configure, apps, publish app
   - name: Configure in-app purchases
