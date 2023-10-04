@@ -170,7 +170,7 @@ You need:
     >
     >    Use the lowercase option *demoapplication* as base resource name.
     >
-    > - **Sensitive information**: Please note, the resource URI is logged as part of the authentication process and should not contain the sensitive information.
+    > - **Sensitive information**: The application ID URI is logged as part of the authentication process and should not contain sensitive information.
 
 1. Select **Save**.
 
