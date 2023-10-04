@@ -154,7 +154,7 @@ items:
 
     1. Ensure that **Chat Command** is selected as the app feature that you want to build in your app.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-command-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
 
     1. Select **JavaScript** as the programming language.
 
