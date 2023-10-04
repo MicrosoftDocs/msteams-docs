@@ -138,7 +138,7 @@ Users can rate apps from one to five stars on Microsoft Teams Store and offer fe
 :::image type="content" source="../../../../assets/images/submission/review.gif" alt-text="Graphics shows the user ratings and review for teams app.":::
 
 > [!NOTE]
-> Ratings and reviews aren't available for LOB apps.
+> Ratings and reviews aren't available for Line of business (LOB) apps.
 
 ## See also
 
