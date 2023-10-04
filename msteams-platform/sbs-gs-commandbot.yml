@@ -44,6 +44,9 @@ items:
    > [!NOTE]
    > The guide is tested on Teams Toolkit latest version and Nodejs version 14 and 16. The steps in this guide may work with other versions, but that hasn't been tested.
 
+   [!INCLUDE [Set up prerequisites](includes/get-started/prepare-teams-toolkit.md)]
+
+   <!--
    ## Prepare development environment
 
    After you've installed the required tools, set up the development environment.
@@ -130,7 +133,7 @@ items:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft":::
 
-   1. Sign-in to Teams using the new administrator account. Now you should have the **Upload a custom app** option.
+   1. Sign-in to Teams using the new administrator account. Now you should have the **Upload a custom app** option. -->
 
 - title: Build command bot
   durationInMinutes: 1
