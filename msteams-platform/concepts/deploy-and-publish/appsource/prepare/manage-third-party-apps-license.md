@@ -10,7 +10,9 @@ ms.date: 04/06/2023
 
 # Create an offer plan for license purchase
 
-SaaS offer published in the marketplace must have suitable offers. After the offer configurations are done, you must then create one or more subscription plans for your offer, where the user can purchase suitable subscription as license to use your app. If you have enabled Microsoft license management, then Teams admins or users can purchase, assign, unassign, use, and track SaaS licenses for their third-party app subscriptions within Teams and manages the purchased licenses on your behalf.
+SaaS offer published in the marketplace must have suitable offers. After the offer configurations are done, you must then create one or more subscription plans for your offer, where the user can purchase suitable subscription as license to use your app.
+
+If you have enabled Microsoft license management, then the Teams admin or an user can purchase, assign, unassign, use, and track SaaS licenses for their third-party app subscriptions within Teams. Microsoft can manage the purchased licenses on your behalf.
 
 :::row:::
    :::column:::
@@ -84,7 +86,7 @@ You can configure a free trial for each plan in your offer.
 
 1. Select **Plan overview** at the top of the page to go to the listing page that shows all the plans you've created for this offer.
 
-    After you create one or more plans, you'll see your plan name, plan ID, pricing model, availability (Public or Private), current publishing status, and any available actions on the **Plan overview** tab.
+    After you create one or more plans, you see the plan name, plan ID, pricing model, availability (Public or Private), current publishing status, and any available actions on the **Plan overview** tab.
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/list-of-plans-created.png" alt-text="Screenshot shows plan listing page with service ID, pricing model, availability, status and action.":::
 
@@ -94,7 +96,7 @@ You can configure a free trial for each plan in your offer.
 
 ## Submit the offer
 
-After you create the plans for your offer and finish the required configurations for the offer, you must validate the offer. You can then submit the offer with the plans from Partner Center for validation and publishing. The **Offer overview** page displays the **Publish status** where you can track the progress.
+After you create the plans for your offer and finish the required configurations, you must validate the offer. You can then submit the offer from Partner Center for validation and publishing. The **Offer overview** page displays the **Publish status** where you can track the progress.
 
 When the offer reaches the **Publisher signoff** phase, preview links for the respective platforms are given under the **Go live** button to test the offer. Upon successful validation, it's recommended to [test the offer](Test-preview-for-monetized-apps.md) with the given preview links before you publish the offer in the marketplace.
 

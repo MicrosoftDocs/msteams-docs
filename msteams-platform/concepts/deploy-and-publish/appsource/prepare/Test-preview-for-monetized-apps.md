@@ -1,5 +1,5 @@
 ---
-title: Test and publish a SaaS offer in the marketplace
+title: Test and publish a SaaS offer to the marketplace
 author: v-ypalikila
 description: Create and test SaaS Preview offers for Teams app before pushing the offer live. Create a preview offer ID, configure your app with the preview offer ID, and sideload.
 ms.topic: conceptual
@@ -8,9 +8,9 @@ ms.localizationpriority: high
 ms.date: 12/26/2022
 ---
 
-# Test and publish a SaaS offer in the marketplace
+# Test and publish a SaaS offer to the marketplace
 
-You can create a Software as a Service (SaaS) offer and test the end-to-end purchase experience for your monetized apps in Teams. Users added as the preview audience for the Teams app can review your SaaS offer before you publish.
+You can create a software as a service (SaaS) offer and test the end-to-end purchase experience for your monetized apps in Teams. Users added as the preview audience for the Teams app can review your SaaS offer before you publish.
 
 :::row:::
    :::column:::
@@ -33,7 +33,7 @@ You can create a Software as a Service (SaaS) offer and test the end-to-end purc
    :::column-end:::
 :::row-end:::
 
-When the offer is in **Publisher signoff** stage, preview links for the respective platforms are given under the **Go live** option. We recommend you to verify the end-to-end purchase experience before publishing your SaaS offer. You can test and verify the end-to-end transaction in Teams by creating a separate offer for testing.
+When the offer is in **Publisher signoff** stage, preview links for the respective platforms are given under the **Go live** button. We recommend you to test and verify the end-to-end transaction in Teams by creating a separate offer for testing.
 
 ## Create a preview offer ID
 
@@ -56,7 +56,7 @@ You can generate the preview offer ID from the **AppSource preview** link in the
 
 ## Configure your app with the preview offer ID
 
-Before you begin, sign in to the **Developer Portal** using a developer account with **Preview audience** for users to see your subscription plans in the Teams store.
+Before you begin, sign in to the **Developer Portal** using a developer account with **Preview audience** for users to see your subscription plans in the Microsoft Teams Store.
 
 After you've generated your preview offer ID, link the offer ID to your Teams app. To link the offer ID:
 
@@ -111,14 +111,14 @@ Upon successful testing, your offer is now ready to go live. Check for any valid
 When all the check are done, click **Go live** for the offer to be available in the commercial marketplace. After the validation checks are done, the offer is available for purchase.
 
 > [!NOTE]
-> You need to first publish the offer live in the marketplace and link the offer to your app. Then you need to publish the SaaS app with the offer to the store.
+> You need to first publish the offer live in the marketplace and link the offer to your app. You need to then publish the SaaS app with the offer to the Teams Store.
 
 To understand more about the validation and certification, check [Review and publish offers](/partner-center/marketplace/review-publish-offer).
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Publish your app with configured SaaS offer](publish-saas-offer-app.md)
+> [Publish the SaaS app to Teams Store](publish-saas-offer-app.md)
 
 ## See also
 

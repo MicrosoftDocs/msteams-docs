@@ -10,7 +10,7 @@ ms.date: 07/11/2023
 
 # Create your SaaS offer
 
-This article helps you to create an offer in Partner Center and configure the offer with suitable options. You can configure the publishing option and details about an offer. Creating a plan for your offer is given as a standalone content. Check if the prerequisites are fulfilled before you create a SaaS offer. You must also have a commercial marketplace account in Partner Center.
+This article helps you to create an offer in Partner Center and configure the offer with suitable options. You must also have a commercial marketplace account in Partner Center to create offers.
 
 :::row:::
    :::column:::
@@ -62,17 +62,17 @@ You can create premium and enterprise SaaS offers on top of the existing basic f
 
 ## Configure your SaaS offer
 
-Set up the offer by making the required configurations. You need to do the following configurations:
+Set up the offer by configuring with the required details. You need to do the following configurations:
 
 * [Offer setup](#set-up-offer-selling): Select if you're selling through Microsoft or independently.
 * [License management](#set-up-microsoft-license-management): Select if you're allowing Microsoft to manage your licenses or not.
 * [Offer properties](#set-up-the-offer-properties): Select the options that decides the marketplace where the offer is available.
-* [Offer listing](#set-up-offer-details): Provide the information that's available on the landing page of your offer.
+* [Offer listing](#set-up-offer-details): Provide the information that's to be available on the landing page of your offer.
 * [Preview audience](#set-the-preview-audience): Add specific users who can test the prerelease version of the offer.
-* [Technical configuration](#add-the-technical-information): Details that helps users to integrate with your offer with ease.
+* [Technical configuration](#add-the-technical-information): Add details that help users to integrate with your offer with ease.
 * [Create a plan](#create-a-plan): Provide the pricing, billing, and other plan details to purchase the subscription license.
 
-All that you have planned for your offer is done in the offer configuration.
+You can configure the offer based on the planning done.
 
 ### Set up offer selling
 
@@ -146,7 +146,7 @@ You can define a limited audience who can review your SaaS offer before you publ
 
 ### Add the technical information
 
-On the **Technical configuration** tab, define the technical details that the commercial marketplace uses to communicate to your SaaS application or solution.
+On the **Technical configuration** tab, add the technical details that the commercial marketplace uses to communicate to your SaaS app.
 
 1. Enter **Landing page URL**, that customers land on after acquiring your offer from the commercial marketplace and triggering the configuration process from the newly created SaaS subscription.
 1. Enter the **Connection webhook** URL, for all asynchronous events that Microsoft needs to send to your SaaS subscription.
@@ -158,7 +158,7 @@ After the initial configurations are done, you must create one or more plans wit
 
 ### Create a plan
 
-Offers sold as a transactable SaaS offers must have at least one plan. Let's [create a plan](manage-third-party-apps-license.md) that enables users to purchase licenses and submit the offer for validation.
+Offers sold as a transactable SaaS offers must have at least one plan. To create a plan that enable users to purchase licenses and to submit the offer for validation, see [create a plan](manage-third-party-apps-license.md).
 
 ## Next step
 

@@ -40,7 +40,7 @@ SaaS applications published in Microsoft commercial marketplace for purchase are
 > [!NOTE]
 > To create and publish your offer, you must have a commercial marketplace account in Partner Center.
 
-Here are some features you can opt to integrate with your SaaS offer to enable better user experience and expand the customer base.
+Here are some features you can integrate with your SaaS offer to enable better user experience and expand the customer base.
 
 * **Publishing option**: The publishing option decides how your offer appears in the Teams Store. You can select a suitable option based on your requirements. Let's learn in detail on publishing options when [planning for a SaaS offer](include-saas-offer.md).</br>
 

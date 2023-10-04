@@ -33,7 +33,7 @@ Teams apps with software as a service (SaaS) apps are available for purchase in 
    :::column-end:::
 :::row-end:::
 
-Planning your SaaS offer helps you to understand the suitable features for the offer. Here are the features you need to plan for before creating an offer.
+Planning your SaaS offer helps you to understand the suitable features for the offer. Here are the features you can plan ahead before creating an offer.
 
 ## Plan the publishing option
 
@@ -104,7 +104,7 @@ You can further allow Microsoft to manage licenses on your behalf. If you choose
 
 ## Plan for the offer details
 
-To start with, you need to plan on the basic yet key features that decide the information available on the offer's landing page and the marketplace where the offer is published. The offer details help the users to find your offer easily in the marketplace and enhances usability.
+You need to plan on the basic yet key features that decide the information available on the offer's landing page and the marketplace where the offer is published. The offer details help the users to find your offer easily in the marketplace and enhances usability.
 
 * **Offer categories and industries**: Plan on the primary and secondary categories of the offer. It decides the store where the offer is published and to identify your app in the marketplace.
 * **Offer details**: Plan for the logo, keywords, and description that helps to improve the discovery and value of your offer in the marketplace.
@@ -114,7 +114,7 @@ To start with, you need to plan on the basic yet key features that decide the in
 
 ## Prepare for offer's plan
 
-SaaS offers published through Microsoft must have at least one plan added. Determining the plan features contributes in providing appropriate purchase options for the target users.
+SaaS offers published through Microsoft must have at least one plan added to the offer. Determining the plan features contributes to provide appropriate purchase options for the target users.
 
 ### Plan the subscription model
 
@@ -129,7 +129,7 @@ When creating a plan, you can decide between two [pricing models](/partner-cente
 * **Flat rate**: To charge based on the software usage across the organization. For the flat rate pricing model, you can opt to use [metered billing](/partner-center/marketplace/plans-pricing?branch=main) for consumption-based pricing.
 * **Per user**: To charge for each unique user.
 
-The [billing terms](/partner-center/marketplace/plan-saas-offer?branch=main) indicate the subscription period and you can be set the billing term to monthly or annual.
+The [billing terms](/partner-center/marketplace/plan-saas-offer?branch=main) indicate the subscription period and can be set as monthly or annual.
 
 > [!NOTE]
 >
@@ -138,21 +138,21 @@ The [billing terms](/partner-center/marketplace/plan-saas-offer?branch=main) ind
 
 ## Plan for additional features
 
-In addition to the basic and essential planning, you can also provide additional features to promote user engagement. These features help the users get a hands-on experience of using your app before they decide to purchase offers.
+In addition to the basic and essential planning, you can provide additional features to promote user engagement. These features help the users get a hands-on experience of using your app before they decide to purchase offers.
 
-### Plan for free trails
+### Free trails
 
-You can opt to provide free trials for your SaaS offer. Microsoft allows a free trial period of one month, after which the offer is billed based on the subscription model. When you sell through Microsoft, you can offer a free trial of one month, and Microsoft converts it to a paid subscription by the end of the trial period.
+You can provide free trials for your SaaS offer. When you sell through Microsoft, you can offer a free trial of one month, and Microsoft converts it to a paid subscription by the end of the trial period.
 
-### Plan for test drive
+### Test drive
 
-You can opt to add a test drive for your SaaS app that provides access to the preconfigured environment of your app for fixed hours. For more information, see [Test drive for SaaS offer](/partner-center/marketplace/create-new-saas-offer).
+You can opt to add test drive for your SaaS app that provides access to the preconfigured environment of your app for fixed hours. For more information, see [Test drive for SaaS offer](/partner-center/marketplace/create-new-saas-offer).
 
-### Plan for mobile version
+### Mobile version
 
 To avoid violating third-party app store policies, your app can't include links that allow users to purchase subscription plans on mobile. However, you can still indicate if your app has features that require a subscription plan. For more information, see the [related commercial marketplace certification policies](/legal/marketplace/certification-policies).
 
-For comprehensive guidance, see [how to plan a SaaS offer for the Microsoft commercial marketplace](/azure/marketplace/plan-saas-offer).
+For comprehensive guidance on planning the offer, see [how to plan a SaaS offer for the Microsoft commercial marketplace](/azure/marketplace/plan-saas-offer).
 
 ## Next step
 

@@ -9,7 +9,7 @@ ms.date: 01/31/2023
 ---
 # Prerequisites to create an offer
 
-For any SaaS offer to be published in the marketplace, you need to fulfill the technical configurations and collate the required technical information. It helps negate any blockers while creating the offer. This article provides detailing on the technical configurations and requirements to create a SaaS offer.
+For any SaaS offer you create, you must have the required technical information and fulfill the technical configurations. It helps negate any blockers while creating the offer. This article provides detailing on the technical configurations and requirements to create a SaaS offer.
 
 API integrations are part of technical configuration that needs to be done after the user purchase the offer.
 
@@ -34,7 +34,7 @@ API integrations are part of technical configuration that needs to be done after
    :::column-end:::
 :::row-end:::
 
-The technical configurations differ based on the listing option you opt for your SaaS offer. Before creating a SaaS offer, ensure that the required technical information are handy.
+The technical configurations differ based on the listing option you opt for your SaaS offer.
 
 > [!NOTE]
 > The *Contact me* listing option have no technical configurations to be done.
@@ -48,6 +48,8 @@ If you select **Get it now (Free)**, **Free trial**, and **Sell through Microsof
 
 For Sell through Microsoft or transactable offer, you need to do the [API integrations](#api-integration) after the user purchase the offer, in addition to the basic setup.
 
+:::image type="content" source="../../../../assets/images/saas-offer/tech-config-offer.png" alt-text="Diagram shows the technical configuration per the type of listing option.":::
+
 ### Set up Microsoft and Azure AD accounts
 
 To start with, you must set up the required accounts to create an offer.
@@ -60,28 +62,24 @@ To start with, you must set up the required accounts to create an offer.
 
 When the user successfully purchases a subscription plan for your app in the Teams store, the commercial marketplace directs them to your landing page where they can manage the subscription (such as assign a license to a specific user in their organization).
 
-Ensure to register your landing page as an Azure AD application. Enable SSO using Azure AD and Microsoft Graph to obtain important information about the buyer and to confirm and activate the subscription. For complete instructions, see [build the landing page for your SaaS offer](/partner-center/marketplace/azure-ad-transactable-saas-landing-page).
+Ensure to register your landing page as an Azure AD application. Enable SSO using Azure AD and Microsoft Graph to obtain important information about the buyer and to confirm and activate the subscription. For complete instructions, see the following articles:
+
+* [Build the landing page for your transactable SaaS offer](/partner-center/marketplace/azure-ad-transactable-saas-landing-page).
+* [Build landing page for your free or trial SaaS offer](/partner-center/marketplace/azure-ad-free-or-trial-landing-page)
 
 #### Best practices for landing pages
 
 Consider the following approaches when building a landing page for the Teams app you’re monetizing. See an example landing page in the [End-user purchase experience](end-user-purchase-experience.md).
 
+* Provide the name and details of the offer and user's account details.
 * Enable users to sign in from offer landing page only using the same Azure AD credentials they used to buy the subscription.
-* Allow users to take the following actions on your landing page. Don’t forget to consider what’s appropriate for a user’s role and permissions.
-  * Search for users in their organization using email or another form of identity.
-  * View users in a list for whom they can assign licenses.
-  * Assign licenses to one or more users at the same time.
-  * Assign and manage different types of licenses (if available).
-  * Validate if a license is already assigned to another user.
-  * Cancel their subscription.
-  * Allows subscription admins to search for users.
 * Provide an introduction on how to use your app.
 * Add ways to get support, such as FAQs, knowledge base, or contact email.
-* Provide a link that makes it easy for the subscriber to get back to the landing page. For example, include this link in your app’s About tab.
+* Provide a link that makes it easy for the subscriber to get back to the landing page. For example, include this link in your app’s **About** tab.
 
 ### Technical requirements
 
-To configure your SaaS offer, you must furnish the following technical information during the [offer configuration](create-saas-offer.md#add-the-technical-information). When you create your SaaS offer, have the following technical information handy.
+When you create the SaaS offer, you must provide the following technical information during the [offer configuration](create-saas-offer.md#add-the-technical-information).
 
 * **Landing page URL**: The SaaS site URL that users get redirected to after purchasing your offer from the commercial marketplace. It triggers the configuration process from the newly created SaaS subscription. This URL receives a token that can be used to call the fulfillment APIs to get provisioning details for your interactive registration page.
 
@@ -96,7 +94,7 @@ To configure your SaaS offer, you must furnish the following technical informati
 When the users are redirected to the landing page from the configuration link, a set of user information is required to confirm and activate the subscription. You must integrate Microsoft Graph API and SaaS Fulfillment APIs to retrieve user information.
 
 > [!NOTE]
-> API integrations are done only after the user purchases the license and get started to use the license.
+> API integrations are done only after the user purchases the license or subscription for the SaaS offer.
 
 ### Integrate with SaaS fulfillment API
 
@@ -127,6 +125,8 @@ You can call Graph APIs to determine if the currently logged in user with a vali
   > * You need to have a minimum `User.Read` permissions to call usageRights.
   > The usageRights API is currently in beta version. After the version is updated to V1, users must upgrade from beta to V1 version.
   > * If the Azure AD app is used for both SaaS Fulfillment APIs and usageRights API, ensure that the tenant under which the Azure AD app is created is either the publishing tenant or the associated tenant in the Partner Center.
+
+For detailed information, see [usageRights Graph API](/partner-center/marketplace/isv-app-license-saas).
 
 To determine if the tenant for the Azure AD app is part of the Partner Center setup, follow these steps:
 
