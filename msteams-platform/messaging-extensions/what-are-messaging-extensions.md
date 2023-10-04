@@ -64,6 +64,20 @@ The following image displays the message extension search command task module:
 > [!NOTE]
 > For more information on cards, see [what are cards](../task-modules-and-cards/what-are-cards.md).
 
+## API message extension
+
+An API based message extension helps to interact directly with third-party data, apps, and services, enhancing its capabilities and broadening its range of capabilities. WIth APIs for message extension, you can:
+
+* Retrieve real-time information, for example, latest news coverage on a product launch.
+* Retrieve knowledge-based information, for example, my team’s design files in Figma.
+* Perform actions on behalf of the user, for example, create a Jira ticket.
+
+If you don't already have a message extension, there are two ways to build one:
+
+* API-based ME: Using the Teams Toolkit, developers can easily create a API-backed ME from an existing API or ChatGPT plugin. This method requires an OpenAPI specification, documenting the API. For more information, see [Build copilot plugin](../copilot/build-api-based-message-extension.md).
+
+* Bot-based ME: For developers that want a one-on-one conversational experience in addition to their plugin, they can create a new message extension from a bot using the Teams Toolkit. For more information, see [Build Bot based Message extension](../copilot/build-bot-based-message-extension.md).
+
 ## Link unfurling
 
 A web service is invoked when a URL is pasted in the compose message area. This functionality is known as link unfurling. You can subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can add buttons to allow the users to immediately take action without leaving the Teams client.

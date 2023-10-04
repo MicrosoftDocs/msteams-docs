@@ -16,7 +16,6 @@ You can create an Copilot plugin in Teams using an OpenAPI Specification documen
 
 # [Developer portal for Teams](#tab/developer-portal-for-teams)
 
-
 ## Create an API based ME
 
 To create an API base message extension using Developer portal, follow these steps:
@@ -42,7 +41,6 @@ To create an API base message extension using Developer portal, follow these ste
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-convert-api-commands.png" alt-text="Screenshot shows the list of APIs from the Open API spec document converted as commands.":::
 
 **Add commands**
-
 
 To extend copilot plugin as a message extension, add commands:
 
@@ -80,7 +78,6 @@ An API based ME is created.
 ## Create plugin for copilot
 
 Before you an API plugin, ensure that you have an openAPI specification document.
-
 
 If you have a chatGPT plugin manifest. You can build an API plugin using Teams developer portal.
 
@@ -135,7 +132,6 @@ If you want to add more commands, under the API spec file, select **+ Add** and 
 
 If you want to delete a command, select a command from the available commands and select **Delete**. A pop-up appears to confirm to delete the command, select **Delete**. The command is deleted.
 
-
 # [Teams toolkit](#tab/Teams-toolkit)
 
 1. Open **Visual Studio Code**.
@@ -155,7 +151,7 @@ If you want to delete a command, select a command from the available commands an
 
 1. Follow these steps for the respective API types:
 
-   # [New API](#tab/new-api)
+# [New API](#tab/new-api)
 
    1. Select a programming language.
 
@@ -165,7 +161,7 @@ If you want to delete a command, select a command from the available commands an
 
    1. Enter the name of your app and select **Enter**. Teams Toolkit creates a new plugin with API from Azure functions.
 
-   # [OpenAPI specification](#tab/openapi-specification)
+# [OpenAPI specification](#tab/openapi-specification)
 
    1. Enter or browse the OpenAPI specification doc location.
 
