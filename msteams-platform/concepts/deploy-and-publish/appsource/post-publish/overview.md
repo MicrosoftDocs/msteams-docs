@@ -42,10 +42,6 @@ If you make any of the following changes to your app, however, your existing use
 * Add a connector.
 * Modify configurations related to your Microsoft Azure Active Directory (Azure AD) app registration. For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
-## Fix issues with your published app
-
-Microsoft runs daily automation tests on apps listed on the Teams Store. If issues with your app are identified, we contact you with a detailed report on how to reproduce the issues and recommendations to resolve them. If you can't fix the problems within a stated timeline, your app listing may be removed from the store.
-
 ## Promote your app on another site
 
 When your app is listed in the Teams Store, create a link that launches Teams and displays a dialog to install your app. For example, you can include this link as a download button on your product's marketing page.
@@ -95,17 +91,15 @@ You can remove an app from the [Microsoft commercial marketplace](/azure/marketp
 | Your contact details must be kept up to date in your Partner Center account. |Microsoft will contact you occasionally to resolve any bugs or commercial marketplace policy violations in your app. If your contact details aren't updated, you might miss important notices or updates from Microsoft.|
 | Maintain your app's functionality and user experience. | Your app's functionality and user experience must match or exceed the quality of experience at submission. You must maintain your app's performance.|
 
-1. In **Partner Center**, on the **Product overview** page, select **Stop selling**. It removes the app from the Microsoft AppSource.
-1. To initiate de-listing of the app from the Microsoft Teams Store, write to [apphealthevaluation](mailto:apphealthevaluation@microsoft.com).
+## Fix issues with your published app
 
 Microsoft runs daily automation tests on apps listed on the Teams Store. If issues with your app are identified, Microsoft contacts you with a detailed report on how to reproduce the issues and then provide recommendations to resolve them. Your app listing might be removed from the Teams Store if you can't fix the problems within a stated timeline.
 
-## Ratings and review for Teams apps
+## Possible enforcement actions
 
 Microsoft runs automated and manual continuous health checks for all the published apps. It's intended to maintain the health and user experience of the Microsoft commercial marketplace and the Teams Store. In certain situations, Microsoft might contact you and remove your app from the commercial marketplace and the Teams Store, temporarily halt new user acquisition for your app, or take further action on your app as deemed appropriate.
 
-> [!NOTE]
-> Ratings and reviews aren't available for LOB apps.
+**Microsoft might contact you for a resolution when:**
 
 * Microsoft is unable to run the continuous health evaluation tests on your app as the test credentials or test environment you provided have expired.
 
@@ -136,6 +130,15 @@ To discontinue your app:
 * Contact the Microsoft Teams App Health evaluation team at [apphealthevaluation@microsoft.com](mailto:apphealthevaluation@microsoft.com) or [teams-sas@microsoft.com](mailto:teams-sas@microsoft.com) to remove your app from the Teams Store.
 
 * Contact your customers where appropriate. Delete or revoke any security or authorization tokens generated for your app.
+
+## Ratings and review for Teams apps
+
+Users can rate and review apps on the Teams Store to share feedback on their experiences. Ratings range from one to five stars and can be accompanied by an optional summary of the user's experience. These ratings and reviews are visible on the app's listing in the Teams Store and product details page. Developers can view and respond to these reviews via the Partner Center, and these responses are also displayed on AppSource along with the Teams experience. Such feedback enhances an app's discoverability, boosts user retention, and promotes downloads on the Teams Store.
+
+:::image type="content" source="../../../../assets/images/submission/review.gif" alt-text="Graphics shows the user ratings and review for teams app.":::
+
+> [!NOTE]
+> Ratings and reviews aren't available for LOB apps.
 
 ## See also
 
