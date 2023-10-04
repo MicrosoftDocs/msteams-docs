@@ -78,6 +78,12 @@ If you don't already have a message extension, there are two ways to build one:
 
 * Bot-based ME: For developers that want a one-on-one conversational experience in addition to their plugin, they can create a new message extension from a bot using the Teams Toolkit. For more information, see [Build Bot based Message extension](../copilot/build-bot-based-message-extension.md).
 
+The following table differentiates the types of Message extensions plugins:
+
+|API based message extension  |Bot based message extension  |
+|---------|---------|
+|- Simpler and faster to create and maintain <br> - Use this option if you’re not planning to add a conversational bot to your app - <br> Do not require any additional code or resources for bot logic <br> - Suitable for scenarios where the plugin only needs to communicate with a web service and does not need any complex logic or state management <br> - Privatized traffic as they don’t rely on Azure bot infrastructure.| - More flexibility <br> - Use this option if you’re also planning to build a conversational bot <br> - Can leverage the full capabilities of the bot framework SDK <br> - Suitable for scenarios where the plugin needs to communicate with multiple services, handle complex logic or user interactions, or maintain state across sessions.|
+
 ## Link unfurling
 
 A web service is invoked when a URL is pasted in the compose message area. This functionality is known as link unfurling. You can subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can add buttons to allow the users to immediately take action without leaving the Teams client.
