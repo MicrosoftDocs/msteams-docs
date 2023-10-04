@@ -30,9 +30,7 @@ The Classic Teams client is represented using the `teams` field and the new Team
 
 To ensure a smooth transition, a phased rollout of the new platform is planned as follows:
 
-* **Developer preview**: The new Teams client is available in [public developer preview](dev-preview/developer-preview-intro.md). You can access the new platform and test your apps. We encourage you to provide feedback to help refine the platform.
-
-* **Availability of all platform features from Classic Teams**: All apps are available in the new Teams Client. All platform features except the features listed under [known issues](#known-issues) are now available. Platform features under known issues will be available by September 2023.
+* **Availability of all platform features from Classic Teams**: All apps are available in the new Teams Client. All platform features except the features listed under [known issues](#known-issues) are now available. Platform features under known issues will be available by October 2023.
 
 ## Known issues
 
