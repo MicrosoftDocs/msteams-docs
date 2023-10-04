@@ -25,13 +25,13 @@ Plugins allow Copilot to:
 ## How do I build a plugin?
 
 > [!NOTE]
-> Plugins for Microsoft 365 Copilot are in early access preview. This documentation is subject to change. When you have access to [the developer preview program](https://aka.ms/plugins-dev-waitlist), you'll receive instructions on evaluating your message extension to be used by Microsoft 365 Copilot.
+> Plugins for Microsoft 365 Copilot are in early access preview. This documentation is subject to change.
 
 If you already have a Teams message extension, then you already have a plugin that works with Copilot. If not, create a [message extension using the Teams Toolkit](~/messaging-extensions/what-are-messaging-extensions.md).
 
 **Scenario 1: I want to create a new plugin from an existing API or OpenAI plugin**
 
-[Join the early access program](https://aka.ms/PluginsEarlyAccess) to build a message extension that allows you to convert an existing API or OpenAI plugin to work for Microsoft Copilot.
+To build a message extension that allows you to convert an existing API or OpenAI plugin to work for Microsoft Copilot, follow these steps:
 
 1. Using the Teams Toolkit for Microsoft Visual Studio Code, go to **Create plugin for Copilot**.
 2. Provide a link to either an OpenAPI specification or an OpenAI plugin.
