@@ -322,7 +322,148 @@ items:
 
     ### Step 1: 
   
-    Find an API Spec First, you need to find an OpenAPI specification for the external service you want to interact with. You can find these specifications in repositories like [dannyp777/ChatGPT-AI-Plugin-Manifest-Lists](https://github.com/dannyp777/ChatGPT-AI-Plugin-Manifest-Lists) or [APIs-guru/openapi-directory](https://github.com/APIs-guru/openapi-directory). The API spec must meet the following criteria: - It must not have auth specified. - It must have at most one required parameter or property in the request body. You can make a required parameter optional and add a default value. - The request body (if present) cannot contain any arrays. - The server URL must be defined in the specification. - If there is no operation ID, you can add one to the spec that you will be uploading for testing because an operation ID is mandatory for operations that will be Messaging Extensions. You can validate that the swagger is valid by using an online validator like [Swagger Parser](https://apitools.dev/swagger-parser/online/). Once you have found a suitable API spec, save it in a folder. 
+    You need to find an OpenAPI specification for the external service you want to interact with. The API spec must meet the following criteria: 
+    
+    * It must not have auth specified.
+    * It must have at most one required parameter or property in the request body. You can make a required parameter optional and add a default value.
+    * The request body (if present) cannot contain any arrays.
+    * The server URL must be defined in the specification.
+    * If there is no operation ID, you can add one to the spec that you will be uploading for testing because an operation ID is mandatory for operations that will be Messaging Extensions. You can validate that the swagger is valid by using an online validator like [Swagger Parser](https://apitools.dev/swagger-parser/online/). Once you have found a suitable API spec, save it in a folder. 
+
+    We've used the following OpenAPI sepc as an example for this tutorial:
+
+    ```YAML
+        {
+        "openapi": "3.0.1",
+        "info": {
+            "version": "v0",
+            "title": "Open AI Klarna product Api"
+        },
+        "servers": [
+            {
+                "url": "https://www.klarna.com/us/shopping"
+            }
+        ],
+        "tags": [
+            {
+                "name": "open-ai-product-endpoint",
+                "description": "Open AI Product Endpoint. Query for products."
+            }
+        ],
+        "paths": {
+            "/public/openai/v0/products": {
+                "get": {
+                    "tags": [
+                        "open-ai-product-endpoint"
+                    ],
+                    "summary": "API for fetching Klarna product information",
+                    "operationId": "productsUsingGET",
+                    "parameters": [
+                        {
+                            "name": "countryCode",
+                            "in": "query",
+                            "description": "ISO 3166 country code with 2 characters based on the user location. Currently, only US, GB, DE, SE and DK are supported.",
+                            "required": true,
+                            "schema": {
+                                "type": "string"
+                            }
+                        },
+                        {
+                            "name": "q",
+                            "in": "query",
+                            "description": "A precise query that matches one very small category or product that needs to be searched for to find the products the user is looking for. If the user explicitly stated what they want, use that as a query. The query is as specific as possible to the product name or category mentioned by the user in its singular form, and don't contain any clarifiers like latest, newest, cheapest, budget, premium, expensive or similar. The query is always taken from the latest topic, if there is a new topic a new query is started. If the user speaks another language than English, translate their request into English (example: translate fia med knuff to ludo board game)!",
+                            "required": true,
+                            "schema": {
+                                "type": "string"
+                            }
+                        },
+                        {
+                            "name": "size",
+                            "in": "query",
+                            "description": "number of products returned",
+                            "required": false,
+                            "schema": {
+                                "type": "integer"
+                            }
+                        },
+                        {
+                            "name": "min_price",
+                            "in": "query",
+                            "description": "(Optional) Minimum price in local currency for the product searched for. Either explicitly stated by the user or implicitly inferred from a combination of the user's request and the kind of product searched for.",
+                            "required": false,
+                            "schema": {
+                                "type": "integer"
+                            }
+                        },
+                        {
+                            "name": "max_price",
+                            "in": "query",
+                            "description": "(Optional) Maximum price in local currency for the product searched for. Either explicitly stated by the user or implicitly inferred from a combination of the user's request and the kind of product searched for.",
+                            "required": false,
+                            "schema": {
+                                "type": "integer"
+                            }
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "Products found",
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "$ref": "#/components/schemas/ProductResponse"
+                                    }
+                                }
+                            }
+                        },
+                        "503": {
+                            "description": "one or more services are unavailable"
+                        }
+                    },
+                    "deprecated": false
+                }
+            }
+        },
+        "components": {
+            "schemas": {
+                "Product": {
+                    "type": "object",
+                    "properties": {
+                        "attributes": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "price": {
+                            "type": "string"
+                        },
+                        "url": {
+                            "type": "string"
+                        }
+                    },
+                    "title": "Product"
+                },
+                "ProductResponse": {
+                    "type": "object",
+                    "properties": {
+                        "products": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/Product"
+                            }
+                        }
+                    },
+                    "title": "ProductResponse"
+                }
+            }
+        }
+    }
+
+    ```
     
     ### Step 2: 
     
