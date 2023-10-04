@@ -46,6 +46,10 @@ items:
     > If you work with Microsoft Graph data, you should learn about and bookmark the Microsoft Graph Explorer. This browser-based tool allows you to query Microsoft Graph outside of an app.
     </details>
 
+    [!INCLUDE [Set up prerequisites](includes/get-started/prepare-teams-toolkit.md)]
+
+    <!--
+
     ## Prepare development environment
 
     After you've installed the required tools, set up the development environment.
@@ -136,7 +140,7 @@ items:
 
     Ensure that you have an Administrator account for a SharePoint Site Collection. You need this account at deployment for hosting. If you're using a Microsoft 365 developer program tenant, you can use the administrator account you created at the time.
 
-    Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building!
+    Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building!-->
 
 - title: Create project workspace for your tab app
   durationInMinutes: 1
@@ -170,6 +174,10 @@ items:
     1. Select **SPFx**.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/new-spfxTab-spfx.png" alt-text="new spfx tab spfx":::
+
+    1. Select **Create a New SPFx Solution**.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/new-spfx-solution.png" alt-text="Screenshot shows the option to select Sharepoint soultion.":::
 
     1. Select an option for **scaffolding**
 
