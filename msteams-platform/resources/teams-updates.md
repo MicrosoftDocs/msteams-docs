@@ -49,7 +49,7 @@ The following are the Teams features that will be supported soon:
 
 * [Location](../concepts/device-capabilities/location-capability.md#location-apis) and [Media](../concepts/device-capabilities/media-capabilities.md#media-capability-apis) APIs aren't supported in the new Teams client. We recommend using HTML5 Geolocation, and Media.
 
-* [GetMruTabInstances](/javascript/api/@microsoft/teams-js/pages.tabs?view=msteams-client-js-latest#@microsoft-teams-js-pages-tabs-getmrutabinstances&preserve-view=true) and [GetTabInstances](/javascript/api/@microsoft/teams-js/pages.tabs?view=msteams-client-js-#@microsoft-teams-js-pages-tabs-gettabinstances&preserve-view=true) APIs aren't supported in the new Teams client.
+* [GetMruTabInstances](/javascript/api/@microsoft/teams-js/pages.tabs?view=msteams-client-js-latest#@microsoft-teams-js-pages-tabs-getmrutabinstances&preserve-view=true) and [GetTabInstances](/javascript/api/@microsoft/teams-js/pages.tabs?view=msteams-client-js-#@microsoft-teams-js-pages-tabs-gettabinstances&preserve-view=true) APIs aren't supported in the new Teams client. We recommend to use the [chat](/graph/api/chat-list-tabs?view=graph-rest-1.0&tabs=http&preserve-view=true) and [channel tabs](/graph/api/channel-list-tabs?view=graph-rest-1.0&tabs=http&preserve-view=true) Graph APIs.
 
 For more information on known issues and gaps in the new Teams client, see [new Microsoft Teams](/microsoftteams/new-teams-desktop-admin?tabs=teams-admin-center#known-issues).
 
