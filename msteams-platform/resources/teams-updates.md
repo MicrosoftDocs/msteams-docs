@@ -47,7 +47,7 @@ The following are the Teams features that will be supported soon:
 
 * [Message Extensions](../get-started/build-message-extension.md) can't be invoked from the Teams search bar in the new Teams client.
 
-* Personal static tabs aren't supported in one-on-one chat with the bot in the new Teams client. However, users can open the app from the app bar to see the personal static tabs.
+* Personal static tabs aren't supported in one-on-one conversations with bots in the new Teams client. However, users can open the app from the app bar to view personal static tabs.
 
 * [Location](../concepts/device-capabilities/location-capability.md#location-apis) and [Media](../concepts/device-capabilities/media-capabilities.md#media-capability-apis) APIs aren't supported in the new Teams client. We recommed using HTML5 Geolocation, and Media.
 
