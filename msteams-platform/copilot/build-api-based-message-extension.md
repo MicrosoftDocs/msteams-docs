@@ -170,13 +170,12 @@ If you want to delete a command, select a command from the available commands an
    1. From the API list, select the GET API and select **OK**.
    1. Select **Default folder**.
    1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI spec file and created a API based message extension.
-   ---
+
+    ---
 
 # [Teams CLI](#tab/teams-cli)   
 
 1. npm install -g @microsoft/teamsfx-cli@2.0.3-beta.2023092709.0 
-
-1. Set “TEAMSFX_CLI_NEW_UX” to “true”.
  
 1. Type `teamsfx new` in the terminal 
 

@@ -23,6 +23,17 @@ Bot based plugins are message extensions that use a bot to handle user requests 
 1. Select Default folder.
 1. Enter the name of your app and select Enter.
 
+To trigger the Message Extension through Copilot, you can:
+
+1. Select Debug in Copilot (Edge) or Debug in Copilot (Chrome) from the launch configuration dropdown.
+1. When Teams launches in the browser, click the Apps icon from Teams client left rail to open 1. Teams app store and search for Copilot.
+1. Open the Copilot app and send a prompt to trigger your plugin.
+1. Send a message to Copilot to find an NPM package information. For example: Find the npm package info on teamsfx-react.
+
+> [!NOTE]
+> This prompt may not always make Copilot include a response from your message extension. If it happens, try some other prompts or leave a feedback to us by thumbing down the Copilot response and leave a message tagged with [MessageExtension].
+
+
 # [Developer portal for Teams](#tab/developer-portal-for-teams)
 
 1. Go to **Teams developer portal**.
