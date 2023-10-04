@@ -132,7 +132,7 @@ If you want to add more commands, under the API spec file, select **+ Add** and 
 
 If you want to delete a command, select a command from the available commands and select **Delete**. A pop-up appears to confirm to delete the command, select **Delete**. The command is deleted.
 
-# [Teams toolkit](#tab/Teams-toolkit)
+# [Teams Toolkit](#tab/Teams-toolkit)
 
 1. Open **Visual Studio Code**.
 1. From the left pane, Select **Teams Toolkit**.
@@ -141,17 +141,17 @@ If you want to delete a command, select a command from the available commands an
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot.png" alt-text="Screenshot shows the Plugin for copilot option in the Team Toolkit.":::
 
-1. Select **API based search message extension**.
+1. Select **API Based Search Message Extension**.
 
 1. Select any of the following options:
-    1. Start with a new API.
-    1. Start with an OpenAPI specification.
+    1. **Start with a new API**.
+    1. **Start with an OpenAPI Description Document**.
 
      :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot-options.png" alt-text="Screenshot shows the plugin options to create a plugin for copilot.":::
 
 1. Follow these steps for the respective API types:
 
-# [New API](#tab/new-api)
+   # [New API](#tab/new-api)
 
    1. Select a programming language.
 
@@ -161,7 +161,7 @@ If you want to delete a command, select a command from the available commands an
 
    1. Enter the name of your app and select **Enter**. Teams Toolkit creates a new plugin with API from Azure functions.
 
-# [OpenAPI specification](#tab/openapi-specification)
+   # [OpenAPI specification](#tab/openapi-specification)
 
    1. Enter or browse the OpenAPI specification doc location.
 
@@ -172,8 +172,31 @@ If you want to delete a command, select a command from the available commands an
    1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI spec file and created a API based message extension.
    ---
 
-You can also build bot based message extensions.
+# [Teams CLI](#tab/teams-cli)   
+
+1. npm install -g @microsoft/teamsfx-cli@2.0.3-beta.2023092709.0 
+
+1. Set “TEAMSFX_CLI_NEW_UX” to “true”.
+ 
+1. Type `teamsfx new` in the terminal 
+
+1. Select Message extension and then API Based search Message extension 
+
+1. Select “Start from an OpenAPI specification” 
+
+1. Generate the project 
+
+1. Mitigate other warnings following the mitigation steps described in the output window. 
+
+1. Provision resources: teamsfx provision --env dev 
+
+1. Preview the app: teamsfx preview --env dev 
+
+1. Test your MEs in Teams 
+
 
 ---
+
+You can also build bot based message extensions.
 
 ## See also

@@ -74,9 +74,9 @@ To ensure your plugin works as intended, it's important to include good descript
 
 The following table differentiates the types of Message extensions plugins:
 
-|API based message extension  |API plugin  |Bot based message extension  |
-|---------|---------|---------|
-|- Simpler and faster to create and maintain <br> - Use this option if you’re not planning to add a conversational bot to your app - <br> Do not require any additional code or resources for bot logic <br> - Suitable for scenarios where the plugin only needs to communicate with a web service and does not need any complex logic or state management <br> - Privatized traffic as they don’t rely on Azure bot infrastructure.|  <font color="red"> Need more information </font>       | - More flexibility <br> - Use this option if you’re also planning to build a conversational bot <br> - Can leverage the full capabilities of the bot framework SDK <br> - Suitable for scenarios where the plugin needs to communicate with multiple services, handle complex logic or user interactions, or maintain state across sessions.|
+|API based message extension  |Bot based message extension  |
+|---------|---------|
+|- Simpler and faster to create and maintain <br> - Use this option if you’re not planning to add a conversational bot to your app - <br> Do not require any additional code or resources for bot logic <br> - Suitable for scenarios where the plugin only needs to communicate with a web service and does not need any complex logic or state management <br> - Privatized traffic as they don’t rely on Azure bot infrastructure.| - More flexibility <br> - Use this option if you’re also planning to build a conversational bot <br> - Can leverage the full capabilities of the bot framework SDK <br> - Suitable for scenarios where the plugin needs to communicate with multiple services, handle complex logic or user interactions, or maintain state across sessions.|
 
 ## Upgrading your plugin to a rich conversational Teams app  
 
