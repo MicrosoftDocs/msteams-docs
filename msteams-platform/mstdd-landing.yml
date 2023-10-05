@@ -48,6 +48,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Use callTranscript API to fetch meeting transcript from all meetings
+        url:  graph-api/meeting-transcripts/overview-transcripts.md
       - text: Ratings and review for Teams apps
         url: concepts/deploy-and-publish/appsource/post-publish/overview.md#ratings-and-review-for-teams-apps
       - text: Bot configuration experience
