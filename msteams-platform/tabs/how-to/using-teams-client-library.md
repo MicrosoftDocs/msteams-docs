@@ -56,7 +56,7 @@ To implement Teams app-specific logic, include the following code snippet to you
 ```js
 import 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
 
-// Ensure that the Teans SDK is initialized once no matter how often this is called
+// Ensure that the Teams SDK is initialized once no matter how often this is called
 let teamsInitPromise;
 export function ensureTeamsSdkInitialized(){
     if (!teamsInitPromise) {
