@@ -562,7 +562,7 @@
     - name: Get notified when transcripts and recordings are available
       href: /graph/teams-changenotifications-callrecording-and-calltranscript
     - name: Get transcripts
-      href: /graph/api/resources/calltranscript
+      href: /graph/api/resources/calltranscript?view=graph-rest-1.0&preserve-view=true
     - name: Get recordings
       href: /graph/api/resources/callrecording?view=graph-rest-beta&preserve-view=true
   - name: Enhanced collaboration with Live Share
