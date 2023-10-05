@@ -8,7 +8,7 @@ ms.author: anclear
 ms.date: 09/07/2023
 ---
 
-# Build Bot based Message extension
+# Bot based Message extension
 
 Bot based plugins are message extensions that use a bot to handle user requests and responses. They require a bot registration and a bot framework SDK. They can be configured and deployed using the App Studio or the Teams Toolkit.
 
