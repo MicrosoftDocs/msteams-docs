@@ -63,9 +63,9 @@ By enabling third-party communications, customers accept that such communication
 
 The following list provides references about availability of GCC, GCC-High, and DOD for the features:
 
-| &nbsp; | Feature | Reference |
-|-------------|---------|---|
-| &nbsp; | Third-party apps | [Web apps](../samples/integrating-web-apps.md) <br> [Meeting app extensibility](../apps-in-teams-meetings/teams-apps-in-meetings.md) |
-| &nbsp; | Bots | [Build your first conversational bot for Teams](../get-started/first-app-bot.md) <br> [Designing your Teams bot](../bots/design/bots.md) <br> [Add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md) <br> [Bots in Teams](../bots/what-are-bots.md) |
-| &nbsp; | Sideloading apps | [Enable your Teams app to be customized](../concepts/design/enable-app-customization.md) <br> [Distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md) <br> [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md) |
-| &nbsp; | Custom connectors | [Create connectors for Microsoft 365 Groups for Teams](../webhooks-and-connectors/how-to/connectors-creating.md) |
+| Feature | Reference |
+|---------|---|
+| Third-party apps | [Web apps](../samples/integrating-web-apps.md) <br> [Meeting app extensibility](../apps-in-teams-meetings/teams-apps-in-meetings.md) |
+| Bots | [Build your first conversational bot for Teams](../get-started/first-app-bot.md) <br> [Designing your Teams bot](../bots/design/bots.md) <br> [Add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md) <br> [Bots in Teams](../bots/what-are-bots.md) |
+| Sideloading apps | [Enable your Teams app to be customized](../concepts/design/enable-app-customization.md) <br> [Distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md) <br> [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md) |
+| Custom connectors | [Create connectors for Microsoft 365 Groups for Teams](../webhooks-and-connectors/how-to/connectors-creating.md) |
