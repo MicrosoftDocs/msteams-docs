@@ -1,6 +1,6 @@
 ---
 title: Teams JavaScript client library SDK
-description: In this module, learn Microsoft Teams JavaScript client library (TeamsJS SDK), which can help you build app experiences hosted in an <iframe> in Teams, Microsoft 365 (formerly Office), and Outlook.
+description: In this module, learn Microsoft Teams JavaScript client library (TeamsJS SDK), which can help you build app experiences hosted in an <iframe> in Teams, Microsoft 365 (previously called Office), and Outlook.
 ms.localizationpriority: high
 ms.author: mosdevdocs
 author: erikadoyle
@@ -22,7 +22,7 @@ Here's the current versioning guidance for various app scenarios:
 
 [!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
-The remainder of this article will walk you through the structure and latest updates to the TeamsJS library.
+The remainder of this article walks you through the structure and latest updates to the TeamsJS library.
 
 ## Microsoft 365 support (running Teams apps in Microsoft 365 and Outlook)
 
@@ -80,6 +80,12 @@ export async function inTeams(){
 ```
 
 You must wait for the [app initialization](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-isinitialized) to complete before proceeding with the function call in order for the app to function correctly. Any program logic designed exclusively for Teams might not function correctly on other Microsoft 365 platforms. To ensure the smooth operation of your app across the Microsoft 365 ecosystem, make provisions for the logic handling of other Microsoft 365 platforms.
+
+#### Authentication
+
+In `TeamsJS` version 2.11.0 or later, apps must provide a third url parameter, `hostRedirectUrl`, in the [authenticate API](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate), to redirect users to the correct client after the completion of authentication. The `hostRedirectUrl` authentication parameter is necessary to enable your client to be supported across Microsoft 365 host applications. Apps implemented on older versions of `TeamsJS` only support Teams following this update, as the `oauthRedirectmethod` and `authId` query parameters are passed to the third-party app server.
+
+For more information regarding the authentication parameter, see [use external OAuth providers](authentication/auth-oauth-provider.md).
 
 #### Teams apps running across Microsoft 365
 
@@ -185,7 +191,7 @@ Starting with TeamsJS v.2.0, APIs are defined as functions in a JavaScript names
 
 #### Differentiate your app experience
 
-You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace). It will return `true` if it's supported and `false` if not, and you can adjust app behavior as appropriate. This allows your app to light up UI and functionality in hosts that support it, while continuing to run for hosts that don't.
+You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace). It returns `true` if it's supported and `false` if not, and you can adjust app behavior as appropriate. This allows your app to light up UI and functionality in hosts that support it, while continuing to run for hosts that don't.
 
 The name of the host your app is running in is exposed as a *hostName* property on the Context interface (`app.Context.app.host.name`), which can be queried at runtime by calling `getContext`. It's also available as a `{hostName}` [URL placeholder value](./access-teams-context.md#get-context-by-inserting-url-placeholder-values). Best practice is to use the *hostName* mechanism sparingly:
 
@@ -369,7 +375,7 @@ You can also visualize the changes by reviewing the `transformLegacyContextToApp
 
 ## Updating to TeamsJS version 2.0
 
-The easiest way to update your Teams app with TeamsJS version 2.0.x is to use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Visual Studio Code. This section will walk you through the steps to do that. If you prefer to manually update your code, see the [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities) sections for more details on required API changes.
+The easiest way to update your Teams app with TeamsJS version 2.0.x is to use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Visual Studio Code. This section walks you through the steps to do that. If you prefer to manually update your code, see the [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities) sections for more details on required API changes.
 
 ### 1. Install the latest Teams Toolkit Visual Studio Code extension
 
@@ -403,7 +409,7 @@ If you're updating a Teams app to run in Microsoft 365 app and Outlook, you'll a
 # [Teams Toolkit](#tab/manifest-teams-toolkit)
 
 1. Open the *Command palette*: `Ctrl+Shift+P`
-1. Run **Teams: Upgrade Teams manifest to support Outlook and Microsoft 365 apps** command and select your app manifest file. Changes will be made in place.
+1. Run **Teams: Upgrade Teams manifest to support Outlook and Microsoft 365 apps** command and select your app manifest file. Changes are made in place.
 
 # [Manual steps](#tab/manifest-manual)
 

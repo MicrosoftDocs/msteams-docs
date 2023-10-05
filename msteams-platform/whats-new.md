@@ -26,6 +26,8 @@ Teams platform features that are available to all app developers.
 
 **2023 September**
 
+* ***September 27, 2023***: [Configure your bot with read receipt events to identify if the recipient has read the message sent by the bot.](~/bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt)
+
 * ***September 26, 2023***: [Media elements in Adaptive Card.](task-modules-and-cards/cards/media-elements-in-adaptive-cards.md)
 
 * ***September 06, 2023***: [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md)
@@ -342,19 +344,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2023 August**
+**2023 September**
 
-* ***August 31, 2023***: [The new Teams client supports light theme for apps in Teams meetings.](tabs/how-to/access-teams-context.md#handle-theme-change)
-
-* ***August 28, 2023***: [Teams app manifest is now referred to as app manifest.](resources/schema/manifest-schema-dev-preview.md)
-
-* ***August 22, 2023***: [Enable RSC permissions for a user using the Graph APIs](graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings).
-
-* ***August 21, 2023***: [Introduced the new Microsoft Teams client to provide better experience for your apps and users](resources/teams-updates.md).
-
-* ***August 21, 2023***: [Use Adaptive Card-based Loop components to build collaborative experiences within Teams message extensions that work across Microsoft 365.](m365-apps/design-loop-components.md)
-
-* ***August 08, 2023***: [Use callRecording API to fetch meeting recording from all meetings.](graph-api/meeting-transcripts/overview-transcripts.md)
+***September 28, 2023***: [Configure your bot during installation or after installation from the team or group chat where the bot is installed.](bots/how-to/bot-configuration-experience.md)
 
 :::column-end:::
 :::row-end:::
@@ -365,6 +357,13 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|31/08/2023| The new Teams client supports light theme for apps in Teams meetings. | Build tabs > [Get context for your tab](tabs/how-to/access-teams-context.md#handle-theme-change)|
+|28/08/2023| Teams app manifest is now referred to as app manifest. | App manifest > [App manifest schema](resources/schema/manifest-schema.md)|
+|22/08/2023| Enable RSC permissions for a user using the Graph APIs | Utilize Teams data with Microsoft Graph > Resource-specific consent > [Grant RSC permission to your app](graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings) |
+|21/08/2023| Introduced the new Microsoft Teams client to provide better experience for your apps and users | Resources > [Introducing the new Microsoft Teams client](resources/teams-updates.md)|
+|21/08/2023| Use Adaptive Card-based Loop components to build collaborative experiences within Teams message extensions that work across Microsoft 365. | Extend your app across Microsoft 365 > [Adaptive Card-based Loop components](m365-apps/design-loop-components.md)|
+|08/08/2023| Use callRecording API to fetch meeting recording from all meetings. | Build apps for Teams meetings and calls > [Get meeting transcripts and recordings using Graph APIs](graph-api/meeting-transcripts/overview-transcripts.md)|
+|31/07/2023| Bots can mention tags in Adaptive Cards. |Build bots > Bot conversations > Message in bot conversations > Channel and group chat conversation with a bot > [Bots can mention tags in Adaptive Cards](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention)|
 |31/07/2023| Bots can mention tags in Adaptive Cards. |Build bots > Bot conversations > Message in bot conversations > Channel and group chat conversation with a bot > [Bots can mention tags in Adaptive Cards](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention)|
 |13/07/2023| Extend static tabs to group chat or meetings with a customizable experience. |Build tabs > [Overview](tabs/what-are-tabs.md)|
 | 25/05/2023 | Use a deep link to open a tab app in meeting side panel in Teams mobile client. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) |
