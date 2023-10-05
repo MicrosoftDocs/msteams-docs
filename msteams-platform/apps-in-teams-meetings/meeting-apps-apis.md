@@ -1587,7 +1587,7 @@ The following code provides an example of the participant join event payload:
         },   
         "meeting": { 
             "inMeeting": true, 
-            "role": "Organizer" //Atendee, Organizer, Presenter 
+            "role": "Organizer" //Attendee, Organizer, Presenter 
         },  
         }], 
     }, 
@@ -1610,7 +1610,7 @@ The following code provides an example of the participant leave event payload:
 { 
 
     "type": "event", 
-    "name": "application/vnd.microsoft.meetingParticipantLeave ",
+    "name": "application/vnd.microsoft.meetingParticipantLeave",
     "timestamp": "2023-02-23T19:34:07.478Z", 
     "channelId": "msteams", 
     "serviceUrl": "https://smba.trafficmanager.net/amer/", 
@@ -1622,8 +1622,8 @@ The following code provides an example of the participant leave event payload:
         "conversationType": "groupchat", 
         "id": "19:meeting_threadId@thread.v2" 
     }, 
-"recipient": { 
-    "id": "28:botid" 
+    "recipient": { 
+        "id": "28:botid" 
     },  
     "value": { 
        "members": [ 
@@ -1636,9 +1636,9 @@ The following code provides an example of the participant leave event payload:
             "aadObjectId": " user_object_Id " 
         },   
         "meeting": { 
-            "inMeeting": true
+            "inMeeting": false
         },  
-        }], 
+       }], 
     }, 
     "channelData": { 
         "tenant": { 
