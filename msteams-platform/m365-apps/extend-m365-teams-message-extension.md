@@ -22,7 +22,7 @@ Message extensions allow users to interact with your web service through buttons
 
 You can now bring Teams message extensions to Outlook by extending your Teams apps across Microsoft 365. For more information about [message extension](~/messaging-extensions/what-are-messaging-extensions.md) support within Outlook for Windows desktop, Outlook on web, and Outlook on mobile, see the support table in [extend Teams apps across Microsoft 365](~/m365-apps/overview.md).
 
-If your message extension supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) and unfurls links that display cards to launch [Stage View](../tabs/tabs-link-unfurling.md) in Teams , follow this article to enable link unfurling and Stage View in Outlook on web and Windows desktop environments.
+If your message extension supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) and unfurls links that display cards to launch [Stage View](../tabs/tabs-link-unfurling.md) in Teams, follow this article to enable link unfurling and Stage View in Outlook on web and Windows desktop environments.
 
 Outlook mobile users on Android and [Microsoft Outlook beta TestFlight](https://testflight.apple.com/join/AhS6fRDK) iOS rings can now receive and take actions on cards from your apps that were sent to them by users on Outlook on web and Windows desktop.
 
@@ -94,7 +94,7 @@ To start with a sample message extension app that's already enabled to run in Ou
 
 ### Sideload your app in Teams using Teams Toolkit
 
-Sideload your updated message extension ([app package](/microsoftteams/platform/concepts/build-and-test/apps-package)) into Teams.
+Sideload your updated message extension [app package](/microsoftteams/platform/concepts/build-and-test/apps-package) into Teams.
 
 1. Open **UTILITY** section of Teams Toolkit and select **Zip Teams App Package** . Select the `manifest.json` file for your app and the appropriate environment.
 
@@ -124,7 +124,7 @@ To preview your app running in Outlook on the web:
 1. Select **New message**.
 1. Select **Apps** on the ribbon.
 
-:::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Screenshot shows the Apps menu on the ribbon of the mail composition window to launch your message extension.":::
+   :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Screenshot shows the Apps menu on the ribbon of the mail composition window to launch your message extension.":::
 
 Your message extension is listed. You can invoke it from there and use it just as you would while composing a message in Teams.
 
@@ -172,9 +172,10 @@ Open your app manifest and update the `$schema` and `manifestVersion` with the f
 }
 ```
 
+---
+
 If you used Teams Toolkit to create your message extension app, you can use it to validate the changes to your app manifest file and identify any errors. Open the command palette (`Ctrl+Shift+P`) and find **Teams: Validate manifest file**.
 
----
 
 ### Add Microsoft 365 channel for your app
 
@@ -250,8 +251,6 @@ To preview your app running in Outlook on the web:
 
    `Place holder for Figma image`
 
-Your message extension is listed. You can invoke it from there and use it just as you would while composing a message in Teams.
-
 # [Outlook on the desktop](#tab/outlook-on-the-desktop)
 
 To preview your app running in Outlook on Windows desktop:
@@ -263,6 +262,8 @@ To preview your app running in Outlook on Windows desktop:
    `Place holder for Figma image`
 
 ---
+
+Your message extension is listed. You can invoke it from there and use it just as you would while composing a message in Teams.
 
 ## Debugging
 
