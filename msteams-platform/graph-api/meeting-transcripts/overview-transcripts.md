@@ -8,7 +8,7 @@ ms.date: 02/20/2023
 # Get meeting transcripts and recordings using Graph APIs
 
 > [!NOTE]
-> Get meeting recordings using Graph APIs are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).  
+> Get meeting recordings using Graph API are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 You can now configure your app to fetch Microsoft Teams meeting transcripts and recordings in the post-meeting scenario. Your app can use Microsoft Graph REST APIs to access and fetch transcripts and recordings generated for a Teams meeting that has been scheduled beforehand.
 
