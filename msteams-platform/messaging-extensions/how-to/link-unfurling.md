@@ -432,13 +432,13 @@ To test your setup for zero install link unfurling, follow these steps:
 
 1. Select **Upload**.
 
-1. Select **Open** to upload the .zip file for your test application.
+1. Select **Open** to upload the zip file for your test application.
 
-1. After you successfully upload the app. In the Teams client, select the **Apps** > **Built for your org**. Don’t select **Add**.
+1. After you successfully upload the app. In the Teams client, select the **Apps** > **Built for your org**.
 
 :::image type="content" source="../../assets/images/teams-link-unfurling/build-for-your-org.png" alt-text="Screenshot of Teams client with org sideloaded Teams app":::
 
-1. Now you are ready to receive the invoke request `composeExtensions/anonymousQueryLink`. You can test it by placing a breakpoint in your application in the method which implements an anonymousQueryLink request.
+1. You can test the `composeExtensions/anonymousQueryLink` invoke request by setting up a breakpoint in the method that implements the anonymousQueryLink request in your application.
 
 ## Remove link unfurling cache
 
