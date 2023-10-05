@@ -26,9 +26,13 @@ If your message extension supports [link unfurling](../messaging-extensions/how-
 
 Outlook mobile users on Android and [Microsoft Outlook beta TestFlight](https://testflight.apple.com/join/AhS6fRDK) iOS rings can now receive and take actions on cards from your apps that were sent to them by users on Outlook on web and Windows desktop.
 
-In this article you'll learn how to extend your Teams message extension to Outlook
+In this article you'll learn how to extend your Teams message extension to Outlook, which you can do either of the following:
 
-### Prerequisites
+* [Build a new message extension app with Teams Toolkit and view it in Outlook.](#build-a-message-extension-app)
+
+* [Extend an existing Teams message extension app to Outlook.](#extend-an-existing-teams-message-extension-app-to-outlook)
+
+## Prerequisites
 
 To extend your search-based Teams message extension to Outlook, you need:
 
@@ -37,12 +41,6 @@ To extend your search-based Teams message extension to Outlook, you need:
 * (Optional) Microsoft Visual Studio Code with the Teams Toolkit extension.
 
 To install the prerequisites, see [set up your dev environment.](~/m365-apps/prerequisites.md)
-
-You can either do the following:
-
-* [Build a new message extension app with Teams Toolkit and view it in Outlook](#build-a-message-extension-app)
-
-* [Extend an existing app to Outlook](#extend-an-existing-app-to-outlook)
 
 ## Build a message extension app with Teams Toolkit for Outlook
 
@@ -80,10 +78,7 @@ To start with a sample message extension app that's already enabled to run in Ou
 1. From the dropdown list that appears, select **Message Extension**.
 1. Select **Collect Form Input and Process Data** to download the sample code for a Teams action-based message extension using the latest app manifest. For more information, see [app manifest](../resources/schema/manifest-schema.md).
 
-    :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams sample options.":::
-
-    
-    :::image type="content" source="images/toolkit-search-sample.png" alt-text="Screenshot shows the NPM Search Connector sample in Teams Toolkit Samples gallery.":::
+    :::image type="content" source="images/toolkit-palatte-action-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams action-based message extension sample option.":::
     
 1. Select preferred programming language.
 1. Select a location on your local machine for the workspace folder and enter your application name.
@@ -145,7 +140,7 @@ To preview your app running in Outlook on Windows desktop:
 
 ---
 
-## Extend an existing app to Outlook
+## Extend an existing Teams message extension app to Outlook
 
 The process to extend your Teams message extension app to Outlook involves the following steps:
 
@@ -273,7 +268,7 @@ To preview your app running in Outlook on Windows desktop:
 
 As you test your message extension, you can identify the source (originating from Teams versus Outlook) of bot requests by the [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) of the [Activity](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md) object. When a user performs a query, your service receives a standard Bot Framework `Activity` object. One of the properties in the Activity object is `channelId`, which has the value of `msteams` or `outlook`, depending on where the bot request originates. For more information, see [search based message extensions SDK](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions) and [action based messaging extensions SDK](/microsoftteams/platform/resources/messaging-extension-v3/create-extensions).
 
-### Limitations
+## Limitations
 
 While your updated message extension continues to run in Teams with full [feature support for message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions), there are limitations in this early preview of the Outlook-enabled experience to be aware of:
 
