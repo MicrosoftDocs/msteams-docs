@@ -9,15 +9,15 @@ ms.date: 12/09/2022
 ---
 # Plan responsive tabs for Teams mobile
 
-Teams platform offers the opportunity to build apps on mobile and desktop. Your app users can prefer either desktop or mobile, or both. The users can prepare data on desktop but consume and share more data using mobile. The key to build any app is to understand and meet user's needs.
+Teams platform offers the opportunity to build apps on mobile and desktop. Your app users can prefer either desktop or mobile, or both. The users can prepare data on desktop but consume and share more data using mobile. The key to build any app is to understand and meet the user's needs.
 
-There are capabilities like bots, message extensions, and connectors that work seamlessly on desktop and mobile. However, building tabs and task modules require planning for hosting your web experience on Teams mobile.
+There are capabilities like bots, message extensions, and connectors that work seamlessly on desktop and mobile clients. However, building tabs and task modules require planning for hosting your web experience on Teams mobile.
 
 Consider the following before you implement responsive tabs for your app in Teams mobile:
 
 * **App functionalities:** Consider cross-device functionality for the Teams app.
 
-    For example, if you've a well performing app on desktop, you can explore to build similar app on mobile. Initially, it can be difficult to the shift entire desktop experience on mobile, but you can start with basic and common scenarios. Add functionalities and capabilities after you gather more insights and user feedback.
+    For example, if you've a well performing app on desktop, you can explore to build similar app on mobile. Initially, it can be difficult to the shift the entire desktop experience on mobile, but you can start with basic and common scenarios. Add functionalities and capabilities after you gather more insights and user feedback.
 
 * **User roles:** Ensure to target appropriate user role on Teams mobile.
 
@@ -105,7 +105,7 @@ In the first stage, your app can show the list of tasks to the user in a vertica
 
 In the second stage, you can provide the following app access to users:
 
-* Create tasks or items with the mandatory fields to reduce cognitive load of the users.
+* Create tasks or items with mandatory fields to reduce cognitive load of the users.
 * Change the board type or view.
 * Review tasks by expanding the view.
 * Use task modules to see detailed view.
@@ -150,7 +150,7 @@ In the first stage, you can consider desktop experience to show the content and 
 
 In the second stage, you can introduce the following actions:
 
-* Create new board for collaboration or new documents for signing.
+* Create a new board for collaboration or new documents for signing.
 * Share boards internally and with guests.
 * Configure admin permissions.
 
