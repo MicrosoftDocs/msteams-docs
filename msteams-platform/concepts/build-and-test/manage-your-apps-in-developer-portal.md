@@ -139,19 +139,6 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
 * **App package**: The app package describes how your app is configured that includes app features, required resources, and other important attributes in manifest. The Icon tab shows the icon used for your app.
 
-## Manage rollouts
-
-In the **Manage rollouts** section, you can see the following components to manage your app in Developer Portal:
-
-* **Pull request history**: This page allows you to create a new pull request and to control who gets app updates. For example, you can release an update to Microsoft employees to identify and fix bugs before releasing it to the public.
-
-* **Distribute your app**: This page allows you to create a request to distribute your app to specific audience in Teams. We recommend you not to distribute your app to different versions of Teams simultaneously. Instead, roll out gradually to higher order Teams versions. For help, see [aka.ms/teamsAppIngestion](https://domoreexp.visualstudio.com/Teamspace/_wiki/wikis/Teamspace.wiki/26278/Publishing-apps).
-
-* **Withdraw your app**: This page allows you to create a request to withdraw your app from a specific audience.
-
-   > [!NOTE]
-   > DevX team is allowed to withdraw your app from Teams generally available (GA) version.
-
 ## Test your app directly in Teams
 
 The Developer Portal provides options for testing and debugging your app:
