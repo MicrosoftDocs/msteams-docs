@@ -179,28 +179,31 @@ If you want to delete a command, select a command from the available commands an
 
     ---
 
-# [Teams CLI](#tab/teams-cli)   
+# [Teams CLI](#tab/teams-cli)
 
-1. npm install -g @microsoft/teamsfx-cli@2.0.3-beta.2023092709.0 
- 
-1. Type `teamsfx new` in the terminal 
+1. npm install -g @microsoft/teamsfx-cli@2.0.3-beta.2023092709.0
 
-1. Select Message extension and then API Based search Message extension 
+1. Type `teamsfx new` in the terminal
 
-1. Select “Start from an OpenAPI specification” 
+1. Select Message extension and then API Based search Message extension
 
-1. Generate the project 
+1. Select “Start from an OpenAPI specification”
 
-1. Mitigate other warnings following the mitigation steps described in the output window. 
+1. Generate the project
 
-1. Provision resources: teamsfx provision --env dev 
+1. Mitigate other warnings following the mitigation steps described in the output window.
 
-1. Preview the app: teamsfx preview --env dev 
+1. Provision resources: teamsfx provision --env dev
 
-1. Test your MEs in Teams 
+1. Preview the app: teamsfx preview --env dev
 
+1. Test your MEs in Teams
 
 ---
+
+## Step-by-step guide
+
+You can go through the [step-by-step](../sbs-api-me-ttk.yml) guide to build an API based message extension.
 
 You can also build bot based message extensions.
 

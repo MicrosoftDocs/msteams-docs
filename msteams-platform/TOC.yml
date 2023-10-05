@@ -511,6 +511,12 @@
     - name: Universal actions for search based message extensions
       href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
       displayName: Handle tap actions, Just-in-time install, JIT
+  - name: API based message extension
+    href: messaging-extensions/build-api-based-message-extensions.md
+    displayName: OpenAPI specification, Search, single parameter, search based message extension
+  - name: Bot based message extension
+    href: messaging-extensions/build-bot-based-message-extensions.md
+    displayName:  one-on-one conversation, search command, action command, search based message extension, action based message extension
   - name: Add link unfurling
     href: messaging-extensions/how-to/link-unfurling.md
     displayName: Domain listings can include wildcards, cache
