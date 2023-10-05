@@ -40,6 +40,21 @@ A message extension consists of a web service that you host and an app manifest,
 
 In the app manifest for Teams app, a single message extension is defined with up to 10 different commands. Each command defines a type, such as action or search and the locations in the client from where it's invoked. The invoke locations are compose message area, command bar, and message. On invoke, the web service receives an HTTPS message with a JSON payload including all the relevant information. Respond with a JSON payload, allowing the Teams client to know the next interaction to enable.
 
+## Message extension type
+
+If you don't already have a message extension, there are two ways to build one:
+
+* API based message extension: Using the Teams Toolkit, developers can easily create a API-backed ME from an existing API or ChatGPT plugin. This method requires an OpenAPI specification, documenting the API. For more information, see [Build copilot plugin](../copilot/build-api-based-message-extension.md).
+
+* Bot based message extension:If you want a one-on-one conversational experience in addition to their plugin, they can create a new message extension from a bot using the Teams Toolkit. For more information, see [Build Bot based Message extension](../copilot/build-bot-based-message-extension.md).
+
+The following table differentiates the types of message extensions:
+
+|API based message extension  |Bot based message extension  |
+|---------|---------|
+|- Simpler and faster to create and maintain <br> - Use this option if you’re not planning to add a conversational bot to your app  <br> - Do not require any additional code or resources for bot logic <br> - Suitable for scenarios where the plugin only needs to communicate with a web service and does not need any complex logic or state management <br> - Privatized traffic as they don’t rely on Azure bot infrastructure.| - More flexibility <br> - Use this option if you’re also planning to build a conversational bot <br> - Can leverage the full capabilities of the bot framework SDK <br> - Suitable for scenarios where the plugin needs to communicate with multiple services, handle complex logic or user interactions, or maintain state across sessions.|
+
+
 ## Types of message extension commands
 
 There are two types of message extension commands, action command and search command. The message extension command type defines the UI elements and interaction flows available to your web service. Some interactions, such as authentication and configuration are available for both types of commands.
