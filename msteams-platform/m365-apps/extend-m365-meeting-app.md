@@ -42,7 +42,7 @@ To preview your meeting app in Outlook, you need:
 * [Visual Studio Code](https://code.visualstudio.com/) installed to your development environment.
 * [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) extension for Visual Studio Code.
 
-### Quickstart
+## Build a meeting app with Teams Toolkit for Outlook
 
 Follow these steps to quickly build a simplified Teams meeting app without any authentication that you can use to preview in Outlook:
 
@@ -68,7 +68,7 @@ Follow these steps to quickly build a simplified Teams meeting app without any a
 
 Now you can [sideload your app with TeamsFx CLI](#sideload-your-app-using-teamsfx-cli) and then [preview your meeting app in Outlook](#preview-your-meeting-app-in-outlook).
 
-## Checklist for enabling an existing Teams meeting app in Outlook
+## Enable an existing Teams meeting app in Outlook
 
 The requirements for extending meeting apps in Outlook are similar to [extending personal tabs to Outlook](./extend-m365-teams-personal-tab.md), however you need to use TeamsFx CLI for sideloading, as sideloading from Teams isn't supported.
 
@@ -150,7 +150,7 @@ Teams tab applications are hosted within [iframe elements](https://developer.moz
 
 For more information on client application IDs used to extend Teams apps across the Microsoft 365, see [Teams tabs in Microsoft 365 and Outlook](extend-m365-teams-personal-tab.md#update-azure-ad-app-registration-for-sso).
 
-### Sideload your app using TeamsFx CLI
+## Sideload your app using TeamsFx CLI
 
 To run your app in Microsoft 365 and Outlook sideload your [app package](..//concepts/build-and-test/apps-package.md) using the TeamsFx CLI.
 
