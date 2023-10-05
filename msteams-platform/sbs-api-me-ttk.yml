@@ -464,41 +464,18 @@ items:
 
     ```
     
-    ### Step 2: 
-    
-    Create a response rendering Adaptive Card template that defines how the response from the external service is rendered in Teams. To create the template, follow these steps:
+    Now that you've got your API spec, you can create a Messaging Extension that uses it. To create a message extension using the OpenAPI specification document, follow these steps:
 
-    1. Create a new JSON file. 
-    2. Determine the JSON path to the relevant data/array in the example response from testing. 
-    3. Use Bing chat to create an adaptive card template that binds to the schema of the sample data. 
-    4. Copy the adaptive card template and put it in the response rendering template under the key `responseCardTemplate`. 
-    5. Create a simplified preview card template and put it under the key `previewCardTemplate`. 
-    6. Add the response layout (`list` or `grid`) to the response rendering template. 
-    7. Add `version`: `1.0.0` to the response rendering template. 
-    8. Save the response rendering template in the same folder you saved the OpenAPI spec. 
-    
-    ### Step 3: 
-    
-    Create a Teams App Manifest Now, you need to create a Teams app manifest. This manifest will define the properties of your Teams app. To create the manifest, follow these steps: 
-
-    1. Create a new JSON file. This file will follow the basic structure for creating a Teams app manifest for API Messaging Extensions. 
-    2. Under the `composeExtension` node, include `composeExtensionType`: `apiBased`. 
-    3. Add a new key `apiSpecificationFile`, and put the value as the name of your OpenAPI specification file from Step 1. 
-    4. The Input extension command ID must match the operation ID in the API spec. 
-    5. The input extension parameter name must match the required parameter name or if there are no required parameters, then the name must match one of the operational parameters. 
-    6. Under valid domains in the Teams app manifest, you will need to add the service URL endpoint that is defined in the API spec. 
-    7. Save the Teams app manifest in the same folder you saved the OpenAPI spec and the response rendering template
-    8. You will also need a color image and outline image. These images should be included in the folder and referenced in your Teams app manifest. 
-    9. Zip up the contents of the folder. 
-    
-    ### Step 4: 
-    
-    Log into Teams test environment Finally, you need to test your app in Teams. To do this, follow these steps: 
-
-    1. Log into Teams with the provided credentials. 
-    2. Make sure the feature flag is enabled by doing ctrl+alt+shift+8 and go settings and search for `enableSME` and make sure it is enabled. 
-    3. Side-load the app. 
-    4. Test it out! By following these steps, you can successfully implement API-based Messaging Extensions in your Teams app. For more information, you can refer to the [Teams Developer documentation](/messaging-extensions/what-are-messaging-extensions).
+    1. Go to Visual Studio Code.
+    1. From the left pane, select Teams Toolkit.
+    1. Select **Create a New App**.
+    1. Select **Message Extension**.
+    1. Select **API Based Search Message Extension**.
+    1. Select **Start with an OpenAPI Description Document**.
+    1. Select **Browse** and select the OpenAPI specification document you saved earlier. A list of APIs available in the document appears.
+    1. Select the APIs from the list and select **OK**.
+    1. If you want to save the project in the default folder, select **Default folder**. Else, select **Browse** and select the location where you want to save the project.
+    1. Enter a suitable name for your app and then select **Enter**. Teams Toolkit creates a new project.
 
     ## Build and run your first bot app locally
 
@@ -749,11 +726,9 @@ items:
 
     You've done it!
 
-    You've created a Teams AI library bot.
+    You've created an API based message extension.
 
     :::image type="content" source="assets/images/bots/conversational-ai-sample-bot-chat2.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
-
-    Now that you've learned to create an app using Teams AI library, you can move on to learn about Teams AI capabilities.
 
     You've completed the tutorial.
 
