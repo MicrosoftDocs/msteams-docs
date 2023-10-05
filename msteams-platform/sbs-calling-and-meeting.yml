@@ -10,7 +10,7 @@ metadata:
   nextTutorialHref: bots/calls-and-meetings/registering-calling-bot.md
   nextTutorialTitle: Register a calling bot
   ms.custom: mvc
-  ms.localizationpriority: none
+  ms.localizationpriority: null
 items:
 - durationInMinutes: 1
   content: |

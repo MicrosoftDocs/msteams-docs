@@ -18,7 +18,7 @@ The following are the advantages of the new Teams client:
 
 You can use the following property to identify your app usage in the new Teams or Classic Teams client:
 
-* For TeamsJS v1.x: [`hostName`](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest#@microsoft-teams-js-context-hostname&preserve-view=true)
+* For TeamsJS v1.x: [`hostName`](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-context-hostname)
 * For TeamsJS v2.x: [`AppHostInfo`](/javascript/api/@microsoft/teams-js/app.appinfo?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-app-appinfo-host)
 
 > [!NOTE]

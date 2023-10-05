@@ -15,7 +15,7 @@ Consider the following factors to localize your Microsoft Teams app:
 
 ## Localize your AppSource listing
 
-If you're publishing the app to the store, provide metadata (descriptions, screenshots, name) in the languages that you would like your app to be listed in, and explicitly specify these languages on the **Marketplace listings** page in Partner Center. For more information, see [localized Microsoft AppSource fronts](/office/dev/store/prepare-localized-solutions#localized-microsoft-appsource-fronts). To support localized listings in the app store, you can add additional languages to your listing. The default language information you provide in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) for your listing appears in the [AppSource website](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource is one place for all your team needs. bring everything together including chats, meetings, calls, files, and tools to enable more productive teamwork.") listing for your app. Currently, the default language is English.
+If you're publishing the app to the Microsoft Teams Store, provide metadata (descriptions, screenshots, name) in the languages that you would like your app to be listed in, and explicitly specify these languages on the **Marketplace listings** page in Partner Center. For more information, see [localized Microsoft AppSource fronts](/office/dev/store/prepare-localized-solutions#localized-microsoft-appsource-fronts). To support localized listings in the Teams Store, you can add additional languages to your listing. The default language information you provide in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) for your listing appears in the [AppSource website](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource is one place for all your team needs. bring everything together including chats, meetings, calls, files, and tools to enable more productive teamwork.") listing for your app. Currently, the default language is English.
 
 ### Configure localization
 
@@ -83,17 +83,17 @@ You can provide additional .json files with translations of all the user facing 
 
 The Microsoft 365 host application applies the strings in the following order: default language strings -> user's language only strings -> user's language + user's region strings.
 
-For example, you provide a default language of 'fr' (French, all regions), and additional language files for 'en' (English, all regions) and 'en-gb' (English, Great Britain), the user's language is set to 'en-gb'. The following changes take place based on the language selection:
+For example, you provide a default language of `fr` (French, all regions), and additional language files for `en` (English, all regions) and `en-gb` (English, Great Britain), the user's language is set to `en-gb`. The following changes take place based on the language selection:
 
-1. The Microsoft 365 host application takes the 'fr' strings and overwrites them with the 'en' strings.
-1. Overwrite the 'en' strings with the 'en-gb' strings.
+1. The Microsoft 365 host application takes the `fr` strings and overwrites them with the `en` strings.
+1. Overwrite the `en` strings with the `en-gb` strings.
 
-If the user's language is set to 'en-ca', the following changes take place based on the language selection:
+If the user's language is set to `en-ca`, the following changes take place based on the language selection:
 
-1. The Microsoft 365 host application takes the 'fr' strings and overwrites them with the 'en' strings.
-1. Since no 'en-ca' localization is supplied, the 'en` localizations are used.
+1. The Microsoft 365 host application takes the `fr` strings and overwrites them with the `en` strings.
+1. Since no `en-ca` localization is supplied, the `en` localizations are used.
 
-If the user's language is set to 'es-es', the Microsoft 365 host application takes the 'fr' strings. The Microsoft 365 host application doesn't override the strings with any of the language files as no 'es' or 'es-es' translation is provided.
+If the user's language is set to `es-es`, the Microsoft 365 host application takes the `fr` strings. The Microsoft 365 host application doesn't override the strings with any of the language files as no `es` or `es-es` translation is provided.
 
 Therefore, you must provide top level, language only translations in your manifest. For example, `en` instead of `en-us`. You must provide region level overrides only for the few strings that need them.
 
@@ -161,8 +161,8 @@ If you provide localized versions of your application, the users respond with th
 
 ## See also
 
-* [Microsoft Teams store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+* [Microsoft Teams Store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 * [Create a Partner Center developer account](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)
-* [Prepare your Teams store submission](../deploy-and-publish/appsource/prepare/submission-checklist.md)
+* [Prepare your Teams Store submission](../deploy-and-publish/appsource/prepare/submission-checklist.md)
 * [Update Apple App Store Connect Team ID on Partner Center](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md)
 * [App manifest](../../resources/schema/manifest-schema.md)
