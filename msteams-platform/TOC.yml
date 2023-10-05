@@ -159,7 +159,7 @@
             href: toolkit/toolkit-v4/add-capability-v4.md
             displayName: Multiple capabilities app 
           - name: Create How-to Guides
-            href: toolkit/add-How-to guides-v5.md
+            href: toolkit/add-How-to-guides-v5.md
             displayName: Multiple capabilities app 
           - name: Create capability based cloud resources
             href: toolkit/add-resource.md  
@@ -556,7 +556,7 @@
     - name: Get notified when transcripts and recordings are available
       href: /graph/teams-changenotifications-callrecording-and-calltranscript
     - name: Get transcripts
-      href: /graph/api/resources/calltranscript
+      href: /graph/api/resources/calltranscript?view=graph-rest-1.0&preserve-view=true
     - name: Get recordings
       href: /graph/api/resources/callrecording?view=graph-rest-beta&preserve-view=true
   - name: Enhanced collaboration with Live Share
