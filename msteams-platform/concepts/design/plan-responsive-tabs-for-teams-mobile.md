@@ -25,7 +25,7 @@ Consider the following before you implement responsive tabs for your app in Team
 
     However, it's recommended to start with a user role with a larger base and possible new users for smaller screen experience.
 
-    In this case, the data analysts are the appropriate user roles to target first. You can gradually add functionalities to support other user roles on your Teams mobile.
+    In this case, the data analysts are the appropriate user role to target first. You can gradually add functionalities to support other user roles on your Teams mobile.
 
 ## Understand different stages to build apps
 
