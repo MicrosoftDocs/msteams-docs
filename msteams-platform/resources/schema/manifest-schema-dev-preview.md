@@ -864,25 +864,25 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 
 **Optional** &ndash; Object
 
-The set of add-ins for this app. Used to specify Outlook Add-ins within an app manifest for simplified distribution and acquisition across the Microsoft 365 ecosystem.
+Extensions are used to specify Outlook Add-ins within an app manifest, simplifying their distribution and acquisition across the Microsoft 365 ecosystem.
 
 > [!NOTE]
-Only one extension per app is supported.
+> Only one extension per app is supported.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`requirements`| Object | | | Specifies the set of client or host requirements for the extension. |
-|`runtimes`| array | | | Configures the sets of runtimes and actions that can be used by each extension point. For more information, see [Runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes). |
+|`runtimes`| array | | | Configures the sets of runtimes and actions that can be used by each extension point. For more information, see [Runtimes in Microsoft 365 Add-ins](/office/dev/add-ins/testing/runtimes). |
 |`ribbons`| array | | | Defines the ribbons extension point. |
 |`autoRunEvents`| array | | | Defines event-based activation extension points. |
 |`alternates`| array | | | Specifies relationship to alternate existing Microsoft 365 solutions. It is used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
-|`audienceClaimUrl`| string | 2048 characters | | The URL for your add-in. Used to validate Exchange user identity tokens. |
+|`audienceClaimUrl`| string | 2048 characters | | The URL for your extension and it's used to validate exchange user identity tokens. |
 
-For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview) documentation.
+For more information, see [Microsoft 365 Add-ins for app manifest](/office/dev/add-ins/develop/unified-manifest-overview).
 
 ### extensions.requirements
 
-Specifies the Microsoft 365 applications and [requirement sets](/javascript/api/requirement-sets) for an add-in. If the user's Microsoft 365 version doesn't support the specified requirements, the extension won’t be available in that client. Requirements are supported at the element and sub-element level. In both cases, the service only returns items that match the host.
+Specifies the Microsoft 365 apps and [requirement sets](/javascript/api/requirement-sets) for an Microsoft 365 Add-ins. If the user's Microsoft 365 version doesn't support the specified requirements, the extension won’t be available in that client. Requirements are supported at the element and sub-element level. In both cases, the service only returns items that match the host.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -961,7 +961,7 @@ Provides the ability to add buttons and menu items, collectively called "[add-in
 |`tabs.groups.controls.actionId`| string | 64 characters | ✔️ | Identifies the action that is taken when a user selects the control. The *actionId* must be an exact match for a `runtime.actions.id`.|
 |`tabs.groups.controls.enabled`| boolean | | | Indicates whether the control is initially enabled. Default is `true`.|
 |`tabs.groups.controls.overriddenByRibbonApi`| boolean | | | Specifies whether a button, menu, or menu item will be hidden on application and platform combinations that support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. Default is `false`.|
-|`tabs.groups.builtinGroupId`| string | 64 characters | | ID of a built-in group. For more information, see [Find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
+|`tabs.groups.builtinGroupId`| string | 64 characters | | ID of a built-in group. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
 
 ### extensions.autoRunEvents
 
@@ -969,7 +969,7 @@ Defines event-based activation extension points.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`events`| array | | ✔️ | Configures events that cause actions in an Outlook add-in to run automatically. For a concrete example, see [Use Smart Alerts and the OnMessageSend and OnAppointmentSend events in your Outlook add-in](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest).|
+|`events`| array | | ✔️ | Configures events that cause actions in an Outlook add-in to run automatically. For a concrete example, see [use smart alerts and the `OnMessageSend` and `OnAppointmentSend` events in your Outlook Add-ins](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest).|
 |`events.type`| string | 64 characters | | Specifies the type of event. For supported types, see [Supported events](/office/dev/add-ins/outlook/autolaunch?tabs=xmlmanifest#supported-events).|
 |`events.actionId`| string | 64 characters | | Identifies the action that is taken when the event fires. The *actionId* must be an exact match for a `runtime.actions.id`. |
 |`events.options`| object | | | Configures how Outlook responds to the event.|
