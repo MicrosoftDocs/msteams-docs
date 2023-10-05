@@ -16,7 +16,6 @@ After you create or upload your app, you can manage your apps in Developer Porta
 * [Advanced](#advanced)
 * [Develop](#develop)
 * [Publish](#publish)
-* [Manage rollouts](#manage-rollouts)
 
 ## Overview
 
