@@ -28,7 +28,7 @@ Outlook mobile users on Android and [Microsoft Outlook beta TestFlight](https://
 
 In this article you'll learn how to extend your Teams message extension to Outlook, which you can do either of the following:
 
-* [Build a new message extension app with Teams Toolkit and view it in Outlook.](#build-a-message-extension-app)
+* [Build a new message extension app with Teams Toolkit and view it in Outlook.](#build-a-message-extension-app-with-teams-toolkit-for-outlook)
 
 * [Extend an existing Teams message extension app to Outlook.](#extend-an-existing-teams-message-extension-app-to-outlook)
 
