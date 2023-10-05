@@ -51,7 +51,7 @@ Even if you intend your app to only run in Teams (and not Microsoft 365 app and 
 
 Once you're able, the next step is to [update existing application code](#2-update-teamsjs-references) with the changes described in this article. In the meantime, the v.1 to v.2 API translation layer provides backwards compatibility, ensuring your existing Teams app continues to work in TeamsJS version 2.0.
 
-To implement logic that runs your app in Teams specifically, use the following code snippet:
+To implement logic that runs your app specifically in Teams, use the following code snippet:
 
 ```js
 
