@@ -68,7 +68,7 @@ Follow these steps to quickly build a simplified Teams meeting app without any a
 
 Now you can [sideload your app with TeamsFx CLI](#sideload-your-app-using-teamsfx-cli) and then [preview your meeting app in Outlook](#preview-your-meeting-app-in-outlook).
 
-## Checklist for enabling meeting apps in Outlook
+## Checklist for enabling an existing Teams meeting app in Outlook
 
 The requirements for extending meeting apps in Outlook are similar to [extending personal tabs to Outlook](./extend-m365-teams-personal-tab.md), however you need to use TeamsFx CLI for sideloading, as sideloading from Teams isn't supported.
 
