@@ -24,15 +24,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
+**2023 October**
 
-
-**2023 September**
-
-* ***September 27, 2023***: [Configure your bot with read receipt events to identify if the recipient has read the message sent by the bot.](~/bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt)
-
-* ***September 26, 2023***: [Media elements in Adaptive Card.](task-modules-and-cards/cards/media-elements-in-adaptive-cards.md)
-
-* ***September 06, 2023***: [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md)
+***October 05, 2023***: [Configure your bot to receive meeting participant events.](apps-in-teams-meetings/meeting-apps-apis.md#receive-meeting-participant-events)
 
 :::column-end:::
 :::row-end:::
@@ -45,6 +39,9 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 27/09/2023 | Configure your bot with read receipt events to identify if the recipient has read the message sent by the bot. | Build bots > Bot conversations > [Messages in bot conversations](apps-in-teams-meetings/meeting-apps-apis.md#receive-meeting-participant-events) |
+| 26/09/2023 | Media elements in Adaptive Card. | Build cards and task modules > Build cards > [Media elements in Adaptive Card](task-modules-and-cards/cards/media-elements-in-adaptive-cards.md) |
+| 06/09/2023 | Generate a deep link to share content to stage in meetings. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meetings > [Share in meeting](concepts/build-and-test/share-in-meeting.md) |
 | 29/08/2023 | Use Microsoft Teams Store with intelligent search experience to display apps that are closest match to the user's specified characters. | Distribute your app > [Publish to the Teams Store](concepts/deploy-and-publish/appsource/publish.md#teams-store-search-experience) |
 | 28/08/2023 | Teams app manifest is now referred to as app manifest. | App manifest > [Overview](resources/schema/manifest-schema.md)|
 | 16/08/2023 | Use Teams Toolkit Visual Studio v17.7 extension with many new app development features to get started with app development for Teams. | Tools and SDKs > Tools > [Teams Toolkit for Visual Studio](toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md) |
@@ -346,9 +343,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2023 October**
+**2023 September**
 
-***October 05, 2023***: [Configure your bot to receive meeting participant events.](apps-in-teams-meetings/meeting-apps-apis.md#receive-meeting-participant-events)
+***September 28, 2023***: [Configure your bot during installation or after installation from the team or group chat where the bot is installed.](bots/how-to/bot-configuration-experience.md)
 
 :::column-end:::
 :::row-end:::
@@ -359,7 +356,6 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|28/09/2023| Configure your bot during installation or after installation from the team or group chat where the bot is installed. | Build bots > [Bot configuration experience](bots/how-to/bot-configuration-experience.md)|
 |31/08/2023| The new Teams client supports light theme for apps in Teams meetings. | Build tabs > [Get context for your tab](tabs/how-to/access-teams-context.md#handle-theme-change)|
 |28/08/2023| Teams app manifest is now referred to as app manifest. | App manifest > [App manifest schema](resources/schema/manifest-schema.md)|
 |22/08/2023| Enable RSC permissions for a user using the Graph APIs | Utilize Teams data with Microsoft Graph > Resource-specific consent > [Grant RSC permission to your app](graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings) |
