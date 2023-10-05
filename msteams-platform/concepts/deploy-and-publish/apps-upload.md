@@ -10,7 +10,7 @@ ms.date: 04/16/2023
 
 # Upload your app in Teams
 
-You can sideload Microsoft Teams apps without having to publish to your organization or the Teams store in the following scenarios:
+You can sideload Microsoft Teams apps without having to publish to your organization or the Microsoft Teams Store in the following scenarios:
 
 * You want to test and debug an app locally yourself or with other developers.
 * You built an app for yourself to automate a workflow.
@@ -86,7 +86,7 @@ You don't have to sideload your app again if you make code changes (these are re
 
 When a Teams app receives an update, the user must consent to update the app in any one context, and the app is automatically updated in all the related contexts (chats, channels, and meetings) where the app is installed. The user can update the app from any context.
 
-If an update is available for your app, follow these steps to update your app from the Microsoft Teams store:
+If an update is available for your app, follow these steps to update your app from the Teams Store:
 
 1. Go to **Microsoft Teams**.
 1. Select **Apps** > **Manage your apps**.
@@ -122,7 +122,7 @@ To remove app from Teams, follow the steps:
 > [!NOTE]
 >
 > * You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
-> * Currently, you can't migrate your custom app to the Teams store. If you want to list your app to the Teams store, see [how to publish your app to the Microsoft Teams store](appsource/publish.md).
+> * Currently, you can't migrate your custom app to the Teams Store. If you want to list your app to the Teams Store, see [how to publish your app to the Microsoft Teams Store](appsource/publish.md).
 
 ## Next step
 
