@@ -85,8 +85,3 @@ If you don't have a Teams developer account, you can get it free. Join the Micro
 
 1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a custom app** option in Teams.
 
-## Get a free Azure account
-
-If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
-
-Now you've got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to create first.
