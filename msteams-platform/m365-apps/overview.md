@@ -24,7 +24,7 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 | [**Link unfurling**](../tabs/tabs-link-unfurling.md) | `composeExtensions.messageHandlers` | Web, Desktop, Mobile | Web (preview), Desktop (preview) | - | Viewable/actionable (not composable) in Teams/Outlook mobile preview (iOS, Android). See [notes](extend-m365-teams-message-extension.md#link-unfurling). |
 | [**Adaptive Card Loop components**](./design-loop-components.md)|`composeExtensions.messageHandlers`|Web (preview), Desktop (preview) |Web (preview), Desktop (only for [new Outlook](https://support.microsoft.com/office/getting-started-with-the-new-outlook-for-windows-656bb8d9-5a60-49b2-a98b-ba7822bc7627) preview) |-| Viewable/actionable (not composable) in Teams/Outlook mobile preview (iOS, Android). See [notes](cards-loop-component.md).
 | [**Stage View**](extend-m365-teams-message-extension.md#stage-view)|`composeExtensions.messageHandlers`|Web, Desktop, Mobile|Web (preview), Desktop (preview)|-| Viewable/actionable (not composable) in Outlook mobile preview (iOS, Android). See [notes](extend-m365-teams-message-extension.md#stage-view).
-| [**Office Add-ins**](/office/dev/add-ins/develop/json-manifest-overview) (preview) | `extensions` | - | Web, Desktop | - | Only available in [devPreview](../resources/schema/manifest-schema-dev-preview.md) manifest version. See [notes](#office-add-ins-preview).|
+| [**Outlook Add-ins**](/office/dev/add-ins/develop/json-manifest-overview) (preview) | `extensions` | - | Web (preview), Desktop (preview) | - | Only available in [devPreview](../resources/schema/manifest-schema-dev-preview.md) manifest version. See [notes](#outlook-add-ins-preview).|
 
 Enrollment to [Microsoft 365 Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365) and [Microsoft 365 Apps update channel](/deployoffice/change-update-channels) requires admin opt-in for the entire organization or selected users. Update channels are device specific and apply only to installations of Microsoft 365 running on Windows.
 
@@ -73,9 +73,9 @@ Users can discover and use your meeting app right in the flow of their work when
 
 With an aim toward simplifying and streamlining the Microsoft 365 developer ecosystem, we're continuing to expand the app manifest into other areas of Microsoft 365 with the following.
 
-### Office Add-ins (preview)
+### Outlook Add-ins (preview)
 
-You can now define and deploy Office Add-ins in the [developer preview version](../resources/schema/manifest-schema-dev-preview.md) of the Microsoft Teams app manifest. Currently, this preview is limited to Outlook Add-ins running on subscription Microsoft 365 for Windows app.
+You can now define and deploy Outlook Add-ins in the [developer preview version](../resources/schema/manifest-schema-dev-preview.md) of the app manifest.
 
 For more information, see [app manifest for Office Add-ins (preview)](/office/dev/add-ins/develop/json-manifest-overview).
 
