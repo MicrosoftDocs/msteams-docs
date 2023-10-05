@@ -424,11 +424,11 @@ To test your setup for zero install link unfurling, follow these steps:
 
 1. Select **Managed apps**.
 
-:::image type="content" source="../../assets/images/teams-link-unfurling/manage-apps-admin.png" alt-text="Screenshot of Teams admin center and section for sideloading Teams apps":::
+    :::image type="content" source="../../assets/images/teams-link-unfurling/manage-apps-admin.png" alt-text="Screenshot of Teams admin center and section for sideloading Teams apps":::
 
 1. Select **Upload new app**.
 
-:::image type="content" source="../../assets/images/teams-link-unfurling/upload-app-admin.png" alt-text="Screenshot of Teams admin center and where to upload custom apps":::
+    :::image type="content" source="../../assets/images/teams-link-unfurling/upload-app-admin.png" alt-text="Screenshot of Teams admin center and where to upload custom apps":::
 
 1. Select **Upload**.
 
@@ -436,7 +436,7 @@ To test your setup for zero install link unfurling, follow these steps:
 
 1. After you successfully upload the app. In the Teams client, select the **Apps** > **Built for your org**.
 
-:::image type="content" source="../../assets/images/teams-link-unfurling/build-for-your-org.png" alt-text="Screenshot of Teams client with org sideloaded Teams app":::
+    :::image type="content" source="../../assets/images/teams-link-unfurling/build-for-your-org.png" alt-text="Screenshot of Teams client with org sideloaded Teams app":::
 
 1. You can test the `composeExtensions/anonymousQueryLink` invoke request by setting up a breakpoint in the method that implements the anonymousQueryLink request in your application.
 
