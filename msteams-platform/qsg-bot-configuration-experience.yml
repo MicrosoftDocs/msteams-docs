@@ -1,0 +1,130 @@
+### YamlMime:Tutorial
+title: Bot configuration experience quick start guide
+metadata:
+  title: Bot configuration experience quick start guide
+  description: In this module, learn how to quickly try the bot configuration.
+  audience: Developer
+  level: Beginner
+  ms.date: 04/07/2022
+  ms.topic: interactive-tutorial
+  nextTutorialHref: bots/how-to/bot-configuration-experience.md
+  nextTutorialTitle: Bot configuration experience
+  ms.custom: mvc
+  ms.localizationpriority: high
+items:
+- durationInMinutes: 1
+  content: |
+    > [!NOTE]
+    >
+    > * Bot configuration experience is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+    > * Bot configuration experience is supported in channel or group chat scopes only.
+    
+    Start Microsoft Teams app development with your first Teams app. 
+    You can create a bot app with Teams using Javascript. 
+
+    This quick start guide helps you to build configurable bot with Teams Toolkit. You'll see the following output after you've completed this guide:
+    
+    :::image type="content" source="~/assets/images/bots/configurationbot.gif" alt-text="Screenshot shows the configuration option for the bot in a Teams group chat.":::
+
+- title: Prerequisites
+  durationInMinutes: 1
+  content: |
+   Ensure you install the following tools for building and deploying your apps.
+
+   | &nbsp; | Install | For using... |
+   | --- | --- | --- |
+   | &nbsp; | [Teams Toolkit](~/toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
+   | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+   | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+   | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
+   | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm devDependencies).|
+
+    > [!NOTE]
+    > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
+
+
+    
+- title: Set up local environment
+  durationInMinutes: 1
+  content: |
+     1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+
+     1. Select **Code**. From the dropdown menu, select **Open with GitHub Desktop**.
+
+
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/clone-repository-tab-device.png" alt-text="cloning the repository":::
+
+
+     1. Select **Clone**.
+
+
+- title: Set up tunnel for local web server
+  durationInMinutes: 1
+  content: |    
+     [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+
+- title: Build and run your app
+  durationInMinutes: 1
+  content: |
+     1. Go to **Visual Studio Code**.
+
+     1. Select **Open a folder**, go to **Microsoft-Teams-Samples** > **samples** > **bot-configuration-app** and then select **Select folder**.
+
+     1. From the left pane, select **Teams Toolkit**.
+
+     1. Under **ACCOUNTS**, sign in to the following:
+        * **Microsoft 365 account**
+        * **Azure account**
+
+     1. To debug your app, enter **F5**.
+
+        A browser tab opens a Teams web client requesting to add the bot to your tenant.
+
+     1. From the dropdown next to **Add**, select **Add to a team** or **Add to a chat**.
+
+        :::image type="content" source="~/assets/images/bots/group-chat-add-Bot.png" alt-text="Screenshot shows add your bot to chat.":::
+
+     1. Enter the name of a chat in the search field.
+
+        :::image type="content" source="~/assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot shows bot added to a chat.":::
+
+     1. Select **Set up a bot**.
+
+        :::image type="content" source="~/assets/images/bots/set-up-a-bot.png" alt-text="Screenshot shows set up a bot in chat.":::
+
+         The bot is installed in the chat.
+
+- title: Reconfigure the bot
+  durationInMinutes: 1
+  content: |
+
+   1. Go to the chat and **@mention** the bot in the message compose area and select **Send**.
+
+      :::image type="content" source="~/assets/images/bots/mention-bot.png" alt-text="Screenshot shows the interaction of bot.":::
+
+   1. When you hover over the bot from the conversation, an Adaptive Card appears. Select the **Settings** icon in the Adaptive Card.
+
+      :::image type="content" source="~/assets/images/bots/bot-adaptive-card-interaction.png" alt-text="Screenshot shows the Adaptive Card with settings icon.":::
+
+      A bot configuration Adaptive Card appears.
+
+   1. Reconfigure the bot settings and select **Submit**.
+
+      :::image type="content" source="~/assets/images/bots/reconfigure-bot-settings.png" alt-text="Screenshot shows the Adaptive Card with settings icon to reconfigure.":::
+
+   1. The bot sends a response message.
+
+      :::image type="content" source="~/assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows the response message from the bot.":::
+  
+
+- title: Complete challenge
+  durationInMinutes: 1
+  content: |
+    Did you come up with something like this?
+
+    :::image type="content" source="~/assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows the response message from the bot.":::
+
+- content: |
+    You've completed the tutorial to get started with bot configuration!
+

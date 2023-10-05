@@ -1,4 +1,4 @@
-**Application ID URI**
+**Add Application ID URI**
 
 1. In the left pane, under **Manage**, select **Expose an API**.
 
@@ -12,7 +12,7 @@
 
    The following image shows the domain name:
 
-   :::image type="content" source="../../assets/images/include-files/app-id-uri-output.png" alt-text="Screenshot shows the redirect uri":::
+   :::image type="content" source="../../assets/images/include-files/app-id-uri-output.png" alt-text="Screenshot shows the redirect uri.":::
     <!--
        > [!NOTE]
        > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.

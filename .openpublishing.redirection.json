@@ -915,6 +915,10 @@
       {
         "source_path": "msteams-platform/tabs/how-to/app-caching.md",
         "redirect_url": "/microsoftteams/platform/tabs/how-to/app-caching-for-your-tab-app"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/add-How-to guides-v5.md",
+        "redirect_url": "/msteams-platform/toolkit/add-How-to-guides-v5"
       }
     ]
 }
