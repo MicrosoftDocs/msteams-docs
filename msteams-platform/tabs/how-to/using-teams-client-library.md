@@ -51,12 +51,11 @@ Even if you intend your app to only run in Teams (and not Microsoft 365 app and 
 
 Once you're able, the next step is to [update existing application code](#2-update-teamsjs-references) with the changes described in this article. In the meantime, the v.1 to v.2 API translation layer provides backwards compatibility, ensuring your existing Teams app continues to work in TeamsJS version 2.0.
 
-To implement Teams app-specific logic, include the following code snippet to your app that initializes the TeamsSDK and runs in Teams platform exclusively.
+To implement logic that runs your app in Teams specifically, use the following code snippet:
 
 ```js
-import 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
 
-// Ensure that the Teams SDK is initialized once no matter how often this is called
+// Ensure that the TeamsJS library is initialized once no matter how often this is called
 let teamsInitPromise;
 export function ensureTeamsSdkInitialized(){
     if (!teamsInitPromise) {
@@ -79,7 +78,7 @@ export async function inTeams(){
 }                                                                                                                                
 ```
 
-You must wait for the [app initialization](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-isinitialized) to complete before proceeding with the function call in order for the app to function correctly. Any program logic designed exclusively for Teams might not function correctly on other Microsoft 365 platforms. To ensure the smooth operation of your app across the Microsoft 365 ecosystem, make provisions for the logic handling of other Microsoft 365 platforms.
+You must wait for the [app initialization](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-isinitialized) to complete before proceeding with the function call in order for the app to function correctly. Any program logic designed exclusively for Teams might not function correctly on other Microsoft 365 applications. To ensure the smooth operation of your app across the Microsoft 365 ecosystem, make provisions for the logic handling of other Microsoft 365 applications.
 
 #### Authentication
 
