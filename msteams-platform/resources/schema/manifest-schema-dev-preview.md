@@ -436,7 +436,6 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`team.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch task module dynamically. Default value is `false`.|
-|`team.taskInfo`|Object|||Default value is `false`.|
 |`team.taskInfo.title`|String|64 characters|✔️|Initial dialog title.|
 |`team.taskInfo.width`|String|16||The dialog width is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`team.taskInfo.height`|String|16||The dialog height is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
