@@ -8,23 +8,28 @@ ms.date: 09/29/2023
 ---
 # Government clouds
 
-Cloud services that are specifically designed considering the high security and stringent compliance requirements to store and manage government data are Government clouds. Microsoft Teams platform service is extended to users of government clouds as part of Office 365 Government plans.
+Government sectors or agencies handling sensitive and confidential data need cloud platforms that are secure and compliant to handle the data. Government clouds are cloud services that are specifically designed considering the high security and stringent compliance requirements to store and manage government data.
+
+Considering the raising requirements, Microsoft has built three government cloud offerings (Government plans) based on security constraints and meet the requirements of the government sectors.
+
+| GCC | GCC-High | DoD |
+|---|---|---|
+| Government Community Cloud | Government Community Cloud High | Department of Defense |
+| GCC is a government-focused copy of the commercial environment. | GCC-High was created to meet the needs of DoD and Federal contractors. GCC-High is a copy of the DoD cloud but exists in its own sovereign environment. | DoD cloud is built for the Department of Defense only. DoD and Federal contractors must meet the stringent cybersecurity and compliance requirements. |
+| Built to meet the compliance requirements of cloud services for FedRAMP High, Defense Federal Acquisition Regulations Supplement (DFARS), and requirements for criminal justice and federal tax information systems (CJI and FTI data types). | Built to meet the compliance requirements of cloud services for Department of Defense Security Requirements Guidelines, DFARS, and International Traffic in Arms Regulations (ITAR). | Same compliance requirements as GCC-High but only DoD entities certified with DoD SRG L5 can purchase. |
+| Trials are available only for US Government entities. | Trials aren't available for GCC High. | Trials aren't available for DoD. |
+
+These three clouds are available only in the United States and aligned with the requirements of the US public sector. Microsoft Teams platform service is extended to users of government clouds as part of Office 365 Government plans for US.
 
 Let’s get to know about the different clouds and the Teams capabilities that are supported in each type of government cloud.
 
-## GCC, GCC-High, DoD
-
-Government Community Cloud ([GCC](../get-started/glossary.md)) is a government focused copy of the commercial environment. Department of Defense (DOD) and Federal contractors must meet the stringent cybersecurity and compliance requirements. For this purpose, GCC-High was created to meet the needs of DOD and Federal contractors. GCC-High is a copy of the DOD cloud but exists in its own sovereign environment. The DOD cloud is built for the Department of Defense only.
-
 ## Government clouds in Teams
 
-Solutions built for government resources are more secure and compliant that of a commercial. Government plans are designed for the unique needs of government organizations. They provide all the features and capabilities of Microsoft 365 services in a segmented government cloud community that enables organizations to meet U.S. compliance and security standards.
-
-There are four plans available and all supports Teams platform, but the capabilities that are supported may differ for each government cloud.
+All Microsoft 365 Government plans support Teams platform but the capabilities that are supported may differ for each government cloud.
 
 Government tenant may not have all the Teams features that's available in a commercial tenant. Some are restricted based on security and compliance and other features take time to be rolled out in government clouds.
 
-## Teams usage within Government clouds
+## Deploy Government clouds in Teams
 
 Considerations for [deploying Teams in Government cloud](/microsoftteams/expand-teams-across-your-org/teams-for-government-landing-page).
 
