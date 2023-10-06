@@ -566,7 +566,7 @@ A list of valid domains from which the app expects to load any content. Domain l
 It is **not** necessary to include the domains of identity providers you want to support in your app, however. For example, to authenticate using a Google ID, it's necessary to redirect to accounts.google.com, but you must not include accounts.google.com in `validDomains[]`.
 
 > [!IMPORTANT]
-> Do not add domains that are outside your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid.
+> Do not add domains that are outside your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` isn't valid.
 
 The object is an array with all elements of the type `string`. The maximum item of the object is 16 and maximum length is 2048 characters.
 
@@ -867,7 +867,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 Extensions are used to specify Outlook Add-ins within an app manifest, simplifying their distribution and acquisition across the Microsoft 365 ecosystem.
 
 > [!NOTE]
-> Only one extension per app is supported.
+> Each app supports only one extensions.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -882,11 +882,11 @@ For more information, see [Office Add-ins manifest for Microsoft 365](/office/de
 
 ### extensions.requirements
 
-Specifies the [requirement sets](/javascript/api/requirement-sets) for an Microsoft 365 Add-ins. If the user's Microsoft 365 version doesn't support the specified requirements, the extension won’t be available in that client. Requirements are supported at the element and sub-element level. In both cases, the service only returns items that match the host.
+It specifies the [requirement sets](/javascript/api/requirement-sets) for a Microsoft 365 Add-ins. If the Microsoft 365 version doesn't support the specified requirements, then the extension won’t be available. Requirements are supported at the element and sub-element level. In both cases, the service only returns items that match the host.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`requirements.capabilities`| Array | | | Identifies the requirement sets that the add-in needs to be installable. Each object in the array is made up of three strings: `name` (required), `minVersion`, and `maxVersion`. |
+|`requirements.capabilities`| Array | | | Identifies the requirement sets that the add-in needs to be installable. Options: `name` (required), `minVersion`, and `maxVersion`. |
 |`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the [requirement sets](/javascript/api/requirement-sets) that the add-in needs to run. |
 |`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement sets that the add-in needs to run. |
 |`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement sets that the add-in needs to run. |
@@ -895,30 +895,30 @@ Specifies the [requirement sets](/javascript/api/requirement-sets) for an Micros
 
 ### extensions.runtimes
 
-Configures the sets of [runtimes](/office/dev/add-ins/testing/runtimes) and actions that can be used by each extension point. For concrete examples of using `extensions.runtimes`, see [Create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), especially [Configure the runtime for a task pane](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-task-pane-command) and [Configure the runtime for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-function-command).
+It configures the sets of [runtimes](/office/dev/add-ins/testing/runtimes) and actions that each extension point can use. For example, to use `extensions.runtimes`, see [Create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), especially [Configure the runtime for a task pane](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-task-pane-command), and [Configure the runtime for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-function-command).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`| String | 64 characters | ✔️ | The ID for the runtime. |
-|`type`| String enum | | ✔️ | Specifies the type of runtime. `general` is supported enum value for [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime). |
-|`code`| Object | | ✔️ | Specifies the location of code for this runtime. Depending on the `runtime.type`, add-ins use either a JavaScript file or an HTML page with an embedded `<script>` tag that specifies the URL of a JavaScript file. URLs for both are required because there are scenarios in which you can't know which type of runtime your add-in uses. |
+|`type`| String enum | | ✔️ | Specifies the type of runtime. The supported enum value for [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime): `general`. |
+|`code`| Object | | ✔️ | Specifies the location of code for this runtime. Depending on the `runtime.type`, add-ins use either a JavaScript file or an HTML page with an embedded `<script>` tag that specifies the URL of a JavaScript file. URLs for both are required because there're scenarios in which you can't know which type of runtime your add-in uses. |
 |`code.page`| URL | | ✔️ | URL of the web page that contains an embedded `<script>` tag which specifies the URL of a JavaScript file (to be loaded in a [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime)). |
 |`code.script`| URL | | ✔️ | URL of the JavaScript file to be loaded in [JavaScript only](/office/dev/add-ins/testing/runtimes#javascript-only-runtime) runtimes. |
 |`lifetime`| String enum | | | Runtimes with a `short` lifetime don’t preserve state across executions; runtimes with a `long` lifetime do. For more information about runtime lifetime, see [Runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes).|
-|`actions`| Array | | | Specifies the set of actions supported by this runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
-|`actions[0].id`| String | 64 characters | ✔️ | Identifier for this action which is passed to the code file. |
+|`actions`| Array | | | Specifies the set of actions supported by the runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
+|`actions.id`| String | 64 characters | ✔️ | Identifier for the action which is passed to the code file. |
 |`actions.type`| String | | ✔️ | Supported values: `executeFunction` runs a JavaScript function without waiting for it to finish, `openPage` opens a page in a given view. |
-|`actions.displayName`| String | 64 characters | | Display name for the action. Currently, this is not used. In particular, it is *not* the label of a button or menu item that invokes the action (which is configured with `tabs.groups.controls.label`).|
-|`actions.pinnable`| Boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. Defaults to `false`.|
-|`actions.view`| String | 64 characters | | Used only when `actions.type` is `openPage`. A description of the page that opens in the view; for example, "home page".|
+|`actions.displayName`| String | 64 characters | | Display name for the action. Currently, this isn't used. In particular, it is not the label of a button or menu item that invokes the action (which is configured with `tabs.groups.controls.label`).|
+|`actions.pinnable`| Boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. Default value: `false`.|
+|`actions.view`| String | 64 characters | | The view where the page should be opened, for example, *home page*. It's used only when `actions.type` is `openPage`. |
 
 ### extensions.ribbons
 
-Provides the ability to add buttons and menu items, collectively called "[add-in commands](/office/dev/add-ins/design/add-in-commands)", to the Microsoft 365 application's ribbon. One ribbon definition is selected from the array based on the requirements, based on first-of order. For concrete examples of using `extensions.ribbons`, see [Create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), especially [Configure the UI for the task pane command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-task-pane-command) and [Configure the UI for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-function-command).
+It provides the ability to add buttons and menu items, collectively called [add-in commands](/office/dev/add-ins/design/add-in-commands), to the Microsoft 365 application's ribbon. One ribbon definition is selected from the array based on the requirements, based on first-of order. For example,to use `extensions.ribbons`, see [Create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), especially [Configure the UI for the task pane command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-task-pane-command), and [Configure the UI for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-function-command).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`contexts`| Array | 4 | | Specifies the Microsoft 365 application windows in which the ribbon customization is available to the user. Each item in the array is a member of a string array. Each item in the array is a member of a string array. Possible values are: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`|
+|`contexts`| Array | 4 | | Specifies the Microsoft 365 application windows in which the ribbon customization is available to the user. Each item in the array is a member of a string array. Possible values are: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`|
 |`tabs`| Array | |✔️| Configures custom tabs on the Microsoft 365 application ribbon. |
 |`tabs.id`| String | 64 characters | | Unique identifier for this tab within the app.|
 |`tabs.label`| String | 64 characters | | Text displayed for the tab.|
@@ -965,7 +965,7 @@ Provides the ability to add buttons and menu items, collectively called "[add-in
 
 ### extensions.autoRunEvents
 
-Defines event-based activation extension points.
+It defines event-based activation extension points.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -977,18 +977,18 @@ Defines event-based activation extension points.
 
 ### extensions.alternates
 
-Provides the ability to prefer or hide particular in-market add-ins when you have published multiple add-ins with overlapping functionality.
+It provides the ability to prefer or hide particular in-market add-ins when you've published multiple add-ins with overlapping functionality.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`prefer`| Object | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both.|
 |`prefer.comAddin`| Object | | | Specifies a COM add-in that must be used in place of the Microsoft 365 Web Add-in when the OS is Windows.|
 |`prefer.comAddin.progId`| String | 64 characters | ✔️ | Identifies the application type in which the extension can run.|
-|`hide`| Object | | | Configures how to hide another add-in that you have published whenever this add-in is installed, so users don't see both in the Microsoft 365 UI. For example, use this when you have previously published an add-in that uses the old XML manifest and you are replacing it with a version that uses the new JSON manifest. |
+|`hide`| Object | | | Configures how to hide another add-in that you've published whenever this add-in is installed, so users don't see both in the Microsoft 365 UI. For example, use this when you've previously published an add-in that uses the old XML manifest and you're replacing it with a version that uses the new JSON manifest. |
 |`hide.storeOfficeAddin`| Object | | | Specifies an Microsoft 365 Add-in available in Microsoft AppSource. |
 |`hide.storeOfficeAddin.officeAddinId`| String | 64 characters | ✔️ |ID of an in-market add-in to hide. This GUID is from the manifest `id` property, if the in-market add-in uses the JSON manifest, or from the `<Id>` element, if the in-market add-in uses the XML manifest.|
 |`hide.storeOfficeAddin.assetId`| String | 64 characters | ✔️ | The AppSource asset ID of the in-market add-in to hide.|
-|`hide.customOfficeAddin`| | | | Configures hiding an in-market add-in that is not distributed through AppSource.|
+|`hide.customOfficeAddin`| | | | Configures hiding an in-market add-in that isn't distributed through AppSource.|
 |`hide.customOfficeAddin.officeAddinId`|String | 64 characters | ✔️ | ID of the in-market add-in to hide. This GUID is from the manifest `id` property, if the in-market add-in uses the JSON manifest, or from the `<Id>` element, if the in-market add-in uses the XML manifest.|
 
 ## See also
