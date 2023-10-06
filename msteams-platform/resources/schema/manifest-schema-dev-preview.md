@@ -882,7 +882,7 @@ For more information, see [Office Add-ins manifest for Microsoft 365](/office/de
 
 ### extensions.requirements
 
-It specifies the [requirement sets](/javascript/api/requirement-sets) for a Microsoft 365 Add-ins. If the Microsoft 365 version doesn't support the specified requirements, then the extension won’t be available. Requirements are supported at the element and sub-element level. In both cases, the service only returns items that match the host.
+It specifies the [requirement sets](/javascript/api/requirement-sets) for a Microsoft 365 Add-ins. If the Microsoft 365 version doesn't support the specified requirements, then the extension won’t be available. Requirements are supported at the object and child object level.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
