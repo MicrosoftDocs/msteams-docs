@@ -187,9 +187,7 @@ items:
 
     ---
 
-    ## Build an API based message extension
-
-    ### Step 1: 
+    ## Build an API based message extension 
   
     You need to find an OpenAPI specification for the external service you want to interact with. The API spec must meet the following criteria: 
     
@@ -338,16 +336,6 @@ items:
 
     As you've already prepared for creating these apps, you can set up a new Teams project for creating the app.
 
-    In this tutorial, you'll learn:
-
-    1. [How to set up a new bot project with Teams Toolkit.](#create-your-bot-project-workspace)
-    1. [About the directory structure of your app project.](#take-a-tour-of-the-bot-app-source-code)
-
-    If the prerequisites are in place, let's begin!
-
-    > [!NOTE]
-    > The Visual Studio Code UI shown is from Mac. It might differ depending on your operating system, Teams Toolkit version, and environment.
-
     # [Visual Studio Code](#tab/vscode)
 
     1. Open Visual Studio Code.
@@ -360,16 +348,13 @@ items:
 
     1. Select **Message Extension**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app1.png" alt-text="Screenshot shows the wizard to Create New Project.":::
-
+       
     1. Select **API Based Search Message Extension**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
-   
+          
     1. Select **Start with an OpenAPI Description Document**.
 
-        :::image type="content" source="assets/images/bots/Teams-AI-library-typescript.png" alt-text="Screenshot shows the TypeScript option for programming language in Teams Toolkit.":::
-
+       
     1. Select **Browse** and select the OpenAPI specification document you saved earlier. A list of APIs available in the document appears.
 
     1. Select the APIs from the list and select **OK**.
@@ -414,55 +399,37 @@ items:
     ![Create a Teams app](~/assets/videos/javascript-bot-app1.gif)
     </details>
 
-    # [Command line](#tab/cli)
-
-    Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
-
-    ``` bash
-    teamsfx new
-    ```
-
-    You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
-
-    For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
-
-    1. Select **Create a new Teams app**.
-    1. Select **Bot** and deselect **Tab**.
-    1. Select **JavaScript** as the programming language.
-    1. Select **Enter** to select the default workspace folder.
-    1. Enter a suitable name for your app, like `HelloBot`. The name of the app must consist only of alphanumeric characters.
-
-    After you've answered all questions, your project is created.
-
     ---
 
     After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
-    :::image type="content" source="../msteams-platform/assets/images/bots/Teams-AI-library-ttk-files.png" alt-text="Screenshot shows the Teams Toolkit sample bot folder Structure.":::
+    :::image type="content" source="../msteams-platform/assets/images/Copilot/api-based-me-ttk-explorer.png" alt-text="Screenshot shows the Teams Toolkit sample bot folder Structure.":::
 
     | Folder name | Contents |
     | --- | --- |
-    | `env/.env.local.user` |Configuration file for local environment used by `teamsapp.yml` to customize the provisioning and deployment rules.  |
-    | `index.ts` |  Main entry point for the bot app. |
-    | `teamsBot.ts` | Teams activity handler. |
+    | `env/.env.dev.user` |Configuration file for local environment used by `teamsapp.yml` to customize the provisioning and deployment rules.  |
     | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
     | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
-    | `config.ts` | `config.ts` wraps access to environment variables that is used to set up the bots adapter. |
+    |`appPackage/apiSpecificationFiles/openapi.yml`|OpenAPI Specification file.|
+    | `appPackage/responseTemplates` | The Adaptive Card response template. |
     | `teamsapp.yml` |	This is the main Teams Toolkit project that defines properties and configuration stage definitions. |
-    | `teamsapp.local.yml` |This overrides teamsapp.yml with actions that enable local execution and debugging. |
-    | `infra/azure.parameters.json` | Parameters file for Azure BICEP provision for every environment. |
 
     > [!Tip]
     > Familiarize yourself with bots outside Teams before you integrate your first bot within Teams.
 
-    ## Build and run your first bot app locally
+    ## Run your  app locally
 
-    To build and run your app in the local environment:
+    To run your app in the local environment:
 
-    1. Select the **F5** key to run your app in debug mode.
+    1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
+    1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
+    1. Select the **Start debugging (F5)** to launch your app.
 
-        > [!NOTE]
-        > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check.
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely.":::
+   
+    1. Select **Add**.
+
+    Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens. You can navigate to a chat message and trigger your search commands from compose message area.
 
         <!-- markdownlint-disable MD033 -->
 
@@ -488,25 +455,6 @@ items:
 
         </details>
 
-        :::image type="content" source="assets/images/teams-toolkit-v2/first-bot/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed for debugging.":::
-
-        > [!NOTE]
-        > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens when the build is complete. This process can take three to five minutes to complete.
-
-        Teams runs your app in a web browser.
-
-    1. Sign in with your Microsoft 365 account, if prompted.
-
-    1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
-
-        :::image type="content" source="assets/images/bots/conversational-AI-add-sample-bot.png" alt-text="Screenshot shows an example of the add option to add a sample bot to the local machine.":::
-
-        Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
-
-        :::image type="content" source="assets/images/bots/conversational-ai-sample-bot-chat.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
-
-        You can type `Hi` to start interacting with the bot.
-
       <!-- markdownlint-disable MD033 -->
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
@@ -520,184 +468,6 @@ items:
       > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to sideload the app.
       </details> 
       
-- title: Deploy your first Teams app
-  durationInMinutes: 1
-  content: |
-
-    You've learned to create, build, and run Teams app. The final step is to deploy your app on Azure.
-
-    Let's deploy the first app on Azure using Teams Toolkit.
-
-    ## Sign in to your Azure account
-
-    Use this account to access the Microsoft Azure portal and to provision new cloud resources to support your app.
-
-    # [Visual Studio Code](#tab/viscode)
-
-    1. Open Visual Studio Code.
-    1. Open the project folder in which you created the bot app.
-    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
-    1. Select **Sign in to Azure**.
-
-        > [!TIP]
-        > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
-
-        Your default web browser opens to let you sign in to the account.
-    1. Sign in to your Azure account using your credentials.
-    1. Close the browser when prompted and return to Visual Studio Code.
-
-        The **ACCOUNTS** section in the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
-
-        Now you're ready to deploy your app to Azure!
-
-        Congratulations, you've created a Teams app! 
-        Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
-
-    # [Command line](#tab/cline)
-
-    1. Sign in to Microsoft 365 with the TeamsFx CLI:
-
-        ``` bash
-        teamsfx account login m365
-        ```
-
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
-
-    2. Sign in to Azure with the TeamsFx CLI:
-
-        ``` bash
-        teamsfx account login azure
-        ```
-
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
-
-        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
-
-        Congratulations, you've signed in your Azure account!
-        Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
-
-    ---
-
-    ## Deploy your app to Azure
-
-    Deployment consists of two steps. First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the bot app.
-    <br>
-    <br>
-    <details>
-    <summary>What's the difference between Provision and Deploy?</summary>
-    <br>
-    The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript) is copied to the resources. The <b>Deploy</b> step copies the code for your app to the resources you created during the provision step. It's common to deploy multiple times without provisioning new resources. Since the provision step can take some time to complete, it's separate from the deployment step.
-    </details>
-    <br>
-
-    # [Visual Studio Code](#tab/vscode)
-
-    Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the Visual Studio Code sidebar.
-
-    1. Select **Provision**.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the selection of provision in the cloud under Teams toolkit.":::
-
-    1. Select a subscription to use for the Azure resources.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing the subscription to use for the Azure resources.":::
-
-        Your app is hosted using Azure resources.
-
-        A dialog warns you that costs might be incurred when running resources in Azure.
-
-    1. Select **Provision**.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot showing a dialog box that costs ma be incurred when running resources in Azure.":::
-
-        The provisioning process creates resources in the Azure cloud. It might take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing a notice, which displays 'hellomsg' successfully provisioned in the cloud.":::
-
-        If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
-
-        The provisioned resource appears in the **ENVIRONMENT** section.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot showing the resource being provisioned in the environment section.":::
-
-    1. Select **Deploy** from the **LIFECYCLE** panel after provisioning is complete.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot showing deploy to cloud.":::
-
-        As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
-
-        Now, you can use the same process to deploy your Bot and Message Extension apps to Azure.
-
-    # [Command Line](#tab/cli)
-
-    In your terminal window:
-
-    1. Run `teamsfx provision`.
-
-        ``` bash
-        teamsfx provision
-        ```
-
-    When prompted, select an Azure subscription to use Azure resources.
-
-    Your app is hosted using Azure resources.
-
-    1. Run `teamsfx deploy`.
-
-        ``` bash
-        teamsfx deploy
-        ```
-
-    ---
-
-    ## Run the deployed app
-
-    After the provisioning and deployment steps are complete:
-
-    1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
-    1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
-    1. Select the **Start debugging (F5)** to launch your app from Azure.
-
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely.":::
-
-    1. Select **Add**.
-        
-        The toolkit displays a message to indicate that the app is added to Teams.
-
-        :::image type="content" source="assets/images/bots/conversational-AI-add-sample-bot2.png" alt-text="Screenshot shows an example of the add option to add a sample bot to the local machine.":::
-
-        Your app is loaded on Teams client.
-
-        :::image type="content" source="assets/images/bots/conversational-ai-sample-bot-chat2.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
-
-    <!-- markdownlint-disable MD033 -->
-    <details>
-    <summary>Learn what happens when you deployed your app to Azure</summary>
-
-    Before deployment, the application has been running locally:
-
-     * The backend runs using **Azure Functions Core Tools**.
-     * The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
-
-    Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
-
-     * The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
-     * The frontend application is deployed to an Azure Storage account configured for static web hosting.
-
-    </details>
-
-    Before deployment, the application has been running locally:
-
-      * The backend runs using **Azure Functions Core Tools**.
-      * The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
-
-      Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
-
-      * The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
-      * The frontend application is deployed to an Azure Storage account configured for static web hosting.
-
-      </details>
-
 - title: Congratulations!
   durationInMinutes: 1
   content: |
@@ -706,7 +476,6 @@ items:
 
     You've created an API based message extension.
 
-    :::image type="content" source="assets/images/bots/conversational-ai-sample-bot-chat2.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
-
+    
     You've completed the tutorial.
 

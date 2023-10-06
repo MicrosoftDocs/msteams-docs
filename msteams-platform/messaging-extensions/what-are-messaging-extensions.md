@@ -44,16 +44,15 @@ In the app manifest for Teams app, a single message extension is defined with up
 
 If you don't already have a message extension, there are two ways to build one:
 
-* API based message extension: Using the Teams Toolkit, developers can easily create a API-backed ME from an existing API or ChatGPT plugin. This method requires an OpenAPI specification, documenting the API. For more information, see [Build copilot plugin](../copilot/build-api-based-message-extension.md).
+* **API based message extension**: Using the Teams Toolkit, developers can easily create a API-backed ME from an existing API or ChatGPT plugin. This method requires an OpenAPI specification, documenting the API. For more information, see [API based Message extension](build-api-based-message-extension.md).
 
-* Bot based message extension:If you want a one-on-one conversational experience in addition to their plugin, they can create a new message extension from a bot using the Teams Toolkit. For more information, see [Build Bot based Message extension](../copilot/build-bot-based-message-extension.md).
+* **Bot based message extension**:If you want a one-on-one conversational experience in addition to their plugin, they can create a new message extension from a bot using the Teams Toolkit. For more information, see [Bot based Message extension](build-bot-based-message-extension.md).
 
 The following table differentiates the types of message extensions:
 
 |API based message extension  |Bot based message extension  |
 |---------|---------|
 |- Simpler and faster to create and maintain <br> - Use this option if you’re not planning to add a conversational bot to your app  <br> - Do not require any additional code or resources for bot logic <br> - Suitable for scenarios where the plugin only needs to communicate with a web service and does not need any complex logic or state management <br> - Privatized traffic as they don’t rely on Azure bot infrastructure.| - More flexibility <br> - Use this option if you’re also planning to build a conversational bot <br> - Can leverage the full capabilities of the bot framework SDK <br> - Suitable for scenarios where the plugin needs to communicate with multiple services, handle complex logic or user interactions, or maintain state across sessions.|
-
 
 ## Types of message extension commands
 
