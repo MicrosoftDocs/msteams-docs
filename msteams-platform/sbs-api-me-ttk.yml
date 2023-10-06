@@ -424,36 +424,33 @@ items:
     1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
     1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
     1. Select the **Start debugging (F5)** to launch your app.
-
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely.":::
-   
     1. Select **Add**.
 
     Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens. You can navigate to a chat message and trigger your search commands from compose message area.
 
-        <!-- markdownlint-disable MD033 -->
+    <!-- markdownlint-disable MD033 -->
 
-        <details>
-        <summary>Learn what happens when you run your app locally in the debugger.</summary>
+    <details>
+    <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
-        In case you're wondering, when you press the **F5** key, the Teams Toolkit:
+    In case you're wondering, when you press the **F5** key, the Teams Toolkit:
 
-        1. Checks all the following prerequisites:
-          - You're logged in with a Microsoft 365 account.
-          - Sideloading is enabled for your Microsoft 365 account.
-          - Supported Node.js version is installed.
-          - Port required by bot app is available.
+    1. Checks all the following prerequisites:
+        - You're logged in with a Microsoft 365 account.
+        - Sideloading is enabled for your Microsoft 365 account.
+        - Supported Node.js version is installed.
+        - Port required by bot app is available.
           
-        2. Install npm packages.
-        3. Starts Dev Tunnel to create an HTTP tunnel.
-        4. Registers the app in Azure Active Directory (Azure AD) and configures the app.
-        5. Registers the bot app in Bot Framework SDK and configures the bot app.
-        6. Registers the app in Teams Developer Portal and configures the app.
-        7. Starts the bot app.
-        8. Starts Teams in a web browser and sideloads the bot app.
+    2. Install npm packages.
+    3. Starts Dev Tunnel to create an HTTP tunnel.
+    4. Registers the app in Azure Active Directory (Azure AD) and configures the app.
+    5. Registers the bot app in Bot Framework SDK and configures the bot app.
+    6. Registers the app in Teams Developer Portal and configures the app.
+    7. Starts the bot app.
+    8. Starts Teams in a web browser and sideloads the bot app.
 
 
-        </details>
+    </details>
 
       <!-- markdownlint-disable MD033 -->
       <details>
@@ -476,6 +473,5 @@ items:
 
     You've created an API based message extension.
 
-    
     You've completed the tutorial.
 
