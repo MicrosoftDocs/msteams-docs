@@ -882,16 +882,16 @@ For more information, see [Microsoft 365 Add-ins for app manifest](/office/dev/a
 
 ### extensions.requirements
 
-Specifies the Microsoft 365 apps and [requirement sets](/javascript/api/requirement-sets) for an Microsoft 365 Add-ins. If the user's Microsoft 365 version doesn't support the specified requirements, the extension won’t be available in that client. Requirements are supported at the element and sub-element level. In both cases, the service only returns items that match the host.
+Specifies the [requirement sets](/javascript/api/requirement-sets) for an Microsoft 365 Add-ins. If the user's Microsoft 365 version doesn't support the specified requirements, the extension won’t be available in that client. Requirements are supported at the element and sub-element level. In both cases, the service only returns items that match the host.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`requirements.capabilities`| array | | | Identifies the requirement sets that the add-in needs to be installable. Each object in the array is made up of three strings: `name` (required), `minVersion`, and `maxVersion`. |
-|`requirements.capabilities.name`| string | | ✔️ | Identifies the name of the [requirement sets](/javascript/api/requirement-sets) that the add-in needs to run. |
-|`requirements.capabilities.minVersion`| string | | | Identifies the minimum version for the requirement sets that the add-in needs to run. |
-|`requirements.capabilities.maxVersion`| string | | | Identifies the maximum version for the requirement sets that the add-in needs to run. |
-|`requirements.scopes`| array of enums | 1 | | Identifies the scopes in which the add-in can run. `mail` is the only supported enum value.  This effectively defines the Microsoft 365 applications in which the extension can run. For example, `mail` means Outlook. |
-|`requirements.formFactors`| array of enums | | | Identifies the form factors that support the add-in. Supported values: `mobile`, `desktop`. |
+|`requirements.capabilities`| Array | | | Identifies the requirement sets that the add-in needs to be installable. Each object in the array is made up of three strings: `name` (required), `minVersion`, and `maxVersion`. |
+|`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the [requirement sets](/javascript/api/requirement-sets) that the add-in needs to run. |
+|`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement sets that the add-in needs to run. |
+|`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement sets that the add-in needs to run. |
+|`requirements.scopes`| Array of enums | 1 | | Identifies the scopes in which the add-in can run. `mail` is the only supported enum value.  This effectively defines the Microsoft 365 applications in which the extension can run. For example, `mail` means Outlook. |
+|`requirements.formFactors`| Array of enums | | | Identifies the form factors that support the add-in. Supported values: `mobile`, `desktop`. |
 
 ### extensions.runtimes
 
@@ -899,18 +899,18 @@ Configures the sets of [runtimes](/office/dev/add-ins/testing/runtimes) and acti
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`| string | 64 characters | ✔️ | The ID for the runtime. |
-|`type`| string enum | | ✔️ | Specifies the type of runtime. `general` is supported enum value for [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime). |
-|`code`| object | | ✔️ | Specifies the location of code for this runtime. Depending on the `runtime.type`, add-ins use either a JavaScript file or an HTML page with an embedded `<script>` tag that specifies the URL of a JavaScript file. URLs for both are required because there are scenarios in which you can't know which type of runtime your add-in uses. |
-|`code.page`| url | | ✔️ | URL of the web page that contains an embedded `<script>` tag which specifies the URL of a JavaScript file (to be loaded in a [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime)). |
-|`code.script`| url | | ✔️ | URL of the JavaScript file to be loaded in [JavaScript only](/office/dev/add-ins/testing/runtimes#javascript-only-runtime) runtimes. |
-|`lifetime`| string enum | | | Runtimes with a `short` lifetime don’t preserve state across executions; runtimes with a `long` lifetime do. For more information about runtime lifetime, see [Runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes).|
-|`actions`| array | | | Specifies the set of actions supported by this runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
-|`actions[0].id`| string | 64 characters | ✔️ | Identifier for this action which is passed to the code file. |
-|`actions.type`| string | | ✔️ | Supported values: `executeFunction` runs a JavaScript function without waiting for it to finish, `openPage` opens a page in a given view. |
-|`actions.displayName`| string | 64 characters | | Display name for the action. Currently, this is not used. In particular, it is *not* the label of a button or menu item that invokes the action (which is configured with `tabs.groups.controls.label`).|
-|`actions.pinnable`| boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. Defaults to `false`.|
-|`actions.view`| string | 64 characters | | Used only when `actions.type` is `openPage`. A description of the page that opens in the view; for example, "home page".|
+|`id`| String | 64 characters | ✔️ | The ID for the runtime. |
+|`type`| String enum | | ✔️ | Specifies the type of runtime. `general` is supported enum value for [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime). |
+|`code`| Object | | ✔️ | Specifies the location of code for this runtime. Depending on the `runtime.type`, add-ins use either a JavaScript file or an HTML page with an embedded `<script>` tag that specifies the URL of a JavaScript file. URLs for both are required because there are scenarios in which you can't know which type of runtime your add-in uses. |
+|`code.page`| URL | | ✔️ | URL of the web page that contains an embedded `<script>` tag which specifies the URL of a JavaScript file (to be loaded in a [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime)). |
+|`code.script`| URL | | ✔️ | URL of the JavaScript file to be loaded in [JavaScript only](/office/dev/add-ins/testing/runtimes#javascript-only-runtime) runtimes. |
+|`lifetime`| String enum | | | Runtimes with a `short` lifetime don’t preserve state across executions; runtimes with a `long` lifetime do. For more information about runtime lifetime, see [Runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes).|
+|`actions`| Array | | | Specifies the set of actions supported by this runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
+|`actions[0].id`| String | 64 characters | ✔️ | Identifier for this action which is passed to the code file. |
+|`actions.type`| String | | ✔️ | Supported values: `executeFunction` runs a JavaScript function without waiting for it to finish, `openPage` opens a page in a given view. |
+|`actions.displayName`| String | 64 characters | | Display name for the action. Currently, this is not used. In particular, it is *not* the label of a button or menu item that invokes the action (which is configured with `tabs.groups.controls.label`).|
+|`actions.pinnable`| Boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. Defaults to `false`.|
+|`actions.view`| String | 64 characters | | Used only when `actions.type` is `openPage`. A description of the page that opens in the view; for example, "home page".|
 
 ### extensions.ribbons
 
@@ -918,50 +918,50 @@ Provides the ability to add buttons and menu items, collectively called "[add-in
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`contexts`| array | 4 | | Specifies the Microsoft 365 application windows in which the ribbon customization is available to the user. Each item in the array is a member of a string array. Each item in the array is a member of a string array. Possible values are: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`|
-|`tabs`| array | |✔️| Configures custom tabs on the Microsoft 365 application ribbon. |
-|`tabs.id`| string | 64 characters | | Unique identifier for this tab within the app.|
-|`tabs.label`| string | 64 characters | | Text displayed for the tab.|
-|`tabs.position`| object | | | Configures the position of the custom tab relative to other tabs on the ribbon.|
-|`tabs.position.builtinTabId`| string | 64 characters | | The ID of the built-in tab. For more information, see [Find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
-|`tabs.position.align`| string enum | | |  Defines alignment of this custom tab relative to the specified built-in tab. Supported values: `after`, `before`|
-|`tabs.groups`| string |64 characters | | Defines tab groups.|
-|`tabs.groups.id`| string |64 characters | | Unique identifier for this tab group within the app. Must be different from any built-in group ID in the Microsoft 365 application and any other custom group.|
-|`tabs.groups.label`| string | 64 characters | | Text displayed for the group. |
-|`tabs.groups.icons`| array | | | Icons displayed for the group. |
-|`tabs.groups.icons.size`| number | |✔️| Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
+|`contexts`| Array | 4 | | Specifies the Microsoft 365 application windows in which the ribbon customization is available to the user. Each item in the array is a member of a string array. Each item in the array is a member of a string array. Possible values are: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`|
+|`tabs`| Array | |✔️| Configures custom tabs on the Microsoft 365 application ribbon. |
+|`tabs.id`| String | 64 characters | | Unique identifier for this tab within the app.|
+|`tabs.label`| String | 64 characters | | Text displayed for the tab.|
+|`tabs.position`| Object | | | Configures the position of the custom tab relative to other tabs on the ribbon.|
+|`tabs.position.builtinTabId`| String | 64 characters | | The ID of the built-in tab. For more information, see [Find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
+|`tabs.position.align`| String enum | | |  Defines alignment of this custom tab relative to the specified built-in tab. Supported values: `after`, `before`|
+|`tabs.groups`| String |64 characters | | Defines tab groups.|
+|`tabs.groups.id`| String |64 characters | | Unique identifier for this tab group within the app. Must be different from any built-in group ID in the Microsoft 365 application and any other custom group.|
+|`tabs.groups.label`| String | 64 characters | | Text displayed for the group. |
+|`tabs.groups.icons`| Array | | | Icons displayed for the group. |
+|`tabs.groups.icons.size`| Number | |✔️| Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
 |`tabs.groups.icons.url`| URL| | | URL to the icon.|
-|`tabs.groups.icons.file`| string | 2048 characters| | Relative path to the file that contains the icon. This property isn’t supported as a relative path. |
-|`tabs.groups.controls`| array | | | Configures the buttons and menus in the group. |
-|`tabs.groups.controls.id`| string | 64 characters| ✔️ | Unique identifier for this control within the app. Must be different from any built-in control ID in the Microsoft 365 application and any other custom control. |
-|`tabs.groups.controls.items`| object | | | Configures the items for a menu control. |
-|`tabs.groups.controls.items.id`| string | | ✔️ | Unique identifier for this item within the app. |
-|`tabs.groups.controls.items.type`| string enum | | ✔️ | Defines the control item type. Supported values: `menuItem`. |
-|`tabs.groups.controls.items.label`| string | 64 characters| ✔️ | Text displayed for the item. |
-|`tabs.groups.controls.items.icons`| array | | | Configures the icons for the custom item.|
-|`tabs.groups.controls.items.icons.size`| number | |✔️| Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
+|`tabs.groups.icons.file`| String | 2048 characters| | Relative path to the file that contains the icon. This property isn’t supported as a relative path. |
+|`tabs.groups.controls`| Array | | | Configures the buttons and menus in the group. |
+|`tabs.groups.controls.id`| String | 64 characters| ✔️ | Unique identifier for this control within the app. Must be different from any built-in control ID in the Microsoft 365 application and any other custom control. |
+|`tabs.groups.controls.items`| Object | | | Configures the items for a menu control. |
+|`tabs.groups.controls.items.id`| String | | ✔️ | Unique identifier for this item within the app. |
+|`tabs.groups.controls.items.type`| String enum | | ✔️ | Defines the control item type. Supported values: `menuItem`. |
+|`tabs.groups.controls.items.label`| String | 64 characters| ✔️ | Text displayed for the item. |
+|`tabs.groups.controls.items.icons`| Array | | | Configures the icons for the custom item.|
+|`tabs.groups.controls.items.icons.size`| Number | |✔️| Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
 |`tabs.groups.controls.items.icons.url`| URL| | | URL to the icon.|
-|`tabs.groups.controls.items.icons.file`| string | 2048 characters| | Relative path to the file that contains the icon. This property isn’t supported as a relative path. |
+|`tabs.groups.controls.items.icons.file`| String | 2048 characters| | Relative path to the file that contains the icon. This property isn’t supported as a relative path. |
 |`tabs.groups.controls.items.supertip`| | |✔️| Configures a supertip for the custom item. A *supertip* is a brief, possibly multi-line, box of help information about a control in a UI that becomes visible when the cursor hovers over the control.|
-|`tabs.groups.controls.items.supertip.title`| string | 64 characters | ✔️ | Title text of the supertip.|
-|`tabs.groups.controls.items.supertip.description`| string | 128 characters | ✔️ | Description of the supertip.|
-|`tabs.groups.controls.items.actionId`| string | 64 characters | ✔️ | Identifies the action that is taken when a user selects the control or menu item. The *actionId* must be an exact match for a `runtime.actions.id`. |
-|`tabs.groups.controls.items.enabled`| boolean | | | Indicates whether the control is initially enabled. Default is `true`.|
-|`tabs.groups.controls.items.overriddenByRibbonApi`| boolean | | | Specifies whether a group, button, menu, or menu item will be hidden on application and platform combinations that support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. Default is `false`.|
-|`tabs.groups.controls.type`| string | | ✔️ | Defines the control type. Supported values: `button`, `menu`.|
-|`tabs.groups.controls.builtinControlId`| string | 64 characters | ✔️ | ID of the existing Microsoft 365 control. For more information, see [Find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
+|`tabs.groups.controls.items.supertip.title`| String | 64 characters | ✔️ | Title text of the supertip.|
+|`tabs.groups.controls.items.supertip.description`| String | 128 characters | ✔️ | Description of the supertip.|
+|`tabs.groups.controls.items.actionId`| String | 64 characters | ✔️ | Identifies the action that is taken when a user selects the control or menu item. The *actionId* must be an exact match for a `runtime.actions.id`. |
+|`tabs.groups.controls.items.enabled`| Boolean | | | Indicates whether the control is initially enabled. Default is `true`.|
+|`tabs.groups.controls.items.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item will be hidden on application and platform combinations that support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. Default is `false`.|
+|`tabs.groups.controls.type`| String | | ✔️ | Defines the control type. Supported values: `button`, `menu`.|
+|`tabs.groups.controls.builtinControlId`| String | 64 characters | ✔️ | ID of the existing Microsoft 365 control. For more information, see [Find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
 |`tabs.groups.controls.label`| String | 64 characters | ✔️ | Text displayed for the control.|
-|`tabs.groups.controls.icons`| array | | | Defines the icon(s) for the control. |
-|`tabs.groups.controls.icons.size`| number | | ✔️ | Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
+|`tabs.groups.controls.icons`| Array | | | Defines the icon(s) for the control. |
+|`tabs.groups.controls.icons.size`| Number | | ✔️ | Size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Three image sizes are required: 16, 32, 80. |
 |`tabs.groups.controls.icons.url`| URL| | | URL to the icon.|
-|`tabs.groups.controls.icons.file`| string | 2048 characters| | Relative path to the file that contains the icon. This property isn’t supported as a relative path. |
-|`tabs.groups.controls.supertip`| object | | ✔️ | Configures a supertip for the control. |
-|`tabs.groups.controls.supertip.title`| string | 64 characters | ✔️ |Title text of the supertip.|
-|`tabs.groups.controls.supertip.description`| string | 128 characters | ✔️ | Description of the supertip.|
-|`tabs.groups.controls.actionId`| string | 64 characters | ✔️ | Identifies the action that is taken when a user selects the control. The *actionId* must be an exact match for a `runtime.actions.id`.|
-|`tabs.groups.controls.enabled`| boolean | | | Indicates whether the control is initially enabled. Default is `true`.|
-|`tabs.groups.controls.overriddenByRibbonApi`| boolean | | | Specifies whether a button, menu, or menu item will be hidden on application and platform combinations that support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. Default is `false`.|
-|`tabs.groups.builtinGroupId`| string | 64 characters | | ID of a built-in group. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
+|`tabs.groups.controls.icons.file`| String | 2048 characters| | Relative path to the file that contains the icon. This property isn’t supported as a relative path. |
+|`tabs.groups.controls.supertip`| Object | | ✔️ | Configures a supertip for the control. |
+|`tabs.groups.controls.supertip.title`| String | 64 characters | ✔️ |Title text of the supertip.|
+|`tabs.groups.controls.supertip.description`| String | 128 characters | ✔️ | Description of the supertip.|
+|`tabs.groups.controls.actionId`| String | 64 characters | ✔️ | Identifies the action that is taken when a user selects the control. The *actionId* must be an exact match for a `runtime.actions.id`.|
+|`tabs.groups.controls.enabled`| Boolean | | | Indicates whether the control is initially enabled. Default is `true`.|
+|`tabs.groups.controls.overriddenByRibbonApi`| Boolean | | | Specifies whether a button, menu, or menu item will be hidden on application and platform combinations that support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. Default is `false`.|
+|`tabs.groups.builtinGroupId`| String | 64 characters | | ID of a built-in group. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
 
 ### extensions.autoRunEvents
 
@@ -969,11 +969,11 @@ Defines event-based activation extension points.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`events`| array | | ✔️ | Configures events that cause actions in an Outlook add-in to run automatically. For a concrete example, see [use smart alerts and the `OnMessageSend` and `OnAppointmentSend` events in your Outlook Add-ins](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest).|
-|`events.type`| string | 64 characters | | Specifies the type of event. For supported types, see [Supported events](/office/dev/add-ins/outlook/autolaunch?tabs=xmlmanifest#supported-events).|
-|`events.actionId`| string | 64 characters | | Identifies the action that is taken when the event fires. The *actionId* must be an exact match for a `runtime.actions.id`. |
-|`events.options`| object | | | Configures how Outlook responds to the event.|
-|`events.options.sendMode`| string | | ✔️ | Actions to take during a mail send action. Supported values: `promptUser`, `softBlock`, `block`. For details about these values and their meaning, see [Available send mode options](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest#available-send-mode-options).|
+|`events`| Array | | ✔️ | Configures events that cause actions in an Outlook add-in to run automatically. For a concrete example, see [use smart alerts and the `OnMessageSend` and `OnAppointmentSend` events in your Outlook Add-ins](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest).|
+|`events.type`| String | 64 characters | | Specifies the type of event. For supported types, see [Supported events](/office/dev/add-ins/outlook/autolaunch?tabs=xmlmanifest#supported-events).|
+|`events.actionId`| String | 64 characters | | Identifies the action that is taken when the event fires. The *actionId* must be an exact match for a `runtime.actions.id`. |
+|`events.options`| Object | | | Configures how Outlook responds to the event.|
+|`events.options.sendMode`| String | | ✔️ | Actions to take during a mail send action. Supported values: `promptUser`, `softBlock`, `block`. For details about these values and their meaning, see [Available send mode options](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest#available-send-mode-options).|
 
 ### extensions.alternates
 
@@ -981,15 +981,15 @@ Provides the ability to prefer or hide particular in-market add-ins when you hav
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`prefer`| object | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both.|
-|`prefer.comAddin`| object | | | Specifies a COM add-in that must be used in place of the Microsoft 365 Web Add-in when the OS is Windows.|
-|`prefer.comAddin.progId`| string | 64 characters | ✔️ | Identifies the application type in which the extension can run.|
-|`hide`| object | | | Configures how to hide another add-in that you have published whenever this add-in is installed, so users don't see both in the Microsoft 365 UI. For example, use this when you have previously published an add-in that uses the old XML manifest and you are replacing it with a version that uses the new JSON manifest. |
-|`hide.storeOfficeAddin`| object | | | Specifies an Microsoft 365 Add-in available in Microsoft AppSource. |
-|`hide.storeOfficeAddin.officeAddinId`| string | 64 characters | ✔️ |ID of an in-market add-in to hide. This GUID is from the manifest `id` property, if the in-market add-in uses the JSON manifest, or from the `<Id>` element, if the in-market add-in uses the XML manifest.|
-|`hide.storeOfficeAddin.assetId`| string | 64 characters | ✔️ | The AppSource asset ID of the in-market add-in to hide.|
+|`prefer`| Object | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both.|
+|`prefer.comAddin`| Object | | | Specifies a COM add-in that must be used in place of the Microsoft 365 Web Add-in when the OS is Windows.|
+|`prefer.comAddin.progId`| String | 64 characters | ✔️ | Identifies the application type in which the extension can run.|
+|`hide`| Object | | | Configures how to hide another add-in that you have published whenever this add-in is installed, so users don't see both in the Microsoft 365 UI. For example, use this when you have previously published an add-in that uses the old XML manifest and you are replacing it with a version that uses the new JSON manifest. |
+|`hide.storeOfficeAddin`| Object | | | Specifies an Microsoft 365 Add-in available in Microsoft AppSource. |
+|`hide.storeOfficeAddin.officeAddinId`| String | 64 characters | ✔️ |ID of an in-market add-in to hide. This GUID is from the manifest `id` property, if the in-market add-in uses the JSON manifest, or from the `<Id>` element, if the in-market add-in uses the XML manifest.|
+|`hide.storeOfficeAddin.assetId`| String | 64 characters | ✔️ | The AppSource asset ID of the in-market add-in to hide.|
 |`hide.customOfficeAddin`| | | | Configures hiding an in-market add-in that is not distributed through AppSource.|
-|`hide.customOfficeAddin.officeAddinId`|string | 64 characters | ✔️ | ID of the in-market add-in to hide. This GUID is from the manifest `id` property, if the in-market add-in uses the JSON manifest, or from the `<Id>` element, if the in-market add-in uses the XML manifest.|
+|`hide.customOfficeAddin.officeAddinId`|String | 64 characters | ✔️ | ID of the in-market add-in to hide. This GUID is from the manifest `id` property, if the in-market add-in uses the JSON manifest, or from the `<Id>` element, if the in-market add-in uses the XML manifest.|
 
 ## See also
 
