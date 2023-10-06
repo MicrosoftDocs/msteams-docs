@@ -10,9 +10,12 @@ ms.date: 09/07/2023
 
 # API based Message extension
 
-API based plugins are message extensions that use a web service to handle user requests and responses. They do not require a bot registration or a bot framework SDK. They can be configured and deployed using the Developer Portal for Teams or the Teams Toolkit.
+> [!NOTE]
+> API based message extension only supports search commands.
 
-You can create an Copilot plugin in Teams using an OpenAPI Specification document. After you've created an OpenAPI Specification document for the APIs you want to use, upload the OpenAPI Specification document to Teams Toolkit or Developer portal for Teams to generate and integrate the client code in your app's project. Create an Adaptive Card template to handle the responses from the API.
+API based message extensions use a web service to handle user requests and responses. They do not require a bot registration or a bot framework SDK. They can be configured and deployed using the Developer Portal for Teams or the Teams Toolkit.
+
+You can create an API based message extension in Teams using an OpenAPI Specification document. After you've created an OpenAPI Specification document for the APIs you want to use, upload the OpenAPI Specification document to Teams Toolkit or Developer portal for Teams to generate and integrate the client code in your app's project. Create an Adaptive Card template to handle the responses from the API.
 
 An API based message extension helps to interact directly with third-party data, apps, and services, enhancing its capabilities and broadening its range of capabilities. WIth APIs for message extension, you can:
 
@@ -23,11 +26,12 @@ An API based message extension helps to interact directly with third-party data,
 ## Prerequisites
 
 1. **App manifest**: Use app manifest version 1.13 or later.
-2. **Microsoft 365** (For bot based plugin): You need to register your Bot on Azure bot service under Microsoft 365 Channel.
-3. **Single Sign-on (SSO)**: if your apps need SSO authentication then need to configure authorized client application.
-4. **OpenAPI Specification (OAS)**: Defines a standard, language-agnostic interface to HTTP APIs, which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. An OpenAPI Specification be used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases.
+1. **Microsoft 365** (For bot based plugin): You need to register your Bot on Azure bot service under Microsoft 365 Channel.
+1. **OpenAPI Specification (OAS)**: Defines a standard, language-agnostic interface to HTTP APIs, which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. An OpenAPI Specification be used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases.
 
-The following code is an example of an API spec in YAML format:
+The following code is an example of an API spec in YAML format: <br/>
+
+<details><summary>OpenAPI specification</summary>
 
    ```yml
    openapi: 3.0.0
@@ -117,9 +121,13 @@ The following code is an example of an API spec in YAML format:
               description: A successful response indicating that the repair was created
    ```
 
+</details>
+
 If you've created an OpenAPI specification document, you must create an Adaptive Card template for the bot to respond to the Get requests.
 
-The following is an example of the Adaptive Card template:
+The following is an example of the Adaptive Card template: <br/>
+
+<details><summary>Adaptive Card template</summary>
 
 ```json
 {
@@ -138,7 +146,7 @@ The following is an example of the Adaptive Card template:
                         "columns": [
                             {
                                 "type": "Column",
-                                "width": "stretch",
+                                 "width": "stretch",
                                 "items": [
                                     {
                                         "type": "TextBlock",
@@ -198,45 +206,13 @@ The following is an example of the Adaptive Card template:
 }
 ```
 
+</details>
+
 ## Manifest Update
 
  Update the app manifest with the composeExtensions property. The following is an example of the app manifest with the `composeExtensions` property:
 
    ```json
-   {
-      "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
-      "manifestVersion": "1.17",
-      "version": "1.0.0",
-      "id": "%MICROSOFT-APP-ID%",
-      "localizationInfo": {
-        "defaultLanguageTag": "en-us",
-        "additionalLanguages": [
-          {
-            "languageTag": "es-es",
-            "file": "en-us.json"
-          }
-        ]
-      },
-      "developer": {
-        "name": "Publisher Name",
-        "websiteUrl": "https://example.com/",
-        "privacyUrl": "https://example.com/privacy",
-        "termsOfUseUrl": "https://example.com/app-tos",
-        "mpnId": "1234567890"
-      },
-      "name": {
-        "short": "Name of your app (<=30 chars)",
-        "full": "Full name of app, if longer than 30 characters (<=100 chars)"
-      },
-      "description": {
-        "short": "Short description of your app (<= 80 chars)",
-        "full": "Full description of your app (<= 4000 chars)"
-      },
-      "icons": {
-        "outline": "A relative path to a transparent .png icon — 32px X 32px",
-        "color": "A relative path to a full color .png icon — 192px X 192px"
-      },
-      "accentColor": "A valid HTML color code.",
       "composeExtensions": [
         {
           "type": "ApiBased",
@@ -292,7 +268,6 @@ In the app manifest, Include a JSON path for the response schema. If you don't h
 |`composeExtension.command.apiResponseRenderingTemplateFile`| A template used to format the JSON response from developer’s API to Adaptive card response. The property is mandatory for `ApiBased` composeExtensions type.   |
 |`ComposeExtension.LLMdescription`|Description for the LLM |
 
-
 ## Best practices
 
 Message extension plugins are a type of Teams app that allows you to integrate your business chat functionality directly into Teams. This can enhance your app's usability and provide a seamless user experience. To implement this feature, you need to set specific parameters in the composeExtension section of your Teams app manifest:
@@ -300,7 +275,7 @@ Message extension plugins are a type of Teams app that allows you to integrate y
 * Set composeExtension.composeExtensionType to `apiBased`.
 * Define `composeExtension.apiSpecificationFile` as the relative path to the OpenAPI specification file within the folder.
 
-### API based Message Extensions
+### API based message extensions
 
 API based Message Extensions (MEs) are a powerful tool that allows you to extend the functionality of your Teams app by integrating with external APIs. This can greatly enhance the capabilities of your app and provide a richer user experience. To implement OpenAPI MEs, you need to follow these guidelines:
 
@@ -310,11 +285,11 @@ API based Message Extensions (MEs) are a powerful tool that allows you to extend
 Neither zero nor more than one parameter is supported.
 * A response rendering template must be defined per command. This file, used to convert responses from an API, must be local just like the OpenAPI specification. The command portion of the manifest must point to this template file under composeExtension.command.apiResponseRenderingTemplateFile within the app manifest. Each command will point to a different response rendering template file.
 
-
 ### OpenAPI specification
 
 Developers can't require users to enter a parameter for a header or cookie. If headers need to be passed, a default value for the header can be set in the specification. This simplifies the user experience and reduces the risk of errors.
-* `oneOf`, `anyOf`, `allOf`, `not ` (swagger.io) aren't supported. These constructs aren't compatible with the Teams platform.
+
+* `oneOf`, `anyOf`, `allOf`, `not` (swagger.io) aren't supported. These constructs aren't compatible with the Teams platform.
 * Constructing arrays for the request aren't supported, but nested objects within a JSON request body are supported. This allows for complex data structures while maintaining compatibility with the Teams platform.
 * The request body (if present) can only be application/json. This is a common standard that ensures compatibility with a wide range of APIs.
 * Only one required parameter without a default value is allowed. We're only supporting single parameter search right now. This simplifies the user experience and reduces the risk of errors.
@@ -323,8 +298,7 @@ Developers can't require users to enter a parameter for a header or cookie. If h
 
 ## Build API based message extension
 
-You can create an API based message extension using Developer Portal for Teams, Teams Toolkit and Teams CLI. 
-
+You can create an API based message extension using Developer Portal for Teams, Teams Toolkit and Teams CLI.
 
 # [Developer portal for Teams](#tab/developer-portal-for-teams)
 
@@ -404,7 +378,7 @@ An API based ME is created.
 
 1. Follow these steps for the respective API types:
 
-   # [New API](#tab/new-api)
+# [New API](#tab/new-api)
 
    1. Select a programming language.
 
@@ -414,7 +388,7 @@ An API based ME is created.
 
    1. Enter the name of your app and select **Enter**. Teams Toolkit creates a new plugin with API from Azure functions.
 
-   # [OpenAPI specification](#tab/openapi-specification)
+# [OpenAPI specification](#tab/openapi-specification)
 
    1. Enter or browse the OpenAPI specification doc location.
 
