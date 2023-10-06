@@ -688,6 +688,11 @@ The following code shows an example of Adaptive Cards with `invoke` action:
 }
 ```
 
+| Property | Description |
+| --- | --- |
+| `type` | Set to `invoke`. |
+| `value` | Set the value to display. |
+
 The following code shows an example of Adaptive Cards with `invoke` action with additional payload data:
 
 ```json
