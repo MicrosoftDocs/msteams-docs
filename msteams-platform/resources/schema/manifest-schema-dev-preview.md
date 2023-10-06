@@ -872,11 +872,11 @@ Extensions are used to specify Outlook Add-ins within an app manifest, simplifyi
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`requirements`| Object | | | Specifies the set of client or host requirements for the extension. |
-|`runtimes`| array | | | Configures the sets of runtimes and actions that can be used by each extension point. For more information, see [Runtimes in Microsoft 365 Add-ins](/office/dev/add-ins/testing/runtimes). |
-|`ribbons`| array | | | Defines the ribbons extension point. |
-|`autoRunEvents`| array | | | Defines event-based activation extension points. |
-|`alternates`| array | | | Specifies relationship to alternate existing Microsoft 365 solutions. It is used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
-|`audienceClaimUrl`| string | 2048 characters | | The URL for your extension and it's used to validate exchange user identity tokens. |
+|`runtimes`| Array | | | Configures the sets of runtimes and actions that can be used by each extension point. For more information, see [runtimes in Microsoft 365 Add-ins](/office/dev/add-ins/testing/runtimes). |
+|`ribbons`| Array | | | Defines the ribbons extension point. |
+|`autoRunEvents`| Array | | | Defines event-based activation extension points. |
+|`alternates`| Array | | | Specifies relationship to alternate existing Microsoft 365 solutions. It is used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
+|`audienceClaimUrl`| String | 2048 characters | | The URL for your extension and it's used to validate exchange user identity tokens. |
 
 For more information, see [Microsoft 365 Add-ins for app manifest](/office/dev/add-ins/develop/unified-manifest-overview).
 
