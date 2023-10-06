@@ -908,7 +908,7 @@ It configures the sets of [runtimes](/office/dev/add-ins/testing/runtimes) and a
 |`actions`| Array | | | Specifies the set of actions supported by the runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
 |`actions.id`| String | 64 characters | ✔️ | Identifier for the action which is passed to the code file. |
 |`actions.type`| String | | ✔️ | Supported values: `executeFunction` runs a JavaScript function without waiting for it to finish, `openPage` opens a page in a given view. |
-|`actions.displayName`| String | 64 characters | | Display name for the action. Currently, this isn't used. In particular, it is not the label of a button or menu item that invokes the action (which is configured with `tabs.groups.controls.label`).|
+|`actions.displayName`| String | 64 characters | | Display name for the action. Currently, this isn't used. In specific, it is not the label of a button or menu item that invokes the action (which is configured with `tabs.groups.controls.label`).|
 |`actions.pinnable`| Boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. Default value: `false`.|
 |`actions.view`| String | 64 characters | | The view where the page should be opened, for example, *home page*. It's used only when `actions.type` is `openPage`. |
 
@@ -977,19 +977,19 @@ It defines event-based activation extension points.
 
 ### extensions.alternates
 
-It provides the ability to prefer or hide particular in-market add-ins when you've published multiple add-ins with overlapping functionality.
+It provides the ability to prefer or hide specific in-market add-ins when you've published multiple add-ins with overlapping functionality.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`prefer`| Object | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both.|
 |`prefer.comAddin`| Object | | | Specifies a COM add-in that must be used in place of the Microsoft 365 Web Add-in when the OS is Windows.|
 |`prefer.comAddin.progId`| String | 64 characters | ✔️ | Identifies the application type in which the extension can run.|
-|`hide`| Object | | | Configures how to hide another add-in that you've published whenever this add-in is installed, so users don't see both in the Microsoft 365 UI. For example, use this when you've previously published an add-in that uses the old XML manifest and you're replacing it with a version that uses the new JSON manifest. |
-|`hide.storeOfficeAddin`| Object | | | Specifies an Microsoft 365 Add-in available in Microsoft AppSource. |
-|`hide.storeOfficeAddin.officeAddinId`| String | 64 characters | ✔️ |ID of an in-market add-in to hide. This GUID is from the manifest `id` property, if the in-market add-in uses the JSON manifest, or from the `<Id>` element, if the in-market add-in uses the XML manifest.|
+|`hide`| Object | | | Configures how to hide another add-in that you've published whenever this add-in is installed, so users don't see both in the Microsoft 365 UI. For example, use this when you've previously published an add-in that uses the old XML app manifest and you're replacing it with a version that uses the new JSON app manifest. |
+|`hide.storeOfficeAddin`| Object | | | Specifies a Microsoft 365 Add-in available in Microsoft AppSource. |
+|`hide.storeOfficeAddin.officeAddinId`| String | 64 characters | ✔️ |ID of an in-market add-in to hide. This GUID is from the app manifest `id` property, if the in-market add-in uses the JSON app manifest, or from the `<Id>` element, if the in-market add-in uses the XML app manifest.|
 |`hide.storeOfficeAddin.assetId`| String | 64 characters | ✔️ | The AppSource asset ID of the in-market add-in to hide.|
 |`hide.customOfficeAddin`| | | | Configures hiding an in-market add-in that isn't distributed through AppSource.|
-|`hide.customOfficeAddin.officeAddinId`|String | 64 characters | ✔️ | ID of the in-market add-in to hide. This GUID is from the manifest `id` property, if the in-market add-in uses the JSON manifest, or from the `<Id>` element, if the in-market add-in uses the XML manifest.|
+|`hide.customOfficeAddin.officeAddinId`|String | 64 characters | ✔️ | ID of the in-market add-in to hide. This GUID is from the app manifest `id` property, if the in-market add-in uses the JSON app manifest, or from the `<Id>` element, if the in-market add-in uses the XML app manifest.|
 
 ## See also
 
