@@ -901,7 +901,7 @@ It configures the sets of [runtimes](/office/dev/add-ins/testing/runtimes) and a
 |---|---|---|---|---|
 |`id`| String | 64 characters | ✔️ | The ID for the runtime. |
 |`type`| String enum | | ✔️ | Specifies the type of runtime. The supported enum value for [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime): `general`. |
-|`code`| Object | | ✔️ | Specifies the location of code for this runtime. Add-ins utilize either a JavaScript file or an HTML page with an embedded '<script>' tag that specifies the URL of a JavaScript file, depending on the `runtime.type`. Both URLs are necessary in situations where the add-in's runtime type is uncertain. |
+|`code`| Object | | ✔️ | Specifies the location of code for this runtime. Add-ins utilize either a JavaScript file or an HTML page with an embedded `script` tag that specifies the URL of a JavaScript file, depending on the `runtime.type`. Both URLs are necessary in situations where the add-in's runtime type is uncertain. |
 |`code.page`| URL | | ✔️ | The URL of the web page that contains an embedded `script` tag which specifies the URL of a JavaScript file (to be loaded in a [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime)). |
 |`code.script`| URL | | ✔️ | The URL of the JavaScript file to be loaded in [JavaScript only](/office/dev/add-ins/testing/runtimes#javascript-only-runtime) runtimes. |
 |`lifetime`| String enum | | | Runtimes with a `short` lifetime don’t preserve state across executions; runtimes with a `long` lifetime do. For more information about runtime lifetime, see [Runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes).|
