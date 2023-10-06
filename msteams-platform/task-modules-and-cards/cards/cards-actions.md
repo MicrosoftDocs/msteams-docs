@@ -696,9 +696,9 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
   "title": "submit"
   "data": {
     "msteams": {
-        "type": "task/fetch"
-    },
-    "Value1": "some value"
+      "type": "invoke",
+      "Value": "some value"
+    }
   }
 }
 ```
