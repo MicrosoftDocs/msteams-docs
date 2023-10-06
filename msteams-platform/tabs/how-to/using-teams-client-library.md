@@ -55,9 +55,9 @@ To implement logic that runs your app specifically in Teams, use the following c
 
 ```js
 
-// Ensure that the TeamsJS library is initialized once no matter how often this is called
+// Ensure that you initialize the TeamsJS library 7once, regardless of how often this is called.
 let teamsInitPromise;
-export function ensureTeamsSdkInitialized(){
+export function ensureTeamsJSInitialized(){
     if (!teamsInitPromise) {
         teamsInitPromise = microsoftTeams.app.initialize();
     }
@@ -67,7 +67,7 @@ export function ensureTeamsSdkInitialized(){
 // Function returns a promise which resolves to true if we're running in Teams
 export async function inTeams(){
   try {
-    await ensureTeamsSdkInialized();
+    await ensureTeamsJSInitialized();
     const context = await microsoftTeams.app.getContext();
     return (context.app.host.name === microsoftTeams.HostName.teams);
   }
