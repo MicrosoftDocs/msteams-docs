@@ -1554,7 +1554,7 @@ Following are the examples of the participant join and leave event payloads:
 
 # [Participant join event](#tab/participant-join-event) 
 
-The following code provides an example of the participant join event payload:
+The following is an example of the participant join event payload:
 
 ```json
 { 
@@ -1604,7 +1604,7 @@ The following code provides an example of the participant join event payload:
 
 # [Participant leave event](#tab/participant-leave-event) 
 
-The following code provides an example of the participant leave event payload:
+The following is an example of the participant leave event payload:
 
 ```json
 { 
