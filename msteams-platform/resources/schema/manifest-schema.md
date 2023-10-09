@@ -355,7 +355,7 @@ The version of the app manifest schema that this manifest is using. Use `1.13` t
 
 **Required** &ndash; String
 
-The version of a specific app. When you update something in your app manifest, the version must be incremented too. This way, when the new app manifest is installed, it overwrites the existing one and the user receives the new functionality. When this app was submitted to the store, the new app manifest must be resubmitted and revalidated. The app users receive the new updated app manifest automatically within few hours after the app manifest is approved.
+The version of a specific app. When you update something in your app manifest, the version must be incremented too. This way, when the new app manifest is installed, it overwrites the existing one and the user receives the new functionality. When this app was submitted to the Microsoft Teams Store, the new app manifest must be resubmitted and revalidated. The app users receive the new updated app manifest automatically within few hours after the app manifest is approved.
 
 If the app requests for permissions change, the users are prompted to upgrade and reconsent to the app.
 
@@ -376,7 +376,7 @@ The ID stored in Teams Admin Center is the **External App ID** and it's visible 
 
 **Required** &ndash; Object
 
-Specifies information about your company. For apps submitted to the Teams store, these values must match the information in your store listing. For more information, see the [Teams store publishing guidelines](~/concepts/deploy-and-publish/appsource/publish.md). Developer name helps improve your app discoverability in the Teams store.
+Specifies information about your company. For apps submitted to the Teams Store, these values must match the information in your Teams Store listing. For more information, see the [Teams Store publishing guidelines](~/concepts/deploy-and-publish/appsource/publish.md). Developer name helps improve your app discoverability in the Teams Store.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -390,7 +390,7 @@ Specifies information about your company. For apps submitted to the Teams store,
 
 **Required** &ndash; Object
 
-The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` must be different. App name helps improve your app discoverability in the Teams store.
+The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` must be different. App name helps improve your app discoverability in the Teams Store.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -401,7 +401,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 
 **Required** &ndash; Object
 
-Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry. App description helps improve your app discoverability in the Teams store.
+Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry. App description helps improve your app discoverability in the Teams Store.
 
 Ensure that your description describes your experience and helps potential customers understand what your experience does. You must note in the full description, if an external account is required for use. The values of `short` and `full` must be different. Your short description can't be repeated within the long description and must not include any other app name.
 

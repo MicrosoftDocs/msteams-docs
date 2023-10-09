@@ -10,7 +10,7 @@ metadata:
   nextTutorialHref: webhooks-and-connectors/how-to/add-outgoing-webhook.md
   nextTutorialTitle: Read more on Outgoing Webhooks
   ms.custom: mvc
-  ms.localizationpriority: High
+  ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
@@ -39,7 +39,7 @@ items:
      | --- | --- | --- |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
-     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm devDependencies). |
+     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
      
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -47,28 +47,11 @@ items:
 - title: Set up local environment
   durationInMinutes: 1
   content: |
-   Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
-
-    1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
-    1. Select **Code**. From the dropdown menu, select **Open with GitHub Desktop**.
- 
-       :::image type="content" source="./assets/images/sbs-outgoing-webhooks/clone-repository.png" alt-text="Screenshot of GitHub web page.  The menu entry titled Open with GitHub Desktop under Code dropdown menu is highlighted in red.":::
-
-    1. Select **Clone**. 
+   [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
 - title: Create Outgoing Webhooks
   durationInMinutes: 5
   content: |
-    1. Go to **Teams** and select **Teams** from the left pane.
-
-    1. Go to a team that you want, select More options (•••), and then select **Manage team**.
-
-       :::image type="content" source="./assets/images/sbs-outgoing-webhooks/manage-team.png" alt-text="Screenshot of Teams app with Manage team option under Contoso dropdown menu highlighted in red.":::
-
-    1. Select the **Apps** tab from the navigation bar.
-
-       :::image type="content" source="./assets/images/sbs-outgoing-webhooks/app-selection.png" alt-text="Screenshot shows the selection of Apps tab under Contoso.":::
-
     **Create a tunnel**
 
       # [dev tunnel](#tab/dev)
@@ -80,7 +63,17 @@ items:
       [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
       
       ---     
-      
+    
+    1. Go to **Teams** and select **Teams** from the left pane.
+
+    1. Go to a team that you want, select More options (•••), and then select **Manage team**.
+
+       :::image type="content" source="./assets/images/sbs-outgoing-webhooks/manage-team.png" alt-text="Screenshot of Teams app with Manage team option under Contoso dropdown menu highlighted in red.":::
+
+    1. Select the **Apps** tab from the navigation bar.
+
+       :::image type="content" source="./assets/images/sbs-outgoing-webhooks/app-selection.png" alt-text="Screenshot shows the selection of Apps tab under Contoso.":::
+  
     1. Select **Create an outgoing webhook** from the lower-right corner of the window.
 
        :::image type="content" source="./assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png" alt-text="Screenshot shows the option Create an outgoing webhook highlighted in red.":::
@@ -89,11 +82,11 @@ items:
      
         * **Name**: The webhook title in @mention tab.
 
-        * **Callback URL**: The URL generated from ngrok that accepts JSON payloads and receives POST requests from Teams. To use the api/Sample or api/authenticatedSample, do the following:
+        * **Callback URL**: The URL generated from ngrok that accepts JSON payloads and receives POST requests from Teams. To use the `api/Sample` or `api/authenticatedSample`, do the following:
 
-            * For api/sample, copy-and-paste ngrok URL and append it with /api/sample.
+            * For api sample, copy and paste the `dev tunnel` or `ngrok` URL and append it with `/api/sample`.
 
-            * For authenticated sample, copy-and-paste ngrok URL and append it with /authenticatedSample?id=contoso.
+            * For api authenticatedSample, copy and paste the `dev tunnel` or `ngrok` URL and append it with `/authenticatedSample?id=contoso`.
 
         * **Description**: A detailed string that appears in the profile card and the team-level app dashboard.
 
@@ -113,7 +106,7 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-       1. Open **Visual Studio**.
+       1. Open Visual Studio.
 
        1. Go to **File** > **Open** > **Project/Solution...**.
     

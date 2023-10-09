@@ -49,13 +49,21 @@ Use RSC permissions to determine the data access methods for your app. A user's 
 
 * **Delegated context RSC permissions (delegated permission)**: Allows an app to access data only on behalf of a signed-in user. No access is allowed in the absence of a signed-in user. Only authorized users can install an app in a specific scope. They can also grant any delegated RSC permissions that the app requests in that specific scope at app installation. For example, if regular members have the permission to install an app inside a team, then they can also grant delegated RSC permission to the app in that specific team.
 
+### Basic RSC Permissions
+
+A limited set of RSC permissions have been reviewed by Microsoft privacy and security teams and have been deemed low risk. These permissions can be consented to at all times by any user when they install and use an app. The following low-risk basic permissions will always be consented to upon installation. 
+
+| Permission name | Action | Type: Delegated | Type: Application |
+| ----- | ----- | :-----: | :-----: |
+|`TeamsActivity.Send.Group`|Send activity feed notifications to users in this team. | NA | Supported |
+
 ### RSC-based data access APIs
 
 Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft TeamsJS client library support fine-grained data access through RSC. The supported modes and resource types vary across the API surfaces.
 
 | RSC mode | Supported SDKs | App manifest version | Resource types | RSC-related controls for the entire tenant | Who can consent to RSC permissions? |
 |---------|---------|---------|---------|---------|---------|
-|Application| • Microsoft Graph  <br> • Microsoft Bot Framework | >=v1.6 | Teams, chats, and meetings | • Microsoft Graph-based controls for chats and meetings <br> • Azure Active Directory (Azure AD) portal-based controls for Teams |• Team: A team owner <br> • Chat: A chat member <br> • Meeting: A meeting organizer or presenter |
+|Application| • Microsoft Graph  <br> • Microsoft Bot Framework | >=v1.6 | Teams, chats, and meetings | • Microsoft Graph-based controls for chats and meetings <br> • Azure Active Directory (Azure AD) portal-based controls for Teams |• Team: A team owner or member <br> • Chat: A chat member <br> • Meeting: A meeting organizer or presenter |
 | Delegated | Microsoft Teams Client | >=v1.12 | Teams, chats, meetings, and users | Always on | Any user authorized to install an app in the specific scope. |
 
 > [!NOTE]
@@ -177,3 +185,5 @@ The following table provides RSC permissions for a user and their applicable dat
 
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Permissions in Teams app](../App-permissions/Teams-app-permissions.md)
+* [Manage custom apps in Teams admin center](/microsoftteams/teams-custom-app-policies-and-settings)
+* [Allow members to upload custom apps](/microsoftteams/teams-custom-app-policies-and-settings?branch=main)

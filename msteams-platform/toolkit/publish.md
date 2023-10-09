@@ -17,14 +17,14 @@ Here's what you'll learn in this section:
 
 * [Publish to individual scope or sideload permission](#publish-to-individual-scope-or-sideload-permission)
 * [Publish to your organization](#publish-to-your-organization)
-* [Publish to Microsoft Teams store](#publish-to-microsoft-teams-store)
+* [Publish to Microsoft Teams Store](#publish-to-teams-store)
 
 ## Prerequisites
 
 * Ensure to create your [app package](~/concepts/build-and-test/apps-package.md) and [validate it](https://dev.teams.microsoft.com/appvalidation.html) for errors.
 * [Enable custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) in Teams.
 * Ensure that your app is running and accessible using HTTPs.
-* Ensure you have followed set of guidelines in the publish your app to the Microsoft Teams store to publish your app.
+* Ensure you have followed set of guidelines in the publish your app to the Teams Store to publish your app.
 
 ## Publish to individual scope or sideload permission
 
@@ -34,7 +34,7 @@ You can add a custom app to Teams by uploading an [app package](../concepts/buil
 * Build an app for yourself, such as to automate a workflow.
 * Build an app for small set of users, such as, your work group.
 
-You can build an app for internal use and share it with your team without submitting it to the Microsoft Teams app catalog in the Teams app store. For more information, see [how to upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
+You can build an app for internal use and share it with your team without submitting it to the Microsoft Teams app catalog in the Teams Store . For more information, see [how to upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
 
 ### Build app package
 
@@ -127,11 +127,11 @@ The following steps help you to approve from admin center:
 
    For more information, see [Publish to your org](/microsoftteams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json)
 
-## Publish to Microsoft Teams store
+## Publish to Teams Store
 
-You can distribute your app directly to the store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the store, you can instantly reach potential customers. The apps published to the Teams store also automatically list on Microsoft AppSource, which is the official marketplace for Microsoft 365 apps and solutions.
+You can distribute your app directly to the Teams Store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the Teams Store, you can instantly reach potential customers. The apps published to the Teams Store also automatically list on Microsoft AppSource, which is the official marketplace for Microsoft 365 apps and solutions.
 
-For more information, see [how to publish to the Teams store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store).
+For more information, see [how to publish to the Teams Store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-teams-store).
 
 ## See also
 

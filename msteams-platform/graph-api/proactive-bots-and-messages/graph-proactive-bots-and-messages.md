@@ -45,11 +45,11 @@ To use these permissions, you must add a [webApplicationInfo](../../resources/sc
 ## Enable proactive app installation and messaging
 
 > [!IMPORTANT]
-> Microsoft Graph can only install apps published to your organization's app store or the Teams store.
+> Microsoft Graph can only install apps published to your organization's app store or the Microsoft Teams Store.
 
 ### Create and publish your proactive messaging bot for Teams
 
-To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with [proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities that is in your [organization's app store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-to-your-org) or the [Teams store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-the-teams-store).
+To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with [proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities that is in your [organization's app store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-to-your-org) or the [Teams Store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-the-teams-store).
 
 > [!TIP]
 > The production-ready [*Company Communicator*](../..//samples/app-templates.md#company-communicator) app template permits broadcast messaging and is a good start to build your proactive bot application.
@@ -85,7 +85,7 @@ You can retrieve the `teamsAppId` in the following ways:
     ```
 
     > [!NOTE]
-    > When the app is in the store, the `teamsAppId` is same as `IdFromManifest` and the `externalId` must not be used in this case.
+    > When the app is in the Teams Store, the `teamsAppId` is same as `IdFromManifest` and the `externalId` must not be used in this case.
 
 * If your app has already been uploaded or sideloaded for a user in personal scope:
 
