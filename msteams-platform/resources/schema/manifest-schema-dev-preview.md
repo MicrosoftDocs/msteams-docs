@@ -927,18 +927,16 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.label`| String | 64 characters | | Specifies the text displayed for the group. |
 |`tabs.groups.icons`| Array | | | Specifies the icons displayed for the group. |
 |`tabs.groups.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Required image size: `16`, `32`, `80`. |
-|`tabs.groups.icons.url`| URL| | | Specifies the URL of the icon.|
-|`tabs.groups.icons.file`| String | 2048 characters| | Specifies the relative path to the file that contains the icon. This property isn’t supported as a relative path. |
+|`tabs.groups.icons.url`| URL| | | Specifies the absolute URL of the icon.|
 |`tabs.groups.controls`| Array | | | Configures the buttons and menus in the group. |
 |`tabs.groups.controls.id`| String | 64 characters| ✔️ | Specifies the ID for the control within the app. It must be different from any built-in control ID in the Microsoft 365 application and any other custom control. |
-|`tabs.groups.controls.items`| Object | | | Configures the items for a menu control. |
+|`tabs.groups.controls.items`| Array | | | Configures the items for a menu control. |
 |`tabs.groups.controls.items.id`| String | | ✔️ | Specifies the ID for the items within the app. |
 |`tabs.groups.controls.items.type`| String enum | | ✔️ | Defines the control items type. Supported value: `menuItem`. |
 |`tabs.groups.controls.items.label`| String | 64 characters| ✔️ | Specifies the text displayed for the items. |
 |`tabs.groups.controls.items.icons`| Array | | | Configures the icons for the custom item.|
 |`tabs.groups.controls.items.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Required image size: `16`, `32`, `80`. |
-|`tabs.groups.controls.items.icons.url`| URL| | | Specifies the URL of the icon.|
-|`tabs.groups.controls.items.icons.file`| String | 2048 characters| | Specifies the relative path to the file that contains the icon. This property isn’t supported as a relative path. |
+|`tabs.groups.controls.items.icons.url`| URL| | | Specifies the absolute URL of the icon.|
 |`tabs.groups.controls.items.supertip`| | |✔️| Configures a supertip for the custom item. A supertip is a UI feature that displays a brief box of help information about a control when the cursor hovers over it. The box may contain multiple lines of text. |
 |`tabs.groups.controls.items.supertip.title`| String | 64 characters | ✔️ | Specifies the title text of the supertip.|
 |`tabs.groups.controls.items.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
@@ -950,8 +948,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.label`| String | 64 characters | ✔️ | Specifies the text displayed for the control.|
 |`tabs.groups.controls.icons`| Array | | | Defines the icon(s) for the control. |
 |`tabs.groups.controls.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Required image size: `16`, `32`, `80`. |
-|`tabs.groups.controls.icons.url`| URL| | | Specifies the URL to the icon.|
-|`tabs.groups.controls.icons.file`| String | 2048 characters| | Specifies the relative path to the file that contains the icon. This property isn’t supported as a relative path. |
+|`tabs.groups.controls.icons.url`| URL| | | Specifies the absolute URL to the icon.|
 |`tabs.groups.controls.supertip`| Object | | ✔️ | Configures a supertip for the control. |
 |`tabs.groups.controls.supertip.title`| String | 64 characters | ✔️ |Specifies the title text of the supertip.|
 |`tabs.groups.controls.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
