@@ -12,7 +12,7 @@ ms.subservice: m365apps
 
 > [!NOTE]
 >
-> While in preview, Outlook support for Microsoft Teams meeting apps is only available in [Beta Channel builds](https://insider.microsoft365.com/en-us/join/windows) of the Outlook for Windows desktop client.
+> While in preview, Outlook support for Microsoft Teams meeting apps is only available in [Current Channel (Preview) builds](https://insider.microsoft365.com/en-us/join/windows) of the Outlook for Windows desktop client.
 
 Across the Microsoft 365 ecosystem, most monthly users schedule their Teams meetings from Outlook. To help users stay in the flow of their work, Teams meeting apps are now supported on Outlook. You can configure and add meeting apps to the Teams meetings scheduled from Outlook and also run meeting apps within the Outlook calendar.
 
@@ -36,7 +36,7 @@ This article walks you through the steps to ensure your Teams meeting app experi
 To preview your meeting app in Outlook, you need:
 
 * A [Microsoft 365 developer sandbox](./prerequisites.md#prepare-a-developer-tenant-for-testing) tenant with sideloading enabled.
-* A test environment with Outlook for Windows desktop installed from the [Microsoft 365 Apps *Beta Channel*](./prerequisites.md#install-microsoft-365-apps-in-your-test-environment).
+* A test environment with Outlook for Windows desktop installed from the [Microsoft 365 Apps *Current Channel (Preview)*](./prerequisites.md#install-microsoft-365-apps-in-your-test-environment).
 * [NodeJS](https://nodejs.org/download) (with npm) installed.
 * [TeamsFx CLI v2](../toolkit/TeamsFx-CLI.md) library installed from npm.
 * [Visual Studio Code](https://code.visualstudio.com/) installed to your development environment.
