@@ -416,17 +416,20 @@ The following are the limitations:
 
 ## How to test zero install link unfurling
 
-When testing the zero install link unfurling, don’t install the app as a personal app. Instead, sideload the app into the tenant for testing purposes, rather than performing a direct installation. Don’t run the Teams test app directly from the Microsoft Visual Studio debugger.
+When you test the zero install link unfurling, don’t install the app as a personal app. Instead, sideload the app to Teams for testing.
 
-To test your setup for zero install link unfurling, follow these steps:
+> [!NOTE]
+> Don’t run the test app directly from the Microsoft Visual Studio debugger.
 
-1. Login to [https://admin.teams.microsoft.com/](https://admin.teams.microsoft.com/)
+To test zero install link unfurling, follow these steps:
 
-1. Select **Managed apps**.
+1. Login to [Teams admin center](https://admin.teams.microsoft.com/)
+
+1. From the left pane, select **Teams apps** > **Managed apps**.
 
     :::image type="content" source="../../assets/images/teams-link-unfurling/manage-apps-admin.png" alt-text="Screenshot of Teams admin center and section for sideloading Teams apps":::
 
-1. Select **Upload new app**.
+1. Select **+ Upload new app**.
 
     :::image type="content" source="../../assets/images/teams-link-unfurling/upload-app-admin.png" alt-text="Screenshot of Teams admin center and where to upload custom apps":::
 
