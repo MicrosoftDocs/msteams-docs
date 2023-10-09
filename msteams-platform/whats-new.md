@@ -27,7 +27,7 @@ Teams platform features that are available to all app developers.
 **2023 October**
 
 * ***October 05, 2023***: [Use callTranscript API to fetch meeting transcript from all meetings.](graph-api/meeting-transcripts/overview-transcripts.md)
-* **October 5, 2023**: [You can rate apps on Microsoft Teams Store and offer feedback on your usage experience.](concepts/deploy-and-publish/appsource/post-publish/overview.md#ratings-and-review-for-teams-apps)
+* ***October 05, 2023***: [You can rate apps on Microsoft Teams Store and offer feedback on your usage experience.](concepts/deploy-and-publish/appsource/post-publish/overview.md#ratings-and-review-for-teams-apps)
 
 :::column-end:::
 :::row-end:::
