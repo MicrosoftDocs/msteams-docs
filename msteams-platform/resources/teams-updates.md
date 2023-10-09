@@ -36,7 +36,7 @@ To ensure a smooth transition, a phased rollout of the new platform is planned a
 
 > [!NOTE]
 >
-> * The new Teams client is supported in Government Community Cloud (GCC) and GCC-High.
+> * The new Teams client is supported in Government Community Cloud (GCC) and GCC-High and Windows and Mac clients.
 > * We recommend you to test apps, tabs, messaging extensions, bots, and link unfurling on
 Windows and Mac clients and GCC and GCC-High after switching from the Classic Teams client to the new Teams client.
 > * [Adaptive Card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client. If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
@@ -47,7 +47,7 @@ The following are the Teams features that aren't supported:
 
 * [Message Extensions](../get-started/build-message-extension.md) can't be invoked from the Teams search bar in the new Teams client.
 
-* Personal static tabs aren't supported in one-on-one conversations with bots in the new Teams client. However, users can view personal static tabs when the open the app from the app bar.
+* Personal static tabs aren't supported in one-on-one conversations with bots in the new Teams client. However, users can open their app from the app bar in Teams and view the personal static tabs.
 
 * [Location](../concepts/device-capabilities/location-capability.md#location-apis) and [Media](../concepts/device-capabilities/media-capabilities.md#media-capability-apis) APIs aren't supported in the new Teams client. We recommend using HTML5 Geolocation, and Media.
 
