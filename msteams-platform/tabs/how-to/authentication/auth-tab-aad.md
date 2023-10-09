@@ -46,7 +46,7 @@ Authentication flow should be triggered by a user action. You shouldn't open the
 
 Add a button to your configuration or content page to enable the user to sign in when needed. This can be done in the tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
 
-Azure AD, like most identity providers, doesn't allow its content to be placed in an `iframe`. This means that you need to add a page to host the identity provider. This page is presented inside a pop-up window by Teams client. In the following example, this page is `/tab-auth/simple-start`. Use the `authentication.authenticate()` function of the TeamsJS library to launch this page when the button is selected.
+Azure AD, like most identity providers, doesn't allow its content to be placed in an `iframe`. This means you need to add a page to host the identity provider that is displayed inside a pop-up window by Teams client. In the following example, the page is `/tab-auth/simple-start`. Use the `authentication.authenticate()` function of the TeamsJS library to launch this page when the button is selected.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
