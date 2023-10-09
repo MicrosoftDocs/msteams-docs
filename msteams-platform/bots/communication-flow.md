@@ -130,4 +130,4 @@ Yes. With tenant restrictions, organizations can specify the list of tenants tha
 
 **Can we host a bot for Teams outside of Azure?**
 
-It depends on the scenario. Messaging bots can be hosted on any infrastructure if all required FQDN, IP addresses and ports are on the allow list. However, calling bots can only be hosted on Microsoft Azure and specific services. For example, a bot that only sends notifications could potentially be hosted outside of Azure, while a bot that handles voice calls would need to be hosted on Azure. For more information, see the [Teams Developer Documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/).
+It depends on the scenario. Messaging bots can be hosted on any infrastructure if all required FQDN, IP addresses and ports are on the allow list. However, calling bots can only be hosted on Microsoft Azure and specific services. For example, a bot that only sends notifications could potentially be hosted outside of Azure, while a bot that handles voice calls would need to be hosted on Azure. For more information, see the [Teams Developer Documentation](https://learn.microsoft.com/microsoftteams/platform).
