@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 Understanding the communication flow for Teams bot applications is a key aspect of developing and managing effective bots. This guide provides a detailed look into how traffic is routed between a user in Teams and a bot application running in Azure. It's designed to help you inspect the traffic and understand the user data flow in transit and at rest for bots in Teams.
 
-This guide focuses on the use of messaging and calling bots in Teams. It answers common questions and offers best practices for integrating and securing network connectivity for your Teams bots. Let's dive in and explore the world of Teams bot applications.
+This guide focuses on the use of messaging and calling bots in Teams. Let's dive in and explore the world of Teams bot applications.
 
 > [!NOTE]
 > This article is applicable to customers using Microsoft 365 worldwide or United States Government Community Cloud (GCC) and not applicable to other cloud endpoints.
