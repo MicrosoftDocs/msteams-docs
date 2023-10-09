@@ -40,7 +40,7 @@ If you make any of the following changes to your app, however, your existing use
 * Add a personal tab.
 * Add a channel and group tab.
 * Add a connector.
-* Modify configurations related to your Microsoft Azure Active Directory (Azure AD) app registration. For more information, see [webApplicationInfo](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Modify configurations related to your Microsoft Azure Active Directory (Azure AD) app registration. For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## Promote your app on another site
 
@@ -62,7 +62,6 @@ You can download the complete set of badge images (in PNG and PDF format) from t
 
 [Download](https://github.com/MicrosoftDocs/msteams-docs/blob/main/msteams-platform/assets/downloads/Microsoft-Teams-all-badges.zip) **All badge images**.
 
-
 ### License to Microsoft Marks
 
 *Microsoft Marks* means the *Microsoft badge* described on the [badge generator](https://apps.microsoft.com/store/app-badge) page. To use these badges, you must:
@@ -83,7 +82,7 @@ Microsoft is the sole owner of the Microsoft Marks and associated goodwill, and 
 
 ## Keep your app details updated
 
-You must keep the following app details updated:
+You can remove an app from the [Microsoft commercial marketplace](/azure/marketplace/overview) and the Microsoft Teams Store to prevent its discovery and use.
 
 | App details | Description |
 | --- | --- |
@@ -131,6 +130,15 @@ To discontinue your app:
 * Contact the Microsoft Teams App Health evaluation team at [apphealthevaluation@microsoft.com](mailto:apphealthevaluation@microsoft.com) or [teams-sas@microsoft.com](mailto:teams-sas@microsoft.com) to remove your app from the Teams Store.
 
 * Contact your customers where appropriate. Delete or revoke any security or authorization tokens generated for your app.
+
+## Ratings and review for Teams apps
+
+Users can rate apps from one to five stars on Microsoft Teams Store and offer feedback (review) on their usage experiences. The ratings and reviews for apps appear on the app listing and the product details page in Teams Store. As a developer, you can interact and respond to these reviews from Partner Center, and the responses are shown on AppSource along with Teams experience, helping users find and use the app more easily. This feedback improves app visibility, keeps users engaged, and encourages more downloads on Teams Store.
+
+:::image type="content" source="../../../../assets/images/submission/review.gif" alt-text="Graphics shows the user ratings and review for teams app.":::
+
+> [!NOTE]
+> Ratings and reviews aren't available for custom apps that are built for your organization.
 
 ## See also
 
