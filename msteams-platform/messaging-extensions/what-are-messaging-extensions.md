@@ -54,6 +54,8 @@ The following table differentiates the types of message extensions:
 |---------|---------|
 |- Simpler and faster to create and maintain <br> - Use this option if you’re not planning to add a conversational bot to your app  <br> - Do not require any additional code or resources for bot logic <br> - Suitable for scenarios where the plugin only needs to communicate with a web service and does not need any complex logic or state management <br> - Privatized traffic as they don’t rely on Azure bot infrastructure.| - More flexibility <br> - Use this option if you’re also planning to build a conversational bot <br> - Can leverage the full capabilities of the bot framework SDK <br> - Suitable for scenarios where the plugin needs to communicate with multiple services, handle complex logic or user interactions, or maintain state across sessions.|
 
+:::image type="content" source="../assets/images/Copilot/api-bot-based-message-extension-decision-tree.png" alt-text="Screenshot shows the decisoin tree which helps the user to choose between API based and bot based message extension.":::
+
 ## Types of message extension commands
 
 There are two types of message extension commands, action command and search command. The message extension command type defines the UI elements and interaction flows available to your web service. Some interactions, such as authentication and configuration are available for both types of commands.

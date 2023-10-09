@@ -408,7 +408,7 @@ An API-based ME is created.
    1. Select **Default folder**.
    1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI spec file and created an API-based message extension.
 
-    ---
+  ---
 
 # [Teams CLI](#tab/teams-cli)
 
