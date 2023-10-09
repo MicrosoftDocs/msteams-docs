@@ -30,22 +30,24 @@ The Classic Teams client is represented using the `teams` field and the new Team
 
 To ensure a smooth transition, a phased rollout of the new platform is planned as follows:
 
-* **Availability of all platform features from Classic Teams**: All apps are available in the new Teams Client. All platform features except the features listed under [known issues](#known-issues) are now available. Platform features under known issues will be available by October 2023.
+* **Availability of all platform features from Classic Teams**: All apps are available in the new Teams Client. All platform features except the features listed under [known issues](#known-issues) are now available. Platform features under known issues will be available soon.
 
 ## Known issues
 
 > [!NOTE]
 >
-> * We recommend to test apps, tabs, messaging extensions, bots, and link unfurling after switching from the Classic Teams client to the new Teams client.
+> * The new Teams client is supported in Government Community Cloud (GCC) and GCC-High.
+> * We recommend you to test apps, tabs, messaging extensions, bots, and link unfurling on
+Windows and Mac clients and GCC and GCC-High after switching from the Classic Teams client to the new Teams client.
 > * [Adaptive Card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client. If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
 
-The following are the Teams features that will be supported soon:
+The following are the Teams features that aren't supported:
 
 * [External authentication](../tabs/how-to/authentication/auth-oauth-provider.md) isn't supported in the new Teams client. We recommend you use the [authentication using third-party OAuth provider](../tabs/how-to/authentication/auth-flow-tab.md) or use the app in the Classic Teams client.
 
 * [Message Extensions](../get-started/build-message-extension.md) can't be invoked from the Teams search bar in the new Teams client.
 
-* Personal static tabs aren't supported in one-on-one conversations with bots in the new Teams client. However, users can open the app from the app bar to view personal static tabs.
+* Personal static tabs aren't supported in one-on-one conversations with bots in the new Teams client. However, users can view personal static tabs when the open the app from the app bar.
 
 * [Location](../concepts/device-capabilities/location-capability.md#location-apis) and [Media](../concepts/device-capabilities/media-capabilities.md#media-capability-apis) APIs aren't supported in the new Teams client. We recommend using HTML5 Geolocation, and Media.
 
