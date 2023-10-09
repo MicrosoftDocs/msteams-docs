@@ -70,4 +70,8 @@ To trigger the Message Extension through Copilot, you can:
 
 A bot based ME is created.
 
+## Step-by-step guide
+
+You can go through the [step-by-step](../sbs-gs-msgext.yml) guide to build a bot based message extension.
+
 ---
