@@ -10,14 +10,14 @@ ms.date: 09/07/2023
 
 # Bot-based Message extension
 
-Bot-based plugins are message extensions that use a bot to handle user requests and responses. They require a bot registration and a bot framework SDK. They can be configured and deployed using the App Studio or the Teams Toolkit.
+Bot-based message extensions use a bot to handle user requests and responses. They require a bot registration and a bot framework SDK. They can be configured and deployed using the DEveloper portal for Teams or the Teams Toolkit.
 
 # [Teams Toolkit](#tab/Teams-toolkit)
 
 1. Open **Visual Studio Code**.
 1. From the left pane, Select **Teams Toolkit**.
 1. Select **Create a New App**.
-1. Select** Message Extension**.
+1. Select **Message Extension**.
 1. Select **Custom Search Results**.
 1. Select a **programming language**.
 1. Select **Default folder**.
