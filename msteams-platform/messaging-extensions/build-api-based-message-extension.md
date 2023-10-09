@@ -1,5 +1,5 @@
 ---
-title: Create API based Message extension
+title: Create API-based Message extension
 author: v-ypalikila
 description: Learn how to build an API message extension using Teams developer portal and Teams Toolkit.
 ms.localizationpriority: medium
@@ -8,18 +8,18 @@ ms.author: anclear
 ms.date: 09/07/2023
 ---
 
-# API based Message extension
+# API-based Message extension
 
 > [!NOTE]
 >
-> * API based message extensions is available in [public preview](../resources/dev-preview/developer-preview-intro.md).
-> * API based message extension only supports search commands.
+> * API-based message extensions is available in [public preview](../resources/dev-preview/developer-preview-intro.md).
+> * API-based message extension only supports search commands.
 
-API based message extensions use a web service to handle user requests and responses. They don't require a bot registration or a bot framework SDK. They can be configured and deployed using the Developer Portal for Teams or the Teams Toolkit.
+API-based message extensions use a web service to handle user requests and responses. They don't require a bot registration or a bot framework SDK. They can be configured and deployed using the Developer Portal for Teams or the Teams Toolkit.
 
-You can create an API based message extension in Teams using an [OpenAPI Specification](https://learn.openapis.org/specification/) document. After you've created an OpenAPI Specification document for the APIs you want to use, upload the OpenAPI Specification document to Teams Toolkit or Developer portal for Teams to generate and integrate the client code in your app's project. Create or generate an Adaptive Card template to handle the responses from the API.
+You can create an API-based message extension in Teams using an [OpenAPI Specification](https://learn.openapis.org/specification/) document. After you've created an OpenAPI Specification document for the APIs you want to use, upload the OpenAPI Specification document to Teams Toolkit or Developer portal for Teams to generate and integrate the client code in your app's project. Create or generate an Adaptive Card template to handle the responses from the API.
 
-API based message extensions help your apps to interact directly with third-party data, apps, and services, enhancing its capabilities. With APIs for message extension, you can:
+API-based message extensions help your apps to interact directly with third-party data, apps, and services, enhancing its capabilities. With APIs for message extension, you can:
 
 * Retrieve real-time information, for example, latest news coverage on a product launch.
 * Retrieve knowledge-based information, for example, my team’s design files in Figma.
@@ -27,7 +27,7 @@ API based message extensions help your apps to interact directly with third-part
 
 ## Prerequisites
 
-1. **OpenAPI Specification (OAS)**: An OpenAPI Specification is used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases. You must have an OpenAPI specification document before you create an API based message extension.
+1. **OpenAPI Specification (OAS)**: An OpenAPI Specification is used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases. You must have an OpenAPI specification document before you create an API-based message extension.
 
    The following code is an example of an OpenAPI specification document in YAML format: <br/>
 
@@ -266,9 +266,9 @@ API based message extensions help your apps to interact directly with third-part
 
 Message extension are a type of Teams app that allows you to integrate your chat functionality directly into Teams. This can enhance your app's usability and provide a seamless user experience. We recommend you to follow the best practices:
 
-<details><summary>API based message extensions</summary>
+<details><summary>API-based message extensions</summary>
 
-API based message extensions are a powerful tool that allows you to extend the functionality of your Teams app by integrating with external APIs. This can greatly enhance the capabilities of your app and provide a richer user experience. To implement API based message extension, you need to follow these guidelines:
+API-based message extensions are a powerful tool that allows you to extend the functionality of your Teams app by integrating with external APIs. This can greatly enhance the capabilities of your app and provide a richer user experience. To implement API-based message extension, you need to follow these guidelines:
 
 * `Commands.id` in app manifest must match the corresponding `operationId` in the OpenAPI specification.
 * If there's a required parameter without a default value, the parameter name of the command defined in the Teams app manifest must match this parameter name.
@@ -305,9 +305,9 @@ Developers can't require users to enter a parameter for a header or cookie. If h
 
 </details>
 
-## Build API based message extension
+## Build API-based message extension
 
-You can create an API based message extension using Developer Portal for Teams, Teams Toolkit and Teams CLI.
+You can create an API-based message extension using Developer Portal for Teams, Teams Toolkit and Teams CLI.
 
 # [Developer portal for Teams](#tab/developer-portal-for-teams)
 
@@ -321,7 +321,7 @@ To create an API base message extension using Developer portal, follow these ste
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the plugin of copilot option in Teams developer portal.":::
 
-1. Under **Message extension type**, select **API based**.
+1. Under **Message extension type**, select **API-based**.
 
 1. Under **Open API spec**, select **Upload API spec**.
 
@@ -366,7 +366,7 @@ To extend copilot plugin as a message extension, add commands:
 
 :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams developer portal.":::
 
-An API based ME is created.
+An API-based ME is created.
 
 # [Teams Toolkit](#tab/Teams-toolkit)
 
@@ -377,7 +377,7 @@ An API based ME is created.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot.png" alt-text="Screenshot shows the Plugin for copilot option in the Team Toolkit.":::
 
-1. Select **API Based Search Message Extension**.
+1. Select **API-based Search Message Extension**.
 
 1. Select any of the following options:
     1. **Start with a new API**.
@@ -406,7 +406,7 @@ An API based ME is created.
    1. From the API list, select the GET API and select **OK**.
 
    1. Select **Default folder**.
-   1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI spec file and created an API based message extension.
+   1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI spec file and created an API-based message extension.
 
     ---
 
@@ -422,7 +422,7 @@ An API based ME is created.
 
 1. Type `teamsfx new` in the terminal
 
-1. Select **Message Extension** >  **API Based Search Message Extension**.
+1. Select **Message Extension** >  **API-based Search Message Extension**.
 
 1. Select **Start from an OpenAPI Description Document**.
 
@@ -460,7 +460,7 @@ An API based ME is created.
 
 ## Step-by-step guide
 
-You can go through the [step-by-step](../sbs-api-me-ttk.yml) guide to build an API based message extension.
+You can go through the [step-by-step](../sbs-api-me-ttk.yml) guide to build an API-based message extension.
 
 You can also build bot based message extensions.
 

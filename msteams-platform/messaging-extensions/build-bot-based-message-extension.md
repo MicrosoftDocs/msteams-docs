@@ -1,5 +1,5 @@
 ---
-title: Create bot based Message extension
+title: Create bot-based Message extension
 author: v-ypalikila
 description: Learn how to build a bot message extension using Teams developer portal and Teams Toolkit.
 ms.localizationpriority: medium
@@ -8,27 +8,27 @@ ms.author: anclear
 ms.date: 09/07/2023
 ---
 
-# Bot based Message extension
+# Bot-based Message extension
 
-Bot based plugins are message extensions that use a bot to handle user requests and responses. They require a bot registration and a bot framework SDK. They can be configured and deployed using the App Studio or the Teams Toolkit.
+Bot-based plugins are message extensions that use a bot to handle user requests and responses. They require a bot registration and a bot framework SDK. They can be configured and deployed using the App Studio or the Teams Toolkit.
 
 # [Teams Toolkit](#tab/Teams-toolkit)
 
-1. Open Visual Studio Code.
-1. From the left pane, Select Teams Toolkit.
-1. Select Create a New App.
-1. Select Message Extension.
-1. Select Custom Search Results.
-1. Select a programming language.
-1. Select Default folder.
-1. Enter the name of your app and select Enter.
+1. Open **Visual Studio Code**.
+1. From the left pane, Select **Teams Toolkit**.
+1. Select **Create a New App**.
+1. Select** Message Extension**.
+1. Select **Custom Search Results**.
+1. Select a **programming language**.
+1. Select **Default folder**.
+1. Enter the name of your app and select **Enter**.
 
 To trigger the Message Extension through Copilot, you can:
 
-1. Select Debug in Copilot (Edge) or Debug in Copilot (Chrome) from the launch configuration dropdown.
-1. When Teams launches in the browser, click the Apps icon from Teams client left rail to open 1. Teams app store and search for Copilot.
+1. Select **Debug in Copilot (Edge)** or **Debug in Copilot (Chrome)** from the launch configuration dropdown. The app launches in a browser.
+1. Select **Apps** and search for Copilot.
 1. Open the Copilot app and send a prompt to trigger your plugin.
-1. Send a message to Copilot to find an NPM package information. For example: Find the npm package info on teamsfx-react.
+1. Send a message to Copilot to find an NPM package information. For example, find the npm package info on teamsfx-react.
 
 > [!NOTE]
 > This prompt may not always make Copilot include a response from your message extension. If it happens, try some other prompts or leave a feedback to us by thumbing down the Copilot response and leave a message tagged with [MessageExtension].
@@ -68,10 +68,10 @@ To trigger the Message Extension through Copilot, you can:
 
 1. Select **Save**.
 
-A bot based ME is created.
+A bot-based ME is created.
 
 ## Step-by-step guide
 
-You can go through the [step-by-step](../sbs-gs-msgext.yml) guide to build a bot based message extension.
+You can go through the [step-by-step](../sbs-gs-msgext.yml) guide to build a bot-based message extension.
 
 ---
