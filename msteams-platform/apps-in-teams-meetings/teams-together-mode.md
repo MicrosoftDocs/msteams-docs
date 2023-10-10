@@ -68,23 +68,25 @@ To build a scene using the Scene studio, follow these steps:
 
 1. Go to [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
 
-    Alternately, to open *Scene studio* you can go to the home page of [Teams Developer Portal](https://dev.teams.microsoft.com/home):
-    * Select **Create custom scenes for meetings**.
-    * From the left pane, select **Tools** and select **Scene studio**.
+    Alternately, you can open **Scene studio** from the home page of [Teams Developer Portal](https://dev.teams.microsoft.com/home) through any of the following step:
+    * Select **Create custom scenes for meetings**
+    * On the left pane, select **Tools** and select **Scene studio**.
 
-1. In **Scenes Editor**, select **Create a new scene**.
+1. In **Scenes studio**, select **Create a new scene**.
+
+1. Select **Blank Scene** template from the window to create custom scene.
+   You can select any template of your choice. **Blank Scene** allows you to create custom scenes.
+
+:::image type="content" source="../assets/images/apps-in-meetings/scene-template.png" alt-text="Screenshot shows the choices of templates for a scene in the scene studio.":::
 
 1. In **Scene Name**, enter a name for the scene.
 
-    * You can select **Close** to toggle between closing or reopening the right pane.
-    * You can zoom in or zoom out of the scene using the zoom bar for a better view of the scene.
+   You can select **Close** to toggle between closing or reopening the right pane.
+   You can zoom in or zoom out of the scene using the zoom bar for a better view of the scene.
 
 1. To add the image to the environment, select **Add images**.
 
    :::image type="content" source="../assets/images/apps-in-meetings/addimages.png" alt-text="Screenshot shows the Add images option highlighted in red in the scene studio.":::
-
-    > [!NOTE]
-    > You can download the [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) and [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) files with the images.
 
 1. Select the image that you've added.
 
