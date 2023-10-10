@@ -254,10 +254,10 @@ items:
 
        1. Select **Save**. 
        
-          Your test tenant can permit custom app uploading.
+          Your test tenant can permit custom app sideloading.
 
           > [!NOTE]
-          > The app uploading takes some time to become active.
+          > The sideloading takes some time to become active.
 
     1. Go to **Microsoft Teams**.
     

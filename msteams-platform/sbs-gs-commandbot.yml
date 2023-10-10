@@ -96,23 +96,23 @@ items:
 
    ## Set up your Teams development tenant
 
-   A **tenant** is like a space, or a container where you chat, share files, and run meetings for your organization in Teams. You can also upload and test your app.
+   A **tenant** is like a space, or a container where you chat, share files, and run meetings for your organization in Teams. You can also sideload and test your app.
 
-   ### Check for app upload option
+   ### Check for sideloading option
 
-   After creating the app, you must load your app in Teams without distributing it. This is known as app uploading. Sign-in to your Microsoft 365 account to view this option.
+   After creating the app, you must load your app in Teams without distributing it. This is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > App uploading is necessary for previewing and testing apps in Teams local environment. Enable app uploading to preview and test your app in Teams locally.
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
 
    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
-   To verify upload apps in Teams:
+   To verify sideload apps in Teams:
 
     1. In the Teams client, select **Store** .
     1. Select **Manage your apps**.
     1. Select **Publish an app**.
-    1. Look for the option to **Upload a custom app**. If you see the option, uploading apps is enabled.
+    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 
@@ -189,7 +189,7 @@ items:
 
     1. Select **Debug(Edge)** or **Debug(Chrome)** from the dropdown list.
 
-    1. Select **Start Debugging** button. You'll be prompted to upload the command bot app onto Teams on your local machine. 
+    1. Select **Start Debugging** button. You'll be prompted to sideload the command bot app onto Teams on your local machine. 
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="Screenshot shows the debugging application.":::
 
@@ -300,7 +300,7 @@ items:
     
     1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
     1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
-    1. Select **Start Debugging** button. You'll be prompted to upload the command bot app onto Teams.
+    1. Select **Start Debugging** button. You'll be prompted to sideload the command bot app onto Teams.
 
          :::image type="content" source="~/assets/images/sbs-command-bot/remote-debug.png" alt-text="Screenshot shows the remote debug.":::
 
