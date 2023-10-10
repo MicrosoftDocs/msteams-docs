@@ -1552,7 +1552,7 @@ To subscribe to participant events, follow these steps:
 
 The following examples show how to capture the participant join and leave events:
 
-**Participant join event**
+# [Participant join event](#tab/participant-join-event) 
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
 
@@ -1565,7 +1565,7 @@ protected override async Task OnTeamsMeetingParticipantsJoinAsync(MeetingPartici
 }
 ```
 
-**Participant leave event**
+# [Participant leave event](#tab/participant-leave-event) 
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
 
@@ -1580,7 +1580,7 @@ protected override async Task OnTeamsMeetingParticipantsLeaveAsync(MeetingPartic
 
 Following are the examples of the participant join and leave event payloads:
 
-# [Participant join event](#tab/participant-join-event) 
+# [Participant join event](#tab/participant-join-event1) 
 
 The following is an example of the participant join event payload:
 
@@ -1630,7 +1630,7 @@ The following is an example of the participant join event payload:
 } 
 ```
 
-# [Participant leave event](#tab/participant-leave-event) 
+# [Participant leave event](#tab/participant-leave-event1) 
 
 The following is an example of the participant leave event payload:
 
