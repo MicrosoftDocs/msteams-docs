@@ -1550,6 +1550,34 @@ To subscribe to participant events, follow these steps:
 
    If your app doesn't have the RSC permission, add it through the **Configure** > **Permissions** section of your app in Developer Portal. For more information, see [RSC permissions.](~/graph-api/rsc/resource-specific-consent.md)
 
+The following examples show how to capture the participant join and leave events:
+
+**Participant join event**
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
+
+```csharp
+//Invoked on participant join a meeting
+protected override async Task OnTeamsMeetingParticipantsJoinAsync(MeetingParticipantsEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+{
+  await turnContext.SendActivityAsync("Member has joined the meeting.");
+  return;
+}
+```
+
+**Participant leave event**
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
+
+```csharp
+//Invoked on participant leave a meeting
+protected override async Task OnTeamsMeetingParticipantsLeaveAsync(MeetingParticipantsEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+{
+  await turnContext.SendActivityAsync("Member left the meeting.");
+  return;
+}
+```
+
 Following are the examples of the participant join and leave event payloads:
 
 # [Participant join event](#tab/participant-join-event) 
@@ -1572,8 +1600,8 @@ The following is an example of the participant join event payload:
         "conversationType": "groupchat", 
         "id": "19:meeting_threadId@thread.v2" 
     }, 
-"recipient": { 
-    "id": "28:botid" 
+    "recipient": { 
+        "id": "28:botid" 
     },  
     "value": { 
        "members": [ 
