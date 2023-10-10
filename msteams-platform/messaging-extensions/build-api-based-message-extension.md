@@ -397,7 +397,7 @@ An API-based ME is created.
 
    1. Enter the name of your app and select **Enter**. Teams Toolkit creates a new plugin with API from Azure functions.
 
-  # [OpenAPI specification](#tab/openapi-specification)
+   # [OpenAPI specification](#tab/openapi-specification)
 
    1. Enter or browse the OpenAPI specification doc location.
 
@@ -408,7 +408,7 @@ An API-based ME is created.
    1. Select **Default folder**.
    1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI spec file and created an API-based message extension.
 
-   ---
+    ---
 
 # [Teams Toolkit CLI](#tab/teams-toolkit-cli)
 
