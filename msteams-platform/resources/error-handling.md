@@ -132,6 +132,14 @@ ms.date: 10/06/2023
 
 [Back to top](#error-handling-messages)
 
+## Tabs
+
+|Error message                           |Scenario                               |Resolution  |
+|----------------------------------------|---------------------------------------|------------|
+|Admin Permissions Consent window does not close back after granting or cancelling permissions in the Desktop/ Mac Teams app.|A developer is building a Microsoft Teams Tab application that requires opening the admin permissions consent page within the app. The consent window works fine on the web version of the application, but on the Desktop/ Mac Teams app, the window does not close after granting or cancelling permissions.|<br> 1. Do not mix Teams Tab SSO supports and the idea of having an admin do a pre-consent in the same place. Provide a separate link for admin to pre-consent or rely on the standard SSO experience. <br> 2. Use 'microsoftTeams.authentication.getAuthToken' which handles SSO better than 'authentication.authenticate'. <br> 3. Your redirect page should call the 'notifySuccess(…)' method to close the login screen.<br> 4. Mark your app as 'needs admin pre-approval' and set 'defaultBlockUntilAdminAction' to 'true' and 'publisherDocsUrl' to the page with the instructions for the admin.|
+
+[Back to top](#error-handling-messages)
+
 ## Task module
 
 |Error message                           |Scenario                               |Resolution  |
