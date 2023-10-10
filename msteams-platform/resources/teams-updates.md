@@ -36,9 +36,8 @@ To ensure a smooth transition, a phased rollout of the new platform is planned a
 
 > [!NOTE]
 >
-> * The new Teams client is supported in Government Community Cloud (GCC) and GCC-High and Windows and Mac clients.
-> * We recommend you to test apps, tabs, messaging extensions, bots, and link unfurling on
-Windows and Mac clients and GCC and GCC-High after switching from the Classic Teams client to the new Teams client.
+> * The new Teams client is supported in Windows and Mac clients and Government Community Cloud (GCC) and GCC-High environments.
+> * We recommend you to test the functionality of  apps, tabs, messaging extensions, bots, and link unfurling on Windows and Mac clients and GCC and GCC-High environments after switching from the Classic Teams client to the new Teams client.
 > * [Adaptive Card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client. If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
 
 The following are the Teams features that aren't supported:
