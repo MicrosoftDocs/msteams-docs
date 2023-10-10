@@ -10,11 +10,24 @@ ms.date: 04/07/2022
 
 # Custom Together Mode scenes in Teams
 
-Custom Together Mode scenes in Microsoft Teams provide an immersive and engaging meeting environment with the following actions:
+Discover a new way to collaborate with Custom Together Mode scenes in Microsoft Teams. This feature digitally combines participants into a single virtual scene, creating an immersive and engaging environment with the following actions:
 
 * Bring people together and encourage them to turn on their video.
 * Combine participants digitally into a single virtual scene.
 * Place the participants' video streams in predetermined seats designed and fixed by the scene creator.
+
+Get started now and transform your Teams meetings with Custom Together Mode scenes.
+
+## Prerequisites
+
+Before you start, ensure that you have a basic understanding of the following:
+
+* Define a scene and assign seats in a scene.
+* Create a Microsoft Developer account and familiarity with the Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
+* Understand the [concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
+* Ensure that the administrator has granted permission to [Upload a custom app](../concepts/deploy-and-publish/apps-upload.md#upload-your-app) and select all filters as part of App Setup and meeting policies respectively.
+
+## Custom Together Mode scene
 
 In custom Together Mode scenes, the scene is an artifact. The scene developer creates a scene using Microsoft Scene studio. In a conceived scene setting, participants have seats with video streams. The videos are rendered in those seats. It's recommended to use scene only apps for better experience.
 
@@ -24,15 +37,6 @@ A scene only app is still an app in Teams. Scene studio handles the app package 
 
 > [!NOTE]
 > Users can't initiate Together Mode from mobile. However, after a user joins a meeting through mobile and Together Mode is turned on from desktop, the mobile users who have turned on the video, will appear in Together Mode on desktop.
-
-## Prerequisites
-
-You must've a basic understanding of the following to use custom Together Mode scenes:
-
-* Define scene and seats in a scene.
-* Create a Microsoft Developer account and be familiar with the Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
-* Understand the [concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
-* Ensure that the administrator has granted permission to [**Upload a custom app**](../concepts/deploy-and-publish/apps-upload.md) and select all filters as part of App Setup and meeting policies respectively.
 
 ## Best practices for creating a scene
 
@@ -46,7 +50,7 @@ Consider the following practices for best scene building experience:
 
 ## Build a scene using the Scene studio
 
-Microsoft has a Scene studio that allows you to build scenes. It's available on [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes). This document refers to Scene studio in the Teams Developer Portal. A scene in the context of the Scene studio contains the following elements:
+Microsoft Scene studio allows you to build scenes. It's available on [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes). This document refers to Scene studio in the Teams Developer Portal. A scene in the context of the Scene studio contains the following elements:
 
 * Seats reserved for meeting organizer and meeting presenters. The presenter doesn't refer to the user who is actively sharing. For more information, see [meeting role](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
@@ -90,7 +94,7 @@ To build a scene using the Scene studio, follow these steps:
 
 1. Select an area outside of the image.
 
-1. In the upper-right corner, under **Layers**, select **Participants**. 
+1. In the upper-right corner, under **Layers**, select **Participants**.
 
 1. Select the number of participants for the scene from the **Number of participants** box and select **Add**. After the scene is shipped, the avatar placements are replaced with actual participant's video streams. You can drag the images of the participants around the scene and place them in the required position. You can resize them using the resize arrow.
 
@@ -104,7 +108,7 @@ To build a scene using the Scene studio, follow these steps:
 
     * Selecting **View in Teams** automatically creates a Teams app that can be viewed in the **Apps** page in the Teams Developer Portal.
     * Selecting **View in Teams** automatically creates an app package that is appmanifest.json in the background. You can go to  **Apps** from the menu and access the created app package.
-    
+
 1. Select **View in Teams**, in the dialog box that appears select **Add**.
 
     To test or access the scene, create a test meeting and launch custom Together Mode scenes. For more information, see [test custom Together Mode scenes in Teams](#test-custom-together-mode-scenes-in-teams).
@@ -217,19 +221,19 @@ The following code is the scene.json sample:
 }
 ```
 
-Custom Together Mode scenes support zooming in on the current meeting participants. A scene consists of bitmap images, sprites, and rectangles to put participant videos in. 
+Custom Together Mode scenes support zooming in on the current meeting participants. A scene consists of bitmap images, sprites, and rectangles to put participant videos in.
 
-A sprite is a static bitmap image positioned in the world. These sprites and participant boxes are defined in a world coordinate system. 
+A sprite is a static bitmap image positioned in the world. These sprites and participant boxes are defined in a world coordinate system.
 
-•	The X-axis points to the right.</br>
-•	The Y-axis points downwards.</br>
-•	 The Z value of the sprite determines the position of the sprite. Rendering starts with the sprite with lowest Z value, so higher Z value means it's closer to the camera.
+• The X-axis points to the right.</br>
+• The Y-axis points downwards.</br>
+•  The Z value of the sprite determines the position of the sprite. Rendering starts with the sprite with lowest Z value, so higher Z value means it's closer to the camera.
 
 Ensure to go through the following list while creating a sample scene:  
 
-**Scene:** Each scene has a unique ID and name. A scene.json file along with the images indicate the exact position of the seats. The scene.json file also contains information on all the assets used for the scene. 
+**Scene:** Each scene has a unique ID and name. A scene.json file along with the images indicate the exact position of the seats. The scene.json file also contains information on all the assets used for the scene.
 
-**Asset:** Each asset contains a filename, width, height, and position on the X and Y-axis. 
+**Asset:** Each asset contains a filename, width, height, and position on the X and Y-axis.
 
 **Participants:** Each participant has its own video feed, which is segmented so only the foreground is rendered.
 
