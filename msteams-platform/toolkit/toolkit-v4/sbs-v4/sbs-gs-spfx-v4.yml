@@ -2,7 +2,7 @@
 title: Build your first app with SPFx
 metadata:
   title: Hello World with SPFx
-  description: In this tutorial, you learn to build Hello World app with SPFx. The step-by-step guide helps you to install toolkit, setup development tenant, and you can enable app uploading.
+  description: In this tutorial, you learn to build Hello World app with SPFx. The step-by-step guide helps you to install toolkit, setup development tenant, and you can enable sideloading.
   audience: Developer
   level: Beginner
   ms.date: 05/09/2022
@@ -97,22 +97,22 @@ items:
 
     ## Set up your Teams development tenant
 
-    A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your app. Let's verify if you're ready to develop with the tenant.
+    A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
 
-    ### Enable app upload
+    ### Enable sideloading option
 
-    After creating the app, you must load your app in Teams without distributing it. This process is known as app uploading. Sign in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
       
     > [!NOTE]
-    > App uploading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
 
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
-    Verify if you can upload apps in Teams:
+    Verify if you can sideload apps in Teams:
 
     1. In the Teams client, select **Apps**.
     1. Select **Manage your apps**.
-    1. Look for the option to **Upload a custom app**. If you see the option, uploading apps is enabled.
+    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/spfx-custom-new1-v4.png" alt-text="bot home":::
 
@@ -323,13 +323,13 @@ items:
 
         Teams web client opens in a browser window.
 
-    1. Select **Add** when prompted to upload the app onto Teams on your local machine.
+    1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/add-app-local-debug-v4.png" alt-text="Add the app to Teams":::
    
     1. Select the web app version, if you're asked to switch to Teams desktop. You can see the HTML, CSS, and JavaScript code in a standard web development environment.
 
-    1. Select **Load debug scripts**, if you're prompted to load debug scripts before your app is uploaded in Teams.
+    1. Select **Load debug scripts**, if you're prompted to load debug scripts before your app is sideloaded in Teams.
     
         Congratulations, your first app is running on Teams!
 
