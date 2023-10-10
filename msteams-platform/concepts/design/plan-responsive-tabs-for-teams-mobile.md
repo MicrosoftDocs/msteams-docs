@@ -21,9 +21,7 @@ Consider the following before you implement responsive tabs for your app in Team
 
 * **User roles:** Ensure to target appropriate user role on Teams mobile.
 
-    For example, if you're building an app that provides data visualization tools to end users such as data analysts and senior managers, both can use your app on Teams mobile. You can decide to cater to all the roles that you have on your desktop app.
-
-    However, it's recommended to start with a user role with a larger base and possible early adopters for smaller screen experience.
+    For example, if you're building an app that provides data visualization tools to end users such as data analysts and senior managers, both can use your app on Teams mobile. You can decide to cater to all the roles that you have on your desktop app. We recommend you to start with a user role that has larger base and possible early adopters for smaller screen experience.
 
     In this case, the data analysts are the appropriate user role to target first. You can gradually add functionalities to support other user roles on your Teams mobile.
 
