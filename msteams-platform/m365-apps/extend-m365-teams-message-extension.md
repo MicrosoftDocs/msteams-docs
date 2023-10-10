@@ -12,19 +12,19 @@ ms.subservice: m365apps
 
 > [!IMPORTANT]
 >
-> The **Microsoft 365** channel replaces the Outlook channel for message extensions. Existing message extensions require [Azure Bot registration for the Microsoft 365 channel](#add-microsoft-365-channel-for-your-app) to work in Microsoft Outlook.
+> The **Microsoft 365** channel replaces the Outlook channel for message extensions. The existing message extensions require [Azure Bot registration for the Microsoft 365 channel](#add-microsoft-365-channel-for-your-app) to work in Microsoft Outlook.
 
-Message extensions allow users to interact with your web service through buttons and forms through which they can search or initiate actions in an external system from Microsoft Teams and Outlook. There are two types of message extensions:
+Message extensions allow users to interact with your web service using buttons and forms through which they can search or initiate actions in an external system from Microsoft Teams and Outlook. There are two types of message extensions:
 
 * Search-based message extensions: Allow users to search an external system and share results through the compose message area of the Microsoft Teams client.
 
 * Action-based message extensions: Allow you to present users with a modal pop-up to collect or display information, process the interaction, and send the information back to the client as a rich card.
 
-You can now bring Teams message extensions to Outlook by extending your Teams apps across Microsoft 365. For more information about [message extension](~/messaging-extensions/what-are-messaging-extensions.md) support within Outlook for Windows desktop, Outlook on web, and Outlook on mobile, see the support table in [extend Teams apps across Microsoft 365](~/m365-apps/overview.md).
+You can bring Teams message extensions to Outlook by extending your Teams apps across Microsoft 365. For more information about [message extension](~/messaging-extensions/what-are-messaging-extensions.md) support within Outlook for Windows desktop, web, and mobile, see the support table in [extend Teams apps across Microsoft 365](~/m365-apps/overview.md).
 
 If your message extension supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) and unfurls links that display cards to launch [Stage View](../tabs/tabs-link-unfurling.md) in Teams, follow this article to enable link unfurling and Stage View in Outlook on web and Windows desktop environments.
 
-Outlook mobile users on Android and [Microsoft Outlook beta TestFlight](https://testflight.apple.com/join/AhS6fRDK) iOS rings can now receive and take actions on cards from your apps that were sent to them by users on Outlook on web and Windows desktop.
+Outlook mobile users on Android and [Microsoft Outlook beta TestFlight](https://testflight.apple.com/join/AhS6fRDK) iOS rings can receive and take actions on cards from your apps that were sent to them by users on Outlook on web and Windows desktop.
 
 In this article you'll learn how to extend your Teams message extension to Outlook, which you can do either of the following:
 
