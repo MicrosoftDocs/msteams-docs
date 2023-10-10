@@ -23,7 +23,7 @@ Consider the following before you implement responsive tabs for your app in Team
 
     For example, if you're building an app that provides data visualization tools to end users such as data analysts and senior managers, both can use your app on Teams mobile. You can decide to cater to all the roles that you have on your desktop app.
 
-    However, it's recommended to start with a user role with a larger base and possible new users for smaller screen experience.
+    However, it's recommended to start with a user role with a larger base and possible early adopters for smaller screen experience.
 
     In this case, the data analysts are the appropriate user role to target first. You can gradually add functionalities to support other user roles on your Teams mobile.
 
@@ -73,7 +73,7 @@ In the second stage, the users can work on the existing charts and visuals from 
 
 **Enablement:**
 
-In the third stage, enable users to create content such as, charts and graphics from scratch. Ensure to introduce all the capabilities in your app for mobile. For example, you can use task modules to help access specific data items with detailed view.
+In the third stage, enable users to create content such as, charts and graphics from scratch. Plan to introduce all the capabilities in your app for mobile. For example, you can use task modules to help access specific data items with detailed view.
 
 You can provide following access to users:
 
@@ -103,7 +103,7 @@ In the first stage, your app can show the list of tasks to the user in a vertica
 
 **Quick actions:**
 
-In the second stage, you can provide the following app access to users:
+In the second stage, you can provide the following functionalities to users:
 
 * Create tasks or items with mandatory fields to reduce cognitive load of the users.
 * Change the board type or view.
@@ -116,7 +116,7 @@ In the second stage, you can provide the following app access to users:
 
 **Enablement:**
 
-In the third stage, you can enable users experience with the following activities:
+In the third stage, you can enable users with the following features:
 
 * Add new projects and boards.
 * Add and modify different categories, such as **Proposed**, **Active**, and **Closed**.
@@ -161,7 +161,7 @@ In the second stage, you can introduce the following actions:
 
 **Enablement:**
 
-In the third stage, provide complete experience to your users. You can enable users experience with the following activities:
+In the third stage, provide complete experience to your users. You can enable users with the following features:
 
 * Adding text, shapes, and quick notes.
 * Navigate around content.
