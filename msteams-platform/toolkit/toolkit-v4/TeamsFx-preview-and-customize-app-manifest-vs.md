@@ -156,7 +156,7 @@ If the environment hasn't been provisioned, or the Teams app dependencies haven'
 
 ## Preview app manifest file
 
-You can either sideload an app for local, or deploy for Azure to preview the app manifest file. You can preview the app manifest file by performing the following steps:
+You can either sideload for local, or deploy for Azure to preview the app manifest file. You can preview the app manifest file by performing the following steps:
 
 1. Select **Project** > **Teams Toolkit**.
 
