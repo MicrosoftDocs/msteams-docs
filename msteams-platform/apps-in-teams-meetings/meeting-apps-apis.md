@@ -1578,6 +1578,8 @@ protected override async Task OnTeamsMeetingParticipantsLeaveAsync(MeetingPartic
 }
 ```
 
+---
+
 Following are the examples of the participant join and leave event payloads:
 
 # [Participant join event](#tab/participant-join-event1) 
