@@ -236,7 +236,7 @@ contentType: "application/vnd.microsoft.card.thumbnail",
 
 ## Zero install for link unfurling
 
-Zero install link unfurling helps you unfurl previews for your shared links even before a user discovered or installed your app in Teams. You can anonymously unfurl cards with a new invoke request or create a pre-authenticated Adaptive Card preview for users before they install or authenticate your app.
+Zero install link unfurling helps you unfurl previews for your shared links even before a user discovered or installed your app in Teams. You can anonymously unfurl cards with a new invoke request or create a preauthenticated Adaptive Card preview for users before they install or authenticate your app.
 
 The following image provides a sequential flow to enable and use zero install link unfurling:
 
@@ -344,7 +344,7 @@ To get your app ready for zero install link unfurling, follow these steps:
       }
       ```
 
-   1. For auth scenarios: You must send back a response with the `type` as `auth` with an optional pre-auth card in the attachments. Use the following template:
+   1. For auth scenarios: You must send back a response with the `type` as `auth` with an optional preauth card in the attachments. Use the following template:
   
       ```json
       {
@@ -376,7 +376,7 @@ To get your app ready for zero install link unfurling, follow these steps:
       }
       ```
 
-1. Pre-auth card (for auth only): Create a card preview to unfurl your links for users who don't have your app installed. You can either create a pre-templated card or add relevant placeholder fields for the users to update. The users can learn about the app even before they’ve installed it.
+1. Preauth card (for auth only): Create a card preview to unfurl your links for users who don't have your app installed. You can either create a pre-templated card or add relevant placeholder fields for the users to update. The users can learn about the app even before they’ve installed it.
 
    You can create a customized card and add relevant fields. The users can fill in the required information as per the fields. The following image illustrates a customized card preview:
 
