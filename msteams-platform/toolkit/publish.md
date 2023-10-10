@@ -1,7 +1,7 @@
 ---
 title: Publish Teams apps using Teams Toolkit
 author: zyxiaoyuer
-description: In this module, learn how to publish Teams apps using Teams Toolkit and publish to individual scope or sideload permission.
+description: In this module, learn how to publish Teams apps using Teams Toolkit and publish to individual scope or upload permission.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
@@ -15,7 +15,7 @@ After creating the app, you can distribute your app to different scopes, such as
 
 Here's what you'll learn in this section:
 
-* [Publish to individual scope or sideload permission](#publish-to-individual-scope-or-sideload-permission)
+* [Publish to individual scope or upload permission](#publish-to-individual-scope-or-upload-permission)
 * [Publish to your organization](#publish-to-your-organization)
 * [Publish to Microsoft Teams Store](#publish-to-teams-store)
 
@@ -26,9 +26,9 @@ Here's what you'll learn in this section:
 * Ensure that your app is running and accessible using HTTPs.
 * Ensure you have followed set of guidelines in the publish your app to the Teams Store to publish your app.
 
-## Publish to individual scope or sideload permission
+## Publish to individual scope or upload permission
 
-You can add a custom app to Teams by uploading an [app package](../concepts/build-and-test/apps-package.md) in `.zip` file directly to a team or in personal context. Adding a custom app by uploading an app package is known as sideloading. It allows you to test app while being uploaded in Teams. You can build and test app in the following scenarios:
+You can add a custom app to Teams by uploading an [app package](../concepts/build-and-test/apps-package.md) in `.zip` file directly to a team or in personal context. Adding a custom app by uploading an app package is known as uploading. It allows you to test app while being uploaded in Teams. You can build and test app in the following scenarios:
 
 * Test and debug an app locally.
 * Build an app for yourself, such as to automate a workflow.
@@ -57,7 +57,7 @@ Perform the following steps to upload app package:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/upload_1.png" alt-text="Screenshot shows the upload an app option.":::
 
-   Now, the app is sideloaded into the Teams client and you can add and view it.
+   Now, the app is uploaded into the Teams client and you can add and view it.
 
 ## Publish to your organization
 
