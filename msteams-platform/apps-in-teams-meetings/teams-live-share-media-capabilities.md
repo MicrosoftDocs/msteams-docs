@@ -54,7 +54,11 @@ Example:
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import { LiveShareClient, UserMeetingRole } from "@microsoft/live-share";
+import {
+  LiveShareClient,
+  UserMeetingRole,
+  MediaPlayerSynchronizerEvents,
+} from "@microsoft/live-share";
 import { LiveMediaSession } from "@microsoft/live-share-media";
 import { LiveShareHost } from "@microsoft/teams-js";
 
@@ -71,6 +75,12 @@ const { mediaSession } = container.initialObjects;
 const player = document.getElementById("player");
 const synchronizer = mediaSession.synchronize(player);
 
+// Listen for groupaction events (optional)
+synchronizer.addEventListener(MediaPlayerSynchronizerEvents.groupaction, async (evt) => {
+  // See which user made the change (e.g., to display a notification)
+  const clientInfo = await synchronizer.mediaSession.getClientInfo(evt.details.clientId);
+});
+
 // Define roles you want to allow playback control and start sync
 const allowedRoles = [UserMeetingRole.organizer, UserMeetingRole.presenter];
 await mediaSession.initialize(allowedRoles);
@@ -79,7 +89,11 @@ await mediaSession.initialize(allowedRoles);
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import { LiveShareClient, UserMeetingRole } from "@microsoft/live-share";
+import {
+  LiveShareClient,
+  UserMeetingRole,
+  MediaPlayerSynchronizerEvents,
+} from "@microsoft/live-share";
 import { LiveMediaSession, IMediaPlayer, MediaPlayerSynchronizer } from "@microsoft/live-share-media";
 import { LiveShareHost } from "@microsoft/teams-js";
 import { ContainerSchema } from "fluid-framework";
@@ -97,6 +111,12 @@ const mediaSession = container.initialObjects.mediaSession as LiveMediaSession;
 const player: IMediaPlayer = document.getElementById("player") as HTMLVideoElement;
 const synchronizer: MediaPlayerSynchronizer = mediaSession.synchronize(player);
 
+// Listen for groupaction events (optional)
+synchronizer.addEventListener(MediaPlayerSynchronizerEvents.groupaction, async (evt) => {
+  // See which user made the change (e.g., to display a notification)
+  const clientInfo = await synchronizer.mediaSession.getClientInfo(evt.details.clientId);
+});
+
 // Define roles you want to allow playback control and start sync
 const allowedRoles: UserMeetingRole[] = [UserMeetingRole.organizer, UserMeetingRole.presenter];
 await mediaSession.initialize(allowedRoles);
@@ -107,7 +127,8 @@ await mediaSession.initialize(allowedRoles);
 ```jsx
 import { useMediaSynchronizer } from "@microsoft/live-share-react";
 import { UserMeetingRole } from "@microsoft/live-share";
-import { useRef } from "react";
+import { MediaPlayerSynchronizerEvents } from "@microsoft/live-share-media";
+import { useRef, useEffect } from "react";
 
 const ALLOWED_ROLES = [UserMeetingRole.organizer, UserMeetingRole.presenter];
 
@@ -118,12 +139,31 @@ const UNIQUE_KEY = "MEDIA-SESSION-ID";
 
 export function VideoPlayer() {
   const videoRef = useRef(null);
-  const { play, pause, seekTo } = useMediaSynchronizer(
+  const { play, pause, seekTo, mediaSynchronizer } = useMediaSynchronizer(
     UNIQUE_KEY,
     videoRef,
     INITIAL_TRACK,
     ALLOWED_ROLES
   );
+
+  // Listen for groupaction events (optional)
+  useEffect(() => {
+    // Listen for player group actions for errors (e.g., play error)
+    const onGroupAction = (evt: IMediaPlayerSynchronizerEvent) => {
+      // See which user made the change (e.g., to display a notification)
+      const clientInfo = await synchronizer.mediaSession.getClientInfo(evt.details.clientId);
+    };
+    mediaSynchronizer?.addEventListener(
+      MediaPlayerSynchronizerEvents.groupaction,
+      onGroupAction
+    );
+    return () => {
+      mediaSynchronizer?.removeEventListener(
+        MediaPlayerSynchronizerEvents.groupaction,
+        onGroupAction
+      );
+    };
+  }, [mediaSynchronizer]);
 
   return (
     <div>
@@ -494,10 +534,10 @@ Additionally, add the following [RSC](/microsoftteams/platform/graph-api/rsc/res
 
 ## Code samples
 
-| Sample name          | Description                                                                                                                               | JavaScript                                     |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| Sample name          | Description                                                                                                                               | JavaScript                                     | TypeScript                                     |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
 | React video          | Basic example showing how the LiveMediaSession object works with HTML5 video.                                                        | [View](https://aka.ms/liveshare-reactvideo)    |
-| React media template | Enable all connected clients to watch videos together, build a shared playlist, transfer whom is in control, and annotate over the video. | [View](https://aka.ms/liveshare-mediatemplate) |
+| React media template | Enable all connected clients to watch videos together, build a shared playlist, transfer whom is in control, and annotate over the video. | [View](https://aka.ms/liveshare-mediatemplate) | [View](https://aka.ms/liveshare-mediatemplate-ts) |
 
 ## Next step
 

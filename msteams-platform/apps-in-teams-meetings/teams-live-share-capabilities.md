@@ -20,13 +20,14 @@ This article focuses on how to integrate the Live Share SDK into your app and ke
 
 ### Install the JavaScript SDK
 
-The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or yarn. You must also install Live Share peer dependencies, which include `fluid-framework` and `@fluidframework/azure-client`. If you're using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later.
+The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or yarn. You must also install Live Share peer dependencies, which include `fluid-framework` and `@fluidframework/azure-client`. If you're using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later. Finally, if you plan to use the `TestLiveShareHost` class for local browser development, you must install `@fluidframework/test-client-utils` and `start-server-and-test` packages in your `devDependencies`.
 
 #### npm
 
 ```bash
 npm install @microsoft/live-share fluid-framework @fluidframework/azure-client --save
 npm install @microsoft/teams-js --save
+npm install @fluidframework/test-client-utils start-server-and-test --save-dev
 ```
 
 #### yarn
@@ -34,6 +35,7 @@ npm install @microsoft/teams-js --save
 ```bash
 yarn add @microsoft/live-share fluid-framework @fluidframework/azure-client
 yarn add @microsoft/teams-js
+yarn add @fluidframework/test-client-utils -dev
 ```
 
 ### Register RSC permissions
@@ -48,7 +50,8 @@ To enable the Live Share SDK for your meeting extension, you must first add the 
         "configurationUrl": "<<YOUR_CONFIGURATION_URL>>",
         "canUpdateConfiguration": true,
         "scopes": [
-            "groupchat"
+            "groupchat",
+            "team"
         ],
         "context": [
             "meetingSidePanel",
@@ -395,7 +398,8 @@ const { appState } = container.initialObjects;
 // This should be done before calling `.initialize()`.
 appState.on("stateChanged", (planetName, local, clientId) => {
   // Update app with newly selected planet.
-  // To know which user made this change, you can pass the `clientId` to the `getUserForClient()` API from the `LivePresence` class.
+  // See which user made the change (optional)
+  const clientInfo = await appState.getClientInfo(clientId);
 });
 
 // Set a default value and start listening for changes.
@@ -438,9 +442,10 @@ const appState = container.initialObjects.appState as LiveState<PlanetName>;
 
 // Register listener for changes to the state.
 // This should be done before calling `.initialize()`.
-appState.on("stateChanged", (planetName: PlanetName, local: boolean, clientId: string) => {
+appState.on("stateChanged", async (planetName: PlanetName, local: boolean, clientId: string) => {
   // Update app with newly selected planet
-  // To know which user made this change, you can pass the `clientId` to the `getUserForClient()` API from the `LivePresence` class.
+  // See which user made the change (optional)
+  const clientInfo = await appState.getClientInfo(clientId);
 });
 
 // Set a default value and start listening for changes.
@@ -518,9 +523,10 @@ const { customReactionEvent } = container.initialObjects;
 
 // Register listener to receive events sent through this object.
 // This should be done before calling `.initialize()`.
-customReactionEvent.on("received", (kudosReaction, local, clientId) => {
+customReactionEvent.on("received", async (kudosReaction, local, clientId) => {
   console.log("Received reaction:", kudosReaction, "from clientId", clientId);
-  // To know which user made this change, you can pass the `clientId` to the `getUserForClient()` API from the `LivePresence` class.
+  // See which user made the change (optional)
+  const clientInfo = await customReactionEvent.getClientInfo(clientId);
   // Display notification in your UI
 });
 
@@ -563,7 +569,8 @@ const customReactionEvent = container.initialObjects.customReactionEvent as Live
 // This should be done before calling `.initialize()`.
 customReactionEvent.on("received", async (event: ICustomReaction, local: boolean, clientId: string) => {
   console.log("Received reaction:", kudosReaction, "from clientId", clientId);
-  // To know which user made this change, you can pass the `clientId` to the `getUserForClient()` API from the `LivePresence` class.
+  // See which user made the change (optional)
+  const clientInfo = await customReactionEvent.getClientInfo(clientId);
   // Display notification in your UI
 });
 
@@ -1089,12 +1096,143 @@ export function PlaylistMapExample() {
 > [!NOTE]
 > Core Fluid Framework DDS objects don't support meeting role verification. Everyone in the meeting can change the data stored through these objects.
 
+## Local browser testing
+
+You can test the Live Share SDK locally in your browser using the `TestLiveShareHost` class without installing your app in Teams. This is useful for testing the core collaborative capabilities of your application in a familiar `localhost` environment.
+
+Example:
+
+# [JavaScript](#tab/javascript)
+
+```javascript
+import { LiveShareClient, TestLiveShareHost, LiveState } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+import { SharedMap } from "fluid-framework";
+
+/**
+ * Detect whether you are in Teams or local environment using your preferred method.
+ * Options for this include: environment variables, URL params, Teams FX, etc.
+ */
+const inTeams = process.env.IN_TEAMS;
+// Join the Fluid container
+const host = inTeams
+  ? LiveShareHost.create()
+  : TestLiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema = {
+  initialObjects: {
+    liveState: LiveState,
+    sharedMap: SharedMap,
+  },
+};
+const { container } = await liveShare.joinContainer(schema);
+
+// ... ready to start app sync logic
+```
+
+# [TypeScript](#tab/typescript)
+
+```TypeScript
+import {
+  LiveShareClient,
+  TestLiveShareHost,
+  LiveState,
+  ILiveShareHost,
+} from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+import { ContainerSchema, SharedMap } from "fluid-framework";
+
+/**
+ * Detect whether you are in Teams or local environment using your preferred method.
+ * Options for this include: environment variables, URL params, Teams FX, etc.
+ */
+const inTeams = process.env.IN_TEAMS;
+// Join the Fluid container
+const host: ILiveShareHost = inTeams
+  ? LiveShareHost.create()
+  : TestLiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema: ContainerSchema = {
+  initialObjects: {
+    exampleMap: SharedMap,
+    liveState: LiveState,
+  },
+};
+const { container } = await liveShare.joinContainer(schema);
+
+// ... ready to start app sync logic
+```
+
+# [React](#tab/react)
+
+```jsx
+import { TestLiveShareHost } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+import { LiveShareProvider, useLiveShareContext } from "@microsoft/live-share-react";
+import { useState } from "react";
+
+/**
+ * Detect whether you are in Teams or local environment using your preferred method.
+ * Options for this include: environment variables, URL params, Teams FX, etc.
+ */
+const inTeams = process.env.IN_TEAMS;
+
+export const App = () => {
+    // Create the host as React state so that it doesn't get reset on mount
+    const [host] = useState(
+        inTeams ? LiveShareHost.create() : TestLiveShareHost.create()
+    );
+
+    // Live Share for React does not require that you define a custom Fluid schema
+    return (
+        <LiveShareProvider host={host} joinOnLoad>
+            <LiveShareLoading />
+        </LiveShareProvider>
+    );
+}
+
+const LiveShareLoading = () => {
+    // Any live-share-react hook (e.g., useLiveShareContext, useLiveState, etc.) must be a child of <LiveShareProvider>
+    const { joined } = useLiveShareContext();
+    if (joined) {
+        return <p>{"Loading..."}</p>;
+    }
+    return <p>{"Your app here..."}</p>;
+}
+```
+
+---
+
+The `TestLiveShareHost` class leverages Fluid Framework's `tinylicious` test server, rather than our production Azure Fluid Relay service. To do this, you must add a few scripts to your `package.json` to start the test server. You also must also add the `@fluidframework/test-client-utils` and `start-server-and-test` packages to the `devDependencies` in your `package.json`.
+
+```json
+{
+    "scripts": {
+        "start": "start-server-and-test start:server 7070 start:client",
+        "start:client": "{YOUR START CLIENT COMMAND HERE}",
+        "start:server": "npx tinylicious@latest"
+    },
+    "devDependencies": {
+        "@fluidframework/test-client-utils": "^1.3.6",
+        "start-server-and-test": "^2.0.0"
+    }
+}
+```
+
+When you start your application this way, the `LiveShareClient` will add `#{containerId}` to your URL, if one doesn't already exist. You can then copy and paste the URL into a new browser window to connect to the same Fluid container.
+
+> [!NOTE]
+> By default, all clients connected through `TestLiveShareHost` will have `presenter` and `organizer` roles.
+
 ## Code samples
 
-| Sample name | Description                                                     | JavaScript                                  |
-| ----------- | --------------------------------------------------------------- | ------------------------------------------- |
-| Dice Roller | Enable all connected clients to roll a die and view the result. | [View](https://aka.ms/liveshare-diceroller) |
-| Agile Poker | Enable all connected clients to play Agile Poker.               | [View](https://aka.ms/liveshare-agilepoker) |
+| Sample name | Description                                                     | JavaScript                                  | TypeScript                                  |
+| ----------- | --------------------------------------------------------------- | ------------------------------------------- | ---------------------------------------------- |
+| Dice Roller | Enable all connected clients to roll a die and view the result. | [View](https://aka.ms/liveshare-diceroller) | [View](https://aka.ms/liveshare-diceroller-ts) |
+| Agile Poker | Enable all connected clients to play Agile Poker.               | [View](https://aka.ms/liveshare-agilepoker) |                        |
+| 3D Model    | Enable all connected clients to view a 3D model together.       |                          | [View](https://aka.ms/liveshare-3dviewer-ts)                       |
+| Timer       | Enable all connected clients to view a countdown timer.         |                          | [View](https://aka.ms/liveshare-timer-ts)                          |
+| Presence avatars | Display presence avatars for all connected clients.        |                          | [View](https://aka.ms/liveshare-presence-ts)                       |
 
 ## Next step
 
