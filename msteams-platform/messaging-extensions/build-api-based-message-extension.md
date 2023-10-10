@@ -368,7 +368,7 @@ To extend copilot plugin as a message extension, add commands:
 
 An API-based ME is created.
 
-# [Teams Toolkit](#tab/Teams-toolkit)
+# [Visual Studio Code](#tab/visual-studio-code)
 
 1. Open **Visual Studio Code**.
 1. From the left pane, Select **Teams Toolkit**.
@@ -408,9 +408,9 @@ An API-based ME is created.
    1. Select **Default folder**.
    1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI spec file and created an API-based message extension.
 
-  ---
+   ---
 
-# [Teams CLI](#tab/teams-cli)
+# [Teams Toolkit CLI](#tab/teams-toolkit-cli)
 
 1. Go to **Command Prompt**.
 
