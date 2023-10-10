@@ -147,7 +147,6 @@ The **Read receipts** setting in Teams allow the sender of a chat message to be 
 
 > [!NOTE]
 >
-> * Read receipt events are available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * Read receipts are supported only in user to bot chat scenarios.
 > * Read receipts for bots doesn’t support team, channel, and group chat scopes.
 > * If a tenant admin or user disables the **Read receipts** setting, the bot doesn't receive the read receipt event.
