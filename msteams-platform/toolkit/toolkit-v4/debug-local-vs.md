@@ -42,14 +42,14 @@ To debug your app after you create a project, perform the following steps:
    > [!NOTE]
    > In this scenario the project name is MyTeamsApp1.
 
-   Your Microsoft 365 account needs to have the app upload permission before you sign in. Ensure that your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
+   Your Microsoft 365 account needs to have the side loading permission before you sign in. Ensure that your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
 
 1. Sign in to your **Microsoft 365 Account** and then select **Continue**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-signin-m365.png" alt-text="Screenshot shows sign in to Microsoft 365 account.":::
 
    > [!NOTE]
-   > Learn more about the app upload permission, see [Prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
+   > Learn more about sideloading permission, see [Prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
 
 1. Select **Debug** > **Start Debugging** or select **F5**.
 
@@ -110,14 +110,14 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
    > [!NOTE]
    > In this scenario the project name is MyTeamsApp1.
 
-   Your Microsoft 365 account needs to have the app upload permission before you sign in.  Ensure your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
+   Your Microsoft 365 account needs to have the side loading permission before you sign in.  Ensure your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
 
 1. Sign in to your **Microsoft 365 Account**, then select **Continue**.
 
    :::image type="content" source="images/vs-localdebug-signin-m365-v4.png" alt-text="Sign in to Microsoft 365 account":::
 
    > [!Note]
-   > Learn more about the app upload permission by visiting [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+   > Learn more about sideloading permission by visiting [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
 1. Select **Debug** > **Start Debugging**, or directly select **F5**.
 
