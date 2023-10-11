@@ -113,7 +113,7 @@ To show the loading indicator:
 
 1. Add `"showLoadingIndicator": true` to your manifest.
 1. Call `app.initialize();`.
-1. Call `app.notifySuccess()` in all iframe-based contents to notify Teams that your app has successfully loaded. If applicable, Teams hides the loading indicator. If `notifySuccess`  isn't called within 30 seconds, Teams assumes that your app has timed out, and displays an error screen with a retry option. For app updates, this step applicable for already configured tabs. If you don't perform this step, an error screen is displayed for the existing users. *[Mandatory]*
+1. Call `app.notifySuccess()` in all iframe-based contents to notify Teams that your app has successfully loaded. If applicable, Teams hides the loading indicator. If `notifySuccess`  isn't called within 30 seconds, Teams assumes that your app has timed out, and displays an error screen with a retry option. For app updates, this step is applicable for already configured tabs. If you don't perform this step, an error screen is displayed for the existing users. *[Mandatory]*
 1. If you're ready to print to the screen and wish to lazy load the rest of your application's content, you can hide the loading indicator manually by calling `app.notifyAppLoaded();`. *[Optional]*
 1. If your application doesn't load, you can call `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` to let Teams know about the failure. The `message` property is currently not used, therefore the failure message doesn't appear in the UI, and a generic error screen appears to the user. The following code shows the enumeration that defines the possible reasons you can indicate for the application's failure to load:
 
