@@ -376,7 +376,7 @@ To get your app ready for zero install link unfurling, follow these steps:
       }
       ```
 
-1. Preauth card (for auth only): Create a card preview to unfurl your links for users who don't have your app installed. You can either create a pre-templated card or add relevant placeholder fields for the users to update. The users can learn about the app even before they’ve installed it.
+1. Preauth card (for auth only): Create a card preview to unfurl your links for users who don't have your app installed. You can either create a pre-templated card or add relevant placeholder fields for the users to update. Users can learn about the app even before they’ve installed it.
 
    You can create a customized card and add relevant fields. The users can fill in the required information as per the fields. The following image illustrates a customized card preview:
 
