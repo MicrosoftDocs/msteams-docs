@@ -30,7 +30,7 @@ The Classic Teams client is represented using the `teams` field and the new Team
 
 To ensure a smooth transition, a phased rollout of the new platform is planned as follows:
 
-* **Availability of all platform features from Classic Teams**: All apps are available in the new Teams Client. All platform features except the features listed under [known issues](#known-issues) are now available. Platform features under known issues will be available soon.
+* **Availability of all platform features from Classic Teams**: All apps are available in the new Teams Client. All platform features except the features listed under [known issues](#known-issues) are now available. Platform features under known issues aren't currenly supported (will be available soon) in the new Teams client.
 
 ## Known issues
 
@@ -40,7 +40,7 @@ To ensure a smooth transition, a phased rollout of the new platform is planned a
 > * We recommend you to test the functionality of  apps, tabs, messaging extensions, bots, and link unfurling on Windows and Mac clients and GCC and GCC-High environments after switching from the Classic Teams client to the new Teams client.
 > * [Adaptive Card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client. If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
 
-The following are the Teams features that aren't supported:
+The following Teams features aren't currenly supported (will be available soon) in the new Teams client:
 
 * [External authentication](../tabs/how-to/authentication/auth-oauth-provider.md) isn't supported in the new Teams client. We recommend you use the [authentication using third-party OAuth provider](../tabs/how-to/authentication/auth-flow-tab.md) or use the app in the Classic Teams client.
 
@@ -53,6 +53,8 @@ The following are the Teams features that aren't supported:
 * [GetMruTabInstances](/javascript/api/@microsoft/teams-js/pages.tabs?view=msteams-client-js-latest#@microsoft-teams-js-pages-tabs-getmrutabinstances&preserve-view=true) and [GetTabInstances](/javascript/api/@microsoft/teams-js/pages.tabs?view=msteams-client-js-#@microsoft-teams-js-pages-tabs-gettabinstances&preserve-view=true) APIs aren't supported in the new Teams client. We recommend to use the [chat](/graph/api/chat-list-tabs?view=graph-rest-1.0&tabs=http&preserve-view=true) and [channel tabs](/graph/api/channel-list-tabs?view=graph-rest-1.0&tabs=http&preserve-view=true) Graph APIs.
 
 * [Pinning and unpinning apps](https://support.microsoft.com/office/pin-an-app-for-easy-access-in-microsoft-teams-3045fd44-6604-4ba7-8ecc-1c0d525e89ec) from the left side of Teams isn't supported in the new Teams client.
+
+* [DevTools](/microsoft-edge/devtools-guide-chromium/overview) isn't supported in the new Teams client.
 
 For more information on known issues and gaps in the new Teams client, see [new Microsoft Teams](/microsoftteams/new-teams-desktop-admin?tabs=teams-admin-center#known-issues).
 
