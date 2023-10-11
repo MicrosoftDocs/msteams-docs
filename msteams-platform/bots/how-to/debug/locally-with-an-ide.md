@@ -9,7 +9,7 @@ ms.author: anclear
 
 # Test and debug your bot locally with IDE
 
-When testing your bot, you need to consider both the contexts you want your bot to run in, and any functionality you may have added to your bot that requires data specific to Microsoft Teams. Ensure that the method you choose to test your bot aligns with its functionality.
+When testing your bot, you need to consider both the contexts you want your bot to run in, and any functionality you might have added to your bot that requires data specific to Microsoft Teams. Ensure that the method you choose to test your bot aligns with its functionality.
 
 ## Test by uploading to Teams
 
@@ -24,7 +24,7 @@ There are two methods for uploading your app:
 > To alter the manifest and re-upload your app, [delete the bot](#delete-a-bot-from-teams) before uploading the altered app package.
 > To test the bot, enable sideloading in Teams. See [enable sideloading](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
-We don't recommend uploading multiple apps with different content but the same bot ID, as this may result in undefined bot behavior. Delete or uninstall all previous versions of the apps, and then upload only the latest version. If the apps are created using the same bot ID, then the user has to provide the permissions in the app package.
+We don't recommend uploading multiple apps with different content but the same bot ID, as this might result in undefined bot behavior. Delete or uninstall all previous versions of the apps, and then upload only the latest version. If the apps are created using the same bot ID, then the user has to provide the permissions in the app package.
 
 ## Debug your bot locally
 
@@ -79,7 +79,7 @@ Your bot receives the `conversationUpdate` event as you add the bots to a team, 
 
 ## Block a bot in personal chat
 
-Users can choose to block your bot from sending personal chat messages. They may toggle this by right-clicking your bot in the chat channel and choosing **Block bot conversation**. This means, your bots continue to send messages, however, the user doesn't receive the messages.
+Users can choose to block your bot from sending personal chat messages. They might toggle this by right-clicking your bot in the chat channel and choosing **Block bot conversation**. This means, your bots continue to send messages, however, the user doesn't receive the messages.
 
 ![Blocking a bot](~/assets/images/bots/botdisable.png)
 
