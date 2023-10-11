@@ -57,7 +57,7 @@ To start with a personal tab that's already enabled to run in Teams, Outlook, an
 
     :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Screenshot shows the Basic Tab option highlighted to create a new app feature using a tab.":::
 
-1. Select preferred programming language.
+1. Select a preferred programming language.
 1. Select a location on your local machine for the workspace folder and enter your application name.
 1. Once your app has been created, within the Teams Toolkit extension, make sure you're signed in to the appropriate Microsoft 365 Developer Program sandbox tenant and Azure account. These options can be found within the **ACCOUNTS** section of the extension.
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
