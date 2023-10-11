@@ -137,6 +137,122 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ---
 
+## Receive a read receipt
+
+The **Read receipts** setting in Teams allow the sender of a chat message to be notified when their message was read by the recipient in 1:1 and group chats. When the recipients reads the message the Seen :::image type="icon" source="../../../assets/icons/read_receipt_seen.png" border="false"::: appears next to the message. You can also configure your bot to receive read receipt events through the **Read receipts** setting. The read receipt event helps you enhance user experience in the following ways:
+
+* You can configure your bot to send a follow up message if your app user hasn't read the message in the personal chat.
+
+* You can create a feedback loop using read receipts to tune your bot’s experience.
+
+> [!NOTE]
+>
+> * Read receipts are supported only in user to bot chat scenarios.
+> * Read receipts for bots doesn’t support team, channel, and group chat scopes.
+> * If a tenant admin or user disables the **Read receipts** setting, the bot doesn't receive the read receipt event.
+
+To receive read receipts events for your bot, ensure the following:
+
+* Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) `ChatMessageReadReceipt.Read.Chat` permission in the [app manifest](~/resources/schema/manifest-schema.md), as follows: 
+
+    # [App manifest v1.12 or later](#tab/app-manifest-v112-or-later)
+    
+    ```json
+    
+    "webApplicationInfo": {
+    
+        "id": "38f0ca43-1c38-4c39-8097e-47f62c686500",
+        "resource": ""
+    },
+    "authorization": {
+        "permissions": {
+            "orgwide": [],
+            "resourceSpecific": [
+            {
+                "name": "ChatMessageReadReceipt.Read.Chat",
+                "type": "Application"
+            }
+            ]
+        }
+    }
+    
+    ```
+    
+    # [App manifest v1.11 or earlier](#tab/app-manifest-v111-or-earlier)
+    
+    ```json
+    
+     “webApplicationInfo”: {
+    
+         "id": "123456c8-67d2-4f54-b74e-408b195c4cbc",
+         "resource": "https: //AnyString",
+         "applicationPermissions": [
+             "ChatMessageReadReceipt.Read.Chat"
+         ]
+     },
+    
+    ```
+    
+    ---
+    
+    You can also add RSC permissions through Graph API. For more information, see [`consentedPermissionSet`](/graph/api/userteamwork-teamsappinstallation-upgrade#http-request).
+
+* Override the method `OnTeamsReadReceiptAsync` with `IsMessageRead` handler.
+
+  The `IsMessageRead` helper method is useful to determine if the message is read by the recipients. If the `compareMessageId` is less than or equal to the `LastReadMessageId`, then the message has been read. Override the `OnTeamsReadReceiptAsync` method to receive read receipts with [`IsMessageRead`](/dotnet/api/microsoft.bot.schema.teams.readreceiptinfo.ismessageread#microsoft-bot-schema-teams-readreceiptinfo-ismessageread(system-string)) helper method:
+
+    ```csharp
+    
+    protected override async Task OnTeamsReadReceiptAsync(ReadReceiptInfo readReceiptInfo, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken) 
+    {
+        var lastReadMessageId = readReceiptInfo.LastReadMessageId;
+       if (IsMessageRead("{id of the message that you care}", LastReadMessageId))
+       {
+            await turnContext.SendActivityAsync(MessageFactory.Text("User read the bot's message"), cancellationToken);    
+        }
+    }
+    ```
+
+    Following is an example of read receipts event request that a bot receives:
+    
+    ```json
+    {
+        "name": "application/vnd.microsoft.readReceipt",
+        "type": "event",
+        "timestamp": "2023-08-16T17:23:11.1366686Z",
+        "id": "f:b4783e72-9d7b-2ed9-ccef-ab446c873007",
+        "channelId": "msteams",
+        "serviceUrl": "https://smba.trafficmanager.net/amer/",
+        "from": {
+            "id": "29:1-8Iuh70W9pRqV8tQK8o2nVjxz33RRGDKLf4Bh7gKnrzN8s7e4vCyrFwjkPbTCX_Co8c4aXwWvq3RBLr-WkkVMw",
+            "aadObjectId": "5b649834-7412-4cce-9e69-176e95a394f5"
+        },
+        "conversation": {
+            "conversationType": "personal",
+            "tenantId": "6babcaad-604b-40ac-a9d7-9fd97c0b779f",
+            "id": "a:1xlimp68NSUxEqK0ap2rXuwC9ITauHgV2M4RaDPkeRhV8qMaFn-RyilMZ62YiVdqs8pp43yQaRKvv_U2S2gOS5nM-y_pOxVe4BW1qMGPtqD0Bv3pw-nJXF0zhDlZHMZ1Z"
+        },
+        "recipient": {
+            "id": "28:9901a8b6-4fef-428b-80b1-ddb59361adeb",
+            "name": "Test Bot"
+        },
+        "channelData": {
+            "tenant": {
+                "id": "6babcaad-604b-40ac-a9d7-9fd97c0b779f"
+            }
+        },
+        "value": {
+            "lastReadMessageId": "1692206589131"
+        }
+    }
+    
+    ```
+
+* Read receipt [admin setting](/microsoftteams/messaging-policies-in-teams#messaging-policy-settings) or [user setting](https://support.microsoft.com/office/use-read-receipts-for-messages-in-microsoft-teams-533f2334-32ef-424b-8d56-ed30e019f856) is turned on for the tenant for the bot to receive the read receipt events. The tenant admin or the user can enable or disable the read receipt setting.
+
+After the bot is enabled in a user to bot chat scenario, the bot promptly receives a read receipt event when the user reads the bot's message. You can track the user engagement by counting the number of events and you can also send a context aware message. 
+
+
 ## Send a message
 
 To send a text message, specify the string you want to send as an activity. In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response. Use the object's `SendActivitiesAsync` method to send multiple responses.
