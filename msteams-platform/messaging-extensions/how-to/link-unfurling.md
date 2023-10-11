@@ -425,7 +425,7 @@ To test zero install link unfurling, follow these steps:
 
 1. Login to [Teams admin center](https://admin.teams.microsoft.com/).
 
-1. From the left pane, select **Teams apps** > **Managed apps**.
+1. From the left pane, select **Teams apps** > **Manage apps**.
 
     :::image type="content" source="../../assets/images/teams-link-unfurling/manage-apps-admin.png" alt-text="Screenshot of Teams admin center and section for sideloading Teams apps":::
 
