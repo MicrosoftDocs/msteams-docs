@@ -1,5 +1,5 @@
 ---
-title: Create bot-based Message extension
+title: Bot-based Message extension
 author: v-ypalikila
 description: Learn how to build a bot message extension using Teams developer portal and Teams Toolkit.
 ms.localizationpriority: medium
