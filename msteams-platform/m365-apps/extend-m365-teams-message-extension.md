@@ -19,18 +19,16 @@ Message extensions allow users to interact with your web service using buttons a
 * Search-based message extensions: Allow users to search an external system and share results through the compose message area of the Microsoft Teams client.
 
 * Action-based message extensions: Allow you to present users with a modal pop-up to collect or display information, process the interaction, and send the information back to the client as a rich card.
+  [!NOTE]
+  Teams action-based message extensions are available in preview for Outlook.
 
 You can bring Teams message extensions to Outlook by extending your Teams apps across Microsoft 365. For more information about [message extension](~/messaging-extensions/what-are-messaging-extensions.md) support within Outlook for Windows desktop, web, and mobile, see the support table in [extend Teams apps across Microsoft 365](~/m365-apps/overview.md).
 
-If your message extension supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) and unfurls links that display cards to launch [Stage View](../tabs/tabs-link-unfurling.md) in Teams, follow this article to enable link unfurling and Stage View in Outlook on web and Windows desktop environments.
+If your message extension supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) that display cards to launch [Stage View](../tabs/tabs-link-unfurling.md) in Teams, follow this article to enable link unfurling and Stage View in Outlook for Windows desktop and web.
 
 Outlook mobile users on Android and [Microsoft Outlook beta TestFlight](https://testflight.apple.com/join/AhS6fRDK) iOS rings can receive and take actions on cards from your apps that were sent to them by users on Outlook on web and Windows desktop.
 
-In this article you'll learn how to extend your Teams message extension to Outlook, which you can do either of the following:
-
-* [Build a new message extension app with Teams Toolkit and view it in Outlook.](#build-a-message-extension-app-with-teams-toolkit-for-outlook)
-
-* [Extend an existing Teams message extension app to Outlook.](#extend-an-existing-teams-message-extension-app-to-outlook)
+To extend your Teams message extension to Outlook, you [Build a new message extension app with Teams Toolkit](#build-a-message-extension-app-with-teams-toolkit-for-outlook) or [extend an existing Teams message extension app to Outlook.](#extend-an-existing-teams-message-extension-app-to-outlook)
 
 ## Prerequisites
 
@@ -52,7 +50,7 @@ To start with a sample message extension app that's already enabled to run in Ou
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
 1. Select **Teams: Create a New App**.
 1. From the dropdown list that appears, select **Message Extension**.
-1. Select **Custom Search Results** to download the sample code for a Teams message extension using the latest app manifest. For more information, see [app manifest](../resources/schema/manifest-schema.md).
+1. Select **Custom Search Results** to download the sample code for a Teams message extension using the latest app manifest (previously called Teams app manifest). For more information, see [app manifest](../resources/schema/manifest-schema.md).
 
     :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams sample options.":::
 
@@ -146,7 +144,7 @@ The process to extend your Teams message extension app to Outlook involves the f
 
 > [!div class="checklist"]
 >
-> * [Update your app manifest (previously called Teams app manifest).](#update-your-app-manifest)
+> * [Update your app manifest.](#update-your-app-manifest)
 > * [Add the Microsoft 365 channel for your bot.](#add-microsoft-365-channel-for-your-app)
 > * [Sideload your updated app in Teams.](#sideload-your-app-in-teams)
 
@@ -223,7 +221,7 @@ Azure Active Directory (AD) single sign-on (SSO) for message extensions works th
 
 Sideload your updated message extension ([app package](/microsoftteams/platform/concepts/build-and-test/apps-package)) into Teams. After you complete, message extension appears in your installed **Apps** from the compose message area.
 
-1. Package your Teams application (manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file.
+1. Create a .zip file with app manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons).
 
 1. Go to **Microsoft Teams** and sign in using your sandbox tenant account.
 
@@ -231,7 +229,7 @@ Sideload your updated message extension ([app package](/microsoftteams/platform/
 
    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Screenshot shows the Upload an app option under Manage your apps.":::
 
-1. Choose the **Upload a custom app** option, select your app package, and install (**Add**) it to your Teams client.
+1. Choose the **Upload a custom app** option, select your .zip file, and install (**Add**) it to your Teams client.
 
    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Screenshot shows the Upload a custom app option in Teams.":::
 
@@ -271,19 +269,19 @@ As you test your message extension, you can identify the source (originating fro
 
 ## Limitations
 
-While your updated message extension continues to run in Teams with full [feature support for message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions), there are limitations in this early preview of the Outlook-enabled experience to be aware of:
+While your updated message extension continues to run in Teams with full [feature support for message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions), you must be aware of the following limitations:
 
-- Message extensions in Outlook are limited to the mail [*compose* context](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions). Even if your Teams message extension includes `commandBox` as a *context* in its app manifest, the current preview is limited to the mail composition (`compose`) option. Invoking a message extension from the global Outlook *Search* box isn't supported.
+- Message extensions in Outlook are limited to the mail [*compose* context](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions) even if your Teams message extension includes `commandBox` as a *context* in its app manifest. Invoking a message extension from the global Outlook *Search* box isn't supported. Action based message extension isn't supported for `meesage` context.
+- 
+- [Action-based message extension](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) commands aren't supported in Outlook desktop. If your app has action-based commands, it surfaces in Outlook, but the action menu is only available on the Outlook for web and mobile.
 
-- [Action-based message extension](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) commands aren't supported in Outlook desktop. If your app has action-based commands, it surfaces in Outlook, but the action menu is only available on the web and mobile.
+- [Action-based message extensions](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) that [send cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box in Teams are supported in Outlook. However, using [bots to deliver cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#) isn't supported. In this situation, you can convert a card to be sent by user to allow for support on Outlook.
 
-- [Action-based message extensions](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) that [send cards via the user](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box in Teams are supported in Outlook. However, using [bots to deliver cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#) isn't supported. In this situation, you can convert a card to be sent by user to allow for support on Outlook.
+- In action-based message extensions, task modules launched in pop out windows show up behind the window.
 
-- For action-based message extensions, there is a known issue that task modules launched in pop out windows show up behind the window.
+- You can't insert more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email. Adaptive Cards v1.5 and later aren't supported.
 
-- Insertion of more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email isn't supported; Adaptive Cards v1.5 and later aren't supported.
-
-- [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) of type `messageBack`, `imBack`, `invoke`, and `signin` aren't supported for inserted cards. Support is limited to `openURL`: when selected, the user is redirected to the specified URL in a new tab.
+- [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) of type `messageBack`, `imBack`, `invoke`, and `signin` aren't supported. `openURL` is the only supported card action.
 
 Use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
 
