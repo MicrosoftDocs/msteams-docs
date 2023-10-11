@@ -10,6 +10,48 @@ ms.date: 09/07/2023
 
 # Build API-based message extension
 
+Message extension are a type of Teams app that allows you to integrate your chat functionality directly into Teams. This can enhance your app's usability and provide a seamless user experience. We recommend you to follow the following requirements:
+
+<details><summary>API-based message extensions</summary>
+
+API-based message extensions are a powerful tool that allows you to extend the functionality of your Teams app by integrating with external APIs. This can greatly enhance the capabilities of your app and provide a richer user experience. To implement API-based message extension, you need to follow these guidelines:
+
+* `Commands.id` in app manifest must match the corresponding `operationId` in the OpenAPI specification.
+* If there's a required parameter without a default value, the parameter name of the command defined in the Teams app manifest must match this parameter name.
+* If there's no required parameter without a default value, the parameter name in the Teams app manifest must match the name of an optional parameter defined for that operation.
+* A command can't have more than one parameter.
+* A response rendering template must be defined per command. This file, used to convert responses from an API, must be local just like the OpenAPI specification. The command portion of the manifest must point to this template file under`composeExtension.command.apiResponseRenderingTemplateFile` within the app manifest. Each command will point to a different response rendering template file.
+* Add a `jsonPath` in the Adaptive Card template. The JSON path to the relevant data/array.
+
+</details>
+
+</br>
+
+<details><summary>OpenAPI specification</summary>
+
+Developers can't require users to enter a parameter for a header or cookie. If headers need to be passed, a default value for the header can be set in the specification. This simplifies the user experience and reduces the risk of errors.
+
+* The `oneOf`, `anyOf`, `allOf`, `not` (swagger.io) construct aren't supported in Teams.
+* Constructing arrays for the request aren't supported, but nested objects within a JSON request body are supported.
+* The request body (if present) can only be application or json to ensure compatibility with a wide range of APIs.
+* Only single parameter search is supported.
+* Only one required parameter without a default value is allowed.
+* The operation must have an `operationId`.
+* Only POST and GET HTTP methods are supported.
+
+</details>
+
+</br>
+
+<details><summary>App manifest</summary>
+
+* Set composeExtension.composeExtensionType to `apiBased`.
+* Define `composeExtension.apiSpecificationFile` as the relative path to the OpenAPI specification file within the folder.
+*
+
+</details>
+
+
 You can create an API-based message extension using Developer Portal for Teams, Teams Toolkit and Teams CLI.
 
 # [Developer portal for Teams](#tab/developer-portal-for-teams)
