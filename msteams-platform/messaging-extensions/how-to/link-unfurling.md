@@ -416,7 +416,7 @@ The following are the limitations:
 
 ## How to test zero install link unfurling
 
-When you test the zero install link unfurling, don’t install the app as a personal app. Instead, sideload the app to Teams for testing.
+When you test the zero install link unfurling, don’t install the app as a personal app. Instead, upload the app to Teams.
 
 > [!NOTE]
 > Don’t run the test app directly from the Microsoft Visual Studio debugger.
@@ -437,7 +437,7 @@ To test zero install link unfurling, follow these steps:
 
 1. Select **Open** to upload the zip file for your test application.
 
-1. After you successfully upload the app. In the Teams client, select the **Apps** > **Built for your org**.
+1. After you've successfully uploaded the app, Go to **Teams** > **Apps** > **Built for your org**.
 
     :::image type="content" source="../../assets/images/teams-link-unfurling/build-for-your-org.png" alt-text="Screenshot of Teams client with org sideloaded Teams app":::
 
