@@ -236,7 +236,7 @@ contentType: "application/vnd.microsoft.card.thumbnail",
 
 ## Zero install for link unfurling
 
-Zero install link unfurling helps you unfurl previews for your shared links even before a user discovered or installed your app in Teams. You can anonymously unfurl cards with a new invoke request or create a preauthenticated Adaptive Card preview for users before they install or authenticate your app.
+Zero install link unfurling helps you unfurl previews for your shared links even before a user discovers or installs your app in Teams. You can anonymously unfurl cards with a new invoke request or create a preauthenticated Adaptive Card preview for users before they install or authenticate your app.
 
 The following image provides a sequential flow to enable and use zero install link unfurling:
 
