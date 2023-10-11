@@ -303,14 +303,8 @@ items:
         :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="Screenshot shows the app cloud output.":::
 
     1. Select the bot.
-    1. Select **Enter**.  
-
-        :::image type="content" source="~/assets/images/sbs-command-bot/hello-world-cloud.png" alt-text="Screenshot shows the Hello World Command to enter.":::
-
-        You receive the following command response in adaptive card:
-
-         :::image type="content" source="~/assets/images/sbs-command-bot/cloud-final-output.png" alt-text="Screenshot shows the cloud final output.":::
-
+    1. Select **Enter**.
+        
     # [Command Line](#tab/cli)
 
     In your terminal window:
