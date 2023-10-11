@@ -548,7 +548,7 @@ You receive a new `composeExtensions/submitAction` message similar to the follow
 
 In scenarios where a bot sends messages on behalf of a user, attributing the message to that user helps with engagement and display a more natural interaction flow. This feature lets you to show a message from your bot that was sent on behalf of a user by displaying the name of the user in the header of the Adaptive Card response.
 
-The following images display an Adaptive Card message sent by a bot. The left-side image is without user attribution on the header and right-side image is with user attribution on the header. The card with user attribution displays the name of the user in the format `Username via bot` (Sowrabh N R S via Poll).
+The following images display an Adaptive Card message sent by a bot. The left-side image is without user attribution on the header and the right-side image is with user attribution on the header. The card with user attribution displays the name of the user in the format username via bot **(Sowrabh NRS via Poll)**.
 
 :::image type="content" source="../../../assets/images/messaging-extension/user-attribution-bots.png" alt-text="User attribution bots":::
 
