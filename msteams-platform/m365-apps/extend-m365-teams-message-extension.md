@@ -20,8 +20,8 @@ Message extensions allow users to interact with your web service using buttons a
 
 * Action-based message extensions: Allow you to present users with a modal pop-up to collect or display information, process the interaction, and send the information back to the client as a rich card.
 
-> [!NOTE]
-> Teams action-based message extensions are available in preview for Outlook.
+  > [!NOTE]
+  > Teams action-based message extensions are available in preview for Outlook.
 
 You can bring Teams message extensions to Outlook by extending your Teams apps across Microsoft 365. For more information about [message extension](~/messaging-extensions/what-are-messaging-extensions.md) support within Outlook for Windows desktop, web, and mobile, see the support table in [extend Teams apps across Microsoft 365](~/m365-apps/overview.md).
 
