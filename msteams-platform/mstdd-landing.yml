@@ -48,7 +48,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: New Microsoft Teams client
+      - text: The new Microsoft Teams client
         url: resources/teams-updates.md
       - text: Use callTranscript API to fetch meeting transcript from all meetings
         url:  graph-api/meeting-transcripts/overview-transcripts.md
