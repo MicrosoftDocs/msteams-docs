@@ -28,7 +28,6 @@ items:
 - title: Prerequisites 
   durationInMinutes: 2
   content: |
-    
     Here's a list of tools you need for building and deploying your apps.
 
     | &nbsp; | Install | For using |
@@ -96,14 +95,14 @@ items:
 
     ### Check for sideloading option
 
-    After creating the app, you must load your app in Teams without distributing it. This is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. Sign in to your Microsoft 365 account to view this option.
 
         > [!NOTE]
-        > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
+        > Uploading your app is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
 
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
-    To verify sideload apps in Teams:
+    To verify uploading apps in Teams:
 
         1. Go to **Microsoft Teams**.
         1. Select **Apps** > **Manage your apps**.
