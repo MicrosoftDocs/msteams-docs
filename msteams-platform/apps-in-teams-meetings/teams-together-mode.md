@@ -37,9 +37,9 @@ In custom Together Mode scenes, the scene is an artifact. The scene developer cr
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Graphic shows the four steps to create scene only app in Teams.":::
 
 :::row:::
-      :::image type="content" source="~/assets/images/apps-in-meetings/build-scene.png" alt-text="Microsoft Teams app capabilities for tab." link="~/apps-in-teams-meetings/teams-together-mode.md#build-a-scene-using-the-scene-studio" border="false":::
-      :::image type="content" source="~/assets/images/apps-in-meetings/test-scene.png" alt-text="Microsoft Teams app capabilities for tab." link="~/apps-in-teams-meetings/teams-together-mode.md#test-custom-together-mode-scenes-in-teams" border="false":::
-      :::image type="content" source="~/assets/images/apps-in-meetings/share-screen.png" alt-text="Microsoft Teams app capabilities for tab." link="~/apps-in-teams-meetings/teams-together-mode.md#share-a-scene-using-the-scene-studio" border="false":::
+      :::image type="content" source="~/assets/images/apps-in-meetings/build-scene.png" alt-text="Build a scene using the Scene studio." link="~/apps-in-teams-meetings/teams-together-mode.md#build-a-scene-using-the-scene-studio" border="false":::
+      :::image type="content" source="~/assets/images/apps-in-meetings/test-scene.png" alt-text="Test your scene in Teams." link="~/apps-in-teams-meetings/teams-together-mode.md#test-custom-together-mode-scenes-in-teams" border="false":::
+      :::image type="content" source="~/assets/images/apps-in-meetings/share-screen.png" alt-text="Share your scene using the Scene studio." link="~/apps-in-teams-meetings/teams-together-mode.md#share-a-scene-using-the-scene-studio" border="false":::
 :::row-end:::
 
 A scene only app is still an app in Teams. Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
