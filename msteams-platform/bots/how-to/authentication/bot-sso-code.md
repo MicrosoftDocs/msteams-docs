@@ -83,7 +83,7 @@ adapter.use(tokenExchangeMiddleware);
 
 # [C#](#tab/cs2)
 
-After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
+After you add the `AdapterWithErrorHandler.cs`, the following code should appear:
 
 ```csharp
     public class AdapterWithErrorHandler : CloudAdapter
@@ -125,7 +125,7 @@ After you add the `AdapterWithErrorHandler.cs`, your code should be as shown bel
                     }
                 }
 
-                // Send a trace activity, which will be displayed in the Bot Framework Emulator.
+                // Send a trace activity, which is displayed in the Bot Framework Emulator.
                 await turnContext.TraceActivityAsync(
                     "OnTurnError Trace",
                     exception.Message,
@@ -138,7 +138,7 @@ After you add the `AdapterWithErrorHandler.cs`, your code should be as shown bel
 
 # [JavaScript](#tab/js2)
 
-After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, your code should be as shown below:
+After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, the following code should appear:
 
 ```JavaScript
     // index.js is used to setup and configure your bot.
@@ -187,7 +187,7 @@ After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, your code 
         //       configuration instructions.
         console.error(`\n [onTurnError] unhandled error: ${ error }`);
     
-        // Send a trace activity, which will be displayed in Bot Framework Emulator.
+        // Send a trace activity, which is displayed in Bot Framework Emulator.
         await context.sendTraceActivity(
             'OnTurnError Trace',
             `${ error }`,
@@ -388,12 +388,12 @@ There are a number of libraries available that can handle JWT validation. Basic 
 Keep in mind the following guidelines when validating the token:
 
 - Valid SSO tokens are issued by Azure AD. The `iss` claim in the token should start with this value.
-- The token's `aud1` parameter will be set to the app ID generated during Azure AD app registration.
-- The token's `scp` parameter will be set to `access_as_user`.
+- The token's `aud1` parameter is set to the app ID generated during Azure AD app registration.
+- The token's `scp` parameter is set to `access_as_user`.
 
 #### Example access token
 
-The following is a typical decoded payload of an access token.
+The following code snippet is a typical decoded payload of an access token:
 
 ```javascript
 {

@@ -66,7 +66,7 @@ To update your app's code:
 
    # [C#](#tab/cs2)
 
-   After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
+   After you add the `AdapterWithErrorHandler.cs`, the following code should appear:
 
    ```csharp
        public class AdapterWithErrorHandler : CloudAdapter
@@ -121,7 +121,7 @@ To update your app's code:
 
    # [JavaScript](#tab/js2)
 
-    After you add the code to `index.js`, your code should be as shown below:
+    After you add the code to `index.js`, the following code should appear:
 
    ```JavaScript
        // index.js is used to setup and configure your bot.
@@ -219,7 +219,7 @@ To update your app's code:
 
 ### Consent dialog for getting access token
 
-If the app user is using your app for the first time, they may be required to consent for SSO authentication.
+If the app user is using your app for the first time, they're required to consent for SSO authentication.
 
 :::image type="content" source="~/assets/images/authentication/teams-sso-mex/me-sso-profile-select.png" alt-text="SSO authentication for message extension app":::
 
@@ -227,7 +227,7 @@ When the app user selects the user name, the permission is granted and they can 
 
 :::image type="content" source="~/assets/images/authentication/teams-sso-mex/me-sso-completed.png" alt-text="SSO authentication completed for message extension app":::
 
-The consent dialog that appears is for open-id scopes defined in Azure AD. The app user must give consent only once. After consenting, the app user can access and use your message extension app for the granted permissions and scopes.
+The consent dialog that appears is for open-id scopes defined in Azure AD. The app user must give consent only once. The app user can access and use your message extension app for the granted permissions and scopesafter consenting.
 
 > [!IMPORTANT]
 > Scenarios where consent dialogs are not needed:
@@ -376,12 +376,12 @@ There are a number of libraries available that can handle JWT validation. Basic 
 Keep in mind the following guidelines when validating the token:
 
 - Valid SSO tokens are issued by Azure AD. The `iss` claim in the token should start with this value.
-- The token's `aud1` parameter will be set to the app ID generated during Azure AD app registration.
-- The token's `scp` parameter will be set to `access_as_user`.
+- The token's `aud1` parameter is set to the app ID generated during Azure AD app registration.
+- The token's `scp` parameter is set to `access_as_user`.
 
 #### Example access token
 
-The following is a typical decoded payload of an access token.
+The following code snippet is a typical decoded payload of an access token:
 
 ```javascript
 {
