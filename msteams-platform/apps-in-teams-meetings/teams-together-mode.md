@@ -17,7 +17,7 @@ Discover a new way to collaborate with Custom Together Mode scenes in Microsoft 
 * Place the participants' video streams in predetermined seats designed and fixed by the scene creator.
 
 > [!NOTE]
-> Customer Together Mode scenes for Teams meetings are available in preview. Teams users need the Teams Premium license to use this feature after the preview.
+> Customer Together Mode scenes for Teams meetings are available in preview. Teams users need the [Teams Premium license](/microsoftteams/enhanced-teams-experience) to use this feature after the preview.
 
 Get started now and transform your Teams meetings with Custom Together Mode scenes.
 
@@ -33,8 +33,6 @@ Before you start, ensure that you have a basic understanding of the following:
 ## Custom Together Mode scene
 
 In custom Together Mode scenes, the scene is an artifact. The scene developer creates a scene using Microsoft Scene studio. In a conceived scene setting, participants have seats with video streams. The videos are rendered in those seats. It's recommended to use scene only apps for better experience.
-
-:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Graphic shows the four steps to create scene only app in Teams.":::
 
 :::row:::
       :::image type="content" source="~/assets/images/apps-in-meetings/build-scene.png" alt-text="Build a scene using the Scene studio." link="~/apps-in-teams-meetings/teams-together-mode.md#build-a-scene-using-the-scene-studio" border="false":::
