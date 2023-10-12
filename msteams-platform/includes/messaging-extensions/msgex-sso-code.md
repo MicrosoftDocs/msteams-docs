@@ -300,7 +300,7 @@ private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepCon
    # [JavaScript](#tab/js3)
 
    ```JavaScript
-    class MainDailog {
+    class MainDialog {
       
             this.addDialog(new OAuthPrompt(OAUTH_PROMPT, {
                         connectionName: process.env.connectionName,
