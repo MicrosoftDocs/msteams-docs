@@ -8,7 +8,7 @@ ms.topic: concept-article
 
 # Send activity feed notifications to users in Microsoft Teams
 
-The Microsoft Teams activity feed enables users to triage items that require attention by notifying them of changes. You can use the activity feed notification APIs in Microsoft Graph to extend this functionality to your apps. This allows your apps to provide richer experiences and better engage users by helping to keep them up-to-date with changes in the tools and workflows they use.
+The Teams activity feed enables users to triage items that require attention by notifying them of changes. You can use the activity feed notification APIs in Microsoft Graph to extend this functionality to your apps. This allows your apps to provide richer experiences and better engage users by helping to keep them up-to-date with changes in the tools and workflows they use.
 
 ## Use cases of activity feed notifications
 
@@ -28,7 +28,7 @@ The Microsoft Teams activity feed enables users to triage items that require att
 
 ## Understand the basics of activity feed notifications
 
-In Microsoft Teams, activity feed notifications consist of multiple bits of information displayed together, as shown in the following image:
+In Teams, activity feed notifications consist of multiple bits of information displayed together, as shown in the following image:
 
 :::image type="content" source="../assets/images/activity-feed/notification-template.png" alt-text="Screenshot shows the components of an activity feed notification.":::
 
@@ -78,8 +78,8 @@ Activity feed APIs work with a Teams app. The following are the requirements for
 
 * The app manifest must have the Azure AD app ID added to the `webApplicationInfo` section. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#webapplicationinfo).
 * Activity notifications can be sent with or without activity types declared in the app manifest.
-  * By default, you can use the activity notification APIs without declaring the `activities` section in the manifest. The `systemDefault` activity type is reserved, allowing you to provide free-form text in the `Actor+Reason` line of the activity feed notification.  For more information, see [Send customizable activity feed notifications](/graph/teams-send-activityfeednotifications.md#example-8-send-a-notification-to-a-user-using-the-systemdefault-activity-type).
-  * If you want to send a templated notification in the traditional mode, activity types must be declared in the [Activities](/graph/teams-send-activityfeednotifications.md#activities-section-changes) section. For more information, see [app manifest schema](/microsoftteams/platform/resources/schema/manifest-schema).
+  * By default, you can use the activity notification APIs without declaring the `activities` section in the app manifest. The `systemDefault` activity type is reserved, allowing you to provide free-form text in the `Actor+Reason` line of the activity feed notification.  For more information, see [send customizable activity feed notifications](/graph/teams-send-activityfeednotifications.md#example-8-send-a-notification-to-a-user-using-the-systemdefault-activity-type).
+  * If you want to send a templated notification in the traditional mode, activity types must be declared in the [activities](#activities-update) section. For more information, see [app manifest schema](/microsoftteams/platform/resources/schema/manifest-schema#activities).
 * The Teams app must be installed for the recipient, either personally, or in a team or chat they're part of.
 
 ### Permissions
@@ -136,13 +136,13 @@ This section describes the updates that need to be added to the app manifest. En
 |Parameter|Type|Description|
 |:---|:---|:---|
 |type|string|Type of activity. This needs to be unique in a specific app manifest.|
-|description|string|Human-readable short description. This is visible on the Microsoft Teams client.|
+|description|string|Human-readable short description. This is visible on the Teams client.|
 |templateText|string|Template text for the activity notification. You can declare your parameters by encapsulating parameters in `{}`.|
 
 > [!NOTE]
 >
 > * The `actor` is a special parameter that always takes the name of the caller. In delegated calls, `actor` is the user's name. In application-only calls, it takes the name of the Teams app.
-> * The reserved `systemDefault` activity type should not be provided in the `activities` section of the manifest. This reserved activity type can provide free-form text in the `Actor+Reason` line of the activity feed notification. For more information, see [Send customizable activity feed notifications](/graph/teams-send-activityfeednotifications.md#example-8-send-a-notification-to-a-user-using-the-systemdefault-activity-type).
+> * The reserved `systemDefault` activity type must not be provided in the `activities` section of the app manifest. The reserved `systemDefault` activity type can provide free-form text in the `Actor+Reason` line of the activity feed notification. For more information, see [Send customizable activity feed notifications](/graph/teams-send-activityfeednotifications.md#example-8-send-a-notification-to-a-user-using-the-systemdefault-activity-type).
 >
 #### Authorization update
 
@@ -207,7 +207,7 @@ You can use Activity feed notification in the following scenarios:
 
 ## Customize the notifications
 
-Microsoft Teams users can customize the notifications they see in their feed or as a banner. Notifications generated through activity feed APIs can also be customized. Users can choose how they're notified via settings in Microsoft Teams. Teams apps appear in the list for the user to choose from, as shown in the following screenshot.
+Teams users can customize the notifications they see in their feed or as a banner. Notifications generated through activity feed APIs can also be customized. Users can choose how they're notified via settings in Teams. Teams apps appear in the list for the user to choose from, as shown in the following screenshot.
 
 :::image type="content" source="../assets/images/activity-feed/notification-settings.png" alt-text="Screenshot shows the Notifications settings in Teams, with the Custom option highlighted.":::
 
@@ -221,15 +221,15 @@ For examples on how to send an activity feed notification, see [send activity fe
 
 ## Reserved activity types
 
-* The `systemDefault` activity type is reserved and can't be used in the manifest while declaring [Activities](/graph/teams-send-activityfeednotifications?tabs=http#activities-section-changes).
+* The `systemDefault` activity type is reserved and can't be used in the app manifest while declaring [activities](/graph/teams-send-activityfeednotifications?tabs=http#activities-section-changes).
 * You can use the `systemDefault` activity type to:
-  * Easily test out new scenarios and/or quickly try out the activity feed notification APIs without defining activity types in your app's manifest.
-  * For Store apps, it saves time and streamlines the process since you don't need to adjust activity types in your app's manifest constantly. The `systemDefault` activity type is ready to use from the get-go.
-* Keep in mind that with the `systemDefault` activity type you cannot:
-  * Utilize the built-in localization features provided by manifests.
-  * Rely solely on sending customizable notifications with the  `systemDefault` activity type. Users can turn off all notifications from your app with a single toggle in the Microsoft Teams client settings, which could hinder communication between your app and its users.
-* Recurring and large batch of notifications should still use templated notifications since they require activity templates in the manifest.
-* The `systemDefault` reserved activity type remains available for use, regardless of the activity types listed in your app's manifest.
+  * Easily test new scenarios or quickly try out the activity feed notification APIs without declaring activity types in your app manifest.
+  * For Teams Store apps, it saves time and streamlines the process since you don't need to adjust activity types in your app manifest constantly. The `systemDefault` activity type is ready to use from the get-go.
+* With the `systemDefault` activity type you can't:
+  * Utilize the built-in localization features provided by app manifest.
+  * Rely solely on sending customizable notifications with the  `systemDefault` activity type. Users can turn off all notifications from your app with a single toggle in the Teams client settings, which could hinder communication between your app and its users.
+* Recurring and large batch of notifications must still use templated notifications since they require activity templates in the app manifest.
+* The `systemDefault` reserved activity type remains available for use, regardless of the activity types listed in your app manifest.
 
 ## Step-by-step guide
 
