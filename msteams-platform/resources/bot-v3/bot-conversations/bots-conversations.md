@@ -273,7 +273,7 @@ See [Proactive messaging for bots](~/resources/bot-v3/bot-conversations/bots-con
 
 ## Deleting messages
 
-Messages can be deleted using the connectors [`delete()`](https://docs.botframework.com/node/builder/chat-reference/interfaces/_botbuilder_d_.iconnector.html) method in the [BotBuilder SDK](/bot-framework/bot-builder-overview-getstarted).
+Messages can be deleted using the connector.delete() method in the BotBuilder SDK.
 
 ```typescript
 bot.dialog('BotDeleteMessage', function (session: builder.Session) {
