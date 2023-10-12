@@ -16,6 +16,9 @@ Discover a new way to collaborate with Custom Together Mode scenes in Microsoft 
 * Combine participants digitally into a single virtual scene.
 * Place the participants' video streams in predetermined seats designed and fixed by the scene creator.
 
+> [!NOTE]
+> Customer Together Mode scenes for Teams meetings are available in preview. Teams users need the Teams Premium license to use this feature after the preview.
+
 Get started now and transform your Teams meetings with Custom Together Mode scenes.
 
 ## Prerequisites
@@ -32,6 +35,12 @@ Before you start, ensure that you have a basic understanding of the following:
 In custom Together Mode scenes, the scene is an artifact. The scene developer creates a scene using Microsoft Scene studio. In a conceived scene setting, participants have seats with video streams. The videos are rendered in those seats. It's recommended to use scene only apps for better experience.
 
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Graphic shows the four steps to create scene only app in Teams.":::
+
+:::row:::
+      :::image type="content" source="~/assets/images/apps-in-meetings/build-scene.png" alt-text="Microsoft Teams app capabilities for tab." link="~/apps-in-teams-meetings/teams-together-mode.md#build-a-scene-using-the-scene-studio" border="false":::
+      :::image type="content" source="~/assets/images/apps-in-meetings/test-scene.png" alt-text="Microsoft Teams app capabilities for tab." link="~/apps-in-teams-meetings/teams-together-mode.md#test-custom-together-mode-scenes-in-teams" border="false":::
+      :::image type="content" source="~/assets/images/apps-in-meetings/share-screen.png" alt-text="Microsoft Teams app capabilities for tab." link="~/apps-in-teams-meetings/teams-together-mode.md#share-a-scene-using-the-scene-studio" border="false":::
+:::row-end:::
 
 A scene only app is still an app in Teams. Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
 
