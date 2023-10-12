@@ -83,7 +83,7 @@ adapter.use(tokenExchangeMiddleware);
 
 # [C#](#tab/cs2)
 
-After you add the `AdapterWithErrorHandler.cs`, the following code should appear:
+After you add the `AdapterWithErrorHandler.cs`, the following code must appear:
 
 ```csharp
     public class AdapterWithErrorHandler : CloudAdapter
@@ -101,7 +101,7 @@ After you add the `AdapterWithErrorHandler.cs`, the following code should appear
             OnTurnError = async (turnContext, exception) =>
             {
                 // Log any leaked exception from the application.
-                // NOTE: In production environment, you should consider logging this to
+                // NOTE: In production environment, you must consider logging this to
                 // Azure Application Insights. Visit https://learn.microsoft.com/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp to see how
                 // to add telemetry capture to your bot.
                 logger.LogError(exception, $"[OnTurnError] unhandled error : {exception.Message}");
@@ -116,7 +116,7 @@ After you add the `AdapterWithErrorHandler.cs`, the following code should appear
                     {
                         // Delete the conversationState for the current conversation to prevent the
                         // bot from getting stuck in a error-loop caused by being in a bad state.
-                        // conversationState should be thought of as similar to "cookie-state" in a Web pages.
+                        // conversationState must be thought of as similar to "cookie-state" in a Web pages.
                         await conversationState.DeleteAsync(turnContext);
                     }
                     catch (Exception e)
@@ -138,7 +138,7 @@ After you add the `AdapterWithErrorHandler.cs`, the following code should appear
 
 # [JavaScript](#tab/js2)
 
-After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, the following code should appear:
+After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, the following code must appear:
 
 ```JavaScript
     // index.js is used to setup and configure your bot.
@@ -182,7 +182,7 @@ After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, the follow
     adapter.use(tokenExchangeMiddleware);
     adapter.onTurnError = async (context, error) => {
         // This check writes out errors to console log .vs. app insights.
-        // NOTE: In production environment, you should consider logging this to Azure
+        // NOTE: In production environment, you must consider logging this to Azure
         //       application insights. See https://learn.microsoft.com/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp for telemetry
         //       configuration instructions.
         console.error(`\n [onTurnError] unhandled error: ${ error }`);
@@ -387,7 +387,7 @@ There are a number of libraries available that can handle JWT validation. Basic 
 
 Keep in mind the following guidelines when validating the token:
 
-- Valid SSO tokens are issued by Azure AD. The `iss` claim in the token should start with this value.
+- Valid SSO tokens are issued by Azure AD. The `iss` claim in the token must start with this value.
 - The token's `aud1` parameter is set to the app ID generated during Azure AD app registration.
 - The token's `scp` parameter is set to `access_as_user`.
 
