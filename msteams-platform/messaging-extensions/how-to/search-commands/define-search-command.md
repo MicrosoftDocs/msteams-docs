@@ -118,6 +118,10 @@ To trigger the Message Extension through Copilot, you can:
 
 A bot-based ME is created.
 
+---
+
+## Code snippets
+
 The following code provides an example of search based for message extensions:
 
 # [C#](#tab/dotnet)
