@@ -39,18 +39,18 @@ To extend your Teams message extension to Outlook, you can either [build a new m
 :::row:::
 :::column:::
 
-* [Build a new message extension app with Teams Toolkit.](#build-a-message-extension-app-for-outlook)
+[Build a new message extension app with Teams Toolkit.](#build-a-message-extension-app-for-outlook)
     
   > [!div class="checklist"]
   >
-  > [Build an app with Teams Toolkit in Visual Studio Code](#build-a-message-extension-app-for-outlook)
-  > [Sideload your app in Teams using Teams Toolkit](#sideload-your-app-in-teams-using-teams-toolkit)
-  > [Preview your message extension in Outlook](#preview-your-message-extension-in-outlook)
+  > * [Build an app with Teams Toolkit in Visual Studio Code](#build-a-message-extension-app-for-outlook)
+  > * [Sideload your app in Teams using Teams Toolkit](#sideload-your-app-in-teams-using-teams-toolkit)
+  > * [Preview your message extension in Outlook](#preview-your-message-extension-in-outlook)
 
 :::column-end:::
 :::column:::
 
-* [Extend an existing Teams message extension app to Outlook.](#build-a-message-extension-app-for-outlook)
+[Extend an existing Teams message extension app to Outlook.](#build-a-message-extension-app-for-outlook)
     
   > [!div class="checklist"]
   >
