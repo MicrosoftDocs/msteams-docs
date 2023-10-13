@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
 ---
-# Select search command invoke locations
+# Define message extension search commands
 
 The search command is invoked from any one or both of the following locations:
 
@@ -23,43 +23,9 @@ The following image displays the invoke locations of the search command:
 
 To add the search command to your [app manifest](../../../resources/schema/manifest-schema.md#composeextensions), you must add a new `composeExtensions` object to the top level of your app manifest JSON. You can add the search command either with the help of Developer Portal, or manually.
 
-### Create a search command using Developer Portal
+### Create a  search message extension using Bot Framework
 
 The prerequisite to create a search command is that you must already have created a message extension. For information on how to create a message extension, see [create a message extension](../../../sbs-gs-msgext.yml).
-
-**To create a search command**
-
-1. Open **Developer Portal** from the Microsoft Teams client and select the **Apps** tab.
-   If you already created your app package in **Developer Portal**, select from the list. If you haven't created an app package, import an existing one.
-1. After importing an app package, select **Message extensions** under **App features**.
-1. To create a message extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name to the new bot, and then select **Create**.
-
-   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="Screenshot shows the options to configure a bot for an app in Teams Developer Portal.":::
-
-1. To use an existing bot, select **Select an existing bot** and choose the existing bots from the dropdown list, or select **Enter a bot ID** if you have a bot ID created already.
-
-1. Select the scope of the messaging extension and select **Save**.
-
-1. Select **Add a command** in the **Command** section to include the commands, which decide the behavior of message extension.
-The following image displays command addition for message extension:
-
-   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="Screenshot shows how to add a command in Teams Developer Portal to define the behavior of the message extension.":::
-
-1. Select **Search** and enter **Command ID**, **Command title**, and **Command description**.
-
-1. Enter all the parameters and select the type of input from the dropdown list.
-
-   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="Screenshot shows how to add a parameter to define your command in Teams Developer Portal for a message extension.":::
-
-1. Select **Add a domain** under **Preview links**.
-
-1. Enter valid domain and then select **Add**.
-
-   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Screenshot shows how to add a valid domain to your messaging extension for link unfurling.":::
-
-1. Select **Save**.
-
-   :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="Screenshot shows how to save all your setting and parameters for your message extension.":::
 
 # [Teams Toolkit](#tab/Teams-toolkit)
 
@@ -72,15 +38,7 @@ The following image displays command addition for message extension:
 1. Select **Default folder**.
 1. Enter the name of your app and select **Enter**.
 
-To trigger the Message Extension through Copilot, you can:
-
-1. Select **Debug in Copilot (Edge)** or **Debug in Copilot (Chrome)** from the launch configuration dropdown. The app launches in a browser.
-1. Select **Apps** and search for Copilot.
-1. Open the Copilot app and send a prompt to trigger your plugin.
-1. Send a message to Copilot to find an NPM package information. For example, find the npm package info on teamsfx-react.
-
-> [!NOTE]
-> This prompt may not always make Copilot include a response from your message extension. If it happens, try some other prompts or leave a feedback to us by thumbing down the Copilot response and leave a message tagged with [MessageExtension].
+Teams Toolkit scaffolds your project and creates a search message extension.
 
 # [Developer portal for Teams](#tab/developer-portal-for-teams)
 
@@ -104,7 +62,7 @@ To trigger the Message Extension through Copilot, you can:
 
    A command details page appears.
 
-1. In the Command details page, select the **Search** or **Action** as the type of command and update the following:
+1. In the Command details page, select the **Search** as the type of command and update the following:
    * Command ID
    * Command title
    * Command description
@@ -116,7 +74,7 @@ To trigger the Message Extension through Copilot, you can:
 
 1. Select **Save**.
 
-A bot-based ME is created.
+A search message extension using bot framework created.
 
 ---
 

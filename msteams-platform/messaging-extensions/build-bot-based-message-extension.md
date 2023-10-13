@@ -114,56 +114,43 @@ The following code is an example of an app manifest with the `composeExtensions`
 
 ```json
 "composeExtensions": [
-  {
-    "botId": "c8fa3cf6-b1f0-4ba8-a5bf-a241bc29adf3",
-    "commands": [
-      {
-        "id": "To do",
-        "type": "action",
-        "title": "Create To do",
-        "description": "Create a To do",
-        "initialRun": true,
-        "fetchTask": false,
-        "context": [
-          "commandBox",
-          "compose"
-        ],
-        "parameters": [
-          {
-            "name": "Name",
-            "title": "Title",
-            "description": "To do Title",
-            "inputType": "text"
-          },
-          {
-            "name": "Description",
-            "title": "Description",
-            "description": "Description of the task",
-            "inputType": "textarea"
-          },
-          {
-            "name": "Date",
-            "title": "Date",
-            "description": "Due date for the task",
-            "inputType": "date"
-          }
-        ]
-      }
-    ],
-    "canUpdateConfiguration": true,
-    "messageHandlers": [
-      {
-        "type": "link",
-        "value": {
-          "domains": [
-            "yourapp.onmicrosoft.com"
-          ]
+        {
+            "botId": "xxxxxx-xxx-bot-ID-xxxxxxxx}",
+            "commands": [
+                {
+                    "id": "createCard",
+                    "context": [
+                        "compose",
+                        "message",
+                        "commandBox"
+                    ],
+                    "description": "Command to run action to create a Card from Compose Box",
+                    "title": "Create Card",
+                    "type": "action",
+                    "parameters": [
+                        {
+                            "name": "title",
+                            "title": "Card title",
+                            "description": "Title for the card",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "subTitle",
+                            "title": "Subtitle",
+                            "description": "Subtitle for the card",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "text",
+                            "title": "Text",
+                            "description": "Text for the card",
+                            "inputType": "textarea"
+                        }
+                    ]
+                }
+            ]
         }
-      }
     ]
-  }
-]
-
 ```
 
 ### Parameters

@@ -107,7 +107,15 @@ You can add commands and parameters to your API, to add commands:
 
    A command details page appears.
 
-1. In the Command details page, update the following:
+1. In the **Add command** page, go to **Command details** > **Adaptive card template**.
+
+1. Select **Upload now**.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the adaptive Card template in for the command.":::
+
+1. Select the Adaptive Card template file in JSON and select **Open**.
+
+1. Under **Details**, update the following:
    * Command type
    * Command ID
    * Command title
