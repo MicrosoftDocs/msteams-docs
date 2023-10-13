@@ -19,7 +19,7 @@ Run the experience from your own computer for purely local or local Teams testin
 > [!NOTE]
 > For production-scale debugging and testing, we recommend that you follow your own company guidelines to ensure you are able to support testing, staging, and deployment through your own processes.
 
-Use multiple manifests and packages to maintain separation between production and development services. For example, you might choose to register separate development and production bots and create appropriate packages to upload them in your testing environment. We also recommend, you upload and test your production package before submitting your app for publishing in our app store or distributing to customers.
+Use multiple manifests and packages to maintain separation between production and development services. For example, you might choose to register separate development and production bots and create appropriate packages to upload them in your testing environment. We also recommend, you upload and test your production package before submitting your app for publishing in our Microsoft Teams Store or distributing to customers.
 
 ## Purely local
 
