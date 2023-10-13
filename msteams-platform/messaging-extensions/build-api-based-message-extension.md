@@ -63,7 +63,7 @@ Developers can't require users to enter a parameter for a header or cookie. If h
 <details><summary>4. Response rendering template</summary>
 
 * Define the schema reference URL in the `$schema` property.
-* Define `jsonPath` as the path to the relevant data/array in API response. if the path points to an array, then each entry in the array will be a separate result vs if the path points to an object, there will only be a single result. *[Optional]*
+* Define `jsonPath` as the path to the relevant data/array in API response. if the path points to an array, then each entry in the array will be a separate result and if the path points to an object, there will only be a single result. *[Optional]*
 * The supported values for `responseLayout` are list and grid.
 
 </details>
