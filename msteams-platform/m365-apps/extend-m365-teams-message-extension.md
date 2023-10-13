@@ -10,82 +10,77 @@ ms.subservice: m365apps
 ---
 # Extend a Teams message extension across Microsoft 365
 
-> [!IMPORTANT]
->
-> The **Microsoft 365** channel replaces the Outlook channel for message extensions. The existing message extensions require [Azure Bot registration for the Microsoft 365 channel](#add-microsoft-365-channel-for-your-app) to work in Microsoft Outlook.
+Message extensions allow users to interact with your web service using buttons and forms. Users can search or initiate actions in an external system from Microsoft Teams and Outlook by extending your Teams apps across Microsoft 365. There are two types of message extensions:
 
-Message extensions allow users to interact with your web service using buttons and forms through which they can search or initiate actions in an external system from Microsoft Teams and Outlook. There are two types of message extensions:
+* Search-based message extensions: Allow users to search an external system and share results through the compose message area of the client.
 
-* Search-based message extensions: Allow users to search an external system and share results through the compose message area of the Microsoft Teams client.
+* Action-based message extensions: Allow users with a modal pop-up to collect or display information, process the interaction, and send the information back to the client as a rich card.
 
-* Action-based message extensions: Allow you to present users with a modal pop-up to collect or display information, process the interaction, and send the information back to the client as a rich card.
+> [!NOTE]
+> Teams search-based message extensions are generally available for Outlook and action-based message extensions are available in preview for Outlook.
 
-  > [!NOTE]
-  > Teams action-based message extensions are available in preview for Outlook.
+Outlook mobile users on Android and [Microsoft Outlook beta TestFlight](https://testflight.apple.com/join/AhS6fRDK) iOS can receive and take actions on cards from your apps that were sent to them by users on Outlook on web and Windows desktop.
 
-You can bring Teams message extensions to Outlook by extending your Teams apps across Microsoft 365. For more information about [message extension](~/messaging-extensions/what-are-messaging-extensions.md) support within Outlook for Windows desktop, web, and mobile, see the support table in [extend Teams apps across Microsoft 365](~/m365-apps/overview.md).
-
-If your message extension supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) that display cards to launch [Stage View](../tabs/tabs-link-unfurling.md) in Teams, follow this article to enable link unfurling and Stage View in Outlook for Windows desktop and web.
-
-Outlook mobile users on Android and [Microsoft Outlook beta TestFlight](https://testflight.apple.com/join/AhS6fRDK) iOS rings can receive and take actions on cards from your apps that were sent to them by users on Outlook on web and Windows desktop.
-
-To extend your Teams message extension to Outlook, you [Build a new message extension app with Teams Toolkit](#build-a-message-extension-app-with-teams-toolkit-for-outlook) or [extend an existing Teams message extension app to Outlook.](#extend-an-existing-teams-message-extension-app-to-outlook)
+Teams message extension across Microsoft 365 also supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) that display cards to launch [Stage View](../tabs/tabs-link-unfurling.md) in Teams.
 
 ## Prerequisites
 
-To extend your search-based Teams message extension to Outlook, you need:
+To extend your Teams message extension to Outlook, ensure the following:
 
-* A Microsoft 365 Developer Program sandbox tenant.
-* A test environment with Microsoft 365 apps installed from the Microsoft 365 Apps *Current Channel*.
-* (Optional) Microsoft Visual Studio Code with the Teams Toolkit extension.
+> [!div class="checklist"]
 
-To install the prerequisites, see [set up your dev environment.](~/m365-apps/prerequisites.md)
+> * To check for message extensions support within Outlook for Windows desktop, web, and mobile, see the support table in [extend Teams apps across Microsoft 365](~/m365-apps/overview.md).
+> * [A Microsoft 365 Developer Program sandbox tenant.](~/m365-apps/prerequisites.md#prepare-a-developer-tenant-for-testing)
+> * [A test environment with Microsoft 365 apps installed from the Microsoft 365 Apps *Current Channel*.](~/m365-apps/prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional)
+> * [(Optional) Microsoft Visual Studio Code with the Teams Toolkit extension.](~/m365-apps/prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional)
 
-## Build a message extension app with Teams Toolkit for Outlook
+To extend your Teams message extension to Outlook, you can either [build a new message extension app with Teams Toolkit](#build-a-message-extension-app-with-teams-toolkit-for-outlook) or [extend an existing Teams message extension app to Outlook.](#extend-an-existing-teams-message-extension-app-to-outlook)
 
-To start with a sample message extension app that's already enabled to run in Outlook, use Teams Toolkit extension for Visual Studio Code.
+## Build a message extension app for Outlook
 
-# [Search based message extension](#tab/search-based-message-extension)
+You can build a Teams message extension app for Outlook through Teams Toolkit extension for Visual Studio Code.
+
+# [Search-based message extension](#tab/search-based-message-extension)
 
 1. Open **Visual Studio Code**.
-1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
+1. Select **Command Palette...** under the **View** option or **Ctrl+Shift+P**.
 1. Select **Teams: Create a New App**.
 1. From the dropdown list that appears, select **Message Extension**.
-1. Select **Custom Search Results** to download the sample code for a Teams message extension using the latest app manifest (previously called Teams app manifest). For more information, see [app manifest](../resources/schema/manifest-schema.md).
+1. Select **Custom Search Results** to download the sample code for a Teams message extension using the latest app manifest (previously called Teams [app manifest](../resources/schema/manifest-schema.md)).
 
     :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams sample options.":::
 
-    The sample is also available as *NPM Search Connector* in the Teams Toolkit Samples gallery. From the Teams Toolkit pane, select **Development** > **View samples** > **NPM Search Connector**.
+    The sample is also available as **NPM Search Connector** in the Teams Toolkit **Samples** gallery. From the Teams Toolkit pane, select **Development** > **View samples** > **NPM Search Connector**.
     
     :::image type="content" source="images/toolkit-search-sample.png" alt-text="Screenshot shows the NPM Search Connector sample in Teams Toolkit Samples gallery.":::
     
 1. Select preferred programming language.
 1. Select a location on your local machine for the workspace folder and enter your application name.
-1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
+1. Select **Command Palette...** under the **View** option or **Ctrl+Shift+P**.
 1. Enter **Teams: Provision** to create the relevant app resources, such as Azure App Service, App Service plan, Azure Bot, and Managed Identity, in your Azure account.
 1. Select a subscription and a resource group.
 1. Select **Provision**. Alternatively, you can select **Provision** under the **LIFECYCLE** section of the extension.
-1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
+1. Select **Command Palette...** under the **View** option or **Ctrl+Shift+P**.
 1. Enter **Teams: Deploy** to deploy the sample code to the provisioned resources in Azure and start the app. Alternatively, you can select **Deploy** under **LIFECYCLE** section of the extension.
 1. Select **Deploy**.
 
-# [Action based message extension](#tab/action-based-message-extension)
+# [Action-based message extension](#tab/action-based-message-extension)
 
 1. Open **Visual Studio Code**.
-1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
+1. Select **Command Palette...** under the **View** option or **Ctrl+Shift+P**.
 1. Select **Teams: Create a New App**.
 1. From the dropdown list that appears, select **Message Extension**.
-1. Select **Collect Form Input and Process Data** to download the sample code for a Teams action-based message extension using the latest app manifest. For more information, see [app manifest](../resources/schema/manifest-schema.md).
+1. Select **Collect Form Input and Process Data** to download the sample code for a Teams action-based message extension using the latest app manifest (previously called Teams [app manifest](../resources/schema/manifest-schema.md)).
 
     :::image type="content" source="images/toolkit-palatte-action-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams action-based message extension sample option.":::
-    
+
 1. Select preferred programming language.
 1. Select a location on your local machine for the workspace folder and enter your application name.
-1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
+1. Select **Command Palette...** under the **View** option or **Ctrl+Shift+P**.
 1. Enter **Teams: Provision** to create the relevant app resources, such as Azure App Service, App Service plan, Azure Bot, and Managed Identity, in your Azure account.
 1. Select a subscription and a resource group.
 1. Select **Provision**. Alternatively, you can select **Provision** under the **LIFECYCLE** section of the extension.
-1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
+1. Select **Command Palette...** under the **View** option or **Ctrl+Shift+P**.
 1. Enter **Teams: Deploy** to deploy the sample code to the provisioned resources in Azure and start the app. Alternatively, you can select **Deploy** under **LIFECYCLE** section of the extension.
 1. Select **Deploy**.
 
@@ -95,7 +90,7 @@ To start with a sample message extension app that's already enabled to run in Ou
 
 Sideload your updated message extension [app package](/microsoftteams/platform/concepts/build-and-test/apps-package) into Teams.
 
-1. Open **UTILITY** section of Teams Toolkit and select **Zip Teams App Package** . Select the `manifest.json` file for your app and the appropriate environment.
+1. Open **UTILITY** section of Teams Toolkit and select **Zip Teams App Package**. Select the `manifest.json` file for your app and the appropriate environment.
 
    :::image type="content" source="images/toolkit-zip-teams-app-package.png" alt-text="Screenshot shows Zip Teams App Package option in Teams Toolkit extension for Visual Studio Code.":::
 
@@ -147,34 +142,21 @@ The process to extend your Teams message extension app to Outlook involves the f
 >
 > * [Update your app manifest.](#update-your-app-manifest)
 > * [Add the Microsoft 365 channel for your bot.](#add-microsoft-365-channel-for-your-app)
+> * [Update Azure AD app registration for SSO](#update-azure-ad-app-registration-for-sso)
 > * [Sideload your updated app in Teams.](#sideload-your-app-in-teams)
 
 ### Update your app manifest
 
-You need to use the app manifest schema version `1.13` (or later) to enable your Teams message extension to run in Outlook. For more information on schema version, see [app manifest](../resources/schema/manifest-schema.md).
-
-You have two options for updating your app manifest:
-
-# [Teams Toolkit](#tab/manifest-teams-toolkit)
-
-1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
-1. Run the `Teams: Upgrade app manifest` command and select your app manifest file. Your app manifest files are updated with the latest changes.
-
-# [Manual steps](#tab/manifest-manual)
+You need to use the [app manifest](../resources/schema/manifest-schema.md) schema version `1.13` or later to enable your Teams message extension to run in Outlook.
 
 Open your app manifest and update the `$schema` and `manifestVersion` with the following values:
 
 ```json
 {
-"$schema" : "https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
-"manifestVersion" : "1.14"
+"$schema" : "https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+"manifestVersion" : "1.16"
 }
 ```
-
----
-
-If you used Teams Toolkit to create your message extension app, you can use it to validate the changes to your app manifest file and identify any errors. Open the command palette (`Ctrl+Shift+P`) and find **Teams: Validate manifest file**.
-
 
 ### Add Microsoft 365 channel for your app
 
@@ -184,13 +166,13 @@ For users to interact with your message extension from Outlook, you need to enab
 
 > [!NOTE]
 >
-> If you've previously enabled the Outlook channel for your bot, you'll need to enable the **Microsoft 365** channel in order for your message extension to function correctly in Microsoft Outlook. The Outlook channel is no longer used for message extensions running in Outlook and can be disabled.
+> If you've previously enabled the **Outlook** channel for your bot, you'll need to enable the **Microsoft 365** channel in order for your message extension to function correctly in Microsoft Outlook. The Outlook channel is no longer used for message extensions running in Outlook and can be disabled.
 
-1. From [Microsoft Azure portal](https://portal.azure.com) (or [Bot Framework portal](https://dev.botframework.com) if you previously registered there), go to your bot resource.
+1. Go to [Microsoft Azure portal](https://portal.azure.com) or [Bot Framework portal](https://dev.botframework.com) (if you've previously registered there), go to your bot resource.
 
-1. From *Settings*, select **Channels**.
+1. From **Settings** > **Channels**.
 
-1. Under *Available channels*, select **Microsoft 365** channel.
+1. Under **Available channels**, select **Microsoft 365** channel.
 
    :::image type="content" source="../assets/images/azure-bot-channel-message-extensions.png" alt-text="Screenshot shows the Microsoft 365 Extensions Preview channel for your bot from the Azure Bot Channels pane.":::
 
@@ -270,17 +252,19 @@ As you test your message extension, you can identify the source (originating fro
 
 ## Limitations
 
-While your updated message extension continues to run in Teams with full [feature support for message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions), you must be aware of the following limitations:
+While your updated message extension continues to run in Teams, you must be aware of the following limitations:
 
-- Message extensions in Outlook are limited to the mail [*compose* context](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions) even if your Teams message extension includes `commandBox` as a *context* in its app manifest. Invoking a message extension from the global Outlook *Search* box isn't supported. Action based message extension isn't supported for `meesage` context.
-- 
-- [Action-based message extension](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) commands aren't supported in Outlook desktop. If your app has action-based commands, it surfaces in Outlook, but the action menu is only available on the Outlook for web and mobile.
+- Message extensions in Outlook are limited to the mail [`compose`](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions) context even if your Teams message extension includes `commandBox` as a context in its app manifest.
 
-- [Action-based message extensions](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) that [send cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box in Teams are supported in Outlook. However, using [bots to deliver cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#) isn't supported. In this situation, you can convert a card to be sent by user to allow for support on Outlook.
+-  Action-based message extension isn't supported for `message` context. Invoking a message extension from the global Outlook Search box isn't supported.
 
-- In action-based message extensions, task modules launched in pop out windows show up behind the window.
+- Action-based message extension commands aren't supported in Outlook desktop. If your app has action-based commands, it surfaces in Outlook, but the action menu is only available on the Outlook for web and mobile.
 
-- You can't insert more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email. Adaptive Cards v1.5 and later aren't supported.
+- Action-based message extensions that [send cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box are supported in Outlook. However, using [bots to deliver cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#) isn't supported. In this scenario, you can convert a card to be sent by the user to allow support for Outlook.
+
+- In action-based message extensions, task modules launched in a pop-up window displays behind the Outlook window.
+
+- Adaptive Cards v1.5 and later aren't supported and you can't insert more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email. 
 
 - [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) of type `messageBack`, `imBack`, `invoke`, and `signin` aren't supported. `openURL` is the only supported card action.
 
@@ -292,7 +276,9 @@ Use the [Microsoft Teams developer community channels](/microsoftteams/platform/
 |---------------|--------------|--------|
 | NPM Search Connector | Use Teams Toolkit to build a message extension app. Works in Teams, Outlook. |  [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/NPM-search-connector-M365) |
 | Teams Link Unfurling | Simple Teams app to demonstrate link unfurling. Works in Teams, Outlook. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-link-unfurling/nodejs)
-| Tab in Stage View | Microsoft Teams tab sample app for demonstrating a tab in Stage View. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)
+| Tab in Stage View | Microsoft Teams tab sample app for demonstrating a tab in Stage View. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs) |
+|Teams action-based message extension for Microsoft 365| <TBD> | <TBD> |
+
 
 ## Next step
 
@@ -300,3 +286,7 @@ Publish your app to be discoverable in Teams, Outlook, and Microsoft 365 app:
 
 > [!div class="nextstepaction"]
 > [Publish Teams apps for Outlook and Microsoft 365 app](publish.md)
+
+## See also
+
+[Message extensions](~/messaging-extensions/what-are-messaging-extensions.md)
