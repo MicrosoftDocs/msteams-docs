@@ -50,8 +50,6 @@ The following image displays the locations from where action command is invoked:
 
 :::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="Action command invoke locations":::
 
-To add custom options in **More options** (**...**) or **More actions**, add your commands in `composeExtensions` property of the [app manifest schema](../../../resources/schema/manifest-schema.md#composeextensions). For more information, see [add action command to your app manifest](#add-the-action-command-to-your-app-manifest).
-
 ## Select how to create your task module
 
 In addition to selecting where your command can be invoked from, you must also select how to populate the form in the task module for your users. You have the following three options for creating the form that is rendered inside the task module:

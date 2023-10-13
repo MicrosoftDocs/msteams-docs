@@ -90,7 +90,7 @@ To trigger the Message Extension through Copilot, you can:
 1. Under **Configure**, select **App features**.
 1. Select **Messaging extension**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the plugin of copilot option in Teams developer portal.":::
+  :::image type="content" source="../../../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the plugin of copilot option in Teams developer portal.":::
 
 1. Under **Message extension type**, select **Bot**.
 

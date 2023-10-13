@@ -15,14 +15,14 @@ ms.date: 09/07/2023
 > * API-based message extensions is available in [public preview](../resources/dev-preview/developer-preview-intro.md).
 > * API-based message extension only supports search commands.
 
-API-based message extensions use a web service to handle user requests and responses. They don't require a bot registration or a bot framework SDK. They can be configured and deployed using the Developer Portal for Teams or the Teams Toolkit.
+API-based message extensions use a web service to handle user requests and responses and don't require a bot registration or a bot framework SDK. They can be configured and deployed using the Developer Portal for Teams or the Teams Toolkit.
 
 You can create an API-based message extension in Teams using an [OpenAPI Specification](https://learn.openapis.org/specification/) document. After you've created an OpenAPI Specification document for the APIs you want to use, upload the OpenAPI Specification document to Teams Toolkit or Developer portal for Teams to generate and integrate the client code in your app's project. Create or generate an Adaptive Card template to handle the responses from the API.
 
 API-based message extensions help your apps to interact directly with third-party data, apps, and services, enhancing its capabilities. With APIs for message extension, you can:
 
 * Retrieve real-time information, for example, latest news coverage on a product launch.
-* Retrieve knowledge-based information, for example, my team’s design files in figma.
+* Retrieve knowledge-based information, for example, my team’s design files in Figma.
 * Perform actions on behalf of the user, for example, create a Jira ticket.
 
 ## Prerequisites
@@ -131,9 +131,9 @@ The following code is an example of an OpenAPI specification document in YAML fo
 
 </details>
 
-If you've created an OpenAPI specification document, you need an Adaptive Card template for the app to respond to the get requests. If your building an App using Teams Toolkit or Developer portal for teams, the tools will extract the information from the OpenAPI specification document automatically.
+An OpenAPI specification document requires a response rendering template for the app to respond to the get requests. If your building an app using Teams Toolkit or Developer portal for Teams, the response rendering template is extracted from the OpenAPI specification document automatically.
 
-The following is an example of the Adaptive Card template: <br/>
+The following code is an example of the Adaptive Card template: <br/>
 
 <details><summary>Adaptive Card template</summary>
 
@@ -218,7 +218,7 @@ The following is an example of the Adaptive Card template: <br/>
 
 ## Update app manifest
 
-Update app manifest with the `composeExtensions` property. The following is an example of the app manifest with the `composeExtensions` property:
+Update app manifest with the `composeExtensions` property. The following code is an example of the app manifest with the `composeExtensions` property:
 
 ```json
     "composeExtensions": [
@@ -257,7 +257,7 @@ Update app manifest with the `composeExtensions` property. The following is an e
 |`composeExtension.type`     |  Update the value as `ApiBased`. |
 |`composeExtension.apiSpecificationFile`     |  This references an OpenAPI spec file in the app package. Include when type is `ApiBased`.      |
 |`composeExtension.command.ID`      | The ID must  match the `OperationID` available in the  OpenAPI spec.       |
-|`composeExtension.command.context`      | An existing array where the entry points for ME is defined. The supported values are **compose**: Message Extension to show up as compose extension, **commandBox**: Message Extension to show up in Powerbar, and **message**: Message action |
+|`composeExtension.command.context`      | An existing array where the entry points for ME is defined. The supported values are **compose**: Message Extension to show up as compose extension, **commandBox**: Message Extension to show up in Power bar, and **message**: Message action |
 |`composeExtension.command.parameters`    | Include Title, Name, Description. The name must map to the parameter name in the OpenAPI spec.     |
 |`composeExtension.command.apiResponseRenderingTemplateFile`| A template used to format the JSON response from developer’s API to Adaptive card response. *Mandatory* |
 

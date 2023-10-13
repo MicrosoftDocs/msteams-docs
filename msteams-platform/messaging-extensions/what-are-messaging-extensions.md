@@ -1,7 +1,7 @@
 ---
 title: Message extensions
 author: surbhigupta
-description: Learn how message extensions are used, its types, and scenarios where its used on the Microsoft Teams platform. Samples on action and searched based message extension.
+description: Learn how message extensions are used, its types, and scenarios where it's used on the Microsoft Teams platform. Samples on action and searched based message extension.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -74,17 +74,17 @@ The following image displays the message extension search command task module:
 
 If you don't already have a message extension, there are two ways to build one:
 
-* **Build from an API**:You can easily create a message extension from an existing API. This method requires an OpenAPI specification document. For more information, see [API-based Message extension](build-api-based-message-extension.md).
+* **Build from an API**: You can easily create a message extension from an existing API. This method requires an OpenAPI specification document. For more information, see [API-based Message extension](build-api-based-message-extension.md).
 
-* **Build using bot Framework**:If you want a one-on-one conversational experience, you can create a new message extension from a bot. For more information, see [Bot-based Message extension](build-bot-based-message-extension.md).
+* **Build using bot Framework**: If you want a one-on-one conversational experience, you can create a new message extension from a bot. For more information, see [Bot-based Message extension](build-bot-based-message-extension.md).
 
 The following table differentiates the types of message extensions:
 
 |API-based message extension  |Bot-based message extension  |
 |---------|---------|
-|- Simpler and faster to create and maintain <br> - Use this option if you’re not planning to add a conversational bot to your app  <br> - Do not require any additional code or resources for bot logic <br> - Suitable for scenarios where the plugin only needs to communicate with a web service and does not need any complex logic or state management <br> - Privatized traffic as they don’t rely on Azure bot infrastructure.| - More flexibility <br> - Use this option if you’re also planning to build a conversational bot <br> - Can leverage the full capabilities of the bot framework SDK <br> - Suitable for scenarios where the plugin needs to communicate with multiple services, handle complex logic or user interactions, or maintain state across sessions.|
+|- Simpler and faster to create and maintain <br> - Use this option if you’re not planning to add a conversational bot to your app  <br> - Don't require any additional code or resources for bot logic <br> - Suitable for scenarios where the plugin only needs to communicate with a web service and doesn't need any complex logic or state management <br> - Privatized traffic as they don’t rely on Azure bot infrastructure.| - More flexibility <br> - Use this option if you’re also planning to build a conversational bot <br> - Can leverage the full capabilities of the bot framework SDK <br> - Suitable for scenarios where the plugin needs to communicate with multiple services, handle complex logic or user interactions, or maintain state across sessions.|
 
-:::image type="content" source="../assets/images/Copilot/api-bot-based-message-extension-decision-tree.png" alt-text="Screenshot shows the decisoin tree which helps the user to choose between API based and bot based message extension.":::
+:::image type="content" source="../assets/images/Copilot/api-bot-based-message-extension-decision-tree.png" alt-text="Screenshot shows the decision tree, which helps the user to choose between API based and bot based message extension.":::
 
 ## Link unfurling
 
@@ -100,7 +100,7 @@ The following images display link unfurling feature when a link is pasted in mes
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest**|
 |------------|-------------|----------------|------------|------------|------------|
 | Message extension with action-based commands | This sample shows how to define action commands, create task module, and  respond to task module submit action. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip)
-| Message extension with search-based commands | This sample shows how to build a Search-based Message Extension. It searches nudget packages and displays the results in search based messaging extension. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
+| Message extension with search-based commands | This sample shows how to build a Search-based Message Extension. It searches nuget packages and displays the results in search based messaging extension. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
 |Message extension action preview| This sample shows how to use action preview in Messaging Extensions using Bot Framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) |NA|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
 |Message extension action for task scheduling|This sample shows how to schedule a task from message extension action command and get a reminder card at a scheduled date and time.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)| NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp/demo-manifest/msgext-message-reminder.zip)
 
