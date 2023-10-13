@@ -31,10 +31,10 @@ To extend your Teams message extension to Outlook, ensure the following:
 >
 > * To check for message extensions support within Outlook for Windows desktop, web, and mobile, see the support table in [extend Teams apps across Microsoft 365](~/m365-apps/overview.md).
 > * [A Microsoft 365 Developer Program sandbox tenant.](~/m365-apps/prerequisites.md#prepare-a-developer-tenant-for-testing)
-> * [A test environment with Microsoft 365 apps installed from the Microsoft 365 Apps *Current Channel*.](~/m365-apps/prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional)
+> * [A test environment with Microsoft 365 apps installed from the Microsoft 365 Apps **Current Channel**.](~/m365-apps/prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional)
 > * [(Optional) Microsoft Visual Studio Code with the Teams Toolkit extension.](~/m365-apps/prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional)
 
-To extend your Teams message extension to Outlook, you can either [build a new message extension app with Teams Toolkit](#build-a-message-extension-app-with-teams-toolkit-for-outlook) or [extend an existing Teams message extension app to Outlook.](#extend-an-existing-teams-message-extension-app-to-outlook)
+To extend your Teams message extension to Outlook, you can either [build a new message extension app with Teams Toolkit](#build-a-message-extension-app-for-outlook) or [extend an existing Teams message extension app to Outlook.](#extend-an-existing-teams-message-extension-app-to-outlook)
 
 :::row:::
 :::column:::
@@ -187,7 +187,7 @@ Open your app manifest and update the `$schema` and `manifestVersion` with the f
 
 ### Add Microsoft 365 channel for your app
 
-In Microsoft Teams, a message extension consists of a web service that you host and an app manifest, which defines where your web service is hosted. The web service takes advantage of the [Bot Framework SDK](/azure/bot-service/bot-service-overview) messaging schema and secure communication protocol through a Teams channel registered for your bot.
+In Microsoft Teams, a message extension consists of a web service that you host and an app manifest, which defines where your web service is hosted. The web service takes the advantage of [Bot Framework SDK](/azure/bot-service/bot-service-overview) messaging schema and secure communication protocol through a Teams channel registered for your bot.
 
 For users to interact with your message extension from Outlook, you need to enable the **Microsoft 365** channel for your Azure bot resource of the message extension app.
 
@@ -301,10 +301,10 @@ Use the [Microsoft Teams developer community channels](/microsoftteams/platform/
 
 | **Sample Name** | **Description** | **Node.js** |
 |---------------|--------------|--------|
-| NPM Search Connector | Use Teams Toolkit to build a message extension app. Works in Teams, Outlook. |  [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/NPM-search-connector-M365) |
+| NPM Search Connector | Use Teams Toolkit to build a message extension app. Works in Teams, Outlook. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/NPM-search-connector-M365) |
 | Teams Link Unfurling | Simple Teams app to demonstrate link unfurling. Works in Teams, Outlook. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-link-unfurling/nodejs)
 | Tab in Stage View | Microsoft Teams tab sample app for demonstrating a tab in Stage View. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs) |
-|Teams action-based message extension for Microsoft 365| <TBD> | <TBD> |
+|Teams action-based message extension for Microsoft 365| `TBD` | `TBD` |
 
 
 ## Next step
