@@ -147,7 +147,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
 1. Follow these steps for the respective API types:
 
-# [New API](#tab/new-api)
+   # [New API](#tab/new-api)
 
    1. Select a programming language.
 
@@ -157,7 +157,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
    1. Enter the name of your app and select **Enter**. Teams Toolkit creates a new plugin with API from Azure functions.
 
-# [OpenAPI specification](#tab/openapi-specification)
+   # [OpenAPI specification](#tab/openapi-specification)
 
    1. Enter or browse the OpenAPI specification document location.
 
