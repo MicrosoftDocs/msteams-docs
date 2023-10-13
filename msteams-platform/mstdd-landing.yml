@@ -48,6 +48,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Build webhooks and connectors in GCCH
+        url: webhooks-and-connectors/what-are-webhooks-and-connectors.md
       - text: The new Microsoft Teams client
         url: resources/teams-updates.md
       - text: Use callTranscript API to fetch meeting transcript from all meetings
