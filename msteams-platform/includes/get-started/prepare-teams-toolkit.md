@@ -2,29 +2,29 @@
 
 After you've installed the required tools, set up the development environment.
 
-### Install the Teams Toolkit
+### Install Teams Toolkit
 
-The Microsoft Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
+Microsoft Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app and publish to the Teams Store. 
    
-You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`.
+You can use Teams Toolkit with Visual Studio Code or CLI (command-line interface) (TeamsFx).
 
 
 # [Visual Studio Code](#tab/vscode)
 
-1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
+1. Open Visual Studio Code and select **Extensions** (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
 1. In the search box, enter **Teams Toolkit**.
-1. Select **Install** next to the Teams Toolkit.
+1. Select **Install**.
 
    :::image type="content" source="../../assets/images/include-files/install-toolkit-vs.png" alt-text="Screenshot shows the Teams Toolkit extension installation.":::
 
    The Teams Toolkit :::image type="icon" source="../../assets/images/include-files/teams-toolkit-sidebar-icon.PNG"::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
 
-You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+You can also install Teams Toolkit from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 
 # [Command line](#tab/cli)
 
-To install the TeamsFx CLI, use the `npm` package manager:
+To install the TeamsFx CLI, use the `npm` package manager and enter the following command in Command prompt:
 
 ``` bash
 npm install -g @microsoft/teamsfx-cli
@@ -43,29 +43,29 @@ Ensure you add the npm global cache to your PATH. This step is normally done as 
 You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
 
 > [!CAUTION]
-> Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell.
+> Before you can run TeamsFx in PowerShell terminals, you must enable the **remote signed** execution policy for PowerShell.
 
 ---
 
 ## Set up your Teams development tenant
 
-A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your app. Let's verify if you're ready to develop with the tenant.
+A **tenant** is a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your app. Let's verify if you're ready to develop with the tenant.
 
-### Check for app upload option
+### Check for upload an app option
 
 After creating the app, you must load your app in Teams without distributing it. This process is known as app uploading. Sign in to your Microsoft 365 account to view this option.
 
    > [!NOTE]
-   > App uploading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams local environment.
+   > Ensure that you enable app uploading to preview and test apps in Teams local environment.
 
-Do you already have a tenant, and an admin access? Let's check if you really do!
+Do you already have a tenant and an admin access? Let's check if you really do!
 
 Verify if you can upload apps in Teams:
 
 1. In the Teams client, select the **Apps** icon.
 1. Select **Manage your apps**.
 1. Select **Upload an app**.
-1. Look for the option to **Upload a custom app**. If the option is visible, you've enabled uploading apps. 
+1. Look for the option to **Upload a custom app**. If the option is visible, you've enabled custom app upload. 
    
    :::image type="content" source="../../assets/images/include-files/custom-upload.png" alt-text="Screenshot shows the selection of Upload a custom app highlighted in red.":::
 
@@ -74,7 +74,7 @@ Verify if you can upload apps in Teams:
 
 ### Create a free Teams developer tenant (optional)
 
-If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
+If you don't have a Teams developer account, you can get it for free. Join the Microsoft 365 developer program!
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 1. Select **Join Now** and follow the onscreen instructions.
@@ -84,4 +84,3 @@ If you don't have a Teams developer account, you can get it free. Join the Micro
    :::image type="content" source="../../assets/images/include-files/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
 
 1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a custom app** option in Teams.
-
