@@ -221,6 +221,31 @@ The following code is an example of the Adaptive Card template: <br/>
 Update app manifest with the `composeExtensions` property. The following code is an example of the app manifest with the `composeExtensions` property:
 
 ```json
+{
+    "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+    "manifestVersion": "devPreview",
+    "version": "1.0.3",
+    "id": "55490e7f-xxxx-xxxx-xxxx-9eea9281b0fa",
+    "packageName": "com.microsoft.teams.extension",
+    "developer": {
+        "name": "Teams App, Inc.",
+        "websiteUrl": "https://www.example.com",
+        "privacyUrl": "https://www.example.com/termofuse",
+        "termsOfUseUrl": "https://www.example.com/privacy"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "sampletest2809-dev",
+        "full": "Full name for sampletest2809"
+    },
+    "description": {
+        "short": "Open AI Klarna product Api",
+        "full": "Full description for sampletest2809"
+    },
+    "accentColor": "#FFFFFF",
     "composeExtensions": [
         {
           "type": "ApiBased",
@@ -248,6 +273,7 @@ Update app manifest with the `composeExtensions` property. The following code is
       "validDomains": [
         "repairs-api-2023.azurewebsites.net"
       ]
+}
 ```
 
 |Name  |Description  |
@@ -258,6 +284,10 @@ Update app manifest with the `composeExtensions` property. The following code is
 |`composeExtension.command.context`      | An existing array where the entry points for message extension is defined.  The possible values are `message`, `compose`, or `commandBox`. The default is `["compose", "commandBox"]`. |
 |`composeExtension.command.parameters`    | This property defines a static list of parameters for the command. Include Title, Name, and Description. The name must map to the `parameters.name` in the OpenAPI spec.     |
 |`composeExtension.command.apiResponseRenderingTemplateFile`| A template used to format the JSON response from developer’s API to Adaptive Card response. *Mandatory* |
+
+For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
+
+## Next step
 
 > [!div class="nextstepaction"]
 > [Build from an API](build-api-based-message-extension.md)

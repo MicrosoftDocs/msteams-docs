@@ -23,7 +23,6 @@ Message extensions built from an API are a powerful tool that allows you to exte
 * If there's no required parameter without a default value, the parameter name in the Teams app manifest must match the name of an optional parameter defined for that operation.
 * A command can't have more than one parameter.
 * A response rendering template must be defined per command, which is used to convert responses from an API. The command portion of the manifest must point to this template file under`composeExtension.command.apiResponseRenderingTemplateFile` within the app manifest. Each command points to a different response rendering template file.
-* Add a `jsonPath`
 
 </details>
 
