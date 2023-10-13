@@ -193,9 +193,9 @@ items:
     
     * It must not have auth specified.
     * It must have at most one required parameter or property in the request body. You can make a required parameter optional and add a default value.
-    * The request body (if present) cannot contain any arrays.
+    * The request body (if present) can't contain any arrays.
     * The server URL must be defined in the specification.
-    * If there is no operation ID, you can add one to the spec that you will be uploading for testing because an operation ID is mandatory for operations that will be Messaging Extensions. You can validate that the swagger is valid by using an online validator like [Swagger Parser](https://apitools.dev/swagger-parser/online/). Once you have found a suitable API spec, save it in a folder. 
+    * If there's no operation ID, you can add one to the spec that you'll be uploading for testing because an operation ID is mandatory for operations that will be Messaging Extensions. You can validate that the swagger is valid by using an online validator like [Swagger Parser](https://apitools.dev/swagger-parser/online/). Once you have found a suitable API spec, save it in a folder. 
 
     We've used the following OpenAPI specification as an example for this tutorial:
 
@@ -229,7 +229,7 @@ items:
                         {
                             "name": "countryCode",
                             "in": "query",
-                            "description": "ISO 3166 country code with 2 characters based on the user location. Currently, only US, GB, DE, SE and DK are supported.",
+                            "description": "ISO 3166 country code with two characters based on the user location. Currently, only US, GB, DE, SE and DK are supported.",
                             "required": true,
                             "schema": {
                                 "type": "string"
@@ -238,7 +238,7 @@ items:
                         {
                             "name": "q",
                             "in": "query",
-                            "description": "A precise query that matches one very small category or product that needs to be searched for to find the products the user is looking for. If the user explicitly stated what they want, use that as a query. The query is as specific as possible to the product name or category mentioned by the user in its singular form, and don't contain any clarifiers like latest, newest, cheapest, budget, premium, expensive or similar. The query is always taken from the latest topic, if there is a new topic a new query is started. If the user speaks another language than English, translate their request into English (example: translate fia med knuff to ludo board game)!",
+                            "description": "A precise query that matches one small category or product that needs to be searched for to find the products the user is looking for. If the user explicitly stated what they want, use that as a query. The query is as specific as possible to the product name or category mentioned by the user in its singular form, and don't contain any clarifiers like latest, newest, cheapest, budget, premium, expensive or similar. The query is always taken from the latest article, if there's a new topic a new query is started. If the user speaks another language than English, translate their request into English (example: translate fia med knuff to ludo board game)!",
                             "required": true,
                             "schema": {
                                 "type": "string"

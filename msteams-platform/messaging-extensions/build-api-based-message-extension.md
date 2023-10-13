@@ -34,11 +34,14 @@ Developers can't require users to enter a parameter for a header or cookie. If h
 
 * The `oneOf`, `anyOf`, `allOf`, `not` (swagger.io) construct aren't supported in Teams.
 * Constructing arrays for the request aren't supported, but nested objects within a JSON request body are supported.
-* The request body (if present) can only be application or json to ensure compatibility with a wide range of APIs.
+* The request body (if present) can only be application/json to ensure compatibility with a wide range of APIs.
+* Ensure that a server url is defined for the `servers.url` property.
 * Only single parameter search is supported.
 * Only one required parameter without a default value is allowed.
 * The operation must have an `operationId`.
 * Only POST and GET HTTP methods are supported.
+* The operation cannot have an required Header or Cookie parameters without default values.
+* A command must have exactly one parameter.
 
 </details>
 
@@ -49,7 +52,9 @@ Developers can't require users to enter a parameter for a header or cookie. If h
 * Set composeExtension.composeExtensionType to `apiBased`.
 * Define `composeExtension.apiSpecificationFile` as the relative path to the OpenAPI specification file within the folder.
 * Define `apiResponseRenderingTemplateFile`  as the relative path to the response rendering template.
+* Each command must have a link to the response rendering template.
 * Full description must not exceed 128 characters.
+* A command must have exactly one parameter.
 
 </details>
 
@@ -58,7 +63,7 @@ Developers can't require users to enter a parameter for a header or cookie. If h
 <details><summary>4. Response rendering template</summary>
 
 * Define the schema reference URL in the `$schema` property.
-* Define `jsonPath` as the path to the relevant data/array in API response.
+* Define `jsonPath` as the path to the relevant data/array in API response. if the path points to an array, then each entry in the array will be a separate result vs if the path points to an object, there will only be a single result. *[Optional]*
 * The supported values for `responseLayout` are list and grid.
 
 </details>

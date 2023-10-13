@@ -170,6 +170,12 @@ The following code is an example of the Adaptive Card template: <br/>
                                             "type": "TextBlock",
                                             "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
                                             "wrap": true
+                                        },
+                                        {
+                                            "type": "Image",
+                                            "url": "${image}",
+                                            "size": "Medium",
+                                            "$when": "${image != null}"
                                         }
                                     ]
                                 },
@@ -208,7 +214,9 @@ The following code is an example of the Adaptive Card template: <br/>
             "subtitle": "Description: ${if(description, description, 'N/A')}",
             "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
             "image": {
-                "url": "${if(image, image, '')}"
+            "url": "${image}",
+            "$when": "${image != null}"
+              }
             }
         }
     }
