@@ -35,10 +35,10 @@ Before you get started, ensure that you adhere to the following requirements:
 
 ### OpenAPI Specification
 
-An OpenAPI Specification (OAS) is used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases. You must have an OpenAPI specification document before you create an API-based message extension.
+An OpenAPI Specification is used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases. You must have an OpenAPI specification document before you create an API-based message extension.
 
 The following code is an example of an OpenAPI specification document in YAML format: <br/>
-
+<br/>
 <details><summary>OpenAPI specification</summary>
 
    ```yml
@@ -134,7 +134,7 @@ The following code is an example of an OpenAPI specification document in YAML fo
 An OpenAPI specification document requires a response rendering template for the app to respond to the get requests. If your building an app using Teams Toolkit or Developer portal for Teams, the response rendering template is extracted from the OpenAPI specification document automatically.
 
 The following code is an example of the Adaptive Card template: <br/>
-
+<br/>
 <details><summary>Adaptive Card template</summary>
 
 ```json
@@ -250,16 +250,14 @@ Update app manifest with the `composeExtensions` property. The following code is
       ]
 ```
 
-### Query Parameters
-
 |Name  |Description  |
 |---------|---------|
 |`composeExtension.type`     |  Update the value as `ApiBased`. |
 |`composeExtension.apiSpecificationFile`     |  This references an OpenAPI spec file in the app package. Include when type is `ApiBased`.      |
 |`composeExtension.command.ID`      | The ID must  match the `OperationID` available in the  OpenAPI spec.       |
-|`composeExtension.command.context`      | An existing array where the entry points for ME is defined. The supported values are **compose**: Message Extension to show up as compose extension, **commandBox**: Message Extension to show up in Power bar, and **message**: Message action |
-|`composeExtension.command.parameters`    | Include Title, Name, Description. The name must map to the parameter name in the OpenAPI spec.     |
-|`composeExtension.command.apiResponseRenderingTemplateFile`| A template used to format the JSON response from developer’s API to Adaptive card response. *Mandatory* |
+|`composeExtension.command.context`      | An existing array where the entry points for message extension is defined. The supported values are **compose**: Message Extension to show up as compose extension and **commandBox**: Message Extension to show up in Power bar. |
+|`composeExtension.command.parameters`    | Include Title, Name, Description. The name must map to the `OperationID` in the OpenAPI spec.     |
+|`composeExtension.command.apiResponseRenderingTemplateFile`| A template used to format the JSON response from developer’s API to Adaptive Card response. *Mandatory* |
 
 > [!div class="nextstepaction"]
 > [Build from an API](build-api-based-message-extension.md)

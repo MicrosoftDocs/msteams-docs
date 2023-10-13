@@ -81,8 +81,8 @@ If you don't already have a message extension, there are two ways to build one:
 The following table differentiates the types of message extensions:
 
 |API-based message extension  |Bot-based message extension  |
-|---------|---------|
-|- Simpler and faster to create and maintain <br> - Use this option if you’re not planning to add a conversational bot to your app  <br> - Don't require any additional code or resources for bot logic <br> - Suitable for scenarios where the plugin only needs to communicate with a web service and doesn't need any complex logic or state management <br> - Privatized traffic as they don’t rely on Azure bot infrastructure.| - More flexibility <br> - Use this option if you’re also planning to build a conversational bot <br> - Can leverage the full capabilities of the bot framework SDK <br> - Suitable for scenarios where the plugin needs to communicate with multiple services, handle complex logic or user interactions, or maintain state across sessions.|
+|:---------|:---------|
+|- Simpler and faster to create and maintain <br> - Use this option if you’re not planning to add a conversational bot to your app  <br> - Don't require any additional code or resources for bot logic <br> - Suitable for scenarios where the plugin only needs to communicate with a web service and doesn't need any complex logic or state management <br> - Privatized traffic as they don’t rely on Azure bot infrastructure.<br> - API-based message extension supports search commands.| - More flexibility. <br> - Use this option if you’re also planning to build a conversational bot. <br> - Can leverage the full capabilities of the bot framework SDK. <br> - Suitable for scenarios where the plugin needs to communicate with multiple services, handle complex logic or user interactions, or maintain state across sessions. <br> - Bot based message extensions support action commands, search commands, and link unfurling.|
 
 :::image type="content" source="../assets/images/Copilot/api-bot-based-message-extension-decision-tree.png" alt-text="Screenshot shows the decision tree, which helps the user to choose between API based and bot based message extension.":::
 

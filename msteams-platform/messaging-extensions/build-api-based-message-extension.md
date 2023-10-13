@@ -16,14 +16,14 @@ Before you get started, ensure that you adhere to the following requirements:
 
 <details><summary>API message extension</summary>
 
-Message extension built from an API are a powerful tool that allows you to extend the functionality of your Teams app by integrating with external APIs. This can greatly enhance the capabilities of your app and provide a richer user experience. To implement message extension from an APO, you need to follow these guidelines:
+Message extension built from an API are a powerful tool that allows you to extend the functionality of your Teams app by integrating with external APIs. This can greatly enhance the capabilities of your app and provide a richer user experience. To implement message extension from an API, you need to follow these guidelines:
 
 * `Commands.id` in app manifest must match the corresponding `operationId` in the OpenAPI specification.
 * If there's a required parameter without a default value, the parameter name of the command defined in the Teams app manifest must match this parameter name.
 * If there's no required parameter without a default value, the parameter name in the Teams app manifest must match the name of an optional parameter defined for that operation.
 * A command can't have more than one parameter.
 * A response rendering template must be defined per command which is used to convert responses from an API. The command portion of the manifest must point to this template file under`composeExtension.command.apiResponseRenderingTemplateFile` within the app manifest. Each command points to a different response rendering template file.
-* Add a `jsonPath` to the relevant data/array in the Adaptive Card template.
+* Add a `jsonPath`
 
 </details>
 
@@ -49,7 +49,16 @@ Developers can't require users to enter a parameter for a header or cookie. If h
 
 * Set composeExtension.composeExtensionType to `apiBased`.
 * Define `composeExtension.apiSpecificationFile` as the relative path to the OpenAPI specification file within the folder.
-*
+* Define `apiResponseRenderingTemplateFile`  as the relative path to the response rendering template.
+* Full description must not exceed 128 characters.
+
+</details>
+
+<details><summary>Response rendering template</summary>
+
+* Define the schema reference URL in the `$schema` property.
+* Define `jsonPath` as the path to the relevant data/array in API response.
+* The supported values for `responseLayout` are list and grid.
 
 </details>
 
@@ -138,7 +147,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
 1. Follow these steps for the respective API types:
 
-   # [New API](#tab/new-api)
+# [New API](#tab/new-api)
 
    1. Select a programming language.
 
@@ -148,7 +157,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
    1. Enter the name of your app and select **Enter**. Teams Toolkit creates a new plugin with API from Azure functions.
 
-   # [OpenAPI specification](#tab/openapi-specification)
+# [OpenAPI specification](#tab/openapi-specification)
 
    1. Enter or browse the OpenAPI specification document location.
 
