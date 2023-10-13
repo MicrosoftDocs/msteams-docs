@@ -58,6 +58,7 @@ After creating the app, you must load your app in Teams without distributing it.
    > [!NOTE]
    > Ensure that you enable app uploading to preview and test apps in Teams local environment.
 
+Custom app upload is enabled through a tenant and admin must give an access to upload a custom app. 
 Do you already have a tenant and an admin access? Let's check if you really do!
 
 Verify if you can upload apps in Teams:
