@@ -1,7 +1,7 @@
 ---
 title: API-based Message extension
 author: v-ypalikila
-description: Learn how to build an API message extension using Teams developer portal and Teams Toolkit.
+description: Learn how to build an API message extension.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -22,16 +22,24 @@ You can create an API-based message extension in Teams using an [OpenAPI Specifi
 API-based message extensions help your apps to interact directly with third-party data, apps, and services, enhancing its capabilities. With APIs for message extension, you can:
 
 * Retrieve real-time information, for example, latest news coverage on a product launch.
-* Retrieve knowledge-based information, for example, my team’s design files in Figma.
+* Retrieve knowledge-based information, for example, my team’s design files in figma.
 * Perform actions on behalf of the user, for example, create a Jira ticket.
 
 ## Prerequisites
 
-1. **OpenAPI Specification (OAS)**: An OpenAPI Specification is used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases. You must have an OpenAPI specification document before you create an API-based message extension.
+Before you get started, ensure that you adhere to the following requirements:
 
-   The following code is an example of an OpenAPI specification document in YAML format: <br/>
+* [OpenAPI Specification (OAS)](#openapi-specification)
 
-   <details><summary>OpenAPI specification</summary>
+* [Update app manifest](#update-app-manifest)
+
+### OpenAPI Specification
+
+An OpenAPI Specification (OAS) is used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases. You must have an OpenAPI specification document before you create an API-based message extension.
+
+The following code is an example of an OpenAPI specification document in YAML format: <br/>
+
+<details><summary>OpenAPI specification</summary>
 
    ```yml
        openapi: 3.0.0
@@ -121,15 +129,15 @@ API-based message extensions help your apps to interact directly with third-part
                   description: A successful response indicating that the repair was created
    ```
 
-   </details>
+</details>
 
-   1. If you've created an OpenAPI specification document, you need an Adaptive Card template for the app to respond to the get requests. If your building an App using Teams Toolkit or Developer portal for teams, the tools will extract the information from the OpenAPI specification document automatically.
+If you've created an OpenAPI specification document, you need an Adaptive Card template for the app to respond to the get requests. If your building an App using Teams Toolkit or Developer portal for teams, the tools will extract the information from the OpenAPI specification document automatically.
 
-      The following is an example of the Adaptive Card template: <br/>
+The following is an example of the Adaptive Card template: <br/>
 
-    <details><summary>Adaptive Card template</summary>
+<details><summary>Adaptive Card template</summary>
 
-    ```json
+```json
     {
         "version": "1.0",
         "responseLayout": "grid",
@@ -204,14 +212,16 @@ API-based message extensions help your apps to interact directly with third-part
             }
         }
     }
-    ```
+```
 
-    </details>
+</details>
 
-1. Update app manifest: Update the app manifest with the composeExtensions property. The following is an example of the app manifest with the `composeExtensions` property:
+## Update app manifest
 
-   ```json
-      "composeExtensions": [
+Update app manifest with the `composeExtensions` property. The following is an example of the app manifest with the `composeExtensions` property:
+
+```json
+    "composeExtensions": [
         {
           "type": "ApiBased",
           "apiSpecFile": "listrepairsapispec.yaml",
@@ -238,28 +248,23 @@ API-based message extensions help your apps to interact directly with third-part
       "validDomains": [
         "repairs-api-2023.azurewebsites.net"
       ]
-    }
+```
 
-   ```
+### Query Parameters
 
-   Ensure that the app manifest has the following information:
+|Name  |Description  |
+|---------|---------|
+|`composeExtension.type`     |  Update the value as `ApiBased`. |
+|`composeExtension.apiSpecificationFile`     |  This references an OpenAPI spec file in the app package. Include when type is `ApiBased`.      |
+|`composeExtension.command.ID`      | The ID must  match the `OperationID` available in the  OpenAPI spec.       |
+|`composeExtension.command.context`      | An existing array where the entry points for ME is defined. The supported values are **compose**: Message Extension to show up as compose extension, **commandBox**: Message Extension to show up in Powerbar, and **message**: Message action |
+|`composeExtension.command.parameters`    | Include Title, Name, Description. The name must map to the parameter name in the OpenAPI spec.     |
+|`composeExtension.command.apiResponseRenderingTemplateFile`| A template used to format the JSON response from developer’s API to Adaptive card response. *Mandatory* |
 
-    * App name
-    * App color icon
-    * App outline icon
-    * Terms of Service URL
-    * Privacy policy URL
-    * The authentication type in `composeExtension.auth`: no auth, aad, oauth, or service_http.
-
-   **Query Parameters**
-
-   |Name  |Description  |
-   |---------|---------|
-   |`composeExtension.type`     |  Update the value as `ApiBased`. |
-   |`composeExtension.apiSpecificationFile`     |  This references an OpenAPI spec file in the app package. Include when type is `ApiBased`.      |
-   |`composeExtension.command.ID`      | The ID must  match the `OperationID` available in the  OpenAPI spec.       |
-   |`composeExtension.command.context`      | An existing array where the entry points for ME is defined. The supported values are **compose**: Message Extension to show up as compose extension, **commandBox**: Message Extension to show up in Powerbar, and **message**: Message action |
-   |`composeExtension.command.parameters`    | Include Title, Name, Description. The name must map to the parameter name in the OpenAPI spec.     |
-   |`composeExtension.command.apiResponseRenderingTemplateFile`| A template used to format the JSON response from developer’s API to Adaptive card response. *Mandatory* |
+> [!div class="nextstepaction"]
+> [Build from an API](build-api-based-message-extension.md)
 
 ## See also
+
+* [Build message extensions](what-are-messaging-extensions.md)
+* [Bot-based Message extension](build-bot-based-message-extension.md)

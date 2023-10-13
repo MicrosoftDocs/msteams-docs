@@ -10,7 +10,9 @@ ms.date: 09/07/2023
 
 # Build from an API
 
-Message extensions built from an API are a type of Teams app that allows you to integrate your chat functionality directly into Teams. This can enhance your app's usability and provide a seamless user experience. We recommend you to follow the following requirements:
+Message extensions built from an API are a type of Teams app that allows you to integrate your chat functionality directly into Teams. This can enhance your app's usability and provide a seamless user experience.
+
+Before you get started, ensure that you adhere to the following requirements:
 
 <details><summary>API message extension</summary>
 
@@ -136,7 +138,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
 1. Follow these steps for the respective API types:
 
-# [New API](#tab/new-api)
+   # [New API](#tab/new-api)
 
    1. Select a programming language.
 
@@ -146,7 +148,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
    1. Enter the name of your app and select **Enter**. Teams Toolkit creates a new plugin with API from Azure functions.
 
-# [OpenAPI specification](#tab/openapi-specification)
+   # [OpenAPI specification](#tab/openapi-specification)
 
    1. Enter or browse the OpenAPI specification document location.
 
