@@ -18,10 +18,18 @@ This document gives an overview of the message extension, tasks performed under 
 
 The following image displays the locations from where message extensions are invoked:
 
-:::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="message extension invoke locations":::
-
 > [!NOTE]
 > @mentioning message extensions is no longer supported in the compose box.
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../assets/images/messaging-extension-invoke-locations.png" alt-text="Screenshot shows the message extension invoke location in Teams desktop.":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../assets/images/messaging-extension-invoke-location-mobile.png" alt-text="Screenshot shows the message extension invoke location in Teams mobile.":::
+
+---
 
 ## Scenarios where message extensions are used
 
@@ -50,7 +58,7 @@ Action commands are used to present the users with a modal pop-up to collect or 
 
 The action commands are triggered from the compose message area, the command box, or from a message. When the command is invoked from a message, the initial JSON payload sent to your bot includes the entire message it was invoked from. The following image displays the message extension action command task module:
 
-:::image type="content" source="~/assets/images/task-module.png" alt-text="Message extension action command task module":::
+:::image type="content" source="../assets/images/task-module.png" alt-text="Message extension action command task module":::
 
 ### Search commands
 
@@ -59,7 +67,7 @@ Search commands allow the users to search an external system for information eit
 The cards are triggered from the compose message area or the command box and not triggered from a message. They can't be triggered from a message.
 The following image displays the message extension search command task module:
 
-:::image type="content" source="~/assets/images/search-extension.png" alt-text="Message extension search command":::
+:::image type="content" source="../assets/images/search-extension.png" alt-text="Message extension search command":::
 
 > [!NOTE]
 > For more information on cards, see [what are cards](../task-modules-and-cards/what-are-cards.md).
