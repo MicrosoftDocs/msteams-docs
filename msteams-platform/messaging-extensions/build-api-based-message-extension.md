@@ -14,7 +14,7 @@ Message extensions built from an API are a type of Teams app that allows you to 
 
 Before you get started, ensure that you adhere to the following requirements:
 
-<details><summary>API message extension</summary>
+<details><summary>1. API message extension</summary>
 
 Message extensions built from an API are a powerful tool that allows you to extend the functionality of your Teams app by integrating with external APIs. This can greatly enhance the capabilities of your app and provide a richer user experience. To implement message extension from an API, you need to follow these guidelines:
 
@@ -28,7 +28,7 @@ Message extensions built from an API are a powerful tool that allows you to exte
 
 </br>
 
-<details><summary>OpenAPI specification</summary>
+<details><summary>2. OpenAPI specification</summary>
 
 Developers can't require users to enter a parameter for a header or cookie. If headers need to be passed, a default value for the header can be set in the specification. This simplifies the user experience and reduces the risk of errors.
 
@@ -44,7 +44,7 @@ Developers can't require users to enter a parameter for a header or cookie. If h
 
 </br>
 
-<details><summary>App manifest</summary>
+<details><summary>3. App manifest</summary>
 
 * Set composeExtension.composeExtensionType to `apiBased`.
 * Define `composeExtension.apiSpecificationFile` as the relative path to the OpenAPI specification file within the folder.
@@ -53,7 +53,9 @@ Developers can't require users to enter a parameter for a header or cookie. If h
 
 </details>
 
-<details><summary>Response rendering template</summary>
+</br>
+
+<details><summary>4. Response rendering template</summary>
 
 * Define the schema reference URL in the `$schema` property.
 * Define `jsonPath` as the path to the relevant data/array in API response.
