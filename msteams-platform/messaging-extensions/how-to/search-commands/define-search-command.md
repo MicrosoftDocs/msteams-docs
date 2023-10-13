@@ -82,7 +82,6 @@ To trigger the Message Extension through Copilot, you can:
 > [!NOTE]
 > This prompt may not always make Copilot include a response from your message extension. If it happens, try some other prompts or leave a feedback to us by thumbing down the Copilot response and leave a message tagged with [MessageExtension].
 
-
 # [Developer portal for Teams](#tab/developer-portal-for-teams)
 
 1. Go to **Teams developer portal**.
@@ -118,6 +117,86 @@ To trigger the Message Extension through Copilot, you can:
 1. Select **Save**.
 
 A bot-based ME is created.
+
+The following code provides an example of search based for message extensions:
+
+# [C#](#tab/dotnet)
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionqueryasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmessagingextensionqueryasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-iinvokeactivity))-microsoft-bot-schema-teams-messagingextensionquery-system-threading-cancellationtoken)&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L26-L59)
+
+```csharp
+protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
+        {
+            var text = query?.Parameters?[0]?.Value as string ?? string.Empty;
+
+            var packages = new[] {
+            new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
+            new { title = "Fluent UI Library", value = "FluentUI" }};
+
+            // We take every row of the results and wrap them in cards wrapped in MessagingExtensionAttachment objects.
+            // The Preview is optional, if it includes a Tap, that will trigger the OnTeamsMessagingExtensionSelectItemAsync event back on this bot.
+            var attachments = packages.Select(package =>
+            {
+                var previewCard = new ThumbnailCard { Title = package.title, Tap = new CardAction { Type = "invoke", Value = package } };
+                if (!string.IsNullOrEmpty(package.title))
+                {
+                    previewCard.Images = new List<CardImage>() { new CardImage(package.title, "Icon") };
+                }
+
+                var attachment = new MessagingExtensionAttachment
+                {
+                    ContentType = HeroCard.ContentType,
+                    Content = new HeroCard { Title = package.title },
+                    Preview = previewCard.ToAttachment()
+                };
+
+                return attachment;
+            }).ToList();
+
+            // The list of MessagingExtensionAttachments must we wrapped in a MessagingExtensionResult wrapped in a MessagingExtensionResponse.
+            return new MessagingExtensionResponse
+            {
+                ComposeExtension = new MessagingExtensionResult
+                {
+                    Type = "result",
+                    AttachmentLayout = "list",
+                    Attachments = attachments
+                }
+            };
+        }
+```
+
+# [Node.js](#tab/nodejs)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-quickstart/js/botActivityHandler.js#L30-L53)
+
+```javascript
+async handleTeamsMessagingExtensionQuery(context, query) {
+        const searchQuery = query.parameters[0].value;     
+        const attachments = [];
+                const response = await axios.get(`http://registry.npmjs.com/-/v1/search?${ querystring.stringify({ text: searchQuery, size: 8 }) }`);
+                
+                response.data.objects.forEach(obj => {
+                        const heroCard = CardFactory.heroCard(obj.package.name);
+                        const preview = CardFactory.heroCard(obj.package.name);
+                        preview.content.tap = { type: 'invoke', value: { description: obj.package.description } };
+                        const attachment = { ...heroCard, preview };
+                        attachments.push(attachment);
+                });
+    
+                return {
+                    composeExtension:  {
+                           type: 'result',
+                           attachmentLayout: 'list',
+                           attachments: attachments
+                    }
+                };
+            }       
+        }
+```
+
+---
 
 ## Code sample
 

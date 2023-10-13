@@ -8,6 +8,7 @@ ms.author: anclear
 ---
 
 # Define message extension action commands
+
 Before creating the action command, you must decide the following factors:
 
 1. [Where can the action command be triggered from?](#select-action-command-invoke-locations)
@@ -119,6 +120,85 @@ To create an action command:
 
    :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Screenshot shows how to add additional parameters for your message extension."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
+## Code snippets
+
+The following code provides an example of action based for message extensions:
+
+# [C#](#tab/dotnet)
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionfetchtaskasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmessagingextensionfetchtaskasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-iinvokeactivity))-microsoft-bot-schema-teams-messagingextensionaction-system-threading-cancellationtoken)&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-action-preview/csharp/Bots/TeamsMessagingExtensionsActionPreviewBot.cs#L35-L56)
+
+```csharp
+     protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+        {
+            // Handle different actions using switch.
+            switch (action.CommandId)
+            {
+                case "HTML":
+                    return new MessagingExtensionActionResponse
+                    {
+                        Task = new TaskModuleContinueResponse
+                        {
+                            Value = new TaskModuleTaskInfo
+                            {
+                                Height = 200,
+                                Width = 400,
+                                Title = "Task Module HTML Page",
+                                Url = baseUrl + "/htmlpage.html",
+                            },
+                        },
+                    };
+                // return TaskModuleHTMLPage(turnContext, action);
+                default:
+                    string memberName = "";
+                    var member = await TeamsInfo.GetMemberAsync(turnContext, turnContext.Activity.From.Id, cancellationToken);
+                    memberName = member.Name;
+                    return new MessagingExtensionActionResponse
+                    {
+                        Task = new TaskModuleContinueResponse
+                        {
+                            Value = new TaskModuleTaskInfo
+                            {
+                                Card = <<AdaptiveAction card json>>,
+                                Height = 200,
+                                Width = 400,
+                                Title = $"Welcome {memberName}",
+                            },
+                        },
+                    };
+            }
+```
+
+# [Node.js](#tab/nodejs)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-action/nodejs/bots/teamsMessagingExtensionsActionBot.js#L24-L61)
+
+```javascript
+// Invoked when a Messaging Extension Fetch activity is received from the connector.
+    async handleTeamsMessagingExtensionFetchTask(context, action) {
+        switch (action.commandId) {
+            case 'Static HTML':
+                return staticHtmlPage();
+        }
+    }
+
+    staticHtmlPage(){
+        return {
+            task: {
+                type: 'continue',
+                value: {
+                    width: 450,
+                    height: 125,
+                    title: 'Task module Static HTML',
+                    url: `${baseurl}/StaticPage.html`
+                }
+            }
+        };
+    }
+```
+
+---
 
 ## Code sample
 
