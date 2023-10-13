@@ -254,9 +254,9 @@ Update app manifest with the `composeExtensions` property. The following code is
 |---------|---------|
 |`composeExtension.type`     |  Update the value as `ApiBased`. |
 |`composeExtension.apiSpecificationFile`     |  This references an OpenAPI spec file in the app package. Include when type is `ApiBased`.      |
-|`composeExtension.command.ID`      | The ID must  match the `OperationID` available in the  OpenAPI spec.       |
-|`composeExtension.command.context`      | An existing array where the entry points for message extension is defined. The supported values are **compose**: Message Extension to show up as compose extension and **commandBox**: Message Extension to show up in Power bar. |
-|`composeExtension.command.parameters`    | Include Title, Name, Description. The name must map to the `OperationID` in the OpenAPI spec.     |
+|`composeExtension.command.ID`      | This property is a unique ID that you assign to search command. The user request includes this ID. The ID must  match the `OperationID` available in the  OpenAPI spec.       |
+|`composeExtension.command.context`      | An existing array where the entry points for message extension is defined.  The possible values are `message`, `compose`, or `commandBox`. The default is `["compose", "commandBox"]`. |
+|`composeExtension.command.parameters`    | This property defines a static list of parameters for the command. Include Title, Name, and Description. The name must map to the `parameters.name` in the OpenAPI spec.     |
 |`composeExtension.command.apiResponseRenderingTemplateFile`| A template used to format the JSON response from developer’s API to Adaptive Card response. *Mandatory* |
 
 > [!div class="nextstepaction"]

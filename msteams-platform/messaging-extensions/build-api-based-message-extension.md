@@ -16,13 +16,13 @@ Before you get started, ensure that you adhere to the following requirements:
 
 <details><summary>API message extension</summary>
 
-Message extension built from an API are a powerful tool that allows you to extend the functionality of your Teams app by integrating with external APIs. This can greatly enhance the capabilities of your app and provide a richer user experience. To implement message extension from an API, you need to follow these guidelines:
+Message extensions built from an API are a powerful tool that allows you to extend the functionality of your Teams app by integrating with external APIs. This can greatly enhance the capabilities of your app and provide a richer user experience. To implement message extension from an API, you need to follow these guidelines:
 
 * `Commands.id` in app manifest must match the corresponding `operationId` in the OpenAPI specification.
 * If there's a required parameter without a default value, the parameter name of the command defined in the Teams app manifest must match this parameter name.
 * If there's no required parameter without a default value, the parameter name in the Teams app manifest must match the name of an optional parameter defined for that operation.
 * A command can't have more than one parameter.
-* A response rendering template must be defined per command which is used to convert responses from an API. The command portion of the manifest must point to this template file under`composeExtension.command.apiResponseRenderingTemplateFile` within the app manifest. Each command points to a different response rendering template file.
+* A response rendering template must be defined per command, which is used to convert responses from an API. The command portion of the manifest must point to this template file under`composeExtension.command.apiResponseRenderingTemplateFile` within the app manifest. Each command points to a different response rendering template file.
 * Add a `jsonPath`
 
 </details>
@@ -62,7 +62,7 @@ Developers can't require users to enter a parameter for a header or cookie. If h
 
 </details>
 
-You can create an API-based message extension using Developer Portal for Teams, Teams Toolkit and Teams CLI.
+You can create an API-based message extension using Developer Portal for Teams, Teams Toolkit, and Teams CLI.
 
 # [Developer portal for Teams](#tab/developer-portal-for-teams)
 
@@ -93,7 +93,7 @@ To create an API base message extension using Developer portal, follow these ste
 > [!NOTE]
 > Message extensions built from an API only support single parameter.
 
-You can add commands and parameters to your API, To add commands:
+You can add commands and parameters to your API, to add commands:
 
 1. Under the Open API spec file, select **Add**.
 
@@ -200,7 +200,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
 1. Enter the name of your application and select **Enter**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-CLI-project-done-me.png" alt-text="Screenshot shows the message that the the project is created in the required project folder.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-CLI-project-done-me.png" alt-text="Screenshot shows the message that the project is created in the required project folder.":::
 
 1. Go to the folder path where your project is created and enter the following command to provision your app in Azure:
 
@@ -209,7 +209,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
 1. Sign in to your Microsoft account. Teams Toolkit CLI will execute validation and provisions your app on Azure.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-CLI-provision-me.png" alt-text="Screenshot shows the Login request and the provision stages in the command prompt window.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-CLI-provision-me.png" alt-text="Screenshot shows the sign in request and the provision stages in the command prompt window.":::
 
 1. In the command prompt window, enter the following command to preview your app in Teams:
 

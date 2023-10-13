@@ -37,34 +37,42 @@ The following code is an example of an app manifest with the `composeExtensions`
 
 ```json
 {
-...
-  "composeExtensions": [
+ "composeExtensions": [
     {
-      "botId": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
-      "canUpdateConfiguration": true,
-      "commands": [{
-          "id": "searchCmd",
-          "description": "Search Bing for information on the web",
-          "title": "Search",
+      "botId": "eccdf132-0900-4d36-936b-dec5e6357f11",
+      "commands": [
+        {
+          "id": "Dev",
+          "type": "query",
+          "title": "Jedi",
+          "description": "May the force be with you",
           "initialRun": true,
-          "parameters": [{
-            "name": "searchKeyword",
-            "description": "Enter your search keywords",
-            "title": "Keywords"
-          }]
+          "fetchTask": false,
+          "context": [
+            "commandBox",
+            "compose",
+            "message"
+          ],
+          "parameters": [
+            {
+              "name": "Luke",
+              "title": "Skywalker",
+              "description": "Jedi master",
+              "inputType": "text"
+            }
+          ]
         }
-      ]
+      ],
+      "canUpdateConfiguration": true
     }
   ],
-...
-} 
 ```
 
-### Query parameters
+### Parameters
 
 You must add the following parameters to your `composeExtensions.commands` array of objects:
 
-| Property name | Purpose | Required? | Minimum manifest version |
+| Property name | Purpose | Required? | Manifest version |
 |---|---|---|---|
 | `id` | This property is a unique ID that you assign to search command. The user request includes this ID. | Yes | 1.0 |
 | `title` | This property is a command name. This value appears in the user interface (UI). | Yes | 1.0 |
@@ -85,6 +93,8 @@ You must add the following search parameter details that define the text visible
 | `parameters.value` | Initial value for the parameter. Currently the value isn't supported | No | 1.5 |
 
 For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
+
+## Next step
 
 > [!div class="nextstepaction"]
 > [Select search command invoke locations](how-to/search-commands/define-search-command.md)
@@ -156,7 +166,9 @@ The following code is an example of an app manifest with the `composeExtensions`
 
 ```
 
-### Query parameters
+### Parameters
+
+You must add the following parameters to your `composeExtensions.commands` array of objects:
 
 | Property name | Purpose | Required? | Manifest version |
 |---|---|---|---|
@@ -187,6 +199,8 @@ If you're using an embedded web view, you can optionally add the `taskInfo` obje
 |`taskInfo.url`|Initial web view URL.|No | 1.4 |
 
 For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
+
+## Next step
 
 > [!div class="nextstepaction"]
 > [Define message extension action commands](how-to/action-commands/define-action-command.md)
