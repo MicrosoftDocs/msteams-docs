@@ -10,18 +10,18 @@ ms.subservice: m365apps
 # How to build Actions
 
 To add an Action to your existing Teams app, you must:
-  
-* Define Actions in the manifest
-* Build the handler that retrieves Action information through context object
-* Access content object through Graph API
+
+> [!div class="checklist"]
+>
+>* Define Actions in the manifest
+>* Build the handler that retrieves Action information through context object
+>* Access content object through Graph API
 
 ## Define Actions in the manifest
 
-For an Action to appear in the context menu of your M365 app (when a user right clicks on a file), you must add a JSON payload in the app manifest. In the Manifest, you define the user intent, object type, and the handler that will trigger.
+For an Action to appear in the context menu of your M365 app (when a user right clicks on a file), you must add a JSON payload in the app manifest. In the manifest, you define the user intent, object type, and the handler that will trigger.
 
-Here is a sample manifest code that builds two Actions:
-* An Action that [opens a page](about-actions.md#open-page)
-* An Action that [opens a dialog](about-actions.md#open-dialog)
+In this sample manifest code. two Actions are built, an Action that [opens a page](about-actions.md#open-page) and an Action that [opens a dialog](about-actions.md#open-dialog).
 
 ```json
 {  
@@ -31,7 +31,7 @@ Here is a sample manifest code that builds two Actions:
    ...  
   "actions": [  
     {
-// Definign Action to open a page
+// Defining Action to open a page
       "id": "relatedTasks",  
       "displayName": "Related tasks",  
       "intent": "custom",  
@@ -83,7 +83,7 @@ In the sample code:
 * Action “related task”, uses “custom” `intent` to show tasks in the To-do app that are related to the selected `object` (file). The `object` type (file type) supported by this Action have the extension types   “.xlsx”, “doc”, etc. It has `handler` type “openPage” to open the App and navigate to the page as defined in the pageId and subpageId.
 * Action “add todo task”, uses `Intent` type “addTo”, to add the selected `object`  with a short note on the To-do app. The `object` type supported by this Action have the extension types “.docx”, “.doc”, etc. It has `handler` type “openDialog” to open an HTML based dialog from the URL address defined.
 
-Refer to the [refrence page]() for a comprehensive breakdown of each field in the manifest. 
+Refer to the [refrence page](/javascript/api/@microsoft/teams-js/app) for a comprehensive breakdown of each field in the manifest. 
 
 > [!NOTE]
 > Since this feature is in preview, please use devPreview version manifest, by setting the $schema and manifestVersion as below.
@@ -101,29 +101,31 @@ During preview, please use this verion of the developer preview manifest schema:
 ## Build the handler that retrieves Action information through context object
 
 A handler implements the logic and functionality of the Action, it performs the desired intent on the specified object. Based on the handler type, your app can implement specific app logic:   
-*With `open page` handler type, will direct users to your app’s launch page based on the `pageId` and `subPageId` defined in the manifest.
-*The `open dialog` handler will create an HTML-based dialog for users to seamlessly complete tasks within the dialog itself.   
+* With `open page` handler type, will direct users to your app’s launch page based on the `pageId` and `subPageId` defined in the manifest.
+* The `open dialog` handler will create an HTML-based dialog for users to seamlessly complete tasks within the dialog itself.   
 
-Once your app's page or dialog is launched, your app can access contextual information about the invoked Action from the actionInfo property of the Context object (returned from a call to app.getContext()).
+Once your app's page or dialog is launched, your app can access contextual information about the invoked Action from the [actionInfo](/javascript/api/@microsoft/teams-js/actioninfo) property of the [Context object](/javascript/api/@microsoft/teams-js/app.context) (returned from a call to [app.getContext()](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-getcontext)).
 
 > [!NOTE]
-> The Microsoft Teams JavaScript client library (TeamsJS) enables your app to determine when a page or dialog was opened from an Action, and the content being  triggered.
+> The Microsoft Teams JavaScript client library (TeamsJS) enables your app to determine when a page or dialog was opened from an Action, and the content being triggered.
 
 The following tables provides the list of app.Context API parameters (Context interface) and functions along with their descriptions:
-`actionInfo` a property of app.Context object to represent the action by which your app was invoked.
+
+[`actionInfo`](/javascript/api/@microsoft/teams-js/actioninfo) a property of [app.Context](/javascript/api/@microsoft/teams-js/app.context) object to represent the action by which your app was invoked.
+
 |Property| Description|
 | --- | --- |
 |`actionId` | Maps to the action id supplied inside the manifest |
 |`actionObjects`| Array of corresponding action objects|
 
-`M365ContentAction`interface, stores information needed to represent M365 Content stored in OneDrive or SharePoint.
+[`M365ContentAction`interface](/javascript/api/@microsoft/teams-js/m365contentaction), stores information needed to represent M365 Content stored in OneDrive or SharePoint.
 
 |Property| Description|
 | --- | --- |
 |`itemId` | IDs of the content are passed to the app. Apps should use these ids to query the Microsoft graph for more details.|
 |`secondaryId`| Represents an optional secondary identifier for an action in a Microsoft 365 content item.|
 
-For more details [see the Context interface reference]() or the following code.
+For more details [see the Context interface reference](/javascript/api/@microsoft/teams-js/app.context) or the following code.
 
 ```javascript
 export enum ActionObjectType {
@@ -161,7 +163,8 @@ foo: string?
 ```
 ### Sample code getting the Action info from context
 
-Applications can access the context object using `app.getContext`.
+Applications can access the context object using [app.getContext](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-getcontext).
+
 Once an application has the context object, it can …
 
 **Check if the app was launched using an Action:**
@@ -200,20 +203,18 @@ app.getContext().then((context: app.Context) => {
 })
 ```
 
-Link to sample code: get context
-
 ## Access content through Graph API
 
 After obtaining the `itemId` of the triggering content, you can leverage the Graph API to read or modify the content, facilitating task completion for your users. 
 
 > [!NOTE]
-> When constructing an action that directs the user to a dialog, you can utilize the dialog.url.submit( ) API to close the dialog when the user clicks a button. However, it's important to note that using the submit() API in your app's in the Action triggered dialog will not allow data to be sent back to the launch page.
+> When constructing an action that directs the user to a dialog, you can utilize the [dialog.url.submit( )](/javascript/api/@microsoft/teams-js/dialog.url#@microsoft-teams-js-app-getcontext) API to close the dialog when the user clicks a button. However, it's important to note that using the submit() API in your app's in the Action triggered dialog will not allow data to be sent back to the launch page.
 
 ## Test and Deploy your Actions
 
 Once you have defined the Action in the app manifest, build the handler that retrieves the Action information through the context object, and have access to the content object through Graph Api, it’s time to see your Action in action.
 
-## Test you Actions
+### Test you Actions
 
 To test you Actions:
 1.	[**Enroll your Microsoft 365 tenant in Microsoft 365 Targeted Release**](prerequisites.md#install-microsoft-365-apps-in-your-test-environment). Only Targeted Release users will be able to experience Actions in Microsoft 365 app. 
@@ -225,7 +226,7 @@ To test you Actions:
 ### Enable Actions for your users
 
 To enable Actions for end users through tenant admins:
-1. upload the app package containing the Actions via the Microsoft Admin Center (admin.microsoft.com)
+1. upload the app package containing the Actions via the [Microsoft Admin Center](admin.microsoft.com)
 1.Enable the app for targeted release to users in the tenant
 1. In the Microsoft 365 admin center, navigate to **settings** > **integrated apps** > select **upload custom apps** to upload app
 [Insert demo video of admin flow here]
