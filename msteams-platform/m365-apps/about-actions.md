@@ -57,7 +57,7 @@ Scenario 1: Action opens a dialog  
 This handler directs users to a dialog, offering a dedicated and contextualized interface for interacting with your app's features without opening the full app. This ensures a focused and efficient workflow, allowing users to complete tasks seamlessly within their current context.
 
 Scenario 2: Action opens page  
- 2a: On the same page, she notices the 'Q2 Top suppliers' Excel sheet and wants to see which suppliers she works with are on this list.   She right-clicks on the Excel file, then clicks on the Action 'Related suppliers'.  
+2a: On the same page, she notices the 'Q2 Top suppliers' Excel sheet and wants to see which suppliers she works with are on this list.   She right-clicks on the Excel file, then clicks on the Action 'Related suppliers'.  
 2b: The Northwind app opens, displaying the list of suppliers filtered to show only those that appear in the document.  This saves her time opening up the app and the Excel file and checking each item manually.  
 
 There are future plans to introduce additional types of handlers.
