@@ -208,7 +208,7 @@ items:
     
     We've used the following OpenAPI specification as an example for this tutorial: <br/>
     <br/>
-    <details><summary>Response rendering template</summary>
+    <details><summary>**OpenAPI specification document**</summary>
 
     ```YAML 
         {
@@ -346,9 +346,9 @@ items:
     
     Now that you've got your OpenAPI specification document, it also requires a response rendering template for the app to respond to the API requests. If your building an app using Teams Toolkit or Developer portal for Teams, the response rendering template is extracted from the OpenAPI specification document automatically.
 
-     The following code is an example of the Adaptive Card template: <br/>
+     The following code is an example of the response rendering template: <br/>
      <br/>
-     <details><summary>Response rendering template</summary>
+     <details><summary>**Response rendering template**</summary>
 
      ```json
         {
@@ -437,9 +437,7 @@ items:
      </details>
     
     
-    you can create a Messaging Extension that uses it. To create a message extension using the OpenAPI specification document, follow these steps:
-
-    As you've already prepared for creating these apps, you can set up a new Teams project for creating the app.
+    You can now create a message extension that uses the OpenAPI specification document. To create a message extension using the OpenAPI specification document, follow these steps:
 
     # [Visual Studio Code](#tab/vscode)
 
@@ -515,8 +513,8 @@ items:
     | `env/.env.dev.user` |Configuration file for local environment used by `teamsapp.yml` to customize the provisioning and deployment rules.  |
     | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
     | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
-    |`appPackage/apiSpecificationFiles/openapi.yml`|OpenAPI Specification file.|
-    | `appPackage/responseTemplates` | The Adaptive Card response template. |
+    |`appPackage/apiSpecificationFiles/openapi.yml`|OpenAPI Specification file that you've selected.|
+    | `appPackage/responseTemplates` | The response rendering template which, consists of the Adaptive Card template, preview card template, and metadata. |
     | `teamsapp.yml` |	This is the main Teams Toolkit project that defines properties and configuration stage definitions. |
 
     > [!Tip]

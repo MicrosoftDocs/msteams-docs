@@ -39,7 +39,7 @@ An OpenAPI Specification is used by documentation generation tools to display th
 
 The following code is an example of an OpenAPI specification document in YAML format: <br/>
 <br/>
-<details><summary>OpenAPI specification</summary>
+<details><summary>**OpenAPI specification**</summary>
 
    ```yml
        openapi: 3.0.0
@@ -135,7 +135,7 @@ An OpenAPI specification document requires a response rendering template for the
 
 The following code is an example of a Response rendering template: <br/>
 <br/>
-<details><summary>Response rendering template</summary>
+<details><summary>**Response rendering template**</summary>
 
 ```json
     {
