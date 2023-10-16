@@ -698,7 +698,7 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 ```json
 {
   "type": "Action.Submit",
-  "title": "submit"
+  "title": "submit",
   "data": {
     "msteams": {
       "type": "invoke",
