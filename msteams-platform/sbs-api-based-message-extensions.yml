@@ -5,17 +5,17 @@ metadata:
   description: In this learn module, you'll learn how to build a bot with Teams AI library and set up, build, and deploy a bot app with Teams Toolkit.
   audience: Developer
   level: Advanced
-  ms.date: 10/21/2021
+  ms.date: 10/16/2023
   ms.topic: interactive-tutorial
-  nextTutorialHref: bots/how-to/Teams conversational AI/coversational-ai-faq.md
-  nextTutorialTitle: Teams AI FAQs
+  nextTutorialHref: messaging-extensions/how-to/action-commands/define-action-command.md                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+  nextTutorialTitle: Build message extension using Bot Framework SDK
   ms.custom: mvc
   ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
 
-    API-based Messaging Extensions can significantly enhance the functionality of your Teams apps by allowing them to interact with external services. This can help streamline workflows by reducing the need to switch between different applications.
+    Message extensions using API significantly enhance the functionality of your Teams apps by allowing them to interact with external services. This can help streamline workflows by reducing the need to switch between different applications.
 
     You can use API message extension to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a Messaging Extension to fetch and display customer data directly from Teams. This can help save time and improve efficiency by reducing the need to switch between different applications. This feature is supported on all platforms where Teams is available, including desktop, web, and mobile. 
 
@@ -135,194 +135,14 @@ items:
 
    Now you’ve got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to build first.
 
-- title: Create project workspace for your bot app
+
+- title: Build an API based message extension
   durationInMinutes: 1
   content: |
 
-    Let's create your first bot app.
-    
-    The bot capability of a Teams app creates a chatbot or a conversational bot. You use it to run simple and automated tasks, for example, providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
-
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Diagram showing this app has three features. Bot is highlighted.":::
-    
-    As you've already prepared for creating these apps, you can set up a new Teams project for creating the bot app.
-
-    In this tutorial, you'll learn:
-
-    1. [How to set up a new bot project with Teams Toolkit.](#create-your-bot-project-workspace)
-    1. [About the directory structure of your app project.](#take-a-tour-of-the-bot-app-source-code)
-
-    > [!IMPORTANT]
-    > Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
-
-    ## Create your bot project workspace
-
-    If the prerequisites are in place, let's begin!
-
-    > [!NOTE]
-    > The Visual Studio Code UI shown is from Mac. It might differ depending on your operating system, Teams Toolkit version, and environment.
-
-    # [Visual Studio Code](#tab/vscode)
-
-    1. Open Visual Studio Code.
-    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the Visual Studio Code **Activity Bar**.
-
-    1. Select **Create a New App**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
-
-    1. Select **Bot** to create a new bot project.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app1.png" alt-text="Screenshot shows the wizard to Create New Project.":::
-
-    1. Select **Basic Bot**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
-   
-    1. Select **TypeScript** as the programming language.
-
-        :::image type="content" source="assets/images/bots/Teams-AI-library-typescript.png" alt-text="Screenshot shows the TypeScript option for programming language in Teams Toolkit.":::
-
-    1. Select **Default folder** to store your project root folder in default location.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
-
-       You can also change the default location by the following steps:
-
-       1. Select **Browse**.
-
-           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
-
-       1. Select the location for project workspace.
-       1. Select the **Select Folder**.
-
-           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot shows the folder to select.":::
-
-    1. Enter a suitable name for your app and then select **Enter**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
-
-        A dialog appears. Select **Yes, I trust the authors** or **No, I don’t trust the authors** based on your requirement.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png":::
-    
-        Your Teams app with a bot capability is created in few seconds.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png" alt-text="Screenshot shows the app created." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png":::
-
-        After your app is created, the Teams Toolkit displays the following message:
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project.png" alt-text="Screenshot shows the message that the feature is successfully created.":::
-        
-        Select **Local debug** to preview your project.
-        
-    <details>
-    <summary>A quick recap of creating a Teams app.</summary>
-    Watch this short recap for creating a Teams app.
-
-    ![Create a Teams app](~/assets/videos/javascript-bot-app1.gif)
-    </details>
-
-    # [Command line](#tab/cli)
-
-    Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
-
-    ``` bash
-    teamsfx new
-    ```
-
-    You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
-
-    For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
-
-    1. Select **Create a new Teams app**.
-    1. Select **Bot** and deselect **Tab**.
-    1. Select **JavaScript** as the programming language.
-    1. Select **Enter** to select the default workspace folder.
-    1. Enter a suitable name for your app, like `HelloBot`. The name of the app must consist only of alphanumeric characters.
-
-    After you've answered all questions, your project is created.
-
-    ---
-
-    ## Take a tour of the bot app source code
-
-    After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
-
-    :::image type="content" source="../msteams-platform/assets/images/bots/Teams-AI-library-ttk-files.png" alt-text="Screenshot shows the Teams Toolkit sample bot folder Structure.":::
-
-    | Folder name | Contents |
-    | --- | --- |
-    | `env/.env.local.user` |Configuration file for local environment used by `teamsapp.yml` to customize the provisioning and deployment rules.  |
-    | `index.ts` |  Main entry point for the bot app. |
-    | `teamsBot.ts` | Teams activity handler. |
-    | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
-    | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
-    | `config.ts` | `config.ts` wraps access to environment variables that is used to set up the bots adapter. |
-    | `teamsapp.yml` |	This is the main Teams Toolkit project that defines properties and configuration stage definitions. |
-    | `teamsapp.local.yml` |This overrides teamsapp.yml with actions that enable local execution and debugging. |
-    | `infra/azure.parameters.json` | Parameters file for Azure BICEP provision for every environment. |
-
-    > [!Tip]
-    > Familiarize yourself with bots outside Teams before you integrate your first bot within Teams.
-
-- title: Build and run your first bot app
-  durationInMinutes: 1
-  content: |
-
-    After you set up your project workspace with Teams Toolkit, build your bot project. Ensure that you've signed in to your Microsoft 365 account.
-
-    ## Sign in to your Microsoft 365 account
-
-    Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
-
-    # [Visual Studio Code](#tab/viscode)
-
-    1. Open Visual Studio Code.
-    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
-    1. Select **Sign in to M365**.
-
-        Your default web browser opens to let you sign in to the account.
-
-    1. Sign in to your Microsoft 365 account using your credentials.
-    1. Close the browser when prompted and return to Visual Studio Code.
-    1. Return to Teams Toolkit within Visual Studio Code.
-
-        Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
-
-        Now you're ready to build the app and run it locally!
-
-    # [Command line](#tab/cline)
-
-    1. Sign in to Microsoft 365 with the TeamsFx CLI:
-
-        ``` bash
-        teamsfx account login m365
-        ```
-
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
-
-    2. Sign in to Azure with the TeamsFx CLI:
-
-        ``` bash
-        teamsfx account login azure
-        ```
-
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
-
-        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
-
-        Now that the development environment is configured, you can create, build, and deploy your first Teams app.
-
-    ---
-
-    ## Build an API based message extension
-
-    ### Step 1: 
+    ## OpenAPI specification
   
-    You need to find an OpenAPI specification for the external service you want to interact with. The API spec must meet the following criteria: 
+    You need an OpenAPI specification for the external service you want to interact with. The API spec must meet the following criteria: 
     
     * It must not have auth specified.
     * It must have at most one required parameter or property in the request body. You can make a required parameter optional and add a default value.
@@ -330,7 +150,7 @@ items:
     * The server URL must be defined in the specification.
     * If there is no operation ID, you can add one to the spec that you will be uploading for testing because an operation ID is mandatory for operations that will be Messaging Extensions. You can validate that the swagger is valid by using an online validator like [Swagger Parser](https://apitools.dev/swagger-parser/online/). Once you have found a suitable API spec, save it in a folder. 
 
-    We've used the following OpenAPI sepc as an example for this tutorial:
+    We've used the following OpenAPI spec as an example for this tutorial:
 
     ```YAML
         {
@@ -464,19 +284,129 @@ items:
     }
 
     ```
+
+    1. Go to [Swagger/OpenAPI validator](https://apitools.dev/swagger-parser/online/) and validate the OpenAPI specification document.
+    2. Save the OpenAPI specification document.
+    3. Go to [Swagger Editor](https://editor.swagger.io/).
+    4. Copy the OpenAPI specification code in the editor.
+    5. In the right pane, select **GET**.
+    6. Select **Try it out**.
+    7. Enter the following values for the parameters as follows:
+       1. countryCode: US
+       2.  q: shoes
+       3. size: 5
+       4. min_price: 10
+       5. max_price: 100
+
+       :::image type="content" source="assets/images/Copilot/api-me-sbs-execute-get-response.png" alt-text="Screenshots shows the parameters, it's values and the **EXECUTE** option in the swagger editor.":::
+
+    1. Select **Execute**.
+    1. Go to **Server response** > **Response Body**.
+    1. Under `products`, copy the first product from the list and save it for future reference.
+
+       :::image type="content" source="assets/images/Copilot/api-me-sbs-product-response.png" alt-text="Screenshots shows the highlighted product that is selected from the response body.":::
     
-    ### Step 2: 
+    ### Response rendering template 
     
-    Create a response rendering template Next, you need to create a response rendering template. This template will define how the response from the external service will be rendered in Teams. To create the template, follow these steps:
+    An OpenAPI specification document requires a response rendering template for the app to respond to the get requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
+    
+    To create a response rendering template, follow these steps:
 
     1. Create a new JSON file. This file will follow the schema outlined in the Template Response Schema document. 
-    2. Determine the JSON path to the relevant data/array in the example response from testing. 
+    2. Determine the JSON path to the relevant data/array in the example response from testing. For more information, see [Querying JSON with JSON path](https://www.newtonsoft.com/json/help/html/QueryJsonSelectToken.htm).
     3. Use Bing chat to create an adaptive card template that binds to the schema of the sample data. 
     4. Copy the adaptive card template and put it in the response rendering template under the key `responseCardTemplate`. 
     5. Create a simplified preview card template and put it under the key `previewCardTemplate`. 
     6. Add the response layout (`list` or `grid`) to the response rendering template. 
     7. Add `version`: `1.0.0` to the response rendering template. 
     8. Save the response rendering template in the same folder you saved the OpenAPI spec. 
+
+    The following code is an example of a Response rendering template:
+    
+    ```json
+    {
+        "version": "1.0",
+        "responseLayout": "grid",
+        "responseCardTemplate": {
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "type": "AdaptiveCard",
+            "version": "1.4",
+            "body": [
+                {
+                    "type": "Container",
+                    "items": [
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                     "width": "stretch",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Title: ${if(title, title, 'N/A')}",
+                                            "wrap": true
+                                        },
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Description: ${if(description, description, 'N/A')}",
+                                            "wrap": true
+                                        },
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
+                                            "wrap": true
+                                        },
+                                        {
+                                            "type": "Image",
+                                            "url": "${image}",
+                                            "size": "Medium",
+                                            "$when": "${image != null}"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Column",
+                                    "width": "auto",
+                                    "items": [
+                                        {
+                                            "type": "Image",
+                                            "url": "${if(image, image, '')}",
+                                            "size": "Medium"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "FactSet",
+                            "facts": [
+                                {
+                                    "title": "Repair ID:",
+                                    "value": "${if(id, id, 'N/A')}"
+                                },
+                                {
+                                    "title": "Date:",
+                                    "value": "${if(date, date, 'N/A')}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "previewCardTemplate": {
+            "title": "Title: ${if(title, title, 'N/A')}",
+            "subtitle": "Description: ${if(description, description, 'N/A')}",
+            "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
+            "image": {
+            "url": "${image}",
+            "$when": "${image != null}"
+              }
+            }
+        }
+    }
+    ```
     
     ### Step 3: 
     
