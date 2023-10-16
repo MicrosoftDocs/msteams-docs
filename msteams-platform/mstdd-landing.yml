@@ -48,6 +48,10 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: The new Microsoft Teams client
+        url: resources/teams-updates.md
+      - text: Use callTranscript API to fetch meeting transcript from all meetings
+        url:  graph-api/meeting-transcripts/overview-transcripts.md
       - text: Ratings and review for Teams apps
         url: concepts/deploy-and-publish/appsource/post-publish/overview.md#ratings-and-review-for-teams-apps
       - text: Bot configuration experience
@@ -60,14 +64,10 @@ landingContent:
         url: concepts/deploy-and-publish/appsource/publish.md#teams-store-search-experience
       - text: Enable RSC permissions for a user using the Graph APIs (Developer preview)
         url: graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings
-      - text: New Microsoft Teams client (Developer preview)
-        url: resources/teams-updates.md
       - text: Adaptive Card-based Loop component (Developer preview)
         url: m365-apps/cards-loop-component.md
       - text: Teams Toolkit v17.7 extension within Visual Studio
         url: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md
-      - text: Send a proactive message using AAD ID
-        url: bots/how-to/conversations/send-proactive-messages.md
 
     - linkListType: reference
       links:
