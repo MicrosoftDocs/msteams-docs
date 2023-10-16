@@ -59,7 +59,7 @@ For background: The user is a supervisor at Northwind Traders with limited time 
 
 They see the latest Sales report for a supplier, 'Tokyo Trader,' and want to add it as an attachment in the supplier management system app built by Northwind Traders. Right clicking on the Word document, they choose the Action 'Add to supplier' built by Northwind Traders.  
 
-:::image type="content" source="images/m365-actions-user-scenario-1-1.png" alt-text="The screenshot shows a right click menu displaying the "Add To" Action running on Microsoft 365 on web.":::
+:::image type="content" source="images/m365-actions-user-scenario-1-1.png" alt-text="The screenshot shows a right click menu displaying the Add To Action running on Microsoft 365 on web.":::
 
 A dialog pops up where they select 'Tokyo Traders' and then click 'Add'. They are able to add the attachment quickly, without opening the document or app.  
 

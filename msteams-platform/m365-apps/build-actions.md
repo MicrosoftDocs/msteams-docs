@@ -21,7 +21,7 @@ To add an Action to your existing Teams app, you must:
 
 For an Action to appear in the context menu of your M365 app (when a user right clicks on a file), you must add a JSON payload in the app manifest. In the manifest, you define the user intent, object type, and the handler that will trigger.
 
-In this sample manifest code. two Actions are built, an Action that [opens a page](about-actions.md#open-page) and an Action that [opens a dialog](about-actions.md#open-dialog).
+In this sample manifest code. two Actions are built, an Action that [opens a page](actions.md#open-page) and an Action that [opens a dialog](actions.md#open-dialog).
 
 ```json
 {  
@@ -227,7 +227,7 @@ To test you Actions:
 ### Enable Actions for your users
 
 To enable Actions for end users through tenant admins:
-1. upload the app package containing the Actions via the [Microsoft Admin Center](admin.microsoft.com)
+1. upload the app package containing the Actions via the [Microsoft Admin Center](https://admin.microsoft.com/)
 1.Enable the app for targeted release to users in the tenant
 1. In the Microsoft 365 admin center, navigate to **settings** > **integrated apps** > select **upload custom apps** to upload app
 [Insert demo video of admin flow here]
