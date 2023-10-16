@@ -13,8 +13,8 @@ ms.subservice: m365apps
 Building Actions give developers the power to enhance their users' productivity by streamlining task completion and minimizing context switching across various M365 applications. 
 This feature benefits users by:
 1.	enabling them to accomplish tasks more efficiently
-2.	Seamlessly integrates your app in their workflow. Boosting visibility and user engagement of your app.
-3.	Empowers users to take immediate action on content files through your app, expanding the range of interactions users can have with their content.  
+1.	Seamlessly integrates your app in their workflow. Boosting visibility and user engagement of your app.
+1.	Empowers users to take immediate action on content files through your app, expanding the range of interactions users can have with their content.  
 Actions is currently supported in Microsoft365 App on web and desktop
 
 [Screenshot or Gif of Actions in action]  
@@ -50,15 +50,27 @@ Currently supported handler:
 * openPage: By using the openPage handler you can drive users to your app's dedicated pages(personal tab).
 
 ## Actions user scenarios
+
 Let us walk through a user scenario of how users might interact with your app through Actions you develop and how the handler affects the workflow.
 
 For background: The user is a supervisor at Northwind Traders with limited time for focused work. They start their day in the Microsoft 365 app, where they can easily access all of their content.  
 
 ### Scenario 1: Action opens a dialog
-They see the latest Sales report for a supplier, 'Tokyo Trader,' and want to add it as an attachment in the supplier management system app built by Northwind Traders.   Right-clicking on the Word document, they choose the Action 'Add to supplier' built by Northwind Traders.  
+
+They see the latest Sales report for a supplier, 'Tokyo Trader,' and want to add it as an attachment in the supplier management system app built by Northwind Traders. Right clicking on the Word document, they choose the Action 'Add to supplier' built by Northwind Traders.  
+
+:::image type="content" source="images/m365-actions-user-scenario-1-1.png" alt-text="The screenshot shows a right click menu displaying the "Add To" Action running on Microsoft 365 on web.":::
 
 A dialog pops up where they select 'Tokyo Traders' and then click 'Add'. They are able to add the attachment quickly, without opening the document or app.  
 
-### Scenario 2: Action opens page  
-On the same page, they notice the 'Q2 Top suppliers' Excel sheet and want to see which suppliers they work with are on this list.   They right-click on the Excel file, then click on the Action 'Related suppliers'.  
+:::image type="content" source="images/m365-actions-user-scenario-1-2.png" alt-text="The screenshot shows a pop-up dialog of the Northwind app for the user to add an attachement  running on Microsoft 365 on web.":::
+
+### Scenario 2: Action opens page
+
+On the same page, they notice the 'Q2 Top suppliers' Excel sheet and want to see which suppliers they work with are on this list.   They right-click on the Excel file, then click on the Action 'Related suppliers'.
+
+:::image type="content" source="images/m365-actions-user-scenario-2-1.png" alt-text="The screenshot shows the right click menu displaying the Related supplier option running on Microsoft 365 on web.":::
+
 The Northwind app opens, displaying the list of suppliers filtered to show only those that appear in the document.  This saves them time opening up the app and the Excel file and checking each item manually.
+
+:::image type="content" source="images/m365-actions-user-scenario-2-2.png" alt-text="The screenshot shows the northwind app open, displaying the list of suppliers filtered to show only those that appear in the document running on Microsoft 365 on web.":::

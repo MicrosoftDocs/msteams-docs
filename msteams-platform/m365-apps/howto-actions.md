@@ -219,10 +219,11 @@ Once you have defined the Action in the app manifest, build the handler that ret
 To test you Actions:
 1.	[**Enroll your Microsoft 365 tenant in Microsoft 365 Targeted Release**](prerequisites.md#install-microsoft-365-apps-in-your-test-environment). Only Targeted Release users will be able to experience Actions in Microsoft 365 app. 
 1.	**Sideload your app using Teams Toolkit**. With a developer account In the Microsoft 365 app, go to **Run and Debug (Ctrl+Shift+D)**, and choose **Debug**  to run and test your Actions. It will automatically open up Microsoft 365 app in a browser window and install this app with Actions to your account.  
+    :::image type="content" source="images/vs-actions-debugger.png" alt-text="The screenshot is an example of the dubugger tool running in Visual Studio code on windows.":::
     > [!NOTE]
 > If you are not seeing the option Debug in the Microsoft 365 app, check out your set up in the launch.json. see sample code here. 
 1. **Test your action with the Microsoft 365 app**. You can now preview your new content action by opening the [Microsoft 365 app](https://www.microsoft365.com/) and right clicking a file that is supported by your action. Your action should appear in the context menu.
-    
+    :::image type="content" source="images/m365-actions-add-to-supplier.png" alt-text="The screenshot shows the right click menu displaying the Add to Supplier option running on Microsoft 365 on web.":::
 ### Enable Actions for your users
 
 To enable Actions for end users through tenant admins:
