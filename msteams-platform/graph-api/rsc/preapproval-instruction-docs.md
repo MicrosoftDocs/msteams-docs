@@ -31,7 +31,7 @@ connect-MgGraph -Scopes @('TeamworkAppSettings.ReadWrite.All', 'Policy.ReadWrite
 
 ## Enable preapproval for RSC permissions
 
-to allow preapproved apps only, change your RSC settings using the `Set-MgBetaChatRscConfiguration` and `Set-MgBetaTeamRscConfiguration` cmdlets. The following are the available configurations available:
+Change your RSC settings using the `Set-MgBetaChatRscConfiguration` and `Set-MgBetaTeamRscConfiguration` cmdlets to allow preapproved apps only. The following are the configurations available:
 
 |Configuration| Description|
 |---|---|
