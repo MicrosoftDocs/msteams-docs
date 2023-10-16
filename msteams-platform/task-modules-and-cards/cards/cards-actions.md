@@ -702,7 +702,7 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
   "data": {
     "msteams": {
       "type": "invoke",
-      "Value": "some value"
+      "value": "string/object"
     }
   }
 }
