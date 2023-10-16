@@ -1,14 +1,14 @@
 ### YamlMime:Tutorial
-title:  Build API based message extension
+title:  Build message extension using API
 metadata:
-  title: Build an API based message extension
-  description: In this learn module, you'll learn how to build an API based message extension with Teams Toolkit.
+  title: Build a message extension using API
+  description: In this learn module, you'll learn how to build an message extension using OpenAPI specification document with Teams Toolkit.
   audience: Developer
   level: Beginner
   ms.date: 10/21/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: messaging-extensions/build-api-based-message-extension.md
-  nextTutorialTitle: Teams AI FAQs
+  nextTutorialHref: messaging-extensions/build-bot-based-message-extension.md
+  nextTutorialTitle: Build message extension using bot Framework.
   ms.custom: mvc
   ms.localizationpriority: high
 items:
@@ -208,7 +208,7 @@ items:
     
     We've used the following OpenAPI specification as an example for this tutorial: <br/>
     <br/>
-    <details><summary>**OpenAPI specification document**</summary>
+    <details><summary>OpenAPI specification document</summary>
 
     ```YAML 
         {
@@ -348,7 +348,7 @@ items:
 
      The following code is an example of the response rendering template: <br/>
      <br/>
-     <details><summary>**Response rendering template**</summary>
+     <details><summary>Response rendering template</summary>
 
      ```json
         {
@@ -436,10 +436,7 @@ items:
      ```
      </details>
     
-    
-    You can now create a message extension that uses the OpenAPI specification document. To create a message extension using the OpenAPI specification document, follow these steps:
-
-    # [Visual Studio Code](#tab/vscode)
+    You can now create a message extension that uses the OpenAPI specification document. To create am message extension using the OpenAPI specification document, follow these steps:
 
     1. Open Visual Studio Code.
 
@@ -451,9 +448,7 @@ items:
 
     1. Select **Message Extension**.
 
-       
-    1. Select **API Based Search Message Extension**.
-
+    1. Select **Custom Search Results**
           
     1. Select **Start with an OpenAPI Description Document**.
 
@@ -487,11 +482,11 @@ items:
     
         Your Teams app with a bot capability is created in few seconds.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png" alt-text="Screenshot shows the app created." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png":::
+        :::image type="content" source="assets/images/Copilot/api-based-me-ttk-api-me-readme.png" alt-text="Screenshot shows the app created." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png":::
 
         After your app is created, the Teams Toolkit displays the following message:
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project.png" alt-text="Screenshot shows the message that the feature is successfully created.":::
+        :::image type="content" source="assets/images/Copilot/api-based-me-ttk-api-me-debug.png" alt-text="Screenshot shows the message from Teams Toolkit that the feature is successfully created along with the option to select Debug.":::
         
         Select **Local debug** to preview your project.
         
@@ -501,8 +496,6 @@ items:
 
     ![Create a Teams app](~/assets/videos/javascript-bot-app1.gif)
     </details>
-
-    ---
 
     After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
@@ -514,7 +507,7 @@ items:
     | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
     | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
     |`appPackage/apiSpecificationFiles/openapi.yml`|OpenAPI Specification file that you've selected.|
-    | `appPackage/responseTemplates` | The response rendering template which, consists of the Adaptive Card template, preview card template, and metadata. |
+    | `appPackage/responseTemplates` | The response rendering template, which consists of the Adaptive Card template, preview card template, and metadata. |
     | `teamsapp.yml` |	This is the main Teams Toolkit project that defines properties and configuration stage definitions. |
 
     > [!Tip]
@@ -524,12 +517,11 @@ items:
 
     To run your app in the local environment:
 
-    1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
+    1. Go to Teams Toolkit and from the left pane, select **Run and Debug** (**Ctrl+Shift+D**).
     1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
-    1. Select the **Start debugging (F5)** to launch your app.
-    1. Select **Add**.
+    1. Select the **Start debugging (F5)** to launch your app. A browser window opens and loads Teams.
 
-    Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens. You can navigate to a chat message and trigger your search commands from compose message area.
+    Now the bot is successfully running on Teams! You can navigate to a chat message and trigger your search commands from compose message area.
 
     <!-- markdownlint-disable MD033 -->
 
@@ -567,6 +559,15 @@ items:
       > [!TIP]
       > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to sideload the app.
       </details> 
+
+- title: Complete challenge
+  durationInMinutes: 1
+  content: |
+
+    Did you come up with something like this?
+    
+     :::image type="content" source="assets/images/Copilot/api-based-me-ttk-api-me-final.png" alt-text="Screenshot shows the message extension invoked from the message compose area in Teams.":::
+      
       
 - title: Congratulations!
   durationInMinutes: 1
