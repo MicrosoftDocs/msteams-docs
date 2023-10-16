@@ -2,7 +2,7 @@
 title:  Build message extension using API
 metadata:
   title: Build a message extension using API
-  description: In this learn module, you'll learn how to build an message extension using OpenAPI specification document with Teams Toolkit.
+  description: In this learn module, you'll learn how to build a message extension using OpenAPI specification document with Teams Toolkit.
   audience: Developer
   level: Beginner
   ms.date: 10/21/2021
@@ -15,7 +15,7 @@ items:
 - durationInMinutes: 1
   content: |
 
-    API-based Messaging Extensions can significantly enhance the functionality of your Teams apps by allowing them to interact with external services. This can help streamline workflows by reducing the need to switch between different applications.
+    Message extension built using an API significantly enhance the functionality of your Teams apps by allowing them to interact with external services. It helps streamline workflows by reducing the need to switch between different applications.
 
     You can use API message extension to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a Messaging Extension to fetch and display customer data directly from Teams. This can help save time and improve efficiency by reducing the need to switch between different applications. This feature is supported on all platforms where Teams is available, including desktop, web, and mobile. 
 
@@ -33,7 +33,7 @@ items:
    |[Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
    |[Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
-   | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store. |
+   | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app to your organization or the Microsoft Teams Store. |
    |OpenAPI Specification document| A document that describes the capabilities of your API. For more information, see [OpenAPI Specification](https://swagger.io/specification/).|
 
    ## Prepare development environment
@@ -200,10 +200,10 @@ items:
     * The request body (if present) can only be application/json to ensure compatibility with a wide range of APIs.
     * Ensure that a server url is defined for the `servers.url` property.
     * Only single parameter search is supported.
-    * A command must have exactly one parameter. You can make a required parameter optional and add a default value .
+    * A command must have exactly one parameter. You can make a required parameter optional and add a default value.
     * The operation must have an `operationId`.
     * Only POST and GET HTTP methods are supported.
-    * The operation cannot have an required Header or Cookie parameters without default values.
+    * The operation can't have a required Header or Cookie parameters without default values.
     * A response rendering template must be defined per command, which is used to convert responses from an API. The command portion of the manifest must point to this template file under`composeExtension.command.apiResponseRenderingTemplateFile` within the app manifest. Each command points to a different response rendering template file.
     
     We've used the following OpenAPI specification as an example for this tutorial: <br/>
@@ -249,7 +249,7 @@ items:
                         {
                             "name": "q",
                             "in": "query",
-                            "description": "A precise query that matches one small category or product that needs to be searched for to find the products the user is looking for. If the user explicitly stated what they want, use that as a query. The query is as specific as possible to the product name or category mentioned by the user in its singular form, and don't contain any clarifiers like latest, newest, cheapest, budget, premium, expensive or similar. The query is always taken from the latest article, if there's a new topic a new query is started. If the user speaks another language than English, translate their request into English (example: translate fia med knuff to ludo board game)!",
+                            "description": "A precise query that matches one small category or product that needs to be searched for to find the products the user is looking for. If the user explicitly stated what they want, use that as a query. The query is as specific as possible to the product name or category mentioned by the user in its singular form, and don't contain any clarifiers like latest, newest, cheapest, budget, premium, expensive or similar. The query is always taken from the latest article, if there's a new article a new query is started. If the user speaks another language than English, translate their request into English.",
                             "required": true,
                             "schema": {
                                 "type": "string"
