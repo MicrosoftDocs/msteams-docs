@@ -32,7 +32,6 @@ items:
    |[Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    |[Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-   |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) or [Azure OpenAI](https://azure.microsoft.com/free/)|First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must have create an [Azure OpenAI service](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal) before you begin.|
    |[Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
    | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store. |
 
@@ -146,9 +145,9 @@ items:
     
     * It must not have auth specified.
     * It must have at most one required parameter or property in the request body. You can make a required parameter optional and add a default value.
-    * The request body (if present) cannot contain any arrays.
+    * The request body (if present) can't contain any arrays.
     * The server URL must be defined in the specification.
-    * If there is no operation ID, you can add one to the spec that you will be uploading for testing because an operation ID is mandatory for operations that will be Messaging Extensions. You can validate that the swagger is valid by using an online validator like [Swagger Parser](https://apitools.dev/swagger-parser/online/). Once you have found a suitable API spec, save it in a folder. 
+    * If there's no operation ID, you can add one to the spec that you'll be uploading for testing because an operation ID is mandatory for operations that will be Messaging Extensions. You can validate that the swagger is valid by using an online validator like [Swagger Parser](https://apitools.dev/swagger-parser/online/). Once you have found a suitable API spec, save it in a folder. 
 
     We've used the following OpenAPI spec as an example for this tutorial:
 
@@ -191,7 +190,7 @@ items:
                         {
                             "name": "q",
                             "in": "query",
-                            "description": "A precise query that matches one very small category or product that needs to be searched for to find the products the user is looking for. If the user explicitly stated what they want, use that as a query. The query is as specific as possible to the product name or category mentioned by the user in its singular form, and don't contain any clarifiers like latest, newest, cheapest, budget, premium, expensive or similar. The query is always taken from the latest topic, if there is a new topic a new query is started. If the user speaks another language than English, translate their request into English (example: translate fia med knuff to ludo board game)!",
+                            "description": "A precise query that matches one very small category or product that needs to be searched for to find the products the user is looking for. If the user explicitly stated what they want, use that as a query. The query is as specific as possible to the product name or category mentioned by the user in its singular form, and don't contain any clarifiers like latest, newest, cheapest, budget, premium, expensive or similar. The query is always taken from the latest article, if there's a new article a new query is started. If the user speaks another language than English, translate their request into English (example: translate fia med knuff to ludo board game)!",
                             "required": true,
                             "schema": {
                                 "type": "string"
@@ -288,7 +287,7 @@ items:
     1. Go to [Swagger/OpenAPI validator](https://apitools.dev/swagger-parser/online/) and validate the OpenAPI specification document.
     2. Save the OpenAPI specification document.
     3. Go to [Swagger Editor](https://editor.swagger.io/).
-    4. Copy the OpenAPI specification code in the editor.
+    4. In the left pane, paste the OpenAPI specification code in the editor.
     5. In the right pane, select **GET**.
     6. Select **Try it out**.
     7. Enter the following values for the parameters as follows:
@@ -298,7 +297,7 @@ items:
        4. min_price: 10
        5. max_price: 100
 
-       :::image type="content" source="assets/images/Copilot/api-me-sbs-execute-get-response.png" alt-text="Screenshots shows the parameters, it's values and the **EXECUTE** option in the swagger editor.":::
+       :::image type="content" source="assets/images/Copilot/api-me-sbs-execute-get-response.png" alt-text="Screenshots shows the parameters, its values and the **EXECUTE** option in the swagger editor.":::
 
     1. Select **Execute**.
     1. Go to **Server response** > **Response Body**.
@@ -417,9 +416,9 @@ items:
     3. Add a new key `apiSpecificationFile`, and put the value as the name of your OpenAPI specification file from Step 1. 
     4. The Input extension command ID must match the operation ID in the API spec. 
     5. The input extension parameter name must match the required parameter name or if there are no required parameters, then the name must match one of the operational parameters. 
-    6. Under valid domains in the Teams app manifest, you will need to add the service URL endpoint that is defined in the API spec. 
+    6. Under valid domains in the Teams app manifest, you'll need to add the service URL endpoint that is defined in the API spec. 
     7. Save the Teams app manifest in the same folder you saved the OpenAPI spec and the response rendering template
-    8. You will also need a color image and outline image. These images should be included in the folder and referenced in your Teams app manifest. 
+    8. You'll also need a color image and outline image. These images should be included in the folder and referenced in your Teams app manifest. 
     9. Zip up the contents of the folder. 
     
     ### Step 4: 
@@ -427,7 +426,7 @@ items:
     Log into Teams test environment Finally, you need to test your app in Teams. To do this, follow these steps: 
 
     1. Log into Teams with the provided credentials. 
-    2. Make sure the feature flag is enabled by doing ctrl+alt+shift+8 and go settings and search for `enableSME` and make sure it is enabled. 
+    2. Make sure the feature flag is enabled by doing ctrl+alt+shift+8 and go settings and search for `enableSME` and make sure it's enabled. 
     3. Side-load the app. 
     4. Test it out! By following these steps, you can successfully implement API-based Messaging Extensions in your Teams app. For more information, you can refer to the [Teams Developer documentation](/messaging-extensions/what-are-messaging-extensions).
 
@@ -516,7 +515,7 @@ items:
     1. Select **Sign in to Azure**.
 
         > [!TIP]
-        > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
+        > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you're using in other extensions.
 
         Your default web browser opens to let you sign in to the account.
     1. Sign in to your Azure account using your credentials.
