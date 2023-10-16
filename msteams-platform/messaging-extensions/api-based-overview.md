@@ -131,11 +131,11 @@ The following code is an example of an OpenAPI specification document in YAML fo
 
 </details>
 
-An OpenAPI specification document requires a response rendering template for the app to respond to the get requests. If your building an app using Teams Toolkit or Developer portal for Teams, the response rendering template is extracted from the OpenAPI specification document automatically.
+An OpenAPI specification document requires a response rendering template for the app to respond to the get requests. If your building an app using Teams Toolkit or Developer portal for Teams, the response rendering template is extracted from the OpenAPI specification document automatically. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
 
-The following code is an example of the Adaptive Card template: <br/>
+The following code is an example of a Response rendering template: <br/>
 <br/>
-<details><summary>Adaptive Card template</summary>
+<details><summary>Response rendering template</summary>
 
 ```json
     {

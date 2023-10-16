@@ -34,7 +34,7 @@ items:
    |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
    |[Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
    | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store. |
-
+   |OpenAPI Specification document| A document that describes the capabilities of your API. For more information, see [OpenAPI Specification](https://swagger.io/specification/).|
 
    ## Prepare development environment
 
@@ -70,7 +70,7 @@ items:
    To install the TeamsFx CLI, use the `npm` package manager:
 
    ``` bash
-   npm install -g @microsoft/teamsfx-cli
+   npm install -g @microsoft/teamsfx-cli@beta
    ```
 
    Depending on your configuration, you might need to use `sudo` to install the CLI:
@@ -189,15 +189,26 @@ items:
 
     ## Build an API based message extension 
   
-    You need to find an OpenAPI specification for the external service you want to interact with. The API spec must meet the following criteria: 
+    You must have an OpenAPI specification document before you create an API-based message extension. The API spec must meet the following criteria: 
     
     * It must not have auth specified.
-    * It must have at most one required parameter or property in the request body. You can make a required parameter optional and add a default value.
     * The request body (if present) can't contain any arrays.
     * The server URL must be defined in the specification.
-    * If there's no operation ID, you can add one to the spec that you'll be uploading for testing because an operation ID is mandatory for operations that will be Messaging Extensions. You can validate that the swagger is valid by using an online validator like [Swagger Parser](https://apitools.dev/swagger-parser/online/). Once you have found a suitable API spec, save it in a folder. 
-
-    We've used the following OpenAPI specification as an example for this tutorial:
+    * If there's no operation ID, you can add one to the spec that you'll be uploading for testing because an operation ID is mandatory for operations that will be Messaging Extensions.
+    * The `oneOf`, `anyOf`, `allOf`, `not` (swagger.io) construct aren't supported in Teams.
+    * Constructing arrays for the request aren't supported, but nested objects within a JSON request body are supported.
+    * The request body (if present) can only be application/json to ensure compatibility with a wide range of APIs.
+    * Ensure that a server url is defined for the `servers.url` property.
+    * Only single parameter search is supported.
+    * A command must have exactly one parameter. You can make a required parameter optional and add a default value .
+    * The operation must have an `operationId`.
+    * Only POST and GET HTTP methods are supported.
+    * The operation cannot have an required Header or Cookie parameters without default values.
+    * A response rendering template must be defined per command, which is used to convert responses from an API. The command portion of the manifest must point to this template file under`composeExtension.command.apiResponseRenderingTemplateFile` within the app manifest. Each command points to a different response rendering template file.
+    
+    We've used the following OpenAPI specification as an example for this tutorial: <br/>
+    <br/>
+    <details><summary>Response rendering template</summary>
 
     ```YAML 
         {
@@ -331,8 +342,102 @@ items:
     }
 
     ```
+    </details>
     
-    Now that you've got your API spec, you can create a Messaging Extension that uses it. To create a message extension using the OpenAPI specification document, follow these steps:
+    Now that you've got your OpenAPI specification document, it also requires a response rendering template for the app to respond to the API requests. If your building an app using Teams Toolkit or Developer portal for Teams, the response rendering template is extracted from the OpenAPI specification document automatically.
+
+     The following code is an example of the Adaptive Card template: <br/>
+     <br/>
+     <details><summary>Response rendering template</summary>
+
+     ```json
+        {
+            "version": "1.0",
+            "responseLayout": "grid",
+            "responseCardTemplate": {
+                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                "type": "AdaptiveCard",
+                "version": "1.4",
+                "body": [
+                    {
+                        "type": "Container",
+                        "items": [
+                            {
+                                "type": "ColumnSet",
+                                "columns": [
+                                    {
+                                        "type": "Column",
+                                        "width": "stretch",
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "text": "Title: ${if(title, title, 'N/A')}",
+                                                "wrap": true
+                                            },
+                                            {
+                                                "type": "TextBlock",
+                                                "text": "Description: ${if(description, description, 'N/A')}",
+                                                "wrap": true
+                                            },
+                                            {
+                                                "type": "TextBlock",
+                                                "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
+                                                "wrap": true
+                                            },
+                                            {
+                                                "type": "Image",
+                                                "url": "${image}",
+                                                "size": "Medium",
+                                                "$when": "${image != null}"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Column",
+                                        "width": "auto",
+                                        "items": [
+                                            {
+                                                "type": "Image",
+                                                "url": "${if(image, image, '')}",
+                                                "size": "Medium"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "FactSet",
+                                "facts": [
+                                    {
+                                        "title": "Repair ID:",
+                                        "value": "${if(id, id, 'N/A')}"
+                                    },
+                                    {
+                                        "title": "Date:",
+                                        "value": "${if(date, date, 'N/A')}"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "previewCardTemplate": {
+                "title": "Title: ${if(title, title, 'N/A')}",
+                "subtitle": "Description: ${if(description, description, 'N/A')}",
+                "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
+                "image": {
+                "url": "${image}",
+                "$when": "${image != null}"
+                }
+                }
+            }
+        }
+     ```
+     </details>
+    
+    
+    you can create a Messaging Extension that uses it. To create a message extension using the OpenAPI specification document, follow these steps:
 
     As you've already prepared for creating these apps, you can set up a new Teams project for creating the app.
 
