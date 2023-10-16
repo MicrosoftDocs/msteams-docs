@@ -297,12 +297,7 @@ For more information, see [app manifest schema](~/resources/schema/manifest-sche
 
 ## Schema mapping
 
-|OpenAPI spec type  |Adaptive Card element |Example  |
-|---------|---------|---------|
-|`string`, `number`, `integer`, `boolean` |    Text block     |{<br/>`"type"`: `"TextBlock"`,<br/>`"text"`: `"name: ${if(name, name, 'N/A')}"`,<br/>`"wrap"`: `true`<br/>}         |
-|`array`     |Container inside Adaptive Card         | {</br>`"type"`: `"Container"`,</br>`"$data"`: `"${$root}"`, </br> `"items"`:</br> [</br>    {</br>      `"type"`: `"TextBlock"`,</br>      `"text"`: `"id: ${if(id, id, 'N/A')}"`,</br>      `"wrap"`: `true`</br>    },</br>    {</br>      `"type"`: `"TextBlock"`,</br>      `"text"`: `"category.name: ${if(category.name, category.name, 'N/A')}"`,</br>     `"wrap"`: `true`</br>    }</br>  ]</br>}        |
-|`object`     |  A nested property in Adaptive Card.        |  {  `"type"`: `"TextBlock"`,<br/>  `"text"`: `"category.id: ${if(category.id, category.id, 'N/A')}"`,<br/>  `"wrap"`: `true`<br/>},<br/>{<br/>  `"type"`: `"TextBlock"`,<br/>  `"text"`: `"category.name: ${if(category.name, category.name, 'N/A')}"`,<br/>  `"wrap"`:`true`<br/>}<br/>       |
-|`image`     |If a property is an image url, then it will be converted to an Image element in adaptive card.         |     {<br/>      `"type"`: `"Image"`,<br/>      `"url"`: `"${image}"`,<br/>      `"$when"`: `"${image != null}"`<br/>    }        |
+The properties in OpenAPI specification document are mapped to the Adaptive Card template as follows:
 
 <details><summary>`string`, `number`, `integer`, `boolean`</summary>
 
