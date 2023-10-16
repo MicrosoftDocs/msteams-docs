@@ -295,6 +295,160 @@ Update app manifest with the `composeExtensions` property. The following code is
 
 For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
 
+## Schema mapping
+
+|OpenAPI spec type  |Adaptive Card element |Example  |
+|---------|---------|---------|
+|`string`, `number`, `integer`, `boolean` |    Text block     |{<br/>`"type"`: `"TextBlock"`,<br/>`"text"`: `"name: ${if(name, name, 'N/A')}"`,<br/>`"wrap"`: `true`<br/>}         |
+|`array`     |Container inside Adaptive Card         | {</br>`"type"`: `"Container"`,</br>`"$data"`: `"${$root}"`, </br> `"items"`:</br> [</br>    {</br>      `"type"`: `"TextBlock"`,</br>      `"text"`: `"id: ${if(id, id, 'N/A')}"`,</br>      `"wrap"`: `true`</br>    },</br>    {</br>      `"type"`: `"TextBlock"`,</br>      `"text"`: `"category.name: ${if(category.name, category.name, 'N/A')}"`,</br>     `"wrap"`: `true`</br>    }</br>  ]</br>}        |
+|`object`     |  A nested property in Adaptive Card.        |  {  `"type"`: `"TextBlock"`,<br/>  `"text"`: `"category.id: ${if(category.id, category.id, 'N/A')}"`,<br/>  `"wrap"`: `true`<br/>},<br/>{<br/>  `"type"`: `"TextBlock"`,<br/>  `"text"`: `"category.name: ${if(category.name, category.name, 'N/A')}"`,<br/>  `"wrap"`:`true`<br/>}<br/>       |
+|`image`     |If a property is an image url, then it will be converted to an Image element in adaptive card.         |     {<br/>      `"type"`: `"Image"`,<br/>      `"url"`: `"${image}"`,<br/>      `"$when"`: `"${image != null}"`<br/>    }        |
+
+<details><summary>`string`, `number`, `integer`, `boolean`</summary>
+
+string, number, integer, and  boolean types are converted to a TextBlock.
+
+The following is an example of `string` and `Textblock`:
+
+**`string` property in schema**
+
+```yml
+name:
+  type: string
+  example: doggie
+
+```
+
+**`TextBlock` in Adaptive Card**
+
+```json
+{
+  "type": "TextBlock",
+  "text": "name: ${if(name, name, 'N/A')}",
+  "wrap": true
+}
+
+```
+
+</details>
+<br/>
+<details><summary>`array`</summary>
+An array is converted as a container inside Adaptive Card.
+
+The following is an example of an array and a container inside Adaptive Card:
+
+**`array` property in schema**:
+
+```yml
+  type: array
+  items:
+  required:
+    - name
+  type: object
+    properties:
+    id:
+      type: integer
+    category:
+      type: object
+      properties:
+      name:
+        type: string
+
+```
+
+**`Container` in Adaptive Card**
+
+```json
+{
+  "type": "Container",
+  "$data": "${$root}",
+  "items": [
+    {
+      "type": "TextBlock",
+      "text": "id: ${if(id, id, 'N/A')}",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "category.name: ${if(category.name, category.name, 'N/A')}",
+      "wrap": true
+    }
+  ]
+}
+
+```
+
+</details>
+<br/>
+<details><summary>`object`</summary>
+
+An object is converted to a nested property in Adaptive Card.
+
+The following is an example of an object and a nested property in Adaptive Card:
+
+**`object` property in schema**
+
+```yml
+components:
+  schemas:
+    Pet:
+        category:
+          type: object
+         properties:
+           id:
+             type: integer
+           name:
+             type: string
+
+```
+
+**Nested property in Adaptive Card**
+
+```json
+{
+  "type": "TextBlock",
+  "text": "category.id: ${if(category.id, category.id, 'N/A')}",
+  "wrap": true
+},
+{
+  "type": "TextBlock",
+  "text": "category.name: ${if(category.name, category.name, 'N/A')}",
+  "wrap": true
+}
+
+```
+
+</details>
+</br>
+<details><summary>`image`</summary>
+
+If a property is an image url, then it will be converted to an Image element in adaptive card.
+
+The following is an example of an `image` property in YAML and an image element in an Adaptive Card:
+
+**`image` property in schema**
+
+```yml
+    image:
+      type: string
+      format: uri
+      description: The URL of the image of the item to be repaired
+
+```
+
+**`Image` element in Adaptive Card**
+
+```json
+{
+      "type": "Image",
+      "url": "${image}",
+      "$when": "${image != null}"
+    }
+
+```
+
+</details>
+
 ## Next step
 
 > [!div class="nextstepaction"]

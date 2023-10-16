@@ -35,13 +35,17 @@ Developers can't require users to enter a parameter for a header or cookie. If h
 * The `oneOf`, `anyOf`, `allOf`, `not` (swagger.io) construct aren't supported in Teams.
 * Constructing arrays for the request aren't supported, but nested objects within a JSON request body are supported.
 * The request body (if present) can only be application/json to ensure compatibility with a wide range of APIs.
-* Ensure that a server url is defined for the `servers.url` property.
+* Ensure that a server url is defined for the `servers.url` property. The server URL must have an HTTPS protocol.
 * Only single parameter search is supported.
 * Only one required parameter without a default value is allowed.
 * The operation must have an `operationId`.
 * Only POST and GET HTTP methods are supported.
-* The operation cannot have an required Header or Cookie parameters without default values.
+* The operation can't have a required Header or Cookie parameters without default values.
 * A command must have exactly one parameter.
+* Supported formats are JSON and YAML formats.
+* Supported OpenAPI Versions are 2.0 and 3.0.x.
+* Ensure that there are no remote references in the OpenAPI spec file.
+* A required parameter with default value is considered optional.
 
 </details>
 
@@ -65,6 +69,10 @@ Developers can't require users to enter a parameter for a header or cookie. If h
 * Define the schema reference URL in the `$schema` property.
 * Define `jsonPath` as the path to the relevant data/array in API response. if the path points to an array, then each entry in the array will be a separate result and if the path points to an object, there will only be a single result. *[Optional]*
 * The supported values for `responseLayout` are list and grid.
+
+The `JsonPath` property in response rendering template is $ to indicate the root object of the response data is used to render the Adaptive Card, and you can update the `jsonPath` property to point another property in response data.
+
+If the root object of the OpenAPI schema contains well-known array property name, then Teams Toolkit uses the array property as root element to generate an Adaptive Card, and the array property name is used as `JsonPath` property for response rendering template. For example, if the property name contains "result", "data", "items", "root", "matches", "queries", "list", "output" and the type is array, then it's used as root element.
 
 </details>
 
