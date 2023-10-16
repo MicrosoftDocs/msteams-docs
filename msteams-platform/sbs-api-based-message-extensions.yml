@@ -143,13 +143,15 @@ items:
   
     You need an OpenAPI specification for the external service you want to interact with. The API spec must meet the following criteria: 
     
-    * It must not have auth specified.
-    * It must have at most one required parameter or property in the request body. You can make a required parameter optional and add a default value.
+    * Must not have `auth` specified.
+    * Must have at most one required parameter or property in the request body. You can make a required parameter optional and add a default value.
     * The request body (if present) can't contain any arrays.
     * The server URL must be defined in the specification.
     * If there's no operation ID, you can add one to the spec that you'll be uploading for testing because an operation ID is mandatory for operations that will be Messaging Extensions. You can validate that the swagger is valid by using an online validator like [Swagger Parser](https://apitools.dev/swagger-parser/online/). Once you have found a suitable API spec, save it in a folder. 
 
     We've used the following OpenAPI spec as an example for this tutorial:
+
+    <details><summary>OpenAPI spec</summary>
 
     ```YAML
         {
@@ -283,6 +285,7 @@ items:
     }
 
     ```
+    </details>
 
     You can validate and verify if the OpenAPI specification document is valid by following these steps:
 
@@ -337,6 +340,8 @@ items:
      1. ChatGPT generates a response with an Adaptive Card template that binds to the sample data. Save the Adaptive Card template for future reference.
 
         Following is an example of the Adaptive Card template:
+
+        <details><summary>Adaptive Card template</summary>
 
         ```json
         {
@@ -416,6 +421,7 @@ items:
         }
 
         ``` 
+        </details>
 
     1. You can verify if the Adaptive Card generated binds to the sample data by following these steps:
        1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer/).
@@ -438,6 +444,8 @@ items:
     1. Save the response rendering template in the same folder you saved the OpenAPI spec. 
 
     The following code is an example of a Response rendering template:
+
+    <details><summary>Response rendering template</summary>
     
     ```json
     {
@@ -531,6 +539,7 @@ items:
         }
     }
     ```
+    </details>
     
     ### Create a Teams App Manifest
     
@@ -539,6 +548,8 @@ items:
     1. Create a new JSON file. This file will follow the basic structure for creating a Teams app manifest for API Messaging Extensions.
 
     1. Add the following code in the JSON file:
+
+       <details><summary>App manifest</summary>
 
        ```json
        {
@@ -598,6 +609,8 @@ items:
         "validDomains": []
        }
        ```
+
+       </details>
     
     Ensure that the app manifest file meets the following requirements:
 
