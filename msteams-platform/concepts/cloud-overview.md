@@ -8,7 +8,7 @@ ms.date: 09/29/2023
 ---
 # Government clouds
 
-Government sectors or agencies handling sensitive and confidential data need cloud platforms that are highly secure and compliant. Hence, government clouds services are specifically designed considering the high security and stringent government compliance requirements to store and manage government data.
+Government sectors or agencies handling sensitive and confidential data need cloud platforms that are highly secure and compliant. Government clouds services are specifically designed considering the high security and stringent government compliance requirements to store and manage government data.
 
 Considering the raising requirements, Microsoft has built three government cloud offerings based on security constraints to meet the requirements of the government sectors.
 
@@ -18,9 +18,9 @@ These three clouds are available only in the United States and aligned with the 
 
 ## Government clouds in Teams
 
-To access Government clouds, Microsoft offers [Government plans](https://products.office.com/government/compare-office-365-government-plans). Microsoft Teams platform service is extended to users of government clouds as part of Office 365 Government plans for US.
+To use Microsoft Government clouds services, Microsoft offers [Government plans](https://products.office.com/government/compare-office-365-government-plans). All Office 365 Government plans supports Microsoft Teams platform.
 
-All Microsoft 365 Government plans support Teams platform but the capabilities that are supported may differ for each government cloud. Also, government tenant may not have all the Teams features that's available in a commercial tenant. Some are restricted based on security and compliance and other features take time to be rolled out in government clouds.
+Teams platform capabilities that each government cloud supports differ. Also, government tenant may not have all the Teams features that's available in a commercial tenant. Some are restricted based on security and compliance and other features take time to be rolled out in government clouds.
 
 Let’s get to know about the different clouds and the Teams capabilities that are supported in each type of government cloud.
 
