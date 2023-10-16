@@ -8,19 +8,17 @@ ms.date: 09/29/2023
 ---
 # Government clouds
 
-Government sectors or agencies handling sensitive and confidential data need cloud platforms that are highly secure and compliant. Government clouds services are specifically designed considering the high security and stringent government compliance requirements to store and manage government data.
+Government sectors and agencies handling sensitive and confidential data need cloud platforms that are highly secure and compliant. Considering the raising requirements, Government clouds services are designed specifically to meet the stringent government compliance requirements.
 
-Considering the raising requirements, Microsoft has built three government cloud offerings based on security constraints to meet the requirements of the government sectors.
+Microsoft has built three government cloud services that is GCC, GCC-High, and DoD for government sectors and related entities.
 
 :::image type="content" source="../assets/images/app-fundamentals/GCC_overview.png" alt-text="Illustration shows the types of government clouds.":::
 
-These three clouds are available only in the United States and aligned with the requirements of the US public sector.
+Microsoft Government cloud services are available only in the United States and aligned with the requirements of the US public sector. To use Microsoft Government clouds services, Microsoft offers [Government plans](https://products.office.com/government/compare-office-365-government-plans) for purchase.
 
-## Government clouds in Teams
+## Government clouds for Teams
 
-To use Microsoft Government clouds services, Microsoft offers [Government plans](https://products.office.com/government/compare-office-365-government-plans). All Office 365 Government plans supports Microsoft Teams platform.
-
-Teams platform capabilities that each government cloud supports differ. Also, government tenant may not have all the Teams features that's available in a commercial tenant. Some are restricted based on security and compliance and other features take time to be rolled out in government clouds.
+ All Microsoft 365 Government plans supports Microsoft Teams platform but the capabilities each Government cloud supports differ. Also, government tenant may not have all the Teams features that's available in a commercial tenant. Some are restricted based on security and compliance and other features take time to get rolled out in government clouds.
 
 Let’s get to know about the different clouds and the Teams capabilities that are supported in each type of government cloud.
 
@@ -55,17 +53,29 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 
 ### Compliance UI
 
-By enabling third-party communications, customers accept that such communication is being processed through the third party and not Microsoft. The customer is solely responsible for mitigating risks associated with connecting with third party bots in their services. Microsoft doesn't endorse and makes no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service. Enabling bots extend your system boundary beyond this tenant based on the bot you choose to use. It is your responsibility to ensure that meets your compliance requirements including FedRAMP, DFARS, ITAR, and so on. It is your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
+Here are few pointers to consider while connecting with third-party services from Government clouds:
+
+* By enabling third-party communications, customers accept that such communication is being processed through the third party and not Microsoft.
+* The customer is solely responsible for mitigating risks associated with connecting with third-party bots in their services.
+* Enabling bots extend your system boundary beyond this tenant based on the bot you choose to use. It's your responsibility to ensure that meets your compliance requirements including FedRAMP, DFARS, ITAR, and so on.
+* It's your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
+* Microsoft doesn't endorse and makes no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service.
 
 The following list provides references about availability of GCC, GCC-High, and DOD for the features:
 
-| Feature | Reference |
+| Feature | Reference | Description |
 |---------|---|
-| Third-party apps | [Web apps](../samples/integrating-web-apps.md) <br> [Meeting app extensibility](../apps-in-teams-meetings/teams-apps-in-meetings.md) |
+| Third-party apps | [Web apps](../samples/integrating-web-apps.md) <br> [Meeting app extensibility](../apps-in-teams-meetings/teams-apps-in-meetings.md) | Apps are turned off by default for GCC and not available for GCC-High and DoD. |
 | Bots | [Build your first conversational bot for Teams](../get-started/first-app-bot.md) <br> [Designing your Teams bot](../bots/design/bots.md) <br> [Add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md) <br> [Bots in Teams](../bots/what-are-bots.md) |
 | Sideloading apps | [Enable your Teams app to be customized](../concepts/design/enable-app-customization.md) <br> [Distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md) <br> [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md) |
 | Custom connectors | [Create connectors for Microsoft 365 Groups for Teams](../webhooks-and-connectors/how-to/connectors-creating.md) |
 
 ## Plan to deploy Government clouds in Teams
+
+The following criteria help you to understand the requirements for purchasing or availing a cloud service:
+
+* A US federal, state, local or tribal government entity, or other entities handling data that are subjected to government regulations and guidelines can purchase suitable cloud service license.
+* To validate your organization’s eligibility, submit a form for GCC or GCC-High. To know more about the eligibility, see buy Microsoft 365 Government plans.
+* To purchase Microsoft 365 for US Government licenses, you must place an order only through the Microsoft account team or a qualified partner.
 
 Considerations for [deploying Teams in Government cloud](/microsoftteams/expand-teams-across-your-org/teams-for-government-landing-page).
