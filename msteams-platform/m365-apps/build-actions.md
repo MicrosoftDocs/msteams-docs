@@ -21,7 +21,7 @@ To add an Action to your existing Teams app, you must:
 
 For an Action to appear in the context menu of your M365 app (when a user right clicks on a file), you must add a JSON payload in the app manifest. In the manifest, you define the user intent, object type, and the handler that will trigger.
 
-In this sample manifest code. two Actions are built, an Action that [opens a page](actions.md#open-page) and an Action that [opens a dialog](actions.md#open-dialog).
+In this sample manifest code. two Actions are built, an Action that [opens a page](actions.md#handlers) and an Action that [opens a dialog](actions.md#handlers).
 
 ```json
 {  
