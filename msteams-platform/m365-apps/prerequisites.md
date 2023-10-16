@@ -10,7 +10,7 @@ ms.subservice: m365apps
 ---
 # Set up your dev environment for extending Teams apps across Microsoft 365
 
-The development environment for extending Teams apps across Microsoft 365 is similar to Microsoft Teams development. This article discusses specific configurations required to run preview builds of Microsoft Teams and Microsoft 365 applications in order to preview Teams apps running in Outlook and Microsoft 365 app.
+The development environment for extending Microsoft Teams apps across Microsoft 365 is similar to Teams development. This article discusses specific configurations required to run preview builds of Teams and Microsoft 365 applications in order to preview Teams apps running in Outlook and Microsoft 365 app.
 
 To set up your development environment:
 
@@ -71,14 +71,22 @@ For more information on Microsoft 365 release options, see [set up the Standard 
 
 ### Desktop
 
-You can preview Teams apps running in Outlook on Windows desktop by using a recent *Current Channel* build. Check if you have to [change the Microsoft 365 Apps update channel](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) for your test tenant to install a Microsoft 365 Current Channel build.
+Based on the test scenario, you can preview Teams apps running in Outlook on Windows desktop by using a [Microsoft 365 Apps update channel](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) for your tenant.
 
 To install Microsoft 365 applications in your test environment:
 
 1. Sign in to your test environment with your test tenant credentials.
 1. Download and run the [Office Deployment Tool](https://www.microsoft.com/download/details.aspx?id=49117).
 1. Select a local folder to store the extracted files.
-1. Go to the local folder and open *configuration-Office365-x86.xml* (or **x64.xml*, depending on your environment) in a text editor and ensure the *Channel* value is `CurrentPreview`.
+1. Go to the local folder and open *configuration-Office365-x86.xml* (or **x64.xml*, depending on your environment) in a text editor. Ensure the [*Channel*](/DeployOffice/office-deployment-tool-configuration-options#channel-attribute-part-of-updates-element) value is set according to the scenario you're testing:
+
+    | **Outlook scenario** | **Update channel** |
+    |---------------|--------------|
+    |Teams personal tabs in Outlook | `Current`|
+    |Teams search-based message extensions in Outlook | `Current`|
+    |Outlook Add-ins | `BetaChannel` |
+    |Meeting apps in Outlook | `BetaChannel` |
+
 1. Open Command Prompt and go to the local folder path.
 1. Run `setup.exe /configure configuration-Office365-x86.xml` (or use the **x64.xml* file, depending on your setup).
 1. Open Outlook (desktop client) and set up the mail account using your test tenant credentials.
@@ -113,9 +121,9 @@ Install the Microsoft 365 app to preview your Teams personal tab app running on 
 
 You can preview Teams personal tabs running in Outlook and Microsoft 365 app for iOS by installing the prerelease version on the [TestFlight app](https://testflight.apple.com/) on your iOS device.
 
-1. To access the preview version on TestFlight, please reach out to the product group through your CSAM/Account Manager for an Invitation.
+1. To access the preview version on TestFlight, reach out to the product group through your CSAM/Account Manager for an Invitation.
 1. Install the TestFlight app from the **App Store** on your testing device of choice.
-1. Open your email invitation, accept the email invitation, or follow the public link invitation to install the beta app.
+1. Open your email invitation, accept the email invitation, or follow the public link invitation to install the Beta app.
 1. Launch the Outlook app and sign in with your test tenant credentials.
 1. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
 1. Ensure that you use Microsoft 365 app version 2.72.23030700 or later and Outlook app version 4.2310.0 (18999702) or later for iOS.

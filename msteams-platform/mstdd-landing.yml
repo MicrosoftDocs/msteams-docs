@@ -44,84 +44,35 @@ landingContent:
 #      - text: Adaptive Cards overflow menu
 #        url: ~/task-modules-and-cards/cards/cards-format.md
 
-- title: Microsoft Build 2023
+- title: Whats new
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Bots can mention tags in Adaptive Cards
-        url: bots/how-to/conversations/channel-and-group-conversations.md#tag-mention
-      - text: Distribute your app to specific countries
-        url: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries-or-regions
-      - text: People icon in an Adaptive Card
-        url: task-modules-and-cards/cards/cards-format.md#people-icon-in-an-adaptive-card
-      - text: Deep link to the meeting side panel
-        url: apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel
-      - text: Live Share SDK is now generally available
-        url: apps-in-teams-meetings/teams-live-share-overview.md
-      - text: Design your app for new Teams 
-        url: concepts/design/design-teams-app-overview.md
-      - text: Teams AI library
-        url: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
-      - text: Extend Microsoft 365 Copilot
-        url: copilot/how-to-extend-copilot.md
-      - text: Distribute your app to specific countries or regions
-        url: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
-      - text: Teams Toolkit v5 extension within Visual Studio Code
-        url: toolkit/teams-toolkit-fundamentals.md
+      - text: The new Microsoft Teams client
+        url: resources/teams-updates.md
+      - text: Use callTranscript API to fetch meeting transcript from all meetings
+        url:  graph-api/meeting-transcripts/overview-transcripts.md
+      - text: Ratings and review for Teams apps
+        url: concepts/deploy-and-publish/appsource/post-publish/overview.md#ratings-and-review-for-teams-apps
+      - text: Bot configuration experience
+        url:  bots/how-to/bot-configuration-experience.md      
+      - text: Receive read receipt event for your bot
+        url:  bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt
+      - text: Media elements in Adaptive Card
+        url: task-modules-and-cards/cards/media-elements-in-adaptive-cards.md
+      - text: Microsoft Teams Store search experience
+        url: concepts/deploy-and-publish/appsource/publish.md#teams-store-search-experience
+      - text: Enable RSC permissions for a user using the Graph APIs (Developer preview)
+        url: graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings
+      - text: Adaptive Card-based Loop component (Developer preview)
+        url: m365-apps/cards-loop-component.md
+      - text: Teams Toolkit v17.7 extension within Visual Studio
+        url: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md
 
     - linkListType: reference
       links:
       - text: Community chat room for Microsoft Teams app developers
         url: https://gitter.im/OfficeDev/home
-
-- title: Whats new
-  linkLists:
-    - linkListType: whats-new
-      links:
-      - text: Teams Toolkit v17.7 extension within Visual Studio
-        url: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md      
-      - text: Send a proactive message using AAD ID
-        url: bots/how-to/conversations/send-proactive-messages.md
-      - text: Use callRecording API to fetch meeting recording from all meetings (Developer preview)
-        url: graph-api/meeting-transcripts/overview-transcripts.md
-      - text: App caching for iOS personal tray
-        url: tabs/how-to/app-caching.md
-      - text: Extend static tabs to group chat or meetings with a customizable experience
-        url: tabs/what-are-tabs.md
-      - text: App icon badging for your Teams app
-        url: apps-in-teams-meetings/app-icon-badging-for-your-app.md
-      - text: Collaborative Stage View
-        url: tabs/tabs-link-unfurling.md#collaborative-stage-view
-      - text: Real-time meeting events are supported in channel meetings
-        url: apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api
-      - text: Resource-specific consent for your Teams app
-        url: graph-api/rsc/resource-specific-consent.md      
-      - text: Drive customer adoption of your app
-        url: promote-app-adoption.md
-
-
-    - linkListType: whats-new
-      links:
-      - text: Plan your app growth in Teams
-        url:  concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
-      - text: Build a dashboard tab app
-        url:  tabs/how-to/build-a-dashboard-tab-app.md
-      - text: Targeted in-meeting notification (Developer preview)
-        url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
-      - text: Enable app caching for your tab app (Developer preview)
-        url: tabs/how-to/app-caching.md
-      - text: Update and soft delete activity notifications in bot
-        url: bots/how-to/conversations/conversation-messages.md#get-edit-message-activity
-      - text: Set up Microsoft license management
-        url: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
-      - text: Command bot in Teams
-        url: bots/how-to/conversations/command-bot-in-teams.md
-      - text: Enable SSO for your bot and message extension app
-        url: bots/how-to/authentication/bot-sso-overview.md
-      - text: Integrate location capabilities
-        url: concepts/device-capabilities/location-capability.md
-      - text: Zero install for link unfurling
-        url: messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling
 
 - title: Get started
   linkLists:
@@ -160,7 +111,7 @@ landingContent:
       links:
       - text: Guidelines for apps linked to SaaS offers
         url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
-      - text: Microsoft Teams store validation guidelines
+      - text: Microsoft Teams Store validation guidelines
         url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
       - text: Monetize your Teams app with a transactable SaaS offer
         url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
@@ -215,8 +166,8 @@ landingContent:
   linkLists:        
     - linkListType: tutorial
       links:
-        - text: Grant tab device permissions
-          url: ~/sbs-tab-device-permissions.yml
+        - text: Bot configuration experience
+          url: ~/qsg-bot-configuration-experience.yml
         - text: Create Teams conversation bot
           url: ~/sbs-teams-conversation-bot.yml
         - text: Create Calling and meeting bot
@@ -231,10 +182,9 @@ landingContent:
           url: ~/sbs-bots-with-sso.yml
         - text: Generate meeting token
           url: ~/sbs-meeting-token-generator.yml
-        - text: Generate meeting sidepanel
+        - text: Generate meeting side panel
           url: ~/sbs-meetings-sidepanel.yml
-        - text: Send activity feed notification 
-          url:  ~/sbs-graphactivity-feedbroadcast.yml
+
 
 
     - linkListType: tutorial
@@ -265,6 +215,8 @@ landingContent:
       links:
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
+        - text: Send activity feed notification 
+          url:  ~/sbs-graphactivity-feedbroadcast.yml          
         
            
 - title: Teams app scenarios
@@ -282,15 +234,15 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Publish Teams apps in Microsoft Teams store
+    - text: Publish Teams apps in Microsoft Teams Store
       url: /training/modules/microsoft-teams-publish-app-to-store
     - text: Distribution
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
     - text: Upload your app in Microsoft Teams
       url: ~/concepts/deploy-and-publish/apps-upload.md
-    - text: Publish to Teams Store
+    - text: Publish to Microsoft Teams Store
       url: ~/concepts/deploy-and-publish/appsource/publish.md
-    - text: Store validation guidelines
+    - text: Microsoft Teams Store validation guidelines
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
     - text: Common reasons for app validation failure
       url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md      

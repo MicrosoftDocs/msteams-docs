@@ -1,5 +1,5 @@
 ---
-title: Teams JavaScript client library support across Microsoft 365
+title: The Teams JavaScript client library support across Microsoft 365
 date: 06/26/2023
 author: erikadoyle
 ms.author: mosdevdocs
@@ -12,7 +12,7 @@ keywords: TeamsJS Teams JavaScript library capability Microsoft 365 M365
 ---
 # TeamsJS capability support across Microsoft 365
 
-Starting with version 2.0.0, Teams JavaScript client library (TeamsJS) enables [certain types of Teams apps](./overview.md) to run across the Microsoft 365 ecosystem. Currently, Microsoft 365 applications that can host Teams apps (Microsoft 365 app and Outlook) support only a subset of the application types and capabilities you can build for the Teams platform. This support expands over time.
+Starting with version 2.0.0, Microsoft Teams JavaScript client library (TeamsJS) enables [certain types of Teams apps](./overview.md) to run across the Microsoft 365 ecosystem. Currently, Microsoft 365 applications that can host Teams apps (Microsoft 365 app and Outlook) support only a subset of the application types and capabilities you can build for the Teams platform. This support expands over time.
 
 This article details the level of support of TeamsJS version 2.x capabilities across various host applications. For more information on what's changed between TeamsJS versions 1.x and 2.x, see [What's new in TeamsJS version 2.x.x](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx).
 
@@ -25,21 +25,23 @@ The following *TeamsJS Capability* table lists TeamsJS capabilities (public name
 
 Microsoft 365 hosts are signified by the product icons in the following tables:
 
-| Microsoft Teams | Microsoft 365 app | Microsoft Outlook |
+| Teams | Microsoft 365 app | Outlook |
 | :-: | :-: | :-: |
 | :::image type="content" source="./images/teams-icon.png" alt-text="Microsoft Teams icon"::: | :::image type="content" source="./images/microsoft-365-icon.png" alt-text="Microsoft 365 app icon"::: | :::image type="content" source="./images/outlook-icon.png" alt-text="Microsoft Outlook icon"::: |
 
 Preview versions for both Teams and Outlook (launched through *Try the new Teams* and *Try the new Outlook* toggle controls in Teams and Outlook clients respectively) have different levels of support. The preview versions are designated by the following **PRE** (preview) icons:
 
-| Microsoft Teams preview | Microsoft Outlook preview |
+| Teams preview | Outlook preview |
 | :-: | :-: |
 | :::image type="content" source="./images/teams-preview-icon.png" alt-text="Microsoft Teams (Preview) icon"::: | :::image type="content" source="./images/outlook-preview-icon.png" alt-text="Microsoft Outlook preview icon"::: |
 
-Entries marked with a check and asterisk (&#x2713;*) indicate support for that host is available only to preview audiences (enrolled in [Microsoft 365 Targeted Releases](prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional) for web clients or with [Beta Channel apps](./prerequisites.md#install-microsoft-365-apps-in-your-test-environment) installed for desktop clients). Select any TeamsJS Capability for further details, including reference docs, samples, and usage notes.
+Entries marked with a check and asterisk (&#x2713;*) indicate support for the host that is available only to preview audience who are enrolled in [Microsoft 365 Targeted Releases](prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional) for web clients or [Beta Channel apps](./prerequisites.md#install-microsoft-365-apps-in-your-test-environment) installed for desktop clients.
+
+Using the following table, select any TeamsJS Capability for further details including reference docs, samples, usage notes, and limitations.
 
 ## Cross-host capabilities
 
-The following table lists host application support for TeamsJS capabilities that can run outside of Microsoft Teams.
+The following table lists host application support for TeamsJS capabilities that can run outside of Teams.
 
 <br />
 <table border>
@@ -80,17 +82,17 @@ The following table lists host application support for TeamsJS capabilities that
             <th><a href="#app">app</a></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;*</td>
             <td>&#x2713;*</td>
         </tr>
         <tr>
@@ -99,7 +101,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -118,13 +120,13 @@ The following table lists host application support for TeamsJS capabilities that
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
             <td>&#x2713;*</td>
         </tr>
         <tr>
@@ -135,7 +137,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -148,11 +150,11 @@ The following table lists host application support for TeamsJS capabilities that
             <th><a href="#dialog">dialog</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
@@ -182,34 +184,34 @@ The following table lists host application support for TeamsJS capabilities that
             <th><a href="#mail">mail</a></th>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;*</td>
         </tr>
         <tr>
             <th><a href="#pages">pages</a></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
             <td>&#x2713;*</td>
         </tr>
         <tr>
@@ -220,7 +222,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -229,6 +231,24 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td></td>
         </tr>
+        <tr>
+            <th><a href="#search">search</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
+            <td></td>
+            <td></td>
+            <td>&#x2713;*</td>
+            <td></td>
+            <td>&#x2713;*</td>
+            <td></td>
+            <td>&#x2713;*</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
             <th><a href="#secondarybrowser">secondaryBrowser</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
@@ -250,7 +270,7 @@ The following table lists host application support for TeamsJS capabilities that
 
 ## Teams-only capabilities
 
-The following table lists support for TeamsJS capabilities that run only in the Microsoft Teams environment.
+The following table lists support for TeamsJS capabilities that run only in the Teams environment.
 
 <br />
 <table border>
@@ -327,7 +347,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -412,7 +432,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -429,7 +449,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -463,7 +483,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -564,17 +584,17 @@ The `app` namespace is supported globally across all application hosts and, ther
             <th>app</th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;*</td>
             <td>&#x2713;*</td>
         </tr>
     </tbody>
@@ -688,7 +708,7 @@ Namespace used to open a dialog for installing an application.
             <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -749,17 +769,17 @@ The `authentication` namespace is supported globally across all application host
             <th>authentication</th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;*</td>
             <td>&#x2713;*</td>
         </tr>
     </tbody>
@@ -875,7 +895,7 @@ Namespace providing calendar-related functionality.
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -995,7 +1015,7 @@ Preview. Namespace providing functionality to start a chat with others.
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1057,11 +1077,11 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <th>dialog <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
@@ -1076,7 +1096,7 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1093,7 +1113,7 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1108,11 +1128,11 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <th><a href="#dialogupdate">dialog.update</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1125,11 +1145,11 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <th><a href="#dialogurl">dialog.url</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
@@ -1146,7 +1166,7 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
@@ -1392,18 +1412,18 @@ Namespace providing email-related functionality.
             <th>mail</th>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;*</td>
         </tr>
     </tbody>
 </table>
@@ -1530,6 +1550,14 @@ Namespace providing in-meeting app functionality.
     </tbody>
 </table>
 
+> [!NOTE]
+> The following methods aren't supported on the Teams mobile client:
+>
+> - `meeting.requestStartLiveStreaming`
+> - `meeting.requestStopLiveStreaming`
+> - `meeting.getLiveStreamState`
+> - `meeting.registerLiveStreamChangedHandler`
+
 ## `menus`
 
 [Reference](/javascript/api/@microsoft/teams-js/menus) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Menus.tsx)
@@ -1650,17 +1678,17 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <th><a href="#pages">pages</a></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;*</td>
             <td>&#x2713;*</td>
         </tr>
         <tr>
@@ -1711,7 +1739,7 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
             <td>&#x2713;*</td>
         </tr>
         <tr>
@@ -1750,6 +1778,16 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
         </tr>
     </tbody>
 </table>
+
+> [!NOTE]
+> The following methods aren't supported on the Teams mobile client:
+>
+> - `pages.getConfig`
+> - `pages.setCurrentFrame`
+> - `pages.initializeWithFrameContext`
+> - `pages.tabs.navigateToTab`
+> - `pages.tabs.getMruTabInstances`
+> - `pages.tabs.getTabInstances`
 
 ### `pages.appButton`
 
@@ -1891,7 +1929,7 @@ Preview. Namespace providing for profile-related functionality.
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1902,6 +1940,9 @@ Preview. Namespace providing for profile-related functionality.
         </tr>
     </tbody>
 </table>
+
+> [!NOTE]
+> The `profile.showProfile` method isn't supported on the Teams mobile client.
 
 ## `search`
 
@@ -1948,11 +1989,11 @@ Preview. Allows your application to interact with the host Microsoft 365 applica
             <th>search <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
+            <td>&#x2713;*</td>
             <td></td>
+            <td>&#x2713;*</td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -2133,7 +2174,7 @@ Namespace to open a share dialog for web content. For more information, see [Sha
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -2146,6 +2187,9 @@ Namespace to open a share dialog for web content. For more information, see [Sha
         </tr>
     </tbody>
 </table>
+
+> [!NOTE]
+> The `sharing.shareWebContent` method isn't supported on the Teams mobile client.
 
 ## `stageView`
 
@@ -2194,7 +2238,7 @@ Preview. Namespace to interact with the Stage View specific part of the library.
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -2269,6 +2313,9 @@ The earlier version of the capability for providing modal dialog (task module) s
     </tbody>
 </table>
 
+> [!NOTE]
+> The `task.getDefaultSizeIfNotProvided` method isn't supported on the Teams mobile client.
+
 ## `teamsCore`
 
 [Reference](/javascript/api/@microsoft/teams-js/teamscore) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/TeamsCore.tsx)
@@ -2316,7 +2363,7 @@ Namespace containing the set of APIs that support Teams-specific functionalities
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -2391,6 +2438,12 @@ Preview. Namespace representing functionality for in-meeting video effects.
     </tbody>
 </table>
 
+> [!NOTE]
+> The following methods aren't supported on the Teams mobile client:
+>
+> - `video.notifySelectedVideoEffectChanged`
+> - `video.registerForVideoEffect`
+
 ## `webStorage`
 
 [Reference](/javascript/api/@microsoft/teams-js/webstorage) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/WebStorage.tsx)
@@ -2452,11 +2505,14 @@ Preview. Contains functionality to allow web apps to store data in webview cache
     </tbody>
 </table>
 
+> [!NOTE]
+> The `webStorage.isWebStorageClearedOnUserLogOut` method isn't supported on the Teams mobile client.
+
 ## Code sample
 
 | Sample name           | Description | Source|
 :---------------------|:--------------|:---------|
-| TeamsJS Capability Checker| Sample application to demonstrate the capabilities of TeamsJS library v2 in Microsoft Teams apps extended across Outlook and Microsoft 365. | [TypeScript](https://github.com/vikramtha/microsoft-teams-library-js/tree/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app)
+| TeamsJS Capability Checker| Sample application to demonstrate the capabilities of TeamsJS library v2 in Teams apps extended across Outlook and Microsoft 365. | [TypeScript](https://github.com/vikramtha/microsoft-teams-library-js/tree/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app)
 
 ## See also
 
