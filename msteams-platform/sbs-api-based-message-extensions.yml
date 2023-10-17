@@ -31,61 +31,8 @@ items:
    |[Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
    |[Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
-
-   ## Prepare development environment
-
-   After you've installed the required tools, set up the development environment. 
-
-
-   ### Install the Teams Toolkit
-
-   The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
-    
-   You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`.
-
-
-   # [Visual Studio Code](#tab/vscode)
-
-   1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
-   1. In the search box, enter **Teams Toolkit**.
-   1. Select **Install** next to the Teams Toolkit.
-
-      :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation." lightbox="~/assets\images\teams-toolkit-v2\prerequisites\install-toolkit-vscodeversion-1.png":::
-
-    The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
-
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
-
-   You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
-
-   > [!NOTE]
-   > The latest version of Teams Toolkit is v5.
-
-   # [Command line](#tab/cli)
-
-   To install the TeamsFx CLI, use the `npm` package manager:
-
-   ``` bash
-   npm install -g @microsoft/teamsfx-cli
-   ```
-
-   Depending on your configuration, you might need to use `sudo` to install the CLI:
-
-   ``` bash
-   sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
-   ```
-
-   This condition is more common on Linux and macOS systems.
-
-   Ensure you add the npm global cache to your path. This step is normally done as part of the Node.js installer.
-
-   You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
-
-   > [!CAUTION]
-   > Before you can run TeamsFx in PowerShell terminals, you must enable the 'remote signed' execution policy for PowerShell.
-
-   ---
-
+   |[Azure account](https://azure.microsoft.com/free/) | Access to Azure resources.|
+   
    ## Set up your Teams development tenant
 
    A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your sideload and test your app. Let's verify if you're ready to develop with the tenant.
@@ -563,10 +510,10 @@ items:
 
        ```json
        {
-        "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+        "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
         "manifestVersion": "devPreview",
         "version": "1.0.3",
-        "id": "55490e7f-06e2-4675-9b8f-9eea9281b0fa",
+        "id": "<<YOUR-MICROSOFT-APP-ID>>",
         "packageName": "com.microsoft.teams.extension",
         "developer": {
             "name": "Teams App, Inc.",
@@ -579,18 +526,18 @@ items:
             "outline": "outline.png"
         },
         "name": {
-            "short": "sampletest2809-dev",
-            "full": "Full name for sampletest2809"
+            "short": "Search ME API",
+            "full": "Search ME API full"
         },
         "description": {
-            "short": "Open AI Klarna product Api",
-            "full": "Full description for sampletest2809"
+            "short": "product app for testing API MEs",
+            "full": "product app for testing API MEs"
         },
         "accentColor": "#FFFFFF",
         "composeExtensions": [
             {
-                "composeExtensionType": "apiBased",
-                "apiSpecificationFile": "apiSpecFiles/yash-openapi.yml",
+                "composeExtensionType": "",
+                "apiSpecificationFile": "",
                 "commands": [
                     {
                         "context": [
@@ -598,16 +545,16 @@ items:
                         ],
                         "type": "query",
                         "title": "API for fetching Klarna.",
-                        "id": "productsUsingGET",
+                        "id": "",
                         "parameters": [
                             {
-                                "name": "countryCode",
-                                "title": "Country Code",
-                                "description": "ISO 3166 country code with two characters based on the user location. Currently, only US, GB, DE, SE and DK are supported."
+                                "name": "",
+                                "title": "",
+                                "description": ""
                             }
                         ],
                         "description": "",
-                        "apiResponseRenderingTemplateFile": "responseCards/yashresults.json"
+                        "apiResponseRenderingTemplateFile": ""
                     }
                 ]
             }
@@ -621,16 +568,19 @@ items:
        ```
        </details>
     
-    Ensure that the app manifest file meets the following requirements:
+    1. Update the app manifest properties as follows:
 
-    * Under the `composeExtension` node, include `composeExtensionType`: `apiBased`. 
-    * Add a new `apiSpecificationFile`property and put the value as the name of your OpenAPI specification file. 
-    * The Input extension `commands.id` must match the `operationId` in the OpenAPI specification document. 
-    * The input extension `parameters.name` must match the `parameters.name` property in the OpenAPI specification file. If there are no required parameters, then the name must match one of the operational parameters. 
-    * Under valid domains, add the service URL endpoint that is defined in the OpenAPI specification file. 
-    * Save the Teams app manifest in the same folder you saved the OpenAPI spec and the response rendering template.
-    * You'll also need a color image and outline image. These images should be included in the folder and referenced in your Teams app manifest. 
-    * Zip up the contents of the folder. 
+         * Replace `<<YOUR-MICROSOFT-APP-ID>>`  with bot's Microsoft App ID.
+         * Update the values for `composeExtensionType` to `apibased`.
+         * Update the values for `apiSpecificationFile`to the path of your OpenAPI specification file. 
+         * Update the `commands.id` value to the `operationId` in the OpenAPI specification document. 
+         * Update the `parameters.name` to the the `parameters.name` property in the OpenAPI specification file. If there are no parameters, then the values must be query parameters or properties.name if referencing a property in the request body schema.
+         * Update the `apiResponseRenderingTemplateFile` to the path of your response rendering template file.
+         * Under valid domains, add the service URL endpoint that is defined in the OpenAPI specification file. 
+         
+    1. Save the Teams app manifest in the same folder you saved the OpenAPI spec and the response rendering template.
+        * You'll also need a color image and outline image. These images should be included in the folder and referenced in your Teams app manifest. 
+        * Zip up the contents of the folder. 
 
     
 - title: Sideload the app to Teams
