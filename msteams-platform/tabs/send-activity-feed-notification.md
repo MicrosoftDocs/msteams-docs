@@ -142,7 +142,7 @@ This section describes the updates that need to be added to the app manifest. En
 > [!NOTE]
 >
 > * The `actor` is a special parameter that always takes the name of the caller. In delegated calls, `actor` is the user's name. In application-only calls, it takes the name of the Teams app.
-> * The reserved `systemDefault` activity type mustn't be included in the `activities` section of the app manifest. The reserved `systemDefault` activity type can provide free-form text in the `Actor+Reason` line of the activity feed notification. For more information, see [send customizable activity feed notifications](/graph/teams-send-activityfeednotifications.md#example-8-send-a-notification-to-a-user-using-the-systemdefault-activity-type).
+> * The reserved `systemDefault` activity type mustn't be included in the `activities` section of the app manifest. This reserved activity type can provide free-form text in the `Actor+Reason` line of the activity feed notification. For more information, see [send customizable activity feed notifications](/graph/teams-send-activityfeednotifications.md#example-8-send-a-notification-to-a-user-using-the-systemdefault-activity-type).
 
 #### Authorization update
 
