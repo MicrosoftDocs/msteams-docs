@@ -35,11 +35,11 @@ Before you get started, ensure that you adhere to the following requirements:
 
 ### OpenAPI Specification
 
-An OpenAPI Specification is used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases. You must have an OpenAPI specification document before you create an API-based message extension.
+OpenAPI specification (OAS) is the industry-standard specification that outlines how OpenAPI files are structured and outlined. It's a language-agnostic, human-readable format for describing APIs. It's easy for both humans and machines to read and write. The schema is machine-readable and represented in either YAML or JSON. You must have an OpenAPI specification document before you create an API-based message extension.
 
 The following code is an example of an OpenAPI specification document in YAML format: <br/>
 <br/>
-<details><summary>**OpenAPI specification**</summary>
+<details><summary>OpenAPI specification example</summary>
 
    ```yml
        openapi: 3.0.0
@@ -131,11 +131,11 @@ The following code is an example of an OpenAPI specification document in YAML fo
 
 </details>
 
-An OpenAPI specification document requires a response rendering template for the app to respond to the get requests. If your building an app using Teams Toolkit or Developer portal for Teams, the response rendering template is extracted from the OpenAPI specification document automatically. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
+A response rendering template must be present for each search command and each command must correspond to an operation in the OpenAPI spec but not every operation defined in an API spec has to be a command. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
 
 The following code is an example of a Response rendering template: <br/>
 <br/>
-<details><summary>**Response rendering template**</summary>
+<details><summary>Response rendering template example</summary>
 
 ```json
     {
@@ -286,11 +286,11 @@ Update app manifest with the `composeExtensions` property. The following code is
 
 |Name  |Description  |
 |---------|---------|
-|`composeExtension.type`     |  Update the value as `ApiBased`. |
+|`composeExtension.type`     |  Update the value to `ApiBased`. |
 |`composeExtension.apiSpecificationFile`     |  This references an OpenAPI spec file in the app package. Include when type is `ApiBased`.      |
 |`composeExtension.command.ID`      | This property is a unique ID that you assign to search command. The user request includes this ID. The ID must  match the `OperationID` available in the  OpenAPI spec.       |
-|`composeExtension.command.context`      | An existing array where the entry points for message extension is defined.  The possible values are `message`, `compose`, or `commandBox`. The default is `["compose", "commandBox"]`. |
-|`composeExtension.command.parameters`    | This property defines a static list of parameters for the command. Include Title, Name, and Description. The name must map to the `parameters.name` in the OpenAPI spec.     |
+|`composeExtension.command.context`      | An existing array where the entry points for message extension is defined.  The possible values are `compose` or `commandBox`. The default is `["compose", "commandBox"]`. |
+|`composeExtension.command.parameters`    | This property defines a static list of parameters for the command. The name must map to the `parameters.name` in the OpenAPI spec. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters.     |
 |`composeExtension.command.apiResponseRenderingTemplateFile`| A template used to format the JSON response from developer’s API to Adaptive Card response. *Mandatory* |
 
 For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).

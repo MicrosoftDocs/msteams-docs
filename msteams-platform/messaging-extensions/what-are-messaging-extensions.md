@@ -88,6 +88,9 @@ The following table differentiates the types of message extensions:
 
 ## Link unfurling
 
+> [!NOTE]
+> Link unfurling is supported only for bot based message extensions.
+
 A web service is invoked when a URL is pasted in the compose message area. This functionality is known as link unfurling. You can subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can add buttons to allow the users to immediately take action without leaving the Teams client.
 The following images display link unfurling feature when a link is pasted in message extension:
 

@@ -14,21 +14,7 @@ Message extensions built from an API are a type of Teams app that allows you to 
 
 Before you get started, ensure that you adhere to the following requirements:
 
-<details><summary>1. API message extension</summary>
-
-Message extensions built from an API are a powerful tool that allows you to extend the functionality of your Teams app by integrating with external APIs. This can greatly enhance the capabilities of your app and provide a richer user experience. To implement message extension from an API, you need to follow these guidelines:
-
-* `Commands.id` in app manifest must match the corresponding `operationId` in the OpenAPI specification.
-* If there's a required parameter without a default value, the parameter name of the command defined in the Teams app manifest must match this parameter name.
-* If there's no required parameter without a default value, the parameter name in the Teams app manifest must match the name of an optional parameter defined for that operation.
-* A command can't have more than one parameter.
-* A response rendering template must be defined per command, which is used to convert responses from an API. The command portion of the manifest must point to this template file under`composeExtension.command.apiResponseRenderingTemplateFile` within the app manifest. Each command points to a different response rendering template file.
-
-</details>
-
-</br>
-
-<details><summary>2. OpenAPI specification</summary>
+<details><summary>1. OpenAPI specification</summary>
 
 Developers can't require users to enter a parameter for a header or cookie. If headers need to be passed, a default value for the header can be set in the specification. This simplifies the user experience and reduces the risk of errors.
 
@@ -51,7 +37,7 @@ Developers can't require users to enter a parameter for a header or cookie. If h
 
 </br>
 
-<details><summary>3. App manifest</summary>
+<details><summary>2. App manifest</summary>
 
 * Set composeExtension.composeExtensionType to `apiBased`.
 * Define `composeExtension.apiSpecificationFile` as the relative path to the OpenAPI specification file within the folder.
@@ -64,7 +50,7 @@ Developers can't require users to enter a parameter for a header or cookie. If h
 
 </br>
 
-<details><summary>4. Response rendering template</summary>
+<details><summary>3. Response rendering template</summary>
 
 * Define the schema reference URL in the `$schema` property.
 * Define `jsonPath` as the path to the relevant data/array in API response. if the path points to an array, then each entry in the array will be a separate result and if the path points to an object, there will only be a single result. *[Optional]*
@@ -75,9 +61,22 @@ The `JsonPath` property in response rendering template is $ to indicate the root
 If the root object of the OpenAPI schema contains well-known array property name, then Teams Toolkit uses the array property as root element to generate an Adaptive Card, and the array property name is used as `JsonPath` property for response rendering template. For example, if the property name contains "result", "data", "items", "root", "matches", "queries", "list", "output" and the type is array, then it's used as root element.
 
 </details>
+</br>
 
-You can create an API-based message extension using Developer Portal for Teams, Teams Toolkit, and Teams CLI.
+<details><summary>4. API message extension</summary>
 
+Message extensions built from an API are a powerful tool that allows you to extend the functionality of your Teams app by integrating with external APIs. This can greatly enhance the capabilities of your app and provide a richer user experience. To implement message extension from an API, you need to follow these guidelines:
+
+* `Commands.id` in app manifest must match the corresponding `operationId` in the OpenAPI specification.
+* If there's a required parameter without a default value, the parameter name of the command defined in the Teams app manifest must match this parameter name.
+* If there's no required parameter without a default value, the parameter name in the Teams app manifest must match the name of an optional parameter defined for that operation.
+* A command can't have more than one parameter.
+* A response rendering template must be defined per command, which is used to convert responses from an API. The command portion of the manifest must point to this template file under`composeExtension.command.apiResponseRenderingTemplateFile` within the app manifest. Each command points to a different response rendering template file.
+
+</details>
+
+You can create an API-based message extension using  Teams Toolkit and Teams CLI.
+<!--
 # [Developer portal for Teams](#tab/developer-portal-for-teams)
 
 To create an API base message extension using Developer portal, follow these steps:
@@ -148,6 +147,8 @@ You can add commands and parameters to your API, to add commands:
 
 An API message extension is created.
 
+-->
+
 # [Visual Studio Code](#tab/visual-studio-code)
 
 To build a message extension from an API using Visual Studio Code, follow these steps:
@@ -186,6 +187,9 @@ To build a message extension from an API using Visual Studio Code, follow these 
       :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot-openapi-spec-location.png" alt-text="Screenshot shows the option to select OpenAPI spec location.":::
 
    1. From the API list, select the GET API and select **OK**.
+
+      > [!NOTE]
+      > GET and POST APIs are supported for API based message extensions.
 
    1. Select **Default folder**.
    1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI spec file and created an API-based message extension.
@@ -239,6 +243,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
  A new browser window with Teams web client opens. You can add your app to Teams.
 
+<!--
 # [Visual Studio](#tab/visual-studio)
 
 1. Open Visual Studio.
@@ -258,6 +263,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 1. Select **Create**. The project is scaffolded and you can find API spec, manifest and response template files in the **appPackage** folder.
 1. To provision, select **Project** > **Teams Toolkit** > **Provision in the cloud...**.
 1. To preview your app in Teams, Select **Project** > **Teams Toolkit** > **Preview in** > **Teams**.
+-->
 
 ---
 
