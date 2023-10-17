@@ -228,6 +228,8 @@ The following list provides card design guidelines for User Specific Views:
 
 * Refresh timeout: Teams client triggers a refresh in two ways, either through **Refresh** or by selecting **Execute**. The refresh triggers only if the card from the last invoke is older than a minute. You can control the refresh behavior by adding a timestamp to the data bag and checking it before sending the refreshed card.
 
+* For User Specific Views, Teams client stores 50 latest cached cards per user. When a new card requires caching, the store removes the oldest card based on when it's last read and replaces it with the latest card. There's no process to restore the removed cards after a certain period. The user can also clear Teams cache to delete cards from the store.
+
 * A message update can be used to update the base card and simultaneously refresh the User Specific Card. Opening the chat or channel also refreshes the card for users with **Refresh** enabled.
 
 * For scenarios with larger groups where users switch to a view on action, which needs dynamic updates for responders, you can keep adding up to 60 users to the `userIds` list. You can remove the first responder from the list when the 61st user responds. For the users who get removed from the `userIds` list, you can provide a manual **Refresh** to get the latest result.
