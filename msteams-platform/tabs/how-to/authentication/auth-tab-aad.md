@@ -10,7 +10,7 @@ ms.date: 12/13/2022
 > [!Note]
 > For authentication to work for your tab on mobile clients, ensure that you're using version 1.4.1 or later of the Microsoft Teams JavaScript client library (TeamsJS).
 
-There are many services that you may want to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services includes Facebook, Twitter, and Teams.
+There are many services that you want to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services includes Facebook, Twitter, and Teams.
 Teams user profile information is stored in Azure AD using Microsoft Graph and the article is to focus on authentication using Azure AD to get access information.
 
 OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The OAuth 2.0 Implicit Grant flow is used in the examples. It reads the user's profile information from Azure AD and Microsoft Graph.
@@ -31,7 +31,7 @@ Identity providers that support OAuth 2.0 don't authenticate requests from unkno
 
 2. Select your app to view its properties, or select the "New Registration" button. Find the **Redirect URI** section for the app.
 
-3. Select **Web** from the dropdown menu. Update the URL to your authentication endpoint. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs are be similar to the following:
+3. Select **Web** from the dropdown menu. Update the URL to your authentication endpoint. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs are similar as follows:
 
     Redirect URLs: `https://<hostname>/bot-auth/simple-start`
 
@@ -45,7 +45,7 @@ Replace `<hostname>` with your actual host. This host can be a dedicated hosting
 > [!NOTE]
 > The third-party authentication doesn't work if **Experimental third-party storage partitioning** is enabled. The app prompts for authentication repeatedly as the values aren't stored locally.
 
-Authentication flow should be triggered by a user action. You shouldn't open the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker and confuse the user.
+Authentication flow must be triggered by a user action. You shouldn't open the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker and confuse the user.
 
 Add a button to your configuration or content page to enable the user to sign in when needed. This can be done in the tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
 
@@ -173,7 +173,7 @@ After the user completes authorization, the user is redirected to the callback p
 
 In the last section, you called the Azure AD authorization service and passed in user and app information so that Azure AD could present the user with its own monolithic authorization experience. Your app has no control over what happens in this experience. All it knows is what is returned when Azure AD calls the  callback page that you provided (`/tab-auth/simple-end`).
 
-In this page, you need to determine success or failure based on the information returned by Azure AD and call `authentication.notifySuccess()` or `authentication.notifyFailure()`. If the login was successful, you'll have access to service resources.
+In this page, you need to determine success or failure based on the information returned by Azure AD and call `authentication.notifySuccess()` or `authentication.notifyFailure()`. If the login was successful, you have access to service resources.
 
 ```javascript
 // Split the key-value pairs passed from Azure AD
