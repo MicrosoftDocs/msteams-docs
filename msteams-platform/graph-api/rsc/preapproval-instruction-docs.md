@@ -10,7 +10,7 @@ ms.date: 08/29/2023
 
 # Preapproval of RSC permissions
 
-Preapproval of RSC permissions allows admins to approve resource-specific consent (RSC) on an app-by-app basis in Microsoft Teams. Previously, admins had the ability to toggle RSC on or off in their tenant. Admins had to approve or block all RSC enabled apps with no granularity to declare which apps they wanted to allow. Through preapproved RSC, admins can choose which RSC-enabled apps they allow their tenant users to install in Teams without having to allow or block all apps that utilize RSC permissions.
+Preapproval of resource-specific consent (RSC) permissions allows admins to approve RSC on an app-by-app basis in Microsoft Teams. Previously, admins had the ability to toggle RSC on or off in their tenant. Admins had to approve or block all RSC enabled apps with no granularity to declare which apps they wanted to allow. Through preapproved RSC, admins can choose which RSC-enabled apps they allow their tenant users to install in Teams without having to allow or block all apps that utilize RSC permissions.
 
    > [!NOTE]
    > Preapproval of RSC permissions is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
@@ -31,7 +31,7 @@ connect-MgGraph -Scopes @('TeamworkAppSettings.ReadWrite.All', 'Policy.ReadWrite
 
 ## Enable preapproval for RSC permissions
 
-Change your RSC settings using the `Set-MgBetaChatRscConfiguration` and `Set-MgBetaTeamRscConfiguration` cmdlets to allow preapproved apps only. The following are the configurations available:
+Change your RSC settings using the `Set-MgBetaChatRscConfiguration` and `Set-MgBetaTeamRscConfiguration` cmdlets to allow preapproved apps only. The following are the available configurations:
 
 |Configuration| Description|
 |---|---|
@@ -40,7 +40,7 @@ Change your RSC settings using the `Set-MgBetaChatRscConfiguration` and `Set-MgB
 |`DisabledForAllApps`| No RSC permissions can be consented to by users. In this state, preapproval of RSC permissions have no effect on users ability to consent to RSC enabled apps.|
 
    > [!WARNING]
-   > If you change your Chat RSC or Team RSC configuration to DisabledForAllApps, it disables preapproval in your tenant and users will encounter errors when they attempt to install RSC enabled apps.
+   > If you change your Chat RSC or Team RSC configuration to DisabledForAllApps, it disables preapproval in your tenant and users encounter errors when they attempt to install RSC enabled apps.
 
 ### Enable preapproval for Chat RSC
 
@@ -51,14 +51,14 @@ You can check and change the current state of your Chat RSC configurations using
 
 ### Enable preapproval for Team RSC
 
-You can check the current state of your Team RSC configurations by using the `Get-MgBetaTeamsRscConfiguration` and `Set-MgBetaTeamRscConfiguration` cmdlets.
+You can check the current state of your Team RSC configurations by using `Get-MgBetaTeamsRscConfiguration` and `Set-MgBetaTeamRscConfiguration` cmdlets.
 
 1. `Get-MgBetaTeamRscConfiguration`
 1. `Set-MgBetaTeamRscConfiguration -State EnabledForPreApprovedAppsOnly`
 
 ## Create a preapproval
 
-You can create a preapprovals to preapprove RSC permissions against certain sensitivity labels in your tenant. This means you can dictate what data RSC-enabled apps have access to. In this section, we'll create a preapproval without a sensitivity label for use with any sensitivity group, and with a sensitivity label for use against certain data. To create a preapproval, ensure that you have the following information:
+You can create a preapprovals to preapprove RSC permissions against certain sensitivity labels in your tenant. You can dictate what data RSC-enabled apps have access to. In this section, we'll create a preapproval without a sensitivity label for use with any sensitivity group, and with a sensitivity label for use against certain data. To create a preapproval, ensure that you have the following information:
 
 1. The Teams App ID of the app you wish to preapprove.
 2. The RSC permissions associated with the app you want to preapprove.
@@ -113,8 +113,10 @@ New-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -R
 
 ```powershell
 New-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForChats @('OnlineMeeting.ReadBasic.Chat') -TeamLevelSensitivityLabelCondition Spe```cificSensivityLabel -SpecificSensitivityLabelIdsApplicableToTeams @('4de11089-adb9-4be8-9b7a-8336be68f3c4')
+```
 
-### Preapprove an app with both Team and Chat RSC permissions and a defined sensitivity label:
+#### Preapprove an app with both Team and Chat RSC permissions and a defined sensitivity label
+
 ```powershell
 New-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForChats @('OnlineMeeting.ReadBasic.Chat') -ResourceSpecificApplicationPermissionsAllowedForTeams @(‘example.permissions.group’) -TeamLevelSensitivityLabelCondition SpecificSensivityLabel -SpecificSensitivityLabelIdsApplicableToTeams @('4de11089-adb9-4be8-9b7a-8336be68f3c4')
 ```
