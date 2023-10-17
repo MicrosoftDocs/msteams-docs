@@ -45,7 +45,7 @@ Replace `<hostname>` with your actual host. This host can be a dedicated hosting
 > [!NOTE]
 > The third-party authentication doesn't work if **Experimental third-party storage partitioning** is enabled. The app prompts for authentication repeatedly as the values aren't stored locally.
 
-Authentication flow must be triggered by a user action. You shouldn't open the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker and confuse the user.
+Trigger the authentication flow by a user action. Avoid opening the authentication pop-up automatically, as this is likely to trigger the browser's pop-up blocker and confuse the user.
 
 Add a button to your configuration or content page to enable the user to sign in when needed. This can be done in the tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
 
