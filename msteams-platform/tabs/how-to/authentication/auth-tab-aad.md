@@ -11,7 +11,7 @@ ms.date: 12/13/2022
 > For authentication to work for your tab on mobile clients, ensure that you're using version 1.4.1 or later of the Microsoft Teams JavaScript client library (TeamsJS).
 
 There are many services that you may want to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services includes Facebook, Twitter, and Teams.
-Teams user profile information is stored in Azure AD using Microsoft Graph and this article will focus on authentication using Azure AD to get access to this information.
+Teams user profile information is stored in Azure AD using Microsoft Graph and this article is to focus on authentication using Azure AD to get access to this information.
 
 OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The examples below use the OAuth 2.0 Implicit Grant flow. It reads the user's profile information from Azure AD and Microsoft Graph.
 
@@ -31,7 +31,7 @@ Identity providers that support OAuth 2.0 don't authenticate requests from unkno
 
 2. Select your app to view its properties, or select the "New Registration" button. Find the **Redirect URI** section for the app.
 
-3. Select **Web** from the dropdown menu. Update the URL to your authentication endpoint. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to the following:
+3. Select **Web** from the dropdown menu. Update the URL to your authentication endpoint. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs are be similar to the following:
 
     Redirect URLs: `https://<hostname>/bot-auth/simple-start`
 
@@ -43,7 +43,7 @@ Replace `<hostname>` with your actual host. This host can be a dedicated hosting
 ## Initiate authentication flow
 
 > [!NOTE]
-> The third-party authentication doesn't work, if  **Experimental third-party storage partitioning** is enabled. The app prompts for repeatedly authentication as the values aren't stored locally.
+> The third-party authentication doesn't work if **Experimental third-party storage partitioning** is enabled. The app prompts for authentication repeatedly as the values aren't stored locally.
 
 Authentication flow should be triggered by a user action. You shouldn't open the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker and confuse the user.
 
@@ -95,9 +95,9 @@ microsoftTeams.authentication.authenticate({
 
 * The URL you pass to `authenticate()` is the start page of the authentication flow. In this example that is `/tab-auth/simple-start`. This should match what you registered in the [Azure AD Application Registration Portal](https://apps.dev.microsoft.com).
 
-* Authentication flow must start on a page that's on your domain. This domain should also be listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section of the manifest. Failure to do so will result in an empty pop-up.
+* Authentication flow must start on a page that's on your domain. This domain should also be listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section of the manifest. Failure to do results in an empty pop-up.
 
-* Failing to use `authenticate()` will cause a problem with the pop-up not closing at the end of the sign-in process.
+* If you fail to use `authenticate()`, the pop-up may not close at the end of the sign-in process, causing a problem.
 
 ## Navigate to the authorization page from your pop-up page
 
@@ -225,7 +225,7 @@ Your app can set its own session cookie so that the user need not sign in again 
 > [!NOTE]
 >
 > * Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../../../resources/samesite-cookie-update.md).
-> * To get the correct token for Microsoft Teams Free and guest users, it is important that the apps use tenant specific endpoint `https://login.microsoftonline.com/**{tenantId}**`. You can get tenantId from the bot message or tab context. If the apps use `https://login.microsoftonline.com/common`, the users will get incorrect tokens and will log on to the "home" tenant instead of the tenant that they are currently signed into.
+> * To get the correct token for Microsoft Teams Free and guest users, it is important that the apps use tenant specific endpoint `https://login.microsoftonline.com/**{tenantId}**`. You can get tenantId from the bot message or tab context. Using `https://login.microsoftonline.com/common` in apps can result in users getting incorrect tokens and logging on to the 'home' tenant instead of the tenant they are currently signed into.
 
 For more information on single sign-on (SSO), see the article [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md).
 
