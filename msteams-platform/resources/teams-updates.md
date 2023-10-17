@@ -30,26 +30,31 @@ The Classic Teams client is represented using the `teams` field and the new Team
 
 To ensure a smooth transition, a phased rollout of the new platform is planned as follows:
 
-* **Developer preview**: The new Teams client is available in [public developer preview](dev-preview/developer-preview-intro.md). You can access the new platform and test your apps. We encourage you to provide feedback to help refine the platform.
-
-* **Availability of all platform features from Classic Teams**: All apps are available in the new Teams Client. All platform features except the features listed under [known issues](#known-issues) are now available. Platform features under known issues will be available by September 2023.
+* **Availability of all platform features from Classic Teams**: All apps are available in the new Teams Client. All platform features except the features listed under [known issues](#known-issues) are now available. Platform features under known issues aren't currently supported and will be available soon in the new Teams client.
 
 ## Known issues
 
 > [!NOTE]
 >
-> * We recommend to test apps, tabs, messaging extensions, bots, and link unfurling after switching from the Classic Teams client to the new Teams client.
+> * The new Teams client is supported in Windows and Mac clients and Government Community Cloud (GCC) and GCC-High environments.
+> * We recommend you to test the functionality of  apps, tabs, messaging extensions, bots, and link unfurling on Windows and Mac clients and GCC and GCC-High environments after switching from the Classic Teams client to the new Teams client.
 > * [Adaptive Card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client. If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
 
-The following are the Teams features that will be supported soon:
-
-* [Share in Teams](../concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md).
-
-* [Uploading of apps](../concepts/deploy-and-publish/apps-upload.md) isn't supported in the new Teams client. You can upload an app in the Classic Teams client and use it in new Teams client.
+The following Teams features aren't currently supported (will be available soon) in the new Teams client:
 
 * [External authentication](../tabs/how-to/authentication/auth-oauth-provider.md) isn't supported in the new Teams client. We recommend you use the [authentication using third-party OAuth provider](../tabs/how-to/authentication/auth-flow-tab.md) or use the app in the Classic Teams client.
 
 * [Message Extensions](../get-started/build-message-extension.md) can't be invoked from the Teams search bar in the new Teams client.
+
+* Personal static tabs aren't supported in one-on-one conversations with bots in the new Teams client. However, users can open their app from the app bar in Teams and view the personal static tabs.
+
+* [Location](../concepts/device-capabilities/location-capability.md#location-apis) and [Media](../concepts/device-capabilities/media-capabilities.md#media-capability-apis) APIs aren't supported in the new Teams client. We recommend using HTML5 Geolocation, and Media.
+
+* [GetMruTabInstances](/javascript/api/@microsoft/teams-js/pages.tabs?view=msteams-client-js-latest#@microsoft-teams-js-pages-tabs-getmrutabinstances&preserve-view=true) and [GetTabInstances](/javascript/api/@microsoft/teams-js/pages.tabs?view=msteams-client-js-#@microsoft-teams-js-pages-tabs-gettabinstances&preserve-view=true) APIs aren't supported in the new Teams client. We recommend to use the [chat](/graph/api/chat-list-tabs?view=graph-rest-1.0&tabs=http&preserve-view=true) and [channel tabs](/graph/api/channel-list-tabs?view=graph-rest-1.0&tabs=http&preserve-view=true) Graph APIs.
+
+* [Pinning and unpinning apps](https://support.microsoft.com/office/pin-an-app-for-easy-access-in-microsoft-teams-3045fd44-6604-4ba7-8ecc-1c0d525e89ec) from the left side of Teams isn't supported in the new Teams client.
+
+* [DevTools](/microsoft-edge/devtools-guide-chromium/overview) isn't supported in the new Teams client.
 
 For more information on known issues and gaps in the new Teams client, see [new Microsoft Teams](/microsoftteams/new-teams-desktop-admin?tabs=teams-admin-center#known-issues).
 
