@@ -131,13 +131,15 @@ items:
    Now you’ve got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to build first.
 
 
-- title: Build an API based message extension
-  durationInMinutes: 1
+- title: Create OpenAPI specification document
+  durationInMinutes: 5
   content: |
 
     ## OpenAPI specification
   
-    You need an OpenAPI specification for the external service you want to interact with. The API spec must meet the following criteria: 
+    OpenAPI specification (OAS) is the industry-standard specification that outlines how OpenAPI files are structured and outlined. It's a language-agnostic, human-readable format for describing APIs. It's easy for both humans and machines to read and write. The schema is machine-readable and represented in either YAML or JSON.
+    
+    You need an OpenAPI specification to interact with the APIs. The API spec must meet the following criteria: 
     
     * Must not have `auth` specified.
     * Must have at most one required parameter or property in the request body. You can make a required parameter optional and add a default value.
@@ -151,89 +153,88 @@ items:
 
     ```YAML
         openapi: 3.0.1
-info:
-  version: v0
-  title: Open AI Klarna product Api
-servers:
-  - url: https://www.klarna.com/us/shopping
-tags:
-  - name: open-ai-product-endpoint
-    description: Open AI Product Endpoint. Query for products.
-paths:
-  /public/openai/v0/products:
-    get:
-      tags:
-        - open-ai-product-endpoint
-      summary: API for fetching Klarna product information
-      operationId: productsUsingGET
-      parameters:
-        - name: countryCode
-          in: query
-          description: ISO 3166 country code with 2 characters based on the user location. Currently, only US, GB, DE, SE and DK are supported.
-          required: true
-          schema:
-            type: string
-        - name: q
-          in: query
-          description: 'A precise query that matches one very small category or product that needs to be searched for to find the products the user is looking for. If the user explicitly stated what they want, use that as a query. The query is as specific as possible to the product name or category mentioned by the user in its singular form, and don''t contain any clarifiers like latest, newest, cheapest, budget, premium, expensive or similar. The query is always taken from the latest topic, if there is a new topic a new query is started. If the user speaks another language than English, translate their request into English (example: translate fia med knuff to ludo board game)!'
-          required: true
-          schema:
-            type: string
-        - name: size
-          in: query
-          description: number of products returned
-          required: false
-          schema:
-            type: integer
-        - name: min_price
-          in: query
-          description: (Optional) Minimum price in local currency for the product searched for. Either explicitly stated by the user or implicitly inferred from a combination of the user's request and the kind of product searched for.
-          required: false
-          schema:
-            type: integer
-        - name: max_price
-          in: query
-          description: (Optional) Maximum price in local currency for the product searched for. Either explicitly stated by the user or implicitly inferred from a combination of the user's request and the kind of product searched for.
-          required: false
-          schema:
-            type: integer
-      responses:
-        '200':
-          description: Products found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ProductResponse'
-        '503':
-          description: one or more services are unavailable
-      deprecated: false
-components:
-  schemas:
-    Product:
-      type: object
-      properties:
-        attributes:
-          type: array
-          items:
-            type: string
-        name:
-          type: string
-        price:
-          type: string
-        url:
-          type: string
-      title: Product
-    ProductResponse:
-      type: object
-      properties:
-        products:
-          type: array
-          items:
-            $ref: '#/components/schemas/Product'
-      title: ProductResponse
-
-
+        info:
+        version: v0
+        title: Open AI Klarna product Api
+        servers:
+        - url: https://www.klarna.com/us/shopping
+        tags:
+        - name: open-ai-product-endpoint
+            description: Open AI Product Endpoint. Query for products.
+        paths:
+        /public/openai/v0/products:
+            get:
+            tags:
+                - open-ai-product-endpoint
+            summary: API for fetching Klarna product information
+            operationId: productsUsingGET
+            parameters:
+                - name: countryCode
+                in: query
+                description: ISO 3166 country code with two characters based on the user location. Currently, only US, GB, DE, SE and DK are supported.
+                required: true
+                schema:
+                    type: string
+                - name: q
+                in: query
+                description: 'A precise query that matches one small category or product that needs to be searched for to find the products the user is looking for. If the user explicitly stated what they want, use that as a query. The query is as specific as possible to the product name or category mentioned by the user in its singular form, and don't contain any clarifiers like latest, newest, cheapest, budget, premium, expensive or similar. The query is always taken from the latest article, if there's a new article a new query is started. If the user speaks another language than English, translate their request into English.'
+                required: true
+                schema:
+                    type: string
+                - name: size
+                in: query
+                description: number of products returned
+                required: false
+                schema:
+                    type: integer
+                - name: min_price
+                in: query
+                description: (Optional) Minimum price in local currency for the product searched for. Either explicitly stated by the user or implicitly inferred from a combination of the user's request and the kind of product searched for.
+                required: false
+                schema:
+                    type: integer
+                - name: max_price
+                in: query
+                description: (Optional) Maximum price in local currency for the product searched for. Either explicitly stated by the user or implicitly inferred from a combination of the user's request and the kind of product searched for.
+                required: false
+                schema:
+                    type: integer
+            responses:
+                '200':
+                description: Products found
+                content:
+                    application/json:
+                    schema:
+                        $ref: '#/components/schemas/ProductResponse'
+                '503':
+                description: one or more services are unavailable
+            deprecated: false
+        components:
+        schemas:
+            Product:
+            type: object
+            properties:
+                attributes:
+                type: array
+                items:
+                    type: string
+                name:
+                type: string
+                price:
+                type: string
+                url:
+                type: string
+            title: Product
+            ProductResponse:
+            type: object
+            properties:
+                products:
+                type: array
+                items:
+                    $ref: '#/components/schemas/Product'
+            title: ProductResponse
     ```
+    * Ensure that the `required: true` is available for only one parameter. If there are more than one required parameters, you can update the required property to `required: false` for the other parameters. 
     </details>
 
     You can validate and verify if the OpenAPI specification document is valid by following these steps:
@@ -253,17 +254,22 @@ components:
 
        :::image type="content" source="assets/images/Copilot/api-me-sbs-execute-get-response.png" alt-text="Screenshots shows the parameters, its values and the **EXECUTE** option in the swagger editor.":::
 
-    1. Select **Execute**.
+    1. Select **Execute**. The swagger editor displays a response with a list of products.
     1. Go to **Server response** > **Response Body**.
     1. Under `products`, copy the first product from the list and save it for future reference.
 
        :::image type="content" source="assets/images/Copilot/api-me-sbs-product-response.png" alt-text="Screenshots shows the highlighted product that is selected from the response body.":::
+
+- title: Create response rendering template
+  durationInMinutes: 5
+  content: |
+
+   An OpenAPI specification document requires a response rendering template for the app to respond to the get requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
+
+   ### Adaptive Card template 
     
-    ### Response rendering template 
     
-    An OpenAPI specification document requires a response rendering template for the app to respond to the get requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
-    
-    To create a response rendering template, follow these steps:
+    To create an  Adaptive Card template, follow these steps:
     
     1. Go to ChatGPT and ask the following query in the message compose area:
 
@@ -283,7 +289,7 @@ components:
                 "Series:Nike Dunk"
             ]
             }
-       ````
+       ```
      1. Select **Send message**. 
 
      1. ChatGPT generates a response with an Adaptive Card template that binds to the sample data. Save the Adaptive Card template for future reference.
@@ -368,7 +374,6 @@ components:
             }
         ]
         }
-
         ``` 
         </details>
 
@@ -385,11 +390,63 @@ components:
           
           :::image type="content" source="assets/images/Copilot/api-me-sbs-adaptive-card-preview.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::   
     
-    1. Create a json file and add the adaptive card template code under `responseCardTemplate`. 
-    1. Create a simplified preview card template and put it under the key `previewCardTemplate`. 
-    1. Add `"version": "1.0.0"` to the response rendering template.
-    1. Add the `responseLayout` and update the value as `list`.
-    1. Determine `jsonPath` to the relevant data/array in the product response. In this case, the `jsonPath` is "products". For more information on how to determiner the JSON path, see [Querying JSON with JSON path](https://www.newtonsoft.com/json/help/html/QueryJsonSelectToken.htm).
+    1. Create a preview card template. The preview card template can contain a `title`, `subtitle` and `image` properties. If the API response doesn't have an image, you can remove the image property.
+
+       Following is an example of a preview card template:
+
+       <details><summary>Preview card template</summary>
+
+       ```json
+       {
+        "title": "Title: ${if(title, title, 'N/A')}",
+        "subtitle": "Description: ${if(description, description, 'N/A')}",
+        "image": {
+            "url": "${image}",
+            "$when": "${image != null}"
+        }
+       }
+       ```
+       Create an if condition for the `title` and `subtitle` where, if name exists, the bot uses the name, else, it uses NA. For example, `"title": "Name: ${if(name, name, 'N/A')}"`. Save the preview card template for future reference.
+       </details>
+
+
+     ### Response rendering template
+
+    To create a response rendering template, follow these steps:
+
+    1. Create a json file and create a response rendering template that conforms to the following schema:
+
+       ```json
+       { 
+         "version": "1.0.0", 
+         "$schema": "<URL_REFERENCE_TO_SCHEMA>", 
+         "jsonPath": "", 
+         "responseLayout": "", 
+         "responseCardTemplate": { 
+        },
+        "previewCardTemplate": {
+            }
+        }
+        ```
+    1. Update the properties in the response rendering template as follows:
+       1. `"version"`: `"1.0.0"`
+       1. `"$schema"`: `"http://adaptivecards.io/schemas/adaptive-card.json"`
+       1. `"jsonPath"`: `"products"`
+
+          `jsonPath` is the path to the result(s) in the response JSON response. Add the `jsonPath` to the relevant data/array from the product list in the API response. In this case, the `jsonPath` is "products". For more information on how to determiner the JSON path, see [Querying JSON with JSON path](https://www.newtonsoft.com/json/help/html/QueryJsonSelectToken.htm).
+
+       1. `"responseLayout"`: `"list"`
+
+           `responseLayout` specifies the layout of the attachments. Used for responses of type result. Supported types are list and grid. If the response body contains an object with multiple elements like text, title, and image, then the response layout must be set to `list`. If the API response contains only images or thumbnails, then the response layout must be set to `grid`.
+
+       1. `"responseCardTemplate"`: Paste the Adaptive Card template code you've saved earlier.
+
+           `responseCardTemplate` is an adaptive card template to map the JSON response to an adaptive card.
+
+       1. `"previewCardTemplate"`: Paste the preview card template code you've saved earlier.
+
+           `previewCardTemplate` is a preview card template is used to show a preview of results in the message extension flyout.
+
     1. Save the response rendering template in the same folder you saved the OpenAPI spec. 
 
     The following code is an example of a Response rendering template:
@@ -399,7 +456,7 @@ components:
     ```json
     {
         "version": "1.0",
-        "responseLayout": "grid",
+        "responseLayout": "list",
         "responseCardTemplate": {
         "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
         "type": "AdaptiveCard",
@@ -487,12 +544,18 @@ components:
 
     ```
     </details>
-    
-    ### Create a Teams App Manifest
-    
-    Now, you need to create a Teams app manifest. This manifest will define the properties of your Teams app. To create the manifest, follow these steps: 
 
-    1. Create a new JSON file. This file will follow the basic structure for creating a Teams app manifest for API Messaging Extensions.
+- title: Create app manifest
+  durationInMinutes: 3
+  content: |
+
+    Now, you need to create an app manifest (previously called Teams app manifest). The app manifest describes how your app integrates into the Microsoft Teams product.
+
+    ### Create a Teams app manifest
+    
+    To create the manifest, follow these steps: 
+    
+    1. Create a new JSON file. Your app manifest must conform to the schema defined in the [Microsoft Teams schema](https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json).
 
     1. Add the following code in the JSON file:
 
@@ -556,7 +619,6 @@ components:
         "validDomains": []
        }
        ```
-
        </details>
     
     Ensure that the app manifest file meets the following requirements:
