@@ -24,13 +24,13 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
    Your app is hosted using Azure resources.
 
-    A dialog warns you that costs may be incurred when running resources in Azure.
+    A dialog warns you that costs might be incurred when running resources in Azure.
 
 1. Select **Provision**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot showing a dialog box that costs may be incurred when running resources in Azure.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot showing a dialog box that costs might be incurred when running resources in Azure.":::
 
-   The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
+   The provisioning process creates resources in the Azure cloud. It might take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing a notice, which displays 'hellomsg' successfully provisioned in the cloud.":::
 
