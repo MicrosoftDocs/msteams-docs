@@ -8,7 +8,7 @@ ms.date: 09/28/2022
 
 # Create Teams app package
 
-If you're planning to distribute your  Microsoft Teams app, you need to create an app package. A valid app package is a ZIP file (compressed zip file) that must contain the following files:
+To distribute your Microsoft Teams app, you need to create an app package. A valid app package is a ZIP file (compressed zip file) that must contain the following files:
 
 * **App manifest**: Describes how your app is configured, including its capabilities, required resources, and other important attributes.
 * **App icons**: Each package requires a color and outline icon for your app.
@@ -29,7 +29,7 @@ When publishing to the Microsoft Teams Store, make sure your manifest references
 
 Your app package must include two .png versions of your app icon: A color and outline version.
 
-> [!Note]
+> [!NOTE]
 > If your app has a bot or message extension, your icons are included in your Microsoft Azure Bot Service registration.
 
 For your app to pass Teams Store review, these icons must meet the following size requirements.
@@ -49,7 +49,7 @@ An outline icon displays in two scenarios:
 * When your app is in use and “hoisted” on the app bar on the left side of Teams.
 * When a user pins your app's message extension.
 
-The icon must be 32x32 pixels. It can be white with a transparent background or transparent with a white background (no other colors are permitted). The outline icon should not have any extra padding around the symbol.
+The icon must be 32x32 pixels. It can be white with a transparent background or transparent with a white background (no other colors are permitted). The outline icon shouldn't have any extra padding around the symbol.
 
 :::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams outline icon design guidance.":::
 
