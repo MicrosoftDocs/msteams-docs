@@ -100,16 +100,14 @@ The following table differentiates the types of message extensions:
 
 :::image type="content" source="../assets/images/Copilot/api-bot-based-message-extension-decision-tree.png" alt-text="Screenshot shows the decision tree, which helps the user to choose between API based and bot based message extension.":::
 
-[Bot-based Message extension]()
-
-Select the following options:
+Select the following tile to build a message extension:
 
 :::row:::
     :::column:::
-        :::image type="content" source="../assets/images/Copilot/build-message-extension-API-tile.png" alt-text="Screenshot shows the OpenAPI icon tile." link="api-based-overview.md":::
+        :::image type="content" source="../assets/images/Copilot/build-message-extension-API-tile.png" alt-text="Screenshot shows the OpenAPI icon tile." link="api-based-overview.md" border="false":::
     :::column-end:::
     :::column:::
-        :::image type="content" source="../assets/images/Copilot/build-message-extension-bot-tile.png" alt-text="Screenshot shows the Bot Framework tile." link="build-bot-based-message-extension.md":::
+        :::image type="content" source="../assets/images/Copilot/build-message-extension-bot-tile.png" alt-text="Screenshot shows the Bot Framework tile." link="build-bot-based-message-extension.md" border="false":::
     :::column-end:::
 :::row-end:::
 
