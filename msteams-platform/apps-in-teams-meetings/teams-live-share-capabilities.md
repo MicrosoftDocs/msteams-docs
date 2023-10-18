@@ -808,9 +808,6 @@ export function CountdownTimer() {
 
 Meetings in Teams include calls, all-hands meetings, and online classrooms. Meeting participants might span across organizations, have different privileges, or simply have different goals. Hence, it’s important to respect the privileges of different user roles during meetings. Live objects are designed to support role verification, allowing you to define the roles that are allowed to send messages for each individual live object. For example, you could choose that only meeting presenters and organizers can control video playback, but still allow guests and attendees to request videos to watch next.
 
-> [!NOTE]
-> The `LivePresence` class doesn't support role verification. The `LivePresenceUser` object has a `getRoles` method, which returns the meeting roles for a given user.
-
 In the following example where only presenters and organizers can take control, `LiveState` is used to synchronize which user is the active presenter:
 
 # [JavaScript](#tab/javascript)
