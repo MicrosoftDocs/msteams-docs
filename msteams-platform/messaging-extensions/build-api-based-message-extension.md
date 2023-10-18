@@ -194,7 +194,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
    1. Select **Default folder**.
    1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI spec file and created an API-based message extension.
 
-   ---
+    ---
 
 1. From the left pane, select **Teams Toolkit**.
 1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](https://docs.microsoft.com/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.

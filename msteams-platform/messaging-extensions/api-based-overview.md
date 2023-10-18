@@ -250,82 +250,83 @@ The following code is an example of a Response rendering template: <br/>
 
 The properties in OpenAPI specification document are mapped to the Adaptive Card template as follows:
 
-<details><summary>`string`, `number`, `integer`, `boolean`</summary>
+* `string`, `number`, `integer`, `boolean` types are converted to a TextBlock.
 
-string, number, integer, and  boolean types are converted to a TextBlock.
+:::row:::
+    :::column:::
+        **Source Schema**: `string`, `number`, `integer`, and `boolean` </br>
+       **Example**
 
-The following is an example of `string` and `Textblock`:
+       ```yml
+        name:
+          type: string
+          example: doggie
 
-**`string` property in schema**
-
-```yml
-name:
-  type: string
-  example: doggie
-
-```
-
-**`TextBlock` in Adaptive Card**
-
-```json
-{
-  "type": "TextBlock",
-  "text": "name: ${if(name, name, 'N/A')}",
-  "wrap": true
-}
-
-```
-
-</details>
-<br/>
-<details><summary>`array`</summary>
-An array is converted as a container inside Adaptive Card.
-
-The following is an example of an array and a container inside Adaptive Card:
-
-**`array` property in schema**:
-
-```yml
-  type: array
-  items:
-  required:
-    - name
-  type: object
-    properties:
-    id:
-      type: integer
-    category:
-      type: object
-      properties:
-      name:
-        type: string
-
-```
-
-**`Container` in Adaptive Card**
-
-```json
-{
-  "type": "Container",
-  "$data": "${$root}",
-  "items": [
-    {
+       ```
+    :::column-end:::
+    :::column:::
+  **Target Schema**:`Textblock`
+    **Example**
+      ```json
+      {
       "type": "TextBlock",
-      "text": "id: ${if(id, id, 'N/A')}",
-      "wrap": true
-    },
-    {
-      "type": "TextBlock",
-      "text": "category.name: ${if(category.name, category.name, 'N/A')}",
+      "text": "name: ${if(name, name, 'N/A')}",
       "wrap": true
     }
-  ]
-}
+      ```
+    :::column-end:::
+:::row-end:::
 
-```
+* `array`: An array is converted as a container inside Adaptive Card.
 
-</details>
-<br/>
+:::row:::
+    :::column:::
+        **Source schema**: `array` </br>
+       **Example**
+
+        ```yml
+        type: array
+                  items:
+                  required:
+                    - name
+                  type: object
+                    properties:
+                    id:
+                      type: integer
+                    category:
+                      type: object
+                      properties:
+                      name:
+                        type: string
+        ```
+
+    :::column-end:::
+    :::column:::
+        **Target Schema**: `Container`</br>
+        **Example**
+
+        ```json
+        {
+                  "type": "Container",
+                  "$data": "${$root}",
+                  "items": [
+                    {
+                      "type": "TextBlock",
+                      "text": "id: ${if(id, id, 'N/A')}",
+                      "wrap": true
+                    },
+                    {
+                      "type": "TextBlock",
+                      "text": "category.name: ${if(category.name, category.name, 'N/A')}",
+                      "wrap": true
+                    }
+                  ]
+                }
+                
+        ```
+    :::column-end:::
+:::row-end:::
+
 <details><summary>`object`</summary>
 
 An object is converted to a nested property in Adaptive Card.
