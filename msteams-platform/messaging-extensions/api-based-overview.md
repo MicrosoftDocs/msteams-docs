@@ -131,7 +131,19 @@ The following code is an example of an OpenAPI specification document in YAML fo
 
 </details>
 
+### Response rendering template
+
+A response rendering template is used to map the JSON responses to a preview card and Adaptive Card. The preview cards are shown for the results and when a user selects a search result. The preview is expanded to show an Adaptive Card in the compose box.
+
 A response rendering template must be present for each search command and each command must correspond to an operation in the OpenAPI spec but not every operation defined in an API spec has to be a command. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
+
+**Preview Card**
+
+:::image type="content" source="../assets/images/Copilot/api-based-message-extension-preview-card.png" alt-text="Screenshot shows an example on how the compose extension looks like, displaying an array of preview cards when searching for a specific word. In this case, searching for 'a' in the  'SME test app' returns five cards showing 'Title', 'Description' (truncated) and 'AssignedTo' properties and values in each one.":::
+
+**Expanded Adaptive Card**
+
+:::image type="content" source="../assets/images/Copilot/api-based-message-extension-expanded-adative-card.png" alt-text="Example of how the adaptive card looks like expanded once a user selects a preview card. The adaptive card show the 'Title', the full 'Description', 'AssignedTo', 'RepairId' and 'Date' values.":::
 
 The following code is an example of a Response rendering template: <br/>
 <br/>
@@ -224,78 +236,17 @@ The following code is an example of a Response rendering template: <br/>
 
 </details>
 
-## Update app manifest
+#### Details and Schema changes
 
-Update app manifest with the `composeExtensions` property. The following code is an example of the app manifest with the `composeExtensions` property:
+|Property  |Type  |Description  |Required  |
+|--------- |---------|---------|---------|
+|`version` |  `string` | The schema version of the current response rendering template.        |  Yes       |
+|`jsonPath`     | `string`        | The path  to the relevant section in the results to which the responseCardTemplate and previewCardTemplate should be applied. If not set, the root object is treated as the relevant section. If the relevant section is an array, each entry is mapped to the responseCardTemplate and the previewCardTemplate.        |   No      |
+|`responseLayout`    | `responseLayoutType`        |  Specifies the layout of the results in the message extension flyout. The Supported types are `list` and `grid`.       |    Yes     |
+|`responseCardTemplate`    |  `adaptiveCardTemplate`  | A template for creating an adaptive card from a result entry.      |   Yes      |
+|`previewCardTemplate`     |  `previewCardTemplate`       | A template for creating a preview card from a result entry.The resulting preview card is shown in the message extension flyout.        |  Yes       |
 
-```json
-{
-    "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
-    "manifestVersion": "devPreview",
-    "version": "1.0.3",
-    "id": "55490e7f-xxxx-xxxx-xxxx-9eea9281b0fa",
-    "packageName": "com.microsoft.teams.extension",
-    "developer": {
-        "name": "Teams App, Inc.",
-        "websiteUrl": "https://www.example.com",
-        "privacyUrl": "https://www.example.com/termofuse",
-        "termsOfUseUrl": "https://www.example.com/privacy"
-    },
-    "icons": {
-        "color": "color.png",
-        "outline": "outline.png"
-    },
-    "name": {
-        "short": "sampletest2809-dev",
-        "full": "Full name for sampletest2809"
-    },
-    "description": {
-        "short": "Open AI Klarna product Api",
-        "full": "Full description for sampletest2809"
-    },
-    "accentColor": "#FFFFFF",
-    "composeExtensions": [
-        {
-          "type": "ApiBased",
-          "apiSpecFile": "listrepairsapispec.yaml",
-          "commands": [
-            {
-              "context": [
-                "compose"
-              ],
-              "type": "query",
-              "id": "listRepairs",
-              "title": "List repairs",
-              "parameters": [
-                {
-                  "title": "Filter",
-                  "name": "filter",
-                  "description": "Filter repairs by who they're assigned to."
-                }
-              ],
-              "apiResponseRenderingTemplateFile": "listrepairsresponsetemplate.json"
-            }
-          ]
-        }
-      ],
-      "validDomains": [
-        "repairs-api-2023.azurewebsites.net"
-      ]
-}
-```
-
-|Name  |Description  |
-|---------|---------|
-|`composeExtension.type`     |  Update the value to `ApiBased`. |
-|`composeExtension.apiSpecificationFile`     |  This references an OpenAPI spec file in the app package. Include when type is `ApiBased`.      |
-|`composeExtension.command.ID`      | This property is a unique ID that you assign to search command. The user request includes this ID. The ID must  match the `OperationID` available in the  OpenAPI spec.       |
-|`composeExtension.command.context`      | An existing array where the entry points for message extension is defined.  The possible values are `compose` or `commandBox`. The default is `["compose", "commandBox"]`. |
-|`composeExtension.command.parameters`    | This property defines a static list of parameters for the command. The name must map to the `parameters.name` in the OpenAPI spec. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters.     |
-|`composeExtension.command.apiResponseRenderingTemplateFile`| A template used to format the JSON response from developer’s API to Adaptive Card response. *Mandatory* |
-
-For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
-
-## Schema mapping
+#### Schema mapping
 
 The properties in OpenAPI specification document are mapped to the Adaptive Card template as follows:
 
@@ -443,6 +394,77 @@ The following is an example of an `image` property in YAML and an image element 
 ```
 
 </details>
+
+### Update app manifest
+
+Update app manifest with the `composeExtensions` property. The following code is an example of the app manifest with the `composeExtensions` property:
+
+```json
+{
+    "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+    "manifestVersion": "devPreview",
+    "version": "1.0.3",
+    "id": "55490e7f-xxxx-xxxx-xxxx-9eea9281b0fa",
+    "packageName": "com.microsoft.teams.extension",
+    "developer": {
+        "name": "Teams App, Inc.",
+        "websiteUrl": "https://www.example.com",
+        "privacyUrl": "https://www.example.com/termofuse",
+        "termsOfUseUrl": "https://www.example.com/privacy"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "sampletest2809-dev",
+        "full": "Full name for sampletest2809"
+    },
+    "description": {
+        "short": "Open AI Klarna product Api",
+        "full": "Full description for sampletest2809"
+    },
+    "accentColor": "#FFFFFF",
+    "composeExtensions": [
+        {
+          "type": "ApiBased",
+          "apiSpecFile": "listrepairsapispec.yaml",
+          "commands": [
+            {
+              "context": [
+                "compose"
+              ],
+              "type": "query",
+              "id": "listRepairs",
+              "title": "List repairs",
+              "parameters": [
+                {
+                  "title": "Filter",
+                  "name": "filter",
+                  "description": "Filter repairs by who they're assigned to."
+                }
+              ],
+              "apiResponseRenderingTemplateFile": "listrepairsresponsetemplate.json"
+            }
+          ]
+        }
+      ],
+      "validDomains": [
+        "repairs-api-2023.azurewebsites.net"
+      ]
+}
+```
+
+|Name  |Description  |
+|---------|---------|
+|`composeExtension.type`     |  Update the value to `ApiBased`. |
+|`composeExtension.apiSpecificationFile`     |  This references an OpenAPI spec file in the app package. Include when type is `ApiBased`.      |
+|`composeExtension.command.ID`      | This property is a unique ID that you assign to search command. The user request includes this ID. The ID must  match the `OperationID` available in the  OpenAPI spec.       |
+|`composeExtension.command.context`      | An existing array where the entry points for message extension is defined.  The possible values are `compose` or `commandBox`. The default is `["compose", "commandBox"]`. |
+|`composeExtension.command.parameters`    | This property defines a static list of parameters for the command. The name must map to the `parameters.name` in the OpenAPI spec. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters.     |
+|`composeExtension.command.apiResponseRenderingTemplateFile`| A template used to format the JSON response from developer’s API to Adaptive Card response. *Mandatory* |
+
+For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
 
 ## Next step
 
