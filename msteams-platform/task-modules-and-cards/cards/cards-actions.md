@@ -696,16 +696,30 @@ The following code shows an example of Adaptive Cards with `invoke` action:
 The following code shows an example of Adaptive Cards with `invoke` action with additional payload data:
 
 ```json
-{
-  "type": "Action.Submit",
-  "title": "submit",
-  "data": {
-    "msteams": {
-      "type": "invoke",
-      "value": "{ \"string\": \"object\"}"
+[
+  {
+    "type": "Action.Submit",
+    "title": "submit with object value",
+    "data": {
+      "ab": "xy",
+      "msteams": {
+        "type": "invoke",
+        "value": { "a": "b" }
+      }
+    }
+  },
+  {
+    "type": "Action.Submit",
+    "title": "submit with stringified json value",
+    "data": {
+      "ab": "xy",
+      "msteams": {
+        "type": "invoke",
+        "value": "{ \"a\": \"b\"}"
+      }
     }
   }
-}
+]
 ```
 
 ## Code samples
