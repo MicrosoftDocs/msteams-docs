@@ -23,11 +23,11 @@ The following image displays the locations from where message extensions are inv
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../assets/images/messaging-extension-invoke-locations.png" alt-text="Screenshot shows the message extension invoke location in Teams desktop.":::
+:::image type="content" source="../assets/images/messaging-extension-invoke-locations.png" alt-text="Screenshot shows the message extensions invoke location in Teams desktop.":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../assets/images/messaging-extension-invoke-location-mobile.png" alt-text="Screenshot shows the message extension invoke location in Teams mobile.":::
+:::image type="content" source="../assets/images/messaging-extension-invoke-location-mobile.png" alt-text="Screenshot shows the message extensions invoke location in Teams mobile.":::
 
 ---
 

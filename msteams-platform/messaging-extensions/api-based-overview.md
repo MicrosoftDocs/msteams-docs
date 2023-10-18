@@ -139,11 +139,11 @@ A response rendering template must be present for each search command and each c
 
 **Preview Card**
 
-:::image type="content" source="../assets/images/Copilot/api-based-message-extension-preview-card.png" alt-text="Screenshot shows an example on how the compose extension looks like, displaying an array of preview cards when searching for a specific word. In this case, searching for 'a' in the  'SME test app' returns five cards showing 'Title', 'Description' (truncated) and 'AssignedTo' properties and values in each one.":::
+:::image type="content" source="../assets/images/Copilot/api-based-message-extension-preview-card.png" alt-text="Screenshot shows an example of how the compose extension looks like, displaying an array of preview cards when searching for a specific word. In this case, searching for 'a' in the  'SME test app' returns five cards showing 'Title', 'Description' (truncated) and 'AssignedTo' properties and values in each one.":::
 
 **Expanded Adaptive Card**
 
-:::image type="content" source="../assets/images/Copilot/api-based-message-extension-expanded-adative-card.png" alt-text="Example of how the adaptive card looks like expanded once a user selects a preview card. The adaptive card show the 'Title', the full 'Description', 'AssignedTo', 'RepairId' and 'Date' values.":::
+:::image type="content" source="../assets/images/Copilot/api-based-message-extension-expanded-adative-card.png" alt-text="Example of how the adaptive card looks like expanded once a user selects a preview card. The adaptive card shows the 'Title', the full 'Description', 'AssignedTo', 'RepairId' and 'Date' values.":::
 
 The following code is an example of a Response rendering template: <br/>
 <br/>
@@ -244,7 +244,7 @@ The following code is an example of a Response rendering template: <br/>
 |`jsonPath`     | `string`        | The path  to the relevant section in the results to which the responseCardTemplate and previewCardTemplate should be applied. If not set, the root object is treated as the relevant section. If the relevant section is an array, each entry is mapped to the responseCardTemplate and the previewCardTemplate.        |   No      |
 |`responseLayout`    | `responseLayoutType`        |  Specifies the layout of the results in the message extension flyout. The Supported types are `list` and `grid`.       |    Yes     |
 |`responseCardTemplate`    |  `adaptiveCardTemplate`  | A template for creating an adaptive card from a result entry.      |   Yes      |
-|`previewCardTemplate`     |  `previewCardTemplate`       | A template for creating a preview card from a result entry.The resulting preview card is shown in the message extension flyout.        |  Yes       |
+|`previewCardTemplate`     |  `previewCardTemplate`       | A template for creating a preview card from a result entry. The resulting preview card is shown in the message extension flyout.        |  Yes       |
 
 #### Schema mapping
 
@@ -270,6 +270,7 @@ The properties in OpenAPI specification document are mapped to the Adaptive Card
       "wrap": true
     }
       ```
+
 </details>
 
 * `array`: An array is converted as a container inside Adaptive Card.
@@ -293,6 +294,7 @@ The properties in OpenAPI specification document are mapped to the Adaptive Card
                       name:
                         type: string
     ```
+
   * **Target Schema**: `Container`
 
     ```json
@@ -314,6 +316,7 @@ The properties in OpenAPI specification document are mapped to the Adaptive Card
                 }
                 
     ```
+
 </details>
 
 * `object`: An object is converted to a nested property in Adaptive Card.
@@ -351,6 +354,7 @@ The properties in OpenAPI specification document are mapped to the Adaptive Card
     }
 
     ```
+
 </details>
 
 * `image`: If a property is an image url, then it will be converted to an Image element in adaptive card.
@@ -368,6 +372,7 @@ The properties in OpenAPI specification document are mapped to the Adaptive Card
     ```
 
   * **Target Schema**
+
     ```json
     {
           "type": "Image",
@@ -376,6 +381,7 @@ The properties in OpenAPI specification document are mapped to the Adaptive Card
         }
 
     ```
+
 </details>
 
 ### Update app manifest
@@ -440,9 +446,9 @@ Update app manifest with the `composeExtensions` property. The following code is
 
 |Name  |Description  |
 |---------|---------|
-|`composeExtension.type`     |  Update the value to `ApiBased`. |
-|`composeExtension.apiSpecificationFile`     |  This references an OpenAPI spec file in the app package. Include when type is `ApiBased`.      |
-|`composeExtension.command.ID`      | This property is a unique ID that you assign to search command. The user request includes this ID. The ID must  match the `OperationID` available in the  OpenAPI spec.       |
+|`composeExtension.type`     |  The compose extension type.  Update the value to `ApiBased`. |
+|`composeExtension.apiSpecificationFile`     |  References an OpenAPI spec file in the app package. Include when type is `ApiBased`.      |
+|`composeExtension.command.ID`      | A unique ID that you assign to search command. The user request includes this ID. The ID must  match the `OperationID` available in the  OpenAPI spec.       |
 |`composeExtension.command.context`      | An existing array where the entry points for message extension is defined.  The possible values are `compose` or `commandBox`. The default is `["compose", "commandBox"]`. |
 |`composeExtension.command.parameters`    | This property defines a static list of parameters for the command. The name must map to the `parameters.name` in the OpenAPI spec. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters.     |
 |`composeExtension.command.apiResponseRenderingTemplateFile`| A template used to format the JSON response from developer’s API to Adaptive Card response. *Mandatory* |
