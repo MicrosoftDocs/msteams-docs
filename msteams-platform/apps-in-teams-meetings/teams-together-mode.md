@@ -28,7 +28,7 @@ Before you start, ensure that you have a basic understanding of the following:
 * Define a scene and assign seats in a scene.
 * Create a Microsoft Developer account and familiarity with the Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
 * Understand the [concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
-* Ensure that the administrator has granted permission to [Upload a custom app](../concepts/deploy-and-publish/apps-upload.md#upload-your-app) and select all filters as part of App Setup and meeting policies respectively.
+* Ensure that the administrator has granted permission to [upload a custom app](../concepts/deploy-and-publish/apps-upload.md#upload-your-app) and select all filters as part of app setup and meeting policies respectively.
 
 ## Custom Together Mode scene
 
@@ -127,27 +127,30 @@ To build a scene using the Scene studio, follow these steps:
 ## Test custom Together Mode scenes in Teams
 
 > [!NOTE]
-> You can apply a custom Together Mode scene that is deployed by your tenant admin only if you've a [Teams Premium license](/MicrosoftTeams/enhanced-teams-experience?branch=danismith-t-pre-licensing).
+>
+> * You can apply a custom Together Mode scene that is deployed by your tenant admin only if you've a [Teams Premium license](/MicrosoftTeams/enhanced-teams-experience?branch=danismith-t-pre-licensing).
+> * On selecting **View in Teams** in the Scene studio, the scene is installed as an app in Teams. This is the model for a developer to test and try out scenes from the Scene studio. After a scene is exported and sideloaded as a custom app, users can view the scenes in the scene gallery.
 
-To select scenes and use custom Together Mode scenes, follow these steps:
+You must create a new Teams meeting to test the scene in Teams.
 
-1. Create a new test meeting.
+To select scenes and use custom Together Mode scenes, join the Teams meeting and do the following steps:
 
-    > [!NOTE]
-    > On selecting **View in Teams** in the Scene studio, the scene is installed as an app in Teams. This is the model for a developer to test and try out scenes from the Scene studio. After a scene is exported and sideloaded as a custom app, users can view the scenes in the scene gallery.
+1. In Teams meeting window, select **View** and select **Together Mode** from the drop-down list.
 
-1. From the **Gallery** drop-down in the upper-left corner, select **Together Mode**. The **Picker** dialog box appears and the scene that is added is available.
+1. In the **Select a scene** window, select the scene you have added to Teams from Scene studio.
 
-1. Select **Change scene** to change the default scene.
+1. Select **Assign seats** if you want to assign specific seats for meeting participants.
+    1. .In the **Select a participant** section, from **In this meeting**, select the participant and in  the **Choose a seat** section, select a seat for the participant.
+    1. Select **Assign**.
 
-1. From the **Scene Gallery**, select the scene you want to use for your meeting.
+1. Select **Apply**. Teams installs the app for the user and applies the scene.
 
-    Optionally, the meeting organizer and presenter can **Change scene for all participants** in the meeting.
+    Optionally, the meeting organizer and presenter can select **View** > **Change scene** in the meeting.
 
     >[!NOTE]
     > At any point in time, only one scene is used homogeneously for the meeting. If a presenter or organizer changes a scene, it  changes for all. Switching in or out of custom Together Mode scenes is up to individual participants, but while in custom Together Mode scenes, all participants have the same scene.
 
-1. Select **Apply**. Teams installs the app for the user and applies the scene.
+1. The meeting organizer and presenter can select **View** > **Change scene** in the meeting to select any existing scene available.
 
 ## Share a scene using the Scene studio
 
