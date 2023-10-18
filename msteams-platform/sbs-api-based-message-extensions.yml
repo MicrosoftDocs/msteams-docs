@@ -154,7 +154,7 @@ items:
                     schema:
                         $ref: '#/components/schemas/ProductResponse'
                 '503':
-                description: one or more services are unavailable
+                description: one or more services are unavailable.
             deprecated: false
         components:
         schemas:
@@ -229,7 +229,7 @@ items:
             "attributes": [
                 "Outsole:Rubber",
                 "Fastening:Laced",
-                "Target Group:Woman",
+                "Target Group:Female",
                 "Color:Black",
                 "Upper Material:Leather",
                 "Size (US):9.5,10,11,12,13,14,15,16,17,18,11.5,10.5,2,3,4,5,6,7,8,9,2.5,3.5,4.5,16.5,5.5,15.5,6.5,14.5,13.5,7.5,8.5,12.5",
@@ -574,7 +574,7 @@ items:
          * Update the values for `composeExtensionType` to `apibased`.
          * Update the values for `apiSpecificationFile`to the path of your OpenAPI specification file. 
          * Update the `commands.id` value to the `operationId` in the OpenAPI specification document. 
-         * Update the `parameters.name` to the the `parameters.name` property in the OpenAPI specification file. If there are no parameters, then the values must be query parameters or properties.name if referencing a property in the request body schema.
+         * Update the `parameters.name` to the `parameters.name` property in the OpenAPI specification file. If there are no parameters, then the values must be query parameters or properties.name if referencing a property in the request body schema.
          * Update the `apiResponseRenderingTemplateFile` to the path of your response rendering template file.
          * Under valid domains, add the service URL endpoint that is defined in the OpenAPI specification file. 
          
