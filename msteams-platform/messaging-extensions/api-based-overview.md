@@ -255,6 +255,7 @@ The properties in OpenAPI specification document are mapped to the Adaptive Card
 :::row:::
     :::column:::
         **Source Schema**: `string`, `number`, `integer`, and `boolean` </br>
+        </br>
        **Example**
 
        ```yml
@@ -265,8 +266,8 @@ The properties in OpenAPI specification document are mapped to the Adaptive Card
        ```
     :::column-end:::
     :::column:::
-  **Target Schema**:`Textblock`
-    **Example**
+  **Target Schema**:`Textblock` </br>
+    </br>**Example**
       ```json
       {
       "type": "TextBlock",
@@ -282,6 +283,7 @@ The properties in OpenAPI specification document are mapped to the Adaptive Card
 :::row:::
     :::column:::
         **Source schema**: `array` </br>
+        </br>
        **Example**
 
         ```yml
@@ -303,6 +305,7 @@ The properties in OpenAPI specification document are mapped to the Adaptive Card
     :::column-end:::
     :::column:::
         **Target Schema**: `Container`</br>
+        </br>
         **Example**
 
         ```json
@@ -327,13 +330,12 @@ The properties in OpenAPI specification document are mapped to the Adaptive Card
     :::column-end:::
 :::row-end:::
 
-<details><summary>`object`</summary>
+* `object`: An object is converted to a nested property in Adaptive Card.
 
-An object is converted to a nested property in Adaptive Card.
-
-The following is an example of an object and a nested property in Adaptive Card:
-
-**`object` property in schema**
+:::row:::
+    :::column:::
+**Source Schema**</br></br>
+**Example**
 
 ```yml
 components:
@@ -348,9 +350,10 @@ components:
              type: string
 
 ```
-
-**Nested property in Adaptive Card**
-
+    :::column-end:::
+    :::column:::
+  **Target Schema**: **Nested property in Adaptive Card** </br></br>
+  **Example**
 ```json
 {
   "type": "TextBlock",
@@ -364,16 +367,15 @@ components:
 }
 
 ```
+    :::column-end:::
+:::row-end:::
 
-</details>
-</br>
-<details><summary>`image`</summary>
+* `image`: If a property is an image url, then it will be converted to an Image element in adaptive card.
 
-If a property is an image url, then it will be converted to an Image element in adaptive card.
-
-The following is an example of an `image` property in YAML and an image element in an Adaptive Card:
-
-**`image` property in schema**
+:::row:::
+    :::column:::
+**Source schema**</br></br>
+**Example**
 
 ```yml
     image:
@@ -382,9 +384,11 @@ The following is an example of an `image` property in YAML and an image element 
       description: The URL of the image of the item to be repaired
 
 ```
+    :::column-end:::
+    :::column:::
 
-**`Image` element in Adaptive Card**
-
+**Target Schema**</br></br>
+**Example**
 ```json
 {
       "type": "Image",
@@ -393,8 +397,7 @@ The following is an example of an `image` property in YAML and an image element 
     }
 
 ```
-
-</details>
+:::row-end:::
 
 ### Update app manifest
 
