@@ -2,7 +2,7 @@
 title:  Build your first app using Teams AI library
 metadata:
   title: Build your first app using Teams AI library
-  description: In this learn module, you'll learn how to build a bot with Teams AI library and set up, build, and deploy a bot app with Teams Toolkit.
+  description: In this learn module, you learn how to build a bot with Teams AI library and set up, build, and deploy a bot app with Teams Toolkit.
   audience: Developer
   level: Advanced
   ms.date: 10/16/2023
@@ -42,7 +42,7 @@ items:
    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams local environment.
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you can't preview and test your app in Teams local environment.
 
    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
@@ -92,7 +92,7 @@ items:
     * Must have at most one required parameter or property in the request body. You can make a required parameter optional and add a default value.
     * The request body (if present) can't contain any arrays.
     * The server URL must be defined in the specification.
-    * If there's no operation ID, you can add one to the spec that you'll be uploading for testing because an operation ID is mandatory for operations that will be Messaging Extensions. You can validate that the swagger is valid by using an online validator like [Swagger Parser](https://apitools.dev/swagger-parser/online/). Once you have found a suitable API spec, save it in a folder. 
+    * If there's no operation ID, you can add one to the spec that you'll be uploading for testing because an operation ID is mandatory for operations that'll be Messaging Extensions. You can validate that the swagger is valid by using an online validator like [Swagger Parser](https://apitools.dev/swagger-parser/online/). Once you have found a suitable API spec, save it in a folder. 
 
     We've used the following OpenAPI spec as an example for this tutorial:
 
@@ -221,7 +221,7 @@ items:
     1. Go to ChatGPT and ask the following query in the message compose area:
 
        ```text
-       Create an Adaptive Card template that binds to the following sample data:
+        Create an Adaptive Card template that binds to the following sample data:
         {
             "name": "Nike Dunk Low W - White/Black",
             "url": "https://www.klarna.com/us/shopping/pl/cl337/3200134705/Shoes/Nike-Dunk-Low-W-White-Black/?utm_source=openai&ref-site=openai_plugin",
@@ -579,7 +579,7 @@ items:
          * Under valid domains, add the service URL endpoint that is defined in the OpenAPI specification file. 
          
     1. Save the Teams app manifest in the same folder you saved the OpenAPI spec and the response rendering template.
-        * You'll also need a color image and outline image. These images should be included in the folder and referenced in your Teams app manifest. 
+        * You need a color image and outline image. These images should be included in the folder and referenced in your Teams app manifest. 
         * Zip up the contents of the folder. 
 
     
