@@ -8,12 +8,12 @@ ms.localizationpriority: medium
 
 # Communication flow for Microsoft Teams bot applications
 
-Understanding the communication flow for Teams bot applications is a key aspect of developing and managing effective bots. This guide provides a detailed look into how traffic is routed between a user in Teams and a bot application running in Azure. It's designed to help you inspect the traffic and understand the user data flow in transit and at rest for bots in Teams.
+The key aspect of developing and managing effective bots is to learn about the communication flow for Teams bot applications and understand how the traffic is routed between a user in Microsoft Teams and a bot application running in Azure. This article helps you learn how to inspect the traffic and understand the user data flow in transit and at rest for bots in Teams.
 
-This guide focuses on the use of messaging and calling bots in Teams. Let's dive in and explore the world of Teams bot applications.
+The use cases explained here are messaging and calling bots in Teams. Let's dive in and explore the world of Teams bot applications.
 
 > [!NOTE]
-> This article is applicable to customers using Microsoft 365 worldwide or United States Government Community Cloud (GCC) and not applicable to other cloud endpoints.
+> This article is applicable to customers using Microsoft 365 worldwide and Government Community Cloud (GCC).
 
 ## Architecture and data flow
 
@@ -40,7 +40,7 @@ The data flow shown in the diagram is explained as follows:
 1. **Access to domains**: Your bot needs access to Microsoft services for operations such as validate the JWT token sent in the HTTP Authorization header or facilitate user single sign-on (SSO). We recommend implementing FQDN-based filtering as the list of IP addresses can vary over time.
 1. **Bot permissions on Microsoft Graph API**: If your bot requires additional permissions to perform operations on your Microsoft 365 environment, you need to trigger an authentication flow to get the appropriate access token from Azure AD. We recommend you to implement user-managed identities that simplifies and secure the management of application secrets. Messaging bots generally use delegated permission on-behalf-of the connected user. Calling bots require application permission to have control over the call to hang up, redirect, join participants, and access the audio stream. Your bot needs access to the `graph.microsoft.com` domain to query the Microsoft Graph API.
 
-## Scenario details
+## Enhance user experience with bots
 
 Bots allow Teams users to interact with web services through text, interactive cards, and task modules. The Microsoft Bot Framework and Azure Bot Services provide an easy-to-use set of tools for creating and managing these bots.
 
