@@ -278,7 +278,7 @@ The properties in OpenAPI specification document are mapped to the Adaptive Card
 
   * **Source schema**: `array`
 
-        ```yml
+    ```yml
         type: array
                   items:
                   required:
@@ -292,10 +292,10 @@ The properties in OpenAPI specification document are mapped to the Adaptive Card
                       properties:
                       name:
                         type: string
-        ```
+    ```
   * **Target Schema**: `Container`
 
-        ```json
+    ```json
         {
                   "type": "Container",
                   "$data": "${$root}",
@@ -313,7 +313,7 @@ The properties in OpenAPI specification document are mapped to the Adaptive Card
                   ]
                 }
                 
-        ```
+    ```
 </details>
 
 * `object`: An object is converted to a nested property in Adaptive Card.

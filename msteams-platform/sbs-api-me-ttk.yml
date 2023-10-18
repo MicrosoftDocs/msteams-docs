@@ -516,14 +516,9 @@ items:
     To provision your app on Azure:
 
     1. Go to Teams Toolkit and from the left pane, select **Run and Debug** (**Ctrl+Shift+D**).
-    1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
-    1. Select **Start Debugging**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/start-debugging.png" alt-text="Screenshot shows the location of the Start Debugging button in the Teams Toolkit sidebar.":::
+    1. Select **Launch Remote (Edge)** from the launch configuration dropdown.        
 
         The Teams Toolkit provisions your app on Azure and deploys it to Teams. The following message appears in the **OUTPUT** window.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/provisioning.png" alt-text="Screenshot shows the message from Teams Toolkit that the feature is successfully created along with the option to select Debug.":::
 
         > [!NOTE]
         > The first time you provision your app, it takes a few minutes to complete. Subsequent provisions are faster.
