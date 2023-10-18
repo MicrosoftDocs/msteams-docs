@@ -170,7 +170,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
 1. Follow these steps for the respective API types:
 
-      # [New API](#tab/new-api)
+   # [New API](#tab/new-api)
 
    1. Select a programming language.
 
@@ -180,7 +180,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
    1. Enter the name of your app and select **Enter**. Teams Toolkit creates a new plugin with API from Azure functions.
 
-      # [OpenAPI specification](#tab/openapi-specification)
+   # [OpenAPI specification](#tab/openapi-specification)
 
    1. Enter or browse the OpenAPI specification document location.
 
@@ -194,13 +194,13 @@ To build a message extension from an API using Visual Studio Code, follow these 
    1. Select **Default folder**.
    1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI spec file and created an API-based message extension.
 
-    ---
+   ---
 
 1. From the left pane, select **Teams Toolkit**.
 1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](https://docs.microsoft.com/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
 1. Under **LIFECYCLE**, select **Provision**.
 1. From the left pane, Select **Run and Debug (Ctrl+Shift+D)**.
-1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)` . Teams Toolkit launches Teams web client in a browser window. 
+1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)` . Teams Toolkit launches Teams web client in a browser window.
 1. Go to a chat message and select the **Actions and apps** icon.
 1. In teh flyout menu, search for your app.
 1. Select the app from the list and [trigger your search commands from compose message area](https://learn.microsoft.com/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?tabs=dotnet#search-commands).
