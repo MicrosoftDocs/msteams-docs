@@ -16,12 +16,12 @@ Before you get started, ensure that you adhere to the following requirements:
 
 <details><summary>1. OpenAPI specification</summary>
 
-Developers can't require users to enter a parameter for a header or cookie. If headers need to be passed, a default value for the header can be set in the specification. This simplifies the user experience and reduces the risk of errors.
+Developers can't require users to enter a parameter for a header or cookie. If you need to pass headers, a default value for the header can be set in the specification. This simplifies the user experience and reduces the risk of errors.
 
-* The `oneOf`, `anyOf`, `allOf`, `not` (swagger.io) construct aren't supported in Teams.
-* Constructing arrays for the request aren't supported, but nested objects within a JSON request body are supported.
-* The request body (if present) can only be application/json to ensure compatibility with a wide range of APIs.
-* Ensure that a server url is defined for the `servers.url` property. The server URL must have an HTTPS protocol.
+* The `oneOf`, `anyOf`, `allOf`, and  `not` (swagger.io) constructs aren't supported in Teams.
+* Constructing arrays for the request isn't supported, but nested objects within a JSON request body are supported.
+* The request body (if present) can only be application/Json to ensure compatibility with a wide range of APIs.
+* Ensure that a server URL is defined for the `servers.url` property. The server URL must have an HTTPS protocol.
 * Only single parameter search is supported.
 * Only one required parameter without a default value is allowed.
 * The operation must have an `operationId`.
@@ -65,7 +65,7 @@ If the root object of the OpenAPI schema contains well-known array property name
 
 <details><summary>4. API message extension</summary>
 
-Message extensions built from an API are a powerful tool that allows you to extend the functionality of your Teams app by integrating with external APIs. This can greatly enhance the capabilities of your app and provide a richer user experience. To implement message extension from an API, you need to follow these guidelines:
+Message extensions built from an API are a powerful tool that allows you to extend the functionality of your Teams app by integrating with external APIs. This enhances the capabilities of your app and provide a richer user experience. To implement message extension from an API, you need to follow these guidelines:
 
 * `Commands.id` in app manifest must match the corresponding `operationId` in the OpenAPI specification.
 * If there's a required parameter without a default value, the parameter name of the command defined in the Teams app manifest must match this parameter name.
@@ -158,7 +158,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 1. Select **Create a New App**.
 1. Select **Message Extension**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot.png" alt-text="Screenshot shows the Plugin for copilot option in the Team Toolkit.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot.png" alt-text="Screenshot shows the message extension option in Team Toolkit.":::
 
 1. Select **Custom Search Results**.
 
@@ -166,9 +166,9 @@ To build a message extension from an API using Visual Studio Code, follow these 
     1. If you want to build from the beginning, select **Start with a new API**.
     1. If you already have an OpenAPI description document, select **Start with an OpenAPI Description Document**.
 
-     :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot-options.png" alt-text="Screenshot shows the plugin options to create a plugin for copilot.":::
+     :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot-options.png" alt-text="Screenshot shows the options to create a search based message extension.":::
 
-1. Follow these steps for the respective API types:
+1. Select the following based in the options selected in **step 7**:
 
    # [New API](#tab/new-api)
 
@@ -198,12 +198,19 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
 1. From the left pane, select **Teams Toolkit**.
 1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
-1. Under **LIFECYCLE**, select **Provision**.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Teams Toolkit.":::
+
+1. Under **LIFECYCLE**, select **Provision**. Teams Toolkit provisions the app on Azure and displays a message.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-provision-success.png" alt-text="Screenshot shows the successfull completion of the provsion steps in Teams Toolkit.":::
+
 1. From the left pane, Select **Run and Debug (Ctrl+Shift+D)**.
 1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)` . Teams Toolkit launches Teams web client in a browser window.
-1. Go to a chat message and select the **Actions and apps** icon.
-1. In the flyout menu, search for your app.
+1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, search for your app.
 1. Select the app from the list and [trigger your search commands from compose message area](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?tabs=dotnet#search-commands).
+
+:::image type="content" source="../assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat  menu and the app is displayed in the flyout menu.":::
 
 # [Teams Toolkit CLI](#tab/teams-toolkit-cli)
 

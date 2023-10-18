@@ -88,19 +88,42 @@ The following images display link unfurling feature when a link is pasted in mes
 
 If you don't already have a message extension, there are two ways to build one:
 
-* **Build from an API**: You can easily create a message extension from an existing API. This method requires an OpenAPI specification document. For more information, see [API-based Message extension](build-api-based-message-extension.md).
+* **Build from an API**: You can easily create a message extension from an existing API. This method requires an OpenAPI specification document.
 
-* **Build using bot Framework**: If you want a one-on-one conversational experience, you can create a new message extension from a bot. For more information, see [Bot-based Message extension](build-bot-based-message-extension.md).
+* **Build using Bot Framework**: If you want a one-on-one conversational experience, you can create a new message extension from a bot.
 
 The following table differentiates the types of message extensions:
 
-|API-based message extension  |Bot-based message extension  |
-|:---------|:---------|
-|- Simpler and faster to create and maintain <br> - Use this option if you’re not planning to add a conversational bot to your app  <br> - Don't require any additional code or resources for bot logic <br> - Suitable for scenarios where the plugin only needs to communicate with a web service and doesn't need any complex logic or state management <br> - Privatized traffic as they don’t rely on Azure bot infrastructure.<br> - API-based message extension supports search commands.| - More flexibility. <br> - Use this option if you’re also planning to build a conversational bot. <br> - Can leverage the full capabilities of the bot framework SDK. <br> - Suitable for scenarios where the plugin needs to communicate with multiple services, handle complex logic or user interactions, or maintain state across sessions. <br> - Bot based message extensions support action commands, search commands, and link unfurling.|
+:::row:::
+    :::column:::
+**API-based message extension**
+
+* Simpler and faster to create and maintain.
+* Message extension uses an API.
+* Don't require any additional code or resources for bot logic.
+* Suitable for scenarios where the message extension only needs to communicate with a web service and doesn't need any complex logic or state management.
+* Privatized traffic as they don’t rely on Azure bot infrastructure.
+* Supports search commands.
+
+    :::column-end:::
+    :::column:::
+
+**Bot-based message extension**
+
+* More flexible.
+* Message extension uses a Bot Framework.
+* Can leverage the full capabilities of a bot.
+* Suitable for scenarios where the plugin needs to communicate with multiple services, handle complex logic or user interactions, or maintain state across sessions.
+* Supports action commands, search commands, and link unfurling.
+
+    :::column-end:::
+:::row-end:::
+
+</br>
 
 :::image type="content" source="../assets/images/Copilot/api-bot-based-message-extension-decision-tree.png" alt-text="Screenshot shows the decision tree, which helps the user to choose between API based and bot based message extension.":::
 
-Select the following tile to build a message extension:
+**Select an option to start building a message extension:**
 
 :::row:::
     :::column:::
@@ -123,16 +146,10 @@ Select the following tile to build a message extension:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Define action message extension command](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+> [API-based Message extension](api-based-overview.md)
 
 ## See also
 
 * [App capabilities mapped to features](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)
 * [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml)
 * [Designing your Microsoft Teams message extension](design/messaging-extension-design.md)
-* [Define message extension action commands](how-to/action-commands/define-action-command.md)
-* [Define message extension search commands](how-to/search-commands/define-search-command.md)
-* [Add link unfurling](how-to/link-unfurling.md)
-* [App manifest schema for Teams](../resources/schema/manifest-schema.md)
-* [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
-* [Instrumenting for Teams app specific analytics](../concepts/design/overview-analytics.md#instrumenting-for-teams-app-specific-analytics)

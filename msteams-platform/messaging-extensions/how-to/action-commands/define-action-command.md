@@ -66,9 +66,9 @@ In most cases, the action command results in a card inserted into the compose me
 
 If the message extension is invoked from the compose box or directly from a message, your web service can insert the final response directly into the channel or chat. In this case, the Adaptive Card comes from the bot, the bot updates it, and replies to the conversation thread if needed. You must add the `bot` object to the app manifest using  the same ID and defining the appropriate scopes.
 
-### Create an action command using Developer Portal
+### Create action command using Developer Portal
 
-You can create an action command using **Teams Toolkit** and **Developer Portal**.
+You can create an action command using **Teams Toolkit** and **Developer Portal for Teams**.
 
 
 # [Teams Toolkit](#tab/Teams-toolkit)
