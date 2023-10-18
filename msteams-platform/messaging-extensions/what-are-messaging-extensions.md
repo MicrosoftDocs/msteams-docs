@@ -72,6 +72,20 @@ The following image displays the message extension search command task module:
 > [!NOTE]
 > For more information on cards, see [what are cards](../task-modules-and-cards/what-are-cards.md).
 
+## Link unfurling
+
+> [!NOTE]
+> Link unfurling is supported only for bot based message extensions.
+
+A web service is invoked when a URL is pasted in the compose message area. This functionality is known as link unfurling. You can subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can add buttons to allow the users to immediately take action without leaving the Teams client.
+The following images display link unfurling feature when a link is pasted in message extension:
+
+:::image type="content" source="../assets/images/messaging-extension/unfurl-link.png" alt-text="unfurl link":::
+
+![link unfurling](../assets/images/messaging-extension/link-unfurl.gif)
+
+## Build message extensions
+
 If you don't already have a message extension, there are two ways to build one:
 
 * **Build from an API**: You can easily create a message extension from an existing API. This method requires an OpenAPI specification document. For more information, see [API-based Message extension](build-api-based-message-extension.md).
@@ -85,18 +99,6 @@ The following table differentiates the types of message extensions:
 |- Simpler and faster to create and maintain <br> - Use this option if you’re not planning to add a conversational bot to your app  <br> - Don't require any additional code or resources for bot logic <br> - Suitable for scenarios where the plugin only needs to communicate with a web service and doesn't need any complex logic or state management <br> - Privatized traffic as they don’t rely on Azure bot infrastructure.<br> - API-based message extension supports search commands.| - More flexibility. <br> - Use this option if you’re also planning to build a conversational bot. <br> - Can leverage the full capabilities of the bot framework SDK. <br> - Suitable for scenarios where the plugin needs to communicate with multiple services, handle complex logic or user interactions, or maintain state across sessions. <br> - Bot based message extensions support action commands, search commands, and link unfurling.|
 
 :::image type="content" source="../assets/images/Copilot/api-bot-based-message-extension-decision-tree.png" alt-text="Screenshot shows the decision tree, which helps the user to choose between API based and bot based message extension.":::
-
-## Link unfurling
-
-> [!NOTE]
-> Link unfurling is supported only for bot based message extensions.
-
-A web service is invoked when a URL is pasted in the compose message area. This functionality is known as link unfurling. You can subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can add buttons to allow the users to immediately take action without leaving the Teams client.
-The following images display link unfurling feature when a link is pasted in message extension:
-
-:::image type="content" source="../assets/images/messaging-extension/unfurl-link.png" alt-text="unfurl link":::
-
-![link unfurling](../assets/images/messaging-extension/link-unfurl.gif)
 
 ## Code sample
 

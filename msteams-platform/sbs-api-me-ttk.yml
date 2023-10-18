@@ -193,18 +193,16 @@ items:
     
     * It must not have auth specified.
     * The request body (if present) can't contain any arrays.
-    * The server URL must be defined in the specification.
-    * If there's no operation ID, you can add one to the spec that you'll be uploading for testing because an operation ID is mandatory for operations that will be Messaging Extensions.
+    * The OpenAPI spec must have an `operationId`.The server URL must be defined in the specification.
+    * If there's no operation ID, Teams Toolkit generates an `operationId` automatically.
     * The `oneOf`, `anyOf`, `allOf`, `not` (swagger.io) construct aren't supported in Teams.
     * Constructing arrays for the request aren't supported, but nested objects within a JSON request body are supported.
     * The request body (if present) can only be application/json to ensure compatibility with a wide range of APIs.
     * Ensure that a server url is defined for the `servers.url` property.
     * Only single parameter search is supported.
     * A command must have exactly one parameter. You can make a required parameter optional and add a default value.
-    * The operation must have an `operationId`.
     * Only POST and GET HTTP methods are supported.
     * The operation can't have a required Header or Cookie parameters without default values.
-    * A response rendering template must be defined per command, which is used to convert responses from an API. The command portion of the manifest must point to this template file under`composeExtension.command.apiResponseRenderingTemplateFile` within the app manifest. Each command points to a different response rendering template file.
     
     We've used the following OpenAPI specification as an example for this tutorial: <br/>
     <br/>
@@ -513,52 +511,26 @@ items:
     > [!Tip]
     > Familiarize yourself with bots outside Teams before you integrate your first bot within Teams.
 
-    ## Run your  app locally
+    ## Provision you app
 
-    To run your app in the local environment:
+    To provision your app on Azure:
 
     1. Go to Teams Toolkit and from the left pane, select **Run and Debug** (**Ctrl+Shift+D**).
     1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
-    1. Select the **Start debugging (F5)** to launch your app. A browser window opens and loads Teams.
+    1. Select **Start Debugging**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/start-debugging.png" alt-text="Screenshot shows the location of the Start Debugging button in the Teams Toolkit sidebar.":::
+
+        The Teams Toolkit provisions your app on Azure and deploys it to Teams. The following message appears in the **OUTPUT** window.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/provisioning.png" alt-text="Screenshot shows the message from Teams Toolkit that the feature is successfully created along with the option to select Debug.":::
+
+        > [!NOTE]
+        > The first time you provision your app, it takes a few minutes to complete. Subsequent provisions are faster.
 
     Now the bot is successfully running on Teams! You can navigate to a chat message and trigger your search commands from compose message area.
 
     <!-- markdownlint-disable MD033 -->
-
-    <details>
-    <summary>Learn what happens when you run your app locally in the debugger.</summary>
-
-    In case you're wondering, when you press the **F5** key, the Teams Toolkit:
-
-    1. Checks all the following prerequisites:
-        - You're logged in with a Microsoft 365 account.
-        - Sideloading is enabled for your Microsoft 365 account.
-        - Supported Node.js version is installed.
-        - Port required by bot app is available.
-          
-    2. Install npm packages.
-    3. Starts Dev Tunnel to create an HTTP tunnel.
-    4. Registers the app in Azure Active Directory (Azure AD) and configures the app.
-    5. Registers the bot app in Bot Framework SDK and configures the bot app.
-    6. Registers the app in Teams Developer Portal and configures the app.
-    7. Starts the bot app.
-    8. Starts Teams in a web browser and sideloads the bot app.
-
-
-    </details>
-
-      <!-- markdownlint-disable MD033 -->
-      <details>
-      <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
-
-      To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
-
-      > [!IMPORTANT]
-      > Sideloading apps are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](concepts/app-fundamentals-overview.md#government-community-cloud) environments.
-
-      > [!TIP]
-      > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to sideload the app.
-      </details> 
 
 - title: Complete challenge
   durationInMinutes: 1
