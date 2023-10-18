@@ -252,22 +252,17 @@ The properties in OpenAPI specification document are mapped to the Adaptive Card
 
 * `string`, `number`, `integer`, `boolean` types are converted to a TextBlock.
 
-:::row:::
-    :::column:::
-        **Source Schema**: `string`, `number`, `integer`, and `boolean` </br>
-        </br>
-       **Example**
+  <details><summary>Schema mapping</summary>
+  
+  * **Source Schema**: `string`, `number`, `integer`, and `boolean`
 
        ```yml
         name:
           type: string
           example: doggie
 
-       ```
-    :::column-end:::
-    :::column:::
-  **Target Schema**:`Textblock` </br>
-    </br>**Example**
+  * **Target Schema**: `Textblock`
+
       ```json
       {
       "type": "TextBlock",
@@ -275,16 +270,13 @@ The properties in OpenAPI specification document are mapped to the Adaptive Card
       "wrap": true
     }
       ```
-    :::column-end:::
-:::row-end:::
+</details>
 
 * `array`: An array is converted as a container inside Adaptive Card.
 
-:::row:::
-    :::column:::
-        **Source schema**: `array` </br>
-        </br>
-       **Example**
+  <details><summary>Schema mapping</summary>
+
+  * **Source schema**: `array`
 
         ```yml
         type: array
@@ -301,12 +293,7 @@ The properties in OpenAPI specification document are mapped to the Adaptive Card
                       name:
                         type: string
         ```
-
-    :::column-end:::
-    :::column:::
-        **Target Schema**: `Container`</br>
-        </br>
-        **Example**
+  * **Target Schema**: `Container`
 
         ```json
         {
@@ -327,77 +314,69 @@ The properties in OpenAPI specification document are mapped to the Adaptive Card
                 }
                 
         ```
-    :::column-end:::
-:::row-end:::
+</details>
 
 * `object`: An object is converted to a nested property in Adaptive Card.
 
-:::row:::
-    :::column:::
-**Source Schema**</br></br>
-**Example**
+  <details><summary>Schema mapping</summary>
 
-```yml
-components:
-  schemas:
-    Pet:
-        category:
-          type: object
-         properties:
-           id:
-             type: integer
-           name:
-             type: string
+  * **Source Schema**: `object`
 
-```
-    :::column-end:::
-    :::column:::
-  **Target Schema**: **Nested property in Adaptive Card** </br></br>
-  **Example**
-```json
-{
-  "type": "TextBlock",
-  "text": "category.id: ${if(category.id, category.id, 'N/A')}",
-  "wrap": true
-},
-{
-  "type": "TextBlock",
-  "text": "category.name: ${if(category.name, category.name, 'N/A')}",
-  "wrap": true
-}
+    ```yml
+    components:
+      schemas:
+        Pet:
+            category:
+              type: object
+            properties:
+              id:
+                type: integer
+              name:
+                type: string
 
-```
-    :::column-end:::
-:::row-end:::
+    ```
+
+  * **Target Schema**: Nested property in an Adaptive Card
+
+    ```json
+    {
+      "type": "TextBlock",
+      "text": "category.id: ${if(category.id, category.id, 'N/A')}",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "category.name: ${if(category.name, category.name, 'N/A')}",
+      "wrap": true
+    }
+
+    ```
+</details>
 
 * `image`: If a property is an image url, then it will be converted to an Image element in adaptive card.
 
-:::row:::
-    :::column:::
-**Source schema**</br></br>
-**Example**
+  <details><summary>Schema mapping</summary>
 
-```yml
-    image:
-      type: string
-      format: uri
-      description: The URL of the image of the item to be repaired
+  * **Source schema**
 
-```
-    :::column-end:::
-    :::column:::
+    ```yml
+        image:
+          type: string
+          format: uri
+          description: The URL of the image of the item to be repaired
 
-**Target Schema**</br></br>
-**Example**
-```json
-{
-      "type": "Image",
-      "url": "${image}",
-      "$when": "${image != null}"
-    }
+    ```
 
-```
-:::row-end:::
+  * **Target Schema**
+    ```json
+    {
+          "type": "Image",
+          "url": "${image}",
+          "$when": "${image != null}"
+        }
+
+    ```
+</details>
 
 ### Update app manifest
 
