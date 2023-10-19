@@ -30,7 +30,7 @@ Before you get started, ensure that you adhere to the following requirements:
 
 > [!div class="checklist"]
 >
-> * [OpenAPI Description (OAD)](#openapi-specification)
+> * [OpenAPI Description (OAD)](#openapi-description)
 > * [Update app manifest](#update-app-manifest)
 
 ### OpenAPI Description
