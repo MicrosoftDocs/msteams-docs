@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
 title:  Build API-based message extension
 metadata:
-  title: Build your first app using Teams AI library
-  description: In this learn module, you learn how to build a bot with Teams AI library and set up, build, and deploy a bot app with Teams Toolkit.
+  title: Build API-based message extension
+  description: In this learn module, you learn how to build a message extension using an OpenAPI Description document and Response rendering template to interact with external services.
   audience: Developer
   level: Advanced
   ms.date: 10/16/2023
@@ -78,15 +78,15 @@ items:
    Now you’ve got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to build first.
 
 
-- title: Create OpenAPI specification document
+- title: Create OpenAPI Description document
   durationInMinutes: 5
   content: |
 
-    ## OpenAPI specification
+    ## OpenAPI Description
   
-    OpenAPI specification (OAS) is the industry-standard specification that outlines how OpenAPI files are structured and outlined. It's a language-agnostic, human-readable format for describing APIs. It's easy for both humans and machines to read and write. The schema is machine-readable and represented in either YAML or JSON.
+    OpenAPI Description (OAD) is the industry-standard specification that outlines how OpenAPI files are structured and outlined. It's a language-agnostic, human-readable format for describing APIs. It's easy for both humans and machines to read and write. The schema is machine-readable and represented in either YAML or JSON.
     
-    You need an OpenAPI specification to interact with the APIs. The API spec must meet the following criteria: 
+    You need an OpenAPI Description to interact with the APIs. The API spec must meet the following criteria: 
     
     * Must not have `auth` specified.
     * Must have at most one required parameter or property in the request body. You can make a required parameter optional and add a default value.
@@ -98,106 +98,92 @@ items:
 
     <details><summary>OpenAPI spec</summary>
 
-    ```YAML
-        openapi: 3.0.1
-        info:
-        version: v0
-        title: Open AI Klarna product Api
-        servers:
-        - url: https://www.klarna.com/us/shopping
-        tags:
-        - name: open-ai-product-endpoint
-            description: Open AI Product Endpoint. Query for products.
-        paths:
-        /public/openai/v0/products:
-            get:
-            tags:
-                - open-ai-product-endpoint
-            summary: API for fetching Klarna product information
-            operationId: productsUsingGET
-            parameters:
-                - name: countryCode
-                in: query
-                description: ISO 3166 country code with two characters based on the user location. Currently, only US, GB, DE, SE and DK are supported.
-                required: true
+    openapi: 3.0.1
+    info:
+    title: OpenTools Plugin
+    description: A plugin that allows the user to find the most appropriate AI tools for their use cases, with their pricing information.
+    version: 'v1'
+    servers:
+    - url: https://gptplugin.opentools.ai
+    paths:
+    /tools:
+        get:
+        operationId: searchTools
+        summary: Search for AI Tools
+        parameters:
+            - in: query
+            name: search
+            required: true
+            schema:
+                type: string
+            description: Used to search for AI tools by their category based on the keywords. For example, ?search="tool to create music" will give tools that can create music.
+        responses:
+            "200":
+            description: OK
+            content:
+                application/json:
                 schema:
-                    type: string
-                - name: q
-                in: query
-                description: 'A precise query that matches one small category or product that needs to be searched for to find the products the user is looking for. If the user explicitly stated what they want, use that as a query. The query is as specific as possible to the product name or category mentioned by the user in its singular form, and don't contain any clarifiers like latest, newest, cheapest, budget, premium, expensive or similar. The query is always taken from the latest article, if there's a new article a new query is started. If the user speaks another language than English, translate their request into English.'
-                required: true
+                    $ref: '#/components/schemas/searchToolsResponse'
+            "400":
+            description: Search Error
+            content:
+                application/json:
                 schema:
-                    type: string
-                - name: size
-                in: query
-                description: number of products returned
-                required: false
-                schema:
-                    type: integer
-                - name: min_price
-                in: query
-                description: (Optional) Minimum price in local currency for the product searched for. Either explicitly stated by the user or implicitly inferred from a combination of the user's request and the kind of product searched for.
-                required: false
-                schema:
-                    type: integer
-                - name: max_price
-                in: query
-                description: (Optional) Maximum price in local currency for the product searched for. Either explicitly stated by the user or implicitly inferred from a combination of the user's request and the kind of product searched for.
-                required: false
-                schema:
-                    type: integer
-            responses:
-                '200':
-                description: Products found
-                content:
-                    application/json:
-                    schema:
-                        $ref: '#/components/schemas/ProductResponse'
-                '503':
-                description: one or more services are unavailable.
-            deprecated: false
-        components:
-        schemas:
-            Product:
-            type: object
-            properties:
-                attributes:
-                type: array
-                items:
-                    type: string
+                    $ref: '#/components/schemas/searchToolsError'
+    components:
+    schemas:
+        searchToolsResponse:
+        required:
+            - search
+        type: object
+        properties:
+            tools:
+            type: array
+            items:
+                type: object
+                properties:
                 name:
-                type: string
-                price:
-                type: string
-                url:
-                type: string
-            title: Product
-            ProductResponse:
-            type: object
-            properties:
-                products:
-                type: array
-                items:
-                    $ref: '#/components/schemas/Product'
-            title: ProductResponse
+                    type: string
+                    description: The name of the tool.
+                opentools_url:
+                    type: string
+                    description: The URL to access the tool.
+                main_summary:
+                    type: string
+                    description: A summary of what the tool is.
+                pricing_summary:
+                    type: string
+                    description: A summary of the pricing of the tool.
+                categories:
+                    type: array
+                    items:
+                    type: string
+                    description: The categories assigned to the tool.
+                platforms:
+                    type: array
+                    items:
+                    type: string
+                    description: The platforms that this tool is available on.
+            description: The list of AI tools.
+        searchToolsError:
+        type: object
+        properties:
+            message:
+            type: string
+            description: Message of the error.
     ```
     * Ensure that the `required: true` is available for only one parameter. If there are more than one required parameters, you can update the required property to `required: false` for the other parameters. 
     </details>
 
-    You can validate and verify if the OpenAPI specification document is valid by following these steps:
+    You can validate and verify if the OpenAPI Description document is valid by following these steps:
 
-    1. Go to [Swagger/OpenAPI validator](https://apitools.dev/swagger-parser/online/) and validate the OpenAPI specification document.
-    1. Save the OpenAPI specification document.
+    1. Go to [Swagger/OpenAPI validator](https://apitools.dev/swagger-parser/online/) and validate the OpenAPI Description document.
+    1. Save the OpenAPI Description document.
     1. Go to [Swagger Editor](https://editor.swagger.io/).
-    1. In the left pane, paste the OpenAPI specification code in the editor.
+    1. In the left pane, paste the OpenAPI Description code in the editor.
     1. In the right pane, select **GET**.
     1. Select **Try it out**.
-    1. Enter the following values for the parameters as follows:
-       1. countryCode: US
-       2.  q: shoes
-       3. size: 5
-       4. min_price: 10
-       5. max_price: 100
+    1. Enter the values for the **search** parameters **Tool to create music**.
 
        :::image type="content" source="assets/images/Copilot/api-me-sbs-execute-get-response.png" alt-text="Screenshots shows the parameters, its values and the **EXECUTE** option in the swagger editor.":::
 
@@ -211,7 +197,7 @@ items:
   durationInMinutes: 5
   content: |
 
-   An OpenAPI specification document requires a response rendering template for the app to respond to the get requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
+   An OpenAPI Description document requires a response rendering template for the app to respond to the get requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
 
    ### Adaptive Card template 
     
@@ -221,21 +207,21 @@ items:
     1. Go to ChatGPT and ask the following query in the message compose area:
 
        ```text
-        Create an Adaptive Card template that binds to the following sample data:
+        Create an Adaptive Card Template that binds to the following response:
         {
-            "name": "Nike Dunk Low W - White/Black",
-            "url": "https://www.klarna.com/us/shopping/pl/cl337/3200134705/Shoes/Nike-Dunk-Low-W-White-Black/?utm_source=openai&ref-site=openai_plugin",
-            "price": "$53.00",
-            "attributes": [
-                "Outsole:Rubber",
-                "Fastening:Laced",
-                "Target Group:Female",
-                "Color:Black",
-                "Upper Material:Leather",
-                "Size (US):9.5,10,11,12,13,14,15,16,17,18,11.5,10.5,2,3,4,5,6,7,8,9,2.5,3.5,4.5,16.5,5.5,15.5,6.5,14.5,13.5,7.5,8.5,12.5",
-                "Series:Nike Dunk"
+            "categories": [
+                "Music Generation",
+                "AI Detection"
+            ],
+            "chatbot_short_url": "https://goto.opentools.ai/c/ai-music-generator",
+            "main_summary": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. Powered by advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+            "name": "AI Music Generator",
+            "opentools_url": "https://goto.opentools.ai/ai-music-generator",
+            "platforms": [
+                "Web",
+                "App",
+                "API"
             ]
-            }
        ```
      1. Select **Send message**. 
 
@@ -253,74 +239,55 @@ items:
         "body": [
             {
             "type": "TextBlock",
-            "text": "Product Details",
+            "text": "AI Music Generator",
             "weight": "Bolder",
             "size": "Large"
             },
             {
             "type": "TextBlock",
-            "text": "${name}",
-            "weight": "Bolder",
+            "text": "Categories",
             "size": "Medium"
             },
             {
             "type": "TextBlock",
-            "text": "${price}",
-            "size": "Medium",
-            "spacing": "None"
+            "text": "Music Generation, AI Detection",
+            "wrap": true
             },
             {
             "type": "TextBlock",
-            "text": "Attributes:",
-            "weight": "Bolder",
-            "spacing": "Medium"
+            "text": "Description",
+            "size": "Medium"
             },
             {
-            "type": "FactSet",
-            "facts": [
-                {
-                "title": "Outsole",
-                "value": "${attributes[0]}"
-                },
-                {
-                "title": "Fastening",
-                "value": "${attributes[1]}"
-                },
-                {
-                "title": "Target Group",
-                "value": "${attributes[2]}"
-                },
-                {
-                "title": "Color",
-                "value": "${attributes[3]}"
-                },
-                {
-                "title": "Upper Material",
-                "value": "${attributes[4]}"
-                },
-                {
-                "title": "Size (US)",
-                "value": "${attributes[5]}"
-                },
-                {
-                "title": "Series",
-                "value": "${attributes[6]}"
-                }
-            ],
-            "spacing": "Small"
+            "type": "TextBlock",
+            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. Powered by advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+            "wrap": true
             },
             {
-            "type": "ActionSet",
-            "actions": [
-                {
-                "type": "OpenUrl",
-                "title": "View Product",
-                "url": "${url}"
-                }
-            ]
+            "type": "TextBlock",
+            "text": "Platform",
+            "size": "Medium"
+            },
+            {
+            "type": "TextBlock",
+            "text": "Web, App, API",
+            "wrap": true
+            }
+        ],
+        "actions": [
+            {
+            "type": "Action.OpenUrl",
+            "title": "Learn More",
+            "url": "https://goto.opentools.ai/ai-music-generator"
+            },
+            {
+            "type": "Action.OpenUrl",
+            "title": "Try It",
+            "url": "https://goto.opentools.ai/c/ai-music-generator"
             }
         ]
         }
+
         ``` 
         </details>
 
@@ -344,14 +311,11 @@ items:
        <details><summary>Preview card template</summary>
 
        ```json
-       {
-        "title": "Title: ${if(title, title, 'N/A')}",
-        "subtitle": "Description: ${if(description, description, 'N/A')}",
-        "image": {
-            "url": "${image}",
-            "$when": "${image != null}"
+       "previewCardTemplate": {
+            "title": "${if(name, name, 'N/A')}",
+            "subtitle": "$${if(price, price, 'N/A')}",
+        } 
         }
-       }
        ```
        Create an if condition for the `title` and `subtitle` where, if name exists, the bot uses the name, else, it uses NA. For example, `"title": "Name: ${if(name, name, 'N/A')}"`. Save the preview card template for future reference.
        </details>
@@ -378,9 +342,9 @@ items:
     1. Update the properties in the response rendering template as follows:
        1. `"version"`: `"1.0.0"`
        1. `"$schema"`: `"http://adaptivecards.io/schemas/adaptive-card.json"`
-       1. `"jsonPath"`: `"products"`
+       1. `"jsonPath"`: `"tools"`
 
-          `jsonPath` is the path to the result(s) in the response JSON response. Add the `jsonPath` to the relevant data/array from the product list in the API response. In this case, the `jsonPath` is "products". For more information on how to determiner the JSON path, see [Querying JSON with JSON path](https://www.newtonsoft.com/json/help/html/QueryJsonSelectToken.htm).
+          `jsonPath` is the path to the result(s) in the response JSON response. Add the `jsonPath` to the relevant data/array from the product list in the API response. In this case, the `jsonPath` is "tools". For more information on how to determiner the JSON path, see [Querying JSON with JSON path](https://www.newtonsoft.com/json/help/html/QueryJsonSelectToken.htm).
 
        1. `"responseLayout"`: `"list"`
 
@@ -400,94 +364,70 @@ items:
 
     <details><summary>Response rendering template</summary>
     
-    ```json
     {
-        "version": "1.0",
+        "version": "devPreview",
+        "jsonPath": "tools",
         "responseLayout": "list",
         "responseCardTemplate": {
-        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-        "type": "AdaptiveCard",
-        "version": "1.4",
-        "body": [
-            {
-            "type": "TextBlock",
-            "text": "Product Details",
-            "weight": "Bolder",
-            "size": "Large"
-            },
-            {
-            "type": "TextBlock",
-            "text": "${name}",
-            "weight": "Bolder",
-            "size": "Medium"
-            },
-            {
-            "type": "TextBlock",
-            "text": "${price}",
-            "size": "Medium",
-            "spacing": "None"
-            },
-            {
-            "type": "TextBlock",
-            "text": "Attributes:",
-            "weight": "Bolder",
-            "spacing": "Medium"
-            },
-            {
-            "type": "FactSet",
-            "facts": [
-                {
-                "title": "Outsole",
-                "value": "${attributes[0]}"
-                },
-                {
-                "title": "Fastening",
-                "value": "${attributes[1]}"
-                },
-                {
-                "title": "Target Group",
-                "value": "${attributes[2]}"
-                },
-                {
-                "title": "Color",
-                "value": "${attributes[3]}"
-                },
-                {
-                "title": "Upper Material",
-                "value": "${attributes[4]}"
-                },
-                {
-                "title": "Size (US)",
-                "value": "${attributes[5]}"
-                },
-                {
-                "title": "Series",
-                "value": "${attributes[6]}"
-                }
-            ],
-            "spacing": "Small"
-            },
-            {
-            "type": "ActionSet",
-            "actions": [
-                {
-                "type": "OpenUrl",
-                "title": "View Product",
-                "url": "${url}"
-                }
-            ]
-            }
-        ]
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.4",
+    "body": [
+        {
+        "type": "TextBlock",
+        "text": "AI Music Generator",
+        "weight": "Bolder",
+        "size": "Large"
         },
-        "previewCardTemplate": {
-            "title": "Title: ${if(title, title, 'N/A')}",
-            "subtitle": "Description: ${if(description, description, 'N/A')}",
-            "image": {
-            "url": "${image}",
-            "$when": "${image != null}"
-              }
-            }
+        {
+        "type": "TextBlock",
+        "text": "Categories",
+        "size": "Medium"
+        },
+        {
+        "type": "TextBlock",
+        "text": "Music Generation, AI Detection",
+        "wrap": true
+        },
+        {
+        "type": "TextBlock",
+        "text": "Description",
+        "size": "Medium"
+        },
+        {
+        "type": "TextBlock",
+        "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. Powered by advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+        "wrap": true
+        },
+        {
+        "type": "TextBlock",
+        "text": "Platform",
+        "size": "Medium"
+        },
+        {
+        "type": "TextBlock",
+        "text": "Web, App, API",
+        "wrap": true
         }
+    ],
+    "actions": [
+        {
+        "type": "Action.OpenUrl",
+        "title": "Learn More",
+        "url": "https://goto.opentools.ai/ai-music-generator"
+        },
+        {
+        "type": "Action.OpenUrl",
+        "title": "Try It",
+        "url": "https://goto.opentools.ai/c/ai-music-generator"
+        }
+    ]
+    },
+    "previewCardTemplate": {
+        "title": "${if(name, name, 'N/A')}",
+        "subtitle": "$${if(price, price, 'N/A')}",
+    } 
+    }
 
     ```
     </details>
@@ -571,12 +511,12 @@ items:
     1. Update the app manifest properties as follows:
 
          * Replace `<<YOUR-MICROSOFT-APP-ID>>`  with bot's Microsoft App ID.
-         * Update the values for `composeExtensionType` to `apibased`.
-         * Update the values for `apiSpecificationFile`to the path of your OpenAPI specification file. 
-         * Update the `commands.id` value to the `operationId` in the OpenAPI specification document. 
-         * Update the `parameters.name` to the `parameters.name` property in the OpenAPI specification file. If there are no parameters, then the values must be query parameters or properties.name if referencing a property in the request body schema.
+         * Update the values for `composeExtensionType` to `apiBased`.
+         * Update the values for `apiSpecificationFile`to the path of your OpenAPI Description file. 
+         * Update `searchTools` as the value for  `commands.id`. 
+         * Update `search` as the value for `parameters.name`. If there are no parameters, then the values must be query parameters or properties.name if referencing a property in the request body schema.
          * Update the `apiResponseRenderingTemplateFile` to the path of your response rendering template file.
-         * Under valid domains, add the service URL endpoint that is defined in the OpenAPI specification file. 
+         * Under valid domains, add the service URL endpoint that is defined in the OpenAPI Description file. 
          
     1. Save the Teams app manifest in the same folder you saved the OpenAPI spec and the response rendering template.
         * You need a color image and outline image. These images should be included in the folder and referenced in your Teams app manifest. 
@@ -596,13 +536,18 @@ items:
     1. Select the zip file you've created and select **Open**.
     1. Select **Add**. The app is added to Teams.
     1. Go to a chat and from the message compose area, select **+** and search for your app.
+
+       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat  menu and the app is displayed in the flyout menu.":::
+
     1. Select the app and make a search query.
     1. The app responds with an Adaptive Card template in the chat window.
+
+       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
 
 - title: Congratulations!
   durationInMinutes: 1
   content: |
 
     You've done it! 
-    You've learned to create an app using OpenAPI specification document and completed the tutorial.
+    You've learned to create an app using OpenAPI Description document and completed the tutorial.
 
