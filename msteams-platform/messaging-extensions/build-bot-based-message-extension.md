@@ -1,5 +1,5 @@
 ---
-title: Build message extension using Bot Framework (Bot-based)
+title: Build message extension using Bot Framework
 author: v-ypalikila
 description: Learn how to build a bot message extension using Bot Framework with Teams Toolkit.
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ ms.author: anclear
 ms.date: 10/19/2023
 ---
 
-# Build message extension using Bot Framework (Bot-based)
+# Build message extension using Bot Framework
 
 Message extensions built using Bot Framework (Bot-based) use a web service as a bot. You can use message extensions to enable users to interact with your web service from different locations in the Teams client, such as the compose message area, the command box, or directly from a message and send back structured data, such as cards.
 

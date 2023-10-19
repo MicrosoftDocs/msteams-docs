@@ -1,5 +1,5 @@
 ---
-title: Build message extension using API (API-based)
+title: Build message extension using API
 author: v-ypalikila
 description: Learn how to build an message extension using an OpenAPI description document (API).
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ ms.author: anclear
 ms.date: 10/19/2023
 ---
 
-# Build message extension using API (API-based)
+# Build message extension using API
 
 > [!NOTE]
 > API-based message extensions only support search commands.

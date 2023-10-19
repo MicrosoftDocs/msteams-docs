@@ -491,7 +491,7 @@
   - name: Overview
     href: messaging-extensions/what-are-messaging-extensions.md
     displayName: handleTeamsMessagingExtensionFetchTask
-  - name: Build message extension using API (API-based)
+  - name: Build message extension using API
     items:
     - name: Overview
       href: messaging-extensions/api-based-overview.md
@@ -499,7 +499,7 @@
     - name: Build API-based message extension
       href: messaging-extensions/build-api-based-message-extension.md
       display name: Handle tap actions, Just-in-time install, JIT
-  - name: Build message extension using Bot Framework (Bot-based)  
+  - name: Build message extension using Bot Framework  
     items:
     - name: Overview
       href: messaging-extensions/build-bot-based-message-extension.md
