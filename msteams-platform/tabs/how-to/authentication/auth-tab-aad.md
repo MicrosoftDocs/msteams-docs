@@ -42,7 +42,7 @@ Replace `<hostname>` with your actual host. This host can be a dedicated hosting
 ## Initiate authentication flow
 
 > [!NOTE]
-> The third-party authentication doesn't work if **Experimental third-party storage partitioning** is enabled. The app prompts for authentication repeatedly as the values aren't stored locally.
+> If **Experimental third-party storage partitioning** is enabled, the third-party authentication fails. The app prompts for authentication repeatedly as the values aren’t stored locally.
 
 Trigger the authentication flow by a user action. Avoid opening the authentication pop-up automatically, as this is likely to trigger the browser's pop-up blocker and confuse the user.
 
