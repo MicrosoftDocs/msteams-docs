@@ -1,35 +1,35 @@
 ---
-title: Build from an API
+title: Build message extension using an API
 author: v-ypalikila
 description: Learn how to build an API message extension using Teams developer portal and Teams Toolkit.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 09/07/2023
+ms.date: 10/19/2023
 ---
 
-# Build from an API
+# Build API-based message extension
 
-Message extensions built from an API are a type of Teams app that allows you to integrate your chat functionality directly into Teams. This can enhance your app's usability and provide a seamless user experience.
+API-based message extensions are a type of Teams app that integrates your chat functionality directly into Teams, enhancing your app's usability and offering a seamless user experience.
 
-Before you get started, ensure that you adhere to the following requirements:
+Before you get started, you meet the following requirements:
 
-<details><summary>1. OpenAPI specification</summary>
+<details><summary>1. OpenAPI Description (OAD)</summary>
 
-Developers can't require users to enter a parameter for a header or cookie. If you need to pass headers, a default value for the header can be set in the specification. This simplifies the user experience and reduces the risk of errors.
+Developers must not require users to enter a parameter for a header or cookie. If you need to pass headers, a default value for the header can be set in the specification. This simplifies the user experience and reduces the risk of errors.
 
+* Supported formats are JSON and YAML formats.
+* Supported OpenAPI Versions are 2.0 and 3.0.x.
 * The `oneOf`, `anyOf`, `allOf`, and  `not` (swagger.io) constructs aren't supported in Teams.
 * Constructing arrays for the request isn't supported, but nested objects within a JSON request body are supported.
 * The request body (if present) can only be application/Json to ensure compatibility with a wide range of APIs.
-* Ensure that a server URL is defined for the `servers.url` property. The server URL must have an HTTPS protocol.
+* Define a server URL for the `servers.url` property. The server URL must use an HTTPS protocol.
 * Only single parameter search is supported.
 * Only one required parameter without a default value is allowed.
 * The operation must have an `operationId`.
 * Only POST and GET HTTP methods are supported.
 * The operation can't have a required Header or Cookie parameters without default values.
 * A command must have exactly one parameter.
-* Supported formats are JSON and YAML formats.
-* Supported OpenAPI Versions are 2.0 and 3.0.x.
 * Ensure that there are no remote references in the OpenAPI spec file.
 * A required parameter with default value is considered optional.
 
@@ -39,8 +39,8 @@ Developers can't require users to enter a parameter for a header or cookie. If y
 
 <details><summary>2. App manifest</summary>
 
-* Set composeExtension.composeExtensionType to `apiBased`.
-* Define `composeExtension.apiSpecificationFile` as the relative path to the OpenAPI specification file within the folder.
+* Set `composeExtension.Type` to `apiBased`.
+* Define `composeExtension.apiSpecificationFile` as the relative path to the OpenAPI Description file within the folder.
 * Define `apiResponseRenderingTemplateFile`  as the relative path to the response rendering template.
 * Each command must have a link to the response rendering template.
 * Full description must not exceed 128 characters.
@@ -54,7 +54,7 @@ Developers can't require users to enter a parameter for a header or cookie. If y
 
 * Define the schema reference URL in the `$schema` property.
 * Define `jsonPath` as the path to the relevant data/array in API response. if the path points to an array, then each entry in the array will be a separate result and if the path points to an object, there will only be a single result. *[Optional]*
-* The supported values for `responseLayout` are list and grid.
+* The supported values for `responseLayout` are `list` and `grid`.
 
 The `JsonPath` property in response rendering template is $ to indicate the root object of the response data is used to render the Adaptive Card, and you can update the `jsonPath` property to point another property in response data.
 
@@ -65,17 +65,17 @@ If the root object of the OpenAPI schema contains well-known array property name
 
 <details><summary>4. API message extension</summary>
 
-Message extensions built from an API are a powerful tool that allows you to extend the functionality of your Teams app by integrating with external APIs. This enhances the capabilities of your app and provide a richer user experience. To implement message extension from an API, you need to follow these guidelines:
+API-based message extensions are a potent tool that enhances your Teams app's functionality by integrating with external APIs. This enhances the capabilities of your app and provide a richer user experience. To implement message extension from an API, you need to follow these guidelines:
 
-* `Commands.id` in app manifest must match the corresponding `operationId` in the OpenAPI specification.
-* If there's a required parameter without a default value, the parameter name of the command defined in the Teams app manifest must match this parameter name.
-* If there's no required parameter without a default value, the parameter name in the Teams app manifest must match the name of an optional parameter defined for that operation.
+* The `Commands.id` property in app manifest must match the corresponding `operationId` in the OpenAPI Description.
+* If a required parameter is without a default value, the command `parameter.name` in the app manifest must match the `parameter.name` in the OpenAPI Description.
+* If there's no required parameter, the command `parameter.name` in the app manifest must match the optional `parameter.name` in the OpenAPI Description.
 * A command can't have more than one parameter.
-* A response rendering template must be defined per command, which is used to convert responses from an API. The command portion of the manifest must point to this template file under`composeExtension.command.apiResponseRenderingTemplateFile` within the app manifest. Each command points to a different response rendering template file.
+* A response rendering template must be defined per command, which is used to convert responses from an API. The command section of the manifest must point to this template file under `composeExtension.command.apiResponseRenderingTemplateFile` within the app manifest. Each command points to a different response rendering template file.
 
 </details>
 
-You can create an API-based message extension using  Teams Toolkit and Teams CLI.
+You can create an API-based message extension using Visual Studio Code and Teams Toolkit CLI.
 <!--
 # [Developer portal for Teams](#tab/developer-portal-for-teams)
 
@@ -162,13 +162,13 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
 1. Select **Custom Search Results**.
 
-1. Select any of the following options:
-    1. If you want to build from the beginning, select **Start with a new API**.
+1. Select one of the following options:
+    1. To build from the beginning, select **Start with a new API**.
     1. If you already have an OpenAPI description document, select **Start with an OpenAPI Description Document**.
 
      :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot-options.png" alt-text="Screenshot shows the options to create a search based message extension.":::
 
-1. Select the following based in the options selected in **step 7**:
+1. Based on the options selected in **step 7**, select the following:
 
    # [New API](#tab/new-api)
 
@@ -179,10 +179,19 @@ To build a message extension from an API using Visual Studio Code, follow these 
    1. Select **Default folder**.
 
    1. Enter the name of your app and select **Enter**. Teams Toolkit creates a new plugin with API from Azure functions.
+   1. To get started, you must update the source code in the following files:
 
-   # [OpenAPI specification](#tab/openapi-specification)
+        |File  |Contents |
+        |---------|---------|
+        |`repair/function.json`    |A configuration file that defines the function’s trigger and other settings.         |
+        |`repair/index.ts`     | The main file of a function in Azure Functions.        |
+        |`appPackage/apiSpecificationFiles/repair.yml`     |  A file that describes the structure and behavior of the repair API.       |
+        |`appPackage/responseTemplates/repair.json`     |  A generated Adaptive Card that used to render API response.       |
+        |`repairsData.json`    |  The data source for the repair API.       |
 
-   1. Enter or browse the OpenAPI specification document location.
+   # [OpenAPI Description](#tab/openapi-specification)
+
+   1. Enter or browse the OpenAPI Description document location.
 
       :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot-openapi-spec-location.png" alt-text="Screenshot shows the option to select OpenAPI spec location.":::
 
@@ -271,10 +280,10 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
 1. Select any of the following options:
    * Start with a new API
-   * Start with an OpenAPI Specification
+   * Start with an OpenAPI Description
 
 1. Select **Next**.
-1. Enter OpenAPI Specification URL or select **Browse..** to upload a file from your local machine.
+1. Enter OpenAPI Description URL or select **Browse..** to upload a file from your local machine.
 1. Select the APIs from the list you want the app to interact with.
 1. Select **Create**. The project is scaffolded and you can find API spec, manifest and response template files in the **appPackage** folder.
 1. To provision, select **Project** > **Teams Toolkit** > **Provision in the cloud...**.

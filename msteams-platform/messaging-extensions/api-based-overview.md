@@ -1,27 +1,28 @@
 ---
-title: API-based Message extension
+title: API-based message extension
 author: v-ypalikila
-description: Learn how to build an API message extension.
+description: Learn how to build an message extension using an OpenAPI description document (API).
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 09/07/2023
+ms.date: 10/19/2023
 ---
 
 # API-based Message extension
 
 > [!NOTE]
->
-> * API-based message extensions are only available in [public preview](../resources/dev-preview/developer-preview-intro.md) .
-> * API-based message extensions only support search commands.
+> API-based message extensions only support search commands.
 
-API-based message extensions use a web service to manage user requests and responses and don't require a bot registration or a Bot Framework. You can configure and deploy API-based message extensions using Teams Toolkit. API-based message extensions help your apps to interact directly with third-party data, apps, and services, enhancing its capabilities. With APIs for message extension, you can:
+Message extensions built using an API (API-based) use a web service to manage user requests and responses and don't require a bot registration or a Bot Framework. You can configure and deploy API-based message extensions using Teams Toolkit. API-based message extensions help your apps to interact directly with third-party data, apps, and services, enhancing its capabilities. With APIs for message extension, you can:
 
-* Retrieve real-time information, for example, latest news coverage on a product launch.
+* Retrieve real-time information, such as latest news coverage on a product launch.
 * Retrieve knowledge-based information, for example, my team’s design files in Figma.
 * Perform actions on behalf of the user, for example, create a Jira ticket.
 
-You can create an API-based message extension using an [OpenAPI Specification](https://learn.openapis.org/specification/) document. After you've created an OpenAPI Specification document, upload the OpenAPI Specification document to Teams Toolkit to generate and integrate the client code in your app's project. Create or generate a response rendering to manage the responses from the API.
+You can create an API-based message extension using an [OpenAPI Description (OAD)](https://learn.openapis.org/specification/) document. After you've created an OpenAPI Description document, upload the OpenAPI Description document to Teams Toolkit to generate and integrate the client code in your app's project. Create or generate a response rendering template to manage the responses from the API.
+
+>[!IMPORTANT]
+> You can build an API-based message extension now and starting early next year, the extensions will function as plugins within Copilot and enhance Copilot experience for your extensions.
 
 ## Prerequisites
 
@@ -29,103 +30,91 @@ Before you get started, ensure that you adhere to the following requirements:
 
 > [!div class="checklist"]
 >
-> * [OpenAPI Specification (OAS)](#openapi-specification)
+> * [OpenAPI Description (OAD)](#openapi-specification)
 > * [Update app manifest](#update-app-manifest)
 
-### OpenAPI Specification
+### OpenAPI Description
 
-OpenAPI specification (OAS) is the industry-standard specification that outlines how OpenAPI files are structured and outlined. It's a language-agnostic, human-readable format for describing APIs. It's easy for both humans and machines to read and write. The schema is machine-readable and represented in either YAML or JSON. You must have an OpenAPI specification document before you create an API-based message extension.
+The OpenAPI Description (OAD) is the industry-standard specification that details the structure and outline of OpenAPI files. It's a language-agnostic, human-readable format for describing APIs. It's designed to be easily read and written by both humans and machines. The schema is machine-readable and can be represented in either YAML or JSON. An OAD document is required before creating an API-driven message extension.
 
-The following code is an example of an OpenAPI specification document: <br/>
+The following code is an example of an OpenAPI Description document: <br/>
 <br/>
-<details><summary>OpenAPI specification example</summary>
+<details><summary>OpenAPI Description example</summary>
 
    ```yml
-       openapi: 3.0.0
-        info:
-          title: Repair Service
-          description: A simple service to manage repairs for various items
-          version: 1.0.0
-        servers:
-          - url: https://repairs-api-2023.azurewebsites.net/
-        paths:
-          /repairs:
-            get:
-              operationId: listRepairs
-              summary: List all repairs
-              description: Returns a list of repairs with their details and images
-              parameters:
-                - name: assignedTo
-                  in: query
-                  description: Filter repairs by who they're assigned to
-                  schema:
-                    type: string
-                  required: false
-              responses:
-                '200':
-                  description: A successful response
-                  content:
-                    application/json:
-                      schema:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                              description: The unique identifier of the repair
-                            title:
-                              type: string
-                              description: The short summary of the repair
-                            description:
-                              type: string
-                              description: The detailed description of the repair
-                            assignedTo:
-                              type: string
-                              description: The user who is responsible for the repair
-                            date:
-                              type: string
-                              format: date-time
-                              description: The date and time when the repair is scheduled or completed
-                            image:
-                              type: string
-                              format: uri
-                              description: The URL of the image of the item to be repaired or the repair process
-            post:
-              operationId: createRepair
-              summary: Create a new repair
-              description: Adds a new repair to the list with the given details and image URL
-              requestBody:
-                required: true
-                content:
-                  application/json:
-                    schema:
-                      type: object
-                      properties:
-                        title:
-                          type: string
-                          description: The short summary of the repair
-                        description:
-                          type: string
-                          description: The detailed description of the repair
-                        assignedTo:
-                          type: string
-                          description: The user who is responsible for the repair
-                        date:
-                          type: string
-                          format: date-time
-                          description: The optional date and time when the repair is scheduled or completed
-                        image:
-                          type: string
-                          format: uri
-                          description: The URL of the image of the item to be repaired or the repair process
-                      required:
-                        - title
-                        - description
-                        - assignedTo
-              responses:
-                '201':
-                  description: A successful response indicating that the repair was created
+openapi: 3.0.1
+info:
+  title: OpenTools Plugin
+  description: A plugin that allows the user to find the most appropriate AI tools for their use cases, with their pricing information.
+  version: 'v1'
+servers:
+  - url: https://gptplugin.opentools.ai
+paths:
+  /tools:
+    get:
+      operationId: searchTools
+      summary: Search for AI Tools
+      parameters:
+        - in: query
+          name: search
+          required: true
+          schema:
+            type: string
+          description: Used to search for AI tools by their category based on the keywords. For example, ?search="tool to create music" will give tools that can create music.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/searchToolsResponse'
+        "400":
+          description: Search Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/searchToolsError'
+components:
+  schemas:
+    searchToolsResponse:
+      required:
+        - search
+      type: object
+      properties:
+        tools:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: The name of the tool.
+              opentools_url:
+                type: string
+                description: The URL to access the tool.
+              main_summary:
+                type: string
+                description: A summary of what the tool is.
+              pricing_summary:
+                type: string
+                description: A summary of the pricing of the tool.
+              categories:
+                type: array
+                items:
+                  type: string
+                description: The categories assigned to the tool.
+              platforms:
+                type: array
+                items:
+                  type: string
+                description: The platforms that this tool is available on.
+          description: The list of AI tools.
+    searchToolsError:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Message of the error.
    ```
 
    For more information, see [OpenAPI structure.](https://swagger.io/docs/specification/basic-structure/)
@@ -134,9 +123,9 @@ The following code is an example of an OpenAPI specification document: <br/>
 
 ### Response rendering template
 
-A response rendering template is used to map the JSON responses to a preview card and Adaptive Card. The preview cards are displayed as results when a user selects a search result. The preview card expands as an Adaptive Card in the message compose box.
+A response rendering template maps JSON responses to a preview card and an Adaptive Card. When a user selects a search result, the preview cards appear as results. The preview card then expands into an Adaptive Card in the message compose box.
 
-A response rendering template must be present for each search command and each command must correspond to an operation in the OpenAPI specification but not every operation defined in an OpenAPI specification must be a command. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
+Each search command command must have a corresponding response rendering template, and each command must correspond to an operation in the OpenAPI Description. However, not every operation defined in an OpenAPI Description must be a command. The response rendering template consists of an Adaptive Card template, preview card template, and metadata.
 
 **Preview Card**
 
@@ -249,7 +238,7 @@ The following code is an example of a Response rendering template: <br/>
 
 #### Schema mapping
 
-The properties in OpenAPI specification document are mapped to the Adaptive Card template as follows:
+The properties in OpenAPI Description document are mapped to the Adaptive Card template as follows:
 
 * `string`, `number`, `integer`, `boolean` types are converted to a TextBlock.
 
@@ -447,14 +436,14 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
 
 |Name  |Description  |
 |---------|---------|
-|`composeExtension.type`     |  Compose extension type.  Update the value to `ApiBased`. |
-|`composeExtension.apiSpecificationFile`     |  References an OpenAPI specification file in the app package. Include when type is `ApiBased`.      |
-|`composeExtension.command.ID`      | Unique ID that you assign to search command. The user request includes this ID. The ID must match the `OperationID` available in the OpenAPI specification.       |
+|`composeExtension.type`     |  Compose extension type.  Update the value to `apiBased`. |
+|`composeExtension.apiSpecificationFile`     |  References an OpenAPI Description file in the app package. Include when type is `apiBased`.      |
+|`composeExtension.command.ID`      | Unique ID that you assign to search command. The user request includes this ID. The ID must match the `OperationID` available in the OpenAPI Description.       |
 |`composeExtension.command.context`      | Array where the entry points for message extension is defined. The default values are `compose` and `commandBox`. |
-|`composeExtension.command.parameters`    | Defines a static list of parameters for the command. The name must map to the `parameters.name` in the OpenAPI specification. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters.     |
+|`composeExtension.command.parameters`    | Defines a static list of parameters for the command. The name must map to the `parameters.name` in the OpenAPI Description. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters.     |
 |`composeExtension.command.apiResponseRenderingTemplateFile`| Template used to format the JSON response from developer’s API to Adaptive Card response. *[Mandatory]* |
 
-For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
+For more information, see [composeExtensions](../resources/schema/manifest-schema-dev-preview.md#composeextensions).
 
 ## Next step
 

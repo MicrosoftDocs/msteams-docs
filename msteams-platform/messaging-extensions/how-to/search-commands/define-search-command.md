@@ -23,22 +23,50 @@ The following image displays the invoke locations of the search command:
 
 To add the search command to your [app manifest](../../../resources/schema/manifest-schema.md#composeextensions), you must add a new `composeExtensions` object to the top level of your app manifest JSON. You can add the search command either with the help of Developer Portal, or manually.
 
-### Create Search message extension using Bot Framework
+### Create search message extension using Bot Framework
 
-The prerequisite to create a message extension search command, follow these steps:
+You can create a search message extension using Teams Toolkit and Developer portal for Teams.
+
+#### Prerequisites
+
+Before you get started, ensure that you meet the following requirements:
+
+* [Node.js](https://nodejs.org/en). The supported versions are 16, 18.
+* [Microsoft 365 account for development](../../../toolkit/tools-prerequisites.md#microsoft-365-developer-program)
+* [Set up your dev environment for extending Teams apps across Microsoft 365](../../../m365-apps/prerequisites.md) Please note that after you enrolled your developer tenant in Office 365 Target Release, it may take couple days for the enrollment to take effect.
+* [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version 5.2.0 and higher or Teams Toolkit CLI
 
 # [Teams Toolkit](#tab/Teams-toolkit)
+
+To create a search based message extension using Teams Toolkit, follow these steps:
 
 1. Open **Visual Studio Code**.
 1. From the left pane, Select **Teams Toolkit**.
 1. Select **Create a New App**.
 1. Select **Message Extension**.
 1. Select **Custom Search Results**.
+1. Select **Start with a Bot**.
 1. Select a **programming language**.
 1. Select **Default folder**.
 1. Enter the name of your app and select **Enter**.
 
-Teams Toolkit scaffolds your project and creates a search message extension.
+   Teams Toolkit scaffolds your project and creates a search message extension.
+
+To run the message extension in Teams, follow these steps:
+
+1. From the the left pane, select **Teams Toolkit**.
+1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
+
+   :::image type="content" source="../../../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Teams Toolkit.":::
+
+1. Under **LIFECYCLE**, select **Provision**. Teams Toolkit provisions the app on Azure and displays a message.
+
+   :::image type="content" source="../../../assets/images/Copilot/api-based-me-ttk-provision-success.png" alt-text="Screenshot shows the successfull completion of the provsion steps in Teams Toolkit.":::
+
+1. From the left pane, Select **Run and Debug (Ctrl+Shift+D)**.
+1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)` . Teams Toolkit launches Teams web client in a browser window. Select the Add button in the dialog to install your app to Teams.
+1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, @mention your message extension.
+1. Select the message extension from the list and [trigger your search commands from compose message area](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?tabs=dotnet#search-commands).
 
 # [Developer portal for Teams](#tab/developer-portal-for-teams)
 
@@ -56,6 +84,8 @@ Teams Toolkit scaffolds your project and creates a search message extension.
 
    1. If don't have a Bot ID, you can select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you've created.
 
+1. Select **Save**.
+
 1. Select the required scopes.
 
 1. Under **Command**, select **+ Add a command**.
@@ -70,11 +100,10 @@ Teams Toolkit scaffolds your project and creates a search message extension.
    * Parameter name
    * Parameter title
    * Parameter description
-   * Parameter description type
+   * Select the type of input
 
-1. Select **Save**.
-
-A search message extension using bot framework created.
+1. Select **Save**. A search message extension using bot framework created.
+1. At the upper-right, select **Preview in Teams**. The app opens in Teams desktop or web client.
 
 ---
 

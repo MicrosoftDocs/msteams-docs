@@ -496,7 +496,7 @@
     - name: Overview
       href: messaging-extensions/api-based-overview.md
       displayName: OpenAPI specification, Search, single parameter, search based message extension
-    - name: Search commands
+    - name: Build using an API
       href: messaging-extensions/build-api-based-message-extension.md
       display name: Handle tap actions, Just-in-time install, JIT
   - name: Bot based message extension  
