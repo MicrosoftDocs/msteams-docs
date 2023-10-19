@@ -10,7 +10,7 @@ ms.date: 12/13/2022
 > [!Note]
 > For authentication to work for your tab on mobile clients, ensure that you're using version 1.4.1 or later of the Microsoft Teams JavaScript client library (TeamsJS).
 
-There are many services that you want to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services includes Facebook, Twitter, and Teams.
+Your Teams app may need to interact with various services, such as Facebook, Twitter, and Teams. Most of these services necessitate authentication and authorization for access. Teams stores user profile information in Azure AD via Microsoft Graph. This article primarily focuses on using Azure AD for authentication to access this information.
 Teams user profile information is stored in Azure AD using Microsoft Graph and the article is to focus on authentication using Azure AD to get access information.
 
 OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The OAuth 2.0 Implicit Grant flow is used in the examples. It reads the user's profile information from Azure AD and Microsoft Graph.
@@ -25,13 +25,13 @@ Authentication flow in tabs differs from authentication flow in bots.
 
 ## Configure your app to use Azure AD as an identity provider
 
-Identity providers that support OAuth 2.0 don't authenticate requests from unknown applications. You must register the applications ahead of time. To register an application with Azure AD, follow these steps:
+OAuth 2.0 supporting identity providers do not authenticate requests from unregistered applications. Therefore, it's essential to register your applications in advance. For registering an application with Azure Active Directory (AD), follow these steps:
 
 1. Open the [Application Registration Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
 
 2. Select your app to view its properties, or select the "New Registration" button. Find the **Redirect URI** section for the app.
 
-3. Select **Web** from the dropdown menu. Update the URL to your authentication endpoint. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs are similar as follows:
+3. Select **Web** from the dropdown menu and update the URL to your authentication endpoint. In the TypeScript/Node.js and C# sample apps available on GitHub, the redirect URLs follow a similar pattern:
 
     Redirect URLs: `https://<hostname>/bot-auth/simple-start`
 
@@ -225,7 +225,7 @@ Your app can set its own session cookie so that the user need not sign in again 
 > [!NOTE]
 >
 > * Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../../../resources/samesite-cookie-update.md).
-> * To get the correct token for Microsoft Teams Free and guest users, it is important that the apps use tenant specific endpoint `https://login.microsoftonline.com/**{tenantId}**`. You can get tenantId from the bot message or tab context. Using `https://login.microsoftonline.com/common` in apps can result in users getting incorrect tokens and logging on to the "home" tenant instead of the tenant they are currently signed into.
+> * To obtain the appropriate token for Microsoft Teams Free and guest users, ensure your apps utilize the tenant-specific endpoint `https://login.microsoftonline.com/**{tenantId}**`. You can acquire the tenantId from the bot message or tab context. If your apps use `https://login.microsoftonline.com/common`, users might receive incorrect tokens, causing them to log into the "home" tenant rather than the tenant they are currently signed into.
 
 For more information on single sign-on (SSO), see the article [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md).
 
