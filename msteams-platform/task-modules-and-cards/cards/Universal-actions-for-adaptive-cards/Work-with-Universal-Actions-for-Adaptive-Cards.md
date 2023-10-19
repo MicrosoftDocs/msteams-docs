@@ -112,7 +112,7 @@ For more information, see [backward compatibility on Teams](/adaptive-cards/auth
 |Sample name | Description | .NET | Node.js | Manifest|
 |----------------|-----------------|--------------|--------------|--------------|
 | Teams catering bot | This sample shows  a bot that accepts food order using Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| NA | NA|
-| Sequential Workflows Adaptive Cards | This sample demonstrates the implementation of Sequential Workflows, User Specific Views, and current Adaptive Cards in bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-sequential-flow-adaptive-cards/csharp/demo-manifest/bot-sequential-flow-adaptive-cards.zip) |
+| Sequential Workflows Adaptive Cards | This sample demonstrates the implementation of Sequential Workflows, User Specific Views, and current Adaptive Cards in bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-sequential-flow-adaptive-cards/csharp/demo-manifest/bot-sequential-flow-adaptive-cards.zip) |
 
 ## See also
 
