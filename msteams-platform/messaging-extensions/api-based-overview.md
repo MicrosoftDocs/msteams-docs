@@ -1,5 +1,5 @@
 ---
-title: API-based message extension
+title: Build message extension using API (API-based)
 author: v-ypalikila
 description: Learn how to build an message extension using an OpenAPI description document (API).
 ms.localizationpriority: medium
@@ -8,12 +8,12 @@ ms.author: anclear
 ms.date: 10/19/2023
 ---
 
-# API-based Message extension
+# Build message extension using API (API-based)
 
 > [!NOTE]
 > API-based message extensions only support search commands.
 
-Message extensions built using an API (API-based) use a web service to manage user requests and responses and don't require a bot registration or a Bot Framework. You can configure and deploy API-based message extensions using Teams Toolkit. API-based message extensions help your apps to interact directly with third-party data, apps, and services, enhancing its capabilities. With APIs for message extension, you can:
+Message extensions built using API (API-based) use a web service to manage user requests and responses and don't require a bot registration or a Bot Framework. You can configure and deploy API-based message extensions using Teams Toolkit. API-based message extensions help your apps to interact directly with third-party data, apps, and services, enhancing its capabilities. With APIs for message extension, you can:
 
 * Retrieve real-time information, such as latest news coverage on a product launch.
 * Retrieve knowledge-based information, for example, my team’s design files in Figma.

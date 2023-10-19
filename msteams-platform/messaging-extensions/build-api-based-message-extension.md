@@ -1,5 +1,5 @@
 ---
-title: Build message extension using an API
+title: Build API-based message extension
 author: v-ypalikila
 description: Learn how to build an API message extension using Teams developer portal and Teams Toolkit.
 ms.localizationpriority: medium
