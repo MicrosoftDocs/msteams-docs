@@ -227,9 +227,9 @@ For examples on how to send an activity feed notification, see [send activity fe
   * For Teams Store apps, it saves time and streamlines the process since you don't need to adjust activity types in your app manifest constantly. The `systemDefault` activity type is ready to use from the get-go.
 * With the `systemDefault` activity type you can't:
   * Utilize the built-in localization features provided by app manifest.
-  * Rely solely on sending customizable notifications with the  `systemDefault` activity type. Users can turn off all notifications from your app with a single toggle in the Teams client settings, which could hinder communication between your app and its users.
-* Recurring and large batch of notifications must still use templated notifications since they require activity templates in app manifest.
-* The `systemDefault` reserved activity type remains available for use, regardless of the activity types listed in your app manifest.
+  * Rely on sending customizable notifications with the  `systemDefault` activity type. Users can turn off all notifications from your app with a toggle in the Microsoft Teams client settings, which can hinder communication between your app and its users.
+* We still recommend templated notifications for recurring and large batches of notifications because they require activity templates in the manifest.
+* The `systemDefault` reserved activity type remains available, regardless of the activity types listed in your app's manifest.
 
 ## Step-by-step guide
 
