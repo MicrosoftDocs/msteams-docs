@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Microsoft Teams Platform</title>
-	<updated>2023-07-19T04:15:01+05:30</updated>
+	<updated>2023-10-18T04:15:01+05:30</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
 	<category term="new"/>
 	<category term="updated"/>
+	<entry>
+		<title type="html"><![CDATA[Platform update: Use callTranscript API to fetch meeting transcript from all meetings]]></title>
+		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/graph-api/meeting-transcripts/overview-transcripts</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/graph-api/meeting-transcripts/overview-transcripts?referrer=whats.new.rssfeed"/>
+		<updated>2023-10-05T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[You can now configure your app to fetch Microsoft Teams meeting transcripts and recordings in the post-meeting scenario. Your app can use Microsoft Graph REST APIs to access and fetch transcripts and recordings generated for a Teams meeting that has been scheduled beforehand. Get meeting recordings using Graph API are available only in public developer preview. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2023fb5403-f29d-1479-0899-83a470f4fa05%0A*%20Version%20Independent%20ID%3A%2023fb5403-f29d-1479-0899-83a470f4fa05%0A*%20Content%3A%20%5BUse%20Microsoft%20Graph%20to%20fetch%20transcripts%20and%20recordings%20for%20a%20Teams%20meeting%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fgraph-api%2Fmeeting-transcripts%2Foverview-transcripts)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fgraph-api%2Fmeeting-transcripts%2Foverview-transcripts.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fgraph-api%2Fmeeting-transcripts%2Foverview-transcripts.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+		<entry>
+		<title type="html"><![CDATA[Platform update: Ratings and review for Teams apps]]></title>
+		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/post-publish/overview#ratings-and-review-for-teams-apps</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/post-publish/overview#ratings-and-review-for-teams-apps?referrer=whats.new.rssfeed"/>
+		<updated>2023-10-05T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[Users can rate apps from one to five stars on Microsoft Teams Store and offer feedback (review) on their usage experiences. The ratings and reviews for apps appear on the app listing and the product details page in Teams Store. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d29cfd09-9067-d939-960a-b33931707c4d%0A*%20Version%20Independent%20ID%3A%206c0b95fa-b5b4-5ace-15e7-55d2b007b792%0A*%20Content%3A%20%5BMaintain%20and%20support%20your%20published%20app%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fpost-publish%2Foverview%23ratings-and-review-for-teams-apps)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fpost-publish%2Foverview.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fpost-publish%2Foverview.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40heath-hamilton%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
+		<category label="new" term="new"/>
+	</entry>
 	<entry>
 		<title type="html"><![CDATA[Platform update: Teams store search experience]]></title>
 		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish#teams-store-search-experience</id>
@@ -101,22 +117,6 @@
 		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license?referrer=whats.new.rssfeed"/>
 		<updated>2023-04-06T11:04:01+05:30</updated>
 		<summary type="html"><![CDATA[Independent software vendors (ISVs) can configure Microsoft license management for third-party SaaS apps in Partner Center as part of the offer publishing. This allows Teams admins or users to easily assign, unassign, use, and track SaaS licenses for their third-party app subscriptions within Teams. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20273416d6-635b-e334-76ed-037473249a6d%0A*%20Version%20Independent%20ID%3A%20273416d6-635b-e334-76ed-037473249a6d%0A*%20Content%3A%20%5BSet%20up%20Microsoft%20license%20management%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fprepare%2Fmanage-third-party-apps-license)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fprepare%2Fmanage-third-party-apps-license.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fprepare%2Fmanage-third-party-apps-license.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40heath-hamilton%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: Tab apps in shared channels are available in DOD]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/shared-channels</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/shared-channels?referrer=whats.new.rssfeed"/>
-		<updated>2023-04-04T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Tab apps in shared channels are available in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD) environments. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20ad6cb84d-7e44-02db-512f-7da7c8018976%0A*%20Version%20Independent%20ID%3A%20ad6cb84d-7e44-02db-512f-7da7c8018976%0A*%20Content%3A%20%5BTeams%20Connect%20shared%20channels%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fbuild-and-test%2Fshared-channels)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fshared-channels.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fshared-channels.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40Rajeshwari-v%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: Bots and Message Extensions are available in DOD]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/bots/what-are-bots</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/bots/what-are-bots?referrer=whats.new.rssfeed"/>
-		<updated>2023-03-20T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Conversational Bots and Message Extensions are now available in DOD. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%203af8496d-46be-a691-11e1-16734f71f891%0A*%20Version%20Independent%20ID%3A%20be0ff3e1-8bef-5ca7-8d9c-566e89e3fd41%0A*%20Content%3A%20%5BBots%20in%20Microsoft%20Teams%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fwhat-are-bots)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fbots%2Fwhat-are-bots.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fwhat-are-bots.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**anclear**">feedback</a>? It is important to us.]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 </feed>
