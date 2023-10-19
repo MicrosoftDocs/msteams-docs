@@ -10,12 +10,11 @@ ms.date: 12/13/2022
 > [!Note]
 > For authentication to work for your tab on mobile clients, ensure that you're using version 1.4.1 or later of the Microsoft Teams JavaScript client library (TeamsJS).
 
-There are many services that you may want to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services includes Facebook, Twitter, and Teams.
-Teams user profile information is stored in Azure AD using Microsoft Graph and this article will focus on authentication using Azure AD to get access to this information.
+Your Microsoft Teams app might need to interact with various services, such as Facebook, Twitter, and Teams. Most of these services necessitate authentication and authorization for access. Teams stores user profile information in Azure Active Directory (Azure AD) using Microsoft Graph. This article primarily focuses on using Azure AD for authentication to access this information.
 
-OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The examples below use the OAuth 2.0 Implicit Grant flow. It reads the user's profile information from Azure AD and Microsoft Graph.
+OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The OAuth 2.0 Implicit Grant flow is used in the examples. It reads the user's profile information from Azure AD and Microsoft Graph.
 
-The code in this article comes from the Teams sample app [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs). It contains a static tab that requests an access token for Microsoft Graph, and shows the current user's basic profile information from Azure AD.
+The code in the article comes from the Teams sample app [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs). It contains a static tab that requests an access token for Microsoft Graph, and shows the current user's basic profile information from Azure AD.
 
 For overview of authentication flow for tabs, see [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md).
 
@@ -25,13 +24,13 @@ Authentication flow in tabs differs from authentication flow in bots.
 
 ## Configure your app to use Azure AD as an identity provider
 
-Identity providers that support OAuth 2.0 don't authenticate requests from unknown applications. You must register the applications ahead of time. To do this with Azure AD, follow these steps:
+OAuth 2.0 supporting identity providers do not authenticate requests from unregistered applications. Therefore, it's essential to register your applications in advance. For registering an application with Azure Active Directory (AD), follow these steps:
 
 1. Open the [Application Registration Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
 
 2. Select your app to view its properties, or select the "New Registration" button. Find the **Redirect URI** section for the app.
 
-3. Select **Web** from the dropdown menu. Update the URL to your authentication endpoint. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to the following:
+3. Select **Web** from the dropdown menu and update the URL to your authentication endpoint. In the TypeScript/Node.js and C# sample apps available on GitHub, the redirect URLs follow a similar pattern:
 
     Redirect URLs: `https://<hostname>/bot-auth/simple-start`
 
@@ -42,7 +41,10 @@ Replace `<hostname>` with your actual host. This host can be a dedicated hosting
 
 ## Initiate authentication flow
 
-Authentication flow should be triggered by a user action. You shouldn't open the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker and confuse the user.
+> [!NOTE]
+> If **Experimental third-party storage partitioning** is enabled, the third-party authentication fails. The app prompts for authentication repeatedly as the values aren’t stored locally.
+
+Trigger the authentication flow by a user action. Avoid opening the authentication pop-up automatically, as this is likely to trigger the browser's pop-up blocker and confuse the user.
 
 Add a button to your configuration or content page to enable the user to sign in when needed. This can be done in the tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
 
@@ -92,9 +94,9 @@ microsoftTeams.authentication.authenticate({
 
 * The URL you pass to `authenticate()` is the start page of the authentication flow. In this example that is `/tab-auth/simple-start`. This should match what you registered in the [Azure AD Application Registration Portal](https://apps.dev.microsoft.com).
 
-* Authentication flow must start on a page that's on your domain. This domain should also be listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section of the manifest. Failure to do so will result in an empty pop-up.
+* Authentication flow must start on a page that's on your domain. This domain should also be listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section of the manifest. Failure to do results in an empty pop-up.
 
-* Failing to use `authenticate()` will cause a problem with the pop-up not closing at the end of the sign-in process.
+* If you fail to use `authenticate()`, the pop-up may not close at the end of the sign-in process, causing a problem.
 
 ## Navigate to the authorization page from your pop-up page
 
@@ -170,7 +172,7 @@ After the user completes authorization, the user is redirected to the callback p
 
 In the last section, you called the Azure AD authorization service and passed in user and app information so that Azure AD could present the user with its own monolithic authorization experience. Your app has no control over what happens in this experience. All it knows is what is returned when Azure AD calls the  callback page that you provided (`/tab-auth/simple-end`).
 
-In this page, you need to determine success or failure based on the information returned by Azure AD and call `authentication.notifySuccess()` or `authentication.notifyFailure()`. If the login was successful, you'll have access to service resources.
+In this page, you need to determine success or failure based on the information returned by Azure AD and call `authentication.notifySuccess()` or `authentication.notifyFailure()`. If the login was successful, you have access to service resources.
 
 ```javascript
 // Split the key-value pairs passed from Azure AD
@@ -222,7 +224,7 @@ Your app can set its own session cookie so that the user need not sign in again 
 > [!NOTE]
 >
 > * Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../../../resources/samesite-cookie-update.md).
-> * To get the correct token for Microsoft Teams Free and guest users, it is important that the apps use tenant specific endpoint `https://login.microsoftonline.com/**{tenantId}**`. You can get tenantId from the bot message or tab context. If the apps use `https://login.microsoftonline.com/common`, the users will get incorrect tokens and will log on to the "home" tenant instead of the tenant that they are currently signed into.
+> * To obtain the appropriate token for Microsoft Teams Free and guest users, ensure your apps utilize the tenant-specific endpoint `https://login.microsoftonline.com/**{tenantId}**`. You can acquire the tenantId from the bot message or tab context. If your apps use `https://login.microsoftonline.com/common`, users might receive incorrect tokens, causing them to log into the "home" tenant rather than the tenant they are currently signed into.
 
 For more information on single sign-on (SSO), see the article [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md).
 
