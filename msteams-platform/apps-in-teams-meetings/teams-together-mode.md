@@ -26,7 +26,7 @@ Get started now and transform your Teams meetings with Custom Together Mode scen
 Before you start, ensure that you have a basic understanding of the following:
 
 * Define a scene and assign seats in a scene.
-* Create a Microsoft Developer account and familiarity with the Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
+* Create a Microsoft Developer account and familiarity with the [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
 * Understand the [concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
 * Ensure that the administrator has granted permission to [upload a custom app](../concepts/deploy-and-publish/apps-upload.md#upload-your-app) and select all filters as part of app setup and meeting policies respectively.
 
@@ -69,7 +69,7 @@ Microsoft Scene studio allows you to build scenes. It's available on [Scenes Edi
 
 The following image shows each seat represented as an avatar for building the scenes:
 
-:::image type="content" source="../assets/images/apps-in-meetings/scene-design-studio.png" alt-text="Screenshot shows seven avatars representing the participants in the scene studio.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/scene-design-studio.png" alt-text="Screenshot shows seven avatars representing the participants in the scene studio.":::
 
 To build a scene using the Scene studio, follow these steps:
 
@@ -84,7 +84,7 @@ To build a scene using the Scene studio, follow these steps:
 1. Select **Blank Scene** template from the window to create custom scene.
    You can select any template of your choice. **Blank Scene** allows you to create custom scenes.
 
-:::image type="content" source="../assets/images/apps-in-meetings/scene-template.png" alt-text="Screenshot shows the choices of templates for a scene in the scene studio.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/scene-template.png" alt-text="Screenshot shows the choices of templates for a scene in the scene studio.":::
 
 1. In **Scene Name**, enter a name for the scene.
 
@@ -93,13 +93,13 @@ To build a scene using the Scene studio, follow these steps:
 
 1. To add the image to the environment, select **Add images**.
 
-   :::image type="content" source="../assets/images/apps-in-meetings/addimages.png" alt-text="Screenshot shows the Add images option highlighted in red in the scene studio.":::
+   :::image type="content" source="~/assets/images/apps-in-meetings/addimages.png" alt-text="Screenshot shows the Add images option highlighted in red in the scene studio.":::
 
 1. Select the image that you've added.
 
 1. From the right pane, select an alignment for the image or use **Resize** to adjust the image size.
 
-    :::image type="content" source="../assets/images/apps-in-meetings/image-alignment.png" alt-text="Screenshot shows the Resize option highlighted in red to align the image in a scene studio.":::
+    :::image type="content" source="~/assets/images/apps-in-meetings/image-alignment.png" alt-text="Screenshot shows the Resize option highlighted in red to align the image in a scene studio.":::
 
 1. Select an area outside of the image.
 
@@ -111,25 +111,24 @@ To build a scene using the Scene studio, follow these steps:
 
 1. Select **Meeting Organizer** or **Presenter** role for the participant. In a meeting, one participant must be assigned the role of a meeting organizer:
 
-   :::image type="content" source="../assets/images/apps-in-meetings/assign-spot.png" alt-text="Screenshot shows the Assign spot check box for the participant 3 in the scene studio.":::
+   :::image type="content" source="~/assets/images/apps-in-meetings/assign-spot.png" alt-text="Screenshot shows the Assign spot check box for the participant 3 in the scene studio.":::
 
 1. Select **Save** and select **View in Teams** to quickly test your scene in Teams.
 
     * Selecting **View in Teams** automatically creates a Teams app that can be viewed in the **Apps** page in the Teams Developer Portal.
-    * Selecting **View in Teams** automatically creates an app package that is appmanifest.json in the background. You can go to  **Apps** from the menu and access the created app package.
+    * Selecting **View in Teams** automatically creates an app package that is appmanifest.json in the background. You can go to  **Apps** from the menu and access the created app package. This is the model for a developer to test and try out scenes from the Scene studio. After a scene is exported and sideloaded as a custom app, users can view the scenes in the scene gallery.
 
 1. Select **View in Teams**, in the dialog box that appears select **Add**.
 
     To test or access the scene, create a test meeting and launch custom Together Mode scenes. For more information, see [test custom Together Mode scenes in Teams](#test-custom-together-mode-scenes-in-teams).
 
-     :::image type="content" source="../assets/images/apps-in-meetings/launchtogethermode.png" alt-text="Screenshot shows the custom scene launched in a Teams meeting.":::
+     :::image type="content" source="~/assets/images/apps-in-meetings/launchtogethermode.png" alt-text="Screenshot shows the custom scene launched in a Teams meeting.":::
 
 ## Test custom Together Mode scenes in Teams
 
 > [!NOTE]
 >
-> * You can apply a custom Together Mode scene that is deployed by your tenant admin only if you've a [Teams Premium license](/MicrosoftTeams/enhanced-teams-experience?branch=danismith-t-pre-licensing).
-> * On selecting **View in Teams** in the Scene studio, the scene is installed as an app in Teams. This is the model for a developer to test and try out scenes from the Scene studio. After a scene is exported and sideloaded as a custom app, users can view the scenes in the scene gallery.
+> You can apply a custom Together Mode scene that is deployed by your tenant admin only if you've a [Teams Premium license](/MicrosoftTeams/enhanced-teams-experience?branch=danismith-t-pre-licensing).
 
 You must create a new Teams meeting to test the scene in Teams.
 
@@ -154,13 +153,22 @@ To select scenes and use custom Together Mode scenes, join the Teams meeting and
 
 ## Share a scene using the Scene studio
 
-You can view the scene you've created in the custom Together Mode scenes gallery. Additionally, you can share and export the scene.
+You can view the scene you've created in the **Your scenes** section of **Scene studio**. Additionally, you can share and export the scene.
 
-   **Share**: From the **Save** drop-down menu, select **Share** to create a shareable link of your scenes to share for others to use. The user can open the link to install the scene and start using it. After preview, the scene is shipped as an app to Teams by following the steps for app submission. This step requires the app package. For the scene that is designed, the app package is different from the scene package. The app package created automatically is found in the **Apps** section in the Teams Developer Center. </br>
+**Share**:
 
-   **Export**: From the **Save** drop-down menu, select **Export** to retrieve the scene package. A .zip file, which is the scene package, is downloaded. The Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes. </br>
+1. From the **Save** drop-down menu, select **Share**.
 
-:::image type="content" source="../assets/images/apps-in-meetings/build-a-scene.png" alt-text="Screenshot shows the Export option to export a scene.":::
+1. In **Share the scene app** window, select **Share Test together mode with everyone** toggle to create a shareable link of your scenes to share for others to use.
+
+1. **Copy** the link.
+
+    The user can open the link to install the scene and start using it. After preview, the scene is shipped as an app to Teams by following the steps for app submission. This step requires the app package. For the scene that is designed, the app package is different from the scene package. The app package created automatically is found in the **Apps** section in the Teams Developer Center. </br>
+
+**Export**:
+    From the **Save** drop-down menu, select **Export** to retrieve the scene package. A .zip file, which is the scene package, is downloaded. The Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes. </br>
+
+:::image type="content" source="~/assets/images/apps-in-meetings/build-a-scene.png" alt-text="Screenshot shows the Export option to export a scene.":::
 
 To delete a scene you created, select **Delete scene** on the top bar.
 
@@ -259,7 +267,7 @@ Now that you've gone through the sample scene.json file, you can use the custom 
 
 You can share the Scene package, which is a .zip file retrieved from the Scene studio to other creators to further enhance the scene. The **Import a scene** functionality helps unwrap a scene package to let the creator continue building the scene.
 
-:::image type="content" source="../assets/images/apps-in-meetings/scene-zip-file.png" alt-text="Screenshot shows the Import a scene option highlighted in red in the scene studio.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/scene-zip-file.png" alt-text="Screenshot shows the Import a scene option highlighted in red in the scene studio.":::
 
 ## See also
 
