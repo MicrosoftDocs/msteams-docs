@@ -8,7 +8,7 @@ metadata:
   ms.date: 10/21/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: messaging-extensions/build-bot-based-message-extension.md
-  nextTutorialTitle: Build message extension using bot Framework.
+  nextTutorialTitle: Build message extension using Bot Framework.
   ms.custom: mvc
   ms.localizationpriority: high
 items:
@@ -193,7 +193,7 @@ items:
     
     * It must not have auth specified.
     * The request body (if present) can't contain any arrays.
-    * The OpenAPI spec must have an `operationId`.The server URL must be defined in the specification.
+    * The OpenAPI Description document must have an `operationId`.The server URL must be defined.
     * If there's no operation ID, Teams Toolkit generates an `operationId` automatically.
     * The `oneOf`, `anyOf`, `allOf`, `not` (swagger.io) construct aren't supported in Teams.
     * Constructing arrays for the request aren't supported, but nested objects within a JSON request body are supported.
@@ -209,135 +209,79 @@ items:
     <details><summary>OpenAPI Description document</summary>
 
     ```YAML 
-        {
-        "openapi": "3.0.1",
-        "info": {
-            "version": "v0",
-            "title": "Open AI Klarna product Api"
-        },
-        "servers": [
-            {
-                "url": "https://www.klarna.com/us/shopping"
-            }
-        ],
-        "tags": [
-            {
-                "name": "open-ai-product-endpoint",
-                "description": "Open AI Product Endpoint. Query for products."
-            }
-        ],
-        "paths": {
-            "/public/openai/v0/products": {
-                "get": {
-                    "tags": [
-                        "open-ai-product-endpoint"
-                    ],
-                    "summary": "API for fetching Klarna product information",
-                    "operationId": "productsUsingGET",
-                    "parameters": [
-                        {
-                            "name": "countryCode",
-                            "in": "query",
-                            "description": "ISO 3166 country code with two characters based on the user location. Currently, only US, GB, DE, SE and DK are supported.",
-                            "required": true,
-                            "schema": {
-                                "type": "string"
-                            }
-                        },
-                        {
-                            "name": "q",
-                            "in": "query",
-                            "description": "A precise query that matches one small category or product that needs to be searched for to find the products the user is looking for. If the user explicitly stated what they want, use that as a query. The query is as specific as possible to the product name or category mentioned by the user in its singular form, and don't contain any clarifiers like latest, newest, cheapest, budget, premium, expensive or similar. The query is always taken from the latest article, if there's a new article a new query is started. If the user speaks another language than English, translate their request into English.",
-                            "required": true,
-                            "schema": {
-                                "type": "string"
-                            }
-                        },
-                        {
-                            "name": "size",
-                            "in": "query",
-                            "description": "number of products returned",
-                            "required": false,
-                            "schema": {
-                                "type": "integer"
-                            }
-                        },
-                        {
-                            "name": "min_price",
-                            "in": "query",
-                            "description": "(Optional) Minimum price in local currency for the product searched for. Either explicitly stated by the user or implicitly inferred from a combination of the user's request and the kind of product searched for.",
-                            "required": false,
-                            "schema": {
-                                "type": "integer"
-                            }
-                        },
-                        {
-                            "name": "max_price",
-                            "in": "query",
-                            "description": "(Optional) Maximum price in local currency for the product searched for. Either explicitly stated by the user or implicitly inferred from a combination of the user's request and the kind of product searched for.",
-                            "required": false,
-                            "schema": {
-                                "type": "integer"
-                            }
-                        }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": "Products found",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "$ref": "#/components/schemas/ProductResponse"
-                                    }
-                                }
-                            }
-                        },
-                        "503": {
-                            "description": "one or more services are unavailable"
-                        }
-                    },
-                    "deprecated": false
-                }
-            }
-        },
-        "components": {
-            "schemas": {
-                "Product": {
-                    "type": "object",
-                    "properties": {
-                        "attributes": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
-                            }
-                        },
-                        "name": {
-                            "type": "string"
-                        },
-                        "price": {
-                            "type": "string"
-                        },
-                        "url": {
-                            "type": "string"
-                        }
-                    },
-                    "title": "Product"
-                },
-                "ProductResponse": {
-                    "type": "object",
-                    "properties": {
-                        "products": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/components/schemas/Product"
-                            }
-                        }
-                    },
-                    "title": "ProductResponse"
-                }
-            }
-        }
-    }
+        openapi: 3.0.1
+    info:
+    title: OpenTools Plugin
+    description: A plugin that allows the user to find the most appropriate AI tools for their use cases, with their pricing information.
+    version: 'v1'
+    servers:
+    - url: https://gptplugin.opentools.ai
+    paths:
+    /tools:
+        get:
+        operationId: searchTools
+        summary: Search for AI Tools
+        parameters:
+            - in: query
+            name: search
+            required: true
+            schema:
+                type: string
+            description: Used to search for AI tools by their category based on the keywords. For example, ?search="tool to create music" will give tools that can create music.
+        responses:
+            "200":
+            description: OK
+            content:
+                application/json:
+                schema:
+                    $ref: '#/components/schemas/searchToolsResponse'
+            "400":
+            description: Search Error
+            content:
+                application/json:
+                schema:
+                    $ref: '#/components/schemas/searchToolsError'
+    components:
+    schemas:
+        searchToolsResponse:
+        required:
+            - search
+        type: object
+        properties:
+            tools:
+            type: array
+            items:
+                type: object
+                properties:
+                name:
+                    type: string
+                    description: The name of the tool.
+                opentools_url:
+                    type: string
+                    description: The URL to access the tool.
+                main_summary:
+                    type: string
+                    description: A summary of what the tool is.
+                pricing_summary:
+                    type: string
+                    description: A summary of the pricing of the tool.
+                categories:
+                    type: array
+                    items:
+                    type: string
+                    description: The categories assigned to the tool.
+                platforms:
+                    type: array
+                    items:
+                    type: string
+                    description: The platforms that this tool is available on.
+            description: The list of AI tools.
+        searchToolsError:
+        type: object
+        properties:
+            message:
+            type: string
+            description: Message of the error.
 
     ```
     </details>
@@ -350,86 +294,73 @@ items:
 
      ```json
         {
-            "version": "1.0",
-            "responseLayout": "grid",
-            "responseCardTemplate": {
-                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-                "type": "AdaptiveCard",
-                "version": "1.4",
-                "body": [
-                    {
-                        "type": "Container",
-                        "items": [
-                            {
-                                "type": "ColumnSet",
-                                "columns": [
-                                    {
-                                        "type": "Column",
-                                        "width": "stretch",
-                                        "items": [
-                                            {
-                                                "type": "TextBlock",
-                                                "text": "Title: ${if(title, title, 'N/A')}",
-                                                "wrap": true
-                                            },
-                                            {
-                                                "type": "TextBlock",
-                                                "text": "Description: ${if(description, description, 'N/A')}",
-                                                "wrap": true
-                                            },
-                                            {
-                                                "type": "TextBlock",
-                                                "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
-                                                "wrap": true
-                                            },
-                                            {
-                                                "type": "Image",
-                                                "url": "${image}",
-                                                "size": "Medium",
-                                                "$when": "${image != null}"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "type": "Column",
-                                        "width": "auto",
-                                        "items": [
-                                            {
-                                                "type": "Image",
-                                                "url": "${if(image, image, '')}",
-                                                "size": "Medium"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "FactSet",
-                                "facts": [
-                                    {
-                                        "title": "Repair ID:",
-                                        "value": "${if(id, id, 'N/A')}"
-                                    },
-                                    {
-                                        "title": "Date:",
-                                        "value": "${if(date, date, 'N/A')}"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
+        "version": "1.0.0",
+        "jsonPath": "tools",
+        "responseLayout": "list",
+        "responseCardTemplate": {
+            "type": "AdaptiveCard",
+            "version": "1.4",
+            "body": [
+            {
+                "type": "TextBlock",
+                "text": "${if(name, name, 'N/A')}",
+                "size": "Large",
+                "weight": "Bolder",
+                "wrap": true
             },
-            "previewCardTemplate": {
-                "title": "Title: ${if(title, title, 'N/A')}",
-                "subtitle": "Description: ${if(description, description, 'N/A')}",
-                "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
-                "image": {
-                "url": "${image}",
-                "$when": "${image != null}"
-                }
-                }
+            {
+                "type": "TextBlock",
+                "text": "Categories: ${join(categories, ', ')}",
+                "size": "Small",
+                "isSubtle": true,
+                "wrap": true
+            },
+            {
+                "type": "TextBlock",
+                "text": "${if(main_summary, main_summary, 'N/A')}",
+                "size": "Medium",
+                "wrap": true
+            },
+            {
+                "type": "TextBlock",
+                "text": "Supported Platforms: ${join(platforms, ', ')}",
+                "size": "Small",
+                "isSubtle": true,
+                "wrap": true
+            },
+            {
+                "type": "TextBlock",
+                "text": "Pricing Summary:",
+                "size": "Medium",
+                "weight": "Bolder",
+                "wrap": true
+            },
+            {
+                "type": "TextBlock",
+                "text": "${if(pricing_summary, pricing_summary, 'N/A')}",
+                "size": "Small",
+                "wrap": true
             }
+            ],
+            "actions": [
+            {
+                "type": "Action.OpenUrl",
+                "title": "Learn More",
+                "url": "${opentools_url}",
+                "$when": "${opentools_url != null}"
+            },
+            {
+                "type": "Action.OpenUrl",
+                "title": "Chat with Chatbot",
+                "url": "${chatbot_short_url}",
+                "$when": "${chatbot_short_url != null}"
+            }
+            ],
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+        },
+        "previewCardTemplate": {
+            "title": "${if(name, name, 'N/A')}"
+        }
         }
      ```
      </details>
@@ -523,9 +454,9 @@ items:
         > [!NOTE]
         > The first time you provision your app, it takes a few minutes to complete. Subsequent provisions are faster.
 
-    Now the bot is successfully running on Teams! You can navigate to a chat message and trigger your search commands from compose message area.
+    1. Go to a chat message and trigger your search commands from compose message area.
 
-    <!-- markdownlint-disable MD033 -->
+    :::image type="content" source="assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
 
 - title: Complete challenge
   durationInMinutes: 1
@@ -533,7 +464,7 @@ items:
 
     Did you come up with something like this?
     
-     :::image type="content" source="assets/images/Copilot/api-based-me-ttk-api-me-final.png" alt-text="Screenshot shows the message extension invoked from the message compose area in Teams.":::
+     :::image type="content" source="assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
       
       
 - title: Congratulations!

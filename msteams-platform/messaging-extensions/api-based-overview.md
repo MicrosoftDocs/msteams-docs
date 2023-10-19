@@ -35,7 +35,7 @@ Before you get started, ensure that you adhere to the following requirements:
 
 ### OpenAPI Description
 
-The OpenAPI Description (OAD) is the industry-standard specification that details the structure and outline of OpenAPI files. It's a language-agnostic, human-readable format for describing APIs. It's designed to be easily read and written by both humans and machines. The schema is machine-readable and can be represented in either YAML or JSON. An OAD document is required before creating an API-driven message extension.
+The OpenAPI Description (OAD) is the industry-standard specification that details the structure and outline of OpenAPI files. It's a language-agnostic, human-readable format for describing APIs. It's designed to be easily read and written by both humans and machines. The schema is machine-readable and can be represented in either YAML or JSON. An OpenAPI Description document is required before creating an API-driven message extension.
 
 The following code is an example of an OpenAPI Description document: <br/>
 <br/>
