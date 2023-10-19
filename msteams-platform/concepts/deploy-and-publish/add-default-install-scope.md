@@ -66,7 +66,7 @@ The admin gets a request to take action before a user can access the app. Under 
 If by default, you don't want the app to be hidden, you can update the `defaultBlockUntilAdminAction` property to `false`. When the new version of the app is approved, by default the app will be allowed as long as the admin hasn't taken any explicit action.
 
 > [!NOTE]
-> For LOB apps, `defaultBlockUntilAdminAction` is not supported. The app is not blocked if you upload a LOB app with this property.
+> For the custom app built for your org, `defaultBlockUntilAdminAction` isn't supported. The app isn't blocked if you upload a custom app built for your org with this property.
 
 ## Next step
 

@@ -34,7 +34,7 @@ It's helpful if you learn about the configuration for registering your app on Az
 
 > [!NOTE]
 >
-> - **LOB applications**: Your organization can make LOB applications available through Microsoft Store. These apps are custom to your organization. They are internal or specific within your organization or business.
+> - **Custom app built for your org**: Your organization can make custom app available through Microsoft Store. These apps are custom to your organization. They are internal or specific within your organization or business.
 > - **Customer-owned apps**: SSO is also supported for customer-owned apps within the Azure AD B2C tenants.
 
 To create and configure your app in Azure AD for enabling SSO:
@@ -82,7 +82,7 @@ You'll need to register your app in Azure AD and configure the tenancy and app's
 
     | Option | Select this to... |
     | --- | --- |
-    | Accounts in this organizational directory only  (Microsoft only - Single tenant) | Build an application for use only by users (or guests) in your tenant. <br> Often called LOB application, this app is a single-tenant application in the Microsoft identity platform. |
+    | Accounts in this organizational directory only  (Microsoft only - Single tenant) | Build an application for use only by users (or guests) in your tenant. <br> Often called custom app built for your org, this app is a single-tenant application in the Microsoft identity platform. |
     | Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) | Let users in any Azure AD tenant use your application. This option is appropriate if, for example, you're building a SaaS application, and you intend to make it available to multiple organizations. <br> This type of app is known as a multi-tenant application in the Microsoft identity platform.|
     | Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) and personal Microsoft accounts | Target the widest set of customers. <br> By selecting this option, you're registering a multi-tenant application that can support app users who have personal Microsoft accounts also. |
     | Personal Microsoft accounts only | Build an application only for users who have personal Microsoft accounts. |
