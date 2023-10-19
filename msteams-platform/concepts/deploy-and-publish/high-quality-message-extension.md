@@ -10,9 +10,9 @@ ms.date: 10/18/2023
 
 # Guidelines to create a high-quality message extension plugin
 
-For copilot to recognize and fetch your app, it's recommended to build a high-quality message extension plugin. To get the best out of copilot, only high-quality plugins are recommended for Message extensions. As a developer, you must adhere to follow the mandated criteria and quality parameters to build high-quality message extension plugins. This document provides guidance on the requirements to be fulfilled.
+If you're building a new message extension or want to update your existing message extension, we recommend that you build a high-quality message extension plugin. With the future scope of work assisted with copilot, high-quality plugins are recommended as copilot recognizes only message extensions of high quality.
 
-A rich Adaptive Card that should match copilot standards. It’s search based command, not action based. Only high-quality plugins are allowed or available in copilot, so the developers are expected to build such plug-ins.
+For copilot to recognize and fetch your app, it's recommended to build a high-quality message extension plugin. To get the best out of copilot, you must adhere to follow the mandated criteria and quality parameters to build high-quality message extension plugins. This document provides guidance on the requirements to be fulfilled.
 
 ## Mandatory requirements
 
@@ -30,21 +30,14 @@ Applicable only for ISV apps and not for LOB apps. [*Mandatory*] |
 
 ## Criteria to create high-quality message extension
 
-As a developer, you must focus on the following factors when creating the high-quality ME plugin.
-
-* App manifest
-* Parameter description
-* App description
-* Search Command description
-* Response card
-
-When creating a high-quality message extension:
+To build a high-quality message extension is different from basic message extension. You must consider the following factors when creating a high-quality message extension:
 
 * Must create a search-based message extension that supports both aid in Search or Summarization of information. Search through task module isn't support.
-* Must work beyond the basic or single attribute search and able to handle multi-attribute search. Define multi-parameter search in the app manifest.
-* Parameters defined must have good descriptions, that is, acceptable parameter, Enums, acronyms, output format, etc.
-* Long description and short description.
-* Rich adaptive response card.
+* App manifest: Must work beyond the basic or single attribute search and able to handle multi-attribute search. Define multi-parameter search in the app manifest.
+* Parameter description: Parameters defined must have good descriptions, that is, acceptable parameter, Enums, acronyms, output format, etc.
+* App description: The long and short descriptions that you add or modify must be clear and define the app's scope.
+* Search command description: Must be built based on analysis of the user intent and keywords.
+* Response card: The response must render a rich adaptive response card.
 
 ### App manifest
 
@@ -55,6 +48,8 @@ With copilot, we're moving from basic search to complex search that handles mult
 ### Parameter description
 
 A total of five attributes are supported per parameter of which the first one is available on UX of search flyout as well. These parameters are needed to be backed with good descriptions, which can contain combination of acceptable parameter, Enums, acronyms, and output format. A good description is one, which explains what system is expecting in natural language with output format.
+
+A good description is one that explains what system is expecting in natural language with output format.
 
 Here are the samples for basic vs. complex utterances on different search scenarios and the associated updated for manifest.
 
@@ -183,9 +178,9 @@ Sample Manifest for a general search
 ]
 ```
 
-A good description is one that explains what system is expecting in natural language with output format.
+---
 
-This requires developer to make changes at server side as well. Developers can define their format of output in the manifest and test with user utterances in copilot to see how results are being processed. Accordingly, developers can tweak parameter descriptions to get accurate parameters.
+You must do the required updates and changes at server end as well. Developers can define their format of output in the manifest and test with user utterances in copilot to see how results are being processed. Accordingly, developers can tweak parameter descriptions to get accurate parameters.
 
 ## Descriptions
 
@@ -217,9 +212,11 @@ Command description is used to map user intent and utterance to search command i
 
 Ensure the descriptions follow the given standards:
 
-* Anti-Compete: Developer shouldn't use name of any other plugin in both short and full description.
-* Responsible AI: Developers shouldn't use inappropriate or offensive keywords, for example,  P**N, F**K and other similar offensive words.
-* Prompt Injections: text shouldn't lead to any kind of prompt injections. Additionally, description shouldn't contain any kind of symbols or text that indicates that it can be used as code for Prompt injection. Shouldn't use phrases, functions and codes that call their app recurrently.
+| Action | Reason |
+| --- | --- |
+| :::image type="icon" source="../../assets/images/publish-app/dont-icon.png" border="false"::: | Anti-Compete: Developer shouldn't use name of any other plugin in both short and full description. |
+| :::image type="icon" source="../../assets/images/publish-app/dont-icon.png" border="false"::: | Developers shouldn't use inappropriate or offensive keywords, for example,  P**N, F**K and other similar offensive words. |
+| :::image type="icon" source="../../assets/images/publish-app/dont-icon.png" border="false"::: | Text shouldn't lead to any kind of prompt injections. Additionally, description shouldn't contain any kind of symbols or text that indicates that it can be used as code for Prompt injection. Shouldn't use phrases, functions and codes that call their app recurrently. |
 
 ## Response information
 
@@ -227,7 +224,9 @@ For a high-quality ME, the accepted output is an Adaptive Card, hence it must wo
 
 ### Rich Adaptive Card
 
-* Both previews and content should be part of single response
+A rich Adaptive Card that should match copilot standards. It’s search based command, not action based.
+
+* Both previews and content should be part of single response.
 * Information in Adaptive Card should represent at least two pieces of information besides: Logo title of app, thumbnail, and title of the information. One way to identify these fields could be most often searched attributes can be part of Adaptive Card response, for example,  data modified, author, status, flags etc.  
 * Adaptive Card should look good in all three surfaces: Win32, Web and Mobile (iOS and Android)
 * Adaptive Card should have at least one action button and maximum four actions buttons.  
