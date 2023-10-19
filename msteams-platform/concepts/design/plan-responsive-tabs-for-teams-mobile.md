@@ -17,7 +17,7 @@ Consider the following before you implement responsive tabs for your app in Team
 
 * **App functionalities:** Consider cross-device functionality for the Teams app.
 
-    For example, if you've a well performing app on desktop, you can explore to build similar app on mobile. Initially, it can be difficult to the shift the entire desktop experience on mobile, but you can start with basic and common scenarios. Add functionalities and capabilities after you gather more insights and user feedback.
+    For example, if you've a well performing app on desktop, you can explore to build similar app on mobile. Initially, it can be difficult to shift the entire desktop experience on mobile, but you can start with basic and common scenarios. Add functionalities and capabilities after you gather more insights and user feedback.
 
 * **User roles:** Ensure to target appropriate user role on Teams mobile.
 
