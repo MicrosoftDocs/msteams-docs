@@ -10,7 +10,7 @@ ms.date: 03/28/2023
 
 Ensure that you adhere to the following prerequisites while building your Teams personal and channel or group tab:
 
-* Allow your tab pages to be discovered in an iFrame, using X-Frame-Options and Content-Security-Policy HTTP response headers.
+* Allow your tab pages to be discovered in an iFrame, using X-Frame-Options and [Content-Security-Policy HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) response headers.
   * Set Content Security Policy headers to allow Teams and any other [host applications](../../m365-apps/overview.md) of your app:
 
     [!INCLUDE [CSP headers for multi-hub apps](~/includes/tabs/content-security-policy-headers.md)]
