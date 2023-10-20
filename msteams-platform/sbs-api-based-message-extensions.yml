@@ -97,7 +97,7 @@ items:
     We've used the following OpenAPI spec as an example for this tutorial:
 
     <details><summary>OpenAPI spec</summary>
-
+    ```yml
     openapi: 3.0.1
     info:
     title: OpenTools Plugin
@@ -172,7 +172,8 @@ items:
             type: string
             description: Message of the error.
     ```
-    * Ensure that the `required: true` is available for only one parameter. If there are more than one required parameters, you can update the required property to `required: false` for the other parameters. 
+    
+    Ensure that the `required: true` is available for only one parameter. If there are more than one required parameters, you can update the required property to `required: false` for the other parameters. 
     </details>
 
     You can validate and verify if the OpenAPI Description document is valid by following these steps:
@@ -293,9 +294,9 @@ items:
 
     1. You can verify if the Adaptive Card generated binds to the sample data by following these steps:
        1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer/).
+       1. Go to **Select host app** and from the drop-down select **Microsoft Teams**.
        1. In the left pane, under **CARD PAYLOAD EDITOR**, paste the Adaptive Card template code.
        1. In the right pane, under **SAMPLE DATA EDITOR**, paste the product response you've saved earlier.
-       1. Select **Update**.
        1. Verify if the Adaptive Card template binds to the sample data.
 
           :::image type="content" source="assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data."::: 
@@ -315,7 +316,6 @@ items:
             "title": "${if(name, name, 'N/A')}",
             "subtitle": "$${if(price, price, 'N/A')}",
         } 
-        }
        ```
        Create an if condition for the `title` and `subtitle` where, if name exists, the bot uses the name, else, it uses NA. For example, `"title": "Name: ${if(name, name, 'N/A')}"`. Save the preview card template for future reference.
        </details>
@@ -363,7 +363,7 @@ items:
     The following code is an example of a Response rendering template:
 
     <details><summary>Response rendering template</summary>
-    
+    ```json
     {
         "version": "devPreview",
         "jsonPath": "tools",
@@ -513,10 +513,10 @@ items:
          * Replace `<<YOUR-MICROSOFT-APP-ID>>`  with bot's Microsoft App ID.
          * Update the values for `composeExtensionType` to `apiBased`.
          * Update the values for `apiSpecificationFile`to the path of your OpenAPI Description file. 
-         * Update `searchTools` as the value for  `commands.id`. 
-         * Update `search` as the value for `parameters.name`. If there are no parameters, then the values must be query parameters or properties.name if referencing a property in the request body schema.
+         * Update the value for `commands.id` to `searchTools`. 
+         * Update the value for `parameters.name` to `search`. If there are no parameters, then the values must be query parameters or `properties.name` if referencing a property in the request body schema.
          * Update the `apiResponseRenderingTemplateFile` to the path of your response rendering template file.
-         * Under valid domains, add the service URL endpoint that is defined in the OpenAPI Description file. 
+         * Under valid domains, add the `service URL` endpoint that is defined in the OpenAPI Description file. 
          
     1. Save the Teams app manifest in the same folder you saved the OpenAPI spec and the response rendering template.
         * You need a color image and outline image. These images should be included in the folder and referenced in your Teams app manifest. 
