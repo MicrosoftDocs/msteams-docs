@@ -23,8 +23,7 @@ For the app to be validated successfully and to be identified in advanced search
 | Manifest version | Manifest version of message extension plugin must be 1.13 or above. [*Mandatory*] |
 | Response Time | Response mustn't be more than 9 seconds for P99, 5 Seconds for P75 and 2 Seconds for P50. [*Mandatory*] |
 | Reliability | Apps must be able to meet 99.9% availability for their services that is, if Copilot calls for a plugin 1000 times, it must give meaningful response 999 times. [*Mandatory*] |
-| Zero Regressions | In case, developers might need to resubmit their apps for validation in that case existing ME functionality, which was working before, shouldn't break.
-Applicable only for ISV apps and not for LOB apps. [*Mandatory*] |
+| Zero Regressions | In case, developers might need to resubmit their apps for validation in that case existing ME functionality, which was working before, shouldn't break. Applicable only for ISV apps and not for LOB apps. [*Mandatory*] |
 | Single sign-on (SSO) | Update your Microsoft Azure Active Directory App Registration for SSO (if you have SSO), if applicable. [*Recommended*] |
 | Content Security Policy | Amend your Content Security Policy headers, if applicable. [*Recommended*] |
 
