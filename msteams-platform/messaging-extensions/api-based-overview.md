@@ -11,7 +11,9 @@ ms.date: 10/19/2023
 # Build message extensions using API
 
 > [!NOTE]
-> API-based message extensions only support search commands.
+>
+> * API-based message extensions only support search commands.
+> * API-based message extensions are available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
 Message extensions built using API (API-based) use a web service to manage user requests and responses and don't require a bot registration or a Bot Framework. You can configure and deploy API-based message extensions using Teams Toolkit. API-based message extensions help your apps to interact directly with third-party data, apps, and services, enhancing its capabilities. With APIs for message extension, you can:
 
@@ -449,4 +451,3 @@ For more information, see [composeExtensions](../resources/schema/manifest-schem
 
 > [!div class="nextstepaction"]
 > [Build API-based message extension](build-api-based-message-extension.md)
-
