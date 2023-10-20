@@ -301,9 +301,8 @@ Teams sends the search result as an Adaptive Card in the chat message.
 
 ---
 
-## Step-by-step guide
+## Step-by-step guides
 
-You can go through the [step-by-step](../sbs-api-me-ttk.yml) guide to build an API-based message extension.
+To build an API-based message extension, follow this [step-by-step](../sbs-api-me-ttk.yml) guide. 
 
-You can also build bot based message extensions.
 
