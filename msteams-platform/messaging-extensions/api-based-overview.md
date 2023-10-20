@@ -380,7 +380,7 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
 
 ```json
 {
-    "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
     "manifestVersion": "devPreview",
     "version": "1.0.3",
     "id": "55490e7f-xxxx-xxxx-xxxx-9eea9281b0fa",
