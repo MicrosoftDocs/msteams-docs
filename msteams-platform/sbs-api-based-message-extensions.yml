@@ -86,17 +86,17 @@ items:
   
     OpenAPI Description (OAD) is the industry-standard specification that outlines how OpenAPI files are structured and outlined. It's a language-agnostic, human-readable format for describing APIs. It's easy for both humans and machines to read and write. The schema is machine-readable and represented in either YAML or JSON.
     
-    You need an OpenAPI Description to interact with the APIs. The API spec must meet the following criteria: 
+    You need an OpenAPI Description to interact with the APIs. The OpenAPI Description document must meet the following criteria: 
     
     * Must not have `auth` specified.
     * Must have at most one required parameter or property in the request body. You can make a required parameter optional and add a default value.
     * The request body (if present) can't contain any arrays.
     * The server URL must be defined in the specification.
-    * If there's no operation ID, you can add one to the OpenAPI Description document that are uploading for testing because an operation ID is mandatory for operations that'll be Messaging Extensions. You can validate that the swagger is valid by using an online validator like [Swagger Parser](https://apitools.dev/swagger-parser/online/). Once you have found a suitable API spec, save it in a folder. 
+    * If there's no operation ID, you can add one to the OpenAPI Description document that are uploading for testing because an operation ID is mandatory for operations that are messaging extensions. You can validate that the swagger is valid by using an online validator like [Swagger Parser](https://apitools.dev/swagger-parser/online/). Once you have found a suitable OpenAPI Description (OAD) document, save it in a folder. 
 
-    We've used the following OpenAPI spec as an example for this tutorial:
+    We've used the following OpenAPI Description as an example for this tutorial:
 
-    <details><summary>OpenAPI spec</summary>
+    <details><summary>OpenAPI Description</summary>
     
     ```yml
     openapi: 3.0.1
@@ -117,7 +117,7 @@ items:
             required: true
             schema:
                 type: string
-            description: Used to search for AI tools by their category based on the keywords. For example, ?search="tool to create music" will give tools that can create music.
+            description: Used to search for AI tools by their category based on the keywords. For example, search=tool to create music gives tools that can create music.
         responses:
             "200":
             description: OK
@@ -361,7 +361,7 @@ items:
 
            `previewCardTemplate` is a preview card template is used to show a preview of results in the message extension flyout.
 
-    1. Save the response rendering template in the same folder you saved the OpenAPI spec. 
+    1. Save the response rendering template in the same folder you saved the OpenAPI Description document. 
 
     The following code is an example of a Response rendering template:
 
@@ -523,7 +523,7 @@ items:
          * Update the `apiResponseRenderingTemplateFile` to the path of your response rendering template file.
          * Under valid domains, add the `service URL` endpoint that is defined in the OpenAPI Description file. 
          
-    1. Save the Teams app manifest in the same folder you saved the OpenAPI spec and the response rendering template.
+    1. Save the Teams app manifest in the same folder you saved the OpenAPI Description document and the response rendering template.
         * You need a color image and outline image. These images should be included in the folder and referenced in your Teams app manifest. 
         * Zip up the contents of the folder. 
 
