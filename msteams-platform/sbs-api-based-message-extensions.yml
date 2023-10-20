@@ -101,77 +101,78 @@ items:
     ```yml
     openapi: 3.0.1
     info:
-    title: OpenTools Plugin
-    description: A plugin that allows the user to find the most appropriate AI tools for their use cases, with their pricing information.
-    version: 'v1'
+      title: OpenTools Plugin
+      description: A plugin that allows the user to find the most appropriate AI tools for their use cases, with their pricing information.
+      version: 'v1'
     servers:
-    - url: https://gptplugin.opentools.ai
+      - url: https://gptplugin.opentools.ai
     paths:
-    /tools:
+      /tools:
         get:
-        operationId: searchTools
-        summary: Search for AI Tools
-        parameters:
+          operationId: searchTools
+          summary: Search for AI Tools
+          parameters:
             - in: query
-            name: search
-            required: true
-            schema:
+              name: search
+              required: true
+              schema:
                 type: string
-            description: Used to search for AI tools by their category based on the keywords. For example, search=tool to create music gives tools that can create music.
-        responses:
+              description: Used to search for AI tools by their category based on the keywords. For example, ?search="tool to create music" will give tools that can create music.
+          responses:
             "200":
-            description: OK
-            content:
+              description: OK
+              content:
                 application/json:
-                schema:
+                  schema:
                     $ref: '#/components/schemas/searchToolsResponse'
             "400":
-            description: Search Error
-            content:
+              description: Search Error
+              content:
                 application/json:
-                schema:
+                  schema:
                     $ref: '#/components/schemas/searchToolsError'
     components:
-    schemas:
+      schemas:
         searchToolsResponse:
-        required:
+          required:
             - search
-        type: object
-        properties:
+          type: object
+          properties:
             tools:
-            type: array
-            items:
+              type: array
+              items:
                 type: object
                 properties:
-                name:
+                  name:
                     type: string
                     description: The name of the tool.
-                opentools_url:
+                  opentools_url:
                     type: string
                     description: The URL to access the tool.
-                main_summary:
+                  main_summary:
                     type: string
                     description: A summary of what the tool is.
-                pricing_summary:
+                  pricing_summary:
                     type: string
                     description: A summary of the pricing of the tool.
-                categories:
+                  categories:
                     type: array
                     items:
-                    type: string
+                      type: string
                     description: The categories assigned to the tool.
-                platforms:
+                  platforms:
                     type: array
                     items:
-                    type: string
+                      type: string
                     description: The platforms that this tool is available on.
-            description: The list of AI tools.
+              description: The list of AI tools.
         searchToolsError:
-        type: object
-        properties:
+          type: object
+          properties:
             message:
-            type: string
-            description: Message of the error.
+              type: string
+              description: Message of the error.
+          
     ```
     
     > [!NOTE]
@@ -201,7 +202,7 @@ items:
   durationInMinutes: 5
   content: |
 
-   An OpenAPI Description document requires a response rendering template for the app to respond to the get requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
+   An OpenAPI Description document requires a response rendering template for the app to respond to the get requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata. The response rendering template must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json`](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
 
    ### Adaptive Card template 
     
