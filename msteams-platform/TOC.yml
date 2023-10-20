@@ -334,6 +334,14 @@
           displayName: Loop
         - name: Action extensions
           href: resources/messaging-extension-v3/create-extensions.md
+  - name: Adaptive Card Previewer
+    items:
+    - name: Overview
+      href: concepts/build-and-test/adaptive-card-previewer.md
+      displayName: Adaptive Card previewer 
+    - name: Install Adaptive Card Previewer
+      href: concepts/build-and-test/install-adaptive-card-previewer.md
+      displayName: Install Adaptive Card previewer
 - name: Build tabs
   items:
   - name: Overview
