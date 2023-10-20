@@ -15,9 +15,9 @@ items:
 - durationInMinutes: 1
   content: |
 
-    Message extensions built using API significantly enhance the functionality of your Teams apps by allowing them to interact with external services. API-based message extensions can help streamline workflows by reducing the need to switch between different applications.
+    Message extensions built using API (API-based) significantly enhance the functionality of your Teams apps by allowing them to interact with external services. API-based message extensions can help streamline workflows by reducing the need to switch between different applications.
 
-    You can use API-based message extensions to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a messaging extension to fetch and display customer data directly from Teams which helps save time and improve efficiency by reducing the need to switch between different applications. This feature is supported on all platforms where Teams is available, including desktop, web, and mobile. 
+    You can use API-based message extensions to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a messaging extension to fetch and display customer data directly from Teams, which helps save time and improve efficiency by reducing the need to switch between different applications. This feature is supported on all platforms where Teams is available, including desktop, web, and mobile. 
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -456,7 +456,7 @@ items:
 
        ```json
        {
-        "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+        "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
         "manifestVersion": "devPreview",
         "version": "1.0.3",
         "id": "<<YOUR-MICROSOFT-APP-ID>>",
@@ -516,17 +516,24 @@ items:
     
     1. Update the app manifest properties as follows:
 
-         * Replace `<<YOUR-MICROSOFT-APP-ID>>`  with bot's Microsoft App ID.
+         * Replace `<<YOUR-MICROSOFT-APP-ID>>` with bot's Microsoft App ID.
          * Update the values for `composeExtensionType` to `apiBased`.
          * Update the values for `apiSpecificationFile`to the path of your OpenAPI Description file. 
-         * Update the value for `commands.id` to `searchTools`. 
+         * Update the value for `commands.id` to `searchTools`.
+         * Update the value for `commands.title` to `Search for AI Tools`.
+         * Update the value for `commands.description` to `Search for AI Tools`.
          * Update the value for `parameters.name` to `search`. If there are no parameters, then the values must be query parameters or `properties.name` if referencing a property in the request body schema.
          * Update the `apiResponseRenderingTemplateFile` to the path of your response rendering template file.
          * Under valid domains, add the `service URL` endpoint that is defined in the OpenAPI Description file. 
          
     1. Save the Teams app manifest in the same folder you saved the OpenAPI Description document and the response rendering template.
         * You need a color image and outline image. These images should be included in the folder and referenced in your Teams app manifest. 
-        * Zip up the contents of the folder. 
+        * Zip up the contents of the folder. The zip file must include the following files:
+          * OpenAPI Description document
+          * Response rendering template
+          * App manifest
+          * Color icon
+          * Outline icon 
 
     
 - title: Sideload the app to Teams
@@ -536,17 +543,20 @@ items:
     Sign into Teams test environment to test your app in Teams. To sideload the app in Teams, follow these steps: 
 
     1. Go to **Microsoft Teams** and sign in using your test tenant credentials. 
-    1. Select **ctrl+alt+shift+8** and go settings and search for **enableSME**. Ensure that the **enableSME** toggle is turned on. 
-    1. Go to Apps > Manage your app > Upload an app.
+    1. Go to **Apps** > **Manage your app** > **Upload an app**.
     1. Select **Upload a customized app**.
     1. Select the zip file you've created and select **Open**.
-    1. Select **Add**. The app is added to Teams.
+    1. Select **Add**.
+
+       :::image type="content" source="assets/images/Copilot/api-me-sbs-add-app-teams.png" alt-text="Screenshot shows a pop-up window with the Add option.":::
+
     1. Go to a chat and from the message compose area, select **+** and search for your app.
 
        :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat  menu and the app is displayed in the flyout menu.":::
 
     1. Select the app and make a search query.
-    1. The app responds with an Adaptive Card template in the chat window.
+    1. The app responds with an Adaptive Card in the chat window.
+    1. Select **Send**.
 
        :::image type="content" source="assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
 
