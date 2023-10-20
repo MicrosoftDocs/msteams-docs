@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Microsoft Adaptive Card Previewer
 
-The Microsoft Adaptive Card Previewer allows you to preview the Adaptive Cards when you're iterating over your card designs. It uses the latest rendering stack for Microsoft Teams to provide a more accurate preview of Adaptive Cards. You can open a side-by-side preview to view changes live, toggle between light, dark, and high contrast themes.
+The Microsoft Adaptive Card Previewer (ACP) allows you to preview the Adaptive Cards when you're iterating over your card designs. It uses the latest rendering stack for Microsoft Teams to provide a more accurate preview of Adaptive Cards. You can open a side-by-side preview to view changes live, toggle between light, dark, and high contrast themes.
 
 ## Features of Adaptive Card Previewer
 
@@ -25,10 +25,20 @@ The primary goal of Adaptive Card Previewer is to provide developers with a fast
 
 * Configure default theme through Visual Studio Code extension settings adaptiveCardPreviewer.defaultTheme.
 
-## Advantages of Adaptive Card Previewer
+## Benefits of Adaptive Card previewer
 
-Advantages of Adaptive Card Previewer
+Adaptive Card previewer aims to improve the developer experience for creating adaptive cards in Microsoft Teams with the following benefits:
+
+* Fast Iteration: Developers can preview adaptive card designs right within their integrated development environment without the need to constantly switch between tools. Changes to the card are reflected instantly, similar to a "Hot Reload" feature.
+
+* Trustworthy Previews: The Adaptive Card previewer uses the same rendering stack as Teams and Outlook, ensuring that developers can trust the preview results align with the actual card rendering in these platforms.
 
 ## Limitation
 
-The limitations of Adaptive Card Previewer
+The following features of Adaptive Card aren't supported in Adaptive Card previewer:
+
+* [People Picker](../../task-modules-and-cards/cards/people-picker.md)
+* [Typeahead search](../../task-modules-and-cards/cards/dynamic-search.md)
+* [User mention](../../task-modules-and-cards/cards/cards-format.md#microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention)
+* [Stage view](../../task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards)
+* [Full width control](../../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
