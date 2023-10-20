@@ -97,6 +97,7 @@ items:
     We've used the following OpenAPI spec as an example for this tutorial:
 
     <details><summary>OpenAPI spec</summary>
+    
     ```yml
     openapi: 3.0.1
     info:
@@ -173,7 +174,9 @@ items:
             description: Message of the error.
     ```
     
-    Ensure that the `required: true` is available for only one parameter. If there are more than one required parameters, you can update the required property to `required: false` for the other parameters. 
+    > [!NOTE]
+    > Ensure that the `required: true` is available for only one parameter. If there are more than one required parameters, you can update the required property to `required: false` for the other parameters. 
+    
     </details>
 
     You can validate and verify if the OpenAPI Description document is valid by following these steps:
@@ -363,73 +366,75 @@ items:
     The following code is an example of a Response rendering template:
 
     <details><summary>Response rendering template</summary>
+
     ```json
     {
-        "version": "devPreview",
-        "jsonPath": "tools",
-        "responseLayout": "list",
-        "responseCardTemplate": {
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "type": "AdaptiveCard",
-    "version": "1.4",
-    "body": [
-        {
-        "type": "TextBlock",
-        "text": "AI Music Generator",
-        "weight": "Bolder",
-        "size": "Large"
+            "version": "devPreview",
+            "jsonPath": "tools",
+            "responseLayout": "list",
+            "responseCardTemplate": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.4",
+        "body": [
+            {
+            "type": "TextBlock",
+            "text": "AI Music Generator",
+            "weight": "Bolder",
+            "size": "Large"
+            },
+            {
+            "type": "TextBlock",
+            "text": "Categories",
+            "size": "Medium"
+            },
+            {
+            "type": "TextBlock",
+            "text": "Music Generation, AI Detection",
+            "wrap": true
+            },
+            {
+            "type": "TextBlock",
+            "text": "Description",
+            "size": "Medium"
+            },
+            {
+            "type": "TextBlock",
+            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. Powered by advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+            "wrap": true
+            },
+            {
+            "type": "TextBlock",
+            "text": "Platform",
+            "size": "Medium"
+            },
+            {
+            "type": "TextBlock",
+            "text": "Web, App, API",
+            "wrap": true
+            }
+        ],
+        "actions": [
+            {
+            "type": "Action.OpenUrl",
+            "title": "Learn More",
+            "url": "https://goto.opentools.ai/ai-music-generator"
+            },
+            {
+            "type": "Action.OpenUrl",
+            "title": "Try It",
+            "url": "https://goto.opentools.ai/c/ai-music-generator"
+            }
+        ]
         },
-        {
-        "type": "TextBlock",
-        "text": "Categories",
-        "size": "Medium"
-        },
-        {
-        "type": "TextBlock",
-        "text": "Music Generation, AI Detection",
-        "wrap": true
-        },
-        {
-        "type": "TextBlock",
-        "text": "Description",
-        "size": "Medium"
-        },
-        {
-        "type": "TextBlock",
-        "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. Powered by advanced AI technology, AI Music Generator makes music production accessible to everyone.",
-        "wrap": true
-        },
-        {
-        "type": "TextBlock",
-        "text": "Platform",
-        "size": "Medium"
-        },
-        {
-        "type": "TextBlock",
-        "text": "Web, App, API",
-        "wrap": true
+        "previewCardTemplate": {
+            "title": "${if(name, name, 'N/A')}",
+            "subtitle": "$${if(price, price, 'N/A')}",
+        } 
         }
-    ],
-    "actions": [
-        {
-        "type": "Action.OpenUrl",
-        "title": "Learn More",
-        "url": "https://goto.opentools.ai/ai-music-generator"
-        },
-        {
-        "type": "Action.OpenUrl",
-        "title": "Try It",
-        "url": "https://goto.opentools.ai/c/ai-music-generator"
-        }
-    ]
-    },
-    "previewCardTemplate": {
-        "title": "${if(name, name, 'N/A')}",
-        "subtitle": "$${if(price, price, 'N/A')}",
-    } 
-    }
 
     ```
+
     </details>
 
 - title: Create app manifest
