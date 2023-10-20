@@ -54,14 +54,14 @@ To create a search based message extension using Teams Toolkit, follow these ste
 
 To run the message extension in Teams, follow these steps:
 
-1. From the the left pane, select **Teams Toolkit**.
+1. From the left pane, select **Teams Toolkit**.
 1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
 
    :::image type="content" source="../../../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Teams Toolkit.":::
 
 1. Under **LIFECYCLE**, select **Provision**. Teams Toolkit provisions the app on Azure and displays a message.
 
-   :::image type="content" source="../../../assets/images/Copilot/api-based-me-ttk-provision-success.png" alt-text="Screenshot shows the successfull completion of the provsion steps in Teams Toolkit.":::
+   :::image type="content" source="../../../assets/images/Copilot/api-based-me-ttk-provision-success.png" alt-text="Screenshot shows the successful completion of the provsion steps in Teams Toolkit.":::
 
 1. From the left pane, Select **Run and Debug (Ctrl+Shift+D)**.
 1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)` . Teams Toolkit launches Teams web client in a browser window. Select the Add button in the dialog to install your app to Teams.
@@ -80,7 +80,7 @@ To run the message extension in Teams, follow these steps:
 
 1. If you have an existing bot, select **Existing bot** or if you have a bot ID, select **Enter Bot ID**.
 
-   1. If don't have a Bot ID, you can select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you've created.
+   1. If you don't have a Bot ID, you can select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you've created.
 
 1. Select **Save**.
 

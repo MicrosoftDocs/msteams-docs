@@ -70,7 +70,7 @@ If the root object of the OpenAPI schema contains well-known array property name
 
 <details><summary>4. API message extension</summary>
 
-API-based message extensions are a potent tool that enhances your Teams app's functionality by integrating with external APIs. This enhances the capabilities of your app and provide a richer user experience. To implement message extension from an API, you need to follow these guidelines:
+API-based message extensions are a potent tool that enhances your Teams app's functionality by integrating with external APIs. This enhances the capabilities of your app and provides a richer user experience. To implement message extension from an API, you need to follow these guidelines:
 
 * The `Commands.id` property in app manifest must match the corresponding `operationId` in the OpenAPI Description.
 * If a required parameter is without a default value, the command `parameter.name` in the app manifest must match the `parameter.name` in the OpenAPI Description.
@@ -217,7 +217,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
 1. Under **LIFECYCLE**, select **Provision**. Teams Toolkit provisions the app on Azure and displays a message.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-provision-success.png" alt-text="Screenshot shows the successfull completion of the provsion steps in Teams Toolkit.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-provision-success.png" alt-text="Screenshot shows the successful completion of the provsion steps in Teams Toolkit.":::
 
 1. From the left pane, Select **Run and Debug (Ctrl+Shift+D)**.
 1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)` . Teams Toolkit launches Teams web client in a browser window.

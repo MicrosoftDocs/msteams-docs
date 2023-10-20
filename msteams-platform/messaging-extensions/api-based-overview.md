@@ -1,7 +1,7 @@
 ---
 title: Build message extensions using API
 author: v-ypalikila
-description: Learn how to build an message extension using an OpenAPI description document (API).
+description: Learn how to build a message extension using an OpenAPI description document (API).
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -127,7 +127,7 @@ components:
 
 A response rendering template maps JSON responses to a preview card and an Adaptive Card. When a user selects a search result, the preview cards appear as results. The preview card then expands into an Adaptive Card in the message compose box.
 
-Each search command command must have a corresponding response rendering template, and each command must correspond to an operation in the OpenAPI Description. However, not every operation defined in an OpenAPI Description must be a command. The response rendering template consists of an Adaptive Card template, preview card template, and metadata and must conform to the Response rendering template schema hosted at [`https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json`](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json)
+Each search command must have a corresponding response rendering template, and each command must correspond to an operation in the OpenAPI Description. However, not every operation defined in an OpenAPI Description must be a command. The response rendering template consists of an Adaptive Card template, preview card template, and metadata and must conform to the Response rendering template schema hosted at [`https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json`](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json)
 
 **Preview Card**
 
@@ -349,7 +349,7 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
 
 </details>
 
-* `image`: If a property is a image URL, then it's converted to an Image element in the Adaptive Card.
+* `image`: If a property is an image URL, then it's converted to an Image element in the Adaptive Card.
 
   <details><summary>Example</summary>
 
