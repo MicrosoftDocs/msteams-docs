@@ -24,7 +24,7 @@ You can create Teams apps in Visual Studio using the app templates. You can sear
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
-| &nbsp; | Visual Studio latest version | Install the latest enterprise edition of Visual Studio, and select the **ASP.NET and web development** workload and **Microsoft Teams Development Tools** for installation.|
+| &nbsp; | Visual Studio latest version | Install the latest enterprise edition of Visual Studio, and select the **ASP.NET and web development** workload and **Microsoft Teams Development Tools** for installation. |
 | &nbsp; | Teams Toolkit | A Visual Studio workload that creates a project scaffolding for your app. Use the latest version. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to upload your Teams app into local Teams environment for testing app behavior. |
  | &nbsp; | [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Microsoft 365 account with the appropriate permissions to install an app. |
@@ -83,7 +83,8 @@ To create a new Teams app, follow the steps:
 
 You have created the app project scaffolding for your Teams app using Teams Toolkit template.
 
-The steps to create the other apps are similarlar except notification bot.
+The steps to create the other apps are similar except notification bot. 
+
 
 ### Directory Structure
 
@@ -101,7 +102,7 @@ Teams Toolkit provides all components for building an app. After you're created 
 
 You can see Teams app templates already populated in Teams Toolkit for various Teams app types. The following table lists all the templates available:
 
-|Teams app templates  |Description  |
+|Teams app templates |Description  |
 |---------|---------|
 |**Notification Bot**     |You can use the notification bot app to send notifications to your Teams client. There are multiple ways to trigger the notification. For example, trigger the notification by HTTP request, or by time. You can select triggered notification based on your business scenario.         |
 |**Command Bot**     |You can type a command to interact with the bot using the command bot app.         |
