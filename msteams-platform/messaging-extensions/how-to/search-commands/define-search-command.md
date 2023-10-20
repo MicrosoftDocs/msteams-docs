@@ -25,7 +25,7 @@ To add the search command to your [app manifest](../../../resources/schema/manif
 
 ### Create search message extension using Bot Framework
 
-You can create a search message extension using Teams Toolkit and Developer portal for Teams.
+You can create a search message extension using Teams Toolkit and Developer Portal for Teams.
 
 #### Prerequisites
 
@@ -68,15 +68,15 @@ To run the message extension in Teams, follow these steps:
 1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, @mention your message extension.
 1. Select the message extension from the list and [trigger your search commands from compose message area](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?tabs=dotnet#search-commands).
 
-# [Developer portal for Teams](#tab/developer-portal-for-teams)
+# [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
-1. Go to **Teams developer portal**.
+1. Go to [**Developer Portal for Teams**](https://dev.teams.microsoft.com/home).
 1. Go to **Apps**.
 1. Select **Create a new app**.
 1. Under **Configure**, select **App features**.
 1. Select **Messaging extension**.
 
-  :::image type="content" source="../../../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the plugin of copilot option in Teams developer portal.":::
+  :::image type="content" source="../../../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Teams Developer Portal.":::
 
 1. Under **Message extension type**, select **Bot**.
 
@@ -193,7 +193,7 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 
 | Sample name           | Description | .NET    | Node.js   | Manifest|
 |:---------------------|:--------------|:---------|:--------|:--------------|
-|Teams message extension search   |  This sample shows how to build a Search-based Message Extension. It searches nudget packages and displays the results in search based messaging extension.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
+|Teams message extension search   |  This sample shows how to build a Search-based message extension. It searches nudget packages and displays the results in search based messaging extension.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
 
 ## Step-by-step guide
 
@@ -202,11 +202,9 @@ Follow the [step-by-step guide](../../../sbs-messagingextension-searchcommand.ym
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Respond to the search commands](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
+> [Respond to search commands](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
 
 ## See also
 
-* [Cards](../../../task-modules-and-cards/what-are-cards.md)
-* [Task modules](../../../task-modules-and-cards/what-are-task-modules.md)
 * [Developer Portal for Teams](../../../concepts/build-and-test/teams-developer-portal.md)
 * [Message extensions](../../what-are-messaging-extensions.md)

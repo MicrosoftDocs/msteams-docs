@@ -87,17 +87,17 @@ To create an action based message extension using Teams Toolkit, follow these st
 
 Teams Toolkit scaffolds your project and creates an action message extension.
 
-# [Developer portal for Teams](#tab/developer-portal-for-teams)
+# [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
 To create an action based message extension using Developer Portal for Teams, follow these steps:
 
-1. Go to **Teams developer portal**.
+1. Go to [**Developer Portal for Teams**](https://dev.teams.microsoft.com/home).
 1. Go to **Apps**.
 1. Select **Create a new app**.
 1. Under **Configure**, select **App features**.
 1. Select **Messaging extension**.
 
-  :::image type="content" source="../../../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the plugin of copilot option in Teams developer portal.":::
+  :::image type="content" source="../../../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Teams Developer Portal.":::
 
 1. Under **Message extension type**, select **Bot**.
 
@@ -252,7 +252,5 @@ If you're using the parameters or an embedded web view with a `taskInfo` object,
 
 ## See also
 
-* [Cards](../../../task-modules-and-cards/what-are-cards.md)
-* [Task modules](../../../task-modules-and-cards/what-are-task-modules.md)
 * [Developer Portal for Teams](../../../concepts/build-and-test/teams-developer-portal.md)
 * [Message extensions](../../what-are-messaging-extensions.md)

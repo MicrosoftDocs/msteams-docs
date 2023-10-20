@@ -88,11 +88,11 @@ The following images display link unfurling feature when a link is pasted in a m
 
 To build a message extension, if you don't already have one, there are two ways:
 
-* **Build message extension using API (API-based)**: You can easily create a message extension from an existing API. An OpenAPI Description (OAD) document is required for this method.
+* **Build message extensions using API (API-based)**: You can easily create a message extension from an existing API. An OpenAPI Description (OAD) document is required for this method.
 
-* **Build message extension using Bot Framework (Bot-based)**: If you want a one-on-one conversational experience, you can create a new message extension from a bot.
+* **Build message extensions using Bot Framework (Bot-based)**: If you want a one-on-one conversational experience, you can create a new message extension from a bot.
 
-The following table differentiates the types of message extensions:
+The following table helps you select a message extension type to get started:
 
 :::row:::
     :::column:::
@@ -113,7 +113,7 @@ The following table differentiates the types of message extensions:
 * More flexible.
 * Message extension uses a Bot Framework.
 * Can leverage the full capabilities of a bot.
-* Ideal for scenarios where the plugin needs to communicate with multiple services, manage complex logic or user interactions, or maintain state across sessions.
+* Ideal for scenarios where the message extension needs to communicate with multiple services, manage complex logic or user interactions, or maintain state across sessions.
 * Supports action commands, search commands, and link unfurling.
 
     :::column-end:::
@@ -143,13 +143,4 @@ The following table differentiates the types of message extensions:
 |Message extension action preview| This sample shows how to use action preview in Messaging Extensions using Bot Framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) |NA|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
 |Message extension action for task scheduling|This sample shows how to schedule a task from message extension action command and get a reminder card at a scheduled date and time.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)| NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp/demo-manifest/msgext-message-reminder.zip)
 
-## Next step
 
-> [!div class="nextstepaction"]
-> [Build message extension using API](api-based-overview.md)
-
-## See also
-
-* [App capabilities mapped to features](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)
-* [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml)
-* [Designing your Microsoft Teams message extension](design/messaging-extension-design.md)

@@ -653,17 +653,17 @@ The schema for the taskInfo object is:
 |`title`| The title of the task module.|
 |`height`| It must be either an integer (in pixels), or `small`, `medium`, `large`.|
 |`width`| It must be either an integer (in pixels), or `small`, `medium`, `large`.|
-|`card`| The adaptive card defining the form (if using one).
+|`card`| The Adaptive Card defining the form (if using one).
 |`url`| The URL to be opened inside of the task module as an embedded web view.|
 |`fallbackUrl`| If a client does not support the task module feature, this URL is opened in a browser tab. |
 
 ### Respond to the fetchTask with an Adaptive Card
 
-When using an adaptive card, you must respond with a `task` object with the `value` object containing an Adaptive Card.
+When using an Adaptive Card, you must respond with a `task` object with the `value` object containing an Adaptive Card.
 
 #### Example
 
-The following code section is an example to `fetchTask` response with an adaptive card:
+The following code section is an example to `fetchTask` response with an Adaptive Card:
 
 # [C#/.NET](#tab/dotnet)
 

@@ -1,7 +1,7 @@
 ---
 title: Build API-based message extension
 author: v-ypalikila
-description: Learn how to build an API message extension using Teams developer portal and Teams Toolkit.
+description: Learn how to build an API message extension using Teams Visual Studio Code and Teams Toolkit.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -12,7 +12,7 @@ ms.date: 10/19/2023
 
 API-based message extensions are a type of Teams app that integrates your chat functionality directly into Teams, enhancing your app's usability and offering a seamless user experience.
 
-Before you get started, you meet the following requirements:
+Before you get started, you meet the following requirements: </br>
 
 <details><summary>1. OpenAPI Description (OAD)</summary>
 
@@ -30,7 +30,7 @@ Developers must not require users to enter a parameter for a header or cookie. I
 * Only POST and GET HTTP methods are supported.
 * The operation can't have a required Header or Cookie parameters without default values.
 * A command must have exactly one parameter.
-* Ensure that there are no remote references in the OpenAPI spec file.
+* Ensure that there are no remote references in the OpenAPI Description document.
 * A required parameter with default value is considered optional.
 
 </details>
@@ -58,7 +58,7 @@ Developers must not require users to enter a parameter for a header or cookie. I
 
 The `JsonPath` property in response rendering template is $ to indicate the root object of the response data is used to render the Adaptive Card, and you can update the `jsonPath` property to point another property in response data.
 
-If the root object of the OpenAPI schema contains well-known array property name, then Teams Toolkit uses the array property as root element to generate an Adaptive Card, and the array property name is used as `JsonPath` property for response rendering template. For example, if the property name contains "result", "data", "items", "root", "matches", "queries", "list", "output" and the type is array, then it's used as root element.
+If the root object of the OpenAPI schema contains well-known array property name, then Teams Toolkit uses the array property as root element to generate an Adaptive Card, and the array property name is used as `JsonPath` property for response rendering template. For example, if the property name contains `result`, `data`, `items`, `root`, `matches`, `queries`, `list`, `output` and the type is `array`, then it's used as root element.
 
 </details>
 </br>
@@ -77,23 +77,23 @@ API-based message extensions are a potent tool that enhances your Teams app's fu
 
 You can create an API-based message extension using Visual Studio Code and Teams Toolkit CLI.
 <!--
-# [Developer portal for Teams](#tab/developer-portal-for-teams)
+# [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
-To create an API base message extension using Developer portal, follow these steps:
+To create an API base message extension using Developer Portal, follow these steps:
 
-1. Go to **Teams developer portal**.
+1. Go to **Teams Developer Portal**.
 1. Go to **Apps**.
 1. Select **Create a new app**.
 1. Under **Configure**, select **App features**.
 1. Select **Messaging extension**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the plugin of copilot option in Teams developer portal.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Teams Developer Portal.":::
 
 1. Under **Message extension type**, select **API-based**.
 
 1. Under **Open API spec**, select **Upload API spec**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-upload.png" alt-text="Screenshot shows the Upload now option in Teams developer portal.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-upload.png" alt-text="Screenshot shows the Upload now option in Teams Developer Portal.":::
 
 1. Select the Open API specification file in JSON or YAML and select **Open**.
 
@@ -110,7 +110,7 @@ You can add commands and parameters to your API, to add commands:
 
 1. Under the Open API spec file, select **Add**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-edit-get-commands.png" alt-text="Screenshot shows the option to edit get commands in Teams developer portal.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-edit-get-commands.png" alt-text="Screenshot shows the option to edit get commands in Teams Developer Portal.":::
 
    A list of all the available APIs from the Open API specification are displayed.
 
@@ -143,7 +143,7 @@ You can add commands and parameters to your API, to add commands:
 
 1. Select **Save**. The command is added successfully.
 
-:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams developer portal.":::
+:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams Developer Portal.":::
 
 An API message extension is created.
 
@@ -193,7 +193,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
    1. Enter or browse the OpenAPI Description document location.
 
-      :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot-openapi-spec-location.png" alt-text="Screenshot shows the option to select OpenAPI spec location.":::
+      :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot-openapi-spec-location.png" alt-text="Screenshot shows the option to select OpenAPI Description document location.":::
 
    1. From the API list, select the GET API and select **OK**.
 
@@ -201,7 +201,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
       > GET and POST APIs are supported for API based message extensions.
 
    1. Select **Default folder**.
-   1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI spec file and created an API-based message extension.
+   1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI Description document and created an API-based message extension.
 
     ---
 
@@ -302,4 +302,3 @@ You can go through the [step-by-step](../sbs-api-me-ttk.yml) guide to build an A
 
 You can also build bot based message extensions.
 
-## See also

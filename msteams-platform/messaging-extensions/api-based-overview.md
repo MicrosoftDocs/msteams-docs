@@ -1,5 +1,5 @@
 ---
-title: Build message extension using API
+title: Build message extensions using API
 author: v-ypalikila
 description: Learn how to build an message extension using an OpenAPI description document (API).
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ ms.author: anclear
 ms.date: 10/19/2023
 ---
 
-# Build message extension using API
+# Build message extensions using API
 
 > [!NOTE]
 > API-based message extensions only support search commands.
@@ -125,7 +125,7 @@ components:
 
 A response rendering template maps JSON responses to a preview card and an Adaptive Card. When a user selects a search result, the preview cards appear as results. The preview card then expands into an Adaptive Card in the message compose box.
 
-Each search command command must have a corresponding response rendering template, and each command must correspond to an operation in the OpenAPI Description. However, not every operation defined in an OpenAPI Description must be a command. The response rendering template consists of an Adaptive Card template, preview card template, and metadata.
+Each search command command must have a corresponding response rendering template, and each command must correspond to an operation in the OpenAPI Description. However, not every operation defined in an OpenAPI Description must be a command. The response rendering template consists of an Adaptive Card template, preview card template, and metadata and must conform to the Response rendering template schema hosted at [`https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json`](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json)
 
 **Preview Card**
 
@@ -133,7 +133,7 @@ Each search command command must have a corresponding response rendering templat
 
 **Expanded Adaptive Card**
 
-:::image type="content" source="../assets/images/Copilot/api-based-message-extension-expanded-adaptive-card.png" alt-text="Example of how the adaptive card looks like expanded once a user selects a preview card. The adaptive card shows the 'Title', the full 'Description', 'AssignedTo', 'RepairId' and 'Date' values.":::
+:::image type="content" source="../assets/images/Copilot/api-based-message-extension-expanded-adaptive-card.png" alt-text="Example of how the Adaptive Card looks like expanded once a user selects a preview card. The Adaptive Card shows the 'Title', the full 'Description', 'AssignedTo', 'RepairId' and 'Date' values.":::
 
 The following code is an example of a Response rendering template: <br/>
 <br/>
@@ -233,7 +233,7 @@ The following code is an example of a Response rendering template: <br/>
 |`version` |  `string` | The schema version of the current response rendering template.        |  Yes       |
 |`jsonPath`     | `string`        | The path  to the relevant section in the results to which the responseCardTemplate and previewCardTemplate should be applied. If not set, the root object is treated as the relevant section. If the relevant section is an array, each entry is mapped to the responseCardTemplate and the previewCardTemplate.        |   No      |
 |`responseLayout`    | `responseLayoutType`        |  Specifies the layout of the results in the message extension flyout. The Supported types are `list` and `grid`.       |    Yes     |
-|`responseCardTemplate`    |  `adaptiveCardTemplate`  | A template for creating an adaptive card from a result entry.      |   Yes      |
+|`responseCardTemplate`    |  `adaptiveCardTemplate`  | A template for creating an Adaptive Card from a result entry.      |   Yes      |
 |`previewCardTemplate`     |  `previewCardTemplate`       | A template for creating a preview card from a result entry. The resulting preview card is displayed in the message extension flyout menu.        |  Yes       |
 
 #### Schema mapping
@@ -450,7 +450,3 @@ For more information, see [composeExtensions](../resources/schema/manifest-schem
 > [!div class="nextstepaction"]
 > [Build API-based message extension](build-api-based-message-extension.md)
 
-## See also
-
-* [Build message extensions](what-are-messaging-extensions.md)
-* [Bot-based Message extension](build-bot-based-message-extension.md)

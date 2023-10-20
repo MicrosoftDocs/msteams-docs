@@ -1,5 +1,5 @@
 ---
-title: Build message extension using Bot Framework
+title: Build message extensions using Bot Framework
 author: v-ypalikila
 description: Learn how to build a bot message extension using Bot Framework with Teams Toolkit.
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ ms.author: anclear
 ms.date: 10/19/2023
 ---
 
-# Build message extension using Bot Framework
+# Build message extensions using Bot Framework
 
 Message extensions built using Bot Framework (Bot-based) use a web service as a bot. You can use message extensions to enable users to interact with your web service from different locations in the Teams client, such as the compose message area, the command box, or directly from a message and send back structured data, such as cards.
 
@@ -161,7 +161,7 @@ You must add the following parameters to your `composeExtensions.commands` array
 | `id` | Unique ID that you assign to this command. The user request includes this ID. | Yes | 1.0 |
 | `title` | Command name. This value appears in the UI. | Yes | 1.0 |
 | `type` | Message extension type. Default is `action`. | No | 1.4 |
-| `fetchTask` | Set to `true` for an adaptive card or embedded web view for your task module, and`false` for a static list of parameters or when loading the web view by a `taskInfo`. | No | 1.4 |
+| `fetchTask` | Set to `true` for an Adaptive Card or embedded web view for your task module, and`false` for a static list of parameters or when loading the web view by a `taskInfo`. | No | 1.4 |
 | `context` | Optional array of values that defines where the message extension is invoked from. The possible values are `message`, `compose`, or `commandBox`. The default value is `["compose", "commandBox"]`. | No | 1.5 |
 
 If you're using a static list of parameters, you must also add the following parameters:
@@ -195,9 +195,5 @@ For more information, see [app manifest schema](~/resources/schema/manifest-sche
 
 ## See also
 
-* [Respond to search command](how-to/search-commands/respond-to-search.md)
 * [Universal Actions for search based message extensions](how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
-* [Create and send task modules](how-to/action-commands/create-task-module.md)
-* [Respond to the task module submit action](how-to/action-commands/respond-to-task-module-submit.md)
-* [Build message extensions](what-are-messaging-extensions.md)
-* [API-based Message extension](api-based-overview.md)
+* [API-based message extension](api-based-overview.md)

@@ -491,15 +491,15 @@
   - name: Overview
     href: messaging-extensions/what-are-messaging-extensions.md
     displayName: handleTeamsMessagingExtensionFetchTask
-  - name: Build message extension using API
+  - name: Build message extensions using API
     items:
     - name: Overview
       href: messaging-extensions/api-based-overview.md
-      displayName: OpenAPI specification, Search, single parameter, search based message extension
+      displayName: OpenAPI Description, Search, single parameter, search based message extension
     - name: Build API-based message extension
       href: messaging-extensions/build-api-based-message-extension.md
-      display name: Handle tap actions, Just-in-time install, JIT
-  - name: Build message extension using Bot Framework  
+      display name: Response rendering template, OpenAPI Description, Search, single parameter
+  - name: Build message extensions using Bot Framework  
     items:
     - name: Overview
       href: messaging-extensions/build-bot-based-message-extension.md
