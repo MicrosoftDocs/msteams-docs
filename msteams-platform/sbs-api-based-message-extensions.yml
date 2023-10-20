@@ -15,9 +15,9 @@ items:
 - durationInMinutes: 1
   content: |
 
-    Message extensions using API significantly enhance the functionality of your Teams apps by allowing them to interact with external services. This can help streamline workflows by reducing the need to switch between different applications.
+    Message extensions built using API significantly enhance the functionality of your Teams apps by allowing them to interact with external services. API-based message extensions can help streamline workflows by reducing the need to switch between different applications.
 
-    You can use API message extension to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a Messaging Extension to fetch and display customer data directly from Teams. This can help save time and improve efficiency by reducing the need to switch between different applications. This feature is supported on all platforms where Teams is available, including desktop, web, and mobile. 
+    You can use API-based message extensions to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a messaging extension to fetch and display customer data directly from Teams which helps save time and improve efficiency by reducing the need to switch between different applications. This feature is supported on all platforms where Teams is available, including desktop, web, and mobile. 
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -92,7 +92,7 @@ items:
     * Must have at most one required parameter or property in the request body. You can make a required parameter optional and add a default value.
     * The request body (if present) can't contain any arrays.
     * The server URL must be defined in the specification.
-    * If there's no operation ID, you can add one to the spec that you'll be uploading for testing because an operation ID is mandatory for operations that'll be Messaging Extensions. You can validate that the swagger is valid by using an online validator like [Swagger Parser](https://apitools.dev/swagger-parser/online/). Once you have found a suitable API spec, save it in a folder. 
+    * If there's no operation ID, you can add one to the OpenAPI Description document that are uploading for testing because an operation ID is mandatory for operations that'll be Messaging Extensions. You can validate that the swagger is valid by using an online validator like [Swagger Parser](https://apitools.dev/swagger-parser/online/). Once you have found a suitable API spec, save it in a folder. 
 
     We've used the following OpenAPI spec as an example for this tutorial:
 
