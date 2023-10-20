@@ -48,7 +48,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Build message extension using API
+      - text: Build message extensions using API
         url: messaging-extensions/api-based-overview.md
       - text: The new Microsoft Teams client
         url: resources/teams-updates.md
