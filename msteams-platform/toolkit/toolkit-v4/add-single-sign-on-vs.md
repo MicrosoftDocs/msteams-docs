@@ -36,7 +36,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 1. Update Azure AD app manifest:
 `TeamsFx-Auth/aad.manifest.template.json` file is an Azure AD app manifest template. You can copy and paste this file to any folder of your project, and rename as `aad.manifest.json` and take note of the path to this file. The following updates in the template to create/update an Azure AD app for SSO:
 
-    * `identifierUris`: It's used to uniquely identify and access the resource. Set the correct redirect Uris into `identifierUris` to successfully identify this app. For more information, see [identifierUris attribute](/azure/active-directory/develop/reference-app-manifest#identifieruris-attribute).
+    * `identifierUris`: It's used to uniquely identify and access the resource. Set the correct redirect Uris into `identifierUris` to successfully identify this app. For more information, see [identifierUris attribute](/azure/active-directory/develop/reference-app-manifest).
 
         ```json
             "identifierUris":[
@@ -44,7 +44,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
             ]
         ```
 
-    * `replyUrlsWithType`: It lists registered redirect_uri values that Azure AD accepts as destinations when returning tokens. Set necessary redirect Uris into `replyUrlsWithType` to successfully return token. For more information, see [replyUrlsWithType attribute](/azure/active-directory/develop/reference-app-manifest#replyurlswithtype-attribute).
+    * `replyUrlsWithType`: It lists registered redirect_uri values that Azure AD accepts as destinations when returning tokens. Set necessary redirect Uris into `replyUrlsWithType` to successfully return token. For more information, see [replyUrlsWithType attribute](/azure/active-directory/develop/reference-app-manifest).
 
         ```json
             "replyUrlsWithType":[
@@ -355,7 +355,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 1. Update Azure AD app manifest in the `TeamsFx-Auth/aad.manifest.template.json` file.
 1. You can copy the file to any folder of your project, and rename as the `aad.manifest.json` file and note the path to this file for later reference. Make the following updates in the template to create/update an Azure AD app for SSO.
 
-   * `identifierUris`: Used to uniquely identify and access the resource. You need to set correct Redirect Uris into "identifierUris" for successfully identify this app. For more information, see [identifierUris attribute](/azure/active-directory/develop/reference-app-manifest#identifieruris-attribute).
+   * `identifierUris`: Used to uniquely identify and access the resource. You need to set correct Redirect Uris into "identifierUris" for successfully identify this app. For more information, see [identifierUris attribute](/azure/active-directory/develop/reference-app-manifest).
 
     Example for TeamsFx Bot Template:
 
@@ -368,7 +368,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
     > [!NOTE]
     > You can use `${{ENV_NAME}}` to reference variables in the `env/.env.{TEAMSFX_ENV}` file.
 
-   * `replyUrlsWithType`: It lists registered redirect_uri values that Azure AD accepts as destinations when returning tokens. You need to set necessary Redirect Uris into "replyUrlsWithType" for successfully returning token. For more information, see [replyUrlsWithType attribute](/azure/active-directory/develop/reference-app-manifest#replyurlswithtype-attribute).
+   * `replyUrlsWithType`: It lists registered redirect_uri values that Azure AD accepts as destinations when returning tokens. You need to set necessary Redirect Uris into "replyUrlsWithType" for successfully returning token. For more information, see [replyUrlsWithType attribute](/azure/active-directory/develop/reference-app-manifest).
 
     Example:
 

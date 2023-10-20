@@ -1,6 +1,6 @@
 ---
 title: Upload your custom app
-description: Learn how to upload your app in Microsoft Teams. Uploading is common when testing and debugging an app during development.
+description: Learn how to sideload your app in Microsoft Teams. Sideloading is common when testing and debugging an app during development.
 ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
@@ -10,18 +10,18 @@ ms.date: 04/16/2023
 
 # Upload your app in Teams
 
-You can upload Microsoft Teams apps without having to publish to your organization or the Microsoft Teams store in the following scenarios:
+You can sideload Microsoft Teams apps without having to publish to your organization or the Microsoft Teams Store in the following scenarios:
 
 * You want to test and debug an app locally yourself or with other developers.
 * You built an app for yourself to automate a workflow.
 * You built an app for a small set of users, such as, your work group.
 
 > [!NOTE]
-> Uploading your messaging extension app multiple times displays more than one instance for messaging extensions.
+> Sideloading your messaging extension app multiple times displays more than one instance for messaging extensions.
 
 > [!IMPORTANT]
 >
-> * Uploading of apps is possible only in Government Community Cloud (GCC) and is not possible in GCC-High and Department of Defense (DOD).
+> * Currently, sideloading of apps is possible only in Government Community Cloud (GCC) and is not possible in GCC-High and Department of Defense (DOD).
 > * App installation is supported only on Teams desktop client.
 
 ## Prerequisites
@@ -32,7 +32,7 @@ You can upload Microsoft Teams apps without having to publish to your organizati
 
 ## Upload your app
 
-You can upload your app to a team, chat, meeting, or for personal use depending on how you configured your app's scope.
+You can sideload your app to a team, chat, meeting, or for personal use depending on how you configured your app's scope.
 
 1. Log in to the Teams client with your [Microsoft 365 development account](https://developer.microsoft.com/microsoft-365/dev-program).
 
@@ -54,7 +54,7 @@ You can upload your app to a team, chat, meeting, or for personal use depending 
 
 ## Troubleshoot
 
-If your app fails to upload or encounters any issues to upload, check the following options:
+If your app fails to sideload or encounters any issues to upload, check the following options:
 
 1. Ensure that you've followed all the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).
 1. [Validate your app package](https://dev.teams.microsoft.com/appvalidation.html).
@@ -82,7 +82,7 @@ Teams provides several ways to open apps. For more information, see [access your
 
 ### Update your app
 
-You don't have to upload your app again if you make code changes (these are reflected in Teams in real-time). However, you must reinstall if you change any app configurations. For more information, see [Role of an admin in upgrading Teams apps](/MicrosoftTeams/apps-update-experience).
+You don't have to sideload your app again if you make code changes (these are reflected in Teams in real-time). However, you must reinstall if you change any app configurations. For more information, see [Role of an admin in upgrading Teams apps](/MicrosoftTeams/apps-update-experience).
 
 When a Teams app receives an update, the user must consent to update the app in any one context, and the app is automatically updated in all the related contexts (chats, channels, and meetings) where the app is installed. The user can update the app from any context.
 
@@ -135,4 +135,4 @@ To remove app from Teams, follow the steps:
 * [Configure default install options](~/concepts/deploy-and-publish/add-default-install-scope.md)
 * [Maintain your published Microsoft Teams app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)
 * [Add app to chat](/graph/api/chat-post-installedapps)
-* [Manage custom and uploaded apps](/microsoftteams/teams-custom-app-policies-and-settings)
+* [Manage custom and sideloaded apps](/microsoftteams/teams-custom-app-policies-and-settings)

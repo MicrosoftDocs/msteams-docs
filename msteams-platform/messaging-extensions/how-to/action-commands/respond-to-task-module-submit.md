@@ -1,7 +1,7 @@
 ---
 title: Respond to the task module submit action
 author: surbhigupta
-description: Learn how to respond to the task module submit action from a message extension action command with Proactive message. Define search commands and respond to searches. Displays the username on the Adaptive Card header of the card response. User attribution for bot.
+description: Learn how to respond to the task module submit action from a message extension action command with Proactive message. Define search commands and respond to searches.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -546,9 +546,9 @@ You receive a new `composeExtensions/submitAction` message similar to the follow
 
 ### User attribution for bots messages
 
-In scenarios where a bot sends messages on behalf of a user, attributing the message to that user helps with engagement and display a more natural interaction flow. This feature lets you to show a message from your bot that was sent on behalf of a user by displaying the name of the user in the header of the Adaptive Card response.
+In scenarios where a bot sends messages on behalf of a user, attributing the message to that user helps with engagement and showcase a more natural interaction flow. This feature allows you to attribute a message from your bot to a user on whose behalf it was sent.
 
-The following images display an Adaptive Card message sent by a bot. The left-side image is without user attribution and the right-side image is with user attribution. The image with user attribution displays the name of the user in the format: username via bot **(Megan Bowen via Poll)** in the Adaptive Card header.
+In the following image, left side of the image is a card message sent by a bot without user attribution and right side of the image is a card sent by a bot with user attribution.
 
 :::image type="content" source="../../../assets/images/messaging-extension/user-attribution-bots.png" alt-text="User attribution bots":::
 

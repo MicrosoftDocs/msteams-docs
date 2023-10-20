@@ -1,6 +1,6 @@
 ---
 title: Extend your app with Microsoft Graph permissions
-description: Describes configuring API permissions with Microsoft Graph for bot and messaging extension apps.
+description: Describes configuring API permissions with Microsoft Graph for bot and messaging extensipn apps.
 ms.topic: how-to
 ms.localizationpriority: high
 ---
@@ -60,4 +60,4 @@ You can configure Graph scopes in Azure AD as required for your app. Delegated p
 
 After you've completed the configuration in Azure AD, you must update the code to acquire access token for Microsoft Graph. For more information, see [Bot framework SDK](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/csharp/SimpleGraphClient.cs).
 
-The app user is prompted to consent for Graph permissions on the first time they use it. After the app user gives consent, the Graph permissions are granted. For more information on Graph API permissions, see [permissions and consent](/azure/active-directory/develop/permissions-consent-overview).
+The app user is prompted to consent for Graph permissions on the first time they use it. After the app user gives consent, the Graph permissions are granted.

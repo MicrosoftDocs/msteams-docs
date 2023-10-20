@@ -18,7 +18,7 @@ ms.date: 03/03/2022
 
 You can test your Teams app after integrating with Microsoft Teams. To test your Teams app, you need to create at least one workspace in your environment. You can use Teams Toolkit for testing your Teams app:
 
-* **Locally hosted in Teams**: Teams Toolkit locally hosts your Teams app by sideloading it into Teams for testing in local environment.
+* **Locally hosted in Teams**: Teams Toolkit locally hosts your Teams app by uploading it into Teams for testing in local environment.
 
 * **Cloud-hosted in Teams**: For testing your Teams app remotely, you need to Cloud-host it using provisioning and deploying on Microsoft Azure Active Directory (Azure AD). It involves uploading your solution to the Azure AD and then upload into Teams.
 
@@ -27,7 +27,7 @@ You can test your Teams app after integrating with Microsoft Teams. To test your
 
 ## Locally hosted environment
 
-Teams is a cloud-based product that requires all services it accesses, to be available publicly using HTTPS endpoints. Local hosting is about sideloading into Teams for testing in local environment.
+Teams is a cloud-based product that requires all services it accesses, to be available publicly using HTTPS endpoints. Local hosting is about uploading into Teams for testing in local environment.
 
 > [!NOTE]
 > Although you can use any tool of your choice for testing, we recommend you to use [ngrok](https://ngrok.com/download).

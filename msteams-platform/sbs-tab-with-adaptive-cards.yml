@@ -210,7 +210,7 @@ items:
 
         :::image type="content" source="~/assets/images/adaptive-cards/web-auth.png" alt-text="Screenshot of Authentication with Add a platform, Configure Web, Redirect URLs, and Configure options are highlighted in red.":::
 
-    1. Enter the **Redirect URIs** as `https://token.botframework.com/.auth/web/redirect`.
+    1. Enter the **Redirect URIs** as **https://token.botframework.com/.auth/web/redirect**.
 
     1. Select the following to enable **Implicit grant and hybrid flows**:</br>
        * **ID tokens**

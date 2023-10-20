@@ -8,7 +8,7 @@ ms.date: 05/04/2023
 
 # Card actions
 
-Cards used by bots and message extensions in Microsoft Teams support the following activity [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) types:
+Cards used by bots and message extensions in Teams support the following activity [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) types:
 
 > [!NOTE]
 > The `CardAction` actions differ from `potentialActions` for connector cards for Microsoft 365 Groups when used from connectors.
@@ -688,38 +688,19 @@ The following code shows an example of Adaptive Cards with `invoke` action:
 }
 ```
 
-| Property | Description |
-| --- | --- |
-| `type` | Set to `invoke`. |
-| `value` | Set the value to display. |
-
 The following code shows an example of Adaptive Cards with `invoke` action with additional payload data:
 
 ```json
-[
-  {
-    "type": "Action.Submit",
-    "title": "submit with object value",
-    "data": {
-      "ab": "xy",
-      "msteams": {
-        "type": "invoke",
-        "value": { "a": "b" }
-      }
-    }
-  },
-  {
-    "type": "Action.Submit",
-    "title": "submit with stringified json value",
-    "data": {
-      "ab": "xy",
-      "msteams": {
-        "type": "invoke",
-        "value": "{ \"a\": \"b\"}"
-      }
-    }
+{
+  "type": "Action.Submit",
+  "title": "submit"
+  "data": {
+    "msteams": {
+        "type": "task/fetch"
+    },
+    "Value1": "some value"
   }
-]
+}
 ```
 
 ## Code samples
