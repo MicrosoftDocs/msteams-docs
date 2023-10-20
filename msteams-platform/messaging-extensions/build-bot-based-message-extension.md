@@ -28,7 +28,8 @@ Message extension search commands allow users to search external systems and ins
 See the following video to learn how to define message extension search commands:
 <br>
 
-[!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+
 <br>
 
 The search command in a message extension is configured using the `composeExtensions.commands` property and the `query` type in the app manifest (previously called as Teams app manifest).
@@ -97,7 +98,7 @@ For more information, see [app manifest schema](~/resources/schema/manifest-sche
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Select search command invoke locations](how-to/search-commands/define-search-command.md)
+> [Define message extension search command](how-to/search-commands/define-search-command.md)
 
 # [Action commands](#tab/action-commands)
 

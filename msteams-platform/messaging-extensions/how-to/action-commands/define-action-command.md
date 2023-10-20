@@ -18,7 +18,8 @@ Before creating the action command, you must decide the following factors:
 See the following video to learn how to define message extension action commands:
 <br>
 
-[!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+
 <br>
 
 ## Select action command invoke locations
@@ -242,12 +243,12 @@ Follow the [step-by-step guide](../../../sbs-meetingextension-action.yml) to bui
 If you're using either an Adaptive Card or an embedded web view without a `taskInfo` object, the next step is to:
 
 > [!div class="nextstepaction"]
-> [Create and respond with a task module](~/messaging-extensions/how-to/action-commands/create-task-module.md)
+> [Create and send task module](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
 If you're using the parameters or an embedded web view with a `taskInfo` object, the next step is to:
 
 > [!div class="nextstepaction"]
-> [Respond to task module submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+> [Respond to task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
 ## See also
 

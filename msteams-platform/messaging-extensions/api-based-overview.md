@@ -448,7 +448,7 @@ For more information, see [composeExtensions](../resources/schema/manifest-schem
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Build from an API](build-api-based-message-extension.md)
+> [Build API-based message extension](build-api-based-message-extension.md)
 
 ## See also
 

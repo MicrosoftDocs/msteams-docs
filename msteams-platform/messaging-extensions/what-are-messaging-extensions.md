@@ -146,7 +146,7 @@ The following table differentiates the types of message extensions:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [API-based Message extension](api-based-overview.md)
+> [Build message extension using API](api-based-overview.md)
 
 ## See also
 

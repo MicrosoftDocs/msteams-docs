@@ -987,7 +987,7 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Respond to action command](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+> [Respond to task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
 ## See also
 
