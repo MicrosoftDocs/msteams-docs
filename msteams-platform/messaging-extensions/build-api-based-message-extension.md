@@ -188,7 +188,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
         |File  |Contents |
         |---------|---------|
-        |`repair/function.json`    |A configuration file that defines the function’s trigger and other settings.         |
+        |`repair/function.json`    |A configuration file that defines the function’s trigger and other settings. For more information, see [Azure Functions](/azure/azure-functions/functions-bindings-http-webhook-trigger?tabs=python-v2%2Cisolated-process%2Cnodejs-v4%2Cfunctionsv2&pivots=programming-language-csharp)        |
         |`repair/index.ts`     | The main file of a function in Azure Functions.        |
         |`appPackage/apiSpecificationFiles/repair.yml`     |  A file that describes the structure and behavior of the repair API.       |
         |`appPackage/responseTemplates/repair.json`     |  A generated Adaptive Card that used to render API response.       |
