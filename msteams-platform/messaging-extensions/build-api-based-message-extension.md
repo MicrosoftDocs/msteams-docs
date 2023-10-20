@@ -224,7 +224,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, search for your app.
 1. Select the app from the list and [trigger your search commands from compose message area](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?tabs=dotnet#search-commands).
 
-:::image type="content" source="../assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat  menu and the app is displayed in the flyout menu.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat  menu and the app is displayed in the flyout menu.":::
 
 Teams sends the search result as an Adaptive Card in the chat message.
 

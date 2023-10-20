@@ -76,9 +76,7 @@ To run the message extension in Teams, follow these steps:
 1. Under **Configure**, select **App features**.
 1. Select **Messaging extension**.
 
-  :::image type="content" source="../../../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Teams Developer Portal.":::
-
-1. Under **Message extension type**, select **Bot**.
+   :::image type="content" source="../../../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Teams Developer Portal.":::
 
 1. If you have an existing bot, select **Existing bot** or if you have a bot ID, select **Enter Bot ID**.
 
