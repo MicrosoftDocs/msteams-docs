@@ -454,14 +454,21 @@ items:
     1. Go to Teams Toolkit and from the left pane, select **Run and Debug** (**Ctrl+Shift+D**).
     1. Select **Launch Remote (Edge)** from the launch configuration dropdown.        
 
-        The Teams Toolkit provisions your app on Azure and deploys it to Teams. The following message appears in the **OUTPUT** window.
+        The Teams Toolkit provisions your app on Azure and deploys it to Teams.
 
         > [!NOTE]
         > The first time you provision your app, it takes a few minutes to complete. Subsequent provisions are faster.
 
-    1. Go to a chat message and trigger your search commands from compose message area.
+    1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, search for your app.
+    1. Select the app from the list and [trigger your search commands from compose message area](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?tabs=dotnet#search-commands).
 
-    :::image type="content" source="assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
+       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat  menu and the app is displayed in the flyout menu.":::
+
+       Teams sends the search result as an Adaptive Card in the chat message.
+
+       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
+
+    
 
 - title: Complete challenge
   durationInMinutes: 1
@@ -479,6 +486,4 @@ items:
     You've done it!
 
     You've created an API based message extension.
-
-    You've completed the tutorial.
 
