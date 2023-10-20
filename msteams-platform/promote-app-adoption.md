@@ -373,4 +373,3 @@ After successful app adoption and analysis, share your journey and your achievem
 * [Gain traction for your collaborative app in the market](concepts/deploy-and-publish/appsource/post-publish/app-growth/gain-traction.md)
 * [Succeed with your collaborative app](concepts/deploy-and-publish/appsource/post-publish/app-growth/succeed.md)
 * [Scale your collaborative app](concepts/deploy-and-publish/appsource/post-publish/app-growth/scale-app.md)
-

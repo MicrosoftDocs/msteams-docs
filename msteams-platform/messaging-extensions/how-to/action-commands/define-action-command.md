@@ -17,9 +17,7 @@ Before creating the action command, you must decide the following factors:
 
 See the following video to learn how to define message extension action commands:
 <br>
-
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
-
 <br>
 
 ## Select action command invoke locations
