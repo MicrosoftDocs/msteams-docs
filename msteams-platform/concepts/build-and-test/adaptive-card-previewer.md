@@ -1,5 +1,5 @@
 ---
-title: Tools and SDKs
+title: Microsoft Adaptive Card Previewer
 author: v-vanv
 description: In this article, learn more about the Microsoft Adaptive Card previewer.
 ms.localizationpriority: medium
