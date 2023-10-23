@@ -49,7 +49,7 @@ You can preview the Adaptive Card designs right within their integrated developm
 
 * Create a new bot, messaging extension, or Copilot plugin project with Teams Toolkit or open an existing project with an Adaptive Card metadata file.
 * Open the Adaptive Card metadata file to customize the card.
-* Utilize "CodeLens" or a specific command to preview the card you are currently working on.
+* Utilize "CodeLens" or a specific command to preview the card you're currently working on.
 * Changes to the card are reflected instantly through **Hot Reload** feature in the preview.
 
 ### Trustworthy previews
