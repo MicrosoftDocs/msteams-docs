@@ -382,13 +382,13 @@ The object is an array with all elements of the type `object`. This block is req
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 characters|✔️|The https:// URL to use when configuring the tab.|
-|`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default value: `true`|
+|`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. <br>Default value: `true`|
 |`scopes`|Array of enum|2|✔️|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
-|`context` |Array of enum|8||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default values: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, `personalTab`, `callingSidePanel`|
+|`context` |Array of enum|8||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). <br>Default values: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, `personalTab`, `callingSidePanel`|
 |`sharePointPreviewImage`|String|2048 characters||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
 |`supportedSharePointHosts`|Array of enum|2||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage`, `sharePointWebPart`|
-|`meetingSurfaces`|Array of enum|2||The set of `meetingSurfaceItem` scopes to which a tab belongs. Default values: `sidePanel`, `stage`|
-|`supportedPlatform`|Array of enum|3||The set of `supportedPlatform` scopes to which a tab belongs. Default values: `desktop`, `mobile`, `teamsMeetingDevices`|
+|`meetingSurfaces`|Array of enum|2||The set of `meetingSurfaceItem` scopes to which a tab belongs. <br>Default values: `sidePanel`, `stage`|
+|`supportedPlatform`|Array of enum|3||The set of `supportedPlatform` scopes to which a tab belongs. <br>Default values: `desktop`, `mobile`, `teamsMeetingDevices`|
 
 ## staticTabs
 
@@ -409,8 +409,8 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |`websiteUrl`|String|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
 |`scopes`|Array of enum|3|✔️|Static tabs support the `personal`, `team`, and `groupChat` scopes, which means it can be provisioned as part of the personal, group chat, and channel meetings experience.|
 |`searchUrl`|String|2048 characters||The https:// URL to direct a user's search queries.|
-|`context`|Array of enum|8||The set of `contextItem` scopes to which a tab belongs. Default values: `personalTab`, `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, `teamLevelApp`|
-|`supportedPlatform`|Array of enum|3||The set of `supportedPlatform` scopes to which a tab belongs. Default values: `desktop`, `mobile`, `teamsMeetingDevices`|
+|`context`|Array of enum|8||The set of `contextItem` scopes to which a tab belongs. <br>Default values: `personalTab`, `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, `teamLevelApp`|
+|`supportedPlatform`|Array of enum|3||The set of `supportedPlatform` scopes to which a tab belongs. <br>Default values: `desktop`, `mobile`, `teamsMeetingDevices`|
 
 ## bots
 
@@ -423,13 +423,13 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`botId`|String| |✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
-|`needsChannelSelector`|Boolean|||Describes whether the bot utilizes a user hint to add the bot to a specific channel. Default value: `false`|
-|`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default value: `false`|
-|`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default value: `false`|
+|`needsChannelSelector`|Boolean|||Describes whether the bot utilizes a user hint to add the bot to a specific channel. <br>Default value: `false`|
+|`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. <br>Default value: `false`|
+|`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. <br>Default value: `false`|
 |`scopes`|Array of enum|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are nonexclusive.|
-|`supportsCalling`|Boolean|||A value indicating where a bot supports audio calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. Default value: `false`|
-|`supportsVideo`|Boolean|||A value indicating where a bot supports video calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. Default value: `false`|
-|`requiresSecurityEnabledGroup`|Boolean|||A value indicating whether the team's Office group needs to be security enabled. Default value: `false`|
+|`supportsCalling`|Boolean|||A value indicating where a bot supports audio calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. <br>Default value: `false`|
+|`supportsVideo`|Boolean|||A value indicating where a bot supports video calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. <br>Default value: `false`|
+|`requiresSecurityEnabledGroup`|Boolean|||A value indicating whether the team's Office group needs to be security enabled. <br>Default value: `false`|
 
 ### bots.configuration
 
@@ -437,7 +437,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |---|---|---|---|---|
 |`fetchTask`|Boolean|||A Boolean value that indicates if it should fetch bot config task module dynamically.|
 |`teams.parameters.name`|String|64 characters|✔️|Name of the parameter.|
-|`teams.parameters.inputType`|String|||Type of the parameter. Options are `text`, `textarea`, `number`, `date`, `time`, `toggle`, and `choiceset`. Default value: `text`|
+|`teams.parameters.inputType`|String|||Type of the parameter. Options are `text`, `textarea`, `number`, `date`, `time`, `toggle`, and `choiceset`. <br>Default value: `text`|
 |`teams.parameters.title`|String|32 characters|✔️|Title of the parameter.|
 |`teams.parameters.description`|String|128 characters||Description of the parameter.|
 |`teams.parameters.value`|String|512||The initial value of the parameter.|
@@ -486,12 +486,12 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
 |`botId`|String||✔️|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
-|`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. Default value: `false`|
+|`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. <br>Default value: `false`|
 |`commands`|Array of object|10|✔️|Array of commands the message extension supports|
 |`messageHandlers`|Array of objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
 |`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|Array of Strings|2048 characters||Array of domains that the link message handler can register for.|
-|`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. Default value: `false`. To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
+|`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. <br>Default value: `false`. To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
 
 ### composeExtensions.commands
 
@@ -502,11 +502,11 @@ Each command item is an object with the following structure:
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|String|64 characters|✔️|The ID for the command.|
-|`type`|String|64 characters||Type of the command. One of `query` or `action`. Default value: `query`|
+|`type`|String|64 characters||Type of the command. One of `query` or `action`. <br>Default value: `query`|
 |`title`|String|32 characters|✔️|The user-friendly command name.|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
-|`initialRun`|Boolean|||A Boolean value that indicates whether the command runs initially with no parameters. Default value: `false`|
-|`context`|Array of Strings|3 characters||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. Default values: `compose, commandBox`|
+|`initialRun`|Boolean|||A Boolean value that indicates whether the command runs initially with no parameters. <br>Default value: `false`|
+|`context`|Array of Strings|3 characters||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. <br>Default values: `compose, commandBox`|
 |`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the task module dynamically.|
 |`taskInfo`|Object|||Specify the task module to preload when using a message extension command.|
 |`taskInfo.title`|String|64 characters||Initial dialog title.|
@@ -741,9 +741,9 @@ When a group install scope is selected, it defines the default capability when t
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`team`|String|||When the install scope selected is `team`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
-|`groupchat`|String|||When the install scope selected is `groupchat`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
-|`meetings`|String|||When the install scope selected is `meetings`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`team`|String|||When the install scope selected is `team`, this field specifies the default capability available. <br>Options: `tab`, `bot`, or `connector`.|
+|`groupchat`|String|||When the install scope selected is `groupchat`, this field specifies the default capability available. <br>Options: `tab`, `bot`, or `connector`.|
+|`meetings`|String|||When the install scope selected is `meetings`, this field specifies the default capability available. <br>Options: `tab`, `bot`, or `connector`.|
 
 ## subscriptionOffer
 
@@ -764,9 +764,9 @@ Specify meeting extension definition. For more information, see [custom Together
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`scenes`|Array of objects| 5 items||Meeting supported scenes.|
-|`supportsStreaming`|Boolean|||A Boolean value that indicates whether an app can stream the meeting's audio and video content to a real-time meeting protocol (RTMP) endpoint. Default value: `false`|
+|`supportsStreaming`|Boolean|||A Boolean value that indicates whether an app can stream the meeting's audio and video content to a real-time meeting protocol (RTMP) endpoint. <br>Default value: `false`|
 |`videoFiltersConfigurationUrl`|String|2048 characters||The https:// URL for configuring the video filters.|
-|`supportsAnonymousGuestUsers`|Boolean|||A Boolean value that indicates whether the app supports access by anonymous guest users. Default value: `false`|
+|`supportsAnonymousGuestUsers`|Boolean|||A Boolean value that indicates whether the app supports access by anonymous guest users. <br>Default value: `false`|
 
 ### meetingExtensionDefinition.scenes
 
@@ -812,7 +812,7 @@ Specify and consolidate authorization related information for the app.
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`type`|String||✔️| The type of resource-specific consent (RSC) permission. Options: `Application` and `Delegated`.|
+|`type`|String||✔️| The type of resource-specific consent (RSC) permission. <br>Options: `Application` and `Delegated`.|
 |`name`|String|128 characters|✔️|The name of the RSC permission. For more information, see [RSC application permissions](#rsc-application-permissions) and [RSC delegated permissions](#rsc-delegated-permissions)|
 
 #### RSC application permissions
@@ -883,12 +883,12 @@ The `extensions.requirements` property specifies the [requirement sets](/javascr
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`requirements.capabilities`| Array | | | Identifies the requirement sets. Options: `name` (required), `minVersion`, `maxVersion`|
+|`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
 |`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement sets. |
 |`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement sets. |
 |`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement sets. |
-|`requirements.scopes`| Array of enums | 1 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `mail` (Outlook). Supported value: `mail` |
-|`requirements.formFactors`| Array of enums | | | Identifies the form factors that support the add-in. Supported values: `mobile`, `desktop`|
+|`requirements.scopes`| Array of enums | 1 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `mail` (Outlook). <br>Supported value: `mail` |
+|`requirements.formFactors`| Array of enums | | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 
 ### extensions.runtimes
 
@@ -904,9 +904,9 @@ The `extensions.runtimes` property configures the sets of runtimes and actions t
 |`lifetime`| String enum | | | Specifies the lifetime of the runtime. Runtimes with a `short` lifetime don’t preserve state across executions while runtimes with a `long` lifetime do.|
 |`actions`| Array | | | Specifies the set of actions supported by the runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
 |`actions.id`| String | 64 characters | ✔️ | Specifies the ID for the action, which is passed to the code file. |
-|`actions.type`| String | | ✔️ | Specifies the type of action. The `executeFunction` runs a JavaScript function without waiting for it to finish and `openPage` opens a page in a given view. Supported value: `executeFunction` |
+|`actions.type`| String | | ✔️ | Specifies the type of action. The `executeFunction` runs a JavaScript function without waiting for it to finish and `openPage` opens a page in a given view. <br>Supported value: `executeFunction` |
 |`actions.displayName`| String | 64 characters | | Specifies the display name of the action and it isn't the label of a button or a menu item that invokes the action (which is configured with `tabs.groups.controls.label`).|
-|`actions.pinnable`| Boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. Default value: `false`|
+|`actions.pinnable`| Boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. <br>Default value: `false`|
 |`actions.view`| String | 64 characters | | Specifies the view where the page must be opened. It's used only when `actions.type` is `openPage`. |
 
 To use `extensions.runtimes`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the runtime for a task pane](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-task-pane-command), and [configure the runtime for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-function-command).
@@ -917,13 +917,13 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`contexts`| Array | 4 | | Specifies the Microsoft 365 application window in which the ribbon customization is available to the user. Each item in the array is a member of a string array. Supported values: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`|
+|`contexts`| Array | 4 | | Specifies the Microsoft 365 application window in which the ribbon customization is available to the user. Each item in the array is a member of a string array. <br>Supported values: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`|
 |`tabs`| Array | |✔️| Configures custom tabs on the Microsoft 365 application ribbon. |
 |`tabs.id`| String | 64 characters | | Specifies the ID for the tab within the app.|
 |`tabs.label`| String | 64 characters | | Specifies the text displayed for the tab.|
 |`tabs.position`| Object | | | Configures the position of the custom tab relative to other tabs on the ribbon.|
 |`tabs.position.builtinTabId`| String | 64 characters | | Specifies the ID of the built-in tab. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
-|`tabs.position.align`| String enum | | | Defines alignment of the custom tab relative to the specified built-in tab. Supported values: `after`, `before`|
+|`tabs.position.align`| String enum | | | Defines alignment of the custom tab relative to the specified built-in tab. <br>Supported values: `after`, `before`|
 |`tabs.groups`| String |64 characters | | Defines the tab groups.|
 |`tabs.groups.id`| String |64 characters | | Specifies the ID for the tab group within the app. It must be different from any built-in group ID in the Microsoft 365 application and any other custom group.|
 |`tabs.groups.label`| String | 64 characters | | Specifies the text displayed for the group. |
@@ -934,7 +934,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.id`| String | 64 characters| ✔️ | Specifies the ID for the control within the app. It must be different from any built-in control ID in the Microsoft 365 application and any other custom control. |
 |`tabs.groups.controls.items`| Array | | | Configures the items for a menu control. |
 |`tabs.groups.controls.items.id`| String | | ✔️ | Specifies the ID for the items within the app. |
-|`tabs.groups.controls.items.type`| String enum | | ✔️ | Defines the control items type. Supported value: `menuItem`|
+|`tabs.groups.controls.items.type`| String enum | | ✔️ | Defines the control items type. <br>Supported value: `menuItem`|
 |`tabs.groups.controls.items.label`| String | 64 characters| ✔️ | Specifies the text displayed for the items. |
 |`tabs.groups.controls.items.icons`| Array | | | Configures the icons for the custom item.|
 |`tabs.groups.controls.items.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Required image size: `16`, `32`, `80`. |
@@ -943,9 +943,9 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.items.supertip.title`| String | 64 characters | ✔️ | Specifies the title text of the supertip.|
 |`tabs.groups.controls.items.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
 |`tabs.groups.controls.items.actionId`| String | 64 characters | ✔️ | Specifies the ID of the action that is taken when a user selects the control or menu item. The `actionId` must match with `runtime.actions.id`. |
-|`tabs.groups.controls.items.enabled`| Boolean | | | Indicates whether the control is initially enabled. Default value: `true`|
-|`tabs.groups.controls.items.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. Default value: `false`|
-|`tabs.groups.controls.type`| String | | ✔️ | Defines the control type. Supported values: `button`, `menu`|
+|`tabs.groups.controls.items.enabled`| Boolean | | | Indicates whether the control is initially enabled. <br>Default value: `true`|
+|`tabs.groups.controls.items.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
+|`tabs.groups.controls.type`| String | | ✔️ | Defines the control type. <br>Supported values: `button`, `menu`|
 |`tabs.groups.controls.builtinControlId`| String | 64 characters | ✔️ | Specifies the ID of the existing Microsoft 365 control. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
 |`tabs.groups.controls.label`| String | 64 characters | ✔️ | Specifies the text displayed for the control.|
 |`tabs.groups.controls.icons`| Array | | | Defines the icon(s) for the control. |
@@ -955,8 +955,8 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.supertip.title`| String | 64 characters | ✔️ |Specifies the title text of the supertip.|
 |`tabs.groups.controls.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
 |`tabs.groups.controls.actionId`| String | 64 characters | ✔️ | Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match with `runtime.actions.id`.|
-|`tabs.groups.controls.enabled`| Boolean | | | Indicates whether the control is initially enabled. Default value: `true`|
-|`tabs.groups.controls.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. Default value: `false`|
+|`tabs.groups.controls.enabled`| Boolean | | | Indicates whether the control is initially enabled. <br>Default value: `true`|
+|`tabs.groups.controls.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
 |`tabs.groups.builtinGroupId`| String | 64 characters | | Specifies the ID of a built-in group. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
 
 To use `extensions.ribbons`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the UI for the task pane command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-task-pane-command), and [configure the UI for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-function-command).
@@ -971,7 +971,7 @@ The `extensions.autoRunEvents` property defines event-based activation extension
 |`events.type`| String | 64 characters | | Specifies the type of event. For supported types, see [supported events](/office/dev/add-ins/outlook/autolaunch?tabs=xmlmanifest#supported-events).|
 |`events.actionId`| String | 64 characters | | Identifies the action that is taken when the event fires. The `actionId` must match with `runtime.actions.id`. |
 |`events.options`| Object | | | Configures how Outlook responds to the event.|
-|`events.options.sendMode`| String | | ✔️ | Specifies the actions to take during a mail send action. Supported values: `promptUser`, `softBlock`, `block`. For more information, see [available send mode options](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest#available-send-mode-options).|
+|`events.options.sendMode`| String | | ✔️ | Specifies the actions to take during a mail send action. <br>Supported values: `promptUser`, `softBlock`, `block`. For more information, see [available send mode options](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest#available-send-mode-options).|
 
 ### extensions.alternates
 
@@ -984,13 +984,10 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`prefer.comAddin.progId`| String | 64 characters | ✔️ | Identifies the application type in which the extension can run.|
 |`hide`| Object | | | Configures how to hide another add-in that you've published whenever the add-in is installed, so users don't see both in the Microsoft 365 UI. For example, use this property when you've previously published an add-in that uses the old XML app manifest and you're replacing it with a version that uses the new JSON app manifest. |
 |`hide.storeOfficeAddin`| Object | | | Specifies a Microsoft 365 Add-in available in Microsoft AppSource. |
-|`hide.storeOfficeAddin.officeAddinId`| String | 64 characters | ✔️ | Specifies the ID of an in-market add-in to hide. This GUID is from the app manifest `id` property, if the in-market add-in uses the JSON app manifest, or from the `<Id>` element, if the in-market add-in uses the XML app manifest.|
+|`hide.storeOfficeAddin.officeAddinId`| String | 64 characters | ✔️ | Specifies the ID of the in-market add-in to hide. The GUID is taken from the app manifest `id` property if the in-market add-in uses the JSON app manifest. The GUID is taken from the `<Id>` element if the in-market add-in uses the XML app manifest. |
 |`hide.storeOfficeAddin.assetId`| String | 64 characters | ✔️ | Specifies the AppSource asset ID of the in-market add-in to hide.|
 |`hide.customOfficeAddin`| | | | Configures hiding an in-market add-in that isn't distributed through AppSource.|
-|`hide.customOfficeAddin.officeAddinId`|String | 64 characters | ✔️ | Specifies the ID of the in-market add-in to hide. The GUID is:<br>
-
-* From the app manifest id property, if the in-market add-in uses the JSON app manifest. <br>
-* From the <Id> element, if the in-market add-in uses the XML app manifest. |
+|`hide.customOfficeAddin.officeAddinId`|String | 64 characters | ✔️ | Specifies the ID of the in-market add-in to hide. The GUID is taken from the app manifest `id` property if the in-market add-in uses the JSON app manifest. The GUID is taken from the `<Id>` element if the in-market add-in uses the XML app manifest. |
 
 ## See also
 
