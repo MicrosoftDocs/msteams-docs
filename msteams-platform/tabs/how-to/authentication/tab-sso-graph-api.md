@@ -16,6 +16,8 @@ Graph scopes, such as `User.Read` or `Mail.Read`, indicate what your app can acc
 
 You can configure additional Graph scopes in Azure AD for your app. These are delegated permissions, which are used by apps that require signed-in access. A signed-in app user or administrator must initially consent to them. Thereafter, your tab app can consent on behalf of the signed-in user when it calls Microsoft Graph.
 
+If your app is used in app-only access scenario, where it doesn't require user signed-in user presence, you can alternately select application permission. Only admins can consent to application permissions.
+
 ### To configure API permissions
 
 1. Open the app you registered in the [Azure portal](https://ms.portal.azure.com/).
