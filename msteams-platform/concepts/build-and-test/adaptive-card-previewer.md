@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Microsoft Adaptive Card Previewer
 
-The Microsoft Adaptive Card Previewer (ACP) helps you to preview the Adaptive Cards when you're iterating over your card designs. It's a standalone extension bundled with Teams Toolkit that helps to preview adaptive card built for Teams bot, message extension, and Copilot plugin. You can open a side-by-side preview to view changes live and toggle between different themes.
+The Microsoft Adaptive Card Previewer (ACP) helps you to preview the Adaptive Cards when you're iterating over your card designs. It's a standalone extension bundled with Teams Toolkit that helps to preview Adaptive Card built for Teams bot, message extension, and Copilot plugin. You can open a side-by-side preview to view changes live and toggle between different themes.
 
 :::image type="content" source="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png" alt-text="Shows the Adaptive Card previewer extension Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png":::
 
@@ -17,9 +17,9 @@ The Microsoft Adaptive Card Previewer (ACP) helps you to preview the Adaptive Ca
 
 The Adaptive Card Previewer uses the latest rendering stack for Teams to provide a more accurate preview of Adaptive Cards.
 
-The primary goal of Adaptive Card Previewer is to provide developers with a faster and more reliable solution for previewing adaptive card designs. The adaptive card supports the following features:
+The primary goal of Adaptive Card Previewer is to provide developers with a faster and more reliable solution for previewing Adaptive Card designs. The Adaptive Card supports the following features:
 
-* Instant preview of adaptive cards in Visual Studio Code editor through CodeLens or Command Palette.
+* Instant preview of Adaptive Cards in Visual Studio Code editor through CodeLens or Command Palette.
 
   :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-open-preview.png" alt-text="Shows the options for instant preview of adaptive cards in Visual Studio Code editor through CodeLens or Command Palette.":::
 
@@ -29,9 +29,9 @@ The primary goal of Adaptive Card Previewer is to provide developers with a fast
 
 :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-select-theme.gif" alt-text="Shows how to switch different themes in Adaptive Card Previewer.":::
 
-* Separation of data from the layout in an Adaptive Card [template language](/adaptive-cards/templating/). Use the command `Adaptive Card: New Data File` to add a data file for a template. This generates an empty file where you can bind data to your adaptive card template.
+* Separation of data from the layout in an Adaptive Card [template language](/adaptive-cards/templating/). Use the command `Adaptive Card: New Data File` to add a data file for a template. This generates an empty file where you can bind data to your Adaptive Card template.
 
-* Seamless integration with Teams Toolkit that allows a Just-In-Time installation of Adaptive Card previewer when you're iterating on adaptive cards generated from Teams Toolkit project creation.
+* Seamless integration with Teams Toolkit that allows a Just-In-Time installation of Adaptive Card previewer when you're iterating on Adaptive Cards generated from Teams Toolkit project creation.
 
 :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-preview-example.png" alt-text="Shows a sample preview of an Adaptive Card when iterating an Adaptive Card." lightbox="../../assets/images/previewer-adaptive-card/acp-preview-example.png":::
 
@@ -41,7 +41,7 @@ The primary goal of Adaptive Card Previewer is to provide developers with a fast
 
 ## Benefits of Adaptive Card previewer
 
-Adaptive Card previewer aims to improve the developer experience for creating adaptive cards in Microsoft Teams with the following benefits:
+Adaptive Card previewer aims to improve the developer experience for creating Adaptive Cards in Microsoft Teams with the following benefits:
 
 ### Fast iteration
 
