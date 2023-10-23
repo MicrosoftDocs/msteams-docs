@@ -156,6 +156,8 @@ You need:
 
     > [!IMPORTANT]
     >
+    > - **Sensitive information**: The application ID URI is logged as part of the authentication process and must not contain sensitive information.
+    >
     > - **Standalone bot**: If you're building a standalone bot, enter the application ID URI as api://botid-{YourBotId}. Here, {YourBotId} is your Azure AD application ID.
     > - **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/botid-{YourClientId}`, where `{YourClientId}` is your bot app ID.
     >
@@ -169,8 +171,7 @@ You need:
     >   | *DemoApplication* | `https://DemoApplication.example.net` | Desktop, web, and iOS only. It isn't supported in Android. |
     >
     >    Use the lowercase option *demoapplication* as base resource name.
-    >
-    > - **Sensitive information**: The application ID URI is logged as part of the authentication process and should not contain sensitive information.
+
 
 1. Select **Save**.
 
