@@ -2,7 +2,7 @@
 title:  Build API-based message extension
 metadata:
   title: Build API-based message extension
-  description: In this learn module, you learn how to build a message extension using an OpenAPI Description document and Response rendering template to interact with external services.
+  description: In this learn module, learn how to build a message extension using an OpenAPI Description document and Response rendering template to interact with external services.
   audience: Developer
   level: Advanced
   ms.date: 10/16/2023
