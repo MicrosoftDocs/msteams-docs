@@ -16,7 +16,7 @@ Graph scopes, such as `User.Read` or `Mail.Read`, indicate what your app can acc
 
 You can configure additional Graph scopes in Azure AD for your app. These are delegated permissions, which are used by apps that require signed-in access. A signed-in app user or administrator must initially consent to them. Thereafter, your tab app can consent on behalf of the signed-in user when it calls Microsoft Graph.
 
-If your app is used in app-only access scenario, where it doesn't require signed-in user presence, you can alternately select application permission. Only admins can consent to application permissions.
+When your app doesn't require signed-in user presence, you can use Application permissions, also known as app-only access scenario. Only admins can consent to application permissions. For more information, see [Application permissions](/graph/permissions-overview?tabs=http).
 
 ### To configure API permissions
 
@@ -239,7 +239,7 @@ When the user has provided their consent and you try to make an OBO call immedia
 
 If your application is unaware of this behavior, it might ask the user for consent multiple times. Best practice is to build a meaningful wait-and-retry mechanism to avoid this suboptimal user experience.
 
-This wait-and-retry mechanism should keep track if a user has consented to the required scopes. If an API call that includes an OBO request fails with the above errors, but the user has already consented, avoid showing the consent prompt to the user. Instead, wait for some time before retrying the API call. Usually, Azure AD sends the consent within three to five seconds. In one of our [sample applications](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/8f266c33608d6d7b4cf89c81779ccf49e7664c1e/samples/bot-tab-conversations/csharp/Source/ConversationalTabs.Web/ClientApp/src/utils/UtilsFunctions.ts#LL8C1-L8C1), we retry up to three times with double the wait time between each retry, starting at a one second wait.
+This wait-and-retry mechanism should keep track if a user has consented to the required scopes. If an API call that includes an OBO request fails with the above errors, but the user has already consented, avoid showing the consent prompt to the user. Instead, wait for some time before retrying the API call. Usually, Azure AD sends the consent within three to five seconds. In one of our [sample applications](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/8f266c33608d6d7b4cf89c81779ccf49e7664c1e/samples/bot-tab-conversations/csharp/Source/ConversationalTabs.Web/ClientApp/src/utils/UtilsFunctions.ts#LL8C1-L8C1), we retry up to three times with double the wait time between each retry, starting at a one-second wait.
 
 If after three to five attempts the OBO flow still fails, the user might not have consented to all the required scopes, and you may have to prompt them to consent again.
 
