@@ -23,20 +23,21 @@ Before you get started, you meet the following requirements: </br>
 
 Developers must not require users to enter a parameter for a header or cookie. If you need to pass headers, a default value for the header can be set in the specification. This simplifies the user experience and reduces the risk of errors.
 
-* Supported formats are JSON and YAML formats.
-* Supported OpenAPI Versions are 2.0 and 3.0.x.
-* The `oneOf`, `anyOf`, `allOf`, and  `not` (swagger.io) constructs aren't supported in Teams.
-* Constructing arrays for the request isn't supported, but nested objects within a JSON request body are supported.
-* The request body (if present) can only be application/Json to ensure compatibility with a wide range of APIs.
-* Define a server URL for the `servers.url` property. The server URL must use an HTTPS protocol.
+* The `auth` property must not be specified.
+* JSON and YAML are the supported formats.
+* OpenAPI versions 2.0 and 3.0.x are supported.
+* Teams doesn't support the `oneOf`, `anyOf`, `allOf`, and `not` (swagger.io) constructs.
+* Constructing arrays for the request isn't supported, however, nested objects within a JSON request body are supported.
+* The request body, if present, must be application/Json to ensure compatibility with a wide range of APIs.
+* Define an HTTPS protocol server URL for the `servers.url` property.
 * Only single parameter search is supported.
 * Only one required parameter without a default value is allowed.
-* The operation must have an `operationId`.
 * Only POST and GET HTTP methods are supported.
-* The operation can't have a required Header or Cookie parameters without default values.
+* OpenAPI Description document must have an `operationId`.
+* The operation must not have required Header or Cookie parameters without default values.
 * A command must have exactly one parameter.
 * Ensure that there are no remote references in the OpenAPI Description document.
-* A required parameter with default value is considered optional.
+* A required parameter with a default value is considered optional.
 
 </details>
 
