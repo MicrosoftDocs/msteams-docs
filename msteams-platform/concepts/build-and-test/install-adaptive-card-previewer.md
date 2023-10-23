@@ -28,7 +28,7 @@ Adaptive Card Previewer is a Visual Studio Code Extension that allows you easily
 
 1. Install the downloaded VSIX from Visual Studio Code.
 
-  :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-install.png" alt-text="Shows how to install the downloaded VSIX." lightbox="../../assets/images/previewer-adaptive-card/acp-install.png":::
+  :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-install.png" alt-text="Shows how to install the downloaded VSIX.":::
 
 1. Unzip and open the downloaded sample cards in Visual Studio Code.
 1. Select any of the cards from the sample cards.
