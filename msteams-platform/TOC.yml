@@ -514,6 +514,9 @@
   - name: Add link unfurling
     href: messaging-extensions/how-to/link-unfurling.md
     displayName: Domain listings can include wildcards, cache
+  - name: Message extension plugin guidelines
+    href: concepts/deploy-and-publish/high-quality-message-extension.md
+    displayName: high quality plugin, criteria, plugin requirements, search command description, Adaptive Card response
 - name: Build apps for Teams meetings and calls
   items:
   - name: Overview
@@ -868,9 +871,6 @@
     - name: Prepare your Teams Store submission
       href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
       displayName: Testing instructions, Teams Store listing, Microsoft Teams app validation tool, compile testing instructions, admin account and non admin account, preconfigured account, premium or upgraded features, tenant configuration, Geo-filtering
-    - name: Create high quality message extension
-      href: concepts/deploy-and-publish/high-quality-message-extension.md
-      displayName: Testing instructions, Teams Store listing, high quality
     - name: Update Apple Developer Program Team ID
       href: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
       displayName: Enable users to install your app on Teams iOS platform, app acquisition on mobile

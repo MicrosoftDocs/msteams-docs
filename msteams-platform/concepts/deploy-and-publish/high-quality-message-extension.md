@@ -39,7 +39,7 @@ Ensure the descriptions follow the given standards:
 | Action | Reason |
 | --- | --- |
 | :::image type="icon" source="../../assets/images/publish-app/dont-icon.png" border="false"::: | Anti-Compete: Developer shouldn't use name of any other plugin in both short and full description. |
-| :::image type="icon" source="../../assets/images/publish-app/dont-icon.png" border="false"::: | Responsible AI: Developers shouldn't use inappropriate or offensive keywords, for example,  P**N, F**K, and other offensive words. |
+| :::image type="icon" source="../../assets/images/publish-app/dont-icon.png" border="false"::: | Responsible AI: Developers shouldn't use inappropriate or offensive keywords. |
 | :::image type="icon" source="../../assets/images/publish-app/dont-icon.png" border="false"::: | Prompt injections: Text shouldn't lead to any kind of prompt injections. Additionally, description shouldn't contain any kind of symbols or text that indicates that it can be used as code for Prompt injection. Shouldn't use phrases, functions, and codes that call their app recurrently. |
 
 ### App description
