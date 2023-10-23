@@ -91,13 +91,23 @@ items:
   
     OpenAPI Description (OAD) is the industry-standard specification that outlines how OpenAPI files are structured and outlined. It's a language-agnostic, human-readable format for describing APIs. It's easy for both humans and machines to read and write. The schema is machine-readable and represented in either YAML or JSON.
     
-    You need an OpenAPI Description to interact with the APIs. The OpenAPI Description document must meet the following criteria: 
+    To interact with the APIs, an OpenAPI Description document is necessary. The OpenAPI Description document must meet the following criteria:
     
-    * Must not have `auth` specified.
-    * Must have at most one required parameter or property in the request body. You can make a required parameter optional and add a default value.
-    * The request body (if present) can't contain any arrays.
-    * The server URL must be defined in the specification.
-    * If there's no operation ID, you can add one to the OpenAPI Description document that are uploading for testing because an operation ID is mandatory for operations that are messaging extensions. You can validate that the swagger is valid by using an online validator like [Swagger Parser](https://apitools.dev/swagger-parser/online/). Once you have found a suitable OpenAPI Description (OAD) document, save it in a folder. 
+    * The `auth` property must not be specified.
+    * JSON and YAML are the supported formats.
+    * OpenAPI Versions 2.0 and 3.0.x are supported.
+    * Teams doesn't support the oneOf, anyOf, allOf, and not (swagger.io) constructs.
+    * Constructing arrays for the request isn't supported, however, nested objects within a JSON request body are supported.
+    * The request body, if present, must be application/Json to ensure compatibility with a wide range of APIs.
+    * Define an HTTPS protocol server URL for the `servers.url` property.
+    * Only single parameter search is supported.
+    * Only one required parameter without a default value is allowed.
+    * Only POST and GET HTTP methods are supported.
+    * The OpenAPI Description document must have an `operationId`.
+    * The operation must not have required Header or Cookie parameters without default values.
+    * A command must have exactly one parameter.
+    * Ensure that there are no remote references in the OpenAPI Description document.
+    * A required parameter with a default value is considered optional.
 
     We've used the following OpenAPI Description as an example for this tutorial:
 
@@ -122,7 +132,7 @@ items:
               required: true
               schema:
                 type: string
-              description: Used to search for AI tools by their category based on the keywords. For example, ?search="tool to create music" will give tools that can create music.
+              description: Used to search for AI tools by their category based on the keywords. For example, "tool to create music" will give tools that can create music.
           responses:
             "200":
               description: OK
@@ -181,19 +191,19 @@ items:
     ```
     
     > [!NOTE]
-    > Ensure that the `required: true` is available for only one parameter. If there are more than one required parameters, you can update the required property to `required: false` for the other parameters. 
+    > Ensure that the `required: true` property is available for only one parameter. If there are more than one required parameters, you can update the required property to `required: false` for the other parameters. 
     
     </details>
 
-    You can validate and verify if the OpenAPI Description document is valid by following these steps:
+    You can validate if the OpenAPI Description document is valid. To verify, follow these steps:
 
     1. Go to [Swagger/OpenAPI validator](https://apitools.dev/swagger-parser/online/) and validate the OpenAPI Description document.
     1. Save the OpenAPI Description document.
     1. Go to [Swagger Editor](https://editor.swagger.io/).
-    1. In the left pane, paste the OpenAPI Description code in the editor.
+    1. In the left pane, paste the OpenAPI Description in the editor.
     1. In the right pane, select **GET**.
     1. Select **Try it out**.
-    1. Enter the values for the **search** parameters **Tool to create music**.
+    1. Enter the values for the **search** parameter as **Tool to create music**.
 
        :::image type="content" source="assets/images/Copilot/api-me-sbs-execute-get-response.png" alt-text="Screenshots shows the parameters, its values and the **EXECUTE** option in the swagger editor.":::
 
@@ -207,18 +217,17 @@ items:
   durationInMinutes: 5
   content: |
 
-   An OpenAPI Description document requires a response rendering template for the app to respond to the get requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata. The response rendering template must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json`](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
+   An OpenAPI Description document requires a response rendering template for the app to respond to the get requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
 
    ### Adaptive Card template 
     
     
-    To create an  Adaptive Card template, follow these steps:
+    To create an Adaptive Card template, follow these steps:
     
-    1. Go to ChatGPT and ask the following query in the message compose area:
+    1. Go to [ChatGPT](https://chat.openai.com/) and ask the following query in the message compose area:
 
        ```text
         Create an Adaptive Card Template that binds to the following response:
-        {
             "categories": [
                 "Music Generation",
                 "AI Detection"
@@ -301,24 +310,25 @@ items:
         ``` 
         </details>
 
-    1. You can verify if the Adaptive Card generated binds to the sample data by following these steps:
+    1. To verify if the Adaptive Card generated binds to the sample data, follow these steps:
        1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer/).
-       1. Go to **Select host app** and from the drop-down select **Microsoft Teams**.
-       1. In the left pane, under **CARD PAYLOAD EDITOR**, paste the Adaptive Card template code.
-       1. In the right pane, under **SAMPLE DATA EDITOR**, paste the product response you've saved earlier.
-       1. Verify if the Adaptive Card template binds to the sample data.
+       1. At the upper-left, go to **Select host app** and from the drop-down, select **Microsoft Teams**.
+       1. Go to **CARD PAYLOAD EDITOR**, paste the Adaptive Card template code.
+       1. Go to **SAMPLE DATA EDITOR**, paste the GET API response that you've saved earlier.
 
           :::image type="content" source="assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data."::: 
        
-       1. Select **Preview mode**. The Adaptive Card designer displays an Adaptive Card with the data that binds to the sample data.
+       1. Select **Preview mode**. The Adaptive Card designer displays an Adaptive Card with the data that binds the response to the template.
           
           :::image type="content" source="assets/images/Copilot/api-me-sbs-adaptive-card-preview.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::   
     
-    1. Create a preview card template. The preview card template can contain a `title`, `subtitle` and `image` properties. If the API response doesn't have an image, you can remove the image property.
+    **Create a preview card template**
+    
+    The preview card template can contain a `title`, `subtitle` and `image` properties. If the API response doesn't have an image, you can remove the image property.
 
-       Following is an example of a preview card template:
+    Following is an example of a preview card template:
 
-       <details><summary>Preview card template</summary>
+    <details><summary>Preview card template</summary>
 
        ```json
        "previewCardTemplate": {
@@ -326,15 +336,17 @@ items:
             "subtitle": "$${if(price, price, 'N/A')}",
         } 
        ```
-       Create an if condition for the `title` and `subtitle` where, if name exists, the bot uses the name, else, it uses NA. For example, `"title": "Name: ${if(name, name, 'N/A')}"`. Save the preview card template for future reference.
-       </details>
+    Create an if condition for the `title` and `subtitle` where, if name exists, the bot uses the name, else, it uses NA. For example, `"title": "Name: ${if(name, name, 'N/A')}"`. Save the preview card template for future reference.
+    </details>
 
 
-     ### Response rendering template
+   ### Response rendering template
+
+    The response rendering template must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json`](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
 
     To create a response rendering template, follow these steps:
 
-    1. Create a json file and create a response rendering template that conforms to the following schema:
+    1. Create a JSON file and add the following code to the file:
 
        ```json
        { 
@@ -349,6 +361,7 @@ items:
         }
         ```
     1. Update the properties in the response rendering template as follows:
+
        1. `"version"`: `"1.0.0"`
        1. `"$schema"`: `"http://adaptivecards.io/schemas/adaptive-card.json"`
        1. `"jsonPath"`: `"tools"`
@@ -361,7 +374,7 @@ items:
 
        1. `"responseCardTemplate"`: Paste the Adaptive Card template code you've saved earlier.
 
-           `responseCardTemplate` is an adaptive card template to map the JSON response to an adaptive card.
+           `responseCardTemplate` is an Adaptive Card template to map the JSON response to an Adaptive Card.
 
        1. `"previewCardTemplate"`: Paste the preview card template code you've saved earlier.
 
@@ -455,7 +468,7 @@ items:
     
     1. Create a new JSON file. Your app manifest must conform to the schema defined in the [Microsoft Teams schema](https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json).
 
-    1. Add the following code in the JSON file:
+    1. Add the following code to the JSON file:
 
        <details><summary>App manifest</summary>
 
@@ -522,14 +535,14 @@ items:
     1. Update the app manifest properties as follows:
 
          * Replace `<<YOUR-MICROSOFT-APP-ID>>` with bot's Microsoft App ID.
-         * Update the values for `composeExtensionType` to `apiBased`.
-         * Update the values for `apiSpecificationFile`to the path of your OpenAPI Description file. 
+         * Update the value for `composeExtensionType` to `apiBased`.
+         * Update the value for `apiSpecificationFile` to the path of your OpenAPI Description file. 
          * Update the value for `commands.id` to `searchTools`.
          * Update the value for `commands.title` to `Search for AI Tools`.
          * Update the value for `commands.description` to `Search for AI Tools`.
          * Update the value for `parameters.name` to `search`. If there are no parameters, then the values must be query parameters or `properties.name` if referencing a property in the request body schema.
          * Update the `apiResponseRenderingTemplateFile` to the path of your response rendering template file.
-         * Under valid domains, add the `service URL` endpoint that is defined in the OpenAPI Description file. 
+         * Update the value for `validDomains` to the `service URL` endpoint defined in the OpenAPI Description file. 
          
     1. Save the Teams app manifest in the same folder you saved the OpenAPI Description document and the response rendering template.
         * You need a color image and outline image. These images should be included in the folder and referenced in your Teams app manifest. 
@@ -551,7 +564,7 @@ items:
     1. Go to **Apps** > **Manage your app** > **Upload an app**.
     1. Select **Upload a customized app**.
     1. Select the zip file you've created and select **Open**.
-    1. Select **Add**.
+    1. Select **Add**. The app is added to Teams.
 
        :::image type="content" source="assets/images/Copilot/api-me-sbs-add-app-teams.png" alt-text="Screenshot shows a pop-up window with the Add option.":::
 
