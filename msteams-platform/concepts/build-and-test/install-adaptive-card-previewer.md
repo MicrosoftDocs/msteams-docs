@@ -34,7 +34,7 @@ Adaptive Card Previewer is a Visual Studio Code Extension that allows you easily
 1. Select any of the cards from the sample cards.
 1. Select **Preview Adaptive Card** button in the Adaptive Card template file to preview it.
 
-  :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-sample-preview.png" alt-text="Shows the instant preview of Adaptive Card in the Visual Studio Code extension." lightbox="../../assets/images/previewer-adaptive-card/acp-sample-preview.png":::
+  :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-sample-preview.png" alt-text="Shows the instant preview of Adaptive Card in the Visual Studio Code extension." lightbox="../../assets/images/previewer-adaptive-card/acp-sample-preview1.png":::
 
 1. You can select the theme from the **Theme** dropdown list.
 
