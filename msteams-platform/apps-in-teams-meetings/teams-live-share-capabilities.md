@@ -877,9 +877,7 @@ followMode.on("stateChanged", (state, local, clientId) => {
         infoText.innerHTML = "";
         // Show a "Start presenting" button in your app.
         button.innerHTML = "Start presenting";
-        button.onclick = async () => {
-            await followMode.startPresenting();
-        };
+        button.onclick = followMode.startPresenting;
         // Note: state.isLocalValue will be true.
         break;
     }
@@ -888,9 +886,7 @@ followMode.on("stateChanged", (state, local, clientId) => {
         infoText.innerHTML = `${state.otherUsersCount} users are following you`;
         // Does not mean that the local user is presenting to everyone, so you can still show the "Start presenting" button.
         button.innerHTML = "Present to all";
-        button.onclick = async () => {
-            await followMode.startPresenting();
-        };
+        button.onclick = followMode.startPresenting;
         // Note: state.isLocalValue will be true.
         break;
     }
@@ -899,9 +895,7 @@ followMode.on("stateChanged", (state, local, clientId) => {
         infoText.innerHTML = `You are actively presenting to everyone`;
         // Show a "Stop presenting" button in your app.
         button.innerHTML = "Stop presenting";
-        button.onclick = async () => {
-            await followMode.stopPresenting();
-        };
+        button.onclick = followMode.stopPresenting;
         // Note: state.isLocalValue will be true.
         break;
     }
@@ -910,9 +904,7 @@ followMode.on("stateChanged", (state, local, clientId) => {
         infoText.innerHTML = `${followingUser?.displayName} is presenting to everyone`;
         // Show a "Take control" button in your app.
         button.innerHTML = "Take control";
-        button.onclick = async () => {
-            await followMode.startPresenting();
-        };
+        button.onclick = followMode.startPresenting;
         // Note: state.isLocalValue will be false.
         break;
     }
@@ -921,9 +913,7 @@ followMode.on("stateChanged", (state, local, clientId) => {
         infoText.innerHTML = `${followingUser?.displayName} is presenting to everyone`;
         // Show a "Sync to presenter" button in your app.
         button.innerHTML = "Sync to presenter";
-        button.onclick = async () => {
-            await followMode.endSuspension();
-        };
+        button.onclick = followMode.endSuspension;
         // Note: state.isLocalValue will be true.
         break;
     }
@@ -932,9 +922,7 @@ followMode.on("stateChanged", (state, local, clientId) => {
         infoText.innerHTML = `You are following ${followingUser?.displayName}`;
         // Show a "Stop following" button in your app.
         button.innerHTML = "Stop following";
-        button.onclick = async () => {
-            await followMode.stopFollowing();
-        };
+        button.onclick = followMode.stopFollowing;
         // Note: state.isLocalValue will be false.
         break;
     }
@@ -943,9 +931,7 @@ followMode.on("stateChanged", (state, local, clientId) => {
         infoText.innerHTML = `You were following ${followingUser?.displayName}`;
         // Show a "Resume following" button in your app.
         button.innerHTML = "Resume following";
-        button.onclick = async () => {
-            await followMode.endSuspension();
-        };
+        button.onclick = followMode.endSuspension;
         // Note: state.isLocalValue will be true.
         break;
     }
@@ -1063,9 +1049,7 @@ followMode.on("stateChanged", (state: IFollowModeState<ICameraPosition>, local: 
         infoText.innerHTML = "";
         // Show a "Start presenting" button in your app.
         button.innerHTML = "Start presenting";
-        button.onclick = async () => {
-            await followMode.startPresenting();
-        };
+        button.onclick = followMode.startPresenting;
         // Note: state.isLocalValue will be true.
         break;
     }
@@ -1074,9 +1058,7 @@ followMode.on("stateChanged", (state: IFollowModeState<ICameraPosition>, local: 
         infoText.innerHTML = `${state.otherUsersCount} users are following you`;
         // Does not mean that the local user is presenting to everyone, so you can still show the "Start presenting" button.
         button.innerHTML = "Present to all";
-        button.onclick = async () => {
-            await followMode.startPresenting();
-        };
+        button.onclick = followMode.startPresenting;
         // Note: state.isLocalValue will be true.
         break;
     }
@@ -1085,9 +1067,7 @@ followMode.on("stateChanged", (state: IFollowModeState<ICameraPosition>, local: 
         infoText.innerHTML = `You are actively presenting to everyone`;
         // Show a "Stop presenting" button in your app.
         button.innerHTML = "Stop presenting";
-        button.onclick = async () => {
-            await followMode.stopPresenting();
-        };
+        button.onclick = followMode.stopPresenting;
         // Note: state.isLocalValue will be true.
         break;
     }
@@ -1096,9 +1076,7 @@ followMode.on("stateChanged", (state: IFollowModeState<ICameraPosition>, local: 
         infoText.innerHTML = `${followingUser?.displayName} is presenting to everyone`;
         // Show a "Take control" button in your app.
         button.innerHTML = "Take control";
-        button.onclick = async () => {
-            await followMode.startPresenting();
-        };
+        button.onclick = followMode.startPresenting;
         // Note: state.isLocalValue will be false.
         break;
     }
@@ -1107,9 +1085,7 @@ followMode.on("stateChanged", (state: IFollowModeState<ICameraPosition>, local: 
         infoText.innerHTML = `${followingUser?.displayName} is presenting to everyone`;
         // Show a "Sync to presenter" button in your app.
         button.innerHTML = "Sync to presenter";
-        button.onclick = async () => {
-            await followMode.endSuspension();
-        };
+        button.onclick = followMode.endSuspension;
         // Note: state.isLocalValue will be true.
         break;
     }
@@ -1118,9 +1094,7 @@ followMode.on("stateChanged", (state: IFollowModeState<ICameraPosition>, local: 
         infoText.innerHTML = `You are following ${followingUser?.displayName}`;
         // Show a "Stop following" button in your app.
         button.innerHTML = "Stop following";
-        button.onclick = async () => {
-            await followMode.stopFollowing();
-        };
+        button.onclick = followMode.stopFollowing;
         // Note: state.isLocalValue will be false.
         break;
     }
@@ -1129,9 +1103,7 @@ followMode.on("stateChanged", (state: IFollowModeState<ICameraPosition>, local: 
         infoText.innerHTML = `You were following ${followingUser?.displayName}`;
         // Show a "Resume following" button in your app.
         button.innerHTML = "Resume following";
-        button.onclick = async () => {
-            await followMode.endSuspension();
-        };
+        button.onclick = followMode.endSuspension;
         // Note: state.isLocalValue will be true.
         break;
     }
