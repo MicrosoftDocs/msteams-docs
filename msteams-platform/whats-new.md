@@ -347,7 +347,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 October**
 
-***October 23, 2023***: [Build message extensions using API (API-based) to interact directly with third-party data, apps, and services.](messaging-extensions/api-based-overview.md)
+***October 25, 2023***: [Build message extensions using API (API-based) to interact directly with third-party data, apps, and services.](messaging-extensions/api-based-overview.md)
 
 :::column-end:::
 :::row-end:::
