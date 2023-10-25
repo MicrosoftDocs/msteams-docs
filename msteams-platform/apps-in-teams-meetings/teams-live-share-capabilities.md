@@ -1532,7 +1532,7 @@ const schema = {
   initialObjects: { playlistMap: SharedMap },
 };
 const { container } = await liveShare.joinContainer(schema);
-const playlistMap = container.initialObjects.playlistMap as SharedMap;
+const playlistMap = container.initialObjects.playlistMap;
 
 // Register listener for changes to values in the map
 playlistMap.on("valueChanged", (changed, local) => {
@@ -1560,7 +1560,7 @@ const schema: ContainerSchema = {
   initialObjects: { exampleMap: SharedMap },
 };
 const { container } = await liveShare.joinContainer(schema);
-const playlistMap = container.initialObjects.playlistMap as SharedMap;
+const playlistMap = container.initialObjects.playlistMap as unknown as SharedMap;
 
 // Declare interface for object being stored in map
 interface IVideo {
