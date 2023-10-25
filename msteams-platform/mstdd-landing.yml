@@ -48,6 +48,10 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Introduced the extensions property in public developer preview app manifest schema
+        url: resources/schema/manifest-schema-dev-preview.md#extensions
+      - text: Receive meeting participant events
+        url:  apps-in-teams-meetings/meeting-apps-apis.md#receive-meeting-participant-events
       - text: Build message extensions using API
         url: messaging-extensions/api-based-overview.md
       - text: The new Microsoft Teams client
@@ -64,10 +68,6 @@ landingContent:
         url: task-modules-and-cards/cards/media-elements-in-adaptive-cards.md
       - text: Microsoft Teams Store search experience
         url: concepts/deploy-and-publish/appsource/publish.md#teams-store-search-experience
-      - text: Enable RSC permissions for a user using the Graph APIs (Developer preview)
-        url: graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings
-      - text: Adaptive Card-based Loop component (Developer preview)
-        url: m365-apps/cards-loop-component.md
 
     - linkListType: reference
       links:
