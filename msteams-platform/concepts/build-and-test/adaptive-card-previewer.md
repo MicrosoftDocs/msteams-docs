@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Microsoft Adaptive Card Previewer
 
-The Microsoft Adaptive Card Previewer (ACP) helps you to preview the Adaptive Cards when you're iterating over your card designs. It's a standalone extension bundled with Teams Toolkit that helps to preview Adaptive Card built for Teams bot, message extension, and Copilot plugin. You can open a side-by-side preview to view changes live and toggle between different themes.
+The Microsoft Adaptive Card Previewer (ACP) helps you to preview the [Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md) when you're iterating over your card designs. It's a standalone extension bundled with Teams Toolkit that helps to preview Adaptive Card built for Teams bot, message extension, and Copilot plugin. You can open a side-by-side preview to view changes live and toggle between different themes.
 
 :::image type="content" source="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png" alt-text="Shows the Adaptive Card previewer extension Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png":::
 
