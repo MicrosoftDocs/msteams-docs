@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 The resource-specific consent (RSC) permissions model, originally developed for Microsoft Teams Graph APIs, is being extended to bot scenarios. With RSC, conversation owners can consent for a bot to receive all user messages in standard channels and chats without being @mentioned. This can be enabled by specifying the `ChannelMessage.Read.Group` or `ChatMessage.Read.Chat` permission strings in your app manifest (previously called Teams app manifest). Conversation owners can grant consent during the app installation or upgrade process after the app updates are published. For more information about enabling RSC for your app and inside of a tenant, see [resource-specific consent](../../../graph-api/rsc/resource-specific-consent.md).
 
 > [!NOTE]
-> Bots that receive all conversation messages with RSC aren't supported in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD) environments.
+> Bots that receive all conversation messages with RSC are supported in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
 ## Enable bots to receive all channel or chat messages
 
@@ -40,7 +40,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ### RSC permission
 
-Services that need access to all Teams message data must use the Graph APIs that provide access to archived data in channels and chats. Bots must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission appropriately to build and enhance engaging experience for users to pass the store approval. The app description must include how the bot uses the data it reads:
+Services that need access to all Teams message data must use the Graph APIs that provide access to archived data in channels and chats. Bots must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission appropriately to build and enhance engaging experience for users to pass the Microsoft Teams Store approval. The app description must include how the bot uses the data it reads:
 
 * The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission may not be used by bots to extract large amounts of customer data.
 * The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is only enabled after a re-installation or new installation into a chat.
@@ -83,7 +83,7 @@ The following code provides an example of the app manifest version 1.12 or later
     },
     "description": {
         "short": "Echo bot with RSC configured for all channel and chat messages",
-        "full": "Echo bot configured with all channel and chat messsages RSC permission in manifest"
+        "full": "Echo bot configured with all channel and chat messages RSC permission in manifest"
     },
     "accentColor": "#FFFFFF",
     "staticTabs": [

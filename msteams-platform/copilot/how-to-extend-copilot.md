@@ -25,13 +25,13 @@ Plugins allow Copilot to:
 ## How do I build a plugin?
 
 > [!NOTE]
-> Plugins for Microsoft 365 Copilot are in early access preview. This documentation is subject to change. When you have access to [the developer preview program](https://aka.ms/plugins-dev-waitlist), you'll receive instructions on evaluating your message extension to be used by Microsoft 365 Copilot.
+> Plugins for Microsoft 365 Copilot are in early access preview.
 
 If you already have a Teams message extension, then you already have a plugin that works with Copilot. If not, create a [message extension using the Teams Toolkit](~/messaging-extensions/what-are-messaging-extensions.md).
 
 **Scenario 1: I want to create a new plugin from an existing API or OpenAI plugin**
 
-[Join the early access program](https://aka.ms/PluginsEarlyAccess) to build a message extension that allows you to convert an existing API or OpenAI plugin to work for Microsoft Copilot.
+To build a message extension that allows you to convert an existing API or OpenAI plugin to work for Microsoft Copilot, follow these steps:
 
 1. Using the Teams Toolkit for Microsoft Visual Studio Code, go to **Create plugin for Copilot**.
 2. Provide a link to either an OpenAPI specification or an OpenAI plugin.
@@ -46,14 +46,14 @@ Your Message Extension will work with Copilot (after quality testing).
 
 ## What makes a good plugin for Microsoft 365 Copilot?
 
-To ensure your plugin works as intended, it's important to include good descriptions in your manifest. This allows the underlying LLM to take full advantage of your plugin’s capabilities. It’s recommended to test different descriptions and instructions to find the most effective way for the LLM to utilize your plugin. Also, it’s important that the manifest file is up-to-date with any changes or enhancements you make to your plugin.
+To ensure your plugin works as intended, it's important to include good descriptions in your manifest. This allows the underlying LLM to take full advantage of your plugin’s capabilities. It’s recommended to test different descriptions and instructions to find the most effective way for the LLM to utilize your plugin. Also, it’s important that the manifest file is up to date with any changes or enhancements you make to your plugin.
 
 1. App description: Include detailed descriptions of the app, supported scenarios, feature capabilities, and related keywords using the `shortDescription` and `longDescription` fields.
 
    ```json
-   "name": { 
-     "shortDescription": "Work-item tracking and productivity app", 
-     "longDescription": "Contoso app is a work-item tracking and project management app that allows teams to create, manage, and track work items. This app helps teams manage projects more efficiently. " 
+   "description": { 
+     "short": "Work-item tracking and productivity app", 
+     "full": "Contoso app is a work-item tracking and project management app that allows teams to create, manage, and track work items. This app helps teams manage projects more efficiently. " 
    } 
    ```
 
@@ -64,7 +64,10 @@ To ensure your plugin works as intended, it's important to include good descript
    { 
      "id": "Work item search query", 
      "type": "query", 
-     "context": "command box", 
+     "context": [  
+            "compose",  
+            "commandBox"  
+          ], 
      "parameters": [ 
        { 
          "name": "Work item search string", 
@@ -99,7 +102,7 @@ To ensure your Graph connector works well with Copilot, there are several things
 1. Include `urlToItemResolver`. By including `urlToItemResolver` in your connector’s [activity settings](/graph/connecting-external-content-manage-connections#activity-settings), Copilot will become aware when users share URLs to your content with one another. When users share an item with one another, Copilot boosts its importance for including the item in its response.  
 2. Provide a rich human-readable name and detailed description when you [create the connection](/graph/api/externalconnectors-external-post-connections). This helps Copilot understand what the data source is, so it includes the data source in its response if it’s relevant.
 3. Apply [semantic labels](/graph/connecting-external-content-manage-schema#semantic-labels). Semantic labels help Copilot understand the semantic meaning of your schema. You must apply as many of them to your schema as applicable.
-4. Add [user activities](/graph/api/externalconnectors-externalitem-addactivities). In addition to adding your content `externalItems` to the Microsoft Graph, your connector should also add user activities around you’re content. Supported activity types are shown [here](/graph/api/resources/externalconnectors-externalactivity). Items that have more activities are boosted in their importance.
+4. Add [user activities](/graph/api/externalconnectors-externalitem-addactivities). In addition to adding your content `externalItems` to the Microsoft Graph, your connector should also add user activities around your content. Supported activity types are shown [here](/graph/api/resources/externalconnectors-externalactivity). Items that have more activities are boosted in their importance.
 
 ## See also
 
