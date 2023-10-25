@@ -19,7 +19,7 @@ Message extensions built using API (API-based) use a web service to manage user 
 
 * Retrieve real-time information, such as latest news coverage on a product launch.
 * Retrieve knowledge-based information, for example, my team’s design files in Figma.
-* Perform actions on behalf of the user, for example, create a Jira ticket.
+* Perform actions on behalf of the user, for example, create a Contoso ticket.
 
 You can create an API-based message extension using an [OpenAPI Description (OAD)](https://learn.openapis.org/specification/) document. After you've created an OpenAPI Description document, upload the OpenAPI Description document to Teams Toolkit to generate and integrate the client code in your app's project. Create or generate a response rendering template to manage the responses from the API.
 
