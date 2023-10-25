@@ -54,7 +54,7 @@ You can preview the Adaptive Card designs right within their integrated developm
 
 ### Trustworthy previews
 
-  The Adaptive Card previewer uses the same rendering stack as Teams and Outlook, which ensures an accurate preview results align with the actual card rendering in these platforms.
+  The Adaptive Card previewer uses the same rendering stack as Teams and Outlook, which ensures accurate preview results align with the actual card rendering in these platforms.
 
 ## Limitations
 
