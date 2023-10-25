@@ -180,12 +180,13 @@ That's all it took to setup your container and join the meeting's session. Now, 
 
 The Live Share SDK includes a set of new distributed-data structures that extend Fluid's `DataObject` class, providing new types of stateful and stateless objects. Unlike Fluid data structures, Live Share's `LiveDataObject` classes don’t write changes to the Fluid container, enabling faster synchronization. Further, these classes were designed from the ground up for common meeting scenarios in Teams meetings. Common scenarios include synchronizing what content the presenter is viewing, displaying metadata for each user in the meeting, or displaying a countdown timer.
 
-| Live Object                                                        | Description                                                                                                                             |
+| Live Object                                                            | Description                                                                                                                             |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| [LivePresence](/javascript/api/@microsoft/live-share/livepresence) | See which users are online, set custom properties for each user, and broadcast changes to their presence.                                                            |
-| [LiveState](/javascript/api/@microsoft/live-share/livestate)       | Synchronize any JSON serializable `state` value. |
-| [LiveTimer](/javascript/api/@microsoft/live-share/livetimer)       | Synchronize a countdown timer for a given interval.                                                            |
-| [LiveEvent](/javascript/api/@microsoft/live-share/liveevent)       | Broadcast individual events with any custom data attributes in the payload.                                                             |
+| [LivePresence](/javascript/api/@microsoft/live-share/livepresence)     | See which users are online, set custom properties for each user, and broadcast changes to their presence.                                                            |
+| [LiveState](/javascript/api/@microsoft/live-share/livestate)           | Synchronize any JSON serializable `state` value. |
+| [LiveTimer](/javascript/api/@microsoft/live-share/livetimer)           | Synchronize a countdown timer for a given interval.                                                            |
+| [LiveEvent](/javascript/api/@microsoft/live-share/liveevent)           | Broadcast individual events with any custom data attributes in the payload.                                                             |
+| [LiveFollowMode](/javascript/api/@microsoft/live-share/livefollowmode) | Follow specific users, present to everyone in the session, and start/end suspensions.                                  |
 
 ### LivePresence example
 
@@ -799,6 +800,528 @@ export function CountdownTimer() {
       )}
     </div>
   );
+}
+```
+
+---
+
+### LiveFollowMode example
+
+[LIVE FOLLOW MODE IMAGE PLACEHOLDER]
+
+> [!NOTE]
+> `LiveFollowMode` is in Beta and provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+The `LiveFollowMode` class makes it easy to implement follower modes and presenter modes into your application, enabling familiar patterns established in other collaborative apps like PowerPoint Live, Excel Live, and Whiteboard. Unlike with screen sharing, `LiveFollowMode` allows you to render content with higher quality, better accessibility, and enhanced performance. Users can easily transition between their own private views and following other users.
+
+To "take control" of the application for all other users in the session, you can use the `startPresenting()` function. Alternatively, you can allow users to individually choose specific users they want to follow using the `followUser()` function. In both scenarios, users can temporarily enter a private view with the `beginSuspension()` function, or sync back to the presenter with the `endSuspension()` function. Meanwhile, the `update()` function allows the local user to tell other clients in the session their own personal `stateValue`. Similar to `LivePresence`, you can listen to changes to each user's `stateValue` through a `presenceChanged` event listener.
+
+`LiveFollowMode` also exposes a `state` object, which dynamically updates depending on which user the local user is following. For example, if the local user is not following anyone, then the `state.value` property will equal the local user's most recent `stateValue` that was broadcast through `update()`. However, if the local user is following a presenter, then the `state.value` property will equal the presenting user's most recent `stateValue`. Similar to `LiveState`, you can listen to changes to the `state` value using a `stateChanged` event listener.
+
+The following are a few examples in which `LiveFollowMode` can be used in your application:
+
+- Synchronizing camera positions in a 3D scene to co-browse during a design review.
+- Updating the `slideId` to open in a carousel for productive presentations and discussions.
+- Broadcasting the `path` to open in your application's router.
+
+Example:
+
+# [JavaScript](#tab/javascript)
+
+```javascript
+import {
+  LiveShareClient,
+  LiveFollowMode,
+  FollowModeType,
+} from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+
+// Join the Fluid container
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema = {
+  initialObjects: {
+    followMode: LiveFollowMode,
+  },
+};
+const { container } = await liveShare.joinContainer(schema);
+const followMode = container.initialObjects.followMode;
+
+// As an example, we will assume there is a button in the application document
+const button = document.getElementById("action-button");
+// As an example, we will assume there is a div with text showing the follow state
+const infoText = document.getElementById("info-text");
+
+// Register listener for changes to the `state` value to use in your app.
+// This should be done before calling `.initialize()`.
+followMode.on("stateChanged", (state, local, clientId) => {
+  console.log("The state changed:");
+  console.log("- state value:", state.value);
+  console.log("- follow mode type:", state.type);
+  console.log("- following user id:", state.followingUserId);
+  console.log("- count of other users also following user", state.otherUsersCount);
+  console.log("- state.value references local user's stateValue", state.isLocalValue);
+  // Can optionally get the relevant user's presence object
+  const followingUser = followMode.getUserForClient(clientId);
+  switch (state.type) {
+    case FollowModeType.local: {
+        // Update app to reflect that the user is not currently following anyone and there is no presenter.
+        infoText.innerHTML = "";
+        // Show a "Start presenting" button in your app.
+        button.innerHTML = "Start presenting";
+        button.onclick = async () => {
+            await followMode.startPresenting();
+        };
+        // Note: state.isLocalValue will be true.
+        break;
+    }
+    case FollowModeType.activeFollowers: {
+        // Update app to reflect that the local user is being followed by other users.
+        infoText.innerHTML = `${state.otherUsersCount} users are following you`;
+        // Does not mean that the local user is presenting to everyone, so you can still show the "Start presenting" button.
+        button.innerHTML = "Present to all";
+        button.onclick = async () => {
+            await followMode.startPresenting();
+        };
+        // Note: state.isLocalValue will be true.
+        break;
+    }
+    case FollowModeType.activePresenter: {
+        // Update app to reflect that the local user is actively presenting to everyone.
+        infoText.innerHTML = `You are actively presenting to everyone`;
+        // Show a "Stop presenting" button in your app.
+        button.innerHTML = "Stop presenting";
+        button.onclick = async () => {
+            await followMode.stopPresenting();
+        };
+        // Note: state.isLocalValue will be true.
+        break;
+    }
+    case FollowModeType.followPresenter: {
+        // The local user is following a remote presenter.
+        infoText.innerHTML = `${followingUser?.displayName} is presenting to everyone`;
+        // Show a "Take control" button in your app.
+        button.innerHTML = "Take control";
+        button.onclick = async () => {
+            await followMode.startPresenting();
+        };
+        // Note: state.isLocalValue will be false.
+        break;
+    }
+    case FollowModeType.suspendFollowPresenter: {
+        // The local user is following a remote presenter but has an active suspension.
+        infoText.innerHTML = `${followingUser?.displayName} is presenting to everyone`;
+        // Show a "Sync to presenter" button in your app.
+        button.innerHTML = "Sync to presenter";
+        button.onclick = async () => {
+            await followMode.endSuspension();
+        };
+        // Note: state.isLocalValue will be true.
+        break;
+    }
+    case FollowModeType.followUser: {
+        // The local user is following a specific remote user.
+        infoText.innerHTML = `You are following ${followingUser?.displayName}`;
+        // Show a "Stop following" button in your app.
+        button.innerHTML = "Stop following";
+        button.onclick = async () => {
+            await followMode.stopFollowing();
+        };
+        // Note: state.isLocalValue will be false.
+        break;
+    }
+    case FollowModeType.suspendFollowUser: {
+        // The local user is following a specific remote user but has an active suspension.
+        infoText.innerHTML = `You were following ${followingUser?.displayName}`;
+        // Show a "Resume following" button in your app.
+        button.innerHTML = "Resume following";
+        button.onclick = async () => {
+            await followMode.endSuspension();
+        };
+        // Note: state.isLocalValue will be true.
+        break;
+    }
+    default: {
+        break;
+    }
+  }
+  const newCameraPosition = state.value;
+  // TODO: apply new camera position
+});
+
+// Register listener for changes to each user's personal state updates.
+// This should be done before calling `.initialize()`.
+followMode.on("presenceChanged", (user, local) => {
+  console.log("A user presence changed:");
+  console.log("- display name:", user.displayName);
+  console.log("- state value:", user.data?.stateValue);
+  console.log("- user id user is following:", user.data?.followingUserId);
+  console.log("- change from local client", local);
+  console.log("- change impacts local user", user.isLocalUser);
+  // As an example, we will assume there is a button for each user in the session.
+  document.getElementById(`follow-user-${user.userId}-button`).onclick = () => {
+    followMode.followUser(user.userId);
+  };
+  // Update 3D scene to reflect this user's camera position (e.g., orb + display name)
+  const userCameraPosition = user.data?.stateValue;
+});
+
+// Define the initial stateValue for the local user (optional).
+const startingCameraPosition = {
+  x: 0,
+  y: 0,
+  z: 0,
+};
+// Start receiving incoming presence updates from the session.
+// This will also broadcast the user's `startingCameraPosition` to others in the session.
+await followMode.initialize(startingCameraPosition);
+
+// Example of an event listener for a camera position changed event.
+// For something like a camera change event, you should use a debounce function to prevent sending updates too frequently.
+// Note: it helps to distinguish changes initiated by the local user (e.g., drag mouse) separately from other change events.
+function onCameraPositionChanged(position, isUserAction) {
+    // Broadcast change to other users so that they have their latest camera position
+    followMode.update(position);
+    // If the local user changed the position while following another user, we want to suspend.
+    // Note: helps to distinguish changes initiated by the local user (e.g., drag mouse) separately from other change events.
+    if (!isUserAction) return;
+    switch (state.type) {
+      case FollowModeType.followPresenter:
+      case FollowModeType.followUser: {
+        // This will trigger a "stateChanged" event update for the local user only.
+        followMode.beginSuspension();
+        break;
+      }
+      default: {
+        // No need to suspend for other types
+        break;
+      }
+    }
+}
+```
+
+# [TypeScript](#tab/typescript)
+
+```TypeScript
+import {
+  LiveShareClient,
+  LiveFollowMode,
+  FollowModeType,
+  IFollowModeState,
+  FollowModePresenceUser,
+} from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+
+// Declare interface for custom data to synchronize with LiveFollowMode.
+// In this example, we are synchronizing the camera position in a 3D scene.
+interface ICameraPosition {
+  x: number;
+  y: number;
+  z: number;
+}
+
+// Join the Fluid container
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema = {
+  initialObjects: {
+    followMode: LiveFollowMode<ICameraPosition>,
+  },
+};
+const { container } = await liveShare.joinContainer(schema);
+// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
+// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide `.joinContainer`.
+const followMode = container.initialObjects.followMode as unknown as LiveFollowMode<ICameraPosition>;
+
+// As an example, we will assume there is a button in the application document
+const button = document.getElementById("action-button");
+// As an example, we will assume there is a div with text showing the follow state
+const infoText = document.getElementById("info-text");
+
+// Register listener for changes to the `state` value to use in your app.
+// This should be done before calling `.initialize()`.
+followMode.on("stateChanged", (state: IFollowModeState<ICameraPosition>, local: boolean, clientId: string) => {
+  console.log("The state changed:");
+  console.log("- state value:", state.value);
+  console.log("- follow mode type:", state.type);
+  console.log("- following user id:", state.followingUserId);
+  console.log("- count of other users also following user", state.otherUsersCount);
+  console.log("- state.value references local user's stateValue", state.isLocalValue);
+  // Can optionally get the relevant user's presence object
+  const followingUser = followMode.getUserForClient(clientId);
+  switch (state.type) {
+    case FollowModeType.local: {
+        // Update app to reflect that the user is not currently following anyone and there is no presenter.
+        infoText.innerHTML = "";
+        // Show a "Start presenting" button in your app.
+        button.innerHTML = "Start presenting";
+        button.onclick = async () => {
+            await followMode.startPresenting();
+        };
+        // Note: state.isLocalValue will be true.
+        break;
+    }
+    case FollowModeType.activeFollowers: {
+        // Update app to reflect that the local user is being followed by other users.
+        infoText.innerHTML = `${state.otherUsersCount} users are following you`;
+        // Does not mean that the local user is presenting to everyone, so you can still show the "Start presenting" button.
+        button.innerHTML = "Present to all";
+        button.onclick = async () => {
+            await followMode.startPresenting();
+        };
+        // Note: state.isLocalValue will be true.
+        break;
+    }
+    case FollowModeType.activePresenter: {
+        // Update app to reflect that the local user is actively presenting to everyone.
+        infoText.innerHTML = `You are actively presenting to everyone`;
+        // Show a "Stop presenting" button in your app.
+        button.innerHTML = "Stop presenting";
+        button.onclick = async () => {
+            await followMode.stopPresenting();
+        };
+        // Note: state.isLocalValue will be true.
+        break;
+    }
+    case FollowModeType.followPresenter: {
+        // The local user is following a remote presenter.
+        infoText.innerHTML = `${followingUser?.displayName} is presenting to everyone`;
+        // Show a "Take control" button in your app.
+        button.innerHTML = "Take control";
+        button.onclick = async () => {
+            await followMode.startPresenting();
+        };
+        // Note: state.isLocalValue will be false.
+        break;
+    }
+    case FollowModeType.suspendFollowPresenter: {
+        // The local user is following a remote presenter but has an active suspension.
+        infoText.innerHTML = `${followingUser?.displayName} is presenting to everyone`;
+        // Show a "Sync to presenter" button in your app.
+        button.innerHTML = "Sync to presenter";
+        button.onclick = async () => {
+            await followMode.endSuspension();
+        };
+        // Note: state.isLocalValue will be true.
+        break;
+    }
+    case FollowModeType.followUser: {
+        // The local user is following a specific remote user.
+        infoText.innerHTML = `You are following ${followingUser?.displayName}`;
+        // Show a "Stop following" button in your app.
+        button.innerHTML = "Stop following";
+        button.onclick = async () => {
+            await followMode.stopFollowing();
+        };
+        // Note: state.isLocalValue will be false.
+        break;
+    }
+    case FollowModeType.suspendFollowUser: {
+        // The local user is following a specific remote user but has an active suspension.
+        infoText.innerHTML = `You were following ${followingUser?.displayName}`;
+        // Show a "Resume following" button in your app.
+        button.innerHTML = "Resume following";
+        button.onclick = async () => {
+            await followMode.endSuspension();
+        };
+        // Note: state.isLocalValue will be true.
+        break;
+    }
+    default: {
+        break;
+    }
+  }
+  const newCameraPosition = state.value;
+  // TODO: apply new camera position
+});
+
+// Optionally, you can register a listener for changes to each user's personal state updates.
+// This should be done before calling `.initialize()`.
+followMode.on("presenceChanged", (user: FollowModePresenceUser<ICameraPosition>, local: boolean) => {
+  console.log("A user presence changed:");
+  console.log("- display name:", user.displayName);
+  console.log("- state value:", user.data?.stateValue);
+  console.log("- userId that user is following:", user.data?.followingUserId);
+  console.log("- change from local client", local);
+  console.log("- change impacts local user", user.isLocalUser);
+  // As an example, we will assume there is a button for each user in the session.
+  document.getElementById(`follow-user-${user.userId}-button`)!.onclick = () => {
+    followMode.followUser(user.userId);
+  };
+  // Update 3D scene to reflect this user's camera position (e.g., orb + display name)
+  const userCameraPosition = user.data?.stateValue;
+});
+
+// Define the initial stateValue for the local user (optional).
+const startingCameraPosition: ICameraPosition = {
+  x: 0,
+  y: 0,
+  z: 0,
+};
+// Start receiving incoming presence updates from the session.
+// This will also broadcast the user's `startingCameraPosition` to others in the session.
+await followMode.initialize(startingCameraPosition);
+
+// Example of an event listener for a camera position changed event.
+// For something like a camera change event, you should use a debounce function to prevent sending updates too frequently.
+// Note: it helps to distinguish changes initiated by the local user (e.g., drag mouse) separately from other change events.
+function onCameraPositionChanged(position: ICameraPosition, isUserAction: boolean) {
+    // Broadcast change to other users so that they have their latest camera position
+    followMode.update(position);
+    // If the local user changed the position while following another user, we want to suspend.
+    // Note: helps to distinguish changes initiated by the local user (e.g., drag mouse) separately from other change events.
+    if (!isUserAction) return;
+    switch (state.type) {
+      case FollowModeType.followPresenter:
+      case FollowModeType.followUser: {
+        // This will trigger a "stateChanged" event update for the local user only.
+        followMode.beginSuspension();
+        break;
+      }
+      default: {
+        // No need to suspend for other types
+        break;
+      }
+    }
+}
+```
+
+# [React](#tab/react)
+
+```jsx
+import { FollowModeType } from "@microsoft/live-share";
+import { useLiveFollowMode } from "@microsoft/live-share-react";
+// As an example, we will use a fake component to denote what a 3D viewer might look like in an app
+import { Example3DModelViewer } from "./components";
+
+// Define a unique key that differentiates this usage of `useLiveFollowMode` from others in your app
+const MY_UNIQUE_KEY = "follow-mode-key";
+
+// Define the initial stateValue for the local user (optional).
+const startingCameraPosition = {
+  x: 0,
+  y: 0,
+  z: 0,
+};
+
+// Example component for using useLivePresence
+export const MyLiveFollowMode = () => {
+    const {
+      state,
+      localUser,
+      otherUsers,
+      allUsers,
+      liveFollowMode,
+      update,
+      startPresenting,
+      stopPresenting,
+      beginSuspension,
+      endSuspension,
+      followUser,
+      stopFollowing,
+    } = useLiveFollowMode(MY_UNIQUE_KEY, startingCameraPosition);
+
+    // Example of an event listener for a camera position changed event.
+    // For something like a camera change event, you should use a debounce function to prevent sending updates too frequently.
+    // Note: it helps to distinguish changes initiated by the local user (e.g., drag mouse) separately from other change events.
+    function onCameraPositionChanged(position, isUserAction) {
+        // Broadcast change to other users so that they have their latest camera position
+        update(position);
+        // If the local user changed the position while following another user, we want to suspend.
+        // Note: helps to distinguish changes initiated by the local user (e.g., drag mouse) separately from other change events.
+        if (!isUserAction) return;
+        switch (state.type) {
+          case FollowModeType.followPresenter:
+          case FollowModeType.followUser: {
+            // This will trigger a "stateChanged" event update for the local user only.
+            followMode.beginSuspension();
+            break;
+          }
+          default: {
+            // No need to suspend for other types
+            break;
+          }
+        }
+    }
+
+    // Can optionally get the relevant user's presence object
+    const followingUser = liveFollowMode?.getUser(state.followingUserId);
+
+    // Render UI
+    return (
+        <div>
+            {state.type === FollowModeType.local && (
+                <div>
+                    <p>{""}</p>
+                    <button onClick={startPresenting}>
+                        {"Start presenting"}
+                    </button>
+                </div>
+            )}
+            {state.type === FollowModeType.activeFollowers && (
+                <div>
+                    <p>{`${state.otherUsersCount} users are following you`}</p>
+                    <button onClick={startPresenting}>
+                        {"Present to all"}
+                    </button>
+                </div>
+            )}
+            {state.type === FollowModeType.activePresenter && (
+                <div>
+                    <p>{`You are actively presenting to everyone`}</p>
+                    <button onClick={stopPresenting}>
+                        {"Stop presenting"}
+                    </button>
+                </div>
+            )}
+            {state.type === FollowModeType.followPresenter && (
+                <div>
+                    <p>{`${followingUser?.displayName} is presenting to everyone`}</p>
+                    <button onClick={startPresenting}>
+                        {"Take control"}
+                    </button>
+                </div>
+            )}
+            {state.type === FollowModeType.suspendFollowPresenter && (
+                <div>
+                    <p>{`${followingUser?.displayName} is presenting to everyone`}</p>
+                    <button onClick={endSuspension}>
+                        {"Sync to presenter"}
+                    </button>
+                </div>
+            )}
+            {state.type === FollowModeType.followUser && (
+                <div>
+                    <p>{`You are following ${followingUser?.displayName}`}</p>
+                    <button onClick={stopFollowing}>
+                        {"Stop following"}
+                    </button>
+                </div>
+            )}
+            {state.type === FollowModeType.suspendFollowUser && (
+                <div>
+                    <p>{`You were following ${followingUser?.displayName}`}</p>
+                    <button onClick={stopFollowing}>
+                        {"Resume following"}
+                    </button>
+                </div>
+            )}
+            <div>
+                <p>{"Follow a specific user:"}</p>
+                {otherUsers.map((user) => (
+                    <button onClick={() => {
+                        followUser(user.userId);
+                    }} key={user.userId}>
+                        {user.displayName}
+                    </button>
+                ))}
+            </div>
+            <Example3DModelViewer
+                cameraPosition={state.value}
+                onCameraPositionChanged={onCameraPositionChanged}
+            />
+        </div>
+    );
 }
 ```
 
