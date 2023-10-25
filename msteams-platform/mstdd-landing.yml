@@ -48,7 +48,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Extend a action-based Teams message extension across Microsoft 365.
+      - text: Extend an action-based Teams message extension across Microsoft 365.
         url:  m365-apps/extend-m365-teams-message-extension.md
       - text: The new Microsoft Teams client
         url: resources/teams-updates.md
