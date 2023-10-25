@@ -24,10 +24,10 @@ Before you get started, ensure that you meet the following requirements:
 > [!div class="checklist"]
 >
 > * [Define app, command, and parameter descriptions](#descriptions)
-> * [Enhance message extension to retrieve information through Compound Utterances](#multiple-attributes)
-> * [Create rich Adaptive Card responses](#app-response)
+> * [Enhance message extension to retrieve information through Compound Utterances](#compound-utterances)
+> * [Create rich Adaptive Card responses](#adaptive-card-response)
 
-## Descriptions
+## Define descriptions
 
 A good description provides a clear and concise overview of the app’s features and allows Copilot to effectively discover and perform search functionality. When a user enters the app name with a verb, for example, **Find Contoso tickets..**, the message extension plugin must always be invoked from Copilot.
 
@@ -53,17 +53,89 @@ The following table lists the short description examples for each category:
 
 **Description**: Create, search, view tickets, bugs, and projects.
 
+**App description example:**
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+  "version": "1.0.0",
+  "manifestVersion": "1.11",
+  "id": "2bxxxxc5-5xxx-4xxx-aXXX-94xxxx8919e5",
+  "name": {
+    "short": "Tasks",
+    "full": "Contoso Tasks"
+  },
+  "description": {
+    "short": "Create, search, view tickets, bugs, and projects",
+    "full": "Contoso Tasks makes it easy to stay organized. Create, assign, and track tasks individually or collaboratively with your team, and see everything come together in one place."
+  },
+```
+
 # [Surveys](#tab/surveys)
 
 **Description**: Create and search for surveys and results.
+
+**App description example:**
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+  "version": "1.0.0",
+  "manifestVersion": "1.11",
+  "id": "2bxxxxc5-5xxx-4xxx-aXXX-94xxxx8919e5",
+  "name": {
+    "short": "Survey",
+    "full": "Contoso Survey"
+  },
+  "description": {
+    "short": "Create and search for surveys and results.",
+    "full": "Contoso Survey helps you manage all your surveys in one place. Create, capture and analyze surveys within the platform you use every day."
+  },
+```
+
 
 # [CRM](#tab/crm)
 
 **Description**: Search and view customer leads.
 
+**App description example:**
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+  "version": "1.0.0",
+  "manifestVersion": "1.11",
+  "id": "2bxxxxc5-5xxx-4xxx-aXXX-94xxxx8919e5",
+  "name": {
+    "short": "CRM",
+    "full": "Contoso CRM"
+  },
+  "description": {
+    "short": "Search and view customer leads.",
+    "full": "Resolve tickets faster, simplify employee workflows and improve team performance by integrating Contoso CRM to Microsoft Teams. Contoso CRM is a complete customer service solution that’s easy to use and scales with your business."
+  },
+```
+
 # [General](#tab/general)
 
 **Description**:  Stock and share look up tool. 
+
+**App description example:**
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+  "version": "1.0.0",
+  "manifestVersion": "1.11",
+  "id": "2bxxxxc5-5xxx-4xxx-aXXX-94xxxx8919e5",
+  "name": {
+    "short": "General",
+    "full": "Contoso stocks"
+  },
+  "description": {
+    "short": "Stock and share look up tool.",
+    "full": "Get real-time stock quotes and share them in a conversation. Search by company name, share, or stocks."
+```
 
 ---
 
@@ -81,17 +153,89 @@ The following table lists the command description examples for each category:
 
 **Description**: Search for high priority tasks related to Northwind that are due tomorrow.
 
+**Command description example:**
+
+```json
+"commands": [
+        {
+          "id": "Search",
+          "type": "query",
+          "title": "Tasks",
+          "description": "Search for high priority tasks related to Northwind that are due tomorrow.",
+          "initialRun": true,
+          "fetchTask": false,
+          "context": [
+            "commandBox",
+            "compose",
+            "message"
+          ],
+```
+
 # [Surveys](#tab/surveys)
 
 **Description**: Search for surveys, drafts, and results with keywords or number of respondents.
+
+**Command description example:**
+
+```json
+"commands": [
+        {
+          "id": "Search",
+          "type": "query",
+          "title": "Survey",
+          "description": "Search for surveys, drafts, and results with keywords or number of respondents.",
+          "initialRun": true,
+          "fetchTask": false,
+          "context": [
+            "commandBox",
+            "compose",
+            "message"
+          ],
+```
 
 # [CRM](#tab/crm)
 
 **Description**: Through CRM plugin, find qualified, unqualified, and quoted leads of clients and customers.
 
+**Command description example:**
+
+```json
+"commands": [
+        {
+          "id": "Search",
+          "type": "query",
+          "title": "CRM",
+          "description": "Through CRM plugin, find qualified, unqualified, and quoted leads of clients and customers.",
+          "initialRun": true,
+          "fetchTask": false,
+          "context": [
+            "commandBox",
+            "compose",
+            "message"
+          ],
+```
+
 # [General](#tab/general)
 
-**Description**: Find n number of stocks or listed equities using keyworks, key ratios, index, and so on. 
+**Description**: Find number of stocks or listed equities using keyworks, key ratios, index, and so on.
+
+**Command description example:**
+
+```json
+"commands": [
+        {
+          "id": "Search",
+          "type": "query",
+          "title": "General",
+          "description": "Find number of stocks or listed equities using keyworks, key ratios, index, and so on.",
+          "initialRun": true,
+          "fetchTask": false,
+          "context": [
+            "commandBox",
+            "compose",
+            "message"
+          ],
+```
 
 ---
 
@@ -106,7 +250,7 @@ A good parameter description explains the requirement of the system in a natural
 Basic search: Search for tasks related to Northwind.</br>
 Advanced search: Search for high priority tasks related to Northwind that are due tomorrow.
 
-**Manifest description example:**
+**Parameter description example:**
 
 ```json
 "parameters": [
@@ -236,14 +380,12 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 For Copilot, a search based message extension must support compound utterances to perform deep retrieval of accurate information. To support compound utterances, we recommend you to expand the scope of search to handle two or more search parameters at once by enabling multi-parameter support in app manifest.
 
 
-## App response
+## Adaptive Card response
 
-Message extensions respond to users input with an Adaptive Card. Adaptive Cards allow users to interact with your app directly within the Teams client.
+Message extensions respond to users input with an Adaptive Card. An Adaptive Card for a message extension plugin must work well and look rich and meet the following requirements:
 
-An Adaptive Card for a message extension plugin must work well and look rich and meet the following requirements:
-
-* Adaptive Card previews and content must be part of a single response. [*Mandatory*]
-* Apart from the app logo title, thumbnail, and title of the information, the information in Adaptive Card must represent the most often searched attributes. For example, data modified, author, status, and flags. [*Mandatory*]
+* A response template must include an Adaptive Card and preview card information as part of the same template. [*Mandatory*]
+* Apart from the app logo title, thumbnail, and title of the information, the information in the Adaptive Card must represent the most often searched attributes. For example, data modified, author, status, and flags. [*Mandatory*]
 * Adaptive Card must look good in Win32, Web, and Mobile (iOS and Android). [*Mandatory*]
 * Adaptive Card must have at least one action button and maximum four actions. The following are the recommended actions types: [*Mandatory*]
 
