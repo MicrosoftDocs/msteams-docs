@@ -1,6 +1,6 @@
 ---
 title: Upload your custom app
-description: Learn how to upload your app in Microsoft Teams. Uploading is common when testing and debugging an app during development.
+description: Learn how to upload your app in Microsoft Teams. App upload is common when testing and debugging an app during development.
 ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
@@ -21,7 +21,7 @@ You can upload Microsoft Teams apps without having to publish to your organizati
 
 > [!IMPORTANT]
 >
-> * Uploading of apps is possible only in Government Community Cloud (GCC) and is not possible in GCC-High and Department of Defense (DOD).
+> * App upload is possible only in Government Community Cloud (GCC) and isn't possible in GCC-High and Department of Defense (DOD).
 > * App installation is supported only on Teams desktop client.
 
 ## Prerequisites
