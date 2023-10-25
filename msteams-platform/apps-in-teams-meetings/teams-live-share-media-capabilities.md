@@ -105,7 +105,9 @@ const schema: ContainerSchema = {
   initialObjects: { mediaSession: LiveMediaSession },
 };
 const { container } = await liveShare.joinContainer(schema);
-const mediaSession = container.initialObjects.mediaSession as LiveMediaSession;
+// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
+// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
+const mediaSession = container.initialObjects.mediaSession as unknown as LiveMediaSession;
 
 // Get the player from your document and create synchronizer
 const player: IMediaPlayer = document.getElementById("player") as HTMLVideoElement;

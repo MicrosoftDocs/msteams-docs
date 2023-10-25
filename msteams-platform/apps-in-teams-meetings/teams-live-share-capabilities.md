@@ -277,7 +277,9 @@ const schema = {
   },
 };
 const { container } = await liveShare.joinContainer(schema);
-const presence = container.initialObjects.presence as LivePresence<ICustomUserData>;
+// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
+// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
+const presence = container.initialObjects.presence as unknown as LivePresence<ICustomUserData>;
 
 // Register listener for changes to each user's presence.
 // This should be done before calling `.initialize()`.
@@ -439,7 +441,9 @@ const schema = {
   },
 };
 const { container } = await liveShare.joinContainer(schema);
-const appState = container.initialObjects.appState as LiveState<PlanetName>;
+// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
+// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
+const appState = container.initialObjects.appState as unknown as LiveState<PlanetName>;
 
 // Register listener for changes to the state.
 // This should be done before calling `.initialize()`.
@@ -564,7 +568,9 @@ const schema = {
   },
 };
 const { container } = await liveShare.joinContainer(schema);
-const customReactionEvent = container.initialObjects.customReactionEvent as LiveEvent<ICustomReaction>;
+// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
+// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
+const customReactionEvent = container.initialObjects.customReactionEvent as unknown as LiveEvent<ICustomReaction>;
 
 // Register listener to receive events sent through this object.
 // This should be done before calling `.initialize()`.
@@ -712,7 +718,9 @@ const schema = {
   initialObjects: { timer: LiveTimer },
 };
 const { container } = await liveShare.joinContainer(schema);
-const timer = container.initialObjects.timer as LiveTimer;
+// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
+// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
+const timer = container.initialObjects.timer as unknown as LiveTimer;
 
 // Register listeners for timer changes
 // This should be done before calling `.initialize()`.
@@ -1030,7 +1038,7 @@ const schema = {
 };
 const { container } = await liveShare.joinContainer(schema);
 // Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
-// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide `.joinContainer`.
+// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
 const followMode = container.initialObjects.followMode as unknown as LiveFollowMode<ICameraPosition>;
 
 // As an example, we will assume there is a button in the application document
