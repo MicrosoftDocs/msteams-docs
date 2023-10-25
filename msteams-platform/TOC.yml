@@ -40,7 +40,7 @@
   items:
   - name: Overview
     href: concepts/app-fundamentals-overview.md
-    displayName: Government Community Cloud (GCC), Department of Defense (DOD), GCC-High
+    displayName: Teams app features, Government Community Cloud (GCC), Department of Defense (DOD), GCC-High (GCCH)
   - name: Understand use case
     href: concepts/design/understand-use-cases.md
     displayName: App scope, Teams app features, capabilities
@@ -848,7 +848,7 @@
     displayName: default install scope, default capability for shared scopes, block apps 
   - name: Create Teams app package
     href: concepts/build-and-test/apps-package.md
-    displayName: Host your app, HTTPS, cloud server
+    displayName: Host your app, HTTPS, cloud server, bot icon, app icons
   - name: Upload your app in Teams
     href: concepts/deploy-and-publish/apps-upload.md
   - name: Publish to your org
