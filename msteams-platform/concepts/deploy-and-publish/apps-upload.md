@@ -10,7 +10,7 @@ ms.date: 04/16/2023
 
 # Upload your app in Teams
 
-You can upload Microsoft Teams apps without having to publish to your organization or the Microsoft Teams store in the following scenarios:
+You can upload Microsoft Teams apps without having to publish to your organization or the Microsoft Teams Store in the following scenarios:
 
 * You want to test and debug an app locally yourself or with other developers.
 * You built an app for yourself to automate a workflow.
