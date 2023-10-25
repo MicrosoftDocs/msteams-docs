@@ -70,7 +70,7 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 <br>
 You can create scenes for meetings, provide notifications to users, populate in-meeting dialogs, and more with meeting app extensibility.
 
-Third-party and line-of-business apps designed for meetings and calls are now available for use in Government Community Cloud (GCC) and GCC-High environments. However, these apps aren't available for Department of Defense (DOD) environment.
+Third-party and line-of-business apps designed for meetings and calls are now available for use in Government Community Cloud (GCC) and GCC-High environments.
 
 You must be familiar with the concepts in this article to create custom meeting experiences with apps in Microsoft Teams.
 
