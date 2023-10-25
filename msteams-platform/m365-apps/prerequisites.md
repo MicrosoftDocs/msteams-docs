@@ -29,7 +29,7 @@ You need a Microsoft 365 developer subscription sandbox tenant to set up your de
 > [!NOTE]
 > As you set up for testing, ensure that you sign out of all other accounts and sign in with the account you intend to use for testing.
 
-You also need to enable uploading for your tenant:
+You also need to enable app upload for your tenant:
 
  1. Sign in to [Teams admin center](https://admin.teams.microsoft.com/dashboard) with your test tenant credentials.
 
