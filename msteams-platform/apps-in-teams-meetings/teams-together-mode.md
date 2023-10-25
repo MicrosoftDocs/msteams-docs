@@ -53,7 +53,7 @@ Consider the following practices for best scene building experience:
 * Ensure that the final package with all the images put together mustn't exceed 1920 x 1080 resolution. The resolution is an even number. This resolution is a requirement for scenes to be shown successfully.
 * Ensure that the maximum scene size is 10 MB.
 * Ensure that the maximum size of each image is 5 MB. A scene is a collection of multiple images. This limit is for each individual image.
-* Ensure to select **Transparent** as required. This checkbox is available on the right panel when an image is selected. The overlapping images must be marked as **Transparent** to indicate that they're overlapping images in the scene.
+* Select **Transparent** as required. This checkbox is available on the right panel when an image is selected. Ensure to mark **Transparent** for overlapping images to indicate that they're overlapping images in the scene.
 
 ## Build a scene using the Scene studio
 
@@ -151,11 +151,11 @@ To select scenes and use custom Together Mode scenes, join the Teams meeting and
 
 1. The meeting organizer and presenter can select **View** > **Change scene** in the meeting to select any existing scene available.
 
-## Share a scene using the Scene studio
+## Actions for a scene in the Scene studio
 
 You can view the scene you've created in the **Your scenes** section of **Scene studio**. Additionally, you can share and export the scene.
 
-**Share**:
+### Share
 
 1. From the **Save** drop-down menu, select **Share**.
 
@@ -165,18 +165,19 @@ You can view the scene you've created in the **Your scenes** section of **Scene 
 
     The user can open the link to install the scene and start using it. After preview, the scene is shipped as an app to Teams by following the steps for app submission. This step requires the app package. For the scene that is designed, the app package is different from the scene package. The app package created automatically is found in the **Apps** section in the Teams Developer Center. </br>
 
-**Export**:
-    From the **Save** drop-down menu, select **Export** to retrieve the scene package. A .zip file, which is the scene package, is downloaded. The Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes. </br>
+### Export
+
+From the **Save** drop-down menu, select **Export** to retrieve the scene package. A .zip file, which is the scene package, is downloaded. The Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes. </br>
 
 :::image type="content" source="~/assets/images/apps-in-meetings/build-a-scene.png" alt-text="Screenshot shows the Export option to export a scene.":::
 
-To delete a scene you created, select **Delete scene** on the top bar.
+### Delete
 
-A complex scene that uses the Z-axis is demonstrated in the step-by-step getting started sample.
+To delete a scene you created, select **Delete scene** on the top bar.
 
 ## Sample
 
-The following code is the scene.json sample:
+A complex scene that uses the Z-axis is demonstrated in the step-by-step getting started sample. The following code is a scene.json sample:
 
 ```json
 {
@@ -241,25 +242,24 @@ The following code is the scene.json sample:
 }
 ```
 
-Custom Together Mode scenes support zooming in on the current meeting participants. A scene consists of bitmap images, sprites, and rectangles to put participant videos in.
+A scene consists of bitmap images, sprites, and rectangles to put participant videos in the Custom together mode. The following table contains the values and description of a scene:
 
-A sprite is a static bitmap image positioned in the world. These sprites and participant boxes are defined in a world coordinate system.
+|Value|Description|
+|---|---|
+| Sprite | A Sprite is a static bitmap image positioned in the world. These sprites and participant boxes are defined in a world coordinate system. |
+| **X**-axis | The X-axis points to the right. |
+| **Y**-axis | The Y-axis points downwards. |
+| `zOrder` | The `zOrder` represents the order of placing images and seats along the Z-axis. It gives a sense of depth or partition if necessary. It determines the position of the sprite See the step-by-step getting started sample. The sample uses the `zOrder`. |
 
-• The X-axis points to the right.</br>
-• The Y-axis points downwards.</br>
-•  The Z value of the sprite determines the position of the sprite. Rendering starts with the sprite with lowest Z value, so higher Z value means it's closer to the camera.
-
-Ensure to go through the following list while creating a sample scene:  
+Ensure to go through the following list while creating a sample scene:
 
 **Scene:** Each scene has a unique ID and name. A scene.json file along with the images indicate the exact position of the seats. The scene.json file also contains information on all the assets used for the scene.
 
 **Asset:** Each asset contains a filename, width, height, and position on the X and Y-axis.
 
-**Participants:** Each participant has its own video feed, which is segmented so only the foreground is rendered.
+**Participants:** Each participant has its own video feed, which is segmented so only the foreground is rendered. Custom Together Mode scenes support **ZoomIn** in on the current meeting participants.
 
 **Seat:** Each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is generated automatically and is altered as per preference. The seating order number corresponds to the order of people joining the call.
-
-The `zOrder` represents the order of placing images and seats along the Z-axis. It gives a sense of depth or partition if necessary. See the step-by-step getting started sample. The sample uses the `zOrder`.
 
 Now that you've gone through the sample scene.json file, you can use the custom Together Mode scenes to engage in scenes.
 
