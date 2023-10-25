@@ -918,17 +918,17 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`contexts`| Array | 4 | | Specifies the Microsoft 365 application window in which the ribbon customization is available to the user. Each item in the array is a member of a string array. <br>Supported values: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`|
-|`tabs`| Array | |✔️| Configures custom tabs on the Microsoft 365 application ribbon. |
+|`tabs`| Array | |✔️| Configures the custom tabs on the Microsoft 365 application ribbon. |
 |`tabs.id`| String | 64 characters | | Specifies the ID for the tab within the app.|
 |`tabs.label`| String | 64 characters | | Specifies the text displayed for the tab.|
 |`tabs.position`| Object | | | Configures the position of the custom tab relative to other tabs on the ribbon.|
 |`tabs.position.builtinTabId`| String | 64 characters | | Specifies the ID of the built-in tab. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
-|`tabs.position.align`| String enum | | | Defines alignment of the custom tab relative to the specified built-in tab. <br>Supported values: `after`, `before`|
+|`tabs.position.align`| String enum | | | Defines the alignment of custom tab relative to the specified built-in tab. <br>Supported values: `after`, `before`|
 |`tabs.groups`| String |64 characters | | Defines the tab groups.|
 |`tabs.groups.id`| String |64 characters | | Specifies the ID for the tab group within the app. It must be different from any built-in group ID in the Microsoft 365 application and any other custom group.|
 |`tabs.groups.label`| String | 64 characters | | Specifies the text displayed for the group. |
 |`tabs.groups.icons`| Array | | | Specifies the icons displayed for the group. |
-|`tabs.groups.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Required image size: `16`, `32`, `80`. |
+|`tabs.groups.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image size: `16`, `32`, `80`. |
 |`tabs.groups.icons.url`| URL| | | Specifies the absolute URL of the icon.|
 |`tabs.groups.controls`| Array | | | Configures the buttons and menus in the group. |
 |`tabs.groups.controls.id`| String | 64 characters| ✔️ | Specifies the ID for the control within the app. It must be different from any built-in control ID in the Microsoft 365 application and any other custom control. |
@@ -937,7 +937,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.items.type`| String enum | | ✔️ | Defines the control items type. <br>Supported value: `menuItem`|
 |`tabs.groups.controls.items.label`| String | 64 characters| ✔️ | Specifies the text displayed for the items. |
 |`tabs.groups.controls.items.icons`| Array | | | Configures the icons for the custom item.|
-|`tabs.groups.controls.items.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Required image size: `16`, `32`, `80`. |
+|`tabs.groups.controls.items.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image size: `16`, `32`, `80`. |
 |`tabs.groups.controls.items.icons.url`| URL| | | Specifies the absolute URL of the icon.|
 |`tabs.groups.controls.items.supertip`| | |✔️| Configures a supertip for the custom item. A supertip is a UI feature that displays a brief box of help information about a control when the cursor hovers over it. The box may contain multiple lines of text. |
 |`tabs.groups.controls.items.supertip.title`| String | 64 characters | ✔️ | Specifies the title text of the supertip.|
@@ -949,7 +949,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.builtinControlId`| String | 64 characters | ✔️ | Specifies the ID of the existing Microsoft 365 control. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
 |`tabs.groups.controls.label`| String | 64 characters | ✔️ | Specifies the text displayed for the control.|
 |`tabs.groups.controls.icons`| Array | | | Defines the icon(s) for the control. |
-|`tabs.groups.controls.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. Required image size: `16`, `32`, `80`|
+|`tabs.groups.controls.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br> Required image size: `16`, `32`, `80`|
 |`tabs.groups.controls.icons.url`| URL| | | Specifies the absolute URL to the icon.|
 |`tabs.groups.controls.supertip`| Object | | ✔️ | Configures a supertip for the control. |
 |`tabs.groups.controls.supertip.title`| String | 64 characters | ✔️ |Specifies the title text of the supertip.|
@@ -967,7 +967,7 @@ The `extensions.autoRunEvents` property defines event-based activation extension
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`events`| Array | | ✔️ | Configures event that cause actions in an Outlook Add-in to run automatically. For example, see [use smart alerts and the `OnMessageSend` and `OnAppointmentSend` events in your Outlook Add-ins](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest).|
+|`events`| Array | | ✔️ | Configures the event that cause actions in an Outlook Add-in to run automatically. For example, see [use smart alerts and the `OnMessageSend` and `OnAppointmentSend` events in your Outlook Add-ins](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest).|
 |`events.type`| String | 64 characters | | Specifies the type of event. For supported types, see [supported events](/office/dev/add-ins/outlook/autolaunch?tabs=xmlmanifest#supported-events).|
 |`events.actionId`| String | 64 characters | | Identifies the action that is taken when the event fires. The `actionId` must match with `runtime.actions.id`. |
 |`events.options`| Object | | | Configures how Outlook responds to the event.|
@@ -979,14 +979,14 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`prefer`| Object | | | Specifies backwards compatibility with an equivalent COM add-in, XLL add-in, or both.|
+|`prefer`| Object | | | Specifies the backward compatibility with an equivalent COM add-in, XLL add-in, or both.|
 |`prefer.comAddin`| Object | | | Specifies a COM add-in that must be used in place of the Microsoft 365 Web Add-in for Windows.|
 |`prefer.comAddin.progId`| String | 64 characters | ✔️ | Identifies the application type in which the extension can run.|
 |`hide`| Object | | | Configures how to hide another add-in that you've published whenever the add-in is installed, so users don't see both in the Microsoft 365 UI. For example, use this property when you've previously published an add-in that uses the old XML app manifest and you're replacing it with a version that uses the new JSON app manifest. |
 |`hide.storeOfficeAddin`| Object | | | Specifies a Microsoft 365 Add-in available in Microsoft AppSource. |
 |`hide.storeOfficeAddin.officeAddinId`| String | 64 characters | ✔️ | Specifies the ID of the in-market add-in to hide. The GUID is taken from the app manifest `id` property if the in-market add-in uses the JSON app manifest. The GUID is taken from the `<Id>` element if the in-market add-in uses the XML app manifest. |
 |`hide.storeOfficeAddin.assetId`| String | 64 characters | ✔️ | Specifies the AppSource asset ID of the in-market add-in to hide.|
-|`hide.customOfficeAddin`| | | | Configures hiding an in-market add-in that isn't distributed through AppSource.|
+|`hide.customOfficeAddin`| | | | Configures how to hide an in-market add-in that isn't distributed through AppSource.|
 |`hide.customOfficeAddin.officeAddinId`|String | 64 characters | ✔️ | Specifies the ID of the in-market add-in to hide. The GUID is taken from the app manifest `id` property if the in-market add-in uses the JSON app manifest. The GUID is taken from the `<Id>` element if the in-market add-in uses the XML app manifest. |
 
 ## See also
