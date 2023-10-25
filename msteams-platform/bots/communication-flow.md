@@ -21,8 +21,6 @@ The following diagram illustrates the communication flow between the Teams clien
 
 :::image type="content" source="../assets/images/bots/communication-flow.png" alt-text="The diagram illustrates the communication flow between Teams client and Azure bot application.":::
 
-The data flow shown in the diagram is explained as follows:
-
 | # | Components | What's going on |
 | --- | --- | --- |
 | 1 | **App manifest (previously called Teams app manifest)**| The Teams app manifest defines the bot capabilities and contains the application ID registered in Azure AD. You can only send and receive messages to and from your bot if the application is installed directly in Teams or if you belong to a team, group chat, or meeting where the bot is installed with permissions to read the rosters. |
