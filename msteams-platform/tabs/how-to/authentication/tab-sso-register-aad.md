@@ -147,6 +147,8 @@ To configure scope and authorize trusted client applications, you'll need:
 
     > [!IMPORTANT]
     >
+    > - **Sensitive information**: The application ID URI is logged as part of the authentication process and must not contain sensitive information.
+    >
     > - **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/botid-{YourClientId}`, where {YourClientId} is your bot app ID.
     >
     > - **Format for domain name**: Use lower case letters for domain name. Don't use upper case.
@@ -159,6 +161,7 @@ To configure scope and authorize trusted client applications, you'll need:
     >   | *DemoApplication* | `https://DemoApplication.example.net` | Desktop, web, and iOS only. It isn't supported in Android. |
     >
     >    Use the lower case option *demoapplication* as base resource name.
+
 
 1. Select **Save**.
 
