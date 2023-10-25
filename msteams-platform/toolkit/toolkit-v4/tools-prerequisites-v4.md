@@ -41,7 +41,7 @@ Ensure that the following tools are installed on the device where you’ll creat
    | **Required** | &nbsp; | &nbsp; |
    | [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/) | Use the latest version, *ASP.NET and web development* workload, and *Microsoft Teams development tools* option. | C# or Blazor. |
    | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | The Microsoft Visual Studio Code extension to create a Teams app project. Use the latest version. | JavaScript, TypeScript, and SPFx. |
-   | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Uploading feature to test your app behavior within your local Teams environment.| JavaScript, TypeScript, SPFx, and C# or Blazor. |
+   | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | App upload feature to test your app behavior within your local Teams environment.| JavaScript, TypeScript, SPFx, and C# or Blazor. |
    | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. | JavaScript, TypeScript, SPFx, and C# or Blazor. |
    | **Optional** | &nbsp; | &nbsp; |
    | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Stored data or deploy a cloud-based back-end for your Teams app in Azure. | JavaScript and TypeScript. |
@@ -129,7 +129,7 @@ An Azure account allows you to host a Teams app or the back-end resources for yo
 
 ## Verify app upload permission
 
-After creating the app, you must load your app in Teams without distributing it. This process is known as uploading. Sign in to your Microsoft 365 account to view this option.
+After creating the app, you must load your app in Teams without distributing it. This process is known as app upload. Sign in to your Microsoft 365 account to view this option.
 
 You can verify if the app upload permission is enabled using either Visual Studio Code or Teams client.
 
@@ -170,16 +170,16 @@ You can use this method to verify app upload permission only after you have crea
 
 </details>
 
-### Enable uploading using admin center
+### Enable app upload using admin center
 
-If uploading option isn’t visible in Teams Toolkit extension in Visual Studio Code or if the option to upload a custom app isn’t available in Teams, it indicates that you don't have the required permission for uploading.
+If app upload option isn’t visible in Teams Toolkit extension in Visual Studio Code or if the option to upload a custom app isn’t available in Teams, it indicates that you don't have the required permission for app upload.
 
-You must enable uploading for your app in Teams:
+You must enable app upload for your app in Teams:
 
-* If you're a tenant admin, enable the uploading setting for your tenant or organization in the Teams admin center.
-* If you aren't a tenant admin, contact your tenant admin to enable uploading.
+* If you're a tenant admin, enable the app upload setting for your tenant or organization in the Teams admin center.
+* If you aren't a tenant admin, contact your tenant admin to enable app upload.
 
-If you have admin rights, you can enable uploading:
+If you have admin rights, you can enable app upload:
 
   1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
 
@@ -206,7 +206,7 @@ If you have admin rights, you can enable uploading:
   5. Select **Save**.
 
      > [!Note]
-     > It can take up to 24 hours for uploading to become active. In the meantime, you can use **upload for your tenant** to test your app. To upload the .zip package file of the app, see [upload custom apps](/microsoftteams/teams-app-setup-policies).
+     > It can take up to 24 hours for app upload to become active. In the meantime, you can use **upload for your tenant** to test your app. To upload the .zip package file of the app, see [upload custom apps](/microsoftteams/teams-app-setup-policies).
 
      Ensure that you have the app upload permission using the steps mentioned in [verify app upload permission using Visual Studio Code or Teams client](#verify-app-upload-permission).
 

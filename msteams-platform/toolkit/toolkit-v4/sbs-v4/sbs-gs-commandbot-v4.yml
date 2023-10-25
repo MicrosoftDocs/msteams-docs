@@ -107,16 +107,16 @@ items:
    After creating the app, you must load your app in Teams without distributing it. This is known as app uploading. Sign-in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > App uploading is necessary for previewing and testing apps in Teams local environment. Enable app uploading to preview and test your app in Teams locally.
+    > App upload is necessary for previewing and testing apps in Teams local environment. Enable app upload to preview and test your app in Teams locally.
 
    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
    To verify upload apps in Teams:
 
-    1. In the Teams client, select **Store** .
+    1. In the Teams client, select **Store**.
     1. Select **Manage your apps**.
     1. Select **Publish an app**.
-    1. Look for the option to **Upload a custom app**. If you see the option, uploading apps is enabled.
+    1. Look for the option to **Upload a custom app**. If you see the option, app upload is enabled.
 
         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-csharp/upload-custom-app-v4.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 

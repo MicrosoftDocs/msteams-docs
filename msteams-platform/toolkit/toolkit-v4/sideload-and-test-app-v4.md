@@ -74,7 +74,7 @@ For more information, see [Azure service principals guidelines](/azure/active-di
 
 * [Microsoft Azure portal](/azure/active-directory/develop/howto-create-service-principal-portal)
 * [Windows PowerShell](/azure/active-directory/develop/howto-authenticate-service-principal-powershell)
-* [Microsoft Azure CLI](/cli/azure/azure-cli-sp-tutorial-1)
+* [Microsoft Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli)
 
 ## See also
 
