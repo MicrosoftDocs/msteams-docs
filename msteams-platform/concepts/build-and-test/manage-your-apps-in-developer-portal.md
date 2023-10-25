@@ -169,6 +169,8 @@ To add a bot:
 
 From the Developer Portal, you can go to Bot Framework portal and configure your bot to update icon and other properties.
 
+**Note**: Environment variables are not supported in Bot id.
+
 ## See also
 
 * [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md)
