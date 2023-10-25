@@ -84,16 +84,16 @@ To build a scene using the Scene studio, follow these steps:
 1. Select **Blank Scene** template from the window to create custom scene.
    You can select any template of your choice. **Blank Scene** allows you to create custom scenes.
 
-:::image type="content" source="~/assets/images/apps-in-meetings/scene-template.png" alt-text="Screenshot shows the choices of templates for a scene in the scene studio.":::
+    :::image type="content" source="~/assets/images/apps-in-meetings/scene-template.png" alt-text="Screenshot shows the choices of templates for a scene in the scene studio.":::
 
 1. In **Scene Name**, enter a name for the scene.
 
-   You can select **Close** to toggle between closing or reopening the right pane.
+    You can select **Close** to toggle between closing or reopening the right pane.
    You can zoom in or zoom out of the scene using the zoom bar for a better view of the scene.
 
 1. To add the image to the environment, select **Add images**.
 
-   :::image type="content" source="~/assets/images/apps-in-meetings/addimages.png" alt-text="Screenshot shows the Add images option highlighted in red in the scene studio.":::
+    :::image type="content" source="~/assets/images/apps-in-meetings/addimages.png" alt-text="Screenshot shows the Add images option highlighted in red in the scene studio.":::
 
 1. Select the image that you've added.
 
@@ -111,7 +111,7 @@ To build a scene using the Scene studio, follow these steps:
 
 1. Select **Meeting Organizer** or **Presenter** role for the participant. In a meeting, one participant must be assigned the role of a meeting organizer:
 
-   :::image type="content" source="~/assets/images/apps-in-meetings/assign-spot.png" alt-text="Screenshot shows the Assign spot check box for the participant 3 in the scene studio.":::
+    :::image type="content" source="~/assets/images/apps-in-meetings/assign-spot.png" alt-text="Screenshot shows the Assign spot check box for the participant 3 in the scene studio.":::
 
 1. Select **Save** and select **View in Teams** to quickly test your scene in Teams.
 
@@ -122,7 +122,7 @@ To build a scene using the Scene studio, follow these steps:
 
     To test or access the scene, create a test meeting, and launch custom Together Mode scenes. For more information, see [test custom Together Mode scenes in Teams](#test-custom-together-mode-scenes-in-teams).
 
-     :::image type="content" source="~/assets/images/apps-in-meetings/launchtogethermode.png" alt-text="Screenshot shows the custom scene launched in a Teams meeting.":::
+    :::image type="content" source="~/assets/images/apps-in-meetings/launchtogethermode.png" alt-text="Screenshot shows the custom scene launched in a Teams meeting.":::
 
 ## Test custom Together Mode scenes in Teams
 
