@@ -330,12 +330,12 @@ items:
 
     <details><summary>Preview card template</summary>
 
-       ```json
+    ```json
        "previewCardTemplate": {
             "title": "${if(name, name, 'N/A')}",
             "subtitle": "$${if(price, price, 'N/A')}",
         } 
-       ```
+    ```
     Create an if condition for the `title` and `subtitle` where, if name exists, the bot uses the name, else, it uses NA. For example, `"title": "Name: ${if(name, name, 'N/A')}"`. Save the preview card template for future reference.
     </details>
 
