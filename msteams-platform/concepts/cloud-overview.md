@@ -8,23 +8,23 @@ ms.date: 09/29/2023
 ---
 # Government clouds
 
-Government sectors and agencies handling sensitive and confidential data need cloud platforms that are highly secure and compliant. Considering the raising requirements, Government clouds services are designed specifically to meet the stringent government compliance requirements.
+Government sectors and agencies handling sensitive and confidential data need cloud platforms that are highly secure and compliant. Government clouds services are specifically built to meet the stringent government compliance and raising requirements.
 
-Microsoft has built three government cloud services that is GCC, GCC-High, and DoD for government sectors and related entities.
+Microsoft has built three government cloud services - GCC, GCC-High, and DoD - that are aligned with the requirements of United States government sectors and associated entities.
 
 :::image type="content" source="../assets/images/app-fundamentals/GCC_overview.png" alt-text="Illustration shows the types of government clouds.":::
 
-Microsoft Government cloud services are available only in the United States and aligned with the requirements of the US public sector. To use Microsoft Government clouds services, Microsoft offers [Government plans](https://products.office.com/government/compare-office-365-government-plans) for purchase.
+GCC, GCC-High, and DoD are limited for use within Unites States. To use Microsoft Government clouds services, Microsoft offers [Government plans](https://products.office.com/government/compare-office-365-government-plans) for purchase.
 
 ## Government clouds for Teams
 
- All Microsoft 365 Government plans supports Microsoft Teams platform but the capabilities each Government cloud supports differ. Also, government tenant may not have all the Teams features that's available in a commercial tenant. Some are restricted based on security and compliance and other features take time to get rolled out in government clouds.
+ All Microsoft 365 Government plans supports Microsoft Teams platform but the capabilities each cloud supports differ. Also, government tenant may not have all the Teams features that's available in a commercial tenant. Some are restricted based on security and compliance and other features take time to get rolled out in government clouds.
 
 Let’s get to know about the different clouds and the Teams capabilities that are supported in each type of government cloud.
 
 ## Teams capabilities for Government clouds
 
-The following table includes Teams features and availability for GCC, GCC-High, and DOD:
+The following table includes Teams apps supported for GCC, GCC-High, and DOD:
 
 | &nbsp; | GCC | GCC-High | DOD |
 |-------------|---------|---|---|
@@ -34,6 +34,11 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 |Line-of-business apps are built, distributed, and used for specific tenant. | ✔️ | ✔️ | ✔️ |
 |Sideloading apps | ✔️ | ❌ | ❌ |
 |Personal apps | ✔️ | ✔️ | ✔️ |
+
+The following table includes Teams capabilities and their availability for GCC, GCC-High, and DOD:
+
+| &nbsp; | GCC | GCC-High | DOD |
+|-------------|---------|---|---|
 | **Capabilities** | &nbsp; | &nbsp; | &nbsp; |
 | Tabs | ✔️ | ✔️ | ✔️ |
 | Bots and Message extensions | ✔️ | ✔️ | ✔️ |
