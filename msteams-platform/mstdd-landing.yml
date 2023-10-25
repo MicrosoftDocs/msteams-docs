@@ -48,7 +48,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Introduced extensions sub-properties in public developer preview manifest schema
+      - text: Introduced extensions sub-properties in public developer preview app manifest schema
         url: resources/schema/manifest-schema-dev-preview.md#extensions
       - text: The new Microsoft Teams client
         url: resources/teams-updates.md
