@@ -83,10 +83,10 @@ The following pointers help you plan for government cloud service and understand
 * Upon successful purchase and planning, you can then deploy the Teams for collaboration
 * You can then plan for deploying Teams for meetings and voice.
 
-To purchase the required Microsoft 365 Government plans:
+To purchase required Microsoft 365 for US Government licenses:
 
 * Submit a form for GCC or GCC-High to validate your organization’s eligibility. To know more about the eligibility, see buy Microsoft 365 Government plans.
-* To purchase Microsoft 365 for US Government licenses, you must place an order only through the Microsoft account team or a qualified partner.
+* You must place an order only through the Microsoft account team or a qualified partner.
 
 Considerations for [deploying Teams in Government cloud](/microsoftteams/expand-teams-across-your-org/teams-for-government-landing-page).
 
