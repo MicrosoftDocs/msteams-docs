@@ -48,8 +48,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Introduced additional `extensions` sub-properties in developer preview manifest schema.
-        url: resources/schema/manifest-schema-dev-preview.md
+      - text: Introduced extensions sub-properties in public developer preview manifest schema
+        url: resources/schema/manifest-schema-dev-preview.md#extensions
       - text: The new Microsoft Teams client
         url: resources/teams-updates.md
       - text: Use callTranscript API to fetch meeting transcript from all meetings
