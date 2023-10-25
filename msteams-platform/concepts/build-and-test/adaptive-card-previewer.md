@@ -27,17 +27,17 @@ The primary goal of Adaptive Card Previewer is to provide developers with a fast
 
 * Switch between light, dark, and high contrast themes to preview your cards so you can design with confidence.
 
-:::image type="content" source="../../assets/images/previewer-adaptive-card/acp-select-theme.gif" alt-text="Shows how to switch different themes in Adaptive Card Previewer.":::
+  :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-select-theme.gif" alt-text="Shows how to switch different themes in Adaptive Card Previewer.":::
 
 * Separation of data from the layout in an Adaptive Card [template language](/adaptive-cards/templating/). Use the command `Adaptive Card: New Data File` to add a data file for a template. This generates an empty file where you can bind data to your Adaptive Card template.
 
 * Seamless integration with Teams Toolkit that allows a Just-In-Time installation of Adaptive Card previewer when you're iterating on Adaptive Cards generated from Teams Toolkit project creation.
 
-:::image type="content" source="../../assets/images/previewer-adaptive-card/acp-preview-example.png" alt-text="Shows a sample preview of an Adaptive Card when iterating an Adaptive Card." lightbox="../../assets/images/previewer-adaptive-card/acp-preview-example.png":::
+  :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-preview-example.png" alt-text="Shows a sample preview of an Adaptive Card when iterating an Adaptive Card." lightbox="../../assets/images/previewer-adaptive-card/acp-preview-example.png":::
 
 * Configure default theme through Visual Studio Code extension settings `adaptiveCardPreviewer.defaultTheme`.
 
-:::image type="content" source="../../assets/images/previewer-adaptive-card/acp-default-theme.png" alt-text="Shows how to configure default theme through Visual Studio Code extension settings.":::
+  :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-default-theme.png" alt-text="Shows how to configure default theme through Visual Studio Code extension settings.":::
 
 ## Benefits of Adaptive Card previewer
 
