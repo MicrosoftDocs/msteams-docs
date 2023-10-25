@@ -12,13 +12,7 @@ ms.date: 10/18/2023
 
 A plugin adds a specific feature or functionality to an existing computer program. Microsoft 365 plugins provide integration with Teams, making it easier for users to schedule, deliver, and collaborate on course content. These plugins can be used independently or in partnership, depending on the requirement.
 
-Message extension plugins allow Copilot to interact with APIs from other software and services to retrieve real-time information, perform new types of computations, and safely take action on the user’s behalf.  Plugins allow Copilot to:
-
-* Retrieve real-time information, for example, latest news coverage on a product launch.
-* Retrieve knowledge-based information, for example, my team’s design files in Figma.
-* Perform actions on behalf of the user, for example, create a Jira ticket.
-
-We encourage you to build your message extensions to get the best out of copilot. For copilot to recognize and fetch your app, we recommend to build message extensions that search or Summarization information and  meet standards for compliance, performance, security, and user experience described in this article.
+Message extension plugins allow Copilot to interact with APIs from other software and services to retrieve real-time information, perform new types of computations, and safely take action on the user’s behalf. We encourage you to build your message extensions to get the best out of copilot. For copilot to recognize and fetch your app, we recommend to build message extensions that search or Summarization information and  meet standards for compliance, performance, security, and user experience described in this article.
 
 ## Mandatory requirements
 
@@ -51,12 +45,24 @@ Long and short app descriptions that must be clear and define the app's scope. T
 
 The following table lists the short description examples for each category:
 
-| Category | Examples of Short App Description |
-|---|---|
-| Tasks | Create, search, view tickets, bugs, and projects |
-| Surveys | Create and search for surveys and results |
-| CRM | Search and view customer leads |
-| General | Stock and share look up tool |
+
+# [Tasks](#tab/tasks)
+
+**Description**: Create, search, view tickets, bugs, and projects.
+
+# [Surveys](#tab/surveys)
+
+**Description**: Create and search for surveys and results.
+
+# [CRM](#tab/crm)
+
+**Description**: Search and view customer leads.
+
+# [General](#tab/general)
+
+**Description**:  Stock and share look up tool. 
+
+---
 
 ### Search command description
 
@@ -68,19 +74,23 @@ Command description is used to map user intent and utterance to search command i
 
 The following table lists the command description examples for each category:
 
-| Category | Examples of Search Command Description  |
-|---|---|
-| Tasks | Search for high priority tasks related to Northwind that are due tomorrow. |
-| Surveys | Search for surveys, drafts, and results with keywords or number of respondents. |
-| CRM | Through CRM plugin, find qualified, unqualified, and quoted leads of clients and customers. |
-| General | Find n number of stocks or listed equities using keyworks, key ratios, index, and so on. |
+# [Tasks](#tab/tasks)
 
-## Multiple attributes
+**Description**: Search for high priority tasks related to Northwind that are due tomorrow.
 
-> [!NOTE]
-> Search through task module isn't supported.
+# [Surveys](#tab/surveys)
 
-A message extension must support complex searches to retrieve accurate information. A message extension plugin must expand the scope of search beyond a single attribute and handle more than three search parameters at once. To handle multiple attributes in search, enable multi-parameter support in app manifest.
+**Description**: Search for surveys, drafts, and results with keywords or number of respondents.
+
+# [CRM](#tab/crm)
+
+**Description**: Through CRM plugin, find qualified, unqualified, and quoted leads of clients and customers.
+
+# [General](#tab/general)
+
+**Description**: Find n number of stocks or listed equities using keyworks, key ratios, index, and so on. 
+
+---
 
 ### Parameter description
 
@@ -90,7 +100,7 @@ A good parameter description explains the requirement of the system in a natural
 
 # [Tasks](#tab/tasks)
 
-Basic search: Search for tasks related to Northwind.
+Basic search: Search for tasks related to Northwind.</br>
 Advanced search: Search for high priority tasks related to Northwind that are due tomorrow.
 
 **Manifest description example:**
@@ -214,6 +224,16 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 ```
 
 ---
+
+
+
+## Multiple attributes
+
+> [!NOTE]
+> Search through task module isn't supported.
+
+A message extension must support complex searches to retrieve accurate information. A message extension plugin must expand the scope of search beyond a single attribute and handle more than three search parameters at once. To handle multiple attributes in search, enable multi-parameter support in app manifest.
+
 
 ## App response
 
