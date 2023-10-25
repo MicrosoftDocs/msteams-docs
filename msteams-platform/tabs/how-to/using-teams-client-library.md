@@ -9,6 +9,7 @@ ms.topic: conceptual
 keywords: SDK TeamsJS Teams client JavaScript library
 ms.date: 05/05/2023
 ---
+
 # Teams JavaScript client library
 
 The Microsoft Teams JavaScript client library (TeamsJS) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook, where your app content is hosted in an [iFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). The library is helpful for developing apps with the following Teams capabilities:
@@ -174,6 +175,7 @@ async function example() {
           }
 ```
 
+
 ---
 
 > [!TIP]
@@ -192,7 +194,9 @@ Starting with TeamsJS v.2.0, APIs are defined as functions in a JavaScript names
 
 You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace). It returns `true` if it's supported and `false` if not, and you can adjust app behavior as appropriate. This allows your app to light up UI and functionality in hosts that support it, while continuing to run for hosts that don't.
 
-The name of the host your app is running in is exposed as a *hostName* property on the Context interface (`app.Context.app.host.name`), which can be queried at runtime by calling `getContext`. It's also available as a `{hostName}` [URL placeholder value](./access-teams-context.md#get-context-by-inserting-url-placeholder-values). Best practice is to use the *hostName* mechanism sparingly:
+The host name where your app operates is revealed as a *hostName* property on the Context interface (`app.Context.app.host.name`). You can query this at runtime by invoking `getContext`. For the previous Teams client, this value might return as *unknown* or *undefined*. In such cases, map these values to old Teams.
+
+The `{hostName}` [URL placeholder value](./access-teams-context.md#get-context-by-inserting-url-placeholder-values) is also available. However, we recommend using the *hostName* mechanism with discretion.
 
 * **Don't** assume certain functionality is or isn't available in a host based on the *hostName* property value. Instead, check for capability support (`isSupported`).
 * **Don't** use *hostName* to gate API calls. Instead, check for capability support (`isSupported`).
@@ -391,7 +395,6 @@ To run in Outlook and Microsoft 365 app, your app will need to depend on the [np
 After completion, the utility will have updated your `package.json` file with the TeamsJS version 2.x.x (`@microsoft/teams-js@2.0.0` or later) dependency, and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
 
 > [!div class="checklist"]
->
 > * `package.json` references to TeamsJS version 2.x.x
 > * Import statements for TeamsJS version 2.x.x
 > * [Function, Enum, and Interface calls](#apis-organized-into-capabilities) to TeamsJS version 2.x.x
@@ -421,6 +424,7 @@ Open your app manifest and update the `$schema` and `manifestVersion` with the f
 }
 ```
 
+
 ---
 
 If you used Teams Toolkit to create your personal app, you can also use it to validate the changes to your app manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file** or select the option from the Deployment menu of the Teams Toolkit (look for the Teams icon on the left side of Visual Studio Code).
@@ -431,3 +435,4 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 * Use the [TeamsJS library reference](/javascript/api/overview/msteams-client) to get started with the TeamsJS library.
 * Review the [changelog](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/CHANGELOG.md) for  latest updates to TeamsJS.
+

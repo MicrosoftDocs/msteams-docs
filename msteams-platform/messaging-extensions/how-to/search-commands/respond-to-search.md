@@ -427,7 +427,7 @@ The default query has the same structure as any regular user query, with the `na
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Add authentication to a message extension](~/messaging-extensions/how-to/add-authentication.md)
+> [Add third party authentication to message extension](~/messaging-extensions/how-to/add-authentication.md)
 
 ## See also
 
