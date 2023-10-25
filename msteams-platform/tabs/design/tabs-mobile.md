@@ -23,7 +23,6 @@ Apps [distributed through the Microsoft Teams Store](~/concepts/deploy-and-publi
 > * For all apps that are not distributed through the AppSource, the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
 > * The default behavior of apps is only applicable if distributed through the Teams Store. By default, all tabs open in the Teams client.
 > * To initiate an evaluation of your app for mobile-friendliness, reach out to teamsubm@microsoft.com with your app details.
->
 > * If a mobile app has multiple tabs, whenever the user switches a tab, the tab doesn't reload.
 
 ## Authentication

@@ -11,7 +11,7 @@ ms.date: 03/03/2022
 
 ## Upload your app to Teams
 
-You can upload your Teams app to Microsoft Teams without having to publish to your organization or the Teams store in the following scenarios:
+You can upload your Teams app to Microsoft Teams without having to publish to your organization or the Teams Store in the following scenarios:
 
 * You want to test and debug an app locally or on your testing cloud environment.
 * You built an app for yourself to automate a workflow.
@@ -62,7 +62,7 @@ You can test your Teams app after integrating with Microsoft Teams. To test your
 
 ## Locally hosted environment
 
-Teams is a cloud-based product that requires all services it accesses, to be available publicly using HTTPS endpoints. Local hosting is about uploading into Teams for testing in local environment.
+Teams is a cloud-based product that requires all services it accesses, to be available publicly using HTTPS endpoints. Local hosting is about app uploading into Teams for testing in local environment.
 
 ## Cloud-hosted environment
 
