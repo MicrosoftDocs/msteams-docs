@@ -12,13 +12,13 @@ For information on how to enable developer preview, see [public developer previe
 > [!NOTE]
 > If you aren't using developer preview features, including running [Teams personal tabs and message extensions in Outlook and Microsoft 365 app](../../m365-apps/overview.md), use the [app manifest](~/resources/schema/manifest-schema.md) (previously called Teams app manifest) for generally available (GA) features instead.
 
-The app manifest describes how the app integrates into the Microsoft Teams platform. Your app manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
+The app manifest describes how the app integrates into the Microsoft Teams platform. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
 
 ## Sample app manifest
 
 ```json
 {
-    "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
     "manifestVersion": "devPreview",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
@@ -485,13 +485,15 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
+|`apiSpecificationFile`     |  References an OpenAPI Description file in the app package. Include when type is `ApiBased`.      |
 |`botId`|String||✔️|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. <br>Default value: `false`|
 |`commands`|Array of object|10|✔️|Array of commands the message extension supports|
 |`messageHandlers`|Array of objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
 |`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|Array of Strings|2048 characters||Array of domains that the link message handler can register for.|
-|`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. <br>Default value: `false`. To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
+|`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. The default value is `false`. To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
+|`type`     |  Type of the compose extension.  Supported values are `apiBased` or `botBased`. |
 
 ### composeExtensions.commands
 
@@ -514,7 +516,7 @@ Each command item is an object with the following structure:
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`taskInfo.url`|String|2048 characters||Initial webview URL.|
 |`parameters`|Array of object|5|✔️|The list of parameters the command takes. Minimum: 1; maximum: 5|
-|`parameter.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. This is included in the user request.|
+|`parameter.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. This is included in the user request. </br> For Api-based message extension, The name must map to the `parameters.name` in the OpenAPI Description. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters. |
 |`parameter.title`|String|32 characters|✔️|User-friendly title for the parameter.|
 |`parameter.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
 |`parameter.inputType`|String|||Defines the type of control displayed on a task module for `fetchTask: false`. One of `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`.|
@@ -522,6 +524,7 @@ Each command item is an object with the following structure:
 |`parameter.choices`|Array of objects|10||The choice options for the `choiceset`. Use only when `parameter.inputType` is `choiceset`.|
 |`parameter.choices.title`|String|128 characters||Title of the choice.|
 |`parameter.choices.value`|String|512 characters||Value of the choice.|
+|`apiResponseRenderingTemplateFile`| Template used to format the JSON response from developer’s API to Adaptive Card response.  |
 
 ## scopeConstraints
 
