@@ -12,7 +12,7 @@ ms.date: 12/13/2022
 
 Your Microsoft Teams app might need to interact with various services, such as Facebook, Twitter, and Teams. Most of these services necessitate authentication and authorization for access. Teams stores user profile information in Azure Active Directory (Azure AD) using Microsoft Graph. This article primarily focuses on using Azure AD for authentication to access this information.
 
-OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The OAuth 2.0 Implicit Grant flow is used in the examples. It reads the user's profile information from Azure AD and Microsoft Graph.
+OAuth 2.0, an open standard for authentication, is utilized by Azure AD and numerous other service providers. Understanding of OAuth 2.0 is essential when dealing with authentication in Teams and Azure AD. The examples provided employ the OAuth 2.0 Implicit Grant flow, which retrieves the user's profile information from Azure AD and Microsoft Graph.
 
 The code in the article comes from the Teams sample app [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs). It contains a static tab that requests an access token for Microsoft Graph, and shows the current user's basic profile information from Azure AD.
 
