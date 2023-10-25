@@ -8,7 +8,7 @@ ms.date: 02/01/2023
 ---
 # Configure your tab app in Azure AD
 
-Azure Active Directory (Azure AD) provides access to your tab app based on the app user's Teams identity. You'll need to register your tab app with Azure AD so that the app user who has signed into Teams can be given access to your tab app.
+Azure Active Directory (Azure AD) provides access to your tab app based on the app user's Teams identity. Register your tab app with Azure AD so that the app user who has signed into Teams can be given access to your tab app.
 
 ## Enable SSO in Azure AD
 
@@ -18,7 +18,7 @@ Register your tab app in Azure AD and enable it for SSO requires making app conf
 
 Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It allows Teams Client to obtain an access token on behalf of your application and the logged-in user. You can add client IDs for the trusted mobile, desktop, and web applications that you want to preauthorize.
 
-You may also need to configure additional details, such as authenticating app users on the platform or device where you want to target your tab app.
+You might also need to configure additional details, such as authenticating app users on the platform or device where you want to target your tab app.
 
 User-level Graph API permissions are supported, that is, email, profile, offline_access, and OpenId. If you require access to additional Graph scopes, such as `User.Read` or `Mail.Read`, see [get an access token with Graph permissions](tab-sso-graph-api.md#acquire-access-token-for-ms-graph).
 
@@ -46,7 +46,7 @@ To create and configure your app in Azure AD for enabling SSO:
 
 You can configure your tab app in Azure AD to configure the scope and permissions for access tokens.
 
-You'll need to register your app in Azure AD and configure the tenancy and app's platform, before you can enable it for SSO. Azure AD generates a new app ID that you must note. You'll need to update it later in the app manifest (previously called Teams app manifest) file.
+Register your app in Azure AD and configure the tenancy and app's platform, before you can enable it for SSO. Azure AD generates a new app ID that you must note. You need to update it later in the app manifest (previously called Teams app manifest) file.
 
 > [!NOTE]
 > Microsoft Teams Toolkit registers the Azure AD application in an SSO project. You can skip this section if you've used Teams Toolkit to create your app. However, you would need to configure permissions and scope, and trust client applications.
@@ -101,7 +101,7 @@ You'll need to register your app in Azure AD and configure the tenancy and app's
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="App registration is successful.":::
 
-8. Note and save the app ID from **Application (client) ID**. You'll need it for updating the app manifest later.
+8. Note and save the app ID from **Application (client) ID** to update the app manifest later.
 
     Your app is registered in Azure AD. You now have app ID for your tab app.
 
@@ -111,9 +111,9 @@ You'll need to register your app in Azure AD and configure the tenancy and app's
 
 After you've created a new app registration, configure scope (permission) options for sending access token to Teams Client, and authorizing trusted client applications to enable SSO.
 
-To configure scope and authorize trusted client applications, you'll need:
+To configure scope and authorize trusted client applications, you need:
 
-- [To expose an API](#to-expose-an-api): Configure scope (permission) options for your app. You'll expose a web API, and configure the application ID URI.
+- [To expose an API](#to-expose-an-api): Configure scope (permission) options for your app. Expose a web API and configure the application ID URI.
 - [To configure API scope](#to-configure-api-scope): Define scope for the API, and the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
 - [To configure authorized client application](#to-configure-authorized-client-application): Create authorized client IDs for applications that you want to preauthorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Preauthorize only those client applications you trust as your app users won't have the opportunity to decline consent.
 
@@ -135,7 +135,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="Application ID URI":::
 
-    - The **Application ID URI** is pre-filled with app ID (GUID) in the format `api://{AppID}`.
+    - The **Application ID URI** is prefilled with app ID (GUID) in the format `api://{AppID}`.
     - The application ID URI format must be: `api://fully-qualified-domain-name.com/{AppID}`.
     - Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}` (which is, GUID). For example, api://example.com/{AppID}.
 
@@ -147,7 +147,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
     > [!IMPORTANT]
     >
-    > - **Sensitive information**: The application ID URI is logged as part of the authentication process and must not contain sensitive information.
+    > - **Sensitive information**: The application ID URI is logged as part of the authentication process and mustn't contain sensitive information.
     >
     > - **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/botid-{YourClientId}`, where {YourClientId} is your bot app ID.
     >
@@ -162,7 +162,6 @@ To configure scope and authorize trusted client applications, you'll need:
     >
     >    Use the lower case option *demoapplication* as base resource name.
 
-
 1. Select **Save**.
 
     A message pops up on the browser stating that the application ID URI was updated.
@@ -173,7 +172,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="Application ID URI updated":::
 
-1. Note and save the Application ID URI. You'll need it for updating the app manifest later.
+1. Note and save the Application ID URI to update the app manifest later.
 
 #### To configure API scope
 
@@ -219,7 +218,7 @@ To configure scope and authorize trusted client applications, you'll need:
     > [!NOTE]
     >
     > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
-    > - For a Teams tab app, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
+    > - For a Teams tab app, you need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
 
     1. Select one of the following client IDs:
 
