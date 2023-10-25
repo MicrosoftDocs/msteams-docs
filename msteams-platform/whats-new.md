@@ -348,7 +348,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 October**
 
-***October 25, 2023***: [Build message extensions using API (API-based) to interact directly with third-party data, apps, and services.](messaging-extensions/api-based-overview.md)
+* ***October 25, 2023***: [Introduced the `extensions` property in public developer preview app manifest schema.](resources/schema/manifest-schema-dev-preview.md#extensions)
+* ***October 25, 2023***: [Build message extensions using API (API-based) to interact directly with third-party data, apps, and services.](messaging-extensions/api-based-overview.md)
 
 :::column-end:::
 :::row-end:::
@@ -359,7 +360,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|28/09/2023|Configure your bot during installation or after installation from the team or group chat where the bot is installed.|Build bots > [Bot configuration experience](bots/how-to/bot-configuration-experience.md)|
+|28/09/2023| Configure your bot during installation or after installation from the team or group chat where the bot is installed. | Build bots > [Bot configuration experience](bots/how-to/bot-configuration-experience.md)|
 |31/08/2023| The new Teams client supports light theme for apps in Teams meetings. | Build tabs > [Get context for your tab](tabs/how-to/access-teams-context.md#handle-theme-change)|
 |28/08/2023| Teams app manifest is now referred to as app manifest. | App manifest > [App manifest schema](resources/schema/manifest-schema.md)|
 |22/08/2023| Enable RSC permissions for a user using the Graph APIs | Utilize Teams data with Microsoft Graph > Resource-specific consent > [Grant RSC permission to your app](graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings) |
