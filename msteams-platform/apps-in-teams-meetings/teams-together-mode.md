@@ -151,7 +151,7 @@ To select scenes and use custom Together Mode scenes, join the Teams meeting and
 
 1. The meeting organizer and presenter can select **View** > **Change scene** in the meeting to select any existing scene available.
 
-## Actions for a scene in the Scene studio
+## Share a scene using the Scene studio
 
 You can view the scene you've created in the **Your scenes** section of **Scene studio**. Additionally, you can share and export the scene.
 
@@ -170,8 +170,6 @@ You can view the scene you've created in the **Your scenes** section of **Scene 
 From the **Save** drop-down menu, select **Export** to retrieve the scene package. A .zip file, which is the scene package, is downloaded. The Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes. </br>
 
 :::image type="content" source="~/assets/images/apps-in-meetings/build-a-scene.png" alt-text="Screenshot shows the Export option to export a scene.":::
-
-### Delete
 
 To delete a scene you created, select **Delete scene** on the top bar.
 
