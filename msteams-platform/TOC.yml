@@ -527,7 +527,7 @@
     - name: Add link unfurling
       href: messaging-extensions/how-to/link-unfurling.md
       displayName: Domain listings can include wildcards, cache
-    - name: Message extension plugin guidelines
+    - name:  Guidelines message extension for Copilot
       href: concepts/deploy-and-publish/high-quality-message-extension.md
       displayName: high quality plugin, criteria, plugin requirements, search command description, Adaptive Card response  
 - name: Build apps for Teams meetings and calls

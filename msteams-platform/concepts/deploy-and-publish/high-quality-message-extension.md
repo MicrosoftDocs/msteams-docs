@@ -1,6 +1,6 @@
 ---
-title: Message extension plugin guidelines
-description: Learn about the guidelines and criteria to create a plugin for your message extension that can be associated with copilot.
+title: Message extension for Copilot guidelines
+description: Learn about the guidelines and criteria to create a plugin for your message extension that can be associated with Copilot.
 ms.topic: how-to
 author: v-preethah
 ms.author: surbhigupta
@@ -8,11 +8,14 @@ ms.localizationpriority: high
 ms.date: 10/18/2023
 ---
 
-# Guidelines to create a message extension plugin
+# Guidelines to create or upgrade a message extension for Copilot
 
-A plugin adds a specific feature or functionality to an existing computer program. Microsoft 365 plugins provide integration with Teams, making it easier for users to schedule, deliver, and collaborate on course content. These plugins can be used independently or in partnership, depending on the requirement.
+Microsoft 365 plugins provide integration with various Microsoft hubs such as Teams and Outlook, making it easier for users to search or create content in external systems. Message extension plugins allow Copilot to interact with APIs from other software and services via Bot to: 
 
-Message extension plugins allow Copilot to interact with APIs from other software and services to retrieve real-time information, perform new types of computations, and safely take action on the user’s behalf. We encourage you to build your message extensions to get the best out of copilot. For copilot to recognize and fetch your app, we recommend to build message extensions that search or Summarization information and  meet standards for compliance, performance, security, and user experience described in this article.
+* Search for latest information or record, for example, latest incident ticket or results of a survey. 
+* Summarize information based on multiple records. For example, Summarize all incidents tickets related to project Northwind.
+ 
+Hence, we encourage you to build or upgrade your existing message extensions to get the best out of Copilot. For Copilot to recognize your app, we recommend to build message extensions that at least, searches or summarization information and meet standards for compliance, performance, security, and user experience described in this article. 
 
 ## Mandatory requirements
 
@@ -20,13 +23,13 @@ Before you get started, ensure that you meet the following requirements:
 
 > [!div class="checklist"]
 >
-> * [Descriptions](#descriptions)
-> * [Multiple attributes](#multiple-attributes)
-> * [App response](#app-response)
+> * [Define app, command, and parameter descriptions](#descriptions)
+> * [Enhance message extension to retrieve information through Compound Utterances](#multiple-attributes)
+> * [Create rich Adaptive Card responses](#app-response)
 
 ## Descriptions
 
-A good description provides a clear and concise overview of the app’s features, helps improve the discoverability, and enhances user awareness for your app. When a user enters the app name with a verb, for example, **Find Jira tickets..**, the message extension plugin must be invoked from copilot and must be consistent.
+A good description provides a clear and concise overview of the app’s features and allows Copilot to effectively discover and perform search functionality. When a user enters the app name with a verb, for example, **Find Contoso tickets..**, the message extension plugin must always be invoked from Copilot.
 
 Ensure the descriptions follow the given standards:
 
@@ -38,9 +41,9 @@ Ensure the descriptions follow the given standards:
 
 ### App description
 
-Long and short app descriptions that must be clear and define the app's scope. To render an app as a plugin in copilot, app description must be modified to suit the following requirements of a plugin:
+Long and short app descriptions that must be clear and define the app's scope. To render an app as a plugin in Copilot, app description must be modified to suit the following requirements of a plugin:
 
-* App long description must clearly call out how users can use ME plugin in copilot and what functionality to expect. For example, User Jira Cloud in Copilot to search and summarize your tasks.
+* App long description must clearly call out how users can use ME plugin in Copilot and what functionality to expect. For example, User Jira Cloud in Copilot to search and summarize your tasks.
 * Short description must briefly define the app functionality in a natural language and can include name of the app.
 
 The following table lists the short description examples for each category:
@@ -94,7 +97,7 @@ The following table lists the command description examples for each category:
 
 ### Parameter description
 
-Each parameter supports five attributes and one attribute must be visible in the message extension search bar. Each parameter must have a good description, which must contain a combination of acceptable parameters, Enums, acronyms, and output format.
+Each parameter supports five attributes and one attribute must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, Enums, acronyms, and output format.
 
 A good parameter description explains the requirement of the system in a natural language with output format. The following are few examples on basic and advances search requests for different categories:
 
@@ -108,8 +111,8 @@ Advanced search: Search for high priority tasks related to Northwind that are du
 ```json
 "parameters": [
     {
-        "name": "Project or Task Name",
-        "title": "Name ",
+        "name": "Name",
+        "title": "Project or Task Name",
         "description": "Send project name or task name as keyword",
         "inputType": "text"
     },
@@ -129,8 +132,8 @@ Advanced search: Search for high priority tasks related to Northwind that are du
 
 # [Surveys](#tab/surveys)
 
-Basic search: Retrieve Customer Satisfaction Surveys
-Advanced search: Retrieve recent customer satisfaction survey on product Contoso which as filled by more than 100 recipients
+Basic search: Retrieve Customer Satisfaction Surveys. </br>
+Advanced search: Retrieve recent customer satisfaction survey on product Contoso which as filled by more than 100 recipients.
 
 **Manifest description example:**
 
@@ -159,8 +162,8 @@ Advanced search: Retrieve recent customer satisfaction survey on product Contoso
 
 # [CRM](#tab/crm)
 
-Basic search: Fetch me qualified leads
-Advanced search: Fetch qualified leads for which quotes are pending from last seven days
+Basic search: Fetch me qualified leads. </br>
+Advanced search: Fetch qualified leads for which quotes are pending from last seven days.
 
 **Manifest description example:**
 
@@ -189,8 +192,8 @@ Advanced search: Fetch qualified leads for which quotes are pending from last se
 
 # [General](#tab/general)
 
-Basic search: Find stocks in NASDAQ
-Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less than 2
+Basic search: Find stocks in NASDAQ.</br>
+Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less than 2.
 
 **Manifest description example:**
 
@@ -225,14 +228,12 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 ---
 
-
-
-## Multiple attributes
+## Compound Utterances
 
 > [!NOTE]
-> Search through task module isn't supported.
+> Search through task module isn't supported in Copilot.
 
-A message extension must support complex searches to retrieve accurate information. A message extension plugin must expand the scope of search beyond a single attribute and handle more than three search parameters at once. To handle multiple attributes in search, enable multi-parameter support in app manifest.
+For Copilot, a search based message extension must support compound utterances to perform deep retrieval of accurate information. To support compound utterances, we recommend you to expand the scope of search to handle two or more search parameters at once by enabling multi-parameter support in app manifest.
 
 
 ## App response
@@ -241,10 +242,10 @@ Message extensions respond to users input with an Adaptive Card. Adaptive Cards 
 
 An Adaptive Card for a message extension plugin must work well and look rich and meet the following requirements:
 
-* Adaptive Card previews and content must be part of a single response.
-* Apart from the app logo title, thumbnail, and title of the information, the information in Adaptive Card must represent the most often searched attributes. For example, data modified, author, status, and flags.
-* Adaptive Card must look good in Win32, Web, and Mobile (iOS and Android).
-* Adaptive Card must have at least one action button and maximum four actions. The following are the recommended actions types:
+* Adaptive Card previews and content must be part of a single response. [*Mandatory*]
+* Apart from the app logo title, thumbnail, and title of the information, the information in Adaptive Card must represent the most often searched attributes. For example, data modified, author, status, and flags. [*Mandatory*]
+* Adaptive Card must look good in Win32, Web, and Mobile (iOS and Android). [*Mandatory*]
+* Adaptive Card must have at least one action button and maximum four actions. The following are the recommended actions types: [*Mandatory*]
 
   > [!NOTE]
   > Action types `imBack`, `messageBack` aren't supported in a data object.
@@ -255,7 +256,7 @@ An Adaptive Card for a message extension plugin must work well and look rich and
   * `Action.Submit`: Opens Task module or Stage view using type invoke in data object.
 
 * If a user can change any information on the card through task module, stage view, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
-* Adaptive Cards must include URL as part of metadata. This allows cards to easily copy pasted from one hub to another. [*Recommended*]
+* Adaptive Cards must include URL as part of metadata. This allows cards to easily copy pasted from one hub to another. [*Mandatory*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
 ## Technical requirements
