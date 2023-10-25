@@ -107,7 +107,7 @@ items:
 
     1. In the Teams client, select **Apps** icon.
     1. Select **Manage your apps**.
-    1. Select **Upload a custom app**. If you see Upload a customized app option, uploading apps is enabled.
+    1. Select **Upload a custom app**. If you see Upload a customized app option, app upload is enabled.
 
         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-csharp/upload-custom-app-v4.png" alt-text="Screenshot of Manage your apps in Teams with the Upload an app dialog open. Apps icon, Manage your apps, Upload an app, and Upload a customised app options are highlighted in red.":::
 
@@ -262,7 +262,7 @@ items:
         When you select **F5**, Teams Toolkit:
 
         1. Registers your application with Azure Active Directory.
-        1. Registers your application for app uploading in Teams.
+        1. Registers your application for uploading in Teams.
         1. Starts your application backend running locally.
         1. Starts your application front-end hosted locally.
         1. Starts Teams in a web browser with a command to instruct Teams to upload the application (the URL is registered inside the application manifest).
@@ -305,7 +305,7 @@ items:
         <details>
         <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-        To run your app in Teams, you need a Microsoft 365 development account that allows app uploading. You can learn more about it in the Prerequisites section.
+        To run your app in Teams, you need a Microsoft 365 development account that allows app upload. You can learn more about it in the Prerequisites section.
         </details>
 
     1. Stop debugging in Visual Studio.
