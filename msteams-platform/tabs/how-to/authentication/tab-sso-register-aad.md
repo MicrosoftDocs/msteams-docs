@@ -18,7 +18,7 @@ Register your tab app in Azure AD and enable it for SSO requires making app conf
 
 Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It allows Teams Client to obtain an access token on behalf of your application and the logged-in user. You can add client IDs for the trusted mobile, desktop, and web applications that you want to preauthorize.
 
-You may also need to configure additional details, such as authenticating app users on the platform or device where you want to target your tab app.
+You might also need to configure additional details, such as authenticating app users on the platform or device where you want to target your tab app.
 
 User-level Graph API permissions are supported, that is, email, profile, offline_access, and OpenId. If you require access to additional Graph scopes, such as `User.Read` or `Mail.Read`, see [get an access token with Graph permissions](tab-sso-graph-api.md#acquire-access-token-for-ms-graph).
 
