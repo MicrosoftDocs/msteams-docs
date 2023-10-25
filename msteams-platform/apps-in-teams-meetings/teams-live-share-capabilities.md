@@ -815,7 +815,7 @@ export function CountdownTimer() {
 
 ### LiveFollowMode example
 
-[LIVE FOLLOW MODE IMAGE PLACEHOLDER]
+:::image type="content" source="../assets/images/teams-live-share/live-share-follow-mode.png" alt-text="Image showing three clients with three separate views: a presenting user, a user following the presenter, and a user with their own private view with the option to sync back to the presenter.":::
 
 > [!NOTE]
 > `LiveFollowMode` is in Beta and provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
