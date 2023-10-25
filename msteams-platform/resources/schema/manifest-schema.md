@@ -626,7 +626,7 @@ Do **not** include the domains of identity providers you want to support in your
 Teams apps that require their own SharePoint URLs to function well, includes "{teamsitedomain}" in their valid domain list.
 
 > [!IMPORTANT]
-> Don't add domains that are outside your control, either directly or through wildcards (*). For example, ***.yoursite.com** is valid, but ***.onmicrosoft.com** isn't valid as it isn't under your control.
+> Don't add domains that are outside your control, either directly or through wildcards (*). For example,***.yoursite.com** is valid, but ***.onmicrosoft.com** isn't valid as it isn't under your control.
 >
 > When using wildcards, the following rules apply:
 >

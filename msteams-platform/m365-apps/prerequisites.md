@@ -16,7 +16,7 @@ To set up your development environment:
 
 > [!div class="checklist"]
 >
-> * [Get Microsoft 365 Developer (Sandbox) Tenant and enable uploading](#prepare-a-developer-tenant-for-testing)
+> * [Get Microsoft 365 Developer (Sandbox) Tenant and enable app upload](#prepare-a-developer-tenant-for-testing)
 > * [Install Microsoft 365 Apps in your test environment](#install-microsoft-365-apps-in-your-test-environment)
 > * [*Optional*] [Enroll your Microsoft 365 tenant in Microsoft 365 Targeted Releases](#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional)
 > * [*Optional*] [Install Beta Channel builds of Microsoft 365 Apps in your test environment](#install-microsoft-365-apps-in-your-test-environment)
@@ -80,7 +80,7 @@ To install Microsoft 365 applications in your test environment:
 1. Select a local folder to store the extracted files.
 1. Go to the local folder and open *configuration-Office365-x86.xml* (or **x64.xml*, depending on your environment) in a text editor. Ensure the [*Channel*](/DeployOffice/office-deployment-tool-configuration-options#channel-attribute-part-of-updates-element) value is set according to the scenario you're testing:
 
-    | **Outlook scenario** | **Update channel** | 
+    | **Outlook scenario** | **Update channel** |
     |---------------|--------------|
     |Teams personal tabs in Outlook | `Current`|
     |Teams search-based message extensions in Outlook | `Current`|
