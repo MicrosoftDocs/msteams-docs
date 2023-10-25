@@ -48,7 +48,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Bots for Teams meetings are available in GCCH
+      - text: Apps for Teams meetings are available in GCC-High
         url: apps-in-teams-meetings/teams-apps-in-meetings.md
       - text: The new Microsoft Teams client
         url: resources/teams-updates.md
