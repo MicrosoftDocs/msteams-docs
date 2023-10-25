@@ -23,7 +23,7 @@ Get started now and transform your Teams meetings with Custom Together Mode scen
 
 ## Prerequisites
 
-Before you start, ensure that you have a basic understanding of the following:
+Before you start, ensure that you've a basic understanding of the following:
 
 * Define a scene and assign seats in a scene.
 * Create a Microsoft Developer account and familiarity with the [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
@@ -136,7 +136,7 @@ To select scenes and use custom Together Mode scenes, join the Teams meeting and
 
 1. In Teams meeting window, select **View** and select **Together Mode** from the drop-down list.
 
-1. In the **Select a scene** window, select the scene you have added to Teams from Scene studio.
+1. In the **Select a scene** window, select the scene you've added to Teams from Scene studio.
 
 1. Select **Assign seats** if you want to assign specific seats for meeting participants.
     1. .In the **Select a participant** section, from **In this meeting**, select the participant and in  the **Choose a seat** section, select a seat for the participant.
@@ -147,7 +147,7 @@ To select scenes and use custom Together Mode scenes, join the Teams meeting and
     Optionally, the meeting organizer and presenter can select **View** > **Change scene** in the meeting.
 
     >[!NOTE]
-    > At any point in time, only one scene is used homogeneously for the meeting. If a presenter or organizer changes a scene, it  changes for all. Switching in or out of custom Together Mode scenes is up to individual participants, but while in custom Together Mode scenes, all participants have the same scene.
+    > At any time, only one scene is used homogeneously for the meeting. If a presenter or organizer changes a scene, it  changes for all. Switching in or out of custom Together Mode scenes is up to individual participants, but while in custom Together Mode scenes, all participants have the same scene.
 
 1. The meeting organizer and presenter can select **View** > **Change scene** in the meeting to select any existing scene available.
 
@@ -175,7 +175,7 @@ To delete a scene you created, select **Delete scene** on the top bar.
 
 ## Sample
 
-A complex scene that uses the Z-axis is demonstrated in the step-by-step getting started sample. The following code is a scene.json sample:
+The step-by-step getting started sample demonstrates a complex scene that utilizes the Z-axis. The following code is a scene.json sample:
 
 ```json
 {
@@ -255,9 +255,9 @@ Ensure to go through the following list while creating a sample scene:
 
 **Asset:** Each asset contains a filename, width, height, and position on the X and Y-axis.
 
-**Participants:** Each participant has its own video feed, which is segmented so only the foreground is rendered. Custom Together Mode scenes support **ZoomIn** in on the current meeting participants.
+**Participants:** Each participant has its own video feed, which is segmented to render only the foreground.  Custom Together Mode scenes support **ZoomIn** in on the current meeting participants.
 
-**Seat:** Each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is generated automatically and is altered as per preference. The seating order number corresponds to the order of people joining the call.
+**Seat:** Each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is automatically generated and is altered according to preference. The seating order number corresponds to the order of people joining the call.
 
 Now that you've gone through the sample scene.json file, you can use the custom Together Mode scenes to engage in scenes.
 
