@@ -2,7 +2,7 @@
 title: Build your first app with SPFx
 metadata:
   title: Hello World with SPFx
-  description: In this tutorial, you learn to build Hello World app with SPFx. The step-by-step guide helps you to install toolkit, setup development tenant, and you can enable app uploading.
+  description: In this tutorial, you learn to build Hello World app with SPFx. The step-by-step guide helps you to install toolkit, setup development tenant, and you can enable app upload.
   audience: Developer
   level: Beginner
   ms.date: 05/09/2022
@@ -104,7 +104,7 @@ items:
     After creating the app, you must load your app in Teams without distributing it. This process is known as uploading. Sign in to your Microsoft 365 account to view this option.
       
     > [!NOTE]
-    > App uploading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
+    > App upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
 
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
@@ -112,7 +112,7 @@ items:
 
     1. In the Teams client, select **Store** icon.
     1. Select **Manage your apps**.
-    1. Look for the option to **Upload a custom app**. If you see the option, uploading apps is enabled.
+    1. Look for the option to **Upload a custom app**. If you see the option, app upload is enabled.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="bot home":::
 
