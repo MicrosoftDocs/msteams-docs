@@ -107,7 +107,7 @@ For more info, see [Extend Teams apps across Microsoft 365](../../m365-apps/over
 Teams APIs that previously took a callback parameter have been updated to return a JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object. These include the following APIs:
 
 ```js
-app.getContext, app.initialize, appInstallDialog.openAppInstallDialog, app.openLink, authentication.authenticate, authentication.getAuthToken, authentication.getUser, authentication.registerAuthenticationHandlers was removed to support using Promises, calendar.openCalendarItem, calendar.composeMeeting, call.startCall, chat.getChatMembers, conversations.openConversation, location.getLocation, location.showLocation, mail.openMailItem, mail.composeMail, pages.backStack.navigateBack, pages.navigateCrossDomain, pages.navigateToTab, pages.tabs.getMruTabInstances, pages.tabs.getTabInstances, pages.getConfig, pages.config.setConfig, pages.backStack.navigateBack, people.selectPeople, teams.fullTrust.getConfigSetting, teams.fullTrust.joinedTeams.getUserJoinedTeams
+app.getContext, app.initialize, appInstallDialog.openAppInstallDialog, app.openLink, authentication.authenticate, authentication.getAuthToken, authentication.getUser, authentication.registerAuthenticationHandlers was removed to support using Promises, calendar.openCalendarItem, calendar.composeMeeting, call.startCall, chat.getChatMembers, conversations.openConversation, location.getLocation, location.showLocation, mail.openMailItem, mail.composeMail, pages.backStack.navigateBack, pages.navigateToTab, pages.tabs.getMruTabInstances, pages.tabs.getTabInstances, pages.getConfig, pages.config.setConfig, pages.backStack.navigateBack, people.selectPeople, teams.fullTrust.getConfigSetting, teams.fullTrust.joinedTeams.getUserJoinedTeams
 ```
 
 You'll need to update the way your code calls any of these APIs to use Promises. For example, if your code is calling a Teams API like this:
@@ -239,7 +239,6 @@ The `pages` namespace includes functionality for running and navigating webpages
 | `initializeWithFrameContext` | `pages.initializeWithFrameContext` |
 | `registerFocusEnterHandler` | `pages.registerFocusEnterHandler`
 | `registerFullScreenHandler` | `pages.registerFullScreenHandler` |
-| `navigateCrossDomain` | `pages.navigateCrossDomain` |
 | `returnFocus` | `pages.returnFocus` |
 | `shareDeepLink` | `pages.shareDeepLink` |
 
