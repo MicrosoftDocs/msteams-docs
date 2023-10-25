@@ -1212,7 +1212,7 @@ const startingCameraPosition = {
   z: 0,
 };
 
-// Example component for using useLivePresence
+// Example component for using useLiveFollowMode
 export const MyLiveFollowMode = () => {
     const {
       state,
