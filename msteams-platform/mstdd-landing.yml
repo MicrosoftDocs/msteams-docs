@@ -48,6 +48,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Introduced additional `extensions` sub-properties in developer preview manifest schema.
+        url: resources/schema/manifest-schema-dev-preview.md
       - text: The new Microsoft Teams client
         url: resources/teams-updates.md
       - text: Use callTranscript API to fetch meeting transcript from all meetings
@@ -66,8 +68,6 @@ landingContent:
         url: graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings
       - text: Adaptive Card-based Loop component (Developer preview)
         url: m365-apps/cards-loop-component.md
-      - text: Teams Toolkit v17.7 extension within Visual Studio
-        url: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md
 
     - linkListType: reference
       links:
