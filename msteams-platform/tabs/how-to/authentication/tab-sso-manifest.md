@@ -1,6 +1,6 @@
 ---
 title: Update manifest for enabling SSO for tabs
-description: Update Teams manifest for enabling Single sign-on (SSO) for tabs and upload it into Teams client for testing SSO authentication.
+description: Update Teams app manifest for enabling Single sign-on (SSO) for tabs and upload it into Teams client for testing SSO authentication.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
@@ -129,7 +129,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 > [!NOTE]
 > During debug, you can use ngrok to test your app in Azure AD. In that case, you need to replace the subdomain in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` with the ngrok URL. You'll need to update the URL whenever your ngrok subdomain changes. For example, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
 
-## Upload and Preview in Teams
+## Upload an app and Preview in Teams
 
 You've configured the tab app to enable SSO in Azure AD, in app code, and in the app manifest file. You can now upload your tab app in Teams, and preview it in Teams environment.
 

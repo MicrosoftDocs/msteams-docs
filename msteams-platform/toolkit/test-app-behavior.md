@@ -19,7 +19,7 @@ You can upload your Teams app to Microsoft Teams without having to publish to yo
 
 > [!IMPORTANT]
 >
-> * Uploading of apps is possible only in Government Community Cloud (GCC) and isn't possible in GCC-High and Department of Defense (DOD).
+> * App upload is possible only in Government Community Cloud (GCC) and isn't possible in GCC-High and Department of Defense (DOD).
 > * App installation is supported only on Teams desktop client.
 
 ## Prerequisites

@@ -136,7 +136,7 @@ While creating Teams app using SPFx environment, you must have a SharePoint coll
 
 ## Verify app upload permission
 
-After creating the app, you must load your app in Teams without distributing it. This process is known as uploading. Sign in to your Microsoft 365 account to view this option.
+After creating the app, you must load your app in Teams without distributing it. This process is known as app upload. Sign in to your Microsoft 365 account to view this option.
 
 You can verify if the app upload permission is enabled using either Visual Studio Code or Teams client.
 
@@ -160,7 +160,7 @@ You can use this method to verify app upload permission only after you have crea
 
 1. Verify if you can see the option **Sideloading enabled** as shown in the following image:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading_1.png" alt-text="Screenshot shows the uploading enabled option highlighted in red.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading_1.png" alt-text="Screenshot shows the app upload enabled option highlighted in red.":::
 
 </details>
 <br>
@@ -177,16 +177,16 @@ You can use this method to verify app upload permission only after you have crea
 
 </details>
 
-### Enable uploading using admin center
+### Enable app upload using admin center
 
-If uploading option isn’t visible in Teams Toolkit extension in Visual Studio Code or if the option to upload a custom app isn’t available in Teams, it indicates that you don't have the required permission for uploading.
+If the app upload option isn’t visible in Teams Toolkit extension in Visual Studio Code or if the option to upload a custom app isn’t available in Teams, it indicates that you don't have the required permission for uploading.
 
-You must enable uploading for your app in Teams:
+You must enable app upload in Teams:
 
 * If you're a tenant admin, enable the uploading setting for your tenant or organization in the Teams admin center.
 * If you aren't a tenant admin, contact your tenant admin to enable uploading.
 
-If you have admin rights, you can enable uploading:
+If you have admin rights, you can enable app upload:
 
   1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
 
@@ -213,7 +213,7 @@ If you have admin rights, you can enable uploading:
   5. Select **Save**.
 
      > [!Note]
-     > It can take up to 24 hours for uploading to become active. In the meantime, you can use **upload for your tenant** to test your app. To upload the .zip package file of the app, see [upload custom apps](/microsoftteams/teams-app-setup-policies).
+     > It can take up to 24 hours for app upload to become active. In the meantime, you can use **upload for your tenant** to test your app. To upload the .zip package file of the app, see [upload custom apps](/microsoftteams/teams-app-setup-policies).
 
      Ensure that you have the app upload permission using the steps mentioned in [verify app upload permission using Visual Studio Code or Teams client](#verify-app-upload-permission).
 

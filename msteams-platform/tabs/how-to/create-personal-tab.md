@@ -670,9 +670,9 @@ You can use the CLI with the `teamsfx` command. Verify that the command is worki
 
 A tenant is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your app. Let's verify if you're ready to develop with the tenant.
 
-### Enable uploading option
+### Enable app upload option
 
-After creating the app, you must load your app in Teams without distributing it. This process is known as uploading. Sign in to your Microsoft 365 account to view this option.
+After creating the app, you must load your app in Teams without distributing it. This process is known as app upload. Sign in to your Microsoft 365 account to view this option.
 
 Do you already have a tenant and the admin access? Let's check if you really do!
 
@@ -680,7 +680,7 @@ Verify if you can upload apps in Teams:
 
 1. In the Teams client, select **Apps**.
 1. Select **Manage your apps**.
-1. Select **Upload a custom app**. If you see Upload a custom app option, uploading apps is enabled.
+1. Select **Upload a custom app**. If you see Upload a custom app option, app upload is enabled.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG" alt-text="Screenshot of Manage your apps in Teams with the Upload an app dialog open. Apps icon, Manage your apps, Upload an app, and Upload a custom app option highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG":::
 
@@ -874,7 +874,7 @@ To build and run your app:
     <details>
     <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-    To run your app in Teams, you need a Microsoft 365 development account that allows app uploading. You can learn more about it in the Prerequisites section.
+    To run your app in Teams, you need a Microsoft 365 development account that allows app upload. You can learn more about it in the Prerequisites section.
 
     </details>
 
