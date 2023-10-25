@@ -46,7 +46,7 @@ items:
 
     ### Check for app upload option
 
-    After creating the app, you must load your app in Teams without distributing it. This loading is known as app uploading. Sign in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. This loading is known as app upload. Sign in to your Microsoft 365 account to view this option.
 
      > [!NOTE]
      > App upload is necessary for previewing and testing apps in Teams local environment. Enable app upload to preview and test your app in Teams locally.
