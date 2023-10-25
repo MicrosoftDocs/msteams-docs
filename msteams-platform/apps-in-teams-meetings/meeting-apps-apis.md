@@ -28,7 +28,7 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. | [TeamsJS library](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
 |[**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
-|[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
+|[**Receive real-time Teams meeting events**](#receive-real-time-teams-meeting-events)|Receive real-time meeting events, such as meeting start and end or participant join and leave.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 | [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio state setting for the meeting user.| [TeamsJS library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 | [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa.| [TeamsJS library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
@@ -1314,10 +1314,14 @@ The following table provides the error codes:
 | **404** | Meeting not found or not started. If you receive this error, ensure that you start the meeting and select start captions. After captions are enabled in the meeting, you can begin POSTing captions into the meeting.|
 | **500** |Internal server error. For more information, [contact support or provide feedback](../feedback.md).|
 
-## Get real-time Teams meeting events API
+## Receive real-time Teams meeting events
+
+You can receive real-time meeting events such as meeting start and end or participant join and leave events.
+
+### Receive meeting start and end events
 
 > [!NOTE]
-> Real-time Teams meeting events are supported for scheduled and channel meetings.
+> Meeting start and end events are supported for scheduled and channel meetings.
 
 The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot. The actual start and end time of a meeting are different from scheduled start and end time. The meeting details API provides the scheduled start and end time. The event provides the actual start and end time.
 
@@ -1523,6 +1527,161 @@ The following code provides an example of meeting end event payload:
 | **value.StartTime** | The meeting start time in UTC. |
 | **value.EndTime** | The meeting end time in UTC. |
 | **locale**| The locale of the message set by the client. |
+
+### Receive meeting participant events
+
+Your bot can receive real-time meeting events such as participant join and leave events. A bot can receive the participant events only if subscribed to these events in Developer Portal.
+
+> [!NOTE]
+>
+> * Participant events are supported only for scheduled meetings.
+> * For a bot to receive participant events, ensure that you add the bot to the meeting before a participant joins or leaves the meeting.
+
+To subscribe to participant events, follow these steps:
+
+1. In [Developer Portal](https://dev.teams.microsoft.com/) open your bot app or import an existing app.
+1. In the **Meeting event subscriptions** section, select the events:
+    * Participant join
+    * Participant leave
+1. Select **Save**
+
+   :::image type="content" source="~/assets/images/apps-in-meetings/participant-events.png" alt-text="Screenshot shows how developer portal display for participant events.":::
+1. Ensure that the `OnlineMeetingParticipant.Read.Chat` RSC permission is configured in your app manifest.
+
+   If your app doesn't have the RSC permission, add it through the **Configure** > **Permissions** section of your app in Developer Portal. For more information, see [RSC permissions.](~/graph-api/rsc/resource-specific-consent.md)
+
+The following examples show how to capture the participant join and leave events:
+
+# [Participant join event](#tab/participant-join-event) 
+
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
+
+```csharp
+//Invoked on participant join a meeting
+protected override async Task OnTeamsMeetingParticipantsJoinAsync(MeetingParticipantsEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+{
+  await turnContext.SendActivityAsync("Member has joined the meeting.");
+  return;
+}
+```
+
+# [Participant leave event](#tab/participant-leave-event) 
+
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
+
+```csharp
+//Invoked on participant leave a meeting
+protected override async Task OnTeamsMeetingParticipantsLeaveAsync(MeetingParticipantsEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+{
+  await turnContext.SendActivityAsync("Member left the meeting.");
+  return;
+}
+```
+
+---
+
+Following are the examples of the participant join and leave event payloads:
+
+# [Participant join event](#tab/participant-join-event1) 
+
+The following is an example of the participant join event payload:
+
+```json
+{ 
+
+    "type": "event", 
+    "name": "application/vnd.microsoft.meetingParticipantJoin",
+    "timestamp": "2023-02-23T19:34:07.478Z", 
+    "channelId": "msteams", 
+    "serviceUrl": "https://smba.trafficmanager.net/amer/", 
+    "from": { 
+        "id": "29:id_xyz" 
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "conversationType": "groupchat", 
+        "id": "19:meeting_threadId@thread.v2" 
+    }, 
+    "recipient": { 
+        "id": "28:botid" 
+    },  
+    "value": { 
+       "members": [ 
+       { 
+        "user": { 
+            "tenantId": "tenantid", 
+            "objectId": "user_object_Id", 
+            "id": "29:userId ", 
+            "name": "Test User", 
+            "aadObjectId": " user_object_Id " 
+        },   
+        "meeting": { 
+            "inMeeting": true, 
+            "role": "Organizer" //Attendee, Organizer, Presenter 
+        },  
+        }], 
+    }, 
+    "channelData": { 
+        "tenant": { 
+            "id": "tenantId" 
+        }, 
+        "meeting": { 
+            "id": "encoded_meetingId" 
+        } 
+    } 
+} 
+```
+
+# [Participant leave event](#tab/participant-leave-event1) 
+
+The following is an example of the participant leave event payload:
+
+```json
+{ 
+
+    "type": "event", 
+    "name": "application/vnd.microsoft.meetingParticipantLeave",
+    "timestamp": "2023-02-23T19:34:07.478Z", 
+    "channelId": "msteams", 
+    "serviceUrl": "https://smba.trafficmanager.net/amer/", 
+    "from": { 
+        "id": "29:id_xyz" 
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "conversationType": "groupchat", 
+        "id": "19:meeting_threadId@thread.v2" 
+    }, 
+    "recipient": { 
+        "id": "28:botid" 
+    },  
+    "value": { 
+       "members": [ 
+       { 
+        "user": { 
+            "tenantId": "tenantid", 
+            "objectId": "user_object_Id", 
+            "id": "29:userId ", 
+            "name": "Test User", 
+            "aadObjectId": " user_object_Id " 
+        },   
+        "meeting": { 
+            "inMeeting": false
+        },  
+       }], 
+    }, 
+    "channelData": { 
+        "tenant": { 
+            "id": "tenantId" 
+        }, 
+        "meeting": { 
+            "id": "encoded_meetingId" 
+        } 
+    } 
+} 
+```
+
+---
 
 ## Get incoming audio state
 
