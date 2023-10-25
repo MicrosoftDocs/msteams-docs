@@ -112,10 +112,10 @@ items:
 
    ### Check for app upload option
 
-   After creating the app, you must load your app in Teams without distributing it. This process is known as app uploading. Sign in to your Microsoft 365 account to view this option.
+   After creating the app, you must load your app in Teams without distributing it. This process is known as app upload. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > App uploading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams local environment.
+    > App upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams local environment.
 
    Do you already have a tenant, and an admin access? Let's check if you really do!
 
@@ -124,7 +124,7 @@ items:
     1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps**.
     1. Select **Upload an app**.
-    1. Look for the option to **Upload a custom app**. If you see the option, uploading apps is enabled.
+    1. Look for the option to **Upload a custom app**. If you see the option, app upload is enabled.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-latest.png" alt-text="Screenshot shows the bot home." lightbox="~\assets\images\teams-toolkit-v2\spfx-custom-new2.png":::
 
@@ -341,7 +341,7 @@ items:
 
         1. Checks for the following prerequisites:
           * You're logged in with a Microsoft 365 account.
-          * App uploading is enabled for your Microsoft 365 account.
+          * App upload is enabled for your Microsoft 365 account.
           * Supported Node.js version is installed.
           * Development certificate for localhost is installed.           
           * Port is available for the tab app.
@@ -397,7 +397,7 @@ items:
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-      To successfully run your app in Teams, ensure that you've enabled app uploading in your Teams account. You can learn more about app uploading in the Prerequisites section.
+      To successfully run your app in Teams, ensure that you've enabled app upload in your Teams account. You can learn more about app uploading in the Prerequisites section.
 
       </details>
 

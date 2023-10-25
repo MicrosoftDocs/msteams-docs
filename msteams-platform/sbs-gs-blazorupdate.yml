@@ -424,7 +424,7 @@ items:
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-      To successfully run your app in Teams, ensure that you've enabled app uploading in your Teams account. You can learn more about app uploading in the Prerequisites section.
+      To successfully run your app in Teams, ensure that you've enabled app upload in your Teams account. You can learn more about app upload in the Prerequisites section.
 
 - title: Preview your first bot app
   durationInMinutes: 1
