@@ -341,7 +341,7 @@ Example for RSC permissions for a user:
 To install your app on which you've enabled RSC permission in a team, chat, or user, follow these steps:
 
 1. Ensure that you've configured [consent settings](#configure-consent-settings) for team, chat, or user.
-1. [Sideload your app in Teams](#sideload-your-app-in-teams).
+1. [Upload your app in Teams](#upload-your-app-in-teams).
 
 ### Configure consent settings
 
@@ -407,9 +407,9 @@ The default value of the property `isUserPersonalScopeResourceSpecificConsentEna
 
 <br>
 
-### Sideload your app in Teams
+### Upload your app in Teams
 
-If your Teams admin allows custom app uploads, you can [sideload your app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team, chat, or user.
+If your Teams admin allows custom app uploads, you can [upload your app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team, chat, or user.
 
 ## Verify app RSC permission granted to your app
 

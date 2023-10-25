@@ -22,7 +22,7 @@ The process to update your search-based Teams message extension involves the fol
 >
 > * Update your app manifest (previously called Teams app manifest).
 > * Add the Microsoft 365 channel for your bot.
-> * Sideload your updated app in Teams.
+> * Upload your updated app in Teams.
 
 The rest of this guide walks you through these steps and shows how to preview your message extension in Outlook for Windows desktop and web.
 
@@ -156,9 +156,9 @@ Azure Active Directory (AD) single sign-on (SSO) for message extensions works th
    |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
    |Outlook mobile | 27922004-5251-4030-b22d-91ecd9a37ea4 |
 
-## Sideload your updated message extension in Teams
+## Upload your updated message extension in Teams
 
-The final step is to sideload your updated message extension ([app package](/microsoftteams/platform/concepts/build-and-test/apps-package)) into Teams. After you complete, message extension appears in your installed *Apps* from the compose message area.
+The final step is to upload your updated message extension ([app package](/microsoftteams/platform/concepts/build-and-test/apps-package)) into Teams. After you complete, message extension appears in your installed *Apps* from the compose message area.
 
 1. Package your Teams application (manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you used Teams Toolkit to create your app, you can easily do this using the **Zip Teams App Package** option in the **UTILITY** section of Teams Toolkit. Select the `manifest.json` file for your app and the appropriate environment.
 
@@ -174,7 +174,7 @@ The final step is to sideload your updated message extension ([app package](/mic
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Screenshot shows the Upload a custom app option in Teams.":::
 
-After it's sideloaded through Teams, your message extension is available in Outlook for Windows desktop and web.
+After it's uploaded through Teams, your message extension is available in Outlook for Windows desktop and web.
 
 ## Preview your message extension in Outlook
 

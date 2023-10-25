@@ -19,15 +19,13 @@ Complete the following steps to update the app package:
 
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
-
     The sample comes with its own manifest and is designed to build an app package when the project is built. On .NET, the manifest.json file can be located in Visual Studio in Manifest under ```Microsoft.Teams.Samples.HelloWorld.Web```. On Node.js, this is done by typing `gulp` at the command line in the root directory of the project.
 
      In Visual Studio, the manifest.json file is located in under **Manifest** in `Microsoft.Teams.Samples.HelloWorld.Web`. This step is described by the following image:  
-    
-    <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
-    
-    You can build the app package on Node.js by typing `gulp` at the command line in the root directory of the project.
 
+    <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
+
+    You can build the app package on Node.js by typing `gulp` at the command line in the root directory of the project.
 
     ```bash
     $ gulp
@@ -105,15 +103,15 @@ The bot that was imported from the sample doesn't have an associated App ID. You
 
 Complete the following steps to setup your bot:
 
-1. Select **Delete** next to the imported bot in the bot list. Now there are no bots left to show. 
+1. Select **Delete** next to the imported bot in the bot list. Now there are no bots left to show.
 1. Select **Setup** to display the **Set up a bot** dialog box.
 
     <img  width="450px" alt="Adding a bot dialog" src="~/assets/images/get-started/Setupbot.png"/>
 
 1. Add a bot name **Contoso bot** and select all three check boxes under **Scope**.
-1. Choose **Save** to exit the dialog box. App Studio registers your bot with Microsoft and displays your new bot in the bot list. 
+1. Choose **Save** to exit the dialog box. App Studio registers your bot with Microsoft and displays your new bot in the bot list.
 1. Now open a text file in notepad and copy and paste your new bot ID into it.
-1. Click **Generate New Password**, and note the password in the same text file you noted your bot App ID.
+1. Select **Generate New Password**, and note the password in the same text file you noted your bot App ID.
 1. Update the **Bot endpoint address** to `https://yourteamsapp.ngrok.io/api/messages`, and replace `yourteamsapp.ngrok.io` with the URL that you used when hosting your app.
 1. Now save your text file as you must add the information from the file to your hosted app to allow secure communication with your bot.
 
@@ -153,8 +151,8 @@ Complete the following steps to setup your message extension:
 
 After entering the details of your app, complete the following steps to register your app in Teams:
 
-1. Use **Test and distribute** of App Studio to install your app in Teams. 
-1. Update your hosted application with the App ID and password for your bot. For the sample app, use the same App ID and password for both bot and message extension. 
+1. Use **Test and distribute** of App Studio to install your app in Teams.
+1. Update your hosted application with the App ID and password for your bot. For the sample app, use the same App ID and password for both bot and message extension.
 1. Select **Test and distribute**  under **Finish** in the left-hand pane of App Studio:
 
     <img  width="450px" alt="Testing your app" src="~/assets/images/get-started/Testanddistribute.png"/>
@@ -162,9 +160,9 @@ After entering the details of your app, complete the following steps to register
 1. To upload your app to Teams, select the **Install** button under **Test and Distribute**:
 
     <img  width="450px" alt="Adding a message extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
-    
+
     > [!NOTE]
-    > If you are unable to sideload the app, verify whether you have [enabled custom app uploading](../../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option).
+    > If you are unable to upload the app, verify whether you have [enabled custom app uploading](../../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option).
 
 1. Select the **Search** box in the **Add to a team** section and select a team to add the sample app. You can set up a special team for testing.
 1. Select the **Install** button at the bottom of the dialog box.
