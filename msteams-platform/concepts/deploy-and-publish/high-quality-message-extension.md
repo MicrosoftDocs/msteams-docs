@@ -10,12 +10,12 @@ ms.date: 10/18/2023
 
 # Guidelines to create or upgrade a message extension for Copilot
 
-Microsoft 365 plugins provide integration with various Microsoft hubs such as Teams and Outlook, making it easier for users to search or create content in external systems. Message extension plugins allow Copilot to interact with APIs from other software and services via Bot to: 
+Microsoft 365 plugins provide integration with various Microsoft hubs such as Teams and Outlook, making it easier for users to search or create content in external systems. Message extension plugins allow Copilot to interact with APIs from other software and services via Bot to:
 
-* Search for latest information or record, for example, latest incident ticket or results of a survey. 
+* Search for latest information or record, for example, latest incident ticket or results of a survey.
 * Summarize information based on multiple records. For example, Summarize all incidents tickets related to project Northwind.
- 
-Hence, we encourage you to build or upgrade your existing message extensions to get the best out of Copilot. For Copilot to recognize your app, we recommend to build message extensions that at least, searches or summarization information and meet standards for compliance, performance, security, and user experience described in this article. 
+
+Hence, we encourage you to build or upgrade your existing message extensions to get the best out of Copilot. For Copilot to recognize your app, we recommend to build message extensions that at least, searches or summarization information and meet standards for compliance, performance, security, and user experience described in this article.
 
 ## Mandatory requirements
 
@@ -47,7 +47,6 @@ Long and short app descriptions that must be clear and define the app's scope. T
 * Short description must briefly define the app functionality in a natural language and can include name of the app.
 
 The following table lists the short description examples for each category:
-
 
 # [Tasks](#tab/tasks)
 
@@ -93,7 +92,6 @@ The following table lists the short description examples for each category:
   },
 ```
 
-
 # [CRM](#tab/crm)
 
 **Description**: Search and view customer leads.
@@ -118,7 +116,7 @@ The following table lists the short description examples for each category:
 
 # [General](#tab/general)
 
-**Description**:  Stock and share look up tool. 
+**Description**:  Stock and share look up tool.
 
 **App description example:**
 
@@ -379,12 +377,16 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 For Copilot, a search based message extension must support compound utterances to perform deep retrieval of accurate information. To support compound utterances, we recommend you to expand the scope of search to handle two or more search parameters at once by enabling multi-parameter support in app manifest.
 
+The search parameters must have good descriptions with a combination of acceptable parameter, Enums, acronyms, and output format. For more information and examples, see [Parameter description](#parameter-description).
 
 ## Adaptive Card response
 
 Message extensions respond to users input with an Adaptive Card. An Adaptive Card for a message extension plugin must work well and look rich and meet the following requirements:
 
 * A response template must include an Adaptive Card and preview card information as part of the same template. [*Mandatory*]
+
+  :::image type="content" source="../../assets/images/Copilot/api-me-high-quality-criteria-response.png" alt-text="Screenshot shows the message extension  Preview Card and Adaptive Card response in Teams." border="false":::
+
 * Apart from the app logo title, thumbnail, and title of the information, the information in the Adaptive Card must represent the most often searched attributes. For example, data modified, author, status, and flags. [*Mandatory*]
 * Adaptive Card must look good in Win32, Web, and Mobile (iOS and Android). [*Mandatory*]
 * Adaptive Card must have at least one action button and maximum four actions. The following are the recommended actions types: [*Mandatory*]
