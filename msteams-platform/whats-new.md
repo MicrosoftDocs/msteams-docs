@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 October**
 
-* ***October 11, 2023***: [Webhooks and connectors can now be developed to operate within GCC-High environments.](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+* ***October 26, 2023***: [Webhooks and connectors can now be developed to operate within GCC-High environments.](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 * ***October 25, 2023***: [Configure your bot to receive meeting participant events.](apps-in-teams-meetings/meeting-apps-apis.md#receive-meeting-participant-events)
 * ***October 11, 2023***: [Introduced the new Microsoft Teams client to provide better experience for your apps and users.](resources/teams-updates.md)
 * ***October 05, 2023***: [Use callTranscript API to fetch meeting transcript from all meetings.](graph-api/meeting-transcripts/overview-transcripts.md)
