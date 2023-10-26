@@ -170,7 +170,7 @@ To add a bot:
 From the Developer Portal, you can go to Bot Framework portal and configure your bot to update icon and other properties.
 
   > [!NOTE]
-  > Environment variables are not supported in Bot id.
+  > Bot ID doesn't support environment variables.
 
 ## See also
 
