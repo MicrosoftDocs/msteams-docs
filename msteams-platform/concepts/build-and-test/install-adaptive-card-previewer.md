@@ -55,6 +55,8 @@ You can install Adaptive Card Previewer using **Extensions** in Visual Studio Co
 
    After successful installation of ACP in Visual Studio Code, the Adaptive Card Previewer icon appears in the Visual Studio Code activity bar.
 
+---
+
 ## Preview your Adaptive Card
 
 1. Download the [Adaptive Card sample](https://dev.azure.com/devdiv/_apis/resources/Containers/15555474/Drop?itemPath=Drop%2Fsamples-0.1.0-alpha.dbba2cf.zip).
