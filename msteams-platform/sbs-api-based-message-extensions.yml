@@ -1,23 +1,28 @@
 ### YamlMime:Tutorial
-title:  Build your first app using Teams AI library
+title:  Build API-based message extension
 metadata:
-  title: Build your first app using Teams AI library
-  description: In this learn module, you'll learn how to build a bot with Teams AI library and set up, build, and deploy a bot app with Teams Toolkit.
+  title: Build API-based message extension
+  description: In this learn module, learn how to build a message extension using an OpenAPI Description document and Response rendering template to interact with external services.
   audience: Developer
   level: Advanced
-  ms.date: 10/21/2021
+  ms.date: 10/16/2023
   ms.topic: interactive-tutorial
-  nextTutorialHref: bots/how-to/Teams conversational AI/coversational-ai-faq.md
-  nextTutorialTitle: Teams AI FAQs
+  nextTutorialHref: messaging-extensions/build-bot-based-message-extension.md                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  nextTutorialTitle: Build message extension using Bot Framework
   ms.custom: mvc
   ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
 
-    API-based Messaging Extensions can significantly enhance the functionality of your Teams apps by allowing them to interact with external services. This can help streamline workflows by reducing the need to switch between different applications.
+    > [!NOTE]
+    >
+    > * API-based message extensions only support search commands.
+    > * API-based message extensions are available only in [public developer preview](resources/dev-preview/developer-preview-intro.md).
 
-    You can use API message extension to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a Messaging Extension to fetch and display customer data directly from Teams. This can help save time and improve efficiency by reducing the need to switch between different applications. This feature is supported on all platforms where Teams is available, including desktop, web, and mobile. 
+    Message extensions built using API (API-based) significantly enhance the functionality of your Teams apps by allowing them to interact with external services. API-based message extensions can help streamline workflows by reducing the need to switch between different applications.
+
+    You can use API-based message extensions to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a messaging extension to fetch and display customer data directly from Teams, which helps save time and improve efficiency by reducing the need to switch between different applications. This feature is supported on all platforms where Teams is available, including desktop, web, and mobile. 
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -27,69 +32,12 @@ items:
 
    | Install | For using... |
    | --- | --- |
-   |[Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use version 5. |
    |[Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, or call - all in one place.|
-   |[Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    |[Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-   |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) or [Azure OpenAI](https://azure.microsoft.com/free/)|First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must have create an [Azure OpenAI service](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal) before you begin.|
    |[Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
-   | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store. |
-
-
-   ## Prepare development environment
-
-   After you've installed the required tools, set up the development environment. 
-
-
-   ### Install the Teams Toolkit
-
-   The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
-    
-   You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`.
-
-
-   # [Visual Studio Code](#tab/vscode)
-
-   1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
-   1. In the search box, enter **Teams Toolkit**.
-   1. Select **Install** next to the Teams Toolkit.
-
-      :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation." lightbox="~/assets\images\teams-toolkit-v2\prerequisites\install-toolkit-vscodeversion-1.png":::
-
-    The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
-
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
-
-   You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
-
-   > [!NOTE]
-   > The latest version of Teams Toolkit is v5.
-
-   # [Command line](#tab/cli)
-
-   To install the TeamsFx CLI, use the `npm` package manager:
-
-   ``` bash
-   npm install -g @microsoft/teamsfx-cli
-   ```
-
-   Depending on your configuration, you might need to use `sudo` to install the CLI:
-
-   ``` bash
-   sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
-   ```
-
-   This condition is more common on Linux and macOS systems.
-
-   Ensure you add the npm global cache to your path. This step is normally done as part of the Node.js installer.
-
-   You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
-
-   > [!CAUTION]
-   > Before you can run TeamsFx in PowerShell terminals, you must enable the 'remote signed' execution policy for PowerShell.
-
-   ---
+   |[Azure account](https://azure.microsoft.com/free/) | Access to Azure resources.|
+   |OpenAPI Description (OAD) document| A document that describes the capabilities of your API. For more information, see [OpenAPI Description](https://learn.openapis.org/specification/structure.html).|
 
    ## Set up your Teams development tenant
 
@@ -100,7 +48,7 @@ items:
    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams local environment.
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you can't preview and test your app in Teams local environment.
 
    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
@@ -135,598 +83,506 @@ items:
 
    Now you’ve got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to build first.
 
-- title: Create project workspace for your bot app
-  durationInMinutes: 1
+
+- title: Create OpenAPI Description document
+  durationInMinutes: 5
   content: |
 
-    Let's create your first bot app.
+    ## OpenAPI Description
+  
+    OpenAPI Description (OAD) is the industry-standard specification that outlines how OpenAPI files are structured and outlined. It's a language-agnostic, human-readable format for describing APIs. It's easy for both humans and machines to read and write. The schema is machine-readable and represented in either YAML or JSON.
     
-    The bot capability of a Teams app creates a chatbot or a conversational bot. You use it to run simple and automated tasks, for example, providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
-
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Diagram showing this app has three features. Bot is highlighted.":::
+    To interact with the APIs, an OpenAPI Description document is necessary. The OpenAPI Description document must meet the following criteria:
     
-    As you've already prepared for creating these apps, you can set up a new Teams project for creating the bot app.
+    * The `auth` property must not be specified.
+    * JSON and YAML are the supported formats.
+    * OpenAPI Versions 2.0 and 3.0.x are supported.
+    * Teams doesn't support the oneOf, anyOf, allOf, and not (swagger.io) constructs.
+    * Constructing arrays for the request isn't supported, however, nested objects within a JSON request body are supported.
+    * The request body, if present, must be application/Json to ensure compatibility with a wide range of APIs.
+    * Define an HTTPS protocol server URL for the `servers.url` property.
+    * Only single parameter search is supported.
+    * Only one required parameter without a default value is allowed.
+    * Only POST and GET HTTP methods are supported.
+    * The OpenAPI Description document must have an `operationId`.
+    * The operation must not have required Header or Cookie parameters without default values.
+    * A command must have exactly one parameter.
+    * Ensure that there are no remote references in the OpenAPI Description document.
+    * A required parameter with a default value is considered optional.
 
-    In this tutorial, you'll learn:
+    We've used the following OpenAPI Description as an example for this tutorial:
 
-    1. [How to set up a new bot project with Teams Toolkit.](#create-your-bot-project-workspace)
-    1. [About the directory structure of your app project.](#take-a-tour-of-the-bot-app-source-code)
-
-    > [!IMPORTANT]
-    > Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
-
-    ## Create your bot project workspace
-
-    If the prerequisites are in place, let's begin!
-
+    <details><summary>OpenAPI Description</summary>
+    
+    ```yml
+    openapi: 3.0.1
+    info:
+      title: OpenTools Plugin
+      description: A plugin that allows the user to find the most appropriate AI tools for their use cases, with their pricing information.
+      version: 'v1'
+    servers:
+      - url: https://gptplugin.opentools.ai
+    paths:
+      /tools:
+        get:
+          operationId: searchTools
+          summary: Search for AI Tools
+          parameters:
+            - in: query
+              name: search
+              required: true
+              schema:
+                type: string
+              description: Used to search for AI tools by their category based on the keywords. For example, "tool to create music" will give tools that can create music.
+          responses:
+            "200":
+              description: OK
+              content:
+                application/json:
+                  schema:
+                    $ref: '#/components/schemas/searchToolsResponse'
+            "400":
+              description: Search Error
+              content:
+                application/json:
+                  schema:
+                    $ref: '#/components/schemas/searchToolsError'
+    components:
+      schemas:
+        searchToolsResponse:
+          required:
+            - search
+          type: object
+          properties:
+            tools:
+              type: array
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: The name of the tool.
+                  opentools_url:
+                    type: string
+                    description: The URL to access the tool.
+                  main_summary:
+                    type: string
+                    description: A summary of what the tool is.
+                  pricing_summary:
+                    type: string
+                    description: A summary of the pricing of the tool.
+                  categories:
+                    type: array
+                    items:
+                      type: string
+                    description: The categories assigned to the tool.
+                  platforms:
+                    type: array
+                    items:
+                      type: string
+                    description: The platforms that this tool is available on.
+              description: The list of AI tools.
+        searchToolsError:
+          type: object
+          properties:
+            message:
+              type: string
+              description: Message of the error.
+          
+    ```
+    
     > [!NOTE]
-    > The Visual Studio Code UI shown is from Mac. It might differ depending on your operating system, Teams Toolkit version, and environment.
-
-    # [Visual Studio Code](#tab/vscode)
-
-    1. Open Visual Studio Code.
-    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the Visual Studio Code **Activity Bar**.
-
-    1. Select **Create a New App**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
-
-    1. Select **Bot** to create a new bot project.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app1.png" alt-text="Screenshot shows the wizard to Create New Project.":::
-
-    1. Select **Basic Bot**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
-   
-    1. Select **TypeScript** as the programming language.
-
-        :::image type="content" source="assets/images/bots/Teams-AI-library-typescript.png" alt-text="Screenshot shows the TypeScript option for programming language in Teams Toolkit.":::
-
-    1. Select **Default folder** to store your project root folder in default location.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
-
-       You can also change the default location by the following steps:
-
-       1. Select **Browse**.
-
-           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
-
-       1. Select the location for project workspace.
-       1. Select the **Select Folder**.
-
-           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot shows the folder to select.":::
-
-    1. Enter a suitable name for your app and then select **Enter**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
-
-        A dialog appears. Select **Yes, I trust the authors** or **No, I don’t trust the authors** based on your requirement.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png":::
+    > Ensure that the `required: true` property is available for only one parameter. If there are more than one required parameters, you can update the required property to `required: false` for the other parameters. 
     
-        Your Teams app with a bot capability is created in few seconds.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png" alt-text="Screenshot shows the app created." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png":::
-
-        After your app is created, the Teams Toolkit displays the following message:
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project.png" alt-text="Screenshot shows the message that the feature is successfully created.":::
-        
-        Select **Local debug** to preview your project.
-        
-    <details>
-    <summary>A quick recap of creating a Teams app.</summary>
-    Watch this short recap for creating a Teams app.
-
-    ![Create a Teams app](~/assets/videos/javascript-bot-app1.gif)
     </details>
 
-    # [Command line](#tab/cli)
+    You can validate if the OpenAPI Description document is valid. To verify, follow these steps:
 
-    Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
+    1. Go to [Swagger/OpenAPI validator](https://apitools.dev/swagger-parser/online/) and validate the OpenAPI Description document.
+    1. Save the OpenAPI Description document.
+    1. Go to [Swagger Editor](https://editor.swagger.io/).
+    1. In the left pane, paste the OpenAPI Description in the editor.
+    1. In the right pane, select **GET**.
+    1. Select **Try it out**.
+    1. Enter the values for the **search** parameter as **Tool to create music**.
+    1. Select **Execute**. The swagger editor displays a response with a list of products.
+    
+       :::image type="content" source="assets/images/Copilot/api-me-sbs-execute-get-response.png" alt-text="Screenshots shows the parameters, its values and the **EXECUTE** option in the swagger editor.":::
 
-    ``` bash
-    teamsfx new
-    ```
+    1. Go to **Server response** > **Response Body**.
+    1. Under `products`, copy the first product from the list and save it for future reference.
 
-    You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
+       :::image type="content" source="assets/images/Copilot/api-me-sbs-product-response.png" alt-text="Screenshots shows the highlighted product that is selected from the response body.":::
 
-    For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
-
-    1. Select **Create a new Teams app**.
-    1. Select **Bot** and deselect **Tab**.
-    1. Select **JavaScript** as the programming language.
-    1. Select **Enter** to select the default workspace folder.
-    1. Enter a suitable name for your app, like `HelloBot`. The name of the app must consist only of alphanumeric characters.
-
-    After you've answered all questions, your project is created.
-
-    ---
-
-    ## Take a tour of the bot app source code
-
-    After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
-
-    :::image type="content" source="../msteams-platform/assets/images/bots/Teams-AI-library-ttk-files.png" alt-text="Screenshot shows the Teams Toolkit sample bot folder Structure.":::
-
-    | Folder name | Contents |
-    | --- | --- |
-    | `env/.env.local.user` |Configuration file for local environment used by `teamsapp.yml` to customize the provisioning and deployment rules.  |
-    | `index.ts` |  Main entry point for the bot app. |
-    | `teamsBot.ts` | Teams activity handler. |
-    | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
-    | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
-    | `config.ts` | `config.ts` wraps access to environment variables that is used to set up the bots adapter. |
-    | `teamsapp.yml` |	This is the main Teams Toolkit project that defines properties and configuration stage definitions. |
-    | `teamsapp.local.yml` |This overrides teamsapp.yml with actions that enable local execution and debugging. |
-    | `infra/azure.parameters.json` | Parameters file for Azure BICEP provision for every environment. |
-
-    > [!Tip]
-    > Familiarize yourself with bots outside Teams before you integrate your first bot within Teams.
-
-- title: Build and run your first bot app
-  durationInMinutes: 1
+- title: Create response rendering template
+  durationInMinutes: 5
   content: |
 
-    After you set up your project workspace with Teams Toolkit, build your bot project. Ensure that you've signed in to your Microsoft 365 account.
+   An OpenAPI Description document requires a response rendering template for the app to respond to the GET or POST requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
 
-    ## Sign in to your Microsoft 365 account
-
-    Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
-
-    # [Visual Studio Code](#tab/viscode)
-
-    1. Open Visual Studio Code.
-    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
-    1. Select **Sign in to M365**.
-
-        Your default web browser opens to let you sign in to the account.
-
-    1. Sign in to your Microsoft 365 account using your credentials.
-    1. Close the browser when prompted and return to Visual Studio Code.
-    1. Return to Teams Toolkit within Visual Studio Code.
-
-        Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
-
-        Now you're ready to build the app and run it locally!
-
-    # [Command line](#tab/cline)
-
-    1. Sign in to Microsoft 365 with the TeamsFx CLI:
-
-        ``` bash
-        teamsfx account login m365
-        ```
-
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
-
-    2. Sign in to Azure with the TeamsFx CLI:
-
-        ``` bash
-        teamsfx account login azure
-        ```
-
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
-
-        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
-
-        Now that the development environment is configured, you can create, build, and deploy your first Teams app.
-
-    ---
-
-    ## Build an API based message extension
-
-  
-    You need to find an OpenAPI specification for the external service you want to interact with. The API spec must meet the following criteria: 
+   ### Adaptive Card template 
     
-    * It must not have auth specified.
-    * It must have at most one required parameter or property in the request body. You can make a required parameter optional and add a default value.
-    * The request body (if present) cannot contain any arrays.
-    * The server URL must be defined in the specification.
-    * If there is no operation ID, you can add one to the spec that you will be uploading for testing because an operation ID is mandatory for operations that will be Messaging Extensions. You can validate that the swagger is valid by using an online validator like [Swagger Parser](https://apitools.dev/swagger-parser/online/). Once you have found a suitable API spec, save it in a folder. 
+    
+    To create an Adaptive Card template, follow these steps:
+    
+    1. Go to [ChatGPT](https://chat.openai.com/) and ask the following query in the message compose area:
 
-    We've used the following OpenAPI specification as an example for this tutorial:
+       ```text
+        Create an Adaptive Card Template that binds to the following response:
+            "categories": [
+                "Music Generation",
+                "AI Detection"
+            ],
+            "chatbot_short_url": "https://goto.opentools.ai/c/ai-music-generator",
+            "main_summary": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. Powered by advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+            "name": "AI Music Generator",
+            "opentools_url": "https://goto.opentools.ai/ai-music-generator",
+            "platforms": [
+                "Web",
+                "App",
+                "API"
+            ]
+       ```
+     1. Select **Send message**. 
 
-    ```YAML 
+     1. ChatGPT generates a response with an Adaptive Card template that binds to the sample data. Save the Adaptive Card template for future reference.
+
+        Following is an example of the Adaptive Card template:
+
+        <details><summary>Adaptive Card template</summary>
+
+        ```json
         {
-        "openapi": "3.0.1",
-        "info": {
-            "version": "v0",
-            "title": "Open AI Klarna product Api"
-        },
-        "servers": [
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.4",
+        "body": [
             {
-                "url": "https://www.klarna.com/us/shopping"
+            "type": "TextBlock",
+            "text": "AI Music Generator",
+            "weight": "Bolder",
+            "size": "Large"
+            },
+            {
+            "type": "TextBlock",
+            "text": "Categories",
+            "size": "Medium"
+            },
+            {
+            "type": "TextBlock",
+            "text": "Music Generation, AI Detection",
+            "wrap": true
+            },
+            {
+            "type": "TextBlock",
+            "text": "Description",
+            "size": "Medium"
+            },
+            {
+            "type": "TextBlock",
+            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. Powered by advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+            "wrap": true
+            },
+            {
+            "type": "TextBlock",
+            "text": "Platform",
+            "size": "Medium"
+            },
+            {
+            "type": "TextBlock",
+            "text": "Web, App, API",
+            "wrap": true
             }
         ],
-        "tags": [
+        "actions": [
             {
-                "name": "open-ai-product-endpoint",
-                "description": "Open AI Product Endpoint. Query for products."
+            "type": "Action.OpenUrl",
+            "title": "Learn More",
+            "url": "https://goto.opentools.ai/ai-music-generator"
+            },
+            {
+            "type": "Action.OpenUrl",
+            "title": "Try It",
+            "url": "https://goto.opentools.ai/c/ai-music-generator"
             }
-        ],
-        "paths": {
-            "/public/openai/v0/products": {
-                "get": {
-                    "tags": [
-                        "open-ai-product-endpoint"
-                    ],
-                    "summary": "API for fetching Klarna product information",
-                    "operationId": "productsUsingGET",
-                    "parameters": [
-                        {
-                            "name": "countryCode",
-                            "in": "query",
-                            "description": "ISO 3166 country code with 2 characters based on the user location. Currently, only US, GB, DE, SE and DK are supported.",
-                            "required": true,
-                            "schema": {
-                                "type": "string"
-                            }
-                        },
-                        {
-                            "name": "q",
-                            "in": "query",
-                            "description": "A precise query that matches one very small category or product that needs to be searched for to find the products the user is looking for. If the user explicitly stated what they want, use that as a query. The query is as specific as possible to the product name or category mentioned by the user in its singular form, and don't contain any clarifiers like latest, newest, cheapest, budget, premium, expensive or similar. The query is always taken from the latest topic, if there is a new topic a new query is started. If the user speaks another language than English, translate their request into English (example: translate fia med knuff to ludo board game)!",
-                            "required": true,
-                            "schema": {
-                                "type": "string"
-                            }
-                        },
-                        {
-                            "name": "size",
-                            "in": "query",
-                            "description": "number of products returned",
-                            "required": false,
-                            "schema": {
-                                "type": "integer"
-                            }
-                        },
-                        {
-                            "name": "min_price",
-                            "in": "query",
-                            "description": "(Optional) Minimum price in local currency for the product searched for. Either explicitly stated by the user or implicitly inferred from a combination of the user's request and the kind of product searched for.",
-                            "required": false,
-                            "schema": {
-                                "type": "integer"
-                            }
-                        },
-                        {
-                            "name": "max_price",
-                            "in": "query",
-                            "description": "(Optional) Maximum price in local currency for the product searched for. Either explicitly stated by the user or implicitly inferred from a combination of the user's request and the kind of product searched for.",
-                            "required": false,
-                            "schema": {
-                                "type": "integer"
-                            }
-                        }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": "Products found",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "$ref": "#/components/schemas/ProductResponse"
-                                    }
-                                }
-                            }
-                        },
-                        "503": {
-                            "description": "one or more services are unavailable"
-                        }
-                    },
-                    "deprecated": false
-                }
-            }
-        },
-        "components": {
-            "schemas": {
-                "Product": {
-                    "type": "object",
-                    "properties": {
-                        "attributes": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
-                            }
-                        },
-                        "name": {
-                            "type": "string"
-                        },
-                        "price": {
-                            "type": "string"
-                        },
-                        "url": {
-                            "type": "string"
-                        }
-                    },
-                    "title": "Product"
-                },
-                "ProductResponse": {
-                    "type": "object",
-                    "properties": {
-                        "products": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/components/schemas/Product"
-                            }
-                        }
-                    },
-                    "title": "ProductResponse"
-                }
-            }
+        ]
         }
-    }
 
-    ```
-    
-    Now that you've got your API spec, you can create a Messaging Extension that uses it. To create a message extension using the OpenAPI specification document, follow these steps:
-
-    1. Go to Visual Studio Code.
-    1. From the left pane, select Teams Toolkit.
-    1. Select **Create a New App**.
-    1. Select **Message Extension**.
-    1. Select **API Based Search Message Extension**.
-    1. Select **Start with an OpenAPI Description Document**.
-    1. Select **Browse** and select the OpenAPI specification document you saved earlier. A list of APIs available in the document appears.
-    1. Select the APIs from the list and select **OK**.
-    1. If you want to save the project in the default folder, select **Default folder**. Else, select **Browse** and select the location where you want to save the project.
-    1. Enter a suitable name for your app and then select **Enter**. Teams Toolkit creates a new project.
-
-
-    ## Build and run your first bot app locally
-
-    To build and run your app in the local environment:
-
-    1. From the left pane, Select Teams Toolkit.
-    1. In the Account section, sign in with your Microsoft 365 account if you haven't already.
-    1. Under Lifecycle, select **Provision**.
-    1. From the launch configuration dropdown, select **Preview in Teams (Edge)** or **Preview in Teams (Chrome)** .
-        <!-- markdownlint-disable MD033 -->
-
-        <details>
-        <summary>Learn what happens when you run your app locally in the debugger.</summary>
-
-        In case you're wondering, when you press the **F5** key, the Teams Toolkit:
-
-        1. Checks all the following prerequisites:
-          - You're logged in with a Microsoft 365 account.
-          - Sideloading is enabled for your Microsoft 365 account.
-          - Supported Node.js version is installed.
-          - Port required by bot app is available.
-          
-        2. Install npm packages.
-        3. Starts Dev Tunnel to create an HTTP tunnel.
-        4. Registers the app in Azure Active Directory (Azure AD) and configures the app.
-        5. Registers the bot app in Bot Framework SDK and configures the bot app.
-        6. Registers the app in Teams Developer Portal and configures the app.
-        7. Starts the bot app.
-        8. Starts Teams in a web browser and sideloads the bot app.
-
-
+        ``` 
         </details>
 
-        :::image type="content" source="assets/images/teams-toolkit-v2/first-bot/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed for debugging.":::
+    1. To verify if the Adaptive Card generated binds to the sample data, follow these steps:
+       1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer/).
+       1. At the upper-left, go to **Select host app** and from the drop-down, select **Microsoft Teams**.
+       1. Go to **CARD PAYLOAD EDITOR**, paste the Adaptive Card template code.
+       1. Go to **SAMPLE DATA EDITOR**, paste the GET API response that you've saved earlier.
 
-        > [!NOTE]
-        > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens when the build is complete. This process can take three to five minutes to complete.
+          :::image type="content" source="assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data."::: 
+       
+       1. Select **Preview mode**. The Adaptive Card designer displays an Adaptive Card with the data that binds the response to the template.
+          
+          :::image type="content" source="assets/images/Copilot/api-me-sbs-adaptive-card-preview.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::   
+    
+    **Create a preview card template**
+    
+    The preview card template can contain a `title`, `subtitle` and `image` properties. If the API response doesn't have an image, you can remove the image property.
 
-        Teams runs your app in a web browser.
+    Following is an example of a preview card template:
 
-    1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
+    <details><summary>Preview card template</summary>
 
-        :::image type="content" source="assets/images/bots/conversational-AI-add-sample-bot.png" alt-text="Screenshot shows an example of the add option to add a sample bot to the local machine.":::
+    ```json
+       "previewCardTemplate": {
+            "title": "${if(name, name, 'N/A')}",
+            "subtitle": "$${if(price, price, 'N/A')}",
+        } 
+    ```
+    Create an if condition for the `title` and `subtitle` where, if name exists, the bot uses the name, else, it uses NA. For example, `"title": "Name: ${if(name, name, 'N/A')}"`. Save the preview card template for future reference.
+    </details>
 
-        Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
 
-        :::image type="content" source="assets/images/bots/conversational-ai-sample-bot-chat.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
+   ### Response rendering template
 
-     1. You can navigate to a chat message and trigger your search commands from compose message area.
+    The response rendering template must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json`](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
 
-      <!-- markdownlint-disable MD033 -->
-      <details>
-      <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
+    To create a response rendering template, follow these steps:
 
-      To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
+    1. Create a JSON file and add the following code to the file:
 
-      > [!IMPORTANT]
-      > Sideloading apps are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](concepts/app-fundamentals-overview.md#government-community-cloud) environments.
+       ```json
+       { 
+         "version": "1.0.0", 
+         "$schema": "<URL_REFERENCE_TO_SCHEMA>", 
+         "jsonPath": "", 
+         "responseLayout": "", 
+         "responseCardTemplate": { 
+        },
+        "previewCardTemplate": {
+            }
+        }
+        ```
+    1. Update the properties in the response rendering template as follows:
 
-      > [!TIP]
-      > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to sideload the app.
-      </details> 
-      
-- title: Deploy your first Teams app
+       1. `"version"`: `"1.0.0"`
+       1. `"$schema"`: `"http://adaptivecards.io/schemas/adaptive-card.json"`
+       1. `"jsonPath"`: `"tools"`
+
+          `jsonPath` is the path to the result(s) in the response JSON response. Add the `jsonPath` to the relevant data/array from the product list in the API response. In this case, the `jsonPath` is "tools". For more information on how to determiner the JSON path, see [Querying JSON with JSON path](https://www.newtonsoft.com/json/help/html/QueryJsonSelectToken.htm).
+
+       1. `"responseLayout"`: `"list"`
+
+           `responseLayout` specifies the layout of the attachments. Used for responses of type result. Supported types are list and grid. If the response body contains an object with multiple elements like text, title, and image, then the response layout must be set to `list`. If the API response contains only images or thumbnails, then the response layout must be set to `grid`.
+
+       1. `"responseCardTemplate"`: Paste the Adaptive Card template code you've saved earlier.
+
+           `responseCardTemplate` is an Adaptive Card template to map the JSON response to an Adaptive Card.
+
+       1. `"previewCardTemplate"`: Paste the preview card template code you've saved earlier.
+
+           `previewCardTemplate` is a preview card template is used to show a preview of results in the message extension flyout.
+
+    1. Save the response rendering template in the same folder you saved the OpenAPI Description document. 
+
+    The following code is an example of a Response rendering template:
+
+    <details><summary>Response rendering template</summary>
+
+    ```json
+    {
+            "version": "devPreview",
+            "jsonPath": "tools",
+            "responseLayout": "list",
+            "responseCardTemplate": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.4",
+        "body": [
+            {
+            "type": "TextBlock",
+            "text": "AI Music Generator",
+            "weight": "Bolder",
+            "size": "Large"
+            },
+            {
+            "type": "TextBlock",
+            "text": "Categories",
+            "size": "Medium"
+            },
+            {
+            "type": "TextBlock",
+            "text": "Music Generation, AI Detection",
+            "wrap": true
+            },
+            {
+            "type": "TextBlock",
+            "text": "Description",
+            "size": "Medium"
+            },
+            {
+            "type": "TextBlock",
+            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. Powered by advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+            "wrap": true
+            },
+            {
+            "type": "TextBlock",
+            "text": "Platform",
+            "size": "Medium"
+            },
+            {
+            "type": "TextBlock",
+            "text": "Web, App, API",
+            "wrap": true
+            }
+        ],
+        "actions": [
+            {
+            "type": "Action.OpenUrl",
+            "title": "Learn More",
+            "url": "https://goto.opentools.ai/ai-music-generator"
+            },
+            {
+            "type": "Action.OpenUrl",
+            "title": "Try It",
+            "url": "https://goto.opentools.ai/c/ai-music-generator"
+            }
+        ]
+        },
+        "previewCardTemplate": {
+            "title": "${if(name, name, 'N/A')}",
+            "subtitle": "$${if(price, price, 'N/A')}",
+        } 
+        }
+
+    ```
+
+    </details>
+
+- title: Create app manifest
+  durationInMinutes: 3
+  content: |
+
+    Now, you need to create an app manifest (previously called Teams app manifest). The app manifest describes how your app integrates into the Microsoft Teams product.
+
+    ### Create a Teams app manifest
+    
+    To create the manifest, follow these steps: 
+    
+    1. Create a new JSON file. Your app manifest must conform to the schema defined in the [public developer preview app manifest schema](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json).
+
+    1. Add the following code to the JSON file:
+
+       <details><summary>App manifest</summary>
+
+       ```json
+       {
+        "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+        "manifestVersion": "devPreview",
+        "version": "1.0.3",
+        "id": "<<YOUR-MICROSOFT-APP-ID>>",
+        "packageName": "com.microsoft.teams.extension",
+        "developer": {
+            "name": "Teams App, Inc.",
+            "websiteUrl": "https://www.example.com",
+            "privacyUrl": "https://www.example.com/termofuse",
+            "termsOfUseUrl": "https://www.example.com/privacy"
+        },
+        "icons": {
+            "color": "color.png",
+            "outline": "outline.png"
+        },
+        "name": {
+            "short": "Search ME API",
+            "full": "Search ME API full"
+        },
+        "description": {
+            "short": "product app for testing API MEs",
+            "full": "product app for testing API MEs"
+        },
+        "accentColor": "#FFFFFF",
+        "composeExtensions": [
+            {
+                "composeExtensionType": "",
+                "apiSpecificationFile": "",
+                "commands": [
+                    {
+                        "context": [
+                            "compose"
+                        ],
+                        "type": "query",
+                        "title": "API for fetching Klarna.",
+                        "id": "",
+                        "parameters": [
+                            {
+                                "name": "",
+                                "title": "",
+                                "description": ""
+                            }
+                        ],
+                        "description": "",
+                        "apiResponseRenderingTemplateFile": ""
+                    }
+                ]
+            }
+        ],
+        "permissions": [
+            "identity",
+            "messageTeamMembers"
+        ],
+        "validDomains": []
+       }
+       ```
+       </details>
+    
+    1. Update the app manifest properties as follows:
+
+         * Replace `<<YOUR-MICROSOFT-APP-ID>>` with bot's Microsoft App ID.
+         * Update the value for `composeExtensionType` to `apiBased`.
+         * Update the value for `apiSpecificationFile` to the path of your OpenAPI Description file. 
+         * Update the value for `commands.id` to `searchTools`.
+         * Update the value for `commands.title` to `Search for AI Tools`.
+         * Update the value for `commands.description` to `Search for AI Tools`.
+         * Update the value for `parameters.name` to `search`. If there are no parameters, then the values must be query parameters or `properties.name` if referencing a property in the request body schema.
+         * Update the `apiResponseRenderingTemplateFile` to the path of your response rendering template file.
+         * Update the value for `validDomains` to the `service URL` endpoint defined in the OpenAPI Description file. 
+         
+    1. Save the Teams app manifest in the same folder you saved the OpenAPI Description document and the response rendering template.
+        * You need a color image and outline image. These images should be included in the folder and referenced in your Teams app manifest. 
+        * Zip up the contents of the folder. The zip file must include the following files:
+          * OpenAPI Description document
+          * Response rendering template
+          * App manifest
+          * Color icon
+          * Outline icon 
+
+    
+- title: Sideload the app to Teams
   durationInMinutes: 1
   content: |
 
-    You've learned to create, build, and run Teams app with bot capability. The final step is to deploy your app on Azure.
+    Sign into Teams test environment to test your app in Teams. To sideload the app in Teams, follow these steps: 
 
-    Let's deploy the first app with bot capability on Azure using Teams Toolkit.
+    1. Go to **Microsoft Teams** and sign in using your test tenant credentials. 
+    1. Go to **Apps** > **Manage your app** > **Upload an app**.
+    1. Select **Upload a customized app**.
+    1. Select the zip file you've created and select **Open**.
+    1. Select **Add**. The app is added to Teams.
 
-    ## Sign in to your Azure account
+       :::image type="content" source="assets/images/Copilot/api-me-sbs-add-app-teams.png" alt-text="Screenshot shows a pop-up window with the Add option.":::
 
-    Use this account to access the Microsoft Azure portal and to provision new cloud resources to support your app.
+    1. Go to a chat and from the message compose area, select **+** and search for your app.
+    1. Select the app and make a search query.
 
-    # [Visual Studio Code](#tab/viscode)
+       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat  menu and the app is displayed in the flyout menu.":::
 
-    1. Open Visual Studio Code.
-    1. Open the project folder in which you created the bot app.
-    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
-    1. Select **Sign in to Azure**.
+    1. The app responds with an Adaptive Card in the chat window.
+    1. Select **Send**.
 
-        > [!TIP]
-        > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
-
-        Your default web browser opens to let you sign in to the account.
-    1. Sign in to your Azure account using your credentials.
-    1. Close the browser when prompted and return to Visual Studio Code.
-
-        The **ACCOUNTS** section in the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
-
-        Now you're ready to deploy your app to Azure!
-
-        Congratulations, you've created a Teams app! 
-        Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
-
-    # [Command line](#tab/cline)
-
-    1. Sign in to Microsoft 365 with the TeamsFx CLI:
-
-        ``` bash
-        teamsfx account login m365
-        ```
-
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
-
-    2. Sign in to Azure with the TeamsFx CLI:
-
-        ``` bash
-        teamsfx account login azure
-        ```
-
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
-
-        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
-
-        Congratulations, you've signed in your Azure account!
-        Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
-
-    ---
-
-    ## Deploy your app to Azure
-
-    Deployment consists of two steps. First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the bot app.
-    <br>
-    <br>
-    <details>
-    <summary>What's the difference between Provision and Deploy?</summary>
-    <br>
-    The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript) is copied to the resources. The <b>Deploy</b> step copies the code for your app to the resources you created during the provision step. It's common to deploy multiple times without provisioning new resources. Since the provision step can take some time to complete, it's separate from the deployment step.
-    </details>
-    <br>
-
-    # [Visual Studio Code](#tab/vscode)
-
-    Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the Visual Studio Code sidebar.
-
-    1. Select **Provision**.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the selection of provision in the cloud under Teams toolkit.":::
-
-    1. Select a subscription to use for the Azure resources.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing the subscription to use for the Azure resources.":::
-
-        Your app is hosted using Azure resources.
-
-        A dialog warns you that costs might be incurred when running resources in Azure.
-
-    1. Select **Provision**.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot showing a dialog box that costs ma be incurred when running resources in Azure.":::
-
-        The provisioning process creates resources in the Azure cloud. It might take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing a notice, which displays 'hellomsg' successfully provisioned in the cloud.":::
-
-        If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
-
-        The provisioned resource appears in the **ENVIRONMENT** section.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot showing the resource being provisioned in the environment section.":::
-
-    1. Select **Deploy** from the **LIFECYCLE** panel after provisioning is complete.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot showing deploy to cloud.":::
-
-        As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
-
-        Now, you can use the same process to deploy your Bot and Message Extension apps to Azure.
-
-    # [Command Line](#tab/cli)
-
-    In your terminal window:
-
-    1. Run `teamsfx provision`.
-
-        ``` bash
-        teamsfx provision
-        ```
-
-    When prompted, select an Azure subscription to use Azure resources.
-
-    Your app is hosted using Azure resources.
-
-    1. Run `teamsfx deploy`.
-
-        ``` bash
-        teamsfx deploy
-        ```
-
-    ---
-
-    ## Run the deployed app
-
-    After the provisioning and deployment steps are complete:
-
-    1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
-    1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
-    1. Select the **Start debugging (F5)** to launch your app from Azure.
-
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely.":::
-
-    1. Select **Add**.
-        
-        The toolkit displays a message to indicate that the app is added to Teams.
-
-        :::image type="content" source="assets/images/bots/conversational-AI-add-sample-bot2.png" alt-text="Screenshot shows an example of the add option to add a sample bot to the local machine.":::
-
-        Your app is loaded on Teams client.
-
-        :::image type="content" source="assets/images/bots/conversational-ai-sample-bot-chat2.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
-
-    <!-- markdownlint-disable MD033 -->
-    <details>
-    <summary>Learn what happens when you deployed your app to Azure</summary>
-
-    Before deployment, the application has been running locally:
-
-     * The backend runs using **Azure Functions Core Tools**.
-     * The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
-
-    Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
-
-     * The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
-     * The frontend application is deployed to an Azure Storage account configured for static web hosting.
-
-    </details>
-
-    Before deployment, the application has been running locally:
-
-      * The backend runs using **Azure Functions Core Tools**.
-      * The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
-
-      Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
-
-      * The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
-      * The frontend application is deployed to an Azure Storage account configured for static web hosting.
-
-      </details>
+       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
 
 - title: Congratulations!
   durationInMinutes: 1
   content: |
 
-    You've done it!
-
-    You've created an API based message extension.
-
-    :::image type="content" source="assets/images/bots/conversational-ai-sample-bot-chat2.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
-
-    You've completed the tutorial.
+    You've done it! 
+    You've learned to create a API-based message extension using OpenAPI Description document.
 
