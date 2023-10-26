@@ -23,11 +23,11 @@ Building Actions give developers to enhance their user's productivity by streaml
 
 [Screenshot or Gif of Actions in action]  
 
-## Understand how Actions work
+## How Actions work
 
-Action are built using a combination of **Intent** + **Object** + **Handler**. When a user intends to accomplish a task, it can be represented as intent + object, with the intent describing the user's desired action, and the object, the function to be performed.
+Actions are created through the integration of Intent, Object, and Handler. When a user intends to accomplish a task, it is represented as intent + object. The intent defines the user's desired action, and the object specifies the function to be executed.
 
-As a developer, your role is to receive the user's intent + object input and construct the corresponding handler that facilitates task completion for the users.
+As a developer, your role is to receive the user's intent and object input and construct the corresponding handler that facilitates task completion for the users.
 To build an Action, you will define the intent, object, and handler of your actions in the manifest. And in your handler, use the [Teams JS library](/javascript/api/@microsoft/teams-js) to receive the Action information to create a seamless user experience for performing users specific tasks.  
 
 ### Intent
