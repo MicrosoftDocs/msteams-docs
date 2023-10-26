@@ -8,22 +8,21 @@ ms.topic: Conceptual
 ms.subservice: m365apps
 ---
 
-# Actions
+> [!NOTE]
+> The feature is only available for Microsoft 365 app on web and desktop clients.
 
-Building Actions give developers the power to enhance their users' productivity by streamlining task completion and minimizing context switching across various M365 applications.
-This feature benefits users by:
+Actions seamlessly integrate your app into the user's workflow, ensuring effortless discovery and smooth interaction with their content. By guiding users to your app based on their intent and contextual content, Actions facilitate efficient task completion. This integration increases your app's visibility and engagement with minimal development effort.
 
-1. enabling them to accomplish tasks more efficiently
-1. Seamlessly integrates your app in their workflow. Boosting visibility and user engagement of your app.
+Building Actions give developers to enhance their user's productivity by streamlining task completion and reducing the need for context switching across various Microsoft 365 applications.
+
+# Key benefits of Actions in Microsoft 365 applications
+
+1. Enables them to accomplish tasks more efficiently.
+1. Seamlessly integrates your app in their workflow. Increases app's visibility and user engagement of your app.
 1. Empowers users to take immediate action on content files through your app, expanding the range of interactions users can have with their content.  
-Actions is currently supported in Microsoft365 App on web and desktop
 
 [Screenshot or Gif of Actions in action]  
 
-## What is an Action?
-
-Actions integrates your app into your user's workflow by enabling easy discoverability and seamless interaction with their content. By directing users to your app with their intent and contextual content, Actions enable efficient task completion. This integration not only enhances the visibility and engagement of your app but also offers these benefits with minimal development effort.
-  
 ## Understand how Actions work
 
 Action are built using a combination of **Intent** + **Object** + **Handler**. When a user intends to accomplish a task, it can be represented as intent + object, with the intent describing the user's desired action, and the object, the function to be performed.
