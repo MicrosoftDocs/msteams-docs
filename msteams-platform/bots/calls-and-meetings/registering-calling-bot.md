@@ -101,11 +101,13 @@ You can rely on an administrator to grant the permissions your app needs at the 
 > [!IMPORTANT]
 > Anytime you make a change to your application's permissions, you must also repeat the Admin consent process. Changes made in the app registration portal are not reflected until the consent has been reapplied by the tenant's administrator.
 
-### How to disable anonymous app in meeting
+### Disable anonymous bot joins meeting
 
-1. Teams admin can disable anonymous join for meetings, then no anonymous join can be done by users or apps.  
-2. If resource specific consent (RSC) permission is disabled for all apps, then no apps can be added for new meetings by users without consent, though the existing meetings might be still accessible by apps, if users already installed apps for these meetings.  
-3. If tenant admin didn’t grant `Calls.JoinGroupCall.All` app permission, and the previous two things are also disabled, then the app can’t join any meeting.
+To disable anonymous bots or users joining Teams meeting, follow the steps:
+
+1. If resource specific consent (RSC) permissions are disabled for all apps, then no apps can be added for new meetings without users consent. If users already installed apps for these meetings, the existing meetings might be still accessible by apps.
+1. If tenant admin didn’t grant `Calls.JoinGroupCall.All` application permission, the app can’t join any meeting.
+1. Teams admin can disable anonymous bot joins meetings, then no anonymous join can be done by users or apps.
 
 ## Code sample
 
