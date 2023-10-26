@@ -10,11 +10,12 @@ ms.subservice: m365apps
 
 # Actions
 
-Building Actions give developers the power to enhance their users' productivity by streamlining task completion and minimizing context switching across various M365 applications. 
+Building Actions give developers the power to enhance their users' productivity by streamlining task completion and minimizing context switching across various M365 applications.
 This feature benefits users by:
-1.	enabling them to accomplish tasks more efficiently
-1.	Seamlessly integrates your app in their workflow. Boosting visibility and user engagement of your app.
-1.	Empowers users to take immediate action on content files through your app, expanding the range of interactions users can have with their content.  
+
+1. enabling them to accomplish tasks more efficiently
+1. Seamlessly integrates your app in their workflow. Boosting visibility and user engagement of your app.
+1. Empowers users to take immediate action on content files through your app, expanding the range of interactions users can have with their content.  
 Actions is currently supported in Microsoft365 App on web and desktop
 
 [Screenshot or Gif of Actions in action]  
@@ -32,7 +33,7 @@ To build an Action, you will define the intent, object, and handler of your acti
 
 ### Intent
 
-"intent" is the objective a user wants to perform or achieve. User intent is typically represented by a verb, such as "open," or “add to.” This "intent" enables the M365 platform to display the Actions in locations that mostly align with the user's needs and intentions. This includes but not limited to, where Actions show up and how Actions are grouped or ordered. 
+"intent" is the objective a user wants to perform or achieve. User intent is typically represented by a verb, such as "open," or “add to.” This "intent" enables the M365 platform to display the Actions in locations that mostly align with the user's needs and intentions. This includes but not limited to, where Actions show up and how Actions are grouped or ordered.
 We currently enable three main intents for Actions: “open”, “addTo”, and “custom”. With the "custom" intent, developers have the flexibility to build tailored Actions to fulfill any user task.
 
 ### Object
@@ -43,9 +44,10 @@ We currently enable three main intents for Actions: “open”, “addTo”, and
 
 A "handler" is the method or mechanism to fulfill the user's intent and perform the desired action on the specified object. It is responsible for implementing the logic and functionality of the Action, ensuring a seamless and meaningful user experience.
 
-To support your users in the most meaningful way, we offer multiple types of handlers that you can build. You have the choice to direct users to the app’s page or enable them to complete tasks within a dialog. 
+To support your users in the most meaningful way, we offer multiple types of handlers that you can build. You have the choice to direct users to the app’s page or enable them to complete tasks within a dialog.
 
 Currently supported handler:
+
 * openDialog: This handler directs users to a dialog, offering a dedicated and contextualized interface for interacting with your app's features without opening the full app. This ensures a focused and efficient workflow, allowing users to complete tasks seamlessly within their current context.
 * openPage: By using the openPage handler you can drive users to your app's dedicated pages(personal tab).
 
