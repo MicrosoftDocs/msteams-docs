@@ -113,10 +113,10 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 ## Update TeamsJS references
 
-Your app needs to refer to the npm package `@microsoft/teams-js@2.5.0` (or later) to run in Outlook and the Microsoft 365 app. While code with downlevel versions is supported in Outlook and Microsoft 365 app, deprecation warnings are logged, and support for downlevel versions of TeamsJS in Outlook and Microsoft 365 app will eventually cease. To determine the latest version of TeamsJS, see [TeamsJS GitHub repository](https://github.com/OfficeDev/microsoft-teams-library-js).
+Your app needs to refer to the npm package `@microsoft/teams-js@2.5.0` (or later) to run in Outlook and the Microsoft 365 app. While code with downlevel versions is supported in Outlook and Microsoft 365 app, deprecation warnings are logged, and support for downlevel versions of TeamsJS in Outlook and Microsoft 365 app eventually ceases. To determine the latest version of TeamsJS, see [TeamsJS GitHub repository](https://github.com/OfficeDev/microsoft-teams-library-js).
 
 > [!NOTE]
-> If you need to use an earlier version of TeamsJS than v2.5.0, ensure that you add `www.microsoft365.com` to the `validMessageOrigins` (optional) array of your `app.initialize` call.
+> If you need to use an earlier version of TeamsJS than v2.5.0, ensure that you add `www.microsoft365.com` to the `validMessageOrigins` (optional) array of the `app.initialize` call.
 
 You can use Teams Toolkit to help identify and automate the required code changes to upgrade from 1.x TeamsJS versions to TeamsJS 2.x.x versions. Alternately, you can perform the same steps manually; refer to [TeamsJS library](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx) for details.
 
