@@ -271,7 +271,7 @@
         displayName: dashboard
     - name: Yeoman generator for Teams (GitHub)
       href: https://github.com/pnp/generator-teams 
-    - name: Adaptive Card Previewer
+    - name: Adaptive Card Previewer for Visual Studio Code
       items:
       - name: Overview
         href: concepts/build-and-test/adaptive-card-previewer.md

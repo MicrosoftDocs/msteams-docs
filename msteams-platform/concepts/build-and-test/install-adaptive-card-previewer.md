@@ -10,7 +10,7 @@ ms.author: surbhigupta
 # Install Adaptive Card Previewer
 
 > [!NOTE]
-> The Adaptive Card previewer (ACP) is available in [Public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> The Adaptive Card previewer is available in [Public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
 This article helps you to know about the prerequisites, how to install Adaptive Card Previewer for Visual Studio Code, and Visual Studio Code Marketplace.
 
