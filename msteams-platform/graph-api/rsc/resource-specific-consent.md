@@ -51,7 +51,7 @@ Use RSC permissions to determine the data access methods for your app. A user's 
 
 ### Basic RSC Permissions
 
-A limited set of RSC permissions have been reviewed by Microsoft privacy and security teams and have been deemed low risk. These permissions can be consented to at all times by any user when they install and use an app. The following low-risk basic permissions will always be consented to upon installation. 
+A limited set of RSC permissions have been reviewed by Microsoft privacy and security teams and have been deemed low risk. These permissions can be consented to at all times by any user when they install and use an app. The following low-risk basic permissions will always be consented to upon installation.
 
 | Permission name | Action | Type: Delegated | Type: Application |
 | ----- | ----- | :-----: | :-----: |
@@ -101,6 +101,7 @@ The following table provides RSC application permissions for a team and their ap
 |`Owner.Read.Group`|Read this group's owners.| NA | Supported |
 |`TeamsActivity.Send.Group`|Send activity feed notifications to users in this team. | NA | Supported |
 |`TeamsAppInstallation.Read.Group`|Read the apps that are installed in this team.| NA | Supported |
+|`TeamsAppInstallation.ReadWriteAndConsentSelfForChat.All`|Allows a Teams app to read, install, upgrade, and uninstall itself for any chat, without a signed-in user, and manage its permission grants for accessing those specific chats data.| NA | Supported |
 |`TeamMember.Read.Group`|Read this team's members. | NA | Supported |
 |`TeamSettings.Read.Group` | Read this team's settings.| NA | Supported |
 |`TeamSettings.ReadWrite.Group`|Read and write this team's settings.| NA | Supported |
