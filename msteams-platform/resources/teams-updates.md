@@ -56,7 +56,7 @@ The following Teams features aren't currently supported (will be available soon)
 
 * [DevTools](/microsoft-edge/devtools-guide-chromium/overview) isn't supported in the new Teams client.
   
-* [App caching](https://learn.microsoft.com/microsoftteams/platform/tabs/how-to/app-caching) isn't supported in the new Teams client.
+* [App caching](~/tabs/how-to/app-caching.md) isn't supported in the new Teams client.
 
 For more information on known issues and gaps in the new Teams client, see [new Microsoft Teams](/microsoftteams/new-teams-desktop-admin?tabs=teams-admin-center#known-issues).
 
