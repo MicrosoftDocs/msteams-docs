@@ -43,7 +43,7 @@ Where `<your-app-id>` is your application ID (f46ad259-0fe5-4f12-872d-c737b174bc
 
 Following are the different app IDs that are used for deep links:
 
-* Uploaded apps: Manifest ID
+* Custom app uploaded in Teams: Manifest ID
 * Apps submitted to org catalog: Org catalog ID
 * Apps submitted to Teams Store: Store ID
 
