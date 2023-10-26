@@ -9,6 +9,30 @@ ms.localizationpriority: high
 
 This section contains the frequently asked questions and the answers.
 
+## Adaptive Card previewer
+
+<details>
+<summary>Why do we have to use a new extension in Visual Studio Code? Can’t this extension be integrated into Teams Toolkit for Visual Studio Code?</summary>
+
+It’s a standalone extension because we're using a closed-source package to render the Adaptive Cards to ensure that we maintain consistent rendering logic with the Teams platform. The Teams Toolkit is an open-source project, and we follow CELA guidance to not include dependencies on closed-source packages that 3-P developers don't have access to.
+<br>
+&nbsp;
+</details>
+<details>
+<summary>Does this extension support all Adaptive Card features in Teams platform?</summary>
+
+No. Unfortunately, there are several [limitations](adaptive-card-previewer.md#limitations) that the Adaptive Card previewer extension can't currently support. We might solve them in future iterations.
+<br>
+&nbsp;
+</details>
+<details>
+<summary>Will Visual Studio be integrated into Adaptive Card previewer?</summary>
+
+Yes, we plan to integrate the Adaptive Card previewer into Teams Toolkit for Visual Studio directly in Q4 CY 2023, instead of through a dedicated extension. This change is due to the closed-source nature of the Teams Toolkit for Visual Studio extension.
+<br>
+&nbsp;
+</details>
+
 ## App validation
 
 <details>
@@ -203,6 +227,7 @@ You can use the following Graph API [Get user mailbox settings](/graph/api/user-
 * GET /me/mailboxSettings/timeZone
 * GET /users/{id|userPrincipalName}/mailboxSettings/timeZone
 <br>
+
 &nbsp;
 
 </details>
@@ -251,6 +276,7 @@ The app users have multiple sign-in options from the Moodle login page.
 * To sign in exclusively using Microsoft 365 credentials, enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled, the app user can see the Microsoft sign in page.
 * To sign in manually to the Moodle portal, see [Moodle](https://moodle.org/login/index.php).
 <br>
+
 &nbsp;
 
 </details>
@@ -312,6 +338,7 @@ The reason for inconsistencies with users being able unable to sign using their 
 * Clean up the **Token Issue** and retry.
 * Check if the users have **Permissions** to access the Azure application.
 <br>
+
 &nbsp;
 
 </details>
@@ -480,6 +507,7 @@ You can create a Partner Center account one of the following ways:
 * If you're new to Partner Center and don't have a Microsoft Network Account, [create an account using the Partner Center enrollment page](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page).
 * If you're already enrolled in the Microsoft Partner Network, [create an account directly from Partner Center using existing Microsoft Partner Center enrollments](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
 <br>
+
 &nbsp;
 
 </details>
@@ -557,6 +585,7 @@ Remember the following points about the email verification process:
 * You can request to resend the email by visiting your partner profile page and selecting the **Resend verification email** link.
 * To ensure you receive the email, safe-list **microsoft.com** as a secure domain and check your junk email folders.
 <br>
+
 &nbsp;
 
 </details>
@@ -571,6 +600,7 @@ Try the following steps:
 * Work with your IT department to ensure that the verification emails are not blocked by your email server.
 * Adjust your server's spam filter to allow or safe-list all emails from **<maccount@microsoft.com>**.
 <br>
+
 &nbsp;
 
 </details>
@@ -606,6 +636,7 @@ Send an email to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com<
   * Your seller ID.
   * A screenshot of the issue, if possible.
 <br>
+
 &nbsp;
 
 </details>
@@ -716,6 +747,7 @@ If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get
 2. If you have already provisioned current environment, you need to create a new environment and perform provision because ARM doesn't support moving resources.
 3. If you didn't provision current environment, you can trigger provision directly.
 <br>
+
 &nbsp;
 
 </details>
