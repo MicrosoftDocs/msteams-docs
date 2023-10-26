@@ -15,8 +15,6 @@ The app template is built using the TeamsFx SDK, which provides a simple set of 
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-new-scenario-diagram.png" alt-text="weather forecast sample notification scenario" lightbox="../../../assets/images/notification-bot/notification-new-scenario-diagram.png":::
 
-You can create notification bot in other scenarios, such as a notification can be sent in Teams DevOps channel if there's a build failure.
-
 You can send a bot notification in the following scenarios:
 
 * You want to notify everyone in a channel or chat about the same or related content​.
@@ -164,7 +162,7 @@ You can customize sending the notification to the following targets:
 
 * Notifications to a personal chat:
 
-    # [TypeScript](#tab/ts2)
+  # [TypeScript](#tab/ts2)
 
     ```TypeScript
     // list all installation targets
@@ -177,7 +175,7 @@ You can customize sending the notification to the following targets:
     }
     ```
 
-    # [C#](#tab/csharp2)
+  # [C#](#tab/csharp2)
 
     ```C#
     // list all installation targets
@@ -195,7 +193,7 @@ You can customize sending the notification to the following targets:
 
 * Notifications to a group chat:
 
-    # [TypeScript](#tab/ts3)
+  # [TypeScript](#tab/ts3)
 
     ```TypeScript
     // list all installation targets
@@ -215,7 +213,7 @@ You can customize sending the notification to the following targets:
     }
     ```
 
-    # [C#](#tab/csharp3)
+  # [C#](#tab/csharp3)
 
     ```C#
     // list all installation targets
@@ -238,7 +236,7 @@ You can customize sending the notification to the following targets:
 
 * Notifications to a channel:
 
-    # [TypeScript](#tab/ts4)
+  # [TypeScript](#tab/ts4)
 
     ```TypeScript
     // list all installation targets
@@ -263,7 +261,7 @@ You can customize sending the notification to the following targets:
     }
     ```
 
-    # [C#](#tab/csharp4)
+  # [C#](#tab/csharp4)
 
     ```C#
     // list all installation targets
@@ -509,7 +507,6 @@ TeamsFx provides you with an [Incoming Webhook notification sample](https://gith
 * Send notifications using Incoming Webhooks with Adaptive Cards.
 
 [Back to top](#notification-bot-in-teams)
-
 
 ### Send activity feed notifications
 
