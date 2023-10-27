@@ -385,6 +385,95 @@ Message extensions respond to user input with an Adaptive Card. An Adaptive Card
 
 * A response template must include an Adaptive Card and preview card information as part of the same template. [*Mandatory*]
 
+  <details><summary>Adaptive Card response example</summary>
+
+  ```json
+   {
+        "version": "1.0",
+        "responseLayout": "grid",
+        "responseCardTemplate": {
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "type": "AdaptiveCard",
+            "version": "1.4",
+            "body": [
+                {
+                    "type": "Container",
+                    "items": [
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                     "width": "stretch",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Title: ${if(title, title, 'N/A')}",
+                                            "wrap": true
+                                        },
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Description: ${if(description, description, 'N/A')}",
+                                            "wrap": true
+                                        },
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
+                                            "wrap": true
+                                        },
+                                        {
+                                            "type": "Image",
+                                            "url": "${image}",
+                                            "size": "Medium",
+                                            "$when": "${image != null}"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Column",
+                                    "width": "auto",
+                                    "items": [
+                                        {
+                                            "type": "Image",
+                                            "url": "${if(image, image, '')}",
+                                            "size": "Medium"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "FactSet",
+                            "facts": [
+                                {
+                                    "title": "Repair ID:",
+                                    "value": "${if(id, id, 'N/A')}"
+                                },
+                                {
+                                    "title": "Date:",
+                                    "value": "${if(date, date, 'N/A')}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "previewCardTemplate": {
+            "title": "Title: ${if(title, title, 'N/A')}",
+            "subtitle": "Description: ${if(description, description, 'N/A')}",
+            "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
+            "image": {
+            "url": "${image}",
+            "$when": "${image != null}"
+              }
+            }
+        }
+    }
+  ```
+
+  </details>
+
 * Apart from the app logo title, thumbnail, and title of the information, the data in the Adaptive Card must represent the most frequently searched attributes, such as, data modified, author, status, and flags. [*Mandatory*]
 * Adaptive Card must look presentable in Win32, Web, and Mobile (iOS and Android). [*Mandatory*]
 * An Adaptive Card must contain at least one action, but no more than four actions. The following actions types are recommended: [*Mandatory*]
