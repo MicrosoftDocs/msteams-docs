@@ -1,6 +1,6 @@
 ---
 title: Message extension for Copilot guidelines
-description: Learn about the guidelines and criteria to create a plugin for your message extension that can be associated with Copilot.
+description: Learn about the guidelines and criteria to extend your message extension as a plugin for Copilot.
 ms.topic: how-to
 author: v-preethah
 ms.author: surbhigupta
@@ -10,12 +10,12 @@ ms.date: 10/18/2023
 
 # Guidelines to create or upgrade a message extension for Copilot
 
-Microsoft 365 plugins provide integration with various Microsoft hubs such as Teams and Outlook, making it easier for users to search or create content in external systems. Message extension plugins allow Copilot to interact with APIs from other software and services via Bot to:
+Microsoft 365 plugins provide integration with various Microsoft hubs, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Copilot to interact with APIs from other software and services through a bot. You can:
 
-* Search for latest information or record, for example, latest incident ticket or results of a survey.
-* Summarize information based on multiple records. For example, Summarize all incidents tickets related to project Northwind.
+* Search for latest information or record, for example, latest incident ticket or survey results.
+* Summarize information based on multiple records. For example, Summarize all incidents tickets related to the project Northwind.
 
-Hence, we encourage you to build or upgrade your existing message extensions to get the best out of Copilot. For Copilot to recognize your app, we recommend to build message extensions that at least, searches or summarization information and meet standards for compliance, performance, security, and user experience described in this article.
+We recommend to build or upgrade your existing message extensions to get the best out of Copilot. To ensure Copilot recognizes your app, build message extensions that can at least, search or summarize information.   Additionally, your extensions should meet the standards for compliance, performance, security, and user experience outlined in this article.
 
 ## Mandatory requirements
 
@@ -23,28 +23,28 @@ Before you get started, ensure that you meet the following requirements:
 
 > [!div class="checklist"]
 >
-> * [Define app, command, and parameter descriptions](#descriptions)
-> * [Enhance message extension to retrieve information through Compound Utterances](#compound-utterances)
+> * [Define app, command, and parameter descriptions](#define-descriptions)
+> * [Enhance message extension to retrieve information through compound utterances](#compound-utterances)
 > * [Create rich Adaptive Card responses](#adaptive-card-response)
 
 ## Define descriptions
 
-A good description provides a clear and concise overview of the app’s features and allows Copilot to effectively discover and perform search functionality. When a user enters the app name with a verb, for example, **Find Contoso tickets..**, the message extension plugin must always be invoked from Copilot.
+A good description offers a clear and concise summary of the app’s features and allows Copilot to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets..**, the message extension plugin must be invoked from Copilot.
 
-Ensure the descriptions follow the given standards:
+Ensure that you adhere to the descriptions guidelines listed in the following table:
 
 | Action | Reason |
 | --- | --- |
-| :::image type="icon" source="../../assets/images/publish-app/dont-icon.png" border="false"::: | Anti-Compete: Developer shouldn't use name of any other plugin in both short and full description. |
-| :::image type="icon" source="../../assets/images/publish-app/dont-icon.png" border="false"::: | Responsible AI: Developers shouldn't use inappropriate or offensive keywords. |
-| :::image type="icon" source="../../assets/images/publish-app/dont-icon.png" border="false"::: | Prompt injections: Text shouldn't lead to any kind of prompt injections. Additionally, description shouldn't contain any kind of symbols or text that indicates that it can be used as code for Prompt injection. Shouldn't use phrases, functions, and codes that call their app recurrently. |
+| :::image type="icon" source="../../assets/images/publish-app/dont-icon.png" border="false"::: | Anti-Compete: Avoid using the name of any other plugin in both short and full descriptions. |
+| :::image type="icon" source="../../assets/images/publish-app/dont-icon.png" border="false"::: | Responsible AI: Avoid using inappropriate or offensive keywords. |
+| :::image type="icon" source="../../assets/images/publish-app/dont-icon.png" border="false"::: | Prompt injections: Ensure that the Text doesn't lead to prompt injections. Additionally, description must not contain symbols or text that indicate that it can be used as code for Prompt injection. Avoid using phrases, functions, and codes that call an app recurrently. |
 
 ### App description
 
-Long and short app descriptions that must be clear and define the app's scope. To render an app as a plugin in Copilot, app description must be modified to suit the following requirements of a plugin:
+Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Copilot, app description must be modified to suit the following plugin requirements:
 
-* App long description must clearly call out how users can use ME plugin in Copilot and what functionality to expect. For example, User Jira Cloud in Copilot to search and summarize your tasks.
-* Short description must briefly define the app functionality in a natural language and can include name of the app.
+* App long description must clearly explain how users can use a message extension plugin in Copilot and what functionality they can expect. For example, Use Contoso cloud in Copilot to search and summarize your tasks.
+* Short description must briefly describe the app's functionality in a natural language and can include name of the app.
 
 The following table lists the short description examples for each category:
 
@@ -277,7 +277,7 @@ Advanced search: Search for high priority tasks related to Northwind that are du
 Basic search: Retrieve Customer Satisfaction Surveys. </br>
 Advanced search: Retrieve recent customer satisfaction survey on product Contoso which as filled by more than 100 recipients.
 
-**Manifest description example:**
+**Parameter description example:**
 
 ```json
 "parameters": [
@@ -307,7 +307,7 @@ Advanced search: Retrieve recent customer satisfaction survey on product Contoso
 Basic search: Fetch me qualified leads. </br>
 Advanced search: Fetch qualified leads for which quotes are pending from last seven days.
 
-**Manifest description example:**
+**Parameter description example:**
 
 ```json
 "parameters": [
@@ -337,7 +337,7 @@ Advanced search: Fetch qualified leads for which quotes are pending from last se
 Basic search: Find stocks in NASDAQ.</br>
 Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less than 2.
 
-**Manifest description example:**
+**Parameter description example:**
 
 ```json
 "parameters": [
@@ -375,46 +375,44 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 > [!NOTE]
 > Search through task module isn't supported in Copilot.
 
-For Copilot, a search based message extension must support compound utterances to perform deep retrieval of accurate information. To support compound utterances, we recommend you to expand the scope of search to handle two or more search parameters at once by enabling multi-parameter support in app manifest.
+For Copilot, a search-based message extension must support compound utterances to perform deep retrieval of accurate information. To enable compound utterances, we recommend to expand the scope of search to handle two or more search parameters simultaneously by enabling multi-parameter support in app manifest (previously called Teams app manifest).
 
-The search parameters must have good descriptions with a combination of acceptable parameter, Enums, acronyms, and output format. For more information and examples, see [Parameter description](#parameter-description).
+The search parameters must have good descriptions with acceptable parameters, Enums, acronyms, and output format. For more information and examples, see [Parameter description](#parameter-description).
 
 ## Adaptive Card response
 
-Message extensions respond to users input with an Adaptive Card. An Adaptive Card for a message extension plugin must work well and look rich and meet the following requirements:
+Message extensions respond to user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:
 
 * A response template must include an Adaptive Card and preview card information as part of the same template. [*Mandatory*]
 
-  :::image type="content" source="../../assets/images/Copilot/api-me-high-quality-criteria-response.png" alt-text="Screenshot shows the message extension  Preview Card and Adaptive Card response in Teams." border="false":::
-
-* Apart from the app logo title, thumbnail, and title of the information, the information in the Adaptive Card must represent the most often searched attributes. For example, data modified, author, status, and flags. [*Mandatory*]
-* Adaptive Card must look good in Win32, Web, and Mobile (iOS and Android). [*Mandatory*]
-* Adaptive Card must have at least one action button and maximum four actions. The following are the recommended actions types: [*Mandatory*]
+* Apart from the app logo title, thumbnail, and title of the information, the data in the Adaptive Card must represent the most frequently searched attributes, such as, data modified, author, status, and flags. [*Mandatory*]
+* Adaptive Card must look presentable in Win32, Web, and Mobile (iOS and Android). [*Mandatory*]
+* An Adaptive Card must contain at least one action, but no more than four actions. The following actions types are recommended: [*Mandatory*]
 
   > [!NOTE]
   > Action types `imBack`, `messageBack` aren't supported in a data object.
 
   * `Action.OpenUrl`: Opens a specified URL from the Card.
-  * `Action.ToggleVisibility`: Shows or hides one or more elements in the card.
-  * `Action.Execute`: Gathers the input fields and sends as a request to your bot service.
-  * `Action.Submit`: Opens Task module or Stage view using type invoke in data object.
+  * `Action.ToggleVisibility`: Displays or hides one or more elements in the card.
+  * `Action.Execute`: Collects the input fields and sends as a request to your bot service.
+  * `Action.Submit`: Opens a Task module or Stage view using type invoke in data object.
 
 * If a user can change any information on the card through task module, stage view, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
-* Adaptive Cards must include URL as part of metadata. This allows cards to easily copy pasted from one hub to another. [*Mandatory*]
+* Adaptive Cards must include URL as part of the metadata, which allows cards to be easily copied from one hub to another.
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
 ## Technical requirements
 
-To ensure that a plugin is validated successfully, invoked, and works seamlessly, meet the following criteria:
+For a plugin to be successfully validated, invoked, and work seamlessly, ensure that it meets the following criteria:
 
 | Criteria | Fulfillment |
 |---|---|
-| Manifest version | Manifest version of message extension plugin must be 1.13 or above. [*Mandatory*] |
-| Response Time | Response mustn't be more than 9 seconds for P99, 5 Seconds for P75 and 2 Seconds for P50. [*Mandatory*] |
-| Reliability | Apps must be able to meet 99.9% availability for their services that is, if Copilot calls for a plugin 1000 times, it must give meaningful response 999 times. [*Mandatory*] |
-| Zero Regressions | In case, developers might need to resubmit their apps for validation in that case existing ME functionality, which was working before, shouldn't break. Applicable only for ISV apps and not for LOB apps. [*Mandatory*] |
-| Single sign-on (SSO) | Update your Microsoft Entra ID App Registration for SSO (if you have SSO), if applicable. [*Recommended*] |
-| Content Security Policy | Amend your Content Security Policy headers, if applicable. [*Recommended*] |
+| Manifest version | App manifest version must be 1.13 or later. [*Mandatory*] |
+| Response Time | Response time must not exceed 9 seconds for 99 percent, 5 Seconds for 75 percent and 2 Seconds for 50 percent. [*Mandatory*] |
+| Reliability | Apps must maintain 99.9% availability. For instance, if Copilot calls a plugin 1000 times, it must provide a meaningful response 999 times. [*Mandatory*] |
+| Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier must not break. This requirement is only applicable to ISV apps and not apps built for your organization. [*Mandatory*] |
+| Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
+| Content Security Policy |If applicable, modify your Content Security Policy headers. [*Recommended*] |
 
 ## See also
 
