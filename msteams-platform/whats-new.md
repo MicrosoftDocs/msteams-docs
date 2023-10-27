@@ -348,6 +348,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 October**
 
+* ***October 27, 2023***: [Extend static tabs to channels with a customizable experience.](tabs/what-are-tabs.md)
 * ***October 25, 2023***: [Introduced the `extensions` property in public developer preview app manifest schema.](resources/schema/manifest-schema-dev-preview.md#extensions)
 * ***October 25, 2023***: [Build message extensions using API (API-based) to interact directly with third-party data, apps, and services.](messaging-extensions/api-based-overview.md)
 
