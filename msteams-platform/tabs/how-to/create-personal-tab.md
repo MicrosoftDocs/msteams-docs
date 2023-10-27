@@ -1043,7 +1043,8 @@ If a context isn't defined in the app manifest, by default Teams consider the fo
 
 ```json
 "context": [ 
-   "personalTab", 
+   "personalTab",
+   "channelTab",
    "privateChatTab", 
    "meetingChatTab", 
    "meetingDetailsTab", 
