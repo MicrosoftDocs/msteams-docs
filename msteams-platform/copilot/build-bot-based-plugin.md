@@ -66,25 +66,32 @@ To trigger the Message Extension through Copilot, you can:
 
 1. Search for **Teams** and select **Microsoft Teams App**.
 
-1. Select **Plugin for Copilot**.
-1. Select **Search Results from API**.
+1. Select **Custom Search Results**.
+1. Select **Create**. The project is scaffolded.
 
-1. Select any of the following options:
-   * Start with a new API
-   * Start with an OpenAPI Description
+1. In the debug dropdown, select **Dev Tunnels** > **Create a Tunnel**.
+   1. Select the Account to use to create the tunnel. Azure, Microsoft Account (MSA), and GitHub are the account types that are supported.
+   1. Name: Enter a Name for the tunnel.
+   1. Tunnel Type: Select Persistent or Temporary.
+   1. Access: Select Public.
+   1. Select **OK**. Visual Studio displays a confirmation message that a tunnel is created.
 
-1. Select **Next**.
-1. Enter OpenAPI Description URL or select **Browse..** to upload a file from your local machine.
-1. Select the APIs from the list you want the app to interact with.
-1. Select **Create**. The project is scaffolded and you can find API spec, manifest and response template files in the **appPackage** folder.
-1. To provision, select **Project** > **Teams Toolkit** > **Provision in the cloud...**.
-1. To preview your app in Teams, Select **Project** > **Teams Toolkit** > **Preview in** > **Teams**.
+    The tunnel you've created is listed under **Dev Tunnels(MyPublicDevTunnel)**.
+
+1. Go to **Solution Explorer**.
+1. Select your project and right-click.
+1. From the menu, select **Teams Toolkit** > **Prepare Teams App Dependencies**.
+   1. If prompted, sign in with a Microsoft 365 account.
+1. In the debug dropdown, select **Microsoft Teams (browser)**. Visual Studio launces Teams web client.
+1. Select **Add**.
+1. You can search NuGet package from compose message area, or from the command box.
 
 To trigger the Message Extension through Copilot, you can:
 
-1. In the debug dropdown menu, select `Copilot (browser)`.
-1. When Teams launches in the browser, click the Apps icon from Teams client left rail to open Teams app store and search for Copilot.
-1. Open the Copilot app and send a prompt to trigger your plugin.
+1. In the debug dropdown, select **Copilot (browser)**. Visual Studio launces Teams web client.
+1. Go to **Teams web client** > **Apps**.
+1. Search for Copilot and open the Copilot app.
+1. In the Copilot app, send a prompt to trigger your plugin.
 1. Send a message to Copilot to find an NuGet package information. For example: Find the NuGet package info on Microsoft.CSharp.
 
 > [!NOTE]
@@ -107,6 +114,7 @@ To trigger the Message Extension through Copilot, you can:
    :::image type="content" source="../assets/images/Copilot/api-based-me-CLI-new-project-me.png" alt-text="Screenshot shows Teams capabilities as options in the CLI interface.":::
 
 1. Select **Custom Search Results**.
+1. Select **Start with a Bot**.
 
 1. Enter the location for your project and select **Enter**.
 
@@ -123,6 +131,12 @@ To trigger the Message Extension through Copilot, you can:
 1. Sign in to your Microsoft account. Teams Toolkit CLI will execute validation and provisions your app on Azure.
 
    :::image type="content" source="../assets/images/Copilot/api-based-CLI-provision-me.png" alt-text="Screenshot shows the sign in request and the provision stages in the command prompt window.":::
+
+1. From the list, select a subscription.
+1. From the list, select a resource group.
+1. For Cost may incur according to the usage. Do you want to provision resources in dev environment using accounts listed above?, Enter Y.
+
+   Teams Toolkit will validate your app and provision your app on Azure.
 
 1. In the command prompt window, enter the following command to preview your app in Teams:
 
@@ -173,3 +187,7 @@ To trigger the Message Extension through Copilot, you can:
 A bot based ME is created. -->
 
 ---
+
+## See also
+
+[Frequently Asked Questions](copilot-plugin-faq.md)
