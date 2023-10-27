@@ -113,7 +113,7 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 ## Update TeamsJS references
 
-Your app must refer to the npm package `@microsoft/teams-js@2.5.0` (or later) to run in Outlook and Microsoft 365. Previous versions of TeamsJS are still functional in Outlook and Microsoft 365 apps, but deprecation warnings will be logged. Support for the previous versions will eventually be discontinued in both Outlook and Microsoft 365. To determine the latest version of TeamsJS, see [TeamsJS GitHub repository](https://github.com/OfficeDev/microsoft-teams-library-js).
+Your app must refer to the npm package `@microsoft/teams-js@2.5.0` (or later) to run in Outlook and Microsoft 365. Previous versions of TeamsJS are still functional in Outlook and Microsoft 365 apps, but deprecation warnings are logged. Support for the previous versions eventually discontinue in both Outlook and Microsoft 365. To determine the latest version of TeamsJS, see [TeamsJS GitHub repository](https://github.com/OfficeDev/microsoft-teams-library-js).
 
 > [!NOTE]
 > If you want to use an earlier version of TeamsJS than v2.5.0, ensure that you add `www.microsoft365.com` to the `validMessageOrigins` (optional) array of the `app.initialize` call.
