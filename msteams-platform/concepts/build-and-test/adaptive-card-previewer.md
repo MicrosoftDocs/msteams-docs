@@ -9,13 +9,13 @@ ms.author: surbhigupta
 
 # Microsoft Adaptive Card Previewer
 
-The Microsoft Adaptive Card Previewer (ACP) helps you to preview the [Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md) when you're iterating over your card designs. It's a standalone extension bundled with Teams Toolkit that helps to preview Adaptive Card built for Teams bot, message extension, and Copilot plugin. You can open a side-by-side preview to view changes live and toggle between different themes.
+Microsoft Adaptive Card Previewer (ACP) helps you to preview the [Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md) when you're iterating over your card designs. It's a standalone extension bundled with Teams Toolkit that helps to preview Adaptive Card built for Teams bot, message extension, and Copilot plugin. You can open a side-by-side preview to view changes live and switch between different themes.
 
 :::image type="content" source="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png" alt-text="Shows the Adaptive Card Previewer extension Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png":::
 
-## Features of Adaptive Card Previewer
+## Features
 
-The ACP uses the latest rendering stack for Teams to provide a more accurate preview of Adaptive Cards.
+ACP uses the latest rendering stack for Teams to provide a more accurate preview of Adaptive Cards.
 
 The primary goal of ACP is to provide developers with a faster and more reliable solution for previewing Adaptive Card designs. The Adaptive Card supports the following features:
 
@@ -39,9 +39,9 @@ The primary goal of ACP is to provide developers with a faster and more reliable
 
   :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-default-theme.png" alt-text="Shows how to configure default theme through Visual Studio Code extension settings.":::
 
-## Benefits of Adaptive Card Previewer
+## Advantages
 
-The ACP aims to improve the developer experience for creating Adaptive Cards in Microsoft Teams with the following benefits:
+ACP aims to improve the developer experience for creating Adaptive Cards in Microsoft Teams with the following benefits:
 
 ### Fast iteration
 
@@ -56,7 +56,7 @@ The developer experiences are:
 
 ### Trustworthy previews
 
-  The ACP uses the same rendering stack as Teams and Outlook, which ensures accurate preview results align with the actual card rendering in these platforms.
+ACP uses the same rendering stack as Teams and Outlook, which ensures accurate preview results align with the actual card rendering in these platforms.
 
 ## Limitations
 
@@ -73,21 +73,21 @@ The following features of Adaptive Card aren't supported in ACP:
 <details>
 <summary>Why do we have to use a new extension in Visual Studio Code? Can’t this extension be integrated into Teams Toolkit for Visual Studio Code?</summary>
 
-It’s a standalone extension because we're using a closed-source package to render the Adaptive Cards to ensure that we maintain consistent rendering logic with the Teams platform. The Teams Toolkit is an open-source project, and we follow CELA guidance to not include dependencies on closed-source packages that 3-P developers don't have access to.
+It’s a standalone extension because we're using a closed-source package to render the Adaptive Cards to ensure that we maintain consistent rendering logic with the Teams platform. Teams Toolkit is an open-source project, and we follow CELA guidance to not include dependencies on closed-source packages that 3-P developers don't have access to.
 <br>
 &nbsp;
 </details>
 <details>
 <summary>Does this extension support all Adaptive Card features in Teams platform?</summary>
 
-No. Unfortunately, there are several [limitations](adaptive-card-previewer.md#limitations) that the ACP extension can't currently support. We might solve them in future iterations.
+No. Unfortunately, there are several [limitations](adaptive-card-previewer.md#limitations) that ACP extension can't currently support. We might solve them in future iterations.
 <br>
 &nbsp;
 </details>
 <details>
 <summary>Will Visual Studio be integrated into ACP?</summary>
 
-Yes, we plan to integrate the ACP into Teams Toolkit for Visual Studio directly in Q4 CY 2023, instead of through a dedicated extension. This change is due to the closed-source nature of the Teams Toolkit for Visual Studio extension.
+Yes, we plan to integrate ACP into Teams Toolkit for Visual Studio directly in Q4 CY 2023, instead of through a dedicated extension. This change is due to the closed-source nature of Teams Toolkit for Visual Studio extension.
 <br>
 &nbsp;
 </details>
