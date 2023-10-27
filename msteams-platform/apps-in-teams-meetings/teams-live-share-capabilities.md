@@ -638,7 +638,7 @@ export const MyCustomEvent = () => {
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-timer.png" alt-text="Screenshot shows an example of a count down timer with 9 seconds remaining.":::
 
-`LiveTimer` provides a simple countdown timer that is synchronized for everyone in a meeting. It’s useful for scenarios that have a time limit, such as a group meditation timer or a round timer for a game.
+`LiveTimer` provides a simple countdown timer that is synchronized for everyone in a meeting. It’s useful for scenarios that have a time limit, such as a group meditation timer or a round timer for a game. You can also use it to schedule tasks for everyone in the session, such as displaying a reminder prompt.
 
 # [JavaScript](#tab/javascript)
 
@@ -1529,7 +1529,7 @@ import { ContainerSchema, SharedMap, IValueChanged } from "fluid-framework";
 const host = LiveShareHost.create();
 const liveShare = new LiveShareClient(host);
 const schema: ContainerSchema = {
-  initialObjects: { exampleMap: SharedMap },
+  initialObjects: { playlistMap: SharedMap },
 };
 const { container } = await liveShare.joinContainer(schema);
 const playlistMap = container.initialObjects.playlistMap as unknown as SharedMap;
