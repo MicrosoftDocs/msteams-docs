@@ -17,25 +17,25 @@ Microsoft Adaptive Card Previewer (ACP) helps you to preview the [Adaptive Cards
 
 ACP uses the latest rendering stack for Teams to provide a more accurate preview of Adaptive Cards.
 
-The primary goal of ACP is to provide developers with a faster and more reliable solution for previewing Adaptive Card designs. The Adaptive Card supports the following features:
+ACP provides faster and more reliable solution for previewing Adaptive Card designs. The Adaptive Card supports the following features:
 
-* Instant preview of Adaptive Cards in Visual Studio Code editor through CodeLens or Command Palette.
+* Instant preview: You can preview Adaptive Cards in Visual Studio Code editor through CodeLens or Command Palette.
 
   :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-open-preview.png" alt-text="Shows the options for instant preview of adaptive cards in Visual Studio Code editor through CodeLens or Command Palette.":::
 
   :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-preview-template.gif" alt-text="Shows how the preview appears in Adaptive Card preview extension in Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/acp-preview-template.gif":::
 
-* Switch between light, dark, and high contrast themes to preview your cards so you can design with confidence.
+* Switch themes: You can switch between light, dark, and high contrast themes to preview your cards so you can design with confidence.
 
   :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-select-theme.gif" alt-text="Shows how to switch different themes in Adaptive Card Previewer.":::
 
-* Separation of data from the layout in an Adaptive Card [template language](/adaptive-cards/templating/). Use the command `Adaptive Card: New Data File` to add a data file for a template. This generates an empty file where you can bind data to your Adaptive Card template.
+* Separation of data: You can separate data from the layout in an Adaptive Card [template language](/adaptive-cards/templating/). Use the command `Adaptive Card: New Data File` to add a data file for a template. This generates an empty file where you can bind data to your Adaptive Card template.
 
-* Seamless integration with Teams Toolkit that allows a Just-In-Time installation of ACP when you're iterating on Adaptive Cards generated from Teams Toolkit project creation.
+* Seamless ACP integration with Teams Toolkit: Allows a Just-In-Time installation of ACP when you're iterating on Adaptive Cards generated from Teams Toolkit project creation.
 
   :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-preview-example.png" alt-text="Shows a sample preview of an Adaptive Card when iterating an Adaptive Card." lightbox="../../assets/images/previewer-adaptive-card/acp-preview-example.png":::
 
-* Configure default theme through Visual Studio Code extension settings `adaptiveCardPreviewer.defaultTheme`.
+* Default theme: Configure default theme through Visual Studio Code extension settings **Adaptive Card Previewer: Default Theme**.
 
   :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-default-theme.png" alt-text="Shows how to configure default theme through Visual Studio Code extension settings.":::
 
@@ -60,7 +60,7 @@ ACP uses the same rendering stack as Teams and Outlook, which ensures accurate p
 
 ## Limitations
 
-The following features of Adaptive Card aren't supported in ACP:
+The following are the limitations of ACP:
 
 * [People Picker](../../task-modules-and-cards/cards/people-picker.md)
 * [Typeahead search](../../task-modules-and-cards/cards/dynamic-search.md)
@@ -73,21 +73,21 @@ The following features of Adaptive Card aren't supported in ACP:
 <details>
 <summary>Why do we have to use a new extension in Visual Studio Code? Can’t this extension be integrated into Teams Toolkit for Visual Studio Code?</summary>
 
-It’s a standalone extension because we're using a closed-source package to render the Adaptive Cards to ensure that we maintain consistent rendering logic with the Teams platform. Teams Toolkit is an open-source project, and we follow CELA guidance to not include dependencies on closed-source packages that 3-P developers don't have access to.
+It’s a standalone extension because we're using a closed-source package to render the Adaptive Cards to ensure that we maintain consistent rendering logic with the Teams platform. Teams Toolkit is an open-source project, and we follow CELA guidance to not include dependencies on closed-source packages that third party developers don't have access to.
 <br>
 &nbsp;
 </details>
 <details>
 <summary>Does this extension support all Adaptive Card features in Teams platform?</summary>
 
-No. Unfortunately, there are several [limitations](adaptive-card-previewer.md#limitations) that ACP extension can't currently support. We might solve them in future iterations.
+No. Unfortunately, there are several [limitations](adaptive-card-previewer.md#limitations) that ACP extension can't currently support.
 <br>
 &nbsp;
 </details>
 <details>
 <summary>Will Visual Studio be integrated into ACP?</summary>
 
-Yes, we plan to integrate ACP into Teams Toolkit for Visual Studio directly in Q4 CY 2023, instead of through a dedicated extension. This change is due to the closed-source nature of Teams Toolkit for Visual Studio extension.
+Yes, we plan to integrate ACP into Teams Toolkit for Visual Studio directly in Q4 CY 2023, instead of through a dedicated extension.
 <br>
 &nbsp;
 </details>
