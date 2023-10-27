@@ -246,7 +246,7 @@ CodeLens shows the application name for the pre-authorized application ID for th
    > [!NOTE]
    > Ensure that login credentials of Teams application and M365 account are the same.
 
-3. Open [App Registrations page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), and search the Azure AD application using client ID that you copied before.
+3. Open [App Registrations page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), and search the Microsoft Entra ID application using client ID that you copied before.
   
      :::image type="content" source="images/add view2-v4.png" alt-text="view2":::
 

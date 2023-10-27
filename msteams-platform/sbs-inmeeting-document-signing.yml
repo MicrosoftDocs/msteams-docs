@@ -136,7 +136,7 @@ items:
 
     1. Go to the [Azure portal](https://portal.azure.com/).
 
-    1. Select **Azure Active Directory**.
+    1. Select **Microsoft Entra ID**.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-azure-directory.png" alt-text="Select Azure active directory":::
 

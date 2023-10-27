@@ -112,7 +112,7 @@ items:
     **To create and register new application**
 
     1. Go to the [Azure portal](https://portal.azure.com/). The system prompts you to sign in with your Microsoft account credentials
-    1. Select **Azure Active Directory**.
+    1. Select **Microsoft Entra ID**.
      
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-azure-active.png" alt-text="New registration" border="true":::
 

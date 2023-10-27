@@ -202,7 +202,7 @@ items:
 
     1. Go to the [Azure portal](https://portal.azure.com/).
 
-    1. Select **Azure Active Directory**.
+    1. Select **Microsoft Entra ID**.
 
        :::image type="content" source="~/assets/images/meetings-side-panel/AAD.png" alt-text="Screenshot of Azure services with Azure Active Directory highlighted in red.":::
 
