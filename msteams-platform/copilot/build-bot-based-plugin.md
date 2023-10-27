@@ -67,9 +67,15 @@ To trigger the Message Extension through Copilot, you can:
 1. Search for **Teams** and select **Microsoft Teams App**.
 
 1. Select **Custom Search Results**.
+
+   :::image type="content" source="../assets/images/Copilot/bot-based-VS-new-project.png" alt-text="Screenshot shows the custom search results option in Visual Studio.":::
+
 1. Select **Create**. The project is scaffolded.
 
 1. In the debug dropdown, select **Dev Tunnels** > **Create a Tunnel**.
+
+   :::image type="content" source="../assets/images/Copilot/bot-based-VS-dev-tunnel.png" alt-text="Screenshot shows the create a tunnel option in Visual Studio.":::
+
    1. Select the Account to use to create the tunnel. Azure, Microsoft Account (MSA), and GitHub are the account types that are supported.
    1. Name: Enter a Name for the tunnel.
    1. Tunnel Type: Select Persistent or Temporary.
