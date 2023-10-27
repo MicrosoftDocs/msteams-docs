@@ -147,7 +147,7 @@ teamsfx env add staging --env dev
 
 Run the provision stage in `teamsapp.yml`.
 
-Running `teamsfx provision --env local` triggesr the provision stage in `teamsapp.local.yml` instead.
+Running `teamsfx provision --env local` triggers the provision stage in `teamsapp.local.yml` instead.
 
 ### Parameters for `teamsfx provision`
 
