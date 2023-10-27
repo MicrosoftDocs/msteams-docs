@@ -116,6 +116,8 @@ To trigger the Message Extension through Copilot, you can:
 1. Select **Custom Search Results**.
 1. Select **Start with a Bot**.
 
+   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-new-project.png" alt-text="Screenshot shows the message extension, custom search results and start with a bot options selected in the CLI window.":::
+
 1. Enter the location for your project and select **Enter**.
 
 1. Enter the name of your application and select **Enter**.
@@ -133,8 +135,13 @@ To trigger the Message Extension through Copilot, you can:
    :::image type="content" source="../assets/images/Copilot/api-based-CLI-provision-me.png" alt-text="Screenshot shows the sign in request and the provision stages in the command prompt window.":::
 
 1. From the list, select a subscription.
+
+   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-resource-group.png" alt-text="Screenshot shows the login to Azure and select a subscription option in the CLI window.":::
+
 1. From the list, select a resource group.
 1. For Cost may incur according to the usage. Do you want to provision resources in dev environment using accounts listed above?, Enter Y.
+
+   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-provisoin-preview.png" alt-text="Screenshot shows the Do you want to provision resources in dev environment using accounts listed above? option in CLI window.":::
 
    Teams Toolkit will validate your app and provision your app on Azure.
 
