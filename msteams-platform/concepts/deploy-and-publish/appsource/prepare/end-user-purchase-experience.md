@@ -127,17 +127,17 @@ The following example shows how users can manage licenses for third-party apps f
 
 1. Select **Apps** > **Manage your apps**.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/client-experience-1.png" alt-text="Screenshot shows the Apps screen to select Manage your app option.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/client-experience.png" alt-text="Screenshot shows the apps screen to select manage your app option.":::
 
 1. Select **Subscriptions**. A tab appears with a list of purchases made in the tenant.
 
 1. Select an existing subscription from the list and then select **Assign licenses**.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/client-experience-2.png" alt-text="Screenshot shows the Assign licenses option of the respective app under Subscription tab.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/list-of-subscriptions.png" alt-text="Screenshot shows the assign licenses option of the respective app under subscription tab.":::
 
 1. To view license utilization and assign licenses, select **Assign licenses**.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/view-license.png" alt-text="Screenshot shows the selected assigned licenses highlighted in red.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/view-license.png" alt-text="Screenshot shows the assigned licenses highlighted in red.":::
 
 1. Search for the users or a team in the search box and select **Assign**. The users or a team are assigned with the license.
 
@@ -149,7 +149,7 @@ The following example shows how users can manage licenses for third-party apps f
 
 1. If you want to unassign a license for a user or a team, select the users or a team from the list and select **Unassign**.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/unassign-button.png" alt-text="Screenshot shows the Unassign option highlighted in red to unassign the selected users.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/unassign-button.png" alt-text="Screenshot shows the unassign option highlighted in red to unassign the selected users.":::
 
 ## Admin purchasing experience
 
