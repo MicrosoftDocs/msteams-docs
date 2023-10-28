@@ -179,7 +179,7 @@ The final step to running your app in Microsoft 365 and Outlook is to sideload y
 
 1. Select **Apps** to open the **Manage your apps** pane. Then select **Upload an app**.
 
-    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Screenshot shows the Upload an app option under Manage your apps.":::
+    :::image type="content" source="../assets/images/teams-manage-your-apps.png" alt-text="Screenshot shows the Upload an app option under Manage your apps.":::
 
 1. Choose the **Upload a custom app** option and select your app package.
 

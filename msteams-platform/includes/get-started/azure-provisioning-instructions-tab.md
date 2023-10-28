@@ -16,15 +16,15 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
 1. Select **Provision**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning commands.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot shows the provisioning commands.":::
 
 1. Select anyone of the existing subscription.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/select-subscription.png" alt-text="Screenshot showing selection of existing Subscription.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/select-subscription.png" alt-text="Screenshot shows selection of existing Subscription.":::
 
 1. Select a resource group to use for the Azure resources.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing resources for provisioning.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot shows resources for provisioning.":::
 
    > [!NOTE]
    > Your app is hosted using Azure resources.
@@ -35,23 +35,23 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
 1. Select **Provision**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="The screenshot showing the provisioning of dialog.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="The screenshot shows the provisioning of dialog.":::
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm1.png" alt-text="Screenshot showing the selection of subscription.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm1.png" alt-text="Screenshot shows the selection of subscription.":::
 
    The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="The screenshot showing the resource successfully provisioned in the cloud.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="The screenshot shows the resource successfully provisioned in the cloud.":::
 
     If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
 
     The provisioned resource appears in the **ENVIRONMENT** section.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="The screenshot showing the provisioned resource.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="The screenshot shows the provisioned resource.":::
 
 1. Select **Deploy** from the **LIFECYCLE** panel after provisioning is complete.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="The screenshot showing deploy to the cloud.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="The screenshot shows deploy to the cloud.":::
 
    As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
 
@@ -88,12 +88,12 @@ Once the provisioning and deployment steps are complete:
 1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
 1. Select the **Start debugging (F5)** to launch your app from Azure.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="The screenshot showing how to launch the app remotely.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="The screenshot shows how to launch the app remotely.":::
 
 1. Select **Add** when prompted to sideload the app onto Teams.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="The screenshot showing an app being installed.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="The screenshot shows an app being installed.":::
 
     Congratulations, your first tab app is running in your Azure environment!
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="The screenshot showing the message to try the app now or later.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="The screenshot shows the message to try the app now or later.":::
