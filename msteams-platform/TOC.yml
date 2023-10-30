@@ -273,10 +273,10 @@
       items:
       - name: Overview
         href: concepts/build-and-test/adaptive-card-previewer.md
-        displayName: Adaptive Card previewer 
+        displayName: preview, Adaptive Card, ACP 
       - name: Install Adaptive Card Previewer
         href: concepts/build-and-test/install-adaptive-card-previewer.md
-        displayName: Install Adaptive Card previewer
+        displayName: install, Adaptive Card Previewer, ACP
     - name: Yeoman generator for Teams (GitHub)
       href: https://github.com/pnp/generator-teams 
   - name: SDKs

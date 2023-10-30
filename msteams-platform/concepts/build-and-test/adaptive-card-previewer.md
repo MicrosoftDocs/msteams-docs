@@ -1,10 +1,11 @@
 ---
 title: Microsoft Adaptive Card Previewer
 author: v-vanv
-description: In this article, learn more about the Microsoft Adaptive Card previewer.
+description: In this article, learn more about the Microsoft Adaptive Card previewer, features, advantages, and k=limitations of the Adaptive Card Previewer.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
+ms.date: 20/10/2022
 ---
 
 # Microsoft Adaptive Card Previewer
@@ -51,8 +52,8 @@ The developer experiences are:
 
 * Create a new bot, messaging extension, or Copilot plugin project with Teams Toolkit or open an existing project with an Adaptive Card metadata file.
 * Open the Adaptive Card metadata file to customize the card.
-* Utilize *CodeLens* or a specific command to preview the card you're currently working on.
-* Changes to the card are reflected instantly through *Hot Reload* feature in the preview.
+* Utilize **CodeLens** or a specific command to preview the card you're currently working on.
+* Changes to the card are reflected instantly through **Hot Reload** feature in the preview.
 
 ### Trustworthy previews
 
@@ -87,7 +88,7 @@ No. Unfortunately, there are several [limitations](adaptive-card-previewer.md#li
 <details>
 <summary>Will Visual Studio be integrated into ACP?</summary>
 
-Yes, we plan to integrate ACP into Teams Toolkit for Visual Studio directly in Q4 CY 2023, instead of through a dedicated extension.
+Yes, we plan to integrate ACP into Teams Toolkit for Visual Studio directly soon, instead of through a dedicated extension.
 <br>
 &nbsp;
 </details>
