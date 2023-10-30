@@ -1000,16 +1000,16 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 
 ```
 
-## Extend static tabs to group chat and meetings
+## Extend static tabs to group chat, channels, and meetings
 
 > [!NOTE]
-> * Extending static tabs to group chat and meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md). 
-> * Extending static tabs to group chat and meetings is available only in classic Teams client and isn't available in the [new Teams client](~/resources/teams-updates.md).
+> * Extending static tabs to group chat, channels, and meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md). 
+> * Extending static tabs to group chat, channels, and meetings is available only in classic Teams client and isn't available in the [new Teams client](~/resources/teams-updates.md).
 > * To extend your static tabs to group chat, channels, and meetings, use the app manifest v1.16 or later.
 
 You can extend static tabs to group chat, channels, and meetings. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one tab per app, for example, pinning a single YouTube app tab.
 
-To extend your static tabs to group chat and meetings, update your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with the `scopes` and `context` parameters in the `staticTabs` property.
+To extend your static tabs to group chat, channels, and meetings, update your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with the `scopes` and `context` parameters in the `staticTabs` property.
 
 Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
 
