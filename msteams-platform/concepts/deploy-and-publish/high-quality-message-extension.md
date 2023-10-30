@@ -385,6 +385,8 @@ Message extensions respond to user input with an Adaptive Card. An Adaptive Card
 
 * A response template must include an Adaptive Card and preview card information as part of the same template. [*Mandatory*]
 
+  :::image type="content" source="../../assets/images/Copilot/bot-based-me-adaptive-card-response-copilot.png" alt-text="Screenshot shows the preview card and Adaptive Card as part of the same response in Copilot.":::
+
   <details><summary>Adaptive Card response example</summary>
 
   ```json
