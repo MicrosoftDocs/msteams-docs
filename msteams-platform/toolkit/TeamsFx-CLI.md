@@ -75,7 +75,7 @@ By default, `teamsfx new` is in interactive mode and guides to create new Teams 
 
 ### Parameters for `teamsfx new`
 
-| Parameter | Requirement | Description |
+| Parameter | Required | Description |
 |:---------------- |:-------------|:-------------|
 |`--app-name` | Yes| Name of your Teams application.|
 |`--interactive`| No | Select the options interactively. The options are `true` and `false` and default value is `true`.|
@@ -421,7 +421,7 @@ By default, `teamsfx new` is in interactive mode and guides to create new Teams 
 
 ### Parameters for `teamsfx new`
 
-| Parameter | Requirement | Description |
+| Parameter | Required | Description |
 |:---------------- |:-------------|:-------------|
 |`--app-name` | Yes| Name of your Teams application.|
 |`--interactive`| No | Select the options interactively. The options are `true` and `false` and default value is `true`.|
@@ -505,13 +505,13 @@ teamsfx env add staging --env dev
 
 Provision the cloud resources in the current application.
 
-| `teamsFx provision` Command | Description |
+| Command | Description |
 |:----------------  |:-------------|
 | `teamsfx provision manifest` | Provision a Teams App in Teams Developer portal with corresponding information specified in the given manifest file. |
 
 ### Parameters for `teamsfx provision`
 
-| Parameter  | Requirement | Description |
+| Parameter  | Required | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes| Select an environment for the project. |
 |`--subscription`| No | Specify an Azure Subscription ID. |
@@ -525,7 +525,7 @@ This command is used to deploy the current application. By default it deploys en
 
 ### Parameters for `teamsfx deploy`
 
-| Parameter  | Requirement | Description |
+| Parameter  | Required | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes| Select an existing environment for the project. |
 |`--open-api-document`| No | Applicable when there's APIM resource in the project. The open API document file path. |
@@ -560,7 +560,7 @@ Preview the current application from local or remote.
 
 ### Parameters for `teamsfx preview`
 
-| Parameter  | Requirement | Description |
+| Parameter  | Required | Description |
 |:----------------  |:-------------|:-------------|
 |`--local`| No | Preview the application from local. `--local` is exclusive with `--remote`. |
 |`--remote`| No | Preview the application from remote. `--remote` is exclusive with `--local`. |
@@ -569,7 +569,7 @@ Preview the current application from local or remote.
 |`--browser`| No | The browser to open Teams web client. The options are `chrome`, `edge` and `default` such as system default browser and the value is `default`. |
 |`--browser-arg`| No | Argument to pass to the browser, requires --browser, can be used multiple times, for example, --browser-args="--guest" |
 |`--sharepoint-site`| No | SharePoint site URL, such as `{your-tenant-name}.sharepoint.com` for SPFx project remote preview. |
-|`--m365-host`| Preview the application in Teams, Outlook or Microsoft 365 (formally known as Office app). Options are `teams`, `outlook` and `office`. The default value is `teams`. |
+|`--m365-host`| No |Preview the application in Teams, Outlook or Microsoft 365 (formally known as Office app). Options are `teams`, `outlook` and `office`. The default value is `teams`. |
 
 ### Scenarios for `teamsfx preview`
 
@@ -609,7 +609,7 @@ The configuration data is either in user scope or project scope.
 
 ### Parameters for `teamsfx config`
 
-| Parameter  | Requirement | Description |
+| Parameter  | Required | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes | Select an existing environment for the project. |
 |`--folder`| No | Project directory used for get or set project configuration. The default value is `./`. |
@@ -631,7 +631,7 @@ The secrets in `.userdata` file are encrypted, `teamsfx config` and can help you
 
   * [Node.js installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-nodejs)
   * [.NET SDK installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-net-sdk)
-  * [Azure Functions Core Tools installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-azure).
+  * [Azure Functions Core Tools installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-azure-functions-core-tools).
 
   To disable .NET SDK validation, use the following command:
 
@@ -677,14 +677,14 @@ TeamsFx CLI provides `teamsFx permission` commands for collaboration scenarios.
 
 ### Parameters for `teamsfx permission grant`
 
-| Parameter  | Requirement | Description |
+| Parameter  | Required | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes | Provide env name. |
 |`--email`| Yes | Provide collaborator's Microsoft 365 email address. Ensure the collaborator's account is in the same tenant with creator. |
 
 ### Parameters for `teamsfx permission status`
 
-| Parameter | Requirement | Description |
+| Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes | Provide env name. |
 |`--list-all-collaborators` | No | With this flag, Teams Toolkit CLI prints all collaborators for the project. |
