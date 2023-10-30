@@ -20,7 +20,7 @@ This article focuses on how to integrate the Live Share SDK into your app and ke
 
 ### Install the JavaScript SDK
 
-The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or yarn. You must also install Live Share peer dependencies, which include `fluid-framework` and `@fluidframework/azure-client`. If you're using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later. Finally, if you plan to use the `TestLiveShareHost` class for local browser development, you must install `@fluidframework/test-client-utils` and `start-server-and-test` packages in your `devDependencies`.
+The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or yarn. You must also install Live Share peer dependencies, which include `fluid-framework` and `@fluidframework/azure-client`. If you're using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later. You must install `@fluidframework/test-client-utils` and `start-server-and-test` packages in your `devDependencies` if you want to use the `TestLiveShareHost` class for local browser development.
 
 #### npm
 
@@ -186,7 +186,7 @@ The Live Share SDK includes a set of new distributed-data structures that extend
 | [LiveState](/javascript/api/@microsoft/live-share/livestate)           | Synchronize any JSON serializable `state` value. |
 | [LiveTimer](/javascript/api/@microsoft/live-share/livetimer)           | Synchronize a countdown timer for a given interval.                                                            |
 | [LiveEvent](/javascript/api/@microsoft/live-share/liveevent)           | Broadcast individual events with any custom data attributes in the payload.                                                             |
-| [LiveFollowMode](/javascript/api/@microsoft/live-share/livefollowmode) | Follow specific users, present to everyone in the session, and start/end suspensions.                                  |
+| [LiveFollowMode](/javascript/api/@microsoft/live-share/livefollowmode) | Follow specific users, present to everyone in the session, and start or end suspensions.                                  |
 
 ### LivePresence example
 
@@ -815,20 +815,20 @@ export function CountdownTimer() {
 
 ### LiveFollowMode example
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-follow-mode.png" alt-text="Image showing three clients with three separate views: a presenting user, a user following the presenter, and a user with their own private view with the option to sync back to the presenter.":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-follow-mode.png" alt-text="Image shows three clients with three separate views: a presenter, a user who follows the presenter, and a user with their own private view with the option to sync back to the presenter.":::
 
 > [!NOTE]
-> `LiveFollowMode` is in Beta and provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> `LiveFollowMode` is in Beta and provided as a preview only. Do not use this API in a production environment.
 
-The `LiveFollowMode` class combines `LivePresence` and `LiveState` into a single class, enabling you to easily implement follower and presenter modes into your application. This allows you to implement familiar patterns from popular collaborative apps like PowerPoint Live, Excel Live, and Whiteboard. Unlike with screen sharing, `LiveFollowMode` allows you to render content with higher quality, better accessibility, and enhanced performance. Users can easily transition between their own private views and following other users.
+The `LiveFollowMode` class combines `LivePresence` and `LiveState` into a single class, enabling you to easily implement follower and presenter modes into your application. This allows you to implement familiar patterns from popular collaborative apps such as PowerPoint Live, Excel Live, and Whiteboard. Unlike screen sharing, `LiveFollowMode` allows you to render content with high quality, improved accessibility, and enhanced performance. Users can easily switch between their private views and follow other users.
 
-To "take control" of the application for all other users in the session, you can use the `startPresenting()` function. Alternatively, you can allow users to individually choose specific users they want to follow using the `followUser()` function. In both scenarios, users can temporarily enter a private view with the `beginSuspension()` function, or sync back to the presenter with the `endSuspension()` function. Meanwhile, the `update()` function allows the local user to tell other clients in the session their own personal `stateValue`. Similar to `LivePresence`, you can listen to changes to each user's `stateValue` through a `presenceChanged` event listener.
+You can use the `startPresenting()` function to **take control** of the application for all other users in the session. Alternatively, you can allow users to individually select specific users they want to follow using the `followUser()` function. In both scenarios, users can temporarily enter a private view with the `beginSuspension()` function or sync back to the presenter with the `endSuspension()` function. Meanwhile, the `update()` function allows the local user to inform other clients in the session their own personal `stateValue`. Similar to `LivePresence`, you can listen to changes to each user's `stateValue` through a `presenceChanged` event listener.
 
-`LiveFollowMode` also exposes a `state` object, which dynamically updates depending on which user the local user is following. For example, if the local user is not following anyone, then the `state.value` property will equal the local user's most recent `stateValue` that was broadcast through `update()`. However, if the local user is following a presenter, then the `state.value` property will equal the presenting user's most recent `stateValue`. Similar to `LiveState`, you can listen to changes to the `state` value using a `stateChanged` event listener. To learn more about the `state` object, see the [IFollowModeState interface reference](/javascript/api/@microsoft/live-share/ifollowmodestate).
+`LiveFollowMode` also exposes a `state` object, which dynamically updates depending on the user the local user is following. For example, if the local user isn't following anyone, the `state.value` property matches the local user's most recent `stateValue` broadcasted through `update()`. However, if the local user is following a presenter, the `state.value` property matches the presenting user's most recent `stateValue`. Similar to `LiveState`, you can listen to changes to the `state` value using a `stateChanged` event listener. To learn more about the `state` object, see the [IFollowModeState interface reference](/javascript/api/@microsoft/live-share/ifollowmodestate).
 
-The following are a few examples in which `LiveFollowMode` can be used in your application:
+The following are a few examples in which you can use `LiveFollowMode` in your application:
 
-- Synchronizing camera positions in a 3D scene to co-browse during a design review.
+- Synchronizing camera positions in a 3D scene to cobrowse during a design review.
 - Updating the `slideId` to open in a carousel for productive presentations and discussions.
 - Broadcasting the `path` to open in your application's router.
 
@@ -1309,7 +1309,7 @@ export const MyLiveFollowMode = () => {
 
 ## Role verification for live data structures
 
-Meetings in Teams include calls, all-hands meetings, and online classrooms. Meeting participants might span across organizations, have different privileges, or simply have different goals. Hence, it’s important to respect the privileges of different user roles during meetings. Live objects are designed to support role verification, allowing you to define the roles that are allowed to send messages for each individual live object. For example, you could choose that only meeting presenters and organizers can control video playback, but still allow guests and attendees to request videos to watch next.
+Meetings in Teams include calls, all-hands meetings, and online classrooms. Meeting participants might span across organizations, have different privileges, or have different goals. Hence, it’s important to respect the privileges of different user roles during meetings. Live objects are designed to support role verification, allowing you to define the roles that are allowed to send messages for each individual live object. For example, you've selected; that only meeting presenters and organizers can control video playback, but still allow guests and attendees to request the next videos to watch.
 
 In the following example where only presenters and organizers can take control, `LiveState` is used to synchronize which user is the active presenter:
 
@@ -1467,9 +1467,9 @@ export const MyCustomState = () => {
 
 ---
 
-Listen to your customers to understand their scenarios before implementing role verification into your app, particularly for the **Organizer** role. There's no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users are either **Organizer** or **Presenter** when collaborating within an organization. If a user is an **Attendee**, it's usually an intentional decision on behalf of a meeting organizer.
+Listen to your customers to understand their scenarios before implementing role verification into your app, particularly for the **Organizer** role. There's no guarantee that a meeting organizer will be present in the meeting. As a general rule of thumb, all users are either **Organizer** or **Presenter** when collaborating within an organization. If a user is an **Attendee**, it's usually an intentional decision on behalf of a meeting organizer.
 
-In some cases, a user may have multiple roles. For example, an **Organizer** is also an **Presenter**. In addition, meeting participants that are external to the tenant hosting the meeting have the **Guest** role, but may also have **Presenter** privileges. This provides a lot of flexibility in how you use role verification in your application.
+In some cases, a user might have multiple roles. For example, an **Organizer** is also an **Presenter**. In addition, meeting participants that are external to the tenant hosting the meeting have the **Guest** role, but might also have **Presenter** privileges. This provides more flexibility in how you use role verification in your application.
 
 > [!NOTE]
 > The Live Share SDK isn't supported for **Guest** users in channel meetings.
@@ -1598,7 +1598,7 @@ export function PlaylistMapExample() {
 
 ## Local browser testing
 
-You can test the Live Share SDK locally in your browser using the `TestLiveShareHost` class without installing your app in Teams. This is useful for testing the core collaborative capabilities of your application in a familiar `localhost` environment.
+You can locally test the Live Share SDK in your browser using the `TestLiveShareHost` class without installing your app in Teams. This is useful for testing the core collaborative capabilities of your application within a familiar `localhost` environment.
 
 Example:
 
@@ -1703,7 +1703,7 @@ const LiveShareLoading = () => {
 
 ---
 
-The `TestLiveShareHost` class leverages Fluid Framework's `tinylicious` test server, rather than our production Azure Fluid Relay service. To do this, you must add a few scripts to your `package.json` to start the test server. You also must also add the `@fluidframework/test-client-utils` and `start-server-and-test` packages to the `devDependencies` in your `package.json`.
+The `TestLiveShareHost` class utilizes `tinylicious` test server from Fluid Framework, rather than our production Azure Fluid Relay service. To do this, you must add a few scripts to your `package.json` to start the test server. You must also add the `@fluidframework/test-client-utils` and `start-server-and-test` packages to the `devDependencies` in your `package.json`.
 
 ```json
 {
@@ -1719,7 +1719,7 @@ The `TestLiveShareHost` class leverages Fluid Framework's `tinylicious` test ser
 }
 ```
 
-When you start your application this way, the `LiveShareClient` will add `#{containerId}` to your URL, if one doesn't already exist. You can then copy and paste the URL into a new browser window to connect to the same Fluid container.
+When you start your application this way, the `LiveShareClient` adds `#{containerId}` to your URL, if it doesn't exist. You can then copy and paste the URL into a new browser window to connect to the same Fluid container.
 
 > [!NOTE]
 > By default, all clients connected through `TestLiveShareHost` will have `presenter` and `organizer` roles.
