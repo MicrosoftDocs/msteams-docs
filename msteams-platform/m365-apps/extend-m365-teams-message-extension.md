@@ -74,8 +74,6 @@ To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-
 
     :::image type="content" source="images/toolkit-search-sample.png" alt-text="Screenshot shows the NPM Search Connector sample in Teams Toolkit Samples gallery.":::
 
-    :::image type="content" source="images/toolkit-search-sample.png" alt-text="Screenshot shows the NPM Search Connector sample in Teams Toolkit Samples gallery.":::
-
 1. Select preferred programming language.
 1. Select a location on your local machine for the workspace folder and enter your application name.
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
