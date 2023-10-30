@@ -1003,7 +1003,7 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 ## Extend static tabs to group chat, channels, and meetings
 
 > [!NOTE]
-> * Extending static tabs to group chat, channels, and meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md). 
+> * Extending static tab to group chat, channels, and meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md). 
 > * Extending static tabs to group chat, channels, and meetings is available only in classic Teams client and isn't available in the [new Teams client](~/resources/teams-updates.md).
 > * To extend your static tabs to group chat, channels, and meetings, use the app manifest v1.16 or later.
 
@@ -1054,7 +1054,7 @@ If a context isn't defined in the app manifest, by default Teams consider the fo
 
 ## Customizing your static tab in chats or meetings
 
-To customize your static tab experience in chats or meetings, you can use the `setConfig` APIs in your tab to update the `contentUrl` and `websiteUrl`. Following is an example:
+To customize your static tab experience in chats, channels, or meetings, you can use the `setConfig` APIs in your tab to update the `contentUrl` and `websiteUrl`. Following is an example:
 
 ```json
 pages.config.setConfig({ 
