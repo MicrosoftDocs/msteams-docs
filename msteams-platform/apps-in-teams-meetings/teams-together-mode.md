@@ -146,7 +146,7 @@ Join the Teams meeting and follow the steps to test the Custom Together Mode:
     Optionally, the meeting organizer and presenter can select **View** > **Change scene** in the meeting.
 
     >[!NOTE]
-    > At any time, only one scene is used homogeneously for the meeting. If a presenter or organizer changes a scene, it  changes for all. Switching in or out of custom Together Mode scenes is up to individual participants, but while in custom Together Mode scenes, all participants have the same scene.
+    > Only one scene is used uniformly for the entire meeting. If a presenter or organizer changes the scene, it changes for everyone. Participants can switch in or out of custom Together Mode scenes individually, but when using custom Together Mode scenes, all participants share the same scene.
 
 1. The meeting organizer and presenter can select **View** > **Change scene** in the meeting to select any existing scene available.
 
@@ -154,7 +154,7 @@ Join the Teams meeting and follow the steps to test the Custom Together Mode:
 
 You can view the scene you've created in the **Your scenes** section of **Scene studio**. Additionally, you can share and export the scene.
 
-### Share
+Follow these steps to share a scene:
 
 1. From the **Save** drop-down menu, select **Share**.
 
@@ -164,17 +164,19 @@ You can view the scene you've created in the **Your scenes** section of **Scene 
 
     The user can open the link to install the scene and start using it. After preview, the scene is shipped as an app to Teams by following the steps for app submission. This step requires the app package. For the scene that is designed, the app package is different from the scene package. The app package created automatically is found in the **Apps** section in the Teams Developer Center. </br>
 
-### Export
+Follow the steps to export a scene:
 
-From the **Save** drop-down menu, select **Export** to retrieve the scene package. A .zip file, which is the scene package, is downloaded. The Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes. </br>
+1. In Scene studio, in the upper-right corner, select **Save**.
+1. Select **Export** from the dropdown list to retrieve the scene package.
+   A .zip file, which is the scene package, is downloaded. The Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes. </br>
 
 :::image type="content" source="~/assets/images/apps-in-meetings/build-a-scene.png" alt-text="Screenshot shows the Export option to export a scene.":::
 
 To delete a scene you created, select **Delete scene** on the top bar.
 
-## Sample
+## Example
 
-The step-by-step getting started sample demonstrates a complex scene that utilizes the Z-axis. The following code is a scene.json sample:
+The following sample demonstrates a complex scene that utilizes the Z-axis:
 
 ```json
 {
@@ -239,7 +241,18 @@ The step-by-step getting started sample demonstrates a complex scene that utiliz
 }
 ```
 
-A scene consists of bitmap images, sprites, and rectangles to put participant videos in the Custom together mode. The following table contains the values and description of a scene:
+## Elements of a scene
+
+A scene consists of bitmap images, sprites, and rectangles to put participant videos in the Custom together mode. The following are the elements of a scene:
+
+|Value|Description|
+|---|---|
+| **Scene:** | Each scene has a unique ID and name. A scene.json file along with the images indicate the exact position of the seats. The scene.json file also contains information on all the assets used for the scene. |
+| **Asset:** | Each asset contains a filename, width, height, and position on the X and Y-axis. |
+| **Participants:** | ach participant has its own video feed, which is segmented to render only the foreground.  Custom Together Mode scenes support **ZoomIn** in on the current meeting participants. |
+| **Seat:** | Each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is automatically generated and is altered according to preference. The seating order number corresponds to the order of people joining the call. |
+
+Ensure to go through the following list while creating a scene:
 
 |Value|Description|
 |---|---|
@@ -248,23 +261,16 @@ A scene consists of bitmap images, sprites, and rectangles to put participant vi
 | **Y**-axis | The Y-axis points downwards. |
 | `zOrder` | The `zOrder` represents the order of placing images and seats along the Z-axis. It gives a sense of depth or partition if necessary. It determines the position of the sprite See the step-by-step getting started sample. The sample uses the `zOrder`. |
 
-Ensure to go through the following list while creating a sample scene:
+## Import and share a scene package
 
-**Scene:** Each scene has a unique ID and name. A scene.json file along with the images indicate the exact position of the seats. The scene.json file also contains information on all the assets used for the scene.
+You can share the scene package, which is a .zip file retrieved from the Scene studio to other creators to further enhance the scene.
 
-**Asset:** Each asset contains a filename, width, height, and position on the X and Y-axis.
-
-**Participants:** Each participant has its own video feed, which is segmented to render only the foreground.  Custom Together Mode scenes support **ZoomIn** in on the current meeting participants.
-
-**Seat:** Each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is automatically generated and is altered according to preference. The seating order number corresponds to the order of people joining the call.
-
-Now that you've gone through the sample scene.json file, you can use the custom Together Mode scenes to engage in scenes.
-
-## Open a custom Together Mode scenes Scene package
-
-You can share the Scene package, which is a .zip file retrieved from the Scene studio to other creators to further enhance the scene. The **Import a scene** functionality helps unwrap a scene package to let the creator continue building the scene.
+1. Select **Import a scene**
 
 :::image type="content" source="~/assets/images/apps-in-meetings/scene-zip-file.png" alt-text="Screenshot shows the Import a scene option highlighted in red in the scene studio.":::
+
+1. Select the scene package file you wish to import.
+   This functionality helps you to unwrap a scene package and enhance the scene.
 
 ## See also
 
