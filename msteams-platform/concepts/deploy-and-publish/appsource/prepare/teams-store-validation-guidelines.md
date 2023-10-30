@@ -1650,7 +1650,7 @@ The Microsoft 365 App Compliance Program is intended to help organizations asses
 
 * **Publisher Attestation**: A process in which you share general, data handling, and security and compliance information to help potential customers make informed decisions about using your app. [*Suggested Fix*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: For an app that is not previously listed, you can't complete Publisher Attestation until the app is available in Teams Store. If you're updating an already listed app, complete [Publisher Attestation](/microsoft-365-app-certification/docs/attestation) before submitting the latest version of the app.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: For an app that isn't previously listed, you can't complete Publisher Attestation until the app is available in Teams Store. If you're updating an already listed app, complete [Publisher Attestation](/microsoft-365-app-certification/docs/attestation) before submitting the latest version of the app.
 
 </details>
 
@@ -1772,7 +1772,7 @@ The app must terminate the user account instance when the user is switched or lo
 
 #### Tab navigation
 
-* The progress indicator must appear when the app is loading and dismiss automatically after the app is completely loaded. [*Mandatory Fix*]
+* The progress indicator must appear when the app is loading and dismiss automatically after the app is loaded. [*Mandatory Fix*]
 
 * An error screen must appear when an app fails to load in the instances such as incoherent or broken network, time-out, or authentication failure, and so on. [*Mandatory Fix*]
 
