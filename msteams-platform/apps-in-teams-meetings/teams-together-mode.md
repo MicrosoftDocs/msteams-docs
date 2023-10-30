@@ -10,29 +10,30 @@ ms.date: 04/07/2022
 
 # Custom Together Mode scenes in Teams
 
-Discover a new way to collaborate with Custom Together Mode scenes in Microsoft Teams. This feature digitally combines participants into a single virtual scene, creating an immersive and engaging environment with the following actions:
+Discover a new way to collaborate with Custom Together Mode scenes in Microsoft Teams. Custom Together Mode digitally combines participants into a single virtual scene, create an immersive and engaging environment. Following are the benefits of Custom Together Mode:
 
 * Bring people together and encourage them to turn on their video.
 * Combine participants digitally into a single virtual scene.
-* Place the participants' video streams in predetermined seats designed and fixed by the scene creator.
+* Place the participant's video streams in predetermined seats designed and fixed by the scene creator.
 
 > [!NOTE]
-> Customer Together Mode scenes for Teams meetings are available in preview. Teams users need the [Teams Premium license](/microsoftteams/enhanced-teams-experience) to use this feature after the preview.
+> Customer Together Mode scenes for Teams meetings are available in preview. Teams users need the [Teams Premium license](/microsoftteams/enhanced-teams-experience) to use Custom Together Mode after the preview.
 
-Get started now and transform your Teams meetings with Custom Together Mode scenes.
+Get started and transform your Teams meetings with Custom Together Mode scenes.
 
 ## Prerequisites
 
-Before you start, ensure that you've a basic understanding of the following:
+Before you start, you must be familiar with the following prerequisites:
 
-* Define a scene and assign seats in a scene.
-* Create a Microsoft Developer account and familiarity with the [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
-* Understand the [concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
-* Ensure that the administrator has granted permission to [upload a custom app](../concepts/deploy-and-publish/apps-upload.md#upload-your-app) and select all filters as part of app setup and meeting policies respectively.
+* Scene and assign seats in a scene.
+* Microsoft Developer account and familiarity with the [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
+* [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
+
+Ensure that the administrator has granted permission to [upload a custom app](../concepts/deploy-and-publish/apps-upload.md#upload-your-app) and select all filters as part of app setup and meeting policies respectively.
 
 ## Custom Together Mode scene
 
-In custom Together Mode scenes, the scene is an artifact. The scene developer creates a scene using Microsoft Scene studio. In a conceived scene setting, participants have seats with video streams. The videos are rendered in those seats. It's recommended to use scene only apps for better experience.
+custom Together Mode scene is an artifact and you can create a scene using Microsoft Scene studio. Participants have seats with video streams in a conceived scene setting, and the videos are rendered in those seats. A scene only app is still an app in Teams and we recommended to use scene only apps for better experience. Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
 
 :::row:::
       :::image type="content" source="~/assets/images/apps-in-meetings/build-scene.png" alt-text="Build a scene using the Scene studio." link="~/apps-in-teams-meetings/teams-together-mode.md#build-a-scene-using-the-scene-studio" border="false":::
@@ -40,24 +41,22 @@ In custom Together Mode scenes, the scene is an artifact. The scene developer cr
       :::image type="content" source="~/assets/images/apps-in-meetings/share-screen.png" alt-text="Share your scene using the Scene studio." link="~/apps-in-teams-meetings/teams-together-mode.md#share-a-scene-using-the-scene-studio" border="false":::
 :::row-end:::
 
-A scene only app is still an app in Teams. Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
-
 > [!NOTE]
-> Users can't initiate Together Mode from mobile. However, after a user joins a meeting through mobile and Together Mode is turned on from desktop, the mobile users who have turned on the video, will appear in Together Mode on desktop.
+> Users can't initiate Custom Together Mode on a mobile. However, if they join a meeting through mobile and Together Mode is enabled on desktop, their mobile video will appear in Together Mode on desktop.
 
 ## Best practices for creating a scene
 
-Consider the following practices for best scene building experience:
+To create a best scene, ensure that you follow the following practices:
 
-* Ensure that all images are in PNG format.
-* Ensure that the final package with all the images put together mustn't exceed 1920 x 1080 resolution. The resolution is an even number. This resolution is a requirement for scenes to be shown successfully.
-* Ensure that the maximum scene size is 10 MB.
-* Ensure that the maximum size of each image is 5 MB. A scene is a collection of multiple images. This limit is for each individual image.
-* Select **Transparent** as required. This checkbox is available on the right panel when an image is selected. Ensure to mark **Transparent** for overlapping images to indicate that they're overlapping images in the scene.
+* All images must be in PNG format.
+* The final package with all the images put together mustn't exceed 1920 x 1080 resolution. The resolution is an even number. This resolution is a requirement for scenes to be shown successfully.
+* The maximum scene size doesn't exceed 10 MB.
+* The maximum size of each image doesn't exceed 5 MB. A scene is a collection of multiple images. This limit is for each individual image.
+* Select **Transparent** checkbox available on the right panel when an image is selected for overlapping images to indicate that they're overlapping images in the scene.
 
 ## Build a scene using the Scene studio
 
-Microsoft Scene studio allows you to build scenes. It's available on [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes). This document refers to Scene studio in the Teams Developer Portal. A scene in the context of the Scene studio contains the following elements:
+You can build a scene using [MicrosoftScenes Studio](https://dev.teams.microsoft.com/scenes) in Teams Developer Portal. A scene in the context of the Scene studio contains the following elements:
 
 * Seats reserved for meeting organizer and meeting presenters. The presenter doesn't refer to the user who is actively sharing. For more information, see [meeting role](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
@@ -67,21 +66,18 @@ Microsoft Scene studio allows you to build scenes. It's available on [Scenes Edi
 
 * Collection of images that're camouflaged as one image.
 
-The following image shows each seat represented as an avatar for building the scenes:
+The following image shows each seat represented as an avatar in a scenes:
 
 :::image type="content" source="~/assets/images/apps-in-meetings/scene-design-studio.png" alt-text="Screenshot shows seven avatars representing the participants in the scene studio.":::
 
-To build a scene using the Scene studio, follow these steps:
+To build a scene using the Scene studio in Teams Developer Portal, follow these steps:
 
-1. Go to [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
+1. Go to [Scenes studio - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
 
-    Alternately, you can open **Scene studio** from the home page of [Teams Developer Portal](https://dev.teams.microsoft.com/home) through any of the following step:
-    * Select **Create custom scenes for meetings**.
-    * On the left pane, select **Tools** and select **Scene studio**.
+1. Select **Create a new scene**.
 
-1. In **Scenes studio**, select **Create a new scene**.
+1. Select **Blank Scene** template from the window .
 
-1. Select **Blank Scene** template from the window to create custom scene.
    You can select any template of your choice. **Blank Scene** allows you to create custom scenes.
 
     :::image type="content" source="~/assets/images/apps-in-meetings/scene-template.png" alt-text="Screenshot shows the choices of templates for a scene in the scene studio.":::
@@ -95,52 +91,55 @@ To build a scene using the Scene studio, follow these steps:
 
     :::image type="content" source="~/assets/images/apps-in-meetings/addimages.png" alt-text="Screenshot shows the Add images option highlighted in red in the scene studio.":::
 
-1. Select the image that you've added.
+1. Select **Choose File**.
+1. Select the image you need to add in the scene.
 
 1. From the right pane, select an alignment for the image or use **Resize** to adjust the image size.
 
     :::image type="content" source="~/assets/images/apps-in-meetings/image-alignment.png" alt-text="Screenshot shows the Resize option highlighted in red to align the image in a scene studio.":::
 
-1. Select an area outside of the image.
+1. Select an area outside of the image to view the **Layers** in the upper-right pane.
+1. In **Layers** pane, select **Participants**.
 
-1. In the upper-right corner, under **Layers**, select **Participants**.
+1. Select the number of participants for the scene from the **Number of participants** box and select **Add**.
 
-1. Select the number of participants for the scene from the **Number of participants** box and select **Add**. After the scene is shipped, the avatar placements are replaced with actual participant's video streams. You can drag the images of the participants around the scene and place them in the required position. You can resize them using the resize arrow.
+   You can drag the images of the participants around the scene and place them in the required position. You can resize them using the resize arrow. After the scene is shipped, the avatar placements are replaced with actual participant's video streams.
 
 1. Select any participant image and select **Assign Spot** to assign the spot to the participant.
 
-1. Select **Meeting Organizer** or **Presenter** role for the participant. In a meeting, one participant must be assigned the role of a meeting organizer:
+1. Select **Meeting Organizer** or **Presenter** role for the participant.
+   In a meeting, one participant must be assigned the role of a meeting organizer:
 
     :::image type="content" source="~/assets/images/apps-in-meetings/assign-spot.png" alt-text="Screenshot shows the Assign spot check box for the participant 3 in the scene studio.":::
 
-1. Select **Save** and select **View in Teams** to quickly test your scene in Teams.
+1. Select **Save > View in Teams** to quickly test your scene in Teams.
+   A scene only app and is created and you can view the app and app package .json file in  **Apps** page in the Teams Developer Portal. You can test and try out scenes from the Scene studio. A screen opens in you Teams to add the scene app you've created.
 
-    * Selecting **View in Teams** automatically creates a Teams app that can be viewed in the **Apps** page in the Teams Developer Portal.
-    * Selecting **View in Teams** automatically creates an app package that is appmanifest.json in the background. You can go to  **Apps** from the menu and access the created app package. This is the model for a developer to test and try out scenes from the Scene studio. After a scene is exported and sideloaded as a custom app, users can view the scenes in the scene gallery.
-
-1. Select **View in Teams**, in the dialog box that appears select **Add**.
-
-    To test or access the scene, create a test meeting, and launch custom Together Mode scenes. For more information, see [test custom Together Mode scenes in Teams](#test-custom-together-mode-scenes-in-teams).
+1. Select **Add**.
 
     :::image type="content" source="~/assets/images/apps-in-meetings/launchtogethermode.png" alt-text="Screenshot shows the custom scene launched in a Teams meeting.":::
 
 ## Test custom Together Mode scenes in Teams
 
+### Prerequisites
+
+You must create a new Teams meeting to test and launch custom Together Mode scenes in Teams.
+
 > [!NOTE]
 >
 > You can apply a custom Together Mode scene that is deployed by your tenant admin only if you've a [Teams Premium license](/MicrosoftTeams/enhanced-teams-experience?branch=danismith-t-pre-licensing).
 
-You must create a new Teams meeting to test the scene in Teams.
-
-To select scenes and use custom Together Mode scenes, join the Teams meeting and do the following steps:
+Join the Teams meeting and follow the steps to test the Custom Together Mode:
 
 1. In Teams meeting window, select **View** and select **Together Mode** from the drop-down list.
 
 1. In the **Select a scene** window, select the scene you've added to Teams from Scene studio.
 
-1. Select **Assign seats** if you want to assign specific seats for meeting participants.
-    1. .In the **Select a participant** section, from **In this meeting**, select the participant and in  the **Choose a seat** section, select a seat for the participant.
-    1. Select **Assign**.
+1. Select **Assign seats** to assign specific seats for meeting participants.
+
+1. In the **Select a participant** section, from **In this meeting**, select the participant and in  the **Choose a seat** section, select a seat for the participant.
+
+1. Select **Assign**.
 
 1. Select **Apply**. Teams installs the app for the user and applies the scene.
 
