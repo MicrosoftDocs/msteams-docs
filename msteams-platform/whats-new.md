@@ -24,13 +24,12 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2023 September**
+**2023 October**
 
-* ***September 27, 2023***: [Configure your bot with read receipt events to identify if the recipient has read the message sent by the bot.](~/bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt)
-
-* ***September 26, 2023***: [Media elements in Adaptive Card.](task-modules-and-cards/cards/media-elements-in-adaptive-cards.md)
-
-* ***September 06, 2023***: [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md)
+* ***October 25, 2023***: [Configure your bot to receive meeting participant events.](apps-in-teams-meetings/meeting-apps-apis.md#receive-meeting-participant-events)
+* ***October 11, 2023***: [Introduced the new Microsoft Teams client to provide better experience for your apps and users.](resources/teams-updates.md)
+* ***October 05, 2023***: [Use callTranscript API to fetch meeting transcript from all meetings.](graph-api/meeting-transcripts/overview-transcripts.md)
+* ***October 05, 2023***: [You can rate apps on Microsoft Teams Store and offer feedback on your usage experience.](concepts/deploy-and-publish/appsource/post-publish/overview.md#ratings-and-review-for-teams-apps)
 
 :::column-end:::
 :::row-end:::
@@ -43,6 +42,9 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|26/09/2023|Configure your bot with read receipt events to identify if the recipient has read the message sent by the bot.|Build bots > Messages in bot conversations > [Read receipts](bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt)|
+|26/09/2023|Use media elements such as audio or video clips to your Adaptive Card for enhanced media experience and user engagement.|Build cards and task modules > Build cards > [Media elements in Adaptive Card](task-modules-and-cards/cards/media-elements-in-adaptive-cards.md)|
+| 06/09/2023|Generate a deep link to share content to stage in meetings.|Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Share in meeting](concepts/build-and-test/share-in-meeting.md)|
 | 29/08/2023 | Use Microsoft Teams Store with intelligent search experience to display apps that are closest match to the user's specified characters. | Distribute your app > [Publish to the Teams Store](concepts/deploy-and-publish/appsource/publish.md#teams-store-search-experience) |
 | 28/08/2023 | Teams app manifest is now referred to as app manifest. | App manifest > [Overview](resources/schema/manifest-schema.md)|
 | 16/08/2023 | Use Teams Toolkit Visual Studio v17.7 extension with many new app development features to get started with app development for Teams. | Tools and SDKs > Tools > [Teams Toolkit for Visual Studio](toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md) |
@@ -52,7 +54,7 @@ Teams platform features that are available to all app developers.
 | 20/07/2023 | App caching for iOS personal tray | Build tabs > [App caching for iOS personal tray](tabs/how-to/app-caching.md) |
 | 06/07/2023 | Use app icon badging to identify any app activity during a meeting | Build apps for Teams meetings and calls > Build in-meeting notification and app icon badging > [Use app icon badging to identify any app activity during a meeting](apps-in-teams-meetings/app-icon-badging-for-your-app.md) |
 | 14/06/2023 | Added validation guidelines for Teams app powered by Artificial Intelligence (AI). | Distribute your app > Publish to the Teams Store > Review Teams Store validation guidelines > [Apps powered by Artificial Intelligence](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-powered-by-artificial-intelligence) |
-| 02/06/2023 | Get real-time meeting events for channel meetings. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > Meeting apps APIs > [Get real-time Teams meeting events API](apps-in-teams-meetings/meeting-apps-apis.md#get-real-time-teams-meeting-events-api) |
+| 02/06/2023 | Get real-time meeting events for channel meetings. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > Meeting apps APIs > [Get real-time Teams meeting events API](apps-in-teams-meetings/meeting-apps-apis.md#receive-real-time-teams-meeting-events) |
 | 25/05/2023 | Use a deep link to open a tab app in meeting side panel in Teams mobile client. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) |
 |23/05/2023 |  Live Share SDK is now generally available. Use Live Share to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. | Build apps for Teams meetings and calls > Enhanced collaboration with Live Share > [Live Share SDK](apps-in-teams-meetings/teams-live-share-overview.md)|
 |23/05/2023 | Use Teams app design guidelines to help you make quick and right decisions to design your app. | Design your app > [Overview](concepts/design/design-teams-app-overview.md)|
@@ -344,9 +346,10 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2023 September**
+**2023 October**
 
-***September 28, 2023***: [Configure your bot during installation or after installation from the team or group chat where the bot is installed.](bots/how-to/bot-configuration-experience.md)
+* ***October 25, 2023***: [Introduced the `extensions` property in public developer preview app manifest schema.](resources/schema/manifest-schema-dev-preview.md#extensions)
+* ***October 25, 2023***: [Build message extensions using API (API-based) to interact directly with third-party data, apps, and services.](messaging-extensions/api-based-overview.md)
 
 :::column-end:::
 :::row-end:::
@@ -357,6 +360,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|28/09/2023| Configure your bot during installation or after installation from the team or group chat where the bot is installed. | Build bots > [Bot configuration experience](bots/how-to/bot-configuration-experience.md)|
 |31/08/2023| The new Teams client supports light theme for apps in Teams meetings. | Build tabs > [Get context for your tab](tabs/how-to/access-teams-context.md#handle-theme-change)|
 |28/08/2023| Teams app manifest is now referred to as app manifest. | App manifest > [App manifest schema](resources/schema/manifest-schema.md)|
 |22/08/2023| Enable RSC permissions for a user using the Graph APIs | Utilize Teams data with Microsoft Graph > Resource-specific consent > [Grant RSC permission to your app](graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings) |
@@ -413,9 +417,11 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
+* ***October 11, 2023***: Adaptive Card tabs **are** deprecated in the new Microsoft Teams. If your app is using Adaptive Card tabs, we recommend you to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
+
 * ***May 17, 2023***: [Teams Toolkit v4](toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code **will be** deprecated. We recommend that you use Teams Toolkit v5 within Visual Studio Code for building your Teams app.
 
-* ***May 05, 2023***: Adaptive Card tabs **will be** deprecated in the new Microsoft Teams. Apps are expected to be available in the new Microsoft Teams by June 2023. If your app is using Adaptive Card tabs, it's recommended to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
+* ***May 05, 2023***: Adaptive Card tabs **will be** deprecated in the new Microsoft Teams. Apps are expected to be available in the new Microsoft Teams by June 2023. If your app is using Adaptive Card tabs, we recommend you to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
 
 * ***August 01, 2022***: App Studio is deprecated, use [Developer Portal](concepts/build-and-test/teams-developer-portal.md) for Teams.
 

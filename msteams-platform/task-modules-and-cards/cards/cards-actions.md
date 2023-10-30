@@ -8,7 +8,7 @@ ms.date: 05/04/2023
 
 # Card actions
 
-Cards used by bots and message extensions in Teams support the following activity [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) types:
+Cards used by bots and message extensions in Microsoft Teams support the following activity [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) types:
 
 > [!NOTE]
 > The `CardAction` actions differ from `potentialActions` for connector cards for Microsoft 365 Groups when used from connectors.
@@ -444,7 +444,7 @@ Action.Submit is equivalent to the Bot Framework actions. You can also modify th
 
 #### Example
 
-The following is an example of a `Action.Submit` card payload:
+The following is an example of an `Action.Submit` card payload:
 
 The payload consists of a text input field `"id": "text-1"` and hidden data payload `"hiddenKey": 123.45`.
 
@@ -688,19 +688,38 @@ The following code shows an example of Adaptive Cards with `invoke` action:
 }
 ```
 
+| Property | Description |
+| --- | --- |
+| `type` | Set to `invoke`. |
+| `value` | Set the value to display. |
+
 The following code shows an example of Adaptive Cards with `invoke` action with additional payload data:
 
 ```json
-{
-  "type": "Action.Submit",
-  "title": "submit"
-  "data": {
-    "msteams": {
-        "type": "task/fetch"
-    },
-    "Value1": "some value"
+[
+  {
+    "type": "Action.Submit",
+    "title": "submit with object value",
+    "data": {
+      "ab": "xy",
+      "msteams": {
+        "type": "invoke",
+        "value": { "a": "b" }
+      }
+    }
+  },
+  {
+    "type": "Action.Submit",
+    "title": "submit with stringified json value",
+    "data": {
+      "ab": "xy",
+      "msteams": {
+        "type": "invoke",
+        "value": "{ \"a\": \"b\"}"
+      }
+    }
   }
-}
+]
 ```
 
 ## Code samples
@@ -712,7 +731,7 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 |3|Adaptive cards|Demonstrates how the multi-turn dialog can use a card to get user input for name and age.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|NA|
 
 > [!NOTE]
-> Media elements are not supported for Adaptive Card in Teams.
+> Media elements aren't supported for Adaptive Card in Teams.
 
 ## Next step
 
