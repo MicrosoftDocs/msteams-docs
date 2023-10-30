@@ -1643,7 +1643,7 @@ The Microsoft 365 App Compliance Program is intended to help organizations asses
 
 * **Publisher Attestation**: A process in which you share general, data handling, and security and compliance information to help potential customers make informed decisions about using your app. [*Suggested Fix*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: If you're submitting an app that hasn't been listed previously, you can't officially complete Publisher Attestation until your app is in the Teams Store. If you're updating a listed app, complete Publisher Attestation before you submit the latest version of the app.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: If you're submitting an app that hasn't been listed previously, you can't officially complete Publisher Attestation until your app is in the Teams Store. If you're updating a listed app, complete [Publisher Attestation](/microsoft-365-app-certification/docs/attestation) before you submit the latest version of the app.
 
 </details>
 
