@@ -511,7 +511,7 @@ Provision the cloud resources in the current application.
 
 ### Parameters for `teamsfx provision`
 
-| Parameter  | Requirement | Description |
+| Parameter  | Required | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes| Select an environment for the project. |
 |`--subscription`| No | Specify an Azure Subscription ID. |
@@ -525,7 +525,7 @@ This command is used to deploy the current application. By default it deploys en
 
 ### Parameters for `teamsfx deploy`
 
-| Parameter  | Requirement | Description |
+| Parameter  | Required | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes| Select an existing environment for the project. |
 |`--open-api-document`| No | Applicable when there's APIM resource in the project. The open API document file path. |
@@ -560,7 +560,7 @@ Preview the current application from local or remote.
 
 ### Parameters for `teamsfx preview`
 
-| Parameter  | Requirement | Description |
+| Parameter  | Required | Description |
 |:----------------  |:-------------|:-------------|
 |`--local`| No | Preview the application from local. `--local` is exclusive with `--remote`. |
 |`--remote`| No | Preview the application from remote. `--remote` is exclusive with `--local`. |
@@ -609,7 +609,7 @@ The configuration data is either in user scope or project scope.
 
 ### Parameters for `teamsfx config`
 
-| Parameter  | Requirement | Description |
+| Parameter  | Required | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes | Select an existing environment for the project. |
 |`--folder`| No | Project directory used for get or set project configuration. The default value is `./`. |
@@ -677,14 +677,14 @@ TeamsFx CLI provides `teamsFx permission` commands for collaboration scenarios.
 
 ### Parameters for `teamsfx permission grant`
 
-| Parameter  | Requirement | Description |
+| Parameter  | Required | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes | Provide env name. |
 |`--email`| Yes | Provide collaborator's Microsoft 365 email address. Ensure the collaborator's account is in the same tenant with creator. |
 
 ### Parameters for `teamsfx permission status`
 
-| Parameter | Requirement | Description |
+| Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes | Provide env name. |
 |`--list-all-collaborators` | No | With this flag, Teams Toolkit CLI prints all collaborators for the project. |
