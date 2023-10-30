@@ -278,6 +278,11 @@ Don't include domains outside of your organization's control (including wildcard
 
 * If your app uses the Azure Bot Service's OAuthCard, you must include *token.botframework.com* as a valid domain or else the Sign in button won't work. You mustn't declare *.botframework.com* as wildcards aren't allowed with this domain name. [*Mandatory Fix*]
 
+* OpenAPI URLs must be under partner control.
+
+  > [!NOTE]
+  > We should also link to the WIP doc on guidelines to create a message plug under the newly created Teams apps extensible as Microsoft 365 Copilot plugin section.  Please run grammar check and structure this content better.
+
 * Following External Domains aren't allowed: [*Mandatory Fix*]
   * *.azurewebsites.net
   * *.azureedge.com
@@ -1310,6 +1315,8 @@ If your app includes a message extension, ensure that it adheres to these guidel
 
 * You must include a way for the user to sign in or sign out from the messaging extension. [*Mandatory Fix*]
 
+* Message extensions that use OpenAPI urls must not provide redirection on any API call. Actual API calls must be served from the same domain or subdomain of the root domain.
+
 </details>
 </br>
 
@@ -1770,6 +1777,41 @@ The app must terminate the user account instance when the user is switched or lo
 * An error screen must appear when an app fails to load in the instances such as incoherent or broken network, time-out, or authentication failure, and so on. [*Mandatory Fix*]
 
 [Back to top](#teams-store-validation-guidelines)
+
+## Teams apps extensible as Microsoft 365 Copilot plugin
+
+* App packages must be correctly formatted and conform to manifest schema 1.13 or later.
+* App must be consistent with responsible AI checks Link.
+* App adheres to the plugin compatible criteria here.
+
+### Plugin must not manipulate LLM behavior
+
+Short description of app, Parameter and command description must not include:
+
+1. Instructional phrases are not allowed. For example, if the user says X, ignore, delete, reset, new instructions,  Answer in Bold, or Do not print anything.
+1. Verbose, flowery, or marketing language.
+1. Superlative claims such as **#1**, **amazing**, or **best**.
+1. URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols.
+1. Grammar and punctuation errors.
+
+### User Awareness
+
+App long description should clearly call out:
+
+* App works in Copilot. For examples, use Contoso in Copilot to search and summarize your tasks.
+
+* Provide at least 1 sample prompt of how users can use ME plugin in Copilot. For example, what are the high priority tickets assigned to me this week in Contoso.
+
+## Response Quality
+
+* Mandatory fields in Microsoft 365 Copilot adaptive card response include Information title and at least 2 additional useful fields of your choice eg: date modified, author, status, flags etc. Both preview and content should be part of a single response.
+* Adaptive cards in Microsoft 365 Copilot response must have at least one action button
+* Action buttons present in Microsoft 365 Copilot response adaptive cards must be functional
+
+* Microsoft 365 Copilot must respond accurately and not show an error when an user prompts with a single parameter prompt.
+* Microsoft 365 Copilot must respond accurately and not show an error when an user prompts with a multi parameter prompt.
+* Microsoft 365 Copilot must respond accurately and not show an error when an user prompts with a follow up prompt.
+* At least two parameters must be defined in messaging extension for enhanced user experience in Microsoft 365 Copilot.
 
 ## Next step
 
