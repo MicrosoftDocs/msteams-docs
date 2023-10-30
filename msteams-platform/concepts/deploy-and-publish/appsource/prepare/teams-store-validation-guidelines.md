@@ -1071,11 +1071,11 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bots mustn't display a typing indicator after responding to the user command, but can display a typing indicator while responding to the user command. [*Mandatory Fix*]
 
-* Bots must provide a valid response to the **help** command typed in lowercase or uppercase that provides the user with a way forward or lets the user access the help content related to the bot usage. Bots must provide a valid response even when the user hasn't logged onto the app. [*Mandatory Fix*]
+* Bots must provide a valid response to the **help** command typed in lowercase or uppercase that provides the user with a way forward or lets the user access the help content related to the bot usage. Bots must provide a valid response even when the user hasn't logged on to the app. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-lowercase.png" alt-text="Graphic shows an example of bot not providing a valid response for a command in lowercase or uppercase.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-logged-app.png" alt-text="Graphic shows an example of a bot without a valid response when the user hasn't logged onto the app.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-logged-app.png" alt-text="Graphic shows an example of a bot without a valid response when the user hasn't logged on to the app.":::
 
 * Bots must provide a valid response to **help** command.
 
@@ -1788,7 +1788,7 @@ The app must terminate the user account instance when the user is switched or lo
 
 Short description of app, Parameter and command description must not include:
 
-1. Instructional phrases are not allowed. For example, if the user says X, ignore, delete, reset, new instructions,  Answer in Bold, or Do not print anything.
+1. Instructional phrases aren't allowed. For example, if the user says X, ignore, delete, reset, new instructions,  Answer in Bold, or Don't print anything.
 1. Verbose, flowery, or marketing language.
 1. Superlative claims such as **#1**, **amazing**, or **best**.
 1. URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols.
@@ -1800,17 +1800,17 @@ App long description should clearly call out:
 
 * App works in Copilot. For examples, use Contoso in Copilot to search and summarize your tasks.
 
-* Provide at least 1 sample prompt of how users can use ME plugin in Copilot. For example, what are the high priority tickets assigned to me this week in Contoso.
+* Provide at least one sample prompt of how users can use ME plugin in Copilot. For example, what are the high priority tickets assigned to me this week in Contoso.
 
 ## Response Quality
 
-* Mandatory fields in Microsoft 365 Copilot adaptive card response include Information title and at least 2 additional useful fields of your choice eg: date modified, author, status, flags etc. Both preview and content should be part of a single response.
+* Mandatory fields in Microsoft 365 Copilot adaptive card response include Information title and at least two additional useful fields of your choice, for example, date modified, author, status, flags etc. Both preview and content should be part of a single response.
 * Adaptive cards in Microsoft 365 Copilot response must have at least one action button
 * Action buttons present in Microsoft 365 Copilot response adaptive cards must be functional
 
-* Microsoft 365 Copilot must respond accurately and not show an error when an user prompts with a single parameter prompt.
-* Microsoft 365 Copilot must respond accurately and not show an error when an user prompts with a multi parameter prompt.
-* Microsoft 365 Copilot must respond accurately and not show an error when an user prompts with a follow up prompt.
+* Microsoft 365 Copilot must respond accurately and not show an error when a user prompts with a single parameter prompt.
+* Microsoft 365 Copilot must respond accurately and not show an error when a user prompts with a multi parameter prompt.
+* Microsoft 365 Copilot must respond accurately and not show an error when a user prompts with a follow-up prompt.
 * At least two parameters must be defined in messaging extension for enhanced user experience in Microsoft 365 Copilot.
 
 ## Next step
