@@ -5,7 +5,7 @@ description: In this article, learn more about the Microsoft Adaptive Card previ
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.date: 20/10/2022
+ms.date: 20/10/2023
 ---
 
 # Microsoft Adaptive Card Previewer

@@ -5,7 +5,7 @@ description: In this article, learn more about how to install the Adaptive Card 
 ms.localizationpriority: medium
 ms.topic: Install Adaptive Card Previewer
 ms.author: surbhigupta
-ms.date: 20/10/2022
+ms.date: 20/10/2023
 ---
 
 # Install Adaptive Card Previewer
