@@ -37,7 +37,8 @@ items:
    |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
    |[Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
    |[Azure account](https://azure.microsoft.com/free/) | Access to Azure resources.|
-   
+   |OpenAPI Description (OAD) document| A document that describes the capabilities of your API. For more information, see [OpenAPI Description](https://learn.openapis.org/specification/structure.html).|
+
    ## Set up your Teams development tenant
 
    A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your sideload and test your app. Let's verify if you're ready to develop with the tenant.
@@ -204,10 +205,10 @@ items:
     1. In the right pane, select **GET**.
     1. Select **Try it out**.
     1. Enter the values for the **search** parameter as **Tool to create music**.
-
+    1. Select **Execute**. The swagger editor displays a response with a list of products.
+    
        :::image type="content" source="assets/images/Copilot/api-me-sbs-execute-get-response.png" alt-text="Screenshots shows the parameters, its values and the **EXECUTE** option in the swagger editor.":::
 
-    1. Select **Execute**. The swagger editor displays a response with a list of products.
     1. Go to **Server response** > **Response Body**.
     1. Under `products`, copy the first product from the list and save it for future reference.
 
@@ -217,7 +218,7 @@ items:
   durationInMinutes: 5
   content: |
 
-   An OpenAPI Description document requires a response rendering template for the app to respond to the get requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
+   An OpenAPI Description document requires a response rendering template for the app to respond to the GET or POST requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
 
    ### Adaptive Card template 
     

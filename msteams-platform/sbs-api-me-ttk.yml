@@ -194,20 +194,25 @@ items:
 
     ## Create OpenAPI Description document 
   
+    OpenAPI Description (OAD) is the industry-standard specification that outlines how OpenAPI files are structured and outlined. It's a language-agnostic, human-readable format for describing APIs. It's easy for both humans and machines to read and write. The schema is machine-readable and represented in either YAML or JSON.
+    
     You must have an OpenAPI Description (OAD) document before you create an API-based message extension. The API spec must meet the following criteria: 
     
-    * It must not have auth specified.
-    * The request body (if present) can't contain any arrays.
-    * The OpenAPI Description document must have an `operationId`.The server URL must be defined.
-    * If there's no operation ID, Teams Toolkit generates an `operationId` automatically.
-    * The `oneOf`, `anyOf`, `allOf`, `not` (swagger.io) construct aren't supported in Teams.
-    * Constructing arrays for the request aren't supported, but nested objects within a JSON request body are supported.
-    * The request body (if present) can only be application/json to ensure compatibility with a wide range of APIs.
-    * Ensure that a server url is defined for the `servers.url` property.
+    * The `auth` property must not be specified.
+    * JSON and YAML are the supported formats.
+    * OpenAPI Versions 2.0 and 3.0.x are supported.
+    * Teams doesn't support the oneOf, anyOf, allOf, and not (swagger.io) constructs.
+    * Constructing arrays for the request isn't supported, however, nested objects within a JSON request body are supported.
+    * The request body, if present, must be application/Json to ensure compatibility with a wide range of APIs.
+    * Define an HTTPS protocol server URL for the `servers.url` property.
     * Only single parameter search is supported.
-    * A command must have exactly one parameter. You can make a required parameter optional and add a default value.
+    * Only one required parameter without a default value is allowed.
     * Only POST and GET HTTP methods are supported.
-    * The operation can't have a required Header or Cookie parameters without default values.
+    * The OpenAPI Description document must have an `operationId`.
+    * The operation must not have required Header or Cookie parameters without default values.
+    * A command must have exactly one parameter.
+    * Ensure that there are no remote references in the OpenAPI Description document.
+    * A required parameter with a default value is considered optional.
     
     We've used the following OpenAPI Description as an example for this tutorial: <br/>
     <br/>
@@ -291,7 +296,7 @@ items:
     ```
     </details>
     
-    Now that you've got your OpenAPI Description document, it also requires a response rendering template for the app to respond to the API requests. If your building an app using Teams Toolkit or Developer portal for Teams, the response rendering template is extracted from the OpenAPI Description document automatically.
+    Now that you've got your OpenAPI Description document, it also requires a response rendering template for the app to respond to the GET or POST requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata. If your building an app using Teams Toolkit or Developer portal for Teams, the response rendering template is extracted from the OpenAPI Description document automatically.
 
      The following code is an example of the response rendering template: <br/>
      <br/>
@@ -414,7 +419,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png":::
     
-        Your Teams app with a bot capability is created in few seconds.
+        Your Teams app with a API-based message extension capability is created in few seconds.
 
         :::image type="content" source="assets/images/Copilot/api-based-me-ttk-api-me-readme.png" alt-text="Screenshot shows the app created." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png":::
 
@@ -424,14 +429,8 @@ items:
         
         Select **Local debug** to preview your project.
         
-    <details>
-    <summary>A quick recap of creating a Teams app.</summary>
-    Watch this short recap for creating a Teams app.
 
-    ![Create a Teams app](~/assets/videos/javascript-bot-app1.gif)
-    </details>
-
-    After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
+    After scaffolding is done, view the project directories and files under **Explorer** in Visual Studio Code.
 
     :::image type="content" source="../msteams-platform/assets/images/Copilot/api-based-me-ttk-explorer.png" alt-text="Screenshot shows the Teams Toolkit sample bot folder Structure.":::
 
@@ -440,7 +439,7 @@ items:
     | `env/.env.dev.user` |Configuration file for local environment used by `teamsapp.yml` to customize the provisioning and deployment rules.  |
     | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
     | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
-    |`appPackage/apiSpecificationFiles/openapi.yml`|OpenAPI Description file that you've selected.|
+    |`appPackage/apiSpecificationFiles/openapi.yml`|A description file that contains the structure and syntax of an API in the OpenAPI Description.|
     | `appPackage/responseTemplates` | The response rendering template, which consists of the Adaptive Card template, preview card template, and metadata. |
     | `teamsapp.yml` |	This is the main Teams Toolkit project that defines properties and configuration stage definitions. |
 
