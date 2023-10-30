@@ -1780,15 +1780,15 @@ The app must terminate the user account instance when the user is switched or lo
 
 ## Teams apps extensible as Microsoft 365 Copilot plugin
 
-* App packages must be correctly formatted and conform to manifest schema 1.13 or later.
-* App must be consistent with responsible AI checks Link.
-* App adheres to the plugin compatible criteria here.
+* App packages are correctly formatted and adhere to the manifest schema 1.13 or later.
+* App must pass the [responsible AI checks.](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements)
+* App must meet the [plugin compatible criteria](high-quality-message-extension.md).
 
 ### Plugin must not manipulate LLM behavior
 
-Short description of app, Parameter and command description must not include:
+The short descriptions of an app, parameter, and command must not include the following:
 
-1. Instructional phrases aren't allowed. For example, if the user says X, ignore, delete, reset, new instructions,  Answer in Bold, or Don't print anything.
+1. Instructional phrases. For example, if the user says X, ignore, delete, reset, new instructions, answer in bold, or don't print anything.
 1. Verbose, flowery, or marketing language.
 1. Superlative claims such as **#1**, **amazing**, or **best**.
 1. URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols.
@@ -1796,22 +1796,22 @@ Short description of app, Parameter and command description must not include:
 
 ### User Awareness
 
-App long description should clearly call out:
+The long description of an app must clearly call out the following:
 
-* App works in Copilot. For examples, use Contoso in Copilot to search and summarize your tasks.
+* App's compatibility with Copilot. For example, use Contoso in Copilot to search and summarize your tasks.
 
-* Provide at least one sample prompt of how users can use ME plugin in Copilot. For example, what are the high priority tickets assigned to me this week in Contoso.
+* Provide at least one prompt of how users can use a message extension plugin in Copilot. For example, what are the high priority tickets assigned to me this week in Contoso.
 
-## Response Quality
+### Response Quality
 
-* Mandatory fields in Microsoft 365 Copilot adaptive card response include Information title and at least two additional useful fields of your choice, for example, date modified, author, status, flags etc. Both preview and content should be part of a single response.
-* Adaptive cards in Microsoft 365 Copilot response must have at least one action button
+* The mandatory fields in Microsoft 365 Copilot Adaptive Card response must include Information title and at least two additional useful fields of your choice, for example, date modified, author, status, and flags. Both the preview and content must be part of a single response.
+* Adaptive Cards in Microsoft 365 Copilot response must have at least one action button.
 * Action buttons present in Microsoft 365 Copilot response adaptive cards must be functional
 
-* Microsoft 365 Copilot must respond accurately and not show an error when a user prompts with a single parameter prompt.
-* Microsoft 365 Copilot must respond accurately and not show an error when a user prompts with a multi parameter prompt.
-* Microsoft 365 Copilot must respond accurately and not show an error when a user prompts with a follow-up prompt.
-* At least two parameters must be defined in messaging extension for enhanced user experience in Microsoft 365 Copilot.
+* Microsoft 365 Copilot must respond accurately and not display an error when a user prompts with a single parameter.
+* Microsoft 365 Copilot must respond accurately and not show an error when a user prompts with a multi parameter.
+* Microsoft 365 Copilot must respond accurately and not show an error when a user prompts with a follow-up.
+* Message extension must contain at least two parameters for enhanced user experience in Microsoft 365 Copilot.
 
 ## Next step
 
