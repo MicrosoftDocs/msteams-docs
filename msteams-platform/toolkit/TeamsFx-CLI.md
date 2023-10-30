@@ -421,7 +421,7 @@ By default, `teamsfx new` is in interactive mode and guides to create new Teams 
 
 ### Parameters for `teamsfx new`
 
-| Parameter | Requirement | Description |
+| Parameter | Required | Description |
 |:---------------- |:-------------|:-------------|
 |`--app-name` | Yes| Name of your Teams application.|
 |`--interactive`| No | Select the options interactively. The options are `true` and `false` and default value is `true`.|
