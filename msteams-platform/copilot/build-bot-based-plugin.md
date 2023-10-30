@@ -10,20 +10,21 @@ ms.date: 09/07/2023
 
 # Extend Bot-based message extension as a plugin
 
-Microsoft 365 Copilot is powered by an advanced processing and orchestration engine that seamlessly integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to turn your words into the most powerful productivity tool. While Copilot is already able to use the apps and data within the Microsoft 365 ecosystem, many users still depend on various external tools and services for work management and collaboration. You can address this gap by extending Copilot to enable users to work with their third-party tools and services, unlocking the full potential of Microsoft 365 Copilot.
-You can extend Microsoft 365 Copilot by building a plugin or by connecting to an external data source.
+Microsoft 365 Copilot, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to transform your words into a potent productivity tool. Although Copilot can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending Copilot, you can enable users to interact with their third-party tools and services, thereby unlocking Microsoft 365 Copilot's full potential. You can achieve this extension by developing a plugin or connecting to an external data source.
 
 ## What is a plugin?
 
 A plugin allows Copilot to interact directly with third-party data, apps, and services, enhancing its capabilities and broadening its range of capabilities. Plugins allow Copilot to:
 
-* Retrieve real-time information, for example, latest news coverage on a product launch.
-* Retrieve knowledge-based information, for example, my team’s design files in Figma.
-* Perform actions on behalf of the user, for example, create a Jira ticket.
+* Fetch real-time information, such as the latest news coverage on a product launch.
+* Retrieve knowledge-based information, such as a team’s design files in Figma.
+* Perform actions on behalf of the user, such as creating a Contoso ticket.
 
-All Message Extensions will be supported as plugins pending validation to ensure the plugin meets quality, security, privacy, and usefulness expectations.
+All Message Extensions are eligible for plugins support, subject to validation to ensure the plugin meets quality, security, privacy, and usefulness expectations.
 
-Bot based message extensions can be extended to work as a plugin in Copilot. You can create a bot-based message extension to work in Copilot using Teams Toolkit for Visual Studio Code, Visual Studio, and CLI.
+You can extend Bot-based message extensions to function as a plugin in Copilot. You can create a bot-based message extension for Copilot using Teams Toolkit for Visual Studio Code, Visual Studio, and CLI.
+
+Before you get started, ensure that you meet the standards for compliance, performance, security, and user experience outlined in [Teams Store validation guidelines.](../concepts/deploy-and-publish/appsource/prepare/high-quality-message-extension.md)
 
 # [Visual Studio Code](#tab/visual-studio-code)
 
@@ -33,6 +34,9 @@ Bot based message extensions can be extended to work as a plugin in Copilot. You
 1. Select **Message Extension**.
 1. Select **Custom Search Results**.
 1. Select **Start with a Bot**.
+
+   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-start-with-bot.png" alt-text="Screenshot shows the Start with a Bot option tp create a bot-based message extension in Visual Studio Code..":::
+
 1. Select a programming language.
 1. Select Default folder.
 1. Enter the name of your app and select Enter. Teams toolkit scaffolds your app and creates a message extension.
@@ -43,6 +47,9 @@ To run your message extension in Teams:
 1. Under **ACCOUNTS**:
    1. Select **Sign in to Microsoft 365** and enter your Microsoft 365 credentials.
    1. Select **Sign in to Azure** and enter your Azure credentials.
+
+      :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Sign in to Microsoft 365 and Azure option under ACCOUNTS in Teams Toolkit for Visual Studio Code.":::
+
 1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
 1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)**. Teams Toolkit launches your app in Teams using a web browser.
 1. Select **Add**. The app is installed to Teams.
@@ -94,6 +101,9 @@ To trigger the Message Extension through Copilot, you can:
 1. Go to **Solution Explorer**.
 1. Select your project and right-click.
 1. From the menu, select **Teams Toolkit** > **Prepare Teams App Dependencies**.
+
+   :::image type="content" source="../assets/images/Copilot/bot-based-VS-teams-app-dependencies.png" alt-text="Screenshot shows the Prepare Teams app dependencies option under Teams Toolkit in Visual Studio app project.":::
+
    1. If prompted, sign in with a Microsoft 365 account.
 1. In the debug dropdown, select **Microsoft Teams (browser)**. Visual Studio launces Teams web client.
 1. Select **Add**.
@@ -102,6 +112,9 @@ To trigger the Message Extension through Copilot, you can:
 To trigger the Message Extension through Copilot, you can:
 
 1. In the debug dropdown, select **Copilot (browser)**. Visual Studio launces Teams web client.
+
+   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-debug-Copilot.png" alt-text="Screenshot shows the Copilot (Browser)  debug option in Visual Studio.":::
+
 1. Go to **Teams web client** > **Apps**.
 1. Search for Copilot and open the Copilot app.
 1. Select **Plugins**.
