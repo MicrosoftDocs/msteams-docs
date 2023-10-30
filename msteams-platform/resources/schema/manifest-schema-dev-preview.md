@@ -526,6 +526,8 @@ Each command item is an object with the following structure:
 
 ## scopeConstraints
 
+The scope constraints imposed on an app to specify in which threads you can install the app. When no constraints are specified, you can install the app to all threads within the specific scope.
+
 **Optional** &ndash; Object
 
 |Name| Type | Maximum Size | Required | Description|
