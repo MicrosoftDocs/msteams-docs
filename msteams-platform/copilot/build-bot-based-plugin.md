@@ -57,7 +57,7 @@ To trigger the Message Extension through Copilot, you can:
 1. Select **Plugins**.
 1. From the list of plugins, turn on the toggle for your app.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for Bot-based-ME-test-local plugin.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for Bot-based-ME-test-local plugin.":::
 
 1. From the compose message area, send a message to Copilot to find an NuGet package information. For example: Find the NuGet package info on Microsoft.CSharp.
 
@@ -107,7 +107,7 @@ To trigger the Message Extension through Copilot, you can:
 1. Select **Plugins**.
 1. From the list of plugins, turn on the toggle for your app.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for Bot-based-ME-test-local plugin.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for Bot-based-ME-test-local plugin.":::
 
 1. From the compose message area, send a message to Copilot to find an NuGet package information. For example: Find the NuGet package info on Microsoft.CSharp.
 
