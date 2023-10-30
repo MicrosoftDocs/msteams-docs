@@ -23,7 +23,7 @@ A plugin allows Copilot to interact directly with third-party data, apps, and se
 
 All Message Extensions will be supported as plugins pending validation to ensure the plugin meets quality, security, privacy, and usefulness expectations.
 
-Bot based message extensions can be extended to work as a plugin in Copilot. You can create a bot-based message extension to work in Copilot using Teams Toolkit for Visual Studio Code, Visual Studio and CLI.
+Bot based message extensions can be extended to work as a plugin in Copilot. You can create a bot-based message extension to work in Copilot using Teams Toolkit for Visual Studio Code, Visual Studio, and CLI.
 
 # [Visual Studio Code](#tab/visual-studio-code)
 
