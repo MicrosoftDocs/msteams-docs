@@ -54,7 +54,14 @@ To trigger the Message Extension through Copilot, you can:
 
 1. Select **Apps**.
 1. Search for Copilot.
-1. Open the Copilot app and send a prompt to trigger your plugin.
+1. Select **Plugins**.
+1. From the list of plugins, turn on the toggle for your app.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for Bot-based-ME-test-local plugin.":::
+
+1. From the compose message area, send a message to Copilot to find an NuGet package information. For example: Find the NuGet package info on Microsoft.CSharp.
+
+   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from copilot.":::
 
 > [!NOTE]
 > This prompt may not always make Copilot include a response from your message extension. If it happens, try some other prompts or leave a feedback to us by thumbing down the Copilot response and leave a message tagged with [MessageExtension].
@@ -97,8 +104,14 @@ To trigger the Message Extension through Copilot, you can:
 1. In the debug dropdown, select **Copilot (browser)**. Visual Studio launces Teams web client.
 1. Go to **Teams web client** > **Apps**.
 1. Search for Copilot and open the Copilot app.
-1. In the Copilot app, send a prompt to trigger your plugin.
-1. Send a message to Copilot to find an NuGet package information. For example: Find the NuGet package info on Microsoft.CSharp.
+1. Select **Plugins**.
+1. From the list of plugins, turn on the toggle for your app.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for Bot-based-ME-test-local plugin.":::
+
+1. From the compose message area, send a message to Copilot to find an NuGet package information. For example: Find the NuGet package info on Microsoft.CSharp.
+
+   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from copilot.":::
 
 > [!NOTE]
 > This prompt may not always make Copilot include a response from your message extension. If it happens, try some other prompts or leave a feedback to us by thumbing down the Copilot response and leave a message tagged with [MessageExtension].
