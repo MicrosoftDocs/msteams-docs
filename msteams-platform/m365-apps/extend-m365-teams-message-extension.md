@@ -170,7 +170,7 @@ The final step is to sideload your updated message extension ([app package](/mic
 
     :::image type="content" source="../assets/images/teams-manage-your-apps.png" alt-text="Screenshot shows the Upload an app option under manage your apps.":::
 
-1. Choose the **Upload a custom app** option, select your app package, and install (**Add**) it to your Teams client.
+1. Select the **Upload a custom app** option, select your app package, and select **Add** it to your Teams client.
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Screenshot shows the upload a custom app option in Teams.":::
 
