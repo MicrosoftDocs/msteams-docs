@@ -72,7 +72,12 @@ The following table lists set of APIs to enable your device's media capabilities
 
 The following illustration depicts the web app experience of `captureImage` API for the image capability on Teams mobile:
 
-:::image type="content" source="~/assets/images/tabs/capture-media-mobile.png" alt-text="Illustration shows the captureImage capability for mobile.":::
+* Launch camera and capture the image to share:
+  :::image type="content" source="~/assets/images/tabs/capture-media-mobile.png" alt-text="Illustration shows the captureImage capability for mobile.":::
+
+* Select media from the gallery to share:
+
+  :::image type="content" source="~/assets/images/tabs/capture-media-mobile-gallery.png" alt-text="Illustration shows the mobile gallery of captureImage capability.":::
 
 You can view the web app experience of the `selectMedia` API for Teams desktop and mobile.
 
