@@ -42,7 +42,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
 1. Select **Deploy** from the **LIFECYCLE** panel after provisioning is complete.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot shows deploy to cloud.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot shows deploy to cloud highlighted in red.":::
 
    As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
 
@@ -78,11 +78,11 @@ Once the provisioning and deployment steps are complete:
 1. Select **Launch Remote (Edge)** from the launch configuration drop-down.
 1. Select the **Start debugging (F5)**. You'll be prompted to sideload the bot app onto Teams.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows the launch app remotely.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows the debug and launch app remotely.":::
 
 1. Select **Add** or use the dropdown menu to add your bot app to a team, chat, or meeting.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Screenshot shows the app being installed.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Screenshot shows the app being installed in different scopes.":::
 
    You've successfully added your bot app to the Teams client.
 
