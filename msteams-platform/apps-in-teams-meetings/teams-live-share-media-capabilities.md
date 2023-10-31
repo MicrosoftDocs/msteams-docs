@@ -536,9 +536,9 @@ Additionally, add the following [RSC](/microsoftteams/platform/graph-api/rsc/res
 
 ## Code samples
 
-| Sample name          | Description                                                                                                                               | JavaScript                                     | TypeScript                                     |
+| Sample name |   Description   |  JavaScript  |  TypeScript  |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
-| React video          | Basic example showing how the LiveMediaSession object works with HTML5 video.                                                        | [View](https://aka.ms/liveshare-reactvideo)    |
+| React video | Basic example showing how the LiveMediaSession object works with HTML5 video. | [View](https://aka.ms/liveshare-reactvideo) | NA |
 | React media template | Enable all connected clients to watch videos together, build a shared playlist, transfer whom is in control, and annotate over the video. | [View](https://aka.ms/liveshare-mediatemplate) | [View](https://aka.ms/liveshare-mediatemplate-ts) |
 
 ## Next step
