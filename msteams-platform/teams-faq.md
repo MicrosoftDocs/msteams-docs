@@ -21,7 +21,7 @@ It’s a standalone extension because we're using a closed-source package to ren
 <details>
 <summary>Does this extension support all Adaptive Card features in Teams platform?</summary>
 
-No. Unfortunately, there are several [limitations](concepts/build-and-test/adaptive-card-previewer.md#limitations) that ACP extension can't currently support.
+No. Unfortunately, there are several [limitations](concepts/build-and-test/adaptive-card-previewer.md#limitations) that ACP extension can't support.
 <br>
 &nbsp;
 </details>
@@ -162,7 +162,7 @@ Currently, Live Share doesn't support adding new `initialObjects` to the Fluid `
 
 To fix errors resulting from changes to `initialObjects` when testing locally in your browser, remove the hashed container ID from your URL and reload the page. If you're testing in a Teams meeting, start a new meeting and try again.
 
-If you plan to update your app with new `SharedObject` or `LiveObject` instances frequently, you should consider how you deploy new schema changes to production. While the actual risk is relatively low and short lasting, there may be active sessions at the time you roll out the change. Existing users in the session shouldn't be impacted, but users joining that session after you deployed a breaking change may have issues connecting to the session. To mitigate this, you may consider some of the following solutions:
+If you plan to update your app with new `SharedObject` or `LiveObject` instances frequently, you should consider how you deploy new schema changes to production. While the actual risk is relatively low and short lasting, there might be active sessions at the time you roll out the change. Existing users in the session shouldn't be impacted, but users joining that session after you deployed a breaking change might have issues connecting to the session. To mitigate this, you might consider some of the following solutions:
 
 * Deploy schema changes for your web application outside of normal business hours.
 * Use `dynamicObjectTypes` for any changes made to your schema, rather than changing `initialObjects`.
@@ -555,7 +555,7 @@ See [manage account settings and profile info](/windows/uwp/publish/manage-accou
 &nbsp;
 </details>
 <details>
-<summary>Why do I see a, "This account is not publish eligible," message when I try to submit my app?</summary>
+<summary>Why do I see a, "This account isn't publish eligible," message when I try to submit my app?</summary>
 
 You received this error message because your [account verification status](/partner-center/verification-responses) is pending. Check your status in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select the **Settings** gear icon and choose **Developer settings > Account > Account settings**.
 
@@ -597,7 +597,7 @@ Try the following steps:
 * Check your junk or spam folder.
 * Clear the browser cache, go to your Partner Center account dashboard, and select **Resend verification email**.
 * Try accessing the **Resend verification email** link from a different browser.
-* Work with your IT department to ensure that the verification emails are not blocked by your email server.
+* Work with your IT department to ensure that the verification emails aren't blocked by your email server.
 * Adjust your server's spam filter to allow or safe-list all emails from **<maccount@microsoft.com>**.
 <br>
 
