@@ -231,6 +231,12 @@ For examples on how to send an activity feed notification, see [send activity fe
 * For recurring and large batches of notifications, we recommend to use templated notifications as they depend on activity templates in the app manifest.
 * The `systemDefault` reserved activity type remains available, regardless of the activity types listed in your app manifest.
 
+## Code sample
+
+| Sample name | Description | .NET |
+|-------------|-------------|------|
+|Send activity feed notification with `systemDefault`|Sample app to demonstrates how to implement systemDefault activity type for send activity feed notification.|[View]|
+
 ## Step-by-step guide
 
 Follow the [step-by-step guide](../sbs-graphactivity-feedbroadcast.yml) to send activity feed notifications in Teams.
