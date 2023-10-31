@@ -10,33 +10,41 @@ ms.date: 10/20/2023
 
 # Microsoft Adaptive Card Previewer
 
-Microsoft Adaptive Card Previewer (ACP) helps you to preview the [Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md) when you're iterating over your card designs. It's a standalone extension bundled with Teams Toolkit that helps to preview Adaptive Card built for Teams bot, message extension, and Copilot plugin. You can open a side-by-side preview to view changes live and switch between different themes.
+The Microsoft Adaptive Card Previewer (ACP) enables you to preview [Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md) as you refine your card designs. ACP with Teams Toolkit, facilitates the preview of Adaptive Cards created for Teams bot, message extension, and Copilot. You've the option to open a side-by-side preview to observe live changes and alternate between various themes.
 
 :::image type="content" source="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png" alt-text="Shows the Adaptive Card Previewer extension Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png":::
 
 ## Features
 
-ACP uses the latest rendering stack for Teams to provide a more accurate preview of Adaptive Cards.
+ACP provides faster and more reliable solutions to preview Adaptive Card designs. The Adaptive Card supports the following features:
 
-ACP provides faster and more reliable solution for previewing Adaptive Card designs. The Adaptive Card supports the following features:
+* **Instant preview**: You can preview Adaptive Cards in Visual Studio Code editor through CodeLens or Command Palette.
 
-* Instant preview: You can preview Adaptive Cards in Visual Studio Code editor through CodeLens or Command Palette.
+# [CodeLens](#tab/codelens)
 
-  :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-open-preview.png" alt-text="Shows the options for instant preview of adaptive cards in Visual Studio Code editor through CodeLens or Command Palette.":::
+You can select **Preview Adaptive Card** suggestion in the Adaptive Card template file to preview the Adaptive Card in the right pane.
 
-  :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-preview-template.gif" alt-text="Shows how the preview appears in Adaptive Card preview extension in Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/acp-preview-template.gif":::
+:::image type="content" source="../../assets/images/previewer-adaptive-card/acp-preview-template.gif" alt-text="Shows how the preview appears in Adaptive Card preview extension in Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/acp-preview-template.gif":::
 
-* Switch themes: You can switch between light, dark, and high contrast themes to preview your cards so you can design with confidence.
+# [Command Palette](#tab/command-palette)
+
+You can use **Adaptive Card: Open Preview to the Side** or **Adaptive Card: Open Preview** to preview the Adaptive Card.
+
+:::image type="content" source="../../assets/images/previewer-adaptive-card/acp-open-preview.png" alt-text="Shows the options for instant preview of adaptive cards in Visual Studio Code editor through CodeLens or Command Palette.":::
+
+---
+
+* **Switch themes**: You can switch between light, dark, and high contrast themes to preview your cards so you can design with confidence.
 
   :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-select-theme.gif" alt-text="Shows how to switch different themes in Adaptive Card Previewer.":::
 
-* Separation of data: You can separate data from the layout in an Adaptive Card [template language](/adaptive-cards/templating/). Use the command `Adaptive Card: New Data File` to add a data file for a template. This generates an empty file where you can bind data to your Adaptive Card template.
+* **Data separation**: You can separate data from the layout in an Adaptive Card [template language](/adaptive-cards/templating/). Use the command `Adaptive Card: New Data File` to add a data file for a template. This generates an empty file where you can bind data to your Adaptive Card template.
 
-* Seamless ACP integration with Teams Toolkit: Allows a Just-In-Time installation of ACP when you're iterating on Adaptive Cards generated from Teams Toolkit project creation.
+* **Integration with Teams Toolkit**: Allows Just-in-Time (JIT) installation of ACP when you're iterating on Adaptive Cards generated from Teams Toolkit project creation.
 
   :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-preview-example.png" alt-text="Shows a sample preview of an Adaptive Card when iterating an Adaptive Card." lightbox="../../assets/images/previewer-adaptive-card/acp-preview-example.png":::
 
-* Default theme: Configure default theme through Visual Studio Code extension settings **Adaptive Card Previewer: Default Theme**.
+* **Default theme**: Configure default theme through Visual Studio Code extension settings **Adaptive Card Previewer: Default Theme**.
 
   :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-default-theme.png" alt-text="Shows how to configure default theme through Visual Studio Code extension settings.":::
 
