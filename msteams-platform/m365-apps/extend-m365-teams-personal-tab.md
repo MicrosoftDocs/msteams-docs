@@ -55,9 +55,9 @@ To start with a personal tab that's already enabled to run in Teams, Outlook, an
 1. Select the **Tab** option.
 1. Select **Basic tab**.
 
-    :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Screenshot shows the basic tab option highlighted to create a new app feature using a tab.":::
+    :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Screenshot shows the Basic Tab option highlighted to create a new app feature using a tab.":::
 
-1. Select preferred programming language.
+1. Select a preferred programming language.
 1. Select a location on your local machine for the workspace folder and enter your application name.
 1. Once your app has been created, within the Teams Toolkit extension, make sure you're signed in to the appropriate Microsoft 365 Developer Program sandbox tenant and Azure account. These options can be found within the **ACCOUNTS** section of the extension.
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
@@ -179,7 +179,7 @@ The final step to running your app in Microsoft 365 and Outlook is to sideload y
 
 1. Select **Apps** to open the **Manage your apps** pane. Then select **Upload an app**.
 
-    :::image type="content" source="../assets/images/teams-manage-your-apps.png" alt-text="Screenshot shows the upload an app option under manage your apps.":::
+    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Screenshot shows the Upload an app option under Manage your apps.":::
 
 1. Choose the **Upload a custom app** option and select your app package.
 
@@ -204,7 +204,7 @@ To view your app running in Outlook on Windows desktop:
 1. On the side bar, select  **More apps**. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Outlook.
 
-    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Screenshot shows the more apps option on the side bar of Outlook desktop client to see your installed tab app.":::
+    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Screenshot shows the More apps option on the side bar of Outlook desktop client to see your installed tab app.":::
 
 ### Outlook on the web
 
@@ -214,17 +214,18 @@ To view your app in Outlook on the web:
 1. On the side bar, select  **Apps**. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch and preview your app running in Outlook on the web.
 
-    :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Screenshot shows the apps option on the side bar of outlook.com to see your installed tab app.":::
+    :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Screenshot shows the Apps option on the side bar of outlook.com to see your installed tab app.":::
 
 ### Outlook for Android app
 
 To view your app running in Outlook for Android app:
 
-1. Open the Outlook app on your Android device and sign in using your developer tenant account. If the Outlook for Android app was already running prior to sideloading your app, restart Outlook to see it in the installed apps section.
-1. Select the **More** icon. Your sideloaded app appears among installed apps.
+1. Open the Outlook app on your Android device and sign in using your developer tenant account. If the Outlook app for Android was already running prior to sideloading your app, restart the Outlook app to see it in the installed apps section.
+
+1. Select the **Apps** icon. Your sideloaded app appears among installed apps.
 1. Select your app icon to open your app in Outlook for Android.
 
-    :::image type="content" source="images/outlook-mobile-more.png" alt-text="Screenshot shows the more option on the side bar of the Outlook app to see your installed personal tabs in android.":::
+    :::image type="content" source="images/outlook-mobile-android-more.png" alt-text="Screenshot shows the Apps option of the Outlook app on Android.":::
 
 ### Outlook app for iOS
 
@@ -234,7 +235,7 @@ To view your app running in Outlook app for iOS:
 1. Select the **More** icon. Your sideloaded app appears among installed apps.
 1. Select your app icon to open your app in the Outlook app.
 
-    :::image type="content" source="images/outlook-ios-mobile-more.png" alt-text="Screenshot shows the more option on the side bar of the Outlook app to see your installed personal tabs in iOS.":::
+    :::image type="content" source="images/outlook-ios-mobile-more.png" alt-text="Screenshot shows the More option of the Outlook app on iOS.":::
 
 ### Microsoft 365 on Windows
 
@@ -244,7 +245,7 @@ To view your app running in Microsoft 365 on Windows desktop:
 1. Select the **Apps** icon on the side bar. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Microsoft 365.
 
-    :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Screenshot shows the apps option on the side bar of Microsoft 365 desktop client to see your installed tab app.":::
+    :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Screenshot shows the Apps option on the side bar of Microsoft 365 desktop client to see your installed tab app.":::
 
 ### Microsoft 365 on the web
 
@@ -254,7 +255,7 @@ To preview your app running in Microsoft 365 on the web:
 1. Select the **Apps** icon on the side bar. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Microsoft 365 on the web.
 
-    :::image type="content" source="images/office-web-more-apps.png" alt-text="Screenshot shows the apps option on the side bar of microsoft365.com to see your installed tab app.":::
+    :::image type="content" source="images/office-web-more-apps.png" alt-text="Screenshot shows the Apps option on the side bar of microsoft365.com to see your installed tab app.":::
 
 ### Microsoft 365 for Android app
 
@@ -264,7 +265,7 @@ To view your app running in Microsoft 365 for Android app:
 1. Select the **Apps** icon. Your sideloaded app appears among installed apps.
 1. Select your app icon to launch your app in the Microsoft 365 app.
 
-    :::image type="content" source="images/m365-android-more-apps.png" alt-text="Screenshot shows the apps option on the side bar of the Microsoft 365 app to see your installed personal tabs on Microsoft 365 for android app.":::
+    :::image type="content" source="images/m365-android-more-apps.png" alt-text="Screenshot shows the Apps option on the side bar of the Microsoft 365 app to see your installed personal tabs on Microsoft 365 for Android app.":::
 
 ### Microsoft 365 for iOS
 
@@ -274,7 +275,7 @@ To view your app running in Microsoft 365 for iOS:
 1. Select the **Apps** icon. Your sideloaded app appears among installed apps.
 1. Select your app icon to launch your app in the Microsoft 365 app.
 
-    :::image type="content" source="images/m365-ios-more-apps.png" alt-text="Screenshot shows the apps option on the side bar of the Microsoft 365 app to see your installed personal tabs on Microsoft 365 for iOS.":::
+    :::image type="content" source="images/m365-ios-more-apps.png" alt-text="Screenshot shows the Apps option on the side bar of the Microsoft 365 app to see your installed personal tabs on Microsoft 365 for iOS.":::
 
 ## Troubleshooting
 
@@ -318,7 +319,7 @@ Teams Toolkit (`F5`) debugging isn't yet supported with Microsoft 365 for Androi
 1. Launch the Microsoft 365 app From your Android device.
 1. Open your profile **Me > Settings > Allow debugging**, and toggle on the option for **Enable remote debugging**.
 
-    :::image type="content" source="images/office-android-enable-remote-debugging.png" alt-text="Screenshot shows the enable remote debugging toggle option.":::
+    :::image type="content" source="images/office-android-enable-remote-debugging.png" alt-text="Screenshot shows the Enable remote debugging toggle option.":::
 
 1. Leave **Settings**.
 1. Leave your profile screen.
