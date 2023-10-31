@@ -13,24 +13,24 @@ ms.date: 10/20/2023
 > [!NOTE]
 > The Adaptive Card Previewer (ACP) is available in [Public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-ACP is a Visual Studio Code Extension that allows you to easily preview the Adaptive Cards when you're updating your Adaptive Card designs. It aims to provide a seamless and accurate previewing experience within the Visual Studio Code.
+ACP is a Visual Studio Code extension that allows you to easily preview the Adaptive Cards when you're updating your Adaptive Card designs in Teams Toolkit. It aims to provide a seamless and accurate previewing experience within the Visual Studio Code.
 
 ## Prerequisites
 
-Before you begin, you must be familiar with the following prerequisites:
+Before you begin, ensure that you're familiar with the following prerequisites:
 
 * [Design Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md).
 * [Download and install Visual Studio Code](https://code.visualstudio.com/Download).
 
 ## Install Adaptive Card Previewer for Visual Studio Code
 
-You can install Adaptive Card Previewer using **Extensions** in Visual Studio Code, or install it from the Visual Studio Code Marketplace.
+You can install Adaptive Card Previewer from **Extensions** in Visual Studio Code, or from the Visual Studio Code Marketplace.
 
 # [Visual Studio Code](#tab/vscode)
 
 To install ACP extension in Visual Studio Code, follow these steps:
 
-1. Launch Visual Studio Code.
+1. Go to Visual Studio Code.
 1. Select **View** > **Extensions** or **Ctrl+Shift+X**. You can also open extensions by selecting the extensions :::image type="icon" source="../../assets/images/previewer-adaptive-card/vsc-ext-icon.png" border="false"::: icon from the Visual Studio Code activity bar.
 
     :::image type="content" source="../../assets/images/previewer-adaptive-card/view-extensions.png" alt-text="Screenshot shows how to open extensions in Visual Studio Code.":::
@@ -47,9 +47,9 @@ To install ACP extension in Visual Studio Code, follow these steps:
 
 # [Marketplace](#tab/marketplace)
 
-To install ACP extension in Marketplace, follow these steps:
+To install ACP extension from Visual Studio Code Marketplace, follow these steps:
 
-1. Go to *Visual Studio Code Marketplace* in a web browser.
+1. Go to **Visual Studio Code Marketplace** [link to be shared by TTK team].
 
 1. Select **Install**.
 
@@ -65,15 +65,11 @@ To install ACP extension in Marketplace, follow these steps:
 
 ## Preview an Adaptive Card
 
-1. Download the [Adaptive Card sample](https://github.com/OfficeDev/acpreviewer/tree/main/card-samples).
-1. Unzip and open the downloaded sample cards in the Visual Studio Code.
-1. Select a card from the sample cards.
+You can use your existing Adaptive Card template file or you can download the [Adaptive Card sample](https://github.com/OfficeDev/acpreviewer/tree/main/card-samples).
+
+1. Open an existing Adaptive Card template file or open an Adaptive Card template file from the downloaded sample in Visual Studio Code.
 1. In the upper-left side of Adaptive Card template pane, select **Preview Adaptive Card**.
-    :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-sample-preview.png" alt-text="Shows the instant preview of Adaptive Card in the Visual Studio Code extension." lightbox="../../assets/images/previewer-adaptive-card/acp-sample-preview1.png":::
+
+    :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-sample-preview.png" alt-text="Screenshot shows the instant preview of Adaptive Card in the Visual Studio Code extension." lightbox="../../assets/images/previewer-adaptive-card/acp-sample-preview1.png":::
+
     Preview of the adaptive card opens in the right pane. You can select the theme of the preview from the **Theme** dropdown list.
-
-## Code sample
-
-| **Sample name** | **Description** |**Node.js** |
-|-----------------|-----------------|----------------|
-| Adaptive Cards | This sample code describes the Adaptive Card samples for preview in ACP. |[View](https://github.com/OfficeDev/acpreviewer/tree/main/card-samples)|

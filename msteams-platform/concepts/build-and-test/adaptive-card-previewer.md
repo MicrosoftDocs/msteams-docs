@@ -10,7 +10,7 @@ ms.date: 10/20/2023
 
 # Microsoft Adaptive Card Previewer
 
-The Microsoft Adaptive Card Previewer (ACP) enables you to preview [Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md) as you refine your card designs. ACP with Teams Toolkit, facilitates the preview of Adaptive Cards created for Teams bot, message extension, and Copilot. You've the option to open a side-by-side preview to observe live changes and alternate between various themes.
+The Microsoft Adaptive Card Previewer (ACP) enables you to preview [Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md) as you refine your card designs. ACP with Teams Toolkit, facilitates the preview of Adaptive Cards created for Teams bot, message extension, and Copilot. You have the option to open a side-by-side preview to observe live changes and alternate between various themes.
 
 :::image type="content" source="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png" alt-text="Screenshot shows the Adaptive Card Previewer extension Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png":::
 
@@ -50,26 +50,15 @@ You can use **Adaptive Card: Open Preview to the Side** or **Adaptive Card: Open
 
 ## Advantages
 
-ACP aims to improve the developer experience for creating Adaptive Cards in Microsoft Teams with the following advantages:
+The following are the advantages of ACP:
 
-### Fast iteration
+* Faster update: You can preview the Adaptive Card designs right within their integrated development environment without the need to constantly switch between tools. You can create a bot, messaging extension, or Copilot plugin project with Teams Toolkit, open the Adaptive Card metadata file, and use **CodeLens** or a specific command to preview the card. Any update or changes to the card are reflected instantly through **Hot Reload** feature in the preview.v
 
-You can preview the Adaptive Card designs right within their integrated development environment without the need to constantly switch between tools.
-
-Following are the developer experiences:
-
-1. Create a new bot, messaging extension, or Copilot plugin project with Teams Toolkit or open an existing project with an Adaptive Card metadata file.
-1. Open the Adaptive Card metadata file to customize the card.
-1. Utilize **CodeLens** or a specific command to preview the card you're currently working on.
-1. Changes to the card are reflected instantly through **Hot Reload** feature in the preview.
-
-### Trustworthy previews
-
-ACP uses the same rendering stack as Teams and Outlook, which ensures accurate preview results consistently aligned with the actual card rendering on these platforms.
+* Trustworthy previews: ACP uses the same rendering stack as Teams and Outlook to ensure that accurate preview results are consistently aligned with the actual card rendering.
 
 ## Limitations
 
-The following are the limitations of ACP:
+The following Adaptive Card features aren't supported in ACP:
 
 * [People Picker](../../task-modules-and-cards/cards/people-picker.md)
 * [Typeahead search](../../task-modules-and-cards/cards/dynamic-search.md)
@@ -89,7 +78,7 @@ It’s a standalone extension because we're using a closed-source package to ren
 <details>
 <summary>Does this extension support all Adaptive Card features in Teams platform?</summary>
 
-No. Unfortunately, there are several [limitations](adaptive-card-previewer.md#limitations) that ACP extension can't currently support.
+No. Unfortunately, there are several [limitations](adaptive-card-previewer.md#limitations) that ACP extension can't support.
 <br>
 &nbsp;
 </details>
