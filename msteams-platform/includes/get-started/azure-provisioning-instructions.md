@@ -95,6 +95,6 @@ Once the provisioning and deployment steps are complete:
 
 1. Select **Try it**.
 
-   The Message Extension app is loaded in a chat bot app.
+   The message extension app is loaded in a chat bot app.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/msgext-app.png" alt-text="Screenshot shows an app sideloaded in Teams.":::

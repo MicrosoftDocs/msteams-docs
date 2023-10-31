@@ -67,11 +67,11 @@ To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-
 1. From the dropdown list that appears, select **Message Extension**.
 1. Select **Custom Search Results** to download the sample code for a Teams message extension using the latest app manifest. For more information, see [app manifest](../resources/schema/manifest-schema.md).
 
-    :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams sample options.":::
+    :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="Screenshot shows the create a new Teams app VS Code command palette to list Teams sample options.":::
 
     The sample is also available as *NPM Search Connector* in the Teams Toolkit Samples gallery. From the Teams Toolkit pane, select **Development** > **View samples** > **NPM Search Connector**.
 
-    :::image type="content" source="images/toolkit-search-sample.png" alt-text="Screenshot shows the NPM Search Connector sample in Teams Toolkit Samples gallery.":::
+    :::image type="content" source="images/toolkit-search-sample.png" alt-text="Screenshot shows the NPM search connector sample in Teams Toolkit samples gallery.":::
 
 1. Select preferred programming language.
 1. Select a location on your local machine for the workspace folder and enter your application name.
@@ -127,11 +127,11 @@ For users to interact with your message extension from Outlook, you need to enab
 
 1. Under *Available channels*, select **Microsoft 365** channel.
 
-    :::image type="content" source="../assets/images/azure-bot-channel-message-extensions.png" alt-text="Screenshot shows the Microsoft 365 Extensions Preview channel for your bot from the Azure Bot Channels pane.":::
+    :::image type="content" source="../assets/images/azure-bot-channel-message-extensions.png" alt-text="Screenshot shows the Microsoft 365 Extensions preview channel for your bot from the azure bot channels pane.":::
 
 1. Select **Apply**.
 
-    :::image type="content" source="../assets/images/azure-bot-channel-message-extensions-apply.png" alt-text="Screenshot shows the Microsoft 365 Message Extensions channel for your bot from the Azure Bot Channels pane.":::
+    :::image type="content" source="../assets/images/azure-bot-channel-message-extensions-apply.png" alt-text="Screenshot shows the Microsoft 365 message extensions channel for your bot from the azure bot channels pane.":::
 
 1. Confirm that your Microsoft 365 channel is listed along with Teams in your bot's **Channels** pane.
 
@@ -162,17 +162,17 @@ The final step is to sideload your updated message extension ([app package](/mic
 
 1. Package your Teams application (manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you used Teams Toolkit to create your app, you can easily do this using the **Zip Teams App Package** option in the **UTILITY** section of Teams Toolkit. Select the `manifest.json` file for your app and the appropriate environment.
 
-    :::image type="content" source="images/toolkit-zip-teams-app-package.png" alt-text="Screenshot shows Zip Teams App Package option in Teams Toolkit extension for Visual Studio Code.":::
+    :::image type="content" source="images/toolkit-zip-teams-app-package.png" alt-text="Screenshot shows zip Teams app package option in Teams Toolkit extension for Visual Studio Code.":::
 
 1. Go to **Microsoft Teams** and sign in using your sandbox tenant account.
 
 1. Select **Apps** to open the **Manage your apps** pane. Then select **Upload an app**.
 
-    :::image type="content" source="../assets/images/teams-manage-your-apps.png" alt-text="Screenshot shows the Upload an app option under Manage your apps.":::
+    :::image type="content" source="../assets/images/teams-manage-your-apps.png" alt-text="Screenshot shows the Upload an app option under manage your apps.":::
 
 1. Choose the **Upload a custom app** option, select your app package, and install (**Add**) it to your Teams client.
 
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Screenshot shows the Upload a custom app option in Teams.":::
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Screenshot shows the upload a custom app option in Teams.":::
 
 After it's sideloaded through Teams, your message extension is available in Outlook for Windows desktop and web.
 
@@ -200,7 +200,7 @@ To preview your app running in Outlook on Windows desktop:
 1. Select **New Email**.
 1. Select **All Apps** on the ribbon.
 
-    :::image type="content" source="images/outlook-desktop-compose-more-apps.png" alt-text="Screenshot shows the All Apps menu on the ribbon of the composition window to launch your message extension.":::
+    :::image type="content" source="images/outlook-desktop-compose-more-apps.png" alt-text="Screenshot shows the all apps menu on the ribbon of the composition window to launch your message extension.":::
 
 Your message extension is listed, it opens an adjacent pane to display search results.
 
