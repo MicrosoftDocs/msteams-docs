@@ -638,7 +638,7 @@ export const MyCustomEvent = () => {
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-timer.png" alt-text="Screenshot shows an example of a count down timer with 9 seconds remaining.":::
 
-`LiveTimer` provides a simple countdown timer that is synchronized for everyone in a meeting. It’s useful for scenarios that have a time limit, such as a group meditation timer or a round timer for a game. You can also use it to schedule tasks for everyone in the session, such as displaying a reminder prompt.
+`LiveTimer` provides a simple countdown timer that is synchronized for all participants in a meeting. It’s useful for scenarios that have a time limit, such as a group meditation timer or a round timer for a game. You can also use it to schedule tasks for everyone in the session, such as displaying a reminder prompt.
 
 # [JavaScript](#tab/javascript)
 
@@ -822,7 +822,7 @@ export function CountdownTimer() {
 
 The `LiveFollowMode` class combines `LivePresence` and `LiveState` into a single class, enabling you to easily implement follower and presenter modes into your application. This allows you to implement familiar patterns from popular collaborative apps such as PowerPoint Live, Excel Live, and Whiteboard. Unlike screen sharing, `LiveFollowMode` allows you to render content with high quality, improved accessibility, and enhanced performance. Users can easily switch between their private views and follow other users.
 
-You can use the `startPresenting()` function to **take control** of the application for all other users in the session. Alternatively, you can allow users to individually select specific users they want to follow using the `followUser()` function. In both scenarios, users can temporarily enter a private view with the `beginSuspension()` function or sync back to the presenter with the `endSuspension()` function. Meanwhile, the `update()` function allows the local user to inform other clients in the session their own personal `stateValue`. Similar to `LivePresence`, you can listen to changes to each user's `stateValue` through a `presenceChanged` event listener.
+You can use the `startPresenting()` function to **take control** of the application for all other users in the session. Alternatively, you can allow users to individually select specific users they want to follow using the `followUser()` function. In both scenarios, users can temporarily enter a private view with the `beginSuspension()` function or synchronize back to the presenter with the `endSuspension()` function. Meanwhile, the `update()` function allows the local user to inform other clients in the session of their own personal `stateValue`. Similar to `LivePresence`, you can listen to changes to each user's `stateValue` through a `presenceChanged` event listener.
 
 `LiveFollowMode` also exposes a `state` object, which dynamically updates depending on the user the local user is following. For example, if the local user isn't following anyone, the `state.value` property matches the local user's most recent `stateValue` broadcasted through `update()`. However, if the local user is following a presenter, the `state.value` property matches the presenting user's most recent `stateValue`. Similar to `LiveState`, you can listen to changes to the `state` value using a `stateChanged` event listener. To learn more about the `state` object, see the [IFollowModeState interface reference](/javascript/api/@microsoft/live-share/ifollowmodestate).
 
