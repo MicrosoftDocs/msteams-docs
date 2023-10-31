@@ -224,7 +224,7 @@ For examples on how to send an activity feed notification, see [send activity fe
 * The `systemDefault` activity type is reserved and can't be used in the app manifest while declaring [activities](/graph/teams-send-activityfeednotifications?tabs=http#activities-section-changes).
 * You can use the `systemDefault` activity type to:
   * You can test new scenarios and try activity feed notification APIs without adding activity types to your app manifest.
-  * For Teams Store apps, it saves time and streamlines the process since you don't need to adjust activity types in your app manifest constantly. The `systemDefault` activity type is ready to use from the get-go.
+  * With Teams Store apps, the systemDefault activity type simplifies the process and saves time as it eliminates the need for constant adjustments to activity types in your app manifest. The systemDefault activity type is ready for use immediately.
 * With the `systemDefault` activity type you can't:
   * Utilize the built-in localization features provided by app manifest.
   * Rely on sending customizable notifications with the  `systemDefault` activity type. Users can turn off all notifications from your app with a toggle in the Teams client settings, which can obstruct communication between your app and its users.
