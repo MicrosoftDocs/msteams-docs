@@ -1730,9 +1730,9 @@ When you start your application this way, the `LiveShareClient` adds `#{containe
 | ----------- | --------------------------------------------------------------- | ------------------------------------------- | ---------------------------------------------- |
 | Dice Roller | Enable all connected clients to roll a die and view the result. | [View](https://aka.ms/liveshare-diceroller) | [View](https://aka.ms/liveshare-diceroller-ts) |
 | Agile Poker | Enable all connected clients to play Agile Poker. | [View](https://aka.ms/liveshare-agilepoker) | NA |
-| 3D Model    | Enable all connected clients to view a 3D model together. |  NA | [View](https://aka.ms/liveshare-3dviewer-ts) |
+| 3D Model    | Enable all connected clients to view a 3D model together. |    NA | [View](https://aka.ms/liveshare-3dviewer-ts) |
 | Timer | Enable all connected clients to view a countdown timer. |  NA | [View](https://aka.ms/liveshare-timer-ts) |
-| Presence avatars | Display presence avatars for all connected clients. |  NA | [View](https://aka.ms/liveshare-presence-ts) |
+| Presence avatars | Display presence avatars for all connected clients. |    NA | [View](https://aka.ms/liveshare-presence-ts) |
 
 ## Next step
 
