@@ -20,13 +20,13 @@ ACP provides faster and more reliable solutions to preview Adaptive Card designs
 
 * **Instant preview**: You can preview Adaptive Cards in Visual Studio Code editor through CodeLens or Command Palette.
 
-# [CodeLens](#tab/codelens)
+   # [CodeLens](#tab/codelens)
 
    You can select **Preview Adaptive Card** suggestion in the Adaptive Card template file to preview the Adaptive Card in the right pane.
 
    :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-preview-template.gif" alt-text="Graphic shows how the preview appears in Adaptive Card preview extension in Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/acp-preview-template.gif":::
 
-# [Command Palette](#tab/command-palette)
+   # [Command Palette](#tab/command-palette)
 
    You can use **Adaptive Card: Open Preview to the Side** or **Adaptive Card: Open Preview** to preview the Adaptive Card.
 
