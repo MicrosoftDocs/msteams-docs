@@ -12,6 +12,11 @@ ms.date: 02/27/2023
 
 Personal tabs, along with personally scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access.
 
+> [!IMPORTANT]
+>
+> * To learn how to create a tab with Teams Toolkit, see [build your first tab app using JavaScript](../../sbs-gs-javascript.yml).
+> * We've introduced the [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+
 Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your personal tab.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
@@ -1058,9 +1063,6 @@ pages.config.setConfig({
 ```
 
 Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other properties can't be changed for static tabs.
-
-> [!NOTE]
-> You can also create a tab using Teams Toolkit. For more information, see [build your first tab app using JavaScript](../../sbs-gs-javascript.yml).
 
 ## Code sample
 
