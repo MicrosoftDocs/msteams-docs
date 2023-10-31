@@ -106,7 +106,7 @@ If you've purchased a Teams app subscription or if you want to manage one for yo
 
 1. Select the **Subscriptions** tab to view your list of subscriptions.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/subscription-list.png" alt-text="Screenshot shows the list of subscriptions.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/subscription-list.png" alt-text="Screenshot shows the list of subscriptions under subscriptions tab highlighted in red.":::
 
 1. Find the app that you want to cancel and select **More options ...** > **View subscription**.
 
@@ -127,13 +127,13 @@ The following example shows how users can manage licenses for third-party apps f
 
 1. Select **Apps** > **Manage your apps**.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/client-experience.png" alt-text="Screenshot shows the apps screen to select manage your app option.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/client-experience.png" alt-text="Screenshot shows the apps screen to select manage your apps option highlighted in red.":::
 
 1. Select **Subscriptions**. A tab appears with a list of purchases made in the tenant.
 
 1. Select an existing subscription from the list and then select **Assign licenses**.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/list-of-subscriptions.png" alt-text="Screenshot shows the assign licenses option of the respective app under subscription tab.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/list-of-subscriptions.png" alt-text="Screenshot shows the assign licenses option of the respective app under subscription tab highlighted in red.":::
 
 1. To view license utilization and assign licenses, select **Assign licenses**.
 
@@ -145,7 +145,7 @@ The following example shows how users can manage licenses for third-party apps f
 
     You can view the list of assigned users or teams for the subscription and also check the status of the assignment.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/list-of-assigned-users.png" alt-text="Screenshot shows the list of assigned users with Assign licenses option highlighted in red.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/list-of-assigned-users.png" alt-text="Screenshot shows the list of assigned users with assign licenses option highlighted in red.":::
 
 1. If you want to unassign a license for a user or a team, select the users or a team from the list and select **Unassign**.
 
