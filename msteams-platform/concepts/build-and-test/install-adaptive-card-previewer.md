@@ -13,7 +13,7 @@ ms.date: 10/20/2023
 > [!NOTE]
 > The Adaptive Card Previewer (ACP) is available in [Public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-ACP is a Visual Studio Code Extension that allows you to easily preview the Adaptive Cards when you're iterating over your card designs. It aims to provide a seamless and accurate previewing experience within the Visual Studio Code.
+ACP is a Visual Studio Code Extension that allows you to easily preview the Adaptive Cards when you're updating your Adaptive Card designs. It aims to provide a seamless and accurate previewing experience within the Visual Studio Code.
 
 ## Prerequisites
 

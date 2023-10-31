@@ -12,7 +12,7 @@ ms.date: 10/20/2023
 
 The Microsoft Adaptive Card Previewer (ACP) enables you to preview [Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md) as you refine your card designs. ACP with Teams Toolkit, facilitates the preview of Adaptive Cards created for Teams bot, message extension, and Copilot. You've the option to open a side-by-side preview to observe live changes and alternate between various themes.
 
-:::image type="content" source="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png" alt-text="Shows the Adaptive Card Previewer extension Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png":::
+:::image type="content" source="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png" alt-text="Screenshot shows the Adaptive Card Previewer extension Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png":::
 
 ## Features
 
@@ -24,13 +24,13 @@ ACP provides faster and more reliable solutions to preview Adaptive Card designs
 
 You can select **Preview Adaptive Card** suggestion in the Adaptive Card template file to preview the Adaptive Card in the right pane.
 
-:::image type="content" source="../../assets/images/previewer-adaptive-card/acp-preview-template.gif" alt-text="Shows how the preview appears in Adaptive Card preview extension in Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/acp-preview-template.gif":::
+:::image type="content" source="../../assets/images/previewer-adaptive-card/acp-preview-template.gif" alt-text="Graphic shows how the preview appears in Adaptive Card preview extension in Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/acp-preview-template.gif":::
 
 # [Command Palette](#tab/command-palette)
 
 You can use **Adaptive Card: Open Preview to the Side** or **Adaptive Card: Open Preview** to preview the Adaptive Card.
 
-:::image type="content" source="../../assets/images/previewer-adaptive-card/acp-open-preview.png" alt-text="Shows the options for instant preview of adaptive cards in Visual Studio Code editor through CodeLens or Command Palette.":::
+:::image type="content" source="../../assets/images/previewer-adaptive-card/acp-open-preview.png" alt-text="Screenshot shows the options for instant preview of adaptive cards in Visual Studio Code editor through CodeLens or Command Palette.":::
 
 ---
 
@@ -42,30 +42,30 @@ You can use **Adaptive Card: Open Preview to the Side** or **Adaptive Card: Open
 
 * **Integration with Teams Toolkit**: Allows Just-in-Time (JIT) installation of ACP when you're updating Adaptive Cards generated from Teams Toolkit project creation.
 
-  :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-preview-example.png" alt-text="Screenshot shows a sample preview of an Adaptive Card when iterating an Adaptive Card." lightbox="../../assets/images/previewer-adaptive-card/acp-preview-example.png":::
+  :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-preview-example.png" alt-text="Screenshot shows a sample preview of an Adaptive Card when updating an Adaptive Card." lightbox="../../assets/images/previewer-adaptive-card/acp-preview-example.png":::
 
 * **Default theme**: Configure default theme through Visual Studio Code extension settings **Adaptive Card Previewer: Default Theme**.
 
-  :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-default-theme.png" alt-text="Shows how to configure default theme through Visual Studio Code extension settings.":::
+  :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-default-theme.png" alt-text="Screenshot shows how to configure default theme through Visual Studio Code extension settings.":::
 
 ## Advantages
 
-ACP aims to improve the developer experience for creating Adaptive Cards in Microsoft Teams with the following benefits:
+ACP aims to improve the developer experience for creating Adaptive Cards in Microsoft Teams with the following advantages:
 
 ### Fast iteration
 
 You can preview the Adaptive Card designs right within their integrated development environment without the need to constantly switch between tools.
 
-The developer experiences are:
+Following are the developer experiences:
 
-* Create a new bot, messaging extension, or Copilot plugin project with Teams Toolkit or open an existing project with an Adaptive Card metadata file.
-* Open the Adaptive Card metadata file to customize the card.
-* Utilize **CodeLens** or a specific command to preview the card you're currently working on.
-* Changes to the card are reflected instantly through **Hot Reload** feature in the preview.
+1. Create a new bot, messaging extension, or Copilot plugin project with Teams Toolkit or open an existing project with an Adaptive Card metadata file.
+1. Open the Adaptive Card metadata file to customize the card.
+1. Utilize **CodeLens** or a specific command to preview the card you're currently working on.
+1. Changes to the card are reflected instantly through **Hot Reload** feature in the preview.
 
 ### Trustworthy previews
 
-ACP uses the same rendering stack as Teams and Outlook, which ensures accurate preview results align with the actual card rendering in these platforms.
+ACP uses the same rendering stack as Teams and Outlook, which ensures accurate preview results consistently aligned with the actual card rendering on these platforms.
 
 ## Limitations
 
