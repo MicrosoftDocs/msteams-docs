@@ -34,15 +34,15 @@ You can use **Adaptive Card: Open Preview to the Side** or **Adaptive Card: Open
 
 ---
 
-* **Switch themes**: You can switch between light, dark, and high contrast themes to preview your cards so you can design with confidence.
+* **Switch themes**: You can switch between light, dark, and high contrast themes to preview your Adaptive Cards.
 
-  :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-select-theme.gif" alt-text="Shows how to switch different themes in Adaptive Card Previewer.":::
+  :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-select-theme.gif" alt-text="Graphic shows the Adaptive Card preview in light, dark, and high contrast themes.":::
 
 * **Data separation**: You can separate data from the layout in an Adaptive Card [template language](/adaptive-cards/templating/). Use the command `Adaptive Card: New Data File` to add a data file for a template. This generates an empty file where you can bind data to your Adaptive Card template.
 
-* **Integration with Teams Toolkit**: Allows Just-in-Time (JIT) installation of ACP when you're iterating on Adaptive Cards generated from Teams Toolkit project creation.
+* **Integration with Teams Toolkit**: Allows Just-in-Time (JIT) installation of ACP when you're updating Adaptive Cards generated from Teams Toolkit project creation.
 
-  :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-preview-example.png" alt-text="Shows a sample preview of an Adaptive Card when iterating an Adaptive Card." lightbox="../../assets/images/previewer-adaptive-card/acp-preview-example.png":::
+  :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-preview-example.png" alt-text="Screenshot shows a sample preview of an Adaptive Card when iterating an Adaptive Card." lightbox="../../assets/images/previewer-adaptive-card/acp-preview-example.png":::
 
 * **Default theme**: Configure default theme through Visual Studio Code extension settings **Adaptive Card Previewer: Default Theme**.
 
