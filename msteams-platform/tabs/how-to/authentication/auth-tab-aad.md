@@ -10,7 +10,7 @@ ms.date: 12/13/2022
 > [!NOTE]
 > For authentication to work for your tab on mobile clients, ensure that you're using version 1.4.1 or later of the Microsoft Teams JavaScript client library (TeamsJS).
 
-Your Microsoft Teams app might need to interact with various services, such as Facebook, Twitter, and Teams. Most of these services necessitate authentication and authorization for access. Teams stores user profile information in Azure Active Directory (Azure AD) using Microsoft Graph. This article primarily focuses on using Azure AD for authentication to access this information.
+Microsoft Teams app might need to interact with various services, such as Facebook and Twitter, where most of the services require authentication and authorization for access. Teams user profile information is stored in Azure Active Directory (Azure AD) using Microsoft Graph and this article focuses on authentication using Azure AD to get access to this information.
 
 OAuth 2.0, an open standard for authentication, is utilized by Azure AD and numerous other service providers. Understanding of OAuth 2.0 is essential when dealing with authentication in Teams and Azure AD. The examples provided employ the OAuth 2.0 Implicit Grant flow, which retrieves the user's profile information from Azure AD and Microsoft Graph.
 
@@ -48,7 +48,7 @@ Trigger the authentication flow by a user action. Avoid opening the authenticati
 
 Add a button to your configuration or content page to enable the user to sign in when needed. This can be done in the tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
 
-Azure AD, similar to most identity providers, doesn't allow its content to be placed in an `iframe`. This means you need to add a page to host the identity provider that is displayed inside a pop-up window by Teams client. In the following example, the page is `/tab-auth/simple-start`. Use the `authentication.authenticate()` function of the TeamsJS library to launch this page when the button is selected.
+Azure AD, similar to most identity providers, doesn't allow its content from being embedded in an `iframe`. However, you must incorporate a page to host the identity provider, which Teams client displays within a pop-up window. In the following example, the designated page is `/tab-auth/simple-start`. Utilize the `authentication.authenticate()` function from the TeamsJS library to launch this page after the button is selected.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
