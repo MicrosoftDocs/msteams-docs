@@ -46,7 +46,7 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-- title: Register Azure AD app 
+- title: Register Microsoft Entra app 
   durationInMinutes: 5
   content: |
     The following steps help you to create and register your bot in Azure portal:
@@ -221,5 +221,3 @@ items:
 
 - content: |
     You've completed the tutorial to get started with a **Action Message Extension** app!
-
-

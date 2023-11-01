@@ -46,7 +46,7 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-- title: Register Azure AD app
+- title: Register Microsoft Entra app
   durationInMinutes: 5
   content: |
     Register your bot with Azure Bot service when you develop and host it in Azure. Following are the steps:
@@ -230,4 +230,3 @@ items:
 
 - content: |
     You've completed the tutorial to get started with Teams message extensions search!
-

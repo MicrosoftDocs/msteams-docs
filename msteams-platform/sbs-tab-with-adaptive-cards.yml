@@ -198,7 +198,7 @@ items:
 
     1. Go to the [Azure portal](https://portal.azure.com/).
 
-    1. Select **Azure Active Directory**.
+    1. Select **Microsoft Entra ID**.
 
     1. In the left pane, select **App registrations**.
 
@@ -282,7 +282,7 @@ items:
     1. In the left pane, select **API permissions**. 
 
        > [!NOTE]
-       > Users need to consent to the API permissions only if the Azure Active Directory app is registered in a different tenant.
+       > Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
 
     1. Select **Add a permission**.
 
@@ -318,7 +318,7 @@ items:
       1. In **New Connection Setting**, enter the following details:
 
           * **Name** enter **name for your new connection setting. You can use the name in the settings of your bot service code**.
-          * **Service Provider** select **Azure Active Directory V2**.
+          * **Service Provider** select **Microsoft Entra V2**.
           * **Client ID** update your **Microsoft App ID**.
           * **Client secret**  update the value of the `client secret ID**.
           * **Token Exchange URL** use the **Application ID URI**.

@@ -577,11 +577,11 @@ The object is an array with all elements of the type `string`. The maximum item 
 
 **Optional** &ndash; Object
 
-Specify your Microsoft Azure Active Directory (Azure AD) App ID and Graph information to help users seamlessly sign into your Azure AD app.
+Specify your Microsoft Entra App ID and Graph information to help users seamlessly sign into your Microsoft Entra app.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String| |✔️|Microsoft Azure AD application ID of the app. This ID must be a GUID.|
+|`id`|String| |✔️|Microsoft Entra application ID of the app. This ID must be a GUID.|
 |`resource`|String|2048 characters||Resource URL of the app for acquiring auth token for SSO.|
 
 ## graphConnector

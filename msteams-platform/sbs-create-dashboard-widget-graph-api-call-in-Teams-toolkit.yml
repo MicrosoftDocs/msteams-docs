@@ -299,9 +299,9 @@ items:
      To add SSO, follow these steps:
        
         <details>
-        <summary>1. Create Azure Active Directory (Azure AD) app manifest.</summary>
+        <summary>1. Create Microsoft Entra app manifest.</summary>
 
-        To create Azure AD app manifest, follow these steps:
+        To create a Microsoft Entra app manifest, follow these steps:
 
         1. In Visual Studio Code, go to **EXPLORER**.
         1. Create a **aad.manifest.json** file.

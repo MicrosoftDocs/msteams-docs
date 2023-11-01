@@ -2,7 +2,7 @@
 title: SSO for tabs and message extension
 metadata:
   title: SSO for tabs and message extension
-  description: In this module, learn how to set up Azure Active Directory Single sign-on (Azure AD SSO) for tabs.
+  description: In this module, learn how to set up Microsoft Entra Single sign-on (Microsoft Entra SSO) for tabs.
   audience: Developer
   level: Beginner
   ms.date: 12/07/2021
@@ -14,15 +14,15 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-   The  Azure Active Directory single sign-on (Azure AD SSO) helps to authenticate users in Teams. 
+   The  Microsoft Entra single sign-on (Microsoft Entra SSO) helps to authenticate users in Teams. 
 
-   **Key aspects of Azure AD SSO**:
+   **Key aspects of Microsoft Entra SSO**:
 
     * Allows the user to sign in automatically after the first sign in.
     * Allows the user to sign in to other devices without entering credentials again.
     * Obtains token for the signed in user.
 
-   This step-by-step guide helps you to create tabs and message extensions enabling Azure AD SSO authentication. You'll see the following output:
+   This step-by-step guide helps you to create tabs and message extensions enabling Microsoft Entra SSO authentication. You'll see the following output:
 
      :::image type="content" source="./assets/images/Tab-ME-SSO/hello-megan-profile245-1.png" alt-text="Screenshot of the tab and message extension with SSO authentication output after you have successfully completed the step-by-step guide.":::
    
@@ -49,7 +49,7 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-- title: Register Azure AD app 
+- title: Register Microsoft Entra app 
   durationInMinutes: 5
   content: |
     The following steps help you to create and register your bot in Azure portal:
@@ -99,7 +99,7 @@ items:
       > [!NOTE]
       >
       > * If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
-      > * Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
+      > * Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
 
 
     [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
