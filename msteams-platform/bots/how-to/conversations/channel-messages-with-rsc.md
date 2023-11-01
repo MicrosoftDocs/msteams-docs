@@ -178,7 +178,7 @@ The following steps guide you to sideload and validate bot that receives all cha
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the group chat. The dropdown menu appears.
 1. Select **Manage apps** from the dropdown menu.
 
-   :::image type="content" source="../../../assets/images/bots/Chats_Manage_Apps_Entry.png" alt-text="Manage apps in team.":::
+   :::image type="content" source="../../../assets/images/bots/Chats_Manage_Apps_Entry.png" alt-text="Screenshot highlighting the manage apps option from the dropdown menu of a Teams chat":::
 
 1. Select **Upload a custom app** from the lower right corner of **Manage apps**.
 
