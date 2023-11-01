@@ -1,7 +1,7 @@
 ---
 title: Add authentication to your Teams bot
 author: surbhigupta
-description: Learn how to enable authentication using third-party provider to a bot app in Teams using Azure AD.
+description: Learn how to enable authentication using third-party provider to a bot app in Teams using Microsoft Entra ID.
 ms.topic: how-to
 ms.localizationpriority: high
 ---
@@ -10,7 +10,7 @@ ms.localizationpriority: high
 
 You can create bots in Microsoft Teams that access resources on behalf of the user, such as a mail service. You can use Azure Bot Service v4 SDK authentication, based on OAuth 2.0. This makes it easier to develop a bot that can use authentication tokens based on the user's credentials. The key is the use of **identity providers**.
 
-OAuth 2.0 is an open standard for authentication and authorization used by Microsoft Azure Active Directory (Azure AD) and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
+OAuth 2.0 is an open standard for authentication and authorization used by Microsoft Entra ID and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
 
 See [OAuth 2 Simplified](https://aka.ms/oauth2-simplified) for a basic understanding, and [OAuth 2.0](https://oauth.net/2/) for the complete specification.
 
@@ -150,18 +150,18 @@ For more information, see [Create a bot for Teams](../create-a-bot-for-teams.md)
 ## Create the identity provider
 
 You need an identity provider that can be used for authentication.
-In this procedure, you'll use an Azure AD provider. Other Azure AD supported identity providers can also be used.
+In this procedure, you'll use a Microsoft Entra provider. Other Microsoft Entra ID supported identity providers can also be used.
 
-1. In the [**Azure portal**][azure-portal], on the left navigation panel, select **Azure Active Directory**.
+1. In the [**Azure portal**][azure-portal], on the left navigation panel, select **Microsoft Entra ID**.
     > [!TIP]
-    > You'll need to create and register this Azure AD resource in a tenant
+    > You'll need to create and register this Microsoft Entra resource in a tenant
     > in which you can consent to delegate permissions requested by an application.
     > For instruction on creating a tenant, see [Access the portal and create a tenant](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
 1. In the left panel, select **App registrations**.
 1. In the right panel, select the **New registration** tab, in the upper left.
 1. You'll be asked to provide the following information:
    1. **Name**. Enter the name for the application. An example could be  *BotTeamsIdentity*. Remember that the name must be unique.
-   1. Select the **Supported account types** for your application. Select *Accounts in any organizational directory (Any Microsoft Azure Active Directory (Azure AD) - Multitenant) and personal Microsoft accounts (for example, Skype, Xbox)*.
+   1. Select the **Supported account types** for your application. Select *Accounts in any organizational directory (Any Microsoft Entra ID - Multitenant) and personal Microsoft accounts (for example, Skype, Xbox)*.
    1. For the **Redirect URI**:<br/>
        &#x2713;Select **Web**. <br/>
        &#x2713; Set the URL to `https://token.botframework.com/.auth/web/redirect`.
@@ -178,11 +178,11 @@ In this procedure, you'll use an Azure AD provider. Other Azure AD supported ide
    1. Add a description to identify this secret from others you might need to create for this app, such as *Bot identity app in Teams*.
    1. Set **Expires** to your selection.
    1. Select **Add**.
-   1. Before leaving this page, **record the secret**. You'll use this value later as the *Client secret* when you register your Azure AD application with your bot.
+   1. Before leaving this page, **record the secret**. You'll use this value later as the *Client secret* when you register your Microsoft Entra application with your bot.
 
 ### Configure the identity provider connection and register it with the bot
 
-Note: There are two options for Service Providers here, Azure AD V1 and Azure AD V2.  The differences between the two providers are summarized [here](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison), but in general, V2 provides more flexibility with respect to changing bot permissions.  Graph API permissions are listed in the scopes field, and as new ones are added, bots will allow users to consent to the new permissions on the next sign in.  For V1, the bot consent must be deleted by the user for new permissions to be prompted in the OAuth dialog.
+Note: There are two options for Service Providers here, Azure AD v1 and Azure AD v2.  The differences between the two providers are summarized [here](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison), but in general, V2 provides more flexibility with respect to changing bot permissions.  Graph API permissions are listed in the scopes field, and as new ones are added, bots will allow users to consent to the new permissions on the next sign in.  For V1, the bot consent must be deleted by the user for new permissions to be prompted in the OAuth dialog.
 
 #### Microsoft Azure Active Directory (Azure AD) V1
 
@@ -197,16 +197,16 @@ Note: There are two options for Service Providers here, Azure AD V1 and Azure AD
 1. Complete the form as follows:
 
     1. **Name**. Enter a name for the connection. You'll use this name in your bot in the `appsettings.json` file. For example, *BotTeamsAuthADv1*.
-    1. **Service Provider**. Select **Microsoft Azure Active Directory (Azure AD)**. Once you select this, the Azure AD-specific fields will be displayed.
+    1. **Service Provider**. Select **Microsoft Entra ID**. Once you select this, the Microsoft Entra ID-specific fields will be displayed.
     1. **Client id**. Enter the Application (client) ID that you recorded for your Azure identity provider app in the steps above.
     1. **Client secret**. Enter the secret that you recorded for your Azure identity provider app in the steps above.
     1. **Grant Type**. Enter `authorization_code`.
     1. **Login URL**. Enter `https://login.microsoftonline.com`.
     1. **Tenant ID**, enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign, follow these criteria:
 
-        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft Azure Active Directory (Azure AD) - Multi tenant)*, enter the **tenant ID** you recorded earlier for the Microsoft Azure Active Directory (Azure AD) app. This will be the tenant associated with the users who can be authenticated.
+        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft Entra ID - Multi tenant)*, enter the **tenant ID** you recorded earlier for the Microsoft Entra app. This will be the tenant associated with the users who can be authenticated.
 
-        - If you selected *Accounts in any organizational directory (Any Microsoft Azure Active Directory (Azure AD) - Multi tenant and personal Microsoft accounts, for example, Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the Azure AD (Azure AD) app verifies through the tenant whose ID was selected and exclude personal Microsoft accounts.
+        - If you selected *Accounts in any organizational directory (Any Microsoft Entra ID - Multi tenant and personal Microsoft accounts, for example, Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the Microsoft Entra app verifies through the tenant whose ID was selected and exclude personal Microsoft accounts.
 
     h. For **Resource URL**, enter `https://graph.microsoft.com/`. This isn't used in the current code sample.  
     i. Leave **Scopes** blank. The following image is an example:
@@ -227,15 +227,15 @@ Note: There are two options for Service Providers here, Azure AD V1 and Azure AD
 1. Complete the form as follows:
 
     1. **Name**. Enter a name for the connection. You'll use this name in your bot in the `appsettings.json` file. For example, *BotTeamsAuthADv2*.
-    1. **Service Provider**. Select **Microsoft Azure Active Directory v2**. Once you select this, the Azure AD specific fields will be displayed.
+    1. **Service Provider**. Select **Microsoft Azure Active Directory v2**. Once you select this, the Microsoft Entra specific fields will be displayed.
     1. **Client id**. Enter the Application (client) ID that you recorded for your Azure identity provider app in the steps above.
     1. **Client secret**. Enter the secret that you recorded for your Azure identity provider app in the steps above.
     1. **Token Exchange URL**. Leave this blank.
     1. **Tenant ID**, enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign, follow these criteria:
 
-        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft Azure Active directory - Multi tenant)*, enter the **tenant ID** you recorded earlier for the Azure AD app. This will be the tenant associated with the users who can be authenticated.
+        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft Entra ID - Multi tenant)*, enter the **tenant ID** you recorded earlier for the Microsoft Entra app. This will be the tenant associated with the users who can be authenticated.
 
-        - If you selected *Accounts in any organizational directory (Any Microsoft Azure Active Directory (Azure AD) - Multi tenant and personal Microsoft accounts, for example, Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the Azure AD app verifies through the tenant whose ID was selected and exclude personal Microsoft accounts.
+        - If you selected *Accounts in any organizational directory (Any Microsoft Entra ID - Multi tenant and personal Microsoft accounts, for example, Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the Microsoft Entra app verifies through the tenant whose ID was selected and exclude personal Microsoft accounts.
 
     1. For **Scopes**, enter a space-delimited list of graph permissions this application requires for example: User.Read User.ReadBasic.All Mail.Read
 
@@ -633,7 +633,7 @@ This section provides Bot authentication v3 SDK sample.
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest**|
 |---------------|------------|------------|-------------|---------------|---------------|
 | Bot authentication | This sample shows how to get started with authentication in a bot for Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp/demo-manifest/bot-teams-authentication.zip)
-| Tab, Bot, and Message Extension (ME) SSO | This sample shows Azure AD SSO for Tab, Bot, and ME - search, action, link-unfurling. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/demo-manifest/App-SSO.zip)
+| Tab, Bot, and Message Extension (ME) SSO | This sample shows Microsoft Entra SSO for Tab, Bot, and ME - search, action, link-unfurling. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/demo-manifest/App-SSO.zip)
 
 ## See also
 

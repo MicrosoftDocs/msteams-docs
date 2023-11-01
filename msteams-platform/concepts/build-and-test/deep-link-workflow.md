@@ -32,7 +32,7 @@ Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@conto
 
 The query parameters are:
 
-* `users`: The comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID field supports the Microsoft Azure Active Directory (Azure AD) UserPrincipalName, such as an email address only.
+* `users`: The comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID field supports the Microsoft Entra UserPrincipalName, such as an email address only.
 * `topicName`: An optional field for chat's display name if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
 
@@ -71,7 +71,7 @@ Use the following format for configuring a deep link that you can use in a bot, 
 
 The query parameters are:
 
-* `attendees`: An optional comma-separated list of user IDs representing the attendees of the meeting. The user performing the action is the meeting organizer. The user ID field supports only the Azure AD `UserPrincipalName`, typically an email address.
+* `attendees`: An optional comma-separated list of user IDs representing the attendees of the meeting. The user performing the action is the meeting organizer. The user ID field supports only the Microsoft Entra `UserPrincipalName`, typically an email address.
 * `startTime`: The optional parameter for start time of the event. Start time should be in [long ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), for example *2018-03-12T23:55:25+02:00*.
 * `endTime`: An optional parameter for end time of the event, also in ISO 8601 format.
 * `subject`: An optional parameter for the meeting subject.
@@ -144,7 +144,7 @@ While the use of the typed APIs of TeamsJS library is recommended, you can also 
   
 Following are the query parameters:
 
-* `users`: A comma-separated list of user IDs representing the participants of the call. The user ID field supports the Azure AD `UserPrincipalName`, typically an email address, or in a PSTN call, it supports a pstn mri 4:&lt;phonenumber&gt;.
+* `users`: A comma-separated list of user IDs representing the participants of the call. The user ID field supports the Microsoft Entra `UserPrincipalName`, typically an email address, or in a PSTN call, it supports a pstn mri 4:&lt;phonenumber&gt;.
 * `withVideo`: An optional parameter, which you can use to make a video call. Setting this parameter only turns on the caller's camera. The receiver of the call has a choice to answer through an audio or an audio and video call through the Teams call notification window.
 
 #### Configure deep link using TeamsJS library to start audio-video call with users
