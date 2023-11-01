@@ -127,9 +127,9 @@ Following are the steps to create a personal tab:
 
       Use the arrow keys to select **Personal (static)**.
 
-    * **Do you require Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab?**
+    * **Do you require Microsoft Entra Single-Sign-On support for the tab?**
 
-      Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
+      Choose **not** to include Microsoft Entra Single-Sign-On support for the tab. The default is yes, enter **n**.
     > [!NOTE]
     > In a tab, the tab home page appears only when the user selects the back button (or moves out of the tab) and comes back to the home page. The tab doesn't maintain or retain the previous state by design.
     </details>
@@ -830,7 +830,7 @@ To build and run your app:
 
     When you select **F5**, Teams Toolkit:
 
-    1. Registers your application with Azure Active Directory.
+    1. Registers your application with Microsoft Entra ID.
     1. Registers your application for sideloading in Teams.
     1. Starts your application backend running locally.
     1. Starts your application front-end hosted locally.
