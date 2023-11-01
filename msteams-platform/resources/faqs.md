@@ -17,7 +17,7 @@ Get answers to some of your queries when using Moodle LMS.
 
 <summary>What should I do if one or more of the course teams weren't created after synchronization?</summary>
 
-Each Moodle course must have at least one faculty and one student matched to a Microsoft 365 AAD UPN account. The team can't be created, if the synchronization doesn't find a match.
+Each Moodle course must have at least one faculty and one student matched to a Microsoft 365 Microsoft Entra UPN account. The team can't be created, if the synchronization doesn't find a match.
 
 Each team course instance must have an owner, and the synchronization sets the faculty as the owner, with assumption that the faculty has Teams license.
 
@@ -36,7 +36,7 @@ The users have multiple sign in options from the Moodle login page.
 
 <details>
 
-<summary>How can I specify which users to sync? I don’t want all Azure AD users synchronized with the Moodle website. </summary>
+<summary>How can I specify which users to sync? I don’t want all Microsoft Entra users synchronized with the Moodle website. </summary>
 
 Use the **User Creation Restriction** option to specify the users by synchronizing the configuration options of the **local_o365** plugin. The dropdown menu to the left of the **filter** offers options such as Country or Region, Company Name, and Language.
 
@@ -47,7 +47,7 @@ The following image shows user creation restrictions options:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="sync":::
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure ad":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Microsoft Entra ID":::
 
 </details>
 
@@ -71,7 +71,7 @@ The following image shows synchronization of courses:
 
 <details>
 
-<summary>We have followed the documentation, but the user accounts fail to sync AAD and Moodle. What should we do?</summary>
+<summary>We have followed the documentation, but the user accounts fail to sync Microsoft Entra ID and Moodle. What should we do?</summary>
 
 The issue can be resolved before users perform the **Delta token clean up** as a final troubleshooting step.
 
@@ -81,7 +81,7 @@ The following table provides the actions and dependencies to be performed and ch
 |-------|------------|----------|
 | Stable version| Verify that the version of Moodle is listed as a **stable**.| For more information, see [Version support](https://docs.moodle.org/dev/Releases#Version_support).|
 |Permissions| Verify that the Azure application has the necessary permissions to run the synchronization.| For more information, see [Microsoft permissions](https://docs.moodle.org/311/en/Microsoft_365#Permissions).|
-| Full sync| Verify that **Perform a full sync each run** is enabled, and review the **Task Logs** for **Sync users with Azure AD**.| For more information, see [Enable full sync](https://docs.moodle.org/311/en/local_o365)</br>For more information, see [Check task logs](https://docs.moodle.org/311/en/local_o365#Sync_users_with_Azure_AD). |
+| Full sync| Verify that **Perform a full sync each run** is enabled, and review the **Task Logs** for **Sync users with Microsoft Entra ID**.| For more information, see [Enable full sync](https://docs.moodle.org/311/en/local_o365)</br>For more information, see [Check task logs](https://docs.moodle.org/311/en/local_o365#Sync_users_with_Azure_AD). |
 |Token refresh|Clean the **User sync delta token** in the local_o365 plugin.| For more information, see, [Token refresh](https://docs.moodle.org/38/en/Office365).|
 <!-- |Token refresh|Clean the **User sync delta token** in the local_o365 plugin| {moodle_url}\local_o365\acp.php?Mode=maintenance_cleandeltatoken| -->
 
@@ -94,7 +94,7 @@ The following table provides the actions and dependencies to be performed and ch
 The reason for inconsistencies with users being able unable to sign using their Microsoft 365 credentials can be related to the user mapping operation during synchronization. To resolve the issue, perform the following steps:
 
 * Check if the Moodle user authentication type is **OpenID**.
-* Check if the Moodle **User Name** matches the AAD username.
+* Check if the Moodle **User Name** matches the Microsoft Entra username.
 * Clean up the **Token Issue** and retry.
 * Check if the users have **Permissions** to access the Azure application.
 
