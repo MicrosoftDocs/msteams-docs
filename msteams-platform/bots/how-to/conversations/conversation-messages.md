@@ -6,7 +6,7 @@ ms.author: anclear
 ms.localizationpriority: medium
 ---
 
-# Messages in bot conversations
+# Receive direct and app mentioned messages in conversations
 
 Each message in a conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Microsoft Teams posts the message activity to your bot. Teams sends a JSON object to your bot's messaging endpoint and Teams allows only one endpoint for messaging. Your bot examines the message to determine its type and responds accordingly.
 
