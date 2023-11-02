@@ -48,8 +48,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Introduced systemDefault reserved activity types for send activity feed notifications
-        url: tabs/send-activity-feed-notification.md#reserved-activity-types
+      - text: Introduced systemDefault reserved activity type for send activity feed notifications
+        url: tabs/send-activity-feed-notification.md#reserved-activity-type
       - text: Introduced the extensions property in public developer preview app manifest schema
         url: resources/schema/manifest-schema-dev-preview.md#extensions
       - text: Receive meeting participant events
