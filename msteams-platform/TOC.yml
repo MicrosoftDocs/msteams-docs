@@ -499,29 +499,42 @@
   - name: Overview
     href: messaging-extensions/what-are-messaging-extensions.md
     displayName: handleTeamsMessagingExtensionFetchTask
-  - name: Action commands
+  - name: Build message extensions using API
     items:
-    - name: Define action commands
-      href: messaging-extensions/how-to/action-commands/define-action-command.md
-      displayName: Command invoke locations, static list of parameters, action command manually
-    - name: Create and send task modules
-      href: messaging-extensions/how-to/action-commands/create-task-module.md
-      displayName: Initial invoke request, respond to fetchTask, payload activity, handleTeamsMessagingExtensionFetchTask
-    - name: Respond to the task module submit action
-      href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-      displayName: Compose, Respond to initial submit action, configure the poll, attribution for bot messages, submit action
-  - name: Search commands
+    - name: Overview
+      href: messaging-extensions/api-based-overview.md
+      displayName: OpenAPI Description, Search, single parameter, search based message extension
+    - name: Build API-based message extension
+      href: messaging-extensions/build-api-based-message-extension.md
+      display name: Response rendering template, OpenAPI Description, Search, single parameter
+  - name: Build message extensions using Bot Framework  
     items:
-    - name: Define search commands
-      href: messaging-extensions/how-to/search-commands/define-search-command.md
-    - name: Respond to search commands
-      href: messaging-extensions/how-to/search-commands/respond-to-search.md
-    - name: Universal actions for search based message extensions
-      href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
-      displayName: Handle tap actions, Just-in-time install, JIT
-  - name: Add link unfurling
-    href: messaging-extensions/how-to/link-unfurling.md
-    displayName: Domain listings can include wildcards, cache
+    - name: Overview
+      href: messaging-extensions/build-bot-based-message-extension.md
+      displayName:  one-on-one conversation, search command, action command, search based message extension, action based message extension
+    - name: Action commands
+      items:
+      - name: Define action commands
+        href: messaging-extensions/how-to/action-commands/define-action-command.md
+        displayName: Command invoke locations, static list of parameters, action command manually
+      - name: Create and send task modules
+        href: messaging-extensions/how-to/action-commands/create-task-module.md
+        displayName: Initial invoke request, respond to fetchTask, payload activity, handleTeamsMessagingExtensionFetchTask
+      - name: Respond to the task module submit action
+        href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
+        displayName: Compose, Respond to initial submit action, configure the poll, attribution for bot messages, submit action
+    - name: Search commands
+      items:
+      - name: Define search commands
+        href: messaging-extensions/how-to/search-commands/define-search-command.md
+      - name: Respond to search commands
+        href: messaging-extensions/how-to/search-commands/respond-to-search.md
+      - name: Universal actions for search based message extensions
+        href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
+        displayName: Handle tap actions, Just-in-time install, JIT
+    - name: Add link unfurling
+      href: messaging-extensions/how-to/link-unfurling.md
+      displayName: Domain listings can include wildcards, cache
 - name: Build apps for Teams meetings and calls
   items:
   - name: Overview
