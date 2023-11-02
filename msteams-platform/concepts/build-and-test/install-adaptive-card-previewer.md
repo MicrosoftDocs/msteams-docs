@@ -56,7 +56,7 @@ To install Adaptive Card Previewer extension from Visual Studio Code Marketplace
 
 1. Go to [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.vscode-adaptive-cards).
 
-   :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-marketplace.png" alt-text="Screenshot shows Adaptive Card Previewer in Marketplace.":::
+   :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-marketplace.png" alt-text="Screenshot shows Adaptive Card Previewer in Marketplace." lightbox="../../assets/images/previewer-adaptive-card/acp-marketplace.png":::
 
 1. Select **Install**.
 
@@ -68,7 +68,7 @@ To install Adaptive Card Previewer extension from Visual Studio Code Marketplace
 
    Visual Studio Code opens with Adaptive Card Previewer extension page.
 
-   :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-vsc.png" alt-text="Screenshot shows Adaptive Card Previewer page in Visual Studio Code.":::
+   :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-vsc.png" alt-text="Screenshot shows Adaptive Card Previewer page in Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/acp-vsc.png":::
 
 1. In the Visual Studio Code extension page, Select **Install**.
 
