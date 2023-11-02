@@ -235,7 +235,7 @@ For examples on how to send an activity feed notification, see [send activity fe
 
 | Sample name | Description | .NET |
 |-------------|-------------|------|
-|Send activity feed notification with `systemDefault`|Sample app to demonstrates how to implement systemDefault activity type for send activity feed notification.|[View]|
+|Send activity feed notification |Sample app to demonstrates how to send activity feed notification using Microsoft Graph API.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-activity-feed/csharp)|
 
 ## Step-by-step guide
 
