@@ -219,7 +219,7 @@ Users can select **Edit** next to an app and customize the notifications. The ap
 
 For examples on how to send an activity feed notification, see [send activity feed notification examples](/graph/teams-send-activityfeednotifications?tabs=http#example-1-notify-a-user-about-a-task-created-in-a-chat).
 
-## Reserved activity type
+## Reserved activity type for send activity feed notifications
 
 * The `systemDefault` activity type is reserved and can't be used in the app manifest while adding [activities](/graph/teams-send-activityfeednotifications?tabs=http#activities-section-changes).
 * We recommend to use templated notifications as they depend on activity templates in the app manifest for recurring and large batches of notifications.
