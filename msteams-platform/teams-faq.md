@@ -22,7 +22,7 @@ It’s a standalone extension because we're using a closed-source package to ren
 <details>
 <summary>Does this extension support all Adaptive Card features in Teams platform?</summary>
 
-No. There are several  that Adaptive Card Previewer extension doesn't support.
+No. There are several [limitations](concepts/build-and-test/adaptive-card-previewer.md#limitations) that Adaptive Card Previewer extension doesn't support.
 <br>
 &nbsp;
 </details>
