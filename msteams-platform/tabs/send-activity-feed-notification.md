@@ -72,9 +72,9 @@ The following variants show the kinds of activity feed notification cards you ca
 
 ---
 
-## Requirements for using the activity feed notification APIs
+## Requirements to use the activity feed notification APIs
 
-Activity feed APIs work with a Teams app. The following are the requirements for sending activity feed notifications:
+Activity feed APIs work with a Teams app. The following are the requirements to send activity feed notifications:
 
 * The app manifest must have the Azure AD app ID added to the `webApplicationInfo` section. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#webapplicationinfo).
 * The activity notifications can be sent with or without activity types added in the app manifest.
@@ -142,7 +142,7 @@ This section describes the updates that need to be added to the app manifest. En
 > [!NOTE]
 >
 > * The `actor` is a special parameter that always takes the name of the caller. In delegated calls, `actor` is the user's name. In application-only calls, it takes the name of the Teams app.
-> * The reserved `systemDefault` activity type mustn't be included in the `activities` section of the app manifest. This reserved activity type can provide free-form text in the `Actor+Reason` line of the activity feed notification.
+> * The reserved `systemDefault` activity type mustn't be included in the `activities` section of the app manifest. The `systemDefault` activity type allows you to provide free-form text in the `Actor+Reason` line of the activity feed notification.
 
 #### Authorization update
 
@@ -222,20 +222,20 @@ For examples on how to send an activity feed notification, see [send activity fe
 ## Reserved activity type
 
 * The `systemDefault` activity type is reserved and can't be used in the app manifest while adding [activities](/graph/teams-send-activityfeednotifications?tabs=http#activities-section-changes).
-* You can use the `systemDefault` activity type to:
-  * You can test new scenarios and try activity feed notification APIs without adding activity types to your app manifest.
-  * With Teams Store apps, the `systemDefault` activity type simplifies the process and saves time as it eliminates the need for constant adjustments to activity types in your app manifest. The `systemDefault` activity type is ready for use immediately.
-* With the `systemDefault` activity type you can't:
-  * Utilize the built-in localization features provided by app manifest.
-  * Rely on sending customizable notifications with the  `systemDefault` activity type. Users can turn off all notifications from your app with a toggle in the Teams client settings, which can obstruct communication between your app and its users.
-* For recurring and large batches of notifications, we recommend to use templated notifications as they depend on activity templates in the app manifest.
-* The `systemDefault` reserved activity type remains available, regardless of the activity types listed in your app manifest.
+* We recommend to use templated notifications as they depend on activity templates in the app manifest for recurring and large batches of notifications.
+* The `systemDefault` reserved activity type is available even if the other  activity types are listed in your app manifest.
+
+The following are the benefits and limitations for the `systemDefault` activity type:
+
+| Benefits | Limitations |
+|-------------|-------------|
+| You can test new scenarios and try activity feed notification APIs without adding activity types to your app manifest. <br><br> With Teams Store apps, the `systemDefault` activity type simplifies the process and saves time as it eliminates the need for constant adjustments to activity types in your app manifest. The `systemDefault` activity type is ready for use immediately. | You can't utilize the built-in localization features provided by app manifest. <br><br> You can't rely on sending customizable notifications with the  `systemDefault` activity type. Users can turn off all notifications from your app with a toggle in the Teams client settings, which can obstruct communication between your app and its users. |
 
 ## Code sample
 
 | Sample name | Description | .NET |
 |-------------|-------------|------|
-|Send activity feed notification |Sample app to demonstrates how to send activity feed notification using Microsoft Graph API.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-activity-feed/csharp)|
+|Send activity feed notification |Sample app demonstrates how to send activity feed notification using Microsoft Graph API.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-activity-feed/csharp)|
 
 ## Step-by-step guide
 
