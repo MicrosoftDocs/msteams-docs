@@ -17,7 +17,7 @@ The Microsoft Adaptive Card Previewer enables you to preview Adaptive Cards as y
 
 :::image type="content" source="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png" alt-text="Screenshot shows the Adaptive Card Previewer extension Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png":::
 
-## Features
+## What is Adaptive Card Previewer
 
 Adaptive Card Previewer provides faster and more reliable solutions to preview Adaptive Card designs. The Adaptive Card Previewer supports the following features:
 
