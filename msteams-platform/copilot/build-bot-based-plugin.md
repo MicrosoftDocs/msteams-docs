@@ -8,7 +8,7 @@ ms.author: anclear
 ms.date: 09/07/2023
 ---
 
-# Extend Bot-based message extension as a plugin
+# Extend Bot-based message extension as plugin
 
 Microsoft 365 Copilot, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to transform your words into a potent productivity tool. Although Copilot can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending Copilot, you can enable users to interact with their third-party tools and services, thereby unlocking Microsoft 365 Copilot's full potential. You can achieve this extension by developing a plugin or connecting to an external data source.
 
@@ -24,7 +24,11 @@ All Message Extensions are eligible for plugins support, subject to validation t
 
 You can extend Bot-based message extensions to function as a plugin in Copilot. You can create a bot-based message extension for Copilot using Teams Toolkit for Visual Studio Code, Visual Studio, and CLI.
 
-Before you get started, ensure that you meet the standards for compliance, performance, security, and user experience outlined in [Teams Store validation guidelines.](../concepts/deploy-and-publish/appsource/prepare/high-quality-message-extension.md)
+Before you get started, ensure that you meet the following pre-requisites:
+
+* Standards for compliance, performance, security, and user experience outlined in [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-microsoft-365-copilot-plugin).
+
+* [Guidelines to create or upgrade a message extension for Copilot](../messaging-extensions/high-quality-message-extension.md).
 
 # [Visual Studio Code](#tab/visual-studio-code)
 
