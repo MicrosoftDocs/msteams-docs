@@ -27,20 +27,19 @@ Adaptive Card Previewer provides faster and more reliable solutions to preview A
 
 * **Instant preview**: You can preview Adaptive Cards in Visual Studio Code editor through CodeLens or Command Palette.
 
-# [CodeLens](#tab/codelens)
+   # [CodeLens](#tab/codelens)
 
    You can select **Preview Adaptive Card** suggestion in the Adaptive Card template file to preview the Adaptive Card in the right pane.
 
    :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-preview-template.gif" alt-text="Graphic shows how the preview appears in Adaptive Card preview extension in Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/acp-preview-template.gif":::
 
-# [Command Palette](#tab/command-palette)
+   # [Command Palette](#tab/command-palette)
 
    You can use **Adaptive Card: Open Preview to the Side** or **Adaptive Card: Open Preview** to preview the Adaptive Card.
 
    :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-open-preview.png" alt-text="Screenshot shows the options for instant preview of adaptive cards in Visual Studio Code editor through CodeLens or Command Palette.":::
 
-   When you select **Adaptive Card: Open Preview to the Side**, Adaptive Card preview opens in the right pane.
-   When you select **Adaptive Card: Open Preview**, Adaptive Card preview opens in a new window.
+   When you select **Adaptive Card: Open Preview to the Side**, the Adaptive Card preview opens in the right pane and when you select **Adaptive Card: Open Preview**, the preview opens in a new window.
 
    :::image type="content" source="../../assets/images/previewer-adaptive-card/command-palette-preview.png" alt-text="Screenshot shows the preview of Adaptive Card when selecting the option Adaptive Card: Open Preview in Command Palette." lightbox= "../../assets/images/previewer-adaptive-card/command-palette-preview.png":::
 
@@ -98,3 +97,7 @@ No, Adaptive Card Previewer is now exclusively supported in Visual Studio Code.
 <br>
 &nbsp;
 </details>
+
+## See also
+
+[Design Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md)
