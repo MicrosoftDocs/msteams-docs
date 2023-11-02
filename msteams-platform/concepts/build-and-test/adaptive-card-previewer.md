@@ -52,9 +52,9 @@ Adaptive Card Previewer provides faster and more reliable solutions to preview A
 
 The following are the advantages of Adaptive Card Previewer:
 
-* Faster update: You can preview the Adaptive Card designs right within their integrated development environment without the need to constantly switch between tools. You can create a bot, messaging extension, or Copilot project with Teams Toolkit, open the Adaptive Card metadata file, and use **CodeLens** or a specific command to preview the card. Any update or changes to the card are reflected instantly through **Hot Reload** feature in the preview.
+* **Faster update**: You can preview the Adaptive Card designs right within their integrated development environment without the need to constantly switch between tools. You can create a bot, messaging extension, or Copilot project with Teams Toolkit, open the Adaptive Card metadata file, and use **CodeLens** or a specific command to preview the card. Any update or changes to the card are reflected instantly through the **Hot Reload** feature in the preview.
 
-* Trustworthy previews: Adaptive Card Previewer uses the same rendering stack as Teams and Outlook to ensure that accurate preview results are consistently aligned with the actual card rendering.
+* **Trustworthy previews**: Adaptive Card Previewer uses the same rendering stack as Teams and Outlook to ensure that accurate preview results are consistently aligned with the actual card rendering.
 
 ## Limitations
 
