@@ -16,7 +16,7 @@ Get answers to some of your common queries when you build a copilot plugin.
 
 <summary>Q: I can't get Copilot to include my plugin in a response.</summary>
 
-A: Ensure that you have a descriptive Teams manifest file, as this is used to determine plugin matching in response to a user prompt. Additionally, ensure that you have sideloaded the app package to Outlook and interacted with the app, including authenticating.
+A: Ensure that you have a descriptive app manifest (previously called Teams app manifest). App manifest is used to determine plugin matching in response to a user prompt. Additionally, ensure that you have sideloaded the app package to Outlook and interacted with the app, including authenticating.
 
 If that still doesn’t work, use the thumbs down indicator on the reply from copilot and prefix your reply with [MessageExtension].
 
@@ -123,7 +123,7 @@ Reach out to Pierce Boggan, John Miller, and Abram Jackson over email.
 
 <summary> Q: How does certification work?</summary>
 
-The plugin developer will opt into the App Compliance flow in Partner Center after publishing their plugin.  If the developer hasn't previously completed Publisher Verification, they'll be prompted to do so prior to starting the Microsoft 365 Certification process.  Their next step on the compliance journey is to complete Publisher Attestation, which collects self-attested information about their plugin, company, and operations.  This information is published on a publicly facing MSDocs page for their customers to view.  The developer will then start the Microsoft 365 Certification process by uploading some initial documents to help scope the assessment to their plugin and operating environment.  Based on the scope, the developer will then be required to provide evidence for specific controls related to application security, operational security, and data handling/privacy.  Developers that build on Azure can also opt to leverage the App Compliance Automation Tool (ACAT).  This tool will automatically scan their environment and produce evidence for several controls, reducing the amount of manual work required of the developer. More detailed instructions to achieve Microsoft 365 Certification can be found in this video.
+The plugin developer will opt into the App Compliance flow in Partner Center after publishing their plugin.  If the developer hasn't previously completed Publisher Verification, they'll be prompted to do so prior to starting the Microsoft 365 Certification process.  Their next step on the compliance journey is to complete Publisher Attestation, which collects self-attested information about their plugin, company, and operations.  This information is published on a publicly facing MSDocs page for their customers to view.  The developer will then start the Microsoft 365 Certification process by uploading some initial documents to help scope the assessment to their plugin and operating environment.  Based on the scope, the developer will then be required to provide evidence for specific controls related to application security, operational security, and data handling/privacy.  Developers that build on Azure can also opt to use the App Compliance Automation Tool (ACAT).  This tool will automatically scan their environment and produce evidence for several controls, reducing the amount of manual work required of the developer. More detailed instructions to achieve Microsoft 365 Certification can be found in this video.
 
 </details>
 
