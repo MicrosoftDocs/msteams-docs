@@ -13,19 +13,19 @@ ms.date: 10/20/2023
 > [!NOTE]
 > Adaptive Card Previewer is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-The Microsoft Adaptive Card Previewer enables you to preview Adaptive Cards as you refine your card designs. Adaptive Card Previewer with Teams Toolkit facilitates the preview of Adaptive Cards created for Teams bot and message extension. You have the option to open a side-by-side preview to observe live changes and alternate between various themes.
+Microsoft Adaptive Card Previewer enables you to preview Adaptive Cards when you refine the designs. It works with Teams Toolkit, allows you to preview Adaptive Cards created for Teams bot and message extension. You can open a side-by-side preview to observe live changes and switch between different themes.
 
 :::image type="content" source="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png" alt-text="Screenshot shows the Adaptive Card Previewer extension Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png":::
 
-## What is Adaptive Card Previewer
+## Explore Adaptive Card Previewer
 
-Adaptive Card Previewer provides faster and more reliable solutions to preview Adaptive Card designs. The Adaptive Card Previewer supports the following features:
+Adaptive Card Previewer provides faster and more reliable solutions to preview Adaptive Card designs. Adaptive Card Previewer supports the following features:
 
-* **Integration with Teams Toolkit**: Allows Just-in-Time (JIT) installation of Adaptive Card Previewer when you're updating Adaptive Cards generated from Teams Toolkit project creation.
+* **Teams Toolkit Integration**: Enables Just-in-Time (JIT) installation of Adaptive Card Previewer when you update Adaptive Cards generated from a Teams Toolkit project.
 
   :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-preview-example.png" alt-text="Screenshot shows a sample preview of an Adaptive Card when updating an Adaptive Card." lightbox="../../assets/images/previewer-adaptive-card/acp-preview-example.png":::
 
-* **Instant preview**: You can preview Adaptive Cards in Visual Studio Code editor through CodeLens or Command Palette.
+* **Instant preview**: Allows you to preview Adaptive Cards in the Visual Studio Code editor through CodeLens or the Command Palette.
 
    # [CodeLens](#tab/codelens)
 
@@ -39,8 +39,8 @@ Adaptive Card Previewer provides faster and more reliable solutions to preview A
 
    :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-open-preview.png" alt-text="Screenshot shows the options for instant preview of adaptive cards in Visual Studio Code editor through CodeLens or Command Palette.":::
 
-   * To preview Adaptive Card in the right pane, select **Adaptive Card: Open Preview to the Side**.
-   * To preview Adaptive Card in a new window, select **Adaptive Card: Open Preview**.
+* To preview Adaptive Card in the right pane, select **Adaptive Card: Open Preview to the Side**.
+* To preview Adaptive Card in a new window, select **Adaptive Card: Open Preview**.
 
    :::image type="content" source="../../assets/images/previewer-adaptive-card/command-palette-preview.png" alt-text="Screenshot shows the preview of Adaptive Card when selecting the option Adaptive Card: Open Preview in Command Palette." lightbox= "../../assets/images/previewer-adaptive-card/command-palette-preview.png":::
 
