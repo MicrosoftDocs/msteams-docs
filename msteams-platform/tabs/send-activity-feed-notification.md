@@ -77,14 +77,14 @@ The following variants show the kinds of activity feed notification cards you ca
 Activity feed APIs work with a Teams app. The following are the requirements for sending activity feed notifications:
 
 * The app manifest must have the Azure AD app ID added to the `webApplicationInfo` section. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#webapplicationinfo).
-* The activity notifications can be sent with or without activity types declared in the app manifest.
-  * By default, you can use the activity notification APIs without declaring the `activities` section in the app manifest. The `systemDefault` activity type is reserved, which allows you to provide free-form text in the `Actor+Reason` line of the activity feed notification. For more information, see [send customizable activity feed notifications](/graph/teams-send-activityfeednotifications?tabs=http#example-8-send-a-notification-to-a-user-using-the-systemdefault-activity-type).
-  * If you want to send a templated notification in the traditional mode, the `activityTypes` property must be declared in the [activities](#activities-update) section. For more information, see [app manifest schema](/microsoftteams/platform/resources/schema/manifest-schema#activities).
+* The activity notifications can be sent with or without activity types added in the app manifest.
+  * By default, you can use the activity notification APIs without adding the `activities` section in the app manifest. The `systemDefault` activity type is reserved, which allows you to provide free-form text in the `Actor+Reason` line of the activity feed notification. For more information, see [send customizable activity feed notifications](/graph/teams-send-activityfeednotifications?tabs=http#example-8-send-a-notification-to-a-user-using-the-systemdefault-activity-type).
+  * If you want to send a templated notification in the traditional mode, the `activityTypes` property must be added in the [activities](#activities-update) section. For more information, see [app manifest schema](/microsoftteams/platform/resources/schema/manifest-schema#activities).
 * Teams app must be installed for the recipient either personally, or in a team or chat they're part of.
 
 ### Permissions
 
-Use delegated or application permissions to send activity feed notifications. When you use application permissions, we recommend to use [resource-specific consent (RSC)](../graph-api/rsc/resource-specific-consent.md) as the `TeamsActivity.Send.User` permission is consented by the user to send activity notifications. Ensure that you declare RSC permissions in your app manifest file.
+Use delegated or application permissions to send activity feed notifications. When you use application permissions, we recommend to use [resource-specific consent (RSC)](../graph-api/rsc/resource-specific-consent.md) as the `TeamsActivity.Send.User` permission is consented by the user to send activity notifications. Ensure to add the RSC permissions in your app manifest file.
 
 ### App manifest update
 
@@ -137,7 +137,7 @@ This section describes the updates that need to be added to the app manifest. En
 |:---|:---|:---|
 |type|string|Type of activity. This needs to be unique in a specific app manifest.|
 |description|string|Human-readable short description. This is visible on the Teams client.|
-|templateText|string|Template text for the activity notification. You can declare your parameters by encapsulating parameters in `{}`.|
+|templateText|string|Template text for the activity notification. You can add your parameters by encapsulating parameters in `{}`.|
 
 > [!NOTE]
 >
@@ -221,7 +221,7 @@ For examples on how to send an activity feed notification, see [send activity fe
 
 ## Reserved activity types
 
-* The `systemDefault` activity type is reserved and can't be used in the app manifest while declaring [activities](/graph/teams-send-activityfeednotifications?tabs=http#activities-section-changes).
+* The `systemDefault` activity type is reserved and can't be used in the app manifest while adding [activities](/graph/teams-send-activityfeednotifications?tabs=http#activities-section-changes).
 * You can use the `systemDefault` activity type to:
   * You can test new scenarios and try activity feed notification APIs without adding activity types to your app manifest.
   * With Teams Store apps, the `systemDefault` activity type simplifies the process and saves time as it eliminates the need for constant adjustments to activity types in your app manifest. The `systemDefault` activity type is ready for use immediately.
