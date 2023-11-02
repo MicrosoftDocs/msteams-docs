@@ -77,7 +77,7 @@ You can build a Teams message extension app for Outlook through Teams Toolkit ex
 
     :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams sample options.":::
 
-   From the left pane, under **DEVELOPMENT**, select **View Samples**. A **Samples** tab appears, in the search field enter **NPM Search Connector**.
+   You can also download the sample code from the left pane, under **DEVELOPMENT**, select **View Samples**. A **Samples** tab appears, in the search field enter **NPM Search Connector**.
 
     :::image type="content" source="images/toolkit-search-sample.png" alt-text="Screenshot shows the NPM Search Connector sample in Teams Toolkit Samples gallery.":::
 
@@ -216,7 +216,7 @@ Azure Active Directory (AD) single sign-on (SSO) for message extensions works th
 1. Sign in to [Azure portal](https://portal.azure.com) with your sandbox tenant account.
 1. Select **App registrations**.
 1. Select the name of your application to open its app registration.
-1. Select  **Expose an API** (under *Manage*).
+1. Select **Manage** > **Expose an API**.
 1. In the **Authorized client applications** section, ensure all of the following `Client Id` values are listed:
 
    |Microsoft 365 client application | Client ID |
