@@ -19,7 +19,7 @@ Message extensions allow users to interact with your web service using buttons a
 > [!NOTE]
 > Teams search-based message extensions are generally available for Outlook and action-based message extensions are available in preview for Outlook.
 
-Outlook mobile users on Android and [Microsoft Outlook beta TestFlight](https://testflight.apple.com/join/AhS6fRDK) iOS can receive and take actions on cards from your apps that were sent to them by users on Outlook on web and Windows desktop.
+Outlook mobile users on Android and iOS (Microsoft Outlook beta TestFlight)(https://testflight.apple.com/join/AhS6fRDK) can receive and take actions on cards from your apps that were sent to them by users on Outlook on the web and Outlook for Windows.
 
 Teams message extension across Microsoft 365 also supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) that display cards to launch [Stage View](../tabs/tabs-link-unfurling.md).
 
@@ -29,7 +29,7 @@ To extend your Teams message extension to Outlook, ensure the following:
 
 > [!div class="checklist"]
 >
-> * To check for message extensions support within Outlook for Windows desktop, web, and mobile, see the support table in [extend Teams apps across Microsoft 365](~/m365-apps/overview.md).
+> * Check for message extensions support within Outlook for Windows desktop, web, and mobile, see the support table in [extend Teams apps across Microsoft 365](~/m365-apps/overview.md).
 > * [A Microsoft 365 Developer Program sandbox tenant.](~/m365-apps/prerequisites.md#prepare-a-developer-tenant-for-testing)
 > * [A test environment with Microsoft 365 apps installed from the Microsoft 365 Apps **Current Channel**.](~/m365-apps/prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional)
 > * [(Optional) Microsoft Visual Studio Code with the Teams Toolkit extension.](~/m365-apps/prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional)
@@ -82,7 +82,7 @@ You can build a Teams message extension app for Outlook through Teams Toolkit ex
     :::image type="content" source="images/toolkit-search-sample.png" alt-text="Screenshot shows the NPM Search Connector sample in Teams Toolkit Samples gallery.":::
 
 1. Select a preferred programming language.
-1. Select a location on your local machine for the workspace folder and enter your application name.  
+1. Select a location on your local machine for the workspace folder and enter your application name.
 1. Select **Command Palette...** under the **View** option or **Ctrl+Shift+P**.
 1. Enter **Teams: Provision** to create the relevant app resources, such as Azure App Service, App Service plan, Azure Bot, and Managed Identity, in your Azure account.
 1. Select a subscription and a resource group.
@@ -123,11 +123,11 @@ Sideload your updated message extension [app package](/microsoftteams/platform/c
 
 1. Go to **Microsoft Teams** and sign in using your sandbox tenant account.
 
-1. Select **Apps** to open the **Manage your apps** pane. Then select **Upload an app**.
+1. Select **Apps** > **Manage your apps** > **Upload an app**.
 
    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Screenshot shows the Upload an app option under Manage your apps.":::
 
-1. Choose the **Upload a custom app** option, select your app package, and install (**Add**) it to your Teams client.
+1. Select the **Upload a custom app** option, select your app package, and install (**Add**) it to your Teams client.
 
    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Screenshot shows the Upload a custom app option in Teams.":::
 
@@ -135,7 +135,7 @@ After it's sideloaded through Teams, your message extension is available in Outl
 
 ### Preview your message extension in Outlook
 
-To test your message extension running in Outlook on Windows desktop and the web.
+To test your message extension running in Outlook for Windows and Outlook on the web.
     
 # [Outlook on the web](#tab/outlook-on-the-web)
 
@@ -149,9 +149,9 @@ To preview your app running in Outlook on the web:
 
 Your message extension is listed. You can invoke it from there and use it just as you would while composing a message in Teams.
 
-# [Outlook on the desktop](#tab/outlook-on-the-desktop)
+# [Outlook for Windows](#tab/outlook-on-the-desktop)
 
-To preview your app running in Outlook on Windows desktop:
+To preview your app running in Outlook for Windows:
 
 1. Launch Outlook and sign in with your test tenant credentials.
 1. Select **New Email**.
@@ -163,13 +163,13 @@ To preview your app running in Outlook on Windows desktop:
 
 ## Extend an existing Teams message extension app to Outlook
 
-To extend your Teams message extension app to Outlook, ensure the following:
+To extend your existing Teams message extension app to Outlook, ensure the following:
 
 > [!div class="checklist"]
 >
 > * [Update your app manifest.](#update-your-app-manifest)
-> * [Add the Microsoft 365 channel for your bot.](#add-microsoft-365-channel-for-your-app)
-> * [Update Azure AD app registration for SSO](#update-azure-ad-app-registration-for-sso)
+> * [Add the Microsoft 365 channel for your app.](#add-microsoft-365-channel-for-your-app)
+> * [Update Azure AD app registration for SSO.](#update-azure-ad-app-registration-for-sso)
 > * [Sideload your updated app in Teams.](#sideload-your-app-in-teams)
 
 ### Update your app manifest
@@ -214,7 +214,7 @@ For users to interact with your message extension from Outlook, you need to enab
 Azure Active Directory (AD) single sign-on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). However, you need to add several client application identifiers to the Azure AD app registration of your bot in your tenant's **App registrations** portal.
 
 1. Sign in to [Azure portal](https://portal.azure.com) with your sandbox tenant account.
-1. Open **App registrations**.
+1. Select **App registrations**.
 1. Select the name of your application to open its app registration.
 1. Select  **Expose an API** (under *Manage*).
 1. In the **Authorized client applications** section, ensure all of the following `Client Id` values are listed:
@@ -235,11 +235,11 @@ Sideload your updated message extension ([app package](/microsoftteams/platform/
 
 1. Go to **Microsoft Teams** and sign in using your sandbox tenant account.
 
-1. Select **Apps** to open the **Manage your apps** pane. Then select **Upload an app**.
+1. Select **Apps** > **Manage your apps** > **Upload an app**.
 
    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Screenshot shows the Upload an app option under Manage your apps.":::
 
-1. Choose the **Upload a custom app** option, select your .zip file, and install (**Add**) it to your Teams client.
+1. Select the **Upload a custom app** option, select your .zip file, and install (**Add**) it to your Teams client.
 
    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Screenshot shows the Upload a custom app option in Teams.":::
 
@@ -247,7 +247,7 @@ After it's sideloaded through Teams, your message extension is available in Outl
 
 ### Preview your message extension in Outlook
 
-Here's how to test your message extension running in Outlook on Windows desktop and the web.
+Here's how to test your message extension running in Outlook for Windows and Outlook on the web.
     
 # [Outlook on the web](#tab/outlook-on-the-web)
 
@@ -259,9 +259,9 @@ To preview your app running in Outlook on the web:
 
    `Place holder for Figma image`
 
-# [Outlook on the desktop](#tab/outlook-on-the-desktop)
+# [Outlook for Windows](#tab/outlook-on-the-desktop)
 
-To preview your app running in Outlook on Windows desktop:
+To preview your app running in Outlook for Windows:
 
 1. Launch Outlook and sign in with your test tenant credentials.
 1. Select **New Email**.
@@ -275,7 +275,7 @@ Your message extension is listed. You can invoke it from there and use it just a
 
 ## Debugging
 
-As you test your message extension, you can identify the source (originating from Teams versus Outlook) of bot requests by the [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) of the [Activity](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md) object. When a user performs a query, your service receives a standard Bot Framework `Activity` object. One of the properties in the Activity object is `channelId`, which has the value of `msteams` or `outlook`, depending on where the bot request originates. For more information, see [search based message extensions SDK](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions) and [action based messaging extensions SDK](/microsoftteams/platform/resources/messaging-extension-v3/create-extensions).
+As you debug your message extension, you can identify the source (originating from Teams versus Outlook) of bot requests by the [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) of the [Activity](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md) object. When a user performs a query, your service receives a standard Bot Framework `Activity` object. One of the properties in the Activity object is `channelId`, which has the value of `msteams` or `outlook`, depending on where the bot request originates. For more information, see [search based message extensions SDK](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions) and [action based messaging extensions SDK](/microsoftteams/platform/resources/messaging-extension-v3/create-extensions).
 
 ## Limitations
 
