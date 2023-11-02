@@ -19,7 +19,7 @@ Message extensions allow users to interact with your web service using buttons a
 > [!NOTE]
 > Teams search-based message extensions are generally available for Outlook and action-based message extensions are available in preview for Outlook.
 
-Outlook mobile users on Android and iOS (Microsoft Outlook beta TestFlight)(https://testflight.apple.com/join/AhS6fRDK) can receive and take actions on cards from your apps that were sent to them by users on Outlook on the web and Outlook for Windows.
+Outlook mobile users on Android and iOS [(Microsoft Outlook beta TestFlight)](https://testflight.apple.com/join/AhS6fRDK) can receive and take actions on cards from your apps that were sent to them by users on Outlook on the web and Outlook for Windows.
 
 Teams message extension across Microsoft 365 also supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) that display cards to launch [Stage View](../tabs/tabs-link-unfurling.md).
 
