@@ -16,7 +16,7 @@ Webhooks and connectors help to connect the web services to channels and teams i
 >
 > * Webhooks and connectors are available only in Government Community Cloud (GCC) environment but aren't available in GCC-High and Department of Defense (DOD) environments.
 >
-> * Only Incoming Webhooks are available in GCC-High environment and [Tenant admins](/microsoftteams/office-365-custom-connectors#considerations-when-using-connectors-in-teams) would need to manually upload the app to be displayed in connectors page.
+> * Incoming Webhooks are available only in GCC-High environment and [Tenant admins](/microsoftteams/office-365-custom-connectors#considerations-when-using-connectors-in-teams) need to manually upload to display the app in the connectors page.
 >
 > * You can choose to build notification bot Teams app other than Incoming Webhooks. They perform similarly but notification bot has more functionalities. For more information, see [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) or [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download and explore [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension). For more information, see [Teams Toolkit documents](../toolkit/teams-toolkit-fundamentals.md).
 
