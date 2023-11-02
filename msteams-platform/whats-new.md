@@ -346,9 +346,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2023 October**
+**2023 November**
 
-* ***November 02, 2023***: [Introduced Adaptive Card Previewer in public developer preview](concepts/build-and-test/adaptive-card-previewer.md).
+***November 02, 2023***: [Introduced Adaptive Card Previewer in public developer preview](concepts/build-and-test/adaptive-card-previewer.md).
 :::column-end:::
 :::row-end:::
 

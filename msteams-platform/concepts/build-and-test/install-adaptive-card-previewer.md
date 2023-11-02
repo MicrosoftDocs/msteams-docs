@@ -10,6 +10,9 @@ ms.date: 10/20/2023
 
 # Install Adaptive Card Previewer
 
+> [!NOTE]
+> Adaptive Card Previewer is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+
 Adaptive Card Previewer is a Visual Studio Code extension that allows you to easily preview the Adaptive Cards when you're updating your Adaptive Card designs in Teams Toolkit. It aims to provide a seamless and accurate previewing experience within Visual Studio Code.
 
 ## Prerequisites
