@@ -10,7 +10,7 @@ ms.date: 10/20/2023
 
 # Microsoft Adaptive Card Previewer
 
-The Microsoft Adaptive Card Previewer enables you to preview [Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md) as you refine your card designs. Adaptive Card Previewer with Teams Toolkit, facilitates the preview of Adaptive Cards created for Teams bot, message extension, and Copilot. You have the option to open a side-by-side preview to observe live changes and alternate between various themes.
+The Microsoft Adaptive Card Previewer enables you to preview [Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md) as you refine your card designs. Adaptive Card Previewer with Teams Toolkit facilitates the preview of Adaptive Cards created for Teams bot, message extension, and Copilot. You have the option to open a side-by-side preview to observe live changes and alternate between various themes.
 
 :::image type="content" source="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png" alt-text="Screenshot shows the Adaptive Card Previewer extension Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png":::
 
@@ -52,7 +52,7 @@ Adaptive Card Previewer provides faster and more reliable solutions to preview A
 
 The following are the advantages of Adaptive Card Previewer:
 
-* Faster update: You can preview the Adaptive Card designs right within their integrated development environment without the need to constantly switch between tools. You can create a bot, messaging extension, or Copilot plugin project with Teams Toolkit, open the Adaptive Card metadata file, and use **CodeLens** or a specific command to preview the card. Any update or changes to the card are reflected instantly through **Hot Reload** feature in the preview.v
+* Faster update: You can preview the Adaptive Card designs right within their integrated development environment without the need to constantly switch between tools. You can create a bot, messaging extension, or Copilot project with Teams Toolkit, open the Adaptive Card metadata file, and use **CodeLens** or a specific command to preview the card. Any update or changes to the card are reflected instantly through **Hot Reload** feature in the preview.
 
 * Trustworthy previews: Adaptive Card Previewer uses the same rendering stack as Teams and Outlook to ensure that accurate preview results are consistently aligned with the actual card rendering.
 

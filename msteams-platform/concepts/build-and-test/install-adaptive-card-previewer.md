@@ -48,7 +48,7 @@ To install Adaptive Card Previewer extension in Visual Studio Code, follow these
 
    :::image type="content" source="../../assets/images/previewer-adaptive-card/install-acp-vsc.png" alt-text="Screenshot shows the option to install Adaptive Card Previewer in Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/install-acp-vsc.png":::
 
-   Adaptive Card Previewer is installed in Visual Studio Code and Adaptive Card Previewer extension icon appears in the Visual Studio Code activity bar.
+   Adaptive Card Previewer is installed in Visual Studio Code as an extension.
 
 # [Marketplace](#tab/marketplace)
 
@@ -74,7 +74,7 @@ To install Adaptive Card Previewer extension from Visual Studio Code Marketplace
 
    :::image type="content" source="../../assets/images/previewer-adaptive-card/install-acp.png" alt-text="Screenshot shows the option to install Adaptive Card Previewer in Visual Studio Code.":::
 
-   Adaptive Card Previewer is installed in Visual Studio Code and Adaptive Card PreviewerP extension icon appears in the Visual Studio Code activity bar.
+   Adaptive Card Previewer is installed in Visual Studio Code as an extension.
 
 ---
 
@@ -82,7 +82,7 @@ To install Adaptive Card Previewer extension from Visual Studio Code Marketplace
 
 You can use your existing Adaptive Card template file or you can download the [Adaptive Card sample](https://github.com/OfficeDev/acpreviewer/tree/main/card-samples).
 
-1. Open an existing Adaptive Card template file or open an Adaptive Card template file from the downloaded sample in Visual Studio Code.
+1. Open an existing Adaptive Card template file, or open an Adaptive Card template file from the downloaded sample in Visual Studio Code.
 1. In the upper-left side of Adaptive Card template pane, select **Preview Adaptive Card**.
 
     :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-sample-preview.png" alt-text="Screenshot shows the instant preview of Adaptive Card in the Visual Studio Code extension." lightbox="../../assets/images/previewer-adaptive-card/acp-sample-preview1.png":::
