@@ -35,9 +35,9 @@ Ensure that you adhere to the descriptions guidelines listed in the following ta
 
 | Action | Reason |
 | --- | --- |
-| :::image type="icon" source="../../assets/images/publish-app/dont-icon.png" border="false"::: | Anti-Compete: Avoid using the name of any other plugin in both short and full descriptions. |
-| :::image type="icon" source="../../assets/images/publish-app/dont-icon.png" border="false"::: | Responsible AI: Avoid using inappropriate or offensive keywords. |
-| :::image type="icon" source="../../assets/images/publish-app/dont-icon.png" border="false"::: | Prompt injections: Ensure that the Text doesn't lead to prompt injections. Additionally, description must not contain symbols or text that indicate that it can be used as code for Prompt injection. Avoid using phrases, functions, and codes that call an app recurrently. |
+| :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Anti-Compete: Avoid using the name of any other plugin in both short and full descriptions. |
+| :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Responsible AI: Avoid using inappropriate or offensive keywords. |
+| :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Prompt injections: Ensure that the Text doesn't lead to prompt injections. Additionally, description must not contain symbols or text that indicate that it can be used as code for Prompt injection. Avoid using phrases, functions, and codes that call an app recurrently. |
 
 ### App description
 
@@ -385,7 +385,7 @@ Message extensions respond to user input with an Adaptive Card. An Adaptive Card
 
 * A response template must include an Adaptive Card and preview card information as part of the same template. [*Mandatory*]
 
-  :::image type="content" source="../../assets/images/Copilot/bot-based-me-adaptive-card-response-copilot.png" alt-text="Screenshot shows the preview card and Adaptive Card as part of the same response in Copilot.":::
+  :::image type="content" source="../assets/images/Copilot/bot-based-me-adaptive-card-response-copilot.png" alt-text="Screenshot shows the preview card and Adaptive Card as part of the same response in Copilot.":::
 
   <details><summary>Adaptive Card response example</summary>
 
