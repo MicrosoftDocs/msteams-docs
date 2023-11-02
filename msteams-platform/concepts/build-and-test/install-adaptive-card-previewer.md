@@ -24,7 +24,7 @@ Before you begin, ensure that you're familiar with the following prerequisites:
 
 ## Install Adaptive Card Previewer for Visual Studio Code
 
-You can install Adaptive Card Previewer from **Extensions** in Visual Studio Code, or from the Visual Studio Code Marketplace.
+You can install Adaptive Card Previewer from **Extensions** in Visual Studio Code or from the Visual Studio Code Marketplace.
 
 # [Visual Studio Code](#tab/vscode)
 
@@ -78,11 +78,11 @@ To install Adaptive Card Previewer extension from Visual Studio Code Marketplace
 
 ---
 
-## Preview an Adaptive Card
+## Preview Adaptive Card
 
 You can use your existing Adaptive Card template file or you can download the [Adaptive Card sample](https://github.com/OfficeDev/acpreviewer/tree/main/card-samples).
 
-1. Open an existing Adaptive Card template file, or open an Adaptive Card template file from the downloaded sample in Visual Studio Code.
+1. Open an existing Adaptive Card template file or open an Adaptive Card template file from the downloaded sample in Visual Studio Code.
 1. In the upper-left side of Adaptive Card template pane, select **Preview Adaptive Card**.
 
     :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-sample-preview.png" alt-text="Screenshot shows the instant preview of Adaptive Card in the Visual Studio Code extension." lightbox="../../assets/images/previewer-adaptive-card/acp-sample-preview1.png":::

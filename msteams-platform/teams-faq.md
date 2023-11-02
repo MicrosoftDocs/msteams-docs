@@ -9,26 +9,27 @@ ms.localizationpriority: high
 
 This section contains the frequently asked questions and the answers.
 
-## Adaptive Card previewer
+## Adaptive Card Previewer
 
 <details>
 <summary>Why do we have to use a new extension in Visual Studio Code? Can’t this extension be integrated into Teams Toolkit for Visual Studio Code?</summary>
 
-It’s a standalone extension because we're using a closed-source package to render the Adaptive Cards to ensure that we maintain consistent rendering logic with the Teams platform. Teams Toolkit is an open-source project, and we follow CELA guidance to not include dependencies on closed-source packages that third party developers don't have access to.
+It’s a standalone extension because we're using a closed-source package to render the Adaptive Cards to ensure that we maintain consistent rendering logic with the Teams platform. Teams Toolkit is an open-source project and don't include dependencies on packages that third party developers don't have access to.
+
 <br>
 &nbsp;
 </details>
 <details>
 <summary>Does this extension support all Adaptive Card features in Teams platform?</summary>
 
-No. Unfortunately, there are several [limitations](concepts/build-and-test/adaptive-card-previewer.md#limitations) that ACP extension can't support.
+No. Unfortunately, there are several [limitations](adaptive-card-previewer.md#limitations) that Adaptive Card Previewer extension can't support.
 <br>
 &nbsp;
 </details>
 <details>
-<summary>Will Visual Studio be integrated into ACP?</summary>
+<summary>Will Visual Studio be integrated into Adaptive Card Previewer?</summary>
 
-Yes, we plan to integrate ACP into Teams Toolkit for Visual Studio directly soon, instead of through a dedicated extension.
+No, Adaptive Card Previewer is now exclusively supported in Visual Studio Code.
 <br>
 &nbsp;
 </details>
