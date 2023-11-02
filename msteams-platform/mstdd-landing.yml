@@ -48,7 +48,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Webhooks and connectors are available in GCC-High
+      - text: Incoming Webhooks are available in GCC-High
         url: webhooks-and-connectors/what-are-webhooks-and-connectors.md
       - text: Introduced the extensions property in public developer preview app manifest schema
         url: resources/schema/manifest-schema-dev-preview.md#extensions
