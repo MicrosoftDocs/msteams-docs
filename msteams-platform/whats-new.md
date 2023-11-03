@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 November**
 
-***November 02, 2023***: [Introduced systemDefault reserved activity type for send activity feed notifications.](tabs/send-activity-feed-notification.md#reserved-activity-type-for-send-activity-feed-notifications)
+***November 03, 2023***: [Introduced systemDefault reserved activity type for send activity feed notifications.](tabs/send-activity-feed-notification.md#reserved-activity-type-for-send-activity-feed-notifications)
 
 :::column-end:::
 :::row-end:::
