@@ -235,7 +235,7 @@ The following are the benefits and limitations for the `systemDefault` activity 
 
 | Sample name | Description | .NET |
 |-------------|-------------|------|
-|Send activity feed notification |Sample app demonstrates how to send activity feed notification using Microsoft Graph API.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-activity-feed/csharp)|
+|Send activity feed notifications |Sample app demonstrates how to send activity feed notifications using Microsoft Graph API.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-activity-feed/csharp)|
 
 ## Step-by-step guide
 
