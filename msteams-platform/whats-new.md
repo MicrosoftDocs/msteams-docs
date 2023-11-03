@@ -24,12 +24,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2023 October**
+**2023 November**
 
-* ***October 25, 2023***: [Configure your bot to receive meeting participant events.](apps-in-teams-meetings/meeting-apps-apis.md#receive-meeting-participant-events)
-* ***October 11, 2023***: [Introduced the new Microsoft Teams client to provide better experience for your apps and users.](resources/teams-updates.md)
-* ***October 05, 2023***: [Use callTranscript API to fetch meeting transcript from all meetings.](graph-api/meeting-transcripts/overview-transcripts.md)
-* ***October 05, 2023***: [You can rate apps on Microsoft Teams Store and offer feedback on your usage experience.](concepts/deploy-and-publish/appsource/post-publish/overview.md#ratings-and-review-for-teams-apps)
+***November 03, 2023***: [Apps for Teams meetings are available in GCC-High environment.](apps-in-teams-meetings/teams-apps-in-meetings.md)
 
 :::column-end:::
 :::row-end:::
@@ -42,6 +39,10 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|25/10/2023|Configure your bot to receive meeting participant events.|Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Meeting apps APIs](apps-in-teams-meetings/meeting-apps-apis.md#receive-meeting-participant-events)|
+|11/10/2023|Introduced the new Microsoft Teams client to provide better experience for your apps and users.| Resources > [Introducing the new Microsoft Teams client](resources/teams-updates.md)|
+|05/10/2023|Use callTranscript API to fetch meeting transcript from all meetings.|Build apps for Teams meetings and calls > [Get meeting transcripts and recordings using Graph APIs](graph-api/meeting-transcripts/overview-transcripts.md)|
+|05/10/2023| You can rate apps on Microsoft Teams Store and offer feedback on your usage experience. | Distribute your app > Publish to the Teams Store > [Maintain your published app](concepts/deploy-and-publish/appsource/post-publish/overview.md#ratings-and-review-for-teams-apps) |
 |26/09/2023|Configure your bot with read receipt events to identify if the recipient has read the message sent by the bot.|Build bots > Messages in bot conversations > [Read receipts](bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt)|
 |26/09/2023|Use media elements such as audio or video clips to your Adaptive Card for enhanced media experience and user engagement.|Build cards and task modules > Build cards > [Media elements in Adaptive Card](task-modules-and-cards/cards/media-elements-in-adaptive-cards.md)|
 | 06/09/2023|Generate a deep link to share content to stage in meetings.|Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Share in meeting](concepts/build-and-test/share-in-meeting.md)|
