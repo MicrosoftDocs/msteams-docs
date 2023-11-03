@@ -80,7 +80,7 @@ To install Microsoft 365 applications in your test environment:
 1. Select a local folder to store the extracted files.
 1. Go to the local folder and open *configuration-Office365-x86.xml* (or **x64.xml*, depending on your environment) in a text editor. Ensure the [*Channel*](/DeployOffice/office-deployment-tool-configuration-options#channel-attribute-part-of-updates-element) value is set according to the scenario you're testing:
 
-    | **Outlook scenario** | **Update channel** | 
+    | **Outlook scenario** | **Update channel** |
     |---------------|--------------|
     |Teams personal tabs in Outlook | `Current`|
     |Teams search-based message extensions in Outlook | `Current`|
@@ -90,7 +90,7 @@ To install Microsoft 365 applications in your test environment:
 1. Open Command Prompt and go to the local folder path.
 1. Run `setup.exe /configure configuration-Office365-x86.xml` (or use the **x64.xml* file, depending on your setup).
 1. Open Outlook (desktop client) and set up the mail account using your test tenant credentials.
-1. Open **File** > **Office Account** > **About Outlook** to confirm you're running a Microsoft 365 *Current Channel (Preview)* build of Outlook.
+1. Open **File** > **Office Account** > **About Outlook** to confirm you're running a Microsoft 365 *Current Channel* build of Outlook.
 
 1. Verify that *Microsoft Edge WebView2 Runtime* is installed. Open Windows **Start** > **Apps & features**, and search for **webview**:
 
