@@ -10,6 +10,9 @@ ms.date: 09/07/2023
 
 # Extend Bot-based message extension as plugin
 
+> [!NOTE]
+> Only bot-based search message extension can be extended as a plugin in Copilot.
+
 Microsoft 365 Copilot, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to transform your words into a potent productivity tool. Although Copilot can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending Copilot, you can enable users to interact with their third-party tools and services, thereby unlocking Microsoft 365 Copilot's full potential. You can achieve this extension by developing a plugin or connecting to an external data source.
 
 ## What is a plugin?

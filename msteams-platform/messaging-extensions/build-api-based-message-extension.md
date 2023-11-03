@@ -82,7 +82,7 @@ API-based message extensions are a potent tool that enhances your Teams app's fu
 </details>
 
 You can create an API-based message extension using Visual Studio Code and Teams Toolkit CLI.
-<!--
+
 # [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
 To create an API base message extension using Developer Portal, follow these steps:
@@ -101,7 +101,7 @@ To create an API base message extension using Developer Portal, follow these ste
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-upload.png" alt-text="Screenshot shows the Upload now option in Teams Developer Portal.":::
 
-1. Select the Open API specification file in JSON or YAML and select **Open**.
+1. Select the Open OpenAPI Description document in JSON or YAML and select **Open**.
 
 1. Select **Save**.
 
@@ -114,11 +114,11 @@ To create an API base message extension using Developer Portal, follow these ste
 
 You can add commands and parameters to your API, to add commands:
 
-1. Under the Open API spec file, select **Add**.
+1. Under **Message extension type**, select **+ Add**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-edit-get-commands.png" alt-text="Screenshot shows the option to edit get commands in Teams Developer Portal.":::
 
-   A list of all the available APIs from the Open API specification are displayed.
+   Add a command pop-up appears with a list of all the available APIs from the Open API Description are displayed.
 
 1. Select an API from the list and select **Next**.
 
@@ -126,20 +126,22 @@ You can add commands and parameters to your API, to add commands:
 
    A command details page appears.
 
-1. In the **Add command** page, go to **Command details** > **Adaptive card template**.
-
-1. Select **Upload now**.
+1. In the **Add command** page, go to **Adaptive card template** and select **Upload now**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the adaptive Card template in for the command.":::
 
+   > [!NOTE]
+   > If you have more than one API, ensure that you upload the **Adaptive card template** for all the APIs.
+
 1. Select the Adaptive Card template file in JSON and select **Open**.
 
+1. Turn on the **Automatically run the command when a user opens the extension** toggle.
+
 1. Under **Details**, update the following:
-   * Command type
+   * Command Type
    * Command ID
    * Command title
    * Command description
-   * Context in which the command works
    * Parameter name
    * Parameter title
    * Parameter description
@@ -147,13 +149,11 @@ You can add commands and parameters to your API, to add commands:
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-command-details.png" alt-text="Screenshot shows the fields available in the command details page.":::
 
-1. Select **Save**. The command is added successfully.
+1. Select **Add**. The command is added successfully.
 
-:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams Developer Portal.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams Developer Portal.":::
 
 An API message extension is created.
-
--->
 
 # [Visual Studio Code](#tab/visual-studio-code)
 
@@ -176,7 +176,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
 1. Based on the options selected in **step 7**, select the following:
 
-   # [New API](#tab/new-api)
+# [New API](#tab/new-api)
 
    1. Select a programming language.
 
@@ -195,7 +195,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
         |`appPackage/responseTemplates/repair.json`     |  A generated Adaptive Card that used to render API response.       |
         |`repairsData.json`    |  The data source for the repair API.       |
 
-   # [OpenAPI Description](#tab/openapi-specification)
+# [OpenAPI Description](#tab/openapi-specification)
 
    1. Enter or browse the OpenAPI Description document location.
 
@@ -251,11 +251,11 @@ Teams sends the search result as an Adaptive Card in the chat message.
 
 1. Select **Start from an OpenAPI Description Document**.
 
-1. Enter a valid URL or local path of your API specification.
+1. Enter a valid URL or local path of your OpenAPI Description document.
 
 1. Select the APIs from the list and select **Enter**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-CLI-API-options-me.png" alt-text="Screenshot shows the list of API extracted from the OprnAPI specification document in the command prompt.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-CLI-API-options-me.png" alt-text="Screenshot shows the list of API extracted from the OprnOpenAPI Description document document in the command prompt.":::
 
 1. Enter the location for your project and select **Enter**.
 

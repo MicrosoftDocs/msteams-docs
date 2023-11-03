@@ -1802,11 +1802,20 @@ The long description of an app must clearly call out the following:
 
 * Provide at least one prompt of how users can use a message extension plugin in Copilot. For example, what are the high priority tickets assigned to me this week in Contoso.
 
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guideliens-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as a plugin in Copilot.":::
+
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guideliens-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in Copilot.":::
+
 ### Response Quality
 
 * The mandatory fields in Microsoft 365 Copilot Adaptive Card response must include Information title and at least two additional useful fields of your choice, for example, date modified, author, status, and flags. Both the preview and content must be part of a single response.
+
+   :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Microsoft 365 Copilot app response contains Preview and Content in the same response. ":::
+
 * Adaptive Cards in Microsoft 365 Copilot response must have at least one action button.
-* Action buttons present in Microsoft 365 Copilot response adaptive cards must be functional
+* Action buttons present in Microsoft 365 Copilot response adaptive cards must be functional.
+
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-functional-action.png" alt-text="Screenshot shows an exmple of information title, additional user fields, and action button in an Adaptive Card response.":::
 
 * Microsoft 365 Copilot must respond accurately and not display an error when a user prompts with a single parameter.
 * Microsoft 365 Copilot must respond accurately and not show an error when a user prompts with a multi parameter.
