@@ -1,12 +1,11 @@
 ---
-title: Debug your Teams app
+title: Debug your Teams app test tool
 author: surbhigupta 
-description: In this module, learn how to debug your Teams app and key features of Teams Toolkit.
+description: In this module, learn how to debug your Teams app test tool and key features of Teams app test tool.
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 03/21/2022
-zone_pivot_groups: teams-toolkit-platform
+ms.date: 11/03/2023
 ---
 
 # Teams App Test Tool
