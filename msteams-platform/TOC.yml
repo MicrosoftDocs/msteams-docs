@@ -180,7 +180,9 @@
         - name: Debug your Teams app
           items:
           - name: Overview
-            href: toolkit/debug-overview.md
+            href: toolkit/debug-your-teams-app-test-tool.md
+          - name: Debug your Teams app test tool
+            href: toolkit/debug-local.md
           - name: Debug your Teams app locally
             href: toolkit/debug-local.md
           - name: Debug background process
