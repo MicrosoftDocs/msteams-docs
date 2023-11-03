@@ -435,13 +435,13 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`team.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch task module dynamically. Default value is `false`.|
+|`team.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch task module dynamically. <br>Default value: `false`.|
 |`team.taskInfo.title`|String|64 characters|✔️|Initial dialog title.|
 |`team.taskInfo.width`|String|16||The dialog width is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`team.taskInfo.height`|String|16||The dialog height is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`team.taskInfo.url`|String|2048 characters||Initial webview URL.|
-|`groupChat.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch task module dynamically. Default value is `false`.|
-|`groupChat.taskInfo`|Object|||Default value is `false`.|
+|`groupChat.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch task module dynamically. <br>Default value: `false`.|
+|`groupChat.taskInfo`|Object|||Task module to be launched when fetch task set to false.<br>Default value: `false`.|
 |`groupChat.taskInfo.title`|String|64 characters|✔️|Initial dialog title.|
 |`groupChat.taskInfo.width`|String|16||The dialog width is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`groupChat.taskInfo.height`|String|16||The dialog height is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
@@ -486,12 +486,12 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |`botId`|String|||The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
 |`composeExtensionType`|String|||Type of the compose extension. Enum values are `botBased` and `apiBased`.|
 |`apiSpecificationFile`|String|2048 characters||A relative file path to the api specification file in the manifest package.|
-|`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. The default is `true`.|
+|`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. <br>Default value: `true`|
 |`commands`|Array of object|10||Array of commands the message extension supports|
 |`messageHandlers`|Array of objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
 |`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|Array of Strings|2048 characters||Array of domains that the link message handler can register for.|
-|`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. The default value is `false`. To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
+|`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. <br>Default value: `false`. To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
 |`type`     |  Type of the compose extension.  Supported values are `apiBased` or `botBased`. |
 
 ### composeExtensions.commands
@@ -600,7 +600,7 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 
 **Optional** &ndash; Boolean
 
-Indicates whether to show the loading indicator when an app or tab is loading. The default value is `false`.
+Indicates whether to show the loading indicator when an app or tab is loading. <br>Default value: `false`
 > [!NOTE]
 >
 > * If you select `showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
@@ -610,7 +610,7 @@ Indicates whether to show the loading indicator when an app or tab is loading. T
 
  **Optional** &ndash; Boolean
 
-Indicate where a personal app is rendered with or without a tab header bar. The default value is `false`.
+Indicate where a personal app is rendered with or without a tab header bar. <br>Default value: `false`
 
 > [!NOTE]
 > `isFullScreen` works only for apps published to your organization.
@@ -715,7 +715,7 @@ Enables your app in nonstandard channels. If your app supports a team scope and 
 
 **Optional** &ndash; Boolean
 
-A value that indicates whether an app is blocked by default until admin allows it. The default value is `false`.
+A value that indicates whether an app is blocked by default until admin allows it. <br>Default value: `false`
 
 ## publisherDocsUrl
 
