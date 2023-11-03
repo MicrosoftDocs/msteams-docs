@@ -143,7 +143,7 @@ Design a Teams app with UI components, templates, and examples that you can drag
 
 ### Fluent UI documentation
 
-Get code samples and implementation details for the basic Fluent UI components used to build Teams experiences.
+Obtain code samples and understand the implementation specifics for the fundamental Fluent UI components utilized in constructing Teams experiences.
 
 > [!div class="nextstepaction"]
 > [Try Teams UI components (Fluent UI)](https://react.fluentui.dev/?path=/docs/)
