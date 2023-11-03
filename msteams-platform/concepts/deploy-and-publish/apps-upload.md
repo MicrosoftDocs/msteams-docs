@@ -91,7 +91,7 @@ If an update is available for your app, follow these steps to update your app fr
 1. Go to **Microsoft Teams**.
 1. Select **Apps** > **Manage your apps**.
 
-    :::image type="content" source="../../assets/images/publish-app/update-available-manage-apps.png" alt-text="Screenshot shows the updates available for apps installed in the manage your apps option. :::
+    :::image type="content" source="../../assets/images/publish-app/update-available-manage-apps.png" alt-text="Screenshot shows the updates available for apps installed in the manage your apps option.":::
 
 1. Under the **Apps** tab, check for the **Update** option next to the app.
 
