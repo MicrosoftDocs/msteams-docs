@@ -18,6 +18,7 @@ ms.date: 10/19/2023
 API-based message extensions are a type of Teams app that integrates your chat functionality directly into Teams, enhancing your app's usability and offering a seamless user experience.
 
 Before you get started, ensure that you meet the following requirements:
+
 </br>
 <details><summary>1. OpenAPI Description (OAD)</summary>
 
