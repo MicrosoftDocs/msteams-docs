@@ -213,6 +213,10 @@ Your message extension is listed, it opens an adjacent pane to display search re
 * Insertion of more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email isn't supported; Adaptive Cards v1.5 and later aren't supported.
 * [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) of type `messageBack`, `imBack`, `invoke`, and `signin` aren't supported for inserted cards. Support is limited to `openURL`: when selected, the user is redirected to the specified URL in a new tab.
 
+> [!NOTE]
+>
+> When testing an app with link unfurling, be sure to remove old apps manually after testing. If there are multiple apps that monitor the same domain, the most recently installed app may not get called to unfurl the link in Outlook, as it would in Teams.
+
 Use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
 
 ### Debugging
