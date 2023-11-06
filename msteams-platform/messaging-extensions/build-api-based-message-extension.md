@@ -176,7 +176,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
 1. Based on the options selected in **step 7**, select the following:
 
-# [New API](#tab/new-api)
+   # [New API](#tab/new-api)
 
    1. Select a programming language.
 
@@ -194,8 +194,8 @@ To build a message extension from an API using Visual Studio Code, follow these 
         |`appPackage/apiSpecificationFiles/repair.yml`     |  A file that describes the structure and behavior of the repair API.       |
         |`appPackage/responseTemplates/repair.json`     |  A generated Adaptive Card that used to render API response.       |
         |`repairsData.json`    |  The data source for the repair API.       |
-
-# [OpenAPI Description](#tab/openapi-specification)
+  
+   # [OpenAPI Description](#tab/openapi-specification)
 
    1. Enter or browse the OpenAPI Description document location.
 
