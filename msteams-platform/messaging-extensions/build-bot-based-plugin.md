@@ -8,7 +8,7 @@ ms.author: anclear
 ms.date: 09/07/2023
 ---
 
-# Extend Bot-based message extension as plugin
+# Extend bot-based message extension as plugin
 
 > [!NOTE]
 > Only bot-based search message extension can be extended as a plugin in Copilot.
@@ -25,7 +25,7 @@ A plugin allows Copilot to interact directly with third-party data, apps, and se
 
 All Message Extensions are eligible for plugins support, subject to validation to ensure the plugin meets quality, security, privacy, and usefulness expectations.
 
-You can extend Bot-based message extensions to function as a plugin in Copilot. You can create a bot-based message extension for Copilot using Teams Toolkit for Visual Studio Code, Visual Studio, and CLI.
+You can extend bot-based message extensions to function as a plugin in Copilot. You can create a bot-based message extension for Copilot using Teams Toolkit for Visual Studio Code, Visual Studio, and CLI.
 
 Before you get started, ensure that you meet the following pre-requisites:
 
@@ -71,14 +71,14 @@ To trigger the Message Extension through Copilot, you can:
 1. Select **Plugins**.
 1. From the list of plugins, turn on the toggle for your app.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for Bot-based-ME-test-local plugin.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
 1. From the compose message area, send a message to Copilot to find an NuGet package information. For example: Find the NuGet package info on Microsoft.CSharp.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from copilot.":::
 
 > [!NOTE]
-> This prompt may not always make Copilot include a response from your message extension. If it happens, try some other prompts or leave a feedback to us by thumbing down the Copilot response and leave a message tagged with [MessageExtension].
+> This prompt may not always make Copilot include a response from your message extension. If it happens, try some other prompts or leave feedback to us by thumbing down the Copilot response and leave a message tagged with [MessageExtension].
 
 # [Visual Studio](#tab/visual-studio)
 
@@ -127,14 +127,14 @@ To trigger the Message Extension through Copilot, you can:
 1. Select **Plugins**.
 1. From the list of plugins, turn on the toggle for your app.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for Bot-based-ME-test-local plugin.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
 1. From the compose message area, send a message to Copilot to find an NuGet package information. For example: Find the NuGet package info on Microsoft.CSharp.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from copilot.":::
 
 > [!NOTE]
-> This prompt may not always make Copilot include a response from your message extension. If it happens, try some other prompts or leave a feedback to us by thumbing down the Copilot response and leave a message tagged with [MessageExtension].
+> This prompt may not always make Copilot include a response from your message extension. If it happens, try some other prompts or leave feedback to us by thumbing down the Copilot response and leave a message tagged with [MessageExtension].
 
 # [Toolkit CLI](#tab/toolkit-cli)
 

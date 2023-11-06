@@ -524,8 +524,8 @@
       - name: Universal actions for search based message extensions
         href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
         displayName: Handle tap actions, Just-in-time install, JIT
-      - name: Extend Bot-based message extension as plugin
-        href: copilot/build-bot-based-plugin.md
+      - name: Extend bot-based message extension as plugin
+        href: messaging-extensions/build-bot-based-plugin.md
         displayName: Copilot, extend message extension, search based message extension
       - name: Message extension for Copilot guidelines
         href: messaging-extensions/high-quality-message-extension.md
@@ -815,7 +815,7 @@
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Extend Microsoft 365 Copilot
-  href: copilot/how-to-extend-copilot.md
+  href: messaging-extensions/how-to-extend-copilot.md
 - name: Teams developer documentation FAQs
   href: teams-faq.md
 - name: Test your app

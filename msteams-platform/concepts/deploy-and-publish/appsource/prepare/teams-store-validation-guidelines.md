@@ -1802,9 +1802,9 @@ The long description of an app must clearly call out the following:
 
 * Provide at least one prompt of how users can use a message extension plugin in Copilot. For example, what are the high priority tickets assigned to me this week in Contoso.
 
-  :::image type="content" source="../../../../assets/images/Copilot/validation-guideliens-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as a plugin in Copilot.":::
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as a plugin in Copilot.":::
 
-  :::image type="content" source="../../../../assets/images/Copilot/validation-guideliens-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in Copilot.":::
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in Copilot.":::
 
 ### Response Quality
 

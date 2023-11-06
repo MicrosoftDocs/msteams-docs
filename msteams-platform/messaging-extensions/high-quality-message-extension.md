@@ -508,4 +508,4 @@ For a plugin to be successfully validated, invoked, and work seamlessly, ensure 
 
 ## See also
 
-[Extend Bot-based message extension as plugin](../copilot/build-bot-based-plugin.md)
+[Extend bot-based message extension as plugin](build-bot-based-plugin.md)

@@ -372,7 +372,7 @@ Developer preview is a public program that provides early access to unreleased T
 |13/07/2023| Extend static tabs to group chat or meetings with a customizable experience. |Build tabs > [Overview](tabs/what-are-tabs.md)|
 | 25/05/2023 | Use a deep link to open a tab app in meeting side panel in Teams mobile client. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) |
 |23/05/2023 | Teams AI library helps you build AI-powered Teams apps. | Build Bots > [Teams AI library](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)|
-|23/05/2023| Extend Microsoft 365 Copilot to integrate with Microsoft Teams apps to turn your app into the most powerful productivity tool. | [Extend Microsoft 365 Copilot](copilot/how-to-extend-copilot.md)|
+|23/05/2023| Extend Microsoft 365 Copilot to integrate with Microsoft Teams apps to turn your app into the most powerful productivity tool. | [Extend Microsoft 365 Copilot](messaging-extensions/how-to-extend-copilot.md)|
 |31/01/2023| Send notifications to specific participants on a meeting stage with targeted in-meeting notification. |Build apps for Teams meetings and calls > Enable and configure apps for meetings > Build in-meeting notification for Teams meeting > Build tabs for meeting > [Targeted in-meeting notification](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification)|
 |30/01/2023| Enable app caching to improve subsequent launch time of the apps to the meeting side panel.|Build tabs > [App caching for your tab app](tabs/how-to/app-caching.md) |
 
