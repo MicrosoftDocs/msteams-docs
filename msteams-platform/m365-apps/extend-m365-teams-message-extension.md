@@ -68,8 +68,9 @@ To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-
 1. Select **Custom Search Results** to download the sample code for a Teams message extension using the latest app manifest. For more information, see [app manifest](../resources/schema/manifest-schema.md).
 
     :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams sample options.":::
-
-    The sample is also available as *NPM Search Connector* in the Teams Toolkit Samples gallery. From the Teams Toolkit pane, select **Development** > **View samples** > **NPM Search Connector**.
+1. Select a preferred programming language.
+1. Select a location on your local machine for the workspace folder and enter your application name.
+ From the left pane, under **DEVELOPMENT**, select **View Samples**.  A **Samples** tab appears, in the search field enter **NPM Search Connector**.
 
     :::image type="content" source="images/toolkit-search-sample.png" alt-text="Screenshot shows the NPM Search Connector sample in Teams Toolkit Samples gallery.":::
 
