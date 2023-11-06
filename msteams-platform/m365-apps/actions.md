@@ -7,6 +7,7 @@ author: mobajemu
 ms.topic: Conceptual
 ms.subservice: m365apps
 ---
+# What are Actions
 
 > [!NOTE]
 > The feature is only available for Microsoft 365 app on web and desktop clients.
@@ -15,7 +16,7 @@ Actions seamlessly integrate your app into the user's workflow, ensuring effortl
 
 Building Actions give developers to enhance their user's productivity by streamlining task completion and reducing the need for context switching across various Microsoft 365 applications.
 
-# Key benefits of Actions in Microsoft 365 applications
+## Key benefits of Actions in Microsoft 365 applications
 
 1. Enables them to accomplish tasks more efficiently.
 1. Seamlessly integrates your app in their workflow. Increases app's visibility and user engagement of your app.
