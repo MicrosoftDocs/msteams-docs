@@ -78,6 +78,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Conversational bot](../bots/how-to/conversations/conversation-messages.md) |  It lets a user interact with your web service using text, interactive cards, and task modules. <br>**See also** [Chat bot](#c) |
 | [Copilot](../copilot/how-to-extend-copilot.md)|Microsoft 365 Copilot is powered by an advanced processing and orchestration engine that seamlessly integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to turn your words into the most powerful productivity tool. |
 | Customer-owned apps | An app created by you or your organization that is meant for use by other Teams app users outside the organization. It can be made available on Microsoft Teams Store. <br> **See also**: [Teams Store validation guidelines](#s); [Microsoft Store](#s); [Personal tab](#p); [Shared apps](#s) |
+| Custom app built for your org| An app created only for Teams by you or your organization.  |
 | [Custom Together Mode](../apps-in-teams-meetings/teams-together-mode.md)| Custom Together Mode scenes in Teams provide an immersive and engaging meeting environment. <br>**See also**: [Developer Portal for Teams](#d) |
 
 ## D
