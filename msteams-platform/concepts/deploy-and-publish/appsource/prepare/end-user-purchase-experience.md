@@ -57,7 +57,7 @@ When a new user launches the app for the first time, they're requested to provid
 
 Following is an example of the consent screen:
 
-:::image type="content" source="../../../../assets/images/saas-offer/permissions-requested.png" alt-text="Screenshot shows the Permissions requested consent dialog.":::
+:::image type="content" source="../../../../assets/images/saas-offer/permissions-requested.png" alt-text="Screenshot shows the permissions requested consent dialog.":::
 
 ## Manage subscriptions
 
