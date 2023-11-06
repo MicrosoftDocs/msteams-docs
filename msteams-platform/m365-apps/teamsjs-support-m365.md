@@ -141,7 +141,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -195,7 +195,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -213,7 +213,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
@@ -231,7 +231,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -249,7 +249,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -932,7 +932,7 @@ Namespace providing calendar-related functionality.
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -1178,7 +1178,7 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1196,7 +1196,7 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -1214,7 +1214,7 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -1471,7 +1471,7 @@ Namespace providing email-related functionality.
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -1828,7 +1828,7 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
@@ -2020,7 +2020,7 @@ Preview. Namespace providing for profile-related functionality.
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -2083,7 +2083,7 @@ Preview. Allows your application to interact with the host Microsoft 365 applica
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
