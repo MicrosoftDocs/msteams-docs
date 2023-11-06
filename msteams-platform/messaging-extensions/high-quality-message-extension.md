@@ -12,10 +12,10 @@ ms.date: 10/18/2023
 
 Microsoft 365 plugins provide integration with various Microsoft hubs, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Copilot to interact with APIs from other software and services through a bot. You can:
 
-* Search for latest information or record, for example, latest incident ticket or survey results.
+* Search for the latest information or record, for example, the latest incident ticket or survey results.
 * Summarize information based on multiple records. For example, summarize all incidents tickets related to the project Northwind.
 
-We recommend to build or upgrade your existing message extensions to get the best out of Copilot. To ensure Copilot recognizes your app, build message extensions that can at least, search or summarize information.   Additionally, your extensions should meet the standards for compliance, performance, security, and user experience outlined in this article.
+We recommend that you build or upgrade your existing message extensions to get the best out of Copilot. To ensure Copilot recognizes your app, build message extensions that can at least, search or summarize information.   Additionally, your extensions should meet the standards for compliance, performance, security, and user experience outlined in this article.
 
 ## Mandatory requirements
 
@@ -37,7 +37,7 @@ Ensure that you adhere to the descriptions guidelines listed in the following ta
 | --- | --- |
 | :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Anti-Compete: Avoid using the name of any other plugin in both short and full descriptions. |
 | :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Responsible AI: Avoid using inappropriate or offensive keywords. |
-| :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Prompt injections: Ensure that the Text doesn't lead to prompt injections. Additionally, description must not contain symbols or text that indicate that it can be used as code for Prompt injection. Avoid using phrases, functions, and codes that call an app recurrently. |
+| :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Prompt injections: Ensure that the Text doesn't lead to prompt injections. Additionally, the description must not contain symbols or text that indicate that it can be used as code for Prompt injection. Avoid using phrases, functions, and code that call an app recurrently. |
 
 ### App description
 
@@ -116,7 +116,7 @@ The following table lists the short description examples for each category:
 
 # [General](#tab/general)
 
-**Description**:  Stock and share look up tool.
+**Description**:  Stock and share lookup tool.
 
 **App description example:**
 
@@ -241,7 +241,7 @@ The following table lists the command description examples for each category:
 
 Each parameter supports five attributes and one attribute must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, Enums, acronyms, and output format.
 
-A good parameter description explains the requirement of the system in a natural language with output format. The following are few examples on basic and advances search requests for different categories:
+A good parameter description explains the requirements of the system in a natural language with output format. The following are a few examples of basic and advanced search requests for different categories:
 
 # [Tasks](#tab/tasks)
 
@@ -375,7 +375,7 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 > [!NOTE]
 > Search through task module isn't supported in Copilot.
 
-For Copilot, a search-based message extension must support compound utterances to perform deep retrieval of accurate information. To enable compound utterances, we recommend to expand the scope of search to handle two or more search parameters simultaneously by enabling multi-parameter support in app manifest (previously called Teams app manifest).
+For Copilot, a search-based message extension must support compound utterances to perform deep retrieval of accurate information. To enable compound utterances, we recommend that you expand the scope of search to handle two or more search parameters simultaneously by enabling multi-parameter support in app manifest (previously called Teams app manifest).
 
 The search parameters must have good descriptions with acceptable parameters, Enums, acronyms, and output format. For more information and examples, see [Parameter description](#parameter-description).
 
@@ -476,8 +476,8 @@ Message extensions respond to user input with an Adaptive Card. An Adaptive Card
 
   </details>
 
-* Apart from the app logo title, thumbnail, and title of the information, the data in the Adaptive Card must represent the most frequently searched attributes, such as, data modified, author, status, and flags. [*Mandatory*]
-* Adaptive Card must look presentable in Win32, Web, and Mobile (iOS and Android). [*Mandatory*]
+* Apart from the app logo, title, thumbnail, and title of the information, the data in the Adaptive Card must represent the most frequently searched attributes, such as, data modified, author, status, and flags. [*Mandatory*]
+* Adaptive Card must be presentable in Win32, Web, and Mobile (iOS and Android). [*Mandatory*]
 * An Adaptive Card must contain at least one action, but no more than four actions. The following actions types are recommended: [*Mandatory*]
 
   > [!NOTE]
@@ -485,11 +485,11 @@ Message extensions respond to user input with an Adaptive Card. An Adaptive Card
 
   * `Action.OpenUrl`: Opens a specified URL from the Card.
   * `Action.ToggleVisibility`: Displays or hides one or more elements in the card.
-  * `Action.Execute`: Collects the input fields and sends as a request to your bot service.
+  * `Action.Execute`: Collects the input fields and sends them as a request to your bot service.
   * `Action.Submit`: Opens a Task module or Stage view using type invoke in data object.
 
 * If a user can change any information on the card through task module, stage view, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
-* Adaptive Cards must include URL as part of the metadata, which allows cards to be easily copied from one hub to another.
+* Adaptive Cards must include a URL as part of the metadata, which allows cards to be easily copied from one hub to another.
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
 ## Technical requirements

@@ -59,7 +59,7 @@ To run your message extension in Teams:
 
 1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
 1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)**. Teams Toolkit launches your app in Teams using a web browser.
-1. Select **Add**. The app is installed to Teams.
+1. Select **Add**. The app is installed on Teams.
 1. Go to a chat and select **Actions and apps**.
 1. From the message extension fly-out menu, @mention your message extension from the search box area.
 1. Select your message extension and enter your search query.
@@ -112,13 +112,13 @@ To trigger the Message Extension through Copilot, you can:
    :::image type="content" source="../assets/images/Copilot/bot-based-VS-teams-app-dependencies.png" alt-text="Screenshot shows the Prepare Teams app dependencies option under Teams Toolkit in Visual Studio app project.":::
 
    1. If prompted, sign in with a Microsoft 365 account.
-1. In the debug dropdown, select **Microsoft Teams (browser)**. Visual Studio launces Teams web client.
+1. In the debug dropdown, select **Microsoft Teams (browser)**. Visual Studio launches Teams web client.
 1. Select **Add**.
 1. You can search NuGet package from compose message area, or from the command box.
 
 To trigger the Message Extension through Copilot, you can:
 
-1. In the debug dropdown, select **Copilot (browser)**. Visual Studio launces Teams web client.
+1. In the debug dropdown, select **Copilot (browser)**. Visual Studio launches Teams web client.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-debug-Copilot.png" alt-text="Screenshot shows the Copilot (Browser)  debug option in Visual Studio.":::
 
