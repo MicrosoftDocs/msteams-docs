@@ -161,7 +161,7 @@ The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides acce
 > [!NOTE]
 > Teams Store has evolved:
 >
-> Previously, the custom app built for your org  were updated by selecting the ellipses on the tile. With the updated Teams Store experience, you can now update the custom apps built for your org by logging in to the [Teams Admin Centre](https://admin.teams.microsoft.com).
+> Previously, the custom apps built for your org  were updated by selecting the ellipses on the tile. With the updated Teams Store experience, you can now update the custom apps built for your org by logging in to the [Teams Admin Centre](https://admin.teams.microsoft.com).
 
 ### App scope
 

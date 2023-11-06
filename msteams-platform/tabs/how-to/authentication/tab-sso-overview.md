@@ -128,7 +128,7 @@ Here's a list of best practices:
 ## Known limitations
 
 - Currently, SSO in Teams supports only OAuth 2.0 token. It doesn't support SAML token.
-- Multiple domains per app aren't supported. For more information, see [custom app built for your org](tab-sso-register-aad.md#before-you-configure-your-app).
+- Multiple domains per app aren't supported. For more information, see [custom apps built for your org](tab-sso-register-aad.md#before-you-configure-your-app).
 
 ## Next step
 

@@ -34,7 +34,7 @@ It's helpful if you learn about the configuration for registering your app on Az
 
 > [!NOTE]
 >
-> - **Custom app built for your org**: Your organization can make custom app available through Microsoft Store. These apps are custom to your organization. They are internal or specific within your organization or business.
+> - **Custom apps built for your org**: Custom apps built for your org are internal or specific within your organization or business. Your organization can make these apps available through Microsoft Store.
 > - **Customer-owned apps**: SSO is also supported for customer-owned apps within the Azure AD B2C tenants.
 
 To create and configure your app in Azure AD for enabling SSO:

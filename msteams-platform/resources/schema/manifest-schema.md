@@ -626,7 +626,7 @@ Do **not** include the domains of identity providers you want to support in your
 Teams apps that require their own SharePoint URLs to function well, includes "{teamsitedomain}" in their valid domain list.
 
 > [!IMPORTANT]
-> Don't add domains that are outside your control, either directly or through wildcards (*). For example, ***.yoursite.com** is valid, but ***.onmicrosoft.com** isn't valid as it isn't under your control.
+> Don't add domains that are outside your control, either directly or through wildcards (*). For example,***.yoursite.com** is valid, but ***.onmicrosoft.com** isn't valid as it isn't under your control.
 >
 > When using wildcards, the following rules apply:
 >
@@ -775,7 +775,7 @@ When a group install scope is selected, it defines the default capability when t
 
 **Optional** &ndash; Array
 
-The `configurableProperties` block defines the app properties that Teams admins can customize. For more information, see [enable app customization](~/concepts/design/enable-app-customization.md). The app customization feature isn't supported in custom app or custom app built for your org.
+The `configurableProperties` block defines the app properties that Teams admins can customize. For more information, see [enable app customization](~/concepts/design/enable-app-customization.md). The app customization feature isn't supported in custom apps or custom apps built for your org.
 
 > [!NOTE]
 > A minimum of one property must be defined. You can define a maximum of nine properties in this block.
