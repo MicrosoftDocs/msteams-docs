@@ -195,7 +195,6 @@ To build a message extension from an API using Visual Studio Code, follow these 
         |`appPackage/responseTemplates/repair.json`     |  A generated Adaptive Card that used to render API response.       |
         |`repairsData.json`    |  The data source for the repair API.       |
 
-   # [OpenAPI Description](#tab/openapi-specification)
 # [OpenAPI Description](#tab/openapi-specification)
 
    1. Enter or browse the OpenAPI Description document location.
