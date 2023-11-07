@@ -51,7 +51,7 @@ Use RSC permissions to determine the data access methods for your app. A user's 
 
 ### Basic RSC Permissions
 
-A limited set of RSC permissions have been reviewed by Microsoft privacy and security teams and have been deemed low risk. These permissions can be consented to at all times by any user when they install and use an app. The following low-risk basic permissions will always be consented to upon installation.
+Microsoft's privacy and security teams have evaluated a limited set of Resource-Specific Consent (RSC) permissions and identified them as low risk. Users can consent to these permissions at any time during the installation and usage of an app. The following basic permissions, deemed low-risk, are always consented to upon installation:
 
 | Permission name | Action | Type: Delegated | Type: Application |
 | ----- | ----- | :-----: | :-----: |
