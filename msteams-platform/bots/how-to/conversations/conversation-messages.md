@@ -139,7 +139,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## Receive a read receipt
 
-The **Read receipts** setting in Teams allow the sender of a chat message to be notified when their message was read by the recipient in 1:1 and group chats. When the recipients reads the message the Seen :::image type="icon" source="../../../assets/icons/read_receipt_seen.png" border="false"::: appears next to the message. You can also configure your bot to receive read receipt events through the **Read receipts** setting. The read receipt event helps you enhance user experience in the following ways:
+The **Read receipts** setting in Teams allow the sender of a chat message to be notified when their message was read by the recipient in 1:1 and group chats. When the recipients read the message the Seen :::image type="icon" source="../../../assets/icons/read_receipt_seen.png" border="false"::: appears next to the message. You can also configure your bot to receive read receipt events through the **Read receipts** setting. The read receipt event helps you enhance user experience in the following ways:
 
 * You can configure your bot to send a follow up message if your app user hasn't read the message in the personal chat.
 
