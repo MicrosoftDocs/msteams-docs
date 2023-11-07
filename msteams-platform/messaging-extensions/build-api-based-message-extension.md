@@ -75,7 +75,7 @@ API-based message extensions are a potent tool that enhances your Teams app's fu
 
 * The `Commands.id` property in app manifest must match the corresponding `operationId` in the OpenAPI Description.
 * If a required parameter is without a default value, the command `parameters.name` in the app manifest must match the `parameters.name` in the OpenAPI Description.
-* If there's no required parameter, the command `parameters.name` in the app manifest must match the optional `parameter.name` in the OpenAPI Description.
+* If there's no required parameter, the command `parameters.name` in the app manifest must match the optional `parameters.name` in the OpenAPI Description.
 * A command can't have more than one parameter.
 * A response rendering template must be defined per command, which is used to convert responses from an API. The command section of the manifest must point to this template file under `composeExtensions.commands.apiResponseRenderingTemplateFile` within the app manifest. Each command points to a different response rendering template file.
 

@@ -446,10 +446,10 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
 |---------|---------|
 |`composeExtensions.composeExtensionType`     |  Compose extension type.  Update the value to `apiBased`. |
 |`composeExtensions.apiSpecificationFile`     |  References an OpenAPI Description file in the app package. Include when type is `apiBased`.      |
-|`composeExtensions.command.ID`      | Unique ID that you assign to search command. The user request includes this ID. The ID must match the `OperationID` available in the OpenAPI Description.       |
-|`composeExtensions.command.context`      | Array where the entry points for message extension is defined. The default values are `compose` and `commandBox`. |
-|`composeExtensions.command.parameters`    | Defines a static list of parameters for the command. The name must map to the `parameters.name` in the OpenAPI Description. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters.     |
-|`composeExtensions.command.apiResponseRenderingTemplateFile`| Template used to format the JSON response from developer’s API to Adaptive Card response. *[Mandatory]* |
+|`composeExtensions.commands.ID`      | Unique ID that you assign to search command. The user request includes this ID. The ID must match the `OperationID` available in the OpenAPI Description.       |
+|`composeExtensions.commands.context`      | Array where the entry points for message extension is defined. The default values are `compose` and `commandBox`. |
+|`composeExtensions.commands.parameters`    | Defines a static list of parameters for the command. The name must map to the `parameters.name` in the OpenAPI Description. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters.     |
+|`composeExtensions.commands.apiResponseRenderingTemplateFile`| Template used to format the JSON response from developer’s API to Adaptive Card response. *[Mandatory]* |
 
 For more information, see [composeExtensions](../resources/schema/manifest-schema-dev-preview.md#composeextensions).
 
