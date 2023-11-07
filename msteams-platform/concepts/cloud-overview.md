@@ -8,7 +8,7 @@ ms.date: 09/29/2023
 ---
 # Government clouds
 
-Government sectors and agencies handling sensitive and confidential data need cloud platforms that are highly secure and compliant. Government clouds services are specifically built to meet the stringent government compliance and raising requirements.
+Government sectors and agencies handling sensitive and confidential data need cloud platforms that are highly secure and compliant. Government clouds services are built to meet the stringent government compliance and raising requirements.
 
 Microsoft has built the following three government cloud services that are aligned with the requirements of United States government sectors and associated entities:
 
@@ -62,26 +62,26 @@ The following list provides references about availability of GCC, GCC-High, and 
 |---------|---|
 | Third-party apps | [Web apps](../samples/integrating-web-apps.md) <br> [Meeting app extensibility](../apps-in-teams-meetings/teams-apps-in-meetings.md) | Third-party apps are turned off by default for GCC and not available for GCC-High and DoD. <br> Third-party and LOB apps for meetings and calls are available only in GCC. |
 | Sideloading apps | [Distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md) <br> [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md) | Sideloading apps are available only in GCC. |
-| Tab app in shared channel | [Apps for shared channels](build-and-test/shared-channels.md) | Available in all three three government clouds. |
+| Tab app in shared channel | [Apps for shared channels](build-and-test/shared-channels.md) | Available in all three government clouds. |
 | Bots | [Designing your Teams bot](../bots/design/bots.md) <br> [Add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md) <br> [Bots in Teams](../bots/what-are-bots.md) | Bots are available in all three government clouds. |
 
 ## Plan to deploy Government clouds in Teams
 
-To access Government cloud, you need to purchase suitable government cloud M365 subscription. A US federal, state, local or tribal government entity, or other entities handling data subjected to government regulations and guidelines can purchase cloud service license.
+To access Government cloud, you need to purchase suitable government cloud Microsoft 365 subscription. A US federal, state, local or tribal government entity, or other entities handling data subjected to government regulations and guidelines can purchase cloud service license.
 
 The following pointers help you plan for government cloud service and understand the requirements for availing a cloud service: (Steps to plan)
 
-* You must first determine whether Government cloud is required for your organization.
+* Determine the need of Government cloud for your organization.
 * Review and understand the admin and security settings for the respective cloud tenant.
 * Understand the capabilities available in the respective cloud tenant.
-* You must then apply for the suitable government cloud.
+* Apply for the suitable government cloud.
 * Plan for Governance in Teams
   * Group and team creation naming, guest access, expiration, retention, and archiving.
   * Group and team membership management
   * Teams feature management
   * Security and compliance
-* Upon successful purchase and planning, you can then deploy the Teams for collaboration
-* You can then plan for deploying Teams for meetings and voice.
+* Upon successful purchase, plan and deploy the Teams for collaboration.
+* Based on the cloud platform purchased, plan for deploying Teams for meetings and voice.
 
 The following information helps you plan in detail for deployment in each cloud environment:
 
@@ -105,3 +105,7 @@ Here are few pointers to consider while connecting with third-party services fro
 * Enabling bots extend your system boundary beyond this tenant based on the bot you choose to use. It's your responsibility to ensure that meets your compliance requirements including FedRAMP, DFARS, ITAR, and so on.
 * It's your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
 * Microsoft doesn't endorse and makes no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service.
+
+## See also
+
+[Deployment overview](/microsoftteams/deploy-overview)
