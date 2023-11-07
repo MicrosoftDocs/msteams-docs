@@ -27,7 +27,7 @@ All Bot-based search message extensions are eligible for plugins support, subjec
 
 You can create a bot-based message extension using Teams Toolkit for Visual Studio Code, Visual Studio, or CLI and extend the extension to function as a plugin in Copilot.
 
-## Prerequisites 
+## Prerequisites
 
 Before you get started, ensure that you meet the following pre-requisites:
 

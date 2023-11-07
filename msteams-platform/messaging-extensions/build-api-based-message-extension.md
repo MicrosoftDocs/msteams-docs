@@ -94,19 +94,19 @@ To create an API-based message extension using Developer Portal for Teams, follo
 1. In the left pane, under **Configure**, select **App features**.
 1. Select **Messaging extension**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Teams Developer Portal.":::
+   <!---:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Teams Developer Portal."::: -->
 
 1. Under **Message extension type**, select **API-based**.
 
 1. Under **Open API spec**, select **Upload now**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-upload.png" alt-text="Screenshot shows the Upload now option in Teams Developer Portal.":::
+   <!---:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-upload.png" alt-text="Screenshot shows the Upload now option in Teams Developer Portal."::: --->
 
 1. Select the Open OpenAPI Description document in JSON or YAML and select **Open**.
 
 1. Select **Save**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-convert-api-commands.png" alt-text="Screenshot shows the list of APIs from the Open API spec document converted as commands.":::
+   <!---:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-convert-api-commands.png" alt-text="Screenshot shows the list of APIs from the Open API spec document converted as commands."::: --->
 
 **Add commands**
 
@@ -117,19 +117,19 @@ You can add commands and parameters to your API, to add commands:
 
 1. Under **Message extension type**, select **+ Add**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-edit-get-commands.png" alt-text="Screenshot shows the option to edit the GET API request commands in Teams Developer Portal.":::
+   <!---:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-edit-get-commands.png" alt-text="Screenshot shows the option to edit the GET API request commands in Teams Developer Portal."::: --->
 
    A **Add a command** pop-up appears with a list of all the available APIs from the Open API Description document.
 
 1. Select an API from the list and select **Next**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-commands-view-details.png" alt-text="Screenshot shows the view details option for the Get command.":::
+   <!--- :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-commands-view-details.png" alt-text="Screenshot shows the view details option for the Get command."::: --->
 
    A **Add a command** page appears.
 
 1. In the **Add command** page, go to **Adaptive card template** and select **Upload now**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the adaptive Card template in for the command.":::
+   <!---:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the adaptive Card template in for the command."::: --->
 
    > [!NOTE]
    > If you have more than one API, ensure that you upload the **Adaptive card template** for all the APIs.
@@ -148,11 +148,11 @@ You can add commands and parameters to your API, to add commands:
    * Parameter description
    * Parameter description type
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-command-details.png" alt-text="Screenshot shows the fields available in the command details page.":::
+   <!---:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-command-details.png" alt-text="Screenshot shows the fields available in the command details page."::: --->
 
 1. Select **Add**. The command is added successfully.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams Developer Portal.":::
+   <!--- :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams Developer Portal."::: --->
 
 An API message extension is created.
 
@@ -177,7 +177,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
 1. Based on the options selected in **step 7**, select the following:
 
-   # [New API](#tab/new-api)
+# [New API](#tab/new-api)
 
    1. Select a programming language.
 
@@ -196,7 +196,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
         |`appPackage/responseTemplates/repair.json`     |  A generated Adaptive Card that used to render API response.       |
         |`repairsData.json`    |  The data source for the repair API.       |
 
-   # [OpenAPI Description](#tab/openapi-specification)
+# [OpenAPI Description](#tab/openapi-specification)
 
    1. Enter or browse the OpenAPI Description document location.
 
