@@ -382,62 +382,62 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
-    "manifestVersion": "devPreview",
-    "version": "1.0.4",
-    "id": "228a4704-1cbb-4e59-b026-3b194021dd86",
-    "packageName": "com.microsoft.teams.extension",
-	"name": {
-        "short": "sampletest2809-dev",
-        "full": "Full name for sampletest2809"
-    },		   									  									
-    "developer": {
-        "name": "Teams App, Inc.",
-        "websiteUrl": "https://www.example.com",
-        "privacyUrl": "https://www.example.com/termofuse",
-        "termsOfUseUrl": "https://www.example.com/privacy"
-    },
-	"description": {
-        "short": "Open AI Klarna product Api",
-        "full": "Full description for sampletest2809"
-    },
-    "icons": {
-        "color": "color.png",
-        "outline": "outline.png"
-    },
-    "accentColor": "#FFFFFF",
-    "composeExtensions": [
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.0.4",
+  "id": "228a4704-xxxx-xxxx-xxxx-3b194021dd86",
+  "packageName": "com.microsoft.teams.extension",
+  "name": {
+    "short": "sampletest2809-dev",
+    "full": "Full name for sampletest2809"
+  },
+  "developer": {
+    "name": "Teams App, Inc.",
+    "websiteUrl": "https://www.example.com",
+    "privacyUrl": "https://www.example.com/termofuse",
+    "termsOfUseUrl": "https://www.example.com/privacy"
+  },
+  "description": {
+    "short": "Open AI Klarna product Api",
+    "full": "Full description for sampletest2809"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#FFFFFF",
+  "composeExtensions": [
+    {
+      "composeExtensionType": "apiBased",
+      "apiSpecificationFile": "openapi.yml",
+      "commands": [
         {
-            "composeExtensionType": "apiBased",
-            "apiSpecificationFile": "openapi.yml",
-            "commands": [
-                {
-                    "context": [
-					  "commandBox",						   
-                      "compose"
-                    ],
-					"description": "Search for Klarna products",
-                    "id": "productsUsingGET",
-					"apiResponseRenderingTemplateFile": "results.json"
-					"initialRun": false,
-                    "parameters": [
-                        {
-                            "name": "countryCode",
-                            "title": "Country Code",
-                            "description": "ISO 3166 country code with 2 characters based on the user location. Currently, only US, GB, DE, SE and DK are supported."
-                        }
-                    ],
-					"type": "query",
-                    "title": "API for fetching Klarna."
-                }
-            ]
-        }    
-    ],
-    "validDomains": [
-	  "klarna.com/us/shopping"
-	],
+          "context": [
+            "commandBox",
+            "compose"
+          ],
+          "description": "Search for Klarna products",
+          "id": "productsUsingGET",
+          "apiResponseRenderingTemplateFile": "results.json",
+          "initialRun": false,
+          "parameters": [
+            {
+              "name": "countryCode",
+              "title": "Country Code",
+              "description": "ISO 3166 country code with 2 characters based on the user location. Currently, only US, GB, DE, SE and DK are supported."
+            }
+          ],
+          "type": "query",
+          "title": "API for fetching Klarna."
+        }
+      ]
+    }
+  ],
+  "validDomains": [
+    "klarna.com/us/shopping"
+  ],
   "webApplicationInfo": {
-      "id": "228a4704-1cbb-4e59-b026-3b194021dd86",
+    "id": "228a4704-1cbb-4e59-b026-3b194021dd86"
   }
 }
 ```
