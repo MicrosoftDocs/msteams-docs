@@ -527,7 +527,7 @@
       - name: Extend bot-based message extension as plugin
         href: messaging-extensions/build-bot-based-plugin.md
         displayName: Copilot, extend message extension, search based message extension
-      - name:  Bot-based message extension plugin guidelines
+      - name: Guidelines to extend bot-based message extension as plugin
         href: messaging-extensions/high-quality-message-extension.md
         displayName: Criteria, extend message extension, plugin,  
 
