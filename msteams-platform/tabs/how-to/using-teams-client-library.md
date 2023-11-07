@@ -17,7 +17,7 @@ The Microsoft Teams JavaScript client library (TeamsJS) can help you create host
 * [Tabs](../../tabs/what-are-tabs.md)
 * [Task modules (Dialogs)](../../task-modules-and-cards/what-are-task-modules.md)
 
-Starting with version `2.0.0`, the existing TeamsJS library (`@microsoft/teams-js`, or simply `TeamsJS`) has been refactored to enable [Teams apps to run in Outlook and Microsoft 365 app](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Microsoft 365 app.
+Starting with version `2.0.0`, the existing TeamsJS library (`@microsoft/teams-js`, or simply `TeamsJS`) is refactored to enable [Teams apps to run in Outlook and Microsoft 365 app](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Microsoft 365 app.
 
 Here's the current versioning guidance for various app scenarios:
 
@@ -42,7 +42,7 @@ There are two significant changes between TeamsJS 1.x.x versions and v.2.0.0 and
 
 ### Backwards compatibility
 
-Once you start referencing `@microsoft/teams-js@2.0.0` (or later) from an existing Teams app, you'll see deprecation warnings for any code calling APIs that have changed.
+Once you start referencing `@microsoft/teams-js@2.0.0` (or later) from an existing Teams app, you see deprecation warnings for any code calling APIs that have changed.
 
 An API translation layer (mapping v.1 to v.2 TeamsJS API calls) is provided to enable existing Teams apps to continue working in Teams until they're able to update application code to use the TeamsJS v.2 API patterns.
 
@@ -324,7 +324,7 @@ To generalize the TeamsJS library to run other Microsoft 365 hosts such as Micro
 
 The `Context` interface has been moved to the `app` namespace and updated to group similar properties for better scalability as it runs in Outlook and Microsoft 365 app, in addition to Teams.
 
-A new property `app.Context.app.host.name` has been added to enable tabs to differentiate user experience depending on the host application.
+A new property `app.Context.app.host.name` is added to enable tabs to differentiate user experience depending on the host application.
 
 You can also visualize the changes by reviewing the `transformLegacyContextToAppContext` function in the [TeamsJS version 2.x.x source](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/src/public/app.ts)  (*app.ts* file).
 
@@ -405,7 +405,7 @@ After completion, the utility will have updated your `package.json` file with th
 
 ### 3. Update the app manifest (optional)
 
-If you're updating a Teams app to run in Microsoft 365 app and Outlook, you'll also need to update the app manifest to version 1.13 or later. You can do this easily with Teams Toolkit, or manually.
+If you're updating a Teams app to run in Microsoft 365 app and Outlook, you also need to update the app manifest to version 1.13 or later. You can do this easily with Teams Toolkit, or manually.
 
 # [Teams Toolkit](#tab/manifest-teams-toolkit)
 
