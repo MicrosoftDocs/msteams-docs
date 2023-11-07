@@ -177,7 +177,7 @@ To build am API-based message extension using Visual Studio Code, follow these s
 
      :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot-options.png" alt-text="Screenshot shows the options to create a search based message extension.":::
 
-1. Based on the options selected in **step 7**, select the following:
+1. Based on the options selected in **step 6**, select the following:
 
     # [New API](#tab/new-api)
 
@@ -226,11 +226,12 @@ To build am API-based message extension using Visual Studio Code, follow these s
 1. From the left pane, Select **Run and Debug (Ctrl+Shift+D)**.
 1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)` . Teams Toolkit launches Teams web client in a browser window.
 1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, search for your app.
-1. Select your message extension from the list and [trigger your search commands from compose message area](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?tabs=dotnet#search-commands).
+1. Select your message extension from the list and enter a search command in the search box.
+1. Select an item from the list. The item unfurls into an Adaptive Card in the message compose area.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat  menu and the app is displayed in the flyout menu.":::
+    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat  menu and the app is displayed in the flyout menu.":::
 
-Teams sends the search result as an Adaptive Card in the chat message.
+1. Select **Send**. Teams sends the search result as an Adaptive Card in the chat message.
 
 :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
 
