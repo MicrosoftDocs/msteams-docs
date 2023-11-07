@@ -1,7 +1,7 @@
 ---
 title: Create bot based Message extension
 author: v-ypalikila
-description: Learn how to build a bot message extension using Teams developer portal and Teams Toolkit.
+description: Learn how to build a bot message extension using Teams Developer Portal and Teams Toolkit.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -199,15 +199,15 @@ To trigger the message extension through Copilot, follow these steps:
 1. From the message extension fly-out menu, @mention your message extension from the search box area.
 1. Select your message extension and enter your search query.
 
-# [Developer portal for Teams](#tab/developer-portal-for-teams)
+# [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
-1. Go to **Teams developer portal**.
+1. Go to **Teams Developer Portal**.
 1. Go to **Apps**.
 1. Select **Create a new app**.
 1. Under **Configure**, select **App features**.
 1. Select **Messaging extension**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the plugin of copilot option in Teams developer portal.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the plugin of copilot option in Teams Developer Portal.":::
 
 1. Under **Message extension type**, select **Bot**.
 
