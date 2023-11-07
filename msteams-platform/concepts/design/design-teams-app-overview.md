@@ -141,17 +141,12 @@ Design a Teams app with UI components, templates, and examples that you can drag
 > [!div class="nextstepaction"]
 > [Get the UI kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-### Microsoft Teams UI Library
+### Fluent UI documentation
 
-View and test individual Teams UI templates and related components in your browser.
-
-> [!div class="nextstepaction"]
-> [Try the UI library (playground)](https://63587347138fdad13ed63ccd-omfbjvvebn.chromatic.com/)
-
-Import these templates and related components directly into your Teams app project.
+Obtain code samples and understand the implementation specifics for the fundamental Fluent UI components utilized in constructing Teams experiences.
 
 > [!div class="nextstepaction"]
-> [Get the UI library (GitHub)](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
+> [Try Teams UI components (Fluent UI)](https://react.fluentui.dev/?path=/docs/)
 
 ### Sample app
 
@@ -159,17 +154,6 @@ You can upload a sample app to see how apps should look and behave in the Teams 
 
 > [!div class="nextstepaction"]
 > [Get the sample app (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
-
-## Other resources
-
-To learn more, try one of the following resources:
-
-### Fluent UI documentation
-
-Get code samples and implementation details for the basic Fluent UI components used to build Teams experiences.
-
-> [!div class="nextstepaction"]
-> [Try Teams UI components (Fluent UI)](https://react.fluentui.dev/?path=/docs/)
 
 ### Adaptive Cards designer
 
