@@ -42,7 +42,7 @@ There are two significant changes between TeamsJS 1.x.x versions and v.2.0.0 and
 
 ### Backwards compatibility
 
-Once you start referencing `@microsoft/teams-js@2.0.0` (or later) from an existing Teams app, you see deprecation warnings for any code calling APIs that have changed.
+Once you start referencing `@microsoft/teams-js@2.0.0` (or later) from an existing Teams app, you see deprecation warnings for any code calling APIs that are changed.
 
 An API translation layer (mapping v.1 to v.2 TeamsJS API calls) is provided to enable existing Teams apps to continue working in Teams until they're able to update application code to use the TeamsJS v.2 API patterns.
 
@@ -297,7 +297,7 @@ The `pages` namespace includes functionality for running and navigating webpages
 
 ##### *dialog* namespace
 
-The TeamsJS *tasks* namespace has been renamed to *dialog*, and the following APIs have been renamed:
+The TeamsJS *tasks* namespace is renamed to *dialog*, and the following APIs are renamed:
 
 | Original namespace `tasks` | New namespace `dialog`  |
 | - | - |
@@ -307,7 +307,7 @@ The TeamsJS *tasks* namespace has been renamed to *dialog*, and the following AP
 | `tasks.TaskModuleDimension` enum | `dialog.DialogDimension` (renamed) |
 | `tasks.TaskInfo` interface | `dialog.DialogInfo` (renamed) |
 
-Additionally, this capability has been split into a main capability (`dialog`) for supporting HTML-based dialogs, and a subcapability for bot-based dialogs, `dialog.bot`.
+Additionally, this capability is split into a main capability (`dialog`) for supporting HTML-based dialogs, and a subcapability for bot-based dialogs, `dialog.bot`.
 
 ##### *teamsCore* namespace
 
