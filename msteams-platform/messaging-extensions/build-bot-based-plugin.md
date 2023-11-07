@@ -13,7 +13,7 @@ ms.date: 09/07/2023
 > [!NOTE]
 > Only bot-based search message extension can be extended as a plugin in Copilot.
 
-Microsoft 365 Copilot, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to transform your words into a potent productivity tool. Although Copilot can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending Copilot, you can enable users to interact with their third-party tools and services, thereby unlocking Microsoft 365 Copilot's full potential. You can achieve this extension by developing a plugin or connecting to an external data source.
+Microsoft 365 Copilot, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to transform your words into a potent productivity tool. Although Copilot can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending your message extension as a plugin in Copilot, you can enable users to interact with third-party tools and services, thereby unlocking Microsoft 365 Copilot's full potential. You can achieve this extension by developing a plugin or connecting to an external data source.
 
 ## What is a plugin?
 
@@ -23,15 +23,19 @@ A plugin allows Copilot to interact directly with third-party data, apps, and se
 * Retrieve knowledge-based information, such as a team’s design files in Figma.
 * Perform actions on behalf of the user, such as creating a Contoso ticket.
 
-All Message Extensions are eligible for plugins support, subject to validation to ensure the plugin meets quality, security, privacy, and usefulness expectations.
+All Bot-based search message extensions are eligible for plugins support, subject to validation to ensure the plugin meets quality, security, privacy, and usefulness expectations.
 
-You can extend bot-based message extensions to function as a plugin in Copilot. You can create a bot-based message extension for Copilot using Teams Toolkit for Visual Studio Code, Visual Studio, and CLI.
+You can create a bot-based message extension using Teams Toolkit for Visual Studio Code, Visual Studio, or CLI and extend the extension to function as a plugin in Copilot.
+
+## Prerequisites 
 
 Before you get started, ensure that you meet the following pre-requisites:
 
 * Standards for compliance, performance, security, and user experience outlined in [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-microsoft-365-copilot-plugin).
 
 * [Guidelines to create or upgrade a message extension for Copilot](../messaging-extensions/high-quality-message-extension.md).
+
+## Create bot-based message extension
 
 # [Visual Studio Code](#tab/visual-studio-code)
 
@@ -64,7 +68,7 @@ To run your message extension in Teams:
 1. From the message extension fly-out menu, @mention your message extension from the search box area.
 1. Select your message extension and enter your search query.
 
-To trigger the Message Extension through Copilot, you can:
+To trigger the message extension through Copilot, follow these steps:
 
 1. Select **Apps**.
 1. Search for Copilot.
@@ -116,7 +120,7 @@ To trigger the Message Extension through Copilot, you can:
 1. Select **Add**.
 1. You can search NuGet package from compose message area, or from the command box.
 
-To trigger the Message Extension through Copilot, you can:
+To trigger the message extension through Copilot, follow these steps:
 
 1. In the debug dropdown, select **Copilot (browser)**. Visual Studio launches Teams web client.
 
@@ -195,7 +199,6 @@ To trigger the Message Extension through Copilot, you can:
 1. From the message extension fly-out menu, @mention your message extension from the search box area.
 1. Select your message extension and enter your search query.
 
-<!--
 # [Developer portal for Teams](#tab/developer-portal-for-teams)
 
 1. Go to **Teams developer portal**.
@@ -230,7 +233,7 @@ To trigger the Message Extension through Copilot, you can:
 
 1. Select **Save**.
 
-A bot based ME is created. -->
+A bot based ME is created.
 
 ---
 

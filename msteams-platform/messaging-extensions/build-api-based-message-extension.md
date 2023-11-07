@@ -85,19 +85,20 @@ You can create an API-based message extension using Visual Studio Code and Teams
 
 # [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
-To create an API base message extension using Developer Portal, follow these steps:
+To create an API-based message extension using Developer Portal for Teams, follow these steps:
 
-1. Go to **Teams Developer Portal**.
+1. Go to **[Teams Developer Portal](https://dev.teams.microsoft.com/home)**.
 1. Go to **Apps**.
-1. Select **Create a new app**.
-1. Under **Configure**, select **App features**.
+1. Select **+ New apps**.
+1. Enter a name of the app and select **Add**.
+1. In the left pane, under **Configure**, select **App features**.
 1. Select **Messaging extension**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Teams Developer Portal.":::
 
 1. Under **Message extension type**, select **API-based**.
 
-1. Under **Open API spec**, select **Upload API spec**.
+1. Under **Open API spec**, select **Upload now**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-upload.png" alt-text="Screenshot shows the Upload now option in Teams Developer Portal.":::
 
@@ -116,15 +117,15 @@ You can add commands and parameters to your API, to add commands:
 
 1. Under **Message extension type**, select **+ Add**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-edit-get-commands.png" alt-text="Screenshot shows the option to edit get commands in Teams Developer Portal.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-edit-get-commands.png" alt-text="Screenshot shows the option to edit the GET API request commands in Teams Developer Portal.":::
 
-   Add a command pop-up appears with a list of all the available APIs from the Open API Description are displayed.
+   A **Add a command** pop-up appears with a list of all the available APIs from the Open API Description document.
 
 1. Select an API from the list and select **Next**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-commands-view-details.png" alt-text="Screenshot shows the view details option for the Get command.":::
 
-   A command details page appears.
+   A **Add a command** page appears.
 
 1. In the **Add command** page, go to **Adaptive card template** and select **Upload now**.
 
@@ -225,7 +226,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, search for your app.
 1. Select the app from the list and [trigger your search commands from compose message area](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?tabs=dotnet#search-commands).
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat  menu and the app is displayed in the flyout menu.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app is invoked from the plus icon in the chat and the app is displayed in the message extension flyout menu.":::
 
 Teams sends the search result as an Adaptive Card in the chat message.
 
@@ -255,7 +256,7 @@ Teams sends the search result as an Adaptive Card in the chat message.
 
 1. Select the APIs from the list and select **Enter**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-CLI-API-options-me.png" alt-text="Screenshot shows the list of API extracted from the OprnOpenAPI Description document document in the command prompt.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-CLI-API-options-me.png" alt-text="Screenshot shows the list of API extracted from the OprnOpenAPI Description document in the command prompt.":::
 
 1. Enter the location for your project and select **Enter**.
 
