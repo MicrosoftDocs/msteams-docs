@@ -157,7 +157,10 @@ An API message extension is created.
 
 # [Visual Studio Code](#tab/visual-studio-code)
 
-To build a message extension from an API using Visual Studio Code, install a [pre-release version of Teams Toolkit for Visual Studio Code](../toolkit/install-Teams-Toolkit.md#install-a-pre-release-version-1) and follow these steps:
+> [!NOTE]
+> Before you get started, ensure that you install a [Teams Toolkit pre-release version](../toolkit/install-Teams-Toolkit.md#install-a-pre-release-version-1).
+
+To build am API-based message extension using Visual Studio Code, follow these steps:
 
 1. Open **Visual Studio Code**.
 1. From the left pane, Select **Teams Toolkit**.
