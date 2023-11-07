@@ -45,9 +45,9 @@ Developers must not require users to enter a parameter for a header or cookie. I
 
 <details><summary>2. App manifest</summary>
 
-* Set `composeExtension.Type` to `apiBased`.
-* Define `composeExtension.apiSpecificationFile` as the relative path to the OpenAPI Description file within the folder.
-* Define `apiResponseRenderingTemplateFile`  as the relative path to the response rendering template.
+* Set `composeExtensions.composeExtensionType` to `apiBased`.
+* Define `composeExtensions.apiSpecificationFile` as the relative path to the OpenAPI Description file within the folder.
+* Define `apiResponseRenderingTemplateFile` as the relative path to the response rendering template.
 * Each command must have a link to the response rendering template.
 * Full description must not exceed 128 characters.
 * A command must have exactly one parameter.
@@ -74,10 +74,10 @@ If the root object of the OpenAPI schema contains well-known array property name
 API-based message extensions are a potent tool that enhances your Teams app's functionality by integrating with external APIs. This enhances the capabilities of your app and provides a richer user experience. To implement message extension from an API, you need to follow these guidelines:
 
 * The `Commands.id` property in app manifest must match the corresponding `operationId` in the OpenAPI Description.
-* If a required parameter is without a default value, the command `parameter.name` in the app manifest must match the `parameter.name` in the OpenAPI Description.
-* If there's no required parameter, the command `parameter.name` in the app manifest must match the optional `parameter.name` in the OpenAPI Description.
+* If a required parameter is without a default value, the command `parameters.name` in the app manifest must match the `parameters.name` in the OpenAPI Description.
+* If there's no required parameter, the command `parameters.name` in the app manifest must match the optional `parameter.name` in the OpenAPI Description.
 * A command can't have more than one parameter.
-* A response rendering template must be defined per command, which is used to convert responses from an API. The command section of the manifest must point to this template file under `composeExtension.command.apiResponseRenderingTemplateFile` within the app manifest. Each command points to a different response rendering template file.
+* A response rendering template must be defined per command, which is used to convert responses from an API. The command section of the manifest must point to this template file under `composeExtensions.commands.apiResponseRenderingTemplateFile` within the app manifest. Each command points to a different response rendering template file.
 
 </details>
 
