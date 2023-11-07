@@ -9,9 +9,7 @@ ms.date: 01/31/2023
 ---
 # Prerequisites to create an offer
 
-For any SaaS offer you create, you must have the required technical information and fulfill the technical configurations. It helps negate any blockers while creating the offer. This article provides detailing on the technical configurations and requirements to create a SaaS offer.
-
-API integrations are part of technical configuration that needs to be done after the user purchase the offer.
+For a SaaS offer you create, ensure to have the required technical information and fulfill the technical configurations. It helps negate any blockers while creating the offer. This article provides detailing on the technical configurations and requirements for creating a SaaS offer.
 
 :::row:::
    :::column:::
@@ -34,19 +32,17 @@ API integrations are part of technical configuration that needs to be done after
    :::column-end:::
 :::row-end:::
 
-The technical configurations differ based on the listing option you opt for your SaaS offer.
-
 > [!NOTE]
 > The *Contact me* listing option have no technical configurations to be done.
 
 ## Technical configuration
 
-If you select **Get it now (Free)**, **Free trial**, and **Sell through Microsoft** as the listing option, you must do the following technical configurations:
+The technical configurations differ based on the listing option. If you have opted for **Get it now (Free)**, **Free trial**, or **Sell through Microsoft**, the following technical configurations must be done:
 
-* [Set up Microsoft and Azure AD accounts](#set-up-microsoft-and-azure-ad-accounts)
+* [Set up Microsoft and Microsoft Entra account](#set-up-microsoft-and-azure-ad-accounts)
 * [Create a landing page](#create-a-landing-page)
 
-For Sell through Microsoft or transactable offer, you need to do the [API integrations](#api-integration) after the user purchase the offer, in addition to the basic setup.
+For Sell through Microsoft listing option, you need to do the [API integrations](#api-integration) after the user purchase the offer, in addition to the basic setup.
 
 :::image type="content" source="../../../../assets/images/saas-offer/tech-config-offer.png" alt-text="Diagram shows the technical configuration per the type of listing option.":::
 
@@ -56,13 +52,13 @@ To start with, you must set up the required accounts to create an offer.
 
 * Enable Microsoft Accounts (MSA) and ensure you have a [Microsoft Partner Center account](/partner-center/marketplace/open-a-developer-account).
 
-* Azure Active Directory (Azure AD) provides an easier and secure purchase experience. Enable [Azure AD](https://azure.microsoft.com/services/active-directory/) for authenticating buyers on your site.  With [Azure AD integration](/partner-center/marketplace/azure-ad-saas), you can automatically provision the users to their SaaS apps and also allow buyers with Azure AD account to sign in to your app using Azure AD single sign-on (SSO). For more information, see [Azure AD and transactable SaaS offers](/partner-center/marketplace/azure-ad-saas).
+* Microsoft Entra ID provides an easier and secure purchase experience. Enable [Microsoft Entra ID](https://azure.microsoft.com/services/active-directory/) for authenticating buyers on your site.  With [Microsoft Entra integration](/partner-center/marketplace/azure-ad-saas), you can automatically provision the users to their SaaS apps and also allow buyers with Microsoft Entra account to sign in to your app using Microsoft Entra single sign-on (SSO). For more information, see [Microsoft Entra ID and transactable SaaS offers](/partner-center/marketplace/azure-ad-saas).
 
 ### Create a landing page
 
 When the user successfully purchases a subscription plan for your app in the Teams store, the commercial marketplace directs them to your landing page where they can manage the subscription (such as assign a license to a specific user in their organization).
 
-Ensure to register your landing page as an Azure AD application. Enable SSO using Azure AD and Microsoft Graph to obtain important information about the buyer and to confirm and activate the subscription. For complete instructions, see the following articles:
+Ensure to register your landing page as an Microsoft Entra application. Enable SSO using Microsoft Entra ID and Microsoft Graph to obtain important information about the buyer and to confirm and activate the subscription. For complete instructions, see the following articles:
 
 * [Build the landing page for your transactable SaaS offer](/partner-center/marketplace/azure-ad-transactable-saas-landing-page).
 * [Build landing page for your free or trial SaaS offer](/partner-center/marketplace/azure-ad-free-or-trial-landing-page)
@@ -91,14 +87,14 @@ When you create the SaaS offer, you must provide the following technical informa
 
 ## API integration
 
-When the users are redirected to the landing page from the configuration link, a set of user information is required to confirm and activate the subscription. You must integrate Microsoft Graph API and SaaS Fulfillment APIs to retrieve user information.
+When the user purchase the offer and is redirected to the landing page from the configuration link, a set of user information is required to confirm and activate the subscription. You must integrate Microsoft Graph API and SaaS Fulfillment APIs to retrieve user information.
 
 > [!NOTE]
-> API integrations are done only after the user purchases the license or subscription for the SaaS offer.
+> API integrations are part of technical configuration that can be done after the user purchases the license or subscription for the SaaS offer.
 
 ### Integrate with SaaS fulfillment API
 
-Integrating with the SaaS Fulfillment APIs helps to manage the lifecycle of a subscription plan once the user purchases the plan.
+Integrating with the SaaS Fulfillment APIs help to manage the lifecycle of a subscription plan once the user purchases the plan.
 
 In general, you implement the following steps using the APIs once a subscription is purchased and the customer selects to configure:
 
@@ -128,7 +124,7 @@ You can call Graph APIs to determine if the currently logged in user with a vali
 
 For detailed information, see [usageRights Graph API](/partner-center/marketplace/isv-app-license-saas).
 
-To determine if the tenant for the Azure AD app is part of the Partner Center setup, follow these steps:
+To determine if the tenant for the Microsoft Entra app is part of the Partner Center setup, follow these steps:
 
   1. Sign in  to [Microsoft Partner Center](https://partner.microsoft.com/) with the publisher account that is used to publish the SaaS offer.
   1. On the upper-right corner, select the **Settings** icon.
@@ -149,3 +145,4 @@ Now that we have the technical requirements and planned for the SaaS offer, let'
 
 * [Monetize your app](monetize-overview.md)
 * [SaaS app listing requirements](/partner-center/marketplace/marketplace-criteria-content-validation)
+* [Create a commercial marketplace account in Partner Center](/partner-center/create-account)

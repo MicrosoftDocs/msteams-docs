@@ -33,7 +33,7 @@ Teams apps with software as a service (SaaS) apps are available for purchase in 
    :::column-end:::
 :::row-end:::
 
-Planning your SaaS offer helps you to understand the suitable features for the offer. Here are the features you can plan ahead before creating an offer.
+Planning your SaaS offer helps to understand the suitable features for the offer. Here are the features you can plan ahead before creating an offer.
 
 ## Plan the publishing option
 
@@ -106,7 +106,7 @@ You can further allow Microsoft to manage licenses on your behalf. If you choose
 
 You need to plan on the basic yet key features that decide the information available on the offer's landing page and the marketplace where the offer is published. The offer details help the users to find your offer easily in the marketplace and enhances usability.
 
-* **Offer categories and industries**: Plan on the primary and secondary categories of the offer. It decides the store where the offer is published and to identify your app in the marketplace.
+* **Offer categories and industries**: Plan on the primary and secondary categories of the offer. It decides the store where the offer is published and helps identify your app in the marketplace.
 * **Offer details**: Plan for the logo, keywords, and description that helps to improve the discovery and value of your offer in the marketplace.
 * **Preview audience**: Decide the audience and collate their email address to allow them to use and verify the preview offer before publishing live. The email address must be either of Azure Active Directory (Azure AD) or Microsoft.
 * **Legal terms and conditions**: Provide relevant information for the users to be aware of the terms of use of your app.
