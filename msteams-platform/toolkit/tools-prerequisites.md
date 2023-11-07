@@ -169,11 +169,11 @@ You can use this method to verify sideloading permission only after you have cre
 
 1. In the Teams client, select **Apps** > **Manage your apps** > **Upload an app**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-an-app.png" alt-text="Screenshot shows the option to upload an app highlighted in red.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-an-app.png" alt-text="Screenshot shows the option to upload an app in Teams.":::
 
-1. Check if you can see the option **Upload a customised app** as you can see in the following image:
+1. Check if you can see the option **Upload a customised app**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-customised-app.png" alt-text="Screenshot shows the option to Upload a custom app highlighted in red.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-customised-app.png" alt-text="Screenshot shows the option to Upload a customised app in Teams.":::
 
 </details>
 

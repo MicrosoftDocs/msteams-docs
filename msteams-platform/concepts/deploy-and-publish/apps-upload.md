@@ -72,9 +72,9 @@ To access apps through **Manage your apps**, follow the steps:
 
     :::image type="content" source="~/assets/images/publish-app/manage-apps-list.png" alt-text="Screenshot shows the list of installed apps that appears when you select manage your apps.":::
 
-1. Select the app dropdown to view all the scopes where the app is installed.
+1. Select the app dropdown to view the list of scopes where the app is installed.
 
-    :::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="Screenshot shows the access to Teams app scope.":::
+    :::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="Screenshot shows the list of scopes where the app is installed.":::
 
 1. Select the scope of app to go to the app in the channel or personal view. The list of scopes consists of personal scope and teams scope only. Apps installed in group chat scope aren't displayed in this view currently.
 
@@ -111,7 +111,7 @@ To remove app from Teams, follow the steps:
 
 1. Find the app in **Manage your apps**.
 
-1. Select &nbsp;:::image type="content" source="../../assets/images/publish-app/bin-icon.png" alt-text="Screenshot shows the bin icon to remove app in Teams.":::&nbsp; at the scope of the installed app.
+1. Select &nbsp;:::image type="content" source="../../assets/images/publish-app/bin-icon.png" alt-text="Screenshot shows the delete icon to remove app in Teams.":::&nbsp; at the scope of the installed app.
 
     :::image type="content" source="../../assets/images/publish-app/uninstall-from-channel.png" alt-text="Screenshot shows the option to remove app in a channel highlighted in red.":::
 
