@@ -382,57 +382,63 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
-    "manifestVersion": "devPreview",
-    "version": "1.0.3",
-    "id": "55490e7f-xxxx-xxxx-xxxx-9eea9281b0fa",
-    "packageName": "com.microsoft.teams.extension",
-    "developer": {
-        "name": "Teams App, Inc.",
-        "websiteUrl": "https://www.example.com",
-        "privacyUrl": "https://www.example.com/termofuse",
-        "termsOfUseUrl": "https://www.example.com/privacy"
-    },
-    "icons": {
-        "color": "color.png",
-        "outline": "outline.png"
-    },
-    "name": {
-        "short": "sampletest2809-dev",
-        "full": "Full name for sampletest2809"
-    },
-    "description": {
-        "short": "Open AI Klarna product Api",
-        "full": "Full description for sampletest2809"
-    },
-    "accentColor": "#FFFFFF",
-    "composeExtensions": [
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.0.4",
+  "id": "228a4704-xxxx-xxxx-xxxx-3b194021dd86",
+  "packageName": "com.microsoft.teams.extension",
+  "name": {
+    "short": "sampletest2809-dev",
+    "full": "Full name for sampletest2809"
+  },
+  "developer": {
+    "name": "Teams App, Inc.",
+    "websiteUrl": "https://www.example.com",
+    "privacyUrl": "https://www.example.com/termofuse",
+    "termsOfUseUrl": "https://www.example.com/privacy"
+  },
+  "description": {
+    "short": "Open AI Klarna product Api",
+    "full": "Full description for sampletest2809"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#FFFFFF",
+  "composeExtensions": [
+    {
+      "composeExtensionType": "apiBased",
+      "apiSpecificationFile": "openapi.yml",
+      "commands": [
         {
-          "type": "ApiBased",
-          "apiSpecFile": "listrepairsapispec.yaml",
-          "commands": [
+          "context": [
+            "commandBox",
+            "compose"
+          ],
+          "description": "Search for Klarna products",
+          "id": "productsUsingGET",
+          "apiResponseRenderingTemplateFile": "results.json",
+          "initialRun": false,
+          "parameters": [
             {
-              "context": [
-                "compose"
-              ],
-              "type": "query",
-              "id": "listRepairs",
-              "title": "List repairs",
-              "parameters": [
-                {
-                  "title": "Filter",
-                  "name": "filter",
-                  "description": "Filter repairs by who they're assigned to."
-                }
-              ],
-              "apiResponseRenderingTemplateFile": "listrepairsresponsetemplate.json"
+              "name": "countryCode",
+              "title": "Country Code",
+              "description": "ISO 3166 country code with 2 characters based on the user location. Currently, only US, GB, DE, SE and DK are supported."
             }
-          ]
+          ],
+          "type": "query",
+          "title": "API for fetching Klarna."
         }
-      ],
-      "validDomains": [
-        "repairs-api-2023.azurewebsites.net"
       ]
+    }
+  ],
+  "validDomains": [
+    "klarna.com/us/shopping"
+  ],
+  "webApplicationInfo": {
+    "id": "228a4704-1cbb-4e59-b026-3b194021dd86"
+  }
 }
 ```
 
@@ -440,7 +446,7 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
 |---------|---------|
 |`composeExtensionType`     |  Compose extension type.  Update the value to `apiBased`. |
 |`composeExtensions.apiSpecificationFile`     |  References an OpenAPI Description file in the app package. Include when type is `apiBased`.      |
-|`composeExtensions.commands.id`      | Unique ID that you assign to search command. The user request includes this ID. The ID must match the `OperationID` available in the OpenAPI Description.       |
+|`composeExtensions.commands.id`      | Unique ID that you assign to search command. The user request includes this ID. The ID must match the `OperationId` available in the OpenAPI Description.       |
 |`composeExtensions.commands.context`      | Array where the entry points for message extension is defined. The default values are `compose` and `commandBox`. |
 |`composeExtensions.commands.parameters`    | Defines a static list of parameters for the command. The name must map to the `parameters.name` in the OpenAPI Description. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters.     |
 |`composeExtensions.commands.apiResponseRenderingTemplateFile`| Template used to format the JSON response from developer’s API to Adaptive Card response. *[Mandatory]* |
