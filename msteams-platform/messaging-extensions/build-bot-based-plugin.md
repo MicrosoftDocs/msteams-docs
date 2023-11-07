@@ -8,7 +8,7 @@ ms.author: anclear
 ms.date: 09/07/2023
 ---
 
-# Extend bot-based message extension as plugin
+# Extend bot-based message extension as plugin for Copilot
 
 > [!NOTE]
 > Only bot-based search message extension can be extended as a plugin in Copilot.

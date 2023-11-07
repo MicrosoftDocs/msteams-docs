@@ -1,5 +1,5 @@
 ---
-title: Message extension for Copilot guidelines
+title: Bot-based message extension plugin guidelines
 description: Learn about the guidelines and criteria to extend your message extension as a plugin for Copilot.
 ms.topic: how-to
 author: v-preethah
@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ms.date: 10/18/2023
 ---
 
-# Guidelines to create or upgrade a message extension for Copilot
+# Guidelines to create or upgrade a message extension plugin for Copilot
 
 Microsoft 365 plugins provide integration with various Microsoft hubs, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Copilot to interact with APIs from other software and services through a bot. You can:
 
