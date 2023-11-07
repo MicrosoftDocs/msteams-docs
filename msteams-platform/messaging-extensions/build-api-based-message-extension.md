@@ -157,7 +157,7 @@ An API message extension is created.
 
 # [Visual Studio Code](#tab/visual-studio-code)
 
-To build a message extension from an API using Visual Studio Code, follow these steps:
+To build a message extension from an API using Visual Studio Code, install a [pre-release version of Teams Toolkit for Visual Studio Code](../toolkit/install-Teams-Toolkit.md#install-a-pre-release-version-1) and follow these steps:
 
 1. Open **Visual Studio Code**.
 1. From the left pane, Select **Teams Toolkit**.
@@ -176,7 +176,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
 1. Based on the options selected in **step 7**, select the following:
 
-   # [New API](#tab/new-api)
+    # [New API](#tab/new-api)
 
    1. Select a programming language.
 
@@ -223,7 +223,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 1. From the left pane, Select **Run and Debug (Ctrl+Shift+D)**.
 1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)` . Teams Toolkit launches Teams web client in a browser window.
 1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, search for your app.
-1. Select the app from the list and [trigger your search commands from compose message area](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?tabs=dotnet#search-commands).
+1. Select your message extension from the list and [trigger your search commands from compose message area](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?tabs=dotnet#search-commands).
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat  menu and the app is displayed in the flyout menu.":::
 
