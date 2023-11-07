@@ -236,7 +236,7 @@ contentType: "application/vnd.microsoft.card.thumbnail",
 
 ## Zero install for link unfurling
 
-Zero install link unfurling helps you unfurl previews for your shared links even before a user discovered or installed your app in Teams. You can anonymously unfurl cards with a new invoke request or create a pre-authenticated Adaptive Card preview for users before they install or authenticate your app.
+Zero install link unfurling helps you unfurl previews for your shared links even before a user discovers or installs your app in Teams. You can anonymously unfurl cards with a new invoke request or create a preauthenticated Adaptive Card preview for users before they install or authenticate your app.
 
 The following image provides a sequential flow to enable and use zero install link unfurling:
 
@@ -344,7 +344,7 @@ To get your app ready for zero install link unfurling, follow these steps:
       }
       ```
 
-   1. For auth scenarios: You must send back a response with the `type` as `auth` with an optional pre-auth card in the attachments. Use the following template:
+   1. For auth scenarios: You must send back a response with the `type` as `auth` with an optional preauth card in the attachments. Use the following template:
   
       ```json
       {
@@ -376,7 +376,7 @@ To get your app ready for zero install link unfurling, follow these steps:
       }
       ```
 
-1. Pre-auth card (for auth only): Create a card preview to unfurl your links for users who don't have your app installed. You can either create a pre-templated card or add relevant placeholder fields for the users to update. The users can learn about the app even before they’ve installed it.
+1. Preauth card (for auth only): Create a card preview to unfurl your links for users who don't have your app installed. You can either create a pre-templated card or add relevant placeholder fields for the users to update. Users can learn about the app even before they’ve installed it.
 
    You can create a customized card and add relevant fields. The users can fill in the required information as per the fields. The following image illustrates a customized card preview:
 
@@ -406,13 +406,38 @@ The following are the limitations:
 
 * The bot can't send back an acv2 card in response to the `composeExtensions/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
 
-* If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
-
-* The bot can't send back an acv2 card in response to the `composeExtensions/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
-
-* If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
+* If the bot selects to send back the `"type": "auth"` property with a pre-auth card, Teams strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
 
 ---
+
+## How to test zero install link unfurling
+
+When you test the zero install link unfurling, don’t install the app as a personal app. Instead, upload the app to Teams.
+
+> [!NOTE]
+> Don’t run the test app directly from the Microsoft Visual Studio debugger.
+
+To test zero install link unfurling, follow these steps:
+
+1. Login to [Teams admin center](https://admin.teams.microsoft.com/).
+
+1. From the left pane, select **Teams apps** > **Manage apps**.
+
+    :::image type="content" source="../../assets/images/teams-link-unfurling/manage-apps-admin.png" alt-text="Screenshot of Teams admin center and section for sideloading Teams apps":::
+
+1. Select **+ Upload new app**.
+
+    :::image type="content" source="../../assets/images/teams-link-unfurling/upload-app-admin.png" alt-text="Screenshot of Teams admin center and where to upload custom apps":::
+
+1. Select **Upload**.
+
+1. Select **Open** to upload the zip file for your test application.
+
+1. After you've successfully uploaded the app, Go to **Teams** > **Apps** > **Built for your org**.
+
+    :::image type="content" source="../../assets/images/teams-link-unfurling/build-for-your-org.png" alt-text="Screenshot of Teams client with org sideloaded Teams app":::
+
+1. You can test the `composeExtensions/anonymousQueryLink` invoke request by setting up a breakpoint in the method that implements the anonymousQueryLink request in your application.
 
 ## Remove link unfurling cache
 
