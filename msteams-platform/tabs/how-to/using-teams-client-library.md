@@ -125,7 +125,7 @@ microsoftTeams.getContext((context) => { /* ... */ });
 Needs to be updated to:
 
 ```js
-import { app, Context } from "@microsoft/teams-js";
+import { app } from "@microsoft/teams-js";
 
 app.getContext().then((context) => {
     /*...*/
@@ -135,7 +135,7 @@ app.getContext().then((context) => {
 ...or the equivalent `async/await` pattern:
 
 ```js
-import { app, Context } from "@microsoft/teams-js";
+import { app } from "@microsoft/teams-js";
 
 async function example() {
   const context = await app.getContext();
