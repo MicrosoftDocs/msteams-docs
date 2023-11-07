@@ -48,6 +48,12 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Introduced systemDefault reserved activity type for send activity feed notifications
+        url: tabs/send-activity-feed-notification.md#reserved-activity-type-for-send-activity-feed-notifications
+      - text: Apps for Teams meetings are available in GCC-High
+        url: apps-in-teams-meetings/teams-apps-in-meetings.md
+      - text: Introduced Adaptive Card Previewer in public developer preview
+        url: concepts/build-and-test/adaptive-card-previewer.md
       - text: Introduced the extensions property in public developer preview app manifest schema
         url: resources/schema/manifest-schema-dev-preview.md#extensions
       - text: Receive meeting participant events
@@ -62,12 +68,6 @@ landingContent:
         url: concepts/deploy-and-publish/appsource/post-publish/overview.md#ratings-and-review-for-teams-apps
       - text: Bot configuration experience
         url:  bots/how-to/bot-configuration-experience.md      
-      - text: Receive read receipt event for your bot
-        url:  bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt
-      - text: Media elements in Adaptive Card
-        url: task-modules-and-cards/cards/media-elements-in-adaptive-cards.md
-      - text: Microsoft Teams Store search experience
-        url: concepts/deploy-and-publish/appsource/publish.md#teams-store-search-experience
 
     - linkListType: reference
       links:
