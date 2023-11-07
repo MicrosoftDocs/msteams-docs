@@ -49,7 +49,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Use callRecording API to fetch meeting recording from all meetings
-        url:  graph-api/meeting-recordings/overview-transcripts.md
+        url: graph-api/meeting-recordings/overview-transcripts.md
       - text: Introduced systemDefault reserved activity type for send activity feed notifications
         url: tabs/send-activity-feed-notification.md#reserved-activity-type-for-send-activity-feed-notifications
       - text: Apps for Teams meetings are available in GCC-High
