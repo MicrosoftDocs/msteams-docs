@@ -404,7 +404,7 @@
     - name: Overview
       href: bots/how-to/conversations/conversation-basics.md
       displayName: chat, Messages sent between your Microsoft Teams bot and one or more user
-    - name: Messages in bot conversations
+    - name: Receive direct and app mentioned messages in conversations
       href: bots/how-to/conversations/conversation-messages.md
       displayName: Picture messages, emojis, attribution for bot message, status code responses, app localization using bot and tab, form, soft delete
       items:

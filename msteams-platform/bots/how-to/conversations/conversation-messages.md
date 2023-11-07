@@ -1,5 +1,5 @@
 ---
-title: Messages in bot conversations
+title: Receive direct and app mentioned messages in conversations
 description: Learn how to send, receive, edit, undelete, and soft delete a message in bot conversations with suggested actions, notification, attachments, images, Adaptive Card, and status error code responses.
 ms.topic: overview
 ms.author: anclear
