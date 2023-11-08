@@ -8,6 +8,8 @@ ms.topic: reference
 
 # Error handling messages
 
+Style 1:
+
 ## Bots
 
 The following are the error mesages:
@@ -22,25 +24,7 @@ The following are the error mesages:
 
 For more information, see link (Wajeed will provide).
 
-### BadArgument
-
-Reason: Unknown attachment type.
-
-|Scenario|Resolution|
-|--------|----------|
-|The developer is trying to attach a PDF file to a Microsoft Teams bot and encounters an error.|The developer should check the sample code for file sharing on MS Teams provided by Microsoft. Additionally, the 'supportsFiles' option needs to be enabled in the manifest for the bot to support file attachments.|
-
-### Bad Request - Error in query syntax
-
-Reason: The error occurred while trying to get detailed user information using GetUserProfile() in Microsoft Power Virtual Agents Flow Template.
-
-|Scenario|Resolution|
-|--------|----------|
-|The developer was trying to get detailed user information using Microsoft Power Virtual Agents in Microsoft Teams. The error occurred when the developer tried to use GetUserProfile() function with the input as 'first(outputs('Search_for_users_(V2)')?['body/value'])?['UserPrincipalName']'.|Ensure that the necessary camera and storage permissions are granted on the Android device. Check the app's permission settings and make sure the camera and storage permissions are enabled. If the issue persists, consider debugging the code to identify any potential issues specific to Android. Instead of passing in display name, pass in UserID. This way, the call to SearchForUsers() isn't needed. Correcting the input to GetUserProfile() function should resolve the issue.|
-
 Style 2:
-
-# Error handling messages
 
 ## Bots
 
@@ -58,6 +42,8 @@ For more information, see link (Wajeed will provide).
 
 Style 3:
 
+## Bots
+
 <details>
 
 <summary><b>Bad Request - Error in query syntax</b></summary>
@@ -72,6 +58,10 @@ For more information, see link (Wajeed will provide).
 
 </details>
 </br>
+
+Style 4
+
+## Bots
 
 <details>
 <br>
