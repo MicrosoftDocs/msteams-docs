@@ -284,12 +284,12 @@ items:
         > [!NOTE]
         > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window opens when the build is complete. This process can take three to five minutes to complete.
 
-        Teams run your app in a web browser.
+        Teams runs your app in a web browser.
         
     1. Sign in with your Microsoft 365 account, if prompted.
     1. Select **Add** to add the app to your account.
     
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug-latest.png" alt-text="Screenshot shows the message to add the app." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug-latest.png" alt-text="Screenshot shows the message to add the app." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug-latest.png":::
 
         The toolkit displays a message to indicate that the app is added to Teams.
 
