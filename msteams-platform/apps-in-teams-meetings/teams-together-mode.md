@@ -64,9 +64,9 @@ You can build a scene using [MicrosoftScenes Studio](https://dev.teams.microsoft
 
 * Seat and image XYZ coordinates.
 
-* Collection of images that're camouflaged as one image.
+* Collection of images that are camouflaged as one image.
 
-The following image shows each seat represented as an avatar in a scenes:
+The following image shows each seat represented as an avatar in a scene:
 
 :::image type="content" source="~/assets/images/apps-in-meetings/scene-design-studio.png" alt-text="Screenshot shows seven avatars representing the participants in the scene studio.":::
 
@@ -76,7 +76,7 @@ To build a scene using the Scene studio in Teams Developer Portal, follow these 
 
 1. Select **Create a new scene**.
 
-1. Select **Blank Scene** template from the window .
+1. Select **Blank Scene** template from the window.
 
    You can select any template of your choice. **Blank Scene** allows you to create custom scenes.
 
@@ -113,7 +113,7 @@ To build a scene using the Scene studio in Teams Developer Portal, follow these 
     :::image type="content" source="~/assets/images/apps-in-meetings/assign-spot.png" alt-text="Screenshot shows the Assign spot check box for the participant 3 in the scene studio.":::
 
 1. Select **Save > View in Teams** to quickly test your scene in Teams.
-   A scene only app and is created and you can view the app and app package .json file in  **Apps** page in the Teams Developer Portal. You can test and try out scenes from the Scene studio. A screen opens in you Teams to add the scene app you've created.
+   A scene only app and is created and you can view the app and app package .json file in  **Apps** page in the Teams Developer Portal. You can test and try out scenes from the Scene studio. A screen opens in your Teams to add the scene app you've created.
 
 1. Select **Add**.
 
@@ -162,7 +162,7 @@ To share a scene, follow the steps:
 
     The user can open the link to install the scene and start using it. After preview, the scene is shipped as an app to Teams by following the steps for app submission. This step requires the app package. For the scene that is designed, the app package is different from the scene package. The app package created automatically is found in the **Apps** section in the Teams Developer Center. </br>
 
-To export a scene, Follow the steps :
+To export a scene, Follow the steps:
 
 1. In Scene studio, in the upper-right corner, select **Save**.
 1. Select **Export** from the dropdown list to retrieve the scene package.
