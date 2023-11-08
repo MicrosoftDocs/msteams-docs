@@ -9,6 +9,30 @@ ms.localizationpriority: high
 
 This section contains the frequently asked questions and the answers.
 
+## Adaptive Card Previewer
+
+<details>
+<summary>Why do we have to use a new extension in Visual Studio Code? Can’t this extension be integrated into Teams Toolkit for Visual Studio Code?</summary>
+
+Adaptive Card Previewer is a standalone extension because it uses a closed-source package to render the Adaptive Cards to ensure consistent rendering logic with the Teams platform. Teams Toolkit is an open-source project and doesn't include dependencies on packages that third-party developers can't access.
+<br>
+&nbsp;
+</details>
+<details>
+<summary>Does this extension support all Adaptive Card features in the Teams platform?</summary>
+
+No. There are several [limitations](concepts/build-and-test/adaptive-card-previewer.md#limitations) that Adaptive Card Previewer extension doesn't support.
+<br>
+&nbsp;
+</details>
+<details>
+<summary>Will Visual Studio be integrated into Adaptive Card Previewer?</summary>
+
+No, Adaptive Card Previewer is available in Visual Studio Code only.
+<br>
+&nbsp;
+</details>
+
 ## App validation
 
 <details>
@@ -138,7 +162,7 @@ Currently, Live Share doesn't support adding new `initialObjects` to the Fluid `
 
 To fix errors resulting from changes to `initialObjects` when testing locally in your browser, remove the hashed container ID from your URL and reload the page. If you're testing in a Teams meeting, start a new meeting and try again.
 
-If you plan to update your app with new `SharedObject` or `LiveObject` instances frequently, you should consider how you deploy new schema changes to production. While the actual risk is relatively low and short lasting, there may be active sessions at the time you roll out the change. Existing users in the session shouldn't be impacted, but users joining that session after you deployed a breaking change may have issues connecting to the session. To mitigate this, you may consider some of the following solutions:
+If you plan to update your app with new `SharedObject` or `LiveObject` instances frequently, you should consider how you deploy new schema changes to production. While the actual risk is relatively low and short lasting, there might be active sessions at the time you roll out the change. Existing users in the session shouldn't be impacted, but users joining that session after you deployed a breaking change might have issues connecting to the session. To mitigate this, you might consider some of the following solutions:
 
 * Deploy schema changes for your web application outside of normal business hours.
 * Use `dynamicObjectTypes` for any changes made to your schema, rather than changing `initialObjects`.
@@ -203,6 +227,7 @@ You can use the following Graph API [Get user mailbox settings](/graph/api/user-
 * GET /me/mailboxSettings/timeZone
 * GET /users/{id|userPrincipalName}/mailboxSettings/timeZone
 <br>
+
 &nbsp;
 
 </details>
@@ -251,6 +276,7 @@ The app users have multiple sign-in options from the Moodle login page.
 * To sign in exclusively using Microsoft 365 credentials, enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled, the app user can see the Microsoft sign in page.
 * To sign in manually to the Moodle portal, see [Moodle](https://moodle.org/login/index.php).
 <br>
+
 &nbsp;
 
 </details>
@@ -312,6 +338,7 @@ The reason for inconsistencies with users being able unable to sign using their 
 * Clean up the **Token Issue** and retry.
 * Check if the users have **Permissions** to access the Azure application.
 <br>
+
 &nbsp;
 
 </details>
@@ -480,6 +507,7 @@ You can create a Partner Center account one of the following ways:
 * If you're new to Partner Center and don't have a Microsoft Network Account, [create an account using the Partner Center enrollment page](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page).
 * If you're already enrolled in the Microsoft Partner Network, [create an account directly from Partner Center using existing Microsoft Partner Center enrollments](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
 <br>
+
 &nbsp;
 
 </details>
@@ -527,7 +555,7 @@ See [manage account settings and profile info](/windows/uwp/publish/manage-accou
 &nbsp;
 </details>
 <details>
-<summary>Why do I see a, "This account is not publish eligible," message when I try to submit my app?</summary>
+<summary>Why do I see a, "This account isn't publish eligible," message when I try to submit my app?</summary>
 
 You received this error message because your [account verification status](/partner-center/verification-responses) is pending. Check your status in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select the **Settings** gear icon and choose **Developer settings > Account > Account settings**.
 
@@ -557,6 +585,7 @@ Remember the following points about the email verification process:
 * You can request to resend the email by visiting your partner profile page and selecting the **Resend verification email** link.
 * To ensure you receive the email, safe-list **microsoft.com** as a secure domain and check your junk email folders.
 <br>
+
 &nbsp;
 
 </details>
@@ -568,9 +597,10 @@ Try the following steps:
 * Check your junk or spam folder.
 * Clear the browser cache, go to your Partner Center account dashboard, and select **Resend verification email**.
 * Try accessing the **Resend verification email** link from a different browser.
-* Work with your IT department to ensure that the verification emails are not blocked by your email server.
+* Work with your IT department to ensure that the verification emails aren't blocked by your email server.
 * Adjust your server's spam filter to allow or safe-list all emails from **<maccount@microsoft.com>**.
 <br>
+
 &nbsp;
 
 </details>
@@ -606,6 +636,7 @@ Send an email to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com<
   * Your seller ID.
   * A screenshot of the issue, if possible.
 <br>
+
 &nbsp;
 
 </details>
@@ -716,6 +747,7 @@ If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get
 2. If you have already provisioned current environment, you need to create a new environment and perform provision because ARM doesn't support moving resources.
 3. If you didn't provision current environment, you can trigger provision directly.
 <br>
+
 &nbsp;
 
 </details>
