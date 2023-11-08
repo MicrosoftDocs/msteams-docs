@@ -49,13 +49,13 @@ Perform the following steps to upload app package:
 
 1. In the Teams client, select **Apps** > **Manage your apps** > **Upload an app**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/publish1_1.png" alt-text="Screenshot shows the publish an app option.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/publish-manage-teams-upload-app.png" alt-text="Screenshot shows the publish an app option.":::
 
    The **Upload an app** window appears.
 
-2. Select **Upload a custom app**.
+2. Select **Upload a customised app**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/upload_1.png" alt-text="Screenshot shows the upload an app option.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/upload-custom-app.png" alt-text="Screenshot shows the upload an app option.":::
 
    Now, the app is uploaded into the Teams client and you can add and view it.
 
