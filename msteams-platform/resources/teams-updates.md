@@ -42,8 +42,6 @@ To ensure a smooth transition, a phased rollout of the new platform is planned a
 
 The following Teams features aren't currently supported (will be available soon) in the new Teams client:
 
-* [External authentication](../tabs/how-to/authentication/auth-oauth-provider.md) isn't supported in the new Teams client. We recommend you use the [authentication using third-party OAuth provider](../tabs/how-to/authentication/auth-flow-tab.md) or use the app in the Classic Teams client.
-
 * [Message Extensions](../get-started/build-message-extension.md) can't be invoked from the Teams search bar in the new Teams client.
 
 * Personal static tabs aren't supported in one-on-one conversations with bots in the new Teams client. However, users can open their app from the app bar in Teams and view the personal static tabs.
@@ -55,6 +53,8 @@ The following Teams features aren't currently supported (will be available soon)
 * [Pinning and unpinning apps](https://support.microsoft.com/office/pin-an-app-for-easy-access-in-microsoft-teams-3045fd44-6604-4ba7-8ecc-1c0d525e89ec) from the left side of Teams isn't supported in the new Teams client.
 
 * [DevTools](/microsoft-edge/devtools-guide-chromium/overview) isn't supported in the new Teams client.
+  
+* [App caching](~/tabs/how-to/app-caching.md) isn't supported in the new Teams client.
 
 For more information on known issues and gaps in the new Teams client, see [new Microsoft Teams](/microsoftteams/new-teams-desktop-admin?tabs=teams-admin-center#known-issues).
 
