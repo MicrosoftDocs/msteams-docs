@@ -24,15 +24,15 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
    Your app is hosted using Azure resources.
 
-    A dialog warns you that costs may be incurred when running resources in Azure.
+    A dialog warns you that costs might be incurred when running resources in Azure.
 
 1. Select **Provision**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot shows a dialog box that costs may be incurred when running resources in Azure.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot shows that you might incur charges for using Azure resources.":::
 
    The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot shows a notice which displays 'hellomsg' successfully provisioned in the cloud.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot shows a notice which displays hellomsg successfully provisioned in the cloud.":::
 
     If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
 
@@ -42,7 +42,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
 1. Select **Deploy** from the **LIFECYCLE** panel after provisioning is complete.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot shows deploy to cloud.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot shows the app deploys to the cloud.":::
 
    As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
 
