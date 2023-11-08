@@ -42,6 +42,6 @@ The following are the limitations to Test Tool:
 
 1. The Test Tool doesn't support all other types of Bot application UX [Cards](https://learn.microsoft.com/microsoftteams/platform/task-modules-and-cards/what-are-cards) other than Adaptive Cards.
 
-1. The Test Tool doesn't process the app manifest, which means features that are only enabled through the manifest can't be accessible.
+1. The Test Tool doesn't process the app manifest, which means features that are only enabled through the manifest will not be accessible.
  
 1. The Test Tool doesn't support Single sign-on (SSO), mobile view, and meetings.
