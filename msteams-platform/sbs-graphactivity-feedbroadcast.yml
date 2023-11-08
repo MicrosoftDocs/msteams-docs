@@ -27,9 +27,9 @@ items:
 
     This step-by-step guide helps you to broadcast messages and notify all the members of an organization using activity feed notification. You'll see the following output:
 
-      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/msg-broadcast-output-ready.png" alt-text="Output of feed broad cast" border="true":::
+      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/msg-broadcast-output-ready.png" alt-text="Screenshot shows the output of feed broadcast." border="true":::
 
-      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/notification-recipient1.png" alt-text="Final output" border="true"::: 
+      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/notification-recipient1.png" alt-text="Screenshot shows the final output." border="true"::: 
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -71,7 +71,7 @@ items:
          1. Select **Upload an app**.
          1. Look for the option to **Upload a custom app**.
 
-            :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-app.png" alt-text=" upload an app in Teams.":::
+            :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-app.png" alt-text="Screenshot shows how to upload an app in Teams.":::
 
         > [!NOTE]
         > Contact Teams administrator, if you can't upload a custom app.
@@ -85,7 +85,7 @@ items:
     1. Select **Set-up E5 subscription** from the welcome screen.
     1. Set up administrator account. After you finish, the following screen displays.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft" border="true":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 developer program subscription." border="true":::
 
     1. Sign in to Teams using the new administrator account. Now you can select **Upload a custom app**.
 
@@ -97,7 +97,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clone-repository-sbs-graph1.png" alt-text="Clone repository" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clone-repository-sbs-graph1.png" alt-text="Screenshot show how to clone a GitHub repository." border="true":::
 
     1. Select **Clone**. 
 
@@ -122,7 +122,7 @@ items:
 
     1. Select **New registration**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/new-app-registration2.png" alt-text="New registration" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/new-app-registration.png" alt-text="New registration" border="true":::
 
        Register an application page appears.
 
@@ -455,24 +455,24 @@ items:
 
        The Message broadcasted successfully appears.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/msg-broadcast-output-ready.png" alt-text="Final output" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/msg-broadcast-output-ready.png" alt-text="Screenshot shows a successfully broadcasted message." border="true":::
 
     1. Activity feed notification displays in the **Activity** tab of the recipient with the same Tenant ID.  
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/activity-feed.png" alt-text="Final output" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/activity-feed.png" alt-text="Screenshot shows the activity feed notification." border="true":::
 
     1. The message details appear on selecting the message.  
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/message-members.png" alt-text="Final output" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/message-members.png" alt-text="Screenshot shows the details of the final output message." border="true":::
      
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/completion-broadcast-output-ready.png" alt-text="Final output" border="true"::: 
+    :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/completion-broadcast-output-ready.png" alt-text="Screenshot shows the final output of the activity broadcast." border="true"::: 
 
-    :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/completion-notification-recipient.png" alt-text="Final output" border="true"::: 
+    :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/completion-notification-recipient.png" alt-text="Screenshot shows the final output of the activity broadcast with feed." border="true"::: 
 
 - content: |
     You've completed the tutorial to get started with the **activity feed broadcast** app!

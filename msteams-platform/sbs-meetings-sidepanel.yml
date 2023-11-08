@@ -208,7 +208,7 @@ items:
 
     1. In the left navigation pane, select **App registrations**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-app-registration -screen.png" alt-text="New registration" border="true":::    
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-app-registration-screen.png" alt-text="Screenshot shows app registrations under the Microsoft Entra ID overview." border="true":::    
 
     1. Select your bot.
 
@@ -297,7 +297,7 @@ items:
 
     1. Select **Add a permission** > **Microsoft Graph**
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/addpermission_1.png" alt-text="Screenshot of Configured permissions with Add a permission highlighted in red."::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/add-permission-microsoft-graph.png" alt-text="Screenshot of Configured permissions with Add a permission highlighted in red."::: 
 
     1. Select **Delegated permissions**.
 
@@ -319,7 +319,7 @@ items:
                
          1. Select **Add a platform** > **Web**.
 
-            :::image type="content" source="~/assets/images/meetings-side-panel/webauth_1.png" alt-text="Screenshot of Authentication page with Add a platform option followed by Web option highlighted in red.":::
+            :::image type="content" source="~/assets/images/meetings-side-panel/web-auth-add-a-platform.png" alt-text="Screenshot of Authentication page with Add a platform option followed by Web option highlighted in red.":::
 
          1. Enter the redirect URI for your app by appending `auth-end` to domain name:</br> 
            `https://your ngrok/auth-end`. </br>
