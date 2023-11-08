@@ -10,5 +10,5 @@ ms.topic: reference
 
 > [!div class="op_single_selector"]
 >
-> - [Bots](includes/bots.md)
-> - [Cards](includes/cards.md)
+> - [Bots](includes/bots/)
+> - [Cards](includes/cards/)
