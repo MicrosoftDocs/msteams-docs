@@ -984,7 +984,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 1. Select **OK**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-success.PNG" alt-text="Screenshot of Teams Toolkit with OK option highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-success.PNG" alt-text="Screenshot of Teams Toolkit with **OK** option highlighted in red.":::
 
     Your tab app is successfully deployed to the cloud!
 
