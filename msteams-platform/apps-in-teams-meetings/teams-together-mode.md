@@ -33,7 +33,7 @@ Ensure that the administrator has granted permission to [upload a custom app](..
 
 ## Custom Together Mode scene
 
-custom Together Mode scene is an artifact and you can create a scene using Microsoft Scene studio. Participants have seats with video streams in a conceived scene setting, and the videos are rendered in those seats. A scene only app is still an app in Teams and we recommended to use scene only apps for better experience. Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
+Custom Together Mode scene is an artifact and you can create a scene using Microsoft Scene studio. Participants have seats with video streams in a conceived scene setting, and the videos are rendered in those seats. A scene only app is still an app in Teams and we recommended to use scene only apps for better experience. Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
 
 :::row:::
       :::image type="content" source="~/assets/images/apps-in-meetings/build-scene.png" alt-text="Build a scene using the Scene studio." link="~/apps-in-teams-meetings/teams-together-mode.md#build-a-scene-using-the-scene-studio" border="false":::
@@ -44,7 +44,7 @@ custom Together Mode scene is an artifact and you can create a scene using Micro
 > [!NOTE]
 > Users can't initiate Custom Together Mode on a mobile. However, if they join a meeting through mobile and Together Mode is enabled on desktop, their mobile video will appear in Together Mode on desktop.
 
-## Best practices for creating a scene
+## Best practices to create a scene
 
 To create a best scene, ensure that you follow the following practices:
 
@@ -121,9 +121,7 @@ To build a scene using the Scene studio in Teams Developer Portal, follow these 
 
 ## Test custom Together Mode scenes in Teams
 
-### Prerequisites
-
-You must create a new Teams meeting to test and launch custom Together Mode scenes in Teams.
+Before you start, you must create a new Teams meeting to test and launch custom Together Mode scenes in Teams.
 
 > [!NOTE]
 >
@@ -154,7 +152,7 @@ Join the Teams meeting and follow the steps to test the Custom Together Mode:
 
 You can view the scene you've created in the **Your scenes** section of **Scene studio**. Additionally, you can share and export the scene.
 
-Follow these steps to share a scene:
+To share a scene, follow the steps:
 
 1. From the **Save** drop-down menu, select **Share**.
 
@@ -164,15 +162,15 @@ Follow these steps to share a scene:
 
     The user can open the link to install the scene and start using it. After preview, the scene is shipped as an app to Teams by following the steps for app submission. This step requires the app package. For the scene that is designed, the app package is different from the scene package. The app package created automatically is found in the **Apps** section in the Teams Developer Center. </br>
 
-Follow the steps to export a scene:
+To export a scene, Follow the steps :
 
 1. In Scene studio, in the upper-right corner, select **Save**.
 1. Select **Export** from the dropdown list to retrieve the scene package.
    A .zip file, which is the scene package, is downloaded. The Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes. </br>
 
-:::image type="content" source="~/assets/images/apps-in-meetings/build-a-scene.png" alt-text="Screenshot shows the Export option to export a scene.":::
+   :::image type="content" source="~/assets/images/apps-in-meetings/build-a-scene.png" alt-text="Screenshot shows the Export option to export a scene.":::
 
-To delete a scene you created, select **Delete scene** on the top bar.
+To delete a scene you created, select **Delete scene**.
 
 ## Example
 
@@ -249,7 +247,7 @@ A scene consists of bitmap images, sprites, and rectangles to put participant vi
 |---|---|
 | **Scene:** | Each scene has a unique ID and name. A scene.json file along with the images indicate the exact position of the seats. The scene.json file also contains information on all the assets used for the scene. |
 | **Asset:** | Each asset contains a filename, width, height, and position on the X and Y-axis. |
-| **Participants:** | ach participant has its own video feed, which is segmented to render only the foreground.  Custom Together Mode scenes support **ZoomIn** in on the current meeting participants. |
+| **Participants:** | Each participant has its own video feed, which is segmented to render only the foreground.  Custom Together Mode scenes support **ZoomIn** in on the current meeting participants. |
 | **Seat:** | Each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is automatically generated and is altered according to preference. The seating order number corresponds to the order of people joining the call. |
 
 Ensure to go through the following list while creating a scene:
@@ -265,9 +263,9 @@ Ensure to go through the following list while creating a scene:
 
 You can share the scene package, which is a .zip file retrieved from the Scene studio to other creators to further enhance the scene.
 
-1. Select **Import a scene**
+1. Select **Import a scene**.
 
-:::image type="content" source="~/assets/images/apps-in-meetings/scene-zip-file.png" alt-text="Screenshot shows the Import a scene option highlighted in red in the scene studio.":::
+   :::image type="content" source="~/assets/images/apps-in-meetings/scene-zip-file.png" alt-text="Screenshot shows the Import a scene option highlighted in red in the scene studio.":::
 
 1. Select the scene package file you wish to import.
    This functionality helps you to unwrap a scene package and enhance the scene.
