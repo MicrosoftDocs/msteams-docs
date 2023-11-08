@@ -151,7 +151,7 @@ To preview your tab app in Teams:
 
 1. Select your app package zip file, and then select **Add**.
 
-    The tab app is uploaded and the dialog appears to inform you of the additional permissions that may be required.
+    The tab app is uploaded and the dialog appears to inform you of the additional permissions that might be required.
 
 1. Select **Continue**.
 
