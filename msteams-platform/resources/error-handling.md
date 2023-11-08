@@ -56,11 +56,11 @@ ms.topic: reference
 </details>
 </br>
 
-## Adaptive card
+## Adaptive Card
 
 <details>
 <br>
-<summary><b>Unable to render dynamic data inside the AdaptiveCard template for user mentions in Teams.</b></summary>
+<summary><b>Unable to render dynamic data inside the Adaptive Card template for user mentions in Teams.</b></summary>
 
 * **Reason**: The file size limit for Adobe eSign feature is 10 MB.
 
@@ -125,12 +125,13 @@ ms.topic: reference
 <br>
 <summary><b>iOS Teams app not showing card if the card contains a hyperlink with an ampersand</b></summary>
 
-* **Reason**: The developer is trying to display a card in the iOS Teams app that contains a hyperlink with an ampersand. Instead of displaying the card, the app only shows the message 'Sent a card'
+:::image type="icon" source="../../assets/icons/red-dot.png" border="false"::: **Reason**: The developer is trying to display a card in the iOS Teams app that contains a hyperlink with an ampersand. Instead of displaying the card, the app only shows the message 'Sent a card'
 
-* **Scenario**: The developer is trying to attach a PDF file to a Microsoft Teams bot and encounters an error.
-* **Resolution**: Ensure that the iOS and Teams versions are up to date. If the issue persists, share the card JSON for further investigation. It might be an issue with the way the hyperlink is parsed when it contains an ampersand. As a workaround, try encoding the ampersand in the URL.
+:::image type="icon" source="../../assets/icons/yellow-dot.png" border="false"::: **Scenario**: The developer is trying to attach a PDF file to a Microsoft Teams bot and encounters an error.</br>
 
-* **Link**
+:::image type="icon" source="../../assets/icons/blue-dot.png" border="false"::: **Resolution**: Ensure that the iOS and Teams versions are up to date. If the issue persists, share the card JSON for further investigation. It might be an issue with the way the hyperlink is parsed when it contains an ampersand. As a workaround, try encoding the ampersand in the URL.
+
+:::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: **Link**
 
 </details>
 </br>
