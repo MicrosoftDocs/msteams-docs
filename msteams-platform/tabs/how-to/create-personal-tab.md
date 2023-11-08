@@ -1003,6 +1003,7 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 ## Extend static tabs to group chat and meetings
 
 > [!NOTE]
+>
 > * Extend your static tabs to group chat and meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * To extend your static tabs to group chat and meetings, use the app manifest v1.16 or later.
 
