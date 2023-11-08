@@ -69,7 +69,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 
 <br>
 <details>
-<summary>Here's an example of the app manifest after it's updated</summary>
+<summary>Here's an example of the updated app manifest</summary>
 
 ```json
 {
