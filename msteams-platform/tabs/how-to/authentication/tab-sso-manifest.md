@@ -8,7 +8,7 @@ ms.date: 11/21/2022
 ---
 # Update app manifest for SSO and preview app
 
-Before you update the app manifest (previously called Teams app manifest), ensure that you've configured code to enable SSO in your tab app.
+Before updating the app manifest (previously called Teams app manifest), ensure your tab app's code is configured to enable Single Sign-On (SSO).
 
 > [!div class="nextstepaction"]
 > [Configure code](tab-sso-code.md)
@@ -131,7 +131,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 
 ## Upload an app and preview in Teams
 
-You've configured the tab app to enable SSO in Azure AD, in app code, and in the app manifest file. You can now upload your tab app in Teams, and preview it in Teams environment.
+After configuring the tab app for Single Sign-On (SSO) in Azure AD within the app code, and in the app manifest file, you're now ready to upload your tab app in Teams. You can then preview it within the Teams environment.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="SSO app":::
 
