@@ -9,5 +9,5 @@ ms.topic: reference
 # Error handling messages
 
 > [!div class="op_single_selector"]
-> - [bots](~/resources/includes/bots.md)
-> - [cards](~/resources/includes/cards.md)
+> - [bots](~/includes/bots.md)
+> - [cards](~/includes/cards.md)
