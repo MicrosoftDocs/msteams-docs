@@ -10,14 +10,16 @@ ms.date: 08/29/2023
 
 # Preapproval of RSC permissions
 
-Preapproval of resource-specific consent (RSC) permissions allows admins to approve RSC on an app-by-app basis in Microsoft Teams. Previously, admins had the ability to toggle RSC on or off in their tenant. Admins had to approve or block all RSC enabled apps with no granularity to declare which apps they wanted to allow. Through preapproved RSC, admins can choose which RSC-enabled apps they allow their tenant users to install in Teams without having to allow or block all apps that utilize RSC permissions.
+Preapproval of resource-specific consent (RSC) permissions allows admins to approve RSC on an app-by-app basis in Microsoft Teams. Previously, admins had the ability to toggle RSC on or off in their tenant. Admins had to approve or block all RSC enabled apps with no granularity to declare which apps they wanted to allow.
 
-   > [!NOTE]
-   > Preapproval of RSC permissions is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+Through preapproved RSC, admins can choose which RSC-enabled apps they allow their tenant users to install in Teams without having to allow or block all apps that utilize RSC permissions.
 
-## Setting up PowerShell to manage preapprovals
+> [!NOTE]
+> Preapproval of RSC permissions is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-Preapproval of RSC permissions is managed through Microsoft Teams PowerShell. For more information, see [Manage Teams with Powershell](/manage-teams-with-microsoft-teams-powershell).
+## PowerShell setup to manage preapproval of RSC permissions
+
+Preapproval of RSC permissions is managed through Microsoft Teams PowerShell. For more information, see [Manage Teams with Microsoft Teams Powershell](/microsoftteams/teams-powershell-managing-teams)
 
 Before you can create and manage preapprovals, connect PowerShell to your tenant using Microsoft Graph `Connect-MgGraph` cmdlet. To create, manage, and delete preapproval policies, use the following permissions to connect:
 
@@ -25,7 +27,7 @@ Before you can create and manage preapprovals, connect PowerShell to your tenant
 * `Policy.ReadWrite.Authorization`
 * `AppCatalog.Read.All`
 
-### Example
+The following snippet is an example of the Powershell setup to manage preapproval of RSC permissions:
 
 ```powershell
 connect-MgGraph -Scopes @('TeamworkAppSettings.ReadWrite.All', 'Policy.ReadWrite.Authorization', 'AppCatalog.Read.All','InformationProtectionPolicy.Read', 'ServicePrincipalEndpoint.ReadWrite.All', 'Policy.ReadWrite.PermissionGrant', 'Policy.ReadWrite.ApplicationConfiguration', 'Application.ReadWrite.All')
@@ -103,7 +105,7 @@ New-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -R
 
 ### Create a preapproval with a sensitivity label
 
-The same process can be used to create a preapproval that applies to data within certain sensitivity labels in Microsoft Teams. You can use the `TeamLevelSensitivityLabelCondition` and `SpecificSensitivityLabel` arguments to define specific sensitivity labels to apply the RSC preapproval policy to. The following are examples of cmdlets using these arguments:
+The same process can be used to create a preapproval that applies to data within certain sensitivity labels in Teams. You can use the `TeamLevelSensitivityLabelCondition` and `SpecificSensitivityLabel` arguments to define specific sensitivity labels to apply the RSC preapproval policy to. The following are examples of cmdlets using these arguments:
 
 **Preapprove an app with Team RSC permissions and a defined sensitivity label**
 
