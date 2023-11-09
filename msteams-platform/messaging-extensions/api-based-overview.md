@@ -382,63 +382,57 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+  "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
   "manifestVersion": "devPreview",
-  "version": "1.0.4",
-  "id": "228a4704-xxxx-xxxx-xxxx-3b194021dd86",
+  "version": "1.0.0",
+  "id": "04805b4b-xxxx-xxxx-xxxx-4dbc1cac8f89",
   "packageName": "com.microsoft.teams.extension",
-  "name": {
-    "short": "sampletest2809-dev",
-    "full": "Full name for sampletest2809"
-  },
   "developer": {
     "name": "Teams App, Inc.",
     "websiteUrl": "https://www.example.com",
     "privacyUrl": "https://www.example.com/termofuse",
     "termsOfUseUrl": "https://www.example.com/privacy"
   },
-  "description": {
-    "short": "Open AI Klarna product Api",
-    "full": "Full description for sampletest2809"
-  },
   "icons": {
     "color": "color.png",
     "outline": "outline.png"
+  },
+  "name": {
+    "short": "AI tools",
+    "full": "AI tools"
+  },
+  "description": {
+    "short": "AI tools",
+    "full": "AI tools"
   },
   "accentColor": "#FFFFFF",
   "composeExtensions": [
     {
       "composeExtensionType": "apiBased",
-      "apiSpecificationFile": "openapi.yml",
+      "apiSpecificationFile": "aitools-openapi.yml",
       "commands": [
         {
+          "id": "searchTools",
+          "type": "query",
           "context": [
-            "commandBox",
-            "compose"
+            "compose",
+            "commandBox"
           ],
-          "description": "Search for Klarna products",
-          "id": "productsUsingGET",
-          "apiResponseRenderingTemplateFile": "results.json",
-          "initialRun": false,
+          "title": "search for AI tools",
+          "description": "search for AI tools",
           "parameters": [
             {
-              "name": "countryCode",
-              "title": "Country Code",
-              "description": "ISO 3166 country code with 2 characters based on the user location. Currently, only US, GB, DE, SE and DK are supported."
+              "name": "search",
+              "title": "search query",
+              "description": "e.g. search='tool to create music'"
             }
           ],
-          "type": "query",
-          "title": "API for fetching Klarna."
+          "apiResponseRenderingTemplateFile": "response-template.json"
         }
       ]
     }
   ],
-  "validDomains": [
-    "klarna.com/us/shopping"
-  ],
-  "webApplicationInfo": {
-    "id": "228a4704-1cbb-4e59-b026-3b194021dd86"
-  }
+  "validDomains": []
 }
 ```
 
