@@ -80,7 +80,7 @@ The test tool has predefined activity types in the `Mock an Activity` menu dropd
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-a-user-request.png" alt-text="d":::
 
-Bot sends a response.
+   Bot sends a response.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-a-user-response.png" alt-text="f":::
 
@@ -94,7 +94,7 @@ Bot sends a response.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/custom-activity-request.png" alt-text="d":::
 
-Bot sends a `onReactionsAdded` handler response invoked with the activity defined.
+   Bot sends a `onReactionsAdded` handler response invoked with the activity defined.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/custom-activity-response.png" alt-text="s":::
 
