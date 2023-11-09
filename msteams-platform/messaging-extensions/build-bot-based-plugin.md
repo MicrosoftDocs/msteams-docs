@@ -11,13 +11,17 @@ ms.date: 09/07/2023
 # Extend bot-based message extension as plugin for Copilot
 
 > [!NOTE]
-> Only bot-based search message extension can be extended as a plugin in Copilot.
+>
+> * Bot-based search message extension plugin is available in [**public developer preview**](../resources/dev-preview/developer-preview-intro.md)
+> * Only bot-based search message extension can be extended as a plugin in Microsoft 365 Chat.
 
-Microsoft 365 Copilot, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to transform your words into a potent productivity tool. Although Copilot can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending your message extension as a plugin in Copilot, you can enable users to interact with third-party tools and services, thereby unlocking Microsoft 365 Copilot's full potential. You can achieve this extension by developing a plugin or connecting to an external data source.
+Microsoft 365 Chat, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to transform your words into a potent productivity tool. Although Microsoft 365 Chat can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending your message extension as a plugin in Microsoft 365 Chat, you can enable users to interact with third-party tools and services, thereby empowering them to achieve more with Microsoft 365 Chat. You can achieve this extension by developing a plugin or connecting to an external data source.
+
+:::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams and Microsoft 365 Chat.":::
 
 ## What is a plugin?
 
-A plugin allows Copilot to interact directly with third-party data, apps, and services, enhancing its capabilities and broadening its range of capabilities. Plugins allow Copilot to:
+A plugin allows Microsoft 365 Chat to interact directly with third-party data, apps, and services, enhancing its capabilities and broadening its range of capabilities. Plugins allow Microsoft 365 Chat to:
 
 * Fetch real-time information, such as the latest news coverage on a product launch.
 * Retrieve knowledge-based information, such as a team’s design files in Figma.
@@ -29,7 +33,7 @@ You can create a bot-based message extension using Teams Toolkit for Visual Stud
 
 ## Prerequisites
 
-Before you get started, ensure that you meet the following pre-requisites:
+Before you get started, ensure that you're familiar with the following standards and guidelines for building message extension Copilot plugins:
 
 * Standards for compliance, performance, security, and user experience outlined in [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-microsoft-365-copilot-plugin).
 
@@ -39,14 +43,16 @@ Before you get started, ensure that you meet the following pre-requisites:
 
 # [Visual Studio Code](#tab/visual-studio-code)
 
+To create a bot-based search message extension plugin using Visual Studio Code, follow these steps:
+
 1. Open **Visual Studio Code**.
-1. From the left pane, Select **Teams Toolkit**.
+1. From the left pane, select **Teams Toolkit**.
 1. Select **Create a New App**.
 1. Select **Message Extension**.
 1. Select **Custom Search Results**.
 1. Select **Start with a Bot**.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-start-with-bot.png" alt-text="Screenshot shows the Start with a Bot option tp create a bot-based message extension in Visual Studio Code..":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-start-with-bot.png" alt-text="Screenshot shows the Start with a Bot option to create a bot-based message extension in Visual Studio Code..":::
 
 1. Select a programming language.
 1. Select Default folder.
@@ -54,8 +60,8 @@ Before you get started, ensure that you meet the following pre-requisites:
 
 To run your message extension in Teams:
 
-1. From the left pane, Select **Teams Toolkit**.
-1. Under **ACCOUNTS**:
+1. From the left pane, select **Teams Toolkit**.
+1. Under **ACCOUNTS**, perform the following steps:
    1. Select **Sign in to Microsoft 365** and enter your Microsoft 365 credentials.
    1. Select **Sign in to Azure** and enter your Azure credentials.
 
@@ -65,29 +71,33 @@ To run your message extension in Teams:
 1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)**. Teams Toolkit launches your app in Teams using a web browser.
 1. Select **Add**. The app is installed on Teams.
 1. Go to a chat and select **Actions and apps**.
-1. From the message extension fly-out menu, @mention your message extension from the search box area.
+1. From the message extension fly-out menu, enter the name of your message extension in the search box.
 1. Select your message extension and enter your search query.
 
-To trigger the message extension through Copilot, follow these steps:
+**Trigger message extension in Microsoft 365 Chat**
+
+To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
 1. Select **Apps**.
-1. Search for Copilot.
+1. Search for Microsoft 365 Chat.
 1. Select **Plugins**.
 1. From the list of plugins, turn on the toggle for your app.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-1. From the compose message area, send a message to Copilot to find an NuGet package information. For example: Find the NuGet package info on Microsoft.CSharp.
+1. From the compose message space, send a message to Microsoft 365 Chat to find a NuGet package information. For example, find the NuGet package info on Microsoft.CSharp.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from copilot.":::
 
 > [!NOTE]
-> This prompt may not always make Copilot include a response from your message extension. If it happens, try some other prompts or leave feedback to us by thumbing down the Copilot response and leave a message tagged with [MessageExtension].
+> This prompt may not always make Microsoft 365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Chat response and leave a message tagged with [MessageExtension].
 
 # [Visual Studio](#tab/visual-studio)
 
-1. Open Visual Studio.
-1. Go to **File** > **New** > **Project...** or **New Project**.
+To create a bot-based search message extension plugin using Visual Studio, follow these steps:
+
+1. Open **Visual Studio**.
+1. Go to **File** > **New** > **Project...** or **Create a new Project**.
 
 1. Search for **Teams** and select **Microsoft Teams App**.
 
@@ -97,50 +107,56 @@ To trigger the message extension through Copilot, follow these steps:
 
 1. Select **Create**. The project is scaffolded.
 
-1. In the debug dropdown, select **Dev Tunnels** > **Create a Tunnel**.
+1. In the debug dropdown menu, select **Dev Tunnels** > **Create a Tunnel**.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VS-dev-tunnel.png" alt-text="Screenshot shows the create a tunnel option in Visual Studio.":::
 
    1. Select the Account to use to create the tunnel. Azure, Microsoft Account (MSA), and GitHub are the account types that are supported.
-   1. Name: Enter a Name for the tunnel.
+   1. Name: Enter a name for the tunnel.
    1. Tunnel Type: Select Persistent or Temporary.
    1. Access: Select Public.
    1. Select **OK**. Visual Studio displays a confirmation message that a tunnel is created.
 
-    The tunnel you've created is listed under **Dev Tunnels(MyPublicDevTunnel)**.
+    The tunnel you've created is listed under **Dev Tunnels > (name of the tunnel)**.
 
-1. Go to **Solution Explorer**.
-1. Select your project and right-click.
-1. From the menu, select **Teams Toolkit** > **Prepare Teams App Dependencies**.
+1. Go to **Solution Explorer** and select your project.
+1. Right-click the menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VS-teams-app-dependencies.png" alt-text="Screenshot shows the Prepare Teams app dependencies option under Teams Toolkit in Visual Studio app project.":::
 
-   1. If prompted, sign in with a Microsoft 365 account.
-1. In the debug dropdown, select **Microsoft Teams (browser)**. Visual Studio launches Teams web client.
-1. Select **Add**.
-1. You can search NuGet package from compose message area, or from the command box.
+   If prompted, sign in with a Microsoft 365 account.
 
-To trigger the message extension through Copilot, follow these steps:
+1. In the debug dropdown menu, select **Microsoft Teams (browser)**. Visual Studio launches Teams web client.
+1. Select **Add**. The message extension is added to Teams.
+1. Go to a chat and select **Actions and apps**.
+1. From the message extension fly-out menu, enter the name of your message extension in the search box.
+1. Select your message extension and enter your search query.
+
+**Trigger message extension in Microsoft 365 Chat**
+
+To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
 1. In the debug dropdown, select **Copilot (browser)**. Visual Studio launches Teams web client.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-debug-Copilot.png" alt-text="Screenshot shows the Copilot (Browser)  debug option in Visual Studio.":::
 
 1. Go to **Teams web client** > **Apps**.
-1. Search for Copilot and open the Copilot app.
+1. Search for Microsoft 365 Chat and open the Microsoft 365 Chat app.
 1. Select **Plugins**.
 1. From the list of plugins, turn on the toggle for your app.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-1. From the compose message area, send a message to Copilot to find an NuGet package information. For example: Find the NuGet package info on Microsoft.CSharp.
+1. From the compose message area, send a message to Microsoft 365 Chat to find a NuGet package information. For example, find the NuGet package info on Microsoft.CSharp.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from copilot.":::
 
 > [!NOTE]
-> This prompt may not always make Copilot include a response from your message extension. If it happens, try some other prompts or leave feedback to us by thumbing down the Copilot response and leave a message tagged with [MessageExtension].
+> This prompt may not always make Copilot include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Chat response and leave a message tagged with [MessageExtension].
 
 # [Toolkit CLI](#tab/toolkit-cli)
+
+To create a bot-based search message extension plugin using Teams Toolkit CLI, follow these steps:
 
 1. Go to **Command Prompt**.
 
@@ -150,22 +166,22 @@ To trigger the message extension through Copilot, follow these steps:
    npm install -g @microsoft/teamsfx-cli@2.0.3-beta.2023101103.0
    ```
 
-1. Type `teamsfx new` in the terminal
+1. Type `teamsfx new` in the terminal.
 
-1. Select **Message Extension**.
+1. Select **Message Extension**. Use the arrow keys to switch between options.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-CLI-new-project-me.png" alt-text="Screenshot shows Teams capabilities as options in the CLI interface.":::
 
 1. Select **Custom Search Results**.
 1. Select **Start with a Bot**.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-new-project.png" alt-text="Screenshot shows the message extension, custom search results and start with a bot options selected in the CLI window.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-new-project.png" alt-text="Screenshot shows the message extension, custom search results and start with a bot option selected in the CLI window.":::
 
 1. Enter the location for your project and select **Enter**.
 
 1. Enter the name of your application and select **Enter**.
 
-   Teams Toolkit will scaffold and create a project in the specified location.
+   Teams Toolkit scaffolds and creates a project in the specified location.
 
 1. Go to the folder path where your project is created and enter the following command to provision your app in Azure:
 
@@ -173,7 +189,7 @@ To trigger the message extension through Copilot, follow these steps:
 
    Teams Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
 
-1. Sign in to your Microsoft account. Teams Toolkit CLI will execute validation and provisions your app on Azure.
+1. Sign in to your Microsoft account. Teams Toolkit CLI executes validation and provisions your app on Azure.
 
    :::image type="content" source="../assets/images/Copilot/api-based-CLI-provision-me.png" alt-text="Screenshot shows the sign in request and the provision stages in the command prompt window.":::
 
@@ -182,11 +198,11 @@ To trigger the message extension through Copilot, follow these steps:
    :::image type="content" source="../assets/images/Copilot/bot-based-CLI-resource-group.png" alt-text="Screenshot shows the login to Azure and select a subscription option in the CLI window.":::
 
 1. From the list, select a resource group.
-1. For Cost may incur according to the usage. Do you want to provision resources in dev environment using accounts listed above?, Enter Y.
+1. If you receive a message which reads **Cost may incur according to the usage. Do you want to provision resources in dev environment using accounts listed above?**, Enter **Y**.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-CLI-provisoin-preview.png" alt-text="Screenshot shows the Do you want to provision resources in dev environment using accounts listed above? option in CLI window.":::
 
-   Teams Toolkit will validate your app and provision your app on Azure.
+   Teams Toolkit validates your app manifest and provisions your app on Azure.
 
 1. In the command prompt window, enter the following command to preview your app in Teams:
 
@@ -196,10 +212,28 @@ To trigger the message extension through Copilot, follow these steps:
 
 1. Select **Add**. The message extension is added to Teams.
 1. Go to a chat and select **Actions and apps**.
-1. From the message extension fly-out menu, @mention your message extension from the search box area.
+1. From the message extension fly-out menu, enter the name of your message extension in the search box.
 1. Select your message extension and enter your search query.
 
-# [Developer Portal for Teams](#tab/developer-portal-for-teams)
+**Trigger message extension in Microsoft 365 Chat**
+
+To trigger the message extension through Microsoft 365 Chat, follow these steps:
+
+1. Select **Apps**.
+1. Search for Microsoft 365 Chat.
+1. Select **Plugins**.
+1. From the list of plugins, turn on the toggle for your app.
+
+   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
+
+1. From the compose message area, send a message to Microsoft 365 Chat to find a NuGet package information. For example: Find the NuGet package info on Microsoft.CSharp.
+
+   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from copilot.":::
+
+> [!NOTE]
+> This prompt may not always make Microsoft 365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Chat response and leave a message tagged with [MessageExtension].
+
+<!--# [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
 1. Go to **Teams Developer Portal**.
 1. Go to **Apps**.
@@ -207,21 +241,23 @@ To trigger the message extension through Copilot, follow these steps:
 1. Under **Configure**, select **App features**.
 1. Select **Messaging extension**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the plugin of copilot option in Teams Developer Portal.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the messaging extension option in Teams Developer Portal.":::
 
 1. Under **Message extension type**, select **Bot**.
+
+:::image type="content" source="../assets/images/Copilot/bot-based-tdp-select-bot.png" alt-text="Screenshot shows the Bot, Existing bot, and Enter Bot ID options for messaging extension app feature in Developer Portal for Teams.":::
 
 1. If you have an existing bot, select **Existing bot** or if you have a bot ID, select **Enter Bot ID**.
 
    1. If don't have a Bot ID, you can select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you've created.
 
-1. Select the required scopes.
+1. Select **Save**.
 
 1. Under **Command**, select **+ Add a command**.
 
-   A command details page appears.
+   Add a command page appears.
 
-1. In the Command details page, select the **Search** or **Action** as the type of command and update the following:
+1. In the **Add a command** page, select the **Search** as the type of command and update the following:
    * Command ID
    * Command title
    * Command description
@@ -229,14 +265,18 @@ To trigger the message extension through Copilot, follow these steps:
    * Parameter name
    * Parameter title
    * Parameter description
-   * Parameter description type
+
+1. Select **Save**. The command is added to the message extension.
 
 1. Select **Save**.
 
-A bot based ME is created.
+A bot-based message extension is created.
+
+:::image type="content" source="../assets/images/Copilot/bot-based-tdp-message-extension-created.png" alt-text="Screenshot shows the messaging extension created and listed in the App features page in Developer POrtal for Teams."::: -->
 
 ---
 
 ## See also
 
-[Frequently Asked Questions](copilot-plugin-faq.md)
+* [Build message extensions using API](api-based-overview.md)
+* [Define message extension action commands](how-to/action-commands/define-action-command.md)

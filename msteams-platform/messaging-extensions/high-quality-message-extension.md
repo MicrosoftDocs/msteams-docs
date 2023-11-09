@@ -10,16 +10,21 @@ ms.date: 10/18/2023
 
 # Guidelines to create or upgrade a message extension plugin for Copilot
 
-Microsoft 365 plugins provide integration with various Microsoft hubs, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Copilot to interact with APIs from other software and services through a bot. You can:
+> [!NOTE]
+> Microsoft 365 chat is available only in [**Public developer preview**](../resources/dev-preview/developer-preview-intro.md).
+
+Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Copilot to interact with APIs from other software and services through a bot. You can:
 
 * Search for the latest information or record, for example, the latest incident ticket or survey results.
 * Summarize information based on multiple records. For example, summarize all incidents tickets related to the project Northwind.
 
-We recommend that you build or upgrade your existing message extensions to get the best out of Copilot. To ensure Copilot recognizes your app, build message extensions that can at least, search or summarize information.   Additionally, your extensions should meet the standards for compliance, performance, security, and user experience outlined in this article.
+We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Copilot. Message extensions should support one or more search commands, as these are recognized by Copilot as skills it can execute on behalf of the user.   Additionally, your extensions should meet the standards for compliance, performance, security, and user experience outlined in this article.
+
+:::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Microsoft 365 chat.":::
 
 ## Mandatory requirements
 
-Before you get started, ensure that you meet the following requirements:
+The requirements for building message extension Copilot plugins include:
 
 > [!div class="checklist"]
 >
@@ -27,9 +32,15 @@ Before you get started, ensure that you meet the following requirements:
 > * [Enhance message extension to retrieve information through compound utterances](#compound-utterances)
 > * [Create rich Adaptive Card responses](#adaptive-card-response)
 
+The remainder of this article provides further guidance on how to meet these requirements.
+
 ## Define descriptions
 
 A good description offers a clear and concise summary of the app’s features and allows Copilot to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets..**, the message extension plugin must be invoked from Copilot.
+
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as a plugin in Copilot.":::
+
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in Copilot.":::
 
 Ensure that you adhere to the descriptions guidelines listed in the following table:
 
@@ -255,19 +266,19 @@ Advanced search: Search for high priority tasks related to Northwind that are du
     {
         "name": "Name",
         "title": "Project or Task Name",
-        "description": "Send project name or task name as keyword",
+        "description": "Project name or task name as keyword",
         "inputType": "text"
     },
     {
         "name": "Time",
         "title": "Time",
-        "description": "Send date or number of days for which you need tasks for.Output: Number",
+        "description": "Date or number of days for which you need tasks for.Output: Number",
         "inputType": "text"
     },
     {
         "name": "Priority",
         "title": "Priority",
-        "description": "Send priority of tasks. Acceptable values are: high, medium, low, NA ",
+        "description": "Priority of tasks. Acceptable values are: high, medium, low, NA ",
         "inputType": "text"
     }] 
 ```
@@ -284,19 +295,19 @@ Advanced search: Retrieve recent customer satisfaction survey on product Contoso
   {
     "name": "SurveyName",
     "title": "Name of Survey",
-    "description": "Send survey name or related keyword",
+    "description": "survey name or related keyword",
     "inputType": "text"
   },
   {
     "name": "Tags",
     "title": "Tags",
-    "description": "Send product name or keywords related pertaining to a question",
+    "description": "product name or keywords related pertaining to a question",
     "inputType": "text"
   },
   {
     "name": "ResponseNumber",
     "title": "Response number",
-    "description": "Send number of responses received for a survey. Output: Number",
+    "description": "number of responses received for a survey. Output: Number",
     "inputType": "text"
   }
 ]
@@ -314,19 +325,19 @@ Advanced search: Fetch qualified leads for which quotes are pending from last se
   {
     "name": "TypeofLeads",
     "title": "Type of Leads",
-    "description": "Send what types of leads user is looking for. Acceptable fields are: Qualified, Unqualified and New.",
+    "description": "what types of leads user is looking for. Acceptable fields are: Qualified, Unqualified and New.",
     "inputType": "text"
   },
   {
     "name": "Status",
     "title": "Status",
-    "description": "Send status of leads. Acceptable fields are: Pending, Quote Given and Quote Rejected.",
+    "description": "status of leads. Acceptable fields are: Pending, Quote Given and Quote Rejected.",
     "inputType": "text"
   },
   {
     "name": "Time",
     "title": "Time",
-    "description": "Send number of days for which you need status of leads for. Output: Number",
+    "description": "number of days for which you need status of leads for. Output: Number",
     "inputType": "text"
   }
 ]
@@ -356,13 +367,13 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
   {
     "name": "P/B",
     "title": "Price to Book Ratio",
-    "description": "Send P/B or Price to book ratio of a stock. Output format: >x.xx or <x.xx",
+    "description": "P/B or Price to book ratio of a stock. Output format: >x.xx or <x.xx",
     "inputType": "text"
   },
   {
     "name": "P/E",
     "title": "Price to Earnings Ratio",
-    "description": "Send P/E or Price to Earnings ratio of a stock with comparison. Output format: >x.xx or <x.xx",
+    "description": "P/E or Price to Earnings ratio of a stock with comparison. Output format: >x.xx or <x.xx",
     "inputType": "text"
   }
 ]
@@ -383,9 +394,9 @@ The search parameters must have good descriptions with acceptable parameters, En
 
 Message extensions respond to user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:
 
-* A response template must include an Adaptive Card and preview card information as part of the same template. [*Mandatory*]
+* Adaptive Card response must include an Adaptive Card content and preview card information as part of the same template. [*Mandatory*]
 
-  :::image type="content" source="../assets/images/Copilot/bot-based-me-adaptive-card-response-copilot.png" alt-text="Screenshot shows the preview card and Adaptive Card as part of the same response in Copilot.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Microsoft 365 Copilot app response contains Preview and Content in the same response. ":::
 
   <details><summary>Adaptive Card response example</summary>
 
@@ -477,8 +488,14 @@ Message extensions respond to user input with an Adaptive Card. An Adaptive Card
   </details>
 
 * Apart from the app logo, title, thumbnail, and title of the information, the data in the Adaptive Card must represent the most frequently searched attributes, such as, data modified, author, status, and flags. [*Mandatory*]
+
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-functional-action.png" alt-text="Screenshot shows an example of information title, additional user fields, and action button in an Adaptive Card response.":::
+
 * Adaptive Card must be presentable in Win32, Web, and Mobile (iOS and Android). [*Mandatory*]
+
 * An Adaptive Card must contain at least one action, but no more than four actions. The following actions types are recommended: [*Mandatory*]
+
+  :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in the Microsoft 365 chat.":::
 
   > [!NOTE]
   > Action types `imBack`, `messageBack` aren't supported in a data object.
