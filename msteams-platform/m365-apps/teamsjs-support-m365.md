@@ -1192,7 +1192,7 @@ Preview. Subcapability for interaction with Adaptive Card dialogs that need to c
 
 ### `dialog.update`
 
-[Reference](/javascript/api/@microsoft/teams-js/dialog.update) | [Sample](https://github.com/vikramtha/TeamsJS_CC_App/blob/main/tabs/src/components/capabilities/DialogUpdate.tsx)
+[Reference](/javascript/api/@microsoft/teams-js/dialog.update) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/Dialog.Update.tsx)
 
 Preview. Namespace for updating dialogs.
 
@@ -2193,7 +2193,7 @@ Namespace to open a share dialog for web content. For more information, see [Sha
 
 ## `stageView`
 
-[Reference](/javascript/api/@microsoft/teams-js/stageview) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/StageView.tsx)
+[Reference](/javascript/api/@microsoft/teams-js/stageview) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/StageView.tsx)
 
 Preview. Namespace to interact with the Stage View specific part of the library.
 
@@ -2318,7 +2318,7 @@ The earlier version of the capability for providing modal dialog (task module) s
 
 ## `teamsCore`
 
-[Reference](/javascript/api/@microsoft/teams-js/teamscore) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/TeamsCore.tsx)
+[Reference](/javascript/api/@microsoft/teams-js/teamscore) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/TeamsCore.tsx)
 
 Namespace containing the set of APIs that support Teams-specific functionalities.
 
@@ -2379,7 +2379,7 @@ Namespace containing the set of APIs that support Teams-specific functionalities
 
 ## `video`
 
-[Reference](/javascript/api/@microsoft/teams-js/videoeffects) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Video.tsx)
+[Reference](/javascript/api/@microsoft/teams-js/videoeffects) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/Video.tsx)
 
 Preview. Namespace representing functionality for in-meeting video effects.
 
@@ -2446,7 +2446,7 @@ Preview. Namespace representing functionality for in-meeting video effects.
 
 ## `webStorage`
 
-[Reference](/javascript/api/@microsoft/teams-js/webstorage) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/WebStorage.tsx)
+[Reference](/javascript/api/@microsoft/teams-js/webstorage) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/WebStorage.tsx)
 
 Preview. Contains functionality to allow web apps to store data in webview cache.
 
@@ -2512,7 +2512,7 @@ Preview. Contains functionality to allow web apps to store data in webview cache
 
 | Sample name           | Description | Source|
 :---------------------|:--------------|:---------|
-| TeamsJS Capability Checker| Sample application to demonstrate the capabilities of TeamsJS library v2 in Teams apps extended across Outlook and Microsoft 365. | [TypeScript](https://github.com/vikramtha/microsoft-teams-library-js/tree/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app)
+| TeamsJS Capability Checker| Sample application to demonstrate the capabilities of TeamsJS library v2 in Teams apps extended across Outlook and Microsoft 365. | [TypeScript](https://github.com/vikramtha/microsoft-teams-library-js/tree/vikramtha/teamsjs-cc-app/apps/teams-cc-app)
 
 ## See also
 
