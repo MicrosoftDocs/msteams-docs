@@ -13,7 +13,7 @@ zone_pivot_groups: teams-toolkit-platform
 
 # Add single sign-on to Teams app
 
-Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting few of the Microsoft Entra flows and integrations behind simple APIs. This enables you to add SSO features easily to your Teams app.
+Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting few of the Microsoft Entra ID flows and integrations behind simple APIs. This enables you to add SSO features easily to your Teams app.
 
 ## Add SSO to Teams app for Microsoft Visual Studio Code
 
@@ -68,7 +68,7 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
 >
 > Teams Toolkit v4 extension will soon be deprecated.
 
-Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Microsoft Entra flows and integrations behind some simple APIs. This enables you to add SSO features easily to your Teams app.
+Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Microsoft Entra ID flows and integrations behind some simple APIs. This enables you to add SSO features easily to your Teams app.
 
 ## Add SSO to Teams app for Microsoft Visual Studio Code
 
@@ -136,7 +136,7 @@ To enable SSO in your application, follow these steps:
 <summary><b>Tab project
 </b></summary>
 
-1. Copy `auth-start.html` and `auth-end.htm` in `auth\public` folder to `tabs\public\`. Teams Toolkit registers these two endpoints in Microsoft Entra ID for it's redirect flow.
+1. Copy `auth-start.html` and `auth-end.htm` in `auth\public` folder to `tabs\public\`. Teams Toolkit registers these two endpoints in Microsoft Entra ID for Microsoft Entra's redirect flow.
 
 2. Copy `sso` folder under `auth\tab` to `tabs\src\sso\`.
 
