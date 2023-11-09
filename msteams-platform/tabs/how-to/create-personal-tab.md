@@ -850,7 +850,7 @@ To build and run your app:
 
     Congratulations, your first tab app is running in your local environment!
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/app-local.png" alt-text="Screenshot of Microsoft Teams with Your app is running in your local environment highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/app-local.png" alt-text="Screenshot shows the personal tab of your app in Teams.":::
 
 1. Move through the page to view the user details.
 
@@ -858,7 +858,7 @@ To build and run your app:
 
     The app requests permission to grant access for displaying user details.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot of Microsoft Teams with Authorize option highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot shows the authorize option in the personal tab of your app in Teams.":::
 
 1. Select **Accept** to let your app access user details.
 
@@ -866,7 +866,7 @@ To build and run your app:
 
     Your photograph and details appear in your **Personal Tab**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/tab-user-info.png" alt-text="Screenshot of your Personal Tab in the app displaying basic information.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/tab-user-info.png" alt-text="Screenshot shows the basic information displayed on the personal tab of your app in Teams.":::
 
     You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
 
@@ -952,7 +952,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
     Congratulations, your first tab app is running in your Azure environment!
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-tab-app-azure.PNG" alt-text="Screenshot of Microsoft Teams with Your app is running in your Azure environment highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-tab-app-azure.PNG" alt-text="Screenshot shows the personal tab of your app in Teams.":::
 
     Move through the page to view the user details.
 
@@ -960,7 +960,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
     The app requests permission to grant access for displaying user details.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot of Microsoft Teams with Authorize option under Personal Tab highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot shows the authorize option in the personal tab of your app in Teams.":::
 
 1. Select **Accept** to let your app access user details.
 
@@ -1003,6 +1003,7 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 ## Extend static tabs to group chat and meetings
 
 > [!NOTE]
+>
 > * Extend your static tabs to group chat and meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * To extend your static tabs to group chat and meetings, use the app manifest v1.16 or later.
 
