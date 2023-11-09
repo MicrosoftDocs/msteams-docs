@@ -126,7 +126,7 @@ Virtual Assistant can handle interruptions in cases where a user tries to invoke
 
 To add task module capabilities to a Virtual Assistant, two additional methods are included in the Virtual Assistant activity handler: `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitAsync`. These methods listen to task module-related activities from Virtual Assistant, identify the skill associated with the request, and forward the request to the identified skill.
 
-Request forwarding is done through the [SkillHttpClient](/dotnet/api/microsoft.bot.builder.integration.aspnet.core.skills.skillhttpclient?view=botbuilder-dotnet-stable&preserve-view=true), `PostActivityAsync` method. It returns the response as `InvokeResponse` which is parsed and converted to `TaskModuleResponse` .
+Request forwarding is done through the [SkillHttpClient](/dotnet/api/microsoft.bot.builder.integration.aspnet.core.skills.skillhttpclient?view=botbuilder-dotnet-stable&preserve-view=true), `PostActivityAsync` method. It returns the response as `InvokeResponse`, which is parsed and converted to `TaskModuleResponse` .
 
 ```csharp
     public static TaskModuleResponse GetTaskModuleRespose(this InvokeResponse invokeResponse)
@@ -565,7 +565,7 @@ You can also use existing skills from [Bot Framework Solutions repository](https
 
 ## Limitations of Virtual Assistant
 
-* **EndOfConversation**: A skill must send an `endOfConversation` activity when it finishes a conversation. Based on the activity, a Virtual Assistant ends context with that particular skill and gets back into Virtual Assistant's root context. For Book-a-room bot, there's no clear state where conversation is ended. Hence we haven't sent `endOfConversation` from `Book-a-room` bot and when user wants to go back to root context they can simply do that by `start over` command.  
+* **EndOfConversation**: A skill must send an `endOfConversation` activity when it finishes a conversation. Based on the activity, a Virtual Assistant ends context with that particular skill and gets back into Virtual Assistant's root context. For Book-a-room bot, there's no clear state where conversation is ended. Hence we haven't sent `endOfConversation` from `Book-a-room` bot and when user wants to go back to root context they can do that by `start over` command.  
 * **Card refresh**: Card refresh isn't yet supported through Virtual Assistant.  
 * **Message extensions**:
   * Currently, a Virtual Assistant can support a maximum of 10 commands for message extensions.
