@@ -136,7 +136,7 @@ To enable SSO in your application, follow these steps:
 <summary><b>Tab project
 </b></summary>
 
-1. Copy `auth-start.html` and `auth-end.htm` in `auth\public` folder to `tabs\public\`. Teams Toolkit registers these two endpoints in Microsoft Entra ID for Microsoft Entra's redirect flow.
+1. Copy `auth-start.html` and `auth-end.htm` in `auth\public` folder to `tabs\public\`. Teams Toolkit registers these two endpoints in Microsoft Entra ID for Microsoft Entra ID's redirect flow.
 
 2. Copy `sso` folder under `auth\tab` to `tabs\src\sso\`.
 
