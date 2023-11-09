@@ -50,15 +50,150 @@ The following are the limitations to Test Tool:
 
 ### Teams Toolkit samples and templates
 
+The testing of the bot sample, which displays the features supported by the Teams App Test Tool, proceeds as follows:
 
+1. Dowmload the latest [bot sample](https://github.com/OfficeDev/TeamsAppTestTool/releases/tag/0.1.0-alpha.230921.7a4a1d9).
+ 
+1. Extract the files from the zip folder.
+
+1. Open the sample in Visual Studio Code with Teams Toolkit installed.
+
+1. Select F5.
+
+A browser window pops out and test your.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams app test tool adaptive card.":::
 
 ### Use Custom Activity
 
+If your app handles events such as conversationUpdate, reactionsAdded, etc., by implementing handlers such as onMembersAdded, onChannelDelete, etc., you can use mocked activity for updates. This removes the need to add users in a chat or delete a channel in Teams.
+
+**Predefined Mocked Activities**
+
+The test tool has predefined activity types in the `Mock an Activity` menu dropdown list.
+
+1. Select a predefined activity, for example, `Add a user` and a pop up appears to preview the activity handler.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mock-activity.png" alt-text="s":::
+
+1. Select `Send Activity`. 
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-a-user-request.png" alt-text="d":::
+
+Bot sends a response.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-a-user-response.png" alt-text="f":::
+
+**Customized Mocked Activities**
+
+1. Select **Custom activity**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mock-activity.png" alt-text="s":::
+
+1. Add `reactionsAdded` as customized activity and select `Send Activity`.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/custom-activity-request.png" alt-text="d":::
+
+Bot sends a `onReactionsAdded` handler response invoked with the activity defined.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/custom-activity-response.png" alt-text="s":::
+
 ### Use Config
 
-### Use Test Tool in Existing App(SBS)
-https://github.com/OfficeDev/TeamsAppTestTool/tree/main/samples/ai-chat-bot
+The customization of mock data in the Teams App Test Tool is achieved through the `.teamsapptesttool.yml` configuration file. This file enables developers to effectively interact with external APIs.
 
+**Use config file**
+
+The bot is installed into Teams and fetches inactive bugs from Azure DevOps. It identifies the owner's email address and sends personal notification chats.
+
+For the bot within the test tool, it's necessary to adapt the config file to utilize real email addresses that match Azure DevOps user email addresses. In the `.teamsapptesttool.yml` file, go to the users section and adjust the email properties as per user requests. The following is a snippet:
+
+```yaml
+users:
+    - id: user-id-1
+      name: Megan Bowen
+      userPrincipleName: meganb@example.com
+      aadObjectId: 00000000-0000-0000-0000-0000000000021
+      givenName: Megan
+      surname: Bowen
+      email: some-real-user@real-domain.onmicrosoft.com
+```
+
+**Default config**
+
+The test tool contains a built-in config file in project root folder.
+
+```yaml
+# yaml-language-server: $schema=https://aka.ms/teams-app-test-tool-config/0.1.0/config.schema.json
+# Visit https://aka.ms/teams-app-test-tool-config-guide for details on this file
+
+# The config file is for customization of Teams context information like chats, teams and users.
+# It is mockup data for testing Bot Framework APIs (or botbuilder SDK methods like TeamsInfo.getTeamMembers()).
+# You can customize this file to change API response if your bot code uses these APIs.
+version: "0.1.0"
+tenantId: 00000000-0000-0000-0000-0000000000001
+bot:
+  id: 00000000-0000-0000-0000-00000000000011
+  name: Test Bot
+currentUser:
+  id: user-id-0
+  name: Alex Wilber
+  userPrincipleName: alexw@example.com
+  aadObjectId: 00000000-0000-0000-0000-0000000000020
+  givenName: Alex
+  surname: Wilber
+  email: alexw@example.com
+users:
+  - id: user-id-1
+    name: Megan Bowen
+    userPrincipleName: meganb@example.com
+    aadObjectId: 00000000-0000-0000-0000-0000000000021
+    givenName: Megan
+    surname: Bowen
+    email: meganb@example.com
+  - id: user-id-2
+    name: Adele Vance
+    userPrincipleName: adelev@example.com
+    aadObjectId: 00000000-0000-0000-0000-0000000000022
+    givenName: Adele
+    surname: Vance
+    email: adelev@example.com
+  - id: user-id-3
+    name: Isaiah Langer
+    userPrincipleName: isaiah@example.com
+    aadObjectId: 00000000-0000-0000-0000-0000000000023
+    givenName: Isaiah
+    surname: Langer
+    email: isaiahl@example.com
+  - id: user-id-4
+    name: Patti Fernandez
+    userPrincipleName: pattif@example.com
+    aadObjectId: 00000000-0000-0000-0000-0000000000024
+    givenName: Patti
+    surname: Fernandez
+    email: pattif@example.com
+  - id: user-id-5
+    name: Lynne Robbins
+    userPrincipleName: lynner@example.com
+    aadObjectId: 00000000-0000-0000-0000-0000000000025
+    givenName: Lynne
+    surname: Robbins
+    email: lynner@example.com
+personalChat:
+  id: personal-chat-id
+groupChat:
+  id: group-chat-id
+  name: Group Chat
+team:
+  id: team-id
+  name: My Team
+  aadGroupId: 00000000-0000-0000-0000-000000000031
+  channels:
+    - id: channel-announcements-id
+      name: Announcements
+```
+
+### Use Test Tool in Existing App(SBS)
 
 
 ## FAQ
@@ -87,3 +222,6 @@ No. We always recommend developers to test their bot application in the Microsof
 </details>
 
 ## See also
+
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Build your first app using Teams AI library](sbs-botbuilder-conversation-AI.yml)
