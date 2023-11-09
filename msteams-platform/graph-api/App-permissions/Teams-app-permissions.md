@@ -48,7 +48,7 @@ The bot or messaging extension ID is generated based on the following registrat
 
 #### Microsoft Entra admin center
 
-When a bot or messaging extension is registered on Microsoft Entra admin center, it will have a Microsoft Entra app ID associated with it, which can be found in **Microsoft Entra ID** portal > **App Registrations**. Endpoints and other bot configurations are managed in the Azure portal.
+When a bot or messaging extension is registered on Microsoft Entra admin center, it will have a Microsoft Entra app ID associated with it, which can be found in **Microsoft Entra admin center** > **App Registrations**. Endpoints and other bot configurations are managed in the Azure portal.
 
 #### Developer or Bot Framework portal
 
