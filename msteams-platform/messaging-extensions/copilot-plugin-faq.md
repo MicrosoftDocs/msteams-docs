@@ -104,14 +104,6 @@ Yes, you can. Ensure that you have a descriptive app manifest and have uploaded 
 
 <details>
 
-<summary> Q: I'm having trouble building my Teams message extension with the Teams Toolkit. How can I get help? </summary>
-
-For support, reach out to Pierce Boggan, John Miller, and Abram Jackson over email.
-
-</details>
-
-<details>
-
 <summary> Q: How can I get my existing Teams message extension to work with Microsoft 365 Copilot? </summary>
 
 1. Register the bot channel in Azure Bot Service.
@@ -123,7 +115,7 @@ For support, reach out to Pierce Boggan, John Miller, and Abram Jackson over ema
 
 <summary> Q: What is the certification process?</summary>
 
-After publishing their plugin, developers opt into the App Compliance flow in Partner Center. If they haven't completed Publisher Verification, they'll be prompted to do so before starting the Microsoft 365 Certification process.  The next step is to complete Publisher Attestation, which collects self-attested information about their plugin, company, and operations. This information is published on a publicly facing MSDocs page.  The developer then starts the Microsoft 365 Certification process by uploading initial documents to help scope the assessment to their plugin and operating environment. Based on the scope, the developer will then be required to provide evidence for specific controls related to application security, operational security, and data handling/privacy. Developers that build on Azure can also use the App Compliance Automation Tool (ACAT). This tool automatically scans their environment and produces evidence for several controls, reducing the developer's manual work. For more information, see this video.
+After publishing their plugin, developers opt into the App Compliance flow in Partner Center. If they haven't completed Publisher Verification, they'll be prompted to do so before starting the Microsoft 365 Certification process.  The next step is to complete Publisher Attestation, which collects self-attested information about their plugin, company, and operations. This information is published on a [Microsoft 365 App Compliance Program site](/microsoft-365-app-certification/teams/teams-apps).  The developer then starts the Microsoft 365 Certification process by uploading initial documents to help scope the assessment to their plugin and operating environment. Based on the scope, the developer will then be required to provide evidence for specific controls related to application security, operational security, and data handling/privacy. Developers that build on Azure can also use the App Compliance Automation Tool (ACAT). This tool automatically scans their environment and produces evidence for several controls, reducing the developer's manual work. For more information, see this video.
 
 </details>
 

@@ -272,7 +272,7 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
 A bot-based message extension is created.
 
-:::image type="content" source="../assets/images/Copilot/bot-based-tdp-message-extension-created.png" alt-text="Screenshot shows the messaging extension created and listed in the App features page in Developer POrtal for Teams."::: -->
+:::image type="content" source="../assets/images/Copilot/bot-based-tdp-message-extension-created.png" alt-text="Screenshot shows the messaging extension created and listed in the App features page in Developer Portal for Teams."::: -->
 
 ---
 
