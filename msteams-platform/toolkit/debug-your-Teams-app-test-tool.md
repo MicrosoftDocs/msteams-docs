@@ -45,3 +45,45 @@ The following are the limitations to Test Tool:
 1. The Test Tool doesn't process the app manifest, which means features that are only enabled through the manifest will not be accessible.
  
 1. The Test Tool doesn't support Single sign-on (SSO), mobile view, and meetings.
+
+## Explore Teams App Test Tool
+
+### Teams Toolkit samples and templates
+
+
+
+### Use Custom Activity
+
+### Use Config
+
+### Use Test Tool in Existing App(SBS)
+https://github.com/OfficeDev/TeamsAppTestTool/tree/main/samples/ai-chat-bot
+
+
+
+## FAQ
+
+<details>
+<summary>What should I do when some features I use in my bot application aren't supported in the Test Tool?</summary>
+
+You can always use the [Microsoft Teams client](https://teams.microsoft.com/) to test the features that are not supported in the Test Tool. If you are developing with Teams Toolkit, select the option `Debug (Edge)` or `Debug (Chrome)` to test your application in the Microsoft Teams client.
+<br>
+&nbsp;
+</details>
+<details>
+<summary>How would I notice if some features are not supported in the Test Tool?</summary>
+
+The Test Tool will show a warning message in conversation and log panel when it detects some features are not supported.
+![Cliff](https://github.com/OfficeDev/TeamsFx/assets/11220663/130118cf-c2e1-4b49-8f4a-919cb4c50e0a)
+<br>
+&nbsp;
+</details>
+<details>
+<summary>Should I solely rely on the test tool to test my bot application?</summary>
+
+No. We always recommend developers to test their bot application in the Microsoft Teams client before moving the application to production environment.
+<br>
+&nbsp;
+</details>
+
+## See also
