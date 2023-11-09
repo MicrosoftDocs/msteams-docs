@@ -118,7 +118,7 @@ The following steps help you to approve from Admin Center:
 
 1. Select the :::image type="icon" source="images/Showall-v4.png"::: icon > **Teams apps** > **Manage apps**.
 
-   :::image type="content" source="images/select-manage-apps-v4.png" alt-text="Select Manage apps":::
+   :::image type="content" source="images/select-manage-apps-v4.png" alt-text="Screenshot of Select Manage apps":::
 
    You can view all Teams app for your organization.
 
