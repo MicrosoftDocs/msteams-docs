@@ -256,7 +256,7 @@ To update the config file, follow these steps:
 ## FAQ
 
 <details>
-<summary>What to do when some features I use in my bot application aren't supported in the Test Tool?</summary>
+<summary>How can I test my bot application if some features aren't supported by the Test Tool?</summary>
 
 You can always use the [Teams client](https://teams.microsoft.com/) to test the features that aren't supported in the Test Tool. If you're developing with Teams Toolkit, select the option **Debug (Edge)** or **Debug (Chrome)** to test your application in the Teams client.
 <br>
