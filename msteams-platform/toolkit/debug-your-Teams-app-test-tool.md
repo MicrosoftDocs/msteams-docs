@@ -74,15 +74,17 @@ The following are the limitations:
 
 The testing of the bot sample, which displays the features supported by the Teams App Test Tool, proceeds as follows:
 
-1. Go to the source code from [bot sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/test-tool-sample-app).
+1. Go to the source code and download the [bot sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/test-tool-sample-app).
 
-1. Open the project in Visual Studio Code with Teams Toolkit.
+1. Open the project folder in Visual Studio Code with Teams Toolkit.
 
 1. Select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool** in dropdown list.
 
 1. Select **F5**.
 
-1. Type **help** command into input box. Bot responses in a browser window display a list of commands.
+1. Type **help** command. 
+
+A webpage opens with a list of commands.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
