@@ -30,7 +30,7 @@ The Teams App Test Tool assists users in testing and debugging their Teams bot a
 
 1. **Mock data and activities**: The Test Tool makes it easy to accomplish a test for complex scenarios such as **Send a welcome message when a new member joins the channel** by using mock data and built-in and custom activity triggers.
 
-1. **Reliable and trustable**: The Test Tool is reliable as the Bot application UX [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card) utilizes the same rendering technology as in Microsoft Teams.
+1. **Reliable and trustable**: The Test Tool is reliable as the Bot application [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card) utilizes the same rendering technology as in Microsoft Teams.
 
 1. **Integration with existing Teams bot applications**: The Test Tool can be integrated with existing Teams bot applications that are built with [Bot Framework SDK](https://dev.botframework.com/).
 
@@ -42,7 +42,13 @@ The following are the limitations:
 
 1. Limited emulation: The tool attempts to emulate the behavior, appearance, and user experience of Microsoft Teams, but it doesn't capture every aspect of the Teams environment completely. There could be some variations in behavior between the tool and the actual Teams application.
 
-1. The Test Tool doesn't support all other types of Bot application UX [Cards](../task-modules-and-cards/what-are-cards.md#cards).
+1. The Test Tool doesn't support all other types of Bot application [Cards](../task-modules-and-cards/what-are-cards.md#cards).
+
+    * [People Picker](../../task-modules-and-cards/cards/people-picker.md)
+    * [Typeahead search](../../task-modules-and-cards/cards/dynamic-search.md)
+    * [User mention](../../task-modules-and-cards/cards/cards-format.md#microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention)
+    * [Stage View](../../task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards)
+    * [Full width control](../../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
 
 1. The Test Tool doesn't process the app manifest, which means features that are only enabled through the manifest won't be accessible.
  
