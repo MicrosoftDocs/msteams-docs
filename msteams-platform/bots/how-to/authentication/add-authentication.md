@@ -182,9 +182,10 @@ In this procedure, you'll use a Microsoft Entra provider. Other Microsoft Entra 
 
 ### Configure the identity provider connection and register it with the bot
 
-Note: There are two options for Service Providers here, Microsoft Entra v1 and Microsoft Entra v2.  The differences between the two providers are summarized [here](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison), but in general, V2 provides more flexibility with respect to changing bot permissions.  Graph API permissions are listed in the scopes field, and as new ones are added, bots will allow users to consent to the new permissions on the next sign in.  For V1, the bot consent must be deleted by the user for new permissions to be prompted in the OAuth dialog.
+>[!NOTE]
+> There are two options for Service Providers here, Azure Active Directory v1 and Azure Active Directory v2. The differences between the two providers are summarized [here](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison), but in general, v2 provides more flexibility with respect to changing bot permissions. Graph API permissions are listed in the scopes field, and as new ones are added, bots will allow users to consent to the new permissions on the next sign in. For v1, the bot consent must be deleted by the user for new permissions to be prompted in the OAuth dialog.
 
-#### Microsoft Entra v1
+#### Microsoft Azure Active Directory (Azure AD) v1
 
 1. In the [**Azure portal**][azure-portal], select your resource group from the dashboard.
 1. Select your bot registration link.
@@ -197,7 +198,7 @@ Note: There are two options for Service Providers here, Microsoft Entra v1 and M
 1. Complete the form as follows:
 
     1. **Name**. Enter a name for the connection. You'll use this name in your bot in the `appsettings.json` file. For example, *BotTeamsAuthADv1*.
-    1. **Service Provider**. Select **Microsoft Entra ID**. Once you select this, the Microsoft Entra ID-specific fields will be displayed.
+    1. **Service Provider**. Select **Azure Active Directory**. Once you select this, the Azure Active Directory-specific fields will be displayed.
     1. **Client id**. Enter the Application (client) ID that you recorded for your Azure identity provider app in the steps above.
     1. **Client secret**. Enter the secret that you recorded for your Azure identity provider app in the steps above.
     1. **Grant Type**. Enter `authorization_code`.
@@ -215,7 +216,7 @@ Note: There are two options for Service Providers here, Microsoft Entra v1 and M
 
 1. Select **Save**.
 
-#### Microsoft Entra v2
+#### Microsoft Azure Active Directory (Azure AD) v2
 
 1. In the [**Azure portal**][azure-portal], select your Azure Bot from the dashboard.
 1. In the resource page, select **Configuration** under **Settings**.
@@ -227,7 +228,7 @@ Note: There are two options for Service Providers here, Microsoft Entra v1 and M
 1. Complete the form as follows:
 
     1. **Name**. Enter a name for the connection. You'll use this name in your bot in the `appsettings.json` file. For example, *BotTeamsAuthADv2*.
-    1. **Service Provider**. Select **Microsoft Entra v2**. Once you select this, the Microsoft Entra specific fields will be displayed.
+    1. **Service Provider**. Select **Azure Active Directory v2**. Once you select this, the Azure AD v2 specific fields will be displayed.
     1. **Client id**. Enter the Application (client) ID that you recorded for your Azure identity provider app in the steps above.
     1. **Client secret**. Enter the secret that you recorded for your Azure identity provider app in the steps above.
     1. **Token Exchange URL**. Leave this blank.
