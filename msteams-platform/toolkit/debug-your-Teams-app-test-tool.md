@@ -10,21 +10,23 @@ ms.date: 11/03/2023
 
 # Teams App Test Tool
 
-Teams App Test Tool, also known as the Test Tool, is a component integrated into the Teams Toolkit. The tool assists users in debugging, testing, and refining the app design of a Teams bot application. It provides a web-based chat environment that replicates the behavior, appearance, and user experience of Microsoft Teams.
+Teams App Test Tool (Test Tool), is a component integrated into the Teams Toolkit. The tool assists users in debugging, testing, and refining the app design of a Teams bot application. It provides a web-based chat environment that replicates the behavior, appearance, and user experience of Microsoft Teams.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
-## Features
+## Explore Teams App Test Tool
+
+### Features
 
 The Teams App Test Tool assists users in testing and debugging their Teams bot applications and following are the key features:
 
-1. **Sandbox environment**: The tool provides a web-based chat environment that emulates the behavior, look, and user experience of Microsoft Teams. This tool allows users to test and debug their bot application in a controlled environment.
+1. **Sandbox environment**: Sandbox environment emulates the behavior, look and user experience of Microsoft Teams.
 
 1. **Tunneling**: With the Test Tool, users don't need to set up a tunnel with [Ngrok](https://ngrok.com/download) or [Microsoft Dev Tunnel](/azure/developer/dev-tunnels/overview)to expose their local bot application to the internet.
 
-1. **Reduce local debugging**: Ensure you meet the [prerequisites](tools-prerequisites.md#accounts-to-build-your-teams-app) to secure a Microsoft 365 Developer tenant and the app uploading permissions before you debug the Teams bot applications.
+1. **Reduce local debugging**: Remove the [prerequisites](tools-prerequisites.md#accounts-to-build-your-teams-app) to secure a Microsoft 365 Developer tenant and the app uploading permissions before you debug the Teams bot applications.
 
-1. **Rapid inner-loop tterations**: Optimize the process of making changes to the app design and bot logic without having to redeploy the bot application to the cloud.
+1. **Rapid inner-loop iterations**: Optimize the process of making changes to the app design and bot logic without having to redeploy the bot application to the cloud.
 
 1. **Mock data and activities**: The Test Tool makes it easy to accomplish a test for complex scenarios such as **Send a welcome message when a new member joins the channel** by using mock data and built-in and custom activity triggers.
 
@@ -34,9 +36,9 @@ The Teams App Test Tool assists users in testing and debugging their Teams bot a
 
 1. **Support for different scopes**: The tool supports testing in different scopes (personal, team, group chat), allowing developers to ensure their bot works correctly in all the scopes.
 
-## Limitations
+### Limitations
 
-The following are the limitations to Test Tool: 
+The following are the limitations: 
 
 1. Limited emulation: The tool attempts to emulate the behavior, appearance, and user experience of Microsoft Teams, but it doesn't capture every aspect of the Teams environment completely. There could be some variations in behavior between the tool and the actual Teams application.
 
@@ -45,8 +47,6 @@ The following are the limitations to Test Tool:
 1. The Test Tool doesn't process the app manifest, which means features that are only enabled through the manifest won't be accessible.
  
 1. The Test Tool doesn't support single sign-on (SSO), mobile view, and meetings.
-
-## Explore Teams App Test Tool
 
 ### Teams Toolkit samples and templates
 
@@ -192,10 +192,6 @@ team:
     - id: channel-announcements-id
       name: Announcements
 ```
-
-## Step-by-step guide
-
-Follow the [step-by-step]() guide to build a AI chat bot, and learn to test the Test Tool.
 
 ## FAQ
 
