@@ -26,11 +26,11 @@ The Teams App Test Tool offers the following benefits:
 
 1. **Sandbox environment**: Sandbox environment emulates the behavior, look and user experience of Teams.
 
-1. **Tunneling**: Tunnel service is not required to connect the local server.
+1. **Tunneling**: Tunnel service is not required as it runs locally.
 
-1. **Reduce local debugging**: Remove the [prerequisites](tools-prerequisites.md#accounts-to-build-your-teams-app) to secure a Microsoft 365 Developer tenant and the app uploading permissions before you debug the Teams bot applications.
+1. **Reduce local debugging**: Microsoft 365 Developer tenant and the app uploading permissions aren't required to debug the bot application.
 
-1. **Rapid inner-loop iterations**: Optimize the process of making changes to the app design and bot logic without having to redeploy the bot application to the cloud.
+1. **Rapid inner-loop iterations**: Optimizes the process of making changes to the app design and bot logic without having to redeploy the bot application to the cloud.
 
 1. **Mock data and activities**: The Test Tool makes it easy to accomplish a test for complex scenarios such as **Send a welcome message when a new member joins the channel** by using mock data and built-in and custom activity triggers.
 
@@ -38,15 +38,13 @@ The Teams App Test Tool offers the following benefits:
 
 1. **Integration with existing Teams bot applications**: The Test Tool can be integrated with existing Teams bot applications that are built with [Bot Framework SDK](https://dev.botframework.com/).
 
-1. **Support for different scopes**: The tool supports testing in different scopes (personal, team, group chat), allowing developers to ensure their bot works correctly in all the scopes.
+1. **Support for different scopes**: The Test Tool supports testing in personal, team, and group chat scopes.
 
 ### Limitations
 
 The following are the limitations:
 
 1. The Test Tool doesn't process the app manifest, which means features that are only enabled through the manifest won't be accessible.
- 
-1. The Test Tool doesn't support single sign-on (SSO), mobile view, and meetings.
 
 1. The Test Tool doesn't support all other types of Bot application [Cards](../task-modules-and-cards/what-are-cards.md#cards).
 
@@ -58,12 +56,10 @@ The following are the limitations:
    * [Stage View](../task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards)
    * [Full width](../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
 
-1. The Test Tool doesn't process the app manifest. The features that are enabled through the manifest aren't accessible.
- 
 1. The Test Tool doesn't support the following:
    * Single sign-on (SSO) 
    * Mobile 
-   * Meetings.
+   * Meetings 
 
 1. **Limited emulation**
 
@@ -109,13 +105,13 @@ A webpage opens with a list of commands.
 
 The Test Tool has predefined activity types in the **Mock an Activity** dropdown list.
 
-To test the predefined mocked activities, follow these steps:
+To test the predefined mock activities, follow these steps:
 
 1. Select **Mock an Activity** > **Add a user** and a pop-up window appears to preview the activity handler.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mock-activity.png" alt-text="Screenshot shows the list of option under mock an activity.":::
 
-1. Select **Send Activity**. 
+1. Select **Send activity**. 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-a-user-request.png" alt-text="Screenshot shows the option to send activity for predefined mock activity add user.":::
 
@@ -123,11 +119,11 @@ To test the predefined mocked activities, follow these steps:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-a-user-response.png" alt-text="Screenshot shows the response of predefined mock activity add user.":::
 
-**Customized mocked activities**
+**Customize mocked activities**
 
 The Test Tool has customized option in the **Mock an Activity** dropdown list.
 
-To test the customized mocked activities, follow these steps:
+To test the customize mocked activities, follow these steps:
 
 1. Select **Mock an Activity** > **Custom activity**.
 
@@ -147,7 +143,7 @@ To test the customized mocked activities, follow these steps:
     }
     ```
 
-1. Select **Send Activity**.
+1. Select **Send activity**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/custom-activity-request.png" alt-text="Screenshot shows the option to send activity after customization on mock activity.":::
 
@@ -157,7 +153,7 @@ To test the customized mocked activities, follow these steps:
 
 ### Customize Teams context
 
-The config file allows you to customize Teams context information such as chats, teams, and users. It provides mockup data for testing Bot Framework APIs or bot builder SDK methods like TeamsInfo.getTeamMembers. If your bot code uses these APIs, you can modify this file to alter the API response.
+The config file allows you to customize Teams context information such as chats, teams, and users. It provides mockup data for testing Bot Framework APIs or bot builder SDK methods like `TeamsInfo.getTeamMembers`. If your bot code uses these APIs, you can modify this file to alter the API response.
 
 **Default config**
 
@@ -262,14 +258,15 @@ To update the config file, follow these steps:
 <details>
 <summary>What to do when some features I use in my bot application aren't supported in the Test Tool?</summary>
 
-You can always use the [Teams client](https://teams.microsoft.com/) to test the features that aren't supported in the Test Tool. If you're developing with Teams Toolkit, select the option `Debug (Edge)` or `Debug (Chrome)` to test your application in the Teams client.
+You can always use the [Teams client](https://teams.microsoft.com/) to test the features that aren't supported in the Test Tool. If you're developing with Teams Toolkit, select the option **Debug (Edge)** or **Debug (Chrome)** to test your application in the Teams client.
 <br>
 &nbsp;
 </details>
 <details>
 <summary>How would I notice if some features aren't supported in the Test Tool?</summary>
 
-The Test Tool shows a warning message in conversation and log panel when it detects some features aren't supported.features-not-supported
+The Test Tool shows a warning message in conversation and log panel when it detects some features aren't supported.
+
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/features-not-supported.png" alt-text="Screenshot shows the warning message that the feature isn't supported.":::
 <br>
 &nbsp;
