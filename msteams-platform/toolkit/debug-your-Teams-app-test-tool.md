@@ -65,10 +65,10 @@ The following are the limitations:
    | Features | Debug in Test Tool | Local debug |
    | --- | --- | --- |
    | Basic sending / receiving messages | Available | Available |
-   |Bot Framework APIs (TeamsInfo.getPagedMembers()...) |Available (respond with mocked data) | Available |
-   |Sending Teams events | Available (mocking activity) |Available |
-   |Typing indicator | work in progress | Available |
-   |Tab, Messaging Extension, Task Module, SSO, and non-Adaptive Cards | Not Available | Available |
+   | Bot Framework APIs (TeamsInfo.getPagedMembers()...) |Available (respond with mocked data) | Available |
+   | Sending Teams events | Available (mocking activity) |Available |
+   | Typing indicator | work in progress | Available |
+   | Tab, Messaging Extension, Task Module, SSO, and non-Adaptive Cards | Not Available | Available |
 
 ### Teams Toolkit samples and templates
 
