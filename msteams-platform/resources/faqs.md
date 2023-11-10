@@ -17,7 +17,7 @@ Get answers to some of your queries when using Moodle LMS.
 
 <summary>What should I do if one or more of the course teams weren't created after synchronization?</summary>
 
-Each Moodle course must have at least one faculty and one student matched to a Microsoft 365 Microsoft Entra UPN account. The team can't be created, if the synchronization doesn't find a match.
+Each Moodle course must have at least one faculty and one student matched to a Microsoft 365 account username. The team can't be created, if the synchronization doesn't find a match.
 
 Each team course instance must have an owner, and the synchronization sets the faculty as the owner, with assumption that the faculty has Teams license.
 
