@@ -250,7 +250,7 @@ After your tab is uploaded to Microsoft Teams through **ngrok** and successfully
 ### Upload your application to Teams
 
 1. Go to Teams and select **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Microsoft Teams Store":::.
-1. Select **Manage your apps** > **Upload an app** > **Upload a custom app**.
+1. Select **Manage your apps** > **Upload an app** > **Upload a customised app**.
 1. Go to your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**.
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adding your personal tab":::
@@ -680,12 +680,12 @@ Verify if you can sideload apps in Teams:
 
 1. In the Teams client, select **Apps**.
 1. Select **Manage your apps**.
-1. Select **Upload a custom app**. If you see Upload a custom app option, sideloading apps is enabled.
+1. Select **Upload a customised app**. If you see **Upload a customised app** option, sideloading apps is enabled.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG" alt-text="Screenshot shows the option to upload a customized app. Apps icon, Manage your apps, Upload an app, and Upload a custom app option highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG" alt-text="Screenshot shows the option to upload a customised app in manage your app section."lightbox="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG":::
 
     > [!NOTE]
-    > Contact your Teams administrator, if you don't find the option to upload a custom app.
+    > Contact your Teams administrator, if you don't find the option to upload a customised app.
 
 ### Create a free Teams developer tenant (optional)
 
@@ -698,7 +698,7 @@ If you don't have a Teams developer account, you can get it for free. Join the M
 
     :::image type="content" source="../../assets/images/build-your-first-app/dev-program-subscription.PNG" alt-text="Screenshot of Microsoft 365 Developer Program displaying your Microsoft 365 developer subscriptions for the blazor app.":::
 
-1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a custom app** option in Teams.
+1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a customised app** option in Teams.
 
 ## Get a free Azure account
 
