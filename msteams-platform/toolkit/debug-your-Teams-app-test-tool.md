@@ -117,7 +117,7 @@ To test the predefined mocked activities, follow these steps:
 
 1. Select **Send Activity**. 
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-a-user-request.png" alt-text="Scrrenshot shows the option to send activity for predefined mock activity add user.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-a-user-request.png" alt-text="Screenshot shows the option to send activity for predefined mock activity add user.":::
 
    Bot sends a response.
 
