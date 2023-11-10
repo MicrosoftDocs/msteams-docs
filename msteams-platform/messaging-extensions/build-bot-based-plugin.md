@@ -1,7 +1,7 @@
 ---
-title: Create bot based Message extension
+title: Create bot based Message extension plugin
 author: v-ypalikila
-description: Learn how to build a bot message extension using Teams Developer Portal and Teams Toolkit.
+description: Learn how to build a bot-based message extension plugin for Microsoft 365 Chat using Teams Developer Portal and Teams Toolkit.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
