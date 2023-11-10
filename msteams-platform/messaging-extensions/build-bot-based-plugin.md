@@ -35,7 +35,7 @@ You can create a bot-based message extension using Teams Toolkit for Visual Stud
 
 Before you get started, ensure that you're familiar with the following standards and guidelines for building message extension plugins for Microsoft 365 Chat:
 
-* Standards for compliance, performance, security, and user experience outlined in [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-microsoft-365-copilot-plugin).
+* Standards for compliance, performance, security, and user experience outlined in [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-microsoft-365-chat-plugin).
 
 * [Guidelines to create or upgrade a message extension for Copilot](../messaging-extensions/high-quality-message-extension.md).
 
