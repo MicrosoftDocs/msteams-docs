@@ -28,11 +28,11 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
 1. Select **Provision**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot shows a dialog box that costs might be incurred when running resources in Azure.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot shows that you might incur charges for using Azure resources.":::
 
    The provisioning process creates resources in the Azure cloud. It might take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot shows the app is successfully provisioned in the cloud.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot shows a notice which displays hellomsg successfully provisioned in the cloud.":::
 
     If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
 
@@ -42,7 +42,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
 1. Select **Deploy** from the **LIFECYCLE** panel after provisioning is complete.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot shows the option to deploy to the cloud.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot shows the app deploys to the cloud.":::
 
    As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
 
@@ -78,11 +78,11 @@ Once the provisioning and deployment steps are complete:
 1. Select **Launch Remote (Edge)** from the launch configuration drop-down.
 1. Select the **Start debugging (F5)** to launch your app from Azure.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows the option to launch the app remotely.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows the launch app remotely.":::
 
 1. Select **Add**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/msgext-debug.png" alt-text="Screenshot shows the option to add the app.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/msgext-debug.png" alt-text="Screenshot shows the app being installed.":::
 
    The toolkit displays a message to indicate that the app is added to Teams.
 
@@ -95,6 +95,6 @@ Once the provisioning and deployment steps are complete:
 
 1. Select **Try it**.
 
-   The chat bot app loads the Message Extension app.
+   The message extension app is loaded in a chat bot app.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex.png" alt-text="Screenshot shows an app uploaded in Teams.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/msgext-app.png" alt-text="Screenshot shows an app sideloaded in Teams.":::
