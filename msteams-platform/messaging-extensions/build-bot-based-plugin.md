@@ -21,15 +21,15 @@ Microsoft 365 Chat, powered by an advanced processing and orchestration engine, 
 
 ## What is a plugin?
 
-A plugin allows Microsoft 365 Chat to interact directly with third-party data, apps, and services, enhancing its capabilities and broadening its range of capabilities. Plugins allow Microsoft 365 Chat to:
+A plugin allows Microsoft 365 Chat to interact directly with third-party data, apps, and services, enhance its capabilities, and broaden its range of capabilities. Plugins allow Microsoft 365 Chat to:
 
 * Fetch real-time information, such as the latest news coverage on a product launch.
 * Retrieve knowledge-based information, such as a team’s design files in Figma.
 * Perform actions on behalf of the user, such as creating a Contoso ticket.
 
-All Bot-based search message extensions are eligible for plugins support, subject to validation to ensure the plugin meets quality, security, privacy, and usefulness expectations.
+All bot-based search message extensions are eligible for plugin support, subject to validation to ensure the plugin meets quality, security, privacy, and usefulness expectations.
 
-You can create a bot-based message extension using Teams Toolkit for Visual Studio Code, Visual Studio, or CLI and extend the extension to function as a plugin in Microsoft 365 Chat.
+You can create a bot-based message extension using Teams Toolkit for Visual Studio Code, Visual Studio, or CLI and extend the message extension to function as a plugin in Microsoft 365 Chat.
 
 ## Prerequisites
 

@@ -11,14 +11,14 @@ ms.date: 10/18/2023
 # Guidelines to create or upgrade a message extension plugin for Microsoft 365 Chat
 
 > [!NOTE]
-> Microsoft 365 chat is available only in [**Public developer preview**](../resources/dev-preview/developer-preview-intro.md).
+> Microsoft 365 Chat is available only in [**Public developer preview**](../resources/dev-preview/developer-preview-intro.md).
 
-Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft 365 Chat to interact with APIs from other software and services through a bot. You can:
+Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft 365 Chat to interact with APIs from other software and services through a bot. With Microsoft 365 Chat, you can:
 
 * Search for the latest information or record, for example, the latest incident ticket or survey results.
-* Summarize information based on multiple records. For example, summarize all incidents tickets related to the project Northwind.
+* Summarize information based on multiple records. For example, summarize all incident tickets related to the project Northwind.
 
-We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Microsoft 365 Chat. Message extensions should support one or more search commands, as these are recognized by Microsoft 365 Chat as skills it can execute on behalf of the user.   Additionally, your extensions should meet the standards for compliance, performance, security, and user experience outlined in this article.
+We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Microsoft 365 Chat. Message extensions should support one or more search commands, as these are recognized by Microsoft 365 Chat as skills it can execute on behalf of the user. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in this article.
 
 :::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Microsoft 365 chat.":::
 
@@ -32,8 +32,6 @@ The requirements for building message extension plugins for Microsoft 365 Chat i
 > * [Enhance message extension to retrieve information through compound utterances](#compound-utterances)
 > * [Create rich Adaptive Card responses](#adaptive-card-response)
 
-The remainder of this article provides further guidance on how to meet these requirements.
-
 ## Define descriptions
 
 A good description offers a clear and concise summary of the app’s features and allows Microsoft 365 Chat to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets..**, the message extension plugin must be invoked from Microsoft 365 Chat.
@@ -46,15 +44,15 @@ Ensure that you adhere to the descriptions guidelines listed in the following ta
 
 | Action | Reason |
 | --- | --- |
-| :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Anti-Compete: Avoid using the name of any other plugin in both short and full descriptions. |
+| :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Anti-Compete: Avoid using the name of any other plugin in both short and long descriptions. |
 | :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Responsible AI: Avoid using inappropriate or offensive keywords. |
-| :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Prompt injections: Ensure that the Text doesn't lead to prompt injections. Additionally, the description must not contain symbols or text that indicate that it can be used as code for Prompt injection. Avoid using phrases, functions, and code that call an app recurrently. |
+| :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Prompt injections: Ensure that the text doesn't lead to prompt injections. Additionally, the description mustn't contain symbols or text that indicates that it can be used as code for prompt injection. Avoid using phrases, functions, and code that call an app recurrently. |
 
 ### App description
 
 Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Microsoft 365 Chat, app description must be modified to suit the following plugin requirements:
 
-* App long description must clearly explain how users can use a message extension plugin in Microsoft 365 Chat and what functionality they can expect. For example, Use Contoso cloud in Microsoft 365 Chat to search and summarize your tasks.
+* Long description must clearly explain how users can use a message extension plugin in Microsoft 365 Chat and what functionality they can expect. For example, Use Contoso cloud in Microsoft 365 Chat to search and summarize your tasks.
 * Short description must briefly describe the app's functionality in a natural language and can include name of the app.
 
 The following table lists the short description examples for each category:
@@ -250,9 +248,9 @@ The following table lists the command description examples for each category:
 
 ### Parameter description
 
-Each parameter supports five attributes and one attribute must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, Enums, acronyms, and output format.
+Each parameter supports five attributes and one attribute must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
 
-A good parameter description explains the requirements of the system in a natural language with output format. The following are a few examples of basic and advanced search requests for different categories:
+A good parameter description explains the requirements of the system in a natural language with output format. The following are a few examples of basic and advanced search requests for each category:
 
 # [Tasks](#tab/tasks)
 
@@ -388,11 +386,11 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 For Microsoft 365 Chat, a search-based message extension must support compound utterances to perform deep retrieval of accurate information. To enable compound utterances, we recommend that you expand the scope of search to handle two or more search parameters simultaneously by enabling multi-parameter support in app manifest (previously called Teams app manifest).
 
-The search parameters must have good descriptions with acceptable parameters, Enums, acronyms, and output format. For more information and examples, see [Parameter description](#parameter-description).
+The search parameters must have good descriptions with acceptable parameters, enums, acronyms, and output format. For more information and examples, see [Parameter description](#parameter-description).
 
 ## Adaptive Card response
 
-Message extensions respond to user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:
+Message extensions respond to a user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:
 
 * Adaptive Card response must include an Adaptive Card content and preview card information as part of the same template. [*Mandatory*]
 
@@ -491,9 +489,9 @@ Message extensions respond to user input with an Adaptive Card. An Adaptive Card
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-functional-action.png" alt-text="Screenshot shows an example of information title, additional user fields, and action button in an Adaptive Card response.":::
 
-* Adaptive Card must be presentable in Win32, Web, and Mobile (iOS and Android). [*Mandatory*]
+* Adaptive Card must be presentable in Win32, web, and mobile (iOS and Android). [*Mandatory*]
 
-* An Adaptive Card must contain at least one action, but no more than four actions. The following actions types are recommended: [*Mandatory*]
+* An Adaptive Card must contain at least one action, but not more than four actions. The following action types are recommended: [*Mandatory*]
 
   :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in the Microsoft 365 chat.":::
 
@@ -511,7 +509,7 @@ Message extensions respond to user input with an Adaptive Card. An Adaptive Card
 
 ## Technical requirements
 
-For a plugin to be successfully validated, invoked, and work seamlessly, ensure that it meets the following criteria:
+For a plugin to be validated, invoked, and work seamlessly, ensure that it meets the following criteria:
 
 | Criteria | Fulfillment |
 |---|---|
@@ -519,7 +517,7 @@ For a plugin to be successfully validated, invoked, and work seamlessly, ensure 
 |Microsoft 365 Channel| For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-bot).[*Mandatory*]|
 | Response Time | Response time must not exceed 9 seconds for 99 percent, 5 Seconds for 75 percent and 2 Seconds for 50 percent. [*Mandatory*] |
 | Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1000 times, it must provide a meaningful response 999 times. [*Mandatory*] |
-| Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier must not break. This requirement is only applicable to ISV apps and not apps built for your organization. [*Mandatory*] |
+| Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to ISV apps and not apps built for your organization. [*Mandatory*] |
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
 | Content Security Policy |If applicable, modify your Content Security Policy headers. [*Recommended*] |
 
