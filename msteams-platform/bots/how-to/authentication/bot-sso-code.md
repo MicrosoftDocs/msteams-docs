@@ -56,7 +56,7 @@ To update your app's code:
 
 1. Add code snippet for `TeamsSSOTokenExchangeMiddleware`.
 
-# [C#](#tab/cs1)
+   # [C#](#tab/cs1)
 
     Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
@@ -64,7 +64,7 @@ To update your app's code:
     base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
     ```
 
-# [JavaScript](#tab/js1)
+   # [JavaScript](#tab/js1)
 
     Add the following code snippet to `index.js` (or the equivalent class in your app's code):
 
@@ -81,7 +81,7 @@ To update your app's code:
 
 1. Use the following code snippet for requesting a token.
 
-# [C#](#tab/cs2)
+   # [C#](#tab/cs2)
 
     After you add the `AdapterWithErrorHandler.cs`, the following code must appear:
 
@@ -136,7 +136,7 @@ To update your app's code:
         }
     ```
 
-# [JavaScript](#tab/js2)
+   # [JavaScript](#tab/js2)
 
     After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, the following code must appear:
 
