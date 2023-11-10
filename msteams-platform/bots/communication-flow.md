@@ -93,3 +93,13 @@ It depends on the scenario. Messaging bots can be hosted on any infrastructure i
 <br>
 &nbsp;
 </details>
+
+## Next step
+
+> [Build bots for Teams](what-are-bots.md)
+> [Register a calling bot for Microsoft Teams](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/calls/register-calling-bot.html)
+> [Working with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview)
+
+## See also
+
+[Azure Architecture Center](/azure/architecture/)
