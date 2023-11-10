@@ -10,7 +10,7 @@ ms.date: 11/03/2023
 
 # Teams App Test Tool
 
-Teams App Test Tool (Test Tool) is a component integrated into the Teams Toolkit. The tool assists users to debug, test, and refine the app design of a Teams bot application. It provides a web-based chat environment that replicates the behavior, appearance, and user experience of Microsoft Teams. Test Tool is currently avaialble in pre-release version of Teams ToolKit. For more information see, [install a pre-release version](install-Teams-Toolkit.md#install-a-pre-release-version).
+Teams App Test Tool (Test Tool) is a component integrated into the Teams Toolkit. The tool assists users to debug, test, and refine the app design of a Teams bot application. It provides a web-based chat environment that replicates the behavior, appearance, and user experience of Microsoft Teams. Test Tool is currently available in prerelease version of Teams ToolKit. For more information, see [install a prerelease version](install-Teams-Toolkit.md#install-a-pre-release-version).
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
@@ -82,11 +82,11 @@ The testing of the bot sample, which displays the features supported by the Team
 
 1. Select **F5**.
 
-1. Type **help** command into input box. Bot responses in a browser window displays a list of commands.
+1. Type **help** command into input box. Bot responses in a browser window display a list of commands.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
-### Use custom cctivity
+### Use custom activity
 
 If your app handles events such as `conversationUpdate` and `reactionsAdded` by implementing handlers such as `onMembersAdded` and `onChannelDelete`, you can use mocked activity for updates. This removes the need to add users in a chat or delete a channel in Teams.
 
