@@ -1,7 +1,7 @@
 ---
-title: Debug your Teams app test tool
+title: Debug your Teams App Test Tool
 author: surbhigupta 
-description: In this module, learn how to debug your Teams app test tool and key features of Teams app test tool.
+description: In this module, learn how to debug your Teams App Test Tool and key features of Teams App Test Tool.
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
@@ -10,9 +10,9 @@ ms.date: 11/03/2023
 
 # Teams App Test Tool
 
-Teams App Test Tool, also known as the Test Tool, is a component integrated into the Teams Toolkit. This tool assists users in debugging, testing, and refining the app design of a Teams bot application. It provides a web-based chat environment that replicates the behavior, appearance, and user experience of Microsoft Teams.
+Teams App Test Tool, also known as the Test Tool, is a component integrated into the Teams Toolkit. The tool assists users in debugging, testing, and refining the app design of a Teams bot application. It provides a web-based chat environment that replicates the behavior, appearance, and user experience of Microsoft Teams.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams app test tool Adaptive Card.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
 ## Features
 
@@ -26,11 +26,11 @@ The Teams App Test Tool assists users in testing and debugging their Teams bot a
 
 1. **Rapid Inner-Loop Iterations**: Optimize the process of making changes to the app design and bot logic without having to redeploy the bot application to the cloud.
 
-1. **Mock Data and Activities**: The test tool makes it easy to accomplish a test for complex scenarios such as **Send a welcome message when a new member joins the channel** by using mock data and built-in and custom activity triggers.
+1. **Mock Data and Activities**: The Test Tool makes it easy to accomplish a test for complex scenarios such as **Send a welcome message when a new member joins the channel** by using mock data and built-in and custom activity triggers.
 
-1. **Reliable and Trustable**: The test tool is reliable as the Bot application UX [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card) utilizes the same rendering technology as in Microsoft Teams.
+1. **Reliable and Trustable**: The Test Tool is reliable as the Bot application UX [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card) utilizes the same rendering technology as in Microsoft Teams.
 
-1. **Integration with Existing Teams Bot Applications**: The test tool can be integrated with existing Teams bot applications that are built with [Bot Framework SDK](https://dev.botframework.com/).
+1. **Integration with Existing Teams Bot Applications**: The Test Tool can be integrated with existing Teams bot applications that are built with [Bot Framework SDK](https://dev.botframework.com/).
 
 1. **Support for Different Scopes**: The tool supports testing in different scopes (personal, team, group chat), allowing developers to ensure their bot works correctly in all the scopes.
 
@@ -44,7 +44,7 @@ The following are the limitations to Test Tool:
 
 1. The Test Tool doesn't process the app manifest, which means features that are only enabled through the manifest won't be accessible.
  
-1. The Test Tool doesn't support Single sign-on (SSO), mobile view, and meetings.
+1. The Test Tool doesn't support single sign-on (SSO), mobile view, and meetings.
 
 ## Explore Teams App Test Tool
 
@@ -60,19 +60,19 @@ The testing of the bot sample, which displays the features supported by the Team
 
 1. Select F5.
 
-A browser window pops out with list of options.
+A browser window display a list of commands.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams app test tool Adaptive Card.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
 ### Use Custom Activity
 
-If your app handles events such as conversationUpdate, reactionsAdded, etc., by implementing handlers such as onMembersAdded, onChannelDelete, etc., you can use mocked activity for updates. This removes the need to add users in a chat or delete a channel in Teams.
+If your app handles events such as conversationUpdate, reactionsAdded, and so on by implementing handlers such as onMembersAdded, onChannelDelete, and so on, you can use mocked activity for updates. This removes the need to add users in a chat or delete a channel in Teams.
 
 **Predefined Mocked Activities**
 
-The test tool has predefined activity types in the `Mock an Activity` menu dropdown list.
+The Test Tool has predefined activity types in the `Mock an Activity` dropdown list.
 
-1. Select a predefined activity, for example, `Add a user` and a pop-up appears to preview the activity handler.
+1. Select a predefined activity, for example, `Add a user` and a pop-up window appears to preview the activity handler.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mock-activity.png" alt-text="Screenshot shows the list of option under mock an activity.":::
 
@@ -100,13 +100,13 @@ The test tool has predefined activity types in the `Mock an Activity` menu dropd
 
 ### Use Config
 
-The customization of mock data in the Teams App Test Tool is achieved through the `.teamsapptesttool.yml` configuration file. This file enables developers to effectively interact with external APIs.
+The customization of mock data in the Teams App Test Tool is achieved through the `teamsapptesttool.yml` configuration file. This file enables developers to effectively interact with external APIs.
 
 **Use config file**
 
 The bot is installed into Teams and fetches inactive bugs from Azure DevOps. It identifies the owner's email address and sends personal notification chats.
 
-For the bot within the test tool, it's necessary to adapt the config file to utilize real email addresses that match Azure DevOps user email addresses. In the `.teamsapptesttool.yml` file, go to the users section and adjust the email properties as per user requests is shown in the snippet.
+For the bot within the Test Tool, it's necessary to adapt the config file to utilize real email addresses that match Azure DevOps user email addresses. In the `teamsapptesttool.yml` file, go to the users section and adjust the email properties as per user requests is shown in the snippet.
 
 ```yaml
 users:
@@ -121,7 +121,7 @@ users:
 
 **Default config**
 
-The test tool contains a built-in config file in project root folder.
+The Test Tool contains a built-in config file in project root folder.
 
 ```yaml
 # yaml-language-server: $schema=https://aka.ms/teams-app-test-tool-config/0.1.0/config.schema.json
@@ -214,7 +214,7 @@ The Test Tool shows a warning message in conversation and log panel when it dete
 &nbsp;
 </details>
 <details>
-<summary>Should I solely rely on the test tool to test my bot application?</summary>
+<summary>Should I solely rely on the Test Tool to test my bot application?</summary>
 
 No. We always recommend developers to test their bot application in the Microsoft Teams client before moving the application to production environment.
 <br>
