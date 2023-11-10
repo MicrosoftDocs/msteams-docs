@@ -38,7 +38,7 @@ The Teams App Test Tool assists users in testing and debugging their Teams bot a
 
 ### Limitations
 
-The following are the limitations: 
+The following are the limitations:
 
 1. Limited emulation: The tool attempts to emulate the behavior, appearance, and user experience of Microsoft Teams, but it doesn't capture every aspect of the Teams environment completely. There could be some variations in behavior between the tool and the actual Teams application.
 
