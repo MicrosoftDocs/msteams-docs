@@ -10,7 +10,11 @@ ms.date: 11/03/2023
 
 # Teams App Test Tool
 
-Teams App Test Tool (Test Tool) is a component integrated into the Teams Toolkit. The tool assists users to debug, test, and refine the app design of a Teams bot application. It provides a web-based chat environment that replicates the behavior, appearance, and user experience of Microsoft Teams. Test Tool is currently available in prerelease version of Teams ToolKit. For more information, see [install a prerelease version](install-Teams-Toolkit.md#install-a-pre-release-version).
+> [!NOTE]
+
+> Ensure the prerelease version of Teams ToolKit is installed. For more information, see [install a prerelease version](install-Teams-Toolkit.md#install-a-pre-release-version).
+
+Teams App Test Tool (Test Tool) is a component integrated into the Teams Toolkit. The tool assists users to debug, test, and refine the app design of a Teams bot application. It provides a web-based chat environment that replicates the behavior, appearance, and user experience of Microsoft Teams. 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
@@ -22,7 +26,7 @@ The Teams App Test Tool offers the following benefits:
 
 1. **Sandbox environment**: Sandbox environment emulates the behavior, look and user experience of Teams.
 
-1. **Tunneling**: Users don't need to set up a tunnel with [Ngrok](https://ngrok.com/download) or [Microsoft Dev Tunnel](/azure/developer/dev-tunnels/overview) to expose their local bot application to the internet.
+1. **Tunneling**: Tunnel service is not required to connect the local server.
 
 1. **Reduce local debugging**: Remove the [prerequisites](tools-prerequisites.md#accounts-to-build-your-teams-app) to secure a Microsoft 365 Developer tenant and the app uploading permissions before you debug the Teams bot applications.
 
@@ -46,7 +50,7 @@ The following are the limitations:
 
 1. The Test Tool doesn't support all other types of Bot application [Cards](../task-modules-and-cards/what-are-cards.md#cards).
 
-1. The Adaptive Card Previewer doesn't support the following Adaptive Card features:
+1. The Test Tool doesn't support the following Adaptive Card features:
 
    * [People Picker](../task-modules-and-cards/cards/people-picker.md)
    * [Typeahead search](../task-modules-and-cards/cards/dynamic-search.md)
@@ -62,23 +66,34 @@ The following are the limitations:
    * Meetings.
 
 1. **Limited emulation**
+
    | Features | Debug in Test Tool | Local debug |
    | --- | --- | --- |
    | Basic sending / receiving messages | Available | Available |
    | Bot Framework APIs (TeamsInfo.getPagedMembers()...) |Available (respond with mocked data) | Available |
    | Sending Teams events | Available (mocking activity) |Available |
-   | Typing indicator | work in progress | Available |
+   | Typing indicator | Not Available | Available |
    | Tab, Messaging Extension, Task Module, SSO, and non-Adaptive Cards | Not Available | Available |
 
 ### Teams Toolkit samples and templates
 
-The testing of the bot sample, which displays the features supported by the Teams App Test Tool, proceeds as follows:
+Test the bot sample, which displays the features supported by the Teams App Test Tool, as follows:
 
-1. Go to the source code and download the [bot sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/test-tool-sample-app).
+1. Open [bot sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/test-tool-sample-app).
+
+1. Select **Code**.
+
+1. From the dropdown menu, select **Open with GitHub Desktop**.
+
+   :::image type="content" source="../../assets/images/include-files/clone-repository.png" alt-text="Screenshot show the option to clone repository in local.":::
+
+1. Select **Clone**.
 
 1. Open the project folder in Visual Studio Code with Teams Toolkit.
 
-1. Select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool** in dropdown list.
+1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool** in dropdown list.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
 
 1. Select **F5**.
 
@@ -90,11 +105,11 @@ A webpage opens with a list of commands.
 
 ### Use custom activity
 
-If your app handles events such as `conversationUpdate` and `reactionsAdded` by implementing handlers such as `onMembersAdded` and `onChannelDelete`, you can use mocked activity for updates. This removes the need to add users in a chat or delete a channel in Teams.
-
 **Predefined mocked activities**
 
 The Test Tool has predefined activity types in the **Mock an Activity** dropdown list.
+
+To test the predefined mocked activities, follow these steps:
 
 1. Select **Mock an Activity** > **Add a user** and a pop-up window appears to preview the activity handler.
 
@@ -110,11 +125,29 @@ The Test Tool has predefined activity types in the **Mock an Activity** dropdown
 
 **Customized mocked activities**
 
+The Test Tool has customized option in the **Mock an Activity** dropdown list.
+
+To test the customized mocked activities, follow these steps:
+
 1. Select **Mock an Activity** > **Custom activity**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mock-activity.png" alt-text="Screenshot shows the list of option under mock an activity.":::
 
-1. Add `reactionsAdded` as customized activity and select **Send Activity**.
+1. Add `messageReaction` to customize the activity under the property `type` and following is an example:
+
+    ```json
+    {
+      "type": "messageReaction",
+      "reactionsAdded": [
+        {
+          "type": "like"
+        }
+      ],
+      "replyToId": "d60fd1cb-3e8f-44ef-849c-404806ba1b47"
+    }
+    ```
+
+1. Select **Send Activity**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/custom-activity-request.png" alt-text="Screenshot shows the option to send activity after customization on mock activity.":::
 
@@ -122,9 +155,9 @@ The Test Tool has predefined activity types in the **Mock an Activity** dropdown
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/custom-activity-response.png" alt-text="Screenshot shows the response of custom mock activity.":::
 
-### Use config
+### Customize Teams context
 
-The customization of mock data in the Teams App Test Tool is achieved through the `teamsapptesttool.yml` configuration file. This file enables developers to effectively interact with external APIs.
+The config file allows you to customize Teams context information such as chats, teams, and users. It provides mockup data for testing Bot Framework APIs or bot builder SDK methods like TeamsInfo.getTeamMembers. If your bot code uses these APIs, you can modify this file to alter the API response.
 
 **Default config**
 
@@ -200,32 +233,34 @@ team:
       name: Announcements
 ```
 
-**Use config file**
+**Update config file**
 
 A bot is installed into Teams and fetches inactive bugs and identifies the owner's email address and sends personal notification chats.
 
-For the bot within the Test Tool, it's necessary to adapt the config file to utilize real email addresses that match the user email addresses and steps as follows:
+For the bot within the Test Tool, it's necessary to adapt the config file to utilize real email addresses that match the user email addresses.
 
-1. In the `teamsapptesttool.yml` file, go to the users section.
+To update the config file, follow these steps:
 
-1. Update the email properties with the required user.
+1. In the `teamsapptesttool.yml` file, go to the `users` section.
 
-```yaml
-users:
-    - id: user-id-1
-      name: Megan Bowen
-      userPrincipleName: meganb@example.com
-      aadObjectId: 00000000-0000-0000-0000-0000000000021
-      givenName: Megan
-      surname: Bowen
-      email: some-real-user@real-domain.onmicrosoft.com
-```
+1. Update the `name`, `userPrincipleName`, and `email` properties with the required user.
+
+    ```yaml
+    users:
+        - id: user-id-1
+          name: Megan Bowen
+          userPrincipleName: meganb@example.com
+          aadObjectId: 00000000-0000-0000-0000-0000000000021
+          givenName: Megan
+          surname: Bowen
+          email: some-real-user@real-domain.onmicrosoft.com
+    ```
 1. Save the file and select **F5** to debug in Test Tool.
 
 ## FAQ
 
 <details>
-<summary>What should I do when some features I use in my bot application aren't supported in the Test Tool?</summary>
+<summary>What to do when some features I use in my bot application aren't supported in the Test Tool?</summary>
 
 You can always use the [Teams client](https://teams.microsoft.com/) to test the features that aren't supported in the Test Tool. If you're developing with Teams Toolkit, select the option `Debug (Edge)` or `Debug (Chrome)` to test your application in the Teams client.
 <br>
@@ -234,15 +269,15 @@ You can always use the [Teams client](https://teams.microsoft.com/) to test the 
 <details>
 <summary>How would I notice if some features aren't supported in the Test Tool?</summary>
 
-The Test Tool shows a warning message in conversation and log panel when it detects some features aren't supported.
-![Cliff](https://github.com/OfficeDev/TeamsFx/assets/11220663/130118cf-c2e1-4b49-8f4a-919cb4c50e0a)
+The Test Tool shows a warning message in conversation and log panel when it detects some features aren't supported.features-not-supported
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/features-not-supported.png" alt-text="Screenshot shows the warning message that the feature isn't supported.":::
 <br>
 &nbsp;
 </details>
 <details>
-<summary>Should I solely rely on the Test Tool to test my bot application?</summary>
+<summary>Is it recommended to use only the Test Tool for testing my bot application?</summary>
 
-No. We always recommend developers to test their bot application in the Teams client before moving the application to production environment.
+No. We always recommend users to test their bot application in the Teams client before moving the application to production environment.
 <br>
 &nbsp;
 </details>
