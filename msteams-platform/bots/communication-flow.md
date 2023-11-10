@@ -94,10 +94,15 @@ It depends on the scenario. Messaging bots can be hosted on any infrastructure i
 &nbsp;
 </details>
 
-## Next step
+## Next steps
 
+> [!div class="nextstepaction"]
 > [Build bots for Teams](what-are-bots.md)
+
+> [!div class="nextstepaction"]
 > [Register a calling bot for Microsoft Teams](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/calls/register-calling-bot.html)
+
+> [!div class="nextstepaction"]
 > [Working with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview)
 
 ## See also
