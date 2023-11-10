@@ -68,7 +68,7 @@ When you complete local debug, you can select **Stop (Shift+F5)** or **[Alt] Dis
 
 ### Teams App Test Tool
 
-Teams App Test Tool, also known as the Test Tool, is a component integrated into the Teams Toolkit. The tool assists developers in debugging, testing, and refining the app design of a Teams bot application. It provides a web-based chat environment that replicates the behavior, appearance, and user experience of Microsoft Teams.
+Teams App Test Tool ( Test Tool) is a component integrated into the Teams Toolkit. The tool assists developers to debug, test, and refine the app design of a Teams bot application. It provides a web-based chat environment that replicates the behavior, appearance, and user experience of Microsoft Teams.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
@@ -117,7 +117,7 @@ SECRET_BOT_PASSWORD={YOUR_OWN_BOT_PASSWORD}
 
 </details>
 
-### Customize Scenarios
+### Customize scenarios
 
 Here's a list of debug scenarios that you can use:
 <br>
