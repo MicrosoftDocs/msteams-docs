@@ -11,8 +11,8 @@ ms.date: 11/03/2023
 # Teams App Test Tool
 
 > [!NOTE]
-
-> Ensure the prerelease version of Teams ToolKit is installed. For more information, see [install a prerelease version](install-Teams-Toolkit.md#install-a-pre-release-version).
+>
+> Ensure the prerelease version of Teams Toolkit is installed. For more information, see [install a prerelease version](install-Teams-Toolkit.md#install-a-pre-release-version).
 
 Teams App Test Tool (Test Tool) is a component integrated into the Teams Toolkit. The tool assists users to debug, test, and refine the app design of a Teams bot application. It provides a web-based chat environment that replicates the behavior, appearance, and user experience of Microsoft Teams. 
 
@@ -79,13 +79,13 @@ The following are the limitations:
 
 Test the bot sample, which displays the features supported by the Teams App Test Tool, as follows:
 
-1. Open [bot sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/test-tool-sample-app).
+1. Open [bot sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3).
 
 1. Select **Code**.
 
 1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-   :::image type="content" source="../../assets/images/include-files/clone-repository.png" alt-text="Screenshot show the option to clone repository in local.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool-clone-repository.png" alt-text="Screenshot show the option to clone repository in local.":::
 
 1. Select **Clone**.
 
