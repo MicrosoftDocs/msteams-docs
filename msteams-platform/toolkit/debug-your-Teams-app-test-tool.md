@@ -34,7 +34,7 @@ The Teams App Test Tool assists users in testing and debugging their Teams bot a
 
 1. **Support for Different Scopes**: The tool supports testing in different scopes (personal, team, group chat), allowing developers to ensure their bot works correctly in all the scopes.
 
-## Limitations: 
+## Limitations
 
 The following are the limitations to Test Tool: 
 
@@ -60,7 +60,7 @@ The testing of the bot sample, which displays the features supported by the Team
 
 1. Select F5.
 
-A browser window display a list of commands.
+A browser window displays a list of commands.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
