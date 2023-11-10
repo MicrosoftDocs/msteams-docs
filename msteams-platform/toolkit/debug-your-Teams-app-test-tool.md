@@ -40,7 +40,7 @@ The following are the limitations to Test Tool:
 
 1. Limited Emulation: The tool attempts to emulate the behavior, appearance, and user experience of Microsoft Teams, but it doesn't capture every aspect of the Teams environment completely. There could be some variations in behavior between the tool and the actual Teams application.
 
-1. The Test Tool doesn't support all other types of Bot application UX [Cards](https://learn.microsoft.com/microsoftteams/platform/task-modules-and-cards/what-are-cards) other than Adaptive Cards.
+1. The Test Tool doesn't support all other types of Bot application UX [Cards](../task-modules-and-cards/what-are-cards.md#cards).
 
 1. The Test Tool doesn't process the app manifest, which means features that are only enabled through the manifest won't be accessible.
  
@@ -66,17 +66,17 @@ A browser window display a list of commands.
 
 ### Use Custom Activity
 
-If your app handles events such as conversationUpdate, reactionsAdded, and so on by implementing handlers such as onMembersAdded, onChannelDelete, and so on, you can use mocked activity for updates. This removes the need to add users in a chat or delete a channel in Teams.
+If your app handles events such as `conversationUpdate` and `reactionsAdded` by implementing handlers such as `onMembersAdded` and `onChannelDelete`, you can use mocked activity for updates. This removes the need to add users in a chat or delete a channel in Teams.
 
 **Predefined Mocked Activities**
 
 The Test Tool has predefined activity types in the `Mock an Activity` dropdown list.
 
-1. Select a predefined activity, for example, `Add a user` and a pop-up window appears to preview the activity handler.
+1. Select a predefined activity, **Add a user** and a pop-up window appears to preview the activity handler.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mock-activity.png" alt-text="Screenshot shows the list of option under mock an activity.":::
 
-1. Select `Send Activity`. 
+1. Select **Send Activity**. 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-a-user-request.png" alt-text="Scrrenshot shows the option to send activity for predefined mock activity add user.":::
 
@@ -90,7 +90,7 @@ The Test Tool has predefined activity types in the `Mock an Activity` dropdown l
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mock-activity.png" alt-text="Screenshot shows the list of option under mock an activity.":::
 
-1. Add `reactionsAdded` as customized activity and select `Send Activity`.
+1. Add `reactionsAdded` as customized activity and select **Send Activity**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/custom-activity-request.png" alt-text="Screenshot shows the option to send activity after customization on mock activity.":::
 
@@ -193,8 +193,9 @@ team:
       name: Announcements
 ```
 
-### Use Test Tool in Existing App(SBS)
+## Step-by-step guide
 
+Follow the [step-by-step]() guide to build a AI chat bot, and learn to test the Test Tool.
 
 ## FAQ
 
@@ -224,4 +225,7 @@ No. We always recommend developers to test their bot application in the Microsof
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Build your first app using Teams AI library](sbs-botbuilder-conversation-AI.yml)
+* [Install Teams Toolkit](install-Teams-Toolkit.md)
+* [Build your first app using Teams AI library](../sbs-botbuilder-conversation-AI.yml)
+* [Teams AI library](../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
+* [TeamsFx command line interface](TeamsFx-CLI.md)
