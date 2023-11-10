@@ -281,7 +281,7 @@ Don't include domains outside of your organization's control (including wildcard
 * OpenAPI URLs must be under partner control.
 
   > [!NOTE]
-  > We should also link to the WIP doc on guidelines to create a message plug under the newly created Teams apps extensible as Microsoft 365 Copilot plugin section.  Please run grammar check and structure this content better.
+  > We should also link to the WIP doc on guidelines to create a message plug under the newly created Teams apps extensible as Microsoft 365 Chat plugin section.  Please run grammar check and structure this content better.
 
 * Following External Domains aren't allowed: [*Mandatory Fix*]
   * *.azurewebsites.net
@@ -1778,7 +1778,7 @@ The app must terminate the user account instance when the user is switched or lo
 
 [Back to top](#teams-store-validation-guidelines)
 
-## Teams apps extensible as Microsoft 365 Copilot plugin
+## Teams apps extensible as Microsoft 365 Chat plugin
 
 * App packages are correctly formatted and adhere to the manifest schema 1.13 or later.
 * App must pass the [responsible AI checks.](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements)
@@ -1808,19 +1808,19 @@ The long description of an app must clearly call out the following:
 
 ### Response Quality
 
-* The mandatory fields in Microsoft 365 Copilot Adaptive Card response must include Information title and at least two additional useful fields of your choice, for example, date modified, author, status, and flags. Both the preview and content must be part of a single response.
+* The mandatory fields in Microsoft 365 Chat Adaptive Card response must include Information title and at least two additional useful fields of your choice, for example, date modified, author, status, and flags. Both the preview and content must be part of a single response.
 
-   :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Microsoft 365 Copilot app response contains Preview and Content in the same response. ":::
+   :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Microsoft 365 Chat app response contains Preview and Content in the same response. ":::
 
-* Adaptive Cards in Microsoft 365 Copilot response must have at least one action button.
-* Action buttons present in Microsoft 365 Copilot response adaptive cards must be functional.
+* Adaptive Cards in Microsoft 365 Chat response must have at least one action button.
+* Action buttons present in Microsoft 365 Chat response adaptive cards must be functional.
 
   :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-functional-action.png" alt-text="Screenshot shows an example of information title, additional user fields, and action button in an Adaptive Card response.":::
 
-* Microsoft 365 Copilot must respond accurately and not display an error when a user prompts with a single parameter.
-* Microsoft 365 Copilot must respond accurately and not show an error when a user prompts with a multi parameter.
-* Microsoft 365 Copilot must respond accurately and not show an error when a user prompts with a follow-up.
-* Message extension must contain at least two parameters for enhanced user experience in Microsoft 365 Copilot.
+* Microsoft 365 Chat must respond accurately and not display an error when a user prompts with a single parameter.
+* Microsoft 365 Chat must respond accurately and not show an error when a user prompts with a multi parameter.
+* Microsoft 365 Chat must respond accurately and not show an error when a user prompts with a follow-up.
+* Message extension must contain at least two parameters for enhanced user experience in Microsoft 365 Chat.
 
 ## Next step
 

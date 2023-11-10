@@ -8,7 +8,7 @@ ms.author: anclear
 ms.date: 09/07/2023
 ---
 
-# Extend bot-based message extension as plugin for Copilot
+# Extend bot-based message extension as plugin for Microsoft 365 Chat
 
 > [!NOTE]
 >
@@ -29,11 +29,11 @@ A plugin allows Microsoft 365 Chat to interact directly with third-party data, a
 
 All Bot-based search message extensions are eligible for plugins support, subject to validation to ensure the plugin meets quality, security, privacy, and usefulness expectations.
 
-You can create a bot-based message extension using Teams Toolkit for Visual Studio Code, Visual Studio, or CLI and extend the extension to function as a plugin in Copilot.
+You can create a bot-based message extension using Teams Toolkit for Visual Studio Code, Visual Studio, or CLI and extend the extension to function as a plugin in Microsoft 365 Chat.
 
 ## Prerequisites
 
-Before you get started, ensure that you're familiar with the following standards and guidelines for building message extension Copilot plugins:
+Before you get started, ensure that you're familiar with the following standards and guidelines for building message extension plugins for Microsoft 365 Chat:
 
 * Standards for compliance, performance, security, and user experience outlined in [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-microsoft-365-copilot-plugin).
 
@@ -152,7 +152,7 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from copilot.":::
 
 > [!NOTE]
-> This prompt may not always make Copilot include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Chat response and leave a message tagged with [MessageExtension].
+> This prompt may not always make Microsoft 365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Chat response and leave a message tagged with [MessageExtension].
 
 # [Toolkit CLI](#tab/toolkit-cli)
 

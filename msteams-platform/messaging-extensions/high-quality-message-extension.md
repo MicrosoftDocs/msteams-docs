@@ -1,6 +1,6 @@
 ---
 title: Bot-based message extension plugin guidelines
-description: Learn about the guidelines and criteria to extend your message extension as a plugin for Copilot.
+description: Learn about the guidelines and criteria to extend your message extension as a plugin for Microsoft 365 Chat.
 ms.topic: how-to
 author: v-preethah
 ms.author: surbhigupta
@@ -8,23 +8,23 @@ ms.localizationpriority: high
 ms.date: 10/18/2023
 ---
 
-# Guidelines to create or upgrade a message extension plugin for Copilot
+# Guidelines to create or upgrade a message extension plugin for Microsoft 365 Chat
 
 > [!NOTE]
 > Microsoft 365 chat is available only in [**Public developer preview**](../resources/dev-preview/developer-preview-intro.md).
 
-Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Copilot to interact with APIs from other software and services through a bot. You can:
+Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft 365 Chat to interact with APIs from other software and services through a bot. You can:
 
 * Search for the latest information or record, for example, the latest incident ticket or survey results.
 * Summarize information based on multiple records. For example, summarize all incidents tickets related to the project Northwind.
 
-We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Copilot. Message extensions should support one or more search commands, as these are recognized by Copilot as skills it can execute on behalf of the user.   Additionally, your extensions should meet the standards for compliance, performance, security, and user experience outlined in this article.
+We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Microsoft 365 Chat. Message extensions should support one or more search commands, as these are recognized by Microsoft 365 Chat as skills it can execute on behalf of the user.   Additionally, your extensions should meet the standards for compliance, performance, security, and user experience outlined in this article.
 
 :::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Microsoft 365 chat.":::
 
 ## Mandatory requirements
 
-The requirements for building message extension Copilot plugins include:
+The requirements for building message extension plugins for Microsoft 365 Chat include:
 
 > [!div class="checklist"]
 >
@@ -36,11 +36,11 @@ The remainder of this article provides further guidance on how to meet these req
 
 ## Define descriptions
 
-A good description offers a clear and concise summary of the app’s features and allows Copilot to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets..**, the message extension plugin must be invoked from Copilot.
+A good description offers a clear and concise summary of the app’s features and allows Microsoft 365 Chat to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets..**, the message extension plugin must be invoked from Microsoft 365 Chat.
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as a plugin in Copilot.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as a plugin in Microsoft 365 Chat.":::
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in Copilot.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in Microsoft 365 Chat.":::
 
 Ensure that you adhere to the descriptions guidelines listed in the following table:
 
@@ -52,9 +52,9 @@ Ensure that you adhere to the descriptions guidelines listed in the following ta
 
 ### App description
 
-Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Copilot, app description must be modified to suit the following plugin requirements:
+Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Microsoft 365 Chat, app description must be modified to suit the following plugin requirements:
 
-* App long description must clearly explain how users can use a message extension plugin in Copilot and what functionality they can expect. For example, Use Contoso cloud in Copilot to search and summarize your tasks.
+* App long description must clearly explain how users can use a message extension plugin in Microsoft 365 Chat and what functionality they can expect. For example, Use Contoso cloud in Microsoft 365 Chat to search and summarize your tasks.
 * Short description must briefly describe the app's functionality in a natural language and can include name of the app.
 
 The following table lists the short description examples for each category:
@@ -384,9 +384,9 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 ## Compound Utterances
 
 > [!NOTE]
-> Search through task module isn't supported in Copilot.
+> Search through task module isn't supported in Microsoft 365 Chat.
 
-For Copilot, a search-based message extension must support compound utterances to perform deep retrieval of accurate information. To enable compound utterances, we recommend that you expand the scope of search to handle two or more search parameters simultaneously by enabling multi-parameter support in app manifest (previously called Teams app manifest).
+For Microsoft 365 Chat, a search-based message extension must support compound utterances to perform deep retrieval of accurate information. To enable compound utterances, we recommend that you expand the scope of search to handle two or more search parameters simultaneously by enabling multi-parameter support in app manifest (previously called Teams app manifest).
 
 The search parameters must have good descriptions with acceptable parameters, Enums, acronyms, and output format. For more information and examples, see [Parameter description](#parameter-description).
 
@@ -396,7 +396,7 @@ Message extensions respond to user input with an Adaptive Card. An Adaptive Card
 
 * Adaptive Card response must include an Adaptive Card content and preview card information as part of the same template. [*Mandatory*]
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Microsoft 365 Copilot app response contains Preview and Content in the same response. ":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Microsoft 365 Chat app response contains Preview and Content in the same response. ":::
 
   <details><summary>Adaptive Card response example</summary>
 
@@ -518,7 +518,7 @@ For a plugin to be successfully validated, invoked, and work seamlessly, ensure 
 | Manifest version | App manifest version must be 1.13 or later. [*Mandatory*] |
 |Microsoft 365 Channel| For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-bot).[*Mandatory*]|
 | Response Time | Response time must not exceed 9 seconds for 99 percent, 5 Seconds for 75 percent and 2 Seconds for 50 percent. [*Mandatory*] |
-| Reliability | Apps must maintain 99.9% availability. For instance, if Copilot calls a plugin 1000 times, it must provide a meaningful response 999 times. [*Mandatory*] |
+| Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1000 times, it must provide a meaningful response 999 times. [*Mandatory*] |
 | Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier must not break. This requirement is only applicable to ISV apps and not apps built for your organization. [*Mandatory*] |
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
 | Content Security Policy |If applicable, modify your Content Security Policy headers. [*Recommended*] |
