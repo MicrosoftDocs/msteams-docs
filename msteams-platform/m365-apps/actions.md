@@ -50,6 +50,13 @@ Currently supported handler:
 * openDialog: This handler directs users to a dialog, offering a dedicated and contextualized interface for interacting with your app's features without opening the full app. This ensures a focused and efficient workflow, allowing users to complete tasks seamlessly within their current context.
 * openPage: By using the openPage handler you can drive users to your app's dedicated pages(personal tab).
 
+## How to build Actions
+
+To build Actions to your existing Teams app follow these steps:
+
+1. Update app manifest
+1.
+
 ## Actions user scenarios
 
 Let us walk through a user scenario of how users might interact with your app through Actions you develop and how the handler affects the workflow.
