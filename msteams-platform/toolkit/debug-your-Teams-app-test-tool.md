@@ -18,27 +18,27 @@ Teams App Test Tool, also known as the Test Tool, is a component integrated into
 
 The Teams App Test Tool assists users in testing and debugging their Teams bot applications and following are the key features:
 
-1. **Sandbox Environment**: The tool provides a web-based chat environment that emulates the behavior, look, and user experience of Microsoft Teams. This tool allows users to test and debug their bot application in a controlled environment.
+1. **Sandbox environment**: The tool provides a web-based chat environment that emulates the behavior, look, and user experience of Microsoft Teams. This tool allows users to test and debug their bot application in a controlled environment.
 
 1. **Tunneling**: With the Test Tool, users don't need to set up a tunnel with [Ngrok](https://ngrok.com/download) or [Microsoft Dev Tunnel](/azure/developer/dev-tunnels/overview)to expose their local bot application to the internet.
 
-1. **Reduce Local Debugging**: Ensure you meet the [prerequisites](tools-prerequisites.md#accounts-to-build-your-teams-app) to secure a Microsoft 365 Developer tenant and the app uploading permissions before you debug the Teams bot applications.
+1. **Reduce local debugging**: Ensure you meet the [prerequisites](tools-prerequisites.md#accounts-to-build-your-teams-app) to secure a Microsoft 365 Developer tenant and the app uploading permissions before you debug the Teams bot applications.
 
-1. **Rapid Inner-Loop Iterations**: Optimize the process of making changes to the app design and bot logic without having to redeploy the bot application to the cloud.
+1. **Rapid inner-loop tterations**: Optimize the process of making changes to the app design and bot logic without having to redeploy the bot application to the cloud.
 
-1. **Mock Data and Activities**: The Test Tool makes it easy to accomplish a test for complex scenarios such as **Send a welcome message when a new member joins the channel** by using mock data and built-in and custom activity triggers.
+1. **Mock data and activities**: The Test Tool makes it easy to accomplish a test for complex scenarios such as **Send a welcome message when a new member joins the channel** by using mock data and built-in and custom activity triggers.
 
-1. **Reliable and Trustable**: The Test Tool is reliable as the Bot application UX [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card) utilizes the same rendering technology as in Microsoft Teams.
+1. **Reliable and trustable**: The Test Tool is reliable as the Bot application UX [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card) utilizes the same rendering technology as in Microsoft Teams.
 
-1. **Integration with Existing Teams Bot Applications**: The Test Tool can be integrated with existing Teams bot applications that are built with [Bot Framework SDK](https://dev.botframework.com/).
+1. **Integration with existing Teams bot applications**: The Test Tool can be integrated with existing Teams bot applications that are built with [Bot Framework SDK](https://dev.botframework.com/).
 
-1. **Support for Different Scopes**: The tool supports testing in different scopes (personal, team, group chat), allowing developers to ensure their bot works correctly in all the scopes.
+1. **Support for different scopes**: The tool supports testing in different scopes (personal, team, group chat), allowing developers to ensure their bot works correctly in all the scopes.
 
 ## Limitations
 
 The following are the limitations to Test Tool: 
 
-1. Limited Emulation: The tool attempts to emulate the behavior, appearance, and user experience of Microsoft Teams, but it doesn't capture every aspect of the Teams environment completely. There could be some variations in behavior between the tool and the actual Teams application.
+1. Limited emulation: The tool attempts to emulate the behavior, appearance, and user experience of Microsoft Teams, but it doesn't capture every aspect of the Teams environment completely. There could be some variations in behavior between the tool and the actual Teams application.
 
 1. The Test Tool doesn't support all other types of Bot application UX [Cards](../task-modules-and-cards/what-are-cards.md#cards).
 
@@ -64,11 +64,11 @@ A browser window displays a list of commands.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
-### Use Custom Activity
+### Use custom cctivity
 
 If your app handles events such as `conversationUpdate` and `reactionsAdded` by implementing handlers such as `onMembersAdded` and `onChannelDelete`, you can use mocked activity for updates. This removes the need to add users in a chat or delete a channel in Teams.
 
-**Predefined Mocked Activities**
+**Predefined mocked activities**
 
 The Test Tool has predefined activity types in the `Mock an Activity` dropdown list.
 
@@ -84,7 +84,7 @@ The Test Tool has predefined activity types in the `Mock an Activity` dropdown l
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-a-user-response.png" alt-text="Screenshot shows the response of predefined mock activity add user.":::
 
-**Customized Mocked Activities**
+**Customized mocked activities**
 
 1. Select **Custom activity**.
 
@@ -98,7 +98,7 @@ The Test Tool has predefined activity types in the `Mock an Activity` dropdown l
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/custom-activity-response.png" alt-text="Screenshot shows the response of custom mock activity.":::
 
-### Use Config
+### Use config
 
 The customization of mock data in the Teams App Test Tool is achieved through the `teamsapptesttool.yml` configuration file. This file enables developers to effectively interact with external APIs.
 
