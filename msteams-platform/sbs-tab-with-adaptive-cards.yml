@@ -317,13 +317,13 @@ items:
 
       1. In **New Connection Setting**, enter the following details:
 
-          * **Name** enter **name for your new connection setting. You can use the name in the settings of your bot service code**.
-          * **Service Provider** select **Microsoft Entra V2**.
-          * **Client ID** update your **Microsoft App ID**.
-          * **Client secret**  update the value of the `client secret ID**.
-          * **Token Exchange URL** use the **Application ID URI**.
-          * **Tenant ID** enter **common**.
-          * **Scopes** enter **User.Read**.
+          * **Name**: Enter the name for your new connection setting. You can use the name in the settings of your bot service code.
+          * **Service Provider**: Select **Azure Active Directory v2**.
+          * **Client ID**: Update your **Microsoft App ID**.
+          * **Client secret**: Update the value of the **client secret ID**.
+          * **Token Exchange URL**: Use the **Application ID URI**.
+          * **Tenant ID**: Enter **common**.
+          * **Scopes**: Enter **User.Read**.
      
       1. Select **Save**.
 

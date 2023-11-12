@@ -419,7 +419,7 @@ items:
             }        
             ```
 
-            :::image type="content" source="assets/images/sbs-create-a-new-dashboard/aad-app-manifest.png" alt-text="Screenshot shows the azure active dirctory code addition. ":::
+            :::image type="content" source="assets/images/sbs-create-a-new-dashboard/aad-app-manifest.png" alt-text="Screenshot shows the azure active directory code addition. ":::
 
         </details>
 
@@ -524,7 +524,7 @@ items:
         </details>   
 
         <details>
-        <summary>4. Update Source Code.</summary>       
+        <summary>4. Update source code.</summary>       
 
         1. Create **auth-start.html** and **auth-end.html** files in **public** folder.
         
@@ -538,7 +538,7 @@ items:
 
             ```html
               <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
-              <!--If you're not familiar with this, do not alter or remove this file from your project.-->
+              <!--If you're not familiar with this, don't alter or remove this file from your project.-->
               <html>
                 <head>
                   <title>Login Start Page</title>
@@ -594,7 +594,7 @@ items:
           
             ```html
               <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
-              <!--If you're not familiar with this, do not alter or remove this file from your project.-->
+              <!--If you're not familiar with this, don't alter or remove this file from your project.-->
               <html>
                 <head>
                   <title>Login End Page</title>
@@ -665,7 +665,7 @@ items:
 
         ```typescript
         /**
-          * Retrive sample data
+          * Retrieve sample data
           * @returns data for list widget
           */
         import {TeamsUserCredentialContext} from "../internal/singletonContext";
@@ -709,9 +709,9 @@ items:
         }
         ```
 
-      1. Go to **EXPLORER** > **src** > **services** > **ListWidget.tsx**.
+      1. Go to **EXPLORER** > **src** > **widgets** > **ListWidget.tsx**.
 
-      1. Update the `export default class ListWidget()` to add user pofile widget.
+      1. Update the `export default class ListWidget()` to add user profile widget.
 
          ```typescript
           export default class ListWidget extends BaseWidget<any, IListWidgetState> {
