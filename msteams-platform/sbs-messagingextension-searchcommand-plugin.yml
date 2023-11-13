@@ -192,7 +192,7 @@ items:
 
         Teams Toolkit creates the app in a few seconds.
 
-        :::image type="content" source="/assets/images/Copilot/bot-based-plugin-sbs-ttk-creates-app.png" alt-text="Screenshot showing the app created." lightbox="assets/images/teams-toolkit-v2/first-msgext/app-created-mex.png":::
+        :::image type="content" source="assets/images/Copilot/bot-based-plugin-sbs-ttk-creates-app.png" alt-text="Screenshot showing the app created." lightbox="assets/images/teams-toolkit-v2/first-msgext/app-created-mex.png":::
 
         After your app is created, the Teams Toolkit displays the following message: 
 
@@ -211,7 +211,7 @@ items:
 
     A message extension uses the Bot Framework. You use it to interact with your service via a conversation. After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
-    :::image type="content" source="/assets/images/Copilot/bot-based-plugin-sbs-source-code.png" alt-text="Screenshot shows all the files available in the message extension project created in Teams Toolkit.":::
+    :::image type="content" source="assets/images/Copilot/bot-based-plugin-sbs-source-code.png" alt-text="Screenshot shows all the files available in the message extension project created in Teams Toolkit.":::
 
     | Folder / File | Contents |
     | --- | --- |
