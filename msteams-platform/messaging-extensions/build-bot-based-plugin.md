@@ -73,24 +73,26 @@ To run your message extension in Teams:
 1. Go to a chat and select **Actions and apps**.
 1. From the message extension fly-out menu, enter the name of your message extension in the search box.
 1. Select your message extension and enter your search query.
+1. Select a product from the list. Teams unfurls the product as an Adaptive Card in the message compose area.
+1. Select **Send**.
 
 **Trigger message extension in Microsoft 365 Chat**
 
 To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
 1. Select **Apps**.
-1. Search for Microsoft 365 Chat.
+1. Search for **M365 Chat** and open the M365 Chat app.
 1. Select **Plugins**.
-1. From the list of plugins, turn on the toggle for your app.
+1. From the list of plugins, turn on the toggle for your message extension.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-1. From the compose message space, send a message to Microsoft 365 Chat to find a NuGet package information. For example, find the NuGet package info on Microsoft.CSharp.
+1. From the compose message space, send a message to Microsoft 365 Chat to find a NuGet package information. For example, find Contoso product in Contoso-local.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from copilot.":::
 
 > [!NOTE]
-> This prompt may not always make Microsoft 365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Chat response and leave a message tagged with [MessageExtension].
+> This prompt may not always make Microsoft 365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Chat response and leave a message.
 
 # [Visual Studio](#tab/visual-studio)
 
@@ -109,18 +111,18 @@ To create a bot-based search message extension plugin using Visual Studio, follo
 
 1. In the debug dropdown menu, select **Dev Tunnels** > **Create a Tunnel**.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VS-dev-tunnel.png" alt-text="Screenshot shows the create a tunnel option in Visual Studio.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-VS-dev-tunnel.png" alt-text="Screenshot shows the create a tunnel option in Visual Studio."::: </br>
 
-   1. Select the Account to use to create the tunnel. Azure, Microsoft Account (MSA), and GitHub are the account types that are supported.
-   1. Name: Enter a name for the tunnel.
-   1. Tunnel Type: Select Persistent or Temporary.
-   1. Access: Select Public.
+   1. Select the account to create the tunnel. **Azure**, **Microsoft Account (MSA)**, and **GitHub** are the account types that are supported.
+   1. **Name**: Enter a name for the tunnel.
+   1. **Tunnel Type**: Select **Persistent** or **Temporary**.
+   1. **Access**: Select **Public**.
    1. Select **OK**. Visual Studio displays a confirmation message that a tunnel is created.
 
     The tunnel you've created is listed under **Dev Tunnels > (name of the tunnel)**.
 
 1. Go to **Solution Explorer** and select your project.
-1. Right-click the menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
+1. Right-click the project menu and selec  **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VS-teams-app-dependencies.png" alt-text="Screenshot shows the Prepare Teams app dependencies option under Teams Toolkit in Visual Studio app project.":::
 
@@ -141,18 +143,18 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-debug-Copilot.png" alt-text="Screenshot shows the Copilot (Browser)  debug option in Visual Studio.":::
 
 1. Go to **Teams web client** > **Apps**.
-1. Search for Microsoft 365 Chat and open the Microsoft 365 Chat app.
+1. Search for **M365 Chat** and open the M365 Chat app.
 1. Select **Plugins**.
 1. From the list of plugins, turn on the toggle for your app.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-1. From the compose message area, send a message to Microsoft 365 Chat to find a NuGet package information. For example, find the NuGet package info on Microsoft.CSharp.
+1. From the compose message area, send a message to Microsoft 365 Chat to find a NuGet package information. For example, find Contoso product in Contoso-local.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from copilot.":::
 
 > [!NOTE]
-> This prompt may not always make Microsoft 365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Chat response and leave a message tagged with [MessageExtension].
+> This prompt may not always make Microsoft 365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Chat response and leave a message.
 
 # [Toolkit CLI](#tab/toolkit-cli)
 
@@ -220,13 +222,13 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
 1. Select **Apps**.
-1. Search for Microsoft 365 Chat.
+1. Search for **M365 Chat**  and open the M365 Chat app.
 1. Select **Plugins**.
 1. From the list of plugins, turn on the toggle for your app.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-1. From the compose message area, send a message to Microsoft 365 Chat to find a NuGet package information. For example: Find the NuGet package info on Microsoft.CSharp.
+1. From the compose message area, send a message to Microsoft 365 Chat to find a NuGet package information. For example, find Contoso product in Contoso-local.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from copilot.":::
 
