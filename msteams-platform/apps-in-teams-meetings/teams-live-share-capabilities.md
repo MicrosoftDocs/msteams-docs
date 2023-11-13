@@ -818,7 +818,7 @@ export function CountdownTimer() {
 :::image type="content" source="../assets/images/teams-live-share/live-share-follow-mode.png" alt-text="Image shows three clients with three separate views: a presenter, a user who follows the presenter, and a user with their own private view with the option to sync back to the presenter.":::
 
 > [!NOTE]
-> `LiveFollowMode` is in Beta and provided as a preview only. Do not use this API in a production environment.
+> `LiveFollowMode` is in Beta and provided as a preview only. Don't use this API in a production environment.
 
 The `LiveFollowMode` class combines `LivePresence` and `LiveState` into a single class, enabling you to easily implement follower and presenter modes into your application. This allows you to implement familiar patterns from popular collaborative apps such as PowerPoint Live, Excel Live, and Whiteboard. Unlike screen sharing, `LiveFollowMode` allows you to render content with high quality, improved accessibility, and enhanced performance. Users can easily switch between their private views and follow other users.
 
