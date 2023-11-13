@@ -1,7 +1,7 @@
 ---
 title: Actions overview
 description: In this article, learn more about the function of Actions and its use cases. 
-ms.date: 10/11/2023
+ms.date: 11/12/2023
 ms.author: mosdevdocs
 author: mobajemu
 ms.topic: Conceptual
@@ -39,7 +39,7 @@ There are three intent types supported for Actions: “open”, “addTo”, and
 
 ### Object
 
-"object" is the file on which the user wants to perform an action on. For an Action to be triggered on the file it must reside in ether OneDrive or SharePoint and be accessible through Microsoft Graph.
+"object" is the file on which the user wants to perform an Action on. For an Action to be triggered on the file it must reside in ether OneDrive or SharePoint and be accessible through Microsoft Graph.
 
 > [!NOTE]
 > Current object file types supported include but are not limited to .docx, .doc, .ppt, .xlsx, .pdf, .jpg, .png, and well as other image file types
