@@ -122,7 +122,7 @@ items:
 
       | Folder | Contents |
       | ----- | ----- |
-      | `.vscode` | VSCode files for debugging. |
+      | `.vscode` | VS Code files for debugging. |
       | `appPackage` | Templates for the Teams application manifest. |
       | `env` | Environment files. |
       | `infra` | Templates for provisioning Azure resources. |
@@ -419,7 +419,7 @@ items:
             }        
             ```
 
-            :::image type="content" source="assets/images/sbs-create-a-new-dashboard/aad-app-manifest.png" alt-text="Screenshot shows the azure active directory code addition. ":::
+            :::image type="content" source="assets/images/sbs-create-a-new-dashboard/aad-app-manifest.png" alt-text="Screenshot shows the Microsoft Entra app manifest code addition.":::
 
         </details>
 
@@ -541,7 +541,7 @@ items:
               <!--If you're not familiar with this process, don't alter or remove this file from your project.-->
               <html>
                 <head>
-                  <title>Login Start Page</title>
+                  <title>Sign-in Start Page</title>
                   <meta charset="utf-8" />
                 </head>
 
@@ -597,7 +597,7 @@ items:
               <!--If you're not familiar with this process, don't alter or remove this file from your project.-->
               <html>
                 <head>
-                  <title>Login End Page</title>
+                  <title>Sign-in End Page</title>
                   <meta charset="utf-8" />
                 </head>
 
