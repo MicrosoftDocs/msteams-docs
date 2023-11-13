@@ -56,6 +56,9 @@ items:
 
    ### Install Teams Toolkit
 
+   > [!NOTE]
+   > Teams Toolkit support for bot-based message extension is available only in Teams Toolkit pre-release version. Before you get started, ensure that you've installed a [Teams Toolkit pre-release version](toolkit/install-Teams-Toolkit.md#install-a-pre-release-version).
+
    Microsoft Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app and publish to the Teams Store. 
     
    You can use Teams Toolkit with Visual Studio Code. To install Teams Toolkit, follow these steps:

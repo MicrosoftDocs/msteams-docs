@@ -89,7 +89,7 @@ To run the message extension in Teams, follow these steps:
 
    A command details page appears.
 
-1. In the Command details page, select the **Search** as the type of command and update the following:
+1. In the Command details page, select **Search** as the type of command and update the following:
    * Command ID
    * Command title
    * Command description
