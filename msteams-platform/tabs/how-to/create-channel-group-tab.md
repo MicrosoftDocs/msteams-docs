@@ -202,7 +202,7 @@ gulp ngrok-serve
 1. Follow the directions for adding a tab. There's a custom configuration dialog for your channel or group tab.
 1. Select **Save** and your tab is added to the channel's tab bar.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Channel tab uploaded":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Screenshot shows the uploaded channel tab in Teams.":::
 
     Now you've successfully created and added your channel or group tab in Teams.
 
@@ -418,7 +418,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Select **Add to team** to Set up the tab in a team. Configure your tab and select **Save**. Your tab is now available in Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET uploaded":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Screenshot shows that the channel tab is uploaded.":::
 
     Now you've successfully created and added your channel or group tab in Teams.
 
@@ -633,7 +633,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Select **Add to team** to Set up the tab in a team. Configure your tab and select **Save**. Your tab is now available in Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET MVC uploaded":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Screenshot shows that the channel tab is uploaded in Teams.":::
 
     Now you've successfully created and added your channel or group tab in Teams.
 
@@ -1027,14 +1027,15 @@ You've completed the tutorial to build a tab app with Blazor.
 ## Migrate your configurable tab to static tab
 
 > [!NOTE]
+>
 > * Migrating your configurable tab to static tab is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * To migrate your configurable tab to static tab, use the app manifest v1.16 or later.
 
-Static tab capability is extended to support group chat and meetings. You can update your existing configurable tab to static tab and add different scopes to the static tab. 
+Static tab capability is extended to support group chat and meetings. You can update your existing configurable tab to static tab and add different scopes to the static tab.
 
 To change your configurable tab to static tab:
 
-1. Move your configuration logic out of your `configurationUrl` code space to your `contentUrl` code space. 
+1. Move your configuration logic out of your `configurationUrl` code space to your `contentUrl` code space.
 1. Add the `staticTabs` property to your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with `scopes` and `context` parameters. Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
 
    ```json
@@ -1064,7 +1065,6 @@ To change your configurable tab to static tab:
     For more information, see [configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) and [static tab.](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-and-meetings)
 
 If your app supports [configurable tab,](~/tabs/how-to/create-tab-pages/configuration-page.md#configuration-page-for-tabs) then you must continue to keep the `configurableTab` property in your app manifest to ensure the backward compatibility of previously pinned tabs. As you can only pin static tabs from now, it is important that previous configurable tabs continue to be supported.
-
 
 ## Next step
 
