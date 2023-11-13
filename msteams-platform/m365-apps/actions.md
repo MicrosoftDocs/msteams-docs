@@ -44,7 +44,6 @@ There are three intent types supported for Actions: “open”, “addTo”, and
 > [!NOTE]
 > Current object file types supported include but are not limited to .docx, .doc, .ppt, .xlsx, .pdf, .jpg, .png, and well as other image file types
 
-
 ### Handlers
 
 A "handler" is the method or mechanism to fulfill the user's intent and perform the desired action on the specified object. It is responsible for implementing the logic and functionality of the Action.
