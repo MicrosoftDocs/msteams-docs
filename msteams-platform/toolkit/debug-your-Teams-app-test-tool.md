@@ -14,7 +14,7 @@ ms.date: 11/03/2023
 >
 > Ensure the prerelease version of Teams Toolkit is installed. For more information, see [install a prerelease version](install-Teams-Toolkit.md#install-a-pre-release-version).
 
-Teams App Test Tool (Test Tool) is a component integrated into the Teams Toolkit. The tool assists users to debug, test, and refine the app design of a Teams bot application. It provides a web-based chat environment that replicates the behavior, appearance, and user experience of Microsoft Teams. 
+Teams App Test Tool (Test Tool) is a component integrated into the Teams Toolkit. The tool assists users to debug, test, and refine the app design of a Teams bot application. It provides a web-based chat environment that replicates the behavior, appearance, and user experience of Microsoft Teams.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
@@ -28,7 +28,7 @@ The Teams App Test Tool offers the following benefits:
 
 1. **Tunneling**: Tunnel service is not required as it runs locally.
 
-1. **Reduce local debugging**: Microsoft 365 Developer tenant and the app uploading permissions aren't required to debug the bot application.
+1. **Reduce account dependencies**: Microsoft 365 Developer tenant and the app uploading permissions aren't required to debug the bot application.
 
 1. **Rapid inner-loop iterations**: Optimizes the process of making changes to the app design and bot logic without having to redeploy the bot application to the cloud.
 
@@ -57,13 +57,13 @@ The following are the limitations:
    * [Full width](../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
 
 1. The Test Tool doesn't support the following:
-   * Single sign-on (SSO) 
-   * Mobile 
-   * Meetings 
+   * Single sign-on (SSO)
+   * Mobile
+   * Meetings
 
 1. **Limited emulation**
 
-   | Features | Debug in Test Tool | Local debug |
+   | Features | Debug in Test Tool | [Debug your Teams app locally](debug-local.md) |
    | --- | --- | --- |
    | Basic sending / receiving messages | Available | Available |
    | Bot Framework APIs (TeamsInfo.getPagedMembers()...) |Available (respond with mocked data) | Available |
@@ -75,7 +75,7 @@ The following are the limitations:
 
 Test the bot sample, which displays the features supported by the Teams App Test Tool, as follows:
 
-1. Open [bot sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3).
+1. Open [Test Tool Sample App](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/test-tool-sample-app).
 
 1. Select **Code**.
 
@@ -93,7 +93,7 @@ Test the bot sample, which displays the features supported by the Teams App Test
 
 1. Select **F5**.
 
-1. Type **help** command. 
+1. Type **help** command.
 
 A webpage opens with a list of commands.
 
@@ -111,7 +111,7 @@ To test the predefined mock activities, follow these steps:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mock-activity.png" alt-text="Screenshot shows the list of option under mock an activity.":::
 
-1. Select **Send activity**. 
+1. Select **Send activity**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-a-user-request.png" alt-text="Screenshot shows the option to send activity for predefined mock activity add user.":::
 
@@ -251,6 +251,7 @@ To update the config file, follow these steps:
           surname: Bowen
           email: some-real-user@real-domain.onmicrosoft.com
     ```
+
 1. Save the file and select **F5** to debug in Test Tool.
 
 ## FAQ
