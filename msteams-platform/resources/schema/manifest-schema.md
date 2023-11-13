@@ -688,7 +688,7 @@ Define the properties your app uses to post a user activity feed.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`activityTypes`|Array of objects|128 items| | Provide the types of activities that your app can post to a users activity feed.|
+|`activityTypes`|Array of objects|128 items| | Provide the types of activities that your app can post to a users activity feed. The `systemDefault` activity type is a reserved and invalid string.|
 
 ### activities.activityTypes
 
