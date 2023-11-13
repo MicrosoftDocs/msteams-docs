@@ -34,26 +34,26 @@ The requirements for building message extension plugins for Microsoft 365 Chat i
 
 ## Define descriptions
 
-A good description offers a clear and concise summary of the app’s features and allows Microsoft 365 Chat to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets..**, the message extension plugin must be invoked from Microsoft 365 Chat.
+A good description offers a clear and concise summary of the app’s features and allows Microsoft 365 Chat to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Microsoft 365 Chat.
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as a plugin in Microsoft 365 Chat.":::
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in Microsoft 365 Chat.":::
 
-Ensure that you adhere to the descriptions guidelines listed in the following table:
+Ensure that you adhere to the description guidelines listed in the following table:
 
 | Action | Reason |
 | --- | --- |
 | :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Anti-Compete: Avoid using the name of any other plugin in both short and long descriptions. |
 | :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Responsible AI: Avoid using inappropriate or offensive keywords. |
-| :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Prompt injections: Ensure that the text doesn't lead to prompt injections. Additionally, the description mustn't contain symbols or text that indicates that it can be used as code for prompt injection. Avoid using phrases, functions, and code that call an app recurrently. |
+| :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Prompt injections: Ensure that the text doesn't lead to prompt injections. Additionally, the description mustn't contain symbols or text that indicate that it can be used as code for prompt injection. Avoid using phrases, functions, and code that call an app recurrently. |
 
 ### App description
 
 Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Microsoft 365 Chat, app description must be modified to suit the following plugin requirements:
 
 * Long description must clearly explain how users can use a message extension plugin in Microsoft 365 Chat and what functionality they can expect. For example, Use Contoso cloud in Microsoft 365 Chat to search and summarize your tasks.
-* Short description must briefly describe the app's functionality in a natural language and can include name of the app.
+* Short description must briefly describe the app's functionality in a natural language and can include the name of the app.
 
 The following table lists the short description examples for each category:
 
@@ -248,7 +248,7 @@ The following table lists the command description examples for each category:
 
 ### Parameter description
 
-Each parameter supports five attributes and one attribute must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
+Each parameter supports five attributes, and one attribute must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
 
 A good parameter description explains the requirements of the system in a natural language with output format. The following are a few examples of basic and advanced search requests for each category:
 
@@ -276,7 +276,7 @@ Advanced search: Search for high priority tasks related to Northwind that are du
     {
         "name": "Priority",
         "title": "Priority",
-        "description": "Priority of tasks. Acceptable values are: high, medium, low, NA ",
+        "description": "Priority of tasks. Acceptable values are high, medium, low, NA ",
         "inputType": "text"
     }] 
 ```
@@ -392,7 +392,7 @@ The search parameters must have good descriptions with acceptable parameters, en
 
 Message extensions respond to a user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:
 
-* Adaptive Card response must include an Adaptive Card content and preview card information as part of the same template. [*Mandatory*]
+* Adaptive Card response must include Adaptive Card content and preview card information as part of the same template. [*Mandatory*]
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Microsoft 365 Chat app response contains Preview and Content in the same response. ":::
 

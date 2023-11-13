@@ -14,6 +14,11 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
+    > [!NOTE]
+    >
+    > * Bot-based search message extension plugin is available in [**public developer preview**](resources/dev-preview/developer-preview-intro.md).
+    > * Only bot-based search message extension can be extended as a plugin in Microsoft 365 Chat.
+    
     Start Microsoft Teams app development with your first Teams app. 
     You can create a bot-based message extension plugin with Teams using Javascript.  
     
@@ -43,11 +48,11 @@ items:
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
+   | &nbsp; | Microsoft 365 Chat | The Microsoft 365 Chat feature in Copilot combines the power of large language models (LLMs) with the intelligence of the Microsoft Graph to help you get things done. |
    | **Optional** | &nbsp; | &nbsp; |
    | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
    | &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OR [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | A browser DevTools extension for the open-source React JavaScript library. |
-   | &nbsp; | [Microsoft 365 Chat] | The Microsoft 365 Chat feature in Copilot combines the power of large language models (LLMs) with the intelligence of the Microsoft Graph to help you get things done. |
-
+   
 
   
    ## Prepare development environment
@@ -195,7 +200,7 @@ items:
 
         Teams Toolkit creates the app in a few seconds.
 
-        :::image type="content" source="assets/images/Copilot/bot-based-plugin-sbs-ttk-creates-app.png" alt-text="Screenshot showing the app created." lightbox="assets/images/teams-toolkit-v2/first-msgext/app-created-mex.png":::
+        :::image type="content" source="assets/images/Copilot/bot-based-plugin-sbs-ttk-creates-app.png" alt-text="Screenshot showing the app created." lightbox="assets/images/Copilot/bot-based-plugin-sbs-ttk-creates-app.png":::
 
         After your app is created, the Teams Toolkit displays the following message: 
 
@@ -221,10 +226,11 @@ items:
     | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
     | `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
     | `.vscode/` | VSCode files for local debug. |
+    | `src/`        | The source code for the search application.   |
     | `appPackage/` | Templates for the Teams application manifest. |
     | `infra/` | Templates for provisioning Azure resources. |
-    | `index.js` | Application entry point and `restify` handler. |
-    | `teamsBot.js` | Teams activity handler. |
+    | `src/searchApp.js` | Handles the business logic for this app template to query npm registry and return result list. For more information, see [Teams Toolkit Visual Studio Code v5 Guide](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#overview) to understand how Teams Toolkit works. |
+    | `src/index.js`     | `index.js` is used to setup and configure the Message Extension. For more information, see [Teams Toolkit Visual Studio Code v5 Guide](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#overview) to understand how Teams Toolkit works.  |
 
     > [!Tip]
     > Familiarize yourself with bots and message extension outside of Teams before you integrate your app within Teams.
@@ -239,7 +245,7 @@ items:
 
     Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
-    1. Open Visual Studio Code.
+    1. Open **Visual Studio Code**.
     1. Select the Teams Toolkit  :::image type="icon" source="assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to M365** using your credentials..
 
@@ -300,7 +306,7 @@ items:
         
     1. Select **Add**. The app is installed on Teams.
     
-        :::image type="content" source="assets/images/Copilot/bot-based-plugin-sbs-add-app.png" alt-text="Screenshot shows message to add the app." lightbox="assets/images/Copilot/bot-based-plugin-sbs-add-app.png":::
+        :::image type="content" source="assets/images/Copilot/bot-based-plugin-sbs-add-app-local.png" alt-text="Screenshot shows message to add the app." lightbox="assets/images/Copilot/bot-based-plugin-sbs-add-app-local.png":::
         
         As message extensions rely on bots for enabling communication between the user and the web service,, your app loads in to a chat feature of a bot.
 
@@ -345,7 +351,7 @@ items:
     1. From the left pane, select **Teams Toolkit**.
     1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
     1. Select Debug in **Copilot (Edge)** or **Debug in Copilot (Chrome)**.
-    1. 1. Select **F5** to build and run your app in Microsoft 365 Chat.
+    1. Select **F5** to build and run your app in Microsoft 365 Chat.
     1. Go to **Microsoft Teams** > **Apps**.
     1. Search for **M365 Chat** and open the app.
     1. Select **Plugins**.
@@ -353,7 +359,7 @@ items:
 
        :::image type="content" source="assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-    1. From the compose message area, send a message to Microsoft 365 Chat to find an NuGet package information. For example: Find the NuGet package info on Microsoft.CSharp.
+    1. From the compose message area, send a message to Microsoft 365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
 
        :::image type="content" source="assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from Microsoft 365 Chat.":::
 
@@ -406,11 +412,11 @@ items:
 
     1. Select **Provision**.
 
-      :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the selection of provision in the cloud under Teams toolkit.":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the selection of provision in the cloud under Teams toolkit.":::
 
     1. Select a subscription to use for the Azure resources.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing the subscription to use for the Azure resources.":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing the subscription to use for the Azure resources.":::
 
       Your app is hosted using Azure resources.
 
@@ -418,21 +424,21 @@ items:
 
     1. Select **Provision**.
 
-      :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot showing a dialog box that costs may be incurred when running resources in Azure.":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot showing a dialog box that costs may be incurred when running resources in Azure.":::
 
-      The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
+       The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
-      :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing a notice which displays 'hellomsg' successfully provisioned in the cloud.":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing a notice which displays 'hellomsg' successfully provisioned in the cloud.":::
 
-        If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
+       If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
 
-        The provisioned resource appears in the **ENVIRONMENT** section.
+       The provisioned resource appears in the **ENVIRONMENT** section.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot showing the resource being provisioned in the environment section.":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot showing the resource being provisioned in the environment section.":::
 
     1. Select **Deploy** from the **LIFECYCLE** panel after provisioning is complete.
 
-      :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot showing deploy to cloud.":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot showing deploy to cloud.":::
 
       As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
 
@@ -446,11 +452,11 @@ items:
     1. Select **Launch Remote (Edge)** from the launch configuration drop-down.
     1. Select the **Start debugging (F5)** to launch your app from Azure.
 
-      :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely.":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely.":::
 
     1. Select **Add**.
 
-      :::image type="content" source="assets/images/Copilot/bot-based-plugin-sbs-add-app-local.png" alt-text="Screenshot shows an example of the Add option to add an app to Teams.":::
+       :::image type="content" source="assets/images/Copilot/bot-based-plugin-sbs-add-app.png" alt-text="Screenshot shows an example of the Add option to add an app to Teams.":::
 
       <!-- markdownlint-disable MD033 -->
       <details>

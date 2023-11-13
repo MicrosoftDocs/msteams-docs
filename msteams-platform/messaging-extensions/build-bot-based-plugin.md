@@ -12,7 +12,7 @@ ms.date: 09/07/2023
 
 > [!NOTE]
 >
-> * Bot-based search message extension plugin is available in [**public developer preview**](../resources/dev-preview/developer-preview-intro.md)
+> * Bot-based search message extension plugin is available in [**public developer preview**](../resources/dev-preview/developer-preview-intro.md).
 > * Only bot-based search message extension can be extended as a plugin in Microsoft 365 Chat.
 
 Microsoft 365 Chat, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to transform your words into a potent productivity tool. Although Microsoft 365 Chat can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending your message extension as a plugin in Microsoft 365 Chat, you can enable users to interact with third-party tools and services, thereby empowering them to achieve more with Microsoft 365 Chat. You can achieve this extension by developing a plugin or connecting to an external data source.
@@ -90,7 +90,7 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-1. From the compose message space, send a message to Microsoft 365 Chat to find a NuGet package information. For example, find Contoso product in Contoso-local.
+1. From the compose message space, send a message to Microsoft 365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from copilot.":::
 
@@ -152,7 +152,7 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-1. From the compose message area, send a message to Microsoft 365 Chat to find a NuGet package information. For example, find Contoso product in Contoso-local.
+1. From the compose message area, send a message to Microsoft 365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from copilot.":::
 
@@ -231,7 +231,7 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-1. From the compose message area, send a message to Microsoft 365 Chat to find a NuGet package information. For example, find Contoso product in Contoso-local.
+1. From the compose message area, send a message to Microsoft 365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from copilot.":::
 
