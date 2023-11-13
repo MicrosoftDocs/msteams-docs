@@ -34,7 +34,7 @@ Before you get started, ensure that you meet the following requirements:
 * [Node.js](https://nodejs.org/en). The supported versions are 16, 18.
 * [Microsoft 365 account for development](../../../toolkit/tools-prerequisites.md#microsoft-365-developer-program)
 * [Set up your dev environment for extending Teams apps across Microsoft 365](../../../m365-apps/prerequisites.md) Please note that after you enrolled your developer tenant in Office 365 Target Release, it may take couple days for the enrollment to take effect.
-* [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version 5.2.0 and higher or Teams Toolkit CLI
+* [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version 5.2.0 and higher or Teams Toolkit CLI.
 
 # [Teams Toolkit](#tab/Teams-toolkit)
 
@@ -45,7 +45,6 @@ To create a search based message extension using Teams Toolkit, follow these ste
 1. Select **Create a New App**.
 1. Select **Message Extension**.
 1. Select **Custom Search Results**.
-1. Select **Start with a Bot**.
 1. Select a **programming language**.
 1. Select **Default folder**.
 1. Enter the name of your app and select **Enter**.

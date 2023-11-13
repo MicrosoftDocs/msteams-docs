@@ -1,7 +1,7 @@
 ---
-title: Copilot plugin FAQ
+title: Microsoft 365 Chat plugin FAQ
 author: v-ypalikila
-description: In this article, fetch answers to some frequently asked questions while building a copilot plugin.
+description: In this article, fetch answers to some frequently asked questions while building a Microsoft 365 Chat plugin.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -10,15 +10,15 @@ ms.date: 09/07/2023
 
 # Frequently Asked Questions
 
-Get answers to your common queries about building a Copilot plugin on Microsoft Teams.
+Get answers to your common queries about building a Microsoft 365 Chat plugin on Microsoft Teams.
 
 <details>
 
-<summary>Q: Why isn't Copilot including my plugin in a response?</summary>
+<summary>Q: Why isn't Microsoft 365 Chat including my plugin in a response?</summary>
 
 A: Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in plugin matching in response to a user prompt. Also, make sure you've uploaded  the app package to Outlook and interacted with the app, including authentication.
 
-If the problem continues, use the thumbs down indicator on the Copilot reply and prefix your reply with [MessageExtension].
+If the problem continues, use the thumbs down indicator on the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
 
 </details>
 
@@ -89,9 +89,9 @@ Here's an example description that work for NPM Finder.
 
 <details>
 
-<summary> Q: Copilot includes my plugin in the response, but the Copilot’s response doesn’t meet my expectations. What should I do?</summary>
+<summary> Q: Microsoft 365 Chat includes my plugin in the response, but the Microsoft 365 Chat’s response doesn’t meet my expectations. What should I do?</summary>
 
-Use the thumbs down indicator on the Copilot reply and prefix your reply with [MessageExtension].
+Use the thumbs down indicator on the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
 
 </details>
 
@@ -104,7 +104,7 @@ Yes, you can. Ensure that you have a descriptive app manifest and have uploaded 
 
 <details>
 
-<summary> Q: How can I get my existing Teams message extension to work with Microsoft 365 Copilot? </summary>
+<summary> Q: How can I get my existing Teams message extension to work with Microsoft 365 Microsoft 365 Chat? </summary>
 
 1. Register the bot channel in Azure Bot Service.
 1. Upload the app to Outlook.

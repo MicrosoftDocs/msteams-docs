@@ -43,6 +43,9 @@ Before you get started, ensure that you're familiar with the following standards
 
 # [Visual Studio Code](#tab/visual-studio-code)
 
+> [!NOTE]
+> Teams Toolkit support for bot-based message extension is available only in Teams Toolkit pre-release version. Before you get started, ensure that you've installed a [Teams Toolkit pre-release version](../toolkit/install-Teams-Toolkit.md#install-a-pre-release-version).
+
 To create a bot-based search message extension plugin using Visual Studio Code, follow these steps:
 
 1. Open **Visual Studio Code**.

@@ -314,7 +314,7 @@ items:
     #### To run a search query
 
     1. Go to a Teams chat and select **Actions and apps**.
-    1. From the message extension fly-out menu, enter the mane of your message extension from the search box.
+    1. From the message extension fly-out menu, enter the name of your message extension from the search box.
     1. Select your message extension and enter your search query.   
 
        :::image type="content" source="assets/images/Copilot/bot-based-VSC-me-invoke.png" alt-text="Screenshot shows an example of a message extension invoked from a chat in Teams and the message extension displays a list of products based on the search query..":::
