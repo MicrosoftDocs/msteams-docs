@@ -346,10 +346,11 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2023 October**
+**2023 November**
 
-* ***October 25, 2023***: [Introduced the `extensions` property in public developer preview app manifest schema.](resources/schema/manifest-schema-dev-preview.md#extensions)
-* ***October 25, 2023***: [Build message extensions using API (API-based) to interact directly with third-party data, apps, and services.](messaging-extensions/api-based-overview.md)
+* ***November 14, 2023***: [Build a bot-based message extension and extend the message extension as plugin for Microsoft 365 Chat.](messaging-extensions/build-bot-based-plugin.md)
+
+* ***November 14, 2023***: [Guidelines to create or upgrade a message extension plugin for Microsoft 365 Chat.](messaging-extensions/high-quality-message-extension.md)
 
 :::column-end:::
 :::row-end:::
@@ -360,6 +361,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|25/10/2023| Introduced the `extensions` property in public developer preview app manifest schema. |App manifest > Public developer preview app manifest schema >  [extensions](resources/schema/manifest-schema-dev-preview.md#extensions)|
+|05/10/2023| Build message extensions using API (API-based) to interact directly with third-party data, apps, and services. | Build message extensions > [Build message extensions using API](messaging-extensions/api-based-overview.md)|
 |28/09/2023| Configure your bot during installation or after installation from the team or group chat where the bot is installed. | Build bots > [Bot configuration experience](bots/how-to/bot-configuration-experience.md)|
 |31/08/2023| The new Teams client supports light theme for apps in Teams meetings. | Build tabs > [Get context for your tab](tabs/how-to/access-teams-context.md#handle-theme-change)|
 |28/08/2023| Teams app manifest is now referred to as app manifest. | App manifest > [App manifest schema](resources/schema/manifest-schema.md)|
