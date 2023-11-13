@@ -1309,7 +1309,7 @@ export const MyLiveFollowMode = () => {
 
 ## Role verification for live data structures
 
-Meetings in Teams include calls, all-hands meetings, and online classrooms. Meeting participants might span across organizations, have different privileges, or have different goals. Hence, it’s important to respect the privileges of different user roles during meetings. Live objects are designed to support role verification, allowing you to define the roles that are allowed to send messages for each individual live object. For example, you've selected; that only meeting presenters and organizers can control video playback, but still allow guests and attendees to request the next videos to watch.
+Meetings in Teams include calls, all-hands meetings, and online classrooms. Meeting participants might span across organizations, have different privileges, or have different goals. Hence, it’s important to respect the privileges of different user roles during meetings. Live objects are designed to support role verification, allowing you to define the roles that are allowed to send messages for each individual live object. For example, you've selected the option that permits only meeting presenters and organizers to control video playback. However, guests and attendees can still request the next videos to watch.
 
 In the following example where only presenters and organizers can take control, `LiveState` is used to synchronize which user is the active presenter:
 
