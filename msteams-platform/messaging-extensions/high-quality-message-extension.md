@@ -485,13 +485,13 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
   </details>
 
-* Apart from the app logo, title, thumbnail, and title of the information, the data in the Adaptive Card must represent the most frequently searched attributes, such as, data modified, author, status, and flags. [*Mandatory*]
+* Apart from the app logo, title, thumbnail, and title of the information, the data in the Adaptive Card must represent at least two pieces of information. You can identify the fields from the most frequently searched attributes, such as, data modified, author, status, and flags. [*Mandatory*]
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-functional-action.png" alt-text="Screenshot shows an example of information title, additional user fields, and action button in an Adaptive Card response.":::
 
 * Adaptive Card must be presentable in Win32, web, and mobile (iOS and Android). [*Mandatory*]
 
-* An Adaptive Card must contain at least one action, but not more than four actions. The following action types are recommended: [*Mandatory*]
+* An Adaptive Card must contain at least one action button, but not more than four action buttons. The following action types are recommended: [*Mandatory*]
 
   :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in the Microsoft 365 chat.":::
 
