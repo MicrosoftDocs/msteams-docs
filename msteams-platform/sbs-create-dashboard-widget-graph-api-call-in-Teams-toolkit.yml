@@ -152,7 +152,7 @@ items:
       | `src/index.tsx` | Application entry point. |
       | `src/internal/addNewScopes.ts` | Implementation of new scopes add. |
       | `src/internal/context.ts` | TeamsFx Context. |
-      | `src/internal/login.ts` | Implementation of login. |
+      | `src/internal/login.ts` | Implementation of sign-in. |
       | `src/internal/singletonContext.ts` | Implementation of the TeamsUserCredential instance singleton. |
    
 - title: Add a widget to the dashboard
@@ -693,18 +693,18 @@ items:
 
           // {
           //   id: "id1",
-          //   title: "Lorem ipsum",
-          //   content: "Lorem ipsum dolor sit amet",
+          //   title: "Sample title",
+          //   content: "Sample description",
           // },
           // {
           //   id: "id2",
-          //   title: "Lorem ipsum",
-          //   content: "Lorem ipsum dolor sit amet",
+          //   title: "Sample title",
+          //   content: "Sample description",
           // },
           // {
           //   id: "id3",
-          //   title: "Lorem ipsum",
-          //   content: "Lorem ipsum dolor sit amet",
+          //   title: "Sample title",
+          //   content: "Sample description",
           // },
         }
         ```
@@ -719,7 +719,7 @@ items:
               return { data: await getListData() };
          ```
 
-      1. SSO and Graph API shows the login user profile in list widget. 
+      1. SSO and Graph API shows the signed-in user profile in the list widget. 
 
          :::image type="content" source="assets/images/sbs-create-a-new-dashboard/your-list.png" alt-text="Screenshot shows the new your list widget highlighted in red.":::
 
