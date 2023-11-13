@@ -18,12 +18,12 @@ Building Actions give developers to enhance their user's productivity by streaml
 
 ## Key benefits of Actions in Microsoft 365 applications
 
-1. Enables them to accomplish tasks more efficiently.
-1. Seamlessly integrates your app in their workflow. Increases app's visibility and user engagement of your app.
-1. Empowers users to take immediate action on content files through your app, expanding the range of interactions users can have with their content.  
+1. Users accomplish tasks more efficiently.
+1. Seamlessly integrates your app in user workflow, increasing app's visibility and user engagement.
+1. Users can take immediate action on content files through your app, expanding the range of interactions they can have with their content.  
 
-[Screenshot or Gif of Actions in action]  
-
+:::image type="content" source="images/m365-Actions-in-action.gif" alt-text="In this GIF, the user can add a file to the to-do list sample app with a note attached for a task to complete. ":::
+ 
 ## How Actions work
 
 Actions are created through the integration of Intent, Object, and Handler. When a user intends to accomplish a task, it is represented as intent + object. The intent defines the user's desired action, and the object specifies the function to be executed.
@@ -33,46 +33,57 @@ To build an Action, you will define the intent, object, and handler of your acti
 
 ### Intent
 
-"intent" is the objective a user wants to perform or achieve. User intent is typically represented by a verb, such as "open," or “add to.” This "intent" enables the M365 platform to display the Actions in locations that mostly align with the user's needs and intentions. This includes but not limited to, where Actions show up and how Actions are grouped or ordered.
-We currently enable three main intents for Actions: “open”, “addTo”, and “custom”. With the "custom" intent, developers have the flexibility to build tailored Actions to fulfill any user task.
+"intent" is the objective a user wants to perform or achieve. User intent is typically represented by a verb, such as "open," or “add to.” This "intent" enables the Microsoft 365 platform to display the Actions in locations that mostly align with the user's needs and intentions. This includes but not limited to, where Actions show up and how Actions are grouped or ordered.
+
+There are three intent types supported for Actions: “open”, “addTo”, and “custom”. With the "custom" intent, developers have the flexibility to build tailored Actions to fulfill any user task.
 
 ### Object
 
-"object" is the file on which the user wants to perform an action on. Currently, Actions can be triggered on content objects, files that has an extension, like Word, PowerPoint, Excel, PDF, images, etc., which reside in OneDrive and SharePoint that are accessible through Microsoft Graph.
+"object" is the file on which the user wants to perform an action on. For an Action to be triggered on the file it must reside in ether OneDrive or SharePoint and be accessible through Microsoft Graph.
+
+> [!NOTE]
+> Current object file types supported include but are not limited to .docx, .doc, .ppt, .xlsx, .pdf, .jpg, .png, and well as other image file types
+
 
 ### Handlers
 
-A "handler" is the method or mechanism to fulfill the user's intent and perform the desired action on the specified object. It is responsible for implementing the logic and functionality of the Action, ensuring a seamless and meaningful user experience.
+A "handler" is the method or mechanism to fulfill the user's intent and perform the desired action on the specified object. It is responsible for implementing the logic and functionality of the Action.
 
-To support your users in the most meaningful way, we offer multiple types of handlers that you can build. You have the choice to direct users to the app’s page or enable them to complete tasks within a dialog.
+**Currently supported handler:**
 
-Currently supported handler:
+The current choice of handlers can either direct users to the app’s page or open a dialog for the user to interact with.
 
-* openDialog: This handler directs users to a dialog, offering a dedicated and contextualized interface for interacting with your app's features without opening the full app. This ensures a focused and efficient workflow, allowing users to complete tasks seamlessly within their current context.
+* openDialog: This handler directs users to a dialog, offering a dedicated and contextualized interface for interacting with your app's features without opening the full app.
 * openPage: By using the openPage handler you can drive users to your app's dedicated pages(personal tab).
 
-## Actions user scenarios
+## Handler user scenarios
 
-Let us walk through a user scenario of how users might interact with your app through Actions you develop and how the handler affects the workflow.
+Let us walk through a user scenario of how the handler affects the workflow. 
 
 For background: The user is a supervisor at Northwind Traders with limited time for focused work. They start their day in the Microsoft 365 app, where they can easily access all of their content.  
 
-### Scenario 1: Action opens a dialog
+### Action opens a dialog
 
-They see the latest Sales report for a supplier, 'Tokyo Trader,' and want to add it as an attachment in the supplier management system app built by Northwind Traders. Right clicking on the Word document, they choose the Action 'Add to supplier' built by Northwind Traders.  
+In this example, the user sees the latest sales report from a supplier, 'Tokyo Trader,' and wants to add it as an attachment in the supplier management system app built by Northwind Traders.
+They right-click on the Word document and choose the Action 'Add to supplier' built by Northwind Traders. 
 
 :::image type="content" source="images/m365-actions-user-scenario-1-1.png" alt-text="The screenshot shows a right click menu displaying the Add To Action running on Microsoft 365 on web.":::
 
-A dialog pops up where they select 'Tokyo Traders' and then click 'Add'. They are able to add the attachment quickly, without opening the document or app.  
+A dialog pops up where they select 'Tokyo Traders' and click 'Add' to add the attachment to their management system, all without opening the document or app. With the openDialog handler, users can complete task efficiently by working in a contextualized dialog interface.
+:::image type="content" source="images/m365-actions-user-scenario-1-2.png" alt-text="The screenshot shows a pop-up dialog of the Northwind app for the user to add an attachment  running on Microsoft 365 on web.":::
 
-:::image type="content" source="images/m365-actions-user-scenario-1-2.png" alt-text="The screenshot shows a pop-up dialog of the Northwind app for the user to add an attachement  running on Microsoft 365 on web.":::
+### Action opens a page
 
-### Scenario 2: Action opens page
-
-On the same page, they notice the 'Q2 Top suppliers' Excel sheet and want to see which suppliers they work with are on this list.   They right-click on the Excel file, then click on the Action 'Related suppliers'.
+On the same page, the user notices the 'Q2 Top suppliers' Excel sheet and want to see which suppliers they work with on this list.   
+They right-click on the Excel file and then click on the Action 'Related suppliers'.
 
 :::image type="content" source="images/m365-actions-user-scenario-2-1.png" alt-text="The screenshot shows the right click menu displaying the Related supplier option running on Microsoft 365 on web.":::
 
 The Northwind app opens, displaying the list of suppliers filtered to show only those that appear in the document.  This saves them time opening up the app and the Excel file and checking each item manually.
 
-:::image type="content" source="images/m365-actions-user-scenario-2-2.png" alt-text="The screenshot shows the northwind app open, displaying the list of suppliers filtered to show only those that appear in the document running on Microsoft 365 on web.":::
+:::image type="content" source="images/m365-actions-user-scenario-2-2.png" alt-text="The screenshot shows the Northwind app open, displaying the list of suppliers filtered to show only those that appear in the document running on Microsoft 365 on web.":::
+
+## Next step
+
+With this information you are well acquainted with the functions of Actions. To learn how to build your first Action navigate to the [How to build Actions documentation](build-actions.md).  
+
