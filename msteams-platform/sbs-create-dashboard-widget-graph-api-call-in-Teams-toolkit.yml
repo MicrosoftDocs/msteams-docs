@@ -292,7 +292,7 @@ items:
   durationInMinutes: 5
   content: |
 
-     You've learnt to create a dashboard tab, and add a new widget to the dashboard. Let's add Single Sign-on (SSO) and graph API call to the dashboard tab.
+     You learnt how to create a dashboard tab and add a new widget to the dashboard. Let's add Single Sign-on (SSO) and graph API call to the dashboard tab.
      
      ## Add SSO
      
@@ -538,7 +538,7 @@ items:
 
             ```html
               <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
-              <!--If you're not familiar with this, don't alter or remove this file from your project.-->
+              <!--If you're not familiar with this process, don't alter or remove this file from your project.-->
               <html>
                 <head>
                   <title>Login Start Page</title>
@@ -594,7 +594,7 @@ items:
           
             ```html
               <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
-              <!--If you're not familiar with this, don't alter or remove this file from your project.-->
+              <!--If you're not familiar with this process, don't alter or remove this file from your project.-->
               <html>
                 <head>
                   <title>Login End Page</title>
@@ -651,7 +651,7 @@ items:
 
         </details> 
 
-       You've added the SSO files to your project and now call Graph APIs. 
+       You added the SSO files to your project and need to call Graph APIs next. 
           
      ## Add Graph API call
      
@@ -736,4 +736,4 @@ items:
   durationInMinutes: 5
   content: |
 
-    You've completed the tutorial!
+    You completed the tutorial!
