@@ -20,7 +20,7 @@ This article focuses on how to integrate the Live Share SDK into your app and ke
 
 ### Install the JavaScript SDK
 
-The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or yarn. You must also install Live Share peer dependencies, which include `fluid-framework` and `@fluidframework/azure-client`. If you're using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later. You must install `@fluidframework/test-client-utils` and `start-server-and-test` packages in your `devDependencies` if you want to use the `TestLiveShareHost` class for local browser development.
+The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or yarn. You must also install Live Share peer dependencies, which include `fluid-framework` and `@fluidframework/azure-client`. If you're using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later. If you want to use the `TestLiveShareHost` class for local browser development, you must install `@fluidframework/test-client-utils` and `start-server-and-test` packages in your `devDependencies`.
 
 #### npm
 
