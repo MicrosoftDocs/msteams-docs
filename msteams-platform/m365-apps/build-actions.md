@@ -232,11 +232,12 @@ To test you Action:
 1.	**Sideload your app using Teams Toolkit**. With a developer account In the Microsoft 365 app, go to **Run and Debug (Ctrl+Shift+D)**, and choose **Debug**  to run and test your Actions. It will automatically open up Microsoft 365 app in a browser window and install this app with Actions to your account.  
     :::image type="content" source="images/vs-actions-debugger.png" alt-text="The screenshot is an example of the dubugger tool running in Visual Studio code on windows."::: 
 1. **Test your action with the Microsoft 365 app**. You can now preview your new content action by opening the [Microsoft 365 app](https://www.microsoft365.com/) and right clicking a file that is supported by your action. Your action should appear in the context menu.
+
     :::image type="content" source="images/m365-actions-add-to-supplier.png" alt-text="The screenshot shows the right click menu displaying the Add to Supplier option running on Microsoft 365 on web.":::
+
 ### Enable Actions for your users
 
 To enable Actions for end users through tenant admins:
 1. Upload the app package containing the Actions via the [Microsoft Admin Center](https://admin.microsoft.com/)
 1. Enable the app for targeted release to users in the tenant
 1. In the Microsoft 365 admin center, navigate to **settings** > **integrated apps** > select **upload custom apps** to upload app
-[Insert demo video of admin flow here]

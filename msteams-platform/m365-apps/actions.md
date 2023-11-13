@@ -69,6 +69,7 @@ They right-click on the Word document and choose the Action 'Add to supplier' bu
 :::image type="content" source="images/m365-actions-user-scenario-1-1.png" alt-text="The screenshot shows a right click menu displaying the Add To Action running on Microsoft 365 on web.":::
 
 A dialog pops up where they select 'Tokyo Traders' and click 'Add' to add the attachment to their management system, all without opening the document or app. With the openDialog handler, users can complete task efficiently by working in a contextualized dialog interface.
+
 :::image type="content" source="images/m365-actions-user-scenario-1-2.png" alt-text="The screenshot shows a pop-up dialog of the Northwind app for the user to add an attachment  running on Microsoft 365 on web.":::
 
 ### Action opens a page
