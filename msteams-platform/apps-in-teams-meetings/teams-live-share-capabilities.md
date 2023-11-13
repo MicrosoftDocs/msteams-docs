@@ -828,9 +828,9 @@ You can use the `startPresenting()` function to **take control** of the applicat
 
 The following are a few examples in which you can use `LiveFollowMode` in your application:
 
-- Synchronizing camera positions in a 3D scene to cobrowse during a design review.
-- Updating the `slideId` to open in a carousel for productive presentations and discussions.
-- Broadcasting the `path` to open in your application's router.
+- Synchronize camera positions in a 3D scene to cobrowse during a design review.
+- Update the `slideId` to open in a carousel for productive presentations and discussions.
+- Broadcast the `path` to open in your application's router.
 
 Example:
 
