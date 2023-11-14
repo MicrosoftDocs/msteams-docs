@@ -148,27 +148,27 @@ The following steps guide you to sideload and validate bot that receives all cha
 1. Select &#x25CF;&#x25CF;&#x25CF; from the left pane. The dropdown menu appears.
 1. Select **Manage team** from the dropdown menu.
 
-   :::image type="content" source="Media/managingteam.png" alt-text="Screenshot shows the managing team option in Teams application.":::
+   :::image type="content" source="Media/managing-team.png" alt-text="Screenshot shows the managing team option in Teams application.":::
 
 1. Select **Apps**. Multiple apps appear.
 
 1. Select **Upload a custom app** from the lower right corner.
 
-      :::image type="content" source="Media/uploadingcustomapp.png" alt-text="Screenshot shows the upload a custom app option.":::
+      :::image type="content" source="Media/uploading-custom-app.png" alt-text="Screenshot shows the upload a custom app option.":::
   
 1. Select **Open**.
 
-      :::image type="content" source="Media/selectapppackage.png" alt-text="Screenshot shows the open dialog box to select the app package." lightbox="Media/selectapppackage.png":::
+      :::image type="content" source="Media/select-apppackage.png" alt-text="Screenshot shows the open dialog box to select the app package." lightbox=="Media/select-apppackage.png"":::
 
 1. Select **Add** from the app details pop-up, to add the bot to your selected team.
 
-      :::image type="content" source="Media/addingbot.png" alt-text="Screenshot shows the add button to add a bot to a team.":::
+      :::image type="content" source="Media/adding-bot.png" alt-text="Screenshot shows the add button to add a bot to a team.":::
 
 1. Select a channel and enter a message in the channel for your bot.
 
     The bot receives the message without being @mentioned.
 
-      :::image type="content" source="Media/botreceivingmessage.png" alt-text="Screenshot shows a bot receiving message in a channel." lightbox="Media/botreceivingmessage.png":::
+      :::image type="content" source="Media/bot-receiving-message.png" alt-text="Screenshot shows a bot receiving message in a channel." lightbox="Media/bot-receiving-message.png":::
 
 # [Chat messages](#tab/chat)
 
