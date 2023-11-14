@@ -66,7 +66,7 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 </details>
 
 <details>
-<summary>How can I deploy the code in Azure AD using Teams Toolkit, and use Graph API to get the app user's profile photo?</summary>
+<summary>How can I deploy the code in Microsoft Entra ID using Teams Toolkit, and use Graph API to get the app user's profile photo?</summary>
 
 Shared references to deploy the code using toolkit:
 

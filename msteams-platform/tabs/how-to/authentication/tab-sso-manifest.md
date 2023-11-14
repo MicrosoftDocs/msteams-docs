@@ -13,7 +13,7 @@ Before updating the app manifest (previously called Teams app manifest), ensure 
 > [!div class="nextstepaction"]
 > [Configure code](tab-sso-code.md)
 
-You've registered your tab app in Azure AD, and obtained an app ID. You've also configured your code to call `getAuthToken()` and handle the access token. Now, you must update the app manifest to enable SSO for your tab app. The app manifest describes how an app integrates into Teams.
+You've registered your tab app in Microsoft Entra ID, and obtained an app ID. You've also configured your code to call `getAuthToken()` and handle the access token. Now, you must update the app manifest to enable SSO for your tab app. The app manifest describes how an app integrates into Teams.
 
 ## webApplicationInfo property
 
@@ -25,13 +25,13 @@ Configure the `webApplicationInfo` property in the app manifest file. This prope
 
 | Element | Description |
 | --- | --- |
-| id | Enter the app ID (GUID) that you created in Azure AD. |
-| resource | Enter your app's subdomain URI and the application ID URI that you created in Azure AD when creating scope. You can copy it from the **Azure AD** > **Expose an API** section. |
+| id | Enter the app ID (GUID) that you created in Microsoft Entra ID. |
+| resource | Enter your app's subdomain URI and the application ID URI that you created in Microsoft Entra ID when creating scope. You can copy it from the **Microsoft Entra ID** > **Expose an API** section. |
 
 > [!NOTE]
 > Use the app manifest version 1.5 or later to implement the `webApplicationInfo` property.
 
-The application ID URI that you registered in Azure AD is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in the app manifest.
+The application ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in the app manifest.
 
 For more information, see [webApplicationInfo](../../../resources/schema/manifest-schema.md#webapplicationinfo).
 
@@ -57,10 +57,10 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
     ```
 
     where,
-    - `{Azure AD AppId}` is the app ID you created when you registered your app in Azure AD. It's the GUID.
-    - `subdomain.example.com` is the application ID URI that you registered when creating scope in Azure AD.
+    - `{Azure AD AppId}` is the app ID you created when you registered your app in Microsoft Entra ID. It's the GUID.
+    - `subdomain.example.com` is the application ID URI that you registered when creating scope in Microsoft Entra ID.
 
-4. Update the app ID from Azure AD in the **id** property.
+4. Update the app ID from Microsoft Entra ID in the **id** property.
 5. Update the subdomain URL in the following properties:
    1. `contentUrl`
    2. `configurationUrl`
@@ -127,11 +127,11 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 </details>
 
 > [!NOTE]
-> During debug, you can use ngrok to test your app in Azure AD. In that case, you need to replace the subdomain in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` with the ngrok URL. You'll need to update the URL whenever your ngrok subdomain changes. For example, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
+> During debug, you can use ngrok to test your app in Microsoft Entra ID. In that case, you need to replace the subdomain in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` with the ngrok URL. You'll need to update the URL whenever your ngrok subdomain changes. For example, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
 
 ## Upload an app and preview in Teams
 
-After configuring the tab app for SSO in Azure AD within the app code, and in the app manifest file, you're now ready to upload your tab app in Teams. You can then preview it within the Teams environment.
+You've configured the tab app to enable SSO in Microsoft Entra ID, in app code, and in the app manifest file. You can now upload your tab app in Teams, and preview it in Teams environment.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="SSO app":::
 
@@ -157,11 +157,11 @@ To preview your tab app in Teams:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Teams dialog box informing about additional permissions required":::
 
-    The Azure AD consent dialog appears.
+    The Microsoft Entra consent dialog appears.
 
 1. Select **Accept** to give consent for open-id scopes.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD consent dialog":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Microsoft Entra consent dialog":::
 
     Teams opens the tab app and you can use it.
 

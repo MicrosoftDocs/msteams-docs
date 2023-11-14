@@ -76,7 +76,7 @@ The following variants show the kinds of activity feed notification cards you ca
 
 Activity feed APIs work with a Teams app. The following are the requirements to send activity feed notifications:
 
-* The app manifest must have the Azure AD app ID added to the `webApplicationInfo` section. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#webapplicationinfo).
+* The app manifest must have the Microsoft Entra app ID added to the `webApplicationInfo` section. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#webapplicationinfo).
 * The activity notifications can be sent with or without activity types added in the app manifest.
   * By default, you can use the activity notification APIs without adding the `activities` section in the app manifest. The `systemDefault` activity type is reserved, which allows you to provide free-form text in the `Actor+Reason` line of the activity feed notification. For more information, see [send customizable activity feed notifications](/graph/teams-send-activityfeednotifications?tabs=http#example-8-send-a-notification-to-a-user-using-the-systemdefault-activity-type).
   * If you want to send a templated notification in the traditional mode, the `activityTypes` property must be added in the [activities](#activities-update) section. For more information, see [app manifest schema](/microsoftteams/platform/resources/schema/manifest-schema#activities).
@@ -107,11 +107,11 @@ This section describes the updates that need to be added to the app manifest. En
 
 |Parameter|Type|Description|
 |:---|:---|:---|
-|`id`|string|Azure AD app ID (client ID).|
-|`resource`|string|Resource associated with the Azure AD app. Also known as reply or redirect URL in the Microsoft Azure Portal.|
+|`id`|string|Microsoft Entra app ID (client ID).|
+|`resource`|string|Resource associated with the Microsoft Entra app. Also known as reply or redirect URL in the Microsoft Azure Portal.|
 
 > [!NOTE]
-> You might get an error if multiple Teams apps in the same scope (team, chat, or user) are using the same Azure AD app. Make sure that you're using unique Azure AD apps.
+> You might get an error if multiple Teams apps in the same scope (team, chat, or user) are using the same Microsoft Entra app. Make sure that you're using unique Microsoft Entra apps.
 
 #### Activities update
 
