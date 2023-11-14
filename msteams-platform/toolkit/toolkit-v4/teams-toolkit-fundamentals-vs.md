@@ -58,7 +58,7 @@ Perform the following the steps to select templates and app capbaility:
 
 ### Automatic registration and configuration
 
-You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, Teams Toolkit automatically registers the Teams app to your Microsoft 365 tenant and configures settings such as Azure Active Directory (Azure AD) for your Teams app. Sign in with your Microsoft 365 account to control where the app is configured and customize the Azure AD manifest. 
+You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, Teams Toolkit automatically registers the Teams app to your Microsoft 365 tenant and configures settings such as Microsoft Entra ID for your Teams app. Sign in with your Microsoft 365 account to control where the app is configured and customize the Microsoft Entra manifest. 
 
 #### TeamsFx .NET SDK reference
 
@@ -110,7 +110,7 @@ You can start directly with the capability-focused templates such as tabs, bots,
 
 ### Automatic registration and configuration
 
-You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, configure settings, such as Azure Active Directory (Azure AD) automatically. Sign in with your Microsoft 365 account to control where the app is configured and customized the included Azure AD manifest when you need flexibility.
+You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, configure settings, such as Microsoft Entra ID automatically. Sign in with your Microsoft 365 account to control where the app is configured and customized the included Microsoft Entra manifest when you need flexibility.
 
 #### TeamsFx .NET SDK Reference docs
 

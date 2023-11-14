@@ -364,7 +364,7 @@ items:
           > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check it.
 
         2. Install NPM packages.
-        3. Registers the app with Azure AD and configures the app.
+        3. Registers the app with Microsoft Entra ID and configures the app.
         4. Registers the app in Teams Developer Portal and configures the app.
         5. Starts the tab app.
         6. Starts Teams in a web browser and uploads the tab app.
