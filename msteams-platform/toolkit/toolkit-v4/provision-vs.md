@@ -158,7 +158,7 @@ The `teamsApp/publishAppPackage` action publishes built Teams app zip file to te
 
 ### aadApp/create
 
-The `aadApp/create` action creates a new Azure Active Directory (Azure AD) application to authenticate users if the environment variable that stores the `clientId` is empty. It operates in Azure AD in Microsoft 365 tenant.
+The `aadApp/create` action creates a new Microsoft Entra application to authenticate users if the environment variable that stores the `clientId` is empty. It operates in Microsoft Entra ID in Microsoft 365 tenant.
 
 ```yml
 - uses: aadApp/create
@@ -187,7 +187,7 @@ The `aadApp/create` action creates a new Azure Active Directory (Azure AD) appli
   
 ### aadApp/update
 
-`aadApp/update` action updates your Azure AD application based on Azure AD app manifest. It refers to the ID property in Azure AD app manifest to determine which Azure AD app to update. aadApp/update operates on Azure AD in your Microsoft 365 tenant.
+`aadApp/update` action updates your Microsoft Entra application based on Microsoft Entra app manifest. It refers to the ID property in Microsoft Entra app manifest to determine which Microsoft Entra app to update. aadApp/update operates on Microsoft Entra ID in your Microsoft 365 tenant.
 
 ```yaml
 - uses: aadApp/update
@@ -200,7 +200,7 @@ The `aadApp/create` action creates a new Azure Active Directory (Azure AD) appli
 
 ### botAadApp/create
 
-The `botAadApp/create` action creates a new or reuses an existing Azure AD application for bot. It operates on Azure AD in the Microsoft 365 tenant.
+The `botAadApp/create` action creates a new or reuses an existing Microsoft Entra application for bot. It operates on Microsoft Entra ID in the Microsoft 365 tenant.
 
 ```yml
 - uses: botAadApp/create
@@ -277,7 +277,7 @@ The provision steps are defined in the `teamsapp.yml` file, under the `provision
 
 #### Reference environment variables in parameter files
 
-Teams Toolkit supports referencing the values from environment variables in the `teamsapp.yml` file, Teams app manifest, Azure AD app manifest, and Azure parameter files. You can use the syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
+Teams Toolkit supports referencing the values from environment variables in the `teamsapp.yml` file, Teams app manifest, Microsoft Entra app manifest, and Azure parameter files. You can use the syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
 
 The following example sets the value of environment variable `MY_AZURE_SUBSCRIPTION_ID` to `subscriptionId`:
 
@@ -312,18 +312,20 @@ You can sign in to [Azure portal](https://portal.azure.com/) and manage all reso
 
 ### Customize Teams apps
 
-You can customize your bot or the Teams app by adding environment variables to use an Azure AD app that you've created. You can customize the Teams app in the following ways:
+You can customize your bot or the Teams app by adding environment variables to use a Microsoft Entra app that you've created. You can customize the Teams app in the following ways:
 
-* [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app-1)
-* [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot)
+* [Use an existing Microsoft Entra app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app)
+* [Use an existing Microsoft Entra app for your bot](#use-an-existing-azure-ad-app-for-your-bot)
 
-#### Use an existing Azure AD app for your Teams app
+<a name='use-an-existing-azure-ad-app-for-your-teams-app'></a>
 
-To use an Azure AD app created for your Teams app and to add environment variables to the .env files, follow these steps.
+#### Use an existing Microsoft Entra app for your Teams app
+
+To use a Microsoft Entra app created for your Teams app and to add environment variables to the .env files, follow these steps.
 
 1. Open the `teamsapp.yml` file and find the `aadApp/create` action.
 
-1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. If you create projects using Teams Toolkit the default  `writeToenvironmentFile` property definition is as follows:
+1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. If you create projects using Teams Toolkit the default  `writeToenvironmentFile` property definition is as follows:
 
      ```yml
       writeToEnvironmentFile:
@@ -348,27 +350,29 @@ To use an Azure AD app created for your Teams app and to add environment variabl
         AAD_APP_ACCESS_AS_USER_PERMISSION_ID=<id of access_as_user permission> # example: 00000000-0000-0000-0000-000000000000
        ```  
 
-    1. If your application requires an Azure AD app client secret, add the following environment variable and its value to `env\.env.{env}.user` file. For example:
+    1. If your application requires a Microsoft Entra app client secret, add the following environment variable and its value to `env\.env.{env}.user` file. For example:
 
        ```env
        SECRET_AAD_APP_CLIENT_SECRET=<value of Azure AD application's client secret>
        ```
 
-If you don't have an Azure AD app yet or you've one but don't know where to find the correct value, see [Use existing Azure AD app in TeamsFx project](../use-existing-aad-app.md).
+If you don't have a Microsoft Entra app yet or you've one but don't know where to find the correct value, see [Use existing Microsoft Entra app in TeamsFx project](../use-existing-aad-app.md).
 
 >[!NOTE]
 >
 > * Remember to update the environment variable names in the examples if you use different names in `writeToEnvironmentFile`.
-> * If you don't use `aadApp/create` action to create Azure AD application, you can add necessary environment variables with your preferred name without following above steps.
-> * Ensure you do not share the same Azure AD app in multiple environments.
+> * If you don't use `aadApp/create` action to create Microsoft Entra application, you can add necessary environment variables with your preferred name without following above steps.
+> * Ensure you do not share the same Microsoft Entra app in multiple environments.
 
-#### Use an existing Azure AD app for your bot
+<a name='use-an-existing-azure-ad-app-for-your-bot'></a>
 
-You can follow the steps to add environment variables to the .env files to use an Azure AD app created for your Teams app.
+#### Use an existing Microsoft Entra app for your bot
+
+You can follow the steps to add environment variables to the .env files to use a Microsoft Entra app created for your Teams app.
 
 1. Open the `teamsapp.yml` file and find the `botAadApp/create` action.
 
-1. Find the environment variable names that store information for Azure AD app in the `writeToEnvironmentFile` property. The default `writeToEnvironmentFile` definition if you create projects using Teams Toolkit is as follows:
+1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. The default `writeToEnvironmentFile` definition if you create projects using Teams Toolkit is as follows:
 
     ```yml
      writeToEnvironmentFile:
@@ -390,13 +394,13 @@ You can follow the steps to add environment variables to the .env files to use a
        SECRET_BOT_PASSWORD=<value of Azure AD application's client secret>
        ```
 
-If you don't have an Azure AD app for your bot yet or you've one but don't know where to find the correct values, see [Use existing Azure AD app in TeamsFx project](../use-existing-aad-app.md).
+If you don't have a Microsoft Entra app for your bot yet or you've one but don't know where to find the correct values, see [Use existing Microsoft Entra app in TeamsFx project](../use-existing-aad-app.md).
 
 > [!NOTE]
 >
 > * Remember to update the environment variable names in the examples if you use different names in `writeToEnvironmentFile`.
-> * If you don't use `botAadApp/create` action to create Azure AD application, you can add necessary environment variables with your preferred name without following above steps.
-> * Ensure that you do not share the same Azure AD app in multiple environments.
+> * If you don't use `botAadApp/create` action to create Microsoft Entra application, you can add necessary environment variables with your preferred name without following above steps.
+> * Ensure that you do not share the same Microsoft Entra app in multiple environments.
 
 ## See also
 
@@ -489,7 +493,7 @@ After you open your project in Visual Studio:
 
 When you trigger provision command in Teams Toolkit or TeamsFx CLI, you can create the following resources:
 
-* Microsoft Azure Active Directory (Azure AD) app under your Microsoft 365 tenant.
+* Microsoft Entra app under your Microsoft 365 tenant.
 * Teams app registration under your Microsoft 365 tenant's Teams platform.
 * Azure resources under your selected Azure subscription.
 
@@ -622,16 +626,18 @@ Provision with ARM involves changing the following sets of files, parameters, an
 
 The ARM template files use placeholders for parameters. The purpose of the placeholders is to ensure that new resources can be created in a new environment. The actual values are resolved from `.fx\states\state.{env}.json` file.
 
-### Azure AD app related parameters
+<a name='azure-ad-app-related-parameters'></a>
+
+### Microsoft Entra app related parameters
 
 | Parameter name | Default value placeholder | Meaning of the placeholder | How to customize |
 | --- | --- | --- | --- |
-| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's Azure AD app client Id created during provision. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app-1). |
-| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Your app's Azure AD app client secret is created during provision. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app-1).  |
-| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Tenant Id of your app's Azure AD app. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app-1).  |
-| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth authority host of your app's Azure AD app. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app-1). |
-| botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's Azure AD app client Id is created during provision. | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot-1).|
-| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bot's Azure AD app client secret is created during provision. | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot-1). |
+| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's Microsoft Entra app client Id created during provision. | [Use an existing Microsoft Entra app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app). |
+| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Your app's Microsoft Entra app client secret is created during provision. | [Use an existing Microsoft Entra app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app).  |
+| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Tenant Id of your app's Microsoft Entra app. | [Use an existing Microsoft Entra app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app).  |
+| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth authority host of your app's Microsoft Entra app. | [Use an existing Microsoft Entra app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app). |
+| botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's Microsoft Entra app client Id is created during provision. | [Use an existing Microsoft Entra app for your bot](#use-an-existing-azure-ad-app-for-your-bot).|
+| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bot's Microsoft Entra app client secret is created during provision. | [Use an existing Microsoft Entra app for your bot](#use-an-existing-azure-ad-app-for-your-bot). |
 
 ### Reference environment variables in parameter files
 
@@ -657,15 +663,17 @@ To ensure the TeamsFx tool functions properly, customize ARM template that satis
 
 ### Customize Teams app
 
-You can customize your bot or the Teams app by adding configuration snippets to use an Azure AD app created for your Teams app.
+You can customize your bot or the Teams app by adding configuration snippets to use a Microsoft Entra app created for your Teams app.
 Perform in the following ways to customize the Teams app:
 
-* [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app-1)
-* [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot-1)
+* [Use an existing Microsoft Entra app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app)
+* [Use an existing Microsoft Entra app for your bot](#use-an-existing-azure-ad-app-for-your-bot)
 
-#### Use an existing Azure AD app for your Teams app
+<a name='use-an-existing-azure-ad-app-for-your-teams-app'></a>
 
-You can add the following configuration snippet to `.fx\configs\config.{env}.json` file to use an Azure AD app created for your Teams app. If you don't have an Azure AD app yet or you already have one but don't know where to find the correct value, see [how to use existing Azure AD app in TeamsFx project](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/fx-core/using-existing-aad.md):
+#### Use an existing Microsoft Entra app for your Teams app
+
+You can add the following configuration snippet to `.fx\configs\config.{env}.json` file to use a Microsoft Entra app created for your Teams app. If you don't have a Microsoft Entra app yet or you already have one but don't know where to find the correct value, see [how to use existing Microsoft Entra app in TeamsFx project](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/fx-core/using-existing-aad.md):
 
 ```json
 "$schema": "https://aka.ms/teamsfx-env-config-schema",
@@ -685,11 +693,13 @@ You can add the following configuration snippet to `.fx\configs\config.{env}.jso
 After adding the snippet, add your client secret to the related environment variable for Teams Toolkit to resolve the actual client secret during provision.
 
 > [!NOTE]
-> Ensure that not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you get a warning with instructions to manually update the Azure AD app. Follow these instructions to update your Azure AD app after provision.
+> Ensure that not to share the same Microsoft Entra app in multiple environments. If you don't have permission to update the Microsoft Entra app, you get a warning with instructions to manually update the Microsoft Entra app. Follow these instructions to update your Microsoft Entra app after provision.
 
-#### Use an existing Azure AD app for your bot
+<a name='use-an-existing-azure-ad-app-for-your-bot'></a>
 
-You can add the following configuration snippet to `.fx\configs\config.{env}.json` file to use the Azure AD app created for your bot:
+#### Use an existing Microsoft Entra app for your bot
+
+You can add the following configuration snippet to `.fx\configs\config.{env}.json` file to use the Microsoft Entra app created for your bot:
 
 ```json
 "bot": {
