@@ -537,7 +537,10 @@
         displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Chat
       - name: Guidelines to extend bot-based message extension as plugin
         href: messaging-extensions/high-quality-message-extension.md
-        displayName: Criteria, extend message extension, plugin,  M365, Microsoft 365 Chat  
+        displayName: Criteria, extend message extension, plugin,  M365, Microsoft 365 Chat
+      - name: Microsoft 365 Chat plugin FAQ
+        href: messaging-extensions/copilot-plugin-faq.md
+        displayName: M365, bot-based message extension, plugin
 
     - name: Add link unfurling
       href: messaging-extensions/how-to/link-unfurling.md

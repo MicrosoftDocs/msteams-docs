@@ -104,6 +104,10 @@ To run the message extension in Teams, follow these steps:
 
 ---
 
+### Extend bot-based message extension as plugin
+
+Microsoft 365 plugins provide integration with various Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft 365 Chat to interact with APIs from other software and services through a bot. We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Microsoft 365 Chat. For more information, see [Extend bot-based message extension as plugin for Microsoft 365 Chat](../../build-bot-based-plugin.md).
+
 ## Code snippets
 
 The following code provides an example of search based for message extensions:

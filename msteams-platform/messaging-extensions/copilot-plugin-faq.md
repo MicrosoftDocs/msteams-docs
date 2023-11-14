@@ -91,7 +91,7 @@ Here's an example description that work for NPM Finder.
 
 <summary> Q: Microsoft 365 Chat includes my plugin in the response, but the Microsoft 365 Chat’s response doesn’t meet my expectations. What should I do?</summary>
 
-Use the thumbs down indicator on the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
+Use the downvoting option in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
 
 </details>
 

@@ -1822,6 +1822,8 @@ The long description of an app must clearly call out the following:
 * Microsoft 365 Chat must respond accurately and not show an error when a user prompts with a follow-up.
 * Message extension must contain at least two parameters for enhanced user experience in Microsoft 365 Chat.
 
+[Back to top](#teams-store-validation-guidelines)
+
 ## Next step
 
 > [!div class="nextstepaction"]
