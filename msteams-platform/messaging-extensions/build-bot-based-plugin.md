@@ -101,7 +101,7 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
 Before you get started, ensure that you install the following tools to build and deploy your message extension:
 
-* Install the Visual Studio Enterprise 2022 Preview version 17.9.0 Preview 1.0, and install the **Microsoft Teams development tools** under **ASP.NET and web development** workload.
+* Install the Visual Studio Enterprise 2022 Preview version 17.9.0 Preview 1.0 and install the **Microsoft Teams development tools** under **ASP.NET and web development** workload.
 * Ensure that the Copilot feature flag is enabled. To enable the feature flag, follow these steps:
   1. Open Visual Studio.
   1. Go to **Tools** > **Options**.
@@ -134,7 +134,7 @@ To create a bot-based search message extension plugin using Visual Studio, follo
     The tunnel you've created is listed under **Dev Tunnels > (name of the tunnel)**.
 
 1. Go to **Solution Explorer** and select your project.
-1. Right-click the project menu and selec  **Teams Toolkit** > **Prepare Teams App Dependencies**.
+1. Right-click the project menu and select  **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VS-teams-app-dependencies.png" alt-text="Screenshot shows the Prepare Teams app dependencies option under Teams Toolkit in Visual Studio app project.":::
 
@@ -209,7 +209,9 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 
 1. Go to the folder path where your project is created and enter the following command to provision your app in Azure:
 
-   ```teamsfx provision --env dev```
+   ```
+    teamsfx provision --env dev
+   ```
 
    Teams Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
 
@@ -230,7 +232,9 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 
 1. In the command prompt window, enter the following command to preview your app in Teams:
 
-   ```teamsfx preview --env dev```
+   ```
+    teamsfx preview --env dev
+   ```
 
    A new browser window with Teams web client opens. You can add your app to Teams.
 
