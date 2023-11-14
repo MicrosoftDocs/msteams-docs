@@ -185,7 +185,7 @@ Yes, you can. Ensure that you have a descriptive app manifest and have uploaded 
 
 <details>
 
-<summary> Q: How can I get my existing Teams message extension to work with Microsoft 365 Microsoft 365 Chat? </summary>
+<summary> Q: How can I get my existing Teams message extension to work with Microsoft 365 Chat? </summary>
 
 1. Register the bot channel in Azure Bot Service.
 1. Upload the app to Outlook.
