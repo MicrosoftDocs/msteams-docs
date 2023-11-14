@@ -36,7 +36,7 @@ No, Adaptive Card Previewer is available in Visual Studio Code only.
 ## App validation
 
 <details>
-<summary>How can I connect Azure AD to an MPN account?</summary>
+<summary>How can I connect Microsoft Entra ID to an MPN account?</summary>
 
 <!--Question: Publisher Attestation issue - the app needed to be published first (I attached the screenshot when I tried to submit the attestation). Before doing the Publisher Attestation. I think this is most likely to connect the Azure AD to an MPN account.-->
 
@@ -45,7 +45,7 @@ Follow the steps in the pages given here:
 1. [Publisher verification overview - Microsoft Entra](/azure/active-directory/develop/publisher-verification-overview).
 1. [Microsoft LearnMark an app as publisher verified - Microsoft Entra](/azure/active-directory/develop/mark-app-as-publisher-verified).
 1. [Microsoft Learn
-Resolution - Connect Azure AD to MPN settings](/partner-center/mpn-benefits-azure-cloud).
+Resolution - Connect Microsoft Entra ID to MPN settings](/partner-center/mpn-benefits-azure-cloud).
 
 <!--Links found:
 1. [Update preferred email](/partner-center/partner-center-account-setup.md#update-preferred-email)
@@ -262,7 +262,7 @@ For more information, see [Graph explorer](https://developer.microsoft.com/graph
 <details>
 <summary>What should I do if one or more of the course teams weren't created after synchronization?</summary>
 
-Each Moodle course must have at least one faculty and one student matched to a Microsoft 365 AAD UPN account. The team can't be created if the synchronization doesn't find a match.
+Each Moodle course must have at least one faculty and one student matched to a Microsoft 365 account username. The team can't be created if the synchronization doesn't find a match.
 
 Each team course instance must have an owner, and the synchronization sets the faculty as the owner, with assumption that the faculty has Teams license.
 <br>
@@ -281,7 +281,7 @@ The app users have multiple sign-in options from the Moodle login page.
 
 </details>
 <details>
-<summary>How can I specify which users to sync? I don’t want all Azure AD users synchronized with the Moodle website. </summary>
+<summary>How can I specify which users to sync? I don’t want all Microsoft Entra users synchronized with the Moodle website. </summary>
 
 Use the **User Creation Restriction** option to specify the app users by synchronizing the configuration options of the **local_o365** plugin. The dropdown menu to the left of the **filter** offers options, such as Country or region, Company Name, and Language.
 
@@ -292,7 +292,7 @@ The following image shows user creation restrictions options:
 
 :::image type="content" source="assets/images/MoodleInstructions/faq-2.png" alt-text="sync":::
 
-:::image type="content" source="assets/images/MoodleInstructions/faq-3.png" alt-text="Azure ad":::
+:::image type="content" source="assets/images/MoodleInstructions/faq-3.png" alt-text="Microsoft Entra ID":::
 <br>
 &nbsp;
 </details>
@@ -312,7 +312,7 @@ The following image shows synchronization of courses:
 &nbsp;
 </details>
 <details>
-<summary>We have followed the documentation, but the user accounts fail to sync AAD and Moodle. What should we do?</summary>
+<summary>We have followed the documentation, but the user accounts fail to sync Microsoft Entra ID and Moodle. What should we do?</summary>
 
 The issue can be resolved before users perform the **Delta token clean up** as a final troubleshooting step.
 
@@ -322,7 +322,7 @@ The following table provides the actions and dependencies to be performed and ch
 |-------|------------|----------|
 | Stable version| Verify that the version of Moodle is listed as a **stable**.| For more information, see [Version support](https://docs.moodle.org/dev/Releases#Version_support).|
 |Permissions| Verify that the Azure application has the necessary permissions to run the synchronization.| For more information, see [Microsoft permissions](https://docs.moodle.org/311/en/Microsoft_365#Permissions).|
-| Full sync| Verify that **Perform a full sync each run** is enabled, and review the **Task Logs** for **Sync users with Azure AD**.| For more information, see [Enable full sync](https://docs.moodle.org/311/en/local_o365)</br>For more information, see [Check task logs](https://docs.moodle.org/311/en/local_o365#Sync_users_with_Azure_AD). |
+| Full sync| Verify that **Perform a full sync each run** is enabled, and review the **Task Logs** for **Sync users with Microsoft Entra ID**.| For more information, see [Enable full sync](https://docs.moodle.org/311/en/local_o365)</br>For more information, see [Check task logs](https://docs.moodle.org/311/en/local_o365#Sync_users_with_Azure_AD). |
 |Token refresh|Clean the **User sync delta token** in the local_o365 plugin.| For more information, see, [Token refresh](https://docs.moodle.org/38/en/Office365).|
 
 <br>
@@ -334,7 +334,7 @@ The following table provides the actions and dependencies to be performed and ch
 The reason for inconsistencies with users being able unable to sign using their Microsoft 365 credentials can be related to the user mapping operation during synchronization. To resolve the issue, perform the following steps:
 
 * Check if the Moodle user authentication type is **OpenID**.
-* Check if the Moodle **User Name** matches the AAD username.
+* Check if the Moodle **User Name** matches the Microsoft Entra username.
 * Clean up the **Token Issue** and retry.
 * Check if the users have **Permissions** to access the Azure application.
 <br>
@@ -667,7 +667,7 @@ You can use the [code sample](https://github.com/OfficeDev/Microsoft-Teams-Sampl
 <details>
 <summary>How can I change application ID URI of SSO scope to use bot ID also so that the consent window won't be required for a bot app?</summary>
 
-For more information, see [Configure your app in Azure AD](bots/how-to/authentication/bot-sso-register-aad.md).
+For more information, see [Configure your app in Microsoft Entra ID](bots/how-to/authentication/bot-sso-register-aad.md).
 <br>
 &nbsp;
 </details>
@@ -690,7 +690,7 @@ Open the sign in simple start page instead of opening login page directly to res
 <details>
 <summary>How can I generate the access token using the endpoint oauth2/v2.0/token with grant type as "authorization_code"?</summary>
 
-Configure the application you're using to only execute HTML encoding of the scopes once, so the scopes can be correctly sent and evaluated by Azure AD.
+Configure the application you're using to only execute HTML encoding of the scopes once, so the scopes can be correctly sent and evaluated by Microsoft Entra ID.
 <br>
 &nbsp;
 </details>
@@ -764,13 +764,13 @@ Before provision, the toolkit asks you if you want to create a new resource grou
 You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 
 > [!NOTE]
-> Currently, building a Teams app using SharePoint Framework with Teams Toolkit doesn't have direct integration with Azure AD portal. The content in the document doesn't apply to SPFx-based apps.
+> Currently, building a Teams app using SharePoint Framework with Teams Toolkit doesn't have direct integration with Microsoft Entra admin center. The content in the document doesn't apply to SPFx-based apps.
 
 <br>
 &nbsp;
 </details>
 <details>
-<summary>How can I deploy the code in Azure AD using Teams Toolkit, and use Graph API to get the app user's profile photo?</summary>
+<summary>How can I deploy the code in Microsoft Entra ID using Teams Toolkit, and use Graph API to get the app user's profile photo?</summary>
 
 Shared references to deploy the code using toolkit:
 
