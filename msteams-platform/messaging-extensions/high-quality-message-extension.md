@@ -5,7 +5,7 @@ ms.topic: how-to
 author: v-preethah
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 10/18/2023
+ms.date: 11/14/2023
 ---
 
 # Guidelines to create or upgrade a message extension plugin for Microsoft 365 Chat

@@ -5,7 +5,7 @@ description: Learn how to build a bot-based message extension plugin for Microso
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 09/07/2023
+ms.date: 11/14/2023
 ---
 
 # Extend bot-based message extension as plugin for Microsoft 365 Chat
