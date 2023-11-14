@@ -196,7 +196,6 @@ items:
           return { content: "Hello world!" };
           };
         ```
-
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/service-retrieve.png" alt-text="Screenshot shows the creation of sampleService.ts file under the service folder in Visual Studio Code.":::
     
      ## Create a widget file
