@@ -11,44 +11,41 @@ ms.subservice: m365apps
 
 > [!NOTE]
 > The feature is only available for Microsoft 365 app on web and desktop clients.
+> The feature is availbe in dev preview.
 
 Actions seamlessly integrate your app into the user's workflow, ensuring effortless discovery and smooth interaction with their content. By guiding users to your app based on their intent and contextual content, Actions facilitate efficient task completion. This integration increases your app's visibility and engagement with minimal development effort.
 
-Building Actions give developers to enhance their user's productivity by streamlining task completion and reducing the need for context switching across various Microsoft 365 applications.
+Actions enhance user's productivity by streamlining task completion and reducing the need for context switching across various Microsoft 365 applications.
 
 ## Key benefits of Actions in Microsoft 365 applications
 
-1. Users accomplish tasks more efficiently.
-1. Seamlessly integrates your app in user workflow, increasing app's visibility and user engagement.
+1. Users can accomplish tasks more efficiently.
+1. Seamlessly integrates your app into users workflow, increasing app's visibility and user engagement.
 1. Users can take immediate action on content files through your app, expanding the range of interactions they can have with their content.  
 
 :::image type="content" source="images/m365-Actions-in-action.gif" alt-text="In this GIF, the user can add a file to the to-do list sample app with a note attached for a task to complete. ":::
  
 ## How Actions work
 
-Actions are created through the integration of Intent, Object, and Handler. When a user intends to accomplish a task, it is represented as intent + object. The intent defines the user's desired action, and the object specifies the function to be executed.
+Actions are the combination of Intent, Object, and Handler. The Intent defines the user's desired action, the Object is file being acted upon, and the Handler is the method on which the function of the Intent will be executed.
 
 As a developer, your role is to receive the user's intent and object input and construct the corresponding handler that facilitates task completion for the users.
+
 To build an Action, you will define the intent, object, and handler of your actions in the manifest. And in your handler, use the [Teams JS library](/javascript/api/@microsoft/teams-js) to receive the Action information to create a seamless user experience for performing users specific tasks.  
 
 ### Intent
 
-"intent" is the objective a user wants to perform or achieve. User intent is typically represented by a verb, such as "open," or “add to.” This "intent" enables the Microsoft 365 platform to display the Actions in locations that mostly align with the user's needs and intentions. This includes but not limited to, where Actions show up and how Actions are grouped or ordered.
+Intent is the objective a user wants to perform or achieve. User intent is typically represented by a verb, such as "open," or “add to.” This "intent" enables the Microsoft 365 platform to display the Actions in locations that mostly align with the user's needs and intentions. This includes but not limited to, where Actions show up and how Actions are grouped or ordered.
 
 There are three intent types supported for Actions: “open”, “addTo”, and “custom”. With the "custom" intent, developers have the flexibility to build tailored Actions to fulfill any user task.
 
 ### Object
 
-"object" is the file on which the user wants to perform an Action on. For an Action to be triggered on the file it must reside in ether OneDrive or SharePoint and be accessible through Microsoft Graph.
-
-> [!NOTE]
-> Current object file types supported include but are not limited to .docx, .doc, .ppt, .xlsx, .pdf, .jpg, .png, and well as other image file types
+Object is the file on which the user wants to perform an Action on. For an Action to be triggered on the file it must reside in ether OneDrive or SharePoint and be accessible through Microsoft Graph. The Object file type must be specified in the manifest.
 
 ### Handlers
 
-A "handler" is the method or mechanism to fulfill the user's intent and perform the desired action on the specified object. It is responsible for implementing the logic and functionality of the Action.
-
-**Currently supported handler:**
+A Handler is the method or mechanism to fulfill the user's intent and perform the desired action on the specified object. It is responsible for implementing the logic and functionality of the Action.
 
 The current choice of handlers can either direct users to the app’s page or open a dialog for the user to interact with.
 
@@ -79,7 +76,7 @@ They right-click on the Excel file and then click on the Action 'Related supplie
 
 :::image type="content" source="images/m365-actions-user-scenario-2-1.png" alt-text="The screenshot shows the right click menu displaying the Related supplier option running on Microsoft 365 on web.":::
 
-The Northwind app opens, displaying the list of suppliers filtered to show only those that appear in the document.  This saves them time opening up the app and the Excel file and checking each item manually.
+The Northwind app opens, displaying the list of suppliers filtered to show only those that appear in the document. This saves them time opening up the app and the Excel file and checking each item manually.
 
 :::image type="content" source="images/m365-actions-user-scenario-2-2.png" alt-text="The screenshot shows the Northwind app open, displaying the list of suppliers filtered to show only those that appear in the document running on Microsoft 365 on web.":::
 

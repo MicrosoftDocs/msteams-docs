@@ -794,10 +794,10 @@
         displayName: loop component, weburl, metadata
   - name: M365 Actions
     items:
-      - name: Learn what are Actions
+      - name: Microsoft 365 Actions
         href: m365-apps/actions.md
         displayName: actions, Microsoft 365, Office 365
-      - name: Build your first Action
+      - name: How to build Actions in Microsoft 365
         href: m365-apps/build-actions.md
         displayName: actions, Microsoft 365, Office 365, metadata        
   - name: Publish Teams apps for Microsoft 365

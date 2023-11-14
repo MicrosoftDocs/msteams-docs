@@ -1,5 +1,5 @@
 ---
-title: How to build Actions
+title: How to build Actions in Microsoft 365
 description: In this documentation, you will learn to build Actions.
 ms.date: 11/12/2023
 ms.author: mosdevdocs
@@ -7,7 +7,7 @@ author: mobajemu
 ms.topic: Conceptual
 ms.subservice: m365apps
 ---
-# How to build Actions
+# How to build Actions in Microsoft 365
 
 To add an Action to your existing Teams app, you must:
 
@@ -219,7 +219,7 @@ app.getContext().then((context: app.Context) => {
 After obtaining the `itemId` of the triggering content, you can leverage the Graph API to read or modify the content, facilitating task completion for your users. 
 
 > [!NOTE]
-> When constructing an action that directs the user to a dialog, you can utilize the [dialog.url.submit( )](/javascript/api/@microsoft/teams-js/dialog.url#@microsoft-teams-js-app-getcontext) API to close the dialog when the user clicks a button. However, it's important to note that using the submit() API in your app's in the Action triggered dialog will not allow data to be sent back to the launch page.
+> When constructing an Action that directs the user to a dialog, you can utilize the [dialog.url.submit( )](/javascript/api/@microsoft/teams-js/dialog.url#@microsoft-teams-js-app-getcontext) API to close the dialog when the user clicks a button. However, it's important to note that using the submit() API in your app's in the Action triggered dialog will not allow data to be sent back to the launch page.
 
 ## Test and Deploy your Actions
 
