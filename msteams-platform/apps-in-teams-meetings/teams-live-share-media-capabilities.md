@@ -16,7 +16,7 @@ The Live Share SDK enables robust **media synchronization** for any HTML `<video
 
 ## Install
 
-Live Share media is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share-media), and you can download through npm or yarn. You must also install its peer dependencies, which include `@microsoft/live-share`, `fluid-framework` and `@fluidframework/azure-client`. If you are using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later.
+Live Share media is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share-media), and you can download through npm or yarn. You must also install its peer dependencies, which include `@microsoft/live-share`, `fluid-framework` and `@fluidframework/azure-client`. If you're using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later.
 
 ```bash
 npm install @microsoft/live-share @microsoft/live-share-media fluid-framework @fluidframework/azure-client --save
@@ -309,7 +309,7 @@ export function VideoPlayer() {
 
 ---
 
-When beginning a suspension, you can also include an optional [CoordinationWaitPoint](/javascript/api/@microsoft/live-share-media/coordinationwaitpoint) parameter, which allows users to define the timestamps in which a suspension should occur for all users. Synchronization won't resume until all users have ended the suspension for that wait point.
+When beginning a suspension, you can also include an optional [CoordinationWaitPoint](/javascript/api/@microsoft/live-share-media/coordinationwaitpoint) parameter, which allows users to define the timestamps in which a suspension should occur for all users. Synchronization doesn't resume until all users end the suspension for that wait point.
 
 Here are a few scenarios where wait points are especially useful:
 
