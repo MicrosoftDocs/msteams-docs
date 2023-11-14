@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Build a bot-based message extension plugin
 metadata:
-  title: Build a bot-based message extension plugin
+  title: Build a bot-based message extension plugin for Microsoft 365 Chat
   description: In this tutorial, you can learn to build a bot-based message extension and extend it as a plugin in Microsoft 365 Chat.
   audience: Developer
   level: Beginner
