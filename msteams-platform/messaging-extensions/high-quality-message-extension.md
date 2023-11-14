@@ -15,7 +15,7 @@ ms.date: 10/18/2023
 
 Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft 365 Chat to interact with APIs from other software and services through a bot. With Microsoft 365 Chat, you can:
 
-* Search for the latest information or record, for example, the latest incident ticket or survey results.
+* Search for the latest information or record. For example, the latest incident ticket or survey results.
 * Summarize information based on multiple records. For example, summarize all incident tickets related to the project Northwind.
 
 We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Microsoft 365 Chat. Message extensions should support one or more search commands, as these are recognized by Microsoft 365 Chat as skills it can execute on behalf of the user. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in this article.
@@ -504,7 +504,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
   * `Action.Submit`: Opens a Task module or Stage view using type invoke in data object.
 
 * If a user can change any information on the card through task module, stage view, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
-* Adaptive Cards must include a URL as part of the metadata, which allows cards to be easily copied from one hub to another.
+* Adaptive Cards must include a URL as part of the metadata, which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
 ## Technical requirements

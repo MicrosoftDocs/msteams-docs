@@ -37,7 +37,7 @@ Before you get started, ensure that you're familiar with the following standards
 
 * Standards for compliance, performance, security, and user experience outlined in [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-microsoft-365-chat-plugin).
 
-* [Guidelines to create or upgrade a message extension for Copilot](../messaging-extensions/high-quality-message-extension.md).
+* [Guidelines to create or upgrade a message extension plugin for Microsoft 365 Chat](../messaging-extensions/high-quality-message-extension.md).
 
 ## Create bot-based message extension
 
@@ -92,7 +92,7 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
 1. From the compose message space, send a message to Microsoft 365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from copilot.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from Microsoft 365 Chat.":::
 
 > [!NOTE]
 > This prompt may not always make Microsoft 365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Chat response and leave a message.
@@ -154,7 +154,7 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
 1. From the compose message area, send a message to Microsoft 365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from copilot.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from Microsoft 365 Chat.":::
 
 > [!NOTE]
 > This prompt may not always make Microsoft 365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Chat response and leave a message.
@@ -233,7 +233,7 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
 1. From the compose message area, send a message to Microsoft 365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from copilot.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from Microsoft 365 Chat.":::
 
 > [!NOTE]
 > This prompt may not always make Microsoft 365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Chat response and leave a message tagged with [MessageExtension].

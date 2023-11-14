@@ -83,7 +83,7 @@ API-based message extensions are a potent tool that enhances your Teams app's fu
 
 You can create an API-based message extension using Visual Studio Code and Teams Toolkit CLI.
 
-# [Developer Portal for Teams](#tab/developer-portal-for-teams)
+<!--# [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
 To create an API-based message extension using Developer Portal for Teams, follow these steps:
 
@@ -132,7 +132,7 @@ You can add commands and parameters to your message extension, to add commands:
 
 1. In the **Add command** page, go to **Adaptive card template** and select **Upload now**.
 
-   <!---:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the adaptive Card template in for the command."::: --->
+    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the adaptive Card template in for the command."::: 
 
    > [!NOTE]
    > If you have more than one API, ensure that you upload the **Adaptive card template** for all the APIs.
@@ -158,7 +158,7 @@ You can add commands and parameters to your message extension, to add commands:
 
     :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams Developer Portal.":::
 
-An API message extension is created.
+An API message extension is created. -->
 
 # [Visual Studio Code](#tab/visual-studio-code)
 
@@ -181,7 +181,7 @@ To build a message extension from an API using Visual Studio Code, follow these 
 
 1. Based on the options selected in **step 7**, select the following:
 
-    # [New API](#tab/new-api)
+   # [New API](#tab/new-api)
 
    1. Select a programming language.
 
@@ -298,7 +298,7 @@ Teams sends the search result as an Adaptive Card in the chat message.
 
 1. Select **Next**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-vs-create-project.png" alt-text="Screenshot shows the Search results from API, New API,  OpenAPI Description Document, and Create options in Visual Stuio to create a new Project.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-vs-create-project.png" alt-text="Screenshot shows the Search results from API, New API,  OpenAPI Description Document, and Create options in Visual Studio to create a new Project.":::
 
 1. Enter OpenAPI specification URL or select **Browse..** to upload a file from your local machine.
 1. Under **Select Operations Copilot Can Interact with**, select dropdown and select APIs from the list.
