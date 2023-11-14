@@ -86,7 +86,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-dashboard-add.png" alt-text="Screenshot shows the selection of workspace folder.":::
 
-        The Teams tab app dashboard is successfully created.
+        Teams app successfully creates the tab app dashboard.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity.":::
 
@@ -128,7 +128,7 @@ items:
       | `infra` | Templates for provisioning Azure resources. |
       | `src` | The source code for the dashboard Teams application. |
 
-      The following files provide the business logic for the dashboard tab. These files can be updated to fit your business logic requirements. The default implementation provides a starting point to help you get started.
+      The following files provide the business logic for the dashboard tab. You can update them to fit your business logic requirements. The default implementation provides a starting point to help you get started.
 
       | File | Contents |
       | ----- | ----- |
@@ -244,7 +244,7 @@ items:
           ```typescript
           override layout(): JSX.Element | undefined {
             return (
-            <>
+           <>
                 <ListWidget />
                 <ChartWidget />
                 <SampleWidget />
@@ -252,7 +252,6 @@ items:
             );
           } 
           ```
-
           ---
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-dashboard.png" alt-text="Screenshot shows the existing sampleDashboard file in Visual Studio Code."::: 
@@ -536,7 +535,7 @@ items:
             Add the following code in **auth-start.html**:
 
             ```html
-              <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
+              <!--The Teams authentication flow process uses this file to assist with retrieval of the access token.-->
               <!--If you're not familiar with this process, don't alter or remove this file from your project.-->
               <html>
                 <head>
@@ -592,7 +591,7 @@ items:
             Add the following code in **auth-end.html**:
           
             ```html
-              <!--This file is used during the Teams authentication flow to assist with retrieval of the access token.-->
+              <!--The Teams authentication flow process uses this file to assist with retrieval of the access token.-->
               <!--If you're not familiar with this process, don't alter or remove this file from your project.-->
               <html>
                 <head>
@@ -656,7 +655,7 @@ items:
      
      To add Graph API, follow these steps:
    
-     The graph API call is implemented via TeamsFx SDK. 
+      TeamsFx SDK implementes the graph API call. 
 
      1. In Visual Studio Code, go to **EXPLORER** > **src** > **services** > **listService.ts**.
 
