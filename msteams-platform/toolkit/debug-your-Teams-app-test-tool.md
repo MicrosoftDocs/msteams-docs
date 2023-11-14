@@ -97,7 +97,7 @@ Test the bot sample, which displays the features supported by the Teams App Test
 
 A webpage opens with a list of commands.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card." "lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
 ### Use custom activity
 
