@@ -285,6 +285,10 @@ Teams sends the search result as an Adaptive Card in the chat message.
 
 <!--# [Visual Studio](#tab/visual-studio)
 
+Before you get started, ensure that you install the Visual Studio Enterprise 2022 Preview version 17.9.0 Preview 1.0, and install the **Microsoft Teams development tools** under **ASP.NET and web development** workload.
+
+To create an API-based message extension using Teams Toolkit for Visual Studio, follow these steps:
+
 1. Open Visual Studio.
 1. Go to **File** > **New** > **Project...** or **New Project**.
 
@@ -323,7 +327,8 @@ Teams sends the search result as an Adaptive Card in the chat message.
 
    If prompted, sign in with a Microsoft 365 account.
 
-1. Right-click your project and select **Teams Toolkit** > **Preview in** > **Teams**. Visual Studio launches Teams web client.
+1. Right-click your project and select **Teams Toolkit** > **Preview in** > **Teams**. 
+1. Select the **manifest.json** file and select Open. Visual Studio launches Teams web client.
 1. Select **Add**. The message extension is added to Teams.
 1. Go to a chat and select **Actions and apps**.
 1. From the message extension fly-out menu, enter the name of your message extension in the search box.

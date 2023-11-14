@@ -99,6 +99,15 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
 # [Visual Studio](#tab/visual-studio)
 
+Before you get started, ensure that you install the following tools to build and deploy your message extension:
+
+* Install the Visual Studio Enterprise 2022 Preview version 17.9.0 Preview 1.0, and install the **Microsoft Teams development tools** under **ASP.NET and web development** workload.
+* Ensure that the Copilot feature flag is enabled. To enable the feature flag, follow these steps:
+  1. Open Visual Studio.
+  1. Go to **Tools** > **Options**.
+  1. Enter **Teams Toolkit** in the Search Settings search box.
+  1. Under **Preview Features**, select the **Teams Toolkit: Develop Copilot Plugin** checkbox.
+
 To create a bot-based search message extension plugin using Visual Studio, follow these steps:
 
 1. Open **Visual Studio**.
@@ -133,9 +142,19 @@ To create a bot-based search message extension plugin using Visual Studio, follo
 
 1. In the debug dropdown menu, select **Microsoft Teams (browser)**. Visual Studio launches Teams web client.
 1. Select **Add**. The message extension is added to Teams.
+
+   :::image type="content" source="../assets/images/Copilot/bot-based-VS-debug-teams-add-app.png" alt-text="Screenshot shows an example of the Add option to add Contoso Pluginlocal app to Teams.":::
+
 1. Go to a chat and select **Actions and apps**.
 1. From the message extension fly-out menu, enter the name of your message extension in the search box.
 1. Select your message extension and enter your search query.
+
+   :::image type="content" source="../assets/images/Copilot/bot-based-VS-debug-teams-invoke.png" alt-text="Screenshot shows an example of Contoso search query entered in in the Contoso pluginlocal message extension and the message extension displays seven products results.":::
+
+1. Select a product from the list. Teams unfurls the product into an Adaptive Card in the message compose area.
+1. Select **Send**. The Adaptive Card is sent to the chat.
+
+   :::image type="content" source="../assets/images/Copilot/bot-based-VS-debug-teams-send-card.png" alt-text="Screenshot shows Contoso.Base product sent as an Adaptive Card in Teams chat.":::
 
 **Trigger message extension in Microsoft 365 Chat**
 
@@ -150,11 +169,11 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
 1. Select **Plugins**.
 1. From the list of plugins, turn on the toggle for your app.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-VS-me-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
 1. From the compose message area, send a message to Microsoft 365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from Microsoft 365 Chat.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-VS-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the Adaptive Card response with content and preview card from Microsoft 365 Chat. The response contains a list of four products with Contoso product name. ":::
 
 > [!NOTE]
 > This prompt may not always make Microsoft 365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Chat response and leave a message.
@@ -168,7 +187,7 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 1. Enter the following command:
 
    ```
-   npm install -g @microsoft/teamsfx-cli@2.0.3-beta.2023101103.0
+   npm install -g @microsoft/teamsfx-cli@beta
    ```
 
 1. Type `teamsfx new` in the terminal.
