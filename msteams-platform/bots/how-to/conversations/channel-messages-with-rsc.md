@@ -158,7 +158,7 @@ The following steps guide you to sideload and validate bot that receives all cha
   
 1. Select **Open**.
 
-      :::image type="content" source="Media/select-apppackage.png" alt-text="Screenshot shows the open dialog box to select the app package." lightbox=="Media/select-apppackage.png"":::
+      :::image type="content" source="Media/select-apppackage.png" alt-text="Screenshot shows the open dialog box to select the app package." lightbox="Media/select-apppackage.png":::
 
 1. Select **Add** from the app details pop-up, to add the bot to your selected team.
 
