@@ -56,7 +56,7 @@ Perform the following steps to upload app package:
 
 1. In the Teams client, select **Apps** > **Manage your apps** > **Upload an app**.
 
-   :::image type="content" source="images/upload-an-app-v4.png" alt-text="Screenshot of upload an app":::
+   :::image type="content" source="images/upload-an-app.png" alt-text="Screenshot of upload an app":::
 
    **Upload an app** window appears.
 
@@ -118,7 +118,7 @@ The following steps help you to approve from Admin Center:
 
 1. Select the :::image type="icon" source="images/Showall-v4.png"::: icon > **Teams apps** > **Manage apps**.
 
-   :::image type="content" source="images/select-manage-apps-v4.png" alt-text="Screenshot of Select Manage apps":::
+   :::image type="content" source="images/select-manage-apps.png" alt-text="Screenshot of Select Manage apps":::
 
    You can view all Teams app for your organization.
 
