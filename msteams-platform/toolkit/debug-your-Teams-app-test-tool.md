@@ -14,7 +14,7 @@ ms.date: 11/03/2023
 >
 > Ensure the prerelease version of Teams Toolkit is installed. For more information, see [install a prerelease version](install-Teams-Toolkit.md#install-a-pre-release-version).
 
-The Teams App Test Tool (Test Tool) is a utility that streamlines the debugging process of bot-based applications. The Test Tool displays a comprehensive list of commands that are used in your app's code, along with their descriptions. This way, you can efficiently test your app and identify available commands without the need to manually analyze your code. The tool displays the list of commands in either a web page view or a web-based chat view.
+The Teams App Test Tool (Test Tool) is a utility that streamlines the debugging process of bot-based applications. The Test Tool displays a comprehensive list of commands that are used in your app's code, along with their descriptions. This enables you to efficiently test your app and identify available commands without the need to manually search your code. The tool displays the list of commands in either a web page view or a web-based chat view.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
@@ -58,11 +58,11 @@ The Teams App Test Tool (Test Tool) is a utility that streamlines the debugging 
 
 1. Type **help** command. A list of commands is displayed.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
 ## Predefined mocked activities
 
-The Test Tool has a set of predefined mocked activities that can be used to test the functionalities of your app:
+The Test Tool has a set of predefined mocked activities that can be used to test the functionalities of your app.
 
 1. Select **Mock an Activity** > **Add a user** and a pop-up window appears to preview the activity handler.
 
