@@ -33,14 +33,14 @@ Microsoft Graph [teamsAppInstallation resource type](/graph/api/resources/teamsa
 
 To use these permissions, you must add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest (previously called Teams app manifest) with the following values:
 
-* **id**: Your Azure Active Directory app ID.
+* **id**: Your Microsoft Entra app ID.
 * **resource**: The resource URL for the app.
 
 > [!NOTE]
 >
 > * Your bot requires application and not user delegated permissions because the installation is for others.
 >
-> * An Azure AD tenant administrator must [explicitly grant permissions to an application](/graph/security-authorization#grant-permissions-to-an-application). After the application is granted permissions, all members of the Azure AD tenant get the granted permissions.
+> * A Microsoft Entra tenant administrator must [explicitly grant permissions to an application](/graph/security-authorization#grant-permissions-to-an-application). After the application is granted permissions, all members of the Microsoft Entra tenant get the granted permissions.
 
 ## Enable proactive app installation and messaging
 
