@@ -162,7 +162,7 @@ The following steps guide you to sideload and validate bot that receives all cha
 
 1. Select **Add** from the app details pop-up, to add the bot to your selected team.
 
-      :::image type="content" source="Media/addingbot.png" alt-text="Screenshot shows the add button to add a bot to a team." lightbox="Media/addingbot.png":::
+      :::image type="content" source="Media/addingbot.png" alt-text="Screenshot shows the add button to add a bot to a team.":::
 
 1. Select a channel and enter a message in the channel for your bot.
 
