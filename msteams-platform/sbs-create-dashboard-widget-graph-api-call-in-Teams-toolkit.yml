@@ -330,13 +330,13 @@ items:
                     "resourceAppId": "Microsoft Graph",
                     "resourceAccess": [
                         {
-                          "id": "User.Read",
+                          "id": "User.Read", 
                           "type": "Scope"
                         }
                     ]
                   }
               ],
-              "oauth2Permissions": [
+               "oauth2Permissions": [
                   {
                     "adminConsentDescription": "Allows Teams to call the app's web APIs as the current user.",
                     "adminConsentDisplayName": "Teams can access app's web APIs",
@@ -468,7 +468,7 @@ items:
               - uses: aadApp/update
                 with:
                   manifestPath: "./aad.manifest.json"
-                  outputFilePath : ./build/aad.manifest.${{TEAMSFX_ENV}}.json
+                  outputFilePath: ./build/aad.manifest.${{TEAMSFX_ENV}}.json
             ```
 
             :::image type="content" source="assets/images/sbs-create-a-new-dashboard/ttk-teams-app.png" alt-text="Screenshot shows the addition of aadApp/create and aadApp/update code.":::
