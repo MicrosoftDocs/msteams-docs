@@ -5,7 +5,7 @@ ms.topic: how-to
 author: v-preethah
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 10/18/2023
+ms.date: 11/14/2023
 ---
 
 # Guidelines to create or upgrade a message extension plugin for Microsoft 365 Chat
@@ -491,17 +491,19 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 * Adaptive Card must be presentable in Win32, web, and mobile (iOS and Android). [*Mandatory*]
 
-* An Adaptive Card must contain at least one action button, but not more than four action buttons. The following action types are recommended: [*Mandatory*]
-
-  :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in the Microsoft 365 chat.":::
+* An Adaptive Card must contain at least one action button, but not more than four action buttons. [*Mandatory*]
 
   > [!NOTE]
   > Action types `imBack`, `messageBack` aren't supported in a data object.
+
+  The following action types are recommended:
 
   * `Action.OpenUrl`: Opens a specified URL from the Card.
   * `Action.ToggleVisibility`: Displays or hides one or more elements in the card.
   * `Action.Execute`: Collects the input fields and sends them as a request to your bot service.
   * `Action.Submit`: Opens a Task module or Stage view using type invoke in data object.
+
+  :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in the Microsoft 365 chat.":::
 
 * If a user can change any information on the card through task module, stage view, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
 * Adaptive Cards must include a URL as part of the metadata, which allows cards to be easily copied from one hub to another. [*Recommended*]
