@@ -166,6 +166,7 @@ Here's an example description that work for NPM Finder.
                     ] 
 
 ```
+
 <br>
 &nbsp;
 
@@ -196,6 +197,7 @@ Yes, you can. Ensure that you have a descriptive app manifest and have uploaded 
 1. Register the bot channel in Azure Bot Service.
 1. Upload the app to Outlook.
 <br>
+
 &nbsp;
 </details>
 
@@ -326,7 +328,7 @@ Live Share isn't supported for GCC, GCC-High, and DOD tenants.
 </details>
 
 <details>
-<summary><b>Does Live Share support external and guest users?</b></summary>
+<summary>Does Live Share support external and guest users?</summary>
 
 Yes, Live Share supports guest and external users for most meeting types. However, guest users aren't supported in channel meetings.
 
@@ -335,7 +337,7 @@ Yes, Live Share supports guest and external users for most meeting types. Howeve
 </details>
 
 <details>
-<summary><b>Does Live Share support Teams Rooms devices?</b></summary>
+<summary>Does Live Share support Teams Rooms devices?</summary>
 
 No, Live Share doesn't support Teams Rooms devices.
 
@@ -344,7 +346,7 @@ No, Live Share doesn't support Teams Rooms devices.
 </details>
 
 <details>
-<summary><b>Do Live Share apps support meeting recordings?</b></summary>
+<summary>Do Live Share apps support meeting recordings?</summary>
 
 No, Live Share doesn't support meeting recordings.
 
