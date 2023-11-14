@@ -14,7 +14,7 @@ ms.date: 11/03/2023
 >
 > Ensure the prerelease version of Teams Toolkit is installed. For more information, see [install a prerelease version](install-Teams-Toolkit.md#install-a-pre-release-version).
 
-The Teams App Test Tool (Test Tool) is a utility that streamlines the debugging process of bot-based applications. The Test Tool displays a comprehensive list of commands that are used in your app's code, along with their descriptions. This enables you to efficiently test your app and identify available commands without the need to manually search your code. The tool displays the list of commands in either a web page view or a web-based chat view.
+The Teams App Test Tool (Test Tool) is a utility that streamlines the debugging process of bot-based applications. The Test Tool displays a comprehensive list of commands that are used in your app's code, along with their descriptions. This enables you to efficiently test your app and identify available commands without manually searching your code. The tool displays the list of commands in either a web page view or a web-based chat view.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
@@ -62,7 +62,7 @@ The Teams App Test Tool (Test Tool) is a utility that streamlines the debugging 
 
 ## Predefined mocked activities
 
-The Test Tool has a set of predefined mocked activities that can be used to test the functionalities of your app.
+The Test Tool provides predefined mocked activities that can be used to test the functionalities of your app.
 
 1. Select **Mock an Activity** > **Add a user** and a pop-up window appears to preview the activity handler.
 
@@ -108,7 +108,7 @@ Mocked activities can be customized to fit the requirements of your app.
 
 ## Customize Teams context
 
-The config file allows you to customize Teams context information such as chats, teams, and users. The config file provides mockup data for testing Bot Framework APIs or bot builder SDK methods such as `TeamsInfo.getTeamMembers`. If your bot code uses these APIs, you can modify this file to alter the API response.
+The config file allows you to customize Teams context information such as chats, teams, and users. The config file provides mockup data for testing Bot Framework APIs or Bot Builder SDK methods such as `TeamsInfo.getTeamMembers`. If your bot code uses these APIs, you can modify this file to alter the API response.
 
 **Default config**
 
@@ -186,15 +186,13 @@ team:
 
 **Update config file**
 
-A bot is installed into Teams and fetches inactive bugs and identifies the owner's email address and sends personal notification chats.
+A bot is installed into Teams and fetches inactive bugs and identifies a user's email address and sends personal notification chats.
 
-For the bot within the Test Tool, it's necessary to adapt the config file to utilize real email addresses that match the user email addresses.
-
-To update the config file, follow these steps:
+For the bot within the Test Tool, it's necessary to update the config file. Follow these steps:
 
 1. In the `teamsapptesttool.yml` file, go to the `users` section.
 
-1. Update the `name`, `userPrincipleName`, and `email` properties with the required user.
+1. Update the `name`, `userPrincipleName`, and `email` of the required user.
 
     ```yaml
     users:
@@ -257,7 +255,7 @@ The Test Tool shows a warning message in conversation and log panel when it dete
 &nbsp;
 </details>
 <details>
-<summary>Is it recommended to use only the Test Tool for testing my bot application?</summary>
+<summary>Is it recommended to use only the Test Tool for testing bot applications?</summary>
 
 No. We always recommend users to test their bot application in the Teams client before moving the application to production environment.
 <br>
