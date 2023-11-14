@@ -158,15 +158,17 @@ When you select **Start Debugging (F5)**, Teams Toolkit output channel displays 
 
 In the set-up process, Teams Toolkit prepares the following registrations and configurations for your Teams app:
 
-1. [Registers and configures Microsoft Azure Active Directory(Azure AD) app](#registers-and-configures-microsoft-azure-active-directoryazure-ad-app)
+1. [Registers and configures Microsoft Entra app](#registers-and-configures-microsoft-azure-active-directoryazure-ad-app)
 
 1. [Registers and configures bot](#registers-and-configures-bot)
 
 1. [Registers and configures Teams app](#registers-and-configures-teams-app)
 
-### Registers and configures Microsoft Azure Active Directory(Azure AD) app
+<a name='registers-and-configures-microsoft-azure-active-directoryazure-ad-app'></a>
 
-1. Registers an Azure AD app.
+### Registers and configures Microsoft Entra app
+
+1. Registers a Microsoft Entra app.
 
 2. Creates a Client Secret.
 
@@ -202,11 +204,11 @@ In the set-up process, Teams Toolkit prepares the following registrations and co
 
 For tab app or message extension:
 
-1. Registers an Azure AD application.
+1. Registers a Microsoft Entra application.
 
-1. Creates a Client Secret for the Azure AD application.
+1. Creates a Client Secret for the Microsoft Entra application.
 
-1. Registers a bot in [Microsoft Bot Framework](https://dev.botframework.com/) using the Azure AD application.
+1. Registers a bot in [Microsoft Bot Framework](https://dev.botframework.com/) using the Microsoft Entra application.
 
 1. Adds Teams channel.
 

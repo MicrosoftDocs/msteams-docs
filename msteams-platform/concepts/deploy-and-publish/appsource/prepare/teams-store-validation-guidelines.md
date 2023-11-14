@@ -424,11 +424,11 @@ The app manifest defines your app's configuration.
 
 * Your app manifest must conform to a publicly released app manifest schema. For more information, see [app manifest reference](~/resources/schema/manifest-schema.md). Don't submit your app using a preview version of the app manifest.
 * If your app includes a bot or message extension, details in the app manifest must be consistent with Bot Framework metadata including bot name, logo, privacy policy link, and terms of service link.
-* If your app uses Azure Active Directory for authentication, include the Microsoft Azure Active Directory (Azure AD) Application (client) ID in the app manifest. For more information, see the [app manifest reference](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* If your app uses Microsoft Entra ID for authentication, include the Microsoft Entra Application (client) ID in the app manifest. For more information, see the [app manifest reference](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### Uses of latest app manifest schema
 
-* If your app uses Single sign-on (SSO), you must declare Microsoft Azure Active Directory (Azure AD) ID in the app manifest for user authentication. [*Mandatory Fix*]
+* If your app uses Single sign-on (SSO), you must declare Microsoft Entra ID in the app manifest for user authentication. [*Mandatory Fix*]
 
 * You must use a publicly released app manifest schema. You can update your app package to use a public version of app manifest schema 1.10 or later. [*Mandatory Fix*]
 
@@ -1637,9 +1637,9 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 The Microsoft 365 App Compliance Program is intended to help organizations assess and manage risk by evaluating security and compliance information about your app. If you're publishing an app to the Teams Store, you must complete the following tiers of the program:
 
-* **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Azure Active Directory consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified). [*Mandatory Fix*]
+* **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Microsoft Entra consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified). [*Mandatory Fix*]
 
-    :::image type="content" source="../../../../assets/images/submission/validation-365-compliance-publisher-verification.png" alt-text="Graphic shows an example of a blue verified badge on the Azure Active Directory consent dialog.":::
+    :::image type="content" source="../../../../assets/images/submission/validation-365-compliance-publisher-verification.png" alt-text="Graphic shows an example of a blue verified badge on the Microsoft Entra consent dialog.":::
 
 * **Publisher Attestation**: A process in which you share general, data handling, and security and compliance information to help potential customers make informed decisions about using your app. [*Suggested Fix*]
 
