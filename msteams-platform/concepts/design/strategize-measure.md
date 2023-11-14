@@ -49,7 +49,7 @@ Instrumentation designed to improve adoption should aim at improving discoverabi
 
 | Measure | Insights |
 | --- | --- |
-| • Users installing the app in R1, R7, R14, R28 days. <br> • # Sign-ins (if app has sign-in). | • App level adoption broken down at tenant, region, and segment. <br> • Segment users based on Azure AD profile. <br> • Segment by tenant and org name. |
+| • Users installing the app in R1, R7, R14, R28 days. <br> • # Sign-ins (if app has sign-in). | • App level adoption broken down at tenant, region, and segment. <br> • Segment users based on Microsoft Entra profile. <br> • Segment by tenant and org name. |
 | • Average time taken to first use (click on tab, bot, Adaptive Card, and meeting). | • Report at a feature or platform capability level to measure feature level adoption. |
 | • Extensibility point of first discovery. <br> • Scope of first discovery. | • Use the data to measure which extensibility point and scope are most used to discover your app by your end users. |
 | • % of link unfurls leading to app installation. | • Users interested in installing app, post-discovery. |
@@ -73,7 +73,7 @@ Engagement intends to measure the intensity and depth of interaction between the
 
 | Measure | Comments |
 | --- | --- |
-| • # App users (R7, R14, R28). – DAU and MAU. <br> • # App users trendline. | • App and feature level engagement <br> • Segment users based on Azure AD profile. <br> • Report by client –  desktop, web, and mobile. <br> • Segment by tenant and org name. <br> • Segment by product feature (active users at feature level). |
+| • # App users (R7, R14, R28). – DAU and MAU. <br> • # App users trendline. | • App and feature level engagement <br> • Segment users based on Microsoft Entra profile. <br> • Report by client –  desktop, web, and mobile. <br> • Segment by tenant and org name. <br> • Segment by product feature (active users at feature level). |
 | • % of users using key features in Teams app vs. using the same feature in a web or native app. | • Indicates discoverability, ease of use, and value of using the feature within Teams app. <br> • Report at app feature level. |
 | • #, % users using the app across different scopes (R28). | • Engagement penetration. <br> • Report by scope. <br> • Ability to drill down by capability. |
 | • #, % users using the app in different platform capabilities (R28). <br> • #, % Interacting with tab. <br> • #, % Interacting with Messaging extension. <br> • #, % Interacting with bot. <br> • #, % Interacting with side panel in a meeting. <br> • #, % Interacting with Stage View. | • Engagement and value prop of app capabilities. <br> • If usage of any of platform capabilities is low, consider drilling into details on ease of use and value add. |
@@ -121,7 +121,7 @@ Happiness intends to measure your user’s attitude towards your product and can
 
 | Measure | Insight |
 | --- | --- |
-| • App Net Promoter Score (NPS) from app source. | • Net Promoter Score. <br> • Azure AD and tenant information. |
+| • App Net Promoter Score (NPS) from app source. | • Net Promoter Score. <br> • Microsoft Entra ID and tenant information. |
 | • % of happy or satisfied users. | • Drill down at tenant level. <br> • Report trend over time. |
 | • % users using Teams app vs. web, or mobile app. | • Report month over month. |
 | • User feedback on experience after completing core action. | • Introduce product led way for collecting feedback after completing core action (for example, in-app message to submit feedback). |
