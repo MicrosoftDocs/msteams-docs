@@ -57,7 +57,7 @@ The following are the limitations:
    * [Full width](../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
 
 1. The Test Tool doesn't support the following:
-   * Single sign-on (SSO)
+
    * Mobile
    * Meetings
 
@@ -69,13 +69,13 @@ The following are the limitations:
    | Bot Framework APIs (TeamsInfo.getPagedMembers()...) |Available (respond with mocked data) | Available |
    | Sending Teams events | Available (mocking activity) |Available |
    | Typing indicator | Not Available | Available |
-   | Tab, Messaging Extension, Task Module, SSO, and non-Adaptive Cards | Not Available | Available |
+   | Tab, Messaging Extension, Task Module, Single sign-on (SSO), and non-Adaptive Cards | Not Available | Available |
 
 ### Teams Toolkit samples and templates
 
 Test the bot sample, which displays the features supported by the Teams App Test Tool, as follows:
 
-1. Open [Test Tool Sample App](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/test-tool-sample-app).
+1. Open [TeamsFx-Samples](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3).
 
 1. Select **Code**.
 
@@ -85,7 +85,7 @@ Test the bot sample, which displays the features supported by the Teams App Test
 
 1. Select **Clone**.
 
-1. Open the project folder in Visual Studio Code with Teams Toolkit.
+1. Open the **test-tool-sample-app** folder in Visual Studio Code with Teams Toolkit.
 
 1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool** in dropdown list.
 
@@ -97,7 +97,7 @@ Test the bot sample, which displays the features supported by the Teams App Test
 
 A webpage opens with a list of commands.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card." "lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png":::
 
 ### Use custom activity
 
