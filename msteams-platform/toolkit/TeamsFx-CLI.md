@@ -293,7 +293,7 @@ Check, grant, and list user permission.
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 | `--email` | No | Input email address of collaborator. |
 | `--teams-app-manifest` | No | Manifest of Your Teams app. |
-| `--aad-app-manifest` | No | Manifest of your Azure Active Directory (Azure AD) app. |
+| `--aad-app-manifest` | No | Manifest of your Microsoft Entra app. |
 
 ### Parameters for `teamsfx permission status`
 
@@ -302,7 +302,7 @@ Check, grant, and list user permission.
 | `--env` | Yes | Select an existing environment for the project. |
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 | `--teams-app-manifest` | No | Manifest of Your Teams app. |
-| `--aad-app-manifest` | No | Manifest of your Azure AD app. |
+| `--aad-app-manifest` | No | Manifest of your Microsoft Entra app. |
 | `--list-all-collaborators` | No | To list all collaborators. |
 
 ### Scenarios for `teamsfx permission`
@@ -339,7 +339,7 @@ Update the specific application manifest file.
 
 | Command | Description |
 |:----------------  |:-------------|
-| `teamsfx update aad-app` | Update the Azure AD App in the current application. |
+| `teamsfx update aad-app` | Update the Microsoft Entra App in the current application. |
 | `teamsfx update teams-app` | Update the Teams App manifest to Teams Developer Portal. |
 
 ### Parameters for `teamsfx update aad-app`
@@ -348,7 +348,7 @@ Update the specific application manifest file.
 |:----------------  |:-------------|:-------------|
 | `--env` | Yes | Select an existing environment for the project. |
 | `--folder` | No | Select root folder of the project. Defaults to `./` |
-| `--manifest-file-path` | No | Enter the Azure AD app manifest template file path, it's a relative path to project root folder, defaults to `./aad.manifest.json`. |
+| `--manifest-file-path` | No | Enter the Microsoft Entra app manifest template file path, it's a relative path to project root folder, defaults to `./aad.manifest.json`. |
 
 ### Parameters for `teamsfx update teams-app`
 
@@ -532,7 +532,7 @@ This command is used to deploy the current application. By default it deploys en
 |`--api-prefix`| No | Applicable when there's APIM resource in the project. The API name prefix. The default unique name of the API is `{api-prefix}-{resource-suffix}-{api-version}`. |
 |`--api-version`| No | Applicable when there's APIM resource in the project. The API version. |
 |`--include-app-manifest`| No | Whether to deploy app manifest to Teams platform. Options are `yes` and `not`. The default value is `no`. |
-|`--include-aad-manifest`| No | Whether to deploy aad manifest. Options are `yes` and `not`. The default value is `no`. |
+|`--include-aad-manifest`| No | Whether to deploy Microsoft Entra manifest. Options are `yes` and `not`. The default value is `no`. |
 
 ## `teamsfx validate`
 
@@ -806,7 +806,7 @@ The following list provides required permissions for `TeamsFx` projects:
 
 6. Modify `templates/azure/provision/frontendHosting.bicep`.
 
-7. Provision again. Teams Toolkit updates Azure Active Directory (Azure AD), and manifest for you.
+7. Provision again. Teams Toolkit updates Microsoft Entra ID, and manifest for you.
 
 8. Find your `appPackage.dev.zip` in build, or AppPackage folder, and add to Teams.
 

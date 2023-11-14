@@ -86,9 +86,11 @@ Adaptive Cards with Incoming Webhooks enable you to use the rich and flexible ca
 
 Adaptive Card in Teams supports overflow menu. You can populate an overflow menu for all the secondary actions in an Adaptive Card.
 
-## Support for Azure AD Object ID and UPN in user mention
+<a name='support-for-azure-ad-object-id-and-upn-in-user-mention'></a>
 
-Bots with Adaptive Cards support user mention IDs, such as Microsoft Azure Active Directory (Azure AD) Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming Webhooks start to support user mention in Adaptive Card with the Azure AD Object ID and UPN.
+## Support for Microsoft Entra Object ID and UPN in user mention
+
+Bots with Adaptive Cards support user mention IDs, such as Microsoft Entra Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming Webhooks start to support user mention in Adaptive Card with the Microsoft Entra Object ID and UPN.
 
 ## Next step
 
