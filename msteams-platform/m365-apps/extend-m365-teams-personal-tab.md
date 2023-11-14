@@ -19,7 +19,7 @@ Updating your Teams personal app to run in other Microsoft 365 applications invo
 > * [Update your app manifest (previously called Teams app manifest)](#update-the-app-manifest).
 > * [Update your Microsoft Teams JavaScript client library (TeamsJS) references](#update-teamsjs-references).
 > * [Amend your Content Security Policy headers](#configure-content-security-policy-headers).
-> * [Update your Microsoft Azure Active Directory (Azure AD) App Registration for Single Sign-On (SSO)](#update-azure-ad-app-registration-for-sso).
+> * [Update your Microsoft Entra App Registration for Single Sign-On (SSO)](#update-azure-ad-app-registration-for-sso).
 > * [Sideload your updated app in Teams](#sideload-your-app-in-teams).
 
 The rest of this guide walks you through these steps and show you how to preview your personal tab in other Microsoft 365 applications.
@@ -57,7 +57,7 @@ To start with a personal tab that's already enabled to run in Teams, Outlook, an
 
     :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Screenshot shows the Basic Tab option highlighted to create a new app feature using a tab.":::
 
-1. Select preferred programming language.
+1. Select a preferred programming language.
 1. Select a location on your local machine for the workspace folder and enter your application name.
 1. Once your app has been created, within the Teams Toolkit extension, make sure you're signed in to the appropriate Microsoft 365 Developer Program sandbox tenant and Azure account. These options can be found within the **ACCOUNTS** section of the extension.
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
@@ -113,7 +113,10 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 ## Update TeamsJS references
 
-To run in Outlook and Microsoft 365 app, your app needs to refer to the npm package `@microsoft/teams-js@2.0.0` (or later). While code with downlevel versions is supported in Outlook and Microsoft 365 app, deprecation warnings are logged, and support for downlevel versions of TeamsJS in Outlook and Microsoft 365 app will eventually cease. To determine the latest version of TeamsJS, see [TeamsJS GitHub repository](https://github.com/OfficeDev/microsoft-teams-library-js).
+Your app must refer to the npm package `@microsoft/teams-js@2.5.0` (or later) to run in Outlook and Microsoft 365. Previous versions of TeamsJS are still functional in Outlook and Microsoft 365 apps, but deprecation warnings are logged. Support for the previous versions eventually discontinue in both Outlook and Microsoft 365. To determine the latest version of TeamsJS, see [TeamsJS GitHub repository](https://github.com/OfficeDev/microsoft-teams-library-js).
+
+> [!NOTE]
+> If you want to use an earlier version of TeamsJS than v2.5.0, ensure that you add `www.microsoft365.com` to the `validMessageOrigins` (optional) array of the `app.initialize` call.
 
 You can use Teams Toolkit to help identify and automate the required code changes to upgrade from 1.x TeamsJS versions to TeamsJS 2.x.x versions. Alternately, you can perform the same steps manually; refer to [TeamsJS library](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx) for details.
 
@@ -140,9 +143,11 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
 
 [!INCLUDE [CSP headers for multi-hub apps](~/includes/tabs/content-security-policy-headers.md)]
 
-## Update Azure AD app registration for SSO
+<a name='update-azure-ad-app-registration-for-sso'></a>
 
-[Azure Active Directory (AD) Single-sign on (SSO)](../tabs/how-to/authentication/tab-sso-overview.md) for personal tabs works the same way in Microsoft 365 app and Outlook as it does in Teams. However, you need to add several client application identifiers to the Azure AD app registration of your tab app in your tenant's *App registrations* portal.
+## Update Microsoft Entra app registration for SSO
+
+[Microsoft Entra Single-sign on (SSO)](../tabs/how-to/authentication/tab-sso-overview.md) for personal tabs works the same way in Microsoft 365 app and Outlook as it does in Teams. However, you need to add several client application identifiers to the Microsoft Entra app registration of your tab app in your tenant's *App registrations* portal.
 
 1. Sign in to [Microsoft Azure portal](https://portal.azure.com) with your sandbox tenant account.
 1. Open the **App registrations** blade.
@@ -220,11 +225,12 @@ To view your app in Outlook on the web:
 
 To view your app running in Outlook for Android app:
 
-1. Open the Outlook app on your Android device and sign in using your developer tenant account. If the Outlook for Android app was already running prior to sideloading your app, restart Outlook to see it in the installed apps section.
-1. Select the **More** icon. Your sideloaded app appears among installed apps.
+1. Open the Outlook app on your Android device and sign in using your developer tenant account. If the Outlook app for Android was already running prior to sideloading your app, restart the Outlook app to see it in the installed apps section.
+
+1. Select the **Apps** icon. Your sideloaded app appears among installed apps.
 1. Select your app icon to open your app in Outlook for Android.
 
-    :::image type="content" source="images/outlook-mobile-more.png" alt-text="Screenshot shows the More option on the side bar of the Outlook app to see your installed personal tabs in Android.":::
+    :::image type="content" source="images/outlook-mobile-android-more.png" alt-text="Screenshot shows the Apps option of the Outlook app on Android.":::
 
 ### Outlook app for iOS
 
@@ -234,7 +240,7 @@ To view your app running in Outlook app for iOS:
 1. Select the **More** icon. Your sideloaded app appears among installed apps.
 1. Select your app icon to open your app in the Outlook app.
 
-    :::image type="content" source="images/outlook-ios-mobile-more.png" alt-text="Screenshot shows the More option on the side bar of the Outlook app to see your installed personal tabs in iOS.":::
+    :::image type="content" source="images/outlook-ios-mobile-more.png" alt-text="Screenshot shows the More option of the Outlook app on iOS.":::
 
 ### Microsoft 365 on Windows
 

@@ -7,12 +7,12 @@ zone_pivot_groups: enable-sso
 ---
 # Add code to enable SSO in your bot app
 
-Before you add code to enable single sign-on (SSO), ensure that you've configured your app and bot resource in Azure AD portal.
+Before you add code to enable single sign-on (SSO), ensure that you've configured your app and bot resource in Microsoft Entra admin center.
 
 > [!div class="nextstepaction"]
-> [Configure bot app in Azure AD](bot-sso-register-aad.md)
+> [Configure bot app in Microsoft Entra ID](bot-sso-register-aad.md)
 
-You need to configure your app's code to obtain an access token from Azure AD. The access token is issued on behalf of the bot app.
+You need to configure your app's code to obtain an access token from Microsoft Entra ID. The access token is issued on behalf of the bot app.
 
 > [!NOTE]
 > If you've built your Teams app using Microsoft Teams Toolkit, you can enable SSO for your app using the instructions in the Tools and SDKs module. For more information, see [Add single sign-on to Teams app](../../../toolkit/add-single-sign-on.md). Teams Toolkit supports SSO for JavaScript and TypeScript apps in Visual Studio Code, and in Teams Toolkit 17.4 preview 3 for C# apps.
@@ -28,7 +28,7 @@ This section covers:
 
 ## Update development environment variables
 
-You've configured client secret and OAuth connection setting for the app in Azure AD. You must configure the code with these values.
+You've configured client secret and OAuth connection setting for the app in Microsoft Entra ID. You must configure the code with these values.
 
 To update the development environment variables:
 
@@ -36,9 +36,9 @@ To update the development environment variables:
 1. Open the environment file for your project.
 1. Update the following variables:
 
-    - For `MicrosoftAppId`, update the bot ID from Azure AD.
+    - For `MicrosoftAppId`, update the bot ID from Microsoft Entra ID.
     - For `MicrosoftAppPassword`, update the client secret.
-    - For `ConnectionName`, update the name of the OAuth connection you configured in Azure AD.
+    - For `ConnectionName`, update the name of the OAuth connection you configured in Microsoft Entra ID.
     - For `MicrosoftAppTenantId`, update the tenant ID.
 
 1. Save the file.
@@ -83,7 +83,7 @@ adapter.use(tokenExchangeMiddleware);
 
 # [C#](#tab/cs2)
 
-After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
+After you add the `AdapterWithErrorHandler.cs`, the following code must appear:
 
 ```csharp
     public class AdapterWithErrorHandler : CloudAdapter
@@ -101,7 +101,7 @@ After you add the `AdapterWithErrorHandler.cs`, your code should be as shown bel
             OnTurnError = async (turnContext, exception) =>
             {
                 // Log any leaked exception from the application.
-                // NOTE: In production environment, you should consider logging this to
+                // NOTE: In production environment, you must consider logging this to
                 // Azure Application Insights. Visit https://learn.microsoft.com/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp to see how
                 // to add telemetry capture to your bot.
                 logger.LogError(exception, $"[OnTurnError] unhandled error : {exception.Message}");
@@ -116,7 +116,7 @@ After you add the `AdapterWithErrorHandler.cs`, your code should be as shown bel
                     {
                         // Delete the conversationState for the current conversation to prevent the
                         // bot from getting stuck in a error-loop caused by being in a bad state.
-                        // conversationState should be thought of as similar to "cookie-state" in a Web pages.
+                        // conversationState must be thought of as similar to "cookie-state" in a Web pages.
                         await conversationState.DeleteAsync(turnContext);
                     }
                     catch (Exception e)
@@ -125,7 +125,7 @@ After you add the `AdapterWithErrorHandler.cs`, your code should be as shown bel
                     }
                 }
 
-                // Send a trace activity, which will be displayed in the Bot Framework Emulator.
+                // Send a trace activity, which is displayed in the Bot Framework Emulator.
                 await turnContext.TraceActivityAsync(
                     "OnTurnError Trace",
                     exception.Message,
@@ -138,7 +138,7 @@ After you add the `AdapterWithErrorHandler.cs`, your code should be as shown bel
 
 # [JavaScript](#tab/js2)
 
-After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, your code should be as shown below:
+After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, the following code must appear:
 
 ```JavaScript
     // index.js is used to setup and configure your bot.
@@ -182,12 +182,12 @@ After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, your code 
     adapter.use(tokenExchangeMiddleware);
     adapter.onTurnError = async (context, error) => {
         // This check writes out errors to console log .vs. app insights.
-        // NOTE: In production environment, you should consider logging this to Azure
+        // NOTE: In production environment, you must consider logging this to Azure
         //       application insights. See https://learn.microsoft.com/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp for telemetry
         //       configuration instructions.
         console.error(`\n [onTurnError] unhandled error: ${ error }`);
     
-        // Send a trace activity, which will be displayed in Bot Framework Emulator.
+        // Send a trace activity, which is displayed in Bot Framework Emulator.
         await context.sendTraceActivity(
             'OnTurnError Trace',
             `${ error }`,
@@ -247,16 +247,16 @@ When the user selects **Continue**, one of the following events occurs:
 
 - If the bot doesn't have a sign-in button on the OAuth card, app user consent is required for a minimal set of permissions. This token is useful for basic authentication and to get the app user's email address.
 
-The consent dialog that appears is for open-id scopes defined in Azure AD. The app user must give consent only once. After consenting, the app user can access and use your bot app for the granted permissions and scopes.
+The consent dialog that appears is for open-id scopes defined in Microsoft Entra ID. The app user must give consent only once. After consenting, the app user can access and use your bot app for the granted permissions and scopes.
 
 > [!NOTE]
-> After the app user consents, they're not required to consent again for any other permissions. If the permissions defined in Azure AD scope are modified, then the app user may need to consent again. If, however, the consent prompt fails to let the app user access, the bot app falls back to sign-in card.
+> After the app user consents, they're not required to consent again for any other permissions. If the permissions defined in Microsoft Entra scope are modified, then the app user may need to consent again. If, however, the consent prompt fails to let the app user access, the bot app falls back to sign-in card.
 
 > [!IMPORTANT]
 > Scenarios where consent dialogs are not needed:
 >
 > - If the tenant administrator has granted consent on behalf of the tenant, app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs and can access the app seamlessly.
-> - If your Azure AD app is registered in the same tenant from which you're requesting an authentication in Teams, the app user can't be asked to consent, and is granted an access token right away. App users consent to these permissions only if the Azure AD app is registered in a different tenant.
+> - If your Microsoft Entra app is registered in the same tenant from which you're requesting an authentication in Teams, the app user can't be asked to consent, and is granted an access token right away. App users consent to these permissions only if the Microsoft Entra app is registered in a different tenant.
 
 If you encounter any errors, see [Troubleshoot SSO authentication in Teams](../../../tabs/how-to/authentication/tab-sso-troubleshooting.md).
 
@@ -387,13 +387,13 @@ There are a number of libraries available that can handle JWT validation. Basic 
 
 Keep in mind the following guidelines when validating the token:
 
-- Valid SSO tokens are issued by Azure AD. The `iss` claim in the token should start with this value.
-- The token's `aud1` parameter will be set to the app ID generated during Azure AD app registration.
-- The token's `scp` parameter will be set to `access_as_user`.
+- Valid SSO tokens are issued by Microsoft Entra ID. The `iss` claim in the token must start with this value.
+- The token's `aud1` parameter is set to the app ID generated during Microsoft Entra app registration.
+- The token's `scp` parameter is set to `access_as_user`.
 
 #### Example access token
 
-The following is a typical decoded payload of an access token.
+The following code snippet is a typical decoded payload of an access token:
 
 ```javascript
 {

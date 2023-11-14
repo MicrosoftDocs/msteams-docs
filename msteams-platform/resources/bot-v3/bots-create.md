@@ -28,7 +28,7 @@ For more information, see [Bot Framework Documentation](/azure/bot-service/?view
 
 3. Test the bot using the [Bot Framework Emulator](/bot-framework/debug-bots-emulator).
 
-4. Deploy the bot to a cloud service, such as [Microsoft Azure](https://azure.microsoft.com/). Alternatively, run your app locally and use a tunneling service such [ngrok](https://ngrok.com) to expose an https:// endpoint for your bot, such as `https://45az0eb1.ngrok.io/api/messages`.
+4. Deploy the bot to a cloud service, such as [Microsoft Azure](https://azure.microsoft.com/). Alternatively, run your app locally and use a tunneling service such [ngrok](https://ngrok.com) to expose an https:// endpoint for your bot, such as `https://45az0eb1.ngrok-free.app/api/messages`.
 
 > [!NOTE]
 >

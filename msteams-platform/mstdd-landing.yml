@@ -48,26 +48,26 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Introduced systemDefault reserved activity type for send activity feed notifications
+        url: tabs/send-activity-feed-notification.md#reserved-activity-type-for-send-activity-feed-notifications
+      - text: Apps for Teams meetings are available in GCC-High
+        url: apps-in-teams-meetings/teams-apps-in-meetings.md
+      - text: Introduced Adaptive Card Previewer in public developer preview
+        url: concepts/build-and-test/adaptive-card-previewer.md
+      - text: Introduced the extensions property in public developer preview app manifest schema
+        url: resources/schema/manifest-schema-dev-preview.md#extensions
+      - text: Receive meeting participant events
+        url:  apps-in-teams-meetings/meeting-apps-apis.md#receive-meeting-participant-events
+      - text: Build message extensions using API
+        url: messaging-extensions/api-based-overview.md
+      - text: The new Microsoft Teams client
+        url: resources/teams-updates.md
       - text: Use callTranscript API to fetch meeting transcript from all meetings
         url:  graph-api/meeting-transcripts/overview-transcripts.md
       - text: Ratings and review for Teams apps
         url: concepts/deploy-and-publish/appsource/post-publish/overview.md#ratings-and-review-for-teams-apps
       - text: Bot configuration experience
         url:  bots/how-to/bot-configuration-experience.md      
-      - text: Receive read receipt event for your bot
-        url:  bots/how-to/conversations/conversation-messages.md#receive-a-read-receipt
-      - text: Media elements in Adaptive Card
-        url: task-modules-and-cards/cards/media-elements-in-adaptive-cards.md
-      - text: Microsoft Teams Store search experience
-        url: concepts/deploy-and-publish/appsource/publish.md#teams-store-search-experience
-      - text: Enable RSC permissions for a user using the Graph APIs (Developer preview)
-        url: graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings
-      - text: New Microsoft Teams client (Developer preview)
-        url: resources/teams-updates.md
-      - text: Adaptive Card-based Loop component (Developer preview)
-        url: m365-apps/cards-loop-component.md
-      - text: Teams Toolkit v17.7 extension within Visual Studio
-        url: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md
 
     - linkListType: reference
       links:
