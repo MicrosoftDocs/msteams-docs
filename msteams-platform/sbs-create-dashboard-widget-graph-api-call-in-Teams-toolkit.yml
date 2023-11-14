@@ -159,7 +159,7 @@ items:
   durationInMinutes: 5
   content: |
 
-    To add a new widget to the dashboard, follow the steps:
+    To add a new widget to the dashboard, follow these steps:
 
      1. [Define a data model](#define-a-data-model)
      2. [Create a data retrieve service](#create-a-data-retrieve-service)
@@ -256,7 +256,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-dashboard.png" alt-text="Screenshot shows the existing sampleDashboard file in Visual Studio Code."::: 
 
-          Optional: If you want to add your widget in a column, you can refer to the following code:
+          Optional: Refer the following code to add your widget in a column:
 
             ```css
             .one-column {
