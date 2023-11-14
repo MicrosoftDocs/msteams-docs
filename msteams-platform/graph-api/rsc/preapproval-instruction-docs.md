@@ -80,19 +80,19 @@ You can create preapproval with PowerShell cmdlets. To create a cmdlet, you must
 
 When you create your cmdlet, you should use the option appropriate to the permissions included in the app you're trying to preapprove. If the app you're preapproving has both chat RSC and team RSC permissions, you can also include both the options . The following examples show multiple ways to build cmdlets to preapprove apps with varying permissions without specifying a sensitivity label:
 
-**Preapprove an app with team RSC permissions**
+**Preapprove an app with team RSC permissions:**
 
 ```powershell
 New-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForTeams @('OnlineMeeting.ReadBasic.Group')
 ```
 
-**Preapprove an app with chat RSC permissions**
+**Preapprove an app with chat RSC permissions:**
 
 ```powershell
 New-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e  -ResourceSpecificApplicationPermissionsAllowedForChats @('OnlineMeeting.ReadBasic.Chat')
 ```
 
-**Preapprove an app with both team and chat RSC permissions**
+**Preapprove an app with both team and chat RSC permissions:**
 
 ```powershell
 New-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForChats @('OnlineMeeting.ReadBasic.Chat') -ResourceSpecificApplicationPermissionsAllowedForTeams @(‘example.permissions.group’)
@@ -107,19 +107,19 @@ New-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -R
 
 The same process can be used to create a preapproval that applies to data within certain sensitivity labels in Teams. You can use the `TeamLevelSensitivityLabelCondition` and `SpecificSensitivityLabel` arguments to define specific sensitivity labels to apply the RSC preapproval policy to. The following are examples of cmdlets using these arguments:
 
-**Preapprove an app with team RSC permissions and a defined sensitivity label**
+**Preapprove an app with team RSC permissions and a defined sensitivity label:**
 
 ```powershell
 New-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForTeams @('OnlineMeeting.ReadBasic.Group') -TeamLevelSensitivityLabelCondition SpecificSensivityLabel -SpecificSensitivityLabelIdsApplicableToTeams @('4de11089-adb9-4be8-9b7a-8336be68f3c4')
 ```
 
-**Preapprove an app with chat RSC permissions and a defined sensitivity label**
+**Preapprove an app with chat RSC permissions and a defined sensitivity label:**
 
 ```powershell
 New-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForChats @('OnlineMeeting.ReadBasic.Chat') -TeamLevelSensitivityLabelCondition Spe```cificSensivityLabel -SpecificSensitivityLabelIdsApplicableToTeams @('4de11089-adb9-4be8-9b7a-8336be68f3c4')
 ```
 
-**Preapprove an app with both team and chat RSC permissions and a defined sensitivity label**
+**Preapprove an app with both team and chat RSC permissions and a defined sensitivity label:**
 
 ```powershell
 New-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForChats @('OnlineMeeting.ReadBasic.Chat') -ResourceSpecificApplicationPermissionsAllowedForTeams @(‘example.permissions.group’) -TeamLevelSensitivityLabelCondition SpecificSensivityLabel -SpecificSensitivityLabelIdsApplicableToTeams @('4de11089-adb9-4be8-9b7a-8336be68f3c4')
@@ -136,13 +136,13 @@ You can update a preapproval policy by using the `Update-MgBetaTeamAppPreApprova
 |`ResourceSpecificApplicationPermissionsAllowedForChats`|Use this option when creating a preapproval for RSC permissions for a team. A listing of these permissions can be found here
 |`ResourceSpecificApplicationPermissionsAllowedForTeams`|Use this option when creating a preapproval for RSC permissions for a team. A listing of these permissions can be found here
 
-**Updating a preapproval for chat RSC**
+**Updating a preapproval for chat RSC:**
 
 ```powershell
 Update-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForChats @('OnlineMeeting.ReadBasic.Chat', 'TeamsAppInstallation.Read.Chat ')
 ```
 
-**Updating a preapproval for team RSC**
+**Updating a preapproval for team RSC:**
 
 ```powershell
 Update-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForTeams @('OnlineMeeting.ReadBasic.Group', 'TeamsAppInstallation.Read.Group)
