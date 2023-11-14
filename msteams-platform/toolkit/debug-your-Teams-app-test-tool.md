@@ -14,15 +14,11 @@ ms.date: 11/03/2023
 >
 > Ensure the prerelease version of Teams Toolkit is installed. For more information, see [install a prerelease version](install-Teams-Toolkit.md#install-a-pre-release-version).
 
-The Teams App Test Tool (Test Tool) is a component integrated into the Teams Toolkit. The tool assists users to debug, test, and refine the app design of a Teams bot application. It provides a web-based chat environment that replicates the behavior, appearance, and user experience of Microsoft Teams.
+The Teams App Test Tool (Test Tool) is a utility that streamlines the debugging process of bot-based applications. The Test Tool displays a comprehensive list of commands that are used in your app's code, along with their descriptions. This way, you can efficiently test your app and identify available commands without the need to manually analyze your code. The tool displays the list of commands in either a web page view or a web-based chat view.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
-## Explore Test Tool
-
-### Advantages
-
-The Test Tool offers the following benefits:
+## Advantages
 
 1. **Sandbox environment**: Sandbox environment emulates the behavior, look and user experience of Teams.
 
@@ -40,40 +36,7 @@ The Test Tool offers the following benefits:
 
 1. **Support for different scopes**: The Test Tool supports testing in personal, team, and group chat scopes.
 
-### Limitations
-
-The following are the limitations:
-
-1. The Test Tool doesn't process the app manifest, which means features that are only enabled through the manifest won't be accessible.
-
-1. The Test Tool doesn't support all other types of Bot application [Cards](../task-modules-and-cards/what-are-cards.md#cards).
-
-1. The Test Tool doesn't support the following Adaptive Card features:
-
-   * [People Picker](../task-modules-and-cards/cards/people-picker.md)
-   * [Typeahead search](../task-modules-and-cards/cards/dynamic-search.md)
-   * [User mention](../task-modules-and-cards/cards/cards-format.md#microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention)
-   * [Stage View](../task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards)
-   * [Full width](../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
-
-1. The Test Tool doesn't support the following:
-
-   * Mobile
-   * Meetings
-
-1. **Limited emulation**
-
-   | Features | Debug in Test Tool | [Debug your Teams app locally](debug-local.md) |
-   | --- | --- | --- |
-   | Basic sending / receiving messages | Available | Available |
-   | Bot Framework APIs (TeamsInfo.getPagedMembers()...) |Available (respond with mocked data) | Available |
-   | Sending Teams events | Available (mocking activity) |Available |
-   | Typing indicator | Not Available | Available |
-   | Tab, Messaging Extension, Task Module, Single sign-on (SSO), and non-Adaptive Cards | Not Available | Available |
-
-### Teams Toolkit samples and templates
-
-Test the bot sample, which displays the features supported by the Test Tool, as follows:
+## Understand how the Test Tool works
 
 1. Open [TeamsFx-Samples](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3).
 
@@ -91,21 +54,15 @@ Test the bot sample, which displays the features supported by the Test Tool, as 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
 
-1. Select **F5**.
+1. Select **F5**. A webpage opens with an Adaptive Card.
 
-1. Type **help** command.
-
-A webpage opens with a list of commands.
+1. Type **help** command. A list of commands is displayed.
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
-### Use custom activity
+## Predefined mocked activities
 
-**Predefined mocked activities**
-
-The Test Tool has predefined activity types in the **Mock an Activity** dropdown list.
-
-To test the predefined mock activities, follow these steps:
+The Test Tool has a set of predefined mocked activities that can be used to test the functionalities of your app:
 
 1. Select **Mock an Activity** > **Add a user** and a pop-up window appears to preview the activity handler.
 
@@ -119,11 +76,9 @@ To test the predefined mock activities, follow these steps:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-a-user-response.png" alt-text="Screenshot shows the response of predefined mock activity add user.":::
 
-**Customize mocked activities**
+## Customize mocked activities
 
-The Test Tool has customized option in the **Mock an Activity** dropdown list.
-
-To test the customize mocked activities, follow these steps:
+Mocked activities can be customized to fit the requirements of your app.
 
 1. Select **Mock an Activity** > **Custom activity**.
 
@@ -151,9 +106,9 @@ To test the customize mocked activities, follow these steps:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/custom-activity-response.png" alt-text="Screenshot shows the response of custom mock activity.":::
 
-### Customize Teams context
+## Customize Teams context
 
-The config file allows you to customize Teams context information such as chats, teams, and users. It provides mockup data for testing Bot Framework APIs or bot builder SDK methods like `TeamsInfo.getTeamMembers`. If your bot code uses these APIs, you can modify this file to alter the API response.
+The config file allows you to customize Teams context information such as chats, teams, and users. The config file provides mockup data for testing Bot Framework APIs or bot builder SDK methods such as `TeamsInfo.getTeamMembers`. If your bot code uses these APIs, you can modify this file to alter the API response.
 
 **Default config**
 
@@ -254,6 +209,35 @@ To update the config file, follow these steps:
 
 1. Save the file and select **F5** to debug in Test Tool.
 
+## Limitations
+
+1. The Test Tool doesn't process the app manifest, which means features that are only enabled through the manifest won't be accessible.
+
+1. The Test Tool doesn't support all other types of Bot application [Cards](../task-modules-and-cards/what-are-cards.md#cards).
+
+1. The Test Tool doesn't support the following Adaptive Card features:
+
+   * [People Picker](../task-modules-and-cards/cards/people-picker.md)
+   * [Typeahead search](../task-modules-and-cards/cards/dynamic-search.md)
+   * [User mention](../task-modules-and-cards/cards/cards-format.md#microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention)
+   * [Stage View](../task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards)
+   * [Full width](../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
+
+1. The Test Tool doesn't support the following:
+
+   * Mobile
+   * Meetings
+
+1. **Limited emulation**
+
+   | Features | Debug in Test Tool | [Debug your Teams app locally](debug-local.md) |
+   | --- | --- | --- |
+   | Basic sending / receiving messages | Available | Available |
+   | Bot Framework APIs (TeamsInfo.getPagedMembers()...) |Available (respond with mocked data) | Available |
+   | Sending Teams events | Available (mocking activity) |Available |
+   | Typing indicator | Not Available | Available |
+   | Tab, Messaging Extension, Task Module, Single sign-on (SSO), and non-Adaptive Cards | Not Available | Available |
+
 ## FAQ
 
 <details>
@@ -284,6 +268,5 @@ No. We always recommend users to test their bot application in the Teams client 
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Install Teams Toolkit](install-Teams-Toolkit.md)
-* [Build your first app using Teams AI library](../sbs-botbuilder-conversation-AI.yml)
-* [Teams AI library](../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
-* [TeamsFx command line interface](TeamsFx-CLI.md)
+* [Build bots for Teams](../bots/what-are-bots.md)
+* [Designing Adaptive Cards for your Microsoft Teams app](../task-modules-and-cards/cards/design-effective-cards.md)

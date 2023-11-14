@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 November**
 
-* **November 14, 2023**: [Teams App Test Tool](toolkit/debug-your-Teams-app-test-tool.md)
+* **November 14, 2023**: Introduced [Teams App Test Tool](toolkit/debug-your-Teams-app-test-tool.md), a utility to debug bot-based applications in a sandbox environment.
 * **November 14, 2023**: Branding update. Azure Active Directory (Azure AD) is referred to as Microsoft Entra ID.
 * **November 03, 2023**: [Introduced systemDefault reserved activity type for send activity feed notifications.](tabs/send-activity-feed-notification.md#reserved-activity-type-for-send-activity-feed-notifications)
 * **November 03, 2023**: [Apps for Teams meetings are available in GCC-High environment.](apps-in-teams-meetings/teams-apps-in-meetings.md)
