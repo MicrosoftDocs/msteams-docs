@@ -65,9 +65,9 @@ The following table lists the short description examples for each category:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
   "version": "1.0.0",
-  "manifestVersion": "1.11",
+  "manifestVersion": "1.13",
   "id": "2bxxxxc5-5xxx-4xxx-aXXX-94xxxx8919e5",
   "name": {
     "short": "Tasks",
@@ -87,9 +87,9 @@ The following table lists the short description examples for each category:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
   "version": "1.0.0",
-  "manifestVersion": "1.11",
+  "manifestVersion": "1.13",
   "id": "2bxxxxc5-5xxx-4xxx-aXXX-94xxxx8919e5",
   "name": {
     "short": "Survey",
@@ -109,9 +109,9 @@ The following table lists the short description examples for each category:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
   "version": "1.0.0",
-  "manifestVersion": "1.11",
+  "manifestVersion": "1.13",
   "id": "2bxxxxc5-5xxx-4xxx-aXXX-94xxxx8919e5",
   "name": {
     "short": "CRM",
@@ -131,9 +131,9 @@ The following table lists the short description examples for each category:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
   "version": "1.0.0",
-  "manifestVersion": "1.11",
+  "manifestVersion": "1.13",
   "id": "2bxxxxc5-5xxx-4xxx-aXXX-94xxxx8919e5",
   "name": {
     "short": "General",
