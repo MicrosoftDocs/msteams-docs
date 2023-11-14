@@ -17,7 +17,7 @@ Through preapproved RSC, admins can choose which RSC-enabled apps they allow the
 > [!NOTE]
 > Preapproval of RSC permissions is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-## PowerShell setup to manage preapproval of RSC permissions
+## PowerShell set up to manage preapproval of RSC permissions
 
 Preapproval of RSC permissions is managed through Microsoft Teams PowerShell. For more information, see [Manage Teams with Microsoft Teams Powershell](/microsoftteams/teams-powershell-managing-teams)
 
@@ -27,7 +27,7 @@ Before you can create and manage preapprovals, connect PowerShell to your tenant
 * `Policy.ReadWrite.Authorization`
 * `AppCatalog.Read.All`
 
-The following snippet is an example of the Powershell setup to manage preapproval of RSC permissions:
+The following snippet is an example of the PowerShell setup to manage preapproval of RSC permissions:
 
 ```powershell
 connect-MgGraph -Scopes @('TeamworkAppSettings.ReadWrite.All', 'Policy.ReadWrite.Authorization', 'AppCatalog.Read.All','InformationProtectionPolicy.Read', 'ServicePrincipalEndpoint.ReadWrite.All', 'Policy.ReadWrite.PermissionGrant', 'Policy.ReadWrite.ApplicationConfiguration', 'Application.ReadWrite.All')
@@ -78,7 +78,7 @@ You can create preapproval with PowerShell cmdlets. To create a cmdlet, you must
 
 ### Create a preapproval without a sensitivity label
 
-When you create your cmdlet, you should use the option appropriate to the permissions included in the app you're trying to preapprove. If the app you're preapproving has both chat RSC and team RSC permissions, you can also include both the options . The following examples show multiple ways to build cmdlets to preapprove apps with varying permissions without specifying a sensitivity label:
+When you create your cmdlet, you should use the option appropriate to the permissions included in the app you're trying to preapprove. If the app you're preapproving has both chat RSC and team RSC permissions, you can also include both the options. The following examples show multiple ways to build cmdlets to preapprove apps with varying permissions without specifying a sensitivity label:
 
 **Preapprove an app with team RSC permissions:**
 
@@ -148,7 +148,7 @@ Update-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e
 Update-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForTeams @('OnlineMeeting.ReadBasic.Group', 'TeamsAppInstallation.Read.Group)
 ```
 
-If you're changing your preapproval from a defined sensitivity label to all sensitivity labels you must reset the value of the `SpecificSensitivityLabel` argument to null in your preapproval as follows:
+If you're changing your preapproval from a defined sensitivity label to all sensitivity labels, you must reset the value of the `SpecificSensitivityLabel` argument to null in your preapproval as follows:
 
 ```powershell
 New-MgBetaTeamAppPreApproval  -TeamsAppId d46d75f9-d445-457e-b555-24bd2f54c15a -ResourceSpecificApplicationPermissionsAllowedForTeams @('ChannelMessage.Read.Group') -TeamLevelSensitivityLabelCondition SpecificSensivityLabel -SpecificSensitivityLabelIdsApplicableToTeams @(‘null’)
