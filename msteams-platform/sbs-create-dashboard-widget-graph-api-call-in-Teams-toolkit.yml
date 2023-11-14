@@ -472,7 +472,7 @@ items:
 
             :::image type="content" source="assets/images/sbs-create-a-new-dashboard/ttk-teams-app.png" alt-text="Screenshot shows the addition of aadApp/create and aadApp/update code.":::
 
-        1. Under the action `cli/runNpmCommand` and the `build app` name, add the following code:
+        1. Add the following code, under the action `cli/runNpmCommand` and the `build app` name:
         
            ```yaml
              env:
