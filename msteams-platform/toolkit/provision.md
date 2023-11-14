@@ -585,8 +585,8 @@ There are two types of parameters:
 
 | Parameter name | Default value placeholder | Meaning of the placeholder | How to customize |
 | --- | --- | --- | --- |
-| Microsoft 365 ClientId | `{{state.fx-resource-aad-app-for-teams.clientId}}` | Your app's Microsoft Entra app client Id is created during provision. | [Use an existing Microsoft Entra app for your bot](#use-an-existing-azure-ad-app-for-your-bot-1). |
-| Microsoft 365 ClientSecret | `{{state.fx-resource-aad-app-for-teams.clientSecret}}` | Your app's Microsoft Entra app client secret is created during provision. | [Use an existing Microsoft Entra app for your Teams app](#use-an-existing-microsoft-entra-app-for-your-teams-app). |
+| Microsoft 365 ClientId | `{{state.fx-resource-aad-app-for-teams.clientId}}` | Your app's Microsoft Entra app client Id is created during provision. | [Use an existing Microsoft Entra app for your bot](#use-an-existing-azure-ad-app-for-your-bot). |
+| Microsoft 365 ClientSecret | `{{state.fx-resource-aad-app-for-teams.clientSecret}}` | Your app's Microsoft Entra app client secret is created during provision. | [Use an existing Microsoft Entra app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app). |
 | Microsoft 365 TenantId | `{{state.fx-resource-aad-app-for-teams.tenantId}}` | Tenant Id of your app's Microsoft Entra app. | [Use an existing Microsoft Entra app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app).  |
 | Microsoft 365 OAuthAuthorityHost | `{{state.fx-resource-aad-app-for-teams.oauthHost}}` | OAuth authority host of your app's Microsoft Entra app. | [Use an existing Microsoft Entra app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app). |
 | botAadAppClientId | `{{state.fx-resource-bot.botId}}` | Bot's Microsoft Entra app client Id created during provision. | [Use an existing Microsoft Entra app for your bot](#use-an-existing-azure-ad-app-for-your-bot). |
