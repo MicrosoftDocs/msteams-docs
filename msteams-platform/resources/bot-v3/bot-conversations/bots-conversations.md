@@ -155,7 +155,7 @@ The `channelData` object contains Teams-specific information and is the definiti
 A typical channelData object in an activity sent to your bot contains the following information:
 
 * `eventType` Teams event type; passed only in cases of [channel modification events](~/resources/bot-v3/bots-notifications.md#channel-updates).
-* `tenant.id` Microsoft Azure Active Directory (Azure AD) tenant ID; passed in all contexts.
+* `tenant.id` Microsoft Entra tenant ID; passed in all contexts.
 * `team` Passed only in channel contexts, not in personal chat.
   * `id` GUID for the channel.
   * `name` Name of the team; passed only in cases of [team rename events](~/resources/bot-v3/bots-notifications.md#team-name-updates).
