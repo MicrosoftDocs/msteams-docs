@@ -428,7 +428,7 @@ items:
 
         1. In Visual Studio Code, go to **EXPLORER** > **appPackage** > **manifest.json**.
 
-        1. Add the following code after `validdomain` property in the **manifest.json** file:
+        1. Add the following code after the valid domains property in the **manifest.json** file:
 
            ```json
              "webApplicationInfo": {
