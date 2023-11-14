@@ -655,7 +655,7 @@ items:
      
      To add Graph API, follow these steps:
    
-      TeamsFx SDK implementes the graph API call. 
+      TeamsFx SDK implements the graph API call. 
 
      1. In Visual Studio Code, go to **EXPLORER** > **src** > **services** > **listService.ts**.
 
