@@ -41,7 +41,7 @@ Moodle LMS supports the following plugins:
 
 ## OpenID Connect
 
-The Open ID Connect plugin allows users to authenticate any website or tool that supports necessary specification and provides single sign-on support (SSO) with Microsoft 365. The OpenID Connect plugin provides institutions with the following sign in options to meet their specific requirements:
+The OpenID Connect plugin allows users to authenticate any website or tool that supports necessary specification and provides single sign-on support (SSO) with Microsoft 365. The OpenID Connect plugin provides institutions with the following sign in options to meet their specific requirements:
 
 * Users can enter their Microsoft 365 credentials, such as email and password to sign in directly or sign in using Moodle’s username and password fields, without signing into Microsoft 365.
 * Users can select the link to sign in through Microsoft 365 or the OpenID Connect provider on Moodle page.
@@ -69,7 +69,7 @@ The users can perform the following actions with Microsoft 365 integration:
 
 * Check the overall functioning of all Microsoft 365 plugin integrations.
 * Upload a CSV file, which compares Moodle to Microsoft 365 users.
-* Check configurations for Azure AD permissions.
+* Check configurations for Microsoft Entra permissions.
 
 ## Microsoft 365 repository
 
