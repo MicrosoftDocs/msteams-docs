@@ -168,3 +168,8 @@ You can delete the preapproval policy associated with an app by using `remove-Mg
 ```powershell
 Remove-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e
 ```
+
+## See also
+
+* [Grant RSC permissions to your app](grant-resource-specific-consent.md)
+* [Test resource-specific consent permissions in Teams](test-resource-specific-consent.md)
