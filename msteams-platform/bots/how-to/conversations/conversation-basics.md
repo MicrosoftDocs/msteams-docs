@@ -43,7 +43,7 @@ The workflow bot is a type of conversation bot, which interacts with the users i
 You can add single sign-on authentication to your conversation bot using the following steps:
 
 * [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml)
-* [Configure your bot app in Azure AD](~/bots/how-to/authentication/bot-sso-register-aad.md)
+* [Configure your bot app in Microsoft Entra ID](~/bots/how-to/authentication/bot-sso-register-aad.md)
 
 ## Next step
 

@@ -116,9 +116,9 @@ Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to
 
     You can select a team or a group chat.
 
-* **Do you require Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab?**
+* **Do you require Microsoft Entra Single-Sign-On support for the tab?**
 
-    Choose **not** to include Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab. The default is yes, enter **n**.
+    Choose **not** to include Microsoft Entra Single-Sign-On support for the tab. The default is yes, enter **n**.
 
 * **Do you want this tab to be available in SharePoint Online? (Y/n)**
 
@@ -878,7 +878,7 @@ To build and run your app:
 
     When you select **F5**, Teams Toolkit:
 
-    1. Registers your application with Azure Active Directory.
+    1. Registers your application with Microsoft Entra ID.
     1. Registers your application for sideloading in Teams.
     1. Starts your application backend running locally.
     1. Starts your application front-end hosted locally.
