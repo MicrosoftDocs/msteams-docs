@@ -18,11 +18,11 @@ The Teams App Test Tool (Test Tool) is a component integrated into the Teams Too
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
-## Explore Teams App Test Tool
+## Explore Test Tool
 
 ### Advantages
 
-The Teams App Test Tool offers the following benefits:
+The Test Tool offers the following benefits:
 
 1. **Sandbox environment**: Sandbox environment emulates the behavior, look and user experience of Teams.
 
@@ -73,7 +73,7 @@ The following are the limitations:
 
 ### Teams Toolkit samples and templates
 
-Test the bot sample, which displays the features supported by the Teams App Test Tool, as follows:
+Test the bot sample, which displays the features supported by the Test Tool, as follows:
 
 1. Open [TeamsFx-Samples](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3).
 
