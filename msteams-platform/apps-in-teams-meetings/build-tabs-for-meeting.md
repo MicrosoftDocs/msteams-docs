@@ -140,7 +140,7 @@ However, the tab instances in a channel meeting are separate from the tabs in th
 
    The following image shows apps in a channel in the Teams desktop client:
 
-   :::image type="content" source="../assets/images/apps-in-meetings/apps-in-channel-meeting-desktop.png" alt-text="Screenshot shows a tab added to a channel meeting in Teams desktop.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/apps-in-channel-meeting-desktop.png" alt-text="Screenshot shows apps added to a channel meeting in Teams desktop client.":::
 
 # [Channel meeting mobile](#tab/channel-meeting-mobile)
 
