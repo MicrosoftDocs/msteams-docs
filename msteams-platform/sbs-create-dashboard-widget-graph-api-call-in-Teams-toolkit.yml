@@ -159,7 +159,7 @@ items:
   durationInMinutes: 5
   content: |
 
-    To add a new widget to the dashboard, follow these steps:
+    To add a new widget to the dashboard, follow the steps:
 
      1. [Define a data model](#define-a-data-model)
      2. [Create a data retrieve service](#create-a-data-retrieve-service)
