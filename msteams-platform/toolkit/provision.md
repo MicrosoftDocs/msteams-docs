@@ -632,7 +632,7 @@ To ensure the TeamsFx tool functions properly, customize ARM template that satis
 You can customize your bot or the Teams app by adding configuration snippets to use a Microsoft Entra app created by you. Perform the following ways to customize the Teams app:
 
 * [Use an existing Microsoft Entra app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app)
-* [Use an existing Microsoft Entra app for your bot](#use-an-existing-azure-ad-app-for-your-bot-1)
+* [Use an existing Microsoft Entra app for your bot](#use-an-existing-azure-ad-app-for-your-bot)
 
 <a name='use-an-existing-azure-ad-app-for-your-teams-app'></a>
 
