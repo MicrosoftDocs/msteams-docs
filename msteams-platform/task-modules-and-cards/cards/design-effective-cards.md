@@ -91,7 +91,7 @@ Use when you want to combine text and media, like audio or video.
 
 ### People
 
-Use when you want to efficiently convey who's involved with a task.
+Use when you want to efficiently communicate the individuals involved in a task.
 
 #### Mobile
 
