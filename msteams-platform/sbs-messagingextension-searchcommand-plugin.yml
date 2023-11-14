@@ -7,8 +7,8 @@ metadata:
   level: Beginner
   ms.date: 05/26/2022
   ms.topic: interactive-tutorial
-  nextTutorialHref: messaging-extensions/build-bot-based-plugin.md
-  nextTutorialTitle: Bot-based message extension plugin
+  nextTutorialHref: messaging-extensions/high-quality-message-extension.md
+  nextTutorialTitle: Bot-based message extension plugin guidelines
   ms.custom: mvc
   ms.localizationpriority: high
 items:
@@ -418,9 +418,7 @@ items:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing the subscription to use for the Azure resources.":::
 
-       Your app is hosted using Azure resources.
-
-       A dialog warns you that costs may be incurred when running resources in Azure.
+        Your app is hosted using Azure resources. A dialog warns you that costs may be incurred when running resources in Azure.
 
     1. Select **Provision**.
 

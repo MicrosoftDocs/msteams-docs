@@ -29,7 +29,7 @@ A plugin allows Microsoft 365 Chat to interact directly with third-party data, a
 
 All bot-based search message extensions are eligible for plugin support, subject to validation to ensure the plugin meets quality, security, privacy, and usefulness expectations.
 
-You can create a bot-based message extension using Teams Toolkit for Visual Studio Code, Visual Studio, or CLI and extend the message extension to function as a plugin in Microsoft 365 Chat.
+You can create a bot-based search message extension using Teams Toolkit for Visual Studio Code, Visual Studio, or CLI and extend the message extension to function as a plugin in Microsoft 365 Chat.
 
 ## Prerequisites
 
@@ -299,6 +299,10 @@ A bot-based message extension is created.
 :::image type="content" source="../assets/images/Copilot/bot-based-tdp-message-extension-created.png" alt-text="Screenshot shows the messaging extension created and listed in the App features page in Developer Portal for Teams."::: -->
 
 ---
+
+## Step-by-step guide
+
+Follow the [step-by-step guide](../sbs-messagingextension-searchcommand-plugin.yml) to build a bot-based search message extension plugin for Microsoft 365 Chat.
 
 ## See also
 
