@@ -10,7 +10,7 @@ ms.date: 04/16/2023
 
 # Upload your app in Teams
 
-You can upload Microsoft Teams apps without having to publish to your organization or the Teams Store in the following scenarios:
+You can upload Microsoft Teams apps without having to publish to your organization or the Microsoft Teams Store in the following scenarios:
 
 * You want to test and debug an app locally yourself or with other developers.
 * You built an app for yourself to automate a workflow.
@@ -122,7 +122,7 @@ To remove app from Teams, follow the steps:
 > [!NOTE]
 >
 > * You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
-> * Currently, you can't migrate your custom app to the Teams Store. If you want to list your app to the Teams Store, see [how to publish your app to the Teams Store](appsource/publish.md).
+> * You can't migrate your custom app to the Teams Store. If you want to list your app to the Teams Store, see [how to publish your app to the Teams Store](appsource/publish.md).
 
 ## Next step
 

@@ -34,7 +34,7 @@ You must have a basic understanding of the following to use custom Together Mode
 * Define scene and seats in a scene.
 * Have a Microsoft Developer account and be familiar with the Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
 * Understand the [concept of app upload](../concepts/deploy-and-publish/apps-upload.md).
-* Ensure that the Administrator has granted permission to [**upload a custom app**](../concepts/deploy-and-publish/apps-upload.md) and select all filters as part of App Setup and Meeting policies respectively.
+* Ensure that the Administrator has granted permission to [upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md) and select all filters as part of app setup and meeting policies respectively.
 
 ## Best practices
 
