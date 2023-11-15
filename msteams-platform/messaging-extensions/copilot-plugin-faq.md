@@ -5,7 +5,7 @@ description: In this article, fetch answers to some frequently asked questions w
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 09/07/2023
+ms.date: 11/14/2023
 ---
 
 # Frequently Asked Questions
@@ -17,7 +17,7 @@ Get answers to your common queries about building a Microsoft 365 Chat plugin on
 
 <summary>Why isn't Microsoft 365 Chat including my plugin in a response?</summary>
 
-A: Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in plugin matching in response to a user prompt. Also, make sure you've uploaded  the app package to Outlook and interacted with the app, including authentication.
+Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in plugin matching in response to a user prompt. Also, make sure you've uploaded  the app package to Outlook and interacted with the app, including authentication.
 
 If the problem continues, use the thumbs down indicator on the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
 
@@ -124,11 +124,12 @@ After publishing their plugin, developers opt into the App Compliance flow in Pa
 
 <summary> How are plugins certified?</summary>
 
-A: After passing the proactive validation, developers of both existing and new message extensions that haven't been certified will be encouraged to certify their plugin. This will be communicated through an email confirming their message extension has been validated.
+After passing the proactive validation, developers of both existing and new message extensions that haven't been certified will be encouraged to certify their plugin. This will be communicated through an email confirming their message extension has been validated.
 </details>
 </br>
 <details>
 
 <summary> How are new plugins certified?</summary>
-A: Developers will be encouraged to certify their new plugin after successfully completing validation.
+
+Developers will be encouraged to certify their new plugin after successfully completing validation.
 </details>
