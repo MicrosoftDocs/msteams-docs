@@ -48,7 +48,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Apps for Teams meetings are available in Department of Defense (DOD).
+      - text: Apps for Teams meetings are available in Department of Defense (DOD)
         url: messaging-extensions/build-bot-based-plugin.md
       - text: Build bot-based message extension plugin
         url: messaging-extensions/build-bot-based-plugin.md
