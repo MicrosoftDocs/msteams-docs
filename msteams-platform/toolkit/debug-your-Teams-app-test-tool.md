@@ -130,7 +130,7 @@ The following example explains the **Add user** handler:
 
 1. Select **Mock an Activity** > **Add user** and a pop-up window appears to preview the activity handler.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-user.png" alt-text="Screenshot shows the list of option under mock an activity.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-user.png" alt-text="Screenshot shows the add user option under mock an activity.":::
 
 1. Select **Send activity**.
 
