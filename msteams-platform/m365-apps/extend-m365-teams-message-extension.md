@@ -65,7 +65,11 @@ To extend your Teams message extension to Outlook, you can either build a new me
 
 # [Build a message extension app for Outlook](#tab/ttk)
 
-You can build a Teams message extension app for Outlook through Teams Toolkit extension for Visual Studio Code.
+You can build a Teams message extension app for Outlook through Teams Toolkit extension for Visual Studio Code. To build a message extension app for Outlook, ensure the following:
+
+  > * [Build an app with Teams Toolkit in Visual Studio Code](#build-a-message-extension-app-for-outlook)
+  > * [Sideload your app in Teams](#sideload-your-app-in-teams)
+  > * [Preview your message extension in Outlook](#preview-your-message-extension-in-outlook)
 
 [!INCLUDE [message-extensions-outlook](../includes/messaging-extensions/message-extensions-outlook.md)]
 
@@ -79,6 +83,7 @@ To extend your existing Teams message extension app to Outlook, ensure the follo
 > * [Add the Microsoft 365 channel for your app.](#add-microsoft-365-channel-for-your-app)
 > * [Update Azure AD app registration for SSO.](#update-azure-ad-app-registration-for-sso)
 > * [Sideload your updated app in Teams.](#sideload-your-app-in-teams)
+> * [Preview your message extension in Outlook](#preview-your-message-extension-in-outlook)
 
 ### Update your app manifest
 
@@ -119,7 +124,7 @@ For users to interact with your message extension from Outlook, you need to enab
 
 <a name='update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso'></a>
 
-## Update Microsoft Entra app registration for SSO
+### Update Microsoft Entra app registration for SSO
 
 > [!NOTE]
 > You can skip this step if you're using the [sample app](#quickstart) provided in this tutorial, as the scenario doesn't involve Microsoft Entra single sign-on authentication.
@@ -172,7 +177,7 @@ To preview your app running in Outlook on the web:
 1. Select **New message**.
 1. Select **Apps** on the ribbon.
 
-   `Place holder for Figma image`
+   :::image type="content" source="images/outlook-me.png" alt-text="Screenshot shows the preview your message extension in Outlook on the web.":::
 
 # [Outlook for Windows](#tab/outlook-on-the-desktop)
 
