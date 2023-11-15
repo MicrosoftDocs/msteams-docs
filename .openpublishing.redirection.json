@@ -915,6 +915,10 @@
       {
         "source_path": "msteams-platform/toolkit/add-How-to guides-v5.md",
         "redirect_url": "/msteams-platform/toolkit/add-How-to-guides-v5"
+      },
+      {
+        "source_path": "msteams-platform/copilot/how-to-extend-copilot.md",
+        "redirect_url": "/msteams-platform/messaging-extensions/how-to-extend-copilot.md"
       }
     ]
 }
