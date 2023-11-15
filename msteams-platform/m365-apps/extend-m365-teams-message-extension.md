@@ -67,7 +67,7 @@ To extend your Teams message extension to Outlook, you can either build a new me
 
 You can build a Teams message extension app for Outlook through Teams Toolkit extension for Visual Studio Code.
 
-   # [Search-based message extension](#tab/search-based-message-extension)
+   # [Search-based message extension](#tab1/search-based-message-extension)
     
    1. Open **Visual Studio Code**.
    1. Select **Command Palette...** under the **View** option or **Ctrl+Shift+P**.
@@ -91,7 +91,7 @@ You can build a Teams message extension app for Outlook through Teams Toolkit ex
    1. Enter **Teams: Deploy** to deploy the sample code to the provisioned resources in Azure and start the app. Alternatively, you can select **Deploy** under **LIFECYCLE** section of the extension.
    1. Select **Deploy**.
     
-   # [Action-based message extension](#tab/action-based-message-extension)
+   # [Action-based message extension](#tab1/action-based-message-extension)
     
    1. Open **Visual Studio Code**.
    1. Select **Command Palette...** under the **View** option or **Ctrl+Shift+P**.
@@ -111,7 +111,7 @@ You can build a Teams message extension app for Outlook through Teams Toolkit ex
    1. Enter **Teams: Deploy** to deploy the sample code to the provisioned resources in Azure and start the app. Alternatively, you can select **Deploy** under **LIFECYCLE** section of the extension.
    1. Select **Deploy**.
     
-   ---
+  ---
 
 # [Extend an existing Teams message extension app to Outlook](#tab/existing-app)
 
