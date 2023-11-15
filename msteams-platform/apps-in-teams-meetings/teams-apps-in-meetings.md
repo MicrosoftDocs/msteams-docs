@@ -117,14 +117,14 @@ Teams supports user types, such as in-tenant, guest, federated or external, and 
 
 The following list details the various user types along with their accessibility:
 
-* **In-tenant**: In-tenant users belong to the organization and have credentials in Azure Active Directory (Azure AD) for the tenant. They're full-time, onsite, or remote employees and can be an organizer, presenter, or attendee.
-* **Guest**: A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s Azure AD and have same Teams capabilities as a native team member. They have access to team chats, meetings, and files. A guest can be an organizer, presenter, or attendee. For more information, see [guest access in Teams](/microsoftteams/guest-access).
+* **In-tenant**: In-tenant users belong to the organization and have credentials in Microsoft Entra ID for the tenant. They're full-time, onsite, or remote employees and can be an organizer, presenter, or attendee.
+* **Guest**: A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s Microsoft Entra ID and have same Teams capabilities as a native team member. They have access to team chats, meetings, and files. A guest can be an organizer, presenter, or attendee. For more information, see [guest access in Teams](/microsoftteams/guest-access).
 * **Federated or external**: A federated or an external user is a Teams user from another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. They don't have access to your Teams or other shared resources from your organization. Guest access is a better option for external users to have access to Teams and channels. For more information, see [manage external access in Teams](/microsoftteams/manage-external-access).
 
     > [!NOTE]
     > Teams users can add apps when they host meetings or chats with other organizations. When an external user shares an app to the meeting, all the users can access the app. The host organization's data policies and data sharing practices of the third-party apps shared by that user's organization will be in effect.
 
-* **Anonymous**: Anonymous users don't have an Azure AD identity and aren't federated with a tenant. The anonymous participants are external users but their identity isn't shown in the meeting. Anonymous users can access apps in a meeting window. An anonymous user can be a presenter or an attendee but can't be an organizer.
+* **Anonymous**: Anonymous users don't have a Microsoft Entra identity and aren't federated with a tenant. The anonymous participants are external users but their identity isn't shown in the meeting. Anonymous users can access apps in a meeting window. An anonymous user can be a presenter or an attendee but can't be an organizer.
 
     > [!NOTE]
     > Anonymous users inherit the global default user-level app permission policy. For more information, see [manage apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
