@@ -230,13 +230,13 @@ To preview your app running in Outlook for Windows:
 
 ---
 
-# [Extend an existing Teams message extension app to Outlook](#tab/existing-app)
+# [Extend an existing Teams message extension app to Outlook](#tab1/existing-app)
 
-   # [Extend an existing Teams message extension app to Outlook](#tab/existing-app)
-   # [Extend an existing Teams message extension app to Outlook](#tab/existing-app)
+   # [Extend an existing Teams message extension app to Outlook](#tab2/existing-app)
+   # [Extend an existing Teams message extension app to Outlook](#tab2/existing-app)
    ---
 
-# [Extend an existing Teams message extension app to Outlook](#tab/existing-app)
+# [Extend an existing Teams message extension app to Outlook](#tab1/existing-app)
 
 ---
 
