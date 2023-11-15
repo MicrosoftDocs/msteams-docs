@@ -54,7 +54,7 @@ For your bot to receive all conversation messages, the relevant RSC permission s
 
 The following code provides an example of the app manifest:
 
-* **webApplicationInfo.id**: Your Microsoft Azure Active Directory (AAD) app ID. The app ID can be the same as your bot ID.
+* **webApplicationInfo.id**: Your Microsoft Entra app ID. The app ID can be the same as your bot ID.
 * **webApplicationInfo.resource**: Any string. The resource field has no operation in RSC, but must be added with a value to avoid error response.
 * **authorization.permissions.resourceSpecific**: RSC permissions for your app with either or both `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` specified. For more information, see [resource-specific permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions).
 
