@@ -19,9 +19,9 @@ Message extensions allow users to interact with your web service using buttons a
 > [!NOTE]
 > Teams search-based message extensions are generally available for Outlook and action-based message extensions are available in preview for Outlook.
 
-Outlook mobile users on Android and iOS [(Microsoft Outlook beta TestFlight)](https://testflight.apple.com/join/AhS6fRDK) can receive and take actions on cards from your apps that were sent to them by users on Outlook on the web and Outlook for Windows.
+Outlook mobile users on Android and iOS can receive and take actions on cards from your apps that were sent to them by users on Outlook on the web and Outlook for Windows.
 
-Teams message extension across Microsoft 365 also supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) that display cards to launch [Stage View](../tabs/tabs-link-unfurling.md).
+Teams message extension across Microsoft 365 also supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) that display cards to launch [Stage View](../tabs/tabs-link-unfurling.md) and task modules.
 
 ## Prerequisites
 
@@ -280,25 +280,21 @@ Your message extension is listed. You can invoke it from there and use it just a
 
 ## Debugging
 
-As you debug your message extension, you can identify the source (originating from Teams versus Outlook) of bot requests by the [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) of the [Activity](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md) object. When a user performs a query, your service receives a standard Bot Framework `Activity` object. One of the properties in the Activity object is `channelId`, which has the value of `msteams` or `outlook`, depending on where the bot request originates. For more information, see [search based message extensions SDK](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions) and [action based messaging extensions SDK](/microsoftteams/platform/resources/messaging-extension-v3/create-extensions).
+As you debug your message extension, you can identify the source (originating from Teams versus Outlook) of bot requests by the [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) field of the [Activity](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md) object. When a user performs a query, your service receives a standard Bot Framework `Activity` object. One of the properties in the Activity object is `channelId`, which has the value of `msteams` or `m365extensions`, depending on where the bot request originates. For more information, see [search based message extensions SDK](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions) and [action based messaging extensions SDK](/microsoftteams/platform/resources/messaging-extension-v3/create-extensions).
 
 ## Limitations
 
 While your updated message extension continues to run in Teams, you must be aware of the following limitations:
 
-- Message extensions in Outlook are limited to the mail [`compose`](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions) context even if your Teams message extension includes `commandBox` as a context in its app manifest.
+- Message extensions in Outlook are supported only in the [`compose`](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions) context. In Teams app manifest, message extension contexts such as `commandBox` and `message` aren't supported in Outlook.
 
--  Action-based message extension isn't supported for `message` context. Invoking a message extension from the global Outlook Search box isn't supported.
+-  Action-based message extensions that [send cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box are supported in Outlook. However, using [bots to deliver cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#) isn't supported. In this scenario, you can convert your message extension to [send cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box in Outlook.
 
-- Action-based message extension commands aren't supported in Outlook desktop. If your app has action-based commands, it surfaces in Outlook, but the action menu is only available on the Outlook for web and mobile.
-
-- Action-based message extensions that [send cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box are supported in Outlook. However, using [bots to deliver cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#) isn't supported. In this scenario, you can convert a card to be sent by the user to allow support for Outlook.
-
-- In action-based message extensions, task modules launched in a pop-up window displays behind the Outlook window.
-
-- Adaptive Cards v1.5 and later aren't supported and you can't insert more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email. 
+- You can't insert more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email.
 
 - [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) of type `messageBack`, `imBack`, `invoke`, and `signin` aren't supported. `openURL` is the only supported card action.
+
+- Adaptive Card actions are supported. For `Action.Submit` only [stageview](https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/tabs-link-unfurling#invoke-collaborative-stage-view-from-adaptive-card) and [taskmodule](https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/task-modules/task-modules-bots?tabs=nodejs#bot-framework-card-actions-vs-adaptive-card-actionsubmit-actions) launching is supported.
 
 Use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
 
