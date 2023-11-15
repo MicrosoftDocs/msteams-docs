@@ -2,7 +2,7 @@
 title: Build a dashboard in Teams
 metadata:
   title: Build a dashboard in Teams
-  description: Learn how to create a dashboard tab, add a new widget, and implement Graph API.
+  description: Learn how to create a dashboard tab, add a new widget, and implement Graph API in Teams toolkit.
   audience: Developer
   level: Beginner
   ms.date: 01/06/2023
