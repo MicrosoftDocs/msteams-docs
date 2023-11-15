@@ -998,3 +998,4 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 * [Enable app customization](~/concepts/design/enable-app-customization.md)
 * [Localize your app](~/concepts/build-and-test/apps-localization.md)
 * [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
+* [Different versions of app manifest schema](https://github.com/microsoft/json-schemas/tree/main/teams)
