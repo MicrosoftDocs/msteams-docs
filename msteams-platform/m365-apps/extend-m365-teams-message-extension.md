@@ -75,11 +75,11 @@ You can build a Teams message extension app for Outlook through Teams Toolkit ex
    1. From the dropdown list that appears, select **Message Extension**.
    1. Select **Custom Search Results** to download the sample code for a Teams search-based message extension using the latest app manifest (previously called Teams [app manifest](../resources/schema/manifest-schema.md)).
     
-     :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams sample options.":::
+      :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams sample options.":::
     
      You can also download the sample code from the left pane, under **DEVELOPMENT**, select **View Samples**. A **Samples** tab appears, in the search field enter **NPM Search Connector**.
     
-     :::image type="content" source="images/toolkit-search-sample.png" alt-text="Screenshot shows the NPM Search Connector sample in Teams Toolkit Samples gallery.":::
+      :::image type="content" source="images/toolkit-search-sample.png" alt-text="Screenshot shows the NPM Search Connector sample in Teams Toolkit Samples gallery.":::
     
    1. Select a preferred programming language.
    1. Select a location on your local machine for the workspace folder and enter your application name.
@@ -111,7 +111,7 @@ You can build a Teams message extension app for Outlook through Teams Toolkit ex
    1. Enter **Teams: Deploy** to deploy the sample code to the provisioned resources in Azure and start the app. Alternatively, you can select **Deploy** under **LIFECYCLE** section of the extension.
    1. Select **Deploy**.
     
-  ---
+   ---
 
 # [Extend an existing Teams message extension app to Outlook](#tab/existing-app)
 
@@ -229,6 +229,18 @@ To preview your app running in Outlook for Windows:
    `Place holder for Figma image`
 
 ---
+
+# [Extend an existing Teams message extension app to Outlook](#tab/existing-app)
+
+   # [Extend an existing Teams message extension app to Outlook](#tab/existing-app)
+   # [Extend an existing Teams message extension app to Outlook](#tab/existing-app)
+   ---
+
+# [Extend an existing Teams message extension app to Outlook](#tab/existing-app)
+
+---
+
+
 
 Your message extension is listed. You can invoke it from there and use it just as you would while composing a message in Teams.
 
