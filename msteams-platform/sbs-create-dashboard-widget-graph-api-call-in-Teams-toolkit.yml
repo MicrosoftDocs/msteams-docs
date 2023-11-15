@@ -64,7 +64,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/enter-application-name.png" alt-text="Screenshot shows the selection of application name.":::
 
-        Teams Toolkit creates tab app in few seconds and displays a message.
+        Teams Toolkit creates tab app in few seconds and message appears.
       
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-app-preview.png" alt-text="Screenshot shows the teams tab app dashboard preview in VS Code.":::
 
@@ -256,7 +256,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-dashboard.png" alt-text="Screenshot shows the existing sampleDashboard file in Visual Studio Code."::: 
 
-          Optional: If you want to add your widget in a column, you can refer to the following code:
+          Optional: Refer the following code to add your widget in a column:
 
             ```css
             .one-column {
@@ -428,7 +428,7 @@ items:
 
         1. In Visual Studio Code, go to **EXPLORER** > **appPackage** > **manifest.json**.
 
-        1. Add the following code after `validdomain` property in the **manifest.json** file:
+        1. Add the following code after the valid domains property in the **manifest.json** file:
 
            ```json
              "webApplicationInfo": {
@@ -472,7 +472,7 @@ items:
 
             :::image type="content" source="assets/images/sbs-create-a-new-dashboard/ttk-teams-app.png" alt-text="Screenshot shows the addition of aadApp/create and aadApp/update code.":::
 
-        1. Under the action `cli/runNpmCommand` and the `build app` name, add the following code:
+        1. Add the following code, under the action `cli/runNpmCommand` and the `build app` name:
         
            ```yaml
              env:
@@ -655,7 +655,7 @@ items:
      
      To add Graph API, follow these steps:
    
-      TeamsFx SDK implementes the graph API call. 
+      TeamsFx SDK implements the graph API call. 
 
      1. In Visual Studio Code, go to **EXPLORER** > **src** > **services** > **listService.ts**.
 
