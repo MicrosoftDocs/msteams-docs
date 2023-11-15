@@ -42,11 +42,11 @@ items:
 
     ## Set up your Teams development tenant
 
-    A **tenant** is like a space or a container where you chat, share files, and run meetings for your organization in Teams. You can also upload and test the app.
+    A tenant is like a space or a container where you chat, share files, and run meetings for your organization in Teams. You can also upload and test the app.
 
     ### Check for app upload option
 
-    After creating the app, you must load your app in Teams without distributing it. This loading is known as app upload. Sign in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. This process is known as app upload. Sign in to your Microsoft 365 account to view this option.
 
      > [!NOTE]
      > App upload is necessary for previewing and testing apps in Teams local environment. Enable app upload to preview and test your app in Teams locally.
