@@ -45,7 +45,7 @@ Ensure you install the following tools for building and deploying your bot apps 
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
-| &nbsp; | [Teams Toolkit](#install-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+| &nbsp; | [Install Teams Toolkit](install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
 
@@ -55,7 +55,7 @@ This section explains how the Test Tool works and how it connects with your bot 
 
 To use a Teams bot app on the Test Tool, you need to provide:
 
-* The bot message endpoint is the URL that links the Test Tool and your bot. You can update with the BOT_ENDPOINT environment variable or use the default value of <http://localhost:3978/api/messages>.
+* The bot message endpoint is the URL that links the Test Tool and your bot. You can update with the BOT_ENDPOINT environment variable or use the default value of [http://localhost:3978/api/messages](http://localhost:3978/api/messages).
 * (Optional) A configuration file to inform the Test Tool about your customized contextual information in Teams. The file is named **teamsapptesttool.yml** in the project's root folder. If Teams cannot find this file, it will use the default configuration. For more details, see [update Teams context](#customize-teams-context).
 
 ## Test Tool experience in Teams Toolkit
@@ -66,42 +66,42 @@ To use a Teams bot app on the Test Tool, you need to provide:
 
 1. Select **Create a New App**.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
 1. Select **Bot** to create a new bot project.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app1.png" alt-text="Screenshot shows the wizard to Create New Project.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app1.png" alt-text="Screenshot shows the wizard to Create New Project.":::
 
 1. Select **Basic Bot** as the app feature that you want to build in your app. If you need a different functionality for your bot, select accordingly.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
 
 1. Select **JavaScript** as the programming language.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot shows the option to select the programming language.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot shows the option to select the programming language.":::
 
 1. Select **Default folder** to store your project root folder in default location.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
 
     You can also change the default location by the following steps:
 
     1. Select **Browse**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
 
     1. Select the location for project workspace.
     1. Select the **Select Folder**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot shows the folder to select.":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot shows the folder to select.":::
 
 1. Enter a suitable name for your app and then select **Enter**.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
 
     A dialog appears, where you would be required to choose yes or no to trust the authors of the files in this folder.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
 
 1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool** in dropdown list.
 
