@@ -1,27 +1,27 @@
 ---
 title: Create bot based Message extension plugin
 author: v-ypalikila
-description: Learn how to build a bot-based message extension plugin for Microsoft 365 Chat using Teams Developer Portal and Teams Toolkit.
+description: Learn how to build a bot-based message extension plugin for Microsoft Copilot for Microsoft 365 using Teams Developer Portal and Teams Toolkit.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
 ms.date: 11/14/2023
 ---
 
-# Extend bot-based message extension as plugin for Microsoft 365 Chat
+# Extend bot-based message extension as plugin for Copilot for Microsoft 365
 
 > [!NOTE]
 >
 > * Bot-based search message extension plugin is available in [**public developer preview**](../resources/dev-preview/developer-preview-intro.md).
 > * Only bot-based search message extension can be extended as a plugin in Microsoft 365 Chat.
 
-Microsoft 365 Chat, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to transform your words into a potent productivity tool. Although Microsoft 365 Chat can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending your message extension as a plugin in Microsoft 365 Chat, you can enable users to interact with third-party tools and services, thereby empowering them to achieve more with Microsoft 365 Chat. You can achieve this extension by developing a plugin or connecting to an external data source.
+Microsoft Copilot for Microsoft 365, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to transform your words into a potent productivity tool. Although Copilot for Microsoft 365 can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending your message extension as a plugin in Copilot for Microsoft 365, you can enable users to interact with third-party tools and services, thereby empowering them to achieve more with Copilot for Microsoft 365. You can achieve this extension by developing a plugin or connecting to an external data source.
 
 :::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams and Microsoft 365 Chat.":::
 
 ## What is a plugin?
 
-A plugin allows Microsoft 365 Chat to interact directly with third-party data, apps, and services, enhance its capabilities, and broaden its range of capabilities. Plugins allow Microsoft 365 Chat to:
+A plugin allows Copilot for Microsoft 365 to interact directly with third-party data, apps, and services, enhance its capabilities, and broaden its range of capabilities. Plugins allow Copilot for Microsoft 365 to:
 
 * Fetch real-time information, such as the latest news coverage on a product launch.
 * Retrieve knowledge-based information, such as a team’s design files in Figma.
@@ -29,17 +29,20 @@ A plugin allows Microsoft 365 Chat to interact directly with third-party data, a
 
 All bot-based search message extensions are eligible for plugin support, subject to validation to ensure the plugin meets quality, security, privacy, and usefulness expectations.
 
-You can create a bot-based search message extension using Teams Toolkit for Visual Studio Code, Visual Studio, or CLI and extend the message extension to function as a plugin in Microsoft 365 Chat.
+You can create a bot-based search message extension using Teams Toolkit for Visual Studio Code, Visual Studio, or CLI and extend the message extension to function as a plugin in Copilot for Microsoft 365.
 
 ## Prerequisites
 
-Before you get started, ensure that you're familiar with the following standards and guidelines for building message extension plugins for Microsoft 365 Chat:
+Before you get started, ensure that you're familiar with the following standards and guidelines for building message extension plugins for Copilot for Microsoft 365:
 
 * Standards for compliance, performance, security, and user experience outlined in [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-microsoft-365-chat-plugin).
 
-* [Guidelines to create or upgrade a message extension plugin for Microsoft 365 Chat](../messaging-extensions/high-quality-message-extension.md).
+* [Guidelines to create or upgrade a message extension plugin for Copilot for Microsoft 365](../messaging-extensions/high-quality-message-extension.md).
 
 ## Create bot-based message extension
+
+> [!IMPORTANT]
+> Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams.
 
 # [Visual Studio Code](#tab/visual-studio-code)
 
