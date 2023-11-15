@@ -448,7 +448,7 @@ items:
 
         # [teamsapp.yml](#tab/teamsappyml)
 
-        1. Add the code under provision.
+        1. Add the code under `provision`.
         
             ```yaml 
               - uses: aadApp/create
@@ -484,7 +484,7 @@ items:
 
         # [teamsapp.local.yml](#tab/teamsapplocalyml)
         
-        1. Add the code under provision.
+        1. Add the code under `provision`.
         
             ```yaml 
               - uses: aadApp/create
