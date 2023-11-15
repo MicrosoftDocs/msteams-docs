@@ -55,14 +55,14 @@ This section explains how the Test Tool works and how it connects with your bot 
 
 To use a Teams bot app on the Test Tool, you need to provide:
 
-* The bot message endpoint is the URL that links the Test Tool and your bot. You can update with the BOT_ENDPOINT environment variable or use the default value of [http://localhost:3978/api/messages](http://localhost:3978/api/messages).
+* The bot message endpoint is the URL that links the Test Tool and your bot. You can update with the BOT_ENDPOINT environment variable or use the default value of `http://localhost:3978/api/messages`.
 * (Optional) A configuration file to inform the Test Tool about your customized contextual information in Teams. The file is named **teamsapptesttool.yml** in the project's root folder. If Teams cannot find this file, it will use the default configuration. For more details, see [update Teams context](#customize-teams-context).
 
 ## Test Tool experience in Teams Toolkit
 
 1. Open Visual Studio Code.
 
-1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
+1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 
 1. Select **Create a New App**.
 
