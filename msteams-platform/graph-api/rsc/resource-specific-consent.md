@@ -8,7 +8,7 @@ ms.date: 03/20/2023
 
 # Resource-specific consent for your Teams app
 
-Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft Identity platform that allows for granting scoped access to an app.
+Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft identity platform that allows for granting scoped access to an app.
 
 Through RSC, an authorized user can give an app access to the data of a specific instance of a resource type. They don't need to give app access to every instance of the resource type in the entire tenant.
 
@@ -63,7 +63,7 @@ Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft TeamsJS client l
 
 | RSC mode | Supported SDKs | App manifest version | Resource types | RSC-related controls for the entire tenant | Who can consent to RSC permissions? |
 |---------|---------|---------|---------|---------|---------|
-|Application| • Microsoft Graph  <br> • Microsoft Bot Framework | >=v1.6 | Teams, chats, and meetings | • Microsoft Graph-based controls for chats and meetings <br> • Azure Active Directory (Azure AD) portal-based controls for Teams |• Team: A team owner or member <br> • Chat: A chat member <br> • Meeting: A meeting organizer or presenter |
+|Application| • Microsoft Graph  <br> • Microsoft Bot Framework | >=v1.6 | Teams, chats, and meetings | • Microsoft Graph-based controls for chats and meetings <br> • Microsoft Entra admin center-based controls for Teams |• Team: A team owner or member <br> • Chat: A chat member <br> • Meeting: A meeting organizer or presenter |
 | Delegated | Microsoft Teams Client | >=v1.12 | Teams, chats, meetings, and users | Always on | Any user authorized to install an app in the specific scope. |
 
 > [!NOTE]
@@ -158,7 +158,7 @@ The following table provides RSC permissions for a chat or meeting and their app
 For more information, see [chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions).
 
 > [!TIP]
-> RSC permissions are available only to Teams apps installed on the Teams client and not part of the Azure AD portal. If you want to know the RSC permissions associated with an app, see app installation or app information dialog within Teams client.
+> RSC permissions are available only to Teams apps installed on the Teams client and not part of the Microsoft Entra admin center. If you want to know the RSC permissions associated with an app, see app installation or app information dialog within Teams client.
 
 ### RSC permissions for user access
 

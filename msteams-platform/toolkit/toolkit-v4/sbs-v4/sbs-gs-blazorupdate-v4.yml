@@ -261,7 +261,7 @@ items:
 
         When you select **F5**, Teams Toolkit:
 
-        1. Registers your application with Azure Active Directory.
+        1. Registers your application with Microsoft Entra ID.
         1. Registers your application for sideloading in Teams.
         1. Starts your application backend running locally.
         1. Starts your application front-end hosted locally.
@@ -535,7 +535,7 @@ items:
 
         When you select **F5**, Teams Toolkit:
 
-        1. Registers your application with Azure Active Directory.
+        1. Registers your application with Microsoft Entra ID.
         1. Registers your application for sideloading in Teams.
         1. Starts your application backend running locally.
         1. Starts your application front-end hosted locally.

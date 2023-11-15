@@ -41,7 +41,7 @@ Teams Toolkit performs background functions during debug process, which include 
 
 ### Start debugging
 
-You can press **F5** as a single operation to start debugging. Teams Toolkit starts to check prerequisites, registers Microsoft Azure Active Directory (Azure AD) app, Teams app, and registers bot, starts services, and launches browser.
+You can press **F5** as a single operation to start debugging. Teams Toolkit starts to check prerequisites, registers Microsoft Entra app, Teams app, and registers bot, starts services, and launches browser.
 
 ### Multi-target debugging
 
@@ -88,7 +88,7 @@ You can also customize debug settings for your existing bot app.
 
 <summary><b>Learn how to use an existing bot for debugging</b></summary>
 
-Teams Toolkit creates Azure AD apps for projects with bot by default using  [`botAadApp/create`](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#botaadappcreate) action.
+Teams Toolkit creates Microsoft Entra apps for projects with bot by default using  [`botAadApp/create`](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#botaadappcreate) action.
 
 To use an existing bot, you can set `BOT_ID` and `SECRET_BOT_PASSWORD` in `env/.env.local` with your own values.
 
@@ -345,7 +345,7 @@ Teams Toolkit performs background functions during debug process, which include 
 
 ### Start debugging
 
-You can press **F5** as a single operation to start debugging. Teams Toolkit starts to check prerequisites, registers Microsoft Azure Active Directory (Azure AD) app, Teams app, and registers bot, starts services, and launches browser.
+You can press **F5** as a single operation to start debugging. Teams Toolkit starts to check prerequisites, registers Microsoft Entra app, Teams app, and registers bot, starts services, and launches browser.
 
 ### Multi-target debugging
 
@@ -410,8 +410,8 @@ Use the following code snippet example to setup an existing bot for debugging:
 }
 ```
 
-1. Update `botId` with the Azure AD app client id for your existing bot.
-1. Update `botPassword` with the Azure AD app client secret for your bot.
+1. Update `botId` with the Microsoft Entra app client id for your existing bot.
+1. Update `botPassword` with the Microsoft Entra app client secret for your bot.
 
 </details>
 
