@@ -1,5 +1,5 @@
 ---
-title: Actions overview
+title: Actions in Microsoft 365
 description: In this article, learn more about the function of Actions and its use cases. 
 ms.date: 11/12/2023
 ms.author: mosdevdocs
@@ -10,8 +10,8 @@ ms.subservice: m365apps
 # Actions in Microsoft 365
 
 > [!NOTE]
-> The feature is only available for Microsoft 365 app on web and desktop clients.
-> The feature is availbe in dev preview.
+> The Actions in Microsoft 365 is only available for Microsoft 365 app on web and desktop clients.
+> The Actions in Microsoft 365 is available in public developer preview.
 
 Actions seamlessly integrate your app into the user's workflow, ensuring effortless discovery and smooth interaction with their content. By guiding users to your app based on their intent and contextual content, Actions facilitate efficient task completion. Which integration increases your app's visibility and engagement with minimal development effort.
 
@@ -24,7 +24,7 @@ Actions enhance user's productivity by streamlining task completion and reducing
 1. Users can take immediate action on content files through your app, expanding the range of interactions they can have with their content.  
 
 :::image type="content" source="images/m365-Actions-in-action.gif" alt-text="Graphic shows the user can add a file to the to-do list app with a note attached for a task to complete. ":::
- 
+
 ## Understand how Actions work
 
 Actions are the combination of Intent, Object, and Handler. Actions represent the task that the user wants to perform where Intent is the user’s desired action, Object is the function to be executed, and Handler is the way to perform the action on the object.
@@ -116,6 +116,7 @@ In the following example, two Actions are built:
     }
 ]
 ```
+
 For more information, see public developer preview app manifest schema.
 
 ## User scenarios  
@@ -129,7 +130,7 @@ For background: The user is a supervisor at Northwind Traders with limited time 
 ### Action opens a dialog
 
 In this example, the user sees the latest sales report from a supplier, 'Tokyo Trader,' and wants to add it as an attachment in the supplier management system app built by Northwind Traders.
-They right-click on the Word document and choose the Action 'Add to supplier' built by Northwind Traders. 
+They right-click on the Word document and choose the Action 'Add to supplier' built by Northwind Traders.
 
 :::image type="content" source="images/m365-actions-user-scenario-1-1.png" alt-text="The screenshot shows a right click menu displaying the Add To Action running on Microsoft 365 on web.":::
 
@@ -139,7 +140,7 @@ A dialog pops up where they select 'Tokyo Traders' and click 'Add' to add the at
 
 ### Action opens a page
 
-On the same page, the user notices the 'Q2 Top suppliers' Excel sheet and want to see which suppliers they work with on this list.   
+On the same page, the user notices the 'Q2 Top suppliers' Excel sheet and want to see which suppliers they work with on this list.
 They right-click on the Excel file and then click on the Action 'Related suppliers'.
 
 :::image type="content" source="images/m365-actions-user-scenario-2-1.png" alt-text="The screenshot shows the right click menu displaying the Related supplier option running on Microsoft 365 on web.":::
@@ -147,7 +148,3 @@ They right-click on the Excel file and then click on the Action 'Related supplie
 The Northwind app opens, displaying the list of suppliers filtered to show only those that appear in the document. This saves them time opening up the app and the Excel file and checking each item manually.
 
 :::image type="content" source="images/m365-actions-user-scenario-2-2.png" alt-text="The screenshot shows the northwind app open, displaying the list of suppliers filtered to show only those that appear in the document running on Microsoft 365 on web.":::
-
-
-
-
