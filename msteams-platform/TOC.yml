@@ -532,6 +532,16 @@
       - name: Universal actions for search based message extensions
         href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
         displayName: Handle tap actions, Just-in-time install, JIT
+      - name: Extend bot-based message extension as plugin
+        href: messaging-extensions/build-bot-based-plugin.md
+        displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Chat
+      - name: Guidelines to extend bot-based message extension as plugin
+        href: messaging-extensions/high-quality-message-extension.md
+        displayName: Criteria, extend message extension, plugin,  M365, Microsoft 365 Chat
+      - name: Microsoft 365 Chat plugin FAQ
+        href: messaging-extensions/copilot-plugin-faq.md
+        displayName: M365, bot-based message extension, plugin
+
     - name: Add link unfurling
       href: messaging-extensions/how-to/link-unfurling.md
       displayName: Domain listings can include wildcards, cache
@@ -579,7 +589,7 @@
     - name: Get transcripts
       href: /graph/api/resources/calltranscript?view=graph-rest-1.0&preserve-view=true
     - name: Get recordings
-      href: /graph/api/resources/callrecording?view=graph-rest-beta&preserve-view=true
+      href: /graph/api/resources/callrecording?view=graph-rest-1.0&preserve-view=true
   - name: Enhanced collaboration with Live Share
     items:
     - name: Overview
@@ -801,7 +811,7 @@
     items:
       - name: Enable a Teams message extension for Outlook
         href: m365-apps/extend-m365-teams-message-extension.md
-        displayName: mail, Microsoft 365, Office 365
+        displayName: mail, Microsoft 365, Office 365Microsoft 365 
       - name: Teams message extension vs. Outlook add-in
         href: m365-apps/me-or-outlook-add-in.md
         displayName: mail, Microsoft 365, Office 365, Outlook add-in, message extension
@@ -815,8 +825,8 @@
         displayName: loop component, weburl, metadata
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
-- name: Extend Microsoft 365 Copilot
-  href: copilot/how-to-extend-copilot.md
+- name: Extend Microsoft 365 Chat
+  href: messaging-extensions/how-to-extend-copilot.md
 - name: Teams developer documentation FAQs
   href: teams-faq.md
 - name: Test your app
@@ -1091,6 +1101,9 @@
   - name: Introducing the new Microsoft Teams client
     href: resources/teams-updates.md
     displayName: Classic Teams, new Teams client, Teams 2.1
+  - name: Extend Microsoft 365 Copilot
+    href: messaging-extensions/how-to-extend-copilot.md
+    displayName: message extension, plugin, Copilot
 - name: Support and feedback
   href: feedback.md
   displayName: Developer community help, questions, suggestions, contact, issues
