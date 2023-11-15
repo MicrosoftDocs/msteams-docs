@@ -525,4 +525,5 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 
 ## See also
 
-[Extend bot-based message extension as plugin](build-bot-based-plugin.md)
+* [Extend bot-based message extension as plugin](build-bot-based-plugin.md)
+* [Extend Microsoft Copilot for Microsoft 365](/microsoft-365-copilot/extensibility/)
