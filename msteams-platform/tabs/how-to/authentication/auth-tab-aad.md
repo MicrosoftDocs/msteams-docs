@@ -217,6 +217,8 @@ This code parses the key-value pairs received from Microsoft Entra ID in `window
 `NotifyFailure()` has the following predefined failure reasons:
 
 * `CancelledByUser` the user closed the pop-up window before completing the authentication flow.
+  > [!NOTE]
+  > We recommend not to return `Cross-Origin-Opener-Policy` response header on the login pages as it causes the `CancelledByUser` error to occur prematurely.
 * `FailedToOpenWindow` the pop-up window couldn't be opened. When running Microsoft Teams in a browser, this typically means that the window was blocked by a pop-up blocker.
 
 If successful, you can refresh or reload the page and show content relevant to the now-authenticated user. If authentication fails, it displays an error message.
