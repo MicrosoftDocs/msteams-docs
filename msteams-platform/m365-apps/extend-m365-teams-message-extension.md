@@ -44,7 +44,7 @@ To extend your Teams message extension to Outlook, you can either build a new me
   > [!div class="checklist"]
   >
   > * [Build an app with Teams Toolkit in Visual Studio Code](#build-a-message-extension-app-for-outlook)
-  > * [Sideload your app in Teams using Teams Toolkit](#sideload-your-app-in-teams-using-teams-toolkit)
+  > * [Sideload your app in Teams](#sideload-your-app-in-teams-using-teams-toolkit)
   > * [Preview your message extension in Outlook](#preview-your-message-extension-in-outlook)
 
 :::column-end:::
@@ -54,16 +54,16 @@ To extend your Teams message extension to Outlook, you can either build a new me
     
   > [!div class="checklist"]
   >
-  > * [Update your app manifest.](#update-your-app-manifest)
-  > * [Add the Microsoft 365 channel for your bot.](#add-microsoft-365-channel-for-your-app)
-  > * [Update Azure AD app registration for SSO](#update-azure-ad-app-registration-for-sso)
-  > * [Sideload your updated app in Teams.](#sideload-your-app-in-teams)
+  > * [Update your app manifest](#update-your-app-manifest)
+  > * [Add the Microsoft 365 channel for your bot](#add-microsoft-365-channel-for-your-app)
+  > * [Update Microsoft Entra app registration for SSO](#update-azure-ad-app-registration-for-sso)
+  > * [Sideload your updated app in Teams](#sideload-your-app-in-teams)
   > * [Preview your message extension in Outlook](#preview-your-message-extension-in-outlook-1)
 
 :::column-end:::
 :::row-end:::
 
-## Build a message extension app for Outlook
+# [Build a message extension app for Outlook](#tab/ttk)
 
 You can build a Teams message extension app for Outlook through Teams Toolkit extension for Visual Studio Code.
 
@@ -113,55 +113,7 @@ You can build a Teams message extension app for Outlook through Teams Toolkit ex
 
 ---
 
-### Sideload your app in Teams using Teams Toolkit
-
-Sideload your updated message extension [app package](/microsoftteams/platform/concepts/build-and-test/apps-package) into Teams.
-
-1. Open **UTILITY** section of Teams Toolkit and select **Zip Teams App Package**. Select the `manifest.json` file for your app and the appropriate environment.
-
-   :::image type="content" source="images/toolkit-zip-teams-app-package.png" alt-text="Screenshot shows Zip Teams App Package option in Teams Toolkit extension for Visual Studio Code.":::
-
-1. Go to **Microsoft Teams** and sign in using your sandbox tenant account.
-
-1. Select **Apps** > **Manage your apps** > **Upload an app**.
-
-   :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Screenshot shows the Upload an app option under Manage your apps.":::
-
-1. Select the **Upload a custom app** option, select your app package, and install (**Add**) it to your Teams client.
-
-   :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Screenshot shows the Upload a custom app option in Teams.":::
-
-After it's sideloaded through Teams, your message extension is available in Outlook for Windows desktop and web.
-
-### Preview your message extension in Outlook
-
-To test your message extension running in Outlook for Windows and Outlook on the web.
-    
-# [Outlook on the web](#tab/outlook-on-the-web)
-
-To preview your app running in Outlook on the web:
-
-1. Sign in to [outlook.com](https://www.outlook.com) using your test tenant credentials.
-1. Select **New message**.
-1. Select **Apps** on the ribbon.
-
-   :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Screenshot shows the Apps menu on the ribbon of the mail composition window to launch your message extension.":::
-
-Your message extension is listed. You can invoke it from there and use it just as you would while composing a message in Teams.
-
-# [Outlook for Windows](#tab/outlook-on-the-desktop)
-
-To preview your app running in Outlook for Windows:
-
-1. Launch Outlook and sign in with your test tenant credentials.
-1. Select **New Email**.
-1. Select **All Apps** on the ribbon.
-
-   :::image type="content" source="images/outlook-desktop-compose-more-apps.png" alt-text="Screenshot shows the All Apps menu on the ribbon of the composition window to launch your message extension.":::
-
----
-
-## Extend an existing Teams message extension app to Outlook
+# [Extend an existing Teams message extension app to Outlook](#tab/existing-app)
 
 To extend your existing Teams message extension app to Outlook, ensure the following:
 
@@ -231,6 +183,8 @@ Microsoft Entra single sign-on (SSO) for message extensions works the same way i
    |Outlook desktop | d3590ed6-52b3-4102-aeff-aad2292ab01c |
    |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
    |Outlook mobile | 27922004-5251-4030-b22d-91ecd9a37ea4 |
+
+---
 
 ### Sideload your app in Teams
 
