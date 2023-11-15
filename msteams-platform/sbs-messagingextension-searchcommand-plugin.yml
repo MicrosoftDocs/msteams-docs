@@ -144,7 +144,7 @@ items:
     > [!NOTE]
     >
     > * Message extensions rely on bots to provide a dialog between the user and your code.
-    > * Only bot-based search message extension can be extended as a plugin in Microsoft 365 Chat.
+    > * Only bot-based search message extension can be extended as a plugin for Copilot for Microsoft 365.
 
 
     In this tutorial, you'll learn:
