@@ -15,6 +15,7 @@ ms.date: 11/03/2023
 > Teams App Test Tool is available in the latest prerelease version of the Teams Toolkit. Ensure the [latest prerelease version](install-Teams-Toolkit.md#install-a-pre-release-version) of Teams Toolkit is installed.
 
 The Teams App Test Tool (Test Tool) makes debugging your bot-based apps effortless. You can chat with your bot and see its messages and adaptive cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use the Test Tool.
+
 The Test Tool also assists you discover and test the commands in your app’s code. It displays a list of commands and their descriptions, so you can test your app without manually searching your code. You can see the commands in a web page or a web chat.
 
 The image shows a bot displaying an Adaptive Card with a list of commands in the Test Tool.
@@ -51,7 +52,7 @@ Ensure you install the following tools for building and deploying your bot apps 
 
 ## Understand how the Test Tool works
 
-This section explains how the Test Tool works and how it connects with your bot app. The Test Tool is an npm package that has a CLI command called ~teamsapptester~. When you run ~teamsapptester start~, it opens a web app on your local machine that emulates the Teams Web client and Bot Framework service. This web app doesn't need any cloud resources as it uses mock data to simulate the contextual information of Teams.
+This section explains how the Test Tool works and how it connects with your bot app. The Test Tool is an npm package that has a CLI command called `teamsapptester`. When you run `teamsapptester start`, it opens a web app on your local machine that emulates the Teams Web client and Bot Framework service. This web app doesn't need any cloud resources as it uses mock data to simulate the contextual information of Teams.
 
 To use a Teams bot app on the Test Tool, you need to provide:
 
@@ -66,7 +67,7 @@ To use a Teams bot app on the Test Tool, you need to provide:
 
 1. Select **Create a New App**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
 1. Select **Bot** to create a new bot project.
 
@@ -123,13 +124,13 @@ The Test Tool provides predefined activities that can be used to test the functi
 | | Remove channel <br> Remove team |
 
 > [!NOTE]
-> All types of activities aren't available in all scopes. For example, you can't add or remove a channel in personal chat or group chat.
+> All types of activities aren't available in all scopes. For example, you can't add or remove a channel in a personal chat or a group chat.
 
-The following example explains the **Add user** handler.
+The following example explains the **Add user** handler:
 
 1. Select **Mock an Activity** > **Add user** and a pop-up window appears to preview the activity handler.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mock-activity.png" alt-text="Screenshot shows the list of option under mock an activity.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-user.png" alt-text="Screenshot shows the list of option under mock an activity.":::
 
 1. Select **Send activity**.
 
@@ -141,7 +142,7 @@ The following example explains the **Add user** handler.
 
 ## Customize activities
 
-Activities can be customized to fit the requirements of your app. The required properties of the activity are automatically populated and you can modify the activity type and add more properties.
+Activities can be customized to fit the requirements of your app. The required properties of the activity are automatically populated. You can also modify the activity type and add more properties.
 
 1. Select **Mock an Activity** > **Custom activity**.
 
