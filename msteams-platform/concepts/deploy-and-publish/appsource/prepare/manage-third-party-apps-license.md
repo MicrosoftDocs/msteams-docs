@@ -113,15 +113,15 @@ You can call Graph APIs to determine if the currently logged in user with a vali
    >
    > * You need to have minimum `User.Read` permissions to call usageRights.
    > The usageRights API is currently in beta version. After the version is updated to V1, users must upgrade from beta to V1 version.
-   > * If the Azure AD app is used for both SaaS Fulfillment APIs and usageRights API, ensure that the tenant under which the Azure AD app is created is either the publishing tenant or the associated tenant in the Partner Center.
+   > * If the Microsoft Entra app is used for both SaaS Fulfillment APIs and usageRights API, ensure that the tenant under which the Microsoft Entra app is created is either the publishing tenant or the associated tenant in the Partner Center.
 
-To determine if the tenant for the Azure AD app is part of the Partner Center setup, follow these steps:
+To determine if the tenant for the Microsoft Entra app is part of the Partner Center setup, follow these steps:
 
 1. Sign in  to [Microsoft Partner Center](https://partner.microsoft.com/) with the publisher account that is used to publish the SaaS offer.
 1. On the upper-right corner, select the **Settings** icon.
 1. Select **Account Settings**.
 1. On the left pane, select **Tenants**.
-   You can see all tenants associated with the Microsoft Partner Network (MPN) account. The tenant, who is the owner of the Azure AD app, must be available in the list. If the tenant isn’t on the list, you can use the **Associate Azure ID** button to link the tenant.
+   You can see all tenants associated with the Microsoft Partner Network (MPN) account. The tenant, who is the owner of the Microsoft Entra app, must be available in the list. If the tenant isn’t on the list, you can use the **Associate Azure ID** button to link the tenant.
 
 ## Check license usage in Partner Center analytics
 
