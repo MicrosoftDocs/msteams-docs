@@ -17,7 +17,6 @@ Following these guidelines increases the chances of your app to pass the Microso
 > * We've cross-referenced these guidelines to the Microsoft commercial certification policies and added Do’s and Don’ts with examples from pass or fail scenarios encountered in our validation process.
 > * Certain guidelines are marked as *Mandatory Fix*. If your app submission doesn't meet these mandatory guidelines, you'll receive a failure report from us with steps to mitigate. Your app submission will pass Teams Store validation only after you have fixed the issues.
 > * Other guidelines are marked as *Suggested Fix*. For an ideal user experience, we suggest that you fix the issues, however, your app submission will not be blocked from publishing on the Teams Store, if you choose not to fix the issues.
-> * We don't recommend uploading multiple apps with different content with the same bot ID, as this might result in undefined bot behavior. Delete or uninstall any previous versions of the apps and only upload the latest version. You also need to give the app permissions in the app package if the apps are created using the same bot ID. However, you have to enable both the apps in the app permission policy and the managed apps and ensure that they're not blocked. Otherwise, you might encounter problems while using these apps.
 
 :::row:::
    :::column:::
@@ -1254,6 +1253,9 @@ Apps that provide only notifications with content such as, **You have a new noti
 <br/>
 
 <details><summary>Bot metadata information</summary>
+
+> [!NOTE]
+> We don't recommend uploading multiple apps with different content with the same bot ID, as this might result in undefined bot behavior. Delete or uninstall any previous versions of the apps and only upload the latest version. You also need to give the app permissions in the app package if the apps are created using the same bot ID. However, you have to enable both the apps in the app permission policy and the managed apps and ensure that they're not blocked. Otherwise, you might encounter problems while using these apps.
 
 * Bot information in the app manifest (bot name, logo, privacy link, and terms of service link) must be consistent with the Bot Framework metadata. [*Mandatory Fix*]
 
