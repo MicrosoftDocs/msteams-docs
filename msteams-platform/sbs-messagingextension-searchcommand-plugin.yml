@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Build a bot-based message extension plugin
+title: Build a bot-based message extension plugin for Copilot for Microsoft 365
 metadata:
-  title: Build a bot-based message extension plugin for Microsoft 365 Chat
-  description: In this tutorial, you can learn to build a bot-based message extension and extend it as a plugin in Microsoft 365 Chat.
+  title: Build a bot-based message extension plugin for Copilot for Microsoft 365
+  description: In this tutorial, you can learn to build a bot-based message extension and extend it as a plugin in Microsoft Copilot for Microsoft 365.
   audience: Developer
   level: Beginner
   ms.date: 11/14/2023
@@ -18,6 +18,7 @@ items:
     >
     > * Bot-based search message extension plugin is available in [**public developer preview**](resources/dev-preview/developer-preview-intro.md).
     > * Only bot-based search message extension can be extended as a plugin in Microsoft 365 Chat.
+    > * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams.
     
     Start Microsoft Teams app development with your first Teams app. 
     You can create a bot-based message extension plugin with Teams using Javascript.  
@@ -143,7 +144,7 @@ items:
     > [!NOTE]
     >
     > * Message extensions rely on bots to provide a dialog between the user and your code.
-    > * Only bot-based search message extension can be extended as a plugin in Microsoft 365 Chat.
+    > * Only bot-based search message extension can be extended as a plugin for Copilot for Microsoft 365.
 
 
     In this tutorial, you'll learn:
@@ -348,7 +349,7 @@ items:
 - title: Trigger your bot-based message extension plugin in Microsoft 365 Chat
   durationInMinutes: 1
   content: |
-    To trigger the message extension through Microsoft 365 Chat, follow these steps:
+    To trigger the message extension in Microsoft 365 Chat, follow these steps:
 
     1. From the left pane, select **Teams Toolkit**.
     1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.

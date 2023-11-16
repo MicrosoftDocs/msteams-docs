@@ -10,7 +10,7 @@ ms.date: 05/23/2023
 # Extend Microsoft 365 Copilot
 
 > [!IMPORTANT]
-> This article is deprecated. For more information, see [Extend bot-based message extension as plugin for Microsoft 365 Chat](build-bot-based-plugin.md).
+> This article is deprecated. For more information, see [Extend Microsoft Copilot for Microsoft 365](/microsoft-365-copilot/extensibility/).
 
 Microsoft 365 Copilot is powered by an advanced processing and orchestration engine that seamlessly integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to turn your words into the most powerful productivity tool. While Copilot is already able to use the apps and data within the Microsoft 365 ecosystem, many users still depend on various external tools and services for work management and collaboration. You can address this gap by extending Copilot to enable users to work with their third-party tools and services, unlocking the full potential of Microsoft 365 Copilot.
 
