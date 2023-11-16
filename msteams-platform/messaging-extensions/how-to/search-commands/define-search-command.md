@@ -34,7 +34,7 @@ Before you get started, ensure that you meet the following requirements:
 * [Node.js](https://nodejs.org/en). The supported versions are 16, 18.
 * [Microsoft 365 account for development](../../../toolkit/tools-prerequisites.md#microsoft-365-developer-program)
 * [Set up your dev environment for extending Teams apps across Microsoft 365](../../../m365-apps/prerequisites.md) Please note that after you enrolled your developer tenant in Office 365 Target Release, it may take couple days for the enrollment to take effect.
-* [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version 5.2.0 and higher or Teams Toolkit CLI
+* [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version 5.2.0 and higher or Teams Toolkit CLI.
 
 # [Teams Toolkit](#tab/Teams-toolkit)
 
@@ -45,7 +45,6 @@ To create a search based message extension using Teams Toolkit, follow these ste
 1. Select **Create a New App**.
 1. Select **Message Extension**.
 1. Select **Custom Search Results**.
-1. Select **Start with a Bot**.
 1. Select a **programming language**.
 1. Select **Default folder**.
 1. Enter the name of your app and select **Enter**.
@@ -88,7 +87,7 @@ To run the message extension in Teams, follow these steps:
 
    A command details page appears.
 
-1. In the Command details page, select the **Search** as the type of command and update the following:
+1. In the Command details page, select **Search** as the type of command and update the following:
    * Command ID
    * Command title
    * Command description
@@ -102,6 +101,13 @@ To run the message extension in Teams, follow these steps:
 1. At the upper-right, select **Preview in Teams**. The app opens in Teams desktop or web client.
 
 ---
+
+### Extend bot-based message extension as plugin
+
+> [!IMPORTANT]
+> Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams.
+
+Microsoft 365 plugins provide integration with various Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft Copilot for Microsoft 365 to interact with APIs from other software and services through a bot. We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Copilot for Microsoft 365. For more information, see [Extend bot-based message extension as plugin for Copilot for Microsoft 365](../../build-bot-based-plugin.md).
 
 ## Code snippets
 
