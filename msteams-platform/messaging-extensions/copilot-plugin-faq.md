@@ -1,7 +1,7 @@
 ---
 title: Microsoft 365 Chat plugin FAQ
 author: v-ypalikila
-description: In this article, fetch answers to some frequently asked questions while building a Microsoft 365 Chat plugin.
+description: In this article, fetch answers to some frequently asked questions while building a plugin for Microsoft Copilot for Microsoft 365.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -10,7 +10,7 @@ ms.date: 11/14/2023
 
 # Frequently Asked Questions
 
-Get answers to your common queries about building a Microsoft 365 Chat plugin on Microsoft Teams.
+Get answers to your common queries about building a message extension and extending the message extension as a plugin in  Microsoft 365 Chat.
 
 </br>
 <details>
@@ -19,7 +19,7 @@ Get answers to your common queries about building a Microsoft 365 Chat plugin on
 
 Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in plugin matching in response to a user prompt. Also, make sure you've uploaded  the app package to Outlook and interacted with the app, including authentication.
 
-If the problem continues, use the thumbs down indicator on the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
+If the problem continues, use the thumbs down indicator in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
 
 </details>
 </br>
