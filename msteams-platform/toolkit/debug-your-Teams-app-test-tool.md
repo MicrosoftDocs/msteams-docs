@@ -492,6 +492,8 @@ No. We always recommend users to test their bot application in the Teams client 
 &nbsp;
 </details>
 
+## Code sample
+
 |Sample name | Description | TBD |
 |----------------|-----------------|--------------|
 | Test Tool | A sample bot app to explore Test Tool. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/test-tool-sample-app) |
