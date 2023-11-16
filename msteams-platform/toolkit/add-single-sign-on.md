@@ -13,11 +13,11 @@ zone_pivot_groups: teams-toolkit-platform
 
 # Add single sign-on to Teams app
 
-Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting few of the Microsoft Azure Active Directory (Azure AD) flows and integrations behind simple APIs. This enables you to add SSO features easily to your Teams app.
+Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting few of the Microsoft Entra ID flows and integrations behind simple APIs. This enables you to add SSO features easily to your Teams app.
 
 ## Add SSO to Teams app for Microsoft Visual Studio Code
 
-For apps that interact with the user in a chat, Team, or channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Azure AD consent flow.
+For apps that interact with the user in a chat, Team, or channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Microsoft Entra consent flow.
 
 ## Enable SSO support
 
@@ -49,7 +49,7 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
    |Develop Single Sign-on Experience in Teams | [How to Develop Single Sign-on Experience](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams) |
 
 > [!NOTE]
-> When SSO is enabled, Teams Toolkit by default provisions a single-tenant Azure AD app, which means only user and guest accounts in the same directory as your M365 account can sign in to your Teams app. For more information on supporting multi-tenant to update your TeamsFx project, see [Multi-tenancy support for Azure AD app](https://github.com/OfficeDev/TeamsFx/wiki/Multi-tenancy-Support-for-Azure-AD-app).
+> When SSO is enabled, Teams Toolkit by default provisions a single-tenant Microsoft Entra app, which means only user and guest accounts in the same directory as your M365 account can sign in to your Teams app. For more information on supporting multi-tenant to update your TeamsFx project, see [Multi-tenancy support for Microsoft Entra app](https://github.com/OfficeDev/TeamsFx/wiki/Multi-tenancy-Support-for-Azure-AD-app).
 
 ## See also
 
@@ -68,11 +68,11 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
 >
 > Teams Toolkit v4 extension will soon be deprecated.
 
-Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Microsoft Azure Active Directory (Azure AD) flows and integrations behind some simple APIs. This enables you to add SSO features easily to your Teams app.
+Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Microsoft Entra ID flows and integrations behind some simple APIs. This enables you to add SSO features easily to your Teams app.
 
 ## Add SSO to Teams app for Microsoft Visual Studio Code
 
-For apps that interact with the user in a chat, Team, or channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Azure AD consent flow.
+For apps that interact with the user in a chat, Team, or channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Microsoft Entra consent flow.
 
 ## Enable SSO support
 
@@ -114,7 +114,7 @@ The following table lists the changes Teams Toolkit makes to your project:
 
 | **Type** | **File**                                             | **Purpose**                                                                                                                                                                               |
 | -------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Create   | `aad.template.json` under `template\appPackage`      | Azure AD application manifest represents your Azure AD app. `template\appPackage` helps to register an Azure AD app during local debug or provision stage.                                |
+| Create   | `aad.template.json` under `template\appPackage`      | Microsoft Entra application manifest represents your Microsoft Entra app. `template\appPackage` helps to register a Microsoft Entra app during local debug or provision stage.                                |
 | Modify   | `manifest.template.json` under `template\appPackage` | A `webApplicationInfo` object is added into your app manifest (previously called Teams app manifest) template. Teams requires this field to enable SSO. The change is in effect when you trigger local debugging or provisioning. |
 | Create   | `auth\tab`                                           | Reference code, auth redirect pages, and `README.md` files are generated in this path for a tab project.                                                                                  |
 | Create   | `auth\bot`                                           | Reference code, auth redirect pages, and `README.md` files are generated in this path for a bot project.                                                                                  |
@@ -136,7 +136,7 @@ To enable SSO in your application, follow these steps:
 <summary><b>Tab project
 </b></summary>
 
-1. Copy `auth-start.html` and `auth-end.htm` in `auth\public` folder to `tabs\public\`. Teams Toolkit registers these two endpoints in Azure AD for Azure AD's redirect flow.
+1. Copy `auth-start.html` and `auth-end.htm` in `auth\public` folder to `tabs\public\`. Teams Toolkit registers these two endpoints in Microsoft Entra ID for Microsoft Entra ID's redirect flow.
 
 2. Copy `sso` folder under `auth\tab` to `tabs\src\sso\`.
 
@@ -163,9 +163,11 @@ To enable SSO in your application, follow these steps:
 <summary><b>Bot project
 </b></summary>
 
-#### Set up the Azure AD redirects
+<a name='set-up-the-azure-ad-redirects'></a>
 
-1. Move the `auth\bot\public` folder to `bot\src`. This folder contains HTML pages that the bot app hosts. When SSO flow is initiated with Azure AD, it redirects you to the HTML pages.
+#### Set up the Microsoft Entra ID redirects
+
+1. Move the `auth\bot\public` folder to `bot\src`. This folder contains HTML pages that the bot app hosts. When SSO flow is initiated with Microsoft Entra ID, it redirects you to the HTML pages.
 1. Modify your `bot\src\index` to add the appropriate `restify` routes to HTML pages.
 
    ```ts
@@ -181,7 +183,7 @@ To enable SSO in your application, follow these steps:
 
 #### Update your app
 
-SSO command handler `ProfileSsoCommandHandler` uses an Azure AD token to call Microsoft Graph. This token is obtained by using the signed in Teams user token. The flow is brought together in a dialog that displays a consent dialog if necessary.
+SSO command handler `ProfileSsoCommandHandler` uses a Microsoft Entra token to call Microsoft Graph. This token is obtained by using the signed in Teams user token. The flow is brought together in a dialog that displays a consent dialog if necessary.
 
 1. Move `profileSsoCommandHandler` file under `auth\bot\sso` folder to `bot\src`. `ProfileSsoCommandHandler` class is an SSO command handler to get user info with SSO token, follow this method and create your own SSO command handler.
 1. Open `package.json` file and ensure that TeamsFx SDK version >= 1.2.0.
@@ -433,7 +435,7 @@ You can update the query logic in the `handleMessageExtensionQueryWithToken` wit
 
 To make this work in your app:
 
-1. Move the `auth\bot\public` folder to `bot`. This folder contains HTML pages that the bot app hosts. When SSO flows are initiated with Azure AD, Azure AD redirects you to these pages.
+1. Move the `auth\bot\public` folder to `bot`. This folder contains HTML pages that the bot app hosts. When SSO flows are initiated with Microsoft Entra ID, Microsoft Entra ID redirects you to these pages.
 
 1. Modify your `bot\index` to add the appropriate `restify` routes to these pages.
 
@@ -482,12 +484,14 @@ To make this work in your app:
 
 ## Debug your app
 
-Press **F5** to debug your application. Teams Toolkit uses the Azure AD app manifest file to register an Azure AD app for SSO. For Teams Toolkit local debug functionalities, see [how to debug your app locally](~/toolkit/debug-local.md).
+Press **F5** to debug your application. Teams Toolkit uses the Microsoft Entra app manifest file to register a Microsoft Entra app for SSO. For Teams Toolkit local debug functionalities, see [how to debug your app locally](~/toolkit/debug-local.md).
 
-## Customize Azure AD app registration
+<a name='customize-azure-ad-app-registration'></a>
 
-The [Azure AD app manifest](/azure/active-directory/develop/reference-app-manifest) allows you to customize various aspects of app registration. You can update the app manifest as needed. If you need to include more API permissions to access your desired APIs, see [API permissions to access your desired APIs](https://github.com/OfficeDev/TeamsFx/wiki/#customize-aad-manifest-template).
-To view your Azure AD app in Azure portal, see [view Azure AD app in Azure portal](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal).
+## Customize Microsoft Entra app registration
+
+The [Microsoft Entra app manifest](/azure/active-directory/develop/reference-app-manifest) allows you to customize various aspects of app registration. You can update the app manifest as needed. If you need to include more API permissions to access your desired APIs, see [API permissions to access your desired APIs](https://github.com/OfficeDev/TeamsFx/wiki/#customize-aad-manifest-template).
+To view your Microsoft Entra app in Azure portal, see [view Microsoft Entra app in Azure portal](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal).
 
 ## SSO authentication concepts
 
@@ -495,7 +499,7 @@ The following concepts help you with SSO authentication:
 
 ### Working of SSO in Teams
 
-SSO authentication in Azure AD silently refreshes the authentication token to minimize the number of times users need to enter their sign in credentials. If users agree to use your app, they don't have to provide consent again on another device, as they're signed in automatically.
+SSO authentication in Microsoft Entra ID silently refreshes the authentication token to minimize the number of times users need to enter their sign in credentials. If users agree to use your app, they don't have to provide consent again on another device, as they're signed in automatically.
 
 Teams tabs and bots have similar flow for SSO support. For more information, see:
 

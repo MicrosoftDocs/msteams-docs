@@ -35,7 +35,7 @@ Teams platform brings you different tools to build and develop your Teams apps. 
 | Environment variables | Use `.env` file | Use `.env` file |
 | Generate manifest | Teams Toolkit auto-generates when creating projects. | gulp manifest |
 | Deploy Teams app | Automatically update use command `Teams: Update Teams App` |gulp tenant: deploy |
-| Create AAD app | Automatically create when debugging or provisioning the project. Users can also use their existing AAD app by filling in Teams app ID in `.env` file. | Manual |
+| Create Microsoft Entra app | Automatically create when debugging or provisioning the project. Users can also use their existing Microsoft Entra app by filling in Teams app ID in `.env` file. | Manual |
 | Add SSO | Provide SSO-enabled samples and how-to guides to add SSO. | Manual |
 | Bot or Message extension Registration | Automatically create when debugging or provisioning the project. User can also specify their own Bot ID. | Manual (Azure Bot) |
 | Expose Node.js app | Tab: localhost + HTTPS and Others: Dev Tunnel | gulp ngrok-serve |
@@ -82,7 +82,9 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 | [Fluent UI React components](https://react.fluentui.dev/?path=/docs/concepts-introduction--page) | Fluent UI React components are a collection of UI elements and tools that come from combining various React-based component libraries used in production, like `@fluentui/react` and `@fluentui/react-northstar`. | :::image type="icon" source="../../assets/icons/yellow-dot.png" border="false"::: You can use it with **Teams JavaScript client library** and **SharePoint Framework (SPFx)**. |
 | [Fluid Framework](https://fluidframework.com/docs/) | Fluid Framework consists of client libraries that help distribute and synchronize shared state. These libraries enable multiple clients to simultaneously create and operate on shared data structures using coding patterns similar to those used to work with local data. | :::image type="icon" source="../../assets/icons/red-dot.png" border="false"::: You can pass the reference to **Live Share SDK**. </br> :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Based on **Azure Fluid Relay**. |
 
-### Azure AD-secured services and APIs
+<a name='azure-ad-secured-services-and-apis'></a>
+
+### Microsoft Entra ID-secured services and APIs
 
 | SDKs and libraries | Why do you need? | Related SDKs and libraries |
 | ----------------- | -------------- | ----------------------- |
