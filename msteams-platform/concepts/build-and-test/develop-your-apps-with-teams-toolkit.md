@@ -29,7 +29,7 @@ Following are the steps to open your app in Visual Studio Code:
     A dialog is displayed.
 
 > [!NOTE]
-> Update your TTK to the latest version in VSC so that the app opens.
+> Ensure your TTK is updated to the latest version in Visual Studio Code to enable the app to open.
 
 1. Select **Open**.
 
