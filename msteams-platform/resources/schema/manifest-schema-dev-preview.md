@@ -566,6 +566,9 @@ Specifies the native features on a user's device that your app may request acces
 
 A list of valid domains from which the app expects to load any content. Domain listings can include wildcards, for example `*.example.com`. The valid domain matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI needs to go to any other domain besides the one use for tab configuration, that domain must be specified here.
 
+> [!NOTE]
+> Office Add-ins, configured with an `extensions` property in the manifest, disregard domains containing a wildcard. If your app incorporates an Office Add-in, specify the full domain name for the domains that the add-in will access.
+
 It's **not** necessary to include the domains of identity providers you want to support in your app, however. For example, to authenticate using a Google ID, it's necessary to redirect to accounts.google.com, but you must not include accounts.google.com in `validDomains[]`.
 
 > [!IMPORTANT]
