@@ -1,14 +1,14 @@
 ---
 title: Upload and test app in Teams environment v4
 author: zyxiaoyuer
-description: In this module, learn how to upload and test app in different environment using Teams toolkit v4.
+description: In this module, learn how to upload and test the custom apps in different environment using Teams toolkit v4.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
 ---
 
-# Upload and test app in Teams environment v4
+# Upload and test the custom apps in Teams environment v4
 
 > [!IMPORTANT]
 >

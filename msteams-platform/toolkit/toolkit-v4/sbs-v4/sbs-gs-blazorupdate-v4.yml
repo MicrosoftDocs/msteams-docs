@@ -97,17 +97,17 @@ items:
 
     A tenant is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your app. Let's verify if you're ready to develop with the tenant.
 
-    ### Enable app upload
+    ### Enable custom app upload
 
-    After creating the app, you must load your app in Teams without distributing it. This process is known as app upload. Sign in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
       
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
-    Verify if you can upload apps in Teams:
+    Verify if you can upload a custom app in Teams:
 
     1. In the Teams client, select **Apps** icon.
     1. Select **Manage your apps**.
-    1. Select **Upload a custom app**. If you see Upload a customized app option, app upload is enabled.
+    1. Select **Upload a custom app**. If you see Upload a customized app option, custom app upload is enabled.
 
         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-csharp/upload-custom-app-v4.png" alt-text="Screenshot of Manage your apps in Teams with the Upload an app dialog open. Apps icon, Manage your apps, Upload an app, and Upload a customised app options are highlighted in red.":::
 
@@ -305,7 +305,7 @@ items:
         <details>
         <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-        To run your app in Teams, you need a Microsoft 365 development account that allows app upload. You can learn more about it in the prerequisites section.
+        To run your app in Teams, you need a Microsoft 365 development account that allows custom app upload. You can learn more about it in the prerequisites section.
         </details>
 
     1. Stop debugging in Visual Studio.
@@ -548,7 +548,7 @@ items:
 
         Your web browser starts to run the app.
 
-    1. Select **Add** when prompted to upload the app onto Teams on your local machine.
+    1. Select **Add** when prompted to upload a custom app onto Teams on your local machine.
 
         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/add-bot.png" alt-text="Screenshot of Teams displaying the Add option for adding Blazor app. The Add option is highlighted in red.":::
 
@@ -566,7 +566,7 @@ items:
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-      To successfully run your app in Teams, ensure that you've enabled app upload in your Teams account. You can learn more about app upload in the prerequisites section.
+      To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the prerequisites section.
 
 - title: Preview your first bot app
   durationInMinutes: 1

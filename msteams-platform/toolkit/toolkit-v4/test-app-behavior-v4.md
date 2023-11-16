@@ -27,7 +27,7 @@ You can test your Teams app after integrating with Microsoft Teams. To test your
 
 ## Locally hosted environment
 
-Teams is a cloud-based product that requires all services it accesses, to be available publicly using HTTPS endpoints. Local hosting is about app uploading into Teams for testing in local environment.
+Teams is a cloud-based product that requires all services it accesses, to be available publicly using HTTPS endpoints. Local hosting is about custom app upload into Teams for testing in local environment.
 
 > [!NOTE]
 > Although you can use any tool of your choice for testing, we recommend you to use [ngrok](https://ngrok.com/download).
