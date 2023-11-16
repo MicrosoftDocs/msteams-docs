@@ -20,7 +20,7 @@ Action-based message extensions allow your users to trigger actions in external 
 To initiate actions from a message extension, set the `type` parameter to `action`. A single message extension can have up to 10 different commands and include multiple search-based and action-based commands.
 
  > [!NOTE]
- >`justInTimeInstall` functions when you upload an app to the app catalog but fails when you upload an app.
+ >`justInTimeInstall` functions when you upload an app to the app catalog but fails when you upload a custom app.
 
 ### Complete app manifest example
 

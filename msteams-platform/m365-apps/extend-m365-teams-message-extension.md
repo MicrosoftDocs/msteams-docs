@@ -22,7 +22,7 @@ The process to update your search-based Teams message extension involves the fol
 >
 > * Update your app manifest (previously called Teams app manifest).
 > * Add the Microsoft 365 channel for your bot.
-> * Upload your updated app in Teams.
+> * Upload your updated custom app in Teams.
 
 The rest of this guide walks you through these steps and shows how to preview your message extension in Outlook for Windows desktop and web.
 
