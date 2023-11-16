@@ -214,7 +214,7 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
    npm install -g @microsoft/teamsfx-cli@beta
    ```
 
-1. Type `teamsfx new` in the terminal.
+1. Enter `teamsfx new` in the terminal.
 
 1. Select **Message Extension**. Use the arrow keys to switch between options.
 
@@ -241,14 +241,12 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 
 1. Sign in to your Microsoft account. Teams Toolkit CLI executes validation and provisions your app on Azure.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-CLI-provision-me.png" alt-text="Screenshot shows the sign in request and the provision stages in the command prompt window.":::
-
 1. From the list, select a subscription.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-CLI-resource-group.png" alt-text="Screenshot shows the login to Azure and select a subscription option in the CLI window.":::
 
 1. From the list, select a resource group.
-1. If you receive a message which reads **Cost may incur according to the usage. Do you want to provision resources in dev environment using accounts listed above?**, Enter **Y**.
+1. If you receive a message which reads **Cost may incur according to the usage. Do you want to provision resources in dev environment using accounts listed above?**, enter **Y**.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-CLI-provisoin-preview.png" alt-text="Screenshot shows the Do you want to provision resources in dev environment using accounts listed above? option in CLI window.":::
 
@@ -283,7 +281,7 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from Microsoft 365 Chat.":::
 
 > [!NOTE]
-> This prompt may not always make Microsoft 365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Chat response and leave a message tagged with [MessageExtension].
+> This prompt might not always make Microsoft 365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Chat response and leave a message tagged with [MessageExtension].
 
 <!--# [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
