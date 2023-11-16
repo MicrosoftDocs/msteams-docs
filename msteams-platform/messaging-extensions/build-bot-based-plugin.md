@@ -17,7 +17,7 @@ ms.date: 11/14/2023
 
 Microsoft Copilot for Microsoft 365, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to transform your words into a potent productivity tool. Although Copilot for Microsoft 365 can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending your message extension as a plugin in Copilot for Microsoft 365, you can enable users to interact with third-party tools and services, thereby empowering them to achieve more with Copilot for Microsoft 365. You can achieve this extension by developing a plugin or connecting to an external data source.
 
-:::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams and Microsoft 365 Chat.":::
+:::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams and Microsoft 365 Chat." lightbox="../assets/images/Copilot/ailib-copilot-diff.png":::
 
 ## What is a plugin?
 
@@ -50,9 +50,9 @@ Before you begin, ensure that you install the following tools to build and deplo
 
 * Install the latest [Teams Toolkit pre-release version](../toolkit/install-Teams-Toolkit.md#install-a-pre-release-version).
 * Ensure that the **Develop Copilot Plugin** feature flag is enabled. To enable the feature flag, follow these steps:
-  1. Open Visual Studio Code.
+  1. Open **Visual Studio Code**.
   1. Go to **Manage** > **Settings**.
-  1. Enter **Teams Toolkit** in the Search settings search box.
+  1. Enter **Teams Toolkit** in the **Search settings** search box.
   1. Under **Extensions**, select the **Fx-extension: Develop Copilot Plugin** checkbox.
 
 To create a bot-based search message extension plugin using Visual Studio Code, follow these steps:
@@ -68,9 +68,9 @@ To create a bot-based search message extension plugin using Visual Studio Code, 
 
 1. Select a programming language.
 1. Select **Default folder**.
-1. Enter the name of your app and select Enter. Teams toolkit scaffolds your app and creates a message extension.
+1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds your app and creates a message extension.
 
-To run your message extension in Teams:
+To run your message extension in Teams, follow these steps:
 
 1. From the left pane, select **Teams Toolkit**.
 1. Under **ACCOUNTS**, perform the following steps:
@@ -104,7 +104,7 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from Microsoft 365 Chat.":::
 
 > [!NOTE]
-> This prompt may not always make Microsoft 365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Chat response and leave a message.
+> This prompt might not always make Microsoft 365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Chat response and leave a message.
 
 # [Visual Studio](#tab/visual-studio)
 
@@ -112,9 +112,9 @@ Before you begin, ensure that you install the following tools to build and deplo
 
 * Install the Visual Studio Enterprise 2022 Preview version 17.9.0 Preview 1.0 and install the **Microsoft Teams development tools** under **ASP.NET and web development** workload.
 * Ensure that the Copilot feature flag is enabled. To enable the feature flag, follow these steps:
-  1. Open Visual Studio.
+  1. Open **Visual Studio**.
   1. Go to **Tools** > **Options**.
-  1. Enter **Teams Toolkit** in the Search Settings search box.
+  1. Enter **Teams Toolkit** in the **Search Settings** search box.
   1. Under **Preview Features**, select the **Teams Toolkit: Develop Copilot Plugin** checkbox.
 
 To create a bot-based search message extension plugin using Visual Studio, follow these steps:
@@ -169,6 +169,7 @@ To create a bot-based search message extension plugin using Visual Studio, follo
 
 To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
+1. Go to **Visual Studio**.
 1. In the debug dropdown, select **Copilot (browser)**. Visual Studio launches Teams web client.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-debug-Copilot.png" alt-text="Screenshot shows the Copilot (Browser)  debug option in Visual Studio.":::
@@ -185,7 +186,7 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
    :::image type="content" source="../assets/images/Copilot/bot-based-VS-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the Adaptive Card response with content and preview card from Microsoft 365 Chat. The response contains a list of four products with Contoso product name. ":::
 
 > [!NOTE]
-> This prompt may not always make Microsoft 365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Chat response and leave a message.
+> This prompt might not always make Microsoft 365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Chat response and leave a message.
 
 # [Toolkit CLI](#tab/toolkit-cli)
 
@@ -195,7 +196,7 @@ Before you begin, ensure that you set the environment variable **DEVELOP_COPILOT
 1. Select **System**.
 1. Under **About** > **Device specifications**, select **Advanced system settings**.
 1. Under **System Properties**, select **Environment Variables..**.
-1. Under **User variables**, select **New..**. A **New User Variable dialog** opens.
+1. Under **User variables**, select **New..**. A **New User Variable** dialog opens.
 1. Update the following fields:
     1. **Variable name**: DEVELOP_COPILOT_PLUGIN
     1. **Variable value**: true
