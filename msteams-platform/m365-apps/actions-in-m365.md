@@ -11,7 +11,7 @@ ms.subservice: m365apps
 
 > [!NOTE]
 >
-> * The Actions in Microsoft 365 is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> * The Actions in Microsoft 365 is available in [Public developer preview](../resources/dev-preview/developer-preview-intro.md)
 >
 > * The Actions in Microsoft 365 is supported for Microsoft 365 app on web and desktop clients only.
 
@@ -51,6 +51,21 @@ You can choose between two types of handlers:
 
 * openDialog: This handler directs users to a dialog, offering a dedicated and contextualized interface for interacting with your app's features without opening the full app.
 * openPage: By using the openPage handler, you can drive users to your app's dedicated pages(personal tab).
+
+## Prerequisites
+
+Ensure you install the following tools for building Actions in Microsoft 365.
+
+| &nbsp; | Install | For using... |
+| --- | --- | --- |
+| **Required** | &nbsp; | &nbsp; |
+| &nbsp; | [Install Teams Toolkit](../toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
+| **Optional** | &nbsp; | &nbsp; |
+| &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
 
 ## How to build Actions
 
