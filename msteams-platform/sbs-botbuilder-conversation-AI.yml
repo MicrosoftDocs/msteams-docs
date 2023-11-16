@@ -29,7 +29,7 @@ items:
 
     You can see the following output:
 
-    :::image type="content" source="assets/images/bots/conversational-ai-sample-bot-chat2.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
+    :::image type="content" source="assets/images/bots/conversational-ai-sample-bot-chat.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
 
 
 - title: Prerequisites
@@ -784,11 +784,11 @@ items:
         
         The toolkit displays a message to indicate that the app is added to Teams.
 
-        :::image type="content" source="assets/images/bots/conversational-AI-add-sample-bot2.png" alt-text="Screenshot shows an example of the add option to add a sample bot to the local machine.":::
+        :::image type="content" source="assets/images/bots/conversational-AI-add-sample-bot.png" alt-text="Screenshot shows an example of the add option to add a sample bot to the local machine.":::
 
         Your app is loaded on Teams client.
 
-        :::image type="content" source="assets/images/bots/conversational-ai-sample-bot-chat2.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
+        :::image type="content" source="assets/images/bots/conversational-ai-sample-bot-chat.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
 
     <!-- markdownlint-disable MD033 -->
     <details>
@@ -826,7 +826,7 @@ items:
 
     You've created a Teams AI library bot.
 
-    :::image type="content" source="assets/images/bots/conversational-ai-sample-bot-chat2.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
+    :::image type="content" source="assets/images/bots/conversational-ai-sample-bot-chat.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
 
     Now that you've learned to create an app using Teams AI library, you can move on to learn about Teams AI capabilities.
 
