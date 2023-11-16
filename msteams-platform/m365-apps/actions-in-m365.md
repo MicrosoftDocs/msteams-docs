@@ -162,6 +162,24 @@ this.setState({
 
 ### Access content through Graph API
 
+After obtaining the itemId of the triggering content, you can leverage the Graph API to read or modify the content, facilitating task completion for your users.
+
+```javascript
+async readActionItem() {
+    try {
+        return await this.graphClient.api(`/users/${this.objectId}/drive/items/${this.itemId}`).get();
+    } catch (error) {
+        console.log("readActionItem", error);
+    }
+}
+```
+
+## Test your Actions in Microsoft 365 apps
+
+You can now preview your Actions in Microsoft 365 app by right-clicking a file that is supported by your Actions. Actions will appear in the context menu.
+
+:::image type="content" source="images/actions-context-menu.png" alt-text="The screenshot shows the actions in context menu.":::
+
 ## User scenarios  
 
 ## Actions user scenarios
@@ -191,3 +209,7 @@ They right-click on the Excel file and then click on the Action 'Related supplie
 The Northwind app opens, displaying the list of suppliers filtered to show only those that appear in the document. This saves them time opening up the app and the Excel file and checking each item manually.
 
 :::image type="content" source="images/m365-actions-opens-supplier-list.png" alt-text="The screenshot shows the northwind app, which shows the suppliers that match the document in Microsoft 365 on the web.":::
+
+## See also
+
+[Extend Teams apps across Microsoft 365](overview.md)

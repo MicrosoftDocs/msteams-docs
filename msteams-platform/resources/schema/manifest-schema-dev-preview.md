@@ -906,9 +906,12 @@ The `extensions.runtimes` property configures the sets of runtimes and actions t
 |`code.script`| URL | | ✔️ | Specifies the URL of the JavaScript file to be loaded in [JavaScript-only runtime](/office/dev/add-ins/testing/runtimes#javascript-only-runtime). |
 |`lifetime`| String enum | | | Specifies the lifetime of the runtime. Runtimes with a `short` lifetime don’t preserve state across executions while runtimes with a `long` lifetime do.|
 |`actions`| Array | | | Specifies the set of actions supported by the runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
+|`actions.displayName`| String | 64 characters | | Specifies the display name of the action and it isn't the label of a button or a menu item that invokes the action (which is configured with `tabs.groups.controls.label`).|
+|`actions.description`| String | | ✔️ | Specifies the description of the actions. |
+|`actions.handlers`| Array of objects | | ✔️ | An array of handlers object, defining how actions can be handled. If an app has more than one handler, only one experience will show up at one entry point. The hub will decide which action to show up based on which experience is supported.  |
+|`actions.intent`| String enum |  | ✔️ | Specifies the type of actions. The supported enum value open, addTo, and custom. |
 |`actions.id`| String | 64 characters | ✔️ | Specifies the ID for the action, which is passed to the code file. |
 |`actions.type`| String | | ✔️ | Specifies the type of action. The `executeFunction` runs a JavaScript function without waiting for it to finish and `openPage` opens a page in a given view. <br>Supported value: `executeFunction` |
-|`actions.displayName`| String | 64 characters | | Specifies the display name of the action and it isn't the label of a button or a menu item that invokes the action (which is configured with `tabs.groups.controls.label`).|
 |`actions.pinnable`| Boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. <br>Default value: `false`|
 |`actions.view`| String | 64 characters | | Specifies the view where the page must be opened. It's used only when `actions.type` is `openPage`. |
 
