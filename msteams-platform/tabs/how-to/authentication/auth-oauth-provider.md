@@ -56,9 +56,10 @@ The following image provides the flow to add authentication to external browsers
        isExternal: true,
        successCallback: function (result) {
        //sucess 
-       } failureCallback: function (reason) {
+       },
+       failureCallback: function (reason) {
        //failure 
-        }
+       }
     });
     ```
 
