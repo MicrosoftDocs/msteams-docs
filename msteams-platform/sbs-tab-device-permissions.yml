@@ -18,7 +18,7 @@ items:
 
     This step-by-step guide helps you grant tab device permission in Teams. You can see the following output:
 
-      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output1_1.png" alt-text="final output":::
+      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output-grant-tab.png" alt-text="Screenshot shows the final output of grant tab device permission.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -245,7 +245,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output1_1.png" alt-text="location":::                   
+    :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output-grant-tab.png" alt-text="Screenshot shows the final output screen for grant tab device permission.":::                   
 
 - content: |
     You've completed the tutorial and now you can grant tab device permission at Teams.
