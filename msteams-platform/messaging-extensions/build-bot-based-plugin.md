@@ -49,7 +49,7 @@ Before you get started, ensure that you're familiar with the following standards
 Before you get started, ensure that you install the following tools to build and deploy your message extension:
 
 * Install the installed the latest [Teams Toolkit pre-release version](../toolkit/install-Teams-Toolkit.md#install-a-pre-release-version).
-* Ensure that the Copilot feature flag is enabled. To enable the feature flag, follow these steps:
+* Ensure that the **Develop Copilot Plugin** feature flag is enabled. To enable the feature flag, follow these steps:
   1. Open Visual Studio Code.
   1. Go to **Manage** > **Settings**.
   1. Enter **Teams Toolkit** in the Search settings search box.
