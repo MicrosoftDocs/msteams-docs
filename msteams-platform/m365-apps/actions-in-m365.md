@@ -1,9 +1,9 @@
 ---
 title: Actions in Microsoft 365
 description: In this article, learn more about the function of Actions and its use cases. 
-ms.date: 11/12/2023
+ms.date: 11/16/2023
 ms.author: mosdevdocs
-author: mobajemu
+author: Vishnu
 ms.topic: Conceptual
 ms.subservice: m365apps
 ---
@@ -11,33 +11,34 @@ ms.subservice: m365apps
 
 > [!NOTE]
 >
-> * The Actions in Microsoft 365 is available in [Public developer preview](../resources/dev-preview/developer-preview-intro.md)
+> * Actions for Microsoft 365 is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md)
 >
-> * The Actions in Microsoft 365 is supported for Microsoft 365 app on web and desktop clients only.
+> * Actions is supported for Microsoft 365 apps on web and desktop clients only and isn't supported on Outlook and Microsoft Teams.
 
 Actions seamlessly integrate your app into the user's workflow, ensuring effortless discovery and smooth interaction with their content. By guiding users to your app based on their intent and contextual content, Actions facilitate efficient task completion. Which integration increases your app's visibility and engagement with minimal development effort.
 
 Actions enhance user's productivity by streamlining task completion and reducing the need for context switching across various Microsoft 365 applications.
 
-## Key benefits
+You can create an Teams app extensible across Microsoft 365 with the Actions feature. However Actions will only work in Microsoft 365 hub.
 
-1. Users can accomplish tasks more efficiently.
-1. Seamlessly integrates your app into users workflow, increasing app's visibility and user engagement.
-1. Users can take immediate action on content files through your app, expanding the range of interactions they can have with their content.  
+With Actions users can:
 
-    :::image type="content" source="images/actions-in-m365-app.gif" alt-text="Graphic shows the user can add a file to the to-do list app with a note attached for a task to complete.":::
+* Accomplish tasks more efficiently.
+* Seamlessly integrates your app into users workflow, increasing app's visibility and user engagement.
+* Take immediate action on content files through your app, expanding the range of interactions they can have with their content.  
+
+  :::image type="content" source="images/actions-in-m365-app.gif" alt-text="Graphic shows the user can add a file to the to-do list app with a note attached for a task to complete.":::
 
 ## Understand how Actions work
 
 Actions are the combination of Intent, Object, and Handler. Actions represent the task that the user wants to perform where Intent is the user’s desired action, Object is the function to be executed, and Handler is the way to perform the action on the object.
 
-your role is to receive the user's intent and object input and construct the corresponding handler that facilitates task completion for the users.
-To build an Action, you'll define the intent, object, and handler of your actions in the manifest. And in your handler, use the [Teams JS library](/javascript/api/@microsoft/teams-js) to receive the Action information to create a seamless user experience for performing users specific tasks.  
+When your creating an app ensure that you define user intent, and choose the object to perform the action, and construct the corresponding handler that facilitates task completion for the user.
 
 ### Intent
 
-Intent is the objective a user wants to perform or achieve. User intent is typically represented by a verb, such as "open," or “add to.” Intent enables the Microsoft 365 platform to display the Actions in locations that mostly align with the user's needs and intentions. This includes but not limited to, where Actions show up and how Actions are grouped or ordered.
-We currently enable three main intents for Actions: “open”, “addTo”, and “custom”. With the "custom" intent, developers have the flexibility to build tailored Actions to fulfill any user task.
+Intent is the objective a user wants to perform or achieve. User intent is typically represented as open or add to. Intent enables the Microsoft 365 platform to display the Actions in locations that mostly align with the user's needs and intentions. This includes but not limited to, where Actions show up and how Actions are grouped or ordered.
+We currently enable three main intents for Actions: Open, addTo, and custom. With the custom intent, developers have the flexibility to build tailored Actions to fulfill any user task.
 
 ### Object
 
@@ -77,13 +78,13 @@ To build Actions to your existing Teams app follow these steps:
 
 ### Update app manifest
 
-Add the following code after `staticTabs` property in the app manifest (previously called Teams app manifest).
+1. Define the intent, object, and handler for your actions in the app manifest schema (previously called Teams app manifest).
+
+1. Update the handler to receive the Action information to create a seamless user experience for performing users specific tasks using the [Teams JavaScript library (TeamsJS)](/javascript/api/@microsoft/teams-js).
 
 In the following example, two Actions are built:
 
 * Action to open a page: Action shows related tasks in the **To-do** app based on the selected file. It uses a custom `intent` to identify the file type, such as .xlsx or doc. It has a handler type of **openPage** that opens the app and navigates to the specified `pageId` and `subpageId`.
-
-* Action to open a dialog: Action lets you add a selected file and a note to the **To-do** app. It uses an `intent` type of **addTo** to identify the file type, such as .docx or .doc. It has a `handler` type of **openDialog** that opens a web-based dialog from the specified URL.
 
 ```json
 "actions": [
@@ -107,7 +108,14 @@ In the following example, two Actions are built:
                 }
             }
         ]
-    },
+    }
+]
+```
+
+* Action to open a dialog: Action lets you add a selected file and a note to the **To-do** app. It uses an `intent` type of **addTo** to identify the file type, such as .docx or .doc. It has a `handler` type of **openDialog** that opens a web-based dialog from the specified URL.
+
+```json
+"actions": [
     {
         // Defining Action to open a dialog
         "id": "addTodoTask",
@@ -135,6 +143,24 @@ In the following example, two Actions are built:
 ```
 
 For more information, see public developer preview app manifest schema.
+
+### Build the handler that retrieves Action information through context object
+
+* Open page handler: Handler is directed to app’s launch page based on the pageId and subPageId defined in the manifest.
+
+* Open dialog handler: HTML-based dialog that enables app to complete tasks seamlessly within the dialog itself.
+
+Once your app's page or dialog is launched, your app can access contextual information about the invoked Action from the `actionInfo` property of the context object `app.getContext()`.
+
+```javascript
+const context = await app.getContext();
+const itemId = context.actionInfo && context.actionInfo.actionObjects[0].itemId;
+this.setState({
+    itemId: itemId
+});
+```
+
+### Access content through Graph API
 
 ## User scenarios  
 
