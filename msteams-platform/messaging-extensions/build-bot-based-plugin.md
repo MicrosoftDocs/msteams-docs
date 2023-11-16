@@ -67,7 +67,7 @@ To create a bot-based search message extension plugin using Visual Studio Code, 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-start-with-bot.png" alt-text="Screenshot shows the Start with a Bot option to create a bot-based message extension in Visual Studio Code..":::
 
 1. Select a programming language.
-1. Select Default folder.
+1. Select **Default folder**.
 1. Enter the name of your app and select Enter. Teams toolkit scaffolds your app and creates a message extension.
 
 To run your message extension in Teams:
@@ -93,13 +93,13 @@ To run your message extension in Teams:
 To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
 1. Select **Apps**.
-1. Search for **M365 Chat** and open the M365 Chat app.
+1. Search for **M365 Chat** and open the **M365 Chat** app.
 1. Select **Plugins**.
 1. From the list of plugins, turn on the toggle for your message extension.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-1. From the compose message space, send a message to Microsoft 365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
+1. From the compose message area, send a message to M365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from Microsoft 365 Chat.":::
 
@@ -174,13 +174,13 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-debug-Copilot.png" alt-text="Screenshot shows the Copilot (Browser)  debug option in Visual Studio.":::
 
 1. Go to **Teams web client** > **Apps**.
-1. Search for **M365 Chat** and open the M365 Chat app.
+1. Search for **M365 Chat** and open the **M365 Chat** app.
 1. Select **Plugins**.
 1. From the list of plugins, turn on the toggle for your app.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VS-me-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-1. From the compose message area, send a message to Microsoft 365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
+1. From the compose message area, send a message to M365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VS-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the Adaptive Card response with content and preview card from Microsoft 365 Chat. The response contains a list of four products with Contoso product name. ":::
 
@@ -271,13 +271,13 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
 1. Select **Apps**.
-1. Search for **M365 Chat**  and open the M365 Chat app.
+1. Search for **M365 Chat**  and open the **M365 Chat** app.
 1. Select **Plugins**.
 1. From the list of plugins, turn on the toggle for your app.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-1. From the compose message area, send a message to Microsoft 365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
+1. From the compose message area, send a message to M365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from Microsoft 365 Chat.":::
 
