@@ -379,7 +379,7 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 ---
 
-## Compound Utterances
+## Compound utterances
 
 > [!NOTE]
 > Search through task module isn't supported in Microsoft 365 Chat.
