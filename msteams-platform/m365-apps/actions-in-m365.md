@@ -31,17 +31,17 @@ Actions enhance user's productivity by streamlining task completion and reducing
 
 Actions are the combination of Intent, Object, and Handler. Actions represent the task that the user wants to perform where Intent is the user’s desired action, Object is the function to be executed, and Handler is the way to perform the action on the object.
 
-You your role is to receive the user's intent and object input and construct the corresponding handler that facilitates task completion for the users.
-To build an Action, you will define the intent, object, and handler of your actions in the manifest. And in your handler, use the [Teams JS library](/javascript/api/@microsoft/teams-js) to receive the Action information to create a seamless user experience for performing users specific tasks.  
+your role is to receive the user's intent and object input and construct the corresponding handler that facilitates task completion for the users.
+To build an Action, you'll define the intent, object, and handler of your actions in the manifest. And in your handler, use the [Teams JS library](/javascript/api/@microsoft/teams-js) to receive the Action information to create a seamless user experience for performing users specific tasks.  
 
 ### Intent
 
-Intent is the objective a user wants to perform or achieve. User intent is typically represented by a verb, such as "open," or “add to.” This "intent" enables the M365 platform to display the Actions in locations that mostly align with the user's needs and intentions. This includes but not limited to, where Actions show up and how Actions are grouped or ordered.
+Intent is the objective a user wants to perform or achieve. User intent is typically represented by a verb, such as "open," or “add to.” Intent enables the Microsoft 365 platform to display the Actions in locations that mostly align with the user's needs and intentions. This includes but not limited to, where Actions show up and how Actions are grouped or ordered.
 We currently enable three main intents for Actions: “open”, “addTo”, and “custom”. With the "custom" intent, developers have the flexibility to build tailored Actions to fulfill any user task.
 
 ### Object
 
-Object is the file on which the user wants to perform an action on. Currently, Actions can be triggered on content objects, files that has an extension, like Word, PowerPoint, Excel, PDF, and images. Which reside in OneDrive and SharePoint that are accessible through Microsoft Graph.
+Object is the file on which the user wants to perform an action on. Currently, Actions can be triggered on content objects, files that have an extension, like Word, PowerPoint, Excel, PDF, and images. Which reside in OneDrive and SharePoint that are accessible through Microsoft Graph.
 
 ### Handlers
 
@@ -50,7 +50,7 @@ A handler is how the Action performs the user’s intent on the selected object.
 You can choose between two types of handlers:
 
 * openDialog: This handler directs users to a dialog, offering a dedicated and contextualized interface for interacting with your app's features without opening the full app.
-* openPage: By using the openPage handler you can drive users to your app's dedicated pages(personal tab).
+* openPage: By using the openPage handler, you can drive users to your app's dedicated pages(personal tab).
 
 ## How to build Actions
 
@@ -134,11 +134,11 @@ For background: The user is a supervisor at Northwind Traders with limited time 
 In this example, the user sees the latest sales report from a supplier, 'Tokyo Trader,' and wants to add it as an attachment in the supplier management system app built by Northwind Traders.
 They right-click on the Word document and choose the Action 'Add to supplier' built by Northwind Traders.
 
-:::image type="content" source="images/m365-actions-add-to-dropdown.png" alt-text="The screenshot shows a right click menu displaying the options from the add to dropdown.":::
+:::image type="content" source="images/m365-actions-add-to-dropdown.png" alt-text="The screenshot shows a right click menu displaying the options from the add-to dropdown.":::
 
 A dialog pops up where they select 'Tokyo Traders' and click 'Add' to add the attachment to their management system, all without opening the document or app. With the openDialog handler, users can complete task efficiently by working in a contextualized dialog interface.
 
-:::image type="content" source="images/m365-actions-popup-dialog.png" alt-text="The screenshot shows a pop-up dialog of the northwind app for the user to add an attachment  running on M365 on web.":::
+:::image type="content" source="images/m365-actions-popup-dialog.png" alt-text="The screenshot shows a pop-up dialog of the northwind app for the user to add an attachment  running on Microsoft 365 on web.":::
 
 ### Action opens a page
 
@@ -149,4 +149,4 @@ They right-click on the Excel file and then click on the Action 'Related supplie
 
 The Northwind app opens, displaying the list of suppliers filtered to show only those that appear in the document. This saves them time opening up the app and the Excel file and checking each item manually.
 
-:::image type="content" source="images/m365-actions-opens-supplier-list.png" alt-text="The screenshot shows the northwind app, which shows the suppliers that match the document in M365 on the web.":::
+:::image type="content" source="images/m365-actions-opens-supplier-list.png" alt-text="The screenshot shows the northwind app, which shows the suppliers that match the document in Microsoft 365 on the web.":::
