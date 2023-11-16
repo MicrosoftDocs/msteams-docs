@@ -8,7 +8,7 @@ ms.date: 11/21/2022
 ---
 # Update app manifest for SSO and preview app
 
-Before updating the app manifest (previously called Teams app manifest), ensure your tab app's code is configured to enable single sign-on (SSO).
+Before you update the app manifest (previously called Teams app manifest), ensure your tab app code is configured to enable single sign-on (SSO).
 
 > [!div class="nextstepaction"]
 > [Configure code](tab-sso-code.md)

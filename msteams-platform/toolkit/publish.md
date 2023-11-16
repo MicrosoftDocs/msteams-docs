@@ -28,7 +28,7 @@ Here's what you'll learn in this section:
 
 ## Publish to individual scope or app upload permission
 
-You can add a custom app to Teams by uploading an [app package](../concepts/build-and-test/apps-package.md) in `.zip` file directly to a team or in personal context. Adding a custom app by uploading an app package is known as uploading. It allows you to test app while being uploaded in Teams. You can build and test app in the following scenarios:
+You can add a custom app to Teams by uploading an [app package](../concepts/build-and-test/apps-package.md) in `.zip` file directly to a team or in personal context. Adding a custom app by uploading an app package is known as app upload. It allows you to test app while being uploaded in Teams. You can build and test app in the following scenarios:
 
 * Test and debug an app locally.
 * Build an app for yourself, such as to automate a workflow.

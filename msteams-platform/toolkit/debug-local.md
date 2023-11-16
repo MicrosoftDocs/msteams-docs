@@ -11,7 +11,7 @@ zone_pivot_groups: teams-toolkit-platform
 
 # Debug your Teams app locally
 
-Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and upload Teams app. You can preview your Teams app in Teams web client locally after debugging.
+Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and uploads Teams app. You can preview your Teams app in Teams web client locally after debugging.
 
 ::: zone pivot="visual-studio-code-v5"
 
@@ -94,7 +94,7 @@ After the initial setup process, Teams Toolkit starts the following processes:
 
 * [Starts app services](#starts-app-services)
 * [Launches debug configurations](#launches-debug-configurations)
-* [Upload Teams app](#upload-teams-app)
+* [Uploads the Teams app](#uploads-the-teams-app)
 
 ### Starts app services
 
@@ -200,7 +200,7 @@ The following table lists the debug configuration names and types for project wi
 |  Bot or message extension  |   **Attach to Bot** |  node  |
 |  Azure Functions |  **Attach to Backend** |  node |
 
-### Upload Teams app
+### Uploads the Teams app
 
 The configuration **Attach to Frontend** or **Launch App** launches Microsoft Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, upload Teams app that is controlled by the uploading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). When Teams client loads in the web browser, select **Add** or select an option from the dropdown as per your requirement.
 
@@ -313,7 +313,7 @@ After the initial setup process, Teams Toolkit starts the following processes:
 
 * [Starts app services](#starts-app-services)
 * [Launches debug configurations](#launches-debug-configurations)
-* [Upload Teams app](#upload-teams-app)
+* [Uploads the Teams app](#uploads-the-teams-app)
 
 ### Starts app services
 

@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 ms.topic: conceptual
 ---
 
-# Send activity feed notifications to users in Teams
+# Send activity feed notifications to users in Microsoft Teams
 
 The Microsoft Teams activity feed enables users to triage items that require attention by notifying them of changes. You can use the activity feed notification APIs in Microsoft Graph to extend this functionality to your apps. This allows your apps to provide richer experiences and better engage users by helping to keep them up-to-date with changes in the tools and workflows they use.
 
