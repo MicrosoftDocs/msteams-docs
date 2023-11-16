@@ -239,11 +239,17 @@ async readActionItem() {
 
 ## Build and run your app
 
+To build and run your app locally:
+
 1. After you update the app manifest, open your app in Teams Toolkit.
 
-1.
-1.
-1.
+1. To debug your app, enter **F5**.
+
+   :::image type="content" source="images/actions-debug.png" alt-text="The screenshot shows actions in debug.":::
+
+1. Select **Yes** if the following dialog appears:
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/hw-warning.png" alt-text="Screenshot shows the microsoft warning.":::
 
 ## Test your Actions in Microsoft 365 apps
 
