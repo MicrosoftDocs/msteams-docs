@@ -183,7 +183,7 @@ You must avoid the following issues that occur in 20% of apps that are rejected 
 
 The Microsoft 365 App Compliance Program helps organizations assess and manage risk by evaluating security and compliance information about an app. You **must complete** [Publisher Verification](/azure/active-directory/develop/mark-app-as-publisher-verified) before you submit your app for review to publish on the Teams Store.
 
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-AAD-consent.png" alt-text="Screenshot of passed image of AAD consent dialog.":::
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-AAD-consent.png" alt-text="Screenshot of passed image of Microsoft Entra consent dialog.":::
 
 [Back to top](#common-reasons-for-app-validation-failure)
 
@@ -311,7 +311,7 @@ Your offer listing must include a valid Terms of use link. Offers with invalid, 
 
 ### Microsoft 365 re-branding
 
-Tab doesn't load or show an error page or message on the Microsoft 365 client when you replace the tab url from www.office.com/ to www.microsoft365.com/.
+Tab doesn't load or show an error page or message on the Microsoft 365 client when you replace the tab url from <www.office.com/> to <www.microsoft365.com/>.
 
 ### App functionality
 
