@@ -24,15 +24,15 @@ The Test Tool provides the following advantages:
 
 * **Sandbox environment**: The sandbox environment of the Test Tool emulates the behavior, look and user experience of Teams.
 
-* **Tunneling**: An external tunnel service isn't necessary as the Test Tool runs on a local server that your bot app that can communicate with.
+* **Tunneling**: An external tunnel service isn't necessary as the Test Tool runs on a local server that your bot can communicate with.
 
-* **Reduce account dependencies**: Microsoft 365 Developer tenant and the app uploading permissions aren't necessary to debug the bot application.
+* **Reduce account dependencies**: Microsoft 365 Developer tenant and the app uploading permissions aren't necessary to debug the bot.
 
-* **Rapid inner-loop iterations**: Optimizes the process of making changes to the app design and bot logic without having to redeploy the bot application to the cloud.
+* **Rapid inner-loop iterations**: Optimizes the process of making changes to the app design and bot logic without having to redeploy the bot to the cloud.
 
 * **Mock data and activities**: The Test Tool makes it easy to accomplish a test for complex scenarios such as **Send a welcome message when a new member joins the channel** by using mock data and built-in and custom activity triggers.
 
-* **Reliable**: The Test Tool is reliable as the bot application's Adaptive Card utilizes the same rendering technology as in Teams.
+* **Reliable**: The Test Tool is reliable as the bot's Adaptive Card utilizes the same rendering technology as in Teams.
 
 * **Integration with existing Teams bot applications**: The Test Tool integrates effortlessly with existing Teams bot applications built with [Bot Framework SDK](https://dev.botframework.com/).
 
@@ -40,7 +40,7 @@ The Test Tool provides the following advantages:
 
 ## Prerequisites
 
-Ensure you install the following tools for building and deploying your bot apps in Test Tool.
+Ensure you install the following tools for building and deploying your bots in Test Tool.
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
@@ -52,7 +52,7 @@ Ensure you install the following tools for building and deploying your bot apps 
 
 The Test Tool is an npm package that has a CLI command called `teamsapptester`. When you run `teamsapptester start`, it opens a web app on your local machine that emulates the Teams Web client and Bot Framework service. This web app doesn't need any cloud resources as it uses mock data to simulate the contextual information of Teams.
 
-To use a Teams bot app on the Test Tool, you need to provide:
+To use a Teams bot on the Test Tool, you need to provide:
 
 * The bot message endpoint is the URL that links the Test Tool and your bot. You can update the endpoint with the `BOT_ENDPOINT` environment variable or use the default value of `http://localhost:3978/api/messages`.
 * (Optional) A configuration file to inform the Test Tool about your customized contextual information in Teams. The file is named **teamsapptesttool.yml** in the project's root folder. If Teams can't find this file, it uses the default configuration. For more information, see [customize Teams context](#customize-teams-context).
@@ -110,11 +110,11 @@ To use a Teams bot app on the Test Tool, you need to provide:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
-Similarly, you can use the other commands in your bot to test the bot experience. Download a ready-to-use sample [here](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/test-tool-sample-app).
+Similarly, you can use the other commands in your bot to test the bot experience.
 
 ## Predefined activities
 
-The Test Tool provides predefined activities that you can use to test the functionalities of your bot app.
+The Test Tool provides predefined activities that you can use to test the functionalities of your bot.
 
 | Category | Activity | Handler |
 | --- | --- | --- |
@@ -288,7 +288,7 @@ It's vital to recognize that updating the configuration file has three major imp
 
 1. Bot features enabled through the Teams app manifest aren't available as The Test Tool doesn't process it.
 
-1. The Test Tool doesn't support all other types of Bot application [Cards](../task-modules-and-cards/what-are-cards.md#cards).
+1. The Test Tool doesn't support all other types of bot application [Cards](../task-modules-and-cards/what-are-cards.md#cards).
 
 1. The Test Tool doesn't support the following Adaptive Card features:
 
@@ -315,9 +315,9 @@ It's vital to recognize that updating the configuration file has three major imp
 
 ## Debug an existing app with the Test Tool
 
-Ensure you have an existing bot app created using Teams Toolkit. To debug your bot app with the Test Tool, follow these steps:
+Ensure you have an existing bot created using Teams Toolkit. To debug your bot with the Test Tool, follow these steps:
 
-1. Open the existing bot app's project folder in Teams Toolkit.
+1. Open the existing bot's project folder in Teams Toolkit.
 
 1. Go to **EXPLORER** > **.vscode**.
 1. Select **launch.json** and add the following code at the end of the file:
@@ -389,7 +389,7 @@ Ensure you have an existing bot app created using Teams Toolkit. To debug your b
     }
     ```
 
-1. Create **.localConfigs.testtool** file in the project's root folder and add the following code:
+1. Under **EXPLORER**, create a **.localConfigs.testtool** file and add the following code:
 
     ```json
     // .localConfigs.testTool
@@ -399,7 +399,8 @@ Ensure you have an existing bot app created using Teams Toolkit. To debug your b
     TEAMSFX_NOTIFICATION_STORE_FILENAME=.notification.testtoolstore.json
     ```
 
-1. Create **.env.testtool** file in the **env** folder and add the following code:
+1. Go to **EXPLORER** > **env**.
+1. Create a **.env.testtool** file and add the following code:
 
     ```json
     // .env.testtool
@@ -410,9 +411,9 @@ Ensure you have an existing bot app created using Teams Toolkit. To debug your b
     TEAMSAPPTESTER_PORT=56150
     ```
 
-1. If you have any custom environment variables, set their values in **.env.testtool** or **.env.testtool.user**.
+    If you have custom environment variables, set their values in **.env.testtool** or **.env.testtool.user**.
 
-1. Add either an OpenAI key or Azure OpenAI key and endpoint:
+1. Add either an OpenAI key or Azure OpenAI key endpoint in **.env.testtool.user**.
 
     ```json
     # SECRET_OPENAI_API_KEY=***********
@@ -420,7 +421,7 @@ Ensure you have an existing bot app created using Teams Toolkit. To debug your b
     SECRET_AZURE_OPENAI_ENDPOINT=<https://your-openai-service-name.openai.azure.com/>
     ```
 
-1. Add **teamsapp.testtool.yml** to npm install and pass the environment variables using the `file/createOrUpdateEnvironmentFile` action.
+<!-- 1. Go to **EXPLORER** Add **teamsapp.testtool.yml** to npm install and pass the environment variables using the `file/createOrUpdateEnvironmentFile` action.
 
     ```yaml
     # yaml-language-server: $schema=<https://aka.ms/teams-toolkit/v1.3/yaml.schema.json>
@@ -446,9 +447,9 @@ Ensure you have an existing bot app created using Teams Toolkit. To debug your b
             # OPENAI_API_KEY: ${{SECRET_OPENAI_API_KEY}} 
             AZURE_OPENAI_API_KEY: ${{SECRET_AZURE_OPENAI_API_KEY}} 
             AZURE_OPENAI_ENDPOINT: ${{SECRET_AZURE_OPENAI_ENDPOINT}} 
-    ```
+    ```-->
 
-1. Update the npm script in **package.json** in the project's root folder with the following code:
+1. Go to **package.json** and add the following code under the `scripts` property:
 
     ```json
     "scripts": {
@@ -463,19 +464,19 @@ Ensure you have an existing bot app created using Teams Toolkit. To debug your b
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
 
-Test Tool successfully debugs your existing bot app.
+Test Tool successfully debugs your existing bot.
 
 ## FAQ
 
 <details>
-<summary>How can I test my bot app if the Test Tool doesn't support its features?</summary>
+<summary>How can I test my bot if the Test Tool doesn't support its features?</summary>
 
 You can always use the [Teams client](https://teams.microsoft.com/) to test the features that Test Tool doesn't support. Select the option **Debug (Edge)** or **Debug (Chrome)** to test your application in the Teams client.
 <br>
 &nbsp;
 </details>
 <details>
-<summary>How would I know if Test Tool doesn't support features in my bot app?</summary>
+<summary>How would I know if Test Tool doesn't support features in my bot?</summary>
 
 The Test Tool shows a warning message in conversation and log panel when it detects unsupported features.
 
@@ -490,6 +491,10 @@ No. We always recommend users to test their bot application in the Teams client 
 <br>
 &nbsp;
 </details>
+
+|Sample name | Description | TBD |
+|----------------|-----------------|--------------|
+| Test Tool | A sample bot app to explore Test Tool. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/test-tool-sample-app) |
 
 ## See also
 
