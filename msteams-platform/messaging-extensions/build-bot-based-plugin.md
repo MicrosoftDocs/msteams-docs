@@ -46,8 +46,14 @@ Before you get started, ensure that you're familiar with the following standards
 
 # [Visual Studio Code](#tab/visual-studio-code)
 
-> [!NOTE]
-> Teams Toolkit support for bot-based message extension is available only in Teams Toolkit pre-release version. Before you get started, ensure that you've installed a [Teams Toolkit pre-release version](../toolkit/install-Teams-Toolkit.md#install-a-pre-release-version).
+Before you get started, ensure that you install the following tools to build and deploy your message extension:
+
+* Install the installed the latest [Teams Toolkit pre-release version](../toolkit/install-Teams-Toolkit.md#install-a-pre-release-version).
+* Ensure that the Copilot feature flag is enabled. To enable the feature flag, follow these steps:
+  1. Open Visual Studio Code.
+  1. Go to **Manage** > **Settings**.
+  1. Enter **Teams Toolkit** in the Search settings search box.
+  1. Under **Extensions**, select the **Fx-extension: Develop Copilot Plugin** checkbox.
 
 To create a bot-based search message extension plugin using Visual Studio Code, follow these steps:
 
@@ -183,6 +189,19 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
 # [Toolkit CLI](#tab/toolkit-cli)
 
+Before you get started, ensure that you set the environment variable **DEVELOP_COPILOT_PLUGIN** to **true**. To the set the environment variables, follow these steps:
+
+1. On your Computer, Select the **Windows** + **X** key.
+1. Select System.
+1. Under About > Device specifications, select **Advanced system settings**.
+1. Under System Properties, select **Environment Variables..**.
+1. Under User variables, select **New..**. A New User Variable dialog opens.
+1. Update the following fields:
+    1. **Variable name**: DEVELOP_COPILOT_PLUGIN
+    1. **Variable value**: true
+1. Select **OK**.
+
+   :::image type="content" source="../assets/images/Copilot/bot-based-plugin-CLI-add-env-variable.png" alt-text="Screenshot shows the Variable name and Variable value fields in the New User Variable dialog.":::
 To create a bot-based search message extension plugin using Teams Toolkit CLI, follow these steps:
 
 1. Go to **Command Prompt**.
