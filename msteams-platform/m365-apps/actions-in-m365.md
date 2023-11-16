@@ -38,7 +38,7 @@ When your creating an app ensure that you define user intent, and choose the obj
 ### Intent
 
 Intent is the objective a user wants to perform or achieve. User intent is typically represented as open or add to. Intent enables the Microsoft 365 platform to display the Actions in locations that mostly align with the user's needs and intentions. This includes but not limited to, where Actions show up and how Actions are grouped or ordered.
-We currently enable three main intents for Actions: Open, addTo, and custom. With the custom intent, developers have the flexibility to build tailored Actions to fulfill any user task.
+You can create an intents for Open, addTo, and custom actions. If you want to build any tailored Actions to fulfill any user task create a custom intent.
 
 ### Object
 
@@ -55,102 +55,99 @@ You can choose between two types of handlers:
 
 ## Prerequisites
 
-Ensure you install the following tools for building Actions in Microsoft 365.
+Ensure you install the following tools to build Actions in Microsoft 365:
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
-| **Required** | &nbsp; | &nbsp; |
 | &nbsp; | [Install Teams Toolkit](../toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
-| **Optional** | &nbsp; | &nbsp; |
-| &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
 
-## How to build Actions
+## Build Actions
 
-To build Actions to your existing Teams app follow these steps:
+To build Actions for your app, follow these steps:
 
 1. Update app manifest
-1. Build the handler that retrieves Action information through context object
+1. Build the handler that retrieves Actions information through context object
 1. Access content object through Graph API
 
 ### Update app manifest
 
-1. Define the intent, object, and handler for your actions in the app manifest schema (previously called Teams app manifest).
+Define the intent, object, and handler for your actions in the app manifest schema (previously called Teams app manifest).
 
-1. Update the handler to receive the Action information to create a seamless user experience for performing users specific tasks using the [Teams JavaScript library (TeamsJS)](/javascript/api/@microsoft/teams-js).
-
-In the following example, two Actions are built:
+The following is an app manifest example for `openPage` and `openDialog`:
 
 * Action to open a page: Action shows related tasks in the **To-do** app based on the selected file. It uses a custom `intent` to identify the file type, such as .xlsx or doc. It has a handler type of **openPage** that opens the app and navigates to the specified `pageId` and `subpageId`.
 
-```json
-"actions": [
-    {
-        // Defining Action to open a page
-        "id": "relatedTasks",
-        "displayName": "Related tasks",
-        "intent": "custom",
-        "description": "Shows tasks in the To do app that are related to this file.",
-        "handlers": [
-            {
-                "type": "openPage",
-                "supportedObjects": {
-                    "file": {
-                        "extensions": ["xlsx", "doc", "docx", "pdf", "pptx", "ppt"]
+    ```json
+    "actions": [
+        {
+            // Defining Action to open a page
+            "id": "relatedTasks",
+            "displayName": "Related tasks",
+            "intent": "custom",
+            "description": "Shows tasks in the To do app that are related to this file.",
+            "handlers": [
+                {
+                    "type": "openPage",
+                    "supportedObjects": {
+                        "file": {
+                            "extensions": ["xlsx", "doc", "docx", "pdf", "pptx", "ppt"]
+                        }
+                    },
+                    "pageInfo": {
+                        "pageId": "index",
+                        "subPageId": ""
                     }
-                },
-                "pageInfo": {
-                    "pageId": "index",
-                    "subPageId": ""
                 }
-            }
-        ]
-    }
-]
-```
+            ]
+        }
+    ]
+    ```
 
 * Action to open a dialog: Action lets you add a selected file and a note to the **To-do** app. It uses an `intent` type of **addTo** to identify the file type, such as .docx or .doc. It has a `handler` type of **openDialog** that opens a web-based dialog from the specified URL.
 
-```json
-"actions": [
-    {
-        // Defining Action to open a dialog
-        "id": "addTodoTask",
-        "displayName": "Add todo task",
-        "intent": "addTo",
-        "description": "Add this file with a short note to my to do list",
-        "handlers": [
-            {
-                "type": "openDialog",
-                "supportedObjects": {
-                    "file": {
-                        "extensions": ["xlsx", "doc", "dot", "docx", "pdf", "pptx", "ppt"]
+    ```json
+    "actions": [
+        {
+            // Defining Action to open a dialog
+            "id": "addTodoTask",
+            "displayName": "Add todo task",
+            "intent": "addTo",
+            "description": "Add this file with a short note to my to do list",
+            "handlers": [
+                {
+                    "type": "openDialog",
+                    "supportedObjects": {
+                        "file": {
+                            "extensions": ["xlsx", "doc", "dot", "docx", "pdf", "pptx", "ppt"]
+                        }
+                    },
+                    "dialogInfo": {
+                        "dialogType": "url",
+                        "url": "http://localhost:53000/index.html#/dialogPage",
+                        "width": "small",
+                        "height": "large"
                     }
-                },
-                "dialogInfo": {
-                    "dialogType": "url",
-                    "url": "http://localhost:53000/index.html#/dialogPage",
-                    "width": "small",
-                    "height": "large"
                 }
-            }
-        ]
-    }
-]
-```
+            ]
+        }
+    ]
+    ```
 
 For more information, see public developer preview app manifest schema.
 
 ### Build the handler that retrieves Action information through context object
 
+Update the handler to receive the Action information to create a seamless user experience for performing users specific tasks using the [Teams JavaScript library (TeamsJS)](/javascript/api/@microsoft/teams-js).
+
 * Open page handler: Handler is directed to app’s launch page based on the pageId and subPageId defined in the manifest.
 
 * Open dialog handler: HTML-based dialog that enables app to complete tasks seamlessly within the dialog itself.
 
-Once your app's page or dialog is launched, your app can access contextual information about the invoked Action from the `actionInfo` property of the context object `app.getContext()`.
+When the user selects Add option from the context menu the app's page or dialog is launched with the help of the `openDialog` property in the app manifest. Your app can access contextual information about the invoked Action from the `actionInfo` property of the context object `app.getContext()`.
 
 ```javascript
 const context = await app.getContext();
@@ -159,6 +156,72 @@ this.setState({
     itemId: itemId
 });
 ```
+
+#### [`actionInfo`](/javascript/api/@microsoft/teams-js/actioninfo)
+
+The TeamsJS has been updated to enable your app to determine when a page or dialog was opened from an Action, and the content that user was triggering this Action.
+
+```javascript
+app.getContext().then((context: app.Context) => {
+    const actionInfo = context.actionInfo;
+    if (actionInfo && actionInfo.actionId == 'myActionId1') {
+        // Handle specific action
+    }
+});
+```
+
+**Properties**
+
+| &nbsp; | Name | Description |
+| --- | --- | --- |
+| &nbsp; | `actionId` | Maps to the action id supplied inside the manifest. |
+| &nbsp; | `actionObjects` | Array of corresponding action objects. |
+
+#### [`M365ContentAction`interface](/javascript/api/@microsoft/teams-js/m365contentaction)
+
+In order to not leak personal data to applications, only ids of the office content is passed to the app. Apps use these iDs together with the fact that this is OfficeContent to query the Microsoft graph for more details.
+
+```javascript
+export enum ActionObjectType {
+    Future = 'future',
+    M365Contenet = 'm365content',
+}
+
+export interface BaseActionObject<T extends ActionObjectType> {
+    type: T;
+}
+
+export interface M365ContentAction extends BaseActionObject<ActionObjectType.M365Content>{
+// In order to not leak person data to applications, only ids of the
+// office content is passed to the app. Apps use these ids together with the fact
+// that this is OfficeContent to query the Microsoft graph for more details.
+//
+// In the future, we may need to support "ExternalContent" or "MailContent" etc.
+// and would also use the types as hints on which cloud api to call to get more info 
+    itemId: string;
+    secondaryId?: SecondaryId;
+}
+
+// These correspond with field names in the MSGraph
+export enum SecondaryM365ContentIdName {
+    DriveId = 'driveId',
+    GroupId = 'groupId',
+    SiteId = 'siteId',
+    UserId = 'userId',
+}
+
+// This is just an example of how future Actions could be added, not for checkin
+export interface FutureAction extends BaseActionObject<ActionObjectType.Future> {
+foo: string?
+}
+```
+
+**Properties**
+
+| &nbsp; | Name | Description |
+| --- | --- | --- |
+| &nbsp; | `itemId` | Only office content IDs are passed to the app. Apps should use these ids to query the Microsoft graph for more details. |
+| &nbsp; | `secondaryId` | Represents an optional secondary identifier for an action in a Microsoft 365 content item. |
 
 ### Access content through Graph API
 
@@ -173,6 +236,14 @@ async readActionItem() {
     }
 }
 ```
+
+## Build and run your app
+
+1. After you update the app manifest, open your app in Teams Toolkit.
+
+1.
+1.
+1.
 
 ## Test your Actions in Microsoft 365 apps
 
