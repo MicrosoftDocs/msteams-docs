@@ -68,11 +68,7 @@ When you complete local debug, you can select **Stop (Shift+F5)** or **[Alt] Dis
 
 ### Teams App Test Tool
 
-The Teams App Test Tool (Test Tool) makes debugging your bot-based apps effortless. You can chat with your bot and see its messages and adaptive cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use the Test Tool.
-
-The Test Tool also assists you discover and test the commands in your app’s code. It displays a list of commands and their descriptions, so you can test your app without manually searching your code. You can see the commands in a web page or a web chat. For more information, see [Teams App Test Tool](debug-your-Teams-app-test-tool.md).
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
+The Teams App Test Tool makes debugging your bot-based apps effortless. You can chat with your bot and see its messages and adaptive cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use the Test Tool. For more information, see [Teams App Test Tool](debug-your-Teams-app-test-tool.md).
 
 ## Prepare for debug
 
