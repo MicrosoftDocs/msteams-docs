@@ -909,12 +909,7 @@ The `extensions.runtimes` property configures the sets of runtimes and actions t
 |`code.script`| URL | | ✔️ | Specifies the URL of the JavaScript file to be loaded in [JavaScript-only runtime](/office/dev/add-ins/testing/runtimes#javascript-only-runtime). |
 |`lifetime`| String enum | | | Specifies the lifetime of the runtime. Runtimes with a `short` lifetime don’t preserve state across executions while runtimes with a `long` lifetime do.|
 |`actions`| Array | | | Specifies the set of actions supported by the runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
-|`actions.displayName`| String | 64 characters | | Specifies the display name of the action and it isn't the label of a button or a menu item that invokes the action (which is configured with `tabs.groups.controls.label`).|
-|`actions.description`| String | | ✔️ | Specifies the description of the actions. |
-|`actions.handlers`| Array of objects | | ✔️ | An array of handlers object, defining how actions can be handled. If an app has more than one handler, only one experience will show up at one entry point. The hub will decide which action to show up based on which experience is supported.  |
-|`actions.intent`| String enum |  | ✔️ | Specifies the type of actions. The supported enum value open, addTo, and custom. |
 |`actions.id`| String | 64 characters | ✔️ | Specifies the ID for the action, which is passed to the code file. |
-|`actions.type`| String | | ✔️ | Specifies the type of action. The `executeFunction` runs a JavaScript function without waiting for it to finish and `openPage` opens a page in a given view. <br>Supported value: `executeFunction` |
 |`actions.pinnable`| Boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. <br>Default value: `false`|
 |`actions.view`| String | 64 characters | | Specifies the view where the page must be opened. It's used only when `actions.type` is `openPage`. |
 
@@ -997,6 +992,56 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`hide.storeOfficeAddin.assetId`| String | 64 characters | ✔️ | Specifies the AppSource asset ID of the in-market add-in to hide.|
 |`hide.customOfficeAddin`| | | | Configures how to hide an in-market add-in that isn't distributed through AppSource.|
 |`hide.customOfficeAddin.officeAddinId`|String | 64 characters | ✔️ | Specifies the ID of the in-market add-in to hide. The GUID is taken from the app manifest `id` property if the in-market add-in uses the JSON app manifest. The GUID is taken from the `<Id>` element if the in-market add-in uses the XML app manifest. |
+
+## actions
+
+The object is an array of action objects. This block is required only for solutions that provides Actions.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`| String | 64 characters | ✔️ | Specifies the ID for the action, which is passed to the code file. |
+|`displayName`| String | 64 characters | | Specifies the display name of the action and it isn't the label of a button or a menu item that invokes the action (which is configured with `tabs.groups.controls.label`).|
+|`description`| String | | ✔️ | Specifies the description of the actions. |
+|`intent`| String enum |  | ✔️ | Specifies the type of actions. The supported enum value open, addTo, and custom. |
+|`actions.handlers`| Array of objects | | ✔️ | An array of handlers object, defining how actions can be handled. If an app has more than one handler, only one experience will show up at one entry point. The hub will decide which action to show up based on which experience is supported.  |
+
+### actions.handlers
+
+Defines the handlers of the action.The handlers is an array of handler objects. Each action must have at least one handler.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`supportedObjects`| Object | |  | Objects defining what objects can trigger this action. |
+|`type`| String enum | | ✔️ | Specifies the handler type of actions. The supported enum value openPage, openDialog. |
+|`dialogInfo`| Object | |  | Required if the handler type is `openDialog`. Object containing metadata of the dialog handler. |
+|`pageInfo`| Object | |  | Required if the handler type is `openPage`. Object containing metadata of the page to open. |
+
+### actions.handlers.supportedObjects
+
+Objects defining what objects can trigger this action.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`file`| Object | |  | Supported file types. |
+|`file.extensions`| Array of strings | |  | Array of strings. File extensions of the file types the action can trigger. |
+
+### actions.handlers.pageInfo
+
+Required if the handler type is openPage. Object containing metadata of the page to open.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`pageId`| String | |  | Id of the page (in the app) that the action will direct the user to. |
+|`subpageId`| String | |  | Id of the subpage (in the app) that the action will direct the user to. |
+
+###  actions.handlers.dialogInfo
+
+Required if the handler type is openDialog. Object containing metadata of the dialog to open.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`width`| String | | ✔️ | Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'. |
+|`height`| String | | ✔️ | Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'. |
 
 ## See also
 
