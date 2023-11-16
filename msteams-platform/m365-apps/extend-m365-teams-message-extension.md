@@ -48,7 +48,7 @@ You can build a Teams message extension app for Outlook through Teams Toolkit ex
 
 [!INCLUDE [message-extensions-outlook](../includes/messaging-extensions/message-extensions-outlook.md)]
 
-Now, you can sideload your app in Teams and preview your message extension in Outlook. To build your app package through Teams Toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
+Now, you can [sideload your app in Teams](#sideload-your-app-in-teams) and [preview your message extension in Outlook](#preview-your-message-extension-in-outlook). To build your app package through Teams Toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
 
 # [Extend an existing Teams message extension app to Outlook](#tab/existing-app)
 
