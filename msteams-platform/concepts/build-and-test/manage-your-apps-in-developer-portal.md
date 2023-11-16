@@ -58,6 +58,8 @@ In the **Configure** section, you can see the following components to manage and
   > [!NOTE]
   > Connector isn't available for Government Community Cloud (GCC) tenants.
 * **Permissions**: This section allows you to give **Device permissions**, **Team Permissions**, **Chat/Meeting permissions**, and **User Permissions** for your app.
+> [!NOTE]
+  > Maximum limit for RSC permissions is 16.
 * **Single sign-on**: Bot registered on Microsoft Entra ID supports single sign-on (SSO). If a bot is registered on Bot Framework portal (or within the Developer Portal under **Bot management**), then a bot doesn't support SSO, and you have to register your bot on Microsoft Entra ID to support SSO. For a bot registered on Microsoft Entra ID, add the **Application ID URI**. To get **Application ID URI** from Microsoft Entra ID, see [how to use SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
 * **Languages**: This section allows you to set up or change the language of your app.
 * **Domain**: This section allows you to add the domains to load your apps in the Teams client, such as *.example.com.
@@ -136,7 +138,7 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
    You can download the app package by selecting **Download app package** button from the **Publish to store** page.
 
-* **App package**: The app package describes how your app is configured that includes app features, required resources, and other important attributes in manifest. The Icon tab shows the icon used for your app.
+* **App package**: The app package describes how your app is configured that includes app features, required resources, and other important attributes in manifest. The app definition refers to the configuration and settings associated with the application. The Icon tab shows the icon used for your app.
 
 ## Test your app directly in Teams
 
